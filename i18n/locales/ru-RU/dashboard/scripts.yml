@@ -309,9 +309,9 @@ ru:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Лаборатория игр
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: Disney Infinity Play Lab
+          description_short: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
+          description: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
           Play Lab: Лаборатория игр
           Infinity: Бесконечность
         algebrademo:
@@ -337,7 +337,7 @@ ru:
           Ways to go beyond Courses 1, 2, and 3: Способы обучения после курсов 1, 2, и 3
           K-5 Courses: K-5 Courses
           Writing computer programs in Blockly: Writing computer programs in Blockly
-          Teacher Dashboard: Teacher Dashboard
+          Teacher Dashboard: Панель управления преподавателя
           Personal Reflection: Personal Reflection
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -353,11 +353,6 @@ ru:
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
-        Infinity:
-          title: Бесконечная лаборатория игр
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          Infinity: Бесконечность
         pixelation:
           title: Пикселизация
           description: Создавайте картинки при помощи битов и байтов.
@@ -471,6 +466,8 @@ ru:
           Lesson 5: Lesson 5
           Lesson 3: Lesson 3
           Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -522,3 +519,15 @@ ru:
           "Play Lab: Collision Detection (Big Game)": 'Лаборатория игр: обнаружение столкновений (большая игра)'
           Your Game - Player Movement: 'Your Game - Player Movement'
           Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Введение в профессиональные разработки
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

@@ -415,7 +415,12 @@ bs:
       Big Game Booleans 2_instruction: 'Sjećaš li se sigurno-lijevo? i sigurno-desno? funkcija iz Šišmiš Sem? Sada ćemo iskoristiti tu istu logiku da bismo shvatili kada meta i opasnost napuštaju ekran. Idi na sekciju "Funkcije" u alatnoj traci i dovrši sigurno-lijevo? funkciju.'
       Big Game Booleans 3_instruction: 'Sada kada imamo sigurno-lijevo?, hajde da dovršimo sigurno-desno?. Funkcija bi trebala uzeti x koordinatu lika i vratiti "istinito" ako lik nije otišao izvan desne strane ekrana.'
       Big Game Booleans 4_instruction: Odlično! Sada kada imamo ove funkcije za provjeru lijeve i desne strane ekrana, promijeni na-ekranu? funkciju tako da provjerava sigurno-lijevo? I sigurno-desno?, isto kao što smo uradili sa Šišmiš Sem.
-      Big Game Booleans 5_instruction: 'U ovom trenutku tvoje igre tvoja opasnost bi trebala da se kreće preko ekrana s desna na lijevo, i tvoja meta bi trebala trčati po ekranu s lijeva na desno. Oboje bi se trebali vratiti na suprotne strane. Provjeri na trenutak da li tvoja igra radi ono što ti želiš, i onda idi na "Završi" da nastaviš.'
+      Big Game Booleans 5_instruction: |
+        At this point your danger should run across
+        the screen from right to left, your target should run across from left to
+        right, and they should both return to the opposite side. Take a minute to
+        make sure your game is working like you want it to, and then click finish
+        to move on.
       Big Game Collision 1 (copy 1)_instruction: 'Kada si zadnji put radio/la na tvojoj igrici imali smo da naša meta i opasnost lete preko ekrana, ali se nikada ne vrate. Klikni na "Pokreni" da vidiš kako tvoja igra radi u ovom trenutku, i onda klikni na završi. Kasnije ćemo raditi na tome da se tvoji likovi pojave opet na ekranu nakon što su otišli.'
       Big Game Collision 1_instruction: |
         At this point you've programmed a video
@@ -488,7 +493,10 @@ bs:
       C3-Farmer While Loops 8_instruction: ' Vidim stvarno duboku rupu i veoma veliku gomilu zemlje. Koliko lopata zemlje trebam premjestiti da bi se zemlja poravnala? Savjet: Koristi "dok" petlju za oboje.'
       C3-Farmer While Loops Assessment 1_instruction: Vidim jako mnogo rupa i gomila. Pomozi mi da premjestim zemlju tako da se sve poravna.
       C3-Farmer While Loops Multi Pics_instruction: Višestruki izbor
-      Calc Circles of Eval .1_instruction: Kod koji ćeš napisati u ovom kursu se zove Blokovi Izvršenja, zato što će svaki blok poprimiti jednu vrijednost nakon izvršenja. Promijeni ??? u ovom kodu tako da blok poprimi vrijednost 5.
+      Calc Circles of Eval .1_instruction: |
+        You’ll be writing a kind of code called
+        Evaluation Blocks, because each block of code evaluates to a single value.
+        Change the ??? in this code so that the block evaluates to 5.
       Calc Circles of Eval .2_instruction: 'Ovaj Blok Izvršenja je funkcija za množenje koja uzima dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako da pomnoži 2 * 5'
       Calc Circles of Eval .3_instruction: 'Ovo je funkcija za Sabiranje - uzima dva broja i vraća njihov zbir. Upotrijebi ovaj Blok Sabiranja da izračunaš 3 + 6.'
       Calc Circles of Eval .4_instruction: Ovdje smo ugnijezdili Blok Sabiranja unutar Bloka Množenja. Dovrši ovaj kod da bi pomnožio/la 3 sa (4 + 1)
@@ -496,9 +504,8 @@ bs:
       Calc Circles of Eval 1_instruction: 'Svaki matematički operator (+, -, *, /, i tako dalje) se može predstaviti za Blokom Izvršenja u kodu. Promijeni Blok Izvršenja da bi odgovarao izrazu.'
       Calc Circles of Eval 2 (copy 1)_instruction: 'Pretvori ovaj izraz u <some_shape> izvršenje.'
       Calc Circles of Eval 2_instruction: |
-        Each Evaluation Block has a function at
-        the top, with the inputs to that function written below. Each of those arguments
-        can be a value, or another block.
+        Use a multiplication block to complete
+        this code.
       Calc Circles of Eval 3_instruction: Dovrši Blok Izvršenja da ogovara ovom izrazu.
       Calc Circles of Eval 4_instruction: 'Ovom kodu nedostaje nekoliko Blokova Izvršenja - pobrini se da staviš sve u pravilnom redu.'
       Calc Circles of Eval 5_instruction: Dovrši Blok Izvršenja da ogovara ovom izrazu.
@@ -528,27 +535,27 @@ bs:
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cookie-cost`, which takes in the number of cookies you intend\nto sell, and gives you back the amount of money it would cost to produce that\nnumber of cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand gives you back the amount of money it would cost to produce that number\nof cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales` which
-        takes in the number of cookies sold, and produces the amount of money customers
-        spent to buy those cookies (each cookie costs $1.50).
+        Write the function `sales` which takes in
+        the number of cookies sold, and produces the amount of money customers spent
+        to buy those cookies (each cookie costs $1.50).
       Calc Design Recipe 4_instruction: |
-        Using the two functions we just wrote, write
-        the function `cookie-profit`, which takes in the number of cookies you sold,
-        and gives you back the total profit you make from selling your cookies, accounting
-        for the cost of baking them.
+        Free Play: Using the two functions we just
+        wrote, write the function `cookie-profit`, which takes in the number of cookies
+        you sold, and gives you back the total profit you make from selling your cookies,
+        accounting for the cost of baking them.
       Calc Free Play_instruction: 'Vrijeme za slobodno igranje: Napiši funkcije i algorithme po tvom vlastitom izboru!'
       Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor the function \"rocket-height\" that states it has a range of Number, domain\nof Number, and should return the height of the rocket traveling at 15 m/s\nafter a given number of seconds. Let's write an example case now for the\nheight of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
       Calc Rocket 1_instruction: "U posljednjem zadatku si napisao/la ugovor za funkciju \"visina-rakete\" koja ima Brojeve kao kodomenu i domenu, i koja vraća visinu rakete koja ide brzinom od 15 m/s nakon datog broja sekundi. Hajde sada da napišemo primjer za visinu rakete u trećoj sekundi.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n "
       Calc Rocket 2_instruction: Odlično! Hadje da uradimo još jedan primjer prije nego napišemo funkciju. Koju visinu bi raketa trebala imati nakon 30 sekundi?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 years
-        - can you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years.
+        Can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
-        then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to your age and click run.
+        easily refer to them repeatedly throughout our programs. Here's a variable
+        called "age". Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: 'Ovdje smo postavili varijablu "dob" na 17. Možeš li napisati izraz koji računa "dob" izraženu u mjesecima?'
       Calc Vars 2.1_instruction: |
         You can actually set a variable using the value
@@ -819,7 +826,10 @@ bs:
       Course 4 Play Lab Vars 8_instruction: 'Hajde da postaivmo ovu igru tako Pas može pobijediti (ili izgubiti). Upotrijebi beskonačnu petlju za provjeru vrijednosti rezultata. Ako je rezultat veći od 20, neka neprijatelj (Mačka) nestane. Ako je rezultat manji od 0, neka igrač (Pas) nestane. Klikni na "Završi" kada igrica radi ono što ti želiš.'
       Course 4 Play Lab Vars 9_instruction: 'Vrijeme za slobodno igranje! Evo svih varijabli s kojima smo se igrali do sada, zajedno sa još nekoliko dodatni u slučaju da ih zatrebaš. Napravi igricu ili priču koja koristi ove varijable. Savjet: Pomjeraj radni prostor prema dolje da vidiš sve komande.'
       Course 4 Play Lab Vars_instruction: Dobro, još jedna zadnja stvar. Hajde da postavimo da igrač može pobijediti (ili izgubiti). Koristi beskonačnu petlju da provjeriš vrijednost rezultata. Ako je rezultat veći od 20, neka neprijatelj nestane. Ako je rezultat manji od 0, neka igrač nestane.
-      Course 4 Play Labs For Loops 1_instruction: 'Hajde da napravimo da pas može izgovoriti svaki broj od 1 do 100. Upotrijebi "od-do" petlju i blok za govor da bi pas izgovorio vrijednost brojač varijable pri svakom prolazu kroz petlju.'
+      Course 4 Play Labs For Loops 1_instruction: |
+        Let's make the dog speak every
+        number from 1 to 100. Use a for loop and the counter block to speak the counter
+        variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: Hajde da ovaj putpokušamo brojati neparne brojeve od 1 do 100.
       Course 4 Play Labs For Loops 3_instruction: Ako računamo sa većim korakom, brojimo još više za isto vrijeme. Pokušaj napraviti da pas broji od 10 do 1000, sa korakom od 10.
       Course 4 Play Labs For Loops 4 (copy 1)_instruction: Promjena priraštaja može biti korisna, ali još uvijek brojimo linearno (svaki broj je udaljen za istu vrijednost od posljednjeg broja). Šta ako želim brojati eksponencijalno? Bez mijenjanja postavke u ovoj petlji, možeš li brojati 1, 4, 9, 16, 25... (kvadrat brojač varijable)?
@@ -851,13 +861,21 @@ bs:
         is true. Otherwise, if both parameters are false it will return false. Set
         the y variable to a value that will cause this expression to return false.
       Eval Booleans 6_instruction: Evo još jedan booleov blok naziva NE. Ovaj blok mijenja vrijednost sa istinito na neistinito, ili sa neistinito na istinito. Ako staviš ovaj blok koda u NE blok, trebao bi vratiti istinito (jer tražimo da ova dva izraza NE daju istu vrijednost).
+      Eval Booleans Free Play_instruction: |
+        Free Play: Try out some creations of
+        your own using Booleans.
       Eval Booleans_instruction: 'Booleovi operatori nam omogućuju da poredimo različite vrijednosti, te vraćaju "istinito" ako su jednaki ili "neistinito" ako nisu. Šta misliš koji rezultat će vratiti ovaj kod?'
       Eval Cond 1_instruction: 'Uslovni blok provjerava booleove izraze u lijevoj koloni, i čim nađe jedan koji vraća "istinito" izvršava odgovarajući kod u desnoj koloni. Ako nijedan od izraza ne dobije vrijednost "istinito", onda se vraća na dno bloka. Promijeni varijablu "temperatura" tako da ovaj blok vraća "Taman je".'
       Eval Cond 2 (copy 1)_instruction: 'Ovaj uvjet vraća različit oblik zavisno od vrijednosti "stranice" varijable. Promijeni vrijednost "stranice" tako da uvjetni blok vraća trokut.'
       Eval Cond 2_instruction: 'Ovaj uvjet vraća različit oblik zavisno od vrijednosti "stranice" varijable. Promijeni vrijednost "stranice" tako da uvjetni blok vraća trokut.'
       Eval Cond 3 (copy 1)_instruction: 'Možeš li napisati uslov koji provjerava varijablu "dob" i vraća "Dovoljna dob za glasanje i vozačku dozvolu" ako dob > 17, "Dovoljna dob za vozačku dozvolu" ako je dob  > 15, i "Ne može glasati ili voziti" ako nijedan od uslova nije tačan. Savjet: Prvi uslov za vraćanje istinito pobjeđuje. Pobrinir se da staviš uvjete u pravom redoslijedu.'
       Eval Cond 3_instruction: 'Možeš li napisati uslov koji provjerava varijablu "dob" i vraća "Dovoljna dob za glasanje i vozačku dozvolu" ako dob > 17, "Dovoljna dob za vozačku dozvolu" ako je dob  > 15, i "Ne može glasati ili voziti" ako nijedan od uslova nije tačan. Savjet: Prvi uslov za vraćanje istinito pobjeđuje. Pobrinir se da staviš uvjete u pravom redoslijedu.'
-      Eval Cond 4_instruction: 'Koristimo "niz_karaktera=?" funkciju da bismo napravili uslove za unos teksta. Evo funkcija naziva "zeleni oblik" koja uzima niz karaktera kao parametar za oblik. Dovrši uslove tako da su ispravni oblici nacrtani kada se funkcija pozove sa "kvadrat", "trokut", "krug" ili "pravougaonik".'
+      Eval Cond 4_instruction: |
+        We can use the "string=?" function to make conditionals
+        that respond to text input. Here's a function called "green shape" that
+        takes a string parameter for the shape. Complete the conditions so that the
+        correct shape is drawn when the function is run with "circle," "triangle,"
+        "square," or "rectangle."
       Eval Cond 5_instruction: 'Evo slična funkcija "crveni oblik" sa dodatnim parametrom za veličinu. Dovrši uvjete tako da je ispravan oblik nacrtan pri pozivu sa "krug", "trokut" i "zvijezda".'
       Eval Cond 6_instruction: "Napiši funkciju pod nazvimo gastro-kritičar koja uzima ime hrane kao ulazni argument i vraća niz karaktera koji kažu šta ti misliš o toj hrani. Na primjer, (gastro-kritičar \"pizza\") bi mogao reći \"ukusno\", ali (gastro-kritičar \"pokvarena jaja\") bi rekao da je to \"užasno\"! Izaberi dvije vrste hrane za kritiku, ali možeš uraditi i više ako želiš! Ne zaboravi da dodaš \"inače\" izraz!\r\nJedan primjer - i dio definicije - smo već odradili za tebe!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
@@ -868,7 +886,11 @@ bs:
       Eval Contracts 2_instruction: 'Provjeri ovu "rotiraj" funkciju. Možeš li je upotrijebiti da zarotiraš ovaj zeleni kvadrat od 90 piksela veličine za 45 stepeni?'
       Eval Contracts 3_instruction: 'Pokušaj upotrijebiti "tekst" funkciju za pisanje ovog tirkiznog teksta veličine 40.'
       Eval Contracts 4 A_instruction: 'Funkcija "skaliraj" vraća sliku koja je ili veća ili manja od orginalne ulazne slike. Pokušaj skalirati ovaj kurg za faktor 10. Kako bi rezultirajuća slika bila drugačija kada bi se ispočetka napravio krug te veličine?'
-      Eval Contracts 4_instruction: 'Funkcija "skaliraj" vraća sliku koja je ili veća ili manja od orginalne ulazne slike. Pokušaj skalirati ovaj kurg za faktor 10. Kako bi rezultirajuća slika bila drugačija kada bi se ispočetka napravio krug te veličine?'
+      Eval Contracts 4_instruction: |
+        The "scale" function returns an image that
+        is either larger or smaller than the input image. Try scaling this circle
+        by a factor of 10. How is the returned image different than if you'd just
+        made a circle of that size in the first place?
       Eval Contracts 8A_instruction: Možeš li dovršiti ovaj zadatak? Veliki trokut je ljubičast i veličine od 200 piksela.
       Eval Contracts A_instruction: |
         Use the "star" function to produce a solid
@@ -885,7 +907,10 @@ bs:
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
         you can make.
-      Eval Design Recipe .1_instruction: 'Evo Recept za Crtež za funkciju pod nazivom "kvadrat-krug" sa domenom od Brojčanog Niza Karaktera i Slikom kao kodomene. Pogledaj ova dva primjera koja smo ti dali i napiši definiciju funkcije.'
+      Eval Design Recipe .1_instruction: |
+        Here's a Design Recipe for a function
+        called "square-circle" with domain Number String and range Image. Click
+        Edit to write the function description (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: Napisati ćemo funkciju koja crta puni pravougaonik bilo koje boje koji je dva puta širi nego što je visok. Počni sa primjerom. Nacrtaj puni zeleni pravougaonik koji ima visinu od 100 piksela.
       Eval Design Recipe 1_instruction: 'Dobro. Sada imamo Ugovor širok-pravougaonik: Brojčani Niz Karaktera -> Slika. Napiši primjer. Nacrtaj puni zeleni pravougaonik visine 100 piksela.'
       Eval Design Recipe 2 (copy 1)_instruction: Hajde da napravimo još jedan primjer prije nego napišemo definiciju funkcije. Ovaj puta nacrta puni crveni pravougaonik visine 75 piksela.
@@ -924,10 +949,10 @@ bs:
       Eval Strings Images 6_instruction: Upotrijebi funkciju prekrivanja da postaviš žutu zvijezdu od 75 piksela preko plavog pravougaonika dugog 150 piksela.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to where it would normally be placed. Use this block to offset the
-        triangle 80 pixels on the y axis.
+        relative to the center of the playspace, where it would normally be placed.
+        Use this block to offset the triangle by 80 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Here's a different kinds of star block
+        Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
         of points! Use it to create a solid orange star with an inner radius of 75
         pixels and an outer radius of 175 pixels.
@@ -991,8 +1016,8 @@ bs:
       Infinity_touch_faster_instruction: Dodirni još više pahuljica!
       Infinity_touch_four_instruction: Pokreni Annu prema gore, dole lijevo, i onda desno da bi dotakla svaku od četiri pahuljice.
       Infinity_touch_score_instruction: |
-        Score a point when a snowflake is touched.  Then
-        "Run", and steer Anna to touch each snowflake once.
+        Make Anna score a point when she touches
+        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
       K-1 Artist 1 Assessment 1_instruction: Nacrtaj kratku liniju gore i jednu dugačku liniju desno!
       K-1 Artist Loops 1_instruction: Nacrtaj ovu liniju krećući se ka Istoku 4 puta.
       K-1 Artist Loops 2_instruction: Možeš li nacrtati ovu istu liniju ali koristeći petlju?
@@ -1140,7 +1165,7 @@ bs:
         to those people, could you update the "else" clause so that we charge them
         a premium for toppings that we don't normally offer? Let's charge $10,000
         for a topping we don't carry.
-      Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
+      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even better? Try one (or more) of the following:\r\n- Display an\nimage of the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Uradi ovo!
       Maze screenshot Work_instruction: Test instructions
       MSM Big Game Empty_instruction: Sve varijable i funkcije su trenutno prazne. Svaki nivo predstavlja napredak i definisanje funkcija, što će povećati funkcionalnost.
@@ -1303,8 +1328,6 @@ bs:
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
       perpendicular_instruction: Hajde sada da vidimo da li možemo napraviti dvije okomite linije. Okomite linije su dvije linije koje se presijecaju pod pravim uglom (90 stepeni).
-      Play Lab Rocket 1 (copy 1)_instruction: 'Raketa je poletjela i leti brzinom od 15 metara u sekundi... klikni na "pokreni" da vidiš kako ovaj problem izgleda kao animacija.'
-      Play Lab Rocket 1 (copy 2)_instruction: 'Raketa je poletjela i leti brzinom od 15 metara u sekundi... klikni na "pokreni" da vidiš kako ovaj problem izgleda kao animacija.'
       Play Lab Rocket 1_instruction: 'Raketa je poletjela i leti brzinom od 15 metara u sekundi... klikni na "pokreni" da vidiš kako ovaj problem izgleda kao animacija.'
       Play Lab Rocket 2 (copy 1)_instruction: Dodali smo tvoj ugovor i još dva primjera u Recept za Dizajn za visinu rakete. Sada napiši funkciju za visinu rakete.
       Play Lab Rocket 2 (copy 2)_instruction: |
@@ -1382,20 +1405,20 @@ bs:
         your function works, Sam shouldn't be able to leave the yard from the left
         side.
       Sam the Butterfly 3_instruction: |
-        That's great, now Sam can't leave the yard
-        from the left side, but what about the right? Fill out the "safe-right?"
-        function to make sure Sam can't go past x = 425
+        In the last puzzle we kept Sam from leaving
+        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
+        function to make sure Sam can't go past x = 425.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
-        from going either direction? Try using the "AND" block program the function
+        from going either direction? Try using the "AND" block to program the function
         "on-screen?" to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter 'y' to the 'onscreen?' function. Can you update
         your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
-        either? Test your program my moving Sam as far as he can go in all four directions.
+        either? Test your program by moving Sam as far as he can go in all four directions.
         Click Finish when Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the

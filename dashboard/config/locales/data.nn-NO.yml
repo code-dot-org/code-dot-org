@@ -659,6 +659,9 @@
         msm_3_pemdas: PEMDAS
         msm_6_variables: Variabler
         msm_7_functions: Funksjoner
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka

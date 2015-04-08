@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"Your program results in division by zero.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"Mayroon kang isang block na walang nailagay na input .",
   "equivalentExpression":"Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon.",
   "evaluate":"evaluate",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

@@ -50,7 +50,7 @@ sv:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bee Villkorssatser Flerval Två
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Välj de bästa blocken
+        Choose the best blocks.: Välj de bästa blocken.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -83,7 +83,7 @@ sv:
       2-3 Algorithms Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Välj en algoritm för bilden
+        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Börja med en fyrkant <br/> sätt en triangel ovanför fyrkanten <br/> sätt en triangel under fyrkanten'
         0: '? Börja med en fyrkant <br/> sätt en triangel till höger om fyrkanten <br/> sätt ett parallellogram nedanför fyrkanten <br/> rSätt triangeln till höger om parallellogrammet'
         1: ': Start med en fyrkant <br/> sätt en triangel till höger om fyrkanten <br/> sätt ett parallellogram nedanför fyrkanten <br/> Sätt triangeln till höger om parallellogrammet'
@@ -141,7 +141,6 @@ sv:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
         Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
         a image: a image
         a number: a number
@@ -256,19 +255,19 @@ sv:
       4-5 Algorithms Multi 1:
         Multiple Choice: Flervalsfråga
         Which one of these items is hardest to describe an algorithm for?: Vilken av dessa objekt är svårast att skriva en algoritm för?
-        <h4>Brushing your teeth</h4>: '<h4>Borsta tänderna</h4>'
-        <h4>Baking cookies</h4>: '<h4>Baka kakor</h4>'
-        <h4>Shopping from a grocery list</h4>: '<h4>Shopping från en inköpslista</h4>'
-        <h4>Banana</h4>: '<h4>Banan</h4>'
+        Brushing your teeth: Brushing your teeth
+        Baking cookies: Baking cookies
+        Shopping from a grocery list: Shopping from a grocery list
+        Banana: Banana
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Flervalsfråga
         0: '? Här är tre meningar. Vilken av mallarna nedan abstraherar korrekt så att alla tre matchar samma mönster som mallen?'
         1: ': Här är tre meningar. Vilken av mallarna nedan abstraherar korrekt så att alla tre matchar samma mönster som mallen?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle är en storstad. <br/>Eugene är en medelstor stad <br/> Hillview är en liten stad.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Seattle _____ en _____ _____.</h4>'
-        <h4>_____ is a _____ city.</h4>: '<h4>_____ är en _____ stad.</h4>'
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ är _____ en _____.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene är en _____ stad.</h4>'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        Eugene is a _____ city.: Eugene is a _____ city.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Flervalsfråga
         Which of these pictures best represents crowdsourcing?: Vilken av dessa bilder representerar bäst crowdsourcing?
@@ -277,33 +276,33 @@ sv:
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Flervalsfråga
         Which one of these activities would be best for practicing crowdsourcing?: Vilken av dessa verksamheter skulle vara bäst för crowdsourcing?
-        <h4>Cleaning your room</h4>: '<h4>Städa ditt rum</h4>'
-        <h4>Eating your dessert</h4>: '<h4>Äta din dessert</h4>'
-        <h4>Brushing your hair</h4>: '<h4>Borsta håret</h4>'
-        <h4>Washing your face</h4>: '<h4>Tvätta ansiktet</h4>'
+        Cleaning your room: Cleaning your room
+        Eating your dessert: Eating your dessert
+        Brushing your hair: Brushing your hair
+        Washing your face: Washing your face
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Flervalsfråga
         Which piece of information listed below is okay to share on the internet?: Vilken del av informationen nedan är okej att dela på internet?
-        <h4>Your birthday</h4>: '<h4>Din födelsedag</h4>'
-        <h4>Your favorite food</h4>: '<h4>Din favoritmat</h4>'
-        <h4>Your address</h4>: '<h4>Din adress</h4>'
-        <h4>Your parent's credit card number</h4>: '<h4>Dina föräldrars kreditkortsnummer</h4>'
+        Your birthday: Your birthday
+        Your favorite food: Your favorite food
+        Your address: Your address
+        Your parent's credit card number: "Your parent's credit card number"
       4-5 Internet Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: När du försöker logga in på code.org, vilken IP-adress är mest sannolikt att DNS-servern tar dig till?
-        <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
-        <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
-        <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
-        <h4>54.243.71.82</h4>: '<h4>54.243.71.82</h4>'
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: Flervalsfråga
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Om DNS-servern har skickat dig till sidan på IP-adressen 100.42.50.110, vilken hemsida är du på?
-        <h4>code.org</h4>: '<h4>Code.org</h4>'
-        <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
-        <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
-        <h4>khanacademy.org</h4>: '<h4>khanacademy.org</h4>'
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
@@ -318,7 +317,7 @@ sv:
       4-5 Suncatchers Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: 'Vilket av programmen nedan gör <em>inte</em>  exakt samma sekvens som Program 1'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -640,10 +639,10 @@ sv:
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
         Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images 1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images 1.blocks4.start_blocks, 300, 100
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
       PDK5 Basic CS:
         Video Follow-up Question: Video Follow-up Question
         Answer this question based on the video you just watched.: Answer this question based on the video you just watched.

@@ -245,6 +245,7 @@
         artist: Piirrä jotakin
     user:
       classroom: Opettajan kotisivu
+      district_dashboard: District Dashboard
       label: Hei %{username}
       stats: Minun edistymiseni
       settings: Tilini
@@ -496,6 +497,9 @@
       body: Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!
@@ -628,3 +632,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

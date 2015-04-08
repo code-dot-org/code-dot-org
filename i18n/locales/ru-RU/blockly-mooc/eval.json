@@ -4,7 +4,6 @@
   "circleBlockTitle":"круг (радиус, стиль, цвет)",
   "displayBlockTitle":"оценить",
   "ellipseBlockTitle":"эллипс (ширина, высота, стиль, цвет)",
-  "emptyFunctionalBlock":"У вас есть блок с незаполненными входными данными.",
   "extraTopBlocks":"У вас есть неприсоединенные блоки. Вы хотите подключить их к блоку \"Показать\"?",
   "infiniteRecursionError":"Ваша функция вызывает сама себя. Мы вынуждены это остановить, иначе она бы вызывала себя постоянно.",
   "overlayBlockTitle":"наложение (сверху, снизу)",
@@ -27,5 +26,6 @@
   "solid":"заливка",
   "string":"строка",
   "stringMismatchError":"В вашей строке перепутаны заглавные и строчные буквы.",
-  "userCodeException":"Во время исполнения вашей программы произошла ошибка."
+  "userCodeException":"Во время исполнения вашей программы произошла ошибка.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

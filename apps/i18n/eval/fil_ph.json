@@ -4,7 +4,6 @@
   "circleBlockTitle": "bilog (radius, klase, kulay)",
   "displayBlockTitle": "display",
   "ellipseBlockTitle": "ellipse (lapad, taas, style, kulay)",
-  "emptyFunctionalBlock": "Mayroon kang isang block na walang nailagay na input .",
   "extraTopBlocks": "Mayroon kang hindi isinama na block. Ibig mo bang isama ito sa \"display\" block?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "overlay (taas, baba)",

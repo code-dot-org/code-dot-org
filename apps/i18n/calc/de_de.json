@@ -1,18 +1,17 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
+  "divideByZeroError": "Das Programm führt zu einer Division durch Null.",
   "emptyComputeBlock": "Du musst einen Block mit dem \"berechnen\" Block verbinden.",
-  "emptyFunctionalBlock": "Du hast einen Block ohne Eingabe.",
   "equivalentExpression": "Versuche deine Argumente neu zu ordnen, um genau das gleiche Ergebnis zu bekommen.",
-  "evaluate": "evaluate",
+  "evaluate": "Bewerten",
   "extraTopBlocks": "Du hast unverbundene Blöcke. Wolltest du sie mit dem \"berechnen\" Block verknüpfen?",
   "failedInput": "Deine Funktion gibt nicht die richtigen Werte für alle Variablen zurück.",
   "goal": "Ziel:",
   "levelIncompleteError": "Dein Ausdruck erfüllt nicht das Ziel.",
   "missingFunctionError": "You must define a function named {functionName}.",
-  "missingVariableX": "Your expression is missing variable {var}.",
+  "missingVariableX": "Bei Ihrem Ausdruck fehlt die Variable {var}.",
   "reinfFeedbackMsg": "Hier ist deine Berechnung! Arbeite weiter oder gehe zum nächsten Rätsel!",
   "yourExpression": "Dein Ausdruck:",
   "wrongInput": "Du rufst deine Funktion mit einem falschen Wert auf.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongResult": "Ihr Ausdruck gibt nicht das richtige Ergebnis zurück."
 }

@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"कॉल",
   "ADD":"जोडें",
   "ADD_COMMENT":"टिप्पणी जोड़ें",
   "ADD_PARAMETER":"-> पॅरमीटर को_ जोड़िए",
@@ -143,7 +143,7 @@
   "LISTS_INLIST":"सूची में",
   "LISTS_IS_EMPTY_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#is_empty",
   "LISTS_IS_EMPTY_TITLE":"1 प्रतिशत खाली है",
-  "LISTS_LENGTH_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#length_of",
+  "LISTS_LENGTH_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#length_of\n\nurl - यह आपको लिस्ट की लम्बाई कि गणना कैसे कि जाए यह जानकारी देता है (जैसे - element की कुल गणना, ना कि विभिन्न elements की गणना)",
   "LISTS_LENGTH_INPUT_LENGTH":"लंबाई",
   "LISTS_LENGTH_TITLE":"% 1 की लंबाई",
   "LISTS_LENGTH_TOOLTIP":"सूची की लंबाई वापिस देता है!",

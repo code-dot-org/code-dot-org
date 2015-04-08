@@ -219,6 +219,7 @@ ro:
         artist: Desenează ceva
     user:
       classroom: Pagina de Start a Profesorilor
+      district_dashboard: District Dashboard
       label: 'Salut %{username}'
       stats: Progresul meu
       settings: Contul meu
@@ -437,6 +438,9 @@ ro:
       body: Vedeți o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au făcut acestea cu secvențe de cod!
@@ -550,3 +554,5 @@ ro:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

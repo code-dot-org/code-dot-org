@@ -1,18 +1,17 @@
 {
   "divideByZeroError": "Dit program resulterer i division med nul.",
-  "emptyComputeBlock": "Du skal vedhæfte en blok til \"Beregn\"-blokken.",
-  "emptyFunctionalBlock": "Du har en blok med et ikke-udfyldt input.",
+  "emptyComputeBlock": "Du skal vedhæfte en blok til \"vurdér\"-blokken.",
   "equivalentExpression": "Prøv at ændre rækkefølgen på dine argumenter for at få præcis det samme udtryk.",
   "evaluate": "evaluér",
-  "extraTopBlocks": "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"beregn\" blokken?",
+  "extraTopBlocks": "Du har ikke-vedhæftede blokke. Ønskede du at vedhæfte disse til \"vurdér\"-blokken?",
   "failedInput": "Din funktion returnerer ikke det korrekte resultat for alle værdier.",
   "goal": "Mål:",
   "levelIncompleteError": "Dit udtryk er ikke det samme som målet.",
-  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingFunctionError": "Du skal definere en funktion navngivet {functionName}.",
   "missingVariableX": "Dit udtryk mangler variable {var}.",
   "reinfFeedbackMsg": "Her er din beregning! Fortsæt med at arbejde på det, eller gå videre til det næste puslespil!",
   "yourExpression": "Dit udtryk:",
   "wrongInput": "Du kalder din funktion med den forkerte værdi.",
   "wrongOtherValuesX": "Dir udtryk resulterer i den forkerte værdi, hvis vi ændrer {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongResult": "Dit udtryk returnerer ikke det korrekte resultat."
 }

@@ -434,6 +434,9 @@ en:
         msm_3_pemdas: crwdns35066:0crwdne35066:0
         msm_6_variables: crwdns35067:0crwdne35067:0
         msm_7_functions: crwdns35068:0crwdne35068:0
+        infinity_playlab_intro: crwdns35943:0crwdne35943:0
+        infinity_playlab_events: crwdns35944:0crwdne35944:0
+        infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

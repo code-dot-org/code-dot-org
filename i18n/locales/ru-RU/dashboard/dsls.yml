@@ -4,14 +4,14 @@ ru:
       Blocks to Bools 1:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое выражение, которое соответствует этому коду
-        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
+        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png, 500
         (4+5) > 9: '(4 + 5) > 9'
         ((4+5) > 9): '((4+5) > 9)'
         Type the arithmetic expression here: Введите арифметическое выражение
       Blocks to Bools 2:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое выражение, которое соответствует этому коду
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png, 500
         (10 > 11) or (7 <= 9): '(10 >11) ИЛИ (7 < = 9)'
         (10 > 11) OR (7 <= 9): '(10 >11) ИЛИ (7 < = 9)'
         (10 > 11) || (7 <= 9): '(10 >11) || (7 < = 9)'
@@ -19,18 +19,28 @@ ru:
       Blocks to Bools 3:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое выражение, которое соответствует этому коду
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png, 500
         (5 < 10) and (10 < 15): '(5 < 10) И (10 < 15)'
+        (5 < 10) And (10 < 15): '(5 < 10) And (10 < 15)'
         (5 < 10) AND (10 < 15): '(5 < 10) И (10 < 15)'
         (5 < 10) && (10 < 15): '(5 < 10) && (10 < 15)'
+        ((5 < 10) and (10 < 15)): '((5 < 10) and (10 < 15))'
+        ((5 < 10) And (10 < 15)): '((5 < 10) And (10 < 15))'
+        ((5 < 10) AND (10 < 15)): '((5 < 10) AND (10 < 15))'
+        ((5 < 10) && (10 < 15)): '((5 < 10) && (10 < 15))'
         Type the arithmetic expression here: Введите арифметическое выражение
       Blocks to Bools 4:
         Convert Blocks to Math: Преобразование блоков в математические выражения
         Type out the arithmetic expression that matches this code: Выводит арифметическое выражение, которое соответствует этому коду
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png, 500
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): '((1 < x) И (x < 5)) ИЛИ ((8 < x) И (x < 10))'
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): '((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))'
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): '((1 < x) И (x < 5)) ИЛИ ((8 < x) И (x < 10))'
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): '((1 < x) && (x < 5)) || ((8 < x) && (x < 10))'
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): '(((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))'
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): '(((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))'
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): '(((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))'
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): '(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))'
         Type the arithmetic expression here: Введите арифметическое выражение
       Blocks to Math 1:
         Convert Blocks to Math: Преобразование блоков в математические выражения
@@ -53,6 +63,7 @@ ru:
         (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
         2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
         ((2 * 3) - (1 + 0)): '((2 * 3) - (1 + 0))'
+        2 * 3 - 1 + 0: '2 * 3 - 1 + 0'
         Type the arithmetic expression here: Введите арифметическое выражение
       Blocks to Math 4:
         Convert Blocks to Math: Преобразование блоков в математические выражения
@@ -160,6 +171,7 @@ ru:
       Mixing Colors:
         title: название
         description here: Описание здесь
+      PDCSP Intro: [ ]
       PDK5 Beyond C:
         Beyond: Beyond
       PDK5 Classroom Culture C:
@@ -182,7 +194,7 @@ ru:
       PDK5 Teacher Dashboard 4:
         Course Progress: Прогресс курса
       PDK5 Teacher Dashboard C:
-        Teacher Dashboard: Teacher Dashboard
+        Teacher Dashboard: Панель управления преподавателя
       PDK5 Unplugged Intro C:
         Unplugged intro: Unplugged intro
       PDK5 UVideo Overview C:
@@ -212,6 +224,9 @@ ru:
         description here: Описание здесь
       Pixelation Flappy:
         title: название
+        description here: Описание здесь
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: 'Pixelation - Hadi Emoji'
         description here: Описание здесь
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: 'Pixelation - Lesson 14 - Fix bit offset'
@@ -281,6 +296,18 @@ ru:
       test html katie:
         testing: testing
         lkajsdfasdf: lkajsdfasdf
+      Text Compression 1:
+        Text Compression 1: Text Compression 1
+        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
+      Text Compression Peter Piper:
+        Text Compression Peter Piper: Text Compression Peter Piper
+        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
+      U1L5 Student Lesson:
+        title: название
+        description here: Описание здесь
+      U1L6 Student Lesson Plan:
+        title: название
+        description here: Описание здесь
       unique level name here:
         title: название
         description here: Описание здесь

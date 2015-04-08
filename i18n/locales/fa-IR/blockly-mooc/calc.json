@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"نتایج برنامه شما در تقسیم بر صفر.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"شما یک بلوک با یک ورودی پر نشده دارید.",
   "equivalentExpression":"سعی کنید ایده ها و فکرهایتان را منظم و مرتب کنید تا دقیقا همان عبارت را به دست بیاورید.",
   "evaluate":"ارزیابی کنید",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

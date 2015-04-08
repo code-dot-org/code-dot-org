@@ -658,6 +658,9 @@
         msm_3_pemdas: PEMDAS
         msm_6_variables: Breytur
         msm_7_functions: Föll
+        infinity_playlab_intro: Leikjasmiðja - kynning
+        infinity_playlab_events: Leikjasmiðja - Atvik
+        infinity_playlab_repeat_forever: Leikjasmiðja - Endurtaka endalaust
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

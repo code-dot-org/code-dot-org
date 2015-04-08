@@ -4,7 +4,6 @@
   "circleBlockTitle":"cirkel (straal, stijl, kleur)",
   "displayBlockTitle":"evalueren",
   "ellipseBlockTitle":"ellips (breedte, hoogte, stijl, kleur)",
-  "emptyFunctionalBlock":"Je hebt een blok zonder waarde.",
   "extraTopBlocks":"U hebt niet-vastgemaakte blokken. Wilde je deze vastmaken aan het blok \"weergeven\"?",
   "infiniteRecursionError":"Je opdracht roept zichzelf aan. We hebben het gestopt, anders zou het zichzelf oneindig blijven aanroepen.",
   "overlayBlockTitle":"overlay (boven, onder)",
@@ -27,5 +26,6 @@
   "solid":"vast",
   "string":"tekenreeks",
   "stringMismatchError":"Je hebt een tekenreeks met verkeerde (hoofd)letters.",
-  "userCodeException":"Er is een fout opgetreden tijdens het uitvoeren van de code."
+  "userCodeException":"Er is een fout opgetreden tijdens het uitvoeren van de code.",
+  "wrongBooleanError":"Jouw blokken leveren de verkeerde Boolean-waarde op."
 }

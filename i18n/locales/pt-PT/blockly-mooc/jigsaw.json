@@ -1,10 +1,10 @@
 {
   "continue":"Continua",
-  "nextLevel":"Parabéns! Completaste este puzzle.",
+  "nextLevel":"Parabéns! Concluístes este desafio.",
   "no":"Não",
   "numBlocksNeeded":"Este puzzle pode ser resolvido com blocos de  %1 .",
   "reinfFeedbackMsg":"Podes selecionar o botão \"Tenta Novamente\" para voltar e jogares o teu jogo.",
-  "share":"Partilha",
+  "share":"Partilhar",
   "shareGame":"Partilha o teu jogo:",
   "yes":"Sim"
 }

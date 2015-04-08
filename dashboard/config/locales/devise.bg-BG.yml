@@ -2,18 +2,18 @@
   devise:
     confirmations:
       confirmed: Вашият имейл адрес е успешно потвърден.
-      send_instructions: До няколко минути, ще получите писмо с инструкции за това,
+      send_instructions: До няколко минути, ще получите имейл с инструкции за това
         как да потвърдите акаунта си.
-      send_paranoid_instructions: Ако вашият електронен адрес съществува в нашата
-        база данни, ще получите писмо с инструкции за това как да потвърдите акаунта
-        си до няколко минути.
+      send_paranoid_instructions: Ако вашият email адрес съществува в нашата база
+        данни, ще получите имейл с инструкции за това как да потвърдите акаунта си
+        до няколко минути.
     failure:
       already_authenticated: Вече сте влезли.
       inactive: Вашият акаунт все още не е активиран.
-      invalid: Невалиден пощенски адрес или парола.
+      invalid: Невалиден имейл или парола.
       invalid_token: Невалиден код за удостоверяване.
       locked: Вашият акаунт е заключен.
-      not_found_in_database: Невалиден пощенски адрес или парола.
+      not_found_in_database: Невалиден имейл или парола.
       timeout: Вашата сесия е изтекла, моля, влезте отново, за да продължите.
       unauthenticated: Трябва да влезете, или да се регистрирате, преди да продължите.
       unconfirmed: Трябва да потвърдите вашия акаунт преди да продължите.
@@ -26,50 +26,72 @@
         subject: Инструкции за отключване
     omniauth_callbacks:
       failure: Не може да ви потвърдим от %{kind} , защото "%{reason}".
-      success: Успешно удостоверен от %{kind} акаунт.
+      success: Успешно удостоверен от акаунта %{kind}.
     passwords:
-      no_token: Ако не сте използвали връзката за промяна на парола от пощата си,
-        нямате право на достъп до тази страница. Ако сте копирали връзката от писмото,
-        моля, уверете се, че сте маркирали пълния ѝ URL адрес.
-      send_instructions: До няколко минути, Вие ще получите писмо с инструкции как
+      no_token: Нямате достъп до тази страница, ако не идвате от имейл за възстановяване
+        на парола. Ако идвате такъв имейл, то моля уверете се, че сте използвали пълния
+        URL от него.
+      send_instructions: До няколко минути, Вие ще получите имейл с инструкции как
         да възстановите паролата си.
-      send_paranoid_instructions: До няколко минути, ако съществува ваша регистрация
-        в нашата база данни, на адреса си ще получите връзка за възстановяване на
-        паролата.
+      send_paranoid_instructions: До няколко минути, ако вашият email адрес съществува
+        в нашата база данни, ще получите връзка за възстановяване на паролата ви,
+        на вашия имейл адрес.
       updated: Вашата парола е променена успешно. Вече сте влезли.
       updated_not_active: Вашата парола е променена успешно.
     registrations:
-      destroyed: Чао! Вашия акаунт бе успешно прекратен. Надяваме се, че скоро ще
-        ви видим отново.
+      destroyed: Чао! Вашия акаунт бе успешно прекратен. Надяваме се скоро да ви видим
+        отново.
       signed_up: Добре дошли! Вие се регистрирахте успешно.
       signed_up_but_inactive: Регистрирали сте се успешно. Въпреки това, ние не можем
         да ви впишем, тъй като вашият акаунт все още не е активиран.
       signed_up_but_locked: Регистрирали сте се успешно. Въпреки това ние не можем
-        да ви впишем, тъй като вашият акаунт е заключен.
+        да ви впишем, понеже вашият акаунт е заключен.
       signed_up_but_unconfirmed: Съобщение с линк за потвърждение, е изпратено до
         вашия имейл адрес. Моля, отворете връзката, за да активирате профила си.
       update_needs_confirmation: Успешно актуализирахте профила си, но ние трябва
         да проверим вашия нов имейл адрес. Моля, проверете електронната си поща, и
-        щракнете върху връзката за потвърждение, за да завършите потвърждаването на
-        новия си пощенски адрес.
+        щракнете върху връзката за потвърждение, за да финализирате потвърждаването
+        на новия имейл адрес.
       updated: Вие успешно обновихте профила си.
     sessions:
       signed_in: ''
       signed_out: Успешно излязохте.
     unlocks:
       send_instructions: До няколко минути, Вие ще получите имейл с инструкции как
-        да отключите вашия профил.
-      send_paranoid_instructions: До няколко минути, ако профилът съществува, вие
-        ще получите имейл с инструкции, за това как да го отключите.
+        да отключите вашия акаунт.
+      send_paranoid_instructions: Ако акаунтът съществува, вие ще получите имейл с
+        инструкции за това как да го отключите за няколко минути.
       unlocked: Вашият акаунт бе успешно отключен. Моля, влезте, за да продължите.
   errors:
     messages:
       already_confirmed: е вече потвърден, моля опитайте се да влезете
-      confirmation_period_expired: изисква се потвърждение в рамките на %{period},
-        моля поискайте нова парола
-      expired: е изтекъла, моля поискайте нова
+      confirmation_period_expired: трябва да бъде потвърден в рамките на %{period},
+        моля поискайте нов
+      expired: е изтекъл, моля поискайте нов
       not_found: не е намерен
       not_locked: не е заключен
       not_saved:
-        one: '1 грешка забранява запазването на този %{resource}:'
-        other: '%{count} грешки забраняват запазването на този %{resource} :'
+        one: '1 грешка забранява записването на този %{resource}:'
+        other: '%{count} грешки забраняват записването на този %{resource} :'
+    invitations:
+      send_instructions: An invitation email has been sent to %{email}.
+      invitation_token_invalid: The invitation token provided is not valid!
+      updated: Your password was set successfully. You are now signed in.
+      no_invitations_remaining: No invitations remaining
+      invitation_removed: Your invitation was removed.
+      new:
+        header: Send invitation
+        submit_button: Send an invitation
+      edit:
+        header: Set your password
+        submit_button: Set my password
+    mailer:
+      invitation_instructions:
+        subject: Invitation instructions
+        hello: Hello %{email}
+        someone_invited_you: Someone has invited you to %{url}, you can accept it
+          through the link below.
+        accept: Accept invitation
+        ignore: If you don't want to accept the invitation, please ignore this email.<br
+          />Your account won't be created until you access the link above and set
+          your password.

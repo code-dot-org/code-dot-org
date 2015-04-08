@@ -517,6 +517,9 @@
         msm_3_pemdas: PEMDAS
         msm_6_variables: 변수
         msm_7_functions: 함수
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

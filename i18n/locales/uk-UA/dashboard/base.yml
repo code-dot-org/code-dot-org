@@ -219,6 +219,7 @@ uk:
         artist: Намалювати
     user:
       classroom: Домашня сторінка вчителя
+      district_dashboard: District Dashboard
       label: 'Привіт %{username}'
       stats: Мій прогрес
       settings: Мій профіль
@@ -297,8 +298,8 @@ uk:
     student_teacher_disassociated: '%{teacher_name} вилучений як вчитель для %{student_name}'
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
-    email_confirm_needed_required: 'Ваш %{email} адреса електронної пошти не підтвердили:'
-    email_confirm_wrong_email: (Неправильний електронну адресу)?
+    email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
+    email_confirm_wrong_email: (Неправильна електронна адреса?)
     email_resend_confirm: Надіслати повідомлення з підтвердженням повторно
     new_password_hint: (залишіть порожнім, якщо ви не хочете змінювати)
     current_password_hint: (нам потрібний ваш поточний пароль, щоб підтвердити зміни)
@@ -437,6 +438,9 @@ uk:
       body: Переглянути галерею програм та художніх зображень, створених нашими користувачами
     frozen:
       title: Крижане серце
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Ці малюнки запрограмували учні!
     students_made_these_with_code: Це запрограмували учні!
@@ -481,7 +485,7 @@ uk:
           title: Вступ в курс інформатики для 5-8 класів (15-25 годин)
           description: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
         Hour of Code:
-          title: Година код 2013
+          title: Година коду 2013
           description: ""
         edit-code:
           title: Редагування коду
@@ -551,3 +555,5 @@ uk:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"
