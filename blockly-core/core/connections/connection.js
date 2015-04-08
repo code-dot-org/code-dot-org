@@ -556,6 +556,12 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
         return true;
       }
     }
+
+    // Don't offer to connect if the target is immovable
+    if (connection.targetConnection && !connection.targetBlock().isMovable()) {
+      return true;
+    }
+
     // Offering to connect the top of a statement block to an already connected
     // connection is ok, we'll just insert it into the stack.
     // Offering to connect the left (male) of a value block to an already
