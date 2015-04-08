@@ -154,7 +154,7 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"divideByZeroError":function(d){return "ผลของโปรแกรมของคุณถูกหารด้วยศูนย์."},
+"divideByZeroError":function(d){return "โปรแกรมของคุณเกิดการหารด้วยศูนย์"},
 "emptyComputeBlock":function(d){return "คุณต้องแนบบล็อกเพื่อทำงานกับอีกบล็อก."},
 "equivalentExpression":function(d){return "ลองจัดลำดับ argument ใหม่ เพื่อให้ได้ expression ที่เหมือนกันจริงๆ."},
 "evaluate":function(d){return "การทดสอบ"},
@@ -162,7 +162,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "ฟังค์ชั่นของคุณไม่สามารถส่งผลลัพท์ที่ถูกต้องคืนมาได้ สำหรับทุกค่า."},
 "goal":function(d){return "เป้าหมาย:"},
 "levelIncompleteError":function(d){return "Expression ของคุณไม่ตรงกับเป้าหมาย."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "คุณต้องประกาศฟังก์ชัน"+appLocale.v(d,"functionName")},
 "missingVariableX":function(d){return "Expression ของคุณขาด variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "นี่คือการคำนวณของคุณ! ทำงานต่อไป, หรือไปทำปริศนาอันต่อไป!"},
 "yourExpression":function(d){return "Expression ของคุณ:"},

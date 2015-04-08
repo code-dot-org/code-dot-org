@@ -14,7 +14,7 @@ hu:
         Az "ugorj" blokk vonalhúzás nélkül mozgatja a művészt.
         Rajzolj szaggatott vonalat az "ugorj" és a "rajzolj" blokkok segítségével.
       2-3 Artist 3_instruction: Ez a kalap 100 pixel magas. Rajzolj egy 70 pixellel kisebb kalapot.
-      2-3 Artist 3new_instruction: A vörös kalap 100 pixel magas, Fejezd be a rajzot egy fekete kalappal, ami 70 pixellel rövidebb. A fekete kalap szélessége 50 pixel.
+      2-3 Artist 3new_instruction: A vörös kalap 100 képpont magas. Fejezd be a fekete kalapot, ami 70 képponttal alacsonyabb. A fekete kalap szélessége 50 pixel.
       2-3 Artist 4_instruction: Segíts befejezni a cica házát!
       2-3 Artist 5_instruction: 'Helyettesítsd ezt a kódot egy "ismételd...alkalommal" blokkal, hogy ugyanazt a házat mindössze 3 blokk felhasználásával rajzold meg.'
       2-3 Artist 6_instruction: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget. Tipp: Mind a három oldal egyforma hosszú.'
@@ -805,6 +805,7 @@ hu:
       add 2_instruction: |
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -1198,7 +1199,7 @@ hu:
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -1270,7 +1271,7 @@ hu:
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand gives you back the amount of money it would cost to produce that number\nof cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -1299,10 +1300,8 @@ hu:
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -1316,6 +1315,7 @@ hu:
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ""
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: |
         Draw the line.
         It is 200 pixels long. 
@@ -2209,7 +2209,7 @@ hu:
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
         function block? The radius is 20. 
@@ -2322,8 +2322,8 @@ hu:
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to the center of the playspace, where it would normally be placed.
-        Use this block to offset the triangle by 80 pixels on the y axis.
+        relative to where it would normally be placed. Use this block to offset the
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -2337,86 +2337,37 @@ hu:
         Use the new 'create a circle'
         block to create 10 overlapping circles. Don't forget to jump forward between
         circles
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
+      frozen circle function in circle_instruction: Most rajzoljunk 20 egymást átfedő kört! 18 fokot kell fordulni minden kör rajzolása után.
+      frozen circle function with parameter_instruction: 'Van itt egy olyan "készíts kört" blokk, ami különböző méretű köröket tud készíteni. Fel tudod használni arra, hogy készíts egy kicsi, 5 képpont méretű, és egy nagyobb, 10 képpont méretű kört?'
+      frozen circle function_instruction: 'Használd a "készíts kört" blokkot, hogy 10 egymást átfedő kör készüljön. Ne felejts el ugrani a körök között!'
+      frozen circle_instruction: A kör egy különleges forma. Ki tudod találni, mit kell beírni a kérdőjelek helyére, hogy meg tudjunk rajzolni egy kört?
       frozen cross rotate (copy 1)_instruction: |
         Now try repeating it 10 times. How
         many degrees do you need to turn between each line?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
+      frozen cross rotate dense_instruction: 'Most ismételjük meg 90-szer! Hányszor fér bele a 90 a 360-be? Tipp: egy igazán kis számra gondolok.'
+      frozen cross rotate_instruction: Most próbáld meg 10 alkalommal ismételni. Hány fokos szögben kell elfordulnod a vonalak rajzolása közben?
+      frozen cross_instruction: 'Használd az "ismételd" blokkot egy plusz jel elkészítéséhez. Észrevetted, hogy Elza előre és hátra is tud mozogni?'
+      frozen diamond mini snowflake_instruction: 'Tudtad, hogy minden hópehelynek másmilyen a formája? Készítsünk most egy hópelyhet az "ismételd" blokkal: rajzoljuk meg a parallelogrammát négyszer, a parallelogrammák között pedig mindig forduljunk el 90 fokot.'
       frozen diamond snowflake (copy 1)_instruction: |
         Did you know every snowflake
         is a different shape?  Let's create a new snowflake by using the repeat block
         and repeating the diamond 10 times, turning right by 36 degrees between each
         diamond.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
+      frozen diamond snowflake_instruction: Most készítsünk hópelyhet úgy, hogy 10 parallelogrammát rajzolunk, és mindegyik után 36 fokot fordulunk jobbra.
+      frozen diamond_instruction: 'Most készítsünk egy parallelogrammát! Ez hasonlít a négyzetre, de eltérőek a szögei: 60 és 120 fokos szögei vannak 90 fokos szögek helyett.'
       frozen freeplay (copy 1)_instruction: |
         You've officially become a master artist!
         Create a winter wonderland.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
-      frozen line_instruction: |
-        Hi! I'm Elsa of Arendelle. Help me create a single
-        line.
-      frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
-      frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
+      frozen freeplay_instruction: Hivatalos művész mesterré váltál! Készíts egy téli csodaországot.
+      frozen line_instruction: Szia! Elza vagyok Arendelle-ből. Segíts nekem létrehozni egy vonalat.
+      frozen perpendicular_instruction: Most lássuk, sikerül-e két olyan vonalat létrehozni, amelyek 90 fokos szöget zárnak be? Használnod kell majd a fordulj és a mozgasd blokkokat.
+      frozen snowflake branch_instruction: 'Próbáld használni a "hozz létre egy hópehely ágat" blokkot, hogy létrehozz három ágat. Ez már kezd úgy kinézni, mint egy hópehely.'
+      frozen snowflake full_instruction: Most ismételjük meg 8-szor, hogy egy gyönyörű hópelyhet készítsünk!
+      frozen snowflower_instruction: Egészen összetett hópihe mintákat is tudunk készíteni egyszerű formákból. Meg tudod rajzolni ezt a mintát 5 darab 5 képpont méretű és 5 darab 10 képpont méretű kör felhasználásával?
+      frozen square iterative_instruction: Úgy tűnik, fél úton járunk ahhoz, hogy elkészüljön egy négyzet. Rajzoljunk meg négy vonalat, hogy létrehozzuk a négyzetet.
+      frozen square loop 3x_instruction: Most készítsünk három négyzetet, és minden négyzet megrajzolása után forduljunk el. Gondoskodj róla, hogy minden négyzet után 120 fokot forduljunk.
+      frozen square loop_instruction: Szia! Anna vagyok Arendelle-ből! Készítsünk négyzetet az ismételd blokkal, így kevesebb blokkot kell felhasználnunk. Hányszor (???) kell az ismételd blokknak lejátszania a benne lévő blokkokat, hogy elkészüljön a négyzet?
+      frozen square snowflake_instruction: Tudsz készíteni egy hópelyhet az ismételd blokkal? rajzoljunk négyzetet 10 alkalommal, és közben használjuk a fordulj blokkot 36 fokos elfordulásokkal minden négyzet után.
       Function Block 1_instruction: |
         Here is a new type of Block. It is called a
         "Function block." Click on "RUN" to see what it can do. 
@@ -2437,38 +2388,19 @@ hu:
         Use the new 'create a circle' block to create two
         circles
       Go Up Artist_instruction: Go Up Artist
-      Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
-      Infinity_finale_instruction: Create anything you like and share it!
-      Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
-      Infinity_repeat_instruction: |
-        Use a "repeat forever" block to make Anna move
-        up and down 400 pixels.
-      Infinity_say_instruction: 'Make Anna say "Hi there." by using the Say block.'
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      Infinity_catch_instruction: Tudsz segíteni Elzának (2. szereplő) utolérni Annát a nyíl gombokat használva?
+      Infinity_finale_instruction: Alkoss bármit, amit csak szeretnél, és oszd meg másokkal!
+      Infinity_move_collide_instruction: Hiro az 1. szereplő. Mozgasd jobbra Baymaxhoz, és játsszunk le egy hangot, amikor találkoznak.
+      Infinity_move_directions_instruction: Baymax a 2. szereplő. Adj hozzá Mozgasd blokkokat, és mozgasd Baymaxot a nyilak segítségével. Érintse meg a másik két szereplőt.
+      Infinity_move_right_instruction: Hiro az 1. szereplő. Használd a mozgasd blokkot, hogy Hiro jobbra mozogva elérje Baymaxot.
+      Infinity_repeat_instruction: Használd a végtelen ismétlés blokkot, hogy Anna föl és le mozogjon 400 képpontnyit.
+      Infinity_say_instruction: 'Használd a mondd blokkot, hogy Anna azt mondja: "Szia.".'
+      Infinity_shoot_instruction: Baymax a 2. szereplő. Baymax lőjön ki egy rakétát Hiro-ra.
+      Infinity_shoot_directions_instruction: Hiro a 3. szereplő. Hiro lőjön ki egy-egy lövedéket mind a négy másik szereplőre. Várjon egy másodpercet a lövedékek kilövése között.
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: |
-        Move Anna up, down left, and right to touch
-        each of the four snowflakes.
-      Infinity_touch_score_instruction: |
-        Make Anna score a point when she touches
-        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Infinity_touch_faster_instruction: Érintsünk meg még több hópelyhet!
+      Infinity_touch_four_instruction: Mozgasd Annát fel, le, balra és jobbra, hogy mind a négy hópelyhet megérintse.
+      Infinity_touch_score_instruction: Állítsd be, hogy Anna pontot szerezzen, valahányszor megérint egy hópelyhet. Ezután kattints a Futtatásra, és vezesd oda Annát mindegyik hópehelyhez.
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2992,6 +2924,33 @@ hu:
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -3224,5 +3183,9 @@ hu:
       TestK1-1_instruction: |
         Draw three partially overlapping squares using the repeat
         block
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

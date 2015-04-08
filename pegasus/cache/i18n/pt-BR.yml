@@ -139,7 +139,6 @@
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
     - Michael Clark, professor'
   studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explore o Code Studio
   studiobar_elementary_title: Cursos para o Ensino Fundamental
   studiobar_elementary_body: Nossos três novos cursos para Ensino Fundamental
   studiobar_hoc_title: A Hour of Code
@@ -154,43 +153,43 @@
   studiobar_donate_body: Para cada dólar doado, uma criança aprende
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_malala: "&ldquo;Eu desafio as meninas do mundo todo a fazer a
+    Hora do Código&rdquo;  \nMalala, ganhadora do Prêmio Nobel da Paz\n"
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Se você pode mudar a tecnologia,
+    você pode mudar o mundo.&rdquo;
+    Susan, CEO do YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Em vez de simplesmente jogar em seu celular,
     aprenda a programá-lo.&rdquo;
     Presidente Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Nossos filhos &mdash; inclusive nossas meninas &mdash;
+    precisam ter a oportunidade de aprender ciência da computação.&rdquo;
+    Sheryl, COO do Facebook
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;A ciência da computação leva
+    às melhores oportunidades no mundo.&rdquo;
+    Satya, CEO da Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Se você programa, você pode escolher
+    o rumo da sua vida.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; \n"
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; \n"
+  homepage_hero_text_student1: "&ldquo;Essas habilidades mudaram meu futuro.\nSem
+    contar que é pura diversão.&rdquo; \n"
+  homepage_hero_text_student2: "&ldquo;Eu nunca vi meus filhos tão\nanimados em aprender.&rdquo;
+    \n"
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; \n"
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; \n"
+    &ldquo;A ciência da computação é um campo que você não
+    pode dizer se gosta ou não antes de tê-lo experimentado.&rdquo;
+  homepage_hero_text_student4: "&ldquo;Você pode fazer o que quiser\ncom a programação.&rdquo;
+    \n"
+  homepage_hero_text_student5: "&ldquo;A ciência da computação não é para outra\npessoa.
+    É para você, aqui e agora.&rdquo; \n"
+  homepage_hero_text_teacher1: "&ldquo;Programar desperta a criatividade, inspiração
+    e inovação &mdash;\ntudo o que é essencial em qualquer carreira.&rdquo; \n"
+  homepage_hero_text_teacher2: "&ldquo;Esse programa fez 100% dos meus alunos se\nengajarem,
+    se envolverem e participarem.&rdquo; \n"
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel de controle do professor

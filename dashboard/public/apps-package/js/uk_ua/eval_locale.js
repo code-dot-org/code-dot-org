@@ -159,7 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "коло (радіус, стиль, колір)"},
 "displayBlockTitle":function(d){return "Оцінювати"},
 "ellipseBlockTitle":function(d){return "еліпс (ширина, висота, стиль, колір)"},
-"extraTopBlocks":function(d){return "У вас залишились зайві блоки. Ви збирались їх прикріпити до блоку \"показати\"?"},
+"extraTopBlocks":function(d){return "Ви не прикріпили блок.Ви мали на увазі надати значення цьому блоку?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "накладання (верхнє, нижнє)"},
 "placeImageBlockTitle":function(d){return "розмістити-зображення (x, y, зображення)"},

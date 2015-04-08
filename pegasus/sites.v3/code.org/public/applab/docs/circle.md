@@ -19,7 +19,7 @@ Category: Canvas
 
 [short_description]
 
-Draw a circle on the active canvas using the specified values for center (x, y) and radius.
+Draws a circle on the active canvas with the specified radius, and center at coordinates: (centerX, centerY).
 
 [/short_description]
 

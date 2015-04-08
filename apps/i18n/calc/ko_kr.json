@@ -1,17 +1,17 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
+  "divideByZeroError": "프로그램의 결과가 0으로 나누기가 되었습니다.",
   "emptyComputeBlock": "반드시 \"계산\" 블럭에 블럭을 붙여야 합니다.",
   "equivalentExpression": "같은 계산결과가 나올 수 있도록 다시 배치하세요.",
   "evaluate": "evaluate",
   "extraTopBlocks": "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"계산하기\"블럭에 붙이려고 했나요?",
-  "failedInput": "함수가 모든 값에 대해서 올바른 결과를 리턴하지 않습니다.",
+  "failedInput": "함수가 모든 값에 대해서 올바른 결과를 반환하지 않습니다.",
   "goal": "목표값:",
-  "levelIncompleteError": "네 계산식은 올바른 답이 아닙니다.",
-  "missingFunctionError": "You must define a function named {functionName}.",
-  "missingVariableX": "Your expression is missing variable {var}.",
+  "levelIncompleteError": "수식이 목표 값과 일치하지 않습니다.",
+  "missingFunctionError": "{functionName} 이라는 함수를 반드시 정의해야 합니다.",
+  "missingVariableX": "수식에 변수 {var}가 빠졌습니다.",
   "reinfFeedbackMsg": "축하합니다! 계속해서 작업을 하거나, 다음 퍼즐로 넘어갈 수 있습니다!",
   "yourExpression": "계산식:",
-  "wrongInput": "잘못된 값을 가지고 함수를 호출하였습니다.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongInput": "잘못된 값으로 함수를 호출하고 있습니다.",
+  "wrongOtherValuesX": "만약 {var}를 바꾼다면 수식의 결과가 틀릴 것입니다.",
+  "wrongResult": "수식이 정확한 결과를 반환하지 않습니다."
 }

@@ -1,5 +1,5 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
+  "divideByZeroError":"កម្មវិធី​របស់​អ្នក​ផ្ដល់​លទ្ធផល​ដែល​ចែក​ដោយ​សូន្យ។",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "equivalentExpression":"សូមព្យាយាម ធ្វើការរៀបចំ អំណះអំណាងរបស់អ្នកដើម្បីទទួលបានកន្សោមពិតដូចគ្នា។",
   "evaluate":"evaluate",

@@ -4,7 +4,7 @@
   "circleBlockTitle": "çember (yarıçap,stil,renk)",
   "displayBlockTitle": "değerlendirme",
   "ellipseBlockTitle": "Elips (genişlik, yükseklik, stil, renk)",
-  "extraTopBlocks": "Bağlantı yapılmamış bloklarınız var. Bunları \"görüntüleme\" bloğuyla mı ilişkilendirecek istediniz?",
+  "extraTopBlocks": "Blokları ayırdınız. Bunları \"değerlendir\" bloğuna eklemek mi istiyorsunuz?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "kaplama (üst, alt)",
   "placeImageBlockTitle": "Görüntü Yerleştir (x, y, resim)",

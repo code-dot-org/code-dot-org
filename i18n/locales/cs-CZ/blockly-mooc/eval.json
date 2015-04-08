@@ -4,7 +4,7 @@
   "circleBlockTitle":"kruh (poloměr, styl, barva)",
   "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"Elipsa (šířka, výška, styl, barva)",
-  "extraTopBlocks":"Máš nepřipojené bloky. Nechceš je připojit k bloku \"zobraz\"?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"překrytí (zhora, zdola)",
   "placeImageBlockTitle":"umístit obrázek (x, y, obrázek)",

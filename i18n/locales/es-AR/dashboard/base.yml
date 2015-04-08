@@ -219,7 +219,7 @@ es-AR:
         artist: Dibujar algo
     user:
       classroom: Página de inicio del maestro
-      district_dashboard: District Dashboard
+      district_dashboard: Tablero de Distrito
       label: 'Hola %{username}'
       stats: Mi progreso
       settings: Mi cuenta
@@ -439,7 +439,7 @@ es-AR:
     frozen:
       title: Frozen
     infinity:
-      title: Infinity Play Lab
+      title: Laboratorio de Juego Infinity
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
@@ -470,6 +470,12 @@ es-AR:
     wrong_body: 'La solución ingresada no es la correcta.  ¡Intenta nuevamente!'
     correct_title: Correcto
     correct_body: Esa respuesta es la correcta.
+  contract_match:
+    wrong_title: Respuesta incorrecta
+    badname: El contrato tiene el nombre equivocado.
+    badrange: El contrato tiene el nombre equivocado.
+    baddomainsize: El contrato no tiene el número de elementos en el dominio.
+    baddomainname: Uno o más items de su dominio tienen el nombre equivocado.
   text_match:
     placeholder: Escribe aquí tu respuesta
   dialog:
@@ -515,20 +521,20 @@ es-AR:
     sign_out: 'Si no quieres proporcionar tu edad puedes <a heref="%{url}">finalizar tu sesión</a>.'
   zendesk_too_young_message: 'Lo sentimos, los usuarios más jóvenes no pueden registrarse en nuestro sitio de soporte. Puedes navegar <a href="http://support.code.org">support.code.org</a> sin registrarte o pedir a tus padres o maestros que nos contacten en tu nombre.'
   progress:
-    not_started: not started
+    not_started: No iniciado
     in_progress: En progreso
     completed_too_many_blocks: completado, pero tiene demasiados bloques
     completed_perfect: completado, perfecto
     furthest_level_attempted: Nivel más alto intentado
-    assessment: assessment
+    assessment: evaluación
   studio:
     courses_working_on: Cursos en los que estás participando
     completed_courses: Cursos finalizados
     all_courses: Todos los cursos
   project:
-    projects: Projects
+    projects: Proyectos
     create: Crear Proyecto
-    create_a_project: 'Create a new project:'
+    create_a_project: 'Crear un nuevo proyecto:'
     new: Crear Nuevo
     rename: Renombrar
     save: Guardar
@@ -543,7 +549,7 @@ es-AR:
     name: Nombre
     updated: Actualizado
     project_type: Tipo de Proyecto
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    help_text: '¡Haz clic en <strong>Hacer una Aplicación</strong> o <strong>Dibujar Algo</strong> más abajo para hacer un nuevo proyecto de Artista o de Laboratorio de Juego! <br/>Puedes regresar y trabajar en tus proyectos en cualquier momento.'
     need_help: Requiere ayuda para empezar ?
     really_delete: ¿Borrar?
     delete_yes: Sí
@@ -554,5 +560,5 @@ es-AR:
     delete_confirm_title: Esta seguro de querer eliminar este proyecto?
     delete_confirm_text: Eliminado su proyecto hará que se retire permanentemente de su lista de proyectos. Cualquiera que tenga un enlace compartido por usted no podrá seguir viendo el proyecto.
     view_all: Ver Mis Proyectos
-    remix: Remix
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    remix: Remezclar
+    click_to_remix: "¡Haz clic en 'Remezclar' para a variar tu propia versión!"

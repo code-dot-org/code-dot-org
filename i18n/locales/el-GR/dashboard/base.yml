@@ -471,6 +471,12 @@ el:
     wrong_body: 'Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε ξανά!'
     correct_title: Σωστό
     correct_body: Αυτή είναι η σωστή απάντηση.
+  contract_match:
+    wrong_title: Λανθασμένη απάντηση
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Εισάγετε την απάντησή σας εδώ
   dialog:

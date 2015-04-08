@@ -8,10 +8,10 @@
   "goal":"Ziel:",
   "levelIncompleteError":"Dein Ausdruck erfüllt nicht das Ziel.",
   "missingFunctionError":"You must define a function named {functionName}.",
-  "missingVariableX":"Bei Ihrem Ausdruck fehlt die Variable {var}.",
+  "missingVariableX":"Bei deinem Ausdruck fehlt die Variable {var}.",
   "reinfFeedbackMsg":"Hier ist deine Berechnung! Arbeite weiter oder gehe zum nächsten Rätsel!",
   "yourExpression":"Dein Ausdruck:",
   "wrongInput":"Du rufst deine Funktion mit einem falschen Wert auf.",
   "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Ihr Ausdruck gibt nicht das richtige Ergebnis zurück."
+  "wrongResult":"Dein Ausdruck gibt nicht das richtige Ergebnis zurück."
 }

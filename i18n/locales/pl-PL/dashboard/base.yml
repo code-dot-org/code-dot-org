@@ -470,6 +470,12 @@ pl:
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
     correct_title: Poprawnie
     correct_body: To jest poprawna odpowiedź.
+  contract_match:
+    wrong_title: Błędna odpowiedź
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Wprowadź swoją odpowiedź tutaj
   dialog:

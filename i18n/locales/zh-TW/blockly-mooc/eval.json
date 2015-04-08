@@ -4,7 +4,7 @@
   "circleBlockTitle":"圓(半徑、 樣式、 顏色)",
   "displayBlockTitle":"計算",
   "ellipseBlockTitle":"橢圓(寬度,高度,樣式, 顏色)",
-  "extraTopBlocks":"你有未連接的區塊，難道你要將它們附加到\"顯示\"區塊嗎?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"覆蓋 (頂部, 底部)",
   "placeImageBlockTitle":"放置圖片(x,y,圖片)",

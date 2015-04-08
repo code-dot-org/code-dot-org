@@ -4,7 +4,7 @@
   "circleBlockTitle":"წრე (რადიუსი, სტილი, ფერი)",
   "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"ელიფსი (სიგანე, სიმაღლე, სტილი, ფერი)",
-  "extraTopBlocks":"ზოგიერთი ბლოკი მიუერთებელია, გსურთ მათი მიერთება ბლოკთან „გამოსახვა“?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"ზედდება (ზემოდან, ქვემოდან)",
   "placeImageBlockTitle":"სასურათე ადგილი (x, y, სურათი)",

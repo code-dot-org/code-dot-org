@@ -20,6 +20,7 @@ Category: UI controls
 [short_description]
 
 Creates a checkbox button. A checkbox is used to choose between two options and can be referenced by the specified id.
+
 [/short_description]
 
 [/description]
@@ -30,9 +31,9 @@ ____________________________________________________
 [example]
 
 <pre>
-// Create a checkbox
+// Create a checkbox with a corresponding label
 checkbox("Agree",false);
-textLabe("IAgreeLabel","I Agree","Agree");
+textLabel("IAgreeLabel","I Agree","Agree");
 </pre>
 
 [/example]
@@ -84,6 +85,7 @@ No Return Value
 ### Tips
 All checkbox buttons should always have an associated textLabel. If you have more than 2 choices, consider using a radioButton or dropdown list.
 
+The radioButton can also be used in design mode.
 [/tips]
 
 [bug]

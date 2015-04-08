@@ -555,6 +555,12 @@
     wrong_body: The solution you've entered is not correct.  Please try again!
     correct_title: Tama
     correct_body: Iyon ay ang tamang sagot.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Enter your answer here
   dialog:

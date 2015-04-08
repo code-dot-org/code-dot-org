@@ -470,6 +470,12 @@ ro:
     wrong_body: 'Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!'
     correct_title: Corect
     correct_body: Acela este răspunsul corect.
+  contract_match:
+    wrong_title: Răspuns incorect
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Completați răspunsul aici
   dialog:

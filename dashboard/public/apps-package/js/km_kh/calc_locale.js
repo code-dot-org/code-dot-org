@@ -154,7 +154,7 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"divideByZeroError":function(d){return "Your program results in division by zero."},
+"divideByZeroError":function(d){return "កម្មវិធី​របស់​អ្នក​ផ្ដល់​លទ្ធផល​ដែល​ចែក​ដោយ​សូន្យ។"},
 "emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "សូមព្យាយាម ធ្វើការរៀបចំ អំណះអំណាងរបស់អ្នកដើម្បីទទួលបានកន្សោមពិតដូចគ្នា។"},
 "evaluate":function(d){return "evaluate"},

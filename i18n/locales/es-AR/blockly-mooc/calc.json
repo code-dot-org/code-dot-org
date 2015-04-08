@@ -12,6 +12,6 @@
   "reinfFeedbackMsg":"Aquí esta tu calculo! Continua trabajando en ello, o pasa al siguiente rompecabezas!",
   "yourExpression":"Tu expresión:",
   "wrongInput":"Estas llamando tu función con el valor incorrecto.",
-  "wrongOtherValuesX":"Su expresión se traduce en un valor incorrecto si variamos",
+  "wrongOtherValuesX":"Su expresión da como resultado el valor incorrecto si variamos {var}.",
   "wrongResult":"Su expresión no devuelve el resultado correcto."
 }

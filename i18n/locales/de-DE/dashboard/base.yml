@@ -42,7 +42,7 @@ de:
   less: WENIGER
   beta: Beta
   try_hoc: 'Probiere "The Hour of Code" aus, klicke hier >> '
-  try_k8intro: Versuche unseren Einführungskurs in die Informatik (15-25 Stunden)
+  try_k8intro: Probiere unseren Einführungskurs in die Informatik (15-25 Stunden)
   k8intro: Einführung in die Informatik (15-25 Stunden)
   already_started: 'Schon begonnen? Hier fortsetzen >> '
   demos: 'Admin: Alle Demos'
@@ -98,8 +98,8 @@ de:
     submit: Anmelden
   signin:
     try_heading: Willst Du mit dem Programmieren anfangen, ohne Dich anzumelden?
-    try_hoc: Versuche zuerst eine Hour of Code
-    try_20hours: Versuche unsere 20-stündige Einführung in die Informatik
+    try_hoc: Probiere zuerst eine Hour of Code
+    try_20hours: Probiere unsere 20-stündige Einführung in die Informatik
   signinsection:
     welcome: 'Willkommen im Kapitel %{section_name}'
     name: Wähle deinen Namen
@@ -110,7 +110,7 @@ de:
     reset_form:
       title: Passwort vergessen?
       email: E-Mail-Adresse
-      submit: Sende mir Anweisungen um das Kennwort zurückzusetzen
+      submit: Sende mir Anweisungen um das Passwort zurückzusetzen
     change_form:
       title: Ändern Sie Ihr Passwort
       new_password: Neues Passwort
@@ -129,7 +129,7 @@ de:
   follower:
     invite_sent: Einladung gesendet
     added_teacher: '%{name} wurde als Ihr Lehrer hinzugefügt'
-    registered: 'Sie haben Sich registriert als %{section_name}.'
+    registered: 'Sie haben Sich für %{section_name} registriert.'
     error:
       signed_in: Bitte melden Sie sich ab bevor Sie fortfahren
       username_not_found: 'Benutzername %{username} wurde nicht gefunden'
@@ -295,7 +295,7 @@ de:
       email: Als e-Mail senden
     rollup: Fortschrittsanzeige
     activity: Letzte Aktivitäten der Klasse
-    user_not_found: Der Lehrer oder Student konnte nicht gefunden werden
+    user_not_found: Der Lehrer oder Schüler konnte nicht gefunden werden
     cant_remove_student_no_email: '%{student_name} kann nicht von ihren Schülern entfernt werden, da %{student_name} nicht mit einer E-Mail-Adresse registriert ist'
     cant_remove_teacher_no_email: '%{teacher_name} kann nicht als dein Lehrer entfernt werden, da du keine E-Mail-Adresse registriert hast'
     student_teacher_disassociated: '%{teacher_name} wurde als Lehrerin für %{student_name} entfernt'
@@ -305,7 +305,7 @@ de:
     email_confirm_wrong_email: (Falsche E-Mail-Adresse?)
     email_resend_confirm: Anmeldebestätigung erneut senden
     new_password_hint: (freilassen, wenn Sie es nicht verändern möchten)
-    current_password_hint: (wir benötigen Ihr aktuelle Kennwort, um Ihre Änderungen zu bestätigen)
+    current_password_hint: (wir benötigen dein aktuelles Passwort, um deine Änderungen zu bestätigen)
     delete: Lösche deinen Account
     delete_text: Klicke auf den unteren Button um deinen Account zu löschen.
     delete_text_teacher_note: 'Bitte bemerke: Das Löschen deines Accounts wird nicht die Accounts deiner Schüler löschen.'
@@ -344,7 +344,7 @@ de:
     trynow: Probiere es jetzt aus
     add_hint_help: Bitte helfen Sie uns nützliche Hinweise zu Code.org Tutorials hinzuzufügen
     20hour_overview: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.'
-    test_videos_help: Testen Sie unseren neuen Video-Player an Ihrer Schule
+    test_videos_help: Teste unseren neuen Video-Player an deiner Schule
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Schüler der Schulstufen 1-6
     use_as_teacher: Verwende diese Seite als Lehrer
     heading_hoc2014: '<h2>Die Hour of Code für</h2><h1>jedes Alter</h1>'
@@ -442,8 +442,8 @@ de:
     frozen:
       title: Die Eiskönigin
     infinity:
-      title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      title: Infinity Spiele Lab
+      body: Benutze den Spiele Lab, um eine Geschichte oder ein Spiel mit dem Disney Infinity Charakteren z u erstellen.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -473,6 +473,12 @@ de:
     wrong_body: Die Lösung, die du eingegeben hast, ist nicht korrekt. Bitte versuche es erneut!
     correct_title: Richtig
     correct_body: Das ist die richtige Antwort.
+  contract_match:
+    wrong_title: Falsche Antwort
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Gebe hier deine Antwort ein
   dialog:
