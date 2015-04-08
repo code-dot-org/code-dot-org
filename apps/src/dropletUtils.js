@@ -64,10 +64,10 @@ var standardConfig = {};
 
 standardConfig.blocks = [
   // Control
-  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
   {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'category': 'Control' },
   {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
   {'func': 'getTime', 'block': 'getTime()', 'category': 'Control', type: 'value' },
 
   // Math
