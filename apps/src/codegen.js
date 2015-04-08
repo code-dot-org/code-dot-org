@@ -501,3 +501,28 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
   }
   return userCodeRow;
 };
+
+/**
+ * Finds the current line of code in droplet/ace editor. Walks up the stack if
+ * not currently in the user code area.
+ */
+exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
+                                           userCodeStartOffset, userCodeLength) {
+  var userCodeRow = 0;
+  for (var i = 0; i < interpreter.stateStack.length; i++) {
+    var node = interpreter.stateStack[i].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+      break;
+    }
+  }
+  return userCodeRow;
+};
