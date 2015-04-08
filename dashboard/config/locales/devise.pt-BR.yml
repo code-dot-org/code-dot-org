@@ -73,24 +73,23 @@
         one: '1 erro impede esse %{resource} de ser salvo:'
         other: '%{count} erros impedem esse %{resource} de ser salvo:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: Foi enviado um e-mail de convite para %{email}.
+      invitation_token_invalid: A chave de convite fornecida não é válida!
+      updated: Sua senha foi salva com êxito. Agora você está conectado.
+      no_invitations_remaining: Nenhum convite restante
+      invitation_removed: Seu convite foi removido.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Enviar convite
+        submit_button: Enviar um convite
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Escolha uma senha
+        submit_button: Definir minha senha
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Instruções de convite
+        hello: Olá %{email}
+        someone_invited_you: Alguém o convidou para %{url}, você pode aceitar o convite
+          por meio do link abaixo.
+        accept: Aceitar convite
+        ignore: Se você não quiser aceitar o convite, ignore este e-mail.<br />Sua
+          conta não será criada até que você acesse o link acima e defina sua senha.

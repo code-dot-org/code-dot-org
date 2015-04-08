@@ -309,7 +309,7 @@ bg:
           "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и Питагорова теорема'
           "Play Lab: Collision Detection (Big Game)": 'Голямата игра - Collision Detection'
         infinity:
-          title: Disney Infinity Play Lab
+          title: Дисни Инфинити Игрална лаборатория
           description_short: 'Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.'
           description: 'Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.'
           Play Lab: Театрална лаборатория
@@ -466,8 +466,17 @@ bg:
           Lesson 5: Урок 5
           Lesson 3: Урок 3
           Lesson 4: Урок 4
-          Lesson 6: Lesson 6
-          Lesson 2: Lesson 2
+          Lesson 6: Урок 6
+          Lesson 2: Урок 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
         algebraPD:
           title: Компютърни науки в алгебрата
           description: Научете функционално програмиране чрез алгебра
@@ -524,10 +533,10 @@ bg:
           description: Компресиране на текст чрез идентифициране на повтарящи се модели.
           Text Compression: Компресия на текста
         CSPPD:
-          new stage: new stage
+          new stage: нов етап
           Introduction to PD: Въведение в PD
         CSPLessonSamples:
-          title: CSP Lesson Samples
-          description_short: lesson samples for csp
+          title: CSP пробни уроци
+          description_short: пробни уроци за csp
           Lesson 14: Урок 14
           Lesson 15: Урок 15

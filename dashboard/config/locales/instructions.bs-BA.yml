@@ -677,6 +677,7 @@
       A test level ArtistArtist_instruction: A test level ArtistArtist
       add 2_instruction: Super odrađen zadnji zadatak. Hajde da pokušamo još jednom.
         Ali sada hajde da napravimo ovaj cool crtež sa šestougaonicima od 60 piksela.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: Hadje sada da nacrtamo 6 kvadrata
         tako da svaki ima slučajno odabranu boju. Za koji ugao bismo trebali okrenuti
         između crtanja svakih od kvadrata da bismo dobili puni krug kvadrata?
@@ -997,9 +998,10 @@
       Calc Circles of Eval .2_instruction: Ovaj Blok Izvršenja je funkcija za množenje
         koja uzima dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako
         da pomnoži 2 * 5
-      Calc Circles of Eval .3_instruction: Ovo je funkcija za Sabiranje - uzima dva
-        broja i vraća njihov zbir. Upotrijebi ovaj Blok Sabiranja da izračunaš 3 +
-        6.
+      Calc Circles of Eval .3_instruction: |
+        Here's a function for Addition which
+        takes two numbers and returns their sum. Use this Addition block to add 3
+        + 6.
       Calc Circles of Eval .4_instruction: Ovdje smo ugnijezdili Blok Sabiranja unutar
         Bloka Množenja. Dovrši ovaj kod da bi pomnožio/la 3 sa (4 + 1)
       Calc Circles of Eval 1 (copy 1)_instruction: Pretvori ovaj izraz u <some_shape>
@@ -1050,12 +1052,10 @@
         two example cases! When you're done, use your new function to calculate 7
         cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
-        are in charge of writing computer programs to track the cost of making\neach
-        treat, the money customers give you, and the total profit from selling\nthem.
-        Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe
+        need to track the cost of making each cookie, the money paid, and the\ntotal
+        profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe
         function `cost`, which takes in the number of cookies you intend to sell,\nand
-        gives you back the amount of money it would cost to produce that number\nof
-        cookies."
+        returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -1088,10 +1088,8 @@
       Calc Vars 2 (copy 1)_instruction: Ovdje smo postavili varijablu "dob" na 17.
         Možeš li napisati izraz koji računa "dob" izraženu u mjesecima?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: Možeš li napisati izraz koji računa "dob" izraženu
         u godinama?
       Calc Vars 3 (copy 1)_instruction: Možeš li nadopuniti ovaj kod tako da može
@@ -1102,6 +1100,7 @@
       Calc Vars 4_instruction: Isto tako možemo postaviti vrijednosti varijabli koristeći
         druge varijable. Recimo da imaš brata koji je dvije godine mlađi od tebe.
         Možeš li postaviti novu varijable "dob-brata" koristeći tvoju "dob" varijablu?
+      Code Logo v3_instruction: ''
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: "Draw the line.\nIt
         is 200 pixels long. \n"
       Code Studio Puzzle Challenge 1 - Artist_instruction: 'Nacrtaj liniju koja je
@@ -1813,8 +1812,9 @@
         red star with a 60 pixel radius
       Eval Contracts C_instruction: Provjeri ovu "rotiraj" funkciju. Možeš li je upotrijebiti
         da zarotiraš ovaj zeleni kvadrat od 90 piksela veličine za 45 stepeni?
-      Eval Contracts E_instruction: Pokušaj upotrijebiti "tekst" funkciju za pisanje
-        ovog tirkiznog teksta veličine 40.
+      Eval Contracts E_instruction: |
+        Try using the "text" function to write this
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: 'Možeš li dovršiti ovu sliku koristeći "smanji"
         funkciju? Prečnik je 20. '
       Eval Define Funcs 1_instruction: Evo nove funkcije pod nazivom "zeleni-trokut"
@@ -1908,8 +1908,8 @@
         žutu zvijezdu od 75 piksela preko plavog pravougaonika dugog 150 piksela.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to the center of the playspace, where it would normally be placed.
-        Use this block to offset the triangle by 80 pixels on the y axis.
+        relative to where it would normally be placed. Use this block to offset the
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -2483,6 +2483,33 @@
       perpendicular_instruction: Hajde sada da vidimo da li možemo napraviti dvije
         okomite linije. Okomite linije su dvije linije koje se presijecaju pod pravim
         uglom (90 stepeni).
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: Raketa je poletjela i leti brzinom od 15 metara
         u sekundi... klikni na "pokreni" da vidiš kako ovaj problem izgleda kao animacija.
       Play Lab Rocket 2 (copy 1)_instruction: Dodali smo tvoj ugovor i još dva primjera
@@ -2715,6 +2742,10 @@
       testing_instruction: Test level
       TestK1-1_instruction: Nacrtaj tri djelomično preklapajuća kvadrata koristeći
         blok ponavljanja
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
       XML Scratchpad_instruction: Koristeći ovaj test nivo za dohvatanje xml-a za
         jedinični test

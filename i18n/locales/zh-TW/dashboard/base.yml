@@ -473,6 +473,12 @@ zh:
     wrong_body: 您的解決方案不正確。請再試一次 ！
     correct_title: 正確
     correct_body: 這是正確的答案。
+  contract_match:
+    wrong_title: 不正確的答案
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: 在這裡輸入你的答案
   dialog:

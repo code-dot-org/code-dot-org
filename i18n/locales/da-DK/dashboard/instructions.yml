@@ -2,66 +2,30 @@ da:
   data:
     instructions:
       10A_instruction: Okay Lad os afslutte denne opgave med et grønt kvadrat, der er 175 pixels på hver side.
-      2-3 _instruction: |
-        Purple flowers may have either 1 or 0 nectar. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Artist 1 new_instruction: |
-        Hi, I'm an artist. You can write code to make
-        me draw almost anything. Use a few blocks to make me draw over the grey lines
-        in the picture. (Each line is 100 pixels long)
-      2-3 Artist 11_instruction: |
-        Give the stop sign a border by making an octagon
-        with 8 sides, each 100 pixels long. How many degrees should you turn? (Hint:
-        What is 360 divided by 8?) 
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
-      2-3 Artist 2 new_instruction: |
-        This house has a half-finished wall. Each side
-        is 100, but the half-finished wall is only 50. Complete the wall. 
+      2-3 _instruction: Lilla blomster kan enten have 1 eller 0 nektar. Vær omhyggelig med ikke at samle nektar fra en lilla blomst, hvis den ikke har noget.
+      2-3 Artist 1 new_instruction: Hej, er jeg en kunstner. Du kan få mig til at tegne næsten hvad som helst, hvis bare du skriver koden . Brug et par blokke til, at tegne over de grå linier i billedet. (Hver linje er 100 pixels lang)
+      2-3 Artist 11_instruction: 'Giv stopskiltet en kant ved at lave en ottekant med 8 sider, hver 100 pixel lang. Hvor mange grader skal du dreje? (Hint: Hvad er 360 divideret med 8?) '
+      2-3 Artist 12_instruction: 'Angiv "repeat times" blokken, så det skaber en "circle" for at lave øjet. Hvis hver bevægelse drejer en grad til højre, hvor mange gange du skal gentage den for at fuldende cirklen? 180? 360? 500?'
+      2-3 Artist 2 new_instruction: 'Dette hus har en halv-færdig væg. Hver side er 100, men den halvfærdige væg er kun 50. Færdiggør væggen. '
       2-3 Artist 2_instruction: |
         This house has a half-finished wall. Each side is
         100, but the half-finished wall is only 50. Complete the wall. 
-      2-3 Artist 3.4_instruction: |
-        The jump block moves the artist without drawing.
-        Draw the dashed line by using both the jump and draw blocks.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
-      2-3 Artist 4_instruction: Help me complete the house for this cat.
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
-      2-3 Artist 7_instruction: |
-        Finish drawing the right half of the last window.
-        Each square of the window is 25 pixels. 
-      2-3 Artist 8_instruction: |
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
-      2-3 Artist 9_instruction: Finish this kite
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
+      2-3 Artist 3.4_instruction: 'Hop blokken flytter kunstneren uden at tegne. Tegn de stiplede linjer ved hjælp af både hoppe- og tegneblokkene.'
+      2-3 Artist 3_instruction: Denne hat er 100 pixels høj. Tegn en hat, der er 70 pixels mindre.
+      2-3 Artist 3new_instruction: Den røde hat er 100 pixels høj. Tegn en sort hat, der er 70 pixels kortere. Bredden af den sorte hat er 50 pixel.
+      2-3 Artist 4_instruction: Hjælp mig færdigøre huset for denne kat.
+      2-3 Artist 5_instruction: 'Erstat denne kode med en "gentag gange" blok til at tegne det samme hus ved hjælp af kun 3 blokke.'
+      2-3 Artist 6_instruction: 'Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.'
+      2-3 Artist 7_instruction: 'Udfør tegningen af den højre halvdel af det sidste vindue. Hvert kvadrat i vinduet er 25 pixel. '
+      2-3 Artist 8_instruction: Færdiggør værelserne til hvert dyr ved at opdele rektanglen i 2 lige store firkanter. Rektanglen er 200 pixel bred og 100 pixel høj.
+      2-3 Artist 9_instruction: Færdiggør dragen
+      2-3 Artist Assessment 1_instruction: 'Vurdering: Færdiggør tegningen af den sidste tand, 25 pixel bred og 25 pixel høj.'
+      2-3 Artist Debugging 1_instruction: Kan du lave dette hat med en top længde på 100?
       2-3 Artist Debugging 10_instruction: |
         The direction pad on my game controller
         is too narrow. Hint: Make it wider by 10 pixels
-      2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
-      2-3 Artist Debugging 12_instruction: |
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
+      2-3 Artist Debugging 11_instruction: 'Hjælp mig med at afslutte mit smukke snefnug. Hvor mange gange skal jeg "gentage" for at færdiggøre det?'
+      2-3 Artist Debugging 12_instruction: Jeg skal tilføje en bølge til denne scene. Kan du hjælpe mig?
       2-3 Artist Debugging 2_instruction: |
         The code for the three whiskers that you
         see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
@@ -885,6 +849,7 @@ da:
       add 2_instruction: |
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -1278,7 +1243,7 @@ da:
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -1350,7 +1315,7 @@ da:
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand gives you back the amount of money it would cost to produce that number\nof cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -1379,10 +1344,8 @@ da:
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -1396,6 +1359,7 @@ da:
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ""
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: |
         Draw the line.
         It is 200 pixels long. 
@@ -2293,7 +2257,7 @@ da:
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
         function block? The radius is 20. 
@@ -2406,8 +2370,8 @@ da:
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to the center of the playspace, where it would normally be placed.
-        Use this block to offset the triangle by 80 pixels on the y axis.
+        relative to where it would normally be placed. Use this block to offset the
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -3059,6 +3023,33 @@ da:
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -3302,5 +3293,9 @@ da:
       TestK1-1_instruction: |
         Draw three partially overlapping squares using the repeat
         block
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

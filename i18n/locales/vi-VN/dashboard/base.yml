@@ -1,7 +1,7 @@
 vi:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Hãy sửa các lỗi sau đây:'
   activerecord:
     errors:
       messages:
@@ -282,8 +282,8 @@ vi:
       grade: Grade
       course: Course
       rename: đổi tên
-      edit: edit
-      delete: delete
+      edit: chỉnh sửa
+      delete: xóa
       confirm_delete: Are you sure you want to delete this section?
       email: Send in email
     rollup: Bảng tiến trình
@@ -299,10 +299,10 @@ vi:
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (để trống nếu bạn không muốn thay đổi nó)
     current_password_hint: (chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)
-    delete: Delete your account
+    delete: Xóa tài khoản của bạn
     delete_text: Clicking the button below will delete your account.
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete_confirm: Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?
   user_level:
     completed: Đã hoàn thành
     tried: Cố gắng
@@ -354,7 +354,7 @@ vi:
     student: học sinh
     teacher: Giáo viên
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+    help_from_html: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp tạo ra hướng dẫn này.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     powered_by_aws: Powered by Amazon Web Services
     feedback: Cung cấp thông tin phản hồi
@@ -467,6 +467,12 @@ vi:
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: Correct
     correct_body: That is the correct answer.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Enter your answer here
   dialog:

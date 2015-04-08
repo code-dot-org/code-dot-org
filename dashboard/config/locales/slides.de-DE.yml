@@ -58,9 +58,9 @@
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hi, ich bin JR! Jedes Autorennteam braucht Computerspezialisten, um
-          zu gewinnen. Sie analysieren die Messdaten des Autos, um es noch schneller
-          zu machen.
+        text: Hallo, ich heiße JR! Jedes Autorennteam braucht Computerspezialisten,
+          um erfolgreich zu sein. Sie analysieren die Messdaten des Autos, um es noch
+          schneller zu machen.
       2:
         image: notes/stage5_2.jpg
         text: In diesen Rätseln bist du ein Künstler, der überall wo er hin geht,
@@ -494,16 +494,16 @@
           that's called a function.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Hi, ich bin Jess. Beim Programmieren mit Blöcken, nutzt man Funktionen,
+          wenn es eine Reihe von Handlungen gibt, die man viele Male wiederholen möchte.
+          Ein Beispiel ist der Code, den du geschrieben hast, um ein Quadrat zu zeichnen.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Du kannst diese Funktion "Zeichne ein Quadrat" nennen. '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: Nun hast du einen neuen Block, den du viele Male benutzen kannst, um
+          mehrere Quadrate zu zeichnen.
       7:
         image: notes/frozen3_7.jpg
         text: A lot of simple shapes can be used to create more complex patterns.
@@ -522,8 +522,8 @@
           these blocks together to move the actors around with the arrow keys.
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked.
-          Check them out and have fun!
+        text: Und es gibt einige Blöcke, die etwas tun, wenn Figuren zusammenstoßen
+          oder angeklickt werden. Probiers und hab Spaß!
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png

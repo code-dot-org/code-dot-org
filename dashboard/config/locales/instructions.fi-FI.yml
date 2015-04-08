@@ -24,8 +24,9 @@
         piirtää. Piirrä katkoviiva käyttämällä sekä hyppää- että piirrä-lohkoja.
       2-3 Artist 3_instruction: Tämä hattu on 100 kuvapistettä korkea. Piirrä hattu,
         joka on 70 kuvapistettä vähemmän.
-      2-3 Artist 3new_instruction: Punainen hattu on 100 kuvapistettä korkea. Piirrä
-        musta hattu, joka on 70 kuvapistettä lyhyempi. Mustan hatun leveys on 50 kuvapistettä.
+      2-3 Artist 3new_instruction: Punainen hattu on korkeudeltaan 100 kuvapistettä.
+        Täydennä piirustus mustasta hatusta, joka on 70 kuvapistetta matalampi. Mustan
+        hatun leveys on 50 kuvapistettä.
       2-3 Artist 4_instruction: Auta minua saamaan valmiiksi talo tälle kissalle.
       2-3 Artist 5_instruction: Korvaa tämä koodi "toista kertaa" -lohkolla siten,
         että se piirtää saman talon käyttäen vain 3 lohkoa.
@@ -37,8 +38,8 @@
         2:een samansuuruiseen neliöön. Suorakulmio on 200 kuvapistettä leveä ja 100
         kuvapistettä korkea.
       2-3 Artist 9_instruction: Viimeistele tämä leija
-      2-3 Artist Assessment 1_instruction: 'Arviointi: Viimeistele piirtämällä viimeinen
-        hammas, 25 kuvapistettä leveä ja 25 kuvapistettä korkea.'
+      2-3 Artist Assessment 1_instruction: 'Arviointi: Piirrä loppuun viimeinen hammas,
+        korkeudeltaan 25 kuvapistettä ja leveydeltään 25 kuvapistettä.'
       2-3 Artist Debugging 1_instruction: Voitko tehdä tämän hatun huippupituudella
         100?
       2-3 Artist Debugging 10_instruction: 'Minun peliohjaimen suunta-näppäimistö
@@ -119,7 +120,7 @@
         silmukan sisälle ja katso, miten kuviomme muuttuu.
       2-3 Artist Loops 7_instruction: Voimme käyttää silmukoita tekemään kaikenlaisia
         monikulmioita.  Osaatko tehdä vinoneliön tämän kuusikulmion sisälle?
-      2-3 Artist Loops 8_instruction: Laittakaamme molemmat osaset silmukan sisälle.
+      2-3 Artist Loops 8_instruction: Laitetaan molemmat palat silmukan sisään.
       2-3 Artist Loops 9_instruction: "Aiomme laittaa silmukoihin samoja osia, mutta
         nyt me aiomme lisätä niiden välistä eäisyyttä.\r Käytä samaa koodia kuin ennenkin,
         mutta lisää askel eteenpäin ulomman silmukan loppuun."
@@ -161,10 +162,9 @@
         times to draw this pattern. Divide the number of degrees in a circle (360)
         by the number of shapes you're drawing (12) to figure out how much to turn
         after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
+      2-3 Artist Nested Loops 4_instruction: 'Tee toistosilmukka tälle timantille
+        12 kertaa piirtääksesi kukka. Vinkki: 12 timanttia on kuten 12 kolmiota, jotka
+        teit - kuinka paljon sinun täytyy kääntyä kunkin muodon jälkeen?'
       2-3 Artist Nested Loops 5_instruction: |
         Fill in this building's windows with
         a nested loop. The windows are 20 pixels long and 20 pixels apart.
@@ -213,26 +213,20 @@
       2-3 Bee Conditionals 4_instruction: |
         Help me collect all of the nectar from
         the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
+      2-3 Bee Conditionals 5_instruction: Violeteissa kukissa voi olla 1 tai 0 mettä,
+        mutta et tiedä kuinka paljon! Varo keräämästä mettä violetista kukasta jos
+        sitä ei ole. Tarkista onko meden määrä 1 käyttäen jos-lohkoa.
       2-3 Bee Conditionals 6_instruction: |
         Check this flower with an "if" block
         to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
-      2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
+      2-3 Bee Conditionals 7_instruction: Cherry mesi kustakin kukasta, jos niissä
+        sitä on.
+      2-3 Bee Conditionals 8_instruction: Kentällä on punaisia ja violetteja kukkia.
+        Punaisilla kukilla on tunnettu määrä mettä, mutta violettien kukkien mesimäärä
+        on tuntematon. Kerää kaikki mesi.
+      2-3 Bee Conditionals 9_instruction: Kerää kaikki mesi kustakin kukasta.
+      2-3 Bee Conditionals Assessment 1_instruction: 'Arviointi: kerää kaikki mesi.
+        Varo keräämästä mettä violetista kukasta jos siinä ei ole lainkaan mettä.'
       2-3 Bee Debugging 1_instruction: Nämä lohkot todella häiritsevät minua. Korjaa
         virhe(et) kerätäksesi kaikki mesi ja tehdäksesi kaikki hunajaksi.
       2-3 Bee Debugging 10_instruction: Nämä lohkot todella häiritsevät minua. Korjaa
@@ -266,7 +260,7 @@
         Functions are blocks of code that perform
         a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
         use a loop to get an ideal block count, too.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+      2-3 Bee Functions 3_instruction: Kerää kaikki mesi kustakin kukasta.
       2-3 Bee Functions 4_instruction: |
         The "move and get nectar" function turns
         the bee, collects nectar, and then returns the bee to where it started. Use
@@ -820,6 +814,7 @@
       add 2_instruction: |
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -1208,7 +1203,7 @@
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -1281,12 +1276,10 @@
         two example cases! When you're done, use your new function to calculate 7
         cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
-        are in charge of writing computer programs to track the cost of making\neach
-        treat, the money customers give you, and the total profit from selling\nthem.
-        Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe
+        need to track the cost of making each cookie, the money paid, and the\ntotal
+        profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe
         function `cost`, which takes in the number of cookies you intend to sell,\nand
-        gives you back the amount of money it would cost to produce that number\nof
-        cookies."
+        returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -1323,10 +1316,8 @@
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -1340,6 +1331,7 @@
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ''
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: "Draw the line.\nIt
         is 200 pixels long. \n"
       Code Studio Puzzle Challenge 1 - Artist_instruction: "Draw the line. It is\n200
@@ -2223,7 +2215,7 @@
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
       Eval Define Funcs 1_instruction: |
@@ -2334,8 +2326,8 @@
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to the center of the playspace, where it would normally be placed.
-        Use this block to offset the triangle by 80 pixels on the y axis.
+        relative to where it would normally be placed. Use this block to offset the
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -2966,6 +2958,33 @@
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -3207,5 +3226,9 @@
       TestK1-1_instruction: |
         Draw three partially overlapping squares using the repeat
         block
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
       XML Scratchpad_instruction: Käytetään tätä testitasoa napataksemme xml yksikkötesteihin

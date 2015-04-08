@@ -61,10 +61,10 @@ This lesson has one new and important word:<br/>
 
 ### <a name="GetStarted"></a> 2) Are they Touching?
 
-Suppose two objects are moving through space, each one having its own (x,y) coordinates. When do their edges start to overlap? They certainly overlap if their coordinates are identical (x1 = x2, y1 =y 2), but what if their coordinates are separated by a small distance? Just how small does that distance need to be before their edges touch?
+Suppose two objects are moving through space, each one having its own (x,y) coordinates. When do their edges start to overlap? They certainly overlap if their coordinates are identical (x<sub>1</sub> = x<sub>2</sub>, y<sub>1</sub> = y<sub>2</sub>), but what if their coordinates are separated by a small distance? Just how small does that distance need to be before their edges touch?
 
 **Visual aids are key here: be sure to diagram this on the board!**
-<img src="numberline.png" style="float:right; margin: 0 0 20px 20px;"/>In one dimension, it’s easy to calculate when two objects overlap. In this example, the red circle has a radius of 1, and the blue circle has a radius of 1.5 The circles will overlap if the distance _between their centers_ is _less than the sum of their radii_ (1 + 1.5 = 2.5). How is the distance between their centers calculated? In this example, their centers are 3 units apart, because 4 − 1 = 3.
+<img src="numberline.png" style="float:right; margin: 0 0 20px 20px; max-width: 33%;"/>In one dimension, it’s easy to calculate when two objects overlap. In this example, the red circle has a radius of 1, and the blue circle has a radius of 1.5 The circles will overlap if the distance _between their centers_ is _less than the sum of their radii_ (1 + 1.5 = 2.5). How is the distance between their centers calculated? In this example, their centers are 3 units apart, because 4 − 1 = 3.
 
 <div style="clear: both"></div>
 
@@ -93,11 +93,11 @@ Do you expect the same answer regardless of whether the larger or smaller input 
 
 [/tip]
 
-<img src="line-length1.png" style="float:right; margin: 0 0 20px 20px;"/>Unfortunately, line-length can only calculate the distance between points in a single dimension (x or y). How would the distance be calculated between objects moving in 2-dimensions (like your game elements)? **line-length** can calculate the vertical and horizontal lines in the graphic shown here, using the distance between the x-coordinates and the distance between the y-coordinates. Unfortunately, it doesn’t tell us how far apart the two centers are.
+<img src="collision1.png" style="float:right; margin: 0 0 20px 20px; max-width: 33%"/>Unfortunately, line-length can only calculate the distance between points in a single dimension (x or y). How would the distance be calculated between objects moving in 2-dimensions (like your game elements)? **line-length** can calculate the vertical and horizontal lines in the graphic shown here, using the distance between the x-coordinates and the distance between the y-coordinates. Unfortunately, it doesn’t tell us how far apart the two centers are.
 
 <div style="clear: both"></div>
 
-<img src="line-length2.png" style="float:right; margin: 0 0 20px 20px;"/>Drawing a line from the center of one object to the other creates a right-triangle, with sides A, B and C. A and B are the vertical and horizontal distances, with C being the distance between the two coordinates. **line-length** can be used to calculate A and B, but how can we calculate C?
+<img src="collision2.png" style="float:right; margin: 0 0 20px 20px; max-width: 33%"/>Drawing a line from the center of one object to the other creates a right-triangle, with sides A, B and C. A and B are the vertical and horizontal distances, with C being the distance between the two coordinates. **line-length** can be used to calculate A and B, but how can we calculate C?
 
 <div style="clear: both"></div>
 

@@ -4,8 +4,8 @@
   "created_at": "2015-02-27T00:19:14.000Z",
   "properties": {
     "options": {
-      "css": "unplugged",
-      "skip_dialog": true
+      "skip_dialog": true,
+      "css": "unplugged"
     },
     "title": "Beyond",
     "markdown": "## What do I do now?\n\n**Check out more of Code.org's resources:** Code.org/learn is a series of short computer science activities from the Hour of Code. Longer curriculum experiences are listed at Code.org/learn/beyond. These are great places for you to learn more about computer science and also is a place that you can send students who are looking for more varied or advanced materials.\n\n**Further your computer science knowledge:** In addition to Code.org's resources listed above, there are plenty of online courses where you can quench your thirst for more computer science knowledge. \n\n**Join the Computer Science Teachers Association (CSTA):** The CSTA is an engaged community of educators across the nation that are committed to bringing computer science education to their students while raising awareness of the subject to the general public. They host an annual conference and also have chapters that hold local meetings.\n\n**Be in the know by reading computer science news:** There are plenty of ways to keep up with the news in the computer science education community. While this feels like shameless self-promotion, Code.org's facebook page has neat updates on the computer science world.\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">I'm finished!</a>\n"

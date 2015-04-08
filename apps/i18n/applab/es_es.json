@@ -21,9 +21,9 @@
   "repeatForeverTooltip": "Ejecuta repetidamente las acciones en este bloque mientras la aplicación está ejecutando.",
   "shareApplabTwitter": "Échale un vistazo a la aplicación que hice. Yo mismo la escribí con @codeorg",
   "shareGame": "Comparte tu aplicación:",
-  "stepIn": "Continuar",
-  "stepOver": "Esquivar",
-  "stepOut": "Salir",
-  "viewData": "Ver información relacionada",
+  "stepIn": "Paso: Dentro del Método",
+  "stepOver": "Paso: Sig. Instrucción",
+  "stepOut": "Paso: Fuera del Método",
+  "viewData": "Ver datos",
   "yes": "Sí"
 }

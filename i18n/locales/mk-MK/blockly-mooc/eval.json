@@ -4,7 +4,7 @@
   "circleBlockTitle":"круг (радиус, стил, боја)",
   "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"елипса (ширина, висина, стил, боја)",
-  "extraTopBlocks":"Имате неповрзани блокови. Дали мислевте да се закачите на овие на \"Прикажи\" блок?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"шалче (горе, долу)",
   "placeImageBlockTitle":"место-на сликата (x, y, слика)",

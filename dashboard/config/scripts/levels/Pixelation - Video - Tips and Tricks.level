@@ -5,7 +5,10 @@
   "properties": {
     "title": "Pixelation - Video - Tips and Tricks",
     "content1": "description here",
-    "markdown": "Pixelation Teacher Tips and Tricks Video\n\nhttp://youtu.be/_8SqLBaudLY\n"
+    "markdown": "Pixelation Teacher Tips and Tricks Video\n\nhttp://youtu.be/_8SqLBaudLY\n",
+    "options": {
+      "skip_dialog": true
+    }
   },
   "md5": "adba72d6a36322bb7eca73aba7ae2bc7"
 }]]></config>

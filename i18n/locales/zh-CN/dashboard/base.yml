@@ -467,6 +467,12 @@ zh:
     wrong_body: 您输入的解决方案不是正确的。请再试一次 ！
     correct_title: 正确。
     correct_body: 这是正确的答案。
+  contract_match:
+    wrong_title: 不正确的答案
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: 在这里输入你的答案
   dialog:

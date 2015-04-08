@@ -159,7 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "cirkel (radius, stil, farve)"},
 "displayBlockTitle":function(d){return "evaluér"},
 "ellipseBlockTitle":function(d){return "ellipse (bredde, højde, stil, farve)"},
-"extraTopBlocks":function(d){return "Du har separate blokke. Mente du fastgøre disse til \"display\" blokken?"},
+"extraTopBlocks":function(d){return "Du har ikke-vedhæftede blokke. Ønskede du at vedhæfte disse til \"vurdér\"-blokken?"},
 "infiniteRecursionError":function(d){return "Din funktion kalder sig selv. Vi have stoppet den, da den ellers ville have fortsat med at kalder sig for evigt (loop)."},
 "overlayBlockTitle":function(d){return "overlay (top, bund)"},
 "placeImageBlockTitle":function(d){return "placer-billede (x, y, billede)"},

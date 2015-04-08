@@ -159,7 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "κύκλος (ακτίνα, στυλ, χρώμα)"},
 "displayBlockTitle":function(d){return "υπολογισμός"},
 "ellipseBlockTitle":function(d){return "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)"},
-"extraTopBlocks":function(d){return "Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;"},
+"extraTopBlocks":function(d){return "Έχετε ασύνδετα μποκ. Μήπως ενοούσατε να τα επισυνάψετε στο μπλοκ \"αξιολόγηση\";"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "επικάλυμμα (επάνω, κάτω)"},
 "placeImageBlockTitle":function(d){return "τοποθέτησε-εικόνα (χ, ψ, εικόνα)"},

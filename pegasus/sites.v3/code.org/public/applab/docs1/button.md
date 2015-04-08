@@ -84,7 +84,7 @@ onEvent("turnLeft", "click", function(event) {
   turnLeft(90);
 });
 onEvent("turnRight", "click", function(event) {
-  // Turn right 90 degress
+  // Turn right 90 degrees
   turnRight(90);
 });
 </pre>
@@ -123,6 +123,7 @@ No Return Value
 [tips]
 
 ### Tips
+The button can also be used in design mode.
 
 [/tips]
 

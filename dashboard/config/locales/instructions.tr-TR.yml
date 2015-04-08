@@ -77,56 +77,44 @@
       2-3 Artist Functions 1_instruction: 'Merhaba! Ben zombi sanatçısı. Ben çizim
         yapmayı seviyorum. Bana kare gözlük yapmak için yardımcı olur musun? İpucu:
         Gözlük camı arasındaki köprü kare uzunluğundan 25 piksel daha kısadır.'
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex
-        things multiple times. Can you use the \"draw a flower\" function\nto fill
-        the rest of the planter box?(Hint: The plants are all separated by\n100 pixels
-        length)  \n"
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      2-3 Artist Functions 10_instruction: Burada iki fonksiyon var, biri büyük diğeri
+        küçük çark çizmek için. Bunları kullanarak makinenin içini çiz!
+      2-3 Artist Functions 11.5_instruction: Işte bir "Altıgen Çiz" fonksiyonu daha.
+        Her döngüde sadece 60 derece dönersen ne olur?
+      2-3 Artist Functions 11_instruction: '"Kare çiz" fonksiyonunu "Altıgen çiz"
+        olarak yeniden adlandırdık, fakat kareler çizmeye devam ediyor! "Altıgen çiz"
+        fonksiyonunu 50 piksel kenarlı altıgen çizmek için düzenleyebilir ve fonksiyonu
+        kullanarak resmi çizebilir misin?'
+      2-3 Artist Functions 12_instruction: 'Fonksiyonlar karmaşık şeyleri birçok kez
+        çizmek için mükemmeldir. "Çiçek çiz" fonksiyonunu kullanarak saksının geri
+        kalanını doldurabilir misin? (İpucu: Tüm bitkiler birbirinden 100 piksel uzaktadır)  '
+      2-3 Artist Functions 13_instruction: "Sana dört fonksiyon sunuyoruz. \nBunları
+        bir veya daha fazla döngü içinde kullanarak resimler yap ve arkadaşlarınla
+        paylaş. Örnek için çalıştıra bas.\n"
+      2-3 Artist Functions 2_instruction: "Fonksiyonlaryeni bloklar tanımlamanı sağlar!Blokları
+        \"Kare çiz\" fonksiyonuna taşıdık. \"Kare çiz\" fonksiyonunu kullanarak bardakları
+        çizebilir misin? Kareler \n75 piksel uzaklıktadır.\n"
       2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
+        Fonksiyonu 115 piksel kenar uzunluğunda
+        bir kare çizmek için düzenlenve daha büyük bardaklar çiz. Kareler şimdi 45 piksel
+        uzaklığındalar.
       2-3 Artist Functions 4_instruction: Bu 3 kareyi çizmek için "tekrarla" bloğunu
         kullan.
       2-3 Artist Functions 7_instruction: Farklı iki parametre kullanarak iki ev çizmek
         için "ev çiz" fonksiyonunu kullan.(İpucu:İlk ev 100 piksel).
       2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
+        İşte bir kartanesi fonksiyonu. Bir kış
+        sahnesi yaratmak için onunla denemeler yap. Bu bir serbest oyun bölümü, yani çözmen gereken bir bilmece yok. İyi eğlenceler!
+      2-3 Artist Loops 1_instruction: Hücreyi tamamlamak için kenarları 100 piksel
+        uzunluğunda bir altıgen yapabilir misin? Unutma, sadece 60 derece dönmen gerekiyor!
+      2-3 Artist Loops 10_instruction: Eğer son adımımızı yarım adım daha ileriye
+        atarsak tasarıma ne olur?
       2-3 Artist Loops 11_instruction: Şimdi tüm kreasyonumuzun etrafına *başka* bir
         döngü koyalım!Çıkış döngüsünün sonuna derece eklemeyi unutma.
       2-3 Artist Loops 2_instruction: Şimdi tekrarla bloğu kullanarak hücreyi kabuk
         yapın.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
+      2-3 Artist Loops 4_instruction: 'Bu şekli üst üst yeniden kullanarak tekrar
+        ettiğimizde ne olduğunu görmek ister misin? '
       2-3 Artist Loops 5_instruction: Hadi şimdi döngüde küçük bir değişiklik yapalım
         ve resmimiz nasıl değişiyor görelim.
       2-3 Artist Loops 6_instruction: |
@@ -864,6 +852,7 @@
       add 2_instruction: |
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -1251,7 +1240,7 @@
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -1324,12 +1313,10 @@
         two example cases! When you're done, use your new function to calculate 7
         cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
-        are in charge of writing computer programs to track the cost of making\neach
-        treat, the money customers give you, and the total profit from selling\nthem.
-        Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe
+        need to track the cost of making each cookie, the money paid, and the\ntotal
+        profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe
         function `cost`, which takes in the number of cookies you intend to sell,\nand
-        gives you back the amount of money it would cost to produce that number\nof
-        cookies."
+        returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
@@ -1366,10 +1353,8 @@
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -1383,6 +1368,7 @@
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ''
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: "Draw the line.\nIt
         is 200 pixels long. \n"
       Code Studio Puzzle Challenge 1 - Artist_instruction: "Draw the line. It is\n200
@@ -2266,7 +2252,7 @@
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
       Eval Define Funcs 1_instruction: |
@@ -2377,8 +2363,8 @@
         pixel radius yellow star on top of a 150 pixel long blue square.
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
-        relative to the center of the playspace, where it would normally be placed.
-        Use this block to offset the triangle by 80 pixels on the y axis.
+        relative to where it would normally be placed. Use this block to offset the
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
@@ -3039,6 +3025,33 @@
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -3281,5 +3294,9 @@
       TestK1-1_instruction: |
         Draw three partially overlapping squares using the repeat
         block
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

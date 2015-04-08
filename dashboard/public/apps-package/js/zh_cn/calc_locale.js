@@ -162,7 +162,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "你的函数没有返回所有的正确值。"},
 "goal":function(d){return "目标："},
 "levelIncompleteError":function(d){return "你的表达式没有匹配目标。"},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "你必须定义一个名为 "+appLocale.v(d,"functionName")+" 的函数。"},
 "missingVariableX":function(d){return "你的表的式缺少了变量 "+appLocale.v(d,"var")+"。"},
 "reinfFeedbackMsg":function(d){return "这是你的计算！继续做这个工作，或移动到下一个谜！"},
 "yourExpression":function(d){return "你的表达式："},

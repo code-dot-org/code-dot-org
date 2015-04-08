@@ -439,6 +439,12 @@ ru:
         infinity_playlab_intro: 'Лаборатория игр - введение'
         infinity_playlab_events: 'Лаборатория игр - события'
         infinity_playlab_repeat_forever: 'Лаборатория игр - повторять бесконечно'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

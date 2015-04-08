@@ -4,7 +4,7 @@
   "circleBlockTitle":"коло (радіус, стиль, колір)",
   "displayBlockTitle":"Оцінювати",
   "ellipseBlockTitle":"еліпс (ширина, висота, стиль, колір)",
-  "extraTopBlocks":"У вас залишились зайві блоки. Ви збирались їх прикріпити до блоку \"показати\"?",
+  "extraTopBlocks":"Ви не прикріпили блок.Ви мали на увазі надати значення цьому блоку?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"накладання (верхнє, нижнє)",
   "placeImageBlockTitle":"розмістити-зображення (x, y, зображення)",

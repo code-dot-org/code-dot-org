@@ -56,21 +56,21 @@ nl:
         one: 'Door 1 fout kon %{resource} niet opgeslagen worden:'
         other: 'Door %{count} fouten kon deze %{resource} niet worden opgeslagen:'
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: 'Een uitnodigingsmail is verzonden naar %{email}.'
+      invitation_token_invalid: De gegeven uitnodigingstoken is niet geldig!
+      updated: Je wachtwoord is aangepast. Je bent nu ingelogd.
+      no_invitations_remaining: Geen openstaande uitnodigingen
+      invitation_removed: Je uitnodiging is verwijderd.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Uitnodiging verzenden
+        submit_button: Een uitnodiging verzenden
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Kies je wachtwoord
+        submit_button: Kies mijn wachtwoord
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: Accept invitation
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        subject: Instructies voor uitnodigingen
+        hello: 'Hallo %{email}'
+        someone_invited_you: 'Iemand heeft je uitgenodigd op %{url}, je kan deze accepteren via onderstaande link.'
+        accept: Accepteer uitnodiging
+        ignore: 'Als je de uitnodiging niet wilt accepteren, kunt je deze mail negeren. <br /> Je account zal niet gemaakt worden totdat je de link hierboven bezoekt en een wachtwoord instelt.'

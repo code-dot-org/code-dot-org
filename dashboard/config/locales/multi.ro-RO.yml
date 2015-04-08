@@ -168,6 +168,9 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
+          <br> size block'
         Blue colored blocks are associated with __________ ?: Blue colored blocks
           are associated with __________ ?
         a image: a image
@@ -395,7 +398,7 @@
         The unicorn moves across the screen: Unicornul se mișcă pe ecran
         The unicorn's y value changes: Valoarea y a unicornului se schimbă
         The unicorn moves to the left: Unicornul se mișcă la stânga
-        The unicorn's x value changes: Valoarea x a unicornului se schimbă
+        The unicorn's x value decreases: The unicorn's x value decreases
       K-1 Artist 1 Multi 1:
         Multiple Choice: Alegere multiplă
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -744,7 +747,7 @@
       Multi Strings Images 1:
         Strings and Images Multiple Choice: 'Alegere multiplă de șiruri de caractere
           și imagini  '
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Care din aceste Blocuri
           va desena imaginea
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images

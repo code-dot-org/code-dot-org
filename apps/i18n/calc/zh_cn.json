@@ -7,7 +7,7 @@
   "failedInput": "你的函数没有返回所有的正确值。",
   "goal": "目标：",
   "levelIncompleteError": "你的表达式没有匹配目标。",
-  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingFunctionError": "你必须定义一个名为 {functionName} 的函数。",
   "missingVariableX": "你的表的式缺少了变量 {var}。",
   "reinfFeedbackMsg": "这是你的计算！继续做这个工作，或移动到下一个谜！",
   "yourExpression": "你的表达式：",

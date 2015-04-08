@@ -544,6 +544,12 @@
     wrong_body: Подане рішення не є правильним.  Будь ласка, спробуйте ще раз!
     correct_title: Правильно
     correct_body: Це правильна відповідь.
+  contract_match:
+    wrong_title: Неправильна відповідь
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Введіть свою відповідь тут
   dialog:

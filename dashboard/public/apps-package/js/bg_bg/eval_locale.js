@@ -159,7 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "кръг (радиус, стил, цвят)"},
 "displayBlockTitle":function(d){return "Оценка"},
 "ellipseBlockTitle":function(d){return "елипса (ширина, височина, стил, цвят)"},
-"extraTopBlocks":function(d){return "Имате не закачени блокове. Искате ли да ги прикачите към \"дисплей\" блока?"},
+"extraTopBlocks":function(d){return "Имате несвързани блокове. Искате ли да ги свържете към блока за \"оценка\"?"},
 "infiniteRecursionError":function(d){return "Вашата функция се стартира сама. Ние я спряхме, в противен случай щеше да продължи да се стартира безброй пъти."},
 "overlayBlockTitle":function(d){return "наслагване (отгоре, отдолу)"},
 "placeImageBlockTitle":function(d){return "място-изображение (x, y, изображение)"},

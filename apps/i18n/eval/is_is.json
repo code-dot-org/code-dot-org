@@ -4,7 +4,7 @@
   "circleBlockTitle": "hringur (geisli, gerð, litur)",
   "displayBlockTitle": "meta",
   "ellipseBlockTitle": "ellipsa (breidd, hæð, gerð, litur)",
-  "extraTopBlocks": "Þú ert með ótengda kubba. Var það ætlun þín að tengja þá við \"sýna\" kubbinn?",
+  "extraTopBlocks": "Þú ert með ótengda kubba. Ætlaðir þú að tengja þá við \"meta\" kubbinn?",
   "infiniteRecursionError": "Fallið þitt kallar á sjálft sig. Við höfum stöðvað það, annars mundi það halda áfram að kalla á sjálft sig að eilífu.",
   "overlayBlockTitle": "yfirlögn (yfir, undir)",
   "placeImageBlockTitle": "setja-mynd (x, y, mynd)",

@@ -4,7 +4,7 @@
   "circleBlockTitle":"រង្វង់ (កាំ, ស្ទីល, ពណ៌)",
   "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"ពង​ក្រពើ (ទទឹង, កំពស់, ស្ទីល, ពណ៌)",
-  "extraTopBlocks":"អ្នក​មាន​ប្លុក​ដែល​មិន​ទាន់​បាន​ភ្ជាប់។ តើ​អ្នក​ចង់​ភ្ជាប់​ពួក​វា​ទៅ​កាន់​ប្លុក \"ការ​បង្ហាញ\" មែនទេ?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"overlay (top, bottom)",
   "placeImageBlockTitle":"place-image (x, y, image)",

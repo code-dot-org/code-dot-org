@@ -1,6 +1,6 @@
 ne-NP:
   hello: Hello world
-  select_language: Please select your language
+  select_language: Nepali
   computer_science: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
@@ -110,7 +110,6 @@ ne-NP:
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
   studiobar_hoc_title: The Hour of Code
