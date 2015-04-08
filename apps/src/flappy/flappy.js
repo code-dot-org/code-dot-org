@@ -8,8 +8,8 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = window.blockly.locale;
-var flappyMsg = window.blockly.flappy_locale;
+var commonMsg = require('locale');
+var flappyMsg = require('appLocale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');

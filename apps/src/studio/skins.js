@@ -6,7 +6,7 @@
 // specified, otherwise, use background.png.
 
 var skinsBase = require('../skins');
-var msg = window.blockly.studio_locale;
+var msg = require('appLocale');
 var constants = require('./constants');
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;

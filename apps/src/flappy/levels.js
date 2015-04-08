@@ -3,7 +3,7 @@
 // todo - i think our prepoluated code counts as LOCs
 
 var constants = require('./constants');
-var flappyMsg = window.blockly.flappy_locale;
+var flappyMsg = require('appLocale');
 var tb = require('../block_utils').createToolbox;
 var utils = require('../utils');
 

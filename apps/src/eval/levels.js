@@ -1,4 +1,4 @@
-var msg = window.blockly.eval_locale;
+var msg = require('appLocale');
 var blockUtils = require('../block_utils');
 
 /**

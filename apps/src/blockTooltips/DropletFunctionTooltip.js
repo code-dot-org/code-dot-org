@@ -1,5 +1,5 @@
 var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html.ejs');
-var msg = window.blockly.locale;
+var msg = require('locale');
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip

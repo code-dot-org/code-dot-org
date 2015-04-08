@@ -12,7 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimPacketSizeControl.html.ejs');
-var i18n = window.blockly.netsim_locale;
+var i18n = require('appLocale');
 
 /**
  * @type {number}

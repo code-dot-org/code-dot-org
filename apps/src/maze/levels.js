@@ -4,7 +4,7 @@ var wordsearchLevels = require('./wordsearchLevels');
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
-var mazeMsg = window.blockly.maze_locale;
+var mazeMsg = require('appLocale');
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function(page, level) {

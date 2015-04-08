@@ -1,7 +1,7 @@
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
-var msg = window.blockly.locale;
+var msg = require('locale');
 var _ = utils.getLodash();
 
 /**

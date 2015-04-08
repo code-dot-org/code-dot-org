@@ -2,7 +2,7 @@
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
 
-var msg = window.blockly.turtle_locale;
+var msg = require('appLocale');
 var utils = require('../utils');
 var _ = utils.getLodash();
 

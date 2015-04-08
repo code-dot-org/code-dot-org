@@ -1,7 +1,7 @@
 <%
 
-var commonMsg = window.blockly.locale;
-var mazeMsg = window.blockly.maze_locale;
+var commonMsg = require('locale');
+var mazeMsg = require('appLocale');
 
 var addProcedures = function() { -%>
   <% if (level > 3) { -%>

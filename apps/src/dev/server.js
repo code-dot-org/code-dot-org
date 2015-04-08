@@ -27,6 +27,7 @@ var renderApp = function(app, req, res) {
   res.render('app', {
     app: app,
     options: {
+      app: app,
       locale: req.query.locale,
       localeDirection: req.query.dir,
       containerId: 'codeApp',

@@ -23,8 +23,8 @@
  */
 'use strict';
 
-var msg = window.blockly.eval_locale;
-var commonMsg = window.blockly.locale;
+var msg = require('appLocale');
+var commonMsg = require('locale');
 
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');

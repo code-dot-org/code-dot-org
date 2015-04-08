@@ -18,7 +18,7 @@
 'use strict';
 
 var page = require('./page.html.ejs');
-var i18n = window.blockly.netsim_locale;
+var i18n = require('appLocale');
 var netsimUtils = require('./netsimUtils');
 var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimConnection = require('./NetSimConnection');

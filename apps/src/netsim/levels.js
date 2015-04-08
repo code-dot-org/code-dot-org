@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = window.blockly.netsim_locale;
+var msg = require('appLocale');
 var utils = require('../utils');
 var netsimConstants = require('./netsimConstants');
 var Packet = require('./Packet');

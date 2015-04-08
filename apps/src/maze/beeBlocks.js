@@ -2,7 +2,7 @@
  * Blocks specific to Bee
  */
 
-var msg = window.blockly.maze_locale;
+var msg = require('appLocale');
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 

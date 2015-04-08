@@ -12,7 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
-var i18n = window.blockly.netsim_locale;
+var i18n = require('appLocale');
 var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var NetSimNode = require('./NetSimNode');

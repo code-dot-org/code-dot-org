@@ -1,4 +1,4 @@
-var msg = window.blockly.studio_locale;
+var msg = require('appLocale');
 
 module.exports.blocks = [
   {'func': 'setSprite', 'category': 'Play Lab', 'params': ["0", "'cat'"] },

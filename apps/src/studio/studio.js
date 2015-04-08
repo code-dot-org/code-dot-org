@@ -8,8 +8,8 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = window.blockly.locale;
-var studioMsg = window.blockly.studio_locale;
+var commonMsg = require('locale');
+var studioMsg = require('appLocale');
 var skins = require('../skins');
 var constants = require('./constants');
 var sharedConstants = require('../constants');

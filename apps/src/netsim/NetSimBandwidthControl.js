@@ -12,7 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimBandwidthControl.html.ejs');
-var i18n = window.blockly.netsim_locale;
+var i18n = require('appLocale');
 
 /**
  * Min value of 2 is 2^2 or 4bps

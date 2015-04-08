@@ -23,8 +23,8 @@ var Eval = module.exports;
  */
 var studioApp = require('../StudioApp').singleton;
 var Eval = module.exports;
-var commonMsg = window.blockly.locale;
-var evalMsg = window.blockly.eval_locale;
+var commonMsg = require('locale');
+var evalMsg = require('appLocale');
 var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');

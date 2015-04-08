@@ -6,8 +6,8 @@
  */
 'use strict';
 
-var msg = window.blockly.flappy_locale;
-var commonMsg = window.blockly.locale;
+var msg = require('appLocale');
+var commonMsg = require('locale');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = utils.getLodash();

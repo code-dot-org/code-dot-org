@@ -2,7 +2,7 @@
 
 var levelBase = require('../level_base');
 var Direction = require('./tiles').Direction;
-var msg = window.blockly.maze_locale;
+var msg = require('appLocale');
 var blockUtils = require('../block_utils');
 
 //TODO: Fix hacky level-number-dependent toolbox.

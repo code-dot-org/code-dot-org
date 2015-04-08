@@ -26,8 +26,8 @@
  */
 'use strict';
 
-var commonMsg = window.blockly.locale;
-var turtleMsg = window.blockly.turtle_locale;
+var commonMsg = require('locale');
+var turtleMsg = require('appLocale');
 var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');

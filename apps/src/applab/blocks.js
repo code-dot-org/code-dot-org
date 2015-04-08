@@ -6,8 +6,8 @@
  */
 'use strict';
 
-var msg = window.blockly.applab_locale;
-var commonMsg = window.blockly.locale;
+var msg = require('appLocale');
+var commonMsg = require('locale');
 var codegen = require('../codegen');
 var utils = require('../utils');
 var _ = utils.getLodash();
