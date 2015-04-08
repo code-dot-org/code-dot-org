@@ -507,3 +507,7 @@ pt-BR:
         arrows_move_actor: Use as setas para mover o personagem
         right_arrow_fireball: Use a seta para a direita para atirar bolas de fogo
         name_function: Escreva o nome da sua função aqui
+        Infinity_move_right_runbutton: Adicione um bloco Mova aqui
+        Infinity_move_directions_callout: Qual bloco fará Baymax se mover para cima quando a seta para cima estiver pressionada?
+        Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
+        Infinity_repeat_callout: Coloque blocos Mova aqui dentro

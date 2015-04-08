@@ -504,3 +504,7 @@ de:
         arrows_move_actor: Benutze die Pfeile um den Schauspieler zu bewegen
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Schreib den Funktionsnamen hierhin
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

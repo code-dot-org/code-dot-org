@@ -503,3 +503,7 @@ en:
         arrows_move_actor: crwdns25675:0crwdne25675:0
         right_arrow_fireball: crwdns25676:0crwdne25676:0
         name_function: crwdns25677:0crwdne25677:0
+        Infinity_move_right_runbutton: crwdns36218:0crwdne36218:0
+        Infinity_move_directions_callout: crwdns36219:0crwdne36219:0
+        Infinity_move_collide_callout: crwdns36220:0crwdne36220:0
+        Infinity_repeat_callout: crwdns36221:0crwdne36221:0

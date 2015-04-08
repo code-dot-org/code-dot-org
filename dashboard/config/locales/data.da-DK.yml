@@ -763,3 +763,8 @@
         arrows_move_actor: Brug pilene til at flytte figuren
         right_arrow_fireball: Brug højre pil til at skyde ildkugler
         name_function: Skriv navnet på din funktion her
+        Infinity_move_right_runbutton: Tilføj "flyt"-blok her
+        Infinity_move_directions_callout: Hvilken blok vil få Baymax til at bevæge
+          sig op, når der trykkes på pil op?
+        Infinity_move_collide_callout: Afspil en lyd, når denne event indtræffer.
+        Infinity_repeat_callout: Placér "flyt"-blokke her

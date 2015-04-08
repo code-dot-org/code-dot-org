@@ -513,3 +513,7 @@ fr:
         arrows_move_actor: "Utilise les flèches pour déplacer l'acteur"
         right_arrow_fireball: Utilise la flèche droite pour tirer des boules de feu
         name_function: Écris le now de ta fonction ici
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

@@ -505,3 +505,7 @@ ru:
         arrows_move_actor: Используйте стрелки для перемещения персонажа
         right_arrow_fireball: Используйте стрелку вправо для стрельбы огненными шарами
         name_function: Напишите здесь название вашей процедуры
+        Infinity_move_right_runbutton: 'Добавьте сюда блок "двигаться"'
+        Infinity_move_directions_callout: Какой блок сделают Baymax переместить при нажатии стрелки вверх?
+        Infinity_move_collide_callout: Воспроизведение звука, когда происходит данное событие.
+        Infinity_repeat_callout: Место переместить блоки внутри здесь

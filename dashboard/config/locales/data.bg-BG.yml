@@ -792,3 +792,8 @@
         right_arrow_fireball: Използвайте дясната стрелка за да стреляте с огнени
           топки
         name_function: Напишете името на функцията си тук
+        Infinity_move_right_runbutton: Добави блок за движение тук
+        Infinity_move_directions_callout: Кой блок ще накара Баймакс да се премести
+          нагоре при натискане на стрелка нагоре?
+        Infinity_move_collide_callout: Издай звук, когато това събитие се появи.
+        Infinity_repeat_callout: Постави блокове за движение тук вътре
