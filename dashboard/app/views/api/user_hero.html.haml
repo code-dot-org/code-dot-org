@@ -13,7 +13,7 @@
             = t('home.student_stats', trophy_count: current_user.trophy_count, trophy_max: Trophy::TROPHY_MAX)
           = link_to t('home.see_details'), root_url
           %br/
-          = render partial: 'shared/student_continue', locals: { include_finished: true, script: current_user.primary_script }
+          = render partial: 'shared/student_continue', locals: { include_finished: true, script: current_user.primary_script, role_class: role_class }
         - else
           = link_to t('home.no_primary_course'), root_url
       - if current_user.teacher?
@@ -27,7 +27,7 @@
                 = t('home.teacher_student_count', count: current_user.students.length)
               &nbsp;
             %a{href: teacher_dashboard_url, style: 'text-decoration:none'}
-              %button.btn.btn-primary.button-continue= t('teacher.students.dashboard')
+              %button.btn.btn-primary.button-continue{class: role_class}= t('teacher.students.dashboard')
             %br/
       
     #clearboth{ style: 'clear:both;' }
