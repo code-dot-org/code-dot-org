@@ -29,12 +29,17 @@ class DSLDefined < Level
     dsl_class.parse(str,filename,name)
   end
 
-  def self.create_from_level_builder(params, level_params)
+  def self.create_from_level_builder(params, level_params, old_name = nil)
     text = level_params[:dsl_text] || params[:dsl_text]
     transaction do
       # Parse data, save updated level data to database
       data, i18n = dsl_class.parse(text, '')
       data[:properties].merge! level_params
+
+      if old_name && data[:name] != old_name
+        raise 'Renaming of DSLDefined levels is not allowed'
+      end
+
       level = setup data
 
       # Save updated level data to external file
@@ -59,9 +64,7 @@ class DSLDefined < Level
 
   def update(params)
     if params[:dsl_text].present?
-      # Don't allow renaming
-      params.delete(:name)
-      self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, params)
+      self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, params, name)
     else
       super(params)
     end
