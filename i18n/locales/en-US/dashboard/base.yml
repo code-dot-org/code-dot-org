@@ -466,6 +466,7 @@ en:
   contract_match:
     wrong_title: crwdns36222:0crwdne36222:0
     badname: crwdns36223:0crwdne36223:0
+    badname_case: crwdns36271:0crwdne36271:0
     badrange: crwdns36224:0crwdne36224:0
     baddomainsize: crwdns36225:0crwdne36225:0
     baddomainname: crwdns36226:0crwdne36226:0

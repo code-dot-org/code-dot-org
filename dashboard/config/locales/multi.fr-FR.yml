@@ -171,9 +171,6 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
-          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
-          <br> size block'
         Blue colored blocks are associated with __________ ?: Les blocs de couleur
           bleue sont associés avec __________ ?
         a image: une image
@@ -667,6 +664,7 @@
           "rouge")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solide rouge)
       msm variables multi 1:
+        x = 15<br>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: Quelle est la valeur de x ?
         a function: une fonction
         15: '15'
@@ -938,6 +936,15 @@
         this is a question?: Il s'agit d'une question ?
         wrong answer: mauvaise réponse
         right answer: bonne réponse
+      U1L6 Assessment multiple choice:
+        'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
+        If you just had a circle and a square, how many 3-shape rows could you make?: If
+          you just had a circle and a square, how many 3-shape rows could you make?
+        4: '4'
+        6: '6'
+        8: '8'
+        10: '10'
+        12: '12'
       unique level name here:
         line1<br/>line2: ligne1 <br/> ligne2
         description here: description ici

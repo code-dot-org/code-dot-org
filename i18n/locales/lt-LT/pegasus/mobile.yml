@@ -110,6 +110,7 @@ lt-LT:
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "Peržiūrėkite <a href='http://studio.code.org'>programavimo kursus</a>"
+  studiobar_title_nolink: Peržiūrėkite programavimo kursus
   studiobar_elementary_title: Kursai mažiems vaikams
   studiobar_elementary_body: Mūsų trys nauji kursai mažiems vaikams
   studiobar_hoc_title: Vienos Valandos Kodo kursas
@@ -150,25 +151,32 @@ lt-LT:
     Chris Bosh
   homepage_hero_text_student1: |
     &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo; 
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
   homepage_hero_text_student2: |
     &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo; 
+    so excited about learning.&rdquo;
+    Michael, teacher
   homepage_hero_text_student3: |
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
   homepage_hero_text_student4: |
     &ldquo;You can do anything your mind
     wants to do with programming.&rdquo; 
+    Maya, 2nd grade
   homepage_hero_text_student5: |
     &ldquo;Computer science isn't for someone
     else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
   homepage_hero_text_teacher1: |
     &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
   homepage_hero_text_teacher2: |
     &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo; 
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Vienos Valandos Kodo kursas
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard

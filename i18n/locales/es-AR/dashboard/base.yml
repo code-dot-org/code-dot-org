@@ -473,6 +473,7 @@ es-AR:
   contract_match:
     wrong_title: Respuesta incorrecta
     badname: El contrato tiene el nombre equivocado.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
     badrange: El contrato tiene el nombre equivocado.
     baddomainsize: El contrato no tiene el número de elementos en el dominio.
     baddomainname: Uno o más items de su dominio tienen el nombre equivocado.
