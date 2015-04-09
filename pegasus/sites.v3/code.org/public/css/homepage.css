@@ -81,8 +81,12 @@ body.modal-open .supreme-container{
   text-shadow: 0 0 5px black;
 }
 
+#homepage #caption_container .smallcaption {
+  font-size: 14px;
+}
+
 #homepage #caption_container #blankspaceleftdesktop {
-  height: 380px
+  height: 380px;
 }
 
 #homepage #caption_container #blankspaceleftmobile {
