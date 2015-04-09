@@ -15,7 +15,8 @@
       .row#continue
         .span12
           .padtopbottom{style: 'line-height: 1.5em'}
-            = render partial: 'shared/student_continue', locals: { include_finished: true }
+            - role_class = current_user.user_type
+            = render partial: 'shared/student_continue', locals: { include_finished: true, role_class: role_class }
 
     = render partial: 'home/projects'
 

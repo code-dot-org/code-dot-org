@@ -1,6 +1,6 @@
 - if current_user
 
-  - role_class = current_user.teacher? ? "teacher" : "student"
+  - role_class = current_user.user_type
 
   #contents{style: 'margin-top: 20px; padding-left:5px; padding-right:5px'}
     #welcome{class: role_class, style: "padding-left:5px"}= t('welcome_back', name: current_user.name)
