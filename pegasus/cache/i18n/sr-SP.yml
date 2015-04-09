@@ -137,6 +137,7 @@
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     - Michael Clark, Teacher'
   studiobar_title: Истражите<a href='http://studio.code.org'>Студио Програмирања</a>
+  studiobar_title_nolink: Истражите Студио Програмирања
   studiobar_elementary_title: Основни курсеви
   studiobar_elementary_body: Наша три нова курса за врт&#8209;ић
   studiobar_hoc_title: сата кодирања
@@ -173,21 +174,28 @@
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; \n"
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; \n"
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
   homepage_hero_text_student3: |
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
   homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \n"
+    with programming.&rdquo; \nMaya, 2nd grade\n"
   homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \n"
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
   homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; \n"
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; \n"
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: сата кодирања
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
