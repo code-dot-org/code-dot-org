@@ -282,8 +282,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
       this.disconnectFromRemote.bind(this));
 
-  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_,
-      this.shardChange);
+  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
