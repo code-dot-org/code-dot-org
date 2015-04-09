@@ -147,7 +147,6 @@ def query_contacts_with_location(params)
   params[:q] += ' && ' + location_query if location_query
   params[:fq] = location_filter_query
 
-  p params
   query_contacts(params)
 end
 
