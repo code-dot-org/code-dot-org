@@ -91,7 +91,7 @@ var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
 <div class="content-wrap">
 
   <strong><%= i18n.lobby() %></strong>
-  <ul id="netsim_lobby_list" class="netsim-lobby-list">
+  <ul class="netsim-lobby-list">
     <%
 
     lobbyRows.forEach(function (row) {
@@ -105,7 +105,7 @@ var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
     if (!controller.hasOutgoingRequest() && showAddRouterButton) {
     %>
     <li class="empty-row">
-      <input type="button" id="netsim_lobby_add_router" value="Add Router" />
+      <input type="button" id="netsim-lobby-add-router" value="<%= i18n.addRouter() %>" />
     </li>
     <%
     } else if (lobbyRows.length === 0) {
@@ -118,7 +118,7 @@ var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
 
   <% if (requestRows.length > 0) { %>
   <strong><%= i18n.incomingConnectionRequests() %></strong>
-  <ul id="netsim_connection_requests" class="netsim-lobby-list">
+  <ul class="netsim-lobby-list">
     <%
     requestRows.forEach(function (row) {
     %>
@@ -133,7 +133,7 @@ var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
 
   <% if (outgoingRequestRows.length > 0) { %>
   <strong><%= i18n.outgoingConnectionRequests() %></strong>
-  <ul id="netsim_outgoing_requests" class="netsim-lobby-list">
+  <ul class="netsim-lobby-list">
     <%
     outgoingRequestRows.forEach(function (row) {
     %>
@@ -147,8 +147,8 @@ var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
   <% } %>
 
   <% if (controller.hasOutgoingRequest()) { %>
-    <p>Waiting for <%= remoteNode.getDisplayName() %> to connect... <input type="button" id="netsim_lobby_cancel" value="Cancel" /></p>
+    <p><%= i18n.waitingForNodeToConnect({ node: remoteNode.getDisplayName() }) %> <input type="button" id="netsim-lobby-cancel" value="<%= i18n.cancel() %>" /></p>
   <% } else { %>
-    <input type="button" id="netsim_lobby_connect" value="Connect" <% if (!controller.hasSelectedNode()) { %>disabled<% } %> />
+    <input type="button" id="netsim-lobby-connect" value="<%= i18n.connect() %>" <% if (!controller.hasSelectedNode()) { %>disabled<% } %> />
   <% } %>
 </div>
