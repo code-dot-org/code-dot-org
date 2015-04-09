@@ -210,7 +210,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
-  arguments += " -f html -o #{browser['name']}_output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
+  arguments += " --format html --out #{browser['name']}_output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
 
   # return all text after "Failing Scenarios"
   def output_synopsis(output_text)
@@ -238,7 +238,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
 
   # if autorertrying, output a rerun file so on retry we only run failed tests
   rerun_filename = browser['name'] + '.rerun'
-  first_time_arguments = $options.auto_retry ? " --out #{rerun_filename} --format rerun" : ""
+  first_time_arguments = $options.auto_retry ? " --format rerun --out #{rerun_filename}" : ""
 
   succeeded, output_text, test_duration = run_tests(arguments + first_time_arguments)
 
