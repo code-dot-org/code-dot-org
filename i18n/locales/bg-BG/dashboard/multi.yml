@@ -141,7 +141,6 @@ bg:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
         Blue colored blocks are associated with __________ ?: Сините цветни блокове са свързани с __________?
         a image: изображение
         a number: число
@@ -160,7 +159,7 @@ bg:
         a string: низ
         boolean: boolean
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: Зелените на цвят блокове са свързани с __________ ?
+        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
         a image: изображение
         a number: число
         a string: низ
@@ -542,6 +541,7 @@ bg:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(правоъгълник (+ 8 2) (-7 5) "твърд" "червено")'
         (rectangle (+ 8 2) (- 7 5) solid red): (правоъгълник (+ 8 2) (-7 5) твърд червено)
       msm variables multi 1:
+        x = 15<br>a = 2<br>b = 6: 'x = 15<br>a = 2<br>b = 6'
         What is the value of x?: Каква е стойността на х?
         a function: функция
         15: "15"
@@ -765,6 +765,14 @@ bg:
         this is a question?: това е въпрос?
         wrong answer: грешен отговор
         right answer: верен отговор
+      U1L6 Assessment multiple choice:
+        "Multiple Choice: Number Systems": 'Multiple Choice: Number Systems'
+        If you just had a circle and a square, how many 3-shape rows could you make?: If you just had a circle and a square, how many 3-shape rows could you make?
+        4: "4"
+        6: "6"
+        8: "8"
+        10: "10"
+        12: "12"
       unique level name here:
         line1<br/>line2: 'линия1 <br/> линия2'
         description here: описание тук

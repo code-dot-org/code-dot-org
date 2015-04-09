@@ -141,7 +141,6 @@ en:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: crwdns8566:0crwdne8566:0
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: crwdns8567:0crwdne8567:0
       2-3 multi match 1:
-        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": crwdns36248:0crwdne36248:0
         Blue colored blocks are associated with __________ ?: crwdns35721:0__________crwdne35721:0
         a image: crwdns35722:0crwdne35722:0
         a number: crwdns35723:0crwdne35723:0
@@ -160,11 +159,11 @@ en:
         a string: crwdns35759:0crwdne35759:0
         boolean: crwdns35760:0crwdne35760:0
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: crwdns36210:0__________crwdne36210:0
-        a image: crwdns36211:0crwdne36211:0
-        a number: crwdns36212:0crwdne36212:0
-        a string: crwdns36213:0crwdne36213:0
-        boolean: crwdns36214:0crwdne36214:0
+        Green colored blocks are associated with __________ ?: crwdns36296:0__________crwdne36296:0
+        a image: crwdns36297:0crwdne36297:0
+        a number: crwdns36298:0crwdne36298:0
+        a string: crwdns36299:0crwdne36299:0
+        boolean: crwdns36300:0crwdne36300:0
       4-5 artist multi 1:
         Artist Multiple Choice: crwdns6306:0crwdne6306:0
         Which blocks draw a rectangle with a perimeter of 100?: crwdns6307:0crwdne6307:0
@@ -542,6 +541,7 @@ en:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): crwdns7426:0crwdne7426:0
         (rectangle (+ 8 2) (- 7 5) solid red): crwdns7427:0crwdne7427:0
       msm variables multi 1:
+        x = 15<br>a = 2<br>b = 6: crwdns36277:0crwdne36277:0
         What is the value of x?: crwdns34705:0crwdne34705:0
         a function: crwdns34706:0crwdne34706:0
         15: crwdns34707:0crwdne34707:0
@@ -765,6 +765,14 @@ en:
         this is a question?: crwdns34810:0crwdne34810:0
         wrong answer: crwdns34811:0crwdne34811:0
         right answer: crwdns34812:0crwdne34812:0
+      U1L6 Assessment multiple choice:
+        "Multiple Choice: Number Systems": crwdns36278:0crwdne36278:0
+        If you just had a circle and a square, how many 3-shape rows could you make?: crwdns36279:0crwdne36279:0
+        4: crwdns36280:0crwdne36280:0
+        6: crwdns36281:0crwdne36281:0
+        8: crwdns36282:0crwdne36282:0
+        10: crwdns36283:0crwdne36283:0
+        12: crwdns36284:0crwdne36284:0
       unique level name here:
         line1<br/>line2: crwdns34813:0crwdne34813:0
         description here: crwdns21784:0crwdne21784:0

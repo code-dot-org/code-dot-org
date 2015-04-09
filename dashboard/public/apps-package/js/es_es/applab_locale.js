@@ -31,12 +31,12 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "catActions":function(d){return "Acciones"},
-"catControl":function(d){return "vuelta"},
+"catControl":function(d){return "Bucles"},
 "catEvents":function(d){return "Eventos"},
 "catLogic":function(d){return "Lógica"},
 "catMath":function(d){return "Matemáticas"},
-"catProcedures":function(d){return "funciones"},
-"catText":function(d){return "texto"},
+"catProcedures":function(d){return "Funciones"},
+"catText":function(d){return "Texto"},
 "catVariables":function(d){return "variables"},
 "continue":function(d){return "Continuar"},
 "container":function(d){return "crear contenedor"},

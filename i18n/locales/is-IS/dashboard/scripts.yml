@@ -455,13 +455,13 @@ is:
           "Artist: Functions": 'Listamaður: Föll'
           "Bee: Debugging": 'Býfluga: Villuleit'
         cspunit1:
-          title: CSP Kafli 1
-          description: 'CSP Kafli 1 - áfangar'
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           Lesson14: Kennslustund14
           Lesson 14: Kennslustund 14
           Lesson 14 v2: Kennslustund 14 útg. 2
           Lesson 15: Kennslustund 15
-          description_short: Búa til svarthvítar myndir með dílamynstursverkfærinu
           Lesson 8: Kennslustund 8
           Lesson 5: Kennslustund 5
           Lesson 3: Kennslustund 3

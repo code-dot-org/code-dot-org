@@ -66,52 +66,58 @@ div.droplet-palette-group-header-selected {
   color: #000; }
 
 div.droplet-palette-group-header.yellow {
-  border-left: 10px solid #ffd54f; }
+  border-left: 10px solid #FFF176; }
 
 div.droplet-palette-group-header-selected.yellow {
-  background-color: #ffd54f; }
+  background-color: #FFF176; }
 
 div.droplet-palette-group-header.red {
-  border-left: 10px solid #f87477; }
+  border-left: 10px solid #F78183; }
 
 div.droplet-palette-group-header-selected.red {
-  background-color: #f87477; }
+  background-color: #F78183; }
 
 div.droplet-palette-group-header.cyan {
-  border-left: 10px solid #00d2e2; }
+  border-left: 10px solid #4DD0E1; }
 
 div.droplet-palette-group-header-selected.cyan {
-  background-color: #00d2e2; }
+  background-color: #4DD0E1; }
+
+div.droplet-palette-group-header.pink {
+  border-left: 10px solid #F57AC6; }
+
+div.droplet-palette-group-header-selected.pink {
+  background-color: #F57AC6; }
 
 div.droplet-palette-group-header.lightgreen {
-  border-left: 10px solid #d3e965; }
+  border-left: 10px solid #D3E965; }
 
 div.droplet-palette-group-header-selected.lightgreen {
-  background-color: #d3e965; }
+  background-color: #D3E965; }
 
 div.droplet-palette-group-header.purple {
-  border-left: 10px solid #b159ab; }
+  border-left: 10px solid #BB77C7; }
 
 div.droplet-palette-group-header-selected.purple {
-  background-color: #b159ab; }
-
-div.droplet-palette-group-header.deeppurple {
-  border-left: 10px solid #a38bc3; }
-
-div.droplet-palette-group-header-selected.deeppurple {
-  background-color: #a38bc3; }
+  background-color: #BB77C7; }
 
 div.droplet-palette-group-header.blue {
-  border-left: 10px solid #19c3e1; }
+  border-left: 10px solid #64B5F6; }
 
 div.droplet-palette-group-header-selected.blue {
-  background-color: #19c3e1; }
+  background-color: #64B5F6; }
 
 div.droplet-palette-group-header.green {
-  border-left: 10px solid #48d882; }
+  border-left: 10px solid #68D995; }
 
 div.droplet-palette-group-header-selected.green {
-  background-color: #48d882; }
+  background-color: #68D995; }
+
+div.droplet-palette-group-header.orange {
+  border-left: 10px solid #FFB74D; }
+
+div.droplet-palette-group-header-selected.orange {
+  background-color: #FFB74D; }
 
 .droplet-wrapper-div {
   overflow: hidden;

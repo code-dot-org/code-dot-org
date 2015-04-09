@@ -299,7 +299,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_multiplyOperator_description":function(d){return "Multiply two numbers"},
 "dropletBlock_notOperator_description":function(d){return "Logical NOT of a boolean"},
 "dropletBlock_notOperator_signatureOverride":function(d){return "AND boolean operator"},
-"dropletBlock_onEvent_description":function(d){return "Execute code in response to the specified event."},
+"dropletBlock_onEvent_description":function(d){return "Kódot futtat egy meghatározott esemény hatására."},
 "dropletBlock_onEvent_param0":function(d){return "id"},
 "dropletBlock_onEvent_param1":function(d){return "event"},
 "dropletBlock_onEvent_param2":function(d){return "function"},
