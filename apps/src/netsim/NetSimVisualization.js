@@ -31,16 +31,22 @@ var tweens = require('./tweens');
  *        will be created.
  * @param {RunLoop} runLoop - Loop providing tick and render events that the
  *        visualization can hook up to and respond to.
- * @param {ObservableEvent} shardChange - shard change event that we can watch
- *        to get the shard and local node.
+ * @param {NetSim} netsim - core app controller, provides access to change
+ *        events and connection information.
  * @constructor
  */
-var NetSimVisualization = module.exports = function (svgRoot, runLoop, shardChange) {
+var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   /**
    * @type {jQuery}
    * @private
    */
   this.svgRoot_ = svgRoot;
+
+  /**
+   * @type {NetSim}
+   * @private
+   */
+  this.netsim_ = netsim;
 
   /**
    * The shard currently being represented.
@@ -50,7 +56,7 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, shardChan
    * @private
    */
   this.shard_ = null;
-  shardChange.register(this.onShardChange_.bind(this));
+  netsim.shardChange.register(this.onShardChange_.bind(this));
 
   /**
    * List of VizEntities, which are all the elements that will actually show up
@@ -83,6 +89,12 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, shardChan
    * @type {Object}
    */
   this.wireTableChangeKey = undefined;
+
+  /**
+   * Event registration information
+   * @type {Object}
+   */
+  this.eventKeys = {};
 
   // Hook up tick and render methods
   runLoop.tick.register(this.tick.bind(this));
@@ -167,6 +179,21 @@ NetSimVisualization.prototype.setShard = function (newShard) {
  * @param {?NetSimLocalClientNode} newLocalNode - null if disconnected
  */
 NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
+  // Unregister old handlers
+  if (this.eventKeys.registeredWithLocalNode) {
+    this.eventKeys.registeredWithLocalNode.remoteChange.unregister(
+        this.eventKeys.remoteChange);
+    this.eventKeys.registeredWithLocalNode = null;
+  }
+
+  // Register new handlers
+  if (newLocalNode) {
+    this.eventKeys.remoteChange = newLocalNode.remoteChange.register(
+        this.onRemoteChange_.bind(this));
+    this.eventKeys.registeredWithLocalNode = newLocalNode;
+  }
+
+  // Create viznode for local node
   if (newLocalNode) {
     if (this.localNode) {
       this.localNode.configureFrom(newLocalNode);
@@ -180,6 +207,16 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     this.localNode.kill();
   }
   this.pullElementsToForeground();
+};
+
+/**
+ * Called whenever the local node notifies that we've been connected to,
+ * or disconnected from, a router.
+ * @private
+ */
+NetSimVisualization.prototype.onRemoteChange_ = function () {
+  this.pullElementsToForeground();
+  this.distributeForegroundNodes();
 };
 
 /**
@@ -339,22 +376,28 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
     vizEntity.visited = false;
   });
 
-  // Use a simple stack for our list of nodes that need visiting.
-  // If we have a local node, push it onto the stack as our starting point.
-  // (If we don't have a local node, the next step is REALLY EASY)
-  var toExplore = [];
-  if (this.localNode) {
-    toExplore.push(this.localNode);
-  }
+  if (this.netsim_.isConnectedToRemote()) {
+    // Use a simple stack for our list of nodes that need visiting.
+    // If we have a local node, push it onto the stack as our starting point.
+    // (If we don't have a local node, the next step is REALLY EASY)
+    var toExplore = [];
+    if (this.localNode) {
+      toExplore.push(this.localNode);
+    }
 
-  // While there are still nodes that need visiting,
-  // visit the next node, marking it as "foreground/visited" and
-  // pushing all of its unvisited connections onto the stack.
-  var currentVizEntity;
-  while (toExplore.length > 0) {
-    currentVizEntity = toExplore.pop();
-    currentVizEntity.visited = true;
-    toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizEntity));
+    // While there are still nodes that need visiting,
+    // visit the next node, marking it as "foreground/visited" and
+    // pushing all of its unvisited connections onto the stack.
+    var currentVizEntity;
+    while (toExplore.length > 0) {
+      currentVizEntity = toExplore.pop();
+      currentVizEntity.visited = true;
+      toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizEntity));
+    }
+  } else if (this.localNode) {
+    // ONLY pull the local node to the foreground if we don't have a connection
+    // yet.
+    this.localNode.visited = true;
   }
 
   // Now, visited nodes belong in the foreground.
