@@ -335,6 +335,24 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
   }
 }
 
+function apiValidateActiveCanvas(opts, funcName) {
+  var validatedActiveCanvasKey = 'validated_active_canvas';
+  if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
+    var activeCanvas = Boolean(Applab.activeCanvas);
+    if (!activeCanvas) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName +
+              "() called without an active canvas. Call createCanvas() first.");
+    }
+    if (opts) {
+      opts[validatedActiveCanvasKey] = activeCanvas;
+    }
+  }
+}
+
 function onDebugInputKeyDown(e) {
   if (e.keyCode == KeyCodes.ENTER) {
     var input = e.target.textContent;
@@ -2021,6 +2039,7 @@ Applab.setActiveCanvas = function (opts) {
 };
 
 Applab.line = function (opts) {
+  apiValidateActiveCanvas(opts, 'line');
   apiValidateType(opts, 'line', 'x1', opts.x1, 'number');
   apiValidateType(opts, 'line', 'x2', opts.x2, 'number');
   apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
@@ -2037,6 +2056,7 @@ Applab.line = function (opts) {
 };
 
 Applab.circle = function (opts) {
+  apiValidateActiveCanvas(opts, 'circle');
   apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
   apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
   apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
@@ -2052,6 +2072,7 @@ Applab.circle = function (opts) {
 };
 
 Applab.rect = function (opts) {
+  apiValidateActiveCanvas(opts, 'rect');
   apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
   apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
   apiValidateType(opts, 'rect', 'width', opts.width, 'number');
@@ -2068,6 +2089,7 @@ Applab.rect = function (opts) {
 };
 
 Applab.setStrokeWidth = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeWidth');
   apiValidateTypeAndRange(opts, 'setStrokeWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
@@ -2078,6 +2100,7 @@ Applab.setStrokeWidth = function (opts) {
 };
 
 Applab.setStrokeColor = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeColor');
   apiValidateType(opts, 'setStrokeColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
@@ -2089,6 +2112,7 @@ Applab.setStrokeColor = function (opts) {
 
 Applab.setFillColor = function (opts) {
   // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'setFillColor');
   apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
@@ -2099,6 +2123,7 @@ Applab.setFillColor = function (opts) {
 };
 
 Applab.clearCanvas = function (opts) {
+  apiValidateActiveCanvas(opts, 'clearCanvas');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.clearRect(0,
@@ -2112,6 +2137,7 @@ Applab.clearCanvas = function (opts) {
 
 Applab.drawImage = function (opts) {
   // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'drawImage');
   apiValidateType(opts, 'drawImage', 'imageId', opts.imageId, 'string');
   apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
   apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
@@ -2139,6 +2165,7 @@ Applab.drawImage = function (opts) {
 };
 
 Applab.getImageData = function (opts) {
+  apiValidateActiveCanvas(opts, 'getImageData');
   apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
   apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
   apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
@@ -2151,6 +2178,7 @@ Applab.getImageData = function (opts) {
 
 Applab.putImageData = function (opts) {
   // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'putImageData');
   apiValidateType(opts, 'putImageData', 'imageData', opts.imageData, 'object');
   apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
   apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
