@@ -10,6 +10,7 @@ class DSLDefined < Level
 
   def self.setup(data)
     level = find_or_create_by({ name: data[:name] })
+    level.send(:write_attribute, 'properties', {})
     level.update!(name: data[:name], game_id: Game.find_by(name: self.to_s).id, properties: data[:properties])
     level
   end
@@ -52,7 +53,7 @@ class DSLDefined < Level
 
   def filename
     # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
-    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts"
+    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts --color=never"
     `#{grep_string}`.chomp.presence || "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
   end
 
