@@ -128,15 +128,6 @@ Blockly.TypeDropdown.prototype.setSquareIconColor = function (newType, colorIcon
   colorIconDiv.style.background = hexColor;
 };
 
-/**
- * @param {!Element} element
- * @param {!Array.<Number>} hsvColor
- */
-Blockly.TypeDropdown.prototype.setBackgroundFromHSV_ = function (element, hsvColor) {
-  element.style.background =
-    goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255);
-};
-
 Blockly.TypeDropdown.prototype.dispose = function () {
   goog.events.unlistenByKey(this.changeListenerKey_);
   this.selectComponent_.dispose();
