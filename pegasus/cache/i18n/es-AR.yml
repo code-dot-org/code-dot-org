@@ -3,7 +3,7 @@
   select_language: Por favor seleccione su idioma
   computer_science: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
-  csedweek_dates: Del 8 al 14 de Diciembre, 2014
+  csedweek_dates: 8-14 de diciembre de 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Hora del código</a>.  Se convoca
     a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color:
@@ -17,8 +17,8 @@
   petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender
     Informática
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
-  petition_sign_message_support: Si desea apoyarnos, firme con su nombre. Únase a
-    otros.
+  petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a #
+    otros.'
   name: Nombre
   email: Correo electrónico
   zipcode: Código postal o país
@@ -33,7 +33,7 @@
   hoc2014_teachers: Maestros
   hoc2014_host: Organízalo
   hoc2014_everyone: Todos
-  hoc2014_support: Apóyelo&#x25BE;
+  hoc2014_support: Apóyalo &#x25BE;
   hoc2014_whatishoc: Qué es la Hora de Programación?
   twentyhours_trynow: Probar ahora
   california_heading: Pídele a tu escuela que enseñe ciencias de la computación
@@ -115,8 +115,9 @@
   learn_classes: Encontrar clases cerca de ti
   hoc_is_here: '#HourOfCode está aquí - compruébalo! @codeorg'
   just_did_hoc: Yo he terminado the HourofCode - Dale un vistazo! @codeorg
-  twitter_teach_cs: "¿Por qué no hay más escuelas enseñando a programar? Podemos solucionar
-    esto. http://youtu.be/nKIu9yen5nc. \nVisite http://code.org/ para saber más.\n"
+  twitter_teach_cs: ¿Por qué no hay más escuelas que enseñen ciencias de la  computación?
+    Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visite http://code.org/ para
+    obtener más información.
   learn_hoc: Aprende una hora del código
   beyond_hoc: Más allá de una hora
   what_gender: ¿Cual es tu sexo?
@@ -134,13 +135,14 @@
   start_hoc: Comienza La hora de código ahora
   contact_form_topic_press: Prensa/ Medios de comunicación (entrevista o compromiso
     de hablar)
-  stats_nina: '"Cada día produzco los mismos resultados &mdash; 100% de compromiso."
-    - Nina Nichols Peery, docente'
-  stats_student: '"Sabía que ésta es una posibilidad que se da <b>sólo una vez en
-    la vida</b>" - Mariana Alzate, alumna de 5º grado.'
-  stats_michael: '"Yo <b>nunca antes</b> había visto a mis estudiantes tan entuciasmados
-    por el aprendizaje." - Michael Clark, Profesor'
+  stats_nina: '"Cada día produjo los mismos resultados &mdash; 100% de compromiso."-Nina
+    Nichols Peery, profesora'
+  stats_student: '"Sabía que era una oportunidad<b> única en la vida</b>."-Mariana
+    Alzate, estudiante de 5º grado'
+  stats_michael: '" <b>Nunca antes</b> había visto a mis estudiantes tan entusiasmados
+    por aprender." - Michael Clark, Profesor'
   studiobar_title: Explora <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title_nolink: Explora Code Studio
   studiobar_elementary_title: Cursos elementales
   studiobar_elementary_body: Nuestros tres nuevos cursos para K&#8209;5
   studiobar_hoc_title: La Hora de Programación
@@ -154,38 +156,42 @@
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que done
   studiobar_shop_title: Tienda
-  studiobar_shop_body: Rompa los estereotipos. Luzca nuestro logo con orgullo.
-  homepage_hero_text_malala: '&ldquo;"Desafío a las chicas de todos los países a aprender
-    una Hora de Código" Malala, ganadora del Premio Nobel de la Paz&rdquo;'
-  homepage_hero_text_susan: |
-    &ldquo;Si podés cambiar la tecnología,
-    podés cambiar el mundo.&rdquo;
-    Susan, Directora Ejecutiva de YouTube
-  homepage_hero_text_fistbump: '&ldquo;"No sólo juegues con tu teléfono, programalo"
-    Presidente Barak Obama&rdquo;'
-  homepage_hero_text_sheryl: |
-    &ldquo;Nuestros niños &mdash; incluyendo a nuestras niñas &mdash;
-    necesitan la oportunidad de aprender computación.&rdquo;
-    Sheryl, Jefa de Operaciones de Facebook
-  homepage_hero_text_satya: |
-    &ldquo;La ciencia de la computación puede desbloquear las mejores oportunidades del mundo.&rdquo;
-    Satya, Director Ejecutivo de Microsoft
-  homepage_hero_text_bosh: |
-    &ldquo;Si codificás, podés elegir el curso de tu vida.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;Estas habilidades han cambiado mi futuro.\nPor
-    no mencionar que es pura diversión.&rdquo; \n"
-  homepage_hero_text_student2: '&ldquo;Jamás ví a mis hijos tan emocionados por aprender.&rdquo; '
-  homepage_hero_text_student3: '&ldquo;Las ciencias de la computación es un campo
-    que no puedes saber si te va a gustar o no sin probarlo.&rdquo;'
-  homepage_hero_text_student4: '"Puedes hacer cualquier cosa que tu mente quiera hacer
-    con programación". '
-  homepage_hero_text_student5: '&ldquo;Ciencias de la computación no es para otros.
-    Es para ti, aquí, ahora.&rdquo; '
-  homepage_hero_text_teacher1: '&ldquo;Programar hace saltar chispas de creatividad,
-    inspiración e innovación &mdash;las cuales son esenciales en cualquier carrera.&rdquo; '
-  homepage_hero_text_teacher2: '&ldquo;Este programa tiene al 100% de mis estudiantes
-    comprometidos, involucrados y participando.&rdquo; '
+  studiobar_shop_body: Rompe los estereotipos. Usa nuestro logotipo con orgullo.
+  homepage_hero_text_malala: '&ldquo;Hago un reto a chicas en cada país a aprender
+    una "Hora de código"&rdquo; Malala, ganadora del Premio Nobel de la paz'
+  homepage_hero_text_susan: '"Si puedes cambiar la tecnología, puedes cambiar el mundo."
+    Susan, CEO de YouTube'
+  homepage_hero_text_fistbump: '"No sólo juegues con tu  teléfono, prográmalo" Presidente
+    Barack Obama'
+  homepage_hero_text_sheryl: '&ldquo;Nuestros hijos &mdash;incluyendo nuestras chicas&mdash;
+    necesitan la oportunidad de aprender ciencias de la computación.&rdquo; Sheryl,
+    COO de Facebook'
+  homepage_hero_text_satya: '&ldquo;Las ciencias de la computación pueden permitirle
+    acceder a las mejores oportunidades en el mundo.&rdquo; Satya, CEO de Microsoft'
+  homepage_hero_text_bosh: '"Si programas, puedes elegir el curso de tu vida." Chris
+    Bosh'
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: La Hora de Programación
   homepage_slot_text_frozen: Congelados con Anna y Elsa
   homepage_slot_text_teacher: Teacher Dashboard
