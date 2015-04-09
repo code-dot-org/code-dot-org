@@ -7,8 +7,8 @@ nav: educate_nav
 # Student of the Month winners
 
 <%= view :sotm3_winners %>
-
-
+</br>
+<a href="http://blog.code.org/tagged/SOTM"><button>See all</button></a>
 # Nominate a Student of the Month
 
 ## We want to recognize students who are changing the face of computer science.
