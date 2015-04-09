@@ -19,6 +19,13 @@ var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 
 /**
+ * How long the "entrance" animation for new messages lasts, in milliseconds.
+ * @type {number}
+ * @const
+ */
+var MESSAGE_SLIDE_IN_DURATION_MS = 400;
+
+/**
  * Generator and controller for message log.
  * @param {jQuery} rootDiv
  * @param {Object} options
@@ -112,11 +119,6 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
  * Put a message into the log.
  */
 NetSimLogPanel.prototype.log = function (packetBinary) {
-  var scrollArea = this.scrollArea_;
-  var wasScrolledToEnd =
-      scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
-      scrollArea.outerHeight();
-
   var newPacket = new NetSimLogPacket(packetBinary, {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
@@ -124,13 +126,10 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
     isUnread: this.hasUnreadMessages_,
     markAsReadCallback: this.updateUnreadCount.bind(this)
   });
-  newPacket.getRoot().appendTo(this.scrollArea_);
-  this.packets_.push(newPacket);
-
-  // Auto-scroll
-  if (wasScrolledToEnd) {
-    scrollArea.scrollTop(scrollArea[0].scrollHeight);
-  }
+  newPacket.getRoot().hide();
+  newPacket.getRoot().prependTo(this.scrollArea_);
+  newPacket.getRoot().slideDown(MESSAGE_SLIDE_IN_DURATION_MS);
+  this.packets_.unshift(newPacket);
 
   this.updateUnreadCount();
 };
