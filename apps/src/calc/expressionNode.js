@@ -406,7 +406,8 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     return this.getTokenListDiff(null);
   }
 
-  if (this.getType_() !== ValueType.ARITHMETIC) {
+  if (this.getType_() !== ValueType.ARITHMETIC &&
+      this.getType_() !== ValueType.EXPONENTIAL) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
   }
@@ -416,8 +417,16 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     rightDeeper = this.children_[1].depth() > this.children_[0].depth();
   }
 
+  var prefix = new Token('(', false);
+  var suffix = new Token(')', false);
+
+  if (this.value_ === 'sqrt') {
+    prefix = new Token('sqrt', false);
+    suffix = null;
+  }
+
   var tokens = [
-    new Token('(', false),
+    prefix,
     this.children_[0].getTokenList(markDeepest && !rightDeeper),
   ];
   if (this.children_.length > 1) {
@@ -426,7 +435,9 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
       this.children_[1].getTokenList(markDeepest && rightDeeper)
     ]);
   }
-  tokens.push(new Token(')', false));
+  if (suffix) {
+    tokens.push(suffix);
+  }
   return _.flatten(tokens);
 };
 
