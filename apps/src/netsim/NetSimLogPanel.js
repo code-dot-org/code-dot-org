@@ -216,6 +216,11 @@ var NetSimLogPacket = function (packetBinary, options) {
   this.isUnread = options.isUnread;
 
   /**
+   * @type {boolean}
+   */
+  this.isMinimized = false;
+
+  /**
    * @type {function}
    * @private
    */
@@ -227,10 +232,6 @@ var NetSimLogPacket = function (packetBinary, options) {
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('packet');
-
-  if (this.isUnread) {
-    this.rootDiv_.addClass('unread');
-  }
 
   // Initial content population
   this.render();
@@ -244,12 +245,17 @@ NetSimLogPacket.prototype.render = function () {
     packetBinary: this.packetBinary_,
     packetSpec: this.packetSpec_,
     chunkSize: this.chunkSize_,
-    isUnread: this.isUnread
+    isUnread: this.isUnread,
+    isMinimized: this.isMinimized
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   this.rootDiv_.html(jQueryWrap);
   this.rootDiv_.find('.mark-as-read-button').click(this.markAsRead.bind(this));
+  this.rootDiv_.find('.minimize-button').click(this.minimize.bind(this));
+  this.rootDiv_.find('.maximize-button').click(this.maximize.bind(this));
+
+  this.rootDiv_.toggleClass('unread', this.isUnread);
 };
 
 /**
@@ -285,7 +291,16 @@ NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
  */
 NetSimLogPacket.prototype.markAsRead = function () {
   this.isUnread = false;
-  this.rootDiv_.removeClass('unread');
+  this.render();
   this.markAsReadCallback_();
+};
+
+NetSimLogPacket.prototype.minimize = function () {
+  this.isMinimized = true;
+  this.render();
+};
+
+NetSimLogPacket.prototype.maximize = function () {
+  this.isMinimized = false;
   this.render();
 };
