@@ -455,13 +455,13 @@ bg:
           "Artist: Functions": 'Художник: функции'
           "Bee: Debugging": 'Пчела: отстраняване на грешки'
         cspunit1:
-          title: CSP блок 1
-          description: CSP единица 1 етапи
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           Lesson14: Урок14
           Lesson 14: Урок 14
           Lesson 14 v2: Урок 14 v2
           Lesson 15: Урок 15
-          description_short: Направи черно-бели изображения с инструмента за пикселизация
           Lesson 8: Урок 8
           Lesson 5: Урок 5
           Lesson 3: Урок 3

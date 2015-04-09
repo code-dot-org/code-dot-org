@@ -632,6 +632,45 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
   }
 }
 
+function apiValidateActiveCanvas(opts, funcName) {
+  var validatedActiveCanvasKey = 'validated_active_canvas';
+  if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
+    var activeCanvas = Boolean(Applab.activeCanvas);
+    if (!activeCanvas) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName +
+              "() called without an active canvas. Call createCanvas() first.");
+    }
+    if (opts) {
+      opts[validatedActiveCanvasKey] = activeCanvas;
+    }
+  }
+}
+
+function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shouldExist) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedDomKey = 'validated_id_' + varName;
+  apiValidateType(opts, funcName, varName, id, 'string');
+  if (opts[validatedTypeKey] && typeof opts[validatedDomKey] === 'undefined') {
+    var element = document.getElementById(id);
+    var exists = Boolean(element && divApplab.contains(element));
+    var valid = exists == shouldExist;
+    if (!valid) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
+              " parameter refers to an id (" + id + ") which " +
+              (exists ? "already exists." : "does not exist."));
+    }
+    opts[validatedDomKey] = valid;
+  }
+}
+
 function onDebugInputKeyDown(e) {
   if (e.keyCode == KeyCodes.ENTER) {
     var input = e.target.textContent;
@@ -1952,11 +1991,11 @@ Applab.write = function (opts) {
 };
 
 Applab.button = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'button', 'id', opts.elementId, 'string');
-  apiValidateType(opts, 'button', 'text', opts.text, 'string');
-
   var divApplab = document.getElementById('divApplab');
+
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
+  apiValidateType(opts, 'button', 'text', opts.text, 'string');
 
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
@@ -2272,8 +2311,8 @@ Applab.speed = function (opts) {
 };
 
 Applab.createCanvas = function (opts) {
-  apiValidateType(opts, 'createCanvas', 'canvasId', opts.elementId, 'string');
   var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'createCanvas', 'canvasId', opts.elementId, false);
 
   var newElement = document.createElement("canvas");
   var ctx = newElement.getContext("2d");
@@ -2306,9 +2345,9 @@ Applab.createCanvas = function (opts) {
 };
 
 Applab.setActiveCanvas = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'setActiveCanvas', 'canvasId', opts.elementId, 'string');
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
   var canvas = document.getElementById(opts.elementId);
   if (divApplab.contains(canvas)) {
     Applab.activeCanvas = canvas;
@@ -2318,6 +2357,7 @@ Applab.setActiveCanvas = function (opts) {
 };
 
 Applab.line = function (opts) {
+  apiValidateActiveCanvas(opts, 'line');
   apiValidateType(opts, 'line', 'x1', opts.x1, 'number');
   apiValidateType(opts, 'line', 'x2', opts.x2, 'number');
   apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
@@ -2334,6 +2374,7 @@ Applab.line = function (opts) {
 };
 
 Applab.circle = function (opts) {
+  apiValidateActiveCanvas(opts, 'circle');
   apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
   apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
   apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
@@ -2349,6 +2390,7 @@ Applab.circle = function (opts) {
 };
 
 Applab.rect = function (opts) {
+  apiValidateActiveCanvas(opts, 'rect');
   apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
   apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
   apiValidateType(opts, 'rect', 'width', opts.width, 'number');
@@ -2365,6 +2407,7 @@ Applab.rect = function (opts) {
 };
 
 Applab.setStrokeWidth = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeWidth');
   apiValidateTypeAndRange(opts, 'setStrokeWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
@@ -2375,6 +2418,7 @@ Applab.setStrokeWidth = function (opts) {
 };
 
 Applab.setStrokeColor = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeColor');
   apiValidateType(opts, 'setStrokeColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
@@ -2386,6 +2430,7 @@ Applab.setStrokeColor = function (opts) {
 
 Applab.setFillColor = function (opts) {
   // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'setFillColor');
   apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
@@ -2396,6 +2441,7 @@ Applab.setFillColor = function (opts) {
 };
 
 Applab.clearCanvas = function (opts) {
+  apiValidateActiveCanvas(opts, 'clearCanvas');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.clearRect(0,
@@ -2408,11 +2454,12 @@ Applab.clearCanvas = function (opts) {
 };
 
 Applab.drawImage = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'drawImage', 'imageId', opts.imageId, 'string');
+  apiValidateActiveCanvas(opts, 'drawImage');
+  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'imageId', opts.imageId, true);
   apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
   apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
-  var divApplab = document.getElementById('divApplab');
   var image = document.getElementById(opts.imageId);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx && divApplab.contains(image)) {
@@ -2436,6 +2483,7 @@ Applab.drawImage = function (opts) {
 };
 
 Applab.getImageData = function (opts) {
+  apiValidateActiveCanvas(opts, 'getImageData');
   apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
   apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
   apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
@@ -2448,6 +2496,7 @@ Applab.getImageData = function (opts) {
 
 Applab.putImageData = function (opts) {
   // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'putImageData');
   apiValidateType(opts, 'putImageData', 'imageData', opts.imageData, 'object');
   apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
   apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
@@ -2463,11 +2512,10 @@ Applab.putImageData = function (opts) {
 };
 
 Applab.textInput = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'textInput', 'id', opts.elementId, 'string');
-  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
@@ -2477,12 +2525,11 @@ Applab.textInput = function (opts) {
 };
 
 Applab.textLabel = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'textLabel', 'id', opts.elementId, 'string');
+  apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
   apiValidateType(opts, 'textLabel', 'text', opts.text, 'string');
   apiValidateType(opts, 'textLabel', 'forId', opts.forId, 'string', OPTIONAL);
-
-  var divApplab = document.getElementById('divApplab');
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
@@ -2497,11 +2544,10 @@ Applab.textLabel = function (opts) {
 };
 
 Applab.checkbox = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'checkbox', 'id', opts.elementId, 'string');
-  // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'checkbox', 'id', opts.elementId, false);
+  // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
 
   var newCheckbox = document.createElement("input");
   newCheckbox.setAttribute("type", "checkbox");
@@ -2512,12 +2558,11 @@ Applab.checkbox = function (opts) {
 };
 
 Applab.radioButton = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'radioButton', 'id', opts.elementId, 'string');
+  apiValidateDomIdExistence(divApplab, opts, 'radioButton', 'id', opts.elementId, false);
   // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
   apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
-
-  var divApplab = document.getElementById('divApplab');
 
   var newRadio = document.createElement("input");
   newRadio.setAttribute("type", "radio");
@@ -2529,10 +2574,9 @@ Applab.radioButton = function (opts) {
 };
 
 Applab.dropdown = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'dropdown', 'id', opts.elementId, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'dropdown', 'id', opts.elementId, false);
 
   var newSelect = document.createElement("select");
 
@@ -2573,10 +2617,10 @@ Applab.setAttribute = function (opts) {
 };
 
 Applab.getText = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'getText', 'id', opts.elementId, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getText', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
@@ -2591,11 +2635,11 @@ Applab.getText = function (opts) {
 };
 
 Applab.setText = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'setText', 'id', opts.elementId, 'string');
+  apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
   apiValidateType(opts, 'setText', 'text', opts.text, 'string');
 
-  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
@@ -2611,10 +2655,10 @@ Applab.setText = function (opts) {
 };
 
 Applab.getChecked = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'getChecked', 'id', opts.elementId, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getChecked', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
     return element.checked;
@@ -2623,11 +2667,11 @@ Applab.getChecked = function (opts) {
 };
 
 Applab.setChecked = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'setChecked', 'id', opts.elementId, 'string');
+  apiValidateDomIdExistence(divApplab, opts, 'setChecked', 'id', opts.elementId, true);
   // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
 
-  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
     element.checked = opts.checked;
@@ -2637,10 +2681,10 @@ Applab.setChecked = function (opts) {
 };
 
 Applab.getImageURL = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'getImageURL', 'id', opts.elementId, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getImageURL', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
@@ -2656,11 +2700,11 @@ Applab.getImageURL = function (opts) {
 };
 
 Applab.setImageURL = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'setImageURL', 'id', opts.elementId, 'string');
+  apiValidateDomIdExistence(divApplab, opts, 'setImageURL', 'id', opts.elementId, true);
   apiValidateType(opts, 'setImageURL', 'src', opts.src, 'string');
 
-  var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = opts.src;
@@ -2693,10 +2737,10 @@ Applab.innerHTML = function (opts) {
 };
 
 Applab.deleteElement = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'deleteElement', 'id', opts.elementId, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'deleteElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     // Special check to see if the active canvas is being deleted
@@ -2709,10 +2753,10 @@ Applab.deleteElement = function (opts) {
 };
 
 Applab.showElement = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'showElement', 'id', opts.elementId, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'showElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.visibility = 'visible';
@@ -2722,10 +2766,10 @@ Applab.showElement = function (opts) {
 };
 
 Applab.hideElement = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'hideElement', 'id', opts.elementId, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'hideElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.visibility = 'hidden';
@@ -2756,14 +2800,14 @@ Applab.setParent = function (opts) {
 };
 
 Applab.setPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'setPosition', 'id', opts.elementId, 'string');
+  apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
   apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
   apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
   apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
   apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
 
-  var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.position = 'absolute';
@@ -2777,10 +2821,10 @@ Applab.setPosition = function (opts) {
 };
 
 Applab.getXPosition = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'getXPosition', 'id', opts.elementId, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getXPosition', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var x = div.offsetLeft;
@@ -2794,10 +2838,10 @@ Applab.getXPosition = function (opts) {
 };
 
 Applab.getYPosition = function (opts) {
-  // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'getYPosition', 'id', opts.elementId, 'string');
-
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getYPosition', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var y = div.offsetTop;
@@ -2836,10 +2880,10 @@ Applab.onEventFired = function (opts, e) {
 };
 
 Applab.onEvent = function (opts) {
-  apiValidateType(opts, 'onEvent', 'id', opts.elementId, 'string');
+  var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
   apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
   apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
-  var divApplab = document.getElementById('divApplab');
   // Special case the id of 'body' to mean the app's container (divApplab)
   // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
   if (opts.elementId === 'body') {
@@ -4693,6 +4737,12 @@ exports.Mode = Mode;
 });
 
 },{"../../dropletUtils":58,"../dropletConfig":16,"./errorMapper":6}],16:[function(require,module,exports){
+var COLOR_LIGHT_GREEN = '#D3E965';
+var COLOR_BLUE = '#19C3E1';
+var COLOR_RED = '#F78183';
+var COLOR_CYAN = '#4DD0E1';
+var COLOR_YELLOW = '#FFF176';
+
 module.exports.blocks = [
   {'func': 'onEvent', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -4788,27 +4838,27 @@ module.exports.blocks = [
 module.exports.categories = {
   'UI controls': {
     'color': 'yellow',
-    'rgb': '#FFD54F',
+    'rgb': COLOR_YELLOW,
     'blocks': []
   },
   'Canvas': {
     'color': 'red',
-    'rgb': '#F87477',
+    'rgb': COLOR_RED,
     'blocks': []
   },
   'Data': {
     'color': 'lightgreen',
-    'rgb': '#D3E965',
+    'rgb': COLOR_LIGHT_GREEN,
     'blocks': []
   },
   'Turtle': {
     'color': 'cyan',
-    'rgb': '#00D2E2',
+    'rgb': COLOR_CYAN,
     'blocks': []
   },
   'Advanced': {
     'color': 'blue',
-    'rgb': '#19C3E1',
+    'rgb': COLOR_BLUE,
     'blocks': []
   },
 };

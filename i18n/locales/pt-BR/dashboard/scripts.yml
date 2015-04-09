@@ -455,13 +455,13 @@ pt-BR:
           "Artist: Functions": 'Artista: Funções'
           "Bee: Debugging": 'Abelha: Depuração'
         cspunit1:
-          title: 'CSP - Unidade 1'
-          description: 'CSP - Unidade 1 - Fases'
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           Lesson14: Lição14
           Lesson 14: Lição 14
           Lesson 14 v2: Lição 14 v2
           Lesson 15: Lição 15
-          description_short: Faça imagens em preto e branco com a ferramenta de pixelização
           Lesson 8: Lição 8
           Lesson 5: Lição 5
           Lesson 3: Lição 3

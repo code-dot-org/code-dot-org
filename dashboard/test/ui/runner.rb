@@ -237,7 +237,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   end
 
   # if autorertrying, output a rerun file so on retry we only run failed tests
-  rerun_filename = browser['name'] + '.rerun'
+  rerun_filename = (browser['name'] || 'UnknownBrowser') + '.rerun'
   first_time_arguments = $options.auto_retry ? " --format rerun --out #{rerun_filename}" : ""
 
   succeeded, output_text, test_duration = run_tests(arguments + first_time_arguments)
