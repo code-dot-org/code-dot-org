@@ -98,7 +98,7 @@ Blockly.TypeDropdown.prototype.createSelect_ = function() {
  * @private
  */
 Blockly.TypeDropdown.prototype.createColorSquareDiv = function () {
-  return goog.dom.createDom('div', "color-square-icon");
+  return goog.dom.createDom('div', 'color-square-icon');
 };
 
 Blockly.TypeDropdown.prototype.attachListeners_ = function (selectComponent) {
