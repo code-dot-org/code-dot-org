@@ -5,7 +5,7 @@ $(window).load(function () {
      * data-color attribute on select elements.
      * @param ul
      * @param item
-     * @returns {*}
+     * @returns {jQuery}
      * @private
      */
     _renderItem: function (ul, item) {
@@ -19,10 +19,18 @@ $(window).load(function () {
     }
   });
 
+  /**
+   * @param {string} color
+   * @returns {string}
+   */
   function bgColorStyle(color) {
     return "background-color: " + color;
   }
 
+  /**
+   * Styles a button element to have a color square icon
+   * @param {Element} selectElement
+   */
   function styleButton(selectElement) {
     var selectedColor = $(selectElement).find("option:selected").attr("data-color");
     var hiddenSelectMenuBtn = "#" + $(selectElement).attr("id") + "-button .ui-selectmenu-text";
