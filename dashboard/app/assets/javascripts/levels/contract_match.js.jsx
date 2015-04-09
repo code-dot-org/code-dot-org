@@ -1,4 +1,3 @@
-/** TODO(bjordan): Move this all into StudioApps */
 $(window).load(function () {
   $.widget("custom.coloriconselectmenu", $.ui.selectmenu, {
     /**
