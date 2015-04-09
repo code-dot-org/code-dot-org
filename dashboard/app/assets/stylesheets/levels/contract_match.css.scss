@@ -29,19 +29,35 @@
   overflow: hidden;
 }
 
-.domain-x-button {
-  float: right;
-  width: 27px;
-  height: 27px;
-  font-size: 22px;
-  padding: 0;
-  margin: 4px;
-}
-
 .contract .buttons {
   margin-top: 8px;
 }
 
 #sectionTitle {
   font-size: 20px;
+}
+
+#contractForm {
+  .ui-selectmenu-button {
+    margin-top: 13px;
+    margin-bottom: -13px;
+  }
+
+  .domain-add-button {
+    padding: 4px 11px;
+    margin-top: 10px;
+    margin-left: 0;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .domain-x-button {
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    margin: 4px;
+    font-size: 17px
+  }
+
+  margin-bottom: 20px;
 }
