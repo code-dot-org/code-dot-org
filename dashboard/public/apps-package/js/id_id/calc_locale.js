@@ -155,15 +155,14 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Program Anda menghasilkan pembagian dengan nol."},
-"emptyComputeBlock":function(d){return "Kamu harus melampirkan blok ke blok \"menghitung\"."},
-"emptyFunctionalBlock":function(d){return "Kamu memiliki blok dengan masukan yang tidak terisi."},
+"emptyComputeBlock":function(d){return "Anda harus memasang blok ke \"evaluasi\" block."},
 "equivalentExpression":function(d){return "Cobalah tata ulang argumen Anda untuk mendapatkan ekspresi yang sama persis."},
 "evaluate":function(d){return "evaluasi"},
-"extraTopBlocks":function(d){return "Terdapat blok yang tidak terpasang. Apa maksud Anda ialah memasangnya pada blok \"hitung\"?"},
+"extraTopBlocks":function(d){return "Anda memiliki blok terikat. Apakah maksud Anda untuk memasang ini ke \"evaluasi\" blok?"},
 "failedInput":function(d){return "Fungsi Kamu tidak memberikan hasil yang tepat bagi semua nilai."},
 "goal":function(d){return "Tujuan:"},
 "levelIncompleteError":function(d){return "Ekspresi Kamu tidak cocok dengan tujuan."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "Anda harus mendefinisikan fungsi bernama "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Ekspresi Anda kehilangan variabel "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Berikut adalah hasil perhitungan Anda! Terus bekerja, atau beralih ke masalah berikutnya!"},
 "yourExpression":function(d){return "Ekspresimu:"},

@@ -68,7 +68,8 @@ Dashboard::Application.routes.draw do
     omniauth_callbacks: 'omniauth_callbacks',
     registrations: 'registrations',
     confirmations: 'confirmations',
-    sessions: 'sessions'
+    sessions: 'sessions',
+    passwords: 'passwords'
   }
   get 'discourse/sso' => 'discourse_sso#sso'
 

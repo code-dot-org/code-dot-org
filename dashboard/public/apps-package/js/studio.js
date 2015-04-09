@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({208:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({209:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":200,"./levels":207,"./skins":212,"./studio":213}],213:[function(require,module,exports){
+},{"../appMain":5,"./blocks":201,"./levels":208,"./skins":213,"./studio":214}],214:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -1277,8 +1277,8 @@ studioApp.reset = function(first) {
     projectile.removeElement();
   }
 
-  // True if we should failure despite being freeplay
-  Studio.freePlayFailure = false;
+  // True if we should fail before execution, even if freeplay
+  Studio.preExecutionFailure = false;
   Studio.message = null;
 
   // Reset the score and title screen.
@@ -1419,7 +1419,7 @@ var displayFeedback = function() {
       tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && level.freePlay && !Studio.freePlayFailure,
+      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -1563,6 +1563,29 @@ var nativeGetCallback = function () {
 };
 
 /**
+ * Looks for failures that should prevent execution.
+ * @returns {boolean} True if we have a pre-execution failure
+ */
+Studio.checkForPreExecutionFailure = function () {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Studio.message = commonMsg.emptyFunctionalBlock();
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  if (studioApp.hasExtraTopBlocks()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the story
  */
 Studio.execute = function() {
@@ -1573,11 +1596,7 @@ Studio.execute = function() {
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
-    if (studioApp.hasUnfilledFunctionalBlock()) {
-      Studio.result = false;
-      Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-      Studio.message = commonMsg.emptyFunctionalBlock();
-      Studio.freePlayFailure = true;
+    if (Studio.checkForPreExecutionFailure()) {
       return Studio.onPuzzleComplete();
     }
 
@@ -1664,7 +1683,7 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function() {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (level.freePlay && !Studio.freePlayFailure) {
+  } else if (level.freePlay && !Studio.preExecutionFailure) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -1677,10 +1696,10 @@ Studio.onPuzzleComplete = function() {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    if (!Studio.freePlayFailure) {
+    if (!Studio.preExecutionFailure) {
       Studio.testResults = TestResults.FREE_PLAY;
     }
-    // If freePlayFailure testResults should already be set
+    // If preExecutionFailure testResults should already be set
   } else {
     Studio.testResults = studioApp.getTestResults(levelComplete);
   }
@@ -2987,7 +3006,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":247,"../../locale/current/studio":253,"../StudioApp":4,"../canvg/StackBlur.js":48,"../canvg/canvg.js":49,"../canvg/rgbcolor.js":50,"../canvg/svg_todataurl":51,"../codegen":53,"../constants":55,"../dom":56,"../dropletUtils":57,"../skins":196,"../templates/page.html":221,"../utils":242,"../xml":243,"./api":198,"./bigGameLogic":199,"./blocks":200,"./collidable":201,"./constants":202,"./controls.html":203,"./dropletConfig":205,"./extraControlRows.html":206,"./projectile":209,"./rocketHeightLogic":210,"./samBatLogic":211,"./visualization.html":214}],214:[function(require,module,exports){
+},{"../../locale/current/common":248,"../../locale/current/studio":254,"../StudioApp":4,"../canvg/StackBlur.js":49,"../canvg/canvg.js":50,"../canvg/rgbcolor.js":51,"../canvg/svg_todataurl":52,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../skins":197,"../templates/page.html":222,"../utils":243,"../xml":244,"./api":199,"./bigGameLogic":200,"./blocks":201,"./collidable":202,"./constants":203,"./controls.html":204,"./dropletConfig":206,"./extraControlRows.html":207,"./projectile":210,"./rocketHeightLogic":211,"./samBatLogic":212,"./visualization.html":215}],215:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3007,7 +3026,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":263}],211:[function(require,module,exports){
+},{"ejs":264}],212:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3131,7 +3150,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 
 module.exports = SamBatLogic;
 
-},{"../codegen":53,"../constants":55,"./api":198,"./constants":202,"./customGameLogic":204}],210:[function(require,module,exports){
+},{"../codegen":54,"../constants":56,"./api":199,"./constants":203,"./customGameLogic":205}],211:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3193,7 +3212,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 
 module.exports = RocketHeightLogic;
 
-},{"../codegen":53,"./api":198,"./constants":202,"./customGameLogic":204}],209:[function(require,module,exports){
+},{"../codegen":54,"./api":199,"./constants":203,"./customGameLogic":205}],210:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3367,7 +3386,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":201,"./constants":202}],212:[function(require,module,exports){
+},{"./collidable":202,"./constants":203}],213:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3736,7 +3755,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":253,"../skins":196,"./constants":202}],207:[function(require,module,exports){
+},{"../../locale/current/studio":254,"../skins":197,"./constants":203}],208:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -5238,7 +5257,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":253,"../block_utils":25,"../utils":242,"./constants":202}],206:[function(require,module,exports){
+},{"../../locale/current/studio":254,"../block_utils":26,"../utils":243,"./constants":203}],207:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5258,7 +5277,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":247,"ejs":263}],205:[function(require,module,exports){
+},{"../../locale/current/common":248,"ejs":264}],206:[function(require,module,exports){
 var msg = require('../../locale/current/studio');
 
 module.exports.blocks = [
@@ -5282,7 +5301,7 @@ module.exports.categories = {
   },
 };
 
-},{"../../locale/current/studio":253}],203:[function(require,module,exports){
+},{"../../locale/current/studio":254}],204:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5302,7 +5321,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":247,"ejs":263}],201:[function(require,module,exports){
+},{"../../locale/current/common":248,"ejs":264}],202:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5408,7 +5427,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":4,"./constants":202}],200:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":203}],201:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -7433,9 +7452,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":247,"../../locale/current/studio":253,"../StudioApp":4,"../codegen":53,"../sharedFunctionalBlocks":195,"../utils":242,"./constants":202}],253:[function(require,module,exports){
+},{"../../locale/current/common":248,"../../locale/current/studio":254,"../StudioApp":4,"../codegen":54,"../sharedFunctionalBlocks":196,"../utils":243,"./constants":203}],254:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],199:[function(require,module,exports){
+},{}],200:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7657,7 +7676,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":53,"./api":198,"./constants":202,"./customGameLogic":204}],204:[function(require,module,exports){
+},{"../codegen":54,"./api":199,"./constants":203,"./customGameLogic":205}],205:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7726,7 +7745,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 
 module.exports = CustomGameLogic;
 
-},{"../codegen":53,"./api":198,"./constants":202}],198:[function(require,module,exports){
+},{"../codegen":54,"./api":199,"./constants":203}],199:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7890,7 +7909,7 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":202}],202:[function(require,module,exports){
+},{"./constants":203}],203:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8067,4 +8086,4 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}]},{},[208]);
+},{}]},{},[209]);

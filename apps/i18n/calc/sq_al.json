@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Rezultatet e programit tuaj të pjestuar me zero.",
   "emptyComputeBlock": "Ti duhet të bashkangjitësh një bllok tek blloku \"llogarit\".",
-  "emptyFunctionalBlock": "Ti ke një bllok me një input të pambushur.",
   "equivalentExpression": "Përpiqu të riformulosh argumentat e tu për të pasur egzaktësisht të njëjtën shprehje.",
   "evaluate": "përcakto",
   "extraTopBlocks": "Ke shkëputur blloqet. Doje t'i bashkangjisje te blloku \" i llogaritur\"?",

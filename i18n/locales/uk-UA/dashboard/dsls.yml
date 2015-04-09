@@ -4,14 +4,14 @@ uk:
       Blocks to Bools 1:
         Convert Blocks to Math: Перетворити блоки на математичні вирази
         Type out the arithmetic expression that matches this code: Запишіть арифметичний вираз, котрий відповідає поданому коду
-        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
+        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png, 500
         (4+5) > 9: '(4+5) > 9'
         ((4+5) > 9): '((4+5) > 9)'
         Type the arithmetic expression here: Запишіть арифметичний вираз тут
       Blocks to Bools 2:
         Convert Blocks to Math: Перетворити блоки на математичні вирази
         Type out the arithmetic expression that matches this code: Запишіть арифметичний вираз, котрий відповідає поданому коду
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png, 500
         (10 > 11) or (7 <= 9): '(10 > 11) or (7 <= 9)'
         (10 > 11) OR (7 <= 9): '(10 > 11) OR (7 <= 9)'
         (10 > 11) || (7 <= 9): '(10 > 11) || (7 <= 9)'
@@ -19,18 +19,28 @@ uk:
       Blocks to Bools 3:
         Convert Blocks to Math: Перетворити блоки на математичні вирази
         Type out the arithmetic expression that matches this code: Запишіть арифметичний вираз, котрий відповідає поданому коду
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png, 500
         (5 < 10) and (10 < 15): '(5 < 10) and (10 < 15)'
+        (5 < 10) And (10 < 15): '(5 < 10) And (10 < 15)'
         (5 < 10) AND (10 < 15): '(5 < 10) AND (10 < 15)'
         (5 < 10) && (10 < 15): '(5 < 10) && (10 < 15)'
+        ((5 < 10) and (10 < 15)): '((5 < 10) and (10 < 15))'
+        ((5 < 10) And (10 < 15)): '((5 < 10) And (10 < 15))'
+        ((5 < 10) AND (10 < 15)): '((5 < 10) AND (10 < 15))'
+        ((5 < 10) && (10 < 15)): '((5 < 10) && (10 < 15))'
         Type the arithmetic expression here: Запишіть арифметичний вираз тут
       Blocks to Bools 4:
         Convert Blocks to Math: Перетворити блоки на математичні вирази
         Type out the arithmetic expression that matches this code: Запишіть арифметичний вираз, котрий відповідає поданому коду
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png, 500
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): '((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))'
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): '((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))'
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): '((1 < x) and (x < 5)) or ((8 < x) and (x < 10))'
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): '((1 < x) && (x < 5)) || ((8 < x) && (x < 10))'
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): '(((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))'
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): '(((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))'
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): '(((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))'
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): '(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))'
         Type the arithmetic expression here: Запишіть арифметичний вираз тут
       Blocks to Math 1:
         Convert Blocks to Math: Перетворити блоки на математичні вирази
@@ -53,6 +63,7 @@ uk:
         (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
         2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
         ((2 * 3) - (1 + 0)): '((2 * 3) - (1 + 0))'
+        2 * 3 - 1 + 0: '2 * 3 - 1 + 0'
         Type the arithmetic expression here: Запишіть арифметичний вираз тут
       Blocks to Math 4:
         Convert Blocks to Math: Перетворити блоки на математичні вирази
@@ -145,7 +156,7 @@ uk:
     external:
       Code Logo v3:
         title: назва
-        Create images with bits and bytes.: Створити зображення з біти і байти.
+        Create images with bits and bytes.: Створити зображення з бітів та байтів.
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instructions: Encode the Letter A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -160,6 +171,7 @@ uk:
       Mixing Colors:
         title: назва
         description here: опис тут
+      PDCSP Intro: [ ]
       PDK5 Beyond C:
         Beyond: Beyond
       PDK5 Classroom Culture C:
@@ -190,28 +202,31 @@ uk:
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Why teach computer science in elementary school?
       Pixelation 1:
-        Pixelation 1: Пікселізаціі 1
-        Create images with bits and bytes.: Створити зображення з біти і байти.
+        Pixelation 1: Пікселізація 1
+        Create images with bits and bytes.: Створити зображення з бітів та байтів.
       Pixelation 2:
-        Pixelation 2: Пікселізаціі 2
-        Create images with bits and bytes.: Створити зображення з біти і байти.
+        Pixelation 2: Пікселізація 2
+        Create images with bits and bytes.: Створити зображення з бітів та байтів.
       Pixelation 3:
-        Pixelation 3: Пікселізаціі 3
-        Create images with bits and bytes.: Створити зображення з біти і байти.
+        Pixelation 3: Пікселізація 3
+        Create images with bits and bytes.: Створити зображення з бітів та байтів.
       Pixelation 3 Bit Colors:
         title: назва
         description here: опис тут
       Pixelation 4:
         Pixelation 4 - Baker test of External level -- NOT REAL: 'Pixelation 4 - Baker test of External level -- NOT REAL'
-        Create images with bits and bytes.: Створити зображення з біти і байти.
+        Create images with bits and bytes.: Створити зображення з бітів та байтів.
       Pixelation 4x4 Empty:
         Pixelation 4x4 Empty: Pixelation 4x4 Empty
-        Create images with bits and bytes.: Створити зображення з біти і байти.
+        Create images with bits and bytes.: Створити зображення з бітів та байтів.
       Pixelation Bee:
         title: назва
         description here: опис тут
       Pixelation Flappy:
         title: назва
+        description here: опис тут
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: 'Pixelation - Hadi Emoji'
         description here: опис тут
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: 'Pixelation - Lesson 14 - Fix bit offset'
@@ -281,23 +296,35 @@ uk:
       test html katie:
         testing: testing
         lkajsdfasdf: lkajsdfasdf
+      Text Compression 1:
+        Text Compression 1: Text Compression 1
+        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
+      Text Compression Peter Piper:
+        Text Compression Peter Piper: Text Compression Peter Piper
+        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
+      U1L5 Student Lesson:
+        title: назва
+        description here: опис тут
+      U1L6 Student Lesson Plan:
+        title: назва
+        description here: опис тут
       unique level name here:
         title: назва
         description here: опис тут
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
         Big Triangle: Великий трикутник
-        Write a contract for a big red triangle that is 100 pixels in size: Написати контракт на великий червоний трикутник, який є 100 pixels у величині
+        Write a contract for a big red triangle that is 100 pixels in size: Написати контракт на великий червоний трикутник розміром 100 пікселів
         EXAMPLE 1.solution_blocks, 300: Приклад 1.solution_blocks, 300
         Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
       Creating Contracts From Examples 2:
         Square Contract: Квадратний контракт
-        Write a contract for a purple square that is 15 pixels in size.: Написати контракт на фіолетовий квадрат, який є 15 pixels у величині.
+        Write a contract for a purple square that is 15 pixels in size.: Написати контракт на фіолетовий квадрат розміром 15 пікселів.
         Example 2.solution_blocks, 300: Приклад 2.solution_blocks, 300
         Square|Image|Number|String: Square|Image|Number|String
       Creating Contracts From Examples 3A:
         Banner Contract: Банер контракт
-        Banner Function block: Банер блок функцій
+        Banner Function block: Блок функції банера
         Examples 3.solution_blocks, 300: Приклади 3.solution_blocks, 300
         banner|Image|String: banner|Image|String
       Creating Contracts From Examples 4:

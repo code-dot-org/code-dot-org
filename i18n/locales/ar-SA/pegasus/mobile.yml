@@ -1,54 +1,41 @@
-"ar-SA":
+ar-SA:
   hello: مرحباً بالعالم
   select_language: الرجاء تحديد اللغة الخاصة بك
   computer_science: علوم الكمبيوتر
   computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
-  csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold"> حدث ساعة البرمجة</a>. دعوة إلى جميع المعلمين والمنظمين، <a
-    href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">
-    قم بتخطيط "ساعة البرمجة" </a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400"> هل أنت مدرس علوم الحاسوب؟ انظر موارد أخرى CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>هل جربت</h3><h2>ساعة من البرمجة</h2>
+  csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> حدث ساعة البرمجة</a>. دعوة إلى جميع المعلمين والمنظمين، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> قم بتخطيط "ساعة البرمجة" </a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> هل أنت مدرس علوم الحاسوب؟ انظر موارد أخرى CSEdWeek</a>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: اي شخص بأستطاعته التعلم.
   learn_now: تعلم الآن
-  petition_message: كل طالب في كل مدرسة يجب أن يحصل على الفرصة الفرصة لتعلم علوم الحاسب
-    الآلي
+  petition_message: كل طالب في كل مدرسة يجب أن يحصل على الفرصة الفرصة لتعلم علوم الحاسب الآلي
   petition_sign_message: 'اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: الاسم
   email: البريد الإلكتروني
   zipcode: الرمز البريدي أو اسم البلد
   submit: تسجيل
-  twentyhours_heading: جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر
-  twentyhours_text: أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب
-    ومفاهيم البرمجة الأساسية في الدورة التالية.
-  hoc2014_heading: انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/>
-    8-14 كانون الأول/ديسمبر، عام 2014 <br/>
+  twentyhours_heading: 'جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر'
+  twentyhours_text: 'أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب ومفاهيم البرمجة الأساسية في الدورة التالية.'
+  hoc2014_heading: 'انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/> 8-14 كانون الأول/ديسمبر، عام 2014 <br/>'
   hoc2014_students: الطلاب
   hoc2014_try: جربها
   hoc2014_teachers: الاساتذة
   hoc2014_host: قم باستضافة الحدث
   hoc2014_everyone: الجميع
-  hoc2014_support: "ادعم الحدث &#x25BE;"
+  hoc2014_support: 'ادعم الحدث &#x25BE;'
   hoc2014_whatishoc: ماهي الساعة من البرمجة ؟
   twentyhours_trynow: جرب الآن
   california_heading: أطلب من مدرستك لتعليم علوم الحاسب الآلي
-  california_text: أي معلم يمكن أن يقدم لدينا <a href='http://studio.code.org/'>دورات
-    مجانية</a>.  أي مدرسة ابتدائية تستطيع <a href='http://code.org/educate/k5'>تدريس
-    علوم الكومبيوتر</a>. إسأل المدارس الثانوية إلى <a href='http://code.org/educate/districts'>مشاركتنا.
+  california_text: "أي معلم يمكن أن يقدم لدينا <a href='http://studio.code.org/'>دورات مجانية</a>.  أي مدرسة ابتدائية تستطيع <a href='http://code.org/educate/k5'>تدريس علوم الكومبيوتر</a>. إسأل المدارس الثانوية إلى <a href='http://code.org/educate/districts'>مشاركتنا."
   california_button: التعرف على المزيد
   flappy_heading: عيد ميلاد flappy إلى Code.org
-  flappy_text: صار عمرنا 1 سنة في Code.org . <br/><br/> إحتفل معنا بطريقتك الخاصة
-    في لعبة <b>Flappy</b>. دون قواعدك الخاصة و شاركها مع أصدقائك !
+  flappy_text: 'صار عمرنا 1 سنة في Code.org . <br/><br/> إحتفل معنا بطريقتك الخاصة في لعبة <b>Flappy</b>. دون قواعدك الخاصة و شاركها مع أصدقائك !'
   view_english_site: عرض الموقع باللغة الإنكليزية
   non_english_tutorials: 'دروس مترجمة إلى لغات مختلفة:'
   write_your_first_program: اكتب برنامجك الاول
-  learn_cs_concepts: تعلم المفاهيم الاساسية في علوم الكمبيوتر من خلال سحب و تركيب
-    اوامر البرنامج. هذا الدرس عبارة عن فيديو من بطولة بيل غيتس، مارك زوكيربيررغ، ومن
-    ثم لعبة Angry Birds و Plants vs. Zombies. ستتعلم تكرار الدوران "حلقة كرر"  ، اداة
-    الشرط  "اذا كان"، و الخوارزميات الاساسية.
+  learn_cs_concepts: 'تعلم المفاهيم الاساسية في علوم الكمبيوتر من خلال سحب و تركيب اوامر البرنامج. هذا الدرس عبارة عن فيديو من بطولة بيل غيتس، مارك زوكيربيررغ، ومن ثم لعبة Angry Birds و Plants vs. Zombies. ستتعلم تكرار الدوران "حلقة كرر"  ، اداة الشرط  "اذا كان"، و الخوارزميات الاساسية.'
   all_ages: كل الاعمار
   beginner: مبتدئ
   n_participants: '# المشاركين'
@@ -58,18 +45,13 @@
   congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة
   get_a_certificate_of_achievement: أحصل على شهادة الانجاز
   enter_valid_email: الرجاء ادخال عنوان بريد الكتروني صالح
-  get_a_certificate_message: نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'>
-    تعلم بعد ساعة واحدة من البرمجة</a>
-  get_a_certificate_message_after: اضغط على الشهادة لتحميلها أو لطباعتها . استمر بالتقدم
-    مع <a href='http://studio.code.org'>دوراتنا الأخرى</a>, أو شاهد خيارات أخرى لـ
-    <a href='/learn/beyond'>تعلم ما وراء ساعة واحدة</a>.
+  get_a_certificate_message: "نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'> تعلم بعد ساعة واحدة من البرمجة</a>"
+  get_a_certificate_message_after: "اضغط على الشهادة لتحميلها أو لطباعتها . استمر بالتقدم مع <a href='http://studio.code.org'>دوراتنا الأخرى</a>, أو شاهد خيارات أخرى لـ <a href='/learn/beyond'>تعلم ما وراء ساعة واحدة</a>."
   thanks_for_submitting: شكرا لتسجيلك!
-  if_you_enjoyed: اذا استمتعت بالتعلم , اسأل اصدقائك ليحاولون هم ايضا! نحن نرغب من
-    العالم كله ان يتعلم.
+  if_you_enjoyed: اذا استمتعت بالتعلم , اسأل اصدقائك ليحاولون هم ايضا! نحن نرغب من العالم كله ان يتعلم.
   personalize_certificate: تخصيص شهادتك
   share_achievement: شارك انجازاتك
-  beyond_hour_message: إستمر بالتقدم مع <a href='http://studio.code.org'>دوراتنا الأخرى</a>,
-    أو شاهد خيارات أخرى لـ <a href='/learn/beyond'>تعلم ما بعد ساعة من البرمجة</a>.
+  beyond_hour_message: "إستمر بالتقدم مع <a href='http://studio.code.org'>دوراتنا الأخرى</a>, أو شاهد خيارات أخرى لـ <a href='/learn/beyond'>تعلم ما بعد ساعة من البرمجة</a>."
   leaderboards_for_hoc: المتصدرين لبرنامج ساعة من البرمجة.
   support_url: http://support.code.org/
   country: الدولة
@@ -80,11 +62,11 @@
   give_my_hour: 'التبرع بساعتي لـ:'
   girls_team: فريق البنات
   boys_team: فريق الأولاد
-  tell_the_world: اخبر  العالم باسره!
+  tell_the_world: 'اخبر  العالم باسره!'
   thanks_for_voting: شكرا للتصويت!
   share_on_facebook: انشرها على الفيس بوك
   share_on_twitter: انشرها على التويتر
-  beyond_an_hour: أبعد من ساعة من البرمجة >
+  beyond_an_hour: 'أبعد من ساعة من البرمجة >'
   get_started: إبدأ
   i_agree: أوافق
   participant_select: '- اختر -'
@@ -96,6 +78,7 @@
   print_all: طباعة الجميع
   print_ice_art: |
     إطبع فن الثلج الخاص بك
+    
   create_art_with_zombie: او القيام بعمل فني متقدم مع زومبي
   i_am_a: انا
   never_spam: نحن لن نزعجك
@@ -104,15 +87,13 @@
   privacy_practices_children: راجع ممارسات الخصوصية للأطفال
   petition_thankyou: شكرا لك على توقيع العريضة
   continue_learning_header: مواصلة التعلم بعد ساعة واحدة من البرمجة
-  continue_learning_body: يوجد الكثير من الخيارات, يمكنك ان تتعلم عبر الانترنت او
-    في مدرسة حكومية او مخيم صيفي.
+  continue_learning_body: يوجد الكثير من الخيارات, يمكنك ان تتعلم عبر الانترنت او في مدرسة حكومية او مخيم صيفي.
   learn_next_level: إستمر إلى المستوى التالي
   learn_online: جرب دورات أخرى على الإنترنت
   learn_classes: ابحث عن الفئات المحلية
   hoc_is_here: ' هنا هاش تاك #ساعة_من_البرمجة - تحقق من ذلك! @codeorg'
   just_did_hoc: 'انا عملت هاش تاك #ساعة_من_البرمجة - تحقق من ذلك! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: تعلم ساعة من البرمجة
   beyond_hoc: بعد تعلم ساعة من البرمجة
   what_gender: ماهو جنسك؟
@@ -121,49 +102,75 @@
   help_recruit_coders: ساعدنا في توظيف العديد من المبرمجين في فريقك!
   help_recruit: ساعدنا في توظيف العديد من المبرمجين!
   lines_of_code: 'فوق <b> # اسطر الكود البرمجي </b> المكتوبة حتى الان.'
-  lines_of_code_alt: <b>#</b> اسطر الكود البرمجي التي كتبها الطلاب
+  lines_of_code_alt: '<b>#</b> اسطر الكود البرمجي التي كتبها الطلاب'
   who_has_done_hoc: 'من الذي اكمل #الساعة_من_البرمجة؟ @codeorg'
   hoc_leaderboards: متصدرين الساعة من البرمجة
-  students_and_lines: '%{students} الطلبة الذين اكملو ساعة من البرمجة وكتبو %{lines}
-    اسطر من الكود البرمجي.'
+  students_and_lines: '%{students} الطلبة الذين اكملو ساعة من البرمجة وكتبو %{lines} اسطر من الكود البرمجي.'
   start_hoc: ابدأ ساعة من البرمجة الان
   contact_form_topic_press: الصحافة/وسائل الإعلام (مقابلة أو تحدث المشاركة)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
-  stats_michael: '"لم أر طلابي مهتمين بالتعلم هكذا <b>من قبل</b> !." - مايكل كلارك،
-    معلم'
-  studiobar_title: إستكشف ستوديو البرمجة
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '"لم أر طلابي مهتمين بالتعلم هكذا <b>من قبل</b> !." - مايكل كلارك، معلم'
+  studiobar_title: "إستكشف <a href='http://studio.code.org'>ستوديو البرمجة</a>"
   studiobar_elementary_title: الدورات الابتدائية
-  studiobar_elementary_body: دوراتنا الثلاث الجديدة لـ K&#8209;5
+  studiobar_elementary_body: 'دوراتنا الثلاث الجديدة لـ K&#8209;5'
   studiobar_hoc_title: الساعة من التعليمات البرمجية
   studiobar_hoc_body: تعلم البرمجة مع الطيور الغاضبة
   studiobar_flappy_title: رمز لعبة flappy
   studiobar_flappy_body: اصنع و شارك لعبة فلابي الخاصة بك
   studiobar_teacher_title: صنع من أجل المدرسين
-  studiobar_teacher_body: يعرض "استوديو التعليمات البرمجية Code Studio " في الفصل
-    الدراسي الخاص بك
+  studiobar_teacher_body: 'يعرض "استوديو التعليمات البرمجية Code Studio " في الفصل الدراسي الخاص بك'
   studiobar_frozen_title: ساعة من البرمجة
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: تبرع
   studiobar_donate_body: طفل واحد يتعلم البرمجه مع كل دولار تتبرع به
   studiobar_shop_title: تسوق
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo; 
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo; 
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo; 
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo; 
   homepage_slot_text_hoc: الساعة من التعليمات البرمجية
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -172,13 +179,13 @@
   homepage_slot_text_shop: تسوق
   homepage_slot_text_flappy: رمز لعبة flappy
   homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
+  homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   homepage_slot_text_title_hoc: ساعة من البرمجة
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
-  homepage_slot_text_link_hoc: جرب "Hour of Code"
+  homepage_slot_text_link_hoc: 'جرب "Hour of Code"'
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: الطلاب
@@ -216,16 +223,14 @@
   class_submission_in_school_ap_computer_science: AP علوم الحاسب الآلي
   class_submission_in_school_full_university_cs_curriculum: المنهج كامل جامعة CS
   class_submission_in_school_robotics_club: نادي الروبوتات
-  class_submission_in_school_programming_integrated_in_other_classes: البرمجة المتكاملة
-    مع المواد الدراسية الأخرى (الرياضيات، والعلوم، إلخ)
+  class_submission_in_school_programming_integrated_in_other_classes: البرمجة المتكاملة مع المواد الدراسية الأخرى (الرياضيات، والعلوم، إلخ)
   class_submission_in_school_summer_school_cs_program: برنامج المدرسة الصيفية CS
   class_submission_in_school_exploring_computer_science: استكشاف علوم الحاسب الآلي
   class_submission_in_school_other: الأخرى في المدرسة
   class_submission_out_of_school: الخروج من المدرسة
   class_submission_out_of_school_summer_camp: مخيم صيفي
   class_submission_out_of_school_afterschool_program: برنامج بعد المدرسة
-  class_submission_out_of_school_all-day_workshop: ورشة عمل اليوم كله (يصل إلى 1 في
-    الأسبوع)
+  class_submission_out_of_school_all-day_workshop: ورشة عمل اليوم كله (يصل إلى 1 في الأسبوع)
   class_submission_out_of_school_multi-week_workshop: ورشة عمل متعددة في الأسبوع
   class_submission_out_of_school_other: الأخرى خارج المدرسة
   class_submission_online: على الإنترنت
@@ -245,15 +250,11 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: ثلاث ساعات أسبوعياً
   volunteer_engineer_submission_commitment_five_hrs_per_week: خمس ساعات أسبوعياً
   volunteer_engineer_submission_commitment_more: المزيد
-  volunteer_engineer_submission_location_flexibility_onsite: في المكان المخصص لذلك
-    في المدرسة
-  volunteer_engineer_submission_location_flexibility_remote: التوجيه عن بعد (المدرسين
-    أو الطلاب)
-  volunteer_engineer_submission_location_flexibility_curriculum: على استعداد للمساهمة
-    في مشاريع المناهج الدراسية المفتوحة المصدر
+  volunteer_engineer_submission_location_flexibility_onsite: في المكان المخصص لذلك في المدرسة
+  volunteer_engineer_submission_location_flexibility_remote: التوجيه عن بعد (المدرسين أو الطلاب)
+  volunteer_engineer_submission_location_flexibility_curriculum: على استعداد للمساهمة في مشاريع المناهج الدراسية المفتوحة المصدر
   volunteer_engineer_submission_experience_unspecified: غير محدد
-  volunteer_engineer_submission_experience_university_student_or_researcher: طالب
-    جامعي حالي (أو باحث)
+  volunteer_engineer_submission_experience_university_student_or_researcher: طالب جامعي حالي (أو باحث)
   volunteer_engineer_submission_experience_software_professional: مهني البرمجيات
   petition_age: العمر
   dashboard_landing_title: الصفحة الرئيسية المعلم
@@ -264,21 +265,17 @@
   dashboard_landing_students_title: طلابك
   dashboard_landing_students_manage: عرض وإدارة طلابك
   dashboard_landing_news_title: موارد لمعلمي المستوى الخامس (باللغة الانكليزية)
-  dashboard_landing_new_beta: جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية
-    لطلاب K-5 .
+  dashboard_landing_new_beta: جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية لطلاب K-5 .
   dashboard_landing_new_k5courses: جديد ! جرب دوراتنا للطلاب K-5.
   dashboard_landing_useful_links: روابط مفيدة (باللغة الإنجليزية فقط)
-  dashboard_landing_office_hours: اسأل سؤالاً شخصيا! قم بزيارة مكاتبنا خلال ساعات
-    العمل شهريا .
-  dashboard_landing_print_certificates: طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة
-    التدريبية
+  dashboard_landing_office_hours: اسأل سؤالاً شخصيا! قم بزيارة مكاتبنا خلال ساعات العمل شهريا .
+  dashboard_landing_print_certificates: طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة التدريبية
   dashboard_landing_educator_blog: أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا
-  dashboard_landing_smart_hints: الرجاء مساعدتنا لإضافة تلميحات ذكية لبرامج Code.org
-    التعليمية
+  dashboard_landing_smart_hints: الرجاء مساعدتنا لإضافة تلميحات ذكية لبرامج Code.org التعليمية
   dashboard_landing_video_player: إختبر مشغل الفيديو الجديد الخاص بنا في مدرستك
   dashboard_landing_progress_title: علمية تقدم الصف الرئيسي
-  dashboard_landing_progress_biggest: هذه هي عملية التقدم  للجزء لأكبر الخاص بك.
-  dashboard_landing_view_progress: عرض عملية التقدم لـ %{biggest_section}
+  dashboard_landing_progress_biggest: 'هذه هي عملية التقدم  للجزء لأكبر الخاص بك.'
+  dashboard_landing_view_progress: 'عرض عملية التقدم لـ %{biggest_section}'
   dashboard_landing_available_title: الدورات التدريبية المتاحة
   dashboard_landing_available_courses: هذة هي الدورات المتاحة حاليا لكم ولطلابكم.
   dashboard_landing_loading: جاري التحميل...
@@ -300,7 +297,7 @@
   dashboard_navigation_section_lesson_plans: خطط الدرس والموارد
   dashboard_navigation_section_community: التعليمات والمجتمع
   dashboard_navigation_section_pd: التنمية المهنية
-  dashboard_navigation_section_speakers: علوم الحاسب الآلي <br/> المتحدثين الضيوف
+  dashboard_navigation_section_speakers: 'علوم الحاسب الآلي <br/> المتحدثين الضيوف'
   dashboard_navigation_all_sections: حسابات و سير الطلاب
   dashboard_navigation_view_progress: عرض عملية التقدم
   dashboard_navigation_add_students: إضافة طلاب
@@ -310,9 +307,7 @@
   dashboard_navigation_section: 'القسم: %{section_name}'
   dashboard_navigation_student: 'الطالب: %{student_name}'
   dashboard_sections_new_section: القسم جديد
-  dashboard_sections_jumbotron_instruction: انشئ أقسام جديدة وأضف الطلاب إليها، هذة
-    الطريقة تساعد في توزيع الطلاب إلى مجموعات صغيرة يسهل متابعة عملية تقدمهم وإدارة
-    حسابتهم.
+  dashboard_sections_jumbotron_instruction: انشئ أقسام جديدة وأضف الطلاب إليها، هذة الطريقة تساعد في توزيع الطلاب إلى مجموعات صغيرة يسهل متابعة عملية تقدمهم وإدارة حسابتهم.
   dashboard_sections_table_section: القسم
   dashboard_sections_table_secret: نوع تسجيل الدخول
   dashboard_sections_table_grade: الصف الدراسي
@@ -320,21 +315,16 @@
   dashboard_sections_table_students: الطلاب
   dashboard_sections_table_code: قسم البرمجة
   dashboard_sections_name: إسم القسم
-  dashboard_sections_choose_secret: إذا كنت ترغب في تقديم حسابات لطلابك بك، اختر <b>كلمة</b>
-    أو <b>صورة</b> سرية لهذا القسم.
-  dashboard_sections_secret_word: يسمح لك تعيين كلمة سر لكل طالب <b>كلمة سرية</b>.
-  dashboard_sections_secret_picture: <b>صورة</b> يسمح لك بتعيين صورة سرية لكل طالب،
-    هذا هو الخيار الأفضل لطلاب الأصغر سنا الذين لم يتمكنو من الكتابة بعد.
-  dashboard_sections_secret_none: إذا كنت تريد أن يتمكن طلابك من إدارة الحسابات الخاصة
-    بهم، بما في ذلك اختيار كلمات المرور الخاصة بهم، اختر نوع الحماية <b>بدون</b>.
-  dashboard_sections_print_secrets: كما يمكنك بعد ذلك طباعة بطاقات ورقية تحوي معلومات
-    الحساب وتعطى لكل طالب من طلابك بشكل فردي.
+  dashboard_sections_choose_secret: 'إذا كنت ترغب في تقديم حسابات لطلابك بك، اختر <b>كلمة</b> أو <b>صورة</b> سرية لهذا القسم.'
+  dashboard_sections_secret_word: 'يسمح لك تعيين كلمة سر لكل طالب <b>كلمة سرية</b>.'
+  dashboard_sections_secret_picture: '<b>صورة</b> يسمح لك بتعيين صورة سرية لكل طالب، هذا هو الخيار الأفضل لطلاب الأصغر سنا الذين لم يتمكنو من الكتابة بعد.'
+  dashboard_sections_secret_none: 'إذا كنت تريد أن يتمكن طلابك من إدارة الحسابات الخاصة بهم، بما في ذلك اختيار كلمات المرور الخاصة بهم، اختر نوع الحماية <b>بدون</b>.'
+  dashboard_sections_print_secrets: كما يمكنك بعد ذلك طباعة بطاقات ورقية تحوي معلومات الحساب وتعطى لكل طالب من طلابك بشكل فردي.
   dashboard_sections_switch_section: 'قسم التبديل:'
   dashboard_students_add_student: إضافة طالب
   dashboard_students_add_students: إضافة العديد من الطلاب
   dashboard_students_add_multiple: 'اكتب أو إلصق أسماء الطلاب. واحداً في كل سطر:'
-  dashboard_students_new_section: قمت بإنشاء قسم جديد! الآن أضف طلابك باستخدام أزرار
-    <b>إضافة الطالب</b> و <b>إضافة العديد من الطلاب</b> أعلاه.
+  dashboard_students_new_section: 'قمت بإنشاء قسم جديد! الآن أضف طلابك باستخدام أزرار <b>إضافة الطالب</b> و <b>إضافة العديد من الطلاب</b> أعلاه.'
   dashboard_students_placeholder_name: اسم التلميذ
   dashboard_students_name: الاسم
   dashboard_students_progress: Progress
@@ -355,23 +345,15 @@
   dashboard_students_share_section: 'مشاركة صفحة تسجيل الدخول هذة مع الطلاب:'
   dashboard_students_print_info: طباعة بطاقات معلومات تسجيل الدخول الخاصة بطلابك.
   dashboard_students_secret_picture: صورة سرية
-  dashboard_students_reset_picture: يمكنك إعادة تعيين صورة الطالب سرية في أي وقت عن
-    طريق اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول
-    السرية</b>. سيتم إنشاء صورة سرية جديدة لهذا الطالب لاستخدامها عند تسجيل الدخول.
+  dashboard_students_reset_picture: 'يمكنك إعادة تعيين صورة الطالب سرية في أي وقت عن طريق اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول السرية</b>. سيتم إنشاء صورة سرية جديدة لهذا الطالب لاستخدامها عند تسجيل الدخول.'
   dashboard_students_secret_word: الكلمة السرية
-  dashboard_students_reset_word: 'يمكنك إعادة تعيين كلمات سر الطالب في أي وقت عن طريق
-    اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول السرية</b>.
-    سيتم إنشاء زوج من الكلمات السرية جديدة لهذا الطالب لاستخدامه عند تسجيل الدخول. '
-  dashboard_students_join_link: أخبر طلابك لينشئوا حساباتهم الخاصة بهم والانضمام إلى
-    القسم الخاص بك في
-  dashboard_students_no_email: إذا كان الطلاب ليس لديهم عناوين بريد إلكتروني، أو كنت
-    ترغب في إنشاء حسابات خاصة بهم ، قم بتغيير نوع هذا القسم السري إلى <b>كلمة</b>
-    أو <b>صورة</b>.
+  dashboard_students_reset_word: 'يمكنك إعادة تعيين كلمات سر الطالب في أي وقت عن طريق اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول السرية</b>. سيتم إنشاء زوج من الكلمات السرية جديدة لهذا الطالب لاستخدامه عند تسجيل الدخول. '
+  dashboard_students_join_link: أخبر طلابك لينشئوا حساباتهم الخاصة بهم والانضمام إلى القسم الخاص بك في
+  dashboard_students_no_email: 'إذا كان الطلاب ليس لديهم عناوين بريد إلكتروني، أو كنت ترغب في إنشاء حسابات خاصة بهم ، قم بتغيير نوع هذا القسم السري إلى <b>كلمة</b> أو <b>صورة</b>.'
   dashboard_students_print_page: إطبع هذة الصفحة
   dashboard_students_url: عنوان URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
-    انقر هنا</a> للحصول على مستند الخصوصية الذي يمكن مشاركته أو طباعته لطلابك .
-  dashboard_curriculum_overview: نظرة عامة على منهاج الروضة - صف 5
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> انقر هنا</a> للحصول على مستند الخصوصية الذي يمكن مشاركته أو طباعته لطلابك .'
+  dashboard_curriculum_overview: 'نظرة عامة على منهاج الروضة - صف 5'
   dashboard_view_all_lesson_plans: عرض جميع خطط الدرس
   dashboard_course1: 'الدرس الأول :'
   dashboard_course2: 'الدرسة الثاني:'
@@ -398,37 +380,35 @@
   dashboard_progress_completed_too_many_blocks: أكملت، كتل كثيرة جداً
   dashboard_progress_completed_perfect: مكتمل, ممتاز
   dashboard_progress_furthest_level_attempted: حاول المستوى الأبعد
-  stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود "  للسنة الماضية.
-    في أسبوع واحد فقط:'
+  stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود "  للسنة الماضية. في أسبوع واحد فقط:'
   stats_hoc_2013_image_alt: إحصائيات سنة 2013 لساعة من البرمجة
   dashboard_teacher: المدرس
   dashboard_student: طالب
-  dashboard_sections_email_question: هل جميع يتوفر التلاميد على عنوان بريد إلكتروني
-    صحيح ؟
+  dashboard_sections_email_question: هل جميع يتوفر التلاميد على عنوان بريد إلكتروني صحيح ؟
   dashboard_sections_account_creation_question: من قام بإنشاء حساب للطالب/التلميذ؟
   dashboard_sections_password_question: |
     ماذا استخدام الطلاب ككلمة مرور؟
+    
   dashboard_sections_picture_account_creation: صورة تم تعيينها من قبل Code.org
   dashboard_sections_word_account_creation: كلمة بسيطة من طرف Code.org
   dashboard_sections_sign_in_question: أين يقوم الطلاب/التلاميد تسجيل الدخول؟
-  dashboard_sections_sign_in_unique: صفحة ويب متوفرة في علامة التبويب "إدارة الطلاب"
-  dashboard_sections_sign_in_main: http://code.org و انقر على "تسجيل الدخول"
+  dashboard_sections_sign_in_unique: 'صفحة ويب متوفرة في علامة التبويب "إدارة الطلاب"'
+  dashboard_sections_sign_in_main: 'http://code.org و انقر على "تسجيل الدخول"'
   dashboard_sections_password_account_creation: كلمة المرور المنشئة من طرف الطلاب
-  dashboard_sections_login_type_explanation: هذا الجدول يساعد على تفسير أي من أنواع
-    تسجيل الدخول هذه، <b>صورة، كلمة، أو البريد الإلكتروني</b>، تريد أن تختار لمقطع.
+  dashboard_sections_login_type_explanation: 'هذا الجدول يساعد على تفسير أي من أنواع تسجيل الدخول هذه، <b>صورة، كلمة، أو البريد الإلكتروني</b>، تريد أن تختار لمقطع.'
   dashboard_faq: الأسئلة الشائعة
   code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: التعرف على المزيد
   hoc2014_try_new_tutorials: جرّب الدروس الجديدة لساعة البرمجة
-  hoc2014_try_new_tutorial: جرب درس ساعة الكود الجديد ب"بيتا"
+  hoc2014_try_new_tutorial: 'جرب درس ساعة الكود الجديد ب"بيتا"'
   hoc2014_try_scrat: Angry Birds, PvZ, و Scrat
   hoc2014_try_frozen: الفنان مع آنا و إنسا, من Frozen
   carousel_heading_international: دروس تعليمية بلغتك
   carousel_heading_domestic: البرامج التعليمية المتوفرة باللغة الإنجليزية
   carousel_heading_beginners: دروس للمبتدئين
   carousel_heading_javascript: دروس تعليم جافا سكريبت
-  carousel_heading_unplugged: لا يوجد جهاز أو إنترت ؟ جرب علم الحاسوب "مفكوك"
+  carousel_heading_unplugged: 'لا يوجد جهاز أو إنترت ؟ جرب علم الحاسوب "مفكوك"'
   carousel_heading_devices: دروس تعليمية للهواتف والألواح
   carousel_heading_languages: دروس في لغات البرمجة الأخرى
   carousel_heading_apps_games: برمج ألعابك او تطبيقاتك الخاصة
@@ -445,9 +425,7 @@
   previous: السابق
   next: التالي
   older_systems: الدروس التي تعمل على أنظمة قديمة
-  older_systems_subheading: هذه يجب أن تعمل على المتصفّحات القديمة. للوصول إلى جميع
-    الدروس، يجب تحيين <a href="http://browsehappy.com/" target="_blank"> متصفح الويب
-    .</a>
+  older_systems_subheading: 'هذه يجب أن تعمل على المتصفّحات القديمة. للوصول إلى جميع الدروس، يجب تحيين <a href="http://browsehappy.com/" target="_blank"> متصفح الويب .</a>'
   mobile_devices: دروس للأجهزة المحمولة
   frozen_name: برمج مع آنا و إليسا
   codeorg_name: اكتب برنامجك الاول
@@ -578,8 +556,7 @@
   khanhe_shortdescription: تعلم كيفية الرسم في جافا سكريبت
   khanfr_shortdescription: تعلم كيفية الرسم في جافا سكريبت
   khanpl_shortdescription: تعلم كيفية الرسم في جافا سكريبت
-  tynker_shortdescription: تعلم البرمجة بحل الألغاز الممتعة و بناء ألعاب الهاتف الخاصة
-    بك.
+  tynker_shortdescription: تعلم البرمجة بحل الألغاز الممتعة و بناء ألعاب الهاتف الخاصة بك.
   scratch_shortdescription: إنشاء ألعاب تفاعلية، والقصص، والرسوم المتحركة.
   lightbot_shortdescription: برمج لايتبوت لحل الألغاز باستخدام الإجراءات والحلقات!
   thinkersmith_shortdescription: الدروس الغير موصولة بالحاسوب لمجموعة لا تملك أجهزة
@@ -587,173 +564,77 @@
   lightbotintl_shortdescription: لعبة لتعليم مفاهيم البرمجة
   codehs_shortdescription: إبدء البرمجة مع كاريل الكلب، مقدمة ممتعة للبرمجة!
   codecademy_shortdescription: تعلم برمجة جافا سكريبت، في مستعرض ويب
-  codecombat_shortdescription: هزيمة الغيلان تعلم بيثون أو جافا سكريبت في هذه اللعبة
-    ملحمة البرمجة!
+  codecombat_shortdescription: هزيمة الغيلان تعلم بيثون أو جافا سكريبت في هذه اللعبة ملحمة البرمجة!
   codemonkey_shortdescription: الطلاب يبرمجون قرد ليلتقط الموز.
   codeavengers_shortdescription: تعلم برمجة جافا سكريبت، في مستعرض ويب
   processing_shortdescription: درس تعليمي في اللغات المعالجة
   robomind_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
-  groklearning_shortdescription: تعليم "إليزا" الروبوت الذكي لخداع اصدقائك في الظن
-    انها إنسان!
-  quorum_shortdescription: انضم إلى مري في جولة موجهة وهي تتعلم لغة البرمجة كوروم
-    "Quorum".
+  groklearning_shortdescription: 'تعليم "إليزا" الروبوت الذكي لخداع اصدقائك في الظن انها إنسان!'
+  quorum_shortdescription: 'انضم إلى مري في جولة موجهة وهي تتعلم لغة البرمجة كوروم "Quorum".'
   codespark_shortdescription: فوس لعبة ممتعة، صديقة للأطفال لمعرفة المزيد عن البرمجة.
   kodable_shortdescription: لعبة أيباد ممتعة لتعليم مفاهيم البرمجة
   tynkerapp_shortdescription: 'تعلم البرمجة عن طريق حل أحجية كود ممتعة. '
   robomindnl_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
-  flappy_shortdescription: برمج وإعمل لعبتك - فلابي بيرد, القرش أو الغواصة
+  flappy_shortdescription: 'برمج وإعمل لعبتك - فلابي بيرد, القرش أو الغواصة'
   bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
-  makegameswithus_shortdescription: برمج لعبة للأيفون! تعلم من خلال البرمجة الحركات
-    الخاصة بك للوحش !
-  touchdevelop_shortdescription: 'حل الألغاز ، ابن الألعاب، وتعلم الترميز كل ذلك على
-    الهاتف الخاص بك. '
+  makegameswithus_shortdescription: برمج لعبة للأيفون! تعلم من خلال البرمجة الحركات الخاصة بك للوحش !
+  touchdevelop_shortdescription: 'حل الألغاز ، ابن الألعاب، وتعلم الترميز كل ذلك على الهاتف الخاص بك. '
   appinventor_shortdescription: برمج تطبيقك الخاص! (فقط للأندرويد)
   blockly_shortdescription: للتعلم من دون الإتصال على الشبكة حمل الملف المضغوط
-  thinkersmith2_shortdescription: تعلم كيفية استخدام أجهزة الكمبيوتر لل0 وال1 لتمثيل
-    المعلومات
+  thinkersmith2_shortdescription: تعلم كيفية استخدام أجهزة الكمبيوتر لل0 وال1 لتمثيل المعلومات
   kodableunplugged_shortdescription: تمارين ممتعة غير موصولة
   projguts_shortdescription: حاول إستعمال النمذجة والمحاكاة باستخدام ورقة/مقص/صخرة
   hourofcode_shortdescription: Placeholder for new code.org/hoc
-  frozen_shortdescription: دعونا استخدام التعليمات البرمجية للانضمام إلى آنا و إليسا,
-    و نستكشف سحر وجمال الجليد.
+  frozen_shortdescription: دعونا استخدام التعليمات البرمجية للانضمام إلى آنا و إليسا, و نستكشف سحر وجمال الجليد.
   playlab_shortdescription: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
-  codeorg_longdescription: تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط
-    البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو
-    من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار
-    الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.
-  codeintl_longdescription: تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط
-    البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو
-    من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار
-    الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة
-    بك. برمج بنفسك أو مع صفك!
-  khanes_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!
-  khanpt_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!
-  khanhe_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!
-  khanfr_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!
-  khanpl_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!
-  tynker_longdescription: بناء الألعاب الخاصة بك ومشاركتها مع الأصدقاء! حل الألغاز
-    الترميزية وتعلم مفاهيم البرمجة في كل مستوى. إضفاء الطابع الشخصي لشخصيات الرسوم
-    المتحركة، ومستويات متعددة والدعائم الغنية.  إجعل الألعاب واقعية باستخدام الفيزياء.
-    انظر للكود ككتل بصرية أو جافا سكريبت. خذ ألعابك للجهازك المحمول أو اللوحي الخاص
-    بك. أكثر من اثنتي عشر نشاط ممتع للاختيار من بينها!
-  scratch_longdescription: مع "سكراتش"، يمكنك إنشاء ألعاب تفاعلية الخاصة بك والقصص
-    والرسوم المتحركة &mdash; ومشاركتها مع أصدقائك. إبدأ  اسمك أو إنشاء بطاقة معايدة،
-    أو إنشاء لعبة كرة الطاولة.
-  lightbot_longdescription: وجه "لايت بوت" لتضيء كافة البلاط الأزرق! "لايت بوت" هي
-    لعبة ألغاز تستخدم لغة البرمجة للسماح للاعبين اكتساب فهم عملي لأساسيات البرمجة.
-    تعلم تسلسل التعليمات، كتابة الإجراءات، والاستفادة من الحلقات لحل المستويات. مثالية
-    لجميع الأعمار.
-  thinkersmith_longdescription: باستخدام "مفردات روبوت" معرفة مسبقاً  الطلاب سوف يكتشفون
-    كيفية توجيه بعضهم البعض لإنجاز مهام محددة دون مناقشتها أولاً. هذا الدرس يعلم الأطفال
-    الصلة بين الرموز والإجراءات، فضلا عن مهارة لا تقدر بثمن لتصحيح الأخطاء. "أصدقائي
-    الروبوتيون" يعمل بشكل أفضل كنشاط مجموعة ويتضمن كراس معلم للاستخدام  في الفصول
-    الدراسية.
-  condcards_longdescription: تعرف على الخوارزميات والعبارات الشرطية في هذا النشاط
-    "الموصول" باستخدام أوراق اللعب. الطلاب تقيم هذا النشاط في فرق، وتحتاج حزمة واحدة
-    من البطاقات لكل فريق.
-  lightbotintl_longdescription: تعلم منطق البرمجة الأساسية، بدءا من البرمجة الأساسية
-    السهلة، للأعمار 4+، على نظام التشغيل iOS والأندرويد (أو متصفح الأنترنت). تعلم
-    كيفية تسلسل الأوامر، وتحديد أنماط وإجراءات الاستخدام، والاستفادة من الحلقات!
-  codehs_longdescription: إعطاء الأوامر إلى جهاز الحاسوب، وهذا ما هو كل شيء عن البرمجة،
-    هو تماما مثل إعطاء الأوامر لكلب. تعلم كيفية البرمجة مع كاريل الكلب &mdash; مقدمة
-    في البرمجة بطريقة مرحة وسهلة لتعلم المفاهيم الأساسية للمبتدئين مثل الأوامر والظائف.
-    يتم توجيه الطالب عن طريق البرنامج التعليمي ولكن يمكن للمدرسين الاشتراك للوصول
-    إلى أدوات المعلم وتتبع نجاح الطالب!
-  codecademy_longdescription: كود أكاديمي هو مقدمة تفاعلية يسترشد الطالب لأساسيات
-    CS من خلال جافا سكريبت الذي يتم استخدامه من قبل عشرات الملايين من الطلاب في جميع
-    أنحاء العالم. لقد تم إعداد ساعة من البرمجة سهلة وبسيطة من خلال إستعمال المسابقات،
-    عرض الشرائح، ومشروع منجز للطلاب في نهاية المطاف.
-  codecombat_longdescription: هزيمة الغيلان تعلم بيثون أو جافا سكريبت في هذه اللعبة
-    ملحمة البرمجة!
-  codemonkey_longdescription: '"كود مونكي" هي لعبة على الانترنت التي تعلم الترميز
-    في لغة برمجة حقيقية! الطلاب يبرمجون القرد لإلتقات الموز في حين يزيد أكثر تعقيدا
-    في كل مستوى. يحصلالطلاب على عشرات من النجوم في كل حل ويمكن مشاركتها بنقرة واحدة. '
-  codeavengers_longdescription: ابن لعبة أعلى - أسفل ثنائية الأبعاد للاعبين اثنين
-    مع جافا سكريبت في 10 خطوات قصيرة . ثم استمر في تعلم بعض أساسيات البرمجة (المتغيرات
-    و تركيبة إذا) فيما تقوم بإنشاء مسابقة لتشاركها مع الأصدقاء. اثناء ذلك اكسب النقاط
-    والشارات فيما تتنافس للوصول إلى أعلى قائمة المتصدرين في الصف.
-  processing_longdescription: مقدمة في البرمجة في سياق الفنون البصرية باستخدام لغة
-    البرمجة التجهيز. دروس فيديو قصيرة للبرمجة والتمارين التي تؤدي إلى تصميم برنامج
-    الرسم التفاعلي
-  robomind_longdescription: 'يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت
-    الافتراضي الخاص بهم. الدورة على شبكة الإنترنت متكامل مع عروض قصيرة، وأفلام، ومسابقات
-    والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. '
-  groklearning_longdescription: استخدم لغة البرمجة بايثون لبناء chatbot يسمى "إليزا"
-    ليكون بمثابة الطبيب الروبوت النفسي. عليك أن تعلم إليزا كيفية التحدث وصواب القول.
-    هل تستطيع أن تخدع أصدقاءك في التفكير انها الإنسان ليس حاسوب أو رجل آلي ؟
-  quorum_longdescription: هذا البرنامج التعليمي قابل الإستعمال للمعاقين بصريا، ويعمل
-    مع برامج قراءة الشاشة. إذهب مع ماري في جولة تنضم إلى مختبر البيولوجيا كمبرمج وتتعلم
-    لغة البرمجة كورم. يسترشد الطالب هذا البرنامج التعليمي مع الأنشطة وامثلة على الانترنت.
-  codespark_longdescription: '"الفوس" هي وسيلة ممتعة وصديقة للطفل لمعرفة المزيد عن
-    برمجة الحاسوب. برمج شخصيات لطيفة لحل الألغاز وجلب الحياة إلى العالم الافتراضي.
-    اللعبة هي "خالية من الكلمات" حتى يمكن الجميع اللعب!'
-  kodable_longdescription: '"كودلبل" هي لعبة أيباد بتوجيه الذاتي الذي يقدم للأطفال
-    5+ إلى الأساسيات البرمجة. وجود المعلم أو أحد الوالدين هو الأمثل، ولكن ليس من الضروري.'
-  tynkerapp_longdescription: تعلم أن تبرمج عن طريق حل أحجيات ترميز ممتعة. ابن ألعاب
-    وقصص بسهولة باستخدام رسومات معنونة، أكثر من عشر مجموعات ألعاب وشخصيات قابلة للتخصيص.
-    لا يلزم الاتصال بالإنترنت. يمكنك أيضا الوصول إلى الإبداعات الخاصة بك على شبكة
-    الإنترنت.
-  robomindnl_longdescription: 'يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت
-    الافتراضي الخاص بهم. الدورة على شبكة الإنترنت متكامل مع عروض قصيرة، وأفلام، ومسابقات
-    والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. '
-  flappy_longdescription: استخدم برمجة السحب والإفلات لبرمجة وعمل لعبة "الفلابي بيرد"
-    الخاص بك، وتخصيصه لتبدو مختلفة (قرش القفاز، القفاز سانتا، Hو أي تصميم آخر). ويمكنك
-    إضافة اللعبة إلى هاتفك في نقرة واحدة.
-  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
-    of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real JavaScript, and the more advanced you are the further you'll
-    go.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a
-    brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'محرر اللمس سيدلك على كيفية إنشاء الفن بكسل، حل لغز
-    الدب، أو إنشاء لعبة الطيور القافزة خاصة بك . '
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through
-    building three simple apps for your Android phone or tablet. Designed for novices
-    and experts alike, this hour of code will get you ready to start building your
-    own apps before you know it. Imagine sharing your own app creations with your
-    friends! These activities are suitable for individuals and for teachers leading
-    classes.
-  blockly_longdescription: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_longdescription: يتعلم الطلاب تمثيل وتخزين الرسائل في ثنائي، كوظائف
-    مفتوح أو مغلقة. في نهاية المطاف، فإن الصف يحصل غلى ترميز الأحرف الأولى الخاصة
-    بها لاخذها الى المنزل.
-  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
-  projguts_longdescription: This "unplugged" activity helps students learn how modeling
-    and simulation works by having a group of students play different versions of
-    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
+  codeorg_longdescription: 'تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.'
+  codeintl_longdescription: 'تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.'
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  khan_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  khanes_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  khanpt_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  khanhe_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  khanfr_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  khanpl_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  tynker_longdescription: 'بناء الألعاب الخاصة بك ومشاركتها مع الأصدقاء! حل الألغاز الترميزية وتعلم مفاهيم البرمجة في كل مستوى. إضفاء الطابع الشخصي لشخصيات الرسوم المتحركة، ومستويات متعددة والدعائم الغنية.  إجعل الألعاب واقعية باستخدام الفيزياء. انظر للكود ككتل بصرية أو جافا سكريبت. خذ ألعابك للجهازك المحمول أو اللوحي الخاص بك. أكثر من اثنتي عشر نشاط ممتع للاختيار من بينها!'
+  scratch_longdescription: 'مع "سكراتش"، يمكنك إنشاء ألعاب تفاعلية الخاصة بك والقصص والرسوم المتحركة &mdash; ومشاركتها مع أصدقائك. إبدأ  اسمك أو إنشاء بطاقة معايدة، أو إنشاء لعبة كرة الطاولة.'
+  lightbot_longdescription: 'وجه "لايت بوت" لتضيء كافة البلاط الأزرق! "لايت بوت" هي لعبة ألغاز تستخدم لغة البرمجة للسماح للاعبين اكتساب فهم عملي لأساسيات البرمجة. تعلم تسلسل التعليمات، كتابة الإجراءات، والاستفادة من الحلقات لحل المستويات. مثالية لجميع الأعمار.'
+  thinkersmith_longdescription: 'باستخدام "مفردات روبوت" معرفة مسبقاً  الطلاب سوف يكتشفون كيفية توجيه بعضهم البعض لإنجاز مهام محددة دون مناقشتها أولاً. هذا الدرس يعلم الأطفال الصلة بين الرموز والإجراءات، فضلا عن مهارة لا تقدر بثمن لتصحيح الأخطاء. "أصدقائي الروبوتيون" يعمل بشكل أفضل كنشاط مجموعة ويتضمن كراس معلم للاستخدام  في الفصول الدراسية.'
+  condcards_longdescription: 'تعرف على الخوارزميات والعبارات الشرطية في هذا النشاط "الموصول" باستخدام أوراق اللعب. الطلاب تقيم هذا النشاط في فرق، وتحتاج حزمة واحدة من البطاقات لكل فريق.'
+  lightbotintl_longdescription: تعلم منطق البرمجة الأساسية، بدءا من البرمجة الأساسية السهلة، للأعمار 4+، على نظام التشغيل iOS والأندرويد (أو متصفح الأنترنت). تعلم كيفية تسلسل الأوامر، وتحديد أنماط وإجراءات الاستخدام، والاستفادة من الحلقات!
+  codehs_longdescription: 'إعطاء الأوامر إلى جهاز الحاسوب، وهذا ما هو كل شيء عن البرمجة، هو تماما مثل إعطاء الأوامر لكلب. تعلم كيفية البرمجة مع كاريل الكلب &mdash; مقدمة في البرمجة بطريقة مرحة وسهلة لتعلم المفاهيم الأساسية للمبتدئين مثل الأوامر والظائف. يتم توجيه الطالب عن طريق البرنامج التعليمي ولكن يمكن للمدرسين الاشتراك للوصول إلى أدوات المعلم وتتبع نجاح الطالب!'
+  codecademy_longdescription: كود أكاديمي هو مقدمة تفاعلية يسترشد الطالب لأساسيات CS من خلال جافا سكريبت الذي يتم استخدامه من قبل عشرات الملايين من الطلاب في جميع أنحاء العالم. لقد تم إعداد ساعة من البرمجة سهلة وبسيطة من خلال إستعمال المسابقات، عرض الشرائح، ومشروع منجز للطلاب في نهاية المطاف.
+  codecombat_longdescription: هزيمة الغيلان تعلم بيثون أو جافا سكريبت في هذه اللعبة ملحمة البرمجة!
+  codemonkey_longdescription: '"كود مونكي" هي لعبة على الانترنت التي تعلم الترميز في لغة برمجة حقيقية! الطلاب يبرمجون القرد لإلتقات الموز في حين يزيد أكثر تعقيدا في كل مستوى. يحصلالطلاب على عشرات من النجوم في كل حل ويمكن مشاركتها بنقرة واحدة. '
+  codeavengers_longdescription: 'ابن لعبة أعلى - أسفل ثنائية الأبعاد للاعبين اثنين مع جافا سكريبت في 10 خطوات قصيرة . ثم استمر في تعلم بعض أساسيات البرمجة (المتغيرات و تركيبة إذا) فيما تقوم بإنشاء مسابقة لتشاركها مع الأصدقاء. اثناء ذلك اكسب النقاط والشارات فيما تتنافس للوصول إلى أعلى قائمة المتصدرين في الصف.'
+  processing_longdescription: مقدمة في البرمجة في سياق الفنون البصرية باستخدام لغة البرمجة التجهيز. دروس فيديو قصيرة للبرمجة والتمارين التي تؤدي إلى تصميم برنامج الرسم التفاعلي
+  robomind_longdescription: 'يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت الافتراضي الخاص بهم. الدورة على شبكة الإنترنت متكامل مع عروض قصيرة، وأفلام، ومسابقات والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. '
+  groklearning_longdescription: 'استخدم لغة البرمجة بايثون لبناء chatbot يسمى "إليزا" ليكون بمثابة الطبيب الروبوت النفسي. عليك أن تعلم إليزا كيفية التحدث وصواب القول. هل تستطيع أن تخدع أصدقاءك في التفكير انها الإنسان ليس حاسوب أو رجل آلي ؟'
+  quorum_longdescription: هذا البرنامج التعليمي قابل الإستعمال للمعاقين بصريا، ويعمل مع برامج قراءة الشاشة. إذهب مع ماري في جولة تنضم إلى مختبر البيولوجيا كمبرمج وتتعلم لغة البرمجة كورم. يسترشد الطالب هذا البرنامج التعليمي مع الأنشطة وامثلة على الانترنت.
+  codespark_longdescription: '"الفوس" هي وسيلة ممتعة وصديقة للطفل لمعرفة المزيد عن برمجة الحاسوب. برمج شخصيات لطيفة لحل الألغاز وجلب الحياة إلى العالم الافتراضي. اللعبة هي "خالية من الكلمات" حتى يمكن الجميع اللعب!'
+  kodable_longdescription: '"كودلبل" هي لعبة أيباد بتوجيه الذاتي الذي يقدم للأطفال 5+ إلى الأساسيات البرمجة. وجود المعلم أو أحد الوالدين هو الأمثل، ولكن ليس من الضروري.'
+  tynkerapp_longdescription: تعلم أن تبرمج عن طريق حل أحجيات ترميز ممتعة. ابن ألعاب وقصص بسهولة باستخدام رسومات معنونة، أكثر من عشر مجموعات ألعاب وشخصيات قابلة للتخصيص. لا يلزم الاتصال بالإنترنت. يمكنك أيضا الوصول إلى الإبداعات الخاصة بك على شبكة الإنترنت.
+  robomindnl_longdescription: 'يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت الافتراضي الخاص بهم. الدورة على شبكة الإنترنت متكامل مع عروض قصيرة، وأفلام، ومسابقات والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. '
+  flappy_longdescription: 'استخدم برمجة السحب والإفلات لبرمجة وعمل لعبة "الفلابي بيرد" الخاص بك، وتخصيصه لتبدو مختلفة (قرش القفاز، القفاز سانتا، Hو أي تصميم آخر). ويمكنك إضافة اللعبة إلى هاتفك في نقرة واحدة.'
+  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
+  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
+  touchdevelop_longdescription: 'محرر اللمس سيدلك على كيفية إنشاء الفن بكسل، حل لغز الدب، أو إنشاء لعبة الطيور القافزة خاصة بك . '
+  appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
+  blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
+  thinkersmith2_longdescription: يتعلم الطلاب تمثيل وتخزين الرسائل في ثنائي، كوظائف مفتوح أو مغلقة. في نهاية المطاف، فإن الصف يحصل غلى ترميز الأحرف الأولى الخاصة بها لاخذها الى المنزل.
+  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
+  projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
   hourofcode_longdescription: Placeholder for new code.org/hoc
-  frozen_longdescription: دعونا نستخدام التعليمات البرمجية لنشارك آنا وإليسا حال استكشافهم
-    لسحر وجمال الجليد، سوف تصنع رقاقات الثلج و تزحلقك لتترك تلك الخطوط على الجليد
-    ورائك لتصنع بذلك أرض الأحلام الخاصة بك التي سوف تتمكن من مشاركتها مع أصدقائك!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
-  codeorg_beyond_name: مقدمة "علوم الحاسوب" (روضة لصف ثامن)
+  frozen_longdescription: دعونا نستخدام التعليمات البرمجية لنشارك آنا وإليسا حال استكشافهم لسحر وجمال الجليد، سوف تصنع رقاقات الثلج و تزحلقك لتترك تلك الخطوط على الجليد ورائك لتصنع بذلك أرض الأحلام الخاصة بك التي سوف تتمكن من مشاركتها مع أصدقائك!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  codeorg_beyond_name: 'مقدمة "علوم الحاسوب" (روضة لصف ثامن)'
   khan_beyond_name: تعلم برمجة الحاسوب
   tynker_beyond_name: تعلم البرمجة في المنزل
   scratch_beyond_name: كن مبدعاً مع البرمجة
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: كودابل
-  scratchjr_beyond_name: برنامج "سكراتش جر" للأطفال قبل القراء
+  scratchjr_beyond_name: 'برنامج "سكراتش جر" للأطفال قبل القراء'
   hopscotch_beyond_name: 'لعبة المربعات: البرمجة على أيبادك'
   pocketcode_beyond_name: برمجة بسيطة
   groklearning_beyond_name: تعلم لغة البرمجة بايثون
@@ -849,8 +730,7 @@
   w3schools_beyond_platformtext: متصفحات الويب الحديثة
   codeavengers_beyond_platformtext: متصفحات الويب الحديثة
   mozilla_beyond_platformtext: متصفحات الويب الحديثة
-  codecombat_beyond_platformtext: القائمة على تكنولوجيا الواب (فايرفوكس، كروم، سفاري،
-    IE9 +)
+  codecombat_beyond_platformtext: القائمة على تكنولوجيا الواب (فايرفوكس، كروم، سفاري، IE9 +)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: شراء روبوت
   finch_beyond_platformtext: شراء روبوت
@@ -858,8 +738,7 @@
   processing_beyond_platformtext: متصفحات الويب الحديثة
   alice_beyond_platformtext: Windows أو Mac (التثبيت مطلوب)
   sphero_beyond_platformtext: شراء روبوت
-  codeorg_beyond_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و
-    الطيورالغاضبة!
+  codeorg_beyond_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!
   khan_beyond_shortdescription: تعلم كيفية الرسم في جافا سكريبت
   tynker_beyond_shortdescription: درس إنخراطي و ممتع للأطفال في الصفوف 4-8
   scratch_beyond_shortdescription: إنشاء ألعاب تفاعلية، والقصص، والرسوم المتحركة.
@@ -867,24 +746,21 @@
   codecademy_beyond_shortdescription: تعلم برمجة جافا سكريبت، في مستعرض ويب
   kodable_beyond_shortdescription: لعبة أيباد ممتعة لتعليم مفاهيم البرمجة
   scratchjr_beyond_shortdescription: 'إنشاء قصص تفاعلية وألعاب باستخدام سكراتش جونيور. '
-  hopscotch_beyond_shortdescription: تعلم البرمجة المرئية "فيشويل" على الأيباد
-  pocketcode_beyond_shortdescription: قم بإنشاء لعبة على الهاتف الذكي الخاص بك ومشاركتها
-    مع الأصدقاء للتجريب!
+  hopscotch_beyond_shortdescription: 'تعلم البرمجة المرئية "فيشويل" على الأيباد'
+  pocketcode_beyond_shortdescription: قم بإنشاء لعبة على الهاتف الذكي الخاص بك ومشاركتها مع الأصدقاء للتجريب!
   groklearning_beyond_shortdescription: مقدمة أساسية لبرمجة بايثون PYTHON
   hacketyhack_beyond_shortdescription: تعلم روبي من الاساسيات
   robomind_beyond_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
   makegameswithus_beyond_shortdescription: تعلم صناعة لعبة أي فون في ساعة
   appinventor_beyond_shortdescription: برمج تطبيقك الخاص! (فقط للأندرويد)
-  touchdevelop_beyond_shortdescription: برمج التطبيقات مباشرة على هاتفك, الألوح أو
-    الحاسوب المحمول
+  touchdevelop_beyond_shortdescription: برمج التطبيقات مباشرة على هاتفك, الألوح أو الحاسوب المحمول
   codehs_beyond_shortdescription: تعلم برمجة الجافا سكريبت مع بيئة بصرية ممتعة
   udemy_beyond_shortdescription: العشرات من دروس البرمجة على الإنترنت
   lynda_beyond_shortdescription: العشرات من دروس البرمجة على الإنترنت
   edx_beyond_shortdescription: البدرس الأكثر شعبية في جامعة هارفارد
   coursera_beyond_shortdescription: ابدء مع CS101
   udacity_beyond_shortdescription: ابدء مع CS101
-  teachingtree_beyond_shortdescription: 'المعرفة والتعلم على  الانترنت: سريع وغير
-    مقيد'
+  teachingtree_beyond_shortdescription: 'المعرفة والتعلم على  الانترنت: سريع وغير مقيد'
   kodu_beyond_shortdescription: صمّم عالم ثلاثي الابعاد
   cargobot_beyond_shortdescription: برمج ذراع روبوت على أيبادك
   kidsruby_beyond_shortdescription: تعلم البرمجة باستخدام روبي
@@ -895,190 +771,44 @@
   codea_beyond_shortdescription: برمج تطبيقات على الأيباد الخاصة بك
   lego_beyond_shortdescription: بناء وبرمجة الروبوت
   finch_beyond_shortdescription: روبوت لتعليم علم الحاسوب
-  arduino_beyond_shortdescription: تعلم "الأردوينو" مع "سبارك فن" في العلبة الرقمية
-    التجريبية.
+  arduino_beyond_shortdescription: 'تعلم "الأردوينو" مع "سبارك فن" في العلبة الرقمية التجريبية.'
   processing_beyond_shortdescription: تعلم لغات المعالجة
   alice_beyond_shortdescription: تعليم البرمجة في بيئة 3D
-  sphero_beyond_shortdescription: دروس "SPRK" تعطي الاطفال دورة مكثفة ممتعة في برمجة
-    الروبوتات في حين تحسين مهاراتهم في الرياضيات والعلوم.
-  codeorg_beyond_longdescription: Learn the basic concepts of Computer Science with
-    drag and drop programming. 3 full courses, each consists of 15-20 lessons that
-    blend "unplugged" classroom activities interspersed with game-like, self-directed
-    tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds
-    and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions,
-    and variables.
-  khan_beyond_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!
-  tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
-    It makes it visual. Kids build games and mobile apps by arranging blocks of code.
-    It removes the need to know programming syntax. Kids transform ideas into animated
-    stories and math art right away. It promotes progressive learning. As kids learn
-    fundamentals, Tynker introduces more advanced concepts including syntax driven
-    programming.
-  scratch_beyond_longdescription: مع "سكراتش"، يمكنك إنشاء ألعاب تفاعلية الخاصة بك
-    والقصص والرسوم المتحركة &mdash; ومشاركتها مع أصدقائك. إبدأ  اسمك أو إنشاء بطاقة
-    معايدة، أو إنشاء لعبة كرة الطاولة.
-  lightbot_beyond_longdescription: تعلم منطق البرمجة الأساسية، بدءا من البرمجة الأساسية
-    السهلة، للأعمار 4+، على نظام التشغيل iOS والأندرويد (أو متصفح الأنترنت). تعلم
-    كيفية تسلسل الأوامر، وتحديد أنماط وإجراءات الاستخدام، والاستفادة من الحلقات!
-  codecademy_beyond_longdescription: كود أكاديمي هو مقدمة تفاعلية يسترشد الطالب لأساسيات
-    CS من خلال جافا سكريبت الذي يتم استخدامه من قبل عشرات الملايين من الطلاب في جميع
-    أنحاء العالم. لقد تم إعداد ساعة من البرمجة سهلة وبسيطة من خلال إستعمال المسابقات،
-    عرض الشرائح، ومشروع منجز للطلاب في نهاية المطاف.
-  kodable_beyond_longdescription: '"كودلبل" هي لعبة أيباد بتوجيه الذاتي الذي يقدم
-    للأطفال 5+ إلى الأساسيات البرمجة. وجود المعلم أو أحد الوالدين هو الأمثل، ولكن
-    ليس من الضروري.'
-  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
-    that enables young children to create their own interactive stories and games.
-    Children snap together graphical programming blocks to make characters move, jump,
-    dance, and sing
-  hopscotch_beyond_longdescription: برنامج تعليمي موجه للطالب على الأيباد باستخدام
-    لغة البرمجة "هوب سكوتش". سوف يتمكن الطلاب على بناء ألعاب وتطبيقات للأيباد على
-    الأيباد. يمكن للطلاب العمل بشكل فردي أو مع الأصدقاء (تصل إلى 3 على كل أيباد).
-  pocketcode_beyond_longdescription: Create your own game on your smart phone with
-    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
-    friends and other users to try!
-  groklearning_beyond_longdescription: An introductory course using the programming
-    language Python for people with no programming experience. Our unique mix of introductory
-    content and challenges will bring you to a thorough understanding of Python and
-    programming itself. We've taught this content to students of varying ages from
-    diverse backgrounds and we're sure it'll suit you too.
-  hacketyhack_beyond_longdescription: 'Hackety Hack will teach you the absolute basics
-    of programming from the ground up. No previous programming experience is needed!
-    With Hackety Hack, you''ll learn the Ruby programming language. Ruby is used for
-    all kinds of programs, including desktop applications and websites. [Note: Desktop
-    install required]'
-  robomind_beyond_longdescription: 'Students learn the basics of programming by controling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  makegameswithus_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you
-    through building three simple apps for your Android phone or tablet. Designed
-    for novices and experts alike, this hour of code will get you ready to start building
-    your own apps before you know it. Imagine sharing your own app creations with
-    your friends! These activities are suitable for individuals and for teachers leading
-    classes.
-  touchdevelop_beyond_longdescription: برنامج "TouchDevelop" يتيح لك إنشاء تطبيقات
-    على الأيباد، الأيفون، الأندرويد، أجهزة الحاسوب، أجهزة الماك، ويندوز موبايل. جهودنا
-    بالبرمجة من خلال محرر صديق يجعل الترميز مرح، حتى على الهاتف أو الجهاز اللوحي!
-  codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog,
-    a fun, accessible and visual introduction to coding, where giving commands to
-    a computer is just like giving commands to a dog. This tutorial is great if led
-    by a teacher, but can also be done independently. [Note: payment is required]'
-  udemy_beyond_longdescription: 'إذا كنت لم ترى سطر من البرمجة أم تبرمج كوظيفة، أوديمي
-    لديها صف لك، تدرس من قبل مدربين محترفين. [ملاحظة: مطلوب الدفع]'
-  lynda_beyond_longdescription: 'تعلم كيفية إنشاء التعليمات البرمجية وبناء تطبيقات
-    الويب، من أسس البرمجة كائنية المنحى في C و ++C، إلى كيفية كتابة Java. لدينا دروس
-    مطورين يمكن أن تساعدك على تعلم كيفية تطوير وإنشاء تطبيقات الجوال، العمل مع قواعد
-    البيانات PHP و MySQL، والبدء بالمعالجة الإحصائية لغة R، وأكثر من ذلك بكثير. [ملاحظة:
-    مطلوب الدفع]'
-  edx_beyond_longdescription: CS50x is Harvard College's introduction to the intellectual
-    enterprises of computer science and the art of programming for majors and non-majors
-    alike, with or without prior programming experience. Topics include abstraction,
-    algorithms, data structures, encapsulation, resource management, security, software
-    engineering, and web development. Languages include C, PHP, and JavaScript plus
-    SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest
-    course.
-  coursera_beyond_longdescription: 'Stanford''s CS 101 class taught by Nick Parlante
-    (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience
-    audience. Play and experiment with short bits of code to bring to life to the
-    power and limitations of computers. CS101 also provides a general background on
-    computers today: what is a computer, what is hardware, what is software, what
-    is the internet. No previous experience is required other than the ability to
-    use a web browser.'
-  udacity_beyond_longdescription: In this course you will learn key concepts in computer
-    science and learn how to write your own computer programs in the context of building
-    a web crawler. There is no prior programming knowledge needed for this course.
-    Beginners are welcome! At the end of this course, you will have learned key concepts
-    in computer science and enough programming to be able to write Python programs
-    to solve problems on your own. This course will prepare you to move on to intermediate-level
-    computing courses.
-  teachingtree_beyond_longdescription: '"TeachingTree" هي منصة مفتوحة تتيح لأي شخص
-    تنظيم المحتوى التعليمي. هدفنا هو وصول الطلاب بسرعة للقطات الدقيقة التي يحتاجونها
-    من أجل معرفة المفاهيم الفردية. يشجع الجميع للمساعدة بإضافة أشرطة الفيديو أو وضع
-    علامات المفاهيم.'
-  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via
-    a simple visual programming language. Kodu can be used to teach creativity, problem
-    solving, storytelling, as well as programming. Anyone can use Kodu to make a game,
-    young children as well as adults with no design or programming skills. Kodu for
-    the PC is available to download for free. Kodu for the XBox is also available
-    in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot
-    how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
-    haunting music and stunning retina graphics. You can even record your solutions
-    and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: 'إستمتع وبرمج الألعاب أو إختراق الواجب المنزلي
-    الخاصة بك باستخدام روبي! فقط خبر أهلك أو المدرس كنت تعلم البرمجة روبي ...؛). مجانا
-    ويعمل على أي جهاز حاسوب. [ملاحظة: مطلوب تنزيل برنامج على الحاسوب]'
-  w3schools_beyond_longdescription: تعلم كيفية إنشاء المواقع على جهاز الحاسوب الخاص
-    بك. تعلم أساسيات الخادم في أقل من يوم واحد. تعلم قواعد البيانات لإضافتها إلى موقع
-    الويب الخاص بك
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
-    Designed by experts with perfect level of difficulty for beginners, easy to understand
-    instructions and great help when you need it. Our HTML, CSS and JavaScript courses
-    include code challenges and revision games that make learning fun and effective
-    for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
-  codecombat_beyond_longdescription: إلعب كساحروبرمج (نوبات) للتحكم بالأبطال، اجتاز
-    المتاهات، أهزم الوحوش، وأخدع الأعداء, وحرر الأحلفاء! تعلم الجافا سكربت للمبتدئين
-    في هذه اللعبة على شبكة الإنترنت والمتصفح HTML 5 .
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations
-    &mdash; or just about any visual idea you have. Turn your thoughts into interactive
-    creations that make use of iPad features like Multi-Touch and the accelerometer.
-    We think Codea is the most beautiful code editor you'll use, and it's easy. Codea
-    is designed to let you touch your code. Want to change a number? Just tap and
-    drag it. How about a color, or an image? Tapping will bring up visual editors
-    that let you choose exactly what you want.
-  lego_beyond_longdescription: خلق الروبوتات الصغيرة، تخصيصها وبرمجة باستخدام قطع
-    الليجو.
-  finch_beyond_longdescription: The Finch is a new robot for computer science education.
-    Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
-    The Finch is designed to support an engaging introduction to the art of programming.
-    It has support for over a dozen programming languages and environments, including
-    several environments appropriate for students as young as eight years old. The
-    Finch was designed to allow students to write richly interactive programs.
-  arduino_beyond_longdescription: '"اردوينو" هو منصة شعبية صممت للسماح للفنانين والمصممين
-    للعمل مع أجهزة الاستشعار الحقيقية، المصابيح، بوزيرس، وأكثر من ذلك. فإن معالج الإفتراضي
-    التجريبي "سبارك فن" يعلمك برمجة اردوينو الحقيقي في المتصفح.'
-  processing_beyond_longdescription: المعالجة هي لغة برمجة، وبيئة تطوير، ومجتمع على
-    الإنترنت. منذ عام 2001 شجعت المعالجة في التعلم وخفض مستوى محو الأمية في البرمجيات
-    في الفنون البصرية التكنولوجية. أنشئت في البداية لتكون بمثابة كراسة الرسم للبرمجيات
-    وتعليم أساسيات برمجة الحاسوب في سياق البصرية، وتطورت المعالجة إلى أداة للتنمية
-    للمحترفين. اليوم، هناك عشرات الآلاف من الطلاب والفنانين والمصممين والباحثين والهواة
-    الذين يستخدمون المعالجة للتعلم، والنماذج، والإنتاج.
-  alice_beyond_longdescription: باستخدام بيئة البرمجة المبتكرة لدعم إنشاء الرسوم المتحركة
-    3D، يوفر المشروع أليس الأدوات والمواد اللازمة للتدريس والتعلم التفكير الحسابي،
-    وحل المشكلات، وبرمجة الكمبيوتر عبر مجموعة متنوعة للأعمار والمراحل الدراسية.
-  sphero_beyond_longdescription: سواء كنت معلم أو أحد الوالدين، "سبرك" تعطي دروس ممتعة
-    للأطفال ببرمجة الروبوتات وبنفس الوقت تحسين مهاراتهم في الرياضيات والعلوم.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "
+  sphero_beyond_shortdescription: 'دروس "SPRK" تعطي الاطفال دورة مكثفة ممتعة في برمجة الروبوتات في حين تحسين مهاراتهم في الرياضيات والعلوم.'
+  codeorg_beyond_longdescription: 'Learn the basic concepts of Computer Science with drag and drop programming. 3 full courses, each consists of 15-20 lessons that blend "unplugged" classroom activities interspersed with game-like, self-directed tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions, and variables.'
+  khan_beyond_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  tynker_beyond_longdescription: 'Tynker makes it fun & easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.'
+  scratch_beyond_longdescription: 'مع "سكراتش"، يمكنك إنشاء ألعاب تفاعلية الخاصة بك والقصص والرسوم المتحركة &mdash; ومشاركتها مع أصدقائك. إبدأ  اسمك أو إنشاء بطاقة معايدة، أو إنشاء لعبة كرة الطاولة.'
+  lightbot_beyond_longdescription: تعلم منطق البرمجة الأساسية، بدءا من البرمجة الأساسية السهلة، للأعمار 4+، على نظام التشغيل iOS والأندرويد (أو متصفح الأنترنت). تعلم كيفية تسلسل الأوامر، وتحديد أنماط وإجراءات الاستخدام، والاستفادة من الحلقات!
+  codecademy_beyond_longdescription: كود أكاديمي هو مقدمة تفاعلية يسترشد الطالب لأساسيات CS من خلال جافا سكريبت الذي يتم استخدامه من قبل عشرات الملايين من الطلاب في جميع أنحاء العالم. لقد تم إعداد ساعة من البرمجة سهلة وبسيطة من خلال إستعمال المسابقات، عرض الشرائح، ومشروع منجز للطلاب في نهاية المطاف.
+  kodable_beyond_longdescription: '"كودلبل" هي لعبة أيباد بتوجيه الذاتي الذي يقدم للأطفال 5+ إلى الأساسيات البرمجة. وجود المعلم أو أحد الوالدين هو الأمثل، ولكن ليس من الضروري.'
+  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language that enables young children to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing
+  hopscotch_beyond_longdescription: 'برنامج تعليمي موجه للطالب على الأيباد باستخدام لغة البرمجة "هوب سكوتش". سوف يتمكن الطلاب على بناء ألعاب وتطبيقات للأيباد على الأيباد. يمكن للطلاب العمل بشكل فردي أو مع الأصدقاء (تصل إلى 3 على كل أيباد).'
+  pocketcode_beyond_longdescription: Create your own game on your smart phone with Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with friends and other users to try!
+  groklearning_beyond_longdescription: "An introductory course using the programming language Python for people with no programming experience. Our unique mix of introductory content and challenges will bring you to a thorough understanding of Python and programming itself. We've taught this content to students of varying ages from diverse backgrounds and we're sure it'll suit you too."
+  hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
+  robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
+  makegameswithus_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
+  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
+  touchdevelop_beyond_longdescription: 'برنامج "TouchDevelop" يتيح لك إنشاء تطبيقات على الأيباد، الأيفون، الأندرويد، أجهزة الحاسوب، أجهزة الماك، ويندوز موبايل. جهودنا بالبرمجة من خلال محرر صديق يجعل الترميز مرح، حتى على الهاتف أو الجهاز اللوحي!'
+  codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog, a fun, accessible and visual introduction to coding, where giving commands to a computer is just like giving commands to a dog. This tutorial is great if led by a teacher, but can also be done independently. [Note: payment is required]'
+  udemy_beyond_longdescription: 'إذا كنت لم ترى سطر من البرمجة أم تبرمج كوظيفة، أوديمي لديها صف لك، تدرس من قبل مدربين محترفين. [ملاحظة: مطلوب الدفع]'
+  lynda_beyond_longdescription: 'تعلم كيفية إنشاء التعليمات البرمجية وبناء تطبيقات الويب، من أسس البرمجة كائنية المنحى في C و ++C، إلى كيفية كتابة Java. لدينا دروس مطورين يمكن أن تساعدك على تعلم كيفية تطوير وإنشاء تطبيقات الجوال، العمل مع قواعد البيانات PHP و MySQL، والبدء بالمعالجة الإحصائية لغة R، وأكثر من ذلك بكثير. [ملاحظة: مطلوب الدفع]'
+  edx_beyond_longdescription: "CS50x is Harvard College's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, PHP, and JavaScript plus SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest course."
+  coursera_beyond_longdescription: "Stanford's CS 101 class taught by Nick Parlante (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience audience. Play and experiment with short bits of code to bring to life to the power and limitations of computers. CS101 also provides a general background on computers today: what is a computer, what is hardware, what is software, what is the internet. No previous experience is required other than the ability to use a web browser."
+  udacity_beyond_longdescription: In this course you will learn key concepts in computer science and learn how to write your own computer programs in the context of building a web crawler. There is no prior programming knowledge needed for this course. Beginners are welcome! At the end of this course, you will have learned key concepts in computer science and enough programming to be able to write Python programs to solve problems on your own. This course will prepare you to move on to intermediate-level computing courses.
+  teachingtree_beyond_longdescription: '"TeachingTree" هي منصة مفتوحة تتيح لأي شخص تنظيم المحتوى التعليمي. هدفنا هو وصول الطلاب بسرعة للقطات الدقيقة التي يحتاجونها من أجل معرفة المفاهيم الفردية. يشجع الجميع للمساعدة بإضافة أشرطة الفيديو أو وضع علامات المفاهيم.'
+  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the XBox is also available in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
+  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles, haunting music and stunning retina graphics. You can even record your solutions and share them on YouTube to show your friends.
+  kidsruby_beyond_longdescription: 'إستمتع وبرمج الألعاب أو إختراق الواجب المنزلي الخاصة بك باستخدام روبي! فقط خبر أهلك أو المدرس كنت تعلم البرمجة روبي ...؛). مجانا ويعمل على أي جهاز حاسوب. [ملاحظة: مطلوب تنزيل برنامج على الحاسوب]'
+  w3schools_beyond_longdescription: تعلم كيفية إنشاء المواقع على جهاز الحاسوب الخاص بك. تعلم أساسيات الخادم في أقل من يوم واحد. تعلم قواعد البيانات لإضافتها إلى موقع الويب الخاص بك
+  codeavengers_beyond_longdescription: Learn how to program games, apps and websites. Designed by experts with perfect level of difficulty for beginners, easy to understand instructions and great help when you need it. Our HTML, CSS and JavaScript courses include code challenges and revision games that make learning fun and effective for all ages.
+  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike.
+  codecombat_beyond_longdescription: إلعب كساحروبرمج (نوبات) للتحكم بالأبطال، اجتاز المتاهات، أهزم الوحوش، وأخدع الأعداء, وحرر الأحلفاء! تعلم الجافا سكربت للمبتدئين في هذه اللعبة على شبكة الإنترنت والمتصفح HTML 5 .
+  codea_beyond_longdescription: "Codea for iPad lets you create games and simulations &mdash; or just about any visual idea you have. Turn your thoughts into interactive creations that make use of iPad features like Multi-Touch and the accelerometer. We think Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed to let you touch your code. Want to change a number? Just tap and drag it. How about a color, or an image? Tapping will bring up visual editors that let you choose exactly what you want."
+  lego_beyond_longdescription: خلق الروبوتات الصغيرة، تخصيصها وبرمجة باستخدام قطع الليجو.
+  finch_beyond_longdescription: "The Finch is a new robot for computer science education. Its design is the result of a four year study at Carnegie Mellon's CREATE lab. The Finch is designed to support an engaging introduction to the art of programming. It has support for over a dozen programming languages and environments, including several environments appropriate for students as young as eight years old. The Finch was designed to allow students to write richly interactive programs."
+  arduino_beyond_longdescription: '"اردوينو" هو منصة شعبية صممت للسماح للفنانين والمصممين للعمل مع أجهزة الاستشعار الحقيقية، المصابيح، بوزيرس، وأكثر من ذلك. فإن معالج الإفتراضي التجريبي "سبارك فن" يعلمك برمجة اردوينو الحقيقي في المتصفح.'
+  processing_beyond_longdescription: المعالجة هي لغة برمجة، وبيئة تطوير، ومجتمع على الإنترنت. منذ عام 2001 شجعت المعالجة في التعلم وخفض مستوى محو الأمية في البرمجيات في الفنون البصرية التكنولوجية. أنشئت في البداية لتكون بمثابة كراسة الرسم للبرمجيات وتعليم أساسيات برمجة الحاسوب في سياق البصرية، وتطورت المعالجة إلى أداة للتنمية للمحترفين. اليوم، هناك عشرات الآلاف من الطلاب والفنانين والمصممين والباحثين والهواة الذين يستخدمون المعالجة للتعلم، والنماذج، والإنتاج.
+  alice_beyond_longdescription: باستخدام بيئة البرمجة المبتكرة لدعم إنشاء الرسوم المتحركة 3D، يوفر المشروع أليس الأدوات والمواد اللازمة للتدريس والتعلم التفكير الحسابي، وحل المشكلات، وبرمجة الكمبيوتر عبر مجموعة متنوعة للأعمار والمراحل الدراسية.
+  sphero_beyond_longdescription: 'سواء كنت معلم أو أحد الوالدين، "سبرك" تعطي دروس ممتعة للأطفال ببرمجة الروبوتات وبنفس الوقت تحسين مهاراتهم في الرياضيات والعلوم.'

@@ -174,13 +174,13 @@ is:
         title: Tölvuleikir og hnitakerfi
         desc: Uppgötvaðu hvernig tölvuleikirnir, sem þér finnst svo gaman að spila, eru í raun keyrðir á algebru! Kannaðu hvernig algebruformúlur og hnitakerfið geta hjálpað okkur að skilja hvernig tölvuleikir virka, og byrjaðu svo að áætla hvernig leik þú munt búa til.
       Contracts:
-        title: Samningar, gildismengi og svið
+        title: Samningar, gildamengi og svið
         desc: Samingar eru aðferð til að skilja og ræða um föll. Í þessari námseiningu munum við skoða hvernig samningar geta hjálpað okkur að skilja nýtt forritunarmál eða fall.
       DesignRecipe:
         title: Hönnunaruppskriftin
         desc: 'Í síðasta áfanga skrifuðu nemendur nokkur mjög einföld föll. En til að búa til viðameiri föll þarf að leggjast í meiri hugsun. Hönnunaruppskriftin (enska: Design Recipe) er formleg aðferð við að skrifa föll. Hluti af henni er að búa til dæmatilfelli til að tryggja að fallið geri það sem það á að gera.'
       Booleans:
-        title: Boole virkjar og rökvísi
+        title: Boole gildi og rökvísi
         desc: Boole gildi eru fjórða og síðasta gagnategundin sem þú lærir um á þessu námskeiði. Í þessu verkefni muntu læra hvað Boole gildi eru og hvernig þau hjálpa okkur að skrifa föll sem nota rökvísi
       ConditionalsPiecewiseFunctions:
         title: Skilyrði og Piecewise föll

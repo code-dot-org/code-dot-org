@@ -4,8 +4,7 @@
   "circleBlockTitle": "cirkel (straal, stijl, kleur)",
   "displayBlockTitle": "evalueren",
   "ellipseBlockTitle": "ellips (breedte, hoogte, stijl, kleur)",
-  "emptyFunctionalBlock": "Je hebt een blok zonder waarde.",
-  "extraTopBlocks": "U hebt niet-vastgemaakte blokken. Wilde je deze vastmaken aan het blok \"weergeven\"?",
+  "extraTopBlocks": "Je hebt niet-gekoppelde blokken. Was het de bedoeling om deze aan het \"evalueren\" blok te koppelen?",
   "infiniteRecursionError": "Je opdracht roept zichzelf aan. We hebben het gestopt, anders zou het zichzelf oneindig blijven aanroepen.",
   "overlayBlockTitle": "overlay (boven, onder)",
   "placeImageBlockTitle": "plaats-afbeelding (x, y, afbeelding)",
@@ -28,5 +27,5 @@
   "string": "tekenreeks",
   "stringMismatchError": "Je hebt een tekenreeks met verkeerde (hoofd)letters.",
   "userCodeException": "Er is een fout opgetreden tijdens het uitvoeren van de code.",
-  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
+  "wrongBooleanError": "Jouw blokken leveren de verkeerde Boolean-waarde op."
 }

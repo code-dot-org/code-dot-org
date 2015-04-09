@@ -222,6 +222,7 @@ fr:
         artist: Dessine quelque chose
     user:
       classroom: "Page d'accueil des enseignants"
+      district_dashboard: District Dashboard
       label: 'Bonjour %{username}'
       stats: Ma progression
       settings: Mon compte
@@ -440,6 +441,9 @@ fr:
       body: "Regardez une galerie des applications et images d'artistes créées par nos utilisateurs"
     frozen:
       title: La Reine des neiges
+    infinity:
+      title: Infinity Play Lab
+      body: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infiny.
   gallery:
     students_drew_these_with_code: Les élèves les ont dessinés avec du code !
     students_made_these_with_code: Les élèves ont réalisé ceci avec du code !
@@ -469,6 +473,12 @@ fr:
     wrong_body: La solution que vous avez entrée est incorrecte. Veuillez réessayer !
     correct_title: Correct
     correct_body: "C'est la bonne réponse."
+  contract_match:
+    wrong_title: Réponse incorrecte
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Entrez votre réponse ici
   dialog:
@@ -554,3 +564,5 @@ fr:
     delete_confirm_title: Êtes-vous sûr de que vouloir supprimer ce projet ?
     delete_confirm_text: Supprimer votre projet le supprimera définitivement de votre liste de mes projets. Tous ceux auxquels vous avez partagé le lien ne seront plus en mesure de visualiser votre projet.
     view_all: Afficher mes projets
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

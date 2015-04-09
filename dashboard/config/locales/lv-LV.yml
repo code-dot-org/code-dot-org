@@ -248,6 +248,7 @@
         artist: Uzzīmēt kaut ko
     user:
       classroom: Skolotāju mājas lapa
+      district_dashboard: District Dashboard
       label: Sveiki, %{username}
       stats: Mans progress
       settings: Mans konts
@@ -498,6 +499,9 @@
       body: Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji
     frozen:
       title: Ledus sirds
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
     students_made_these_with_code: Skolēni izveidoja šos ar kodu!
@@ -534,6 +538,12 @@
     wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģini vēl!
     correct_title: Pareizi
     correct_body: Tā ir pareizā atbilde.
+  contract_match:
+    wrong_title: Nepareiza atbilde
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Ievadi savu atbildi šeit
   dialog:
@@ -631,3 +641,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

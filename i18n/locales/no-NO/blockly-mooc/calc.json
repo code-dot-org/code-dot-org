@@ -1,7 +1,6 @@
 {
   "divideByZeroError":"Programmet gir deling med null.",
   "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
-  "emptyFunctionalBlock":"Du har en blokk som mangler inndata.",
   "equivalentExpression":"Prøv å endre rekkefølgen på argumentene dine for å få nøyaktig samme uttrykk.",
   "evaluate":"beregn",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",

@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "Trebuie sa ataşezi un bloc la blocul \"calculează\".",
-  "emptyFunctionalBlock": "Ai un bloc necompletat.",
   "equivalentExpression": "Încercaţi să vă reordonați argumentele pentru a obţine exact aceeaşi expresie.",
   "evaluate": "evaluate",
   "extraTopBlocks": "Aveţi blocuri neataşate. Aţi vrut să le ataşaţi la blocul \"calculare\"?",

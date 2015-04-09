@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-19T16:50:33.000Z",
+  "properties": {
+    "title": "title",
+    "content1": "description here",
+    "markdown": "## Unit 1: Lesson 2 - Sending Binary Messages\n\n# What happens in this lesson?\nIn this lesson, you will work in a team to create a systems for encoding and sending simple binary messages using  everyday objects. The messages will have only two possible values. Your challenge is to think of a message that can be communicated with such a simple message. And then build a device from everyday objects to communicate the message across the room. You will work with your team mates in an iterative design process of rapidly building and improving your device.  \n\n\n# Links to stuff you need\n\n* Activity Guide: [Sending Binary Numbers](https://docs.google.com/document/d/1s3qa6U2mPFSH_n6Uf0I9IHV2FOzXtOlxZ3LSTOM3JTQ/edit?usp=sharing)\n\n\n",
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    }
+  },
+  "md5": "2d99ac7e63a8324e53d76d34b07e5b5a"
+}]]></config>
+</External>

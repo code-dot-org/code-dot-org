@@ -1,58 +1,42 @@
-"ro-RO":
+ro-RO:
   hello: Salutare lume
   select_language: Vă rugăm selectaţi limba dvs
   computer_science: Informatică
   computer_science_edweek: Săptămâna Informaticii
   csedweek_dates: 8-14 decembrie 2014
-  csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white;
-    text-decoration:underline; font-weight:bold"> Ora de cod</a>. Chemând toți profesorii
-    şi organizatorii, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold"> planificați-vă Ora de cod</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400"> Sunteți profesor de informatică ? Vedeți alte resurse
-    CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>Încercaţi o</h1><h2>Ora de cod</h2><h3># servit</h3>
+  csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Ora de cod</a>. Chemând toți profesorii şi organizatorii, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planificați-vă Ora de cod</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Sunteți profesor de informatică ? Vedeți alte resurse CSEdWeek</a>'
+  n_have_learned_an_hoc: '<h1>Încercaţi o</h1><h2>Ora de cod</h2><h3># servit</h3>'
   anybody_can_learn: Oricine poate învăța.
   learn_now: Învaţă Acum
-  petition_message: Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea
-    de a învăța tehnologia computerelor
-  petition_sign_message: 'Dacă ești de acord, semnează-ți numele. Alătură-te altora
-    #.'
+  petition_message: Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea de a învăța tehnologia computerelor
+  petition_sign_message: 'Dacă ești de acord, semnează-ți numele. Alătură-te altora #.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Nume
   email: Email
   zipcode: Cod poştal sau ţară
   submit: Trimite
   twentyhours_heading: Încearcă Cursul nostru de Introducere în Informatică
-  twentyhours_text: Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica
-    de bază și conceptele programării în cadrul cursului următor.
-  hoc2014_heading: Alăturaţi-vă <a href="http://hourofcode.com"> Orei de cod</a> <br/>
-    8-14 decembrie, 2014 <br/>
+  twentyhours_text: Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica de bază și conceptele programării în cadrul cursului următor.
+  hoc2014_heading: 'Alăturaţi-vă <a href="http://hourofcode.com"> Orei de cod</a> <br/> 8-14 decembrie, 2014 <br/>'
   hoc2014_students: Elevi
   hoc2014_try: Încercați
   hoc2014_teachers: Profesori
   hoc2014_host: Găzduiți
   hoc2014_everyone: Toată lumea
-  hoc2014_support: "Susțineți &#x25BE;"
+  hoc2014_support: 'Susțineți &#x25BE;'
   hoc2014_whatishoc: Ce este Ora de Cod?
   twentyhours_trynow: Încearcă acum
   california_heading: Cere şcolii tale să te învețe tehnologia computerelor
-  california_text: Orice profesor poate preda <a href='http://studio.code.org/'>cursuri
-    gratuite</a>.  Orice şcoală primară poate <a href='http://code.org/educate/k5'>preda
-    informatică</a>. Cere liceelor să intre în < o href = "http://code.org/educate/districts">parteneriat
-    cu noi</a>.
+  california_text: |-
+    Orice profesor poate preda <a href='http://studio.code.org/'>cursuri gratuite</a>.  Orice şcoală primară poate <a href='http://code.org/educate/k5'>preda informatică</a>. Cere liceelor să intre în < o href = "http://code.org/educate/districts">parteneriat cu noi</a>.
   california_button: Află mai mult
-  flappy_heading: La mulți "Flappy" ani, Code.org
-  flappy_text: Code.org tocmai a împlinit 1 an.<br/><br/> Sărbatorește cu noi prin
-    crearea propriului tău joc customizat <b>Flappy</b>. Codează-ți propriile reguli
-    și apoi distribuie în cercul tău de prieteni!
+  flappy_heading: 'La mulți "Flappy" ani, Code.org'
+  flappy_text: 'Code.org tocmai a împlinit 1 an.<br/><br/> Sărbatorește cu noi prin crearea propriului tău joc customizat <b>Flappy</b>. Codează-ți propriile reguli și apoi distribuie în cercul tău de prieteni!'
   view_english_site: Vezi site-ul englez
   non_english_tutorials: 'Tutoriale traduse în mai multe limbi:'
   write_your_first_program: Scrie primul tău program de calculator
-  learn_cs_concepts: Învață conceptele de bază ale Informaticii cu programare drag
-    şi drop. Acesta este un tutorial asemănător unui joc, cu prezentări video semnate
-    de Bill Gates, Mark Zuckerberg, Angry Birds şi Plants vs Zombies. Învață despre
-    repetare-bucle, afirmații dacă-atunci şi algoritmi de bază.
+  learn_cs_concepts: Învață conceptele de bază ale Informaticii cu programare drag şi drop. Acesta este un tutorial asemănător unui joc, cu prezentări video semnate de Bill Gates, Mark Zuckerberg, Angry Birds şi Plants vs Zombies. Învață despre repetare-bucle, afirmații dacă-atunci şi algoritmi de bază.
   all_ages: Toate vârstele
   beginner: Începător
   n_participants: '# (de) participanți'
@@ -62,20 +46,13 @@
   congratulations_on_completing_hoc: Felicitări pentru finalizarea unei Ore de Cod
   get_a_certificate_of_achievement: Obţine un certificat de realizare
   enter_valid_email: Te rugăm să introduci o adresă de email validă
-  get_a_certificate_message: Îți vom trimite un certificat şi informaţii despre cum
-    să <a href='/learn/beyond'> Înveți peste O Oră</a>
-  get_a_certificate_message_after: Faceţi clic pe certificare să descărcaţi sau să
-    se tipăriți. Acum, continuați cu <a href='http://studio.code.org'> alte cursuri</a>
-    ale noastre sau vedeți mai multe opţiuni la <a href='/learn/beyond'> Învață mai
-    mult de o oră</a>.
+  get_a_certificate_message: "Îți vom trimite un certificat şi informaţii despre cum să <a href='/learn/beyond'> Înveți peste O Oră</a>"
+  get_a_certificate_message_after: "Faceţi clic pe certificare să descărcaţi sau să se tipăriți. Acum, continuați cu <a href='http://studio.code.org'> alte cursuri</a> ale noastre sau vedeți mai multe opţiuni la <a href='/learn/beyond'> Învață mai mult de o oră</a>."
   thanks_for_submitting: Mulţumim pentru transmitere!
-  if_you_enjoyed: Dacă ți-a făcut plăcere să înveți, sugerează-le și prietenilor tăi
-    să încerce acest lucru. Vrem ca toată lumea să învețe.
+  if_you_enjoyed: Dacă ți-a făcut plăcere să înveți, sugerează-le și prietenilor tăi să încerce acest lucru. Vrem ca toată lumea să învețe.
   personalize_certificate: Personalizează-ți certificatul
   share_achievement: Distribuie realizarea personală
-  beyond_hour_message: Continuă cu <a href='http://studio.code.org'>celelalte cursuri</a>
-    ale noastre, sau vezi mai multe opţiuni pentru a <a href='/learn/beyond'>Învăţa
-    dincolo de O Oră</a>.
+  beyond_hour_message: "Continuă cu <a href='http://studio.code.org'>celelalte cursuri</a> ale noastre, sau vezi mai multe opţiuni pentru a <a href='/learn/beyond'>Învăţa dincolo de O Oră</a>."
   leaderboards_for_hoc: Clasamentele pentru Ora de Cod.
   support_url: http://support.code.org/
   country: Ţară
@@ -109,15 +86,13 @@
   privacy_practices_children: Consultaţi practicile de confidenţialitate pentru copii
   petition_thankyou: Îți mulțumim pentru semnarea petiției
   continue_learning_header: Continuă să înveți peste O Oră
-  continue_learning_body: Există o mulţime de opţiuni.  Poţi învăța online, sau la
-    o şcoală locală, sau în tabăra de vară.
+  continue_learning_body: 'Există o mulţime de opţiuni.  Poţi învăța online, sau la o şcoală locală, sau în tabăra de vară.'
   learn_next_level: Continua cu nivelul următor
   learn_online: Încearcă alte cursuri online
   learn_classes: Găsește clase local
   hoc_is_here: '#OraDeCod este aici - Hai să vezi despre ce e vorba! @codeorg'
   just_did_hoc: 'Tocmai am făcut #OraDeCod - Hai să vezi despre ce e vorba! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Învață o Oră de Cod
   beyond_hoc: Peste de O Oră
   what_gender: Ce gen sexual ai?
@@ -125,23 +100,19 @@
   boy: Băiat
   help_recruit_coders: Ajută-ne să recrutăm mai mulți programatori la echipa ta!
   help_recruit: Ajută-ne să recrutăm mai mulți programatori!
-  lines_of_code: PESTE <b># LINII DE COD</b> SCRISE PÂNĂ ÎN PREZENT.
-  lines_of_code_alt: <b>#</b> LINII DE COD SCRISE DE STUDENȚI
+  lines_of_code: 'PESTE <b># LINII DE COD</b> SCRISE PÂNĂ ÎN PREZENT.'
+  lines_of_code_alt: '<b>#</b> LINII DE COD SCRISE DE STUDENȚI'
   who_has_done_hoc: 'Cine a făcut #OraDeCod? @codeorg'
   hoc_leaderboards: Clasamentele Orei de Cod
-  students_and_lines: '%{students} studenți au făcut Ora de Cod și au scris %{lines}
-    de linii de cod.'
+  students_and_lines: '%{students} studenți au făcut Ora de Cod și au scris %{lines} de linii de cod.'
   start_hoc: Începe Ora de Cod acum
   contact_form_topic_press: Presă/media (interviu sau angajamentul vorbit)
-  stats_nina: '"Fiecare zi a generat aceleaşi rezultate&mdash; 100% pasiune."- Nina
-    Nichols Peery, Profesor'
-  stats_student: '"Ştiam că acest lucru a fost o șansă <b>o dată în viața</b>."- Mariana
-    Alzate, elev de clasa a cincea'
-  stats_michael: Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați
-    să învețe."- Michael Clark, Profesor
-  studiobar_title: Explorează Studio-ul Code
+  stats_nina: '"Fiecare zi a generat aceleaşi rezultate&mdash; 100% pasiune."- Nina Nichols Peery, Profesor'
+  stats_student: '"Ştiam că acest lucru a fost o șansă <b>o dată în viața</b>."- Mariana Alzate, elev de clasa a cincea'
+  stats_michael: 'Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați să învețe."- Michael Clark, Profesor'
+  studiobar_title: "Explorează <a href='http://studio.code.org'>Studio-ul Code</a>"
   studiobar_elementary_title: Cursuri elementare
-  studiobar_elementary_body: Cele trei cursuri noi pentru K&#8209;5
+  studiobar_elementary_body: 'Cele trei cursuri noi pentru K&#8209;5'
   studiobar_hoc_title: Ora de Programare
   studiobar_hoc_body: Învaţă să programezi cu Angry Birds
   studiobar_flappy_title: Codul Flappy
@@ -154,20 +125,51 @@
   studiobar_donate_body: Un copil învaţă pentru fiecare dolar donat
   studiobar_shop_title: Magazin
   studiobar_shop_body: Sparge stereotipurile. Poartă logo-ul nostru cu mândrie.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo; 
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo; 
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo; 
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo; 
   homepage_slot_text_hoc: Ora de Programare
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -176,10 +178,10 @@
   homepage_slot_text_shop: Magazin
   homepage_slot_text_flappy: Codul Flappy
   homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: '[șir gol]'
+  homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   homepage_slot_text_title_hoc: Oră de Cod
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Încearcă Ora de Cod
@@ -218,19 +220,16 @@
   class_submission_in_school: În şcoală
   class_submission_in_school_daily_programming_course: Curs zilnic de programare
   class_submission_in_school_ap_computer_science: AP ştiinţa calculatoarelor
-  class_submission_in_school_full_university_cs_curriculum: Curriculum-ul universitar
-    CS complet
+  class_submission_in_school_full_university_cs_curriculum: Curriculum-ul universitar CS complet
   class_submission_in_school_robotics_club: Club de robotică
-  class_submission_in_school_programming_integrated_in_other_classes: Programarea
-    integrată în alte cursuri (matematică, știinte, etc.)
+  class_submission_in_school_programming_integrated_in_other_classes: Programarea integrată în alte cursuri (matematică, știinte, etc.)
   class_submission_in_school_summer_school_cs_program: Programul şcolii de vară CS
   class_submission_in_school_exploring_computer_science: Explorând Informatica
   class_submission_in_school_other: Altele în şcoală
   class_submission_out_of_school: În afara şcolii
   class_submission_out_of_school_summer_camp: Tabară de vară
   class_submission_out_of_school_afterschool_program: Program Afterschool
-  class_submission_out_of_school_all-day_workshop: Atelier de lucru pe tot parcursul
-    zilei (până la 1 săptămână)
+  class_submission_out_of_school_all-day_workshop: Atelier de lucru pe tot parcursul zilei (până la 1 săptămână)
   class_submission_out_of_school_multi-week_workshop: Atelier pe mai multe săptămâni
   class_submission_out_of_school_other: Alta din afara școlii
   class_submission_online: Online
@@ -251,46 +250,33 @@
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ore pe săptămână
   volunteer_engineer_submission_commitment_more: Mai mult
   volunteer_engineer_submission_location_flexibility_onsite: Local, la o şcoală
-  volunteer_engineer_submission_location_flexibility_remote: Mentorat la distanță
-    (profesori sau elevi)
-  volunteer_engineer_submission_location_flexibility_curriculum: Dispus să ajut la
-    proiecte de tip curriculum open-source
+  volunteer_engineer_submission_location_flexibility_remote: Mentorat la distanță (profesori sau elevi)
+  volunteer_engineer_submission_location_flexibility_curriculum: Dispus să ajut la proiecte de tip curriculum open-source
   volunteer_engineer_submission_experience_unspecified: Nespecificat
-  volunteer_engineer_submission_experience_university_student_or_researcher: Momentan
-    student (sau cercetător)
+  volunteer_engineer_submission_experience_university_student_or_researcher: Momentan student (sau cercetător)
   volunteer_engineer_submission_experience_software_professional: Profesionist software
   petition_age: Vârsta
   dashboard_landing_title: Pagina de Start a Profesorilor
-  dashboard_landing_welcome: Bine aţi venit la noul şi îmbunătăţitul tablou de bord
-    al profesorilor.
+  dashboard_landing_welcome: Bine aţi venit la noul şi îmbunătăţitul tablou de bord al profesorilor.
   dashboard_landing_video: Urmăreşte acest video
   dashboard_landing_watch_video: pentru un tur cu noile calităţi!
   dashboard_landing_view_as_student: Vizionează acest site ca elev
   dashboard_landing_students_title: Studenţii/elevii dumneavoastră
   dashboard_landing_students_manage: Vizualizați și gestionați-vă elevii
-  dashboard_landing_news_title: Resurse pentru educatorii claselor 1-5 (numai în limba
-    engleză)
-  dashboard_landing_new_beta: Nou! Încercaţi cursurile noastre beta pentru elevi din
-    clasele 1-5.
-  dashboard_landing_new_k5courses: Nou! Încercaţi cursurile noastre pentru elevi din
-    clasele 1-5.
+  dashboard_landing_news_title: Resurse pentru educatorii claselor 1-5 (numai în limba engleză)
+  dashboard_landing_new_beta: Nou! Încercaţi cursurile noastre beta pentru elevi din clasele 1-5.
+  dashboard_landing_new_k5courses: Nou! Încercaţi cursurile noastre pentru elevi din clasele 1-5.
   dashboard_landing_useful_links: Alte link-uri utile (numai în limba engleză)
-  dashboard_landing_office_hours: Puneți o întrebare în persoană! Vizitaţi video orele
-    noastre de birou lunare.
-  dashboard_landing_print_certificates: Tipărește certificate pentru studenţii care
-    termină acest curs
-  dashboard_landing_educator_blog: Citeşte despre ştiri şi actualizări referitoare
-    la materialele noastre pe Blog-ul nostru de Educator
-  dashboard_landing_smart_hints: Ajută-ne să adăugăm sugestii inteligente pentru tutorialele
-    Code.org
+  dashboard_landing_office_hours: Puneți o întrebare în persoană! Vizitaţi video orele noastre de birou lunare.
+  dashboard_landing_print_certificates: Tipărește certificate pentru studenţii care termină acest curs
+  dashboard_landing_educator_blog: Citeşte despre ştiri şi actualizări referitoare la materialele noastre pe Blog-ul nostru de Educator
+  dashboard_landing_smart_hints: Ajută-ne să adăugăm sugestii inteligente pentru tutorialele Code.org
   dashboard_landing_video_player: Încearcă noul nostru video player la şcoala ta
   dashboard_landing_progress_title: Progresul clasei principale
-  dashboard_landing_progress_biggest: Acesta este progresul pentru cea mai mare secţiune
-    a dvs.
-  dashboard_landing_view_progress: Vedeți progresul pentru %{biggest_section}
+  dashboard_landing_progress_biggest: Acesta este progresul pentru cea mai mare secţiune a dvs.
+  dashboard_landing_view_progress: 'Vedeți progresul pentru %{biggest_section}'
   dashboard_landing_available_title: Cursuri disponibile
-  dashboard_landing_available_courses: Aici sunt cursurile disponibile în prezent
-    pentru dvs. şi elevii dumneavoastră.
+  dashboard_landing_available_courses: Aici sunt cursurile disponibile în prezent pentru dvs. şi elevii dumneavoastră.
   dashboard_landing_loading: Se încarcă...
   dashboard_action_edit: Editează
   dashboard_action_save: Salvează
@@ -310,7 +296,7 @@
   dashboard_navigation_section_lesson_plans: Planuri de lecţie şi resurse
   dashboard_navigation_section_community: Ajutor şi comunitate
   dashboard_navigation_section_pd: Dezvoltare profesională
-  dashboard_navigation_section_speakers: Informatică <br/> invitaţi
+  dashboard_navigation_section_speakers: 'Informatică <br/> invitaţi'
   dashboard_navigation_all_sections: Conturile elevilor şi progresul lor
   dashboard_navigation_view_progress: Vedeți progresele
   dashboard_navigation_add_students: Adăugați elevi
@@ -320,9 +306,7 @@
   dashboard_navigation_section: 'Sectiunea: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
   dashboard_sections_new_section: Secţiune nouă
-  dashboard_sections_jumbotron_instruction: Creaţi secţiuni noi şi adăugați-le elevi.
-    Secțiunile vă ajută să organizaţi elevii în grupuri mai mici, astfel încât să
-    puteţi urmări progresul lor şi să le gestionați conturile.
+  dashboard_sections_jumbotron_instruction: Creaţi secţiuni noi şi adăugați-le elevi. Secțiunile vă ajută să organizaţi elevii în grupuri mai mici, astfel încât să puteţi urmări progresul lor şi să le gestionați conturile.
   dashboard_sections_table_section: Secţiune
   dashboard_sections_table_secret: Tip de conectare
   dashboard_sections_table_grade: Notă
@@ -330,26 +314,16 @@
   dashboard_sections_table_students: Elevi
   dashboard_sections_table_code: Cod de Secţiune
   dashboard_sections_name: Numele secţiunii
-  dashboard_sections_choose_secret: Dacă doriţi să oferiți conturi elevilor dumneavoastră,
-    selectaţi un tip secret de <b>cuvânt</b> sau <b>imagine</b> pentru acea secțiune.
-  dashboard_sections_secret_word: Un <b>cuvânt</b> vă permite să setaţi un cuvânt
-    secret pentru fiecare student.
-  dashboard_sections_secret_picture: O <b>imagine</b> vă permite să setaţi o poză
-    secretă pentru fiecare elev, potrivit pentru elevii mai mici, care nu pot încă
-    să tasteze.
-  dashboard_sections_secret_none: Dacă doriţi ca elevii dumneavoastră să își gestioneze
-    propriile conturi, inclusiv alegerea propriile parole, alegeţi ca tip secret <b>nici
-    unul</b>.
-  dashboard_sections_print_secrets: Atunci puteți tipări o foaie de carduri care conţin
-    informaţii despre cont, pentru a fi distribuite elevilor individual.
+  dashboard_sections_choose_secret: 'Dacă doriţi să oferiți conturi elevilor dumneavoastră, selectaţi un tip secret de <b>cuvânt</b> sau <b>imagine</b> pentru acea secțiune.'
+  dashboard_sections_secret_word: 'Un <b>cuvânt</b> vă permite să setaţi un cuvânt secret pentru fiecare student.'
+  dashboard_sections_secret_picture: 'O <b>imagine</b> vă permite să setaţi o poză secretă pentru fiecare elev, potrivit pentru elevii mai mici, care nu pot încă să tasteze.'
+  dashboard_sections_secret_none: 'Dacă doriţi ca elevii dumneavoastră să își gestioneze propriile conturi, inclusiv alegerea propriile parole, alegeţi ca tip secret <b>nici unul</b>.'
+  dashboard_sections_print_secrets: Atunci puteți tipări o foaie de carduri care conţin informaţii despre cont, pentru a fi distribuite elevilor individual.
   dashboard_sections_switch_section: 'Comutare secţiune:'
   dashboard_students_add_student: Adăugare elev
   dashboard_students_add_students: Adăugare mai mulți elevi
-  dashboard_students_add_multiple: 'Tastați sau lipiți numele elevilor dvs., câte
-    unul pe linie:'
-  dashboard_students_new_section: Aţi creat o nouă secţiune! Acum, adăugaţi elevii
-    dumneavoastră utilizând butoanele <b>Adăugare elev</b> şi <b>Adăugare mai mulți
-    elevi</b> de mai sus.
+  dashboard_students_add_multiple: 'Tastați sau lipiți numele elevilor dvs., câte unul pe linie:'
+  dashboard_students_new_section: 'Aţi creat o nouă secţiune! Acum, adăugaţi elevii dumneavoastră utilizând butoanele <b>Adăugare elev</b> şi <b>Adăugare mai mulți elevi</b> de mai sus.'
   dashboard_students_placeholder_name: Numele elevului
   dashboard_students_name: Nume
   dashboard_students_progress: Progres
@@ -367,30 +341,17 @@
   dashboard_students_auto_generated: Auto-generat
   dashboard_students_reset_secret: Resetare secret
   dashboard_students_reset_password: Resetare parolă
-  dashboard_students_share_section: 'Partajați această pagină pentru secțiunea de
-    logare cu elevi dvs.:'
-  dashboard_students_print_info: Tipăriți cardurile cu informațiile de logare ale
-    elevilor dvs.
+  dashboard_students_share_section: 'Partajați această pagină pentru secțiunea de logare cu elevi dvs.:'
+  dashboard_students_print_info: Tipăriți cardurile cu informațiile de logare ale elevilor dvs.
   dashboard_students_secret_picture: Imagine secretă
-  dashboard_students_reset_picture: Puteți reseta imaginea secretă pentru un elev
-    în orice moment selectând <b>Afișare secret</b> și apoi <b>Resetare secret</b>.
-    O nouă imagine secretă va fi generată pentru ca elevul să o folosească pentru
-    conectare.
+  dashboard_students_reset_picture: 'Puteți reseta imaginea secretă pentru un elev în orice moment selectând <b>Afișare secret</b> și apoi <b>Resetare secret</b>. O nouă imagine secretă va fi generată pentru ca elevul să o folosească pentru conectare.'
   dashboard_students_secret_word: Cuvânt secret
-  dashboard_students_reset_word: 'Puteți reseta cuvintele secrete ale unui elev în
-    orice moment selectând <b>Afișare secret</b> și apoi <b>Resetare secret</b>. Va
-    fi generată o nouă pereche de cuvinte secrete pentru ca elevul să o folosească
-    atunci când se conectează. '
-  dashboard_students_join_link: Spuneți-le elevilor să își creeze propriile conturi
-    și să se alăture secțiunii dvs. la
-  dashboard_students_no_email: Dacă elevii dvs. nu au adrese de e-mail sau dacă doriți
-    să creaţi conturi pentru ei, schimbați tipul secret al acestei secţiuni la <b>cuvânt</b>
-    sau <b>imagine</b>.
+  dashboard_students_reset_word: 'Puteți reseta cuvintele secrete ale unui elev în orice moment selectând <b>Afișare secret</b> și apoi <b>Resetare secret</b>. Va fi generată o nouă pereche de cuvinte secrete pentru ca elevul să o folosească atunci când se conectează. '
+  dashboard_students_join_link: Spuneți-le elevilor să își creeze propriile conturi și să se alăture secțiunii dvs. la
+  dashboard_students_no_email: 'Dacă elevii dvs. nu au adrese de e-mail sau dacă doriți să creaţi conturi pentru ei, schimbați tipul secret al acestei secţiuni la <b>cuvânt</b> sau <b>imagine</b>.'
   dashboard_students_print_page: Tipărirea aceste pagini
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
-    faceţi clic aici</a> pentru documentația noastră de confidenţialitate, care poate
-    fi partajată sau tipărită pentru elevii dumneavoastră.
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> faceţi clic aici</a> pentru documentația noastră de confidenţialitate, care poate fi partajată sau tipărită pentru elevii dumneavoastră.'
   dashboard_curriculum_overview: Prezentare generală Curriculum pentru clasele 1-5
   dashboard_view_all_lesson_plans: Vezi toate planurile de lecţie
   dashboard_course1: 'Curs 1:'
@@ -418,8 +379,7 @@
   dashboard_progress_completed_too_many_blocks: finalizat, prea multe blocuri
   dashboard_progress_completed_perfect: finalizat, perfect
   dashboard_progress_furthest_level_attempted: cel mai îndepărtat nivel încercat
-  stats_hoc_2013_heading: 'Statistici incredibile la evenimentul Hour of Code de anul
-    trecut. Într-o singură săptămână:'
+  stats_hoc_2013_heading: 'Statistici incredibile la evenimentul Hour of Code de anul trecut. Într-o singură săptămână:'
   stats_hoc_2013_image_alt: Statistici Hour of Code (Ora de Programare) din 2013
   dashboard_teacher: Profesor
   dashboard_student: elev
@@ -429,30 +389,23 @@
   dashboard_sections_picture_account_creation: O imagine atribuită de code.org
   dashboard_sections_word_account_creation: Un cuvânt simplu atribuit de Code.org
   dashboard_sections_sign_in_question: Unde se conectează elevii?
-  dashboard_sections_sign_in_unique: Pagină web unică listată în tab-ul ”Gestionare
-    elevi”
-  dashboard_sections_sign_in_main: http://code.org şi faceţi clic pe "Conectare"
-  dashboard_sections_password_account_creation: Text pentru creare parolă de către
-    elev
-  dashboard_sections_login_type_explanation: Acest tabel ajută la explicarea tipurilor
-    de conectare, <b>imagine, cuvant, sau e-mail</b>, ca să știți pe care veţi dori
-    să-l alegeţi pentru o secţiune.
+  dashboard_sections_sign_in_unique: Pagină web unică listată în tab-ul ”Gestionare elevi”
+  dashboard_sections_sign_in_main: 'http://code.org şi faceţi clic pe "Conectare"'
+  dashboard_sections_password_account_creation: Text pentru creare parolă de către elev
+  dashboard_sections_login_type_explanation: 'Acest tabel ajută la explicarea tipurilor de conectare, <b>imagine, cuvant, sau e-mail</b>, ca să știți pe care veţi dori să-l alegeţi pentru o secţiune.'
   dashboard_faq: Întrebări frecvente
   code_hoc_coming: 'Ora de cod este aici: 8-14 decembrie!'
-  code_sign_up: Înscrieţi-vă pentru a participa în timpul CS Education Week (”Săptămâna
-    Informaticii în Educaţie”)
+  code_sign_up: Înscrieţi-vă pentru a participa în timpul CS Education Week (”Săptămâna Informaticii în Educaţie”)
   learn_more: Află mai mult
   hoc2014_try_new_tutorials: Încercați noile noastre tutoriale Ora de Cod
-  hoc2014_try_new_tutorial: Încercați noul nostru tutorial Ora de cod în versiune
-    beta
+  hoc2014_try_new_tutorial: Încercați noul nostru tutorial Ora de cod în versiune beta
   hoc2014_try_scrat: Păsări Supărate, PvZ şi Scrat
   hoc2014_try_frozen: Artist cu Anna și Elsa, din Frozen
   carousel_heading_international: Tutoriale în limba ta
   carousel_heading_domestic: Tutoriale disponibile în engleză
   carousel_heading_beginners: Tutoriale pentru începători
   carousel_heading_javascript: Tutoriale pentru JavaScript
-  carousel_heading_unplugged: Nu ai device sau internet? Încearca tehnologia computerelor
-    'deconectate'
+  carousel_heading_unplugged: "Nu ai device sau internet? Încearca tehnologia computerelor 'deconectate'"
   carousel_heading_devices: Aplicații-tutorial pentru orice device
   carousel_heading_languages: Alte limbaje de programare
   carousel_heading_apps_games: Creează-ți propriile aplicații
@@ -469,9 +422,7 @@
   previous: Anterior
   next: Următorul
   older_systems: Tutoriale care funcționează pe sisteme mai vechi
-  older_systems_subheading: Acestea ar trebui să funcționeze pe browsere web mai vechi.
-    Pentru a avea acces la toate tutorialele, upgradați pana la <a href="http://browsehappy.com/"
-    target="_blank">modern Web browser</a>.
+  older_systems_subheading: 'Acestea ar trebui să funcționeze pe browsere web mai vechi. Pentru a avea acces la toate tutorialele, upgradați pana la <a href="http://browsehappy.com/" target="_blank">modern Web browser</a>.'
   mobile_devices: Tutoriale pentru device-uri mobile
   frozen_name: Codați cu Anna și Elsa
   codeorg_name: Scrie primul tău program de calculator
@@ -500,10 +451,10 @@
   quorum_name: Programare accesibilă (cu suport pentru cititorul de ecran)
   codespark_name: Foos (bun venit preșcolarilor)
   kodable_name: Kodable (bun venit preșcolari)
-  tynkerapp_name: Tynker - pe tablete
+  tynkerapp_name: 'Tynker - pe tablete'
   robomindnl_name: Programează un robot virtual
   flappy_name: Să facem un joc cu Flappy
-  bitsbox_name: Bitsbox - creează un joc
+  bitsbox_name: 'Bitsbox - creează un joc'
   makegameswithus_name: Construiește un joc pentru iPhone în browser
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
@@ -602,198 +553,77 @@
   khanhe_shortdescription: Învață sa desenezi în JavaScript
   khanfr_shortdescription: Învață sa desenezi în JavaScript
   khanpl_shortdescription: Învață sa desenezi în JavaScript
-  tynker_shortdescription: Invață să codezi rezolvând puzzle-uri distractive și creându-ți
-    propriile jocuri pe mobil.
+  tynker_shortdescription: Invață să codezi rezolvând puzzle-uri distractive și creându-ți propriile jocuri pe mobil.
   scratch_shortdescription: Creează jocuri interactive, povestiri şi animaţii.
-  lightbot_shortdescription: Programează cu Lightbot pentru a rezolva puzzle-uri folosind
-    proceduri și repetiții!
+  lightbot_shortdescription: Programează cu Lightbot pentru a rezolva puzzle-uri folosind proceduri și repetiții!
   thinkersmith_shortdescription: Tutorial pentru grupuri fără computere sau dispozitive
   condcards_shortdescription: Invață algoritmi cu un pachet de carti
   lightbotintl_shortdescription: Un joc pentru învățarea conceptelor programării
-  codehs_shortdescription: Începe să codezi cu Câinele Karel, o introducere distractivă
-    și vizuală în programare!
+  codehs_shortdescription: Începe să codezi cu Câinele Karel, o introducere distractivă și vizuală în programare!
   codecademy_shortdescription: Învață programare JavaScript într-un browser web
-  codecombat_shortdescription: Învinge căpcăuni pentru a învăţa Python sau JavaScript
-    în acest joc epic de programare!
-  codemonkey_shortdescription: Program pentru elevii - o maimuță prinde bananele.
+  codecombat_shortdescription: Învinge căpcăuni pentru a învăţa Python sau JavaScript în acest joc epic de programare!
+  codemonkey_shortdescription: 'Program pentru elevii - o maimuță prinde bananele.'
   codeavengers_shortdescription: Învață programare JavaScript într-un browser web
   processing_shortdescription: Un tutorial de o oră pentru programare Processing
   robomind_shortdescription: Programează pentru un robot virtual
-  groklearning_shortdescription: Învaț-o pe Eliza Chatbot (robotul vorbitor) să-ți
-    păcălească prietenii ca să creadă că ea este umană!
-  quorum_shortdescription: Alăturaţi-vă lui Mary pentru un tur cu ghid pe măsură ce
-    ea învaţă limbajul de programare Quorum.
-  codespark_shortdescription: Foos este un joc distractiv, prietenos cu copiii care
-    îi învaţă despre programare.
-  kodable_shortdescription: Un joc distractiv pentru iPad, pentru învățarea conceptelor
-    de bază în programare
-  tynkerapp_shortdescription: 'Înveți distractiv să programezi rezolvând puzzle-uri
-    de codificare. '
+  groklearning_shortdescription: Învaț-o pe Eliza Chatbot (robotul vorbitor) să-ți păcălească prietenii ca să creadă că ea este umană!
+  quorum_shortdescription: Alăturaţi-vă lui Mary pentru un tur cu ghid pe măsură ce ea învaţă limbajul de programare Quorum.
+  codespark_shortdescription: Foos este un joc distractiv, prietenos cu copiii care îi învaţă despre programare.
+  kodable_shortdescription: Un joc distractiv pentru iPad, pentru învățarea conceptelor de bază în programare
+  tynkerapp_shortdescription: 'Înveți distractiv să programezi rezolvând puzzle-uri de codificare. '
   robomindnl_shortdescription: Programează pentru un robot virtual
-  flappy_shortdescription: Creează-ți propriul joc - Flappy Bird, shark sau Submarine
-  bitsbox_shortdescription: Scrie o serie de aplicați cu care sa te joci și sa le
-    dai share, folosind programul JavaScript.
-  makegameswithus_shortdescription: Fă un joc pentru iPhone! Studiază scriind cod
-    ca să îți înveți monstrul să facă noi mișcări!
-  touchdevelop_shortdescription: 'Rezolva puzzle-uri, crează jocuri, şi învaţă să
-    codezi, toate pe telefonul tău. '
+  flappy_shortdescription: 'Creează-ți propriul joc - Flappy Bird, shark sau Submarine'
+  bitsbox_shortdescription: Scrie o serie de aplicați cu care sa te joci și sa le dai share, folosind programul JavaScript.
+  makegameswithus_shortdescription: Fă un joc pentru iPhone! Studiază scriind cod ca să îți înveți monstrul să facă noi mișcări!
+  touchdevelop_shortdescription: 'Rezolva puzzle-uri, crează jocuri, şi învaţă să codezi, toate pe telefonul tău. '
   appinventor_shortdescription: Construiește-ți propria aplicație! (Doar pentru Android)
   blockly_shortdescription: Descarcă arhiva ZIP ca să înveți offline
-  thinkersmith2_shortdescription: Învață cum folosesc computerele 1 și 0 pentru a
-    reprezenta informația
+  thinkersmith2_shortdescription: Învață cum folosesc computerele 1 și 0 pentru a reprezenta informația
   kodableunplugged_shortdescription: Un exercițiu distractiv, unplugged
   projguts_shortdescription: Încercaţi modelare şi simulare folosind piatră/hârtie/foarfece
   hourofcode_shortdescription: Substituent pentru noul code.org/hoc
-  frozen_shortdescription: Să folosim cod pentru a ne alătura Annei şi Elsei în explorarea
-    magiei şi frumuseţii de gheaţă.
+  frozen_shortdescription: Să folosim cod pentru a ne alătura Annei şi Elsei în explorarea magiei şi frumuseţii de gheaţă.
   playlab_shortdescription: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
-  codeorg_longdescription: Învață conceptele de bază ale programării cu o metodă simplă,
-    distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține
-    clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies.
-    Învață algoritmi de bază, repeat-loops, conditionals. Disponibil în 34 de limbi.
-  codeintl_longdescription: Învață conceptele de bază ale programării cu o metodă
-    simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat
-    ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
-    Zombies. Învață algoritmi de bază, repeat-loops, conditionals. Disponibil în 34
-    de limbi.
-  thinkersmithspanish_longdescription: Folosind un limbaj fix "Vocabularul Robotului",
-    elevii vor căuta mijloace prin care care sa-și ghideze colegii să ducă la bun
-    sfârșit anumite acțiuni, fără a le discuta în prealabil. Această lecție învață
-    copiii legătura dintre simboluri și acțiuni, precum și deprinderea atât de necesară
-    de a depana.
-  khan_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
-    programând. Fă asta singur sau alături de clasă.
-  khanes_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
-    programând. Fă asta singur sau alături de clasă.
-  khanpt_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
-    programând. Fă asta singur sau alături de clasă.
-  khanhe_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
-    programând. Fă asta singur sau alături de clasă.
-  khanfr_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
-    programând. Fă asta singur sau alături de clasă.
-  khanpl_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
-    programând. Fă asta singur sau alături de clasă.
-  tynker_longdescription: Creați-vă propriile jocuri și partajati-le cu prietenii!
-    Rezolvați puzzle-uri distractive de cod și învățați conceptele programării pe
-    fiecare nivel. Personalizați jocurile cu personaje animate, niveluri multiple
-    și recuzită bogată. Faceți jocurile să pară realiste folosind fizica. Vedeți codul
-    în mod vizual sau ca JavaScript. Luați-vă jocurile pe iPads sau tablete Android.
-    Peste o sută de activități distractive din care să alegeți!
-  scratch_longdescription: Cu Scratch, puteți crea propriile jocuri interactive, povești,
-    animații &mdash; și puteți să le partajați cu prietenii. Începeți cu animarea
-    propriului nume, crearea de felicitări de vacanță sau creând un joc pong.
-  lightbot_longdescription: Ghidați-l pe Lightbot să aprindă toate dalele albastre!
-    Lightbot este un joc puzzle care folosește mecanismele programării jocurilor pentru
-    a-i face pe jucători să câștige înțelegere practică despre bazele programării.
-    Învață să scrie secvențe de instrucțiuni, să scrie proceduri, să folosească repetiții
-    pentru a rezolva diverse niveluri. Este potrivit pentru toate vârstele.
-  thinkersmith_longdescription: Folosind un "Robot Vocabulary" predefinit elevii vor
-    învăța să se ghideze în rezolvarea unor taskuri predefinite fară a le discuta
-    prealabil. Această lecție, învață copiii conexiunea dintre simboluri si acțiuni,
-    alături de abilitatea testării. "My Robotic Friends" funcționează cel mai bine
-    în cadrul unui grup și conține un workbook pentru profesor, ce poate fi folosit
-    la clasă.
-  condcards_longdescription: Învățați despre algoritmi și instrucțiuni decizionale
-    în această activitate fără calculator, folosind un pachet de cărți. Elevii fac
-    această activitate în echipe și eu nevoie de un pachet de cărți pentru fiecare
-    echipă.
-  lightbotintl_longdescription: Învață bazele logice ale programării, începând de
-    la 4 ani pe iOS, Android sau browser web. Învață secvențialitatea comenzilor,
-    identificarea pattern-urilor, utilizarea procedurilor si a LOOP-urilor!
-  codehs_longdescription: A da comenzi unui calculator, ceea ce înseamnă de fapt programarea,
-    este ca și cum i-am da comenzi unui câine. Învățați să scrieți cod cu câinele
-    Karel&mdash; o introducere distractivă, accesibilă și vizuală în programare care
-    le arată începătorilor conceptele fundamentale precum instrucțiuni și funcții.
-    Tutorialul este orientat pe elevi, dar profesorii se pot conecta pentru a accesa
-    instrumentele profesorului și a urmări evoluția elevilor!
-  codecademy_longdescription: Codeacademy este o platformă interactivă. ce oferă o
-    introducere în bazele programării cu ajutorul JavaScript, ce se pretează studiului
-    individual fiind utilizată de zeci de milioane de elevi din întreaga lume. Am
-    pregatit o adevărată experiență Hour of Code cu teste si slide-uri și un proiect
-    complet pentru elevi la final.
-  codecombat_longdescription: Învinge căpcăuni pentru a învăţa Python sau JavaScript
-    în acest joc epic de programare!
-  codemonkey_longdescription: 'CodeMonkey este un joc online care învaţă programarea
-    într-un limbaj de programare real! Elevii programează o maimuţă să prindă banane,
-    în timp ce jocul devine din ce în ce mai complicat cu fiecare nivel. Ei primesc
-    scoruri în stele cu fiecare soluţie şi le pot partaja cu un singur clic. '
-  codeavengers_longdescription: Construiește în întregime un joc 2D pentru 2 jucatori,
-    cu JavaScript, în 10 pași simpli. Apoi continua studiul unor elemente de bază
-    ale programării (variabile și if statements) cât realizezi un Quiz pe care îl
-    poți share-ui prietenilor. Pe tot parcursul activității caștigă puncte și insigne,
-    concurând la ocuparea primului loc al clasamentului în clasă.
-  processing_longdescription: O introducere în programare în contextul artelor vizuale
-    utilizând limbajul de programare Processing. Lecții video scurte, prezinta exerciții
-    de programare ce conduc la realizarea unui program de desenare interactiv.
-  robomind_longdescription: Elevii învață bazele programării controlând robotul lor
-    virtual. Cursul online conține prezentări scurte, filme, teste si recomandări
-    automate/ indicii, pentru a ajuta la rezolvarea exercițiilor de programare.
-  groklearning_longdescription: Folosiți limbajul de programare Python pentru a construi
-    un robot vorbitor, numit ”Eliza”, care acționează ca un robot psihoterapeut. O
-    veți învăța pe Eliza cum să vorbească și lucrurile potrivite pe care să le spună.
-    Oare poate să-i păcălească pe prietenii voștri astfel încât aceștia să creadă
-    că este un om, nu un calculator?
-  quorum_longdescription: Acest tutorial este accesibil persoanelor cu deficiențe
-    vizuale și funcționează cu cititoare de ecran. Alăturați-vă lui Mary într-un tur
-    pe care ea îl face în laboratorul de biologie ca programator și învață limbajul
-    de programare Quorum. Acest tutorial este orientat pe elev cu exemple de activități
-    online.
-  codespark_longdescription: Foos este un mod distractiv și prietenos cu copiii de
-    a învăța despre programarea calculatoarelor. Programați personaje drăguțe să rezolve
-    puzzle-uri și aduceți la viață o lume virtuală. Jocul este fără cuvinte, așa încât
-    toată lumea poate să îl joace!
-  kodable_longdescription: Kodable este un joc pentru iPad intuitiv, ce introduce
-    copiii de peste 5 ani în bazele programarii. A avea un parinte sau profesor în
-    preajma este optim dar nu neaparat necesar.
-  tynkerapp_longdescription: Învață să programezi prin rezolvarea de puzzle-uri amuzante
-    de codare. Construiește cu ușurință jocuri și povești cu grafică tematică, kituri
-    de jocuri pentru 10+ și caractere personalizabile. Nu e necesară conexiune la
-    Internet. Poți de asemenea să îți accesezi creațiile pe web.
-  robomindnl_longdescription: Elevii învață bazele programării controlând robotul
-    lor virtual. Cursul online conține prezentări scurte, filme, teste si recomandări
-    automate/ indicii, pentru a ajuta la rezolvarea exercițiilor de programare.
-  flappy_longdescription: Folosiți programarea drag-and-drop pentru a vă construi
-    propriul joc Flappy Bird și personalizați-l așa încât să arate diferit (rechinul
-    Flappy, Moș Crăciun Flappy, orice). Adaugă-ți jocul pe telefon cu doar un clic.
-  bitsbox_longdescription: Personalizează-ți propria tableta virtuala, apoi codați
-    o serie de aplicații cu care sa va jucați și pe care sa le dați share. Tutoriale
-    simple le dau chiar și celor mai mici posibilitatea de a programa în JavaScript,
-    și cu cât sunt mai avansați cu atât vei ajunge mai departe.
-  makegameswithus_longdescription: Învățați să codați realizând un joc pentru iPhone
-    folosind un  limbaj de programare nou și prietenos cu începătorii numit Swift!
-    Creați un joc de acțiune inspirat de Pok&eacute;mon și scrieți un cod pentru a
-    vă învăța monstrul mișcări noi. Veți învăța cum să folosiți variabile, metode,
-    și obiecte pentru a vă ajuta monstrul să câștige!
-  touchdevelop_longdescription: 'Editorul touch-friendly vă va ghida în crearea de
-    artă pixel, rezolvarea puzzle urs sau a face propriul joc cu pasăre săritoare. '
-  appinventor_longdescription: Clipuri video interactive te ajută să creezi 3 aplicații
-    simple pentru tableta sau telefonul tău Android. Create pentru începători și avansați
-    deopotrivă, aceasta oră de programare te va ajuta să creezi propriile tale aplicații
-    mai repede decât crezi. Imaginează-ți cum ar fi să arăți prietenilor aplicații
-    programate de tine. Aceste activități se pretează lucrului individual dar si lecțiilor
-    la clasă.
-  blockly_longdescription: Ai un calculator fără internet sau cu internet cu viteză
-    mică? Descarcă tutorialele Blockly care sunt precursoarele tutorialelor Code.org
-    - un fișier arhivat de 3MB poate fi încărcat de pe computer sau de pe un stick
-    USB.
-  thinkersmith2_longdescription: Elevii învață despre reprezentarea și salvarea literelor
-    în sistem binar ca funcție on si off. La final elevii pot sa decodeze propriile
-    inițiale pentru a le lua acasă.
-  kodableunplugged_longdescription: Creată pentru utilizarea pe hârtie, fuzzFamily
-    Frenzy este o introducere în programare logică pentru copii de la 5 ani. Un profesor
-    ar trebui să explice jocul, apoi elevii provoacă un partener să concureze într-o
-    simplă cursă cu obstacole.
-  projguts_longdescription: Această activitate fără calculator ajută elevii să învețe
-    modelarea și simularea prin jucarea unor versiuni diferite ale jocului Piatră/Hârtie/Foarfecă
-    de către un grup de elevi și evidențierea rezultatelor ca experimente diferite
-    de modelare.
+  codeorg_longdescription: 'Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, repeat-loops, conditionals. Disponibil în 34 de limbi.'
+  codeintl_longdescription: 'Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, repeat-loops, conditionals. Disponibil în 34 de limbi.'
+  thinkersmithspanish_longdescription: 'Folosind un limbaj fix "Vocabularul Robotului", elevii vor căuta mijloace prin care care sa-și ghideze colegii să ducă la bun sfârșit anumite acțiuni, fără a le discuta în prealabil. Această lecție învață copiii legătura dintre simboluri și acțiuni, precum și deprinderea atât de necesară de a depana.'
+  khan_longdescription: Învață bazele programării JavaScript, în timp ce desenezi programând. Fă asta singur sau alături de clasă.
+  khanes_longdescription: Învață bazele programării JavaScript, în timp ce desenezi programând. Fă asta singur sau alături de clasă.
+  khanpt_longdescription: Învață bazele programării JavaScript, în timp ce desenezi programând. Fă asta singur sau alături de clasă.
+  khanhe_longdescription: Învață bazele programării JavaScript, în timp ce desenezi programând. Fă asta singur sau alături de clasă.
+  khanfr_longdescription: Învață bazele programării JavaScript, în timp ce desenezi programând. Fă asta singur sau alături de clasă.
+  khanpl_longdescription: Învață bazele programării JavaScript, în timp ce desenezi programând. Fă asta singur sau alături de clasă.
+  tynker_longdescription: Creați-vă propriile jocuri și partajati-le cu prietenii! Rezolvați puzzle-uri distractive de cod și învățați conceptele programării pe fiecare nivel. Personalizați jocurile cu personaje animate, niveluri multiple și recuzită bogată. Faceți jocurile să pară realiste folosind fizica. Vedeți codul în mod vizual sau ca JavaScript. Luați-vă jocurile pe iPads sau tablete Android. Peste o sută de activități distractive din care să alegeți!
+  scratch_longdescription: 'Cu Scratch, puteți crea propriile jocuri interactive, povești, animații &mdash; și puteți să le partajați cu prietenii. Începeți cu animarea propriului nume, crearea de felicitări de vacanță sau creând un joc pong.'
+  lightbot_longdescription: Ghidați-l pe Lightbot să aprindă toate dalele albastre! Lightbot este un joc puzzle care folosește mecanismele programării jocurilor pentru a-i face pe jucători să câștige înțelegere practică despre bazele programării. Învață să scrie secvențe de instrucțiuni, să scrie proceduri, să folosească repetiții pentru a rezolva diverse niveluri. Este potrivit pentru toate vârstele.
+  thinkersmith_longdescription: 'Folosind un "Robot Vocabulary" predefinit elevii vor învăța să se ghideze în rezolvarea unor taskuri predefinite fară a le discuta prealabil. Această lecție, învață copiii conexiunea dintre simboluri si acțiuni, alături de abilitatea testării. "My Robotic Friends" funcționează cel mai bine în cadrul unui grup și conține un workbook pentru profesor, ce poate fi folosit la clasă.'
+  condcards_longdescription: Învățați despre algoritmi și instrucțiuni decizionale în această activitate fără calculator, folosind un pachet de cărți. Elevii fac această activitate în echipe și eu nevoie de un pachet de cărți pentru fiecare echipă.
+  lightbotintl_longdescription: Învață bazele logice ale programării, începând de la 4 ani pe iOS, Android sau browser web. Învață secvențialitatea comenzilor, identificarea pattern-urilor, utilizarea procedurilor si a LOOP-urilor!
+  codehs_longdescription: 'A da comenzi unui calculator, ceea ce înseamnă de fapt programarea, este ca și cum i-am da comenzi unui câine. Învățați să scrieți cod cu câinele Karel&mdash; o introducere distractivă, accesibilă și vizuală în programare care le arată începătorilor conceptele fundamentale precum instrucțiuni și funcții. Tutorialul este orientat pe elevi, dar profesorii se pot conecta pentru a accesa instrumentele profesorului și a urmări evoluția elevilor!'
+  codecademy_longdescription: Codeacademy este o platformă interactivă. ce oferă o introducere în bazele programării cu ajutorul JavaScript, ce se pretează studiului individual fiind utilizată de zeci de milioane de elevi din întreaga lume. Am pregatit o adevărată experiență Hour of Code cu teste si slide-uri și un proiect complet pentru elevi la final.
+  codecombat_longdescription: Învinge căpcăuni pentru a învăţa Python sau JavaScript în acest joc epic de programare!
+  codemonkey_longdescription: 'CodeMonkey este un joc online care învaţă programarea într-un limbaj de programare real! Elevii programează o maimuţă să prindă banane, în timp ce jocul devine din ce în ce mai complicat cu fiecare nivel. Ei primesc scoruri în stele cu fiecare soluţie şi le pot partaja cu un singur clic. '
+  codeavengers_longdescription: Construiește în întregime un joc 2D pentru 2 jucatori, cu JavaScript, în 10 pași simpli. Apoi continua studiul unor elemente de bază ale programării (variabile și if statements) cât realizezi un Quiz pe care îl poți share-ui prietenilor. Pe tot parcursul activității caștigă puncte și insigne, concurând la ocuparea primului loc al clasamentului în clasă.
+  processing_longdescription: O introducere în programare în contextul artelor vizuale utilizând limbajul de programare Processing. Lecții video scurte, prezinta exerciții de programare ce conduc la realizarea unui program de desenare interactiv.
+  robomind_longdescription: Elevii învață bazele programării controlând robotul lor virtual. Cursul online conține prezentări scurte, filme, teste si recomandări automate/ indicii, pentru a ajuta la rezolvarea exercițiilor de programare.
+  groklearning_longdescription: Folosiți limbajul de programare Python pentru a construi un robot vorbitor, numit ”Eliza”, care acționează ca un robot psihoterapeut. O veți învăța pe Eliza cum să vorbească și lucrurile potrivite pe care să le spună. Oare poate să-i păcălească pe prietenii voștri astfel încât aceștia să creadă că este un om, nu un calculator?
+  quorum_longdescription: Acest tutorial este accesibil persoanelor cu deficiențe vizuale și funcționează cu cititoare de ecran. Alăturați-vă lui Mary într-un tur pe care ea îl face în laboratorul de biologie ca programator și învață limbajul de programare Quorum. Acest tutorial este orientat pe elev cu exemple de activități online.
+  codespark_longdescription: Foos este un mod distractiv și prietenos cu copiii de a învăța despre programarea calculatoarelor. Programați personaje drăguțe să rezolve puzzle-uri și aduceți la viață o lume virtuală. Jocul este fără cuvinte, așa încât toată lumea poate să îl joace!
+  kodable_longdescription: Kodable este un joc pentru iPad intuitiv, ce introduce copiii de peste 5 ani în bazele programarii. A avea un parinte sau profesor în preajma este optim dar nu neaparat necesar.
+  tynkerapp_longdescription: Învață să programezi prin rezolvarea de puzzle-uri amuzante de codare. Construiește cu ușurință jocuri și povești cu grafică tematică, kituri de jocuri pentru 10+ și caractere personalizabile. Nu e necesară conexiune la Internet. Poți de asemenea să îți accesezi creațiile pe web.
+  robomindnl_longdescription: Elevii învață bazele programării controlând robotul lor virtual. Cursul online conține prezentări scurte, filme, teste si recomandări automate/ indicii, pentru a ajuta la rezolvarea exercițiilor de programare.
+  flappy_longdescription: Folosiți programarea drag-and-drop pentru a vă construi propriul joc Flappy Bird și personalizați-l așa încât să arate diferit (rechinul Flappy, Moș Crăciun Flappy, orice). Adaugă-ți jocul pe telefon cu doar un clic.
+  bitsbox_longdescription: Personalizează-ți propria tableta virtuala, apoi codați o serie de aplicații cu care sa va jucați și pe care sa le dați share. Tutoriale simple le dau chiar și celor mai mici posibilitatea de a programa în JavaScript, și cu cât sunt mai avansați cu atât vei ajunge mai departe.
+  makegameswithus_longdescription: 'Învățați să codați realizând un joc pentru iPhone folosind un  limbaj de programare nou și prietenos cu începătorii numit Swift! Creați un joc de acțiune inspirat de Pok&eacute;mon și scrieți un cod pentru a vă învăța monstrul mișcări noi. Veți învăța cum să folosiți variabile, metode, și obiecte pentru a vă ajuta monstrul să câștige!'
+  touchdevelop_longdescription: 'Editorul touch-friendly vă va ghida în crearea de artă pixel, rezolvarea puzzle urs sau a face propriul joc cu pasăre săritoare. '
+  appinventor_longdescription: Clipuri video interactive te ajută să creezi 3 aplicații simple pentru tableta sau telefonul tău Android. Create pentru începători și avansați deopotrivă, aceasta oră de programare te va ajuta să creezi propriile tale aplicații mai repede decât crezi. Imaginează-ți cum ar fi să arăți prietenilor aplicații programate de tine. Aceste activități se pretează lucrului individual dar si lecțiilor la clasă.
+  blockly_longdescription: 'Ai un calculator fără internet sau cu internet cu viteză mică? Descarcă tutorialele Blockly care sunt precursoarele tutorialelor Code.org - un fișier arhivat de 3MB poate fi încărcat de pe computer sau de pe un stick USB.'
+  thinkersmith2_longdescription: Elevii învață despre reprezentarea și salvarea literelor în sistem binar ca funcție on si off. La final elevii pot sa decodeze propriile inițiale pentru a le lua acasă.
+  kodableunplugged_longdescription: Creată pentru utilizarea pe hârtie, fuzzFamily Frenzy este o introducere în programare logică pentru copii de la 5 ani. Un profesor ar trebui să explice jocul, apoi elevii provoacă un partener să concureze într-o simplă cursă cu obstacole.
+  projguts_longdescription: Această activitate fără calculator ajută elevii să învețe modelarea și simularea prin jucarea unor versiuni diferite ale jocului Piatră/Hârtie/Foarfecă de către un grup de elevi și evidențierea rezultatelor ca experimente diferite de modelare.
   hourofcode_longdescription: Substituent pentru noul code.org/hoc
-  frozen_longdescription: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează
-    magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca la patinaj
-    şi veți face un paradis de iarnă, pe care apoi veți putea să-l partajați cu prietenii!
-  playlab_longdescription: Creează o poveste sau fa un joc cu Play Lab! Creează animale,pirați,zombi,ninja
-    și mute alte personaje, mai multe mișcări pentru personaje, mai multe sunete,
-    acumulează puncte, și chiar arunca mingi de foc!
+  frozen_longdescription: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca la patinaj şi veți face un paradis de iarnă, pe care apoi veți putea să-l partajați cu prietenii!
+  playlab_longdescription: Creează o poveste sau fa un joc cu Play Lab! Creează animale,pirați,zombi,ninja și mute alte personaje, mai multe mișcări pentru personaje, mai multe sunete, acumulează puncte, și chiar arunca mingi de foc!
   codeorg_beyond_name: Introducere K-8 în Tehnologia Computerelor
   khan_beyond_name: Învață programare
   tynker_beyond_name: Învață programare acasă
@@ -905,31 +735,22 @@
   processing_beyond_platformtext: Browsere web moderne
   alice_beyond_platformtext: Windows sau Mac (instalare necesară)
   sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Învață să programezi cu Mark Zuckerberg si Angry
-    Birds!
+  codeorg_beyond_shortdescription: Învață să programezi cu Mark Zuckerberg si Angry Birds!
   khan_beyond_shortdescription: Învață sa desenezi în JavaScript
-  tynker_beyond_shortdescription: 'Un curs distractiv și antrenant pentru copii din
-    clasele 4-8 '
+  tynker_beyond_shortdescription: 'Un curs distractiv și antrenant pentru copii din clasele 4-8 '
   scratch_beyond_shortdescription: Creează jocuri interactive, povestiri şi animaţii.
   lightbot_beyond_shortdescription: Un joc pentru învățarea conceptelor programării
-  codecademy_beyond_shortdescription: Învață programare JavaScript într-un browser
-    web
-  kodable_beyond_shortdescription: Un joc distractiv pentru iPad, pentru învățarea
-    conceptelor de bază în programare
-  scratchjr_beyond_shortdescription: 'Creați povești și jocuri interactive folosind
-    ScratchJr. '
+  codecademy_beyond_shortdescription: Învață programare JavaScript într-un browser web
+  kodable_beyond_shortdescription: Un joc distractiv pentru iPad, pentru învățarea conceptelor de bază în programare
+  scratchjr_beyond_shortdescription: 'Creați povești și jocuri interactive folosind ScratchJr. '
   hopscotch_beyond_shortdescription: Învață programare vizuală pe un iPad
-  pocketcode_beyond_shortdescription: Creați un joc pe telefonul vostru și partajați-l
-    cu prietenii ca să îl încerce!
+  pocketcode_beyond_shortdescription: Creați un joc pe telefonul vostru și partajați-l cu prietenii ca să îl încerce!
   groklearning_beyond_shortdescription: Intro pentru bazele programării Python
   hacketyhack_beyond_shortdescription: Învață Ruby de la 0
   robomind_beyond_shortdescription: Programează pentru un robot virtual
-  makegameswithus_beyond_shortdescription: Învață să faci un joc pentru iPhone într-o
-    oră
-  appinventor_beyond_shortdescription: Construiește-ți propria aplicație! (Doar pentru
-    Android)
-  touchdevelop_beyond_shortdescription: Programează aplicații de mobil direct de pe
-    telefon, tabletă sau laptop
+  makegameswithus_beyond_shortdescription: Învață să faci un joc pentru iPhone într-o oră
+  appinventor_beyond_shortdescription: Construiește-ți propria aplicație! (Doar pentru Android)
+  touchdevelop_beyond_shortdescription: Programează aplicații de mobil direct de pe telefon, tabletă sau laptop
   codehs_beyond_shortdescription: Învață JavaScript într-un mediu vizual, distractiv
   udemy_beyond_shortdescription: O mulțime de cursuri de programare
   lynda_beyond_shortdescription: O mulțime de cursuri de programare
@@ -950,200 +771,41 @@
   arduino_beyond_shortdescription: Învățaţi Arduino cu Digital Sandbox de la Sparkfun.
   processing_beyond_shortdescription: Învață limbajele Processing
   alice_beyond_shortdescription: Predă programare într-un mediu 3D
-  sphero_beyond_shortdescription: Lecțiile SPRK le oferă copiilor un curs intensiv
-    distractiv de programare a roboților în timp ce își formează competenţe în matematică
-    şi ştiinţe.
-  codeorg_beyond_longdescription: Învață conceptele de bază ale Tehnologiei Computerelor
-    cu programarea de tip "drag and drop". 15-25 de ore de activități fără computer,
-    presărate printre jocuri-tutoriale în care apar lecții video semnate Bill Gates,
-    Mark Zuckerberg, Angry Birds și Plants vs. Zombies. Învață ce sunt repeat-loop-urile,
-    conditionalele, algoritmii de bază, funcțiile și variabilele. Elevii din Statele
-    Unite câștigă premii incredibile pentru completarea tuturor stagiilor.
-  khan_beyond_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
-    programând. Fă asta singur sau alături de clasă.
-  tynker_beyond_longdescription: 'Tynker face ca deprinderea limbajelor de programare
-    să fie simplă, prin focusarea pe elementul vizual. Copiii creează jocuri și aplicații
-    mobile prin aranjarea blocurilor de cod. Acest lucru rezolvă nevoia de a cunoaște
-    sintaxa de programare. Copiii transformă ideile în povești animate și artă matematică
-    imediat. Metoda promovează învățarea progresivă: pe măsură ce copiii învață fundamentul,
-    Tynker introduce concepte mai avansate, inclusiv programarea bazată pe sintaxă.'
-  scratch_beyond_longdescription: Cu Scratch, puteți crea propriile jocuri interactive,
-    povești, animații &mdash; și puteți să le partajați cu prietenii. Începeți cu
-    animarea propriului nume, crearea de felicitări de vacanță sau creând un joc pong.
-  lightbot_beyond_longdescription: Învață bazele logice ale programării, începând
-    de la 4 ani pe iOS, Android sau browser web. Învață secvențialitatea comenzilor,
-    identificarea pattern-urilor, utilizarea procedurilor si a LOOP-urilor!
-  codecademy_beyond_longdescription: Codeacademy este o platformă interactivă. ce
-    oferă o introducere în bazele programării cu ajutorul JavaScript, ce se pretează
-    studiului individual fiind utilizată de zeci de milioane de elevi din întreaga
-    lume. Am pregatit o adevărată experiență Hour of Code cu teste si slide-uri și
-    un proiect complet pentru elevi la final.
-  kodable_beyond_longdescription: Kodable este un joc pentru iPad intuitiv, ce introduce
-    copiii de peste 5 ani în bazele programarii. A avea un parinte sau profesor în
-    preajma este optim dar nu neaparat necesar.
-  scratchjr_beyond_longdescription: ScratchJr este un limbaj de programare introductiv,
-    care le permite copiilor să își creeze propriile lor poveşti şi jocuri interactive.
-    Copiii grupează blocuri grafice de cod pentru a face personajele să se miște,
-    să sară, să danseze şi să cânte
-  hopscotch_beyond_longdescription: Tutoriale pentru elevi pentru iPad utilizând limbajul
-    de programare Hopscotch. Elevii vor construi jocuri si aplicații pentru iPad,
-    de pe iPad. Ei pot lucra individual sau în perechi de 3 la un iPad.
-  pocketcode_beyond_longdescription: Creați-vi propriul joc pe smart phone cu Pocket
-    Code! Ajutați-l pe parașutistul Steve să își salveze parcelele. Puteți să îl partajați
-    cu prietenii și cu alții pentru a-l încerca!
-  groklearning_beyond_longdescription: Un curs introductiv pentru limbajul de programare
-    Python, pentru oameni care nu au experiență în programare. Mixul nostru unic de
-    conținut introductiv și provocări te va ajuta să înțelegi Python, dar și programarea
-    în general. Am predat acest curs elevilor de diverse vârste și experiențe și suntem
-    siguri că și ție ți se va potrivi.
-  hacketyhack_beyond_longdescription: 'Hackety Hack te va învăța elementele de bază
-    ale programării de la 0. Nu este nevoie de experiență anterioară în programare!
-    Cu Hackety Hack, vei învăța limbajul de programare Ruby. Acesta este folosit pentru
-    orice tip de program, inclusiv aplicații desktop și website-uri. [Notă: este necesară
-    instalarea pe Desktop]'
-  robomind_beyond_longdescription: Elevii pot deprinde elementele de bază ale programării
-    prin controlarea propriului robot virtual. Cursul online conține scurte prezentări,
-    filme, quizz-uri și recomandări automate/sugestii care vin în ajutorul celor care
-    fac exercițiile de programare.
-  makegameswithus_beyond_longdescription: Știi puțin ObjectiveC? Învață cum să creezi
-    un joc pentru iPhone într-o oră! Te vom ghida de-a lungul fiecărui pas, când vei
-    programa, testa și juca jocul tău în browser. Poți chiar să-l share-uiești cu
-    prietenii tăi pe Facebook, pentru ca și ei să-l joace! Nu este necesară experiență
-    anterioară în dezvoltarea de aplicații pentru iPhone. Trebuie să înțelegi care
-    sunt variabilele, metodele și obiectele.
-  appinventor_beyond_longdescription: Clipuri video interactive te ajută să creezi
-    3 aplicații simple pentru tableta sau telefonul tău Android. Create pentru începători
-    și avansați deopotrivă, aceasta oră de programare te va ajuta să creezi propriile
-    tale aplicații mai repede decât crezi. Imaginează-ți cum ar fi să arăți prietenilor
-    aplicații programate de tine. Aceste activități se pretează lucrului individual
-    dar si lecțiilor la clasă.
-  touchdevelop_beyond_longdescription: 'TouchDevelop te ajută să creezi aplicații
-    pe iPad, iPhone, Android, PC, Mac, Windows Phone. Editorul nostru touch-friendly
-    face ca programarea să fie distractivă, chiar și pe telefon sau tabletă. '
-  codehs_beyond_longdescription: 'Învață elementele de bază ale programării alături
-    de Câinele Karel: o introducere distractivă, accesibilă, vizuală în programare,
-    în care este la fel de ușor să-i comanzi computerului ca și câinelui. Cel mai
-    bine este ca acest tutorial să fie prezentat de un profesor, dar studiul poate
-    fi și individual [Notă: cursul este plătit]'
-  udemy_beyond_longdescription: 'Chiar dacă nu ai văzut niciodată o linie de cod,
-    sau dacă jobul tău este programarea, Udemy are un curs pentru tine, predat de
-    instructori profesioniști. [Notă: cursul este plătit]'
-  lynda_beyond_longdescription: 'Învață să programezi, să creezi și să construiești
-    aplicații web, de la elementele de bază ale programării în C sau C++, până la
-    modul în care poți programa în Java. Tutorialele noastre te pot ajuta să creezi
-    aplicații mobile, să lucrezi cu baze de date PHP și MySQL, să înveți bazele limbajului
-    de procesare statistică R, dar și multe, multe altele. [Notă: cursul este plătit]'
-  edx_beyond_longdescription: 'CS50x este introducerea Colegiului Harvard în tehnologiei
-    computerelor și arta programării pentru experți și începători, cu sau fără experiență
-    anterioară. Subiectele abordate includ abstracția, algoritmii, structurile de
-    informații, încapsularea, managementul resurselor, securitatea, ingineria de software,
-    web development. Limbajele includ C, PHP, JavaScript și SQL, CSS, HTML. Versiunea
-    on-campus a CS50x este al doilea cel mai mare curs Harvard. '
-  coursera_beyond_longdescription: 'Cursul Stanford CS 101 este predat de Nick Parlante
-    (GRATIS!). CS101 predă ideile esențiale ale Tehnologiei Computerelor pentru o
-    audiență fără experiență anterioară. Joacă și experimentează cu bucăți mici de
-    cod pentru a testa puterea și limitele computerului. CS101 asigură, de asemenea,
-    informații generale despre computere: ce este un computer, hardware, software,
-    ce este internetul. Nu este necesară experiența anterioară, ci doar abilitatea
-    de a folosi un browser web.  '
-  udacity_beyond_longdescription: 'În cadrul acestui curs vei învăța concepte-cheie
-    în tehnologia computerelor și cum să scrii propriile programe în contextul construirii
-    unui crawler web. Nu este necesară experiența anterioară în programare. Începătorii
-    sunt bineveniți! La finalul acestui curs, îți vei fi însușit concepte-cheie în
-    tehnologia computerelor și suficientă programare pentru a scrie programe Python
-    și a rezolva probleme pe cont propriu. Acest curs te va pregăti pentru a trece
-    la cursurile de programare de nivel mediu. '
-  teachingtree_beyond_longdescription: TeachingTree este o platformă care permite
-    oricui să uploadeze și să organizeze conținut educațional. Scopul nostru este
-    ca elevii să acceseze rapid conținutul necesar pentru a învăța pe cont propriu.
-    Oricine este încurajat să contribuie prin adăugarea de conținut video sau tag-uri.
-  kodu_beyond_longdescription: Kodu ajută copiii să creeze jocuri pe PC și XBOX printr-un
-    limbaj de programare simplu. Kodu poate fi folosit pentru a învăța creativitatea,
-    rezolvarea de probleme, storytelling-ul sau programarea. Oricine poate folosi
-    Kodu pentru a crea un joc, copii sau adulți fără abilități de design sau programare.
-    Kodu pentru PC este disponibil gratuit. Kodu pentru XBOX este de asemenea disponibil
-    in Statele Unite în XBox Marketplace sau în canalul Indie Games pentru aproximativ
-    5$.
-  cargobot_beyond_longdescription: Cargo-Bot este un joc de puzzle în cadrul căruia
-    poți învăța un robot să mute cutii. Simplu, nu? Jocul include 36 de puzzle-uri
-    istețe, muzică și grafice uimitoare. Aici poți chiar să îți înregistrezi soluțiile
-    și să le share-uiești pe YouTube cu prietenii tăi.
-  kidsruby_beyond_longdescription: 'Distrează-te și creează jocuri sau sabotează-ți
-    tema cu Ruby! Doar spune-le prietenilor sau profesorilor tăi că înveți limbajul
-    de programare Ruby... ;) Este gratis și funcționează pe orice computer. [Notă:
-    este necesară instalarea pe Desktop]'
-  w3schools_beyond_longdescription: Învață să creezi website-uri pe propriul tău computer.
-    Învață elementele de bază ale unui server în mai puțin de o zi. Învață să adaugi
-    baze de date website-ului tău.
-  codeavengers_beyond_longdescription: Învață cum să programezi jocuri, aplicații
-    și website-uri. Cursul este creat de experți cu un nivel de dificultate perfect
-    pentru începători, cu instrucțiuni ușor de înțeles și ajutor atunci când ai nevoie.
-    Cursurile noastre HTML, CSS și JavaScript includ provocări de codare și jocuri
-    de revizie care fac ca învățatul să fie distractiv și eficient pentru toate vârstele.
-  mozilla_beyond_longdescription: Cu Thimble, crearea și share-uirea paginilor web
-    sunt ridicol de simple. Scrie și editează HTML și CSS direct în browserul tău,
-    apoi vezi instantaneu ce ai creat. Hostează și share-uiește proiectele tale cu
-    un singur click. Perfect pentru începători și experți deopotrivă.
-  codecombat_beyond_longdescription: 'Joacă-te ca un vrăjitor folosind coduri (vrăji)
-    pentru a controla eroii, pentru a naviga prin labirinturi, a învinge căpcăunii,
-    a păcăli dușmanii și a salva aliații! Învață JavaScript în acest joc web HTML
-    5 pentru începători. '
-  codea_beyond_longdescription: Codea pentru iPad vă permite să creați jocuri și simulări
-    &mdash; sau orice idee vizuală ați avea. Transformați-vă gândurile în creații
-    interactive care folosesc particularitățile iPad-ului ca Multi-Touch și accelerometru.
-    Credem că limbajul Codea este cel mai frumos editor de cod pe care îl veți folosi
-    și e simplu. Codea este creat pentru a vă permite să completați codul prin touch.
-    Vreți să schimbați un număr? Mutați-l cu degetul. Ce ziceți de culoare sau de
-    o imagine? O simplă bătaie cu degetul vă deschide un meniu din care veți putea
-    alege exact ceea ce doriți.
-  lego_beyond_longdescription: Creează roboți mici, customizabili și programabili
-    folosind piese LEGO.
-  finch_beyond_longdescription: 'Finch este un nou robot pentru educația în tehnologia
-    computerelor. Design-ul său este rezultatul unui studiu de 4 ani al laboratorului
-    Carnegie Mellon CREATE. Finch este creat pentru a face o introducere captivantă
-    în arta programării. Acesta oferă suport pentru mai mult de 12 limbaje și medii
-    de programare, inclusiv o serie de medii potrivite studentilor cu vârste de la
-    8 ani. Finch a fost creat pentru a permite studenților să scrie programe interactive
-    complexe. '
-  arduino_beyond_longdescription: Arduino este o binecunoscută platformă proiectată
-    pentru a permite artiștilor și designer-ilor să lucreze cu senzori reali, LED-uri,
-    sonerii și altele. Sparkfun Virtual Sandbox vă va învăța cod real Arduino chiar
-    în browser-ul vostru.
-  processing_beyond_longdescription: Processing este un limbaj de programare, un mediu
-    de dezvoltare și o comunitate online. Din 2001, Processing a promovat software-ul
-    în cadrul artelor vizuale și vizualul în cadrul tehnologiei. Inițial creat ca
-    un caiet de schițe software pentru a preda elementele de bază ale programării
-    într-un context vizual, Processing a evoluat într-un instrument de dezvoltare
-    pentru profesioniști. Astăzi există zeci de mii de studenți, artiști, designeri,
-    cercetători și pasionați care folosesc Processing pentru a învăța, a prototipa
-    și în producție.
-  alice_beyond_longdescription: Utilizând un mediu de programare inovativ pentru a
-    sprijini crearea de animații 3D, Alice Project asigură instrumentele și materialele
-    necesare pentru predarea și învățarea gândirii numerice, a rezolvării de probleme
-    și a programării, pentru o gamă diversă de vârste și experiențe.
-  sphero_beyond_longdescription: Fie că sunteţi un educator sau un părinte, lecțiile
-    SPRK oferă copiilor un curs intensiv și distractiv de programare a roboților,
-    în timp ce își formează abilităţi în matematică şi ştiinţă.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "
+  sphero_beyond_shortdescription: Lecțiile SPRK le oferă copiilor un curs intensiv distractiv de programare a roboților în timp ce își formează competenţe în matematică şi ştiinţe.
+  codeorg_beyond_longdescription: 'Învață conceptele de bază ale Tehnologiei Computerelor cu programarea de tip "drag and drop". 15-25 de ore de activități fără computer, presărate printre jocuri-tutoriale în care apar lecții video semnate Bill Gates, Mark Zuckerberg, Angry Birds și Plants vs. Zombies. Învață ce sunt repeat-loop-urile, conditionalele, algoritmii de bază, funcțiile și variabilele. Elevii din Statele Unite câștigă premii incredibile pentru completarea tuturor stagiilor.'
+  khan_beyond_longdescription: Învață bazele programării JavaScript, în timp ce desenezi programând. Fă asta singur sau alături de clasă.
+  tynker_beyond_longdescription: 'Tynker face ca deprinderea limbajelor de programare să fie simplă, prin focusarea pe elementul vizual. Copiii creează jocuri și aplicații mobile prin aranjarea blocurilor de cod. Acest lucru rezolvă nevoia de a cunoaște sintaxa de programare. Copiii transformă ideile în povești animate și artă matematică imediat. Metoda promovează învățarea progresivă: pe măsură ce copiii învață fundamentul, Tynker introduce concepte mai avansate, inclusiv programarea bazată pe sintaxă.'
+  scratch_beyond_longdescription: 'Cu Scratch, puteți crea propriile jocuri interactive, povești, animații &mdash; și puteți să le partajați cu prietenii. Începeți cu animarea propriului nume, crearea de felicitări de vacanță sau creând un joc pong.'
+  lightbot_beyond_longdescription: Învață bazele logice ale programării, începând de la 4 ani pe iOS, Android sau browser web. Învață secvențialitatea comenzilor, identificarea pattern-urilor, utilizarea procedurilor si a LOOP-urilor!
+  codecademy_beyond_longdescription: Codeacademy este o platformă interactivă. ce oferă o introducere în bazele programării cu ajutorul JavaScript, ce se pretează studiului individual fiind utilizată de zeci de milioane de elevi din întreaga lume. Am pregatit o adevărată experiență Hour of Code cu teste si slide-uri și un proiect complet pentru elevi la final.
+  kodable_beyond_longdescription: Kodable este un joc pentru iPad intuitiv, ce introduce copiii de peste 5 ani în bazele programarii. A avea un parinte sau profesor în preajma este optim dar nu neaparat necesar.
+  scratchjr_beyond_longdescription: ScratchJr este un limbaj de programare introductiv, care le permite copiilor să își creeze propriile lor poveşti şi jocuri interactive. Copiii grupează blocuri grafice de cod pentru a face personajele să se miște, să sară, să danseze şi să cânte
+  hopscotch_beyond_longdescription: Tutoriale pentru elevi pentru iPad utilizând limbajul de programare Hopscotch. Elevii vor construi jocuri si aplicații pentru iPad, de pe iPad. Ei pot lucra individual sau în perechi de 3 la un iPad.
+  pocketcode_beyond_longdescription: Creați-vi propriul joc pe smart phone cu Pocket Code! Ajutați-l pe parașutistul Steve să își salveze parcelele. Puteți să îl partajați cu prietenii și cu alții pentru a-l încerca!
+  groklearning_beyond_longdescription: Un curs introductiv pentru limbajul de programare Python, pentru oameni care nu au experiență în programare. Mixul nostru unic de conținut introductiv și provocări te va ajuta să înțelegi Python, dar și programarea în general. Am predat acest curs elevilor de diverse vârste și experiențe și suntem siguri că și ție ți se va potrivi.
+  hacketyhack_beyond_longdescription: 'Hackety Hack te va învăța elementele de bază ale programării de la 0. Nu este nevoie de experiență anterioară în programare! Cu Hackety Hack, vei învăța limbajul de programare Ruby. Acesta este folosit pentru orice tip de program, inclusiv aplicații desktop și website-uri. [Notă: este necesară instalarea pe Desktop]'
+  robomind_beyond_longdescription: Elevii pot deprinde elementele de bază ale programării prin controlarea propriului robot virtual. Cursul online conține scurte prezentări, filme, quizz-uri și recomandări automate/sugestii care vin în ajutorul celor care fac exercițiile de programare.
+  makegameswithus_beyond_longdescription: Știi puțin ObjectiveC? Învață cum să creezi un joc pentru iPhone într-o oră! Te vom ghida de-a lungul fiecărui pas, când vei programa, testa și juca jocul tău în browser. Poți chiar să-l share-uiești cu prietenii tăi pe Facebook, pentru ca și ei să-l joace! Nu este necesară experiență anterioară în dezvoltarea de aplicații pentru iPhone. Trebuie să înțelegi care sunt variabilele, metodele și obiectele.
+  appinventor_beyond_longdescription: Clipuri video interactive te ajută să creezi 3 aplicații simple pentru tableta sau telefonul tău Android. Create pentru începători și avansați deopotrivă, aceasta oră de programare te va ajuta să creezi propriile tale aplicații mai repede decât crezi. Imaginează-ți cum ar fi să arăți prietenilor aplicații programate de tine. Aceste activități se pretează lucrului individual dar si lecțiilor la clasă.
+  touchdevelop_beyond_longdescription: 'TouchDevelop te ajută să creezi aplicații pe iPad, iPhone, Android, PC, Mac, Windows Phone. Editorul nostru touch-friendly face ca programarea să fie distractivă, chiar și pe telefon sau tabletă. '
+  codehs_beyond_longdescription: 'Învață elementele de bază ale programării alături de Câinele Karel: o introducere distractivă, accesibilă, vizuală în programare, în care este la fel de ușor să-i comanzi computerului ca și câinelui. Cel mai bine este ca acest tutorial să fie prezentat de un profesor, dar studiul poate fi și individual [Notă: cursul este plătit]'
+  udemy_beyond_longdescription: 'Chiar dacă nu ai văzut niciodată o linie de cod, sau dacă jobul tău este programarea, Udemy are un curs pentru tine, predat de instructori profesioniști. [Notă: cursul este plătit]'
+  lynda_beyond_longdescription: 'Învață să programezi, să creezi și să construiești aplicații web, de la elementele de bază ale programării în C sau C++, până la modul în care poți programa în Java. Tutorialele noastre te pot ajuta să creezi aplicații mobile, să lucrezi cu baze de date PHP și MySQL, să înveți bazele limbajului de procesare statistică R, dar și multe, multe altele. [Notă: cursul este plătit]'
+  edx_beyond_longdescription: 'CS50x este introducerea Colegiului Harvard în tehnologiei computerelor și arta programării pentru experți și începători, cu sau fără experiență anterioară. Subiectele abordate includ abstracția, algoritmii, structurile de informații, încapsularea, managementul resurselor, securitatea, ingineria de software, web development. Limbajele includ C, PHP, JavaScript și SQL, CSS, HTML. Versiunea on-campus a CS50x este al doilea cel mai mare curs Harvard. '
+  coursera_beyond_longdescription: 'Cursul Stanford CS 101 este predat de Nick Parlante (GRATIS!). CS101 predă ideile esențiale ale Tehnologiei Computerelor pentru o audiență fără experiență anterioară. Joacă și experimentează cu bucăți mici de cod pentru a testa puterea și limitele computerului. CS101 asigură, de asemenea, informații generale despre computere: ce este un computer, hardware, software, ce este internetul. Nu este necesară experiența anterioară, ci doar abilitatea de a folosi un browser web.  '
+  udacity_beyond_longdescription: 'În cadrul acestui curs vei învăța concepte-cheie în tehnologia computerelor și cum să scrii propriile programe în contextul construirii unui crawler web. Nu este necesară experiența anterioară în programare. Începătorii sunt bineveniți! La finalul acestui curs, îți vei fi însușit concepte-cheie în tehnologia computerelor și suficientă programare pentru a scrie programe Python și a rezolva probleme pe cont propriu. Acest curs te va pregăti pentru a trece la cursurile de programare de nivel mediu. '
+  teachingtree_beyond_longdescription: TeachingTree este o platformă care permite oricui să uploadeze și să organizeze conținut educațional. Scopul nostru este ca elevii să acceseze rapid conținutul necesar pentru a învăța pe cont propriu. Oricine este încurajat să contribuie prin adăugarea de conținut video sau tag-uri.
+  kodu_beyond_longdescription: Kodu ajută copiii să creeze jocuri pe PC și XBOX printr-un limbaj de programare simplu. Kodu poate fi folosit pentru a învăța creativitatea, rezolvarea de probleme, storytelling-ul sau programarea. Oricine poate folosi Kodu pentru a crea un joc, copii sau adulți fără abilități de design sau programare. Kodu pentru PC este disponibil gratuit. Kodu pentru XBOX este de asemenea disponibil in Statele Unite în XBox Marketplace sau în canalul Indie Games pentru aproximativ 5$.
+  cargobot_beyond_longdescription: Cargo-Bot este un joc de puzzle în cadrul căruia poți învăța un robot să mute cutii. Simplu, nu? Jocul include 36 de puzzle-uri istețe, muzică și grafice uimitoare. Aici poți chiar să îți înregistrezi soluțiile și să le share-uiești pe YouTube cu prietenii tăi.
+  kidsruby_beyond_longdescription: 'Distrează-te și creează jocuri sau sabotează-ți tema cu Ruby! Doar spune-le prietenilor sau profesorilor tăi că înveți limbajul de programare Ruby... ;) Este gratis și funcționează pe orice computer. [Notă: este necesară instalarea pe Desktop]'
+  w3schools_beyond_longdescription: Învață să creezi website-uri pe propriul tău computer. Învață elementele de bază ale unui server în mai puțin de o zi. Învață să adaugi baze de date website-ului tău.
+  codeavengers_beyond_longdescription: Învață cum să programezi jocuri, aplicații și website-uri. Cursul este creat de experți cu un nivel de dificultate perfect pentru începători, cu instrucțiuni ușor de înțeles și ajutor atunci când ai nevoie. Cursurile noastre HTML, CSS și JavaScript includ provocări de codare și jocuri de revizie care fac ca învățatul să fie distractiv și eficient pentru toate vârstele.
+  mozilla_beyond_longdescription: Cu Thimble, crearea și share-uirea paginilor web sunt ridicol de simple. Scrie și editează HTML și CSS direct în browserul tău, apoi vezi instantaneu ce ai creat. Hostează și share-uiește proiectele tale cu un singur click. Perfect pentru începători și experți deopotrivă.
+  codecombat_beyond_longdescription: 'Joacă-te ca un vrăjitor folosind coduri (vrăji) pentru a controla eroii, pentru a naviga prin labirinturi, a învinge căpcăunii, a păcăli dușmanii și a salva aliații! Învață JavaScript în acest joc web HTML 5 pentru începători. '
+  codea_beyond_longdescription: 'Codea pentru iPad vă permite să creați jocuri și simulări &mdash; sau orice idee vizuală ați avea. Transformați-vă gândurile în creații interactive care folosesc particularitățile iPad-ului ca Multi-Touch și accelerometru. Credem că limbajul Codea este cel mai frumos editor de cod pe care îl veți folosi și e simplu. Codea este creat pentru a vă permite să completați codul prin touch. Vreți să schimbați un număr? Mutați-l cu degetul. Ce ziceți de culoare sau de o imagine? O simplă bătaie cu degetul vă deschide un meniu din care veți putea alege exact ceea ce doriți.'
+  lego_beyond_longdescription: Creează roboți mici, customizabili și programabili folosind piese LEGO.
+  finch_beyond_longdescription: 'Finch este un nou robot pentru educația în tehnologia computerelor. Design-ul său este rezultatul unui studiu de 4 ani al laboratorului Carnegie Mellon CREATE. Finch este creat pentru a face o introducere captivantă în arta programării. Acesta oferă suport pentru mai mult de 12 limbaje și medii de programare, inclusiv o serie de medii potrivite studentilor cu vârste de la 8 ani. Finch a fost creat pentru a permite studenților să scrie programe interactive complexe. '
+  arduino_beyond_longdescription: Arduino este o binecunoscută platformă proiectată pentru a permite artiștilor și designer-ilor să lucreze cu senzori reali, LED-uri, sonerii și altele. Sparkfun Virtual Sandbox vă va învăța cod real Arduino chiar în browser-ul vostru.
+  processing_beyond_longdescription: Processing este un limbaj de programare, un mediu de dezvoltare și o comunitate online. Din 2001, Processing a promovat software-ul în cadrul artelor vizuale și vizualul în cadrul tehnologiei. Inițial creat ca un caiet de schițe software pentru a preda elementele de bază ale programării într-un context vizual, Processing a evoluat într-un instrument de dezvoltare pentru profesioniști. Astăzi există zeci de mii de studenți, artiști, designeri, cercetători și pasionați care folosesc Processing pentru a învăța, a prototipa și în producție.
+  alice_beyond_longdescription: Utilizând un mediu de programare inovativ pentru a sprijini crearea de animații 3D, Alice Project asigură instrumentele și materialele necesare pentru predarea și învățarea gândirii numerice, a rezolvării de probleme și a programării, pentru o gamă diversă de vârste și experiențe.
+  sphero_beyond_longdescription: Fie că sunteţi un educator sau un părinte, lecțiile SPRK oferă copiilor un curs intensiv și distractiv de programare a roboților, în timp ce își formează abilităţi în matematică şi ştiinţă.

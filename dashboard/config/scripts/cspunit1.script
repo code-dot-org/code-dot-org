@@ -1,16 +1,35 @@
 title 'CSP Unit 1: Digital Information'
-description_short "Make Black and White Images with the pixelation tool"
+description 'This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.'
+description_short "Explore how digital information is represented and transferred"
 
-stage "Lesson 2"
+stage "Innovation"
+level 'U1L1 Student Lesson Introduction'
+
+stage "Sending Binary Messages"
+level 'U1L2 Student Lesson Introduction'
+level 'U1L2 Free response assessment question'
+level 'U1L2 Free response reflection question'
 
 
-stage "Lesson 3"
+stage "Sending More Complex Messages"
+level 'U1L3 Student Lesson Introduction'
+level 'U1L3 Free response reflection question'
 
-stage 'Lesson 4'
+stage 'Bit Sending Widget'
+level 'U1L4 Student Lesson Introduction'
+
 level 'NetSim_SendingABTest'
 
-stage 'Lesson 6'
-level 'U1L6 Student Lesson Plan'
+
+stage 'Sending Bits in the Real World'
+level 'U1L5 Student Lesson Introduction'
+
+
+stage 'Number Systems'
+level 'U1L6 Student Lesson Introduction'
+
+stage 'Binary Numbers'
+level 'U1L7 Student Lesson Introduction'
 
 stage 'Lesson 14'
 level 'Pixelation - Video - Lesson 14 - B and W'

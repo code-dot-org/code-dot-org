@@ -220,6 +220,7 @@ ar:
         artist: ارسم شيئا
     user:
       classroom: الصفحة الرئيسية المعلم
+      district_dashboard: District Dashboard
       label: 'مرحباً %{username}'
       stats: انجازاتي
       settings: حسابي
@@ -438,6 +439,9 @@ ar:
       body: 'عرض معرض صور "تطبيق" و "الفنان" التي تم إنشاؤها من قبل مستخدمينا'
     frozen:
       title: ملكة الثلج Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: ووجه الطلاب هذه بالكود!
     students_made_these_with_code: طلاب صنعوا هذا بالكود!
@@ -467,6 +471,12 @@ ar:
     wrong_body: 'الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!'
     correct_title: صحيح
     correct_body: هذا هو الجواب الصحيح.
+  contract_match:
+    wrong_title: الإجابة غير صحيحة
+    badname: Your contract has the wrong name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: 'ادخل إجابتك هنا '
   dialog:
@@ -551,3 +561,5 @@ ar:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

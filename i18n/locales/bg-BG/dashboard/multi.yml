@@ -10,7 +10,7 @@ bg:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: 'Художник - цикли: тест с  избор от множество отговори'
+        Artist Loops Multiple Choice: 'Художник повторения: тест с  избор от множество отговори'
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
         Which shape is made by this loop?: Коя фигура се прави от това повторение?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
@@ -34,13 +34,13 @@ bg:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
       2-3 bee conditionals multi 1:
         Bee Conditionals Multiple Choice One: 'Пчела условности: тест с избор от множество отговори'
-        Which comparison below is true?: Кое сравнение по-долу е вярно?
+        Which comparison below is true?: Кои сравнение по-долу е вярно?
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
       2-3 bee conditionals multi 2:
-        Bee Conditionals Multiple Choice Two: 'Пчела условности: тест 2 с избор от множество отговори'
+        Bee Conditionals Multiple Choice Two: 'Пчела условности: втори тест с избор от множество отговори '
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
         Choose the best blocks.: Изберете най-добрите блокове.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
@@ -50,7 +50,7 @@ bg:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: 'Пчела условности: втори тест с избор от множество отговори '
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Изберете най-добрите блокове
+        Choose the best blocks.: Изберете най-добрите блокове.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -83,7 +83,7 @@ bg:
       2-3 Algorithms Multi 1:
         Multiple Choice: Избор от множество отговори
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Изберете алгоритъм за изображението
+        Choose an algorithm for the image provided.: Изберете алгоритъм за изображението.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Започва сe с квадрат <br/> Сложете триъгълник над квадрата <br/> Сложете триъгълник под квадрата'
         0: '? Започнете с квадрат <br/> сложете триъгълник отдясно на квадрата <br/> поставете успоредник под квадрата <br/> сложете триъгълник отдясно на успоредника'
         1: ': Започнете с квадрат <br/> сложете триъгълник отдясно на квадрата <br/> Поставете успоредник под квадрата <br/> Сложете триъгълник отдясно на успоредника'
@@ -141,26 +141,26 @@ bg:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + блок <br>- блок <br>/ блок <br>* блокира <br>0 # блок <br>??? # блокира <br>размер блок'
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
         Blue colored blocks are associated with __________ ?: Сините цветни блокове са свързани с __________?
         a image: изображение
         a number: число
         a string: низ
         boolean: boolean
       2-3 multi match 2:
-        Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
+        Purple colored blocks are associated with __________ ?: Лилавите на цвят блокове са свързани с __________?
         a image: изображение
         a number: число
         a string: низ
         boolean: boolean
       2-3 multi match 3:
-        Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
+        Teal colored blocks are associated with __________ ?: Сините на цвят блокове са свързани с __________ ?
         a image: изображение
         a number: число
         a string: низ
         boolean: boolean
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
+        Green colored blocks are associated with __________ ?: Зелените на цвят блокове са свързани с __________ ?
         a image: изображение
         a number: число
         a string: низ
@@ -188,7 +188,7 @@ bg:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: 'Художник повторения: тест с  избор от множество отговори'
+        Artist Loops Multiple Choice: 'Художник - цикли: тест с  избор от множество отговори'
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500
         Which blocks will create the design?: Кои блокове създават този дизайн?
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
@@ -222,7 +222,7 @@ bg:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: 'Пчела - повторения: тест с избор от множество отговори'
+        Bee Loops Multiple Choice: 'Пчела - цикли: тест с избор от множество отговори'
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
         Which blocks will solve the puzzle?: Кои блокове ще решат пъзела?
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
@@ -256,54 +256,54 @@ bg:
       4-5 Algorithms Multi 1:
         Multiple Choice: избор от множество отговори
         Which one of these items is hardest to describe an algorithm for?: За кой от тези елементи е най-трудно да напишете алгоритъм?
-        <h4>Brushing your teeth</h4>: '<h4>Миене на зъбите</h4>'
-        <h4>Baking cookies</h4>: '<h4>Печене на бисквитки</h4>'
-        <h4>Shopping from a grocery list</h4>: '<h4>Пазаруване от списък</h4>'
-        <h4>Banana</h4>: '<h4>Банан</h4>'
+        Brushing your teeth: Миене на зъбите
+        Baking cookies: Печене на бисквитки
+        Shopping from a grocery list: Пазаруване от хранителен списък
+        Banana: Банан
       4-5 Computational Thinking Multi 1:
         Multiple Choice: избор от множество отговори
         0: '? Тук има три изречения. Кой от шаблоните по-долу подхожда  и на трите?'
         1: ': Тук има три изречения. Кой от шаблоните по-долу подхожда и на трите?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Сиатъл е един голям град. <br/>Eugene е среден град <br/> Хилвию е малък град.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Сиатъл _____ a _____ _____.</h4>'
-        <h4>_____ is a _____ city.</h4>: '<h4>_____ е  _____ град.</h4>'
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ е _____  _____.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene е _____ град.</h4>'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Сиатъл е  голям град. <br/>Eugene е среден град <br/> Хилвю е малък град.'
+        Seattle _____ a _____ _____.: Сиатъл _____ _____ _____.
+        _____ is a _____ city.: _____ е _____ град.
+        _____ is _____ a _____.: _____ е _____ _____.
+        Eugene is a _____ city.: Eugene е _____ град.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: избор от множество отговори
-        Which of these pictures best represents crowdsourcing?: Кои от тези снимки най-добре представлява crowdsourcing?
+        Which of these pictures best represents crowdsourcing?: Кои от тези снимки най-добре представляват crowdsourcing?
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: избор от множество отговори
-        Which one of these activities would be best for practicing crowdsourcing?: Кое от тези дейности ще бъде най-подходяща за практикуване на crowdsourcing?
-        <h4>Cleaning your room</h4>: '<h4>Почистване на стаята</h4>'
-        <h4>Eating your dessert</h4>: '<h4>Ядене на десерт</h4>'
-        <h4>Brushing your hair</h4>: '<h4>Сресване на косата </h4>'
-        <h4>Washing your face</h4>: '<h4>Измиване лицето</h4>'
+        Which one of these activities would be best for practicing crowdsourcing?: Коя от тези дейности ще бъде най-подходяща за практикуване на crowdsourcing?
+        Cleaning your room: Почистване на стаята
+        Eating your dessert: Ядене на десерт
+        Brushing your hair: Ресане на косата
+        Washing your face: Измиване лицето
       4-5 Digital Footprint Multi 1:
         Multiple Choice: избор от множество отговори
-        Which piece of information listed below is okay to share on the internet?: Коя част от информацията, изброени по-долу е добре да споделя в интернет?
-        <h4>Your birthday</h4>: '<h4>Вашият рожден ден</h4>'
-        <h4>Your favorite food</h4>: '<h4>Вашата любима храна</h4>'
-        <h4>Your address</h4>: '<h4>Вашият адрес</h4>'
-        <h4>Your parent's credit card number</h4>: '<h4>Номерът на кредитната карта на ваш родител</h4>'
+        Which piece of information listed below is okay to share on the internet?: Коя част от информацията, изброена по-долу е добре да споделя в Интернет?
+        Your birthday: Вашият рожден ден
+        Your favorite food: Вашата любима храна
+        Your address: Вашият адрес
+        Your parent's credit card number: Номерът на кредитната карта на Вашата майка
       4-5 Internet Multi 1:
         Multiple Choice: избор от множество отговори
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.pn
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Когато се опитвате да влезете в code.org, кой IP адрес е най-вероятно ще ви отведе до DNS?
-        <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
-        <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
-        <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
-        <h4>54.243.71.82</h4>: '<h4>54.243.71.82</h4>'
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: избор от множество отговори
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.pn
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Ако DNS ви е изпратил на страницата на IP адреса 100.42.50.110, на кой уебсайт сте?
-        <h4>code.org</h4>: '<h4>Code.org</h4>'
-        <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
-        <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
-        <h4>khanacademy.org</h4>: '<h4>khanacademy.org</h4>'
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: избор от множество отговори
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
@@ -318,7 +318,7 @@ bg:
       4-5 Suncatchers Multi 1:
         Multiple Choice: избор от множество отговори
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: 'Коя от програмите по-долу <em>не</em> извършва точно същата последователност като програма 1'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Коя от програмите по-долу <em>не</em> извършва точно същата последователност като програма 1?'
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -328,7 +328,7 @@ bg:
         The unicorn moves across the screen: Еднорогът се движи по екрана
         The unicorn's y value changes: 'Стойността "у" на еднорога се променя'
         The unicorn moves to the left: Еднорогът се премества наляво
-        The unicorn's x value changes: 'Стойността "x" на еднорога се променя'
+        The unicorn's x value decreases: "The unicorn's x value decreases"
       K-1 Artist 1 Multi 1:
         Multiple Choice: избор от множество отговори
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -528,7 +528,7 @@ bg:
       valid contracts multi:
         Valid Contracts: Валидни редове
         Pick the best answer to the question.: Изберете най-добрият отговор на въпроса.
-        Which of these is a valid contract for the function circle?: Кой от тях е валиден ред за функцията на кръга?
+        Which of these is a valid contract for the function circle?: Кой от тях е валиден ред за действието на функцията?
         "circle: size style color -> image": 'кръг: размер стил цвят-> изображение'
         "circle: number string string -> image": 'кръг: номер пореден пореден-> изображение'
         "circle: number string string -> shape": 'кръг: номер пореден пореден-> форма'
@@ -638,12 +638,12 @@ bg:
         "y": true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Стрингове и изображения избор от множество отговори
-        Multi Strings Images 1.blocks3.level: Мулти стрингове изображения 1.blocks3.level
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Кои от тези блокове за оценка ще изчертаят картинката
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Мулти стрингове изображения 1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Мулти стрингове изображения 1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Мулти стрингове изображения 1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Мулти стрингове изображения 1.blocks4.start_blocks, 300, 100
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
       PDK5 Basic CS:
         Video Follow-up Question: 'Видео  въпрос'
         Answer this question based on the video you just watched.: Отговорете на този въпрос въз основа на видеото, което току що гледахте.

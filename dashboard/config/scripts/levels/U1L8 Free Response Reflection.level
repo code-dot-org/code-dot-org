@@ -1,0 +1,16 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-04-08T20:32:03.000Z",
+  "properties": {
+    "title": "Reflection: Sending Numbers ",
+    "content1": "Complete the Sending Numbers Checklist and then respond to the following prompt.",
+    "markdown": "Describe the \"Maker Mentality\" process that your team used to create a successful protocol. \n\nWhat problems arose in your efforts to create a working protocol? \n\nHow did you think about the problem(s) in order to solve it? \n\nDescribe what you witnessed as your teammates worked to create the protocol. How did their thinking/work strategies differ from yours?\n",
+    "type": "TextMatch",
+    "dsl_text": "name 'U1L8 Free Response Reflection'\r\ntitle 'Reflection: Sending Numbers '\r\ncontent1 'Complete the Sending Numbers Checklist and then respond to the following prompt.'\r\n\r\n\r\nmarkdown <<MARKDOWN\r\nDescribe the “Maker Mentality” process that your team used to create a successful protocol. \r\n\r\nWhat problems arose in your efforts to create a working protocol? \r\n\r\nHow did you think about the problem(s) in order to solve it? \r\n\r\nDescribe what you witnessed as your teammates worked to create the protocol. How did their thinking/work strategies differ from yours?\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</TextMatch>

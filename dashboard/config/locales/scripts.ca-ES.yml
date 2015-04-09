@@ -350,9 +350,11 @@
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
         infinity:
-          title: Play Lab
-          description_short: Crea una història o fes una partida amb Play Lab!
-          description: Crea una història o fes una partida amb Play Lab!
+          title: Disney infinit Play Lab
+          description_short: Utilitza Play Lab per crear una història o un joc protagonitzada
+            pels personatges de Disney infinity.
+          description: Utilitza Play Lab per crear una història o un joc protagonitzada
+            pels personatges de Disney infinity.
           Play Lab: Play Lab
           Infinity: Infinit
         algebrademo:
@@ -397,11 +399,6 @@
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
           'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Infinit
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
@@ -459,9 +456,9 @@
           description: ''
           Step: pas
         Hour of Code:
-          title: Hour of Code 2013
+          title: Hora de codi 2013
           description: ''
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: Hora de codi 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -520,6 +517,17 @@
           Lesson 5: Lesson 5
           Lesson 3: Lesson 3
           Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -577,3 +585,15 @@
             (Big Game)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

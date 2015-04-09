@@ -5,7 +5,8 @@
         Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
           Ausdruck ein, der diesem Code entspricht
-        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
+        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png,
+          500
         (4+5) > 9: (4 + 5) > 9
         ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
@@ -14,7 +15,8 @@
         Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
           Ausdruck ein, der diesem Code entspricht
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/Einheit6/BloeckezuMathematik2.pgn
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png,
+          500
         (10 > 11) or (7 <= 9): (10 > 11) oder (7 < = 9)
         (10 > 11) OR (7 <= 9): (10 > 11) oder (7 < = 9)
         (10 > 11) || (7 <= 9): (10 > 11) || (7 < = 9)
@@ -24,23 +26,40 @@
         Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
           Ausdruck ein, der diesem Code entspricht
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/Einheit6/BloeckezuMathematik3.pgn
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
+          500
         (5 < 10) and (10 < 15): (5 < 10) und (10 < 15)
+        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) UND (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
+        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
+        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
+        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Bools 4:
         Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
           Ausdruck ein, der diesem Code entspricht
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/Einheit6/BloeckezuMathematik4.pgn
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
+          500
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) und (x < 5)) ODER
           ((8 < x) und (x < 10))
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
+          ((8 < x) And (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) und (x < 5)) oder
           ((8 < x) und (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5))
+          OR ((8 < x) AND (x < 10)))
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5))
+          Or ((8 < x) And (x < 10)))
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
+          or ((8 < x) and (x < 10)))
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) ||
+          ((8 < x) && (x < 10)))
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Math 1:
@@ -71,6 +90,7 @@
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
+        2 * 3 - 1 + 0: 2 * 3 - 1 + 0
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Math 4:
@@ -137,24 +157,24 @@
       PDK5 Foundation:
         Computer Science as a Foundational Skill: Computer Science as a Foundational
           Skill
-        Do you see computer science as a foundational skill for your students? Why or why not?: Do
-          you see computer science as a foundational skill for your students? Why
-          or why not?
+        Do you see computer science as a foundational skill for your students? Why or why not?: Sehen
+          Sie Informatik als eine grundlegende Fähigkeit für Ihre Schüler? Warum oder
+          warum nicht?
         Your thoughts here: Your thoughts here
       PDK5 Impact 1:
-        Impact for students: Impact for students
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do
-          you think your students will find the online activities in the K-5 courses
-          fun and engaging? Why or Why not?
+        Impact for students: Auswirkungen für Schüler
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Glauben
+          Sie, dass Ihre Schüler die Online-Aktivitäten in den K-5-Kursen unterhaltsam
+          und fordernd finden? Warum oder warum nicht?
         Your thoughts here: Your thoughts here
       PDK5 Impact 2:
         Connections to other Subjects: Connections to other Subjects
-        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does
-          computer science connect to other topics or subjects your students are learning
-          about? Explain why or why not.
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Überträgt
+          sich Informatik auf andere Fächer oder Themen, die Sie Ihren Schülern lehren?
+          Erläutern Sie warum oder warum nicht.
         Your thoughts here: Your thoughts here
       PDK5 Impact 3:
-        Real-world applications for Students: Real-world applications for Students
+        Real-world applications for Students: Reale Anwendungen für Schüler
         0: '? Does learning about computer science help students grow into the kind
           of citizens you are preparing them to be? Explain why or why not.'
         1: ': Does learning about computer science help students grow into the kind
@@ -211,6 +231,7 @@
       Mixing Colors:
         title: Titel
         description here: hier die Beschreibung
+      PDCSP Intro: []
       PDK5 Beyond C:
         Beyond: Beyond
       PDK5 Classroom Culture C:
@@ -266,6 +287,9 @@
         description here: hier die Beschreibung
       Pixelation Flappy:
         title: Titel
+        description here: hier die Beschreibung
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
         description here: hier die Beschreibung
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit
@@ -347,6 +371,20 @@
       test html katie:
         testing: testing
         lkajsdfasdf: lkajsdfasdf
+      Text Compression 1:
+        Text Compression 1: Text Compression 1
+        Compress text by identifying repeated patterns.: Compress text by identifying
+          repeated patterns.
+      Text Compression Peter Piper:
+        Text Compression Peter Piper: Text Compression Peter Piper
+        Compress text by identifying repeated patterns.: Compress text by identifying
+          repeated patterns.
+      U1L5 Student Lesson:
+        title: Titel
+        description here: hier die Beschreibung
+      U1L6 Student Lesson Plan:
+        title: Titel
+        description here: hier die Beschreibung
       unique level name here:
         title: Titel
         description here: hier die Beschreibung
