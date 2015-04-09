@@ -1,5 +1,49 @@
-/** TODO(bjordan): Move this all into StudioApps */
 $(window).load(function () {
+  $.widget("custom.coloriconselectmenu", $.ui.selectmenu, {
+    /**
+     * Override the jQuery selectmenu to add a color square icon driven by the
+     * data-color attribute on select elements.
+     * @param ul
+     * @param item
+     * @returns {jQuery}
+     * @private
+     */
+    _renderItem: function (ul, item) {
+      var li = $("<li>", {text: item.label});
+      var color = item.element.attr("data-color");
+      makeColorSquareIcon(color).appendTo(li);
+      return li.appendTo(ul);
+    },
+    styleCurrentValue: function () {
+      addSquareIconToButton(this.element);
+    }
+  });
+
+  /**
+   * @param {string} color
+   * @returns {string}
+   */
+  function bgColorStyle(color) {
+    return "background-color: " + color;
+  }
+
+  /**
+   * Styles a button element to have a color square icon
+   * @param {Element} selectElement
+   */
+  function addSquareIconToButton(selectElement) {
+    var selectMenuButton = $("#" + $(selectElement).attr("id") + "-button .ui-selectmenu-text");
+    var selectedColor = $(selectElement).find("option:selected").attr("data-color");
+    makeColorSquareIcon(selectedColor).prependTo(selectMenuButton);
+  }
+
+  /**
+   * @param {string} color
+   * @returns {jQuery}
+   */
+  function makeColorSquareIcon(color) {
+    return $("<div>", {class: "color-square-icon", style: bgColorStyle(color)});
+  }
 
   /**
    * TODO(bjordan): Change usages to lodash _.curry once available in this context
@@ -30,7 +74,6 @@ $(window).load(function () {
   };
 
   var typesToColors = {};
-  typesToColors[blockValueType.NONE] = "#999999";
   typesToColors[blockValueType.NUMBER] = "#00ccff";
   typesToColors[blockValueType.STRING] = "#009999";
   typesToColors[blockValueType.IMAGE] = "#9900cc";
@@ -70,14 +113,8 @@ $(window).load(function () {
        */
       return {
         name: "",
-        rangeType: blockValueType.NONE,
-        domainTypes: [
-          {
-            key: 'domain' + this.grabUniqueID(),
-            type: blockValueType.NONE,
-            order: 0
-          }
-        ]
+        rangeType: blockValueType.NUMBER,
+        domainTypes: []
       }
     },
     onNameChangeEvent: function (event) {
@@ -107,7 +144,7 @@ $(window).load(function () {
         domainTypes:
           this.state.domainTypes.concat({
             key: 'domain' + nextDomainID,
-            type: blockValueType.NONE,
+            type: blockValueType.NUMBER,
             order: nextDomainID
           })
       });
@@ -134,7 +171,7 @@ $(window).load(function () {
             onDomainChange={this.onDomainChange}
             onDomainAdd={this.onDomainAdd}
             onDomainRemove={this.onDomainRemove}/>
-          <div id='sectionTitle'>Range</div>
+          <div id='sectionTitle' className="clear">Range</div>
           <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
         </div>
       )
@@ -147,46 +184,55 @@ $(window).load(function () {
       var sortedDomains = this.props.domainTypes.sort(function (a,b) {
         return a.order > b.order;
       });
-      var lastNode = this.props.domainTypes[this.props.domainTypes.length - 1];
       var typeChoiceNodes = sortedDomains.map(function (object) {
-        var isLastNode = (object === lastNode);
         return (
-          <div style={isLastNode ? {float: 'left'} : {}}>
+          <div className="clear">
             <TypeChooser
               order={object.order}
               type={object.type}
               key={object.key}
               onTypeChange={curry(self.props.onDomainChange, object.key)}/>
-            <button onClick={curry(self.props.onDomainRemove, object.key)}>x</button>
+            <button className="domain-x-button" onClick={curry(self.props.onDomainRemove, object.key)}>x</button>
           </div>
         );
       });
       return (
         <div className="domainsList">
           {typeChoiceNodes}
-          <button onClick={this.props.onDomainAdd}>Add Domain</button>
+          <button className="domain-add-button" onClick={this.props.onDomainAdd}>Add</button>
         </div>
       )
     }
   });
 
   var TypeChooser = React.createClass({
-    handleChange: function(event) {
-      this.props.onTypeChange(event.target.value);
+    selectmenuChange: function(selectChange) {
+      this.props.onTypeChange(selectChange.target.value);
     },
     render: function () {
       var divStyle = {
         backgroundColor: typesToColors[this.props.type]
       };
       return (
-        <select value={this.props.type} onChange={this.handleChange} style={divStyle}>
-          <option value={blockValueType.NONE} disabled style={{display: 'none'}}>Choose a Type</option>
-          <option value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
-          <option value={blockValueType.STRING}he>{blockValueType.STRING}</option>
-          <option value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
-          <option value={blockValueType.BOOLEAN}>{blockValueType.BOOLEAN}</option>
+        <select value={this.props.type} style={divStyle}>
+          <option data-color={typesToColors[blockValueType.NUMBER]} value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
+          <option data-color={typesToColors[blockValueType.STRING]} value={blockValueType.STRING}>{blockValueType.STRING}</option>
+          <option data-color={typesToColors[blockValueType.IMAGE]} value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
+          <option data-color={typesToColors[blockValueType.BOOLEAN]} value={blockValueType.BOOLEAN}>{blockValueType.BOOLEAN}</option>
         </select>
       )
+    },
+    componentDidMount: function () {
+      $(React.findDOMNode(this)).coloriconselectmenu({
+        select: function () {
+          addSquareIconToButton(this);
+        },
+        change: this.selectmenuChange
+      });
+      $(React.findDOMNode(this)).coloriconselectmenu("styleCurrentValue");
+    },
+    componentWillUnmount: function () {
+      $(React.findDOMNode(this)).coloriconselectmenu('destroy');
     }
   });
 

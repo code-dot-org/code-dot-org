@@ -40,19 +40,6 @@ textLabel("IAgreeLabel","I Agree","Agree");
 
 ____________________________________________________
 
-[example]
-
-**The Checked Item**
-Determine which radio button within a group is checked.
-
-<pre>
-
-</pre>
-
-[/example]
-
-____________________________________________________
-
 [syntax]
 
 ### Syntax
@@ -85,7 +72,8 @@ No Return Value
 ### Tips
 All checkbox buttons should always have an associated textLabel. If you have more than 2 choices, consider using a radioButton or dropdown list.
 
-The radioButton can also be used in design mode.
+The checkbox can also be used in design mode.
+
 [/tips]
 
 [bug]

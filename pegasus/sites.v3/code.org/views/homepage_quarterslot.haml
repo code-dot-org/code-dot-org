@@ -1,11 +1,13 @@
-.div.col-25.col-mobile-50{style: "float:left; height:220px; padding:10px 5px 10px 5px"}
-  %a{href: entry[:param1_s]}
-    .slotbox{style: "position:relative; overflow:hidden; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; background-position: 0% 50%"}
-      .greybox{style: "position:absolute; bottom:0px; left:0px; /*background-color: rgba(0,0,0,0.6); */ background-color: rgba(#{entry[:bgc_head]}, 0.92); color:white; width:100%; padding:10px; padding-bottom:5px; font-size:18px; text-align:left; font-family: 'Gotham 4r', sans-serif;"}
-        -# text = I18n.t(entry[:text1_s])
-        - text = entry[:text1_s]
-        = text
-        .sentence{style: "opacity: 0.9; font-size: 14px"}
-          = entry[:sentence]
-      - if entry[:watermark_s] == "codestudio"
-        %img{src: "/shared/images/codeorg-studio-logo-horizontal.png", style: "position:absolute; top:0px; left:0px; width:100px; background-color:rgba(255,255,255,0.8); padding:5px; border-radius:5px; margin-top:4px; margin-left:4px"}
+- display = entry[:active_s] == "hide" ? "none" : "block"
+.quarterslot.div.col-25.col-mobile-50{style: "display: #{display}"}
+  %a{id: "#{entry[:id_s]}_link", href: entry[:param4_s]}
+    .slotbox{style: "background-image: url(#{entry[:image_t]})"}
+      .headerbox{style: "background-color: rgb(#{entry[:param2_s]}); background-color: rgba(#{entry[:param2_s]}, 0.92); "}
+        .header.underscorehover
+          = I18n.t(entry[:text1_s])
+        .sentence
+          - unless entry[:param1_s].nil_or_empty?
+            = I18n.t(entry[:param1_s])
+          - else
+            &nbsp;
+ 
