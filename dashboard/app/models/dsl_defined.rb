@@ -59,7 +59,9 @@ class DSLDefined < Level
 
   def update(params)
     if params[:dsl_text].present?
-      self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, params.merge(name: name))
+      # Don't allow renaming
+      params.delete(:name)
+      self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, params)
     else
       super(params)
     end
