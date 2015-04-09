@@ -126,13 +126,11 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
 
   // Add our own content markup
   var newMarkup = $(markup({
-    level: this.levelConfig_,
+    controller: this,
+    showAddRouterButton: this.levelConfig_.showAddRouterButton,
     nodesOnShard: this.nodesOnShard_,
     incomingConnectionNodes: this.incomingConnectionNodes_,
-    selectedNode: this.selectedNode_,
-    remoteNode: this.remoteNode_,
-    canConnectToNode: this.canConnectToNode_.bind(this),
-    isMyNode: this.isMyNode_.bind(this)
+    remoteNode: this.remoteNode_
   }));
   this.getBody().html(newMarkup);
 
@@ -160,7 +158,7 @@ NetSimRemoteNodeSelectionPanel.prototype.onRowClick_ = function (jQueryEvent) {
   });
 
   // Don't even allow clicking on nodes we can't connect to.
-  if (!clickedNode || !this.canConnectToNode_(clickedNode)) {
+  if (!clickedNode || !this.canConnectToNode(clickedNode)) {
     return;
   }
 
@@ -175,9 +173,8 @@ NetSimRemoteNodeSelectionPanel.prototype.onRowClick_ = function (jQueryEvent) {
 /**
  * @param {NetSimNode} node
  * @returns {boolean}
- * @private
  */
-NetSimRemoteNodeSelectionPanel.prototype.isMyNode_ = function (node) {
+NetSimRemoteNodeSelectionPanel.prototype.isMyNode = function (node) {
   return this.myNodeID_ === node.entityID;
 };
 
@@ -186,11 +183,10 @@ NetSimRemoteNodeSelectionPanel.prototype.isMyNode_ = function (node) {
  * node.
  * @param {NetSimNode} connectionTarget
  * @returns {boolean} whether connection to the target is allowed
- * @private
  */
-NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode_ = function (connectionTarget) {
+NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connectionTarget) {
   // Can't connect to own node
-  if (this.isMyNode_(connectionTarget)) {
+  if (this.isMyNode(connectionTarget)) {
     return false;
   }
 
@@ -201,3 +197,41 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode_ = function (connectio
   var allowRouters = this.levelConfig_.canConnectToRouters;
   return (isClient && allowClients) || (isRouter && allowRouters);
 };
+
+/**
+ * @returns {boolean} TRUE if a node is selected in the listing.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.hasSelectedNode = function () {
+  return !!(this.selectedNode_);
+};
+
+/**
+ * @param {NetSimNode} node
+ * @returns {boolean} TRUE if the given node has the same ID as the currently
+ *          selected node.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.isSelectedNode = function (node) {
+  return node && this.selectedNode_ &&
+      node.entityID === this.selectedNode_.entityID;
+};
+
+/**
+ * @returns {boolean} TRUE if we have an open outgoing connection request.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.hasOutgoingRequest = function () {
+  return !!(this.remoteNode_);
+};
+
+/**
+ * For use with Array.prototype.filter()
+ * @param {NetSimNode} node
+ * @returns {boolean} TRUE if the given node should show up in the lobby
+ */
+NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
+  var isClient = (node.getNodeType() === NodeType.CLIENT);
+  var isRouter = (node.getNodeType() === NodeType.ROUTER);
+  var showClients = this.levelConfig_.showClientsInLobby;
+  var showRouters = this.levelConfig_.showRoutersInLobby;
+  return (isClient && showClients) || (isRouter && showRouters);
+};
+
