@@ -10618,6 +10618,14 @@ var utils = require('./utils');
  * @property {Object} categories configuration of categories within which to place blocks
  */
 
+var COLOR_PINK = '#F57AC6';
+var COLOR_PURPLE = '#BB77C7';
+var COLOR_GREEN = '#68D995';
+var COLOR_LIGHT_GREEN = '#D3E965';
+var COLOR_WHITE = '#FFFFFF';
+var COLOR_BLUE = '#64B5F6';
+var COLOR_ORANGE = '#FFB74D';
+
 exports.randomNumber = function (min, max) {
   if (typeof max === 'undefined') {
     // If only one parameter is specified, use it as the max with zero as min:
@@ -10659,9 +10667,9 @@ var standardConfig = {};
 standardConfig.blocks = [
   // Control
   {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
   {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
   {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
-  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
   {'func': 'getTime', 'block': 'getTime()', 'category': 'Control', type: 'value' },
 
   // Math
@@ -10700,22 +10708,22 @@ standardConfig.blocks = [
 standardConfig.categories = {
   'Control': {
     'color': 'blue',
-    'rgb': '#19C3E1',
+    'rgb': COLOR_BLUE,
     'blocks': []
   },
   'Math': {
-    'color': 'deeppurple',
-    'rgb': '#A38BC3',
+    'color': 'orange',
+    'rgb': COLOR_ORANGE,
     'blocks': []
   },
   'Variables': {
     'color': 'purple',
-    'rgb': '#B159AB',
+    'rgb': COLOR_PURPLE,
     'blocks': []
   },
   'Functions': {
     'color': 'green',
-    'rgb': '#48D882',
+    'rgb': COLOR_GREEN,
     'blocks': []
   },
 };
@@ -10915,7 +10923,22 @@ function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
  */
 exports.generateDropletModeOptions = function (dropletConfig) {
   var modeOptions = {
-    functions: []
+    functions: {
+    },
+    categories: {
+      arithmetic: { color: COLOR_ORANGE },
+      logic: { color: COLOR_ORANGE },
+      conditionals: { color: COLOR_BLUE },
+      loops: { color: COLOR_BLUE },
+      functions: { color: COLOR_GREEN },
+      returns: { color: COLOR_BLUE },
+      comments: { color: COLOR_WHITE },
+      containers: { color: COLOR_LIGHT_GREEN },
+      value: { color: COLOR_PURPLE },
+      command: { color: COLOR_GREEN },
+      assignments: { color: COLOR_PURPLE },
+      // errors: { },
+    }
   };
 
   populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
