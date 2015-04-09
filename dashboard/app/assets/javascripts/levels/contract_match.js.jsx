@@ -32,9 +32,9 @@ $(window).load(function () {
    * @param {Element} selectElement
    */
   function addSquareIconToButton(selectElement) {
+    var selectMenuButton = $("#" + $(selectElement).attr("id") + "-button .ui-selectmenu-text");
     var selectedColor = $(selectElement).find("option:selected").attr("data-color");
-    var hiddenSelectMenuBtn = "#" + $(selectElement).attr("id") + "-button .ui-selectmenu-text";
-    makeColorSquareIcon(selectedColor).prependTo($(hiddenSelectMenuBtn));
+    makeColorSquareIcon(selectedColor).prependTo(selectMenuButton);
   }
 
   /**
