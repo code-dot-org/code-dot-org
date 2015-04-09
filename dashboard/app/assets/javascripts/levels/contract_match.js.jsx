@@ -15,7 +15,7 @@ $(window).load(function () {
       return li.appendTo(ul);
     },
     styleCurrentValue: function () {
-      styleButton(this.element);
+      addSquareIconToButton(this.element);
     }
   });
 
@@ -31,7 +31,7 @@ $(window).load(function () {
    * Styles a button element to have a color square icon
    * @param {Element} selectElement
    */
-  function styleButton(selectElement) {
+  function addSquareIconToButton(selectElement) {
     var selectedColor = $(selectElement).find("option:selected").attr("data-color");
     var hiddenSelectMenuBtn = "#" + $(selectElement).attr("id") + "-button .ui-selectmenu-text";
     makeColorSquareIcon(selectedColor).prependTo($(hiddenSelectMenuBtn));
@@ -225,7 +225,7 @@ $(window).load(function () {
     componentDidMount: function () {
       $(React.findDOMNode(this)).coloriconselectmenu({
         select: function () {
-          styleButton(this);
+          addSquareIconToButton(this);
         },
         change: this.selectmenuChange
       });
