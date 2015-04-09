@@ -12,7 +12,7 @@
 /* global $ */
 'use strict';
 
-require('../utils'); // For Function.prototype.inherits()
+var utils = require('../utils');
 var i18n = require('../../locale/current/netsim');
 var markup = require('./NetSimSendPanel.html');
 var NetSimPanel = require('./NetSimPanel');
@@ -25,12 +25,12 @@ var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
- * @param {NetSimConnection} connection
+ * @param {NetSim} connection
  * @constructor
  * @augments NetSimPanel
  */
 var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
-    connection) {
+    netsim) {
 
   /**
    * @type {netsimLevelConfiguration}
@@ -46,12 +46,10 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
 
   /**
    * Connection that owns the router we will represent / manipulate
-   * @type {NetSimConnection}
+   * @type {NetSim}
    * @private
    */
-  this.connection_ = connection;
-  this.connection_.statusChanges
-      .register(this.onConnectionStatusChange_.bind(this));
+  this.netsim_ = netsim;
 
   /**
    * List of controllers for packets currently being edited.
@@ -224,15 +222,13 @@ NetSimSendPanel.prototype.resetPackets_ = function () {
 };
 
 /**
- * Handler for connection status changes.  Can update configuration and
- * trigger a update of this view.
- * @private
+ * Update from address for the panel, update all the packets to reflect this.
+ * @param {number} [fromAddress] default zero
  */
-NetSimSendPanel.prototype.onConnectionStatusChange_ = function () {
-  this.fromAddress_ = 0;
-  if (this.connection_.myNode && this.connection_.myNode.myWire) {
-    this.fromAddress_ = this.connection_.myNode.myWire.localAddress;
-  }
+NetSimSendPanel.prototype.setFromAddress = function (fromAddress) {
+  // fromAddress can be undefined for other parts of the sim, but within
+  // the send panel we just set it to zero.
+  this.fromAddress_ = utils.valueOr(fromAddress, 0);
 
   this.packets_.forEach(function (packetEditor) {
     packetEditor.setFromAddress(this.fromAddress_);
@@ -246,7 +242,7 @@ NetSimSendPanel.prototype.onSendButtonPress_ = function () {
     return packetEditor.getPacketBinary().substr(0, this.maxPacketSize_);
   }.bind(this));
 
-  var myNode = this.connection_.myNode;
+  var myNode = this.netsim_.myNode;
   if (myNode && packetBinaries.length > 0) {
     this.disableEverything();
     myNode.sendMessages(packetBinaries, function () {

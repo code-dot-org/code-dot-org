@@ -146,7 +146,9 @@ When /^I hold key "([^"]*)"$/ do |keyCode|
 end
 
 When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
-  @browser.execute_script("$('" + selector + "').val('" + inputText + "')");
+  @browser.execute_script("$('" + selector + "').val('" + inputText + "')")
+  @browser.execute_script("$('" + selector + "').keyup()")
+  @browser.execute_script("$('" + selector + "').change()")
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
