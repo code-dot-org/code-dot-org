@@ -1,0 +1,13 @@
+{
+  "common.js": ["./appMain", "./clientApi", "./commands", "./level_base", "./RunLoop", "./canvg/base"],
+  "maze.js": ["./maze/main"],
+  "turtle.js": ["./turtle/main"],
+  "bounce.js": ["./bounce/main"],
+  "flappy.js": ["./flappy/main"],
+  "studio.js": ["./studio/main"],
+  "jigsaw.js": ["./jigsaw/main"],
+  "calc.js": ["./calc/main"],
+  "applab.js": ["./applab/main"],
+  "eval.js": ["./eval/main"],
+  "netsim.js": ["./netsim/main"]
+}
