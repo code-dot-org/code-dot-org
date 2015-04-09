@@ -173,7 +173,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     } else {
       this.localNode = new NetSimVizNode(newLocalNode);
       this.entities_.push(this.localNode);
-      this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
+      this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
     this.localNode.isLocalNode = true;
   } else {
@@ -308,7 +308,7 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
  */
 NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
   this.entities_.push(vizEntity);
-  this.svgRoot_.find('#background_group').prepend(vizEntity.getRoot());
+  this.svgRoot_.find('#background-group').prepend(vizEntity.getRoot());
 };
 
 /**
@@ -360,8 +360,8 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Now, visited nodes belong in the foreground.
   // Move all nodes to their new, correct layers
   // Possible optimization: Can we do this with just one operation on the live DOM?
-  var foreground = this.svgRoot_.find('#foreground_group');
-  var background = this.svgRoot_.find('#background_group');
+  var foreground = this.svgRoot_.find('#foreground-group');
+  var background = this.svgRoot_.find('#background-group');
   this.entities_.forEach(function (vizEntity) {
     var isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
 

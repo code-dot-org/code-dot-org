@@ -267,19 +267,19 @@ NetSim.prototype.shouldShowAnyTabs = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.receivedMessageLog_ = new NetSimLogPanel($('#netsim_received'), {
+  this.receivedMessageLog_ = new NetSimLogPanel($('#netsim-received'), {
     logTitle: i18n.receivedMessageLog(),
     isMinimized: false,
     packetSpec: this.level.clientInitialPacketHeader
   });
 
-  this.sentMessageLog_ = new NetSimLogPanel($('#netsim_sent'), {
+  this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
     logTitle: i18n.sentMessageLog(),
     isMinimized: true,
     packetSpec: this.level.clientInitialPacketHeader
   });
 
-  this.statusPanel_ = new NetSimStatusPanel($('#netsim_status'),
+  this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
       this.disconnectFromRemote.bind(this));
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_,
@@ -298,7 +298,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Tab panel - contains instructions, my device, router, dns
   if (this.shouldShowAnyTabs()) {
     this.tabs_ = new NetSimTabsComponent(
-        $('#netsim_tabs'),
+        $('#netsim-tabs'),
         this.level,
         {
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
@@ -313,7 +313,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.tabs_.attachToRunLoop(this.runLoop_);
 }
 
-  this.sendPanel_ = new NetSimSendPanel($('#netsim_send'), this.level,
+  this.sendPanel_ = new NetSimSendPanel($('#netsim-send'), this.level,
       this);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
@@ -801,12 +801,12 @@ NetSim.prototype.render = function () {
 
   // Render left column
   if (this.isConnectedToRemote()) {
-    this.mainContainer_.find('.leftcol_disconnected').hide();
-    this.mainContainer_.find('.leftcol_connected').show();
+    this.mainContainer_.find('.leftcol-disconnected').hide();
+    this.mainContainer_.find('.leftcol-connected').show();
     this.sendPanel_.setFromAddress(myAddress);
   } else {
-    this.mainContainer_.find('.leftcol_disconnected').show();
-    this.mainContainer_.find('.leftcol_connected').hide();
+    this.mainContainer_.find('.leftcol-disconnected').show();
+    this.mainContainer_.find('.leftcol-connected').hide();
     this.lobby_.render();
   }
 
