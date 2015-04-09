@@ -1,5 +1,42 @@
 /** TODO(bjordan): Move this all into StudioApps */
 $(window).load(function () {
+  $.widget("custom.coloriconselectmenu", $.ui.selectmenu, {
+    /**
+     * Override the jQuery selectmenu to add a color square icon driven by the
+     * data-color attribute on select elements.
+     * @param ul
+     * @param item
+     * @returns {*}
+     * @private
+     */
+    _renderItem: function (ul, item) {
+      var li = $("<li>", {text: item.label});
+      var color = item.element.attr("data-color");
+      makeColorSquareIcon(color).appendTo(li);
+      return li.appendTo(ul);
+    },
+    styleCurrentValue: function () {
+      styleButton(this.element);
+    }
+  });
+
+  function bgColorStyle(color) {
+    return "background-color: " + color;
+  }
+
+  function styleButton(selectElement) {
+    var selectedColor = $(selectElement).find("option:selected").attr("data-color");
+    var hiddenSelectMenuBtn = "#" + $(selectElement).attr("id") + "-button .ui-selectmenu-text";
+    makeColorSquareIcon(selectedColor).prependTo($(hiddenSelectMenuBtn));
+  }
+
+  /**
+   * @param {string} color
+   * @returns {jQuery}
+   */
+  function makeColorSquareIcon(color) {
+    return $("<div>", {class: "color-square-icon", style: bgColorStyle(color)});
+  }
 
   /**
    * TODO(bjordan): Change usages to lodash _.curry once available in this context
@@ -30,7 +67,6 @@ $(window).load(function () {
   };
 
   var typesToColors = {};
-  typesToColors[blockValueType.NONE] = "#999999";
   typesToColors[blockValueType.NUMBER] = "#00ccff";
   typesToColors[blockValueType.STRING] = "#009999";
   typesToColors[blockValueType.IMAGE] = "#9900cc";
@@ -101,7 +137,7 @@ $(window).load(function () {
         domainTypes:
           this.state.domainTypes.concat({
             key: 'domain' + nextDomainID,
-            type: blockValueType.NONE,
+            type: blockValueType.NUMBER,
             order: nextDomainID
           })
       });
@@ -172,21 +208,25 @@ $(window).load(function () {
       };
       return (
         <select value={this.props.type} style={divStyle}>
-          <option value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
-          <option value={blockValueType.STRING}>{blockValueType.STRING}</option>
-          <option value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
-          <option value={blockValueType.BOOLEAN}>{blockValueType.BOOLEAN}</option>
+          <option data-color={typesToColors[blockValueType.NUMBER]} value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
+          <option data-color={typesToColors[blockValueType.STRING]} value={blockValueType.STRING}>{blockValueType.STRING}</option>
+          <option data-color={typesToColors[blockValueType.IMAGE]} value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
+          <option data-color={typesToColors[blockValueType.BOOLEAN]} value={blockValueType.BOOLEAN}>{blockValueType.BOOLEAN}</option>
         </select>
       )
     },
-    componentDidMount: function() {
-      $(React.findDOMNode(this)).selectmenu({
+    componentDidMount: function () {
+      $(React.findDOMNode(this)).coloriconselectmenu({
+        select: function () {
+          styleButton(this);
+        },
         change: this.selectmenuChange
       });
+      $(React.findDOMNode(this)).coloriconselectmenu("styleCurrentValue");
     },
-    componentWillUnmount: function() {
-      $(React.findDOMNode(this)).selectmenu('destroy');
-    },
+    componentWillUnmount: function () {
+      $(React.findDOMNode(this)).coloriconselectmenu('destroy');
+    }
   });
 
   var contractForm = React.render(<ContractForm />, document.getElementById('contractForm'));
