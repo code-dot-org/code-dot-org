@@ -79,7 +79,6 @@ body.modal-open .supreme-container{
   opacity: 0; 
   padding: 8px; 
   text-shadow: 0 0 5px black;
-
 }
 
 #homepage #caption_container #blankspaceleftdesktop {
@@ -243,7 +242,9 @@ body.modal-open .supreme-container{
   font-size: 20px; 
   text-align: left; 
   font-family: 'Gotham 5r', sans-serif; 
-  text-align: center
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 #homepage #gallerycolumn .thelinks {
