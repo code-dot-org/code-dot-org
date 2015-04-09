@@ -3,7 +3,7 @@
   "game_id": 38,
   "created_at": "2015-04-07T19:47:21.000Z",
   "properties": {
-    "title": "Reflection: Bit sending Widget",
+    "title": "Assessment: Bit sending Widget",
     "content1": "Complete the Lesson 2 Rubric.",
     "placeholder": "Enter your reflection here.",
     "markdown": "Describe how you contributed to this project through effective collaboration with team members. Cite specific examples of working together to solve problems. Explain your role.\n",
@@ -11,7 +11,7 @@
     "concept_ids": [
       ""
     ],
-    "name": "U1L2 Free response reflection question"
+    "name": "U1L4 Free response reflection question"
   }
 }]]></config>
 </TextMatch>

@@ -9,7 +9,12 @@
     },
     "title": "title",
     "content1": "description here",
-    "markdown": "## Unit 1: Lesson 6 - Number Systems\n\n# Background\nNumbers are just markings on paper with rules about how to get from one number to the next. The \"binary number system\" that is so fundamental to computing is a logical way of representing numbers with values that have two possible states. Representing values using a finite set of patterns in predictable sequences is the basis of a number system.\n\n\n# Lesson\n* Count using circles, triangles, and squares.\n* Create a number systems with non-numeric symbols. \n* Write the rules for counting with your number system.\n\n\n# Resources\n\n* Activity Guide: [Counting with Shapes](https://docs.google.com/a/code.org/document/d/1QX6PDWnNHIJdE3aNMrXIBmlTSyL_jiWdu-OELV0rWvA/edit)\n* Widget: [Odometer Widget](http://cspdashboard-c9-bfranke.c9.io/Odometers/)\n\n\n"
+    "markdown": "## Unit 1: Lesson 6 - Number Systems\n\n# Background\nNumbers are just markings on paper with rules about how to get from one number to the next. The \"binary number system\" that is so fundamental to computing is a logical way of representing numbers with values that have two possible states. Representing values using a finite set of patterns in predictable sequences is the basis of a number system.\n\n\n# Lesson\n* Count using circles, triangles, and squares.\n* Create a number systems with non-numeric symbols. \n* Write the rules for counting with your number system.\n\n\n# Resources\n\n* Activity Guide: [Counting with Shapes](https://docs.google.com/a/code.org/document/d/1QX6PDWnNHIJdE3aNMrXIBmlTSyL_jiWdu-OELV0rWvA/edit)\n* Widget: [Odometer Widget](http://cspdashboard-c9-bfranke.c9.io/Odometers/)\n* Peter Denning [Computation\n: A new way of science](http://denninginstitute.com/pjd/GP/overviews/ov_computation.pdf)\n\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ],
+    "name": "U1L6 Student Lesson Introduction"
   },
   "md5": "0597bde99ab49afbb3544224d1b30e43"
 }]]></config>
