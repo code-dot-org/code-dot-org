@@ -143,6 +143,17 @@ body {
   border-top-right-radius: 5px;
 }
 
+#user_hero button {
+  border: none;
+}
+#user_hero button.teacher {
+  background-color: rgb(0, 148, 202);
+}
+
+#user_hero button.student {
+  background-color: #7665a0;
+}
+
 #user_hero #welcome.teacher {
   background-color: rgb(0, 148, 202);
 }
