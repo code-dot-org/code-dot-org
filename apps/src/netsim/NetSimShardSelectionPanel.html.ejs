@@ -3,16 +3,16 @@
 %>
 <div class="content-wrap">
   <div class="field-box display-name-control">
-    <label for="netsim_lobby_name"><%= i18n.myName() %></label>
-    <input id="netsim_lobby_name" type="text" value="<%= displayName %>" <% if (displayName.length > 0) { %>disabled<% } %> />
+    <label for="netsim-lobby-name"><%= i18n.myName() %></label>
+    <input id="netsim-lobby-name" type="text" value="<%= displayName %>" <% if (displayName.length > 0) { %>disabled<% } %> />
     <% if (displayName.length === 0) { %>
-      <input id="netsim_lobby_set_name_button" type="button" value="<%= i18n.setName() %>" disabled />
+      <input id="netsim-lobby-set-name-button" type="button" value="<%= i18n.setName() %>" disabled />
     <% } %>
   </div>
   <% if (displayName.length > 0) { %>
     <div class="field-box shard-control">
-      <label for="netsim_shard_select"><%= i18n.mySection() %></label>
-      <select id="netsim_shard_select" <% if (selectedShardID) { %>disabled<% } %>>
+      <label for="netsim-shard-select"><%= i18n.mySection() %></label>
+      <select id="netsim-shard-select" <% if (selectedShardID) { %>disabled<% } %>>
         <option value="<%= SELECTOR_NONE_VALUE %>"><%= i18n.dropdownPickOne() %></option>
         <%
           var selectedAnyShard = false;
@@ -29,7 +29,7 @@
         %>
       </select>
       <% if (!selectedShardID) { %>
-        <input id="netsim_shard_confirm_button" type="button" value="<%= i18n.joinSection() %>" <% if (!selectedAnyShard) { %>disabled<% } %> />
+        <input id="netsim-shard-confirm-button" type="button" value="<%= i18n.joinSection() %>" <% if (!selectedAnyShard) { %>disabled<% } %> />
       <% } %>
     </div>
   <% } %>
