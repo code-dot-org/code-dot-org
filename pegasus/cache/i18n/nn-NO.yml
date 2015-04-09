@@ -136,6 +136,7 @@
   stats_michael: '"Jeg har <b>aldri, noensinne</b> sett elevene mine så interessert
     i å lære." - Michael Clark, Lærer'
   studiobar_title: Prøv ut <a href='http://studio.code.org'>«Kode Studio»</a>
+  studiobar_title_nolink: Prøv ut Kode Studio
   studiobar_elementary_title: Grunnleggande kurs
   studiobar_elementary_body: Våre tre nye kurs for barnetrinnet
   studiobar_hoc_title: Kodetimen
@@ -162,19 +163,28 @@
     Satya, CEO i Microsoft
   homepage_hero_text_bosh: '"Hvis du kan programmere, kan du velge og vrake retningen
     til ditt eget liv." Chris Bosh'
-  homepage_hero_text_student1: '"Disse ferdighetene har endret min fremtid. For ikke
-    å snakke om at det rett og slett er morsomt." '
-  homepage_hero_text_student2: '"Jeg har aldri før sett mine barn så begeistret for
-    å lære." '
-  homepage_hero_text_student3: '"Informatikk er et felt du ikke kan vite om du liker
-    eller ikke før du prøver det."'
-  homepage_hero_text_student4: '"Du kan gjøre alt du kan forestille deg med programmering." '
-  homepage_hero_text_student5: '"Informatikk er ikke for alle andre. Det er for deg,
-    her, nå." '
-  homepage_hero_text_teacher1: '"Koding utløser kreativitet, inspirasjon og innovasjon
-    &mdash; alle like viktige for enhver karrière." '
-  homepage_hero_text_teacher2: '"Dette programmet gjorde 100% av elevene mine engasjert,
-    involvert og deltagende." '
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frost med Anna og Elsa
   homepage_slot_text_teacher: Teacher Dashboard
