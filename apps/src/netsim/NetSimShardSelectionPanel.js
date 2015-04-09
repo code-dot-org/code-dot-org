@@ -101,17 +101,17 @@ NetSimShardSelectionPanel.prototype.render = function () {
   this.getBody().html(newMarkup);
 
   // Bind handlers
-  var nameField = this.getBody().find('#netsim_lobby_name');
+  var nameField = this.getBody().find('#netsim-lobby-name');
   nameField.keyup(this.onNameKeyUp_.bind(this));
 
-  var setNameButton = this.getBody().find('#netsim_lobby_set_name_button');
+  var setNameButton = this.getBody().find('#netsim-lobby-set-name-button');
   setNameButton.click(this.setNameButtonClick_.bind(this));
 
-  var shardSelect = this.getBody().find('#netsim_shard_select');
+  var shardSelect = this.getBody().find('#netsim-shard-select');
   shardSelect.change(this.onShardSelectChange_.bind(this));
   shardSelect.keyup(this.onShardSelectKeyUp_.bind(this));
 
-  var setShardButton = this.getBody().find('#netsim_shard_confirm_button');
+  var setShardButton = this.getBody().find('#netsim-shard-confirm-button');
   setShardButton.click(this.setShardButtonClick_.bind(this));
 
   // At the end of any render we should focus on the earliest unsatisfied
@@ -130,7 +130,7 @@ NetSimShardSelectionPanel.prototype.render = function () {
  */
 NetSimShardSelectionPanel.prototype.onNameKeyUp_ = function (jQueryEvent) {
   var name = jQueryEvent.target.value;
-  var setNameButton = this.getBody().find('#netsim_lobby_set_name_button');
+  var setNameButton = this.getBody().find('#netsim-lobby-set-name-button');
   setNameButton.attr('disabled', name.length === 0);
 
   if (name.length > 0 && jQueryEvent.which === KeyCodes.ENTER) {
@@ -140,7 +140,7 @@ NetSimShardSelectionPanel.prototype.onNameKeyUp_ = function (jQueryEvent) {
 
 /** @private */
 NetSimShardSelectionPanel.prototype.setNameButtonClick_ = function () {
-  this.setNameCallback_(this.getBody().find('#netsim_lobby_name').val());
+  this.setNameCallback_(this.getBody().find('#netsim-lobby-name').val());
 };
 
 /**
@@ -149,7 +149,7 @@ NetSimShardSelectionPanel.prototype.setNameButtonClick_ = function () {
  */
 NetSimShardSelectionPanel.prototype.onShardSelectChange_ = function (jQueryEvent) {
   var shardID = jQueryEvent.target.value;
-  var setShardButton = this.getBody().find('#netsim_shard_confirm_button');
+  var setShardButton = this.getBody().find('#netsim-shard-confirm-button');
   setShardButton.attr('disabled', !shardID || shardID === SELECTOR_NONE_VALUE);
 };
 
@@ -167,5 +167,5 @@ NetSimShardSelectionPanel.prototype.onShardSelectKeyUp_ = function (jQueryEvent)
 
 /** @private */
 NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
-  this.setShardCallback_(this.getBody().find('#netsim_shard_select').val());
+  this.setShardCallback_(this.getBody().find('#netsim-shard-select').val());
 };
