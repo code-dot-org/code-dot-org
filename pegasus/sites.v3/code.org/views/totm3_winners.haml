@@ -1,15 +1,29 @@
 .row#infobottom{style: "/*margin: 0 auto; width: 800px; */ font-weight: 400; font-size: 16px; color: #ea7717;"}
   .col-xs-6.col-sm-4{style: "text-align:center"}
-    %img{src: "/images/totm8.jpg", style: "width: 240px"}
+    <a href="http://blog.code.org/post/103221429853/totm8"><div class="totm-image totm8"></div></a> 
     %br/
-    Computer science is solving problems that transcend age, gender, race, etc.
+    "Computer science is solving problems that transcend age, gender, race, etc."
 
   .col-xs-6.col-sm-4{style: "text-align:center"}
-    %img{src: "/images/totm7.png", style: "width: 240px"}
+    <a href="http://blog.code.org/post/99075187308/totm7"><div class="totm-image totm7"></div></a>
     %br/
-    Computer science teaches problem solving at its core.
+    "Computer science teaches problem solving at its core."
 
   .hidden-xs.col-sm-4{style: "text-align:center"}
-    %img{src: "/images/totm6.jpg", style: "width: 240px"}
+    <a href="http://blog.code.org/post/96187918138/totm6"><div class="totm-image totm6"></div></a>
     %br/
-    Computers are a huge part of kids’ world today, and it’s crucial to help them build their understanding of that world
+    "Computers are a huge part of kids’ world today, and it’s crucial to help them build their understanding of that world"
+
+:css
+  .totm-image {
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    height: 180px;
+    margin-top: 20px;
+    border-radius: 120px;
+  }
+
+  .totm8 {background: url(/images/fit-280/totm8.jpg) 5% 1% no-repeat;}
+  .totm7 {background: url(/images/fit-330/totm7.png) 30% 10% no-repeat;}
+  .totm6 {background: url(/images/fit-360/totm6.jpg) 0% 50% no-repeat;}
