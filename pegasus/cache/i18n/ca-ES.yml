@@ -34,7 +34,7 @@
   hoc2014_teachers: Mestres
   hoc2014_host: Acolliu-ho
   hoc2014_everyone: Tothom
-  hoc2014_support: "Doneu-li suport &#x25BE;"
+  hoc2014_support: Doneu-li suport &#x25BE;
   hoc2014_whatishoc: Què és l'Hora del Codi?
   twentyhours_trynow: Intenteu-ho ara
   california_heading: Demaneu a la vostra escola que ensenyin informàtica
@@ -116,8 +116,9 @@
   learn_classes: Troba classes locals
   hoc_is_here: 'La #HourOfCode és aquí - prova-ho! @codeorg'
   just_did_hoc: 'Acabo de fer la #HourOfCode - Fes-ho! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Per què no hi ha més escoles que ensenyin informàtica? Nosaltres
+    ho podem arreglar. http://youtu.be/nKIu9yen5nc. Visita http://code.org/ per obtenir
+    més informació.
   learn_hoc: Aprendre una hora del codi
   beyond_hoc: Més enllà d'una hora
   what_gender: Quin gènere ets?
@@ -139,7 +140,7 @@
     Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     - Michael Clark, Teacher'
-  studiobar_title: Explora el Code Studio
+  studiobar_title: Explora el <a href='http://studio.code.org'> Code Studio</a>
   studiobar_elementary_title: Cursos elementals
   studiobar_elementary_body: Els nostres tres cursos nous per cicle&#8209;superior
     de primària
@@ -156,33 +157,56 @@
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
+    mention, it's just plain fun.&rdquo; \n"
+  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
+    about learning.&rdquo; \n"
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo; \n"
+  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
+    involved and participating.&rdquo; \n"
   homepage_slot_text_hoc: L'Hora de Codi
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frozen amb l'Anna i l'Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Tots els nostres tutorials
   homepage_slot_text_course4: Curs 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Codi Flappy
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
+  homepage_action_text_codevideo: Mira el vídeo
+  homepage_action_text_teachervideo: Mira el vídeo
+  homepage_action_text_learn: Comença a aprendre avui
+  homepage_action_text_signpetition: Signa la petició
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
   homepage_slot_text_title_hoc: Hora del codi
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: Proveu l'Hora de programació
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
@@ -190,17 +214,17 @@
   homepage_slot_text_blurb_students: Explore all of our tutorials
   homepage_slot_text_link_codestudio: Try Code Studio
   homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_link_othercourses: Altres cursos online
+  homepage_slot_text_title_educators: Educadors
   homepage_slot_text_blurb_educators: Teach your students
   homepage_slot_text_link_k5: Courses for grades K-5
   homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_link_pd: Desenvolupament professional
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_link_buy: Compra una samarreta o un barret
+  homepage_slot_text_link_donate: Fes una donació
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
   homepage_donors_seall: See all
@@ -411,8 +435,8 @@
   dashboard_login_picture: Imatge
   dashboard_login_none: Email
   dashboard_new_password: Nova contrasenya
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: no començat
+  dashboard_progress_in_progress: En curs
   dashboard_progress_not_completed: no finalitzat
   dashboard_progress_completed_too_many_blocks: completat, massa blocs
   dashboard_progress_completed_perfect: completat, perfecte
@@ -1135,26 +1159,3 @@
   sphero_beyond_longdescription: Si ets educador o un pare, les lliçons SPRK donen
     als nens un divertit curs accelerat a la programació de robots de mentre  milloren
     les seves habilitats en matemàtiques i ciències.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "

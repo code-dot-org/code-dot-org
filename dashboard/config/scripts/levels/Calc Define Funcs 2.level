@@ -21,8 +21,11 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
-  }
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "input_output_table": "[[15,5],[20,10],[33,23],[42,32]]"
+  },
+  "md5": "9e17676fb6226a44b86d5f6eda7d8c8e"
 }]]></config>
   <blocks>
     <toolbox_blocks>

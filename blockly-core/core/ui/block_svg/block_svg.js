@@ -855,7 +855,7 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
     // current x/y location
     curX: iconWidth,
     curY: 0
-  }
+  };
 
   this.renderDrawTop_(renderInfo, inputRows.rightEdge, connectionsXY);
   this.renderDrawRight_(renderInfo, connectionsXY, inputRows, iconWidth);

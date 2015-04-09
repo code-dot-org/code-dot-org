@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-02-27T20:51:13.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "markdown": "# Header\n\n# Some content\n\nparagraph text\n\n\n",
+    "title": "demo title",
+    "content1": "demo description"
+  },
+  "md5": "276a916cf8c58bd690bcaec8342673a2"
+}]]></config>
+</External>

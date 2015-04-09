@@ -399,7 +399,13 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
             msg.levelIncompleteError();
         break;
       case TestResults.EXTRA_TOP_BLOCKS_FAIL:
-        message = options.level.extraTopBlocks || msg.extraTopBlocks();
+        var hasWhenRun = Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
+          return block.type === 'when_run' && block.isUserVisible();
+        });
+
+        var defaultMessage = hasWhenRun ?
+          msg.extraTopBlocksWhenRun() : msg.extraTopBlocks();
+        message = options.level.extraTopBlocks || defaultMessage;
         break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;

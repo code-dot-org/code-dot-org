@@ -1,0 +1,21 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-03T20:43:24.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "title": "title",
+    "content1": "description here",
+    "markdown": "## Unit 1: Lesson 3 - Sending More Complex Messages\n\n# Background\nThe word \"bit\" comes from the contraction: \"binary digit.\" A bit is the unit of a binary message, it is a name for the thing that can represent one of two possible states. A bit sending device can be used to send any kind of message, as long as the message is binary and a communication protocol has been established. Bits can be grouped together to send more complex messages.\n\n# Lesson\n\n* Use your bit-sending device to send a message that has more than two possibilities. \n* Invented a system of communication that uses combinations of binary messages. \n* Use the term \"bit\" as another way to describe a binary message. \n\n\n# Resources\n\n* Activity Guide: [Bit-sending Device](https://docs.google.com/document/d/1FY6RjnY8P8cLd8CYwm8nNnvVqN2dFlww0kSi_LIMoDw/edit?usp=sharing)\n* Assessment: [Bit-sending Device Rubric](https://docs.google.com/document/d/1N5lkggG807XKiu5kRLmBc1xm4ELQLfEoQhrLUKb59bw/edit?usp=sharing)\n\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ],
+    "name": "U1L3 Student Lesson Introduction"
+  },
+  "md5": "2d7747fc7093d905444894124c7ed362"
+}]]></config>
+</External>

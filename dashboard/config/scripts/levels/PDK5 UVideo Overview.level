@@ -1,0 +1,22 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-02-24T23:11:06.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Are you ready to move on?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Yes",
+        "correct": true
+      }
+    ],
+    "title": "Teacher Guides to all our unplugged activities",
+    "markdown": "At this point, you may be saying to yourself, how do I learn about all the unplugged activities I'm supposed to be teaching? The lesson plans for each activity explain in depth what you need to know and have on hand to teach that lesson, but if you're looking for a quick overview, Kiki Prottsman, who is Executive Director for [Thinkersmith](http://thinkersmith.org/) who collaborated to create this curriculum, has produced videos that explain each one of the unplugged activities in Courses 1, 2, and 3. \n\n[View Course 1 unplugged activity teacher videos here](https://www.youtube.com/playlist?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)\n\n[View Course 2 unplugged activity teacher videos here](https://www.youtube.com/playlist?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)\n\n[View Course 3 unplugged activity teacher videos here](https://www.youtube.com/playlist?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)\n\nThese teacher-facing videos are different from the videos that are presented to students while they go through the Code Studio courses. Check out this teacher-facing video on how to do an unplugged activity from Course 1:\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/icVRxFr39AU\" frameborder=\"0\" allowfullscreen></iframe>\n"
+  },
+  "md5": "87af22ef467383f24851fa1b4d303da2"
+}]]></config>
+</Multi>

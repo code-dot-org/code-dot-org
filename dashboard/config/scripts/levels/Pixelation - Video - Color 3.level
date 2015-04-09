@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-04T16:58:28.000Z",
+  "properties": {
+    "title": "Pixelation - Video - Color 3",
+    "content1": "description here",
+    "markdown": "# How to use hex to type bits more quickly\nMaddie demonstrates how to use the hexadecimal number system to encode colors.  Reminder: hex is not a compression scheme - it doesn't not change the underlying binary code.  Hex is a useful way to view bits because we can represent a 4-bit chunk with a single character.\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Y_yQk6DKZs0\" frameborder=\"0\" allowfullscreen></iframe>\n</br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    }
+  },
+  "md5": "b02ea5bcde7f3f903a29a1e0c47552f8"
+}]]></config>
+</External>

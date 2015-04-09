@@ -8,6 +8,7 @@
 goog.provide('Blockly.FunctionEditor');
 
 goog.require('Blockly.BlockSpace');
+goog.require('Blockly.BlockSpaceEditor');
 goog.require('Blockly.HorizontalFlyout');
 goog.require('goog.style');
 goog.require('goog.dom');
@@ -67,6 +68,8 @@ Blockly.FunctionEditor = function() {
   this.modalBlockSpace = null;
 };
 
+Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
+Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
 
 /**
  * The type of block to instantiate in the function editing area
@@ -124,6 +127,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
   this.functionDefinitionBlock.setMovable(false);
   this.functionDefinitionBlock.setDeletable(false);
+  this.functionDefinitionBlock.setEditable(false);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
 
@@ -394,8 +398,8 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace = function(blockToMove) {
   blockToMove.dispose(false, false, true);
   var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
   newCopyOfBlock.moveTo(Blockly.RTL
-    ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
-    : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+    ? this.modalBlockSpace.getMetrics().viewWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN
+    : Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN, Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN);
   newCopyOfBlock.setCurrentlyHidden(false);
   newCopyOfBlock.setUserVisible(true, true);
   return newCopyOfBlock;
@@ -545,8 +549,8 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
   }
 
   var currentX = Blockly.RTL ?
-    this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE :
-    FRAME_MARGIN_SIDE;
+    this.modalBlockSpace.getMetrics().viewWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN :
+    Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
   var currentY = 0;
   currentY += this.flyout_.getHeight();
   this.flyout_.customYOffset = currentY;
@@ -554,7 +558,7 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
 
   this.modalBlockSpace.trashcan.setYOffset(currentY);
 
-  currentY += FRAME_MARGIN_TOP;
+  currentY += Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN;
   this.functionDefinitionBlock.moveTo(currentX, currentY);
 };
 

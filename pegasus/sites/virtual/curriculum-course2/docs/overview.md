@@ -40,6 +40,7 @@ Online lessons are in regular text and unplugged activities are in **bolded** te
 | 19 | Artist: Nested Loops            | Students write programs that draw interesting and beautiful patterns using nested loops.                                                                                                                          |
 
 
+
 [/lesson-table]
 
 [/content]
