@@ -34,6 +34,7 @@ ____________________________________________________
 
 **List of Favorite Colors**
 Creates a list of colors to choose from.
+
 <pre>
 // Creates a list of color options
 textLabel("RedLabel","Red","Red");
@@ -52,7 +53,8 @@ ____________________________________________________
 [example]
 
 **Radio button click events**
-In this example, we retrieve and display your favorite color.
+Retrieve and display your favorite color each time the radio button is clicked.
+
 <pre>
 // Creates a list of color options
 textLabel("RedLabel","Red","Red");
@@ -88,9 +90,8 @@ ____________________________________________________
 [example]
 
 **Finding the Checked Item**
-Determine which radio button within a group is checked.
+In this example, we iterate over the radio buttons in a group to determine which one is selected each time the favorite button is clicked.
 
-In this example, we retrieve and display your favorite color when the "favorite" button is clicked.
 <pre>
 // Creates a list of color options
 textLabel("RedLabel","Red","Red");
@@ -109,13 +110,12 @@ onEvent("favorite","click", function(event) {
     var radioIDs = ["Red","Blue","Green","Orange"];
     var index = 0;
     // Loop through radio buttons until one is checked
-    while (index<radioIDs.length && !getChecked(radioIDs[index])) {
+    while (index &lt; radioIDs.length && !getChecked(radioIDs[index])) {
       index++;
     }
     // Log the checked button
     console.log("Your favorite color is: " + radioIDs[index])
 })
-
 </pre>
 
 [/example]
@@ -156,6 +156,7 @@ No Return Value
 All radio buttons should always have an associated textLabel. If you are asked a Yes/No question, consider using a checkbox element instead..
 
 The radioButton can also be used in design mode.
+
 [/tips]
 
 [bug]

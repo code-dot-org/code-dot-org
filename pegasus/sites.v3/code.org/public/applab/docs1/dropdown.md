@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## dropDown(id, option1, option2, ..., optionX)
+## dropdown(id, option1, option2, ..., optionX)
 
 [/name]
 
@@ -19,7 +19,8 @@ Category: UI controls
 
 [short_description]
 
-Creates a dropDown list. A dropDown list is used to select from a list of options and can be referenced by the specified ID.
+Creates a dropdown list. A dropdown list is used to select from a list of options and can be referenced by the specified ID.
+
 [/short_description]
 
 [/description]
@@ -30,23 +31,13 @@ ____________________________________________________
 [example]
 **Choose a Month**
 <pre>
-// Create a list
+// Create a drop down for each month
 textLabel("stateLabel","State ", "state");
-dropDown("state","January","February","March","April","May","June","July","August","September","October","November","December");
+dropdown("state","January","February","March","April","May","June","July","August","September","October","November","December");
+// Log each time a new month is selected.
 onEvent("state", "change", function() {
   console.log(getText("state"));
 });
-</pre>
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-**Color the Turtle**
-<pre>
-
 </pre>
 
 [/example]
@@ -57,7 +48,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-button("uniqueIdentifier",false, "GroupName")
+dropdown(id, option1, option2, ..., optionX)
 </pre>
 
 [/syntax]
@@ -83,7 +74,9 @@ No Return Value
 [tips]
 
 ### Tips
-All dropDown list should always have an associated textLabel.
+All dropdown list usually as an associated textLabel.
+
+The dropdown list can also be used in design mode.
 
 [/tips]
 
