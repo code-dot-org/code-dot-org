@@ -79,18 +79,6 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   this.visualizationHeight = 300;
 
   /**
-   * Key used to unregister from the node table.
-   * @type {Object}
-   */
-  this.nodeTableChangeKey = undefined;
-
-  /**
-   * Key used to unregister from the wire table.
-   * @type {Object}
-   */
-  this.wireTableChangeKey = undefined;
-
-  /**
    * Event registration information
    * @type {Object}
    */
@@ -150,26 +138,25 @@ NetSimVisualization.prototype.onShardChange_= function (newShard, localNode) {
  * @param {?NetSimShard} newShard - null if disconnected
  */
 NetSimVisualization.prototype.setShard = function (newShard) {
-  if (this.nodeTableChangeKey !== undefined) {
-    this.shard_.nodeTable.tableChange.unregister(this.nodeTableChangeKey);
-    this.nodeTableChangeKey = undefined;
-  }
-
-  if (this.wireTableChangeKey !== undefined) {
-    this.shard_.wireTable.tableChange.unregister(this.wireTableChangeKey);
-    this.wireTableChangeKey = undefined;
-  }
-
   this.shard_ = newShard;
-  if (!this.shard_) {
-    return;
+
+  // If we were registered for shard events, unregister old handlers.
+  if (this.eventKeys.registeredWithShard) {
+    this.eventKeys.registeredWithShard.nodeTable.tableChange.unregister(
+        this.eventKeys.nodeTable);
+    this.eventKeys.registeredWithShard.wireTable.tableChange.unregister(
+        this.eventKeys.wireTable);
+    this.eventKeys.registeredWithShard = null;
   }
 
-  this.nodeTableChangeKey = this.shard_.nodeTable.tableChange.register(
-      this.onNodeTableChange_.bind(this));
-
-  this.wireTableChangeKey = this.shard_.wireTable.tableChange.register(
-      this.onWireTableChange_.bind(this));
+  // If we have a new shard, register new handlers.
+  if (newShard) {
+    this.eventKeys.nodeTable = newShard.nodeTable.tableChange.register(
+        this.onNodeTableChange_.bind(this));
+    this.eventKeys.wireTable = newShard.wireTable.tableChange.register(
+        this.onWireTableChange_.bind(this));
+    this.eventKeys.registeredWithShard = newShard;
+  }
 };
 
 /**
