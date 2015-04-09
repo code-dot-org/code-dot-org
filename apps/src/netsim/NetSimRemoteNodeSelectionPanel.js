@@ -134,13 +134,13 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   }));
   this.getBody().html(newMarkup);
 
-  this.addRouterButton_ = this.getBody().find('#netsim_lobby_add_router');
+  this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
 
-  this.connectButton_ = this.getBody().find('#netsim_lobby_connect');
+  this.connectButton_ = this.getBody().find('#netsim-lobby-connect');
   this.connectButton_.click(this.connectButtonCallback_);
 
-  this.cancelButton_ = this.getBody().find('#netsim_lobby_cancel');
+  this.cancelButton_ = this.getBody().find('#netsim-lobby-cancel');
   this.cancelButton_.click(this.cancelButtonCallback_);
 
   this.getBody().find('.selectable-row').click(this.onRowClick_.bind(this));
