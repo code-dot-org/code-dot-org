@@ -460,7 +460,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
 
   // If there's only one possible shard, select it by default
   if (this.shardChoices_.length === 1 && !this.selectedShardID_) {
-    this.selectedShardID_ = this.shardChoices_[0].shardID;
+    this.setShardID(this.shardChoices_[0].shardID);
   }
 };
 
