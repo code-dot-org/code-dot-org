@@ -31,6 +31,31 @@
   var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
+  function isEncodingEnabled(queryEncoding) {
+    return enabledEncodings.some(function (enabledEncoding) {
+      return enabledEncoding === queryEncoding;
+    });
+  }
+
+  /**
+   * Packet one-line summary should only use the highest-level enabled encoding.
+   */
+  function getOneLinePacketSummary() {
+    var messageBinary = packet.getBodyAsBinary();
+    if (isEncodingEnabled(EncodingType.ASCII)) {
+      return binaryToAscii(messageBinary, chunkSize);
+    } else if (isEncodingEnabled(EncodingType.DECIMAL)) {
+      return alignDecimal(binaryToDecimal(messageBinary, chunkSize));
+    } else if (isEncodingEnabled(EncodingType.HEXADECIMAL)) {
+      return formatHex(binaryToHex(messageBinary), chunkSize);
+    } else if (isEncodingEnabled(EncodingType.BINARY)) {
+      return formatBinary(messageBinary, chunkSize);
+    } else if (isEncodingEnabled(EncodingType.A_AND_B)) {
+      return formatAB(binaryToAB(messageBinary), chunkSize);
+    }
+    return messageBinary;
+  }
+
   function packetControls() {
     %>
       <div class="packet-controls">
@@ -83,7 +108,7 @@
   %>
   <% if (isMinimized) { %>
       <% packetControls(); %>
-      <div class="single-line-with-ellipsis user-data"><%= formatBinary(message, chunkSize) %></div>
+      <div class="single-line-with-ellipsis user-data"><%= getOneLinePacketSummary() %></div>
   <% } else { %>
     <table>
       <thead>
