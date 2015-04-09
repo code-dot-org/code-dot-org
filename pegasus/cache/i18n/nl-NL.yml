@@ -142,6 +142,7 @@
   stats_michael: '"Ik heb <b> nog nooit </b> mijn leerlingen zo enthousiast gezien
     over leren" -Michael Clark, leraar'
   studiobar_title: ontdek <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title_nolink: ontdek Code Studio
   studiobar_elementary_title: Cursussen voor gevorderden
   studiobar_elementary_body: Onze drie Nieuwe Cursussen voor K&#8209;5
   studiobar_hoc_title: Het Hour of Code
@@ -170,20 +171,28 @@
     ter wereld.&rdquo; Satya, directeur van Microsoft'
   homepage_hero_text_bosh: '&ldquo;Als je programmeert kun je zelf je leven bepalen.&rdquo;
     Chris Bosh'
-  homepage_hero_text_student1: '&ldquo;Deze vaardigheden hebben mijn toekomst veranderd.
-    Bovendien is het gewoon leuk.&rdquo; '
-  homepage_hero_text_student2: '&ldquo;Ik heb mijn kinderen nog nooit zo enthousiast
-    gezien over leren.&rdquo; '
-  homepage_hero_text_student3: '&ldquo;Informatica is een vakgebied waarvan je niet
-    kunt weten of je het leuk vindt voor je het probeert.&rdquo;'
-  homepage_hero_text_student4: '&ldquo;Als je programmeert kun je alles doen wat je
-    kunt bedenken.&rdquo; '
-  homepage_hero_text_student5: '&ldquo;Informatica is niet voor anderen. Het is voor
-    jou, hier, nu.&rdquo; '
-  homepage_hero_text_teacher1: '&ldquo;Programmeren bevordert creativiteit, inspiratie
-    en innovatie &mdash; dat is belangrijk in ieder vak.&rdquo; '
-  homepage_hero_text_teacher2: '&ldquo;Dit lesprogramma boeide 100% van mijn leerlingen,
-    ze zijn allemaal gemotiveerd en doen mee.&rdquo; '
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Het Uur Code
   homepage_slot_text_frozen: Frozen met Anna en Elsa
   homepage_slot_text_teacher: Dashboard Leerkrachten

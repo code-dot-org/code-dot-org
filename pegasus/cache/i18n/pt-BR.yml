@@ -139,6 +139,7 @@
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
     - Michael Clark, professor'
   studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title_nolink: Explore o Code Studio
   studiobar_elementary_title: Cursos para o Ensino Fundamental
   studiobar_elementary_body: Nossos três novos cursos para Ensino Fundamental
   studiobar_hoc_title: A Hour of Code
@@ -175,21 +176,28 @@
     &ldquo;Se você programa, você pode escolher
     o rumo da sua vida.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: "&ldquo;Essas habilidades mudaram meu futuro.\nSem
-    contar que é pura diversão.&rdquo; \n"
-  homepage_hero_text_student2: "&ldquo;Eu nunca vi meus filhos tão\nanimados em aprender.&rdquo;
-    \n"
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
   homepage_hero_text_student3: |
-    &ldquo;A ciência da computação é um campo que você não
-    pode dizer se gosta ou não antes de tê-lo experimentado.&rdquo;
-  homepage_hero_text_student4: "&ldquo;Você pode fazer o que quiser\ncom a programação.&rdquo;
-    \n"
-  homepage_hero_text_student5: "&ldquo;A ciência da computação não é para outra\npessoa.
-    É para você, aqui e agora.&rdquo; \n"
-  homepage_hero_text_teacher1: "&ldquo;Programar desperta a criatividade, inspiração
-    e inovação &mdash;\ntudo o que é essencial em qualquer carreira.&rdquo; \n"
-  homepage_hero_text_teacher2: "&ldquo;Esse programa fez 100% dos meus alunos se\nengajarem,
-    se envolverem e participarem.&rdquo; \n"
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel de controle do professor
