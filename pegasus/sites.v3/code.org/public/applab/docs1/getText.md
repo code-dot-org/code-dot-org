@@ -18,7 +18,9 @@ Category: UI controls
 [description]
 
 [short_description]
+
 Gets the text value of the input control specified by the id. This returns the displayed value. For drop down lists, getText returns the currently selected option.
+
 [/short_description]
 
 [/description]
@@ -28,11 +30,10 @@ ____________________________________________________
 
 [example]
 
-** Count the clicks **
+**Count the clicks**
 Every time the button is clicked, the value will increment.
 <pre>
 button("counter","1");
-
 onEvent("counter", "click", function(event) {
   // Get the current value and convert it to a number
   var currentValue = parseInt(getText("counter"));
@@ -45,11 +46,28 @@ onEvent("counter", "click", function(event) {
 
 ____________________________________________________
 
+[example]
+
+**Choose a Month**
+Demonstrates how to use getText with a dropdown list to retrieve the selected item.
+<pre>
+// Create a drop down for each month
+textLabel("stateLabel","State ", "state");
+dropdown("state","January","February","March","April","May","June","July","August","September","October","November","December");
+// Log each time a new month is selected.
+onEvent("state", "change", function() {
+  console.log(getText("state"));
+});
+</pre>
+
+[/example]
+
+____________________________________________________
 [syntax]
 
 ### Syntax
 <pre>
-setText(id,text)
+getText(id)
 </pre>
 
 [/syntax]
@@ -67,7 +85,7 @@ setText(id,text)
 [returns]
 
 ### Returns
-No Return Value
+The string text value of the specified control.
 
 [/returns]
 

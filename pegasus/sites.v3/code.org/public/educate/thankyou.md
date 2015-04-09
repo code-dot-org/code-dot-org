@@ -5,7 +5,7 @@ nav: educate_nav
 
 # Thank You for Applying!
 
-We will be in touch in the next couple of weeks with the next steps in the process. Please email [PD@Code.org](mailto:pd@code.org) with any questions.
+We will be in touch in the next couple of weeks on whether you've been accepted due to limits on capacity. Please email [PD@Code.org](mailto:pd@code.org) with any questions.
 
 # Also, can you refer a great K-5 Teacher?
 
