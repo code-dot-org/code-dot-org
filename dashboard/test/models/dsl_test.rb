@@ -45,5 +45,6 @@ class DslTest < ActiveSupport::TestCase
     level = level.update(dsl_text: "name 'test external 2'\ntitle 'abc'", video_key: 'zzz')
     assert_equal 'zzz', level.video_key
     assert_equal 'abc', level.properties['title']
+    assert_nil level.properties['name']
   end
 end
