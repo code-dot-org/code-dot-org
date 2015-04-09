@@ -386,7 +386,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
  */
 NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
   NetSimLocalClientNode.create(this.shard_, function (err, node) {
-    if (err !== null) {
+    if (err) {
       logger.error("Failed to create client node; " + err.message);
       return;
     }
@@ -503,15 +503,16 @@ NetSim.prototype.connectToRouter = function (routerID) {
 
   var self = this;
   NetSimRouterNode.get(routerID, this.shard_, function (err, router) {
-    if (err !== null) {
-      logger.warn('Failed to find router with ID ' + routerID + '; ' + err.message);
+    if (err) {
+      logger.warn('Failed to find router with ID ' + routerID + '; ' +
+          err.message);
       return;
     }
 
     self.myNode.connectToRouter(router, function (err) {
       if (err) {
         logger.warn('Failed to connect to ' + router.getDisplayName() + '; ' +
-        err.message);
+            err.message);
       }
     });
   });

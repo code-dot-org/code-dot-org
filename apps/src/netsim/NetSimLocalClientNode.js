@@ -118,14 +118,14 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
  */
 NetSimLocalClientNode.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimLocalClientNode, shard, function (err, node) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, node);
       return;
     }
 
     // Give our newly-created local node a heartbeat
     NetSimHeartbeat.getOrCreate(shard, node.entityID, function (err, heartbeat) {
-      if (err !== null) {
+      if (err) {
         onComplete(err, null);
         return;
       }
@@ -233,8 +233,8 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
 
   var self = this;
   NetSimLocalClientNode.superPrototype.update.call(this, function (err, result) {
-    if (err !== null) {
-      logger.error("Update failed.");
+    if (err) {
+      logger.error("Local node update failed: " + err.message);
       if (self.onNodeLostConnection_ !== undefined) {
         self.onNodeLostConnection_();
       }
@@ -252,10 +252,12 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
 NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete) {
   NetSimLocalClientNode.superPrototype.connectToNode.call(this, otherNode,
       function (err, wire) {
-        if (!err) {
+        if (err) {
+          onComplete(err, null);
+        } else {
           this.myWire = wire;
+          onComplete(err, wire);
         }
-        onComplete(err, wire);
       }.bind(this));
 };
 
@@ -363,7 +365,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
       payload,
       function (err) {
         if (err) {
-          logger.error('Failed to send message; ' + err.message + ': ' +
+          logger.error('Failed to send message: ' + err.message + "\n" +
               JSON.stringify(payload));
           onComplete(err);
           return;
@@ -391,7 +393,7 @@ NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
   }
 
   this.sendMessage(payloads[0], function (err, result) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, result);
       return;
     }
