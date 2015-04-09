@@ -184,18 +184,18 @@ svg {
   //
   //General two-column layout rules
   //
-  #netsim_rightcol {
+  #netsim-rightcol {
     float: right;
     width: 300px;
 
-    #netsim_visualization {
+    #netsim-visualization {
       img {
         width: 100%;
       }
     }
   }
 
-  #netsim_leftcol {
+  #netsim-leftcol {
     margin-right: 320px;
   }
 
