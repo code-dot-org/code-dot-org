@@ -14,28 +14,6 @@ var NodeType = require('./netsimConstants').NodeType;
  */
 
 /**
- * @param {NetSimNode} node
- * @returns {boolean}
- * @private
- */
-var isSelectedNode = function (node) {
-  return node && selectedNode &&
-      node.entityID === selectedNode.entityID;
-};
-
-/**
- * For use with Array.prototype.filter()
- * @param {NetSimNode} node
- * @returns {boolean}
- */
-var shouldShowNodeType = function (node) {
-  var showClients = level.showClientsInLobby;
-  var showRouters = level.showRoutersInLobby;
-  var nodeType = node.getNodeType();
-  return (nodeType === NodeType.CLIENT && showClients) || (nodeType == NodeType.ROUTER && showRouters);
-};
-
-/**
  * For use with Array.prototype.filter()
  * @param {NetSimNode} node
  * @returns {boolean}
@@ -63,15 +41,15 @@ var omitOutgoingRequestTargets = function (node) {
 var nodeToRowMetadata = function (node) {
   var classes = (node.getNodeType() === NodeType.ROUTER) ? ['router-row'] : ['user-row'];
 
-  if (isMyNode(node)) {
+  if (controller.isMyNode(node)) {
     classes.push('own-row');
   }
 
-  if (!remoteNode && canConnectToNode(node)) {
+  if (!controller.hasOutgoingRequest() && controller.canConnectToNode(node)) {
     classes.push('selectable-row');
   }
 
-  if (isSelectedNode(node)) {
+  if (controller.isSelectedNode(node)) {
     classes.push('selected-row');
   }
 
@@ -94,20 +72,20 @@ var displayNameSort = function (a, b) {
 };
 
 var lobbyRows = nodesOnShard
-    .filter(shouldShowNodeType)
+    .filter(controller.shouldShowNode.bind(controller))
     .filter(omitIncomingConnectionNodes)
     .filter(omitOutgoingRequestTargets)
     .map(nodeToRowMetadata)
     .sort(displayNameSort);
 
 var requestRows = incomingConnectionNodes
-    .filter(shouldShowNodeType)
+    .filter(controller.shouldShowNode.bind(controller))
     .filter(omitOutgoingRequestTargets)
     .map(nodeToRowMetadata)
     .sort(displayNameSort);
 
 var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
-    .filter(shouldShowNodeType)
+    .filter(controller.shouldShowNode.bind(controller))
     .map(nodeToRowMetadata);
 %>
 <div class="content-wrap">
@@ -124,7 +102,7 @@ var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
     <%
     });
 
-    if (!remoteNode && level.showAddRouterButton) {
+    if (!controller.hasOutgoingRequest() && showAddRouterButton) {
     %>
     <li class="empty-row">
       <input type="button" id="netsim_lobby_add_router" value="Add Router" />
@@ -168,9 +146,9 @@ var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
   </ul>
   <% } %>
 
-  <% if (remoteNode) { %>
+  <% if (controller.hasOutgoingRequest()) { %>
     <p>Waiting for <%= remoteNode.getDisplayName() %> to connect... <input type="button" id="netsim_lobby_cancel" value="Cancel" /></p>
   <% } else { %>
-    <input type="button" id="netsim_lobby_connect" value="Connect" <% if (!selectedNode) { %>disabled<% } %> />
+    <input type="button" id="netsim_lobby_connect" value="Connect" <% if (!controller.hasSelectedNode()) { %>disabled<% } %> />
   <% } %>
 </div>
