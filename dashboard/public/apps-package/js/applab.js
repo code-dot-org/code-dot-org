@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./applab":10,"./blocks":11,"./levels":18,"./skins":20}],20:[function(require,module,exports){
+},{"../appMain":5,"./applab":10,"./blocks":11,"./levels":18,"./skins":21}],21:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":196}],18:[function(require,module,exports){
+},{"../skins":197}],18:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":244,"../block_utils":25,"../utils":242}],10:[function(require,module,exports){
+},{"../../locale/current/applab":245,"../block_utils":26,"../utils":243}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -326,6 +326,7 @@ var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
+var RGBColor = require('./rgbcolor.js');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -577,10 +578,26 @@ function outputApplabConsole(output) {
 
 var apiWarn = outputApplabConsole;
 
-function apiValidateType(opts, funcName, varName, varValue, expectedType) {
+var OPTIONAL = true;
+
+function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
-    var properType = (typeof varValue == expectedType);
+    var properType;
+    if (expectedType === 'color') {
+      // Special handling for colors, must be a string and a valid RGBColor:
+      properType = (typeof varValue === 'string');
+      if (properType) {
+        var color = new RGBColor(varValue);
+        properType = color.ok;
+      }
+    } else if (expectedType === 'function') {
+      // Special handling for functions, it must be an interpreter function:
+      properType = (typeof varValue === 'object') && (varValue.type === 'function');
+    } else {
+      properType = (typeof varValue === expectedType);
+    }
+    properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
       var line = codegen.getNearestUserCodeLine(Applab.interpreter,
                                                 Applab.cumulativeLength,
@@ -594,7 +611,7 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType) {
 }
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                expectedType, minValue, maxValue) {
+                                 expectedType, minValue, maxValue) {
   var validatedTypeKey = 'validated_type_' + varName;
   var validatedRangeKey = 'validated_range_' + varName;
   apiValidateType(opts, funcName, varName, varValue, expectedType);
@@ -612,6 +629,24 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
               " parameter value (" + varValue + ") is not in the expected range.");
     }
     opts[validatedRangeKey] = inRange;
+  }
+}
+
+function apiValidateActiveCanvas(opts, funcName) {
+  var validatedActiveCanvasKey = 'validated_active_canvas';
+  if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
+    var activeCanvas = Boolean(Applab.activeCanvas);
+    if (!activeCanvas) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName +
+              "() called without an active canvas. Call createCanvas() first.");
+    }
+    if (opts) {
+      opts[validatedActiveCanvasKey] = activeCanvas;
+    }
   }
 }
 
@@ -674,10 +709,16 @@ function handleExecutionError(err, lineNumber) {
     // this while executing (in which case, it would already have been selected)
     selectEditorRowCol(lineNumber - 1, err.loc.column);
   }
+  if (!lineNumber && Applab.interpreter) {
+    lineNumber = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+  }
   if (lineNumber) {
-    outputApplabConsole('Line ' + lineNumber + ': ' + String(err));
+    outputApplabConsole('ERROR: Line ' + lineNumber + ': ' + String(err));
   } else {
-    outputApplabConsole(String(err));
+    outputApplabConsole('ERROR: ' + String(err));
   }
   Applab.executionError = err;
   Applab.onPuzzleComplete();
@@ -1923,10 +1964,16 @@ Applab.container = function (opts) {
 };
 
 Applab.write = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'write', 'html', opts.html, 'string');
   return Applab.container(opts);
 };
 
 Applab.button = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'button', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'button', 'text', opts.text, 'string');
+
   var divApplab = document.getElementById('divApplab');
 
   var newButton = document.createElement("button");
@@ -1938,6 +1985,10 @@ Applab.button = function (opts) {
 };
 
 Applab.image = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'image', 'src', opts.src, 'string');
+
   var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
@@ -2074,6 +2125,7 @@ Applab.turnRight = function (opts) {
 
   var degrees = 90;
   if (typeof opts.degrees !== 'undefined') {
+    // TODO: cpirich: may need to update param name
     apiValidateType(opts, 'turnRight', 'degrees', opts.degrees, 'number');
     degrees = opts.degrees;
   }
@@ -2086,6 +2138,7 @@ Applab.turnRight = function (opts) {
 Applab.turnLeft = function (opts) {
   var degrees = -90;
   if (typeof opts.degrees !== 'undefined') {
+    // TODO: cpirich: may need to update param name
     apiValidateType(opts, 'turnLeft', 'degrees', opts.degrees, 'number');
     degrees = -opts.degrees;
   }
@@ -2093,6 +2146,7 @@ Applab.turnLeft = function (opts) {
 };
 
 Applab.turnTo = function (opts) {
+  // TODO: cpirich: may need to update param name
   apiValidateType(opts, 'turnTo', 'degrees', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
   Applab.turnRight({'degrees': degrees });
@@ -2103,6 +2157,7 @@ Applab.turnTo = function (opts) {
 // if opts.counterclockwise, the center point is 90 degrees counterclockwise
 
 Applab.arcRight = function (opts) {
+  // TODO: cpirich: may need to update param name
   apiValidateType(opts, 'arcRight', 'degrees', opts.degrees, 'number');
   apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
 
@@ -2134,6 +2189,7 @@ Applab.arcRight = function (opts) {
 };
 
 Applab.arcLeft = function (opts) {
+  // TODO: cpirich: may need to update param name
   apiValidateType(opts, 'arcLeft', 'degrees', opts.degrees, 'number');
   apiValidateType(opts, 'arcLeft', 'radius', opts.radius, 'number');
 
@@ -2199,6 +2255,7 @@ Applab.penDown = function (opts) {
 };
 
 Applab.penWidth = function (opts) {
+  // TODO: cpirich: may need to update param name
   apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
@@ -2207,6 +2264,7 @@ Applab.penWidth = function (opts) {
 };
 
 Applab.penColor = function (opts) {
+  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
@@ -2220,6 +2278,7 @@ Applab.penColor = function (opts) {
 };
 
 Applab.speed = function (opts) {
+  // TODO: cpirich: may need to update param name
   apiValidateTypeAndRange(opts, 'speed', 'percent', opts.percent, 'number', 0, 100);
   if (opts.percent >= 0 && opts.percent <= 100) {
     var sliderSpeed = opts.percent / 100;
@@ -2231,6 +2290,7 @@ Applab.speed = function (opts) {
 };
 
 Applab.createCanvas = function (opts) {
+  apiValidateType(opts, 'createCanvas', 'canvasId', opts.elementId, 'string');
   var divApplab = document.getElementById('divApplab');
 
   var newElement = document.createElement("canvas");
@@ -2240,6 +2300,8 @@ Applab.createCanvas = function (opts) {
     // default width/height if params are missing
     var width = opts.width || Applab.appWidth;
     var height = opts.height || Applab.appHeight;
+    apiValidateType(opts, 'createCanvas', 'width', width, 'number');
+    apiValidateType(opts, 'createCanvas', 'height', height, 'number');
     newElement.width = width;
     newElement.height = height;
     newElement.style.width = width + 'px';
@@ -2262,6 +2324,8 @@ Applab.createCanvas = function (opts) {
 };
 
 Applab.setActiveCanvas = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'setActiveCanvas', 'canvasId', opts.elementId, 'string');
   var divApplab = document.getElementById('divApplab');
   var canvas = document.getElementById(opts.elementId);
   if (divApplab.contains(canvas)) {
@@ -2272,6 +2336,11 @@ Applab.setActiveCanvas = function (opts) {
 };
 
 Applab.line = function (opts) {
+  apiValidateActiveCanvas(opts, 'line');
+  apiValidateType(opts, 'line', 'x1', opts.x1, 'number');
+  apiValidateType(opts, 'line', 'x2', opts.x2, 'number');
+  apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
+  apiValidateType(opts, 'line', 'y2', opts.y2, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -2284,6 +2353,10 @@ Applab.line = function (opts) {
 };
 
 Applab.circle = function (opts) {
+  apiValidateActiveCanvas(opts, 'circle');
+  apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
+  apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
+  apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -2296,6 +2369,11 @@ Applab.circle = function (opts) {
 };
 
 Applab.rect = function (opts) {
+  apiValidateActiveCanvas(opts, 'rect');
+  apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
+  apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
+  apiValidateType(opts, 'rect', 'width', opts.width, 'number');
+  apiValidateType(opts, 'rect', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -2308,6 +2386,8 @@ Applab.rect = function (opts) {
 };
 
 Applab.setStrokeWidth = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeWidth');
+  apiValidateTypeAndRange(opts, 'setStrokeWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.lineWidth = opts.width;
@@ -2317,6 +2397,8 @@ Applab.setStrokeWidth = function (opts) {
 };
 
 Applab.setStrokeColor = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeColor');
+  apiValidateType(opts, 'setStrokeColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.strokeStyle = String(opts.color);
@@ -2326,6 +2408,9 @@ Applab.setStrokeColor = function (opts) {
 };
 
 Applab.setFillColor = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'setFillColor');
+  apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.fillStyle = String(opts.color);
@@ -2335,6 +2420,7 @@ Applab.setFillColor = function (opts) {
 };
 
 Applab.clearCanvas = function (opts) {
+  apiValidateActiveCanvas(opts, 'clearCanvas');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.clearRect(0,
@@ -2347,16 +2433,23 @@ Applab.clearCanvas = function (opts) {
 };
 
 Applab.drawImage = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'drawImage');
+  apiValidateType(opts, 'drawImage', 'imageId', opts.imageId, 'string');
+  apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
+  apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
   var divApplab = document.getElementById('divApplab');
   var image = document.getElementById(opts.imageId);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx && divApplab.contains(image)) {
     var xScale, yScale;
     xScale = yScale = 1;
-    if (opts.width) {
+    if (typeof opts.width !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'width', opts.width, 'number');
       xScale = xScale * (opts.width / image.width);
     }
-    if (opts.height) {
+    if (typeof opts.height !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'height', opts.height, 'number');
       yScale = yScale * (opts.height / image.height);
     }
     ctx.save();
@@ -2369,6 +2462,11 @@ Applab.drawImage = function (opts) {
 };
 
 Applab.getImageData = function (opts) {
+  apiValidateActiveCanvas(opts, 'getImageData');
+  apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
+  apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
+  apiValidateType(opts, 'getImageData', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
@@ -2376,6 +2474,11 @@ Applab.getImageData = function (opts) {
 };
 
 Applab.putImageData = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'putImageData');
+  apiValidateType(opts, 'putImageData', 'imageData', opts.imageData, 'object');
+  apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     // Create tmpImageData and initialize it because opts.imageData is not
@@ -2388,6 +2491,10 @@ Applab.putImageData = function (opts) {
 };
 
 Applab.textInput = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'textInput', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
+
   var divApplab = document.getElementById('divApplab');
 
   var newInput = document.createElement("input");
@@ -2398,6 +2505,11 @@ Applab.textInput = function (opts) {
 };
 
 Applab.textLabel = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'textLabel', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'textLabel', 'text', opts.text, 'string');
+  apiValidateType(opts, 'textLabel', 'forId', opts.forId, 'string', OPTIONAL);
+
   var divApplab = document.getElementById('divApplab');
 
   var newLabel = document.createElement("label");
@@ -2413,6 +2525,10 @@ Applab.textLabel = function (opts) {
 };
 
 Applab.checkbox = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'checkbox', 'id', opts.elementId, 'string');
+  // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
+
   var divApplab = document.getElementById('divApplab');
 
   var newCheckbox = document.createElement("input");
@@ -2424,6 +2540,11 @@ Applab.checkbox = function (opts) {
 };
 
 Applab.radioButton = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'radioButton', 'id', opts.elementId, 'string');
+  // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
+  apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
+
   var divApplab = document.getElementById('divApplab');
 
   var newRadio = document.createElement("input");
@@ -2436,6 +2557,9 @@ Applab.radioButton = function (opts) {
 };
 
 Applab.dropdown = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'dropdown', 'id', opts.elementId, 'string');
+
   var divApplab = document.getElementById('divApplab');
 
   var newSelect = document.createElement("select");
@@ -2443,6 +2567,7 @@ Applab.dropdown = function (opts) {
   if (opts.optionsArray) {
     for (var i = 0; i < opts.optionsArray.length; i++) {
       var option = document.createElement("option");
+      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'string');
       option.text = opts.optionsArray[i];
       newSelect.add(option);
     }
@@ -2476,6 +2601,9 @@ Applab.setAttribute = function (opts) {
 };
 
 Applab.getText = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'getText', 'id', opts.elementId, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
@@ -2491,6 +2619,10 @@ Applab.getText = function (opts) {
 };
 
 Applab.setText = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'setText', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'setText', 'text', opts.text, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
@@ -2507,6 +2639,9 @@ Applab.setText = function (opts) {
 };
 
 Applab.getChecked = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'getChecked', 'id', opts.elementId, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
@@ -2516,6 +2651,10 @@ Applab.getChecked = function (opts) {
 };
 
 Applab.setChecked = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'setChecked', 'id', opts.elementId, 'string');
+  // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
+
   var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
@@ -2526,6 +2665,9 @@ Applab.setChecked = function (opts) {
 };
 
 Applab.getImageURL = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'getImageURL', 'id', opts.elementId, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
@@ -2542,6 +2684,10 @@ Applab.getImageURL = function (opts) {
 };
 
 Applab.setImageURL = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'setImageURL', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'setImageURL', 'src', opts.src, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
@@ -2552,6 +2698,9 @@ Applab.setImageURL = function (opts) {
 };
 
 Applab.playSound = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
+
   if (studioApp.cdoSounds) {
     studioApp.cdoSounds.playURL(opts.url,
                                {volume: 1.0,
@@ -2572,6 +2721,9 @@ Applab.innerHTML = function (opts) {
 };
 
 Applab.deleteElement = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'deleteElement', 'id', opts.elementId, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -2585,6 +2737,9 @@ Applab.deleteElement = function (opts) {
 };
 
 Applab.showElement = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'showElement', 'id', opts.elementId, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -2595,6 +2750,9 @@ Applab.showElement = function (opts) {
 };
 
 Applab.hideElement = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'hideElement', 'id', opts.elementId, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -2626,6 +2784,13 @@ Applab.setParent = function (opts) {
 };
 
 Applab.setPosition = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'setPosition', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
+  apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
+  apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+  apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -2640,6 +2805,9 @@ Applab.setPosition = function (opts) {
 };
 
 Applab.getXPosition = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'getXPosition', 'id', opts.elementId, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -2654,6 +2822,9 @@ Applab.getXPosition = function (opts) {
 };
 
 Applab.getYPosition = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'getYPosition', 'id', opts.elementId, 'string');
+
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
@@ -2693,6 +2864,9 @@ Applab.onEventFired = function (opts, e) {
 };
 
 Applab.onEvent = function (opts) {
+  apiValidateType(opts, 'onEvent', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
+  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   var divApplab = document.getElementById('divApplab');
   // Special case the id of 'body' to mean the app's container (divApplab)
   // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
@@ -2761,6 +2935,8 @@ Applab.onHttpRequestEvent = function (opts) {
 };
 
 Applab.startWebRequest = function (opts) {
+  apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
+  apiValidateType(opts, 'startWebRequest', 'function', opts.func, 'function');
   opts.interpreter = Applab.interpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
@@ -2780,20 +2956,30 @@ Applab.onTimerFired = function (opts) {
 };
 
 Applab.setTimeout = function (opts) {
+  apiValidateType(opts, 'setTimeout', 'function', opts.func, 'function');
+  apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
+
   return apiTimeoutList.setTimeout(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearTimeout = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'clearTimeout', 'timeoutId', opts.timeoutId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setTimeout() function
   apiTimeoutList.clearTimeout(opts.timeoutId);
 };
 
 Applab.setInterval = function (opts) {
+  apiValidateType(opts, 'setInterval', 'function', opts.func, 'function');
+  apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
+
   return apiTimeoutList.setInterval(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearInterval = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'clearInterval', 'intervalId', opts.intervalId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setInterval() function
   apiTimeoutList.clearInterval(opts.intervalId);
@@ -3176,7 +3362,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":244,"../../locale/current/common":247,"../StudioApp":4,"../codegen":53,"../constants":55,"../dom":56,"../dropletUtils":57,"../skins":196,"../slider":197,"../templates/page.html":221,"../timeoutList":227,"../utils":242,"../xml":243,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./visualization.html":21}],21:[function(require,module,exports){
+},{"../../locale/current/applab":245,"../../locale/current/common":248,"../StudioApp":4,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../skins":197,"../slider":198,"../templates/page.html":222,"../timeoutList":228,"../utils":243,"../xml":244,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./rgbcolor.js":20,"./visualization.html":22}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3196,7 +3382,257 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":263}],17:[function(require,module,exports){
+},{"ejs":264}],20:[function(require,module,exports){
+/**
+ * A class to parse color values
+ * @author Stoyan Stefanov <sstoo@gmail.com>
+ * @link   http://www.phpied.com/rgb-color-parser-in-javascript/
+ * @license Use it if you like it
+ */
+
+ // hex regular expressions updated to require [0-9a-f] (cpirich)
+ // channels declared as local variable to avoid conflicts (cpirich)
+ // cleanup jshint errors (cpirich)
+ 
+module.exports = function(color_string)
+{
+    this.ok = false;
+
+    // strip any leading #
+    if (color_string.charAt(0) == '#') { // remove # if any
+        color_string = color_string.substr(1,6);
+    }
+
+    color_string = color_string.replace(/ /g,'');
+    color_string = color_string.toLowerCase();
+
+    // before getting into regexps, try simple matches
+    // and overwrite the input
+    var simple_colors = {
+        aliceblue: 'f0f8ff',
+        antiquewhite: 'faebd7',
+        aqua: '00ffff',
+        aquamarine: '7fffd4',
+        azure: 'f0ffff',
+        beige: 'f5f5dc',
+        bisque: 'ffe4c4',
+        black: '000000',
+        blanchedalmond: 'ffebcd',
+        blue: '0000ff',
+        blueviolet: '8a2be2',
+        brown: 'a52a2a',
+        burlywood: 'deb887',
+        cadetblue: '5f9ea0',
+        chartreuse: '7fff00',
+        chocolate: 'd2691e',
+        coral: 'ff7f50',
+        cornflowerblue: '6495ed',
+        cornsilk: 'fff8dc',
+        crimson: 'dc143c',
+        cyan: '00ffff',
+        darkblue: '00008b',
+        darkcyan: '008b8b',
+        darkgoldenrod: 'b8860b',
+        darkgray: 'a9a9a9',
+        darkgreen: '006400',
+        darkkhaki: 'bdb76b',
+        darkmagenta: '8b008b',
+        darkolivegreen: '556b2f',
+        darkorange: 'ff8c00',
+        darkorchid: '9932cc',
+        darkred: '8b0000',
+        darksalmon: 'e9967a',
+        darkseagreen: '8fbc8f',
+        darkslateblue: '483d8b',
+        darkslategray: '2f4f4f',
+        darkturquoise: '00ced1',
+        darkviolet: '9400d3',
+        deeppink: 'ff1493',
+        deepskyblue: '00bfff',
+        dimgray: '696969',
+        dodgerblue: '1e90ff',
+        feldspar: 'd19275',
+        firebrick: 'b22222',
+        floralwhite: 'fffaf0',
+        forestgreen: '228b22',
+        fuchsia: 'ff00ff',
+        gainsboro: 'dcdcdc',
+        ghostwhite: 'f8f8ff',
+        gold: 'ffd700',
+        goldenrod: 'daa520',
+        gray: '808080',
+        green: '008000',
+        greenyellow: 'adff2f',
+        honeydew: 'f0fff0',
+        hotpink: 'ff69b4',
+        indianred : 'cd5c5c',
+        indigo : '4b0082',
+        ivory: 'fffff0',
+        khaki: 'f0e68c',
+        lavender: 'e6e6fa',
+        lavenderblush: 'fff0f5',
+        lawngreen: '7cfc00',
+        lemonchiffon: 'fffacd',
+        lightblue: 'add8e6',
+        lightcoral: 'f08080',
+        lightcyan: 'e0ffff',
+        lightgoldenrodyellow: 'fafad2',
+        lightgrey: 'd3d3d3',
+        lightgreen: '90ee90',
+        lightpink: 'ffb6c1',
+        lightsalmon: 'ffa07a',
+        lightseagreen: '20b2aa',
+        lightskyblue: '87cefa',
+        lightslateblue: '8470ff',
+        lightslategray: '778899',
+        lightsteelblue: 'b0c4de',
+        lightyellow: 'ffffe0',
+        lime: '00ff00',
+        limegreen: '32cd32',
+        linen: 'faf0e6',
+        magenta: 'ff00ff',
+        maroon: '800000',
+        mediumaquamarine: '66cdaa',
+        mediumblue: '0000cd',
+        mediumorchid: 'ba55d3',
+        mediumpurple: '9370d8',
+        mediumseagreen: '3cb371',
+        mediumslateblue: '7b68ee',
+        mediumspringgreen: '00fa9a',
+        mediumturquoise: '48d1cc',
+        mediumvioletred: 'c71585',
+        midnightblue: '191970',
+        mintcream: 'f5fffa',
+        mistyrose: 'ffe4e1',
+        moccasin: 'ffe4b5',
+        navajowhite: 'ffdead',
+        navy: '000080',
+        oldlace: 'fdf5e6',
+        olive: '808000',
+        olivedrab: '6b8e23',
+        orange: 'ffa500',
+        orangered: 'ff4500',
+        orchid: 'da70d6',
+        palegoldenrod: 'eee8aa',
+        palegreen: '98fb98',
+        paleturquoise: 'afeeee',
+        palevioletred: 'd87093',
+        papayawhip: 'ffefd5',
+        peachpuff: 'ffdab9',
+        peru: 'cd853f',
+        pink: 'ffc0cb',
+        plum: 'dda0dd',
+        powderblue: 'b0e0e6',
+        purple: '800080',
+        red: 'ff0000',
+        rosybrown: 'bc8f8f',
+        royalblue: '4169e1',
+        saddlebrown: '8b4513',
+        salmon: 'fa8072',
+        sandybrown: 'f4a460',
+        seagreen: '2e8b57',
+        seashell: 'fff5ee',
+        sienna: 'a0522d',
+        silver: 'c0c0c0',
+        skyblue: '87ceeb',
+        slateblue: '6a5acd',
+        slategray: '708090',
+        snow: 'fffafa',
+        springgreen: '00ff7f',
+        steelblue: '4682b4',
+        tan: 'd2b48c',
+        teal: '008080',
+        thistle: 'd8bfd8',
+        tomato: 'ff6347',
+        turquoise: '40e0d0',
+        violet: 'ee82ee',
+        violetred: 'd02090',
+        wheat: 'f5deb3',
+        white: 'ffffff',
+        whitesmoke: 'f5f5f5',
+        yellow: 'ffff00',
+        yellowgreen: '9acd32'
+    };
+    for (var key in simple_colors) {
+        if (color_string == key) {
+            color_string = simple_colors[key];
+        }
+    }
+    // emd of simple type-in colors
+
+    // array of color definition objects
+    var color_defs = [
+        {
+            re: /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/,
+            example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1]),
+                    parseInt(bits[2]),
+                    parseInt(bits[3])
+                ];
+            }
+        },
+        {
+            re: /^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/,
+            example: ['#00ff00', '336699'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1], 16),
+                    parseInt(bits[2], 16),
+                    parseInt(bits[3], 16)
+                ];
+            }
+        },
+        {
+            re: /^([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})$/,
+            example: ['#fb0', 'f0f'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1] + bits[1], 16),
+                    parseInt(bits[2] + bits[2], 16),
+                    parseInt(bits[3] + bits[3], 16)
+                ];
+            }
+        }
+    ];
+
+    // search through the definitions to find a match
+    for (var i = 0; i < color_defs.length; i++) {
+        var re = color_defs[i].re;
+        var processor = color_defs[i].process;
+        var bits = re.exec(color_string);
+        if (bits) {
+            var channels = processor(bits);
+            this.r = channels[0];
+            this.g = channels[1];
+            this.b = channels[2];
+            this.ok = true;
+        }
+
+    }
+
+    // validate/cleanup values
+    this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
+    this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
+    this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
+
+    // some getters
+    this.toRGB = function () {
+        return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
+    };
+    this.toHex = function () {
+        var r = this.r.toString(16);
+        var g = this.g.toString(16);
+        var b = this.b.toString(16);
+        if (r.length == 1) { r = '0' + r; }
+        if (g.length == 1) { g = '0' + g; }
+        if (b.length == 1) { b = '0' + b; }
+        return '#' + r + g + b;
+    };
+};
+
+},{}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3216,7 +3652,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":244,"../../locale/current/common":247,"ejs":263}],15:[function(require,module,exports){
+},{"../../locale/current/applab":245,"../../locale/current/common":248,"ejs":264}],15:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -3309,7 +3745,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":263}],13:[function(require,module,exports){
+},{"ejs":264}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3329,7 +3765,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":263}],12:[function(require,module,exports){
+},{"ejs":264}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3349,7 +3785,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":247,"ejs":263}],11:[function(require,module,exports){
+},{"../../locale/current/common":248,"ejs":264}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3422,7 +3858,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":244,"../../locale/current/common":247,"../codegen":53,"../utils":242}],244:[function(require,module,exports){
+},{"../../locale/current/applab":245,"../../locale/current/common":248,"../codegen":54,"../utils":243}],245:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],9:[function(require,module,exports){
 'use strict';
@@ -4284,7 +4720,13 @@ oop.inherits(Mode, JavaScriptMode);
 exports.Mode = Mode;
 });
 
-},{"../../dropletUtils":57,"../dropletConfig":16,"./errorMapper":6}],16:[function(require,module,exports){
+},{"../../dropletUtils":58,"../dropletConfig":16,"./errorMapper":6}],16:[function(require,module,exports){
+var COLOR_LIGHT_GREEN = '#D3E965';
+var COLOR_BLUE = '#19C3E1';
+var COLOR_RED = '#F78183';
+var COLOR_CYAN = '#4DD0E1';
+var COLOR_YELLOW = '#FFF176';
+
 module.exports.blocks = [
   {'func': 'onEvent', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -4380,27 +4822,27 @@ module.exports.blocks = [
 module.exports.categories = {
   'UI controls': {
     'color': 'yellow',
-    'rgb': '#FFD54F',
+    'rgb': COLOR_YELLOW,
     'blocks': []
   },
   'Canvas': {
     'color': 'red',
-    'rgb': '#F87477',
+    'rgb': COLOR_RED,
     'blocks': []
   },
   'Data': {
     'color': 'lightgreen',
-    'rgb': '#D3E965',
+    'rgb': COLOR_LIGHT_GREEN,
     'blocks': []
   },
   'Turtle': {
     'color': 'cyan',
-    'rgb': '#00D2E2',
+    'rgb': COLOR_CYAN,
     'blocks': []
   },
   'Advanced': {
     'color': 'blue',
-    'rgb': '#19C3E1',
+    'rgb': COLOR_BLUE,
     'blocks': []
   },
 };

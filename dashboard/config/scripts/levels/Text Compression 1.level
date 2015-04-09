@@ -5,7 +5,10 @@
   "properties": {
     "href": "text-compression/text-compression.html",
     "title": "Text Compression 1",
-    "content1": "Compress text by identifying repeated patterns."
+    "content1": "Compress text by identifying repeated patterns.",
+    "options": {
+      "skip_dialog": true
+    }
   },
   "md5": "700b7a101c5c10f16082720a7f2c969b"
 }]]></config>
