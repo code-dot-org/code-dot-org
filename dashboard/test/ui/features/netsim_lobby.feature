@@ -6,25 +6,24 @@ Feature: Using the Internet Simulator Lobby
 
   Scenario: When not logged in, can connect to a router
     Given I load netsim
-    Then element "#netsim_lobby_name" is visible
-    And element "#netsim_lobby_name" is enabled
-    And element "#netsim_lobby_set_name_button" is visible
-    And element "#netsim_lobby_set_name_button" is enabled
-    And element "#netsim_shard_select" is hidden
+    Then element "#netsim-lobby-name" is visible
+    And element "#netsim-lobby-name" is enabled
+    And element "#netsim-lobby-set-name-button" is visible
+    And element "#netsim-lobby-set-name-button" is disabled
+    And element "#netsim-shard-select" is hidden
 
     When I enter the netsim name "Fred"
-    Then element "#netsim_lobby_name" is disabled
-    And element "#netsim_lobby_set_name_button" is hidden
-    And element "#netsim_shard_select" is visible
-    And element "#netsim_shard_select" contains text "My Private Network"
-    And element "#shard_view" contains text "Share this private network"
+    Then element "#netsim-lobby-name" is disabled
+    And element "#netsim-lobby-set-name-button" is hidden
+    And element "#netsim-shard-select" is visible
+    And element "#netsim-shard-select" contains text "My Private Network"
 
     When I add a router
-    Then element "#netsim_lobby_connect" is disabled
+    Then element "#netsim-lobby-connect" is disabled
 
     When I select the first router
     Then element ".router-row" has class "selected-row"
-    And element "#netsim_lobby_connect" is enabled
+    And element "#netsim-lobby-connect" is enabled
 
     When I press the "Connect" button
     And I wait until element ".netsim-send-panel" is visible
