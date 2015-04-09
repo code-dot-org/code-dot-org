@@ -372,6 +372,7 @@ en:
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
+    no_primary_course: "Try a course at Code Studio"
   gender:
     male: 'Male'
     female: 'Female'

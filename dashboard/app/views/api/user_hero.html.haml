@@ -14,16 +14,18 @@
           = link_to t('home.see_details'), root_url
           %br/
           = render partial: 'shared/student_continue', locals: { include_finished: true, script: current_user.primary_script }
-        
+        - else
+          = link_to t('home.no_primary_course'), root_url
       - if current_user.teacher?
         #teacherarea.col-50{style: "padding:5px"}
           #classroom #{t('home.classroom')}:
           #teacher
-            - if current_user.students.length == 1
-              = t('home.teacher_student_count_one', count: current_user.students.length)
-            - else
-              = t('home.teacher_student_count', count: current_user.students.length)
-            &nbsp;
+            %span#student_count
+              - if current_user.students.length == 1
+                = t('home.teacher_student_count_one', count: current_user.students.length)
+              - else
+                = t('home.teacher_student_count', count: current_user.students.length)
+              &nbsp;
             %a{href: teacher_dashboard_url, style: 'text-decoration:none'}
               %button.btn.btn-primary.button-continue= t('teacher.students.dashboard')
             %br/

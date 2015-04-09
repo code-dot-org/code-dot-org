@@ -172,6 +172,10 @@ body {
   display: inline-block;
 }
 
+#user_hero a {
+  font-family: 'Gotham 4r', sans-serif;
+}
+
 #user_hero #left_off {
   font-family: 'Gotham 5r', sans-serif;
   width: 175px;
@@ -180,7 +184,11 @@ body {
 
 #user_hero #classroom {
   font-family: 'Gotham 5r', sans-serif;
-  font-size:16px;
+}
+
+#user_hero #student_count {
+  width: 175px;
+  display: inline-block;
 }
 
 #sign_in_or_user .button-signin {
