@@ -12,7 +12,7 @@
 /* global $ */
 'use strict';
 
-require('../utils'); // For Function.prototype.inherits()
+var utils = require('../utils');
 var i18n = require('../../locale/current/netsim');
 var markup = require('./NetSimSendPanel.html');
 var NetSimPanel = require('./NetSimPanel');
@@ -223,10 +223,12 @@ NetSimSendPanel.prototype.resetPackets_ = function () {
 
 /**
  * Update from address for the panel, update all the packets to reflect this.
- * @param {number} fromAddress
+ * @param {number} [fromAddress] default zero
  */
 NetSimSendPanel.prototype.setFromAddress = function (fromAddress) {
-  this.fromAddress_ = fromAddress;
+  // fromAddress can be undefined for other parts of the sim, but within
+  // the send panel we just set it to zero.
+  this.fromAddress_ = utils.valueOr(fromAddress, 0);
 
   this.packets_.forEach(function (packetEditor) {
     packetEditor.setFromAddress(this.fromAddress_);
