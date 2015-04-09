@@ -70,14 +70,8 @@ $(window).load(function () {
        */
       return {
         name: "",
-        rangeType: blockValueType.NONE,
-        domainTypes: [
-          {
-            key: 'domain' + this.grabUniqueID(),
-            type: blockValueType.NONE,
-            order: 0
-          }
-        ]
+        rangeType: blockValueType.NUMBER,
+        domainTypes: []
       }
     },
     onNameChangeEvent: function (event) {
@@ -134,7 +128,7 @@ $(window).load(function () {
             onDomainChange={this.onDomainChange}
             onDomainAdd={this.onDomainAdd}
             onDomainRemove={this.onDomainRemove}/>
-          <div id='sectionTitle'>Range</div>
+          <div id='sectionTitle' className="clear">Range</div>
           <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
         </div>
       )
@@ -147,47 +141,52 @@ $(window).load(function () {
       var sortedDomains = this.props.domainTypes.sort(function (a,b) {
         return a.order > b.order;
       });
-      var lastNode = this.props.domainTypes[this.props.domainTypes.length - 1];
       var typeChoiceNodes = sortedDomains.map(function (object) {
-        var isLastNode = (object === lastNode);
         return (
-          <div style={isLastNode ? {float: 'left'} : {}}>
+          <div className="clear">
             <TypeChooser
               order={object.order}
               type={object.type}
               key={object.key}
               onTypeChange={curry(self.props.onDomainChange, object.key)}/>
-            <button onClick={curry(self.props.onDomainRemove, object.key)}>x</button>
+            <button className="domain-x-button" onClick={curry(self.props.onDomainRemove, object.key)}>x</button>
           </div>
         );
       });
       return (
         <div className="domainsList">
           {typeChoiceNodes}
-          <button onClick={this.props.onDomainAdd}>Add Domain</button>
+          <button className="domain-add-button" onClick={this.props.onDomainAdd}>Add</button>
         </div>
       )
     }
   });
 
   var TypeChooser = React.createClass({
-    handleChange: function(event) {
-      this.props.onTypeChange(event.target.value);
+    selectmenuChange: function(selectChange) {
+      this.props.onTypeChange(selectChange.target.value);
     },
     render: function () {
       var divStyle = {
         backgroundColor: typesToColors[this.props.type]
       };
       return (
-        <select value={this.props.type} onChange={this.handleChange} style={divStyle}>
-          <option value={blockValueType.NONE} disabled style={{display: 'none'}}>Choose a Type</option>
+        <select value={this.props.type} style={divStyle}>
           <option value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
-          <option value={blockValueType.STRING}he>{blockValueType.STRING}</option>
+          <option value={blockValueType.STRING}>{blockValueType.STRING}</option>
           <option value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
           <option value={blockValueType.BOOLEAN}>{blockValueType.BOOLEAN}</option>
         </select>
       )
-    }
+    },
+    componentDidMount: function() {
+      $(React.findDOMNode(this)).selectmenu({
+        change: this.selectmenuChange
+      });
+    },
+    componentWillUnmount: function() {
+      $(React.findDOMNode(this)).selectmenu('destroy');
+    },
   });
 
   var contractForm = React.render(<ContractForm />, document.getElementById('contractForm'));
