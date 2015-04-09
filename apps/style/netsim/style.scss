@@ -159,6 +159,21 @@ svg {
     @include user_select(none);
   }
 
+  .single-line-with-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    padding-right: 1em;
+  }
+
+  .user-data {
+    font-family: monospace;
+
+    // Make sure user data can always be selected and copied
+    @include user_select(text);
+  }
+
   // Orange SPAN button
   .netsim-button {
     display: inline-block;

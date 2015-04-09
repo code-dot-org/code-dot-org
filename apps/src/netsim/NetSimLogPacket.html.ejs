@@ -31,13 +31,31 @@
   var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
-/**
- * @param {EncodingType} encodingType
- * @param {string} toAddress
- * @param {string} fromAddress
- * @param {string} packetInfo
- * @param {string} message
- */
+  function packetControls() {
+    %>
+      <div class="packet-controls">
+
+        <% if (isUnread) { %>
+          <span class="netsim-button mark-as-read-button" title="<%= i18n.markAsRead() %>"><i class="fa fa-check"></i></span>
+        <% } %>
+
+        <% if (isMinimized) { %>
+          <span class="netsim-button maximize-button" title="<%= i18n.expand() %>"><i class="fa fa-expand"></i></span>
+        <% } else { %>
+          <span class="netsim-button minimize-button" title="<%= i18n.collapse() %>"><i class="fa fa-compress"></i></span>
+        <% } %>
+
+      </div>
+    <%
+  }
+
+  /**
+   * @param {EncodingType} encodingType
+   * @param {string} toAddress
+   * @param {string} fromAddress
+   * @param {string} packetInfo
+   * @param {string} message
+   */
   function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
     %>
       <tr class="<%= encodingType %>">
@@ -56,75 +74,77 @@
   <%
   }
  %>
-<table>
-  <thead>
-    <tr>
-      <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
-      <% if (showToAddress) { %>
-        <th nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= i18n.to() %></th>
-      <% } %>
-      <% if (showFromAddress) { %>
-        <th nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= i18n.from() %></th>
-      <% } %>
-      <% if (showPacketInfo) { %>
-        <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
-      <% } %>
-      <th class="<%= PacketUIColumnType.MESSAGE %>">
-        <%= i18n.message() %>
-        <div class="packet-controls">
-          <% if (isUnread) { %>
-            <span class="netsim-button mark-as-read-button" title="<%= i18n.markAsRead() %>"><i class="fa fa-check"></i></span>
-          <% } %>
-        </div>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
   <%
     var toAddress = showToAddress ? packet.getHeaderAsBinary(Packet.HeaderType.TO_ADDRESS) : '';
     var fromAddress = showFromAddress ? packet.getHeaderAsBinary(Packet.HeaderType.FROM_ADDRESS) : '';
     var packetIndex = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_INDEX) : '';
     var packetCount = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_COUNT) : '';
     var message = packet.getBodyAsBinary();
+  %>
+  <% if (isMinimized) { %>
+      <% packetControls(); %>
+      <div class="single-line-with-ellipsis user-data"><%= formatBinary(message, chunkSize) %></div>
+  <% } else { %>
+    <table>
+      <thead>
+        <tr>
+          <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
+          <% if (showToAddress) { %>
+            <th nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= i18n.to() %></th>
+          <% } %>
+          <% if (showFromAddress) { %>
+            <th nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= i18n.from() %></th>
+          <% } %>
+          <% if (showPacketInfo) { %>
+            <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
+          <% } %>
+          <th class="<%= PacketUIColumnType.MESSAGE %>">
+            <% packetControls(); %>
+            <%= i18n.message() %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      <%
+        logRow(EncodingType.ASCII,
+            binaryToInt(toAddress),
+            binaryToInt(fromAddress),
+            i18n.xOfYPackets({
+              x: binaryToInt(packetIndex),
+              y: binaryToInt(packetCount)
+            }),
+            binaryToAscii(message, chunkSize));
 
-    logRow(EncodingType.ASCII,
-        binaryToInt(toAddress),
-        binaryToInt(fromAddress),
-        i18n.xOfYPackets({
-          x: binaryToInt(packetIndex),
-          y: binaryToInt(packetCount)
-        }),
-        binaryToAscii(message, chunkSize));
+        logRow(EncodingType.DECIMAL,
+            binaryToInt(toAddress),
+            binaryToInt(fromAddress),
+            i18n.xOfYPackets({
+              x: binaryToInt(packetIndex),
+              y: binaryToInt(packetCount)
+            }),
+            alignDecimal(binaryToDecimal(message, chunkSize)));
 
-    logRow(EncodingType.DECIMAL,
-        binaryToInt(toAddress),
-        binaryToInt(fromAddress),
-        i18n.xOfYPackets({
-          x: binaryToInt(packetIndex),
-          y: binaryToInt(packetCount)
-        }),
-        alignDecimal(binaryToDecimal(message, chunkSize)));
+        logRow(EncodingType.HEXADECIMAL,
+            binaryToHex(toAddress),
+            binaryToHex(fromAddress),
+            i18n.xOfYPackets({
+              x: binaryToHex(packetIndex),
+              y: binaryToHex(packetCount)
+            }),
+            formatHex(binaryToHex(message), chunkSize));
 
-    logRow(EncodingType.HEXADECIMAL,
-        binaryToHex(toAddress),
-        binaryToHex(fromAddress),
-        i18n.xOfYPackets({
-          x: binaryToHex(packetIndex),
-          y: binaryToHex(packetCount)
-        }),
-        formatHex(binaryToHex(message), chunkSize));
+        logRow(EncodingType.BINARY,
+            formatBinary(toAddress, 4),
+            formatBinary(fromAddress, 4),
+            formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+            formatBinary(message, chunkSize));
 
-    logRow(EncodingType.BINARY,
-        formatBinary(toAddress, 4),
-        formatBinary(fromAddress, 4),
-        formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
-        formatBinary(message, chunkSize));
-
-    logRow(EncodingType.A_AND_B,
-        binaryToAB(toAddress),
-        binaryToAB(fromAddress),
-        binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
-        formatAB(binaryToAB(message), chunkSize));
-   %>
-  </tbody>
-</table>
+        logRow(EncodingType.A_AND_B,
+            binaryToAB(toAddress),
+            binaryToAB(fromAddress),
+            binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
+            formatAB(binaryToAB(message), chunkSize));
+       %>
+      </tbody>
+    </table>
+  <% } %>

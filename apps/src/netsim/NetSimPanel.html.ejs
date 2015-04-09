@@ -1,13 +1,12 @@
 <div id="netsim_panel_<%= instanceID %>"
      class="netsim-panel <%= className %>">
   <h1>
-    <span class="minimizer">
+    <div class="panel_controls"></div>
+    <div class="minimizer single-line-with-ellipsis">
       <% if (canMinimize) { %>
         <i class="fa fa-minus-square"></i>
       <% } %>
       <span class="title-text"><%= panelTitle %></span>
-    </span>
-    <div class="panel_controls">
     </div>
   </h1>
   <div class="panel-body">
