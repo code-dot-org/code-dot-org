@@ -447,6 +447,7 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
         + '<div id="domain-label">' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
         + '<div id="domain-area" style="margin: 0;">'
         + '</div>'
+        + '<div class="clear" style="margin: 0;"></div>'
         + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + '</button>'
         + '<div class="clear" style="margin: 0;"></div>'
         + '<div id="range-area" style="margin: 0;">'
