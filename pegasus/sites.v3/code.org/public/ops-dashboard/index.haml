@@ -502,16 +502,12 @@ title: "Ops Dashboard"
         if (teacher.id) {
           teacher.editing = false;
         } else {
-          if (teacher.newTeacher) {
-            $scope.newTeachers.splice($scope.newTeachers.indexOf(teacher), 1); // remove from array
-          } else {
-            $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
-          }
+          $scope.newTeachers.splice($scope.newTeachers.indexOf(teacher), 1); // remove from array
         }
       };
 
       $scope.new_teacher = function() {
-        $scope.newTeachers.unshift({editing: true, newTeacher:true});
+        $scope.newTeachers.unshift({editing: true});
       };
 
       $scope.saveAll = function(cohort) {
