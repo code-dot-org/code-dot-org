@@ -5,12 +5,19 @@
   "properties": {
     "href": "pixelation/pixelation.html",
     "options": {
+      "skip_dialog": true,
       "version": "3",
       "data": "000001000000001000000011000111100010001110"
     },
     "title": "Pixelation - Lesson 15 - Complete 3-bit color",
     "content1": "description here",
-    "markdown": "# Color Pixelation: Task 1\n**Directions:**\n\n* We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. \n* Finish off the image by figuring out which two colors are missing and encode them.\n"
+    "markdown": "# Color Pixelation: Task 1\n**Directions:**\n\n* We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. \n* Finish off the image by figuring out which two colors are missing and encode them.\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ],
+    "video_key": "csp_pixelation_color_1",
+    "name": "Pixelation - Lesson 15 - Complete 3-bit color"
   },
   "md5": "f3425601a4a78c530aa941c439487963"
 }]]></config>

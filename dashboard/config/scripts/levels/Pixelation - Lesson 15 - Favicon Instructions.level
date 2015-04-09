@@ -4,8 +4,8 @@
   "created_at": "2015-03-07T16:40:07.000Z",
   "properties": {
     "options": {
-      "css": "unplugged",
-      "skip_dialog": "true"
+      "skip_dialog": "true",
+      "css": "unplugged"
     },
     "title": "Pixelation - Lesson 15 - Favicon Instructions",
     "content1": "description here",

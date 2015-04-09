@@ -4,8 +4,8 @@
   "created_at": "2015-03-06T20:40:29.000Z",
   "properties": {
     "options": {
-      "css": "unplugged",
-      "skip_dialog": " true"
+      "skip_dialog": " true",
+      "css": "unplugged"
     },
     "title": "Pixelation - Lesson 15 - Task 1 instructions",
     "content1": "description here",
