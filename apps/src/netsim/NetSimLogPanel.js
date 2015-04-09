@@ -244,6 +244,7 @@ NetSimLogPacket.prototype.render = function () {
   var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
     packetSpec: this.packetSpec_,
+    enabledEncodings: this.encodings_,
     chunkSize: this.chunkSize_,
     isUnread: this.isUnread,
     isMinimized: this.isMinimized
