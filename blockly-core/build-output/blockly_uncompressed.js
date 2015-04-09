@@ -13564,11 +13564,12 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
   this.createFunctionalMarkers_();
   goog.base(this, "renderDraw_", iconWidth, inputRows);
   this.blockClipRect_.setAttribute("d", this.svgPath_.getAttribute("d"));
-  if(!this.block_.isVisible()) {
+  try {
+    var rect = this.svgPath_.getBBox();
+    this.divider_.setAttribute("width", Math.max(0, rect.width - 2))
+  }catch(e) {
     return
   }
-  var rect = this.svgPath_.getBBox();
-  this.divider_.setAttribute("width", Math.max(0, rect.width - 2))
 };
 Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
   var functionalMarkers = [];
@@ -14983,13 +14984,13 @@ Blockly.Block.prototype.isCurrentlyHidden_ = function() {
 Blockly.Block.prototype.setCurrentlyHidden = function(hidden) {
   this.currentlyHidden_ = hidden;
   if(this.svg_) {
-    this.svg_.setVisible(!hidden)
+    this.svg_.setVisible(!hidden);
+    if(!hidden) {
+      this.refreshRender()
+    }
   }
 };
 Blockly.Block.prototype.isVisible = function() {
-  if(Blockly.functionEditor && (this.blockSpace === Blockly.functionEditor.modalBlockSpace && !Blockly.functionEditor.isOpen())) {
-    return false
-  }
   var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
   return visibleThroughParent && (this.isUserVisible() && !this.isCurrentlyHidden_())
 };
@@ -15126,10 +15127,7 @@ Blockly.Block.prototype.setPreviousStatement = function(hasPrevious, opt_check) 
     this.previousConnection = new Blockly.Connection(this, Blockly.PREVIOUS_STATEMENT);
     this.previousConnection.setCheck(opt_check)
   }
-  if(this.rendered) {
-    this.render();
-    this.bumpNeighbours_()
-  }
+  this.refreshRender()
 };
 Blockly.Block.prototype.setNextStatement = function(hasNext, opt_check) {
   if(this.nextConnection) {
@@ -15146,10 +15144,7 @@ Blockly.Block.prototype.setNextStatement = function(hasNext, opt_check) {
     this.nextConnection = new Blockly.Connection(this, Blockly.NEXT_STATEMENT);
     this.nextConnection.setCheck(opt_check)
   }
-  if(this.rendered) {
-    this.render();
-    this.bumpNeighbours_()
-  }
+  this.refreshRender()
 };
 Blockly.Block.prototype.setOutput = function(hasOutput, opt_check) {
   if(this.outputConnection) {
@@ -15169,6 +15164,9 @@ Blockly.Block.prototype.setOutput = function(hasOutput, opt_check) {
     this.outputConnection = new Blockly.Connection(this, Blockly.OUTPUT_VALUE);
     this.outputConnection.setCheck(opt_check)
   }
+  this.refreshRender()
+};
+Blockly.Block.prototype.refreshRender = function() {
   if(this.rendered) {
     this.render();
     this.bumpNeighbours_()
@@ -15192,19 +15190,13 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
     this.previousConnection = new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
     this.previousConnection.setCheck(opt_check)
   }
-  if(this.rendered) {
-    this.render();
-    this.bumpNeighbours_()
-  }
+  this.refreshRender()
 };
 Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
   this.setHSV.apply(this, Blockly.FunctionalTypeColors[newType]);
   this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
   this.previousConnection.setCheck(newType);
-  if(this.rendered) {
-    this.render();
-    this.bumpNeighbours_()
-  }
+  this.refreshRender()
 };
 Blockly.Block.prototype.setInputsInline = function(inputsInline) {
   this.inputsInline = inputsInline;
@@ -22202,6 +22194,9 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.hiddenDefinitionBlocks_ = [];
   this.definitionSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {sectionNumber:3, headerText:"Definition", onCollapseCallback:goog.bind(function(isNowCollapsed) {
     this.flyout_.setVisibility(!isNowCollapsed);
+    if(!isNowCollapsed) {
+      this.refreshParamsInFlyout_()
+    }
     this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(!isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this), this.hiddenDefinitionBlocks_);
     this.position_()
   }, this), highlightBox:sharedHighlightBox, placeContentCallback:goog.bind(function(currentY) {

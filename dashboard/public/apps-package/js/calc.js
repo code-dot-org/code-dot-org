@@ -182,7 +182,9 @@ Calc.init = function(config) {
     svg.setAttribute('height', CANVAS_HEIGHT);
 
     if (level.freePlay) {
-      document.getElementById('goalHeader').setAttribute('visibility', 'hidden');
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        '/blockly/media/skins/calc/background_freeplay.png');
     }
 
     // This is hack that I haven't been able to fully understand. Furthermore,
@@ -1118,7 +1120,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 100)">\n  </g>\n  <text x="0" y="330" class="calcHeader" id="goalHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <image id="background" height="400" width="400" x="0" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/blockly/media/skins/calc/background.png"></image>\n  <g id="userExpression" class="expr" transform="translate(0, 100)">\n  </g>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
