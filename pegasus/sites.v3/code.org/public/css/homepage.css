@@ -1,0 +1,257 @@
+a.underscorehover:hover
+{
+  text-decoration: underline;
+  color: white;
+}
+
+.underscorehover:hover
+{
+  text-decoration: underline;
+  color: white;
+}
+
+a.nounderscorehover:hover
+{
+  text-decoration: none;
+}
+
+@media screen and (max-width: 512px)
+{
+  .same-height-column {width:100%}
+}
+@media screen and (min-width: 513px)
+{
+  .same-height-column {float:none !important; width:50%}
+}
+
+body.modal-open .supreme-container{
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+@media screen and (min-width: 971px) {
+  .homepage-caption-bottom {
+    top: 200px;
+  }
+}
+
+#homepage #hero {
+  position: relative; 
+  width: 100%; 
+  overflow: hidden
+}
+
+#homepage #hero .widehero {
+  display: none; 
+  z-index: -5; 
+  position:absolute; 
+  left: 0; 
+  top: 0; 
+  background-repeat: no-repeat; background-size: cover; 
+  width: 100%; 
+  height: 100%; 
+}
+
+#homepage #hero #fullwidth {
+  width: 100%;
+}
+
+#homepage #caption_container {
+  color: white; 
+  font-size: 20px;
+}
+
+#homepage #caption_container .captionarea {
+  position: absolute; 
+  left: 0; 
+  text-align: center; 
+  width: 100%; 
+  color: #fff; 
+  line-height: 22px;
+}
+
+#homepage #caption_container .caption {
+  display: none;  
+  position: absolute;
+  opacity: 0; 
+  padding: 8px; 
+  text-shadow: 0 0 5px black;
+}
+
+#homepage #caption_container .smallcaption {
+  font-size: 14px;
+}
+
+#homepage #caption_container #blankspaceleftdesktop {
+  height: 380px;
+}
+
+#homepage #caption_container #blankspaceleftmobile {
+  height: 120px;
+}
+
+#homepage #actions {
+  position: relative; 
+  padding: 20px; 
+  margin-top: 40px; 
+  text-align: center
+}
+
+#homepage #actions #playimage {
+  cursor: pointer
+}
+
+#homepage #actions #playtext {
+  font-size: 20px; 
+  cursor: pointer
+}
+
+#homepage #actions #herolearnlink {
+  color: white; 
+  font-size: 20px
+}
+
+#homepage #actions #herolearnbutton {
+  font-weight: 500; 
+  font-size: 20px; 
+  height: 50px
+}
+
+#homepage #actions #petitionaction {
+  display: none; 
+  font-weight: 500; 
+  font-size: 14px; 
+  height: 50px; 
+  cursor: pointer
+}
+
+#homepage #actions .actiongap {
+  height: 40px
+}
+
+#homepage .quarterslot {
+  float: left; 
+  height: 250px; 
+  padding: 0px 5px 10px 5px;
+}
+
+#homepage .quarterslot .slotbox {
+  position: relative; 
+  overflow: hidden;  
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  width: 100%; 
+  height: 100%; 
+  background-position: 0% 50%; 
+  height: 220px; 
+  border-radius: 5px;
+}
+
+#homepage .quarterslot .slotbox .headerbox {
+  position: absolute; 
+  bottom: 0px; 
+  left: 0px; 
+  color: white; 
+  width: 100%; 
+  padding: 10px; 
+  font-size: 18px; 
+  text-align: left; 
+  font-family: 'Gotham 4r', sans-serif; 
+  text-align: center;
+}
+
+#homepage .quarterslot .slotbox .headerbox .header {
+  font-family: 'Gotham 7r', sans-serif
+}
+
+#homepage .quarterslot .slotbox .headerbox .sentence {
+  font-size: 14px; 
+  opacity: 0.9
+}
+
+#homepage .quarterslot-links {
+  float: left; 
+  height: 390px; 
+  padding: 0px 5px 10px 5px; 
+}
+
+#homepage .quarterslot-links .slotbox {
+  position: relative; 
+  overflow: hidden; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  width: 100%; 
+  height: 100%; 
+  background-position: 0% 50%; 
+  height: 220px; 
+  border-top-left-radius: 5px;  
+  border-top-right-radius: 5px;
+}
+
+#homepage .quarterslot-links .headerbox {
+  position: absolute; 
+  bottom: 0px; 
+  left: 0px; 
+  color: white; 
+  width: 100%; 
+  padding: 10px; 
+  font-size: 18px; 
+  text-align: left; 
+  font-family: 'Gotham 4r', sans-serif; 
+  text-align: center
+} 
+
+#homepage .quarterslot-links .headerbox .header {
+  font-family: 'Gotham 7r', sans-serif;
+} 
+
+#homepage .quarterslot-links .headerbox .sentence {
+  font-size: 14px; 
+  opacity: 0.9
+}
+
+#homepage .quarterslot-links .thelinks {
+  padding: 5px; 
+  padding-top: 20px; 
+  border-bottom-right-radius: 5px; 
+  border-bottom-left-radius: 5px;
+}
+
+#homepage .quarterslot-links .thelinks .linkentry {
+  margin-bottom: 20px
+}
+
+#homepage .quarterslot-links .thelinks .link {
+  font-size: 16px; 
+  font-family: 'Gotham 4r', sans-serif; 
+  color: white;
+}
+
+#homepage #gallerycolumn {
+  width: 100%; 
+  margin-bottom: 20px; 
+  margin-top: 40px; 
+  display: table-cell; 
+  border: 5px solid white
+}
+
+#homepage #gallerycolumn .headingbox {
+  left: 0px;
+  color: white; 
+  width: 100%; 
+  padding: 10px; 
+  font-size: 20px; 
+  text-align: left; 
+  font-family: 'Gotham 5r', sans-serif; 
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#homepage #gallerycolumn .thelinks {
+  padding: 10px; 
+  height: 100%
+}
