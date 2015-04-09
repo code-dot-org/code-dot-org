@@ -50,7 +50,7 @@ Blockly.TypeDropdown = function (options) {
 Blockly.TypeDropdown.prototype.render = function (parent) {
   var selectComponent = this.renderSelectComponent_(parent);
   this.buttonColorSquareDiv_ = this.createColorSquareDiv();
-  goog.dom.appendChild(selectComponent.getElement(), this.buttonColorSquareDiv_)
+  goog.dom.appendChild(selectComponent.getElement(), this.buttonColorSquareDiv_);
   this.setSquareIconColor(this.type_, this.buttonColorSquareDiv_);
   this.attachListeners_(selectComponent);
   this.selectComponent_ = selectComponent;
@@ -126,16 +126,6 @@ Blockly.TypeDropdown.prototype.setSquareIconColor = function (newType, colorIcon
   var hsvColor = Blockly.FunctionalTypeColors[newType];
   var hexColor = goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255);
   colorIconDiv.style.background = hexColor;
-};
-
-/**
- * @param {!goog.ui.MenuItem} menuItem
- * @param {!Array.<Number>} hsvColor
- * @private
- */
-Blockly.TypeDropdown.prototype.setMenuItemColor_ = function(menuItem, hsvColor) {
-  var menuItemElement = menuItem.getElement();
-  this.setBackgroundFromHSV_(menuItemElement, hsvColor);
 };
 
 /**
