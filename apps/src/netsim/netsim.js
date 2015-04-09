@@ -280,7 +280,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   });
 
   this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
-      this.disconnectFromRemote.bind(this));
+      this.disconnectFromRemote.bind(this, function () {}));
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
@@ -857,6 +857,9 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
  * @private
  */
 NetSim.prototype.onRemoteChange_ = function (wire, remoteNode) {
+  var routerConnectEvent = remoteNode && remoteNode instanceof NetSimRouterNode;
+  var routerDisconnectEvent = !remoteNode && this.eventKeys.registeredWithRouter;
+
   // Unhook old handlers
   if (this.eventKeys.registeredWithRouter) {
     this.eventKeys.registeredWithRouter.stateChange.unregister(
@@ -870,12 +873,6 @@ NetSim.prototype.onRemoteChange_ = function (wire, remoteNode) {
     this.eventKeys.registeredWithRouter = null;
   }
 
-  var routerConnectEvent = !this.isConnectedToRouter() &&
-      remoteNode && remoteNode instanceof NetSimRouterNode;
-  var routerDisconnectEvent = this.isConnectedToRouter() && !remoteNode;
-
-  this.render();
-
   // Hook up new handlers
   if (routerConnectEvent) {
     this.eventKeys.routerStateChange = remoteNode.stateChange.register(
@@ -888,6 +885,8 @@ NetSim.prototype.onRemoteChange_ = function (wire, remoteNode) {
         this.onRouterLogChange_.bind(this));
     this.eventKeys.registeredWithRouter = remoteNode;
   }
+
+  this.render();
 
   if (routerConnectEvent) {
     this.onRouterConnect_(remoteNode);
