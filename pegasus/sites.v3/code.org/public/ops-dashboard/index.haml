@@ -419,6 +419,7 @@ title: "Ops Dashboard"
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
 
       $scope.teachers_bulk_import = {uploading: false};
+      $scope.newTeachers = [];
 
       // error handling
       $scope.genericError = function(result) {
@@ -501,15 +502,18 @@ title: "Ops Dashboard"
         if (teacher.id) {
           teacher.editing = false;
         } else {
-          $scope.cohort.teachers.splice($scope.cohort.teachers.indexOf(teacher), 1); // remove from array
+          $scope.newTeachers.splice($scope.newTeachers.indexOf(teacher), 1); // remove from array
         }
       };
 
       $scope.new_teacher = function() {
-        $scope.cohort.teachers.unshift({editing: true});
+        $scope.newTeachers.unshift({editing: true});
       };
 
       $scope.saveAll = function(cohort) {
+
+        cohort.teachers = cohort.teachers.concat($scope.newTeachers);
+
         for (var i = 0; i < cohort.teachers.length; i++) {
           if (typeof cohort.teachers[i].district == 'undefined') {
             cohort.teachers[i].district_id = null;
@@ -522,6 +526,7 @@ title: "Ops Dashboard"
         cohortsService.update({id: cohort.id}, {cohort: cohort}).$promise.then(
           function() {
             $scope.cohort = cohortsService.get({id: $routeParams.id});
+            $scope.newTeachers = [];
           }
         ).catch($scope.genericError);
       };
