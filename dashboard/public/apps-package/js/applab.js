@@ -4796,7 +4796,7 @@ module.exports.blocks = [
   {'func': 'readRecords', 'category': 'Data', 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
   {'func': 'deleteRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
-  {'func': 'getUserId', 'category': 'Data', 'params': [] },
+  {'func': 'getUserId', 'category': 'Data', 'params': [], type: 'value' },
 
   {'func': 'moveForward', 'category': 'Turtle', 'params': ["25"] },
   {'func': 'moveBackward', 'category': 'Turtle', 'params': ["25"] },
