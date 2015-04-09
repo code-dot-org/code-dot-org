@@ -21,6 +21,8 @@ var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 var markup = require('./NetSimLobby.html');
 
+var logger = require('./NetSimLogger').getSingleton();
+
 /**
  * @typedef {Object} shardChoice
  * @property {string} shardSeed - unique key for shard within level, used in
@@ -278,14 +280,20 @@ NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
  */
 NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
   this.shard_.nodeTable.readAll(function (err, rows) {
-    if (!err) {
-      this.onNodeTableChange_(rows);
-      this.shard_.wireTable.readAll(function (err, rows) {
-        if (!err) {
-          this.onWireTableChange_(rows);
-        }
-      }.bind(this));
+    if (err) {
+      logger.warn("Node table read failed: " + err.message);
+      return;
     }
+
+    this.onNodeTableChange_(rows);
+    this.shard_.wireTable.readAll(function (err, rows) {
+      if (err) {
+        logger.warn("Wire table read failed: " + err.message);
+        return;
+      }
+
+      this.onWireTableChange_(rows);
+    }.bind(this));
   }.bind(this));
 };
 
@@ -297,6 +305,7 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
 NetSimLobby.prototype.addRouterToLobby = function () {
   NetSimRouterNode.create(this.shard_, function (err, router) {
     if (err) {
+      logger.error("Unable to create router: " + err.message);
       return;
     }
 
