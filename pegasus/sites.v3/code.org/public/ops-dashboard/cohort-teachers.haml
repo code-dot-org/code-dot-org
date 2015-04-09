@@ -78,9 +78,49 @@ theme: none
         Gender
       %th.manage-th
         %div
-          %a.btn.btn-primary{"ng-click" => "saveAll(cohort)", "ng-show" => "editingAny(cohort.teachers)", "ng-disabled" => "allForm.$invalid || isTooManyTeachers()"} Save All
+          %a.btn.btn-primary{"ng-click" => "saveAll(cohort)", "ng-show" => "editingAny(cohort.teachers) || editingAny(newTeachers)", "ng-disabled" => "allForm.$invalid || isTooManyTeachers()"} Save All
           %span.error{"ng-show" => "isTooManyTeachers()"} Too many teachers!
-    %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:['teacher.ops_last_name', 'teacher.ops_first_name']", style: "vertical-align:top", 'ng-form' => 'form'}
+
+
+    %tr{"ng-repeat" => "teacher in newTeachers", style: "vertical-align:top", 'ng-form' => 'form'}
+      %td
+        %div{"ng-show" => "teacher.editing"}
+          %input.form-control{"ng-model" => "teacher.ops_first_name", placeholder: "First name", style: "width: 100%", type: "text", required: "true", name: 'ops_first_name'}/
+          %span.error{'ng-show' => 'form.ops_first_name.$error.required'} required
+      %td
+        %div{"ng-show" => "teacher.editing"}
+          %input.form-control{"ng-model" => "teacher.ops_last_name", placeholder: "Last name", style: "width: 100%", type: "text", required: "true", name: 'ops_last_name'}/
+          %span.error{'ng-show' => 'form.ops_last_name.$error.required'} required
+      %td
+        %div{"ng-show" => "teacher.editing"}
+          %input.form-control{"ng-model" => "teacher.email", placeholder: "Email address", style: "width: 100%", type: 'email', required: "true", name: 'email'}/
+          %span.error{'ng-show' => 'form.email.$error.required'} required
+          %span.error{'ng-show' => 'form.email.$error.email'} Invalid email address
+      %td
+        %div{"ng-show" => "teacher.editing"}
+          %select.district-name.form-control{"ng-model" => "teacher.district.id", "ng-options"=>"district.id as district.name for district in cohort.districts | orderBy:'name'", selectize: true, required: true, name: 'district'}
+          %span.error{'ng-show' => 'form.district.$error.required'} required
+      %td
+        %div{"ng-show" => "teacher.editing"}
+          %input.form-control{"ng-model" => "teacher.ops_school", placeholder: "School", style: "width: 100%", type: "text", name: 'school', required: true}/
+          %span.error{'ng-show' => 'form.school.$error.required'} required
+      %td
+        %div{"ng-show" => "teacher.editing"}
+          %select.teacher-gender.form-control{"ng-model" => "teacher.ops_gender", "ng-options"=>"value for value in ['Female', 'Male']", name: 'gender', required: true}
+          %span.error{'ng-show' => 'form.gender.$error.required'} required
+      %td{nowrap: true, style: 'white-space: nowrap;'}
+        %span{"ng-show" => "teacher.confirmDelete"}
+          %span Delete?
+          %br
+          %a.btn.btn-danger.btn-xs{"ng-click"=>'del(teacher)'} Yes
+          %a.btn.btn-success.btn-xs{"ng-click"=>'teacher.confirmDelete = false'} No
+        %span{"ng-hide" => "teacher.confirmDelete"}
+          %a.btn.btn-white.btn-xs{"ng-click" => "edit(teacher)", "ng-hide" => "teacher.editing"} Edit
+          %a.btn.btn-white.btn-xs{"ng-click" => "cancel(teacher);", "ng-show" => "teacher.editing"} Cancel
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)", "ng-show" => "!teacher.editing && teacher.id"} Delete
+
+
+    %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:['ops_last_name', 'ops_first_name']", style: "vertical-align:top", 'ng-form' => 'form'}
       %td
         %div{"ng-hide" => "teacher.editing"}
           {{teacher.ops_first_name}}
