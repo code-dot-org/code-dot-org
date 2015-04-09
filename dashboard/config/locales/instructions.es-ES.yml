@@ -104,14 +104,12 @@
       2-3 Artist Functions 7_instruction: 'Utiliza la función "dibuja una casa" para
         dibujar dos casas utilizando dos parámetros diferentes. (Sugerencia: la primera
         casa es de 100 pixeles).'
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
+      2-3 Artist Functions 9_instruction: Esta es la función copo de nieve. ¡Experimenta
+        con ella para crea una escena invernal! Este es un nivel libre de acertijos,
+        puedes jugar libremente . ¡Diviértete!
+      2-3 Artist Loops 1_instruction: ¿Podrías hacer un hexágono que sus lados midan
+        100 pixeles de largo para terminar la célula? Recuerda, eso significa que
+        ¡sólo deberas girar 60 grados!
       2-3 Artist Loops 10_instruction: |
         What happens to the design when we make our
         final step forward half as long?

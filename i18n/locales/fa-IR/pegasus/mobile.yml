@@ -110,6 +110,7 @@ fa-IR:
   stats_student: '"من می دانستم که این يك فرصت <b> تكرار نشدني</b> است." - ماریانا الزيت، كلاس پنجمي'
   stats_michael: '"من <b> هیچ وقت، هرگز </b> دانش آموزانم را برای آموختن تا این حد هیجان زده ندیده ام." از میشل کلارک، معلم'
   studiobar_title: "<a href='http://studio.code.org'>استودیوی برنامه نویسی</a> ما را کشف کنید"
+  studiobar_title_nolink: استودیوی برنامه نویسی ما را کشف کنید
   studiobar_elementary_title: دوره‌های مقدماتی
   studiobar_elementary_body: 'سه درس جدید ما برای کلاس K&#8209;پنجمی ها'
   studiobar_hoc_title: ساعتی با کدنویسی
@@ -142,13 +143,34 @@ fa-IR:
   homepage_hero_text_bosh: |
     &ldquo;اگر شما کد بزنید، می توانید مسیر زندگیتان را مشخص و انتخاب کنید.&rdquo;
     کریس بوش
-  homepage_hero_text_student1: '&ldquo;این مهارت ها آینده ی مرا تغییر دادند. لازم به ذکر نیست، این ها فقط سرگرمی ساده اند.&rdquo; '
-  homepage_hero_text_student2: '&ldquo;من هیچ وقت، هرگز فرزندانم را اینقدر مشتاق آموختن ندیده ام.&rdquo; '
-  homepage_hero_text_student3: '&ldquo;علوم کامپیوتر رشته ای است که اگر قبل از امتحان کردنش دوستش دارید یا نه نمی توانید آن را بشناسید.&rdquo;'
-  homepage_hero_text_student4: '&ldquo;شما می توانید با برنامه نویسی هرکاری که ذهنتان می خواهد انجام دهد انجام دهید.&rdquo; '
-  homepage_hero_text_student5: '&ldquo;علوم کامپیوتر برای کس دیگری نیست. بلکه متعلق به شماست، اینجا، حالا.&rdquo; '
-  homepage_hero_text_teacher1: '&ldquo;کد زدن خلاقیت، الهام گرفتن و ابداع را فعال می کند&mdash; که همه ی آن ها نیاز اساسی در هر شغلی هستند.&rdquo; '
-  homepage_hero_text_teacher2: '&ldquo;این برنامه 100% دانش آموزان مرا درگیر، همراه و فعال کرد.&rdquo; '
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: ساعتی با کدنویسی
   homepage_slot_text_frozen: کارتون Frozen با آنا و السا
   homepage_slot_text_teacher: Teacher Dashboard

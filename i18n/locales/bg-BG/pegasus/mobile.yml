@@ -110,6 +110,7 @@ bg-BG:
   stats_student: '"Знаех, че това е <b>еднократна</b> възможност в живота."-Мариана Алзейт, 5-ти клас'
   stats_michael: 'Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани за нещо в обучението им. "-Майкъл Кларк, учител'
   studiobar_title: "Разгледайте <a href='http://studio.code.org'> Студиото за програмиране</a>"
+  studiobar_title_nolink: Разгледайте Студиото за кодиране
   studiobar_elementary_title: Начални курсове
   studiobar_elementary_body: 'Нашите три нови курса за K &#8209; 5'
   studiobar_hoc_title: Един Час Програмиране
@@ -130,13 +131,34 @@ bg-BG:
   homepage_hero_text_sheryl: '&ldquo;"Нашите деца &mdash; включително момичета &mdash; имат нужда от възможност да изучават компютърни науки."&rdquo; Шерил, главен оперативен директор на Facebook'
   homepage_hero_text_satya: '&ldquo;"Инфроматиката може да отключи най-добрите възможности в света."&rdquo; Сатя, изпълнителен директор на Microsoft'
   homepage_hero_text_bosh: '&ldquo;"Ако се научите да програмирате , можете да определите и изберете посоката на вашия живот."&rdquo; Крис Бош'
-  homepage_hero_text_student1: '&ldquo;"Тези умения промениха бъдещето ми. Да не говорим, че това е просто забавно."&rdquo; '
-  homepage_hero_text_student2: '&ldquo;"Никога, никога не съм виждал децата ми толкова развълнувани от наученото."&rdquo;'
-  homepage_hero_text_student3: '&ldquo;"Няма как да знаете дали харесвате или не компютърните науки ако преди това не сте опитали да програмирате."&rdquo;'
-  homepage_hero_text_student4: '&ldquo;"Можете да направите всичко което ви хрумне с програмиране."&rdquo;'
-  homepage_hero_text_student5: '&ldquo;"Информатиката не е само за специалисти. Това е за вас, тук, сега." &rdquo; '
-  homepage_hero_text_teacher1: '&ldquo;"Програмирането запълва въожраьението, вдъхновението и иновациите &mdash; които са от съществено значение за всяка кариера." &rdquo; '
-  homepage_hero_text_teacher2: '&ldquo;"Тази програма ангажира на 100 % моите ученици, ангажирани, въвлечени и участващи." &rdquo; '
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Един Час Програмиране
   homepage_slot_text_frozen: Замръзнали (Frozen) с Анна и Елза
   homepage_slot_text_teacher: Учителско табло

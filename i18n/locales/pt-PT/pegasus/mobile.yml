@@ -110,6 +110,7 @@ pt-PT:
   stats_student: '"Sabia que era uma chance <b>única</b>." - Mariana Alzate, aluna da 5º série'
   stats_michael: '"<b>Nunca vi</b> os meus alunos tão interessados em explorar um assunto." - Michael Clark, Professor'
   studiobar_title: "Explora o <a href='http://studio.code.org'>Code Studio</a>"
+  studiobar_title_nolink: Explora o Code Studio
   studiobar_elementary_title: Cursos elementares
   studiobar_elementary_body: Os nossos três cursos para alunos do 1.º Ciclo
   studiobar_hoc_title: A Hora de Código
@@ -150,25 +151,32 @@ pt-PT:
     Chris Bosh
   homepage_hero_text_student1: |
     &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo; 
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
   homepage_hero_text_student2: |
     &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo; 
+    so excited about learning.&rdquo;
+    Michael, teacher
   homepage_hero_text_student3: |
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
   homepage_hero_text_student4: |
     &ldquo;You can do anything your mind
     wants to do with programming.&rdquo; 
+    Maya, 2nd grade
   homepage_hero_text_student5: |
     &ldquo;Computer science isn't for someone
     else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
   homepage_hero_text_teacher1: |
     &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
   homepage_hero_text_teacher2: |
     &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo; 
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: A Hora de Código
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard

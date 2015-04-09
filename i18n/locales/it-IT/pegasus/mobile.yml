@@ -113,6 +113,7 @@ it-IT:
   stats_student: '"Sapevo che questa era una occasione <b>irripetibile</b>."-Mariana Alzate, 5a Elementare'
   stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti di imparare." - Michael Clark, Insegnante'
   studiobar_title: "Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>"
+  studiobar_title_nolink: "Esplora l'Officina del Codice"
   studiobar_elementary_title: Scuola Primaria
   studiobar_elementary_body: I nostri tre nuovi corsi, specifici per la Scuola Primaria
   studiobar_hoc_title: "L'Ora del Codice"
@@ -151,25 +152,33 @@ it-IT:
     &ldquo;Se scrivi codice, puoi determinare il corso della tua vita.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;Queste abilità hanno cambiato il mio futuro.
-    Per non parlare del fatto che è anche molto divertente.&rdquo;
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
   homepage_hero_text_student2: |
-    &ldquo;Non ho mai, mai visto i miei figli 
-    così entusiasti di imparare.&rdquo; 
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
   homepage_hero_text_student3: |
-    &ldquo;L'imformatica è un campo in cui non puoi
-    sapere se ti piace o no finchè non lo hai provato.&rdquo;
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
   homepage_hero_text_student4: |
-    &ldquo;Con la programmazione puoi fare qualsiasi cosa la tua mente
-    può immaginare.&rdquo; 
-  homepage_hero_text_student5: |-
-    &ldquo;"L'informatica non è per qualcun altro. È per te, qui, ora."&rdquo; 
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
   homepage_hero_text_teacher1: |
-    &ldquo;Programmare accende la creatività, l'ispirazione e l'innovazione &mdash;  
-    ingredienti essenziali in ogni tipo di carriera lavorativa.&rdquo; 
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
   homepage_hero_text_teacher2: |
-    &ldquo;Questo programma ha mantenuto il 100% dei miei studenti
-    impegnati, coinvolti e desiderosi di partecipare.&rdquo; 
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: "L'Ora del Codice"
   homepage_slot_text_frozen: Frozen con Anna ed Elsa
   homepage_slot_text_teacher: Teacher Dashboard

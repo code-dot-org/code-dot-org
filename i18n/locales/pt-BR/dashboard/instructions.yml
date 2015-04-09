@@ -863,7 +863,7 @@ pt-BR:
       add 2_instruction: |
         Belo trabalho no último desafio, vamos tentar novamente.
         Desta vez, vamos fazer esse design bacana com hexágonos de 60 pixels.
-      Alice Test_instruction: Here are some instructions!
+      Alice Test_instruction: Aqui estão algumas instruções!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Agora, vamos desenhar 6 quadrados, cada
         um com uma cor aleatória. Que ângulo devemos usar para virar entre cada quadrado para
@@ -1255,10 +1255,7 @@ pt-BR:
         Esse bloco de cálculo é uma função
         de multiplicação que recebe dois números e retorna o produto desses números.
         Edite esse bloco para que ele multiplique 2 * 5
-      Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition which
-        takes two numbers and returns their sum. Use this Addition block to add 3
-        + 6.
+      Calc Circles of Eval .3_instruction: Aqui está uma função de adição que leva dois números e retorna a soma. Use este bloco de adição para adicionar 3 + 6.
       Calc Circles of Eval .4_instruction: |
         Temos aqui um bloco de adição aninhado
         dentro de um bloco de multiplicação. Complete esse código para que ele multiplique 3 por (4
@@ -1328,7 +1325,7 @@ pt-BR:
         de número e retornar o número dado elevado à terceira potência. Lembre-se de escrever
         dois casos de exemplo! Quando você terminar, use sua nova função para calcular 7
         elevado ao cubo.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Sua escola está fazendo uma venda de bolos, e você precisa controlar o custo para a produção de cada biscoito, o dinheiro pago, e o lucro total. Cada biscoito custa $0,25 para ser produzido, e deve ser vendido por $1,50 cada um.\r Escreva uma função 'custo', que leva o número de biscoitos que você pretende vender, e retorna o custo para fazer os biscoitos."
       Calc Design Recipe 3_instruction: |
         Escreva a função `vendas` que recebe 
         o número de cookies vendidos e retorna quanto dinheiro os clientes gastaram
@@ -1356,9 +1353,7 @@ pt-BR:
       Calc Vars 2 (copy 1)_instruction: |
         Aqui, definimos a variável "idade" como
         17 - você pode escrever uma expressão que calcula "idade" em meses?
-      Calc Vars 2.1_instruction: |
-        Here's a new variable called "age-in-months"
-        - use the variable "age" to set "age-in-months"
+      Calc Vars 2.1_instruction: 'Aqui está uma variável chamada "idade em meses" - use a variável "idade" para definir "idade em meses"'
       Calc Vars 2_instruction: |
         Você pode escrever uma expressão que calcula "idade"
         em meses?
@@ -2257,9 +2252,7 @@ pt-BR:
       Eval Contracts C_instruction: |
         Confira a função "rotacione" - você pode
         usá-la para rotacionar esse quadrado verde de 90 pixels em 45 graus?
-      Eval Contracts E_instruction: |
-        Try using the "text" function to write this
-        "Hello, World!" in teal at size 40.
+      Eval Contracts E_instruction: 'Tente usar a função "texto" para escrever este "Olá, Mundo!" em verde-azulado no tamanho 40.'
       Eval Contracts shrink_instruction: |
         Você pode completar essa imagem usando o bloco
         de função "encolha"? O raio é 20. 
@@ -2369,10 +2362,7 @@ pt-BR:
       Eval Strings Images 6_instruction: |
         Use a função sobreposição para colocar uma estrela
         amarela com raio de 75 pixels em cima de um quadrado azul com 150 pixels de comprimento.
-      Eval Strings Images 7_instruction: |
-        The "offset" block lets you move an image
-        relative to where it would normally be placed. Use this block to offset the
-        square by 100 pixels on the y axis.
+      Eval Strings Images 7_instruction: 'O bloco "deslocamento" permite você mover uma imagem em relação a onde ele normalmente seria colocado. Use este bloco para deslocar o quadrado por 100 pixels pelo eixo y.'
       Eval Strings Images 8_instruction: |
         Temos aqui um tipo diferente de bloco de estrela
         - ele é chamado "estrela-radial" e permite que você desenhe estrelas com qualquer número
@@ -3040,19 +3030,9 @@ pt-BR:
         Agora, vamos ver se podemos criar duas retas perpendiculares.
         Retas perpendiculares são duas retas que se interceptam em um ângulo de 90 graus,
         ou ângulo reto.
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
-        Something happened
-        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
-        were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Fix the error_instruction: |
-        Something happened to
-        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
-        added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_instruction: |
-        Make a 3x5 letter
-        'A'.  The widget is setup with the incorrect dimensions. Your first task
-        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
-        start entering pixel data.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: 'Algo aconteceu com os bits desta imagem! Ache o erro e corrija-o! Dica: alguns poucos bits extras foram adicionados. Você deveria somente precisar remover alguns bits.'
+      Pixelation - Lesson 14 - Fix the error_instruction: 'Algo aconteceu com os bits desta imagem! Ache o erro e corrija-o! Dica: alguns poucos bits extras foram adicionados. Você deveria somente precisar remover alguns bits.'
+      Pixelation - Lesson 14 - Make the Letter A_instruction: "Faça uma carta 'A' de 3X5. O widget está definido com as dimensões incorretas. A sua primeira tarefa é definir o segundo byte para o código binário de 8-bits para 5:0000 0101. Então comece introduzindo os dados do pixel."
       Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
         Now make
         your own image! We've started you off with a 10x10 canvas but you can make
