@@ -3,16 +3,16 @@
   var MessageGranularity = require('./netsimConstants').MessageGranularity;
 %>
 <div class="send-widget-packets"></div>
-<div class="send_widget_footer">
+<div class="send-widget-footer">
   <div class="right-side-controls">
     <% if (level.showAddPacketButton) { %>
-      <span class="netsim-button" id="add_packet_button"><%= i18n.addPacket() %></span>
+      <span class="netsim-button" id="add-packet-button"><%= i18n.addPacket() %></span>
     <% } %>
     <% if (level.messageGranularity === MessageGranularity.PACKET) { %>
-      <span class="netsim-button" id="send_button"><%= i18n.send() %></span>
+      <span class="netsim-button" id="send-button"><%= i18n.send() %></span>
     <% } else { %>
       <span class="netsim-button" id="set-wire-button"><%= i18n.setWire() %></span>
     <% } %>
   </div>
-  <div class="packet_size"></div>
+  <div class="packet-size"></div>
 </div>
