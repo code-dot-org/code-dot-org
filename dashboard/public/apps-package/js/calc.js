@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":197,"./blocks":37,"./calc":38,"./levels":45}],38:[function(require,module,exports){
+},{"../appMain":5,"../skins":200,"./blocks":37,"./calc":38,"./levels":45}],38:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -182,7 +182,9 @@ Calc.init = function(config) {
     svg.setAttribute('height', CANVAS_HEIGHT);
 
     if (level.freePlay) {
-      document.getElementById('goalHeader').setAttribute('visibility', 'hidden');
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        '/blockly/media/skins/calc/background_freeplay.png');
     }
 
     // This is hack that I haven't been able to fully understand. Furthermore,
@@ -1106,7 +1108,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":247,"../../locale/current/common":248,"../StudioApp":4,"../block_utils":26,"../dom":57,"../skins":197,"../templates/page.html":222,"../timeoutList":228,"../utils":243,"./controls.html":39,"./equation":40,"./equationSet":41,"./expressionNode":42,"./inputIterator":43,"./js-numbers/js-numbers.js":44,"./levels":45,"./token":47,"./visualization.html":48}],48:[function(require,module,exports){
+},{"../../locale/current/calc":250,"../../locale/current/common":251,"../StudioApp":4,"../block_utils":26,"../dom":57,"../skins":200,"../templates/page.html":225,"../timeoutList":231,"../utils":246,"./controls.html":39,"./equation":40,"./equationSet":41,"./expressionNode":42,"./inputIterator":43,"./js-numbers/js-numbers.js":44,"./levels":45,"./token":47,"./visualization.html":48}],48:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1118,7 +1120,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 100)">\n  </g>\n  <text x="0" y="330" class="calcHeader" id="goalHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <image id="background" height="400" width="400" x="0" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/blockly/media/skins/calc/background.png"></image>\n  <g id="userExpression" class="expr" transform="translate(0, 100)">\n  </g>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -1126,7 +1128,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":247,"ejs":264}],45:[function(require,module,exports){
+},{"../../locale/current/calc":250,"ejs":267}],45:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -1165,7 +1167,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":247,"../block_utils":26}],43:[function(require,module,exports){
+},{"../../locale/current/calc":250,"../block_utils":26}],43:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1625,7 +1627,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":243,"./equation":40,"./expressionNode":42,"./js-numbers/js-numbers":44}],42:[function(require,module,exports){
+},{"../utils":246,"./equation":40,"./expressionNode":42,"./js-numbers/js-numbers":44}],42:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -2034,7 +2036,8 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     return this.getTokenListDiff(null);
   }
 
-  if (this.getType_() !== ValueType.ARITHMETIC) {
+  if (this.getType_() !== ValueType.ARITHMETIC &&
+      this.getType_() !== ValueType.EXPONENTIAL) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
   }
@@ -2044,8 +2047,16 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     rightDeeper = this.children_[1].depth() > this.children_[0].depth();
   }
 
+  var prefix = new Token('(', false);
+  var suffix = new Token(')', false);
+
+  if (this.value_ === 'sqrt') {
+    prefix = new Token('sqrt', false);
+    suffix = null;
+  }
+
   var tokens = [
-    new Token('(', false),
+    prefix,
     this.children_[0].getTokenList(markDeepest && !rightDeeper),
   ];
   if (this.children_.length > 1) {
@@ -2054,7 +2065,9 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
       this.children_[1].getTokenList(markDeepest && rightDeeper)
     ]);
   }
-  tokens.push(new Token(')', false));
+  if (suffix) {
+    tokens.push(suffix);
+  }
   return _.flatten(tokens);
 };
 
@@ -2225,7 +2238,7 @@ ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
   return tokenList;
 };
 
-},{"../utils":243,"./js-numbers/js-numbers":44,"./token":47}],47:[function(require,module,exports){
+},{"../utils":246,"./js-numbers/js-numbers":44,"./token":47}],47:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -6737,7 +6750,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":247,"../../locale/current/common":248,"ejs":264}],37:[function(require,module,exports){
+},{"../../locale/current/calc":250,"../../locale/current/common":251,"ejs":267}],37:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -6802,6 +6815,6 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":247,"../../locale/current/common":248,"../sharedFunctionalBlocks":196}],247:[function(require,module,exports){
+},{"../../locale/current/calc":250,"../../locale/current/common":251,"../sharedFunctionalBlocks":199}],250:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}]},{},[46]);

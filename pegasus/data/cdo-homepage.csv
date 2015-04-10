@@ -44,7 +44,7 @@ blocklink_k5,blocklink,block_educators,homepage_slot_text_link_k5,/educate/k5,,,
 blocklink_fullcurriculum,blocklink,block_educators,homepage_slot_text_link_fullcurriculum,/educate/curriculum,,,,,code.org,show,en
 blocklink_pd,blocklink,block_educators,homepage_slot_text_link_pd,/educate/professional-development,,,,,code.org,show,en
 blocklink_stats,blocklink,block_advocates,homepage_slot_text_link_stats,/promote,,,,,code.org,show,en
-blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_buy,/shop,,,,,code.org,show,en
+blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_buy,/help,,,,,code.org,show,en
 blocklink_donate,blocklink,block_advocates,homepage_slot_text_link_donate,/donate,,,,,code.org,show,en
 blockshort_hoc_noten,blockshort,studiobar_frozen_title,learn_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_hoc.jpg,code.org,show,not en
 blockshort_students_noten,blockshort,hoc2014_students,write_your_first_program,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,not en

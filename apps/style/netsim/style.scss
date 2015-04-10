@@ -7,8 +7,10 @@ $dark-gray: #a9a9a9;
 $black: #000000;
 $red: #ff0000;
 $code-org-pacific-blue: #00adbc;
+$code-org-purple: #7665a0;
 $code-org-web-orange: #ffa400;
-$own-node-background-color: #e0ffff;
+$own-node-background-color: white;
+$user-row-hover-color: #e0ffff;
 $router-row-hover-color: rgba(255, 140, 0, 0.21);
 $to-address-color: rgba(255, 233, 238, 0.85);
 $from-address-color: lightcyan;
@@ -183,27 +185,53 @@ svg {
   //
   //General two-column layout rules
   //
-  #netsim_rightcol {
+  #netsim-rightcol {
     float: right;
     width: 300px;
 
-    #netsim_visualization {
+    #netsim-visualization {
       img {
         width: 100%;
       }
     }
   }
 
-  #netsim_leftcol {
+  #netsim-leftcol {
     margin-right: 320px;
   }
 
+  .netsim-shard-selection-panel {
+    overflow: hidden;
+
+    .content-wrap {
+      margin: 1em;
+    }
+
+    .field-box {
+      float: left;
+      margin-right: 1em;
+    }
+
+    .clearfix {
+      clear:both;
+    }
+  }
+
+  .netsim-lobby-panel {
+    .content-wrap {
+      margin: 1em;
+    }
+
+    ul {
+      margin: 0 0 10px 0;
+    }
+  }
 
   .netsim-panel.netsim-lobby div.panel-body {
     padding: 1em;
   }
 
-  #netsim_lobby_list {
+  .netsim-lobby-list {
     background-color: $white;
     padding: 0.5em;
     border: inset darkslategray thin;
@@ -211,32 +239,48 @@ svg {
 
     li {
       background-color: $white;
-      padding: 0.3em;
+      border-left: solid white 3px;
+      border-right: solid white 3px;
+      padding: 0.3em 0.8em;
+    }
+
+    .empty-row {
+      text-align: center;
+      color: $medium-gray;
+      font-style: italic;
+    }
+
+    .selectable-row {
+      cursor: pointer;
+      &:hover {
+        border-left: solid $code-org-web-orange 3px;
+      }
     }
 
     .own-row {
-      font-weight: bold;
       background-color: $own-node-background-color;
+      font-style: italic;
     }
 
     .user-row {
-
+      &.selectable-row:hover {
+        background-color: $user-row-hover-color;
+        color: $black;
+      }
     }
 
     .router-row {
-      cursor: pointer;
-    }
-    .router-row:hover {
-      background-color: $router-row-hover-color;
-      color: $black;
+      &.selectable-row:hover {
+        background-color: $router-row-hover-color;
+        color: $black;
+      }
     }
 
+
     .selected-row {
-      background-color: $code-org-web-orange;
-      color: white;
-    }
-    .selected-row:hover {
-      background-color: $code-org-web-orange;
+      background-color: $code-org-web-orange !important;
+      color: white !important;
+      font-weight: bold;
     }
   }
 
@@ -259,7 +303,7 @@ svg {
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
-      background-color: $code-org-pacific-blue;
+      background-color: $code-org-purple;
       color: $whitesmoke;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
@@ -274,7 +318,7 @@ svg {
       border-left: solid darkgray thin;
       border-right: solid darkgray thin;
       border-bottom: solid darkgray thin;
-      border-top: solid $code-org-pacific-blue thin;
+      border-top: solid $code-org-purple thin;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
     }
 
@@ -582,7 +626,7 @@ svg {
 
     // Modify actual tabs at top of tab area
     .ui-tabs-nav {
-      background: $code-org-pacific-blue;
+      background: $code-org-purple;
       border-left: none;
       border-right: none;
       border-top: none;

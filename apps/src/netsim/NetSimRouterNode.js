@@ -295,13 +295,13 @@ NetSimRouterNode.inherits(NetSimNode);
  */
 NetSimRouterNode.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimRouterNode, shard, function (err, router) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, null);
       return;
     }
 
     NetSimHeartbeat.getOrCreate(shard, router.entityID, function (err, heartbeat) {
-      if (err !== null) {
+      if (err) {
         onComplete(err, null);
         return;
       }
@@ -329,13 +329,13 @@ NetSimRouterNode.create = function (shard, onComplete) {
  */
 NetSimRouterNode.get = function (routerID, shard, onComplete) {
   NetSimEntity.get(NetSimRouterNode, routerID, shard, function (err, router) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, null);
       return;
     }
 
     NetSimHeartbeat.getOrCreate(shard, routerID, function (err, heartbeat) {
-      if (err !== null) {
+      if (err) {
         onComplete(err, null);
         return;
       }
@@ -710,6 +710,7 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID, packetSpec) 
     // Populate router log cache with initial data
     this.shard_.logTable.readAll(function (err, rows) {
       if (err) {
+        logger.warn("Failed to read from log table: " + err.message);
         return;
       }
       this.onLogTableChange_(rows);

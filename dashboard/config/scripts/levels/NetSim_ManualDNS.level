@@ -9,6 +9,8 @@
     "instructions": "In this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other.",
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
+    "can_connect_to_clients": "false",
+    "can_connect_to_routers": "true",
     "show_add_router_button": "true",
     "router_expects_packet_header": [ { "key": "toAddress", "bits": 4 }, { "key": "fromAddress", "bits": 4 } ],
     "client_initial_packet_header": [ { "key": "toAddress", "bits": 4 }, { "key": "fromAddress", "bits": 4 } ],
