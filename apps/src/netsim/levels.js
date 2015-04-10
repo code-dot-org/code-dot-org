@@ -3,6 +3,7 @@
 var netsimConstants = require('./netsimConstants');
 var Packet = require('./Packet');
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
+var MessageGranularity = netsimConstants.MessageGranularity;
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 var NetSimTabType = netsimConstants.NetSimTabType;
@@ -27,6 +28,9 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
+ *
+ * @property {MessageGranularity} messageGranularity - Whether the simulator
+ *           puts a single bit into storage at a time, or a whole packet.
  *
  * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
  *           the router uses to parse incoming packets and figure out where
@@ -100,6 +104,9 @@ levels.custom = {
   canConnectToClients: false,
   canConnectToRouters: false,
   showAddRouterButton: false,
+
+  // Simulator-wide setup
+  messageGranularity: MessageGranularity.BIT,
 
   // Packet header specification
   routerExpectsPacketHeader: [],
