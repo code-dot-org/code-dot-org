@@ -17,12 +17,13 @@ def create_database(uri)
   system command.join(' ')
 end
 
-def with_retries(count=5)
+def with_retries(count = 5, &block)
   begin
     yield if block_given?
   rescue
     raise if (count -= 1) == 0
     sleep 2.25
+    with_retries(count, &block)
   end
 end
 
