@@ -15,21 +15,34 @@ stage "Sending More Complex Messages"
 level 'U1L3 Student Lesson Introduction'
 level 'U1L3 Free response reflection question'
 
+
 stage 'Bit Sending Widget'
 level 'U1L4 Student Lesson Introduction'
-
+level 'U1L4 Widget Demo - Video'
 level 'NetSim_SendingABTest'
+level 'U1L4 Free response reflection question'
+level'U1L4 Free Response Reflection'
 
 
 stage 'Sending Bits in the Real World'
 level 'U1L5 Student Lesson Introduction'
+level 'U1L5 How the Internet Works - Video'
+level 'U1L5 Free Response Assessment'
+level 'U1L5 Free Response Lesson Review'
 
 
 stage 'Number Systems'
 level 'U1L6 Student Lesson Introduction'
+level 'U1L6 Odometer Widget'
+level 'U1L6 Assessment multiple choice'
+level 'U1L6 Free Response Assessment'
+level 'U1L6 Free Response Reflection'
+
 
 stage 'Binary Numbers'
 level 'U1L7 Student Lesson Introduction'
+level 'U1L7 Free Response Assessment'
+level 'U1L7 Free Response Reflection'
 
 stage 'Lesson 14'
 level 'Pixelation - Video - Lesson 14 - B and W'

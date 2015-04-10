@@ -72,6 +72,10 @@ SETS = {
              'West Compton',
              'Willowbrook'],
     state: 'California'
+  },
+  columbus: {
+    pt: '39.98,-82.98',
+    d: '40'
   }
 }
 
@@ -84,6 +88,18 @@ end
 
 def state
   SETS[$key][:state]
+end
+
+def location_query
+  if SETS[$key][:cities]
+    city_query + ' && create_ip_state_s:"' + state + '"'
+  end
+end
+
+def location_filter_query
+  if SETS[$key][:pt]
+    "{!geofilt pt=#{SETS[$key][:pt]} sfield=create_ip_location_p d=#{SETS[$key][:d]}}"
+  end
 end
 
 SOLR = Solr::Server.new(host:'ec2-54-83-22-254.compute-1.amazonaws.com')
@@ -124,6 +140,16 @@ def query_contacts(params)
   end
 end
 
+def query_contacts_with_location(params)
+  raise "there must be a query" if params[:q].nil?
+
+  params = params.dup
+  params[:q] += ' && ' + location_query if location_query
+  params[:fq] = location_filter_query
+
+  query_contacts(params)
+end
+
 UNSUBSCRIBERS = {}.tap do |results|
   DB[:contacts].where('unsubscribed_at IS NOT NULL').each do |i|
     email = i[:email].downcase.strip
@@ -142,8 +168,8 @@ puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
 ADMINS = {}.tap do |results|
   (
-    query_contacts(q:'kind_s:"BringToSchool2013" && (role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && ' + city_query + ' && create_ip_state_s:"' + state + '"') +
-    query_contacts(q:'kind_s:"CSEdWeekEvent2013" && (role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && ' + city_query + ' && create_ip_state_s:"' + state + '"')
+    query_contacts_with_location(q:'kind_s:"BringToSchool2013" && (role_s:"principal" || role_s:"superintendent" || role_s:"district_admin")') +
+    query_contacts_with_location(q:'kind_s:"CSEdWeekEvent2013" && (role_s:"principal" || role_s:"superintendent" || role_s:"district_admin")')
   ).each do |i|
     email = i[:email].downcase.strip
     results[email] = i unless UNSUBSCRIBERS[email]
@@ -153,11 +179,11 @@ puts "#{ADMINS.count} admins loaded."
 
 TEACHERS = {}.tap do |results|
   (
-    query_contacts(q:'kind_s:"user" && role_s:"teacher" && country_s:"united states"') +
-    query_contacts(q:'kind_s:"Petition" && role_s:"educator" && ' + city_query + ' && create_ip_state_s:"' + state + '"') +
-    query_contacts(q:'kind_s:"BringToSchool2013" && role_s:"teacher" && ' + city_query + ' && create_ip_state_s:"' + state + '"') +
-    query_contacts(q:'kind_s:"CSEdWeekEvent2013" && role_s:"teacher" && ' + city_query + ' && create_ip_state_s:"' + state + '"') +
-    query_contacts(q:'kind_s:"ClassSubmission" && ' + city_query + ' && create_ip_state_s:"' + state + '"')
+    query_contacts_with_location(q:'kind_s:"user" && role_s:"teacher"') +
+    query_contacts_with_location(q:'kind_s:"Petition" && role_s:"educator"') +
+    query_contacts_with_location(q:'kind_s:"BringToSchool2013" && role_s:"teacher"') +
+    query_contacts_with_location(q:'kind_s:"CSEdWeekEvent2013" && role_s:"teacher"') +
+    query_contacts_with_location(q:'kind_s:"ClassSubmission"')
   ).each do |i|
     email = i[:email].downcase.strip
     results[email] = i unless UNSUBSCRIBERS[email] || ADMINS[email]
@@ -167,7 +193,7 @@ puts "#{TEACHERS.count} teachers loaded."
 
 PARENTS = {}.tap do |results|
   (
-    query_contacts(q:'kind_s:"Petition" && role_s:"parent" && ' + city_query + ' && create_ip_state_s:"' + state + '"')
+    query_contacts_with_location(q:'kind_s:"Petition" && role_s:"parent"')
   ).each do |i|
     email = i[:email].downcase.strip
     results[email] = i unless UNSUBSCRIBERS[email] || ADMINS[email] || TEACHERS[email]

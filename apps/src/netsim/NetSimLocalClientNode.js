@@ -11,7 +11,8 @@
  */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
+var _ = utils.getLodash();
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
@@ -45,6 +46,12 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @type {NetSimWire}
    */
   this.myWire = null;
+
+  /**
+   * Client nodes can be connected to other clients.
+   * @type {NetSimClientNode}
+   */
+  this.myRemoteClient = null;
 
   /**
    * Client nodes can be connected to a router, which they will
@@ -82,10 +89,10 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
 
   /**
    * Change event others can observe, which we will fire when we
-   * connect to a router or disconnect from a router.
+   * connect or disconnect from a router or remote client
    * @type {ObservableEvent}
    */
-  this.routerChange = new ObservableEvent();
+  this.remoteChange = new ObservableEvent();
 
   /**
    * Callback for when something indicates that this node has been
@@ -94,6 +101,12 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @private
    */
   this.onNodeLostConnection_ = undefined;
+
+  /**
+   * Event registration information
+   * @type {Object}
+   */
+  this.eventKeys = {};
 };
 NetSimLocalClientNode.inherits(NetSimClientNode);
 
@@ -105,14 +118,14 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
  */
 NetSimLocalClientNode.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimLocalClientNode, shard, function (err, node) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, node);
       return;
     }
 
     // Give our newly-created local node a heartbeat
     NetSimHeartbeat.getOrCreate(shard, node.entityID, function (err, heartbeat) {
-      if (err !== null) {
+      if (err) {
         onComplete(err, null);
         return;
       }
@@ -150,11 +163,12 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (levelConfig,
   this.sentLog_ = sentLog;
   this.receivedLog_ = receivedLog;
 
-  // Subscribe to message table changes
-  var newMessageEvent = this.shard_.messageTable.tableChange;
-  var newMessageHandler = this.onMessageTableChange_.bind(this);
-  this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
-  logger.info("Local node registered for messageTable tableChange");
+  // Subscribe to table changes
+  this.eventKeys.wireTable = this.shard_.wireTable.tableChange.register(
+      this.onWireTableChange_.bind(this));
+  this.eventKeys.messageTable = this.shard_.messageTable.tableChange.register(
+      this.onMessageTableChange_.bind(this));
+  this.eventKeys.registeredOnShard = this.shard_;
 };
 
 /**
@@ -162,11 +176,12 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (levelConfig,
  * observing.
  */
 NetSimLocalClientNode.prototype.stopSimulation = function () {
-  if (this.newMessageEventKey_ !== undefined) {
-    var newMessageEvent = this.shard_.messageTable.tableChange;
-    newMessageEvent.unregister(this.newMessageEventKey_);
-    this.newMessageEventKey_ = undefined;
-    logger.info("Local node registered for messageTable tableChange");
+  if (this.eventKeys.registeredOnShard) {
+    this.eventKeys.registeredOnShard.wireTable.tableChange.unregister(
+        this.eventKeys.wireTable);
+    this.eventKeys.registeredOnShard.messageTable.tableChange.unregister(
+        this.eventKeys.messageTable);
+    this.eventKeys.registeredOnShard = null;
   }
 };
 
@@ -218,8 +233,8 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
 
   var self = this;
   NetSimLocalClientNode.superPrototype.update.call(this, function (err, result) {
-    if (err !== null) {
-      logger.error("Update failed.");
+    if (err) {
+      logger.error("Local node update failed: " + err.message);
       if (self.onNodeLostConnection_ !== undefined) {
         self.onNodeLostConnection_();
       }
@@ -237,11 +252,32 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
 NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete) {
   NetSimLocalClientNode.superPrototype.connectToNode.call(this, otherNode,
       function (err, wire) {
-        if (!err) {
+        if (err) {
+          onComplete(err, null);
+        } else {
           this.myWire = wire;
+          onComplete(err, wire);
         }
-        onComplete(err, wire);
       }.bind(this));
+};
+
+/**
+ * Connect to a remote client node.
+ * @param {NetSimClientNode} client
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) {
+  this.connectToNode(client, function (err, wire) {
+    // Check whether WE just established a mutual connection with a remote client.
+    this.shard_.wireTable.readAll(function (err, wireRows) {
+      if (err) {
+        onComplete(err, wire);
+        return;
+      }
+      this.onWireTableChange_(wireRows);
+      onComplete(err, wire);
+    }.bind(this));
+  }.bind(this));
 };
 
 /**
@@ -263,15 +299,12 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 
     router.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
-        wire.destroy(function () {
-          onComplete(err);
-        });
-        this.myWire = null;
+        this.disconnectRemote(onComplete);
         return;
       }
 
       this.myRouter = router;
-      this.routerChange.notifyObservers(this.myWire, this.myRouter);
+      this.remoteChange.notifyObservers(this.myWire, this.myRouter);
 
       this.status_ = "Connected to " + router.getDisplayName() +
           " with address " + wire.localAddress;
@@ -286,20 +319,23 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  var self = this;
   this.myWire.destroy(function (err) {
     if (err) {
       onComplete(err);
       return;
     }
 
-    self.myWire = null;
+    this.myWire = null;
     // Trigger an immediate router update so its connection count is correct.
-    self.myRouter.update(onComplete);
-    self.myRouter.stopSimulation();
-    self.myRouter = null;
-    self.routerChange.notifyObservers(null, null);
-  });
+    if (this.myRouter) {
+      this.myRouter.update(onComplete);
+      this.myRouter.stopSimulation();
+    }
+
+    this.myRemoteClient = null;
+    this.myRouter = null;
+    this.remoteChange.notifyObservers(null, null);
+  }.bind(this));
 };
 
 /**
@@ -329,7 +365,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
       payload,
       function (err) {
         if (err) {
-          logger.error('Failed to send message; ' + err.message + ': ' +
+          logger.error('Failed to send message: ' + err.message + "\n" +
               JSON.stringify(payload));
           onComplete(err);
           return;
@@ -357,13 +393,45 @@ NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
   }
 
   this.sendMessage(payloads[0], function (err, result) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, result);
       return;
     }
 
     this.sendMessages(payloads.slice(1), onComplete);
   }.bind(this));
+};
+
+/**
+ * Handler for any wire table change.  Used here to detect mutual connections
+ * between client nodes that indicate we can move to a "connected" state.
+ * @param {Array} wireRows
+ * @private
+ */
+NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
+  if (!this.myWire) {
+    return;
+  }
+
+  // Look for mutual connection
+  var mutualConnectionRow = _.find(wireRows, function (row) {
+    return row.remoteNodeID === this.myWire.localNodeID &&
+        row.localNodeID === this.myWire.remoteNodeID;
+  }.bind(this));
+
+  if (mutualConnectionRow && !this.myRemoteClient) {
+    // New mutual connection! Get the node for our own use.
+    NetSimClientNode.get(mutualConnectionRow.localNodeID, this.shard_,
+        function (err, remoteClient) {
+          this.myRemoteClient = remoteClient;
+          this.remoteChange.notifyObservers(this.myWire, this.myRemoteClient);
+        }.bind(this));
+  } else if (!mutualConnectionRow && this.myRemoteClient) {
+    // Remote client disconnected or we disconnected; either way we are
+    // no longer connected.
+    this.myRemoteClient = null;
+    this.remoteChange.notifyObservers(this.myWire, this.myRemoteClient);
+  }
 };
 
 /**
