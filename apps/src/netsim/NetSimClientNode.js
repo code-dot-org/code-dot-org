@@ -13,6 +13,7 @@
 
 require('../utils');
 var NodeType = require('./netsimConstants').NodeType;
+var NetSimEntity = require('./NetSimEntity');
 var NetSimNode = require('./NetSimNode');
 
 /**
@@ -43,4 +44,15 @@ NetSimClientNode.prototype.getNodeType = function () {
 /** @inheritdoc */
 NetSimClientNode.prototype.getStatus = function () {
   return this.status_ ? this.status_ : 'Online';
+};
+
+/**
+ * Static async retrieval method.  See NetSimEntity.get().
+ * @param {!number} nodeID - The row ID for the entity you'd like to find.
+ * @param {!NetSimShard} shard
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
+ *        found entity, or null if entity search failed.
+ */
+NetSimClientNode.get = function (nodeID, shard, onComplete) {
+  NetSimEntity.get(NetSimClientNode, nodeID, shard, onComplete);
 };

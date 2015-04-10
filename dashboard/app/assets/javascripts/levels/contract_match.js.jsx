@@ -166,12 +166,14 @@ $(window).load(function () {
             <input id='functionNameText' onChange={this.onNameChangeEvent} placeholder='Name' type='text' value={this.state.name}/>
           </div>
           <div id='sectionTitle'>Domain</div>
+          <div className='section-type-hint'>(the domain is the type of input)</div>
           <DomainsList
             domainTypes={this.state.domainTypes}
             onDomainChange={this.onDomainChange}
             onDomainAdd={this.onDomainAdd}
             onDomainRemove={this.onDomainRemove}/>
           <div id='sectionTitle' className="clear">Range</div>
+          <div className='section-type-hint'>(the range is the type of output)</div>
           <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
         </div>
       )

@@ -11,6 +11,7 @@
 /* global $ */
 'use strict';
 
+var utils = require('../utils');
 var markup = require('./NetSimPanel.html');
 
 /**
@@ -25,6 +26,8 @@ var markup = require('./NetSimPanel.html');
  *        Defaults to no class, so only the 'netsim-panel' class will be used.
  * @param {string} [options.panelTitle] - Localized initial panel title.
  *        Defaults to empty string.
+ * @param {boolean} [options.canMinimize] - Whether this panel can be minimized
+ *        (closed) by clicking on the title. Defaults to TRUE.
  * @param {boolean} [options.beginMinimized] - Whether this panel should be
  *        minimized (closed) when it is initially created.  Defaults to FALSE.
  * @constructor
@@ -52,14 +55,21 @@ var NetSimPanel = module.exports = function (rootDiv, options) {
    * @type {string}
    * @private
    */
-  this.className_ = options.className || '';
+  this.className_ = utils.valueOr(options.className, '');
 
   /**
    * Panel title, displayed in header.
    * @type {string}
    * @private
    */
-  this.panelTitle_ = options.panelTitle || '';
+  this.panelTitle_ = utils.valueOr(options.panelTitle, '');
+
+  /**
+   * Whether this panel can be minimized (closed) by clicking on the title.
+   * @type {boolean}
+   * @private
+   */
+  this.canMinimize_ = utils.valueOr(options.canMinimize, true);
 
   /**
    * Whether the component is minimized, for consistent
@@ -67,8 +77,7 @@ var NetSimPanel = module.exports = function (rootDiv, options) {
    * @type {boolean}
    * @private
    */
-  this.isMinimized_ = options.beginMinimized !== undefined ?
-      options.beginMinimized : false;
+  this.isMinimized_ = utils.valueOr(options.beginMinimized, false);
 
   // Initial render
   this.render();
@@ -88,14 +97,18 @@ NetSimPanel.prototype.render = function () {
   var newMarkup = $(markup({
     instanceID: this.instanceID_,
     className: this.className_,
-    panelTitle: this.panelTitle_
+    panelTitle: this.panelTitle_,
+    canMinimize: this.canMinimize_
 
   }));
   this.rootDiv_.html(newMarkup);
 
-  this.rootDiv_.find('.minimizer').click(this.onMinimizerClick_.bind(this));
-
-  this.setMinimized(this.isMinimized_);
+  if (this.canMinimize_) {
+    this.rootDiv_.find('.minimizer').click(this.onMinimizerClick_.bind(this));
+    this.setMinimized(this.isMinimized_);
+  } else {
+    this.setMinimized(false);
+  }
 };
 
 /**

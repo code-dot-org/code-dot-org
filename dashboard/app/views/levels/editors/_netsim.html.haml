@@ -12,9 +12,17 @@
       %td= f.label :show_routers_in_lobby, 'Show Routers in Lobby'
       %td Whether router nodes should appear in the lobby list at all.
     %tr
+      %td= boolean_check_box f, :can_connect_to_clients
+      %td= f.label :can_connect_to_clients, 'Can connect to clients'
+      %td Whether the student can connect directly to other students' client nodes.
+    %tr
+      %td= boolean_check_box f, :can_connect_to_routers
+      %td= f.label :can_connect_to_routers, 'Can connect to routers'
+      %td Whether the student can connect to router nodes.
+    %tr
       %td= boolean_check_box f, :show_add_router_button
       %td= f.label :show_add_router_button, 'Show "Add Router" Button'
-      %td Whether the "Add Router" button should be available to students
+      %td Whether the "Add Router" button should be available to students.
 
 %h3 Packet Headers
 .field

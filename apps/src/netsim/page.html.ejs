@@ -32,9 +32,9 @@
 <div id="appcontainer">
   <!-- Should disable spell-check on all netsim elements -->
   <div id="netsim"  autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">
-    <div id="netsim_rightcol">
-      <div id="netsim_status"></div>
-      <div id="netsim_vizualization">
+    <div id="netsim-rightcol">
+      <div id="netsim-status"></div>
+      <div id="netsim-visualization">
         <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
 
           <filter id="backgroundBlur">
@@ -44,22 +44,22 @@
             </feComponentTransfer>
           </filter>
 
-          <g id="centered_group" transform="translate(150,150)">
-            <g id="background_group" filter="url(#backgroundBlur)"></g>
-            <g id="foreground_group"></g>
+          <g id="centered-group" transform="translate(150,150)">
+            <g id="background-group" filter="url(#backgroundBlur)"></g>
+            <g id="foreground-group"></g>
           </g>
         </svg>
       </div>
-      <div id="netsim_tabs"></div>
+      <div id="netsim-tabs"></div>
     </div>
-    <div id="netsim_leftcol">
-      <div class="leftcol_disconnected">
-        <div id="netsim_lobby_container"></div>
+    <div id="netsim-leftcol">
+      <div class="leftcol-disconnected">
+        <div class="lobby-panel"></div>
       </div>
-      <div class="leftcol_connected">
-        <div id="netsim_received"></div>
-        <div id="netsim_sent"></div>
-        <div id="netsim_send"></div>
+      <div class="leftcol-connected">
+        <div id="netsim-received"></div>
+        <div id="netsim-sent"></div>
+        <div id="netsim-send"></div>
       </div>
     </div>
   </div>

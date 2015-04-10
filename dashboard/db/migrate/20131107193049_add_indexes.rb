@@ -1,6 +1,6 @@
 class AddIndexes < ActiveRecord::Migration
   def change
-    add_index :activities, :level_source_id if !index_exists?(:activities, :level_source_id)
+    add_index :activities, :level_source_id unless index_exists?(:activities, :level_source_id)
     add_index :concepts, :video_id
     add_index :concepts_levels, :concept_id
     add_index :concepts_levels, :level_id

@@ -10,6 +10,8 @@
     "instructions": "You have loaded NetSim in superuser mode.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "true",
+    "can_connect_to_clients": "true",
+    "can_connect_to_routers": "true",
     "show_add_router_button": "true",
     "router_expects_packet_header": [ { "key": "toAddress", "bits": 4 }, { "key": "fromAddress", "bits": 4 }, { "key": "packetIndex", "bits": 4 }, { "key": "packetCount", "bits": 4 } ],
     "client_initial_packet_header": [ { "key": "toAddress", "bits": 4 }, { "key": "fromAddress", "bits": 4 }, { "key": "packetIndex", "bits": 4 }, { "key": "packetCount", "bits": 4 } ],

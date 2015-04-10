@@ -161,10 +161,7 @@ NetSimVizEntity.prototype.stopAllAnimation = function () {
 NetSimVizEntity.prototype.tweenToPosition = function (newX, newY, duration,
     tweenFunction) {
   // Remove any existing tweens controlling posX or posY
-  this.tweens_.filter(function (tween) {
-    return tween.target !== this ||
-        (tween.propertyName !== 'posX' && tween.propertyName !== 'posY');
-  });
+  this.removeAllTweensOnProperties(['posX', 'posY']);
 
   // Add two new tweens, one for each axis
   if (duration > 0) {
@@ -199,9 +196,7 @@ NetSimVizEntity.prototype.snapToPosition = function (newX, newY) {
 NetSimVizEntity.prototype.tweenToScale = function (newScale, duration,
     tweenFunction) {
   // Remove existing scale tweens
-  this.tweens_.filter(function (tween) {
-    return tween.target !== this || tween.propertyName !== 'scale';
-  });
+  this.removeAllTweensOnProperty('scale');
 
   // On nonzero duration, add tween to target scale.  Otherwise just set it.
   if (duration > 0) {
@@ -210,6 +205,33 @@ NetSimVizEntity.prototype.tweenToScale = function (newScale, duration,
   } else {
     this.scale = newScale;
   }
+};
+
+/**
+ * Remove (stop) all active tweens that control the given property on this
+ * visualization entity.
+ * @param {string} propertyName
+ */
+NetSimVizEntity.prototype.removeAllTweensOnProperty = function (propertyName) {
+  this.removeAllTweensOnProperties([propertyName]);
+};
+
+/**
+ * Remove (stop) all active tweens that control any of the given properties
+ * on this visualization entity.
+ * @param {string[]} propertyNames
+ */
+NetSimVizEntity.prototype.removeAllTweensOnProperties = function (propertyNames) {
+  this.tweens_ = this.tweens_.filter(function (tween) {
+    var targetsThisEntity = tween.target === this;
+    var isRemovableProperty = propertyNames.some(function (name) {
+      return tween.propertyName === name;
+    });
+
+    // Invert for filter() because we want to keep everything BUT the matched
+    // properties
+    return !(targetsThisEntity && isRemovableProperty);
+  }, this);
 };
 
 /**
