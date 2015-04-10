@@ -68,7 +68,7 @@ NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
   entity.localNodeID = localNodeID;
   entity.remoteNodeID = remoteNodeID;
   entity.getTable_().create(entity.buildRow_(), function (err, row) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, null);
       return;
     }

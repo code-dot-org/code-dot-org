@@ -194,6 +194,9 @@ Blockly.ContractEditor.prototype.create_ = function() {
       headerText: "Definition", /** TODO(bjordan) i18n */
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
         this.flyout_.setVisibility(!isNowCollapsed);
+        if (!isNowCollapsed) {
+          this.refreshParamsInFlyout_();
+        }
         this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this),
           this.hiddenDefinitionBlocks_);
