@@ -15,7 +15,7 @@ end
 
 # Employee engagement
 get '/api/hour/begin_company/:company' do |company|
-  pass unless form = DB[:forms].where(kind:'CompanyProfile', name:company).first
+  pass unless DB[:forms].where(kind:'CompanyProfile', name:company).first
   pass unless tutorial = DB[:tutorials].where(code:'codeorg').first
   launch_tutorial(tutorial, company:company)
 end

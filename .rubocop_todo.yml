@@ -65,10 +65,6 @@ Lint/UnusedMethodArgument:
 Lint/UselessAccessModifier:
   Enabled: false
 
-# Offense count: 33
-Lint/UselessAssignment:
-  Enabled: false
-
 # Offense count: 3
 Lint/Void:
   Enabled: false
