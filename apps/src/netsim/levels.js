@@ -31,6 +31,14 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *
  * @property {MessageGranularity} messageGranularity - Whether the simulator
  *           puts a single bit into storage at a time, or a whole packet.
+ *           Should use 'bits' for variant 1 (levels about the coordination
+ *           problem), and 'packets' for levels where the coordination problem
+ *           is abstracted away.
+ *
+ * @property {boolean} automaticReceive - Whether the local node will
+ *           automatically pick up messages to itself from the message table,
+ *           and dump them to the received message log.  If false, some other
+ *           method must be used for receiving messages.
  *
  * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
  *           the router uses to parse incoming packets and figure out where
@@ -107,6 +115,7 @@ levels.custom = {
 
   // Simulator-wide setup
   messageGranularity: MessageGranularity.BITS,
+  automaticReceive: false,
 
   // Packet header specification
   routerExpectsPacketHeader: [],
