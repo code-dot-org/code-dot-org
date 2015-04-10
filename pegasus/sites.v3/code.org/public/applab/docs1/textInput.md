@@ -31,6 +31,8 @@ ____________________________________________________
 [example]
 
 <pre>
+// Display Label
+textLabel("demoLabel", "Enter Value:", "demo");
 textInput("demo","Type Here"); // Create a text input with the initial value "Type Here"
 </pre>
 
@@ -40,12 +42,21 @@ ____________________________________________________
 
 [example]
 
-
 <pre>
-// Display Label
-textLabel("moveAmountLabel", "How Much?", "moveAmount");
-// User-specified number of pixels to move
-textInput("moveAmount", "10");
+textLabel("firstLabel", "First Name:", "first");
+textInput("first","John");
+textLabel("lastLabel", "Last Name:", "last");
+textInput("last","Smith");
+function outputName() {
+  console.log(getText("first") + " " + getText("last"));
+}
+// Output the name to the console everytime it changes.
+onEvent("first","change", function(event) {
+  outputName();
+})
+onEvent("last","change", function(event) {
+  outputName();
+})
 </pre>
 
 [/example]
@@ -84,6 +95,8 @@ No Return Value
 ### Tips
 You should associate a textLabel with your textInput to describe the purpose of the text field.
 
+
+The textInput can also be used in design mode.
 [/tips]
 
 [bug]

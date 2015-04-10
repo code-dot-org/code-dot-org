@@ -19,6 +19,12 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {boolean} showRoutersInLobby - Whether router nodes should appear
  *           in the lobby list at all.
  *
+ * @property {boolean} canConnectToClients - Whether client nodes are selectable
+ *           and can be connected to
+ *
+ * @property {boolean} canConnectToRouters - Whether router nodes are selectable
+ *           and can be connected to
+ *
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
  *
@@ -91,21 +97,13 @@ levels.custom = {
   // Lobby configuration
   showClientsInLobby: false,
   showRoutersInLobby: false,
+  canConnectToClients: false,
+  canConnectToRouters: false,
   showAddRouterButton: false,
 
   // Packet header specification
-  routerExpectsPacketHeader: [
-    { key: Packet.HeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: Packet.HeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: Packet.HeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
-    { key: Packet.HeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
-  ],
-  clientInitialPacketHeader: [
-    { key: Packet.HeaderType.TO_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: Packet.HeaderType.FROM_ADDRESS, bits: BITS_PER_NIBBLE },
-    { key: Packet.HeaderType.PACKET_INDEX, bits: BITS_PER_NIBBLE },
-    { key: Packet.HeaderType.PACKET_COUNT, bits: BITS_PER_NIBBLE }
-  ],
+  routerExpectsPacketHeader: [],
+  clientInitialPacketHeader: [],
 
   // Send widget configuration
   showAddPacketButton: false,
@@ -113,12 +111,7 @@ levels.custom = {
   defaultPacketSizeLimit: Infinity,
 
   // Tab-panel control
-  showTabs: [
-    NetSimTabType.INSTRUCTIONS,
-    NetSimTabType.MY_DEVICE,
-    NetSimTabType.ROUTER,
-    NetSimTabType.DNS
-  ],
+  showTabs: [],
   defaultTabIndex: 0,
 
   // Instructions tab and its controls
@@ -126,17 +119,8 @@ levels.custom = {
   //       be localized by the time it gets here.
 
   // "My Device" tab and its controls
-  showEncodingControls: [
-    EncodingType.BINARY,
-    EncodingType.A_AND_B,
-    EncodingType.HEXADECIMAL,
-    EncodingType.DECIMAL,
-    EncodingType.ASCII
-  ],
-  defaultEnabledEncodings: [
-    EncodingType.ASCII,
-    EncodingType.BINARY
-  ],
+  showEncodingControls: [],
+  defaultEnabledEncodings: [],
 
   // Router tab and its controls
   showRouterBandwidthControl: false,

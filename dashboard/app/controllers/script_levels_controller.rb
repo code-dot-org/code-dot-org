@@ -112,8 +112,6 @@ private
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     @full_width = true
 
-    @applab_user_id = applab_user_id
-
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
       success: milestone_response(script_level: @script_level, solved?: true),

@@ -25,7 +25,7 @@ Returns the amount of blue (ranging from 0 to 255) in the color of the pixel loc
 
 **Note**: Canvas and image data must exist before image color functions can be used. Create a canvas element in Design mode first or call [createCanvas()](/applab/docs/createCanvas), and then you can capture image data using [getImageData()](/applab/docs/getImageData) before calling getBlue().
 
-**How pixel colors work**: The color you see in a pixel on the screen is made up of 4 values. The red, green, blue, and alpha values of a pixel determine exactly the shade of color that appears on the screen. Each of these values ranges from a minimum of 0 up to a maximum of 255. They are usually listed in the order of Red, Green, Blue, then Alpha - or RGBA. A fully blue (and only blue) pixel would be written as (0, 0, 255, 255). The alpha value is special because it shows how transparent the pixel should be in comparison to other pixels on the same spot at the screen. So an alpha value of 0 would make a pixel fully transparent (regardless of the other color values) and 255 is fully visible.
+**How pixel colors work**: The color you see in a pixel on the screen is made up of 4 values. The red, green, blue, and alpha values of a pixel determine exactly the shade of color that appears on the screen. Each of these values ranges from a minimum of 0 up to a maximum of 255. They are usually listed in the order of Red, Green, Blue, then Alpha - or RGBA. A fully blue (and only blue) pixel would be written as (0, 0, 255, 255). A black pixel is (0, 0, 0, 255). So reducing a pixel's color values will cause it to be closer to black. The alpha value is special because it shows how opaque the pixel should be in comparison to other pixels on the same spot at the screen. So an alpha value of 0 would make a pixel fully transparent (regardless of the other color values) and 255 is fully visible.
 
 [/description]
 
@@ -105,16 +105,17 @@ ____________________________________________________
 
 [example]
 
-**Remove all blue from the canvas**
+**Halve all blue values in the canvas**
 
-In this more detailed example, we move through each pixel of the canvas and change the blue value to zero in each. To do this, the function `removeBlue(imageData)` is defined and called after a canvas element has been created with a rectangle drawn and image data captured.
+In this more detailed example, we move through each pixel of the canvas and halve the blue value in each. To do this, the function `halveBlue(imageData)` is defined and called after a canvas element has been created with a rectangle drawn and image data captured.
 
 <pre>
-//Define the removeBlue function (which accepts image data to work on as variable 'thisImageData')
-function removeBlue(thisImageData){
+//Define the halveBlue function (which accepts image data to work on as variable 'thisImageData')
+function halveBlue(thisImageData){
     for(var y=0; y < thisImageData.height; y++) { //Loop over each pixel in y axis
         for(var x=0; x < thisImageData.width; x++) { //An inner loop over each pixel in x axis
-            setBlue(thisImageData, x, y, 0); //Use x, y from our loops to set each pixel's blue value to 0
+            var newBlue = (getBlue(thisImageData, x, y) / 2); //Calculate half the blue value of the pixel
+            setBlue(thisImageData, x, y, newBlue); //Use x, y from our loops to set each pixel's new blue
         }
         putImageData(thisImageData, 0, 0); //We update the whole canvas for every pixel in our loops
     }
@@ -126,8 +127,8 @@ setFillColor('blue');
 rect(0, 0, 100, 200);
 var imageData = getImageData(0, 0, 320, 480);
 
-//Then we will call our function to remove all blue from the canvas one pixel at a time
-removeBlue(imageData);
+//Then we will call our function to halve all blue values in the canvas one pixel at a time
+halveBlue(imageData);
 </pre>
 
 [/example]

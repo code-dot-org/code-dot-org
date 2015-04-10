@@ -223,6 +223,8 @@ module LevelsHelper
       failure_message_override
       show_clients_in_lobby
       show_routers_in_lobby
+      can_connect_to_clients
+      can_connect_to_routers
       show_add_router_button
       router_expects_packet_header
       client_initial_packet_header
@@ -303,7 +305,6 @@ module LevelsHelper
       },
       droplet: @game.try(:uses_droplet?),
       pretty: Rails.configuration.pretty_apps ? '' : '.min',
-      applabUserId: @applab_user_id,
     }
     app_options[:scriptId] = @script.id if @script
     app_options[:levelGameName] = @level.game.name if @level.game
@@ -314,6 +315,7 @@ module LevelsHelper
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
     app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || @embed
     app_options[:isLegacyShare] = true if @is_legacy_share
+    app_options[:applabUserId] = applab_user_id if @game == Game.applab
 
     # Move these values up to the root
     %w(hideSource share noPadding embed).each do |key|
