@@ -10,13 +10,14 @@
   "scripts": {
     "gulp": "FORCE_COLOR=true gulp --cwd=. --gulpfile=lib/frontend/gulpfile.js",
     "start": "npm run gulp -- dev",
-    "prepublish": "npm run gulp -- build"
+    "build": "npm run gulp -- build"
   },
   "dependencies": {
     "@cdo/apps-build": "0.0.1",
     "@cdo/example": "0.0.1",
     "browserify": "^9.0.2",
     "chalk": "^1.0.0",
+    "check-dependencies": "^0.9.2",
     "event-stream": "^3.1.7",
     "factor-bundle": "^2.3.3",
     "gulp": "^3.8.11",
@@ -31,6 +32,7 @@
     "mkdirp": "^0.5.0",
     "node-sass": "~2.0.0-beta",
     "rimraf": "^2.3.2",
+    "spawn-sync": "^1.0.6",
     "uglify-js": "~2.4.16",
     "vinyl": "^0.4.6",
     "vinyl-source-stream": "^1.0.0",

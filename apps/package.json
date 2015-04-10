@@ -28,7 +28,7 @@
   },
   "scripts": {
     "clean": "rm -rf ./build",
-    "prepublish": "gulp build",
+    "build": "gulp build",
     "deploy": "./deploy.sh",
     "unpack": "./unpack.sh",
     "start": "gulp dev & node server.js",

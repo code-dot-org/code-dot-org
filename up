@@ -24,6 +24,5 @@ def load_gem(name, require = nil)
 end
 
 `bundle install --quiet --full-index`
-`npm --silent install`
 load_gem 'foreman'
 system "foreman start -f #{procfile.path} -d #{__dir__}"
