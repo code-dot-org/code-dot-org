@@ -9,12 +9,7 @@
     },
     "title": "How the Internet Works - Video",
     "content1": "description here",
-    "markdown": "# How the Internet Works\n\n# THIS VIDEO URL MUST BE REPLACED\n\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dubPPv_ECPA\" frameborder=\"0\" allowfullscreen></iframe>\n</br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
-    "type": "External",
-    "dsl_text": "name 'U1L5 How the Internet Works - Video'\r\ntitle 'How the Internet Works - Video'\r\ndescription 'description here'\r\ncss 'unplugged'\r\nskip_dialog 'true'\r\n\r\nmarkdown <<MARKDOWN\r\n# How the Internet Works\r\n\r\n# THIS VIDEO URL MUST BE REPLACED\r\n\r\n\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dubPPv_ECPA\" frameborder=\"0\" allowfullscreen></iframe>\r\n</br>\r\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "# How the Internet Works\n\n# THIS VIDEO URL MUST BE REPLACED\n\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dubPPv_ECPA\" frameborder=\"0\" allowfullscreen></iframe>\n</br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
   },
   "md5": "bda8a254ebfc26b157e121aa10ab257c"
 }]]></config>

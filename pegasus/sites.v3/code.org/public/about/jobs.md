@@ -7,7 +7,6 @@ nav: about_nav
 - [Technical Product Manager](#Tech-PM)
 - [K-5 Affiliate Program Manager](#K-5-PM)
 - [Hour of Code Campaign Coordinator](#HOC-Temp)
-- [Accountant (PT)](#accountant)
 - [Head of Engineering](#head-engineering)
 - [High School Program Manager](#HS-PM)
 - [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
@@ -104,40 +103,6 @@ Responsibilities of this position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="accountant"href="#accountant">Accountant (PT) (Seattle, WA)</a>
-**Job Summary:**
-
-The Accountant plays a critical role in ensuring accurate financial record keeping in accordance with GAAP, IRS regulations and non-profit best practices. Responsibilities of the position include:
-
-- Journal entry processing
-- Bank and balance sheet reconciliations and analysis
-- Inventory reconciliation
-- Month-end and year-end closing processes
-- Preparation of monthly, quarterly, and annual financial statements and Board of Directors financial presentations
-- Ad hoc financial reports and analysis
-- Preparing audit schedules and interfacing with external auditors
-- Assisting with development of annual budgets and rolling forecasts
-- Advising leadership team on accounting implications of operational decisions
-
-**Qualifications**
-
-The ideal candidate has the following qualifications:
-
-- A Bachelor’s degree in Accounting or equivalent experience
-- A minimum of 3-5 years of progressively responsible accounting experience 
-- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
-- Expertise in Quickbooks Online or other accounting software
-- Must be an advanced or expert user of spreadsheets
-- Strong analytical and problem solving ability
-- Professional demeanor, possessing excellent communication skills
-- Must be extremely organized and detail oriented
-- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
-- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
-
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="advocacy-researcher" href="#advocacy-researcher">Policy Research Analyst (Seattle, WA preferred)</a>    
 **Job Summary:**

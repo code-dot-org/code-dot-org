@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "The function 'update-target' function takes the target's current x value, and returns an updated value. Complete the 'update-target' function so that it adds to the x value each time it is called. The more you add to x, the faster the target will go.",
+    "instructions": "The 'update-target' function takes the target's current x value, and returns an updated value. Complete the 'update-target' function so that it adds to the x value each time it is called. The more you add to x, the faster the target will go.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -36,10 +36,12 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
     "custom_game_type": "Big Game",
-    "min_workspace_height": "1500"
-  }
+    "min_workspace_height": "1500",
+    "disable_examples": "false",
+    "maze_data": null
+  },
+  "md5": "75e971e4af061f7dbc07263645493bb1"
 }]]></config>
   <blocks/>
 </Studio>
