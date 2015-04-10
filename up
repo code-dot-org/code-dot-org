@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Self-contained wrapper script to run foreman on our project's processes
+# Self-contained wrapper script using foreman to host multiple project processes in parallel
 
 proc = <<Procfile
 dashboard: bin/dashboard-server
@@ -11,6 +11,7 @@ procfile = Tempfile.new 'procfile'
 procfile.write(proc)
 procfile.close
 
+# install/load the Gem without Bundler
 def load_gem(name, require = nil)
   begin
     gem name
@@ -22,5 +23,7 @@ def load_gem(name, require = nil)
   require require || name
 end
 
+`bundle install --quiet --full-index`
+`npm --silent install`
 load_gem 'foreman'
 system "foreman start -f #{procfile.path} -d #{__dir__}"
