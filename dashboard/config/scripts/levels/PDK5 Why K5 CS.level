@@ -3,13 +3,13 @@
   "game_id": 43,
   "created_at": "2015-03-12T17:57:13.000Z",
   "properties": {
-    "title": "Why teach computer science in elementary school?",
-    "markdown": "## Why should you teach computer science in elementary school?\n\nComputer science promote critical thinking, creativity, problem-solving, and engagement in real-world skills. If we wait until high school or college to introduce students to computer science, some students will already have decided that computer science is not for them or they will feel that they are already too far behind compared to students who study it outside of school. \n\nExposing students to computer science in grades K-5, when they don't have to opt-in to a class like in high school, allows all students to see how accessible the subject is and decide if they enjoy it. Below are 2 infographics that help paint a picture of the kind of students currently studying computer science. By introducing students to computer science at a younger age, we can help to make the computer science field **more equitable**. \n\n\n</br>\n\n![image](http://code.org/images/cs-stats/gender-inequality.png)\n\n</br>\n\n![image](http://code.org/images/cs-stats/2012-hs-ap-courses.png)\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
     "options": {
       "skip_dialog": true,
       "css": "unplugged",
       "skip_dialogue": true
-    }
+    },
+    "title": "Why teach computer science in elementary school?",
+    "markdown": "## Why should you teach computer science in elementary school?\n\nComputer science promote critical thinking, creativity, problem-solving, and engagement in real-world skills. If we wait until high school or college to introduce students to computer science, some students will already have decided that computer science is not for them or they will feel that they are already too far behind compared to students who study it outside of school. \n\nExposing students to computer science in grades K-5, when they don't have to opt-in to a class like in high school, allows all students to see how accessible the subject is and decide if they enjoy it. Below are 2 infographics that help paint a picture of the kind of students currently studying computer science. By introducing students to computer science at a younger age, we can help to make the computer science field **more equitable**. \n\n\n</br>\n\n![image](http://code.org/images/cs-stats/gender-inequality.png)\n\n</br>\n\n![image](http://code.org/images/cs-stats/2012-hs-ap-courses.png)\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
   },
   "md5": "14f1800b57b754beec5decdd93ec4ab3"
 }]]></config>
