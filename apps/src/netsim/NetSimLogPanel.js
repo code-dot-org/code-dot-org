@@ -127,7 +127,7 @@ NetSimLogPanel.prototype.render = function () {
   this.addButton(i18n.clear(), this.onClearButtonPress_.bind(this));
 
   // Bind reference to scrollArea for use when logging.
-  this.scrollArea_ = this.getBody().find('.scroll_area');
+  this.scrollArea_ = this.getBody().find('.scroll-area');
 
   this.updateUnreadCount();
 };
