@@ -39,11 +39,10 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    sudo aptitude update
-    sudo aptitude upgrade
-    export DEBIAN_FRONTEND=noninteractive
-    sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev
-    sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby
-    sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem
+    aptitude update
+    aptitude upgrade
+    DEBIAN_FRONTEND=noninteractive aptitude install -q -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev
+    ln -sf /usr/bin/ruby2.0 /usr/bin/ruby
+    ln -sf /usr/bin/gem2.0 /usr/bin/gem
   SHELL
 end
