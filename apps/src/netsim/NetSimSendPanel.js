@@ -145,6 +145,9 @@ NetSimSendPanel.prototype.render = function () {
   this.getBody()
       .find('#send_button')
       .click(this.onSendButtonPress_.bind(this));
+  this.getBody()
+      .find('#set-wire-button')
+      .click(this.onSetWireButtonPress_.bind(this));
 
   // Note: At some point, we might want to replace this with something
   // that nicely re-renders the contents of this.packets_... for now,
@@ -257,14 +260,53 @@ NetSimSendPanel.prototype.onSendButtonPress_ = function () {
   }
 };
 
+/**
+ * Send a single bit, manually 'setting the wire state'.
+ * @private
+ */
+NetSimSendPanel.prototype.onSetWireButtonPress_ = function () {
+  // Find the first bit of the first packet.  Set the wire to 0/off if
+  // there is no first bit.
+  var firstBit = 0;
+  if (this.packets_.length > 0) {
+    var packetBinary = this.packets_[0].getPacketBinary();
+    if (packetBinary.length > 0) {
+      firstBit = packetBinary.substr(0, 1);
+    }
+  }
+
+  var myNode = this.netsim_.myNode;
+  if (myNode) {
+    this.disableEverything();
+    myNode.sendMessages([firstBit], function () {
+      this.consumeFirstBit();
+      this.enableEverything();
+    }.bind(this));
+  }
+};
+
 /** Disable all controls in this panel, usually during network activity. */
 NetSimSendPanel.prototype.disableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', true);
+  // TODO: Update these methods to disable netsim-buttons as well
 };
 
 /** Enable all controls in this panel, usually after network activity. */
 NetSimSendPanel.prototype.enableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', false);
+};
+
+/**
+ * Remove the first bit of the first packet, usually because we just sent
+ * a single bit in variant 1.
+ */
+NetSimSendPanel.prototype.consumeFirstBit = function () {
+  if (this.packets_.length > 0) {
+    this.packets_[0].consumeFirstBit();
+    if (this.packets_[0].getPacketBinary() === '' && this.packets_.length > 1) {
+      this.removePacket_(this.packets_[0]);
+    }
+  }
 };
 
 /**

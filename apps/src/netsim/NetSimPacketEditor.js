@@ -555,3 +555,13 @@ NetSimPacketEditor.prototype.updateBitCounter = function () {
 NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function () {
   this.removePacketCallback_(this);
 };
+
+/**
+ * Remove the first bit of the packet binary, used when sending one bit
+ * at a time.
+ */
+NetSimPacketEditor.prototype.consumeFirstBit = function () {
+  // TODO: Better support for doing this through packet headers
+  this.message = this.message.substr(1);
+  this.updateFields_();
+};
