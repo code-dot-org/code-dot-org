@@ -109,7 +109,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
    */
   this.packetSizeControl_ = null;
 
-  var panelTitle = (levelConfig.messageGranularity === MessageGranularity.PACKET) ?
+  var panelTitle = (levelConfig.messageGranularity === MessageGranularity.PACKETS) ?
       i18n.sendAMessage() : i18n.sendBits();
 
   NetSimPanel.call(this, rootDiv, {

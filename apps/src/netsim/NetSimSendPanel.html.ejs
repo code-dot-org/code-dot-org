@@ -8,9 +8,9 @@
     <% if (level.showAddPacketButton) { %>
       <span class="netsim-button" id="add-packet-button"><%= i18n.addPacket() %></span>
     <% } %>
-    <% if (level.messageGranularity === MessageGranularity.PACKET) { %>
+    <% if (level.messageGranularity === MessageGranularity.PACKETS) { %>
       <span class="netsim-button" id="send-button"><%= i18n.send() %></span>
-    <% } else if (level.messageGranularity === MessageGranularity.BIT) { %>
+    <% } else if (level.messageGranularity === MessageGranularity.BITS) { %>
       <span class="netsim-button" id="set-wire-button"><%= i18n.setWire() %></span>
     <% } %>
   </div>

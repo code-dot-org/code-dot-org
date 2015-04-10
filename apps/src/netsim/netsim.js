@@ -272,7 +272,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   // Create log panels according to level configuration
-  if (this.level.messageGranularity === MessageGranularity.PACKET) {
+  if (this.level.messageGranularity === MessageGranularity.PACKETS) {
     this.receivedMessageLog_ = new NetSimLogPanel($('#netsim-received'), {
       logTitle: i18n.receivedMessageLog(),
       isMinimized: false,
@@ -286,7 +286,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
       hasUnreadMessages: false,
       packetSpec: this.level.clientInitialPacketHeader
     });
-  } else if (this.level.messageGranularity === MessageGranularity.BIT) {
+  } else if (this.level.messageGranularity === MessageGranularity.BITS) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
       isMinimized: false

@@ -106,7 +106,7 @@ levels.custom = {
   showAddRouterButton: false,
 
   // Simulator-wide setup
-  messageGranularity: MessageGranularity.BIT,
+  messageGranularity: MessageGranularity.BITS,
 
   // Packet header specification
   routerExpectsPacketHeader: [],
