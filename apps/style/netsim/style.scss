@@ -7,6 +7,7 @@ $dark-gray: #a9a9a9;
 $black: #000000;
 $red: #ff0000;
 $code-org-pacific-blue: #00adbc;
+$code-org-purple: #7665a0;
 $code-org-web-orange: #ffa400;
 $own-node-background-color: white;
 $user-row-hover-color: #e0ffff;
@@ -302,7 +303,7 @@ svg {
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
-      background-color: $code-org-pacific-blue;
+      background-color: $code-org-purple;
       color: $whitesmoke;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
@@ -317,7 +318,7 @@ svg {
       border-left: solid darkgray thin;
       border-right: solid darkgray thin;
       border-bottom: solid darkgray thin;
-      border-top: solid $code-org-pacific-blue thin;
+      border-top: solid $code-org-purple thin;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
     }
 
@@ -625,7 +626,7 @@ svg {
 
     // Modify actual tabs at top of tab area
     .ui-tabs-nav {
-      background: $code-org-pacific-blue;
+      background: $code-org-purple;
       border-left: none;
       border-right: none;
       border-top: none;
