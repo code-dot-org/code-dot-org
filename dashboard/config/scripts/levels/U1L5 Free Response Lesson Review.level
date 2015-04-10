@@ -5,13 +5,7 @@
   "properties": {
     "title": "Lesson Review",
     "content1": "Complete these three sentences.",
-    "markdown": "Three big ideas from the lesson today are _____ and _____ and _____ . \nBut the most important or interesting thing I learned today is _____. \n\nAt the beginning of the class, I thought _______ but now i know _______.\n",
-    "type": "TextMatch",
-    "dsl_text": "name 'U1L5 Free Response Lesson Review'\r\ntitle 'Lesson Review'\r\ncontent1 'Complete these three sentences.'\r\n\r\n\r\nmarkdown <<MARKDOWN\r\nThree important ideas from the lesson today are _____ and _____ and _____ . \r\nBut the most important or interesting thing I learned today is _____. \r\n\r\nAt first I thought _______ but now i know _______.\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ],
-    "name": "U1L5 Free Response Lesson Review"
+    "markdown": "Three big ideas from the lesson today are _____ and _____ and _____ . \nBut the most important or interesting thing I learned today is _____. \n\nAt the beginning of the class, I thought _______ but now i know _______.\n"
   },
   "md5": "148e026a3529c2f693d207d4ee0b6af2"
 }]]></config>

@@ -58,14 +58,18 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="overlay"/>
-        <block type="functional_circle"/>
-        <block type="functional_triangle" id="callout_here"/>
+        <block type="overlay" inline="false"/>
+        <block type="functional_triangle" inline="false" id="callout_here"/>
+        <block type="functional_circle" inline="false"/>
         <block type="functional_math_number_dropdown">
           <title name="NUM" config="100,125,150,175,200">???</title>
         </block>
-        <block type="functional_string"/>
-        <block type="functional_style"/>
+        <block type="functional_string">
+          <title name="VAL"/>
+        </block>
+        <block type="functional_style">
+          <title name="VAL">solid</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
