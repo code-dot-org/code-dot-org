@@ -421,11 +421,6 @@ Style/MultilineTernaryOperator:
   Enabled: false
 
 # Offense count: 8
-# Cop supports --auto-correct.
-Style/NegatedIf:
-  Enabled: false
-
-# Offense count: 8
 # Configuration parameters: EnforcedStyle, MinBodyLength, SupportedStyles.
 Style/Next:
   Enabled: false
