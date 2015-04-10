@@ -10,7 +10,7 @@
     <% } %>
     <% if (level.messageGranularity === MessageGranularity.PACKET) { %>
       <span class="netsim-button" id="send-button"><%= i18n.send() %></span>
-    <% } else { %>
+    <% } else if (level.messageGranularity === MessageGranularity.BIT) { %>
       <span class="netsim-button" id="set-wire-button"><%= i18n.setWire() %></span>
     <% } %>
   </div>

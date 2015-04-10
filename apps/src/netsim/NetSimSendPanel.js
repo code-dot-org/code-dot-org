@@ -181,6 +181,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
 
   // Create a new packet
   var newPacket = new NetSimPacketEditor({
+    messageGranularity: this.levelConfig_.messageGranularity,
     packetSpec: this.packetSpec_,
     toAddress: newPacketToAddress,
     fromAddress: this.fromAddress_,

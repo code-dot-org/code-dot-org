@@ -47,7 +47,8 @@ var asciiToBinary = dataConverters.asciiToBinary;
 /**
  * Generator and controller for message sending view.
  * @param {Object} initialConfig
- * @param {packetHeaderSpec} packetSpec
+ * @param {MessageGranularity} initialConfig.messageGranularity
+ * @param {packetHeaderSpec} initialConfig.packetSpec
  * @param {number} [initialConfig.toAddress]
  * @param {number} [initialConfig.fromAddress]
  * @param {number} [initialConfig.packetIndex]
@@ -67,6 +68,12 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('netsim-packet');
+
+  /**
+   * @type {MessageGranularity}
+   * @private
+   */
+  this.messageGranularity_ = initialConfig.messageGranularity;
 
   /**
    * @type {packetHeaderSpec}
@@ -157,6 +164,7 @@ NetSimPacketEditor.prototype.getRoot = function () {
 /** Replace contents of our root element with our own markup. */
 NetSimPacketEditor.prototype.render = function () {
   var newMarkup = $(markup({
+    messageGranularity: this.messageGranularity_,
     packetSpec: this.packetSpec_
   }));
   this.rootDiv_.html(newMarkup);
