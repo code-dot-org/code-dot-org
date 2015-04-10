@@ -7,9 +7,9 @@
       "skip_dialog": true,
       "css": "unplugged"
     },
-    "markdown": "# Header\n\n# Some content\n\nparagraph text\n\n\n",
     "title": "demo title",
-    "content1": "demo description"
+    "content1": "demo description",
+    "markdown": "# Header\n\n# Some content\n\nparagraph text\n\n\n"
   },
   "md5": "276a916cf8c58bd690bcaec8342673a2"
 }]]></config>
