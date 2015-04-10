@@ -1,9 +1,11 @@
 // colors from https://www.dropbox.com/s/ycjiwt8vxlmv2ih/Code.org_stylesheet_v2_09.05.13.pdf
 
+$black: #000000;
 $charcoal: #5b6770;
 $light_gray: #949ca2;
 $lighter_gray: #c6cacd;
 $lightest_gray: #e7e8ea;
+$white: #ffffff;
 
 $teal: #00adbc;
 $light_teal: #59cad3;
@@ -35,7 +37,7 @@ $light_yellow: #ffdb74;
 $lighter_yellow: #ffebb5;
 $lightest_yellow: #fff7df;
 
-$header_text: white;
+$header_text: $white;
 $bkgnd_color: $teal;
 $inset_color: $lighter_gray;
 $dark_color:  $purple;
