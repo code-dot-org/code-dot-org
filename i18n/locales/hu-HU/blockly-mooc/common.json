@@ -144,7 +144,7 @@
   "dropletBlock_multiplyOperator_description":"Multiply two numbers",
   "dropletBlock_notOperator_description":"Returns false if the expression can be converted to true; otherwise, returns true",
   "dropletBlock_notOperator_signatureOverride":"AND boolean operator",
-  "dropletBlock_onEvent_description":"Execute code in response to the specified event.",
+  "dropletBlock_onEvent_description":"Kódot futtat egy meghatározott esemény hatására.",
   "dropletBlock_onEvent_param0":"id",
   "dropletBlock_onEvent_param1":"event",
   "dropletBlock_onEvent_param2":"function",

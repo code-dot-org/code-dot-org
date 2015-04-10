@@ -911,4 +911,18 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal true, new_level
     assert_equal false, new_level
   end
+
+  test 'trophy_check only on script with trophies' do
+    script_level_no_trophies = Script.where(trophies: false).first.script_levels.first
+    script_level_with_trophies = Script.where(trophies: true).first.script_levels.first
+
+    @controller.expects(:trophy_check).never
+    post :milestone, @milestone_params.merge(script_level_id: script_level_no_trophies)
+    assert_response :success
+
+    @controller.expects(:trophy_check).with(@user)
+    post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies)
+    assert_response :success
+  end
+
 end

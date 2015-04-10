@@ -1,22 +1,24 @@
-:css
-
-
-#top{style: "position:relative; width:100%; overflow:hidden"}
+#hero
 
   -# Generate a random set of hero images alternating between non-celeb and celeb.
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
-  - heroes.shuffle!
-  - heroes_nonceleb = heroes.select {|hero| hero[:param2_s] != "celeb"}
-  - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
-  - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
+  - if rack_env == :production
+    - heroes.shuffle!
+    - heroes_nonceleb = heroes.select {|hero| hero[:param2_s] != "celeb"}
+    - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
+    - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
+    - hero_display_time = 13 * 1000
+  - else
+    -# on non-production, show all heroes, and more quickly, for easier previewing
+    - heroes_arranged = heroes
+    - hero_display_time = 6 * 1000
 
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
-    - opacity = index == 0 ? 1 : 0
-    .widehero{id: "fullwidth#{index}", style: "display: none; z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{entry[:image_t]}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: #{opacity}; background-position: #{entry[:param1_s]}"}
+    .widehero{id: "fullwidth#{index}", style: "background-image: url(#{entry[:image_t]}); background-position: #{entry[:param1_s]}"}
 
-  #fullwidth{style: "width: 100%;"}
+  #fullwidth
     .thegap{style: "height: 1px"}
       &nbsp;
     #desktop-header.desktop-feature
@@ -24,7 +26,7 @@
     #mobile-header.mobile-feature
       = view :header, variant: "mobile"
 
-  .container_responsive{style: "color: white; font-size: 20px"}
+  #caption_container.container_responsive
     .col-66{style: "position:relative;"}
       - heroes_arranged.each_with_index do |entry, index|
         -# note: this gsheet display parameter unused due to IE8 fix.
@@ -35,38 +37,40 @@
             - lines = text.lines
             - if entry[:param3_s] == "bottom"
               - position_class = "homepage-caption-bottom"
-            .captions{id: "captionarea#{index}", class: position_class, style: "position:absolute; left:0; text-align:center; width:100%; color:#fff; line-height:22px"}
-              .caption.caption1{style: "display: none; left: 50px; top: 50px; position: absolute; opacity: 0; padding:8px; text-shadow: 0 0 5px black"}
-                = lines[0]
-              .caption.caption2{style: "display: none; left: 30px; top: 95px; position: absolute; opacity: 0; padding:8px; text-shadow: 0 0 5px black"}
-                = lines[1]
-              .caption.caption3{style: "display: none; left: 40px; top: 140px; position: absolute; opacity: 0; font-size: 14px; padding:8px; text-shadow: 0 0 5px black"}
-                = lines[2]
+            .captionarea{id: "captionarea#{index}", class: position_class}
+              -# Nokogiri::HTML is use to strip any HTML tags.
+              -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
+              .caption.caption1{style: "left: 50px; top: 50px"}
+                = Nokogiri::HTML(lines[0])
+              .caption.caption2{style: "left: 30px; top: 95px"}
+                = Nokogiri::HTML(lines[1])
+              .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
+                = Nokogiri::HTML(lines[2])
 
       &nbsp;
 
       -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
-      #blankspaceleft.desktop-feature{style: "height:380px"}
-      #blankspaceleft.mobile-feature{style: "height:120px"}
+      #blankspaceleftdesktop.desktop-feature
+      #blankspaceleftmobile.mobile-feature
 
-    .col-33{style: "position:relative; padding: 20px; margin-top:40px; text-align:center"}   
+    #actions.col-33  
       - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
       - actions.each_with_index do |entry, index|
         - display = entry[:active_s] == "hide" ? "none" : "block"
         .action{style: "display: #{display}; opacity: 0"}
           - if entry[:param1_s] == "video"
-            %img{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
-            %span{style: "font-size:20px", onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
+            %img#playimage{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();"}
+            %span#playtext{onclick: "return showVideo_mainvideo();"}
               = I18n.t(entry[:text1_s])
           - elsif entry[:param1_s] == "learn"
-            %a#herolearnlink{href: "/learn", style: "color:white; font-size:20px"}
-              %button{style: "font-weight: 500; font-size: 20px; height: 50px"}
+            %a#herolearnlink{href: "/learn"}
+              %button#herolearnbutton
                 = I18n.t(entry[:text1_s])
           -# elsif entry[:param1_s] == "petition"
-            %span#petitionaction{style: "display: none; font-weight: 500; font-size: 14px; height: 50px; cursor:pointer", onclick: "expandPetition(); adjustScroll('petitionblock');"}
+            %span#petitionaction{onclick: "expandPetition(); adjustScroll('petitionblock');"}
               = I18n.t(entry[:text1_s])
-          %div{style: "height:40px"}
-
+          .actiongap
+            &nbsp;
 
 
 :javascript
@@ -133,5 +137,5 @@
 
   $.ready()
   {
-    timerId = setInterval(cycleImage, 13000);
+    timerId = setInterval(cycleImage, #{hero_display_time});
   }

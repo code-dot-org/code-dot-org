@@ -117,12 +117,10 @@
         ettiğimizde ne olduğunu görmek ister misin? '
       2-3 Artist Loops 5_instruction: Hadi şimdi döngüde küçük bir değişiklik yapalım
         ve resmimiz nasıl değişiyor görelim.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
+      2-3 Artist Loops 6_instruction: 'Döngünün içine bir hamle ve bir dönüş daha
+        ekleyin ve tasarımın nasıl değiştiğini görün. '
+      2-3 Artist Loops 7_instruction: Döngüleri her çeşitte poligon yapmak için kullanabiliriz.
+        Bu altıgenin içine bir eşkenar dörtgen çizebilir misin?
       2-3 Artist Loops 8_instruction: Hadi döngünün içine iki öğeyi de koyalım.
       2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
         we're going to add some distance between them.\r\nUse the same code as\nbefore,

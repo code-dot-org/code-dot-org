@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## setText(id,text)
+## setText(id,  text)
 
 [/name]
 
@@ -18,7 +18,11 @@ Category: UI controls
 [description]
 
 [short_description]
-Sets the text value of the input control specified by the id. For buttons, text inputs, and text label controls setting the text value changes the value being displayed.  For drop down lists, if the specified value is an option in the list, it will be selected (or it will be added to the end? - need to test)
+
+Sets the text value of the input control specified by the id. For buttons, text inputs, and text label controls setting the text value changes the value being displayed.  
+
+For drop down lists, if the specified value is an option in the list, it will be selected. If the specified value is not in the list, the first value will be selected but no text will be displayed.
+
 [/short_description]
 
 [/description]
@@ -28,11 +32,10 @@ ____________________________________________________
 
 [example]
 
-** Count the clicks **
+**Count the clicks**
 Every time the button is clicked, the value will increment.
 <pre>
 button("counter","1");
-
 onEvent("counter", "click", function(event) {
   // Get the current value and convert it to a number
   var currentValue = parseInt(getText("counter"));

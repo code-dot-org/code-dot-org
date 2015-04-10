@@ -1,9 +1,11 @@
 // colors from https://www.dropbox.com/s/ycjiwt8vxlmv2ih/Code.org_stylesheet_v2_09.05.13.pdf
 
+$black: black;
 $charcoal: #5b6770;
 $light_gray: #949ca2;
 $lighter_gray: #c6cacd;
 $lightest_gray: #e7e8ea;
+$white: white;
 
 $teal: #00adbc;
 $light_teal: #59cad3;
@@ -35,22 +37,20 @@ $light_yellow: #ffdb74;
 $lighter_yellow: #ffebb5;
 $lightest_yellow: #fff7df;
 
-$header_text: white;
+$header_text: $white;
 $bkgnd_color: $teal;
 $inset_color: $lighter_gray;
 $dark_color:  $purple;
 $hdr_color:   $purple;
 
 // some extra colors
+$red: #c00;
+$realyellow: yellow;
 
 // progress colors
 $level_perfect: rgb(14, 190, 14);
 $level_passed: rgb(159, 212, 159);
-$level_attempted: $yellow;
+$level_attempted: $realyellow;
 $level_not_tried: #fefefe;
 $level_current: $orange;
 $assessment: $cyan;
-
-// yeah we need a red
-$red: #c00;
-$realyellow: yellow;

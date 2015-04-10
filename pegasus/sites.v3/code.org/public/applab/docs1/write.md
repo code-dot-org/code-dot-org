@@ -28,11 +28,11 @@ ____________________________________________________
 
 [example]
 
-** Display an Application Title **
+**Display an Application Title**
 Creates and displays a title at the top of your application.
 
 <pre>
-write("<H1>My Awesome Application</H1>");
+write("&lt;H1>My Awesome Application&lt;/H1>");
 // Followed by the rest of your application
 </pre>
 
@@ -45,7 +45,26 @@ ____________________________________________________
 **Ticker Tape Calculator**
 Creates a simple ticker tape calculator.
 <pre>
-
+textInput("value","0");
+write("&lt;br>");
+button("plus","+");
+button("minus","-");
+button("clear","clear");
+onEvent("plus");
+var total = 0;
+onEvent("plus","click", function(event) {
+  total += parseFloat(getText("value"));
+  write(total);
+})
+onEvent("minus","click", function(event) {
+  total -= parseFloat(getText("value"));
+  write(total);
+})
+onEvent("clear", "click", function(event) {
+  total = 0;
+  write(total);
+})
+write(total);
 </pre>
 
 [/example]
@@ -81,7 +100,8 @@ No Return Value
 [tips]
 
 ### Tips
-The HTML added to the bottom of your page can execute code. Be careful adding HTML to the page that may contain content entered by your users.
+The HTML added to the bottom of your page. The HTML can also include executable code so be careful adding any HTML to the page that may contain content entered by your users.
+
 [/tips]
 
 [bug]

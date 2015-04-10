@@ -1,3 +1,9 @@
+var COLOR_LIGHT_GREEN = '#D3E965';
+var COLOR_BLUE = '#19C3E1';
+var COLOR_RED = '#F78183';
+var COLOR_CYAN = '#4DD0E1';
+var COLOR_YELLOW = '#FFF176';
+
 module.exports.blocks = [
   {'func': 'onEvent', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
   {'func': 'button', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
@@ -51,7 +57,7 @@ module.exports.blocks = [
   {'func': 'readRecords', 'category': 'Data', 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
   {'func': 'updateRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
   {'func': 'deleteRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
-  {'func': 'getUserId', 'category': 'Data', 'params': [] },
+  {'func': 'getUserId', 'category': 'Data', 'params': [], type: 'value' },
 
   {'func': 'moveForward', 'category': 'Turtle', 'params': ["25"] },
   {'func': 'moveBackward', 'category': 'Turtle', 'params': ["25"] },
@@ -93,27 +99,27 @@ module.exports.blocks = [
 module.exports.categories = {
   'UI controls': {
     'color': 'yellow',
-    'rgb': '#FFD54F',
+    'rgb': COLOR_YELLOW,
     'blocks': []
   },
   'Canvas': {
     'color': 'red',
-    'rgb': '#F87477',
+    'rgb': COLOR_RED,
     'blocks': []
   },
   'Data': {
     'color': 'lightgreen',
-    'rgb': '#D3E965',
+    'rgb': COLOR_LIGHT_GREEN,
     'blocks': []
   },
   'Turtle': {
     'color': 'cyan',
-    'rgb': '#00D2E2',
+    'rgb': COLOR_CYAN,
     'blocks': []
   },
   'Advanced': {
     'color': 'blue',
-    'rgb': '#19C3E1',
+    'rgb': COLOR_BLUE,
     'blocks': []
   },
 };
