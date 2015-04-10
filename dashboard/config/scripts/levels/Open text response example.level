@@ -3,9 +3,9 @@
   "game_id": 38,
   "created_at": "2015-02-23T23:19:31.000Z",
   "properties": {
+    "title": "Open text response example",
     "placeholder": "I loved it because...",
-    "markdown": "# Open text response example\n\nThis is an example Markdown content header.\n\n## YouTube video\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nKIu9yen5nc\" frameborder=\"0\" allowfullscreen></iframe>\n\nWhat did you think of the video?\n",
-    "title": "Open text response example"
+    "markdown": "# Open text response example\n\nThis is an example Markdown content header.\n\n## YouTube video\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nKIu9yen5nc\" frameborder=\"0\" allowfullscreen></iframe>\n\nWhat did you think of the video?\n"
   },
   "md5": "24b61d50e68c9cdee90a3cba2c615da6"
 }]]></config>

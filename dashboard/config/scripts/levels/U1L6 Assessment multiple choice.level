@@ -30,14 +30,7 @@
         "correct": false
       }
     ],
-    "title": "Multiple Choice: Number Systems",
-    "content1": "Select the best answer from the list below",
-    "type": "Multi",
-    "dsl_text": "name 'U1L6 Assessment multiple choice'\r\ntitle 'Multiple Choice: Number Systems'\r\ndescription 'Select the best answer from the list below'\r\nquestion 'If you just had a circle and a square, how many 3-shape rows could you make?'\r\nwrong '4'\r\nwrong '6'\r\nwrong '8'\r\nwrong '10'\r\nright '12'\r\n\r\nmarkdown <<MARKDOWN\r\n\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ],
-    "name": "U1L6 Assessment multiple choice"
+    "title": "Multiple Choice: Number Systems"
   }
 }]]></config>
 </Multi>
