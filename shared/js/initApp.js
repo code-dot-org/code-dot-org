@@ -302,7 +302,9 @@ function loadProject(promise) {
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
     dashboard.isEditingProject = true;
-    promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
+    promise = promise.then(function () {
+      return dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName);
+    });
   }
   return promise;
 }

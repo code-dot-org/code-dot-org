@@ -42,15 +42,13 @@ $dark_color:  $purple;
 $hdr_color:   $purple;
 
 // some extra colors
+$red: #c00;
+$realyellow: yellow;
 
 // progress colors
 $level_perfect: rgb(14, 190, 14);
 $level_passed: rgb(159, 212, 159);
-$level_attempted: $yellow;
+$level_attempted: $realyellow;
 $level_not_tried: #fefefe;
 $level_current: $orange;
 $assessment: $cyan;
-
-// yeah we need a red
-$red: #c00;
-$realyellow: yellow;

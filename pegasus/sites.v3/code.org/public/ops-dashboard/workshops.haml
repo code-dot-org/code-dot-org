@@ -76,7 +76,7 @@ template: none
         %p{'ng-show' => 'workshop.deletion'}
           Are you sure?
         %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1)', 'ng-show' => 'workshop.deletion == true'} Yes
-        %button.btn.btn-danger{'ng-click' => 'workshop.deletion = false', 'ng-show' => 'workshop.deletion == true'} No
+        %button.btn.btn-white{'ng-click' => 'workshop.deletion = false', 'ng-show' => 'workshop.deletion == true'} No
 
 :css
   td .btn {
