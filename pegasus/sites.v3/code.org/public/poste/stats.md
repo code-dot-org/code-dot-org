@@ -36,15 +36,16 @@ OFFSET #{offset}
 <br/>
 <br/>
 
-<div class="pagination">
-<% (1..pages).each do |page_num| %>
+<ol class="pagination">
+<% 1.upto(pages) do |page_num| %>
  <% if page_num == page %>
-  <span><%= page_num %></span>
+  <li class="active">
  <% else %>
-  <a href="/poste/stats?page=<%= page_num%>"><%= page_num %></a>
+  <li>
  <% end %>
+  <a href="/poste/stats?page=<%= page_num%>"><%= page_num %></a></li>
 <% end %>
-</div>
+</ol>
 
 <table>
   <tr>
