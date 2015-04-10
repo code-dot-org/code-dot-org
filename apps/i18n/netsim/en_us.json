@@ -59,6 +59,7 @@
   "send": "Send",
   "sendAMessage": "Send a Message",
   "sendBits": "Send Bits",
+  "sentBitsLog": "Sent Bits Log",
   "sentMessageLog": "Sent Message Log",
   "setName": "Set Name",
   "setWire": "Set Wire",

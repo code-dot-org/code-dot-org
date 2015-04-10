@@ -296,7 +296,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
     });
 
     this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
-      logTitle: i18n.sentMessageLog(),
+      logTitle: i18n.sentBitsLog(),
       isMinimized: false
     });
   }
