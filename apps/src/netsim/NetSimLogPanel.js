@@ -26,6 +26,33 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 var MESSAGE_SLIDE_IN_DURATION_MS = 400;
 
 /**
+ * Object that can be sent data to be browsed by the user at their discretion
+ * @interface
+ * @name INetSimLogPanel
+ */
+
+/**
+ * Put data into the log
+ * @function
+ * @name INetSimLogPanel#log
+ * @param {string} binary
+ */
+
+/**
+ * Show or hide parts of the log based on the currently selected encoding mode.
+ * @function
+ * @name INetSimLogPanel#setEncodings
+ * @param {EncodingType[]} newEncodings
+ */
+
+/**
+ * Change how binary input in interpreted and formatted in the log.
+ * @function
+ * @name INetSimLogPanel#setChunkSize
+ * @param {number} newChunkSize
+ */
+
+/**
  * Generator and controller for message log.
  * @param {jQuery} rootDiv
  * @param {Object} options
@@ -35,6 +62,7 @@ var MESSAGE_SLIDE_IN_DURATION_MS = 400;
  * @param {packetHeaderSpec} options.packetSpec
  * @constructor
  * @augments NetSimPanel
+ * @implements INetSimLogPanel
  */
 var NetSimLogPanel = module.exports = function (rootDiv, options) {
   /**
