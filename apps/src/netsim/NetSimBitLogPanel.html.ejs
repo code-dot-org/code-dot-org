@@ -1,0 +1,61 @@
+<%
+  var i18n = require('../../locale/current/netsim');
+  var netsimConstants = require('./netsimConstants');
+  var dataConverters = require('./dataConverters');
+
+  var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
+
+  var EncodingType = netsimConstants.EncodingType;
+  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+
+  var formatAB = dataConverters.formatAB;
+  var formatBinary = dataConverters.formatBinary;
+  var formatHex = dataConverters.formatHex;
+  var alignDecimal = dataConverters.alignDecimal;
+  var binaryToAB = dataConverters.binaryToAB;
+  var binaryToHex = dataConverters.binaryToHex;
+  var binaryToDecimal = dataConverters.binaryToDecimal;
+  var binaryToAscii = dataConverters.binaryToAscii;
+
+  /**
+   * @param {EncodingType} encodingType
+   * @param {string} encodedContent
+   */
+  function logRow(encodingType, encodedContent) {
+    %>
+    <tr class="<%= encodingType %>">
+      <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"><%= getEncodingLabel(encodingType) %></th>
+      <td class="<%= PacketUIColumnType.MESSAGE %>"><%= encodedContent %></td>
+    </tr>
+    <%
+  }
+%>
+<div class="log_body">
+  <div class="scroll_area">
+    <div class="packet">
+      <table>
+        <thead>
+          <tr>
+            <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
+            <th class="<%= PacketUIColumnType.MESSAGE %>">
+              <%= i18n.message() %>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <%
+            logRow(EncodingType.ASCII, binaryToAscii(binary, chunkSize));
+
+            logRow(EncodingType.DECIMAL, alignDecimal(binaryToDecimal(binary, chunkSize)));
+
+            logRow(EncodingType.HEXADECIMAL, formatHex(binaryToHex(binary), chunkSize));
+
+            logRow(EncodingType.BINARY, formatBinary(binary, chunkSize));
+
+            logRow(EncodingType.A_AND_B, formatAB(binaryToAB(binary), chunkSize));
+          %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
