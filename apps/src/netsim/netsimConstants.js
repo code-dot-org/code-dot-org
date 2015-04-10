@@ -75,8 +75,8 @@ exports.NodeType = {
  * @enum {string}
  */
 exports.MessageGranularity = {
-  PACKET: 'packet',
-  BIT: 'bit'
+  PACKETS: 'packets',
+  BITS: 'bits'
 };
 
 /**
