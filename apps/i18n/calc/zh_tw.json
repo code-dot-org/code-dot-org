@@ -1,9 +1,17 @@
 {
-  "compute": "計算",
+  "divideByZeroError": "你的程式造成除數為0。",
+  "emptyComputeBlock": "您必須將一塊積木連接到\"計算\"積木。",
   "equivalentExpression": "請嘗試重新排序你的參數，得到完全相同結果。",
+  "evaluate": "計算",
   "extraTopBlocks": "你有未連接的積木。你要將它們連接到「計算」積木嗎？",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "你的程式回傳的結果不完全正確。",
   "goal": "目標：",
-  "reinfFeedbackMsg": "這裡是你的故事 ！繼續做它，或往下一個謎題 ！",
-  "yourExpression": "您的運算式："
+  "levelIncompleteError": "你的運算式不符合目標。",
+  "missingFunctionError": "你必須定義名為 {functionName} 的函式。",
+  "missingVariableX": "你的運算式少了變數{var}。",
+  "reinfFeedbackMsg": "這裡是你的計算結果！繼續做下去，或移動到下一個謎 ！",
+  "yourExpression": "您的運算式：",
+  "wrongInput": "你用了錯誤的值呼叫你的函數。",
+  "wrongOtherValuesX": "如果我們改變{var}，你的運算式會造成錯誤的值。",
+  "wrongResult": "你的運算式沒有回傳正確的結果。"
 }

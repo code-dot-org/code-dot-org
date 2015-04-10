@@ -23,6 +23,7 @@
           future: kan inte vara i framtiden
   hello: Hej världen
   welcome_back: Välkommen tillbaka, %{name}
+  submit: Skicka in
   add_teacher_form:
     code:
       label: 'Lägg till lärare:'
@@ -252,6 +253,7 @@
         artist: Rita något
     user:
       classroom: Lärare hemsida
+      district_dashboard: District Dashboard
       label: Hej %{username}
       stats: Mina framsteg
       settings: Mitt konto
@@ -338,6 +340,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Skicka instruktioner för bekräftelse igen
     new_password_hint: (lämna tomt om du inte vill ändra det)
     current_password_hint: (vi behöver ditt nuvarande lösenord att bekräfta dina ändringar)
@@ -504,6 +508,9 @@
       body: Se ett galleri av app och artist bilder som skapats av våra användare
     frozen:
       title: Frost
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Elever gjorde dessa med kod!
@@ -540,6 +547,14 @@
     wrong_body: Din lösning är inte rätt.  Försök pånytt!
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
+  contract_match:
+    wrong_title: Felaktigt svar
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Skriv in ditt svar här
   dialog:
@@ -594,11 +609,48 @@
     Du kan besöka<a href="http://support.code.org"> support.code.org</a> utan att
     logga in eller be din förälder eller lärare att kontakta oss.
   progress:
-    not_completed: Ej avklarad
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: Avklarad med för många block
     completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
+    assessment: assessment
   studio:
     courses_working_on: Kurser du påbörjat
     completed_courses: Avslutade kurser
     all_courses: Alla kurser
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Spara
+    delete: Ta bort
+    exit: Return to Course
+    my_projects: My Projects
+    share: Dela
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Mer
+    name: Namn
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Ta bort?
+    delete_yes: Ja
+    delete_no: Nej
+    saved: Saved
+    not_saved: Not saved
+    cancel: Avbryt
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

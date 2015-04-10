@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "வட்டம் (ஆரம், பாணி, வண்ணம்)"},
 "displayBlockTitle":function(d){return "காட்சி"},
 "ellipseBlockTitle":function(d){return "நீள்வட்ட (அகலம், உயரம், பாணி, வண்ணம்)"},
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "மேலிடு (மேல், கீழ்)"},
 "placeImageBlockTitle":function(d){return "இடம்-உருவம் (x, y, உருவம்)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "underlay (bottom, top)"},
 "outline":function(d){return "outline"},
 "solid":function(d){return "solid"},
-"string":function(d){return "string"}};
+"string":function(d){return "string"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

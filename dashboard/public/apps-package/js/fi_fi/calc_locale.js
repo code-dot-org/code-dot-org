@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "laskea"},
+"divideByZeroError":function(d){return "Ohjelmasi johtaa nollalla jakamiseen."},
+"emptyComputeBlock":function(d){return "Liitä lohko \"laske\"-lohkoon."},
 "equivalentExpression":function(d){return "Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen."},
+"evaluate":function(d){return "arvioi"},
 "extraTopBlocks":function(d){return "Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla."},
 "goal":function(d){return "Tavoite:"},
-"reinfFeedbackMsg":function(d){return "Tässä on tarinasi! Jatka sen työstämistä, tai siirry seuraavaan tehtävään!"},
-"yourExpression":function(d){return "Lausekkeesi:"}};
+"levelIncompleteError":function(d){return "Lausekkeesi ei vastaa tavoitetta."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Lausekkeestasi puuttuu muuttuja "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Tässä on laskelmasi! Jatka sen työstämistä tai siirry  seuraavaan tehtävään!"},
+"yourExpression":function(d){return "Lausekkeesi:"},
+"wrongInput":function(d){return "Kutsut funktiotasi väärällä arvolla."},
+"wrongOtherValuesX":function(d){return "Lausekkeesi johtaa väärään arvoon, jos muutamme "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Lausekkeesi ei palauta oikeaa tulosta."}};

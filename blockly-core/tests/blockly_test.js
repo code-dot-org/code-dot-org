@@ -191,7 +191,7 @@ function test_initializeBlockSpace() {
   var container = document.createElement('div');
   document.body.appendChild(container);
   Blockly.assetUrl = function(){return ''};
-  Blockly.Css.inject();
+  Blockly.Css.inject(container);
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
   goog.dom.removeNode(container);
@@ -201,7 +201,7 @@ function test_initializeBlockSpace() {
   var container = document.createElement('div');
   document.body.appendChild(container);
   Blockly.assetUrl = function(){return ''};
-  Blockly.Css.inject();
+  Blockly.Css.inject(container);
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
   goog.dom.removeNode(container);

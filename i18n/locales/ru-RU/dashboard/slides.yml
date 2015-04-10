@@ -78,7 +78,7 @@ ru:
         text: Каждый раз, когда кто-то щёлкает мышью, касается экрана или печатает на компьютере или телефоне, это запускает СОБЫТИЕ и определённый код, который решает, что делать, когда происходит СОБЫТИЕ.
       3:
         image: Примечания/flappy03.jpg
-        text: 'Например, у вас может быть ОБРАБОТЧИК СОБЫТИЙ, который звучит так : «по щелчку мыши воспроизвести звук» '
+        text: 'Например, у вас может быть такой ОБРАБОТЧИК СОБЫТИЙ : «по щелчку мыши исполнить звук» '
       4:
         image: Примечания/flappy04.jpg
         text: 'Вы когда-нибудь слышали о игре "Порхающая птичка"? С помощью обработчиков событий, мы будем учиться программировать нашу собственную версию игры "Порхающая птичка"!'
@@ -96,7 +96,7 @@ ru:
         text: В каждой головоломке этой деятельности мы познакомимся с новыми типами событий, такими как зеленые блоки на рабочей области, и вы можете решить соответствующие блоки для добавления в ответ на эти события.
       9:
         image: Примечания/flappy09.jpg
-        text: 'Если вы видите стрелки выпадающего меню, как эти, это значит, что можно изменить настройки - например, какой будет звук, когда Птичка падает на землю.'
+        text: 'Если вы видите такую стрелку выпадающего меню, это значит, что можно изменить настройки, например, выбрать, какой  звук исполнить, когда Птичка падает на землю.'
       10:
         image: Примечания/flappy10.jpg
         text: В последней головоломке у вас будет возможность создать свою собственную игру и поделиться ей с друзьями. Веселитесь!
@@ -166,11 +166,10 @@ ru:
         text: Если я поставлю блок «двигаться вперед» в область, где сказано «выполнить», и поставлю блок «повернуть налево» туда, где сказано «иначе», это будет означать, что зомби будет выбирать между двумя вариантами. Если путь впереди свободен, зомби пройдет вперед, а ИНАЧЕ (то есть если вперед никак не пройти) зомби повернется налево.
       3:
         image: notes/hoc5_3.jpg
-        text: |-
-          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
+        text: 'Так же как и блок "если", мы можем добавить блок "если/иначе" внутрь цикла, чтобы зомби продолжал двигаться, а блок "если/иначе" проверял когда надо поворачивать.'
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: А теперь, отправь зомби туда, откуда он пришел!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -343,57 +342,52 @@ ru:
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: "So far you've been making an animation or a story that does the exact same thing every time you run it. Now you can make an interactive game that you can actually play."
+        text: До этого момента, вы создавали анимацию или игру, которая делает то же самое каждый раз вы её запускаете. Теперь вы можете сделать интерактивную игру, в которую на самом деле можно будет поиграть.
       2:
         image: notes/playlab_2.png
-        text: |-
-          There's the "when arrow" block and the "move actor" block. You can put these blocks together to move the actors around with the arrow keys.
+        text: 'Используйте блоки "когда стрелка" и "переместить персонаж". Вы можете соединить эти блоки вместе, чтобы передвигать персонаж нажатием клавиш со стрелками.'
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked. Check them out and have fun!
+        text: Существуют блоки, которые выполняются когда персонажи сталкиваются или когда на них нажмут мышкой. Используйте их и веселитесь!
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: Мы собираемся создавать игры с помощью Лаборатории Игр. У хороших игр есть хорошая история, и в каждой истории есть свои персонажи. Мы научимся создавать таких персонажей как ведьмы, пришельцы, животные; научим их говорить и общаться друг с другом. К концу этого урока вы сможете создавать игры с самого начали и до конца, и делиться ими с друзьями.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: 'Ваш экран разделен на 3 основные части. Слева - место для игры, где будет выполняться ваша программа. Инструкции для каждого уровня написаны внизу.'
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Посередине экрана находится панель инструментов, где каждый из блоков содержит фрагмент кода. Белое пространство справа называется рабочая область, здесь мы будем собирать нашу программу.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'Для начала, надо прикрепить ваши блоки к оранжевому блоку "При запуске". Вы можете прикрепить несколько блоков друг к другу. Для этого переместите их друг к другу пока не увидите жёлтую линию. После отпускания, они автоматически соединятся вместе.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'В этой первой головоломке, нашим персонажем будет пингвин. Чтобы он сказал "привет", перенесите блок "говорить" к блоку "при запуске", и напишите "привет". Мы можем переместить пингвина используя блоки "двигаться вправо" и "двигаться влево". После того как все блоки расставлены по местам, нажмите на кнопку "Выполнить", чтобы увидеть результат вашей программы.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: Начните работу, и в конце, вы сможете создать свою собственную игру с различными персонажами, которые могут общаться, веселиться, грустить, зарабатывать очки, бросать огненные шары, даже делать так, чтобы другие игроки исчезали. Всё зависит от вас, и того, что вы хотите сделать.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: А сейчас мы изучим то, что все программисты игр используют каждый день. Это называется событиями. Событие говорит вашей программе ожидать пока что-нибудь не случиться. Когда же это случается, программа выполняет определённое действие.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: 'Например, событиями могут быть: ожидание нажатия кнопки мыши, клавиши со стрелкой, или касания сенсорного экрана.'
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: 'Теперь мы создадим космического робота, который приветствует землян при нажатии на нём кнопкой мыши. Используйте блок "по щелчку" и прикрепите к нему блок "сказать". Когда игрок щёлкнет кнопкой мыши на космическом роботе, будет выполнено всё, что прикреплено к блоку события "по щелчку". Что скажет ваш пришелец?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'Существуют также блоки "при нажатии на стрелку". Если вы прикрепите к ним блок "двиаться", вы сможете двигать персонажей вверх, вниз, влево, или вправо. Шаг за шагом, ваша игра станет всё более интерактивной.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'Это блок "повторять бесконечно". Всё что находится внутри этого блока будет выполняться постоянно во всей игре.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Если вы хотите, чтобы персонаж постоянно что-нибудь делал без вмешательства игрока, поместите эти блоки внутрь блока "повторять бесконечно".'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: 'Наша цель в этой головоломке - помочь волшебнику охранять границы его королевства, непрерывно передвигаясь влево и вправо. Изучение команды повторения поможет сберечь вам кучу времени в будущем, когда вы будете создавать свои собственные игры.'

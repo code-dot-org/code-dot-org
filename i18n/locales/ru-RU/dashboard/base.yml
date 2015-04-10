@@ -22,6 +22,7 @@ ru:
           future: не может быть в будущем
   hello: Привет, мир!
   welcome_back: 'С возвращением, %{name}'
+  submit: Отправить
   add_teacher_form:
     code:
       label: 'Добавить учителя:'
@@ -213,6 +214,7 @@ ru:
         artist: Нарисовать что-нибудь
     user:
       classroom: Домашняя страница Преподавателя
+      district_dashboard: District Dashboard
       label: 'Привет, %{username}'
       stats: Мои результаты
       settings: Моя регистрация
@@ -291,6 +293,8 @@ ru:
     student_teacher_disassociated: 'Учитель %{teacher_name} удалён у ученика %{student_name}'
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
+    email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтверждён:'
+    email_confirm_wrong_email: (Неверный адрес электронной почты?)
     email_resend_confirm: Выслать инструкции для подтверждения
     new_password_hint: (оставьте пустым, если не хотите ничего менять)
     current_password_hint: (нам нужен Ваш текущий пароль для подтверждения изменений)
@@ -429,6 +433,9 @@ ru:
       body: Показать галерею приложений и картинок, созданных нашими пользователями
     frozen:
       title: '"Холодное сердце"'
+    infinity:
+      title: Лаборатория игр Infinity
+      body: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!
@@ -458,6 +465,13 @@ ru:
     wrong_body: 'Твоё решение неверно.  Пожалуйста, попробуй еще раз!'
     correct_title: Верно
     correct_body: Это правильный ответ.
+  contract_match:
+    wrong_title: Неправильный ответ
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Внеси сюда свой ответ
   dialog:
@@ -473,7 +487,7 @@ ru:
           title: 'Курс "Введение в информатику" (15-25 часов)'
           description: Этот 20-часовой курс является введением в основы информатики. Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
         Hour of Code:
-          title: Hour of Code
+          title: Час кода 2013
           description: ""
         edit-code:
           title: Редактирование кода
@@ -503,11 +517,44 @@ ru:
     sign_out: 'Если Вы не хотите предоставлять ваш возраст, Вы можете <a href="%{url}"> выйти</a>.'
   zendesk_too_young_message: 'Извини, но пользователи твоего возраста не могут авторизоваться на нашем сайте технической поддержки. Ты можешь зайти на страницу <a href="http://support.code.org">support.code.org</a> без авторизации или попросить своих родителей или учителя связаться с нами за тебя.'
   progress:
-    not_completed: Не завершено
+    not_started: не начато
+    in_progress: в процессе
     completed_too_many_blocks: Завершено, слишком много блоков
     completed_perfect: Завершено, отлично
     furthest_level_attempted: запрошен слишком высокий уровень
+    assessment: оценка
   studio:
     courses_working_on: Курсы, в процессе изучения
     completed_courses: Завершенные курсы
     all_courses: Все курсы
+  project:
+    projects: Проекты
+    create: Создать проект
+    create_a_project: 'Создать новый проект:'
+    new: Создать новый
+    rename: Переименовать
+    save: Сохранить
+    delete: Удалить
+    exit: Вернуться к курсу
+    my_projects: Мои проекты
+    share: Поделитесь
+    share_title: Поделитесь вашим проектом
+    share_copy_link: 'Скопировать ссылку:'
+    close: Закрыть
+    more: Ещё
+    name: Имя
+    updated: Обновлено
+    project_type: Тип проекта
+    help_text: 'Нажмите кнопку <strong>Сделать приложение</strong> или <strong>Нарисовать что-то</strong> ниже, чтобы создать новый проект лаборатории игр или художника! <br/>Вы можете вернуться и работать над вашими проектами в любое время.'
+    need_help: Нужна помощь, чтобы начать работать?
+    really_delete: Удалить?
+    delete_yes: Да
+    delete_no: Нет
+    saved: Сохранено
+    not_saved: Не сохранено
+    cancel: Отмена
+    delete_confirm_title: Вы уверены, что хотите удалить этот проект?
+    delete_confirm_text: Удаление вашего проекта окончательно удалит его из вашего списка Мои проекты. Если вы поделились ссылкой на этот проект с друзьями, у них больше не будет доступа к этому проекту.
+    view_all: Посмотреть Мои проекты
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

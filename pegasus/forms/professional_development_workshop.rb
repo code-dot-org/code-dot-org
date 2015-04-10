@@ -24,7 +24,7 @@ class ProfessionalDevelopmentWorkshop
     if data[:stopped]
       result[:stopped_dt] = DateTime.now.to_solr
     end
-    
+
     result
   end
 
@@ -117,7 +117,7 @@ class ProfessionalDevelopmentWorkshop
       kind_s: self.name,
       type_s: 'Public',
       first_date_dt: '[NOW TO *]',
-    }.map{|key,value| "#{key.to_s}:#{value.to_s}"}.join(' AND ')
+    }.map{|key,value| "#{key}:#{value}"}.join(' AND ')
 
     {
       q: "*:*",

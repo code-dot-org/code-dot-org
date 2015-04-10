@@ -214,7 +214,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "putdownTower":function(d){return "setja niður turn"},
 "reinfFeedbackMsg":function(d){return "Þú getur smellt á \"Reyna aftur\" hnappinn til þess að spila leikinn aftur."},
 "removeSquare":function(d){return "fjarlægja ferning"},
-"repeatUntil":function(d){return "endurtaka uns"},
+"repeatUntil":function(d){return "endurtaka þar til"},
 "repeatUntilBlocked":function(d){return "meðan slóð framundan"},
 "repeatUntilFinish":function(d){return "endurtaka þar til búið"},
 "scoreText":function(d){return "Skor: "+appLocale.v(d,"playerScore")+" : "+appLocale.v(d,"opponentScore")},

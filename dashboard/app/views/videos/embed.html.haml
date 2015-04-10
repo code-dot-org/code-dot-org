@@ -29,7 +29,7 @@
     var width = $(window).width();
     var height = $(window).height();
 
-    var videoInfo = #{video_info(@video, params.has_key?(:autoplay)).to_json};
+    var videoInfo = #{@video.summarize(params.has_key?(:autoplay)).to_json};
     videoInfo['enable_fallback'] = #{!params.has_key?(:youtube_only)};
     videoInfo['force_fallback'] = #{params.has_key?(:fallback_only)};
     $('#video-container').append(createVideoWithFallback(videoInfo, width, height));

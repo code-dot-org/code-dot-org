@@ -1,6 +1,7 @@
 require 'image_lib'
 
 class LevelSourcesController < ApplicationController
+  include LevelsHelper
   before_filter :authenticate_user!, only: [:update]
   load_and_authorize_resource
   check_authorization
@@ -10,6 +11,7 @@ class LevelSourcesController < ApplicationController
 
   def show
     @hide_source = true
+    @is_legacy_share = true
     if params[:embed]
       @embed = true
       @share = false
@@ -103,6 +105,7 @@ class LevelSourcesController < ApplicationController
     @game = @level.game
     @full_width = true
     @share = true
+    @no_footer_puzzle = (@game == Game.applab)
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
     @no_padding = @share && browser.mobile? && @game.share_mobile_fullscreen?
     @callouts = []

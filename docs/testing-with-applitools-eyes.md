@@ -16,7 +16,13 @@ add your test to a new `.feature` file, annotating it with `@eyes`
 
 ## Run the test
 
-For now, to run locally, you must have the Applitools secret key installed in your `locals.yml`. Ask Brian when needed.
+To run locally, you must have the Applitools secret key installed in your `locals.yml`.
+
+```
+applitools_eyes_api_key: 'my_applitools_eyes_key'
+```
+
+You can find that key by [logging in](https://eyes.applitools.com/app/sessions/) and pressing (Profile Icon) -> My API Key.
 
 ### Try it locally
 

@@ -1,9 +1,17 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "failedInput":"Your function does not return the right result for all values.",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Your expression:"
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
+  "equivalentExpression":"Hãy thử sắp xếp lại những lý lẽ của bạn để có được sự diễn tả giống nhất.",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"Chức năng của bạn không đưa ra kết quả phù hợp cho tất cả các giá trị.",
+  "goal":"Mục tiêu:",
+  "levelIncompleteError":"Cách diễn tả của bạn không phù hợp với mục tiêu. \n",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Your expression is missing variable {var}.",
+  "reinfFeedbackMsg":"Đây là sự tính toán của bạn! Tiếp tục làm việc với nó, hoặc chuyển sang câu đố tiếp theo!",
+  "yourExpression":"Cách diễn tả của bạn:",
+  "wrongInput":"Bạn đang gọi chức năng của mình với giá trị sai.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

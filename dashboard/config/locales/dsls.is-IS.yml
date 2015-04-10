@@ -5,14 +5,17 @@
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png,
+          500
         (4+5) > 9: (4+5) > 9
+        ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Bools 2:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png,
+          500
         (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
         (10 > 11) OR (7 <= 9): (10 > 11) EÐA (7 <= 9)
         (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
@@ -21,177 +24,452 @@
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
+          500
         (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
+        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
+        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
+        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
+        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Bools 4:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
+          500
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR
           ((8 < x) AND (x < 10))
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
+          ((8 < x) And (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
           ((8 < x) and (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5))
+          OR ((8 < x) AND (x < 10)))
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5))
+          Or ((8 < x) And (x < 10)))
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
+          or ((8 < x) and (x < 10)))
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) ||
+          ((8 < x) && (x < 10)))
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 1:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
+        Blocks to Math 1.blocks.start_blocks, 200: Kubbastærðfræði 1.blocks.start_blocks,
           200
         4 + 5: 4 + 5
+        (4+5): (4+5)
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 2:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks,
+        Blocks to Math 2.blocks.start_blocks, 200: Kubbastærðfræði 2.blocks.start_blocks,
           200
         7 * 6: 7 * 6
+        (7 * 6): (7 * 6)
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 3:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
+        Blocks to Math 3.blocks.start_blocks: Kubbastærðfræði 3.blocks.start_blocks
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
+        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
+        2 * 3 - 1 + 0: 2 * 3 - 1 + 0
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 4:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
+        Blocks to Math 4.blocks.start_blocks: Kubbastærðfræði 4.blocks.start_blocks
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8 - 12
+        ((5 + 8) - 12): ((5 + 8) - 12)
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 5:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        Blocks to Math 5.blocks.start_blocks: Kubbastærðfræði 5.blocks.start_blocks
         (-2) * (-6):
         - 2 * -6: -2 * -6
+        ((-2) * (-6)): ((-2) * (-6))
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-        -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
+        Blocks to Math 6.blocks.start_blocks: Kubbastærðfræði 6.blocks.start_blocks
         ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
         ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
         (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
+        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
       Blocks to Math 7:
         Convert Blocks to Math: Breyta kubbum í stærðfræði
         Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
           sem samsvarar þessum kóða
-        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
+        Blocks to Math 7.blocks.start_blocks: Kubbastærðfræði 7.blocks.start_blocks
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
+        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Open text response example:
+        Open text response example: Dæmi um opið textasvar
+        I loved it because...: Mér líkaði það vegna ...
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Stuðlar
+          að jákvæðu námsumhverfi í tölvunarfræðitímum
+        0: '? Nú þegar þú veist meira um námsefni okkar, hvaða aðferðir vilt þú þá
+          nota til að stuðla að heilbrigðu andrúmslofti í tölvunarfræðitímum sem þú
+          kennir?'
+        1: ': Nú þegar þú veist meira um námsefni okkar, hvaða aðferðir vilt þú þá
+          nota til að stuðla að heilbrigðu andrúmslofti í tölvunarfræðitímum sem þú
+          kennir?'
+        In my classroom, I want to...: Í kennslutímum mínum vil ég ...
+      PDK5 Course Descriptions:
+        Course Structure: Skipulag námskeiðs
+        I am going to start with Course...: Ég ætla að byrja á námskeiði...
+      PDK5 Difficulty:
+        Degree of Difficulty: Erfiðleikastig
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Var
+          forritun eins erfið og þú bjóst við? Útskýrðu hvers vegna (ekki). Hvaða
+          áhrif hefur það á kennslu þína í tölvunarfræði?
+        Your thoughts here: Hugsanir þínar hér
+      PDK5 Foundation:
+        Computer Science as a Foundational Skill: Tölvunarfræði sem grunnfærni
+        Do you see computer science as a foundational skill for your students? Why or why not?: Álítur
+          þú að tölvunarfræði eigi að vera grundvallarfærni fyrir nemendur þína? Hvers
+          vegna (ekki)?
+        Your thoughts here: Hugsanir þínar hér
+      PDK5 Impact 1:
+        Impact for students: Áhrif fyrir nemendur
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Álítur
+          þú að nemendum þínum muni finnast netverkefnin á 5-11 ára (K-5) námskeiðunum
+          skemmtileg og grípandi? Hvers vegna (ekki)?
+        Your thoughts here: Hugsanir þínar hér
+      PDK5 Impact 2:
+        Connections to other Subjects: Tengingar við önnur fög
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Tengist
+          tölvunarfræði öðru efni eða fögum sem nemendur þínir eru að læra? Útskýrðu
+          hvers vegna (ekki).
+        Your thoughts here: Hugsanir þínar hér
+      PDK5 Impact 3:
+        Real-world applications for Students: Gagnsemi fyrir nemendur í raunheimi
+        0: '? Does learning about computer science help students grow into the kind
+          of citizens you are preparing them to be? Explain why or why not.'
+        1: ': Hjálpar það að læra um tölvunarfræði nemendum að verða að þeim þjóðfélagsþegnum
+          sem þú ert að undirbúa þá fyrir að verða? Útskýrðu hvers vegna (ekki).'
+        Your thoughts here: Hugsanir þínar hér
+      PDK5 Problem Solving:
+        Problem Solving Methods: Aðferðir við lausn verkefna
+        I could integrate this in my classroom by...: Ég gæti samþætt þetta kennslu
+          minni með því að...
+      PDK5 Promo Video:
+        'Code Studio: Kid tested, Teacher approved': 'Kóðastúdíó: Krakkaprófað, kennaravottað'
+      PDK5 Promo Video 2:
+        'Code Studio: Kid tested, Teacher approved': 'Kóðastúdíó: Krakkaprófað, kennaravottað'
+        My first impressions of Code Studio are...: Fyrstu viðbrögð mín við Kóðastúdíói
+          eru...
+      PDK5 Strategies O:
+        Strategies for Teaching Computer Science: Stefnur í kennslu tölvunarfræði
+        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'Ég
+          álít að kennsla tölvunarfræði verði ólík kennslu annarra faga á eftirfarandi
+          hátt: ...'
+      Test Markdown level:
+        Enter title here: Skráðu titil hér
+        Enter prompt here: Skráðu kvaðningu hér
       text match test:
         Mathematical Expression Assessment: Mat á reikningsdæmi
         Type out the arithmetic expression that this circle of evaluation evaluates to: Skrifaðu
-          reikningsdæmið sem þessi greiningarhringur samsvarar
+          reikningsdæmið sem þessi matshringur samsvarar
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
           1/Exercise_5_question_2.png
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4: 
         9-3+4: 
         Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-        (9-3)+4*7: (9-3)+4*7
-        9-3+4*7: 9-3+4*7
+    external:
+      Code Logo v3:
+        title: titill
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+      CSP Lesson 14 encode letter A instructions:
+        'Instructions: Encode the Letter A': 'Leiðbeiningar: Umkóðun stafsins A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP námsáætlun -
+          K1K5 - Sending bita í raunheiminum
+        description here: lýsing hér
+      CSPStudentLessonPlanTemplate:
+        title: titill
+        description here: lýsing hér
+      External level test (will):
+        first computer program: fyrsta tölvuforrit
+      Hour of Code test content: []
+      Mixing Colors:
+        title: titill
+        description here: lýsing hér
+      PDCSP Intro: []
+      PDK5 Beyond C:
+        Beyond: Áframhald
+      PDK5 Classroom Culture C:
+        Classroom Culture: Bekkjarmenning
+      PDK5 Course Maps C: []
+      PDK5 Course Overview C: []
+      PDK5 Glossary C:
+        Vocabulary: Orðaforði
+      PDK5 Intro C: []
+      PDK5 Pair Programming 1:
+        Pair Programming: Félagaforritun
+      PDK5 Strategies:
+        Strategies for Teaching Computer Science: Stefnur í kennslu tölvunarfræði
+      PDK5 Teacher Dashboard 1:
+        Dashboard 1: Stjórnborð 1
+      PDK5 Teacher Dashboard 2:
+        Dashboard 2: Stjórnborð 2
+      PDK5 Teacher Dashboard 3:
+        Course Progress: Framvinda námskeiðs
+      PDK5 Teacher Dashboard 4:
+        Course Progress: Framvinda námskeiðs
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Stjórnborð kennara
+      PDK5 Unplugged Intro C:
+        Unplugged intro: Kynning án tölvu
+      PDK5 UVideo Overview C:
+        Kiki video overview: Kiki myndskeiðsyfirlit
+      PDK5 Why K5 CS:
+        Why teach computer science in elementary school?: Hvers vegna kenna tölvunarfræði
+          í grunnskóla?
+      Pixelation 1:
+        Pixelation 1: Dílamynstur 1
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+      Pixelation 2:
+        Pixelation 2: Dílamynstur 2
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+      Pixelation 3:
+        Pixelation 3: Dílamynstur 3
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+      Pixelation 3 Bit Colors:
+        title: titill
+        description here: lýsing hér
+      Pixelation 4:
+        Pixelation 4 - Baker test of External level -- NOT REAL: Dílamynstur 4 - Baker
+          mæling á ytri stöðu -- SÝNDAR
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+      Pixelation 4x4 Empty:
+        Pixelation 4x4 Empty: Dílamynstur 4x4 tómt
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+      Pixelation Bee:
+        title: titill
+        description here: lýsing hér
+      Pixelation Flappy:
+        title: titill
+        description here: lýsing hér
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
+        description here: lýsing hér
+      Pixelation - Lesson 14 - Fix bit offset:
+        Pixelation - Lesson 14 - Fix bit offset: Dílamynstur - Kennslustund 14 - Hliðrun
+          fix bita
+      Pixelation - Lesson 14 - Fix bit offset v.2:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Dílamynstur - Kennslustund 14
+          - Hliðrun fix bita útg.2
+      Pixelation - Lesson 14 - Fix the error:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Dílamynstur - Kennslustund 14
+          - Hliðrun fix bita útg.2
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        Make your own B&W image: Búa til þína eigin S/H mynd
+        description here: lýsing hér
+      Pixelation - Lesson 14 - Instructions one bit error:
+        'Lesson 14 - Task 2: fix the error': 'Kennslustund 14 - Verkefni 2: leiðréttu
+          villuna'
+        description here: lýsing hér
+      Pixelation - Lesson 14 - Make the Letter A:
+        title: titill
+        description here: lýsing hér
+      Pixelation - Lesson 14 - Make your own B and W Image:
+        title: titill
+        description here: lýsing hér
+      Pixelation - Lesson 14 - Make your own B&W Image:
+        title: titill
+        description here: lýsing hér
+      Pixelation - Lesson 15 - Color Free Play:
+        Pixelation - Lesson 15 - Color Free Play: Dílamynstur - Kennslustund 15 -
+          Litir, frjálst
+        description here: lýsing hér
+      Pixelation - Lesson 15 - Color Shades:
+        Pixelation - Lesson 15 - Color Shades: Dílamynstur - Kennslustund 15 - Litir
+        description here: lýsing hér
+      Pixelation - Lesson 15 - Color Shades 4x4:
+        Pixelation - Lesson 15 - Color Shades 4x4: Dílamynstur - Kennslustund 15 -
+          Litir 4x4
+        description here: lýsing hér
+      Pixelation - Lesson 15 - Complete 3-bit color:
+        Pixelation - Lesson 15 - Complete 3-bit color: Dílamynstur - Kennslustund
+          15 - 3-bita litir
+        description here: lýsing hér
+      Pixelation - Lesson 15 - Favicon Instructions:
+        Pixelation - Lesson 15 - Favicon Instructions: Dílamynstur - Kennslustund
+          15 - Favicon leiðbeiningar
+        description here: lýsing hér
+      Pixelation - Lesson 15 - Task 1 instructions:
+        Pixelation - Lesson 15 - Task 1 instructions: Dílamynstur - Kennslustund 15
+          - Verkefni 1 leiðbeiningar
+        description here: lýsing hér
+      Pixelation - Lesson 15 - Task 2 instructions:
+        Pixelation - Lesson 15 - Task 2 instructions: Dílamynstur - Kennslustund 15
+          - Verkefni 2 leiðbeiningar
+        description here: lýsing hér
+      Pixelation - Lesson 15 - Task 3 instructions:
+        Pixelation - Lesson 15 - Task 3 instructions: Dílamynstur - Kennslustund 15
+          - Verkefni 3 leiðbeiningar
+        description here: lýsing hér
+      Pixelation - Video - Color 1:
+        Pixelation - Video - Color 1: Dílamynstur - Myndskeið - Litur 1
+        description here: lýsing hér
+      Pixelation - Video - Color 2:
+        Pixelation - Video - Color 2: Dílamynstur - Myndskeið - Litur 2
+        description here: lýsing hér
+      Pixelation - Video - Color 3:
+        Pixelation - Video - Color 3: Dílamynstur - Myndskeið - Litur 3
+        description here: lýsing hér
+      Pixelation - Video - Lesson 14 - B and W:
+        How to use the B&W Pixelation Widget: Um notkun S/H Dílamynstursgræjunnar
+      Pixelation - Video - Tips and Tricks:
+        Pixelation - Video - Tips and Tricks: Dílamynstur - Myndskeið - Ráð og refabrögð
+        description here: lýsing hér
+      test demo level:
+        demo title: demo title
+        demo description: demo description
+      Test discourse forum-comment level:
+        Degree of Difficulty: Erfiðleikastig
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Var
+          forritun eins erfið og þú bjóst við? Útskýrðu hvers vegna (ekki). Hvaða
+          áhrif hefur það á kennslu þína í tölvunarfræði?
+      test html katie:
+        testing: testing
+        lkajsdfasdf: lkajsdfasdf
+      Text Compression 1:
+        Text Compression 1: Text Compression 1
+        Compress text by identifying repeated patterns.: Þjappa texta með því að greina
+          endurtekin mynstur.
+      Text Compression Peter Piper:
+        Text Compression Peter Piper: Text Compression Peter Piper
+        Compress text by identifying repeated patterns.: Þjappa texta með því að greina
+          endurtekin mynstur.
+      U1L5 Student Lesson:
+        title: titill
+        description here: lýsing hér
+      U1L6 Student Lesson Plan:
+        title: titill
+        description here: lýsing hér
+      unique level name here:
+        title: titill
+        description here: lýsing hér
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
-        Write a contract for a big red triangle that is 100 pixels in size: Write
-          a contract for a big red triangle that is 100 pixels in size
-        EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
+        Big Triangle: Stór þríhyrningur
+        Write a contract for a big red triangle that is 100 pixels in size: Skrifaðu
+          samning fyrir stóran rauðan þríhyrning sem er 100 dílar á stærð
+        EXAMPLE 1.solution_blocks, 300: DÆMI 1.solution_blocks, 300
+        Big Triangle|Image|Number|String: stór þríhyrningur | mynd | tala | strengur
       Creating Contracts From Examples 2:
-        Creating Contracts From Examples 2: Creating Contracts From Examples 2
-        Write a contract for a purple square that is 15 pixels in size.: Write a contract
-          for a purple square that is 15 pixels in size.
-        Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
-        Square|image|color:string|size:Number: Square|image|color:string|size:Number
+        Square Contract: Samningur fyrir "square"
+        Write a contract for a purple square that is 15 pixels in size.: Skrifa samning
+          fyrir fjólubláan ferning sem er 15 dílar á stærð.
+        Example 2.solution_blocks, 300: Dæmi 2.solution_blocks, 300
+        Square|Image|Number|String: ferningur | mynd | tala | strengur
       Creating Contracts From Examples 3A:
-        Creating Contracts From Examples 3A: Creating Contracts From Examples 3A
-        Banner Function block: Banner Function block
-        Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        banner|image|text:string: banner|image|text:string
+        Banner Contract: Samningur fyrir "banner"
+        Banner Function block: Kubbur fallsins "Borði"
+        Examples 3.solution_blocks, 300: Dæmi 3.solution_blocks, 300
+        banner|Image|String: borði | mynd | strengur
       Creating Contracts From Examples 4:
-        Creating Contracts From Examples 4: Creating Contracts From Examples 4
-        Try using the "text" function to write this red text at size 40.: Try using
-          the "text" function to write this red text at size 40.
-        Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        shrink|image|image:image: shrink|image|image:image
+        Shrink Contract: Samningur fyrir "shrink"
+        Try using the "shrink" function.: Prófaðu að nota fallið "minnka".
+        Examples 4.solution_blocks, 300: Dæmi 4.solution_blocks, 300
+        shrink|Image|Image: minnka | mynd | mynd
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Skrifaðu samning fyrir kvarðafallið
-        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til ferhyrning með
+        Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
+        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
           tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til ferhyrning með
+        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
           tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
-        ? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
+        wide-rect|Image|Number|String: breiður-rétth | mynd | tala | strengur
       Enter name here:
         Enter title here: Skráðu titil hér
         Enter prompt here: Skráðu kvaðningu hér
-        Contract Name|Number|Domain1:Number|Domain2:string: Samningur Name|Number|Domain1:Number|Domain2:string
+        Contract Name|Number|Number|String: heiti samnings | tala | tala | strengur
       Eval Contracts 1 B:
-        Star Contract: Star Contract
-        Write a contract for the star function: Skrifaðu samning fyrir stjörnufallið
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+        Star Contract: Samningur fyrir "star"
+        Write a contract for the star function: Skrifaðu samning fyrir fallið "star"
+          (stjarna)
+        Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks,
           300
-        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
+        star|Image|String|Number|String: stjarna | mynd | strengur | tala | strengur
       Eval Contracts 2 B:
-        Rotate Contract: Rotate Contract
-        Write a contract for the rotate function: Skrifaðu samning fyrir snúningsfallið
-        Eval Contracts 2 A.solution_blocks, 300: Mat samningar 2 A.solution_blocks,
+        Rotate Contract: Samningur fyrir "rotate"
+        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "rotate"
+          (snúa)
+        Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks,
           300
-        rotate|image|degrees:Number|image:image: snúa|image|degrees:Number|image:image
+        rotate|Image|Number|Image: snúa | mynd | tala | mynd
       Eval Contracts 3 B:
-        Text Contract: Text Contract
-        Write a contract for the text function: Skrifaðu samning fyrir textafallið
-        Eval Contracts 3 A.solution_blocks, 300: Mat samningar 3 A.solution_blocks,
+        Text Contract: Samningur fyrir "texti"
+        Write a contract for the text function: Skrifaðu samning fyrir fallið "text"
+          (texti)
+        Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks,
           300
-        text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
+        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
       Eval Contracts 4 B:
-        Scale Contract: Scale Contract
-        Write a contract for the scale function: Skrifaðu samning fyrir kvarðafallið
-        Eval Contracts 4 A.solution_blocks, 300: Mat samningar 4 A.solution_blocks,
+        Scale Contract: Samningur fyrir "kvarða"
+        Write a contract for the scale function: Skrifaðu samning fyrir fallið "scale"
+          (kvarða)
+        Eval Contracts 4 A.solution_blocks, 300: Mat Samningar 4 A.solution_blocks,
           300
-        scale|image|factor:Number|image:image: kvarði|image|factor:Number|image:image
+        scale|Image|Number|Image: kvarða | mynd | tala | mynd
+      Eval Contracts B:
+        Star Contract: Samningur fyrir "star"
+        Write a contract for the star function: Skrifaðu samning fyrir fallið "star"
+          (stjarna)
+        Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks,
+          300
+        star|Image|Number|String|String: stjarna | mynd | tala | strengur | strengur
+      Eval Contracts D:
+        Rotate Contract: Samningur fyrir "rotate"
+        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "rotate"
+          (snúa)
+        Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks,
+          300
+        rotate|Image|Number|Image: snúa | mynd | tala | mynd
+      Eval Contracts F:
+        Text Contract: Samningur fyrir "texti"
+        Write a contract for the text function: Skrifaðu samning fyrir fallið "text"
+          (texti)
+        Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks,
+          300
+        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Skrifaðu samning fyrir kvarðafallið
-        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til ferhyrning með
+        Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
+        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
           tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til ferhyrning með
+        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
           tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
-        ? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
+        wide-rect|Image|Number|String: breiður-rétth | mynd | tala | strengur
       Rocket Contract 1:
-        Contract for rocket-height: Contract for rocket-height
-        'Write a contract for the following question:': 'Write a contract for the
-          following question:'
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a function
-          called rocket-height that takes in the number of seconds that have passed
-          since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a function
-          called rocket-height that takes in the number of seconds that have passed
-          since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        rocket-height|Number|seconds:Number: rocket-height|Number|seconds:Number
+        Contract for rocket-height: Samningur fyrir "hæð-flaugar"
+        0: '? Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu samning
+          fyrir fallið "hæð-flaugar" sem tekur inn tímann sem flugið hefur staðið
+          talið í sekúndum og skilar hæð eldflaugarinnar á þeim tíma.'
+        1: ': Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu samning
+          fyrir fallið "hæð-flaugar" sem tekur inn tímann sem flugið hefur staðið
+          talið í sekúndum og skilar hæð eldflaugarinnar á þeim tíma.'
+        rocket-height|Number|Number: hæð-flaugar | tala | tala

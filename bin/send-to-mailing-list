@@ -14,7 +14,7 @@ end
 def load_recipients(path, params={})
   start = params[:start] || 0
   limit = params[:limit] || -1
-  
+
   Queue.new.tap do |queue|
     CSV.foreach(path, headers:true) do |row|
       row = params[:filter][row] if params[:filter]
@@ -26,7 +26,7 @@ def load_recipients(path, params={})
       end
 
       queue << row
-    
+
       break if queue.length == limit
     end
   end
@@ -42,7 +42,7 @@ def process_command_line(argv=ARGV)
   }.tap do |params|
     i = 0
     c = argv.count
-  
+
     flag = nil
 
     while(i < c)
@@ -51,7 +51,7 @@ def process_command_line(argv=ARGV)
         params[:threads] = argv[i].to_i
       elsif argv[i] == '--start'
         raise ArgumentError, 'no value for --start flag provided.' unless (i += 1) < c
-        params[:start] = argv[i].to_i        
+        params[:start] = argv[i].to_i
       elsif argv[i] == '--limit'
         raise ArgumentError, 'no value for --limit flag provided.' unless (i += 1) < c
         params[:limit] = argv[i].to_i
@@ -79,7 +79,7 @@ def send_message(template, item)
       puts "#{@contacts_cache.length} contact(s) loaded."
     end
   end
-  
+
   begin
     ip_address = '127.0.0.1'
 
@@ -90,24 +90,33 @@ def send_message(template, item)
       recipient = Poste2.ensure_recipient(item['email'], name:item['name'].to_s, ip_address:ip_address)
       @contacts_cache[item['email']] = recipient[:id] if @contacts_cache
     end
-    
+
     Poste2.send_message template, recipient, item.to_hash.except('email', 'name')
   rescue => e
     puts "Couldn't send to '#{item['email']}': #{e.message}"
   end
 end
 
+USAGE = <<EOS
+Usage: send-to-mailing-list [options] template mailing-list.csv
+Options:
+  --threads
+  --start
+  --limit
+I look for templates in pegasus/emails
+EOS
+
 def main()
   params = process_command_line
-  raise ArgumentError, 'Must provide a template and csv.' unless params[:template] && params[:csv]
+  raise ArgumentError, USAGE unless params[:template] && params[:csv]
 
-  raise ArgumentError, "'#{params[:template]}' not found." unless Poste.resolve_template(params[:template]) 
+  raise ArgumentError, "'#{params[:template]}' not found." unless Poste.resolve_template(params[:template])
 
   queue = load_recipients params[:csv], start:params[:start], limit:params[:limit]
   puts "#{queue.length} messages to send."
-  
+
   workers = []
-  
+
   workers << Thread.new do
     until queue.empty?
       puts "#{queue.length} messages left to send."

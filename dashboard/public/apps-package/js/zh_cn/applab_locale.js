@@ -163,8 +163,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "文本"},
 "catVariables":function(d){return "变量"},
 "continue":function(d){return "继续"},
-"createHtmlBlock":function(d){return "创建HTML块"},
-"createHtmlBlockTooltip":function(d){return "创建一个HTML块在应用程序内."},
+"container":function(d){return "创建容器"},
+"containerTooltip":function(d){return "创建一个主要容器，并设置其内部的 HTML。"},
 "finalLevel":function(d){return "恭喜你！你完成了最后一个谜题。"},
 "nextLevel":function(d){return "恭喜你！你解决了这个谜题。"},
 "no":function(d){return "不"},
@@ -179,5 +179,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "步入"},
 "stepOver":function(d){return "跨过"},
 "stepOut":function(d){return "步出"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "查看数据"},
 "yes":function(d){return "是"}};

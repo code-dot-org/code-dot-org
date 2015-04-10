@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "calcola"},
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "È necessario attaccare un blocco al blocco 'quando si clicca su \"Esegui\" '."},
 "equivalentExpression":function(d){return "Prova a riordinare i tuoi argomenti per ottenere esattamente la stessa espressione."},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'calcola'?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "La tua funzione non restituisce il risultato corretto per tutti i valori."},
 "goal":function(d){return "Obiettivo:"},
-"reinfFeedbackMsg":function(d){return "Ecco la tua storia! Continua a lavorarci sopra, oppure passa al prossimo esercizio!"},
-"yourExpression":function(d){return "La tua espressione:"}};
+"levelIncompleteError":function(d){return "La tua espressione non è adeguata all'obiettivo."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Ecco il risultato! Continua a lavorarci sopra, o passa al prossimo esercizio!"},
+"yourExpression":function(d){return "La tua espressione:"},
+"wrongInput":function(d){return "Stai invocando la funzione con un valore sbagliato."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

@@ -204,7 +204,7 @@ tr:
         turtle_3_5: 'Şimdi, iki kediyi ev içine alan yeni bir "Ev Çiz" fonksiyonu oluşturun. İpucu: "Bir şey yap" bloğunu kullanın ve fonksiyona kendiniz bir isim verin (örn:"Ev Çiz").'
         turtle_3_6: '"Kare çiz" fonksiyonunu örnek alarak, "Üçgen Çiz" fonksiyonuna "uzunluk" adında bir giriş ekleyin. Sonra, bu yeni fonksiyonu kullanarak farklı boyutlarda üçgenler çizin. (İpucu: Fonksiyona girdi eklemek için yıldız simgesine tıklayın.)'
         turtle_3_7: '"Ev çiz" fonksiyonuna "uzunluk" adında yeni bir girdi ekleyin ve fil için yeterince büyük bir ev çizin (kenarları 150 piksel uzunluğunda)'
-        turtle_3_8: 'işte bir önceki  bulmacanın tüm blokları. "Ev çiz" fonksiyonunu çizimi evin sağ alt köşesinde bitirebilmem için değiştirin.  Sonra bu yeni fonksiyonu kullanarak 3 ev çizin.'
+        turtle_3_8: 'Yeni bir ev çizdikten sonra tamamlamak için sağ alt köşedeki  "Ev çiz"i düzenle. 3 ev çizmek için bu  düzenlenmiş fonksiyonu kullan.'
         turtle_3_9: '"Ev çiz" fonksiyonunu yardım almadan yeniden yapabilir misin? Bir dene ve bir dizi ev çiz.'
         turtle_3_10: Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız, spiral veya bir kar tanesi çizmeye çalışın.
         maze_karel_debug_seq_1: Hata ayıklamaya (debugging) hoşgeldin! Kodum düzgün çalışmıyor. Problemi bulup düzeltebilir misin? Böylece tarlam düzleşir ve ekim için hazır olur.
@@ -330,78 +330,6 @@ tr:
         turtle_ec_1_2: 'Şimdi, bir kare çizin. NOT: yeni "penColor" bloğundan seçerek en sevdiğiniz rengi kullanın.'
         turtle_ec_1_10: 'Başardınız! Şimdi, istediğiniz herhangi bir şey çizin. İşte bazı öneriler: bir çöp adam, bir kar tanesi, ya da bir spiral. Yeni "penWidth" bloğunu da deneyin. Eğlenmenize bakın!'
         studio_ec_sandbox: "Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin."
-    levelbuilder:
-      frozen line:
-        instructions: Merhaba! Ben Elsa Arendelle.Bana tek bir çizgi çizmek için yardım edin.
-      frozen perpendicular:
-        instructions: 'Şimdi bakalım birbirine 90 derecelik açı yapan iki çizgiyi nasıl oluşturacağız. Bunun için "Dön" ve "İlerle" bloklarını kullanmanız gerekecek.'
-      frozen square iterative:
-        instructions: Karenin yarısı yapmışız gibi görünüyor. Bir kare oluşturmak için 4 satırı bir araya getirelim.
-      frozen square loop:
-        instructions: 'Merhaba, ben Arendelle, Anna! Daha az blokları kullanarak "Tekrarlayan" bir kare yapalım. Bir kare yapmak için, blokların içinde "Tekrarlayan" bloklar kaç keç döngü oluşturmalı (?) ?'
-      frozen square loop 3x:
-        instructions: Her bir karenin dönümünden sonra üç kare oluşturalım. Her yeni kareden önce, 120 derece çevirmek için emin olun.
-      frozen square snowflake:
-        instructions: '"Tekrar" bloğunu 10 tane kare oluşturmak için kullanıp her kareden sonra 36 derece dönerek bir kar tanesi oluşturabilir misiniz?'
-      frozen cross:
-        instructions: |-
-          "Tekrarlayan" blok kullanarak bir artı işareti oluşturunuz. Elsa'nın ileri ve geri hareket edebildini farkettiniz mi?
-      frozen cross rotate:
-        instructions: Şimdi, bu işlemi 10 kez deneyerek tekrarlayınız. Her bir çizgi arasını dönmek için kaç dereceye ihtiyacınız var?
-      frozen cross rotate dense:
-        instructions: "Bu işlemi 90 kez tekrarlayalım! Kaç kere de 90'dan 360'a varılır? İpucu: cevabı gerçekten çok küçük bir sayı."
-      frozen diamond:
-        instructions: Bir paralelkenar oluşturalım. oluşturduğumuz şekil, bir kare gibi fakat, 90 derece yerine 60 ve 120 derece gibi açı farkları var.
-      frozen diamond mini snowflake:
-        instructions: 'Her kar tanesinin birbirinden farklı olduğunu biliyor muydunuz? "Dönen" blok kullarak, bir paralelkenarı 4 kez, her bir paralel kenar arasında 90 derece olacak şekilde sağa doğru döndürerek yeni bir kar tanesi oluşturalım.'
-      frozen diamond snowflake:
-        instructions: Şimdi, tekrarla bloğunu kullanarak yeni kar taneleri oluşturalım. Tekrarla bloğu ile 10 tane paralelkenar çizelim her paralelkenar çizildikten sonra sağa doğru 36 derece dönelim.
-      frozen circle:
-        instructions: Çember özel bir şekildir. Bir çember çizmek için soru işareti yerine kaç gelmesi gerektiğini bulabilir misiniz?
-      frozen circle function:
-        instructions: '10 tane üst üste çember oluşturmak için "Çember oluştur" bloğunu kullanın. Çemberler arasında ileri zıplamayı unutmayın.'
-      frozen circle function in circle:
-        instructions: Şimdi herbirini çizdikten sonra 18 derece bırakacağınız 20 tane çember oluşturun.
-      frozen circle function with parameter:
-        instructions: '"Çember oluştur" bloğuyla farklı büyüklüklerde çemberler oluşturabilirsiniz. Bunu 5 birim ve 10 birimlik çemberler çizmek için kullanır mısınız?'
-      frozen snowflower:
-        instructions: Karmaşık kar tanecikleri aslında basit şekillerle oluşturulur. Bu modeli 5 birim uzunlukta 5 çember ve 10 birim uzunluktaki 5 çember ile oluşturabilir misiniz?
-      frozen snowflake branch:
-        instructions: 'Üç tane dal oluşturmak için "Kar taneciği dalı oluştur" bloğunu deneyin gitgide kar taneciğine benziyor.'
-      frozen snowflake full:
-        instructions: Şimdi bunu kar taneciği yapmak için 8 kere tekrar edin!
-      frozen freeplay:
-        instructions: Resmen bir usta sanatçı haline geldiniz! Kış harikalar diyarı yaratın.
-      scrat 16:
-        instructions: 'Acorn! Acorn! Acorn! Beni oraya  ulaştırmak için bir "Eğer" bloğu kullanın ve en az sayıda komutu kullanmaya çalışın.'
-      scrat 17:
-        instructions: 'Tamam, pratik yapmak için tekrar yapalım - bu çok farklı değil fakat duvarlara dikkat edin!'
-      scrat 18:
-        instructions: '"Eğer-Değilse" bloğu koşulu kontrol eder ve birini ya da diğerini yapar. Meşe palamuduna ulaşmam için bu yeni bloğu kullanın.'
-      scrat 19:
-        instructions: '"Eğer değilse" bloğunun bir örneğini daha, ilk denemenizde doğru yapabildiniz mi?'
-      scrat 20:
-        instructions: Bu bulmacayı çözmem için 3 blok daha ekleyebilir misiniz? Eğer doğru yaptıysan, Bu kıvrımlı yolu uzunluğu ne olursa olsun yürüyebilirim. Acele et! Buzlar Eriyor!
-      Standalone_Artist_1:
-        instructions: Sanatçıya hoş geldiniz! İlk olarak, sağa dön ve ilerle bloklarını kullanarak basit bir kare yapmayı dene. Her kenarı 100 piksel olmalı.
-      Standalone_Artist_2:
-        instructions: 120 ve 60 derecelik açılar ile 150 piksellik uzun kenarları kullanarak bu elması çiz.
-      Standalone_Artist_3:
-        instructions: Bu altıgeni 100 piksellik kenarlar ile 60 derecelik dönüşler kullanarak çizebilir misin?
-      Standalone_Artist_4:
-        instructions: Şimdi yeni bir döngü bloğun var. Komutlardan bazılarını yineleyecek. Bu komutları 6 kez döndürürsen ne olur?
-      Standalone_Artist_5:
-        instructions: Elmaslar ile çiçek için bu döngüyü kaç kez tekrarlaman lazım?
-      Standalone_Artist_5.5:
-        instructions: 'Döngüde dönmek için elmas kodlamayı ne kadar basitleştirdiğimize dikkat et. Çiçeği çizmek için bütün diziyi 12 kez döndürebilirsin. İpucu: Aynı elması tekrar çizmemek için elmas döngüsünü yaptıktan sonra 30 derece çevirmen lazım.'
-      Standalone_Artist_6:
-        instructions: 'Tasarım oluşturmak için bu altıgen kodu 6 kez döndür. Her seferinde kaç derece çevirmen lazım? İpucu:  Açıların sayısını döngü sayısına böl.'
-      Standalone_Artist_7:
-        instructions: 'Fonksiyon, kendini tekrarlamandan kaçınmanı sağlayan farklı bir programlama aracıdır. Bu fonksiyon çiçek çizebilir, yani çiçek çizmek istediğin zaman bunu kullanabilirsin. Çiçekleri çizmek için bunu ve yeni atlama bloğunu kullan. İpucu: Çiçekler 150 piksel arayla durmaktalar'
-      Standalone_Artist_8:
-        instructions: 'İşte altıgenleri çizmek için programladığımız ve "Şekil Çiz" diye adlandırdığımız bir fonksiyon. Ne olduğunu görmek ve fonksiyonlar nelere yapılabileceğini denemek için kodu çalıştırın. Kare, üçgen veya sekizgenlerden desen yapabilir misin?'
-      Standalone_Artist_9:
-        instructions: Şimdi devam et ve istediğin her türlü resmi yap! Hata ne istiyorsan yapabileceğin bir fonksiyonun bile var!
     video:
       name:
         maze_intro: 'Labirent: Tanıtım'
@@ -461,6 +389,7 @@ tr:
         C2_relay_programming: Röle Programlama
         C2_paper_airplanes: Kağıt Uçaklar
         C2_digital_footprint: Dijital İziniz
+        C2_digital_footprint_v2: Dijital İziniz
         C3_maze_level_4: Labirent Döngüleri
         C3_artist_intro: 'Ressam: Giriş'
         C3_artist_functions: Aktör Fonksiyonları
@@ -501,6 +430,21 @@ tr:
         playlab_intro: Oyun laboratuarı için giriş
         playlab_events: Laboratuvar Olaylarını Oynatın
         playlab_repeat_forever: Play Lab Sonsuza Dek Tekrarla
+        tutorial_puzzle_challenge: YapBoz Mücadelesi Konu Anlatımı
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Değerlendirme Blokları
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Değişkenler
+        msm_7_functions: Fonksiyonlar
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
@@ -569,3 +513,7 @@ tr:
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
         right_arrow_fireball: Ateştoplarını fırlatmak için sağ ok tuşunu kullan
         name_function: Fonksiyonunun ismini buraya yaz
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

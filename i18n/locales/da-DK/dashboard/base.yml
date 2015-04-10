@@ -1,7 +1,7 @@
 da:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Ret venligst følgende fejl:'
   activerecord:
     errors:
       messages:
@@ -22,6 +22,7 @@ da:
           future: kan ikke være i fremtiden
   hello: Hej verden
   welcome_back: 'Velkommen tilbage %{name}'
+  submit: Indsend
   add_teacher_form:
     code:
       label: 'Tilføje en lærer:'
@@ -136,7 +137,7 @@ da:
       no_teacher: "Vi kunne ikke finde nogen brugere der er logget ind med %{teacher_email_or_code}'. Vær venlig og spørg dem om at lave en bruger, og derefter prøv at tilføje dem."
       section_not_found: "Kunne ikke finde en sektion med kode '%{section_code}'."
       blank_code: Angiv en sektions kode
-      cant_join_own_section: Desværre, kan ikke kan du deltage i dit eget afsnit.
+      cant_join_own_section: Desværre, du kan ikke deltage i dit eget afsnit.
     mail:
       invite_student:
         subject: 'Tilmeld dig en klasse med %{teacher_name} på Code.org!'
@@ -218,6 +219,7 @@ da:
         artist: Tegn noget
     user:
       classroom: Lærerens Startside
+      district_dashboard: District Dashboard
       label: 'Hej %{username}'
       stats: Mine fremskridt
       settings: Min konto
@@ -296,6 +298,8 @@ da:
     student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for %{student_name}'
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
+    email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
+    email_confirm_wrong_email: (Forkert e-mail?)
     email_resend_confirm: Gensend bekræftelses instruktioner
     new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
     current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)
@@ -434,6 +438,9 @@ da:
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Brug Play Lab til at skabe en historie eller et spil med karakterer fra Disneys Infinity
   gallery:
     students_drew_these_with_code: Elever har tegnet disse med kode!
     students_made_these_with_code: Elever har lavet disse med kode!
@@ -447,7 +454,7 @@ da:
     header_playlab: Play Lab
     header_artist: Kunstner
   landing:
-    prerelease: "Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder, at det ikke er den endelige version af kurset, og er undergivet revision som feedback modtages og forbedringer."
+    prerelease: "Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder, at det ikke er den endelige version af kurset, men at ændringer vil forekomme efterhånden som feedback modtages og forbedringer foretages."
     prerelease_hoc2014: "Denne øvelse er i <span class='betatext'> beta</span>.  Det er undergivet revision så feedback modtages og der arbejdes på forbedringer."
     feedback: Giv feedback
     report_bug: Rapporter fejl
@@ -463,6 +470,13 @@ da:
     wrong_body: 'Den løsning, du har angivet er ikke korrekte.  Prøv venligst igen!'
     correct_title: Rigtigt
     correct_body: Det er det korrekte svar.
+  contract_match:
+    wrong_title: Forkert svar
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Skriv dit svar her
   dialog:
@@ -478,7 +492,7 @@ da:
           title: Grundskole introduktion til datalogi kursus (15-25 timer)
           description: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
         Hour of Code:
-          title: Hour of Code
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Rediger kode
@@ -508,11 +522,44 @@ da:
     sign_out: 'Hvis du ikke ønsker at give din alder kan <a href="%{url}"> logge ud</a>.'
   zendesk_too_young_message: 'Beklager, yngre brugere kan ikke logge på vores websted. Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at logge på eller spørg dine forældre eller lærer om at kontakte os for dig.'
   progress:
-    not_completed: ikke afsluttet
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: afsluttet, for mange blokke
     completed_perfect: Afsluttet, perfekt
     furthest_level_attempted: længst opnåede niveau
+    assessment: assessment
   studio:
     courses_working_on: Kurser du er i gang med
     completed_courses: Afsluttede kurser
     all_courses: Alle kurser
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Gem
+    delete: Slet
+    exit: Return to Course
+    my_projects: My Projects
+    share: Del
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Mere
+    name: Navn
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Slet?
+    delete_yes: Ja
+    delete_no: Nej
+    saved: Saved
+    not_saved: Not saved
+    cancel: Annuller
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

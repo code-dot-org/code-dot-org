@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "calcular"},
+"divideByZeroError":function(d){return "Seu programa resulta em uma divisão por zero."},
+"emptyComputeBlock":function(d){return "Você precisa anexar um bloco ao bloco \"calcular\"."},
 "equivalentExpression":function(d){return "Tente reorganizar seus argumentos para obter exatamente a mesma expressão."},
-"extraTopBlocks":function(d){return "Você tem blocos não conectados. Você pretendia conectá-los ao bloco \"calcular\"?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "calcular"},
+"extraTopBlocks":function(d){return "Você tem blocos não anexados. Você pretendia anexá-los ao bloco \"calcular\"?"},
+"failedInput":function(d){return "Sua função não retorna o resultado correto para todos os valores."},
 "goal":function(d){return "Objetivo:"},
-"reinfFeedbackMsg":function(d){return "Aqui está a sua história! Continue trabalhando nela, ou siga para o próximo desafio!"},
-"yourExpression":function(d){return "Sua expressão:"}};
+"levelIncompleteError":function(d){return "Sua expressão não corresponde ao objetivo."},
+"missingFunctionError":function(d){return "Você deve definir uma função chamada "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Está faltando a variável "+appLocale.v(d,"var")+" na sua expressão."},
+"reinfFeedbackMsg":function(d){return "Aqui está seu cálculo! Continue trabalhando nele, ou vá para o próximo desafio!"},
+"yourExpression":function(d){return "Sua expressão:"},
+"wrongInput":function(d){return "Você está chamando sua função com o valor errado."},
+"wrongOtherValuesX":function(d){return "Sua expressão resulta no valor errado se variarmos "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Sua expressão não retorna o resultado correto."}};

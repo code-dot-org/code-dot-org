@@ -265,7 +265,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenRightTooltip":function(d){return "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-rechts-Taste gedrückt wird."},
 "whenUp":function(d){return "wenn Pfeil-nach-oben"},
 "whenUpTooltip":function(d){return "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-nach-oben-Taste gedrückt wird."},
-"whenWallCollided":function(d){return "Wenn Ball und Wand sich berühren"},
+"whenWallCollided":function(d){return "Wenn der Ball eine Wand berührt"},
 "whenWallCollidedTooltip":function(d){return "Führe untere Aktion aus wenn ein Ball eine Wand berührt."},
 "whileMsg":function(d){return "solange"},
 "whileTooltip":function(d){return "Wiederhole diese Aktionen bis das Ziel erreicht ist."},

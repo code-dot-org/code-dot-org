@@ -39,8 +39,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Proměnné"},
 "continue":function(d){return "Pokračovat"},
-"createHtmlBlock":function(d){return "vytvoř html blok"},
-"createHtmlBlockTooltip":function(d){return "Vytvoří blok kódu HTML v aplikaci."},
+"container":function(d){return "create container"},
+"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
 "finalLevel":function(d){return "Dobrá práce! Vyřešil si poslední hádanku."},
 "nextLevel":function(d){return "Dobrá práce! Dokončil jsi tuto hádanku."},
 "no":function(d){return "Ne"},
@@ -55,5 +55,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Krok"},
 "stepOver":function(d){return "Krok přes"},
 "stepOut":function(d){return "Krok ven"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "Zobrazit data"},
 "yes":function(d){return "Ano"}};

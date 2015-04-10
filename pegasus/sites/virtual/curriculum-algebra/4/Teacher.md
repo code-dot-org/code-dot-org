@@ -1,18 +1,15 @@
 ---
-title: Contracts
+title: Contracts, Domain, and Range
 view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg4'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'Contracts',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-Contracts provide a way for students to better understand and discuss functions. Through this lesson students will look at known functions and come up with the contracts that describe those functions.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -28,27 +25,28 @@ Contracts provide a way for students to better understand and discuss functions.
 4) [Writing Contracts](#Activity2)  
 
 ### **Wrap-up**
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Keep Up Your Contracts](#WrapUp)  
 
+<!--
 ### **Assessment**
 6) [Contracts Assessment](#Assessment)
+-->
 
 [/summary]
 
+[together]
+
 ## Lesson Objectives 
 ### Students will:
+
 - Describe a function in terms of its name, domain, and range
 - Create contracts for arithmetic and image-producing functions
 
-[/together]
-
-[together]
-
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
-- [Contract Log](needacontractlog.pdf)
+- [Contract Log](../docs/worksheets/contract_log.pdf)
 
 ### For the Teacher
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1SAu2YgSAE9g5NrhJ_c7eWBOAc_EGtXIDQqihvjyHV98)
@@ -69,7 +67,7 @@ This lesson has three new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) What's in a Function
 
-You’ve already seen several functions that take in two Numbers, such as +, and -. On the other hand, the function "star" takes in a Number and two Strings. Different functions take in different inputs, and we need a way to keep track of the requirements for each function.
+You’ve already seen several functions that take in two Numbers, such as +, and -. Other functions like "star", take in a Number and two Strings. Different functions take in different inputs, and we need a way to keep track of the requirements for each function.
 
 - What does the '+' function do?
   - What does it take as input?
@@ -82,21 +80,23 @@ Let's look at a simple way to describe any function, it's called a "contract"
 - What is a Contract?
   - A formal agreement
   - A description of expected behavior
-- Why do Contracts tell us?
+- What do Contracts tell us?
   - What a function should do
   - What inputs a function needs
   - What a function returns
   
 Encourage students to think about contracts in the real world. What purpose do they serve? If a contract is signed, do we expect it to be followed?
 
-Contracts have three disctinct parts:
+Contracts have three distinct parts:
 
 1. Name
 2. Domain
-3. Rainge
+3. Range
 
 **The Name of a function briefly describes what the function does.**
+
 **The Domain of a function is the data that the function expects.**
+
 **The Range of a function is the data that the function produces.**
 
 
@@ -125,12 +125,12 @@ Let's look at a few example contracts - for each contract we'll identify the Nam
 
 ### <a name="Activity2"></a> 4) Writing Contracts
 
-Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contract reference](needacontractlog.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation.
+Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contract log](../docs/worksheets/contract_log.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation.
 
 - We'll start with contracts for simple arithmetic functions
 - +, -, *, /
  
-Those ones were pretty easy, arithmetic functions only deal in Numbers! When it comes to writing functions that deal with multiple data types, looking at the Evaluation Block can give us some helpful clues.
+Those were pretty easy as arithmetic functions only deal in Numbers. When it comes to writing functions that deal with multiple data types, looking at the Evaluation Block can give us some helpful clues.
 
 - The Name of each function is at the top
 - There will be a slot for each Domain element
@@ -147,7 +147,7 @@ Common mistakes when students first write down contracts include: writing values
 
 [/tip]
 
-For each of the following Evaluation Blocks:
+Display each of the following Evaluation Blocks and ask students:
 
 - What is the Name of this function?
 - What is the Domain of this function?
@@ -172,39 +172,13 @@ In the next unit, you’ll learn how to create your own functions to save work i
 
 [together]
 
+<!--
 ## Assessment
 ### <a name="Assessment"></a>6) Contract Writing Assessment
 
-Visit [MSM Stage 4](http://studio.code.org/s/algebra/stage/4/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 4](http://studio.code.org/s/algebra/stage/4/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
-- N-Q: The student reasons quantitatively in using units to solve problems.
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>

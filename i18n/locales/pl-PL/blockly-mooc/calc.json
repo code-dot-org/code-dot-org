@@ -1,9 +1,17 @@
 {
-  "compute":"Oblicz",
+  "divideByZeroError":"Twój program prowadzi do dzielenia przez zero.",
+  "emptyComputeBlock":"Musisz dołączyć blok do bloku \"wykonywanego\".",
   "equivalentExpression":"Spróbuj zmienić kolejność argumentów, aby dostać dokładnie to samo wyrażenie.",
-  "extraTopBlocks":"Masz niezałączone bloki. Czy chciałeś je dołączyć do bloku obliczeniowego?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"wykonaj",
+  "extraTopBlocks":"Masz niepodłączone bloki. Czy pomyślałeś by dołączyć je do bloku \"wykonywanego\"?",
+  "failedInput":"Twoja funkcja nie zwraca prawidłowych wyników dla wszystkich wartości.",
   "goal":"Cel:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Twoje wyrażenie:"
+  "levelIncompleteError":"Twoje wyrażenie nie jest zgodne z celem.",
+  "missingFunctionError":"Należy zdefiniować funkcję o nazwie {functionName}.",
+  "missingVariableX":"W twoim wyrażeniu brakuje zmiennej {var}.",
+  "reinfFeedbackMsg":"Oto wynik Twoich obliczeń! Kontynuuj pracę nad nim lub przejdź dalej do następnej zagadki!",
+  "yourExpression":"Twoje wyrażenie:",
+  "wrongInput":"Przekazujesz nieprawidłową wartość wywołująć swoją funkcję.",
+  "wrongOtherValuesX":"Twoje wyrażenie prowadzi do niepoprawnych wartości gdy wstawiamy zmienną {var}.",
+  "wrongResult":"Twoje wyrażenie nie zwraca poprawnego wyniku."
 }

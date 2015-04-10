@@ -22,6 +22,7 @@ id:
           future: tidak mungkin di masa depan
   hello: Halo dunia
   welcome_back: 'Selamat datang kembali, %{name}'
+  submit: Kirim
   add_teacher_form:
     code:
       label: 'Tambahkan seorang guru:'
@@ -219,6 +220,7 @@ id:
         artist: Gambarlah Sesuatu
     user:
       classroom: Beranda Guru
+      district_dashboard: District Dashboard
       label: 'Halo %{username}'
       stats: Kemajuan saya
       settings: Akun saya
@@ -297,12 +299,14 @@ id:
     student_teacher_disassociated: '%{teacher_name} telah dihapus sebagai guru dari %{student_name}'
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
+    email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
+    email_confirm_wrong_email: (Alamat email salah?)
     email_resend_confirm: Kirim ulang petunjuk konfirmasi
     new_password_hint: (Kosongkan jika Anda tidak ingin mengubahnya)
     current_password_hint: (kita perlu password Anda saat ini untuk mengkonfirmasi perubahan Anda)
     delete: Hapuslah akun anda
     delete_text: Klik tombol di bawah ini akan menghapus akun Anda.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_text_teacher_note: 'Catatan : menghapus Akun Anda tidak akan menghapus akun murid-murid Anda.'
     delete_confirm: Apakah Anda yakin ingin menghapus akun Anda?
   user_level:
     completed: Selesai
@@ -435,6 +439,9 @@ id:
       body: Lihat galeri gambarn aplikasi dan seniman yang dibuat oleh pengguna kami
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
     students_made_these_with_code: Siswa membuat ini dengan kode program!
@@ -464,6 +471,13 @@ id:
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
+  contract_match:
+    wrong_title: Jawaban Salah
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Masukkan jawaban Anda di sini
   dialog:
@@ -479,7 +493,7 @@ id:
           title: Kursus pengenalan ilmu komputer (15-25 jam)
           description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk semua usia.
         Hour of Code:
-          title: Jam kode
+          title: Koding satu jam 2013
           description: ""
         edit-code:
           title: Mengedit kode
@@ -509,11 +523,44 @@ id:
     sign_out: 'Jika Anda tidak ingin memasukkan umur kamu bisa<a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a> tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami. u.'
   progress:
-    not_completed: belum selesai
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: selesai, terlalu banyak blok
     completed_perfect: selesai, sempurna
     furthest_level_attempted: tingkat terjauh yang dicoba
+    assessment: assessment
   studio:
     courses_working_on: Kursus yang sedang Anda kerjakan
     completed_courses: Kursus yang telah diselesaikan
     all_courses: Semua kursus
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Ubah Nama
+    save: Simpan
+    delete: Hapus
+    exit: Kembali ke Kursus
+    my_projects: Project Saya
+    share: Bagikan
+    share_title: Bagikan proyek Anda
+    share_copy_link: 'Salin link:'
+    close: Tutup
+    more: Lebih
+    name: Nama
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Perlu bantuan untuk memulai?
+    really_delete: Hapus?
+    delete_yes: Ya
+    delete_no: Tidak
+    saved: Disimpan
+    not_saved: Not saved
+    cancel: Batal
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

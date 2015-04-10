@@ -3,7 +3,11 @@ title: Certificates
 layout: page_print
 theme: none
 ---
--course = request.params['course'] || 'hoc'
+
+-if ! request.params['course'].nil? && ! request.params['course'].empty?
+  -course = request.params['course']
+-else
+  -course = 'hoc'
 
 %div.hide-print
   -case course

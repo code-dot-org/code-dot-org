@@ -15,9 +15,9 @@ class ApiController < ApplicationController
     @script = @section.script || Script.twenty_hour_script
 
     # stage data
-    stages = @script.script_levels.group_by(&:stage_or_game).map do |stage_or_game, levels|
+    stages = @script.script_levels.group_by(&:stage).map do |stage, levels|
       {length: levels.length,
-       title: ActionController::Base.helpers.strip_tags(stage_title(@script, stage_or_game))}
+       title: ActionController::Base.helpers.strip_tags(stage.localized_title)}
     end
 
     # student level completion data
@@ -27,11 +27,12 @@ class ApiController < ApplicationController
       @script.script_levels.each do |script_level|
         if user_level = level_map[script_level.level_id]
           student_levels << {class: activity_css_class(user_level.try(:best_result)),
-                             title: script_level.stage_or_game_position}
+                             title: script_level.position}
         else
-          student_levels << nil
+          student_levels << {class: activity_css_class(nil),
+                             title: script_level.position}
         end
-      end   
+      end
       {id: student.id, levels: student_levels}
     end
 
@@ -61,7 +62,7 @@ class ApiController < ApplicationController
     @script = @section.script || Script.twenty_hour_script
 
     @recent_levels = UserLevel.find_by_sql(<<SQL)
-select ul.*, sl.game_chapter, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
+select ul.*, sl.position, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
 from user_levels ul
 inner join script_levels sl on sl.level_id = ul.level_id
 inner join levels l on l.id = ul.level_id

@@ -21,8 +21,18 @@ class Blockly < Level
     use_contract_editor
     default_num_example_blocks
     open_function_definition
-    callout_json
+    contract_highlight
+    contract_collapse
+    examples_highlight
+    examples_collapse
+    definition_highlight
+    definition_collapse
+    disable_examples
     project_template_level_name
+    is_project_level
+    edit_code
+    code_functions
+    failure_message_override
   )
 
   before_validation {
@@ -46,14 +56,13 @@ class Blockly < Level
     self.class.pretty_print(xml_node.to_xml)
   end
 
-  def load_level_xml(xml)
-    xml_node = Nokogiri::XML(xml, &:noblanks)
-    block_nodes = xml_node.xpath(xml_blocks.map{|x| '//'+x}.join(' | ')).map(&:remove)
-    super(xml_node.to_xml)
+  def load_level_xml(xml_node)
+    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//'+x}.join(' | ')).map(&:remove) : []
+    level_properties = super(xml_node)
     block_nodes.each do |attr_node|
-      self.send("#{attr_node.name}=", attr_node.child.to_xml)
+      level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
     end
-    self.tap(&:save!)
+    level_properties
   end
 
   def filter_level_attributes(level_hash)
@@ -129,4 +138,10 @@ class Blockly < Level
     return if !self.respond_to?(:solution_blocks) || solution_blocks.blank?
     self.ideal_level_source_id = LevelSource.find_identical_or_create(self, solution_blocks).id
   end
+
+  # What blocks should be embedded for the given block_xml. Default behavior is to change nothing.
+  def blocks_to_embed(block_xml)
+    return block_xml
+  end
+
 end

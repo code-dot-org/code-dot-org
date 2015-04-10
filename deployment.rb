@@ -25,17 +25,10 @@ def load_configuration()
 
   hostname = `hostname`.strip
 
-  global_config = load_yaml_file File.join(root_dir, 'aws', 'secrets', 'config.yml')
-  global_config = {'environments'=>{}, 'hosts'=>{}} unless global_config
-
-  default_config = global_config['environments']['all'] || {}
-
-  host_config = global_config['hosts'][hostname] || {}
-
+  global_config = load_yaml_file(File.join(root_dir, 'globals.yml')) || {}
   local_config = load_yaml_file(File.join(root_dir, 'locals.yml')) || {}
 
-  env = local_config['env'] || host_config['env'] || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
-  env_config = global_config['environments'][env] || {}
+  env = local_config['env'] || global_config['env'] || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
 
   rack_env = env.to_sym
 
@@ -44,7 +37,6 @@ def load_configuration()
     'build_apps'                  => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
-    'build_jupiter'               => false,
     'build_pegasus'               => true,
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
@@ -58,16 +50,13 @@ def load_configuration()
     'db_writer'                   => 'mysql://root@localhost/',
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
-    'jupiter_database'            => "mysql2://root@localhost/jupiter_#{rack_env}",
-    'jupiter_database_logging'    => rack_env == :development,
-    'jupiter_database_reader'     => nil,
-    'jupiter_port'                => 3000,
-    'jupiter_workers'             => 4,
     'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
     'name'                        => hostname,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
+    'pdf_port_collate'            => 8081,
+    'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
     'pegasus_port'                => 3000,
@@ -80,7 +69,13 @@ def load_configuration()
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'varnish_instances'           => [],
+    'use_dynamo_tables'           => [:staging, :test, :production].include?(rack_env),
+    'use_dynamo_properties'       => [:staging, :test, :production].include?(rack_env),
+    'dynamo_tables_table'         => "#{rack_env}_tables",
+    'dynamo_tables_index'         => "channel_id-table_name-index",
+    'use_dynamo_properties'       => false,
+    'dynamo_properties_table'     => "#{rack_env}_properties",
+    'lint'                        => rack_env == :staging || rack_env == :development
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
@@ -88,14 +83,11 @@ def load_configuration()
 
     config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
 
-    config.merge! default_config
-    config.merge! env_config
-    config.merge! host_config
+    config.merge! global_config
     config.merge! local_config
 
-    config['apps_api_secret']     ||= config['poste_secret']
-    config['jupiter_session_secret'] ||= config['poste_secret']
-    config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'daemon'
+    config['channels_api_secret']     ||= config['poste_secret']
+    config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
     config['pegasus_db_reader']   ||= config['db_reader'] + config['pegasus_db_name']
@@ -121,6 +113,7 @@ class CDOImpl < OpenStruct
   def canonical_hostname(domain)
     return "localhost.#{domain}" if rack_env?(:development)
     return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
+    return "translate.#{domain}" if self.name == 'crowdin'
     return domain if rack_env?(:production)
     "#{rack_env}.#{domain}"
   end
@@ -216,16 +209,8 @@ def home_dir(*paths)
   File.join(CDO.home_dir, *paths)
 end
 
-def jupiter_dir(*paths)
-  deploy_dir('jupiter', *paths)
-end
-
 def pegasus_dir(*paths)
   deploy_dir('pegasus', *paths)
-end
-
-def secrets_dir(*dirs)
-  aws_dir('secrets', *dirs)
 end
 
 def shared_dir(*dirs)

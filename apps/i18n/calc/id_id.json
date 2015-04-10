@@ -1,9 +1,17 @@
 {
-  "compute": "hitung",
+  "divideByZeroError": "Program Anda menghasilkan pembagian dengan nol.",
+  "emptyComputeBlock": "Anda harus memasang blok ke \"evaluasi\" block.",
   "equivalentExpression": "Cobalah tata ulang argumen Anda untuk mendapatkan ekspresi yang sama persis.",
-  "extraTopBlocks": "Terdapat blok yang tidak terpasang. Apa maksud Anda ialah memasangnya pada blok \"hitung\"?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "evaluate": "evaluasi",
+  "extraTopBlocks": "Anda memiliki blok terikat. Apakah maksud Anda untuk memasang ini ke \"evaluasi\" blok?",
+  "failedInput": "Fungsi Kamu tidak memberikan hasil yang tepat bagi semua nilai.",
   "goal": "Tujuan:",
-  "reinfFeedbackMsg": "Inilah ceritamu! Lanjutkanlah, atau beralih ke teka-teki berikutnya!",
-  "yourExpression": "Ekspresimu:"
+  "levelIncompleteError": "Ekspresi Kamu tidak cocok dengan tujuan.",
+  "missingFunctionError": "Anda harus mendefinisikan fungsi bernama {functionName}.",
+  "missingVariableX": "Ekspresi Anda kehilangan variabel {var}.",
+  "reinfFeedbackMsg": "Berikut adalah hasil perhitungan Anda! Terus bekerja, atau beralih ke masalah berikutnya!",
+  "yourExpression": "Ekspresimu:",
+  "wrongInput": "Anda memanggil fungsi milik sendiri dengan nilai yang salah.",
+  "wrongOtherValuesX": "Ekspresi Anda menghasilkan nilai yang salah jika kami menvariasikan {var}.",
+  "wrongResult": "Ekspresi Anda tidak mengembalikan hasil yang benar."
 }

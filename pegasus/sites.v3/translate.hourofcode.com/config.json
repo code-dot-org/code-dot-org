@@ -1,0 +1,48 @@
+{
+  "base": "hourofcode.com",
+   "map_starting_locations": {
+    "us": "38.6028331,-97.9062109,4z",
+    "eu": "49.5,22,4z"
+  },
+  "companies": {
+    "4-H": {
+      "name": "4-H Youth Development"
+    },
+    "asa": {
+      "name": "Afterschool Alliance"
+    },
+    "bgca": {
+      "name": "Boys and Girls Club of America"
+    },
+    "bsusa": {
+      "name": "Boy Scouts of America"
+    },
+    "cgcs": {
+      "name": "Council of the Great City Schools"
+    },
+    "gsusa": {
+      "name": "Girl Scouts of America"
+    },
+    "khanacademy": {
+      "name": "Khan Academy"
+    },
+    "mesa": {
+      "name": "Mathematics Engineering Science Achievement"
+    },
+    "napcs": {
+      "name": "National Alliance of Public Charter Schools"
+    },
+    "ngcp": {
+      "name": "National Girls Collaborative Project"
+    },
+    "teachforall": {
+      "name": "Teach for All"
+    },
+    "teachforamerica": {
+      "name": "Teach for America"
+    },
+    "tntp": {
+      "name": "TNTP"
+    }
+  }
+}

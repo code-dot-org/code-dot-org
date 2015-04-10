@@ -8,14 +8,21 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Write a function called green-shape, which takes in the name of a shape and produces a solid green shape. Your function should work with at least “circle”, “star” and “rectangle”, but you can add other shapes if you like. You can choose the size of each shape. Don’t forget to add an “else” clause!\r\nOne example - and part of the definition -  has already been done for you!\r\n",
+    "instructions": "Free Play: Write a function called green-shape, which takes in the name of a shape and produces a solid green shape. Your function should work with at least “circle”, “star” and “rectangle”, but you can add other shapes if you like. You can choose the size of each shape. Don’t forget to add an “else” clause!\r\nOne example - and part of the definition -  has already been done for you!\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "default_num_example_blocks": "2",
-    "free_play": "false"
+    "free_play": "true",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>
@@ -23,8 +30,8 @@
       <xml>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="shape" type="string"/>
-            <outputtype>image</outputtype>
+            <arg name="shape" type="String"/>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">green-shape</title>
         </block>
@@ -32,7 +39,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="green-shape">
-                <arg name="shape" type="string"/>
+                <arg name="shape" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string" uservisible="false">
@@ -65,7 +72,7 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="green-shape">
-                <arg name="shape" type="string"/>
+                <arg name="shape" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -74,7 +81,7 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
               <mutation name="green-shape">
-                <arg name="shape" type="string"/>
+                <arg name="shape" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string">
@@ -138,195 +145,5 @@
         <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>
       </xml>
     </toolbox_blocks>
-    <solution_blocks>
-      <xml>
-        <block type="functional_display" inline="false" deletable="false" movable="false">
-          <functional_input name="ARG1">
-            <block type="functional_call" inline="false">
-              <mutation name="green-shape">
-                <arg name="shape" type="string"/>
-              </mutation>
-              <functional_input name="ARG0">
-                <block type="functional_string">
-                  <title name="VAL">circle</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="green-shape">
-                <arg name="shape" type="string"/>
-              </mutation>
-              <functional_input name="ARG0">
-                <block type="functional_string" uservisible="false">
-                  <title name="VAL">circle</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-          <functional_input name="EXPECTED">
-            <block type="functional_circle" inline="false" uservisible="false">
-              <functional_input name="SIZE">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">100</title>
-                </block>
-              </functional_input>
-              <functional_input name="STYLE">
-                <block type="functional_style" uservisible="false">
-                  <title name="VAL">solid</title>
-                </block>
-              </functional_input>
-              <functional_input name="COLOR">
-                <block type="functional_string" uservisible="false">
-                  <title name="VAL">green</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="shape" type="string"/>
-            <outputtype>image</outputtype>
-          </mutation>
-          <title name="NAME">green-shape</title>
-          <functional_input name="STACK">
-            <block type="functional_cond" inline="false" uservisible="false">
-              <mutation pairs="0,1,2"/>
-              <functional_input name="COND0">
-                <block type="functional_string_equals" inline="false" uservisible="false">
-                  <functional_input name="ARG1">
-                    <block type="functional_parameters_get" uservisible="false">
-                      <mutation>
-                        <outputtype>string</outputtype>
-                      </mutation>
-                      <title name="VAR">shape</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="ARG2">
-                    <block type="functional_string" uservisible="false">
-                      <title name="VAL">circle</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="VALUE0">
-                <block type="functional_circle" inline="false" uservisible="false">
-                  <functional_input name="SIZE">
-                    <block type="functional_math_number" uservisible="false">
-                      <title name="NUM">100</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="STYLE">
-                    <block type="functional_style" uservisible="false">
-                      <title name="VAL">solid</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="COLOR">
-                    <block type="functional_string" uservisible="false">
-                      <title name="VAL">green</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="COND1">
-                <block type="functional_string_equals" inline="false" uservisible="false">
-                  <functional_input name="ARG1">
-                    <block type="functional_parameters_get" uservisible="false">
-                      <mutation>
-                        <outputtype>string</outputtype>
-                      </mutation>
-                      <title name="VAR">shape</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="ARG2">
-                    <block type="functional_string" uservisible="false">
-                      <title name="VAL">star</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="VALUE1">
-                <block type="functional_star" inline="false" uservisible="false">
-                  <functional_input name="SIZE">
-                    <block type="functional_math_number" uservisible="false">
-                      <title name="NUM">100</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="STYLE">
-                    <block type="functional_style" uservisible="false">
-                      <title name="VAL">solid</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="COLOR">
-                    <block type="functional_string" uservisible="false">
-                      <title name="VAL">green</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="COND2">
-                <block type="functional_string_equals" inline="false" uservisible="false">
-                  <functional_input name="ARG1">
-                    <block type="functional_parameters_get" uservisible="false">
-                      <mutation>
-                        <outputtype>string</outputtype>
-                      </mutation>
-                      <title name="VAR">shape</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="ARG2">
-                    <block type="functional_string" uservisible="false">
-                      <title name="VAL">rectangle</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="VALUE2">
-                <block type="functional_rectangle" inline="false" uservisible="false">
-                  <functional_input name="WIDTH">
-                    <block type="functional_math_number" uservisible="false">
-                      <title name="NUM">100</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="HEIGHT">
-                    <block type="functional_math_number" uservisible="false">
-                      <title name="NUM">100</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="STYLE">
-                    <block type="functional_style" uservisible="false">
-                      <title name="VAL">solid</title>
-                    </block>
-                  </functional_input>
-                  <functional_input name="COLOR">
-                    <block type="functional_string" uservisible="false">
-                      <title name="VAL">green</title>
-                    </block>
-                  </functional_input>
-                </block>
-              </functional_input>
-              <functional_input name="DEFAULT">
-                <block type="functional_string" uservisible="false">
-                  <title name="VAL">I have never seen that shape</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_example" inline="false" uservisible="false">
-          <functional_input name="ACTUAL">
-            <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="green-shape">
-                <arg name="shape" type="string"/>
-              </mutation>
-            </block>
-          </functional_input>
-        </block>
-      </xml>
-    </solution_blocks>
   </blocks>
 </Eval>

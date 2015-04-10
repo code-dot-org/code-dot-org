@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "دائرة (نصف القطر ، النمط ، اللون)"},
 "displayBlockTitle":function(d){return "عرض"},
 "ellipseBlockTitle":function(d){return "القطع الناقص (العرض ، الارتفاع ، النمط واللون )"},
 "extraTopBlocks":function(d){return "لديك كتل غير متصلة. هل تقصد بإتصال هذه إلى كتلة \"العرض\" ؟"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "تداخل (الأعلى، الأسفل)"},
 "placeImageBlockTitle":function(d){return "وضع الصورة (س، ص، صورة)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "الأساس الذي تقوم عليه (أسفل، أعلى)"},
 "outline":function(d){return "موجز"},
 "solid":function(d){return "صلب"},
-"string":function(d){return "السلسلة"}};
+"string":function(d){return "السلسلة"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

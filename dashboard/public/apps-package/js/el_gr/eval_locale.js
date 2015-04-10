@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "κύκλος (ακτίνα, στυλ, χρώμα)"},
-"displayBlockTitle":function(d){return "εμφάνιση"},
+"displayBlockTitle":function(d){return "υπολογισμός"},
 "ellipseBlockTitle":function(d){return "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)"},
-"extraTopBlocks":function(d){return "Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;"},
+"extraTopBlocks":function(d){return "Έχετε ασύνδετα μποκ. Μήπως ενοούσατε να τα επισυνάψετε στο μπλοκ \"αξιολόγηση\";"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "επικάλυμμα (επάνω, κάτω)"},
 "placeImageBlockTitle":function(d){return "τοποθέτησε-εικόνα (χ, ψ, εικόνα)"},
 "offsetBlockTitle":function(d){return "μετατόπιση (x, y, εικόνα)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "υπόστρωμα (κάτω, κορυφή)"},
 "outline":function(d){return "περίγραμμα"},
 "solid":function(d){return "συμπαγής"},
-"string":function(d){return "συμβολοσειρά"}};
+"string":function(d){return "συμβολοσειρά"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

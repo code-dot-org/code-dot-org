@@ -8,11 +8,12 @@ it-IT:
     L'<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate la vostra Ora del Codice</a>
   csedweek_banner_teachers: |-
     <a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Sei un insegnante interessato all'Informatica? Guarda le altre risorse disponibili</a>
-  n_have_learned_an_hoc: '<h1>#</h1><h3>hanno completato la</h3><h2>Ora del Codice</h2>'
+  n_have_learned_an_hoc: '<h1>Prova una</h1><h2>Ora del Codice</h2><h3>in # hanno partecipato</h3>'
   anybody_can_learn: Chiunque può imparare.
   learn_now: Impara Adesso
   petition_message: "Ogni studente di ogni Scuola dovrebbe avere l'opportunità di imparare informatica"
   petition_sign_message: "Se sei d'accordo, firma con il tuo nome.  Unisciti agli altri #."
+  petition_sign_message_support: 'Per sostenerci, aggiungi il tuo nome. Unisciti # altri.'
   name: Nome
   email: Indirizzo di posta elettronica
   zipcode: CAP o Città
@@ -25,7 +26,7 @@ it-IT:
   hoc2014_teachers: Insegnanti
   hoc2014_host: Ospita
   hoc2014_everyone: Tutti
-  hoc2014_support: Sostienilo
+  hoc2014_support: 'Sostienilo &#x25BE;'
   hoc2014_whatishoc: "Cosa è l'Ora del Codice?"
   twentyhours_trynow: Prova adesso
   california_heading: Chiedi alla tua scuola di insegnare informatica
@@ -93,6 +94,7 @@ it-IT:
   learn_classes: Trova le scuole locali
   hoc_is_here: "L'Ora del Codice #HourOfCode è qua - provala! @codeorg @programmafuturo"
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala! @codeorg @programmafuturo'
+  twitter_teach_cs: 'Perchè molte scuole non insegnano informatica? Possiamo migliorare questa situazione.  http://youtu.be/nKIu9yen5nc. Visita http://code.org/  per saperne di più.'
   learn_hoc: "Fai l'Ora del Codice"
   beyond_hoc: Dopo la prima ora
   what_gender: Di che sesso sei?
@@ -107,10 +109,11 @@ it-IT:
   students_and_lines: "%{students} studenti hanno svolto l'Ora del Codice e scritto %{lines} linee di codice."
   start_hoc: "Inizia l'Ora del Codice adesso"
   contact_form_topic_press: "Stampa/media (appuntamento per un'intervista o per un intervento)"
-  stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti di imparare." - Michael Clark, Insegnante'
   stats_nina: '"Ogni giorno sempre lo stesso risultato &mdash; il 100% di attenzione."-Nina Nichols Peery, Insegnante'
   stats_student: '"Sapevo che questa era una occasione <b>irripetibile</b>."-Mariana Alzate, 5a Elementare'
+  stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti di imparare." - Michael Clark, Insegnante'
   studiobar_title: "Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>"
+  studiobar_title_nolink: "Esplora l'Officina del Codice"
   studiobar_elementary_title: Scuola Primaria
   studiobar_elementary_body: I nostri tre nuovi corsi, specifici per la Scuola Primaria
   studiobar_hoc_title: "L'Ora del Codice"
@@ -125,6 +128,93 @@ it-IT:
   studiobar_donate_body: Per ogni dollaro che dai un bambino ha la possibilità di imparare
   studiobar_shop_title: Acquista
   studiobar_shop_body: Rompete gli stereotipi. Indossate con orgoglio il nostro logo.
+  homepage_hero_text_malala: |
+    &ldquo;Sfido le ragazze di ogni singolo paese a imparare un'ora di codice
+    &rdquo; 
+    Malala, Premio Nobel per la pace
+  homepage_hero_text_susan: |
+    &ldquo;Se si può cambiare la tecnologia,
+    si può cambiare il mondo.&rdquo;
+    Susan, CEO di YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Non giocare soltanto con il tuo telefono,
+    programmalo.&rdquo;
+    Presidente Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;I nostri bambini &mdash; comprese le nostre bambine &mdash;
+    devono avere l'opportunità di imparare informatica.&rdquo;
+    Sheryl, COO di Facebook
+  homepage_hero_text_satya: |
+    &ldquo;L'informatica può creare 
+    le migliori opportunità del mondo.&rdquo;
+    Satya, CEO di Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;Se scrivi codice, puoi determinare il corso della tua vita.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: "L'Ora del Codice"
+  homepage_slot_text_frozen: Frozen con Anna ed Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: Tutti i nostri tutorial
+  homepage_slot_text_course4: Corso 4
+  homepage_slot_text_shop: Acquista
+  homepage_slot_text_flappy: 'Codice di "Flappy"'
+  homepage_action_text_codevideo: Guarda il video
+  homepage_action_text_teachervideo: Guarda il video
+  homepage_action_text_learn: Inizia ad imparare da oggi
+  homepage_action_text_signpetition: Firma la petizione
+  homepage_signpetition_dropdown: 'Firma la nostra petizione &#x25BE;'
+  homepage_slot_text_title_hoc: "L'Ora del Codice"
+  homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
+  homepage_slot_text_link_hoc: "Prova l'Ora del Codice"
+  homepage_slot_text_link_host: "Ospita un'Ora di Codice"
+  homepage_slot_text_link_hocserved: '# servito'
+  homepage_slot_text_title_students: Studenti
+  homepage_slot_text_blurb_students: Scopri tutto sui nostri tutorial
+  homepage_slot_text_link_codestudio: Prova Code Studio
+  homepage_slot_text_link_local: Trova una classe nella tua zona
+  homepage_slot_text_link_othercourses: Altri corsi online
+  homepage_slot_text_title_educators: Insegnanti
+  homepage_slot_text_blurb_educators: Insegna ai tuoi studenti
+  homepage_slot_text_link_k5: "Corsi per scuola dell'infanzia e elementare"
+  homepage_slot_text_link_fullcurriculum: Guarda il nostro curriculum completo
+  homepage_slot_text_link_pd: Sviluppo professionale
+  homepage_slot_text_title_advocates: Sostenitori
+  homepage_slot_text_blurb_advocates: Supporta il nostro lavoro
+  homepage_slot_text_link_stats: Guarda le statistiche
+  homepage_slot_text_link_buy: Compra una T-shirt o un cappello
+  homepage_slot_text_link_donate: Fai una donazione
+  homepage_header_codestudio: Creazioni degli studenti di Code Studio
+  homepage_header_donors: Code.org ringrazia i suoi sostenitori
+  homepage_donors_seall: Mostra tutto
+  homepage_donors_donate: Sostienici
   contact_form_topic_student: Io sono uno studente
   contact_form_topic_parent: Io sono un genitore
   contact_form_topic_teacher: Io sono un insegnante
@@ -292,6 +382,8 @@ it-IT:
   dashboard_login_picture: Immagine
   dashboard_login_none: Indirizzo di posta elettronica
   dashboard_new_password: nuova password
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: non completato
   dashboard_progress_completed_too_many_blocks: completato, ma usando troppi blocchi
   dashboard_progress_completed_perfect: completato in modo perfetto

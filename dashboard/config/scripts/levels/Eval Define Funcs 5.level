@@ -14,8 +14,17 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "false",
-    "embed": "false"
-  }
+    "embed": "false",
+    "default_num_example_blocks": "0",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "f455d17e807b60d3d9eef9df5dbb5038"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -24,9 +33,9 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
               <mutation name="three-shapes">
-                <arg name="shape1" type="image"/>
-                <arg name="shape2" type="image"/>
-                <arg name="shape3" type="image"/>
+                <arg name="shape1" type="Image"/>
+                <arg name="shape2" type="Image"/>
+                <arg name="shape3" type="Image"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_call" inline="false">
@@ -69,11 +78,11 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="shape1" type="image"/>
-            <arg name="shape2" type="image"/>
-            <arg name="shape3" type="image"/>
+            <arg name="shape1" type="Image"/>
+            <arg name="shape2" type="Image"/>
+            <arg name="shape3" type="Image"/>
             <description>Take three shapes and return an image with all three in a row.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">three-shapes</title>
           <functional_input name="STACK">
@@ -93,7 +102,7 @@
                   <functional_input name="IMAGE">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>image</outputtype>
+                        <outputtype>Image</outputtype>
                       </mutation>
                       <title name="VAR">shape1</title>
                     </block>
@@ -117,7 +126,7 @@
                       <functional_input name="IMAGE">
                         <block type="functional_parameters_get" uservisible="false">
                           <mutation>
-                            <outputtype>image</outputtype>
+                            <outputtype>Image</outputtype>
                           </mutation>
                           <title name="VAR">shape2</title>
                         </block>
@@ -139,7 +148,7 @@
                       <functional_input name="IMAGE">
                         <block type="functional_parameters_get" uservisible="false">
                           <mutation>
-                            <outputtype>image</outputtype>
+                            <outputtype>Image</outputtype>
                           </mutation>
                           <title name="VAR">shape3</title>
                         </block>
@@ -155,7 +164,7 @@
           <mutation>
             <arg name="radius" type="Number"/>
             <description>Return a solid aqua star of given radius</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">aqua-star</title>
           <functional_input name="STACK">
@@ -224,14 +233,14 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
               <mutation name="three-shapes">
-                <arg name="shape1" type="image"/>
-                <arg name="shape2" type="image"/>
-                <arg name="shape3" type="image"/>
+                <arg name="shape1" type="Image"/>
+                <arg name="shape2" type="Image"/>
+                <arg name="shape3" type="Image"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_call" inline="false">
                   <mutation name="aqua star">
-                    <arg name="radius" type="null"/>
+                    <arg name="radius"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_math_number">
@@ -243,7 +252,7 @@
               <functional_input name="ARG1">
                 <block type="functional_call" inline="false">
                   <mutation name="aqua star">
-                    <arg name="radius" type="null"/>
+                    <arg name="radius"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_math_number">
@@ -255,7 +264,7 @@
               <functional_input name="ARG2">
                 <block type="functional_call" inline="false">
                   <mutation name="aqua star">
-                    <arg name="radius" type="null"/>
+                    <arg name="radius"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_math_number">
@@ -269,9 +278,9 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="radius" type="null"/>
+            <arg name="radius"/>
             <description>Produces an aqua star of given radius</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">aqua star</title>
           <functional_input name="STACK">
@@ -299,10 +308,10 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="shape1" type="image"/>
-            <arg name="shape2" type="image"/>
-            <arg name="shape3" type="image"/>
-            <outputtype>image</outputtype>
+            <arg name="shape1" type="Image"/>
+            <arg name="shape2" type="Image"/>
+            <arg name="shape3" type="Image"/>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">three-shapes</title>
           <functional_input name="STACK">
@@ -322,7 +331,7 @@
                   <functional_input name="IMAGE">
                     <block type="functional_parameters_get" uservisible="false">
                       <mutation>
-                        <outputtype>image</outputtype>
+                        <outputtype>Image</outputtype>
                       </mutation>
                       <title name="VAR">shape1</title>
                     </block>
@@ -346,7 +355,7 @@
                       <functional_input name="IMAGE">
                         <block type="functional_parameters_get" uservisible="false">
                           <mutation>
-                            <outputtype>image</outputtype>
+                            <outputtype>Image</outputtype>
                           </mutation>
                           <title name="VAR">shape2</title>
                         </block>
@@ -368,7 +377,7 @@
                       <functional_input name="IMAGE">
                         <block type="functional_parameters_get" uservisible="false">
                           <mutation>
-                            <outputtype>image</outputtype>
+                            <outputtype>Image</outputtype>
                           </mutation>
                           <title name="VAR">shape3</title>
                         </block>

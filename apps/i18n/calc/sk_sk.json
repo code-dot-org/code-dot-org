@@ -1,9 +1,17 @@
 {
-  "compute": "vypočítať",
+  "divideByZeroError": "Your program results in division by zero.",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "equivalentExpression": "Skús zmeniť poradie argumentov a tak získať úplne rovnaký výraz.",
+  "evaluate": "evaluate",
   "extraTopBlocks": "Máš nepripojené bloky. Nechcel si ich pripojiť na blok \"vypočítať\"?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Cieľ:",
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Tu je tvoj príbeh! Pokračuj v práci, alebo choď na ďalšiu úlohu!",
-  "yourExpression": "Tvoj výraz:"
+  "yourExpression": "Tvoj výraz:",
+  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

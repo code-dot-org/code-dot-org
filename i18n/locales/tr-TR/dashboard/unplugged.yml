@@ -57,12 +57,12 @@ tr:
         video: Unplug9
       Unplug10:
         title: İnternet
-        desc: In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS.
+        desc: Bu derste öğrenciler IPs ve DNS web adresleri hakkındaki her şeyi öğrenirken,internetteki akışı taklit edecekler.
         pdfs:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: paketlemek
         desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
         pdfs:
           - unplug11
@@ -78,14 +78,14 @@ tr:
       PlantASeed:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
         desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
-        video: C1_planting_seed
+        video: C1_dikmek_tohum
       BuildingAFoundation:
         title: Bir Temel Oluşturma
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
         title: Döngüselleşme
-        desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
+        desc: 'Bu ders dans aktivitesi ile döngülerin(tekrarlanan komutlar) programlama konsepti hakkında bilgilendirme yapar.Öğrenciler  basit planlama yı ve inşa edilenleri tekrar etmeyi öğrenecekler.'
         video: C1_getting_loopy
       RelayProgramming:
         title: Röle Programlama
@@ -131,14 +131,14 @@ tr:
       SongwritingParameters:
         title: Parametrelerle Şarkı Yazmak
         desc: Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).
-        video: C3_songwriting_with_parameters
+        video: C3_parametreler_ile_şarkıyazımı
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
-        video: C3_dice_race
+        title: Gerçek yaşam algoritması:Zar yarışı
+        desc: Bu ders algoritmaları günlük hayatımızda kullanmamız için bizi yönlendiriyor.Bunun bir parçası olarak,öğrenciler zar yarışı oyunu için algoritmaları tanımlayıp kaydedecekler.
+        video: C3_zar_yarışı
       Internet:
         title: İnternet
-        desc: Students send messages representing various Internet transmission methods using pieces of paper.
+        desc: Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını mesajlar yollayarak gösterecekler.
         video: C3_internet
       Crowdsourcing:
         title: "Kalabalık Kaynaklandırma 'Crowdsourcing'"
@@ -148,44 +148,44 @@ tr:
         title: Sayısal Vatandaşlık
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+        title: Tangram algoritmaları
+        desc: 'Bu ders bize algoritmalar hakkında  bazı önemli şeyler gösterdi.Eğer algoritmayı basit tutacaksanız bunun bir çok yolu var.Eğer herkesin aynı şey ile sonlandırdığından emin olmak istiyorsanız,algoritmanız daha çok detaya ihtiyaç duyacaktır.'
         video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Envelope Variables
         desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
         video: C4_unplugged_variables
       MadGlibs:
-        title: Mad Glibs
+        title: Kızgın konuşkan
         desc: Soyutlama bir bilgisayar bilimcisinin sahip olması gereken en önemli yeteneklerden biridir. Bu aktivite, öğrencilerinizin hikayelerin farklılıklarını analiz etmesini, böylece onları soyutlamasını sağlayacak. Bu soyutlanmış hikayeler ise daha bir çok eğlenceli hikayeye yol gösterici olacak.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
-        video: C4_unplugged_forloops
+        title: Eğlenceli tekrar için
+        desc: 'Biliyoruzki döngüler bize bazı şeyleri tekrar ve tekrar yapmamız için olanak sağlıyor,fakat şimdi   ekstra yapıları döngüler ile nasıl doğru kullanacağımızı öğreneceğiz.'
+        video: C4_bağımsız_looplar_için
       SongwritingWithParameters:
         title: Değiştirgenlerle Şarkı Yazma
         desc: 'Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.  '
-        video: C4_unplugged_parameters
+        video: C4_tıkanmamış_parametreler
       BinaryImages:
-        title: Binary Images
+        title: İkili resimler
         desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Video oyunları ve kordinat düzlemleri
+        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
       Contracts:
-        title: Teknikler
-        desc: Contracts unplugged lesson description
+        title: Contracts, Domain, and Range
+        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
       DesignRecipe:
         title: Tasarım Tarifi
-        desc: Design Recipe lesson description
+        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
       Booleans:
-        title: Boolean Değerleri
-        desc: Booleans lesson description
+        title: Booleans and Logic
+        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
       ConditionalsPiecewiseFunctions:
         title: Koşullar ve Parçalı Fonksiyonlar
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
       CollisionDetection:
-        title: Çakışma Bulma
-        desc: Çakışma Bulma dersi tanımı
+        title: Collision Detection and the Pythagorean Theorem
+        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."

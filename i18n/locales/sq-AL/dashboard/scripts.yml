@@ -239,31 +239,9 @@ sq:
           Artist Binary: Artist Binar
           description_audience: Moshat 10+ (pas Kursit 3)
         Course4pre:
+          title: Kushtet paraprake të Kursit 4
           description_short: Një përmbledhje e shkurtër e koncepteve për studentët që nuk kanë bërë Kurset 2 dhe 3.
-          Course 4 Prerequisite: Kushtet paraprake të Kursit 4
-          "Maze: Sequence": 'Maze: Sekuencë'
-          "Artist: Sequence": 'Artist: Sekuencë'
-          "Artist: Loops": 'Artist: Ciklet'
-          "Bee: Conditionals": 'Bletë: Kushtet'
-          "Artist: Nested Loops": 'Artist: CIklet e Mbivendosura'
-          "Farmer: While Loops": 'Fermeri: Ciklet While'
-          "Bee: Nested Loops": 'Bletë: Ciklet e Mbivendosura'
-          "Artist: Functions": 'Artisti: Funksionet'
-          "Bee: Debugging": 'Bletë: Rregullimi'
-        course4pre:
-          description_short: Një përmbledhje e shkurtër e koncepteve për studentët që nuk kanë bërë Kurset 2 dhe 3.
-          Course 4 Prerequisite: Kushtet paraprake të Kursit 4
-          "Maze: Sequence": 'Maze: Sekuencë'
-          "Artist: Sequence": 'Artist: Sekuencë'
-          "Artist: Loops": 'Artist: Ciklet'
-          "Bee: Conditionals": 'Bletë: Kushtet'
-          "Artist: Nested Loops": 'Artisti: Ciklet e Mbivendosura'
-          "Farmer: While Loops": 'Fermeri: Ciklet While'
-          "Bee: Nested Loops": 'Bletë: Ciklet e Mbivendosura'
-          "Artist: Functions": 'Artisti: Funksionet'
-          "Bee: Debugging": 'Bletë: Rregullimi'
-        Course4pre (Case Conflict):
-          description_short: Një përmbledhje e shkurtër e koncepteve për studentët që nuk kanë bërë Kurset 2 dhe 3.
+          description: Një përmbledhje e shkurtër e koncepteve për studentët që nuk kanë bërë Kurset 2 dhe 3.
           Course 4 Prerequisite: Kushtet paraprake të Kursit 4
           "Maze: Sequence": 'Maze: Sekuencë'
           "Artist: Sequence": 'Artist: Sekuencë'
@@ -296,6 +274,9 @@ sq:
           Special: I/E Veçantë
           Binary: Binare
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Testimi i përdorueshmërisë për MSM
           Evaluation Blocks: Blloqet e Vlerësimit
           Blocks to Math: Blloqet te Matematika
@@ -310,16 +291,210 @@ sq:
           title: Shkenëa Kompjuterike në Algjebër
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Stringjet dhe Imazhet
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
+          "Unplugged: The Design Recipe": 'Unplugged: Receta e Dizenjimit'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Kushtet dhe Funksionet Piecewise'
+          "Eval: Conditionals": Kushtoret
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+        infinity:
+          title: Disney Infinity Play Lab
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          Play Lab: Play Lab
+          Infinity: Pafundësi
+        algebrademo:
+          title: Demo e Algjebrës
+          description_short: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën e programimit të përdorur në Code.org CS në Algjebër
+          description: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën e programimit të përdorur në Code.org CS në Algjebër
+          Algebra Demo: Demo e Algjebrës
+          Evaluation Blocks: Blloqet e Vlerësimit
+          Making Pictures: Të bërit Figura
+          Defining Variables: Përcaktimi i Variablave
+          Defining Simple Functions: Përcaktimi i Funksioneve të Thjeshtë
+          The Design Recipe: Receta e Dizenjimit
+        K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Hyrje në PD
+          Blockly Basics: Format bazë
+          Writing computer programs: Duke shkruar programe kompjuterike
+          Navigating the teacher dashboard: Duke naviguar panelin e mësuesit
+          Unplugged lessons: Mësimet unplugged
+          Classroom Culture: Kultura e klasës
+          Ways to go beyond Courses 1, 2, and 3: |
+            Mënyrat për te shkuar në kurset 1, 2 dhe 3
+            
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+        netsim:
+          title: Imitues Interneti
+          description_short: ""
+          description: ""
+          Internet Simulator: Imitues Interneti
+          Unit 1: Kapitulli 1
+          Unit 2: Kapitulli 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: Krijo imazhe me bite dhe bajte.
+          Pixelation: Pixelation
+        20-hour:
+          title: 20-Hour Intro Course
+          description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
+          Introduction to Computer Science: Hyrje ne Informatike
+          The Maze: The Maze
+          Computational Thinking: Te menduarit si kompjuter
+          Graph Paper Programming: Programimi grafik me leter
+          The Artist: Artisti
+          Algorithms: Algoritmet
+          The Artist 2: Artisti 2
+          Functions: Funksionet
+          The Farmer: Fermeri
+          Conditionals: Kushtoret
+          The Artist 3: Artisti 3
+          Song Writing: Kompozim kengesh
+          The Farmer 2: Fermeri 2
+          Abstraction: Abstraksion
+          The Artist 4: Artisti 4
+          Relay Programming: Programimi i Besuar
+          The Farmer 3: Fermeri 3
+          The Internet: Interneti
+          The Artist 5: Artisti 5
+          Wrap-up: Mbështjell
+        edit-code:
+          title: Ndrysho kodin
+          description: ""
+          The Maze: The Maze
+          Applab: Applab
+          The Artist: Artisti
+          Play Lab: Play Lab
+        events:
+          title: Ngjarjet
+          description: ""
+          Bounce: Hidhu
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Kodi Flappy
+          description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin tonë të Kodit Flappy!
+          Flappy Code: Kodi Flappy
+        jigsaw:
+          title: Jigsaw
+          description: ""
+          Jigsaw: Jigsaw
+        step:
+          title: NJë Hap
+          description: ""
+          Step: NJë Hap
+        Hour of Code:
+          title: Ora e Kodit 2013
+          description: ""
+          Hour of Code 2013: Ora e Kodit 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Kushtet paraprake të Kursit 4
+          description_short: Një përmbledhje e shkurtër e koncepteve për studentët që nuk kanë bërë Kurset 2 dhe 3.
+          description: Një përmbledhje e shkurtër e koncepteve për studentët që nuk kanë bërë Kurset 2 dhe 3.
+          Course 4 Prerequisite: Kushtet paraprake të Kursit 4
+          "Maze: Sequence": 'Maze: Sekuencë'
+          "Artist: Sequence": 'Artist: Sekuencë'
+          "Artist: Loops": 'Artist: Ciklet'
+          "Bee: Conditionals": 'Bletë: Kushtet'
+          "Artist: Nested Loops": 'Artisti: Ciklet e Mbivendosura'
+          "Farmer: While Loops": 'Fermeri: Ciklet While'
+          "Bee: Nested Loops": 'Bletë: Ciklet e Mbivendosura'
+          "Artist: Functions": 'Artisti: Funksionet'
+          "Bee: Debugging": 'Bletë: Rregullimi'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
           "Calc: Evaluation Blocks": 'Calc: Blloqet e Vlerësimit'
           "Eval: Strings and Images": 'Eval: Stringje dhe Imazhe'
           "Unplugged: Contracts": 'Unplugged: Kontratat'
           "Eval: Writing Contracts": 'Eval: Kontratat e Shkruara'
           "Calc: Defining Variables": 'Calc: Përcaktimi i Ndryshoreve'
           "Play Lab: Defining Variables (Big Game)": 'Play Lab: Të përcaktsoh Ndryshoret (Loja e Madhe)'
-          "Eval: Defining Functions": 'Eval: Përcaktimi i Funksioneve'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
           "Unplugged: The Design Recipe": 'Unplugged: Receta e Dizenjimit'
-          "Play Lab: Defining Functions": 'Play Lab: Përcaktimi i Funkisoneve'
-          "Eval: Functions": 'Eval: Funksionet'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animimi (Loja e Madhe)'
           "Unplugged: Booleans": 'Unplugged: Booleans'
           "Eval: Boolean Operators": 'Eval: Operatorët Boolean'
@@ -329,28 +504,43 @@ sq:
           "Eval: Conditionals": 'Eval: Kushtet'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Kapja e Përplasjeve dhe Formula Largësisë'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kapja e përplasjeve (Loja e Madhe)'
-        infinity:
-          title: Play Lab
-          description_short: Krijo një histori ose bëj një lojë me Play Lab!
-          description: Krijo një histori ose bëj një lojë me Play Lab!
-          Play Lab: Play Lab
-        algebrademo:
-          description: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën e programimit të përdorur në Code.org CS në Algjebër
-          Algebra Demo: Demo e Algjebrës
           Evaluation Blocks: Blloqet e Vlerësimit
-          Making Pictures: Të bërit Figura
-          Defining Variables: Përcaktimi i Variablave
-          Defining Simple Functions: Përcaktimi i Funksioneve të Thjeshtë
+          Strings and Images: Stringjet dhe Imazhet
+          Contracts: Marrëveshjet
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
           The Design Recipe: Receta e Dizenjimit
-        K5PD:
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Kushtet dhe Funksionet Piecewise
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Blloqet e Vlerësimit
+          Strings and Images: Stringjet dhe Imazhet
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kapja e përplasjeve (Loja e Madhe)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
           Introduction to PD: Hyrje në PD
-        netsim:
-          title: Internet Simulator
-          description_short: ""
-          description: ""
-          Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Pafundësi
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

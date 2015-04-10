@@ -2,7 +2,7 @@ fr:
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: Artist Loops Matching One
+        Artist Loops Matching One: 'Artiste : les boucles première correspondance'
         Matching loops: Boucles correspondantes
         Match the loop to the shape: Assortissez la boucle à la forme
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
@@ -25,7 +25,7 @@ fr:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: Bounce Matching
+        Bounce Matching: Correspondance des rebonds
         Matching: Correspondance
         Match the events with the actions: Associes les événements aux actions
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
@@ -39,7 +39,7 @@ fr:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
-        Flappy Matching One: Flappy Matching One
+        Flappy Matching One: Flappy correspondance 1
         Matching: Correspondance
         Match the events with the actions: Associes les événements aux actions
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
@@ -49,7 +49,7 @@ fr:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: Maze Match One
+        Maze Match One: Labyrinthe correspondance 1
         Match the puzzles to the blocks: Assortir les puzzles aux blocs
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
@@ -58,7 +58,7 @@ fr:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: Maze Match
+        Maze Match: Labyrinthe correspondance
         Match the puzzles to the blocks: Associes les puzzles aux blocs
         Instructions: Consignes
         Drag the blocks to match.: Faites glisser les blocs correspondants.
@@ -72,7 +72,7 @@ fr:
       2-3 Big Event Match 1:
         Matching: Correspondance
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
+        Match the button combination to the dance moves.: Associe les combinaisons de boutons aux pas de danse.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -95,7 +95,7 @@ fr:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Correspondance
-        Match the grid to the program: Attribue la grille au bon programme
+        Match the grid to the program.: Attribue la grille au bon programme.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -112,7 +112,7 @@ fr:
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: Maze Match
+        Maze Match: Labyrinthe correspondance
         Match the puzzles to the blocks: Associes les puzzles aux blocs
         Instructions: Consignes
         Drag the blocks to match.: Faites glisser les blocs correspondants.
@@ -132,15 +132,15 @@ fr:
         <h4>4)</h4>: '<h4>4)</h4>'
         <h4>Set Player 1 score to 0</h4>: '<h4>Mettre le score du Joueur 1 à 0</h4>'
         <h4>Player 1 rolls die</h4>: '<h4>Le Joueur 1 lance le dé</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>Ajoute le lancer du joueur 1 au score total</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>Compare les scores pour savoir qui a gagné</h4>'
       4-5 Computational Thinking Match 1:
         Matching: Correspondance
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Chacun de ces véhicules a été décomposé en de plus petits morceaux. Associe chaque véhicule avec sa liste décomposée.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Roues/côté: 2 <br/>Fenêtres/côté: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Roues/côté: 2 <br/>Fenêtres/côté: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Roues/côté: 2 <br/>Fenêtres/côté: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Roues/côté: 3<br/>Fenêtres/côté: 2</h3>'
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
@@ -153,7 +153,7 @@ fr:
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>STACK</h4>: '<h4>STACK</h4>'
+        <h4>STACK</h4>: '<h4>PILE</h4>'
         <h4>STAMP</h4>: '<h4>TIMBRE</h4>'
         <h4>STAR</h4>: '<h4>ETOILE</h4>'
         <h4>RAMP</h4>: '<h4>RAMPE</h4>'
@@ -234,7 +234,7 @@ fr:
       K-1 Big Event Match 1:
         Matching: Correspondance
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
+        Match the button combination to the dance moves.: Associe les combinaisons de boutons aux pas de danse.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -306,28 +306,41 @@ fr:
       parts of contract:
         Parts of a Contract: "Parties d'un Contrat"
         Here is a contract for a new function. Match each item with the word that describes it.: Voici un contrat pour une nouvelle fonction. Assortis chaque élément au mot qui le décrit.
-        yearbook-picture: yearbook-picture
+        yearbook-picture: photo de trombinoscope
         string numer: n° de chaîne
         image: image
-        (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
+        (yearbook-picture "Sally" 1992): '(trombinoscope-photo "Sally" 1992)'
         function name: nom de la fonction
         domain: domaine
         range: gamme
         example: exemple
       Match example to contract:
-        Contracts of Functions: Contracts of Functions
+        Contracts of Functions: Contrats de fonctions
         Match each example with the correct contract!: Associes chaque exemple avec le contrat correcte!
-        (big-string? "gigantic" 5): '(big-string? "gigantic" 5)'
-        (find-price 4): (find-price 4)
-        (small-star "blue"): '(small-star "blue")'
-        (bigger-string "big" "little"): '(bigger-string "big" "little")'
-        (small-star "solid"): '(small-star "solid")'
-        (find-price "cheese"): '(find-price "cheese")'
-        "big-string: string number -> boolean": 'big-string: string number -> boolean'
+        (big-string? "gigantic" 5): '(grande-chaine? "geant" 5)'
+        (find-price 4): (trouver-prix 4)
+        (small-star "blue"): '(petite-étoile "bleu")'
+        (bigger-string "big" "little"): '(immense-chaine "grand" "petit")'
+        (small-star "solid"): '(petite-étoile "solide")'
+        (find-price "cheese"): '(trouver-prix "fromage")'
+        "big-string: string number -> boolean": 'grande-chaine: chaine nombre -> booléen'
         "find-price: number -> number": Trouver le prix
-        "small-star: string -> image": 'small-star: string -> image'
-        "bigger-string: string string -> string": 'bigger-string: string string -> string'
-        "find-price: string -> number": 'find-price: string -> number'
+        "small-star: string -> image": 'petite-étoile: chaine -> image'
+        "bigger-string: string string -> string": 'immense-chaine: chaine chaine -> chaine'
+        "find-price: string -> number": 'trouver-prix: chaine -> nombre'
+      PDK5 Pair programming match:
+        Pair programming match: "Correspondance d'une programmation en binôme"
+        Match the definitions to the words you were introduced to in the last video.: Faites correspondre les définitions aux mots que vous avez découvert dans la dernière vidéo.
+        Pair programming: Programmation à deux
+        Driver: Pilote
+        Navigator: Navigateur
+        When two students work at one computer to write a program together: Quand deux étudiants travaillent sur un ordinateur pour écrire un programme ensemble
+        The student who controls the keyboard, mouse, or touch screen: "L'élève qui contrôle le clavier, la souris ou l'écran tactile"
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: "L'élève qui pense à la vue d'ensemble - et cherche d'éventuels erreurs ou malentendus"
+      PDK5 What is unplugged:
+        What is an unplugged activity?: "Qu'est-ce qu'une activité débranchée ?"
+        Question: Question
+        Answer 1: Réponse 1
       test matching image:
         Matching Images Two: Comparaison de 2 images
         Match up all the flowers by colour!: Regroupe toutes les fleurs par couleur!

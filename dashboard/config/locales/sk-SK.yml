@@ -22,6 +22,7 @@
           future: nemôže byť v buducnosti
   hello: Ahoj svet
   welcome_back: Vitajte späť, %{name}
+  submit: Potvrdiť
   add_teacher_form:
     code:
       label: 'Pridať učiteľa:'
@@ -254,6 +255,7 @@
         artist: Nakresliť niečo
     user:
       classroom: Domovská stránka učiteľa
+      district_dashboard: District Dashboard
       label: Ahoj %{username}
       stats: Môj pokrok
       settings: Môj účet
@@ -340,6 +342,8 @@
       for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (leave blank if you don't want to change it)
     current_password_hint: (we need your current password to confirm your changes)
@@ -502,6 +506,9 @@
       body: Zobraziť galériu aplikácií a obrázkov vytvorených našími užívateľmi
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Študenti toto nakreslil s pomocou kódu!
     students_made_these_with_code: Študenti vytvorili toto s pomocou kódu!
@@ -538,6 +545,14 @@
     wrong_body: Zadané riešenie nie je správne.  Prosím skúste to znova!
     correct_title: Správne
     correct_body: To je správna odpoveď.
+  contract_match:
+    wrong_title: Nesprávna odpoveď
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Zadajte vašu odpoveď
   dialog:
@@ -591,11 +606,48 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_completed: nedokončené
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: dokončené, príliš veľa blokov
     completed_perfect: dokončené, super
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: Kurzy na ktorých pracujete
     completed_courses: Absolvované kurzy
     all_courses: Všetky kurzy
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Uložiť
+    delete: Odstrániť
+    exit: Return to Course
+    my_projects: My Projects
+    share: Zdieľať
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Viac
+    name: Meno
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Odstrániť?
+    delete_yes: Áno
+    delete_no: Nie
+    saved: Saved
+    not_saved: Not saved
+    cancel: Zrušiť
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

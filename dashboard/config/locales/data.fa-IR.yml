@@ -44,7 +44,7 @@
           Jigsaw: مرحله 1
         Step Levels:
           desc: مارپیچ (آزمایشی)
-          MazeStep: Stage Step
+          MazeStep: بخش مرحله
         edit-code:
           desc: ویرایش کد (آزمایشی)
           MazeEC: مرحله 1
@@ -66,15 +66,15 @@
           Jigsaw: مرحله 1
         step:
           desc: مارپیچ (آزمایشی)
-          MazeStep: Stage Step
+          MazeStep: بخش مرحله
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: زنبور هجی (بتا)
           WordSearch: مرحله 1
     game:
       name:
         Unplug1: آشنایی با علوم کامپیوتر
         Maze: پیچ و خم
-        Multi: Multiple Choice Stuffs
+        Multi: چیزهای چندگزینه ای
         Unplug2: تفکر محاسباتی
         Unplug3: 'برنامه نویسی روی کاغذ شطرنجی '
         Artist: هنرمند
@@ -94,17 +94,17 @@
         Artist5: هنرمند 5
         Unplug11: خلاصه
         MazeEC: مارپیچ
-        Bounce: Bounce
+        Bounce: پریدن
         Flappy: پرنده شل و  ول
         Jigsaw: جورچین
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: Webapp
+        MazeStep: سبک مرحله ای هزارتو
+        Wordsearch: جستجوی لغت
+        Webapp: آزمایشگاه نرم افزار
         ArtistEC: هنرمند
-        TextMatch: Text Match
+        TextMatch: تطبیق متن
         StudioEC: آزمایشگاه بازی
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: آزمایشگاه نرم افزار
+        NetSim: شبیه ساز اینترنت
     trophy:
       name:
         Bronze: برنز
@@ -136,9 +136,10 @@
         maze_2_6: سعی کن فقط با استفاده از 3 بلوک من رو به این مزاحم سبز رنگ برسونی.
         maze_2_7: به من کمک کن تا با کمترین تعداد بلوک این خوک بد رو نابود کنم. سعی
           کن بیش از یک بلوک "تکرار" استفاده کنی.
-        maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
-          puzzle using the "repeat" block that repeats 3 times. Try putting these
-          3 blocks inside the grey "repeat" block: move, move, turn.'
+        maze_2_8: 'هنگامی که یک بلوک خاکستری است، یعنی شما نمی توانید آن را حذف کنید.
+          این پازل را با استفاده از بلوک "تکرار" که 3 بار تکرار می شود حل کن. قرار
+          دادن این 3 بلوک در داخل بلوک خاکستری "تکرار" را امتحان کن: حرکت کن، حرکت
+          کن، بچرخ.'
         maze_2_9: خوب! سعی کن از بلوک جدید "تکرار کن تا" استفاده کنی. تا زمانی که
           من به خوک مزاحم برسم اون تکرار میشه.
         maze_2_10: خب، آخرین بار تمرین - آیا شما می توانید فقط با استفاده از ۴ بلوک
@@ -361,17 +362,16 @@
           برخورد نکنم!
         maze_3_4: آخ! یه برنامه برام بنویس که من رو از کنار بمب ها بگذرونه و به خوک
           برسونه.
-        bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
-          the paddle using the left arrow to reach the finish target.
-        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
-          Move the paddle to reach both finish targets.
-        bounce_3: Now try something similar with the "when up arrow" block. Move the
-          paddle to the finish target at the top.
-        bounce_4: This time you need to add four blocks. Move the paddle to all four
-          finish targets to complete this puzzle.
-        bounce_5: We're going to send a ball flying down towards the paddle. Attach
-          a block to the "when ball hits paddle" block to ensure the ball reaches
-          the finish target.
+        bounce_1: یک بلوک را به بلوک "When left arrow" متصل کنید و "Run" را فشار دهید.
+          راکت را با استفاده از پیکان چپ حرکت دهید تا به هدف پایان برسید.
+        bounce_2: یک بلوک را به بلوک های" When right arrow" و "when left arrow" متصل
+          کنید. راکت را حرکت دهید تا به هردو هدف پایان برسید.
+        bounce_3: حالا یک چیز مشابه را با بلوک "When up arrow" امتحان کنید. راکت را
+          به سمت هدف پایان در بالا حرکت دهید.
+        bounce_4: این دفعه باید 4 بلوک اضافه کنید. راکت را به طرف 4 هدف پایان حرکت
+          دهید تا این معما را کامل کنید.
+        bounce_5: ما یک توپ را به سمت راکت پرواز خواهیم داد. بلوکی به "When ball hits
+          paddle" متصل کنید تا مطمئن شوید توپ به هدف پایان می رسد.
         bounce_6: Now the finish target is on the top. You need to attach blocks to
           both of the "when ball hits" blocks to solve this puzzle.
         bounce_7: Attach blocks to each of the "when" blocks. Bounce the ball until
@@ -544,128 +544,6 @@
           Have fun!'
         studio_ec_sandbox: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
-    levelbuilder:
-      frozen line:
-        instructions: سلام ! من السا هستم از آرندل . به من کمک کنید تا یک خط بکشم
-          .
-      frozen perpendicular:
-        instructions: حالا بیاین ببینیم می تونیم دو تا خط بکشیم که با هم زاویه 90
-          درجه داشته باشند . شما به بلوک چرخش و بلوک حرکت نیاز دارید .
-      frozen square iterative:
-        instructions: به نظر می رسد که ما نصف راه را برای کشیدن یک مربع رفته ایم .
-          حالا بیایید برای ساختن یک مربع ،  4 خط را کنار هم قرار دهیم .
-      frozen square loop:
-        instructions: سلام ، من آنا هستم از آرندل ! بیایید با استفاده از بلوک تکرار
-          یک مربع بکشیم که از بلوک های کمتری استفاده کنیم . چند بار (؟؟؟) باید بلوک
-          داخل بلوک تکرار را ، تکرار کنیم تا یک مربع ساخته شود ؟
-      frozen square loop 3x:
-        instructions: 'حالا بیایید سه تا مربع بسازیم که هر کدام نسبت به دیگری می چرخد
-          . مطمئن بشید که هر مربع 120 درجه نسبت به مربع جدید می چرخد . '
-      frozen square snowflake:
-        instructions: 'می تونید یک دونه برف با استفاده از بلوک تکرار و چرخاندن ده
-          مربع و استفاده از بلوک چرخش 36 درجه بین هر مربع ، بسازید ؟ '
-      frozen cross:
-        instructions: 'از بلوک تکرار برای ساختن علامت بعلاوه استفاده کنید .آیا می
-          دونید که السا می تواند به جلو و عقب حرکت کند ؟  '
-      frozen cross rotate:
-        instructions: 'حالا 10 بار تکرارش کنید . بین هر خط چند درجه چرخش وجود دارد
-          ؟ '
-      frozen cross rotate dense:
-        instructions: 'حالا بیایید 90 بار تکرارش کنیم ! چند درجه بین 90 خط چرخش وجود
-          دارد تا به 360 درجه برسد ؟ راهنمایی : عدد واقعا کوچکی هست .'
-      frozen diamond:
-        instructions: 'بیایید یک متوازی الاضلاع بسازیم . خیلی شبیه مربع هست فقط زاویه
-          هایش با مربع فرق دارند : 60 و 120 درجه به جای 90 درجه '
-      frozen diamond mini snowflake:
-        instructions: 'آیا می دانید هر دانه ی برف شکل متفاوتی دارد ؟ حالا بیایید با
-          استفاده از بلوک تکرار و 4 بار تکرار کردن شکل متوازی الاضلاع و چرخش 90 درجه
-          به سمت راست بین هر متوازی الاضلاع، یک دانه ی برف جدید بسازیم . '
-      frozen diamond snowflake:
-        instructions: حالا بیایید با استفاده از بلوک تکرار و 10 بار تکرار کردن متوازی
-          الاضلاع و چرخش 36 درجه بین هر متوازی الاضلاع ، یک دانه ی برف جدید بسازیم
-          .
-      frozen circle:
-        instructions: دایره یک شکل خاص است . می توانید کشف کنید چه عددی را باید به
-          جای علامت سوال ها بگزاریم تا یک دایره رسم شود؟
-      frozen circle function:
-        instructions: از بلوک جدید " دایره بکش " برای کشیدن 10 دایره ی روی هم افتاده
-          استفاده کن . فراموش نکن که از بلوک به "جلو بپر" بین دایره ها استفاده کنی
-          .
-      frozen circle function in circle:
-        instructions: 'حالا بیایید 20 دایره ی روی هم با استفاده از چرخش 18 درجه بین
-          دایره ها ایجاد کنیم . '
-      frozen circle function with parameter:
-        instructions: اینجا بلوک "دایره بکش " وجود دارد که می تواند دایره هایی با
-          اندازه ها متفاوت رسم کند . می توانی از آن برای رسم دایره ی کوچک با اندازه
-          ی 5 و دایره ی بزرگ با اندازه ی 10 استفاده کنی ؟
-      frozen snowflower:
-        instructions: دانه برف های پیچیده را می توان با استفاده از اشکال شاده ایجاد
-          کرد . آیا می توانید این الگو را با استفاده از 5 دایره ی اندازه ی 5 و 5 دایره
-          ی اندازه ی 10 ایجاد کنید ؟
-      frozen snowflake branch:
-        instructions: 'از بلوک " create a snowflake branch" (یک شاخه از دانه برف را
-          بکش ) برای ایجاد سه شاخه از دانه برف استفاده کن که به یک دانه ی برف شبیه
-          می شود . '
-      frozen snowflake full:
-        instructions: حالا بیایید برای ساختن یک دانه ی برف زیبا ، از آن 8 بار استفاده
-          کنیم !
-      frozen freeplay:
-        instructions: شما رسما یک هنرمند چیره دست شده اید ! یک سرزمین جادویی برفی
-          بسازید .
-      scrat 16:
-        instructions: بلوط ! بلوط ! بلوط ! از بلوک "if" ، برای استفاده از تعداد کمتری
-          بلوک ، استفاده کنید .
-      scrat 17:
-        instructions: خوب، اجازه دهید که دوباره برای تمرین--این بسیار متفاوت نیست،
-          اما سازمان دیده بان را برای دیوار!
-      scrat 18:
-        instructions: بلوک "اگر دیگری" شرط را بررسی کرده و سپس یک چیز را نمی کند و
-          یا یکی دیگر. من بلوط سعی کنید برای استفاده از این بلوک های جدید.
-      scrat 19:
-        instructions: یک تمرین بیشتر با بلوک "if-else"، آیا می توانید با سعی خود جواب
-          درست بدهی؟
-      scrat 20:
-        instructions: شما فقط 3 بلوک برای کمک به من حل ماز پیچیده تر اضافه کنم؟ اگر
-          شما آن را درست انجام دهید، می توانم هر مسیر منحنی هر طول راه رفتن. عجله
-          کن! قادر به ذوب یخ است!
-      Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
-      Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
-      Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
-      Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
-      Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
-      Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: معرفی پیچ و خم
@@ -725,6 +603,7 @@
         C2_relay_programming: برنامه نویسی رله
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: ردپای دیجیتالی شما
+        C2_digital_footprint_v2: ردپای دیجیتالی شما
         C3_maze_level_4: حلقه های هزارتو
         C3_artist_intro: معرفی هنرمند
         C3_artist_functions: توابع هنرمند
@@ -735,7 +614,7 @@
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: اشکال زدایی زنبور عسل
-        C3_bounce: Bounce
+        C3_bounce: پریدن
         C3_playlab_create_game: Play Lab - Create a Game
         C3_computational_thinking: تفکر محاسباتی
         C3_dice_race: مسابقۀ تاس انداختن
@@ -765,6 +644,21 @@
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: بلوک های ارزیابی
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: متغیرها
+        msm_7_functions: توابع
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان
@@ -860,3 +754,8 @@
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "skaitļot"},
+"divideByZeroError":function(d){return "Tava programma rezultējas ar nulles dalījumu."},
+"emptyComputeBlock":function(d){return "Tev ir jāpievieno bloks, lai \"izpildītu\" bloku."},
 "equivalentExpression":function(d){return "Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi."},
-"extraTopBlocks":function(d){return "Jums ir nepiesaistīti bloki. Vai jūs domājāt pievienot šos pie \"skaitļošanas\" bloka?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "izpildīt"},
+"extraTopBlocks":function(d){return "Tev ir nepievienoti bloki. Vai tu vēlējies, lai tie bloki tiktu pievienoti \"izpildes\" blokam?"},
+"failedInput":function(d){return "Tava funkcija neatgriež pareizo rezultātu priekš visām vērtībām."},
 "goal":function(d){return "Mērķis:"},
-"reinfFeedbackMsg":function(d){return "Šeit ir tavs stāsts! Turpini pie tā strādāt vai pārej pie nākamā uzdevuma!"},
-"yourExpression":function(d){return "Jūsu izteiksme:"}};
+"levelIncompleteError":function(d){return "Tava izteiksme neatbilst mērķim."},
+"missingFunctionError":function(d){return "Tev ir jādefinē funkcija ar nosaukumu "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Tavai izteiksmei trūkst mainīgā "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Te ir tavs aprēķins! Turpini strādāt pie tā, vai dodies uz nākamo uzdevumu!"},
+"yourExpression":function(d){return "Jūsu izteiksme:"},
+"wrongInput":function(d){return "Jūs izsaucat savu fukciju ar nepareizu vērtību."},
+"wrongOtherValuesX":function(d){return "Jūsu izteiksmes rezultāti nepareizā daudzumā, ja ir mainīgs "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Tava izteiksme neatgriež pareizo rezultātu."}};

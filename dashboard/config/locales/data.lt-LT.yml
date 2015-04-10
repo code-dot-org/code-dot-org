@@ -565,120 +565,6 @@
           naują bloką: „pieštuko storis“. Smagaus piešimo!'
         studio_ec_sandbox: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok
           draugams išmėginti žaidimą savo telefonuose.
-    levelbuilder:
-      frozen line:
-        instructions: Labas! Aš Elzė iš Arendelės. Padėk man nubrėžti liniją.
-      frozen perpendicular:
-        instructions: O ar galėtume nubrėžt dvi linijas, išdėstytas statmenai? Reikės
-          "pasisuk" ir "eik į priekį" komandų.
-      frozen square iterative:
-        instructions: Mes pusiau nupiešėme kvadratą. Nubrėžkime visas 4 linijas!
-      frozen square loop:
-        instructions: Labas, aš Ana iš Arendelio! Nupieškime kvadratą, naudodami "kartok"
-          - tada judėjimo komandas užteks paminėti po vieną kartą.
-      frozen square loop 3x:
-        instructions: Sukurkime 3 kvadratus, pasisukdami po kiekvieno 120 laipsnių.
-      frozen square snowflake:
-        instructions: Ar galėtum sukurti snaigę naudodamas "kartok" komandą? Nupiešk
-          10 kvadratų (tarp jų pasisukdamas po 36 laipsnius).
-      frozen cross:
-        instructions: Naudodamas "kartok" komandą, sukurk pliuso vaizdą. Ar pastebėjai,
-          kad Elzė gali judėti pirmyn ir atgal?
-      frozen cross rotate:
-        instructions: Dabar pabandyk 10 kartų. O po kiek laipsnių reiks pasisukti
-          šįkart?
-      frozen cross rotate dense:
-        instructions: 'Pakartokime 90 kartų! Po kiek bus 360 padalinus į 90 dalių?
-          Užuomina: tai bus nedidelis skaičius..'
-      frozen diamond:
-        instructions: Sukurkime lygiagretainį.  Jis irgi turi 4 kraštines, bet skirtingus
-          kampus - 60 ir 120 laipsnių vietoj 90.
-      frozen diamond mini snowflake:
-        instructions: Ar žinojai, kad kiekviena snaigė turi kitokią formą? Sukurkime
-          snaigę panaudodami kartojimo blokelį, ir nubrėžkime 4 lygiagretainius, tarp
-          kurių yra 90 laipsnių kampas.
-      frozen diamond snowflake:
-        instructions: O dabar sukurkime snaigę, naudodami kartojimo bloką, kad būtų
-          nubrėžta 10 vienodų lygiagretainių, tarp kurių kampas yra 36 laipsniai.
-      frozen circle:
-        instructions: Apskritimas yra ypatinga geometrinė figūra. Ar sugalvosi, kokį
-          skaičių reikia įrašyti vietoje klaustukų, kad nubrėžčiau apskritimą?
-      frozen circle function:
-        instructions: Panaudok naują blokelį „Sukurk apskritimą“ ir sukurk 10 persidengiančių
-          apskritimų. Nepamiršk, kad nuo vieno apskritimo iki kito reikia peršokti.
-      frozen circle function in circle:
-        instructions: O dabar sukurk 20 persidengiančių apskritimų. Tarp kiekvieno
-          apskritimo turi būti 18 laipsnių kampas.
-      frozen circle function with parameter:
-        instructions: Štai blokelis „Sukurk apskritimą“, kuris gali sukurti skirtingo
-          dydžio apskritimus. Ar sugebėsi panaudodamas jį sukurti mažą apskritimą,
-          kurio dydis yra 5 ir didesnį apskritimą, kurio dydis yra 10?
-      frozen snowflower:
-        instructions: Sudėtingi sniego raštai gali būti sukuriami panaudojant paprastas
-          figūras. Ar sugebėsi sukurti raštą, nubrėždamas 5 apskritimus, kurių dydis
-          yra 5 bei 5 apskritimus, kurių dydis yra 10?
-      frozen snowflake branch:
-        instructions: Pabandyk panaudoti blokelį „sukurk snaigės šaką“ ir sukurk tris
-          snaigės šakas, kurios pradeda atrodyti kaip snaigės.
-      frozen snowflake full:
-        instructions: O dabar pakartokime tai 8 kartus ir gaukime nuostabią snaigę!
-      frozen freeplay:
-        instructions: Tu tapai piešimo meistru! Sukurk gražų žiemos raštą ir pasidalink
-          juo su draugais.
-      scrat 16:
-        instructions: Gilė! Gilė! Gilė! Panaudok "kartok" ir "jei" bloką, kad pasiektum
-          tikslą su minimaliai komandų.
-      scrat 17:
-        instructions: Gerai, pamėginkime dar kartą – kad geriau išmoktum. Saugokis
-          sienos!
-      scrat 18:
-        instructions: Blokelis „jei-priešingu atveju“ pagal sąlygą atlieka vienus
-          ARBA kitus veiksmus. Panaudok šį blokelį, kad pasiekčiau gilę.
-      scrat 19:
-        instructions: Dar viena užduotis su „Jei-priešingu atveju“ blokeliu. Ar sugebėsi
-          ją atlikti iš pirmo karto?
-      scrat 20:
-        instructions: Ar gali pridėjęs 3 blokelius išspręsti šį labirintą? Jei viską
-          atliksi teisingai, aš galėsiu eiti vingiuotu keliu, nesvarbu, koks yra jo
-          ilgis. Paskubėk! Ledas tirpsta!
-      Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
-      Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
-      Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
-      Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
-      Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
-      Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Labirinto užduoties įvadas
@@ -738,6 +624,7 @@
         C2_relay_programming: Programavimas komandoje
         C2_paper_airplanes: Popieriniai lėktuvėliai
         C2_digital_footprint: Virtualūs pirštų antspaudai
+        C2_digital_footprint_v2: Virtualūs pirštų antspaudai
         C3_maze_level_4: 'Labirintas: kartojimas'
         C3_artist_intro: Įvadas į Menininką
         C3_artist_functions: 'Menininkas: komandos'
@@ -778,6 +665,21 @@
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Kintamieji
+        msm_7_functions: Komandų kūrimas
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat
@@ -873,3 +775,8 @@
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "محاسبه"},
+"divideByZeroError":function(d){return "نتایج برنامه شما در تقسیم بر صفر."},
+"emptyComputeBlock":function(d){return "شما باید یک بلوک به بلوک \"compute\" متصل کنید."},
 "equivalentExpression":function(d){return "سعی کنید ایده ها و فکرهایتان را منظم و مرتب کنید تا دقیقا همان عبارت را به دست بیاورید."},
+"evaluate":function(d){return "ارزیابی کنید"},
 "extraTopBlocks":function(d){return "شما بلوک های متصل نشده دارید. آیا منظورتان متصل کردن اینها به بلوک \"محاسبه\" بود؟"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "تابع تو نتیجه مناسبی برای همه مقادیر برنمیگرداند."},
 "goal":function(d){return "هدف:"},
-"reinfFeedbackMsg":function(d){return "این داستان شماست! کار کردن روی آن را ادامه دهید, یا به پازل بعدی بروید!"},
-"yourExpression":function(d){return "عبارت شما:"}};
+"levelIncompleteError":function(d){return "معادله ی شما با هدف تطابق ندارد."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "معادله شما فاقد متغیر است"+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "این هم محاسبات خوذت! یا روی آنها کار کن، یا برو به پازل بعدی!"},
+"yourExpression":function(d){return "عبارت شما:"},
+"wrongInput":function(d){return "شما دارید تابع خود را با مقدار نادرست صدا می کنید."},
+"wrongOtherValuesX":function(d){return "اگر ما متغیر"+appLocale.v(d,"var")+" را تغییر دهیم معادله شما جواب اشتباه می دهد."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

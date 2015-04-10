@@ -26,4 +26,3 @@ class MatchDSL < ContentDSL
   end
 
 end
-

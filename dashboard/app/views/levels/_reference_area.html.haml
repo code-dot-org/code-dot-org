@@ -23,3 +23,10 @@
       });
     }, this));
   });
+  // Allow levels to specify how and where the reference area is rendered.
+  // Reparent the reference area under the target if the target exists.
+  $('#reference_area_target').append($('#reference_area'));
+  // Show only text links if "data-minimal" is set.
+  if ($('#reference_area_target').data('minimal')) {
+    $('#reference_area .video_thumbnail').hide()
+  }

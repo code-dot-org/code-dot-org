@@ -2,9 +2,9 @@
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: Corrispondenza per i Cicli dell'Artista 1
-        Matching loops: Cicli di corrispondenza
-        Match the loop to the shape: Associa il ciclo alla forma
+        Artist Loops Matching One: Esercizio di Verifica (Associazioni)
+        Matching loops: Esercizio di Verifica (Associazioni)
+        Match the loop to the shape: Associa ogni ciclo alla figura che esso disegna
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
@@ -14,8 +14,8 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
-        Artist Matching: Corrispondenza per l'Artista
-        Match the shape with the blocks that complete it.: Associa la forma con i
+        Artist Matching: Esercizio di Verifica (Associazioni)
+        Match the shape with the blocks that complete it.: Associa la figura con i
           blocchi che la completano.
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
@@ -26,8 +26,8 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: Corrispondenza per Ping-Pong
-        Matching: Corrispondenza
+        Bounce Matching: Esercizio di Verifica (Associazioni)
+        Matching: Esercizio di Verifica (Associazioni)
         Match the events with the actions: Associa gli eventi con le azioni
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
@@ -40,8 +40,8 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
-        Flappy Matching One: Corrispondenza per Flappy 1
-        Matching: Corrispondenza
+        Flappy Matching One: Esercizio di Verifica (Associazioni)
+        Matching: Esercizio di Verifica (Associazioni)
         Match the events with the actions: Associa gli eventi con le azioni
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
@@ -50,8 +50,9 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: Associazione per il Labirinto 1
-        Match the puzzles to the blocks: Associa i puzzle con i blocchi
+        Maze Match One: Esercizio di Verifica (Associazioni)
+        Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
+          blocchi che la risolve
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -59,8 +60,9 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: Associazione per il Labirinto
-        Match the puzzles to the blocks: Associa i puzzle con i blocchi
+        Maze Match: Esercizio di Verifica (Associazioni)
+        Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
+          blocchi che la risolve
         Instructions: Istruzioni
         Drag the blocks to match.: Trascina i blocchi per associare.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -71,10 +73,11 @@
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Associa la combinazione
-          di pulsanti alle mosse di danza.
+        Match the button combination to the dance moves.: Associa ogni sequenza di
+          figure alla relativa sequenza di mosse di danza, usando la corrispondenza
+          sopra illustrata.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -84,7 +87,7 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
       2-3 Binary Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png,
           250
         Use the key to match each code to its letter: Utilizza la chiave per associare
@@ -98,8 +101,8 @@
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
-        Matching: Corrispondenza
-        Match the grid to the program: Associa la griglia al programma
+        Matching: Esercizio di Verifica (Associazioni)
+        Match the grid to the program.: Match the grid to the program.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -107,7 +110,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Match the grid to the program: Associa la griglia al programma
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
@@ -116,8 +119,9 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: Associazione per il Labirinto
-        Match the puzzles to the blocks: Associa i puzzle con i blocchi
+        Maze Match: Esercizio di Verifica (Associazioni)
+        Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
+          blocchi che la risolve
         Instructions: Istruzioni
         Drag the blocks to match.: Trascina i blocchi per associarli.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -128,7 +132,7 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
       4-5 Algorithms Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Associa
           i passi della Gara con i Dadi nell'ordine che dovrebbero avere nell'algoritmo.
         <h4>1)</h4>: <h4>1)</h4>
@@ -143,7 +147,7 @@
         <h4>Compare player scores to see who wins</h4>: <h4>Confronta il punteggio
           dei giocatori per vedere chi vince</h4>
       4-5 Computational Thinking Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Ognuno
           di questi veicoli è stato decomposto in parti più piccole. Abbinare ogni
           veicolo con il corretto elenco di parti.
@@ -160,7 +164,7 @@
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Match each program to the word it makes, using the provided group of skills.: Associa
           ogni programma alle parole che produce, usando le abilità fornite.
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
@@ -173,7 +177,7 @@
         <h4>STAR</h4>: <h4>STELLA</h4>
         <h4>RAMP</h4>: <h4>RAMPA</h4>
       K-1 Artist 2 Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Is the square next to, above, or below the ball?: Il quadrato si trova vicino
           a, sopra, o sotto la palla?
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
@@ -183,7 +187,7 @@
         <br/><br/>below: <br/><br/>sotto
         <br/><br/>next to: <br/><br/>vicino a
       K-1 Artist 2 Match 2:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Match the shapes based on type.: Associa le forme in base al tipo.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
@@ -194,7 +198,7 @@
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
       K-1 Artist 2 Match 3:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Match the shapes based on type.: Associa le forme in base al tipo.
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
@@ -205,7 +209,7 @@
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Match the code to the stairs it draws.: Associa il codice alle scale che disegna.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
@@ -214,8 +218,8 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
-        Matching: Corrispondenza
-        Match the blocks: Associa i blocchi
+        Matching: Esercizio di Verifica (Associazioni)
+        Match the blocks: Associa i blocchi che fanno le stesse azioni
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -225,8 +229,8 @@
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
-        Matching: Corrispondenza
-        Match the blocks: Associa i blocchi
+        Matching: Esercizio di Verifica (Associazioni)
+        Match the blocks: Associa i blocchi che fanno le stesse azioni
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -234,8 +238,9 @@
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
-        Matching: Corrispondenza
-        Match the puzzles and blocks: Associa i puzzle e i blocchi
+        Matching: Esercizio di Verifica (Associazioni)
+        Match the puzzles and blocks: Associa ad ogni situazione l'insieme dei blocchi
+          che la risolve
         Instructions: Istruzioni
         Drag the blocks to match.: Trascina i blocchi per associarli.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -248,10 +253,11 @@
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
       K-1 Big Event Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Associa la combinazione
-          di pulsanti alle mosse di danza.
+        Match the button combination to the dance moves.: Associa ogni sequenza di
+          figure alla relativa sequenza di mosse di danza, usando la corrispondenza
+          sopra illustrata.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -259,7 +265,7 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Match the Map to the arrow that gets the Flurb to the treasure: Associa la
           mappa alla freccia che porta il Flurb al tesoro
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
@@ -269,7 +275,7 @@
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Match the Map to the algorithm that gets the Flurb to the flowers.: Associa
           la mappa all'algoritmo che porta il Flurb ai fiori.
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
@@ -367,8 +373,26 @@
         'bigger-string: string string -> string': 'stringa-grande: stringa stringa
           -> stringa'
         'find-price: string -> number': 'trova-prezzo: stringa -> numero'
+      PDK5 Pair programming match:
+        Pair programming match: Pair programming match
+        Match the definitions to the words you were introduced to in the last video.: Match
+          the definitions to the words you were introduced to in the last video.
+        Pair programming: Pair programming
+        Driver: Driver
+        Navigator: Navigator
+        When two students work at one computer to write a program together: When two
+          students work at one computer to write a program together
+        The student who controls the keyboard, mouse, or touch screen: The student
+          who controls the keyboard, mouse, or touch screen
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The
+          student who thinks about the big-picture and looks for potential mistakes
+          or misunderstandings
+      PDK5 What is unplugged:
+        What is an unplugged activity?: What is an unplugged activity?
+        Question: Domanda
+        Answer 1: Answer 1
       test matching image:
-        Matching Images Two: Corrispondenza di Immagini 2
+        Matching Images Two: Esercizio di Verifica (Associazioni)
         Match up all the flowers by colour!: Associa tutti i fiori in base al colore!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
         Instructions: Istruzioni
@@ -382,7 +406,7 @@
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
-        Matching: Corrispondenza
+        Matching: Esercizio di Verifica (Associazioni)
         Some really easy stuff to match.  Drag it around until you get it.: Alcune
           cose veramente facili da mettere in corrispondenza.  Provaci fino a che
           ce la fai.

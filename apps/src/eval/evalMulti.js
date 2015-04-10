@@ -39,3 +39,7 @@ EvalMulti.prototype.draw = function (parent) {
 
   EvalImage.prototype.draw.apply(this, arguments);
 };
+
+EvalImage.prototype.getChildren = function () {
+  return [this.image1_, this.image2_];
+};

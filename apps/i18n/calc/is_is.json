@@ -1,9 +1,17 @@
 {
-  "compute": "reikna",
+  "divideByZeroError": "Forritið þitt leiðir til deilingar með núlli.",
+  "emptyComputeBlock": "Þú verður að tengja kubb við \"meta\" kubbinn.",
   "equivalentExpression": "Prófaðu að umraða liðunum til að fá nákvæmlega sama dæmi.",
-  "extraTopBlocks": "Það eru ótengdir kubbar. Var meiningin að tengja þá við \"reikna\" kubbinn?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "evaluate": "meta",
+  "extraTopBlocks": "Þú ert með ótengda kubba. Ætlaðir þú að tengja þá við \"meta\" kubbinn?",
+  "failedInput": "Fallið þitt gefur stundum ekki rétta útkomu.",
   "goal": "Markmið:",
-  "reinfFeedbackMsg": "Hér er sagan þín! Haltu áfram að vinna að henni eða farðu í næstu þraut!",
-  "yourExpression": "Dæmið þitt:"
+  "levelIncompleteError": "Formúlan þín samsvarar ekki markmiðinu.",
+  "missingFunctionError": "Þú verður að skilgreina fall með heitinu {functionName}.",
+  "missingVariableX": "Það vantar breytuna {var} í formúluna þína.",
+  "reinfFeedbackMsg": "Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!",
+  "yourExpression": "Formúlan þín:",
+  "wrongInput": "Þú ert að kalla á fallið þitt með röngu gildi.",
+  "wrongOtherValuesX": "Formúlan þín gefur rangt gildi ef breytunni {var} er breytt.",
+  "wrongResult": "Formúlan þín gefur ekki rétta niðurstöðu."
 }

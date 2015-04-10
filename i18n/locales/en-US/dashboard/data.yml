@@ -203,7 +203,7 @@ en:
         turtle_3_5: crwdns2721:0crwdne2721:0
         turtle_3_6: crwdns2994:0crwdne2994:0
         turtle_3_7: crwdns3817:0crwdne3817:0
-        turtle_3_8: crwdns2995:0crwdne2995:0
+        turtle_3_8: crwdns35062:0crwdne35062:0
         turtle_3_9: crwdns2996:0crwdne2996:0
         turtle_3_10: crwdns2997:0crwdne2997:0
         maze_karel_debug_seq_1: crwdns2727:0crwdne2727:0
@@ -328,77 +328,6 @@ en:
         turtle_ec_1_2: crwdns23293:0crwdne23293:0
         turtle_ec_1_10: crwdns22212:0crwdne22212:0
         studio_ec_sandbox: crwdns23437:0crwdne23437:0
-    levelbuilder:
-      frozen line:
-        instructions: crwdns24740:0crwdne24740:0
-      frozen perpendicular:
-        instructions: crwdns24794:0crwdne24794:0
-      frozen square iterative:
-        instructions: crwdns24795:0crwdne24795:0
-      frozen square loop:
-        instructions: crwdns24796:0crwdne24796:0
-      frozen square loop 3x:
-        instructions: crwdns24797:0crwdne24797:0
-      frozen square snowflake:
-        instructions: crwdns24798:0crwdne24798:0
-      frozen cross:
-        instructions: crwdns24799:0crwdne24799:0
-      frozen cross rotate:
-        instructions: crwdns24800:0crwdne24800:0
-      frozen cross rotate dense:
-        instructions: crwdns24801:0crwdne24801:0
-      frozen diamond:
-        instructions: crwdns24802:0crwdne24802:0
-      frozen diamond mini snowflake:
-        instructions: crwdns24803:0crwdne24803:0
-      frozen diamond snowflake:
-        instructions: crwdns24804:0crwdne24804:0
-      frozen circle:
-        instructions: crwdns24805:0crwdne24805:0
-      frozen circle function:
-        instructions: crwdns24806:0crwdne24806:0
-      frozen circle function in circle:
-        instructions: crwdns24807:0crwdne24807:0
-      frozen circle function with parameter:
-        instructions: crwdns24808:0crwdne24808:0
-      frozen snowflower:
-        instructions: crwdns24809:0crwdne24809:0
-      frozen snowflake branch:
-        instructions: crwdns24810:0crwdne24810:0
-      frozen snowflake full:
-        instructions: crwdns24811:0crwdne24811:0
-      frozen freeplay:
-        instructions: crwdns24812:0crwdne24812:0
-      scrat 16:
-        instructions: crwdns24813:0crwdne24813:0
-      scrat 17:
-        instructions: crwdns24814:0crwdne24814:0
-      scrat 18:
-        instructions: crwdns24815:0crwdne24815:0
-      scrat 19:
-        instructions: crwdns24816:0crwdne24816:0
-      scrat 20:
-        instructions: crwdns24817:0crwdne24817:0
-      Standalone_Artist_1:
-        instructions: crwdns24775:0crwdne24775:0
-      Standalone_Artist_2:
-        instructions: crwdns24776:0crwdne24776:0
-      Standalone_Artist_3:
-        instructions: crwdns24777:0crwdne24777:0
-      Standalone_Artist_4:
-        instructions: crwdns24778:0crwdne24778:0
-      Standalone_Artist_5:
-        instructions: crwdns24779:0crwdne24779:0
-      Standalone_Artist_5.5:
-        instructions: crwdns24780:0crwdne24780:0
-      Standalone_Artist_6:
-        instructions: crwdns24781:0crwdne24781:0
-      Standalone_Artist_7:
-        instructions: crwdns24782:0crwdne24782:0
-      Standalone_Artist_8:
-        instructions: crwdns24783:0crwdne24783:0
-      Standalone_Artist_9:
-        instructions: crwdns24784:0crwdne24784:0
     video:
       name:
         maze_intro: crwdns2737:0crwdne2737:0
@@ -458,6 +387,7 @@ en:
         C2_relay_programming: crwdns22218:0crwdne22218:0
         C2_paper_airplanes: crwdns8789:0crwdne8789:0
         C2_digital_footprint: crwdns24767:0crwdne24767:0
+        C2_digital_footprint_v2: crwdns33886:0crwdne33886:0
         C3_maze_level_4: crwdns22219:0crwdne22219:0
         C3_artist_intro: crwdns8706:0crwdne8706:0
         C3_artist_functions: crwdns8707:0crwdne8707:0
@@ -498,6 +428,21 @@ en:
         playlab_intro: crwdns25663:0crwdne25663:0
         playlab_events: crwdns25664:0crwdne25664:0
         playlab_repeat_forever: crwdns25665:0crwdne25665:0
+        tutorial_puzzle_challenge: crwdns35063:0crwdne35063:0
+        msm_1_intro: crwdns35064:0crwdne35064:0
+        msm_2_eval_block: crwdns35065:0crwdne35065:0
+        msm_3_pemdas: crwdns35066:0crwdne35066:0
+        msm_6_variables: crwdns35067:0crwdne35067:0
+        msm_7_functions: crwdns35068:0crwdne35068:0
+        infinity_playlab_intro: crwdns35943:0crwdne35943:0
+        infinity_playlab_events: crwdns35944:0crwdne35944:0
+        infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
+        csp_concept_rgb: crwdns36227:0crwdne36227:0
+        csp_pixelation_color_1: crwdns36228:0crwdne36228:0
+        csp_pixelation_color_2: crwdns36229:0crwdne36229:0
+        csp_pixelation_color_3: crwdns36230:0crwdne36230:0
+        csp_pixelation_bw: crwdns36231:0crwdne36231:0
+        csp_U1L14_tipstricks: crwdns36232:0crwdne36232:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0
@@ -564,3 +509,7 @@ en:
         arrows_move_actor: crwdns25675:0crwdne25675:0
         right_arrow_fireball: crwdns25676:0crwdne25676:0
         name_function: crwdns25677:0crwdne25677:0
+        Infinity_move_right_runbutton: crwdns36218:0crwdne36218:0
+        Infinity_move_directions_callout: crwdns36219:0crwdne36219:0
+        Infinity_move_collide_callout: crwdns36220:0crwdne36220:0
+        Infinity_repeat_callout: crwdns36221:0crwdne36221:0

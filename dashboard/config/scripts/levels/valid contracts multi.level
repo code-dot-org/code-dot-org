@@ -1,0 +1,34 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which of these is a valid contract for the function circle?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "circle: size style color -> image",
+        "correct": false
+      },
+      {
+        "text": "circle: number string string -> image",
+        "correct": true
+      },
+      {
+        "text": "circle: number string string -> shape",
+        "correct": false
+      },
+      {
+        "text": "circle: 5 solid blue -> circle ",
+        "correct": false
+      }
+    ],
+    "title": "Valid Contracts",
+    "content1": "Pick the best answer to the question."
+  },
+  "md5": "450a01952ddcfa0316bbf1fc6318f54c"
+}]]></config>
+</Multi>

@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "hitung"},
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "cuba menyusun semula hujah anda untuk mendapatkan maksud yang sama."},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "anda mempunyai blok-blok tidak terikat. adakah anda bermaksud untuk mengepilkan blok-blok ini kepada blok \"penghitung\"?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "matlamat:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Here is your story! Continue working on it, or move on to the next puzzle!"},
-"yourExpression":function(d){return "Ungkapan anda:"}};
+"yourExpression":function(d){return "Ungkapan anda:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

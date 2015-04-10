@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "llogarit"},
+"divideByZeroError":function(d){return "Rezultatet e programit tuaj të pjestuar me zero."},
+"emptyComputeBlock":function(d){return "Ti duhet të bashkangjitësh një bllok tek blloku \"llogarit\"."},
 "equivalentExpression":function(d){return "Përpiqu të riformulosh argumentat e tu për të pasur egzaktësisht të njëjtën shprehje."},
+"evaluate":function(d){return "përcakto"},
 "extraTopBlocks":function(d){return "Ke shkëputur blloqet. Doje t'i bashkangjisje te blloku \" i llogaritur\"?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "Funksioni juaj nuk kthen rezultatet e duhura për të gjitha vlerat."},
 "goal":function(d){return "Qëllimi:"},
-"reinfFeedbackMsg":function(d){return "Ky është krimi yt/jote! Vazhdo të punosh me të, ose kalo në pjesën tjetër!"},
-"yourExpression":function(d){return "Thënia jote:"}};
+"levelIncompleteError":function(d){return "Shprehja juaj nuk shkon me qëllimin."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Frazës tuaj i mungon variabla "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Ja ku është llogaritja juaj! Vazhdoni të punoni me të, ose shko tek puzzle tjetër!"},
+"yourExpression":function(d){return "Thënia jote:"},
+"wrongInput":function(d){return "Ju jeni duke e thërritur funksionin tuaj me vlerën e gabuar."},
+"wrongOtherValuesX":function(d){return "Rezultatet e frazës tuaj në vlerën e gabuar nëqoftëse ndryshojmë "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

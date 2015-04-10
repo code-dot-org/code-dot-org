@@ -4,22 +4,22 @@
       Unplug1:
         title: Introduction à l'informatique
         desc: Ici, vous allez apprendre en quoi consiste l'informatique et nous allons
-          vous expliquer se que fait un ingénieur en informatique. Cette leçon va
-          également donner l'opportunité aux étudiants, de se mettre à la place d'un
-          informaticien. A la fin de cette activité, chaque étudiant devra savoir
-          réutiliser ce qu'il ou elle a appris dans ce cours. Etant difficile, vous
-          serez sûrement tenté de passer l'apprentissage du vocabulaire ci-contre
-          aux enfants, mais en leurs présentant celui-ci de manière ludique et amusante,
-          ce sera beaucoup plus productif que d'attendre des possibilités plus avancées.
+          vous expliquer ce que fait un développeur informatique. Cette leçon va également
+          donner l'opportunité aux étudiants, de se mettre à la place d'un informaticien.
+          A la fin de cette activité, chaque étudiant aura un souvenir de ce qu'il
+          ou elle a appris dans ce cours. Vous serez peut-être tenté de sauter l'apprentissage
+          aux enfants du vocabulaire associé à la leçon qui va suivre, mais leur présenter
+          celui-ci de manière ludique et amusante sera beaucoup plus productif que
+          d'attendre des leçons plus avancées.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
         title: Algorithmique
-        desc: Seulement munis de papier et de feutres, les étudiants vont apprendre
-          les quatre étapes de la pensée computationnelle. Après une brève introduction,
+        desc: Seulement munis de papier et de feutres, les élèves vont apprendre les
+          quatre étapes de la pensée computationnelle. Après une brève introduction,
           ils seront séparées en groupes pour créer des instructions à partir desquelles
-          d'autres étudiants devront dessiner un monstre précis (extrait d'un catalogue
+          d'autres élèves devront dessiner un monstre précis (extrait d'un catalogue
           de monstres pré-établis). L'intégralité de cette tâche doit être décomposée,
           puis les équipes étudieront les monstres du catalogue pour trouver un schéma,
           s'écarter des détails des différents monstres, puis utiliser ces informations
@@ -32,7 +32,7 @@
         video: Unplug2
       Unplug3:
         title: Programmation sur papier quadrillé
-        desc: En se programmant les uns les autres pour créer des images, les étudiants
+        desc: En se programmant les uns les autres pour créer des images, les élèves
           commenceront à comprendre ce qu'est réellement la programmation. Au début
           du cours, les élèves devront échanger des instructions pour colorier chaque
           carré d'une feuille de papier quadrillé, afin de reproduire une image existante.
@@ -120,16 +120,14 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Cartes joyeuses
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une commande
-          simple.
+          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Déplacez le, déplacez le
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une commande
-          simple.
+          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Les algorithmes : Planter une graine'
@@ -208,7 +206,7 @@
           à un jeu livré sans instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Vitraux fonctionnels
         desc: Les élèves créent un algorithme avec des variables et des fonctions
           (portions de code que vous voulez utiliser encore et encore) pour créer
           des attrapes-soleil en utilisant des ficelles et des perles.
@@ -288,20 +286,40 @@
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Les jeux video est les plans de coordonnées
-        desc: Description de la lesson sur les jeux video est les plans de coordonnées
+        desc: Découvrez comment les jeux vidéo auxquels vous aimez jouer sont en fait
+          dirigés par de l'algèbre ! Explorez comment des expressions algébriques
+          et le plan des coordonnées peuvent nous aider à comprendre comment fonctionnent
+          des jeux vidéo, puis commencez à planifier le jeu vidéo que vous allez créer.
       Contracts:
-        title: Contrats
-        desc: Description de leçon sur les contrats
+        title: Contrats, domaine et gamme
+        desc: Les contrats nous donnent un moyen de comprendre et de discuter des
+          fonctions. Dans cette leçon, nous regarderons comment les contrats peuvent
+          nous aider à comprendre un nouveau langage de programmation ou une nouvelle
+          fonction.
       DesignRecipe:
         title: La Recette de la Conception
-        desc: Description de la lesson sur l'apparence des recettes
+        desc: Dans le dernier stade, des étudiants ont écrit quelques fonctions très
+          simples - mais des fonctions plus sophistiquées exigent une approche plus
+          réfléchie. La recette de la conception est une démarche structurée pour
+          l'écriture de fonctions qui inclut la rédaction des scénarios de test pour
+          s'assurer que la fonction fonctionne comme prévu.
       Booleans:
-        title: Booléens
-        desc: Description de la lesson sur la fonction OU exclusif
+        title: Les booléens et la logique
+        desc: Les booléens sont le quatrième et dernier type de données que vous apprendrez
+          dans ce cours. Dans cette activité, vous apprendrez quels sont les types
+          booléens, et comment ils peuvent aider à nous écrire des fonctions qui raisonnent
+          de façon logique
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
-        desc: Description de leçon sur les fonctions conditionnelles et les fonctions
-          par morceau
+        title: Instructions conditionnelles et des fonctions par morceaux
+        desc: Les paramètres que nous passons aux fonctions font varier les sorties
+          selon un schéma très rigide. Supposons que nous voulons que des paramètres
+          créent des sorties qui suivent un certain schéma lorsqu'ils ont certaines
+          valeurs, mais utilisent un schéma différent lorsqu'ils ont d'autres valeurs.
+          C'est là où les conditions sont nécessaires...
       CollisionDetection:
-        title: Détection de collision
-        desc: Description de leçon sur la détection de collisions
+        title: La détection de collision et le théorème de Pythagore
+        desc: Déterminer quand des objets sur l'écran se touchent est un aspect important
+          de la plupart des jeux. Dans cette leçon, nous regarderons comment le Théorème
+          de Pythagore et la formule de Distance peuvent servir à mesurer la distance
+          entre deux points sur le plan et décider ensuite si ces deux points (ou
+          les personnages du jeu) se touchent.

@@ -1,19 +1,15 @@
 ---
-title: Calc Defining Variables
+title: Defining Variables and Substitution
 view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg6'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 6, :unplugged=>false, :title=> 'Calc: Defining Variables',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-
-In this plugged activity students will learn to define variables that store values and expressions, which can be used repeatedly throughout a program. It's important to note that in some programming languages variables are consider mutable, meaning that their value can be changed throughout the running of the programming. In Evaluation Blocks, as in Algebra, variables are considered immutable - the value of a variable cannot be modified after it has been created.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -23,19 +19,11 @@ In this plugged activity students will learn to define variables that store valu
 1) [Vocabulary](#Vocab)<br/>
 2) [Introduction](#GetStarted)  
 
-### **Activity: Calc Defining Variables**  
+### **Activity: Defining Variables and Substitution**  
 
 3) [Online Puzzles](#Activity1)
 
 [/summary]
-
-## Lesson Objectives 
-### Students will:
-
-- Decompose existing functions
-- Write contracts that describe functions
-
-[/together]
 
 [together]
 
@@ -57,55 +45,22 @@ Suppose we want to make an image with fifty identical, solid red triangles. To d
 
 Even worse, if you decided you wanted fifty blue triangles instead, you'd have to go through and change each and every block. There must be a better way!
 
-We can store that red triangle Evaluation Block in a Variable, let's call it "red-triangle." That name "red-triangle" now becomes a shortcut for the blocks inside the variable, and we can use that shortcut over and over in our program. If we decide that we want that red triangle to be 100 pixels instead of 50, we only need to change it in the variable definition!
+We can store that red triangle Evaluation Block in a Variable, let's call it "red-triangle." That name "red-triangle" now becomes a shortcut for the blocks inside the variable, and we can use that shortcut over and over in our program. If we decide that we want that red triangle to be 100 pixels instead of 50, we only need to change it in the variable definition.
 
 [tip]
 
 # Lesson Tip
- If students have used variables in other languages
-It's really imporant to note that in functional programming, variables are considered immutable - meaning the value can't be changed during the execuation of a program. Think about it this way: x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
+ If students have used variables in other programming languages, it's essential to note that in functional programming, as in math, variables are considered **immutable** - meaning the value can't be changed during the execution of a program. Think about it this way: saying x = 50, and then x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
 
 [/together]
 
 [together]
 
-## Activity: Eval Writing Contracts
+## Activity: Defining Variables and Substitution
 ### <a name="Activity1"></a> 3) Online Puzzles
 
-In this stage you'll create some Variables to store a variety of values and expressions. Head to [MSM stage 6](http://studio.code.org/s/algebra/stage/6/puzzle/1) in Code Studio to get started programming.
+In this stage you'll use variables to reference a variety of values and expressions. Head to [CS in Algebra stage 6](http://studio.code.org/s/algebra/stage/6/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
-
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
-- 7.EE.3-4: The student uses numerical and algebraic expressions and equations to solve real-life and mathematical problems.
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- F-BF.1-2: The student models a relationship between two quantities by building a function.
-- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
-- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>

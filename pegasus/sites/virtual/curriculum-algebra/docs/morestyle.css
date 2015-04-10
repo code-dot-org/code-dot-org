@@ -209,7 +209,7 @@ li p {
 
 .fill-in { width: 100% }
 
-.fill-in tbody tr.empty { height: 75px; }
+.fill-in tbody tr.empty { height: 50px; }
 
 .fill-in .sub {
   vertical-align: bottom;
@@ -217,6 +217,28 @@ li p {
   font-style: italic;
   color: #999;
   padding-bottom: 5px;
+  height: 20px;
+}
+
+.worksheet .printbackground {
+  clear: none !important;
+  padding-top: 20px;
+}
+
+.design-recipe tbody tr {
+  padding: 0 15px;
+  font-size: 18pt;
+  font-family: monospace;
+}
+
+.design-recipe thead tr {
+  background-color: #ddd;
+}
+
+.right-img {
+  float:right;
+  padding-left: 20px;
+  max-width: 50%;
 }
 
 @page  
@@ -232,5 +254,9 @@ li p {
         zoom: 75%;
     }
 	img{ max-width: 100%; }
-    .standards, .video { display: none !important; }
+    .standards, .video { visibility: hidden; display: none !important; }
+    tr, td, th {page-break-inside:avoid}
+    thead {display:table-header-group}
+    a, p, li {color:#000000 !important}
+  
 }

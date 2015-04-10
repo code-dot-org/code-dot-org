@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "rdeča";
 Blockly.Msg.COLOUR_RGB_TITLE = "barva z";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Ustvarite barvo z določenimi količinami rdeče, zelene in modre.  Vse vrednosti morajo biti med 0 in 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "izstopi iz zanke";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "nadaljuj z naslednjo ponovitvijo zanke";

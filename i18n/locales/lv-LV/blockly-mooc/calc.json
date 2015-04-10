@@ -1,9 +1,17 @@
 {
-  "compute":"skaitļot",
+  "divideByZeroError":"Tava programma rezultējas ar nulles dalījumu.",
+  "emptyComputeBlock":"Tev ir jāpievieno bloks, lai \"izpildītu\" bloku.",
   "equivalentExpression":"Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi.",
-  "extraTopBlocks":"Jums ir nepiesaistīti bloki. Vai jūs domājāt pievienot šos pie \"skaitļošanas\" bloka?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"izpildīt",
+  "extraTopBlocks":"Tev ir nepievienoti bloki. Vai tu vēlējies, lai tie bloki tiktu pievienoti \"izpildes\" blokam?",
+  "failedInput":"Tava funkcija neatgriež pareizo rezultātu priekš visām vērtībām.",
   "goal":"Mērķis:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Jūsu izteiksme:"
+  "levelIncompleteError":"Tava izteiksme neatbilst mērķim.",
+  "missingFunctionError":"Tev ir jādefinē funkcija ar nosaukumu {functionName}.",
+  "missingVariableX":"Tavai izteiksmei trūkst mainīgā {var}.",
+  "reinfFeedbackMsg":"Te ir tavs aprēķins! Turpini strādāt pie tā, vai dodies uz nākamo uzdevumu!",
+  "yourExpression":"Jūsu izteiksme:",
+  "wrongInput":"Jūs izsaucat savu fukciju ar nepareizu vērtību.",
+  "wrongOtherValuesX":"Jūsu izteiksmes rezultāti nepareizā daudzumā, ja ir mainīgs {var}.",
+  "wrongResult":"Tava izteiksme neatgriež pareizo rezultātu."
 }

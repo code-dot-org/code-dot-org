@@ -580,128 +580,6 @@
           bloc "ampladadellapis". Diverteix-te!'
         studio_ec_sandbox: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza
           per fer que els teus amics provin el teu joc als seus mòbils.
-    levelbuilder:
-      frozen line:
-        instructions: Hola! Sóc Elsa d' Arendelle. Ajuda'm a crear una sola línia.
-      frozen perpendicular:
-        instructions: Ara anem a veure si podem crear dues línies que estan en un
-          angle de 90 graus una de l'altre. Necessitaràs utilitzar el bloc "Gira",
-          així com el bloc "Avança".
-      frozen square iterative:
-        instructions: Sembla que estem a mig camí per fer un quadrat. Anem a posar
-          4 línies junts per crear una quadrat.
-      frozen square loop:
-        instructions: Hola, sóc Anna de Arendelle! Anem a fer un quadrat amb el bloc
-          "Repeteix", que utilitza menys blocs. Quantes voltes(???) hauria de fer
-          el bloc "Repeteix" per que els blocs de dins fessin un quadrat?
-      frozen square loop 3x:
-        instructions: Anem a crear 3 quadrats, girant després de cada quadrat. Assegura't
-          de girar 120 graus abans de cada nou quadrat.
-      frozen square snowflake:
-        instructions: Pots crear un floc de neu utilitzant el bloc "Repeteix" per
-          fer un quadrat 10 vegades i el bloc "Gira" per tombar 36 graus entre cada
-          quadrat?
-      frozen cross:
-        instructions: Fes servir el bloc "Repeteix" per crear un signe més. ¿T'has
-          adonat que Elsa pot moure's endavant i endarrere?
-      frozen cross rotate:
-        instructions: Ara intenta repetir-lo 10 vegades. Quants graus necessites girar
-          entre cada línia?
-      frozen cross rotate dense:
-        instructions: 'Anem a repetir-lo 90 vegades! Quantes vegades entra 90 en 360?
-          Pista: És un nombre molt petit.'
-      frozen diamond:
-        instructions: 'Anem a crear un paral·lelogram. És com un quadrat però té diferents
-          angles: angles de 60 i 120 graus en comptes d''angles de 90 graus.'
-      frozen diamond mini snowflake:
-        instructions: Sabíeu que cada floc de neu és una forma diferent? Anem a crear
-          un nou floc de neu utilitzant el bloc "Repetir" per repetir un paral·lelogram
-          4 vegades, girant a la dreta 90 graus entre cada paral·lelogram.
-      frozen diamond snowflake:
-        instructions: Ara, anem a crear un nou floc de neu utilitzant el bloc repeteix
-          per repetir un paral·lelogram 10 vegades, girant a la dreta 36 graus entre
-          cadascuna.
-      frozen circle:
-        instructions: Un cercle és una forma especial. Pots esbrinar quin nombre necessites
-          per reemplaçar els interrogants per dibuixar un cercle?
-      frozen circle function:
-        instructions: Utilitza el nou bloc "Crea un cercle" per fer 10 cercles que
-          es superposin. No oblidis saltar endavant entre cercles.
-      frozen circle function in circle:
-        instructions: Ara anem a crear 20 cercles que es superposin, girant 18 graus
-          entre cada cercle.
-      frozen circle function with parameter:
-        instructions: Aquí tens un bloc "Crea un cercle" que pot fer cercles de diferents
-          mides. Pots utilitzar-ho per crear un cercle petit de mida 5 i un cercle
-          més grans de mida 10?
-      frozen snowflower:
-        instructions: Flocs de neu amb patrons complexos es poden crear amb formes
-          molt simples. Pots fer un patró mitjançant la repetició de 5 cercles de
-          mida 5 i 5 de mida 10?
-      frozen snowflake branch:
-        instructions: Intenta utilitzar el bloc "Crea una branca de un floc de neu"
-          per crear tres branques, que comença a semblar-se a un floc de neu.
-      frozen snowflake full:
-        instructions: Ara anem a repetir-ho 8 vegades per fer un floc de neu preciós!
-      frozen freeplay:
-        instructions: T'has convertit oficialment en un autèntic artista! Crea un
-          món fantàstic d'hivern i comparteix-ho amb els teus amics.
-      scrat 16:
-        instructions: Gla! Gla! Gla! Utilitza un bloc "si" per portar-me cap allà
-          amb el menor nombre de blocs.
-      scrat 17:
-        instructions: Bé, anem a fer-ho una altra vegada per practicar - aquest no
-          és molt diferent, però ves amb compte amb la paret!
-      scrat 18:
-        instructions: Els blocs "si-en cas contrari" comproven una condició, i llavors
-          fa una cosa O una altra. Per portar-me al aglà prova d'utilitzar aquest
-          nou bloc.
-      scrat 19:
-        instructions: Una pràctica més del blocs "si-sino", pots fer-ho bé en el primer
-          intent?
-      scrat 20:
-        instructions: Pots afegir només 3 blocs per ajudar-me a resoldre un laberint
-          més complex? Si ho fas bé, podré caminar per qualsevol camí amb corbes sense
-          importar la llargada. Afanya't! S'està fonent el gel!
-      Standalone_Artist_1:
-        instructions: Benvinguts a l'Artista! En primer lloc, anem a tractar de fer
-          un simple quadrat utilitzant el bloc gira a la dreta i el bloc avança. Cada
-          costat hauria de fer 100 píxels de llarg.
-      Standalone_Artist_2:
-        instructions: Dibuixa aquest diamant amb angles de 120 i 60 graus i costats
-          de 150 píxels de llargada.
-      Standalone_Artist_3:
-        instructions: Pots dibuixar aquest hexàgon de 100 píxels de costat i girant
-          60 graus?
-      Standalone_Artist_4:
-        instructions: Ara tens un nou bloc per jugar, el bucle. Això repetirà un conjunt
-          d'ordres. Què passa si repeteixes aquestes comandes 6 vegades?
-      Standalone_Artist_5:
-        instructions: Quantes vegades és necessita repetir aquest diamant per dibuixar
-          la flor?
-      Standalone_Artist_5.5:
-        instructions: 'Dóna''t compte com hem simplificat el codi del diamant per
-          convertir-lo en un bucle. Pots fer  un bucle que tota seqüència 12 vegades
-          per dibuixar la flor. Pista: Necessites girar 30 graus després de dibuixar
-          el diamant per no repetir el dibuix sobre el mateix diamant.'
-      Standalone_Artist_6:
-        instructions: 'Repeteix aquest codi de l''hexàgon 6 vegades per crear el disseny.
-          Quants graus necessitaràs girar cada vegada? Pista: Divideixi el nombre
-          de graus en un cercle pel nombre de vegades que fas el bucle.'
-      Standalone_Artist_7:
-        instructions: 'La funció és una altra eina de programació per ajudar a evitar
-          repetir-te. Aquesta funció dibuixa una flor, així que pots utilitzar-la
-          en qualsevol moment que vulguis dibuixar una flor. Utilitzar això i el nou
-          bloc salta per dibuixar aquestes flors. Consell: Les flors estan separades
-          150 píxels'
-      Standalone_Artist_8:
-        instructions: Aquí tens una funció anomenada "Dibuixa una forma" que hem programat
-          per dibuixar hexàgons. Executa el codi per veure què fa i després  experimenta
-          amb la funció a veure què passa. Pots fer-li dibuixar un patró de quadrats,
-          triangles o octògons?
-      Standalone_Artist_9:
-        instructions: Ara segueix endavant i fes qualsevol imatge que t'agradi! Fins
-          i tot hi ha una funció buida amb la que pots fer el que vulguis!
     video:
       name:
         maze_intro: 'Laberint: Introducció'
@@ -761,6 +639,7 @@
         C2_relay_programming: Programació en relleus
         C2_paper_airplanes: Avions de paper
         C2_digital_footprint: La vostra empremta digital
+        C2_digital_footprint_v2: La vostra empremta digital
         C3_maze_level_4: 'Laberint: bucles'
         C3_artist_intro: Introducció a l'Artista
         C3_artist_functions: 'Artista: Funcions'
@@ -801,6 +680,21 @@
         playlab_intro: Introducció a Play Lab
         playlab_events: Esdeveniments de Play Lab
         playlab_repeat_forever: Repetir per sempre Play Lab
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variables
+        msm_7_functions: Funcions
+        infinity_playlab_intro: Play Lab - introducció
+        infinity_playlab_events: Play Lab - esdeveniments
+        infinity_playlab_repeat_forever: Play Lab - repeteix per sempre
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc
@@ -905,3 +799,8 @@
         arrows_move_actor: Utilitza les fletxes per moure l'actor
         right_arrow_fireball: Utilitza la fletxa dreta per disparar boles de foc
         name_function: Escriu el nom de la teva funció aquí
+        Infinity_move_right_runbutton: Afegeix un bloc de moviment aquí
+        Infinity_move_directions_callout: Quin bloc farà que Baymax pugi quan es premi
+          la fletxa amunt?
+        Infinity_move_collide_callout: Reprodueix un so quan tingui lloc aquest fet.
+        Infinity_repeat_callout: Col·loca els blocs de moviment aquí dins

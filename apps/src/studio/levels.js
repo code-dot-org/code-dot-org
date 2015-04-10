@@ -308,11 +308,6 @@ levels.playlab_3 = {
   },
   background: 'tennis',
   firstSpriteIndex: 26, // tennis girl
-  goal: {
-    successCondition: function () {
-      return Studio.sprite[0].isCollidingWith(1);
-    }
-  },
   toolbox:
     tb(
       '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
@@ -1450,18 +1445,56 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
-  'codeFunctions': [
-    {'func': 'setSprite', 'params': ["0", "'cat'"] },
-    {'func': 'setBackground', 'params': ["'night'"] },
-    {'func': 'move', 'params': ["0", "1"] },
-    {'func': 'playSound', 'params': ["'slap'"] },
-    {'func': 'changeScore', 'params': ["1"] },
-    {'func': 'setSpritePosition', 'params': ["0", "7"] },
-    {'func': 'setSpriteSpeed', 'params': ["0", "8"] },
-    {'func': 'setSpriteEmotion', 'params': ["0", "1"] },
-    {'func': 'throwProjectile', 'params': ["0", "1", "'blue_fireball'"] },
-    {'func': 'vanish', 'params': ["0"] },
-    {'func': 'onEvent', 'params': ["'when-left'", "function() {\n  \n}"] },
-  ],
+  'codeFunctions': {
+    // Play Lab
+    "setSprite": null,
+    "setBackground": null,
+    "move": null,
+    "playSound": null,
+    "changeScore": null,
+    "setSpritePosition": null,
+    "setSpriteSpeed": null,
+    "setSpriteEmotion": null,
+    "throwProjectile": null,
+    "vanish": null,
+    "onEvent": null,
+
+    // Control
+    "forLoop_i_0_4": null,
+    "ifBlock": null,
+    "ifElseBlock": null,
+    "whileBlock": null,
+
+    // Math
+    "addOperator": null,
+    "subtractOperator": null,
+    "multiplyOperator": null,
+    "divideOperator": null,
+    "equalityOperator": null,
+    "inequalityOperator": null,
+    "greaterThanOperator": null,
+    "lessThanOperator": null,
+    "andOperator": null,
+    "orOperator": null,
+    "notOperator": null,
+    "randomNumber_max": null,
+    "randomNumber_min_max": null,
+    "mathRound": null,
+    "mathAbs": null,
+    "mathMax": null,
+    "mathMin": null,
+
+    // Variables
+    "declareAssign_x": null,
+    "assign_x": null,
+    "declareAssign_x_array_1_4": null,
+    "declareAssign_x_prompt": null,
+
+    // Functions
+    "functionParams_none": null,
+    "functionParams_n": null,
+    "callMyFunction": null,
+    "callMyFunction_n": null,
+  },
   'startBlocks': "",
 });

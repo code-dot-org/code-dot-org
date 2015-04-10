@@ -2,39 +2,20 @@ var gmap;
 var gmap_loc;
 
 $(function() {
-  var location_input = document.getElementById('location');
-  var location_autocomplete = new google.maps.places.SearchBox(location_input); // Google Maps autocomplete.
-
   selectize = $('#class-search-facets select').selectize({
     plugins: ['fast_click']
   });
 
-  // Trigger query when location is selected.
-  google.maps.event.addListener(location_autocomplete, 'places_changed', function(){
-    var place = location_autocomplete.getPlaces()[0];
-    var loc = place.geometry.location;
-    gmap_loc = loc.lat() + ',' + loc.lng();
-    resetFacets();
-    submitForm();
-  });
+  $("#location").geocomplete()
+    .bind("geocode:result", function(event, result){
+      var loc = result.geometry.location;
+      gmap_loc = loc.lat() + ',' + loc.lng();
+      resetFacets();
+      submitForm();
+    });
 
   // Make the map sticky.
   $("#gmap").sticky({topSpacing:0});
-
-  // Trigger query when search is submitted.
-//  $('#class-search-form').submit(function() {
-//    event.preventDefault();
-//    gmap_loc = '';
-//
-//    var place = location_autocomplete.getPlace();
-//    if (typeof place !== 'undefined') {
-//      var loc = place.geometry.location;
-//      gmap_loc = loc.d + ',' + loc.e;
-//    }
-//
-//    resetFacets();
-//    submitForm();
-//  });
 
   // Trigger query when a facet is changed.
   $('#class-search-facets').find('select').change(function() {
@@ -47,11 +28,6 @@ function submitForm() {
 
   // Clear the location details.
   $('#location-details').html('');
-
-  // If we don't have coordinates, try to get them via geocoding from the location entered.
-//  if (!gmap_loc) {
-//    getLatLng(form_data);
-//  }
 
   // If we still don't have coordinates, display an error.
   if (!gmap_loc) {

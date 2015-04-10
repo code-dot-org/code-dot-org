@@ -8,157 +8,6 @@ theme: none
 .loading{"ng-hide"=>"progressLoaded"}
   = I18n.t('dashboard_landing_loading')
 
-:scss
-  $level_passed: rgb(159, 212, 159);
-  $level_perfect: rgb(14, 190, 14);
-  $level_attempted: #fefefe;
-  $level_not_tried: #fefefe;
-  $progress_background: #eee;
-
-  table#progress {
-    th {
-     border: 1px solid white;
-    }
-    td {
-      border: none;
-      padding: 0px;
-    }
-  }
-
-  .progressheader .stage {
-    box-sizing: border-box;
-    background-color: #aaa;
-    color: white; 
-    float:left;
-    height:50px;
-    padding: 5px 0 0 5px;
-    border-left: 1px solid #888;
-  }
-
-  .studentzone {
-    position: relative;
-
-    .studentbar {
-      position: absolute;
-    }
-
-    .studentdot {
-      position: absolute;
-      left: 0px;
-      padding-top: 4px;
-      padding-bottom: 4px;
-
-      -webkit-transition: left 2s; /* For Safari 3.1 to 6.0 */
-      transition: left 2s;
-    }
-  }
-
-  .studentzone .stage {
-    box-sizing: border-box;
-    background-color: #eee;
-    color: white;
-    float:left;
-    padding: 5px 0 0 5px;
-    height:40px; 
-    border-left: 1px solid #ccc
-  }
-
-  .studentname {
-    width: 160px;
-    height: 40px;
-    line-height: 40px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .studentzone .studentname {
-    height: 40px;
-  }
-
-  .bar {
-    float: left;
-    margin-top: 15px;
-    height:10px;
-    opacity: 0.8;
-    cursor: default;
-    background-color: $level_not_tried;
-
-    -webkit-transition: background-color 2s; /* For Safari 3.1 to 6.0 */
-    transition: background-color 2s;
-
-    &.perfect {
-      border: none;
-      background-color: $level_perfect;
-    }
-
-    &.passed {
-      border: none;
-      background-color: $level_passed;
-    }
-
-    &.attempted {
-      border: none;
-      background-color: $level_attempted;
-    }
-  }
-
-  .dot {
-    box-sizing: content-box;
-    border-radius: 20px;
-    border: 2px solid #ccc;
-    background-color: $level_attempted;
-    padding: 5px 7px 9px 7px;
-    color: #333;
-    width: 18px;
-    height: 18px;
-    font-family: 'Gotham 5r', sans-serif;
-    font-weight: normal;;
-    cursor:default;
-    text-align: center;
-
-    &.perfect {
-      border: none;
-      background-color: $level_perfect;
-      color: white;
-    }
-
-    &.passed {
-      border: none;
-      background-color: $level_passed;
-      color: white;
-    }
-  }
-
-  .key {
-    margin: 10px 0;
-    float: left;
-    background-color: #eee;
-    padding: 10px;
-    dl {
-      margin: 0;
-      float: left;
-    }
-    dd, dt {
-      height: 20px;
-      line-height: 20px;
-      float: left;
-      margin-right: 5px;
-    }
-    dt {
-      padding: 5px 0;
-    }
-    dd {
-      margin-right: 30px;
-    }
-    .bar {
-      margin: 0;
-    }
-    .dot {
-      margin-top: -12px;
-    }
-  }
-
 %h3 {{progress.script.name}}
 
 %table#progress{style: "width: 950px; table-layout: fixed"}
@@ -194,8 +43,11 @@ theme: none
 .key
   %dl
     %dt
+      %span.bar.not_tried &nbsp;
+    %dd= I18n.t('dashboard_progress_not_started')
+    %dt
       %span.bar.attempted &nbsp;
-    %dd= I18n.t('dashboard_progress_not_completed')
+    %dd= I18n.t('dashboard_progress_in_progress')
     %dt
       %span.bar.passed &nbsp;
     %dd= I18n.t('dashboard_progress_completed_too_many_blocks')

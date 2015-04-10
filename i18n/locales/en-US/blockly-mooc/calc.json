@@ -1,9 +1,17 @@
 {
-  "compute":"crwdns21836:0crwdne21836:0",
+  "divideByZeroError":"crwdns35469:0crwdne35469:0",
+  "emptyComputeBlock":"crwdns35791:0crwdne35791:0",
   "equivalentExpression":"crwdns21837:0crwdne21837:0",
-  "extraTopBlocks":"crwdns21838:0crwdne21838:0",
+  "evaluate":"crwdns35470:0crwdne35470:0",
+  "extraTopBlocks":"crwdns35792:0crwdne35792:0",
   "failedInput":"crwdns31410:0crwdne31410:0",
   "goal":"crwdns21839:0crwdne21839:0",
+  "levelIncompleteError":"crwdns34858:0crwdne34858:0",
+  "missingFunctionError":"crwdns35936:0{functionName}crwdne35936:0",
+  "missingVariableX":"crwdns35471:0{var}crwdne35471:0",
   "reinfFeedbackMsg":"crwdns31411:0crwdne31411:0",
-  "yourExpression":"crwdns21841:0crwdne21841:0"
+  "yourExpression":"crwdns21841:0crwdne21841:0",
+  "wrongInput":"crwdns34876:0crwdne34876:0",
+  "wrongOtherValuesX":"crwdns35472:0{var}crwdne35472:0",
+  "wrongResult":"crwdns35715:0crwdne35715:0"
 }

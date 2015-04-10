@@ -48,7 +48,7 @@ Across the entire CS in Algebra curriculum, students will develop the skills of 
 #### A computing device and an Internet connection. 
 We work hard to build an environment that is supported by all modern web browsers on desktops and mobile devices, but you'll have the most success with an up-to-date browser (IE9+, Firefox, Chrome, Safari).
 
-[together]
+[units]
 
 | Unit of Study                    | Description                                                                                                                                                                                                                                                                    | Standards                                                                       |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
@@ -61,7 +61,7 @@ We work hard to build an environment that is supported by all modern web browser
 | Piecewise Functions              | Students use geometry and conditional branching to move their player characters in response to key-presses. The Word Problem for key-events describes a function that behaves differently under different sub-domains, requiring students to learn about Piecewise Functions.  | <ul><li>A-SSE.1-2</li></ul>                                                     |
 | Collision Detection              | Students derive, discuss, and prove the Pythagorean theorem, then use this theorem—in conjunction with Booleans—to detect collisions in their games.                                                                                                                           | <ul><li>8.G.6</li><li>F-IF.1-3</li><li>F-IF.4-6</li></ul>                       |
 
-[/together]
+[/units]
 
 <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
 

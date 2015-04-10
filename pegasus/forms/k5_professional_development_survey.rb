@@ -25,7 +25,7 @@ class K5ProfessionalDevelopmentSurvey
 
   def self.normalize(data)
     result = {}
-    
+
     result[:workshop_id_i] = required data[:workshop_id_i]
     result[:section_id_i] = required data[:section_id_i]
 
@@ -197,9 +197,8 @@ class K5ProfessionalDevelopmentSurvey
       result[:send_materials_email_s] = required stripped data[:send_materials_email_s]
       result[:send_materials_phone_s] = required stripped data[:send_materials_phone_s]
       result[:send_materials_course_s] = required enum data[:send_materials_course_s].to_s.strip.downcase, [
-        'course 1 (beginners to computer science; early)',
-        'course 2 (beginners to computer science; readers)',
-        'course 3 (builds on course 2)',
+        'course 1 (beginners to computer science; early readers)',
+        'courses 2 and 3 (beginners to computer science; readers)',
       ]
     end
 

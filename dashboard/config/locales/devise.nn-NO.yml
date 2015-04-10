@@ -1,7 +1,7 @@
-'no':
+"nn":
   devise:
     confirmations:
-      confirmed: E-postadressen din har blitt bekreftet.
+      confirmed: E-postadressa di har blitt stadfesta.
       send_instructions: Om noen få minutter vil du motta en e-post med instruksjoner
         om hvordan du bekrefter kontoen.
       send_paranoid_instructions: Hvis din e-postadresse finnes i vår database, vil
@@ -19,9 +19,9 @@
       unconfirmed: Du må bekrefte kontoen før du fortsetter.
     mailer:
       confirmation_instructions:
-        subject: Code.org instruksjoner for bekreftelse
+        subject: Code.org sine instruksjonar for stadfesting
       reset_password_instructions:
-        subject: Code.org instruksjoner for å tilbakestille passord
+        subject: Code.org sine instruksjonar for å tilbakestille passord
       unlock_instructions:
         subject: Instruksjoner for å låse opp
     omniauth_callbacks:
@@ -70,3 +70,25 @@
       not_saved:
         one: '1 feil forhindret denne %{resource} fra å bli reddet:'
         other: '%{count} feil forhindret denne %{resource} fra å bli reddet:'
+    invitations:
+      send_instructions: An invitation email has been sent to %{email}.
+      invitation_token_invalid: The invitation token provided is not valid!
+      updated: Your password was set successfully. You are now signed in.
+      no_invitations_remaining: No invitations remaining
+      invitation_removed: Your invitation was removed.
+      new:
+        header: Send invitation
+        submit_button: Send an invitation
+      edit:
+        header: Set your password
+        submit_button: Set my password
+    mailer:
+      invitation_instructions:
+        subject: Invitation instructions
+        hello: Hello %{email}
+        someone_invited_you: Someone has invited you to %{url}, you can accept it
+          through the link below.
+        accept: Accept invitation
+        ignore: If you don't want to accept the invitation, please ignore this email.<br
+          />Your account won't be created until you access the link above and set
+          your password.

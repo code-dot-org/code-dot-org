@@ -1,9 +1,17 @@
 {
-  "compute":"calculare",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "equivalentExpression":"Încercaţi să vă reordonați argumentele pentru a obţine exact aceeaşi expresie.",
-  "extraTopBlocks":"Aveţi blocuri neataşate. Aţi vrut să le ataşaţi la blocul \"calculare\"?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"Funcția ta nu returnează rezultatul corect pentru toate valorile.",
   "goal":"Obiectiv:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Expresia dvs.:"
+  "levelIncompleteError":"Expresia nu se potriveşte obiectivului.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Your expression is missing variable {var}.",
+  "reinfFeedbackMsg":"Aici este calculul tău! Continuă să lucrezi la el, sau treci la următorul puzzle!",
+  "yourExpression":"Expresia dvs.:",
+  "wrongInput":"Apelezi funcţia cu o valoare greşită.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

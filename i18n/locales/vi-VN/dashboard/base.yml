@@ -1,7 +1,7 @@
 vi:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Hãy sửa các lỗi sau đây:'
   activerecord:
     errors:
       messages:
@@ -22,6 +22,7 @@ vi:
           future: không thể trong tương lai
   hello: Xin chào thế giới
   welcome_back: 'Chào mừng bạn %{name}'
+  submit: Chấp nhận
   add_teacher_form:
     code:
       label: 'Thêm một giáo viên:'
@@ -214,6 +215,7 @@ vi:
         artist: Draw Something
     user:
       classroom: Trang chủ giáo viên
+      district_dashboard: District Dashboard
       label: 'Hi %{username}'
       stats: TIến trình của bạn
       settings: Tài khoản của bạn
@@ -280,8 +282,8 @@ vi:
       grade: Grade
       course: Course
       rename: đổi tên
-      edit: edit
-      delete: delete
+      edit: chỉnh sửa
+      delete: xóa
       confirm_delete: Are you sure you want to delete this section?
       email: Send in email
     rollup: Bảng tiến trình
@@ -292,13 +294,15 @@ vi:
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (để trống nếu bạn không muốn thay đổi nó)
     current_password_hint: (chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)
-    delete: Delete your account
+    delete: Xóa tài khoản của bạn
     delete_text: Clicking the button below will delete your account.
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete_confirm: Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?
   user_level:
     completed: Đã hoàn thành
     tried: Cố gắng
@@ -350,7 +354,7 @@ vi:
     student: học sinh
     teacher: Giáo viên
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+    help_from_html: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp tạo ra hướng dẫn này.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     powered_by_aws: Powered by Amazon Web Services
     feedback: Cung cấp thông tin phản hồi
@@ -431,6 +435,9 @@ vi:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -460,6 +467,13 @@ vi:
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: Correct
     correct_body: That is the correct answer.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Enter your answer here
   dialog:
@@ -475,7 +489,7 @@ vi:
           title: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25 giờ)
           description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
         Hour of Code:
-          title: Giờ của mã
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Hiệu chỉnh mã
@@ -505,11 +519,44 @@ vi:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Lưu
+    delete: Xóa
+    exit: Return to Course
+    my_projects: My Projects
+    share: Chia sẻ
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Nhiều hơn
+    name: Tên
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Xóa?
+    delete_yes: Đồng ý
+    delete_no: Không
+    saved: Saved
+    not_saved: Not saved
+    cancel: Huỷ
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

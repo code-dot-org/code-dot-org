@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "计算"},
+"divideByZeroError":function(d){return "你的程序因除以 0 而结束。"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "试着重新排列你的参数来得到完全相同的表达式。"},
+"evaluate":function(d){return "评估"},
 "extraTopBlocks":function(d){return "您有未连接的语句块。您要将其连接到“compute”语句块吗？"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "你的函数没有返回所有的正确值。"},
 "goal":function(d){return "目标："},
-"reinfFeedbackMsg":function(d){return "这是你的故事！继续为其努力，或转向下一个谜题。"},
-"yourExpression":function(d){return "你的表达式："}};
+"levelIncompleteError":function(d){return "你的表达式没有匹配目标。"},
+"missingFunctionError":function(d){return "你必须定义一个名为 "+appLocale.v(d,"functionName")+" 的函数。"},
+"missingVariableX":function(d){return "你的表的式缺少了变量 "+appLocale.v(d,"var")+"。"},
+"reinfFeedbackMsg":function(d){return "这是你的计算！继续做这个工作，或移动到下一个谜！"},
+"yourExpression":function(d){return "你的表达式："},
+"wrongInput":function(d){return "你使用了错误的值来运行你的函数。"},
+"wrongOtherValuesX":function(d){return "如果我们改变"+appLocale.v(d,"var")+"，那你的表达式导致了错误的值。"},
+"wrongResult":function(d){return "你的表达式没有返回正确的结果。"}};

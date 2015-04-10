@@ -98,7 +98,7 @@ DashboardUser.prototype.initialize = function (data) {
   this.whenReadyCallbacks_.forEach(function (callback) {
     callback(this);
   }.bind(this));
-  this.whenReadyCallbacks_ = [];
+  this.whenReadyCallbacks_.length = 0;
 };
 
 /**

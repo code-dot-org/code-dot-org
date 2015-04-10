@@ -72,7 +72,7 @@ nl:
       2-3 Big Event Match 1:
         Matching: Koppelen
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Combineer de knop met de dansbewegingen.
+        Match the button combination to the dance moves.: Koppel de knoppencombinatie aan de dansbewegingen.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -95,7 +95,7 @@ nl:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Koppelen
-        Match the grid to the program: Combineer het rooster met het programma
+        Match the grid to the program.: Match the grid to the program.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -133,7 +133,7 @@ nl:
         <h4>Set Player 1 score to 0</h4>: '<h4>Zet de score van speler 1 naar 0</h4>'
         <h4>Player 1 rolls die</h4>: '<h4>Speler een gooit de dobbelsteen</h4>'
         <h4>Add Player 1 roll to total score</h4>: '<h4>Voeg het ogenaantal van speler 1 toe aan de totale score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Vergelijk de spelers om te kijken wie er wint</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>Vergelijk de spelersscores om te kijken wie er wint</h4>'
       4-5 Computational Thinking Match 1:
         Matching: Koppelen
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Elk van de voertuigen zijn verdeeld in kleinere onderdelen. Combineer elk voertuig met de lijst met onderdelen.
@@ -159,12 +159,12 @@ nl:
         <h4>RAMP</h4>: '<h4>HELLING</h4>'
       K-1 Artist 2 Match 1:
         Matching: Koppelen
-        Is the square next to, above, or below the ball?: Is de vierkant naast, boven, of beneden de bal?
+        Is the square next to, above, or below the ball?: Bevindt het vierkant zich naast, boven of onder de bal?
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
         <br/><br/>above: '<br/><br/>boven'
-        <br/><br/>below: '<br/><br/>beneden'
+        <br/><br/>below: '<br/><br/>onder'
         <br/><br/>next to: '<br/><br/>naast'
       K-1 Artist 2 Match 2:
         Matching: Koppelen
@@ -190,7 +190,7 @@ nl:
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
         Matching: Koppelen
-        Match the code to the stairs it draws.: 'Combineer de code met de trap die  hij tekent.'
+        Match the code to the stairs it draws.: Koppel de code aan de trap die ermee getekend wordt.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
@@ -234,7 +234,7 @@ nl:
       K-1 Big Event Match 1:
         Matching: Koppelen
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Combineer de knop met de dansbewegingen.
+        Match the button combination to the dance moves.: Koppel de knoppencombinatie aan de dansbewegingen.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -261,7 +261,7 @@ nl:
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
         Coordinates of Ninjacat: Coördinaten van Ninjakat
-        Match each character with its correct coordinate!: Combineer elk figuur met de goede co:ordinaten!
+        Match each character with its correct coordinate!: Koppel elk figuur aan de juiste coördinaten!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
         Cloud: Wolk
         Ruby: Ruby
@@ -293,8 +293,8 @@ nl:
         /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: Verander Wiskunde naar Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Combineer elke wiskundige som met de goede code. Gebruik een cirkel van evaluatie om je te helpen om het antwoord te krijgen!
+        Converting Math to Code: Wiskundige berekeningen omzetten naar Code
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Combineer elke wiskundige som met de juiste code. Gebruik een cirkel van evaluatie om je te helpen om het antwoord te krijgen!
         (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
         72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
@@ -304,10 +304,10 @@ nl:
         (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
         (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
       parts of contract:
-        Parts of a Contract: Delen van een Contract
-        Here is a contract for a new function. Match each item with the word that describes it.: Hier is een contract voor een nieuwe functie.Combineer elk item met het woord dat het beschrijft.
+        Parts of a Contract: onderdelen van een functie ontwerp
+        Here is a contract for a new function. Match each item with the word that describes it.: Hier is een ontwerp voor een nieuwe functie. Combineer elk item met het woord dat het beschrijft.
         yearbook-picture: Jaarboek-afbeelding
-        string numer: tekst nummer
+        string numer: tekenreeks nummer
         image: afbeelding
         (yearbook-picture "Sally" 1992): '(Jaarboek-afbeelding "Sally" 1992)'
         function name: functienaam
@@ -315,8 +315,8 @@ nl:
         range: bereik
         example: voorbeeld
       Match example to contract:
-        Contracts of Functions: Contracten van functies
-        Match each example with the correct contract!: Combineer elk voorbeeld met de juiste contract!
+        Contracts of Functions: Ontwerpen van functies
+        Match each example with the correct contract!: Combineer elk voorbeeld met de juiste ontwerp!
         (big-string? "gigantic" 5): '(grote-tekst? "gigantische" 5)'
         (find-price 4): (zoek-prijs 4)
         (small-star "blue"): "(kleine-ster 'blauw')"
@@ -328,6 +328,19 @@ nl:
         "small-star: string -> image": 'kleine-ster: tekst-> afbeelding'
         "bigger-string: string string -> string": 'groter-tekst: tekst tekst-> tekst'
         "find-price: string -> number": 'zoek-prijs: tekst-> nummer'
+      PDK5 Pair programming match:
+        Pair programming match: 'Wedstrijd "programmeren in tweetallen"'
+        Match the definitions to the words you were introduced to in the last video.: Koppel de definities aan de woorden die je in het laatste filmpje hebt geleerd.
+        Pair programming: Programmeren in Tweetallen
+        Driver: Rijder
+        Navigator: Bij-rijder
+        When two students work at one computer to write a program together: Wanneer twee leerlingen aan één computer werken om samen een programma te schrijven
+        The student who controls the keyboard, mouse, or touch screen: De leerling die het toetsenbord, de muis of het touch-screen bedient
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: De leerling die kijkt naar het grotere geheel en let op mogelijke fouten en misverstanden
+      PDK5 What is unplugged:
+        What is an unplugged activity?: Wat is een ontkoppelde activiteit?
+        Question: Vraag
+        Answer 1: Antwoord 1
       test matching image:
         Matching Images Two: Plaatjes koppelen twee
         Match up all the flowers by colour!: Koppel alle bloemen aan de juiste kleur!

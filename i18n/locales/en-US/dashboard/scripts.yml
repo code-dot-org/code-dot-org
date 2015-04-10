@@ -237,7 +237,9 @@ en:
           Artist Binary: crwdns23312:0crwdne23312:0
           description_audience: crwdns24913:0crwdne24913:0
         Course4pre:
+          title: crwdns35290:0crwdne35290:0
           description_short: crwdns22252:0crwdne22252:0
+          description: crwdns35291:0crwdne35291:0
           Course 4 Prerequisite: crwdns22253:0crwdne22253:0
           "Maze: Sequence": crwdns22254:0crwdne22254:0
           "Artist: Sequence": crwdns22255:0crwdne22255:0
@@ -248,30 +250,6 @@ en:
           "Bee: Nested Loops": crwdns22260:0crwdne22260:0
           "Artist: Functions": crwdns22261:0crwdne22261:0
           "Bee: Debugging": crwdns22262:0crwdne22262:0
-        course4pre:
-          description_short: crwdns23536:0crwdne23536:0
-          Course 4 Prerequisite: crwdns23537:0crwdne23537:0
-          "Maze: Sequence": crwdns23538:0crwdne23538:0
-          "Artist: Sequence": crwdns23539:0crwdne23539:0
-          "Artist: Loops": crwdns23540:0crwdne23540:0
-          "Bee: Conditionals": crwdns23541:0crwdne23541:0
-          "Artist: Nested Loops": crwdns23542:0crwdne23542:0
-          "Farmer: While Loops": crwdns23543:0crwdne23543:0
-          "Bee: Nested Loops": crwdns23544:0crwdne23544:0
-          "Artist: Functions": crwdns23545:0crwdne23545:0
-          "Bee: Debugging": crwdns23546:0crwdne23546:0
-        Course4pre (Case Conflict):
-          description_short: crwdns23547:0crwdne23547:0
-          Course 4 Prerequisite: crwdns23548:0crwdne23548:0
-          "Maze: Sequence": crwdns23549:0crwdne23549:0
-          "Artist: Sequence": crwdns23550:0crwdne23550:0
-          "Artist: Loops": crwdns23551:0crwdne23551:0
-          "Bee: Conditionals": crwdns23552:0crwdne23552:0
-          "Artist: Nested Loops": crwdns23553:0crwdne23553:0
-          "Farmer: While Loops": crwdns23554:0crwdne23554:0
-          "Bee: Nested Loops": crwdns23555:0crwdne23555:0
-          "Artist: Functions": crwdns23556:0crwdne23556:0
-          "Bee: Debugging": crwdns23557:0crwdne23557:0
         usability:
           Intro: crwdns23558:0crwdne23558:0
           Variables and For Loops: crwdns23559:0crwdne23559:0
@@ -294,6 +272,9 @@ en:
           Special: crwdns25207:0crwdne25207:0
           Binary: crwdns27312:0crwdne27312:0
         usabilitymsm:
+          title: crwdns35292:0crwdne35292:0
+          description_short: crwdns35293:0crwdne35293:0
+          description: crwdns35294:0crwdne35294:0
           Usability testing for MSM: crwdns27313:0crwdne27313:0
           Evaluation Blocks: crwdns27314:0crwdne27314:0
           Blocks to Math: crwdns27315:0crwdne27315:0
@@ -308,31 +289,34 @@ en:
           title: crwdns27323:0crwdne27323:0
           description: crwdns27324:0crwdne27324:0
           "Unplugged: Video Games and Coordinate Planes": crwdns27325:0crwdne27325:0
-          "Calc: Evaluation Blocks": crwdns27326:0crwdne27326:0
-          "Eval: Strings and Images": crwdns27327:0crwdne27327:0
-          "Unplugged: Contracts": crwdns27777:0crwdne27777:0
-          "Eval: Writing Contracts": crwdns27778:0crwdne27778:0
-          "Calc: Defining Variables": crwdns27779:0crwdne27779:0
-          "Play Lab: Defining Variables (Big Game)": crwdns27780:0crwdne27780:0
-          "Eval: Defining Functions": crwdns27781:0crwdne27781:0
+          "Calc: Evaluation Blocks": crwdns35295:0crwdne35295:0
+          "Eval: Strings and Images": crwdns35296:0crwdne35296:0
+          "Unplugged: Contracts": crwdns35297:0crwdne35297:0
+          "Eval: Writing Contracts": crwdns35298:0crwdne35298:0
+          "Calc: Defining Variables": crwdns35299:0crwdne35299:0
+          "Play Lab: Defining Variables (Big Game)": crwdns35300:0crwdne35300:0
+          "Eval: Defining Functions": crwdns35301:0crwdne35301:0
           "Unplugged: The Design Recipe": crwdns27782:0crwdne27782:0
-          "Play Lab: Defining Functions": crwdns27783:0crwdne27783:0
-          "Eval: Functions": crwdns27784:0crwdne27784:0
-          "Play Lab: Animation (Big Game)": crwdns27785:0crwdne27785:0
-          "Unplugged: Booleans": crwdns27786:0crwdne27786:0
-          "Eval: Boolean Operators": crwdns27787:0crwdne27787:0
-          "Play Lab: Booleans": crwdns27788:0crwdne27788:0
-          "Play Lab: Boolean (Big Game)": crwdns27789:0crwdne27789:0
+          "Play Lab: Defining Functions": crwdns35302:0crwdne35302:0
+          "Eval: Functions": crwdns35303:0crwdne35303:0
+          "Play Lab: Animation (Big Game)": crwdns35304:0crwdne35304:0
+          "Unplugged: Booleans": crwdns35305:0crwdne35305:0
+          "Eval: Boolean Operators": crwdns35306:0crwdne35306:0
+          "Play Lab: Booleans": crwdns35307:0crwdne35307:0
+          "Play Lab: Boolean (Big Game)": crwdns35308:0crwdne35308:0
           "Unplugged: Conditionals and Piecewise Functions": crwdns27790:0crwdne27790:0
-          "Eval: Conditionals": crwdns27791:0crwdne27791:0
-          "Unplugged: Collision Detection and the Distance Formula": crwdns27792:0crwdne27792:0
-          "Play Lab: Collision Detection (Big Game)": crwdns27793:0crwdne27793:0
+          "Eval: Conditionals": crwdns35309:0crwdne35309:0
+          "Unplugged: Collision Detection and the Distance Formula": crwdns35310:0crwdne35310:0
+          "Play Lab: Collision Detection (Big Game)": crwdns35311:0crwdne35311:0
         infinity:
-          title: crwdns29007:0crwdne29007:0
-          description_short: crwdns29008:0crwdne29008:0
-          description: crwdns29009:0crwdne29009:0
+          title: crwdns36051:0crwdne36051:0
+          description_short: crwdns35312:0crwdne35312:0
+          description: crwdns35313:0crwdne35313:0
           Play Lab: crwdns29010:0crwdne29010:0
+          Infinity: crwdns35314:0crwdne35314:0
         algebrademo:
+          title: crwdns35315:0crwdne35315:0
+          description_short: crwdns35316:0crwdne35316:0
           description: crwdns27930:0crwdne27930:0
           Algebra Demo: crwdns27931:0crwdne27931:0
           Evaluation Blocks: crwdns27932:0crwdne27932:0
@@ -341,14 +325,218 @@ en:
           Defining Simple Functions: crwdns27935:0crwdne27935:0
           The Design Recipe: crwdns27936:0crwdne27936:0
         K5PD:
+          title: crwdns35317:0crwdne35317:0
+          description: crwdns35318:0crwdne35318:0
+          description_short: crwdns35319:0crwdne35319:0
           Introduction to PD: crwdns27937:0crwdne27937:0
+          Blockly Basics: crwdns34814:0crwdne34814:0
+          Writing computer programs: crwdns34815:0crwdne34815:0
+          Navigating the teacher dashboard: crwdns34816:0crwdne34816:0
+          Unplugged lessons: crwdns34817:0crwdne34817:0
+          Classroom Culture: crwdns34818:0crwdne34818:0
+          Ways to go beyond Courses 1, 2, and 3: crwdns34819:0crwdne34819:0
+          K-5 Courses: crwdns35320:0crwdne35320:0
+          Writing computer programs in Blockly: crwdns35321:0crwdne35321:0
+          Teacher Dashboard: crwdns35322:0crwdne35322:0
+          Personal Reflection: crwdns35323:0crwdne35323:0
+          Next Steps: crwdns35324:0crwdne35324:0
+          Computer Science Pedagogy: crwdns35325:0crwdne35325:0
         netsim:
           title: crwdns29002:0crwdne29002:0
           description_short: crwdns29003:0crwdne29003:0
           description: crwdns29004:0crwdne29004:0
           Internet Simulator: crwdns29005:0crwdne29005:0
-        Infinity:
-          title: crwdns29011:0crwdne29011:0
-          description_short: crwdns29012:0crwdne29012:0
-          description: crwdns29013:0crwdne29013:0
-          Infinity: crwdns29014:0crwdne29014:0
+          Unit 1: crwdns35326:0crwdne35326:0
+          Unit 2: crwdns35327:0crwdne35327:0
+          Sending Bits: crwdns35328:0crwdne35328:0
+          Routing and DNS: crwdns35329:0crwdne35329:0
+          "Unit 1: Sending Bits": crwdns35330:0crwdne35330:0
+          "Unit 2: Routing and DNS": crwdns35331:0crwdne35331:0
+          Internet Simulator Templates: crwdns35332:0crwdne35332:0
+        pixelation:
+          title: crwdns34820:0crwdne34820:0
+          description: crwdns34821:0crwdne34821:0
+          Pixelation: crwdns34822:0crwdne34822:0
+        20-hour:
+          title: crwdns35335:0crwdne35335:0
+          description: crwdns34824:0crwdne34824:0
+          Introduction to Computer Science: crwdns34825:0crwdne34825:0
+          The Maze: crwdns34826:0crwdne34826:0
+          Computational Thinking: crwdns34827:0crwdne34827:0
+          Graph Paper Programming: crwdns34828:0crwdne34828:0
+          The Artist: crwdns34829:0crwdne34829:0
+          Algorithms: crwdns34830:0crwdne34830:0
+          The Artist 2: crwdns34831:0crwdne34831:0
+          Functions: crwdns34832:0crwdne34832:0
+          The Farmer: crwdns34833:0crwdne34833:0
+          Conditionals: crwdns34834:0crwdne34834:0
+          The Artist 3: crwdns34835:0crwdne34835:0
+          Song Writing: crwdns34836:0crwdne34836:0
+          The Farmer 2: crwdns34837:0crwdne34837:0
+          Abstraction: crwdns34838:0crwdne34838:0
+          The Artist 4: crwdns34839:0crwdne34839:0
+          Relay Programming: crwdns34840:0crwdne34840:0
+          The Farmer 3: crwdns34841:0crwdne34841:0
+          The Internet: crwdns34842:0crwdne34842:0
+          The Artist 5: crwdns34843:0crwdne34843:0
+          Wrap-up: crwdns34844:0crwdne34844:0
+        edit-code:
+          title: crwdns35336:0crwdne35336:0
+          description: crwdns35337:0crwdne35337:0
+          The Maze: crwdns35338:0crwdne35338:0
+          Applab: crwdns35339:0crwdne35339:0
+          The Artist: crwdns35340:0crwdne35340:0
+          Play Lab: crwdns35341:0crwdne35341:0
+        events:
+          title: crwdns35342:0crwdne35342:0
+          description: crwdns35343:0crwdne35343:0
+          Bounce: crwdns35344:0crwdne35344:0
+          Studio: crwdns35345:0crwdne35345:0
+          Calc: crwdns35346:0crwdne35346:0
+          Eval: crwdns35347:0crwdne35347:0
+        flappy:
+          title: crwdns35348:0crwdne35348:0
+          description: crwdns35349:0crwdne35349:0
+          Flappy Code: crwdns35350:0crwdne35350:0
+        jigsaw:
+          title: crwdns35351:0crwdne35351:0
+          description: crwdns35352:0crwdne35352:0
+          Jigsaw: crwdns35353:0crwdne35353:0
+        step:
+          title: crwdns35354:0crwdne35354:0
+          description: crwdns35355:0crwdne35355:0
+          Step: crwdns35356:0crwdne35356:0
+        Hour of Code:
+          title: crwdns35357:0crwdne35357:0
+          description: crwdns35358:0crwdne35358:0
+          Hour of Code 2013: crwdns35359:0crwdne35359:0
+        Code Studio Puzzle Challenge:
+          title: crwdns35360:0crwdne35360:0
+          description_short: crwdns35361:0crwdne35361:0
+          description: crwdns35362:0crwdne35362:0
+          Puzzles: crwdns35363:0crwdne35363:0
+        CodeStudioPuzzleChallenge:
+          title: crwdns35364:0crwdne35364:0
+          description_short: crwdns35365:0crwdne35365:0
+          description: crwdns35366:0crwdne35366:0
+          Puzzles: crwdns35367:0crwdne35367:0
+        Test - Code Studio Puzzle Challenge:
+          title: crwdns35368:0crwdne35368:0
+          description_short: crwdns35369:0crwdne35369:0
+          description: crwdns35370:0crwdne35370:0
+          Puzzles: crwdns35371:0crwdne35371:0
+        How to do the Code Studio Puzzle Challenge:
+          title: crwdns35372:0crwdne35372:0
+          description_short: crwdns35373:0crwdne35373:0
+          description: crwdns35374:0crwdne35374:0
+          Puzzles: crwdns35375:0crwdne35375:0
+        Tutorial - Code Studio Puzzle Challenge:
+          title: crwdns35376:0crwdne35376:0
+          description_short: crwdns35377:0crwdne35377:0
+          description: crwdns35378:0crwdne35378:0
+          Puzzles: crwdns35379:0crwdne35379:0
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: crwdns35380:0crwdne35380:0
+          description_short: crwdns35381:0crwdne35381:0
+          description: crwdns35382:0crwdne35382:0
+          Puzzles: crwdns35383:0crwdne35383:0
+        course4pre:
+          title: crwdns35384:0crwdne35384:0
+          description_short: crwdns23536:0crwdne23536:0
+          description: crwdns35385:0crwdne35385:0
+          Course 4 Prerequisite: crwdns23537:0crwdne23537:0
+          "Maze: Sequence": crwdns23538:0crwdne23538:0
+          "Artist: Sequence": crwdns23539:0crwdne23539:0
+          "Artist: Loops": crwdns23540:0crwdne23540:0
+          "Bee: Conditionals": crwdns23541:0crwdne23541:0
+          "Artist: Nested Loops": crwdns23542:0crwdne23542:0
+          "Farmer: While Loops": crwdns23543:0crwdne23543:0
+          "Bee: Nested Loops": crwdns23544:0crwdne23544:0
+          "Artist: Functions": crwdns23545:0crwdne23545:0
+          "Bee: Debugging": crwdns23546:0crwdne23546:0
+        cspunit1:
+          title: crwdns36285:0crwdne36285:0
+          description_short: crwdns36286:0crwdne36286:0
+          description: crwdns36287:0crwdne36287:0
+          Lesson14: crwdns35388:0crwdne35388:0
+          Lesson 14: crwdns35389:0crwdne35389:0
+          Lesson 14 v2: crwdns35390:0crwdne35390:0
+          Lesson 15: crwdns35391:0crwdne35391:0
+          Lesson 8: crwdns35670:0crwdne35670:0
+          Lesson 5: crwdns35707:0crwdne35707:0
+          Lesson 3: crwdns35708:0crwdne35708:0
+          Lesson 4: crwdns35709:0crwdne35709:0
+          Lesson 6: crwdns36052:0crwdne36052:0
+          Lesson 2: crwdns36053:0crwdne36053:0
+          Lesson 7: crwdns36251:0crwdne36251:0
+          Lesson 1: crwdns36252:0crwdne36252:0
+          Innovation: crwdns36253:0crwdne36253:0
+          Sending Binary Messages: crwdns36254:0crwdne36254:0
+          Sending More Complex Messages: crwdns36255:0crwdne36255:0
+          Bit Sending Widget: crwdns36256:0crwdne36256:0
+          Sending Bits in the Real World: crwdns36257:0crwdne36257:0
+          Number Systems: crwdns36258:0crwdne36258:0
+          Binary Numbers: crwdns36259:0crwdne36259:0
+        algebraPD:
+          title: crwdns35393:0crwdne35393:0
+          description: crwdns35394:0crwdne35394:0
+          "Unplugged: Video Games and Coordinate Planes": crwdns35395:0crwdne35395:0
+          "Calc: Evaluation Blocks": crwdns35396:0crwdne35396:0
+          "Eval: Strings and Images": crwdns35397:0crwdne35397:0
+          "Unplugged: Contracts": crwdns35398:0crwdne35398:0
+          "Eval: Writing Contracts": crwdns35399:0crwdne35399:0
+          "Calc: Defining Variables": crwdns35400:0crwdne35400:0
+          "Play Lab: Defining Variables (Big Game)": crwdns35401:0crwdne35401:0
+          "Eval: Defining Functions": crwdns35402:0crwdne35402:0
+          "Unplugged: The Design Recipe": crwdns35403:0crwdne35403:0
+          "Play Lab: Defining Functions": crwdns35404:0crwdne35404:0
+          "Eval: Functions": crwdns35405:0crwdne35405:0
+          "Play Lab: Animation (Big Game)": crwdns35406:0crwdne35406:0
+          "Unplugged: Booleans": crwdns35407:0crwdne35407:0
+          "Eval: Boolean Operators": crwdns35408:0crwdne35408:0
+          "Play Lab: Booleans": crwdns35409:0crwdne35409:0
+          "Play Lab: Boolean (Big Game)": crwdns35410:0crwdne35410:0
+          "Unplugged: Conditionals and Piecewise Functions": crwdns35411:0crwdne35411:0
+          "Eval: Conditionals": crwdns35412:0crwdne35412:0
+          "Unplugged: Collision Detection and the Distance Formula": crwdns35413:0crwdne35413:0
+          "Play Lab: Collision Detection (Big Game)": crwdns35414:0crwdne35414:0
+          Evaluation Blocks: crwdns35415:0crwdne35415:0
+          Strings and Images: crwdns35416:0crwdne35416:0
+          Contracts: crwdns35417:0crwdne35417:0
+          Your Game - Defining Variables: crwdns35418:0crwdne35418:0
+          Simple Function Definition: crwdns35419:0crwdne35419:0
+          The Design Recipe: crwdns35420:0crwdne35420:0
+          Your Game - Animation: crwdns35421:0crwdne35421:0
+          Booleans: crwdns35422:0crwdne35422:0
+          Sam the Bat: crwdns35423:0crwdne35423:0
+          Your Game - Booleans: crwdns35424:0crwdne35424:0
+          Conditionals and Piecewise Functions: crwdns35425:0crwdne35425:0
+          Rocket-Height: crwdns35426:0crwdne35426:0
+          Design Recipe Practice: crwdns35427:0crwdne35427:0
+        algPDmiami:
+          title: crwdns35428:0crwdne35428:0
+          description: crwdns35429:0crwdne35429:0
+          Evaluation Blocks: crwdns35430:0crwdne35430:0
+          Strings and Images: crwdns35431:0crwdne35431:0
+          Rocket-Height: crwdns35432:0crwdne35432:0
+          Design Recipe Practice: crwdns35433:0crwdne35433:0
+          Your Game - Animation: crwdns35434:0crwdne35434:0
+          Booleans: crwdns35435:0crwdne35435:0
+          Sam the Bat: crwdns35436:0crwdne35436:0
+          Your Game - Booleans: crwdns35437:0crwdne35437:0
+          Luigi's Pizza: crwdns35438:0crwdne35438:0
+          "Play Lab: Collision Detection (Big Game)": crwdns35439:0crwdne35439:0
+          Your Game - Player Movement: crwdns35440:0crwdne35440:0
+          Your Game - Collision Detection: crwdns35441:0crwdne35441:0
+        text-compression:
+          title: crwdns35939:0crwdne35939:0
+          description: crwdns35940:0crwdne35940:0
+          Text Compression: crwdns35941:0crwdne35941:0
+        CSPPD:
+          new stage: crwdns36054:0crwdne36054:0
+          Introduction to PD: crwdns36055:0crwdne36055:0
+        CSPLessonSamples:
+          title: crwdns36056:0crwdne36056:0
+          description_short: crwdns36057:0crwdne36057:0
+          Lesson 14: crwdns36058:0crwdne36058:0
+          Lesson 15: crwdns36059:0crwdne36059:0

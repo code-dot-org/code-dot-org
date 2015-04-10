@@ -31,8 +31,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "الجمل"},
 "catVariables":function(d){return "المتغيرات"},
 "continue":function(d){return "أستمر"},
-"createHtmlBlock":function(d){return "إنشاء قطعة html"},
-"createHtmlBlockTooltip":function(d){return "إنشاء قطعة من HTML في التطبيق."},
+"container":function(d){return "إنشاء حاوية"},
+"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
 "finalLevel":function(d){return "تهانينا ! لقد قمت بحل اللغز الاخير."},
 "nextLevel":function(d){return "تهانينا ! لقد تم الانتهاء من اللغز."},
 "no":function(d){return "لا"},
@@ -47,5 +47,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "خطوة للداخل"},
 "stepOver":function(d){return "خطوة للأعلى"},
 "stepOut":function(d){return "خطوة للخارج"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "عرض البيانات"},
 "yes":function(d){return "نعم"}};

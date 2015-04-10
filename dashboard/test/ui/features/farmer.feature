@@ -31,7 +31,7 @@ Scenario: Winning the first level
   And I press "continue-button"
   Then I see "#x-close"
   And element ".dialog-title" has text "Puzzle 2 of 11"
-  Then check that I am on "http://learn.code.org/s/1/level/48"
+  Then check that I am on "http://learn.code.org/s/20-hour/stage/9/puzzle/2"
 
 @no_mobile
 Scenario: Losing the first level

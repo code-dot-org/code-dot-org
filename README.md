@@ -118,6 +118,8 @@ You can use `rake build:apps` and `rake build:blockly_core` to build a specific 
 
 You can also set `build_dashboard: false` and/or `build_pegasus: false` in `locals.yml` if you don't need to build these frequently. They default to `true`.
 
+Alternatively, you can run: `rake build:core_and_apps_dev`, which will build blockly core and the apps bundle without running tests and without localization.
+
 ## Contributing
 
 We'd love to have you join our group of contributors!

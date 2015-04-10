@@ -8,8 +8,8 @@
   "catText":"الجمل",
   "catVariables":"المتغيرات",
   "continue":"أستمر",
-  "createHtmlBlock":"إنشاء قطعة html",
-  "createHtmlBlockTooltip":"إنشاء قطعة من HTML في التطبيق.",
+  "container":"إنشاء حاوية",
+  "containerTooltip":"Creates a division container and sets its inner HTML.",
   "finalLevel":"تهانينا ! لقد قمت بحل اللغز الاخير.",
   "nextLevel":"تهانينا ! لقد تم الانتهاء من اللغز.",
   "no":"لا",
@@ -24,6 +24,6 @@
   "stepIn":"خطوة للداخل",
   "stepOver":"خطوة للأعلى",
   "stepOut":"خطوة للخارج",
-  "viewData":"View Data",
+  "viewData":"عرض البيانات",
   "yes":"نعم"
 }

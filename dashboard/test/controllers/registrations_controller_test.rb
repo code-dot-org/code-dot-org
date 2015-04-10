@@ -24,7 +24,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       gender: 'F',
                       age: '13',
                       user_type: 'student'}
-      
+
     post :create, user: student_params
 
     assert_redirected_to '/'
@@ -41,7 +41,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                         gender: 'F',
                         age: '13',
                         user_type: 'student'}
-      
+
       assert_creates(User) do
         post :create, user: student_params
       end
@@ -66,7 +66,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                         gender: 'F',
                         age: '9',
                         user_type: 'student'}
-      
+
       assert_creates(User) do
         post :create, user: student_params
       end
@@ -90,7 +90,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       gender: 'F',
                       age: '',
                       user_type: 'student'}
-    
+
     assert_does_not_create(User) do
       post :create, user: student_params
     end
@@ -106,7 +106,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       gender: 'F',
                       age: '',
                       user_type: 'teacher'}
-    
+
     assert_does_not_create(User) do
       post :create, user: teacher_params
     end
@@ -121,7 +121,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       email: nil,
                       user_type: 'student',
                       age: '10'}
-    
+
     assert_does_not_create(User) do
       post :create, user: student_params
     end
@@ -130,13 +130,13 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create requires case insensitive unique email" do
-    existing = create(:student, email: 'not_a@unique.email')
+    create(:student, email: 'not_a@unique.email')
     student_params = {name: "A name",
                       password: "apassword",
                       email: 'Not_A@unique.email',
                       user_type: 'student',
                       age: '10'}
-    
+
     assert_does_not_create(User) do
       post :create, user: student_params
     end
@@ -151,7 +151,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       sign_in student
 
       post :update, user: {age: 9}
-    
+
       assert_equal Date.today - 9.years, assigns(:user).birthday
     end
   end
@@ -166,7 +166,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       sign_in student
 
       post :update, user: {age: {"Pr" => nil}}
-    
+
       # did not change
       assert_equal '1981-03-24', assigns(:user).birthday.to_s
     end

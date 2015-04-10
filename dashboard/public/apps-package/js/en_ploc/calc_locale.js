@@ -154,13 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "!!-compute-!!"},
-"emptyComputeBlock":function(d){return "!!-You must attach a block to the \"compute\" block.-!!"},
-"emptyFunctionalBlock":function(d){return "!!-You have a block with an unfilled input.-!!"},
+"divideByZeroError":function(d){return "!!-Your program results in division by zero.-!!"},
+"emptyComputeBlock":function(d){return "!!-You must attach a block to the \"evaluate\" block.-!!"},
 "equivalentExpression":function(d){return "!!-Try reordering your arguments to get exactly the same expression.-!!"},
-"extraTopBlocks":function(d){return "!!-You have unattached blocks. Did you mean to attach these to the \"compute\" block?-!!"},
+"evaluate":function(d){return "!!-evaluate-!!"},
+"extraTopBlocks":function(d){return "!!-You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?-!!"},
 "failedInput":function(d){return "!!-Your function does not return the right result for all values.-!!"},
 "goal":function(d){return "!!-Goal:-!!"},
 "levelIncompleteError":function(d){return "!!-Your expression does not match the goal.-!!"},
+"missingFunctionError":function(d){return "!!-You must define a function named "+appLocale.v(d,"functionName")+".-!!"},
+"missingVariableX":function(d){return "!!-Your expression is missing variable "+appLocale.v(d,"var")+".-!!"},
 "reinfFeedbackMsg":function(d){return "!!-Here is your calculation! Continue working on it, or move on to the next puzzle!-!!"},
-"yourExpression":function(d){return "!!-Your expression:-!!"}};
+"yourExpression":function(d){return "!!-Your expression:-!!"},
+"wrongInput":function(d){return "!!-You are calling your function with the wrong value.-!!"},
+"wrongOtherValuesX":function(d){return "!!-Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+".-!!"},
+"wrongResult":function(d){return "!!-Your expression does not return the correct result.-!!"}};

@@ -1,9 +1,17 @@
 {
-  "compute": "laskea",
+  "divideByZeroError": "Ohjelmasi johtaa nollalla jakamiseen.",
+  "emptyComputeBlock": "Liitä lohko \"laske\"-lohkoon.",
   "equivalentExpression": "Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen.",
+  "evaluate": "arvioi",
   "extraTopBlocks": "Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla.",
   "goal": "Tavoite:",
-  "reinfFeedbackMsg": "Tässä on tarinasi! Jatka sen työstämistä, tai siirry seuraavaan tehtävään!",
-  "yourExpression": "Lausekkeesi:"
+  "levelIncompleteError": "Lausekkeesi ei vastaa tavoitetta.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Lausekkeestasi puuttuu muuttuja {var}.",
+  "reinfFeedbackMsg": "Tässä on laskelmasi! Jatka sen työstämistä tai siirry  seuraavaan tehtävään!",
+  "yourExpression": "Lausekkeesi:",
+  "wrongInput": "Kutsut funktiotasi väärällä arvolla.",
+  "wrongOtherValuesX": "Lausekkeesi johtaa väärään arvoon, jos muutamme {var}.",
+  "wrongResult": "Lausekkeesi ei palauta oikeaa tulosta."
 }

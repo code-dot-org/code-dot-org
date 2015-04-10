@@ -99,12 +99,12 @@ ro:
         Jigsaw: Puzzle
         MazeStep: Modul Pas Labirint
         Wordsearch: Cautare de cuvinte
-        Webapp: App Lab
+        Webapp: Laboratului Aplicației
         ArtistEC: Artistul
         TextMatch: Potrivire de text
         StudioEC: Laborator de Joacă
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: Laboratului Aplicației
+        NetSim: Simulator Internet
     trophy:
       name:
         Bronze: Bronz
@@ -203,7 +203,7 @@ ro:
         turtle_3_5: 'Acum creează o nouă funcție "desenează o casă" şi utilizeaz-o pentru a găzdui două pisici. Sugestie: creează o nouă funcţie folosind blocul "fă ceva" şi introdu propriul text pentru a denumi blocul.'
         turtle_3_6: 'Folosind "desenează un pătrat" de exemplu, adaugă un input numit "lungime" la "desenează un triunghi". Apoi, desenează triunghiuri în dimensiuni diferite. (Sugestie: fă clic pe stea pentru a adăuga o intrare la o funcție)'
         turtle_3_7: 'Adaugă un input numit "lungime" la "desenează o casă" și contruiește o casă mare pentru elefant (cu margini de 150 de pixeli lungime)'
-        turtle_3_8: 'Aici sunt toate blocurile de la puzzle-ul anterior.  Modifică "desenează o casă" astfel încât să ajung până în colţul de jos din dreapta după ce am desenat o casa nouă. Utilizează această funcţie modificată să desenezi trei case.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Poţi re-crea funcţia "desenează o casă" fără ajutor? Încearc-o, și apoi desenează un rând de case.'
         turtle_3_10: Ai învăţat o mulţime! Acum folosește-ți cunoștințele pentru a desena tot ce vrei. Încercă să deseni o stea, sau o spirală sau un fulg de nea sofisticat.
         maze_karel_debug_seq_1: Bine ai venit la depanare! Codul meu nu funcţionează corect. Poţi descoperi problema şi să o repari astfel încât să pot obţine un teren plat şi gata de plantare?
@@ -244,7 +244,7 @@ ro:
         flappy_6: Verifică dacă încă mai poți înscrie un punct după ce-l faci pe Flappy să dea din aripi mai mult sau mai puțin.
         flappy_7: 'Apoi, încercaţi să schimbaţi scena prin ataşarea unui alt bloc la blocul "atunci când rulaţi".'
         flappy_8: Poți seta vizuale oricând, nu doar atunci când începe jocul. Încearcă să setezi o scenă aleatorie când alte incidente se întâmplă.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: Pentru diversitate, în locul opririi jocului, încearcă setarea scorului la 0 atunci când lovești un obstacol.
         flappy_11: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele lor.
         flappy_k1_1: Joacă Flappy
         flappy_k1_2: 'Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul". Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.'
@@ -324,81 +324,10 @@ ro:
         maze_wordsearch_k_15: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEASUPRA
         maze_wordsearch_k_16: Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului DEDESUBT
         maze_wordsearch_k_20: Acesta este un test! Mișcați-mă într-un sens, apoi în celălalt ca să spun literele cuvântului POVESTE
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Crează-ți propria aplicație folosind blocurile din bara de unelte.
         turtle_ec_1_2: 'Acum, desenați un pătrat. Atenție: folosți culoarea favorită alegând-o din noul bloc ”penColor”.'
         turtle_ec_1_10: 'Ați reușit! Acum, desenați orice doriți. Unele idei distractive: o figură băţ, fulg de nea sau spirală. Încercați, de asemenea, noul bloc "penWidth". Distracţie plăcută!'
         studio_ec_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
-    levelbuilder:
-      frozen line:
-        instructions: Salutare! Eu sunt Elsa din Arendelle. Ajutați-mă să creez o singură linie.
-      frozen perpendicular:
-        instructions: Acum să vedem dacă putem crea două linii care formează un unghi de 90 de grade. Va trebui să folosiți blocuri ”Rotește” și ”Mișcă”.
-      frozen square iterative:
-        instructions: Se pare că am parcurs jumătate de drum în crearea unui pătrat. Să punem 4 linii împreună pentru a crea un pătrat.
-      frozen square loop:
-        instructions: Salutare, eu sunt Anna din Arendelle! Haideți să facem un pătrat cu blocul repetă, care folosește mai puține blocuri. De câte ori (???) ar trebui să reia blocul ”Repetă” blocurile din interior pentru a face un pătrat?
-      frozen square loop 3x:
-        instructions: Haideți să creăm trei pătrate, rotind după fiecare pătrat. Asigurați-vă că rotiți cu 120 de grade înainte de fiecare pătrat nou.
-      frozen square snowflake:
-        instructions: Puteți să creați un fulg de nea folosind blocul ”Repetă” pentru a face un pătrat de 10 ori și blocul ”Rotește” să rotească 36 de grade între pătrate?
-      frozen cross:
-        instructions: 'Utilizaţi blocul "Repetă" pentru a crea un semn plus. Ați observat că Elsa se poate muta înainte şi înapoi?'
-      frozen cross rotate:
-        instructions: Acum, încercaţi să îl repetați de 10 ori. Câte grade trebuie să rotiți după fiecare linie?
-      frozen cross rotate dense:
-        instructions: 'Haideți să îl repetăm de 90 de ori! De câte ori intră 90 în 360? Sugestie: Este un număr chiar foarte mic.'
-      frozen diamond:
-        instructions: 'Haideți să creăm un paralelogram. Este chiar ca un pătrat dar are unghiuri diferite: unghiuri de 60 și 120 de grade în loc de unghiuri de 90 de grade.'
-      frozen diamond mini snowflake:
-        instructions: 'Ştiaţi că fiecare fulg de nea are o formă diferită? Haideți să creăm un nou fulg de nea utilizând blocul "Repetă" pentru a repeta un paralelogram de 4 ori, rontind la dreapta 90 de grade după fiecare paralelogram.'
-      frozen diamond snowflake:
-        instructions: Acum, haideți să creăm un nou fulg de zăpadă utilizând blocul de repetare pentru a repeta un paralelogram de 10 ori, rotind la dreapta 36 de grade după fiecare dintre ele.
-      frozen circle:
-        instructions: Un cerc este o formă specială. Puteți să vă dați seama cu ce număr să înlocuim semnul de întrebare pentru a desena un cerc?
-      frozen circle function:
-        instructions: 'Utilizaţi noul bloc "Creare cerc" pentru a crea 10 cercuri suprapuse. Nu uitaţi să săriți în față între cercuri.'
-      frozen circle function in circle:
-        instructions: Acum haideți să creăm 20 de cercuri suprapuse, rotind 18 grade după fiecare cerc.
-      frozen circle function with parameter:
-        instructions: 'Aici este un bloc "Creare cerc", care poate face cercuri de diferite dimensiuni. Îl puteţi folosi pentru a crea un mic cerc de dimensiunea 5 şi un cerc mai mare de dimensiune 10?'
-      frozen snowflower:
-        instructions: Se pot crea modele complicare de zăpadă cu forme foarte simple. Puteți face un model repetând 5 cercuri de dimensiune 5 și 5 cercuri de dimensiune 10?
-      frozen snowflake branch:
-        instructions: 'Încercaţi să utilizaţi blocul "Creare ramură de fulg de nea" pentru a crea trei ramuri, care încep să arate ca un fulg de nea.'
-      frozen snowflake full:
-        instructions: Acum haideţi să îl repetăm de 8 ori pentru a face un frumos fulg de nea!
-      frozen freeplay:
-        instructions: Aţi devenit oficial un artist maestru! Creați un paradis de iarnă.
-      scrat 16:
-        instructions: 'Ghindă! Ghindă! Ghindă! Utilizaţi un bloc "dacă" pentru a mă acolo cu cel mai mic număr de blocuri.'
-      scrat 17:
-        instructions: 'OK, haideți să exersăm din nou - nu este foarte diferit, dar uitați-vă după perete!'
-      scrat 18:
-        instructions: 'Blocurile "dacă-altfel" verifică o condiţie, şi apoi execută un lucru sau altul. Pentru a mă duce la ghindă încercaţi să utilizaţi acest bloc nou.'
-      scrat 19:
-        instructions: 'Încă un exercițiu de practică cu blocul "dacă-altfel", poate reușești chiar prima încercare?'
-      scrat 20:
-        instructions: Puteți să mai adăugați doar 3 blocuri pentru a mă ajuta să rezolv un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice traseu curbat, indiferent de lungime. Uraaa! Gheața se topește!
-      Standalone_Artist_1:
-        instructions: Bine ați venit la Artist! În primul rând, să încercăm să facem un pătrat simplu folosind blocul rotește la dreapta şi blocul Mutare înainte. Fiecare latură ar trebui să aibă lungimea de 100 pixeli.
-      Standalone_Artist_2:
-        instructions: Desenaţi acest diamant cu unghiuri de 120 şi 60 de grade şi laturile de lungimi 150 pixeli.
-      Standalone_Artist_3:
-        instructions: Puteţi desena acest hexagon cu laturi de 100 pixeli şi rotiri de 60 grade?
-      Standalone_Artist_4:
-        instructions: Acum ați obținut un bloc nou cu care să vă jucați într-o repetiție. Acesta va repeta un set de comenzi. Ce se întâmplă dacă repetați aceste comenzi de 6 ori?
-      Standalone_Artist_5:
-        instructions: De câte ori aveți nevoie să repetați acest diamant pentru a desena floarea?
-      Standalone_Artist_5.5:
-        instructions: 'Observaţi cum am simplificat codul diamantului transformându-l într-o repetiție. Puteți să repetați întreaga secvență de 12 ori pentru a desena floarea. Sugestie: Veţi avea nevoie să rotiți cu 30 de grade, după repetiția diamantului dvs. astfel încât vă nu desenați tot peste acelaşi diamant.'
-      Standalone_Artist_6:
-        instructions: 'Buclează acest cod hexagon de 6 ori pentru a crea designul. Cu câte grade va trebui să rotești de fiecare dată? Indiciu: împarte numărul de grade într-un cerc la numărul de câte ori buclezi.'
-      Standalone_Artist_7:
-        instructions: 'O funcţie este un alt instrument de programare care a vă ajută să evitați repetarea. Această funcţie desenează o floare, astfel încât o puteţi folosi oricând vrei să desenați o floare. Utilizaţi această funcție şi bloc nou "Salt" pentru a să desena mai multe flori. Sugestie: Florile sunt de aproximativ 150 pixeli'
-      Standalone_Artist_8:
-        instructions: 'Aici este o funcţie numită "Desenează o forma", pe care noi am programat-o să elaboreze hexagoane. Rulează codul pentru a vedea ce face şi apoi experimentează utilizând funcția pentru a vedea ce se întâmplă. Poţi să se elaboreze un model de pătrate, triunghiuri sau octagoane?'
-      Standalone_Artist_9:
-        instructions: Acum mergeţi mai departe şi creați orice imagine doriţi! Ai chiar şi o funcţie de gol cu care poți face ce vrei!
     video:
       name:
         maze_intro: Intro Labirint
@@ -458,6 +387,7 @@ ro:
         C2_relay_programming: Programare de releu
         C2_paper_airplanes: Avioane de hârtie
         C2_digital_footprint: Amprenta ta Digitală
+        C2_digital_footprint_v2: Amprenta ta Digitală
         C3_maze_level_4: Bucle de Labirint
         C3_artist_intro: 'Intro Artist '
         C3_artist_functions: Funcţii de Artist
@@ -486,7 +416,7 @@ ro:
         C4_function_create: Crearea de funcții
         C4_function_parameters: Funcții cu Parametrii
         C4_conditionals: Condiţionale
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: Algoritmi cu Tangrame
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variabile în plicuri
         C4_unplugged_forloops: Repetiții Pentru
@@ -497,7 +427,22 @@ ro:
         frozen_functions: Introducere în Funcții
         playlab_intro: Introducere in Play Lab
         playlab_events: Joaca Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_repeat_forever: 'Laboratorul de joacă: Repetă la nesfârșit'
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Blocuri de evaluare
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabile
+        msm_7_functions: Funcţii
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: 'Trage un bloc "mutare" şi fixează-l sub alt bloc'
@@ -564,3 +509,7 @@ ro:
         arrows_move_actor: Utilizează săgețile pentru a muta actorul
         right_arrow_fireball: Utilizează săgeata dreapta pentru a trage mingiile de foc
         name_function: Scrie numele funcției aici
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

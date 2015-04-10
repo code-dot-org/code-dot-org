@@ -206,7 +206,7 @@ sr:
         turtle_3_5: 'А сада, креирај нову "draw a house(нацртај кућу)" функцију и искористи је да удомиш две мачке. Напомена: Креирај нову функцију користећи "do something(уради нешто)" блок, и унеси свој текст како бих дао име блоку.'
         turtle_3_6: 'Користите  "draw a square(нацртај квадрат)" као пример, додајте унос кутију назван "length(дужина)" како бих сте нацртали троугао. Затим, нацртајте троуглове различитих величина.(Напомена: кликни на звезду како бих додали унос кутију у функцији)'
         turtle_3_7: 'Додај унос назван "length"(дужина) да бих "нацртао кућу" и направио велику кућу за слона (са ивицама од 150 пиксела дужине)'
-        turtle_3_8: 'Ево их сви блокови из прошле загонетке. Измени "draw a house(нацртај кућу)" функцију, тако да ја завршим у доњем десном углу по завршетку цртања нове куће. Користи измењену функцију да нацрташ три куће.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Можеш ли реконструисати  "draw a house (нацртај кућу)" функцију, без ичије помоћи? Покушај, а затим нацртај ред кућа.'
         turtle_3_10: 'Много сте научили! А сада искористите то знање да нацртате шта год пожелите. Покушајте да нацртате звезду, или спиралу, или кул пахуљицу. '
         maze_karel_debug_seq_1: 'Добро дошао у дебаговање!  Мој код не ради како бих требало. Можеш ли одкрити проблем и  исправити га, тако да могу да поравнам своје поље како бих било спремно за сејање?'
@@ -338,83 +338,6 @@ sr:
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-    levelbuilder:
-      frozen line:
-        instructions: "Hi! I'm Elsa of Arendelle. Help me create a single line."
-      frozen perpendicular:
-        instructions: |-
-          Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the "Turn" block as well as the "Move" block.
-      frozen square iterative:
-        instructions: "It seems like we're halfway to making a square. Let's put 4 lines together to create a square."
-      frozen square loop:
-        instructions: |-
-          Hi, I'm Anna of Arendelle! Let's make a square with the "Repeat" block, which uses fewer blocks. How many times (???) should the "Repeat" block loop the blocks inside it to make a square?
-      frozen square loop 3x:
-        instructions: "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square."
-      frozen square snowflake:
-        instructions: 'Can you create a snowflake using the "Repeat" block to make a square 10 times, and the "Turn" block to turn 36 degrees between each square?'
-      frozen cross:
-        instructions: 'Use the "Repeat" block to create a plus sign. Did you notice Elsa can move forward and backward?'
-      frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need to turn between each line?
-      frozen cross rotate dense:
-        instructions: "Let's repeat it 90 times! How many times does 90 go into 360? Hint: It's a really small number."
-      frozen diamond:
-        instructions: "Let's create a parallelogram. It's just like a square but has different angles: 60 and 120 degree angles instead of 90 degree angles."
-      frozen diamond mini snowflake:
-        instructions: |-
-          Did you know every snowflake is a different shape? Let's create a new snowflake by using the "Repeat" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.
-      frozen diamond snowflake:
-        instructions: "Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one."
-      frozen circle:
-        instructions: A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?
-      frozen circle function:
-        instructions: |-
-          Use the new "Create a circle" block to create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle function in circle:
-        instructions: "Now let's create 20 overlapping circles, turning 18 degrees between each circle."
-      frozen circle function with parameter:
-        instructions: |-
-          Here's a "Create circle" block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?
-      frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?
-      frozen snowflake branch:
-        instructions: 'Try using the "Create a snowflake branch" block to create three branches, which starts to look like a snowflake.'
-      frozen snowflake full:
-        instructions: "Now let's repeat it 8 times to make a beautiful snowflake!"
-      frozen freeplay:
-        instructions: "You've officially become a master artist! Create a winter wonderland."
-      scrat 16:
-        instructions: 'Acorn! Acorn! Acorn! Use an "if" block to get me there with the fewest number of blocks.'
-      scrat 17:
-        instructions: "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!"
-      scrat 18:
-        instructions: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block.'
-      scrat 19:
-        instructions: 'Још једна вежба "ако-иначе" блока, можеш ли је урадити како треба из првог пута?'
-      scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!
-      Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
-      Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
-      Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
-      Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
-      Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
-      Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
     video:
       name:
         maze_intro: Лавиринт увод-представљање
@@ -474,6 +397,7 @@ sr:
         C2_relay_programming: Релејно Програмирање
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint_v2: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: Уметник Увод
         C3_artist_functions: Artist Functions
@@ -514,6 +438,21 @@ sr:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Променљиве
+        msm_7_functions: Функције
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
@@ -581,3 +520,7 @@ sr:
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

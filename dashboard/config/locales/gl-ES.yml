@@ -22,6 +22,7 @@
           future: No puede ser en el futuro
   hello: Hola mundo
   welcome_back: Bienvenido, %{name}
+  submit: Submit
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -265,6 +266,7 @@
         artist: Dibujar algo
     user:
       classroom: Página de inicio del maestro
+      district_dashboard: District Dashboard
       label: Hola %{username}
       stats: Mi progreso
       settings: Mi cuenta
@@ -352,6 +354,8 @@
       de %{student_name}'
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Reenviar las instrucciones de confirmación
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
@@ -522,6 +526,9 @@
         nuestros usuarios
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!
@@ -558,6 +565,14 @@
     wrong_body: La solución ingresada no es la correcta.  ¡Intenta nuevamente!
     correct_title: Correcto
     correct_body: Esa respuesta es la correcta.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Escribe aquí tu respuesta
   dialog:
@@ -612,11 +627,48 @@
     en nuestro sitio de soporte. Puedes navegar <a href="http://support.code.org">support.code.org</a>
     sin registrarte o pedir a tus padres o maestros que nos contacten en tu nombre.
   progress:
-    not_completed: No completado
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completado, pero tiene demasiados bloques
     completed_perfect: completado, perfecto
     furthest_level_attempted: Nivel más alto intentado
+    assessment: assessment
   studio:
     courses_working_on: Cursos en los que estás participando
     completed_courses: Cursos finalizados
     all_courses: Todos los cursos
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Save
+    delete: Delete
+    exit: Return to Course
+    my_projects: My Projects
+    share: Share
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: More
+    name: Name
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Delete?
+    delete_yes: 'Yes'
+    delete_no: 'No'
+    saved: Saved
+    not_saved: Not saved
+    cancel: Cancel
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

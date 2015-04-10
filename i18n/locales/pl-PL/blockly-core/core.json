@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"wywołaj",
   "ADD":"Dodaj",
   "ADD_COMMENT":"Dodaj Komentarz",
   "ADD_PARAMETER":"Dodaj Parametr",
@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED":"czerwony",
   "COLOUR_RGB_TITLE":"pomaluj",
   "COLOUR_RGB_TOOLTIP":"Utwórz kolor z określoną ilość czerwonego, zielonego i niebieskiego.  Wszystkie wartości muszą być między 0 i 100.",
+  "CONTRACT_EDITOR_HEADER":"Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"wyjdź z pętli",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"przejdź do kolejnej iteracji pętli",

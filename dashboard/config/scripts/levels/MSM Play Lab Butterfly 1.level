@@ -40,7 +40,7 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="n"/>
-            <outputtype>boolean</outputtype>
+            <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-left</title>
           <functional_input name="STACK">

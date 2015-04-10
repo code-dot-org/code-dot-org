@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "គិត​លេខ"},
+"divideByZeroError":function(d){return "កម្មវិធី​របស់​អ្នក​ផ្ដល់​លទ្ធផល​ដែល​ចែក​ដោយ​សូន្យ។"},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "សូមព្យាយាម ធ្វើការរៀបចំ អំណះអំណាងរបស់អ្នកដើម្បីទទួលបានកន្សោមពិតដូចគ្នា។"},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "អ្នកមានប្លុក មិនជាប់គ្នា មួយ។ តើអ្នកចង់មានន័យថាការភ្ជាប់ទាំងនេះទៅប្លុក \"គណនា\"មែនទេ?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "គោលដៅ៖"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "រឿងរបស់អ្នកនៅទីនេះគឺ! បន្តធ្វើការលើវាឬប្តូទៅផ្ដុំរូបបន្ទាប់!"},
-"yourExpression":function(d){return "កន្សោម​របស់​អ្នក៖"}};
+"yourExpression":function(d){return "កន្សោម​របស់​អ្នក៖"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

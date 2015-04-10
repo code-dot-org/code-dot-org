@@ -11,7 +11,7 @@ class Follower < ActiveRecord::Base
   def cannot_follow_yourself
     errors.add(:student_user_id, "can't be yourself") if student_user_id == user_id
   end
-  
+
   def teacher_must_be_teacher
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
   end
@@ -19,7 +19,7 @@ class Follower < ActiveRecord::Base
   def section_must_belong_to_teacher
     errors.add(:section_id, "must belong to teacher") unless user_id == user.id
   end
-  
+
   validate :cannot_follow_yourself, :teacher_must_be_teacher, :section_must_belong_to_teacher
 
   validates_presence_of :user, :student_user, :section

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({154:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({212:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./blocks":148,"./levels":153,"./skins":156,"./studio":157}],157:[function(require,module,exports){
+},{"../appMain":5,"./blocks":204,"./levels":211,"./skins":216,"./studio":217}],217:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -40,16 +40,23 @@ var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var BigGameLogic = require('./bigGameLogic');
+var RocketHeightLogic = require('./rocketHeightLogic');
+var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
+var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 
-if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
-  var rgbcolor = require('../canvg/rgbcolor.js');
-  var stackBlur = require('../canvg/StackBlur.js');
-  var canvg = require('../canvg/canvg.js');
-  var svgToDataUrl = require('../canvg/svg_todataurl');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  // Loading these modules extends SVGElement and puts canvg in the global
+  // namespace
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/canvg.js');
+  require('../canvg/svg_todataurl');
 }
 
 var Direction = constants.Direction;
@@ -89,15 +96,6 @@ var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
 // if we name a projectile class 'left' for example.
-
-var ProjectileClassNames = [
-  'blue_fireball',
-  'purple_fireball',
-  'red_fireball',
-  'purple_hearts',
-  'red_hearts',
-  'yellow_hearts',
-];
 
 var EdgeClassNames = [
   'top',
@@ -177,9 +175,11 @@ function loadLevel() {
     case 'Big Game':
       Studio.customLogic = new BigGameLogic(Studio);
       break;
-    case 'SamTheButterfly':
-      // Going forward, we may also want to move Sam the Butterfly logic
-      // into code
+    case 'Rocket Height':
+      Studio.customLogic = new RocketHeightLogic(Studio);
+      break;
+    case 'Sam the Bat':
+      Studio.customLogic = new SamBatLogic(Studio);
       break;
   }
 
@@ -251,6 +251,16 @@ var drawMap = function () {
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
     svg.appendChild(tile);
+  }
+
+  if (level.coordinateGridBackground) {
+    studioApp.createCoordinateGridBackground({
+      svg: 'svgStudio',
+      origin: 0,
+      firstLabel: 100,
+      lastLabel: 300,
+      increment: 100
+    });
   }
 
   if (Studio.spriteStart_) {
@@ -586,6 +596,20 @@ function callHandler (name, allowQueueExtension) {
   });
 }
 
+/**
+ * This is a little weird, but is effectively a way for us to call api code
+ * (i.e. the methods in studio/api.js) so that we can essentially simulate
+ * generated code. It does this by creating an event handler for the given name,
+ * calling the handler - which results in func being executed to generate a
+ * command queue - and then executing the command queue.
+ */
+Studio.callApiCode = function (name, func) {
+  registerEventHandler(Studio.eventHandlers, name, func);
+  // generate the cmdQueue
+  callHandler(name);
+  Studio.executeQueue(name);
+};
+
 Studio.onTick = function() {
   Studio.tickCount++;
 
@@ -705,9 +729,17 @@ Studio.onTick = function() {
 
     var isWalking = true;
 
-    // After 5 ticks of no movement, turn sprite forward
+    // After 5 ticks of no movement, turn sprite forward.
     if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      isWalking = false;
+    }
+
+    // Also if the character has never moved, they are also not walking.
+    // Separate to the above case because we don't want to force them to
+    // face south in this case.  They are still allowed to face a different
+    // direction even if they've never walked.
+    if (Studio.sprite[i].lastMove === Infinity) {
       isWalking = false;
     }
 
@@ -856,8 +888,8 @@ function checkForCollisions() {
     for (j = 0; j < EdgeClassNames.length; j++) {
       executeCollision(i, EdgeClassNames[j]);
     }
-    for (j = 0; j < ProjectileClassNames.length; j++) {
-      executeCollision(i, ProjectileClassNames[j]);
+    for (j = 0; j < skin.ProjectileClassNames.length; j++) {
+      executeCollision(i, skin.ProjectileClassNames[j]);
     }
   }
 }
@@ -1042,14 +1074,15 @@ Studio.init = function(config) {
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
 
+  var showFinishButton = !level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: finishButtonFirstLine
+    finishButton: finishButtonFirstLine && showFinishButton
   });
   var extraControlsRow = require('./extraControlRows.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine
+    finishButton: !finishButtonFirstLine && showFinishButton
   });
 
   config.html = page({
@@ -1062,7 +1095,8 @@ Studio.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      inputOutputTable: level.inputOutputTable
     }
   });
 
@@ -1127,18 +1161,21 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = studioApp.assetUrl('media/promo.png');
 
-  // Disable "show code" button in feedback dialog and workspace.
+  // Disable "show code" button in feedback dialog and workspace if blockly.
   // Note - if turned back on, be sure it remains hidden when config.level.embed
-  config.enableShowCode = false;
+  config.enableShowCode = utils.valueOr(studioApp.editCode, false);
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
+  config.dropletConfig = dropletConfig;
 
   Studio.initSprites();
 
   studioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+  if (finishButton) {
+    dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+  }
 
   // pre-load images asynchronously
   // (to reduce the likelihood that there is a delay when images
@@ -1166,8 +1203,8 @@ var preloadBackgroundImages = function() {
 };
 
 var preloadProjectileImages = function() {
-  for (var i = 0; i < ProjectileClassNames.length; i++) {
-    preloadImage(skin[ProjectileClassNames[i]]);
+  for (var i = 0; i < skin.ProjectileClassNames.length; i++) {
+    preloadImage(skin[skin.ProjectileClassNames[i]]);
   }
 };
 
@@ -1221,6 +1258,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
 studioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  var svg = document.getElementById('svgStudio');
 
   // Soft buttons
   var softButtonCount = 0;
@@ -1238,6 +1276,10 @@ studioApp.reset = function(first) {
     var projectile = Studio.projectiles.pop();
     projectile.removeElement();
   }
+
+  // True if we should fail before execution, even if freeplay
+  Studio.preExecutionFailure = false;
+  Studio.message = null;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1310,8 +1352,6 @@ studioApp.reset = function(first) {
     }
   }
 
-  var svg = document.getElementById('svgStudio');
-
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
     goalAsset = skin[level.goalOverride.goal];
@@ -1355,7 +1395,8 @@ studioApp.runButtonClick = function() {
   Studio.startTime = new Date();
   Studio.execute();
 
-  if (level.freePlay && (!studioApp.hideSource || level.showFinish)) {
+  if (level.freePlay && !level.isProjectLevel &&
+      (!studioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -1375,13 +1416,15 @@ var displayFeedback = function() {
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
+      tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && (level.freePlay),
+      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      message: Studio.message,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
@@ -1481,7 +1524,7 @@ var registerHandlersWithMultipleSpriteParams =
                        blockParam2,
                        String(j));
     }
-    ProjectileClassNames.forEach(registerHandlersForClassName);
+    skin.ProjectileClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_actor');
@@ -1520,29 +1563,50 @@ var nativeGetCallback = function () {
 };
 
 /**
+ * Looks for failures that should prevent execution.
+ * @returns {boolean} True if we have a pre-execution failure
+ */
+Studio.checkForPreExecutionFailure = function () {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Studio.message = commonMsg.emptyFunctionalBlock();
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  if (studioApp.hasExtraTopBlocks()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the story
  */
 Studio.execute = function() {
-  var code;
   Studio.result = studioApp.UNSET;
   Studio.testResults = TestResults.NO_TESTS_RUN;
   Studio.waitingForReport = false;
   Studio.response = null;
-  var i;
-
-  if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
-    code += studioApp.editor.getValue();
-  }
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
+    if (Studio.checkForPreExecutionFailure()) {
+      return Studio.onPuzzleComplete();
+    }
+
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -1569,7 +1633,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
+    var codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
@@ -1589,9 +1653,10 @@ Studio.execute = function() {
 
 
       var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-      var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                     nativeGetCallback,
-                                                     null);
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: nativeGetCallback,
+      });
       interpreter.setProperty(scope,
                               'getCallback',
                               interpreter.createNativeFunction(wrapper));
@@ -1618,7 +1683,7 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function() {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (level.freePlay) {
+  } else if (level.freePlay && !Studio.preExecutionFailure) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -1631,7 +1696,10 @@ Studio.onPuzzleComplete = function() {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Studio.testResults = TestResults.FREE_PLAY;
+    if (!Studio.preExecutionFailure) {
+      Studio.testResults = TestResults.FREE_PLAY;
+    }
+    // If preExecutionFailure testResults should already be set
   } else {
     Studio.testResults = studioApp.getTestResults(levelComplete);
   }
@@ -1670,7 +1738,9 @@ Studio.onPuzzleComplete = function() {
     });
   };
 
-  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') { // don't try it if function is not defined
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
     document.getElementById('svgStudio').toDataURL("image/png", {
@@ -1799,6 +1869,16 @@ Studio.displaySprite = function(i, isWalking) {
   var xOffset, yOffset;
 
   if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
+
+    // One exception: don't show the walk sprite if we're already playing an explosion animation for
+    // that sprite.  (Ideally, we would show the sprite in place while explosion plays over the top,
+    // but this is not a common case for now and this keeps the change small.)
+    var explosion = document.getElementById('explosion' + i);
+    if (explosion && explosion.getAttribute('visibility') !== 'hidden') {
+      spriteWalkIcon.setAttribute('visibility', 'hidden');
+      return;
+    }
+
     // Show walk sprite, and hide regular sprite.
     spriteRegularIcon.setAttribute('visibility', 'hidden');
     spriteWalkIcon.setAttribute('visibility', 'visible');
@@ -2060,8 +2140,13 @@ Studio.callCmd = function (cmd) {
 
 Studio.vanishActor = function (opts) {
   var svg = document.getElementById('svgStudio');
+
   var sprite = document.getElementById('sprite' + opts.spriteIndex);
-  if (!sprite || sprite.getAttribute('visibility') === 'hidden') {
+  var spriteShowing = sprite && sprite.getAttribute('visibility') !== 'hidden';
+  var spriteWalk = document.getElementById('spriteWalk' + opts.spriteIndex);
+  var spriteWalkShowing = spriteWalk && spriteWalk.getAttribute('visibility') !== 'hidden';
+
+  if (!spriteShowing && !spriteWalkShowing) {
     return;
   }
 
@@ -2630,7 +2715,7 @@ function isEdgeClass(className) {
 }
 
 function isProjectileClass(className) {
-  return ProjectileClassNames.indexOf(className) !== -1;
+  return skin.ProjectileClassNames.indexOf(className) !== -1;
 }
 
 /**
@@ -2886,20 +2971,30 @@ Studio.allGoalsVisited = function() {
 };
 
 var checkFinished = function () {
-  // if we have a succcess condition and have accomplished it, we're done and successful
-  if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
+
+  var hasGoals = Studio.spriteGoals_.length !== 0;
+  var achievedGoals = Studio.allGoalsVisited();
+  var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
+  var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
+  var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+
+  // Levels with goals (usually images that need to be touched) can have an optional success
+  // condition that can explicitly return false to prevent the level from completing.
+  // In very rare cases, a level might have goals but not care whether they're touched or not
+  // to succeed, relying instead solely on the success function.  In such a case, the level should
+  // have completeOnSuccessConditionNotGoals set to true.
+  // In the remainder of levels which do not have goals, they simply require a success condition
+  // that returns true.
+
+  if ((hasGoals && achievedGoals && achievedOptionalSuccessCondition) ||
+      (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
+      (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
 
-  // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;
-    return true;
-  }
-
-  if (Studio.allGoalsVisited()) {
-    Studio.result = ResultType.SUCCESS;
     return true;
   }
 
@@ -2911,7 +3006,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":190,"../../locale/current/studio":196,"../StudioApp":2,"../canvg/StackBlur.js":38,"../canvg/canvg.js":39,"../canvg/rgbcolor.js":40,"../canvg/svg_todataurl":41,"../codegen":42,"../constants":43,"../dom":44,"../skins":144,"../templates/page.html":165,"../utils":185,"../xml":186,"./api":146,"./bigGameLogic":147,"./blocks":148,"./collidable":149,"./constants":150,"./controls.html":151,"./extraControlRows.html":152,"./projectile":155,"./visualization.html":158}],158:[function(require,module,exports){
+},{"../../locale/current/common":251,"../../locale/current/studio":257,"../StudioApp":4,"../canvg/StackBlur.js":49,"../canvg/canvg.js":50,"../canvg/rgbcolor.js":51,"../canvg/svg_todataurl":52,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../skins":200,"../templates/page.html":225,"../utils":246,"../xml":247,"./api":202,"./bigGameLogic":203,"./blocks":204,"./collidable":205,"./constants":206,"./controls.html":207,"./dropletConfig":209,"./extraControlRows.html":210,"./projectile":213,"./rocketHeightLogic":214,"./samBatLogic":215,"./visualization.html":218}],218:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2931,7 +3026,193 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],155:[function(require,module,exports){
+},{"ejs":267}],215:[function(require,module,exports){
+var CustomGameLogic = require('./customGameLogic');
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var KeyCodes = require('../constants').KeyCodes;
+var codegen = require('../codegen');
+var api = require('./api');
+
+/**
+ * Custom logic for the Sam the Bat levels
+ * @constructor
+ * @implements CustomGameLogic
+ */
+var SamBatLogic = function (studio) {
+  CustomGameLogic.apply(this, arguments);
+  this.samIndex = 0;
+  this.sam = null;
+  // Has the onscreen? stopped Sam on a given side?
+  this.stopped = {left: false, up: false, right: false, down: false};
+};
+SamBatLogic.inherits(CustomGameLogic);
+
+SamBatLogic.prototype.onTick = function () {
+  this.sam = this.studio_.sprite[this.samIndex];
+
+  // Move Sam with arrow keys
+  for (var key in KeyCodes) {
+    if (this.studio_.keyState[KeyCodes[key]] &&
+        this.studio_.keyState[KeyCodes[key]] === "keydown") {
+      switch (KeyCodes[key]) {
+        case KeyCodes.LEFT:
+          this.updateSam_(Direction.WEST);
+          break;
+        case KeyCodes.UP:
+          this.updateSam_(Direction.NORTH);
+          break;
+        case KeyCodes.RIGHT:
+          this.updateSam_(Direction.EAST);
+          break;
+        case KeyCodes.DOWN:
+          this.updateSam_(Direction.SOUTH);
+          break;
+      }
+    }
+  }
+
+  // Move Sam with arrow buttons
+  for (var btn in this.studio_.btnState) {
+    if (this.studio_.btnState[btn]) {
+      switch (btn) {
+        case 'leftButton':
+          this.updateSam_(Direction.WEST);
+          break;
+        case 'upButton':
+          this.updateSam_(Direction.NORTH);
+          break;
+        case 'rightButton':
+          this.updateSam_(Direction.EAST);
+          break;
+        case 'downButton':
+          this.updateSam_(Direction.SOUTH);
+          break;
+      }
+    }
+  }
+
+  // Display Sam's coordinates, with y inverted
+  var centerX = this.sam.x + this.sam.width / 2;
+  var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
+  this.studio_.scoreText = '(' + centerX + ', ' + centerY + ')';
+  this.studio_.displayScore();
+};
+
+/**
+ * Before moving, check if Sam would still be onscreen?
+ * If move would take Sam offscreen, set dir to None
+ */
+SamBatLogic.prototype.updateSam_ = function (dir) {
+  var centerX = this.sam.x + this.sam.width / 2;
+  //invert Y
+  var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
+  
+  switch (dir) {
+    case Direction.WEST:
+      if (!this.onscreen(centerX - this.sam.speed, centerY)) {
+        dir = Direction.NONE;
+        this.stopped.left = true;
+      }
+      break;
+    case Direction.NORTH:
+      if (!this.onscreen(centerX, centerY + this.sam.speed)) {
+        dir = Direction.NONE;
+        this.stopped.up = true;
+      }
+      break;
+    case Direction.EAST:
+      if (!this.onscreen(centerX + this.sam.speed, centerY)) {
+        dir = Direction.NONE;
+        this.stopped.right = true;
+      }
+      break;
+    case Direction.SOUTH:
+      if (!this.onscreen(centerX, centerY - this.sam.speed)) {
+        dir = Direction.NONE;
+        this.stopped.down = true;
+      }
+      break;
+  }
+  this.studio_.moveSingle({spriteIndex: this.samIndex, dir: dir});
+};
+
+/**
+ * Calls the user provided onscreen? function, or no-op if none was provided.
+ * @param {number} x Current x location of Sam
+ * @param {number} y Current y location of Sam (optional)
+ * @returns {boolean} True if coordinate is onscreen?
+ */
+SamBatLogic.prototype.onscreen = function (x, y) {
+  return this.resolveCachedBlock_('VALUE')(x, y);
+};
+
+module.exports = SamBatLogic;
+
+},{"../codegen":54,"../constants":56,"./api":202,"./constants":206,"./customGameLogic":208}],214:[function(require,module,exports){
+var CustomGameLogic = require('./customGameLogic');
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var codegen = require('../codegen');
+var api = require('./api');
+
+/**
+ * Custom logic for the Rocket Height levels
+ * @constructor
+ * @implements CustomGameLogic
+ */
+var RocketHeightLogic = function (studio) {
+  CustomGameLogic.apply(this, arguments);
+  this.rocketIndex = 0;
+  this.last = Date.now();
+  this.seconds = 0;
+  // rocket and height for use in success/failure checking
+  this.rocket = null;
+  this.height = 0;
+
+  // Use by successCondition/failureCondition
+  this.SECONDS_TO_RUN = 8;
+};
+RocketHeightLogic.inherits(CustomGameLogic);
+
+RocketHeightLogic.prototype.onTick = function () {
+  if (this.studio_.tickCount === 1) {
+    // Make sure fields are properly initialized, for example if we've run
+    // and then reset.
+    this.last = Date.now();
+    this.seconds = 0;
+    this.rocket = this.studio_.sprite[this.rocketIndex];
+    this.height = 0;
+  }
+
+  // Update the rocket once a second
+  if (Date.now() - this.last < 1000) {
+    return;
+  }
+  this.last = Date.now();
+  this.seconds++;
+
+  // Display the rocket height and time elapsed
+  this.height = this.rocket_height(this.seconds) || 0;
+  this.rocket.y = this.studio_.MAZE_HEIGHT - (this.height + this.rocket.height);
+  this.rocket.dir = Direction.NONE;
+  this.studio_.scoreText = 'Time: ' + this.seconds + ' | Height: ' + this.height;
+  this.studio_.displayScore();
+};
+
+/**
+ * Calls the user provided rocket-height function, or no-op if none was provided.
+ * @param {number} seconds Time elapsed since rocket launch
+ * @returns {number} Height of rocket after seconds
+ */
+RocketHeightLogic.prototype.rocket_height = function (seconds) {
+  return this.resolveCachedBlock_('VALUE')(seconds);
+};
+
+module.exports = RocketHeightLogic;
+
+},{"../codegen":54,"./api":202,"./constants":206,"./customGameLogic":208}],213:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3105,7 +3386,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":149,"./constants":150}],156:[function(require,module,exports){
+},{"./collidable":205,"./constants":206}],216:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3124,10 +3405,23 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
 function loadInfinity(skin, assetUrl) {
-  skin.preloadAssets = false;
+  skin.preloadAssets = true;
 
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'projectile_hiro',
+    'projectile_anna',
+    'projectile_elsa',
+    'projectile_baymax',
+    'projectile_rapunzel',
+    'projectile_cherry',
+    'projectile_ice',
+    'projectile_duck'
+  ];
 
   skin.specialProjectileFrames = {
     'projectile_cherry': 13,
@@ -3172,28 +3466,27 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
-    background: skin.assetUrl('background_leafy.png')
+    background: skin.assetUrl('background_leafy.jpg')
   };
   skin.grassy = {
-    background: skin.assetUrl('background_grassy.png')
+    background: skin.assetUrl('background_grassy.jpg')
   };
   skin.flower = {
-    background: skin.assetUrl('background_flower.png')
+    background: skin.assetUrl('background_flower.jpg')
   };
   skin.tile = {
-    background: skin.assetUrl('background_tile.png')
+    background: skin.assetUrl('background_tile.jpg')
   };
   skin.icy = {
-    background: skin.assetUrl('background_icy.png')
+    background: skin.assetUrl('background_icy.jpg')
   };
   skin.snowy = {
-    background: skin.assetUrl('background_snowy.png')
+    background: skin.assetUrl('background_snowy.jpg')
   };
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    // todo - come up with better names and i18n
     [msg.setBackgroundLeafy(), '"leafy"'],
     [msg.setBackgroundGrassy(), '"grassy"'],
     [msg.setBackgroundFlower(), '"flower"'],
@@ -3203,9 +3496,14 @@ function loadInfinity(skin, assetUrl) {
     ];
 
   skin.backgroundChoicesK1 = [
+    [skin.leafy.background, '"leafy"'],
+    [skin.grassy.background, '"grassy"'],
+    [skin.flower.background, '"flower"'],
+    [skin.tile.background, '"tile"'],
+    [skin.icy.background, '"icy"'],
+    [skin.snowy.background, '"snowy"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
-    [msg.setBackgroundLeafy(), '"leafy"'],
-    [msg.setBackgroundGrassy(), '"grassy"']];
+    ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -3216,7 +3514,6 @@ function loadInfinity(skin, assetUrl) {
     [msg.setSpriteBaymax(), '"baymax"'],
     [msg.setSpriteRapunzel(), '"rapunzel"']];
 
-  // todo - i18n
   skin.projectileChoices = [
     [msg.projectileHiro(), '"projectile_hiro"'],
     [msg.projectileAnna(), '"projectile_anna"'],
@@ -3382,6 +3679,17 @@ function loadStudio(skin, assetUrl) {
 exports.load = function(assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
 
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+    'blue_fireball',
+    'purple_fireball',
+    'red_fireball',
+    'purple_hearts',
+    'red_hearts',
+    'yellow_hearts',
+  ];
+
   // Images
   skin.yellow_hearts = skin.assetUrl('yellow_hearts.gif');
   skin.purple_hearts = skin.assetUrl('purple_hearts.gif');
@@ -3447,7 +3755,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":196,"../skins":144,"./constants":150}],153:[function(require,module,exports){
+},{"../../locale/current/studio":257,"../skins":200,"./constants":206}],211:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -3758,11 +4066,6 @@ levels.playlab_3 = {
   },
   background: 'tennis',
   firstSpriteIndex: 26, // tennis girl
-  goal: {
-    successCondition: function () {
-      return Studio.sprite[0].isCollidingWith(1);
-    }
-  },
   toolbox:
     tb(
       '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
@@ -4900,23 +5203,61 @@ levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
-  'codeFunctions': [
-    {'func': 'setSprite', 'params': ["0", "'cat'"] },
-    {'func': 'setBackground', 'params': ["'night'"] },
-    {'func': 'move', 'params': ["0", "1"] },
-    {'func': 'playSound', 'params': ["'slap'"] },
-    {'func': 'changeScore', 'params': ["1"] },
-    {'func': 'setSpritePosition', 'params': ["0", "7"] },
-    {'func': 'setSpriteSpeed', 'params': ["0", "8"] },
-    {'func': 'setSpriteEmotion', 'params': ["0", "1"] },
-    {'func': 'throwProjectile', 'params': ["0", "1", "'blue_fireball'"] },
-    {'func': 'vanish', 'params': ["0"] },
-    {'func': 'onEvent', 'params': ["'when-left'", "function() {\n  \n}"] },
-  ],
+  'codeFunctions': {
+    // Play Lab
+    "setSprite": null,
+    "setBackground": null,
+    "move": null,
+    "playSound": null,
+    "changeScore": null,
+    "setSpritePosition": null,
+    "setSpriteSpeed": null,
+    "setSpriteEmotion": null,
+    "throwProjectile": null,
+    "vanish": null,
+    "onEvent": null,
+
+    // Control
+    "forLoop_i_0_4": null,
+    "ifBlock": null,
+    "ifElseBlock": null,
+    "whileBlock": null,
+
+    // Math
+    "addOperator": null,
+    "subtractOperator": null,
+    "multiplyOperator": null,
+    "divideOperator": null,
+    "equalityOperator": null,
+    "inequalityOperator": null,
+    "greaterThanOperator": null,
+    "lessThanOperator": null,
+    "andOperator": null,
+    "orOperator": null,
+    "notOperator": null,
+    "randomNumber_max": null,
+    "randomNumber_min_max": null,
+    "mathRound": null,
+    "mathAbs": null,
+    "mathMax": null,
+    "mathMin": null,
+
+    // Variables
+    "declareAssign_x": null,
+    "assign_x": null,
+    "declareAssign_x_array_1_4": null,
+    "declareAssign_x_prompt": null,
+
+    // Functions
+    "functionParams_none": null,
+    "functionParams_n": null,
+    "callMyFunction": null,
+    "callMyFunction_n": null,
+  },
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":196,"../block_utils":17,"../utils":185,"./constants":150}],152:[function(require,module,exports){
+},{"../../locale/current/studio":257,"../block_utils":26,"../utils":246,"./constants":206}],210:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4936,7 +5277,31 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],151:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],209:[function(require,module,exports){
+var msg = require('../../locale/current/studio');
+
+module.exports.blocks = [
+  {'func': 'setSprite', 'category': 'Play Lab', 'params': ["0", "'cat'"] },
+  {'func': 'setBackground', 'category': 'Play Lab', 'params': ["'night'"] },
+  {'func': 'move', 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'playSound', 'category': 'Play Lab', 'params': ["'slap'"] },
+  {'func': 'changeScore', 'category': 'Play Lab', 'params': ["1"] },
+  {'func': 'setSpritePosition', 'category': 'Play Lab', 'params': ["0", "7"] },
+  {'func': 'setSpriteSpeed', 'category': 'Play Lab', 'params': ["0", "8"] },
+  {'func': 'setSpriteEmotion', 'category': 'Play Lab', 'params': ["0", "1"] },
+  {'func': 'throwProjectile', 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
+  {'func': 'vanish', 'category': 'Play Lab', 'params': ["0"] },
+  {'func': 'onEvent', 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
+];
+
+module.exports.categories = {
+  'Play Lab': {
+    'color': 'red',
+    'blocks': []
+  },
+};
+
+},{"../../locale/current/studio":257}],207:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4956,7 +5321,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],149:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],205:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5062,7 +5427,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":2,"./constants":150}],148:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":206}],204:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5077,10 +5442,6 @@ var msg = require('../../locale/current/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
-var functionalBlockUtils = require('../functionalBlockUtils');
-var installFunctionalApiCallBlock =
-  functionalBlockUtils.installFunctionalApiCallBlock;
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -5102,6 +5463,10 @@ var generateSetterCode = function (opts) {
         .map(function (item) { return item[1]; })
         .without(RANDOM_VALUE, HIDDEN_VALUE, CLICK_VALUE);
     value = 'Studio.random([' + possibleValues + '])';
+  }
+
+  if (opts.returnValue) {
+    return value;
   }
 
   return 'Studio.' + opts.name + '(\'block_id_' + opts.ctx.id + '\', ' +
@@ -5460,7 +5825,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('SPRITE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.stopSpriteN({spriteIndex: ''}));
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -5654,7 +6019,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       if (spriteCount > 1) {
         this.appendValueInput('SPRITE')
-          .setCheck('Number')
+          .setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
       } else {
         this.appendDummyInput()
@@ -5663,9 +6028,9 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendTitle(msg.toXY());
       this.appendValueInput('XPOS')
-        .setCheck('Number');
+        .setCheck(blockly.BlockValueType.NUMBER);
       this.appendValueInput('YPOS')
-        .setCheck('Number');
+        .setCheck(blockly.BlockValueType.NUMBER);
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -5838,7 +6203,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       if (options.sprite) {
         this.appendValueInput('SPRITE')
-            .setCheck('Number')
+            .setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
       } else if (spriteCount > 1) {
         if (isK1) {
@@ -5867,7 +6232,7 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle('\t');
       if (options.params) {
         this.appendValueInput('DISTANCE')
-          .setCheck('Number');
+          .setCheck(blockly.BlockValueType.NUMBER);
         this.appendDummyInput()
           .appendTitle(msg.moveDistancePixels());
       } else {
@@ -6162,9 +6527,9 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-      this.appendValueInput('VALUE').setCheck('Number')
+      this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.speed());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -6232,9 +6597,9 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
-      this.appendValueInput('VALUE').setCheck('Number')
+      this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.size());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -6342,11 +6707,11 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendTitle(msg.showTitleScreen());
       if (options.params) {
         this.appendValueInput('TITLE')
-          .setCheck('String')
+          .setCheck(blockly.BlockValueType.STRING)
           .setAlign(Blockly.ALIGN_RIGHT)
           .appendTitle(msg.showTitleScreenTitle());
         this.appendValueInput('TEXT')
-          .setCheck('String')
+          .setCheck(blockly.BlockValueType.STRING)
           .setAlign(Blockly.ALIGN_RIGHT)
           .appendTitle(msg.showTitleScreenText());
       } else {
@@ -6460,7 +6825,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
         this.setHSV(312, 0.32, 0.62);
         this.appendValueInput('SPRITE')
-            .setCheck('Number')
+            .setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.setSpriteN({spriteIndex: ''}));
         this.appendDummyInput()
             .appendTitle(dropdown, 'VALUE');
@@ -6559,7 +6924,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.setSpriteN({spriteIndex: ''}));
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]);  // default to normal
@@ -6609,7 +6974,7 @@ exports.install = function(blockly, blockInstallOptions) {
     block.init = function() {
       this.setHSV(184, 1.00, 0.74);
       if (options.time) {
-        this.appendValueInput('SPRITE').setCheck('Number')
+        this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.actor());
         this.appendDummyInput()
             .appendTitle(msg.saySprite());
@@ -6626,10 +6991,14 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.saySprite());
       }
       if (options.restrictedDialog) {
-        var dropdown = new blockly.FieldDropdown(
-          [[msg.saySpriteChoices_1(), msg.saySpriteChoices_1()],
-           [msg.saySpriteChoices_2(), msg.saySpriteChoices_2()],
-           [msg.saySpriteChoices_3(), msg.saySpriteChoices_3()]]);
+        var functionArray = [];
+        var numRestrictedSayChoices = 59;
+        for (var i = 0; i < numRestrictedSayChoices; i++) {
+          var functionElement = functionArray[i] = [];
+          var string = msg["saySpriteChoices_" + i]();
+          functionElement[0] = functionElement[1] = string;
+        }
+        var dropdown = new blockly.FieldDropdown(functionArray);
         this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       }
       else if (options.params) {
@@ -6646,7 +7015,7 @@ exports.install = function(blockly, blockInstallOptions) {
               Blockly.assetUrl('media/quote1.png'), 12, 12));
       }
       if (options.time) {
-        this.appendValueInput('TIME').setCheck('Number').appendTitle(msg.for());
+        this.appendValueInput('TIME').setCheck(blockly.BlockValueType.NUMBER).appendTitle(msg.for());
         this.appendDummyInput().appendTitle(msg.waitSeconds());
       }
       this.setInputsInline(true);
@@ -6676,7 +7045,7 @@ exports.install = function(blockly, blockInstallOptions) {
     return 'Studio.saySprite(\'block_id_' + this.id +
                '\', ' +
                (this.getTitleValue('SPRITE') || '0') + ', \'' +
-               this.getTitles()[1].getValue() + '\');\n';
+               (this.getTitleValue('VALUE') || ' ') + '\');\n';
   };
 
   generator.studio_saySpriteParams = function() {
@@ -6710,7 +7079,7 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.waitFor());
         this.appendValueInput('VALUE')
-          .setCheck('Number');
+          .setCheck(blockly.BlockValueType.NUMBER);
         this.appendDummyInput()
           .appendTitle(msg.waitSeconds());
       } else {
@@ -6765,32 +7134,32 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_start_setValue = {
     init: function() {
       var blockName = msg.startSetValue();
-      var blockType = 'none';
-      var blockArgs = [{name: 'VALUE', type: 'function'}];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      var blockType = blockly.BlockValueType.NONE;
+      var blockArgs = [{name: 'VALUE', type: blockly.BlockValueType.FUNCTION}];
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
   generator.functional_start_setValue = function() {
-    // For the current design, this doesn't need to generate any code.
-    // Though we pass in a function, we're not actually using that passed in
-    // function, and instead depend on a function of the required name existing
-    // in the global space. This may change in the future.
+    // For each of our inputs (i.e. update-target, update-danger, etc.) get
+    // the attached block and figure out what it's function name is. Store
+    // that on BigGameLogic so we can know what functions to call later.
+    Studio.customLogic.cacheBlock('VALUE', this.getInputTargetBlock('VALUE'));
   };
 
   blockly.Blocks.functional_start_setVars = {
     init: function() {
       var blockName = msg.startSetVars();
-      var blockType = 'none';
+      var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
-        {name: 'title', type: 'string'},
-        {name: 'subtitle', type: 'string'},
-        {name: 'background', type: 'image'},
-        {name: 'player', type: 'image'},
-        {name: 'target', type: 'image'},
-        {name: 'danger', type: 'image'}
+        {name: 'title', type: blockly.BlockValueType.STRING},
+        {name: 'subtitle', type: blockly.BlockValueType.STRING},
+        {name: 'background', type: blockly.BlockValueType.IMAGE},
+        {name: 'player', type: blockly.BlockValueType.IMAGE},
+        {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6801,18 +7170,69 @@ exports.install = function(blockly, blockInstallOptions) {
     // in the global space. This may change in the future.
   };
 
+  /**
+   * functional_start_setFuncs
+   * Even those this is called setFuncs, we are passed both functions and
+   * variables. Our generator stashes the passed values on our customLogic
+   * object (which is BigGameLogic).
+   */
   blockly.Blocks.functional_start_setFuncs = {
     init: function() {
-      var blockName = msg.startSetFuncs();
-      var blockType = 'none';
-      var blockArgs = [
-        {name: 'update-target', type: 'function'},
-        {name: 'update-danger', type: 'function'},
-        {name: 'update-player', type: 'function'},
-        {name: 'collide?', type: 'function'},
-        {name: 'on-screen?', type: 'function'}
+      this.blockArgs = [
+        {name: 'title', type: blockly.BlockValueType.STRING},
+        {name: 'subtitle', type: blockly.BlockValueType.STRING},
+        {name: 'background', type: blockly.BlockValueType.IMAGE},
+        {name: 'target', type: blockly.BlockValueType.IMAGE},
+        {name: 'danger', type: blockly.BlockValueType.IMAGE},
+        {name: 'player', type: blockly.BlockValueType.IMAGE},
+        {name: 'update-target', type: blockly.BlockValueType.FUNCTION},
+        {name: 'update-danger', type: blockly.BlockValueType.FUNCTION},
+        {name: 'update-player', type: blockly.BlockValueType.FUNCTION},
+        {name: 'collide?', type: blockly.BlockValueType.FUNCTION},
+        {name: 'on-screen?', type: blockly.BlockValueType.FUNCTION}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      this.setFunctional(true, {
+        headerHeight: 30
+      });
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NONE]);
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('game_funcs', options))
+        .setAlign(Blockly.ALIGN_LEFT);
+
+      var rows = [
+        'title, subtitle, background',
+        [this.blockArgs[0], this.blockArgs[1], this.blockArgs[2]],
+        'target, danger, player',
+        [this.blockArgs[3], this.blockArgs[4], this.blockArgs[5]],
+        'update-target, update-danger, update-player',
+        [this.blockArgs[6], this.blockArgs[7], this.blockArgs[8]],
+        'collide?, onscreen?',
+        [this.blockArgs[9], this.blockArgs[10]]
+      ];
+
+      rows.forEach(function (row) {
+        if (typeof(row) === 'string') {
+          this.appendDummyInput()
+            .appendTitle(new Blockly.FieldLabel(row));
+        } else {
+          row.forEach(function (blockArg, index) {
+            var input = this.appendFunctionalInput(blockArg.name);
+            if (index !== 0) {
+              input.setInline(true);
+            }
+            input.setHSV.apply(input, blockly.FunctionalTypeColors[blockArg.type]);
+            input.setCheck(blockArg.type);
+            input.setAlign(Blockly.ALIGN_LEFT);
+          }, this);
+        }
+      }, this);
+
+      this.setFunctionalOutput(false);
     }
   };
 
@@ -6820,44 +7240,38 @@ exports.install = function(blockly, blockInstallOptions) {
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
-    this.inputList.forEach(function (input) {
-      if (input.type !== Blockly.FUNCTIONAL_INPUT) {
-        return;
-      }
-      var inputBlock = this.getInputTargetBlock(input.name);
+    this.blockArgs.forEach(function (arg) {
+      var inputBlock = this.getInputTargetBlock(arg.name);
       if (!inputBlock) {
         return;
       }
-      var inputBlockName = inputBlock.getTitleValue('NAME');
-      var functionName = Blockly.JavaScript.variableDB_.getName(inputBlockName,
-        Blockly.Procedures.NAME_TYPE);
 
-      Studio.customLogic.functionNames[input.name] = functionName;
+      Studio.customLogic.cacheBlock(arg.name, inputBlock);
     }, this);
   };
 
-  installFunctionalApiCallBlock(blockly, generator, {
+  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: 'function'}]
+    args: [{name: 'VAL', type: blockly.BlockValueType.FUNCTION}]
   });
 
-  installFunctionalApiCallBlock(blockly, generator, {
+  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_setBackground',
     blockTitle: 'start (background)',
     apiName: 'Studio.setBackground',
-    args: [{ name: 'BACKGROUND', type: 'string', default: 'space'}]
+    args: [{ name: 'BACKGROUND', type: blockly.BlockValueType.STRING, default: 'space'}]
   });
 
   blockly.Blocks.functional_start_setSpeeds = {
     init: function() {
       var blockName = 'start (player-speed, enemy-speed)';
-      var blockType = 'none';
+      var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6877,13 +7291,13 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_start_setBackgroundAndSpeeds = {
     init: function() {
       var blockName = 'start (background, player-speed, enemy-speed)';
-      var blockType = 'none';
+      var blockType = blockly.BlockValueType.NONE;
       var blockArgs = [
-        {name: 'BACKGROUND', type: 'string'},
+        {name: 'BACKGROUND', type: blockly.BlockValueType.STRING},
         {name: 'PLAYER_SPEED', type: 'Number'},
         {name: 'ENEMY_SPEED', type: 'Number'}
       ];
-      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
     }
   };
 
@@ -6912,7 +7326,7 @@ exports.install = function(blockly, blockInstallOptions) {
   // API instead of here.
   var functional_background_values = skin.backgroundChoices.slice(1);
 
-  functionalBlockUtils.installStringPicker(blockly, generator, {
+  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_background_string_picker',
     values: functional_background_values
   });
@@ -6921,7 +7335,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE').setCheck('Number')
+      this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER)
           .appendTitle(msg.vanishActorN({spriteIndex: ''}));
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -6942,7 +7356,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.spriteChoices;
 
@@ -6970,7 +7384,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, functionalBlockUtils.colors.image);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]);
 
       this.VALUES = skin.backgroundChoicesK1;
       var dropdown = new blockly.FieldImageDropdown(skin.backgroundChoicesK1,
@@ -6985,24 +7399,11 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.functional_background_dropdown = function () {
     // returns the sprite index
-    return this.getTitleValue('BACKGROUND');
-  };
-
-  /**
-   * functional_sqrt
-   */
-  blockly.Blocks.functional_sqrt = {
-    helpUrl: '',
-    init: function() {
-      initTitledFunctionalBlock(this, 'sqrt', 'Number', [
-        { name: 'ARG1', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.functional_sqrt = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    return 'Math.sqrt(' + arg1 + ');';
+    return generateSetterCode({
+      value: this.getTitleValue('BACKGROUND'),
+      ctx: this,
+      returnValue: true
+    });
   };
 
   /**
@@ -7012,7 +7413,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       // todo = localize
-      initTitledFunctionalBlock(this, 'keydown?', 'boolean', [
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'keydown?', blockly.BlockValueType.BOOLEAN, [
         { name: 'ARG1', type: 'Number' }
       ]);
     }
@@ -7051,24 +7452,16 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":190,"../../locale/current/studio":196,"../StudioApp":2,"../codegen":42,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":143,"../utils":185,"./constants":150}],196:[function(require,module,exports){
+},{"../../locale/current/common":251,"../../locale/current/studio":257,"../StudioApp":4,"../codegen":54,"../sharedFunctionalBlocks":199,"../utils":246,"./constants":206}],257:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],147:[function(require,module,exports){
-var Direction = require('./constants').Direction;
+},{}],203:[function(require,module,exports){
+var CustomGameLogic = require('./customGameLogic');
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var codegen = require('../codegen');
+var api = require('./api');
 
-/**
- * Interface for a set of custom game logic for playlab
- * @param {Studio} studio Reference to global studio object
- * @interface CustomGameLogic
- */
-function CustomGameLogic(studio) {}
-
-/**
- * Logic to be run once per playlab tick
- *
- * @function
- * @name CustomGameLogic#onTick
- */
 
 /**
  * Custom logic for the MSM BigGame
@@ -7076,21 +7469,30 @@ function CustomGameLogic(studio) {}
  * @implements CustomGameLogic
  */
 var BigGameLogic = function (studio) {
-  this.studio_ = studio;
-  this.functionNames = {};
+  CustomGameLogic.apply(this, arguments);
 
   this.playerSpriteIndex = 0;
   this.targetSpriteIndex = 1;
   this.dangerSpriteIndex = 2;
 };
+BigGameLogic.inherits(CustomGameLogic);
 
 BigGameLogic.prototype.onTick = function () {
-   // Don't start until the title is over
-  var titleScreenTitle = document.getElementById('titleScreenTitle');
-  if (this.studio_.tickCount <= 1 ||
-      titleScreenTitle.getAttribute('visibility') === "visible") {
+  if (this.studio_.tickCount === 1) {
+    this.onFirstTick_();
+    this.studio_.playerScore = 100;
     return;
   }
+
+   // Don't start until the title is over
+  var titleScreenTitle = document.getElementById('titleScreenTitle');
+  if (titleScreenTitle.getAttribute('visibility') === "visible") {
+    return;
+  }
+
+  var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
+  var targetSprite = this.studio_.sprite[this.targetSpriteIndex];
+  var dangerSprite = this.studio_.sprite[this.dangerSpriteIndex];
 
   // Update target, using onscreen and update_target
   this.updateSpriteX_(this.targetSpriteIndex, this.update_target.bind(this));
@@ -7100,23 +7502,76 @@ BigGameLogic.prototype.onTick = function () {
   // For every key and button down, call update_player
   for (var key in this.studio_.keyState) {
     if (this.studio_.keyState[key] === 'keydown') {
-      this.updatePlayer_(key);
+      this.handleUpdatePlayer_(key);
     }
   }
 
   for (var btn in this.studio_.btnState) {
     if (this.studio_.btnState[btn]) {
       if (btn === 'leftButton') {
-        this.updatePlayer_(37);
+        this.handleUpdatePlayer_(37);
       } else if (btn === 'upButton') {
-        this.updatePlayer_(38);
+        this.handleUpdatePlayer_(38);
       } else if (btn === 'rightButton') {
-        this.updatePlayer_(39);
+        this.handleUpdatePlayer_(39);
       } else if (btn === 'downButton') {
-        this.updatePlayer_(40);
+        this.handleUpdatePlayer_(40);
       }
     }
   }
+
+  if (playerSprite.visible && dangerSprite.visible &&
+      this.collide(playerSprite.x, playerSprite.y,
+                   dangerSprite.x, dangerSprite.y)) {
+    this.studio_.vanishActor({spriteIndex:this.playerSpriteIndex});
+    setTimeout((function ()  {
+      this.studio_.setSprite({
+        spriteIndex: this.playerSpriteIndex,
+        value:"visible"
+      });
+    }).bind(this), 500);
+    this.studio_.playerScore -= 20;
+
+    // send sprite back offscreen
+    this.resetSprite_(dangerSprite);
+  }
+
+  if (playerSprite.visible && targetSprite.visible &&
+      this.collide(playerSprite.x, playerSprite.y,
+                   targetSprite.x, targetSprite.y)) {
+    this.studio_.playerScore += 10;
+
+    // send sprite back offscreen
+    this.resetSprite_(targetSprite);
+}
+
+  if (this.studio_.playerScore <= 0) {
+    var score = document.getElementById('score');
+    score.setAttribute('visibility', 'hidden');
+    this.studio_.showTitleScreen({title:'Game Over', text:'Click Reset to Play Again'});
+    for (var i = 0; i < this.studio_.spriteCount; i++) {
+      this.studio_.vanishActor({spriteIndex:i});
+    }
+  } else {
+    this.studio_.displayScore();
+  }
+};
+
+/**
+ * When game starts logic
+ */
+BigGameLogic.prototype.onFirstTick_ = function () {
+  var func = function (StudioApp, Studio, Globals) {
+    Studio.setBackground(null, this.getVar_('background'));
+    Studio.setSpritePosition(null, this.playerSpriteIndex, Position.MIDDLECENTER);
+    Studio.setSprite(null, this.playerSpriteIndex, this.getVar_('player'));
+    Studio.setSpritePosition(null, this.targetSpriteIndex, Position.TOPLEFT);
+    Studio.setSprite(null, this.targetSpriteIndex, this.getVar_('target'));
+    Studio.setSpritePosition(null, this.dangerSpriteIndex, Position.BOTTOMRIGHT);
+    Studio.setSprite(null, this.dangerSpriteIndex, this.getVar_('danger'));
+    Studio.showTitleScreen(null, this.getVar_('title'), this.getVar_('subtitle'));
+  }.bind(this);
+  this.studio_.callApiCode('BigGame.onFirstTick', func);
 };
 
 /**
@@ -7135,28 +7590,38 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
   // side. We could add a delay if we want.
   if (!this.onscreen(newCenterX)) {
     // reset to other side
-    if (sprite.dir === Direction.EAST) {
-      sprite.x = 0 - sprite.width;
-    } else {
-      sprite.x = this.studio_.MAZE_WIDTH;
-    }
-    sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
+    this.resetSprite_(sprite);
   }
 };
 
 /**
  * Update the player sprite, using the user provided function.
  */
-BigGameLogic.prototype.updatePlayer_ = function (key) {
+BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
 
+  // sprite.y is the top. get the center
+  var centerY = playerSprite.y + playerSprite.height / 2;
+  
   // invert Y
-  var userSpaceY = this.studio_.MAZE_HEIGHT - playerSprite.y;
+  var userSpaceY = this.studio_.MAZE_HEIGHT - centerY;
 
   var newUserSpaceY = this.update_player(key, userSpaceY);
 
   // reinvertY
-  playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
+  playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY - playerSprite.height / 2;
+};
+
+/**
+ * Reset sprite to the opposite side of the screen
+ */
+BigGameLogic.prototype.resetSprite_ = function (sprite) {
+  if (sprite.dir === Direction.EAST) {
+    sprite.x = 0 - sprite.width;
+  } else {
+    sprite.x = this.studio_.MAZE_WIDTH;
+  }
+  sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
 };
 
 /**
@@ -7165,7 +7630,7 @@ BigGameLogic.prototype.updatePlayer_ = function (key) {
  * @returns {number} New x location of target
  */
 BigGameLogic.prototype.update_target = function (x) {
-  return this.getPassedFunction_('update-target')(x);
+  return this.getFunc_('update-target')(x);
 };
 
 /**
@@ -7174,7 +7639,7 @@ BigGameLogic.prototype.update_target = function (x) {
  * @returns {number} New x location of the danger target
  */
 BigGameLogic.prototype.update_danger = function (x) {
-  return this.getPassedFunction_('update-danger')(x);
+  return this.getFunc_('update-danger')(x);
 };
 
 /**
@@ -7184,7 +7649,7 @@ BigGameLogic.prototype.update_danger = function (x) {
  * @returns {number} New y location of the player
  */
 BigGameLogic.prototype.update_player = function (key, y) {
-  return this.getPassedFunction_('update-player')(key, y);
+  return this.getFunc_('update-player')(key, y);
 };
 
 /**
@@ -7193,7 +7658,7 @@ BigGameLogic.prototype.update_player = function (key, y) {
  * @returns {boolean} True if x location is onscreen?
  */
 BigGameLogic.prototype.onscreen = function (x) {
-  return this.getPassedFunction_('on-screen?')(x);
+  return this.getFunc_('on-screen?')(x);
 };
 
 /**
@@ -7205,29 +7670,82 @@ BigGameLogic.prototype.onscreen = function (x) {
  * @returns {boolean} True if objects collide
  */
 BigGameLogic.prototype.collide = function (px, py, cx, cy) {
-  return this.getPassedFunction_('collide?')(px, py, cx, cy);
+  return this.getFunc_('collide?')(px, py, cx, cy);
 };
 
-/**
- * @returns the user function that was passed in
- */
-BigGameLogic.prototype.getPassedFunction_ = function (name) {
-  var userFunctionName = this.functionNames[name];
-  if (!userFunctionName) {
-    return function () {}; // noop
-  }
-
-  var userFunction = this.studio_.Globals[userFunctionName];
-  if (!userFunction) {
-    throw new Error('Unexepcted');
-  }
-
-  return userFunction;
-};
 
 module.exports = BigGameLogic;
 
-},{"./constants":150}],146:[function(require,module,exports){
+},{"../codegen":54,"./api":202,"./constants":206,"./customGameLogic":208}],208:[function(require,module,exports){
+var studioConstants = require('./constants');
+var Direction = studioConstants.Direction;
+var Position = studioConstants.Position;
+var codegen = require('../codegen');
+var api = require('./api');
+
+/**
+ * Interface for a set of custom game logic for playlab
+ * @param {Studio} studio Reference to global studio object
+ * @interface CustomGameLogic
+ */
+var CustomGameLogic = function (studio) {
+  this.studio_ = studio;
+  this.cached_ = {};
+};
+
+/**
+ * Logic to be run once per playlab tick
+ *
+ * @function
+ * @name CustomGameLogic#onTick
+ */
+
+CustomGameLogic.prototype.onTick = function () {
+  throw new Error('should be overridden by child');
+};
+
+/**
+ * Store a block in our cache, so that it can be called elsewhere
+ */
+CustomGameLogic.prototype.cacheBlock = function (key, block) {
+  this.cached_[key] = block;
+};
+
+/**
+ * Takes a cached block for a function of variable, and calculates the value
+ * @returns The result of calling the code for the cached block. If the cached
+ *   block was a function_pass, this means we get back a function that can
+ *   now be called.
+ */
+CustomGameLogic.prototype.resolveCachedBlock_ = function (key) {
+  var result = '';
+  var block = this.cached_[key];
+  if (!block) {
+    return result;
+  }
+
+  var code = 'return ' + Blockly.JavaScript.blockToCode(block);
+  result = codegen.evalWith(code, {
+    Studio: api,
+    Globals: Studio.Globals
+  });
+  return result;
+};
+
+/**
+ * getVar/getFunc just call resolveCachedBlock_, but are provided for clarity
+ */
+CustomGameLogic.prototype.getVar_ = function (key) {
+  return this.resolveCachedBlock_(key);
+};
+
+CustomGameLogic.prototype.getFunc_ = function (key) {
+  return this.resolveCachedBlock_(key) || function () {};
+};
+
+module.exports = CustomGameLogic;
+
+},{"../codegen":54,"./api":202,"./constants":206}],202:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7391,7 +7909,7 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":150}],150:[function(require,module,exports){
+},{"./constants":206}],206:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -7568,1129 +8086,4 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],41:[function(require,module,exports){
-/**
-	The missing SVG.toDataURL library for your SVG elements.
-
-	Usage: SVGElement.toDataURL( type, { options } )
-
-	Returns: the data URL, except when using native PNG renderer (needs callback).
-
-	type	MIME type of the exported data.
-			Default: image/svg+xml.
-			Must support: image/png.
-			Additional: image/jpeg.
-
-	options is a map of options: {
-		callback: function(dataURL)
-			Callback function which is called when the data URL is ready.
-			This is only necessary when using native PNG renderer.
-			Default: undefined.
-
-		[the rest of the options only apply when type="image/png" or type="image/jpeg"]
-
-		renderer: "native"|"canvg"
-			PNG renderer to use. Native renderer¹ might cause a security exception.
-			Default: canvg if available, otherwise native.
-
-		keepNonSafe: true|false
-			Export non-safe (image and foreignObject) elements.
-			This will set the Canvas origin-clean property to false, if this data is transferred to Canvas.
-			Default: false, to keep origin-clean true.
-			NOTE: not currently supported and is just ignored.
-
-		keepOutsideViewport: true|false
-			Export all drawn content, even if not visible.
-			Default: false, export only visible viewport, similar to Canvas toDataURL().
-			NOTE: only supported with canvg renderer.
-	}
-
-	See original paper¹ for more info on SVG to Canvas exporting.
-
-	¹ http://svgopen.org/2010/papers/62-From_SVG_to_Canvas_and_Back/#svg_to_canvas
-*/
-
-SVGElement.prototype.toDataURL = function(type, options) {
-	var _svg = this;
-
-	function debug(s) {
-		// We could find to a way to make this display depending on environment, but
-		// for now I think it's okay to just disable.
-		// console.log("SVG.toDataURL:", s);
-	}
-
-	function exportSVG() {
-		var svg_xml = XMLSerialize(_svg);
-		var svg_dataurl = base64dataURLencode(svg_xml);
-		debug(type + " length: " + svg_dataurl.length);
-
-		// NOTE double data carrier
-		if (options.callback) options.callback(svg_dataurl);
-		return svg_dataurl;
-	}
-
-	function XMLSerialize(svg) {
-
-		// quick-n-serialize an SVG dom, needed for IE9 where there's no XMLSerializer nor SVG.xml
-		// s: SVG dom, which is the <svg> elemennt
-		function XMLSerializerForIE(s) {
-			var out = "";
-
-			out += "<" + s.nodeName;
-			for (var n = 0; n < s.attributes.length; n++) {
-				out += " " + s.attributes[n].name + "=" + "'" + s.attributes[n].value + "'";
-			}
-
-			if (s.hasChildNodes()) {
-				out += ">\n";
-
-				for (var n = 0; n < s.childNodes.length; n++) {
-					out += XMLSerializerForIE(s.childNodes[n]);
-				}
-
-				out += "</" + s.nodeName + ">" + "\n";
-
-			} else out += " />\n";
-
-			return out;
-		}
-
-
-		if (window.XMLSerializer) {
-			debug("using standard XMLSerializer.serializeToString")
-			return (new XMLSerializer()).serializeToString(svg);
-		} else {
-			debug("using custom XMLSerializerForIE")
-			return XMLSerializerForIE(svg);
-		}
-
-	}
-
-	function base64dataURLencode(s) {
-		var b64 = "data:image/svg+xml;base64,";
-
-		// https://developer.mozilla.org/en/DOM/window.btoa
-		if (window.btoa) {
-			debug("using window.btoa for base64 encoding");
-			b64 += btoa(s);
-		} else {
-			debug("using custom base64 encoder");
-			b64 += Base64.encode(s);
-		}
-
-		return b64;
-	}
-
-	function exportImage(type) {
-		var canvas = document.createElement("canvas");
-		var ctx = canvas.getContext('2d');
-
-		// TODO: if (options.keepOutsideViewport), do some translation magic?
-
-		var svg_img = new Image();
-		var svg_xml = XMLSerialize(_svg);
-		svg_img.src = base64dataURLencode(svg_xml);
-
-		svg_img.onload = function() {
-			debug("exported image size: " + [svg_img.width, svg_img.height])
-			canvas.width = svg_img.width;
-			canvas.height = svg_img.height;
-			ctx.drawImage(svg_img, 0, 0);
-
-			// SECURITY_ERR WILL HAPPEN NOW
-			var png_dataurl = canvas.toDataURL(type);
-			debug(type + " length: " + png_dataurl.length);
-
-			if (options.callback) options.callback( png_dataurl );
-			else debug("WARNING: no callback set, so nothing happens.");
-		}
-
-		svg_img.onerror = function() {
-			console.log(
-				"Can't export! Maybe your browser doesn't support " +
-				"SVG in img element or SVG input for Canvas drawImage?\n" +
-				"http://en.wikipedia.org/wiki/SVG#Native_support"
-			);
-		}
-
-		// NOTE: will not return anything
-	}
-
-	function exportImageCanvg(type) {
-		var canvas = document.createElement("canvas");
-		var ctx = canvas.getContext('2d');
-		var svg_xml = XMLSerialize(_svg);
-
-		// NOTE: canvg gets the SVG element dimensions incorrectly if not specified as attributes
-		//debug("detected svg dimensions " + [_svg.clientWidth, _svg.clientHeight])
-		//debug("canvas dimensions " + [canvas.width, canvas.height])
-
-		var keepBB = options.keepOutsideViewport;
-		if (keepBB) var bb = _svg.getBBox();
-
-		// NOTE: this canvg call is synchronous and blocks (no it does not)
-		canvg(canvas, svg_xml, {
-			ignoreMouse: true, ignoreAnimation: true,
-			offsetX: keepBB ? -bb.x : undefined,
-			offsetY: keepBB ? -bb.y : undefined,
-			scaleWidth: keepBB ? bb.width+bb.x : undefined,
-			scaleHeight: keepBB ? bb.height+bb.y : undefined,
-			renderCallback: function() {
-				debug("exported image dimensions " + [canvas.width, canvas.height]);
-				var png_dataurl = canvas.toDataURL(type);
-				debug(type + " length: " + png_dataurl.length);
-
-				if (options.callback) options.callback( png_dataurl );
-			}
-		});
-
-		// NOTE: return in addition to callback
-		return canvas.toDataURL(type);
-	}
-
-	// BEGIN MAIN
-
-	if (!type) type = "image/svg+xml";
-	if (!options) options = {};
-
-	if (options.keepNonSafe) debug("NOTE: keepNonSafe is NOT supported and will be ignored!");
-	if (options.keepOutsideViewport) debug("NOTE: keepOutsideViewport is only supported with canvg exporter.");
-
-	switch (type) {
-		case "image/svg+xml":
-			return exportSVG();
-			break;
-
-		case "image/png":
-		case "image/jpeg":
-
-			if (!options.renderer) {
-				if (window.canvg) options.renderer = "canvg";
-				else options.renderer="native";
-			}
-
-			switch (options.renderer) {
-				case "canvg":
-					debug("using canvg renderer for png export");
-					return exportImageCanvg(type);
-					break;
-
-				case "native":
-					debug("using native renderer for png export. THIS MIGHT FAIL.");
-					return exportImage(type);
-					break;
-
-				default:
-					debug("unknown png renderer given, doing noting (" + options.renderer + ")");
-			}
-
-			break;
-
-		default:
-			debug("Sorry! Exporting as '" + type + "' is not supported!")
-	}
-}
-
-},{}],40:[function(require,module,exports){
-/**
- * A class to parse color values
- * @author Stoyan Stefanov <sstoo@gmail.com>
- * @link   http://www.phpied.com/rgb-color-parser-in-javascript/
- * @license Use it if you like it
- */
-function RGBColor(color_string)
-{
-    this.ok = false;
-
-    // strip any leading #
-    if (color_string.charAt(0) == '#') { // remove # if any
-        color_string = color_string.substr(1,6);
-    }
-
-    color_string = color_string.replace(/ /g,'');
-    color_string = color_string.toLowerCase();
-
-    // before getting into regexps, try simple matches
-    // and overwrite the input
-    var simple_colors = {
-        aliceblue: 'f0f8ff',
-        antiquewhite: 'faebd7',
-        aqua: '00ffff',
-        aquamarine: '7fffd4',
-        azure: 'f0ffff',
-        beige: 'f5f5dc',
-        bisque: 'ffe4c4',
-        black: '000000',
-        blanchedalmond: 'ffebcd',
-        blue: '0000ff',
-        blueviolet: '8a2be2',
-        brown: 'a52a2a',
-        burlywood: 'deb887',
-        cadetblue: '5f9ea0',
-        chartreuse: '7fff00',
-        chocolate: 'd2691e',
-        coral: 'ff7f50',
-        cornflowerblue: '6495ed',
-        cornsilk: 'fff8dc',
-        crimson: 'dc143c',
-        cyan: '00ffff',
-        darkblue: '00008b',
-        darkcyan: '008b8b',
-        darkgoldenrod: 'b8860b',
-        darkgray: 'a9a9a9',
-        darkgreen: '006400',
-        darkkhaki: 'bdb76b',
-        darkmagenta: '8b008b',
-        darkolivegreen: '556b2f',
-        darkorange: 'ff8c00',
-        darkorchid: '9932cc',
-        darkred: '8b0000',
-        darksalmon: 'e9967a',
-        darkseagreen: '8fbc8f',
-        darkslateblue: '483d8b',
-        darkslategray: '2f4f4f',
-        darkturquoise: '00ced1',
-        darkviolet: '9400d3',
-        deeppink: 'ff1493',
-        deepskyblue: '00bfff',
-        dimgray: '696969',
-        dodgerblue: '1e90ff',
-        feldspar: 'd19275',
-        firebrick: 'b22222',
-        floralwhite: 'fffaf0',
-        forestgreen: '228b22',
-        fuchsia: 'ff00ff',
-        gainsboro: 'dcdcdc',
-        ghostwhite: 'f8f8ff',
-        gold: 'ffd700',
-        goldenrod: 'daa520',
-        gray: '808080',
-        green: '008000',
-        greenyellow: 'adff2f',
-        honeydew: 'f0fff0',
-        hotpink: 'ff69b4',
-        indianred : 'cd5c5c',
-        indigo : '4b0082',
-        ivory: 'fffff0',
-        khaki: 'f0e68c',
-        lavender: 'e6e6fa',
-        lavenderblush: 'fff0f5',
-        lawngreen: '7cfc00',
-        lemonchiffon: 'fffacd',
-        lightblue: 'add8e6',
-        lightcoral: 'f08080',
-        lightcyan: 'e0ffff',
-        lightgoldenrodyellow: 'fafad2',
-        lightgrey: 'd3d3d3',
-        lightgreen: '90ee90',
-        lightpink: 'ffb6c1',
-        lightsalmon: 'ffa07a',
-        lightseagreen: '20b2aa',
-        lightskyblue: '87cefa',
-        lightslateblue: '8470ff',
-        lightslategray: '778899',
-        lightsteelblue: 'b0c4de',
-        lightyellow: 'ffffe0',
-        lime: '00ff00',
-        limegreen: '32cd32',
-        linen: 'faf0e6',
-        magenta: 'ff00ff',
-        maroon: '800000',
-        mediumaquamarine: '66cdaa',
-        mediumblue: '0000cd',
-        mediumorchid: 'ba55d3',
-        mediumpurple: '9370d8',
-        mediumseagreen: '3cb371',
-        mediumslateblue: '7b68ee',
-        mediumspringgreen: '00fa9a',
-        mediumturquoise: '48d1cc',
-        mediumvioletred: 'c71585',
-        midnightblue: '191970',
-        mintcream: 'f5fffa',
-        mistyrose: 'ffe4e1',
-        moccasin: 'ffe4b5',
-        navajowhite: 'ffdead',
-        navy: '000080',
-        oldlace: 'fdf5e6',
-        olive: '808000',
-        olivedrab: '6b8e23',
-        orange: 'ffa500',
-        orangered: 'ff4500',
-        orchid: 'da70d6',
-        palegoldenrod: 'eee8aa',
-        palegreen: '98fb98',
-        paleturquoise: 'afeeee',
-        palevioletred: 'd87093',
-        papayawhip: 'ffefd5',
-        peachpuff: 'ffdab9',
-        peru: 'cd853f',
-        pink: 'ffc0cb',
-        plum: 'dda0dd',
-        powderblue: 'b0e0e6',
-        purple: '800080',
-        red: 'ff0000',
-        rosybrown: 'bc8f8f',
-        royalblue: '4169e1',
-        saddlebrown: '8b4513',
-        salmon: 'fa8072',
-        sandybrown: 'f4a460',
-        seagreen: '2e8b57',
-        seashell: 'fff5ee',
-        sienna: 'a0522d',
-        silver: 'c0c0c0',
-        skyblue: '87ceeb',
-        slateblue: '6a5acd',
-        slategray: '708090',
-        snow: 'fffafa',
-        springgreen: '00ff7f',
-        steelblue: '4682b4',
-        tan: 'd2b48c',
-        teal: '008080',
-        thistle: 'd8bfd8',
-        tomato: 'ff6347',
-        turquoise: '40e0d0',
-        violet: 'ee82ee',
-        violetred: 'd02090',
-        wheat: 'f5deb3',
-        white: 'ffffff',
-        whitesmoke: 'f5f5f5',
-        yellow: 'ffff00',
-        yellowgreen: '9acd32'
-    };
-    for (var key in simple_colors) {
-        if (color_string == key) {
-            color_string = simple_colors[key];
-        }
-    }
-    // emd of simple type-in colors
-
-    // array of color definition objects
-    var color_defs = [
-        {
-            re: /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/,
-            example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
-            process: function (bits){
-                return [
-                    parseInt(bits[1]),
-                    parseInt(bits[2]),
-                    parseInt(bits[3])
-                ];
-            }
-        },
-        {
-            re: /^(\w{2})(\w{2})(\w{2})$/,
-            example: ['#00ff00', '336699'],
-            process: function (bits){
-                return [
-                    parseInt(bits[1], 16),
-                    parseInt(bits[2], 16),
-                    parseInt(bits[3], 16)
-                ];
-            }
-        },
-        {
-            re: /^(\w{1})(\w{1})(\w{1})$/,
-            example: ['#fb0', 'f0f'],
-            process: function (bits){
-                return [
-                    parseInt(bits[1] + bits[1], 16),
-                    parseInt(bits[2] + bits[2], 16),
-                    parseInt(bits[3] + bits[3], 16)
-                ];
-            }
-        }
-    ];
-
-    // search through the definitions to find a match
-    for (var i = 0; i < color_defs.length; i++) {
-        var re = color_defs[i].re;
-        var processor = color_defs[i].process;
-        var bits = re.exec(color_string);
-        if (bits) {
-            channels = processor(bits);
-            this.r = channels[0];
-            this.g = channels[1];
-            this.b = channels[2];
-            this.ok = true;
-        }
-
-    }
-
-    // validate/cleanup values
-    this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
-    this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
-    this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
-
-    // some getters
-    this.toRGB = function () {
-        return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
-    }
-    this.toHex = function () {
-        var r = this.r.toString(16);
-        var g = this.g.toString(16);
-        var b = this.b.toString(16);
-        if (r.length == 1) r = '0' + r;
-        if (g.length == 1) g = '0' + g;
-        if (b.length == 1) b = '0' + b;
-        return '#' + r + g + b;
-    }
-
-    // help
-    this.getHelpXML = function () {
-
-        var examples = new Array();
-        // add regexps
-        for (var i = 0; i < color_defs.length; i++) {
-            var example = color_defs[i].example;
-            for (var j = 0; j < example.length; j++) {
-                examples[examples.length] = example[j];
-            }
-        }
-        // add type-in colors
-        for (var sc in simple_colors) {
-            examples[examples.length] = sc;
-        }
-
-        var xml = document.createElement('ul');
-        xml.setAttribute('id', 'rgbcolor-examples');
-        for (var i = 0; i < examples.length; i++) {
-            try {
-                var list_item = document.createElement('li');
-                var list_color = new RGBColor(examples[i]);
-                var example_div = document.createElement('div');
-                example_div.style.cssText =
-                        'margin: 3px; '
-                        + 'border: 1px solid black; '
-                        + 'background:' + list_color.toHex() + '; '
-                        + 'color:' + list_color.toHex()
-                ;
-                example_div.appendChild(document.createTextNode('test'));
-                var list_item_value = document.createTextNode(
-                    ' ' + examples[i] + ' -> ' + list_color.toRGB() + ' -> ' + list_color.toHex()
-                );
-                list_item.appendChild(example_div);
-                list_item.appendChild(list_item_value);
-                xml.appendChild(list_item);
-
-            } catch(e){}
-        }
-        return xml;
-
-    }
-
-}
-
-
-},{}],38:[function(require,module,exports){
-/*
-
-StackBlur - a fast almost Gaussian Blur For Canvas
-
-Version: 	0.5
-Author:		Mario Klingemann
-Contact: 	mario@quasimondo.com
-Website:	http://www.quasimondo.com/StackBlurForCanvas
-Twitter:	@quasimondo
-
-In case you find this class useful - especially in commercial projects -
-I am not totally unhappy for a small donation to my PayPal account
-mario@quasimondo.de
-
-Or support me on flattr: 
-https://flattr.com/thing/72791/StackBlur-a-fast-almost-Gaussian-Blur-Effect-for-CanvasJavascript
-
-Copyright (c) 2010 Mario Klingemann
-
-Permission is hereby granted, free of charge, to any person
-obtaining a copy of this software and associated documentation
-files (the "Software"), to deal in the Software without
-restriction, including without limitation the rights to use,
-copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following
-conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-*/
-
-var mul_table = [
-        512,512,456,512,328,456,335,512,405,328,271,456,388,335,292,512,
-        454,405,364,328,298,271,496,456,420,388,360,335,312,292,273,512,
-        482,454,428,405,383,364,345,328,312,298,284,271,259,496,475,456,
-        437,420,404,388,374,360,347,335,323,312,302,292,282,273,265,512,
-        497,482,468,454,441,428,417,405,394,383,373,364,354,345,337,328,
-        320,312,305,298,291,284,278,271,265,259,507,496,485,475,465,456,
-        446,437,428,420,412,404,396,388,381,374,367,360,354,347,341,335,
-        329,323,318,312,307,302,297,292,287,282,278,273,269,265,261,512,
-        505,497,489,482,475,468,461,454,447,441,435,428,422,417,411,405,
-        399,394,389,383,378,373,368,364,359,354,350,345,341,337,332,328,
-        324,320,316,312,309,305,301,298,294,291,287,284,281,278,274,271,
-        268,265,262,259,257,507,501,496,491,485,480,475,470,465,460,456,
-        451,446,442,437,433,428,424,420,416,412,408,404,400,396,392,388,
-        385,381,377,374,370,367,363,360,357,354,350,347,344,341,338,335,
-        332,329,326,323,320,318,315,312,310,307,304,302,299,297,294,292,
-        289,287,285,282,280,278,275,273,271,269,267,265,263,261,259];
-        
-   
-var shg_table = [
-	     9, 11, 12, 13, 13, 14, 14, 15, 15, 15, 15, 16, 16, 16, 16, 17, 
-		17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 
-		19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20,
-		20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21,
-		21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
-		21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 
-		22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22,
-		22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 
-		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
-		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
-		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 
-		23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 
-		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
-		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
-		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
-		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24 ];
-
-function stackBlurImage( imageID, canvasID, radius, blurAlphaChannel )
-{
-			
- 	var img = document.getElementById( imageID );
-	var w = img.naturalWidth;
-    var h = img.naturalHeight;
-       
-	var canvas = document.getElementById( canvasID );
-      
-    canvas.style.width  = w + "px";
-    canvas.style.height = h + "px";
-    canvas.width = w;
-    canvas.height = h;
-    
-    var context = canvas.getContext("2d");
-    context.clearRect( 0, 0, w, h );
-    context.drawImage( img, 0, 0 );
-
-	if ( isNaN(radius) || radius < 1 ) return;
-	
-	if ( blurAlphaChannel )
-		stackBlurCanvasRGBA( canvasID, 0, 0, w, h, radius );
-	else 
-		stackBlurCanvasRGB( canvasID, 0, 0, w, h, radius );
-}
-
-
-function stackBlurCanvasRGBA( id, top_x, top_y, width, height, radius )
-{
-	if ( isNaN(radius) || radius < 1 ) return;
-	radius |= 0;
-	
-	var canvas  = document.getElementById( id );
-	var context = canvas.getContext("2d");
-	var imageData;
-	
-	try {
-	  try {
-		imageData = context.getImageData( top_x, top_y, width, height );
-	  } catch(e) {
-	  
-		// NOTE: this part is supposedly only needed if you want to work with local files
-		// so it might be okay to remove the whole try/catch block and just use
-		// imageData = context.getImageData( top_x, top_y, width, height );
-		try {
-			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
-			imageData = context.getImageData( top_x, top_y, width, height );
-		} catch(e) {
-			alert("Cannot access local image");
-			throw new Error("unable to access local image data: " + e);
-			return;
-		}
-	  }
-	} catch(e) {
-	  alert("Cannot access image");
-	  throw new Error("unable to access image data: " + e);
-	}
-			
-	var pixels = imageData.data;
-			
-	var x, y, i, p, yp, yi, yw, r_sum, g_sum, b_sum, a_sum, 
-	r_out_sum, g_out_sum, b_out_sum, a_out_sum,
-	r_in_sum, g_in_sum, b_in_sum, a_in_sum, 
-	pr, pg, pb, pa, rbs;
-			
-	var div = radius + radius + 1;
-	var w4 = width << 2;
-	var widthMinus1  = width - 1;
-	var heightMinus1 = height - 1;
-	var radiusPlus1  = radius + 1;
-	var sumFactor = radiusPlus1 * ( radiusPlus1 + 1 ) / 2;
-	
-	var stackStart = new BlurStack();
-	var stack = stackStart;
-	for ( i = 1; i < div; i++ )
-	{
-		stack = stack.next = new BlurStack();
-		if ( i == radiusPlus1 ) var stackEnd = stack;
-	}
-	stack.next = stackStart;
-	var stackIn = null;
-	var stackOut = null;
-	
-	yw = yi = 0;
-	
-	var mul_sum = mul_table[radius];
-	var shg_sum = shg_table[radius];
-	
-	for ( y = 0; y < height; y++ )
-	{
-		r_in_sum = g_in_sum = b_in_sum = a_in_sum = r_sum = g_sum = b_sum = a_sum = 0;
-		
-		r_out_sum = radiusPlus1 * ( pr = pixels[yi] );
-		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1] );
-		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2] );
-		a_out_sum = radiusPlus1 * ( pa = pixels[yi+3] );
-		
-		r_sum += sumFactor * pr;
-		g_sum += sumFactor * pg;
-		b_sum += sumFactor * pb;
-		a_sum += sumFactor * pa;
-		
-		stack = stackStart;
-		
-		for( i = 0; i < radiusPlus1; i++ )
-		{
-			stack.r = pr;
-			stack.g = pg;
-			stack.b = pb;
-			stack.a = pa;
-			stack = stack.next;
-		}
-		
-		for( i = 1; i < radiusPlus1; i++ )
-		{
-			p = yi + (( widthMinus1 < i ? widthMinus1 : i ) << 2 );
-			r_sum += ( stack.r = ( pr = pixels[p])) * ( rbs = radiusPlus1 - i );
-			g_sum += ( stack.g = ( pg = pixels[p+1])) * rbs;
-			b_sum += ( stack.b = ( pb = pixels[p+2])) * rbs;
-			a_sum += ( stack.a = ( pa = pixels[p+3])) * rbs;
-			
-			r_in_sum += pr;
-			g_in_sum += pg;
-			b_in_sum += pb;
-			a_in_sum += pa;
-			
-			stack = stack.next;
-		}
-		
-		
-		stackIn = stackStart;
-		stackOut = stackEnd;
-		for ( x = 0; x < width; x++ )
-		{
-			pixels[yi+3] = pa = (a_sum * mul_sum) >> shg_sum;
-			if ( pa != 0 )
-			{
-				pa = 255 / pa;
-				pixels[yi]   = ((r_sum * mul_sum) >> shg_sum) * pa;
-				pixels[yi+1] = ((g_sum * mul_sum) >> shg_sum) * pa;
-				pixels[yi+2] = ((b_sum * mul_sum) >> shg_sum) * pa;
-			} else {
-				pixels[yi] = pixels[yi+1] = pixels[yi+2] = 0;
-			}
-			
-			r_sum -= r_out_sum;
-			g_sum -= g_out_sum;
-			b_sum -= b_out_sum;
-			a_sum -= a_out_sum;
-			
-			r_out_sum -= stackIn.r;
-			g_out_sum -= stackIn.g;
-			b_out_sum -= stackIn.b;
-			a_out_sum -= stackIn.a;
-			
-			p =  ( yw + ( ( p = x + radius + 1 ) < widthMinus1 ? p : widthMinus1 ) ) << 2;
-			
-			r_in_sum += ( stackIn.r = pixels[p]);
-			g_in_sum += ( stackIn.g = pixels[p+1]);
-			b_in_sum += ( stackIn.b = pixels[p+2]);
-			a_in_sum += ( stackIn.a = pixels[p+3]);
-			
-			r_sum += r_in_sum;
-			g_sum += g_in_sum;
-			b_sum += b_in_sum;
-			a_sum += a_in_sum;
-			
-			stackIn = stackIn.next;
-			
-			r_out_sum += ( pr = stackOut.r );
-			g_out_sum += ( pg = stackOut.g );
-			b_out_sum += ( pb = stackOut.b );
-			a_out_sum += ( pa = stackOut.a );
-			
-			r_in_sum -= pr;
-			g_in_sum -= pg;
-			b_in_sum -= pb;
-			a_in_sum -= pa;
-			
-			stackOut = stackOut.next;
-
-			yi += 4;
-		}
-		yw += width;
-	}
-
-	
-	for ( x = 0; x < width; x++ )
-	{
-		g_in_sum = b_in_sum = a_in_sum = r_in_sum = g_sum = b_sum = a_sum = r_sum = 0;
-		
-		yi = x << 2;
-		r_out_sum = radiusPlus1 * ( pr = pixels[yi]);
-		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1]);
-		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2]);
-		a_out_sum = radiusPlus1 * ( pa = pixels[yi+3]);
-		
-		r_sum += sumFactor * pr;
-		g_sum += sumFactor * pg;
-		b_sum += sumFactor * pb;
-		a_sum += sumFactor * pa;
-		
-		stack = stackStart;
-		
-		for( i = 0; i < radiusPlus1; i++ )
-		{
-			stack.r = pr;
-			stack.g = pg;
-			stack.b = pb;
-			stack.a = pa;
-			stack = stack.next;
-		}
-		
-		yp = width;
-		
-		for( i = 1; i <= radius; i++ )
-		{
-			yi = ( yp + x ) << 2;
-			
-			r_sum += ( stack.r = ( pr = pixels[yi])) * ( rbs = radiusPlus1 - i );
-			g_sum += ( stack.g = ( pg = pixels[yi+1])) * rbs;
-			b_sum += ( stack.b = ( pb = pixels[yi+2])) * rbs;
-			a_sum += ( stack.a = ( pa = pixels[yi+3])) * rbs;
-		   
-			r_in_sum += pr;
-			g_in_sum += pg;
-			b_in_sum += pb;
-			a_in_sum += pa;
-			
-			stack = stack.next;
-		
-			if( i < heightMinus1 )
-			{
-				yp += width;
-			}
-		}
-		
-		yi = x;
-		stackIn = stackStart;
-		stackOut = stackEnd;
-		for ( y = 0; y < height; y++ )
-		{
-			p = yi << 2;
-			pixels[p+3] = pa = (a_sum * mul_sum) >> shg_sum;
-			if ( pa > 0 )
-			{
-				pa = 255 / pa;
-				pixels[p]   = ((r_sum * mul_sum) >> shg_sum ) * pa;
-				pixels[p+1] = ((g_sum * mul_sum) >> shg_sum ) * pa;
-				pixels[p+2] = ((b_sum * mul_sum) >> shg_sum ) * pa;
-			} else {
-				pixels[p] = pixels[p+1] = pixels[p+2] = 0;
-			}
-			
-			r_sum -= r_out_sum;
-			g_sum -= g_out_sum;
-			b_sum -= b_out_sum;
-			a_sum -= a_out_sum;
-		   
-			r_out_sum -= stackIn.r;
-			g_out_sum -= stackIn.g;
-			b_out_sum -= stackIn.b;
-			a_out_sum -= stackIn.a;
-			
-			p = ( x + (( ( p = y + radiusPlus1) < heightMinus1 ? p : heightMinus1 ) * width )) << 2;
-			
-			r_sum += ( r_in_sum += ( stackIn.r = pixels[p]));
-			g_sum += ( g_in_sum += ( stackIn.g = pixels[p+1]));
-			b_sum += ( b_in_sum += ( stackIn.b = pixels[p+2]));
-			a_sum += ( a_in_sum += ( stackIn.a = pixels[p+3]));
-		   
-			stackIn = stackIn.next;
-			
-			r_out_sum += ( pr = stackOut.r );
-			g_out_sum += ( pg = stackOut.g );
-			b_out_sum += ( pb = stackOut.b );
-			a_out_sum += ( pa = stackOut.a );
-			
-			r_in_sum -= pr;
-			g_in_sum -= pg;
-			b_in_sum -= pb;
-			a_in_sum -= pa;
-			
-			stackOut = stackOut.next;
-			
-			yi += width;
-		}
-	}
-	
-	context.putImageData( imageData, top_x, top_y );
-	
-}
-
-
-function stackBlurCanvasRGB( id, top_x, top_y, width, height, radius )
-{
-	if ( isNaN(radius) || radius < 1 ) return;
-	radius |= 0;
-	
-	var canvas  = document.getElementById( id );
-	var context = canvas.getContext("2d");
-	var imageData;
-	
-	try {
-	  try {
-		imageData = context.getImageData( top_x, top_y, width, height );
-	  } catch(e) {
-	  
-		// NOTE: this part is supposedly only needed if you want to work with local files
-		// so it might be okay to remove the whole try/catch block and just use
-		// imageData = context.getImageData( top_x, top_y, width, height );
-		try {
-			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
-			imageData = context.getImageData( top_x, top_y, width, height );
-		} catch(e) {
-			alert("Cannot access local image");
-			throw new Error("unable to access local image data: " + e);
-			return;
-		}
-	  }
-	} catch(e) {
-	  alert("Cannot access image");
-	  throw new Error("unable to access image data: " + e);
-	}
-			
-	var pixels = imageData.data;
-			
-	var x, y, i, p, yp, yi, yw, r_sum, g_sum, b_sum,
-	r_out_sum, g_out_sum, b_out_sum,
-	r_in_sum, g_in_sum, b_in_sum,
-	pr, pg, pb, rbs;
-			
-	var div = radius + radius + 1;
-	var w4 = width << 2;
-	var widthMinus1  = width - 1;
-	var heightMinus1 = height - 1;
-	var radiusPlus1  = radius + 1;
-	var sumFactor = radiusPlus1 * ( radiusPlus1 + 1 ) / 2;
-	
-	var stackStart = new BlurStack();
-	var stack = stackStart;
-	for ( i = 1; i < div; i++ )
-	{
-		stack = stack.next = new BlurStack();
-		if ( i == radiusPlus1 ) var stackEnd = stack;
-	}
-	stack.next = stackStart;
-	var stackIn = null;
-	var stackOut = null;
-	
-	yw = yi = 0;
-	
-	var mul_sum = mul_table[radius];
-	var shg_sum = shg_table[radius];
-	
-	for ( y = 0; y < height; y++ )
-	{
-		r_in_sum = g_in_sum = b_in_sum = r_sum = g_sum = b_sum = 0;
-		
-		r_out_sum = radiusPlus1 * ( pr = pixels[yi] );
-		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1] );
-		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2] );
-		
-		r_sum += sumFactor * pr;
-		g_sum += sumFactor * pg;
-		b_sum += sumFactor * pb;
-		
-		stack = stackStart;
-		
-		for( i = 0; i < radiusPlus1; i++ )
-		{
-			stack.r = pr;
-			stack.g = pg;
-			stack.b = pb;
-			stack = stack.next;
-		}
-		
-		for( i = 1; i < radiusPlus1; i++ )
-		{
-			p = yi + (( widthMinus1 < i ? widthMinus1 : i ) << 2 );
-			r_sum += ( stack.r = ( pr = pixels[p])) * ( rbs = radiusPlus1 - i );
-			g_sum += ( stack.g = ( pg = pixels[p+1])) * rbs;
-			b_sum += ( stack.b = ( pb = pixels[p+2])) * rbs;
-			
-			r_in_sum += pr;
-			g_in_sum += pg;
-			b_in_sum += pb;
-			
-			stack = stack.next;
-		}
-		
-		
-		stackIn = stackStart;
-		stackOut = stackEnd;
-		for ( x = 0; x < width; x++ )
-		{
-			pixels[yi]   = (r_sum * mul_sum) >> shg_sum;
-			pixels[yi+1] = (g_sum * mul_sum) >> shg_sum;
-			pixels[yi+2] = (b_sum * mul_sum) >> shg_sum;
-			
-			r_sum -= r_out_sum;
-			g_sum -= g_out_sum;
-			b_sum -= b_out_sum;
-			
-			r_out_sum -= stackIn.r;
-			g_out_sum -= stackIn.g;
-			b_out_sum -= stackIn.b;
-			
-			p =  ( yw + ( ( p = x + radius + 1 ) < widthMinus1 ? p : widthMinus1 ) ) << 2;
-			
-			r_in_sum += ( stackIn.r = pixels[p]);
-			g_in_sum += ( stackIn.g = pixels[p+1]);
-			b_in_sum += ( stackIn.b = pixels[p+2]);
-			
-			r_sum += r_in_sum;
-			g_sum += g_in_sum;
-			b_sum += b_in_sum;
-			
-			stackIn = stackIn.next;
-			
-			r_out_sum += ( pr = stackOut.r );
-			g_out_sum += ( pg = stackOut.g );
-			b_out_sum += ( pb = stackOut.b );
-			
-			r_in_sum -= pr;
-			g_in_sum -= pg;
-			b_in_sum -= pb;
-			
-			stackOut = stackOut.next;
-
-			yi += 4;
-		}
-		yw += width;
-	}
-
-	
-	for ( x = 0; x < width; x++ )
-	{
-		g_in_sum = b_in_sum = r_in_sum = g_sum = b_sum = r_sum = 0;
-		
-		yi = x << 2;
-		r_out_sum = radiusPlus1 * ( pr = pixels[yi]);
-		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1]);
-		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2]);
-		
-		r_sum += sumFactor * pr;
-		g_sum += sumFactor * pg;
-		b_sum += sumFactor * pb;
-		
-		stack = stackStart;
-		
-		for( i = 0; i < radiusPlus1; i++ )
-		{
-			stack.r = pr;
-			stack.g = pg;
-			stack.b = pb;
-			stack = stack.next;
-		}
-		
-		yp = width;
-		
-		for( i = 1; i <= radius; i++ )
-		{
-			yi = ( yp + x ) << 2;
-			
-			r_sum += ( stack.r = ( pr = pixels[yi])) * ( rbs = radiusPlus1 - i );
-			g_sum += ( stack.g = ( pg = pixels[yi+1])) * rbs;
-			b_sum += ( stack.b = ( pb = pixels[yi+2])) * rbs;
-			
-			r_in_sum += pr;
-			g_in_sum += pg;
-			b_in_sum += pb;
-			
-			stack = stack.next;
-		
-			if( i < heightMinus1 )
-			{
-				yp += width;
-			}
-		}
-		
-		yi = x;
-		stackIn = stackStart;
-		stackOut = stackEnd;
-		for ( y = 0; y < height; y++ )
-		{
-			p = yi << 2;
-			pixels[p]   = (r_sum * mul_sum) >> shg_sum;
-			pixels[p+1] = (g_sum * mul_sum) >> shg_sum;
-			pixels[p+2] = (b_sum * mul_sum) >> shg_sum;
-			
-			r_sum -= r_out_sum;
-			g_sum -= g_out_sum;
-			b_sum -= b_out_sum;
-			
-			r_out_sum -= stackIn.r;
-			g_out_sum -= stackIn.g;
-			b_out_sum -= stackIn.b;
-			
-			p = ( x + (( ( p = y + radiusPlus1) < heightMinus1 ? p : heightMinus1 ) * width )) << 2;
-			
-			r_sum += ( r_in_sum += ( stackIn.r = pixels[p]));
-			g_sum += ( g_in_sum += ( stackIn.g = pixels[p+1]));
-			b_sum += ( b_in_sum += ( stackIn.b = pixels[p+2]));
-			
-			stackIn = stackIn.next;
-			
-			r_out_sum += ( pr = stackOut.r );
-			g_out_sum += ( pg = stackOut.g );
-			b_out_sum += ( pb = stackOut.b );
-			
-			r_in_sum -= pr;
-			g_in_sum -= pg;
-			b_in_sum -= pb;
-			
-			stackOut = stackOut.next;
-			
-			yi += width;
-		}
-	}
-	
-	context.putImageData( imageData, top_x, top_y );
-	
-}
-
-function BlurStack()
-{
-	this.r = 0;
-	this.g = 0;
-	this.b = 0;
-	this.a = 0;
-	this.next = null;
-}
-},{}]},{},[154]);
+},{}]},{},[212]);

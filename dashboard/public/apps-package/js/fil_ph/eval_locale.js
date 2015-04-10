@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "Ginamit mo ang isang hindi wastong color string:"+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "Ginamit mo ang isang hindi wastong color string:"+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "bilog (radius, klase, kulay)"},
 "displayBlockTitle":function(d){return "display"},
 "ellipseBlockTitle":function(d){return "ellipse (lapad, taas, style, kulay)"},
 "extraTopBlocks":function(d){return "Mayroon kang hindi isinama na block. Ibig mo bang isama ito sa \"display\" block?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "overlay (taas, baba)"},
 "placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
@@ -168,7 +171,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "squareBlockTitle":function(d){return "square (size, style, kulay)"},
 "starBlockTitle":function(d){return "star (radius, style, color)"},
 "radialStarBlockTitle":function(d){return "radial-star (points, inner, outer, style, color)"},
-"polygonBlockTitle":function(d){return "polygon (sides, length, style, color)"},
+"polygonBlockTitle":function(d){return "polygon (gilid, haba , estilo, kulay)"},
 "stringAppendBlockTitle":function(d){return "string-append (first, second)"},
 "stringLengthBlockTitle":function(d){return "string-length (string)"},
 "textBlockTitle":function(d){return "text (string, size, kulay)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "underlay (ilalim, ibabaw)"},
 "outline":function(d){return "outline"},
 "solid":function(d){return "solid"},
-"string":function(d){return "string"}};
+"string":function(d){return "string"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

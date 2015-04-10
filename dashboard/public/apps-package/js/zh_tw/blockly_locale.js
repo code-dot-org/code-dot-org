@@ -1,12 +1,12 @@
 goog.provide('Blockly.Msg.zh_tw');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "實際";
+Blockly.Msg.ACTUAL = "呼叫";
 Blockly.Msg.ADD = "加入";
 Blockly.Msg.ADD_COMMENT = "加入註解";
 Blockly.Msg.ADD_PARAMETER = "加入參數";
 Blockly.Msg.CHANGE_VALUE_TITLE = "修改值:";
 Blockly.Msg.COLLAPSE_ALL = "收合積木";
-Blockly.Msg.COLLAPSE_BLOCK = "收合積木";
+Blockly.Msg.COLLAPSE_BLOCK = "收合區塊";
 Blockly.Msg.COLOUR_BLEND_COLOUR1 = "顏色 1";
 Blockly.Msg.COLOUR_BLEND_COLOUR2 = "顏色 2";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "紅";
 Blockly.Msg.COLOUR_RGB_TITLE = "顏色選擇";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "以指定的紅、 綠和藍的數值來產生顏色。所有值必須都是介於 0 和 100 之間。";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "停止迴圈";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "繼續下一個 迴圈";
@@ -69,12 +70,12 @@ Blockly.Msg.DELETE_PARAMETER_TITLE = "這會將全部參數「%1」刪除。真�
 Blockly.Msg.DELETE_X_BLOCKS = "刪除 %1 個程式積木";
 Blockly.Msg.DISABLE_BLOCK = "停用程式積木";
 Blockly.Msg.DUPLICATE_BLOCK = "複製\n";
-Blockly.Msg.ENABLE_BLOCK = "啟用積木";
+Blockly.Msg.ENABLE_BLOCK = "啟用區塊";
 Blockly.Msg.EXAMPLE = "範例";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "定義一個預期和實際行為的例子";
 Blockly.Msg.EXPAND_ALL = "展開積木";
 Blockly.Msg.EXPAND_BLOCK = "展開區塊";
-Blockly.Msg.EXPECTED = "預期的";
+Blockly.Msg.EXPECTED = "結果";
 Blockly.Msg.EXTERNAL_INPUTS = "外部輸入";
 Blockly.Msg.FUNCTION_CREATE = "建立一個函數";
 Blockly.Msg.FUNCTION_EDIT = "編輯";

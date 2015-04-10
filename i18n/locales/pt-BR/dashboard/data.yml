@@ -114,7 +114,7 @@ pt-BR:
       description:
         sequence: Sequência
         if: 'Bloco "se"'
-        if_else: Bloco se-senão
+        if_else: 'Bloco "se" - "se não"'
         loop_times: 'Bloco "Repetir Vezes"'
         loop_until: 'Bloco "Repita até que"'
         loop_while: 'Bloco "Enquanto"'
@@ -203,7 +203,7 @@ pt-BR:
         turtle_3_5: 'Agora, crie uma nova função "desenhe uma casa" e use-a para abrigar dois gatos. Dica: crie uma nova função usando o bloco "faça alguma coisa" e nomeie o bloco como quiser.'
         turtle_3_6: 'Usando "desenhe um quadrado" como exemplo, adicione uma entrada denominada "comprimento" para "desenhe um triângulo". Em seguida, desenhe triângulos de tamanhos diferentes. (Dica: clique na estrela para adicionar uma entrada a uma função)'
         turtle_3_7: 'Coloque uma entrada "comprimento" em "desenhe uma casa" e construa uma casa grande para o elefante (com bordas de 150 pixels de comprimento)'
-        turtle_3_8: 'Estes são todos os blocos do desafio anterior. Modifique "desenhe uma casa" de forma que eu acabe no canto inferior direito após desenhar uma nova casa. Use essa função modificada para desenhar três casas.'
+        turtle_3_8: 'Modifique "desenhe uma casa" para que eu termine de desenhar uma nova casa no canto inferior direito. Use essa função modificada para desenhar três casas.'
         turtle_3_9: 'Você pode recriar a função "desenhe uma casa" sem ajuda? Tente, e em seguida desenhe uma fileira de casas.'
         turtle_3_10: Você aprendeu muito! Agora, use seu conhecimento para desenhar o que quiser. Tente desenhar uma estrela, ou uma espiral, ou um floco de neve.
         maze_karel_debug_seq_1: Bem-vindo à depuração! Meu código não está funcionando bem. Você pode achar o problema e corrigi-lo para que eu possa deixar meu terreno pronto para o plantio?
@@ -332,77 +332,6 @@ pt-BR:
         turtle_ec_1_2: 'Agora, desenhe um quadrado. NOTA: use sua cor preferida selecionando-a no novo bloco "Cor da caneta".'
         turtle_ec_1_10: 'Muito bem! Agora, desenhe o que quiser. Veja algumas ideias divertidas para desenhar: um boneco, um floco de neve ou uma espiral. Use também o novo bloco "Largura da caneta". Divirta-se!'
         studio_ec_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
-    levelbuilder:
-      frozen line:
-        instructions: Oi! Eu sou a Elsa de Arendelle. Você pode me ajudar a criar uma reta?
-      frozen perpendicular:
-        instructions: 'Agora, vamos ver se podemos criar duas retas que formam um ângulo de 90 graus entre elas. Você vai precisar usar o bloco "vire" e o bloco "mova".'
-      frozen square iterative:
-        instructions: Parece que estamos no meio do caminho para criar um quadrado. Vamos juntar 4 retas para criar um quadrado.
-      frozen square loop:
-        instructions: 'Oi, eu sou a Anna de Arendelle! Agora nós vamos fazer um quadrado usando o bloco "repita", que usa menos blocos. Quantas vezes (???) o bloco "repita" deve repetir os blocos dentro dele para criar um quadrado?'
-      frozen square loop 3x:
-        instructions: Vamos criar três quadrados, virando depois de cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado.
-      frozen square snowflake:
-        instructions: 'Você consegue criar um floco de neve usando o bloco "repita" para criar um quadrado 10 vezes, e o bloco "vire" para virar 36 graus entre cada quadrado?'
-      frozen cross:
-        instructions: 'Use o bloco "Repita" para criar um sinal de adição. Você percebeu que Elsa pode ir para frente e para trás?'
-      frozen cross rotate:
-        instructions: Agora, tente repetir isso 10 vezes. Quantos graus você precisa virar entre cada reta?
-      frozen cross rotate dense:
-        instructions: 'Vamos repetir isso 90 vezes! Quantas vezes 90 cabe em 360? Dica: é um número realmente pequeno.'
-      frozen diamond:
-        instructions: 'Vamos criar um paralelogramo. Ele é igual a um quadrado, mas tem ângulos diferentes: ângulos de 60 e de 120 graus ao invés de ângulos de 90 graus.'
-      frozen diamond mini snowflake:
-        instructions: 'Você sabia que todo floco de neve tem uma forma diferente? Vamos criar um novo floco de neve usando o bloco "Repita" para repetir um paralelogramo 4 vezes, virando à direita 90 graus entre cada paralelogramo.'
-      frozen diamond snowflake:
-        instructions: Agora, vamos criar um novo floco de neve usando o bloco repita para repetir um paralelogramo 10 vezes, virando à direita 36 graus entre cada um.
-      frozen circle:
-        instructions: Um círculo é uma forma especial. Você sabe qual número deve substituir os pontos de interrogação para desenhar um círculo?
-      frozen circle function:
-        instructions: 'Use o novo bloco "Crie um círculo" para criar 10 círculos sobrepostos. Não se esqueça de pular para a frente entre os círculos.'
-      frozen circle function in circle:
-        instructions: Agora, vamos criar 20 círculos sobrepostos, virando 18 graus entre cada círculo.
-      frozen circle function with parameter:
-        instructions: 'Este é um bloco "crie um círculo", e ele pode criar círculos de tamanhos diferentes. Você consegue criar um círculo pequeno de tamanho 5, e um círculo maior de tamanho 10 usando esse bloco?'
-      frozen snowflower:
-        instructions: Padrões de neve complexos podem ser criados com formas muito simples. Você consegue criar um padrão repetindo 5 círculos de tamanho 5 e 5 círculos de tamanho 10?
-      frozen snowflake branch:
-        instructions: 'Tente usar o bloco "crie um floco de neve do tipo ramificado" para criar três ramificações, que começam a parecer com um floco de neve.'
-      frozen snowflake full:
-        instructions: Agora, vamos repetir isso 8 vezes para criar um lindo floco de neve!
-      frozen freeplay:
-        instructions: Você se tornou oficialmente um artista mestre! Crie um país das maravilhas congelante e compartilhe com seus amigos.
-      scrat 16:
-        instructions: 'Bolota! Bolota! Bolota! Use um bloco "se" para me levar até lá com o menor número de blocos.'
-      scrat 17:
-        instructions: 'Ok, vamos fazer novamente para pegar a prática - este não é muito diferente, mas cuidado com a parede!'
-      scrat 18:
-        instructions: 'Os blocos "se-senão" verificam uma condição e, em seguida, fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.'
-      scrat 19:
-        instructions: 'Vamos praticar o uso do bloco "se-senão" mais uma vez, você consegue na primeira tentativa?'
-      scrat 20:
-        instructions: Você consegue adicionar apenas 3 blocos para me ajudar a percorrer um labirinto mais complexo? Se você acertar, eu posso andar por qualquer caminho cheio de curvas, não importa o comprimento. Rápido! O gelo está derretendo!
-      Standalone_Artist_1:
-        instructions: 'Bem-vindo ao Artista! Primeiro, vamos tentar fazer um quadrado simples usando o bloco "vire à direita" e "avance". Cada lado deve medir 100 pixels.'
-      Standalone_Artist_2:
-        instructions: Desenhe este diamante com ângulos de 120 e 60 graus, e com lados de 150 pixels de comprimento.
-      Standalone_Artist_3:
-        instructions: Você pode desenhar este hexágono com lados que meçam 100 pixels e ângulos que meçam 60 graus?
-      Standalone_Artist_4:
-        instructions: Agora você pode brincar com um novo bloco, o laço. Ele repetirá um conjunto de comandos. O que acontecerá se você fizer seis iterações desses comandos?
-      Standalone_Artist_5:
-        instructions: Quantas vezes você precisar iterar este diamante para desenhar a flor?
-      Standalone_Artist_5.5:
-        instructions: 'Observe como simplificamos o código do diamante, transformando-o em um laço. Você pode fazer 12 iterações de toda a sequência para desenhar a flor. Dica: você terá que virar 30 graus depois de iterar seu diamante para não continuar desenhando o mesmo diamante todas as vezes.'
-      Standalone_Artist_6:
-        instructions: 'Faça 6 iterações do código deste hexágono para criar o desenho. Quantos graus você terá que virar de cada vez? Dica: divida o número de graus de um círculo pelo número de iterações que fizer.'
-      Standalone_Artist_7:
-        instructions: 'Uma função é mais uma ferramenta de programação para que você não tenha que repetir as mesmas ações. Esta função desenha uma flor, assim, você pode usá-la sempre que quiser fazer esse desenho. Use-a juntamente com o novo bloco "pule" para desenhar essas flores. Dica: as flores são separadas por 150 pixels'
-      Standalone_Artist_8:
-        instructions: 'Esta é uma função chamada "Desenhe uma forma", que programamos para desenhar hexágonos. Execute o código para ver o que ele faz e, em seguida, tente usá-lo com a função para ver o que acontece. Você consegue fazer com que ela desenhe um padrão de quadrados, triângulos ou octógonos?'
-      Standalone_Artist_9:
-        instructions: Agora vá em frente e faça a imagem que mais gostar! Você tem até uma função vazia para usar para fazer o que quiser!
     video:
       name:
         maze_intro: Introdução ao Labirinto
@@ -412,8 +341,8 @@ pt-BR:
         loop_times: Bloco repita
         loop_until: Bloco repita até
         if: Bloco se
-        if_else: Bloco se/senão
-        if_else_scrat: Bloco se/senão
+        if_else: Bloco se/se não
+        if_else_scrat: Bloco se/se não
         function: Funções
         loop_while: Bloco enquanto
         loop_for: Bloco contador
@@ -462,6 +391,7 @@ pt-BR:
         C2_relay_programming: Programação Relay
         C2_paper_airplanes: Aviões de papel
         C2_digital_footprint: Seu rastro digital
+        C2_digital_footprint_v2: Seu rastro digital
         C3_maze_level_4: Laços do labirinto
         C3_artist_intro: Introdução ao Artista
         C3_artist_functions: Funções do artista
@@ -502,6 +432,21 @@ pt-BR:
         playlab_intro: Introdução ao Laboratório
         playlab_events: Eventos do Laboratório
         playlab_repeat_forever: 'Laboratório: repetir infinitamente'
+        tutorial_puzzle_challenge: Desafio tutorial
+        msm_1_intro: 'Capítulo 1 - introdução à ciência da computação em álgebra'
+        msm_2_eval_block: Blocos de cálculo
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variáveis
+        msm_7_functions: Funções
+        infinity_playlab_intro: 'Laboratório - Introdução'
+        infinity_playlab_events: 'Laboratório - Eventos'
+        infinity_playlab_repeat_forever: 'Laboratório - Repetir infinitamente'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'
@@ -568,3 +513,7 @@ pt-BR:
         arrows_move_actor: Use as setas para mover o personagem
         right_arrow_fireball: Use a seta para a direita para atirar bolas de fogo
         name_function: Escreva o nome da sua função aqui
+        Infinity_move_right_runbutton: Adicione um bloco Mova aqui
+        Infinity_move_directions_callout: Qual bloco fará Baymax se mover para cima quando a seta para cima estiver pressionada?
+        Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
+        Infinity_repeat_callout: Coloque blocos Mova aqui dentro

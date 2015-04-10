@@ -20,3 +20,4 @@ script: bundle exec rake -t
 
 env:
   - DB=mysql
+

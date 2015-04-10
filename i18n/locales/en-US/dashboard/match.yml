@@ -95,7 +95,7 @@ en:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: crwdns7557:0crwdne7557:0
       2-3 Graph Paper Match 1:
         Matching: crwdns7558:0crwdne7558:0
-        Match the grid to the program: crwdns7559:0crwdne7559:0
+        Match the grid to the program.: crwdns36015:0crwdne36015:0
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: crwdns7560:0crwdne7560:0
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: crwdns7561:0crwdne7561:0
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: crwdns7562:0crwdne7562:0
@@ -328,6 +328,19 @@ en:
         "small-star: string -> image": crwdns7404:0crwdne7404:0
         "bigger-string: string string -> string": crwdns7405:0crwdne7405:0
         "find-price: string -> number": crwdns7406:0crwdne7406:0
+      PDK5 Pair programming match:
+        Pair programming match: crwdns35195:0crwdne35195:0
+        Match the definitions to the words you were introduced to in the last video.: crwdns35196:0crwdne35196:0
+        Pair programming: crwdns35197:0crwdne35197:0
+        Driver: crwdns35198:0crwdne35198:0
+        Navigator: crwdns35199:0crwdne35199:0
+        When two students work at one computer to write a program together: crwdns35200:0crwdne35200:0
+        The student who controls the keyboard, mouse, or touch screen: crwdns35201:0crwdne35201:0
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: crwdns35202:0crwdne35202:0
+      PDK5 What is unplugged:
+        What is an unplugged activity?: crwdns35203:0crwdne35203:0
+        Question: crwdns35204:0crwdne35204:0
+        Answer 1: crwdns35205:0crwdne35205:0
       test matching image:
         Matching Images Two: crwdns6007:0crwdne6007:0
         Match up all the flowers by colour!: crwdns6008:0crwdne6008:0

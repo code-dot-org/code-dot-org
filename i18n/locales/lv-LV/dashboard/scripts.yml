@@ -237,31 +237,9 @@ lv:
           Artist Binary: 'Mākslinieks: Binārais'
           description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
         Course4pre:
+          title: 4. kursa priekšnoteikums
           description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
-          Course 4 Prerequisite: 4. kursa priekšnoteikums
-          "Maze: Sequence": 'Labirints: secība'
-          "Artist: Sequence": 'Māsklinieks: secība'
-          "Artist: Loops": 'Mākslinieks: cikli'
-          "Bee: Conditionals": 'Bite: nosacījumi'
-          "Artist: Nested Loops": 'Mākslinieks: Cikls ciklā'
-          "Farmer: While Loops": 'Lauksaimnieks: Nosacījuma cikli'
-          "Bee: Nested Loops": 'Bite: Nosacījuma cikli'
-          "Artist: Functions": 'Mākslinieks: Funkcijas'
-          "Bee: Debugging": 'Bite: atkļūdošana'
-        course4pre:
-          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
-          Course 4 Prerequisite: 4. kursa priekšnoteikums
-          "Maze: Sequence": 'Labirints: secība'
-          "Artist: Sequence": 'Māsklinieks: secība'
-          "Artist: Loops": 'Mākslinieks: cikli'
-          "Bee: Conditionals": 'Bite: nosacījumi'
-          "Artist: Nested Loops": 'Mākslinieks: Cikls ciklā'
-          "Farmer: While Loops": 'Lauksaimnieks: Nosacījuma cikli'
-          "Bee: Nested Loops": 'Bite: Nosacījuma cikli'
-          "Artist: Functions": 'Mākslinieks: Funkcijas'
-          "Bee: Debugging": 'Bite: atkļūdošana'
-        Course4pre (Case Conflict):
-          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
+          description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
           Course 4 Prerequisite: 4. kursa priekšnoteikums
           "Maze: Sequence": 'Labirints: secība'
           "Artist: Sequence": 'Māsklinieks: secība'
@@ -294,6 +272,9 @@ lv:
           Special: īpaša
           Binary: Binārie
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: matemātiskie bloki
@@ -307,6 +288,198 @@ lv:
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Atvienots: Videospēles un koordinātu plaksnes'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Strings and Images
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
+          "Unplugged: The Design Recipe": 'Atvienots: Dizaina recepte'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Atvienots: nosacījumi un hibrīdfunkcijas'
+          "Eval: Conditionals": Sazarojumi
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+        infinity:
+          title: Disney Infinity Play Lab
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          Play Lab: Spēles laboratorija
+          Infinity: Bezgalība
+        algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: Dizaina recepte
+        K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+        netsim:
+          title: Interneta simulators
+          description_short: ""
+          description: ""
+          Internet Simulator: Interneta simulators
+          Unit 1: 1. nodaļa
+          Unit 2: 2. nodaļa
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: 20-Hour Intro Course
+          description: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās prieku mācīties visos vecumos.
+          Introduction to Computer Science: Ievads datorzinātnēs
+          The Maze: Labirints
+          Computational Thinking: Algoritmiska domāšana
+          Graph Paper Programming: Rūtiņpapīra programmēšana
+          The Artist: Mākslinieks
+          Algorithms: Algoritmi
+          The Artist 2: Mākslinieks 2
+          Functions: Funkcijas
+          The Farmer: Fermeris
+          Conditionals: Sazarojumi
+          The Artist 3: Mākslinieks 3
+          Song Writing: Dziesmas rakstīšana
+          The Farmer 2: Fermeris 2
+          Abstraction: Abstrakcija
+          The Artist 4: Mākslinieks 4
+          Relay Programming: Releju programmēšana
+          The Farmer 3: Fermeris 3
+          The Internet: Internets
+          The Artist 5: Mākslinieks 5
+          Wrap-up: Ietīt
+        edit-code:
+          title: rediģēt kodu
+          description: ""
+          The Maze: Labirints
+          Applab: Applab
+          The Artist: Mākslinieks
+          Play Lab: Spēles laboratorija
+        events:
+          title: Pasākumi
+          description: ""
+          Bounce: Atlekt
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy kods
+          description: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy koda apmācību!
+          Flappy Code: Flappy kods
+        jigsaw:
+          title: Puzle
+          description: ""
+          Jigsaw: Puzle
+        step:
+          title: Solis
+          description: ""
+          Step: Solis
+        Hour of Code:
+          title: Hour of Code 2013
+          description: ""
+          Hour of Code 2013: Hour of Code 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: 4. kursa priekšnoteikums
+          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
+          description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
+          Course 4 Prerequisite: 4. kursa priekšnoteikums
+          "Maze: Sequence": 'Labirints: secība'
+          "Artist: Sequence": 'Māsklinieks: secība'
+          "Artist: Loops": 'Mākslinieks: cikli'
+          "Bee: Conditionals": 'Bite: nosacījumi'
+          "Artist: Nested Loops": 'Mākslinieks: Cikls ciklā'
+          "Farmer: While Loops": 'Lauksaimnieks: Nosacījuma cikli'
+          "Bee: Nested Loops": 'Bite: Nosacījuma cikli'
+          "Artist: Functions": 'Mākslinieks: Funkcijas'
+          "Bee: Debugging": 'Bite: atkļūdošana'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Atvienots: Videospēles un koordinātu plaksnes'
           "Calc: Evaluation Blocks": 'Kalkulators: Novērtēšanas bloki'
           "Eval: Strings and Images": 'Vērtēšana: simbolu virkne un attēli'
@@ -327,28 +500,43 @@ lv:
           "Eval: Conditionals": 'Vērtēšana: nosacījumi'
           "Unplugged: Collision Detection and the Distance Formula": 'Atvienots: Sadursmes atklāšana un distances formula'
           "Play Lab: Collision Detection (Big Game)": 'Spēlu laboratorija: sadursmes noteikšana (liela spēle)'
-        infinity:
-          title: Spēles laboratorija
-          description_short: Izveidot stāstu vai spēli ar Spēles laboratoriju!
-          description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
-          Play Lab: Spēles laboratorija
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
           Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
+          Strings and Images: Strings and Images
+          Contracts: Līgumi
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
           The Design Recipe: Dizaina recepte
-        K5PD:
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Nosacījumi un hibrīdfunkcijas
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'Spēlu laboratorija: sadursmes noteikšana (liela spēle)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
           Introduction to PD: Introduction to PD
-        netsim:
-          title: Internet Simulator
-          description_short: ""
-          description: ""
-          Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Bezgalība
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

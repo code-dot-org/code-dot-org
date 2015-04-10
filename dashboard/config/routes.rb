@@ -1,3 +1,8 @@
+module OPS
+  API = 'api' if !defined? API
+  DASHBOARDAPI = 'dashboardapi' if !defined? DASHBOARDAPI
+end
+
 Dashboard::Application.routes.draw do
   def redirect_to_teacher_dashboard
     redirect CDO.code_org_url('/teacher-dashboard')
@@ -63,8 +68,10 @@ Dashboard::Application.routes.draw do
     omniauth_callbacks: 'omniauth_callbacks',
     registrations: 'registrations',
     confirmations: 'confirmations',
-    sessions: 'sessions'
+    sessions: 'sessions',
+    passwords: 'passwords'
   }
+  get 'discourse/sso' => 'discourse_sso#sso'
 
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
@@ -72,18 +79,29 @@ Dashboard::Application.routes.draw do
   get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
-  get '/projects', to: 'projects#index'
-  get '/projects/:template', to: 'projects#template'
+  resources :projects, path: '/p/', only: [:index] do
+    collection do
+      get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
+      get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
+      get '/applab', to: 'levels#show', key: 'New App Lab Project', as: 'applab'
+      get '/:template', to: 'projects#template'
+    end
+  end
 
   post '/locale', to: 'home#set_locale', as: 'locale'
-  
-  get '/lang/it', to: 'home#set_locale', as: 'lang/it', locale: 'it-IT'
+
+  # quick links for cartoon network arabic
   get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', return_to: '/flappy/1'
   get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', return_to: '/s/playlab/stage/1/puzzle/1'
   get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', return_to: '/s/artist/stage/1/puzzle/1'
 
+  # /lang/xx shortcut for all routes
+  get '/lang/:locale', to: 'home#set_locale', return_to: '/'
+  get '*i18npath/lang/:locale', to: 'home#set_locale'
+
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+    get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     get 'embed_blocks/:block_type', to: 'levels#embed_blocks', as: 'embed_blocks'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'clone', to: 'levels#clone'
@@ -112,23 +130,14 @@ Dashboard::Application.routes.draw do
 
   get 'reset_session', to: 'application#reset_session_endpoint'
 
-  # duplicate routes are for testing -- ActionController::TestCase calls to_s on all params
   get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_NAME, reset:true, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID, as: 'k8intro_chapter', format: false
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID.to_s, format: false
-  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID, as: 'editcode_chapter', format: false
-  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID.to_s, format: false
-  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_LEVELS_ID, as: 'twenty_fourteen_chapter', format: false
-  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_LEVELS_ID.to_s, format: false
-  get '/builder/:chapter', to: 'script_levels#show', script_id: Script::BUILDER_ID, as: 'builder_chapter', format: false
-  get '/builder/:chapter', to: 'script_levels#show', script_id: Script::BUILDER_ID.to_s, format: false
-  get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_ID, as: 'flappy_chapter', format: false
-  get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_ID.to_s, format: false
-  get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_ID, as: 'jigsaw_chapter', format: false
-  get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_ID.to_s, format: false
-
+  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME, as: 'k8intro_chapter', format: false
+  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_NAME, as: 'editcode_chapter', format: false
+  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_NAME, as: 'twenty_fourteen_chapter', format: false
+  get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
+  get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
   resources :followers, only: [:create]
   post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
@@ -162,16 +171,50 @@ Dashboard::Application.routes.draw do
 
   get '/notes/:key', to: 'notes#index'
 
-  get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
-  get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
-  get '/api/:action', controller: 'api'
+  resources :zendesk_session, only: [:index]
+
+  post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+
+  concern :ops_routes do
+    # /ops/district/:id
+    resources :districts do
+      member do
+        get 'teachers'
+      end
+    end
+    resources :cohorts do
+      delete 'teachers/:teacher_id', action: 'destroy_teacher', on: :member
+    end
+    resources :workshops do
+      resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
+        resources :workshop_attendance, path: '/attendance', shallow: true do
+        end
+      end
+      member do
+        get 'teachers'
+      end
+    end
+    get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
+    get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
+    get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
+    post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
+  end
+
+  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
+    concerns :ops_routes
+  end
+
+  namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
+    concerns :ops_routes
+  end
+
   get '/dashboardapi/section_progress/:id', to: 'api#section_progress'
   get '/dashboardapi/student_progress/:section_id/:id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 
-  resources :zendesk_session, only: [:index]
-
-  post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+  get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
+  get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
+  get '/api/:action', controller: 'api'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

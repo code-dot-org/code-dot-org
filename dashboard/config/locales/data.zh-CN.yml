@@ -337,86 +337,6 @@
         turtle_ec_1_10: 你成功了！现在任由你随意画你喜欢的东西。你可以尝试画个火柴人、雪花、旋螺型或其他有趣的图画。还有，可别忘了试用新的
           penWidth 模块哦！玩乐愉快！
         studio_ec_sandbox: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
-    levelbuilder:
-      frozen line:
-        instructions: 你好！我是艾伦代尔的艾莎公主。请你帮我画一条直线。
-      frozen perpendicular:
-        instructions: 现在让我们看看我们是否可以画两条直线，前提是彼此必须存着90度角的相位关系。您将需要使用“转向”块和“移动”块。
-      frozen square iterative:
-        instructions: 我们好像已经成功地绘制了半个正方形。来，我们一起把四行条线组合起来绘制一个完整的正方形。
-      frozen square loop:
-        instructions: 你好！我是艾伦代尔的安娜公主！我们一起应用“重复“块绘制一个正方形。这样一来，我们可以减少我们必须使用的代码块。你说“重复”块必须循环多少次（？）才能促使块内的其他代码块绘制出一个正方形呢？
-      frozen square loop 3x:
-        instructions: 让我们绘制三个正方形，每绘制一个正方形后，请别忘了先把它转120度后再继续绘制下一个正方形。
-      frozen square snowflake:
-        instructions: 你可以试试绘制一朵雪花。用“重复”块绘制10个正方形，而且记得在绘制成每个正方形移之后，先把它移转36度后才开始画下一个正方形。
-      frozen cross:
-        instructions: 利用“重复”块来绘制一个十字（加）号。您注意到艾莎可以向前和向后移动吗？
-      frozen cross rotate:
-        instructions: 现在请尝试重复 10 次。每个行之间你需要转多少度？
-      frozen cross rotate dense:
-        instructions: 让我们重复90次！ 90进入360是多少次？提示：这是一个非常小的数目。
-      frozen diamond:
-        instructions: 让我们创建一个平行四边形。它就像一个方形，但有不同的角度：60和120度角，而不是90度角。
-      frozen diamond mini snowflake:
-        instructions: 你知道每个雪花是一个不同的形嗎? 让我们创建一个新的雪花, 使用“重复”块来重复一个平行四边形4次，把每一个平行四边形之间转右90度.
-      frozen diamond snowflake:
-        instructions: 現在，让我们创建一个新的雪花, 使用“重复”块来重复一个平行四边形10次，把每一个平行四边形之间转右36度
-      frozen circle:
-        instructions: 圆形是一种特殊的形. 你可以计算出什么号码能取代问号来画圆形吗?
-      frozen circle function:
-        instructions: 使用新的“创建圈子”功能块来创建10个交叠的圆圈. 不要忘了在每个圆圈之间跳跃前进.
-      frozen circle function in circle:
-        instructions: 现在让我们创建20个交叠的圆圈，在每圆圈之间转18度。
-      frozen circle function with parameter:
-        instructions: 这里有一个“创建圈子”块，可以做不同大小的圆圈.  你可以用它来创建一个5号码的小圆圈和10号码的大圆圈吗?
-      frozen snowflower:
-        instructions: 错综复杂的雪模式可以用非常简单的形状来创建。 你可用重复5个5号码的圈和5个10号码的圈来做一个模式吗?
-      frozen snowflake branch:
-        instructions: 尝试使用“创建雪花分支”块创建三个分支，看起来它开始像一片雪花。
-      frozen snowflake full:
-        instructions: 现在，让我们重复8次，做一个漂亮的雪花!
-      frozen freeplay:
-        instructions: 你已经正式成为艺术大师！创建一个冬季仙境.
-      scrat 16:
-        instructions: 橡果！橡果！橡果！使用“如果”块让我用最少块数到达那里.
-      scrat 17:
-        instructions: 好，接下来让我们再练习一次 - 这不会非常不一样，但要当心那堵墙！
-      scrat 18:
-        instructions: '"If-else"块会检查一个条件，然后做一件事或另一件。为了帮助拿到我的橡子，试试这个新的块。'
-      scrat 19:
-        instructions: 让我们来再联系一次使用“如果 - 其他”块，你能一次就让我达成目的么？
-      scrat 20:
-        instructions: 你可以只添加3块就帮我解答一个更复杂的迷宫吗？如果你做对了，我可以走任何长度和任意弯曲的路径。加油！冰正在融化 ！
-      Standalone_Artist_1:
-        instructions: 欢迎来到艺术家！首先，一起用“右转“块和”向前移“块来画一个简单的正方形。正方形每边的长度是100像素。
-      Standalone_Artist_2:
-        instructions: 用 120 度和 60 度的角度，再加上长达150像素的边来画个钻石型。
-      Standalone_Artist_3:
-        instructions: 能够用100 像素的边和 60度的转度来绘制一个六边形吗？
-      Standalone_Artist_4:
-        instructions: 现在你已获得一个新的块—循环，该块可以重复执行一连串的指令。如果你循环这些指令6次，看看会发生什么？
-      Standalone_Artist_5:
-        instructions: 你需要循环多少次钻石才能化成这朵花呢？
-      Standalone_Artist_5.5:
-        instructions: 注意：如何将画钻石的代码转换成“循环”块来精简代码。你可以通过循环整个事件12次来花一朵花。提示：在每个画钻石的循环结束后，你需要向左（或右）转30°，这样你就不会总是在一个地方画钻石了。
-      Standalone_Artist_6:
-        instructions: |
-          通过循环画六边形6次来创建一个图形。每次你需要转动多少度呢？
-          提示：用一个圆周的度数除以你循环的次数。
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: 迷宫简介
@@ -476,6 +396,7 @@
         C2_relay_programming: 编程接力
         C2_paper_airplanes: 纸飞机
         C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint_v2: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: 艺术家简介
         C3_artist_functions: Artist Functions
@@ -516,6 +437,21 @@
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: 变量
+        msm_7_functions: 函数
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块和捕捉低于它的其他块
@@ -609,3 +545,8 @@
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

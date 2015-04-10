@@ -1,13 +1,16 @@
 {
+  "badColorStringError":"Użyłeś nieprawidłowej wartości opisującej kolor: {val}",
+  "badStyleStringError":"Użyłeś nieprawidłowej wartości dla stylu: {val}",
   "circleBlockTitle":"okrąg (promień, styl, kolor)",
-  "displayBlockTitle":"wyświetl",
+  "displayBlockTitle":"wykonaj",
   "ellipseBlockTitle":"elipsa (szerokość, wysokość, styl, kolor)",
-  "extraTopBlocks":"Masz niedołączone bloki. Czy chcesz je dołączyć do bloku wyświetl?",
+  "extraTopBlocks":"Masz niepodłączone bloki. Czy pomyślałeś by dołączyć je do bloku \"wykonywanego\"?",
+  "infiniteRecursionError":"Twoja funkcja wywołuje się rekurencyjnie. Zatrzymaliśmy ją, w przeciwnym wypadku wywoływałaby się w nieskończoność.",
   "overlayBlockTitle":"nakładka (góra, dół)",
   "placeImageBlockTitle":"położenie-obraz (x, y, obraz)",
   "offsetBlockTitle":"offset (x, y, obraz)",
   "rectangleBlockTitle":"prostokąt (szerokość, wysokość, styl, kolor)",
-  "reinfFeedbackMsg":"Możesz nacisnąć przycisk Spróbuj ponownie, aby edytować swój rysunek. ",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"obróć  (stopnie, obraz)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"kwadrat (rozmiar, styl, kolor)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"podkładka (dół, góra)",
   "outline":"zarys",
   "solid":"trwały",
-  "string":"łańcuch"
+  "string":"łańcuch",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"Wystąpił błąd podczas wykonywania twojego kodu.",
+  "wrongBooleanError":"Twoje bloki zwróciły złą wartość logiczną."
 }

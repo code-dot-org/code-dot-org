@@ -1,4 +1,61 @@
-var utils = require('./utils');
+var dropletUtils = require('./dropletUtils');
+
+/**
+ * Evaluates a string of code parameterized with a dictionary.
+ */
+exports.evalWith = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      exports.initJSInterpreter(interpreter, scope, options);
+    };
+    var myInterpreter = new Interpreter(code, initFunc);
+    // interpret the JS program all at once:
+    myInterpreter.run();
+  } else {
+    // execute JS code "natively"
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor().apply(null, args);
+  }
+};
+
+/**
+ * Returns a function based on a string of code parameterized with a dictionary.
+ */
+exports.functionFromCode = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
+  }
+};
+
+//
+// Blockly specific codegen functions:
+//
 
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
@@ -53,7 +110,45 @@ exports.workspaceCode = function(blockly) {
   return exports.strip(code);
 };
 
+//
+// Property access wrapped in try/catch. This is in an indepedendent function
+// so the JIT compiler can optimize the calling function.
+//
+
+function safeReadProperty(object, property) {
+  try {
+    return object[property];
+  } catch (e) { }
+}
+
+//
+// Marshal a single native object from native to interpreter. This is in an
+// indepedendent function so the JIT compiler can optimize the calling function.
+// (Chrome V8 says ForInStatement is not fast case)
+//
+
+function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
+  var retVal = interpreter.createObject(interpreter.OBJECT);
+  for (var prop in nativeObject) {
+    var value = safeReadProperty(nativeObject, prop);
+    interpreter.setProperty(retVal,
+                            prop,
+                            exports.marshalNativeToInterpreter(interpreter,
+                                                               value,
+                                                               nativeObject,
+                                                               maxDepth));
+  }
+  return retVal;
+}
+
+//
+// Droplet/JavaScript/Interpreter codegen functions:
+//
+
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  if (typeof nativeVar === 'undefined') {
+    return interpreter.UNDEFINED;
+  }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to inifinite levels of depth
@@ -78,7 +173,11 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     }
     retVal.length = nativeVar.length;
   } else if (nativeVar instanceof Function) {
-    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: nativeVar,
+        nativeParentObj: nativeParentObj,
+    });
     retVal = interpreter.createNativeFunction(wrapper);
   } else if (nativeVar instanceof Object) {
     // note Object must be checked after Function and Array (since they are also Objects)
@@ -92,19 +191,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
 
       retVal = nativeVar;
     } else {
-      retVal = interpreter.createObject(interpreter.OBJECT);
-      for (var prop in nativeVar) {
-        var value;
-        try {
-          value = nativeVar[prop];
-        } catch (e) { }
-        interpreter.setProperty(retVal,
-                                prop,
-                                exports.marshalNativeToInterpreter(interpreter,
-                                                                   value,
-                                                                   nativeVar,
-                                                                   maxDepth - 1));
-      }
+      retVal = marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1);
     }
   } else {
     retVal = interpreter.createPrimitive(nativeVar);
@@ -140,16 +227,30 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
-  return function() {
-    // Call the native function:
-    var nativeArgs = [];
-    for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
-    }
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
-    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
-  };
+exports.makeNativeMemberFunction = function (opts) {
+  if (opts.dontMarshal) {
+    return function() {
+      // Just call the native function and marshal the return value:
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  } else {
+    return function() {
+      // Call the native function after marshalling parameters:
+      var nativeArgs = [];
+      for (var i = 0; i < arguments.length; i++) {
+        nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
+      }
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  }
 };
 
 function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
@@ -159,7 +260,11 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
       // Populate the scope with native functions
       // NOTE: other properties are not currently passed to the interpreter
       var parent = parentObj ? parentObj : funcsObj;
-      var wrapper = exports.makeNativeMemberFunction(interpreter, func, parent);
+      var wrapper = exports.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+      });
       interpreter.setProperty(scope,
                               prop,
                               interpreter.createNativeFunction(wrapper));
@@ -168,10 +273,14 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
 }
 
 function populateGlobalFunctions(interpreter, scope) {
-  for (var i = 0; i < utils.dropletGlobalConfigBlocks.length; i++) {
-    var gf = utils.dropletGlobalConfigBlocks[i];
+  for (var i = 0; i < dropletUtils.dropletGlobalConfigBlocks.length; i++) {
+    var gf = dropletUtils.dropletGlobalConfigBlocks[i];
     var func = gf.parent[gf.func];
-    var wrapper = exports.makeNativeMemberFunction(interpreter, func, gf.parent);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: func,
+        nativeParentObj: gf.parent,
+    });
     interpreter.setProperty(scope,
                             gf.func,
                             interpreter.createNativeFunction(wrapper));
@@ -184,9 +293,11 @@ function populateJSFunctions(interpreter) {
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction(interpreter,
-                                                   String[functions[i]],
-                                                   String);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: String[functions[i]],
+        nativeParentObj: String,
+    });
     interpreter.setProperty(interpreter.STRING,
                             functions[i],
                             interpreter.createNativeFunction(wrapper),
@@ -223,13 +334,34 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   if (state.done) {
     return true;
   }
+  if (state.node.type === "ForStatement") {
+    var mode = state.mode || 0;
+    // Safe to skip over ForStatement's in mode 0 (init) and 3 (update),
+    // but not mode 1 (test) or mode 2 (body) while unwinding...
+    return mode === 0 || mode === 3;
+  }
   switch (state.node.type) {
+    // Declarations:
     case "VariableDeclaration":
+    // Statements:
     case "BlockStatement":
-    case "ForStatement": // check for state.mode ?
-    case "UpdateExpression":
+    // All Expressions:
+    case "ThisExpression":
+    case "ArrayExpression":
+    case "ObjectExpression":
+    case "ArrowExpression":
+    case "SequenceExpression":
+    case "UnaryExpression":
     case "BinaryExpression":
+    case "UpdateExpression":
+    case "LogicalExpression":
+    case "ConditionalExpression":
+    case "NewExpression":
     case "CallExpression":
+    case "MemberExpression":
+    case "FunctionExpression":
+    case "AssignmentExpression":
+    // Other:
     case "Identifier":
     case "Literal":
     case "Program":
@@ -371,54 +503,26 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
 };
 
 /**
- * Evaluates a string of code parameterized with a dictionary.
+ * Finds the current line of code in droplet/ace editor. Walks up the stack if
+ * not currently in the user code area.
  */
-exports.evalWith = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, scope, options);
-    };
-    var myInterpreter = new Interpreter(code, initFunc);
-    // interpret the JS program all at once:
-    myInterpreter.run();
-  } else {
-    // execute JS code "natively"
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
-    }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor().apply(null, args);
-  }
-};
+exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
+                                           userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  for (var i = 0; i < interpreter.stateStack.length; i++) {
+    var node = interpreter.stateStack[i].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
 
-/**
- * Returns a function based on a string of code parameterized with a dictionary.
- */
-exports.functionFromCode = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Since this returns a new native function, it doesn't make sense in the
-    // editCode case (we assume that the app will be using JSInterpreter)
-    throw "Unexpected";
-  } else {
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+      break;
     }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor();
   }
+  return userCodeRow;
 };

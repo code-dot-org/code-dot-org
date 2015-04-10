@@ -1,8 +1,8 @@
 -dont_cache
 
--encrypted_app_id = request.splat_path_info[1..-1].split('/').first
--app_id = storage_decrypt_app_id(encrypted_app_id).last.to_s
--app_tables = DB[:app_tables].where(app_id:app_id, storage_id:nil).group(:table_name)
+-encrypted_channel_id = request.splat_path_info[1..-1].split('/').first
+-channel_id = storage_decrypt_channel_id(encrypted_channel_id).last.to_s
+-TableType = CDO.use_dynamo_tables ? DynamoTable : Table
 
 %form#csp_tables
   %table
@@ -11,13 +11,12 @@
         Table name
       %td
         action
-    -app_tables.each do |app_table|
-      -table_name = app_table[:table_name]
+    -TableType.table_names(channel_id).each do |table_name|
       %tr
         %td
           #{table_name}
         %td
-          %a{href:"/private/edit-csp-table/#{encrypted_app_id}/#{table_name}", target:"_blank"}
+          %a{href:"/private/edit-csp-table/#{encrypted_channel_id}/#{table_name}", target:"_blank"}
             view
     %tr
       %td
@@ -25,7 +24,7 @@
       %td
         %button
           Add
-  %a{href:"/private/csp-properties/#{encrypted_app_id}", target:"_blank"}
+  %a{href:"/private/edit-csp-properties/#{encrypted_channel_id}", target:"_blank"}
     view key/value pairs
 
 :javascript
@@ -33,7 +32,7 @@
     function(e) {
       var tableName = document.getElementById('table-name-input').value;
       if (tableName) {
-        window.open("/private/edit-csp-table/#{encrypted_app_id}/" + tableName, "_blank");
+        window.open("/private/edit-csp-table/#{encrypted_channel_id}/" + tableName, "_blank");
       }
     }
   );

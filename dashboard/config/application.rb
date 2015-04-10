@@ -5,10 +5,10 @@ require 'rails/all'
 
 require 'cdo/geocoder'
 require 'varnish_environment'
-require 'apps_api'
+require 'channels_api'
+require 'properties_api'
+require 'tables_api'
 require 'shared_resources'
-
-require 'pegasus_sites' if CDO.dashboard_enable_pegasus
 
 require 'bootstrap-sass'
 
@@ -19,10 +19,15 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
 
-    config.middleware.use VarnishEnvironment
-    config.middleware.use AppsApi
-    config.middleware.use SharedResources
-    config.middleware.use PegasusSites if CDO.dashboard_enable_pegasus
+    config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
+    config.middleware.insert_after VarnishEnvironment, ChannelsApi
+    config.middleware.insert_after ChannelsApi, PropertiesApi
+    config.middleware.insert_after PropertiesApi, TablesApi
+    config.middleware.insert_after TablesApi, SharedResources
+    if CDO.dashboard_enable_pegasus
+      require 'pegasus_sites'
+      config.middleware.insert_after SharedResources, PegasusSites
+    end
 
     config.encoding = 'utf-8'
 
@@ -66,6 +71,19 @@ module Dashboard
     cache_bust_path = Rails.root.join('.cache_bust')
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
-    config.assets.precompile += ['**/blockly_editor*']
+    config.assets.paths << Rails.root.join('../shared/css')
+
+    config.assets.precompile += %w(
+      epiceditor/*.css
+      editor/markdown_editor.css
+      editor/markdown_editor.js
+      editor/blockly_editor.css
+      editor/blockly_editor.js
+      levels/*
+      react.js
+    )
+    config.react.variant = :development
+    config.react.addons = true
+    config.autoload_paths << Rails.root.join('lib')
   end
 end

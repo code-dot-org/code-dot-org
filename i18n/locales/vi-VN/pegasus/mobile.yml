@@ -3,15 +3,16 @@ vi-VN:
   select_language: Vui lòng chọn ngôn ngữ của bạn
   computer_science: Khoa học máy tính
   computer_science_edweek: Tuần giáo dục khoa học máy tính
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 'Từ ngày 8-14 tháng  12 năm 2014'
   csedweek_banner_hoc: |-
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Giờ Mã</a> đang đến. Gọi điện cho tất cả giáo viên và các tổ chức, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">lập kết hoạch 'Giờ Mã' của bạn</a>
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Bạn là giáo viên Tin Học? Xem thêm thư viện tuần giáo dục Tin Học.</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>đã cố gắng một</h3><h2>Giờ Mã</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Tất cả mọi người điều có thể học.
   learn_now: Học ngay
   petition_message: Mỗi học sinh trong tất cả các trường nên có cơ hội để tìm hiểu khoa học máy tính
   petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người khác.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Tên
   email: Thư điện tử
   zipcode: Mã bưu điện
@@ -24,7 +25,7 @@ vi-VN:
   hoc2014_teachers: Giáo viên
   hoc2014_host: Lưu trữ nó
   hoc2014_everyone: Tất cả mọi người
-  hoc2014_support: Hỗ trợ nó
+  hoc2014_support: 'Hỗ trợ nó &#x25BE;'
   hoc2014_whatishoc: Giờ Mã là gì?
   twentyhours_trynow: Thử ngay bây giờ
   california_heading: Yêu cầu trường học của bạn giảng dạy khoa học máy tính
@@ -46,12 +47,12 @@ vi-VN:
   get_a_certificate_of_achievement: Lấy chứng nhận thành tích
   enter_valid_email: Vui lòng nhập một địa chỉ email hợp lệ
   get_a_certificate_message: "Chúng tôi sẽ gửi cho bạn một Giấy Chứng Nhận và Thông Tin về việc làm thế nào để <a href='/learn/beyond'>Học Trong Vòng Một Giờ</a>"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  get_a_certificate_message_after: "Click vào phần certificate để tải về hoặc in ra. Bây giờ, tiếp tục với <a href='http://studio.code.org'>other courses</a>, hoặc tham khảo thêm một vài lựa chọn ở <a href='/learn/beyond'>Learn beyond One Hour</a>."
   thanks_for_submitting: Cảm ơn bạn vì đã chấp nhận!
   if_you_enjoyed: Nếu bạn cảm thấy việc học Code thật thú vị thì hãy rủ bạn bè cùng tham gia nhé! Chúng tớ mong muốn cả thế giới có thể học về nó.
   personalize_certificate: Cá nhân hoá chứng chỉ của bạn
   share_achievement: Chia sẻ thành tích của bạn
-  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  beyond_hour_message: "Tiếp tục với <a href='http://studio.code.org'>other courses</a>, hoặc tham khảo thêm một vài lựa chọn ở <a href='/learn/beyond'>Learn beyond One Hour</a>."
   leaderboards_for_hoc: Bảng thành tích của the Hour of Code.
   support_url: http://support.code.org/
   country: Quốc gia
@@ -66,8 +67,8 @@ vi-VN:
   thanks_for_voting: Cảm ơn bạn đã bỏ phiếu!
   share_on_facebook: Chia sẻ lên Facebook
   share_on_twitter: Chia sẻ lên Twitter
-  beyond_an_hour: Beyond an Hour of Code
-  get_started: Start
+  beyond_an_hour: Hơn cả một tiếng học lập trinh
+  get_started: Bắt đầu
   i_agree: Tôi đồng ý
   participant_select: -Chọn-
   participant_student: học sinh
@@ -75,8 +76,8 @@ vi-VN:
   participant_educator: Giáo viên
   participant_engineer: Kĩ sư phần mềm
   participant_other: Không có ở trên
-  print_all: Print all
-  print_ice_art: Print your ice art
+  print_all: In tất cả
+  print_ice_art: In tác phẩm Ice art của bạn
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: Tôi là một
   never_spam: Chúng tôi sẽ không bao giờ gửi tin nhắn rác cho bạn
@@ -91,6 +92,7 @@ vi-VN:
   learn_classes: Tìm một lớp học tại địa phương
   hoc_is_here: '#HourOfCode là ở đây - kiểm tra nó xem! @codeorg'
   just_did_hoc: 'Tôi chỉ cần làm #HourOfCode - kiểm tra nó xem! @codeorg'
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Học một Giờ lập trình
   beyond_hoc: Ngoài một giờ
   what_gender: Giới tính của bạn là gì?
@@ -105,10 +107,11 @@ vi-VN:
   students_and_lines: '%{students} sinh viên có hoàn thành Một Giờ Lập Trình và viết%{lines} những dòng lập trình.'
   start_hoc: Bắt đầu một giờ lập trình ngay bây giờ
   contact_form_topic_press: Báo chí / truyền thông (phỏng vấn hoặc tham gia nói)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
   studiobar_hoc_title: The Hour of Code
@@ -123,6 +126,94 @@ vi-VN:
   studiobar_donate_body: One child learns for each dollar you donate
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
+  homepage_hero_text_susan: |
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_flappy: Flappy Code
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_slot_text_title_hoc: Giờ của mã
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Học thử Hour of Code
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Students
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Donate
   contact_form_topic_student: Tôi là sinh viên
   contact_form_topic_parent: Tôi là một phụ huynh
   contact_form_topic_teacher: Tôi là một giáo viên/giáo dục
@@ -290,6 +381,8 @@ vi-VN:
   dashboard_login_picture: Hình ảnh
   dashboard_login_none: Địa chỉ email
   dashboard_new_password: Mật khẩu mới
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: not completed
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect

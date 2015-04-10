@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # BUILD.RAKE used to contain everything that is now in the top-level Rakefile, i.e. it used to be
 # the entire build system and developers needed to remember seperate steps to build each project
 # or wait for CI. Since then, the building of projects has been moved out to the top-level Rakefile
@@ -71,7 +72,7 @@ def threaded_each(array, thread_count=2)
   threads.each(&:join)
 end
 
-if rack_env?(:staging) || rack_env?(:development)
+if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   #
   # Define the BLOCKLY[-CORE] BUILD task
   #
@@ -110,7 +111,7 @@ if rack_env?(:staging) || rack_env?(:development)
 
     if blockly_core_changed || apps_changed
       if RakeUtils.git_updates_available?
-        # NOTE: If we have local changes as a result of building APPS_TASK, but there are new 
+        # NOTE: If we have local changes as a result of building APPS_TASK, but there are new
         # commits pending in the repository, it is better to pull the repository first and commit
         # these changes after we're caught up with the repository because, if we committed the changes
         # before pulling we would need to manually handle a "merge commit" even though it's impossible
@@ -187,6 +188,9 @@ end
 #
 $websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK]) do
   Dir.chdir(deploy_dir) do
+    # Lint
+    RakeUtils.system 'rake', 'lint' if CDO.lint
+
     # Build myself
     RakeUtils.system 'rake', 'build'
 
@@ -208,38 +212,23 @@ $websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK]) do
       threaded_each CDO.app_servers.keys, thread_count do |name|
         upgrade_frontend name, CDO.app_servers[name]
       end
-
-      # Once you've seen this block, you can delete it. Now that we're moving toward static pages
-      # with lightweight services, a CDN/Cloudfront is a better choice than a network of Varnish
-      # instances. But, if you ever want to switch back to the varnish-instance model, this is where
-      # they're updated.
-      remote_command = [
-        'sudo chef-client',
-        'sudo service varnish stop',
-        'sudo service varnish start',
-      ].join('; ')
-      threaded_each CDO.varnish_instances, 5 do |host|
-        begin
-          HipChat.log "Upgrading <b>#{host}</b> varnish instance..."
-          RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
-        rescue
-          HipChat.log "Unable to upgrade <b>#{host}</b> varnish instance."
-        end
-      end
     end
   end
 end
 task 'websites' => [$websites] {}
 
 #
-# This is the mail build task when running on the test instance. It performs a normal local build
+# This is the build task when running on the test instance. It performs a normal local build
 # via the top-level Rakefile and then runs our tests.
 #
-$websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
+
+task :build do
   Dir.chdir(deploy_dir) do
     RakeUtils.system 'rake', 'build'
   end
+end
 
+task :pegasus_unit_tests do
   Dir.chdir(pegasus_dir) do
     HipChat.log 'Running <b>pegasus</b> unit tests...'
     begin
@@ -250,7 +239,22 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
       raise
     end
   end
+end
 
+task :shared_unit_tests do
+  Dir.chdir(shared_dir) do
+    HipChat.log 'Running <b>shared</b> unit tests...'
+    begin
+      RakeUtils.rake 'test'
+    rescue
+      HipChat.log 'Unit tests for <b>shared</b> failed.', color:'red'
+      HipChat.developers 'Unit tests for <b>shared</b> failed.', color:'red', notify:1
+      raise
+    end
+  end
+end
+
+task :dashboard_unit_tests do
   Dir.chdir(dashboard_dir) do
     # Unit tests mess with the database so stop the service before running them and
     # reset the database afterward.
@@ -268,32 +272,48 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
     HipChat.log "Reseeding <b>dashboard</b>..."
     RakeUtils.rake 'seed:all'
     RakeUtils.start_service CDO.dashboard_unicorn_name
+  end
+end
 
+task :dashboard_browserstack_ui_tests do
+  Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
       failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test.learn.code.org', '-p', '10', '-a', '--html'
       if failed_browser_count == 0
-        message = 'UI tests for <b>dashboard</b> succeeded.'
+        message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
         HipChat.developers message, color:'green'
       else
-        message = "UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
-        HipChat.log message, color:'red'
-        HipChat.developers message, color:'red', notify:1
-      end
-
-      HipChat.log 'Running <b>dashboard</b> UI visual tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'Chrome33Win7', '-d', 'test.learn.code.org', '--eyes'
-      if failed_browser_count == 0
-        message = 'Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
-        HipChat.log message
-        HipChat.developers message, color:'green'
-      else
-        message = 'Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+        message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
         HipChat.log message, color:'red'
         HipChat.developers message, color:'red', notify:1
       end
     end
   end
 end
-task 'test-websites' => [$websites_test] {}
+
+task :dashboard_eyes_ui_tests do
+  Dir.chdir(dashboard_dir) do
+    Dir.chdir('test/ui') do
+      HipChat.log 'Running <b>dashboard</b> UI visual tests...'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'Chrome33Win7', '-d', 'test.learn.code.org', '--eyes'
+      if failed_browser_count == 0
+        message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+        HipChat.log message
+        HipChat.developers message, color:'green'
+      else
+        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+        HipChat.log message, color:'red'
+        HipChat.developers message, color:'red', notify:1
+      end
+    end
+  end
+end
+
+# do the eyes and browserstack ui tests in parallel
+multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
+
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+
+task 'test-websites' => [$websites_test]

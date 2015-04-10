@@ -22,6 +22,7 @@ az:
           future: gələcəkdə ola bilməz
   hello: Salam, dünya
   welcome_back: 'Bir daha xoş gəldiniz, %{name}'
+  submit: Göndər
   add_teacher_form:
     code:
       label: 'Müəllim əlavə edin:'
@@ -218,6 +219,7 @@ az:
         artist: Draw Something
     user:
       classroom: Müəllimin ev səhifəsi
+      district_dashboard: District Dashboard
       label: 'Salam %{username}'
       stats: Mənim nəticələrim
       settings: Mənim hesabım
@@ -296,6 +298,8 @@ az:
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
   user:
     email_confirm_needed: 'E-poçt ünvanı təsdiqlənməyib:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Təsdiqləmə təlimatlarını yenidən göndər
     new_password_hint: (dəyişmək istəmirsinizsə, boş buraxın)
     current_password_hint: (dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)
@@ -434,6 +438,9 @@ az:
       body: İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına baxın
     frozen:
       title: Buzlu ürək
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Şagirdlər bunları kod yazmaqla edib!
@@ -463,6 +470,13 @@ az:
     wrong_body: Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!
     correct_title: Düzgün
     correct_body: Bu düzgün cavabdır.
+  contract_match:
+    wrong_title: Yanlış cavab
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Cavabınızı buraya daxil edin
   dialog:
@@ -478,7 +492,7 @@ az:
           title: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
           description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
         Hour of Code:
-          title: Kod Saatı
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Koda düzəliş et
@@ -508,11 +522,44 @@ az:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: tamamlanmayıb
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: tamamlanıb, artıq bloklar var
     completed_perfect: tamamlanıb, əladır
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: Üzərində işlədiyiniz kurslar
     completed_courses: Tamamlanmış kurslar
     all_courses: Bütün kurslar
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Save
+    delete: Delete
+    exit: Return to Course
+    my_projects: My Projects
+    share: Bölüşün
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Daha çox
+    name: Ad
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Delete?
+    delete_yes: Bəli
+    delete_no: Xeyr
+    saved: Saved
+    not_saved: Not saved
+    cancel: İmtina et
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

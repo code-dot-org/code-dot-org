@@ -22,6 +22,7 @@
           future: δεν μπορεί να είναι στο μέλλον
   hello: Γεια σου κόσμε
   welcome_back: Καλώς ήρθες, %{name}
+  submit: Υποβολή
   add_teacher_form:
     code:
       label: 'Προσθέστε ένα δάσκαλο:'
@@ -272,6 +273,7 @@
         artist: Ζωγραφίστε κάτι
     user:
       classroom: H Αρχική Σελίδα του Εκπαιδευτικού
+      district_dashboard: District Dashboard
       label: Γεια σου %{username}
       stats: Η πρόοδός μου
       settings: Ο λογαριασμός μου
@@ -359,6 +361,8 @@
       του %{student_name}
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Επανάληψη αποστολής οδηγιών επιβεβαίωσης
     new_password_hint: (άστο κενό εάν δεν θέλεις να τον αλλάξεις)
     current_password_hint: (χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν
@@ -530,6 +534,9 @@
         από τους χρήστες μας
     frozen:
       title: Ψυχρά κι ανάποδα
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
     students_made_these_with_code: Οι μαθητές τα δημιούργησαν αυτά με κώδικα!
@@ -570,6 +577,14 @@
       ξανά!
     correct_title: Σωστό
     correct_body: Αυτή είναι η σωστή απάντηση.
+  contract_match:
+    wrong_title: Λανθασμένη απάντηση
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Εισάγετε την απάντησή σας εδώ
   dialog:
@@ -626,11 +641,48 @@
     χωρίς σύνδεση ή να ζητήσετε από τους γονείς σας ή το δάσκαλό σας να επικοινωνήσει
     μαζί μας.
   progress:
-    not_completed: δεν έχει ολοκληρωθεί
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
     completed_perfect: ολοκληρώθηκε, τέλειο
     furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
+    assessment: assessment
   studio:
     courses_working_on: Μαθήματα τα οποία παρακολουθείτε
     completed_courses: Μαθήματα που ολοκληρώσατε
     all_courses: Όλα τα μαθήματα
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: αποθήκευση
+    delete: Διαγραφή
+    exit: Return to Course
+    my_projects: My Projects
+    share: Μοιράσου
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Περισσότερα
+    name: Όνομα
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Διαγραφή;
+    delete_yes: Ναι
+    delete_no: Όχι
+    saved: Saved
+    not_saved: Not saved
+    cancel: Άκυρο
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

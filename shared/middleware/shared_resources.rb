@@ -5,7 +5,7 @@ require 'sass/plugin/rack'
 class SharedResources < Sinatra::Base
 
   use Sass::Plugin::Rack
-  
+
   configure do
     static_max_age = [:development, :staging].include?(rack_env) ? 0 : 3600
 
@@ -28,7 +28,7 @@ class SharedResources < Sinatra::Base
 
   helpers do
   end
-  
+
   # CSS
   get "/shared/css/*" do |uri|
     path = shared_dir('css', uri)
@@ -54,14 +54,14 @@ class SharedResources < Sinatra::Base
       cache_control :public, :must_revalidate, max_age:settings.javascript_max_age
       send_file(path)
     end
-    
+
     erb_path = "#{path}.erb"
     if File.file?(erb_path)
       content_type extname[1..-1].to_sym
       cache_control :public, :must_revalidate, max_age:settings.javascript_max_age
       return ERB.new(IO.read(erb_path)).result
     end
-    
+
     pass
   end
 
@@ -81,7 +81,7 @@ class SharedResources < Sinatra::Base
       manipulation = File.basename(dirname)
       dirname = File.dirname(dirname)
     end
-    
+
     # Assume we are returning the same resolution as we're reading.
     retina_in = retina_out = basename[-3..-1] == '@2x'
 
@@ -98,7 +98,7 @@ class SharedResources < Sinatra::Base
       path = resolve_image File.join(dirname, basename)
     end
     pass unless path # No match at any resolution.
-    
+
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
@@ -106,7 +106,7 @@ class SharedResources < Sinatra::Base
       send_file(path)
     else
       image = Magick::Image.read(path).first
-      
+
       mode = :resize
 
       if manipulation
@@ -123,7 +123,7 @@ class SharedResources < Sinatra::Base
       else
         width = image.columns
         height = image.rows
-        
+
         # Retina sources need to be downsampled for non-retina output
         if retina_in && !retina_out
           width /= 2
@@ -154,7 +154,7 @@ class SharedResources < Sinatra::Base
     cache_control :public, :must_revalidate, max_age:settings.image_max_age
     image.to_blob
   end
-  
+
   def resolve_image(uri)
     settings.image_extnames.each do |extname|
       path = deploy_dir("#{uri}#{extname}")

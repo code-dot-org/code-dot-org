@@ -5,14 +5,17 @@
         Convert Blocks to Math: Конвертиране на блокове  в Математика
         Type out the arithmetic expression that matches this code: Напишете аритметичен
           израз, който съответства на този код
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png,
+          500
         (4+5) > 9: (4 + 5) > 9
+        ((4+5) > 9): ((4 + 5) > 9)
         Type the arithmetic expression here: Въведете аритметичния израз тук
       Blocks to Bools 2:
         Convert Blocks to Math: Конвертиране на блокове  в Математика
         Type out the arithmetic expression that matches this code: Напишете аритметичен
           израз, който съответства на този код
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png,
+          500
         (10 > 11) or (7 <= 9): (10 > 11) или (7 < = 9)
         (10 > 11) OR (7 <= 9): (10 > 11) ИЛИ (7 < = 9)
         (10 > 11) || (7 <= 9): (10 > 11) || (7 < = 9)
@@ -21,22 +24,39 @@
         Convert Blocks to Math: Конвертиране на блокове  в Математика
         Type out the arithmetic expression that matches this code: Напишете аритметичен
           израз, който съответства на този код
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
+          500
         (5 < 10) and (10 < 15): (5 < 10) и (10 < 15)
+        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) И (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
+        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
+        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
+        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         Type the arithmetic expression here: Въведете аритметичния израз тук
       Blocks to Bools 4:
         Convert Blocks to Math: Конвертиране на блокове  в Математика
         Type out the arithmetic expression that matches this code: Напишете аритметичен
           израз, който съответства на този код
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
+          500
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) и (x < 5)) ИЛИ ((8
           < x) и (x < 10))
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
+          ((8 < x) And (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) и (x < 5)) или ((8
           < x) и (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5))
+          OR ((8 < x) AND (x < 10)))
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5))
+          Or ((8 < x) And (x < 10)))
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
+          or ((8 < x) and (x < 10)))
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) ||
+          ((8 < x) && (x < 10)))
         Type the arithmetic expression here: Въведете аритметичния израз тук
       Blocks to Math 1:
         Convert Blocks to Math: Конвертиране на блокове  в Математика
@@ -45,6 +65,7 @@
         Blocks to Math 1.blocks.start_blocks, 200: Блокове за математика 1.blocks.start_blocks,
           200
         4 + 5: 4 + 5
+        (4+5): (4 + 5)
         Type the arithmetic expression here: Въведете аритметичния израз тук
       Blocks to Math 2:
         Convert Blocks to Math: Конвертиране на блокове  в Математика
@@ -53,6 +74,7 @@
         Blocks to Math 2.blocks.start_blocks, 200: Блокове за математика 2.blocks.start_blocks,
           200
         7 * 6: 7 * 6
+        (7 * 6): (7 * 6)
         Type the arithmetic expression here: Въведете аритметичния израз тук
       Blocks to Math 3:
         Convert Blocks to Math: Конвертиране на блокове  в Математика
@@ -61,6 +83,8 @@
         Blocks to Math 3.blocks.start_blocks: Блокове за математика 3.blocks.start_blocks
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
+        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
+        2 * 3 - 1 + 0: 2 * 3 - 1 + 0
         Type the arithmetic expression here: Въведете аритметичния израз тук
       Blocks to Math 4:
         Convert Blocks to Math: Конвертиране на блокове  в Математика
@@ -69,6 +93,7 @@
         Blocks to Math 4.blocks.start_blocks: Блокове за математика 4.blocks.start_blocks
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8-12
+        ((5 + 8) - 12): ((5 + 8) - 12)
         Type the arithmetic expression here: Въведете аритметичния израз тук
       Blocks to Math 5:
         Convert Blocks to Math: Конвертиране на блокове  в Математика
@@ -77,8 +102,8 @@
         Blocks to Math 5.blocks.start_blocks: Блокове за математика 5.blocks.start_blocks
         (-2) * (-6):
         - 2 * -6: -2 * -6
+        ((-2) * (-6)): ((-2) * (-6))
         Type the arithmetic expression here: Въведете аритметичния израз тук
-        -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: Конвертиране на блокове  в Математика
         Type out the arithmetic expression that matches this code: Напишете аритметичен
@@ -88,6 +113,7 @@
         ((4 - 1) * -2) + 12: ((4-1) * -2) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
         (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
+        ((4 - 1) * (-2)) + 12): ((4-1) * (-2)) + 12)
         Type the arithmetic expression here: Въведете аритметичния израз тук
       Blocks to Math 7:
         Convert Blocks to Math: Конвертиране на блокове  в Математика
@@ -95,7 +121,77 @@
           израз, който съответства на този код
         Blocks to Math 7.blocks.start_blocks: Блокове за математика 7.blocks.start_blocks
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
+        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Въведете аритметичния израз тук
+      Open text response example:
+        Open text response example: Отворен отговор с примерен текст
+        I loved it because...: Обичах го, защото...
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Спомагане
+          положителна учебна среда във вашия клас по компютърни науки
+        0: '? Сега, когато знаете повече за нашата учебна програма, какви практики
+          искате да използвате за насърчаване здравословната атмосфера във вашия клас
+          по компютърни науки?'
+        1: '? Сега, когато знаете повече за нашата учебна програма, какви практики
+          искате да използвате за насърчаване здравословната атмосфера във вашия клас
+          по компютърни науки?'
+        In my classroom, I want to...: В моята класна стая аз искам да...
+      PDK5 Course Descriptions:
+        Course Structure: Структура на курса
+        I am going to start with Course...: Аз смятам да започна с курс...
+      PDK5 Difficulty:
+        Degree of Difficulty: Степен на трудност
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Програмирането
+          толкова трудно ли се оказа, колкото сте очаквали? Обяснете защо или защо
+          не. Как това влияе на преподаването на информатика?
+        Your thoughts here: Вашите мисли тук
+      PDK5 Foundation:
+        Computer Science as a Foundational Skill: Компютърни науки като фундаментални
+          умения
+        Do you see computer science as a foundational skill for your students? Why or why not?: Виждате
+          ли компютърните науки като фундаментални умения за вашите ученици? Защо
+          или защо не?
+        Your thoughts here: Вашите мисли тук
+      PDK5 Impact 1:
+        Impact for students: Въздействие върху учениците
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Смятате
+          ли, че вашите ученици ще намерят онлайн дейностите в курсовете К-5 за забавни
+          и завладяващи? Защо или защо не?
+        Your thoughts here: Вашите мисли тук
+      PDK5 Impact 2:
+        Connections to other Subjects: Connections to other Subjects
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does
+          computer science connect to other topics or subjects your students are learning
+          about? Explain why or why not.
+        Your thoughts here: Вашите мисли тук
+      PDK5 Impact 3:
+        Real-world applications for Students: Real-world applications for Students
+        0: '? Does learning about computer science help students grow into the kind
+          of citizens you are preparing them to be? Explain why or why not.'
+        1: ': Does learning about computer science help students grow into the kind
+          of citizens you are preparing them to be? Explain why or why not.'
+        Your thoughts here: Вашите мисли тук
+      PDK5 Problem Solving:
+        Problem Solving Methods: Problem Solving Methods
+        I could integrate this in my classroom by...: I could integrate this in my
+          classroom by...
+      PDK5 Promo Video:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
+          approved'
+      PDK5 Promo Video 2:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
+          approved'
+        My first impressions of Code Studio are...: My first impressions of Code Studio
+          are...
+      PDK5 Strategies O:
+        Strategies for Teaching Computer Science: Strategies for Teaching Computer
+          Science
+        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'I
+          think teaching computer science will be different than teaching other subjects
+          in these ways: ...'
+      Test Markdown level:
+        Enter title here: Въведете заглавието тук
+        Enter prompt here: Въведете ред тук
       text match test:
         Mathematical Expression Assessment: Оценка на Математически израз
         Type out the arithmetic expression that this circle of evaluation evaluates to: Напишете
@@ -106,93 +202,277 @@
         (9-3)+4: 
         9-3+4: 
         Type the arithmetic expression here: Въведете аритметичния израз тук
-        (9-3)+4*7: (9-3)+4*7
-        9-3+4*7: 9-3+4*7
+    external:
+      Code Logo v3:
+        title: Заглавие
+        Create images with bits and bytes.: Създаване на изображения с битове и байтове.
+      CSP Lesson 14 encode letter A instructions:
+        'Instructions: Encode the Letter A': 'Инструкции: Кодиране на буквата А'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP план за ученика
+          - U1L5 - изпращане на битове в реалния свят
+        description here: описание тук
+      CSPStudentLessonPlanTemplate:
+        title: Заглавие
+        description here: описание тук
+      External level test (will):
+        first computer program: първата компютърна програма
+      Hour of Code test content: []
+      Mixing Colors:
+        title: Заглавие
+        description here: описание тук
+      PDCSP Intro: []
+      PDK5 Beyond C:
+        Beyond: Отвъд
+      PDK5 Classroom Culture C:
+        Classroom Culture: Култура на класната стая
+      PDK5 Course Maps C: []
+      PDK5 Course Overview C: []
+      PDK5 Glossary C:
+        Vocabulary: Речник
+      PDK5 Intro C: []
+      PDK5 Pair Programming 1:
+        Pair Programming: Програмиране по двойки
+      PDK5 Strategies:
+        Strategies for Teaching Computer Science: Strategies for Teaching Computer
+          Science
+      PDK5 Teacher Dashboard 1:
+        Dashboard 1: Табло 1
+      PDK5 Teacher Dashboard 2:
+        Dashboard 2: Табло 2
+      PDK5 Teacher Dashboard 3:
+        Course Progress: Прогрес в курса
+      PDK5 Teacher Dashboard 4:
+        Course Progress: Прогрес в курса
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Учителско табло
+      PDK5 Unplugged Intro C:
+        Unplugged intro: Представяне на ънплъгд урок
+      PDK5 UVideo Overview C:
+        Kiki video overview: Кики видео преглед
+      PDK5 Why K5 CS:
+        Why teach computer science in elementary school?: Защо да се изучават компютърни
+          науки в началното училище?
+      Pixelation 1:
+        Pixelation 1: Пикселизация 1
+        Create images with bits and bytes.: Създаване на изображения с битове и байтове.
+      Pixelation 2:
+        Pixelation 2: Пикселизация 2
+        Create images with bits and bytes.: Създаване на изображения с битове и байтове.
+      Pixelation 3:
+        Pixelation 3: Пикселизация 3
+        Create images with bits and bytes.: Създаване на изображения с битове и байтове.
+      Pixelation 3 Bit Colors:
+        title: Заглавие
+        description here: описание тук
+      Pixelation 4:
+        Pixelation 4 - Baker test of External level -- NOT REAL: Пикселизация 4 -
+          Пекарски тест на външно ниво--не е РЕАЛНО
+        Create images with bits and bytes.: Създаване на изображения с битове и байтове.
+      Pixelation 4x4 Empty:
+        Pixelation 4x4 Empty: Пикселизация 4 x 4 празно
+        Create images with bits and bytes.: Създаване на изображения с битове и байтове.
+      Pixelation Bee:
+        title: Заглавие
+        description here: описание тук
+      Pixelation Flappy:
+        title: Заглавие
+        description here: описание тук
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
+        description here: описание тук
+      Pixelation - Lesson 14 - Fix bit offset:
+        Pixelation - Lesson 14 - Fix bit offset: Пикселизация - урок 14 - Поправи
+          битовия офсет
+      Pixelation - Lesson 14 - Fix bit offset v.2:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Пикселизация - урок 14 - Поправи
+          битовия офсет 2
+      Pixelation - Lesson 14 - Fix the error:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Пикселизация - урок 14 - Поправи
+          битовия офсет 2
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        Make your own B&W image: Направете своя собствена Б&Ч изображение
+        description here: описание тук
+      Pixelation - Lesson 14 - Instructions one bit error:
+        'Lesson 14 - Task 2: fix the error': 'Урок 14 - задача 2: поправяне на грешка'
+        description here: описание тук
+      Pixelation - Lesson 14 - Make the Letter A:
+        title: Заглавие
+        description here: описание тук
+      Pixelation - Lesson 14 - Make your own B and W Image:
+        title: Заглавие
+        description here: описание тук
+      Pixelation - Lesson 14 - Make your own B&W Image:
+        title: Заглавие
+        description here: описание тук
+      Pixelation - Lesson 15 - Color Free Play:
+        Pixelation - Lesson 15 - Color Free Play: Пикселизация - урок 15 - цвят свободна
+          игра
+        description here: описание тук
+      Pixelation - Lesson 15 - Color Shades:
+        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
+        description here: описание тук
+      Pixelation - Lesson 15 - Color Shades 4x4:
+        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color
+          Shades 4x4
+        description here: описание тук
+      Pixelation - Lesson 15 - Complete 3-bit color:
+        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete
+          3-bit color
+        description here: описание тук
+      Pixelation - Lesson 15 - Favicon Instructions:
+        Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon
+          Instructions
+        description here: описание тук
+      Pixelation - Lesson 15 - Task 1 instructions:
+        Pixelation - Lesson 15 - Task 1 instructions: Pixelation - Lesson 15 - Task
+          1 instructions
+        description here: описание тук
+      Pixelation - Lesson 15 - Task 2 instructions:
+        Pixelation - Lesson 15 - Task 2 instructions: Pixelation - Lesson 15 - Task
+          2 instructions
+        description here: описание тук
+      Pixelation - Lesson 15 - Task 3 instructions:
+        Pixelation - Lesson 15 - Task 3 instructions: Pixelation - Lesson 15 - Task
+          3 instructions
+        description here: описание тук
+      Pixelation - Video - Color 1:
+        Pixelation - Video - Color 1: Pixelation - Video - Color 1
+        description here: описание тук
+      Pixelation - Video - Color 2:
+        Pixelation - Video - Color 2: Pixelation - Video - Color 2
+        description here: описание тук
+      Pixelation - Video - Color 3:
+        Pixelation - Video - Color 3: Пикселизация - видео - цвят 3
+        description here: описание тук
+      Pixelation - Video - Lesson 14 - B and W:
+        How to use the B&W Pixelation Widget: Как да използвате приспособлението за
+          Ч&Б пикселизация
+      Pixelation - Video - Tips and Tricks:
+        Pixelation - Video - Tips and Tricks: Пикселизация - видео - съвети и трикове
+        description here: описание тук
+      test demo level:
+        demo title: demo title
+        demo description: demo description
+      Test discourse forum-comment level:
+        Degree of Difficulty: Степен на трудност
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Програмирането
+          толкова трудно ли се оказа, колкото сте очаквали? Обяснете защо или защо
+          не. Как това влияе на преподаването на информатика?
+      test html katie:
+        testing: testing
+        lkajsdfasdf: lkajsdfasdf
+      Text Compression 1:
+        Text Compression 1: Text Compression 1
+        Compress text by identifying repeated patterns.: Компресиране на текст чрез
+          идентифициране на повтарящи се модели.
+      Text Compression Peter Piper:
+        Text Compression Peter Piper: Text Compression Peter Piper
+        Compress text by identifying repeated patterns.: Компресиране на текст чрез
+          идентифициране на повтарящи се модели.
+      U1L5 Student Lesson:
+        title: Заглавие
+        description here: описание тук
+      U1L6 Student Lesson Plan:
+        title: Заглавие
+        description here: описание тук
+      unique level name here:
+        title: Заглавие
+        description here: описание тук
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
+        Big Triangle: Голям триъгълник
         Write a contract for a big red triangle that is 100 pixels in size: Write
           a contract for a big red triangle that is 100 pixels in size
         EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
+        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
       Creating Contracts From Examples 2:
-        Creating Contracts From Examples 2: Creating Contracts From Examples 2
+        Square Contract: Square Contract
         Write a contract for a purple square that is 15 pixels in size.: Write a contract
           for a purple square that is 15 pixels in size.
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
-        Square|image|color:string|size:Number: Square|image|color:string|size:Number
+        Square|Image|Number|String: Square|Image|Number|String
       Creating Contracts From Examples 3A:
-        Creating Contracts From Examples 3A: Creating Contracts From Examples 3A
+        Banner Contract: Banner Contract
         Banner Function block: Banner Function block
         Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        banner|image|text:string: banner|image|text:string
+        banner|Image|String: banner|Image|String
       Creating Contracts From Examples 4:
-        Creating Contracts From Examples 4: Creating Contracts From Examples 4
-        Try using the "text" function to write this red text at size 40.: Try using
-          the "text" function to write this red text at size 40.
+        Shrink Contract: Shrink Contract
+        Try using the "shrink" function.: Try using the "shrink" function.
         Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        shrink|image|image:image: shrink|image|image:image
+        shrink|Image|Image: shrink|Image|Image
       Design Recipe 1.contract:
-        Design Recipe 1 Contract: Рецепта 1 в Договора
+        Design Recipe 1 Contract: Състави Рецепта 1  Договор
         0: '? Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.'
         1: ': Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|height:Number|color:string: Wide-rect|Image|Height:number|Color:String
-        ? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
       Enter name here:
         Enter title here: Въведете заглавието тук
         Enter prompt here: Въведете ред тук
-        Contract Name|Number|Domain1:Number|Domain2:string: Договор Name|Number|Domain1:number|Domain2:String
+        Contract Name|Number|Number|String: Contract Name|Number|Number|String
       Eval Contracts 1 B:
-        Star Contract: Star Contract
+        Star Contract: Звезден договор
         Write a contract for the star function: Напишете рецепта за функцията на звездата
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
+        star|Image|String|Number|String: star|Image|String|Number|String
       Eval Contracts 2 B:
-        Rotate Contract: Rotate Contract
+        Rotate Contract: Рецепта за Завъртане
         Write a contract for the rotate function: Напишете рецепта за функцията на
           завъртане
         Eval Contracts 2 A.solution_blocks, 300: Оценяване на рецепти 2 A.solution_blocks,
           300
-        rotate|image|degrees:Number|image:image: rotate|Image|degrees:number|image:image
+        rotate|Image|Number|Image: rotate|Image|Number|Image
       Eval Contracts 3 B:
-        Text Contract: Text Contract
+        Text Contract: Рецепта за текст
         Write a contract for the text function: Напишете рецепта за функцията text
         Eval Contracts 3 A.solution_blocks, 300: Оценяване на рецепти 3 A.solution_blocks,
           300
-        text|image|color:string|size:Number|string:string: text|image|color:string|size:Number|string:string
+        text|Image|String|Number|String: text|Image|String|Number|String
       Eval Contracts 4 B:
         Scale Contract: Scale Contract
-        Write a contract for the scale function: Write a contract for the scale function
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
+        Write a contract for the scale function: Напишете рецепта за функцията за
+          завъртане
+        Eval Contracts 4 A.solution_blocks, 300: Оценяване на рецепти 4 A.solution_blocks,
           300
-        scale|image|factor:Number|image:image: Scale|Image|Factor:number|Image:Image
+        scale|Image|Number|Image: scale|Image|Number|Image
+      Eval Contracts B:
+        Star Contract: Звезден договор
+        Write a contract for the star function: Напишете рецепта за функцията на звездата
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+          300
+        star|Image|Number|String|String: star|Image|Number|String|String
+      Eval Contracts D:
+        Rotate Contract: Рецепта за Завъртане
+        Write a contract for the rotate function: Напишете рецепта за функцията на
+          завъртане
+        Eval Contracts 2 A.solution_blocks, 300: Оценяване на рецепти 2 A.solution_blocks,
+          300
+        rotate|Image|Number|Image: rotate|Image|Number|Image
+      Eval Contracts F:
+        Text Contract: Рецепта за текст
+        Write a contract for the text function: Напишете рецепта за функцията text
+        Eval Contracts 3 A.solution_blocks, 300: Оценяване на рецепти 3 A.solution_blocks,
+          300
+        text|Image|String|Number|String: text|Image|String|Number|String
       Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Рецепта 1 в Договора
+        Design Recipe 1 Contract: Състави Рецепта 1  Договор
         0: '? Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.'
         1: ': Write the contract for function called "wide-rect" which creates a rectangle
           of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|height:Number|color:string: Wide-rect|Image|Height:number|Color:String
-        ? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
       Rocket Contract 1:
         Contract for rocket-height: Contract for rocket-height
-        'Write a contract for the following question:': 'Write a contract for the
-          following question:'
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a function
-          called rocket-height that takes in the number of seconds that have passed
-          since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a function
-          called rocket-height that takes in the number of seconds that have passed
-          since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        rocket-height|Number|seconds:Number: rocket-height|Number|seconds:Number
+        0: '? A rocket blasts off, traveling at 15 meters per second. Write a contract
+          for the function rocket-height that takes in the number of seconds that
+          have passed since the rocket took off, and which produces the height of
+          the rocket at that time.'
+        1: ': A rocket blasts off, traveling at 15 meters per second. Write a contract
+          for the function rocket-height that takes in the number of seconds that
+          have passed since the rocket took off, and which produces the height of
+          the rocket at that time.'
+        rocket-height|Number|Number: rocket-height|Number|Number

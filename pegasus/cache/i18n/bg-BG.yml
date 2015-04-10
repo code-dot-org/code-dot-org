@@ -3,43 +3,45 @@
   select_language: Моля, изберете вашия език
   computer_science: Компютърни науки
   computer_science_edweek: Седмица на Компютърните Науки
-  csedweek_dates: 8-14 декември 2014 г.
+  csedweek_dates: 8-14 Декември 2014 г.
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold"> Часът на кодирането</a> идва. Призоваваме всички учители и
-    организатори, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold"> да планират техния Час на кодирането</a>'
+    font-weight:bold"> Един Час Програмиране</a> идва. Призоваваме всички учители
+    и организатори, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold"> да планират техния Час </a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Вие учител по ИТ или  информатика  сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте
+    none; font-weight: 400">Вие учител по   информатика ли   сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте
     други ресурси на CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>са се опитали</h3><h2>Часът на кодирането</h2>
+  n_have_learned_an_hoc: <h1>Опитайте</h1><h2>Един Час Програмиране</h2><h3># served</h3>
   anybody_can_learn: Всеки може да се научи.
   learn_now: Научете сега
   petition_message: Всеки ученик във всяко училище трябва да има възможност да учи
     компютърни науки
   petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете
-    се към # всички останали.'
+    се към # други.'
+  petition_sign_message_support: 'Ако ни подкрепяте, запишете се.  Присъединете се
+    # към другите.'
   name: Име
   email: Имейл
   zipcode: Пощенски код или държава
   submit: Изпрати
-  twentyhours_heading: Опитайте нашите въвеждащи курсове по компютърни науки
+  twentyhours_heading: Опитайте нашите интро курсове по компютърни науки
   twentyhours_text: Завършихте ли първия час на code.org? Научете повече за основните
     понятия в компютърните науки и програмиране в този следващ курс.
-  hoc2014_heading: Присъединете се към <a href="http://hourofcode.com"> Часът на кодирането</a>
+  hoc2014_heading: Присъединете се към <a href="http://hourofcode.com"> Часът на програмирането</a>
     <br/>на 8-14 декември 2014 г. <br/>
   hoc2014_students: Ученици
-  hoc2014_try: Опитайте го
+  hoc2014_try: 'Пробваийте '
   hoc2014_teachers: Учители
   hoc2014_host: Организирайте го
   hoc2014_everyone: Всички
-  hoc2014_support: Подкрепете го
-  hoc2014_whatishoc: Какво е Часът на кодирането?
-  twentyhours_trynow: Опитайте сега
+  hoc2014_support: Подкрепете  &#x25BE;
+  hoc2014_whatishoc: Какво е представлява  "Един Час Програмиране ?
+  twentyhours_trynow: Опитай сега
   california_heading: Попитайте във вашето училище дали се изучават компютърни науки
   california_text: Всеки учител може да предложи нашия <a href='http://studio.code.org/'>
     безплатен въвеждащ курс</a>.  Всяко основно училище може да<a href='http://code.org/educate/k5'>
-    въведе предметът  компютърни науки</a>. Попитайте гимназиите дали са <a href =
-    'http://code.org/educate/districts'> партньори с нас.
+    въведе предметът  Инфроматика</a>. Попитайте гимназиите дали са <a href = 'http://code.org/educate/districts'>  искат
+    да си партнират с нас.
   california_button: Научете повече
   flappy_heading: Flappy рожден ден на Code.org
   flappy_text: Code.org навърши 1 година. <br/> <br/> Празнувай с нас като направиш
@@ -50,28 +52,28 @@
   write_your_first_program: Напишете първата си компютърна програма
   learn_cs_concepts: Научете основните понятия на компютърните науки чрез визуално
     програмиране. Това е урок-игра, с  видео лекции от Бил Гейтс, Марк Зукерберг,
-    Angry Birds  и Plants vs. Zombies. Научете се да създавате циклични повторения,
-    условия 'ако-то-иначе' и някои основни алгоритми.
+    Ядосаните Птици и Растенията срещу Зомбитата. Научете се да създавате циклични
+    повторения, условия 'ако-то-иначе' и някои основни алгоритми.
   all_ages: Всички възрасти
   beginner: Начинаещ
   n_participants: '# участници'
-  go: Напред
+  go: Започни
   thank_you_: Благодарим Ви!
   congratulations: Поздравления!
   congratulations_on_completing_hoc: Поздравления за завършване на предизвикателството
-    Един Час Кодиране
+    Един Час Програмиране
   get_a_certificate_of_achievement: Получете сертификат за постижение
   enter_valid_email: Моля, въведете валиден имейл адрес
   get_a_certificate_message: Ние ще ви изпратим сертификат и информация за това как
-    да <a href='/learn/beyond'> учите и след първия час кодиране</a>
+    да <a href='/learn/beyond'> учите и след първия час програмиране</a>
   get_a_certificate_message_after: Щракнете върху сертификата, за да го изтеглите
     или да го отпечатате. Сега продължете с нашият <a href='http://studio.code.org'>
-    20-часов курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите
-    и след Часът на кодирането</a>.
-  thanks_for_submitting: Благодарим ви, вашето запитване е изпратено!
-  if_you_enjoyed: Ако Ви е харесало да учите, кажете и на приятелите ви, за да се
-    го пробват! Ние искаме целият свят да научи.
-  personalize_certificate: Попълнете вашия сертификат
+    20-часов курс</a>, или вижте повече възможности да <a href='/learn/beyond'> продължете
+    и след като завършите  и Един  Част програмиране</a>.
+  thanks_for_submitting: Благодарим за изпращането!
+  if_you_enjoyed: Ако Ви е харесало да учите, кажете и на приятелите ви, за да го
+    пробват! Ние искаме целият свят да научи.
+  personalize_certificate: Персонализирайте вашия сертификат
   share_achievement: Споделете вашето постижение
   beyond_hour_message: Продължете с нашия<a href='http://studio.code.org'> 20-часов
     курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите след
@@ -89,8 +91,8 @@
   tell_the_world: Кажете на света!
   thanks_for_voting: Благодарим за гласуването!
   share_on_facebook: Споделяне във Facebook
-  share_on_twitter: Споделяне в Twitter
-  beyond_an_hour: 'След Часът на кодирането '
+  share_on_twitter: Споделяне във Twitter
+  beyond_an_hour: Продължете след  Един Час   програмиране
   get_started: Старт
   i_agree: Приемам
   participant_select: -Изберете-
@@ -101,23 +103,26 @@
   participant_other: Никое от горните
   print_all: Печат на всички
   print_ice_art: Отпечатай своето ледено изкуство
-  create_art_with_zombie: или допълни уменията си в изкуството със зомбито
+  create_art_with_zombie: 'или направи още нещо използвайки Зомби '
   i_am_a: Аз съм
   never_spam: Ние никога няма да ви изпратим спам
-  enter_country: Въведете страна, ако се намирате извън САЩ
-  used_infrequent_updates: Използва само за чести актуализации
+  enter_country: Въведете Държава, ако се намирате извън САЩ
+  used_infrequent_updates: Използва се само за редки  актуализации
   privacy_practices_children: Вижте нашите правила за поверителност за деца
-  petition_thankyou: Благодарим ви, че подписахте петицията
-  continue_learning_header: Продължете обучението и след  Един час кодиране
+  petition_thankyou: Благодаря ви за подписване на петицията
+  continue_learning_header: Продължи обучението след един час
   continue_learning_body: Има много възможности.  Можете да учите онлайн в местното
     училище или на летен лагер.
   learn_next_level: Продължи към следващото ниво
   learn_online: Опитайте други курсове онлайн
   learn_classes: Намерете местни класове
   hoc_is_here: '#HourOfCode е тук - вижте го! @codeorg'
-  just_did_hoc: 'Току-що завърших #HourOfCode - вижте го! @codeorg'
-  learn_hoc: Научете се да програмирате с "Часът на кодирането"
-  beyond_hoc: След един час
+  just_did_hoc: 'Току-що направих #HourOfCode - вижте го! @codeorg'
+  twitter_teach_cs: Защо да не се преподава информатика в повече училища? Можем да
+    поправим това. http://Youtu.be/nKIu9yen5nc. Посетете http://code.org/ за да научите
+    повече.
+  learn_hoc: Научете се да програмирате с "Един час кодиране"
+  beyond_hoc: Продължение на Един Час Програмиране
   what_gender: Какъв пол сте?
   girl: Момиче
   boy: Момче
@@ -126,32 +131,106 @@
   lines_of_code: НАД<b># РЕДА КОД</b> НАПИСАНИ ДО МОМЕНТА.
   lines_of_code_alt: <b>#</b> РЕДОВЕ КОД, НАПИСАНИ ОТ УЧЕНИЦИ
   who_has_done_hoc: 'Кой приключи #HourOfCode? @codeorg'
-  hoc_leaderboards: Класации на "Часът на кодирането"
-  students_and_lines: '%{students} ученици са приключили "Часът на кодирането" и са
-    написали %{lines} реда код.'
-  start_hoc: Започнете "Часът на кодиране" сега
+  hoc_leaderboards: The Hour of Code класации
+  students_and_lines: '%{students} ученици са направили Часът на кода и са написали
+    %{lines} реда код.'
+  start_hoc: Започнете "Един Час Програмиране " сега
   contact_form_topic_press: Преса/медии (интервю или гласово включване)
-  stats_michael: Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани
-    за нещо в обучението им. "-Майкъл Кларк, учител
   stats_nina: '"Всеки ден отчитам същите резултати &mdash; 100 % ангажираност."-Нина
     Никълс Пири, учител'
   stats_student: '"Знаех, че това е <b>еднократна</b> възможност в живота."-Мариана
     Алзейт, 5-ти клас'
-  studiobar_title: Разгледайте <a href='http://studio.code.org'> Студиото за кодиране</a>
+  stats_michael: Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани
+    за нещо в обучението им. "-Майкъл Кларк, учител
+  studiobar_title: Разгледайте <a href='http://studio.code.org'> Студиото за програмиране</a>
+  studiobar_title_nolink: Разгледайте Студиото за кодиране
   studiobar_elementary_title: Начални курсове
-  studiobar_elementary_body: Нашите три нови курсове за K &#8209; 5
-  studiobar_hoc_title: Час по кодиране
-  studiobar_hoc_body: Научете се да кодирате с Angry Birds
+  studiobar_elementary_body: Нашите три нови курса за K &#8209; 5
+  studiobar_hoc_title: Един Час Програмиране
+  studiobar_hoc_body: Научете се да прогармирате с "Ядосаните Птици (Angry Birds)"
   studiobar_flappy_title: Flappy код
   studiobar_flappy_body: Направете и споделете своя собствена Flappy игра
   studiobar_teacher_title: За учители
-  studiobar_teacher_body: Представете Code Studio в класната си стая
+  studiobar_teacher_body: Въведе код студио в класната стая
   studiobar_frozen_title: Час на Кодирането
   studiobar_frozen_body: Създаване на зимна приказка с Анна и Елза
   studiobar_donate_title: Дарения
-  studiobar_donate_body: Едно дете учи за всеки долар, който си дарил
+  studiobar_donate_body: Едно дете  получава вузможност да учи от всеки долар, който
+    си дарил
   studiobar_shop_title: Магазин
   studiobar_shop_body: Разбий стереотипите. Носи логото ни с гордост.
+  homepage_hero_text_malala: '&ldquo;"Предизвиквам момичета във всяка страна да учат
+    с  Един Час Програмиране"&rdquo; Малала, носител на Нобелова награда за мир'
+  homepage_hero_text_susan: '&ldquo;"Ако можете да промените технологията, можете
+    да промените света."&rdquo; Сюзън, изпълнителен директор на YouTube'
+  homepage_hero_text_fistbump: '&ldquo;"Не само играйте на телефона, програмирайте
+    за него."&rdquo; президент Барак Обама'
+  homepage_hero_text_sheryl: '&ldquo;"Нашите деца &mdash; включително момичета &mdash;
+    имат нужда от възможност да изучават компютърни науки."&rdquo; Шерил, главен оперативен
+    директор на Facebook'
+  homepage_hero_text_satya: '&ldquo;"Инфроматиката може да отключи най-добрите възможности
+    в света."&rdquo; Сатя, изпълнителен директор на Microsoft'
+  homepage_hero_text_bosh: '&ldquo;"Ако се научите да програмирате , можете да определите
+    и изберете посоката на вашия живот."&rdquo; Крис Бош'
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: Един Час Програмиране
+  homepage_slot_text_frozen: Замръзнали (Frozen) с Анна и Елза
+  homepage_slot_text_teacher: Учителско табло
+  homepage_slot_text_studio: Всичко от нашите уроци
+  homepage_slot_text_course4: Курс 4
+  homepage_slot_text_shop: Магазин
+  homepage_slot_text_flappy: Flappy код
+  homepage_action_text_codevideo: Гледайте видеото
+  homepage_action_text_teachervideo: Гледайте видеото
+  homepage_action_text_learn: Започнете да учите днес
+  homepage_action_text_signpetition: Подпишете петицията
+  homepage_signpetition_dropdown: Подпишете нашата петиция &#x25BE;
+  homepage_slot_text_title_hoc: Час на Кодирането
+  homepage_slot_text_blurb_hoc: Всеки може да се научи. Започнете днес
+  homepage_slot_text_link_hoc: Опитайте Часа на Кодирането
+  homepage_slot_text_link_host: Бъдете домакин на Един Час Програмиране
+  homepage_slot_text_link_hocserved: '# Обслужен'
+  homepage_slot_text_title_students: Ученици
+  homepage_slot_text_blurb_students: Разгледайте всички наши уроци
+  homepage_slot_text_link_codestudio: Опитайте Студиото по Програмиране
+  homepage_slot_text_link_local: Намери  клас в близост до Вас
+  homepage_slot_text_link_othercourses: Други онлайн курсове
+  homepage_slot_text_title_educators: Педагози
+  homepage_slot_text_blurb_educators: Преподавай на  учениците си
+  homepage_slot_text_link_k5: Курсове за клас предучилище и начално училище до 5-ти
+    клас
+  homepage_slot_text_link_fullcurriculum: Вижте нашата пълна програма
+  homepage_slot_text_link_pd: Професионално развитие
+  homepage_slot_text_title_advocates: Проложения
+  homepage_slot_text_blurb_advocates: Подкрепете нашата работа
+  homepage_slot_text_link_stats: Виждате статистиката
+  homepage_slot_text_link_buy: Купете тениска или шапка
+  homepage_slot_text_link_donate: Направете дарение
+  homepage_header_codestudio: Проекти  на ученици в Студиото по програмиране
+  homepage_header_donors: Code.org благодари на своите привърженици
+  homepage_donors_seall: Вижте всички
+  homepage_donors_donate: Дарения
   contact_form_topic_student: Аз съм ученик
   contact_form_topic_parent: Аз съм родител
   contact_form_topic_teacher: Аз съм учител/обучител
@@ -165,16 +244,15 @@
   contact_form_label_submit: Изпрати съобщение
   class_submission_in_school: В училище
   class_submission_in_school_daily_programming_course: Ежедневен курс по програмиране
-  class_submission_in_school_ap_computer_science: разширен курс по компютърни науки
-  class_submission_in_school_full_university_cs_curriculum: Пълна университетска учебна
-    програма по Компютърни науки
+  class_submission_in_school_ap_computer_science: AP компютърни науки
+  class_submission_in_school_full_university_cs_curriculum: Пълен университетски CS
+    план
   class_submission_in_school_robotics_club: Клуб по роботика
   class_submission_in_school_programming_integrated_in_other_classes: Програмиране,
     интегрирано в други предмети (математика, наука и др.)
-  class_submission_in_school_summer_school_cs_program: Лятно училище с програма по
-    компютърни науки
-  class_submission_in_school_exploring_computer_science: Изследване на компютърните
-    науки
+  class_submission_in_school_summer_school_cs_program: Лятно училище CS програма
+  class_submission_in_school_exploring_computer_science: Изследване на Инфроматиката
+    като предмет
   class_submission_in_school_other: Други в училище
   class_submission_out_of_school: Извън училище
   class_submission_out_of_school_summer_camp: Летен лагер
@@ -186,24 +264,24 @@
   class_submission_online_programming_class: Онлайн клас по програмиране
   class_submission_online_teacher_resource: Онлайн преподавателски ресурс
   class_submission_online_other: Други онлайн
-  class_submission_level_preschool: Предучилищно
+  class_submission_level_preschool: Предучилищна
   class_submission_level_elementary: Начално
   class_submission_level_middle_school: Средно училище
   class_submission_level_high_school: Висше училище
   class_submission_level_college: Колеж
   class_submission_level_vocational: Професионално
   class_submission_languages_other: Друг език (и)
-  volunteer_engineer_submission_commitment_uncertain: Неизвестно
+  volunteer_engineer_submission_commitment_uncertain: Неопределено
   volunteer_engineer_submission_commitment_now_and_then: От време на време
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 час седмично
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 часа на седмица
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 часа в седмицата
   volunteer_engineer_submission_commitment_more: Повече
-  volunteer_engineer_submission_location_flexibility_onsite: На място в училище
+  volunteer_engineer_submission_location_flexibility_onsite: ' В училище'
   volunteer_engineer_submission_location_flexibility_remote: Дистанционно обучение
     (учители или ученици)
-  volunteer_engineer_submission_location_flexibility_curriculum: Желаете ли да допринесете
-    за проектиране на учебна програма с отворен код
+  volunteer_engineer_submission_location_flexibility_curriculum: Желае да допринесе
+    за проекти с отворен код
   volunteer_engineer_submission_experience_unspecified: Неизвестен
   volunteer_engineer_submission_experience_university_student_or_researcher: Настоящ
     студент (или Изследовател)
@@ -211,14 +289,16 @@
   petition_age: Възраст
   dashboard_landing_title: Начална страница на учителя
   dashboard_landing_welcome: Добре дошли в новото и подобрено учителско табло.
-  dashboard_landing_video: Гледайте това видео
+  dashboard_landing_video: Гледайте  видеото
   dashboard_landing_watch_video: за запознаване с новите функции!
   dashboard_landing_view_as_student: Вижте сайта като ученик
   dashboard_landing_students_title: Вашите ученици
   dashboard_landing_students_manage: Преглед и управление на вашите ученици
   dashboard_landing_news_title: K-5 ресурси за учителя (само на английски език)
-  dashboard_landing_new_beta: Ново! Опитайте нашите бета курсове за K-5 ученици.
-  dashboard_landing_new_k5courses: Ново! Опитайте нашите курсове за K-5 ученици.
+  dashboard_landing_new_beta: Ново! Опитайте нашите бета курсове за ученици в предучилищна
+    и училищна възраст до 5 клас
+  dashboard_landing_new_k5courses: Ново! Опитайте нашите курсове за ученици в предучилищна
+    и училищна възраст до 5 клас
   dashboard_landing_useful_links: Други полезни връзки (само на английски език)
   dashboard_landing_office_hours: Задайте въпрос лично! Посетете ни в работно време.
   dashboard_landing_print_certificates: Печат на сертификати за ученици, които завършват
@@ -246,14 +326,14 @@
   dashboard_action_remove: Изтриване
   dashboard_action_remove_confirm: Изтриване?
   dashboard_action_done: Готово
-  dashboard_action_required: изисква
+  dashboard_action_required: изисквания
   dashboard_navigation_home_page: Начална страница на учителя
   dashboard_navigation_section_student_progress: Ученически акаунти и прогрес
   dashboard_navigation_section_teacher_progress: Прогреса ви в курса
   dashboard_navigation_section_lesson_plans: Учебни планове и ресурси
   dashboard_navigation_section_community: Помощ и Общност
   dashboard_navigation_section_pd: Професионално развитие
-  dashboard_navigation_section_speakers: Компютърни науки <br/> гости говорители
+  dashboard_navigation_section_speakers: Информатика <br/> гости представители
   dashboard_navigation_all_sections: Ученически акаунти и прогрес
   dashboard_navigation_view_progress: Преглед на напредъка
   dashboard_navigation_add_students: Добавяне на ученици
@@ -274,14 +354,14 @@
   dashboard_sections_table_code: Код за раздел
   dashboard_sections_name: Име на раздел
   dashboard_sections_choose_secret: Ако искате да предоставите акаунти на учениците
-    си, изберете таен тип  <b>дума</b> или <b>картина</b> за този раздел.
-  dashboard_sections_secret_word: <b>Дума</b> ви позволява да зададете тайна дума
-    за всеки ученик.
-  dashboard_sections_secret_picture: <b>Картина</b> ви позволява да зададете тайно
+    си, изберете специален фромат  <b>дума</b> или <b>картина</b> за този раздел.
+  dashboard_sections_secret_word: <b>Дума</b> ви позволява да зададете парола за всеки
+    ученик.
+  dashboard_sections_secret_picture: <b>Картина</b> ви позволява да зададете специфично
     изображение за всеки ученик, идеален вариант за по-малките ученици, които все
     още не могат да пишат на компютър.
   dashboard_sections_secret_none: Ако искате вашите ученици да управляват своите акаунти
-    сами, не изберете таен тип за <b>тях</b>.
+    сами, изберете </b>празно <b>.
   dashboard_sections_print_secrets: След това може да разпечатате на листове информацията
     за акаунта и да ги раздадете на учениците си.
   dashboard_sections_switch_section: 'Превключване към раздел:'
@@ -299,39 +379,39 @@
   dashboard_students_gender: Пол
   dashboard_students_male: Мъж
   dashboard_students_female: Жена
-  dashboard_students_secret: Тайна
+  dashboard_students_secret: Парола
   dashboard_students_password: Парола
   dashboard_students_username: 'Потребителско име: %{student_username}'
   dashboard_students_email: 'Имейл: %{student_email}'
   dashboard_students_completed_levels: Завършени нива
   dashboard_students_total_lines: Редовете с код
-  dashboard_students_show_secret: Покажи тайна
-  dashboard_students_auto_generated: Автоматично генериран
-  dashboard_students_reset_secret: Нова тайна
-  dashboard_students_reset_password: Нова парола
+  dashboard_students_show_secret: Покажи паролата
+  dashboard_students_auto_generated: Автоматично измислен
+  dashboard_students_reset_secret: Сменете парола
+  dashboard_students_reset_password: Възстанови парола
   dashboard_students_share_section: 'Споделете този код за раздел с вашите ученици:'
   dashboard_students_print_info: Отпечатайте карти с информация за влизане в сайта
     на вашите ученици.
-  dashboard_students_secret_picture: Тайна картина
+  dashboard_students_secret_picture: Парола с  картина
   dashboard_students_reset_picture: Може да зададете нова тайна картина на ученика
     по всяко време като изберете <b>Покажи тайна</b> и след това <b>възстанови тайна</b>.
     Нова тайна картина ще бъде генерирана за този ученик. Той ще я използва, когато
     влезне отново в сайта.
-  dashboard_students_secret_word: Тайна дума
+  dashboard_students_secret_word: Подпомагаща дума
   dashboard_students_reset_word: 'Може да зададете нови тайни думи на учениците си
     по всяко време като изберете <b>Покажи тайна</b> и след това <b>възстанови тайна</b>.
     Нова двойка тайни думи ще се генерира, за да се използват при следващото влизане. '
-  dashboard_students_join_link: Кажете на вашите ученици да си създат свои собствени
-    акаунти и да се присъединят към вашият раздел в
+  dashboard_students_join_link: 'Кажете на вашите ученици да си създат свои собствени
+    акаунти и да се присъединят към вашият раздел '
   dashboard_students_no_email: Ако учениците ви нямат свой имейл адрес, но искате
-    да създадете акаунти за тях, променете тайния тип на този раздел <b>дума</b> или
-    <b>картина</b>.
+    да създадете акаунти за тях, променете специфичния  тип на този раздел <b>дума</b>
+    или <b>картина</b>.
   dashboard_students_print_page: Печат на тази страница
   dashboard_students_url: URL АДРЕС
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Щракнете тук</a> за нашата декларация поверителност, която може да се сподели
     или да се отпечата за вашите ученици.
-  dashboard_curriculum_overview: K-5 преглед на учебния план
+  dashboard_curriculum_overview: K-5 преглед на програмата
   dashboard_view_all_lesson_plans: Разгледай всички урочни планове
   dashboard_course1: 'Курс 1:'
   dashboard_course2: 'Курс 2:'
@@ -346,18 +426,20 @@
   dashboard_puzzle_solving: 'Решаване на пъзел:'
   dashboard_student_worksheet: Ученически лист
   dashboard_teacher_worksheet: Учителски лист
-  dashboard_grade_k: K
+  dashboard_grade_k: Предучилище
   dashboard_grade_other: Друго
   dashboard_login_word: Дума
   dashboard_login_picture: Картина
   dashboard_login_none: Имейл
   dashboard_new_password: нова парола
+  dashboard_progress_not_started: не стартира
+  dashboard_progress_in_progress: в ход
   dashboard_progress_not_completed: не е завършено
   dashboard_progress_completed_too_many_blocks: завършено, но с повече блокове
-  dashboard_progress_completed_perfect: завършено, перфектно
+  dashboard_progress_completed_perfect: завършен, перфектно
   dashboard_progress_furthest_level_attempted: последното пробвано ниво
-  stats_hoc_2013_heading: 'Невероятната статистика от миналата година за Часът на
-    кодирането. Само за една седмица:'
+  stats_hoc_2013_heading: Невероятната статистика от миналата година за Часът на кодирането.
+    Само за една седмица
   stats_hoc_2013_image_alt: Статистика Часът на кодирането от 2013
   dashboard_teacher: Учител
   dashboard_student: Ученик
@@ -427,7 +509,7 @@
   codehs_name: Научете се да програмирате с кучето Карел
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codemonkey_name: CodeMonkey
+  codemonkey_name: Маймунски Код
   codeavengers_name: Изграждане игра с JavaScript
   processing_name: Рисуване с код
   robomind_name: Програмирайте виртуален робот
@@ -435,13 +517,13 @@
   quorum_name: Достъпно програмиране (с екранен четец)
   codespark_name: The Foos (малките читатели са добре дошли)
   kodable_name: Kodable (малките читатели са добре дошли)
-  tynkerapp_name: Tynker - на таблети
+  tynkerapp_name: Tynker -за таблети
   robomindnl_name: Програмирайте виртуален робот
-  flappy_name: Направиете Flappy игра
+  flappy_name: Направи Flappy игра
   bitsbox_name: Bitsbox - направи игра
   makegameswithus_name: Създайте iPhone игра в браузъра си!
   touchdevelop_name: TouchDevelop
-  appinventor_name: Часът на кодирането с AppInventor
+  appinventor_name: Часът на програмирането с AppInventor
   blockly_name: Blockly
   thinkersmith2_name: Двоични Baubles (гривни)
   kodableunplugged_name: fuzzFamily Frenzy
@@ -498,10 +580,10 @@
   khanfr_platformtext: Съвременни уеб браузъри
   khanpl_platformtext: Съвременни уеб браузъри
   tynker_platformtext: Съвременни уеб браузъри
-  scratch_platformtext: Само за десктоп браузъри (не таблети)
-  lightbot_platformtext: ВСИЧКИ браузъри и iOS, Android или игрална конзола
+  scratch_platformtext: Само за десктоп браузъри (не е за таблети)
+  lightbot_platformtext: ВСИЧКИ браузъри и iOS, Android или игрова конзола
   thinkersmith_platformtext: Ънплъгд
-  condcards_platformtext: Ънплъгд
+  condcards_platformtext: Изключено
   lightbotintl_platformtext: iOS, Android (или уеб браузър)
   codehs_platformtext: Съвременни браузъри. (Започването на курса изисква $$)
   codecademy_platformtext: Съвременни уеб браузъри. iOS, Android приложения
@@ -548,7 +630,7 @@
   codehs_shortdescription: Започнете да програмирате с кучето Карел, забавно и визуално
     въведение в програмирането!
   codecademy_shortdescription: Научете да програмирате с JavaScript в уеб браузър
-  codecombat_shortdescription: Победете оргитата, за да научите JavaScript или Python,
+  codecombat_shortdescription: Победете Огритата, за да научите JavaScript или Python,
     чрез тази епична игра за програмиране!
   codemonkey_shortdescription: Учениците създават програма за маймуната, за да си
     вземе банани.
@@ -559,7 +641,7 @@
     че е човек!
   quorum_shortdescription: Присъединете се към Мери, която се отправя на екскурзия,
     за да научи езикът за програмиране Quorum.
-  codespark_shortdescription: Foos е забавна, насочена към децата игра за изучаване
+  codespark_shortdescription: Foos е забавна, насочена към децата, игра за изучаване
     на програмирането.
   kodable_shortdescription: Забавна игра на iPad за преподаване на понятия от компютърното
     програмиране
@@ -592,11 +674,9 @@
     and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от
     Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторения-цикли,
     условия и основни алгоритми. Наличен на 34 езика.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: |2
+
+    Използвайки въведените вече функциим учениците ще трябва да се насочеат взаимно без да са обсъждали предварително. Урока показва връзката между символи и действия
   khan_longdescription: Научете основите на програмирането с JavaScript докато създавате
     забавни рисунки с вашия код. Направете го сами или с класа си!
   khanes_longdescription: Научете основите на програмирането с JavaScript докато създавате
@@ -644,7 +724,7 @@
     въведение в основите на CS чрез JavaScript, езикът който се използва от десетки
     милиони по целия свят. Ние сме подготвили  за Часът на кодирането  придружаващи
     викторини, с които да проверим знанията ви, слайдове и  проект за ученици в края.
-  codecombat_longdescription: Победете оргитата, за да научите JavaScript или Python,
+  codecombat_longdescription: Победете Огритата, за да научите JavaScript или Python,
     чрез тази епична игра за програмиране!
   codemonkey_longdescription: 'CodeMonkey е онлайн игра, която учи реално на програмен
     език! Учениците програмират маймунка да си улови банани, като мисията става все
@@ -703,7 +783,7 @@
     своя jumping bird" игра. '
   appinventor_longdescription: Забавни, бързи видео уроци ще ви преведат през изграждането
     на три прости приложения за вашия андроид телефон или таблет. Предназначен за
-    начинаещи и за експерти. В този Час на кодирането ще се научите да изграждате
+    начинаещи и за експерти. В този Час на програмирането ще се научите да изграждате
     собствени програми. Представете си възможността да споделите собствените си приложения
     с вашите приятели! Тези дейности са подходящи индивидуално и за класове.
   blockly_longdescription: Имате бавни компютри с бавен (или липсва) достъп до интернет?
@@ -742,13 +822,13 @@
   hacketyhack_beyond_name: Научете Ruby
   robomind_beyond_name: Програмирайте виртуален робот
   makegameswithus_beyond_name: Създайте iPhone игра в браузъра си!
-  appinventor_beyond_name: Часът на кодирането с AppInventor
+  appinventor_beyond_name: Часът на програмирането с AppInventor
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Научете се да програмирате с кучето Карел
   udemy_beyond_name: Онлайн курсове по програмиране
   lynda_beyond_name: Онлайн курсове по програмиране
-  edx_beyond_name: Harvard CS50 class
-  coursera_beyond_name: Stanford CS 101 class
+  edx_beyond_name: Харвард CS50 клас
+  coursera_beyond_name: Станфорд CS 101 клас
   udacity_beyond_name: CS 101
   teachingtree_beyond_name: Университетски курсове онлайн
   kodu_beyond_name: Kodu
@@ -949,9 +1029,9 @@
     за iPad, iPhone, Android, PC, Mac, Windows Phone. Нашият touch-friendly редактор
     прави кодирането забавно, дори на вашия телефон или таблет!
   codehs_beyond_longdescription: Научете основите на програмирането с кучето Карел,
-    забавно, достъпно и визуално въведение в кодирането, където давате команди на
-    компютъра, така както давате команди на куче. Този урок е страхотен ако се води
-    от учител, но също така може да се направи самостоятелно
+    забавно, достъпно и визуално въведение в програмирането, където давате команди
+    на компютъра, така както давате команди на куче. Този урок е страхотен ако се
+    води от учител, но също така може да се направи самостоятелно
   udemy_beyond_longdescription: 'Независимо дали не сте виждали линия  код или кодирането
     е вашия живот, Udemy има курсове за вас, преподавани от професионални инструктори.
     [Забележка: изисква се плащане]'
@@ -1044,6 +1124,6 @@
     на създаването на 3D анимации, Проектът Alice предоставя инструменти и материали
     за преподаване и изучаване на изчислително мислене, решаване на проблеми и компютърно
     програмиране за всички възрасти.
-  sphero_beyond_longdescription: Независимо дали сте учител или родител, SPRK уроците
-    ще дадат на децата ви време за забавления чрез програмиране на роботи те ще подобряват
-    уменията си по математика и наука.
+  sphero_beyond_longdescription: Независимо дали сте учител или родител,  уроците
+    " Училище-Родител-Дете-Робот" ще дадат на децата ви време за забавления чрез програмиране
+    на роботи те ще подобряват уменията си по математика и наука.

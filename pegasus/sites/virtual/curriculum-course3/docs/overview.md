@@ -38,6 +38,9 @@ Online lessons are in regular text and unplugged activities are in **bolded** te
 | 18 | **Internet**                         | Students send messages representing various Internet transmission methods using pieces of paper.                                                                                                             |
 | 19 | **Crowdsourcing**                    | Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.                         |
 | 20 | **Digital Citizenship**              | Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.                                                                |
+| 21 | Artist: Patterns            | Students write programs that draw interesting and beautiful patterns.                                                                                                                          |
+
+
 
 [/lesson-table]
 

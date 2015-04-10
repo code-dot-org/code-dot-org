@@ -104,7 +104,7 @@
         TextMatch: Përshtatja e Tekstit
         StudioEC: Play Lab
         Applab: Laboratori i Aplikacionit
-        NetSim: Internet Simulator
+        NetSim: Imitues Interneti
     trophy:
       name:
         Bronze: Bronx
@@ -434,8 +434,8 @@
         flappy_8: Ti mund të vendosësh pamje në çdo kohë, jo vetëm kur fillon loja.
           Provo vendosjen e një pamjeje të RASTËSISHME kur ndodhin evente të tjera,
           për shembull, kur je duke kaluar një pengesë.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
-          of ending the game try setting the score back to 0.
+        flappy_9: Për ti përzierë gjërat, kur je duke gjuajtur një pengesë, në vend
+          të mbaroni lojën provoni të vendosni pikët përsëri 0.
         flappy_11: Krijo lojën tënde Flappy. Ti mund të ndryshosh të githa pamjet
           dhe rregullat, edhe gravitetin madje. Kur të përfundosh, kliko Përfundo,
           që të lejosh shokët të provojnë lojën tënde në telefonat e tyre.
@@ -591,130 +591,6 @@
           të ri "penWidth". Bëfsh qejf!'
         studio_ec_sandbox: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
           lejosh shokët e tu ta provojnë atë në telefonat e tyre.
-    levelbuilder:
-      frozen line:
-        instructions: Përshëndetje! Unë jam Elsa e Arendelle. Më ndihmo të krijoj
-          një rresht të vetëm.
-      frozen perpendicular:
-        instructions: Tani le të shohim nëse ne mund të krijojmë dy rreshta që janë
-          në një kënd 90 gradë nga njëri tjetri. Ti duhet të përdorësh bllokun "Kthehu"
-          ashtu si edhe bllokun "Leviz".
-      frozen square iterative:
-        instructions: Duket sikur jemi në gjysëm të punës për të bërë një katror.
-          Le të vendosim 4 vija bashkë për të krijuar një katror.
-      frozen square loop:
-        instructions: Përshëndetje, unë jam Anna e Arendelle! Le të bëjmë një katror
-          me bllokun "Repeat", që përdor më pak blloqe. Sa herë (???) duhet që blloku
-          "Repeat" të fusë blloqet brenda atij për të bërë një katror?
-      frozen square loop 3x:
-        instructions: Le të krijojmë tre katrorë, që kthehen pas çdo katrori tjetër.
-          Sigurohu të kthehen me nga 120 gradë përpara çdo katrori të ri.
-      frozen square snowflake:
-        instructions: A mund të krijosh një flok dëbore duke përdorur bllokun "Repeat"
-          për të bërë një katror 10 herë dhe të përdorësh bllokun "Turn" për tu kthyer
-          36 gradë ndërmjet çdo katrori?
-      frozen cross:
-        instructions: Përdor bllokun "Repeat" për të krijuar një shenjë plusi. A e
-          vure re që Elsa mund të lëvizë para dhe mbrapa?
-      frozen cross rotate:
-        instructions: Tani përpiqu të përsërisësh atë 10 herë. Sa gradë duhet të kthehesh
-          midis çdo vije?
-      frozen cross rotate dense:
-        instructions: 'Le ta përsërisim atë 90 herë! Sa herë hyn 90 tek 360? Ndihmë:
-          Është një numër vërtet i vogël.'
-      frozen diamond:
-        instructions: 'Le të krijojmë një paralelogram. Është njësoj si një katror
-          por ka këndet të ndryshme: Kënde 60 dhe 120 gradë në vend të 90 gradë që
-          i ka katrori.'
-      frozen diamond mini snowflake:
-        instructions: A e dije që çdo flok dëbore ka formë të ndryshme? Le të krijojmë
-          një flok dëbore duke përdorur bllokun "Repeat" për të përsëritur një paralelogram
-          4 herë, duke u kthyer me 90 gradë midis çdo paralelogrami.
-      frozen diamond snowflake:
-        instructions: Tani, le të krijojmë një flok dëbore duke përdorur bllokun repeat
-          për të përsëritur një paralelogram 10 herë, duke u kthyer djathtas 36 gradë
-          midis secilit.
-      frozen circle:
-        instructions: Një rreth është një formë e veçantë. A mund të gjesh se me çfarë
-          numri të zëvendësosh pikëpyetjet për të vizatuar një rreth?
-      frozen circle function:
-        instructions: Përdor bllokun e ri "Create a circle" për të krijuar 10 rrathë
-          të mbivendosur. MOs harro të kërcesh përpara ndërmjet rrathëve.
-      frozen circle function in circle:
-        instructions: Tani le të krijojmë 20 rrathë të mbivendosur, duke kthyer 18
-          gradë ndërmjet çdo rrethi.
-      frozen circle function with parameter:
-        instructions: Këtu kemi një bllok "Create circle" që bën rrathët me forma
-          të ndryshme. A mund të përdorësh këtë për të krijuar një rreth të vogel
-          me masë 5 dhe një rreth më të madh me masë 10?
-      frozen snowflower:
-        instructions: Modelet e flokëve të dëborës që janë të ndërlikuara, mund të
-          krijohen me forma shumë të thjeshta. A mund ta bësh një model duke përsëritur
-          5 rrathë me masë 5 dhe 5 rrathë me masë 10?
-      frozen snowflake branch:
-        instructions: Provo të përdorësh bllokun "Create a snowflake branch" për të
-          krijuar tre degë, që do fillojnë të duken si një flok dëbore.
-      frozen snowflake full:
-        instructions: Tani le ta përsërisim atë 8 herë për të bërë një flok dëbore
-          të bukur!
-      frozen freeplay:
-        instructions: Ti zyrtarisht je bërë një mjeshtër! Krijo një magji dimërore.
-      scrat 16:
-        instructions: Lajthi! Lajthi! Lajthi! Përdor një bllok "if" për të më çuar
-          atje me numrin më të vogël të blloqeve.
-      scrat 17:
-        instructions: Në rregull, le ta bëjmë këtë për tu praktikuar - kjo nuk ndryshon,
-          por kujdes nga muri!
-      scrat 18:
-        instructions: Blloqet if-else kërkojnë një kusht dhe më pas bëjnë një gjë
-          ose diçka tjetër. Për të më çuar mua tek lajthia, përpiqu të përdorësh këtë
-          bllok të ri.
-      scrat 19:
-        instructions: Edhe një herë praktikohu me bllokun if-else, mund ta bësh si
-          duhet me përpjekjen e parë?
-      scrat 20:
-        instructions: A mund të shtosh thjesht 3 blloqe për të më ndihmuar mua të
-          zgjidh një maze më të ndërlikuar? Nëse e bën si duhet, une mund të ec n
-          çdo rrugë të dredhuar, pavarësisht gjatësisë. Nxito! Akulli po shkrin!
-      Standalone_Artist_1:
-        instructions: MIrë se erdhe Artist! Së pari, le të provojmë të bëjmë një katror
-          të thjeshtë duke përdorur bllokun "turn right" dhe bllokun "move forward".
-          Çdo brinjë duhet te jete 100 piksel e gjatë.
-      Standalone_Artist_2:
-        instructions: Vizato këtë diamant me kënde 120 dhe 60 gradë dhe me brinje
-          150 piksel të gjatë.
-      Standalone_Artist_3:
-        instructions: A mund ta vizatosh këtë gjashtëkëndësh me 100 piksela brinjët
-          dhe me kthim 60 gradë?
-      Standalone_Artist_4:
-        instructions: Tani ti ke një bllok të ri për të luajtur, ciklin. Kjo do të
-          përsërisë një grup komandash. Çfarë do ndodhë nëse i ciklon këto komanda
-          6 herë?
-      Standalone_Artist_5:
-        instructions: Sa herë duhet të ciklosh këtë diamant për të vizatuar lulen?
-      Standalone_Artist_5.5:
-        instructions: 'Ver re se si e thjeshtësuam kodin e diamantit duke e kthyer
-          atë në një cikël. Ti mund të ciklosh të gjithë sekuencën 12 herë për të
-          vizatuar një lule. Ndihmë: Ty do të duhet të kthehesh 30 gradë pas ciklit
-          të diamantit tënd, kështu që nuk do vazhdosh të vizatosh të njëjtin diamant.'
-      Standalone_Artist_6:
-        instructions: 'Cikloje këtë kodin e gjashtëkëndëshit 6 herë për të krijuar
-          dizajnin. Sa gradë do të duhet të kthesh çdo herë? Ndihmë: ndaj numrin e
-          gradëve në një rreth në numrin e herëve që ti je duke cikluar.'
-      Standalone_Artist_7:
-        instructions: 'Një funksion është një tjetër mjet programimi që të ndihmon
-          ty të mos përsërisësh vetveten. Ky funksion vizaton një lule, kështu që
-          ti mund ta përdorësh në çdo kohë, sa herë që dëshiron të vizatosh një lule.
-          Përdor këtë dhe bllokun e ri "jump" për të vizatuar këto lule. Ndihmë: Lulet
-          janë 150 piksela veç e veç'
-      Standalone_Artist_8:
-        instructions: Këtu kemi një funksion që quhet "Draw a shape" që ne e kemi
-          programuar për të vizatuar gjashtëkëndësha. Ekzekuto kodin për të parë se
-          çfarë bën dhe më pas eksperimento me funksionin për të parë se çfarë ndodh.
-          A mund ta bësh të vizatojë një model katrorësh, trekëndorësh ose tetëkëndorësh?
-      Standalone_Artist_9:
-        instructions: Tani ec përpara dhe bëj çfarë figure të duash! Ti madje ke një
-          funksion bosh që të jep mundësinë të bësh çfarë të duash!
     video:
       name:
         maze_intro: Hyrja e Maze
@@ -774,6 +650,7 @@
         C2_relay_programming: Programimi i Besuar
         C2_paper_airplanes: Avionët prej Letre
         C2_digital_footprint: Hapat e tua Dixhitale
+        C2_digital_footprint_v2: Gjurmët e Tua Dixhitale
         C3_maze_level_4: Përsëritja e Maze
         C3_artist_intro: Hyrja e Artistit
         C3_artist_functions: Funksionet e Artistit
@@ -814,6 +691,21 @@
         playlab_intro: Hyrje në Play Lab
         playlab_events: Ngjarjet Play Lab
         playlab_repeat_forever: Përsërit Gjithmonë Play Lab
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Blloqet e Vlerësimit
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: variabla
+        msm_7_functions: Funksionet
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër
@@ -917,3 +809,8 @@
         arrows_move_actor: Përdor shigjetat për të lëvizur aktorin
         right_arrow_fireball: Përdor shigjetën djathtas të gjuash topat e zjarrit
         name_function: Shkruaj emrin e funksionit tënd këtu
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

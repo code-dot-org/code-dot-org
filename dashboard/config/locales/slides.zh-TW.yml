@@ -161,9 +161,7 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: 你好，我是 Saloni。我使用電腦科學來幫忙解決一些衛生和醫學的問題。讓我們學習 "如果-否則" 這個程式積木。它看起來跟程式積木"如果"很像，不過它後面還多了個"否則"。
       2:
         image: notes/hoc5_2.jpg
         text: If I put a "move forward" block in the spot where it says "do" and a

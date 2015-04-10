@@ -160,7 +160,12 @@ class GSheetToCsv
       return
     end
 
-    buf = @file.spreadsheet.export_as_string('csv')
+    begin
+      buf = @file.spreadsheet_csv
+    rescue GoogleDrive::Error => e
+      puts "Error on file: #{@gsheet_path}, #{e}"
+      throw e
+    end
     if @exclude_columns.empty?
       IO.write(@csv_path, buf)
     else
@@ -217,7 +222,7 @@ namespace :seed do
   end
 
   def stub_path(table)
-    cache_dir(".#{table.to_s}-imported")
+    cache_dir(".#{table}-imported")
   end
 
   def gdrive()
@@ -246,7 +251,7 @@ namespace :seed do
           ctime = File.mtime(path).utc if File.file?(path)
           unless mtime.to_s == ctime.to_s
             puts "gdrive #{path}"
-            file.spreadsheet.export_as_file(path, nil, 0)
+            IO.write(path, file.spreadsheet_csv)
             File.utime(File.atime(path), mtime, path)
           end
         else

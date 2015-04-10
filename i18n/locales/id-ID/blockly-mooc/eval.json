@@ -1,13 +1,16 @@
 {
+  "badColorStringError":"Anda menggunakan string warna yang tidak valid: {val}",
+  "badStyleStringError":"Anda menggunakan string gaya yang tidak valid: {val}",
   "circleBlockTitle":"lingkaran(jari-jari, gaya, warna)",
-  "displayBlockTitle":"tampilan",
+  "displayBlockTitle":"evaluasi",
   "ellipseBlockTitle":"lonjong (lebar, panjang, gaya, warna)",
-  "extraTopBlocks":"Anda memiliki blok yang tidak terpasang. Mungkin maksud Anda adalah untuk memasangnya di blok \"tampilan\"?",
+  "extraTopBlocks":"Anda memiliki blok terikat. Apakah maksud Anda untuk memasang ini ke \"evaluasi\" blok?",
+  "infiniteRecursionError":"Fungsi Anda memanggil dirinya sendiri. Kami telah menghentikan fungsi Anda, jika tidak maka fungsi tersebut akan terus memanggil dirinya sendiri selamanya.",
   "overlayBlockTitle":"lapisan-atas (atas, bawah)",
   "placeImageBlockTitle":"tempat-gambar (x, y, gambar)",
   "offsetBlockTitle":"selisih (x, y, gambar)",
   "rectangleBlockTitle":"persegi-panjang (lebar, panjang, gaya, warna)",
-  "reinfFeedbackMsg":"Anda dapat menekan tombol \"Coba lagi\" untuk menyunting gambar Anda.",
+  "reinfFeedbackMsg":"Anda dapat menekan tombol \"Terus Bermain\" untuk mengedit gambar Anda.",
   "rotateImageBlockTitle":"putar (derajat, gambar)",
   "scaleImageBlockTitle":"Skala (faktor, gambar)",
   "squareBlockTitle":"persegi (ukuran, gaya, warna)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"lapisan-bawah (bawah, atas)",
   "outline":"garis luar",
   "solid":"Pejal",
-  "string":"kata"
+  "string":"kata",
+  "stringMismatchError":"Anda memiliki sebuah string dengan kapitalisasi yang salah.",
+  "userCodeException":"Kesalahan terjadi ketika menjalankan kode Anda.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

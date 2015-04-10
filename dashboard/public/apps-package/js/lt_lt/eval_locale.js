@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "apskritimas(spindulys, stilius, spalva)"},
 "displayBlockTitle":function(d){return "parodyk"},
 "ellipseBlockTitle":function(d){return "elipsė(plotis, aukštis, stilius, spalva)"},
 "extraTopBlocks":function(d){return "Yra neprijungtų blokelių. Ar norėjai juos prijungti prie \"parodyk\"?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "padėk-aukščiau(viršutinis, apatinis)"},
 "placeImageBlockTitle":function(d){return "padėk-vaizdą(x, y, vaizdas)"},
 "offsetBlockTitle":function(d){return "poslinkis(x, y, paveiksliukas)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "padėk-žemiau(apatinis, viršutinis)"},
 "outline":function(d){return "plonai"},
 "solid":function(d){return "storai"},
-"string":function(d){return "tekstas"}};
+"string":function(d){return "tekstas"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

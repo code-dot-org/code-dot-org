@@ -22,6 +22,7 @@ he:
           future: לא יכול להיות בעתיד
   hello: שלום עולם
   welcome_back: 'ברוך שובך, %{name}'
+  submit: שלח
   add_teacher_form:
     code:
       label: 'הוסף מורה:'
@@ -222,6 +223,7 @@ he:
         artist: Draw Something
     user:
       classroom: Teacher Home Page
+      district_dashboard: District Dashboard
       label: 'היי %{username}'
       stats: ההתקדמות שלי
       settings: החשבון שלי
@@ -300,6 +302,8 @@ he:
     student_teacher_disassociated: '% {teacher_name} הוסר כמורה של % {student_name}'
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 'שלח מחדש הוראות אישור דוא"ל'
     new_password_hint: (השאר ריק אם אין ברצונך לשנות)
     current_password_hint: (אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים שלך)
@@ -438,6 +442,9 @@ he:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
     students_made_these_with_code: Students made these with code!
@@ -467,6 +474,13 @@ he:
     wrong_body: הפתרון שענית אינו נכון.נא נסה שנית!
     correct_title: נכון
     correct_body: זאת התשובה הנכונה.
+  contract_match:
+    wrong_title: תשובה לא נכונה
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Enter your answer here
   dialog:
@@ -482,7 +496,7 @@ he:
           title: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
           description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
         Hour of Code:
-          title: שעה של קוד
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: עריכת קוד
@@ -512,11 +526,44 @@ he:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Save
+    delete: Delete
+    exit: Return to Course
+    my_projects: My Projects
+    share: שתף
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: יותר
+    name: שם
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Delete?
+    delete_yes: כן
+    delete_no: לא
+    saved: Saved
+    not_saved: Not saved
+    cancel: בטל
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

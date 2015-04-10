@@ -57,3 +57,10 @@ EvalImage.prototype.scale = function (scaleX, scaleY) {
   this.scaleX_ = scaleX;
   this.scaleY_ = scaleY;
 };
+
+/**
+ * Get child EvalObjects. overridden by children
+ */
+EvalImage.prototype.getChildren = function () {
+  return [];
+};

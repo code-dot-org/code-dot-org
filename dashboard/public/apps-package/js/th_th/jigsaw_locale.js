@@ -157,7 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "ดำเนินการต่อไป"},
 "nextLevel":function(d){return "ขอแสดงความยินดีคุณสำเร็จปริศนานี้."},
 "no":function(d){return "ไม่ใช่"},
-"numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
+"numBlocksNeeded":function(d){return "ปริศนานี้สามารถแก้ได้เพียงแค่ %1 บล็อกเท่านั้นเอง"},
 "reinfFeedbackMsg":function(d){return "คุณสามารถกดปุ่ม \"เริ่มอีกครั้ง\" เพื่อกลับไปสู่เกมส์ของคุณ."},
 "share":function(d){return "แบ่งปัน"},
 "shareGame":function(d){return "Share your game:"},

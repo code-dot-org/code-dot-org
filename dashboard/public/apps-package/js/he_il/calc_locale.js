@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "חשב"},
+"divideByZeroError":function(d){return "התכנית שלך מנסה לחלק באפס."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי."},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "הפונקציה שלך אינה מחזירה את התוצאה הנכונה עבור כל הערכים."},
 "goal":function(d){return "מטרה:"},
-"reinfFeedbackMsg":function(d){return "הינה הסיפור שלך! תמשיך לעבוד עליו, או עבור לאתגר הבא!"},
-"yourExpression":function(d){return "הביטוי שלך:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "הנה החישוב שלך! המשך לעבוד על זה, או עבור לחידה הבאה!"},
+"yourExpression":function(d){return "הביטוי שלך:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

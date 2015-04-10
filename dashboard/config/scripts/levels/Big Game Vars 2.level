@@ -28,9 +28,18 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n  {\"localization_key\":\"big_game_title\",\"callout_text\":\"Edit this variable to change the title of your game\",\"element_id\":\"#game_title\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom right\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"big_game_title\",\r\n  \"callout_text\": \"Click \\\"edit\\\" to change the title of your game\",\r\n  \"element_id\": \"#game_title\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": -5\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "custom_game_type": "Big Game",
+    "min_workspace_height": "1500",
     "maze_data": null
-  }
+  },
+  "md5": "35c5299a1119eec56459ef079a8c9df3"
 }]]></config>
   <blocks/>
 </Studio>

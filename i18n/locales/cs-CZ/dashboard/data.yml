@@ -203,7 +203,7 @@ cs:
         turtle_3_5: 'Nyní vytvoř novou funkci "nakreslit dům" a použij jí k zabydlení dvou koček. Tip: k vytvoření nové funkce použij blok "proveď něco" a jako název bloku napiš vlastní text.'
         turtle_3_6: 'Použij "nakreslit čtverec" jako příklad a přidej vstup s názvem "délka" do "nakreslit trojúhelník". Poté nakresli trojúhelníky o různých velikostech. (Tip: klikni na hvězdičku aby jsi přidal vstup do funkce)'
         turtle_3_7: 'Přidej vstup s názvem "délka" do "nakreslit dům" a postav veliký dům pro slona (se stranami dlouhými 150 pixelů)'
-        turtle_3_8: 'Zde jsou všechny bloky z předchozí hádanky.  Změň "nakreslit dům" tak, aby jsem po nakreslení nového domu skončil v pravém dolním rohu. Použijte tuto upravenou funkci k nakreslení tří domků.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Zvládneš znovu vytvořit funkci "nakreslit dům" bez pomoci? Zkus to a potom nakresli řadu domů.'
         turtle_3_10: Hodně jsi se toho naučil! Teď to využij a nakresli cokoliv si přeješ. Zkus nakreslit hvězdu, nebo spirálu, nebo fajnovou sněhovou vločku.
         maze_karel_debug_seq_1: Vítej v ladícím módu! Můj kód nefunguje dobře. Rozpoznáš problém a opravíš ho tak, abych pole srovnal a připravil na výsadbu?
@@ -332,78 +332,6 @@ cs:
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-    levelbuilder:
-      frozen line:
-        instructions: Ahoj! Jmenuji se Elsa Arendelle. Pomozte mi nakreslit čáru.
-      frozen perpendicular:
-        instructions: 'Teď zkusme, jestli dokážeme vytvořit dvě čáry, které jsou na sebe kolmé. Budeš muset použít blok "otoč" spolu s blokem "posun".'
-      frozen square iterative:
-        instructions: Vypadá to, že jsme na půl cesty k tomu vytvořit čtverec. Dejme dohromady 4 čáry tak, aby vytvořily čtverec.
-      frozen square loop:
-        instructions: 'Ahoj, já se jmenuji Anna Arendelle! Vytvořme čtverec pomocí bloku "opakuj". Toto řešení využívá méně bloků. Kolikrát (???) musí blok "opakuj" projít bloky uvnitř, aby vznikl čtverec?'
-      frozen square loop 3x:
-        instructions: Pojďme vytvořit tři čtverce tak, že se po každém čtverci otočíme. Ujisti se, že se otočiš o 120 stupňů před každým novým čtvercem.
-      frozen square snowflake:
-        instructions: 'Můžeš vytvořit vločku pomocí bloku "opakuj" tak, že nakreslíš 10krát čtverec a použiješ blok "otoč" pro otočku o 36 stupňů před každým čtvercem?'
-      frozen cross:
-        instructions: 'Vytvoř znaménko plus pomocí bloku "opakuj". Všiml(a) sis, že se Elsa může pohybovat dopředu i dozadu?'
-      frozen cross rotate:
-        instructions: Teď to zkus opakovat desetkrát. O kolik stupňů se musíš otočit mezi jednotlivými čarami?
-      frozen cross rotate dense:
-        instructions: 'Pojďme to zopakovat 90krát! Kolikrát se 90 vejde do 360? Tip: To je opravdu malé číslo.'
-      frozen diamond:
-        instructions: 'Vytvořme rovnoběžník. Je podobný jako čtverec, ale má jiné úhly: 60 a 120 stupňů místo 90 stupňů.'
-      frozen diamond mini snowflake:
-        instructions: 'Věděli jste, že každá sněhová vločka má jiný tvar? Vytvořme novou vločka pomocí bloku "opakuj" tak, že zopakujeme rovnoběžník 4krát. Po každém rovnoběžníku se otočíme o 90 stupňů.'
-      frozen diamond snowflake:
-        instructions: Teď pojďme vytvořit novou vločka pomocí bloku opakuj tak, že budeme opakovat rovnoběžník desetkrát a otočíme se vpravo o 36 stupňů mezi každým z nich.
-      frozen circle:
-        instructions: Kružnice je zvláštní tvar. Vymyslíš jakým číslem nahradit otazníky, aby se nakreslila kružnice?
-      frozen circle function:
-        instructions: 'Použij nový blok "vytvoř kružnici" pro nakreslení deseti překrývajících se kružnic. Nezapomeň mezi kružnicemi skočit vpřed.'
-      frozen circle function in circle:
-        instructions: Teď pojďme vytvořit 20 překrývajících se kružnic tak, že se otočíme o 18 stupňů mezi každou kružnicí.
-      frozen circle function with parameter:
-        instructions: 'Tady je blok "vytvoř kružnici", který umí vytvořit kružnice různých velikostí. Můžeš ho použít k vytvoření malé kružnice o velikosti 5 a větší kružnice o velikosti 10?'
-      frozen snowflower:
-        instructions: Složité sněhové vzory lze vytvořit za pomocí velmi jednoduchých tvarů. Můžeš vytvořit vzorek opakováním 5 kružnic o velikosti 5 a 5 kružnic o velikosti 10?
-      frozen snowflake branch:
-        instructions: 'Zkus použít blok "Vytvoř rameno vločky" k vytvoření tří ramen, která začnou vypadat jako sněhová vločka.'
-      frozen snowflake full:
-        instructions: Teď pojďme vytvořit krásnou sněhovou vločku tak, že to zopakujeme osmkrát!
-      frozen freeplay:
-        instructions: Oficiálně se z tebe stal mistr umělec! Vytvoř krásnou zimní krajinu a sdílej ji se svými přáteli.
-      scrat 16:
-        instructions: 'Žalud! Žalud! Žalud! Použij blok "když" a dostaň mě tam za použití co nejmenšího počtu bloků.'
-      scrat 17:
-        instructions: Dobře, pro procvičení si to zopakujme. Tentokrát to není o moc jiné, ale pozor na zeď!
-      scrat 18:
-        instructions: 'Blok "když-jinak" zkontroluje podmínku, a podle ní udělá buď jednu věc nebo druhou. Zkus použít tento nový blok abych se dostal k žaludu.'
-      scrat 19:
-        instructions: 'Další cvičení pro blok "pokud-jinak". Zvládneš to na první pokus?'
-      scrat 20:
-        instructions: Můžeš mi pomoci vyřešit mnohem složitější bludiště přidáním jen tří bloků? Když to uděláš dobře, můžu projít jakoukoliv klikatou cestou bez ohledu na její délku. Pospěš si, led začíná tát!
-      Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
-      Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
-      Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
-      Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
-      Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
-      Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
     video:
       name:
         maze_intro: Úvod Bludiště
@@ -463,6 +391,7 @@ cs:
         C2_relay_programming: Štafetové Programování
         C2_paper_airplanes: Papírová letadla
         C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint_v2: Your Digital Footprint
         C3_maze_level_4: 'Bludiště: cykly'
         C3_artist_intro: Úvod Malíř
         C3_artist_functions: Umělec funkce
@@ -503,6 +432,21 @@ cs:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Proměnné
+        msm_7_functions: Funkce
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: 'Přetáhni blok "posunout vpřed" pod ten druhý blok'
@@ -570,3 +514,7 @@ cs:
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

@@ -156,7 +156,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "continue":function(d){return "Continuar"},
 "doCode":function(d){return "faça"},
-"elseCode":function(d){return "senão"},
+"elseCode":function(d){return "se não"},
 "endGame":function(d){return "fim de Jogo"},
 "endGameTooltip":function(d){return "Termina o Jogo."},
 "finalLevel":function(d){return "Parabéns! Você resolveu o desafio final."},

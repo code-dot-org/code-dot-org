@@ -1,2 +1,2 @@
-title: Calc Defining Variables
-description: "Variables allow us to take an expression of value and store it in a container that can be easily referenced throughout your program."
+title: Defining Variables and Substitution
+description: "Variables allow us to create shortcuts to values or expressions that we want to use repeatedly in a program."

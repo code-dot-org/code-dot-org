@@ -203,7 +203,7 @@ ar:
         turtle_3_5: 'الآن أنشئ داله جديدة وهي "ارسم بيت" واستخدمه لإيواء أثنين من القطط. تلميح: أنشئ داله جديدة بإستخدامك قطعة "القيام بشيء ما"، و أكتب نصك الخاص لتسمية القطعة.'
         turtle_3_6: 'بإستخدام "ارسم مربع" كمثال، أضف مدخلاً يسمى  "طول" إلى "ارسم مثلث". ثم، أرسم مثلثات بأحجام مختلفة . (تلميح : اضغط على النجمة لتضيف المدخل الى الدالة )'
         turtle_3_7: 'اضف مدخل يسمى "طول" لـ"رسم بيت" من اجل بناء بيت كبير لايواء الفيل (بحدود اطوالها 150 بكسل)'
-        turtle_3_8: 'هنا توجد كل القطع من اللغز السابق.  قم بتعديل "ارسم بيت" حتى ينتهي بي المطاف في أسفل الزاوية اليمنى بعد رسم منزلً جديد. استخدم هذه الدالة المعدلة لرسم ثلاثة منازل.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'بأمكانك إعادة إنشاء الدالة "ارسم بيت" دون مساعدة؟ جرب المحاولة، ومن ثم أرسم صفً من المنازل.'
         turtle_3_10: لقد تعلمت الكثير! الآن استخدم ما تعلمت لرسم ما تشاء. حاول رسم نجمة، أو شكل حلزوني، أو ندفة ثلج فخمة.
         maze_karel_debug_seq_1: مرحبا بكم في تصحيح الأخطاء! لا يعمل الكود الخاص بي بشكل صحيح. بأمكانك تحديد أين توجد المشكلة و إصلاحها بحيث يمكنني أن أجعل حقلي مسطح و جاهزً للزراعة؟
@@ -332,77 +332,6 @@ ar:
         turtle_ec_1_2: 'الآن، ارسم مربعا. ملاحظة: استخدم لونك المفضل بانتقاء فإنه في كتلة "penColor" الجديدة.'
         turtle_ec_1_10: 'يمكنك جعلها! الآن، رسم أي شيء تريده. بعض المرح الأفكار: الشكل عصا، ندفة الثلج، أو دوامة. كما حاول كتلة "penWidth" الجديدة. استمتع!'
         studio_ec_sandbox: 'إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء" للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.'
-    levelbuilder:
-      frozen line:
-        instructions: مرحبا! أنا إلسا أرينديلي. ساعدني في إنشاء سطر واحد.
-      frozen perpendicular:
-        instructions: 'والآن دعونا نرى إذا كان بامكننا إنشاء 2 خطوط تبعد عن بعضها بزاوية 90 درجة. سوف تحتاج إلى استخدام القطعة "اتجه"، فضلا عن القطعة "تقدم".'
-      frozen square iterative:
-        instructions: يبدو أننا في منتصف الطريق إلى انشاء مربع. دعونا نضع 4 خطوط معا لفعل ذلك.
-      frozen square loop:
-        instructions: 'مرحبا، أنا انّا أرينديلي! دعونا ننشئ مربعا مع قطعة "كرّر"، الذي يستخدم قطعا أقل. ما هو عدد المرات (؟) التي يجب على قطعة "كرر" تكرار القطع التي بداخلها لانشاء المربع ؟'
-      frozen square loop 3x:
-        instructions: لنقم بإنشاء ثلاث مربعات. تأكد من الاستدارة ب 120 درجة قبل كل مربع جديد.
-      frozen square snowflake:
-        instructions: 'هل يمكنك إنشاء رقاقة الثلج باستخدام القطعة "كرّر" لرسم 10 مربعات، و القطعة "اتجه" للاستدارة 36 درجة بين كل مربع؟'
-      frozen cross:
-        instructions: 'استخدم القطعة "كرر" لإنشاء علامة زائد(مع). هل لاحظت انّ بامكان إلزا أن تتحرك إلى الأمام وإلى الخلف؟'
-      frozen cross rotate:
-        instructions: والآن حاول تكرار ذلك 10 مرات. ما هو عدد الدرجات التي يجب أن تستدريها بين كل سطر؟
-      frozen cross rotate dense:
-        instructions: 'دعنا نكررذلك 90 مرة! كم من مرة يوجد العدد 90 في 360؟ اشارة: هذا العدد صغير.'
-      frozen diamond:
-        instructions: 'لنقم بإنشاء متوازي أضلاع. إنه مجرّد شكل مثل المربع و لكن بزوايا مختلفة: قيس الزوايا 60 و 120 درجة بدلاً من زوايا 90 درجة.'
-      frozen diamond mini snowflake:
-        instructions: 'هل تعلم أنّ كل رقاقة الثلج  لها شكل مختلف؟ لنقم بإنشاء رقاقة ثلج جديدة باستخدام كتلة "كرر" لتكرار متوازي أضلاع أربع مرات، استدر إلى اليمين بزاوية 90 درجة بين كل متوازي أضلاع.'
-      frozen diamond snowflake:
-        instructions: 'الآن، دعنا ننشئ رقاقة ثلج جديدة باستخدام قطعة "كرّر" و ذلك بتكرار متوازي الأضلاع 10 مرات، و الاستدارة ب36 درجة بين كل واحدة.'
-      frozen circle:
-        instructions: الدائرة شكل خاص. هل يمكنك معرفة ما هو الرقم الذي يجب وضعه بدل علامات الاستفهام لرسم دائرة؟
-      frozen circle function:
-        instructions: 'استخدام القطعة الجديدة "إنشاء دائرة" لإنشاء 10 دوائر متداخلة. لا تنسى القفز إلى الأمام بين الدوائر.'
-      frozen circle function in circle:
-        instructions: الآن لنقم بإنشاء 20 دائرة متداخلة، استدر 18 درجة بين كل دائرة.
-      frozen circle function with parameter:
-        instructions: 'هذه قطعة "إنشاء دائرة" التي يمكنها أن ترسم دوائر من أحجام مختلفة.هل يمكنك استخدام هذا لإنشاء دائرة صغيرة من حجم 5 ودائرة أكبر من حجم 10؟'
-      frozen snowflower:
-        instructions: يمكن إنشاء اشكال معقدة من الثلوج باستخدام أشكال بسيطة جداً. هل يمكنك إنشاء شكل بتكرار 5 دوائر من الحجم 5 و 5 دوائر من حجم 10؟
-      frozen snowflake branch:
-        instructions: 'حاول استخدام قطعة "إنشاء فرع رقاقة الثلج" لإنشاء ثلاثة فروع، التي تبدأ لتبدو وكأنها ندفة الثلج.'
-      frozen snowflake full:
-        instructions: الآن دعنا نكرر ذلك 8 مرات لرسم رقاقة ثلج جميلة!
-      frozen freeplay:
-        instructions: 'لقد أصبحت رسميا فنانا محترفا! قم بإنشاء شكل يمثل "شتاء العجائب"  ثم شاركه مع أصدقائك.'
-      scrat 16:
-        instructions: 'بلوط! بلوط! بلوط! استخدام الشرطية "if" لكي توصلني إلى هناك بأقل عدد من "if".'
-      scrat 17:
-        instructions: 'أوكي، دعونا نفعل دلك مرة أخرى للممارسة - هذه المرة ليست مختلفة جداً، ولكن عليك الحذر من الجدار!'
-      scrat 18:
-        instructions: 'القطع الشرطية  "If-else" ، إدا- والا ،تقوم بفحص تحقق شرط ما،و بعد دلك تقوم بتنفيد شيء واحد أو اخر.لكي أحصل على البلوط حاول أن تستخدم هده القطعة الجديدة: if-else .'
-      scrat 19:
-        instructions: 'تمرين اخر على قطعة " اذا - والا ", هل تقدر اعطاء اجابة صحيحة من أول محاولة ؟'
-      scrat 20:
-        instructions: 'هل يمكنك أن تساعدني بإضافة 3 قطع لكي أحل هاته المتاعة الأكثر تعقيدا ؟  إذا فعلتها بطريقة صحيحة،يمكنني أن أمشي على أي مسار متعرج مهما كان الطول.أسرع! الجليد يذوب!'
-      Standalone_Artist_1:
-        instructions: 'مرحبا بالفنان! أولا، دعونا نحاول أن نرسم مربعا باستخدام المقاطع البرمجية "اتجه الى اليمين" و "تقدم الى الأمام".   يجب أن يكون كل جانب بطول 100بكسل.'
-      Standalone_Artist_2:
-        instructions: ارسم هذه الماسة ذات الزوايا 120 و 60 درجة و بطول 150 بيكسل
-      Standalone_Artist_3:
-        instructions: هل يمكنك رسم سداسي الاضلاع، حيث يبلغ طول الضلع 100 بيكسل و قياس الزاوية 60 درجة؟
-      Standalone_Artist_4:
-        instructions: 'عندنا الان مقطع برمجي جديد سنلعب به: كرر. سيقوم  بتكرار مجموعة من المقاطع البرمجية. ماذا يحصل اذا كررت هذه الاوامر 6 مرات؟'
-      Standalone_Artist_5:
-        instructions: كم من مرة يجب تكرار الياقوتة لرسم الوردة؟
-      Standalone_Artist_5.5:
-        instructions: 'يمكن الملاحظة اننا قمنا بتبسيط برمجة الياقوتة بتحويلها الى عملية مكررة. يمكن تكرار هذه السلسلة 12 مرة لرسم الوردة. اشارة: يجب الاستدارة ب 30 درجة بعد رسم كل ياقوتة و ذلك لعدم تكرار الرسم في نفس المكان.'
-      Standalone_Artist_6:
-        instructions: 'كرر المقاطع البرمجية لسداسي الاضلاع 6 مرات لإنشاء التصميم. كم درجة سوف تحتاج إلى الاستدارة في كل مرة؟ اشارة: قسم عدد الدرجات في دائرة على عدد المرات.'
-      Standalone_Artist_7:
-        instructions: 'الوظيفة هي آدات اخرى لمساعدتك تجنب التكرار. هذه الوظيفة ترسم وردة، بامكانك استخدامها في اي وقت لرسم وردة. استعمل هذه الوظيقة و المقطع البرمجي الجديد "القفز الى" لرسم الورود. اشارة: الورود تبعد عن بعضها مسافة 150 بيكسل'
-      Standalone_Artist_8:
-        instructions: 'هذه الوظيفة اسمها "ارسم شكل" و التي وقع برمجتها لرسم سداسي الاضلاع. جرب البرنامج لفهم ذلك ثم حاول مجددا باستعمال الوظيفة الجديدة و لاحظ ماذا سيحصل. هل بامكانك رسم شكل مثلث، مربع، او ثماني الاضلاع؟'
-      Standalone_Artist_9:
-        instructions: واصل الآن و ارسم اي صورة تحب! لديك وظيفة جديدة فارغة بامكانك برمجتها لتفعل ما تريد!
     video:
       name:
         maze_intro: مقدمة حول المتاهة
@@ -462,6 +391,7 @@ ar:
         C2_relay_programming: برمجة السباق
         C2_paper_airplanes: الطائرات الورقية
         C2_digital_footprint: البصمة الرقمية الخاصة بك
+        C2_digital_footprint_v2: البصمة الرقمية الخاصة بك
         C3_maze_level_4: حلقات المتاهة
         C3_artist_intro: مقدمة حول الرسام
         C3_artist_functions: وظائف الرسام
@@ -502,6 +432,21 @@ ar:
         playlab_intro: مقدمة لمختبر Play اللعب
         playlab_events: أحداث مختبر اللعب
         playlab_repeat_forever: تشغيل مختبر تكرار
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: المتغيرات
+        msm_7_functions: الدوال
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: 'اسحب كتلة "التحرك" وثبتها تحت كتلة أخرى'
@@ -569,3 +514,7 @@ ar:
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: استخدم السهم الايمن لإطلاق الكرات النارية
         name_function: اكتب اسم دالتك هنا
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

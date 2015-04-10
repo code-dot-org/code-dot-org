@@ -1,7 +1,7 @@
 require_relative 'src/env'
 
 def there_can_be_only_one(pidfile)
-  if File.exists?(pidfile)
+  if File.exist?(pidfile)
     oldpid = File.read(pidfile).to_i
     # does that process exist?
     exists = true

@@ -78,16 +78,16 @@ class VideosController < ApplicationController
     end
 
   def set_video_by_key
-      @video = Video.find_by_key(params[:key])
-    end
+    @video = Video.find_by_key(params[:key])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def video_params
-      params.require(:video).permit(:name, :key, :youtube_code)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def video_params
+    params.require(:video).permit(:name, :key, :youtube_code)
+  end
 
-    # this is to fix a ForbiddenAttributesError cancan issue
-    prepend_before_filter do
-      params[:video] &&= video_params
-    end
+  # this is to fix a ForbiddenAttributesError cancan issue
+  prepend_before_filter do
+    params[:video] &&= video_params
+  end
 end

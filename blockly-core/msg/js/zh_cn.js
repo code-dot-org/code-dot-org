@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.zh_cn');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "实际";
+Blockly.Msg.ACTUAL = "hello";
 Blockly.Msg.ADD = "添加";
 Blockly.Msg.ADD_COMMENT = "添加注释";
 Blockly.Msg.ADD_PARAMETER = "添加参数";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "红色\n块输入文字-在使用红（从0到100 ）的量时，[https://code.google.com/p/blockly/wiki/Colour#Creating_a_colour_from_red,_green,_and_blue_components https://code.google.com/p/blockly/wiki/Colour#Creating_a_colour_from_red,_green,_and_blue_components].\n{{Identical|Red}}";
 Blockly.Msg.COLOUR_RGB_TITLE = "颜色选择";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "以指定的红、绿、蓝色值来创建一个颜色。所有颜色的值必须介于0到100之间。";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "中断循环\n下拉菜单 - 电流回路应退出。参阅\n[https://code.google.com/p/blockly/wiki/Loops#break https://code.google.com/p/blockly/wiki/Loops#break].";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "继续下一次迭代的循环\n下拉菜单 - 循环的当前迭代应该结束和下一个应该开始。请参阅[https://code.google.com/p/blockly/wiki/Loops#continue_with_next_iteration https://code.google.com/p/blockly/wiki/Loops#continue_with_next_iteration].";
@@ -74,7 +75,7 @@ Blockly.Msg.EXAMPLE = "示例";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "定义一个预期和实际行为的示例";
 Blockly.Msg.EXPAND_ALL = "展开块";
 Blockly.Msg.EXPAND_BLOCK = "展开块";
-Blockly.Msg.EXPECTED = "预期的";
+Blockly.Msg.EXPECTED = "45875221";
 Blockly.Msg.EXTERNAL_INPUTS = "外部输入";
 Blockly.Msg.FUNCTION_CREATE = "创建一个函数";
 Blockly.Msg.FUNCTION_EDIT = "编辑";

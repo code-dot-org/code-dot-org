@@ -27,6 +27,8 @@ goog.provide('Blockly.Connection');
 goog.provide('Blockly.ConnectionDB');
 
 goog.require('Blockly.BlockSpace');
+goog.require('goog.array');
+goog.require('goog.string');
 
 /**
  * SVG paths for drawing next/previous notch from left to right, left to right
@@ -76,6 +78,13 @@ Blockly.Connection = function(source, type) {
   this.inDB_ = false;
   // Shortcut for the databases for this connection's blockSpace.
   this.dbList_ = this.sourceBlock_.blockSpace.connectionDBList;
+
+  /**
+   * Compatible type check
+   * @type {?Array.<Blockly.BlockValueType>} array of valid connection types
+   * @private
+   */
+  this.check_ = null;
 };
 
 /**
@@ -271,7 +280,7 @@ Blockly.Connection.singleConnection_ = function(block, orphanBlock) {
   for (var x = 0; x < block.inputList.length; x++) {
     var thisConnection = block.inputList[x].connection;
     if (thisConnection && thisConnection.type == Blockly.INPUT_VALUE &&
-        orphanBlock.outputConnection.checkType_(thisConnection)) {
+        orphanBlock.outputConnection.checkAllowedConnectionType_(thisConnection)) {
       if (connection) {
         return null;  // More than one connection.
       }
@@ -436,8 +445,12 @@ Blockly.Connection.prototype.unhighlight = function() {
  *
  */
 Blockly.Connection.prototype.getNotchPaths = function () {
+  if (Blockly.Connection.NOTCH_PATHS_OVERRIDE) {
+    return Blockly.Connection.NOTCH_PATHS_OVERRIDE;
+  }
+
   var constraints = this && this.check_ || [];
-  if (constraints.length === 1 && constraints[0] === 'function') {
+  if (constraints.length === 1 && constraints[0] === Blockly.BlockValueType.FUNCTION) {
     return SQUARE_NOTCH_PATHS;
   }
   return ROUNDED_NOTCH_PATHS;
@@ -457,7 +470,7 @@ Blockly.Connection.prototype.tighten_ = function() {
     if (!svgRoot) {
       throw 'block is not rendered.';
     }
-    var xy = Blockly.getRelativeXY_(svgRoot);
+    var xy = Blockly.getRelativeXY(svgRoot);
     block.getSvgRoot().setAttribute('transform',
         'translate(' + (xy.x - dx) + ', ' + (xy.y - dy) + ')');
     block.moveConnections_(-dx, -dy);
@@ -529,7 +542,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     var targetSourceBlock = connection.sourceBlock_;
 
     // Don't offer to connect to hidden blocks, unless we're in edit mode
-    if (!Blockly.editBlocks && !targetSourceBlock.isUserVisible()) {
+    if (!Blockly.editBlocks && !targetSourceBlock.isVisible()) {
       return true;
     }
 
@@ -543,13 +556,19 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
         return true;
       }
     }
+
+    // Don't offer to connect if the target is immovable
+    if (connection.targetConnection && !connection.targetBlock().isMovable()) {
+      return true;
+    }
+
     // Offering to connect the top of a statement block to an already connected
     // connection is ok, we'll just insert it into the stack.
     // Offering to connect the left (male) of a value block to an already
     // connected value pair is ok, we'll splice it in.
 
     // Do type checking.
-    if (!thisConnection.checkType_(connection)) {
+    if (!thisConnection.checkAllowedConnectionType_(connection)) {
       return true;
     }
 
@@ -567,7 +586,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     if (connection.sourceBlock_.getDragging()) {
       connectionX += dx;
       connectionY += dy;
-    };
+    }
 
     var distX = currentX - connectionX;
     var distY = currentY - connectionY;
@@ -588,19 +607,36 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
  * @return {boolean} True if the connections share a type.
  * @private
  */
-Blockly.Connection.prototype.checkType_ = function(otherConnection) {
-  if (!this.check_ || !otherConnection.check_) {
+Blockly.Connection.prototype.checkAllowedConnectionType_ = function(otherConnection) {
+  if (this.acceptsAnyType() || otherConnection.acceptsAnyType()) {
     // One or both sides are promiscuous enough that anything will fit.
     return true;
   }
   // Find any intersection in the check lists.
   for (var x = 0; x < this.check_.length; x++) {
-    if (otherConnection.check_.indexOf(this.check_[x]) != -1) {
+    if (otherConnection.acceptsType(this.check_[x])) {
       return true;
     }
   }
   // No intersection.
   return false;
+};
+
+/**
+ * Returns whether this connection is compatible with any/every type
+ * @returns {boolean}
+ */
+Blockly.Connection.prototype.acceptsAnyType = function() {
+  return !this.check_ || this.acceptsType(Blockly.BlockValueType.NONE);
+};
+
+/**
+ * Returns whether this connection is compatible with a given type
+ * @param type
+ * @returns {boolean}
+ */
+Blockly.Connection.prototype.acceptsType = function(type) {
+  return !this.check_ || goog.array.contains(this.check_, type);
 };
 
 /**
@@ -616,9 +652,21 @@ Blockly.Connection.prototype.setCheck = function(check) {
     if (!(check instanceof Array)) {
       check = [check];
     }
+
     this.check_ = check;
+
+    var legacyTypeFound = Blockly.Connection.findLegacyType_(check);
+    if (legacyTypeFound) {
+      /**
+       * Intended for temporary post-rename debugging
+       * Should not be hit by normal usage
+       * TODO(bjordan): Remove once confident no remaining usages
+       */
+      throw "Legacy type format found: " + legacyTypeFound;
+    }
+
     // The new value type may not be compatible with the existing connection.
-    if (this.targetConnection && !this.checkType_(this.targetConnection)) {
+    if (this.targetConnection && !this.checkAllowedConnectionType_(this.targetConnection)) {
       if (this.isSuperior()) {
         this.targetBlock().setParent(null);
       } else {
@@ -632,6 +680,31 @@ Blockly.Connection.prototype.setCheck = function(check) {
   }
   return this;
 };
+
+/**
+ * Tries to find a legacy type check on this connection
+ * @returns {*}
+ * @private
+ * @param checkArray
+ */
+Blockly.Connection.findLegacyType_ = function(checkArray) {
+  if (!checkArray) {
+    return false;
+  }
+  for (var i = 0; i < checkArray.length; i++) {
+    var type = checkArray[i];
+    if (Blockly.Connection.isLegacyType_(type)) {
+      return type;
+    }
+  }
+  return null;
+};
+
+Blockly.Connection.isLegacyType_ = function(type) {
+  var startsWithLowercase = /^[a-z]/.test(type);
+  return startsWithLowercase;
+};
+
 
 /**
  * Find all nearby compatible connections to this connection.
@@ -688,7 +761,7 @@ Blockly.Connection.prototype.neighbours_ = function(maxLimit) {
     var targetSourceBlock = connection.sourceBlock_;
 
     // Don't include invisible blocks unless we're in edit mode
-    if (!Blockly.editBlocks && !targetSourceBlock.isUserVisible()) {
+    if (!Blockly.editBlocks && !targetSourceBlock.isVisible()) {
       return true;
     }
 

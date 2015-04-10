@@ -22,6 +22,7 @@ en:
           future: crwdns4882:0crwdne4882:0
   hello: crwdns2556:0crwdne2556:0
   welcome_back: 'crwdns3633:0%{name}crwdne3633:0'
+  submit: crwdns35673:0crwdne35673:0
   add_teacher_form:
     code:
       label: crwdns23429:0crwdne23429:0
@@ -211,6 +212,7 @@ en:
         artist: crwdns20076:0crwdne20076:0
     user:
       classroom: crwdns22205:0crwdne22205:0
+      district_dashboard: crwdns35951:0crwdne35951:0
       label: 'crwdns2593:0%{username}crwdne2593:0'
       stats: crwdns3077:0crwdne3077:0
       settings: crwdns2963:0crwdne2963:0
@@ -289,6 +291,8 @@ en:
     student_teacher_disassociated: 'crwdns4366:0%{teacher_name}crwdnd4366:0%{student_name}crwdne4366:0'
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
+    email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'
+    email_confirm_wrong_email: crwdns33867:0crwdne33867:0
     email_resend_confirm: crwdns4343:0crwdne4343:0
     new_password_hint: crwdns2610:0crwdne2610:0
     current_password_hint: crwdns2611:0crwdne2611:0
@@ -427,6 +431,9 @@ en:
       body: crwdns23627:0crwdne23627:0
     frozen:
       title: crwdns24790:0crwdne24790:0
+    infinity:
+      title: crwdns35937:0crwdne35937:0
+      body: crwdns35938:0crwdne35938:0
   gallery:
     students_drew_these_with_code: crwdns5091:0crwdne5091:0
     students_made_these_with_code: crwdns20426:0crwdne20426:0
@@ -456,6 +463,13 @@ en:
     wrong_body: crwdns5099:0crwdne5099:0
     correct_title: crwdns5344:0crwdne5344:0
     correct_body: crwdns5345:0crwdne5345:0
+  contract_match:
+    wrong_title: crwdns36222:0crwdne36222:0
+    badname: crwdns36223:0crwdne36223:0
+    badname_case: crwdns36271:0crwdne36271:0
+    badrange: crwdns36224:0crwdne36224:0
+    baddomainsize: crwdns36225:0crwdne36225:0
+    baddomainname: crwdns36226:0crwdne36226:0
   text_match:
     placeholder: crwdns22206:0crwdne22206:0
   dialog:
@@ -471,7 +485,7 @@ en:
           title: crwdns6553:0crwdne6553:0
           description: crwdns6554:0crwdne6554:0
         Hour of Code:
-          title: crwdns6555:0crwdne6555:0
+          title: crwdns33868:0crwdne33868:0
           description: crwdns6556:0crwdne6556:0
         edit-code:
           title: crwdns6557:0crwdne6557:0
@@ -501,11 +515,44 @@ en:
     sign_out: 'crwdns7666:0%{url}crwdne7666:0'
   zendesk_too_young_message: crwdns8502:0crwdne8502:0
   progress:
-    not_completed: crwdns22207:0crwdne22207:0
+    not_started: crwdns35032:0crwdne35032:0
+    in_progress: crwdns35033:0crwdne35033:0
     completed_too_many_blocks: crwdns22208:0crwdne22208:0
     completed_perfect: crwdns22209:0crwdne22209:0
     furthest_level_attempted: crwdns22210:0crwdne22210:0
+    assessment: crwdns35034:0crwdne35034:0
   studio:
     courses_working_on: crwdns25902:0crwdne25902:0
     completed_courses: crwdns25903:0crwdne25903:0
     all_courses: crwdns25904:0crwdne25904:0
+  project:
+    projects: crwdns35035:0crwdne35035:0
+    create: crwdns35036:0crwdne35036:0
+    create_a_project: crwdns35674:0crwdne35674:0
+    new: crwdns35037:0crwdne35037:0
+    rename: crwdns35038:0crwdne35038:0
+    save: crwdns35039:0crwdne35039:0
+    delete: crwdns35040:0crwdne35040:0
+    exit: crwdns35041:0crwdne35041:0
+    my_projects: crwdns35042:0crwdne35042:0
+    share: crwdns35043:0crwdne35043:0
+    share_title: crwdns35044:0crwdne35044:0
+    share_copy_link: crwdns35045:0crwdne35045:0
+    close: crwdns35046:0crwdne35046:0
+    more: crwdns35047:0crwdne35047:0
+    name: crwdns35048:0crwdne35048:0
+    updated: crwdns35049:0crwdne35049:0
+    project_type: crwdns35050:0crwdne35050:0
+    help_text: crwdns35051:0crwdne35051:0
+    need_help: crwdns35052:0crwdne35052:0
+    really_delete: crwdns35053:0crwdne35053:0
+    delete_yes: crwdns35054:0crwdne35054:0
+    delete_no: crwdns35055:0crwdne35055:0
+    saved: crwdns35056:0crwdne35056:0
+    not_saved: crwdns35057:0crwdne35057:0
+    cancel: crwdns35058:0crwdne35058:0
+    delete_confirm_title: crwdns35059:0crwdne35059:0
+    delete_confirm_text: crwdns35060:0crwdne35060:0
+    view_all: crwdns35061:0crwdne35061:0
+    remix: crwdns35952:0crwdne35952:0
+    click_to_remix: crwdns35953:0crwdne35953:0

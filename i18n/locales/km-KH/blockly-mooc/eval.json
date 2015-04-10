@@ -1,13 +1,16 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"រង្វង់ (កាំ, ស្ទីល, ពណ៌)",
-  "displayBlockTitle":"ការ​បង្ហាញ",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"ពង​ក្រពើ (ទទឹង, កំពស់, ស្ទីល, ពណ៌)",
-  "extraTopBlocks":"អ្នក​មាន​ប្លុក​ដែល​មិន​ទាន់​បាន​ភ្ជាប់។ តើ​អ្នក​ចង់​ភ្ជាប់​ពួក​វា​ទៅ​កាន់​ប្លុក \"ការ​បង្ហាញ\" មែនទេ?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"overlay (top, bottom)",
   "placeImageBlockTitle":"place-image (x, y, image)",
   "offsetBlockTitle":"offset (x, y, image)",
   "rectangleBlockTitle":"ចតុកោណ​កែង (ទទឹង, កម្ពស់, ស្ទីល, ពណ៌)",
-  "reinfFeedbackMsg":"អ្នក​អាច​ចុច​ប៊ូតុង \"ព្យាយាម​ម្ដង​ទៀត\" ដើម្បី​កែសម្រួល​គំនូរ​របស់​អ្នក។",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"បង្វិល (ដឺក្រេ, រូបភាព)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"ការ៉េ (ទំហំ, ស្ទីល, ពណ៌)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"underlay (bottom, top)",
   "outline":"បន្ទាត់​ក្រៅ",
   "solid":"គំនូស​ជាប់",
-  "string":"ខ្សែ​អក្សរ"
+  "string":"ខ្សែ​អក្សរ",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

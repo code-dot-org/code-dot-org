@@ -8,7 +8,7 @@ def create_storage_id_cookie
   response.set_cookie(storage_id_cookie_name, {
     value:CGI.escape(storage_encrypt_id(storage_id)),
     domain:".#{site}",
-    path:'/v3/apps',
+    path:'/v3',
     expires:Time.now + (365 * 24 * 3600)
   })
 
@@ -18,7 +18,7 @@ end
 def storage_decrypt(encrypted)
   decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
   decrypter.decrypt
-  decrypter.pkcs5_keyivgen(CDO.apps_api_secret, '8 octets')
+  decrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   plain = decrypter.update(encrypted)
   plain << decrypter.final
 end
@@ -30,19 +30,21 @@ def storage_decrypt_id(encrypted)
   return id
 end
 
-def storage_decrypt_app_id(encrypted)
-  storage_id, app_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':')
+def storage_decrypt_channel_id(encrypted)
+  # pad to a multiple of 4 characters to make a valid base64 string.
+  encrypted += '=' * ((4 - encrypted.length % 4) % 4)
+  storage_id, channel_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':')
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  app_id = app_id.to_i
-  raise ArgumentError, "`app_id` must be an integer > 0" unless app_id > 0
-  [storage_id, app_id]
+  channel_id = channel_id.to_i
+  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
+  [storage_id, channel_id]
 end
 
 def storage_encrypt(plain)
   encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
   encrypter.encrypt
-  encrypter.pkcs5_keyivgen(CDO.apps_api_secret, '8 octets')
+  encrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   encrypted = encrypter.update(plain.to_s)
   encrypted << encrypter.final
 end
@@ -53,12 +55,12 @@ def storage_encrypt_id(id)
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
 end
 
-def storage_encrypt_app_id(storage_id, app_id)
+def storage_encrypt_channel_id(storage_id, channel_id)
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  app_id = app_id.to_i
-  raise ArgumentError, "`app_id` must be an integer > 0" unless app_id > 0
-  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{app_id}"))
+  channel_id = channel_id.to_i
+  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
+  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{channel_id}")).tr('=', '')
 end
 
 def storage_id(endpoint)
@@ -75,22 +77,22 @@ end
 
 def storage_id_for_user()
   return nil unless request.user_id
-  
+
   # Return the user's storage-id, if it exists.
   if row = user_storage_ids_table.where(user_id:request.user_id).first
-    return row[:id] 
+    return row[:id]
   end
-  
+
   # Take ownership of cookie storage, if it exists.
   if storage_id = storage_id_from_cookie
     # Delete the cookie that was tracking this storage id
     response.delete_cookie(storage_id_cookie_name)
-    
+
     # Only take ownership if the storage id doesn't already have an owner - it shouldn't but
     # there is a race condition (addressed below)
     rows_updated = user_storage_ids_table.where(id:storage_id,user_id:nil).update(user_id:request.user_id)
     return storage_id if rows_updated > 0
-  
+
     # We couldn't claim the storage. The most likely cause is that another request (by this
     # user) beat us to the punch so we'll re-check to see if we own it. Otherwise the storage
     # id is either invalid or it belongs to another user (both addressed below)

@@ -1,13 +1,16 @@
 {
+  "badColorStringError":"Ti përdore një string ngjyrë të gabuar: {val}",
+  "badStyleStringError":"Ti përdore një string stili të gabuar: {val}",
   "circleBlockTitle":"rreth (rreze, stil, ngjyrë)",
-  "displayBlockTitle":"shfaq",
+  "displayBlockTitle":"përcakto",
   "ellipseBlockTitle":"elips (gjerësi, gjatësi, stil, ngjyrë)",
-  "extraTopBlocks":"Ti ke blloqe të pa bashkuar. A ke menduar t'i bashkangjitësh këto me bllokun e \"shfaqur\"?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "infiniteRecursionError":"Funksioni juaj po thërret vetveten. Ne e ndaluam atë, përndryshe do të kishte vazhduar te thërriste vetveten përgjithmonë.",
   "overlayBlockTitle":"mbivendosje (lart, poshtë)",
   "placeImageBlockTitle":"vendos-imazh (x, y, imazh)",
   "offsetBlockTitle":"vlera offset (x, y, imazh)",
   "rectangleBlockTitle":"drejtkëndësh (gjerësi, gjatësi, stil, ngjyrë)",
-  "reinfFeedbackMsg":"Ti mund të shtypësh butonin \"Përpiqu përsëri\", që të redaktosh vizatimin tënd.",
+  "reinfFeedbackMsg":"Mund të shtypni butonin \" Vazhdoni Luani\" të editoni vizatimin tuaj.",
   "rotateImageBlockTitle":"rrotullo (gradët, imazh)",
   "scaleImageBlockTitle":"shkalla (faktori, imazhi)",
   "squareBlockTitle":"katror (madhësia, stili, ngjyra)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"mbivendosje (poshtë, lart)",
   "outline":"skica",
   "solid":"solid",
-  "string":"string"
+  "string":"string",
+  "stringMismatchError":"Keni nje varg me kapitalizimin e gabuar.",
+  "userCodeException":"Nje gabim ndodhi gjatë ekzekutimit të kodit tuaj.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

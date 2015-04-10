@@ -1,36 +1,37 @@
 da-DK:
   hello: Hej verden
   select_language: Vælg dit sprog
-  computer_science: Computer videnskab
+  computer_science: Datalogi
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
   csedweek_dates: 14. december, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code</a> kommer. Opråb til alle lærere og arrangørerne, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planlægge din Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> er du Programmerings lærer? Se andre CSEdWeek ressourcer</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>har prøvet en</h3><h2>Hour of Code</h2>'
+  n_have_learned_an_hoc: '<h1>Prøv en</h1><h2>Hour of Code</h2><h3># vist</h3>'
   anybody_can_learn: Alle kan lære.
   learn_now: Lær Nu
   petition_message: Alle elever i alle skoler burde have muligheden for at lære programmering
   petition_sign_message: 'Hvis du er enig, underskriv dit navn.  Tilslut dig # andre.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Navn
   email: E-mail
   zipcode: Postnummer eller land
   submit: Indsend
-  twentyhours_heading: Prøv vores Intro til programmerings kursus
-  twentyhours_text: Færdig med din første time kode? Lær flere kerne datalogi og programmeringbegreber i dette opfølgende kursus.
+  twentyhours_heading: Prøv vores intro til programmeringskursus
+  twentyhours_text: Færdig med din første programmerings time ? Lær flere centrale datalogi og programmeringbegreber i dette opfølgende kursus.
   hoc2014_heading: 'Tilslut dig <a href="http://hourofcode.com">Hour of Code</a> <br/>8. - 14. December 2014 <br/>'
   hoc2014_students: Studerende
-  hoc2014_try: Prøv det
+  hoc2014_try: Afprøv det
   hoc2014_teachers: Lærere
   hoc2014_host: Være vært for det
   hoc2014_everyone: Alle
-  hoc2014_support: Støtte dette
-  hoc2014_whatishoc: 'Hvad er "Hour of Code"?'
+  hoc2014_support: 'Støt &#x25BE;'
+  hoc2014_whatishoc: 'Hvad er "En times kodning"?'
   twentyhours_trynow: Prøv nu
   california_heading: Bed din skole om undervisning i programmering
   california_text: "Enhver lærer kan tilbyde vores <a href='http://learn.code.org/'>gratis introforløb</a>.  Enhver grundskole kan <a href='http://code.org/educate/k5'>undervise i programmering</a>. Spørg gymnasier <a href='http://code.org/educate/districts'>om de vil være partner med os."
   california_button: Lær mere
   flappy_heading: Flappy fødselsdag til Code.org
-  flappy_text: 'Code.org er lige fyldt 1 år gammel.<br/><br/> Fejr den med os ved at gøre dine egne brugerdefinerede <b>Flappy</b> spil. Kod dine egne regler, og del det med venner!'
+  flappy_text: 'Code.org er lige fyldt 1 år.<br/><br/> For at fejre det sammen med os kan du lave det helt eget <b>Flappy</b> spil. Programmer dine egne regler, og del det med venner!'
   view_english_site: Se engelske side
   non_english_tutorials: 'Vejledninger oversat til flere sprog:'
   write_your_first_program: Skriv dit første computerprogram
@@ -51,7 +52,7 @@ da-DK:
   personalize_certificate: Personliggør dit certifikat
   share_achievement: Del din præstation
   beyond_hour_message: "Fortsæt med vores  <a href='http://studio.code.org'>andre kurser</a>, eller se flere muligheder for at <a href='/learn/beyond'>lære ud over Kodetimen</a>."
-  leaderboards_for_hoc: Ranglister for En Times Kodning.
+  leaderboards_for_hoc: Ranglister for Kodetimen.
   support_url: http://support.Code.org
   country: Land
   city: By
@@ -70,44 +71,46 @@ da-DK:
   i_agree: Jeg er enig
   participant_select: '- Vælg -'
   participant_student: studerende
-  participant_parent: Forælder
+  participant_parent: Forældre
   participant_educator: Underviser
-  participant_engineer: Software ingeniør
+  participant_engineer: Softwareingeniør
   participant_other: Ingen af ovenstående
-  print_all: Udskriv alle
+  print_all: Udskriv alt
   print_ice_art: Udskriv din is-kunst
   create_art_with_zombie: eller lav avanceret zombie-kunst
   i_am_a: Jeg er en
   never_spam: Vi vil aldrig spamme dig
   enter_country: Indtast land, hvis du bor udenfor USA
   used_infrequent_updates: Anvendes kun til sjældne opdateringer
-  privacy_practices_children: Se vores beskyttelses betingelser for børn
+  privacy_practices_children: Se vores beskyttelsesbetingelser for børn
   petition_thankyou: Tak for at du underskrev indsamlingen
   continue_learning_header: Fortsat læring efter Hour of Code
   continue_learning_body: 'Der er masser af muligheder.  Du kan lære online, eller på en lokal skole, eller sommerlejr.'
   learn_next_level: Fortsæt til det næste niveau
-  learn_online: Prøv andre kurser online
+  learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
   hoc_is_here: '#HourOfCode er her - tjek det ud! @codeorg'
   just_did_hoc: 'Jeg fuldførte lige #HourOfCode - tjek det ud! @codeorg'
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Lær Hour of Code
   beyond_hoc: Efter Hour of Code
   what_gender: Hvilket køn er du?
   girl: Pige
   boy: Dreng
   help_recruit_coders: Hjælpe os med at rekruttere flere programmører til dit hold!
-  help_recruit: Hjælpe os med at rekruttere flere programmører!
+  help_recruit: Hjælp os med at rekruttere flere programmører!
   lines_of_code: 'OVER <b># LINJER KODE</b> SKREVET TIL DATO.'
   lines_of_code_alt: '<b>#</b> LINJER AF KODE SKREVET AF STUDERENDE'
   who_has_done_hoc: 'Hvem har lavet #HourOfCode @codeorg'
   hoc_leaderboards: Rangelisten for Hour Of Code
   students_and_lines: '%{students} studerende har lavet Hour of Code and har skrevet %{lines} linjer af kode.'
-  start_hoc: Start Hour of Code nu
+  start_hoc: Start Kodetimen nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
-  stats_michael: '"Jeg har <b>aldrig, nogensinde</b> set mine elever så begejstrede for at lære." - Michael Clark, lærer'
   stats_nina: '"Hver eneste dag gav de samme resultater&mdash; 100% engagement." - Nina Nichols Peery, lærer'
   stats_student: '"Jeg vidste det var en <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5. klasse'
+  stats_michael: '"Jeg har <b>aldrig, nogensinde</b> set mine elever så begejstrede for at lære." - Michael Clark, lærer'
   studiobar_title: "Udforsk <a href='http://studio.code.org'>kodeskolen</a>"
+  studiobar_title_nolink: Udforsk kodeskolen
   studiobar_elementary_title: Grundlæggende kurser
   studiobar_elementary_body: Vores tre nye kurser for indskoling og melemtrin
   studiobar_hoc_title: Kodetimen
@@ -122,6 +125,94 @@ da-DK:
   studiobar_donate_body: Hver gang du donerer hvad der svarer til en dollar, lærer et barn mere
   studiobar_shop_title: Butik
   studiobar_shop_body: Nedbryd stereotyper. Bær vores logo med stolthed.
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
+  homepage_hero_text_susan: |
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: Kodetimen
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Kursus 4
+  homepage_slot_text_shop: Butik
+  homepage_slot_text_flappy: Flappy kode
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_slot_text_title_hoc: Hour of Code
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Prøv Hour of Code
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Studerende
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Donér
   contact_form_topic_student: Jeg er elev
   contact_form_topic_parent: Jeg er en forælder
   contact_form_topic_teacher: Jeg er en lærer/pædagog
@@ -156,13 +247,13 @@ da-DK:
   class_submission_level_elementary: Folkeskole
   class_submission_level_middle_school: Folkeskole
   class_submission_level_high_school: Gymnasium
-  class_submission_level_college: Kollegie
+  class_submission_level_college: Gymnasium
   class_submission_level_vocational: Faglig
   class_submission_languages_other: Andre sprog
   volunteer_engineer_submission_commitment_uncertain: Usikker
   volunteer_engineer_submission_commitment_now_and_then: Ny og næ
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 time pr. uge
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 timer pr. uge
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 time om ugen
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 timer om ugen
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 timer pr. uge
   volunteer_engineer_submission_commitment_more: Mere
   volunteer_engineer_submission_location_flexibility_onsite: På skolen
@@ -205,7 +296,7 @@ da-DK:
   dashboard_action_remove: Fjern
   dashboard_action_remove_confirm: Fjern?
   dashboard_action_done: Udfør
-  dashboard_action_required: kræves
+  dashboard_action_required: krævet
   dashboard_navigation_home_page: Lærerens Startside
   dashboard_navigation_section_student_progress: Elevernes konti og fremskridt
   dashboard_navigation_section_teacher_progress: Dine kurser
@@ -238,11 +329,11 @@ da-DK:
   dashboard_sections_switch_section: 'Skift afsnit:'
   dashboard_students_add_student: Tilføj elever
   dashboard_students_add_students: Tilføje flere elever
-  dashboard_students_add_multiple: 'Skriv eller Indsæt navnene på dine elever, en per linie:'
+  dashboard_students_add_multiple: 'Skriv eller indsæt navnene på dine elever, en per linje:'
   dashboard_students_new_section: 'Du har oprettet et nyt afsnit! Tilføje nu dine elever ved hjælp af knapperne <b>Tilføj studerende</b> og <b>Tilføje flere studerende</b> ovenfor.'
   dashboard_students_placeholder_name: Elevens navn
   dashboard_students_name: Navn
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Fremskridt
   dashboard_students_age: Alder
   dashboard_students_gender: Køn
   dashboard_students_male: Mand
@@ -265,7 +356,7 @@ da-DK:
   dashboard_students_reset_word: 'Du kan nulstille en elevs hemmelige ord når som helst ved at vælge <b>Vis hemmeligt</b>, og derefter <b>Nulstille hemmeligt</b>. Et par nye hemmelige ord vil blive genereret for den studerende at bruge, når de logger på. '
   dashboard_students_join_link: Fortæl dine studerende til at oprette deres egne konti og deltage i jeres afdeling på
   dashboard_students_no_email: 'Hvis dine elever har ikke e-mail-adresser, eller du ønsker at oprette konti til dem, skal du ændre denne hemmelige afsnits type <b>ord</b> eller <b>billede</b>.'
-  dashboard_students_print_page: Udskrive denne side
+  dashboard_students_print_page: Udskriv denne side
   dashboard_students_url: Web-adresse
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Klik her</a> for vores privatlivs betingelser, der kan deles eller udskrives til dine elever.'
   dashboard_curriculum_overview: Indskoling og mellemtrin (0.-5. klasse)
@@ -289,6 +380,8 @@ da-DK:
   dashboard_login_picture: Billede
   dashboard_login_none: E-mail
   dashboard_new_password: Ny adgangskode
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: ikke afsluttet
   dashboard_progress_completed_too_many_blocks: afsluttet, for mange blokke
   dashboard_progress_completed_perfect: Afsluttet, perfekt
@@ -420,7 +513,7 @@ da-DK:
   playlab_gradelevel: For 4-104-årige
   codeorg_platformtext: Moderne browsere, smartphones, tabletter
   codeintl_platformtext: Moderne browsere, smartphones, tabletter
-  thinkersmithspanish_platformtext: Unplugged
+  thinkersmithspanish_platformtext: Ikke tilsluttet
   khan_platformtext: Moderne web-browsere
   khanes_platformtext: Moderne web-browsere
   khanpt_platformtext: Moderne web-browsere
@@ -430,7 +523,7 @@ da-DK:
   tynker_platformtext: Moderne web-browsere
   scratch_platformtext: Kun til desktop-browsere (ikke tablets)
   lightbot_platformtext: Alle browsere og IOS, Android eller spillekonsoller
-  thinkersmith_platformtext: Unplugged
+  thinkersmith_platformtext: Ikke tilsluttet
   condcards_platformtext: Unplugged
   lightbotintl_platformtext: iOS, Android (eller webbrowser)
   codehs_platformtext: Moderne browsere. (Opfølgende kursus kræver $$)
@@ -452,9 +545,9 @@ da-DK:
   touchdevelop_platformtext: Moderne browsere, smartphones, alle enheder
   appinventor_platformtext: Moderne browsere og Android
   blockly_platformtext: Kun for moderne browsere
-  thinkersmith2_platformtext: Unplugged
-  kodableunplugged_platformtext: Unplugged
-  projguts_platformtext: Unplugged
+  thinkersmith2_platformtext: Ikke tilsluttet
+  kodableunplugged_platformtext: Ikke tilsluttet
+  projguts_platformtext: Ikke tilsluttet
   hourofcode_platformtext: Moderne browsere, smartphones, tabletter
   frozen_platformtext: Moderne webbrowsere og tablets
   playlab_platformtext: Moderne browsere, smartphones, tabletter
@@ -475,17 +568,17 @@ da-DK:
   lightbotintl_shortdescription: Et spil til at undervise i kodnings begreber
   codehs_shortdescription: Start kodning med hunden Karel, en sjov og visuel introduktion til programmering!
   codecademy_shortdescription: Lær JavaScript programmering i webbrowseren
-  codecombat_shortdescription: Overvind orger for at lære Python eller JacaScript i dette episke programmeringsspil!
+  codecombat_shortdescription: Overvind orger for at lære Python eller Javascript i dette episke programmeringsspil!
   codemonkey_shortdescription: Elever programmerer en abe til at finde bananer.
   codeavengers_shortdescription: Lær JavaScript programmering i webbrowseren
   processing_shortdescription: En times tutorial i Processing languages
-  robomind_shortdescription: Skrive kode til en virtuel robot
+  robomind_shortdescription: Skriv kode til en virtuel robot
   groklearning_shortdescription: Lær snakkerobotten Eliza at snyde dine venner, til at tro at hun er et menneske!
   quorum_shortdescription: Følg med Mary på en guidet tur hvor hun lærer Quorum programmeringssproget.
   codespark_shortdescription: Foos er et sjovt og børnevenligt spil hvor man lærer om programmering.
   kodable_shortdescription: Et sjovt iPad-spil til at undervise i programmerings begreber
   tynkerapp_shortdescription: 'Lær at programmere ved at løse sjove kode-øvelser. '
-  robomindnl_shortdescription: Skrive kode til en virtuel robot
+  robomindnl_shortdescription: Skriv kode til en virtuel robot
   flappy_shortdescription: 'Lav dit eget Flappy Bird-, haj- eller ubådsspil'
   bitsbox_shortdescription: Kod en række apps til at spille og dele, med rigtig JavaScript-kode.
   makegameswithus_shortdescription: Lav et iPhone spil! Lær ved at skrive kode, som lærer dine monstre nye bevægelser!
@@ -515,7 +608,7 @@ da-DK:
   lightbotintl_longdescription: Lær grundlæggende programmering logik, startende fra Super-grundlæggende programmering, for aldre 4+, på iOS eller Android (eller webbrowser). Lær at sekvens kommandoer, identificere mønstre, bruge procedurer og udnyt sløjfer!
   codehs_longdescription: 'At give kommandoer til en computer, som er det programmering handler om, er ligesom at give kommandoer til en hund. Lære at kode med Karel hunden &mdash; en sjov, tilgængelige og visuelle Introduktion til programmering, lærer de grundlæggende begreber, som kommandoer og funktioner for nybegyndere. Øvelserne er elevstyrede, men lærere kan tilmelde dig adgang for lærerværktøjer og følge elevernes fremskridt!'
   codecademy_longdescription: 'Codecademy er en interaktiv Introduktion til grundlæggende programmering med JavaScript, som bruges af millioner af brugere rundt om i verden. Vi har forberedt en "Hour of Code" med tilhørende quizzer, slides og et afsluttet projekt for alle deltagere.'
-  codecombat_longdescription: Overvind orger for at lære Python eller JacaScript i dette episke programmeringsspil!
+  codecombat_longdescription: Overvind orger for at lære Python eller Javascript i dette episke programmeringsspil!
   codemonkey_longdescription: 'CodeMonkey er et online spil, der lærer kodning i et virkeligt programmeringssprog! Eleverne programmere en abe til at fange bananer, mens det bliver lidt mere og mere kompliceret for hvert niveau. De får stjerne-scores for hver opgaveløsning og eleverne kan dele det med et enkelt klik. '
   codeavengers_longdescription: Byg et 2-player 2D top-down spil med JavaScript i 10 korte opgaver. Derefter fortsæt med at lære grundlæggende programmering (variabler og if statement) når du opretter en Quiz, som kan deles med vennerne. Undervejs optjenes point og badges, som du konkurrerer om, for at nå toppen af klassens scoringstavle.
   processing_longdescription: 'En introduktion til programmering i forbindelse af billedkunst ved hjælp af Processing  programmeringssprog. Korte video lektioner indfører kodnings øvelser, der fører til at eleverne kan designe en interaktivt tegneprogram'
@@ -661,7 +754,7 @@ da-DK:
   pocketcode_beyond_shortdescription: Oprette et spil på din smartphone og dele det med vennerne!
   groklearning_beyond_shortdescription: Grundlæggende intro til python programmering
   hacketyhack_beyond_shortdescription: Lær Ruby fra bunden
-  robomind_beyond_shortdescription: Skrive kode til en virtuel robot
+  robomind_beyond_shortdescription: Skriv kode til en virtuel robot
   makegameswithus_beyond_shortdescription: Lære at lave et iPhone spil på en time
   appinventor_beyond_shortdescription: Lav din egen app! (Kun til android)
   touchdevelop_beyond_shortdescription: Kode mobile apps direkte på din mobil, tablet eller laptop
@@ -678,7 +771,7 @@ da-DK:
   w3schools_beyond_shortdescription: Lære at lave websites
   codeavengers_beyond_shortdescription: Lære at kode spil og websites
   mozilla_beyond_shortdescription: Oprette og del websider
-  codecombat_beyond_shortdescription: Spille et spil og lær JavaScript for at vinde
+  codecombat_beyond_shortdescription: Spil et spil og lær JavaScript for at vinde
   codea_beyond_shortdescription: Lav apps på din iPad
   lego_beyond_shortdescription: Byg og programmere en robot
   finch_beyond_shortdescription: En robot til computer videnskabs uddannelse

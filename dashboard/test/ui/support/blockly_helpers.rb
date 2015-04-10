@@ -7,9 +7,13 @@ module BlocklyHelpers
   end
 
   def generate_drag_code(from, to, target_dx, target_dy)
-    "var drag_dx = $(\"[block-id='#{to}']\").position().left - $(\"[block-id='#{from}']\").position().left;" +
-        "var drag_dy = $(\"[block-id='#{to}']\").position().top  - $(\"[block-id='#{from}']\").position().top;" +
-        "$(\"[block-id='#{from}']\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
+    generate_selector_drag_code "[block-id='#{from}']", "[block-id='#{to}']", target_dx, target_dy
+  end
+
+  def generate_selector_drag_code(from, to, target_dx, target_dy)
+    "var drag_dx = $(\"#{to}\").position().left - $(\"#{from}\").position().left;" +
+        "var drag_dy = $(\"#{to}\").position().top  - $(\"#{from}\").position().top;" +
+        "$(\"#{from}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
   def generate_begin_to_drag_code(from, to, target_dx, target_dy)
@@ -26,6 +30,7 @@ module BlocklyHelpers
     Point.new(coordinate_pair[0], coordinate_pair[1])
   end
 
+  # Assign a given string block ID to a given alias
   def add_block_alias(blockAlias, blockId)
     if @blockAliases.nil? then
       @blockAliases = Hash.new
@@ -33,11 +38,13 @@ module BlocklyHelpers
     @blockAliases[blockAlias] = blockId
   end
 
+  # Get the block ID for a given alias
+  # Callers expect the returned block ID value to be a string
   def get_block_id(alias_or_id)
-    if not @blockAliases.nil? and @blockAliases.has_key?(alias_or_id) then
+    if @blockAliases && @blockAliases.has_key?(alias_or_id)
       return @blockAliases[alias_or_id]
     end
-    return alias_or_id
+    alias_or_id
   end
 end
 

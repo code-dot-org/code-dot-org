@@ -13,8 +13,16 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "At the top of each Evaluation Block is the function, below that are places to put each argument needed by that function. Each of those arguments can take either a value (in this case a number) or another Block (or combination of Blocks) that evaluates to a number."
-  }
+    "instructions": "Use a multiplication block to complete this code.",
+    "embed": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false"
+  },
+  "md5": "f1947f450f66688e70ec1857f4deab54"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -39,6 +47,12 @@
         <block type="functional_math_number"/>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="functional_compute" inline="false" deletable="false" movable="false"/>
+        <block type="functional_times" inline="false"/>
+      </xml>
+    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="functional_compute" inline="false" deletable="false" movable="false">

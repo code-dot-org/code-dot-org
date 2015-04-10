@@ -610,132 +610,6 @@
           Sie auch die neue "PenWidth"-Block. Viel Spaß!'
         studio_ec_sandbox: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, clicke
           auf "Fertig" und lass Deine Freunde das Spiel auf ihren SmartPhones ausprobieren.
-    levelbuilder:
-      frozen line:
-        instructions: Hallo! Ich bin Elsa von Arendelle. Hilf mir, eine einzige Linie
-          zu zeichnen.
-      frozen perpendicular:
-        instructions: Jetzt schauen wir mal, ob wir zwei Linien zeichnen können, die
-          in einem 90° Winkel zueinander stehen. Du musst sowohl den „Drehen“-Block
-          als auch den „Bewegen“-Block benutzen.
-      frozen square iterative:
-        instructions: Es scheint, als hätten wir die Hälfte eines Quadrates geschafft.
-          Lass uns 4 Linien benutzen, um ein Quadrat zu erstellen.
-      frozen square loop:
-        instructions: Hallo, bin ich Anna von Arendelle! Lass uns ein Quadrat mit
-          dem „Wiederholen“-Block erstellen, um weniger Blöcke zu verwenden. Wie oft
-          (???) soll der „Wiederholen“-Block die in ihm enthaltenen Blöcke ausführen,
-          um ein Quadrat zu erstellen?
-      frozen square loop 3x:
-        instructions: Lass uns drei Quadrate erstellen und nach jedem Quadrat drehen.
-          Stell sicher, dass du vor jedem neuen Quadrat um 120° drehst.
-      frozen square snowflake:
-        instructions: Kannst du eine Schneeflocke erstellen, indem du den "Wiederholen"
-          Baustein 10 mal benutzt, um ein Quadrat zu erstellen und nach jedem Quadrat
-          den "Drehen" Baustein mit 36° benutzt?
-      frozen cross:
-        instructions: Benutze den "Wiederholen" Baustein, um ein Pluszeichen zu erstellen.
-          Hast du bemerkt, dass sich Elsa vor und zurück bewegen kann?
-      frozen cross rotate:
-        instructions: Jetzt versuche, es zehn Mal zu wiederholen. Wieviel Grad musst
-          du zwischen den einzelnen Linien drehen?
-      frozen cross rotate dense:
-        instructions: 'Wiederhole es 90 Mal! Wie oft geht 90 in 360 ? Hinweis: Es
-          ist eine sehr kleine Zahl.'
-      frozen diamond:
-        instructions: 'Erstelle ein Parallelogramm. Es ist wie ein Quadrat, hat aber
-          verschiedene Winkel: 60 und 120 Grad Winkel anstatt 90 Grad Winkel.'
-      frozen diamond mini snowflake:
-        instructions: Wusstest du schon, dass jede Schneeflocke eine andere Form hat?
-          Erstelle eine neue Schneeflocke mit Hilfe des "Wiederholungs" Bausteins
-          zu einem Parallelogramm, das 4 mal wiederholt wird. Drehe jedes Parallelogramm
-          90 Grad nach rechts.
-      frozen diamond snowflake:
-        instructions: Nun erstellen wir eine neue Schneeflocke mit dem Wiederholen-Baustein
-          zu einem Parallelogramm. 10 Mal wiederholen, jeweils 36 Grad  nach rechts
-          drehen.
-      frozen circle:
-        instructions: Ein Kreis ist eine besondere Form. Kannst du herausfinden, mit
-          welcher Zahl die Fragezeichen ersetzt werden müssen, um einen Kreis zu zeichnen?
-      frozen circle function:
-        instructions: Verwende den neue "Kreis erstellen" Baustein 10 um sich überschneidende
-          Kreise zu erstellen. Vergiss nicht zwischen den Kreisen nach vorn zu springen
-          .
-      frozen circle function in circle:
-        instructions: Jetzt erstellen wir 20 überschneidende Kreise, und drehen die
-          einzelnen Kreise um 18 Grad.
-      frozen circle function with parameter:
-        instructions: Hier ist ein "Kreiskreation"-Baustein der Kreise verschiedener
-          Größe machen kann. Kannst du diesen benutzen um einen kleinen Kreis von
-          Größe 5 und einem größeren Kreis von Größe 10 zu erstellen?
-      frozen snowflower:
-        instructions: Komplizierte Schneemuster können mit sehr einfachen Formen erstellt
-          werden. Kannst du ein Muster machen, das 5 Kreise der Größe 5 und 5 Kreise
-          der Größe 10 wiederholt?
-      frozen snowflake branch:
-        instructions: Verwende den "Erstelllung eines Schneeflockezweig" Baustein
-          um drei Zweige zu erstellen, die beginnen wie eine Schneeflocke auszusehen.
-      frozen snowflake full:
-        instructions: Jetzt wiederhole das 8 Mal, um eine schöne Schneeflocke zu machen!
-      frozen freeplay:
-        instructions: Du bist jetzt offiziell ein Meisterkünstler geworden! Erstelle
-          ein Winterwunderland und teile es mit Freunden.
-      scrat 16:
-        instructions: Eichel! Eichel! Eichel! Verwende einen "wenn"-Baustein, um mich
-          dort mit der geringsten Anzahl von Bausteinen zu erreichen.
-      scrat 17:
-        instructions: OK, nochmal zum Ueben - das ist nicht sehr unterschiedlich,
-          aber man muss auf die Wand achten!
-      scrat 18:
-        instructions: Die "wenn-aber" Bausteine überprüfen eine Bedingung und machen
-          dann eine Sache oder eine andere. Um mich zu erreichen und mir die Eichel
-          zu geben, musst  du diesen neuen Baustein verwenden.
-      scrat 19:
-        instructions: Noch eine Übung mit dem "Wenn-Ansonsten" Baustein, schaffst
-          du es mit dem ersten Versuch?
-      scrat 20:
-        instructions: Kannst du mir helfen ein komplexes Labyrinth zu lösen,  indem
-          du nur 3 Bausteine hinzufügst? Wenn du es richtig machst, kann ich jeden
-          kurvigen Pfad gehen, egal wie lange er ist. Beeile dich! Das Eis schmilzt!
-      Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
-      Standalone_Artist_2:
-        instructions: Malen diesen Diamanten mit 120 und 60 Grad Winkeln und 150 Pixel
-          langen Seiten.
-      Standalone_Artist_3:
-        instructions: Kannst du ein Hexagon mit 100 Pixel Seitenlänge und 60°-Drehungen
-          malen?
-      Standalone_Artist_4:
-        instructions: 'Du hast jetzt einen neuen Block mit dem du spielen kannst:
-          Die Schleife. Dies wird einen Befehlssatz wiederholen. Was passiert, wenn
-          du diese Befehle 6 mal in einer Schleife wiederholst?'
-      Standalone_Artist_5:
-        instructions: Wie oft musst du diesen Diamant wiederholen um eine Blume zu
-          zeichnen?
-      Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Labyrinth Einführung
@@ -795,6 +669,7 @@
         C2_relay_programming: Relais-Programmierung
         C2_paper_airplanes: Papier Flugzeuge
         C2_digital_footprint: Dein digitaler Fußabdruck
+        C2_digital_footprint_v2: Dein digitaler Fußabdruck
         C3_maze_level_4: Labyrinth Schleifen
         C3_artist_intro: Künstler Einführung
         C3_artist_functions: Künstler Funktionen
@@ -835,6 +710,21 @@
         playlab_intro: Einführung ins Spiele Labor
         playlab_events: Spiele Labor Ereignisse
         playlab_repeat_forever: Spiele Labor für immer wiederholen
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variablen
+        msm_7_functions: Funktionen
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: Ziehen Sie einen "bewegen" Block und lassen Sie es unter den
@@ -940,3 +830,8 @@
         arrows_move_actor: Benutze die Pfeile um den Schauspieler zu bewegen
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Schreib den Funktionsnamen hierhin
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

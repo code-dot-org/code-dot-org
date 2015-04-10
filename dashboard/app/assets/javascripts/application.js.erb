@@ -10,7 +10,7 @@
 // Gem assets
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery-ui
 //= require video
 //= require bootstrap
 
@@ -22,18 +22,15 @@
 //= require jquery.query-object
 //= require jquery.simulate
 //= require jquery.ui.touch-punch
+//= require jquery.timeago.js
 //= require md5
 
 // Application assets
+//= require namespace
 //= require_directory .
 //= require_self
 
 <% environment.context_class.instance_eval { include ApplicationHelper } %>
-
-// Dashboard namespace
-if (!window.dashboard) {
-    window.dashboard = {};
-}
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
@@ -71,7 +68,7 @@ $(document).keydown(function(e) {
 });
 
 setTimeout(function() {
-  $('#blocklyApp .slow_load').show();
+  $('#codeApp .slow_load').show();
 }, 10000);
 
 function cache_bust_only() {
@@ -79,3 +76,9 @@ function cache_bust_only() {
 }
 
 var CDOSounds = new Sounds();
+
+$(window).load(function () {
+  onURLBlocked('https://studio.code.org/test-image.png', function () {
+    trackEvent("HTTPS Test", "blocked");
+  });
+});

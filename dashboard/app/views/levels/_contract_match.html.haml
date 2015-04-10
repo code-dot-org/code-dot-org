@@ -1,63 +1,34 @@
+- data = @level.properties
+:javascript
+  window.levelData = #{data.to_json};
+
+= javascript_include_tag 'react'
+= javascript_include_tag 'levels/contract_match'
+= stylesheet_link_tag 'levels/contract_match'
+= render partial: 'levels/common_audio'
+
 .contract
-  - data = @level.properties
   - app = 'contract_match'
+
+  - options_to_colors = { None: "#999999", Number: "#00ccff", String: "#0099999", Image: "#9900cc", Boolean: "#336600" }
 
   .mainblock
     = render partial: 'levels/content', locals: {app: app, data: data}
-    %div Name
-    %div
-      %input#functionNameText{type: 'text', placeholder: 'Name'}
-    %div#outputTypeTitle Range
-    %select#rangeInput
-      %option none
-      %option Number
-      %option string
-      %option image
-      %option boolean
-    %div#domainTitle Domain
-    %div
-      %input#domainItemText{type: 'text', placeholder: 'Name'}
-      %select#domainInput
-        %option none
-        %option Number
-        %option string
-        %option image
-        %option boolean
-      %button#addButton Add
-    %div#domainItems
+    #contractForm
+    #domainItems
+    .clear
     = render partial: 'levels/dialog', locals: {app: app, data: data}
   .clear
-= render partial: 'levels/common_audio'
-:javascript
-  $('#addButton').click(function()
-  {
-    var domainItemText = $('#domainItemText').val();
-    var domainInput = $('#domainInput').val();
-    $('#domainItemText').val('');
-    var $div = $('<div>'+domainItemText+':'+domainInput + '</div>')
-    var $button = $('<button>X</button>');
-    $div.append($button);
-    $button.click(function(event) {
-      $(event.target.parentElement).remove();
-    });
-    $('#domainItems').append($div);
-  });
 
-  function getResult()
-  {
-    var functionName = $('#functionNameText').val();
-    var rangeInput = $('#rangeInput').val();
-    var items = $('#domainItems').children().map(function(item, element) { return (element.firstChild.textContent);});
 
-    // Order domain inputs alphabetically sorted
-    var domainInput = $.makeArray(items).slice().sort().join('|');
-    var response = functionName + '|' + rangeInput + '|' + domainInput;
-    console.log('input="' + response + '"');
-    var result = #{data['answers'].to_json}.some(function(element) {
-      return response == element;
-    });
-    return {
-      response: response,
-      result: result
-    };
-  }
+  %div{style: 'display: none;'}
+    - ['badname', 'badname_case', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
+      %div{id: "#{error_type}-dialogcontent"}
+        .modal-content
+          %p.dialog-title
+            =t('contract_match.wrong_title')
+          %p
+            =t("contract_match.#{error_type}")
+          .farSide
+            %button#ok-button.secondary
+              =t('dialog.ok')

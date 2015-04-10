@@ -6,8 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return ((Studio.Globals.time == 8 && Studio.Globals.height == 320) && (Studio.Globals.rocket_height(4) == 160));\r\n}",
-    "failure_condition": "function () {\r\n  return ((Studio.Globals.time > 7) && ((Studio.Globals.rocket_height(2) != 80) || (Studio.Globals.rocket_height(4) != 160) || (Studio.Globals.rocket_height(8) != 320)));\r\n }",
+    "success_condition": "function () {\r\n  var seconds = Studio.customLogic.seconds;\r\n  var height = Studio.customLogic.height;\r\n  var SECONDS_TO_RUN = Studio.customLogic.SECONDS_TO_RUN;\r\n  var targetHeight = SECONDS_TO_RUN * 40;\r\n\r\n  // If at target time, make sure we have the right height for this time and\r\n  // the next time.\r\n  return seconds === SECONDS_TO_RUN && height === targetHeight &&\r\n    Studio.customLogic.rocket_height(4) === 4 * 40;\r\n}",
+    "failure_condition": "function () {\r\n  return Studio.customLogic.seconds > Studio.customLogic.SECONDS_TO_RUN;\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "Awesome, now can you update that function so that our rocket moves more quickly? Make sure to update the purpose statement, examples, and function definition to launch a rocket at 40 meters per second.",
     "is_k1": "false",
@@ -28,11 +28,20 @@
     "open_function_definition": "rocket-height",
     "default_num_example_blocks": "2",
     "disable_sharing": "false",
-    "min_workspace_height": "1000",
+    "min_workspace_height": "1250",
     "generate_function_pass_blocks": "true",
     "timeout_after_when_run": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "true",
+    "definition_highlight": "false",
+    "definition_collapse": "true",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Play Lab Rocket 3 1\",\r\n  \"callout_text\": \"Update the purpose statement before moving on to the examples and definition.\",\r\n  \"element_id\": \"#description-area\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "custom_game_type": "Rocket Height",
     "maze_data": null
-  }
+  },
+  "md5": "fe108f858162c0886b77a3c995d19070"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -47,7 +56,7 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="seconds" type="Number"/>
-            <description>Given a Number "seconds," return the height of a rocket traveling at 40 meters per second.</description>
+            <description>Given a Number "seconds," return the height of a rocket traveling at 15 meters per second.</description>
             <outputtype>Number</outputtype>
           </mutation>
           <title name="NAME">rocket-height</title>
@@ -74,119 +83,8 @@
           <next>
             <block type="studio_setBackground" uservisible="false">
               <title name="VALUE">"space"</title>
-              <next>
-                <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">time</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">0</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="variables_set" inline="false" uservisible="false">
-                      <title name="VAR">height</title>
-                      <value name="VALUE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">0</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </next>
             </block>
           </next>
-        </block>
-        <block type="studio_repeatForever" uservisible="false">
-          <statement name="DO">
-            <block type="studio_setScoreText" inline="true" uservisible="false">
-              <value name="TEXT">
-                <block type="text_join" inline="false">
-                  <mutation items="4"/>
-                  <value name="ADD0">
-                    <block type="text">
-                      <title name="TEXT">Time: </title>
-                    </block>
-                  </value>
-                  <value name="ADD1">
-                    <block type="variables_get">
-                      <title name="VAR">time</title>
-                    </block>
-                  </value>
-                  <value name="ADD2">
-                    <block type="text">
-                      <title name="TEXT"> | Height: </title>
-                    </block>
-                  </value>
-                  <value name="ADD3">
-                    <block type="variables_get">
-                      <title name="VAR">height</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <next>
-                <block type="studio_setSpriteXY" inline="true" uservisible="false">
-                  <value name="XPOS">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">200</title>
-                    </block>
-                  </value>
-                  <value name="YPOS">
-                    <block type="math_arithmetic" inline="true" uservisible="false">
-                      <title name="OP">MINUS</title>
-                      <value name="A">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">350</title>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="variables_get" uservisible="false">
-                          <title name="VAR">height</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="math_change" inline="false" uservisible="false">
-                      <title name="VAR">time</title>
-                      <value name="DELTA">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">1</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="variables_set" inline="false" uservisible="false">
-                          <title name="VAR">height</title>
-                          <value name="VALUE">
-                            <block type="procedural_to_functional_call" inline="false" uservisible="false">
-                              <mutation name="rocket-height">
-                                <arg name="seconds"/>
-                              </mutation>
-                              <value name="ARG0">
-                                <block type="variables_get" uservisible="false">
-                                  <title name="VAR">time</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="studio_waitParams" inline="true" uservisible="false">
-                              <value name="VALUE">
-                                <block type="math_number" uservisible="false">
-                                  <title name="NUM">1</title>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
         </block>
       </xml>
     </start_blocks>
@@ -210,7 +108,7 @@
           <block type="functional_definition" inline="false" uservisible="false">
             <mutation>
               <arg name="seconds" type="Number"/>
-              <description>Given a Number "seconds," return the height of a rocket traveling at 40 meters per second.</description>
+              <description>Given a Number "seconds," return the height of a rocket traveling at 15 meters per second.</description>
               <outputtype>Number</outputtype>
             </mutation>
             <title name="NAME">rocket-height</title>

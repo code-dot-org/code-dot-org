@@ -6,5 +6,7 @@ level 'test multi text'
 level 'test multi image'
 
 stage 'Match'
+level 'External level test (will)'
+level 'Hour of Code test content'
 level 'test matching text'
 level 'test matching image'

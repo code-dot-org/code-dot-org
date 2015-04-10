@@ -22,6 +22,7 @@ fi:
           future: ei voi olla tulevaisuudessa
   hello: Hei maailma
   welcome_back: 'Tervetuloa takaisin, %{name}'
+  submit: Jatka
   add_teacher_form:
     code:
       label: 'Lisää opettaja:'
@@ -221,6 +222,7 @@ fi:
         artist: Piirrä jotakin
     user:
       classroom: Opettajan kotisivu
+      district_dashboard: District Dashboard
       label: 'Hei %{username}'
       stats: Minun edistymiseni
       settings: Tilini
@@ -305,13 +307,15 @@ fi:
     student_teacher_disassociated: 'Opettaja %{teacher_name} on poistettu oppilaalta %{student_name}'
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
+    email_confirm_needed_required: 'Sinun sähköpostiosoitetta %{email} ei ole vahvistettu:'
+    email_confirm_wrong_email: (Väärä sähköpostiosoite?)
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
     new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
     current_password_hint: (anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Poista tilisi
+    delete_text: Klikkaamalla alla olevaa painiketta poistat tilisi.
+    delete_text_teacher_note: 'Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi käyttäjätilejä.'
+    delete_confirm: Oletko varma, että haluat poistaa käyttäjätilisi?
   user_level:
     completed: Valmis
     tried: Kokeili
@@ -443,6 +447,9 @@ fi:
       body: Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Pelilabra
+      body: Tee Pelilabrassa tarina tai peli jonka pääosassa on Disneyn Infinity hahmot.
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!
@@ -472,6 +479,13 @@ fi:
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
     correct_title: Oikein
     correct_body: Tämä on oikea vastaus.
+  contract_match:
+    wrong_title: Väärä vastaus
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Kirjoita vastauksesi tähän
   dialog:
@@ -487,7 +501,7 @@ fi:
           title: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
           description: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille.
         Hour of Code:
-          title: Koodaustunti
+          title: Kooditunti 2013
           description: ""
         edit-code:
           title: Muokkaa koodia
@@ -517,11 +531,44 @@ fi:
     sign_out: 'Jos et halua kertoa ikääsi voit <a href="%{url}">kirjautua ulos</a>.'
   zendesk_too_young_message: 'Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua tukisivustollemme. Voit selailla <a href="http://support.code.org">support.code.org</a> -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä meihin puolestasi.'
   progress:
-    not_completed: kesken
+    not_started: ei aloitettu
+    in_progress: käynnissä
     completed_too_many_blocks: valmis, liian monta lohkoa
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
+    assessment: arviointi
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kurssit, joita työstät
+    completed_courses: Valmiit kurssit
+    all_courses: Kaikki kurssit
+  project:
+    projects: Projektit
+    create: Luo projekti
+    create_a_project: 'Luo uusi projekti:'
+    new: Luo uusi
+    rename: Nimeä uudelleen
+    save: Tallenna
+    delete: Poista
+    exit: Takaisin kurssiin
+    my_projects: Omat projektit
+    share: Jaa
+    share_title: Jaa projektisi
+    share_copy_link: 'Kopioi linkki:'
+    close: Sulje
+    more: Lisää
+    name: Nimi
+    updated: Päivitetty
+    project_type: Projektityyppi
+    help_text: 'Klikkaa <strong>Tee Sovellus</strong> tai <strong>Piirrä Jotain</strong> alla tehdäksesi uuden Pelilabra tai Taiteilija projektin! <br/>Voit tulla myöhemmin takaisin ja jatkaa projektiesi työstämistä milloin tahansa.'
+    need_help: Tarvitsetko apua alkutoimissa?
+    really_delete: Poista?
+    delete_yes: Kyllä
+    delete_no: Ei
+    saved: Tallennettu
+    not_saved: Ei tallenneta
+    cancel: Peru
+    delete_confirm_title: Oletko varma, että haluat poistaa tämän projektin?
+    delete_confirm_text: Projektin poistaminen pysyvästi poistaa sen Omat projektit-luettelosta. Kukaan kenelle olet jakanut linkin ei enää voi katsella projektiasi.
+    view_all: Katso omia projektejasi
+    remix: Remix
+    click_to_remix: 'Klikkaa "Remix" ja tee oma versiosi!'

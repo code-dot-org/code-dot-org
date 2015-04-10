@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"circleBlockTitle":function(d){return "circle (radius, style, color)"},
+"badColorStringError":function(d){return "Bạn sử dụng một chuỗi màu sắc không hợp lệ: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "Bạn sử dụng một chuỗi phong cách không hợp lệ: "+appLocale.v(d,"val")},
+"circleBlockTitle":function(d){return "vòng tròn (bán kính, phong cách, màu sắc)"},
 "displayBlockTitle":function(d){return "display"},
-"ellipseBlockTitle":function(d){return "ellipse (width, height, style, color)"},
+"ellipseBlockTitle":function(d){return "elip (chiều rộng, chiều cao, phong cách, màu sắc)"},
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "overlay (top, bottom)"},
 "placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
 "offsetBlockTitle":function(d){return "offset (x, y, image)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "underlay (bottom, top)"},
 "outline":function(d){return "outline"},
 "solid":function(d){return "solid"},
-"string":function(d){return "string"}};
+"string":function(d){return "string"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

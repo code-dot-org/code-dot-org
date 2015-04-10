@@ -1,5 +1,5 @@
 {
-  "ACTUAL":"call",
+  "ACTUAL":"crida",
   "ADD":"Afegeix",
   "ADD_COMMENT":"Afegeix un comentari",
   "ADD_PARAMETER":"Afegeix el paràmetre",
@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED":"vermell",
   "COLOUR_RGB_TITLE":"color amb",
   "COLOUR_RGB_TOOLTIP":"Crea un color amb la quantitat justa de vermell, verd i blau. Tots els valors han d'estar entre 0 i 100.",
+  "CONTRACT_EDITOR_HEADER":"Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blocs\/wiki\/Loops#Loop_Termination_Blocs",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"surt del bucle",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"continua amb la següent iteració del bucle",

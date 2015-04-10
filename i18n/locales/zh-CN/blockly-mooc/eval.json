@@ -1,15 +1,18 @@
 {
+  "badColorStringError":"你使用了一个无效的颜色字串：",
+  "badStyleStringError":"你使用了一个无效的样式字串：",
   "circleBlockTitle":"圆 （半径、 样式、 颜色）",
-  "displayBlockTitle":"显示",
+  "displayBlockTitle":"评估",
   "ellipseBlockTitle":"椭圆 （宽度、 高度、 样式、 颜色）",
-  "extraTopBlocks":"您有未连接的语句块。您要将其连接至“显示”语句块吗？",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "infiniteRecursionError":"你的函数正在调用它自己。我们已经将它停止，否则它将会永久持续地调用它自己。",
   "overlayBlockTitle":"覆盖 （顶部、 底部）",
   "placeImageBlockTitle":"放置图像（X轴坐标，Y轴坐标，图像）",
   "offsetBlockTitle":"偏移量 （x，y，图片）",
   "rectangleBlockTitle":"矩形 （宽度、 高度、 风格、 颜色)",
-  "reinfFeedbackMsg":"您可以按\"重试\"按钮以编辑您的绘图。",
+  "reinfFeedbackMsg":"你可以点击 “继续玩” 按钮来编辑你的绘画。",
   "rotateImageBlockTitle":"旋转(度，图像)",
-  "scaleImageBlockTitle":"scale (factor, image)",
+  "scaleImageBlockTitle":"拉伸（因素，图像）",
   "squareBlockTitle":"方形 (大小，样式，颜色)",
   "starBlockTitle":"星（半径，样式，颜色）",
   "radialStarBlockTitle":"径向-星 (点、 内部、 外部，款式、 颜色）",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"衬底 （底部、 顶部）",
   "outline":"轮廓",
   "solid":"固体",
-  "string":"字符串"
+  "string":"字符串",
+  "stringMismatchError":"你有一个使用了错误大写的字符串。",
+  "userCodeException":"在你运行代码时一个错误出现了。",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

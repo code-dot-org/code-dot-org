@@ -8,8 +8,8 @@
   "catText": "szöveg",
   "catVariables": "változók",
   "continue": "Tovább",
-  "createHtmlBlock": "html blokk készítése",
-  "createHtmlBlockTooltip": "HTML-ből álló blokkot készít az app-ban.",
+  "container": "Tároló létrehozása",
+  "containerTooltip": "Létrehoz egy osztály tárolót és beállítja a belső HTML-t.",
   "finalLevel": "Gratulálok, megoldottad az utolsó feladatot.",
   "nextLevel": "Gratulálok! Ezt a feladatot megoldottad.",
   "no": "Nem",
@@ -24,6 +24,6 @@
   "stepIn": "Belépés",
   "stepOver": "Átlépés",
   "stepOut": "Kilépés",
-  "viewData": "View Data",
+  "viewData": "Adat megtekintése",
   "yes": "Igen"
 }

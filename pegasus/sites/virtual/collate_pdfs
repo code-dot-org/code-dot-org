@@ -4,7 +4,7 @@ require 'cdo/rack/rackup'
 require 'cdo/only_one'
 
 def main()
-  Rack.with_rackup(pegasus_dir, port:8079) do |params|
+  Rack.with_rackup(pegasus_dir, port:CDO.pdf_port_collate) do |params|
     system 'rake', '--rakefile', pegasus_dir('sites/virtual/collate_pdfs.rake'), "base_url=http://localhost.code.org:#{params[:port]}/"
     exit $?.exitstatus
   end

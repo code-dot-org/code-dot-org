@@ -9,34 +9,23 @@
   </div>
 </div>
 
-<% var instructions = function() { -%>
-  <div id="bubble" class="clearfix">
-    <table id="prompt-table">
-      <tr>
-        <td id="prompt-icon-cell">
-          <img id="prompt-icon"/>
-        </td>
-        <td id="prompt-cell">
-          <p id="prompt">
-          </p>
-        </td>
-      </tr>
-    </table>
-    <div id="ani-gif-preview-wrapper">
-      <div id="ani-gif-preview">
-        <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
-      </div>
-    </div>
+<% var gameButtons = function() { -%>
+  <div id="gameButtons">
+    <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
+      <div><%= msg.runProgram() %></div>
+      <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
+    </button>
+    <button id="resetButton" class="launch blocklyLaunch" style="display: none">
+      <div><%= msg.resetProgram() %></div>
+      <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
+    </button>
+    <% if (data.controls) { %>
+    <%- data.controls %>
+    <% } %>
+    <% if (!data.pinWorkspaceToBottom && data.extraControlRows) { %>
+    <%- data.extraControlRows %>
+    <% } %>
   </div>
-<% }; -%>
-
-<% // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) { -%>
-  <% if (html) { -%>
-    <div id="helpArea">
-      <%- html %>
-    </div>
-  <% } -%>
 <% }; -%>
 
 <div id="visualizationColumn">
@@ -46,50 +35,91 @@ var helpArea = function(html) { -%>
 
   <div id="belowVisualization">
 
-    <div id="gameButtons">
-      <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
-        <div><%= msg.runProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
-      </button>
-      <button id="resetButton" class="launch blocklyLaunch" style="display: none">
-        <div><%= msg.resetProgram() %></div>
-        <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
-      </button>
-      <% if (data.controls) { %>
-      <%- data.controls %>
+    <% gameButtons() %>
+    <div id="bubble" class="clearfix">
+      <table id="prompt-table">
+        <tr>
+          <td id="prompt-icon-cell">
+            <img id="prompt-icon"/>
+          </td>
+          <td id="prompt-cell">
+            <p id="prompt">
+            </p>
+          </td>
+        </tr>
+      </table>
+      <% if (data.inputOutputTable) { %>
+      <div id="input-table">
+        <table>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+          <% for (var i = 0; i < data.inputOutputTable.length; i++) { %>
+          <tr>
+            <td><%- data.inputOutputTable[i][0] %></td>
+            <td><%- data.inputOutputTable[i][1] %></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
       <% } %>
-      <% if (data.extraControlRows) { %>
-      <%- data.extraControlRows %>
-      <% } %>
+      <div id="ani-gif-preview-wrapper">
+        <div id="ani-gif-preview">
+          <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
+        </div>
+      </div>
     </div>
 
-    <% instructions() %>
-    <% helpArea(data.helpHtml) %>
-
+    <% if (data.hasDesignMode) { %>
+      <button id="designModeButton" class="share">
+        <%= msg.designMode() %>
+      </button>
+      <button id="codeModeButton" class="share" style="display:none;">
+        <%= msg.codeMode() %>
+      </button>
+    <% } %>
   </div>
 </div>
 
-<% if (data.editCode) { %>
-  <div id="codeWorkspace">
-<% } else { %>
-  <div id="blockly">
-<% } %>
+<div id="codeWorkspace">
   <div id="headers" dir="<%= data.localeDirection %>">
-    <div id="toolbox-header" class="blockly-header"><span><%= msg.toolboxHeader() %></span></div>
-    <div id="workspace-header" class="blockly-header">
-      <span id="workspace-header-span"><%= msg.workspaceHeader()%> </span>
-      <div id="blockCounter">
-        <div id="blockUsed" class=<%= data.blockCounterClass %>>
-          <%= data.blockUsed %>
+    <div id="codeModeHeaders">
+      <div id="toolbox-header" class="workspace-header">
+        <span><%= data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() %></span>
+        <span id="hide-toolbox" style="display:none;">&nbsp;<%= msg.hideToolbox() %></span>
+      </div>
+      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox"><%= msg.showToolbox() %></span></div>
+      <div id="show-code-header" class="workspace-header"><span><%= msg.showCodeHeader() %></span></div>
+      <div id="clear-puzzle-header" class="workspace-header"><span><%= msg.clearPuzzle() %></span></div>
+      <div id="workspace-header" class="workspace-header">
+        <span id="workspace-header-span"><%= msg.workspaceHeaderShort()%> </span>
+        <div id="blockCounter">
+          <div id="blockUsed" class=<%= data.blockCounterClass %>>
+            <%= data.blockUsed %>
+          </div>
+          <span>/</span>
+          <span id="idealBlockNumber"><%= data.idealBlockNumber %></span>
+          <span> <%= msg.blocks() %></span>
         </div>
-        <span>&nbsp;/</span>
-        <span id="idealBlockNumber"><%= data.idealBlockNumber %></span>
       </div>
     </div>
-    <div id="show-code-header" class="blockly-header"><span><%= msg.showCodeHeader() %></span></div>
+    <% if (data.hasDesignMode) { %>
+      <div id="designModeHeaders" style="display:none;">
+        <div id="design-header" class="workspace-header">
+          <span><%= msg.designModeHeader() %></span>
+        </div>
+      </div>
+    <% } %>
   </div>
   <% if (data.editCode) { %>
     <div id="codeTextbox"></div>
+  <% } %>
+  <% if (data.hasDesignMode) { %>
+    <%- data.designModeBox %>
+  <% } %>
+  <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
+  <%- data.extraControlRows %>
   <% } %>
 </div>
 

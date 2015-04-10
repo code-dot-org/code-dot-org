@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "reikna"},
+"divideByZeroError":function(d){return "Forritið þitt leiðir til deilingar með núlli."},
+"emptyComputeBlock":function(d){return "Þú verður að tengja kubb við \"meta\" kubbinn."},
 "equivalentExpression":function(d){return "Prófaðu að umraða liðunum til að fá nákvæmlega sama dæmi."},
-"extraTopBlocks":function(d){return "Það eru ótengdir kubbar. Var meiningin að tengja þá við \"reikna\" kubbinn?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "meta"},
+"extraTopBlocks":function(d){return "Þú ert með ótengda kubba. Ætlaðir þú að tengja þá við \"meta\" kubbinn?"},
+"failedInput":function(d){return "Fallið þitt gefur stundum ekki rétta útkomu."},
 "goal":function(d){return "Markmið:"},
-"reinfFeedbackMsg":function(d){return "Hér er sagan þín! Haltu áfram að vinna að henni eða farðu í næstu þraut!"},
-"yourExpression":function(d){return "Dæmið þitt:"}};
+"levelIncompleteError":function(d){return "Formúlan þín samsvarar ekki markmiðinu."},
+"missingFunctionError":function(d){return "Þú verður að skilgreina fall með heitinu "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Það vantar breytuna "+appLocale.v(d,"var")+" í formúluna þína."},
+"reinfFeedbackMsg":function(d){return "Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!"},
+"yourExpression":function(d){return "Formúlan þín:"},
+"wrongInput":function(d){return "Þú ert að kalla á fallið þitt með röngu gildi."},
+"wrongOtherValuesX":function(d){return "Formúlan þín gefur rangt gildi ef breytunni "+appLocale.v(d,"var")+" er breytt."},
+"wrongResult":function(d){return "Formúlan þín gefur ekki rétta niðurstöðu."}};

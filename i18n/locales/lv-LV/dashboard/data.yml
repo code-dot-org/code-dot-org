@@ -99,12 +99,12 @@ lv:
         Jigsaw: Puzle
         MazeStep: Labirinta soļa režīms
         Wordsearch: Vārdu meklēšana
-        Webapp: App Lab
+        Webapp: Aplikāciju laborotorija
         ArtistEC: Mākslinieks
         TextMatch: Teksta atbilstība
         StudioEC: Spēles laboratorija
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: Aplikāciju laborotorija
+        NetSim: Interneta simulators
     trophy:
       name:
         Bronze: Bronzas
@@ -203,7 +203,7 @@ lv:
         turtle_3_5: 'Tagad izveido jaunu "zīmēt māju" funkciju un izmanto to lai izveidotu māju abiem kaķiem. Padoms: Izveido jaunu funkciju izmantojot "dari kaut ko" programmas bloku un ievadi pats savu tekstu lai nosauktu bloku.'
         turtle_3_6: 'Izmantojot "zīmēt kvadrātu" kā piemēru, pievieno ievadi ar nosaukumu "garums" pie "zīmē trīsstūri". Tad uzzīmē trīsstūrus ar dažādiem izmēriem. (Padoms: uzklikšķini uz zvaigznes, lai pievienotu ievadi funkcijai)'
         turtle_3_7: 'Pievieno ievadi ar nosaukumu "garums" funkcijai "zīmēt māju" un uzzīmē lielu māju zilonim (malu garums 150 pikseļi)'
-        turtle_3_8: 'Šeit ir visi bloki no iepriekšējā uzdevuma. Izmaini "zīmēt māju" tā, lai es atrastos apakšējajā labajā stūrī, kad tiks uzzīmēta jauna māja. Izmanto izmainīto funkciju, lai uzzīmētu rīs mājas.'
+        turtle_3_8: "Rediģē ''uzzīmē māju'' tā, lai tas atrastos labajā, lejējā stūrī pēc jaunas mājas zīmēšanas. Lieto šo modificēto fukciju, lai uzzīmētu māju kokā."
         turtle_3_9: |
           Vai tu vari izveidot "uzzīmē māju " funkciju bez palīdzības? izmēģini to un tad uzzīmē veselu rindu ar mājām.
           
@@ -247,7 +247,7 @@ lv:
         flappy_6: Pārbaudi, vai vari saņemt punktus, ja Flappy vēzē spārnus ātrāk vai lēnāk.
         flappy_7: 'Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie "kad palaists" bloka.'
         flappy_8: Tu vari mainīt izskatu jebkad, ne tikai iesākoties spēlei. Izmēģini uzstādījumu RANDOM fons, kad kaut kas notiek, piemēram, kad izvairās no šķēršļa.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: Lai pamainītu lietas, tā vietā, lai tad, kad atduries pret ščērsli beigtu spēli, iestati punktu skaitu atpakaļ uz 0.
         flappy_11: Izveido pats savu Flappy spēli. Tu vari mainīt visus vizuālos efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied Pabeigt, lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
         flappy_k1_1: Spēlēt Flappy spēli
         flappy_k1_2: 'Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.'
@@ -327,81 +327,10 @@ lv:
         maze_wordsearch_k_15: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu ABOVE
         maze_wordsearch_k_16: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu BELOW
         maze_wordsearch_k_20: Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad citu, lai pateiktu STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Izveido savu aplikāciju lietojot rīkus, kas atrodas instrumentu kastē.
         turtle_ec_1_2: 'Tagad uzzīmē kvadrātu. Ievēro: izmanto savu mīļāko krāsu, lietojot jauno "pildspalvas krāsa" bloku.'
         turtle_ec_1_10: 'Tu to paveici! Tagad uzzīmē ko vēlies. Dažas idejas: vienkāršs cilvēciņš, sniegpārsla vai spirāle. Izmēģini arī jauno bloku "pildspalvas platums". Lai jautri!'
         studio_ec_sandbox: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
-    levelbuilder:
-      frozen line:
-        instructions: Čau! Esmu Elza no Arendellas. Palīdzi man izveidot vienu līniju.
-      frozen perpendicular:
-        instructions: 'Tagad paskatīsimies vai mēs varam izveidot divas līnijas, kuras ir 90 grādu leķņī viena pret otru. Tev būs nepieciešams izmantot "Pagrieziena"  bloku, kā arī "Kustības" bloku.'
-      frozen square iterative:
-        instructions: Šķiet, ka esam pusceļā, lai izveidotu kvadrātu. Liksim kopā 4 līnijas, lai izveidotu kvadrātu.
-      frozen square loop:
-        instructions: 'Sveiki,  esmu Anna no Arendellas! Izveidosim kvadrātu ar "Atkārtot" bloku, kurš izmanto mazāk blokus. Cik reizes (???) "Atkārtot" blokam būtu jāatkārto bloku cikls tā iekšpusē, lai  izveidotu kvadrātu?'
-      frozen square loop 3x:
-        instructions: Izveidosim trīs kvadrātus, pagriežoties pēc katra kvadrāta. Pārliecinies pagriezties par 120 grādiem pirms katra jaunā kvadrāta.
-      frozen square snowflake:
-        instructions: 'Vai Tu vari izveidot sniegpārsliņu izmantojot "Atkārtot" bloku, lai uztaisītu kvadrātu 10 reizes, un  "Pagrieziena" bloku, lai pagrieztos par 36 grādiem starp katru kvadrātu?'
-      frozen cross:
-        instructions: 'Izmanto "Atkārtot" bloku, lai izveidotu plusa zīmi. Vai tu pamanīji, ka Elza var pārvietoties uz priekšu un atpakaļ?'
-      frozen cross rotate:
-        instructions: Tagad mēģini to atkārtot 10 reizes. Par cik grādiem Tev jāpagriežas pēc katras līnijas?
-      frozen cross rotate dense:
-        instructions: 'Atkārtosim to 90 reizes! Cik reizes 90 ietilpst iekš 360? Mājiens: Tas ir ļoti mazs skaitlis.'
-      frozen diamond:
-        instructions: 'Izveidosim paralelogramu. Tas ir kā kvadrāts, bet tam ir dažādi leņķi: 60 un 120 grādu lieli leņķi nevis 90 grādu lieli leņķi.'
-      frozen diamond mini snowflake:
-        instructions: 'Vai tu zināji, ka katra sniegpārsla ir citā formā? Izveidosim jaunu sniegpārslu izmantojot "Atkārtot" bloku, lai atkārtotu paralelogramu 4 reizes, starp katru paralelogramu pagriežoties par 90 grādiem.'
-      frozen diamond snowflake:
-        instructions: Tagad izveidosim jaunu sniegpārslu izmantojot atkārtošanās bloku, lai atkārtotu paralelogramu 10 reizes, starp katru no tiem pagriežoties pa labi par 36 grādiem.
-      frozen circle:
-        instructions: Aplis ir īpaša figūra. Vai vari izdomāt, ar kādu numuru aizstāt jautājuma zīmes, lai uzzīmētu apli?
-      frozen circle function:
-        instructions: 'Izmanto  jaunu "Izveido apli" bloku, lai izveidotu 10 apļus, kas pārklājas.  Neaizmirsti pārvietoties starp apļiem.'
-      frozen circle function in circle:
-        instructions: Tagad izveidosim 20 apļus, kas pārklājas, pagriežoties par 18 grādiem starp katru apli.
-      frozen circle function with parameter:
-        instructions: 'Šeit ir "Izveido apli" bloks, kas var izveidot dažādu izmēru apļus. Vai tu vari to izmantot, lai uztaisītu mazu 5. izmēra apli un lielāku 10. izmēra apli?'
-      frozen snowflower:
-        instructions: Sarežģītus sniega rakstus var izveidot no ļoti vienkāršām figūrām. Vai vari izveidot rakstu, atkārtojot piecus apļus ar izmēru 5 un piecus apļus ar izmēru 10?
-      frozen snowflake branch:
-        instructions: 'Izmēģini bloku "Izveidot sniegpārsliņas zaru" , lai izveidotu trīs zarus, kas sāks izskatīties kā sniegpārsla.'
-      frozen snowflake full:
-        instructions: Tagad atkārtosim to 8 reizes, lai izveidotu skaistu sniegpārsliņu!
-      frozen freeplay:
-        instructions: Tagad tu esi īsts mākslinieks! Izveido ziemas brīnumzemi un dalies ar draugiem!
-      scrat 16:
-        instructions: 'Zīle! Zīle! Zīle! Izmanto "ja" bloku, lai aizvestu mani pie tās ar mazāko iespējamo bloku skaitu.'
-      scrat 17:
-        instructions: 'Labi, tupināsim tālāk - tas daudz savādāk, tomēr piesargies no sienām!'
-      scrat 18:
-        instructions: '"Ja-tad" bloki pārbauda nosacījumu un tad izpilda vienu VAI otru darbību. Lai aizvestu mani pie zīles, izmanto šo jauno bloku.'
-      scrat 19:
-        instructions: 'Vēl viens uzdevums ar "ja-tad" bloku. Vai vari to atrisināt pareizi no pirmā mēģinājuma?'
-      scrat 20:
-        instructions: Vai vari pievienot tikai 3 blokus, lai palīdzētu man iziet sarežģītāku labirintu? Ja izdarīsi to pareizi, es varēšu iziet jebkuru apļveida ceļu, neskatoties uz garumu. Pasteidzies! Ledus kūst!
-      Standalone_Artist_1:
-        instructions: 'Sveiks Mākslinieka kursā! Pirmkārt, mēģini izveidot vienkāršu kvadrātu ar blokiem "pagriezies pa labi" un "ej uz priekšu". Katrai malai jābūt 100 pikseļus garai.'
-      Standalone_Artist_2:
-        instructions: Uzzīmē šo dimantu ar 120 un 60 grādu leņķiem un 150 pikseļu garām malām.
-      Standalone_Artist_3:
-        instructions: Vari uzzīmēt šo sešstūri ar 100 pikseļu malām un 60 grādu leņķiem?
-      Standalone_Artist_4:
-        instructions: 'Nu tev ir jauns bloks, ko izmantot - cikls. Tas atkārtot tevis izvēlētas komandas. Kas notiks, ja ieliksi savas 6 komandas ciklā?'
-      Standalone_Artist_5:
-        instructions: Cik reizes jāieliek ciklā dimants, lai uzzīmētu puķi?
-      Standalone_Artist_5.5:
-        instructions: 'Ievēro, ka vienkāršojām dimanta kodu, ieliekot to ciklā. Tu vari ielikt šīs darbības ciklā 12 reizes, lai uzzīmētu puķi. Padoms: Tev jāpagriežas par 30 grādiem pēc dimanta cikla, lai nepārzīmētu to pašu dimantu.'
-      Standalone_Artist_6:
-        instructions: 'Ieliec ciklā sešstūra kodu 6 reizes, lai kaut ko uzzīmētu. Par cik grādiem būs jāpagriežas pēc katra sešstūra? Padoms: izdali grādus aplī ar cikla reižu skaitu.'
-      Standalone_Artist_7:
-        instructions: 'Funkcija ir programmētāja rīks, kas palīdz izvairīties no pašam sevis atkārtošanas. Šī funkcija zīmē puķi, un tu to vari izmantot tik reizes, cik gribi, lai zīmētu puķes. Izmanto šo un jauno bloku "lekt", lai zīmētu šīs puķes. Padoms: ziedi ir 150 pikseļus lieli.'
-      Standalone_Artist_8:
-        instructions: 'Ir dota funkcija "Zīmē figūru", kuru izveidojām, lai zīmētu sešstūrus. Izpildi kodu, lai redzētu, ko tā dara un tad eksperimentē ar funkciju un novērtē rezultātu. Vai tai likt zīmēt rakstus no kvadrātiem, trīsstūriem vai astoņstūriem?'
-      Standalone_Artist_9:
-        instructions: Nu nu uzzīmē tādu attēlu, kādu gribi. Tev dota tukša funkcija, kurā vari likt iekšā ko vien vēlies!
     video:
       name:
         maze_intro: Labirinta ievads
@@ -461,6 +390,7 @@ lv:
         C2_relay_programming: Releju programmēšana
         C2_paper_airplanes: Papīra lidmašīnas
         C2_digital_footprint: Tavs digitālais nospiedums
+        C2_digital_footprint_v2: Tavs digitālais nospiedums
         C3_maze_level_4: Labirinta Cilpas
         C3_artist_intro: Mākslinieka ievads
         C3_artist_functions: Mākslinieks funkcijas
@@ -501,6 +431,21 @@ lv:
         playlab_intro: Ievads spēļu laboratorijā
         playlab_events: Spēļu laboratorijas notikumi
         playlab_repeat_forever: Spēļu laboratorija, mūžīgie cikli
+        tutorial_puzzle_challenge: Apmācība Mīklas Izaicinājumā
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Mainīgie
+        msm_7_functions: Funkcijas
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: 'Pārvieto "pārvietot" bloku un pielipini zem cita bloka'
@@ -567,3 +512,7 @@ lv:
         arrows_move_actor: Izmato bultas, lai pārvietotu tēlu
         right_arrow_fireball: Izmanto labo bultu, lai sašautu ugunsbumbas
         name_function: Raksti te savas funkcijas nosaukumu
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

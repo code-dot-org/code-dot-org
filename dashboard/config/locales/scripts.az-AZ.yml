@@ -265,34 +265,11 @@
           Artist Binary: Artist Binary
           description_audience: 10+ yaş (Kurs 3-dən sonra)
         Course4pre:
+          title: Kurs 4 üçün lazımi şərtlər
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
-          Course 4 Prerequisite: Kurs 4 üçün lazımi şərtlər
-          'Maze: Sequence': 'Labirint: Ardıcıllıq'
-          'Artist: Sequence': 'Rəssam: Ardıcıllıq'
-          'Artist: Loops': 'Rəssam: Dövrlər'
-          'Bee: Conditionals': 'Arı: Şərti ifadələr'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': Arı Sazlama
-        course4pre:
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          Course 4 Prerequisite: Kurs 4 üçün lazımi şərtlər
-          'Maze: Sequence': 'Labirint: Ardıcıllıq'
-          'Artist: Sequence': 'Rəssam: Ardıcıllıq'
-          'Artist: Loops': 'Rəssam: Dövrlər'
-          'Bee: Conditionals': 'Arı: Şərti ifadələr'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': Arı Sazlama
-        Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken
+            Course 2 and 3.
           Course 4 Prerequisite: Kurs 4 üçün lazımi şərtlər
           'Maze: Sequence': 'Labirint: Ardıcıllıq'
           'Artist: Sequence': 'Rəssam: Ardıcıllıq'
@@ -325,6 +302,9 @@
           Special: Special
           Binary: İkilik
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Blocks to Math
@@ -358,7 +338,7 @@
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
-          'Eval: Conditionals': 'Eval: Conditionals'
+          'Eval: Conditionals': Şərti ifadələr
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
@@ -368,7 +348,11 @@
           description_short: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
           description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
           Play Lab: Oyun labı
+          Infinity: Sonsuzluq
         algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and
+            programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
@@ -378,14 +362,232 @@
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: The Design Recipe
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Internet Simulator
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Sonsuzluq
+          Unit 1: Unit 1
+          Unit 2: Unit 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25
+            saat)
+          description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın
+            əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar)
+            olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda
+            əyləncəlidir.
+          Introduction to Computer Science: İnformatikaya giriş
+          The Maze: Labirint
+          Computational Thinking: Hesablama təfəkkürü
+          Graph Paper Programming: Millimetrlik kağızda proqramlaşdırma
+          The Artist: Rəssam
+          Algorithms: Alqoritmlər
+          The Artist 2: Rəssam 2
+          Functions: Funksiyalar
+          The Farmer: Fermer
+          Conditionals: Şərti ifadələr
+          The Artist 3: Rəssam 3
+          Song Writing: Mahnı bəstələmə
+          The Farmer 2: Fermer 2
+          Abstraction: Mücərrədlik
+          The Artist 4: Rəssam 4
+          Relay Programming: Estafet proqramlaşdırması
+          The Farmer 3: Fermer 3
+          The Internet: İnternet
+          The Artist 5: Rəssam 5
+          Wrap-up: Yekun
+        edit-code:
+          title: Koda düzəliş et
+          description: ''
+          The Maze: Labirint
+          Applab: Applab
+          The Artist: Rəssam
+          Play Lab: Oyun labı
+        events:
+          title: Hadisələr
+          description: ''
+          Bounce: Bounce
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Qanadlı Kod
+          description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz?
+            Qanadlı Kod dərsliyimizi sınayın!
+          Flappy Code: Qanadlı Kod
+        jigsaw:
+          title: Jigsaw
+          description: ''
+          Jigsaw: Jigsaw
+        step:
+          title: addım
+          description: ''
+          Step: addım
+        Hour of Code:
+          title: Hour of Code 2013
+          description: ''
+          Hour of Code 2013: Hour of Code 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Kurs 4 üçün lazımi şərtlər
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken
+            Course 2 and 3.
+          Course 4 Prerequisite: Kurs 4 üçün lazımi şərtlər
+          'Maze: Sequence': 'Labirint: Ardıcıllıq'
+          'Artist: Sequence': 'Rəssam: Ardıcıllıq'
+          'Artist: Loops': 'Rəssam: Dövrlər'
+          'Bee: Conditionals': 'Arı: Şərti ifadələr'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Bee: Debugging': Arı Sazlama
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          'Play Lab: Booleans': 'Play Lab: Booleans'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            and Piecewise Functions'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            Detection and the Distance Formula'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Contracts: Contracts
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: The Design Recipe
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  * Gem assets
- *= require jquery.ui.all
+ *= require jquery-ui
  *= require video-js
  *
  * Vendor assets
@@ -20,15 +20,19 @@
  * Application assets
  *= require_self
  *= require_directory .
+ *
+ * Shared
+ *= require user-menu
  */
+
+@import "color";
 
 $baseFontFamily: 'Gotham 4r', sans-serif;
 $headingsFontWeight: normal;
-$btnPrimaryBackground: orange;
-$btnPrimaryBackgroundHighlight: orange;
+$btnPrimaryBackground: $orange;
+$btnPrimaryBackgroundHighlight: $orange;
 
 @import "bootstrap";
-@import "color";
 @import "font-awesome";
 
 @mixin unselectable {
@@ -57,7 +61,7 @@ body {
 h1 {
   font-family: 'Gotham 7r', sans-serif;
   font-weight: normal;
-  color: #7665a0;
+  color: $purple;
 }
 
 h2 {
@@ -66,12 +70,12 @@ h2 {
 }
 
 hr {
-  border-color: #0094ca;
+  border-color: $teal;
   border-bottom: none;
 }
 
 th {
-  background-color: #5b6770;
+  background-color: $charcoal;
   color: white;
   border: 1px solid white;
   text-align: left;
@@ -96,16 +100,17 @@ em strong {
   font-family: 'Gotham 7i', sans-serif;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .clear {
   clear: both;
 }
 
 .navbar {
   margin-bottom: 30px;
-}
-
-.production {
-  background-color: lightgray;
 }
 
 .trophy_gold {
@@ -153,6 +158,7 @@ em strong {
 }
 
 .level_link, .level_link:link, .level_link:visited {
+  box-sizing: content-box;
   border-radius: 20px;
   min-width: 22px;
   line-height: 22px;
@@ -161,15 +167,22 @@ em strong {
   text-align: center;
   cursor: pointer;
   display: inline-block;
-  margin: 2px;
   font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
   color: white;
+  border: 2px solid $lighter_gray;
+
+
+  $transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out;
+  transition: $transition;
+  -moz-transition: $transition;
+  -webkit-transition: $transition;
+  -o-transition: $transition;
 }
 
 .level_link.not_tried, .level_link.not_tried:link, .level_link.not_tried:visited {
   background-color: $level_not_tried;
-  color: #666 !important;
+  color: $charcoal !important;
   &:hover {
     background-color: $level_current;
     color: white;
@@ -179,7 +192,7 @@ em strong {
 
 .level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
   background-color: $level_attempted;
-  color: #666 !important;
+  color: $charcoal !important;
   &:hover {
     background-color: $level_current;
     color: white;
@@ -208,30 +221,28 @@ em strong {
   }
 }
 
+.level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
+  background-color: $level_attempted;
+  color: $charcoal !important;
+  &:hover {
+    background-color: $level_attempted;
+    text-decoration: none;
+  }
+}
+
 .puzzle_outer_level,
 .puzzle_outer_assessment,
 .puzzle_outer_current {
   padding: 1px;
   display: inline-block;
-  border-radius: 20px;
 }
 
-.puzzle_outer_level {
-  background-color: #ccc;
+.puzzle_outer_assessment .level_link {
+  border: 2px solid $assessment;
 }
 
-.puzzle_outer_current {
-  background-color: $level_current;
-  padding: 1px;
-  display: inline-block;
-  border-radius: 20px;
-}
-
-.puzzle_outer_assessment {
-  background-color: yellow;
-  padding: 1px;
-  display: inline-block;
-  border-radius: 20px;
+.user-stats-block .puzzle_outer_current .level_link {
+  border: 2px solid $level_current;
 }
 
 .user-stats-block
@@ -243,7 +254,9 @@ em strong {
   width:100%;
 }
 
-.stage-lesson-plan-link a
+.stage-lesson-plan-link a,
+.stage-lesson-plan-link a:link,
+.stage-lesson-plan-link a:visited,
 {
   font-size: 10px;
   color: $purple;
@@ -252,8 +265,8 @@ em strong {
 }
 
 .game-group {
-  border-bottom: 2px solid #ccc;
-  background-color: #eee;
+  border-bottom: 2px solid $lighter_gray;
+  background-color: $lightest_gray;
   display: table;
   table-layout: fixed;
   padding: 10px;
@@ -291,38 +304,18 @@ em strong {
 }
 
 .header-wrapper {
-  padding-top: 30px;
-  min-height: 100px;
-  @media screen and (max-width: 1150px) {
-    padding-top: 15px;
-    &.feedback-bug-links {
-      padding-top: 30px;
-    }
-    min-height: 70px;
-  }
-  @media screen and (max-device-width: 900px) {
-    padding-top: 15px;
-    &.feedback-bug-links {
-      padding-top: 30px;
-    }
-  }
+  padding-top: 15px;
+  min-height: 70px;
 }
 
 .header {
   padding-top: 0;
   padding-bottom: 0;
-  height: 52px;
-  @media screen and (max-width: 1150px) {
-    height: 44px;
-  }
+  height: 44px;
   background-color: $bkgnd_color;
   color: $header_text;
   a:link {color:$header_text;}
   a:visited {color:$header_text;}
-
-  #betainfo {
-    font-size: 11px;
-  }
 }
 
 .header.hide_on_mobile,
@@ -342,7 +335,7 @@ em strong {
 }
 
 a.header_status_bar:hover {
-  background-color: orange;
+  background-color: $orange;
 }
 
 .header_text {
@@ -352,9 +345,9 @@ a.header_status_bar:hover {
 
 #betainfo {
   position: absolute;
-  font-size: 11px;
-  top: 5px;
-  right: 25px;
+  font-size: 10px;
+  top: -1px;
+  right: 33px;
 }
 
 .main {
@@ -427,12 +420,8 @@ html, body {
   display: inline-block;
 }
 
-.user_menu {
-  cursor: pointer;
-}
-
-.user_options {
-  display: inline-block;
+.user_options, .project_more_popup {
+  display: none;
   background-color: white;
   a:link {color:black;}
   a:visited {color:black;}
@@ -455,11 +444,11 @@ html, body {
 }
 
 .full_container {
-  padding: 25px;
+  padding: 0px 25px 25px 25px;
 }
 
 .modal {
-  a:hover {color:#FF0000; background-color: white; }
+  a:hover {color:$red; background-color: white; }
 }
 
 .modal-body {
@@ -477,7 +466,7 @@ html, body {
 
 .btn#dataConfirmOK:hover {
   color: white;
-  background-color: orange;
+  background-color: $orange;
 }
 
 #video {
@@ -514,24 +503,78 @@ html, body {
   }
 }
 
-.header_logo {
+.header_left {
   position: absolute;
-  float: left;
   left: 25px;
-  width: 86px;
-  max-width: 86px;
-  min-width: 86px;
-  z-index: 1;
-  margin-top: -15px;
-  @media screen and (max-width: 1150px) {
-    width: 55px;
-    max-width: 55px;
-    min-width: 55px;
-    padding-top: 10px;
-    min-width: 0px;
+  z-index: 2;
+  .header_button, .header_input, .header_text {
+    margin-left: 10px;
   }
+}
+
+.header_left, .header_right {
+  margin-top: 5px;
+}
+
+.header_logo {
+  float: left;
+  z-index: 1;
+  margin-top: -24px;
+  padding-top: 14px;
+  min-width: 0px;
+  max-width: 55px;
+  width: 55px;
+
   a:hover {
     background-color: transparent;
+  }
+}
+
+
+.project_info {
+  .header_text, .header_button {
+    float: left;
+  }
+  .project_name_wrapper .header_text {
+    float: left;
+    clear: left;
+  }
+}
+
+.project_name {
+  max-width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.project_updated_at {
+  font-size: 10px;
+}
+
+.project_save[disabled] {
+  background: $light_gray;
+}
+
+#project-share .social-buttons a {
+  display: inline-block;
+  &:hover, & {
+    text-decoration: none;
+  }
+  i {
+    display: table-cell;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    background: $purple;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24pt;
+    &:hover {
+      box-shadow: 2px 2px 5px $light_gray;
+    }
   }
 }
 
@@ -539,6 +582,9 @@ html, body {
   position: absolute;
   left: 0;
   right: 0;
+  .header_button {
+    margin-top: 3px;
+  }
 }
 
 .header_level_container {
@@ -546,38 +592,40 @@ html, body {
 }
 
 .header_level {
-  padding-top: 6px;
+  padding-top: 2px;
   padding-bottom: 0;
   text-align: center;
   font-size: 150%;
   cursor: default;
   white-space: nowrap;
-  @media screen and (max-width: 1150px) {
-    padding-top: 2px;
-  }
 
   .progress_container {
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: $lightest_gray;
+    border: 1px solid $lighter_gray;
     display: inline-block;
-    padding: 5px 10px;
+    padding: 4px 8px;
     border-radius: 5px;
-  }
-  /* current and last are large dots */
-  .puzzle_outer_current,
-  .puzzle_outer_level.last,
-  .puzzle_outer_assessment.last {
-    margin: 0 -1px;
-    vertical-align: middle;
-    border-radius: 20px;
 
+    .puzzle_outer_level,
+    .puzzle_outer_assessment,
+    .puzzle_outer_current {
+      vertical-align: middle;
+      margin: 0 -2px;
+    }
+  }
+
+
+  /* current puzzle is a large dot */
+  .puzzle_outer_current {
     .level_link {
-      border-radius: 20px;
-      height: 18px;
-      min-width: 18px;
-      width: 18px;
+      box-sizing: border-box;
+      border-radius: 28px;
+      height: 28px;
+      min-width: 28px;
+      width: 28px;
       font-size: 14px;
-      padding: 0 2px 4px 2px;
+      line-height: 24px;
+      padding: 0px;
       text-align: center;
       display: inline-block;
     }
@@ -590,21 +638,18 @@ html, body {
     }
   }
 
-  /* all others are small dot */
+  /* other puzzles are small dot */
   .puzzle_outer_level,
   .puzzle_outer_assessment {
-    margin: 0 -1px;
-    vertical-align: middle;
-    border-radius: 11px;
     line-height: 1px;
-
     .level_link {
-      min-width: 1px;
-      width: 1px;
-      height: 1px;
-      border-radius: 9px;
+      box-sizing: border-box;
+      min-width: 11px;
+      width: 11px;
+      height: 11px;
+      border-radius: 11px;
       padding: 3px;
-      margin: 1px;
+      margin: 0px;
       /* hack to hide the number: */
       font-size: 0px;
       color: transparent;
@@ -615,23 +660,12 @@ html, body {
     text-decoration: none;
     background-color: $level_current;
   }
-
-  .puzzle_outer_current,
-  .puzzle_outer_current .level_link {
-    background-color: $level_current;
-    color: white !important;
-  }
-
 }
 
 .header_right {
   position: absolute;
   float: left;
   right: 25px;
-  margin-top: 9px;
-  @media screen and (max-width: 1150px) {
-    margin-top: 5px;
-  }
 }
 
 .freeplay_links {
@@ -639,21 +673,32 @@ html, body {
   text-align: center;
 }
 
-.header_user {
+.header_button {
   display: inline-block;
-  text-align: right;
-  background-color: rgb(255, 164, 0);
+  background-color: $orange;
   border-radius: 5px;
   padding: 7px 14px;
-  margin-left: 5px;
   font-size: 14px;
   line-height: 20px;
   box-sizing: border-box;
+  cursor: pointer;
   a:hover {
     text-decoration: none;
-    background-color: rgb(255, 164, 0);
+    background-color: $orange;
   }
 }
+
+input.header_input {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+
+.header_user {
+  text-align: right;
+  margin-left: 5px;
+}
+
 .header_popup {
   display: none;
   position: absolute;
@@ -665,11 +710,32 @@ html, body {
   border: 20px solid $bkgnd_color;
   border-top: 5px;
   border-bottom: 5px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
+  border-radius: 6px;
   z-index: 1050;
   background-color: white;
   overflow: hidden;
+}
+
+.key {
+  margin: 10px 0;
+  float: left;
+  padding: 10px;
+  background-color: $lightest_gray;
+  dl {
+    margin: 0;
+    float: left;
+    white-space: nowrap;
+  }
+  dd, dt {
+    float: left;
+    height: 36px;
+  }
+  dt { margin-right: 5px; }
+  dd {
+    line-height: 36px;
+    margin-left: 0;
+    margin-right: 25px;
+  }
 }
 
 .header_popup_header {
@@ -687,7 +753,7 @@ html, body {
   overflow-y: auto;
   display: block;
   min-height: 1100px;
-  color: #333;
+  color: $charcoal;
 
   .loading {
     height: 400px;
@@ -735,7 +801,7 @@ html, body {
 
 .header_popup_link_glyph {
   font-size: 22px;
-  color: orange;
+  color: $orange;
   line-height: 10px;
 }
 
@@ -752,7 +818,7 @@ html, body {
 }
 
 #alert {
-  color: red;
+  color: $red;
   font-size: 130%;
   border-style: solid;
   border-width: 2px;
@@ -764,11 +830,11 @@ html, body {
   overflow: visible;
 }
 
-#blocklyApp {
+#codeApp {
+  position: relative;
 
   .loading {
     height: 520px;
-    margin: 20px;
     background: image-url("spinner-big.gif") no-repeat center center;
   }
 
@@ -778,14 +844,24 @@ html, body {
     position: relative;
     top: -230px;
   }
+}
 
+#codeApp.pin_bottom {
+  position: absolute;
+  top: 85px;
+  left: 25px;
+  right: 25px;
+  bottom: 10px;
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+    top: 10px;
+  }
 }
 
 .reference_area {
   margin-top: 20px;
 
   .help_title {
-    color: #1180be;
+    color: $cyan;
     font-family: 'Gotham 7r', sans-serif;
     font-weight: normal;
     font-size: 17.5px;
@@ -804,7 +880,6 @@ html, body {
 
   .video_name {
     text-align: center;
-    width: 183px;
   }
 
   .help_subtitle {
@@ -850,11 +925,15 @@ html, body {
         background: $dark_color;
         color: white;
         &:hover {
-          color: $light_green;
+          color: $green;
         }
         &:focus {
           outline: 0;
         }
+      }
+
+      html[dir=rtl] & {
+        float: right;
       }
     }
 
@@ -892,6 +971,15 @@ html, body {
     width: $startWidth + $growth;
     height: $startHeight + $growth;
   }
+
+  html[dir=rtl] & {
+    right: auto;
+    left: $cornerOffset;
+  }
+  html[dir=rtl] &:hover {
+    right: auto;
+    left: $cornerOffset - $movement;
+  }
 }
 
 .x-close {
@@ -901,7 +989,7 @@ html, body {
 .qtip-content {
   font-size: 20px;
   line-height: 28px;
-  color: #7E5BA0;
+  color: $purple;
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
 }
@@ -912,9 +1000,9 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+  background-color: white;
+  color: $charcoal;
+  border: 1px solid $charcoal;
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
   padding: 10px;
@@ -927,14 +1015,12 @@ html[dir=rtl] .qtip-content {
 .cdo-qtips {
   z-index: 1;
 
-
   .tooltip-x-close {
     @include close-button($cornerOffset: -35px);
   }
 }
 
 a.download-video {
-  float: left;
   z-index: 1;
   cursor: pointer;
   width: 40px;
@@ -959,11 +1045,11 @@ a.download-video {
   padding: 5px 20px;
   font-size: 28px;
   line-height: 32px;
-  background-color: orange;
+  background-color: $orange;
   text-align: center;
   color: white;
   a, a:visited {
-    color: #08c;
+    color: $cyan;
   }
   a:hover {
     background: transparent;
@@ -1000,7 +1086,7 @@ a.download-video {
 
 #landingpage {
   .row#continue {
-    background-color: #00adbc;
+    background-color: $teal;
     color: white;
     font-size: 24.5px;
     padding: 5px 0;
@@ -1040,7 +1126,7 @@ a.download-video {
       height: 154px;
       width: 154px;
       img {
-        border: 2px solid #ccc;
+        border: 2px solid $lighter_gray;
         background-color: white;
       }
     }
@@ -1056,7 +1142,7 @@ a.download-video {
 
   .row.navcontainer {
     margin: 30px 0 10px -20px;
-    background-color: #eee;
+    background-color: $lightest_gray;
   }
 
   ul.nav.nav-pills {
@@ -1068,8 +1154,8 @@ a.download-video {
 
     li.active a, li.active a:hover, li.active a:link {
       background-color: white;
-      color: #7665a0;
-      border: 2px solid #7665a0;
+      color: $purple;
+      border: 2px solid $purple;
     }
     li a:hover, a:focus {
       text-decoration: none;
@@ -1087,15 +1173,15 @@ a.download-video {
       font-size:18px; line-height:30px;
     }
     #maintext {
-      text-align:left; padding-left:20px; color:#666;
+      text-align:left; padding-left:20px; color:$charcoal;
     }
     #helptext {
-      text-align:right; padding-right:20px; color:#888;
+      text-align:right; padding-right:20px; color:$light_gray;
     }
   }
 
   #lesson {
-    background-color:rgb(88, 103, 113);
+    background-color: $charcoal;
     #heading {
       -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 20px 10px 0px;
       .whitetext {
@@ -1111,7 +1197,7 @@ a.download-video {
         margin-bottom:5px;
       }
       a {
-        color: #ddd;
+        color: $lightest_gray;
         font-family: 'Gotham 4r', sans-serif; font-weight: normal;
       }
       .white {
@@ -1122,18 +1208,18 @@ a.download-video {
       color:white; font-size:15px;
     }
     .lightgreytext {
-      color: #ddd;
+      color: $lightest_gray;
     }
   }
   #stats {
-    background-color:#eeeeee;
+    background-color:$lightest_gray;
     #rightside {
       -moz-box-sizing:border-box; box-sizing:border-box; padding:10px;
     }
   }
   .twolineheader {
     h2 {
-      font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: #7665a0; font-size: 24px; margin-bottom: 0px; line-height: 30px;
+      font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: $purple; font-size: 24px; margin-bottom: 0px; line-height: 30px;
     }
     h1 {
       margin-top: 0px; line-height: 30px; font-size: 30px;   font-family: 'Gotham 5r', sans-serif; font-weight: normal;
@@ -1141,7 +1227,7 @@ a.download-video {
   }
 
   #edit_teachers {
-    background-color: #eee;
+    background-color: $lightest_gray;
     margin: 20px 0 20px -20px;
     form {
       margin: 0;
@@ -1150,11 +1236,11 @@ a.download-video {
 }
 
 .betatext {
-  color: yellow;
+  color: $realyellow;
 }
 
 .miniblock {
-  background-color:#ddd;
+  background-color:$lightest_gray;
   height:100px;
   .heading {
     -moz-box-sizing: border-box;
@@ -1163,27 +1249,39 @@ a.download-video {
   }
   h3 {
     margin: 0;
-    color: rgb(88, 103, 113);
+    color: $charcoal;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 24px;
   }
   .smalltext {
     font-size:13px;
     padding-right:10px;
     font-family: 'Gotham 4r', sans-serif;
     font-weight:normal;
-    color:rgb(88, 103, 113);
+    color:$charcoal;
   }
   .whitetext {
-    color:#ddd;
+    color:$lightest_gray;
   }
   .greytext {
-    color:rgb(88, 103, 113);
+    color:$charcoal;
   }
   .imgspan {
     margin-left: 0px;
     text-align: right;
+  }
+  .audience {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    background-color: $charcoal;
   }
 }
 
@@ -1232,10 +1330,10 @@ a.download-video {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      background-color: rgba(116, 128, 136, 0.37);
+      background-color: $light_gray;
       padding-left: 5px;
       padding-right: 5px;
-      font-size: 24.5px;
+      font-size: 24px;
       height: 35px;
       line-height: 40px;
       width: 60px;
@@ -1270,9 +1368,9 @@ a.download-video {
   ul.students li,
   ul.pictures li {
     list-style-type: none;
-    border: 1px solid #ccc;
+    border: 1px solid $lighter_gray;
     border-radius: 5px;
-    background-color: #eee;
+    background-color: $lightest_gray;
     float: left;
     margin: 5px;
     padding: 5px;
@@ -1281,18 +1379,18 @@ a.download-video {
 
   ul.students li:hover,
   ul.pictures li:hover {
-    background-color: lightyellow;
+    background-color: $light_yellow;
   }
 
   ul.students li.selected,
   ul.pictures li.selected {
-    background-color: yellow;
+    background-color: $yellow;
   }
 }
 
 #signup {
   .signupblock {
-    background-color: #fafafa;
+    background-color: $lightest_gray;
   }
   .signupform {
     padding:20px;
@@ -1335,9 +1433,15 @@ a.download-video {
   .registertext {
     display:inline-block;
     font-size:16px;
-    color:#586771;
+    color:$charcoal;
     margin-top:15px;
   }
+}
+
+@mixin yTranslation($offset) {
+  -webkit-transform: translateY($offset);
+  -ms-transform: translateY($offset);
+  transform: translateY($offset);
 }
 
 .match {
@@ -1350,9 +1454,7 @@ a.download-video {
     img {
       position: relative;
       top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+      @include yTranslation(-50%);
       height: auto;
       width: auto;
       max-height: 100%;
@@ -1367,7 +1469,7 @@ a.download-video {
   li {
     padding-top: 1px;
     padding-bottom: 1px;
-    background-color: lightgrey;
+    background-color: $lighter_gray;
     padding-left: 4px;
     padding-right: 4px;
     width: 220px;
@@ -1382,7 +1484,7 @@ a.download-video {
     margin-left:0px;
     li {
       background-color: white;
-      border-color: #c6cacd;
+      border-color: $lighter_gray;
     }
   }
   li {
@@ -1392,8 +1494,8 @@ a.download-video {
     list-style-type: none;
     margin-left: 0px;
     .emptyslot {
-      background-color: #e7e8ea;
-      border-color: #e7e8ea;
+      background-color: $lightest_gray;
+      border-color: $lightest_gray;
       .giantmark {
         .text {
           opacity: 0.8;
@@ -1403,26 +1505,40 @@ a.download-video {
     }
     .active {
       border-style: dotted;
-      border-color: #ffdb74;
+      border-color: $light_yellow;
     }
     .active.emptyslot {
-      background-color: lightyellow;
+      background-color: $lighter_yellow;
     }
   }
   .answer {
     background-color: white;
-    border-color: #a6daed;
+    border-color: $lighter_cyan;
   }
   .answer:hover {
-    border-color: #d1d567;
+    border-color: $light_green;
     cursor: move;
   }
   #answerdest {
     width: 240px;
   }
+  .answerlist {
+    h4 {
+      position: relative;
+      top: 25%;
+      @include yTranslation(-50%);
+    }
+  }
   #answers {
     list-style-type: none;
     margin-left: 0px;
+  }
+  .answerslot {
+    h4 {
+      position: relative;
+      top: 25%;
+      @include yTranslation(-50%);
+    }
   }
   #correctmarkscolumn
   {
@@ -1449,7 +1565,7 @@ a.download-video {
   }
 }
 #script-updated {
-  color: green;
+  color: $green;
   display: none;
 }
 #edit-script-content {
@@ -1475,7 +1591,7 @@ a.download-video {
 .edit_level {
   .field {
     margin-bottom: 10px;
-    border-top: 2px solid #eee;
+    border-top: 2px solid $lightest_gray;
     padding-top: 10px;
   }
 
@@ -1500,7 +1616,7 @@ div.gallery_activity {
     border: $img_border_size groove lightgray;
   }
   .caption {
-    color: #666;
+    color: $charcoal;
     margin: 0 auto;
     clear: both;
     max-width: $img_size;
@@ -1526,8 +1642,7 @@ div.mini_gallery_activity {
 }
 
 .infobox {
-  background-color: rgb(88, 103, 113);
-  margin-left: 0px;
+  background-color: $charcoal;
   color: white;
   font-size: 13px;
   padding-right: 10px;
@@ -1546,6 +1661,10 @@ $information-desktop: "only screen and (min-width: 1024px)";
 .multi {
 
   margin: auto;
+
+  h2 {
+    text-align: center;
+  }
 
   .question {
     float: left;
@@ -1573,6 +1692,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
     @media #{$information-desktop} {
       width: 55%;
     }
+    .multi-question {
+      font-size: 17px;
+    }
   }
   .mainblock {
     margin-left: 0px;
@@ -1594,6 +1716,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
+    @include yTranslation(-35%);
   }
   .item-cross {
     display: inline-block;
@@ -1606,6 +1729,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .item-label {
     display: inline-block;
     float: left;
+    label {
+      font-size: 15px;
+    }
   }
   .answerbutton {
     margin-top: 15px;
@@ -1617,13 +1743,15 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
 }
 
-/* moved over from apps */
-
 $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 
 .modal-content {
   margin-left: $modal-image-width + $modal-image-margin-gap;
+  html[dir=rtl] & {
+    margin-left: 0;
+    margin-right: $modal-image-width + $modal-image-margin-gap;
+  }
   p, pre {
     line-height: 27px;
     font-size: 24px;
@@ -1660,6 +1788,40 @@ $modal-image-margin-gap: 10px;
   .feedback-links {
     margin-top: 15px;
   }
+
+  .feedback-callout {
+    border: solid;
+    border-radius: 10px;
+    border-color: $red;
+
+    p {
+      margin: 15px;
+      color: $red;
+      padding-right: 20%;
+    }
+
+    .congrats {
+      font-size: 24px;
+      line-height: 27px;
+    }
+
+    .hint-header {
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
+    }
+
+    .hint-image {
+      float: right;
+      width: 20%;
+    }
+  }
+
+  .lines-of-code-message {
+    font-size: 20px;
+    line-height: normal;
+    color: $charcoal;
+    margin: 0 0 8px;
+  }
 }
 
 .dialog-title {
@@ -1669,6 +1831,7 @@ $modal-image-margin-gap: 10px;
 
 #ok-button {
   background-color: $orange;
+  border: 1px solid $orange;
   color: white;
   min-width: 100px;
 }
@@ -1692,6 +1855,12 @@ $modal-image-margin-gap: 10px;
   height: auto;
   margin-top: -60px;
   float: left;
+  html[dir=rtl] & {
+    float: right;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
 }
 .modal-header {
   border: none;
@@ -1707,10 +1876,17 @@ $modal-image-margin-gap: 10px;
   border: none;
 }
 
-/* also moved over from apps */
+#feedbackButtons:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
 
 .farSide {
   text-align: right;
+  html[dir=rtl] & {
+    text-align: left;
+  }
 }
 
 /* Buttons from apps */
@@ -1719,15 +1895,15 @@ button {
   margin: 5px;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #ddd;
+  border: 1px solid $lightest_gray;
   font-size: large;
-  background-color: #eee;
+  background-color: $lightest_gray;
   color: #000;
 }
 button.launch {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
-  color: #fff;
+  border: 1px solid $orange;
+  background-color: $orange;
+  color: white;
   font-size: large;
   min-width: 96px;
   margin-left: 0px;
@@ -1750,14 +1926,18 @@ button:hover>img {
   opacity: 1;
 }
 button:active {
-  border: 1px solid #888 !important;
+  border: 1px solid $light_gray !important;
 }
 button:hover {
+<<<<<<< HEAD
   @include box-shadow(2px 2px 5px rgba(0,0,0,0.5));
+=======
+  @include box-shadow(2px 2px 5px $light_gray);
+>>>>>>> staging
 }
 button.disabled, button[disabled=disabled] {
-  border: 1px solid #C7C7C7;
-  background-color: #C7C7C7;
+  border: 1px solid $lighter_gray;
+  background-color: $lighter_gray;
   @include box-shadow(none);
 }
 button.disabled:hover>img {
@@ -1775,7 +1955,7 @@ button.notext {
 }
 
 @mixin rounded-border {
-  border: 2px solid #A4A4A4;
+  border: 2px solid $light_gray;
   border-radius: 25px;
 }
 

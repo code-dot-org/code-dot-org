@@ -269,34 +269,11 @@
           Artist Binary: 'Художник: двійкова система'
           description_audience: Вік 10 + (після курсу 3)
         Course4pre:
+          title: Знання, необхідні для курсу 4
           description_short: Коротке узагальнення понять для учнів, котрі не проходили
             курси 2 та 3.
-          Course 4 Prerequisite: Знання, необхідні для курсу 4
-          'Maze: Sequence': 'Лабіринт: послідовність'
-          'Artist: Sequence': 'Художник: послідовність'
-          'Artist: Loops': 'Художник: цикли'
-          'Bee: Conditionals': Бджола - умови
-          'Artist: Nested Loops': Художник - вкладені цикли
-          'Farmer: While Loops': Фермерка - цикли "поки"
-          'Bee: Nested Loops': Бджола - вкладені цикли
-          'Artist: Functions': Художник - функції
-          'Bee: Debugging': Бджола - відлагодження
-        course4pre:
-          description_short: Коротке узагальнення понять для учнів, котрі не проходили
-            курси 2 та 3.
-          Course 4 Prerequisite: Знання, необхідні для курсу 4
-          'Maze: Sequence': 'Лабіринт: послідовність'
-          'Artist: Sequence': 'Художник: послідовність'
-          'Artist: Loops': 'Художник: цикли'
-          'Bee: Conditionals': Бджола - умови
-          'Artist: Nested Loops': Художник - вкладені цикли
-          'Farmer: While Loops': Фермерка - цикли "поки"
-          'Bee: Nested Loops': Бджола - вкладені цикли
-          'Artist: Functions': Художник - функції
-          'Bee: Debugging': Бджола - відлагодження
-        Course4pre (Case Conflict):
-          description_short: Коротке узагальнення понять для учнів, котрі не проходили
-            курси 2 та 3.
+          description: Коротке узагальнення понять для учнів, котрі не проходили курси
+            2 та 3.
           Course 4 Prerequisite: Знання, необхідні для курсу 4
           'Maze: Sequence': 'Лабіринт: послідовність'
           'Artist: Sequence': 'Художник: послідовність'
@@ -329,6 +306,9 @@
           Special: Спеціальні
           Binary: Двійкова система
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Юзабіліті-тестування з математикою
           Evaluation Blocks: Оцінкові блоки
           Blocks to Math: Блоки до математики
@@ -345,7 +325,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'Безмашинна вправа: відео-ігри
             та координатні площини'
           'Calc: Evaluation Blocks': 'Калькулятор: оцінювання блоків'
-          'Eval: Strings and Images': 'Оцінка: рядки та картинки'
+          'Eval: Strings and Images': Рядки та зображення
           'Unplugged: Contracts': 'Безмашинна вправа: Визначення'
           'Eval: Writing Contracts': 'Оцінка: написання визначень'
           'Calc: Defining Variables': 'Калькулятор: визначення змінних'
@@ -364,7 +344,7 @@
             гра)'
           'Unplugged: Conditionals and Piecewise Functions': 'Безмашинна вправа: Умови
             та складні функції'
-          'Eval: Conditionals': 'Оцінка: умови'
+          'Eval: Conditionals': Умови
           'Unplugged: Collision Detection and the Distance Formula': 'Безмашинна вправа:
             Виявлення зіткнень та формула відстані'
           'Play Lab: Collision Detection (Big Game)': 'Ігрова лабораторія: виявлення
@@ -374,24 +354,246 @@
           description_short: Складіть історію або створіть гру в Ігровій студії!
           description: Складіть історію або створіть гру в Ігровій студії!
           Play Lab: Ігрова студія
+          Infinity: Нескінченність
         algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming
-            language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
+          title: Демонстрація Алгебри
+          description_short: Декілька задач, що демонструють середовище та мову програмування,
+            що використовується у Code.org CS в Алгебрі
+          description: Декілька задач, що демонструють середовище та мову програмування,
+            що використовується у Code.org CS в Алгебрі
+          Algebra Demo: Демонстрація Алгебри
           Evaluation Blocks: Оцінкові блоки
-          Making Pictures: Making Pictures
+          Making Pictures: Зробити зображення
           Defining Variables: Визначення змінних
-          Defining Simple Functions: Defining Simple Functions
+          Defining Simple Functions: Визначити прості функції
           The Design Recipe: Створення рецепту
         K5PD:
-          Introduction to PD: Introduction to PD
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Знайомство з профессійним кодуванням
+          Blockly Basics: Blockly основи
+          Writing computer programs: Письмовій формі комп'ютерних програм
+          Navigating the teacher dashboard: Навігація вчитель приладної дошки
+          Unplugged lessons: Unplugged уроки
+          Classroom Culture: Класі культури
+          Ways to go beyond Courses 1, 2, and 3: Способів вийти за рамки курсів 1,
+            2 і 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
-          title: Internet Simulator
+          title: Інтернет симулятор
           description_short: ''
           description: ''
-          Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Нескінченність
+          Internet Simulator: Інтернет симулятор
+          Unit 1: Розділ 1
+          Unit 2: Розділ 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Пікселізаціі
+          description: Створити зображення з бітів та байтів.
+          Pixelation: Пікселізаціі
+        20-hour:
+          title: Вступ в курс інформатики для 5-8 класів (15-25 годин)
+          description: Цей 20-годинний курс охоплює базові поняття комп'ютерних наук
+            та програмування. Цей курс розроблено для використання на заняттях в основній
+            школі, але може бути цікавим для будь-якого віку.
+          Introduction to Computer Science: Вступ до інформатики
+          The Maze: Лабіринт
+          Computational Thinking: Обчислювальне мислення
+          Graph Paper Programming: Програмування по клітинках
+          The Artist: Художник
+          Algorithms: Алгоритми
+          The Artist 2: Художник 2
+          Functions: Функції
+          The Farmer: Фермерка
+          Conditionals: Умови
+          The Artist 3: Художник 3
+          Song Writing: Написання пісень
+          The Farmer 2: Фермерка 2
+          Abstraction: Абстракції
+          The Artist 4: Художник 4
+          Relay Programming: Релейне програмування
+          The Farmer 3: Фермерка 3
+          The Internet: Інтернет
+          The Artist 5: Художник 5
+          Wrap-up: Підведення підсумків
+        edit-code:
+          title: Редагування коду
+          description: ''
+          The Maze: Лабіринт
+          Applab: Applab
+          The Artist: Художник
+          Play Lab: Ігрова студія
+        events:
+          title: Події
+          description: ''
+          Bounce: Арканоід
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Код Пурха
+          description: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте
+            запрограмувати Пурха!
+          Flappy Code: Код Пурха
+        jigsaw:
+          title: Пазли
+          description: ''
+          Jigsaw: Пазли
+        step:
+          title: Крок
+          description: ''
+          Step: Крок
+        Hour of Code:
+          title: Година коду 2013
+          description: ''
+          Hour of Code 2013: Година коду 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Задачі
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Задачі
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Задачі
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Задачі
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Задачі
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Задачі
+        course4pre:
+          title: Знання, необхідні для курсу 4
+          description_short: Коротке узагальнення понять для учнів, котрі не проходили
+            курси 2 та 3.
+          description: Коротке узагальнення понять для учнів, котрі не проходили курси
+            2 та 3.
+          Course 4 Prerequisite: Знання, необхідні для курсу 4
+          'Maze: Sequence': 'Лабіринт: послідовність'
+          'Artist: Sequence': 'Художник: послідовність'
+          'Artist: Loops': 'Художник: цикли'
+          'Bee: Conditionals': Бджола - умови
+          'Artist: Nested Loops': Художник - вкладені цикли
+          'Farmer: While Loops': Фермерка - цикли "поки"
+          'Bee: Nested Loops': Бджола - вкладені цикли
+          'Artist: Functions': Художник - функції
+          'Bee: Debugging': Бджола - відлагодження
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Безмашинна вправа: відео-ігри
+            та координатні площини'
+          'Calc: Evaluation Blocks': 'Калькулятор: оцінювання блоків'
+          'Eval: Strings and Images': 'Оцінка: рядки та картинки'
+          'Unplugged: Contracts': 'Безмашинна вправа: Визначення'
+          'Eval: Writing Contracts': 'Оцінка: написання визначень'
+          'Calc: Defining Variables': 'Калькулятор: визначення змінних'
+          'Play Lab: Defining Variables (Big Game)': 'Ігрова лабораторія: визначення
+            змінних (Велика гра)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Безмашинна вправа: Створення рецепту'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Ігрова лабораторія: анімація (Велика
+            гра)'
+          'Unplugged: Booleans': 'Безмашинна вправа: логічні вирази'
+          'Eval: Boolean Operators': 'Оцінка: логічні вирази'
+          'Play Lab: Booleans': 'Ігрова лабораторія: логічні вирази'
+          'Play Lab: Boolean (Big Game)': 'Ігрова лабораторія: логічні значення (Велика
+            гра)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Безмашинна вправа: Умови
+            та складні функції'
+          'Eval: Conditionals': 'Оцінка: умови'
+          'Unplugged: Collision Detection and the Distance Formula': 'Безмашинна вправа:
+            Виявлення зіткнень та формула відстані'
+          'Play Lab: Collision Detection (Big Game)': 'Ігрова лабораторія: виявлення
+            зіткнень (Велика гра)'
+          Evaluation Blocks: Оцінкові блоки
+          Strings and Images: Рядки та зображення
+          Contracts: Визначення
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: Створення рецепту
+          Your Game - Animation: Your Game - Animation
+          Booleans: Логічні вирази
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Умови та складні функції
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Оцінкові блоки
+          Strings and Images: Рядки та зображення
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Логічні вирази
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Ігрова лабораторія: виявлення
+            зіткнень (Велика гра)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Знайомство з профессійним кодуванням
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

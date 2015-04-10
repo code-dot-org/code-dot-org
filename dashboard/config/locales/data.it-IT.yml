@@ -101,7 +101,7 @@
         Wordsearch: Ricerca di parole
         Webapp: Laboratorio per le App
         ArtistEC: L'artista
-        TextMatch: Corrispondenza di testo
+        TextMatch: 'Testo: Associazioni'
         StudioEC: Laboratorio
         Applab: Laboratorio per le App
         NetSim: Simulatore di Internet
@@ -187,9 +187,9 @@
         turtle_1_7: 'Ok, ora è un po'' più difficile: vedi se riesci a disegnare questi
           occhiali verdi. I quadrati hanno 100 pixel su ciascun lato, e sono distanti
           tra loro 50 pixel. Non dimenticarti di disegnare usando il verde!'
-        turtle_1_8: Ok, cerca di immaginare cosa succede se si esegue questo codice
-          (o premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte
-          sufficiente a completare il disegno. I colori saranno diversi ogni volta.
+        turtle_1_8: Cerca di immaginare cosa succede se si esegue questo codice (o
+          premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte sufficiente
+          a completare il disegno. I colori saranno diversi ogni volta.
         turtle_1_9: Riesci a capire con quale numero devi sostituire i punti interrogativi
           per disegnare un cerchio?
         turtle_1_10: 'Ce l''hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune
@@ -477,17 +477,17 @@
           il giocatore" al blocco "quando inizia il fioco".
         jigsaw_1: Clicca sul blocco
         jigsaw_2: Sposta il blocco verso la destinazione
-        jigsaw_3: Sistema i blocchi per formare l'immagine
-        jigsaw_4: Sistema i blocchi per formare l'immagine
-        jigsaw_5: Sistema i blocchi per formare l'immagine
-        jigsaw_6: Sistema i blocchi per formare l'immagine
-        jigsaw_7: Sistema i blocchi per formare l'immagine
-        jigsaw_8: Sistema i blocchi per formare l'immagine
-        jigsaw_9: Sistema i blocchi per formare l'immagine
-        jigsaw_10: Sistema i blocchi per formare l'immagine
-        jigsaw_11: Sistema i blocchi per formare l'immagine
-        jigsaw_12: Sistema i blocchi per formare l'immagine
-        jigsaw_13: Correggi il puzzle!
+        jigsaw_3: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_4: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_5: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_6: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_7: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_8: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_9: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_10: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_11: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_12: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_13: Correggi la figura!
         mazestep_1: Qui c'è la descrizione del passo del labirinto
         mazestep_2: Qui c'è la descrizione del passo del labirinto
         mazestep_3: Qui c'è la descrizione del passo del labirinto
@@ -504,19 +504,18 @@
           viene cliccato?
         studio_c2_6: Riesci a scrivere un programma per spostare questo pinguino in
           tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
-          / a destra in modo da fargli colpire tutti i bersagli?
+          / a destra in modo da fargli raggiungere tutte le bandierine?
         studio_c2_7: Il blocco "ripeti per sempre" permette di eseguire il codice
-          senza fermarsi mai. Riesci a mettere insieme dei blocchi per spostare in
-          continuazione questo dinosauro su e giù?
-        studio_c2_8: Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono
-          "colpito" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti
-          freccia per far sì che questo accada?
-        studio_c2_9: Riesci ad aggiungere un blocco per segnare un punto quando il
-          pinguino sbatte contro il polpo e poi a spostarlo con i tasti freccia fino
-          a che segni un punto?
-        studio_c2_10: Riesci ad aggiungere dei blocchi per cambiare lo sfondo e la
-          velocità del pinguino, e poi a spostarlo con i tasti freccia fino a che
-          segni un punto?
+          senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro
+          in continuazione in su e in giù?
+        studio_c2_8: Riesci a far dire "Ahi!" al pinguino e a riprodurre il "suono
+          di un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i
+          tasti freccia per far sì che questo accada?
+        studio_c2_9: Aggiungi un blocco che segna un punto quando il pinguino sbatte
+          contro il polpo. Poi sposta il pinguino con i tasti freccia fino a che fai
+          un punto.
+        studio_c2_10: Aggiungi dei blocchi per cambiare lo sfondo e la velocità del
+          pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
         studio_c2_11: Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi"
           per far provare la storia ai tuoi amici sui loro smartphone.
         studio_c3_story_1: Riesci a far dire a questo cane "Ciao a tutti"?
@@ -534,19 +533,18 @@
           quando viene cliccato?
         studio_c3_game_2: Riesci a scrivere un programma per spostare questo pinguino
           in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
-          / a destra in modo da fargli colpire tutti i bersagli?
+          / a destra in modo da fargli raggiungere tutte le bandierine?
         studio_c3_game_3: Il blocco "ripeti per sempre" permette di eseguire il codice
-          senza fermarsi mai. Riesci a mettere insieme dei blocchi per spostare in
-          continuazione questo dinosauro su e giù?
-        studio_c3_game_4: Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono
-          "colpo" se esso sbatte contro il dinosauro e poi a spostarlo con i tasti
-          freccia per far sì che questo accada?
-        studio_c3_game_5: Riesci ad aggiungere un blocco per segnare un punto quando
-          il pinguino sbatte contro il polpo e poi a spostarlo con i tasti freccia
-          fino a che segni un punto?
-        studio_c3_game_6: Riesci ad aggiungere dei blocchi per cambiare lo sfondo
-          e la velocità del pinguino e poi a spostarlo con i tasti freccia fino a
-          che segni un punto?
+          senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro
+          in continuazione in su e in giù?
+        studio_c3_game_4: Riesci a far dire "Ahi!" al pinguino e a riprodurre il "suono
+          di un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i
+          tasti freccia per far sì che questo accada?
+        studio_c3_game_5: Aggiungi un blocco che segna un punto quando il pinguino
+          sbatte contro il polpo. Poi sposta il pinguino con i tasti freccia fino
+          a che fai un punto.
+        studio_c3_game_6: Aggiungi dei blocchi per cambiare lo sfondo e la velocità
+          del pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
         studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_playlab_1: Il pinguino vuole dire "ciao" - puoi aiutarlo?
@@ -562,12 +560,12 @@
         studio_playlab_6: Puoi aiutare la Strega a muoversi usando i tasti freccia
           in alto / in basso / a sinistra / a destra per raggiungere le palle di fuoco
           magiche?
-        studio_playlab_7: Il blocco "Ripeti per sempre" permette di eseguire il codice
+        studio_playlab_7: Il blocco "ripeti per sempre" permette di eseguire il codice
           senza fermarsi mai. Puoi attaccare ad esso dei blocchi  per aiutare il mago
           a spostarsi in continuazione a destra e a sinistra?
         studio_playlab_8: Aggiungi dei blocchi in modo che quando l'unicorno incontra
           il mago si segna un punto e si riproduce un suono. Poi usa le frecce per
-          spostare l'unicorno fino al mago.
+          spostare l'unicorno fino a che fai un punto.
         studio_playlab_9: Imposta lo sfondo per questa invasione aliena e aiuta il
           robot spaziale a raggiungere più velocemente l'alieno modificando la propria
           velocità. Poi sposta il robot spaziale con i tasti freccia per arrivare
@@ -610,128 +608,6 @@
           Prova anche il nuovo blocco "larghezza della penna". Buon divertimento!'
         studio_ec_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
-    levelbuilder:
-      frozen line:
-        instructions: Ciao! Io sono Elsa di Arendelle. Aiutami a creare una linea.
-      frozen perpendicular:
-        instructions: Ora vediamo se riusciamo a creare due linee che sono a 90 gradi
-          tra loro. Dovrai usare il blocco "gira" oltre al blocco "vai".
-      frozen square iterative:
-        instructions: Adesso siamo a metà strada per formare un quadrato. Uniamo 4
-          linee tra loro per creare un quadrato.
-      frozen square loop:
-        instructions: Ciao, sono Anna di Arendelle! Costruiamo un quadrato utilizzando
-          il blocco "Ripeti", così usiamo meno blocchi. Quante volte (???) il blocco
-          "Ripeti" deve ripetere i blocchi al suo interno per disegnare un quadrato?
-      frozen square loop 3x:
-        instructions: Creiamo tre quadrati, girando dopo aver completato ogni quadrato.
-          Assicurati di girare di 120 gradi prima di disegnare ogni nuovo quadrato.
-      frozen square snowflake:
-        instructions: Riesci a creare un fiocco di neve usando il blocco "ripeti"
-          per disegnare un quadrato 10 volte, e il blocco "gira" per ruotare di 36
-          gradi tra un quadrato e il successivo?
-      frozen cross:
-        instructions: Utilizza il blocco "ripeti" per creare un segno di addizione.
-          Hai notato che Elsa può muoversi avanti e indietro?
-      frozen cross rotate:
-        instructions: Ora prova a ripeterlo 10 volte. Quanti gradi devi girare tra
-          una linea e la successiva?
-      frozen cross rotate dense:
-        instructions: 'Ripetiamolo 90 volte! Quante volte il 90 sta in 360? Suggerimento:
-          È un numero molto piccolo.'
-      frozen diamond:
-        instructions: Creiamo un parallelogramma con angoli di 60 e 120 gradi. Ha
-          quattro lati uguali come il quadrato, ma invece di avere tutti gli angoli
-          uguali di 90 gradi ne ha due di 60 e due di 120 gradi.
-      frozen diamond mini snowflake:
-        instructions: Sapevi che ogni fiocco di neve ha una forma diversa? Creiamo
-          un nuovo fiocco di neve usando il blocco "ripeti" per ripetere un parallelogramma
-          4 volte, ruotando a destra di 90 gradi tra un parallelogramma e il successivo.
-      frozen diamond snowflake:
-        instructions: Ora, creiamo un nuovo fiocco di neve usando il blocco "ripeti"
-          per disegnare un parallelogramma 10 volte, girando a destra di 36 gradi
-          tra ogni parallelogramma e il successivo.
-      frozen circle:
-        instructions: Un cerchio è una forma speciale. Riesci a trovare quale numero
-          sostituire ai punti interrogativi per disegnare un cerchio?
-      frozen circle function:
-        instructions: Usa il nuovo blocco "crea un cerchio" per creare 10 cerchi sovrapposti.
-          Non dimenticare di saltare in avanti tra un cerchio e il successivo.
-      frozen circle function in circle:
-        instructions: Ora creiamo 20 cerchi sovrapposti, girando di 18 gradi tra un
-          cerchio e il successivo.
-      frozen circle function with parameter:
-        instructions: Qui c'è un blocco "crea cerchio" che può disegnare cerchi di
-          diverse dimensioni. Riesci a usarlo per creare un cerchio più piccolo di
-          dimensione 5 e un cerchio più grande di dimensione 10?
-      frozen snowflower:
-        instructions: Fiocchi di neve dai disegni complessi possono essere creati
-          partendo da forme molto semplici. Riesci a creare un disegno ripetendo 5
-          cerchi di dimensione 5 e 5 cerchi di dimensione 10?
-      frozen snowflake branch:
-        instructions: Prova a usare il blocco "crea un ramo di fiocco di neve" per
-          creare tre rami, che iniziano a sembrare un fiocco di neve.
-      frozen snowflake full:
-        instructions: Ora ripetiamolo 8 volte per disegnare un bel fiocco di neve!
-      frozen freeplay:
-        instructions: Sei ufficialmente diventato un maestro d'arte! Crea un fantastico
-          paesaggio invernale.
-      scrat 16:
-        instructions: Ghianda! Ghianda! Ghianda! Usa un blocco "se" per farmi arrivare
-          lì con il minor numero di blocchi.
-      scrat 17:
-        instructions: 'Ok, esercitiamoci di nuovo per far pratica: questo esercizio
-          non è molto diverso, ma stai attento al muro!'
-      scrat 18:
-        instructions: Il blocco "se-altrimenti" controlla una condizione, e poi fa
-          una cosa OPPURE un'altra. Prova ad usare questo nuovo blocco per farmi raggiungere
-          la ghianda.
-      scrat 19:
-        instructions: 'Ancora un esercizio con il blocco "se-altrimenti": riesci a
-          risolverlo correttamente al primo tentativo?'
-      scrat 20:
-        instructions: Riesci ad aggiungere solo 3 blocchi per farmi uscire da un labirinto
-          più complesso? Se lo fai correttamente, riuscirò a camminare lungo un percorso
-          tortuoso di qualsiasi lunghezza. Sbrigati! Il ghiaccio si sta sciogliendo!
-      Standalone_Artist_1:
-        instructions: Benvenuto nell'Artista! Prima di tutto, proviamo a fare un semplice
-          quadrato usando i blocchi "gira a destra" e "vai avanti". Ogni lato deve
-          essere lungo 100 pixel.
-      Standalone_Artist_2:
-        instructions: Disegna questo diamante con i lati di lunghezza pari a 100 pixel
-          disposti a 120 e 60 gradi.
-      Standalone_Artist_3:
-        instructions: Puoi disegnare questo esagono che ha i lati di 100 pixel usando
-          dei giri di 60 gradi?
-      Standalone_Artist_4:
-        instructions: 'Adesso hai un nuovo blocco con cui giocare: il ciclo. Esso
-          ripete un insieme di istruzioni. Cosa succede se ripeti 6 volte queste istruzioni?'
-      Standalone_Artist_5:
-        instructions: Quante volte è necessario eseguire il ciclo che crea questo
-          diamante per disegnare il fiore?
-      Standalone_Artist_5.5:
-        instructions: 'Osserva come abbiamo semplificato il codice del diamante utilizzando
-          un ciclo. Puoi eseguire il ciclo 12 volte per disegnare il fiore. Suggerimento:
-          devi ruotare di 30 gradi dopo ogni ciclo del diamante altrimenti disegni
-          sempre lo stesso diamante.'
-      Standalone_Artist_6:
-        instructions: 'Ripeti 6 volte il codice relativo a questo esagono per creare
-          il disegno. Di quanti gradi devi girare ogni volta? Suggerimento: dividi
-          il numero di gradi in un cerchio per il numero di volte che ripeti il ciclo.'
-      Standalone_Artist_7:
-        instructions: 'Una funzione è un altro strumento di programmazione che ti
-          aiuta ad evitare inutili ripetizioni. Questa funzione disegna un fiore:
-          è quindi possibile usarla ogni volta che vuoi disegnare un fiore. Utilizza
-          questa funzione e il nuovo blocco "salto" per disegnare questi fiori. Suggerimento:
-          i fiori sono distanti tra loro 150 pixel'
-      Standalone_Artist_8:
-        instructions: Ecco una funzione chiamata "Disegna una forma" che noi abbiamo
-          programmato per disegnare esagoni. Esegui il codice per vedere che cosa
-          fa e poi fai esperimenti con questa funzione per vedere cosa succede. Puoi
-          disegnare una composizione di quadrati, triangoli o ottagoni?
-      Standalone_Artist_9:
-        instructions: Ora vai avanti e crea qualsiasi figura desideri! Hai anche una
-          funzione vuota che puoi usare per fare quello che vuoi!
     video:
       name:
         maze_intro: Introduzione a "Il Labirinto"
@@ -791,6 +667,7 @@
         C2_relay_programming: Programmazione a Staffetta
         C2_paper_airplanes: Aeroplani di Carta
         C2_digital_footprint: La tua Impronta Digitale
+        C2_digital_footprint_v2: La tua Impronta Digitale
         C3_maze_level_4: 'Labirinto: Cicli'
         C3_artist_intro: 'Artista - Corso 3: Introduzione'
         C3_artist_functions: 'Artista: Funzioni'
@@ -831,6 +708,21 @@
         playlab_intro: Introduzione al Laboratorio
         playlab_events: 'Laboratorio: Eventi'
         playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Blocchi di Valutazione
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabili
+        msm_7_functions: Funzioni
+        infinity_playlab_intro: Play Lab - Introduzione
+        infinity_playlab_events: Play Lab - Eventi
+        infinity_playlab_repeat_forever: Play Lab - Ripeti per sempre
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
@@ -941,3 +833,9 @@
         arrows_move_actor: Usa le frecce per muovere il personaggio
         right_arrow_fireball: Usa la freccia a destra per lanciare le palle di fuoco
         name_function: Scrivi qui il nome della tua funzione
+        Infinity_move_right_runbutton: Aggiungi Sposta blocco qui
+        Infinity_move_directions_callout: Quale blocco farà spostare Baymax verso
+          l'alto quando viene premuta la freccia in su?
+        Infinity_move_collide_callout: Riproduci un suono quando si verifica questo
+          evento.
+        Infinity_repeat_callout: Posiziona Sposta blocchi qui dentro

@@ -33,9 +33,13 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 }
 
 .errorToken {
-  fill: red;
+  fill: rgb(242, 65, 24);
 }
 
 .expr {
   font-size: 20px;
+}
+
+#answerExpression {
+  fill: rgb(60, 60, 60);
 }

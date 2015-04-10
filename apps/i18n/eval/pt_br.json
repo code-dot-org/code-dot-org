@@ -1,13 +1,16 @@
 {
+  "badColorStringError": "Você usou uma cor de string inválida: {val}",
+  "badStyleStringError": "Você usou um estilo de string inválido: {val}",
   "circleBlockTitle": "círculo (raio, estilo, cor)",
-  "displayBlockTitle": "exibir",
+  "displayBlockTitle": "calcular",
   "ellipseBlockTitle": "elipse (largura, altura, estilo, cor)",
-  "extraTopBlocks": "Alguns de seus blocos estão soltos. Você pretendia conectá-los ao bloco \"exibir\"?",
+  "extraTopBlocks": "Você tem blocos não anexados. Você pretendia anexá-los ao bloco \"calcular\"?",
+  "infiniteRecursionError": "Sua função está chamando a si mesma. Fizemos com que ela parasse, caso contrário ela teria continuado a chamar a si mesma para sempre.",
   "overlayBlockTitle": "sobreposição (superior, inferior)",
   "placeImageBlockTitle": "lugar-imagem (x, y, imagem)",
   "offsetBlockTitle": "offset (x, y, imagem)",
   "rectangleBlockTitle": "retângulo (largura, altura, estilo, cor)",
-  "reinfFeedbackMsg": "Você pode clicar no botão \"Tente novamente\" para editar seu desenho.",
+  "reinfFeedbackMsg": "Você pode clicar no botão \"Continuar\" para editar seu desenho.",
   "rotateImageBlockTitle": "rotacionar (graus, imagem)",
   "scaleImageBlockTitle": "escala (fator, imagem)",
   "squareBlockTitle": "quadrado (tamanho, estilo, cor)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle": "subjacente (inferior, superior)",
   "outline": "definir",
   "solid": "sólido",
-  "string": "string"
+  "string": "string",
+  "stringMismatchError": "Você tem uma string com a capitalização errada.",
+  "userCodeException": "Ocorreu um erro durante a execução do seu código.",
+  "wrongBooleanError": "Seus blocos retornam o valor booleano errado."
 }

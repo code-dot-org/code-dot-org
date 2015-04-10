@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "calculare"},
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "Trebuie sa ataşezi un bloc la blocul \"calculează\"."},
 "equivalentExpression":function(d){return "Încercaţi să vă reordonați argumentele pentru a obţine exact aceeaşi expresie."},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Aveţi blocuri neataşate. Aţi vrut să le ataşaţi la blocul \"calculare\"?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "Funcția ta nu returnează rezultatul corect pentru toate valorile."},
 "goal":function(d){return "Obiectiv:"},
-"reinfFeedbackMsg":function(d){return "Iată povestea ta! Continuă să lucrezi la ea, sau treci la următorul puzzle!"},
-"yourExpression":function(d){return "Expresia dvs.:"}};
+"levelIncompleteError":function(d){return "Expresia nu se potriveşte obiectivului."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Aici este calculul tău! Continuă să lucrezi la el, sau treci la următorul puzzle!"},
+"yourExpression":function(d){return "Expresia dvs.:"},
+"wrongInput":function(d){return "Apelezi funcţia cu o valoare greşită."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

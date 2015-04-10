@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "गणना"},
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "बिल्कुल उसी अभिव्यक्ति प्राप्त करने के लिए अपने तर्क पुनर्व्यवस्था की कोशिश करो।"},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "आपके पास स्वाधीन ब्लॉक है। आप ये \"गणना\" ब्लॉक संग जोड़ना चाहते हैं ?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "आपका फंक्षन सभी मूल्यों के लिए सही परिणाम वापस नहीं करता है।"},
 "goal":function(d){return "लक्ष्य:"},
-"reinfFeedbackMsg":function(d){return "Here is your story! Continue working on it, or move on to the next puzzle!"},
-"yourExpression":function(d){return "आपका उत्तर"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "यहाँ अपनी गणना है! उस पर काम जारी रखे, या अगले पहेली के लिए आगे बढ़े"},
+"yourExpression":function(d){return "आपका उत्तर"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

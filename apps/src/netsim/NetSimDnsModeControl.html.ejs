@@ -1,0 +1,26 @@
+<%
+  var DnsMode = require('./netsimConstants').DnsMode;
+  var i18n = require('../../locale/current/netsim');
+
+  /**
+   * @param {exports.DnsMode} mode
+   * @param {string} label
+   */
+  function makeRadio(mode, label) {
+    %>
+    <div class="dns_mode_<%= mode %>">
+      <input id="dns_mode_<%= mode %>"
+                   type="radio"
+                   name="dns_mode"
+                   value="<%= mode %>" />
+      <label for="dns_mode_<%= mode %>"><%= label %></label>
+    </div>
+    <%
+  }
+%>
+<div class="dns-mode-control">
+  <h1><%= i18n.dnsMode() %></h1>
+  <% makeRadio(DnsMode.NONE, i18n.dnsMode_NONE()); %>
+  <% makeRadio(DnsMode.MANUAL, i18n.dnsMode_MANUAL()); %>
+  <% makeRadio(DnsMode.AUTOMATIC, i18n.dnsMode_AUTOMATIC()); %>
+</div>

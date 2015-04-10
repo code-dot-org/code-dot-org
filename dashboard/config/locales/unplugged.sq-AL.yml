@@ -51,16 +51,16 @@
         video: Unplug4
       Unplug5:
         title: Funksionet
-        desc: In this lesson, students will make a suncatcher out of string, beads,
-          and a special charm. The students will follow a series of repetitive steps,
-          then be asked to identify certain sets of "skills" that are duplicated several
-          times. Once those skills are defined, they will be called from a main program
-          and the whole beautiful process of creation will be recorded on a single
-          sheet of paper. The final program will be geared toward the entire class,
-          whatever their type of string, beads, and charms. To effectively allow for
-          this, students will need to "abstract out" the details of their specific
-          materials and create vague terms for an individual's supplies.  This use
-          of generic placeholders is a wonderful introduction to variables.
+        desc: 'Në këtë mësim, studentët do të bëjnë një suncatcher nga string, rruaza,
+          dhe një bukuri të veçantë. Studentët do të ndjekin një seri hapash të përsëritura,
+          atëherë të kërkohet për të identifikuar grupe të caktuara të "aftësive"
+          që janë të dyfishta disa herë. Pasi këto aftësi janë të përcaktuara, ata
+          do të thirren nga një program kryesor dhe i gjithë procesi i bukur i krijimit
+          do të regjistrohen në një fletë të vetme letre. Programi përfundimtar do
+          të përshtatet drejt të gjithë klasës. Për të lejuar në mënyrë efektive për
+          këtë, nxënësit do të duhet të "abstrakte nga" detajet e materialeve të tyre
+          specifike dhe të krijojnë kushte të paqarta për furnizime të një individi.
+          Ky përdorim i placeholders është një hyrje e mrekullueshme për tek variablat. '
         pdfs:
         - unplug5
         video: Unplug5

@@ -163,8 +163,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "文本"},
 "catVariables":function(d){return "變數類別"},
 "continue":function(d){return "繼續 "},
-"createHtmlBlock":function(d){return "建立HTML區塊"},
-"createHtmlBlockTooltip":function(d){return "在app中建立一個HTML區塊"},
+"container":function(d){return "建立容器"},
+"containerTooltip":function(d){return "創造一個主要的容器，並設定其內部的HTML。"},
 "finalLevel":function(d){return "恭喜！你已經完成最後的關卡。"},
 "nextLevel":function(d){return "恭喜！你已經完成這個關卡。"},
 "no":function(d){return "否"},
@@ -179,5 +179,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "步入"},
 "stepOver":function(d){return "跨過"},
 "stepOut":function(d){return "走出去"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "查看資料"},
 "yes":function(d){return "是"}};

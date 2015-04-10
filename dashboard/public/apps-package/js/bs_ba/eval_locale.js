@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "krug (poluprečnik, stil, boja)"},
 "displayBlockTitle":function(d){return "prikaz"},
 "ellipseBlockTitle":function(d){return "elipsa (širina, visina, stil, boja)"},
 "extraTopBlocks":function(d){return "Imate nepovezane blokove. Da li ste ih htjeli pridodati bloku \"prikaz\"?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "sloj (gore, dolje)"},
 "placeImageBlockTitle":function(d){return "Ubaci sliku (x, y, slika)"},
 "offsetBlockTitle":function(d){return "pomak (x, y, slika)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "podloga (dno, vrh)"},
 "outline":function(d){return "struktura"},
 "solid":function(d){return "popunjen"},
-"string":function(d){return "niz karaktera"}};
+"string":function(d){return "niz karaktera"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

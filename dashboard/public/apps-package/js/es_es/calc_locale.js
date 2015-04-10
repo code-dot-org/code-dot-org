@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "calcular"},
+"divideByZeroError":function(d){return "Su programa se traduce en la división por cero."},
+"emptyComputeBlock":function(d){return "Debes adjuntar un bloque al bloque \"evaluar\"."},
 "equivalentExpression":function(d){return "Intenta reorganizar tus argumentos para obtener exactamente la misma expresión."},
-"extraTopBlocks":function(d){return "Tienes bloques sin unir. ¿Quisiste unirlos al bloque \"calcular\"?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "evaluar"},
+"extraTopBlocks":function(d){return "Usted tiene bloques sueltos \"separados\". Quiso decir adjuntar estos para el bloque de \"evaluar\"?"},
+"failedInput":function(d){return "Tu función no devuelve el resultado correcto para todos los valores."},
 "goal":function(d){return "Objetivo:"},
-"reinfFeedbackMsg":function(d){return "¡Aquí está tu historia! Sigue trabajando en ella, o pasa al siguiente acertijo!"},
-"yourExpression":function(d){return "Tu expresión:"}};
+"levelIncompleteError":function(d){return "Su expresión no coincide con la meta."},
+"missingFunctionError":function(d){return "Se debe definir una función denominada "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "A su expresión le falta la variable"},
+"reinfFeedbackMsg":function(d){return "¡Aquí está tu cálculo! ¡Sigue trabajando en ello, o pasa al siguiente puzle!"},
+"yourExpression":function(d){return "Tu expresión:"},
+"wrongInput":function(d){return "Estás llamando tu función con el valor incorrecto."},
+"wrongOtherValuesX":function(d){return "Su expresión da como resultado el valor incorrecto si variamos "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Su expresión no devuelve el resultado correcto."}};

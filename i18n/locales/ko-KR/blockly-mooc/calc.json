@@ -1,9 +1,17 @@
 {
-  "compute":"계산",
+  "divideByZeroError":"프로그램의 결과가 0으로 나누기가 되었습니다.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "equivalentExpression":"같은 계산결과가 나올 수 있도록 다시 배치하세요.",
-  "extraTopBlocks":"붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"계산하기\"블럭에 붙이려고 했나요?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"함수가 모든 값에 대해서 올바른 결과를 반환하지 않습니다.",
   "goal":"목표값:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"계산식:"
+  "levelIncompleteError":"수식이 목표 값과 일치하지 않습니다.",
+  "missingFunctionError":"{functionName} 이라는 함수를 반드시 정의해야 합니다.",
+  "missingVariableX":"수식에 변수 {var}가 빠졌습니다.",
+  "reinfFeedbackMsg":"축하합니다! 계속해서 작업을 하거나, 다음 퍼즐로 넘어갈 수 있습니다!",
+  "yourExpression":"계산식:",
+  "wrongInput":"잘못된 값으로 함수를 호출하고 있습니다.",
+  "wrongOtherValuesX":"만약 {var}를 바꾼다면 수식의 결과가 틀릴 것입니다.",
+  "wrongResult":"수식이 정확한 결과를 반환하지 않습니다."
 }

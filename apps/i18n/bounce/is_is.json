@@ -59,7 +59,7 @@
   "putdownTower": "setja niður turn",
   "reinfFeedbackMsg": "Þú getur smellt á \"Reyna aftur\" hnappinn til þess að spila leikinn aftur.",
   "removeSquare": "fjarlægja ferning",
-  "repeatUntil": "endurtaka uns",
+  "repeatUntil": "endurtaka þar til",
   "repeatUntilBlocked": "meðan slóð framundan",
   "repeatUntilFinish": "endurtaka þar til búið",
   "scoreText": "Skor: {playerScore} : {opponentScore}",

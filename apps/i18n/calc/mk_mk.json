@@ -1,9 +1,17 @@
 {
-  "compute": "Пресметај",
+  "divideByZeroError": "Your program results in division by zero.",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "equivalentExpression": "Обидете се со промена на распоредот на вашите аргументи за да се добие ист израз.",
+  "evaluate": "evaluate",
   "extraTopBlocks": "Имате неповрзани блокови. Дали мислевте да се закачите на овие на \" пресмета\" блок ?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Цел:",
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Еве ја твојата приказна ! Продолжи да работиш на неа, или се движи кон следниот мозаик!",
-  "yourExpression": "Вашиот израз:"
+  "yourExpression": "Вашиот израз:",
+  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

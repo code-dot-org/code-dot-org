@@ -569,130 +569,6 @@
           blocket. Ha det så kul!'
         studio_ec_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför
           för att låta vänner prova ditt spel på sina telefoner.
-    levelbuilder:
-      frozen line:
-        instructions: Hej! Jag är Elsa av Arendal. Hjälp mig göra en rak linje.
-      frozen perpendicular:
-        instructions: Nu ska vi se om vi kan göra två linjer i 90 graders vinkel mot
-          varandra. Du kommer att behöva använda blocken "Sväng" och "Gå".
-      frozen square iterative:
-        instructions: Vi verkar vara halvvägs med att göra en kvadrat. Låt oss sätta
-          ihop 4 linjer så att det blir en kvadrat.
-      frozen square loop:
-        instructions: Hej, jag är Anna av Arendal! Låt oss göra en kvadrat med hjälp
-          av blocket "Upprepa", så att vi kan använda färre block. Hur många gånger
-          (???) ska "Upprepa" blocket repetera blocken inuti för att det ska bli en
-          kvadrat?
-      frozen square loop 3x:
-        instructions: Låt oss göra tre kvadrater, och svänga efter varje kvadrat.
-          Se till att svänga 120 grader före varje ny kvadrat.
-      frozen square snowflake:
-        instructions: Kan du skapa en snöflinga genom att använda "Upprepa" blocket
-          för att göra 10 kvadrater och "Sväng" blocket för att svänga 36 grader mellan
-          varje kvadrat?
-      frozen cross:
-        instructions: Använd blocket "Upprepa" för att skapa ett plustecken. Har du
-          märkt att Elsa kan gå både framåt och bakåt?
-      frozen cross rotate:
-        instructions: Prova nu att upprepa det 10 gånger. Hur många grader behöver
-          du svänga mellan varje linje?
-      frozen cross rotate dense:
-        instructions: 'Låt oss upprepa det 90 gånger! Hur många gånger går 90 på 360?
-          Tips: Det är en riktigt låg siffra.'
-      frozen diamond:
-        instructions: 'Vi skapar ett parallellogram. Det är som en kvadrat fast den
-          har andra vinklar: 60 och 120 graders vinklar istället för 90 graders vinklar.'
-      frozen diamond mini snowflake:
-        instructions: Visste du att varenda snöflinga har en helt unik form? Låt oss
-          skapa en ny snöflinga genom att använda "Upprepa" blocket och göra ett parallellogram
-          4 gånger, och svänga höger 90 grader mellan varje parallellogram.
-      frozen diamond snowflake:
-        instructions: Nu provar vi att skapa en ny snöflinga genom att använda upprepa
-          blocket för att göra 10 parallellogram och svänga höger med 36 grader mellan
-          varje.
-      frozen circle:
-        instructions: En cirkel är en speciell form. Kan du tänka ut vad frågetecknen
-          behöver ersättas med för siffra för att det ska bli en cirkel?
-      frozen circle function:
-        instructions: Använd det nya "skapa en cirkel" blocket för att göra 10 cirklar
-          som överlappar varandra. Glöm inte att hoppa framåt mellan cirklarna.
-      frozen circle function in circle:
-        instructions: Låt oss nu skapa 20 cirklar som överlappar varandra, och svänga
-          18 grader mellan varje cirkel.
-      frozen circle function with parameter:
-        instructions: Här är ett "skapa en cirkel" block som kan göra cirklar i olika
-          storlekar. Kan du använda det för att skapa en liten cirkel med storlek
-          5 och en större cirkel med storlek 10?
-      frozen snowflower:
-        instructions: Enkla former kan kombineras och bli avancerade snömönster. Kan
-          du gör ett mönster genom att upprepa 5 cirklar med storlek 5 och 5 cirklar
-          med storlek 10?
-      frozen snowflake branch:
-        instructions: Prova att använda blocket "skapa en snöflinge-gren" för att
-          skapa tre grenar, som blir början på en snöflinga.
-      frozen snowflake full:
-        instructions: Prova nu att upprepa det 8 gånger, så att det blir en vacker
-          snöflinga!
-      frozen freeplay:
-        instructions: Du har blivit en konstnärlig mästare! Skapa ett vinterlandskap
-          och dela med dina vänner.
-      scrat 16:
-        instructions: Ekollon! Ekollon! Ekollon! Använd ett "om" block för att få
-          mig dit med minsta antalet block.
-      scrat 17:
-        instructions: OK, låt oss göra att igen för att träna - detta inte är så olikt,
-          men se upp för väggen!
-      scrat 18:
-        instructions: '"om-annars" blocken kontrollerar ett villkor, och utför sedan
-          en sak eller en annan. För att få mig till ekollonet, försök att använda
-          detta nya block.'
-      scrat 19:
-        instructions: Mer träning med "Om/annars"-blocket, kan du få det rätt på första
-          försöket?
-      scrat 20:
-        instructions: Kan du lägga till bara 3 block för att hjälpa mig att lösa en
-          mer komplex labyrint? Om du gör det rätt, kan jag gå vilken kurvig väg som
-          helst oavsett längd. Skynda! Isen smälter!
-      Standalone_Artist_1:
-        instructions: Välkommen till Artist! Först och främst, låt oss försöka göra
-          en enkel kvadrat med 'sväng höger' block och 'gå framåt' blocket. Varje
-          sida ska vara 100 bildpunkter lång.
-      Standalone_Artist_2:
-        instructions: Rita denna diamant med 120 och 60 graders vinklar och 150 pixlar
-          långa sidor.
-      Standalone_Artist_3:
-        instructions: Kan du rita denna hexagon med 100 pixlar långa sidor och 60
-          graders vinklar?
-      Standalone_Artist_4:
-        instructions: Nu har du fått ett nytt block att leka med, slingan(loop). Den
-          upprepar en uppsättning kommandon. Vad händer om du upprepar dessa kommandon
-          6 gånger?
-      Standalone_Artist_5:
-        instructions: Hur många gånger behöver du loopa denna diamant för att rita
-          en blomma?
-      Standalone_Artist_5.5:
-        instructions: 'Lägg märke till hur vi förenklat diamant koden genom att köra
-          den i en loop. Du kan upprepa hela sekvensen 12 gånger för att  rita blomman.
-          Tips: Du måste svänga 30 grader efter din diamant-loop så du inte ritar
-          över samma diamant.'
-      Standalone_Artist_6:
-        instructions: 'Loopa den här hexagon-koden 6 gånger för att skapa dess utseende.
-          Hur många grader måste du svänga varje gång? Tips: dividera antalet grader
-          i en cirkel med antalet gånger du loopar.'
-      Standalone_Artist_7:
-        instructions: 'En funktion är ett annat programmerings- verktyg som hjälper
-          dig att undvika att upprepa dig själv. Denna funktion ritar en blomma, så
-          du kan använda den varje gång du vill rita en blomma. Använd detta och det
-          nya hoppa-blocket för att rita dessa blommor. Tips: Blommorna är 150 pixlar
-          från varandra'
-      Standalone_Artist_8:
-        instructions: Här är en funktion som kallas "Rita en form" som vi har programmerat
-          till att rita hexagoner. Kör koden för att se vad den gör och experimentera
-          med funktionen för att se vad som händer. Kan du göra så att denna funktion
-          ritar ett mönster av kvadrater, trianglar eller oktagoner?
-      Standalone_Artist_9:
-        instructions: Gå vidare nu och rita vilken bild du vill! Du har även en tom
-          funktion som du kan göra vad du vill med!
     video:
       name:
         maze_intro: Labyrint Introduktion
@@ -752,6 +628,7 @@
         C2_relay_programming: Relä programmering
         C2_paper_airplanes: Pappersflygplan
         C2_digital_footprint: Ditt digitala fotavtryck
+        C2_digital_footprint_v2: Ditt digitala fotavtryck
         C3_maze_level_4: 'Labyrint: slingor'
         C3_artist_intro: Konstnär Introduktion
         C3_artist_functions: Artist Funktioner
@@ -792,6 +669,21 @@
         playlab_intro: Introduktion till Play Lab
         playlab_events: Play Lab händelser
         playlab_repeat_forever: Play Lab Upprepa för evigt
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabler
+        msm_7_functions: Funktioner
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: Dra ett "flytta" block och fäst det under det andra blocket
@@ -887,3 +779,8 @@
         arrows_move_actor: Använd piltangenterna för att flytta figuren
         right_arrow_fireball: Använd högerpiltangenten för att skjuta eldklot
         name_function: Skriv namnet på din funktion här
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

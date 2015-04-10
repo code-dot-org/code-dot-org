@@ -6,11 +6,12 @@ ja-JP:
   csedweek_dates: 2014年12月8～14日
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>が始まります。先生方と主催者のみなさん、<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>の計画をしましょう'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">コンピュータサイエンスの先生ですか？他のCSEdWeekをご覧ください</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h2>Hour of Code</h2><h3>を試したことがある</h3>'
+  n_have_learned_an_hoc: '<h1>さあ、</h1><h2>コードの時間</h2><h3># をはじめよう</h3>'
   anybody_can_learn: 誰でも学べます
   learn_now: 今すぐ学ぶ
   petition_message: すべての学校の、すべての生徒が、コンピュータサイエンスを学ぶ機会を得るべきです
   petition_sign_message: 同意して、署名をする。参加する
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: 名前
   email: Eメール
   zipcode: 郵便番号または国名
@@ -23,7 +24,7 @@ ja-JP:
   hoc2014_teachers: 先生方
   hoc2014_host: 主催する
   hoc2014_everyone: 全員
-  hoc2014_support: サポートする
+  hoc2014_support: 'サポートする &#x25BE;'
   hoc2014_whatishoc: Hour of Codeとは何でしょうか？
   twentyhours_trynow: 今すぐ試す
   california_heading: コンピュータサイエンスを教えるよう学校に依頼する
@@ -92,6 +93,7 @@ ja-JP:
   learn_classes: 近くのクラスを見つける
   hoc_is_here: '#HourOfCode はここです - 見つける @codeorg'
   just_did_hoc: '私は #HourOfCode に挑戦しました - 見つける @codeorg'
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Hour of Codeを学ぶ
   beyond_hoc: 1 時間を超えて
   what_gender: 性別は？
@@ -106,10 +108,11 @@ ja-JP:
   students_and_lines: '学生%{students} がHour of Code を行い、%{lines}行のコードを書きました'
   start_hoc: Hour of Codeに今すぐ挑戦する
   contact_form_topic_press: プレス/メディア(インタビュー 又は講演)
-  stats_michael: '「私は<b>これまでに<b>こんなに生徒たちが興味をもって勉強しているのをみたことがありません。」 - マイケル クラーク, 教師'
   stats_nina: '「毎日、100%の取り組みがみられました。」 - ニーナ ニコルズピーリー, 教師'
   stats_student: '「私はこれが<b>一生に一度</b>のチャンスだと知っていました。」 - マリアナ アルザテ, 小学5年生'
+  stats_michael: '「私は<b>これまでに<b>こんなに生徒たちが興味をもって勉強しているのをみたことがありません。」 - マイケル クラーク, 教師'
   studiobar_title: "<a href='http://studio.code.org'> Code Studio </a>を試す"
+  studiobar_title_nolink: Code Studio を試す
   studiobar_elementary_title: 初級コース
   studiobar_elementary_body: 'K&#8209;5 の生徒のための、3つの新しいコース'
   studiobar_hoc_title: Hour of Code
@@ -123,7 +126,95 @@ ja-JP:
   studiobar_donate_title: 寄付する
   studiobar_donate_body: 1ドルの寄付ごとに、一人の子供が学びます
   studiobar_shop_title: ショップ
-  studiobar_shop_body: いままでの考え方を変えよう。私たちのロゴに誇りを持とう。
+  studiobar_shop_body: いままでの考え方を変えよう。誇りを持って私たちのロゴをつけよう。
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
+  homepage_hero_text_susan: |
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: Hour of Code
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: コース4
+  homepage_slot_text_shop: ショップ
+  homepage_slot_text_flappy: Flappy Code
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: 「コードの時間」に挑戦する
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: 生徒
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: 寄付する
   contact_form_topic_student: 私は学生です
   contact_form_topic_parent: 私は親です
   contact_form_topic_teacher: 私は、教師/教育者です
@@ -244,7 +335,7 @@ ja-JP:
   dashboard_students_new_section: '新しいセクションを作成しました！<b>生徒を追加</b>、<b>複数の生徒を追加</b>ボタンをつかって、生徒を追加してください。'
   dashboard_students_placeholder_name: 生徒の名前
   dashboard_students_name: 名前
-  dashboard_students_progress: Progress
+  dashboard_students_progress: 進行状況
   dashboard_students_age: 年齢
   dashboard_students_gender: 性別
   dashboard_students_male: 男性
@@ -291,6 +382,8 @@ ja-JP:
   dashboard_login_picture: 画像
   dashboard_login_none: Eメール
   dashboard_new_password: '新規パスワード:'
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: not completed
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
@@ -499,7 +592,7 @@ ja-JP:
   tynkerapp_shortdescription: 楽しいコーディングのパズルでプログラミングを学ぶ
   robomindnl_shortdescription: バーチャルロボットのためのコードを書く
   flappy_shortdescription: '自分のゲームを作る - フラッピーバード、サメまたは、潜水艦'
-  bitsbox_shortdescription: JavaScriptを使って、遊んで共有するアプリを作成します
+  bitsbox_shortdescription: JavaScriptを使って、遊んだり共有できるアプリを作成します
   makegameswithus_shortdescription: iPhoneのゲームを作りましょう！コードの書き方を学び、モンスターに新しい動きを教えましょう！
   touchdevelop_shortdescription: 携帯電話でパズルを解いたり、ゲームを作って、コーディングについて学ぶ
   appinventor_shortdescription: あなたのアプリケーションを作りましょう！(Android限定)

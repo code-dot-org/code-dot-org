@@ -1,0 +1,23 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-02-24T19:32:54.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Are you ready to move on?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Yes",
+        "correct": true
+      }
+    ],
+    "title": "Overview of K-5 Courses",
+    "content1": "Watch this video to understand our offerings of computer science courses for elementary school students.",
+    "markdown": "We believe that every student should have the opportunity to learn computer science, and the reasons are far more varied than simply having a strong resume. Critical thinking, logic, persistence, and creativity help students excel at problem-solving in all subject areas, no matter what their age.\n\nAt Code.org, we recognize that this benefit begins early. That's why we have partnered with Thinkersmith and Common Sense Media to develop an exciting and engaging curriculum that allows students to explore the limitless world of technology, beginning in elementary school.\n\nWatch this video to understand our offerings of computer science courses for elementary school students.\n\n<iframe width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/0OJlxaOIQMA\" frameborder=\"0\" allowfullscreen></iframe>\n"
+  },
+  "md5": "d26ad32a8df68eed471efda16fba1f7f"
+}]]></config>
+</Multi>

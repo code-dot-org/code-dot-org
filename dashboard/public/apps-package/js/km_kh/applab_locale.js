@@ -54,8 +54,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "អត្ថ​​បទ"},
 "catVariables":function(d){return "អ​ថេរ"},
 "continue":function(d){return "បន្ត"},
-"createHtmlBlock":function(d){return "បង្កើត​ប្លុក html"},
-"createHtmlBlockTooltip":function(d){return "បង្កើត​ប្លុក HTML មួយ​នៅ​ក្នុង​កម្មវិធី។"},
+"container":function(d){return "create container"},
+"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
 "finalLevel":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​ចុង​ក្រោយ​ហើយ។"},
 "nextLevel":function(d){return "សូម​អបអរ​សាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​នេះ​ហើយ។"},
 "no":function(d){return "ទេ"},
@@ -70,5 +70,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Step in"},
 "stepOver":function(d){return "Step over"},
 "stepOut":function(d){return "Step out"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "មើល​ទិន្នន័យ"},
 "yes":function(d){return "យល់ព្រម"}};

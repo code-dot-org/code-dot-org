@@ -1,9 +1,17 @@
 {
-  "compute": "berechnen",
+  "divideByZeroError": "Das Programm führt zu einer Division durch Null.",
+  "emptyComputeBlock": "Du musst einen Block mit dem \"berechnen\" Block verbinden.",
   "equivalentExpression": "Versuche deine Argumente neu zu ordnen, um genau das gleiche Ergebnis zu bekommen.",
-  "extraTopBlocks": "Sie haben unverbundene Blöcke. Wollten sie diese an den \"berechnen\" Block knüpfen?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "evaluate": "Bewerten",
+  "extraTopBlocks": "Du hast unverbundene Blöcke. Wolltest du sie mit dem \"berechnen\" Block verknüpfen?",
+  "failedInput": "Deine Funktion gibt nicht die richtigen Werte für alle Variablen zurück.",
   "goal": "Ziel:",
-  "reinfFeedbackMsg": "Fertig, hier ist Deine Geschichte! Arbeite weiter daran und gehe zum nächsten Level!",
-  "yourExpression": "Dein Ausdruck:"
+  "levelIncompleteError": "Dein Ausdruck erfüllt nicht das Ziel.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Bei deinem Ausdruck fehlt die Variable {var}.",
+  "reinfFeedbackMsg": "Hier ist deine Berechnung! Arbeite weiter oder gehe zum nächsten Rätsel!",
+  "yourExpression": "Dein Ausdruck:",
+  "wrongInput": "Du rufst deine Funktion mit einem falschen Wert auf.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Dein Ausdruck gibt nicht das richtige Ergebnis zurück."
 }

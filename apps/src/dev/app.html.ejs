@@ -22,7 +22,8 @@
   <script type="text/javascript" src="../js/requirejs/require.js"></script>
   <script type="text/javascript" src="../js/ace/ace.js"></script>
   <script type="text/javascript" src="../js/ace/ext-language_tools.js"></script>
-  <script type="text/javascript" src="../js/droplet/droplet-full.min.js"></script>
+  <script type="text/javascript" src="../js/droplet/droplet-full.js"></script>
+  <script type="text/javascript" src="../js/ace/mode-javascript.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/droplet/droplet.min.css">
 <% } else { -%>
   <script type="text/javascript" src="../js/blockly.js"></script>
@@ -74,7 +75,7 @@
 
     <%= app %>Main(appOptions);
   </script>
-  <div id="blocklyApp"></div>
+  <div id="codeApp"></div>
   <script type="text/javascript" src="chrome34Workaround.js"></script>
 </body>
 </html>

@@ -217,16 +217,16 @@ Blockly.noEvent = function(e) {
  * @return {!Object} Object with .x and .y properties.
  * @private
  */
-Blockly.getRelativeXY_ = function(element) {
+Blockly.getRelativeXY = function(element) {
   var xy = {x: 0, y: 0};
   // First, check for x and y attributes.
   var x = element.getAttribute('x');
   if (x) {
-    xy.x = parseInt(x, 10);
+    xy.x = parseFloat(x);
   }
   var y = element.getAttribute('y');
   if (y) {
-    xy.y = parseInt(y, 10);
+    xy.y = parseFloat(y);
   }
   // Second, check for transform="translate(...)" attribute.
   var transform = element.getAttribute('transform');
@@ -237,9 +237,9 @@ Blockly.getRelativeXY_ = function(element) {
   var r = transform &&
     transform.match(/translate\(\s*([-\d.]+)([ ,]\s*([-\d.]+)\s*\))?/);
   if (r) {
-    xy.x += parseInt(r[1], 10);
+    xy.x += parseFloat(r[1]);
     if (r[3]) {
-      xy.y += parseInt(r[3], 10);
+      xy.y += parseFloat(r[3]);
     }
   }
   return xy;
@@ -260,7 +260,7 @@ Blockly.getSvgXY_ = function(element, opt_svgParent) {
   var topMostSVG = opt_svgParent || Blockly.topMostSVGParent(element);
   do {
     // Loop through this block and every parent.
-    var xy = Blockly.getRelativeXY_(element);
+    var xy = Blockly.getRelativeXY(element);
     x += xy.x;
     y += xy.y;
     element = element.parentNode;

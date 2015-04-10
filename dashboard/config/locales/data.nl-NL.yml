@@ -127,9 +127,9 @@
           paar "vooruit" blokken op elkaar en klik op "Uitvoeren" om me erbij te laten
           komen. '
         maze_2_1: Het biggetje werkt me op mijn zenuwen. Help me het te vinden!
-        maze_2_2_5: Volg het pad en breng me bij het stomme biggetje. Vermijd dynamiet
-          of er zullen veertjes dwarrelen!
-        maze_2_3: Breng me naar de groene naarling! (Pas op voor dynamiet)
+        maze_2_2_5: Volg het pad en breng me bij het gekke biggetje. Blijf weg bij
+          de TNT of er zullen veertjes dwarrelen!
+        maze_2_3: Breng me naar de groene slechterik! (Pas op voor TNT)
         maze_2_4: Rustig blijven, help me het slechte biggetje te vinden. Anders word
           ik misschien nog boos!
         maze_2_5: Er is een manier om bij het biggetje te komen met maar 2 blokken.
@@ -326,9 +326,9 @@
           aan een functie toe te voegen)'
         turtle_3_7: Voeg een input met de naam "lengte" toe aan "teken een huis" en
           teken een groot huis voor de olifant (met randen van 150 pixels lang)
-        turtle_3_8: Hier zijn alle blokken van de vorige puzzel. Bewerk "teken een
-          huis" zodat ik rechts onderin eindig na het tekenen van een nieuw huis.
-          Gebruik deze bewerkte functie om drie huizen te tekenen.
+        turtle_3_8: Pas "teken een huis" aan zodat ik in de hoek linksonder beland
+          na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie
+          huizen te tekenen.
         turtle_3_9: Kan je deze "teken een huis" functie namaken zonder hulp? Probeer
           het, en teken daarna een rijtje huizen.
         turtle_3_10: Je hebt al een heleboel geleerd! Nu kun je het gebruiken om te
@@ -426,9 +426,8 @@
         flappy_8: Je kan de vormgeving altijd veranderen, niet alleen als het spel
           start. Probeer een WILLEKEURIGE achtergrond in te stellen als er iet gebeurd,
           als Flappy bijvoorbeeld een obstakel passeert.
-        flappy_9: Probeer om het nog moeilijker te maken de punten terug te zetten
-          naar 0 als Flappy een obstakel of de grond raakt. Dus zonder het spel te
-          eindigen.
+        flappy_9: Probeer voor de verandering om, als je een obstakel raakt, het spel
+          niet te beëindigen maar de score weer op 0 te zetten.
         flappy_11: Maak je eigen Flappy spel. Je kunt de vormgeving en de regels helemaal
           veranderen, zelfs de zwaartekracht. Druk als je klaar bent op afronden om
           je vrienden je spel te laten spelen op hun telefoons.
@@ -553,23 +552,24 @@
           de kat hallo laat zeggen als hij aankomt.
         studio_k1_5: Kan je een blok toevoegen zodat de octopus blij wordt?
         studio_k1_6: Maak je eigen verhaal! Beweeg de kat en de hond en laat ze praten.
-        maze_wordsearch_k_1: Verplaats me zodat het woord OOST gespeld wordt
-        maze_wordsearch_k_2: Verplaats me zodat het woord ZUID gespeld wordt
+        maze_wordsearch_k_1: Verplaats me zodat het woord EAST (oost) gespeld wordt
+        maze_wordsearch_k_2: Verplaats me zodat het woord SOUTH (zuid) gespeld wordt
         maze_wordsearch_k_3: Verplaats me zodat het woord WEST gespeld wordt
-        maze_wordsearch_k_4: Verplaats me zodat het woord NOORD gespeld wordt
-        maze_wordsearch_k_6: Verplaats me Oost en dan Zuid zodat het woord SPRING
+        maze_wordsearch_k_4: Verplaats me zodat het woord NORTH (noord) gespeld wordt
+        maze_wordsearch_k_6: Verplaats me Oost en dan Zuid zodat het woord JUMP (spring)
           gespeld wordt
         maze_wordsearch_k_9: Verplaats me in een richting, dan in een andere richting
           zodat CODE gespeld wordt
         maze_wordsearch_k_13: Verplaats me in een richting, dan in een andere richting
           zodat DEBUG gespeld wordt
         maze_wordsearch_k_15: Verplaats me in een richting, dan in een andere richting
-          zodat BOVEN gespeld wordt
+          zodat ABOVE (boven) gespeld wordt
         maze_wordsearch_k_16: Verplaats me in een richting, dan in een andere richting
-          zodat BENEDEN gespeld wordt
+          zodat BELOW (onder) gespeld wordt
         maze_wordsearch_k_20: Dit is een test! Verplaats me in een richting, dan in
-          een andere richting zodat VERHAAL gespeld wordt
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+          een andere richting zodat STORY (verhaal) gespeld wordt
+        applab_ec_simple: Maak jouw app door de blokken in de gereedschapskist te
+          gebruiken.
         turtle_ec_1_2: 'Teken een vierkant. OPMERKING: gebruik je favoriete kleur
           door deze te kiezen in het nieuwe "Penkleur" blok.'
         turtle_ec_1_10: 'Het is je gelukt! Teken nu alles wat je wilt. Wat leuke ideeën:
@@ -577,132 +577,6 @@
           block. Veel plezier!'
         studio_ec_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish
           om je vrienden toe te laten je spel te proberen op hun telefoons.
-    levelbuilder:
-      frozen line:
-        instructions: Hallo! Ik ben Elsa van Arendelle. Help mij met het maken van
-          een enkele lijn.
-      frozen perpendicular:
-        instructions: Laten we nu eens kijken of we twee lijnen die 90 graden van
-          elkaar afstaan kunnen maken. Je moet het "Draai" blok en de "Verplaats"
-          blok gebruiken.
-      frozen square iterative:
-        instructions: Het lijkt alsof we een half vierkant hebben. Laten we 4 lijnen
-          samenvoegen om een vierkant te maken.
-      frozen square loop:
-        instructions: Hoi, ik ben Anna van Arendelle! Laten we een vierkant maken
-          het blok "Herhaal", op die manier gebruik je minder blokken. Hoeveel keer
-          (?) moet het "Herhaal" blok de blokken die er in staan herhalen om een vierkant
-          te maken?
-      frozen square loop 3x:
-        instructions: Nu gaan we drie vierkanten maken en draaien na ieder vierkant.
-          Zorg er voor dat je minstens 120 graden draait voor je een nieuw vierkant
-          begint.
-      frozen square snowflake:
-        instructions: Kan je een sneeuwvlok maken met behulp van de "Herhaal" blok
-          en het "Draai" blok door 10 vierkanten te maken en 36 graden te draaien
-          na ieder vierkant?
-      frozen cross:
-        instructions: Gebruik het "Herhaal" blok om een plusteken (+) te maken. Heb
-          je gezien dat Elsa vooruit en achteruit kan bewegen?
-      frozen cross rotate:
-        instructions: Herhaal dit 10 keer. Hoeveel graden moet je draaien na iedere
-          lijn?
-      frozen cross rotate dense:
-        instructions: 'Laten we dit 90 maal herhalen! Hoeveel keer gaat 90 in 360?
-          Tip: Het is een heel klein getal.'
-      frozen diamond:
-        instructions: 'Laat ons nu een een parallellogram maken. Het is net zoals
-          een vierkant maar heeft verschillende hoeken: hoeken van 60 graden en hoeken
-          van 120 graden in plaats van hoeken van 90 graden.'
-      frozen diamond mini snowflake:
-        instructions: Wist je dat iedere sneeuwvlok een andere vorm heeft? We gaan
-          nu een sneeuwvlok maken door de met behulp van de "Herhaal" blok een parallellogram
-          4 keer te herhalen, na iedere parallellogram draaien we 90 graden naar rechts.
-      frozen diamond snowflake:
-        instructions: Nu gaan we een sneeuwvlok maken door een parallellogram 10 maal
-          te herhalen met behulp van de "Herhaal' blok. Hiervoor draaien we 36 graden
-          na iedere parallellogram.
-      frozen circle:
-        instructions: Een cirkel is een speciale vorm. Heb je een idee door welk getal
-          je de vraagtekens moet vervangen om een cirkel te tekenen?
-      frozen circle function:
-        instructions: Gebruik de nieuwe "Maak cirkel" blok om 10 elkaar overlappende
-          cirkels te maken. Vergeet niet om na iedere cirkel vooruit te springen.
-      frozen circle function in circle:
-        instructions: Nu gaan we 20 elkaar overlappende cirkels maken, draai 18 graden
-          na iedere cirkel.
-      frozen circle function with parameter:
-        instructions: Dit is de "Maak cirkel" blok waarmee je cirkels van verschillende
-          grootte kan maken. kan je deze gebruiken om een kleine cirkel te maken (grootte
-          5) en een grotere cirkel (grootte 10)?
-      frozen snowflower:
-        instructions: Je kan met zeer eenvoudige vormen ingewikkelde patronen maken.
-          Kan je een patroon maken door 5 cirkels (grootte 5) en 5 cirkels (grootte
-          10) te herhalen?
-      frozen snowflake branch:
-        instructions: Gebruik de "Maak sneeuwvlok tak" blok en maak hier drie takken
-          mee die er uitzien als een sneeuwvlok.
-      frozen snowflake full:
-        instructions: Nu gaan we dit 8 keer herhalen om een mooie sneeuwvlok te maken!
-      frozen freeplay:
-        instructions: Je bent nu een echte kunstenaar geworden! Maak een mooi winterlandschap
-          en deel het met je vrienden.
-      scrat 16:
-        instructions: Eikel! Eikel! Eikel! Gebruik een "als"-blok om me op de juiste
-          plek te krijgen met het minste aantal blokken.
-      scrat 17:
-        instructions: Ok, nog een keer om te oefenen - deze is niet zo anders, maar
-          pas op voor de muur!
-      scrat 18:
-        instructions: Het "als anders"-blok kijkt naar een voorwaarde, en doet het
-          één OF het ander. Probeer dit blok te gebruiken om me naar de eikel te brengen.
-      scrat 19:
-        instructions: Nog een oefening met het "als anders"-blok - lukt deze in één
-          keer?
-      scrat 20:
-        instructions: Lukt het om een moeilijker doolhof op te lossen door maar 3
-          blokken toe te voegen? Als je het goed doet kan ik ieder kronkelend pad
-          volgen, hoe lang het ook is. Schiet op! Het ijs is aan het smelten!
-      Standalone_Artist_1:
-        instructions: Welkom bij Kunstenaar! Laat ons eerst een eenvoudig vierkant
-          maken met behulp van de draai rechts blok en de beweeg vooruit blok. Iedere
-          zijde moet 100 pixels lang zijn.
-      Standalone_Artist_2:
-        instructions: Teken deze diamant met koeken van 120 graden en 60 graden en
-          zijden met een lengte van 150 pixels.
-      Standalone_Artist_3:
-        instructions: Kan je deze zeshoek tekenen met zijden van 100 pixels en bochten
-          van 60 graden?
-      Standalone_Artist_4:
-        instructions: Nu heb je een nieuwe blok om mee te spelen, de lus. Deze zal
-          een reeks van commando's herhalen. Wat gebeurt er wanneer je deze commando's
-          6 keer herhaalt?
-      Standalone_Artist_5:
-        instructions: Hoeveel maal heb je de diamant in een lus stoppen om een bloem
-          te tekenen?
-      Standalone_Artist_5.5:
-        instructions: 'Kijk hoe we de diamant code vereenvoudigd hebben door de code
-          te veranderen in een lus. Je kan de ganse reeks 12 keer herhalen om een
-          bloem te tekenen. Tip: Je moet 30 graden draaien na je diamant lus zodat
-          je niet over dezelfde diamant blijft tekenen.'
-      Standalone_Artist_6:
-        instructions: 'Gebruik de zeshoek code 6 maal in een lus om dit ontwerp te
-          tekenen. Hoeveel graden moet je iedere keer draaien. Tip: deel het aantal
-          graden in een cirkel door het aantal maal dat je een lus gebruikt.'
-      Standalone_Artist_7:
-        instructions: 'Een functie is een ander programmeer-hulpmiddel wat vermijdt
-          dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze gelijk
-          waneer gebruiken wanneer je een bloem wil tekenen. Gebruik deze en de nieuwe
-          spring blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van
-          mekaar'
-      Standalone_Artist_8:
-        instructions: Hier is de functie "teken een vorm" die we geprogrammeerd hebben
-          om zeshoeken te tekenen. voer de code uit om te zien wat deze doet en experimenteer
-          vervolgens met de functie om te zien wat er gebeurt. Kan je er patronen
-          met vierkanten, driehoeken of achthoeken mee tekenen?
-      Standalone_Artist_9:
-        instructions: Nu mag je maken wat je wil! Je hebt zelfs een lege functie die
-          je kan laten doen wat je maar wilt!
     video:
       name:
         maze_intro: Doolhof Intro
@@ -743,7 +617,7 @@
         C1_zuck_repeat_loop: Doolhof lussen
         C1_bee_loops: Bij lussen
         C1_maze_loops: Doolhof lussen
-        C1_playlab_storytelling: Speel Lab - Maak een Verhaal
+        C1_playlab_storytelling: Play Lab - Maak een Verhaal
         C1_planting_seed: Poot een Zaadje
         C1_building_foundation: Een Basis Bouwen
         C1_going_places_safely: Veilig Reizen
@@ -755,13 +629,14 @@
         C2_bee_loops: Bij lussen
         C2_bee_debugging: Bij foutopsporing
         C2_bee_conditionals: Bij voorwaardelijke instructies
-        C2_playlab_createstory: Speel Lab - Maak een Verhaal
+        C2_playlab_createstory: Play Lab - Maak een Verhaal
         C2_graph_paper: Programmeren op Ruitjespapier
         C2_conditionals_with_cards: Voorwaardelijke instructies
         C2_binary_bracelets: Binaire armbanden
         C2_relay_programming: Estafette Programmeren
         C2_paper_airplanes: Papieren Vliegtuigjes
         C2_digital_footprint: Je Digitale Voetafdruk
+        C2_digital_footprint_v2: Je Digitale Voetafdruk
         C3_maze_level_4: Doolhof lussen
         C3_artist_intro: Artiest Intro
         C3_artist_functions: Kunstenaar functies
@@ -773,7 +648,7 @@
         C3_bee_nested_loops: Genestelde lussen
         C3_bee_debugging: Bij foutopsporing
         C3_bounce: Stuiter
-        C3_playlab_create_game: Speel Lab - Maak een Spel
+        C3_playlab_create_game: Play Lab - Maak een Spel
         C3_computational_thinking: Rekenend Denken
         C3_dice_race: Dobbelstenen Race
         C3_internet: Internet
@@ -802,6 +677,21 @@
         playlab_intro: Inleiding tot Play Lab
         playlab_events: Play Lab evenenementen
         playlab_repeat_forever: Play Lab Herhaal voor altijd
+        tutorial_puzzle_challenge: Handleiding voor de Puzzel Opdracht
+        msm_1_intro: Informatica in de Wiskunde Hoofdstuk 1 Inleiding
+        msm_2_eval_block: evaluatie blokken
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variabelen
+        msm_7_functions: Functies
+        infinity_playlab_intro: Play Lab - Inleiding
+        infinity_playlab_events: Play Lab - Gebeurtenissen
+        infinity_playlab_repeat_forever: Play Lab - Oneindig Herhalen
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok
@@ -904,3 +794,9 @@
         arrows_move_actor: Gebruik de pijltjestoetsen om de acteur te bewegen
         right_arrow_fireball: Gebruik het rechter-pijltje om vuurballen te schieten
         name_function: Schrijf hier de naam van je functie
+        Infinity_move_right_runbutton: Voeg hier een verplaats blok toe
+        Infinity_move_directions_callout: Welk blok zal Baymax omhoog laten gaan wanneer
+          de pijl naar boven is ingedrukt?
+        Infinity_move_collide_callout: Speel een geluid af wanneer deze gebeurtenis
+          plaatsvindt.
+        Infinity_repeat_callout: Zet hierin verplaats blokken

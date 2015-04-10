@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "izračunaj"},
+"divideByZeroError":function(d){return "Program rezultira dijeljenjem s nulom."},
+"emptyComputeBlock":function(d){return "Morate spojiti blok sa blokom za evaluaciju."},
 "equivalentExpression":function(d){return "Pokušaj presložiti svoje argumente da dobiješ posve jednak izraz."},
-"extraTopBlocks":function(d){return "Postoje nespojeni blokovi. Želiš li da budu spojeni u blok \"izračunati\"?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "evaluate"},
+"extraTopBlocks":function(d){return "Imate blokove koji nisu spojeni. Da li ste ih htjeli spojiti sa blokom za evaluaciju?"},
+"failedInput":function(d){return "Funkcija ne vraća točan rezultat za sve vrijednosti."},
 "goal":function(d){return "Cilj:"},
-"reinfFeedbackMsg":function(d){return "Evo i tvoje priče! Nastavi raditi na njoj ili započni slijedeći zadatak!"},
-"yourExpression":function(d){return "Tvoj izraz:"}};
+"levelIncompleteError":function(d){return "Izraz ne odgovara predviđenom."},
+"missingFunctionError":function(d){return "Funkciju s imenom "+appLocale.v(d,"functionName")+" mora biti definirana."},
+"missingVariableX":function(d){return "Izrazu nedostaje varijabla "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Ovo je tvoj izračun! Nastavi raditi na njemu, ili prijeđi na sljedeći zadatak!"},
+"yourExpression":function(d){return "Tvoj izraz:"},
+"wrongInput":function(d){return "Funkcija se poziva s krivom vrijednosti."},
+"wrongOtherValuesX":function(d){return "Izraz rezultira krivom vrijednosti ako se mijenja "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Izraz ne vraća ispravan rezultat."}};

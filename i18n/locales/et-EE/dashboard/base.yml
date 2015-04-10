@@ -1,15 +1,15 @@
 et:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Palun parandage järgmised vead:'
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: on nõutud
     attributes:
       user:
-        name: Display Name
-        email: Email
+        name: Kuvatav nimi
+        email: E-post
         username: Kasutajanimi
         password: Salasõna
         password_confirmation: Salasõna kinnitus
@@ -19,13 +19,14 @@ et:
         gender: Sugu
         edit_header: Muuda kasutajakonto üksikasju
         error:
-          future: "can't be in the future"
-  hello: Hello world
+          future: tulevikus ei saa olla
+  hello: Tere maailm
   welcome_back: 'Tere tulemast tagasi, %{name}'
+  submit: Esita
   add_teacher_form:
     code:
       label: 'Lisa õpetaja:'
-      placeholder: Section Code (ABCDEF)
+      placeholder: Üksuse kood (ABCDEF)
     submit: Lisa õpetaja
   add_hint_form:
     placeholder: Palun sisesta siia oma vihje
@@ -43,34 +44,34 @@ et:
   try_hoc: 'Proovi Koodi Tundi, kliki siia >> '
   try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
-  already_started: 'Already started? Resume here >> '
+  already_started: 'Oled juba alustanud? Jätka siin>> '
   demos: 'Admin: All Demos'
   continue: Jätka
   prize: auhind
   more_info: Rohkem infot
   auth:
-    sign_in_with: 'Sign in with %{provider}'
-    signed_in: Signed in!
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
-    already_signedup: Already signed up?
+    sign_in_with: 'Logige sisse %{provider}'
+    signed_in: Olete sisse logitud!
+    signed_out: 'Olete välja loginud <a href="%{url}">Code.org</a>.'
+    sign_out_of: 'Kasutasid %{provider} sisselogimiseks. <a href="%{url}">Vajuta siia</a> et logida välja%{provider}.'
+    already_signedup: Juba registreerunud?
     notyet_signedup: Pole veel liitunud?
-    google_oauth2: Google Account
+    google_oauth2: "Google'i konto"
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Microsoft konto
     forgot_password: Unustasid oma salasõna?
-    need_confirmation: "Didn't receive confirmation instructions?"
-    need_unlock: "Didn't receive unlock instructions?"
+    need_confirmation: Ei saanud kinnituse juhiseid?
+    need_unlock: Ei saanud avamise juhiseid?
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
-    no_signup_message: 'You can <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a>, but you will need to sign up to save your progress.'
-    teacher_educator_guide: See educator guide
-    teacher_pitch: Teacher sign up for Code.org
-    teacher_title: Teacher sign up
-    student_pitch: Student sign up for Code.org
-    student_title: Student sign up
+    overview_student: 'Registreeri et oma progressi jälgida. Sinu email on primaarselt sisselogimiseks ja parooli lähtestamiseks. Rohkema info jaoks vaata <a href="http://code.org/privacy">Privaatsuspoliitikat</a>.'
+    overview_teacher: 'Õpeta arvutiteadust oma klassiruumis registreerides endale konto. <p/> Sa saad lisada õpilasi ja jälgida nende tegevuse edenemist.'
+    no_signup_message: 'Saad  <a target="_blank" href="http://learn.code.org">sirvida erinevaid tasemeid ja puslesid</a>, aga sa pead registreeruma et oma progressi eelnevalt salvestada.'
+    teacher_educator_guide: Vaata õpetajate juhendit
+    teacher_pitch: Õpetaja registreerumine Code.org-i
+    teacher_title: Õpetaja registreerumine
+    student_pitch: Õpilase registreerumine Code.org-i
+    student_title: Õpilase registreerumine
     school_name: Kooli nimi (ei ole kohustuslik)
     school_address: Kooli aadress (ei ole kohustuslik)
     address_placeholder: aaddress, linn, riik, postiindeks
@@ -86,30 +87,30 @@ et:
     valid_password: Sobilik salasõna!
     invalid_password: Salasõna peab olema vähemalt 6 tähemärgi pikkune
     mismatch_password: Sinu poolt sisestatud salasõnad ei ühti
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    student_terms: "Nõustun Code.org <a href='http://code.org/tos'> teenusetingimustega</a>. Kui ma olen alla 13-aastane, kinnitan selle vormiga, et mul on mu vanema või seaduslik eestkostja luba kasutada Code.org teenuseid.<br/>Alla 13 aastaste kasutajate E-maili aadresse ei salvestata sellisel kujul et me saaksime teiega ühendust võtta."
+    teacher_terms: "Nõustun Code.org <a href='http://code.org/tos'> teenusetingimustega</a>."
+    additional_information: Meil on vaja täiendavat teavet et sind registreerida.
   signin_form:
     title: Sul juba on konto? Logi sisse
-    login: Email or username
+    login: E-post või kasutajanimi
     password: Salasõna
     remember: Jäta mind meelde
     submit: Logi sisse
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Tahad proovida koodi kirjutamist ilma registreerimata?
     try_hoc: Proovi enne Tunni Koodi
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_20hours: Proovige meie 20-tunnist arvutiõpetuse sissejuhatust
   signinsection:
-    welcome: 'Welcome to %{section_name}'
+    welcome: 'Tere tulemast %{section_name}'
     name: Vali oma nimi
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    picture: Nüüd leida oma salajane pilt
+    words: Nüüd sisestage oma salajased sõnad
     login: Logi sisse
   password:
     reset_form:
       title: Unustasid oma salasõna?
       email: E-posti aadress
-      submit: Send me reset password instructions
+      submit: Saada mulle parooli lähtesamise juhend
     change_form:
       title: Muuda salasõna
       new_password: Uus salasõna
@@ -117,58 +118,51 @@ et:
       submit: Muuda mu parool
   welcome_email:
     subject: Liitu minu klassiga (Code.org lehel)
-    body: |
-      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
-      
-      %{link}
-      
-      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
-      
-      %{name}
+    body: 'Kliki lingile, et registreeruda arvutiõpetuse  kursustele Code.org-is (koos minuga oma "õpetaja"):%{link} Õpetused on lõbusad, visuaalselt kütkestavad ja õpetavad arvutiõpetuse põhitõdesid kasutades lihtsat, giidiga, mängu-sarnaseid kogemusi. Õpi koodi kirjutama Bill Gatesilt, Mark Zuckerbergilt, Angry birdsilt ja Plants vs Zombielt! :-) %{name}'
   follower:
     invite_sent: Kutse saadetud
     added_teacher: '%{name} lisatud kui sinu õpetaja'
-    registered: "You've registered for %{section_name}."
+    registered: 'Te olete registreeritud %{section_name}.'
     error:
-      signed_in: Please signout before proceeding
-      username_not_found: 'Username %{username} not found'
-      username_in_use: '%{username} is already taken, please pick another'
-      no_teacher: "Could not find anyone signed in with '%{teacher_email_or_code}'. Please ask them to sign up here and then try adding them again"
-      section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: Please enter a section code
-      cant_join_own_section: "Sorry, you can't join your own section."
+      signed_in: Palun logige enne jätkamist välja
+      username_not_found: 'Kasutajanime %{username} ei leitud'
+      username_in_use: '%{username} on juba võetud, palun vali teine'
+      no_teacher: "Ei leitud kedagi sisse logitud '%{teacher_email_or_code}'. Paluge neil siin sisse logida ja proovige siis neid uuesti lisada"
+      section_not_found: 'Ei leidnud jaotist koodiga "%{section_code}".'
+      blank_code: Sisestage jaotise kood
+      cant_join_own_section: Kahjuks te ei saa ühineda oma osaga.
     mail:
       invite_student:
         subject: 'Join a class with %{teacher_name} at Code.org!'
       student_disassociated:
-        subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
+        subject: 'Code.org teade: %{student_name} pole enam seotud teiega kui teie õpilane.'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as your teacher.'
+        subject: 'Code.org teade: %{teacher_name} pole enam teiega seotud õpetaja.'
   reports:
     error:
-      access_denied: "You don't have access to this person's stats"
+      access_denied: Teil pole juurdepääsu selle isiku andmetele
   redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
+    title: 'Lunastada auhindu: %{name}'
+    provider: 'Pakkuja:'
     code: 'Kood:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
+    redeem_header: 'Lunastada:'
+    donorschoose_register: Registreeri end õpetajaks DonorsChoose.org-is
     donorschoose_project: Postita projekt
-    donorschoose_how_to: How to use your code
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
-    error_us_only: The prize offer is only valid for U.S. users.
-    error_not_earned: You have not yet earned this prize.
-    error_already_redeemed: Your prize has already been redeemed.
-    no_prizes_available: "We're sorry, but we currently have no prizes available."
-    teacher_info_required: 'Teacher prizes require school name and address information:'
-    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    donorschoose_how_to: Kuidas oma koodi kasutada
+    success: Teie preemia lunastati edukalt, vt alljärgnevat koodi.
+    error: Teie auhinda ei saanud lunastada, proovi uuesti.
+    error_us_only: Preemia pakkumine kehtib ainult USA kasutajate jaoks.
+    error_not_earned: Sa pole seda auhinda veel saanud.
+    error_already_redeemed: Teie auhind on juba lunastatud.
+    no_prizes_available: Vabandame, kuid meil ei ole praegu auhindu saadaval.
+    teacher_info_required: 'Õpetaja auhinnad nõuavad kooli nime ja aadressi informatsiooni:'
+    teacher_email_required: 'Õpetaja auhindade jaoks peab olema kinnitatud e-maili aadress:'
     confirm:
       title: Palun kinnita
       "no": Ei
       "yes": Jah
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
-      msg_student: 'NOTE: You can only choose one type of prize.'
+      msg_student: 'MÄRKUS: Saad valida ainult ühe auhinnatüübi.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
       msg_visit_website: Külasta veebisaiti
     providers:
@@ -185,7 +179,7 @@ et:
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: You have earned a prize! (U.S. students only)
+      earned: Olete saanuauhinna! (Ainult USA õpilased)
       not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
       not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
       teacher:
@@ -211,15 +205,16 @@ et:
     access_denied: 'You do not have access to this %{model}.'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
+      finished_hoc: Olen lõpetanud oma Tund Koodi
       sign_in_to_save: Sign in to save progress
       free_play:
         playlab: Loo rakendus
         artist: Joonista midagi
     user:
       classroom: Õpetaja kodulehekülg
+      district_dashboard: District Dashboard
       label: 'Tere, %{username}'
-      stats: My progress
+      stats: Minu progress
       settings: Minu konto
       prizes: Auhinnad
       logout: Logi välja
@@ -227,14 +222,14 @@ et:
       signup: Liitu
       already_registered: Oled juba liitunud?
     popup:
-      progress: Your progress
+      progress: Sinu progress
       lines: 'Koodiridade koguarv: %{lines}'
       close: SULGE
-      mastery: Concepts
-      puzzle_map: Stages
-      prizes: 'Collect all %{total_trophies} trophies and win prizes!'
+      mastery: Mõisted
+      puzzle_map: Etapid
+      prizes: 'Kogu kõik %{total_trophies} trofeed ja võida auhindu!'
       prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
-      prize_us_only: (U.S. students only)
+      prize_us_only: (Ainult USA õpilased)
       prizes_link: rohkem infot
   teacher:
     title:
@@ -245,15 +240,15 @@ et:
       remove: Oled kindel, et tahad seda õpetajat eemaldada?
     tools: Õpetaja töövahendid
     followers:
-      section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
+      section: 'Jaotis:'
+      stages: 'Etappide kuvamine:'
+      show_past: 'Kuva õpilase aktiivsus (%{bullet_html}):'
+      levels_key: Tasemete võti
       perfect: Tehtud, suurepärane
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
+      completed: Tehtud, kuid liiga paljude plokkidega
+      tried: Proovitud, aga ei lõpetanud
+      not_tried: Pole veel proovinud
+      activity: 'Näitab õpilase aktiivsust viimasel %{hours}%{plural}'
       no_section: No assigned section
       trophies: Trofeed
     students:
@@ -261,33 +256,33 @@ et:
       username: Kasutajanimi
       password: Salasõna
       manage: Halda õpilasi
-      dashboard: Go to Teacher Dashboard
+      dashboard: Mine õpetaja menüüsse
       add: Lisa õpilasi
       remove: eemalda õpilane
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: 'First, please %{add_section}'
+      confirm_remove: Kas olete kindel et soovite selle õpilase eemaldada?
+      help_reassign: Et oma klassi erinevateks osaks jagada, valige õpilased mida tahate uude jaotisesse määrata.
+      help_register: 'Selle asemel et iga õpilase infot eraldi importida, saate oma  klassi kiirelt kokku panna, lastes neil registreeruda. Teie õpilased peavad valima kasutajanimed ja paroolid aga nad ei pea andma oma e-maili aadressi. kui õpilane oma parooli unustab saate selle ise lähtestada.'
+      register: Palun laske oma õpilastel ise registreeruda
+      vist: Paluge õpilastel külastada
+      section_code: 'ja sisestage nende jaotise kood:'
+      first_please: 'Esiteks, palun %{add_section}'
       for: For
-      enter: 'enter:'
+      enter: 'Sisestage:'
     sections:
-      add: Add section
-      manage: Manage sections
-      section: Section
-      students: Students
-      section_code: Section Code
+      add: Jaotise lisamine
+      manage: Halda jaotisi
+      section: Jaotis
+      students: Õpilased
+      section_code: Jaotise kood
       add_section_code: Add Students Section-Code
       secret: Secret type
-      grade: Grade
+      grade: Klass
       course: Kursus
       rename: nimeta ümber
       edit: muuda
       delete: kustuta
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
+      confirm_delete: Olete kindel et soovite selle sektsiooni kustutada?
+      email: Saada e-postiga
     rollup: Progress Dashboard
     activity: Recent class activity
     user_not_found: The teacher or student could not be found
@@ -296,6 +291,8 @@ et:
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: (we need your current password to confirm your changes)
@@ -319,15 +316,14 @@ et:
     teacher_reg_link: Teacher Sign Up
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
     teacher_dashboard: See progress dashboard
-    teacher_student_count_one: 'You have %{count} student.'
-    teacher_student_count: 'You have %{count} students.'
-    teacher_averages: 'On average your students have earned %{trophy_average} out of %{trophy_max} "Concept Mastery" trophies.'
-    teacher_print_certificates: Print certificates for students who finish this course
+    teacher_student_count_one: 'Sul on %{count} õpilane.'
+    teacher_student_count: 'sul on %{count} õpilast.'
+    teacher_averages: 'Teie Õpilased on keskmiselt teeninud %{trophy_average}/%{trophy_max} "Kontseptsiooni Meisterlikkuse" trofeed.'
+    teacher_print_certificates: Saate printida tunnistusi õpilastele, kes selle kursuse lõpetasid
     teacher_read_blog: Read about news and updates to our materials at our Educator Blog
-    classroom: Your classroom
-    student_progress: Your learning progress
-    student_stats: |-
-      You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
+    classroom: Teie klass
+    student_progress: Sinu õppeprogress
+    student_stats: 'Sa oled saanud %{trophy_count}/%{trophy_max} "Kontseptsiooni Meisterlikkuse" trofeed.'
     student_left_off: 'Kus sa pooleli jäid:'
     student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
     local_school: kohalik kool
@@ -347,19 +343,19 @@ et:
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     your_gallery: Galerii
   gender:
-    male: Male
-    female: Female
-    none: Prefer not to answer
+    male: Mees
+    female: Naine
+    none: Ei soovi vastata
   user_type:
     student: Õpilane
     teacher: Õpetaja
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+    help_from_html: 'Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid  luua selle õppekeskkonna.'
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     powered_by_aws: Powered by Amazon Web Services
-    feedback: Provide feedback
-    translate: Help us translate to your language
-    support: Support
+    feedback: Tagasiside
+    translate: Aita meil tõlkida oma keelde
+    support: Tugi
     support_url: http://support.code.org
     tos: Terms
     privacy: Privacy Policy
@@ -379,7 +375,7 @@ et:
     download: Lae video alla
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Me töötame teie brauseri toe kallal.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Peida see hoiatussõnum
     upgrade:
@@ -411,8 +407,8 @@ et:
     destroyed: You destroyed a script.
     manage: Build Levels
     view: Vaata
-    back: Back to scripts
-    success: You successfully edited the blocks.
+    back: Tagasi skriptide juurde
+    success: Olete edukalt plokke muutnud.
     level:
       create: Loo uus tase
       current: Olemasolevad tasemed
@@ -420,7 +416,7 @@ et:
   upsell:
     hoc:
       title: Koodi Tund
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: Proovige arvutiteaduse alused. Miljonid on proovinud.
     flappy:
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
@@ -435,23 +431,26 @@ et:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
-    students_drew_these_with_code: Students drew these with code!
+    students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
     students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
     activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
-    more: 'More &rarr;'
+    more: 'Rohkem &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
-    caption_time_ago: '%{time_ago} ago'
+    caption_time_ago: '%{time_ago} tagasi'
     header: Galerii
     header_playlab: Play Lab
     header_artist: Artist
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
-    report_bug: Report Bug
+    feedback: Anna tagasisidet
+    report_bug: Raporteeri veast
     support: Get Help
     support_url: //support.code.org
   multi:
@@ -464,6 +463,13 @@ et:
     wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!
     correct_title: Õige
     correct_body: See on õige vastus.
+  contract_match:
+    wrong_title: Vale vastus
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Sisesta siia oma vastus
   dialog:
@@ -479,7 +485,7 @@ et:
           title: K-8 Intro to Computer Science Course (15-25 hours)
           description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
         Hour of Code:
-          title: Koodi Tund
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Muuda koodi
@@ -488,7 +494,7 @@ et:
           title: Sündmused
           description: ""
         builder:
-          title: Builder
+          title: Ehitaja
           description: ""
         flappy:
           title: Flappy Code
@@ -509,11 +515,44 @@ et:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: tehtud, suurepärane
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Salvesta
+    delete: Kustuta
+    exit: Return to Course
+    my_projects: My Projects
+    share: Jaga
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Veel
+    name: Nimi
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Kas kustutada?
+    delete_yes: Jah
+    delete_no: Ei
+    saved: Saved
+    not_saved: Not saved
+    cancel: Tühista
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

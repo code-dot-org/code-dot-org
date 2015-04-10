@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({13:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({19:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":3,"./applab":6,"./blocks":7,"./levels":12,"./skins":14}],14:[function(require,module,exports){
+},{"../appMain":5,"./applab":10,"./blocks":11,"./levels":18,"./skins":21}],21:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":144}],12:[function(require,module,exports){
+},{"../skins":200}],18:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -65,83 +65,150 @@ levels.simple = {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-levels.ec_simple = {
-  'freePlay': true,
-  'editCode': true,
+levels.custom = {
   'sliderSpeed': 0.95,
-  'appWidth': 320,
-  'appHeight': 480,
   'codeFunctions': {
-    'onEvent': null,
-    'startWebRequest': null,
-    'setTimeout': null,
-    'clearTimeout': null,
-    'playSound': null,
-    'deleteElement': null,
-    'showElement': null,
-    'hideElement': null,
-    'setPosition': null,
-    'button': null,
-    'textInput': null,
-    'textLabel': null,
-    'dropdown': null,
-    'getText': null,
-    'setText': null,
-    'checkbox': null,
-    'radioButton': null,
-    'getChecked': null,
-    'setChecked': null,
-    'image': null,
-    'getImageURL': null,
-    'setImageURL': null,
-    'createCanvas': null,
-    'setActiveCanvas': null,
-    'line': null,
-    'circle': null,
-    'rect': null,
-    'setStrokeWidth': null,
-    'setStrokeColor': null,
-    'setFillColor': null,
-    'drawImage': null,
-    'getImageData': null,
-    'putImageData': null,
-    'clearCanvas': null,
-    'getKeyValue': null,
-    'setKeyValue': null,
-    'createRecord': null,
-    'readRecords': null,
-    'updateRecord': null,
-    'deleteRecord': null,
-    'moveForward': null,
-    'moveBackward': null,
-    'move': null,
-    'moveTo': null,
-    'turnRight': null,
-    'turnLeft': null,
-    'turnTo': null,
-    'arcRight': null,
-    'arcLeft': null,
-    'dot': null,
-    'getX': null,
-    'getY': null,
-    'getDirection': null,
-    'penUp': null,
-    'penDown': null,
-    'penWidth': null,
-    'penColor': null,
-    'show': null,
-    'hide': null,
+    // UI Controls
+    "onEvent": null,
+    "button": null,
+    "textInput": null,
+    "textLabel": null,
+    "dropdown": null,
+    "getText": null,
+    "setText": null,
+    "checkbox": null,
+    "radioButton": null,
+    "getChecked": null,
+    "setChecked": null,
+    "image": null,
+    "getImageURL": null,
+    "setImageURL": null,
+    "playSound": null,
+    "showElement": null,
+    "hideElement": null,
+    "deleteElement": null,
+    "setPosition": null,
+    "write": null,
+    "getXPosition": null,
+    "getYPosition": null,
+
+    // Canvas
+    "createCanvas": null,
+    "setActiveCanvas": null,
+    "line": null,
+    "circle": null,
+    "rect": null,
+    "setStrokeWidth": null,
+    "setStrokeColor": null,
+    "setFillColor": null,
+    "drawImage": null,
+    "getImageData": null,
+    "putImageData": null,
+    "clearCanvas": null,
+    "getRed": null,
+    "getGreen": null,
+    "getBlue": null,
+    "getAlpha": null,
+    "setRed": null,
+    "setGreen": null,
+    "setBlue": null,
+    "setAlpha": null,
+    "setRGB": null,
+
+    // Data
+    "startWebRequest": null,
+    "setKeyValue": null,
+    "getKeyValue": null,
+    "createRecord": null,
+    "readRecords": null,
+    "updateRecord": null,
+    "deleteRecord": null,
+    "getUserId": null,
+
+    // Turtle
+    "moveForward": null,
+    "moveBackward": null,
+    "move": null,
+    "moveTo": null,
+    "dot": null,
+    "turnRight": null,
+    "turnLeft": null,
+    "turnTo": null,
+    "arcRight": null,
+    "arcLeft": null,
+    "getX": null,
+    "getY": null,
+    "getDirection": null,
+    "penUp": null,
+    "penDown": null,
+    "penWidth": null,
+    "penColor": null,
+    "show": null,
+    "hide": null,
+    "speed" : null,
+
+    // Control
+    "forLoop_i_0_4": null,
+    "ifBlock": null,
+    "ifElseBlock": null,
+    "whileBlock": null,
+    "setTimeout": null,
+    "clearTimeout": null,
+    "setInterval": null,
+    "clearInterval": null,
+    "getTime": null,
+
+    // Math
+    "addOperator": null,
+    "subtractOperator": null,
+    "multiplyOperator": null,
+    "divideOperator": null,
+    "equalityOperator": null,
+    "inequalityOperator": null,
+    "greaterThanOperator": null,
+    "lessThanOperator": null,
+    "andOperator": null,
+    "orOperator": null,
+    "notOperator": null,
+    "randomNumber_max": null,
+    "randomNumber_min_max": null,
+    "mathRound": null,
+    "mathAbs": null,
+    "mathMax": null,
+    "mathMin": null,
+
+    // Variables
+    "declareAssign_x": null,
+    "assign_x": null,
+    "declareAssign_x_array_1_4": null,
+    "declareAssign_x_prompt": null,
+    "console.log": null,
+
+    // Functions
+    "functionParams_none": null,
+    "functionParams_n": null,
+    "callMyFunction": null,
+    "callMyFunction_n": null,
+    "return": null,
   },
 };
 
+levels.ec_simple = utils.extend(levels.custom, {
+  'freePlay': true,
+  'editCode': true,
+  'appWidth': 320,
+  'appHeight': 480,
+});
+
 // Functions in Advanced category currently disabled in all levels:
 /*
- 'container': null,
- 'innerHTML': null,
- 'setStyle': null,
- 'getAttribute': null,
- 'setAttribute': null,
- 'setParent': null,
+ "imageUploadButton": null,
+ "container": null,
+ "innerHTML": null,
+ "setStyle": null,
+ "getAttribute": null,
+ "setAttribute": null,
+ "setParent": null,
 */
 
 levels.full_sandbox =  {
@@ -227,35 +294,39 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":187,"../block_utils":17,"../utils":185}],6:[function(require,module,exports){
+},{"../../locale/current/applab":248,"../block_utils":26,"../utils":246}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
  * Copyright 2014-2015 Code.org
  *
  */
+/* global $ */
 
 'use strict';
-
+require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var applabMsg = require('../../locale/current/applab');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
-var FormStorage = require('./formStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
+var apiTimeoutList = require('../timeoutList');
+var RGBColor = require('./rgbcolor.js');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -267,6 +338,7 @@ var Applab = module.exports;
 
 var level;
 var skin;
+var user;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -311,10 +383,51 @@ function loadLevel() {
 }
 
 //
+// Adjust a media height rule (if needed). This is called by adjustAppSizeStyles
+// for all media rules. We look for a specific set of rules that should be in
+// the stylesheet and swap out the defaultHeightRules with the newHeightRules
+//
+
+function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
+  // The media rules we are looking for always have two components. The first
+  // component is for screen width, which we ignore. The second is for screen
+  // height, which we want to modify:
+  if (mediaList.length === 2) {
+    var lastHeightRuleIndex = defaultHeightRules.length - 1;
+    for (var i = 0; i <= lastHeightRuleIndex; i++) {
+      if (-1 !== mediaList.item(1).indexOf("(min-height: " +
+          (defaultHeightRules[i] + 1) + "px)")) {
+        if (i === 0) {
+          // Matched the first rule (no max height)
+          mediaList.mediaText = mediaList.item(0) +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)";
+        } else {
+          // Matched one of the middle rules with a min and a max height
+          mediaList.mediaText = mediaList.item(0) +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)" +
+              " and (max-height: " + newHeightRules[i - 1] + "px)";
+        }
+        break;
+      } else if (mediaList.item(1) === "screen and (max-height: " +
+                 defaultHeightRules[lastHeightRuleIndex] + "px)") {
+        // Matched the last rule (no min height)
+        mediaList.mediaText = mediaList.item(0) +
+            ", screen and (max-height: " +
+            newHeightRules[lastHeightRuleIndex] + "px)";
+        break;
+      }
+    }
+  }
+}
+
+//
 // The visualization area adjusts its size using a series of CSS rules that are
 // tuned to make adjustments assuming a 400x400 visualization. Since applab
 // allows its visualization size to be set on a per-level basis, the function
 // below modifies the CSS rules to account for the per-level coordinates
+//
+// It also adjusts the height rules based on the adjusted visualization size
+// and the offset where the app has been embedded in the page
 //
 // The visualization column will remain at 400 pixels wide in the max-width
 // case and scale downward from there. The visualization height will be set
@@ -326,10 +439,11 @@ function loadLevel() {
 // result in a scaled-down version of divApplab
 //
 
-function adjustAppSizeStyles() {
+function adjustAppSizeStyles(container) {
   var vizScale = 1;
   // We assume these are listed in this order:
-  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  var defaultScaleFactors = [ 1.0, 0.875, 0.75, 0.625, 0.5 ];
+  var scaleFactors = defaultScaleFactors.slice(0);
   if (vizAppWidth !== Applab.appWidth) {
     vizScale = vizAppWidth / Applab.appWidth;
     for (var ind = 0; ind < scaleFactors.length; ind++) {
@@ -337,6 +451,24 @@ function adjustAppSizeStyles() {
     }
   }
   var vizAppHeight = Applab.appHeight * vizScale;
+
+  // Compute new height rules:
+  // (1) defaults are scaleFactors * defaultAppHeight + 200 (belowViz estimate)
+  // (2) we adjust the height rules to take into account where the codeApp
+  // div is anchored on the page. If this changes after this function is called,
+  // the media rules for height are no longer valid.
+  // (3) we assume that there is nothing below codeApp on the page that also
+  // needs to be included in the height rules
+  // (4) there is no 5th height rule in the array because the 5th rule in the
+  // stylesheet has no minimum specified. It just uses the max-height from the
+  // 4th item in the array.
+  var defaultHeightRules = [ 600, 550, 500, 450 ];
+  var newHeightRules = defaultHeightRules.slice(0);
+  for (var z = 0; z < newHeightRules.length; z++) {
+    newHeightRules[z] += container.offsetTop +
+        (vizAppHeight - defaultAppHeight) * defaultScaleFactors[z];
+  }
+
   var ss = document.styleSheets;
   for (var i = 0; i < ss.length; i++) {
     if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
@@ -354,9 +486,11 @@ function adjustAppSizeStyles() {
                                    "px; width: " + vizAppWidth + "px;";
           changedRules++;
         } else if (rules[j].media && childRules) {
+          adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
+
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 3; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -367,6 +501,21 @@ function adjustAppSizeStyles() {
             } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+              // set the max-width for the parent visualizationColumn (with_padding)
+              childRules[k].style.cssText = "max-width: " +
+                  (Applab.appWidth * scale + 2) + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#codeWorkspace") {
+              // set the left for the codeWorkspace
+              childRules[k].style.cssText = "left: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
+              // set the right for the codeWorkspace (RTL mode)
+              childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
@@ -394,18 +543,16 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
-
-  // TODO: one-time initial drawing
-
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = vizAppWidth + 'px';
 };
+
+function stepSpeedFromSliderSpeed(sliderSpeed) {
+  return 300 * Math.pow(1 - sliderSpeed, 2);
+}
 
 function getCurrentTickLength() {
   var stepSpeed = Applab.scale.stepSpeed;
   if (Applab.speedSlider) {
-    stepSpeed = 300 * Math.pow(1 - Applab.speedSlider.getValue(), 2);
+    stepSpeed = stepSpeedFromSliderSpeed(Applab.speedSlider.getValue());
   }
   return stepSpeed;
 }
@@ -427,6 +574,101 @@ function outputApplabConsole(output) {
     debugOutput.value = output;
   }
   debugOutput.scrollTop = debugOutput.scrollHeight;
+}
+
+var apiWarn = outputApplabConsole;
+
+var OPTIONAL = true;
+
+function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  if (typeof opts[validatedTypeKey] === 'undefined') {
+    var properType;
+    if (expectedType === 'color') {
+      // Special handling for colors, must be a string and a valid RGBColor:
+      properType = (typeof varValue === 'string');
+      if (properType) {
+        var color = new RGBColor(varValue);
+        properType = color.ok;
+      }
+    } else if (expectedType === 'function') {
+      // Special handling for functions, it must be an interpreter function:
+      properType = (typeof varValue === 'object') && (varValue.type === 'function');
+    } else {
+      properType = (typeof varValue === expectedType);
+    }
+    properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
+    if (!properType) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
+              " parameter value (" + varValue + ") is not a " + expectedType + ".");
+    }
+    opts[validatedTypeKey] = properType;
+  }
+}
+
+function apiValidateTypeAndRange(opts, funcName, varName, varValue,
+                                 expectedType, minValue, maxValue) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedRangeKey = 'validated_range_' + varName;
+  apiValidateType(opts, funcName, varName, varValue, expectedType);
+  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
+    var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
+    if (inRange) {
+      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
+    }
+    if (!inRange) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
+              " parameter value (" + varValue + ") is not in the expected range.");
+    }
+    opts[validatedRangeKey] = inRange;
+  }
+}
+
+function apiValidateActiveCanvas(opts, funcName) {
+  var validatedActiveCanvasKey = 'validated_active_canvas';
+  if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
+    var activeCanvas = Boolean(Applab.activeCanvas);
+    if (!activeCanvas) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName +
+              "() called without an active canvas. Call createCanvas() first.");
+    }
+    if (opts) {
+      opts[validatedActiveCanvasKey] = activeCanvas;
+    }
+  }
+}
+
+function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shouldExist) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedDomKey = 'validated_id_' + varName;
+  apiValidateType(opts, funcName, varName, id, 'string');
+  if (opts[validatedTypeKey] && typeof opts[validatedDomKey] === 'undefined') {
+    var element = document.getElementById(id);
+    var exists = Boolean(element && divApplab.contains(element));
+    var valid = exists == shouldExist;
+    if (!valid) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
+              " parameter refers to an id (" + id + ") which " +
+              (exists ? "already exists." : "does not exist."));
+    }
+    opts[validatedDomKey] = valid;
+  }
 }
 
 function onDebugInputKeyDown(e) {
@@ -488,14 +730,28 @@ function handleExecutionError(err, lineNumber) {
     // this while executing (in which case, it would already have been selected)
     selectEditorRowCol(lineNumber - 1, err.loc.column);
   }
+  if (!lineNumber && Applab.interpreter) {
+    lineNumber = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+  }
   if (lineNumber) {
-    outputApplabConsole('Line ' + lineNumber + ': ' + String(err));
+    outputApplabConsole('ERROR: Line ' + lineNumber + ': ' + String(err));
   } else {
-    outputApplabConsole(String(err));
+    outputApplabConsole('ERROR: ' + String(err));
   }
   Applab.executionError = err;
   Applab.onPuzzleComplete();
 }
+
+Applab.getCode = function () {
+  return studioApp.editor.getValue();
+};
+
+Applab.getHtml = function () {
+  return Applab.levelHtml;
+};
 
 Applab.onTick = function() {
   if (!Applab.running) {
@@ -508,15 +764,27 @@ Applab.onTick = function() {
   if (Applab.interpreter) {
     Applab.executeInterpreter();
   } else {
-    if (Applab.tickCount === 1) {
-      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
-    }
+    Applab.executeNativeJS();
   }
 
   if (checkFinished()) {
     Applab.onPuzzleComplete();
   }
 };
+
+Applab.executeNativeJS = function () {
+  if (Applab.tickCount === 1) {
+    try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+  }
+};
+
+function safeStepInterpreter() {
+  try {
+    Applab.interpreter.step();
+  } catch (err) {
+    return err;
+  }
+}
 
 Applab.executeInterpreter = function (runUntilCallbackReturn) {
   Applab.runUntilCallbackReturn = runUntilCallbackReturn;
@@ -543,7 +811,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // step out to - and store that in stepOutToStackDepth:
         if (Applab.interpreter && typeof Applab.stepOutToStackDepth === 'undefined') {
           Applab.stepOutToStackDepth = 0;
-          for (var i = Applab.interpreter.stateStack.length - 1; i > 0; i--) {
+          for (var i = Applab.maxValidCallExpressionDepth; i > 0; i--) {
             if (Applab.callExpressionSeenAtDepth[i]) {
               Applab.stepOutToStackDepth = i;
               break;
@@ -560,12 +828,10 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
   var inUserCode;
   var userCodeRow;
   var session = studioApp.editor.aceEditor.getSession();
-  // NOTE: when running with no source visible or at max speed with blocks, we
+  // NOTE: when running with no source visible or at max speed, we
   // call a simple function to just get the line number, otherwise we call a
   // function that also selects the code:
-  var selectCodeFunc =
-    (studioApp.hideSource ||
-     (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
+  var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
           codegen.getUserCodeLine :
           codegen.selectCurrentCode;
 
@@ -576,12 +842,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
     if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !atMaxSpeed) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||
         (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
       // (3) have seen an empty event queue in nativeGetCallback (no events) OR
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
@@ -634,33 +901,44 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
       Applab.stoppedAtBreakpointRow = userCodeRow;
       Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
     }
-    try {
-      Applab.interpreter.step();
+    var err = safeStepInterpreter();
+    if (!err) {
       doneUserLine = doneUserLine ||
         (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
 
+      var stackDepth = Applab.interpreter.stateStack.length;
       // Remember the stack depths of call expressions (so we can implement 'step out')
 
       // Truncate any history of call expressions seen deeper than our current stack position:
-      Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
+      for (var depth = stackDepth + 1;
+            depth <= Applab.maxValidCallExpressionDepth;
+            depth++) {
+        Applab.callExpressionSeenAtDepth[depth] = false;
+      }
+      Applab.maxValidCallExpressionDepth = stackDepth;
 
       if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
         // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-        Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
+        Applab.callExpressionSeenAtDepth[stackDepth] = true;
       }
 
       if (Applab.paused) {
         // Store the first call expression stack depth seen while in this step operation:
         if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
           if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-            Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+            Applab.firstCallStackDepthThisStep = stackDepth;
           }
         }
+        // If we've arrived at a BlockStatement, set doneUserLine even though the
+        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
+        // sense (otherwise we'll skip over the first line in loops):
+        doneUserLine = doneUserLine ||
+          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
             Applab.nextStep === StepType.IN &&
-            Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+            stackDepth > Applab.firstCallStackDepthThisStep) {
           reachedBreak = true;
         }
         // After the interpreter says a node is "done" (meaning it is time to stop), we will
@@ -687,11 +965,11 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
 
         if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
           if (Applab.nextStep === StepType.OUT &&
-              Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
+              stackDepth > Applab.stepOutToStackDepth) {
             // trying to step out, but we didn't get out yet... continue on.
           } else if (Applab.nextStep === StepType.OVER &&
               typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-              Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+              stackDepth > Applab.firstCallStackDepthThisStep) {
             // trying to step over, and we're in deeper inside a function call... continue next onTick
           } else {
             // Our step operation is complete, reset nextStep to StepType.RUN to
@@ -700,7 +978,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
-              Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+              Applab.stoppedAtBreakpointStackDepth = stackDepth;
             }
             delete Applab.stepOutToStackDepth;
             delete Applab.firstCallStackDepthThisStep;
@@ -709,8 +987,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
           }
         }
       }
-    }
-    catch(err) {
+    } else {
       handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
       return;
     }
@@ -763,22 +1040,24 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles();
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: finishButtonFirstLine
+    finishButton: true
   });
   var extraControlsRow = require('./extraControlRows.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
+  });
+  var designProperties = require('./designProperties.html')({tagName:null});
+  var designModeBox = require('./designModeBox.html')({
+    designProperties: designProperties
   });
 
   config.html = page({
@@ -791,13 +1070,15 @@ Applab.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      pinWorkspaceToBottom: true,
+      hasDesignMode: true,
+      designModeBox: designModeBox
     }
   });
 
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
@@ -836,7 +1117,7 @@ Applab.init = function(config) {
         e.stop();
       });
     }
-    
+
     if (studioApp.share) {
       // automatically run in share mode:
       window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
@@ -854,6 +1135,7 @@ Applab.init = function(config) {
   config.noButtonsBelowOnMobileShare = true;
 
   config.dropletConfig = dropletConfig;
+  config.pinWorkspaceToBottom = true;
 
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
@@ -861,7 +1143,25 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
+  Applab.levelHtml = level.levelHtml || "";
+
   studioApp.init(config);
+
+  var viz = document.getElementById('visualization');
+  var vizCol = document.getElementById('visualizationColumn');
+
+  if (!config.noPadding) {
+    viz.className += " with_padding";
+    vizCol.className += " with_padding";
+  }
+
+  if (config.embed || config.hideSource) {
+    // no responsive styles active in embed or hideSource mode, so set sizes:
+    viz.style.width = Applab.appWidth + 'px';
+    viz.style.height = Applab.appHeight + 'px';
+    // Use offsetWidth of viz so we can include any possible border width:
+    vizCol.style.maxWidth = viz.offsetWidth + 'px';
+  }
 
   if (level.editCode) {
     // Initialize the slider.
@@ -898,7 +1198,192 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
+    var designModeButton = document.getElementById('designModeButton');
+    if (designModeButton) {
+      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    }
+    var codeModeButton = document.getElementById('codeModeButton');
+    if (codeModeButton) {
+      dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    }
+    var designModeClear = document.getElementById('designModeClear');
+    if (designModeClear) {
+      dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
+    }
+
+    // Allow elements to be dragged and dropped from the design mode
+    // element tray to the play space.
+    if (window.$) {
+      $('.new-design-element').draggable({
+        containment:"#codeApp",
+        helper:"clone",
+        appendTo:"#codeApp",
+        revert: 'invalid',
+        zIndex: 2,
+        start: function() {
+          studioApp.resetButtonClick();
+        }
+      });
+      var scale = vizAppWidth / Applab.appWidth;
+      var gridSize = 20;
+      $('#visualization').droppable({
+        accept: '.new-design-element',
+        drop: function (event, ui) {
+          var elementType = ui.draggable[0].dataset.elementType;
+
+          var left = ui.position.left / scale;
+          left = Math.round(left - left % gridSize);
+          var top = ui.position.top / scale;
+          top = Math.round(top - top % gridSize);
+
+          Applab.createElement(elementType, left, top);
+        }
+      });
+    }
+
   }
+
+  user = {applabUserId: config.applabUserId};
+};
+
+/**
+ * The types of acceptable HTML elements in the levelHtml.
+ * @type {{BUTTON: string, LABEL: string, INPUT: string}}
+ */
+var ElementType = {
+  BUTTON: 'button',
+  LABEL: 'label',
+  INPUT: 'input'
+};
+Applab.ElementType = ElementType;
+
+/**
+ * A map from prefix to the next numerical suffix to try to
+ * use as an id in the applab app's DOM.
+ * @type {Object.<string, number>}
+ */
+Applab.nextElementIdMap = {};
+
+/**
+ * Returns an element id with the given prefix which is unused within
+ * the applab app's DOM.
+ * @param {string} prefix
+ * @returns {string}
+ */
+Applab.getUnusedElementId = function (prefix) {
+  var divApplab = $('#divApplab');
+  var i = Applab.nextElementIdMap[prefix] || 1;
+  while (divApplab.find("#" + prefix + i).length !== 0) {
+    i++;
+  }
+  Applab.nextElementIdMap[prefix] = i + 1;
+  return prefix + i;
+};
+
+/**
+ * Create a new element of the specified type within the play space.
+ * @param {ElementType} elementType HTML element type to create.
+ * @param {number} left Position from left.
+ * @param {number} top Position from top.
+ */
+Applab.createElement = function (elementType, left, top) {
+  var el = document.createElement(elementType);
+  switch (elementType) {
+    case ElementType.BUTTON:
+      el.appendChild(document.createTextNode('Button'));
+      el.style.margin = 0;
+      break;
+    case ElementType.LABEL:
+      el.appendChild(document.createTextNode("text"));
+      el.style.margin = '10px';
+      break;
+    case ElementType.INPUT:
+      el.style.margin = '10px';
+      break;
+    default:
+      throw "unrecognized element type " + elementType;
+  }
+  el.id = Applab.getUnusedElementId(elementType);
+  el.style.position = 'absolute';
+  el.style.left = left + 'px';
+  el.style.top = top + 'px';
+
+  var divApplab = document.getElementById('divApplab');
+  divApplab.appendChild(el);
+  Applab.levelHtml = divApplab.innerHTML;
+};
+
+Applab.onDivApplabClick = function (event) {
+  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+    return;
+  }
+  event.preventDefault();
+  Applab.editElementProperties(event.target);
+};
+
+// Currently there is a 1:1 mapping between applab element types and HTML tag names
+// (input, label, button, ...), so elements are simply identified by tag name.
+Applab.editElementProperties = function(el) {
+  var tagName = el.tagName.toLowerCase();
+  if (!Applab.isValidElementType(tagName)) {
+   Applab.clearProperties();
+   return;
+  }
+
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: tagName,
+    props: {
+      id: el.id,
+      left: el.style.left,
+      top: el.style.top,
+      width: el.style.width,
+      height: el.style.height,
+      text: $(el).text()
+    }
+  });
+  var savePropertiesButton = document.getElementById('savePropertiesButton');
+  var onSave = Applab.onSavePropertiesButton.bind(this, el);
+  if (savePropertiesButton) {
+    dom.addClickTouchEvent(savePropertiesButton, onSave);
+  }
+  var deletePropertiesButton = document.getElementById('deletePropertiesButton');
+  var onDelete = Applab.onDeletePropertiesButton.bind(this, el);
+  if (deletePropertiesButton) {
+    dom.addClickTouchEvent(deletePropertiesButton, onDelete);
+  }
+};
+
+Applab.clearProperties = function () {
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: null
+  });
+};
+
+Applab.isValidElementType = function (type) {
+  for (var prop in Applab.ElementType) {
+    if (type === Applab.ElementType[prop]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+Applab.onSavePropertiesButton = function(el, event) {
+  el.id = document.getElementById('design-property-id').value;
+  el.style.left = document.getElementById('design-property-left').value;
+  el.style.top = document.getElementById('design-property-top').value;
+  el.style.width = document.getElementById('design-property-width').value;
+  el.style.height = document.getElementById('design-property-height').value;
+  $(el).text(document.getElementById('design-property-text').value);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+};
+
+Applab.onDeletePropertiesButton = function(el, event) {
+  el.parentNode.removeChild(el);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.clearProperties();
 };
 
 /**
@@ -952,6 +1437,8 @@ studioApp.reset = function(first) {
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
   Applab.turtle.y = Applab.appHeight / 2;
+  apiTimeoutList.clearTimeouts();
+  apiTimeoutList.clearIntervals();
 
   var divApplab = document.getElementById('divApplab');
 
@@ -962,6 +1449,13 @@ studioApp.reset = function(first) {
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
+
+  divApplab = document.getElementById('divApplab');
+  if (Applab.levelHtml) {
+    divApplab.innerHTML = Applab.levelHtml;
+  }
+  divApplab.addEventListener('click', Applab.onDivApplabClick);
+
 
   // Reset goal successState:
   if (level.goal) {
@@ -975,6 +1469,7 @@ studioApp.reset = function(first) {
     delete Applab.firstCallStackDepthThisStep;
     delete Applab.stoppedAtBreakpointRow;
     delete Applab.stoppedAtBreakpointStackDepth;
+    Applab.maxValidCallExpressionDepth = 0;
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
@@ -1027,6 +1522,12 @@ studioApp.runButtonClick = function() {
   studioApp.reset(false);
   studioApp.attempts++;
   Applab.execute();
+
+  // Show view data button now that channel id is available.
+  var viewDataButton = document.getElementById('viewDataButton');
+  if (viewDataButton) {
+    viewDataButton.style.display = "inline-block";
+  }
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
@@ -1156,14 +1657,24 @@ JSONApi.stringify = function(object) {
   return JSON.stringify(object);
 };
 
-// Commented out, but available in case we want to expose the droplet/pencilcode
-// style random (with a min, max value)
-/*
-exports.random = function (min, max)
-{
-    return Math.floor(Math.random()*(max-min+1)+min);
-};
-*/
+function populateNonMarshalledFunctions(interpreter, scope, parent) {
+  for (var i = 0; i < dropletConfig.blocks.length; i++) {
+    var block = dropletConfig.blocks[i];
+    if (block.dontMarshal) {
+      var func = parent[block.func];
+      // 4th param is false to indicate: don't marshal params
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+          dontMarshal: true
+      });
+      interpreter.setProperty(scope,
+                              block.func,
+                              interpreter.createNativeFunction(wrapper));
+    }
+  }
+}
 
 /**
  * Execute the app
@@ -1175,15 +1686,13 @@ Applab.execute = function() {
   Applab.response = null;
   var i;
 
-  studioApp.playAudio('start');
-
   studioApp.reset(false);
 
   // Set event handlers and start the onTick timer
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, dropletConfig, 'Applab');
+    codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Applab');
     Applab.userCodeStartOffset = codeWhenRun.length;
     Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
@@ -1220,19 +1729,24 @@ Applab.execute = function() {
                                     console: consoleApi,
                                     JSON: JSONApi });
 
+        populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
+
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
-        var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                       nativeGetCallback,
-                                                       null,
-                                                       5);
+        var wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeGetCallback,
+            maxDepth: 5
+        });
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
 
-        wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                   nativeSetCallbackRetVal);
+        wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeSetCallbackRetVal,
+        });
         interpreter.setProperty(scope,
                                 'setCallbackRetVal',
                                 interpreter.createNativeFunction(wrapper));
@@ -1332,8 +1846,41 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
+};
+
+Applab.onDesignModeButton = function() {
+  studioApp.resetButtonClick();
+  Applab.toggleDesignMode(true);
+};
+
+Applab.onCodeModeButton = function() {
+  Applab.toggleDesignMode(false);
+};
+
+Applab.onDesignModeClear = function() {
+  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
+Applab.toggleDesignMode = function(enable) {
+  var codeModeHeaders = document.getElementById('codeModeHeaders');
+  codeModeHeaders.style.display = enable ? 'none' : 'block';
+  var designModeHeaders = document.getElementById('designModeHeaders');
+  designModeHeaders.style.display = enable ? 'block' : 'none';
+
+  var codeTextbox = document.getElementById('codeTextbox');
+  codeTextbox.style.display = enable ? 'none' : 'block';
+  var designModeBox = document.getElementById('designModeBox');
+  designModeBox.style.display = enable ? 'block' : 'none';
+
+  var designModeButton = document.getElementById('designModeButton');
+  designModeButton.style.display = enable ? 'none' : 'block';
+  var codeModeButton = document.getElementById('codeModeButton');
+  codeModeButton.style.display = enable ? 'block' : 'none';
+
+  var debugArea = document.getElementById('debug-area');
+  debugArea.style.display = enable ? 'none' : 'block';
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1429,14 +1976,26 @@ Applab.container = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newDiv = document.createElement("div");
-  newDiv.id = opts.elementId;
+  if (typeof opts.elementId !== "undefined") {
+    newDiv.id = opts.elementId;
+  }
   newDiv.innerHTML = opts.html;
 
   return Boolean(divApplab.appendChild(newDiv));
 };
 
+Applab.write = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'write', 'html', opts.html, 'string');
+  return Applab.container(opts);
+};
+
 Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
+
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
+  apiValidateType(opts, 'button', 'text', opts.text, 'string');
 
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
@@ -1447,6 +2006,10 @@ Applab.button = function (opts) {
 };
 
 Applab.image = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'image', 'src', opts.src, 'string');
+
   var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
@@ -1500,6 +2063,7 @@ function getTurtleContext() {
     turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
+    turtleImage.ondragstart = function () { return false; };
     divApplab.appendChild(turtleImage);
   }
 
@@ -1531,6 +2095,8 @@ Applab.hide = function (opts) {
 };
 
 Applab.moveTo = function (opts) {
+  apiValidateType(opts, 'moveTo', 'x', opts.x, 'number');
+  apiValidateType(opts, 'moveTo', 'y', opts.y, 'number');
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -1544,16 +2110,18 @@ Applab.moveTo = function (opts) {
 };
 
 Applab.move = function (opts) {
-  var newOpts = {};
-  newOpts.x = Applab.turtle.x + opts.x;
-  newOpts.y = Applab.turtle.y + opts.y;
-  Applab.moveTo(newOpts);
+  apiValidateType(opts, 'move', 'x', opts.x, 'number');
+  apiValidateType(opts, 'move', 'y', opts.y, 'number');
+  opts.x += Applab.turtle.x;
+  opts.y += Applab.turtle.y;
+  Applab.moveTo(opts);
 };
 
 Applab.moveForward = function (opts) {
   var newOpts = {};
   var distance = 25;
   if (typeof opts.distance !== 'undefined') {
+    apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number');
     distance = opts.distance;
   }
   newOpts.x = Applab.turtle.x +
@@ -1565,7 +2133,8 @@ Applab.moveForward = function (opts) {
 
 Applab.moveBackward = function (opts) {
   var distance = -25;
-  if (opts.distance !== 'undefined') {
+  if (typeof opts.distance !== 'undefined') {
+    apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number');
     distance = -opts.distance;
   }
   Applab.moveForward({'distance': distance });
@@ -1577,6 +2146,8 @@ Applab.turnRight = function (opts) {
 
   var degrees = 90;
   if (typeof opts.degrees !== 'undefined') {
+    // TODO: cpirich: may need to update param name
+    apiValidateType(opts, 'turnRight', 'degrees', opts.degrees, 'number');
     degrees = opts.degrees;
   }
 
@@ -1588,12 +2159,16 @@ Applab.turnRight = function (opts) {
 Applab.turnLeft = function (opts) {
   var degrees = -90;
   if (typeof opts.degrees !== 'undefined') {
+    // TODO: cpirich: may need to update param name
+    apiValidateType(opts, 'turnLeft', 'degrees', opts.degrees, 'number');
     degrees = -opts.degrees;
   }
   Applab.turnRight({'degrees': degrees });
 };
 
 Applab.turnTo = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'turnTo', 'degrees', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
   Applab.turnRight({'degrees': degrees });
 };
@@ -1603,6 +2178,10 @@ Applab.turnTo = function (opts) {
 // if opts.counterclockwise, the center point is 90 degrees counterclockwise
 
 Applab.arcRight = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'arcRight', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
+
   // call this first to ensure there is a turtle (in case this is the first API)
   var centerAngle = opts.counterclockwise ? -90 : 90;
   var clockwiseDegrees = opts.counterclockwise ? -opts.degrees : opts.degrees;
@@ -1631,6 +2210,10 @@ Applab.arcRight = function (opts) {
 };
 
 Applab.arcLeft = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'arcLeft', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcLeft', 'radius', opts.radius, 'number');
+
   opts.counterclockwise = true;
   Applab.arcRight(opts);
 };
@@ -1651,12 +2234,24 @@ Applab.getDirection = function (opts) {
 };
 
 Applab.dot = function (opts) {
+  apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up and the color has been changed, use that color:
+      ctx.strokeStyle = Applab.turtle.penUpColor;
+    }
+    var savedLineWidth = ctx.lineWidth;
+    ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up, reset strokeStyle back to transparent:
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
+    ctx.lineWidth = savedLineWidth;
     return true;
   }
 
@@ -1665,8 +2260,10 @@ Applab.dot = function (opts) {
 Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
-    Applab.turtle.penUpColor = ctx.strokeStyle;
-    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
+      Applab.turtle.penUpColor = ctx.strokeStyle;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
   }
 };
 
@@ -1674,12 +2271,13 @@ Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
-    ctx.fillStyle = Applab.turtle.penUpColor;
     delete Applab.turtle.penUpColor;
   }
 };
 
 Applab.penWidth = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.lineWidth = opts.width;
@@ -1687,6 +2285,7 @@ Applab.penWidth = function (opts) {
 };
 
 Applab.penColor = function (opts) {
+  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
@@ -1694,13 +2293,26 @@ Applab.penColor = function (opts) {
       Applab.turtle.penUpColor = opts.color;
     } else {
       ctx.strokeStyle = opts.color;
-      ctx.fillStyle = opts.color;
     }
+    ctx.fillStyle = opts.color;
+  }
+};
+
+Applab.speed = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateTypeAndRange(opts, 'speed', 'percent', opts.percent, 'number', 0, 100);
+  if (opts.percent >= 0 && opts.percent <= 100) {
+    var sliderSpeed = opts.percent / 100;
+    if (Applab.speedSlider) {
+      Applab.speedSlider.setValue(sliderSpeed);
+    }
+    Applab.scale.stepSpeed = stepSpeedFromSliderSpeed(sliderSpeed);
   }
 };
 
 Applab.createCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'createCanvas', 'canvasId', opts.elementId, false);
 
   var newElement = document.createElement("canvas");
   var ctx = newElement.getContext("2d");
@@ -1709,6 +2321,8 @@ Applab.createCanvas = function (opts) {
     // default width/height if params are missing
     var width = opts.width || Applab.appWidth;
     var height = opts.height || Applab.appHeight;
+    apiValidateType(opts, 'createCanvas', 'width', width, 'number');
+    apiValidateType(opts, 'createCanvas', 'height', height, 'number');
     newElement.width = width;
     newElement.height = height;
     newElement.style.width = width + 'px';
@@ -1717,6 +2331,7 @@ Applab.createCanvas = function (opts) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineCap = "round";
 
     if (!Applab.activeCanvas && !opts.turtleCanvas) {
       // If there is no active canvas and this isn't the turtleCanvas,
@@ -1731,6 +2346,8 @@ Applab.createCanvas = function (opts) {
 
 Applab.setActiveCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
   var canvas = document.getElementById(opts.elementId);
   if (divApplab.contains(canvas)) {
     Applab.activeCanvas = canvas;
@@ -1740,6 +2357,11 @@ Applab.setActiveCanvas = function (opts) {
 };
 
 Applab.line = function (opts) {
+  apiValidateActiveCanvas(opts, 'line');
+  apiValidateType(opts, 'line', 'x1', opts.x1, 'number');
+  apiValidateType(opts, 'line', 'x2', opts.x2, 'number');
+  apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
+  apiValidateType(opts, 'line', 'y2', opts.y2, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -1752,6 +2374,10 @@ Applab.line = function (opts) {
 };
 
 Applab.circle = function (opts) {
+  apiValidateActiveCanvas(opts, 'circle');
+  apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
+  apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
+  apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -1764,6 +2390,11 @@ Applab.circle = function (opts) {
 };
 
 Applab.rect = function (opts) {
+  apiValidateActiveCanvas(opts, 'rect');
+  apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
+  apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
+  apiValidateType(opts, 'rect', 'width', opts.width, 'number');
+  apiValidateType(opts, 'rect', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -1776,6 +2407,8 @@ Applab.rect = function (opts) {
 };
 
 Applab.setStrokeWidth = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeWidth');
+  apiValidateTypeAndRange(opts, 'setStrokeWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.lineWidth = opts.width;
@@ -1785,6 +2418,8 @@ Applab.setStrokeWidth = function (opts) {
 };
 
 Applab.setStrokeColor = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeColor');
+  apiValidateType(opts, 'setStrokeColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.strokeStyle = String(opts.color);
@@ -1794,6 +2429,9 @@ Applab.setStrokeColor = function (opts) {
 };
 
 Applab.setFillColor = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'setFillColor');
+  apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.fillStyle = String(opts.color);
@@ -1803,6 +2441,7 @@ Applab.setFillColor = function (opts) {
 };
 
 Applab.clearCanvas = function (opts) {
+  apiValidateActiveCanvas(opts, 'clearCanvas');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.clearRect(0,
@@ -1816,15 +2455,22 @@ Applab.clearCanvas = function (opts) {
 
 Applab.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'drawImage');
+  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'imageId', opts.imageId, true);
+  apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
+  apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
   var image = document.getElementById(opts.imageId);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx && divApplab.contains(image)) {
     var xScale, yScale;
     xScale = yScale = 1;
-    if (opts.width) {
+    if (typeof opts.width !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'width', opts.width, 'number');
       xScale = xScale * (opts.width / image.width);
     }
-    if (opts.height) {
+    if (typeof opts.height !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'height', opts.height, 'number');
       yScale = yScale * (opts.height / image.height);
     }
     ctx.save();
@@ -1837,6 +2483,11 @@ Applab.drawImage = function (opts) {
 };
 
 Applab.getImageData = function (opts) {
+  apiValidateActiveCanvas(opts, 'getImageData');
+  apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
+  apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
+  apiValidateType(opts, 'getImageData', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
@@ -1844,6 +2495,11 @@ Applab.getImageData = function (opts) {
 };
 
 Applab.putImageData = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'putImageData');
+  apiValidateType(opts, 'putImageData', 'imageData', opts.imageData, 'object');
+  apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     // Create tmpImageData and initialize it because opts.imageData is not
@@ -1857,6 +2513,9 @@ Applab.putImageData = function (opts) {
 
 Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
@@ -1867,6 +2526,10 @@ Applab.textInput = function (opts) {
 
 Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textLabel', 'text', opts.text, 'string');
+  apiValidateType(opts, 'textLabel', 'forId', opts.forId, 'string', OPTIONAL);
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
@@ -1882,6 +2545,9 @@ Applab.textLabel = function (opts) {
 
 Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'checkbox', 'id', opts.elementId, false);
+  // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
 
   var newCheckbox = document.createElement("input");
   newCheckbox.setAttribute("type", "checkbox");
@@ -1893,6 +2559,10 @@ Applab.checkbox = function (opts) {
 
 Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'radioButton', 'id', opts.elementId, false);
+  // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
+  apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
 
   var newRadio = document.createElement("input");
   newRadio.setAttribute("type", "radio");
@@ -1905,12 +2575,15 @@ Applab.radioButton = function (opts) {
 
 Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'dropdown', 'id', opts.elementId, false);
 
   var newSelect = document.createElement("select");
 
   if (opts.optionsArray) {
     for (var i = 0; i < opts.optionsArray.length; i++) {
       var option = document.createElement("option");
+      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'string');
       option.text = opts.optionsArray[i];
       newSelect.add(option);
     }
@@ -1945,6 +2618,9 @@ Applab.setAttribute = function (opts) {
 
 Applab.getText = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getText', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
@@ -1960,6 +2636,10 @@ Applab.getText = function (opts) {
 
 Applab.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setText', 'text', opts.text, 'string');
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
@@ -1976,6 +2656,9 @@ Applab.setText = function (opts) {
 
 Applab.getChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getChecked', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
     return element.checked;
@@ -1985,6 +2668,10 @@ Applab.getChecked = function (opts) {
 
 Applab.setChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setChecked', 'id', opts.elementId, true);
+  // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
     element.checked = opts.checked;
@@ -1995,6 +2682,9 @@ Applab.setChecked = function (opts) {
 
 Applab.getImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getImageURL', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
@@ -2011,6 +2701,10 @@ Applab.getImageURL = function (opts) {
 
 Applab.setImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setImageURL', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setImageURL', 'src', opts.src, 'string');
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = opts.src;
@@ -2020,6 +2714,9 @@ Applab.setImageURL = function (opts) {
 };
 
 Applab.playSound = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
+
   if (studioApp.cdoSounds) {
     studioApp.cdoSounds.playURL(opts.url,
                                {volume: 1.0,
@@ -2041,6 +2738,9 @@ Applab.innerHTML = function (opts) {
 
 Applab.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'deleteElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     // Special check to see if the active canvas is being deleted
@@ -2054,6 +2754,9 @@ Applab.deleteElement = function (opts) {
 
 Applab.showElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'showElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.visibility = 'visible';
@@ -2064,6 +2767,9 @@ Applab.showElement = function (opts) {
 
 Applab.hideElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'hideElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.visibility = 'hidden';
@@ -2095,6 +2801,13 @@ Applab.setParent = function (opts) {
 
 Applab.setPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
+  apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
+  apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+  apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.position = 'absolute';
@@ -2105,6 +2818,40 @@ Applab.setPosition = function (opts) {
     return true;
   }
   return false;
+};
+
+Applab.getXPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getXPosition', 'id', opts.elementId, true);
+
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var x = div.offsetLeft;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      x += div.offsetLeft;
+    }
+    return x;
+  }
+  return 0;
+};
+
+Applab.getYPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getYPosition', 'id', opts.elementId, true);
+
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var y = div.offsetTop;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      y += div.offsetTop;
+    }
+    return y;
+  }
+  return 0;
 };
 
 Applab.onEventFired = function (opts, e) {
@@ -2134,6 +2881,9 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
+  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
+  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   // Special case the id of 'body' to mean the app's container (divApplab)
   // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
   if (opts.elementId === 'body') {
@@ -2185,44 +2935,70 @@ Applab.onEvent = function (opts) {
 };
 
 Applab.onHttpRequestEvent = function (opts) {
-  if (this.readyState === 4) {
-    Applab.eventQueue.push({
-      'fn': opts.func,
-      'arguments': [
-        Number(this.status),
-        String(this.getResponseHeader('content-type')),
-        String(this.responseText)]
-    });
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.interpreter === Applab.interpreter) {
+    if (this.readyState === 4) {
+      Applab.eventQueue.push({
+        'fn': opts.func,
+        'arguments': [
+          Number(this.status),
+          String(this.getResponseHeader('content-type')),
+          String(this.responseText)]
+      });
+    }
   }
 };
 
 Applab.startWebRequest = function (opts) {
+  apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
+  apiValidateType(opts, 'startWebRequest', 'function', opts.func, 'function');
+  opts.interpreter = Applab.interpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
   req.open('GET', String(opts.url), true);
   req.send();
 };
 
-Applab.onTimeoutFired = function (opts) {
+Applab.onTimerFired = function (opts) {
+  // ensure that this event came from the active interpreter instance:
   Applab.eventQueue.push({
     'fn': opts.func
   });
-  if (Applab.interpreter) {
-    // NOTE: the interpreter will not execute forever, if the event handler
-    // takes too long, executeInterpreter() will return and the rest of the
-    // user's code will execute in the next onTick()
-    Applab.executeInterpreter(true);
-  }
+  // NOTE: the interpreter will not execute forever, if the event handler
+  // takes too long, executeInterpreter() will return and the rest of the
+  // user's code will execute in the next onTick()
+  Applab.executeInterpreter(true);
 };
 
 Applab.setTimeout = function (opts) {
-  return window.setTimeout(Applab.onTimeoutFired.bind(this, opts), opts.milliseconds);
+  apiValidateType(opts, 'setTimeout', 'function', opts.func, 'function');
+  apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
+
+  return apiTimeoutList.setTimeout(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearTimeout = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'clearTimeout', 'timeoutId', opts.timeoutId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setTimeout() function
-  window.clearTimeout(opts.timeoutId);
+  apiTimeoutList.clearTimeout(opts.timeoutId);
+};
+
+Applab.setInterval = function (opts) {
+  apiValidateType(opts, 'setInterval', 'function', opts.func, 'function');
+  apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
+
+  return apiTimeoutList.setInterval(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
+};
+
+Applab.clearInterval = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'clearInterval', 'intervalId', opts.intervalId, 'number');
+  // NOTE: we do not currently check to see if this is a timer created by
+  // our Applab.setInterval() function
+  apiTimeoutList.clearInterval(opts.intervalId);
 };
 
 Applab.createRecord = function (opts) {
@@ -2302,11 +3078,11 @@ Applab.updateRecord = function (opts) {
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateRecord = function(successCallback) {
+Applab.handleUpdateRecord = function(successCallback, record) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
-      'arguments': []
+      'arguments': [record]
     });
   }
 };
@@ -2326,6 +3102,12 @@ Applab.handleDeleteRecord = function(successCallback) {
   }
 };
 
+Applab.getUserId = function (opts) {
+  if (!user.applabUserId) {
+    throw new Error("User ID failed to load.");
+  }
+  return user.applabUserId;
+};
 
 /*
 var onWaitComplete = function (opts) {
@@ -2596,7 +3378,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":187,"../../locale/current/common":190,"../StudioApp":2,"../codegen":42,"../constants":43,"../dom":44,"../skins":144,"../slider":145,"../templates/page.html":165,"../utils":185,"../xml":186,"./api":4,"./appStorage":5,"./blocks":7,"./controls.html":8,"./dropletConfig":9,"./extraControlRows.html":10,"./formStorage":11,"./visualization.html":15}],15:[function(require,module,exports){
+},{"../../locale/current/applab":248,"../../locale/current/common":251,"../StudioApp":4,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../skins":200,"../slider":201,"../templates/page.html":225,"../timeoutList":231,"../utils":246,"../xml":247,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./rgbcolor.js":20,"./visualization.html":22}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2616,190 +3398,257 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],11:[function(require,module,exports){
+},{"ejs":267}],20:[function(require,module,exports){
 /**
- * CodeOrgApp: Applab
- *
- * Copyright 2014-2015 Code.org
- *
+ * A class to parse color values
+ * @author Stoyan Stefanov <sstoo@gmail.com>
+ * @link   http://www.phpied.com/rgb-color-parser-in-javascript/
+ * @license Use it if you like it
  */
 
-'use strict';
+ // hex regular expressions updated to require [0-9a-f] (cpirich)
+ // channels declared as local variable to avoid conflicts (cpirich)
+ // cleanup jshint errors (cpirich)
+ 
+module.exports = function(color_string)
+{
+    this.ok = false;
 
-/**
- * Namespace for form storage.
- */ 
-var FormStorage = module.exports;
-
-
-/**
- * Creates a new record in the specified table.
- * @param {string} record.tableName The name of the table to read from.
- * @param {Object} record Object containing other properties to store
- *     on the record.
- * @param {Function} callback Function to call with the resulting record.
- */
-FormStorage.createRecord = function(record, callback) {
-  var tableName = record.tableName;
-  if (!tableName) {
-    // TODO(dave): remove console.log for IE9 compatability, here and below.
-    console.log('readRecords: missing required property "tableName"');
-    return;
-  }
-  FormStorage.fetchTableSecret(
-      tableName, 
-      putRecord.bind(this, record, callback));
-};
-
-var putRecord = function(record, callback, tableSecret) {
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handlePutRecord.bind(req, record, callback, tableSecret);
-  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
-      '/children/CspRecord';
-  delete record.tableName;
-  var postData = {record_data_s: JSON.stringify(record)};
-  req.open('POST', url, true);
-  req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-  req.send(JSON.stringify(postData));
-};
-
-var handlePutRecord = function(record, callback, tableSecret) {
-  if (this.readyState !== 4) {
-    return;
-  }
-  if (this.status !== 201) {
-    console.log('unexpected http status ' + this.status);
-    return;
-  }
-  
-  // TODO(dave): merge tableSecret into record once XSS issues are resolved.
-  callback(record);
-};
-
-/**
- * Reads records which match the searchParams specified by the user,
- * and passes them to the callback.
- * @param {string} searchParams.tableName The name of the table to read from.
- * @param {string} searchParams.recordId Optional id of record to read.
- * @param {Object} searchParams Other search criteria. Only records
- *     whose contents match all criteria will be returned.
- * @param {Function} callback Function to call with an array of record objects.
- */
-FormStorage.readRecords = function(searchParams, callback) {
-  var tableName = searchParams.tableName;
-  if (!tableName) {
-    console.log('readRecords: missing required property "tableName"');
-    return;
-  }
-  // TODO(dave): optimization: call fetchRecords here if table data is cached.
-  FormStorage.fetchTableSecret(
-      tableName, 
-      fetchRecords.bind(this, tableName, searchParams, callback));
-};
-
-var fetchRecords = function(tableName, searchParams, callback, tableSecret) {
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = handleFetchRecords.bind(req, tableName,
-      searchParams, callback);
-  var url = '//' + getFormDataHost() + '/v2/forms/CspTable/' + tableSecret +
-      '/children/CspRecord';
-  req.open('GET', url, true);
-  req.send();
-};
-
-var handleFetchRecords = function(tableName, searchParams, callback) {
-  if (this.readyState !== 4) {
-    return;
-  }
-  if (this.status !== 200) {
-    console.log('readRecords failed with status ' + this.status);
-    return;
-  }
-  var forms = JSON.parse(this.responseText);
-  var records = forms.map(function(form) {
-    var record = JSON.parse(form.record_data_s);
-    record.tableName = tableName;
-    record.recordId = form.secret;
-    return record;
-  });
-  records = records.filter(function(record) {
-    for (var prop in searchParams) {
-      if (record[prop] !== searchParams[prop]) {
-        return false;
-      }
+    // strip any leading #
+    if (color_string.charAt(0) == '#') { // remove # if any
+        color_string = color_string.substr(1,6);
     }
-    return true;
-  });
-  callback(records);
+
+    color_string = color_string.replace(/ /g,'');
+    color_string = color_string.toLowerCase();
+
+    // before getting into regexps, try simple matches
+    // and overwrite the input
+    var simple_colors = {
+        aliceblue: 'f0f8ff',
+        antiquewhite: 'faebd7',
+        aqua: '00ffff',
+        aquamarine: '7fffd4',
+        azure: 'f0ffff',
+        beige: 'f5f5dc',
+        bisque: 'ffe4c4',
+        black: '000000',
+        blanchedalmond: 'ffebcd',
+        blue: '0000ff',
+        blueviolet: '8a2be2',
+        brown: 'a52a2a',
+        burlywood: 'deb887',
+        cadetblue: '5f9ea0',
+        chartreuse: '7fff00',
+        chocolate: 'd2691e',
+        coral: 'ff7f50',
+        cornflowerblue: '6495ed',
+        cornsilk: 'fff8dc',
+        crimson: 'dc143c',
+        cyan: '00ffff',
+        darkblue: '00008b',
+        darkcyan: '008b8b',
+        darkgoldenrod: 'b8860b',
+        darkgray: 'a9a9a9',
+        darkgreen: '006400',
+        darkkhaki: 'bdb76b',
+        darkmagenta: '8b008b',
+        darkolivegreen: '556b2f',
+        darkorange: 'ff8c00',
+        darkorchid: '9932cc',
+        darkred: '8b0000',
+        darksalmon: 'e9967a',
+        darkseagreen: '8fbc8f',
+        darkslateblue: '483d8b',
+        darkslategray: '2f4f4f',
+        darkturquoise: '00ced1',
+        darkviolet: '9400d3',
+        deeppink: 'ff1493',
+        deepskyblue: '00bfff',
+        dimgray: '696969',
+        dodgerblue: '1e90ff',
+        feldspar: 'd19275',
+        firebrick: 'b22222',
+        floralwhite: 'fffaf0',
+        forestgreen: '228b22',
+        fuchsia: 'ff00ff',
+        gainsboro: 'dcdcdc',
+        ghostwhite: 'f8f8ff',
+        gold: 'ffd700',
+        goldenrod: 'daa520',
+        gray: '808080',
+        green: '008000',
+        greenyellow: 'adff2f',
+        honeydew: 'f0fff0',
+        hotpink: 'ff69b4',
+        indianred : 'cd5c5c',
+        indigo : '4b0082',
+        ivory: 'fffff0',
+        khaki: 'f0e68c',
+        lavender: 'e6e6fa',
+        lavenderblush: 'fff0f5',
+        lawngreen: '7cfc00',
+        lemonchiffon: 'fffacd',
+        lightblue: 'add8e6',
+        lightcoral: 'f08080',
+        lightcyan: 'e0ffff',
+        lightgoldenrodyellow: 'fafad2',
+        lightgrey: 'd3d3d3',
+        lightgreen: '90ee90',
+        lightpink: 'ffb6c1',
+        lightsalmon: 'ffa07a',
+        lightseagreen: '20b2aa',
+        lightskyblue: '87cefa',
+        lightslateblue: '8470ff',
+        lightslategray: '778899',
+        lightsteelblue: 'b0c4de',
+        lightyellow: 'ffffe0',
+        lime: '00ff00',
+        limegreen: '32cd32',
+        linen: 'faf0e6',
+        magenta: 'ff00ff',
+        maroon: '800000',
+        mediumaquamarine: '66cdaa',
+        mediumblue: '0000cd',
+        mediumorchid: 'ba55d3',
+        mediumpurple: '9370d8',
+        mediumseagreen: '3cb371',
+        mediumslateblue: '7b68ee',
+        mediumspringgreen: '00fa9a',
+        mediumturquoise: '48d1cc',
+        mediumvioletred: 'c71585',
+        midnightblue: '191970',
+        mintcream: 'f5fffa',
+        mistyrose: 'ffe4e1',
+        moccasin: 'ffe4b5',
+        navajowhite: 'ffdead',
+        navy: '000080',
+        oldlace: 'fdf5e6',
+        olive: '808000',
+        olivedrab: '6b8e23',
+        orange: 'ffa500',
+        orangered: 'ff4500',
+        orchid: 'da70d6',
+        palegoldenrod: 'eee8aa',
+        palegreen: '98fb98',
+        paleturquoise: 'afeeee',
+        palevioletred: 'd87093',
+        papayawhip: 'ffefd5',
+        peachpuff: 'ffdab9',
+        peru: 'cd853f',
+        pink: 'ffc0cb',
+        plum: 'dda0dd',
+        powderblue: 'b0e0e6',
+        purple: '800080',
+        red: 'ff0000',
+        rosybrown: 'bc8f8f',
+        royalblue: '4169e1',
+        saddlebrown: '8b4513',
+        salmon: 'fa8072',
+        sandybrown: 'f4a460',
+        seagreen: '2e8b57',
+        seashell: 'fff5ee',
+        sienna: 'a0522d',
+        silver: 'c0c0c0',
+        skyblue: '87ceeb',
+        slateblue: '6a5acd',
+        slategray: '708090',
+        snow: 'fffafa',
+        springgreen: '00ff7f',
+        steelblue: '4682b4',
+        tan: 'd2b48c',
+        teal: '008080',
+        thistle: 'd8bfd8',
+        tomato: 'ff6347',
+        turquoise: '40e0d0',
+        violet: 'ee82ee',
+        violetred: 'd02090',
+        wheat: 'f5deb3',
+        white: 'ffffff',
+        whitesmoke: 'f5f5f5',
+        yellow: 'ffff00',
+        yellowgreen: '9acd32'
+    };
+    for (var key in simple_colors) {
+        if (color_string == key) {
+            color_string = simple_colors[key];
+        }
+    }
+    // emd of simple type-in colors
+
+    // array of color definition objects
+    var color_defs = [
+        {
+            re: /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/,
+            example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1]),
+                    parseInt(bits[2]),
+                    parseInt(bits[3])
+                ];
+            }
+        },
+        {
+            re: /^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/,
+            example: ['#00ff00', '336699'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1], 16),
+                    parseInt(bits[2], 16),
+                    parseInt(bits[3], 16)
+                ];
+            }
+        },
+        {
+            re: /^([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})$/,
+            example: ['#fb0', 'f0f'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1] + bits[1], 16),
+                    parseInt(bits[2] + bits[2], 16),
+                    parseInt(bits[3] + bits[3], 16)
+                ];
+            }
+        }
+    ];
+
+    // search through the definitions to find a match
+    for (var i = 0; i < color_defs.length; i++) {
+        var re = color_defs[i].re;
+        var processor = color_defs[i].process;
+        var bits = re.exec(color_string);
+        if (bits) {
+            var channels = processor(bits);
+            this.r = channels[0];
+            this.g = channels[1];
+            this.b = channels[2];
+            this.ok = true;
+        }
+
+    }
+
+    // validate/cleanup values
+    this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
+    this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
+    this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
+
+    // some getters
+    this.toRGB = function () {
+        return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
+    };
+    this.toHex = function () {
+        var r = this.r.toString(16);
+        var g = this.g.toString(16);
+        var b = this.b.toString(16);
+        if (r.length == 1) { r = '0' + r; }
+        if (g.length == 1) { g = '0' + g; }
+        if (b.length == 1) { b = '0' + b; }
+        return '#' + r + g + b;
+    };
 };
 
-// Helper methods
-
-/**
- * Retrieves the table secret for a given table name.
- * @param {string} tableName Table name.
- * @param {function(string)} callback Callback to call with the table secret.
- */
-FormStorage.fetchTableSecret = function(tableName, callback) {
-  var req = new XMLHttpRequest();
-  req.onreadystatechange =
-      handleFetchTableSecret.bind(req, tableName, callback);
-  var url = '//' + getFormDataHost() + '/v2/forms/CspApp/' + 
-      FormStorage.getAppSecret() + '/children/CspTable';
-  req.open('GET', url, true);
-  req.send();
-};
-
-var handleFetchTableSecret = function(tableName, callback) {
-  if (this.readyState !== 4) {
-    return;
-  }
-  if (this.status !== 200) {
-    console.log('unexpected http status ' + this.status);
-    return;
-  }
-  var formData = JSON.parse(this.responseText);
-  if (!(formData instanceof Array)) {
-    console.log('formData is not an array');
-    return;
-  }
-
-  var tableData = formData.filter(function(table) {
-    return table.table_name_s === tableName;
-  });
-  var tableSecret = tableData[0] && tableData[0].secret;
-  if (!tableSecret) {
-    console.log('table not found: ' + tableName);
-    console.log(tableData);
-    return;
-  }
-  callback(tableSecret);
-};
-
-// TODO(dave): move this logic to dashboard.
-var getFormDataHost = function() {
-  // Forms api is already mapped to pegasus on all non-local deployments.
-  // Caveat: local api access only works with temporary hacks in place
-  // to set dashboard_user cookie and access-control-allow-origin header.
-  return window.location.hostname.split('.')[0] === 'localhost' ?
-      'localhost.code.org:9393' : window.location.hostname;
-};
-
-// TODO(dave): store secret with the app in the database.
-FormStorage.getAppSecret = function() {
-  var name = window.location.hostname.split('.')[0];
-  switch(name) {
-    case 'localhost':
-      return 'ededb6d4a8ced65f8a011ce0e194094e';
-    case 'staging':
-      return 'b0a06b8bbd7352a3fdb1b6738262defd';
-    default:
-      return null;
-  }
-};
-
-
-},{}],10:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2811,7 +3660,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  applabMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  applabMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  applabMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  applabMsg.stepOut() )), '\n    </button>\n    <button id="viewDataButton" class="share">\n      ', escape((20,  applabMsg.viewData() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');33; } ; buf.push('\n\n');35; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((38,  assetUrl('media/1x1.gif') )), '">', escape((38,  msg.finish() )), '\n    </button>\n  </div>\n');41; } ; buf.push('\n\n');43; if (debugButtons) { ; buf.push('\n</div>\n');45; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        ', escape((9,  applabMsg.pause() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        ', escape((12,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        ', escape((15,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        ', escape((18,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((21,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');25; } ; buf.push('\n\n  ');27; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');35; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2819,109 +3668,120 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":187,"../../locale/current/common":190,"ejs":206}],9:[function(require,module,exports){
-module.exports.blocks = [
-  {'func': 'onEvent', 'title': 'Execute code in response to an event for the specified element. Additional parameters are passed to the callback function.', 'category': 'UI controls', 'params': ["'id'", "'click'", "function(event) {\n  \n}"] },
-  {'func': 'button', 'title': 'Create a button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'textInput', 'title': 'Create a text input and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'textLabel', 'title': 'Create a text label, assign it an element id, and bind it to an associated element', 'category': 'UI controls', 'params': ["'id'", "'text'", "'forId'"] },
-  {'func': 'dropdown', 'title': 'Create a dropdown, assign it an element id, and populate it with a list of items', 'category': 'UI controls', 'params': ["'id'", "'option1'", "'etc'"] },
-  {'func': 'getText', 'title': 'Get the text from the specified element', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'setText', 'title': 'Set the text for the specified element', 'category': 'UI controls', 'params': ["'id'", "'text'"] },
-  {'func': 'checkbox', 'title': 'Create a checkbox and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false"] },
-  {'func': 'radioButton', 'title': 'Create a radio button and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "false", "'group'"] },
-  {'func': 'getChecked', 'title': 'Get the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'setChecked', 'title': 'Set the state of a checkbox or radio button', 'category': 'UI controls', 'params': ["'id'", "true"] },
-  {'func': 'image', 'title': 'Create an image and assign it an element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-  {'func': 'getImageURL', 'title': 'Get the URL associated with an image or image upload button', 'category': 'UI controls', 'params': ["'id'"], 'type': 'value' },
-  {'func': 'setImageURL', 'title': 'Set the URL for the specified image element id', 'category': 'UI controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-  {'func': 'playSound', 'title': 'Play the MP3, OGG, or WAV sound file from the specified URL', 'category': 'UI controls', 'params': ["'http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3'"] },
-  {'func': 'showElement', 'title': 'Show the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
-  {'func': 'hideElement', 'title': 'Hide the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
-  {'func': 'deleteElement', 'title': 'Delete the element with the specified id', 'category': 'UI controls', 'params': ["'id'"] },
-  {'func': 'setPosition', 'title': 'Position an element with x, y, width, and height coordinates', 'category': 'UI controls', 'params': ["'id'", "0", "0", "100", "100"] },
+},{"../../locale/current/applab":248,"../../locale/current/common":251,"ejs":267}],15:[function(require,module,exports){
+var Applab = require('./applab');
 
-  {'func': 'createCanvas', 'title': 'Create a canvas with the specified id, and optionally set width and height dimensions', 'category': 'Canvas', 'params': ["'id'", "320", "480"] },
-  {'func': 'setActiveCanvas', 'title': 'Set the canvas id for subsequent canvas commands (only needed when there are multiple canvas elements)', 'category': 'Canvas', 'params': ["'id'"] },
-  {'func': 'line', 'title': 'Draw a line on the active canvas from x1, y1 to x2, y2', 'category': 'Canvas', 'params': ["0", "0", "160", "240"] },
-  {'func': 'circle', 'title': 'Draw a circle on the active  canvas with the specified coordinates for center (x, y) and radius', 'category': 'Canvas', 'params': ["160", "240", "100"] },
-  {'func': 'rect', 'title': 'Draw a rectangle on the active  canvas with x, y, width, and height coordinates', 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
-  {'func': 'setStrokeWidth', 'title': 'Set the line width for the active  canvas', 'category': 'Canvas', 'params': ["3"] },
-  {'func': 'setStrokeColor', 'title': 'Set the stroke color for the active  canvas', 'category': 'Canvas', 'params': ["'red'"] },
-  {'func': 'setFillColor', 'title': 'Set the fill color for the active  canvas', 'category': 'Canvas', 'params': ["'yellow'"] },
-  {'func': 'drawImage', 'title': 'Draw an image on the active  canvas with the specified image element and x, y as the top left coordinates', 'category': 'Canvas', 'params': ["'imageId'", "0", "0"] },
-  {'func': 'getImageData', 'title': 'Get the ImageData for a rectangle (x, y, width, height) within the active  canvas', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
-  {'func': 'putImageData', 'title': 'Set the ImageData for a rectangle within the active  canvas with x, y as the top left coordinates', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
-  {'func': 'clearCanvas', 'title': 'Clear all data on the active canvas', 'category': 'Canvas', },
+// APIs designed specifically to run on interpreter data structures without marshalling
+// (valuable for performance or to support in/out parameters)
 
-  {'func': 'startWebRequest', 'title': 'Request data from the internet and execute code when the request is complete', 'category': 'Data', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
-  {'func': 'setKeyValue', 'title': 'Saves the value associated with the key to the remote data store.', 'category': 'Data', 'params': ["'key'", "'value'", "function () {\n  \n}"] },
-  {'func': 'getKeyValue', 'title': 'Reads the value associated with the key from the remote data store.', 'category': 'Data', 'params': ["'key'", "function (value) {\n  \n}"] },
-  {'func': 'createRecord', 'title': 'createRecord(table, record, onSuccess); Creates a new record in the specified table.', 'category': 'Data', 'params': ["'mytable'", "{name:'Alice'}", "function() {\n  \n}"] },
-  {'func': 'readRecords', 'title': 'readRecords(table, searchParams, onSuccess); Reads all records whose properties match those on the searchParams object.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    createTextLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
-  {'func': 'updateRecord', 'title': 'updateRecord(table, record, onSuccess); Updates a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1, name:'Bob'}", "function() {\n  \n}"] },
-  {'func': 'deleteRecord', 'title': 'deleteRecord(table, record, onSuccess); Deletes a record, identified by record.id.', 'category': 'Data', 'params': ["'mytable'", "{id:1}", "function() {\n  \n}"] },
+// Note: these also don't have blockId params for blockly support, so they are
+// used without aliasing (dropletConfig marked with dontMarshal and dontAlias)
 
-  {'func': 'moveForward', 'title': 'Move the turtle forward the specified distance', 'category': 'Turtle', 'params': ["25"] },
-  {'func': 'moveBackward', 'title': 'Move the turtle backward the specified distance', 'category': 'Turtle', 'params': ["25"] },
-  {'func': 'move', 'title': 'Move the turtle by the specified x and y coordinates', 'category': 'Turtle', 'params': ["25", "25"] },
-  {'func': 'moveTo', 'title': 'Move the turtle to the specified x and y coordinates', 'category': 'Turtle', 'params': ["0", "0"] },
-  {'func': 'dot', 'title': "Draw a dot in the turtle's location with the specified radius", 'category': 'Turtle', 'params': ["5"] },
-  {'func': 'turnRight', 'title': 'Turn the turtle clockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
-  {'func': 'turnLeft', 'title': 'Turn the turtle counterclockwise by the specified number of degrees', 'category': 'Turtle', 'params': ["90"] },
-  {'func': 'turnTo', 'title': 'Turn the turtle to the specified direction (0 degrees is pointing up)', 'category': 'Turtle', 'params': ["0"] },
-  {'func': 'arcRight', 'title': 'Move the turtle in a clockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
-  {'func': 'arcLeft', 'title': 'Move the turtle in a counterclockwise arc using the specified number of degrees and radius', 'category': 'Turtle', 'params': ["90", "25"] },
-  {'func': 'getX', 'title': "Get the turtle's x position", 'category': 'Turtle', 'type': 'value' },
-  {'func': 'getY', 'title': "Get the turtle's y position", 'category': 'Turtle', 'type': 'value' },
-  {'func': 'getDirection', 'title': "Get the turtle's direction (0 degrees is pointing up)", 'category': 'Turtle', 'type': 'value' },
-  {'func': 'penUp', 'title': "Pick up the turtle's pen", 'category': 'Turtle' },
-  {'func': 'penDown', 'title': "Set down the turtle's pen", 'category': 'Turtle' },
-  {'func': 'penWidth', 'title': 'Set the turtle to the specified pen width', 'category': 'Turtle', 'params': ["3"] },
-  {'func': 'penColor', 'title': 'Set the turtle to the specified pen color', 'category': 'Turtle', 'params': ["'red'"] },
-  {'func': 'show', 'title': "Show the turtle image at its current location", 'category': 'Turtle' },
-  {'func': 'hide', 'title': "Hide the turtle image", 'category': 'Turtle' },
+// ImageData RGB helper functions
 
-  {'func': 'setTimeout', 'title': 'Set a timer and execute code when that number of milliseconds has elapsed', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
-  {'func': 'clearTimeout', 'title': 'Clear an existing timer by passing in the value returned from setTimeout()', 'category': 'Control', 'params': ["0"] },
+// TODO: more parameter validation (data array type, length), error output
 
-  {'func': 'imageUploadButton', 'title': 'Create an image upload button and assign it an element id', 'category': 'Advanced', 'params': ["'id'", "'text'"] },
-  {'func': 'container', 'title': 'Create a division container with the specified element id, and optionally set its inner HTML', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
-  {'func': 'innerHTML', 'title': 'Set the inner HTML for the element with the specified id', 'category': 'Advanced', 'params': ["'id'", "'html'"] },
-  {'func': 'setParent', 'title': 'Set an element to become a child of a parent element', 'category': 'Advanced', 'params': ["'id'", "'parentId'"] },
-  {'func': 'setStyle', 'title': 'Add CSS style text to an element', 'category': 'Advanced', 'params': ["'id'", "'color:red;'"] },
-  {'func': 'getAttribute', 'category': 'Advanced', 'params': ["'id'", "'scrollHeight'"], 'type': 'value' },
-  {'func': 'setAttribute', 'category': 'Advanced', 'params': ["'id'", "'scrollHeight'", "200"]},
-];
-
-module.exports.categories = {
-  'UI controls': {
-    'color': 'red',
-    'blocks': []
-  },
-  'Canvas': {
-    'color': 'yellow',
-    'blocks': []
-  },
-  'Data': {
-    'color': 'orange',
-    'blocks': []
-  },
-  'Turtle': {
-    'color': 'yellow',
-    'blocks': []
-  },
-  'Advanced': {
-    'color': 'blue',
-    'blocks': []
-  },
-  'Control': {
-    'color': 'blue',
-    'blocks': []
-  },
+exports.getRed = function (imageData, x, y) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    return imageData.properties.data.properties[pixelOffset].toNumber();
+  }
+};
+exports.getGreen = function (imageData, x, y) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    return imageData.properties.data.properties[pixelOffset + 1].toNumber();
+  }
+};
+exports.getBlue = function (imageData, x, y) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    return imageData.properties.data.properties[pixelOffset + 2].toNumber();
+  }
+};
+exports.getAlpha = function (imageData, x, y) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    return imageData.properties.data.properties[pixelOffset + 3].toNumber();
+  }
 };
 
-},{}],8:[function(require,module,exports){
+exports.setRed = function (imageData, x, y, value) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset] = value;
+  }
+};
+exports.setGreen = function (imageData, x, y, value) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset + 1] = value;
+  }
+};
+exports.setBlue = function (imageData, x, y, value) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset + 2] = value;
+  }
+};
+exports.setAlpha = function (imageData, x, y, value) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset + 3] = value;
+  }
+};
+exports.setRGB = function (imageData, x, y, r, g, b, a) {
+  if (imageData.properties.data && imageData.properties.width) {
+    var pixelOffset = y * imageData.properties.width * 4 + x * 4;
+    imageData.properties.data.properties[pixelOffset] = r;
+    imageData.properties.data.properties[pixelOffset + 1] = g;
+    imageData.properties.data.properties[pixelOffset + 2] = b;
+    imageData.properties.data.properties[pixelOffset + 3] =
+      (typeof a === 'undefined') ? Applab.interpreter.createPrimitive(255) : a;
+  }
+};
+
+},{"./applab":10}],14:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; if (tagName) { ; buf.push('\n<table>\n  <tr>\n    <th>name</th>\n    <th>value</th>\n  </tr>\n  <tr>\n    <td>id</td>\n    <td><input id="design-property-id" value="', escape((9,  props.id )), '"></td>\n  </tr>\n  <tr>\n    <td>x position</td>\n    <td><input id="design-property-left" value="', escape((13,  props.left )), '"></td>\n  </tr>\n  <tr>\n    <td>y position</td>\n    <td><input id="design-property-top" value="', escape((17,  props.top )), '"></td>\n  </tr>\n  <tr>\n    <td>width</td>\n    <td><input id="design-property-width" value="', escape((21,  props.width)), '"></td>\n  </tr>\n  <tr>\n    <td>height</td>\n    <td><input id="design-property-height" value="', escape((25,  props.height )), '"></td>\n  </tr>\n  <tr>\n    <td>text</td>\n    <td><input id="design-property-text" value="', escape((29,  props.text )), '"></td>\n  </tr>\n</table>\n<button id="savePropertiesButton" class="share">Save</button>\n<button id="deletePropertiesButton" class="share">Delete</button>\n');34; } else { ; buf.push('\n  Click on an element to edit its properties.\n');36; } ; buf.push(''); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":267}],13:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div id="designModeBox" width="100%" style="display:none;">\n  ');2; /* contains temporary unlocalized strings */ ; buf.push('\n  Welcome to Design mode! Under construction.<br>\n  Drag the elements below into your app, then press \'Run\' to save. Press \'Clear\' to start over.<br>\n  <table>\n    <colgroup>\n      <col width="50%">\n      <col width="50%">\n    </colgroup>\n    <tr>\n      <td><h3>Elements</h3></td>\n      <td><h3>Properties</h3></td>\n    </tr>\n    <tr>\n      <td>\n        <div id="design-elements">\n          <div data-element-type="button" class="new-design-element">button</div>\n          <div data-element-type="label" class="new-design-element">label</div>\n          <div data-element-type="input" class="new-design-element">input</div>\n          <button id="designModeClear" class="share">Clear</button><br>\n        </div>\n      </td>\n      <td>\n        <div id="design-properties">\n          ', (25,  designProperties ), '\n        </div>\n      </td>\n    </tr>\n  </table>\n\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":267}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2941,7 +3801,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],7:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3014,20 +3874,29 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":187,"../../locale/current/common":190,"../codegen":42,"../utils":185}],187:[function(require,module,exports){
+},{"../../locale/current/applab":248,"../../locale/current/common":251,"../codegen":54,"../utils":246}],248:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
-},{}],5:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
+
+/* global dashboard */
 
 /**
  * Namespace for app storage.
  */
 var AppStorage = module.exports;
 
-// TODO(dave): remove once we can store ids for each app.
-AppStorage.tempEncryptedAppId =
+// TODO(dave): remove once all applab data levels are associated with
+// a project.
+AppStorage.tempChannelId =
     window.location.hostname.split('.')[0] === 'localhost' ?
         "SmwVmYVl1V5UCCw1Ec6Dtw==" : "DvTw9X3pDcyDyil44S6qbw==";
+
+AppStorage.getChannelId = function() {
+  // TODO(dave): pull channel id directly from appOptions once available.
+  var id = dashboard && dashboard.currentApp && dashboard.currentApp.id;
+  return id || AppStorage.tempChannelId;
+};
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -3039,13 +3908,18 @@ AppStorage.tempEncryptedAppId =
 AppStorage.getKeyValue = function(key, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
   req.open('GET', url, true);
   req.send();
 };
 
 var handleGetKeyValue = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status === 404) {
+    onSuccess(undefined);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3066,14 +3940,15 @@ var handleGetKeyValue = function(onSuccess, onError) {
 AppStorage.setKeyValue = function(key, value, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-properties/' + key;
+  var url = '/v3/shared-properties/' + AppStorage.getChannelId() + '/' + key;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   req.send(JSON.stringify(value));
 };
 
 var handleSetKeyValue = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3103,14 +3978,15 @@ AppStorage.createRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
-  var url = "/v3/apps/" + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('POST', url, true);
   req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
   req.send(JSON.stringify(record));
 };
 
 var handleCreateRecord = function(onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3141,14 +4017,15 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleReadRecords.bind(req,
       searchParams, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + "/shared-tables/" + tableName;
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('GET', url, true);
   req.send();
   
 };
 
 var handleReadRecords = function(searchParams, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3189,7 +4066,7 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -3197,7 +4074,8 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status === 404) {
@@ -3209,7 +4087,7 @@ var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
     onError('error updating record: unexpected http status ' + this.status);
     return;
   }
-  onSuccess();
+  onSuccess(record);
 };
 
 /**
@@ -3233,7 +4111,7 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   }
   var req = new XMLHttpRequest();
   req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
-  var url = '/v3/apps/' + AppStorage.tempEncryptedAppId + '/shared-tables/' +
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
   req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -3241,12 +4119,13 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
 };
 
 var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
-  if (this.readyState !== 4) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
     return;
   }
   if (this.status === 404) {
     onError('error deleting record: could not find record id ' + record.id +
-        ' in table ' + record.tableName);
+        ' in table ' + tableName);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
@@ -3256,7 +4135,7 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   onSuccess();
 };
 
-},{}],4:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 
 exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);
@@ -3270,6 +4149,12 @@ exports.container = function (blockId, elementId, html) {
                           'container',
                           {'elementId': elementId,
                            'html': html });
+};
+
+exports.write = function (blockId, html) {
+  return Applab.executeCmd(blockId,
+                          'write',
+                          {'html': html });
 };
 
 exports.innerHTML = function (blockId, elementId, html) {
@@ -3319,6 +4204,18 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
                            'top': top,
                            'width': width,
                            'height': height });
+};
+
+exports.getXPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getXPosition',
+                          {'elementId': elementId });
+};
+
+exports.getYPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getYPosition',
+                          {'elementId': elementId });
 };
 
 exports.createCanvas = function (blockId, elementId, width, height) {
@@ -3553,6 +4450,19 @@ exports.clearTimeout = function (blockId, timeoutId) {
                            {'timeoutId': timeoutId });
 };
 
+exports.setInterval = function (blockId, func, milliseconds) {
+  return Applab.executeCmd(blockId,
+                          'setInterval',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearInterval = function (blockId, intervalId) {
+  return Applab.executeCmd(blockId,
+                           'clearInterval',
+                           {'intervalId': intervalId });
+};
+
 exports.playSound = function (blockId, url) {
   return Applab.executeCmd(blockId,
                           'playSound',
@@ -3610,6 +4520,12 @@ exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
                            'record': record,
                            'onSuccess': onSuccess,
                            'onError': onError});
+};
+
+exports.getUserId = function (blockId) {
+  return Applab.executeCmd(blockId,
+                          'getUserId',
+                          {});
 };
 
 exports.moveForward = function (blockId, distance) {
@@ -3704,6 +4620,12 @@ exports.hide = function (blockId) {
   return Applab.executeCmd(blockId, 'hide');
 };
 
+exports.speed = function (blockId, percent) {
+  return Applab.executeCmd(blockId,
+                           'speed',
+                           {'percent': percent});
+};
+
 exports.penWidth = function (blockId, width) {
   return Applab.executeCmd(blockId,
                           'penWidth',
@@ -3717,4 +4639,261 @@ exports.penColor = function (blockId, color) {
 };
 
 
-},{}]},{},[13]);
+},{}],7:[function(require,module,exports){
+var dropletConfig = require('../dropletConfig');
+var dropletUtils = require('../../dropletUtils');
+var errorMapper = require('./errorMapper');
+
+// define ourselves for ace, so that it knows where to get us
+ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
+
+var oop = acerequire("ace/lib/oop");
+var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
+var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
+var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
+var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
+var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
+var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
+
+var Mode = function() {
+    this.HighlightRules = JavaScriptHighlightRules;
+    this.$outdent = new MatchingBraceOutdent();
+    this.$behaviour = new CstyleBehaviour();
+    this.foldingRules = new CStyleFoldMode();
+};
+oop.inherits(Mode, JavaScriptMode);
+
+(function() {
+
+  // A set of keywords we don't want to autocomplete
+  var excludedKeywords = [
+    'ArrayBuffer',
+    'Collator',
+    'EvalError',
+    'Float32Array',
+    'Float64Array',
+    'Intl',
+    'Int16Array',
+    'Int32Array',
+    'Int8Array',
+    'Iterator',
+    'NumberFormat',
+    'Object',
+    'QName',
+    'RangeError',
+    'ReferenceError',
+    'StopIteration',
+    'SyntaxError',
+    'TypeError',
+    'Uint16Array',
+    'Uint32Array',
+    'Uint8Array',
+    'Uint8ClampedArra',
+    'URIError'
+  ];
+
+  // Manually create our highlight rules so that we can modify it
+  this.$highlightRules = new JavaScriptHighlightRules();
+
+  excludedKeywords.forEach(function (keywordToRemove) {
+    var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
+    if (keywordIndex > 0) {
+      this.$highlightRules.$keywordList.splice(keywordIndex);
+    }
+  }, this);
+
+  this.createWorker = function(session) {
+    var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
+    worker.attachToDocument(session.getDocument());
+    var newOptions = {
+      unused: true,
+      undef: true,
+      predef: {
+      }
+    };
+    // Mark all of our blocks as predefined so that linter doesnt complain about
+    // using undefined variables
+    dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
+      newOptions.predef[block.func] = false;
+    });
+
+    worker.send("changeOptions", [newOptions]);
+
+    worker.on("jslint", function(results) {
+      errorMapper.processResults(results);
+
+      session.setAnnotations(results.data);
+    });
+
+    worker.on("terminate", function() {
+      session.clearAnnotations();
+    });
+
+    return worker;
+  };
+}).call(Mode.prototype);
+
+exports.Mode = Mode;
+});
+
+},{"../../dropletUtils":58,"../dropletConfig":16,"./errorMapper":6}],16:[function(require,module,exports){
+var COLOR_LIGHT_GREEN = '#D3E965';
+var COLOR_BLUE = '#19C3E1';
+var COLOR_RED = '#F78183';
+var COLOR_CYAN = '#4DD0E1';
+var COLOR_YELLOW = '#FFF176';
+
+module.exports.blocks = [
+  {'func': 'onEvent', 'category': 'UI controls', 'params': ['"id"', '"click"', "function(event) {\n  \n}"] },
+  {'func': 'button', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'textInput', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'textLabel', 'category': 'UI controls', 'params': ['"id"', '"text"', '"forId"'] },
+  {'func': 'dropdown', 'category': 'UI controls', 'params': ['"id"', '"option1"', '"etc"'] },
+  {'func': 'getText', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setText', 'category': 'UI controls', 'params': ['"id"', '"text"'] },
+  {'func': 'checkbox', 'category': 'UI controls', 'params': ['"id"', "false"] },
+  {'func': 'radioButton', 'category': 'UI controls', 'params': ['"id"', "false", '"group"'] },
+  {'func': 'getChecked', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setChecked', 'category': 'UI controls', 'params': ['"id"', "true"] },
+  {'func': 'image', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'getImageURL', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'setImageURL', 'category': 'UI controls', 'params': ['"id"', '"http://code.org/images/logo.png"'] },
+  {'func': 'playSound', 'category': 'UI controls', 'params': ['"http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3"'] },
+  {'func': 'showElement', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'hideElement', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'deleteElement', 'category': 'UI controls', 'params': ['"id"'] },
+  {'func': 'setPosition', 'category': 'UI controls', 'params': ['"id"', "0", "0", "100", "100"] },
+  {'func': 'write', 'category': 'UI controls', 'params': ['"html"'] },
+  {'func': 'getXPosition', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+  {'func': 'getYPosition', 'category': 'UI controls', 'params': ['"id"'], 'type': 'value' },
+
+  {'func': 'createCanvas', 'category': 'Canvas', 'params': ['"id"', "320", "480"] },
+  {'func': 'setActiveCanvas', 'category': 'Canvas', 'params': ['"id"'] },
+  {'func': 'line', 'category': 'Canvas', 'params': ["0", "0", "160", "240"] },
+  {'func': 'circle', 'category': 'Canvas', 'params': ["160", "240", "100"] },
+  {'func': 'rect', 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
+  {'func': 'setStrokeWidth', 'category': 'Canvas', 'params': ["3"] },
+  {'func': 'setStrokeColor', 'category': 'Canvas', 'params': ['"red"'] },
+  {'func': 'setFillColor', 'category': 'Canvas', 'params': ['"yellow"'] },
+  {'func': 'drawImage', 'category': 'Canvas', 'params': ['"imageId"', "0", "0"] },
+  {'func': 'getImageData', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
+  {'func': 'putImageData', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
+  {'func': 'clearCanvas', 'category': 'Canvas', },
+  {'func': 'getRed', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'getAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0"], 'type': 'value', 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRed', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setGreen', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setBlue', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setAlpha', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255"], 'dontAlias': true, 'dontMarshal': true },
+  {'func': 'setRGB', 'category': 'Canvas', 'params': ["imageData", "0", "0", "255", "255", "255"], 'dontAlias': true, 'dontMarshal': true },
+
+  {'func': 'startWebRequest', 'category': 'Data', 'params': ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
+  {'func': 'setKeyValue', 'category': 'Data', 'params': ['"key"', '"value"', "function () {\n  \n}"] },
+  {'func': 'getKeyValue', 'category': 'Data', 'params': ['"key"', "function (value) {\n  \n}"] },
+  {'func': 'createRecord', 'category': 'Data', 'params': ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"] },
+  {'func': 'readRecords', 'category': 'Data', 'params': ['"mytable"', "{}", "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"] },
+  {'func': 'updateRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1, name:'Bob'}", "function(record) {\n  \n}"] },
+  {'func': 'deleteRecord', 'category': 'Data', 'params': ['"mytable"', "{id:1}", "function() {\n  \n}"] },
+  {'func': 'getUserId', 'category': 'Data', 'params': [], type: 'value' },
+
+  {'func': 'moveForward', 'category': 'Turtle', 'params': ["25"] },
+  {'func': 'moveBackward', 'category': 'Turtle', 'params': ["25"] },
+  {'func': 'move', 'category': 'Turtle', 'params': ["25", "25"] },
+  {'func': 'moveTo', 'category': 'Turtle', 'params': ["0", "0"] },
+  {'func': 'dot', 'category': 'Turtle', 'params': ["5"] },
+  {'func': 'turnRight', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turnLeft', 'category': 'Turtle', 'params': ["90"] },
+  {'func': 'turnTo', 'category': 'Turtle', 'params': ["0"] },
+  {'func': 'arcRight', 'category': 'Turtle', 'params': ["90", "25"] },
+  {'func': 'arcLeft', 'category': 'Turtle', 'params': ["90", "25"] },
+  {'func': 'getX', 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getY', 'category': 'Turtle', 'type': 'value' },
+  {'func': 'getDirection', 'category': 'Turtle', 'type': 'value' },
+  {'func': 'penUp', 'category': 'Turtle' },
+  {'func': 'penDown', 'category': 'Turtle' },
+  {'func': 'penWidth', 'category': 'Turtle', 'params': ["3"] },
+  {'func': 'penColor', 'category': 'Turtle', 'params': ['"red"'] },
+  {'func': 'show', 'category': 'Turtle' },
+  {'func': 'hide', 'category': 'Turtle' },
+  {'func': 'speed', 'category': 'Turtle', 'params': ["50"] },
+
+  {'func': 'setTimeout', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearTimeout', 'category': 'Control', 'params': ["0"] },
+  {'func': 'setInterval', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'clearInterval', 'category': 'Control', 'params': ["0"] },
+
+  {'func': 'console.log', 'category': 'Variables', 'params': ['"Message"'], 'dontAlias': true },
+
+  {'func': 'imageUploadButton', 'category': 'Advanced', 'params': ['"id"', '"text"'] },
+  {'func': 'container', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'innerHTML', 'category': 'Advanced', 'params': ['"id"', '"html"'] },
+  {'func': 'setParent', 'category': 'Advanced', 'params': ['"id"', '"parentId"'] },
+  {'func': 'setStyle', 'category': 'Advanced', 'params': ['"id"', '"color:red;"'] },
+  {'func': 'getAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"'], 'type': 'value' },
+  {'func': 'setAttribute', 'category': 'Advanced', 'params': ['"id"', '"scrollHeight"', "200"]},
+];
+
+module.exports.categories = {
+  'UI controls': {
+    'color': 'yellow',
+    'rgb': COLOR_YELLOW,
+    'blocks': []
+  },
+  'Canvas': {
+    'color': 'red',
+    'rgb': COLOR_RED,
+    'blocks': []
+  },
+  'Data': {
+    'color': 'lightgreen',
+    'rgb': COLOR_LIGHT_GREEN,
+    'blocks': []
+  },
+  'Turtle': {
+    'color': 'cyan',
+    'rgb': COLOR_CYAN,
+    'blocks': []
+  },
+  'Advanced': {
+    'color': 'blue',
+    'rgb': COLOR_BLUE,
+    'blocks': []
+  },
+};
+
+},{}],6:[function(require,module,exports){
+var errorMap = [
+  {
+    original: /Assignment in conditional expression/,
+    replacement: "For conditionals, use the comparison operator (===) to check if two things are equal."
+  },
+  {
+    original: /(.*)\sis defined but never used./,
+    replacement: "$1 is defined, but it's not called in your program."
+  },
+  {
+    original: /(.*)\sis not defined./,
+    replacement: "$1 hasn't been declared yet."
+  }
+];
+
+/**
+ * Takes the results of a JSLint pass, and modifies the error text according to
+ * our mapping. Note this makes changes in place to the passed in results
+ * object.
+ */
+module.exports.processResults = function (results) {
+  results.data.forEach(function (item) {
+    errorMap.forEach(function (errorMapping) {
+      if (!errorMapping.original.test(item.text)) {
+        return;
+      }
+
+      item.text = item.text.replace(errorMapping.original, errorMapping.replacement);
+    });
+  });
+};
+
+},{}]},{},[19]);

@@ -1,7 +1,7 @@
 "ro":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Te rog să corectezi următoarele greșeli:'
   activerecord:
     errors:
       messages:
@@ -22,6 +22,7 @@
           future: nu poate fi în viitor
   hello: Salutare lume
   welcome_back: Bine ai revenit, %{name}
+  submit: Trimite
   add_teacher_form:
     code:
       label: 'Adaugă un profesor:'
@@ -265,6 +266,7 @@
         artist: Desenează ceva
     user:
       classroom: Pagina de Start a Profesorilor
+      district_dashboard: District Dashboard
       label: Salut %{username}
       stats: Progresul meu
       settings: Contul meu
@@ -352,14 +354,16 @@
       pentru %{student_name}'
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
+    email_confirm_needed_required: 'Adresa ta de email %{email} nu a fost confirmată:'
+    email_confirm_wrong_email: (Adresă email greşită?)
     email_resend_confirm: Retrimite instrucțiunile de confirmare
     new_password_hint: (lasă necompletat dacă nu dorești să schimbi)
     current_password_hint: (avem nevoie de parola ta curentă pentru a confirma modificările)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Șterge-ți contul
+    delete_text: Apasă butonul de dedesubt pentru a-ți șterge contul.
+    delete_text_teacher_note: 'Atenție: ștergerea contului implică ștergerea conturilor
+      elevilor tăi.'
+    delete_confirm: Ești sigur ca vrei să-ți ștergi contul?
   user_level:
     completed: Finalizat
     tried: Încercat
@@ -519,6 +523,9 @@
         noștri
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au făcut acestea cu secvențe de cod!
@@ -555,6 +562,14 @@
     wrong_body: Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!
     correct_title: Corect
     correct_body: Acela este răspunsul corect.
+  contract_match:
+    wrong_title: Răspuns incorect
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Completați răspunsul aici
   dialog:
@@ -572,7 +587,7 @@
             şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru
             clasele K-8, dar este distractiv de învăţat la toate vârstele.
         Hour of Code:
-          title: Hour of Code
+          title: Ora de cod 2013
           description: '[șir gol]'
         edit-code:
           title: Editează Codul
@@ -608,11 +623,48 @@
     pe site-ul nostru de sprijin. Te poţi uita prin <a href="http://support.code.org">support.code.org</a>
     fără să te loghezi, sau poţi cere ajutorul unui părinte sau profesor.
   progress:
-    not_completed: nefinalizat
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: finalizat, prea multe blocuri
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
+    assessment: assessment
   studio:
     courses_working_on: Cursurile la care lucrați
     completed_courses: Curs terminat
     all_courses: Toate cursurile
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Salvează
+    delete: Șterge
+    exit: Return to Course
+    my_projects: My Projects
+    share: Distribuie
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Mai mult
+    name: Nume
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Șterge?
+    delete_yes: Da
+    delete_no: Nu
+    saved: Saved
+    not_saved: Not saved
+    cancel: Anulează
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

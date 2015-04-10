@@ -3,6 +3,7 @@ Feature: Playing the Artist Game
 Background:
   Given I am on "http://learn.code.org/s/1/level/24?noautoplay=true"
   And I rotate to landscape
+  And I wait to see "#x-close"
   Then element ".dialog-title" has text "Puzzle 1 of 10"
   And I press "x-close"
   Then element "#runButton" is visible
@@ -22,7 +23,7 @@ Scenario: Winning the first level
   And I press "continue-button"
   And I wait to see "#x-close"
   And element ".dialog-title" has text "Puzzle 2 of 10"
-  Then check that I am on "http://learn.code.org/s/1/level/25"
+  Then check that I am on "http://learn.code.org/s/20-hour/stage/5/puzzle/2"
 
 Scenario: Losing the first level
   And I drag block "2" to block "4"

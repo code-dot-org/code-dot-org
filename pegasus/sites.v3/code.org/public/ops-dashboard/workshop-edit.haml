@@ -1,0 +1,71 @@
+---
+layout: none
+template: none
+---
+- authentication_required!
+- forbidden! unless dashboard_user[:admin]
+
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%a{href:'/ops-dashboard#/workshops'}
+  PD Workshops
+>
+%span
+  PD Workshop Management
+
+%h1{'ng-show' => 'workshop.id'} Edit {{workshop.name}}
+%h1{'ng-show' => '!workshop.id'} Add a workshop
+
+%h3
+  Workshop Name
+%input.form-control{type: 'text', 'ng-model' => 'workshop.name'}
+%h3
+  Workshop Address
+%input.form-control{'ng-model' => 'workshop.cohort_id', type:'text', 'ng-model' => 'workshop.location'}
+%h3
+  Program Type
+%select.form-control{'ng-model' => 'workshop.program_type'}
+  %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.id}}'}
+    {{program_type.long_name}}
+%h3
+  Assigned Cohort
+%select.form-control{'ng-model' => 'workshop.cohort_id', 'ng-disabled' => '!workshop.program_type'}
+  %option{'ng-repeat' => 'cohort in cohorts | matchingProgramType:workshop.program_type', 'value' => '{{cohort.id}}'}
+    {{cohort.name}}
+%br
+%button#btn-save.btn.btn-default{type: 'submit', 'ng-click' => 'save(workshop)'} Save
+%p#save-confirmation{style:'display:none'}
+  Saved!
+%hr
+%h2{'ng-hide' => 'workshopSegments.length <= 0'}
+  Workshop segments
+%div{'ng-repeat' => 'segment in workshopSegments'}
+  %p
+    {{segment.start | utc | date:'longDate'}}
+  %span
+    {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
+  %br
+  %br
+  %button.btn-danger{'ng-click' => 'segment.deletion = true', 'ng-hide' => 'segment.deletion == true'}
+    Delete Segment
+  %span{'ng-show' => 'segment.deletion == true'}
+    Are you sure?
+  %br
+  %button.btn-danger{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);', 'ng-show' => 'segment.deletion == true'}
+    Yes
+  %button.btn-white{'ng-click' => 'segment.deletion = false', 'ng-show' => 'segment.deletion == true'}
+    No
+  %hr
+%div{'ng-show' => 'workshop.id'}
+  %h2
+    Add a new segment
+  %div
+    Segment Start
+    %input{type:'datetime-local', 'ng-model' => 'segment.start'}
+    Segment End
+    %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+    %br
+    %br
+  %button{'ng-click' => 'saveSegment(segment)'}
+    Save Segment

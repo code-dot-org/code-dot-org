@@ -272,34 +272,11 @@
           Artist Binary: Binar cu artist
           description_audience: Vârstele 10 + (după curs 3)
         Course4pre:
+          title: Curs 4 Condiţii prealabile
           description_short: O scurtă prezentare a conceptelor pentru elevii care
             nu au parcurs cursurile 2 și 3.
-          Course 4 Prerequisite: Curs 4 Condiţii prealabile
-          'Maze: Sequence': 'Labirint: Secvenţă'
-          'Artist: Sequence': 'Artist: Secvenţă'
-          'Artist: Loops': 'Artist: Bucle'
-          'Bee: Conditionals': 'Ortografie: Condiţionale'
-          'Artist: Nested Loops': 'Artist: Bucle Adunate'
-          'Farmer: While Loops': 'Fermier: În Timp ce Şerpuieşte'
-          'Bee: Nested Loops': 'Ortografie: Bucle Adunate'
-          'Artist: Functions': 'Artist: Funcţii'
-          'Bee: Debugging': 'Ortografie: Depanare'
-        course4pre:
-          description_short: O scurtă prezentare a conceptelor pentru elevii care
-            nu au parcurs cursurile 2 și 3.
-          Course 4 Prerequisite: Curs 4 Condiţii prealabile
-          'Maze: Sequence': 'Labirint: Secvenţă'
-          'Artist: Sequence': 'Artist: Secvenţă'
-          'Artist: Loops': 'Artist: Bucle'
-          'Bee: Conditionals': 'Ortografie: Condiţionale'
-          'Artist: Nested Loops': 'Artist: Bucle Adunate'
-          'Farmer: While Loops': 'Fermier: În Timp ce Şerpuieşte'
-          'Bee: Nested Loops': 'Ortografie: Bucle Adunate'
-          'Artist: Functions': 'Artist: Funcţii'
-          'Bee: Debugging': 'Ortografie: Depanare'
-        Course4pre (Case Conflict):
-          description_short: O scurtă prezentare a conceptelor pentru elevii care
-            nu au parcurs cursurile 2 și 3.
+          description: O scurtă prezentare a conceptelor pentru elevii care nu au
+            parcurs cursurile 2 și 3.
           Course 4 Prerequisite: Curs 4 Condiţii prealabile
           'Maze: Sequence': 'Labirint: Secvenţă'
           'Artist: Sequence': 'Artist: Secvenţă'
@@ -332,19 +309,227 @@
           Special: Speciale
           Binary: Binar
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
+          Usability testing for MSM: Teste pentru matematică de gimnaziu
+          Evaluation Blocks: Blocuri de evaluare
           Blocks to Math: Blocuri în matematică
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Strings and Images: Șiruri de caractere și Imagini
+          Defining Variables: Definirea Variabilelor
+          Defining Functions: Definirea Funcțiilor
+          Design Recipe: Rețetă de proiectare
           Booleans: Booleene
           Conditionals: Condiţionale
-          Free Play: Free Play
+          Free Play: Joc la liber
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
+          title: Informatică în Algebră
+          description: Învață Programare Funcțională prin Algebră
+          'Unplugged: Video Games and Coordinate Planes': 'Fără calculator: Jocuri
+            video și planuri de coordonate'
+          'Calc: Evaluation Blocks': 'Calcul: Blocuri de evaluare'
+          'Eval: Strings and Images': Șiruri de caractere și Imagini
+          'Unplugged: Contracts': 'Fără calculator: Contracte'
+          'Eval: Writing Contracts': 'Evaluare: Scrierea de contracte'
+          'Calc: Defining Variables': 'Calcul: Definirea variabilelor'
+          'Play Lab: Defining Variables (Big Game)': 'Laboratorul de joc: Definirea
+            de variabile (jocul mare)'
+          'Eval: Defining Functions': 'Evaluare: definirea de funcții'
+          'Unplugged: The Design Recipe': 'Fără calculator: Rețeta pentru design'
+          'Play Lab: Defining Functions': 'Play Lab: Definirea Funcțiilor'
+          'Eval: Functions': 'Evaluare: funcții'
+          'Play Lab: Animation (Big Game)': 'Laboratorul de joc: Animație (jocul mare)'
+          'Unplugged: Booleans': 'Fără calculator: booleene'
+          'Eval: Boolean Operators': 'Evaluare: Operatorii booleeni'
+          'Play Lab: Booleans': 'Laboratorul de joc: Booleene'
+          'Play Lab: Boolean (Big Game)': 'Laboratorul de joc: Boolean (jocul mare)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Fără calculator: Decizii
+            și porțiuni de funcții'
+          'Eval: Conditionals': Condiţionale
+          'Unplugged: Collision Detection and the Distance Formula': 'Fără calculator:
+            Detectarea de coliziuni și formula pentru distanță'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorul de joc: Detectarea
+            de coliziuni (jocul mare)'
+        infinity:
+          title: Laborator de Joacă
+          description_short: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
+          description: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
+          Play Lab: Laborator de Joacă
+          Infinity: Infinit
+        algebrademo:
+          title: Demo Algebră
+          description_short: O mulțime de puzzle-uri pentru a demonstra mediul și
+            limbajul de programare utilizat în Code.org CS în Algebră
+          description: O mulțime de puzzle-uri pentru a demonstra mediul și limbajul
+            de programare utilizat în Code.org CS în Algebră
+          Algebra Demo: Demo Algebră
+          Evaluation Blocks: Blocuri de evaluare
+          Making Pictures: Fotografiere
+          Defining Variables: Definirea Variabilelor
+          Defining Simple Functions: Definirea Funcțiilor Simple
+          The Design Recipe: Rețeta pentru design
+        K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Blockly Basics: Bazele Blockly
+          Writing computer programs: Scriind programe pentru computer
+          Navigating the teacher dashboard: Navigând dashboard-ul profesorului
+          Unplugged lessons: Lecţii offline
+          Classroom Culture: Cultura sălii de clasă
+          Ways to go beyond Courses 1, 2, and 3: Metode de a progresa dupa Cursurile
+            1, 2, si 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+        netsim:
+          title: Simulator Internet
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+          Internet Simulator: Simulator Internet
+          Unit 1: Unitatea 1
+          Unit 2: Unitatea 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelare
+          description: Creaţi imagini cu biţi şi bytes.
+          Pixelation: Pixelare
+        20-hour:
+          title: Cursul Introducere K-8 in Programare (15-25 ore)
+          description: Acest curs de 20 de ore prezintă concepte de bază din informatică
+            şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru
+            clasele K-8, dar este distractiv de învăţat la toate vârstele.
+          Introduction to Computer Science: Introducere în Informatică
+          The Maze: Labirintul
+          Computational Thinking: Gândire de Calcul
+          Graph Paper Programming: Programare pe Hârtie Milimetrică
+          The Artist: Artistul
+          Algorithms: Algoritmi
+          The Artist 2: Artistul 2
+          Functions: Funcţii
+          The Farmer: Fermierul
+          Conditionals: Condiţionale
+          The Artist 3: Artistul 3
+          Song Writing: Compunerea muzicală
+          The Farmer 2: Fermierul 2
+          Abstraction: Abstractizare
+          The Artist 4: Artistul 4
+          Relay Programming: Programare de releu
+          The Farmer 3: Fermierul 3
+          The Internet: Internetul
+          The Artist 5: Artistul 5
+          Wrap-up: Încheiere
+        edit-code:
+          title: Editează Codul
+          description: '[șir gol]'
+          The Maze: Labirintul
+          Applab: Applab
+          The Artist: Artistul
+          Play Lab: Laborator de Joacă
+        events:
+          title: Evenimente
+          description: '[șir gol]'
+          Bounce: Săritură
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Codul Flappy
+          description: Vrei să programezi propriul joc în mai puţin de 10 minute?
+            Încearcă lecția noastră Codul Floppy!
+          Flappy Code: Codul Flappy
+        jigsaw:
+          title: Puzzle
+          description: '[șir gol]'
+          Jigsaw: Puzzle
+        step:
+          title: Pas
+          description: '[șir gol]'
+          Step: Pas
+        Hour of Code:
+          title: Ora de cod 2013
+          description: '[șir gol]'
+          Hour of Code 2013: Ora de cod 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Curs 4 Condiţii prealabile
+          description_short: O scurtă prezentare a conceptelor pentru elevii care
+            nu au parcurs cursurile 2 și 3.
+          description: O scurtă prezentare a conceptelor pentru elevii care nu au
+            parcurs cursurile 2 și 3.
+          Course 4 Prerequisite: Curs 4 Condiţii prealabile
+          'Maze: Sequence': 'Labirint: Secvenţă'
+          'Artist: Sequence': 'Artist: Secvenţă'
+          'Artist: Loops': 'Artist: Bucle'
+          'Bee: Conditionals': 'Ortografie: Condiţionale'
+          'Artist: Nested Loops': 'Artist: Bucle Adunate'
+          'Farmer: While Loops': 'Fermier: În Timp ce Şerpuieşte'
+          'Bee: Nested Loops': 'Ortografie: Bucle Adunate'
+          'Artist: Functions': 'Artist: Funcţii'
+          'Bee: Debugging': 'Ortografie: Depanare'
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Fără calculator: Jocuri
             video și planuri de coordonate'
           'Calc: Evaluation Blocks': 'Calcul: Blocuri de evaluare'
@@ -370,29 +555,44 @@
             Detectarea de coliziuni și formula pentru distanță'
           'Play Lab: Collision Detection (Big Game)': 'Laboratorul de joc: Detectarea
             de coliziuni (jocul mare)'
-        infinity:
-          title: Laborator de Joacă
-          description_short: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
-          description: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
-          Play Lab: Laborator de Joacă
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming
-            language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
+          Evaluation Blocks: Blocuri de evaluare
+          Strings and Images: Șiruri de caractere și Imagini
+          Contracts: Contracte
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
           The Design Recipe: Rețeta pentru design
-        K5PD:
-          Introduction to PD: Introduction to PD
-        netsim:
-          title: Internet Simulator
-          description_short: '[șir gol]'
-          description: '[șir gol]'
-          Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Infinit
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleene
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Decizii și porțiuni de funcții
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Blocuri de evaluare
+          Strings and Images: Șiruri de caractere și Imagini
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleene
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorul de joc: Detectarea
+            de coliziuni (jocul mare)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introducere in Dezvoltarea Profesionala
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

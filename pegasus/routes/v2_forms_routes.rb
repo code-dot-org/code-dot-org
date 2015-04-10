@@ -80,6 +80,16 @@ post '/v2/forms/:kind/:secret/review' do |kind, secret|
 end
 
 get '/v2/forms/:kind/:secret/status/:status' do |kind, secret, status|
+
+  def send_receipts(kind, form)
+    templates = ['workshop_signup_cancel_receipt','workshop_signup_cancel_notice']
+    recipient = Poste2.create_recipient(form[:email], name:form[:name], ip_address:form[:updated_ip])
+    templates.each do |template|
+      Poste2.send_message(template, recipient, form_id:form[:id])
+    end
+    templates.count
+  end
+
   dont_cache
   form = DB[:forms].where(kind:kind, secret:secret).first
   forbidden! if form.empty?
@@ -87,6 +97,8 @@ get '/v2/forms/:kind/:secret/status/:status' do |kind, secret, status|
   pass unless ['cancelled'].include?(status)
   data['status_s'] = status
   DB[:forms].where(kind:kind, secret:secret).update(data:data.to_json, indexed_at:nil)
+
+  send_receipts(kind, form);
 
   content_type :json
   data.to_json

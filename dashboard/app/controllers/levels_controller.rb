@@ -4,10 +4,10 @@ require "naturally"
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_filter :authenticate_user!, :except => [:embed_blocks], :unless => Proc.new {params[:embed] && action_name == 'show'}
-  before_filter :can_modify?, except: [:show, :index]
-  skip_before_filter :verify_params_before_cancan_loads_model, :only => [:create, :update_blocks]
-  load_and_authorize_resource :except => [:create, :update_blocks, :edit_blocks, :embed_blocks]
+  before_filter :authenticate_user!, except: [:show, :embed_blocks, :embed_level]
+  before_filter :can_modify?, except: [:show, :index, :embed_blocks, :embed_level]
+  skip_before_filter :verify_params_before_cancan_loads_model, only: [:create, :update_blocks]
+  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_blocks, :embed_level]
   check_authorization
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -21,21 +21,9 @@ class LevelsController < ApplicationController
   # GET /levels/1
   # GET /levels/1.json
   def show
-    set_videos_and_blocks_and_callouts_and_instructions
-
-    @fallback_response = {
-      success: {message: 'good job'},
-      failure: {message: 'try again'}
-    }
-
+    set_videos_and_blocks_and_callouts
     @full_width = true
-    if params[:embed]
-      @hide_source = true
-      @embed = true
-      @share = false
-      @no_padding = true
-      @skip_instructions_popup = true
-    end
+    @no_footer_puzzle = (@game == Game.applab)
   end
 
   # GET /levels/1/edit
@@ -45,7 +33,7 @@ class LevelsController < ApplicationController
     end
     if @level.is_a? DSLDefined
       @filename = @level.filename
-      @dsl_file = File.read(@filename) if @filename && File.exists?(@filename)
+      @dsl_file = File.read(@filename) if @filename && File.exist?(@filename)
     end
   end
 
@@ -95,7 +83,7 @@ class LevelsController < ApplicationController
       return
     end
     if @level.update(level_params)
-      render json: { redirect: level_url(@level) }.to_json
+      render json: { redirect: level_url(@level, show_callouts: true) }
     else
       render json: @level.errors, status: :unprocessable_entity
     end
@@ -131,7 +119,7 @@ class LevelsController < ApplicationController
       render status: :not_acceptable, text: invalid and return
     end
 
-    render json: { redirect: edit_level_path(@level) }.to_json
+    render json: { redirect: edit_level_path(@level) }
   end
 
   # DELETE /levels/1
@@ -143,52 +131,48 @@ class LevelsController < ApplicationController
 
   def new
     authorize! :create, :level
-    @type_class = params[:type].try(:constantize)
-    # Can't use case/when because a constantized string does not === the class by that name.
-    if @type_class
+    if params.has_key? :type
+      @type_class = params[:type].constantize
       if @type_class == Artist
         @game = Game.custom_artist
-        @level = @type_class.new
-        render :edit
       elsif @type_class <= Studio
         @game = Game.custom_studio
-        @level = @type_class.new
-        render :edit
       elsif @type_class <= Calc
         @game = Game.calc
-        @level = @type_class.new
-        render :edit
       elsif @type_class <= Eval
         @game = Game.eval
-        @level = @type_class.new
-        render :edit
+      elsif @type_class <= Applab
+        @game = Game.applab
       elsif @type_class <= Maze
         @game = Game.custom_maze
-        @level = @type_class.new
-        render :edit
       elsif @type_class <= DSLDefined
         @game = Game.find_by(name: @type_class.to_s)
-        @level = @type_class.new
-        render :edit
+      elsif @type_class == NetSim
+        @game = Game.netsim
       end
+      @level = @type_class.new
+      render :edit
+    else
+      @levels = Naturally.sort_by(Level.where(user: current_user), :name)
     end
-    @levels = Naturally.sort_by(Level.where(user: current_user), :name)
   end
 
-  # POST /levels/1/clone
+  # POST /levels/1/clone?name=new_name
   def clone
-    # Clone existing level and open edit page
-    old_level = Level.find(params[:level_id])
-    @level = old_level.dup
-    # resolve duplicate name conflicts with 'X (copy); X (copy 2); X (copy 3)... X (copy 10)'
-    name = "#{old_level.name} (copy 0)"
-    begin result = @level.update(name: name.next!) end until result
-    redirect_to(edit_level_url(@level))
-  end
-
-  def can_modify?
-    unless Rails.env.levelbuilder? || Rails.env.development?
-      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+    if params[:name]
+      # Clone existing level and open edit page
+      old_level = Level.find(params[:level_id])
+      @level = old_level.dup
+      begin
+        @level.update!(name: params[:name])
+      rescue ArgumentError => e
+        render status: :not_acceptable, text: e.message and return
+      rescue ActiveRecord::RecordInvalid => invalid
+        render status: :not_acceptable, text: invalid and return
+      end
+      render json: {redirect: edit_level_url(@level)}
+    else
+      render status: :not_acceptable, text: 'New name required to clone level'
     end
   end
 
@@ -201,15 +185,39 @@ class LevelsController < ApplicationController
         readonly: true,
         locale: js_locale,
         baseUrl: "#{ActionController::Base.asset_host}/blockly/",
-        blocks: level.properties[block_type]
+        blocks: level.blocks_to_embed(level.properties[block_type])
     }
     render :embed_blocks, layout: false, locals: options
   end
 
+  def embed_level
+    authorize! :read, :level
+    @level = Level.find(params[:level_id])
+    @game = @level.game
+    @hide_source = true
+    @embed = true
+    @share = false
+    @no_padding = true
+    @skip_instructions_popup = true
+    @full_width = true
+    render 'levels/show'
+  end
+
   private
+    def can_modify?
+      unless Rails.env.levelbuilder? || Rails.env.development?
+        raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_level
-      @level = Level.find(params[:id])
+      @level =
+        if params.include? :key
+          Level.find_by_key params[:key]
+        else
+          Level.find(params[:id])
+        end
       @game = @level.game
     end
 

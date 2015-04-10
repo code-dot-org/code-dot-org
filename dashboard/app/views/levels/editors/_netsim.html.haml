@@ -1,0 +1,116 @@
+%h2 NetSim settings
+
+%h3 Lobby configuration
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_clients_in_lobby
+      %td= f.label :show_clients_in_lobby, 'Show Clients in Lobby'
+      %td Whether client nodes should appear in the lobby list at all.
+    %tr
+      %td= boolean_check_box f, :show_routers_in_lobby
+      %td= f.label :show_routers_in_lobby, 'Show Routers in Lobby'
+      %td Whether router nodes should appear in the lobby list at all.
+    %tr
+      %td= boolean_check_box f, :can_connect_to_clients
+      %td= f.label :can_connect_to_clients, 'Can connect to clients'
+      %td Whether the student can connect directly to other students' client nodes.
+    %tr
+      %td= boolean_check_box f, :can_connect_to_routers
+      %td= f.label :can_connect_to_routers, 'Can connect to routers'
+      %td Whether the student can connect to router nodes.
+    %tr
+      %td= boolean_check_box f, :show_add_router_button
+      %td= f.label :show_add_router_button, 'Show "Add Router" Button'
+      %td Whether the "Add Router" button should be available to students.
+
+%h3 Packet Headers
+.field
+  %p Packet headers can be customized to different header column combinations, orderings, and sizes with a JSON spec.
+  %p Example: <tt>[{"key":"toAddress", "bits":8}, {"key":"fromAddress", "bits":8}]</tt>
+  %p Valid header keys are "toAddress", "fromAddress", "packetIndex" and "packetCount"
+  = f.label :router_expects_packet_header, 'Router expects packet header'
+  %p The header format the router uses to parse incoming packets and figure out where to route them.
+  = f.text_area :router_expects_packet_header, placeholder: 'Router packet header format', rows: 4
+  :javascript
+      codeMirror('router_expects_packet_header', 'javascript');
+.field
+  = f.label :client_initial_packet_header, 'Client initial packet header'
+  %p The header format used by the local client node when generating/parsing packets, which affects the layout of the send panel and log panels.  Usually the same as the router format, unless the lesson asks students to manually compose their header.
+  = f.text_area :client_initial_packet_header, placeholder: 'Client packet header format', rows: 4
+  :javascript
+      codeMirror('client_initial_packet_header', 'javascript');
+
+%h3 Send a Message Panel
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_add_packet_button
+      %td= f.label :show_add_packet_button, 'Show "Add Packet" button'
+      %td Whether the "Add Packet" button should appear in the footer of the send widget
+    %tr
+      %td= boolean_check_box f, :show_packet_size_control
+      %td= f.label :show_packet_size_control, 'Show packet size control'
+      %td Whether the packet size slider should appear in the footer of the send widget
+.field
+  = f.label :default_packet_size_limit, 'Default packet size'
+  %p The initial maximum packet size.  If the control is not shown, this will be the fixed packet size for the level.  Should be a positive number, or "Infinity"
+  = f.text_field :default_packet_size_limit, placeholder: 'Default packet size'
+
+%h3 Tabs
+.field
+  = f.label :show_tabs, 'Visible tabs'
+  %p An array of tabs to appear beneath the network visualization.  Does not determine tab order; tabs always appear in the order "Instructions, My Device, Router, DNS." Valid tab names are "instructions", "my_device", "router" and "dns".  Example: <tt>["my_device", "router"]</tt>
+  = f.text_area :show_tabs, placeholder: 'Which tabs to show?', rows: 4
+  :javascript
+      codeMirror('show_tabs', 'javascript');
+.field
+  = f.label :default_tab_index, 'Default tab index'
+  %p The zero-based index of the tab that should be active by default, which depends on which tabs you have enabled.
+  = f.number_field :default_tab_index
+
+%h3 My Device Tab
+.field
+  = f.label :show_encoding_controls, 'Show which encoding controls?'
+  %p An array of encoding types ("ascii", "binary", etc.) which should have visible checkbox controls on the "My Device" tab.  Valid encoding names are "a_and_b", "binary", "hexadecimal", "decimal" and "ascii".  Example: <tt>["a_and_b", "binary", "ascii"]</tt>
+  = f.text_area :show_encoding_controls, placeholder: 'Which encodings can the student control?', rows: 4
+  :javascript
+      codeMirror('show_encoding_controls', 'javascript');
+.field
+  = f.label :default_enabled_encodings, 'Default enabled encodings'
+  %p An array of encoding types ("ascii", "binary", etc.) to enable on page load.  An encoding enabled here but omitted from the visible controls becomes mandatory and cannot be disabled by the student.  Valid encoding names are "a_and_b", "binary", "hexadecimal", "decimal" and "ascii".  Example: <tt>["a_and_b", "binary", "ascii"]</tt>
+  = f.text_area :default_enabled_encodings, placeholder: 'Which encodings are enabled by default?', rows: 4
+  :javascript
+      codeMirror('default_enabled_encodings', 'javascript');
+
+%h3 Router Tab
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_router_bandwidth_control
+      %td= f.label :show_router_bandwidth_control, 'Show router bandwidth control'
+      %td Whether the student can change the max bandwidth of the router in the simulation.
+    %tr
+      %td= boolean_check_box f, :show_router_memory_control
+      %td= f.label :show_router_memory_control, 'Show router memory control'
+      %td Whether the student can change the maximum queue memory of the router in the simulation.
+.field
+  = f.label :default_router_bandwidth
+  %p The initial maximum bandwidth of the router, given in bits per second.  The control on the router tab snaps to powers of two, so it's probably ideal to give a power of two here.  Can also use "Infinity".
+  = f.text_field :default_router_bandwidth, placeholder: 'Bandwidth in bits per second, e.g. "1024" or "Infinity".'
+.field
+  = f.label :default_router_memory
+  %p The initial maximum queue memory of the router, given in bits.  Once the total size of messages queued for the router exceeds this value, incoming packets will be dropped.  The control on the router tab snaps to powers of two, so it's probably ideal to give a power of two here.  Can also use "Infinity".
+  = f.text_field :default_router_memory, placeholder: 'Memory in bits, e.g. "1024" or "Infinity".'
+
+%h3 DNS Tab
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_dns_mode_control
+      %td= f.label :show_dns_mode_control, 'Show DNS mode control'
+      %td Whether the student can change the DNS mode of the simulator.
+.field
+  = f.label :default_dns_mode, 'Default DNS Mode'
+  %p Which DNS mode to use initially, regardless of whether the mode control is displayed
+  = f.select :default_dns_mode, options_for_select(@level.class.dns_modes, @level.default_dns_mode)

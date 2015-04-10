@@ -1,9 +1,17 @@
 {
-  "compute": "إحصاء",
+  "divideByZeroError": "Your program results in division by zero.",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "equivalentExpression": "حاول إعادة ترتيب حجتك للحصول على نفس التعبير.",
+  "evaluate": "evaluate",
   "extraTopBlocks": "لديك قطع غير موصلة. هل قصدت إيصالها بقطعة الـ\"حساب\"؟",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "الدالة الخاص بك لا تقوم بإرجاع النتيجة الصحيحة لكافة القيم.",
   "goal": "الهدف:",
-  "reinfFeedbackMsg": "هذه هي قصتك! أكمل العمل عليها, أو انتقل إلى الأحجية التالية!",
-  "yourExpression": "التعبير الخاص بك:"
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Your expression is missing variable {var}.",
+  "reinfFeedbackMsg": "هنا عملية الحساب الخاص بك! لمواصلة العمل على ذلك، أو الانتقال إلى اللغز القادم!",
+  "yourExpression": "التعبير الخاص بك:",
+  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

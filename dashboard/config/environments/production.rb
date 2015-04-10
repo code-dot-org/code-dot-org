@@ -86,4 +86,7 @@ Dashboard::Application.configure do
 
   # Whether or not to display pretty blockly.
   config.pretty_apps = false
+
+  # Serve a production version of React
+  config.react.variant = :production
 end

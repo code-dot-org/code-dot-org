@@ -8,8 +8,8 @@
   "catText": "Text",
   "catVariables": "Mga variable",
   "continue": "Magpatuloy",
-  "createHtmlBlock": "lumikha ng html block",
-  "createHtmlBlockTooltip": "Lumilikha ng isang block ng HTML sa app.",
+  "container": "lumikha ng container",
+  "containerTooltip": "Lumilikha ng dibisyon na container at itakda nito ang panloob na HTML.",
   "finalLevel": "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle.",
   "nextLevel": "Maligayang pagbati! Natapos mo ang puzzle na ito.",
   "no": "Hindi",
@@ -24,6 +24,6 @@
   "stepIn": "Hakbang sa",
   "stepOver": "Hakbang sa paglipas ng",
   "stepOut": "Umalis",
-  "viewData": "View Data",
+  "viewData": "Tingnan ang Data",
   "yes": "Oo"
 }

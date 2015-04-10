@@ -1,9 +1,17 @@
 {
-  "compute": "calcular",
+  "divideByZeroError": "Su programa se traduce en la división por cero.",
+  "emptyComputeBlock": "Debes adjuntar un bloque al bloque \"evaluar\".",
   "equivalentExpression": "Intenta reorganizar tus argumentos para obtener exactamente la misma expresión.",
-  "extraTopBlocks": "Tienes bloques sin unir. ¿Quisiste unirlos al bloque \"calcular\"?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "evaluate": "evaluar",
+  "extraTopBlocks": "Usted tiene bloques sueltos \"separados\". Quiso decir adjuntar estos para el bloque de \"evaluar\"?",
+  "failedInput": "Tu función no devuelve el resultado correcto para todos los valores.",
   "goal": "Objetivo:",
-  "reinfFeedbackMsg": "¡Aquí está tu historia! Sigue trabajando en ella, o pasa al siguiente acertijo!",
-  "yourExpression": "Tu expresión:"
+  "levelIncompleteError": "Su expresión no coincide con el objetivo.",
+  "missingFunctionError": "Se debe definir una función denominada {functionName}.",
+  "missingVariableX": "A su expresión le falta la variable",
+  "reinfFeedbackMsg": "Aquí esta tu calculo! Continua trabajando en ello, o pasa al siguiente rompecabezas!",
+  "yourExpression": "Tu expresión:",
+  "wrongInput": "Estas llamando tu función con el valor incorrecto.",
+  "wrongOtherValuesX": "Su expresión da como resultado el valor incorrecto si variamos {var}.",
+  "wrongResult": "Su expresión no devuelve el resultado correcto."
 }

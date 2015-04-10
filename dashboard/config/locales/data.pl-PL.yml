@@ -105,7 +105,7 @@
         TextMatch: Dopasowanie tekstu
         StudioEC: Lab Gier
         Applab: App Lab
-        NetSim: Internet Simulator
+        NetSim: Symulator Internetowy
     trophy:
       name:
         Bronze: Brąz
@@ -417,8 +417,8 @@
         flappy_8: Efekty wizualne możesz ustawić w dowolnym momencie, nie tylko, gdy
           gra się zaczyna.  Spróbuj ustawić losową scenę, gdy dzieje się coś innego,
           na przykład, gdy Flappy mija przeszkodę.
-        flappy_9: Można mieszać różne polecenia, po uderzeniu w przeszkodę lub w ziemię,
-          zamiast kończyć grę, spróbujmy ustawić wynik z powrotem na 0.
+        flappy_9: Dla zmyłki, gdy uderzy w przeszkodę, zamiast kończyć grę, spróbuj
+          ustawić wynik z powrotem na 0.
         flappy_11: Utwórz swoją własną grę Flappy'ego. Możesz zmienić wszystkie efekty
           wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
           przycisk Zakończ, aby swoim znajomym udostępnić grę na telefony.
@@ -552,8 +552,8 @@
           gdy dociera do niego pies.
         studio_k1_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje się
           szczęśliwa?
-        studio_k1_6: Utwórz własną historię! Przesuwaj dookoła kota i psa i powoduj,
-          że coś mówią.
+        studio_k1_6: Utwórz własną historię! Przesuwaj kota i psa i spraw, że będą
+          mówić.
         maze_wordsearch_k_1: Przesuwaj mnie, żeby przeliterować słowo EAST
         maze_wordsearch_k_2: Przesuwaj mnie, żeby przeliterować słowo  SOUTH
         maze_wordsearch_k_3: Przesuwaj mnie, żeby przeliterować słowo WEST
@@ -570,7 +570,7 @@
           słowo BELOW
         maze_wordsearch_k_20: To jest test! Przesuwaj mnie w jedną stronę a potem
           w inną, żeby przeliterować słowo STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Stwórz swoją aplikację używając bloków z przybornika.
         turtle_ec_1_2: 'Teraz narysuj kwadrat. Uwaga: użyj ulubionego koloru, wybierając
           go w nowym bloku "kolor pisaka".'
         turtle_ec_1_10: 'Wykonałeś to! Teraz narysuj cokolwiek. Niektóre zabawne pomysły:
@@ -578,129 +578,6 @@
           pisaka". Baw się dobrze!'
         studio_ec_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
           aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
-    levelbuilder:
-      frozen line:
-        instructions: Hi! jestem Elsa z Arendelle. Proszę pomóż mi utworzyć pojedynczą
-          linię.
-      frozen perpendicular:
-        instructions: Teraz zobaczmy, czy potrafimy utworzyć dwie linie leżące pod
-          kątem 90 stopni do siebie. Będziesz musiał użyć bloków Obróć (Turn) oraz
-          Przesuń (Move).
-      frozen square iterative:
-        instructions: Wygląda na to, że jesteśmy w połowie drogi do utworzenia kwadratu.
-          Umieść 4 linie tak, aby utworzyły kwadrat.
-      frozen square loop:
-        instructions: Cześć, jestem Anna z Arendelle! Zróbmy kwadrat używając bloku
-          Powtórz (Repeat), co pozwoli użyć mniej bloków. Ile razy (???) powinny wykonać
-          się bloki wewnątrz bloku pętli Powtórz (Repeat), żeby powstał kwadrat?
-      frozen square loop 3x:
-        instructions: Utwórzmy trzy kwadraty, obracając każdy z nich. Upewnij się
-          przed każdym nowym kwadratem, że obrót ma 120 stopni.
-      frozen square snowflake:
-        instructions: Czy potrafisz utworzyć śnieżynkę używając bloku Powtórz (Repeat),
-          aby narysować kwadrat 10 razy, oraz bloku Obróć (Turn), aby obrócić się
-          o 36 stopni pomiędzy każdym z kwadratów?
-      frozen cross:
-        instructions: Użyj bloku Powtórz (Repeat), aby utworzyć znak plus. Czy zauważyłeś,
-          że Elsa może poruszać się do przodu i do tyły?
-      frozen cross rotate:
-        instructions: Teraz spróbuj powtórzyć to 10 razy. O ile stopni musisz się
-          obrócić miedzy każdą z linii?
-      frozen cross rotate dense:
-        instructions: 'Powtórzmy to 90 razy! Ile razy 90 zmieści się w 360? Podpowiedź:
-          To naprawdę mała liczba.'
-      frozen diamond:
-        instructions: 'Utwórzmy równoległobok. To figura podobna do kwadratu, ale
-          ma inne kąty: 60 i 120 stopni zamiast 90 stopni.'
-      frozen diamond mini snowflake:
-        instructions: Czy wiesz, że każdy płatek śniegu ma inny kształt? Utwórzmy
-          nową śnieżynkę używając bloku Powtórz (Repeat), aby powtórzyć równoległobok
-          4 razy, obracając go za każdym razem o 90 stopni w prawo.
-      frozen diamond snowflake:
-        instructions: Teraz utwórzmy nową śnieżynkę, używając bloku powtórzenia, żeby
-          powtórzyć równoległobok 10 razy, obracając go za każdym razem o 36 stopni
-          w prawo.
-      frozen circle:
-        instructions: Okrąg jest specjalnym kształtem. Czy potrafisz znaleźć liczbę,
-          którą należy zastąpić pytajniki, aby narysować okrąg?
-      frozen circle function:
-        instructions: Użyj nowego bloku Utwórz okrąg (Create a circle), aby narysować
-          10 nakładających się na siebie okręgów. Nie zapomnij skoczyć do przodu pomiędzy
-          okręgami.
-      frozen circle function in circle:
-        instructions: Teraz utwórzmy 20 nakładających się na siebie okręgów, skręcając
-          o 18 stopni przy każdym okręgu.
-      frozen circle function with parameter:
-        instructions: Oto blok Utwórz okrąg (Create a circle), który potrafi tworzyć
-          okręgi o różnych rozmiarach. Czy potrafisz użyć go do utworzenia małego
-          okręgu o rozmiarze 5 i większego o rozmiarze 10?
-      frozen snowflower:
-        instructions: Wymyślne śnieżne wzory mogą być utworzone z bardzo prostych
-          kształtów. Czy potrafisz utworzyć wzór powtarzając 5 okręgów rozmiaru 5
-          i 5 okręgów rozmiaru 10?
-      frozen snowflake branch:
-        instructions: Spróbuj użyć bloku Utwórz ramię płatka śniegu (Create a snowflake
-          branch), aby utworzyć 3 ramiona, które zaczną wyglądać jak płatek śniegu.
-      frozen snowflake full:
-        instructions: Teraz powtórzymy to 8 razy, aby utworzyć piękny płatek śniegu!
-      frozen freeplay:
-        instructions: Oficjalnie stałeś się mistrzem artystą! Utwórz zimową krainę
-          cudów i podziel się nią z przyjaciółmi.
-      scrat 16:
-        instructions: Żołądź! Żołądź! Żołądź! Użyj bloku Jeśli (if), by sprowadzić
-          mnie tam przy użyciu jak najmniejszej liczby bloków.
-      scrat 17:
-        instructions: Ok, zróbmy to jeszcze raz dla poćwiczenia - nie różni się to
-          zbytnio, ale uważaj na ścianę!
-      scrat 18:
-        instructions: Bloki jeśli-w przeciwnym razie (if-else) sprawdzają warunek,
-          a następnie wykonują jedną rzecz LUB drugą. By sprowadzić mnie do żołędzia,
-          spróbuj użyć tego nowego bloku.
-      scrat 19:
-        instructions: Jeszcze jedno ćwiczenie z bloków jeśli-w przeciwnym razie. Czy
-          potrafisz użyć ich prawidłowo przy pierwszym podejściu?
-      scrat 20:
-        instructions: Czy możesz dodać tylko 3 bloki, aby pomóc mi rozwiązać bardziej
-          skomplikowany labirynt? Jeśli zrobisz to dobrze, to mogę przejść każdą krętą
-          drogę bez względu na jej długość. Pospiesz się! Lód się topi!
-      Standalone_Artist_1:
-        instructions: Zapraszamy do Artysty! Najpierw, spróbujmy wykonać kwadrat używając
-          bloków "obróć w prawo" i "przesuń do przodu". Każdy bok powinien mieć długość
-          100 pikseli.
-      Standalone_Artist_2:
-        instructions: Narysuj ten diament z kontami 120 i 60 stopni i długościami
-          boków 150 pikseli.
-      Standalone_Artist_3:
-        instructions: Czy potrafisz narysować ten sześciokąt z bokami 100 pikseli
-          i obrotami 60 stopni?
-      Standalone_Artist_4:
-        instructions: Teraz masz do dyspozycji nowy blok, pętlę. Będzie powtarzał
-          zestaw poleceń. Co się stanie, jeśli te polecenia zostaną wykonane w pętli
-          6 razy?
-      Standalone_Artist_5:
-        instructions: Ile razy musisz powtórzyć ten diament, by narysować kwiat?
-      Standalone_Artist_5.5:
-        instructions: 'Zwróć uwagę, jak uprościliśmy kod diamentu wykorzystując pętlę.
-          Możesz teraz powtórzyć całę tę sekwencję 12 razy, aby narysować kwiat. Wskazówka:
-          Musisz wykonać obrót o 30 stopni po każdym diamencie, by nie rysować cały
-          czas tego samego diamentu.'
-      Standalone_Artist_6:
-        instructions: 'Wykonaj ten sześciokąt w pętli 6 razy, aby utworzyć wzór. O
-          ile stopni będzie trzeba wykonać obrót za każdym razem? Wskazówka: podzielić
-          liczbę stopni w okręgu przez ile razy jest wykonywana pętla.'
-      Standalone_Artist_7:
-        instructions: 'Funkcja jest kolejnym narzędziem programowania, które pomaga
-          unikać powtarzania się. Ta funkcja rysuje kwiat, możesz więc użyć jej za
-          każdym razem, gdy chcesz narysować kwiat. Użyj funkcji i nowego bloku skoku,
-          by narysować te kwiaty. Wskazówka: Kwiaty są oddalone od siebie o 150 pikseli'
-      Standalone_Artist_8:
-        instructions: Tutaj jest funkcja o nazwie "Rysuj kształt", którą zaprogramowaliśmy,
-          by rysować sześciokąty. Uruchom kod, aby zobaczyć, co robi, a następnie
-          eksperymentuj z tą funkcją, aby zobaczyć co się dzieje. Czy mógłbyś spowodować,
-          by rysowała wzory złożone z kwadratów, trójkątów lub ośmiokątów?
-      Standalone_Artist_9:
-        instructions: Teraz idź dalej i twórz obrazki, jakie chcesz! Masz nawet pustą
-          funkcja, którą możesz wykorzystać, by robiła, co chcesz!
     video:
       name:
         maze_intro: Labirynt - wprowadzenie
@@ -760,6 +637,7 @@
         C2_relay_programming: Programowanie przekaźnika
         C2_paper_airplanes: Samoloty z papieru
         C2_digital_footprint: Twój cyfrowy ślad
+        C2_digital_footprint_v2: Twój cyfrowy ślad
         C3_maze_level_4: Pętle w labiryncie
         C3_artist_intro: Artysta - wprowadzenie
         C3_artist_functions: Funkcje Artysty
@@ -800,6 +678,21 @@
         playlab_intro: Wprowadzenie do Play Lab
         playlab_events: Zdarzenia Play Gry Lab
         playlab_repeat_forever: Play Lab Powtarzaj Zawsze
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Zmienne
+        msm_7_functions: Funkcje
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
@@ -830,18 +723,18 @@
         snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
         degrees_per_side: Podziel 360 przez liczbę stron, aby uzyskać miarę każdego
           kąta w stopniach.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
+        set_sides: Użyj tego bloku, aby ustawić "strony" do numeru potrzebnego do
+          skompletowania puzzli.
         set_length: Użyj tego bloku, aby ustawić "długość" poprawnej wartości.
         which_equation: Which equation makes each side shorter for shapes with more
           sides?
         get_nectar: Użyj nowego bloku "dostać nektar".
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        actions_category: Przybornik ma nowy wygląd! Bloki "Akcje" są teraz tutaj.
+        draw_square_hint: 'Wskazówka: Użyj pętli kwadratowej, którą wykonałeś w ostatnich
+          puzzlach.'
         edit_function: Kliknij tutaj, aby edytować swoją funkcję.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
+        create_function: Kliknij tutaj, aby otworzyć menu "Funkcje", następnie kliknij
+          przycisk "Utwórz funkcję".
         house_hint: It's ok if the picture doesn't look like a house yet. We will
           fix it in the next puzzle.
         edit_draw_square: Use this button to edit the function and add the loop.
@@ -880,18 +773,24 @@
           trójkąt
         edit_add_parameter: Kliknij przycisk "Edytuj", aby dodać parametr w Twojej
           funkcji
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
+        add_and_drag_parameter: Napisz tu nazwę swojego parametru, kliknij "dodaj"
+          (add), a następnie przeciągnij to do definicji swojej funkcji
+        fill_in_actor: Wypełnij ??? liczbami, które odpowiadają każdemu aktorowi (1,
+          2 i 3)
+        repeat: Umieść bloki wewnątrz pętli, aby powtórzyć polecenia
         if_bee_nectar: Użyj bloku IF aby zdecydować, czy pszczoły powinny dostać nektar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
+        if_else_bee: Użyj bloku "if/else" (jeżeli/w przeciwnym wypadku), aby pszczoła
+          mogła dostać nektar jeśli to jest kwiat lub zrobić miód - w przypadku gdy
+          nie jest to kwiat
+        repeat_full_circle: Wpisz ile razy zombie musi wykonać ruch, aby zrobić pełne
+          kółko
+        place_length_variable: Przeciągnij zmienną długość (length) tutaj, aby zastąpić
+          znaki zapytania
+        arrows_move_actor: Używaj strzałek, aby poruszać się aktorem
+        right_arrow_fireball: Użyj strzałki w prawo, aby strzelać ognistymi kulami
         name_function: Napisz tu nazwę swojej funkcji
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

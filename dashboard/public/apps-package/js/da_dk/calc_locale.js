@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "beregn"},
+"divideByZeroError":function(d){return "Dit program resulterer i division med nul."},
+"emptyComputeBlock":function(d){return "Du skal vedhæfte en blok til \"vurdér\"-blokken."},
 "equivalentExpression":function(d){return "Prøv at ændre rækkefølgen på dine argumenter for at få præcis det samme udtryk."},
-"extraTopBlocks":function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"beregn\" blokken?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "evaluér"},
+"extraTopBlocks":function(d){return "Du har ikke-vedhæftede blokke. Ønskede du at vedhæfte disse til \"vurdér\"-blokken?"},
+"failedInput":function(d){return "Din funktion returnerer ikke det korrekte resultat for alle værdier."},
 "goal":function(d){return "Mål:"},
-"reinfFeedbackMsg":function(d){return "Her er din historie! Fortsæt med at arbejde på den, eller gå videre til den næste opgave!"},
-"yourExpression":function(d){return "Dit udtryk:"}};
+"levelIncompleteError":function(d){return "Dit udtryk er ikke det samme som målet."},
+"missingFunctionError":function(d){return "Du skal definere en funktion navngivet "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Dit udtryk mangler variable "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Her er din beregning! Fortsæt med at arbejde på det, eller gå videre til det næste puslespil!"},
+"yourExpression":function(d){return "Dit udtryk:"},
+"wrongInput":function(d){return "Du kalder din funktion med den forkerte værdi."},
+"wrongOtherValuesX":function(d){return "Dir udtryk resulterer i den forkerte værdi, hvis vi ændrer "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Dit udtryk returnerer ikke det korrekte resultat."}};

@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "cirkel (radie, stil, färg)"},
 "displayBlockTitle":function(d){return "visa"},
 "ellipseBlockTitle":function(d){return "ellips (bredd, höjd, stil, färg)"},
 "extraTopBlocks":function(d){return "Du har okopplade block. Menade du att fästa dessa till \"visa\" blocket?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "övertäckning(topp, botten)"},
 "placeImageBlockTitle":function(d){return "placera-bild (x, y, bild)"},
 "offsetBlockTitle":function(d){return "Offset (x, y, bild)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "underlag (botten, topp)"},
 "outline":function(d){return "kontur"},
 "solid":function(d){return "solid"},
-"string":function(d){return "sträng"}};
+"string":function(d){return "sträng"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

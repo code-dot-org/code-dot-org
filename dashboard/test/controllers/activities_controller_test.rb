@@ -3,6 +3,7 @@ require 'test_helper'
 
 class ActivitiesControllerTest < ActionController::TestCase
   include Devise::TestHelpers
+  include LevelsHelper
   setup do
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
@@ -14,7 +15,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    script_levels = Script.find(Script::TWENTY_HOUR_ID).script_levels
+    script_levels = Script.twenty_hour_script.script_levels
     @script_level_prev = script_levels[0]
     @script_level = @script_level_prev.next_progression_level
     @script_level_next = @script_level.next_progression_level
@@ -31,7 +32,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   # without having to update all existing test contracts.
   def assert_equal_expected_keys(expected, actual)
     expected.each do |key, value|
-      assert_equal value, actual[key]
+      assert_equal value, actual.with_indifferent_access[key]
     end
   end
 
@@ -39,6 +40,24 @@ class ActivitiesControllerTest < ActionController::TestCase
     '<xml><block type="when_run" deletable="false"><next><block type="studio_showTitleScreen"><title name="TITLE">' +
         text +
         '</title><title name="TEXT">type text here</title></block></next></block>'
+  end
+
+  def build_expected_response(options = {})
+    {
+      previous_level: build_script_level_path(@script_level_prev),
+      total_lines: 35,
+      redirect: build_script_level_path(@script_level_next),
+      design: 'white_background',
+    }.merge options
+  end
+
+  def build_try_again_response(options = {})
+    {
+      previous_level: build_script_level_path(@script_level_prev),
+      message: 'try again',
+      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      design: 'white_background',
+    }.merge options
   end
 
   test "logged in milestone" do
@@ -58,13 +77,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-#                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
@@ -141,15 +154,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     assert_response :success
-
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>nil,
-#                         "save_to_gallery_url"=>nil,
-                         "design"=>"white_background"}
-
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+    assert_equal_expected_keys build_expected_response, JSON.parse(@response.body)
 
     # created a user script
     user_script = UserScript.last
@@ -184,13 +189,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     # pretend it succeeded
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines" => 15, # no change
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-#                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        total_lines: 15, # No change
+        level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # activity does not have unreasonable lines of code either
@@ -218,13 +219,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     # pretend it succeeded
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines" => 1015, # pretended it was 1000
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-#                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        total_lines: 1015, # Pretend it was 1000
+        level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # activity does not have unreasonable lines of code either
@@ -256,12 +253,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     # pretend it succeeded
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines" => 1000, # no change
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        total_lines: 1000, # No change
+        level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -298,13 +292,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-#                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script that we started in the past with the other userlevel
@@ -334,13 +322,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created gallery activity and activity for user
@@ -368,13 +350,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-#                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     assert_equal @user, Activity.last.user
@@ -400,13 +376,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-#                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     assert_equal @user, Activity.last.user
@@ -425,13 +395,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     assert_response :success
-
-    expected_response = {"previous_level"=>"/s/1/level/#{@script_level_prev.id}",
-                         "message"=>"try again",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "design"=>"white_background"}
-
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+    assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
   end
 
   test "logged in milestone not passing with hint" do
@@ -452,12 +416,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/1/level/#{@script_level_prev.id}",
-                         "message"=>"try again",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "design"=>"white_background",
-                         "hint" => hint.hint}
-
+    expected_response = build_try_again_response(hint: hint.hint)
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -477,13 +436,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 #    assert_equal @good_image.size, LevelSourceImage.last.image.size
 
     assert_response :success
-
-    expected_response = {"previous_level"=>"/s/1/level/#{@script_level_prev.id}",
-                         "message"=>"try again",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "design"=>"white_background"}
-
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+    assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
   end
 
   test "logged in milestone with image" do
@@ -507,13 +460,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        level_source: "http://test.host/c/#{assigns(:level_source).id}",
+        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -548,13 +497,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal level_source, assigns(:level_source)
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        level_source: "http://test.host/c/#{assigns(:level_source).id}",
+        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -562,7 +507,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     program = "<whatever>"
 
     level_source = LevelSource.find_identical_or_create(@script_level.level, program)
-    level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
+    LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @blank_image
     end
 
@@ -580,13 +525,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal level_source, assigns(:level_source)
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        level_source: "http://test.host/c/#{assigns(:level_source).id}",
+        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -614,13 +555,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal level_source, assigns(:level_source)
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        level_source: "http://test.host/c/#{assigns(:level_source).id}",
+        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -648,13 +585,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal level_source, assigns(:level_source)
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        level_source: "http://test.host/c/#{assigns(:level_source).id}",
+        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -694,14 +627,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>35,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-#                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
-                         "design"=>"white_background"}
-
-
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -745,12 +671,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>20,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        total_lines: 20,
+        level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -782,12 +705,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>30,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        total_lines: 30,
+        level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -813,11 +733,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 10, session['lines']
 
     assert_response :success
-    expected_response = {"previous_level"=>"/s/1/level/#{@script_level_prev.id}",
-                         "message"=>"try again",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "design"=>"white_background"}
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+    assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
   end
 
   test "anonymous milestone with image saves image but does not save to gallery" do
@@ -850,12 +766,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines"=>30,
-                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-                         "design"=>"white_background"}
-
+    expected_response = build_expected_response(
+        total_lines: 30,
+        level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -968,7 +881,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone changes to next stage in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
-    levels = (1..3).map { |n| create(:level, :name => "Level #{n}", :game => game) }
+    (1..3).each { |n| create(:level, :name => "Level #{n}", :game => game) }
     script_dsl = ScriptDSL.parse(
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"

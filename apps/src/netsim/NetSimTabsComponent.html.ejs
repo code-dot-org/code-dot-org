@@ -1,0 +1,41 @@
+<%
+  var i18n = require('../../locale/current/netsim');
+
+  var shouldShowTab = require('./netsimUtils').shouldShowTab;
+  var NetSimTabType = require('./netsimConstants').NetSimTabType;
+
+  var showInstructions = shouldShowTab(level, NetSimTabType.INSTRUCTIONS);
+  var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);
+  var showRouter = shouldShowTab(level, NetSimTabType.ROUTER);
+  var showDns = shouldShowTab(level, NetSimTabType.DNS);
+
+  var instructionsContent = level.instructions || '';
+%>
+<div class="netsim-tabs">
+  <ul>
+    <% if (showInstructions) { %>
+    <li><a href="#tab_instructions"><%= i18n.instructions() %></a></li>
+    <% } %>
+    <% if (showMyDevice) { %>
+      <li><a href="#tab_my_device"><%= i18n.myDevice() %></a></li>
+    <% } %>
+    <% if (showRouter) { %>
+      <li><a href="#tab_router"><%= i18n.router() %></a></li>
+    <% } %>
+    <% if (showDns) { %>
+      <li><a href="#tab_dns"><%= i18n.dns() %></a></li>
+    <% } %>
+  </ul>
+  <% if (showInstructions) { %>
+    <div id="tab_instructions"><p><%= instructionsContent %></p></div>
+  <% } %>
+  <% if (showMyDevice) { %>
+    <div id="tab_my_device"></div>
+  <% } %>
+  <% if (showRouter) { %>
+    <div id="tab_router"></div>
+  <% } %>
+  <% if (showDns) { %>
+    <div id="tab_dns"></div>
+  <% } %>
+</div>

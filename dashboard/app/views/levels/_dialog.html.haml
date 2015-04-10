@@ -1,9 +1,10 @@
 / This partial contains general logic+view for displaying modal dialogs and handling submit button interactions.
 - app, data = %i(app data).map{ |x| local_assigns[x] }
 
-.buttons
-  %a.btn.btn-large.btn-primary.next-stage.submitButton
-    Submit
+- unless app == 'external'
+  .buttons
+    %a.btn.btn-large.btn-primary.next-stage.submitButton
+      Submit
 .clear
 %div{style: 'display: none;'}
   #error-dialogcontent
@@ -47,72 +48,54 @@
           =t('dialog.ok')
 
 :javascript
-  var buttonEnabled = true;  // avoid multiple simultaneous submissions
   var dialogType = null;
   var adjustedScroll = false;
 
-  $(function()
-  {
-    if ("#{data['pre_title']}" != "")
-    {
-      setTimeout(function() {
+  $(function () {
+    if ("#{data['pre_title']}" != "") {
+      setTimeout(function () {
         showDialog("pre");
-        }, 1000);
+      }, 1000);
     }
   });
 
-  function enableButton(enable)
-  {
-    buttonEnabled = enable;
-
-    if (enable)
-      $('.submitButton').removeClass("disabled");
-    else
-      $('.submitButton').addClass("disabled");
-  }
-
-  function dialogHidden()
-  {
-    if (dialogType == "success" && lastServerResponse.nextRedirect)
-    {
+  function dialogHidden() {
+    if (dialogType == "success" && lastServerResponse.nextRedirect) {
       window.location.href = lastServerResponse.nextRedirect;
     }
 
-    if (dialogType == "error")
-    {
+    if (dialogType == "error") {
       adjustScroll();
     }
   }
 
-  function showDialog(type)
-  {
+  function showDialog(type) {
     dialogType = type;
 
     var dialog = new Dialog({ body: "", onHidden: dialogHidden });
 
-    // use our prefabricated dialog content
+    // Use our prefabricated dialog content.
     $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
 
-    // clicking the okay button in the dialog box dismisses it
-    $(".modal-body #ok-button").click(function() {
+    // Clicking the okay button in the dialog box dismisses it.
+    $(".modal-body #ok-button").click(function () {
       dialog.hide();
     });
 
     dialog.show();
   }
 
-  function adjustScroll()
-  {
-    if (adjustedScroll)
+  function adjustScroll() {
+    if (adjustedScroll) {
       return;
+    }
 
     var win = $(window);
     var el = $('.mainblock');
     var winPos = win.scrollTop() + win.height();
     var elPos = el.offset().top + el.height() - 10;
 
-    if (winPos < elPos)
-    {
+    if (winPos < elPos) {
       $('html, body').animate({
         scrollTop: $(".submitButton:first").offset().top - 10
       }, 1000);
@@ -121,45 +104,44 @@
     adjustedScroll = true;
   }
 
-  $('.submitButton').click(function()
-  {
+  $('.submitButton').click(function () {
     var results = getResult();
     var response = results['response'];
     var result = results['result'];
+    var errorType = results['errorType'];
 
-    if (buttonEnabled)
-    {
-      enableButton(false);
+    // Avoid multiple simultaneous submissions.
+    $('.submitButton').attr('disabled', true);
 
-      if (!result)
-      {
-        showDialog("error");
-        CDOSounds.play('failure');
-      } else {
-        CDOSounds.play('success');
-      }
+    if (!result) {
+      showDialog(errorType || "error");
+      CDOSounds.play('failure');
+    } else {
+      CDOSounds.play('success');
+    }
 
-      sendReport({
-        program: response,
-        fallbackResponse: '#{@fallback_response.to_json}',
-        callback: '#{@callback}',
-        app: '#{app}',
-        level: '#{@level.level_num}',
-        result: result,
-        testResult: result ? 100 : 0,
-        onComplete: function() {
-          if (!lastServerResponse.nextRedirect)
-          {
-            enableButton(true);
-          }
-          if (lastServerResponse.videoInfo)
-          {
-            showVideoDialog(lastServerResponse.videoInfo);
-          } else if (lastServerResponse.nextRedirect)
-          {
+    sendReport({
+      program: response,
+      fallbackResponse: '#{@fallback_response.to_json}',
+      callback: '#{@callback}',
+      app: '#{app}',
+      level: '#{@level.level_num}',
+      result: result,
+      testResult: result ? 100 : 0,
+      onComplete: function () {
+        if (!lastServerResponse.nextRedirect) {
+          $('.submitButton').attr('disabled', false);
+        }
+        if (lastServerResponse.videoInfo)
+        {
+          showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.nextRedirect) {
+          if(#{data['options'].try(:[], 'skip_dialog').blank?}) {
             showDialog("success");
+          } else {
+            window.location.href = lastServerResponse.nextRedirect;
           }
         }
-      });
-    }
+      }
+    });
   });

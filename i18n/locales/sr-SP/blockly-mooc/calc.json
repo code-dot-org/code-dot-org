@@ -1,9 +1,17 @@
 {
-  "compute":"рачунај",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "equivalentExpression":"Покушајте да прерасподелите своје аргументе како би добили идентичан израз.",
-  "extraTopBlocks":"Имате неспојене блокове. Да ли сте мислили да спојите ове на блок \"рачунај\"?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"Ваша функција не враћа прави резултат за све вредности.",
   "goal":"Циљ:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Ваш израз:"
+  "levelIncompleteError":"Твој израз се не подудара са задатком.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Your expression is missing variable {var}.",
+  "reinfFeedbackMsg":"Ево вашег прорачуна! Наставите да радите на њему, или пређите на следећу пузлу!",
+  "yourExpression":"Ваш израз:",
+  "wrongInput":"You are calling your function with the wrong value.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

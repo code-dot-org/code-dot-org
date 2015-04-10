@@ -1,27 +1,21 @@
 .multi
 
   - data = @level.properties
+  - app = 'multi'
 
-  %h2!= multi_t(data['title'])
-
-  - if ! data['content1'].blank? || ! data['content2'].blank? || ! data['content3'].blank?
-    .question
-
-      %p!= multi_t(data['content1']) unless data['content1'].blank?
-      %p!= multi_t(data['content2']) unless data['content2'].blank?
-      %p!= multi_t(data['content3']) unless data['content3'].blank?
+  = render partial: 'levels/content', locals: {app: app, data: data, content_class: 'question'}
 
   .answers
 
     %span
-      %strong.multi-question!= data['questions'][0]['text']
+      %h4.multi-question!= multi_t(data['questions'][0]['text']) if data['questions']
 
     %br/
     %br/
 
     .buttons
       %a.btn.btn-large.btn-primary.next-stage.submitButton
-        Submit
+        =t('submit')
 
     - height = data['height'] || '20'
     - height += 'px'
@@ -42,7 +36,7 @@
 
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton
-          Submit
+          =t('submit')
 
   .clear
 
@@ -98,7 +92,8 @@
 :javascript
 
   var selection = "none";   // "none", "wrong", "right"
-  var selectionIndex = -1;
+  var selectionIndex = #{@last_attempt || -1};
+
   var buttonEnabled = true;  // avoid multiple simultaneous submissions
   var dialogType = null;
   var adjustedScroll = false;
@@ -141,6 +136,15 @@
     });
 
     enableButton(false);
+
+    // Pre-select previously submitted response if available
+    if (selectionIndex != -1) {
+      var radioButton = $('#choice_' + selectionIndex);
+      radioButton.prop('checked', true);
+      var correctChoice = $(radioButton).attr('correct') === 'true';
+      selection = correctChoice ? "right" : "wrong";
+      enableButton(true);
+    }
 
     if ("#{data['pre_title']}" != "")
     {
@@ -235,6 +239,7 @@
           level: '#{@level.level_num}',
           result: selection == "right",
           testResult: selection == "right" ? 100 : 0,
+          program: selectionIndex,
           onComplete: function()
           {
             if (!lastServerResponse.nextRedirect)

@@ -72,7 +72,7 @@ ko:
       2-3 Big Event Match 1:
         Matching: 맞추기
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
+        Match the button combination to the dance moves.: 조합되는 블럭을 맞춰 댄스 무브하세요.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -95,7 +95,7 @@ ko:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: 맞추기
-        Match the grid to the program: 프로그램의 모양을 맞추세요
+        Match the grid to the program.: Match the grid to the program.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -234,7 +234,7 @@ ko:
       K-1 Big Event Match 1:
         Matching: 짝 맞추기
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
+        Match the button combination to the dance moves.: 조합되는 블럭을 맞춰 댄스 무브하세요.
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
@@ -330,6 +330,19 @@ ko:
         "small-star: string -> image": '작은-별 -> 이미지'
         "bigger-string: string string -> string": '더 긴-문장: 문장 문장 -> 문장'
         "find-price: string -> number": '찾기-가격: 문장 -> 수'
+      PDK5 Pair programming match:
+        Pair programming match: Pair programming match
+        Match the definitions to the words you were introduced to in the last video.: Match the definitions to the words you were introduced to in the last video.
+        Pair programming: Pair programming
+        Driver: Driver
+        Navigator: Navigator
+        When two students work at one computer to write a program together: When two students work at one computer to write a program together
+        The student who controls the keyboard, mouse, or touch screen: The student who controls the keyboard, mouse, or touch screen
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The student who thinks about the big-picture and looks for potential mistakes or misunderstandings
+      PDK5 What is unplugged:
+        What is an unplugged activity?: What is an unplugged activity?
+        Question: 질문 입력
+        Answer 1: Answer 1
       test matching image:
         Matching Images Two: 이미지 맞추기2
         Match up all the flowers by colour!: 꽃들을 색깔에 따라 짝을 맞추세요.

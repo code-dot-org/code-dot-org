@@ -571,11 +571,10 @@
           un buton segeata sau un robinet pe ecran.
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: Uite, il vom determina pe extraterestru să-l salute pe umanoid când
+          jucătorul apasă pe el. Vom folosi blocul "când s-a apăsat", atașându-i blocul
+          "spune". Când jucătorul apasă pe extraterestru, tot ce este atașat acestui
+          bloc "când s-a apăsat" va fi executat. Ce va zice extraterestrul tău?
       4:
         image: notes/playlab_events_4.png
         text: Exista, de asemena blocuri "când săgeți". Daca conectezi blocurile "muta"

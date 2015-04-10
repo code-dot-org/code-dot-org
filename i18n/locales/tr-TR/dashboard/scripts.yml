@@ -237,31 +237,9 @@ tr:
           Artist Binary: Sanaçtı İkili Taban
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
         Course4pre:
+          title: Ders 4 Ön Koşulu
           description_short: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
-          Course 4 Prerequisite: Ders 4 Ön Koşulu
-          "Maze: Sequence": 'Labirent: Sıra'
-          "Artist: Sequence": 'Aktör: Sıra'
-          "Artist: Loops": 'Aktör: Döngüler'
-          "Bee: Conditionals": 'Arı: Koşullandırıcılar'
-          "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
-          "Farmer: While Loops": 'Çiftçi: While Döngüleri'
-          "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
-          "Artist: Functions": 'Aktör: Fonksiyonlar'
-          "Bee: Debugging": 'Arı: Ayıklama'
-        course4pre:
-          description_short: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
-          Course 4 Prerequisite: Ders 4 Ön Koşulu
-          "Maze: Sequence": 'Labirent: Sıra'
-          "Artist: Sequence": 'Aktör: Sıra'
-          "Artist: Loops": 'Aktör: Döngüler'
-          "Bee: Conditionals": 'Arı: Koşullandırıcılar'
-          "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
-          "Farmer: While Loops": 'Çiftçi: While Döngüleri'
-          "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
-          "Artist: Functions": 'Aktör: Fonksiyonlar'
-          "Bee: Debugging": 'Arı: Ayıklama'
-        Course4pre (Case Conflict):
-          description_short: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          description: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
           Course 4 Prerequisite: Ders 4 Ön Koşulu
           "Maze: Sequence": 'Labirent: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
@@ -294,6 +272,9 @@ tr:
           Special: Özel
           Binary: İkili
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Ortaokul Matematiği için Kullanılabilirlik Testi
           Evaluation Blocks: Değerlendirme Blokları
           Blocks to Math: Matematik için bloklar
@@ -308,16 +289,208 @@ tr:
           title: Cebirde Bilgisayar Bilimi
           description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Oyunları ve Koordinat Düzlemleri'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Diziler ve Görüntüler
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
+          "Unplugged: The Design Recipe": 'Unplugged: Tasarım Tarifi'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Şartlar ve Parçalı Fonksiyonlar'
+          "Eval: Conditionals": Koşullar
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+        infinity:
+          title: Disney Infinity Play Lab
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          Play Lab: Oyun Laboratuvarı
+          Infinity: Sonsuz
+        algebrademo:
+          title: Cebir Demo
+          description_short: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
+          description: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
+          Algebra Demo: Cebir Demo
+          Evaluation Blocks: Değerlendirme Blokları
+          Making Pictures: Resim Yapma
+          Defining Variables: Değişkenler Tanımlama
+          Defining Simple Functions: Basit Fonksiyonları Tanımlama
+          The Design Recipe: Tasarım Tarifi
+        K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Kişisel Geliştirme Giriş
+          Blockly Basics: "Balockly'nin temelleri"
+          Writing computer programs: Bilgisayar programları yazma
+          Navigating the teacher dashboard: Öğretmen panosunda gezinme
+          Unplugged lessons: Bağımsız dersler
+          Classroom Culture: Sınıf kültürü
+          Ways to go beyond Courses 1, 2, and 3: kurs 1,2 ve 3 ünde ilersine gitmek için yollar
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+        netsim:
+          title: İnternet Simülatörü
+          description_short: ""
+          description: ""
+          Internet Simulator: İnternet Simülatörü
+          Unit 1: Ünite 1
+          Unit 2: İkinci Ünite
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pikselleşme
+          description: Bitler ve baytlar ile görüntüler oluştur.
+          Pixelation: Pikselleşme
+        20-hour:
+          title: 20-Hour Intro Course
+          description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
+          Introduction to Computer Science: Bilgisayar Bilimlerine Giriş
+          The Maze: Labirent
+          Computational Thinking: Sayısal Düşünme
+          Graph Paper Programming: Grafikli Kağıdıyla Programlama
+          The Artist: Sanatçı
+          Algorithms: Algoritmalar
+          The Artist 2: Sanatçı 2
+          Functions: Fonksiyonlar
+          The Farmer: Çiftçi
+          Conditionals: Koşullar
+          The Artist 3: Sanatçı 3
+          Song Writing: Şarkı Yazma
+          The Farmer 2: Çiftçi 2
+          Abstraction: Soyutlama
+          The Artist 4: Sanatçı 4
+          Relay Programming: Röle Programlama
+          The Farmer 3: Çiftçi 3
+          The Internet: İnternet
+          The Artist 5: Sanatçı 5
+          Wrap-up: Özet
+        edit-code:
+          title: Kodu Düzenle
+          description: ""
+          The Maze: Labirent
+          Applab: Applab
+          The Artist: Sanatçı
+          Play Lab: Oyun Laboratuvarı
+        events:
+          title: Olaylar
+          description: ""
+          Bounce: Sıçrama
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy Kod
+          description: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!
+          Flappy Code: Flappy Kod
+        jigsaw:
+          title: Yapboz
+          description: ""
+          Jigsaw: Yapboz
+        step:
+          title: Adım
+          description: ""
+          Step: Adım
+        Hour of Code:
+          title: Kodlama Saati 2013
+          description: ""
+          Hour of Code 2013: Kodlama Saati 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Ders 4 Ön Koşulu
+          description_short: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          description: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          Course 4 Prerequisite: Ders 4 Ön Koşulu
+          "Maze: Sequence": 'Labirent: Sıra'
+          "Artist: Sequence": 'Aktör: Sıra'
+          "Artist: Loops": 'Aktör: Döngüler'
+          "Bee: Conditionals": 'Arı: Koşullandırıcılar'
+          "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
+          "Farmer: While Loops": 'Çiftçi: While Döngüleri'
+          "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
+          "Artist: Functions": 'Aktör: Fonksiyonlar'
+          "Bee: Debugging": 'Arı: Ayıklama'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Oyunları ve Koordinat Düzlemleri'
           "Calc: Evaluation Blocks": 'Calc: Değerlendirme Blokları'
           "Eval: Strings and Images": 'Eval: Diziler ve Görüntüler'
           "Unplugged: Contracts": 'Unplugged: Teknikler'
           "Eval: Writing Contracts": 'Eval: Yazım Teknikleri'
           "Calc: Defining Variables": 'Hesaplama: Değişkenleri Tanımlama'
           "Play Lab: Defining Variables (Big Game)": 'Play Lab: Değişkenleri Tanımlama (Büyük Oyun)'
-          "Eval: Defining Functions": 'Eval: Fonksiyonları Tanımlama'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
           "Unplugged: The Design Recipe": 'Unplugged: Tasarım Tarifi'
-          "Play Lab: Defining Functions": 'Oyun Laboratuvarı: Fonksiyonları Tanımlama'
-          "Eval: Functions": 'Eval: Fonksiyonlar'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animasyon (Büyük Oyun)'
           "Unplugged: Booleans": 'Unplugged: Boolean Değerleri'
           "Eval: Boolean Operators": 'Eval: Boolean Operatörleri'
@@ -327,28 +500,43 @@ tr:
           "Eval: Conditionals": 'Eval: Şartlar'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Kaza Algılama ve Mesafe Formülü'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kaza Algılama (Büyük Oyun)'
-        infinity:
-          title: Oyun Laboratuvarı
-          description_short: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
-          description: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
-          Play Lab: Oyun Laboratuvarı
-        algebrademo:
-          description: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
-          Algebra Demo: Cebir Demo
           Evaluation Blocks: Değerlendirme Blokları
-          Making Pictures: Resim Yapma
-          Defining Variables: Değişkenler Tanımlama
-          Defining Simple Functions: Basit Fonksiyonları Tanımlama
+          Strings and Images: Diziler ve Görüntüler
+          Contracts: Teknikler
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
           The Design Recipe: Tasarım Tarifi
-        K5PD:
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean Değerleri
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Koşullar ve Parçalı Fonksiyonlar
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Değerlendirme Blokları
+          Strings and Images: Diziler ve Görüntüler
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean Değerleri
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kaza Algılama (Büyük Oyun)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
           Introduction to PD: Kişisel Geliştirme Giriş
-        netsim:
-          title: İnternet Simülatörü
-          description_short: ""
-          description: ""
-          Internet Simulator: İnternet Simülatörü
-        Infinity:
-          title: Infinity Oyun Laboratuvarı
-          description_short: Infinity Oyun Laboratuvarı ile bir hikaye oluştur veya oyun yap!!
-          description: Infinity Oyun Laboratuvarı ile bir hikaye oluştur veya oyun yap!
-          Infinity: Sonsuz
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

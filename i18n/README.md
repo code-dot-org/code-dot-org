@@ -37,7 +37,8 @@ git push
 1. `cd code-dot-org/i18n/curriculum`
 2. `./sync.rb`
 
-## Modifying/Adding a new string
+## Modifying/Adding a new string 
+When adding a string, please make the key as descriptive as possible because this is the first context that translators get. 
 
 ### Pegasus
 
@@ -60,7 +61,7 @@ git push
 cd i18n/code.org
 ./sync-pegasus.sh
 ```
-5. Commit and push all locale files
+5. Commit and push i18n/locales/source/pegasus/mobile.yml + all locale files in pegasus/i18n/cache/xx-YY.yml **except** for en-US.yml
 ```bash
 git commit -m "new pegasus string XYZ"
 git push
@@ -78,6 +79,8 @@ git push
 
 ### Apps
 1. Make changes in `apps/i18n/<app>/en_us.json`
+2. From home directory, run `cd i18n/code.org && ./sync-apps.sh`
+3. Commit all .json files in i18n/locales and apps/i18n
 
 ### Dashboard
 1. Make changes in `dashboard/config/locales` NOTE: Choose from the following files depending on where it best fits categorically.
@@ -92,10 +95,29 @@ git push
 * unplugged.en.yml
 2. DO NOT directly modify `match.en.yml` or `multi.en.yml` Please make changes to the levels directly in levelbuilder.
 
-## Common Issues
+## Uncommon Issues
 
 If you see an error similar to the following:
 ```
 /Users/brent/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/json-1.8.1/lib/json/common.rb:155:in `encode': "\xC3" on US-ASCII (Encoding::InvalidByteSequenceError)
 ```
 check the values of environment variables LANG and LC_ALL.  On my MacBook this only seemed to work when these values were not set.  On my Linux machine, this only seemed to work when these were set to LINUX=en_US.UTF-8 and LC_ALL=POSIX
+
+If you see an error similar to the following when running `grunt build`:
+```
+Running "messages:all" (messages) task
+Warning: Error processing localization file i18n/applab/ar_sa.json: TypeError: Object #<MessageFormat> has no method 'functions' Use --force to continue.
+
+Aborted due to warnings.
+rake aborted!
+'MOOC_DEV=1 grunt build' returned 3
+/Users/brian/code/code-dot-org/lib/cdo/rake_utils.rb:33:in `system'
+/Users/brian/code/code-dot-org/Rakefile:72:in `block (3 levels) in <top (required)>'
+/Users/brian/code/code-dot-org/Rakefile:71:in `chdir'
+/Users/brian/code/code-dot-org/Rakefile:71:in `block (2 levels) in <top (required)>'
+/Users/brian/.rvm/gems/ruby-2.0.0-p598/bin/ruby_executable_hooks:15:in `eval'
+/Users/brian/.rvm/gems/ruby-2.0.0-p598/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => build:core_and_apps_dev
+(See full trace by running task with --trace)
+```
+Run `npm install`

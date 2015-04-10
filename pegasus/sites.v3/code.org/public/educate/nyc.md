@@ -19,7 +19,7 @@ Computer science opens more doors for students than any other discipline in toda
 
 <%= view :testimonials %>
 
-## NYC Teachers and administrators:
+## NYC teachers and administrators:
 
 ### Grades K-5
 

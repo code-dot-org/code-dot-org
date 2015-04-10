@@ -192,7 +192,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawATree":function(d){return "joonista puu"},
 "drawUpperWave":function(d){return "joonista ülemine laine"},
 "drawLowerWave":function(d){return "joonista alumine laine"},
-"drawStamp":function(d){return "draw stamp"},
+"drawStamp":function(d){return "Joonista tempel"},
 "heightParameter":function(d){return "kõrgus"},
 "hideTurtle":function(d){return "peida kunstnik"},
 "jump":function(d){return "hüppa"},

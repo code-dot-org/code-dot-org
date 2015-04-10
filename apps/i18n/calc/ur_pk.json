@@ -1,9 +1,17 @@
 {
-  "compute": "کمپیوٹ",
+  "divideByZeroError": "Your program results in division by zero.",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
+  "evaluate": "evaluate",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "مقصد:",
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "یہاں آپ کی داستان ہے! اس پر کام جاری رکھے یا اگلی پہیلی کی طرف بڑھیں!",
-  "yourExpression": "آپ کا اظہار:"
+  "yourExpression": "آپ کا اظہار:",
+  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

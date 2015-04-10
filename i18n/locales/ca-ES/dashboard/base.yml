@@ -1,7 +1,7 @@
 ca:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Si us plau corregeixi els errors següents:'
   activerecord:
     errors:
       messages:
@@ -22,6 +22,7 @@ ca:
           future: no pot ser en el futur
   hello: Hola Món
   welcome_back: 'Benvingut de nou, %{name}'
+  submit: Envia
   add_teacher_form:
     code:
       label: 'Afegeix un mestre:'
@@ -223,6 +224,7 @@ ca:
         artist: Dibuixa alguna cosa
     user:
       classroom: "Pàgina d'inici de mestre"
+      district_dashboard: District Dashboard
       label: 'Hola %{username}'
       stats: El meu progrés
       settings: El meu compte
@@ -301,13 +303,15 @@ ca:
     student_teacher_disassociated: "%{teacher_name} s'ha esborrat com a mestre de %{student_name}"
   user:
     email_confirm_needed: "L'adreça de correu electrònic no ha estat confirmada:"
+    email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no ha estat confirmada:'
+    email_confirm_wrong_email: "(Adreça d'e-mail equivocada?)"
     email_resend_confirm: Torna a enviar les instruccions de confirmació
     new_password_hint: (deixa-ho en blanc si no vols canviar-lo)
     current_password_hint: (necessitem la teva contrasenya actual per a confirmar els canvis)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Suprimir el vostre compte
+    delete_text: Fent clic al botó de sota suprimirà el compte.
+    delete_text_teacher_note: "Tingueu en compte: Si suprimiu el vostre compte no s'esborrarant els comptes dels seus alumnes."
+    delete_confirm: Esteu segur que voleu suprimir el vostre compte?
   user_level:
     completed: Completat
     tried: Provat
@@ -441,6 +445,9 @@ ca:
       body: "Mira tota una galeria d'imatges artístiques i aplicacions creades pels nostres usuaris"
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
   gallery:
     students_drew_these_with_code: Els estudiants van dibuixar això amb codi!
     students_made_these_with_code: Els estudiants van fer això amb codi!
@@ -470,6 +477,13 @@ ca:
     wrong_body: 'La solució que has introduït no és correcta.  Si us plau, intenta-ho de nou!'
     correct_title: Correcte
     correct_body: Aquesta és la resposta correcta.
+  contract_match:
+    wrong_title: Resposta incorrecta
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Introdueix la teva resposta aquí
   dialog:
@@ -485,7 +499,7 @@ ca:
           title: "Curs d'introducció a la informàtica per a ESO (15-25 hores)"
           description: "Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat."
         Hour of Code:
-          title: Hora del codi
+          title: Hora de codi 2013
           description: ""
         edit-code:
           title: Edita el codi
@@ -515,11 +529,44 @@ ca:
     sign_out: 'Si no vols donar la teva edat tens que <a href="%{url}"> tancar la sessió</a>.'
   zendesk_too_young_message: 'Lamentablement, els usuaris més joves no poden registrar-se en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a> sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres en representació vostra.'
   progress:
-    not_completed: no finalitzat
+    not_started: no començat
+    in_progress: En curs
     completed_too_many_blocks: completat, massa blocs
     completed_perfect: completat, perfecte
     furthest_level_attempted: nivell més alt intentat
+    assessment: avaluació
   studio:
     courses_working_on: Cursos en els que estàs treballant
     completed_courses: Cursos completats
     all_courses: Tots els cursos
+  project:
+    projects: Projectes
+    create: Crear un projecte
+    create_a_project: 'Crear un nou projecte:'
+    new: Create New
+    rename: Canviar el nom
+    save: Desa
+    delete: Elimina
+    exit: Tornar al curs
+    my_projects: Els meus projectes
+    share: Comparteix
+    share_title: Compartir el teu projecte
+    share_copy_link: "Copia l'enllaç:"
+    close: Tancar
+    more: Més
+    name: Nom
+    updated: Actualitzat
+    project_type: Tipus de projecte
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Necessita ajuda per començar?
+    really_delete: Vols suprimir?
+    delete_yes: Sí
+    delete_no: 'No'
+    saved: Desat
+    not_saved: No desat
+    cancel: Cancel·lar
+    delete_confirm_title: Esteu segur que voleu suprimir aquest projecte?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: Mostra els meus projectes
+    remix: Remescla
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

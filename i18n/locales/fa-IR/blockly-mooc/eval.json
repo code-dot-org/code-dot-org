@@ -1,13 +1,16 @@
 {
+  "badColorStringError":"شما از یک رشته رنگ نامعتبر را استفاده کردید:{val}",
+  "badStyleStringError":"شما از یک رشته ی سبک نامعتبر استفاده کردید:{val}",
   "circleBlockTitle":"دایره (شعاع، سبک، رنگ)",
-  "displayBlockTitle":"نمایش",
+  "displayBlockTitle":"ارزیابی کنید",
   "ellipseBlockTitle":"بیضی (عرض، ارتفاع، سبک، رنگ)",
-  "extraTopBlocks":"تو چندتا بلوک وصل نشده داری. آیا میخواستی به بلوک \"نمایش\" وصلشان کنی؟",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "infiniteRecursionError":"تابع شما دارد خودش را صدا می زند. ما متوقفش کردیم، در غیر این صورت برای همیشه به صدا زدن خودش ادامه میداد.",
   "overlayBlockTitle":"پوشش (بالا، پایین)",
   "placeImageBlockTitle":"مکان تصویر (x، y، تصویر)",
   "offsetBlockTitle":"اُفسِت (x، y، تصویر)",
   "rectangleBlockTitle":"مستطیل (عرض، ارتفاع، سبک، رنگ)",
-  "reinfFeedbackMsg":"تو می توانی دکمه \"دوباره امتحان کن\" را فشار دهی تا نقاشیت را  ویرایش کنید.",
+  "reinfFeedbackMsg":"شما می توانید دکمه ی \"Keep Playing\" را فشار دهید تا طراحی خود را ویرایش کنید.",
   "rotateImageBlockTitle":"چرخش (درجه، تصویر)",
   "scaleImageBlockTitle":"مقیاس (عامل، تصویر)",
   "squareBlockTitle":"مربع (اندازه، سبک، رنگ)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"لایه زیرین (زیر، رو)",
   "outline":"طرح کلی",
   "solid":"تو پُر",
-  "string":"رشته"
+  "string":"رشته",
+  "stringMismatchError":"شما یک رشته با حروف بزرگ اشتباه دارید.",
+  "userCodeException":"در زمان اجرای کد شما خطایی رخ داد.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

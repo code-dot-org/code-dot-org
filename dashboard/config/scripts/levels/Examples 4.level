@@ -74,8 +74,8 @@
       <xml>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="image" type="image"/>
-            <outputtype>image</outputtype>
+            <arg name="image" type="Image"/>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">shrink</title>
         </block>
@@ -83,7 +83,7 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
               <mutation name="shrink">
-                <arg name="image" type="image"/>
+                <arg name="image" type="Image"/>
               </mutation>
             </block>
           </functional_input>

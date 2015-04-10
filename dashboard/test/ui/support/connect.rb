@@ -64,9 +64,10 @@ end
 # let's allow much longer timeouts
 browser.manage.timeouts.implicit_wait = 25
 
-Before do |scenario|
+Before do
   @browser = browser
 end
+
 at_exit do
   browser.quit
 end

@@ -15,8 +15,16 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"purple_image_block\",\"callout_text\":\"The purple function block is a image type block.\",\"element_id\":\"#callout_here\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
-  }
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"purple_image_block\",\r\n  \"callout_text\": \"Purple colored blocks output image values\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "95b0296cc40c4e2573607b434d0f860b"
 }]]></config>
   <blocks>
     <start_blocks>

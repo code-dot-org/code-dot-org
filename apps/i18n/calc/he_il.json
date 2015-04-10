@@ -1,9 +1,17 @@
 {
-  "compute": "חשב",
+  "divideByZeroError": "התכנית שלך מנסה לחלק באפס.",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "equivalentExpression": "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי.",
+  "evaluate": "evaluate",
   "extraTopBlocks": "יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "הפונקציה שלך אינה מחזירה את התוצאה הנכונה עבור כל הערכים.",
   "goal": "מטרה:",
-  "reinfFeedbackMsg": "הינה הסיפור שלך! תמשיך לעבוד עליו, או עבור לאתגר הבא!",
-  "yourExpression": "הביטוי שלך:"
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Your expression is missing variable {var}.",
+  "reinfFeedbackMsg": "הנה החישוב שלך! המשך לעבוד על זה, או עבור לחידה הבאה!",
+  "yourExpression": "הביטוי שלך:",
+  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

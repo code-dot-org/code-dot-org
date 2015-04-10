@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "계산"},
+"divideByZeroError":function(d){return "프로그램의 결과가 0으로 나누기가 되었습니다."},
+"emptyComputeBlock":function(d){return "반드시 \"계산\" 블럭에 블럭을 붙여야 합니다."},
 "equivalentExpression":function(d){return "같은 계산결과가 나올 수 있도록 다시 배치하세요."},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"계산하기\"블럭에 붙이려고 했나요?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "함수가 모든 값에 대해서 올바른 결과를 반환하지 않습니다."},
 "goal":function(d){return "목표값:"},
-"reinfFeedbackMsg":function(d){return "여기서 직접 이야기를 만들 수 있습니다! 계속하거나 다음 퍼즐로 이동하세요!"},
-"yourExpression":function(d){return "계산식:"}};
+"levelIncompleteError":function(d){return "수식이 목표 값과 일치하지 않습니다."},
+"missingFunctionError":function(d){return appLocale.v(d,"functionName")+" 이라는 함수를 반드시 정의해야 합니다."},
+"missingVariableX":function(d){return "수식에 변수 "+appLocale.v(d,"var")+"가 빠졌습니다."},
+"reinfFeedbackMsg":function(d){return "축하합니다! 계속해서 작업을 하거나, 다음 퍼즐로 넘어갈 수 있습니다!"},
+"yourExpression":function(d){return "계산식:"},
+"wrongInput":function(d){return "잘못된 값으로 함수를 호출하고 있습니다."},
+"wrongOtherValuesX":function(d){return "만약 "+appLocale.v(d,"var")+"를 바꾼다면 수식의 결과가 틀릴 것입니다."},
+"wrongResult":function(d){return "수식이 정확한 결과를 반환하지 않습니다."}};

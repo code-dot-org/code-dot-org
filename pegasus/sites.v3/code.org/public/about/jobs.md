@@ -3,57 +3,146 @@ title: Jobs at Code.org
 nav: about_nav
 ---
 
-# Job Openings at Code.org
-
-- [Head of Product/Marketing](#head-product)
+# Job Openings at Code.org	
+- [Technical Product Manager](#Tech-PM)
+- [K-5 Affiliate Program Manager](#K-5-PM)
+- [Hour of Code Campaign Coordinator](#HOC-Temp)
+- [Accountant (PT)](#accountant)
 - [Head of Engineering](#head-engineering)
-- [HR Generalist](#hr-generalist)
-- [Grant Writer and Relationships Manager](#grant-writer)
-- [K-8 Program Manager](#K8-PM)
 - [High School Program Manager](#HS-PM)
-- [Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)](#reg-PM)
-- [Advocacy Researcher](#advocacy-researcher)
+- [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
+- [Policy Research Analyst](#advocacy-researcher)
 - [Data Scientist / Quantitative Data Analyst](#data-scientist)
 - [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
 
-## <a name="hr-generalist" href="#hr-generalist">HR Generalist (Seattle, WA preferred)</a>
+## <a name="Tech-PM"href="#Tech-PM">Technical Product Manager (Seattle,WA)</a>
 **Job Summary:**
 
-The HR Generalist plays a critical role in supporting Code.org staff in areas such as recruiting and hiring, benefits, performance reviews, and workforce compliance. The candidate selected for this should have experience supporting a multi-state employer and hiring technical employees in a fast-paced start-up environment. Full-time, salaried. Responsibilities of the position include:
+Code.org is recruiting for an experienced Product Manager who can help us identify and implement solutions that use crowd-sourcing to build a strong community of teachers, volunteers, students and donors. Full-time, salaried. Responsibilities of the position include:
 
-- Conducting full cycle recruiting for staff and independent contractor positions including drafting of job descriptions, sourcing and screening of applicants, managing interview cycles, preparing offer letter package, and onboarding all new hires
-- Maintaining organizational compliance with federal, state, and local regulations concerning employment
-- Coordinating employee benefit programs 
-- Maintaining, advising, and updating HR policies, employee handbook, compensation data, and other organization policies and documents
-- Providing support to employees and managers on HR and benefit-related matters
-- Supervising annual performance review process
-- Leading the planning and execution of company events
-- Other duties, as assigned
+- Defining the scope of these projects
+- Designing user experience and working with engineers and other teams at Code.org to implement them
+
+This person must be able to work in a fast paced environment with continuous release to customers
 
 **Qualifications:**
 
 The ideal candidate has the following qualifications:
 
-- A Bachelor’s degree and a minimum of 3 years of HR generalist experience or equivalent work experience. PHR certification preferred.
-- Professional demeanor, possessing excellent communication, organizational and interpersonal skills
-- Experience in marketing positions using internet and social media channels; demonstrated ability to generate a steady flow of qualified candidates
-- Familiarity with federal and state regulations including FLSA, FMLA, state specific leave laws, COBRA, ADA and EEO required
-- Demonstrated ability to provide the highest level of customer service to candidates and employees
-- Have hands-on experience with all aspects of benefits administration
-- Strong communication skills with the ability to maintain a high level of confidentiality
-- Must be extremely organized and detail oriented with strong time-management skills
-- Be highly comfortable working in a fast-paced, ambiguous, informal work environment 
-- **Prior experience in technical recruiting and with a smaller startups, preferably a tech startup**
+- Bachelors degree in Computer Science
+- Minimum of 3 years of experience as a technical program manager or product manager building web-centric products/services
+- Experience in designing user experience for non-tech savvy customers
+- Strong technical background
+- Strong communication and collaboration skills
 
-A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+## <a name="K-5-PM"href="#K-5-PM">K-5 Affiliate Program Manager (Seattle, WA)</a>
+**Job Summary:**
+
+Code.org is recruiting a K-5 Affiliate Program Manager who can manage our K-5 Affiliate Program and support our outreach team to spread the K-5 program to Code.org’s school district partners. The Affiliate program is the centerpiece of Code.org’s K-5 talent development pipeline. The program is intended to develop and then support facilitators across the country who can, in turn, train teachers to teach our K-5 curriculum in the formal classroom.
+
+Responsibilities of the position include:
+
+- Setting strategy for scaling, management and potential expansion of the K-5 Affiliate Program
+- Managing the relationships with existing Code.org K-5 Affiliates across the country
+- Manage vendor relationships and monitor K-5 supplies and inventory
+- Manage and continuously update the K-5 budget 
+- Determining potential expansion areas for recruiting new affiliates
+- Leading the development of Code.org’s Affiliate Summit (where new affiliates are trained)
+- Supporting Code.org’s District Program Managers in growing the K-5 program within our existing partner districts and addressing implementation issues
+- Determining, tracking and evaluating overall program metrics
+- Evaluating data/feedback from teachers trained by affiliates and affiliates (as well as other sources) to make course corrections in Affiliate Program
+- Working with Code.org’s K-5 Education Team leads and K-5 Product Team leads to incorporate feedback from teachers/affiliates into the K-5 product
+- Working with Code.org’s education operations team and defining operations workflows to ensure logistical support of affiliate workshops
+- Other duties as assigned
+
+**Qualifications:**
+
+- 2-3 years experience in K-12 education (required)
+- 3+ years experience in relationship management in an education setting (required)
+- 3+ years experience in educational and/or professional development program management (including train the trainer) (required)
+- Knowledge of computer science education (preferred)
+- Strong analytical and problem solving ability
+- Professional demeanor, possessing excellent communication skills
+- Must be extremely organized and detail oriented
+- Must be an advanced or expert user of spreadsheets
+- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
+- Ability to work in a fast-paced, team-based environment with a geographically dispersed team
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="advocacy-researcher" href="#advocacy-researcher">Advocacy Researcher (Seattle, WA preferred)</a>    
+## <a name="HOC-Temp"href="#HOC-Temp">Hour of Code Campaign Coordinator (Temp) (Seattle,WA)</a>
 **Job Summary:**
 
-Code.org is recruiting for an Advocacy Researcher who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
+The Hour of Code initiative is a yearly campaign to encourage students to try computer science during Computer Science Education Week (Dec. 7-13). Since 2013, it has reached over 100M students worldwide in 180+ countries. Supporters of the campaign include President Obama, Sheryl Sandberg, Bill Gates, Susan Wojcicki, Ashton Kutcher and many more. Code.org is recruiting temporary staff to assist the Marketing team in the planning and execution of December’s global Hour of Code campaign. Full-time, June-December contract position.
+
+Responsibilities of this position include:
+
+- Assisting overall marketing efforts for the Hour of Code campaign
+- Managing partner commitments
+- Managing prize fulfillment, guiding winners through the fulfillment process
+- Helping plan special events and maintain a database of key Hour of Code events
+- Supporting our community and fielding questions about the Hour of Code in a timely manner
+- Tracking social media and press coverage related to the campaign 
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
+**Qualifications:**
+
+- Degree in Marketing, Communications or related field
+- Must be a self-starter, multi-tasker and excel in a fast-paced environment
+- Excellent writing skills, with an interest in social media platforms and trends
+- Demonstrated experience with Google Drive (spreadsheets), Google Hangouts, Skype 
+- Passion for technology and inspiring new students to try computer science
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="accountant"href="#accountant">Accountant (PT) (Seattle, WA)</a>
+**Job Summary:**
+
+The Accountant plays a critical role in ensuring accurate financial record keeping in accordance with GAAP, IRS regulations and non-profit best practices. Responsibilities of the position include:
+
+- Journal entry processing
+- Bank and balance sheet reconciliations and analysis
+- Inventory reconciliation
+- Month-end and year-end closing processes
+- Preparation of monthly, quarterly, and annual financial statements and Board of Directors financial presentations
+- Ad hoc financial reports and analysis
+- Preparing audit schedules and interfacing with external auditors
+- Assisting with development of annual budgets and rolling forecasts
+- Advising leadership team on accounting implications of operational decisions
+
+**Qualifications**
+
+The ideal candidate has the following qualifications:
+
+- A Bachelor’s degree in Accounting or equivalent experience
+- A minimum of 3-5 years of progressively responsible accounting experience 
+- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
+- Expertise in Quickbooks Online or other accounting software
+- Must be an advanced or expert user of spreadsheets
+- Strong analytical and problem solving ability
+- Professional demeanor, possessing excellent communication skills
+- Must be extremely organized and detail oriented
+- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
+- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must.
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="advocacy-researcher" href="#advocacy-researcher">Policy Research Analyst (Seattle, WA preferred)</a>    
+**Job Summary:**
+
+Code.org is recruiting for an Policy Research Analyst who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
 Responsibilities of the position include:
 
 - Research and analysis of state policy issues, including:
@@ -76,30 +165,7 @@ Responsibilities of the position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="K8-PM" href="#K8-PM">K-8 Program Manager (Seattle, WA preferred)</a>
-**Job Summary:**
 
-Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:
-
-- Sharing responsibility with the K-8 team for executing on a middle school education vision for the organization that includes integrating CS into Math and Science.
-- Designing, testing, revising, executing, managing, and evaluating a highly-scalable professional development model for the middle school programs.
-- Create both online and written middle school curricula; includes coordinating with internal teams (Development Team and Videographer) and third party vendors
-- Aligning middle school efforts with elementary and high school efforts
-- Collaborating with Product Team to develop curriculum-specific technology tools 
-- Refining specs with Product Team for teacher dashboard
-- Working with video team to create/integrate educational videos in curriculum
-- Transition between elementary and middle school programs, as needed
-- Collaborating with remote Education team members
-
-**Qualifications:**
-
-The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. While a degree in computer science is optional, a comprehensive knowledge of computer science is expected. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.
-
-Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
-
-Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="HS-PM" href="#HS-PM">High School Program Manager (Seattle, WA preferred)</a> 
 **Job Summary:**
@@ -127,27 +193,7 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="head-product" href="#head-product">Head of Product/Marketing (Seattle, WA)</a>
-**Job Summary:**
 
-Code.org is recruiting for an experienced Head of Product/Marketing who can lead the Product and Marketing teams. Full-time, salaried. Responsibilities of the position include:
-
-- Acting as central point of leadership for Code.org curriculum + technology products and services
-- Providing end-end ownership of the Code.org website and web services, including the curriculum platform used by tens of millions of students and hundreds of thousands of classrooms
-- High level ownership of Code.org marketing - celebrities, videos, social media, testimonials, and the international Hour of Code grassroots movement
-- Managing a team comprising product management, user experience, video production and marketing
-- Managing high visibility partnerships such as the one with Disney for the 2014 Hour of Code with Anna and Elsa (from Frozen)
-- Jack of all trades given the disparate types of activities Code.org engages in, and supporting all of them with marketing programs and helping identify how engineering can improve our work
-
-**Qualifications:**
-
-- Bachelor’s degree with a background in Computer Science (as a major or a minor)
-- 3+ years experience as a technical product manager, i.e. defining product, writing specs, closely managing engineering projects, hands on design
-- 3+ years experience as a manager of other PMs
-- Experience with building / managing / marketing of a Web site and/or web services
-- Experience in consumer marketing (PR, social media, advertising) desired, but not required
-
-Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 ## <a name="head-engineering" href="#head-engineering">Head of Engineering (Seattle, WA)</a>
 **Job Summary:**
 
@@ -164,10 +210,20 @@ Code.org is recruiting for an experienced Head of Engineering. Full-time, salari
 - 10+ years as a software engineer or manager of software engineers
 - 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
 - Full stack Web engineering experience, i.e. databases, application, front-end
+- DEEP knowledge and experience in either JavaScript OR Ruby
 - Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
+- Experience building and running a large scale consumer-focused Web service, with at least 1M users
 - Mobile development experience (iOS, Android) desired but not required
+- Experience in a fast growth start-up environment desired
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
 
 Interested candidates should email a resume or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 
 ## <a name="data-scientist" href="#data-scientist">Data Scientist / Quantitative Data Analyst (Seattle, WA preferred)</a>
 
@@ -206,42 +262,8 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="grant-writer" href="#grant-writer">Grant Writer and Relationships Manager</a>
 
-**Job Summary:**
-
-The Grant Writer and Relationship Manager plays an important role in increasing revenue for Code.org, with a focus on grant writing, and stewardship of existing Foundation and Corporate partnerships. The candidate selected for this role will develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org, and also help establish long-term partnerships and strengthen existing relationships with the corporate and foundation sector. Full-time, salaried. Responsibilities of the position include:
-
-- Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations, persuasively communicating the organization’s mission and programs to potential funders
-- Cultivating and growing support from existing Foundation and corporate donors, including managing the Code.org Employee Engagement program to build corporate pipeline
-- Managing ongoing donor communications, working with marketing team, and overseeing donor stewardship and recognition efforts
-- Working with Director of Finance & Administration, ensure timely reporting on grant deliverables by managing grants calendar
-- Working with the Fundraising & Marketing Associate on prospect research, maintaining grant files, database, fundraising materials, donor acknowledgement
-- Coordinating Code.org fundraising events
-- Other duties, as assigned
-
-**Qualifications:**
-
-- A Bachelor’s degree and a minimum of 5 years of relevant experience are required
-- Demonstrated ability to develop funding proposals in a clear and compelling manner and have a proven track record of success in writing six and seven figure foundation and/or corporate grants
-- An incredible passion for our mission and an ability to inspire others to get involved
-- Strategic thinker, analytical and proactive
-- Candidates must be self-motivated, detail-oriented, and highly-organized to succeed in a demanding, impact-focused environment
-- Ability to be flexible and adaptive in a growing organization; be able to work alongside a diverse group of people
-- Thrive in a collaborative, team environment and also work independently 
-- Outstanding communication and highly developed interpersonal skills with ability to be persuasive in both written and verbal communications
-- Strong and thoughtful customer service orientation
-- Experience using online databases (Foundation Center and others) and other sources to conduct research on potential funding prospects
-- A solid understanding of budgets as they relate to proposals and grants is required
-
-
-A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred.
-
-Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals. 
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)</a>
+## <a name="reg-PM" href="#reg-PM">Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)</a>
 
 **Job Summary:** 
 

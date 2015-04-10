@@ -3,8 +3,7 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Kirakós játék: Tanuljuk, hogy fogd és
-            vidd technikát!'
+          'Jigsaw: Learn to drag and drop': 'Kirakós játék: Tanuld meg a vonszolást'
           The Maze: A labirintus
           Multi: Feleletválasztás
           Match: Párosítás
@@ -12,15 +11,14 @@
           title: Teszttanfolyam
           description: Csak egy belső teszttanfolyam.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Kirakós játék: Tanuljuk, hogy fogd és
-            vidd technikát!'
+          'Jigsaw: Learn to drag and drop': 'Kirakós játék: Tanuld meg a vonszolást'
           'Maze: Sequence': 'Labirintus: sorozat'
           'Maze: Debugging': 'Labirintus: hibakeresés'
-          'Artist 1: Intro': '1. szereplő: Bevezetés'
+          'Artist 1: Intro': Művész 1 - Bevezető
           Artists 2: Művészek 2
           Spelling Bee: Betüző méh
           Spelling Bee not blockly: A Betüző méh nem blockly
-          'Bee 1: Intro': 'Méh 1: Bevezetés'
+          'Bee 1: Intro': 'Méh 1: Bevezető'
           'Maze 2: Loops': 'Labirintus 2: ciklusok'
           'Bee 2: Loops': 'Méh 2: Ciklusok'
           Multi & Match: Feleletválasztás és párosítás
@@ -28,11 +26,11 @@
           Flappy non blockly: Flappy blokkok nélkül
           title: 1. tanfolyam
           Artist 2: Művész 2
-          Happy Maps: Boldog térképek
+          Happy Maps: Vidám térképek
           Move it, Move it: Gyerünk, gyerünk!
           'Real-life Algorithms: Plant a Seed': 'Valós algoritmusok: Ültess el egy
             magot!'
-          Building a Foundation: Az alap megépítése
+          Building a Foundation: Alapozás
           Getting Loopy: Ciklikusság
           The Big Event: A nagy esemény
           Going Places Safely: Biztonságos utazás
@@ -42,11 +40,11 @@
             készségeket és legyőzni a nehézségeket. A tanfolyam végére a tanulók létrehoznak
             egy egyedi saját játékot vagy egy történetet, amit majd meg tudnak osztani.
             1. osztályosok számára ajánlott.
-          'Bee: Sequence': 'Méh: Sorozat'
+          'Bee: Sequence': 'Méh: sorozat'
           'Artist: Sequence': 'Művész: sorozat'
           'Artist: Shapes': 'Művész: alakzatok'
           'Maze: Loops': 'Labirintus: ciklusok'
-          'Bee: Loops': 'Méh: Ciklusok'
+          'Bee: Loops': 'Méh: ciklusok'
           'Studio: Create a Story': 'Játéklabor: hozz létre egy történetet'
           'Artist: Loops': 'Művész: ciklusok'
           description_audience: 'Korosztály: 4+ (nemolvasók)'
@@ -63,11 +61,11 @@
           Bee Conditionals: Méh Feltételes mód
           Flappy: Flappy
           title: 2. tanfolyam
-          Bee Loops: Méh Ciklusok
+          Bee Loops: 'Méh: ciklusok'
           Artist Functions: 'Művész: függvények'
           The Artist Debugging: 'Művész: hibakeresés'
-          Bee Debugging: Méh Hibakeresés
-          Bee Functions: Méh Funkciók
+          Bee Debugging: 'Méh: hibakeresés'
+          Bee Functions: 'Méh: függvények'
           Maze Loops: 'Labirintus: ciklusok'
           Graph Paper Programming: Grafikus programozás
           'Real-life Algorithms: Paper Planes': 'Hétköznapi algoritmusok: Papírrepülők'
@@ -86,8 +84,8 @@
           'Artist: Sequence': 'Művész: sorozat'
           'Maze: Loops': 'Labirintus: ciklusok'
           'Artist: Loops': 'Művész: ciklusok'
-          'Bee: Loops': 'Méh: Ciklusok'
-          'Bee: Debugging': 'Méh: Hibakeresés'
+          'Bee: Loops': 'Méh: ciklusok'
+          'Bee: Debugging': 'Méh: hibakeresés'
           'Artist: Debugging': 'Művész: hibakeresés'
           'Bee: Conditionals': 'Méh: Feltételes mód'
           'Artist: Sequence2': 'Művész: sorozat 2'
@@ -106,14 +104,14 @@
           Bee Conditionals: Méh Feltételes mód
           Bee Nested Loops: Méh Beágyazott ciklusok
           Bee Debuggin: Méh Hibakeresés
-          Bee Debugging: Méh Hibakeresés
-          Bee Functions: Méh Funkciók
+          Bee Debugging: 'Méh: hibakeresés'
+          Bee Functions: 'Méh: függvények'
           Artist Functions with Params: 'Művész: paraméteres függvények'
           Bounce: Ugrál
           Maze Conditionals: 'Labirintus: feltételes utasítások'
           Artist Functions with Parameters: 'Művész: paraméteres függvények'
           Computational Thinking: Számítógépes gondolkodás
-          Functional Suncatchers: Funkcionális Dekor
+          Functional Suncatchers: Hasznos díszek
           Songwriting Parameters: Dalszerző-paraméterek
           Dice Race: Kocka verseny
           Internet: Internet
@@ -130,23 +128,23 @@
           Maze: Labirintus
           Artist: Művész
           'Artist: Functions': 'Művész: függvények'
-          'Bee: Functions': 'Méh: Funkciók'
+          'Bee: Functions': 'Méh: függvények'
           'Bee: Conditionals': 'Méh: Feltételes mód'
           'Maze: Conditionals': 'Labirintus: feltételes utasítások'
           'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
           'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
           'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
-          'Bee: Debugging': 'Méh: Hibakeresés'
+          'Bee: Debugging': 'Méh: hibakeresés'
           Maze2: Labirintus 2
           Artist2: Művész 2
           'Artist: Functions2': 'Művész: függvények 2'
-          'Bee: Functions2': 'Méh: Funkciók2'
+          'Bee: Functions2': 'Méh: függvények 2'
           'Bee: Conditionals2': 'Méh: Feltételes mód2'
           'Maze: Conditionals2': 'Labirintus: feltételes utasítások 2'
           'Artist: Nested Loops2': 'Művész: egymásba ágyazott ciklusok 2'
           'Farmer: While Loops2': 'Farmer: előtesztelő ciklusok 2'
           'Bee: Nested Loops2': 'Méh: Beágyazott ciklusok2'
-          'Bee: Debugging2': 'Méh: Hibakeresés2'
+          'Bee: Debugging2': 'Méh: hibakeresés 2'
           'Artist: Patterns': 'Művész: minták'
           Songwriting: Dalszerzés
           description_audience: 'Korosztály: 8+ (a 2. tanfolyam elvégzése után)'
@@ -210,9 +208,9 @@
           'Eval: Design Recipe': 'Kiértékelés: A recept dizájnja'
         playlab:
           title: Játéklabor
-          description: Hozz létre egy történetet vagy készíts egy játékok a Játéklaborral!
+          description: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
           Play Lab: Játéklabor
-          description_short: Hozz létre egy történetet vagy készíts egy játékok a
+          description_short: Hozz létre egy történetet vagy készíts egy játékot a
             Játéklaborral!
         artist:
           title: Művész
@@ -221,8 +219,8 @@
           description_short: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
         scrat:
           title: Motkány
-          description_short: Motkány. Rövid leírás.
-          description: Motkány. Hosszú leírás
+          description_short: Motkány rövid leírás.
+          description: Motkány hosszú leírás
           'Maze: Sequence': 'Labirintus: sorozat'
         hourofcode:
           Maze: Labirintus
@@ -250,13 +248,13 @@
             interaktív történeteteket és játékokat hoznak létre, amit bárkivel megoszthatnak.
             4.-8. osztályosok számára ajánlott.
           'Artist: Variables': 'Művész: változók'
-          'Bee: For Loops': 'Bee: For ciklusok'
+          'Bee: For Loops': 'Méh: for ciklusok'
           title: 4. tanfolyam
-          'Algorithms: Tangrams': 'Algoritmusok: Tangram'
+          'Algorithms: Tangrams': 'Algoritmusok: tangram'
           Variables: Változók
           'Play Lab: Variables': 'Játéklabor: változók'
-          'Play Lab: Functions with Parameters': 'Játéklabor: Függvények paraméterrel'
-          'Bee: Functions with Parameters': 'Méh: Függvények paraméterekkel'
+          'Play Lab: Functions with Parameters': 'Játéklabor: függvények paraméterekkel'
+          'Bee: Functions with Parameters': 'Méh: függvények paraméterekkel'
           'Artist: For Loops': 'Művész: számláló ciklusok'
           'Play Lab: For Loops': 'Játéklabor: számláló ciklusok'
           'Artist: Functions': 'Művész: függvények'
@@ -277,8 +275,11 @@
           Artist Binary: 'Művész: a kettes számrendszer'
           description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
         Course4pre:
+          title: A 4. tanfolyam előfeltétel
           description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
             akik nem vettek részt a 2. és 3. tanfolyamon.
+          description: A fogalmak egy rövid összefoglalása azon tanulók számára, akik
+            nem vettek részt a 2. és 3. tanfolyamon.
           Course 4 Prerequisite: A 4. tanfolyam előfeltétel
           'Maze: Sequence': 'Labirintus: sorozat'
           'Artist: Sequence': 'Művész: sorozat'
@@ -288,33 +289,7 @@
           'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
           'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
           'Artist: Functions': 'Művész: függvények'
-          'Bee: Debugging': 'Méh: Hibakeresés'
-        course4pre:
-          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
-            akik nem vettek részt a 2. és 3. tanfolyamon.
-          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
-          'Maze: Sequence': 'Labirintus: sorozat'
-          'Artist: Sequence': 'Művész: sorozat'
-          'Artist: Loops': 'Művész: ciklusok'
-          'Bee: Conditionals': 'Méh: Feltételes mód'
-          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
-          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
-          'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
-          'Artist: Functions': 'Művész: függvények'
-          'Bee: Debugging': 'Méh: Hibakeresés'
-        Course4pre (Case Conflict):
-          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
-            akik nem vettek részt a 2. és 3. tanfolyamon.
-          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
-          'Maze: Sequence': 'Labirintus: sorozat'
-          'Artist: Sequence': 'Művész: sorozat'
-          'Artist: Loops': 'Művész: ciklusok'
-          'Bee: Conditionals': 'Méh: Feltételes mód'
-          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
-          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
-          'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
-          'Artist: Functions': 'Művész: függvények'
-          'Bee: Debugging': 'Méh: Hibakeresés'
+          'Bee: Debugging': 'Méh: hibakeresés'
         usability:
           Intro: Bevezető
           Variables and For Loops: Változók és számláló ciklusok
@@ -337,6 +312,9 @@
           Special: Különleges
           Binary: Bináris
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Matematikai blokkok
@@ -370,18 +348,23 @@
           'Play Lab: Boolean (Big Game)': 'Játéklabor: logikai változók (A Nagy Játék)'
           'Unplugged: Conditionals and Piecewise Functions': 'Gép nélküli feladatok:
             Feltételes utasítások és összetett függvények'
-          'Eval: Conditionals': 'Kiértékelés: feltételes utasítások'
+          'Eval: Conditionals': Feltételek
           'Unplugged: Collision Detection and the Distance Formula': 'Gép nélküli
             feladatok: Ütközés észlelése és a távolság képlete'
           'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
             (A Nagy Játék)'
         infinity:
-          title: Játéklabor
-          description_short: Hozz létre egy történetet vagy készíts egy játékok a
-            Játéklaborral!
-          description: Hozz létre egy történetet vagy készíts egy játékok a Játéklaborral!
+          title: Disney Infinity játéklabor
+          description_short: Használd a Játéklabort, hogy megalkoss egy történetet
+            vagy játékot a Disney Infinity karakterek szereplésével.
+          description: Használd a Játéklabort, hogy megalkoss egy történetet vagy
+            játékot a Disney Infinity karakterek szereplésével.
           Play Lab: Játéklabor
+          Infinity: Végtelen
         algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and
+            programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
@@ -391,14 +374,231 @@
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: A dizájn receptje
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
+          K-5 Courses: Alsó tagozatos tanfolyamok
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
-          title: Internet Simulator
+          title: Internet szimulátor
           description_short: ''
           description: ''
-          Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Végtelen
+          Internet Simulator: Internet szimulátor
+          Unit 1: 1. rész
+          Unit 2: 2. rész
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)
+          description: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás
+            alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki
+            számára jó időtöltés lehet.
+          Introduction to Computer Science: Bevezetés a számítástechnikába
+          The Maze: A labirintus
+          Computational Thinking: Számítógépes gondolkodás
+          Graph Paper Programming: Grafikus programozás
+          The Artist: A művész
+          Algorithms: algoritmusok
+          The Artist 2: A művész 2
+          Functions: Függvények
+          The Farmer: A Farmer
+          Conditionals: Feltételek
+          The Artist 3: A művész 3
+          Song Writing: Dalírás
+          The Farmer 2: A Farmer 2
+          Abstraction: Változó
+          The Artist 4: A művész 4
+          Relay Programming: Váltó programozás
+          The Farmer 3: A Farmer 3
+          The Internet: Az internet
+          The Artist 5: A Művész 5
+          Wrap-up: Összefoglaló
+        edit-code:
+          title: Kód szerkesztése
+          description: ''
+          The Maze: A labirintus
+          Applab: Applab
+          The Artist: A művész
+          Play Lab: Játéklabor
+        events:
+          title: Események
+          description: ''
+          Bounce: Visszapattanós
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy kód
+          description: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc
+            alatt? Próbáld ki a Flappy kód gyakorlatot!
+          Flappy Code: Flappy kód
+        jigsaw:
+          title: Kirakós játék
+          description: ''
+          Jigsaw: Kirakós játék
+        step:
+          title: Lépés
+          description: ''
+          Step: Lépés
+        Hour of Code:
+          title: Kódolás órája 2013
+          description: ''
+          Hour of Code 2013: Kódolás órája 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: A 4. tanfolyam előfeltétel
+          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
+            akik nem vettek részt a 2. és 3. tanfolyamon.
+          description: A fogalmak egy rövid összefoglalása azon tanulók számára, akik
+            nem vettek részt a 2. és 3. tanfolyamon.
+          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
+          'Maze: Sequence': 'Labirintus: sorozat'
+          'Artist: Sequence': 'Művész: sorozat'
+          'Artist: Loops': 'Művész: ciklusok'
+          'Bee: Conditionals': 'Méh: Feltételes mód'
+          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
+          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
+          'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
+          'Artist: Functions': 'Művész: függvények'
+          'Bee: Debugging': 'Méh: hibakeresés'
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Gép nélküli feladatok:
+            videojátékok és a koordináta síkok'
+          'Calc: Evaluation Blocks': 'Számológép: Kiértékelési blokkok'
+          'Eval: Strings and Images': 'Kiértékelés: Szöveges típus és a képek'
+          'Unplugged: Contracts': 'Számítógép nélkül: Szerződések'
+          'Eval: Writing Contracts': 'Kiértékelés: Szerződések írása'
+          'Calc: Defining Variables': 'Számológép: Változók deklarációja'
+          'Play Lab: Defining Variables (Big Game)': 'Játéklabor: változók deklarálása
+            (A Nagy Játék)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Gép nélküli feladatok: a dizájn receptje'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Játéklabor: Animáció (A Nagy Játék)'
+          'Unplugged: Booleans': 'Gép nélküli feladatok: logikai változók'
+          'Eval: Boolean Operators': 'Kiértékelés: Logikai műveletek'
+          'Play Lab: Booleans': 'Játéklabor: a logikai típus'
+          'Play Lab: Boolean (Big Game)': 'Játéklabor: logikai változók (A Nagy Játék)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Gép nélküli feladatok:
+            Feltételes utasítások és összetett függvények'
+          'Eval: Conditionals': 'Kiértékelés: feltételes utasítások'
+          'Unplugged: Collision Detection and the Distance Formula': 'Gép nélküli
+            feladatok: Ütközés észlelése és a távolság képlete'
+          'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
+            (A Nagy Játék)'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Contracts: Szerződések
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: A dizájn receptje
+          Your Game - Animation: Your Game - Animation
+          Booleans: Logikai adattípus
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Feltételes utasítások és összetett
+            függvények
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Logikai adattípus
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
+            (A Nagy Játék)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

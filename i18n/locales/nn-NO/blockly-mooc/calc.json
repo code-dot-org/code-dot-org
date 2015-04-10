@@ -1,9 +1,17 @@
 {
-  "compute":"beregn",
-  "equivalentExpression":"Prøv å endre rekkefølgen på argumentene dine for å få nøyaktig samme uttrykk.",
-  "extraTopBlocks":"Du har ledige blokker. Mente du å knytte disse til \"beregn\" blokken?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "divideByZeroError":"Programmet gir deling med null.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
+  "equivalentExpression":"Prøv å endre rekkjefylga på argumenta dine for å få nøyaktig same uttrykk.",
+  "evaluate":"beregn",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"Funksjonen returnerer ikke riktig resultat for alle verdier.",
   "goal":"Mål:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Ditt uttrykk:"
+  "levelIncompleteError":"Uttrykket ditt stemmer ikke med målet.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Uttrykket mangler variabel {var}.",
+  "reinfFeedbackMsg":"Her er utregningen din! Fortsett å jobbe på den eller gå videre til neste oppgave!",
+  "yourExpression":"Uttrykket ditt:",
+  "wrongInput":"Du kaller funksjonen din med feil verdi.",
+  "wrongOtherValuesX":"Uttrykket resulterer i feil verdi hvis vi varierer {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

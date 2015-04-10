@@ -1,9 +1,17 @@
 {
-  "compute": "計算",
-  "equivalentExpression": "引数を正しく並べてください",
-  "extraTopBlocks": "接続されていないブロックがあります。",
-  "failedInput": "Your function does not return the right result for all values.",
+  "divideByZeroError": "０による割り算を行ってしまいました。",
+  "emptyComputeBlock": "「evaluate」ブロックにブロックを追加する必要があります",
+  "equivalentExpression": "同じ式になるよう引数を並べ替えてください。",
+  "evaluate": "計算する",
+  "extraTopBlocks": "関連付けられていないブロックがあります。このブロックを「evaluate」ブロックに追加しますか？",
+  "failedInput": "あなたの関数は正しい結果を返していません。",
   "goal": "ゴール: ",
-  "reinfFeedbackMsg": "あなたのストーリーができあがりました！作業をつづけるか、次のパズルに進みましょう。",
-  "yourExpression": "あなたの式:"
+  "levelIncompleteError": "あなたの式はゴールと合っていません。",
+  "missingFunctionError": "{functionName} という関数を定義してください",
+  "missingVariableX": "あなたの式には、変数{var}がありません。",
+  "reinfFeedbackMsg": "あなたの計算結果です！このパズルを続けるか、次のパズルに進んでください！",
+  "yourExpression": "あなたの式:",
+  "wrongInput": "誤った入力値で関数を呼び出しています。",
+  "wrongOtherValuesX": "{var}の値が変わると、あなたの式の結果は誤った値になります。",
+  "wrongResult": "あなたの式は、正しい結果を返していません。"
 }

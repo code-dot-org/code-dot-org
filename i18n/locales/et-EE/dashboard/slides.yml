@@ -3,165 +3,162 @@ et:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: "Welcome to your first hour of code! Let's dive right into your first taste of programming."
+        text: |
+          Tere tulemast oma koodi esimene tund! Let's sukelduda otse oma esimese maitse programmeerimine.
+          Tere tulemast oma esimesse programmeerimise tundi! Sukeldume otse sinu esimesse programmeerimise kogemusse.
       2:
         image: notes/hoc1_2.jpg
-        text: "We'll be using Blockly, a visual programming language where you drag and drop blocks to write code."
+        text: Me hakkame kasutame Blocklyt, visuaalse programmeerimise keelt, kus koodi kirjutamiseks lohistatakse koodiplokid sobivasse järjestusse.
       3:
         image: notes/hoc1_3.jpg
-        text: 'Most code is typed, but Blockly is visual. Each blocks corresponds to a line of "real" code.'
+        text: 'Enamik koodi on eelnevalt sisestatud, kuid Blockly on rohkem visuaalne. Igale plokile vastab rida "päris" koodi.'
       4:
         image: notes/hoc1_4.jpg
-        text: "You'll learn the foundations of computer science, concepts which are used anywhere from making apps to controlling the Mars rover."
+        text: Te hakkate õppima arvutiteaduse põhaluseid, mõisteid mida kasutatakse igal pool, äppide tegemisest kuni Marsi kulguri kontrolimiseni.
       5:
         image: notes/hoc1_5.jpg
-        text: A program is a set of instructions for your computer to follow.
+        text: Programm on lihtsalt üks komplekt juhiseid sinu arvuti jaoks.
       6:
         image: notes/hoc1_6.jpg
-        text: The goal of your first program is to get an Angry Bird through a maze to hit a Green Pig.
+        text: Sinu esimese programmi eesmärk on aidata Angry Bird´i lind läbi labürindi et ta saaks lüüa Rohelist Siga.
       7:
         image: notes/hoc1_7.jpg
-        text: The left side is the maze where your program is run. The instructions for each puzzle are below the maze.
+        text: Vasakul pool on labürint kus teie programm töötab. Igale puslele on labürindi all juhised.
       8:
         image: notes/hoc1_8.jpg
-        text: "The middle toolbox has the commands for the Angry Bird. You'll use these to build your code."
+        text: 'Keskmises tööriista kastis (programmi ja tööruumi vahel) on käsud Angry Bird´i linnule. Sa hakkad neid kasutama et ehitada oma  koodi.'
       9:
         image: notes/hoc1_9.jpg
-        text: "On the right is your workspace where you'll drag blocks from the toolbox to build your program. To delete a block, drag it to the trash in the corner."
+        text: Paremal pool on tööruum, koht kus saad ehitada koodi. Ploki lisamiseks tööruumi lohista mõni element tööristakastist tööruumi sobivasse kohta. Elemendi kustutamiseks lohista see nurgas olevasse prügikasti.
       10:
         image: notes/hoc1_10.jpg
-        text: 'Each block is one instruction. If you drag a "move forward" block to your workspace and press "Run Program", the bird moves one space on the maze.'
+        text: 'Iga plokk on üks juhis. Kui sa lohistad "liigu edasi" ploki oma tööruumi ja vajutad "Käivita Programm", liigub lind ühe koha labürindis.'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: Et teha rohkem kui ühte asja, saad sa lohistada mitu plokki oma tööruumi ja ühendada nad omavahel kokku. Lind täidab käske ülevalt alla.
       12:
         image: notes/hoc1_12.jpg
-        text: 'If you run a program and want to fix it and try again, press the "Reset" button.'
+        text: 'Kui olete käivitanud programmi aga tahate seda parandada ja uuest proovida, vajuta "Lähtesta" nuppu.'
       13:
         image: notes/hoc1_13.jpg
         text: Järele neile põrsastele!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: "Hi, I'm JR! Every race car team need computer scientists to win. They analyze data from the car to make it go faster."
+        text: Tere, mina olen JR! iga võidusõiduauto tiim vajab arvutiteadlast et võita. Nad analüüsivad autost pärinevaid andmeid ja panevad selle kiiremini liikuma.
       2:
         image: notes/stage5_2.jpg
         text: "In these puzzles, you'll be an artist that draws a line behind them everywhere they go."
       3:
         image: notes/stage5_3.jpg
-        text: 'This block says "move forward by 100 pixels." Pixels are just really tiny dots on your screen.'
+        text: 'See plokk ütleb "liigu edasi 100 pikslit." Pikslid on lihtsalt ühed väikesed punktikesed mis moodustavad pildi sinu ekraanil.'
       4:
         image: notes/stage5_4.jpg
-        text: 'This block says "turn right by 90 degrees." This will turn your artist the same amount as the "turn" blocks in the maze puzzles.'
+        text: 'See plokk ütleb "pööra 90 kraadi paremale." See pöörab sinu kunstnikku sama palju kui "pööra" plokid labürindi pusledes.'
       5:
         image: notes/stage5_5.jpg
-        text: Click on the arrow in either of these blocks to change the amount the artist moves forward or turns. Play around to get familiar with these new blocks.
+        text: Vajuta noolele kummaski plokis et muuta seda kui palju kunstnik edasi liigub või pöörab. Katseta seda noole asja et seda tundma õppida.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: "Hi, I'm Paola! In these puzzles, you're a farmer who has to get her field completely flat to start planting crops."
+        text: Tere, ma olen Paola! Nendes pusledes oled talunik kes peab oma põllu täielikult siledaks saama et midagi külvata.
       2:
         image: notes/stage9_2.jpg
-        text: You have to help her remove all the piles of dirt and fill in all the holes.
+        text: Sa pead aitama tal eemaldada kõik mulla hunnikud ja aitama tal auke täita.
       3:
         image: notes/stage9_3.jpg
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1 shovelful of dirt to a hole.
+        text: Uued plokid eemaldavad 1 labidatäie mulda hunnikust ja panevad 1 kühvlitäie mulda auku.
       4:
         image: notes/stage9_4.jpg
-        text: The piles and holes are different sizes, so you have to tell the farmer how many shovelfuls to use.
+        text: Mullahunnikud ja augud on erineva suurussega, seega pead ütlema mitut labidatäit kasutada.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: "Hi, I'm Katie! One of the most exciting things about computer science is that a computer program can be interactive."
+        text: Tere, mina olen Katie! Üks kõige põnevamaid asju arvutiteaduses on see, et arvutid saavad olla interaktiivsed.
       2:
         image: notes/flappy02.jpg
-        text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."
+        text: Ükskõik millal, kui keegi klikib, vajutab ekraanile või kirjutab arvutis või telefonis luuakse SÜNDMUS ja siin on jupp koodi mis otsustab mida teha kui SÜNDMUS aset leiab.
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse is clicked, play a sound" '
+        text: 'Näiteks sul võib olla mõni SÜNDMUSE- KÄSITSEJA mis ütleb "kui klikitakse, mängitakse heli" '
       4:
         image: notes/flappy04.jpg
-        text: "Have you ever heard of the game FlappyBird? By using Event handlers, we're going to learn to program our own custom version of FlappyBird!"
+        text: Kas sa oled kuulnud midagi FlappyBird´i mängust? Kasutades Sündmuse käsitsejaid hakkame õppima seda, kuidas teha oma FlappyBird!
       5:
         image: notes/flappy05.jpg
-        text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
+        text: 'Koodi mida sa plokkide lohistamisega "kirjutad" on arvuti jaoks käsud. Iga plokk on esindatud päris koodiga.'
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that are filled in for you - these are "event handlers" '
+        text: 'Kui vaatad oma tööruumi siis võid märgata, et seal on juba mõned rohelised plokid, need on "sündmuste käsitsejad" '
       7:
         image: notes/flappy07.jpg
         text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
       8:
         image: notes/flappy08.jpg
-        text: "In each puzzle of this activity we'll introduce new types of events as green blocks on the workspace, and you can decide the appropriate blocks to add in response to those events."
+        text: igas pusles tutvustame uusi sündmusi roheliste plokkidena tööruumis, sina saad otsustada selle üle, millise ploki sa sinna paned vastavalt nendele sündmustele.
       9:
         image: notes/flappy09.jpg
-        text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
+        text: 'Kui sa näed mõne ploki küles alla suunatud nooli nagu see, siis tähendab see seda et sa saad ,uuta selle ploki seadeid- nagu näiteks mis heli mängitakse kui FlappyBird´i lind kukub vastu maad.'
       10:
         image: notes/flappy10.jpg
-        text: "In the final puzzle you'll be able to create your own game and share it with your friends. Have fun!"
+        text: Viimases pusles saad luua oma enda mängu ja seda jagada oma sõpradega. Kasuta oma loovust!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
-        text: "Hi, I'm Mark! Let's learn about loops. Using loops you can tell a computer to repeat any set of actions over and over, thousands or even billions of times."
+        text: Tere, olen Mark! Õpime kordusi. Korduste kasutamine ütleb arvutile et ta kordaks valitud tegevuste gruppi uuest ja uuesti, tuhandeid või isegi miljardeid kordi.
       2:
         image: notes/hoc2_2.jpg
-        text: In this puzzle, we want to make the bird move forward 5 spaces to get to the pig.
+        text: Selles pusles tahame et lind liiguks viis kohta edasi, et püüda siga.
       3:
         image: notes/hoc2_3.jpg
-        text: 'We can use the new "repeat" block to help us out.'
+        text: 'Saame kasutada uut "korda" plokki et meid välja aidata.'
       4:
         image: notes/hoc2_4.jpg
-        text: 'Instead of dragging out 5 "move forward" blocks...'
+        text: 'Selle asemel et lohistada viis "liigu edasi" plokki ritta kasuta...'
       5:
         image: notes/hoc2_5.jpg
-        text: 'We can put the "move forward" block inside the "repeat" block and write a number in the block to tell it how many times to repeat.'
+        text: 'pane "liigu edasi" plokk "korda" ploki sisse ja kirjuta plokki number et määrata mitu korda tegevust korrata tuleb.'
       6:
         image: notes/hoc2_6.jpg
-        text: 'And this is important: you can put more than one command inside a "repeat" block.'
+        text: 'Oluline on see et: sa saad "korda" ploki sisse rohkem kui ühe ploki.'
       7:
         image: notes/hoc2_7.jpg
-        text: 'Enjoy using your new "repeat" block!'
+        text: 'Naudi oma uue "korda" ploki kasutamist!'
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: |-
-          Hi, I'm Chris. Before joining the Miami Heat, I went to Georgia Tech to study Computer Science. Let's try our new block, the "repeat until" block.
+        text: 'Tere, olen Chris. Enne Miami Heatiga läksin Georgiasse et õppida arvutiteaduse õpetajaks. Proovime uut plokki, "korda kuni" plokki.'
       2:
         image: notes/hoc3_2.jpg
-        text: "What if we didn't know how far the bird had to move to get to the pig?"
+        text: Mis oleks, kui me ei teaks, kui kaugele peaks lind liikuma, et siga kätte saada?
       3:
         image: notes/hoc3_3.jpg
-        text: 'If we put a "move forward" block inside the "repeat until" block, the bird will move forward UNTIL it reaches the pig (or crashes into a wall).'
+        text: 'Kui me paneme "liigu edasi" ploki "korda kuni" ploki sisse siis lind liigub nii kaua edasi KUNI ta jõuab seani (või põrkab seinaga kokku).'
       4:
         image: notes/hoc3_4.jpg
-        text: 'And this is important: just like before, we can put multiple blocks inside the "repeat until" block, and they will all be repeated.'
+        text: 'Oluline: nagu ennegi saame me nüüd panna mitu plokki "korda kuni" ploki sisse ja neid kõiki korratakse.'
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: |-
-          Hi, I'm Bill! Let's learn a new fundamental concept: "If" statements. This is how computers make decisions.
+        text: 'Tere. olen Bill! Õpime uue põhimõiste, "kui" avalduse. Arvuti teeb selle abil otsuseid.'
       2:
         image: notes/hoc4_2.jpg
-        text: |-
-          You use "If" statements yourself everday. Before you go outside each morning, you say IF it's raining outside, I need to wear my jacket.
+        text: 'Sa kasutad "kui" avaldust iga päev. Näiteks kui lähed hommikul õue, sa mõtled et KUI õues sajab, pean kandma jopet.'
       3:
         image: notes/hoc4_3.jpg
-        text: "We can tell the zombie to check IF there's path to the left, and if he finds a path to the left, we can have him turn in that direction."
+        text: Me saame zombil lasta kontrollida KAS vasakul pool on rada ja kui ta leiab raja vasakule siis me saame panna ta pöörama sinna suunas.
       4:
         image: notes/hoc4_4.jpg
-        text: |-
-          To write the code for this, let's drag out our "if" block and put a "turn left" block inside it.
+        text: 'Et kirjutada selleks koodi, lohista tööruumi "kui" plokk ja pane sinna sisse "pööra vasakule" plokk.'
       5:
         image: notes/hoc4_5.jpg
-        text: |-
-          Now, if we put a "move forward" block above it and a "repeat" block around everything, each time the zombie moves, he'll check if there's a path to the left and turn. The "repeat" command is critical, to check for a turn at every step.
+        text: 'Nüüd kui me paneme "liigu edasi"ploki selle kohale ja nad omakorda veel "korda" ploki sisse, siis iga kord kui zombi liigub siis ta kontrollib kas vasakule poole on rada ja sinna saab pöörata. Käsk "korda" on siin kriitilise tähtsusega, kuna zombi peab kontrollima rada iga astumise järel.'
       6:
         image: notes/hoc4_6.jpg
-        text: If statements are really important in computer science. One of the first programs I wrote was a tic-tac-toe game, and there was a If statement that said IF the other person is about to win, block the spot that lets them win.
+        text: 'Kui avaldused on arvutiteaduses väga tähtsad. Üks esimestest programmidest mille kirjutasin oli tic-tac.toe-mäng. Selle mängu koodis oli "kui" avaldis mis ütles: KUI teine inimene hakkab võitma, siis tuleb blokeerida koht mis laseks tal võita.'
       7:
         image: notes/hoc4_7.jpg
-        text: 'Have fun using the "if" block!'
+        text: 'Lõbutse "kui" plokki kasutades!'
     if_else:
       1:
         image: notes/hoc5_1.jpg
@@ -192,26 +189,24 @@ et:
           It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: Aitame Scratil, oraval jõuda tammetõruni!
     function:
       1:
         image: notes/stage13_1.jpg
-        text: "Hi, I'm Brina, an engineer at Instagram. A function is certain lines of code that you want to use over and over again, so instead of writing that code out everytime, you can just use one block."
+        text: Tere, olen Brina, Instagrami insener. Funktsioon on kindel rida koodi, mida sa tahad korduvalt kasutada, selle asemel et kirjutada seda koodi iga kord välja, saad sa kasutada ühte plokki.
       2:
         image: notes/stage13_2.jpg
-        text: "We're going to learn how to define functions. Function definitions have a star in the corner. The name of the function is written on the top line."
+        text: Me hakkame õppima kuidas defineerida funktsiooni. Funktsiooni definitsioonidel on nurgas täht. Funktsiooni nimetus on kirjutatud ülemisele joonele.
       3:
         image: notes/stage13_3.jpg
-        text: |-
-          The blocks that go inside the definition tell us what it does. So this function definition is called "fill 5" and it's made up of a "repeat" block and a "fill" block.
+        text: 'Plokid mis lähevad definitsiooni sisse, ütlevad meile mida see teeb. Selle funktsiooni definitsioon on "täida 5" ja see on tehtud "korda" ja "täida" plokist.'
       4:
         image: notes/stage13_4.jpg
         text: |-
           The definition sits on the workspace, but our farmer won't run the function until we drag out our "fill 5" function block from functions category.
       5:
         image: notes/stage13_5.jpg
-        text: |-
-          Let's put the "fun" back in "FUNction!" 
+        text: 'Paneme "fun"i tagasi "FUNction"isse! (tõlkimatu nali) '
     loop_while:
       1:
         image: notes/stage9_5.jpg
@@ -219,17 +214,17 @@ et:
           Hi, I'm Makinde! Let's learn about the "while block." 
       2:
         image: notes/stage9_6.jpg
-        text: 'The "while block" will do whatever you put inside it AS LONG AS the statement on the top is TRUE.'
+        text: '"Tingimusel plokk" teeb mida iganes sa selle sisse paned NIIKAUA KUNI väide üleval on TÕENE.'
       3:
         image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her.
+        text: Näiteks, kui talunik on hunniku otsas, jätkab ta 1 kühvlitäie eemaldamist tingimusel, et tema all on veel hunnik.
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: "Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies, including Shrek."
+        text: tere, olen Trina, töötan Pixaris. Ma olen töötanud paljude filmide kallal, kaasa arvatud Shreki.
       2:
         image: notes/stage11_2.jpg
-        text: 'This is our new "counter" loop. It will perform actions over and over again and you can make the actions change slightly each time.'
+        text: 'See on meie uus "loendur" tsükkel. See sooritab korduvalt toiminguid, aga sa saad tegevusi igal korra jaoks natuke muuta.'
       3:
         image: notes/stage11_3.jpg
         text: 'In this example, our "counter" loop says "count with counter from 50 to 90 by 10" and inside it, we have our "draw a square" block. Drag the "counter" block from the "Variables" section into the "length" spot.'
@@ -282,35 +277,34 @@ et:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: Tere, olen Lyndsey. Ma modelleerin, näitlen ja kirjutan oma äppe. Kasutame koodi et panna Anna ja Elsa seltsima kui nad jää maagiat ja ilu avastavad.
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Sa saad teha lumehelbeid ja teisi mustreid kui sa uisutad. Nii saad teha oma talve võlumaa, mida saad ka oma sõpradega jagada.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: Järgmises tunnis hakkame õppima koodi kirjutamise põhialuseid. Traditsiooniline programmeerimine on tavaliselt teksti kirjutamine aga meie kasutame Blocklyt, see kasutab visuaalseid plokke, mida saad lohistadam, et programme kirjutada. Sel meetodil õpitakse põhitõdesid isegi ülikoolides. Tegelikult loote ikkagi koodi, hoolimata sellest, et te ise näete ainult plokke.
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: Programm on juhiste kogum, mis ütleb arvutile mida teha. Ehitame koodi või programmi, mis aitab Elsal luua lihtsa sirgjoone. Hakkame seda edaspidi kasutama et luua raskemaid mustreid.
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: Sinu ekraan on jaotatud kolmeks põhiosaks. Vasakul on jääväljak, koht kus sinu programm käib. Iga taseme juhised on selle alla kirjutatud.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: Keskmine ala on tööriistakast ja iga plokk seal on tegevus mida Elsa ja Anna teha saavad.
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 'Valget ala vasakul nimetatakse tööruumiks, see on koht kus sa oma programmi ehitama hakkad. Jääl liikumiseks kasuta "Liigu Edasi" plokki.'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'Plokk "Liigu Edasi" plokk tähendab "liigu edasi 100 piksli võrra." Kui vajutad "Käivita", mis juhtub? Elsa liigub ekraanil edasi 100 pikslit.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'Teine plokk mis meil siin pusles on ütleb "pööra paremale 90 kraadi võrra." "pööra paremale" plokk paneb Elsa pöörama teatud nurga. Saad katsetada kui kaugele tahad Elsat pöörama panna. Nurka mõõdetakse Elsa ette jäävast rajast. Niisiis see pöörab 90 kraadi. Ja see pöörab 120 kraadi.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Pea meeles, sa saad ploki peal olevale noolele vajutades muuta seda, kui palju tegelane pöörab või edasi liigub.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
@@ -326,12 +320,11 @@ et:
         text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'Pea meeles, sa saad "korda" ploki väärtuse muuta ükskõik milleks ja see kordabki plokki sisestatud tegevusi niipalju kordi.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: Tere, olen Chris Bosh. Olen professionaalne korvpallur, kirjutasin koodi kolledžis.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
@@ -343,7 +336,7 @@ et:
         text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Sa saad seda kutsuda funktsiooniks "loo ruut" '
       6:
         image: notes/frozen3_6.jpg
         text: Now you have a new block that you can use multiple times to create multiple squares.
@@ -367,28 +360,26 @@ et:
         text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Sinu ekraan on jagatud kolmeks põhiosaks. Vasakul pool on see kus sinu programm käib. Iga taseme juhend on selle alla kirjutatud.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Keskmine ala on tööriistakast, milles on plokid mida sinu pusles vaja läheb. Iga plokk on jupike koodi. Valget ala vasakul kutsutakse tööruumiks, see on koht kus sa oma programmi ehitad.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'Alustuseks pead ühendama oma plokid oranži "kui käib" ploki külge. Saad ühendada mitu plokki üksteise külge lohistades neid tööruumi, teiste plokkide lähedusse kuni näed kollast joont, seejärel nad kinnituvad üksteise külge.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'Selles esimeses pusles on meie tegelaseks pingviin ja me paneme ta ütlema "Tere!" Selleks lohista "ütle" plokk tööruumi ja ühenda see "kui käib" plokiga, seejärel kirjuta tekstikasti "Tere." Kui tahame siis saame pingviini liikuma ka panna.  Pingviini liikumapanemiseks kasuta "liigu vasakule" ja "liigu paremale" plokke. Kui oled koodi kokku saanud vajuta "käivita" nuppu ja vaata mis sa programmeerisid.'
       6:
         image: notes/playlab_intro_6.png
         text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: Nüüd hakkame õppima midagi sellist, mida programmeerijad iga päev kasutavad. Neid kutsutake sündmusteks. Sündmus ütleb programmile et tuleb jälgida kui midagi juhtub. Kui mingi kindel asi juhtub siis rakendab programm eelnevalt valitud käsu.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: 'Mõned sündmuse näited: hiire kliki, noole nupu vajutuse või  ekraani puudutamise ootamine.'
       3:
         image: notes/playlab_events_3.png
         text: |-
@@ -399,11 +390,10 @@ et:
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'See on "korda igavesti" plokk. Kõik mis selle ploki sees on korratakse mängu jooksul igavesti.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Kui me tahame, et mõni tegelane midagi korduvalt teeks, ilma et mängija midagi peaks tegema, paneme me need plokid  "korda igavesti" ploki sisse.'
       3:
         image: notes/playlab_repeat_forever_3.png
         text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.

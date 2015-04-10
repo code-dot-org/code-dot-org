@@ -22,6 +22,7 @@
           future: nevar būt nākotnē
   hello: Sveika, pasaule
   welcome_back: Laipni lūdzu atpakaļ, %{name}
+  submit: Iesniegt
   add_teacher_form:
     code:
       label: 'Pievienot skolotāju:'
@@ -247,6 +248,7 @@
         artist: Uzzīmēt kaut ko
     user:
       classroom: Skolotāju mājas lapa
+      district_dashboard: District Dashboard
       label: Sveiki, %{username}
       stats: Mans progress
       settings: Mans konts
@@ -333,6 +335,8 @@
       %{student_name}
   user:
     email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Atkārtoti nosūtīt apstiprinājumu instrukcijas
     new_password_hint: (atstājiet tukšu, ja nevēlaties mainīt to)
     current_password_hint: (nepieciešama jūsu pašreizējā parole, lai apstiprinātu
@@ -495,6 +499,9 @@
       body: Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji
     frozen:
       title: Ledus sirds
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
     students_made_these_with_code: Skolēni izveidoja šos ar kodu!
@@ -531,6 +538,14 @@
     wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģini vēl!
     correct_title: Pareizi
     correct_body: Tā ir pareizā atbilde.
+  contract_match:
+    wrong_title: Nepareiza atbilde
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Ievadi savu atbildi šeit
   dialog:
@@ -585,11 +600,48 @@
     bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar
     mums tavā vietā.
   progress:
-    not_completed: Nav pabeigts
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: Pabeigts, pārāk daudz bloki
     completed_perfect: pabeigts, ideāli
     furthest_level_attempted: tālākais līmenis mēģināts
+    assessment: assessment
   studio:
     courses_working_on: Kursi, pie kuriem tu strādā
     completed_courses: Pabeigtie kursi
     all_courses: Visi kursi
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Saglabāt
+    delete: Izdzēst
+    exit: Return to Course
+    my_projects: My Projects
+    share: Ieteikt
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Vairāk
+    name: Vārds
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Izdzēst?
+    delete_yes: Jā
+    delete_no: Nē
+    saved: Saved
+    not_saved: Not saved
+    cancel: Atcelt
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

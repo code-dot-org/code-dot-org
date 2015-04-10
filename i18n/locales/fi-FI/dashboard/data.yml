@@ -99,12 +99,12 @@ fi:
         Jigsaw: Palapeli
         MazeStep: Sokkelo askeltila
         Wordsearch: Sanaetsintä
-        Webapp: App Lab
+        Webapp: Sovelluksien laboratorio
         ArtistEC: Taiteilija
         TextMatch: Tekstin yhdistäminen
         StudioEC: Pelilabra
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: Sovelluksien laboratorio
+        NetSim: Internet simulaattori
     trophy:
       name:
         Bronze: Pronssi
@@ -205,7 +205,7 @@ fi:
         turtle_3_5: 'Luo nyt uusi "piirrä talo" funktio. Piirrä sitten talo kahdelle kissalle. Vihje: luo uusi funktio raahaamalla "suorittaaksesi jotain" -lohko ja muuta "jotain"-tekstin tilalle funktion nimi ("piirrä talo").'
         turtle_3_6: 'Käyttäen "piirrä neliö" -funktiota esimerkkinä, lisää syöte "pituus" "piirrä kolmio" -funtiolle. Tämän jälkeen piirrä eri kokoisia kolmioita. (Vihje: klikkaa tähteä funktion vasemmassa yläkulmassa)'
         turtle_3_7: 'Lisää syöte "pituus" "piirrä talo" -funktiolle ja piirrä iso talo elefantille (sivun pituus 150 kuvapistettä)'
-        turtle_3_8: 'Tässä on kaikki edellisen pulman lohkot. Muokkaa "piirrä talo"-funktiota niin, että päädyn talon oikeaan alakulmaan piirtämisen jälkeen. Käytä muutettua funktiota ja piirrä kolme taloa.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Osaatko luoda "piirrä talo" -funktion ilman apua? Kokeile ja sitten piirrä rivi taloja.'
         turtle_3_10: Olet oppinut todella paljon! Käytä nyt taitojasi ja piirrä jotain mukavaa. Kokeile vaikka piirtää tähti, spiraali tai erikoinen lumihiutale.
         maze_karel_debug_seq_1: Tervetuloa mestästämään koodivirhettä, eli bugia! Koodini ei toimi oikein. Osaatko löytää virheen ja korjata sen? Minun pitäisi saada peltoni tasattua, jotta voin aloittaa istutuksen.
@@ -246,7 +246,7 @@ fi:
         flappy_6: Kokeile, pystytkö vielä saamaan pisteitä, jos laitat Flappyn räpyttelemään pienemmän tai suuremman määrän.
         flappy_7: 'Seuraavaksi, kokeile muuttaa taustakuvaa liittämällä toinen lohko "suoritettaessa"-lohko.'
         flappy_8: Voit asettaa ulkoasuun liittyvät asiat koska tahansa, ei vain pelin käynnistyessä. Kokeile asettaa SATUNNAINEN kohtaus kun muita tapahtumia tapahtuu, esim. kun ohitat esteen.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: 'Asioita sotkemaan: kun osutaan esteeseen, ei lopeteta peliä vaan kokeile asettaa pisteet takaisin 0:aan.'
         flappy_11: Luo oma Flappy-pelisi. Voit muuttaa kaikkia ulkoasuun ja sääntöihin liittyviä asioita, myös painovoimaa. Kun olet valmis, napsauta Valmis antaaksesi ystäviesi kokeilla peliäsi heidän puhelimissaan.
         flappy_k1_1: Pelaa Flappy-peliä
         flappy_k1_2: 'Liitä lohko "napsautuksella"-lohkoon ja paina "Suorita". Napsauta ruutua siirtääksesi Flappy maaliin.'
@@ -326,81 +326,10 @@ fi:
         maze_wordsearch_k_15: Liikuta minua yhteen suuntaan, sitten toiseen suuntaan ja kirjoita sana ABOVE (yläpuolella suomeksi)
         maze_wordsearch_k_16: Liikuta minua yhteen suuntaan, sitten toiseen suuntaan ja kirjoita sana BELOW (alla suomeksi)
         maze_wordsearch_k_20: Tämä on kokeilu! Liikuta minua yhteen suuntaan, sitten toiseen suuntaan ja kirjoita sana STORY (tarina suomeksi)
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Luo sovelluksesi käyttäen työkaluvalikossa olevia lohkoja.
         turtle_ec_1_2: 'Piirrä nyt neliö. Huomautus: käytä suosikkiväriäsi valitsemalla se "kynän väri" lohkolla.'
         turtle_ec_1_10: 'Teit sen! Nyt voit piirtää mitä haluat. Joitakin hauskoja ideoita: tikku-ukko, lumihiutale tai kierre. Kokeile myös uutta "penWidth" lohkoa. Pidä hauskaa!'
         studio_ec_sandbox: 'Luo oma pelisi.  Kun olet valmis, napsauta Valmis, niin voit antaa ystäviesikin kokeilla tarinaasi puhelimissaan.'
-    levelbuilder:
-      frozen line:
-        instructions: Hei! Olen Arendelin Elsa. Auta minua luomaan yksittäinen viiva.
-      frozen perpendicular:
-        instructions: 'Kokeillaanpa nyt luoda kaksi viivaa, jotka ovat 90 asteen kulmassa toisiinsa nähden. Sinun täytyy käyttää "Käännä"-lohkoa sekä "Liiku"-lohkoa.'
-      frozen square iterative:
-        instructions: Näyttää siltä, että olemme puolessa välissä neliön piirtämiseksi. Laitetaan 4 viivaa yhteen, niin saamme neliön.
-      frozen square loop:
-        instructions: 'Hei, olen Arendelin Anna! Tehdäänpä neliö "Toista"-lohkolla. Siten säästämme lohkoja. Kuinka monta kertaa "Toista"-lohkon pitäisi toistaa sen sisällä olevat lohkot saadakseen aikaan neliön?'
-      frozen square loop 3x:
-        instructions: Luodaanpa kolme neliötä, kääntyen kunkin neliön jälkeen. Pidä huolta että käännyt täsmälleen 120 astetta ennen kutakin uutta neliötä.
-      frozen square snowflake:
-        instructions: 'Osaatko luoda lumihiutaleen käyttäen "Toista"-lohkoa 10 neliön piirtämiseksi siten, että käytät "Käännä"-lohkoa kääntyäksesi 36 astetta jokaisen neliön jälkeen?'
-      frozen cross:
-        instructions: 'Käytä "Toista"-lohkoa luodaksesi plusmerkki. Huomasitko että Elsa voi liikkua eteen- ja taaksepäin?'
-      frozen cross rotate:
-        instructions: Kokeile nyt toistaa 10 kertaa. Kuinka monta astetta sinun täytyy kääntää jokaisen rivin jälkeen?
-      frozen cross rotate dense:
-        instructions: 'Toistetaanpa se 90 kertaa! Kuinka monta kertaa 90 menee 360:een? Vinkki: Se on todella pieni luku.'
-      frozen diamond:
-        instructions: 'Luodaanpa suunnikas. Se on kuin neliö, mutta sillä on erilaiset kulmat: esim. 60 ja 120 asteen kulmat 90 asteen kulmien sijaan.'
-      frozen diamond mini snowflake:
-        instructions: 'Tiesitkö, että jokainen lumihiutale on eri muotoinen? Luodaanpa uusi lumihiutale käyttäen "Toista"-lohkoa toistamaan suunnikas neljä kertaa, kääntyen oikealle 90 astetta jokaisen suunnikkaan välissä.'
-      frozen diamond snowflake:
-        instructions: Luo nyt uusi lumihiutale käyttäen toista-lohkoa toistaaksesi suunnikkaan 19 kertaa, kääntyen 36 astetta kunkin välissä.
-      frozen circle:
-        instructions: Ympyrä on erityinen muoto. Saatko selvitettyä, mikä numero sinun tulee laittaa kysymysmerkkien paikalle piirtääksesi ympyrän?
-      frozen circle function:
-        instructions: 'Käytä uutta "Luo ympyrä" lohkoa piirtääksesi 10 osittain päällekkäistä ympyrää. Älä unohda hypätä ympyröiden välissä.'
-      frozen circle function in circle:
-        instructions: Luodaanpa 20 osittain päällekkäistä ympyrää siten, että käännytään 18 astetta kunkin ympyrän jälkeen.
-      frozen circle function with parameter:
-        instructions: 'Tässä on "Luo ympyrä" -lohko joka tekee eri kokoisia ympyröitä. Voitko käyttää tätä luodaksesi pienen ympyrän kokoa 5 ja isomman ympyrän kokoa 10?'
-      frozen snowflower:
-        instructions: Monimutkaisia lumikuvioita voi luoda hyvin yksinkertaisilla muodoilla. Voitko tehdä kuvion toistamalla 5 ympyrää kokoa 5 ja 5 ympyrää kokoa 10?
-      frozen snowflake branch:
-        instructions: 'Kokeile "Luo lumihiutalehaara" -lohkoa ja piirrä kolme haaraa siten, että se alkaa näyttää lumihiutaleelta.'
-      frozen snowflake full:
-        instructions: Toista sitä nyt 8 kertaa tehdäksesi kaunis lumihiutale!
-      frozen freeplay:
-        instructions: Olet nyt virallisesti mestaritaiteilija! Luo talven ihmemaa ja jaa se ystäviesi kanssa.
-      scrat 16:
-        instructions: 'Pähkinöitä! Käytä "jos" lohkoa viedäksesi minut sinne pienimmällä määrällä lohkoja.'
-      scrat 17:
-        instructions: Ok, tehdäänpä se vielä uudestaan harjoituksen vuoksi – tämä on melko samanlainen, mutta varo seinää!
-      scrat 18:
-        instructions: '"Jos - muuten" -lohkot tarkistavat jonkin ehdon, ja tekevät sitten ainoastaan jomman kumman toiminnoista. Saadaksesi minut tammenterhon luo, kokeile käyttää tätä uutta lohkoa.'
-      scrat 19:
-        instructions: 'Vielä yksi harjoitus "Jos - muuten" -lohkolla. Saatko sen oikein heti ensimmäisellä yrityksellä?'
-      scrat 20:
-        instructions: Osaatko ratkaista tämän vaikeamman vaikeamman sokkelon lisäämällä vain kolme uutta lohkoa? Jos teet sen oikein, voin kävellä kaarevan polun riippumatta sen pituudesta. Kiirehdi! Jää sulaa jo!
-      Standalone_Artist_1:
-        instructions: 'Tervetuloa Taiteilijaan! Ensimmäiseksi tehdään yksinkertainen neliö käyttäen "käänny oikealle" ja "liiku eteenpäin" -lohkoja. Kunkin sivun tulee olla 100 kuvapistettä pitkä.'
-      Standalone_Artist_2:
-        instructions: Piirrä tämä timantti 120 ja 60 asteen kulmilla ja 150 kuvapisteen pituisilla sivuilla.
-      Standalone_Artist_3:
-        instructions: Osaatko piirtää tämän kuusikulmion 100 kuvapisteen sivuilla ja 50 asteen käännöksillä?
-      Standalone_Artist_4:
-        instructions: Sinulla on uusi lohko kokeiltavaksi, silmukka. Tämä toistaa joukon käskyjä. Mitä tapahtuu jos teet nämä komennot silmukassa 6 kertaa?
-      Standalone_Artist_5:
-        instructions: Kuinka monta kertaa sinun täytyy toistaa tämä timantti silmukassa piirtääksesi kukan?
-      Standalone_Artist_5.5:
-        instructions: 'Huomaa kuinka yksinkertaistimme timantin koodia muuttamalla sen silmukaksi. Voit tehdä koko komentosarjasta 12 toistolla kukan. Vinkki: Sinun täytyy kääntyä 30 astetta timantin silmukan jälkeen jotta et piirrä uudelleen samaa timanttia.'
-      Standalone_Artist_6:
-        instructions: 'Luo kuvio toistamalla tätä kuusikulmiota silmukassa 6 kertaa. Kuinka monta astetta sinun täytyy kääntyä kerrallaan? Vihje: jaa ympyrän astemäärä toistojen määrällä.'
-      Standalone_Artist_7:
-        instructions: 'Funktio on toinen ohjelmoinnin työkalu, joka auttaa sinua välttämään toistoa. Tämä funktio piirtää kukan, joten voit käyttää sitä koska tahansa halutessasi piirtää kukan. Käytä tätä ja uutta hyppää-lohkoa piirtääksesi nämä kukat. Vinkki: kukat ovat 150 kuvapisteen etäisyydellä toisistaan'
-      Standalone_Artist_8:
-        instructions: 'Tässä on funktio "Piirrä kuvio", jonka olemme ohjelmoineet piirtämään kuusikulmioita. Aja koodi nähdäksesi mitä se tekee ja tee kokeiluja funktiolla nähdäksesi mitä tapahtuu. Osaatko laittaa sen piirtämään kuvion neliöitä, kolmioita tai kahdeksankulmioita?'
-      Standalone_Artist_9:
-        instructions: Tee nyt mikä tahansa haluamasi kuva! Sinulla on jopa tyhjä funktio, jonka voit laittaa tekemään ihan mitä haluat!
     video:
       name:
         maze_intro: Sokkelon johdanto
@@ -460,6 +389,7 @@ fi:
         C2_relay_programming: Releohjelmointi
         C2_paper_airplanes: Paperilentokoneet
         C2_digital_footprint: Digitaalinen jalanjälkesi
+        C2_digital_footprint_v2: Digitaalinen jalanjälkesi
         C3_maze_level_4: 'Sokkelo: silmukat'
         C3_artist_intro: Taiteilijan johdanto
         C3_artist_functions: Taiteilijan funktiot
@@ -500,6 +430,21 @@ fi:
         playlab_intro: Johdanto Pelilabraan
         playlab_events: 'Pelilabra: tapahtumat'
         playlab_repeat_forever: 'Pelilabra: ikuinen toisto'
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Arviointilohkot
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Muuttujat
+        msm_7_functions: Funktiot
+        infinity_playlab_intro: 'Pelilabra - Johdanto'
+        infinity_playlab_events: 'Pelilabra - Tapahtumia'
+        infinity_playlab_repeat_forever: 'Pelilabra - Ikuinen Toisto'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: 'Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan'
@@ -566,3 +511,7 @@ fi:
         arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
         right_arrow_fireball: Käytä oikeaa nuolta ampuaksesi tulipalloja
         name_function: Kirjoita funktiosi nimi tähän
+        Infinity_move_right_runbutton: Lisää liikuta lohko tänne
+        Infinity_move_directions_callout: Mikä lohko siirtää Baymaxiä ylös kun nuoli ylös nappia painetaan?
+        Infinity_move_collide_callout: Anna äänimerkki, kun tämä tapahtuma toteutuu.
+        Infinity_repeat_callout: Aseta liikuta lohkoja tänne

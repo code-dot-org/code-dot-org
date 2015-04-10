@@ -155,9 +155,9 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "continue":function(d){return "Fortsett"},
-"nextLevel":function(d){return "Gratulerer! Du har fullført denne oppgaven."},
+"nextLevel":function(d){return "Gratulerer! Du har fullført denne utfordringen."},
 "no":function(d){return "Nei"},
-"numBlocksNeeded":function(d){return "Denne oppgaven kan løses med %1 blokker."},
+"numBlocksNeeded":function(d){return "Denne utfordringen kan bli løst med %1 blokker."},
 "reinfFeedbackMsg":function(d){return "Du kan trykke på \"Prøv igjen\" for å gå tilbake til spillet ditt."},
 "share":function(d){return "Del"},
 "shareGame":function(d){return "Del ditt spill:"},

@@ -2,36 +2,25 @@
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
   .field
-    = f.label :name
-    = f.text_field :name, placeholder: 'Level Name'
-  - unless @level.new_record? && (@level.is_a?(Grid) || @level.is_a?(Calc) || @level.is_a?(Eval) || @level.is_a?(Artist))
-    .field
-      = f.label 'concepts'
-      %p
-        Select
-        %a.select_all{href: '#'} all
-        \/
-        %a.select_none{href: '#'} none
-        (shift-click or cmd-click to select multiple).
-      = f.collection_select :concept_ids, Concept.cached, :id, :name, { :selected => @level.concept_ids }, { :multiple => true, :name => 'level[concept_ids][]', :size => Concept.cached.length }
-    = render partial: 'levels/editors/video', locals: {f: f}
+    / dsl-defined levels specify a name directly in the DSL text
+    - unless @level.is_a? DSLDefined
+      = f.label :name
+      = f.text_field :name, placeholder: 'Level Name'
+  / Only enter name to create new records of certain level types.
+  - unless @level.new_record? && @level.is_a?(Blockly)
+    = render partial: 'levels/editors/all', locals: {f: f}
+
     = render partial: 'levels/editors/blockly', locals: {f: f} if @level.is_a? Blockly
     = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
     = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
     = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
     = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
+    = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
     = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
+    = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
   .actions
     = f.submit
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
   #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: @level.new_record? ? '#new_level' : '.edit_level'}}
-  function make_selection_handler(flag) {
-    return function (e) {
-      e.preventDefault();
-      $(this).parent().siblings('select').children('option')[flag ? 'attr' : 'removeAttr']('selected', true);
-    }
-  }
-  $('.select_all').click(make_selection_handler(true));
-  $('.select_none').click(make_selection_handler(false));

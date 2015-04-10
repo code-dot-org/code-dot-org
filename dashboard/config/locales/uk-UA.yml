@@ -1,7 +1,7 @@
 "uk":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Будь-ласка виправте ці помилки:'
   activerecord:
     errors:
       messages:
@@ -22,6 +22,7 @@
           future: не може бути в майбутньому
   hello: Привіт, світе
   welcome_back: З поверненням, %{name}
+  submit: Надіслати
   add_teacher_form:
     code:
       label: 'Додати учителя:'
@@ -257,6 +258,7 @@
         artist: Намалювати
     user:
       classroom: Домашня сторінка вчителя
+      district_dashboard: District Dashboard
       label: Привіт %{username}
       stats: Мій прогрес
       settings: Мій профіль
@@ -341,6 +343,8 @@
     student_teacher_disassociated: '%{teacher_name} вилучений як вчитель для %{student_name}'
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
+    email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
+    email_confirm_wrong_email: (Неправильна електронна адреса?)
     email_resend_confirm: Надіслати повідомлення з підтвердженням повторно
     new_password_hint: (залишіть порожнім, якщо ви не хочете змінювати)
     current_password_hint: (нам потрібний ваш поточний пароль, щоб підтвердити зміни)
@@ -501,6 +505,9 @@
       body: Переглянути галерею програм та художніх зображень, створених нашими користувачами
     frozen:
       title: Крижане серце
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Ці малюнки запрограмували учні!
     students_made_these_with_code: Це запрограмували учні!
@@ -537,6 +544,14 @@
     wrong_body: Подане рішення не є правильним.  Будь ласка, спробуйте ще раз!
     correct_title: Правильно
     correct_body: Це правильна відповідь.
+  contract_match:
+    wrong_title: Неправильна відповідь
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Введіть свою відповідь тут
   dialog:
@@ -554,7 +569,7 @@
             та програмування. Цей курс розроблено для використання на заняттях в основній
             школі, але може бути цікавим для будь-якого віку.
         Hour of Code:
-          title: Година Коду
+          title: Година коду 2013
           description: ''
         edit-code:
           title: Редагування коду
@@ -592,11 +607,48 @@
     не входячи в обліковий запис, або попросіть своїх батьків чи вчителя зв'язатися
     з нами.
   progress:
-    not_completed: не завершено
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: завершено, забагато блоків
     completed_perfect: виконано, ідеально
     furthest_level_attempted: останній відкритий рівень
+    assessment: assessment
   studio:
     courses_working_on: Відкриті курси
     completed_courses: Завершені курси
     all_courses: Всі курси
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: зберегти
+    delete: Видалити
+    exit: Return to Course
+    my_projects: My Projects
+    share: Поділитися
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Більше
+    name: Ім’я
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Видалити?
+    delete_yes: Так
+    delete_no: Ні
+    saved: Saved
+    not_saved: Not saved
+    cancel: Скасувати
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

@@ -48,7 +48,7 @@ fa-AF:
           Suzi: سوزی
           The Artist: هنرمند
           Artist Debugging: اشکال زدایی هنرمند
-          Bounce: Bounce
+          Bounce: پریدن
           "Studio: Create a Story": 'آزمایشگاه بازی: یک داستان بنویس'
           Artist Loops: حلقه های هنرمند
           Bee Conditionals: شرطی های زنبور عسل
@@ -96,7 +96,7 @@ fa-AF:
           Bee Debugging: اشکال زدایی زنبور عسل
           Bee Functions: توابع زنبور عسل
           Artist Functions with Params: توابع هنرمند با پارامترها
-          Bounce: Bounce
+          Bounce: پریدن
           Maze Conditionals: شرطی های هزارتو
           Artist Functions with Parameters: توابع هنرمند با پارامترها
           Computational Thinking: تفکر محاسباتی
@@ -237,31 +237,9 @@ fa-AF:
           Artist Binary: دودویی هنرمند
           description_audience: سنین 10 به بالا (پس از دوره 3)
         Course4pre:
+          title: پیش نیاز دوره 4
           description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
-          Course 4 Prerequisite: پیش نیاز دوره 4
-          "Maze: Sequence": 'هزارتو: دنباله'
-          "Artist: Sequence": 'هنرمند: دنباله'
-          "Artist: Loops": 'هنرمند: حلقه ها'
-          "Bee: Conditionals": 'زنبور عسل: شرطی ها'
-          "Artist: Nested Loops": 'هنرمند: حلقه های تو در تو'
-          "Farmer: While Loops": 'کشاورز: حلقه‌های "در حالیکه"'
-          "Bee: Nested Loops": 'زنبور عسل: حلقه های تو در تو'
-          "Artist: Functions": 'هنرمند: توابع'
-          "Bee: Debugging": 'زنبور عسل: اشکال زدایی'
-        course4pre:
-          description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
-          Course 4 Prerequisite: پیش نیاز دوره 4
-          "Maze: Sequence": 'هزارتو: دنباله'
-          "Artist: Sequence": 'هنرمند: دنباله'
-          "Artist: Loops": 'هنرمند: حلقه ها'
-          "Bee: Conditionals": 'زنبور عسل: شرطی ها'
-          "Artist: Nested Loops": 'هنرمند: حلقه های تو در تو'
-          "Farmer: While Loops": 'کشاورز: حلقه‌های "در حالیکه"'
-          "Bee: Nested Loops": 'زنبور عسل: حلقه های تو در تو'
-          "Artist: Functions": 'هنرمند: توابع'
-          "Bee: Debugging": 'زنبور عسل: اشکال زدایی'
-        Course4pre (Case Conflict):
-          description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
+          description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
           Course 4 Prerequisite: پیش نیاز دوره 4
           "Maze: Sequence": 'هزارتو: دنباله'
           "Artist: Sequence": 'هنرمند: دنباله'
@@ -294,6 +272,9 @@ fa-AF:
           Special: ویژه
           Binary: Binary
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: امتحان کاربردی برای ریاضیات مدارس راهنمایی
           Evaluation Blocks: بلوک های ارزیابی
           Blocks to Math: بلوکها به ریاضی
@@ -308,16 +289,208 @@ fa-AF:
           title: علوم کامپیوتر در جبر
           description: یادگیری برنامه نویسی تابعی از طریق جبر
           "Unplugged: Video Games and Coordinate Planes": 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": رشته ها و تصاویر
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
+          "Unplugged: The Design Recipe": 'بدون دستگاه: دستور العمل طرح'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'بدون دستگاه: شرطی ها و توابع چند ضابطه ای'
+          "Eval: Conditionals": مشروط
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+        infinity:
+          title: Disney Infinity Play Lab
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          Play Lab: آزمایشگاه بازی
+          Infinity: بی نهایت
+        algebrademo:
+          title: نسخه ی نمایشی جبر
+          description_short: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده در علوم کامپیوتر در جبرِ Code.org
+          description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده در علوم کامپیوتر در جبرِ Code.org
+          Algebra Demo: نسخه ی نمایشی جبر
+          Evaluation Blocks: بلوک های ارزیابی
+          Making Pictures: ساخت تصاویر
+          Defining Variables: تعریف متغیرها
+          Defining Simple Functions: تعریف توابع ساده
+          The Design Recipe: دستور العمل طرح
+        K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+        netsim:
+          title: شبیه ساز اینترنت
+          description_short: ""
+          description: ""
+          Internet Simulator: شبیه ساز اینترنت
+          Unit 1: واحد 1
+          Unit 2: واحد 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: 20-Hour Intro Course
+          description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب باشد.
+          Introduction to Computer Science: آشنایی با علوم کامپیوتر
+          The Maze: پیچ و خم
+          Computational Thinking: تفکر محاسباتی
+          Graph Paper Programming: 'برنامه نویسی روی کاغذ شطرنجی '
+          The Artist: هنرمند
+          Algorithms: الگوریتم
+          The Artist 2: هنرمند 2
+          Functions: توابع
+          The Farmer: کشاورز
+          Conditionals: مشروط
+          The Artist 3: هنرمند 3
+          Song Writing: آهنگ سازی
+          The Farmer 2: کشاورز 2
+          Abstraction: انتزاع
+          The Artist 4: هنرمند 4
+          Relay Programming: برنامه نویسی رله
+          The Farmer 3: کشاورز 3
+          The Internet: اینترنت
+          The Artist 5: هنرمند 5
+          Wrap-up: خلاصه
+        edit-code:
+          title: ویرایش کد
+          description: ""
+          The Maze: پیچ و خم
+          Applab: Applab
+          The Artist: هنرمند
+          Play Lab: آزمایشگاه بازی
+        events:
+          title: رویدادها
+          description: ""
+          Bounce: پریدن
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: کدنویسی Flappy
+          description: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی Flappy ما را امتحان کن!
+          Flappy Code: کدنویسی Flappy
+        jigsaw:
+          title: جورچین
+          description: ""
+          Jigsaw: جورچین
+        step:
+          title: مرحله
+          description: ""
+          Step: مرحله
+        Hour of Code:
+          title: ساعت کد نویسی سال 2013
+          description: ""
+          Hour of Code 2013: ساعت کد نویسی سال 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: پیش نیاز دوره 4
+          description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
+          description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
+          Course 4 Prerequisite: پیش نیاز دوره 4
+          "Maze: Sequence": 'هزارتو: دنباله'
+          "Artist: Sequence": 'هنرمند: دنباله'
+          "Artist: Loops": 'هنرمند: حلقه ها'
+          "Bee: Conditionals": 'زنبور عسل: شرطی ها'
+          "Artist: Nested Loops": 'هنرمند: حلقه های تو در تو'
+          "Farmer: While Loops": 'کشاورز: حلقه‌های "در حالیکه"'
+          "Bee: Nested Loops": 'زنبور عسل: حلقه های تو در تو'
+          "Artist: Functions": 'هنرمند: توابع'
+          "Bee: Debugging": 'زنبور عسل: اشکال زدایی'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
           "Calc: Evaluation Blocks": 'حساب: ارزیابی بلوکها'
           "Eval: Strings and Images": 'ارزیابی: رشته ها و تصاویر'
           "Unplugged: Contracts": 'بدون دستگاه: قراردادها'
           "Eval: Writing Contracts": 'ارزبابی: نوشتن قراردادها'
           "Calc: Defining Variables": 'حساب: تعریف متغیرها'
           "Play Lab: Defining Variables (Big Game)": 'آزمایشگاه بازی: تعریف متغیرها (بازی بزرگ)'
-          "Eval: Defining Functions": 'ارزیابی: تعریف توابع'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
           "Unplugged: The Design Recipe": 'بدون دستگاه: دستور العمل طرح'
-          "Play Lab: Defining Functions": 'آزمایشگاه بازی: تعریف توابع'
-          "Eval: Functions": 'ارزیابی: توابع'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
           "Play Lab: Animation (Big Game)": 'آزمایشگاه بازی: انیمیشن (بازی بزرگ)'
           "Unplugged: Booleans": 'بدون دستگاه: بولی ها'
           "Eval: Boolean Operators": 'ارزیابی: عملگرهای بولی'
@@ -327,28 +500,43 @@ fa-AF:
           "Eval: Conditionals": 'ارزیابی: شرطی ها'
           "Unplugged: Collision Detection and the Distance Formula": 'بدون دستگاه: تشخیص برخورد و فرمول فاصله'
           "Play Lab: Collision Detection (Big Game)": 'آزمایشگاه بازی: تشخیص برخورد (بازی بزرگ)'
-        infinity:
-          title: آزمایشگاه بازی
-          description_short: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
-          description: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
-          Play Lab: آزمایشگاه بازی
-        algebrademo:
-          description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده در علوم کامپیوتر در جبرِ Code.org
-          Algebra Demo: نسخه ی نمایشی جبر
           Evaluation Blocks: بلوک های ارزیابی
-          Making Pictures: ساخت تصاویر
-          Defining Variables: تعریف متغیرها
-          Defining Simple Functions: تعریف توابع ساده
+          Strings and Images: رشته ها و تصاویر
+          Contracts: قراردادها
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
           The Design Recipe: دستور العمل طرح
-        K5PD:
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: بولی ها
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: شرطی ها و توابع چند ضابطه ای
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: بلوک های ارزیابی
+          Strings and Images: رشته ها و تصاویر
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: بولی ها
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'آزمایشگاه بازی: تشخیص برخورد (بازی بزرگ)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
           Introduction to PD: آشنايي با پیشرفت حرفه ای
-        netsim:
-          title: Internet Simulator
-          description_short: ""
-          description: ""
-          Internet Simulator: Internet Simulator
-        Infinity:
-          title: آزمایشگاه بازی بی نهایت
-          description_short: با آزمایشگاه بازی بینهایت یک داستان یا یک بازی ایجاد کنید!!
-          description: با آزمایشگاه بازی بینهایت یک داستان یا یک بازی ایجاد کنید!
-          Infinity: بی نهایت
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

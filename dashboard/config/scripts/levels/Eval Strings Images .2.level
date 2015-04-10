@@ -14,15 +14,25 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "embed": "false"
-  }
+    "embed": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Teal colored blocks output string values\",\r\n  \"element_id\": \"#string_append\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false",
+    "failure_message_override": "Make sure you append the string \"Universe\" to make the code create \"Hello, Universe\""
+  },
+  "md5": "d6717a8be86097d06d4f9c3e0e64b62a"
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="string_append" inline="false" movable="false">
+            <block type="string_append" inline="false" movable="false" id="string_append">
               <functional_input name="FIRST">
                 <block type="functional_string" editable="false" movable="false">
                   <title name="VAL">Hello, </title>

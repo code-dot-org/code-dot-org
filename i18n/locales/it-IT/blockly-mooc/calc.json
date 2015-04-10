@@ -1,9 +1,17 @@
 {
-  "compute":"calcola",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "equivalentExpression":"Prova a riordinare i tuoi argomenti per ottenere esattamente la stessa espressione.",
-  "extraTopBlocks":"Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'calcola'?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"La tua funzione non restituisce il risultato corretto per tutti i valori.",
   "goal":"Obiettivo:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"La tua espressione:"
+  "levelIncompleteError":"La tua espressione non è adeguata all'obiettivo.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Your expression is missing variable {var}.",
+  "reinfFeedbackMsg":"Ecco il risultato! Continua a lavorarci sopra, o passa al prossimo esercizio!",
+  "yourExpression":"La tua espressione:",
+  "wrongInput":"Stai invocando la funzione con un valore sbagliato.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

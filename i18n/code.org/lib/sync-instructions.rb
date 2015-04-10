@@ -13,7 +13,7 @@ def find_instruction(f)
   nil
 end
 
-def copy_instructions_to_yml(instructions)		
+def copy_instructions_to_yml(instructions)
   File.open("../../dashboard/config/locales/instructions.en.yml", "w+") do |f|
     f.write(({ "en" => { "data" => { "instructions" => instructions }}}).to_yaml)
     File.write(f, File.read(f))
@@ -41,7 +41,7 @@ def localize_instructions
         level_instructions[level] = instruction
       end
     end
-  end 
+  end
   copy_instructions_to_yml(level_instructions)
   reformat_quotes
 end

@@ -8,8 +8,8 @@
   "catText": "文本",
   "catVariables": "變數類別",
   "continue": "繼續 ",
-  "createHtmlBlock": "建立HTML區塊",
-  "createHtmlBlockTooltip": "在app中建立一個HTML區塊",
+  "container": "建立容器",
+  "containerTooltip": "創造一個主要的容器，並設定其內部的HTML。",
   "finalLevel": "恭喜！你已經完成最後的關卡。",
   "nextLevel": "恭喜！你已經完成這個關卡。",
   "no": "否",
@@ -24,6 +24,6 @@
   "stepIn": "步入",
   "stepOver": "跨過",
   "stepOut": "走出去",
-  "viewData": "View Data",
+  "viewData": "查看資料",
   "yes": "是"
 }

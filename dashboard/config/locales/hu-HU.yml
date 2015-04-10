@@ -1,7 +1,7 @@
 "hu":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Kérjük, javítsd a következő hibákat:'
   activerecord:
     errors:
       messages:
@@ -22,13 +22,14 @@
           future: nem lehet a jövőben
   hello: Helló világ
   welcome_back: Üdv újra, %{name}
+  submit: Elküldés
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
       placeholder: Szakasz kód (ABCDEF)
     submit: Tanár hozzáadása
   add_hint_form:
-    placeholder: Kérjük, írja ide a véleményét
+    placeholder: Kérjük, írd ide a javaslatod
     submit: Írja le a véleményét
   appname: Code.org
   stage: szakasz
@@ -36,14 +37,14 @@
   puzzle: Kirakós
   trophies: trófeák
   courses: tanfolyamok
-  of: a
+  of: /
   more: TÖBB
   less: KEVESEBB
   beta: béta
-  try_hoc: 'Próbálja ki a Kódolás Óráját, kattintson ide >> '
-  try_k8intro: Próbálja ki a K-8 bevezetőnket a Számítógép Tudomány Tanfolyamhoz (15-25
-    óra)
-  k8intro: K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)
+  try_hoc: 'Próbáld ki a Kódolás Óráját, kattints ide >> '
+  try_k8intro: Próbáld ki az általános iskolás Bevezető számítógép-tudományi tanfolyamot
+    (15-25 óra)
+  k8intro: Bevezető számítógép-tudomány tanfolyam általános iskolásoknak (15-25 óra)
   already_started: Már elkezdted? Folytasd itt >>
   demos: 'Admin: Minden demó'
   continue: Tovább
@@ -53,8 +54,8 @@
     sign_in_with: Bejelentkezés %{provider} -el
     signed_in: Bejelentkezve!
     signed_out: Kijelentkezett a <a href="%{url}"> Code.org</a> - ról.
-    sign_out_of: A %{provider} segítségével jelentkeztél be. Kattints <a href="%{url}">ide</a>  a
-      kijeletnktezéshez %{provider}-ból/ből.
+    sign_out_of: '%{provider} segítségével jelentkeztél be. <a href="%{url}">Kattints
+      ide</a>  a kijelentkezéshez ebből a fiókból: %{provider}.'
     already_signedup: Már regisztrált?
     notyet_signedup: Még nem csatlakozott?
     google_oauth2: Google fiók
@@ -62,22 +63,22 @@
     facebook: Facebook
     windowslive: Microsoft fiók
     forgot_password: Elfelejtette jelszavát?
-    need_confirmation: Nem kapta meg a megerősítéshez instrukciókat?
+    need_confirmation: Nem kapta meg a megerősítő instrukciókat?
     need_unlock: Nem kaptál a zárolás megszüntetéséhez útmutatót?
   signup_form:
     overview_student: Regisztrálj, hogy nyomon tudd követni a haladásodat. Az e-mail
       címedet csak azonosításként használjuk, vagy ha esetleg elfelejtetted a jelszavadat.
       További információkért olvasd el az <a href="http://code.org/privacy"> Adatvédelmi
       Szabályainkat.</a>
-    overview_teacher: Regisztrálj tanárként, hogy a tanteremben könnyebb legyen a
-      tanítás. <p/> Minden diákod teljesítményét nyomon tudod követni.
+    overview_teacher: A számítógép-tudomány tanításához hozz létre egy felhasználói
+      fiókot. <p/> Felveheted diákjaidat hogy nyomon kövesd az előrehaladásukat.
     no_signup_message: <a target="_blank" href="http://learn.code.org">Böngészhetsz
-      a különböző szintek és feladatok között</a>, de regisztrálnod kell, hogy elmenthesd,
-      hogy hol tartassz.
+      a különböző szakaszok és feladványok között</a>, de regisztrálnod kell, hogy
+      elmenthesd, hogy hol tartasz.
     teacher_educator_guide: Lásd a tanító segítségét
-    teacher_pitch: Tanároknak. Feliratkozás a code.org-ra
+    teacher_pitch: Tanári fiók létrehozása a Code.org-on
     teacher_title: Tanár regisztrálás
-    student_pitch: Diákoknak. Feliratkozás a code.org.ra
+    student_pitch: Diák fiók létrehozása a Code.org-on
     student_title: Diák regisztráció
     school_name: Iskola neve (nem kötelező)
     school_address: Iskola címe (nem kötelező)
@@ -87,36 +88,36 @@
     age: Kor
     user_type: Diák vagy tanár vagy?
     submit: Regisztrálás
-    teacher: Ön tanár?
+    teacher: Tanár vagy?
     valid_username: Elérhető!
     invalid_username: Felhasználónév minimum 5 karakter hosszú
     taken_username: Felhasználónév már foglalt
     valid_password: Érvényes jelszó!
-    invalid_password: Jelszónak minimum 6 karakter hosszúnak kell lennie
+    invalid_password: A jelszónak legalább 6 karakter hosszúnak kell lennie
     mismatch_password: A megadott két jelszó nem egyezik
     student_terms: Beleegyezem a Code.org <a href='http://code.org/tos'>Felhasználói
-      szabályaiba</a>. Ha 13 éves kor alatt regisztráltam, ez az űrlap kitöltésével
-      biztosítom, hogy a szüleim vagy a törvényes gyámom beleegyezett, hogy használjam
+      szabályaiba</a>. Ha 13 éves kor alatt regisztráltam, ezen űrlap kitöltésével
+      igazolom, hogy a szüleim vagy a törvényes gyámom beleegyezett, hogy használjam
       a Code.org szolgáltatásait. <br/> A 13 évesnél fiatalabb felhasználóink e-mail
-      címét nem tároljuk arra a célra, hogy kapcsolatba lépjünk velük.
+      címét nem tároljuk abból a célból, hogy kapcsolatba lépjünk velük.
     teacher_terms: Beleegyezem a Code.org <a href='http://code.org/tos'>Felhasználói
       szabályaiba</a>.
     additional_information: Még szükségünk van néhány adatra  a regisztráció folytatásához.
   signin_form:
-    title: Van felhasználói azonosítója? Jelentkezzen be!
+    title: Már van felhasználói fiókod? Bejelentkezés
     login: E-mail cím vagy felhasználónév
     password: Jelszó
     remember: Emlékezz rám
     submit: Bejelentkezés
   signin:
-    try_heading: Bejelentkezés nélkül akarod kipróbálni a kódírást?
-    try_hoc: Először próbáld meg a Kódolás Órája-t
-    try_20hours: Próbálja ki a 20 órás bevezetőt a számítógép-tudományhoz
+    try_heading: Bejelentkezés nélkül próbálnád ki a kódolást?
+    try_hoc: Először próbáld meg a Kódolás Óráját
+    try_20hours: Próbáld ki a 20 órás bevezetést a számítógép-tudományba
   signinsection:
-    welcome: Üdvözöljük %{section_name}
+    welcome: 'Üdvözlünk itt: %{section_name}'
     name: Válaszd ki a neved
     picture: Keress egy titkos képet
-    words: Írj be titkos szavakat
+    words: Írd be a titkos szavaidat
     login: Bejelentkezés
   password:
     reset_form:
@@ -130,58 +131,56 @@
       submit: Jelszavam módosítása
   welcome_email:
     subject: Csatlakozz az én órámhoz (a Code.org-on)
-    body: "Kattintson az alábbi linkre, hogy feliratkozzon a számítógép tudomány oktatására
-      a Code.org rendszeren (velem, mint a \"tanár\"): % {link} \naz oktatóanyagok
-      a élvezhetőek, vizuálisan vonzóak, és megtanítják az alapvető fogalmakat a számítógép-tudomány
-      fogalmait egy egyszerű, számítógépes játékszerű próbák segítségével . Megtanulhatsz
-      programozni olyan tanároktól, mint Bill Gates, Mark Zuckerberg, az Angry Birds
-      és  a zombik! :-) % {név}\n"
+    body: "Kattints az alábbi linkre, hogy számítógép-tudományi gyakorlatokra iratkozz
+      fel a Code.org rendszerben (velem, mint tanár): %{link} \n\nA gyakorlatok izgalmasak,
+      látványosak, és a számítógép-tudomány alapvető fogalmait egyszerű, irányított,
+      játékos módon tanítják. Tanulj programozni olyan tanároktól, mint Bill Gates,
+      Mark Zuckerberg, az Angry Birds és a zombik! :-) %{name}\n"
   follower:
     invite_sent: Meghívó elküldve
     added_teacher: '%{name} hozzáadva mint a tanárod'
     registered: Regisztráltál %{section_name}-ra.
     error:
       signed_in: Mielőtt folytatná kérem jelentkezzen ki
-      username_not_found: '%{username} felhasználónevet nem találjuk'
+      username_not_found: '%{username} felhasználónév nem található'
       username_in_use: '%{username} már foglalt, kérjük válasszon egy újat'
-      no_teacher: Nem találam senkit '%{teacher_email_or_code}' -val bejelentkezve
-        . Kérje meg , jelentkezzen be és utána próbálja meg újra
-      section_not_found: Nincs ilyen kódú ( %{section_code} ) szakasz.
+      no_teacher: 'Nem található bejelentkezett felhasználó ezzel az értékkel: ''%{teacher_email_or_code}''.
+        Kérdd meg, hogy jelentkezzen be itt, majd próbáld felvenni újra'
+      section_not_found: 'Nem található szakasz ezzel a kóddal: ''%{section_code}''.'
       blank_code: Add meg a szakasz kódját
-      cant_join_own_section: Elnézést, de te nem csatlakozhatsz a saját szakaszodhoz.
+      cant_join_own_section: Sajnáljuk, de nem csatlakozhatsz a saját szakaszodhoz.
     mail:
       invite_student:
-        subject: Csatlakozz egy osztályhoz %{teacher_name} a Code.org-on belül!
+        subject: Csatlakozz %{teacher_name} osztályához a Code.org-on!
       student_disassociated:
-        subject: 'Code.org megjegyzés: %{student_name}  már nem az Ön a hallgatója.'
+        subject: 'Code.org figyelmeztetés: %{student_name} már nem a diákod a rendszerben.'
       teacher_disassociated:
-        subject: 'Code.org megjegyzése: %{teacher_name} már nem szerepel, mint az
-          Ön tanára.'
+        subject: 'Code.org figyelmeztetés: %{teacher_name} már nem a tanárod a rendszerben.'
   reports:
     error:
-      access_denied: Nincs jogosultságod megtekinteni ennek a személyesnek a statisztikáját
+      access_denied: Nincs jogosultságod megtekinteni ennek a személynek a statisztikáit
   redeem_prizes:
     title: 'Díj beváltása: %{name}'
     provider: 'Szolgáltató:'
     code: 'Kód:'
     redeem_header: 'Beváltáshoz:'
-    donorschoose_register: Regisztrálj, mint tanár a DonorsChoose.org-on
+    donorschoose_register: Regisztrálj tanárként a DonorsChoose.org-on
     donorschoose_project: Posztold a projektedet
-    donorschoose_how_to: Hogyan használhatja a kódját
+    donorschoose_how_to: Hogyan használd a kódot
     success: A jutalmadat sikeresen kiváltottad, jegyezd meg az alábbi kódot.
     error: A jutalmadat nem sikerült kiváltanod. Próbáld újra.
     error_us_only: A díjat csak amerikai felhasználók nyerhetik.
     error_not_earned: Ezt a díjat még nem szerezted meg.
     error_already_redeemed: A díjadat már megkaptad.
     no_prizes_available: Sajnáljuk, jelenleg nincsenek elérhető díjak.
-    teacher_info_required: 'a tanári díjakhoz adja meg az iskola nevét és címét:'
+    teacher_info_required: 'A tanári díjakhoz meg kell adni az iskola nevét és címét:'
     teacher_email_required: 'Tanár díjazásához szükséges egy megerősített e-mail cím:'
     confirm:
-      title: Kérjük erősítse meg
+      title: Kérjük, erősítsd meg
       'no': nem
       'yes': igen
       msg: Biztos vagy benne, hogy ki szeretnéd váltani a %{prize_name} jutalmat?
-      msg_student: 'FIGYELEM: Csak egy féle jutalmat választhatsz.'
+      msg_student: 'FIGYELEM: Csak egyféle jutalmat választhatsz.'
       msg_publicschool: Kérjük, erősítse meg, hogy Ön egy U.S. állami iskolai tanár.
       msg_visit_website: Weboldal meglátogatása
     providers:
@@ -243,8 +242,8 @@
     confirm: Biztos benne?
     created: '%{model} sikeresen létrehozva.'
     updated: '%{model} sikeresen frissítve.'
-    destroyed: A %{model} sikeresen törölve.
-    access_denied: Nincs jogosultsága a %{model}-hez.
+    destroyed: '%{model} sikeresen törölve.'
+    access_denied: 'Nincs jogosultsága ehhez: %{model}.'
   nav:
     header:
       finished_hoc: Befejeztem a Kódolás Óráját
@@ -254,6 +253,7 @@
         artist: Rajzolj valamit
     user:
       classroom: Tanári kezdőlap
+      district_dashboard: District Dashboard
       label: Üdv %{username}
       stats: Fejlődésem
       settings: Profilom
@@ -319,68 +319,70 @@
       add: Adj hozzá egy szakaszt
       manage: Vezetési szakasz
       section: Szakasz
-      students: Diák
+      students: Diákok
       section_code: Szakasz kódja
       add_section_code: Adj a listához diákokat a kódjukkal
       secret: Titkos
-      grade: Osztály
+      grade: Évfolyam
       course: Tanfolyam
       rename: átnevezés
       edit: szerkeszt
-      delete: töröl
+      delete: törlés
       confirm_delete: Biztos vagy benne, hogy törölni szeretnéd ezt a szakaszt?
-      email: Küldj egy e-mailt
-    rollup: Fejlődés tájékoztató
-    activity: Mostanában osztály aktivitás
-    user_not_found: A tanár, vagy a diák nem ismert
-    cant_remove_student_no_email: '%{student_name} nem törölhető a listáról, mert,
-      mert %{student_name} nem regisztrált e-mail címet'
-    cant_remove_teacher_no_email: '%{teacher_name} nem törolhető, mint az Ön tanára,
-      mert Ön még nem regisztrált  e-mail címet'
-    student_teacher_disassociated: '%{teacher_name}, mint a %{student_name} tanáraként
-      el lett bocsátva'
+      email: Küldj e-mailt
+    rollup: Nyomonkövetési felület
+    activity: Legutóbbi osztálytermi aktivitás
+    user_not_found: A tanár vagy a diák nem található
+    cant_remove_student_no_email: '%{student_name} nem törölhető a listáról, mert
+      %{student_name} nem regisztrált e-mail címet'
+    cant_remove_teacher_no_email: '%{teacher_name} nem törölhető, mert még nem regisztráltál
+      e-mail címet'
+    student_teacher_disassociated: '%{teacher_name} már nem %{student_name} tanára
+      a rendszerben'
   user:
-    email_confirm_needed: 'Az e-mail címét nem erősítette meg:'
-    email_resend_confirm: Újra elküldtük a megerősítés módját
+    email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
+    email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
+    email_confirm_wrong_email: (Helytelen e-mail cím?)
+    email_resend_confirm: Megerősítés újraküldése
     new_password_hint: (hagyja üresen, ha nem akarja megváltoztatni)
-    current_password_hint: (szükségünk van a jelszavára  módosításainak jóváhagyásához)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    current_password_hint: (szükségünk van a jelenlegi jelszavadra a módosítások végrehajtásához)
+    delete: Fiók törlése
+    delete_text: Az alábbi gombra kattintva törlöd a fiókot.
+    delete_text_teacher_note: 'Kérjük, vedd figyelembe: a fiók törlésével együtt nem
+      törlődnek a tanulói fiókok.'
+    delete_confirm: Biztosan törölni akarod a fiókot?
   user_level:
     completed: Befejezve
     tried: Próbáltam
   user_stats:
-    recent_activity: Mostani tevékenységek
+    recent_activity: Legutóbbi tevékenységek
     show_more: Mutass többet
     classroom_activity: Offline tevékenység
   home:
     title: Kód Stúdió
     all_courses: 1., 2. és 3. tanfolyam áttekintése
     lesson_plans: Óravázlatok
-    signin_message: Már regisztrált? %{link}
+    signin_message: Már regisztráltál? %{link}
     student_reg_link: Diák Bejelentkezés
-    teacher_reg_link: Tanár Bejelentkezés
-    signin_directions: Fiók használatával nyomon követheted a haladásodat,. <br/>
-      Tanárok, nyomon követhetik az egész osztályt.
-    teacher_dashboard: Nézd meg a fejlődés bemutatót
+    teacher_reg_link: Tanári bejelentkezés
+    signin_directions: Fiók használatával nyomon követheted a haladásodat. <br/> Tanárok
+      nyomon követhetik az egész osztályt.
+    teacher_dashboard: Nézd meg a nyomonkövetési felületet
     teacher_student_count_one: '%{count} diákod van.'
     teacher_student_count: '%{count} diákod van.'
     teacher_averages: Diákjaid átlagosan   %{trophy_average} trófeát szereztek meg
       a %{trophy_max}  "Concept Mastery" trófeákból.
-    teacher_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak, akik befejezték
-      a tanfolyamot
-    teacher_read_blog: Olvastam a híreket és frissítéseket az anyagokhoz  a Pedagógus
-      Blog-ban
+    teacher_print_certificates: Nyomtasd ki az okleveleket azoknak a diákoknak, akik
+      befejezték a tanfolyamot
+    teacher_read_blog: Olvass híreket és értesülj tananyagaink frissítéseiről az Educator
+      blogból
     classroom: A tantermed
-    student_progress: Fejlődésed
+    student_progress: Előrehaladásod
     student_stats: Már megszereztél %{trophy_count} trófeát a %{trophy_max} "Concept
       Mastery" trófeákból.
     student_left_off: 'Ahol abbahagyta:'
-    student_finished: Miután befejezte az összes oktatóanyag, válasszon egy másik
-      osztály % {online_link} vagy a {local_school_link} %
+    student_finished: Befejezted az összes gyakorlatot. Válassz másik osztályt %{online_link}
+      vagy %{local_school_link}
     local_school: helyi iskola
     online: online
     see_details: Részletek
@@ -388,13 +390,12 @@
       $1,000.'
     tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
     trynow: Próbálja ki most
-    add_hint_help: Kérlek, segíts bennünket, okos tippekkel oktatóanyagainkhoz a code.org
-      felületére
+    add_hint_help: Segíts, hogy okos tippekkel láthassuk el oktatóanyagainkat a Code.org-on
     20hour_overview: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás
       alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki
       számára jó időtöltés lehet.
     test_videos_help: Teszteld az új videó lejátszót az iskolában
-    try_beta_courses: ÚJ! Próbáld ki a béta kurzusokat elsős diákoknak
+    try_beta_courses: ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak
     use_as_teacher: használd ezt az oldalt tanárként
     heading_hoc2014: <h2>A Kódolás Órája</h2><h1>Minden korosztály számára</h1>
     heading_elementary: <h2>20 órás tanfolyamok</h2><h1>Kezdőknek (minden korosztály)</h1>
@@ -409,10 +410,10 @@
     student: Diák
     teacher: Tanár
   footer:
-    help_from_html: A Google, Microsoft, Facebook és Twitter mérnökei segítettek létrehozni
-      ezt a bemutatót.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Minden jog fenntartva.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+    help_from_html: A Google, a Microsoft, a Facebook és a Twitter mérnökei segítettek
+      létrehozni ezt a gyakorlatot.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Minden jog fenntartva.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Minden jog fenntartva.
     powered_by_aws: Az Amazon Web Services működteti
     feedback: Visszajelzés küldése
@@ -431,7 +432,7 @@
     direction: Kezdő irány (fokban)
   video:
     tab: Videó.
-    notes: Nem látszik a videó? Olvassa el a szöveges magyarázatot!
+    notes: Nem látszik a videó? Megjegyzések megtekintése.
     notes_coming_soon: Ehhez a videóhoz hamarosan lesznek jegyzetek.
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
@@ -448,40 +449,40 @@
     upgrade:
       header: Kérjük frissítse a böngészőjét.
       message: A Code.org modern webes technológiát használ. Így a webhely gyorsabban
-        használható. Sajnos az böngészője nem támogatja az oldal ezen részének futtatásához
-        szükséges összes jellemzőt. <br/> <br/>A folytatáshoz telepítsen egy új -
-        a támogatott böngésző listánkon lévő - böngészőt. <a href='#'> Megpróbálja</a>megnézni
-        az oldalt, de számítson a várható működési zavarokra.
+        használható. Sajnos a böngésződ nem támogatja az oldal ezen részének futtatásához
+        szükséges összes jellemzőt. <br/> <br/>A folytatáshoz telepíts egy új - a
+        támogatott böngészők listáján szereplő - böngészőt. <a href='#'> Megpróbálhatod</a>megnézni
+        az oldalt, de működési zavarokra kell számítanod.
       button: Mutasd meg az összes támogatott böngészőt
   slow_loading: Ez tovább tart majd, mint szokásosan...
   try_reloading: Próbálja meg újratölteni az oldalt
   next_stage: Befejezve! Folytatás a következő pályára
-  download_pdf: Nyitott óravázlat
+  download_pdf: Óravázlat
   lesson_plan: Óravázlat
   view_lesson_plan: Óravázlat megtekintése
   pdf_download: Letöltés PDF-ben
   download_coming_soon: Hamarosan lesz letölthető tevékenység.
   video_coming_soon: Hamarosan lesz videó!
   share_code:
-    title: Kattints a "Run"-ra, hogy lásd a programomat működés közben
-    bounce_og_title: Nézd meg a Bounce Game-emet
-    flappy_og_title: Jelentkezzen ki az én Flappy játékomból
-    studio_og_title: Próbáld ki a Play Lab alkalmazásomat
+    title: Kattints a "Fuss"-ra, hogy lásd a programomat működés közben
+    bounce_og_title: Nézd meg a Visszapattanós játékomat
+    flappy_og_title: Nézd meg a Flappy játékomat
+    studio_og_title: Próbáld ki a Játéklabor alkalmazásomat
     check_out_what_i_made: Nézd meg, mit csináltam
     og_description: A kódját magam írtam a Code.org segítségével
-    phone_number_not_allowed: Olyan mintha telefonszámot tartalmazna. Próbálj módosítani
+    phone_number_not_allowed: Olyan, mintha telefonszámot tartalmazna. Próbálj módosítani
       a szövegen.
-    address_not_allowed: Olyan mintha címet tartalmazna. Próbálj módosítani a szövegen.
-    email_not_allowed: Olyan mintha e-mail címet tartalmazna. Próbálj módosítani a
-      szövegen.
-    profanity_not_allowed: Úgy tűnik hogy profanitást tartalmaz. Próbálj módosítani
+    address_not_allowed: Olyan, mintha címet tartalmazna. Próbálj módosítani a szövegen.
+    email_not_allowed: Olyan, mintha e-mail címet tartalmazna. Próbálj módosítani
       a szövegen.
+    profanity_not_allowed: Úgy tűnik, mintha csúnya kifejezést tartalmazna. Próbálj
+      módosítani a szövegen.
   builder:
-    created: Létrehozott egy új parancsfájlt.
-    destroyed: Elpusztult a parancsfájlt.
+    created: Létrehoztál egy új szkriptet.
+    destroyed: Töröltél egy szkriptet.
     manage: Szintek építése
     view: Nézet
-    back: Vissza a parancsfájlokhoz
+    back: Vissza a szkriptekhez
     success: Sikeresen szerkesztetted a blokkokat.
     level:
       create: Hozzon létre új szintet
@@ -490,14 +491,14 @@
   upsell:
     hoc:
       title: A kódolás órája
-      body: Próbáld ki a számítógép tudomány alapjait. Millióknak ad egy lehetőséget.
+      body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
     flappy:
       title: Flappy kód
       body: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld
-        ki a Flappy kód oktatót.
+        ki a Flappy kód gyakorlatot!
     20hour:
       title: Bevezető tanfolyam
-      body: Próbáld ki a 20 órás, bevezetés a számítógép-tudományba óránkat.
+      body: Próbáld ki a 20 órás, Bevezetés a számítógép-tudományba tanfolyamunkat.
     hoc2014:
       try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
       try_frozen: Művészkedj Annával és  Elzával a Jégvarázsból
@@ -506,6 +507,10 @@
       body: Nézd meg a felhasználóink által készített alkalmazás és művész kép galériát
     frozen:
       title: Jégvarázs
+    infinity:
+      title: Infinity játéklabor
+      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney
+        Infinity karakterek szereplésével.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -518,7 +523,7 @@
     want_to_make_your_own: Szeretnéd elkészíteni a sajátodat?
     more: Több &rarr;
     caption_by_name_age: készítette %{name}, %{age} éves
-    caption_time_ago: '%{time_ago} ezelőtt'
+    caption_time_ago: 'ennyi ideje: %{time_ago}'
     header: Galéria
     header_playlab: Játéklabor
     header_artist: Művész
@@ -543,6 +548,14 @@
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
     correct_title: Helyes
     correct_body: Ez a helyes válasz.
+  contract_match:
+    wrong_title: Helytelen válasz
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Itt add meg a válaszod
   dialog:
@@ -560,7 +573,7 @@
             alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki
             számára jó időtöltés lehet.
         Hour of Code:
-          title: Kódolás Órája
+          title: Kódolás órája 2013
           description: ''
         edit-code:
           title: Kód szerkesztése
@@ -592,18 +605,54 @@
       van arra, hogy a meglévő felhasználóink megadják az életkorukat itt. <br/>Ugyanúgy
       mint eddig, a code.org soha nem fogja harmadik félnek bérbeadni, eladni vagy
       továbbadni ezt az információt.
-    sign_out: Ha nem szeretnéd, megadni az életkorod, <a href="%{url}">Jelentkezz
-      ki</a>.
+    sign_out: Ha nem szeretnéd megadni az életkorod, <a href="%{url}">Jelentkezz ki</a>.
   zendesk_too_young_message: Elnézést, de kiskorú felhasználók nem iratkozhatnak fel
     a támogatói oldalunkra. Megnézheted a <a href="http://support.code.org"> support.code.org</a>oldalakat
     feliratkozás nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy lépjenek
     kapcsolatba velünk a nevedben.
   progress:
-    not_completed: Nincs készen
+    not_started: el nem kezdett
+    in_progress: folyamatban
     completed_too_many_blocks: elkészült, túl sok a blokk
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
+    assessment: értékelés
   studio:
-    courses_working_on: Tanfolyamok amelyeken dolgozol
+    courses_working_on: Tanfolyamok, amelyeken dolgozol
     completed_courses: Teljesített tanfolyamok
     all_courses: Minden tanfolyam
+  project:
+    projects: Projektek
+    create: Projekt létrehozása
+    create_a_project: 'Új projekt létrehozása:'
+    new: Új létrehozása
+    rename: Átnevezés
+    save: Mentés
+    delete: Törlés
+    exit: Vissza a tanfolyamhoz
+    my_projects: Projektjeim
+    share: Megosztás
+    share_title: A projekt megosztása
+    share_copy_link: 'A hivatkozás másolása:'
+    close: Bezár
+    more: Mégtöbb
+    name: Név
+    updated: Frissítve
+    project_type: Projekt típusa
+    help_text: Kattints <strong>App készítése</strong> vagy a <strong>Rajzolj valamit</strong>
+      feliratokra egy új "Játék a Laborban" vagy "Művész" projekt létrehozásához!<br/>Bármikor
+      vissza tudsz térni és folytatni a munkát a projektjeiden.
+    need_help: Szükséged van segítségre a kezdéshez?
+    really_delete: Biztos törölni akarod?
+    delete_yes: Igen
+    delete_no: Nem
+    saved: Mentve
+    not_saved: Nincs mentve
+    cancel: Mégsem
+    delete_confirm_title: Biztosan törlöd ezt a projektet?
+    delete_confirm_text: A projekt törlése véglegesen eltávolítja azt a saját projektek
+      listájából. Bárki, akivel korábban megosztottad azt, többé már nem fogja tudni
+      megtekinteni a projektet.
+    view_all: Projektjeim megtekintése
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

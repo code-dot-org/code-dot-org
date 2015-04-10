@@ -22,6 +22,7 @@ it:
           future: non può essere in futuro
   hello: Ciao a tutti
   welcome_back: 'Bentornato, %{name}'
+  submit: Invia
   add_teacher_form:
     code:
       label: 'Aggiungi un insegnante:'
@@ -220,6 +221,7 @@ it:
         artist: Disegna qualcosa
     user:
       classroom: "Cruscotto di Controllo dell'insegnante"
+      district_dashboard: District Dashboard
       label: 'Ciao %{username}'
       stats: I miei progressi
       settings: Il mio account
@@ -298,6 +300,8 @@ it:
     student_teacher_disassociated: '%{teacher_name} è stato rimosso come insegnante per %{student_name}'
   user:
     email_confirm_needed: "L'indirizzo di posta elettronica non è stato confermato:"
+    email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email} non è stato confermato:'
+    email_confirm_wrong_email: (Indirizzo di posta elettronica sbagliato?)
     email_resend_confirm: Reinvia le istruzioni di conferma
     new_password_hint: (lascialo vuoto se non vuoi cambiarlo)
     current_password_hint: (inserisci la tua password corrente per confermare i cambiamenti)
@@ -436,6 +440,9 @@ it:
       body: Guarda una collezione di app e immagini artistiche create dai nostri utenti
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: "Gli studenti l'hanno creato scrivendo del codice!"
@@ -457,14 +464,21 @@ it:
     support_url: //programmailfuturo.it/aiuto
   multi:
     wrong_title: Risposta non corretta
-    wrong_body: 'La risposta che hai inserito non è corretta.  Per favore riprova!'
-    correct_title: Corretto
-    correct_body: Questa è la risposta corretta.
+    wrong_body: 'La risposta che hai scelto non è corretta.  Per favore riprova!'
+    correct_title: Molto bene!
+    correct_body: Questa risposta è corretta.
   match:
-    wrong_title: Soluzione non corretta
-    wrong_body: 'La soluzione che hai inserito non è corretta.  Per favore riprova!'
-    correct_title: Corretto
-    correct_body: Questa è la risposta corretta.
+    wrong_title: Riprova!
+    wrong_body: 'La risposta che hai scelto non è corretta.  Per favore riprova!'
+    correct_title: Molto bene!
+    correct_body: Questa risposta è corretta.
+  contract_match:
+    wrong_title: Risposta non corretta
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Inserisci qui la tua risposta
   dialog:
@@ -480,7 +494,7 @@ it:
           title: Corso introduttivo di informatica per scuole elementari e medie inferiori (in 20 lezioni)
           description: "Questo corso in 20 lezioni introduce i concetti fondamentali dell'informatica e della programmazione. Il corso è progettato per l'uso nelle scuole elementari e medie inferiori, ma è divertente per imparare a qualunque età."
         Hour of Code:
-          title: "L'Ora del Codice"
+          title: "L'Ora del Codice 2013"
           description: ""
         edit-code:
           title: Modifica il Codice
@@ -510,11 +524,44 @@ it:
     sign_out: 'Se non desideri fornire la tua età puoi <a href="%{url}">uscire</a>.'
   zendesk_too_young_message: 'Siamo spiacenti, gli utenti più giovani non possono accedere al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai tuoi genitori o insegnanti di contattarci al posto tuo.'
   progress:
-    not_completed: non completato
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completato, ma usando troppi blocchi
     completed_perfect: completato in modo perfetto
     furthest_level_attempted: livello più avanzato che è stato provato
+    assessment: assessment
   studio:
     courses_working_on: Corsi su cui stai lavorando
     completed_courses: Corsi completati
     all_courses: Tutti i corsi
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Salva
+    delete: Elimina
+    exit: Return to Course
+    my_projects: My Projects
+    share: Condividi
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Di più
+    name: Nome
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Elimina?
+    delete_yes: Sì
+    delete_no: 'No'
+    saved: Saved
+    not_saved: Not saved
+    cancel: Annulla
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

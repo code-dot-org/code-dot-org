@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "verwerk"},
+"divideByZeroError":function(d){return "Je programma resulteert in een deling door nul."},
+"emptyComputeBlock":function(d){return "Je moet een blok aan het \"evalueren\" blok koppelen."},
 "equivalentExpression":function(d){return "Probeer jouw argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen."},
-"extraTopBlocks":function(d){return "Je hebt blokken die niet gekoppeld zijn. Was het jouw bedoeling om deze aan het \"verwerk\"-blok te koppelen?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "evalueren"},
+"extraTopBlocks":function(d){return "Je hebt niet-gekoppelde blokken. Was het de bedoeling om deze aan het \"evalueren\" blok te koppelen?"},
+"failedInput":function(d){return "Jouw functie geeft niet het juiste resultaat voor alle waardes."},
 "goal":function(d){return "Doel:"},
-"reinfFeedbackMsg":function(d){return "Hier is jouw verhaal! Werk er verder aan of ga verder met de volgende puzzel!"},
-"yourExpression":function(d){return "Jouw expressie:"}};
+"levelIncompleteError":function(d){return "Jouw expressie komt niet overeen met het doel."},
+"missingFunctionError":function(d){return "Je moeten een functie genaamd "+appLocale.v(d,"functionName")+" definiëren."},
+"missingVariableX":function(d){return "Variabele "+appLocale.v(d,"var")+" ontbreekt in jouw expressie."},
+"reinfFeedbackMsg":function(d){return "Hier is jouw berekening! Je kan er verder aan werken, of naar de volgende puzzel gaan!"},
+"yourExpression":function(d){return "Jouw expressie:"},
+"wrongInput":function(d){return "Je roept jouw functie met de verkeerde waarde aan."},
+"wrongOtherValuesX":function(d){return "Jouw expressie resulteert in de verkeerde waarde wanneer we "+appLocale.v(d,"var")+" aanpassen."},
+"wrongResult":function(d){return "Jouw expressie geeft niet het juiste resultaat terug."}};

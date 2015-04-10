@@ -15,6 +15,7 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     @hidden = true
     @trophies = false
+    @wrapup_video = nil
   end
 
   def id(id)
@@ -45,6 +46,10 @@ class ScriptDSL < BaseDSL
     @trophies = ActiveRecord::ConnectionAdapters::Column::value_to_boolean(trophies_string)
   end
 
+  def wrapup_video(wrapup_video)
+    @wrapup_video = wrapup_video
+  end
+
   def stage(name)
     @stages << {stage: @stage, levels: @levels} if @stage
     @stage = name
@@ -55,7 +60,7 @@ class ScriptDSL < BaseDSL
 
   def parse_output
     stage(nil)
-    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies}
+    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies, wrapup_video: @wrapup_video}
   end
 
   def concepts(*items)

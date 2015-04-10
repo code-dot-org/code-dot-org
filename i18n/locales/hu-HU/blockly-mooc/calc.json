@@ -1,9 +1,17 @@
 {
-  "compute":"számítás",
+  "divideByZeroError":"A programod nullával való osztást eredményezett.",
+  "emptyComputeBlock":"A kiértékeléshez először csatlakoztatni kell egy blokkot.",
   "equivalentExpression":"Próbáld meg átrendezni az érveidet, hogy pontosan ugyanazt a kifejezést kapd.",
-  "extraTopBlocks":"Vannak szabad blokkjaid. Ezeket a \"számítás\" blokkhoz szeretted volna csatolni?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"kiértékel",
+  "extraTopBlocks":"Néhány blokk nincs csatlakoztatva. Csatolni akarja ezeket az értékelendő blokkhoz?",
+  "failedInput":"A függvényed nem ad vissza minden változóhoz helyes eredményt.",
   "goal":"Cél:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"A kifejezésed:"
+  "levelIncompleteError":"A kifejezésed nem a célt eredményezi.",
+  "missingFunctionError":"Meg kell határozni a {functionName} függvényt.",
+  "missingVariableX":"A kifejezésből hiányzik a {var} változó.",
+  "reinfFeedbackMsg":"Íme a számításod! Folytathatod vele a munkát, vagy menj a következő blokkra.",
+  "yourExpression":"A kifejezésed:",
+  "wrongInput":"Rossz értékkel hívtad meg a függvényedet.",
+  "wrongOtherValuesX":"A kifejezés rossz értéket eredményez, ha {var}-t megváltoztatjuk.",
+  "wrongResult":"A kifejezés nem ad vissza helyes eredményt."
 }

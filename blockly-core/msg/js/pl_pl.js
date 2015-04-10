@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.pl_pl');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "faktyczny";
+Blockly.Msg.ACTUAL = "wywołaj";
 Blockly.Msg.ADD = "Dodaj";
 Blockly.Msg.ADD_COMMENT = "Dodaj Komentarz";
 Blockly.Msg.ADD_PARAMETER = "Dodaj Parametr";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "czerwony";
 Blockly.Msg.COLOUR_RGB_TITLE = "pomaluj";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Utwórz kolor z określoną ilość czerwonego, zielonego i niebieskiego.  Wszystkie wartości muszą być między 0 i 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "wyjdź z pętli";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "przejdź do kolejnej iteracji pętli";

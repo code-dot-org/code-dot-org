@@ -1,10 +1,83 @@
 $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
-#visualization {
-  background-color: #fff;
+@import 'color';
+
+$own-node-background-color: $white;
+$user-row-hover-color: $lightest_teal;
+$router-row-hover-color: $lighter_orange;
+$to-address-color: $lightest_cyan;
+$from-address-color: $lightest_yellow;
+$packet-info-color: $lighter_green;
+$message-color: $white;
+
+// For aligning table columns across panels
+$narrow-column-width: 50px;
+$wide-column-width: 121px;
+
+// Cross-browser helper for user_select property
+@mixin user_select($val) {
+  -moz-user-select: $val;
+  -webkit-user-select: $val;
+  -ms-user-select: $val;
+  -khtml-user-select: $val;
+  user-select: $val;
 }
 
-/* Sprited icons. */
+// Reduce top margin to help fit everything above the fold
+.full_container {
+  padding-top: 2px;
+}
+
+// Hide the footer instructions, we put them in the instructions tab
+#prompt-table {
+  display: none;
+}
+
+.clearfix {
+  clear: both;
+}
+
+// Visualization styles
+svg {
+  background-color: $white;
+  border: solid $black thin;
+  border-radius: 25px;
+
+  .viz-node {
+    text {
+      text-anchor: middle;
+    }
+
+    circle {
+      stroke: $black;
+      stroke-width: 2;
+      fill: $own-node-background-color;
+    }
+
+    rect.address-box {
+      stroke: $black;
+      stroke-width: 2px;
+      fill: $white;
+    }
+
+    text.address-box {
+      font-weight: bold;
+    }
+  }
+  
+  .router-node {
+    circle {
+      fill: $orange;
+    }
+  }
+  
+  .viz-wire {
+    stroke: $black;
+    stroke-width: 2;
+  }
+}
+
+// Sprited icons.
 .icon21 {
   height: 21px;
   width: 21px;
@@ -29,85 +102,616 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 }
 
 .markedToken {
-  fill: white;
+  fill: $white;
 }
 
 .errorToken {
-  fill: red;
+  fill: $red;
 }
 
 .expr {
   font-size: 20px;
 }
 
-#netsim_rightcol {
-  float: right;
-  width: 300px;
+//
+// NetSim-specific styles
+//
+#netsim {
+  h1 {
+    font-family: "Gotham 5r", sans-serif;
+  }
 
-  #netsim_visualization {
-    img {
+  p, label {
+    font-family: "Gotham 4r", sans-serif;
+  }
+
+  table {
+    width: 100%;
+
+    th, td {
+      padding: 1px 5px;
+      border: solid lightgray 1px;
+      border-collapse: collapse;
+    }
+
+    th {
+      font-family: "Gotham 4r", sans-serif;
+      font-size: 10pt;
+    }
+
+    td {
+      font-family: "Gotham 4r", sans-serif;
+
+      // Make sure table text can be selected and copied
+      @include user_select(text);
+    }
+
+    tbody {
+      th, td {
+        vertical-align: top;
+      }
+    }
+  }
+
+  // Span around clickable icons and text that show/hide panels.
+  .minimizer {
+    cursor: pointer;
+    @include user_select(none);
+  }
+
+  // Orange SPAN button
+  .netsim-button {
+    display: inline-block;
+    background-color: $orange;
+    color: $white;
+    border-radius: 3px;
+    font-family: "Gotham 4r", sans-serif;
+    font-size: 8pt;
+    line-height: 14pt;
+    padding: 0 10px;
+    cursor: pointer;
+
+    // Button text should not be selectable
+    @include user_select(none);
+  }
+
+  //
+  //General two-column layout rules
+  //
+  #netsim-rightcol {
+    float: right;
+    width: 300px;
+
+    #netsim-visualization {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  #netsim-leftcol {
+    margin-right: 320px;
+  }
+
+  .netsim-shard-selection-panel {
+    overflow: hidden;
+
+    .content-wrap {
+      margin: 1em;
+    }
+
+    .field-box {
+      float: left;
+      margin-right: 1em;
+    }
+
+    .clearfix {
+      clear:both;
+    }
+  }
+
+  .netsim-lobby-panel {
+    .content-wrap {
+      margin: 1em;
+    }
+
+    ul {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  .netsim-panel.netsim-lobby div.panel-body {
+    padding: 1em;
+  }
+
+  .netsim-lobby-list {
+    background-color: $white;
+    padding: 0.5em;
+    border: inset darkslategray thin;
+    list-style: none;
+
+    li {
+      background-color: $white;
+      border-left: solid white 3px;
+      border-right: solid white 3px;
+      padding: 0.3em 0.8em;
+    }
+
+    .empty-row {
+      text-align: center;
+      color: $lightest_gray;
+      font-style: italic;
+    }
+
+    .selectable-row {
+      cursor: pointer;
+      &:hover {
+        border-left: solid $orange 3px;
+      }
+    }
+
+    .own-row {
+      background-color: $own-node-background-color;
+      font-style: italic;
+    }
+
+    .user-row {
+      &.selectable-row:hover {
+        background-color: $user-row-hover-color;
+        color: $black;
+      }
+    }
+
+    .router-row {
+      &.selectable-row:hover {
+        background-color: $router-row-hover-color;
+        color: $black;
+      }
+    }
+
+
+    .selected-row {
+      background-color: $orange !important;
+      color: white !important;
+      font-weight: bold;
+    }
+  }
+
+  // NetSim Panel
+  // One of the sections in the left column with a colored header
+  // and user controls.
+
+  // How rounded are the corners of the panel?
+  $panel_border_radius: 0.3em;
+
+  div.netsim-panel {
+    background-color: $white;
+    margin: 0 0 0.5em;
+    padding: 0;
+
+    h1 {
+      margin: 0;
+      padding: 0.3em 0.5em;
+      font-family: "Gotham 4r", sans-serif;
+      font-size: 110%;
+      font-weight: bold;
+      line-height: 110%;
+      background-color: $purple;
+      color: $white;
+      border-radius: $panel_border_radius $panel_border_radius 0 0;
+
+      .panel_controls {
+        float: right;
+        margin-top: -0.3em;
+        padding-top: 3px;
+      }
+    }
+
+    div.panel-body {
+      border-left: solid darkgray thin;
+      border-right: solid darkgray thin;
+      border-bottom: solid darkgray thin;
+      border-top: solid $purple thin;
+      border-radius: 0 0 $panel_border_radius $panel_border_radius;
+    }
+
+    // Minimized panel, contents are hidden.
+    &.minimized {
+      h1 {
+        border-radius: $panel_border_radius;
+        .clear_button {
+          display: none;
+        }
+      }
+
+      div.panel-body {
+        display: none;
+      }
+    }
+  }
+
+  // Log panel rules
+  // Panel that shows a history of sent or received messages in a table.
+  .netsim-log-panel {
+
+    .packet {
+      margin: 10px;
+      padding: 5px;
+      border: solid darkgray thin;
+      border-radius: 3px;
+      background-color: $lightest_gray;
+
+      td {
+        border-color: $lightest_gray;
+      }
+    }
+
+    .scroll_area {
+      margin: 0.5em 0 0.5em 0;
+      max-height: 180px;
       width: 100%;
+      overflow-y: auto;
+    }
+
+    table {
+      th {
+        background-color: transparent;
+        color: $black;
+      }
+
+      tbody {
+        td {
+          font-family: monospace;
+
+          // Make sure table text can be selected and copied
+          @include user_select(text);
+        }
+
+        tr.ascii td.message {
+          white-space: pre-wrap;
+        }
+      }
+    }
+
+    th.encodingLabel, td.encodingLabel,
+    th.toAddress, td.toAddress,
+    th.fromAddress, td.fromAddress,
+    th.packetInfo, td.packetInfo {
+      text-align: center;
+    }
+
+    th.encodingLabel, td.encodingLabel {
+      width: 1%; // Depend on nowrap
+    }
+
+    th.toAddress, td.toAddress,
+    th.fromAddress, td.fromAddress {
+      width: $narrow-column-width;
+    }
+
+    th.packetInfo, td.packetInfo {
+      width: $wide-column-width;
+    }
+
+    td.toAddress {
+      background-color: $to-address-color;
+    }
+
+    td.fromAddress {
+      background-color: $from-address-color;
+    }
+
+    td.packetInfo {
+      background-color: $packet-info-color;
+    }
+
+    td.message {
+      background-color: $message-color;
+    }
+  }
+
+  // Send panel rules
+  // Panel that lets the user enter and send messages
+  // Mimics the log panel styles as much as possible.
+  .netsim-send-panel {
+
+    .netsim-packet {
+      border: solid darkgray thin;
+      background-color: $lightest_gray;
+      margin: 10px;
+      padding: 0.5em;
+      border-radius: 0.5em;
+
+      .packet-controls {
+        float: right;
+        text-align: right;
+      }
+
+      th {
+        background-color: transparent;
+        color: $black;
+      }
+
+      // All input fields
+      input, textarea {
+        resize: none;
+        padding: 0.2em;
+        margin-bottom: 0.2em;
+        font-family: monospace;
+        background-color: transparent;
+        box-shadow: none;
+      }
+      input {
+        border: solid 1px #ccc;
+      }
+      textarea {
+        border: none;
+      }
+
+      .watermark {
+        color: $lightest_gray;
+      }
+
+      .bit-counter {
+        text-align: right;
+        color: $light_gray;
+        &.oversized {
+          color: $red;
+        }
+      }
+
+      // All columns but "message"
+      th.encodingLabel, td.encodingLabel,
+      th.toAddress, td.toAddress,
+      th.fromAddress, td.fromAddress,
+      th.packetInfo, td.packetInfo {
+        text-align: center;
+
+        input {
+          width: 3em;
+          text-align: center;
+        }
+      }
+
+      th.encodingLabel, td.encodingLabel {
+        width: 1%; // depend on nowrap
+      }
+
+      th.toAddress, td.toAddress,
+      th.fromAddress, td.fromAddress {
+        width: $narrow-column-width;
+      }
+
+      th.packetInfo, td.packetInfo {
+        width: $wide-column-width;
+      }
+
+      td.toAddress {
+        background-color: $to-address-color;
+      }
+
+      td.fromAddress {
+        background-color: $from-address-color;
+      }
+
+      td.packetInfo {
+        background-color: $packet-info-color;
+      }
+
+      td.message {
+        background-color: $message-color;
+
+        // Wrapper div keeps textarea bound within column, but still
+        // able to set padding.
+        div {
+          margin-right: 0.4em;
+          textarea {
+            resize: none;
+            height: 1.5em;
+            width: 100%;
+          }
+        }
+
+      }
+    }
+
+    .send_widget_footer {
+      margin: 10px;
+      overflow: hidden;
+
+      .right-side-controls {
+        float: right;
+        text-align: right;
+      }
+
+      .packet_size {
+        width: 400px;
+      }
+    }
+  }
+
+  // Packet size slider and labels, which appear in the
+  // send widget footer.
+  .netsim_packet_size_control {
+    label {
+      display: inline-block;
+    }
+
+    .slider-inline-wrap {
+      display: inline-block;
+      margin-top: 3.5px;
+      width: 300px;
+
+      .slider-labels {
+        margin-bottom: 1px;
+
+        .max-value {
+          float: right;
+          text-align: right;
+          width: 5em;
+        }
+
+        .min-value {
+          float: left;
+          text-align: left;
+          width: 5em;
+        }
+
+        .current-value {
+          text-align: center;
+        }
+      }
+
+      .packet-size-slider {
+        clear: both;
+      }
+    }
+  }
+
+  .netsim-slider {
+    text-align: center;
+
+    label {
+      display: inline-block;
+    }
+
+    .slider-inline-wrap {
+      display: inline-block;
+      margin-top: 3.5px;
+      width: 95%;
+      margin-right: 0.5em;
+
+      .slider-labels {
+        margin-bottom: 1px;
+
+        .max-value {
+          float: right;
+          text-align: right;
+          width: 4em;
+        }
+
+        .min-value {
+          float: left;
+          text-align: left;
+          width: 4em;
+        }
+
+        .current-value {
+          text-align: center;
+        }
+      }
+
+      .slider {
+        clear: both;
+      }
+    }
+  }
+
+  .netsim-tabs {
+    margin-top: 1em;
+
+    h1 {
+      font-size: 10pt;
+      line-height: 10pt;
+      margin: 10px 0 3px 0;
+      border-bottom: solid darkgrey thin;
+    }
+
+    // Modify actual tabs at top of tab area
+    .ui-tabs-nav {
+      background: $purple;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      li {
+        // Make tabs just a _little_ bit more compact
+        margin-right: 2px;
+        a {
+          font-family: "Gotham 5r", sans-serif;
+          font-size: 8pt;
+          padding: 0 1em;
+        }
+      }
+    }
+
+    // Less padding around tab content divs
+    .ui-tabs-panel {
+      padding: 0.8em 0.5em;
+
+      // But extra margin around paragraphs of text (instructions)
+      p {
+        margin: 0 1em 10px 1em;
+      }
+    }
+  }
+
+  .netsim-encoding-selector {
+    div.hidden-control {
+      display: none;
+    }
+
+    input[type="checkbox"] {
+      vertical-align: baseline;
+      margin: 0;
+    }
+
+    label {
+      display: inline;
+      margin-left: 0.25em;
+    }
+  }
+
+  .netsim-router-log {
+    max-height: 200px;
+    overflow-y: scroll;
+
+    table {
+      th, td {
+        font-size: 8pt;
+      }
+    }
+  }
+
+  .dns-mode-control {
+    input[type="radio"] {
+      vertical-align: middle;
+      margin: 0;
+    }
+
+    label {
+      display: inline;
+      margin-left: 1em;
+    }
+  }
+
+  .netsim-dns-table {
+    tr.local-node {
+      font-weight: bold;
+      background-color: $own-node-background-color;
+    }
+
+    tr.dns-node {
+      color: $white;
+      background-color: $orange;
+    }
+  }
+
+  .dns-notes {
+    div {
+      textarea {
+        resize: none;
+        width: 100%;
+        height: 100px;
+      }
+      padding-right: 14px;
+    }
+  }
+
+  // Connection status panel, above visualization
+  .netsim-panel.netsim_status_panel {
+    div.panel-body {
+      padding: 1em;
     }
   }
 }
 
-#netsim_leftcol {
-  margin-right: 320px;
-}
-
-#netsim_lobby_list {
-  background-color: white;
-  padding: 0.5em;
-  border: inset darkslategray thin;
-  list-style: none;
-
-  li {
-    background-color: white;
-    padding: 0.3em;
-  }
-
-  .own_row {
-    font-weight: bold;
-    background-color: lightcyan;
-  }
-
-  .user_row {
-
-  }
-
-  .router_row {
-    cursor: pointer;
-  }
-  .router_row:hover {
-    color: black;
-    background-color: rgba(255, 140, 0, 0.21);
-  }
-
-  .selected_row {
-    color: white;
-    background-color: darkorange;
-  }
-  .selected_row:hover {
-    background-color: darkorange;
-  }
-}
-
-.netsim_log_widget {
-  border: solid darkgray thin;
-  margin: 0.5em;
-  padding: 0.5em;
-
-  #scroll_area {
-    border: inset darkgray 2px;
-    background-color: white;
-    height: 100px;
-    width: 400px;
-    overflow-y: scroll;
-  }
-}
-
-.netsim_send_widget {
-  border: solid darkgray thin;
-  margin: 0.5em;
-  padding: 0.5em;
-}

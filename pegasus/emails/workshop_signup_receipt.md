@@ -27,11 +27,7 @@ Workshop details:
 
 > <%= workshop['notes_s'] %>
 
-If you are unable to attend the workshop, please [cancel your registration](<%= cancel_link %>).
-
-<hr/>
-
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
+### How to cancel your registration
+**If you are unable to attend the workshop, please [cancel your registration](<%= cancel_link %>), in advance so other teachers may take your spot.**
 
 ![](<%= tracking_pixel %>)
-

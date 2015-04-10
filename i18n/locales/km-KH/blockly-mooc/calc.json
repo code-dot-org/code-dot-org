@@ -1,9 +1,17 @@
 {
-  "compute":"គិត​លេខ",
+  "divideByZeroError":"កម្មវិធី​របស់​អ្នក​ផ្ដល់​លទ្ធផល​ដែល​ចែក​ដោយ​សូន្យ។",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "equivalentExpression":"សូមព្យាយាម ធ្វើការរៀបចំ អំណះអំណាងរបស់អ្នកដើម្បីទទួលបានកន្សោមពិតដូចគ្នា។",
-  "extraTopBlocks":"អ្នកមានប្លុក មិនជាប់គ្នា មួយ។ តើអ្នកចង់មានន័យថាការភ្ជាប់ទាំងនេះទៅប្លុក \"គណនា\"មែនទេ?",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "failedInput":"Your function does not return the right result for all values.",
   "goal":"គោលដៅ៖",
+  "levelIncompleteError":"Your expression does not match the goal.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Your expression is missing variable {var}.",
   "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"កន្សោម​របស់​អ្នក៖"
+  "yourExpression":"កន្សោម​របស់​អ្នក៖",
+  "wrongInput":"You are calling your function with the wrong value.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

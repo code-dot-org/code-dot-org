@@ -1,15 +1,13 @@
 .unplugged.match
 
   - data = @level.properties
+  - app = 'match'
 
-  %h2!= match_t(data['title'])
-  %p.content1!= match_t(data['content1']) unless data['content1'].blank?
-  %p.content2!= match_t(data['content2']) unless data['content2'].blank?
-  %p.content3!= match_t(data['content3']) unless data['content3'].blank?
+  = render partial: 'levels/content', locals: {app: app, data: data}
 
   .buttons
     %a.btn.btn-large.btn-primary.next-stage.submitButton
-      Submit
+      =t('submit')
 
   %br/
 
@@ -24,7 +22,7 @@
   - else
     - shuffled_answers = data['answers']
 
-  - height = data['height'] || '20'
+  - height = data['height'] || '40'
   - giantmark_height = height.to_i > 72 ? 72 : 20
   - gap_height = height.to_i/2 - giantmark_height/2
 
@@ -58,7 +56,7 @@
 
   .buttons
     %a.btn.btn-large.btn-primary.next-stage.submitButton
-      Submit
+      =t('submit')
 
   %div{style: 'display: none;'}
     #error-dialogcontent

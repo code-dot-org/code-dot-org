@@ -8,8 +8,8 @@
   "catText":"문장",
   "catVariables":"변수",
   "continue":"계속하기",
-  "createHtmlBlock":"html 블럭 만들기",
-  "createHtmlBlockTooltip":"응용 프로그램에서 HTML 블럭을 만듭니다.",
+  "container":"컨테이너 만들기",
+  "containerTooltip":"분리된 컨테이너를 만들고 내부 HTML을 설정합니다.",
   "finalLevel":"축하합니다! 마지막 퍼즐을 해결했습니다.",
   "nextLevel":"축하합니다! 퍼즐을 해결했습니다.",
   "no":"아니요",
@@ -24,6 +24,6 @@
   "stepIn":"안쪽 단계로 들어가기",
   "stepOver":"단계 지나가기",
   "stepOut":"이 단계 밖으로 나가기",
-  "viewData":"View Data",
+  "viewData":"데이터 보기",
   "yes":"예"
 }

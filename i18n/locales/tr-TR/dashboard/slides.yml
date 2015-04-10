@@ -6,7 +6,7 @@ tr:
         text: Kod saatinin ilk dakikalarına hoş geldin! Hadi, beraber programlamanın ilk zevkli adımlarını atalım.
       2:
         image: notes/hoc1_2.jpg
-        text: "Kod yazmak için blokları sürükleyip bırakacağınız bir görsel programlama dili olan Blockly'i kullanacağız."
+        text: "Kod yazmak için, blokları sürükleyip bırakacağınız bir görsel programlama dili olan Blockly'i kullanacağız."
       3:
         image: notes/hoc1_3.jpg
         text: 'Çoğu kod yazılır, fakat Blockly görseldir. Her blok "gerçek" bir kod satırına karşılık gelir.'
@@ -30,10 +30,10 @@ tr:
         text: Sağ taraf, programınızı inşa etmek için araç kutusundan blok sürükleyeceğiniz çalışma alanıdır. Blok silmek için, bloğu köşedeki çöp kutusuna sürükleyin.
       10:
         image: notes/hoc1_10.jpg
-        text: 'Her blok bir talimattır. Eğer "ileri taşı" bloğunu çalışma alanına sürükleyip "Programı Çalıştır"a basarsanız, kuş labirent üzerinde bir boşluk hareket eder.'
+        text: 'Her blok bir talimattır. Eğer "ileri taşı" bloğunu çalışma alanına sürükleyip "Programı Çalıştır"a basarsanız, kuş labirent üzerinde bir boşluk kadar hareket eder.'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: Birden fazla eylem yapmak için, birden fazla bloğu çalışma alanına sürükleyebilir ve birbirlerine ekleyebilirsiniz. Kuş komutları yukarıdan aşağıya doğru yapacaktır.
       12:
         image: notes/hoc1_12.jpg
         text: 'Eğer bir programı çalıştırmak ve düzeltme yapıp tekrar denemek istiyorsanız "Sıfırla" düğmesine basın.'
@@ -65,14 +65,14 @@ tr:
         text: Ona çamur yığınlarını kaldırmak ve tüm delikleri doldurmak için yardım etmelisin.
       3:
         image: notes/stage9_3.jpg
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1 shovelful of dirt to a hole.
+        text: Yeni bloklar, bir kürek dolusu toprağı yığından alıp deliğe doldurur.
       4:
         image: notes/stage9_4.jpg
         text: Farklı boyutlarda yığın ve delikler olduğu için çiftçiye kaç kürek dolusu toprak kullanacağını/alacağını söylemelisin.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: "Hi, I'm Katie! One of the most exciting things about computer science is that a computer program can be interactive."
+        text: Merhabai Ben Katie! Bilgisayar bilimi hakkında en heyecan verici şeylerden birisi bilgisayar programının etkileşimli olabilmesidir.
       2:
         image: notes/flappy02.jpg
         text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."

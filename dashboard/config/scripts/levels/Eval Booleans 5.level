@@ -8,14 +8,23 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "This OR block returns true if either of its parameters is true, and otherwise returns false. Set the y variable to a value that will cause this expression to return false.",
+    "instructions": "This OR block returns true if either of its parameters is true. Otherwise, if both parameters are false it will return false. Set the y variable to a value that will cause this expression to return false.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
-  }
+    "free_play": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false",
+    "disable_examples": "false"
+  },
+  "md5": "a20fbd14db20dc096e24b24b263ba152"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -97,6 +106,18 @@
         <block type="functional_logical_or" inline="false"/>
         <block type="functional_call">
           <mutation name="y"/>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">y</title>
+          <functional_input name="STACK">
+            <block type="functional_math_number_dropdown" uservisible="false">
+              <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
+            </block>
+          </functional_input>
         </block>
       </xml>
     </required_blocks>

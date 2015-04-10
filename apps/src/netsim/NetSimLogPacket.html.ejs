@@ -1,0 +1,123 @@
+<%
+  var netsimConstants = require('./netsimConstants');
+  var dataConverters = require('./dataConverters');
+  var i18n = require('../../locale/current/netsim');
+  var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
+  var Packet = require('./Packet');
+
+  var EncodingType = netsimConstants.EncodingType;
+  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+
+  var formatAB = dataConverters.formatAB;
+  var formatBinary = dataConverters.formatBinary;
+  var formatHex = dataConverters.formatHex;
+  var alignDecimal = dataConverters.alignDecimal;
+  var binaryToAB = dataConverters.binaryToAB;
+  var binaryToInt = dataConverters.binaryToInt;
+  var binaryToHex = dataConverters.binaryToHex;
+  var binaryToDecimal = dataConverters.binaryToDecimal;
+  var binaryToAscii = dataConverters.binaryToAscii;
+
+  /** @type {Packet} */
+  var packet = new Packet(packetSpec, packetBinary);
+
+  /** @type {Packet.HeaderType[]} */
+  var headerFields = packetSpec.map(function (headerField) {
+    return headerField.key;
+  });
+
+  var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
+
+/**
+ * @param {EncodingType} encodingType
+ * @param {string} toAddress
+ * @param {string} fromAddress
+ * @param {string} packetInfo
+ * @param {string} message
+ */
+  function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
+    %>
+      <tr class="<%= encodingType %>">
+        <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"><%= getEncodingLabel(encodingType) %></th>
+        <% if (showToAddress) { %>
+          <td nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= toAddress %></td>
+        <% } %>
+        <% if (showFromAddress) { %>
+          <td nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= fromAddress %></td>
+        <% } %>
+        <% if (showPacketInfo) { %>
+          <td nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= packetInfo %></td>
+        <% } %>
+        <td class="<%= PacketUIColumnType.MESSAGE %>"><%= message %></td>
+      </tr>
+  <%
+  }
+ %>
+<table>
+  <thead>
+    <tr>
+      <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
+      <% if (showToAddress) { %>
+        <th nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= i18n.to() %></th>
+      <% } %>
+      <% if (showFromAddress) { %>
+        <th nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= i18n.from() %></th>
+      <% } %>
+      <% if (showPacketInfo) { %>
+        <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
+      <% } %>
+      <th nowrap class="<%= PacketUIColumnType.MESSAGE %>"><%= i18n.message() %></th>
+    </tr>
+  </thead>
+  <tbody>
+  <%
+    var toAddress = showToAddress ? packet.getHeaderAsBinary(Packet.HeaderType.TO_ADDRESS) : '';
+    var fromAddress = showFromAddress ? packet.getHeaderAsBinary(Packet.HeaderType.FROM_ADDRESS) : '';
+    var packetIndex = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_INDEX) : '';
+    var packetCount = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_COUNT) : '';
+    var message = packet.getBodyAsBinary();
+
+    logRow(EncodingType.ASCII,
+        binaryToInt(toAddress),
+        binaryToInt(fromAddress),
+        i18n.xOfYPackets({
+          x: binaryToInt(packetIndex),
+          y: binaryToInt(packetCount)
+        }),
+        binaryToAscii(message, chunkSize));
+
+    logRow(EncodingType.DECIMAL,
+        binaryToInt(toAddress),
+        binaryToInt(fromAddress),
+        i18n.xOfYPackets({
+          x: binaryToInt(packetIndex),
+          y: binaryToInt(packetCount)
+        }),
+        alignDecimal(binaryToDecimal(message, chunkSize)));
+
+    logRow(EncodingType.HEXADECIMAL,
+        binaryToHex(toAddress),
+        binaryToHex(fromAddress),
+        i18n.xOfYPackets({
+          x: binaryToHex(packetIndex),
+          y: binaryToHex(packetCount)
+        }),
+        formatHex(binaryToHex(message), chunkSize));
+
+    logRow(EncodingType.BINARY,
+        formatBinary(toAddress, 4),
+        formatBinary(fromAddress, 4),
+        formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+        formatBinary(message, chunkSize));
+
+    logRow(EncodingType.A_AND_B,
+        binaryToAB(toAddress),
+        binaryToAB(fromAddress),
+        binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
+        formatAB(binaryToAB(message), chunkSize));
+   %>
+  </tbody>
+</table>

@@ -1,9 +1,17 @@
 {
-  "compute":"compute",
+  "divideByZeroError":"Your program results in division by zero.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "equivalentExpression":"Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon.",
-  "extraTopBlocks":"Mayroon kang hindi nakasama na mga block. Ibig mo bang isama ito sa \"compute\" block?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"evaluate",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"Ang iyong  function ay hindi binalik ang tamang resulta para sa lahat ng mga value.",
   "goal":"Goal:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Ang iyong expression:"
+  "levelIncompleteError":"Ang iyong expression ay hindi tumutugma sa layunin.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Your expression is missing variable {var}.",
+  "reinfFeedbackMsg":"Narito ang iyong mga kalkulasyon! Magpatuloy sa pagtatrabaho dito, o ilipat sa susunod na palaisipan !",
+  "yourExpression":"Ang iyong expression:",
+  "wrongInput":"Ginagamit mo ang iyong  function na may maling value.",
+  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

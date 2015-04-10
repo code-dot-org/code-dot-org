@@ -22,6 +22,7 @@ fa:
           future: نمیتوان در آینده بود
   hello: سلام دنیا
   welcome_back: '%{name}، خوش آمدید'
+  submit: ارسال کنید
   add_teacher_form:
     code:
       label: 'افزودن یک معلم:'
@@ -216,6 +217,7 @@ fa:
         artist: چیزی بکش
     user:
       classroom: صفحه اصلی معلم
+      district_dashboard: District Dashboard
       label: 'سلام %{username}'
       stats: پیشرفت من
       settings: حساب کاربری من
@@ -294,6 +296,8 @@ fa:
     student_teacher_disassociated: '%{teacher_name}  به عنوان یک معلم برای %{student_name} حذف شده است'
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
+    email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
+    email_confirm_wrong_email: (آدرس ایمیل اشتباه است؟)
     email_resend_confirm: ارسال مجدد دستورالعمل‌های تأیید
     new_password_hint: (اگر نمی خواهید تغییر بدهید خالی بگذارید)
     current_password_hint: (کلمه عبور برای ذخیره تغییرات لازم است)
@@ -432,6 +436,9 @@ fa:
       body: دیدن یگ گالری از برنامه ها و تصاویر هنرمندانه ایجاد شده توسط کاربران ما
     frozen:
       title: منجمد
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!
     students_made_these_with_code: دانش آموزان اینها را با کد ساخته اند !
@@ -461,6 +468,13 @@ fa:
     wrong_body: راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!
     correct_title: صحیح است
     correct_body: این پاسخ صحیح است
+  contract_match:
+    wrong_title: پاسخ اشتباه
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: پاسخ خود را اینجا وارد کنید
   dialog:
@@ -476,7 +490,7 @@ fa:
           title: دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)
           description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب باشد.
         Hour of Code:
-          title: ساعت كد نويسي
+          title: ساعت کد نویسی سال 2013
           description: ""
         edit-code:
           title: ویرایش کد
@@ -506,11 +520,44 @@ fa:
     sign_out: 'اگر شما نمی خواهید سن خود را اعلام کنید میتوانید <a href="%{url}"> خارج شوید</a>.'
   zendesk_too_young_message: 'با عرض پوزش ، کاربران کم سن ممکن است نتوانند به بخش پشتیبانی سایت ما وارد شوند . شما می توانید بخش <a href="http://support.code.org"> support.code.org</a> را بدون ورود به سیستم و درخواست از والدین یا معلم برای تماس با ما مشاهده کنید .'
   progress:
-    not_completed: تکمیل نشده است
+    not_started: شروع نشده
+    in_progress: در حال اجرا
     completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
     completed_perfect: تکمیل, کامل
     furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج از محدوده '
+    assessment: ارزیابی
   studio:
     courses_working_on: دوره های شما در حال کار بر روی
     completed_courses: دوره های تکمیل شده
     all_courses: تمام دوره ها
+  project:
+    projects: پروژه ها
+    create: پروژه ایجاد کنید
+    create_a_project: 'Create a new project:'
+    new: جدید ایجاد کنید
+    rename: تغییر نام
+    save: ذخيره
+    delete: پاک کردن
+    exit: به درس برگرد
+    my_projects: پروژه های من
+    share: به اشتراک گذاری
+    share_title: پروژه خود را به اشتراک بگذارید
+    share_copy_link: 'لینک را کپی کنید:'
+    close: ببند
+    more: بیشتر
+    name: نام
+    updated: به روز رسانی شده
+    project_type: نوع پروژه
+    help_text: 'روی<strong>یک برنامه بساز</strong>یا<strong>چیزی بکش</strong>در زیر کلیک کنید تا یک آزمایشگاه بازی جدید یا پروژه هنری بسازید!<br/>شما میتوانید در هر زمان برگردید و روی پروژه تان کار کنید.'
+    need_help: برای شروع کردن نیاز به کمک دارید?
+    really_delete: پاک گردد؟
+    delete_yes: بله
+    delete_no: نه
+    saved: ذخیره شد
+    not_saved: ذخیره نشده
+    cancel: لغو کن
+    delete_confirm_title: آیا مطمئنید می خواهید این پروژه را پاک کنید?
+    delete_confirm_text: پاک کردن پروژه تان آن را به طور دائم از لیست پروژه های من شما حذف خواهد کرد. هرکسی که لینک را با او به اشتراک گذاشته اید دیگر قادر نخواهد بود پروژه شما را ببیند.
+    view_all: پروژه های من را ببینید
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

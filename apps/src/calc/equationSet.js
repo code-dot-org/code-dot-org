@@ -1,34 +1,8 @@
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
-
-/**
- * An equation is an expression attached to a particular name. For example:
- *   f(x) = x + 1
- *   name: f
- *   equation: x + 1
- *   params: ['x']
- * In many cases, this will just be an expression with no name.
- * @param {string} name Function or variable name. Null if compute expression
- * @param {string[]} params List of parameter names if a function.
- * @param {ExpressionNode} expression
- */
-var Equation = function (name, params, expression) {
-  this.name = name;
-  this.params = params || [];
-  this.expression = expression;
-
-  this.signature = this.name;
-  if (this.params.length > 0) {
-    this.signature += '(' + this.params.join(',') + ')';
-  }
-};
-
-/**
- * @returns True if a function
- */
-Equation.prototype.isFunction = function () {
-  return this.params.length > 0;
-};
+var Equation = require('./equation');
+var jsnums = require('./js-numbers/js-numbers');
+var utils = require('../utils');
 
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally
@@ -48,8 +22,19 @@ var EquationSet = function (blocks) {
     }, this);
   }
 };
-EquationSet.Equation = Equation;
 module.exports = EquationSet;
+
+EquationSet.prototype.clone = function () {
+  var clone = new EquationSet();
+  clone.compute_ = null;
+  if (this.compute_) {
+    clone.compute_ = this.compute_.clone();
+  }
+  clone.equations_ = this.equations_.map(function (item) {
+    return item.clone();
+  });
+  return clone;
+};
 
 /**
  * Adds an equation to our set. If equation's name is null, sets it as the
@@ -101,16 +86,70 @@ EquationSet.prototype.hasVariablesOrFunctions = function () {
 };
 
 /**
- * @returns {boolean} True if the EquationSet has exactly one function and no
- * variables. If we have multiple functions or one function and some variables,
- * returns false.
+ * @returns {boolean} True if our compute expression is jsut a funciton call
  */
-EquationSet.prototype.hasSingleFunction = function () {
-   if (this.equations_.length === 1 && this.equations_[0].isFunction()) {
-     return true;
-   }
+EquationSet.prototype.computesFunctionCall = function () {
+  if (!this.compute_) {
+    return false;
+  }
 
-   return false;
+  var computeExpression = this.compute_.expression;
+  return computeExpression.isFunctionCall();
+};
+
+
+/**
+ * @returns {boolean} True if our compute expression is just a variable, which
+ * we take to mean we can treat similarly to our single function scenario
+ */
+EquationSet.prototype.computesSingleVariable = function () {
+  if (!this.compute_) {
+    return false;
+  }
+  var computeExpression = this.compute_.expression;
+  return computeExpression.isVariable();
+};
+
+/**
+ * Example set that returns true:
+ * Age = 12
+ * compute: Age
+ * @returns {boolean} True if our EquationSet consists of a variable set to
+ *   a number, and the computation of that variable.
+ */
+EquationSet.prototype.computesSingleConstant = function () {
+  if (!this.compute_ || this.equations_.length !== 1) {
+    return false;
+  }
+  var equation = this.equations_[0];
+  var computeExpression = this.compute_.expression;
+  return computeExpression.isVariable() && equation.expression.isNumber() &&
+    computeExpression.getValue() === equation.name;
+
+};
+
+EquationSet.prototype.isAnimatable = function () {
+  if (!this.compute_) {
+    return false;
+  }
+  if (this.hasVariablesOrFunctions()) {
+    return false;
+  }
+  if (this.compute_.expression.depth() === 0) {
+    return false;
+  }
+
+  return true;
+};
+
+/**
+ * Returns a list of equations that consist of setting a variable to a constant
+ * value, without doing any additional math. i.e. foo = 1
+ */
+EquationSet.prototype.getConstants = function () {
+  return this.equations_.filter(function (item) {
+    return item.params.length === 0 && item.expression.isNumber();
+  });
 };
 
 /**
@@ -141,6 +180,34 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
 };
 
 /**
+ * Are two EquationSets equivalent? This is considered to be true if their
+ * compute expression are equivalent and all of their equations have the same
+ * names and equivalent expressions. Equivalence is a less strict requirement
+ * than identical that allows params to be reordered.
+ */
+EquationSet.prototype.isEquivalentTo = function (otherSet) {
+  if (this.equations_.length !== otherSet.equations_.length) {
+    return false;
+  }
+
+  var otherCompute = otherSet.computeEquation().expression;
+  if (!this.compute_.expression.isEquivalentTo(otherCompute)) {
+    return false;
+  }
+
+  for (var i = 0; i < this.equations_.length; i++) {
+    var thisEquation = this.equations_[i];
+    var otherEquation = otherSet.getEquation(thisEquation.name);
+    if (!otherEquation ||
+        !thisEquation.expression.isEquivalentTo(otherEquation.expression)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+/**
  * Returns a list of the non-compute equations (vars/functions) sorted by name.
  */
 EquationSet.prototype.sortedEquations = function () {
@@ -151,6 +218,16 @@ EquationSet.prototype.sortedEquations = function () {
   });
 
   return this.equations_;
+};
+
+/**
+ * @returns {boolean} true if evaluating our EquationSet would result in
+ *   dividing by zero.
+ */
+EquationSet.prototype.hasDivZero = function () {
+  var evaluation = this.evaluate();
+  return evaluation.err &&
+    evaluation.err instanceof ExpressionNode.DivideByZeroError;
 };
 
 /**
@@ -165,6 +242,9 @@ EquationSet.prototype.evaluate = function () {
  * equations. For example, our equation set might define f(x) = x + 1, and this
  * allows us to evaluate the expression f(1) or f(2)...
  * @param {ExpressionNode} computeExpression The expression to evaluate
+ * @returns {Object} evaluation An object with either an err or result field
+ * @returns {Error?} evalatuion.err
+ * @returns {Number?} evaluation.result
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   // no variables/functions. this is easy
@@ -178,8 +258,9 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   var mapping = {};
   var madeProgress;
   var testMapping;
+  var evaluation;
   var setTestMappingToOne = function (item) {
-    testMapping[item] = 1;
+    testMapping[item] = jsnums.makeFloat(1);
   };
   do {
     madeProgress = false;
@@ -192,8 +273,17 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         // see if we can map if we replace our params
         // note that params override existing vars in our testMapping
         testMapping = _.clone(mapping);
+        testMapping[equation.name] = {
+          variables: equation.params,
+          expression: equation.expression
+        };
         equation.params.forEach(setTestMappingToOne);
-        if (!equation.expression.canEvaluate(testMapping)) {
+        evaluation = equation.expression.evaluate(testMapping);
+        if (evaluation.err) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+              utils.isInfiniteRecursionError(evaluation.err)) {
+            return { err: evaluation.err };
+          }
           continue;
         }
 
@@ -203,19 +293,21 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
           variables: equation.params,
           expression: equation.expression
         };
-      } else if (mapping[equation.name] === undefined &&
-          equation.expression.canEvaluate(mapping)) {
-        // we have a variable that hasn't yet been mapped and can be
-        madeProgress = true;
-        mapping[equation.name] = equation.expression.evaluate(mapping);
+      } else if (mapping[equation.name] === undefined) {
+        evaluation = equation.expression.evaluate(mapping);
+        if (evaluation.err) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+            return { err: evaluation.err };
+          }
+        } else {
+          // we have a variable that hasn't yet been mapped and can be
+          madeProgress = true;
+          mapping[equation.name] = evaluation.result;
+        }
       }
     }
 
   } while (madeProgress);
-
-  if (!computeExpression.canEvaluate(mapping)) {
-    throw new Error("Can't resolve EquationSet");
-  }
 
   return computeExpression.evaluate(mapping);
 };
@@ -240,8 +332,16 @@ function getEquationFromBlock(block) {
     case 'functional_minus':
     case 'functional_times':
     case 'functional_dividedby':
+    case 'functional_pow':
+    case 'functional_sqrt':
+    case 'functional_squared':
       var operation = block.getTitles()[0].getValue();
-      var args = ['ARG1', 'ARG2'].map(function(inputName) {
+      // some of these have 1 arg, others 2
+      var argNames = ['ARG1'];
+      if (block.getInput('ARG2')) {
+        argNames.push('ARG2');
+      }
+      var args = argNames.map(function(inputName) {
         var argBlock = block.getInputTargetBlock(inputName);
         if (!argBlock) {
           return 0;

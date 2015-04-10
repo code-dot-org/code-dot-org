@@ -17,16 +17,16 @@ fr:
           "Artist 1: Intro": 'Artiste 1: Intro'
           Artists 2: Artistes 2
           Spelling Bee: Dictée de lettres
-          Spelling Bee not blockly: Spelling Bee not blockly
+          Spelling Bee not blockly: Epeler abeille sans Blockly
           "Bee 1: Intro": 'Abeille 1: Intro'
           "Maze 2: Loops": 'Labyrinthe 2 : Les boucles'
           "Bee 2: Loops": 'Abeille 2: boucles'
           Multi & Match: 'Multi & Match'
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
+          K-1 Flappy: Flappy niveau maternelle et CP
+          Flappy non blockly: Flappy sans block
           title: Cours 1
           Artist 2: "L'Artiste 2"
-          Happy Maps: Happy Maps
+          Happy Maps: Cartes joyeuses
           Move it, Move it: Déplacez le, déplacez le
           "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
           Building a Foundation: Créer une Fondation
@@ -100,7 +100,7 @@ fr:
           Maze Conditionals: 'Labyrinthe : instructions conditionnelles'
           Artist Functions with Parameters: 'Artiste : fonctions avec paramètres'
           Computational Thinking: Algorithmique
-          Functional Suncatchers: Functional Suncatchers
+          Functional Suncatchers: Vitraux fonctionnels
           Songwriting Parameters: Paramètres de composition
           Dice Race: Course de Dés
           Internet: Internet
@@ -134,54 +134,54 @@ fr:
           description_audience: 8 ans et + (après le cours 2)
           description_short: Le cours 3 fait suite au cours 2.
         msm:
-          title: Middle School Math
+          title: Maths élémentaires
           description: Chantier interdit au public dans le collège Middle School Math.
           Graph Paper Programming: Programmation sur papier quadrillé
           Assessments: Évaluations
           Unit 1: Unité 1
           Unit 2: Unité 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
+          Ninja Cat and the Coordinate Plane: Le chat ninja et le plan
+          "Calc: Circles of Evaluation": "Calc: Cercles d'évaluation"
           "Artist: Strings and Images": 'Artiste : Textes et Images'
           Contracts: Contrats
-          "Artist: Writing Contracts": 'Artist: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Artist: Writing Contracts": 'Artiste : Rédaction des contrats'
+          "Calc: Defining Variables": 'Calc : Définir les variables'
           "Play Lab: Defining Variables": 'Labo : Definir des variables'
           The Design Recipe: La Recette de la Conception
           "Artist: Defining Functions": 'Artiste : Définition de fonctions'
-          "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
+          "Play Lab: Defining Functions": 'Labo : Recette de conception'
           "Artist: Functions": 'Artiste : les fonctions'
           "Play Lab: Animation": 'Labo Jeu: Animation'
           Booleans: Booléens
           "Play Lab: Booleans": 'Play Lab : Booléens'
           "Calc: Boolean Operators": 'Calc: Opérateurs Booléens'
           "Play Lab: Boolean Operators": 'Play Lab : Opérateurs Booléens'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: Instructions conditionnelles et des fonctions par morceaux
           "Artist: Conditionals": 'Artiste : Instructions conditionnelles'
-          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
+          Collision Detection and the Distance Formula: Détection de collision et la formule de la Distance
           "Play Lab: Collision Detection": 'Labo Jeu: Détection de Collision'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
-          "Eval: Functions": 'Eval: Design Recipe'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Unplugged: Ninja Cat and the Coordinate Plane": 'Activité débranchée : le Chat Ninja et le plan de coordonnées'
+          "Eval: Strings and Images": 'Evaluation : Des chaînes et des Images'
+          "Unplugged: Contracts": 'Activité débranchée : les contrats'
+          "Eval: Writing Contracts": 'Evaluation : Rédaction de contrats'
+          "Unplugged: The Design Recipe": 'Activité débranchée : les recettes de conception'
+          "Eval: Defining Functions": 'Evaluation : Fonctions rapides'
+          "Eval: Functions": 'Evaluation : Recette de conception'
+          "Unplugged: Booleans": 'Activité débranchée : les booléens'
+          "Unplugged: Conditionals and Piecewise Functions": 'Activité débranchée : les conditions et fonctions par morceaux'
+          "Eval: Conditionals": 'Evaluation : instructions conditionnelles'
+          "Unplugged: Collision Detection and the Distance Formula": 'Activité débranchée : la détection de collision et la formule de la distance'
+          "Calc: Evaluation Blocks": "Calc : Blocs d'évaluation"
+          "Unplugged: Video Games and Coordinate Planes": 'Activité débranchée : jeux vidéo et les plans de coordonnées'
           "Eval: Boolean Operators": 'Eval : Opérateurs Booléens'
-          Blocks to Math: Blocks to Math
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
-          "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
-          "Eval: Design Recipe": 'Eval: Design Recipe'
+          Blocks to Math: Des blocs aux Math
+          "Play Lab: Defining Variables (Big Game)": 'Labo : définir les variables (grand jeu)'
+          "Play Lab: Animation (Big Game)": 'Labo : Animation (grand jeu)'
+          "Play Lab: Boolean (Big Game)": 'Labo : les booléens (grand jeu)'
+          "Play Lab: Collision Detection (Big Game)": 'Labo : détection de Collision (grand jeu)'
+          "Eval: Fast Functions": 'Evaluation : Fonctions rapides'
+          "Play Lab: Design Recipe": 'Labo : Recette de conception'
+          "Eval: Design Recipe": 'Evaluation : Recette de conception'
         playlab:
           title: Labo
           description: Programmer une histoire ou un jeu avec le Labo !
@@ -194,8 +194,8 @@ fr:
           description_short: "Dessinez des super images et schémas avec l'Artiste!"
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Courte description de Scrat.
+          description: Longue description de Scrat
           "Maze: Sequence": 'Labyrinthe : Parcours'
         hourofcode:
           Maze: Labyrinthe
@@ -222,46 +222,24 @@ fr:
           "Play Lab: For Loops": 'Labo : Pour les boucles'
           "Artist: Functions": 'Artiste : les fonctions'
           "Artist: Functions with Paraqmeters": 'Artiste : Fonctions avec Paramètres'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
+          "Unplugged: Tangrams": 'Débranché : les tangrams'
           Artist: Artiste
           Bee: Abeille
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Travaux libres : des boucles pour le plaisir'
-          "Unplugged: Songwriting with Parameters": 'Travaux libres : utiliser des paramètres pour écrire des chansons'
+          "Unplugged: Envelope Variables": 'Activité débranchée : Enveloppe Variables'
+          "Unplugged: Madlibs": 'Activité débranchée : Madlibs'
+          "Unplugged: For Loop Fun": 'Activité débranchée : des boucles pour le plaisir'
+          "Unplugged: Songwriting with Parameters": 'Activité débranchée : utiliser des paramètres pour écrire des chansons'
           "Artist: Functions with Parameters": 'Artiste : Fonctions avec Paramètres'
-          "Unplugged: Binary": 'Unplugged: Binary'
+          "Unplugged: Binary": 'Activité débranchée : les binaires'
           Bee Binary: Abeille binaire
           Farmer Binary: Agriculteur binaire
           Maze and Bee: Labyrinthe et abeille
           Artist Binary: Artiste binaire
           description_audience: 10 ans et + (après le Cours 3)
         Course4pre:
+          title: Cours 4 prérequis
           description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
-          Course 4 Prerequisite: Cours 4 prérequis
-          "Maze: Sequence": 'Labyrinthe : Parcours'
-          "Artist: Sequence": 'Artiste : Séquence'
-          "Artist: Loops": 'Artiste : Les boucles'
-          "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
-          "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
-          "Farmer: While Loops": 'Fermier : les boucles "tant que"'
-          "Bee: Nested Loops": 'Abeille : les boucles imbriquées'
-          "Artist: Functions": 'Artiste : les fonctions'
-          "Bee: Debugging": 'Abeilles : Le débogage'
-        course4pre:
-          description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
-          Course 4 Prerequisite: Cours 4 prérequis
-          "Maze: Sequence": 'Labyrinthe : Parcours'
-          "Artist: Sequence": 'Artiste : Séquence'
-          "Artist: Loops": 'Artiste : Les boucles'
-          "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
-          "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
-          "Farmer: While Loops": 'Fermier : les boucles "tant que"'
-          "Bee: Nested Loops": 'Abeille : les boucles imbriquées'
-          "Artist: Functions": 'Artiste : les fonctions'
-          "Bee: Debugging": 'Abeilles : Le débogage'
-        Course4pre (Case Conflict):
-          description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
+          description: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
           Course 4 Prerequisite: Cours 4 prérequis
           "Maze: Sequence": 'Labyrinthe : Parcours'
           "Artist: Sequence": 'Artiste : Séquence'
@@ -294,61 +272,271 @@ fr:
           Special: Spécial
           Binary: Binaire
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
-          Blocks to Math: Blocks to Math
+          title: "Facilité d'utilisation de Middle School Math"
+          description_short: "Tests de d'utilisation de Middle School Math"
+          description: "Tests de d'utilisation de Middle School Math"
+          Usability testing for MSM: "Tests d'utilisation de MSM"
+          Evaluation Blocks: "Blocs d'évaluation"
+          Blocks to Math: Des blocs aux Math
           Strings and Images: Textes et Images
           Defining Variables: Définition de Variables
           Defining Functions: Définition de fonctions
-          Design Recipe: Design Recipe
+          Design Recipe: Recette de conception
           Booleans: Booléens
           Conditionals: Instructions conditionnelles
           Free Play: Travail libre
         algebra:
           title: Informatique en algèbre
-          description: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Play Lab: Defining Functions": 'Labo Jeu: Définition de fonctions'
-          "Eval: Functions": 'Eval: Functions'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval : Opérateurs Booléens'
-          "Play Lab: Booleans": 'Play Lab : Booléens'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          description: "Apprendre la programmation fonctionnelle par l'algèbre"
+          "Unplugged: Video Games and Coordinate Planes": 'Activité débranchée : jeux vidéo et les plans de coordonnées'
+          "Calc: Evaluation Blocks": "Blocs d'évaluation et expressions arithmétiques"
+          "Eval: Strings and Images": Textes et Images
+          "Unplugged: Contracts": 'Activité débranchée : contrats, domaine, et gamme'
+          "Eval: Writing Contracts": Rédaction de contrats
+          "Calc: Defining Variables": Définition de Variables et Substitution
+          "Play Lab: Defining Variables (Big Game)": 'Le grand jeu - Variables'
+          "Eval: Defining Functions": Fonctions composées
+          "Unplugged: The Design Recipe": 'Activité débranchée : les recettes de conception'
+          "Play Lab: Defining Functions": Hauteur de la fusée
+          "Eval: Functions": Résoudre des problèmes de mots avec la recette de conception
+          "Play Lab: Animation (Big Game)": 'Le grand jeu - Animation'
+          "Unplugged: Booleans": 'Activité débranchée : les booléens et la logique'
+          "Eval: Boolean Operators": Opérateurs booléens
+          "Play Lab: Booleans": Sam la chauve-souris
+          "Play Lab: Boolean (Big Game)": 'Le grand jeu - valeurs booléennes'
+          "Unplugged: Conditionals and Piecewise Functions": 'Activité débranchée : les conditions et fonctions par morceaux'
+          "Eval: Conditionals": Instructions conditionnelles
+          "Unplugged: Collision Detection and the Distance Formula": 'Activité débranchée : la détection de Collision et le théorème de Pythagore'
+          "Play Lab: Collision Detection (Big Game)": 'Le grand jeu - détection de Collision'
         infinity:
-          title: Labo
-          description_short: Programmer une histoire ou un jeu avec le Labo !
-          description: Programmer une histoire ou un jeu avec le Labo !
+          title: Disney Infinity Play Lab
+          description_short: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infiny.
+          description: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infiny.
           Play Lab: Labo
+          Infinity: Infini
         algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
+          title: "Démo de l'algèbre"
+          description_short: "Une poignée de puzzles pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre"
+          description: "Une poignée de puzzles pour montrer l'environnement et le langage de programmation utilisé dans Code.org CS en algèbre"
+          Algebra Demo: "Démo de l'algèbre"
+          Evaluation Blocks: "Blocs d'évaluation"
+          Making Pictures: Faire des photos
           Defining Variables: Définition de Variables
-          Defining Simple Functions: Defining Simple Functions
+          Defining Simple Functions: Définir des fonctions simples
           The Design Recipe: La Recette de la Conception
         K5PD:
-          Introduction to PD: Introduction to PD
+          title: Perfectionnement professionnel en CM2
+          description: Perfectionnement professionnel pour les cours de CM2
+          description_short: Perfectionnement professionnel pour les cours de CM2
+          Introduction to PD: Introduction au développement professionnel
+          Blockly Basics: Bases de blockly
+          Writing computer programs: Écrire des logiciels informatiques
+          Navigating the teacher dashboard: "Naviguer le tableau de bord d'enseignement"
+          Unplugged lessons: Leçons débranchées
+          Classroom Culture: Culture de la Classe
+          Ways to go beyond Courses 1, 2, and 3: "Façons d'aller au-delà des cours 1, 2 et 3"
+          K-5 Courses: Cours de CM2
+          Writing computer programs in Blockly: Rédaction de programmes informatiques dans Blockly
+          Teacher Dashboard: Tableau de bord enseignant
+          Personal Reflection: Réflexion personnelle
+          Next Steps: Prochaines étapes
+          Computer Science Pedagogy: Pédagogie des sciences informatiques
         netsim:
-          title: Internet Simulator
+          title: "Simulateur d'Internet"
           description_short: ""
           description: ""
-          Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Infini
+          Internet Simulator: "Simulateur d'Internet"
+          Unit 1: Unité 1
+          Unit 2: Unité 2
+          Sending Bits: Envoi de bits
+          Routing and DNS: Routage et DNS
+          "Unit 1: Sending Bits": 'Unité 1 : Envoi de bits'
+          "Unit 2: Routing and DNS": 'Unité 2 : routage et DNS'
+          Internet Simulator Templates: "Modèles de simulateur d'Internet"
+        pixelation:
+          title: Pixellisation
+          description: Créer des images avec des bits et des octets.
+          Pixelation: Pixellisation
+        20-hour:
+          title: Intro des 20 heures de cours
+          description: "Ce cours de 20 heures introduit les notions de base de l'informatique et les concepts de la programmation. Il est conçu pour la grande section jusqu'à la 4ème (14 ans et moins), mais il n'y a pas d'âge pour apprendre."
+          Introduction to Computer Science: "Introduction à l'Informatique"
+          The Maze: Le labyrinthe
+          Computational Thinking: "L'algorithmique"
+          Graph Paper Programming: Programmation sur papier quadrillé
+          The Artist: "L'Artiste"
+          Algorithms: Algorithmes
+          The Artist 2: "L'Artiste 2"
+          Functions: Fonctions
+          The Farmer: Le Fermier
+          Conditionals: Instructions conditionnelles
+          The Artist 3: "L'Artiste 3"
+          Song Writing: Ecriture de chanson
+          The Farmer 2: Le Fermier 2
+          Abstraction: Abstraction
+          The Artist 4: "L'Artiste 4"
+          Relay Programming: Les relais
+          The Farmer 3: Le Fermier 3
+          The Internet: La Toile
+          The Artist 5: "L'Artiste 5"
+          Wrap-up: Résumé
+        edit-code:
+          title: Modifier le Code
+          description: ""
+          The Maze: Le labyrinthe
+          Applab: AppLab
+          The Artist: "L'Artiste"
+          Play Lab: Labo
+        events:
+          title: Événements
+          description: ""
+          Bounce: Rebond
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: "Flappy l'oiseau"
+          description: "Vous voulez développer votre propre jeu vidéo en moins de 10 minutes ? C'est par ici!"
+          Flappy Code: "Flappy l'oiseau"
+        jigsaw:
+          title: Pièces de Puzzle
+          description: ""
+          Jigsaw: Pièces de Puzzle
+        step:
+          title: Étape
+          description: ""
+          Step: Étape
+        Hour of Code:
+          title: Heure de code 2013
+          description: ""
+          Hour of Code 2013: Heure de code 2013
+        Code Studio Puzzle Challenge:
+          title: Défi des énigmes de Code Studio
+          description_short: Relevez le défi !
+          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          Puzzles: Enigmes
+        CodeStudioPuzzleChallenge:
+          title: Défi des énigmes de Code Studio
+          description_short: Relevez le défi !
+          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          Puzzles: Enigmes
+        Test - Code Studio Puzzle Challenge:
+          title: "Test de défi d'énigmes sur Code Studio"
+          description_short: Relevez le défi !
+          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          Puzzles: Enigmes
+        How to do the Code Studio Puzzle Challenge:
+          title: "Test de défi d'énigmes sur Code Studio"
+          description_short: Relevez le défi !
+          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          Puzzles: Enigmes
+        Tutorial - Code Studio Puzzle Challenge:
+          title: "Tutoriel - Défi d'énigmes sur Code Studio"
+          description_short: Relevez le défi !
+          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          Puzzles: Enigmes
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: "Tutoriel - Défi d'énigmes sur Code Studio"
+          description_short: Relevez le défi !
+          description: Essayez ces amusantes énigmes de codage. Faites de votre mieux !
+          Puzzles: Enigmes
+        course4pre:
+          title: Cours 4 prérequis
+          description_short: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
+          description: "Un court rattrapage des concepts pour les élèves n'ayant pas suivi les cours 2 et 3."
+          Course 4 Prerequisite: Cours 4 prérequis
+          "Maze: Sequence": 'Labyrinthe : Parcours'
+          "Artist: Sequence": 'Artiste : Séquence'
+          "Artist: Loops": 'Artiste : Les boucles'
+          "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
+          "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
+          "Farmer: While Loops": 'Fermier : les boucles "tant que"'
+          "Bee: Nested Loops": 'Abeille : les boucles imbriquées'
+          "Artist: Functions": 'Artiste : les fonctions'
+          "Bee: Debugging": 'Abeilles : Le débogage'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Leçon 14
+          Lesson 14 v2: Leçon 14 v2
+          Lesson 15: Leçon 15
+          Lesson 8: Leçon 8
+          Lesson 5: Leçon 5
+          Lesson 3: Leçon 3
+          Lesson 4: Leçon 4
+          Lesson 6: Leçon 6
+          Lesson 2: Leçon 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: "Informatique en DP d'algèbre"
+          description: "Apprendre la programmation fonctionnelle par l'algèbre"
+          "Unplugged: Video Games and Coordinate Planes": 'Activité débranchée : jeux vidéo et les plans de coordonnées'
+          "Calc: Evaluation Blocks": "Calc : Blocs d'évaluation"
+          "Eval: Strings and Images": 'Evaluation : Des chaînes et des Images'
+          "Unplugged: Contracts": 'Activité débranchée : les contrats'
+          "Eval: Writing Contracts": 'Evaluation : Rédaction de contrats'
+          "Calc: Defining Variables": 'Calc : Définir les variables'
+          "Play Lab: Defining Variables (Big Game)": 'Labo : définir les variables (grand jeu)'
+          "Eval: Defining Functions": 'Eval : Définition de fonctions'
+          "Unplugged: The Design Recipe": 'Activité débranchée : les recettes de conception'
+          "Play Lab: Defining Functions": 'Labo : Définition de fonctions'
+          "Eval: Functions": 'Eval : fonctions'
+          "Play Lab: Animation (Big Game)": 'Labo : Animation (grand jeu)'
+          "Unplugged: Booleans": 'Activité débranchée : les booléens'
+          "Eval: Boolean Operators": 'Eval : Opérateurs Booléens'
+          "Play Lab: Booleans": 'Play Lab : Booléens'
+          "Play Lab: Boolean (Big Game)": 'Labo : les booléens (grand jeu)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Activité débranchée : les conditions et fonctions par morceaux'
+          "Eval: Conditionals": 'Evaluation : instructions conditionnelles'
+          "Unplugged: Collision Detection and the Distance Formula": 'Activité débranchée : la détection de collision et la formule de la distance'
+          "Play Lab: Collision Detection (Big Game)": 'Labo : détection de Collision (grand jeu)'
+          Evaluation Blocks: "Blocs d'évaluation"
+          Strings and Images: Textes et Images
+          Contracts: Contrats
+          Your Game - Defining Variables: 'Votre jeu - définition des Variables'
+          Simple Function Definition: Définition de fonction simple
+          The Design Recipe: La Recette de la Conception
+          Your Game - Animation: 'Votre jeu - Animation'
+          Booleans: Booléens
+          Sam the Bat: Sam la chauve-souris
+          Your Game - Booleans: 'Votre jeu - valeurs booléennes'
+          Conditionals and Piecewise Functions: Instructions conditionnelles et des fonctions par morceaux
+          Rocket-Height: Hauteur de la fusée
+          Design Recipe Practice: Pratique de conception de recette
+        algPDmiami:
+          title: "Informatique en DP d'algèbre"
+          description: "Enseigner l'algèbre par le biais de la programmation fonctionnelle"
+          Evaluation Blocks: "Blocs d'évaluation"
+          Strings and Images: Textes et Images
+          Rocket-Height: Hauteur de la fusée
+          Design Recipe Practice: Pratique de conception de recette
+          Your Game - Animation: 'Votre jeu - Animation'
+          Booleans: Booléens
+          Sam the Bat: Sam la chauve-souris
+          Your Game - Booleans: 'Votre jeu - valeurs booléennes'
+          Luigi's Pizza: Luigi Pizza
+          "Play Lab: Collision Detection (Big Game)": 'Labo : détection de Collision (grand jeu)'
+          Your Game - Player Movement: 'Votre jeu - mouvement des joueurs'
+          Your Game - Collision Detection: 'Votre jeu - détection de Collision'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: nouvelle étape
+          Introduction to PD: Introduction au développement professionnel
+        CSPLessonSamples:
+          title: Échantillons de leçon CSP
+          description_short: échantillons de leçon pour le csp
+          Lesson 14: Leçon 14
+          Lesson 15: Leçon 15

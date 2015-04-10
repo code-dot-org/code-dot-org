@@ -1,9 +1,17 @@
 {
-  "compute": "beräkna",
+  "divideByZeroError": "Your program results in division by zero.",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "equivalentExpression": "Försök ordna om dina argument för att få exakt samma uttryck.",
+  "evaluate": "evaluate",
   "extraTopBlocks": "Du har okopplade block. Menade du att fästa dessa till \"beräkna\" blocket?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "Din funktion returnerar inte rätt resultat för alla värden.",
   "goal": "Mål:",
-  "reinfFeedbackMsg": "Här är din berättelse! Fortsätta att arbeta på den eller gå vidare till nästa pussel!",
-  "yourExpression": "Ditt uttryck:"
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Your expression is missing variable {var}.",
+  "reinfFeedbackMsg": "Här är din beräkning! Fortsätt arbete på det, eller gå vidare till nästa övning!",
+  "yourExpression": "Ditt uttryck:",
+  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

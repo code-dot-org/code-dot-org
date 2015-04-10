@@ -8,7 +8,7 @@ class StagesHelperTest < ActionView::TestCase
   end
 
   test 'should give URL for script level curriculum PDF' do
-    assert_includes(lesson_plan_html_url(@stage), 'curriculum/testing/5/Teacher')
-    assert_includes(lesson_plan_pdf_url(@stage), 'curriculum/testing/5/Teacher.pdf')
+    assert_includes(@stage.lesson_plan_html_url, 'curriculum/testing/5/Teacher')
+    assert_includes(@stage.lesson_plan_pdf_url, 'curriculum/testing/5/Teacher.pdf')
   end
 end

@@ -29,7 +29,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     get :show, id: @level_source.id, embed: '1'
     assert_response :success
     assert_equal([], assigns(:callouts))
-    
+
     assert_equal true, assigns(:embed)
     assert_equal false, assigns(:share)
     assert_equal true, assigns(:no_padding)
@@ -83,7 +83,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
                    { controller: 'level_sources', action: 'show', id: '1' })
     assert_routing({ path: '/c/1/edit', method: :get },
                    { controller: 'level_sources', action: 'edit', id: '1' })
-    assert_routing({ path: '/c/1/original_image', method: :get }, 
+    assert_routing({ path: '/c/1/original_image', method: :get },
                    {controller: 'level_sources', action: 'original_image', id: '1' })
     assert_routing({ path: '/c/1/generate_image', method: :get },
                    { controller: 'level_sources', action: 'generate_image', id: '1' })
@@ -98,7 +98,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     artist_level = create :level, game: create(:game, app: Game::ARTIST)
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source
-    
+
     expect_s3_upload
 
     get :generate_image, id: level_source.id
@@ -110,7 +110,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     artist_level = create :level, game: create(:game, app: Game::ARTIST)
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
-    
+
     get :generate_image, id: level_source.id
 
     assert_redirected_to level_source_image.s3_framed_url
@@ -132,7 +132,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     artist_level = create :level, game: create(:game, app: Game::ARTIST)
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
-    
+
     get :original_image, id: level_source.id
 
     assert_redirected_to level_source_image.s3_url
@@ -189,4 +189,46 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
     assert_equal "max-age=36000, public", response.headers["Cache-Control"]
   end
+
+  test 'include level source ID for send to phone dialog' do
+    # Prevents regressions in #79201066
+    # Note: This test depends on the current structure of the 'appOptions' interface to Blockly in LevelSourcesController#show.
+    # If that interface changes, this test will fail and need to be updated or removed/disabled.
+
+    # Since loading, running and testing functionality within the full Blockly app is too complex,
+    # for now just test that the level source ID is correctly set in the appOptions global.
+    get :show, id: @level_source.id
+    assert_response :success
+
+    # Select the first script block containing 'appOptions', then execute it in a JavaScript engine
+    # and return the computed value we want to compare against.
+    element = css('script').select{|x|x.to_s.match(/blocklyOptions/) }.first
+    level_source_id = ExecJS.exec("#{element.child.text};\nreturn blocklyOptions.level_source_id")
+    assert_equal @level_source.id, level_source_id
+  end
+
+  test 'artist levelsource has sharing meta tags' do
+    level_source = create(:level_source, level: Artist.first)
+    get :show, id: level_source.id
+
+    assert_response :success
+    assert_sharing_meta_tags(url: "http://test.host/c/#{level_source.id}",
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 500,
+                            image_height: 261)
+  end
+
+  test 'playlab levelsource has sharing meta tags' do
+    level_source = create(:level_source, level: Studio.first)
+    get :show, id: level_source.id
+
+    assert_response :success
+
+    assert_sharing_meta_tags(url: "http://test.host/c/#{level_source.id}",
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 400,
+                            image_height: 400,
+                            apple_mobile_web_app: true)
+  end
+
 end

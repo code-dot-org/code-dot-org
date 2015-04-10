@@ -1,0 +1,17 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-04-08T19:49:44.000Z",
+  "properties": {
+    "title": "Reflection: Binary Numbers",
+    "content1": "Reflect on your learning in this lesson. In the space below, enter:",
+    "markdown": "3 recollections (things you remember), \n\n2 observations (things you noticed), and \n\n1 insight (something you fully understand the significance of).\n",
+    "type": "TextMatch",
+    "dsl_text": "name 'U1L7 Free Response Reflection'\r\ntitle 'Reflection: Binary Numbers'\r\ncontent1 'Reflect on your learning in this lesson.'\r\n\r\nmarkdown <<MARKDOWN\r\nIn the space below, enter 3 recollections (things you remember), \r\n\r\n2 observations (things you noticed), and \r\n\r\n1 insight (something you fully understand the significance of).\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ],
+    "name": "U1L7 Free Response Reflection"
+  }
+}]]></config>
+</TextMatch>

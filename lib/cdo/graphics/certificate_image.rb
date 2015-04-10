@@ -87,7 +87,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
     donor = DB[:cdo_donors].where('((weight_f - ?) >= 0)', weight).first
     sponsor = donor[:name_s]
   end
-  
+
   Magick::Draw.new.annotate(image, 0, 0, 0, 160, "#{sponsor} made the generous gift to sponsor your learning.") do
     self.gravity = Magick::SouthGravity
     self.pointsize = 24

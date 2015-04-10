@@ -45,8 +45,9 @@
           espaço no labirinto.
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
+        text: Para executar mais de uma ação, você pode arrastar vários blocos para
+          o seu espaço de trabalho e anexá-los juntos. O pássaro vai executar os comandos
+          de cima para baixo.
       12:
         image: notes/hoc1_12.jpg
         text: Se corres um programa e depois quiseres corrigi-lo e tentar novamente,
@@ -110,8 +111,8 @@
           o rato é clicado, toca um som" '
       4:
         image: notes/flappy04.jpg
-        text: Alguma vez ouviste falar no jogo FlappyBird? Ao usar manipuladores de
-          evento, vamos aprender a programar a nossa própria versão do FlappyBird!
+        text: Alguma vez ouviste falar do jogo FlappyBird? Se utilizarmos manipuladores
+          de eventos, podemos programar a nossa própria versão do FlappyBird!
       5:
         image: notes/flappy05.jpg
         text: O código que vais escrever involve arrastar e largar blocos que representam
@@ -222,9 +223,9 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: Olá, o meu nome é Saloni. Eu uso as ciências da computação para resolver
+          problemas na medicina e saúde. Vamos aprender o bloco "se-senão". É muito
+          parecido com o bloco "se" mas tem mais uma parte no final que diz "senão".
       2:
         image: notes/hoc5_2.jpg
         text: If I put a "move forward" block in the spot where it says "do" and a
@@ -267,8 +268,8 @@
           em vez de as escreveres constantemente, podes apresentá-las num só bloco.
       2:
         image: notes/stage13_2.jpg
-        text: Nós vamos aprender como definir funções. A definição de funções tem
-          uma estrela no canto. O nome de uma função é escrita logo na primeira linha.
+        text: Vamos aprender a definir funções. A definição de funções tem uma estrela
+          na ponta. O nome de uma função é escrito logo na primeira linha.
       3:
         image: notes/stage13_3.jpg
         text: Os blocos que vão dentro da definição de nos dizer o que ele faz. Por

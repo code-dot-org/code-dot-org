@@ -63,7 +63,7 @@
           - 2'
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500
-        Choose the best blocks: Выбрать лучшие блоки
+        Choose the best blocks.: Выбери лучшие блоки.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -99,8 +99,8 @@
       2-3 Algorithms Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Выбери алгоритм для предоставленного
-          изображения
+        Choose an algorithm for the image provided.: Choose an algorithm for the image
+          provided.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Начать
           с квадрата <br/>Поместить треугольник над квадратом<br/>Поместить треугольник
           под квадратом
@@ -116,10 +116,6 @@
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Начни
           с квадрата <br/> Помести треугольник ниже квадрата<br/> Помести параллелограмм
           справа от треугольника
-        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
         Multiple Choice: Выбор варианта
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Начать
@@ -173,11 +169,39 @@
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
       2-3 Relay Programming Multi 2:
         Multiple Choice: Выбор варианта
-        Which image-program combo does not contain mistakes?: Which image-program
-          combo does not contain mistakes?
+        Which image-program combo does not contain mistakes?: Какая комбинация изображения
+          и программы не содержит ошибок?
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+      2-3 multi match 1:
+        Blue colored blocks are associated with __________ ?: Блоки синего цвета связаны
+          с __________?
+        a image: изображение
+        a number: число
+        a string: строка
+        boolean: логическое значение
+      2-3 multi match 2:
+        Purple colored blocks are associated with __________ ?: Блоки фиолетового
+          цвета связаны с __________ ?
+        a image: изображение
+        a number: число
+        a string: строка
+        boolean: логическое значение
+      2-3 multi match 3:
+        Teal colored blocks are associated with __________ ?: Блоки зеленовато-голубого
+          цвета связаны с __________ ?
+        a image: изображение
+        a number: число
+        a string: строка
+        boolean: логическое значение
+      2-3 multi match 4:
+        Green colored blocks are associated with __________ ?: Green colored blocks
+          are associated with __________ ?
+        a image: изображение
+        a number: число
+        a string: строка
+        boolean: логическое значение
       4-5 artist multi 1:
         Artist Multiple Choice: 'Художник: Выбор варианта'
         Which blocks draw a rectangle with a perimeter of 100?: Какие блоки рисуют
@@ -214,9 +238,9 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
       4-5 artist loops multi 2:
         Artist Functions Multiple Choice: 'Художник: Процедуры: Выбор варианта'
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pick
-          the for loop that represents the following pattern:  5, 10, 15, 20, 25,
-          30, 35, 40, 45, 50'
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Выберите
+          цикл, который создаст такую последовательность: 5, 10, 15, 20, 25, 30, 35,
+          40, 45, 50'
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
@@ -235,12 +259,6 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
-        ? A purple flower may have either 3, 2 or 1 nectars, but you don't know how
-          many. Which blocks correctly check and collect all of the nectar from a
-          purple flower?
-        : A purple flower may have either 3, 2 or 1 nectars, but you don't know how
-          many. Which blocks correctly check and collect all of the nectar from a
-          purple flower?
       4-5 bee debug multi 1:
         Bee Debug Multiple Choice: 'Пчела: Отладка: Выбор варианта'
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
@@ -289,27 +307,22 @@
         Multiple Choice: Выбор варианта
         Which one of these items is hardest to describe an algorithm for?: Какой из
           этих элементов труднее для описания алгоритма?
-        <h4>Brushing your teeth</h4>: <h4>Почисти зубы</h4>
-        <h4>Baking cookies</h4>: <h4>Печём печенье</h4>
-        <h4>Shopping from a grocery list</h4>: <h4>Shopping from a grocery list</h4>
-        <h4>Banana</h4>: <h4>Банан</h4>
+        Brushing your teeth: Brushing your teeth
+        Baking cookies: Baking cookies
+        Shopping from a grocery list: Shopping from a grocery list
+        Banana: Banana
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Выбор варианта
-        0: '? Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?'
-        1: ': Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Москва
-          - это большой город. <br/>Самара - это город средней величины.<br/> Тында
-          - это маленький город.</h4>
-        <h4>Seattle _____ a _____ _____.</h4>: <h4>Москва - _____ _____ _____.</h4>
-        <h4>_____ is a _____ city.</h4>: <h4>_____ - это город _____ величины.</h4>
-        <h4>_____ is _____ a _____.</h4>: <h4>_____ - это _____ _____.</h4>
-        <h4>Eugene is a _____ city.</h4>: <h4>Тында — это _____ город.</h4>
-        ? Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?
-        : Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?
+        0: '? Ниже приведены три предложения. Какой из шаблонов подходит ко всем трем
+          предложениям?'
+        1: ': Ниже приведены три предложения. Какой из шаблонов ниже подходит ко всем
+          трем предложениям?'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
+          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        Eugene is a _____ city.: Eugene is a _____ city.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Выбор варианта
         Which of these pictures best represents crowdsourcing?: Какая из этих картинок
@@ -320,45 +333,43 @@
         Multiple Choice: Выбор варианта
         Which one of these activities would be best for practicing crowdsourcing?: Какой
           из этих видов деятельности больше подходит для краудсорсинга?
-        <h4>Cleaning your room</h4>: <h4>Уборка комнаты</h4>
-        <h4>Eating your dessert</h4>: <h4>Поедание десерта</h4>
-        <h4>Brushing your hair</h4>: <h4>Расчёсывание волос</h4>
-        <h4>Washing your face</h4>: <h4>Умывание</h4>
+        Cleaning your room: Cleaning your room
+        Eating your dessert: Eating your dessert
+        Brushing your hair: Brushing your hair
+        Washing your face: Washing your face
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Выбор варианта
         Which piece of information listed below is okay to share on the internet?: Какой
           информацией из перечисленных ниже можно поделиться в Интернете?
-        <h4>Your birthday</h4>: <h4>Ваш день рождения</h4>
-        <h4>Your favorite food</h4>: <h4>Ваше любимое блюдо</h4>
-        <h4>Your address</h4>: <h4>Домашний адрес</h4>
-        <h4>Your parent's credit card number</h4>: <h4>Номер кредитной карты твоих
-          родителей</h4>
+        Your birthday: Your birthday
+        Your favorite food: Your favorite food
+        Your address: Your address
+        Your parent's credit card number: Your parent's credit card number
       4-5 Internet Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When
-          you try to log on to code.org, which IP address is the DNS most likely to
-          take you to?
-        <h4>23.23.224.106</h4>: <h4>23.23.224.106</h4>
-        <h4>54.209.61.132</h4>: <h4>54.209.61.132</h4>
-        <h4>64.14.68.10</h4>: <h4>64.14.68.10</h4>
-        <h4>54.243.71.82</h4>: <h4>54.243.71.82</h4>
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Когда
+          вы заходите на code.org, на какой IP-адрес Вас скорее всего направят?
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: Выбор варианта
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Если
           DNS отправил тебя на страницу с IP-адресом 100.42.50.110, на каком ты сайте?
-        <h4>code.org</h4>: <h4>code.org</h4>
-        <h4>csisfun.com</h4>: <h4>csisfun.com</h4>
-        <h4>thinkersmith.org</h4>: <h4>thinkersmith.org</h4>
-        <h4>khanacademy.org</h4>: <h4>khanacademy.org</h4>
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?'
-        1: ': What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?'
+        0: '? Какой самый большой фрагмент песни можно выделить как припев, чтобы
+          он повторялся каждый раз одинаково?'
+        1: ': Какой самый большой фрагмент песни можно выделить как припев, чтобы
+          он повторялся каждый раз одинаково?'
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
@@ -375,40 +386,23 @@
         5: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
           <br/>Skip to my Lou, my darlin.'
-        ? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
-        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Какие
-          из программ ниже <em>не</em> сделают точно такую же последовательность,
-          как программа 1?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
+          of the programs below <em>does not</em> make the exact same sequence as
+          Program 1?
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
-        Video game Coordinates: Video game Coordinates
+        Video game Coordinates: Видеоигра Координаты
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer most accurately describes the unicorn's movement?: Which answer
-          most accurately describes the unicorn's movement?
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn's y value changes: The unicorn's y value changes
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: The unicorn's x value changes
+        The unicorn moves across the screen: Единорог двигается по экрану
+        The unicorn's y value changes: У единорога изменяется значение координаты
+          Y
+        The unicorn moves to the left: Единорог двигается влево
+        The unicorn's x value decreases: The unicorn's x value decreases
       K-1 Artist 1 Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -430,8 +424,7 @@
         Multiple Choice: Выбор варианта
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png,
           500
-        Which shape do these squares combine to make?: Which shape do these squares
-          combine to make?
+        Which shape do these squares combine to make?: Какую фигуру образуют эти квадраты?
         /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
         /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
         /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
@@ -474,7 +467,7 @@
         Maze: Лабиринт
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png,
           500
-        Which answer solves this level?: Which answer solves this level?
+        Which answer solves this level?: Какой ответ решит этот уровень?
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
         /script_assets/k_1_images/move_blocks/ES.png: /script_assets/k_1_images/move_blocks/ES.png
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
@@ -498,9 +491,9 @@
       K-1 Digital Footprint Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which
-          animal has the digital footprint that leaves him or her the <strong>most
-          unsafe</strong>?
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Какое
+          животное оставило цифровой след, который подвергает его <strong>наибольшей
+          опасности</strong>?
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
@@ -515,8 +508,8 @@
       K-1 Happy Maps Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/k_1_images/unplugged_images/happy_maps_1q.png: /script_assets/k_1_images/unplugged_images/happy_maps_1q.png
-        Which arrow gets the Flurb to the treasure?: Which arrow gets the Flurb to
-          the treasure?
+        Which arrow gets the Flurb to the treasure?: Какая стрелка направит Флурба
+          к сокровищу?
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
@@ -531,8 +524,8 @@
       K-1 Move It Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/k_1_images/unplugged_images/move_it_1_q.png: /script_assets/k_1_images/unplugged_images/move_it_1_q.png
-        Which algorithm gets the Flurb to the flowers?: Which algorithm gets the Flurb
-          to the flowers?
+        Which algorithm gets the Flurb to the flowers?: Какой алгоритм доставит Флурба
+          к цветам?
         /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
         /script_assets/k_1_images/unplugged_images/leftleft.png: /script_assets/k_1_images/unplugged_images/leftleft.png
         /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
@@ -574,7 +567,7 @@
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png,
           700
         Which word is spelled?: Какое слово записано?
-        SET: SET
+        SET: SET (УСТАНОВИТЬ)
         SQUARE: КВАДРАТ
         SOUTH: ЮГ
       K-1 multi 4:
@@ -595,26 +588,22 @@
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       Math to Code 1:
-        Racket Code for Math Expressions: Racket Code for Math Expressions
+        Racket Code for Math Expressions: Ракета с кодом для математических выражений
         0: '? Выберите Ракету с кодом, который соответствует заданному математическому
           выражению. Нарисуйте, чтобы найти правильный ответ!'
-        1: ': Pick the Racket code that matches the mathematical expression given.
-          Draw a circle of evaluation to help you find the right answer!'
+        1: ': Выберите ракету с кодом, который соответствует данному математическому
+          выражению. Нарисуйте круг оценивания, чтобы найти правильный ответ!'
         (5 + 6) * 8 / 2: (5 + 6) * 8 / 2
         (/ (* 8 2) (+ 5 6)): (/ (* 8 2) (+ 5 6))
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
         (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
         (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
-        ? Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
-        : Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
       Math to Code 2:
-        Racket Code for Math Expressions: Racket Code for Math Expressions
+        Racket Code for Math Expressions: Ракета с кодом для математических выражений
         0: '? Выберите Ракету с кодом, который соответствует заданному математическому
           выражению. Нарисуйте, чтобы найти правильный ответ!'
-        1: ': Pick the Racket code that matches the mathematical expression given.
-          Draw a circle of evaluation to help you find the right answer!'
+        1: ': Выберите ракету с кодом, который соответствует данному математическому
+          выражению. Нарисуйте круг оценивания, чтобы найти правильный ответ!'
         4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
         (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7))
           2)
@@ -623,15 +612,11 @@
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
           2)
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
-        ? Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
-        : Pick the Racket code that matches the mathematical expression given. Draw
-          a circle of evaluation to help you find the right answer!
       Warmup questions:
-        Coding in Racket: Coding in Racket
-        Select the best answer to the question.: Select the best answer to the question.
-        When converting a circle to code, the correct order is: When converting a
-          circle to code, the correct order is
+        Coding in Racket: Программирование в ракете
+        Select the best answer to the question.: Выберите лучший ответ на вопрос.
+        When converting a circle to code, the correct order is: При преобразовании
+          круга в код, правильным порядком является
         top, left, right: сверху, слева, справа
         left, right, top: слева, справа, сверху
         random: случайный
@@ -639,56 +624,270 @@
       Circle to code:
         Code from Circle: Код из круга
         /script_assets/msm/Unit%202/exercise_1.png: /script_assets/msm/Unit%202/exercise_1.png
-        Pick the Racket code that comes from the circle of evaluation!: Pick the Racket
-          code that comes from the circle of evaluation!
+        Pick the Racket code that comes from the circle of evaluation!: Выберите код,
+          который выходит из круга вычислений!
         (+ 5 (* (- 6 8) 4)): (+ 5 (* (- 6 8) 4))
         (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
         (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
-        '(+ (* (- 8 6) 4) 5) ': '(+ (* (- 8 6) 4) 5) '
       valid contracts multi:
-        Valid Contracts: Valid Contracts
-        Pick the best answer to the question.: Pick the best answer to the question.
-        Which of these is a valid contract for the function circle?: Which of these
-          is a valid contract for the function circle?
-        'circle: size style color -> image': 'circle: size style color -> image'
-        'circle: number string string -> image': 'circle: number string string ->
-          image'
-        'circle: number string string -> shape': 'circle: number string string ->
-          shape'
-        'circle: 5 solid blue -> circle ': 'circle: 5 solid blue -> circle '
+        Valid Contracts: Действующие определения
+        Pick the best answer to the question.: Выберите лучший ответ на вопрос.
+        Which of these is a valid contract for the function circle?: Какое из определений
+          подходит для функции круга?
+        'circle: size style color -> image': 'круг: размер стиль цвет -> изображение'
+        'circle: number string string -> image': 'круг: число строка строка -> изображение'
+        'circle: number string string -> shape': 'круг: число строка строка -> форма'
+        'circle: 5 solid blue -> circle ': 'круг: 5 сплошной голубой -> круг'
       image code from circle:
         Code from Circle: Код из круга
         /script_assets/msm/Unit%202/exercise_5.png: /script_assets/msm/Unit%202/exercise_5.png
-        Pick the Racket code that comes from the circle of evaluation!: Pick the Racket
-          code that comes from the circle of evaluation!
-        (rectangle (10) (2) "solid" "red"): (rectangle (10) (2) "solid" "red")
-        (rectangle 10 2 "solid" "red"): (rectangle 10 2 "solid" "red")
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid"
-          "red")
-        (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
+        Pick the Racket code that comes from the circle of evaluation!: Выберите код,
+          который выходит из круга вычислений!
+        (rectangle (10) (2) "solid" "red"): (прямоугольник (10) (2) "сплошной" "красный")
+        (rectangle 10 2 "solid" "red"): (прямоугольник 10 2 "сплошной" "красный")
+        (rectangle (+ 8 2) (- 7 5) "solid" "red"): (прямоугольник (+ 8 2) (- 7 5)
+          "сплошной" "красный")
+        (rectangle (+ 8 2) (- 7 5) solid red): (прямоугольник (+ 8 2) (- 7 5) сплошной
+          красный)
+      msm variables multi 1:
+        x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
+        What is the value of x?: Какое значение переменной x?
+        a function: функция
+        15: '15'
+        x: x
+      msm variables multi 10:
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the function?: Какое имя у этой функции?
+        f: f
+        x: x
+        17: '17'
+      msm variables multi 11:
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What is the name of the parameter?: Какое имя у этого параметра?
+        f: f
+        x: x
+        17: '17'
+      msm variables multi 12:
+        (define (f x) (*x 17)): (определите (f x) (*x 17))
+        What is the name of the variable?: Какое имя у этой переменной?
+        f: f
+        x: x
+        17: '17'
+      msm variables multi 13:
+        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
+        What should f(1) produce?: Какое значение вернёт функция f(1)?
+        x: x
+        117: '117'
+        17: '17'
+      msm variables multi 2:
+        x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
+        What is the value of a + b?: Какое значение a + b?
+        8: '8'
+        function: функция
+        ab: ab
+      msm variables multi 3:
+        x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
+        What is the value of x-10?: Какое значение x-10?
+        a function: функция
+        5: '5'
+        x: x
+      msm variables multi 4:
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
+          600
+        What is the value of x?: Какое значение переменной x?
+        3: '3'
+        15: '15'
+        do not know: не знаю
+      msm variables multi 5:
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
+          600
+        What is the value of (p - x)?: какое значение (p - x)?
+        q: q
+        3: '3'
+        5: '5'
+      msm variables multi 6:
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
+          600
+        What is the value of string-length(q)?: Какое значение string-length(q)?
+        1: '1'
+        hello: привет
+        5: '5'
+      msm variables multi 7:
+        f(x) = x + 3: f(x) = x + 3
+        What is the name of the function?: Какое имя у этой функции?
+        f: f
+        x: x
+        3: '3'
+      msm variables multi 8:
+        f(x) = x + 3: f(x) = x + 3
+        What is the name of the variable?: Какое имя у этой переменной?
+        f: f
+        x: x
+        3: '3'
+      msm variables multi 9:
+        f(x) = x + 3: f(x) = x + 3
+        What is f(2)?: Какое значение f(2)?
+        6: '6'
+        5: '5'
+        x: x
+      Multi Define Funcs 1:
+        g(y) = y + 3: g(y) = y + 3
+        What is the name of this function?: Какое имя у этой функции?
+        g: g
+        y: true
+        3: '3'
+      Multi Define Funcs 2:
+        g(y) = y + 3: g(y) = y + 3
+        What is the name of the parameter?: Какое имя у этого параметра?
+        g: g
+        y: true
+        3: '3'
+      Multi Define Funcs 3:
+        g(y) = y + 3: g(y) = y + 3
+        What should g(2) return?: Какое значение вернет функция g(2)?
+        6: '6'
+        5: '5'
+        y: true
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
-        Which of these Evaluation Blocks will draw the image: Which of these Evaluation
-          Blocks will draw the image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images
-          1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images
-          1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images
-          1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
-          1.blocks4.start_blocks, 300, 100
+        Strings and Images Multiple Choice: 'Несколько вариантов: строки и изображения'
+        http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
+        Which of these Evaluation Blocks will draw the image: Какой из этих оценочных
+          блоков нарисуют изображение
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
+          1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
+          1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
+          1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
+          1.blocks4.start_blocks, 350, 100
+      PDK5 Basic CS:
+        Video Follow-up Question: Видео вопрос
+        Answer this question based on the video you just watched.: Ответьте на этот
+          вопрос, основываясь на видео, которое вы только что посмотрели.
+        'A computer program, or code, is:': 'Компьютерная программа, или код, это:'
+        a part inside of a computer: часть внутри компьютера
+        a week-long course to learn about computers: недельный курс обучения компьютеру
+        a set of instructions you give a computer to execute: набор инструкций, которые
+          даются компьютеру для исполнения
+        a secret password: секретный пароль
+      PDK5 Beyond:
+        What do I do now?: Что теперь делать?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: Это
+          последняя часть нашей онлайн программы повышения квалификации. Поздравляем!
+          Нажмите "Я закончил" когда  будете готовы!
+        Im finished: Я закончил
+      PDK5 Blockly Intro:
+        Writing your first computer program!: Напишите вашу первую программу!
+        Are you ready to move on?: Вы готовы продолжить?
+        'Yes': Да
+      PDK5 Classroom Culture:
+        Classroom Culture: Культура в классе
+        Are you ready to move on?: Вы готовы продолжить?
+        'Yes': Да
+      PDK5 Course Maps:
+        Navigating Courses 1, 2, and 3: Перемещение по курсам 1, 2, и 3
+        Are you ready to move on?: Вы готовы продолжить?
+        'Yes': Да
+      PDK5 Course Overview:
+        Overview of K-5 Courses: Обзор курсов для начальных классов
+        Are you ready to move on?: Вы готовы продолжить?
+        'Yes': Да
+      PDK5 Glossary:
+        Glossary: Словарь терминов
+        Are you ready to move on?: Вы готовы продолжить?
+        'Yes': Да
+      PDK5 Intro:
+        Welcome!: Добро пожаловать!
+        Before now, have you ever participated in an online PD program?: Вы когда-нибудь
+          участвовали в онлайн программах повышения квалификации?
+        'Yes': Да
+        'No': Нет
+      PDK5 Sequence2:
+        More Sequencing: Продолжение Последовательностей
+        The grey rectangle to the left of the workspace is called the: Серый прямоугольник
+          слева от рабочей области называется
+        toolbox: панель инструментов
+        shelf: полка
+        bin: корзина
+        dropdown: выпадающий список
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Панель управления преподавателя
+        Are you ready to move on?: Вы готовы продолжить?
+        'Yes': Да
+      PDK5 Test1:
+        title: название
+        description here: Описание здесь
+        Question: Вопрос
+        wrong answer: неправильный ответ
+        right answer: правильный ответ
+      PDK5 Unplugged Intro:
+        What is an unplugged activity?: Что такое урок без компьютера?
+        Are you ready to move on?: Вы готовы продолжить?
+        'Yes': Да
+      PDK5 UVideo Overview:
+        Teacher Guides to all our unplugged activities: Руководства для учителей для
+          всех наших уроков без компьютера
+        Are you ready to move on?: Вы готовы продолжить?
+        'Yes': Да
+      PDK5 Visual Languages:
+        Visual Programming Languages: Визуальные языки программирования
+        Based on the video you saw before, please answer the question below.: Ответьте
+          пожалуйста на вопрос ниже, основываясь на видео, которое вы только что посмотрели.
+        Why are visual programming languages easier to learn than text-based programming languages?: Почему
+          визуальные языки программирования легче изучать, чем текстовые языки программирования?
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because
+          you dont have to worry about syntax as much, like where to put a semi-colon
+        Because you can focus on the logic of programming: Because you can focus on
+          the logic of programming
+        Because the commands are available in a menu rather than having to remember them yourself: Because
+          the commands are available in a menu rather than having to remember them
+          yourself
+        All of the above: Все выше
+      PDK5 What is CS:
+        What is Computer Science?: Что такое информатика?
+        'A computer program, or code, is:': 'Компьютерная программа, или код, это:'
+        a part inside of a computer: часть внутри компьютера
+        a set of instructions a person gives a computer to execute: a set of instructions
+          a person gives a computer to execute
+        a week-long course to learn about computers: недельный курс обучения компьютеру
+        a secret password: секретный пароль
+      Play Lab Rocket 6:
+        Rocket Multiple Choice: Ракета - выбор правильных ответов
+        rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds +
+          12
+        rocket-height(seconds) = seconds * 12: rocket-height(seconds) = seconds *
+          12
+        rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
+        rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds
+          * 48
+      Play Lab Rocket 7:
+        Rocket Multiple Choice: Ракета - выбор правильных ответов
+        rocket-height(seconds) = seconds * 2: высота ракеты(секунды) = секунды * 2
+        rocket-height(seconds) = seconds * seconds: высота ракеты(секунды) = секунды
+          * секунды
+        rocket-height(seconds) = seconds * 4: высота ракеты(секунды) = секунды * 4
+        rocket-height(seconds) = seconds * 16: высота ракеты(секунды) = секунды *
+          16
+      Play Lab Rocket 8:
+        Rocket Multiple Choice: Ракета - выбор правильных ответов
+        rocket-height(seconds) = seconds * 7 + 10: высота ракеты(секунды) = секунды
+          * 7 + 10
+        rocket-height(seconds) = seconds * 10 + 7: высота_ракеты(секунды) = секунды*10+7
+        rocket-height(seconds) = seconds * 7 + 3: высота ракеты(секунды) = секунды
+          * 7 + 3
+        rocket-height(seconds) = seconds * 10 - 3: высота ракеты(секунды) = секунды
+          * 10 - 3
       test multi image:
         Maze Multiple Choice Two: 'Лабиринт: Выбор варианта - 2'
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: Эта головоломка целиком
           о выборе правильных цветов.
         Instructions: Инструкции
-        Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Click
-          the right answer, then submit. And here are some longer instructions just
-          to test things more.  How's that word wrapping?
+        Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Щелкните
+          правильный ответ и отправьте ее. А здесь подробные указания для дальнейшей
+          проверки. Как дела с переносом слов?
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Which flowers are yellow?: Какие цветы желтые?
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
@@ -704,8 +903,23 @@
         Martha Washington: Марта Вашингтон
         George Washington: Джордж Вашингтон
         George Jetson: Джордж Джетсон
+      Test 1:
+        This is a test: Это тест
+        whatever: неважно
+        this is a question?: Это вопрос?
+        wrong answer: неправильный ответ
+        right answer: правильный ответ
+      U1L6 Assessment multiple choice:
+        'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
+        If you just had a circle and a square, how many 3-shape rows could you make?: If
+          you just had a circle and a square, how many 3-shape rows could you make?
+        4: '4'
+        6: '6'
+        8: '8'
+        10: '10'
+        12: '12'
       unique level name here:
-        title: название
+        line1<br/>line2: линия1<br/>линия2
         description here: Описание здесь
         Question: Вопрос
         wrong answer: неправильный ответ

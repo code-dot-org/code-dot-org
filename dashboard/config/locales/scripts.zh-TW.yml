@@ -18,9 +18,9 @@
           Artists 2: 畫家 2
           Spelling Bee: 拼字比賽
           Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
+          'Bee 1: Intro': 蜜蜂 1： 簡介
+          'Maze 2: Loops': 迷宮 2： 迴圈
+          'Bee 2: Loops': 蜜蜂 2： 迴圈
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
@@ -38,11 +38,11 @@
             problem-solving skills, and persist through difficult tasks. By the end
             of this course, students create their very own custom game or story that
             they can share. Recommended for grades K-1.
-          'Bee: Sequence': 'Bee: Sequence'
+          'Bee: Sequence': 蜜蜂： 序列
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
-          'Bee: Loops': 'Bee: Loops'
+          'Maze: Loops': 迷宮： 迴圈
+          'Bee: Loops': 蜜蜂： 迴圈
           'Studio: Create a Story': 'Play Lab: Create a Story'
           'Artist: Loops': 'Artist: Loops'
           description_audience: Ages 4+ (pre-readers)
@@ -78,9 +78,9 @@
             Recommended for grades 2-5.
           'Maze: Sequence': '迷宮: 序列'
           'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
+          'Maze: Loops': 迷宮： 迴圈
           'Artist: Loops': 'Artist: Loops'
-          'Bee: Loops': 'Bee: Loops'
+          'Bee: Loops': 蜜蜂： 迴圈
           'Bee: Debugging': 蜜蜂： 除錯
           'Artist: Debugging': 'Artist: Debugging'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -141,7 +141,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: 寫歌
           description_audience: Ages 8+ (after Course 2)
           description_short: Course 3 is a follow-up to Course 2.
         msm:
@@ -262,34 +262,11 @@
           Artist Binary: Artist Binary
           description_audience: Ages 10+ (after Course 3)
         Course4pre:
+          title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': '迷宮: 序列'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 畫家： 嵌套的迴圈
-          'Farmer: While Loops': 農夫： ｢當｣迴圈　
-          'Bee: Nested Loops': 蜜蜂： 嵌套的迴圈
-          'Artist: Functions': 畫家：函數
-          'Bee: Debugging': 蜜蜂： 除錯
-        course4pre:
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': '迷宮: 序列'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 畫家： 嵌套的迴圈
-          'Farmer: While Loops': 農夫： ｢當｣迴圈　
-          'Bee: Nested Loops': 蜜蜂： 嵌套的迴圈
-          'Artist: Functions': 畫家：函數
-          'Bee: Debugging': 蜜蜂： 除錯
-        Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken
+            Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
           'Maze: Sequence': '迷宮: 序列'
           'Artist: Sequence': 'Artist: Sequence'
@@ -322,6 +299,9 @@
           Special: 特別
           Binary: Binary
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Blocks to Math
@@ -350,6 +330,207 @@
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
           'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Eval: Boolean Operators': 布林運算子
+          'Play Lab: Booleans': 'Play Lab: Booleans'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            and Piecewise Functions'
+          'Eval: Conditionals': 流程類別
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            Detection and the Distance Formula'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+        infinity:
+          title: 播放實驗室
+          description_short: 創建一個故事或做遊戲玩實驗室！
+          description: 創建一個故事或做遊戲玩實驗室！
+          Play Lab: 播放實驗室
+          Infinity: 無窮
+        algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and
+            programming language used in Code.org CS in Algebra
+          description: A handful of puzzles to demonstrate the environment and programming
+            language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: The Design Recipe
+        K5PD:
+          title: K5 Professional Development
+          description: K5 課程的專業發展
+          description_short: K5 課程的專業發展
+          Introduction to PD: PD 簡介
+          Blockly Basics: Blockly 的基本知識
+          Writing computer programs: 編寫電腦程式
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: 如何超越 課程1、 2 和 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+        netsim:
+          title: Internet Simulator
+          description_short: ''
+          description: ''
+          Internet Simulator: Internet Simulator
+          Unit 1: 單元 1
+          Unit 2: 單元 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: 以 bits 與 bytes 創造圖像
+          Pixelation: Pixelation
+        20-hour:
+          title: 'K 8 簡介電腦科學課程 （15-25 小時） '
+          description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
+          Introduction to Computer Science: 電腦科學導論
+          The Maze: 迷宮
+          Computational Thinking: 電腦計算式思維
+          Graph Paper Programming: 圖畫紙程式設計
+          The Artist: 藝術家
+          Algorithms: 演算法
+          The Artist 2: '藝術家 2 '
+          Functions: 函數類別
+          The Farmer: 農夫
+          Conditionals: 流程類別
+          The Artist 3: '藝術家 3 '
+          Song Writing: 歌曲創作
+          The Farmer 2: '農夫 2 '
+          Abstraction: 抽象
+          The Artist 4: '藝術家 4 '
+          Relay Programming: 接力式程式設計
+          The Farmer 3: '農夫 3 '
+          The Internet: 網際網路
+          The Artist 5: '藝術家 5 '
+          Wrap-up: 總結
+        edit-code:
+          title: 編輯程式碼
+          description: ''
+          The Maze: 迷宮
+          Applab: Applab
+          The Artist: 藝術家
+          Play Lab: 播放實驗室
+        events:
+          title: 事件類別
+          description: ''
+          Bounce: 彈跳
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy遊戲設計
+          description: 寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學
+          Flappy Code: Flappy遊戲設計
+        jigsaw:
+          title: Jigsaw
+          description: ''
+          Jigsaw: Jigsaw
+        step:
+          title: 步驟
+          description: ''
+          Step: 步驟
+        Hour of Code:
+          title: 一小時Code 2013
+          description: ''
+          Hour of Code 2013: 一小時Code 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        course4pre:
+          title: Course 4 Prerequisite
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken
+            Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': '迷宮: 序列'
+          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Loops': 'Artist: Loops'
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Nested Loops': 畫家： 嵌套的迴圈
+          'Farmer: While Loops': 農夫： ｢當｣迴圈　
+          'Bee: Nested Loops': 蜜蜂： 嵌套的迴圈
+          'Artist: Functions': 畫家：函數
+          'Bee: Debugging': 蜜蜂： 除錯
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: 第 8 課
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
           'Play Lab: Booleans': 'Play Lab: Booleans'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
@@ -360,29 +541,44 @@
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
-        infinity:
-          title: 播放實驗室
-          description_short: 創建一個故事或做遊戲玩實驗室！
-          description: 創建一個故事或做遊戲玩實驗室！
-          Play Lab: 播放實驗室
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming
-            language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
           Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
+          Strings and Images: Strings and Images
+          Contracts: Contracts
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
-        K5PD:
-          Introduction to PD: Introduction to PD
-        netsim:
-          title: Internet Simulator
-          description_short: ''
-          description: ''
-          Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: 無窮
+          Your Game - Animation: Your Game - Animation
+          Booleans: 布林值
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 你的遊戲-布林值
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: 通過函數式程式設計教代數
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: 布林值
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 你的遊戲-布林值
+          Luigi's Pizza: 路易吉的披薩
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: 你的遊戲-碰撞檢測
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: PD 簡介
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

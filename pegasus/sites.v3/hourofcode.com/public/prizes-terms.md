@@ -1,5 +1,5 @@
 ---
-title: How-to Guide for Organisations
+title: Prizes Terms
 layout: wide
 nav: resources_nav
 ---

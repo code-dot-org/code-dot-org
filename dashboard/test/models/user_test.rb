@@ -6,8 +6,6 @@ class UserTest < ActiveSupport::TestCase
   setup do
     @good_data = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
     @good_data_young = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
-    
-    ActionMailer::Base.deliveries.clear
   end
 
   test "log in with password with pepper" do
@@ -72,9 +70,9 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create user with duplicate email" do
     # actually create a user
-    user = User.create!(@good_data)
+    User.create!(@good_data)
 
-    # Now create second user 
+    # Now create second user
     user = User.create(@good_data)
     assert_equal ['Email has already been taken'], user.errors.full_messages
 
@@ -86,9 +84,9 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create young user with duplicate email" do
     # actually create a user
-    user = User.create!(@good_data_young)
+    User.create!(@good_data_young)
 
-    # Now create second user 
+    # Now create second user
     user = User.create(@good_data_young.merge(hashed_email: User.hash_email(@good_data_young[:email])))
     assert_equal ['Email has already been taken'], user.errors.full_messages
 
@@ -176,7 +174,7 @@ class UserTest < ActiveSupport::TestCase
     user.save!
 
     user = User.find(user.id)
-    
+
     assert_equal "21+", user.age
   end
 
@@ -194,7 +192,7 @@ class UserTest < ActiveSupport::TestCase
     user.save!
 
     user = User.find(user.id)
-    
+
     assert_equal "21+", user.age
   end
 
@@ -314,7 +312,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next unfinished level if not completed any unplugged levels' do
     user = create :user
-    twenty_hour = Script.find(Script::TWENTY_HOUR_ID)
+    twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
       next if script_level.level.game.unplugged? # skip all unplugged
       next if script_level.chapter > 33
@@ -325,7 +323,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can get next unfinished level, not tainted by other user progress' do
     user = create :user
-    twenty_hour = Script.find(Script::TWENTY_HOUR_ID)
+    twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter > 33
       UserLevel.create(user: create(:user), level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
@@ -337,6 +335,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     assert user.secret_picture
     assert user.secret_words
+    assert user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
   end
 
   test 'reset_secret_picture' do
@@ -354,7 +353,7 @@ class UserTest < ActiveSupport::TestCase
     # there's only 22 of them and this is random, so it is possible to
     # get the same password again
 
-    pictures = 1.upto(5).map do |i|
+    pictures = 1.upto(5).map do
       user.reset_secret_picture
       user.secret_picture
     end
@@ -403,7 +402,7 @@ class UserTest < ActiveSupport::TestCase
     # create the younger user first
     email1 = 'email1@email.xx'
     create :user, birthday: birthday_4, email: email1
-    
+
     assert_does_not_create(User) do
       # cannot create an older user with duplicate email
       user = User.create @good_data.merge(birthday: birthday_20, email: email1)
@@ -452,6 +451,19 @@ class UserTest < ActiveSupport::TestCase
     assert older_user.hashed_email
   end
 
+  test 'changing user to teacher saves email' do
+    student = create :user, age: 10, email: 'email@old.xx'
+
+    assert student.email.blank?
+    assert student.hashed_email
+
+    student.update_attributes(user_type: 'teacher', email: 'email@old.xx')
+    student.save!
+
+    assert_equal 'email@old.xx', student.email
+    assert_equal '21+', student.age
+  end
+
   test 'under 13' do
     user = create :user
     assert !user.under_13?
@@ -483,7 +495,7 @@ class UserTest < ActiveSupport::TestCase
   test "no send reset password for empty email" do
     error_user = User.send_reset_password_instructions(email: nil)
     assert error_user.errors[:email]
-    
+
     assert ActionMailer::Base.deliveries.empty?
   end
 
@@ -527,12 +539,12 @@ class UserTest < ActiveSupport::TestCase
   test 'send reset password for user without age' do
     email = 'email@email.xx'
     user = create :user, age: 10, email: email
-    
+
     user.update_attribute(:birthday, nil) # hacky
 
     user = User.find(user.id)
     assert !user.age
-    
+
     User.send_reset_password_instructions(email: email)
 
     mail = ActionMailer::Base.deliveries.first
@@ -546,7 +558,7 @@ class UserTest < ActiveSupport::TestCase
   test 'actually reset password for user without age' do
     email = 'email@email.xx'
     user = create :user, age: 10, email: email
-    
+
     user.update_attribute(:birthday, nil) # hacky
 
     user = User.find(user.id)
@@ -590,13 +602,13 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
 
     start_date = Time.now - 3.months
-    
+
     # do a level that is both in script 1 and hoc
     UserLevel.create!(user_id: user.id, level_id: Script.twenty_hour_script.script_levels[1].level.id,
                       created_at: start_date, updated_at: start_date)
 
     user.backfill_user_scripts
-    
+
 
     assert_equal [Script.twenty_hour_script, Script.find_by(name: 'hourofcode')], user.working_on_scripts
   end
@@ -614,14 +626,14 @@ class UserTest < ActiveSupport::TestCase
       UserLevel.record_timestamps = false # ooh
       UserLevel.create!(user_id: user.id, level_id: sl1.level.id,
                         created_at: start_date, updated_at: start_date)
-      
+
       UserLevel.create!(user_id: user.id, level_id: sl2.level.id,
                         created_at: progress_date, updated_at: progress_date)
 
       assert_creates(UserScript) do
         user.backfill_user_scripts
       end
-      
+
       user_script = UserScript.last
       assert_equal start_date.to_i, user_script.started_at.to_i
       assert_equal progress_date.to_i, user_script.last_progress_at.to_i
@@ -637,10 +649,10 @@ class UserTest < ActiveSupport::TestCase
       Follower.record_timestamps = false
 
       assigned_date = Time.now - 20.days
-      
+
       student = create :student
       section = create :section, script: Script.find_by_name('course1')
-      follower = create :follower, student_user: student, section: section, created_at: assigned_date
+      create :follower, student_user: student, section: section, created_at: assigned_date
 
       assert_creates(UserScript) do
         student.backfill_user_scripts
@@ -675,12 +687,12 @@ class UserTest < ActiveSupport::TestCase
       UserLevel.record_timestamps = false
 
       completed_date = Time.now - 20.days
-      
+
       student = create :student
       script = Script.find_by_name('playlab')
 
       complete_script_for_user(student, script, completed_date)
-      
+
       assert_creates(UserScript) do
         student.backfill_user_scripts
       end
@@ -701,14 +713,14 @@ class UserTest < ActiveSupport::TestCase
       UserLevel.record_timestamps = false
 
       completed_date = Time.now - 20.days
-      
+
       student = create :student
       script = Script.find_by_name('playlab')
 
       # complete the script
       complete_script_for_user(student, script, completed_date)
 
-      # and then modify so the last level is... 
+      # and then modify so the last level is...
       sl = script.script_levels.last
       ul = UserLevel.where(user_id: student.id, level_id: sl.level_id).first
       ul.best_result = 10 # ... not passed
@@ -764,7 +776,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal "JADENDUMPLING", student.name
   end
-  
+
 
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
@@ -836,7 +848,7 @@ class UserTest < ActiveSupport::TestCase
     users = names.map do |name|
       User.create!(@good_data.merge(name: name, email: "test_email#{i+=1}@test.xx")) # use real create method not the factory
     end
-    
+
     assert_equal expected_usernames, users.collect(&:username)
   end
 

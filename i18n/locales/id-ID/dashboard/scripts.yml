@@ -134,8 +134,8 @@ id:
           description_audience: Ages 8+ (after Course 2)
           description_short: Course 3 is a follow-up to Course 2.
         msm:
-          title: Middle School Math
-          description: Private work in progress for Middle School Math.
+          title: Matematika Sekolah Menengah Pertama
+          description: Pekerjaan pribadi dalam proses untuk Matematika Sekolah Menengah Pertama.
           Graph Paper Programming: Pemrograman grafis diatas kertas
           Assessments: Penilaian
           Unit 1: Unit 1
@@ -143,7 +143,7 @@ id:
           Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
           "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
           "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: Contracts
+          Contracts: Kontrak
           "Artist: Writing Contracts": 'Artist: Writing Contracts'
           "Calc: Defining Variables": 'Calc: Defining Variables'
           "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
@@ -184,14 +184,14 @@ id:
           "Eval: Design Recipe": 'Eval: Design Recipe'
         playlab:
           title: Play Lab
-          description: Create a story or make a game with Play Lab!
+          description: Buat cerita atau buat permainan dengan Play Lab!
           Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          description_short: Buat cerita atau buat permainan dengan Play Lab!
         artist:
           title: Artis
-          description: Draw cool pictures and designs with the Artist!
+          description: Gambarlah gambar dan desain-desain yang keren dengan the Artist!
           Artist: Artis
-          description_short: Draw cool pictures and designs with the Artist!
+          description_short: Gambarlah gambar dan desain-desain yang keren dengan the Artist!
         scrat:
           title: Scrat
           description_short: Scrat short description.
@@ -237,31 +237,9 @@ id:
           Artist Binary: Artis Biner
           description_audience: Usia 10 + (setelah Kursus 3)
         Course4pre:
+          title: Kursus 4 Prasyarat
           description_short: Sbuah ringkasan rampup dari konsep bagi siswa yang belum mengambil Kursus 2 dan 3.
-          Course 4 Prerequisite: Kursus 4 Prasyarat
-          "Maze: Sequence": 'Labirin: Urutan'
-          "Artist: Sequence": 'Artis: urutan'
-          "Artist: Loops": 'Artis: loop'
-          "Bee: Conditionals": 'Lebah: Kondisional'
-          "Artist: Nested Loops": 'Artis: Sarang Pengulangan'
-          "Farmer: While Loops": 'Petani: Ketika Pengulangan'
-          "Bee: Nested Loops": 'Lebah: Sarang Pengulangan'
-          "Artist: Functions": 'Artis: Fungsi'
-          "Bee: Debugging": 'Lebah: Debugging'
-        course4pre:
-          description_short: Sbuah ringkasan rampup dari konsep bagi siswa yang belum mengambil Kursus 2 dan 3.
-          Course 4 Prerequisite: Kursus 4 Prasyarat
-          "Maze: Sequence": 'Labirin: Urutan'
-          "Artist: Sequence": 'Artis: urutan'
-          "Artist: Loops": 'Artis: loop'
-          "Bee: Conditionals": 'Lebah: Kondisional'
-          "Artist: Nested Loops": 'Artis: Sarang Pengulangan'
-          "Farmer: While Loops": 'Petani: Ketika Pengulangan'
-          "Bee: Nested Loops": 'Lebah: Sarang Pengulangan'
-          "Artist: Functions": 'Artis: Fungsi'
-          "Bee: Debugging": 'Lebah: Debugging'
-        Course4pre (Case Conflict):
-          description_short: Sbuah ringkasan rampup dari konsep bagi siswa yang belum mengambil Kursus 2 dan 3.
+          description: Sbuah ringkasan rampup dari konsep bagi siswa yang belum mengambil Kursus 2 dan 3.
           Course 4 Prerequisite: Kursus 4 Prasyarat
           "Maze: Sequence": 'Labirin: Urutan'
           "Artist: Sequence": 'Artis: urutan'
@@ -294,6 +272,9 @@ id:
           Special: Spesial
           Binary: Biner
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Blocks to Math
@@ -303,10 +284,202 @@ id:
           Design Recipe: Design Recipe
           Booleans: Boolean
           Conditionals: Kondisi
-          Free Play: Free Play
+          Free Play: Permainan Gratis
         algebra:
-          title: Computer Science in Algebra
+          title: Ilmu Komputer dalam Aljabar
           description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Strings and Images
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": Kondisi
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+        infinity:
+          title: Disney Infinity Play Lab
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          Play Lab: Play Lab
+          Infinity: ∞
+        algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: The Design Recipe
+        K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+        netsim:
+          title: Simulator Internet
+          description_short: ""
+          description: ""
+          Internet Simulator: Simulator Internet
+          Unit 1: Unit 1
+          Unit 2: Unit 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: 20-Hour Intro Course
+          description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk semua usia.
+          Introduction to Computer Science: Pengantar Ilmu Komputer
+          The Maze: Labirin
+          Computational Thinking: Berpikir secara komputasi
+          Graph Paper Programming: Pemrograman grafis diatas kertas
+          The Artist: Artis
+          Algorithms: Algoritma
+          The Artist 2: Artis 2
+          Functions: Fungsi
+          The Farmer: Petani
+          Conditionals: Kondisi
+          The Artist 3: Artis 3
+          Song Writing: Menulis lagu
+          The Farmer 2: Petani 2
+          Abstraction: Abstraksi
+          The Artist 4: Artis 4
+          Relay Programming: Pemrograman relay
+          The Farmer 3: Petani 3
+          The Internet: Internet
+          The Artist 5: Artis 5
+          Wrap-up: Penutupan
+        edit-code:
+          title: Mengedit kode
+          description: ""
+          The Maze: Labirin
+          Applab: Applab
+          The Artist: Artis
+          Play Lab: Play Lab
+        events:
+          title: kegiatan
+          description: ""
+          Bounce: Terpental
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy Code
+          description: Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba Tutorial Flappy code kami!
+          Flappy Code: Flappy Code
+        jigsaw:
+          title: Teka-teki
+          description: ""
+          Jigsaw: Teka-teki
+        step:
+          title: Langkah
+          description: ""
+          Step: Langkah
+        Hour of Code:
+          title: Koding satu jam 2013
+          description: ""
+          Hour of Code 2013: Koding satu jam 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Kursus 4 Prasyarat
+          description_short: Sbuah ringkasan rampup dari konsep bagi siswa yang belum mengambil Kursus 2 dan 3.
+          description: Sbuah ringkasan rampup dari konsep bagi siswa yang belum mengambil Kursus 2 dan 3.
+          Course 4 Prerequisite: Kursus 4 Prasyarat
+          "Maze: Sequence": 'Labirin: Urutan'
+          "Artist: Sequence": 'Artis: urutan'
+          "Artist: Loops": 'Artis: loop'
+          "Bee: Conditionals": 'Lebah: Kondisional'
+          "Artist: Nested Loops": 'Artis: Sarang Pengulangan'
+          "Farmer: While Loops": 'Petani: Ketika Pengulangan'
+          "Bee: Nested Loops": 'Lebah: Sarang Pengulangan'
+          "Artist: Functions": 'Artis: Fungsi'
+          "Bee: Debugging": 'Lebah: Debugging'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
           "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
           "Eval: Strings and Images": 'Eval: Strings and Images'
@@ -327,28 +500,43 @@ id:
           "Eval: Conditionals": 'Eval: Conditionals'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-        infinity:
-          title: Play Lab
-          description_short: Create a story or make a game with Play Lab!
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-        algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
           Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
+          Strings and Images: Strings and Images
+          Contracts: Kontrak
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
-        K5PD:
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
           Introduction to PD: Introduction to PD
-        netsim:
-          title: Simulator Internet
-          description_short: ""
-          description: ""
-          Internet Simulator: Simulator Internet
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: ∞
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

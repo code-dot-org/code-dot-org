@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "beräkna"},
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "Försök ordna om dina argument för att få exakt samma uttryck."},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Du har okopplade block. Menade du att fästa dessa till \"beräkna\" blocket?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "Din funktion returnerar inte rätt resultat för alla värden."},
 "goal":function(d){return "Mål:"},
-"reinfFeedbackMsg":function(d){return "Här är din berättelse! Fortsätta att arbeta på den eller gå vidare till nästa pussel!"},
-"yourExpression":function(d){return "Ditt uttryck:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Här är din beräkning! Fortsätt arbete på det, eller gå vidare till nästa övning!"},
+"yourExpression":function(d){return "Ditt uttryck:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

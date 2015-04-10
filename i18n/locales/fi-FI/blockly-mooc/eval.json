@@ -1,15 +1,18 @@
 {
+  "badColorStringError":"Olet käyttänyt virheellistä värin merkkijonoa: {val}",
+  "badStyleStringError":"Olet käyttänyt virheellistä tyylin merkkijonoa: {val}",
   "circleBlockTitle":"ympyrä (säde, tyyli, väri)",
-  "displayBlockTitle":"näytä",
+  "displayBlockTitle":"arvioi",
   "ellipseBlockTitle":"ellipsi (leveys, korkeus, tyyli, väri)",
-  "extraTopBlocks":"Sinulla on vapaita lohkoja. Oliko tarkoituksesi liittää nämä \"näytä\" lohkoon?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"peitto (ylhäältä, alhaalta)",
   "placeImageBlockTitle":"aseta kuva (x, y, kuva)",
   "offsetBlockTitle":"siirtymä (x, y, kuva)",
   "rectangleBlockTitle":"suorakulmio (leveys, korkeus, tyyli, väri)",
-  "reinfFeedbackMsg":"Voit painaa \"Kokeile uudelleen\" -painiketta muokataksesi piirustustasi.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"kierrä (astetta, kuva)",
-  "scaleImageBlockTitle":"mittakaava (kerroin, kuva)",
+  "scaleImageBlockTitle":"skaalaa (kerroin, kuva)",
   "squareBlockTitle":"neliö (koko, tyyli, väri)",
   "starBlockTitle":"tähti (säde, tyyli, väri)",
   "radialStarBlockTitle":"sädetähti (pisteet, sisä, ulko, tyyli, väri)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"aluste (alhaalta, ylhäältä)",
   "outline":"ääriviiva",
   "solid":"kiinteä",
-  "string":"merkkijono"
+  "string":"merkkijono",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

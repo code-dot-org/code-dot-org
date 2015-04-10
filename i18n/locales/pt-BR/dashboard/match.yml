@@ -95,7 +95,7 @@ pt-BR:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Associação
-        Match the grid to the program: Associe a grade ao programa
+        Match the grid to the program.: Associe a grade ao programa.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -328,6 +328,19 @@ pt-BR:
         "small-star: string -> image": 'small-star: string -> image'
         "bigger-string: string string -> string": 'bigger-string: string string -> string'
         "find-price: string -> number": 'find-price: string -> number'
+      PDK5 Pair programming match:
+        Pair programming match: Associação de definições de programação em dupla
+        Match the definitions to the words you were introduced to in the last video.: Associe as definições às palavras que você viu no último vídeo.
+        Pair programming: Programação em dupla
+        Driver: Piloto
+        Navigator: Copiloto
+        When two students work at one computer to write a program together: Quando dois alunos trabalham juntos em um computador para escrever um programa
+        The student who controls the keyboard, mouse, or touch screen: O aluno que controla o teclado, o mouse, ou a tela de toque
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: O aluno que pensa no programa de forma geral e procura por possíveis erros ou enganos
+      PDK5 What is unplugged:
+        What is an unplugged activity?: O que é uma atividade offline?
+        Question: Pergunta
+        Answer 1: Resposta 1
       test matching image:
         Matching Images Two: Associando Imagens Dois
         Match up all the flowers by colour!: Conecte todas as flores pela cor!

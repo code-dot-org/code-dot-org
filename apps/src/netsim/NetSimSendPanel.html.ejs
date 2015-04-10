@@ -1,0 +1,11 @@
+<% var i18n = require('../../locale/current/netsim'); %>
+<div class="send-widget-packets"></div>
+<div class="send_widget_footer">
+  <div class="right-side-controls">
+    <% if (level.showAddPacketButton) { %>
+      <span class="netsim-button" id="add_packet_button"><%= i18n.addPacket() %></span>
+    <% } %>
+    <span class="netsim-button" id="send_button"><%= i18n.send() %></span>
+  </div>
+  <div class="packet_size"></div>
+</div>

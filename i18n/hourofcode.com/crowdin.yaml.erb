@@ -7,39 +7,22 @@ files:
   -
     source: '../pegasus/sites.v3/hourofcode.com/i18n/en.yml'
     translation: '/locales/%locale%/hourofcode/%two_letters_code%.yml'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/partners.md'
+  - 
+    source: '../pegasus/sites.v3/hourofcode.com/public/*.md'
     translation: '/locales/%locale%/hourofcode/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/prizes-terms.md'
-    translation: '/locales/%locale%/hourofcode/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/prizes-thanks.md'
-    translation: '/locales/%locale%/hourofcode/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/prizes.md'
-    translation: '/locales/%locale%/hourofcode/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/resources.md'
-    translation: '/locales/%locale%/hourofcode/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/thanks.md'
-    translation: '/locales/%locale%/hourofcode/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/tutorial-guidelines.md'
-    translation: '/locales/%locale%/hourofcode/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/whole-school.md'
-    translation: '/locales/%locale%/hourofcode/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/resources/how-to.md'
+  - 
+    source: '../pegasus/sites.v3/hourofcode.com/public/resources/*.md'
     translation: '/locales/%locale%/hourofcode/resources/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/resources/press-kit.md'
-    translation: '/locales/%locale%/hourofcode/resources/%original_file_name%'
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/public/resources/stats.md'
-    translation: '/locales/%locale%/hourofcode/resources/%original_file_name%'
+    ignore:
+      - ../pegasus/sites.v3/hourofcode.com/public/resources/how-to-ireland.md
+      - ../pegasus/sites.v3/hourofcode.com/public/resources/how-to-organisations.md
   -
     source: '../pegasus/emails/hoc_signup_2014_receipt.md'
-    translation: '/locales/%locale%/hourofcode/%original_file_name%'
+    translation: '/locales/%locale%/hourofcode/emails/%original_file_name%'
+  -
+    source: '../locales/source/hourofcode/*.idml'
+    translation: '/locales/%locale%/hourofcode/assets/%original_file_name%'
+  -
+    source: '../locales/source/hourofcode/*.md'
+    translation: '/locales/%locale%/hourofcode/assets/%original_file_name%'
+

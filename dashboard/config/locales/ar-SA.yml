@@ -1,7 +1,7 @@
 "ar":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'من فضلك، قم بتصحيح الأخطاء التالية:'
   activerecord:
     errors:
       messages:
@@ -22,6 +22,7 @@
           future: لا يمكن أن يكون في المستقبل
   hello: مرحبا بالعالم
   welcome_back: أهلا بكم من جديد, %{name}
+  submit: تسجيل
   add_teacher_form:
     code:
       label: 'أضف مدرسا:'
@@ -249,6 +250,7 @@
         artist: ارسم شيئا
     user:
       classroom: الصفحة الرئيسية المعلم
+      district_dashboard: District Dashboard
       label: مرحباً %{username}
       stats: انجازاتي
       settings: حسابي
@@ -334,6 +336,8 @@
     student_teacher_disassociated: تم إزالة % {teacher_name} كمدرس ل % {student_name}
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: إعادة إرسال رسالة تأكيد تعليمات
     new_password_hint: (اتركه فارغاً إذا كنت لا ترغب في تغييره)
     current_password_hint: (أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)
@@ -491,6 +495,9 @@
       body: عرض معرض صور "تطبيق" و "الفنان" التي تم إنشاؤها من قبل مستخدمينا
     frozen:
       title: ملكة الثلج Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: ووجه الطلاب هذه بالكود!
     students_made_these_with_code: طلاب صنعوا هذا بالكود!
@@ -526,6 +533,14 @@
     wrong_body: الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!
     correct_title: صحيح
     correct_body: هذا هو الجواب الصحيح.
+  contract_match:
+    wrong_title: الإجابة غير صحيحة
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: 'ادخل إجابتك هنا '
   dialog:
@@ -579,11 +594,48 @@
     دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> بدون تسجيل
     الدخول أو أطلب من والديك أو معلمك لتواصل معنا نيابة عنك.
   progress:
-    not_completed: غير مكتمل
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: أكملت، كتل كثيرة جداً
     completed_perfect: مكتمل, ممتاز
     furthest_level_attempted: حاول المستوى الأبعد
+    assessment: assessment
   studio:
     courses_working_on: إذا كنت تعمل على الدورات
     completed_courses: الدورات المكتملة
     all_courses: جميع الدورات
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: حفظ
+    delete: حذف
+    exit: Return to Course
+    my_projects: My Projects
+    share: مشاركة الآخرين
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: المزيد
+    name: الاسم
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: حذف؟
+    delete_yes: نعم
+    delete_no: لا
+    saved: Saved
+    not_saved: Not saved
+    cancel: إلغاء
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

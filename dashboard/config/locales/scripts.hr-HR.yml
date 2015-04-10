@@ -269,34 +269,11 @@
           Artist Binary: Umjetnik binarno
           description_audience: Dob 10+ (nakon Tečaja 3)
         Course4pre:
+          title: Preduvjeti za Tečaj 4
           description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli
             Tečajeve 2 i 3.
-          Course 4 Prerequisite: Preduvjeti za Tečaj 4
-          'Maze: Sequence': 'Labirint: Slijed'
-          'Artist: Sequence': 'Umjetnik: Slijed'
-          'Artist: Loops': 'Umjetnik: Petlje'
-          'Bee: Conditionals': 'Pčela: Uvjeti'
-          'Artist: Nested Loops': 'Umjetnik: Ugniježđene petlje'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Pčela: Ugniježđene petlje'
-          'Artist: Functions': 'Umjetnik: Funkcije'
-          'Bee: Debugging': 'Pčela: Ispravljanje pogrešaka'
-        course4pre:
-          description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli
-            Tečajeve 2 i 3.
-          Course 4 Prerequisite: Preduvjeti za Tečaj 4
-          'Maze: Sequence': 'Labirint: Slijed'
-          'Artist: Sequence': 'Umjetnik: Slijed'
-          'Artist: Loops': 'Umjetnik: Petlje'
-          'Bee: Conditionals': 'Pčela: Uvjeti'
-          'Artist: Nested Loops': 'Umjetnik: Ugniježđene petlje'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Pčela: Ugniježđene petlje'
-          'Artist: Functions': 'Umjetnik: Funkcije'
-          'Bee: Debugging': 'Pčela: Ispravljanje pogrešaka'
-        Course4pre (Case Conflict):
-          description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli
-            Tečajeve 2 i 3.
+          description: Kratko objašnjenje pojmova za učenike koji nisu prošli Tečajeve
+            2 i 3.
           Course 4 Prerequisite: Preduvjeti za Tečaj 4
           'Maze: Sequence': 'Labirint: Slijed'
           'Artist: Sequence': 'Umjetnik: Slijed'
@@ -329,6 +306,9 @@
           Special: Posebno
           Binary: Binarno
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Blokovi za matematiku
@@ -364,7 +344,7 @@
             igra)'
           'Unplugged: Conditionals and Piecewise Functions': 'Izvanmrežno: Uvjeti
             i Funkcije po dijelovima'
-          'Eval: Conditionals': 'Provjera: Uvjeti'
+          'Eval: Conditionals': Uvjeti
           'Unplugged: Collision Detection and the Distance Formula': 'Izvanmrežno:
             Opažanje sudara i Formula udaljenosti'
           'Play Lab: Collision Detection (Big Game)': 'Laboratorij igara: Opažanje
@@ -374,7 +354,11 @@
           description_short: Napravi priču ili igru pomoću Laboratorija igara!
           description: Napravi priču ili igru pomoću Laboratorija igara!
           Play Lab: Laboratorij igara
+          Infinity: Beskonačnost
         algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and
+            programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
@@ -384,14 +368,232 @@
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: The Design Recipe
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Internet Simulator
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Beskonačnost
+          Unit 1: Cjelina 1
+          Unit 2: Cjelina 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Uvod u informatiku za osnovnu školu (15-25 sati)
+          description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja
+            i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne
+            škole, ali je zabavan za učenje bez obzira na dob polaznika.
+          Introduction to Computer Science: Uvod u računalstvo
+          The Maze: Labirint
+          Computational Thinking: Razmišljati poput računala
+          Graph Paper Programming: Grafičko programiranje
+          The Artist: Umjetnik
+          Algorithms: Algoritmi
+          The Artist 2: Umjetnik 2
+          Functions: Funkcije
+          The Farmer: Farmer
+          Conditionals: Uvjeti
+          The Artist 3: Umjetnik 3
+          Song Writing: Skladanje pjesmi
+          The Farmer 2: Farmer 2
+          Abstraction: Apstrakcija
+          The Artist 4: Umjetnik 4
+          Relay Programming: Programiranje u smjenama
+          The Farmer 3: Farmer 3
+          The Internet: Internet
+          The Artist 5: Umjetnik 5
+          Wrap-up: Zamotavanje
+        edit-code:
+          title: Uredi kôd
+          description: ''
+          The Maze: Labirint
+          Applab: Applab
+          The Artist: Umjetnik
+          Play Lab: Laboratorij igara
+        events:
+          title: Događaji
+          description: ''
+          Bounce: Odskok
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy kôd
+          description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte
+            naš tutorijal izrade Flappy kôda!
+          Flappy Code: Flappy kôd
+        jigsaw:
+          title: Slagalica
+          description: ''
+          Jigsaw: Slagalica
+        step:
+          title: korak
+          description: ''
+          Step: korak
+        Hour of Code:
+          title: Hour of Code 2013
+          description: ''
+          Hour of Code 2013: Hour of Code 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Preduvjeti za Tečaj 4
+          description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli
+            Tečajeve 2 i 3.
+          description: Kratko objašnjenje pojmova za učenike koji nisu prošli Tečajeve
+            2 i 3.
+          Course 4 Prerequisite: Preduvjeti za Tečaj 4
+          'Maze: Sequence': 'Labirint: Slijed'
+          'Artist: Sequence': 'Umjetnik: Slijed'
+          'Artist: Loops': 'Umjetnik: Petlje'
+          'Bee: Conditionals': 'Pčela: Uvjeti'
+          'Artist: Nested Loops': 'Umjetnik: Ugniježđene petlje'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Pčela: Ugniježđene petlje'
+          'Artist: Functions': 'Umjetnik: Funkcije'
+          'Bee: Debugging': 'Pčela: Ispravljanje pogrešaka'
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Izvanmrežno: Videoigre
+            i Koordinatne ravnine'
+          'Calc: Evaluation Blocks': 'Računanje: Blokovi provjere'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Izvanmrežno: Ugovori'
+          'Eval: Writing Contracts': 'Provjera: Pisanje ugovora'
+          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Play Lab: Defining Variables (Big Game)': 'Laboratorij igara: Definiranje
+            varijabli (velika igra)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Izvanmrežno: Dizajn recepta'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Laboratorij igara: Animacija (velika
+            igra)'
+          'Unplugged: Booleans': 'Izvanmrežno: Logički operatori'
+          'Eval: Boolean Operators': 'Provjera: Logički operatori'
+          'Play Lab: Booleans': 'Laboratorij igara: Logički operatori'
+          'Play Lab: Boolean (Big Game)': 'Laboratorij igara: Logički operatori (velika
+            igra)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Izvanmrežno: Uvjeti
+            i Funkcije po dijelovima'
+          'Eval: Conditionals': 'Provjera: Uvjeti'
+          'Unplugged: Collision Detection and the Distance Formula': 'Izvanmrežno:
+            Opažanje sudara i Formula udaljenosti'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorij igara: Opažanje
+            sudara (velika igra)'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Contracts: Contracts
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: The Design Recipe
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Uvjeti i Funkcije po dijelovima
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorij igara: Opažanje
+            sudara (velika igra)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

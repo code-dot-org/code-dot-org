@@ -1,8 +1,11 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "מעגל (רדיוס, סגנון, צבע)",
   "displayBlockTitle": "תצוגה",
   "ellipseBlockTitle": "אליפסה (רוחב, גובה, סגנון, צבע)",
   "extraTopBlocks": "יש לך בלוקים לא מחוברים. האם התכוונת לצרף אותם לבלוק ה\"תצוגה\"?",
+  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "שכבת-על (למעלה, למטה)",
   "placeImageBlockTitle": "מקם-תמונה (y, x, תמונה)",
   "offsetBlockTitle": "איזון(y, x, תמונה)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle": "שכבה-תחתונה (למטה, למעלה)",
   "outline": "קו מתאר",
   "solid": "אטום",
-  "string": "מחרוזת"
+  "string": "מחרוזת",
+  "stringMismatchError": "You have a string with the wrong capitalization.",
+  "userCodeException": "An error occurred while executing your code.",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

@@ -1,0 +1,17 @@
+DEPENDENCIES
+  apt (~> 2.3.8)
+  build-essential (~> 2.1.3)
+  chef-client (~> 4.2.0)
+
+GRAPH
+  apt (2.3.10)
+  build-essential (2.1.3)
+  chef-client (4.2.0)
+    cron (>= 1.2.0)
+    logrotate (>= 1.2.0)
+    windows (~> 1.11)
+  chef_handler (1.1.6)
+  cron (1.6.1)
+  logrotate (1.8.0)
+  windows (1.36.1)
+    chef_handler (>= 0.0.0)

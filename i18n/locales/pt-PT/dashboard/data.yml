@@ -4,72 +4,72 @@ pt:
       name:
         20-hour:
           desc: Introdução ao curso de ciência da computação até ao 3º ciclo
-          Unplug1: Etapa 1
-          Maze: Etapa 2
-          Unplug2: Etapa 3
-          Unplug3: Etapa 4
-          Artist: Etapa 5
-          Unplug4: Etapa 6
-          Artist2: Etapa 7
-          Unplug5: Etapa 8
-          Farmer: Etapa 9
-          Unplug6: Etapa 10
-          Artist3: Etapa 11
-          Unplug7: Etapa 12
-          Farmer2: Etapa 13
-          Unplug8: Etapa 14
-          Artist4: Etapa 15
-          Unplug9: Etapa 16
-          Farmer3: Etapa 17
-          Unplug10: Etapa 18
-          Artist5: Etapa 19
-          Unplug11: Etapa 20
+          Unplug1: 1.ª ETAPA
+          Maze: 2.ª ETAPA
+          Unplug2: 3.ª ETAPA
+          Unplug3: 4.ª ETAPA
+          Artist: 5.ª ETAPA
+          Unplug4: 6.ª ETAPA
+          Artist2: 7.ª ETAPA
+          Unplug5: 8.ª ETAPA
+          Farmer: 9.ª ETAPA
+          Unplug6: 10.ª ETAPA
+          Artist3: 11.ª ETAPA
+          Unplug7: 12.ª ETAPA
+          Farmer2: 13.ª ETAPA
+          Unplug8: 14.ª ETAPA
+          Artist4: 15.ª ETAPA
+          Unplug9: 16.ª ETAPA
+          Farmer3: 17.ª ETAPA
+          Unplug10: 18.ª ETAPA
+          Artist5: 19.ª ETAPA
+          Unplug11: 20.ª ETAPA
         Hour of Code:
           desc: Hora de Código
-          Maze: Etapa 1
+          Maze: 1.ª ETAPA
         Edit Code:
           desc: Editar Código (beta)
-          MazeEC: Etapa 1
+          MazeEC: 1.ª ETAPA
         2014 Levels:
           desc: Bounce (beta)
-          Bounce: Etapa 1
+          Bounce: 1.ª ETAPA
         Builder Levels:
           desc: Puzzles criados pelo utilizador (beta)
-          Custom: Etapa 1
+          Custom: 1.ª ETAPA
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Etapa 1
+          Flappy: 1.ª ETAPA
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: Etapa 1
+          Jigsaw: 1.ª ETAPA
         Step Levels:
           desc: Maze (beta)
-          MazeStep: Stage Step
+          MazeStep: Passo da etapa
         edit-code:
           desc: Editar Código (beta)
-          MazeEC: Etapa 1
-          Applab: Etapa 2
-          ArtistEC: Etapa 3
-          StudioEC: Etapa 4
+          MazeEC: 1.ª ETAPA
+          Applab: 2.ª ETAPA
+          ArtistEC: 3.ª ETAPA
+          StudioEC: 4.ª ETAPA
         events:
           desc: Bounce (beta)
-          Bounce: Etapa 1
+          Bounce: 1.ª ETAPA
           Studio: Etapa 2
         builder:
           desc: Puzzles criados pelo utilizador (beta)
-          Custom: Etapa 1
+          Custom: 1.ª ETAPA
         flappy:
           desc: Flappy Bird
-          Flappy: Etapa 1
+          Flappy: 1.ª ETAPA
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: Etapa 1
+          Jigsaw: 1.ª ETAPA
         step:
           desc: Maze (beta)
-          MazeStep: Stage Step
+          MazeStep: Passo da etapa
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: Etapa 1
+          WordSearch: 1.ª ETAPA
     game:
       name:
         Unplug1: Introdução à Ciência Computacional
@@ -123,7 +123,7 @@ pt:
         parameters: Funções com parâmetros
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'Consegues ajudar-me a apanhar o porquinho? Empilha alguns blocos "segue em frente" e depois clica em "Executar" para me ajudares a chegar até ele. '
         maze_2_1: Este porco está a enervar-me. Ajuda-me a encontrá-lo!
         maze_2_2_5: Traça o caminho e leva-me até ao porco tolo. Evita a dinamite ou as penas vão voar!
         maze_2_3: Guia-me até à maldade verde! (Cuidado com a dinamite)
@@ -204,7 +204,7 @@ pt:
         turtle_3_5: 'Agora cria uma nova função "desenhar uma casa" e usa-a para hospedar dois gatos. Dica: Cria uma nova função usando o bloco "fazer algo" e digite o teu próprio texto para o nome do bloco.'
         turtle_3_6: 'Usando "desenhar um quadrado" como exemplo, adiciona uma entrada denominada "comprimento" para "desenhar um triângulo". Em seguida, desenha triângulos em tamanhos diferentes. (Dica: clica na estrela para adicionar uma entrada para uma função)'
         turtle_3_7: 'Adiciona uma entrada chamada "altura" para "desenhar uma casa" e constrói uma casa grande para o elefante ( com arestas de 150 pixeis de comprimento)'
-        turtle_3_8: 'Aqui estão todos os blocos do quebra-cabeças anterior.  Modifica "desenhar uma casa" para eu acabar no canto inferior direito depois de desenhar uma nova casa. Usa esta função modificada para desenhar três casas.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Podes recriar a função "Desenha uma casa" sem ajuda? Tenta, e depois desenha uma fileira de casas.'
         turtle_3_10: Aprendeste muito! Agora, já consegues desenhar o que quiseres. Tenta desenhar uma estrela, ou uma espiral ou um floco de neve extravagante.
         maze_karel_debug_seq_1: Bem-vindo à depuração! O meu código não funciona bem. Consegues detectar o problema e corrigi-lo para que eu possa ficar com o meu campo plano e pronto para começar a plantar?
@@ -336,81 +336,6 @@ pt:
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-    levelbuilder:
-      frozen line:
-        instructions: Olá! Sou a Elsa de Arendelle. Ajuda-me a criar uma linha única.
-      frozen perpendicular:
-        instructions: 'Agora vamos ver se podemos criar duas linhas que estão num ângulo de 90 grausuma com a outra. Precisará de usar um bloco de "Virar", bem como o bloco de "Movimento".'
-      frozen square iterative:
-        instructions: Parece que estamos na metade do caminho para fazer um quadrado. Vamos colocar 4 linhas juntas para criar um quadrado.
-      frozen square loop:
-        instructions: 'Olá, eu sou a Anna de Arendelle! Vamos fazer um quadrado com o bloco "Repetir", que usa menos blocos. Quantas vezes (?) deve o bloco "repetir" fazer um ciclo para fazer um quadrado?'
-      frozen square loop 3x:
-        instructions: "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square."
-      frozen square snowflake:
-        instructions: 'Can you create a snowflake using the "Repeat" block to make a square 10 times, and the "Turn" block to turn 36 degrees between each square?'
-      frozen cross:
-        instructions: 'Use the "Repeat" block to create a plus sign. Did you notice Elsa can move forward and backward?'
-      frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need to turn between each line?
-      frozen cross rotate dense:
-        instructions: "Let's repeat it 90 times! How many times does 90 go into 360? Hint: It's a really small number."
-      frozen diamond:
-        instructions: "Let's create a parallelogram. It's just like a square but has different angles: 60 and 120 degree angles instead of 90 degree angles."
-      frozen diamond mini snowflake:
-        instructions: |-
-          Did you know every snowflake is a different shape? Let's create a new snowflake by using the "Repeat" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.
-      frozen diamond snowflake:
-        instructions: "Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one."
-      frozen circle:
-        instructions: A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?
-      frozen circle function:
-        instructions: |-
-          Use the new "Create a circle" block to create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle function in circle:
-        instructions: "Now let's create 20 overlapping circles, turning 18 degrees between each circle."
-      frozen circle function with parameter:
-        instructions: |-
-          Here's a "Create circle" block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?
-      frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?
-      frozen snowflake branch:
-        instructions: 'Try using the "Create a snowflake branch" block to create three branches, which starts to look like a snowflake.'
-      frozen snowflake full:
-        instructions: "Now let's repeat it 8 times to make a beautiful snowflake!"
-      frozen freeplay:
-        instructions: "You've officially become a master artist! Create a winter wonderland."
-      scrat 16:
-        instructions: 'Acorn! Acorn! Acorn! Use an "if" block to get me there with the fewest number of blocks.'
-      scrat 17:
-        instructions: "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!"
-      scrat 18:
-        instructions: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block.'
-      scrat 19:
-        instructions: 'Pratica mais uma vez o bloco "se-senão", consegues à primeira tentativa?'
-      scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!
-      Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
-      Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
-      Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
-      Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
-      Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
-      Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
     video:
       name:
         maze_intro: Introdução ao labirinto
@@ -470,6 +395,7 @@ pt:
         C2_relay_programming: Programação do relé
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint_v2: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: Introdução ao artista
         C3_artist_functions: Artist Functions
@@ -492,7 +418,7 @@ pt:
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
-        C4_for_loops: For Loops
+        C4_for_loops: 'Ciclos "for"'
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
@@ -501,7 +427,7 @@ pt:
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_forloops: 'Ciclos "for"'
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro
@@ -510,10 +436,25 @@ pt:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variáveis
+        msm_7_functions: Funções
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: 'Arrasta um bloco "mover" e encaixa-o por baixo de outro bloco'
-        run: 'Clica em "executar" para experimentar o teu programa'
+        run: 'Clica em "Executar" para experimentares o teu programa'
         watch_again: Clica aqui para assistir de novo ao vídeo
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
         show_code_explanation: "Click here to see the code for the program you're making"
@@ -577,3 +518,7 @@ pt:
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

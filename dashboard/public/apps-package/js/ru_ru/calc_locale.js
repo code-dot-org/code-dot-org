@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "вычислить"},
+"divideByZeroError":function(d){return "Ваша программа пытается разделить на ноль."},
+"emptyComputeBlock":function(d){return "Вам необходимо присоединить блок к блоку «оценить»."},
 "equivalentExpression":function(d){return "Попробуйте переназначить ваши аргументы, чтобы получить точно такое же выражение."},
-"extraTopBlocks":function(d){return "У вас есть неприсоединенные блоки. Вы хотите подключить их к блоку \"Вычислить\"?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "оценить"},
+"extraTopBlocks":function(d){return "У вас есть неприсоединённые блоки.  Вы хотели присоединить их к блоку «оценить»?"},
+"failedInput":function(d){return "Ваша процедура возвращает неверный результат для некоторых значений."},
 "goal":function(d){return "Цель:"},
-"reinfFeedbackMsg":function(d){return "Вот ваш сюжет! Продолжайте работать над ним, или перейдите к следующей задаче!"},
-"yourExpression":function(d){return "Ваше выражение:"}};
+"levelIncompleteError":function(d){return "Ваше выражение не соответствует цели."},
+"missingFunctionError":function(d){return "Вы должны опредилить функцию "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "В вашем выражении не хватает переменной "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Вот ваши вычисления! Продолжай работать над этим, или переходи к следующей задаче!"},
+"yourExpression":function(d){return "Ваше выражение:"},
+"wrongInput":function(d){return "Вы вызываете функцию с неправильным значением параметра."},
+"wrongOtherValuesX":function(d){return "Ваше выражение возвращает неправильное значение, если мы поменяем "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Ваше выражение возвращает неправильный результат."}};

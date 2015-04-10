@@ -4,14 +4,14 @@
 .row#stats
   .span12#rightside
     .user-stats-block
-      - levels = script.script_levels.group_by(&:stage_or_game)
-      - levels = levels.select {|stage_or_game, _| !stage_or_game.unplugged? }
-      - levels.each_pair do |stage_or_game, sl_group|
+      - levels = script.script_levels.group_by(&:stage)
+      - levels = levels.select {|stage, _| !stage.unplugged? }
+      - levels.each_pair do |stage, sl_group|
         - color = cycle '#dadada', '#eeeeee'
-        - next if stage_or_game.unplugged?
+        - next if stage.unplugged?
         .game-group{style:"background-color: #{color}"}
           .stage 
-            = stage_title(script, stage_or_game)
+            = stage.localized_title
           .games
             - sl_group.each do |sl|
               .level

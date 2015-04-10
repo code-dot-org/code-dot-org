@@ -1,9 +1,17 @@
 {
-  "compute": "skaičiuoti",
+  "divideByZeroError": "Your program results in division by zero.",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "equivalentExpression": "Pamėgink pertvarkyti argumentus, kad gautum lygiai tokį pat reiškinį.",
+  "evaluate": "evaluate",
   "extraTopBlocks": "Turite nesujungtų blokelių. Gal norėjote juos prikabinti prie blokelio „skaičiuoti“?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "Tikslas:",
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "Štai tavo istorija! Tęsk darbą su ja arba pereik prie kito galvosūkio!",
-  "yourExpression": "Tavo reiškinys:"
+  "yourExpression": "Tavo reiškinys:",
+  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

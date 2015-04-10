@@ -1,0 +1,7 @@
+name '2-3 multi match 2'
+title ' text block <br> scale block <br> offset block <br> circle block <br> triangle block <br> rotate block'
+question 'Purple colored blocks are associated with __________ ?'
+right 'a image'
+wrong 'a number'
+wrong 'a string'
+wrong 'boolean'

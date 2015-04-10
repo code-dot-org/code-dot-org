@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-02-27T01:18:46.000Z",
+  "properties": {
+    "title": "title",
+    "content1": "description here",
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "markdown": "Insert maddie video 1 here\n"
+  },
+  "md5": "37f5dfa8b13d699e0d81822c2ed8b1c4"
+}]]></config>
+</External>

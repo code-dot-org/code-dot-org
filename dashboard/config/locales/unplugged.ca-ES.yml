@@ -3,14 +3,13 @@
     unplugged:
       Unplug1:
         title: Introducció a la informàtica
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Aquesta unitat introdueix el concepte informàtica i explica que fan
+          els informàtics. També dona als estudiants l’oportunitat d’assumir el rol
+          d’un informàtic. Al final de l’activitat cada estudiant podrà emportar-se
+          a casa una mostra del que ha après. Com a mestre tu pots estar temptat a
+          no ensenyar el vocabulari clau associat a la lliçó als més petitons, però
+          recorda que si intentes presentar-la ara de manera divertida i amena serà
+          molt més productiu que no pas deixar-ho per a oportunitats futures.
         pdfs:
         - unplug1
         video: Unplug1
@@ -31,11 +30,11 @@
         video: Unplug2
       Unplug3:
         title: Programació de paper quadriculat
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: Els alumnes començaran a entendre en que consisteix la programació programant-se
+          entre ells per pintar dibuixos. La classe començarà amb els alumnes intercanviant
+          instruccions per pintar quadrats en un full quadriculat amb la finalitat
+          de reproduir una imatge. Si queda temps al final de la sessió els alumnes
+          poden acabar utilitzant els seus propis dibuixos per programar.
         pdfs:
         - unplug3
         video: Unplug3

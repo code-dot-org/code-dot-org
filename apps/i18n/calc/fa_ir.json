@@ -1,9 +1,17 @@
 {
-  "compute": "محاسبه",
+  "divideByZeroError": "نتایج برنامه شما در تقسیم بر صفر.",
+  "emptyComputeBlock": "شما باید یک بلوک به بلوک \"compute\" متصل کنید.",
   "equivalentExpression": "سعی کنید ایده ها و فکرهایتان را منظم و مرتب کنید تا دقیقا همان عبارت را به دست بیاورید.",
+  "evaluate": "ارزیابی کنید",
   "extraTopBlocks": "شما بلوک های متصل نشده دارید. آیا منظورتان متصل کردن اینها به بلوک \"محاسبه\" بود؟",
-  "failedInput": "Your function does not return the right result for all values.",
+  "failedInput": "تابع تو نتیجه مناسبی برای همه مقادیر برنمیگرداند.",
   "goal": "هدف:",
-  "reinfFeedbackMsg": "این داستان شماست! کار کردن روی آن را ادامه دهید, یا به پازل بعدی بروید!",
-  "yourExpression": "عبارت شما:"
+  "levelIncompleteError": "معادله ی شما با هدف تطابق ندارد.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "معادله شما فاقد متغیر است{var}.",
+  "reinfFeedbackMsg": "این هم محاسبات خوذت! یا روی آنها کار کن، یا برو به پازل بعدی!",
+  "yourExpression": "عبارت شما:",
+  "wrongInput": "شما دارید تابع خود را با مقدار نادرست صدا می کنید.",
+  "wrongOtherValuesX": "اگر ما متغیر{var} را تغییر دهیم معادله شما جواب اشتباه می دهد.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

@@ -67,6 +67,8 @@ body {
   font-size: 18px;
   margin: 0.9375em 0 0 30px;
   font-family: 'Gotham 4r', sans-serif;
+  color: white;
+  text-decoration: none;
 }
 
 .headerlink:link,
@@ -78,7 +80,11 @@ body {
 .headerlink:hover,
 .headerlink:active {
   color: white;
-  border-bottom: solid 2px rgb(255, 138, 0);
+  border-bottom: solid 2px rgb(255, 128, 0);
+}
+
+.learnoption:hover {
+  text-decoration: underline;
 }
 
 #pagefooter {
@@ -125,16 +131,60 @@ body {
 /* styling for the embedded dashboard components... */
 
 #user_hero #welcome {
-  margin-top:10px;
-  margin-bottom:5px;
-  font-size: 18px;
+  left: 0px;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  text-align: left;
   font-family: 'Gotham 5r', sans-serif;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#user_hero button {
+  border: none;
+}
+#user_hero button.teacher {
+  background-color: rgb(0, 148, 202);
+}
+
+#user_hero button.student {
+  background-color: #7665a0;
+}
+
+#user_hero #welcome.teacher {
+  background-color: rgb(0, 148, 202);
+}
+
+#user_hero #welcome.student {
+  background-color: #7665a0;
+}
+
+#user_hero #body {
+  overflow: hidden;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#user_hero #body.teacher {
+  background-color: #d9eff7;
+}
+
+#user_hero #body.student {
+  background-color: #ebe8f1;
 }
 
 #user_hero #student_progress {
   font-family: 'Gotham 5r', sans-serif;
   width: 175px;
   display: inline-block;
+}
+
+#user_hero a {
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 #user_hero #left_off {
@@ -145,8 +195,11 @@ body {
 
 #user_hero #classroom {
   font-family: 'Gotham 5r', sans-serif;
-  font-size:16px;
-  margin-top:10px;
+}
+
+#user_hero #student_count {
+  width: 175px;
+  display: inline-block;
 }
 
 #sign_in_or_user .button-signin {
@@ -217,7 +270,7 @@ body {
 }
 
 .mobile-headers #pageheader #left {
-  margin: -8px 0 0 10px;
+  margin: -8px 0 5px 0px;
 }
 .mobile-headers #pageheader img#logo {
   width: 37px;

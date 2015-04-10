@@ -1,13 +1,16 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"kružnica (polomer, štýl, farba)",
-  "displayBlockTitle":"zobraz",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"elipsa (šírka, výška, štýl, farba)",
-  "extraTopBlocks":"Máš nepripojené bloky. Nechcel si ich pripojiť k bloku \"zobraz\"?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"prekrytie (zhora, zdola)",
   "placeImageBlockTitle":"umiestni-obrázok (x, y, obrázok)",
   "offsetBlockTitle":"offset (x, y, image)",
   "rectangleBlockTitle":"obdĺžnik (šírka, výška, štýl, farba)",
-  "reinfFeedbackMsg":"Môžeš stlačiť tlačítko \"Skúsiť znovu\" a upraviť svoj obrázok.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"otočenie (stupne, obrázok)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"štvorec (veľkosť, štýl, farba)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"podklad (zhora, zdola)",
   "outline":"obrys",
   "solid":"plný",
-  "string":"reťazec"
+  "string":"reťazec",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

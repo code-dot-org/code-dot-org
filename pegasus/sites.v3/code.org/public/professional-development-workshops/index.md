@@ -3,7 +3,11 @@ title: Find a workshop
 ---
 # Find a workshop (for US teachers only, grades K-5)
 We welcome elementary school teachers to sign up for a free, high-quality professional development workshop from an experienced computer science facilitator. The workshop will provide an intro to computer science, pedagogy, overview of the online curriculum, teacher dashboard, and strategies for teaching “unplugged” classroom activities. Workshops last 6-7 hours and will prepare you to teach the Code Studio courses for grades K-5. See [what else you'll get](#get) from attending a workshop.
-
+<br />
+<br />
+**No workshop in your area?** [Find](/educate/k5-affiliates-directory) a K-5 Affiliate near you.
+<br />
+<br />
 <%= view :workshop_search %>
 
 <a id="get"></a>
@@ -22,4 +26,5 @@ Workshop attendees will also receive a bag of Code.org swag and printed curricul
 
 ## Become a Code.org affiliate
 
-Are you an experienced computer science educator with experience hosting professional development workshops? [Sign up](https://docs.google.com/a/code.org/forms/d/1Sz1L4KXT-1K56XL4ThmbFuvcJCoUkKy_Vjw-gmulcK8/viewform) to be a Code.org Affiliate to offer workshops for K-5 teachers in your region.
+Are you an experienced computer science educator with experience hosting professional development workshops? <a href="https://docs.google.com/a/code.org/forms/d/1VURjBVOspP0H1ylwX1koYJ0YQdRxmp2JVWlWcslwosk/viewform"target="_blank">Apply</a>
+to become a Code.org Affiliate and host workshops for K-5 teachers in your region. We will notify you by **May 1, 2015** of your application status.

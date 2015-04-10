@@ -1,9 +1,17 @@
 {
-  "compute": "গণনা",
+  "divideByZeroError": "Your program results in division by zero.",
+  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
   "equivalentExpression": "ঠিক একই অভিব্যক্তি পেতে আপনার কথাবার্তা রেকর্ড করতে চেষ্টা করুন ।",
+  "evaluate": "evaluate",
   "extraTopBlocks": "তোমার অসংযুক্ত block আছে । তুমি  \"compute\" block এ যুক্ত করতে চেয়েছিলে কি ?",
   "failedInput": "Your function does not return the right result for all values.",
   "goal": "লক্ষ্য:",
+  "levelIncompleteError": "Your expression does not match the goal.",
+  "missingFunctionError": "You must define a function named {functionName}.",
+  "missingVariableX": "Your expression is missing variable {var}.",
   "reinfFeedbackMsg": "এটি তোমার কাহিনী ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !",
-  "yourExpression": "তোমার অভিব্যাক্তি:"
+  "yourExpression": "তোমার অভিব্যাক্তি:",
+  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "Your expresison does not return the correct result."
 }

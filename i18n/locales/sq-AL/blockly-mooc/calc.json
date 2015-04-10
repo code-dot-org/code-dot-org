@@ -1,9 +1,17 @@
 {
-  "compute":"llogarit",
+  "divideByZeroError":"Rezultatet e programit tuaj të pjestuar me zero.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "equivalentExpression":"Përpiqu të riformulosh argumentat e tu për të pasur egzaktësisht të njëjtën shprehje.",
-  "extraTopBlocks":"Ke shkëputur blloqet. Doje t'i bashkangjisje te blloku \" i llogaritur\"?",
-  "failedInput":"Your function does not return the right result for all values.",
+  "evaluate":"përcakto",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "failedInput":"Funksioni juaj nuk kthen rezultatet e duhura për të gjitha vlerat.",
   "goal":"Qëllimi:",
-  "reinfFeedbackMsg":"Here is your calculation! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Thënia jote:"
+  "levelIncompleteError":"Shprehja juaj nuk shkon me qëllimin.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Frazës tuaj i mungon variabla {var}.",
+  "reinfFeedbackMsg":"Ja ku është llogaritja juaj! Vazhdoni të punoni me të, ose shko tek puzzle tjetër!",
+  "yourExpression":"Thënia jote:",
+  "wrongInput":"Ju jeni duke e thërritur funksionin tuaj me vlerën e gabuar.",
+  "wrongOtherValuesX":"Rezultatet e frazës tuaj në vlerën e gabuar nëqoftëse ndryshojmë {var}.",
+  "wrongResult":"Your expression does not return the correct result."
 }

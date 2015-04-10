@@ -1,0 +1,16 @@
+.course_progress
+  .row#lesson
+    .span8#heading
+      %h3.whitetext{style: 'margin: 0'}
+        = t("project.projects")
+    .span4#heading{style: 'text-align: right;'}
+      = link_to projects_path do
+        %button.btn.btn-primary.button-continue#continue_button= t('project.view_all')
+  .row#stats
+    .span12
+      .padtopbottom{style: 'line-height: 1.5em'}
+        %span{style: 'font-size: 14px'}
+          = t("project.create_a_project")
+          &nbsp;&nbsp;
+        = render partial: 'projects/links'
+

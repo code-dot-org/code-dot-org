@@ -2,8 +2,8 @@ fa-AF:
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: اَعمال کاربر مطابق با یک
-        Matching loops: اَعمال سازگار
+        Artist Loops Matching One: حلقه های هنرمند منطبق شده با یک
+        Matching loops: حلقه های تطابق یافته
         Match the loop to the shape: حلقه را با شکل منطبق سازید
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
@@ -95,7 +95,7 @@ fa-AF:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: تطبیق
-        Match the grid to the program: تصویر مشبک را با برنامه اش تطبیق کن
+        Match the grid to the program.: Match the grid to the program.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -328,6 +328,19 @@ fa-AF:
         "small-star: string -> image": 'ستاره-کوچک: رشته-> تصویر'
         "bigger-string: string string -> string": 'رشته بزرگتر: رشته رشته -> رشته'
         "find-price: string -> number": 'یافتن-قیمت: رشته-> عدد'
+      PDK5 Pair programming match:
+        Pair programming match: مسابقه برنامه نویسی دونفره
+        Match the definitions to the words you were introduced to in the last video.: تعاریف را به کلماتی که در فیلم آخر به شما معرفی شدند تطبیق دهید.
+        Pair programming: برنامه نویسی دونفره
+        Driver: راننده
+        Navigator: نقشه خوان
+        When two students work at one computer to write a program together: زمانی که دو دانش آموز روی یک کامپیوتر کار می کنند تا با هم یک برنامه بنویسند
+        The student who controls the keyboard, mouse, or touch screen: دانش آموزی که کیبورد، ماوس، یا صفحه لمسی را کنترل می کند
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: دانش آموزی که به هدف کلی فکر می کند و دنبال اشتباهات باالقوه یا سوءتفاهم ها می گردد
+      PDK5 What is unplugged:
+        What is an unplugged activity?: یک فعالیت بدون اتصال چیست?
+        Question: سوال
+        Answer 1: جواب 1
       test matching image:
         Matching Images Two: تطبیق کردن تصاویر دو
         Match up all the flowers by colour!: همه گل ها را با رنگها تطبیق کن!

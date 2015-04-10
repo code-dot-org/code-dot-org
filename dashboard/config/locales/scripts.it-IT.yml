@@ -224,7 +224,7 @@
           description: Descrizione lunga di Scrat
           'Maze: Sequence': 'Labirinto: Sequenze'
         hourofcode:
-          Maze: Labirinto
+          Maze: Esercizio di Verifica (Risposte Multiple)
           title: L'Ora del Codice
           description: Impara i concetti base dell'informatica con i personaggi di
             Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
@@ -276,34 +276,11 @@
           Artist Binary: 'Artista: Binario'
           description_audience: Da 10 anni in su (dopo il Corso 3)
         Course4pre:
+          title: Prerequisiti del Corso 4
           description_short: Una breve presentazione dei concetti importanti per gli
             studenti che non hanno svolto i Corsi 2 e 3.
-          Course 4 Prerequisite: Prerequisiti del Corso 4
-          'Maze: Sequence': 'Labirinto: Sequenze'
-          'Artist: Sequence': 'Artista: Sequenze'
-          'Artist: Loops': 'Artista: Cicli'
-          'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
-          'Artist: Nested Loops': 'Artista: Cicli Annidati'
-          'Farmer: While Loops': 'Contadina: Cicli "Mentre"'
-          'Bee: Nested Loops': 'Ape: Cicli Annidati'
-          'Artist: Functions': 'Artista: Funzioni'
-          'Bee: Debugging': 'Ape: Correzione di Errori'
-        course4pre:
-          description_short: Una breve presentazione dei concetti importanti per gli
-            studenti che non hanno svolto i Corsi 2 e 3.
-          Course 4 Prerequisite: Prerequisiti del Corso 4
-          'Maze: Sequence': 'Labirinto: Sequenze'
-          'Artist: Sequence': 'Artista: Sequenze'
-          'Artist: Loops': 'Artista: Cicli'
-          'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
-          'Artist: Nested Loops': 'Artista: Cicli Annidati'
-          'Farmer: While Loops': 'Contadina: Cicli "Mentre"'
-          'Bee: Nested Loops': 'Ape: Cicli Annidati'
-          'Artist: Functions': 'Artista: Funzioni'
-          'Bee: Debugging': 'Ape: Correzione di Errori'
-        Course4pre (Case Conflict):
-          description_short: Una breve presentazione dei concetti importanti per gli
-            studenti che non hanno svolto i Corsi 2 e 3.
+          description: Una breve presentazione dei concetti importanti per gli studenti
+            che non hanno svolto i Corsi 2 e 3.
           Course 4 Prerequisite: Prerequisiti del Corso 4
           'Maze: Sequence': 'Labirinto: Sequenze'
           'Artist: Sequence': 'Artista: Sequenze'
@@ -336,6 +313,9 @@
           Special: Speciale
           Binary: Binario
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Test di usabilità per MSM
           Evaluation Blocks: Blocchi di Valutazione
           Blocks to Math: Dai Blocchi alla Matematica
@@ -345,14 +325,14 @@
           Design Recipe: La Ricetta della Progettazione
           Booleans: Valori Booleani
           Conditionals: Istruzioni condizionali
-          Free Play: Gioca liberamente
+          Free Play: Tempo di giocare
         algebra:
           title: Informatica in Algebra
           description: Impara la Programmazione Funzionale mediante l'Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Senza Rete: Videogiochi
             e Piani Cartesiani'
           'Calc: Evaluation Blocks': 'Calcolo: Blocchi di Valutazione'
-          'Eval: Strings and Images': 'Valutazione: Stringhe e Immagini'
+          'Eval: Strings and Images': Stringhe e Immagini
           'Unplugged: Contracts': 'Senza Rete: Contratti'
           'Eval: Writing Contracts': 'Valutazione: Scrittura di Contratti'
           'Calc: Defining Variables': 'Calcolo: Definizione di Variabili'
@@ -369,7 +349,7 @@
           'Play Lab: Boolean (Big Game)': 'Laboratorio: Valori Booleani (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Lezione Senza Rete:
             Istruzioni Condizionali e Funzioni a Tratti'
-          'Eval: Conditionals': 'Valutazione: Istruzioni Condizionali'
+          'Eval: Conditionals': Istruzioni condizionali
           'Unplugged: Collision Detection and the Distance Formula': 'Senza Rete:
             Rilevamento delle Collisioni e Formula per la Distanza'
           'Play Lab: Collision Detection (Big Game)': 'Laboratorio: Rilevamento delle
@@ -379,7 +359,11 @@
           description_short: Crea una storia o inventa un gioco col Laboratorio!
           description: Crea una storia o inventa un gioco col Laboratorio!
           Play Lab: Laboratorio
+          Infinity: Infinito
         algebrademo:
+          title: Demo per l'Algebra
+          description_short: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio
+            di programmazione usati nel corso "Informatica in Algebra"
           description: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio
             di programmazione usati nel corso "Informatica in Algebra"
           Algebra Demo: Demo per l'Algebra
@@ -389,15 +373,232 @@
           Defining Simple Functions: Definizione di Semplici Funzioni
           The Design Recipe: La Ricetta della Progettazione
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introduzione a PD
+          Blockly Basics: Concetti di base di Blockly
+          Writing computer programs: Scrivere programmi per il computer
+          Navigating the teacher dashboard: Esplorare il cruscotto di lavoro dell'insegnante
+          Unplugged lessons: Lezioni Senza Rete
+          Classroom Culture: Cultura di classe
+          Ways to go beyond Courses 1, 2, and 3: Cosa fare dopo i corsi 1, 2 e 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Simulatore di Internet
           description_short: ''
           description: ''
           Internet Simulator: Simulatore di Internet
-        Infinity:
-          title: Il Laboratorio dell'Infinito
-          description_short: Crea una storia o costruisci un gioco col "Laboratorio
-            dell'Infinito"!
-          description: Crea una storia o costruisci un gioco col "Laboratorio dell'Infinito"!
-          Infinity: Infinito
+          Unit 1: Unità 1
+          Unit 2: Unità 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Conversione di pixel
+          description: Crea immagini utilizzando bit e byte.
+          Pixelation: Conversione di pixel
+        20-hour:
+          title: Corso introduttivo di informatica per scuole elementari e medie inferiori
+            (in 20 lezioni)
+          description: Questo corso in 20 lezioni introduce i concetti fondamentali
+            dell'informatica e della programmazione. Il corso è progettato per l'uso
+            nelle scuole elementari e medie inferiori, ma è divertente per imparare
+            a qualunque età.
+          Introduction to Computer Science: Cos'è l'informatica
+          The Maze: Il labirinto
+          Computational Thinking: Pensiero computazionale
+          Graph Paper Programming: Programmazione su carta a quadretti
+          The Artist: L'artista
+          Algorithms: Algoritmi
+          The Artist 2: L'artista 2
+          Functions: Funzioni
+          The Farmer: La Contadina
+          Conditionals: Istruzioni condizionali
+          The Artist 3: L'artista 3
+          Song Writing: Composizione di canzoni
+          The Farmer 2: La Contadina 2
+          Abstraction: Astrazione
+          The Artist 4: L'artista 4
+          Relay Programming: Programmazione a Staffetta
+          The Farmer 3: La Contadina 3
+          The Internet: Internet
+          The Artist 5: L'artista 5
+          Wrap-up: Conclusione
+        edit-code:
+          title: Modifica il Codice
+          description: ''
+          The Maze: Il labirinto
+          Applab: Applab
+          The Artist: L'artista
+          Play Lab: Laboratorio
+        events:
+          title: Eventi
+          description: ''
+          Bounce: Ping-Pong
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Codice di "Flappy"
+          description: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso
+            sul Codice di "Flappy"!
+          Flappy Code: Codice di "Flappy"
+        jigsaw:
+          title: Puzzle
+          description: ''
+          Jigsaw: Puzzle
+        step:
+          title: Fai un passo
+          description: ''
+          Step: Fai un passo
+        Hour of Code:
+          title: L'Ora del Codice 2013
+          description: ''
+          Hour of Code 2013: L'Ora del Codice 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Prerequisiti del Corso 4
+          description_short: Una breve presentazione dei concetti importanti per gli
+            studenti che non hanno svolto i Corsi 2 e 3.
+          description: Una breve presentazione dei concetti importanti per gli studenti
+            che non hanno svolto i Corsi 2 e 3.
+          Course 4 Prerequisite: Prerequisiti del Corso 4
+          'Maze: Sequence': 'Labirinto: Sequenze'
+          'Artist: Sequence': 'Artista: Sequenze'
+          'Artist: Loops': 'Artista: Cicli'
+          'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
+          'Artist: Nested Loops': 'Artista: Cicli Annidati'
+          'Farmer: While Loops': 'Contadina: Cicli "Mentre"'
+          'Bee: Nested Loops': 'Ape: Cicli Annidati'
+          'Artist: Functions': 'Artista: Funzioni'
+          'Bee: Debugging': 'Ape: Correzione di Errori'
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Senza Rete: Videogiochi
+            e Piani Cartesiani'
+          'Calc: Evaluation Blocks': 'Calcolo: Blocchi di Valutazione'
+          'Eval: Strings and Images': 'Valutazione: Stringhe e Immagini'
+          'Unplugged: Contracts': 'Senza Rete: Contratti'
+          'Eval: Writing Contracts': 'Valutazione: Scrittura di Contratti'
+          'Calc: Defining Variables': 'Calcolo: Definizione di Variabili'
+          'Play Lab: Defining Variables (Big Game)': 'Laboratorio: Definizione di
+            Variabili (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Senza rete: La Ricetta della Progettazione'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Laboratorio: Animazione (Big Game)'
+          'Unplugged: Booleans': 'Senza Rete: Valori Booleani'
+          'Eval: Boolean Operators': 'Valutazione: Operatori Booleani'
+          'Play Lab: Booleans': 'Laboratorio: Valori Booleani'
+          'Play Lab: Boolean (Big Game)': 'Laboratorio: Valori Booleani (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Lezione Senza Rete:
+            Istruzioni Condizionali e Funzioni a Tratti'
+          'Eval: Conditionals': 'Valutazione: Istruzioni Condizionali'
+          'Unplugged: Collision Detection and the Distance Formula': 'Senza Rete:
+            Rilevamento delle Collisioni e Formula per la Distanza'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorio: Rilevamento delle
+            Collisioni (Big Game)'
+          Evaluation Blocks: Blocchi di Valutazione
+          Strings and Images: Stringhe e Immagini
+          Contracts: Contratti
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: La Ricetta della Progettazione
+          Your Game - Animation: Your Game - Animation
+          Booleans: Valori Booleani
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Istruzioni Condizionali e Funzioni
+            a Tratti
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Blocchi di Valutazione
+          Strings and Images: Stringhe e Immagini
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Valori Booleani
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorio: Rilevamento delle
+            Collisioni (Big Game)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduzione a PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

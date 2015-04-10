@@ -15,8 +15,18 @@
     "use_contract_editor": "true",
     "open_function_definition": "green triangle",
     "free_play": "false",
-    "embed": "false"
-  }
+    "embed": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Eval Define Funcs 2 triangle\",\r\n  \"callout_text\": \"Change the triangle's style here\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false",
+    "disable_examples": "false"
+  },
+  "md5": "6026accc3c1eda636947909a4321f0bc"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -25,11 +35,11 @@
           <mutation>
             <arg name="size"/>
             <description>Produces a green triangle of given size</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">green triangle</title>
           <functional_input name="STACK">
-            <block type="functional_triangle" inline="false" uservisible="false">
+            <block type="functional_triangle" inline="false" uservisible="false" id="callout_here">
               <functional_input name="SIZE">
                 <block type="functional_parameters_get" uservisible="false">
                   <mutation>
@@ -119,7 +129,7 @@
           <mutation>
             <arg name="size"/>
             <description>Produces a green triangle of given size</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">green triangle</title>
           <functional_input name="STACK">

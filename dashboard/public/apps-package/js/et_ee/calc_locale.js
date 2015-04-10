@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "arvuta"},
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "Sa pead siduma ploki \"arvuta\" plokiga."},
 "equivalentExpression":function(d){return "Proovi vahetada oma argumentide järjekorda ning saada täpselt sama avaldis."},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"arvuta\" klotsi külge?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Eesmärk:"},
-"reinfFeedbackMsg":function(d){return "See on sinu mäng! Jätka selle kallal töötamist või liigu edasi järgmise mõistatuse juurde!"},
-"yourExpression":function(d){return "Sinu avaldis:"}};
+"levelIncompleteError":function(d){return "Sinu avaldis ei sobi eesmärgiga."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Teie arvutus on siin! Jätka selle kallal töötamist või liigu järgmise pusle juurde!"},
+"yourExpression":function(d){return "Sinu avaldis:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

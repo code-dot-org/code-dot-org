@@ -26,7 +26,7 @@
   "moveDown": "liigu alla",
   "moveDownTooltip": "Liiguta reket allapoole.",
   "moveForward": "liigu edasi",
-  "moveForwardTooltip": "Move me forward one space.",
+  "moveForwardTooltip": "Liiguta mind ühe ühiku võrra edasi.",
   "moveLeft": "liigu vasakule",
   "moveLeftTooltip": "Liiguta reket vasakule.",
   "moveRight": "liigu paremale",
@@ -58,7 +58,7 @@
   "playSoundWood": "lase heli \"puit\"",
   "putdownTower": "put down tower",
   "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to playing your game.",
-  "removeSquare": "remove square",
+  "removeSquare": "eemalda ruut",
   "repeatUntil": "korda kuni",
   "repeatUntilBlocked": "while path ahead",
   "repeatUntilFinish": "repeat until finish",
@@ -113,6 +113,6 @@
   "whenWallCollided": "kui pall läheb vastu seina",
   "whenWallCollidedTooltip": "Täida allolevad käsud, kui pall läheb vastu seina.",
   "whileMsg": "tingimusel",
-  "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
+  "whileTooltip": "Korrake lisatud tegevusi kuni lõpppunkt on saavutatud.",
   "yes": "Jah"
 }

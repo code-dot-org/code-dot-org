@@ -233,7 +233,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBallSpeedFast":function(d){return "hızlı top hızı ayarla"},
 "setBallSpeedVeryFast":function(d){return "çok hızlı top hızı ayarla"},
 "setBallSpeedTooltip":function(d){return "Topun hızını ayarlar"},
-"setPaddleRandom":function(d){return "raketi rastgele seç"},
+"setPaddleRandom":function(d){return "rastgele raket seç"},
 "setPaddleHardcourt":function(d){return "raketi sert zemin yap"},
 "setPaddleRetro":function(d){return "raketi retro yap"},
 "setPaddleTooltip":function(d){return "Raket resmini ayarlar"},

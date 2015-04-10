@@ -53,7 +53,7 @@ nav: educate_nav
 
 <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/5oHe0ozN7Oc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
             
-            <p><a href="https://www.youtube.com/watch?5oHe0ozN7Oc"><strong>Chris Bosh on computer science</strong></p>
+            <p><a href="https://www.youtube.com/watch?5oHe0ozN7Oc"><strong>Chris Bosh on computer science</a></strong></p>
             
           </div>
 
@@ -84,6 +84,7 @@ Share these inspiring stories about students and teachers who are changing the f
 - [Fact-sheet for participation by women](http://www.ncwit.org/infographic/3435) 
 
 ## 5. Other Materials
+
 - Video library: [Use these videos to teach computer science in any class worldwide.](/educate/videos)
 - One-pager: [What can you do with CS?](https://www.dropbox.com/s/o1mafeosi0xuwb0/What_is_CS_and_Careers.pdf)
 

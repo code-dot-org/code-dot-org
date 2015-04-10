@@ -22,6 +22,7 @@
           future: 現在までの日付にする
   hello: 世界の皆さん、こんにちは
   welcome_back: Welcome Back, %{name}
+  submit: 送信
   add_teacher_form:
     code:
       label: 先生を追加：
@@ -233,6 +234,7 @@
         artist: 何かの絵を描く
     user:
       classroom: 先生用ホームページ
+      district_dashboard: District Dashboard
       label: こんにちは  %{username}
       stats: 私の進捗状況
       settings: 私のアカウント
@@ -295,9 +297,9 @@
     sections:
       add: Add section
       manage: セクションの管理
-      section: Section
-      students: Students
-      section_code: Section Code
+      section: セクション
+      students: 生徒
+      section_code: セクション・コード
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
@@ -316,6 +318,8 @@
     student_teacher_disassociated: '%{teacher_name} が  %{student_name}の教師として削除されています'
   user:
     email_confirm_needed: Eメール アドレスが確認されていません
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 確認手順の再送信
     new_password_hint: （変更したくない場合は空白のままにしてください）
     current_password_hint: (変更を確認するためにあなたの現在のパスワードが必要です)
@@ -384,7 +388,7 @@
     powered_by_aws: Powered by Amazon Web Services
     feedback: フィードバックする
     translate: あなたの言語の翻訳にご協力ください
-    support: Support
+    support: サポート
     support_url: http://support.code.org
     tos: 利用規約
     privacy: プライバシー ポリシー
@@ -467,7 +471,10 @@
       title: Gallery
       body: View a gallery of app and artist images created by our users
     frozen:
-      title: Frozen
+      title: アナと雪の女王
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: これらの作品は、生徒たちがコードを使って描きました！
     students_made_these_with_code: これらの作品は、生徒たちがコードを使って創りました！
@@ -502,6 +509,14 @@
     wrong_body: うまく解決できていません。もう一度やってみてください。
     correct_title: 正解
     correct_body: 正解です。
+  contract_match:
+    wrong_title: 不正解
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: ここに答えを入力
   dialog:
@@ -553,11 +568,48 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: 保存
+    delete: 削除
+    exit: Return to Course
+    my_projects: My Projects
+    share: 共有
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: それ以上
+    name: 名前
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: 削除しますか？
+    delete_yes: はい
+    delete_no: いいえ
+    saved: Saved
+    not_saved: Not saved
+    cancel: キャンセル
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

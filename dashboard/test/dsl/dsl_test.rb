@@ -56,4 +56,15 @@ wrong 'w3'
     assert_equal i18n_expected.to_yaml, i18n.to_yaml
   end
 
+  test 'test empty i18n' do
+    # Ensure nil entries are filtered from i18n files
+    input_dsl = <<DSL
+name 'name1'
+title nil
+DSL
+    _, i18n = MultiDSL.parse(input_dsl, 'test')
+    i18n_expected = {'en' => {'data' => {'multi' => {'name1' => {}}}}}
+    assert_equal i18n_expected, i18n
+  end
+
 end

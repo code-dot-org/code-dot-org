@@ -1,97 +1,16 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
+var assertEqual = testUtils.assertEqual;
+var netsimTestUtils = require('../util/netsimTestUtils');
+var fakeStorageTable = netsimTestUtils.fakeStorageTable;
+
 var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
-var _ = testUtils.requireWithGlobalsCheckBuildFolder('utils').getLodash();
-
-var assertEqual = function (left, right) {
-  assert(_.isEqual(left, right),
-      JSON.stringify(left) + ' equals ' + JSON.stringify(right));
-};
-
-/**
- * Storage table API placeholder for testing, always hits callbacks immediately
- * so tests can be written imperatively.
- * @returns {Object}
- */
-var fauxStorageTable = function () {
-  var log_ = '';
-  var rowIndex_ = 1;
-  var tableData_ = [];
-
-  return {
-
-    readAll: function (callback) {
-      log_ += 'readAll';
-
-      callback(tableData_);
-    },
-
-    read: function (id, callback) {
-      log_ += 'read[' + id + ']';
-
-      for (var i = 0; i < tableData_.length; i++) {
-        if (tableData_[i].id === id) {
-          callback(tableData_[i]);
-          return;
-        }
-      }
-      callback(undefined);
-    },
-
-    create: function (value, callback) {
-      log_ += 'create[' + JSON.stringify(value) + ']';
-
-      value.id = rowIndex_;
-      rowIndex_++;
-      tableData_.push(value);
-
-      callback(value);
-    },
-
-    update: function (id, value, callback) {
-      log_ += 'update[' + id + ', ' + JSON.stringify(value) + ']';
-
-      value.id = id;
-      for (var i = 0; i < tableData_.length; i++) {
-        if (tableData_[i].id === id) {
-          tableData_[i] = value;
-          callback(true);
-          return;
-        }
-      }
-
-      callback(false);
-    },
-
-    delete: function (id, callback) {
-      log_ += 'delete[' + id + ']';
-
-      for (var i = 0; i < tableData_.length; i++) {
-        if (tableData_[i].id === id) {
-          tableData_.splice(i, 1);
-          callback(true);
-          return;
-        }
-      }
-
-      callback(false);
-    },
-
-    log: function () {
-      if (arguments.length > 0) {
-        log_ = arguments[0];
-      }
-
-      return log_;
-    }
-  };
-};
 
 describe("NetSimTable", function () {
   var apiTable, netsimTable, callback, notified;
 
   beforeEach(function () {
-    apiTable = fauxStorageTable();
+    apiTable = fakeStorageTable();
     netsimTable = new NetSimTable(apiTable);
     callback = function () {};
     notified = false;

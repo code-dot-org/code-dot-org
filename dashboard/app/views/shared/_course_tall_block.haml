@@ -23,10 +23,12 @@
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-- elsif %w(artist playlab hourofcode frozen).include?(id)
+- elsif %w(artist playlab hourofcode frozen infinity).include?(id)
   - url = script_reset_url(id)
   - if id == 'frozen'
     - title = t('upsell.frozen.title')
+  - elsif id == 'infinity'
+    - title = t('upsell.infinity.title')
   - else
     - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
@@ -65,4 +67,4 @@
 
     - if audience
       .clear
-      .smalltext.whitetext{style: 'position: absolute; bottom: 0px; width: 100%; margin-top: 10px; padding-left: 10px; padding-right: 10px; padding-top: 4px; padding-bottom:4px; background-color: rgb(116, 128, 136);'}= audience
+      .smalltext.whitetext.audience= audience

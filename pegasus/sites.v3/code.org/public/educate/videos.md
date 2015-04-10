@@ -8,24 +8,47 @@ nav: educate_nav
 
 ## Educational videos
 
-Over time, as we recruit unique role models and celebrities to record educational content, we hope to build a growing library of educational videos available for reuse by educators worldwide, online or in classrooms. While it may take us time to make all our videos available, our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos
+As we recruit unique role models to record educational content, we are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. While this library is a work-in-progress, our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos
 
 <div style="float:left; padding:10px">
  
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/8T5acEwfJbw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/fVUL-vzrIcM?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
             
+<p><a href="https://youtu.be/fVUL-vzrIcM"><strong>Bill Gates explains IF/ELSE Statements</strong></a><a href="https://www.dropbox.com/sh/mmlq474q1y572c0/mWiztYFLeR/BillGates-IF%26IFELSE-general.mp4"><img src="/images/download.png" width="30px"></a></p>
+</div>
+
+<div style="float:left; padding:10px">
+ 
+<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/vgkahOzFH2Q?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            
+<p><a href="https://youtu.be/vgkahOzFH2Q"><strong>Pair Programming</strong></a><a href="https://www.dropbox.com/s/9nxua1hoyawa5dp/Pair_Programming_09112014.mp4"><img src="/images/download.png" width="30px"></a></p>
+</div>
+
+<div style='clear:both'></div>
+
+<div style="float:left; padding:10px">
+
+<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/8T5acEwfJbw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 <p><a href="https://www.youtube.com/watch?v=8T5acEwfJbw"><strong>Chris Bosh explains FUNCTIONS</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/viyVhu0ik7/Bosh-Functions-general.mp4"><img src="/images/download.png" width="30px"></a></p>
 </div>
 
 <div style="float:left; padding:10px">
-
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/fVUL-vzrIcM?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+ 
+<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/15aqFQQVBWU?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
             
-            <p><a href="https://www.youtube.com/watch?v=fVUL-vzrIcM"><strong>Bill Gates explains IF/ELSE statements</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/mWiztYFLeR/BillGates-IF%26IFELSE-general.mp4"><img src="/images/download.png" width="30px"></a></p>
-            
-          </div>
+<p><a href="https://youtu.be/15aqFQQVBWU"><strong>Kevin Systrom explains PIXELS</strong></a></p>
+</div>
 
 <div style='clear:both'></div>
+
+<div style="float:left; padding:10px">
+
+<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/hYvcoRkAkOU?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+<p><a href="https://www.youtube.com/watch?v=hYvcoRkAkOU"><strong>Mark Zuckerberg explains REPEAT LOOPS</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/Gb3xnOXsDr/Zuck-repeat-loops.mp4"><img src="/images/download.png" width="30px"></a></p>
+</div>
+         
 
 <div style="float:left; padding:10px">
 
@@ -36,13 +59,12 @@ Over time, as we recruit unique role models and celebrities to record educationa
 
 <div style="float:left; padding:10px">
 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/hYvcoRkAkOU?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-
-<p><a href="https://www.youtube.com/watch?v=hYvcoRkAkOU"><strong>Mark Zuckerberg teaches REPEAT LOOPS</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/Gb3xnOXsDr/Zuck-repeat-loops.mp4"><img src="/images/download.png" width="30px"></a></p>
-</div>
+<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/eZqKqI8AvnA?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            
+            <p><a href="https://youtu.be/eZqKqI8AvnA"><strong>PERSISTENCE and building a foundation</strong></a><a href="https://www.dropbox.com/s/ylzdzcsuh2r7hib/Building_a_Foundation_08_29_2014.mp4"><img src="/images/download.png" width="30px"></a></p>
+          </div>
 
 <div style='clear:both'></div>
-
 
 ---
 

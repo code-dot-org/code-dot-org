@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({82:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({95:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,520 @@ exports.define = function(name) {
   };
 };
 
-},{}],39:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
+/**
+	The missing SVG.toDataURL library for your SVG elements.
+
+	Usage: SVGElement.toDataURL( type, { options } )
+
+	Returns: the data URL, except when using native PNG renderer (needs callback).
+
+	type	MIME type of the exported data.
+			Default: image/svg+xml.
+			Must support: image/png.
+			Additional: image/jpeg.
+
+	options is a map of options: {
+		callback: function(dataURL)
+			Callback function which is called when the data URL is ready.
+			This is only necessary when using native PNG renderer.
+			Default: undefined.
+
+		[the rest of the options only apply when type="image/png" or type="image/jpeg"]
+
+		renderer: "native"|"canvg"
+			PNG renderer to use. Native renderer¹ might cause a security exception.
+			Default: canvg if available, otherwise native.
+
+		keepNonSafe: true|false
+			Export non-safe (image and foreignObject) elements.
+			This will set the Canvas origin-clean property to false, if this data is transferred to Canvas.
+			Default: false, to keep origin-clean true.
+			NOTE: not currently supported and is just ignored.
+
+		keepOutsideViewport: true|false
+			Export all drawn content, even if not visible.
+			Default: false, export only visible viewport, similar to Canvas toDataURL().
+			NOTE: only supported with canvg renderer.
+	}
+
+	See original paper¹ for more info on SVG to Canvas exporting.
+
+	¹ http://svgopen.org/2010/papers/62-From_SVG_to_Canvas_and_Back/#svg_to_canvas
+*/
+
+SVGElement.prototype.toDataURL = function(type, options) {
+	var _svg = this;
+
+	function debug(s) {
+		// We could find to a way to make this display depending on environment, but
+		// for now I think it's okay to just disable.
+		// console.log("SVG.toDataURL:", s);
+	}
+
+	function exportSVG() {
+		var svg_xml = XMLSerialize(_svg);
+		var svg_dataurl = base64dataURLencode(svg_xml);
+		debug(type + " length: " + svg_dataurl.length);
+
+		// NOTE double data carrier
+		if (options.callback) options.callback(svg_dataurl);
+		return svg_dataurl;
+	}
+
+	function XMLSerialize(svg) {
+
+		// quick-n-serialize an SVG dom, needed for IE9 where there's no XMLSerializer nor SVG.xml
+		// s: SVG dom, which is the <svg> elemennt
+		function XMLSerializerForIE(s) {
+			var out = "";
+
+			out += "<" + s.nodeName;
+			for (var n = 0; n < s.attributes.length; n++) {
+				out += " " + s.attributes[n].name + "=" + "'" + s.attributes[n].value + "'";
+			}
+
+			if (s.hasChildNodes()) {
+				out += ">\n";
+
+				for (var n = 0; n < s.childNodes.length; n++) {
+					out += XMLSerializerForIE(s.childNodes[n]);
+				}
+
+				out += "</" + s.nodeName + ">" + "\n";
+
+			} else out += " />\n";
+
+			return out;
+		}
+
+
+		if (window.XMLSerializer) {
+			debug("using standard XMLSerializer.serializeToString")
+			return (new XMLSerializer()).serializeToString(svg);
+		} else {
+			debug("using custom XMLSerializerForIE")
+			return XMLSerializerForIE(svg);
+		}
+
+	}
+
+	function base64dataURLencode(s) {
+		var b64 = "data:image/svg+xml;base64,";
+
+		// https://developer.mozilla.org/en/DOM/window.btoa
+		if (window.btoa) {
+			debug("using window.btoa for base64 encoding");
+			b64 += btoa(s);
+		} else {
+			debug("using custom base64 encoder");
+			b64 += Base64.encode(s);
+		}
+
+		return b64;
+	}
+
+	function exportImage(type) {
+		var canvas = document.createElement("canvas");
+		var ctx = canvas.getContext('2d');
+
+		// TODO: if (options.keepOutsideViewport), do some translation magic?
+
+		var svg_img = new Image();
+		var svg_xml = XMLSerialize(_svg);
+		svg_img.src = base64dataURLencode(svg_xml);
+
+		svg_img.onload = function() {
+			debug("exported image size: " + [svg_img.width, svg_img.height])
+			canvas.width = svg_img.width;
+			canvas.height = svg_img.height;
+			ctx.drawImage(svg_img, 0, 0);
+
+			// SECURITY_ERR WILL HAPPEN NOW
+			var png_dataurl = canvas.toDataURL(type);
+			debug(type + " length: " + png_dataurl.length);
+
+			if (options.callback) options.callback( png_dataurl );
+			else debug("WARNING: no callback set, so nothing happens.");
+		}
+
+		svg_img.onerror = function() {
+			console.log(
+				"Can't export! Maybe your browser doesn't support " +
+				"SVG in img element or SVG input for Canvas drawImage?\n" +
+				"http://en.wikipedia.org/wiki/SVG#Native_support"
+			);
+		}
+
+		// NOTE: will not return anything
+	}
+
+	function exportImageCanvg(type) {
+		var canvas = document.createElement("canvas");
+		var ctx = canvas.getContext('2d');
+		var svg_xml = XMLSerialize(_svg);
+
+		// NOTE: canvg gets the SVG element dimensions incorrectly if not specified as attributes
+		//debug("detected svg dimensions " + [_svg.clientWidth, _svg.clientHeight])
+		//debug("canvas dimensions " + [canvas.width, canvas.height])
+
+		var keepBB = options.keepOutsideViewport;
+		if (keepBB) var bb = _svg.getBBox();
+
+		// NOTE: this canvg call is synchronous and blocks (no it does not)
+		canvg(canvas, svg_xml, {
+			ignoreMouse: true, ignoreAnimation: true,
+			offsetX: keepBB ? -bb.x : undefined,
+			offsetY: keepBB ? -bb.y : undefined,
+			scaleWidth: keepBB ? bb.width+bb.x : undefined,
+			scaleHeight: keepBB ? bb.height+bb.y : undefined,
+			renderCallback: function() {
+				debug("exported image dimensions " + [canvas.width, canvas.height]);
+				var png_dataurl = canvas.toDataURL(type);
+				debug(type + " length: " + png_dataurl.length);
+
+				if (options.callback) options.callback( png_dataurl );
+			}
+		});
+
+		// NOTE: return in addition to callback
+		return canvas.toDataURL(type);
+	}
+
+	// BEGIN MAIN
+
+	if (!type) type = "image/svg+xml";
+	if (!options) options = {};
+
+	if (options.keepNonSafe) debug("NOTE: keepNonSafe is NOT supported and will be ignored!");
+	if (options.keepOutsideViewport) debug("NOTE: keepOutsideViewport is only supported with canvg exporter.");
+
+	switch (type) {
+		case "image/svg+xml":
+			return exportSVG();
+			break;
+
+		case "image/png":
+		case "image/jpeg":
+
+			if (!options.renderer) {
+				if (window.canvg) options.renderer = "canvg";
+				else options.renderer="native";
+			}
+
+			switch (options.renderer) {
+				case "canvg":
+					debug("using canvg renderer for png export");
+					return exportImageCanvg(type);
+					break;
+
+				case "native":
+					debug("using native renderer for png export. THIS MIGHT FAIL.");
+					return exportImage(type);
+					break;
+
+				default:
+					debug("unknown png renderer given, doing noting (" + options.renderer + ")");
+			}
+
+			break;
+
+		default:
+			debug("Sorry! Exporting as '" + type + "' is not supported!")
+	}
+}
+
+},{}],51:[function(require,module,exports){
+/**
+ * A class to parse color values
+ * @author Stoyan Stefanov <sstoo@gmail.com>
+ * @link   http://www.phpied.com/rgb-color-parser-in-javascript/
+ * @license Use it if you like it
+ */
+function RGBColor(color_string)
+{
+    this.ok = false;
+
+    // strip any leading #
+    if (color_string.charAt(0) == '#') { // remove # if any
+        color_string = color_string.substr(1,6);
+    }
+
+    color_string = color_string.replace(/ /g,'');
+    color_string = color_string.toLowerCase();
+
+    // before getting into regexps, try simple matches
+    // and overwrite the input
+    var simple_colors = {
+        aliceblue: 'f0f8ff',
+        antiquewhite: 'faebd7',
+        aqua: '00ffff',
+        aquamarine: '7fffd4',
+        azure: 'f0ffff',
+        beige: 'f5f5dc',
+        bisque: 'ffe4c4',
+        black: '000000',
+        blanchedalmond: 'ffebcd',
+        blue: '0000ff',
+        blueviolet: '8a2be2',
+        brown: 'a52a2a',
+        burlywood: 'deb887',
+        cadetblue: '5f9ea0',
+        chartreuse: '7fff00',
+        chocolate: 'd2691e',
+        coral: 'ff7f50',
+        cornflowerblue: '6495ed',
+        cornsilk: 'fff8dc',
+        crimson: 'dc143c',
+        cyan: '00ffff',
+        darkblue: '00008b',
+        darkcyan: '008b8b',
+        darkgoldenrod: 'b8860b',
+        darkgray: 'a9a9a9',
+        darkgreen: '006400',
+        darkkhaki: 'bdb76b',
+        darkmagenta: '8b008b',
+        darkolivegreen: '556b2f',
+        darkorange: 'ff8c00',
+        darkorchid: '9932cc',
+        darkred: '8b0000',
+        darksalmon: 'e9967a',
+        darkseagreen: '8fbc8f',
+        darkslateblue: '483d8b',
+        darkslategray: '2f4f4f',
+        darkturquoise: '00ced1',
+        darkviolet: '9400d3',
+        deeppink: 'ff1493',
+        deepskyblue: '00bfff',
+        dimgray: '696969',
+        dodgerblue: '1e90ff',
+        feldspar: 'd19275',
+        firebrick: 'b22222',
+        floralwhite: 'fffaf0',
+        forestgreen: '228b22',
+        fuchsia: 'ff00ff',
+        gainsboro: 'dcdcdc',
+        ghostwhite: 'f8f8ff',
+        gold: 'ffd700',
+        goldenrod: 'daa520',
+        gray: '808080',
+        green: '008000',
+        greenyellow: 'adff2f',
+        honeydew: 'f0fff0',
+        hotpink: 'ff69b4',
+        indianred : 'cd5c5c',
+        indigo : '4b0082',
+        ivory: 'fffff0',
+        khaki: 'f0e68c',
+        lavender: 'e6e6fa',
+        lavenderblush: 'fff0f5',
+        lawngreen: '7cfc00',
+        lemonchiffon: 'fffacd',
+        lightblue: 'add8e6',
+        lightcoral: 'f08080',
+        lightcyan: 'e0ffff',
+        lightgoldenrodyellow: 'fafad2',
+        lightgrey: 'd3d3d3',
+        lightgreen: '90ee90',
+        lightpink: 'ffb6c1',
+        lightsalmon: 'ffa07a',
+        lightseagreen: '20b2aa',
+        lightskyblue: '87cefa',
+        lightslateblue: '8470ff',
+        lightslategray: '778899',
+        lightsteelblue: 'b0c4de',
+        lightyellow: 'ffffe0',
+        lime: '00ff00',
+        limegreen: '32cd32',
+        linen: 'faf0e6',
+        magenta: 'ff00ff',
+        maroon: '800000',
+        mediumaquamarine: '66cdaa',
+        mediumblue: '0000cd',
+        mediumorchid: 'ba55d3',
+        mediumpurple: '9370d8',
+        mediumseagreen: '3cb371',
+        mediumslateblue: '7b68ee',
+        mediumspringgreen: '00fa9a',
+        mediumturquoise: '48d1cc',
+        mediumvioletred: 'c71585',
+        midnightblue: '191970',
+        mintcream: 'f5fffa',
+        mistyrose: 'ffe4e1',
+        moccasin: 'ffe4b5',
+        navajowhite: 'ffdead',
+        navy: '000080',
+        oldlace: 'fdf5e6',
+        olive: '808000',
+        olivedrab: '6b8e23',
+        orange: 'ffa500',
+        orangered: 'ff4500',
+        orchid: 'da70d6',
+        palegoldenrod: 'eee8aa',
+        palegreen: '98fb98',
+        paleturquoise: 'afeeee',
+        palevioletred: 'd87093',
+        papayawhip: 'ffefd5',
+        peachpuff: 'ffdab9',
+        peru: 'cd853f',
+        pink: 'ffc0cb',
+        plum: 'dda0dd',
+        powderblue: 'b0e0e6',
+        purple: '800080',
+        red: 'ff0000',
+        rosybrown: 'bc8f8f',
+        royalblue: '4169e1',
+        saddlebrown: '8b4513',
+        salmon: 'fa8072',
+        sandybrown: 'f4a460',
+        seagreen: '2e8b57',
+        seashell: 'fff5ee',
+        sienna: 'a0522d',
+        silver: 'c0c0c0',
+        skyblue: '87ceeb',
+        slateblue: '6a5acd',
+        slategray: '708090',
+        snow: 'fffafa',
+        springgreen: '00ff7f',
+        steelblue: '4682b4',
+        tan: 'd2b48c',
+        teal: '008080',
+        thistle: 'd8bfd8',
+        tomato: 'ff6347',
+        turquoise: '40e0d0',
+        violet: 'ee82ee',
+        violetred: 'd02090',
+        wheat: 'f5deb3',
+        white: 'ffffff',
+        whitesmoke: 'f5f5f5',
+        yellow: 'ffff00',
+        yellowgreen: '9acd32'
+    };
+    for (var key in simple_colors) {
+        if (color_string == key) {
+            color_string = simple_colors[key];
+        }
+    }
+    // emd of simple type-in colors
+
+    // array of color definition objects
+    var color_defs = [
+        {
+            re: /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/,
+            example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1]),
+                    parseInt(bits[2]),
+                    parseInt(bits[3])
+                ];
+            }
+        },
+        {
+            re: /^(\w{2})(\w{2})(\w{2})$/,
+            example: ['#00ff00', '336699'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1], 16),
+                    parseInt(bits[2], 16),
+                    parseInt(bits[3], 16)
+                ];
+            }
+        },
+        {
+            re: /^(\w{1})(\w{1})(\w{1})$/,
+            example: ['#fb0', 'f0f'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1] + bits[1], 16),
+                    parseInt(bits[2] + bits[2], 16),
+                    parseInt(bits[3] + bits[3], 16)
+                ];
+            }
+        }
+    ];
+
+    // search through the definitions to find a match
+    for (var i = 0; i < color_defs.length; i++) {
+        var re = color_defs[i].re;
+        var processor = color_defs[i].process;
+        var bits = re.exec(color_string);
+        if (bits) {
+            var channels = processor(bits);
+            this.r = channels[0];
+            this.g = channels[1];
+            this.b = channels[2];
+            this.ok = true;
+        }
+
+    }
+
+    // validate/cleanup values
+    this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
+    this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
+    this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
+
+    // some getters
+    this.toRGB = function () {
+        return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
+    }
+    this.toHex = function () {
+        var r = this.r.toString(16);
+        var g = this.g.toString(16);
+        var b = this.b.toString(16);
+        if (r.length == 1) r = '0' + r;
+        if (g.length == 1) g = '0' + g;
+        if (b.length == 1) b = '0' + b;
+        return '#' + r + g + b;
+    }
+
+    // help
+    this.getHelpXML = function () {
+
+        var examples = new Array();
+        // add regexps
+        for (var i = 0; i < color_defs.length; i++) {
+            var example = color_defs[i].example;
+            for (var j = 0; j < example.length; j++) {
+                examples[examples.length] = example[j];
+            }
+        }
+        // add type-in colors
+        for (var sc in simple_colors) {
+            examples[examples.length] = sc;
+        }
+
+        var xml = document.createElement('ul');
+        xml.setAttribute('id', 'rgbcolor-examples');
+        for (var i = 0; i < examples.length; i++) {
+            try {
+                var list_item = document.createElement('li');
+                var list_color = new RGBColor(examples[i]);
+                var example_div = document.createElement('div');
+                example_div.style.cssText =
+                        'margin: 3px; '
+                        + 'border: 1px solid black; '
+                        + 'background:' + list_color.toHex() + '; '
+                        + 'color:' + list_color.toHex()
+                ;
+                example_div.appendChild(document.createTextNode('test'));
+                var list_item_value = document.createTextNode(
+                    ' ' + examples[i] + ' -> ' + list_color.toRGB() + ' -> ' + list_color.toHex()
+                );
+                list_item.appendChild(example_div);
+                list_item.appendChild(list_item_value);
+                xml.appendChild(list_item);
+
+            } catch(e){}
+        }
+        return xml;
+
+    }
+
+}
+
+
+},{}],50:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,15 +3538,627 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],143:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
+/*
+
+StackBlur - a fast almost Gaussian Blur For Canvas
+
+Version: 	0.5
+Author:		Mario Klingemann
+Contact: 	mario@quasimondo.com
+Website:	http://www.quasimondo.com/StackBlurForCanvas
+Twitter:	@quasimondo
+
+In case you find this class useful - especially in commercial projects -
+I am not totally unhappy for a small donation to my PayPal account
+mario@quasimondo.de
+
+Or support me on flattr: 
+https://flattr.com/thing/72791/StackBlur-a-fast-almost-Gaussian-Blur-Effect-for-CanvasJavascript
+
+Copyright (c) 2010 Mario Klingemann
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+var mul_table = [
+        512,512,456,512,328,456,335,512,405,328,271,456,388,335,292,512,
+        454,405,364,328,298,271,496,456,420,388,360,335,312,292,273,512,
+        482,454,428,405,383,364,345,328,312,298,284,271,259,496,475,456,
+        437,420,404,388,374,360,347,335,323,312,302,292,282,273,265,512,
+        497,482,468,454,441,428,417,405,394,383,373,364,354,345,337,328,
+        320,312,305,298,291,284,278,271,265,259,507,496,485,475,465,456,
+        446,437,428,420,412,404,396,388,381,374,367,360,354,347,341,335,
+        329,323,318,312,307,302,297,292,287,282,278,273,269,265,261,512,
+        505,497,489,482,475,468,461,454,447,441,435,428,422,417,411,405,
+        399,394,389,383,378,373,368,364,359,354,350,345,341,337,332,328,
+        324,320,316,312,309,305,301,298,294,291,287,284,281,278,274,271,
+        268,265,262,259,257,507,501,496,491,485,480,475,470,465,460,456,
+        451,446,442,437,433,428,424,420,416,412,408,404,400,396,392,388,
+        385,381,377,374,370,367,363,360,357,354,350,347,344,341,338,335,
+        332,329,326,323,320,318,315,312,310,307,304,302,299,297,294,292,
+        289,287,285,282,280,278,275,273,271,269,267,265,263,261,259];
+        
+   
+var shg_table = [
+	     9, 11, 12, 13, 13, 14, 14, 15, 15, 15, 15, 16, 16, 16, 16, 17, 
+		17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 
+		19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20,
+		20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21,
+		21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+		21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 
+		22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22,
+		22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 
+		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
+		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
+		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 
+		23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 
+		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
+		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
+		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
+		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24 ];
+
+function stackBlurImage( imageID, canvasID, radius, blurAlphaChannel )
+{
+			
+ 	var img = document.getElementById( imageID );
+	var w = img.naturalWidth;
+    var h = img.naturalHeight;
+       
+	var canvas = document.getElementById( canvasID );
+      
+    canvas.style.width  = w + "px";
+    canvas.style.height = h + "px";
+    canvas.width = w;
+    canvas.height = h;
+    
+    var context = canvas.getContext("2d");
+    context.clearRect( 0, 0, w, h );
+    context.drawImage( img, 0, 0 );
+
+	if ( isNaN(radius) || radius < 1 ) return;
+	
+	if ( blurAlphaChannel )
+		stackBlurCanvasRGBA( canvasID, 0, 0, w, h, radius );
+	else 
+		stackBlurCanvasRGB( canvasID, 0, 0, w, h, radius );
+}
+
+
+function stackBlurCanvasRGBA( id, top_x, top_y, width, height, radius )
+{
+	if ( isNaN(radius) || radius < 1 ) return;
+	radius |= 0;
+	
+	var canvas  = document.getElementById( id );
+	var context = canvas.getContext("2d");
+	var imageData;
+	
+	try {
+	  try {
+		imageData = context.getImageData( top_x, top_y, width, height );
+	  } catch(e) {
+	  
+		// NOTE: this part is supposedly only needed if you want to work with local files
+		// so it might be okay to remove the whole try/catch block and just use
+		// imageData = context.getImageData( top_x, top_y, width, height );
+		try {
+			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+			imageData = context.getImageData( top_x, top_y, width, height );
+		} catch(e) {
+			alert("Cannot access local image");
+			throw new Error("unable to access local image data: " + e);
+			return;
+		}
+	  }
+	} catch(e) {
+	  alert("Cannot access image");
+	  throw new Error("unable to access image data: " + e);
+	}
+			
+	var pixels = imageData.data;
+			
+	var x, y, i, p, yp, yi, yw, r_sum, g_sum, b_sum, a_sum, 
+	r_out_sum, g_out_sum, b_out_sum, a_out_sum,
+	r_in_sum, g_in_sum, b_in_sum, a_in_sum, 
+	pr, pg, pb, pa, rbs;
+			
+	var div = radius + radius + 1;
+	var w4 = width << 2;
+	var widthMinus1  = width - 1;
+	var heightMinus1 = height - 1;
+	var radiusPlus1  = radius + 1;
+	var sumFactor = radiusPlus1 * ( radiusPlus1 + 1 ) / 2;
+	
+	var stackStart = new BlurStack();
+	var stack = stackStart;
+	for ( i = 1; i < div; i++ )
+	{
+		stack = stack.next = new BlurStack();
+		if ( i == radiusPlus1 ) var stackEnd = stack;
+	}
+	stack.next = stackStart;
+	var stackIn = null;
+	var stackOut = null;
+	
+	yw = yi = 0;
+	
+	var mul_sum = mul_table[radius];
+	var shg_sum = shg_table[radius];
+	
+	for ( y = 0; y < height; y++ )
+	{
+		r_in_sum = g_in_sum = b_in_sum = a_in_sum = r_sum = g_sum = b_sum = a_sum = 0;
+		
+		r_out_sum = radiusPlus1 * ( pr = pixels[yi] );
+		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1] );
+		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2] );
+		a_out_sum = radiusPlus1 * ( pa = pixels[yi+3] );
+		
+		r_sum += sumFactor * pr;
+		g_sum += sumFactor * pg;
+		b_sum += sumFactor * pb;
+		a_sum += sumFactor * pa;
+		
+		stack = stackStart;
+		
+		for( i = 0; i < radiusPlus1; i++ )
+		{
+			stack.r = pr;
+			stack.g = pg;
+			stack.b = pb;
+			stack.a = pa;
+			stack = stack.next;
+		}
+		
+		for( i = 1; i < radiusPlus1; i++ )
+		{
+			p = yi + (( widthMinus1 < i ? widthMinus1 : i ) << 2 );
+			r_sum += ( stack.r = ( pr = pixels[p])) * ( rbs = radiusPlus1 - i );
+			g_sum += ( stack.g = ( pg = pixels[p+1])) * rbs;
+			b_sum += ( stack.b = ( pb = pixels[p+2])) * rbs;
+			a_sum += ( stack.a = ( pa = pixels[p+3])) * rbs;
+			
+			r_in_sum += pr;
+			g_in_sum += pg;
+			b_in_sum += pb;
+			a_in_sum += pa;
+			
+			stack = stack.next;
+		}
+		
+		
+		stackIn = stackStart;
+		stackOut = stackEnd;
+		for ( x = 0; x < width; x++ )
+		{
+			pixels[yi+3] = pa = (a_sum * mul_sum) >> shg_sum;
+			if ( pa != 0 )
+			{
+				pa = 255 / pa;
+				pixels[yi]   = ((r_sum * mul_sum) >> shg_sum) * pa;
+				pixels[yi+1] = ((g_sum * mul_sum) >> shg_sum) * pa;
+				pixels[yi+2] = ((b_sum * mul_sum) >> shg_sum) * pa;
+			} else {
+				pixels[yi] = pixels[yi+1] = pixels[yi+2] = 0;
+			}
+			
+			r_sum -= r_out_sum;
+			g_sum -= g_out_sum;
+			b_sum -= b_out_sum;
+			a_sum -= a_out_sum;
+			
+			r_out_sum -= stackIn.r;
+			g_out_sum -= stackIn.g;
+			b_out_sum -= stackIn.b;
+			a_out_sum -= stackIn.a;
+			
+			p =  ( yw + ( ( p = x + radius + 1 ) < widthMinus1 ? p : widthMinus1 ) ) << 2;
+			
+			r_in_sum += ( stackIn.r = pixels[p]);
+			g_in_sum += ( stackIn.g = pixels[p+1]);
+			b_in_sum += ( stackIn.b = pixels[p+2]);
+			a_in_sum += ( stackIn.a = pixels[p+3]);
+			
+			r_sum += r_in_sum;
+			g_sum += g_in_sum;
+			b_sum += b_in_sum;
+			a_sum += a_in_sum;
+			
+			stackIn = stackIn.next;
+			
+			r_out_sum += ( pr = stackOut.r );
+			g_out_sum += ( pg = stackOut.g );
+			b_out_sum += ( pb = stackOut.b );
+			a_out_sum += ( pa = stackOut.a );
+			
+			r_in_sum -= pr;
+			g_in_sum -= pg;
+			b_in_sum -= pb;
+			a_in_sum -= pa;
+			
+			stackOut = stackOut.next;
+
+			yi += 4;
+		}
+		yw += width;
+	}
+
+	
+	for ( x = 0; x < width; x++ )
+	{
+		g_in_sum = b_in_sum = a_in_sum = r_in_sum = g_sum = b_sum = a_sum = r_sum = 0;
+		
+		yi = x << 2;
+		r_out_sum = radiusPlus1 * ( pr = pixels[yi]);
+		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1]);
+		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2]);
+		a_out_sum = radiusPlus1 * ( pa = pixels[yi+3]);
+		
+		r_sum += sumFactor * pr;
+		g_sum += sumFactor * pg;
+		b_sum += sumFactor * pb;
+		a_sum += sumFactor * pa;
+		
+		stack = stackStart;
+		
+		for( i = 0; i < radiusPlus1; i++ )
+		{
+			stack.r = pr;
+			stack.g = pg;
+			stack.b = pb;
+			stack.a = pa;
+			stack = stack.next;
+		}
+		
+		yp = width;
+		
+		for( i = 1; i <= radius; i++ )
+		{
+			yi = ( yp + x ) << 2;
+			
+			r_sum += ( stack.r = ( pr = pixels[yi])) * ( rbs = radiusPlus1 - i );
+			g_sum += ( stack.g = ( pg = pixels[yi+1])) * rbs;
+			b_sum += ( stack.b = ( pb = pixels[yi+2])) * rbs;
+			a_sum += ( stack.a = ( pa = pixels[yi+3])) * rbs;
+		   
+			r_in_sum += pr;
+			g_in_sum += pg;
+			b_in_sum += pb;
+			a_in_sum += pa;
+			
+			stack = stack.next;
+		
+			if( i < heightMinus1 )
+			{
+				yp += width;
+			}
+		}
+		
+		yi = x;
+		stackIn = stackStart;
+		stackOut = stackEnd;
+		for ( y = 0; y < height; y++ )
+		{
+			p = yi << 2;
+			pixels[p+3] = pa = (a_sum * mul_sum) >> shg_sum;
+			if ( pa > 0 )
+			{
+				pa = 255 / pa;
+				pixels[p]   = ((r_sum * mul_sum) >> shg_sum ) * pa;
+				pixels[p+1] = ((g_sum * mul_sum) >> shg_sum ) * pa;
+				pixels[p+2] = ((b_sum * mul_sum) >> shg_sum ) * pa;
+			} else {
+				pixels[p] = pixels[p+1] = pixels[p+2] = 0;
+			}
+			
+			r_sum -= r_out_sum;
+			g_sum -= g_out_sum;
+			b_sum -= b_out_sum;
+			a_sum -= a_out_sum;
+		   
+			r_out_sum -= stackIn.r;
+			g_out_sum -= stackIn.g;
+			b_out_sum -= stackIn.b;
+			a_out_sum -= stackIn.a;
+			
+			p = ( x + (( ( p = y + radiusPlus1) < heightMinus1 ? p : heightMinus1 ) * width )) << 2;
+			
+			r_sum += ( r_in_sum += ( stackIn.r = pixels[p]));
+			g_sum += ( g_in_sum += ( stackIn.g = pixels[p+1]));
+			b_sum += ( b_in_sum += ( stackIn.b = pixels[p+2]));
+			a_sum += ( a_in_sum += ( stackIn.a = pixels[p+3]));
+		   
+			stackIn = stackIn.next;
+			
+			r_out_sum += ( pr = stackOut.r );
+			g_out_sum += ( pg = stackOut.g );
+			b_out_sum += ( pb = stackOut.b );
+			a_out_sum += ( pa = stackOut.a );
+			
+			r_in_sum -= pr;
+			g_in_sum -= pg;
+			b_in_sum -= pb;
+			a_in_sum -= pa;
+			
+			stackOut = stackOut.next;
+			
+			yi += width;
+		}
+	}
+	
+	context.putImageData( imageData, top_x, top_y );
+	
+}
+
+
+function stackBlurCanvasRGB( id, top_x, top_y, width, height, radius )
+{
+	if ( isNaN(radius) || radius < 1 ) return;
+	radius |= 0;
+	
+	var canvas  = document.getElementById( id );
+	var context = canvas.getContext("2d");
+	var imageData;
+	
+	try {
+	  try {
+		imageData = context.getImageData( top_x, top_y, width, height );
+	  } catch(e) {
+	  
+		// NOTE: this part is supposedly only needed if you want to work with local files
+		// so it might be okay to remove the whole try/catch block and just use
+		// imageData = context.getImageData( top_x, top_y, width, height );
+		try {
+			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+			imageData = context.getImageData( top_x, top_y, width, height );
+		} catch(e) {
+			alert("Cannot access local image");
+			throw new Error("unable to access local image data: " + e);
+			return;
+		}
+	  }
+	} catch(e) {
+	  alert("Cannot access image");
+	  throw new Error("unable to access image data: " + e);
+	}
+			
+	var pixels = imageData.data;
+			
+	var x, y, i, p, yp, yi, yw, r_sum, g_sum, b_sum,
+	r_out_sum, g_out_sum, b_out_sum,
+	r_in_sum, g_in_sum, b_in_sum,
+	pr, pg, pb, rbs;
+			
+	var div = radius + radius + 1;
+	var w4 = width << 2;
+	var widthMinus1  = width - 1;
+	var heightMinus1 = height - 1;
+	var radiusPlus1  = radius + 1;
+	var sumFactor = radiusPlus1 * ( radiusPlus1 + 1 ) / 2;
+	
+	var stackStart = new BlurStack();
+	var stack = stackStart;
+	for ( i = 1; i < div; i++ )
+	{
+		stack = stack.next = new BlurStack();
+		if ( i == radiusPlus1 ) var stackEnd = stack;
+	}
+	stack.next = stackStart;
+	var stackIn = null;
+	var stackOut = null;
+	
+	yw = yi = 0;
+	
+	var mul_sum = mul_table[radius];
+	var shg_sum = shg_table[radius];
+	
+	for ( y = 0; y < height; y++ )
+	{
+		r_in_sum = g_in_sum = b_in_sum = r_sum = g_sum = b_sum = 0;
+		
+		r_out_sum = radiusPlus1 * ( pr = pixels[yi] );
+		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1] );
+		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2] );
+		
+		r_sum += sumFactor * pr;
+		g_sum += sumFactor * pg;
+		b_sum += sumFactor * pb;
+		
+		stack = stackStart;
+		
+		for( i = 0; i < radiusPlus1; i++ )
+		{
+			stack.r = pr;
+			stack.g = pg;
+			stack.b = pb;
+			stack = stack.next;
+		}
+		
+		for( i = 1; i < radiusPlus1; i++ )
+		{
+			p = yi + (( widthMinus1 < i ? widthMinus1 : i ) << 2 );
+			r_sum += ( stack.r = ( pr = pixels[p])) * ( rbs = radiusPlus1 - i );
+			g_sum += ( stack.g = ( pg = pixels[p+1])) * rbs;
+			b_sum += ( stack.b = ( pb = pixels[p+2])) * rbs;
+			
+			r_in_sum += pr;
+			g_in_sum += pg;
+			b_in_sum += pb;
+			
+			stack = stack.next;
+		}
+		
+		
+		stackIn = stackStart;
+		stackOut = stackEnd;
+		for ( x = 0; x < width; x++ )
+		{
+			pixels[yi]   = (r_sum * mul_sum) >> shg_sum;
+			pixels[yi+1] = (g_sum * mul_sum) >> shg_sum;
+			pixels[yi+2] = (b_sum * mul_sum) >> shg_sum;
+			
+			r_sum -= r_out_sum;
+			g_sum -= g_out_sum;
+			b_sum -= b_out_sum;
+			
+			r_out_sum -= stackIn.r;
+			g_out_sum -= stackIn.g;
+			b_out_sum -= stackIn.b;
+			
+			p =  ( yw + ( ( p = x + radius + 1 ) < widthMinus1 ? p : widthMinus1 ) ) << 2;
+			
+			r_in_sum += ( stackIn.r = pixels[p]);
+			g_in_sum += ( stackIn.g = pixels[p+1]);
+			b_in_sum += ( stackIn.b = pixels[p+2]);
+			
+			r_sum += r_in_sum;
+			g_sum += g_in_sum;
+			b_sum += b_in_sum;
+			
+			stackIn = stackIn.next;
+			
+			r_out_sum += ( pr = stackOut.r );
+			g_out_sum += ( pg = stackOut.g );
+			b_out_sum += ( pb = stackOut.b );
+			
+			r_in_sum -= pr;
+			g_in_sum -= pg;
+			b_in_sum -= pb;
+			
+			stackOut = stackOut.next;
+
+			yi += 4;
+		}
+		yw += width;
+	}
+
+	
+	for ( x = 0; x < width; x++ )
+	{
+		g_in_sum = b_in_sum = r_in_sum = g_sum = b_sum = r_sum = 0;
+		
+		yi = x << 2;
+		r_out_sum = radiusPlus1 * ( pr = pixels[yi]);
+		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1]);
+		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2]);
+		
+		r_sum += sumFactor * pr;
+		g_sum += sumFactor * pg;
+		b_sum += sumFactor * pb;
+		
+		stack = stackStart;
+		
+		for( i = 0; i < radiusPlus1; i++ )
+		{
+			stack.r = pr;
+			stack.g = pg;
+			stack.b = pb;
+			stack = stack.next;
+		}
+		
+		yp = width;
+		
+		for( i = 1; i <= radius; i++ )
+		{
+			yi = ( yp + x ) << 2;
+			
+			r_sum += ( stack.r = ( pr = pixels[yi])) * ( rbs = radiusPlus1 - i );
+			g_sum += ( stack.g = ( pg = pixels[yi+1])) * rbs;
+			b_sum += ( stack.b = ( pb = pixels[yi+2])) * rbs;
+			
+			r_in_sum += pr;
+			g_in_sum += pg;
+			b_in_sum += pb;
+			
+			stack = stack.next;
+		
+			if( i < heightMinus1 )
+			{
+				yp += width;
+			}
+		}
+		
+		yi = x;
+		stackIn = stackStart;
+		stackOut = stackEnd;
+		for ( y = 0; y < height; y++ )
+		{
+			p = yi << 2;
+			pixels[p]   = (r_sum * mul_sum) >> shg_sum;
+			pixels[p+1] = (g_sum * mul_sum) >> shg_sum;
+			pixels[p+2] = (b_sum * mul_sum) >> shg_sum;
+			
+			r_sum -= r_out_sum;
+			g_sum -= g_out_sum;
+			b_sum -= b_out_sum;
+			
+			r_out_sum -= stackIn.r;
+			g_out_sum -= stackIn.g;
+			b_out_sum -= stackIn.b;
+			
+			p = ( x + (( ( p = y + radiusPlus1) < heightMinus1 ? p : heightMinus1 ) * width )) << 2;
+			
+			r_sum += ( r_in_sum += ( stackIn.r = pixels[p]));
+			g_sum += ( g_in_sum += ( stackIn.g = pixels[p+1]));
+			b_sum += ( b_in_sum += ( stackIn.b = pixels[p+2]));
+			
+			stackIn = stackIn.next;
+			
+			r_out_sum += ( pr = stackOut.r );
+			g_out_sum += ( pg = stackOut.g );
+			b_out_sum += ( pb = stackOut.b );
+			
+			r_in_sum -= pr;
+			g_in_sum -= pg;
+			b_in_sum -= pb;
+			
+			stackOut = stackOut.next;
+			
+			yi += width;
+		}
+	}
+	
+	context.putImageData( imageData, top_x, top_y );
+	
+}
+
+function BlurStack()
+{
+	this.r = 0;
+	this.g = 0;
+	this.b = 0;
+	this.a = 0;
+	this.next = null;
+}
+},{}],199:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
 var utils = require('./utils');
 var _ = utils.getLodash();
 var msg = require('../locale/current/common');
-var functionalBlockUtils = require('./functionalBlockUtils');
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
+
+var ARITHMETIC_TITLE_FONT_SIZE = 25;
 
 exports.install = function(blockly, generator, gensym) {
   installPlus(blockly, generator, gensym);
@@ -3051,6 +4176,9 @@ exports.install = function(blockly, generator, gensym) {
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
   installCond(blockly, generator);
+  installSqrt(blockly, generator);
+  installPow(blockly, generator);
+  installSquared(blockly, generator);
 };
 
 function installPlus(blockly, generator, gensym) {
@@ -3058,17 +4186,19 @@ function installPlus(blockly, generator, gensym) {
 
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '+', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
-      ]);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '+', blockly.BlockValueType.NUMBER, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
+      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
+
+
     }
   };
 
   generator.functional_plus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " + " + arg2;
+    return "(" + arg1 + " + " + arg2 + ")";
   };
 }
 
@@ -3076,17 +4206,17 @@ function installMinus(blockly, generator, gensym) {
   blockly.Blocks.functional_minus = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '-', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
-      ]);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '-', blockly.BlockValueType.NUMBER, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
+      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
     }
   };
 
   generator.functional_minus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " - " + arg2;
+    return "(" + arg1 + " - " + arg2 + ")";
   };
 }
 
@@ -3094,17 +4224,17 @@ function installTimes(blockly, generator, gensym) {
   blockly.Blocks.functional_times = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '*', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
-      ]);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '*', blockly.BlockValueType.NUMBER, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
+      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
     }
   };
 
   generator.functional_times = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " * " + arg2;
+    return "(" + arg1 + " * " + arg2 + ")";
   };
 }
 
@@ -3112,17 +4242,17 @@ function installDividedBy(blockly, generator, gensym) {
   blockly.Blocks.functional_dividedby = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '/', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
-      ]);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '/', blockly.BlockValueType.NUMBER, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
+      ], { titleFontSize: ARITHMETIC_TITLE_FONT_SIZE});
     }
   };
 
   generator.functional_dividedby = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " / " + arg2;
+    return "(" + arg1 + " / " + arg2 + ")";
   };
 }
 
@@ -3132,9 +4262,9 @@ function installGreaterThan(blockly, generator, gensym) {
   blockly.Blocks.functional_greater_than = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '>', 'boolean', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '>', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3150,9 +4280,9 @@ function installLessThan(blockly, generator, gensym) {
   blockly.Blocks.functional_less_than = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '<', 'boolean', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '<', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3168,9 +4298,9 @@ function installNumberEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_number_equals = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, '=', 'boolean', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, '=', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER },
+        { name: 'ARG2', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };
@@ -3186,9 +4316,9 @@ function installStringEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_string_equals = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, msg.stringEquals(), 'boolean', [
-        { name: 'ARG1', type: 'string' },
-        { name: 'ARG2', type: 'string' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.stringEquals(), blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.STRING },
+        { name: 'ARG2', type: blockly.BlockValueType.STRING }
       ]);
     }
   };
@@ -3206,9 +4336,9 @@ function installLogicalAnd(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_and = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'and', 'boolean', [
-        { name: 'ARG1', type: 'boolean' },
-        { name: 'ARG2', type: 'boolean' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'and', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN },
+        { name: 'ARG2', type: blockly.BlockValueType.BOOLEAN }
       ]);
     }
   };
@@ -3224,9 +4354,9 @@ function installLogicalOr(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_or = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'or', 'boolean', [
-        { name: 'ARG1', type: 'boolean' },
-        { name: 'ARG2', type: 'boolean' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'or', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN },
+        { name: 'ARG2', type: blockly.BlockValueType.BOOLEAN }
       ]);
     }
   };
@@ -3242,8 +4372,8 @@ function installLogicalNot(blockly, generator, gensym) {
   blockly.Blocks.functional_logical_not = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'not', 'boolean', [
-        { name: 'ARG1', type: 'boolean' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'not', blockly.BlockValueType.BOOLEAN, [
+        { name: 'ARG1', type: blockly.BlockValueType.BOOLEAN }
       ]);
     }
   };
@@ -3262,12 +4392,12 @@ function installBoolean(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.boolean);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
       var values = blockly.Blocks.functional_boolean.VALUES;
       this.appendDummyInput()
           .appendTitle(new blockly.FieldDropdown(values), 'VAL')
           .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'boolean');
+      this.setFunctionalOutput(true, blockly.BlockValueType.BOOLEAN);
     }
   };
 
@@ -3288,12 +4418,12 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldTextInput('0',
             Blockly.FieldTextInput.numberValidator), 'NUM')
           .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'Number');
+      this.setFunctionalOutput(true, blockly.BlockValueType.NUMBER);
     }
   };
 
@@ -3308,11 +4438,11 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldDropdown(), 'NUM')
           .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'Number');
+      this.setFunctionalOutput(true, blockly.BlockValueType.NUMBER);
     }
   };
 
@@ -3326,18 +4456,68 @@ function installString(blockly, generator) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(this, functionalBlockUtils.colors.string);
+      this.setHSV.apply(this, blockly.FunctionalTypeColors[blockly.BlockValueType.STRING]);
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('"'))
         .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
         .appendTitle(new Blockly.FieldLabel('"'))
         .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'string');
+      this.setFunctionalOutput(true, blockly.BlockValueType.STRING);
     }
   };
 
   generator.functional_string = function() {
     return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+  };
+}
+
+function installSqrt(blockly, generator) {
+  blockly.Blocks.functional_sqrt = {
+    helpUrl: '',
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqrt', 'Number', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_sqrt = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return 'Math.sqrt(' + arg1 + ')';
+  };
+}
+
+function installPow(blockly, generator) {
+  blockly.Blocks.functional_pow = {
+    helpUrl: '',
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'pow', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_pow = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return 'Math.pow(' + arg1 + ', ' + arg2 + ')';
+  };
+}
+
+function installSquared(blockly, generator) {
+  blockly.Blocks.functional_squared = {
+    helpUrl: '',
+    init: function() {
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, 'sqr', 'Number', [
+        { name: 'ARG1', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_squared = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return arg1 + ' * ' + arg1;
   };
 }
 
@@ -3369,7 +4549,10 @@ function installCond(blockly, generator) {
         .appendTitle(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendFunctionalInput('DEFAULT');
+      this.appendDummyInput('ELSE')
+        .appendTitle(new Blockly.FieldLabel('else', options));
+      this.appendFunctionalInput('DEFAULT')
+        .setInline(true);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
@@ -3390,14 +4573,13 @@ function installCond(blockly, generator) {
       this.pairs_.push(id);
 
       var cond = this.appendFunctionalInput('COND' + id);
-      cond.setHSV.apply(cond, functionalBlockUtils.colors.boolean);
-      cond.setCheck('boolean');
-      this.moveInputBefore('COND' + id, 'DEFAULT');
+      cond.setHSV.apply(cond, blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]);
+      cond.setCheck(blockly.BlockValueType.BOOLEAN);
+      this.moveInputBefore('COND' + id, 'ELSE');
 
       this.appendFunctionalInput('VALUE' + id)
-        .setInline(true)
-        .setHSV(0, 0, 0.99);
-      this.moveInputBefore('VALUE' + id, 'DEFAULT');
+        .setInline(true);
+      this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
         .setInline(true);
@@ -3409,7 +4591,7 @@ function installCond(blockly, generator) {
         minusInput.appendTitle(minusField);
       }
 
-      this.moveInputBefore('MINUS' + id, 'DEFAULT');
+      this.moveInputBefore('MINUS' + id, 'ELSE');
     },
 
     /**
@@ -3514,169 +4696,71 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":190,"./functionalBlockUtils":74,"./utils":185}],74:[function(require,module,exports){
-var utils = require('./utils');
-var _ = utils.getLodash();
-
-var colors = {
-  'Number': [192, 1.00, 0.99], // 00ccff
-  'string': [180, 1.00, 0.60], // 0099999
-  'image': [285, 1.00, 0.80], // 9900cc
-  'boolean': [90, 1.00, 0.4], // 336600
-  'none': [0, 0, 0.6]
-};
-module.exports.colors = colors;
-
-/**
- * Helper function to create the init section for a functional block.
- * @param {Blockly.block} block The block to initialize.
- * @param {string} title Localized block title to display.
- * @param {string} type Block type which appears in xml.
- * @param {Array} args Arguments to this block.
- * @param {number=} wrapWidth Optional number of arguments after which
- *     to wrap the next argument onto a new line when rendering the
- *     block.
- */
-module.exports.initTitledFunctionalBlock = function (block, title, type, args, wrapWidth) {
-  block.setFunctional(true, {
-    headerHeight: 30
-  });
-  block.setHSV.apply(block, colors[type]);
-
-  var options = {
-    fixedSize: { height: 35 }
-  };
-
-  block.appendDummyInput()
-    .appendTitle(new Blockly.FieldLabel(title, options))
-    .setAlign(Blockly.ALIGN_CENTRE);
-
-  for (var i = 0; i < args.length; i++) {
-    var arg = args[i];
-    var input = block.appendFunctionalInput(arg.name);
-    var wrapNextArg = wrapWidth && (i % wrapWidth) === 0;
-    input.setInline(i > 0 && !wrapNextArg);
-    if (arg.type === 'none') {
-      input.setHSV(0, 0, 0.99);
-    } else {
-      input.setHSV.apply(input, colors[arg.type]);
-      input.setCheck(arg.type);
-    }
-    input.setAlign(Blockly.ALIGN_CENTRE);
-  }
-
-  if (type === 'none') {
-    block.setFunctionalOutput(false);
-  } else {
-    block.setFunctionalOutput(true, type);
-  }
-};
-
-/**
- * Installs a block which generates code that makes an API call, which
- * looks roughly like:
- *
- *     apiName(block_id, arg1 [,arg2 ...])
- *
- * where args with "constantValue" defined are pre-specified arguments,
- * and other args are read from functional inputs. For example:
- *
- *     options = {
- *       blockName: 'functional_setSpriteZeroSpeed',
- *       blockTitle: 'set sprite zero speed',
- *       apiName: 'Studio.setSpriteSpeed',
- *       args: [{constantValue: '0'}, // spriteIndex
- *              {name: 'SPEED', type: 'Number', default:'7'}]
- *     }
- *
- * creates a block which, with an id of '43' and an input of '12', would
- * generate the following code:
- *
- *     'Studio.setSpriteSpeed(block_id_43, 0, 12)'
- *
- * if no apiName is specified, a "dummy" block is generated which
- * accepts arguments but generates no code.
- */
-module.exports.installFunctionalApiCallBlock = function(blockly, generator,
-    options) {
-  var blockName = options.blockName;
-  var blockTitle = options.blockTitle;
-  var apiName = options.apiName;
-  var args = options.args;
-
-  var blockArgs = args.filter(function(arg) {
-    return arg.constantValue === undefined;
-  });
-  var blockType = 'none';
-  blockly.Blocks[blockName] = {
-    init: function () {
-      module.exports.initTitledFunctionalBlock(this, blockTitle, blockType,
-          blockArgs);
-    }
-  };
-
-  // The generator function depends on "this" being the block object.
-  generator[blockName] = function() {
-    if (!apiName) {
-      return '';
-    }
-    var apiArgs = [];
-    apiArgs.push('\'block_id_' + this.id + '\'');
-    for (var i = 0; i < args.length; i++) {
-      var arg = args[i];
-      var value = arg.constantValue !== undefined ?
-            arg.constantValue :
-            Blockly.JavaScript.statementToCode(this, arg.name, false) ||
-                arg.default;
-      apiArgs.push(value);
-    }
-    return apiName + '(' + apiArgs.join(',') + ');\n';
-  };
-};
-
-module.exports.installStringPicker = function(blockly, generator, options) {
-  var values = options.values;
-  var blockName = options.blockName;
-  blockly.Blocks[blockName] = {
-    init: function () {
-      this.setFunctional(true, {
-        headerHeight: 0,
-        rowBuffer: 3
-      });
-      this.setHSV.apply(this, colors.string);
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'string');
-    }
-  };
-
-  generator[blockName] = function() {
-    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
-  };
-};
-
-},{"./utils":185}],171:[function(require,module,exports){
-var list = [];
+},{"../locale/current/common":251,"./utils":246}],231:[function(require,module,exports){
+var timeoutList = [];
 
 /**
  * call setTimeout and track the returned id
  */
 exports.setTimeout = function (fn, time) {
-  list.push(window.setTimeout.apply(window, arguments));
+  var timeout = window.setTimeout.apply(window, arguments);
+  timeoutList.push(timeout);
+  return timeout;
 };
 
 /**
- * Clears all timeouts in our list and resets the list
+ * Clears all timeouts in our timeoutList and resets the timeoutList
  */
 exports.clearTimeouts = function () {
-  list.forEach(window.clearTimeout, window);
-  list = [];
+  timeoutList.forEach(window.clearTimeout, window);
+  timeoutList = [];
 };
 
-},{}],165:[function(require,module,exports){
+/**
+ * Clears a timeout and removes the item from the timeoutList
+ */
+exports.clearTimeout = function (id) {
+  window.clearTimeout(id);
+  // List removal requires IE9+
+  var index = timeoutList.indexOf(id);
+  if (index > -1) {
+    timeoutList.splice(index, 1);
+  }
+};
+
+var intervalList = [];
+
+/**
+ * call setInterval and track the returned id
+ */
+exports.setInterval = function (fn, time) {
+  var interval = window.setInterval.apply(window, arguments);
+  intervalList.push(interval);
+  return interval;
+};
+
+/**
+ * Clears all interval timeouts in our intervalList and resets the intervalList
+ */
+exports.clearIntervals = function () {
+  intervalList.forEach(window.clearInterval, window);
+  intervalList = [];
+};
+
+/**
+ * Clears a timeout and removes the item from the intervalList
+ */
+exports.clearInterval = function (id) {
+  window.clearInterval(id);
+  // List removal requires IE9+
+  var index = intervalList.indexOf(id);
+  if (index > -1) {
+    intervalList.splice(index, 1);
+  }
+};
+
+
+},{}],225:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3691,8 +4775,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <button id="designModeButton" class="share">\n        ', escape((74,  msg.designMode() )), '\n      </button>\n      <button id="codeModeButton" class="share" style="display:none;">\n        ', escape((77,  msg.codeMode() )), '\n      </button>\n    ');79; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((84,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((87,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((88,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((90,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((91,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((92,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((94,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((96,  data.blockCounterClass )), '>\n            ', escape((97,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((100,  data.idealBlockNumber )), '</span>\n          <span> ', escape((101,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');105; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((108,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');111; } ; buf.push('\n  </div>\n  ');113; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');115; } ; buf.push('\n  ');116; if (data.hasDesignMode) { ; buf.push('\n    ', (117,  data.designModeBox ), '\n  ');118; } ; buf.push('\n  ');119; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (120,  data.extraControlRows ), '\n  ');121; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3700,7 +4783,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],145:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],201:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3965,7 +5048,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":44}],144:[function(require,module,exports){
+},{"./dom":57}],200:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4039,7 +5122,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],3:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
@@ -4116,7 +5199,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":2,"./blocksCommon":18,"./dom":44,"./required_block_utils":142,"./utils":185}],142:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":27,"./dom":57,"./required_block_utils":198,"./utils":246}],198:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4194,6 +5277,11 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
       case 'procedures_defreturn':
         requiredBlocksTests.push(testsFromProcedure(childNode));
         break;
+      case 'functional_definition':
+        break;
+      case 'functional_call':
+        requiredBlocksTests.push(testsFromFunctionalCall(childNode, blocksXml));
+        break;
       default:
         requiredBlocksTests.push([testFromBlock(childNode)]);
     }
@@ -4263,6 +5351,43 @@ function testsFromProcedure(node) {
     message: msg.errorRequiredParamsMissing(),
     blockDisplayXML: '<xml></xml>'
   }];
+}
+
+function testsFromFunctionalCall(node, blocksXml) {
+  var name = node.querySelector('mutation').getAttribute('name');
+  var argElements = node.querySelectorAll('arg');
+  var types = [];
+  for (var i = 0; i < argElements.length; i++) {
+    types.push(argElements[i].getAttribute('type'));
+  }
+
+  var definition = _.find(blocksXml.childNodes, function (sibling) {
+    if (sibling.getAttribute('type') !== 'functional_definition') {
+      return false;
+    }
+    var nameElement = sibling.querySelector('title[name="NAME"]');
+    if (!nameElement) {
+      return false;
+    }
+    return nameElement.textContent === name;
+  });
+
+  if (!definition) {
+    throw new Error('No matching definition for functional_call');
+  }
+
+  return [{
+    test: function (userBlock) {
+      if (userBlock.type !== 'functional_call' ||
+          userBlock.getCallName() !== name) {
+        return false;
+      }
+      var userTypes = userBlock.getParamTypes();
+      return _.isEqual(userTypes, types);
+    },
+    blockDisplayXML: xml.serialize(definition) + xml.serialize(node)
+  }];
+
 }
 
 /**
@@ -4394,7 +5519,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":190,"./block_utils":17,"./utils":185,"./xml":186}],18:[function(require,module,exports){
+},{"../locale/current/common":251,"./block_utils":26,"./utils":246,"./xml":247}],27:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4487,7 +5612,7 @@ function installNumberDropdown(blockly) {
       this.setHSV(258, 0.35, 0.62);
       this.appendDummyInput()
         .appendTitle(new blockly.FieldDropdown(), 'NUM');
-      this.setOutput(true, 'Number');
+      this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
     }
   };
@@ -4550,6 +5675,9 @@ function installWhenRun(blockly, skin, isK1) {
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
+    },
+    shouldBeGrayedOut: function () {
+      return false;
     }
   };
 
@@ -4559,17 +5687,19 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":190}],2:[function(require,module,exports){
+},{"../locale/current/common":251}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
+var dropletUtils = require('./dropletUtils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
 var msg = require('../locale/current/common');
 var blockUtils = require('./block_utils');
+var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
 
@@ -4616,7 +5746,14 @@ var StudioApp = function () {
    */
   this.cdoSounds = null;
   this.Dialog = null;
+  /**
+   * @type {?Droplet.Editor}
+   */
   this.editor = null;
+  /**
+   * @type {?DropletTooltipManager}
+   */
+  this.dropletTooltipManager = null;
 
   this.blockYCoordinateInterval = 200;
 
@@ -4790,7 +5927,7 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result = this.editor.toggleBlocks();
-        if (result.error) {
+        if (result && result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
           this.feedback_.showToggleBlocksError(this.Dialog);
@@ -4903,7 +6040,7 @@ StudioApp.prototype.init = function(config) {
       codeFunctions: config.level.codeFunctions,
       dropletConfig: config.dropletConfig,
       categoryInfo: config.level.categoryInfo,
-      startBlocks: config.level.startBlocks,
+      startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
       afterInject: config.afterInject
     });
@@ -4913,23 +6050,7 @@ StudioApp.prototype.init = function(config) {
     this.handleUsingBlockly_(config);
   }
 
-  // listen for scroll and resize to ensure onResize() is called
-  window.addEventListener('scroll', _.bind(function() {
-    this.onResize();
-    var event = document.createEvent('UIEvents');
-    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-    window.dispatchEvent(event);
-  }, this));
   window.addEventListener('resize', _.bind(this.onResize, this));
-
-  // Call initial onResize() asynchronously - need 10ms delay to work around
-  // relayout which changes height on the left side to the proper value
-  window.setTimeout(_.bind(function() {
-    this.onResize();
-    var event = document.createEvent('UIEvents');
-    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-    window.dispatchEvent(event);
-  }, this), 10);
 
   this.reset(true);
 
@@ -4943,8 +6064,38 @@ StudioApp.prototype.init = function(config) {
     }, this));
 
     if (config.level.openFunctionDefinition) {
-      Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+      if (Blockly.contractEditor) {
+        Blockly.contractEditor.autoOpenWithLevelConfiguration({
+          autoOpenFunction: config.level.openFunctionDefinition,
+          contractCollapse: config.level.contractCollapse,
+          contractHighlight: config.level.contractHighlight,
+          examplesCollapse: config.level.examplesCollapse,
+          examplesHighlight: config.level.examplesHighlight,
+          definitionCollapse: config.level.definitionCollapse,
+          definitionHighlight: config.level.definitionHighlight
+        });
+      } else {
+        Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
+      }
     }
+  }
+
+  // Bind listener to 'Clear Puzzle' button
+  var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
+  if (clearPuzzleHeader) {
+    dom.addClickTouchEvent(clearPuzzleHeader, (function() {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
+        if (this.isUsingBlockly()) {
+          if (Blockly.functionEditor) {
+            Blockly.functionEditor.hideIfOpen();
+          }
+          Blockly.mainBlockSpace.clear();
+          this.setStartBlocks_(config, false);
+        } else {
+          this.editor.setValue(config.level.startBlocks || '');
+        }
+      }).bind(this));
+    }).bind(this));
   }
 };
 
@@ -4976,15 +6127,8 @@ StudioApp.prototype.handleSharing_ = function (options) {
         belowVisualization.style.display = 'block';
         belowVisualization.style.marginLeft = '0px';
         if (this.noPadding) {
-          // Shift run and reset buttons off the left edge if we have no padding
-          if (runButton) {
-            runButton.style.marginLeft = '10px';
-          }
-          if (resetButton) {
-            resetButton.style.marginLeft = '10px';
-          }
           var shareCell = document.getElementById('share-cell') ||
-          document.getElementById('right-button-cell');
+              document.getElementById('right-button-cell');
           if (shareCell) {
             shareCell.style.marginLeft = '10px';
             shareCell.style.marginRight = '10px';
@@ -5121,7 +6265,7 @@ StudioApp.prototype.stopLoopingAudio = function(name) {
 *    defaults to the element with 'toolbox'.
 *  - {boolean} trashcan True if the trashcan should be displayed, defaults to
 *    true.
-* @param {DomElement} div The parent div in which to insert Blockly.
+* @param {Element} div The parent div in which to insert Blockly.
 */
 StudioApp.prototype.inject = function(div, options) {
   var defaults = {
@@ -5159,7 +6303,7 @@ StudioApp.prototype.localeDirection = function() {
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
 StudioApp.prototype.initReadonly = function(options) {
-  Blockly.inject(document.getElementById('blockly'), {
+  Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
     rtl: this.isRtl(),
@@ -5217,12 +6361,21 @@ StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
 *     visible blocks preceding all hidden blocks.
 */
 StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
+  var userVisible;
+  var currentlyHidden = false;
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
   for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
     xmlBlock = xmlBlocks[x];
-    if (xmlBlock.getAttribute &&
-        xmlBlock.getAttribute('uservisible') === 'false') {
+    if (xmlBlock.getAttribute) {
+      userVisible = xmlBlock.getAttribute('uservisible');
+      var type = xmlBlock.getAttribute('type');
+      currentlyHidden = type &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace &&
+        Blockly.Blocks[type].shouldHideIfInMainBlockSpace();
+    }
+
+    if (currentlyHidden || userVisible === 'false') {
       hiddenXmlBlocks.push(xmlBlock);
     } else {
       visibleXmlBlocks.push(xmlBlock);
@@ -5277,111 +6430,37 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 *  Resizes the blockly workspace.
 */
 StudioApp.prototype.onResize = function() {
-
-  // First, grab the main app container
-  // This is inconsistently named across apps right now
-  // TODO (bbuchanan) : Unify parent app container names
-  var div;
-  if (this.editCode) {
-    div = document.getElementById('codeWorkspace');
-  } else if (this.isUsingBlockly()) {
-    div = document.getElementById('blockly');
-  }
-
-  var divParent = div.parentNode;
-  var parentStyle = window.getComputedStyle(divParent);
-
-  var parentWidth = parseInt(parentStyle.width, 10);
-  var parentHeight = parseInt(parentStyle.height, 10);
-
-  var headers = document.getElementById('headers');
-  var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
-
-  div.style.top = divParent.offsetTop + 'px';
-
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var gameWidth = visualizationColumn.getBoundingClientRect().width;
-  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var workspaceWidth = document.getElementById('codeWorkspace').clientWidth;
 
   // Keep blocks static relative to the right edge in RTL mode
-  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
-  if (this.isUsingBlockly() && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
-      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
-    });
+  if (this.isUsingBlockly() && Blockly.RTL) {
+    if (this.lastWorkspaceWidth && (this.lastWorkspaceWidth !== workspaceWidth)) {
+      var blockOffset = workspaceWidth - this.lastWorkspaceWidth;
+      Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
+        topBlock.moveBy(blockOffset, 0);
+      });
+    }
   }
+  this.lastWorkspaceWidth = workspaceWidth;
 
-  if (this.isRtl()) {
-    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  else {
-    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  if (this.editCode) {
-    // Position the inner codeTextbox element below the headers
-    var codeTextbox = document.getElementById('codeTextbox');
-    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
-    codeTextbox.style.width = fullWorkspaceWidth + 'px';
-    codeTextbox.style.top = headersHeight + 'px';
-
-    // The outer codeWorkspace element height should match its parent:
-    div.style.height = parentHeight + 'px';
-  } else {
-    // reduce height by headers height because blockly isn't aware of headers
-    // and will size its svg element to be too tall
-    div.style.height = (parentHeight - headersHeight) + 'px';
-  }
-
-  div.style.width = fullWorkspaceWidth + 'px';
-  this.resizeHeaders(fullWorkspaceWidth);
+  // Droplet toolbox width varies as the window size changes, so refresh:
+  this.resizeToolboxHeader();
 };
 
-// |          toolbox-header          | workspace-header  | show-code-header |
-// |
-// |           toolboxWidth           |
-// |                 |         <--------- workspaceWidth ---------->         |
-// |         <---------------- fullWorkspaceWidth ----------------->         |
-StudioApp.prototype.resizeHeaders = function (fullWorkspaceWidth) {
+/**
+*  Updates the width of the toolbox-header to match the width of the toolbox
+*  or palette in the workspace below the header.
+*/
+StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  var showCodeWidth = 0;
-
-  var headersDiv = document.getElementById('headers');
-  if (headersDiv) {
-    headersDiv.style.width = fullWorkspaceWidth + 'px';
+  if (this.editCode && this.editor && this.editor.paletteEnabled) {
+    // If in the droplet editor, set toolboxWidth based on the block palette width:
+    var categories = document.querySelector('.droplet-palette-wrapper');
+    toolboxWidth = categories.getBoundingClientRect().width;
+  } else if (this.isUsingBlockly()) {
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-
-  var toolboxHeader = document.getElementById('toolbox-header');
-  if (toolboxHeader) {
-    if (this.editCode) {
-      // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-      if (this.editor && this.editor.currentlyUsingBlocks) {
-        // Set toolboxWidth based on the block palette width:
-        var categories = document.querySelector('.droplet-palette-wrapper');
-        toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
-      }
-    } else if (this.isUsingBlockly()) {
-      toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-    }
-    toolboxHeader.style.width = toolboxWidth + 'px';
-  }
-
-  var showCodeHeader = document.getElementById('show-code-header');
-  if (showCodeHeader) {
-    var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
-    if (this.enableShowCode &&
-        (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-      showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
-      showCodeHeader.style.display = "";
-    } else {
-      showCodeHeader.style.display = "none";
-    }
-  }
-
-  var workspaceHeader = document.getElementById('workspace-header');
-  if (workspaceHeader) {
-    workspaceHeader.style.width =
-        (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
-  }
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
 
 /**
@@ -5608,6 +6687,12 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.sendToPhone = config.sendToPhone;
   this.noPadding = config.noPadding;
 
+  // contract editor requires more vertical space. set height to 1250 unless
+  // explicitly specified
+  if (config.level.useContractEditor) {
+    config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
+  }
+
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
@@ -5637,13 +6722,23 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+  if (!this.enableShowCode) {
+    document.getElementById('show-code-header').style.display = 'none';
+  }
+  var codeWorkspace = container.querySelector('#codeWorkspace');
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(this.runButtonClick, 250, true);
+  var throttledRunClick = _.debounce(function () {
+    if (window.$) {
+      $(window).trigger('run_button_pressed');
+    }
+    this.runButtonClick();
+  }, 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
+  // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
   if (referenceArea) {
@@ -5653,26 +6748,39 @@ StudioApp.prototype.configureDom = function (config) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualization = document.getElementById('visualization');
 
-  // center game screen in embed mode
-  if(config.embed) {
-    visualizationColumn.style.margin = "0 auto";
+  if (!config.hideSource || config.embed) {
+    var vizHeight = this.MIN_WORKSPACE_HEIGHT;
+    if (this.isUsingBlockly() && config.level.edit_blocks) {
+      // Set a class on the main blockly div so CSS can style blocks differently
+      Blockly.addClass_(codeWorkspace, 'edit');
+      // If in level builder editing blocks, make workspace extra tall
+      vizHeight = 3000;
+      // Modify the arrangement of toolbox blocks so categories align left
+      if (config.level.edit_blocks == "toolbox_blocks") {
+        this.blockYCoordinateInterval = 80;
+        config.blockArrangement = { category : { x: 20 } };
+      }
+      // Enable param & var editing in levelbuilder, regardless of level setting
+      config.level.disableParamEditing = false;
+      config.level.disableVariableEditing = false;
+    }
+    if (config.pinWorkspaceToBottom) {
+      document.body.style.overflow = "hidden";
+      container.className = container.className + " pin_bottom";
+      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
+      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
+      if (this.editCode) {
+        var codeTextbox = document.getElementById('codeTextbox');
+        codeTextbox.className = codeTextbox.className + " pin_bottom";
+      }
+    } else {
+      visualizationColumn.style.minHeight = vizHeight + 'px';
+      container.style.minHeight = vizHeight + 'px';
+    }
   }
 
-  if (this.isUsingBlockly() && config.level.edit_blocks) {
-    // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
-    // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "3000px";
-    // Modify the arrangement of toolbox blocks so categories align left
-    if (config.level.edit_blocks == "toolbox_blocks") {
-      this.blockYCoordinateInterval = 80;
-      config.blockArrangement = { category : { x: 20 } };
-    }
-    // Enable param & var editing in levelbuilder, regardless of level setting
-    config.level.disableParamEditing = false;
-    config.level.disableVariableEditing = false;
-  } else if (!config.hideSource) {
-    visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+  if (config.embed && config.hideSource) {
+    visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
   if (!config.embed && !config.hideSource) {
@@ -5688,9 +6796,7 @@ StudioApp.prototype.configureDom = function (config) {
 StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
-  var workspaceDiv = this.editCode ?
-    document.getElementById('codeWorkspace') :
-    container.querySelector('#blockly');
+  var workspaceDiv = document.getElementById('codeWorkspace');
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
@@ -5716,10 +6822,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     }));
 
     dom.addClickTouchEvent(openWorkspace, function() {
-      // Redirect user to /edit version of this page. It would be better
-      // to just turn on the workspace but there are rendering issues
-      // with that.
-      window.location.href = window.location.href + '/edit';
+      // TODO: don't make assumptions about hideSource during init so this works.
+      // workspaceDiv.style.display = '';
+      location.href += '/edit';
     });
 
     buttonRow.appendChild(openWorkspace);
@@ -5734,21 +6839,23 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     // (important because they can be different in our test environment)
     ace = window.ace;
 
+    var fullDropletPalette = dropletUtils.generateDropletPalette(
+      options.codeFunctions, options.dropletConfig);
     this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
       mode: 'javascript',
-      modeOptions: utils.generateDropletModeOptions(options.codeFunctions,
-        options.dropletConfig),
-      palette: utils.generateDropletPalette(options.codeFunctions,
-        options.dropletConfig)
+      modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
+      palette: fullDropletPalette,
+      showPaletteInTextMode: true
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
+    this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     // Add an ace completer for the API functions exposed for this level
-    if (options.codeFunctions || options.dropletConfig) {
+    if (options.dropletConfig) {
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        utils.generateAceApiCompleter(options.codeFunctions, options.dropletConfig));
+        dropletUtils.generateAceApiCompleter(options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
@@ -5756,12 +6863,49 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
+    // Bind listener to palette/toolbox 'Hide' and 'Show' links
+    var hideToolboxLink = document.getElementById('hide-toolbox');
+    var showToolboxLink = document.getElementById('show-toolbox');
+    var showToolboxHeader = document.getElementById('show-toolbox-header');
+    if (hideToolboxLink && showToolboxLink && showToolboxHeader) {
+      hideToolboxLink.style.display = 'inline-block';
+      var handleTogglePalette = (function() {
+        if (this.editor) {
+          this.editor.enablePalette(!this.editor.paletteEnabled);
+          showToolboxHeader.style.display =
+              this.editor.paletteEnabled ? 'none' : 'inline-block';
+          this.resizeToolboxHeader();
+        }
+      }).bind(this);
+      dom.addClickTouchEvent(hideToolboxLink, handleTogglePalette);
+      dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
+    }
+
+    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager.registerBlocksFromList(
+      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+
+    var installTooltips = function () {
+      this.dropletTooltipManager.installTooltipsOnVisibleToolboxBlocks();
+    }.bind(this);
+
+    this.editor.on('changepalette', installTooltips);
+
+    this.editor.on('toggledone', function () {
+      if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
+        installTooltips();
+      }
+    });
+
+    this.resizeToolboxHeader();
+
     if (options.startBlocks) {
       this.editor.setValue(options.startBlocks);
     }
 
     if (options.afterEditorReady) {
       options.afterEditorReady();
+      installTooltips();
     }
   }, this));
 
@@ -5776,6 +6920,33 @@ StudioApp.prototype.handleEditCode_ = function (options) {
  */
 StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
   this.checkForEmptyBlocks_ = checkBlocks;
+};
+
+/**
+ * Add the starting block(s).
+ * @param loadLastAttempt If true, try to load config.lastAttempt.
+ */
+StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
+  var startBlocks = config.level.startBlocks || '';
+  if (loadLastAttempt) {
+    startBlocks = config.level.lastAttempt || startBlocks;
+  }
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks,
+        config.forceInsertTopBlock);
+  }
+  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
+  try {
+    this.loadBlocks(startBlocks);
+  } catch (e) {
+    if (loadLastAttempt) {
+      Blockly.mainBlockSpace.clear();
+      // Try loading the default start blocks instead.
+      this.setStartBlocks_(config, false);
+    } else {
+      throw e;
+    }
+  }
 };
 
 /**
@@ -5803,22 +6974,17 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     }
   }
 
-  var div = document.getElementById('blockly');
+  var div = document.getElementById('codeWorkspace');
   var options = {
     toolbox: config.level.toolbox,
-    disableParamEditing: config.level.disableParamEditing === undefined ?
-        true : config.level.disableParamEditing,
-    disableVariableEditing: config.level.disableVariableEditing === undefined ?
-        false : config.level.disableVariableEditing,
-    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-        false : config.level.useModalFunctionEditor,
-    useContractEditor: config.level.useContractEditor === undefined ?
-        false : config.level.useContractEditor,
-    defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-        0 : config.level.defaultNumExampleBlocks,
+    disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
+    disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
+    useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
+    useContractEditor: utils.valueOr(config.level.useContractEditor, false),
+    disableExamples: utils.valueOr(config.level.disableExamples, false),
+    defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: config.level.edit_blocks === undefined ?
-        false : config.level.edit_blocks
+    editBlocks: utils.valueOr(config.level.edit_blocks, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
@@ -5828,43 +6994,29 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
       }
     });
   this.inject(div, options);
+  this.onResize();
 
   if (config.afterInject) {
     config.afterInject();
   }
-
-  // Add the starting block(s).
-  var startBlocks = config.level.startBlocks || '';
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-  }
-  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  this.loadBlocks(startBlocks);
+  this.setStartBlocks_(config, true);
 };
 
 /**
- * Modify the workspace header after a droplet blocks/code toggle
+ * Modify the workspace header after a droplet blocks/code or palette toggle
  */
 StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
   var showCodeHeader = document.getElementById('show-code-header');
   var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
     msg.showBlocksHeader();
-  showCodeHeader.firstChild.innerText = newButtonTitle;
-
-  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
-  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
-    msg.workspaceHeaderJavaScript();
-  workspaceHeaderSpan.innerText = newButtonTitle;
+  showCodeHeader.firstChild.textContent = newButtonTitle;
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
     blockCount.style.display =
       (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
   }
-
-  // Resize (including headers), so the category header will appear/disappear:
-  this.onResize();
 };
 
 /**
@@ -5875,23 +7027,81 @@ StudioApp.prototype.hasExtraTopBlocks = function () {
 };
 
 /**
- * @param {Blockly.Block} block Block to check
- * @returns true if the block has a connection without a block attached
+ *
  */
-function isUnfilledBlock(block) {
-  return block.inputList.some(function (input) {
-    return input.connection && !input.connection.targetBlock();
-  });
-}
-
-/**
- * @returns true if any block in the workspace has an unfilled input
- */
-StudioApp.prototype.hasUnfilledBlock = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(isUnfilledBlock);
+StudioApp.prototype.hasQuestionMarksInNumberField = function () {
+  return this.feedback_.hasQuestionMarksInNumberField();
 };
 
-},{"../locale/current/common":190,"./ResizeSensor":1,"./block_utils":17,"./constants.js":43,"./dom":44,"./feedback":63,"./templates/builder.html":159,"./templates/buttons.html":160,"./templates/instructions.html":162,"./templates/learn.html":163,"./templates/makeYourOwn.html":164,"./utils":185,"./xml":186,"url":205}],205:[function(require,module,exports){
+/**
+ * @returns true if any non-example block in the workspace has an unfilled input
+ */
+StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+    // Get the root block in the chain
+    var rootBlock = block.getRootBlock();
+
+    // Allow example blocks to have unfilled inputs
+    if (rootBlock.type === 'functional_example') {
+      return false;
+    }
+
+    return block.hasUnfilledFunctionalInput();
+  });
+};
+
+StudioApp.prototype.createCoordinateGridBackground = function (options) {
+  var svgName = options.svg;
+  var origin = options.origin;
+  var firstLabel = options.firstLabel;
+  var lastLabel = options.lastLabel;
+  var increment = options.increment;
+
+  var CANVAS_HEIGHT = 400;
+  var CANVAS_WIDTH = 400;
+
+  var svg = document.getElementById(svgName);
+
+  var bbox, text, rect;
+  for (var label = firstLabel; label <= lastLabel; label += increment) {
+    // create x axis labels
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    text.appendChild(document.createTextNode(label));
+    svg.appendChild(text);
+    bbox = text.getBBox();
+    text.setAttribute('x', label - origin - bbox.width / 2);
+    text.setAttribute('y', CANVAS_HEIGHT);
+    text.setAttribute('font-weight', 'bold');
+    rect = rectFromElementBoundingBox(text);
+    rect.setAttribute('fill', 'white');
+    svg.insertBefore(rect, text);
+
+    // create y axis labels
+    text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    text.appendChild(document.createTextNode(label));
+    svg.appendChild(text);
+    bbox = text.getBBox();
+    text.setAttribute('x', 0);
+    text.setAttribute('y', CANVAS_HEIGHT - (label - origin));
+    text.setAttribute('dominant-baseline', 'central');
+    text.setAttribute('font-weight', 'bold');
+    rect = rectFromElementBoundingBox(text);
+    rect.setAttribute('fill', 'white');
+    svg.insertBefore(rect, text);
+  }
+};
+
+function rectFromElementBoundingBox(element) {
+  var bbox = element.getBBox();
+  var rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('x', bbox.x);
+  rect.setAttribute('y', bbox.y);
+  rect.setAttribute('width', bbox.width);
+  rect.setAttribute('height', bbox.height);
+  return rect;
+}
+
+},{"../locale/current/common":251,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":25,"./block_utils":26,"./constants.js":56,"./dom":57,"./dropletUtils":58,"./feedback":77,"./templates/builder.html":219,"./templates/buttons.html":220,"./templates/instructions.html":222,"./templates/learn.html":223,"./templates/makeYourOwn.html":224,"./utils":246,"./xml":247,"url":266}],266:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6600,13 +7810,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":201,"querystring":204}],204:[function(require,module,exports){
+},{"punycode":262,"querystring":265}],265:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":202,"./encode":203}],203:[function(require,module,exports){
+},{"./decode":263,"./encode":264}],264:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6693,7 +7903,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],202:[function(require,module,exports){
+},{}],263:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6779,7 +7989,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],201:[function(require,module,exports){
+},{}],262:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7290,7 +8500,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],164:[function(require,module,exports){
+},{}],224:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7310,7 +8520,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],163:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],223:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7332,7 +8542,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],162:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],222:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7352,7 +8562,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],159:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],219:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7372,7 +8582,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],63:[function(require,module,exports){
+},{"ejs":267}],77:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -7496,6 +8706,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
+      tryAgainText: options.tryAgainText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       hintRequestExperiment: options.hintRequestExperiment,
@@ -7679,12 +8890,18 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
 FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
+
+  var tryAgainText = '';
+  if (options.feedbackType !== TestResults.ALL_PASS) {
+    tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
+  }
+
   buttons.innerHTML = require('./templates/buttons.html')({
     data: {
       previousLevel:
         !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
-      tryAgain: options.feedbackType !== TestResults.ALL_PASS,
+      tryAgain: tryAgainText,
       nextLevel: this.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
@@ -7719,6 +8936,7 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
 
 // This returns a document element with the appropriate feedback message.
 // The message will be one of the following, from highest to lowest precedence:
+// 0. Failure override message specified on level (options.level.failureMessageOverride)
 // 1. Message passed in by caller (options.message).
 // 2. Message from dashboard database (options.response.hint).
 // 3. Header message due to dashboard text check fail (options.response.share_failure).
@@ -7732,7 +8950,10 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
   var message;
 
   // If a message was explicitly passed in, use that.
-  if (options.message) {
+  if (options.feedbackType !== TestResults.ALL_PASS &&
+      options.level.failureMessageOverride) {
+    message = options.level.failureMessageOverride;
+  } else  if (options.message) {
     message = options.message;
   } else if (options.response && options.response.share_failure) {
     message = msg.shareFailure();
@@ -7763,7 +8984,13 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
             msg.levelIncompleteError();
         break;
       case TestResults.EXTRA_TOP_BLOCKS_FAIL:
-        message = options.level.extraTopBlocks || msg.extraTopBlocks();
+        var hasWhenRun = Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
+          return block.type === 'when_run' && block.isUserVisible();
+        });
+
+        var defaultMessage = hasWhenRun ?
+          msg.extraTopBlocksWhenRun() : msg.extraTopBlocks();
+        message = options.level.extraTopBlocks || defaultMessage;
         break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;
@@ -8087,7 +9314,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
 };
 
 /**
- *
+ * Display the 'Show Code' modal dialog.
  */
 FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = this.getGeneratedCodeElement_();
@@ -8110,6 +9337,49 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
     dom.addClickTouchEvent(okayButton, function() {
+      dialog.hide();
+    });
+  }
+
+  dialog.show();
+};
+
+/**
+ * Display the "Clear Puzzle" confirmation dialog.  Calls `callback` if the user
+ * confirms they want to clear the puzzle.
+ */
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
+  var codeDiv = document.createElement('div');
+  codeDiv.innerHTML = '<p class="dialog-title">' + msg.clearPuzzleConfirmHeader() + '</p>' +
+      '<p>' + msg.clearPuzzleConfirm() + '</p>';
+
+  var buttons = document.createElement('div');
+  buttons.innerHTML = require('./templates/buttons.html')({
+    data: {
+      clearPuzzle: true,
+      cancel: true
+    }
+  });
+  codeDiv.appendChild(buttons);
+
+  var dialog = this.createModalDialogWithIcon({
+    Dialog: Dialog,
+    contentDiv: codeDiv,
+    icon: this.studioApp_.icon,
+    defaultBtnSelector: '#again-button'
+  });
+
+  var cancelButton = buttons.querySelector('#again-button');
+  if (cancelButton) {
+    dom.addClickTouchEvent(cancelButton, function() {
+      dialog.hide();
+    });
+  }
+
+  var clearPuzzleButton = buttons.querySelector('#continue-button');
+  if (clearPuzzleButton) {
+    dom.addClickTouchEvent(clearPuzzleButton, function() {
+      callback();
       dialog.hide();
     });
   }
@@ -8365,7 +9635,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
-  if (this.hasQuestionMarksInNumberField_()) {
+  if (this.hasQuestionMarksInNumberField()) {
     return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   }
   if (!this.hasAllRequiredBlocks_(requiredBlocks)) {
@@ -8430,10 +9700,10 @@ FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
 /**
  * Check for '???' instead of a value in block fields.
  */
-FeedbackUtils.prototype.hasQuestionMarksInNumberField_ = function () {
+FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
     return block.getTitles().some(function(title) {
-      return title.value_ === '???';
+      return title.value_ === '???' || title.text_ === '???';
     });
   });
 };
@@ -8529,7 +9799,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":190,"./codegen":42,"./constants":43,"./dom":44,"./feedbackBlocks":64,"./templates/buttons.html":160,"./templates/code.html":161,"./templates/shareFailure.html":167,"./templates/sharing.html":168,"./templates/showCode.html":169,"./templates/trophy.html":170,"./utils":185,"./xml":186}],170:[function(require,module,exports){
+},{"../locale/current/common":251,"./codegen":54,"./constants":56,"./dom":57,"./feedbackBlocks":78,"./templates/buttons.html":220,"./templates/code.html":221,"./templates/shareFailure.html":227,"./templates/sharing.html":228,"./templates/showCode.html":229,"./templates/trophy.html":230,"./utils":246,"./xml":247}],230:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8549,7 +9819,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],169:[function(require,module,exports){
+},{"ejs":267}],229:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8569,7 +9839,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],168:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],228:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8589,7 +9859,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],167:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],227:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8609,7 +9879,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],161:[function(require,module,exports){
+},{"ejs":267}],221:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8629,7 +9899,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],160:[function(require,module,exports){
+},{"ejs":267}],220:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8641,7 +9911,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  msg.continue() )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  msg.continue() )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -8649,9 +9919,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"ejs":206}],190:[function(require,module,exports){
-/*common*/ module.exports = window.blockly.locale;
-},{}],64:[function(require,module,exports){
+},{"../../locale/current/common":251,"ejs":267}],78:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -8780,7 +10048,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":43,"./templates/readonly.html":166}],166:[function(require,module,exports){
+},{"./constants":56,"./templates/readonly.html":226}],226:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8793,7 +10061,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');14; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="blockly"></div>\n</body>\n</html>\n'); })();
+; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="codeWorkspace"></div>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };
@@ -8801,875 +10069,65 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],206:[function(require,module,exports){
-
-/*!
- * EJS
- * Copyright(c) 2012 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
+},{"ejs":267}],54:[function(require,module,exports){
+var dropletUtils = require('./dropletUtils');
 
 /**
- * Module dependencies.
+ * Evaluates a string of code parameterized with a dictionary.
  */
-
-var utils = require('./utils')
-  , path = require('path')
-  , basename = path.basename
-  , dirname = path.dirname
-  , extname = path.extname
-  , join = path.join
-  , fs = require('fs')
-  , read = fs.readFileSync;
-
-/**
- * Filters.
- *
- * @type Object
- */
-
-var filters = exports.filters = require('./filters');
-
-/**
- * Intermediate js cache.
- *
- * @type Object
- */
-
-var cache = {};
-
-/**
- * Clear intermediate js cache.
- *
- * @api public
- */
-
-exports.clearCache = function(){
-  cache = {};
-};
-
-/**
- * Translate filtered code into function calls.
- *
- * @param {String} js
- * @return {String}
- * @api private
- */
-
-function filtered(js) {
-  return js.substr(1).split('|').reduce(function(js, filter){
-    var parts = filter.split(':')
-      , name = parts.shift()
-      , args = parts.join(':') || '';
-    if (args) args = ', ' + args;
-    return 'filters.' + name + '(' + js + args + ')';
-  });
-};
-
-/**
- * Re-throw the given `err` in context to the
- * `str` of ejs, `filename`, and `lineno`.
- *
- * @param {Error} err
- * @param {String} str
- * @param {String} filename
- * @param {String} lineno
- * @api private
- */
-
-function rethrow(err, str, filename, lineno){
-  var lines = str.split('\n')
-    , start = Math.max(lineno - 3, 0)
-    , end = Math.min(lines.length, lineno + 3);
-
-  // Error context
-  var context = lines.slice(start, end).map(function(line, i){
-    var curr = i + start + 1;
-    return (curr == lineno ? ' >> ' : '    ')
-      + curr
-      + '| '
-      + line;
-  }).join('\n');
-
-  // Alter exception message
-  err.path = filename;
-  err.message = (filename || 'ejs') + ':'
-    + lineno + '\n'
-    + context + '\n\n'
-    + err.message;
-  
-  throw err;
-}
-
-/**
- * Parse the given `str` of ejs, returning the function body.
- *
- * @param {String} str
- * @return {String}
- * @api public
- */
-
-var parse = exports.parse = function(str, options){
-  var options = options || {}
-    , open = options.open || exports.open || '<%'
-    , close = options.close || exports.close || '%>'
-    , filename = options.filename
-    , compileDebug = options.compileDebug !== false
-    , buf = [];
-
-  buf.push('var buf = [];');
-  if (false !== options._with) buf.push('\nwith (locals || {}) { (function(){ ');
-  buf.push('\n buf.push(\'');
-
-  var lineno = 1;
-
-  var consumeEOL = false;
-  for (var i = 0, len = str.length; i < len; ++i) {
-    if (str.slice(i, open.length + i) == open) {
-      i += open.length
-  
-      var prefix, postfix, line = (compileDebug ? '__stack.lineno=' : '') + lineno;
-      switch (str.substr(i, 1)) {
-        case '=':
-          prefix = "', escape((" + line + ', ';
-          postfix = ")), '";
-          ++i;
-          break;
-        case '-':
-          prefix = "', (" + line + ', ';
-          postfix = "), '";
-          ++i;
-          break;
-        default:
-          prefix = "');" + line + ';';
-          postfix = "; buf.push('";
-      }
-
-      var end = str.indexOf(close, i)
-        , js = str.substring(i, end)
-        , start = i
-        , include = null
-        , n = 0;
-
-      if ('-' == js[js.length-1]){
-        js = js.substring(0, js.length - 2);
-        consumeEOL = true;
-      }
-
-      if (0 == js.trim().indexOf('include')) {
-        var name = js.trim().slice(7).trim();
-        if (!filename) throw new Error('filename option is required for includes');
-        var path = resolveInclude(name, filename);
-        include = read(path, 'utf8');
-        include = exports.parse(include, { filename: path, _with: false, open: open, close: close, compileDebug: compileDebug });
-        buf.push("' + (function(){" + include + "})() + '");
-        js = '';
-      }
-
-      while (~(n = js.indexOf("\n", n))) n++, lineno++;
-      if (js.substr(0, 1) == ':') js = filtered(js);
-      if (js) {
-        if (js.lastIndexOf('//') > js.lastIndexOf('\n')) js += '\n';
-        buf.push(prefix, js, postfix);
-      }
-      i += end - start + close.length - 1;
-
-    } else if (str.substr(i, 1) == "\\") {
-      buf.push("\\\\");
-    } else if (str.substr(i, 1) == "'") {
-      buf.push("\\'");
-    } else if (str.substr(i, 1) == "\r") {
-      // ignore
-    } else if (str.substr(i, 1) == "\n") {
-      if (consumeEOL) {
-        consumeEOL = false;
-      } else {
-        buf.push("\\n");
-        lineno++;
-      }
-    } else {
-      buf.push(str.substr(i, 1));
-    }
-  }
-
-  if (false !== options._with) buf.push("'); })();\n} \nreturn buf.join('');")
-  else buf.push("');\nreturn buf.join('');");
-
-  return buf.join('');
-};
-
-/**
- * Compile the given `str` of ejs into a `Function`.
- *
- * @param {String} str
- * @param {Object} options
- * @return {Function}
- * @api public
- */
-
-var compile = exports.compile = function(str, options){
-  options = options || {};
-  var escape = options.escape || utils.escape;
-  
-  var input = JSON.stringify(str)
-    , compileDebug = options.compileDebug !== false
-    , client = options.client
-    , filename = options.filename
-        ? JSON.stringify(options.filename)
-        : 'undefined';
-  
-  if (compileDebug) {
-    // Adds the fancy stack trace meta info
-    str = [
-      'var __stack = { lineno: 1, input: ' + input + ', filename: ' + filename + ' };',
-      rethrow.toString(),
-      'try {',
-      exports.parse(str, options),
-      '} catch (err) {',
-      '  rethrow(err, __stack.input, __stack.filename, __stack.lineno);',
-      '}'
-    ].join("\n");
+exports.evalWith = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      exports.initJSInterpreter(interpreter, scope, options);
+    };
+    var myInterpreter = new Interpreter(code, initFunc);
+    // interpret the JS program all at once:
+    myInterpreter.run();
   } else {
-    str = exports.parse(str, options);
-  }
-  
-  if (options.debug) console.log(str);
-  if (client) str = 'escape = escape || ' + escape.toString() + ';\n' + str;
-
-  try {
-    var fn = new Function('locals, filters, escape', str);
-  } catch (err) {
-    if ('SyntaxError' == err.name) {
-      err.message += options.filename
-        ? ' in ' + filename
-        : ' while compiling ejs';
+    // execute JS code "natively"
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
     }
-    throw err;
-  }
-
-  if (client) return fn;
-
-  return function(locals){
-    return fn.call(this, locals, filters, escape);
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor().apply(null, args);
   }
 };
 
 /**
- * Render the given `str` of ejs.
- *
- * Options:
- *
- *   - `locals`          Local variables object
- *   - `cache`           Compiled functions are cached, requires `filename`
- *   - `filename`        Used by `cache` to key caches
- *   - `scope`           Function execution context
- *   - `debug`           Output generated function body
- *   - `open`            Open tag, defaulting to "<%"
- *   - `close`           Closing tag, defaulting to "%>"
- *
- * @param {String} str
- * @param {Object} options
- * @return {String}
- * @api public
+ * Returns a function based on a string of code parameterized with a dictionary.
  */
-
-exports.render = function(str, options){
-  var fn
-    , options = options || {};
-
-  if (options.cache) {
-    if (options.filename) {
-      fn = cache[options.filename] || (cache[options.filename] = compile(str, options));
-    } else {
-      throw new Error('"cache" option requires "filename".');
-    }
+exports.functionFromCode = function(code, options) {
+  if (options.StudioApp && options.StudioApp.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
   } else {
-    fn = compile(str, options);
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-
-  options.__proto__ = options.locals;
-  return fn.call(options.scope, options);
 };
 
-/**
- * Render an EJS file at the given `path` and callback `fn(err, str)`.
- *
- * @param {String} path
- * @param {Object|Function} options or callback
- * @param {Function} fn
- * @api public
- */
-
-exports.renderFile = function(path, options, fn){
-  var key = path + ':string';
-
-  if ('function' == typeof options) {
-    fn = options, options = {};
-  }
-
-  options.filename = path;
-
-  var str;
-  try {
-    str = options.cache
-      ? cache[key] || (cache[key] = read(path, 'utf8'))
-      : read(path, 'utf8');
-  } catch (err) {
-    fn(err);
-    return;
-  }
-  fn(null, exports.render(str, options));
-};
-
-/**
- * Resolve include `name` relative to `filename`.
- *
- * @param {String} name
- * @param {String} filename
- * @return {String}
- * @api private
- */
-
-function resolveInclude(name, filename) {
-  var path = join(dirname(filename), name);
-  var ext = extname(name);
-  if (!ext) path += '.ejs';
-  return path;
-}
-
-// express support
-
-exports.__express = exports.renderFile;
-
-/**
- * Expose to require().
- */
-
-if (require.extensions) {
-  require.extensions['.ejs'] = function(module, filename) {
-    source = require('fs').readFileSync(filename, 'utf-8');
-    module._compile(compile(source, {}), filename);
-  };
-} else if (require.registerExtension) {
-  require.registerExtension('.ejs', function(src) {
-    return compile(src, {});
-  });
-}
-
-},{"./filters":207,"./utils":208,"fs":198,"path":199}],208:[function(require,module,exports){
-
-/*!
- * EJS
- * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
-
-/**
- * Escape the given string of `html`.
- *
- * @param {String} html
- * @return {String}
- * @api private
- */
-
-exports.escape = function(html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
- 
-},{}],207:[function(require,module,exports){
-
-/*!
- * EJS - Filters
- * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
- * MIT Licensed
- */
-
-/**
- * First element of the target `obj`.
- */
-
-exports.first = function(obj) {
-  return obj[0];
-};
-
-/**
- * Last element of the target `obj`.
- */
-
-exports.last = function(obj) {
-  return obj[obj.length - 1];
-};
-
-/**
- * Capitalize the first letter of the target `str`.
- */
-
-exports.capitalize = function(str){
-  str = String(str);
-  return str[0].toUpperCase() + str.substr(1, str.length);
-};
-
-/**
- * Downcase the target `str`.
- */
-
-exports.downcase = function(str){
-  return String(str).toLowerCase();
-};
-
-/**
- * Uppercase the target `str`.
- */
-
-exports.upcase = function(str){
-  return String(str).toUpperCase();
-};
-
-/**
- * Sort the target `obj`.
- */
-
-exports.sort = function(obj){
-  return Object.create(obj).sort();
-};
-
-/**
- * Sort the target `obj` by the given `prop` ascending.
- */
-
-exports.sort_by = function(obj, prop){
-  return Object.create(obj).sort(function(a, b){
-    a = a[prop], b = b[prop];
-    if (a > b) return 1;
-    if (a < b) return -1;
-    return 0;
-  });
-};
-
-/**
- * Size or length of the target `obj`.
- */
-
-exports.size = exports.length = function(obj) {
-  return obj.length;
-};
-
-/**
- * Add `a` and `b`.
- */
-
-exports.plus = function(a, b){
-  return Number(a) + Number(b);
-};
-
-/**
- * Subtract `b` from `a`.
- */
-
-exports.minus = function(a, b){
-  return Number(a) - Number(b);
-};
-
-/**
- * Multiply `a` by `b`.
- */
-
-exports.times = function(a, b){
-  return Number(a) * Number(b);
-};
-
-/**
- * Divide `a` by `b`.
- */
-
-exports.divided_by = function(a, b){
-  return Number(a) / Number(b);
-};
-
-/**
- * Join `obj` with the given `str`.
- */
-
-exports.join = function(obj, str){
-  return obj.join(str || ', ');
-};
-
-/**
- * Truncate `str` to `len`.
- */
-
-exports.truncate = function(str, len){
-  str = String(str);
-  return str.substr(0, len);
-};
-
-/**
- * Truncate `str` to `n` words.
- */
-
-exports.truncate_words = function(str, n){
-  var str = String(str)
-    , words = str.split(/ +/);
-  return words.slice(0, n).join(' ');
-};
-
-/**
- * Replace `pattern` with `substitution` in `str`.
- */
-
-exports.replace = function(str, pattern, substitution){
-  return String(str).replace(pattern, substitution || '');
-};
-
-/**
- * Prepend `val` to `obj`.
- */
-
-exports.prepend = function(obj, val){
-  return Array.isArray(obj)
-    ? [val].concat(obj)
-    : val + obj;
-};
-
-/**
- * Append `val` to `obj`.
- */
-
-exports.append = function(obj, val){
-  return Array.isArray(obj)
-    ? obj.concat(val)
-    : obj + val;
-};
-
-/**
- * Map the given `prop`.
- */
-
-exports.map = function(arr, prop){
-  return arr.map(function(obj){
-    return obj[prop];
-  });
-};
-
-/**
- * Reverse the given `obj`.
- */
-
-exports.reverse = function(obj){
-  return Array.isArray(obj)
-    ? obj.reverse()
-    : String(obj).split('').reverse().join('');
-};
-
-/**
- * Get `prop` of the given `obj`.
- */
-
-exports.get = function(obj, prop){
-  return obj[prop];
-};
-
-/**
- * Packs the given `obj` into json string
- */
-exports.json = function(obj){
-  return JSON.stringify(obj);
-};
-},{}],199:[function(require,module,exports){
-(function (process){
-// Copyright Joyent, Inc. and other Node contributors.
 //
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
+// Blockly specific codegen functions:
 //
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-// resolves . and .. elements in a path array with directory names there
-// must be no slashes, empty elements, or device names (c:\) in the array
-// (so also no leading and trailing slashes - it does not distinguish
-// relative and absolute paths)
-function normalizeArray(parts, allowAboveRoot) {
-  // if the path tries to go above the root, `up` ends up > 0
-  var up = 0;
-  for (var i = parts.length - 1; i >= 0; i--) {
-    var last = parts[i];
-    if (last === '.') {
-      parts.splice(i, 1);
-    } else if (last === '..') {
-      parts.splice(i, 1);
-      up++;
-    } else if (up) {
-      parts.splice(i, 1);
-      up--;
-    }
-  }
-
-  // if the path is allowed to go above the root, restore leading ..s
-  if (allowAboveRoot) {
-    for (; up--; up) {
-      parts.unshift('..');
-    }
-  }
-
-  return parts;
-}
-
-// Split a filename into [root, dir, basename, ext], unix version
-// 'root' is just a slash, or nothing.
-var splitPathRe =
-    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
-var splitPath = function(filename) {
-  return splitPathRe.exec(filename).slice(1);
-};
-
-// path.resolve([from ...], to)
-// posix version
-exports.resolve = function() {
-  var resolvedPath = '',
-      resolvedAbsolute = false;
-
-  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
-    var path = (i >= 0) ? arguments[i] : process.cwd();
-
-    // Skip empty and invalid entries
-    if (typeof path !== 'string') {
-      throw new TypeError('Arguments to path.resolve must be strings');
-    } else if (!path) {
-      continue;
-    }
-
-    resolvedPath = path + '/' + resolvedPath;
-    resolvedAbsolute = path.charAt(0) === '/';
-  }
-
-  // At this point the path should be resolved to a full absolute path, but
-  // handle relative paths to be safe (might happen when process.cwd() fails)
-
-  // Normalize the path
-  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
-    return !!p;
-  }), !resolvedAbsolute).join('/');
-
-  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
-};
-
-// path.normalize(path)
-// posix version
-exports.normalize = function(path) {
-  var isAbsolute = exports.isAbsolute(path),
-      trailingSlash = substr(path, -1) === '/';
-
-  // Normalize the path
-  path = normalizeArray(filter(path.split('/'), function(p) {
-    return !!p;
-  }), !isAbsolute).join('/');
-
-  if (!path && !isAbsolute) {
-    path = '.';
-  }
-  if (path && trailingSlash) {
-    path += '/';
-  }
-
-  return (isAbsolute ? '/' : '') + path;
-};
-
-// posix version
-exports.isAbsolute = function(path) {
-  return path.charAt(0) === '/';
-};
-
-// posix version
-exports.join = function() {
-  var paths = Array.prototype.slice.call(arguments, 0);
-  return exports.normalize(filter(paths, function(p, index) {
-    if (typeof p !== 'string') {
-      throw new TypeError('Arguments to path.join must be strings');
-    }
-    return p;
-  }).join('/'));
-};
-
-
-// path.relative(from, to)
-// posix version
-exports.relative = function(from, to) {
-  from = exports.resolve(from).substr(1);
-  to = exports.resolve(to).substr(1);
-
-  function trim(arr) {
-    var start = 0;
-    for (; start < arr.length; start++) {
-      if (arr[start] !== '') break;
-    }
-
-    var end = arr.length - 1;
-    for (; end >= 0; end--) {
-      if (arr[end] !== '') break;
-    }
-
-    if (start > end) return [];
-    return arr.slice(start, end - start + 1);
-  }
-
-  var fromParts = trim(from.split('/'));
-  var toParts = trim(to.split('/'));
-
-  var length = Math.min(fromParts.length, toParts.length);
-  var samePartsLength = length;
-  for (var i = 0; i < length; i++) {
-    if (fromParts[i] !== toParts[i]) {
-      samePartsLength = i;
-      break;
-    }
-  }
-
-  var outputParts = [];
-  for (var i = samePartsLength; i < fromParts.length; i++) {
-    outputParts.push('..');
-  }
-
-  outputParts = outputParts.concat(toParts.slice(samePartsLength));
-
-  return outputParts.join('/');
-};
-
-exports.sep = '/';
-exports.delimiter = ':';
-
-exports.dirname = function(path) {
-  var result = splitPath(path),
-      root = result[0],
-      dir = result[1];
-
-  if (!root && !dir) {
-    // No dirname whatsoever
-    return '.';
-  }
-
-  if (dir) {
-    // It has a dirname, strip trailing slash
-    dir = dir.substr(0, dir.length - 1);
-  }
-
-  return root + dir;
-};
-
-
-exports.basename = function(path, ext) {
-  var f = splitPath(path)[2];
-  // TODO: make this comparison case-insensitive on windows?
-  if (ext && f.substr(-1 * ext.length) === ext) {
-    f = f.substr(0, f.length - ext.length);
-  }
-  return f;
-};
-
-
-exports.extname = function(path) {
-  return splitPath(path)[3];
-};
-
-function filter (xs, f) {
-    if (xs.filter) return xs.filter(f);
-    var res = [];
-    for (var i = 0; i < xs.length; i++) {
-        if (f(xs[i], i, xs)) res.push(xs[i]);
-    }
-    return res;
-}
-
-// String.prototype.substr - negative index don't work in IE8
-var substr = 'ab'.substr(-1) === 'b'
-    ? function (str, start, len) { return str.substr(start, len) }
-    : function (str, start, len) {
-        if (start < 0) start = str.length + start;
-        return str.substr(start, len);
-    }
-;
-
-}).call(this,require('_process'))
-},{"_process":200}],200:[function(require,module,exports){
-// shim for using process in browser
-
-var process = module.exports = {};
-var queue = [];
-var draining = false;
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    draining = true;
-    var currentQueue;
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        var i = -1;
-        while (++i < len) {
-            currentQueue[i]();
-        }
-        len = queue.length;
-    }
-    draining = false;
-}
-process.nextTick = function (fun) {
-    queue.push(fun);
-    if (!draining) {
-        setTimeout(drainQueue, 0);
-    }
-};
-
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-// TODO(shtylman)
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-},{}],198:[function(require,module,exports){
-
-},{}],42:[function(require,module,exports){
-var utils = require('./utils');
 
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
@@ -9724,7 +10182,45 @@ exports.workspaceCode = function(blockly) {
   return exports.strip(code);
 };
 
+//
+// Property access wrapped in try/catch. This is in an indepedendent function
+// so the JIT compiler can optimize the calling function.
+//
+
+function safeReadProperty(object, property) {
+  try {
+    return object[property];
+  } catch (e) { }
+}
+
+//
+// Marshal a single native object from native to interpreter. This is in an
+// indepedendent function so the JIT compiler can optimize the calling function.
+// (Chrome V8 says ForInStatement is not fast case)
+//
+
+function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
+  var retVal = interpreter.createObject(interpreter.OBJECT);
+  for (var prop in nativeObject) {
+    var value = safeReadProperty(nativeObject, prop);
+    interpreter.setProperty(retVal,
+                            prop,
+                            exports.marshalNativeToInterpreter(interpreter,
+                                                               value,
+                                                               nativeObject,
+                                                               maxDepth));
+  }
+  return retVal;
+}
+
+//
+// Droplet/JavaScript/Interpreter codegen functions:
+//
+
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  if (typeof nativeVar === 'undefined') {
+    return interpreter.UNDEFINED;
+  }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to inifinite levels of depth
@@ -9749,7 +10245,11 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     }
     retVal.length = nativeVar.length;
   } else if (nativeVar instanceof Function) {
-    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: nativeVar,
+        nativeParentObj: nativeParentObj,
+    });
     retVal = interpreter.createNativeFunction(wrapper);
   } else if (nativeVar instanceof Object) {
     // note Object must be checked after Function and Array (since they are also Objects)
@@ -9763,19 +10263,7 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
 
       retVal = nativeVar;
     } else {
-      retVal = interpreter.createObject(interpreter.OBJECT);
-      for (var prop in nativeVar) {
-        var value;
-        try {
-          value = nativeVar[prop];
-        } catch (e) { }
-        interpreter.setProperty(retVal,
-                                prop,
-                                exports.marshalNativeToInterpreter(interpreter,
-                                                                   value,
-                                                                   nativeVar,
-                                                                   maxDepth - 1));
-      }
+      retVal = marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1);
     }
   } else {
     retVal = interpreter.createPrimitive(nativeVar);
@@ -9811,16 +10299,30 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
-  return function() {
-    // Call the native function:
-    var nativeArgs = [];
-    for (var i = 0; i < arguments.length; i++) {
-      nativeArgs[i] = exports.marshalInterpreterToNative(interpreter, arguments[i]);
-    }
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
-    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
-  };
+exports.makeNativeMemberFunction = function (opts) {
+  if (opts.dontMarshal) {
+    return function() {
+      // Just call the native function and marshal the return value:
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  } else {
+    return function() {
+      // Call the native function after marshalling parameters:
+      var nativeArgs = [];
+      for (var i = 0; i < arguments.length; i++) {
+        nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
+      }
+      var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
+      return exports.marshalNativeToInterpreter(opts.interpreter,
+                                                nativeRetVal,
+                                                null,
+                                                opts.maxDepth);
+    };
+  }
 };
 
 function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
@@ -9830,7 +10332,11 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
       // Populate the scope with native functions
       // NOTE: other properties are not currently passed to the interpreter
       var parent = parentObj ? parentObj : funcsObj;
-      var wrapper = exports.makeNativeMemberFunction(interpreter, func, parent);
+      var wrapper = exports.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+      });
       interpreter.setProperty(scope,
                               prop,
                               interpreter.createNativeFunction(wrapper));
@@ -9839,10 +10345,14 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
 }
 
 function populateGlobalFunctions(interpreter, scope) {
-  for (var i = 0; i < utils.dropletGlobalConfigBlocks.length; i++) {
-    var gf = utils.dropletGlobalConfigBlocks[i];
+  for (var i = 0; i < dropletUtils.dropletGlobalConfigBlocks.length; i++) {
+    var gf = dropletUtils.dropletGlobalConfigBlocks[i];
     var func = gf.parent[gf.func];
-    var wrapper = exports.makeNativeMemberFunction(interpreter, func, gf.parent);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: func,
+        nativeParentObj: gf.parent,
+    });
     interpreter.setProperty(scope,
                             gf.func,
                             interpreter.createNativeFunction(wrapper));
@@ -9855,9 +10365,11 @@ function populateJSFunctions(interpreter) {
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction(interpreter,
-                                                   String[functions[i]],
-                                                   String);
+    var wrapper = exports.makeNativeMemberFunction({
+        interpreter: interpreter,
+        nativeFunc: String[functions[i]],
+        nativeParentObj: String,
+    });
     interpreter.setProperty(interpreter.STRING,
                             functions[i],
                             interpreter.createNativeFunction(wrapper),
@@ -9894,13 +10406,34 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   if (state.done) {
     return true;
   }
+  if (state.node.type === "ForStatement") {
+    var mode = state.mode || 0;
+    // Safe to skip over ForStatement's in mode 0 (init) and 3 (update),
+    // but not mode 1 (test) or mode 2 (body) while unwinding...
+    return mode === 0 || mode === 3;
+  }
   switch (state.node.type) {
+    // Declarations:
     case "VariableDeclaration":
+    // Statements:
     case "BlockStatement":
-    case "ForStatement": // check for state.mode ?
-    case "UpdateExpression":
+    // All Expressions:
+    case "ThisExpression":
+    case "ArrayExpression":
+    case "ObjectExpression":
+    case "ArrowExpression":
+    case "SequenceExpression":
+    case "UnaryExpression":
     case "BinaryExpression":
+    case "UpdateExpression":
+    case "LogicalExpression":
+    case "ConditionalExpression":
+    case "NewExpression":
     case "CallExpression":
+    case "MemberExpression":
+    case "FunctionExpression":
+    case "AssignmentExpression":
+    // Other:
     case "Identifier":
     case "Literal":
     case "Program":
@@ -10042,59 +10575,397 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
 };
 
 /**
- * Evaluates a string of code parameterized with a dictionary.
+ * Finds the current line of code in droplet/ace editor. Walks up the stack if
+ * not currently in the user code area.
  */
-exports.evalWith = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, scope, options);
-    };
-    var myInterpreter = new Interpreter(code, initFunc);
-    // interpret the JS program all at once:
-    myInterpreter.run();
-  } else {
-    // execute JS code "natively"
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
+exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
+                                           userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  for (var i = 0; i < interpreter.stateStack.length; i++) {
+    var node = interpreter.stateStack[i].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+      break;
     }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor().apply(null, args);
   }
+  return userCodeRow;
+};
+
+},{"./dropletUtils":58}],58:[function(require,module,exports){
+var utils = require('./utils');
+
+/**
+ * @name DropletBlock
+ * @description Definition of a block to be used in Droplet
+ * @property {String} func identifying the function this block runs
+ * @property {Object} parent object within which this function is defined as a property, keyed by the func name
+ * @property {String} category category within which to place the block
+ * @property {String} type type of the block (e.g. value)
+ */
+
+/**
+ * @name DropletConfig
+ * @description Configuration information for Droplet
+ * @property {DropletBlock[]} blocks list of blocks
+ * @property {Object} categories configuration of categories within which to place blocks
+ */
+
+var COLOR_PINK = '#F57AC6';
+var COLOR_PURPLE = '#BB77C7';
+var COLOR_GREEN = '#68D995';
+var COLOR_LIGHT_GREEN = '#D3E965';
+var COLOR_WHITE = '#FFFFFF';
+var COLOR_BLUE = '#64B5F6';
+var COLOR_ORANGE = '#FFB74D';
+
+exports.randomNumber = function (min, max) {
+  if (typeof max === 'undefined') {
+    // If only one parameter is specified, use it as the max with zero as min:
+    max = min;
+    min = 0;
+  }
+  // Use double-tilde to ensure we are dealing with integers:
+  return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
+};
+
+exports.getTime = function() {
+  return (new Date()).getTime();
 };
 
 /**
- * Returns a function based on a string of code parameterized with a dictionary.
+ * @type {DropletBlock[]}
  */
-exports.functionFromCode = function(code, options) {
-  if (options.StudioApp && options.StudioApp.editCode) {
-    // Since this returns a new native function, it doesn't make sense in the
-    // editCode case (we assume that the app will be using JSInterpreter)
-    throw "Unexpected";
-  } else {
-    var params = [];
-    var args = [];
-    for (var k in options) {
-      params.push(k);
-      args.push(options[k]);
-    }
-    params.push(code);
-    var ctor = function() {
-      return Function.apply(this, params);
-    };
-    ctor.prototype = Function.prototype;
-    return new ctor();
-  }
+exports.dropletGlobalConfigBlocks = [
+  {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
+  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
+  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
+];
+
+/**
+ * @type {DropletBlock[]}
+ */
+exports.dropletBuiltinConfigBlocks = [
+  {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.max', 'category': 'Math', 'type': 'value' },
+  {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
+];
+
+/**
+ * @type {DropletConfig|*}}
+ */
+var standardConfig = {};
+
+standardConfig.blocks = [
+  // Control
+  {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
+  {'func': 'getTime', 'block': 'getTime()', 'category': 'Control', type: 'value' },
+
+  // Math
+  {'func': 'addOperator', 'block': '__ + __', 'category': 'Math' },
+  {'func': 'subtractOperator', 'block': '__ - __', 'category': 'Math' },
+  {'func': 'multiplyOperator', 'block': '__ * __', 'category': 'Math' },
+  {'func': 'divideOperator', 'block': '__ / __', 'category': 'Math' },
+  {'func': 'equalityOperator', 'block': '__ == __', 'category': 'Math' },
+  {'func': 'inequalityOperator', 'block': '__ != __', 'category': 'Math' },
+  {'func': 'greaterThanOperator', 'block': '__ > __', 'category': 'Math' },
+  {'func': 'lessThanOperator', 'block': '__ < __', 'category': 'Math' },
+  {'func': 'andOperator', 'block': '__ && __', 'category': 'Math' },
+  {'func': 'orOperator', 'block': '__ || __', 'category': 'Math' },
+  {'func': 'notOperator', 'block': '!__', 'category': 'Math' },
+  {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'category': 'Math' },
+  {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'category': 'Math' },
+  {'func': 'mathRound', 'block': 'Math.round(__)', 'category': 'Math' },
+  {'func': 'mathAbs', 'block': 'Math.abs(__)', 'category': 'Math' },
+  {'func': 'mathMax', 'block': 'Math.max(__)', 'category': 'Math' },
+  {'func': 'mathMin', 'block': 'Math.min(__)', 'category': 'Math' },
+
+  // Variables
+  {'func': 'declareAssign_x', 'block': 'var x = __;', 'category': 'Variables' },
+  {'func': 'assign_x', 'block': 'x = __;', 'category': 'Variables' },
+  {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'category': 'Variables' },
+  {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'category': 'Variables' },
+
+  // Functions
+  {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'category': 'Functions' },
+  {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'category': 'Functions' },
+  {'func': 'callMyFunction', 'block': 'myFunction()', 'category': 'Functions' },
+  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'category': 'Functions' },
+  {'func': 'return', 'block': 'return __;', 'category': 'Functions' },
+];
+
+standardConfig.categories = {
+  'Control': {
+    'color': 'blue',
+    'rgb': COLOR_BLUE,
+    'blocks': []
+  },
+  'Math': {
+    'color': 'orange',
+    'rgb': COLOR_ORANGE,
+    'blocks': []
+  },
+  'Variables': {
+    'color': 'purple',
+    'rgb': COLOR_PURPLE,
+    'blocks': []
+  },
+  'Functions': {
+    'color': 'green',
+    'rgb': COLOR_GREEN,
+    'blocks': []
+  },
 };
 
-},{"./utils":185}],185:[function(require,module,exports){
+/**
+ * @param codeFunctions
+ * @param {DropletConfig} dropletConfig
+ * @returns {Array}
+ */
+function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
+  var merged = [];
+
+  if (codeFunctions && dropletConfig && dropletConfig.blocks) {
+    var blockSets = [ standardConfig.blocks, dropletConfig.blocks ];
+    // codeFunctions is an object with named key/value pairs
+    //  key is a block name from dropletBlocks or standardBlocks
+    //  value is an object that can be used to override block defaults
+    for (var s = 0; s < blockSets.length; s++) {
+      var blocks = blockSets[s];
+      for (var i = 0; i < blocks.length; i++) {
+        var block = blocks[i];
+        if (blocks[i].func in codeFunctions) {
+          // We found this particular block, now override the defaults with extend
+          merged.push(utils.extend(blocks[i], codeFunctions[blocks[i].func]));
+        }
+      }
+    }
+  }
+  return merged;
+}
+
+//
+// Return a new categories object with the categories from dropletConfig
+// merged with the ones in standardConfig
+//
+
+function mergeCategoriesWithConfig(dropletConfig) {
+  var merged = {};
+
+  if (dropletConfig && dropletConfig.categories) {
+    var categorySets = [ dropletConfig.categories, standardConfig.categories ];
+    for (var s = 0; s < categorySets.length; s++) {
+      var categories = categorySets[s];
+      for (var catName in categories) {
+        if (!(catName in merged)) {
+          merged[catName] = utils.shallowCopy(categories[catName]);
+        }
+      }
+    }
+  } else {
+    merged = standardConfig.categories;
+  }
+  return merged;
+}
+
+/**
+ * Generate code aliases in Javascript based on some level data.
+ * @param {DropletConfig} dropletConfig
+ * @param {String} parentObjName string reference to object upon which func is
+ *  a property
+ * @returns {String} code
+ */
+exports.generateCodeAliases = function (dropletConfig, parentObjName) {
+  var code = '';
+  var aliasFunctions = dropletConfig.blocks;
+
+  // Insert aliases from aliasFunctions into code
+  for (var i = 0; i < aliasFunctions.length; i++) {
+    var cf = aliasFunctions[i];
+    if (cf.dontAlias) {
+      continue;
+    }
+    code += "var " + cf.func + " = function() { ";
+    if (cf.idArgNone) {
+      code += "return " + parentObjName + "." + cf.func + ".apply(" +
+              parentObjName + ", arguments); };\n";
+    } else {
+      code += "var newArgs = " +
+        (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+        " return " + parentObjName + "." + cf.func +
+        ".apply(" + parentObjName + ", newArgs); };\n";
+    }
+  }
+  return code;
+};
+
+/**
+ * Generate a palette for the droplet editor based on some level data.
+ */
+exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
+  var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  var i, j;
+
+  for (i = 0; i < mergedFunctions.length; i++) {
+    var cf = mergedFunctions[i];
+    var block = cf.block;
+    if (!block) {
+      block = cf.func + "(";
+      if (cf.params) {
+        for (j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
+    }
+
+    /**
+     * Here we set the title attribute to the function shortname,
+     * this is later used as a key for function documentation and tooltips
+     */
+    var blockPair = {
+      block: block,
+      title: cf.func
+    };
+    mergedCategories[cf.category].blocks.push(blockPair);
+  }
+
+  // Convert to droplet's expected palette format:
+  var addedPalette = [];
+  for (var category in mergedCategories) {
+    if (mergedCategories[category].blocks.length > 0) {
+      mergedCategories[category].name = category;
+      addedPalette.push(mergedCategories[category]);
+    }
+  }
+
+  return addedPalette;
+};
+
+function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
+  for (var i = 0; i < configBlocks.length; i++) {
+    var cf = configBlocks[i];
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: cf.category
+    });
+  }
+}
+
+/**
+ * Generate an Ace editor completer for a set of APIs based on some level data.
+ */
+exports.generateAceApiCompleter = function (dropletConfig) {
+  var apis = [];
+
+  populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
+  populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
+  populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+
+  return {
+    getCompletions: function(editor, session, pos, prefix, callback) {
+      if (prefix.length === 0) {
+        callback(null, []);
+        return;
+      }
+      callback(null, apis);
+    }
+  };
+};
+
+function populateModeOptionsFromConfigBlocks(modeOptions, config) {
+  var mergedCategories = mergeCategoriesWithConfig(config);
+
+  for (var i = 0; i < config.blocks.length; i++) {
+    var newFunc = {};
+
+    if (config.blocks[i].type === 'value') {
+      newFunc.value = true;
+    }
+    else if (config.blocks[i].type === 'either') {
+      newFunc.value = true;
+      newFunc.command = true;
+    }
+
+    var category = mergedCategories[config.blocks[i].category];
+    if (category) {
+      newFunc.color = category.rgb || category.color;
+    }
+
+    modeOptions.functions[config.blocks[i].func] = newFunc;
+  }
+}
+
+function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
+  Object.keys(modeOptions.functions).forEach(function (funcName) {
+    modeOptions.functions[funcName].title = funcName;
+  });
+}
+
+/**
+ * Generate modeOptions for the droplet editor based on some level data.
+ */
+exports.generateDropletModeOptions = function (dropletConfig) {
+  var modeOptions = {
+    functions: {
+    },
+    categories: {
+      arithmetic: { color: COLOR_ORANGE },
+      logic: { color: COLOR_ORANGE },
+      conditionals: { color: COLOR_BLUE },
+      loops: { color: COLOR_BLUE },
+      functions: { color: COLOR_GREEN },
+      returns: { color: COLOR_BLUE },
+      comments: { color: COLOR_WHITE },
+      containers: { color: COLOR_LIGHT_GREEN },
+      value: { color: COLOR_PURPLE },
+      command: { color: COLOR_GREEN },
+      assignments: { color: COLOR_PURPLE },
+      // errors: { },
+    }
+  };
+
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
+  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
+
+  setTitlesToFuncNamesForDocumentedBlocks(modeOptions);
+
+  return modeOptions;
+};
+
+/**
+ * Returns a set of all blocks
+ * @param {DropletConfig|null} dropletConfig custom configuration, may be null
+ * @returns {DropletBlock[]} a list of all available Droplet blocks,
+ *      including the given config's blocks
+ */
+exports.getAllAvailableDropletBlocks = function (dropletConfig) {
+  var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
+  var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
+  return exports.dropletGlobalConfigBlocks
+    .concat(exports.dropletBuiltinConfigBlocks)
+    .concat(standardConfig.blocks)
+    .concat(configuredBlocks);
+};
+
+},{"./utils":246}],246:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10235,331 +11106,6 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
   };
 };
 
-exports.randomNumber = function (min, max) {
-  if (typeof max === 'undefined') {
-    // If only one parameter is specified, use it as the max with zero as min:
-    max = min;
-    min = 0;
-  }
-  // Use double-tilde to ensure we are dealing with integers:
-  return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min;
-};
-
-exports.dropletGlobalConfigBlocks = [
-  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
-  {'func': 'round', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'abs', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'max', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'min', 'parent': Math, 'category': 'Math', 'type': 'value' },
-  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
-];
-
-function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
-  var merged = [];
-
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    merged = codeFunctions;
-  } else if (codeFunctions instanceof Object &&
-             dropletConfig &&
-             dropletConfig.blocks) {
-    var dropletBlocks = dropletConfig.blocks;
-    // codeFunctions is an object with named key/value pairs
-    //  key is a block name from dropletBlocks
-    //  value is an object that can be used to override block defaults
-    for (var i = 0; i < dropletBlocks.length; i++) {
-      var block = dropletBlocks[i];
-      if (dropletBlocks[i].func in codeFunctions) {
-        // We found this particular block, now override the defaults with extend
-        merged.push(exports.extend(dropletBlocks[i],
-                    codeFunctions[dropletBlocks[i].func]));
-      }
-    }
-  }
-  return merged;
-}
-
-function selectFunctionsOrFullConfig(codeFunctions, dropletConfig) {
-  if (codeFunctions instanceof Array) {
-    // codeFunctions is in an array, use those exactly:
-    return codeFunctions;
-  } else if (dropletConfig && dropletConfig.blocks) {
-    // use dropletConfig.blocks in its entirety (including all functions, even
-    // those not in this level's palette)
-    return dropletConfig.blocks;
-  }
-}
-
-/**
- * Generate code aliases in Javascript based on some level data.
- */
-exports.generateCodeAliases = function (codeFunctions, dropletConfig, parentObjName) {
-  var code = '';
-  var aliasFunctions = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
-
-  // Insert aliases from aliasFunctions into code
-  for (var i = 0; i < aliasFunctions.length; i++) {
-    var cf = aliasFunctions[i];
-    code += "var " + cf.func + " = function() { ";
-    if (cf.idArgNone) {
-      code += "return " + parentObjName + "." + cf.func + ".apply(" +
-              parentObjName + ", arguments); };\n";
-    } else {
-      code += "var newArgs = " +
-        (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
-        " return " + parentObjName + "." + cf.func +
-        ".apply(" + parentObjName + ", newArgs); };\n";
-    }
-  }
-  return code;
-};
-
-/**
- * Generate a palette for the droplet editor based on some level data.
- */
-exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
-  // TODO: figure out localization for droplet scenario
-  var stdPalette = [
-    {
-      name: 'Control',
-      color: 'orange',
-      blocks: [
-        {
-          block: 'for (var i = 0; i < 4; i++) {\n  __;\n}',
-          title: 'Do something multiple times'
-        }, {
-          block: 'if (__) {\n  __;\n}',
-          title: 'Do something only if a condition is true'
-        }, {
-          block: 'if (__) {\n  __;\n} else {\n  __;\n}',
-          title: 'Do something if a condition is true, otherwise do something else'
-        }, {
-          block: 'while (__) {\n  __;\n}',
-          title: 'Repeat something while a condition is true'
-        }
-      ]
-    }, {
-      name: 'Math',
-      color: 'green',
-      blocks: [
-        {
-          block: '__ + __',
-          title: 'Add two numbers'
-        }, {
-          block: '__ - __',
-          title: 'Subtract two numbers'
-        }, {
-          block: '__ * __',
-          title: 'Multiply two numbers'
-        }, {
-          block: '__ / __',
-          title: 'Divide two numbers'
-        }, {
-          block: '__ == __',
-          title: 'Test for equality'
-        }, {
-          block: '__ != __',
-          title: 'Test for inequality'
-        }, {
-          block: '__ > __',
-          title: 'Compare two numbers'
-        }, {
-          block: '__ < __',
-          title: 'Compare two numbers'
-        }, {
-          block: '__ && __',
-          title: 'Logical AND of two booleans'
-        }, {
-          block: '__ || __',
-          title: 'Logical OR of two booleans'
-        }, {
-          block: 'randomNumber(__)',
-          title: 'Get a random number between 0 and the specified maximum value'
-        }, {
-          block: 'randomNumber(__, __)',
-          title: 'Get a random number between the specified minimum and maximum values'
-        }, {
-          block: 'round(__)',
-          title: 'Round to the nearest integer'
-        }, {
-          block: 'abs(__)',
-          title: 'Absolute value'
-        }, {
-          block: 'max(__, __)',
-          title: 'Maximum value'
-        }, {
-          block: 'min(__, __)',
-          title: 'Minimum value'
-        }
-      ]
-    }, {
-      name: 'Variables',
-      color: 'blue',
-      blocks: [
-        {
-          block: 'var x = __;',
-          title: 'Create a variable for the first time'
-        }, {
-          block: 'x = __;',
-          title: 'Reassign a variable'
-        }, {
-          block: 'var x = [1, 2, 3, 4];',
-          title: 'Create a variable and initialize it as an array'
-        }, {
-          block: 'var x = prompt("Enter a value");',
-          title: 'Create a variable and assign it a value by displaying a prompt'
-        }
-      ]
-    }, {
-      name: 'Functions',
-      color: 'violet',
-      blocks: [
-        {
-          block: 'function myFunction() {\n  __;\n}',
-          title: 'Create a function without an argument'
-        }, {
-          block: 'function myFunction(n) {\n  __;\n}',
-          title: 'Create a function with an argument'
-        }, {
-          block: 'myFunction()',
-          title: 'Use a function without an argument'
-        }, {
-          block: 'myFunction(n)',
-          title: 'Use a function with argument'
-        }
-      ]
-    }
-  ];
-
-  var defCategoryInfo = {
-    'Actions': {
-      'color': 'blue',
-      'blocks': []
-    }
-  };
-  categoryInfo = (dropletConfig && dropletConfig.categories) || defCategoryInfo;
-
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
-  var i, j;
-
-  for (i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    var block = cf.func + "(";
-    if (cf.params) {
-      for (j = 0; j < cf.params.length; j++) {
-        if (j !== 0) {
-          block += ", ";
-        }
-        block += cf.params[j];
-      }
-    }
-    block += ")";
-    var blockPair = {
-      block: block,
-      title: cf.title || cf.func
-    };
-    categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
-  }
-
-  var addedPalette = [];
-  for (var category in categoryInfo) {
-    categoryInfo[category].name = category;
-    for (j = 0; j < stdPalette.length; j++) {
-      if (stdPalette[j].name === category) {
-        // This category is in the stdPalette, merge in its blocks:
-        categoryInfo[category].blocks =
-            categoryInfo[category].blocks.concat(stdPalette[j].blocks);
-        break;
-      }
-    }
-    if (categoryInfo[category].blocks.length > 0) {
-      addedPalette.push(categoryInfo[category]);
-    }
-  }
-
-  for (j = 0; j < stdPalette.length; j++) {
-    if (!(stdPalette[j].name in categoryInfo)) {
-      // This category from the stdPalette hasn't been referenced yet, add it:
-      addedPalette.push(stdPalette[j]);
-    }
-  }
-  return addedPalette;
-};
-
-function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
-  for (var i = 0; i < configBlocks.length; i++) {
-    var cf = configBlocks[i];
-    apis.push({
-      name: 'api',
-      value: cf.func,
-      meta: cf.category || 'Actions'
-    });
-  }
-}
-
-/**
- * Generate an Ace editor completer for a set of APIs based on some level data.
- */
-exports.generateAceApiCompleter = function (codeFunctions, dropletConfig) {
-  var apis = [];
-
-  populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
-
-  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
-  populateCompleterApisFromConfigBlocks(apis, configBlocks);
-
-  return {
-    getCompletions: function(editor, session, pos, prefix, callback) {
-      if (prefix.length === 0) {
-        callback(null, []);
-        return;
-      }
-      callback(null, apis);
-    }
-  };
-};
-
-function populateModeOptionsFromConfigBlocks(modeOptions, configBlocks) {
-  for (var i = 0; i < configBlocks.length; i++) {
-    if (configBlocks[i].type === 'value') {
-      modeOptions.valueFunctions.push(configBlocks[i].func);
-    }
-    else if (configBlocks[i].type === 'either') {
-      modeOptions.eitherFunctions.push(configBlocks[i].func);
-    }
-    else if (configBlocks[i].type !== 'hidden') {
-      modeOptions.blockFunctions.push(configBlocks[i].func);
-    }
-  }
-}
-
-/**
- * Generate modeOptions for the droplet editor based on some level data.
- */
-exports.generateDropletModeOptions = function (codeFunctions, dropletConfig) {
-  var modeOptions = {
-    blockFunctions: [],
-    valueFunctions: [],
-    eitherFunctions: [],
-  };
-
-  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
-  // are included here in comments for reference. When we return our own
-  // modeOptions from this function, it overrides and replaces the list below.
-/*
-  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
-  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
-  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
-*/
-
-  populateModeOptionsFromConfigBlocks(modeOptions, exports.dropletGlobalConfigBlocks);
-
-  var configBlocks = selectFunctionsOrFullConfig(codeFunctions, dropletConfig);
-  populateModeOptionsFromConfigBlocks(modeOptions, configBlocks);
-
-  return modeOptions;
-};
-
 /**
  * Generate a random identifier in a format matching the RFC-4122 specification.
  *
@@ -10577,7 +11123,103 @@ exports.createUuid = function () {
   });
 };
 
-},{"./hammer":75,"./lodash":83,"./xml":186}],83:[function(require,module,exports){
+// ECMAScript 6 polyfill for String.prototype.repeat
+// Polyfill adapted from
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+//        /Global_Objects/String/repeat
+if (!String.prototype.repeat) {
+  /**
+   * The repeat() method constructs and returns a new string which contains
+   * the specified number of copies of the string on which it was called,
+   * concatenated together?
+   * @param {number} count
+   * @returns {string}
+   */
+  String.prototype.repeat = function(count) {
+    'use strict';
+    if (this === null) {
+      throw new TypeError('can\'t convert ' + this + ' to object');
+    }
+    var str = '' + this;
+    count = +count;
+    if (count != count) {
+      count = 0;
+    }
+    if (count < 0) {
+      throw new RangeError('repeat count must be non-negative');
+    }
+    if (count == Infinity) {
+      throw new RangeError('repeat count must be less than infinity');
+    }
+    count = Math.floor(count);
+    if (str.length === 0 || count === 0) {
+      return '';
+    }
+    // Ensuring count is a 31-bit integer allows us to heavily optimize the
+    // main part. But anyway, most current (august 2014) browsers can't handle
+    // strings 1 << 28 chars or longer, so:
+    if (str.length * count >= 1 << 28) {
+      throw new RangeError('repeat count must not overflow maximum string size');
+    }
+    var rpt = '';
+    for (;;) {
+      if ((count & 1) === 1) {
+        rpt += str;
+      }
+      count >>>= 1;
+      if (count === 0) {
+        break;
+      }
+      str += str;
+    }
+    return rpt;
+  };
+}
+
+/**
+ * Similar to val || defaultVal, except it's gated on whether or not val is
+ * undefined instead of whether val is falsey.
+ * @returns {*} val if not undefined, otherwise defaultVal
+ */
+exports.valueOr = function (val, defaultVal) {
+  return val === undefined ? defaultVal : val;
+};
+
+
+/**
+ * Attempts to analyze whether or not err represents infinite recursion having
+ * occurred. This error differs per browser, and it's possible that we don't
+ * properly discover all cases.
+ * Note: Other languages probably have localized messages, meaning we won't
+ * catch them.
+ */
+exports.isInfiniteRecursionError = function (err) {
+  // Chrome/Safari: message ends in a period in Safari, not in Chrome
+  if (err instanceof RangeError &&
+    /^Maximum call stack size exceeded/.test(err.message)) {
+    return true;
+  }
+
+  // Firefox
+  /* jshint ignore:start */
+  // Linter doesn't like our use of InternalError, even though we gate on its
+  // existence.
+  if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
+      err.message === 'too much recursion') {
+    return true;
+  }
+  /* jshint ignore:end */
+
+  // IE
+  if (err instanceof Error &&
+      err.message === 'Out of stack space') {
+    return true;
+  }
+
+  return false;
+};
+
+},{"./hammer":88,"./lodash":96,"./xml":247}],96:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -13946,7 +14588,7 @@ exports.createUuid = function () {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],75:[function(require,module,exports){
+},{}],88:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16110,7 +16752,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],44:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -16217,7 +16859,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],43:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -16291,10 +16933,11 @@ exports.KeyCodes = {
   LEFT: 37,
   UP: 38,
   RIGHT: 39,
-  DOWN: 40
+  DOWN: 40,
+  DELETE: 127
 };
 
-},{}],17:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -16544,7 +17187,55 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":186}],186:[function(require,module,exports){
+/**
+ * Generate xml for a functional defintion
+ * @param {string} name The name of the function
+ * @param {string} outputType Function's output type
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ * @param {string} blockXml Xml for the blocks that actually define the function
+ */
+exports.functionalDefinitionXml = function (name, outputType, argList, blockXml) {
+  var mutation = '<mutation>';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '<outputtype>' + outputType + '</outputtype></mutation>';
+
+  return '<block type="functional_definition" inline="false">'+
+      mutation +
+      '<title name="NAME">' + name + '</title>' +
+     '<functional_input name="STACK">' + blockXml + '</functional_input>' +
+    '</block>';
+};
+
+/**
+ * Generate xml for a calling a functional function
+ * @param {string} name The name of the function
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ */
+exports.functionalCallXml = function (name, argList, inputContents) {
+  if (argList.length !== inputContents.length) {
+    throw new Error('must define contents for each arg');
+  }
+
+  var mutation = '<mutation name="' + name + '">';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '</mutation>';
+
+  var contents = '';
+  inputContents.forEach(function (blockXml, index) {
+    contents += '<functional_input name="ARG' + index + '">' + blockXml + '</functional_input>';
+  });
+
+  return '<block type="functional_call">' +
+      mutation +
+      contents +
+    '</block>';
+};
+
+},{"./xml":247}],247:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -16572,7 +17263,1104 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],1:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
+var DropletFunctionTooltip = require('./DropletFunctionTooltip');
+
+/**
+ * @fileoverview Manages a store of known blocks and tooltips
+ */
+
+/**
+ * Store for finding tooltips for blocks
+ * @constructor
+ */
+var DropletTooltipManager = module.exports = function () {
+  /**
+   * Map of block types to tooltip objects
+   * @type {Object.<String, DropletFunctionTooltip>}
+   */
+  this.blockTypeToTooltip = {};
+};
+
+var DEFAULT_TOOLTIP_CONFIG = {
+  interactive: true,
+  speed: 150,
+  maxWidth: 450,
+  position: 'right',
+  contentAsHTML: true,
+  functionReady: repositionLastTooltip,
+  theme: 'droplet-block-tooltipster'
+  /**
+   * hideOnClick does not work with the droplet hover overlay
+   * (passing through click events?)
+   */
+};
+
+/**
+ * @param {DropletBlock[]} dropletBlocks list of Droplet block definitions for
+ *    which to register documentation
+ */
+DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
+  dropletBlocks.forEach(function (dropletBlockDefinition) {
+    this.blockTypeToTooltip[dropletBlockDefinition.func] =
+      new DropletFunctionTooltip(dropletBlockDefinition.func);
+  }, this);
+};
+
+/**
+ * @param {String} functionName
+ * @returns {DropletFunctionTooltip}
+ */
+DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
+  if (!this.blockTypeToTooltip.hasOwnProperty(functionName)) {
+    throw "Function name " + functionName + " not registered in documentation manager.";
+  }
+
+  return this.blockTypeToTooltip[functionName];
+};
+
+DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function () {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  var self = this;
+  $('.droplet-hover-div').each(function (_, blockHoverDiv) {
+    if ($(blockHoverDiv).hasClass('tooltipstered')) {
+      return;
+    }
+
+    var funcName = $(blockHoverDiv).attr('title');
+    $(blockHoverDiv).tooltipster($.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+      content: self.getDropletTooltip(funcName).getTooltipHTML()
+    }));
+  });
+};
+
+function repositionLastTooltip() {
+  var tooltipBase = $(".tooltipster-base").last();
+  var tooltipOffset = tooltipBase.offset();
+  var dropletToolboxArea = $('.droplet-palette-wrapper');
+  var rightSideOfToolbox = dropletToolboxArea.offset().left +
+    dropletToolboxArea.width();
+  var rightSideOfBlock = tooltipOffset.left;
+  var tipWidth = 8;
+  tooltipOffset.left = Math.min(rightSideOfBlock, rightSideOfToolbox + tipWidth);
+  var blockNotchHeight = 4;
+  tooltipOffset.top -= blockNotchHeight / 2;
+  tooltipBase.offset(tooltipOffset);
+}
+
+},{"./DropletFunctionTooltip":24}],24:[function(require,module,exports){
+var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html');
+var msg = require('../../locale/current/common');
+
+/**
+ * @fileoverview Representation of a droplet function/block's tooltip
+ */
+
+var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
+
+/**
+ * Stores a block's tooltip information and helps render it
+ * Grabs much of the tooltip's information from the 'common' locale file,
+ * (apps/i18n/common/en_us.json), keyed by the function name.
+ *
+ * e.g.,
+ *
+ * "dropletBlock_readRecords_description": "Reads records [...].",
+ * "dropletBlock_readRecords_param0": "table",
+ * "dropletBlock_readRecords_param1": "searchParams",
+ * "dropletBlock_readRecords_param2": "onSuccess",
+ *
+ * Will result in a tooltip with the contents:
+ *
+ *    readRecords(table, searchParams, onSuccess)
+ *    Reads records [...].
+ *    [Read More] (links to `readRecords` doc file)
+ *
+ * Blocks which have functionNames that should not be user-visible can define
+ * their own signature override.
+ *
+ * e.g.,
+ *
+ * "dropletBlock_functionParams_n_description": "Define a function with a given parameter",
+ * "dropletBlock_functionParams_n_signatureOverride": "Function with a Parameter",
+ *
+ * Will result in a tooltip with the contents:
+ *
+ *    Function with a Parameter <-- note, no ()s
+ *    Define a function with a given parameter.
+ *    [Read More] (links to `functionParams_n` doc file)
+ *
+ * @constructor
+ */
+var DropletFunctionTooltip = function (functionName) {
+  /** @type {String} */
+  this.functionName = functionName;
+
+  /** @type {String} */
+  this.description = null;
+
+  if (msg.hasOwnProperty(this.descriptionKey())) {
+    this.description = msg[this.descriptionKey()]();
+  }
+
+  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
+    this.signatureOverride = msg[this.signatureOverrideKey()]();
+  }
+
+  /** @type {Array.<String>} */
+  this.paramNames = [];
+
+  var paramId = 0;
+  while (msg.hasOwnProperty(this.parameterKey(paramId))) {
+    this.paramNames.push(msg[this.parameterKey(paramId)]());
+    paramId++;
+  }
+};
+
+/**
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.descriptionKey = function () {
+  return this.i18nPrefix() + "_description";
+};
+
+/**
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.signatureOverrideKey = function () {
+  return this.i18nPrefix() + "_signatureOverride";
+};
+
+/**
+ * @param {Number} paramIndex
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.parameterKey = function (paramIndex) {
+  return this.i18nPrefix() + "_param" + paramIndex;
+};
+
+/**
+ * @returns {string} i18n file prefix for this function
+ */
+DropletFunctionTooltip.prototype.i18nPrefix = function () {
+  return DROPLET_BLOCK_I18N_PREFIX + this.functionName;
+};
+
+/**
+ * @returns {string} URL for full doc about this function
+ */
+DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
+  return 'http://code.org/applab/docs/' + this.functionName;
+};
+
+/**
+ * @returns {String} HTML for tooltip
+ */
+DropletFunctionTooltip.prototype.getTooltipHTML = function () {
+  return DropletBlockTooltipMarkup({
+    functionName: this.functionName,
+    functionShortDescription: this.description,
+    parameters: this.paramNames,
+    signatureOverride: this.signatureOverride,
+    fullDocumentationURL: this.getFullDocumentationURL()
+  });
+};
+
+module.exports = DropletFunctionTooltip;
+
+},{"../../locale/current/common":251,"./DropletBlockTooltip.html":23}],251:[function(require,module,exports){
+/*common*/ module.exports = window.blockly.locale;
+},{}],23:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div class="function-name">\n  ');2; if (signatureOverride) {; buf.push('    ', escape((2,  signatureOverride )), '\n  ');3; } else {; buf.push('    ', escape((3,  functionName )), '(');3; for (var i = 0; i < parameters.length; i++) {; buf.push('', (3,  parameters[i]), '');3; if (i < parameters.length - 1) {; buf.push(', ');3; }; buf.push('');3; }; buf.push(')  ');3; } ; buf.push('\n</div>\n');5; if (functionShortDescription) { ; buf.push('<div>', escape((5,  functionShortDescription )), '</div>');5; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((7,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":267}],267:[function(require,module,exports){
+
+/*!
+ * EJS
+ * Copyright(c) 2012 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * Module dependencies.
+ */
+
+var utils = require('./utils')
+  , path = require('path')
+  , basename = path.basename
+  , dirname = path.dirname
+  , extname = path.extname
+  , join = path.join
+  , fs = require('fs')
+  , read = fs.readFileSync;
+
+/**
+ * Filters.
+ *
+ * @type Object
+ */
+
+var filters = exports.filters = require('./filters');
+
+/**
+ * Intermediate js cache.
+ *
+ * @type Object
+ */
+
+var cache = {};
+
+/**
+ * Clear intermediate js cache.
+ *
+ * @api public
+ */
+
+exports.clearCache = function(){
+  cache = {};
+};
+
+/**
+ * Translate filtered code into function calls.
+ *
+ * @param {String} js
+ * @return {String}
+ * @api private
+ */
+
+function filtered(js) {
+  return js.substr(1).split('|').reduce(function(js, filter){
+    var parts = filter.split(':')
+      , name = parts.shift()
+      , args = parts.join(':') || '';
+    if (args) args = ', ' + args;
+    return 'filters.' + name + '(' + js + args + ')';
+  });
+};
+
+/**
+ * Re-throw the given `err` in context to the
+ * `str` of ejs, `filename`, and `lineno`.
+ *
+ * @param {Error} err
+ * @param {String} str
+ * @param {String} filename
+ * @param {String} lineno
+ * @api private
+ */
+
+function rethrow(err, str, filename, lineno){
+  var lines = str.split('\n')
+    , start = Math.max(lineno - 3, 0)
+    , end = Math.min(lines.length, lineno + 3);
+
+  // Error context
+  var context = lines.slice(start, end).map(function(line, i){
+    var curr = i + start + 1;
+    return (curr == lineno ? ' >> ' : '    ')
+      + curr
+      + '| '
+      + line;
+  }).join('\n');
+
+  // Alter exception message
+  err.path = filename;
+  err.message = (filename || 'ejs') + ':'
+    + lineno + '\n'
+    + context + '\n\n'
+    + err.message;
+  
+  throw err;
+}
+
+/**
+ * Parse the given `str` of ejs, returning the function body.
+ *
+ * @param {String} str
+ * @return {String}
+ * @api public
+ */
+
+var parse = exports.parse = function(str, options){
+  var options = options || {}
+    , open = options.open || exports.open || '<%'
+    , close = options.close || exports.close || '%>'
+    , filename = options.filename
+    , compileDebug = options.compileDebug !== false
+    , buf = [];
+
+  buf.push('var buf = [];');
+  if (false !== options._with) buf.push('\nwith (locals || {}) { (function(){ ');
+  buf.push('\n buf.push(\'');
+
+  var lineno = 1;
+
+  var consumeEOL = false;
+  for (var i = 0, len = str.length; i < len; ++i) {
+    if (str.slice(i, open.length + i) == open) {
+      i += open.length
+  
+      var prefix, postfix, line = (compileDebug ? '__stack.lineno=' : '') + lineno;
+      switch (str.substr(i, 1)) {
+        case '=':
+          prefix = "', escape((" + line + ', ';
+          postfix = ")), '";
+          ++i;
+          break;
+        case '-':
+          prefix = "', (" + line + ', ';
+          postfix = "), '";
+          ++i;
+          break;
+        default:
+          prefix = "');" + line + ';';
+          postfix = "; buf.push('";
+      }
+
+      var end = str.indexOf(close, i)
+        , js = str.substring(i, end)
+        , start = i
+        , include = null
+        , n = 0;
+
+      if ('-' == js[js.length-1]){
+        js = js.substring(0, js.length - 2);
+        consumeEOL = true;
+      }
+
+      if (0 == js.trim().indexOf('include')) {
+        var name = js.trim().slice(7).trim();
+        if (!filename) throw new Error('filename option is required for includes');
+        var path = resolveInclude(name, filename);
+        include = read(path, 'utf8');
+        include = exports.parse(include, { filename: path, _with: false, open: open, close: close, compileDebug: compileDebug });
+        buf.push("' + (function(){" + include + "})() + '");
+        js = '';
+      }
+
+      while (~(n = js.indexOf("\n", n))) n++, lineno++;
+      if (js.substr(0, 1) == ':') js = filtered(js);
+      if (js) {
+        if (js.lastIndexOf('//') > js.lastIndexOf('\n')) js += '\n';
+        buf.push(prefix, js, postfix);
+      }
+      i += end - start + close.length - 1;
+
+    } else if (str.substr(i, 1) == "\\") {
+      buf.push("\\\\");
+    } else if (str.substr(i, 1) == "'") {
+      buf.push("\\'");
+    } else if (str.substr(i, 1) == "\r") {
+      // ignore
+    } else if (str.substr(i, 1) == "\n") {
+      if (consumeEOL) {
+        consumeEOL = false;
+      } else {
+        buf.push("\\n");
+        lineno++;
+      }
+    } else {
+      buf.push(str.substr(i, 1));
+    }
+  }
+
+  if (false !== options._with) buf.push("'); })();\n} \nreturn buf.join('');")
+  else buf.push("');\nreturn buf.join('');");
+
+  return buf.join('');
+};
+
+/**
+ * Compile the given `str` of ejs into a `Function`.
+ *
+ * @param {String} str
+ * @param {Object} options
+ * @return {Function}
+ * @api public
+ */
+
+var compile = exports.compile = function(str, options){
+  options = options || {};
+  var escape = options.escape || utils.escape;
+  
+  var input = JSON.stringify(str)
+    , compileDebug = options.compileDebug !== false
+    , client = options.client
+    , filename = options.filename
+        ? JSON.stringify(options.filename)
+        : 'undefined';
+  
+  if (compileDebug) {
+    // Adds the fancy stack trace meta info
+    str = [
+      'var __stack = { lineno: 1, input: ' + input + ', filename: ' + filename + ' };',
+      rethrow.toString(),
+      'try {',
+      exports.parse(str, options),
+      '} catch (err) {',
+      '  rethrow(err, __stack.input, __stack.filename, __stack.lineno);',
+      '}'
+    ].join("\n");
+  } else {
+    str = exports.parse(str, options);
+  }
+  
+  if (options.debug) console.log(str);
+  if (client) str = 'escape = escape || ' + escape.toString() + ';\n' + str;
+
+  try {
+    var fn = new Function('locals, filters, escape', str);
+  } catch (err) {
+    if ('SyntaxError' == err.name) {
+      err.message += options.filename
+        ? ' in ' + filename
+        : ' while compiling ejs';
+    }
+    throw err;
+  }
+
+  if (client) return fn;
+
+  return function(locals){
+    return fn.call(this, locals, filters, escape);
+  }
+};
+
+/**
+ * Render the given `str` of ejs.
+ *
+ * Options:
+ *
+ *   - `locals`          Local variables object
+ *   - `cache`           Compiled functions are cached, requires `filename`
+ *   - `filename`        Used by `cache` to key caches
+ *   - `scope`           Function execution context
+ *   - `debug`           Output generated function body
+ *   - `open`            Open tag, defaulting to "<%"
+ *   - `close`           Closing tag, defaulting to "%>"
+ *
+ * @param {String} str
+ * @param {Object} options
+ * @return {String}
+ * @api public
+ */
+
+exports.render = function(str, options){
+  var fn
+    , options = options || {};
+
+  if (options.cache) {
+    if (options.filename) {
+      fn = cache[options.filename] || (cache[options.filename] = compile(str, options));
+    } else {
+      throw new Error('"cache" option requires "filename".');
+    }
+  } else {
+    fn = compile(str, options);
+  }
+
+  options.__proto__ = options.locals;
+  return fn.call(options.scope, options);
+};
+
+/**
+ * Render an EJS file at the given `path` and callback `fn(err, str)`.
+ *
+ * @param {String} path
+ * @param {Object|Function} options or callback
+ * @param {Function} fn
+ * @api public
+ */
+
+exports.renderFile = function(path, options, fn){
+  var key = path + ':string';
+
+  if ('function' == typeof options) {
+    fn = options, options = {};
+  }
+
+  options.filename = path;
+
+  var str;
+  try {
+    str = options.cache
+      ? cache[key] || (cache[key] = read(path, 'utf8'))
+      : read(path, 'utf8');
+  } catch (err) {
+    fn(err);
+    return;
+  }
+  fn(null, exports.render(str, options));
+};
+
+/**
+ * Resolve include `name` relative to `filename`.
+ *
+ * @param {String} name
+ * @param {String} filename
+ * @return {String}
+ * @api private
+ */
+
+function resolveInclude(name, filename) {
+  var path = join(dirname(filename), name);
+  var ext = extname(name);
+  if (!ext) path += '.ejs';
+  return path;
+}
+
+// express support
+
+exports.__express = exports.renderFile;
+
+/**
+ * Expose to require().
+ */
+
+if (require.extensions) {
+  require.extensions['.ejs'] = function(module, filename) {
+    source = require('fs').readFileSync(filename, 'utf-8');
+    module._compile(compile(source, {}), filename);
+  };
+} else if (require.registerExtension) {
+  require.registerExtension('.ejs', function(src) {
+    return compile(src, {});
+  });
+}
+
+},{"./filters":268,"./utils":269,"fs":259,"path":260}],269:[function(require,module,exports){
+
+/*!
+ * EJS
+ * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * Escape the given string of `html`.
+ *
+ * @param {String} html
+ * @return {String}
+ * @api private
+ */
+
+exports.escape = function(html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+ 
+},{}],268:[function(require,module,exports){
+
+/*!
+ * EJS - Filters
+ * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
+ * MIT Licensed
+ */
+
+/**
+ * First element of the target `obj`.
+ */
+
+exports.first = function(obj) {
+  return obj[0];
+};
+
+/**
+ * Last element of the target `obj`.
+ */
+
+exports.last = function(obj) {
+  return obj[obj.length - 1];
+};
+
+/**
+ * Capitalize the first letter of the target `str`.
+ */
+
+exports.capitalize = function(str){
+  str = String(str);
+  return str[0].toUpperCase() + str.substr(1, str.length);
+};
+
+/**
+ * Downcase the target `str`.
+ */
+
+exports.downcase = function(str){
+  return String(str).toLowerCase();
+};
+
+/**
+ * Uppercase the target `str`.
+ */
+
+exports.upcase = function(str){
+  return String(str).toUpperCase();
+};
+
+/**
+ * Sort the target `obj`.
+ */
+
+exports.sort = function(obj){
+  return Object.create(obj).sort();
+};
+
+/**
+ * Sort the target `obj` by the given `prop` ascending.
+ */
+
+exports.sort_by = function(obj, prop){
+  return Object.create(obj).sort(function(a, b){
+    a = a[prop], b = b[prop];
+    if (a > b) return 1;
+    if (a < b) return -1;
+    return 0;
+  });
+};
+
+/**
+ * Size or length of the target `obj`.
+ */
+
+exports.size = exports.length = function(obj) {
+  return obj.length;
+};
+
+/**
+ * Add `a` and `b`.
+ */
+
+exports.plus = function(a, b){
+  return Number(a) + Number(b);
+};
+
+/**
+ * Subtract `b` from `a`.
+ */
+
+exports.minus = function(a, b){
+  return Number(a) - Number(b);
+};
+
+/**
+ * Multiply `a` by `b`.
+ */
+
+exports.times = function(a, b){
+  return Number(a) * Number(b);
+};
+
+/**
+ * Divide `a` by `b`.
+ */
+
+exports.divided_by = function(a, b){
+  return Number(a) / Number(b);
+};
+
+/**
+ * Join `obj` with the given `str`.
+ */
+
+exports.join = function(obj, str){
+  return obj.join(str || ', ');
+};
+
+/**
+ * Truncate `str` to `len`.
+ */
+
+exports.truncate = function(str, len){
+  str = String(str);
+  return str.substr(0, len);
+};
+
+/**
+ * Truncate `str` to `n` words.
+ */
+
+exports.truncate_words = function(str, n){
+  var str = String(str)
+    , words = str.split(/ +/);
+  return words.slice(0, n).join(' ');
+};
+
+/**
+ * Replace `pattern` with `substitution` in `str`.
+ */
+
+exports.replace = function(str, pattern, substitution){
+  return String(str).replace(pattern, substitution || '');
+};
+
+/**
+ * Prepend `val` to `obj`.
+ */
+
+exports.prepend = function(obj, val){
+  return Array.isArray(obj)
+    ? [val].concat(obj)
+    : val + obj;
+};
+
+/**
+ * Append `val` to `obj`.
+ */
+
+exports.append = function(obj, val){
+  return Array.isArray(obj)
+    ? obj.concat(val)
+    : obj + val;
+};
+
+/**
+ * Map the given `prop`.
+ */
+
+exports.map = function(arr, prop){
+  return arr.map(function(obj){
+    return obj[prop];
+  });
+};
+
+/**
+ * Reverse the given `obj`.
+ */
+
+exports.reverse = function(obj){
+  return Array.isArray(obj)
+    ? obj.reverse()
+    : String(obj).split('').reverse().join('');
+};
+
+/**
+ * Get `prop` of the given `obj`.
+ */
+
+exports.get = function(obj, prop){
+  return obj[prop];
+};
+
+/**
+ * Packs the given `obj` into json string
+ */
+exports.json = function(obj){
+  return JSON.stringify(obj);
+};
+},{}],260:[function(require,module,exports){
+(function (process){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// resolves . and .. elements in a path array with directory names there
+// must be no slashes, empty elements, or device names (c:\) in the array
+// (so also no leading and trailing slashes - it does not distinguish
+// relative and absolute paths)
+function normalizeArray(parts, allowAboveRoot) {
+  // if the path tries to go above the root, `up` ends up > 0
+  var up = 0;
+  for (var i = parts.length - 1; i >= 0; i--) {
+    var last = parts[i];
+    if (last === '.') {
+      parts.splice(i, 1);
+    } else if (last === '..') {
+      parts.splice(i, 1);
+      up++;
+    } else if (up) {
+      parts.splice(i, 1);
+      up--;
+    }
+  }
+
+  // if the path is allowed to go above the root, restore leading ..s
+  if (allowAboveRoot) {
+    for (; up--; up) {
+      parts.unshift('..');
+    }
+  }
+
+  return parts;
+}
+
+// Split a filename into [root, dir, basename, ext], unix version
+// 'root' is just a slash, or nothing.
+var splitPathRe =
+    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
+var splitPath = function(filename) {
+  return splitPathRe.exec(filename).slice(1);
+};
+
+// path.resolve([from ...], to)
+// posix version
+exports.resolve = function() {
+  var resolvedPath = '',
+      resolvedAbsolute = false;
+
+  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    var path = (i >= 0) ? arguments[i] : process.cwd();
+
+    // Skip empty and invalid entries
+    if (typeof path !== 'string') {
+      throw new TypeError('Arguments to path.resolve must be strings');
+    } else if (!path) {
+      continue;
+    }
+
+    resolvedPath = path + '/' + resolvedPath;
+    resolvedAbsolute = path.charAt(0) === '/';
+  }
+
+  // At this point the path should be resolved to a full absolute path, but
+  // handle relative paths to be safe (might happen when process.cwd() fails)
+
+  // Normalize the path
+  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
+    return !!p;
+  }), !resolvedAbsolute).join('/');
+
+  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+};
+
+// path.normalize(path)
+// posix version
+exports.normalize = function(path) {
+  var isAbsolute = exports.isAbsolute(path),
+      trailingSlash = substr(path, -1) === '/';
+
+  // Normalize the path
+  path = normalizeArray(filter(path.split('/'), function(p) {
+    return !!p;
+  }), !isAbsolute).join('/');
+
+  if (!path && !isAbsolute) {
+    path = '.';
+  }
+  if (path && trailingSlash) {
+    path += '/';
+  }
+
+  return (isAbsolute ? '/' : '') + path;
+};
+
+// posix version
+exports.isAbsolute = function(path) {
+  return path.charAt(0) === '/';
+};
+
+// posix version
+exports.join = function() {
+  var paths = Array.prototype.slice.call(arguments, 0);
+  return exports.normalize(filter(paths, function(p, index) {
+    if (typeof p !== 'string') {
+      throw new TypeError('Arguments to path.join must be strings');
+    }
+    return p;
+  }).join('/'));
+};
+
+
+// path.relative(from, to)
+// posix version
+exports.relative = function(from, to) {
+  from = exports.resolve(from).substr(1);
+  to = exports.resolve(to).substr(1);
+
+  function trim(arr) {
+    var start = 0;
+    for (; start < arr.length; start++) {
+      if (arr[start] !== '') break;
+    }
+
+    var end = arr.length - 1;
+    for (; end >= 0; end--) {
+      if (arr[end] !== '') break;
+    }
+
+    if (start > end) return [];
+    return arr.slice(start, end - start + 1);
+  }
+
+  var fromParts = trim(from.split('/'));
+  var toParts = trim(to.split('/'));
+
+  var length = Math.min(fromParts.length, toParts.length);
+  var samePartsLength = length;
+  for (var i = 0; i < length; i++) {
+    if (fromParts[i] !== toParts[i]) {
+      samePartsLength = i;
+      break;
+    }
+  }
+
+  var outputParts = [];
+  for (var i = samePartsLength; i < fromParts.length; i++) {
+    outputParts.push('..');
+  }
+
+  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+
+  return outputParts.join('/');
+};
+
+exports.sep = '/';
+exports.delimiter = ':';
+
+exports.dirname = function(path) {
+  var result = splitPath(path),
+      root = result[0],
+      dir = result[1];
+
+  if (!root && !dir) {
+    // No dirname whatsoever
+    return '.';
+  }
+
+  if (dir) {
+    // It has a dirname, strip trailing slash
+    dir = dir.substr(0, dir.length - 1);
+  }
+
+  return root + dir;
+};
+
+
+exports.basename = function(path, ext) {
+  var f = splitPath(path)[2];
+  // TODO: make this comparison case-insensitive on windows?
+  if (ext && f.substr(-1 * ext.length) === ext) {
+    f = f.substr(0, f.length - ext.length);
+  }
+  return f;
+};
+
+
+exports.extname = function(path) {
+  return splitPath(path)[3];
+};
+
+function filter (xs, f) {
+    if (xs.filter) return xs.filter(f);
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        if (f(xs[i], i, xs)) res.push(xs[i]);
+    }
+    return res;
+}
+
+// String.prototype.substr - negative index don't work in IE8
+var substr = 'ab'.substr(-1) === 'b'
+    ? function (str, start, len) { return str.substr(start, len) }
+    : function (str, start, len) {
+        if (start < 0) start = str.length + start;
+        return str.substr(start, len);
+    }
+;
+
+}).call(this,require('_process'))
+},{"_process":261}],261:[function(require,module,exports){
+// shim for using process in browser
+
+var process = module.exports = {};
+var queue = [];
+var draining = false;
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    draining = true;
+    var currentQueue;
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        var i = -1;
+        while (++i < len) {
+            currentQueue[i]();
+        }
+        len = queue.length;
+    }
+    draining = false;
+}
+process.nextTick = function (fun) {
+    queue.push(fun);
+    if (!draining) {
+        setTimeout(drainQueue, 0);
+    }
+};
+
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+// TODO(shtylman)
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],259:[function(require,module,exports){
+
+},{}],2:[function(require,module,exports){
 /**
  * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
  * directory of this distribution and at

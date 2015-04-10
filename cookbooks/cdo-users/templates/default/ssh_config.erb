@@ -1,0 +1,9 @@
+Host *.ec2.internal
+  User ubuntu
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/server_access_key
+
+<% @hosts.each do |node| %>
+Host <%= node.name %>
+  HostName <%= node['fqdn'] || 'fqdn_missing' %>
+<% end %>

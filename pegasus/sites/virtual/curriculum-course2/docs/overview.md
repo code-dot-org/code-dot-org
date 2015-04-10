@@ -37,6 +37,9 @@ Online lessons are in regular text and unplugged activities are in **bolded** te
 | 16 | Flappy                       | Using the concept of “Events,” students will create their own game with events like “When the mouse is clicked, make the bird flap” and “When the bird hits the ground, end the game.”                                                                      |
 | 17 | Play Lab: Create a Story     | Students employ all the different programming concepts they have learned in the curriculum this far to make a customized, interactive story or game of their own.                                                                                           |
 | 18 | **Your Digital Footprint**   | Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or “trail” that has consequences.                                                                                                      |
+| 19 | Artist: Nested Loops            | Students write programs that draw interesting and beautiful patterns using nested loops.                                                                                                                          |
+
+
 
 [/lesson-table]
 

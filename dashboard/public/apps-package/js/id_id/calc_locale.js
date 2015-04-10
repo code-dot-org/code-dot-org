@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "hitung"},
+"divideByZeroError":function(d){return "Program Anda menghasilkan pembagian dengan nol."},
+"emptyComputeBlock":function(d){return "Anda harus memasang blok ke \"evaluasi\" block."},
 "equivalentExpression":function(d){return "Cobalah tata ulang argumen Anda untuk mendapatkan ekspresi yang sama persis."},
-"extraTopBlocks":function(d){return "Terdapat blok yang tidak terpasang. Apa maksud Anda ialah memasangnya pada blok \"hitung\"?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "evaluasi"},
+"extraTopBlocks":function(d){return "Anda memiliki blok terikat. Apakah maksud Anda untuk memasang ini ke \"evaluasi\" blok?"},
+"failedInput":function(d){return "Fungsi Kamu tidak memberikan hasil yang tepat bagi semua nilai."},
 "goal":function(d){return "Tujuan:"},
-"reinfFeedbackMsg":function(d){return "Inilah ceritamu! Lanjutkanlah, atau beralih ke teka-teki berikutnya!"},
-"yourExpression":function(d){return "Ekspresimu:"}};
+"levelIncompleteError":function(d){return "Ekspresi Kamu tidak cocok dengan tujuan."},
+"missingFunctionError":function(d){return "Anda harus mendefinisikan fungsi bernama "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Ekspresi Anda kehilangan variabel "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Berikut adalah hasil perhitungan Anda! Terus bekerja, atau beralih ke masalah berikutnya!"},
+"yourExpression":function(d){return "Ekspresimu:"},
+"wrongInput":function(d){return "Anda memanggil fungsi milik sendiri dengan nilai yang salah."},
+"wrongOtherValuesX":function(d){return "Ekspresi Anda menghasilkan nilai yang salah jika kami menvariasikan "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Ekspresi Anda tidak mengembalikan hasil yang benar."}};

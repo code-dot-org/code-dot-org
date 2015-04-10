@@ -1,7 +1,7 @@
 cs:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Oprav prosím následující chyby:'
   activerecord:
     errors:
       messages:
@@ -22,6 +22,7 @@ cs:
           future: nemůže být v budoucnosti
   hello: Ahoj světe
   welcome_back: 'Vítej zpět, %{name}'
+  submit: Odeslat
   add_teacher_form:
     code:
       label: 'Přidat učitele:'
@@ -218,6 +219,7 @@ cs:
         artist: Nakresli něco
     user:
       classroom: Domovská stránka pro učitele
+      district_dashboard: District Dashboard
       label: 'Ahoj %{username}'
       stats: Můj pokrok
       settings: Můj účet
@@ -296,6 +298,8 @@ cs:
     student_teacher_disassociated: '%{teacher_name} byl odstraněn jako učitel pro %{student_name}'
   user:
     email_confirm_needed: 'E-mailová adresa nebyla potvrzena:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Znovu odeslat instrukce o potvrzení
     new_password_hint: (zanech prázdné, pokud nechceš provést změnu)
     current_password_hint: (potřebujeme tvé aktuální heslo pro potvrzení změny)
@@ -434,6 +438,9 @@ cs:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Studenti tyto nakreslili kódem!
     students_made_these_with_code: Studenti tyto vytvořili kódem!
@@ -463,6 +470,13 @@ cs:
     wrong_body: 'Řešení, které jste zadali, není správné.  Opakujte akci!'
     correct_title: Správně
     correct_body: To je správná odpověď.
+  contract_match:
+    wrong_title: Nesprávná odpověď
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Zadejte svou odpověď zde
   dialog:
@@ -478,7 +492,7 @@ cs:
           title: Kurz K-8 Úvod do počítačové vědy (15-25 hodin)
           description: Tento 20-ti hodinový kurz představuje základní koncepty počítačových věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8), ale jistě bude bavit studenty jakéhokoliv věku.
         Hour of Code:
-          title: Hodina kódu
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Upravit kód
@@ -508,11 +522,44 @@ cs:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: nedokončeno
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: dokončeno, až příliš mnoho bloků
     completed_perfect: dokončeno, perfektní
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Uložit
+    delete: Odstranit
+    exit: Return to Course
+    my_projects: My Projects
+    share: Sdílet
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Více
+    name: Jméno
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Odstranit?
+    delete_yes: Ano
+    delete_no: Ne
+    saved: Saved
+    not_saved: Not saved
+    cancel: Storno
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

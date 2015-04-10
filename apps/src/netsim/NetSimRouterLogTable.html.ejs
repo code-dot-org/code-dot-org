@@ -1,0 +1,67 @@
+<%
+  var i18n = require('../../locale/current/netsim');
+  var netsimConstants = require('./netsimConstants');
+  var netsimUtils = require('./netsimUtils');
+  var Packet = require('./Packet');
+
+  /** @type {Packet.HeaderType[]} */
+  var headerFields = level.routerExpectsPacketHeader.map(function (headerField) {
+    return headerField.key;
+  });
+
+  var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+  var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+  var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
+%>
+<div class="netsim-router-log">
+  <h1>Router Traffic</h1>
+  <table>
+    <thead>
+    <tr>
+      <% if (showToAddress) { %>
+        <th nowrap><%= i18n.to() %></th>
+      <% } %>
+      <% if (showFromAddress) { %>
+        <th nowrap><%= i18n.from() %></th>
+      <% } %>
+      <% if (showPacketInfo) { %>
+        <th nowrap><%= i18n.packetInfo() %></th>
+      <% } %>
+      <th nowrap><%= i18n.size() %></th>
+      <th nowrap><%= i18n.status() %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%
+    // Sort: Most recent first
+    tableData.sort(function (a, b) {
+      return a.timestamp > b.timestamp ? -1 : 1;
+    });
+
+    // Create rows
+    tableData.forEach(function (logEntry) {
+      var rowClasses = [];
+    %>
+    <tr class="<%= rowClasses.join(' ') %>" title="<%= logEntry.getMessageAscii() %>">
+      <% if (showToAddress) { %>
+        <td nowrap><%= logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS) %></td>
+      <% } %>
+      <% if (showFromAddress) { %>
+        <td nowrap><%= logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) %></td>
+      <% } %>
+      <% if (showPacketInfo) { %>
+        <td nowrap><%= i18n.xOfYPackets({
+            x: logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX),
+            y: logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT)
+          }) %></td>
+      <% }%>
+      <td nowrap><%= netsimUtils.bitsToLocalizedRoundedBytesize(logEntry.binary.length) %></td>
+      <td nowrap><%= logEntry.getLocalizedStatus() %></td>
+    </tr>
+    <%
+    });
+    %>
+    </tbody>
+  </table>
+</div>

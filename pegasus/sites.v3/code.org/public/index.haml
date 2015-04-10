@@ -1,6 +1,7 @@
 ---
-theme: responsive
+theme: responsive_wide
 banner: null
+layout: wide
 <%
   if request.site == 'csedweek.org'
 %>
@@ -43,213 +44,56 @@ social:
 %>
 
 ---
-- if request.site == 'csedweek.org'
-  %div
-    = view :index_hoc
-- elsif request.site == 'code.org'
-  %div.desktop-feature
-    = view :index_loc
 
--facebook = {:u=>"http://#{request.site}/"}
+%link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
 
--if request.site == 'csedweek.org'
-  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
-  -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
--else
-  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."}
 
--twitter[:url] = "http://#{request.site}/" unless twitter[:text].include? "http://#{request.site}/" || "#{twitter[:text]} http://#{request.site}/".length > 140
+- # The homepage gsheet may specify "en" or "not en" for many row types.
+- languageFilter = request.language == "en" ? "en" : "not en"
 
-%script{:src=>"/js/jquery.placeholder.js"}
+#homepage.supreme-container
+  = view :homepage_hero, languageFilter: languageFilter
 
-- if request.site == 'code.org'
+  #petitionexpand{style: "display: none"}
+    %script{:src=>"/js/jquery.placeholder.js"}
+    - if DB[:cdo_homepage].where(type_s: "petition")
+      = view :petition_expand
   #user_hero
+    .container_responsive
+      #user_hero
 
-#index
-  #gap.feature-codeorg
+  = view :homepage_sections, languageFilter: languageFilter
 
-  #top
-    #video.col-63.desktop-pad-right
-      = view :index_video
+  = view :homepage_gallery
+  = view :donor_slider
 
-    #start.col-36
-      %div.desktop-feature{:style=>'height: 25px;'}
-      #hoc2014
+= view :homepage_video
 
-        .count{:style=>"font-family: 'Gotham 5r', sans-serif; margin-bottom:15px" }
-          -if locale_chapter_partner?
-            -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_decimals(fetch_hoc_metrics['started']).to_s)
-          -else
-
-            -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-          -if request.locale == 'en-US'
-            %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
-              =count_string
-            %h4
-              =I18n.t :anybody_can_learn
-          -else
-            =count_string
-
-        %div{:style=>'margin-bottom: 8px'}
-          %a#trybutton{:href=>'/learn'}
-            %button.optionbutton
-              =I18n.t :get_started
-        %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
-          =I18n.t :beyond_an_hour
-
-    -download_filename = 'HoC-video-15mb.mp4'
-    #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
-      = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
-
-  -if locale_ro?
-    %br
-    %br
-    %h1{:style=>'text-align: center;'}
-      Esti din Romania? Te rugam sa vizitezi
-      %a{:href=>'http://ro.code.org'}
-        ro.code.org
-
-  -if locale_br?
-    %br
-    %br
-    %h1{:style=>'text-align: center;'}
-      Voce está no Brasil? Por favor, visite
-      %a{:href=>'http://br.code.org'}
-        br.code.org
-
-  -if locale_it?
-    %br
-    %br
-    %h1{:style=>'text-align: center;'}
-      Sei in Italia? Visita per favore 
-      %a{:href=>'http://italia.code.org'}
-        italia.code.org
-
-  -if request.site != 'csedweek.org'
-    #header-social-links.desktop-feature{style: "margin: 15px 0 0 0; float: right;"}
-      %a{:href=>"http://facebook.com/Code.org", :title=>'Facebook', :target=>"_blank", :style=>"text-decoration:none"}
-        %img{:src=>"/images/facebook_purple.png"}
-      %a{:href=>"http://twitter.com/codeorg", :title=>'Twitter', :target=>"_blank", :style=>"text-decoration:none"}
-        %img{:src=>"/images/twitter_purple.png"}
-      %a{:href=>"http://codeorg.tumblr.com/", :title=>'Tumblr', :target=>"_blank", :style=>"text-decoration:none"}
-        %img{:src=>"/images/tumblr_purple.png"}
-      %a{:href=>"/shop", :title=>'Zazzle', :target=>"_blank", :style=>"text-decoration:none"}
-        %img{:src=>"/images/zazzle_purple.png"}
-      %a{:href=>"/donate", :title=>'Donate', :style=>"text-decoration:none"}
-        %img{:src=>"/images/donate_normal.png"}
-
-  .studiobar.feature-codeorg.tablet-feature
-    %h1.mobile-center
-      =I18n.t :studiobar_title
-    #body.mobile-pad-left64
-      - studiobar_items = [ {id: "elementary", url: CDO.studio_url}, {id: "frozen", url: CDO.studio_url('/s/frozen/reset')}, {id: "teacher", url: "/educate/k5"}]
-      - if request.language == "en"
-        - studiobar_items << {id: "shop", url: "/shop"}
-      - else
-        - studiobar_items << {id: "flappy", url: "/flappy"}
-      - studiobar_items.each_with_index do |item, index|
-        - if index < studiobar_items.length-1
-          - other_style = "margin-right: 26px"
-        - else
-          - other_style = ""
-
-        -# Ensure we properly wrap to a new line when in 2 column mobile mode.  Some translations
-        -# with a longer first item caused layout problems otherwise.
-        - if index % 2 == 0
-          %div.mobile-feature{style: "clear:both"}
-
-        %a{href: item[:url]}
-          .col-25.outerblock{style: "float:left; #{other_style}"}
-            .innerblock
-              %img{:src=>CDO.shared_image_url("courses/logo_tall_#{item[:id]}.jpg"), style: "width:100%; height:120px"}
-              .title=I18n.t "studiobar_#{item[:id]}_title"
-              .body=I18n.t "studiobar_#{item[:id]}_body"
-
-  -# A special shop block for English mobile phone (<= 600px width) viewers
-  - if request.language == "en"
-    %br/
-    .studiobar.feature-codeorg.phone-feature{style: "width:100%"}
-      %div{style: "display: table; margin: 0 auto;"}
-        %a{href: "/shop"}
-          .outerblock{style: "width:223px; margin-bottom:0px"}
-            .innerblock
-              %img{:src=>CDO.shared_image_url("courses/logo_tall_shop.jpg"), style: "width:100%; height:120px"}
-              .title=I18n.t "studiobar_shop_title"
-              .body=I18n.t "studiobar_shop_body"
-    %br/
-
-
-  %div{:style=>'clear:both;'}
-  = view :petition
-
-  #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
-    #column1{:style=>'float:left; width: 33.33%'}
-      %h2 Teachers & Educators
-      #column1content
-        -count = 0
-        -DB[:cdo_homepage_teachers].where(site_s:'all').or(site_s:request.site).each do |value|
-          -unless count == 0
-            %hr.narrow_hr
-          =value[:text_s]
-          %a{:href=>value[:url_s]}
-            =value[:linktext_s]
-          -count += 1
-        %br
-        %br
-        %a{:href=>"http://code.org/educate/hoc"}
-          %button{:style=>'width:200px'}
-            Teach an Hour of Code
-
-        = view 'find-on-fb', current_site:request.site
-
-    #column2{:style=>'float:left; width: 33.33%; padding-right: 25px; padding-left: 25px'}
-      %h2 Latest Highlights
-      #column2content
-        -count = 0
-        -DB[:cdo_news_items].where(site_s:'all').or(site_s:request.site).limit(7).each do |value|
-          -unless count == 0
-            %hr.narrow_hr
-          %a{:href=>value[:url_s], :target=>'_blank'}
-            =value[:heading_s]
-          %br
-          = value[:date_dt]
-          = '//'
-          = value[:publication_s]
-          -count += 1
-        %br
-        %br
-        %a{:href=>'/about/news', :style=>'float:right'} See all
-
-    #column3{:style=>'float:left; width: 33.33%;'}
-      %h2 From the Community
-      = view :index_twitter
-
-  #gap
-
-  -if request.site != 'csedweek.org'
-    #donor_slider.desktop-feature{:style=>'width: 100%'}
-      = view :donor_slider
-
-= view 'popup_window.js'
 
 :javascript
-  var petition;
 
   $(document).ready()
   {
-    petition = new Petition();
+    // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
+    // set opacity to 0, ready for code to start showing them by fading them in.
+    $("#petitionexpand").css({display: "block", opacity: 0});
   }
 
-- if request.site == 'code.org'
-  :javascript
-    $(document).ready(function() {
-      $.ajax({
-        type: "GET",
-        url: '/dashboardapi/user_hero',
-        //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
-        success: function(data) {
+  $(document).ready(function() {
+    $.ajax({
+      type: "GET",
+      url: '/dashboardapi/user_hero',
+      //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
+      complete: function(data, status) {
+        if (data.responseText == "" || status !== "success") {
+          $("#petitionexpand").animate({opacity:1}, { duration: 2000 });
+          //$("#petitionaction").animate({opacity:1}, { duration: 2000 });
+        } else {
+          $("#petitionexpand").css({display: "none"});
           // data is ur summary
-          $('#user_hero').html(data);
+          $('#user_hero').html(data.responseText, status);
         }
-      });
+      }
     });
+  });
+  

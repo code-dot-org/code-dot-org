@@ -1,13 +1,16 @@
 {
+  "badColorStringError":"Geçersiz bir renk dizisi kullandınız:{val}",
+  "badStyleStringError":"Geçersiz bir stil dizini kullandınız:{val}",
   "circleBlockTitle":"çember (yarıçap,stil,renk)",
-  "displayBlockTitle":"görüntüle",
+  "displayBlockTitle":"değerlendirme",
   "ellipseBlockTitle":"Elips (genişlik, yükseklik, stil, renk)",
-  "extraTopBlocks":"Bağlantı yapılmamış bloklarınız var. Bunları \"görüntüleme\" bloğuyla mı ilişkilendirecek istediniz?",
+  "extraTopBlocks":"Blokları ayırdınız. Bunları \"değerlendir\" bloğuna eklemek mi istiyorsunuz?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"kaplama (üst, alt)",
   "placeImageBlockTitle":"Görüntü Yerleştir (x, y, resim)",
   "offsetBlockTitle":"uzaklık (x, y, resim)",
   "rectangleBlockTitle":"dikdörtgen (genişlik, yükseklik, Stil, renk)",
-  "reinfFeedbackMsg":"Çiziminizi düzenlemek için \"yeniden dene\" butonuna basabilirsiniz",
+  "reinfFeedbackMsg":"Çiziminizi düzenlemek için \"Oynamayı Sürdür\" butonuna basın.",
   "rotateImageBlockTitle":"döndürme (derece, resim)",
   "scaleImageBlockTitle":"ölçek(faktör, resim)",
   "squareBlockTitle":"kare (boyut, Stil, renk)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"altlık (alt, üst)",
   "outline":"anahat",
   "solid":"katı",
-  "string":"dize"
+  "string":"dize",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

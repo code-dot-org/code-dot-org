@@ -6,11 +6,12 @@ fi-FI:
   csedweek_dates: 8. -14. Joulukuuta 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suunnittele koodaustuntisi</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>on kokeillut</h3><h2>Koodaustuntia</h2>'
+  n_have_learned_an_hoc: '<h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>'
   anybody_can_learn: Kuka tahansa voi oppia.
   learn_now: Opettele nyt
   petition_message: Jokaisen oppilaan jokaisessa koulussa pitää saada mahdollisuus oppia tietojenkäsittelytiedettä
   petition_sign_message: 'Jos olet samaa mieltä, allekirjoita. Ole yksi # joukossa.'
+  petition_sign_message_support: 'Jos tuet meitä, allekirjoita nimesi.  Liity # joukkoon.'
   name: Nimi
   email: Sähköposti
   zipcode: Maa (tai postinumero Yhdysvalloissa)
@@ -23,7 +24,7 @@ fi-FI:
   hoc2014_teachers: Opettajat
   hoc2014_host: Järjestä
   hoc2014_everyone: Kaikki
-  hoc2014_support: Tue
+  hoc2014_support: 'Tue &#x25BE;'
   hoc2014_whatishoc: Mikä on koodaustunti?
   twentyhours_trynow: Kokeile nyt
   california_heading: Pyydä kouluasi opettamaan tietojenkäsittelytiedettä
@@ -90,6 +91,7 @@ fi-FI:
   learn_classes: Etsi paikallisia oppitunteja
   hoc_is_here: '#Koodaustunti on täällä - Tsekkaa! @codeorg'
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
+  twitter_teach_cs: Miksi enemmän kouluja ei opeta tietojenkäsittelytiedettä? Voimme korjata tämän. http://youtu.be/nKIu9yen5nc. Vieraile http://code.org/ ja opi lisää.
   learn_hoc: Opiskele Koodaustunnilla
   beyond_hoc: Koodaustunnin jälkeen
   what_gender: Mikä on sukupuolesi?
@@ -104,10 +106,11 @@ fi-FI:
   students_and_lines: '%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut %{lines} riviä koodia.'
   start_hoc: Aloita Koodaustunti nyt
   contact_form_topic_press: 'Lehdistö/media (haastattelu- tai luentopyyntö)'
-  stats_michael: '"En ole<b>koskaan</b> nähnyt minun opiskelijoitani niin innostuneena oppimisestaan." - Michael Clark, opettaja'
   stats_nina: '"Joka ikinen päivä tuotti saman tuloksen &mdash; 100 % sitoutuminen."-Nina Nichols Peery, opettaja'
   stats_student: '"Tiesin, että tämä oli <b>ainutlaatuinen</b> mahdollisuus."-Mariana Alzate, viidesluokkalainen'
-  studiobar_title: "Tutustu <a href='http://studio.code.org'>Code Studio</a>on"
+  stats_michael: '"En ole<b>koskaan</b> nähnyt minun opiskelijoitani niin innostuneena oppimisestaan." - Michael Clark, opettaja'
+  studiobar_title: "Tutustu <a href='http://studio.code.org'>Koodistudioon</a>"
+  studiobar_title_nolink: Tutustu Koodistudioon
   studiobar_elementary_title: Alkeiskurssit
   studiobar_elementary_body: Kolme uutta kurssiamme alakoululaisille
   studiobar_hoc_title: Koodaustunti
@@ -122,6 +125,94 @@ fi-FI:
   studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
   studiobar_shop_title: Myymälä
   studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
+  homepage_hero_text_susan: |
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: Koodaustunti
+  homepage_slot_text_frozen: Frozen Annan ja Elsan kanssa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: Kaikki oppituntimme
+  homepage_slot_text_course4: Kurssi 4
+  homepage_slot_text_shop: Myymälä
+  homepage_slot_text_flappy: Flappy Code
+  homepage_action_text_codevideo: Katso video
+  homepage_action_text_teachervideo: Katso video
+  homepage_action_text_learn: Aloita opiskeleminen tänään
+  homepage_action_text_signpetition: Allekirjoita vetoomus
+  homepage_signpetition_dropdown: 'Allekirjoita vetoomuksemme &#x25BE;'
+  homepage_slot_text_title_hoc: Koodaustunti
+  homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
+  homepage_slot_text_link_hoc: Kokeile koodaustuntia
+  homepage_slot_text_link_host: Järjestä Koodaustunti
+  homepage_slot_text_link_hocserved: '# käyttäjää'
+  homepage_slot_text_title_students: Oppilaat
+  homepage_slot_text_blurb_students: Tutki kaikki oppaat
+  homepage_slot_text_link_codestudio: Kokeile Koodistudiota
+  homepage_slot_text_link_local: Etsi kerho läheltäsi
+  homepage_slot_text_link_othercourses: Muut verkkokurssit
+  homepage_slot_text_title_educators: Opettajat
+  homepage_slot_text_blurb_educators: Opeta opiskelijoillesi
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: Katso koko opetussuunnitelma
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Kannattajat
+  homepage_slot_text_blurb_advocates: Tue työtämme
+  homepage_slot_text_link_stats: Katso tilastot
+  homepage_slot_text_link_buy: Ostaa t-paita tai hattu
+  homepage_slot_text_link_donate: Tee lahjoitus
+  homepage_header_codestudio: Koodistudion oppilas luomukset
+  homepage_header_donors: Code.org kiittää tukijoitaan
+  homepage_donors_seall: Näytä kaikki
+  homepage_donors_donate: Lahjoita
   contact_form_topic_student: Olen oppilas
   contact_form_topic_parent: Olen vanhempi
   contact_form_topic_teacher: Olen opettaja
@@ -289,6 +380,8 @@ fi-FI:
   dashboard_login_picture: Kuva
   dashboard_login_none: Sähköposti
   dashboard_new_password: uusi salasana
+  dashboard_progress_not_started: ei aloitettu
+  dashboard_progress_in_progress: käynnissä
   dashboard_progress_not_completed: kesken
   dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
   dashboard_progress_completed_perfect: valmis, täydellinen
@@ -329,7 +422,7 @@ fi-FI:
   carousel_heading_ide: Opettajien keskuudessa suositut alustat
   educator_notes: Opettajan muistiinpanot
   how_to_teach_hoc: Miten opettaa koodia tunnissa
-  more_resources_educators: Lisämateriaalit opettajille
+  more_resources_educators: Lisämateriaalit opettajille ja kasvattajille
   participants: osallistujat
   teachers_notes: Opettajan muistiinpanot
   teachers_notes_hoc: 'Opettajat: Lue tärkeitä huomioita kouluttajille tästä'
@@ -500,7 +593,7 @@ fi-FI:
   playlab_shortdescription: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
   codeorg_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
   codeintl_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  thinkersmithspanish_longdescription: 'Käyttämällä ennakkoon "Robotti kieltä" , opiskelijat oppivat tekemään tiettyjä tehtäviä ilman etukäteistä keskustelua . Tämä opetus opettaa lapsille symbolien ja toimintojen suhdetta, lisäksi se on korvaamaton kyky virheenkorjauksessa.'
   khan_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   khanes_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   khanpt_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!

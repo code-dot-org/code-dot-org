@@ -1,0 +1,22 @@
+!!! 5
+%html
+  %head
+
+    %meta{name: "google-site-verification", content: "EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A"}
+
+    =view :theme_common_head_before
+
+    %meta{name:'viewport', content:'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'}
+
+    %link{rel:'stylesheet', type:'text/css', href:'/css/brstrap.css'}
+    %link{rel:'stylesheet', type:'text/css', href:'/css/common.css'}
+
+    /[if lt IE 9]
+      %script{src:'/js/respond.min.js'}
+
+    %meta{:'http-equiv'=>'X-UA-Compatible', content:'IE=8'}
+
+    =view :theme_common_head_after
+  %body
+    =body
+    =view :theme_common_body_after

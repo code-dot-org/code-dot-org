@@ -34,7 +34,9 @@ module Rack; class Request
     parts = host.split('.')
     if parts.count >= 3
       domain = parts.last(3).join('.').split(':').first
-      return domain if ['studio.code.org', 'learn.code.org', 'i18n.code.org', 'al.code.org', 'ar.code.org', 'br.code.org', 'italia.code.org', 'ro.code.org', 'eu.code.org', 'uk.code.org', 'za.code.org'].include?(domain)
+      return domain if ['studio.code.org', 'learn.code.org', 'translate.hourofcode.com', 'i18n.code.org',
+                        'al.code.org', 'ar.code.org', 'br.code.org', 'italia.code.org', 'ro.code.org',
+                        'eu.code.org', 'uk.code.org', 'za.code.org'].include?(domain)
     end
 
     domain = parts.last(2).join('.').split(':').first

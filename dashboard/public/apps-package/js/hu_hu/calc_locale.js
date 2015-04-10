@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "számítás"},
+"divideByZeroError":function(d){return "A programod nullával való osztást eredményezett."},
+"emptyComputeBlock":function(d){return "A kiértékeléshez először csatlakoztatni kell egy blokkot."},
 "equivalentExpression":function(d){return "Próbáld meg átrendezni az érveidet, hogy pontosan ugyanazt a kifejezést kapd."},
-"extraTopBlocks":function(d){return "Vannak szabad blokkjaid. Ezeket a \"számítás\" blokkhoz szeretted volna csatolni?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "kiértékel"},
+"extraTopBlocks":function(d){return "Néhány blokk nincs csatlakoztatva. Csatolni akarja ezeket az értékelendő blokkhoz?"},
+"failedInput":function(d){return "A függvényed nem ad vissza minden változóhoz helyes eredményt."},
 "goal":function(d){return "Cél:"},
-"reinfFeedbackMsg":function(d){return "Itt a történeted! Dolgozz rajta tovább, vagy menj a következő feladványra!"},
-"yourExpression":function(d){return "A kifejezésed:"}};
+"levelIncompleteError":function(d){return "A kifejezésed nem a célt eredményezi."},
+"missingFunctionError":function(d){return "Meg kell határozni a "+appLocale.v(d,"functionName")+" függvényt."},
+"missingVariableX":function(d){return "A kifejezésből hiányzik a "+appLocale.v(d,"var")+" változó."},
+"reinfFeedbackMsg":function(d){return "Íme a számításod! Folytathatod vele a munkát, vagy menj a következő blokkra."},
+"yourExpression":function(d){return "A kifejezésed:"},
+"wrongInput":function(d){return "Rossz értékkel hívtad meg a függvényedet."},
+"wrongOtherValuesX":function(d){return "A kifejezés rossz értéket eredményez, ha "+appLocale.v(d,"var")+"-t megváltoztatjuk."},
+"wrongResult":function(d){return "A kifejezés nem ad vissza helyes eredményt."}};

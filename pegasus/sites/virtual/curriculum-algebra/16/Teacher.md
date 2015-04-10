@@ -1,19 +1,15 @@
 ---
-title: Play Lab Booleans Big Game
+title: The Big Game - Booleans
 view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg16'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 16, :unplugged=>false, :title=> 'Play Lab: Booleans Big Game',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-
-Using Boolean operators, students will write code that checks the location of a sprite on the screen to make sure it doesn't go off-screen.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -22,72 +18,41 @@ Using Boolean operators, students will write code that checks the location of a 
  
 1) [Introduction](#GetStarted)  
 
-### **Play Lab: Booleans Big Game**  
+### **Activity: The Big Game - Booleans**  
 
 2) [Online Puzzles](#Activity1)
 
 [/summary]
 
-## Lesson Objectives 
-### Students will:
-
-- Use Boolean operators to compare values
-- Apply Boolean logic, such as AND, OR, and NOT, to compose complex Boolean comparisons
-
-[/together]
-
 [together]
 
 # Teaching Guide
 
-## Getting Started
+## Materials, Resources, and Prep
+### For the Student
+- [Safe-left? Design Recipe](../docs/worksheets/safe_left.pdf) (in the student workbook)
+- [Safe-right? Design Recipe](../docs/worksheets/safe_right.pdf) (in the student workbook)
+- [Onscreen? Design Recipe](../docs/worksheets/onscreen.pdf) (in the student workbook)
 
+## Getting Started
 
 ### <a name="GetStarted"></a> 1) Introduction
 
+Let's get back into that Big Game that we started in stage 7 and continued in stage 12.
 
+When we last worked on the game, our danger and target were moving off the screen in opposite directions.  Unfortunately, their update functions move them in one direction forever, so they never come back on screen once they've left! We'd actually like them to have a recurring role in this game, so we'll use some boolean logic to move them back to their starting points once they go off screen.
+
+Once the students correctly implement [on-screen?](../docs/worksheets/onscreen.pdf) (and its sub-parts [safe-left?](../docs/worksheets/safe_left.pdf) and [safe-right?](../docs/worksheets/safe_right.pdf)), the new behavior of target and danger is that once they are off the screen they return to their starting position but with a new y-value.  From this new vertical position they will continue to move across the screen.  If one (or both) of the characters go off the screen and never reappear, the most likely source of the error is that one of the newly implemented boolean statements is incorrect.
 
 [/together]
 
 [together]
 
-## Activity: Eval Design Recpie
+## Activity: The Big Game - Booleans
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-Return to your Big Game to use Booleans to keep your player character on screen. Head to [MSM stage 16](http://studio.code.org/s/algebra/stage/16/puzzle/1) in Code Studio to get started programming.
+Return to your Big Game to use Booleans to keep your player character on screen. Head to [CS in Algebra stage 16](http://studio.code.org/s/algebra/stage/16/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
-
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 7.EE.3-4: The student uses numerical and algebraic expressions and equations to solve real-life and mathematical problems.
-- 8.F.1-3: The student defines, evaluates, and compares functions.
-- A-CED.1-4: The student solves equations and inequalities in one or more variable that describe numbers or relationships.
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
-- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>

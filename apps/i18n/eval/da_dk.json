@@ -1,13 +1,16 @@
 {
+  "badColorStringError": "Du benyttede en ugyldig farvestreng: {val}",
+  "badStyleStringError": "Du benyttede en ugyldig stilstreng: {val}",
   "circleBlockTitle": "cirkel (radius, stil, farve)",
-  "displayBlockTitle": "display",
+  "displayBlockTitle": "evaluér",
   "ellipseBlockTitle": "ellipse (bredde, højde, stil, farve)",
-  "extraTopBlocks": "Du har separate blokke. Mente du fastgøre disse til \"display\" blokken?",
+  "extraTopBlocks": "Du har ikke-vedhæftede blokke. Ønskede du at vedhæfte disse til \"vurdér\"-blokken?",
+  "infiniteRecursionError": "Din funktion kalder sig selv. Vi have stoppet den, da den ellers ville have fortsat med at kalder sig for evigt (loop).",
   "overlayBlockTitle": "overlay (top, bund)",
-  "placeImageBlockTitle": "put-billede (x, y, billede)",
+  "placeImageBlockTitle": "placer-billede (x, y, billede)",
   "offsetBlockTitle": "offset (x, y, billede)",
   "rectangleBlockTitle": "rektangel (bredde, højde, stil, farve)",
-  "reinfFeedbackMsg": "Du kan trykke på knappen \"Prøv igen\" for at redigere din tegning.",
+  "reinfFeedbackMsg": "Du kan trykke \"Fortsæt med at spille\"-knappen for at redigere din tegning.",
   "rotateImageBlockTitle": "roter (grader, billede)",
   "scaleImageBlockTitle": "skalér (faktor, billede)",
   "squareBlockTitle": "kvadrat (størrelse, stil, farve)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle": "underlag (bottom, top)",
   "outline": "skitse",
   "solid": "solid",
-  "string": "string"
+  "string": "string",
+  "stringMismatchError": "Du har en streng med den forkerte kapitalisering.",
+  "userCodeException": "Der opstod en fejl under eksekvering af din kode.",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

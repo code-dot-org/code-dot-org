@@ -40,7 +40,7 @@ def generate_professional_development_workshop_teachers_report
       # get data on students of the teacher
       teacher_user_id = teacher[:id]
       next unless teacher_user_id
-      
+
       students = DASHBOARD_DB[:followers].
         where(user_id: teacher_user_id).
         join(:users, id: :student_user_id).
@@ -95,4 +95,43 @@ def generate_professional_development_workshop_signup_report(secret)
       }
     end
   end.compact
+end
+
+def generate_professional_development_workshops_report(from=nil, to=nil)
+  from = Chronic.parse(from.to_s)
+  to = Chronic.parse(to.to_s)
+
+  PEGASUS_DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop').map do |workshop|
+    data = JSON.parse(workshop[:data]) rescue {}
+
+    if first_date = data['dates'].first
+      first_date = first_date['date_s']
+      first_date = Chronic.parse(first_date.to_s)
+    end
+
+    next unless first_date
+    next if from && to && (first_date < from || first_date > to)
+
+    signup_count = 0
+
+    PEGASUS_DB[:forms].
+      where(kind: 'ProfessionalDevelopmentWorkshopSignup').
+      and(parent_id: workshop[:id]).
+      map do |signup|
+        signup_data = JSON.parse(signup[:data]) rescue {}
+        signup_count += 1 unless signup_data['status_s'] == 'cancelled'
+    end
+
+    {
+      Name: data['name_s'],
+      User_ID: workshop[:user_id],
+      Email: data['email_s'],
+      Date: data['dates'].map{|i| i['date_s']}.join('<br />'),
+      Location: data['location_name_s'] + ' (' + data['location_address_s'] + ')',
+      Type: data['type_s'],
+      Signups: signup_count.to_s + '/' + data['capacity_s'],
+    }
+
+  end.compact.flatten
+
 end

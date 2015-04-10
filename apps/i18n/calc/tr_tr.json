@@ -1,9 +1,17 @@
 {
-  "compute": "hesapla",
-  "equivalentExpression": "Aynı ifadeyi elde etmek için argümanlarınızı yeniden sıralayınız.",
-  "extraTopBlocks": "Bağlantı yapılmamış bloklarınız var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?",
-  "failedInput": "Your function does not return the right result for all values.",
-  "goal": "Amaç:",
-  "reinfFeedbackMsg": "İşte hikayesi!Bunun üzerinde çalışmaya devam, ya da bir sonraki bulmaca üzerine hareket!",
-  "yourExpression": "İfadeniz:"
+  "divideByZeroError": "Your program results in division by zero.",
+  "emptyComputeBlock": "\"Değerlendir\" bloğuna bir blok eklemelisiniz.",
+  "equivalentExpression": "Tam olarak aynı ifade almak için argümanlar yeniden deneyin.",
+  "evaluate": "değerlendirme",
+  "extraTopBlocks": "Blokları ayırdınız. Bunları \"değerlendir\" bloğuna eklemek mi istiyorsunuz?",
+  "failedInput": "Fonksiyonunuz tüm değerler için doğru sonuca dönmüyor.",
+  "goal": "Hedef:\n",
+  "levelIncompleteError": "Tanımın hedefle eşleşmiyor.",
+  "missingFunctionError": "{functionName} adında bir işlev tanımlamalısınız.",
+  "missingVariableX": "Your expression is missing variable {var}.",
+  "reinfFeedbackMsg": "İşte senin hesaplaman! Üzerinde çalışmaya devam et, yada sıradaki bulmacaya geç!",
+  "yourExpression": "İfadeniz:",
+  "wrongInput": "Fonksiyonunuzu yanlış değer ile çağırıyorsunuz.",
+  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
+  "wrongResult": "İfadeniz doğru sonucu döndürmüyor"
 }

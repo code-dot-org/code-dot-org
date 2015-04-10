@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "إحصاء"},
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "حاول إعادة ترتيب حجتك للحصول على نفس التعبير."},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "لديك قطع غير موصلة. هل قصدت إيصالها بقطعة الـ\"حساب\"؟"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "الدالة الخاص بك لا تقوم بإرجاع النتيجة الصحيحة لكافة القيم."},
 "goal":function(d){return "الهدف:"},
-"reinfFeedbackMsg":function(d){return "هذه هي قصتك! أكمل العمل عليها, أو انتقل إلى الأحجية التالية!"},
-"yourExpression":function(d){return "التعبير الخاص بك:"}};
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "هنا عملية الحساب الخاص بك! لمواصلة العمل على ذلك، أو الانتقال إلى اللغز القادم!"},
+"yourExpression":function(d){return "التعبير الخاص بك:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

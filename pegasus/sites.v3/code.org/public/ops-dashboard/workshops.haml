@@ -1,0 +1,91 @@
+---
+layout: none
+template: none
+---
+- authentication_required!
+- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
+
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%span{href:'/ops-dashboard/workshops'}
+  PD Workshops
+
+%h1 PD Workshops
+- if dashboard_user[:admin]
+  %a.btn.btn-white{href:'#/workshops/new'}
+    Create New PD Workshop
+
+%form.form-inline{style:'float:right'}
+  From:
+  %input.form-control.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeStart', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
+  To:
+  %input.form-control.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeEnd', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
+
+%table{style:'width:970px; layout:fixed; margin-top:20px;'}
+  %colgroup
+    %col{width: "135"}/
+    %col{width: "120"}/
+    %col{width: "140"}/
+    %col{width: "160"}/
+    %col{width: "150"}/
+    %col{width: "160"}/
+  %tr
+    %th.manage-th
+      %a{'ng-click' => 'order = "name"'}
+        Workshop Name
+    %th.manage-th
+      %span
+        Program Type
+    %th.manage-th
+      %span
+        Teacher Cohort
+    %th.manage-th
+      Dates
+    %th.manage-th
+      %a{'ng-click' => 'order = "location"'}
+        Address
+    - if dashboard_user[:admin]
+      %th.manage-th
+        Manage
+  %tr{'ng-repeat' => 'workshop in workshops | withinDateRange:dateRangeStart:dateRangeEnd | orderBy:order'}
+    %td
+      %p
+        {{workshop.name}}
+      %a{href:'#/workshops/{{workshop.id}}/attendance'}
+        View attendance
+    %td
+      %span
+        {{program_types[workshop.program_type].short_name}}
+    %td
+      %span
+        {{cohortName(workshop.cohort_id)}}
+    %td
+      %div{'ng-repeat' => 'segment in workshop.segments'}
+        %p
+          {{segment.start | utc | date:'longDate'}}
+          %br
+          {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
+    %td
+      %span
+        {{workshop.location}}
+    - if dashboard_user[:admin]
+      %td
+        %a.btn.btn-white{href:'#/workshops/{{workshop.id}}/edit', 'ng-hide' => 'workshop.deletion == true'} Edit
+        %button.btn.btn-danger{'ng-click' => 'workshop.deletion = true', 'ng-hide' => 'workshop.deletion == true'} Delete
+        %p{'ng-show' => 'workshop.deletion'}
+          Are you sure?
+        %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1)', 'ng-show' => 'workshop.deletion == true'} Yes
+        %button.btn.btn-white{'ng-click' => 'workshop.deletion = false', 'ng-show' => 'workshop.deletion == true'} No
+
+:css
+  td .btn {
+    width: 48%;
+  }
+  a {
+    color: white;
+  }
+  a:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }

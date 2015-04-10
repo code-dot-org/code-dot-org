@@ -54,8 +54,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "문장"},
 "catVariables":function(d){return "변수"},
 "continue":function(d){return "계속하기"},
-"createHtmlBlock":function(d){return "html 블럭 만들기"},
-"createHtmlBlockTooltip":function(d){return "응용 프로그램에서 HTML 블럭을 만듭니다."},
+"container":function(d){return "컨테이너 만들기"},
+"containerTooltip":function(d){return "분리된 컨테이너를 만들고 내부 HTML을 설정합니다."},
 "finalLevel":function(d){return "축하합니다! 마지막 퍼즐을 해결했습니다."},
 "nextLevel":function(d){return "축하합니다! 퍼즐을 해결했습니다."},
 "no":function(d){return "아니요"},
@@ -70,5 +70,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "안쪽 단계로 들어가기"},
 "stepOver":function(d){return "단계 지나가기"},
 "stepOut":function(d){return "이 단계 밖으로 나가기"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "데이터 보기"},
 "yes":function(d){return "예"}};

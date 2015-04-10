@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "υπολόγισε"},
+"divideByZeroError":function(d){return "Το πρόγραμμά σας καταλήγει σε διαίρεση με το μηδέν."},
+"emptyComputeBlock":function(d){return "Πρέπει να επισυνάψετε ένα μπλοκ στο μπλοκ \"αξιολόγηση\"."},
 "equivalentExpression":function(d){return "Δοκιμάστε να αναδιατάξετε τα ορίσματά σας έτσι ώστε να έχετε την ίδια έκφραση."},
-"extraTopBlocks":function(d){return "Έχετε ασύνδετα μπλοκ. Μήπως θα θέλατε να τα συνδέσετε στο μπλοκ \"υπολόγισε\";"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "υπολογισμός"},
+"extraTopBlocks":function(d){return "Έχετε ασύνδετα μποκ. Μήπως ενοούσατε να τα επισυνάψετε στο μπλοκ \"αξιολόγηση\";"},
+"failedInput":function(d){return "Η συνάρτηση δεν επιστρέφει το σωστό αποτέλεσμα για όλες τις τιμές."},
 "goal":function(d){return "Στόχος:"},
-"reinfFeedbackMsg":function(d){return "Εδώ είναι η δική σας ιστορία! Συνεχίστε να εργάζεστε σε αυτήν, ή προχωρήστε στον επόμενο γρίφο!"},
-"yourExpression":function(d){return "Η έκφρασή σας:"}};
+"levelIncompleteError":function(d){return "Η έκφραση σας δεν ταιριάζει με την αναμενόμενη του στόχου."},
+"missingFunctionError":function(d){return "Πρέπει να ορίσετε μία συνάρτηση με το όνομα "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Η έκφρασή σας δεν περιέχει την μεταβλητή "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Εδώ είναι το αποτέλεσμα σας! Συνεχίστε να εργάζεστε εδω ή προχωρήστε στον επόμενο γρίφο!"},
+"yourExpression":function(d){return "Η έκφρασή σας:"},
+"wrongInput":function(d){return "Κάνετε κλήση μίας συνάρτησης με την λανθασμένη τιμή."},
+"wrongOtherValuesX":function(d){return "Η έκφρασή σας οδηγεί σε λάθος αποτέλεσμα αν αλλάξουμε την "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "H έκφρασή σας δεν επιστρέφει το σωστό αποτέλεσμα."}};

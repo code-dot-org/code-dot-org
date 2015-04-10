@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "円 (半径、スタイル、色)"},
-"displayBlockTitle":function(d){return "ひょうじ"},
+"displayBlockTitle":function(d){return "計算する"},
 "ellipseBlockTitle":function(d){return "楕円 (幅、高さ、スタイル、色)"},
-"extraTopBlocks":function(d){return "使っていないブロックがあります。\"表示\"ブロックにつなごうと思っていましたか？"},
+"extraTopBlocks":function(d){return "関連付けられていないブロックがあります。このブロックを「evaluate」ブロックに追加しますか？"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "上に重ねる (上、下)"},
 "placeImageBlockTitle":function(d){return "画像を配置 (縦座標、横座標、画像)"},
 "offsetBlockTitle":function(d){return "ずらす (縦座標、横座標、画像)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "下に重ねる (上、下)"},
 "outline":function(d){return "縁"},
 "solid":function(d){return "単色"},
-"string":function(d){return "文字列"}};
+"string":function(d){return "文字列"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

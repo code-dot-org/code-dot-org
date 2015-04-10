@@ -1,13 +1,16 @@
 {
+  "badColorStringError":"You used an invalid color string: {val}",
+  "badStyleStringError":"You used an invalid style string: {val}",
   "circleBlockTitle":"krug (poluprečnik, stil, boja)",
-  "displayBlockTitle":"prikaz",
+  "displayBlockTitle":"evaluate",
   "ellipseBlockTitle":"elipsa (širina, visina, stil, boja)",
-  "extraTopBlocks":"Imate nepovezane blokove. Da li ste ih htjeli pridodati bloku \"prikaz\"?",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle":"sloj (gore, dolje)",
   "placeImageBlockTitle":"Ubaci sliku (x, y, slika)",
   "offsetBlockTitle":"pomak (x, y, slika)",
   "rectangleBlockTitle":"pravougaonik (širina, visina, stil, boja)",
-  "reinfFeedbackMsg":"Možeš kliknuti na \"Pokušaj ponovno\" kako bi preuredio svoj crtež.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
   "rotateImageBlockTitle":"rotiraj (stepeni, slika)",
   "scaleImageBlockTitle":"skaliraj (faktor, slika)",
   "squareBlockTitle":"kvadrat (veličina, stil, boja)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle":"podloga (dno, vrh)",
   "outline":"struktura",
   "solid":"popunjen",
-  "string":"niz karaktera"
+  "string":"niz karaktera",
+  "stringMismatchError":"You have a string with the wrong capitalization.",
+  "userCodeException":"An error occurred while executing your code.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

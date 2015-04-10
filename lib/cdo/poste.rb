@@ -12,7 +12,7 @@ module Poste
   def self.emails_dir(*paths)
     pegasus_dir 'emails', *paths
   end
-  
+
   def self.decrypt(encrypted)
     decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
     decrypter.decrypt
@@ -24,7 +24,7 @@ module Poste
   def self.decrypt_id(encrypted)
     return decrypt(encrypted).to_i
   end
-  
+
   def self.encrypt(plain)
     encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
     encrypter.encrypt
@@ -37,7 +37,7 @@ module Poste
   def self.encrypt_id(id)
     encrypt(id)
   end
-  
+
   def self.resolve_template(name)
     template_extnames.each do |extname|
       path = emails_dir "#{name}#{extname}"

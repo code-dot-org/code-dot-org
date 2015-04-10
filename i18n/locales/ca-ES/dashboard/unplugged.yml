@@ -3,7 +3,7 @@ ca:
     unplugged:
       Unplug1:
         title: Introducció a la informàtica
-        desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
+        desc: Aquesta unitat introdueix el concepte informàtica i explica que fan els informàtics. També dona als estudiants l’oportunitat d’assumir el rol d’un informàtic. Al final de l’activitat cada estudiant podrà emportar-se a casa una mostra del que ha après. Com a mestre tu pots estar temptat a no ensenyar el vocabulari clau associat a la lliçó als més petitons, però recorda que si intentes presentar-la ara de manera divertida i amena serà molt més productiu que no pas deixar-ho per a oportunitats futures.
         pdfs:
           - unplug1
         video: Unplug1
@@ -15,7 +15,7 @@ ca:
         video: Unplug2
       Unplug3:
         title: Programació de paper quadriculat
-        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares in on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
+        desc: Els alumnes començaran a entendre en que consisteix la programació programant-se entre ells per pintar dibuixos. La classe començarà amb els alumnes intercanviant instruccions per pintar quadrats en un full quadriculat amb la finalitat de reproduir una imatge. Si queda temps al final de la sessió els alumnes poden acabar utilitzant els seus propis dibuixos per programar.
         pdfs:
           - unplug3
         video: Unplug3
@@ -176,19 +176,19 @@ ca:
         video: C4_binari_senseconnexió
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
       Contracts:
-        title: Contracts
-        desc: Contracts unplugged lesson description
+        title: Contracts, Domain, and Range
+        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
       DesignRecipe:
         title: The Design Recipe
-        desc: Design Recipe lesson description
+        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
       Booleans:
-        title: Veritat o fals
-        desc: Unitat de descripció de veritat o fals
+        title: Booleans and Logic
+        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
-        desc: Descripció de la unitat de Condicionals i Funcions definides a trossos
+        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Collision Detection and the Pythagorean Theorem
+        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."

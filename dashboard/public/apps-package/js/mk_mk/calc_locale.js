@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "Пресметај"},
+"divideByZeroError":function(d){return "Your program results in division by zero."},
+"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "Обидете се со промена на распоредот на вашите аргументи за да се добие ист израз."},
+"evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Имате неповрзани блокови. Дали мислевте да се закачите на овие на \" пресмета\" блок ?"},
 "failedInput":function(d){return "Your function does not return the right result for all values."},
 "goal":function(d){return "Цел:"},
+"levelIncompleteError":function(d){return "Your expression does not match the goal."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Еве ја твојата приказна ! Продолжи да работиш на неа, или се движи кон следниот мозаик!"},
-"yourExpression":function(d){return "Вашиот израз:"}};
+"yourExpression":function(d){return "Вашиот израз:"},
+"wrongInput":function(d){return "You are calling your function with the wrong value."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Your expresison does not return the correct result."}};

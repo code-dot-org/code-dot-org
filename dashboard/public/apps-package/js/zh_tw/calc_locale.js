@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "計算"},
+"divideByZeroError":function(d){return "你的程式造成除數為0。"},
+"emptyComputeBlock":function(d){return "您必須將一塊積木連接到\"計算\"積木。"},
 "equivalentExpression":function(d){return "請嘗試重新排序你的參數，得到完全相同結果。"},
+"evaluate":function(d){return "計算"},
 "extraTopBlocks":function(d){return "你有未連接的積木。你要將它們連接到「計算」積木嗎？"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"failedInput":function(d){return "你的程式回傳的結果不完全正確。"},
 "goal":function(d){return "目標："},
-"reinfFeedbackMsg":function(d){return "這裡是你的故事 ！繼續做它，或往下一個謎題 ！"},
-"yourExpression":function(d){return "您的運算式："}};
+"levelIncompleteError":function(d){return "你的運算式不符合目標。"},
+"missingFunctionError":function(d){return "你必須定義名為 "+appLocale.v(d,"functionName")+" 的函式。"},
+"missingVariableX":function(d){return "你的運算式少了變數"+appLocale.v(d,"var")+"。"},
+"reinfFeedbackMsg":function(d){return "這裡是你的計算結果！繼續做下去，或移動到下一個謎 ！"},
+"yourExpression":function(d){return "您的運算式："},
+"wrongInput":function(d){return "你用了錯誤的值呼叫你的函數。"},
+"wrongOtherValuesX":function(d){return "如果我們改變"+appLocale.v(d,"var")+"，你的運算式會造成錯誤的值。"},
+"wrongResult":function(d){return "你的運算式沒有回傳正確的結果。"}};

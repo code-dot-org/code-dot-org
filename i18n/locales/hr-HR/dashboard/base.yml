@@ -22,6 +22,7 @@ hr:
           future: Ne može biti u budućnosti
   hello: Pozdrav svima
   welcome_back: 'Dobrodošao natrag, %{name}'
+  submit: Pošalji
   add_teacher_form:
     code:
       label: 'Dodajte učitelja:'
@@ -215,6 +216,7 @@ hr:
         artist: Nacrtaj nešto
     user:
       classroom: Učiteljeva Početna stranica
+      district_dashboard: District Dashboard
       label: 'Zdravo, %{username}'
       stats: Moj napredak
       settings: Moj račun
@@ -293,6 +295,8 @@ hr:
     student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
   user:
     email_confirm_needed: 'E-mail adresa nije potvrđena:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Ponovno slanje uputa za potvrđivanje
     new_password_hint: (ostavite prazno ako ne želite promijeniti)
     current_password_hint: (za potvrdu promjene treba nam vaša trenutna lozinka)
@@ -431,6 +435,9 @@ hr:
       body: Pogledaj galeriju aplikacija i umjetničkih slika koje su napravili naši korisnici
     frozen:
       title: Snježno kraljevstvo
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
     students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!
@@ -460,6 +467,13 @@ hr:
     wrong_body: 'Rješenje koje ste unijeli nije ispravno.  Molimo pokušajte ponovo!'
     correct_title: Ispravno
     correct_body: To je točan odgovor.
+  contract_match:
+    wrong_title: Netočan odgovor
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Ovdje unesite vaš odgovor
   dialog:
@@ -475,7 +489,7 @@ hr:
           title: Uvod u informatiku za osnovnu školu (15-25 sati)
           description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
         Hour of Code:
-          title: Sat Kodiranja
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Uredi kôd
@@ -505,11 +519,44 @@ hr:
     sign_out: 'Ako ne želite unijeti svoju dob možete se<a href="%{url}">odjaviti</a>.'
   zendesk_too_young_message: 'Nažalost, mlađi korisnici se ne mogu prijaviti na našu stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a> bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto tebe.'
   progress:
-    not_completed: nije dovršeno
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: dovršeno, previše blokova
     completed_perfect: dovršeno, savršeno
     furthest_level_attempted: pokušaj posljednjeg nivoa
+    assessment: assessment
   studio:
     courses_working_on: Tečajevi na kojima radite
     completed_courses: Završeni tečajevi
     all_courses: Svi tečajevi
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Spremi
+    delete: izbriši
+    exit: Return to Course
+    my_projects: My Projects
+    share: Podijeli
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Više
+    name: Ime
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Izbrisati?
+    delete_yes: Da
+    delete_no: Ne
+    saved: Saved
+    not_saved: Not saved
+    cancel: Odustani
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

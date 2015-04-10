@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "Hai usato un nome non valido per il colore: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "Hai usato un nome non valido per lo stile: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "cerchio (raggio, stile, colore)"},
 "displayBlockTitle":function(d){return "visualizza"},
 "ellipseBlockTitle":function(d){return "ellisse (larghezza, altezza, stile, colore)"},
 "extraTopBlocks":function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'visualizza'?"},
+"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "metti-sopra (superiore, inferiore)"},
 "placeImageBlockTitle":function(d){return "posiziona-immagine (x, y, immagine)"},
 "offsetBlockTitle":function(d){return "spostamento (x, y, immagine)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "metti-sotto (inferiore, superiore)"},
 "outline":function(d){return "contorno"},
 "solid":function(d){return "solido"},
-"string":function(d){return "stringa"}};
+"string":function(d){return "stringa"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

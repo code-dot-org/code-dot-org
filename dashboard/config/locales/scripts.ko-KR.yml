@@ -248,31 +248,9 @@
           Artist Binary: 2진 예술가
           description_audience: 10세 이상 (과정3을 마친 후)
         Course4pre:
+          title: 과정4 준비조건
           description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
-          Course 4 Prerequisite: 과정4 준비조건
-          'Maze: Sequence': '미로 퍼즐: 순차'
-          'Artist: Sequence': '예술가: 순차'
-          'Artist: Loops': '예술가: 반복'
-          'Bee: Conditionals': '꿀벌: 조건선택'
-          'Artist: Nested Loops': '예술가: 중첩반복'
-          'Farmer: While Loops': '농부: ~인동안 반복'
-          'Bee: Nested Loops': '꿀벌: 중첩반복'
-          'Artist: Functions': '예술가: 함수'
-          'Bee: Debugging': '꿀벌: 디버깅'
-        course4pre:
-          description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
-          Course 4 Prerequisite: 과정4 준비조건
-          'Maze: Sequence': '미로 퍼즐: 순차'
-          'Artist: Sequence': '예술가: 순차'
-          'Artist: Loops': '예술가: 반복'
-          'Bee: Conditionals': '꿀벌: 조건선택'
-          'Artist: Nested Loops': '예술가: 중첩반복'
-          'Farmer: While Loops': '농부: ~인동안 반복'
-          'Bee: Nested Loops': '꿀벌: 중첩반복'
-          'Artist: Functions': '예술가: 함수'
-          'Bee: Debugging': '꿀벌: 디버깅'
-        Course4pre (Case Conflict):
-          description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
+          description: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
           Course 4 Prerequisite: 과정4 준비조건
           'Maze: Sequence': '미로 퍼즐: 순차'
           'Artist: Sequence': '예술가: 순차'
@@ -305,6 +283,9 @@
           Special: 스페셜
           Binary: 2진
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: 계산 블럭
@@ -335,7 +316,7 @@
           'Play Lab: Booleans': '플레이 랩: 불(참 또는 거짓 값)'
           'Play Lab: Boolean (Big Game)': '플레이 랩: 참/거짓값 (빅 게임)'
           'Unplugged: Conditionals and Piecewise Functions': '언플러그드: 조건/선택과 함수 조각'
-          'Eval: Conditionals': '평가: 조건/선택'
+          'Eval: Conditionals': 조건
           'Unplugged: Collision Detection and the Distance Formula': '언플러그드: 충돌 감지와
             거리 계산식'
           'Play Lab: Collision Detection (Big Game)': '플레이 랩: 충돌 감지 (빅 게임)'
@@ -344,7 +325,11 @@
           description_short: Play Lab을 이용해 스토리나 게임을 만드세요!
           description: Play Lab을 이용해 스토리나 게임을 만드세요!
           Play Lab: Play Lab
+          Infinity: 무한
         algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and
+            programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
@@ -354,14 +339,221 @@
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: 디자인 레시피
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
-          title: Internet Simulator
+          title: 인터넷 시뮬레이터
           description_short: ''
           description: ''
-          Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: 무한
+          Internet Simulator: 인터넷 시뮬레이터
+          Unit 1: 유닛1
+          Unit 2: 유닛2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
+          description: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8)
+            학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
+          Introduction to Computer Science: 컴퓨터과학(Computer Science, 정보과학) 소개
+          The Maze: 미로 퍼즐
+          Computational Thinking: 컴퓨터과학적(정보과학적)사고
+          Graph Paper Programming: 모눈종이 프로그래밍
+          The Artist: The Artist
+          Algorithms: 알고리즘
+          The Artist 2: 예술가 퍼즐 2
+          Functions: 함수
+          The Farmer: 농부 퍼즐
+          Conditionals: 조건
+          The Artist 3: 예술가 퍼즐 3
+          Song Writing: 노래 만들기
+          The Farmer 2: 농부 퍼즐 2
+          Abstraction: 추상화
+          The Artist 4: 예술가 퍼즐 4
+          Relay Programming: 릴레이 프로그래밍
+          The Farmer 3: 농부 퍼즐 3
+          The Internet: 인터넷
+          The Artist 5: 예술가 퍼즐 5
+          Wrap-up: 마무리
+        edit-code:
+          title: 코드 수정
+          description: ''
+          The Maze: 미로 퍼즐
+          Applab: Applab
+          The Artist: The Artist
+          Play Lab: Play Lab
+        events:
+          title: 이벤트
+          description: ''
+          Bounce: Bounce
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: 플래피 코드
+          description: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
+          Flappy Code: 플래피 코드
+        jigsaw:
+          title: 퍼즐 맞추기
+          description: ''
+          Jigsaw: 퍼즐 맞추기
+        step:
+          title: 단계
+          description: ''
+          Step: 단계
+        Hour of Code:
+          title: 시간의 암호 2013
+          description: ''
+          Hour of Code 2013: 시간의 암호 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: 과정4 준비조건
+          description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
+          description: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
+          Course 4 Prerequisite: 과정4 준비조건
+          'Maze: Sequence': '미로 퍼즐: 순차'
+          'Artist: Sequence': '예술가: 순차'
+          'Artist: Loops': '예술가: 반복'
+          'Bee: Conditionals': '꿀벌: 조건선택'
+          'Artist: Nested Loops': '예술가: 중첩반복'
+          'Farmer: While Loops': '농부: ~인동안 반복'
+          'Bee: Nested Loops': '꿀벌: 중첩반복'
+          'Artist: Functions': '예술가: 함수'
+          'Bee: Debugging': '꿀벌: 디버깅'
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': '언플러그드: 비디오 게임과 좌표 평면'
+          'Calc: Evaluation Blocks': '계산: 평가(결과 계산) 블럭'
+          'Eval: Strings and Images': '평가: 문자열(문장)과 이미지'
+          'Unplugged: Contracts': '언플러그드 : 제한 조건'
+          'Eval: Writing Contracts': '평가: 제한 조건 쓰기'
+          'Calc: Defining Variables': '계산: 변수 정의하기'
+          'Play Lab: Defining Variables (Big Game)': '플레이 랩: 변수 정의하기 (빅 게임)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': '언플러그드: 디자인 레시피'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': '플레이 랩: 애니메이션 (빅 게임)'
+          'Unplugged: Booleans': '언플러그드: 참/거짓값'
+          'Eval: Boolean Operators': '평가: 참/거짓(논리) 연산자'
+          'Play Lab: Booleans': '플레이 랩: 불(참 또는 거짓 값)'
+          'Play Lab: Boolean (Big Game)': '플레이 랩: 참/거짓값 (빅 게임)'
+          'Unplugged: Conditionals and Piecewise Functions': '언플러그드: 조건/선택과 함수 조각'
+          'Eval: Conditionals': '평가: 조건/선택'
+          'Unplugged: Collision Detection and the Distance Formula': '언플러그드: 충돌 감지와
+            거리 계산식'
+          'Play Lab: Collision Detection (Big Game)': '플레이 랩: 충돌 감지 (빅 게임)'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Contracts: 제한하기
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: 디자인 레시피
+          Your Game - Animation: Your Game - Animation
+          Booleans: 불(참 또는 거짓)값들
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: 조건선택과 불연속 함수
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: 불(참 또는 거짓)값들
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': '플레이 랩: 충돌 감지 (빅 게임)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

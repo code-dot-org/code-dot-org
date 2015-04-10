@@ -1,7 +1,7 @@
 zh:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 請修正下列錯誤：
   activerecord:
     errors:
       messages:
@@ -22,6 +22,7 @@ zh:
           future: 不能在未來
   hello: 世界您好
   welcome_back: '歡迎回來，%{name}'
+  submit: 送出
   add_teacher_form:
     code:
       label: 增加一位老師：
@@ -196,7 +197,7 @@ zh:
           
           
         bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+          not_earned_title: '您仍然可以在<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>賺取額外$250 credits (僅限美國教師)'
           earned: '7個或以上的女學生完成全部 %{num_trophies}個獎盃的收集。你已獲得額外的獎章！(僅限美國教師)'
           not_earned: '如果至少7個以上的女學生完成了所有 %{num_trophies}個獎盃的收集，你將獲得價值$250美元的 <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>儲值。<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>儲值僅限美國公立學校教師使用。'
   crud:
@@ -221,6 +222,7 @@ zh:
         artist: 畫些什麼東西
     user:
       classroom: 教師主頁
+      district_dashboard: District Dashboard
       label: '嗨 %{username}'
       stats: 我的進度
       settings: 我的帳號
@@ -299,13 +301,15 @@ zh:
     student_teacher_disassociated: '%{student_name}的老師%{teacher_name}已經被移除'
   user:
     email_confirm_needed: 電子郵件地址尚未被確認：
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 重新發送確認指令
     new_password_hint: （如果你不想變更它就保留空白）
     current_password_hint: （我們需要您現在的密碼以確認您的更改）
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: 刪除您的帳戶
+    delete_text: 按一下下面的按鈕將刪除您的帳戶。
+    delete_text_teacher_note: 請注意： 刪除您的帳戶並不會刪除您的學生的帳戶。
+    delete_confirm: 是否確定要刪除您的帳戶？
   user_level:
     completed: 已完成
     tried: 已試過
@@ -338,16 +342,16 @@ zh:
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 或者，你也可以先試試，之後再 註冊：
     trynow: 快來試試
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    add_hint_help: 請協助我們添加小提示到Code.org 的教程
     20hour_overview: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
-    test_videos_help: Test our new video player at your school
+    test_videos_help: 在您的學校測試我們新的影片
     try_beta_courses: 新功能！K 5 學生們請嘗試我們的 Beta 測試版課程。
     use_as_teacher: 使用這網站當一名教師
     heading_hoc2014: '<h2>一小時的程式設計課程</h2><h1>對所有年齡</h1>'
     heading_elementary: '<h2>20 小時課程</h2><h1>初學者(所有年齡)</h1>'
-    heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
+    heading_apps: '<h2>樂趣</h2><h1>每個人</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
-    your_gallery: Gallery
+    your_gallery: 相片圖庫
   gender:
     male: 男性
     female: 女性
@@ -356,7 +360,7 @@ zh:
     student: '學生 '
     teacher: 教師
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+    help_from_html: 從Google, Microsoft, Facebook, and Twitter的工程師在幫忙創建本教程。
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     powered_by_aws: Powered by Amazon Web Services
     feedback: 提供回饋
@@ -387,7 +391,7 @@ zh:
     upgrade:
       header: 請升級您的瀏覽器。
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
+      button: 將我轉向至”受支援的瀏覽器清單“
   slow_loading: 請在等等，這次讀取的時間比較久一點.......
   try_reloading: 請嘗試重新載入網頁
   next_stage: 完成 ！繼續邁向下一個階段
@@ -433,10 +437,13 @@ zh:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
-      title: Gallery
+      title: 相片圖庫
       body: View a gallery of app and artist images created by our users
     frozen:
       title: 冰雪奇緣
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: 學生用程式畫出這些圖案 ！
     students_made_these_with_code: Students made these with code!
@@ -446,7 +453,7 @@ zh:
     more: '更多 &rarr;'
     caption_by_name_age: '%{name}, %{age} 歲'
     caption_time_ago: '%{time_ago} 前'
-    header: Gallery
+    header: 相片圖庫
     header_playlab: 播放實驗室
     header_artist: 畫家
   landing:
@@ -466,6 +473,13 @@ zh:
     wrong_body: 您的解決方案不正確。請再試一次 ！
     correct_title: 正確
     correct_body: 這是正確的答案。
+  contract_match:
+    wrong_title: 不正確的答案
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: 在這裡輸入你的答案
   dialog:
@@ -481,7 +495,7 @@ zh:
           title: 'K 8 簡介電腦科學課程 （15-25 小時） '
           description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
         Hour of Code:
-          title: 一小時程式設計
+          title: 一小時Code 2013
           description: ""
         edit-code:
           title: 編輯程式碼
@@ -511,11 +525,44 @@ zh:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: 未完成
+    not_started: 未開始
+    in_progress: 進行中
     completed_too_many_blocks: 完成，但使用過多積木
     completed_perfect: 完美完成
-    furthest_level_attempted: furthest level attempted
+    furthest_level_attempted: 嘗試到的最遠關卡
+    assessment: 評估
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: 您正在進行的課程
+    completed_courses: 已完成的課程
+    all_courses: 所有課程
+  project:
+    projects: 專案
+    create: 創建專案
+    create_a_project: 創建一個新專案：
+    new: 創建新的專案
+    rename: 重新命名
+    save: 儲存
+    delete: 删除
+    exit: 返回課程
+    my_projects: 我的專案
+    share: 分享
+    share_title: 分享專案
+    share_copy_link: 複製連結：
+    close: 退出
+    more: 更多
+    name: 你的名字
+    updated: 最後更新於
+    project_type: 專案類型
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: 需要獲得説明以開始嗎？
+    really_delete: 要刪除嗎？
+    delete_yes: 是
+    delete_no: 否
+    saved: 已存擋
+    not_saved: 未保存
+    cancel: 取消
+    delete_confirm_title: 您確定要刪除此專案？
+    delete_confirm_text: 刪除您當前的專案將會把它永久的從您的”我的專案清單“移除。您已共用的連結將不再使任何人能夠查看您的專案。
+    view_all: 查看我的專案
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

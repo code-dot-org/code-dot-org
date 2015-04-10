@@ -5,14 +5,17 @@
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
         Type out the arithmetic expression that matches this code: Skriv det matematiske
           udtryk, der passer til denne kode
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
+        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png,
+          500
         (4+5) > 9: (4+5) > 9
+        ((4+5) > 9): ((4+5) > 9)
         Type the arithmetic expression here: Skriv det matematiske udtryk her
       Blocks to Bools 2:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
         Type out the arithmetic expression that matches this code: Skriv det matematiske
           udtryk, der passer til denne kode
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png,
+          500
         (10 > 11) or (7 <= 9): (10 > 11) eller (7 <= 9)
         (10 > 11) OR (7 <= 9): (10 > 11) eller (7 <= 9)
         (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
@@ -21,22 +24,39 @@
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
         Type out the arithmetic expression that matches this code: Skriv det matematiske
           udtryk, der passer til denne kode
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
+          500
         (5 < 10) and (10 < 15): (5 < 10) og (10 < 15)
+        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) OG (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
+        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
+        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
+        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         Type the arithmetic expression here: Skriv det matematiske udtryk her
       Blocks to Bools 4:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
         Type out the arithmetic expression that matches this code: Skriv det matematiske
           udtryk, der passer til denne kode
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
+          500
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) og (x < 5)) ELLER
           ((8 < x) og (x < 10))
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
+          ((8 < x) And (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) og (x < 5)) eller
           ((8 < x) og (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5))
+          OR ((8 < x) AND (x < 10)))
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5))
+          Or ((8 < x) And (x < 10)))
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
+          or ((8 < x) and (x < 10)))
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) ||
+          ((8 < x) && (x < 10)))
         Type the arithmetic expression here: Skriv det matematiske udtryk her
       Blocks to Math 1:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
@@ -45,6 +65,7 @@
         Blocks to Math 1.blocks.start_blocks, 200: Blokke til matematik 1.blocks.start_blocks,
           200
         4 + 5: 4 + 5
+        (4+5): (4+5)
         Type the arithmetic expression here: Skriv det matematiske udtryk her
       Blocks to Math 2:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
@@ -53,6 +74,7 @@
         Blocks to Math 2.blocks.start_blocks, 200: Blokke til matematik 2.blocks.start_blocks,
           200
         7 * 6: 7 * 6
+        (7 * 6): (7 * 6)
         Type the arithmetic expression here: Skriv det matematiske udtryk her
       Blocks to Math 3:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
@@ -61,6 +83,8 @@
         Blocks to Math 3.blocks.start_blocks: Blokke til matematik 3.blocks.start_blocks
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
+        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
+        2 * 3 - 1 + 0: 2 * 3 - 1 + 0
         Type the arithmetic expression here: Skriv det matematiske udtryk her
       Blocks to Math 4:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
@@ -69,6 +93,7 @@
         Blocks to Math 4.blocks.start_blocks: Blokke til matematik 4.blocks.start_blocks
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8 - 12
+        ((5 + 8) - 12): ((5 + 8) - 12)
         Type the arithmetic expression here: Skriv det matematiske udtryk her
       Blocks to Math 5:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
@@ -77,8 +102,8 @@
         Blocks to Math 5.blocks.start_blocks: Blokke til matematik 5.blocks.start_blocks
         (-2) * (-6):
         - 2 * -6: -2 * -6
+        ((-2) * (-6)): ((-2) * (-6))
         Type the arithmetic expression here: Skriv det matematiske udtryk her
-        -2 * -6: -2 * -6
       Blocks to Math 6:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
         Type out the arithmetic expression that matches this code: Skriv det matematiske
@@ -88,6 +113,7 @@
         ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
         (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
+        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
         Type the arithmetic expression here: Skriv det matematiske udtryk her
       Blocks to Math 7:
         Convert Blocks to Math: Omformuler blokkene til matematiksprog
@@ -95,7 +121,75 @@
           udtryk, der passer til denne kode
         Blocks to Math 7.blocks.start_blocks: Blokke til matematik 7.blocks.start_blocks
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
+        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
         Type the arithmetic expression here: Skriv det matematiske udtryk her
+      Open text response example:
+        Open text response example: Åbn tekstbesvarelseseksempel
+        I loved it because...: Jeg elskede det, fordi...
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Stiller
+          et positivt indlæringsmiljø til rådighed i dit datalogiklasseværelse
+        0: '? Nu hvor du ved mere om vores pensum, hvilke øvelser vil du benytte til
+          at fremme en sund atmosfære i dit datalogiklasseværelse?'
+        1: ': Nu hvor du ved mere om vores pensum, hvilke øvelser vil du benytte til
+          at fremme en sund atmosfære i dit datalogiklasseværelse?'
+        In my classroom, I want to...: I mit klasseværelse ønsker jeg at...
+      PDK5 Course Descriptions:
+        Course Structure: Kursusforløb
+        I am going to start with Course...: Jeg har tænkt mig at starte med kursus...
+      PDK5 Difficulty:
+        Degree of Difficulty: Sværhedsgrad
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Var
+          programmering så vanskeligt, som du forventede? Forklar hvorfor, eller hvorfor
+          ikke. Hvordan påvirker det din undervisning i datalogi?
+        Your thoughts here: Dine tanker hér
+      PDK5 Foundation:
+        Computer Science as a Foundational Skill: Datalogi som en grundlæggende færdighed
+        Do you see computer science as a foundational skill for your students? Why or why not?: Se
+          du datalogi som en grundlæggende færdighed for dine elever? Hvorfor, eller
+          hvorfor ikke?
+        Your thoughts here: Dine tanker hér
+      PDK5 Impact 1:
+        Impact for students: Virkning for studerende
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Tror
+          du, at dine elever vil finde online-aktiviteter i K-5-kurser sjove og engagerende?
+          Hvorfor, eller hvorfor ikke?
+        Your thoughts here: Dine tanker hér
+      PDK5 Impact 2:
+        Connections to other Subjects: Forbindelser til andre fag
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Forbindes
+          datalogi med andre emner eller delemner, som dine eleverne lærer om? Forklar
+          hvorfor, eller hvorfor ikke.
+        Your thoughts here: Dine tanker hér
+      PDK5 Impact 3:
+        Real-world applications for Students: Dagligdags anvendelsesmuligheder for
+          studerende
+        0: '? Does learning about computer science help students grow into the kind
+          of citizens you are preparing them to be? Explain why or why not.'
+        1: ': Hjælper læring om datalogi de studerende med blive formet til den slags
+          borgere, som du forbereder dem til at blive? Forklar hvorfor, eller hvorfor
+          ikke.'
+        Your thoughts here: Dine tanker hér
+      PDK5 Problem Solving:
+        Problem Solving Methods: Problemløsningsmetoder
+        I could integrate this in my classroom by...: Jeg kunne integrere dette i
+          mit klasseværelse ved...
+      PDK5 Promo Video:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Barn testet, lærer
+          godkendt'
+      PDK5 Promo Video 2:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Barn testet, lærer
+          godkendt'
+        My first impressions of Code Studio are...: Mine første indtryk af Code Studio
+          er...
+      PDK5 Strategies O:
+        Strategies for Teaching Computer Science: Strategier for datalogiundervisning
+        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'Jeg
+          tror datalogiundervisning bliver anderledes end undervisning i andre fag
+          på disse måder: ...'
+      Test Markdown level:
+        Enter title here: Angiv titel hér
+        Enter prompt here: Angiv forespørgsel hér
       text match test:
         Mathematical Expression Assessment: Matematisk udtryks vurdering
         Type out the arithmetic expression that this circle of evaluation evaluates to: Skriv
@@ -106,32 +200,204 @@
         (9-3)+4: 
         9-3+4: 
         Type the arithmetic expression here: Skriv det matematiske udtryk her
-        (9-3)+4*7: (9-3)+4*7
-        9-3+4*7: 9-3+4*7
+    external:
+      Code Logo v3:
+        title: titel
+        Create images with bits and bytes.: Skab billeder med bits og bytes.
+      CSP Lesson 14 encode letter A instructions:
+        'Instructions: Encode the Letter A': 'Instruktioner: Indkod bogstavet A'
+      CSP Student Plan - U1L5 - Sending Bits in the real world:
+        CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan
+          - U1L5 - Sending Bits in the real world
+        description here: Beskrivelse her
+      CSPStudentLessonPlanTemplate:
+        title: titel
+        description here: Beskrivelse her
+      External level test (will):
+        first computer program: første computerprogram
+      Hour of Code test content: []
+      Mixing Colors:
+        title: titel
+        description here: Beskrivelse her
+      PDCSP Intro: []
+      PDK5 Beyond C:
+        Beyond: Ud over
+      PDK5 Classroom Culture C:
+        Classroom Culture: Classroom Culture
+      PDK5 Course Maps C: []
+      PDK5 Course Overview C: []
+      PDK5 Glossary C:
+        Vocabulary: Ordforråd
+      PDK5 Intro C: []
+      PDK5 Pair Programming 1:
+        Pair Programming: Par programmering
+      PDK5 Strategies:
+        Strategies for Teaching Computer Science: Strategier for datalogiundervisning
+      PDK5 Teacher Dashboard 1:
+        Dashboard 1: Instrumentpanel 1
+      PDK5 Teacher Dashboard 2:
+        Dashboard 2: Instrumentpanel 2
+      PDK5 Teacher Dashboard 3:
+        Course Progress: Kursusfremskridt
+      PDK5 Teacher Dashboard 4:
+        Course Progress: Kursusfremskridt
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Teacher Dashboard
+      PDK5 Unplugged Intro C:
+        Unplugged intro: Unplugged intro
+      PDK5 UVideo Overview C:
+        Kiki video overview: Kiki videooversigt
+      PDK5 Why K5 CS:
+        Why teach computer science in elementary school?: Hvorfor undervise i datalogi
+          i folkeskolen?
+      Pixelation 1:
+        Pixelation 1: Pixelering 1
+        Create images with bits and bytes.: Skab billeder med bits og bytes.
+      Pixelation 2:
+        Pixelation 2: Pixelering 2
+        Create images with bits and bytes.: Skab billeder med bits og bytes.
+      Pixelation 3:
+        Pixelation 3: Pixelering 3
+        Create images with bits and bytes.: Skab billeder med bits og bytes.
+      Pixelation 3 Bit Colors:
+        title: titel
+        description here: Beskrivelse her
+      Pixelation 4:
+        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelering 4 - Baker-test
+          af ydre niveau - ikke virkeligt
+        Create images with bits and bytes.: Skab billeder med bits og bytes.
+      Pixelation 4x4 Empty:
+        Pixelation 4x4 Empty: Pixelering 4x4 tom
+        Create images with bits and bytes.: Skab billeder med bits og bytes.
+      Pixelation Bee:
+        title: titel
+        description here: Beskrivelse her
+      Pixelation Flappy:
+        title: titel
+        description here: Beskrivelse her
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
+        description here: Beskrivelse her
+      Pixelation - Lesson 14 - Fix bit offset:
+        Pixelation - Lesson 14 - Fix bit offset: Pixelering - Lektion 14 - Korrigér
+          bit-forskydning
+      Pixelation - Lesson 14 - Fix bit offset v.2:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelering - Lektion 14 - Korrigér
+          bit-forskydning v.2
+      Pixelation - Lesson 14 - Fix the error:
+        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelering - Lektion 14 - Korrigér
+          bit-forskydning v.2
+      Pixelation - Lesson 14 - Instructions Make Your Own:
+        Make your own B&W image: Make your own B&W image
+        description here: Beskrivelse her
+      Pixelation - Lesson 14 - Instructions one bit error:
+        'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
+        description here: Beskrivelse her
+      Pixelation - Lesson 14 - Make the Letter A:
+        title: titel
+        description here: Beskrivelse her
+      Pixelation - Lesson 14 - Make your own B and W Image:
+        title: titel
+        description here: Beskrivelse her
+      Pixelation - Lesson 14 - Make your own B&W Image:
+        title: titel
+        description here: Beskrivelse her
+      Pixelation - Lesson 15 - Color Free Play:
+        Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free
+          Play
+        description here: Beskrivelse her
+      Pixelation - Lesson 15 - Color Shades:
+        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
+        description here: Beskrivelse her
+      Pixelation - Lesson 15 - Color Shades 4x4:
+        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color
+          Shades 4x4
+        description here: Beskrivelse her
+      Pixelation - Lesson 15 - Complete 3-bit color:
+        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete
+          3-bit color
+        description here: Beskrivelse her
+      Pixelation - Lesson 15 - Favicon Instructions:
+        Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon
+          Instructions
+        description here: Beskrivelse her
+      Pixelation - Lesson 15 - Task 1 instructions:
+        Pixelation - Lesson 15 - Task 1 instructions: Pixelation - Lesson 15 - Task
+          1 instructions
+        description here: Beskrivelse her
+      Pixelation - Lesson 15 - Task 2 instructions:
+        Pixelation - Lesson 15 - Task 2 instructions: Pixelation - Lesson 15 - Task
+          2 instructions
+        description here: Beskrivelse her
+      Pixelation - Lesson 15 - Task 3 instructions:
+        Pixelation - Lesson 15 - Task 3 instructions: Pixelation - Lesson 15 - Task
+          3 instructions
+        description here: Beskrivelse her
+      Pixelation - Video - Color 1:
+        Pixelation - Video - Color 1: Pixelation - Video - Color 1
+        description here: Beskrivelse her
+      Pixelation - Video - Color 2:
+        Pixelation - Video - Color 2: Pixelation - Video - Color 2
+        description here: Beskrivelse her
+      Pixelation - Video - Color 3:
+        Pixelation - Video - Color 3: Pixelation - Video - Color 3
+        description here: Beskrivelse her
+      Pixelation - Video - Lesson 14 - B and W:
+        How to use the B&W Pixelation Widget: How to use the B&W Pixelation Widget
+      Pixelation - Video - Tips and Tricks:
+        Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
+        description here: Beskrivelse her
+      test demo level:
+        demo title: demo title
+        demo description: demo description
+      Test discourse forum-comment level:
+        Degree of Difficulty: Sværhedsgrad
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Var
+          programmering så vanskeligt, som du forventede? Forklar hvorfor, eller hvorfor
+          ikke. Hvordan påvirker det din undervisning i datalogi?
+      test html katie:
+        testing: testing
+        lkajsdfasdf: lkajsdfasdf
+      Text Compression 1:
+        Text Compression 1: Text Compression 1
+        Compress text by identifying repeated patterns.: Compress text by identifying
+          repeated patterns.
+      Text Compression Peter Piper:
+        Text Compression Peter Piper: Text Compression Peter Piper
+        Compress text by identifying repeated patterns.: Compress text by identifying
+          repeated patterns.
+      U1L5 Student Lesson:
+        title: titel
+        description here: Beskrivelse her
+      U1L6 Student Lesson Plan:
+        title: titel
+        description here: Beskrivelse her
+      unique level name here:
+        title: titel
+        description here: Beskrivelse her
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
-        CREATING CONTRACTS FROM EXAMPLES 1: CREATING CONTRACTS FROM EXAMPLES 1
-        Write a contract for a big red triangle that is 100 pixels in size: Write
-          a contract for a big red triangle that is 100 pixels in size
+        Big Triangle: Big Triangle
+        Write a contract for a big red triangle that is 100 pixels in size: Skrive
+          en kontrakt for en stor rød trekant, der er 100 pixels i størrelse
         EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Big Triangle|image|color:string|size:Number: Big Triangle|image|color:string|size:Number
+        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
       Creating Contracts From Examples 2:
-        Creating Contracts From Examples 2: Creating Contracts From Examples 2
+        Square Contract: Square Contract
         Write a contract for a purple square that is 15 pixels in size.: Write a contract
           for a purple square that is 15 pixels in size.
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
-        Square|image|color:string|size:Number: Square|image|color:string|size:Number
+        Square|Image|Number|String: Square|Image|Number|String
       Creating Contracts From Examples 3A:
-        Creating Contracts From Examples 3A: Creating Contracts From Examples 3A
+        Banner Contract: Banner Contract
         Banner Function block: Banner Function block
         Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        banner|image|text:string: banner|image|text:string
+        banner|Image|String: banner|Image|String
       Creating Contracts From Examples 4:
-        Creating Contracts From Examples 4: Creating Contracts From Examples 4
-        Try using the "text" function to write this red text at size 40.: Try using
-          the "text" function to write this red text at size 40.
+        Shrink Contract: Shrink Contract
+        Try using the "shrink" function.: Try using the "shrink" function.
         Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        shrink|image|image:image: shrink|image|image:image
+        shrink|Image|Image: shrink|Image|Image
       Design Recipe 1.contract:
         Design Recipe 1 Contract: Designopskrift 1 kontrakt
         0: '? Skriv kontrakten for funktion kaldet "wide-rect", som opretter et rektangel
@@ -139,39 +405,53 @@
         1: ': Skriv kontrakten for funktionen kaldet "wide-rect", som opretter et
           rektangel af en given højde og farve, der er dobbelt så bredt, som det er
           højt.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
-        ? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
       Enter name here:
         Enter title here: Angiv titel hér
         Enter prompt here: Angiv forespørgsel hér
-        Contract Name|Number|Domain1:Number|Domain2:string: Kontrakt Name|Number|Domain1:Number|Domain2:string
+        Contract Name|Number|Number|String: Contract Name|Number|Number|String
       Eval Contracts 1 B:
         Star Contract: Stjerne kontrakt
         Write a contract for the star function: Skriv en kontrakt for stjernefunktionen
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
           300
-        star|image|color:string|radius:Number|style:string: stjerne|billede|farve:streng|radius:Nummer|stil:streng
+        star|Image|String|Number|String: star|Image|String|Number|String
       Eval Contracts 2 B:
         Rotate Contract: Rotér kontrakt
         Write a contract for the rotate function: Skriv en kontrakt for stjernefunktionen
         Eval Contracts 2 A.solution_blocks, 300: Eval kontrakter 2 A.solution_blocks,
           300
-        rotate|image|degrees:Number|image:image: rotate|image|Degrees:Number|image:image
+        rotate|Image|Number|Image: rotate|Image|Number|Image
       Eval Contracts 3 B:
         Text Contract: Tekst kontrakt
         Write a contract for the text function: Skrive en kontrakt for tekstfunktionen
         Eval Contracts 3 A.solution_blocks, 300: Eval kontrakter 3 A.solution_blocks,
           300
-        text|image|color:string|size:Number|string:string: Tekst|Billede|Farve:streng|Størrelse:Nummer|Streng:streng
+        text|Image|String|Number|String: text|Image|String|Number|String
       Eval Contracts 4 B:
         Scale Contract: Skalering kontrakt
         Write a contract for the scale function: Skriv en kontrakt for skalafunktionen
         Eval Contracts 4 A.solution_blocks, 300: Eval kontrakter 4 A.solution_blocks,
           300
-        scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
+        scale|Image|Number|Image: scale|Image|Number|Image
+      Eval Contracts B:
+        Star Contract: Stjerne kontrakt
+        Write a contract for the star function: Skriv en kontrakt for stjernefunktionen
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+          300
+        star|Image|Number|String|String: star|Image|Number|String|String
+      Eval Contracts D:
+        Rotate Contract: Rotér kontrakt
+        Write a contract for the rotate function: Skriv en kontrakt for stjernefunktionen
+        Eval Contracts 2 A.solution_blocks, 300: Eval kontrakter 2 A.solution_blocks,
+          300
+        rotate|Image|Number|Image: rotate|Image|Number|Image
+      Eval Contracts F:
+        Text Contract: Tekst kontrakt
+        Write a contract for the text function: Skrive en kontrakt for tekstfunktionen
+        Eval Contracts 3 A.solution_blocks, 300: Eval kontrakter 3 A.solution_blocks,
+          300
+        text|Image|String|Number|String: text|Image|String|Number|String
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: Designopskrift 1 kontrakt
         0: '? Skriv kontrakten for funktion kaldet "wide-rect", som opretter et rektangel
@@ -179,21 +459,15 @@
         1: ': Skriv kontrakten for funktionen kaldet "wide-rect", som opretter et
           rektangel af en given højde og farve, der er dobbelt så bredt, som det er
           højt.'
-        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
-        ? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
-        : Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
       Rocket Contract 1:
         Contract for rocket-height: Contract for rocket-height
-        'Write a contract for the following question:': 'Write a contract for the
-          following question:'
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a function
-          called rocket-height that takes in the number of seconds that have passed
-          since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a function
-          called rocket-height that takes in the number of seconds that have passed
-          since the rocket took off, and which produces the height of the rocket at
-          that time.'
-        rocket-height|Number|seconds:Number: rocket-height|Number|seconds:Number
+        0: '? A rocket blasts off, traveling at 15 meters per second. Write a contract
+          for the function rocket-height that takes in the number of seconds that
+          have passed since the rocket took off, and which produces the height of
+          the rocket at that time.'
+        1: ': A rocket blasts off, traveling at 15 meters per second. Write a contract
+          for the function rocket-height that takes in the number of seconds that
+          have passed since the rocket took off, and which produces the height of
+          the rocket at that time.'
+        rocket-height|Number|Number: rocket-height|Number|Number

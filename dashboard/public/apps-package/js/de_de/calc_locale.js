@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "berechnen"},
+"divideByZeroError":function(d){return "Das Programm führt zu einer Division durch Null."},
+"emptyComputeBlock":function(d){return "Du musst einen Block mit dem \"berechnen\" Block verbinden."},
 "equivalentExpression":function(d){return "Versuche deine Argumente neu zu ordnen, um genau das gleiche Ergebnis zu bekommen."},
-"extraTopBlocks":function(d){return "Sie haben unverbundene Blöcke. Wollten sie diese an den \"berechnen\" Block knüpfen?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "Bewerten"},
+"extraTopBlocks":function(d){return "Du hast unverbundene Blöcke. Wolltest du sie mit dem \"berechnen\" Block verknüpfen?"},
+"failedInput":function(d){return "Deine Funktion gibt nicht die richtigen Werte für alle Variablen zurück."},
 "goal":function(d){return "Ziel:"},
-"reinfFeedbackMsg":function(d){return "Fertig, hier ist Deine Geschichte! Arbeite weiter daran und gehe zum nächsten Level!"},
-"yourExpression":function(d){return "Dein Ausdruck:"}};
+"levelIncompleteError":function(d){return "Dein Ausdruck erfüllt nicht das Ziel."},
+"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Bei deinem Ausdruck fehlt die Variable "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Hier ist deine Berechnung! Arbeite weiter oder gehe zum nächsten Rätsel!"},
+"yourExpression":function(d){return "Dein Ausdruck:"},
+"wrongInput":function(d){return "Du rufst deine Funktion mit einem falschen Wert auf."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Dein Ausdruck gibt nicht das richtige Ergebnis zurück."}};

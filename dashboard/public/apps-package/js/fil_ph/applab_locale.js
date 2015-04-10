@@ -39,8 +39,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "Text"},
 "catVariables":function(d){return "Mga variable"},
 "continue":function(d){return "Magpatuloy"},
-"createHtmlBlock":function(d){return "lumikha ng html block"},
-"createHtmlBlockTooltip":function(d){return "Lumilikha ng isang block ng HTML sa app."},
+"container":function(d){return "lumikha ng container"},
+"containerTooltip":function(d){return "Lumilikha ng dibisyon na container at itakda nito ang panloob na HTML."},
 "finalLevel":function(d){return "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle."},
 "nextLevel":function(d){return "Maligayang pagbati! Natapos mo ang puzzle na ito."},
 "no":function(d){return "Hindi"},
@@ -55,5 +55,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Hakbang sa"},
 "stepOver":function(d){return "Hakbang sa paglipas ng"},
 "stepOut":function(d){return "Umalis"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "Tingnan ang Data"},
 "yes":function(d){return "Oo"}};

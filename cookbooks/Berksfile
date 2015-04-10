@@ -1,0 +1,7 @@
+source "https://supermarket.chef.io"
+
+#metadata
+
+cookbook 'apt', '~> 2.3.8'
+cookbook 'build-essential', '~> 2.1.3'
+cookbook 'chef-client', '~> 4.2.0'

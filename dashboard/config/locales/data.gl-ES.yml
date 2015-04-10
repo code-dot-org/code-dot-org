@@ -593,129 +593,6 @@
           también el nuevo bloque "Ancho del Lápiz". ¡Que te diviertas!'
         studio_ec_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic
           en finalizar para que tus amigos prueben tu juego en sus teléfonos.
-    levelbuilder:
-      frozen line:
-        instructions: ¡Hola! Soy Elsa de Arendelle. Ayúdame a crear una línea.
-      frozen perpendicular:
-        instructions: Ahora veamos si podemos crear dos líneas que se encuentran a
-          un ángulo de 90 grados una de la otra. Necesitarás usar tanto el bloque
-          de "Giro" como el bloque de "Mover".
-      frozen square iterative:
-        instructions: Parece que estamos a la mitad de completar un cuadrado. Ahora
-          pongamos 4 líneas juntas para crear un cuadrado.
-      frozen square loop:
-        instructions: ¡Hola! Soy Anna de Arandelle. Dibujemos un cuadrado con el bloque
-          de "Repetir", lo que nos permitirá utilizar menos bloques. ¿Cuántas veces
-          (???) se deberían repetir los bloques que están dentro del bloque "Repetir"
-          para formar un cuadrado?
-      frozen square loop 3x:
-        instructions: Ahora crearemos tres cuadrados, girando al terminar cada cuadrado.
-          Asegúrate de girar 120 grados antes de iniciar un nuevo cuadrado.
-      frozen square snowflake:
-        instructions: ¿Puedes dibujar un copo de nieve utilizando el bloque "Repetir"
-          para dibujar un cuadrado 10 veces y el bloque "Girar" para girar 36 grados
-          entre cada cuadrado?
-      frozen cross:
-        instructions: Utiliza el bloque "Repetir" para crear un signo de más (+).
-          ¿Notaste que Elsa puede moverse hacia adelante y hacia atrás?
-      frozen cross rotate:
-        instructions: Ahora trata de repetirlo 10 veces. ¿Cuántos  grados necesitas
-          girar entre cada línea?
-      frozen cross rotate dense:
-        instructions: '¡Ahora repitámoslo 90 veces! ¿Cuántas veces cabe 90 en 360?
-          Pista: Es un número muy pequeño.'
-      frozen diamond:
-        instructions: 'Ahora crearemos un paralelogramo. Es como un cuadrado pero
-          tiene diferentes ángulos: 60 y 120 grados en lugar de ángulos de 90 grados.'
-      frozen diamond mini snowflake:
-        instructions: ¿Sabías que cada copo de nieve tiene una forma distinta? Crearemos
-          un nuevo copo de nieve utilizando el bloque "Repetir" para repetir el paralelogramo
-          4 veces, girando hacia la derecha 90 grados entre cada paralelogramo.
-      frozen diamond snowflake:
-        instructions: Ahora crearemos un nuevo copo de nieve, utilizando el bloque
-          "Repetir" para repetir el paralelogramo 10 veces, girando a la derecha 36
-          grados entre cada uno.
-      frozen circle:
-        instructions: Un círculo es una figura especial. ¿Puedes adivinar qué número
-          debe reemplazar los signos de interrogación para dibujar un círculo?
-      frozen circle function:
-        instructions: Utiliza el nuevo bloque "Crear un círculo" para crear 10 círculos
-          superpuestos. No te olvides de saltar hacia adelante entre cada círculo.
-      frozen circle function in circle:
-        instructions: Ahora crearemos 20 círculos superpuestos, girando 18 grados
-          entre cada círculo.
-      frozen circle function with parameter:
-        instructions: Aquí está un bloque "Crear círculo" que puede dibujar círculos
-          de diferentes tamaños. ¿Puedes usarlo para dibujar un circulo pequeño de
-          tamaño 5 y uno más grande de tamaño 10?
-      frozen snowflower:
-        instructions: Formas complejas de nieve pueden crearse usando figuras geométricas
-          muy simples. ¿Puedes crear uno repitiendo 5 círculos de tamaño 10 y 5 círculos
-          de tamaño 5?
-      frozen snowflake branch:
-        instructions: Intenta utilizar el bloque "Crear una rama de copo de nieve"
-          para dibujar 3 ramas, lo que empezará a parecerse a un copo de nieve.
-      frozen snowflake full:
-        instructions: ¡Ahora repitámoslo 8 veces para dibujar un hermoso copo de nieve!
-      frozen freeplay:
-        instructions: ¡Te has convertido oficialmente en un artista maestro! Crea
-          un paraíso invernal.
-      scrat 16:
-        instructions: ¡Bellota! ¡Bellota! ¡Bellota! Usa un bloque "si" para llevarme
-          ahí con el menor número de bloques.
-      scrat 17:
-        instructions: Ok, vamos a hacerlo de nuevo para practicar - este no es muy
-          diferente, ¡Pero ten cuidado con la pared!
-      scrat 18:
-        instructions: El bloque "If-else" verifica una condición y después hace o
-          una cosa u otra. Para llevarme a la bellota intenta usar este nuevo bloque.
-      scrat 19:
-        instructions: Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien
-          en tu primer intento?
-      scrat 20:
-        instructions: ¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto
-          más complejo? Si lo haces correctamente puedo caminar cualquier camino curvo
-          sin importar su longitud. !Date prisa! ¡El hielo se está derritiendo!
-      Standalone_Artist_1:
-        instructions: ¡Bienvenido a Artista! En primer lugar, vamos a intentar hacer
-          un cuadrado simple usando un bloque para girar hacia la derecha y un bloque
-          de movimiento hacia delante. Cada lado debe medir 100 píxeles de largo.
-      Standalone_Artist_2:
-        instructions: Dibuja este diamante con ángulos de 120 y 60 grados y 150 pixeles
-          de largo para los lados.
-      Standalone_Artist_3:
-        instructions: ¿Puedes dibujar este hexágono de 100 pixeles de cada lado y
-          ángulos de 60 grados?
-      Standalone_Artist_4:
-        instructions: Ahora tienes un nuevo bloque para jugar, el bucle. Este bloque
-          repetirá un conjunto de comandos. ¿Qué pasa si repites estos comandos 6
-          veces?
-      Standalone_Artist_5:
-        instructions: ¿Cuántas veces necesitas repetir este diamante para dibujar
-          la flor?
-      Standalone_Artist_5.5:
-        instructions: 'Nota que simplificamos el código del diamante convirtiéndolo
-          en una repetición. Puedes repetir toda la secuencia 12 veces para dibujar
-          la flor. Pista: Necesitas girar 30 grados después de dibujar el diamante,
-          para que no sigas dibujando sobre el mismo diamante.'
-      Standalone_Artist_6:
-        instructions: 'Repite este código del hexágono 6 veces para crear este diseño.
-          ¿Cuántos grados necesitas girar cada vez? Pista: Divide el número de grados
-          en un círculo entre el número de veces que se repita el bucle.'
-      Standalone_Artist_7:
-        instructions: 'Una función es otra herramienta de programación que te ayuda
-          a evitar repetir código. Esta función dibuja una flor, así que la puedes
-          utilizar en cualquier momento para dibujar una flor. Utiliza esto y el nuevo
-          bloque de salto para dibujar estas flores. Pista: Hay 150 pixeles de espacio
-          entre cada flor'
-      Standalone_Artist_8:
-        instructions: Aquí hay una función llamada "Dibuja una figura" que hemos programado
-          para dibujar hexágonos. Ejecuta el código para ver lo que hace y luego experimenta
-          con la función para ver qué pasa. ¿Puedes hacer que dibuje un patrón de
-          cuadrados, triángulos u octágonos?
-      Standalone_Artist_9:
-        instructions: ¡Ahora haz cualquier imagen que te guste! ¡Incluso tienes una
-          función vacía que puedes hacer que haga lo que quieras!
     video:
       name:
         maze_intro: Introducción al Laberinto
@@ -775,6 +652,7 @@
         C2_relay_programming: Programación bajo presión
         C2_paper_airplanes: Aviones de Papel
         C2_digital_footprint: Tu huella Digital
+        C2_digital_footprint_v2: Your Digital Footprint
         C3_maze_level_4: Bucles de Laberinto
         C3_artist_intro: Introducción al Artista
         C3_artist_functions: Funciones de artista
@@ -815,6 +693,21 @@
         playlab_intro: Introducción al laboratorio de juegos
         playlab_events: Eventos del laboratorio de juegos
         playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        msm_1_intro: CS in Algebra Chapter 1 Introduction
+        msm_2_eval_block: Evaluation Blocks
+        msm_3_pemdas: PEMDAS
+        msm_6_variables: Variables
+        msm_7_functions: Functions
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
@@ -917,3 +810,8 @@
         arrows_move_actor: Usa las flechas para mover el actor
         right_arrow_fireball: Use la flecha derecha para disparar bolas de fuego
         name_function: Escriba el nombre de su función aquí
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

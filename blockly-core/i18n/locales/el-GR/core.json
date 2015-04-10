@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "πραγματική",
+  "ACTUAL": "κλήση",
   "ADD": "Πρόσθεσε",
   "ADD_COMMENT": "Πρόσθεσε σχόλιο",
   "ADD_PARAMETER": "Προσθέστε  παράμετρο",
@@ -23,6 +23,7 @@
   "COLOUR_RGB_RED": "κόκκινο",
   "COLOUR_RGB_TITLE": "χρωμάτισε με",
   "COLOUR_RGB_TOOLTIP": "Δημιουργήστε ένα χρώμα με το συγκεκριμένο ποσό του κόκκινου, πράσινου και μπλε.  Όλες οι τιμές πρέπει να είναι μεταξύ 0 και 100.",
+  "CONTRACT_EDITOR_HEADER": "Συνταγή σχεδιασμού",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Μπλοκ_Τερματισμού_Βρόγχων",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "σταμάτα την επανάληψη",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "συνέχισε με την επόμενη επανάληψη",
@@ -73,7 +74,7 @@
   "EXAMPLE_DESCRIPTION": "Ορίζει ένα παράδειγμα με την αναμενόμενη και πραγματική συμπεριφορά",
   "EXPAND_ALL": "Επέκταση Πλακιδίων",
   "EXPAND_BLOCK": "Μπλοκ επέκτασης",
-  "EXPECTED": "αναμενόμενος",
+  "EXPECTED": "αποτέλεσμα",
   "EXTERNAL_INPUTS": "Εξωτερικές εισόδοι",
   "FUNCTION_CREATE": "Δημιουργήστε μια συνάρτηση",
   "FUNCTION_EDIT": "επεξεργάσου",

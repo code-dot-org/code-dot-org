@@ -1,0 +1,35 @@
+//= require epiceditor
+//= require_self
+var epicEditor = new EpicEditor({
+  'basePath': '<%= ActionController::Base.asset_host %>',
+  'theme': {
+    'base': '<%= stylesheet_path('epiceditor/epiceditor')%>',
+    'preview': '<%=stylesheet_path('epiceditor/github')%>',
+    'editor': '<%=stylesheet_path('epiceditor/light')%>'
+  }
+}).load();
+
+var dslElement = $('#level_dsl_text');
+var dslText = dslElement.val();
+// Match against markdown heredoc syntax and capture contents in [2].
+var regex = /markdown <<(\w*)\n([\s\S]*)\n\1$/m;
+var match = regex.exec(dslText);
+if(match && match[2]) {
+  var markdownText = match[2];
+  epicEditor.importFile('markdown', markdownText);
+  epicEditor.load('markdown')
+} else {
+  epicEditor.importFile('markdown', '');
+  epicEditor.load('markdown')
+}
+epicEditor.on('update', function () {
+  var editorText = epicEditor.exportFile();
+  var dslText = dslElement.val();
+  var replacedText;
+  if(regex.exec(dslText)) {
+    replacedText = dslText.replace(regex,'markdown <<$1\n' + editorText + '\n$1');
+  } else {
+    replacedText = dslText + '\nmarkdown <<MARKDOWN\n' + editorText + '\nMARKDOWN';
+  }
+  dslElement.val(replacedText);
+});

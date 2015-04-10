@@ -38,6 +38,12 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '["blah"]'
   end
 
+  test "if return_to in set_locale is nil redirects to homepage" do
+    request.host = "learn.code.org"
+    get :set_locale, :return_to => nil, :locale => "es-ES"
+    assert_redirected_to '/'
+  end
+
   test "should get index with edmodo header" do
     @request.headers["Accept"] = "image/*"
     @request.headers["User-Agent"] = "Edmodo/14 CFNetwork/672.0.2 Darwin/14.0.0"
@@ -137,18 +143,18 @@ class HomeControllerTest < ActionController::TestCase
       elsif script.flappy?
         url = "http://test.host/flappy"
       else
-        url = "http://test.host/s/#{script.to_param}"
+        url = "http://test.host/s/#{CGI.escape(script.to_param).gsub('+', '%20')}"
       end
       assert_select "#continue a[href^=#{url}]" # continue link
       assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
       assert_select "div[data-script-id=#{script.id}]" # div for loading script progress
     end
   end
-    
+
   test 'finishing whole 20hr curriculum does not show resume info' do
     user = create(:user)
     sign_in(user)
-    Script.find(Script::TWENTY_HOUR_ID).script_levels.each do |script_level|
+    Script.twenty_hour_script.script_levels.each do |script_level|
       UserLevel.create(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
     Script.find_by(name: 'hourofcode').script_levels.each do |script_level|
@@ -157,7 +163,7 @@ class HomeControllerTest < ActionController::TestCase
     user.backfill_user_scripts
 
     assert_equal [], user.working_on_scripts # if you finish a script you are not working on it!
-    
+
     get :index
     assert_response :success
     assert_select '#left_off', false
@@ -171,7 +177,7 @@ class HomeControllerTest < ActionController::TestCase
 
     sign_in user
     get :index
-    
+
     assert_select '#age-modal'
   end
 
@@ -188,7 +194,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'anonymous does not get age prompt' do
     get :index
-    
+
     assert_select '#age-modal', false
   end
 
@@ -254,4 +260,36 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
     assert_select '.alert', 0
   end
+
+  test 'show teacher-dashboard link when a teacher' do
+    teacher = create :teacher
+    sign_in teacher
+
+    get :index
+
+    assert_response :success
+    assert_select 'a[href=//test.code.org/teacher-dashboard]', 'Teacher Home Page'
+  end
+
+  test 'show ops-dashboard link when a district contact' do
+    contact = create(:district).contact
+    sign_in contact
+
+    get :index
+
+    assert_response :success
+    assert_select 'a[href=//test.code.org/ops-dashboard]', 'District Dashboard'
+  end
+
+  test 'student does not see links to ops dashbord or teacher dashboard' do
+    student = create :student
+    sign_in student
+
+    get :index
+
+    assert_response :success
+    assert_select 'a[href=//test.code.org/ops-dashboard]', 0
+    assert_select 'a[href=//test.code.org/teacher-dashboard]', 0
+  end
+
 end

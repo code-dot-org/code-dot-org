@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({61:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({75:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":3,"../skins":144,"./blocks":46,"./eval":48,"./levels":60}],48:[function(require,module,exports){
+},{"../appMain":5,"../skins":200,"./blocks":60,"./eval":62,"./levels":74}],62:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -48,12 +48,21 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
+var EvalText = require('./evalText');
+var utils = require('../utils');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-// requiring this loads canvg into the global namespace
+// Loading these modules extends SVGElement and puts canvg in the global
+// namespace
 require('../canvg/canvg.js');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/svg_todataurl');
+}
 var canvg = window.canvg || global.canvg;
 
 var level;
@@ -61,11 +70,16 @@ var skin;
 
 studioApp.setCheckForEmptyBlocks(false);
 
-var CANVAS_HEIGHT = 400;
-var CANVAS_WIDTH = 400;
+Eval.CANVAS_HEIGHT = 400;
+Eval.CANVAS_WIDTH = 400;
 
 // This property is set in the api call to draw, and extracted in evalCode
 Eval.displayedObject = null;
+
+Eval.answerObject = null;
+
+Eval.feedbackImage = null;
+Eval.encodedFeedbackImage = null;
 
 /**
  * Initialize Blockly and the Eval.  Called on page load.
@@ -105,8 +119,8 @@ Eval.init = function(config) {
     if (!svg) {
       throw "something bad happened";
     }
-    svg.setAttribute('width', CANVAS_WIDTH);
-    svg.setAttribute('height', CANVAS_HEIGHT);
+    svg.setAttribute('width', Eval.CANVAS_WIDTH);
+    svg.setAttribute('height', Eval.CANVAS_HEIGHT);
 
     // This is hack that I haven't been able to fully understand. Furthermore,
     // it seems to break the functional blocks in some browsers. As such, I'm
@@ -117,12 +131,28 @@ Eval.init = function(config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
+    if (level.coordinateGridBackground) {
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        skin.assetUrl('background_grid.png'));
+        studioApp.createCoordinateGridBackground({
+          svg: 'svgEval',
+          origin: -200,
+          firstLabel: -100,
+          lastLabel: 100,
+          increment: 100
+        });
+      background.setAttribute('visibility', 'visible');
+    }
+
     if (level.solutionBlocks) {
       var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
 
       var answerObject = getDrawableFromBlockXml(solutionBlocks);
       if (answerObject && answerObject.draw) {
+        // store object for later analysis
+        Eval.answerObject = answerObject;
         answerObject.draw(document.getElementById('answer'));
       }
     }
@@ -159,6 +189,8 @@ Eval.resetButtonClick = function () {
     user.removeChild(user.firstChild);
   }
 
+  Eval.feedbackImage = null;
+  Eval.encodedFeedbackImage = null;
 };
 
 /**
@@ -180,20 +212,20 @@ function evalCode (code) {
     if (e instanceof CustomEvalError) {
       return e;
     }
-    // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
-    // and analyze success/failure based on what was drawn.
-    // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
-      // call window.onerror so that we get new relic collection.  prepend with
-      // UserCode so that it's clear this is in eval'ed code.
-      if (window.onerror) {
-        window.onerror("UserCode:" + e.message, document.URL, 0);
-      }
-      if (console && console.log) {
-        console.log(e);
-      }
+    if (utils.isInfiniteRecursionError(e)) {
+      return new CustomEvalError(CustomEvalError.Type.InfiniteRecursion, null);
     }
+
+    // call window.onerror so that we get new relic collection.  prepend with
+    // UserCode so that it's clear this is in eval'ed code.
+    if (window.onerror) {
+      window.onerror("UserCode:" + e.message, document.URL, 0);
+    }
+    if (console && console.log) {
+      console.log(e);
+    }
+
+    return new CustomEvalError(CustomEvalError.Type.UserCodeException, null);
   }
 }
 
@@ -230,6 +262,81 @@ function getDrawableFromBlockXml(blockXml) {
 }
 
 /**
+ * Recursively parse an EvalObject looking for EvalText objects. For each one,
+ * extract the text content.
+ */
+Eval.getTextStringsFromObject_ = function (evalObject) {
+  if (!evalObject) {
+    return [];
+  }
+
+  var strs = [];
+  if (evalObject instanceof EvalText) {
+    strs.push(evalObject.getText());
+  }
+
+  evalObject.getChildren().forEach(function (child) {
+    strs = strs.concat(Eval.getTextStringsFromObject_(child));
+  });
+  return strs;
+};
+
+/**
+ * @returns True if two eval objects have sets of text strings that differ
+ *   only in case
+ */
+Eval.haveCaseMismatch_ = function (object1, object2) {
+  var strs1 = Eval.getTextStringsFromObject_(object1);
+  var strs2 = Eval.getTextStringsFromObject_(object2);
+
+  if (strs1.length !== strs2.length) {
+    return false;
+  }
+
+  strs1.sort();
+  strs2.sort();
+
+  var caseMismatch = false;
+
+  for (var i = 0; i < strs1.length; i++) {
+    var str1 = strs1[i];
+    var str2 = strs2[i];
+    if (str1 !== str2) {
+      if (str1.toLowerCase() === str2.toLowerCase()) {
+        caseMismatch  = true;
+      } else {
+        return false; // strings differ by more than case
+      }
+    }
+  }
+  return caseMismatch;
+};
+
+/**
+ * Note: is unable to distinguish from true/false generated from string blocks
+ *   vs. from boolean blocks
+ * @returns {boolean} True if two eval objects are both booleans, but have different values.
+ */
+Eval.haveBooleanMismatch_ = function (object1, object2) {
+  var strs1 = Eval.getTextStringsFromObject_(object1);
+  var strs2 = Eval.getTextStringsFromObject_(object2);
+
+  if (strs1.length !== 1 || strs2.length !== 1) {
+    return false;
+  }
+
+  var text1 = strs1[0];
+  var text2 = strs2[0];
+
+  if ((text1 === "true" && text2 === "false") ||
+      (text1 === "false" && text2 === "true")) {
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
@@ -237,10 +344,13 @@ Eval.execute = function() {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  if (studioApp.hasUnfilledBlock()) {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Eval.message = evalMsg.emptyFunctionalBlock();
+    Eval.message = commonMsg.emptyFunctionalBlock();
+  } else if (studioApp.hasQuestionMarksInNumberField()) {
+    Eval.result = false;
+    Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
   } else {
     var userObject = getDrawableFromBlockspace();
     if (userObject && userObject.draw) {
@@ -251,16 +361,24 @@ Eval.execute = function() {
     if (userObject instanceof CustomEvalError) {
       Eval.result = false;
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
-
       Eval.message = userObject.feedbackMessage;
+    } else if (Eval.haveCaseMismatch_(userObject, Eval.answerObject)) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+      Eval.message = evalMsg.stringMismatchError();
+    } else if (Eval.haveBooleanMismatch_(userObject, Eval.answerObject)) {
+      Eval.result = false;
+      Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
+      Eval.message = evalMsg.wrongBooleanError();
     } else {
       // We got an EvalImage back, compare it to our target
       Eval.result = evaluateAnswer();
       Eval.testResults = studioApp.getTestResults(Eval.result);
-    }
 
-    if (level.freePlay) {
-      Eval.testResults = TestResults.FREE_PLAY;
+      if (level.freePlay) {
+        Eval.result = true;
+        Eval.testResults = TestResults.FREE_PLAY;
+      }
     }
   }
 
@@ -274,10 +392,26 @@ Eval.execute = function() {
     result: Eval.result,
     testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: onReportComplete
+    onComplete: onReportComplete,
+    image: Eval.encodedFeedbackImage
   };
 
-  studioApp.report(reportData);
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgEval').toDataURL === 'undefined') {
+    studioApp.report(reportData);
+  } else {
+    document.getElementById('svgEval').toDataURL("image/png", {
+      callback: function(pngDataUrl) {
+        Eval.feedbackImage = pngDataUrl;
+        Eval.encodedFeedbackImage = encodeURIComponent(Eval.feedbackImage.split(',')[1]);
+
+        studioApp.report(reportData);
+      }
+    });
+  }
+
+  studioApp.playAudio(Eval.result ? 'win' : 'failure');
 };
 
 /**
@@ -292,8 +426,8 @@ function outerHTML (element) {
 
 function imageDataForSvg(elementId) {
   var canvas = document.createElement('canvas');
-  canvas.width = CANVAS_WIDTH;
-  canvas.height = CANVAS_HEIGHT;
+  canvas.width = Eval.CANVAS_WIDTH;
+  canvas.height = Eval.CANVAS_HEIGHT;
   canvg(canvas, outerHTML(document.getElementById(elementId)));
 
   // canvg attaches an svg object to the canvas, and attaches a setInterval.
@@ -302,7 +436,7 @@ function imageDataForSvg(elementId) {
   canvas.svg.stop();
 
   var ctx = canvas.getContext('2d');
-  return ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  return ctx.getImageData(0, 0, Eval.CANVAS_WIDTH, Eval.CANVAS_HEIGHT);
 }
 
 function evaluateAnswer() {
@@ -327,16 +461,21 @@ var displayFeedback = function(response) {
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
   var options = {
-    app: 'Eval',
+    app: 'eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
     level: level,
+    tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    showingSharing: !level.disableSharing && (level.freePlay),
+    // allow users to save freeplay levels to their gallery
+    saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
+    feedbackImage: Eval.feedbackImage,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }
   };
-  if (Eval.message) {
+  if (Eval.message && !level.edit_blocks) {
     options.message = Eval.message;
   }
   studioApp.displayFeedback(options);
@@ -350,11 +489,15 @@ function onReportComplete(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
-  displayFeedback(response);
+
+  // Add a short delay so that user gets to see their finished drawing.
+  setTimeout(function () {
+    displayFeedback(response);
+  }, 2000);
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":190,"../../locale/current/eval":191,"../StudioApp":2,"../block_utils":17,"../canvg/canvg.js":39,"../codegen":42,"../dom":44,"../skins":144,"../templates/page.html":165,"./api":45,"./controls.html":47,"./evalError":51,"./levels":60,"./visualization.html":62}],62:[function(require,module,exports){
+},{"../../locale/current/common":251,"../../locale/current/eval":252,"../StudioApp":4,"../block_utils":26,"../canvg/StackBlur.js":49,"../canvg/canvg.js":50,"../canvg/rgbcolor.js":51,"../canvg/svg_todataurl":52,"../codegen":54,"../dom":57,"../skins":200,"../templates/page.html":225,"../utils":246,"./api":59,"./controls.html":61,"./evalError":65,"./evalText":71,"./levels":74,"./visualization.html":76}],76:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -366,7 +509,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgEval">\n  <g id="answer">\n  </g>\n  <g id="user">\n  </g>\n</svg>\n'); })();
+ buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgEval">\n  <image id="background" visibility="hidden" height="400" width="400" x="0" y="0" ></image>\n  <g id="answer">\n  </g>\n  <g id="user">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -374,7 +517,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":206}],60:[function(require,module,exports){
+},{"ejs":267}],74:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -442,7 +585,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":191,"../block_utils":17}],47:[function(require,module,exports){
+},{"../../locale/current/eval":252,"../block_utils":26}],61:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -465,7 +608,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":190,"../../locale/current/eval":191,"ejs":206}],46:[function(require,module,exports){
+},{"../../locale/current/common":251,"../../locale/current/eval":252,"ejs":267}],60:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -496,9 +639,6 @@ var commonMsg = require('../../locale/current/common');
 
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var functionalBlockUtils = require('../functionalBlockUtils');
-var colors = functionalBlockUtils.colors;
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -518,9 +658,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'functional_display',
     blockTitle: msg.displayBlockTitle(),
     apiName: 'display',
-    returnType: 'none',
+    returnType: blockly.BlockValueType.NONE,
     args: [
-      { name: 'ARG1', type: 'none' },
+      { name: 'ARG1', type: blockly.BlockValueType.NONE },
     ]
   });
 
@@ -530,9 +670,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.circleBlockTitle(),
     apiName: 'circle',
     args: [
-      { name: 'SIZE', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -541,9 +681,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.triangleBlockTitle(),
     apiName: 'triangle',
     args: [
-      { name: 'SIZE', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -552,9 +692,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.squareBlockTitle(),
     apiName: 'square',
     args: [
-      { name: 'SIZE', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -563,10 +703,10 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.rectangleBlockTitle(),
     apiName: 'rectangle',
     args: [
-      { name: 'WIDTH', type: 'Number' },
-      { name: 'HEIGHT', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'WIDTH', type: blockly.BlockValueType.NUMBER },
+      { name: 'HEIGHT', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -575,10 +715,10 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.ellipseBlockTitle(),
     apiName: 'ellipse',
     args: [
-      { name: 'WIDTH', type: 'Number' },
-      { name: 'HEIGHT', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'WIDTH', type: blockly.BlockValueType.NUMBER },
+      { name: 'HEIGHT', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -587,9 +727,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.starBlockTitle(),
     apiName: 'star',
     args: [
-      { name: 'SIZE', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -598,11 +738,11 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.radialStarBlockTitle(),
     apiName: 'radialStar',
     args: [
-      { name: 'POINTS', type: 'Number' },
-      { name: 'INNER', type: 'Number' },
-      { name: 'OUTER', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'POINTS', type: blockly.BlockValueType.NUMBER },
+      { name: 'INNER', type: blockly.BlockValueType.NUMBER },
+      { name: 'OUTER', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -611,10 +751,10 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.polygonBlockTitle(),
     apiName: 'polygon',
     args: [
-      { name: 'SIDES', type: 'Number' },
-      { name: 'LENGTH', type: 'Number' },
-      { name: 'STYLE', type: 'string' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'SIDES', type: blockly.BlockValueType.NUMBER },
+      { name: 'LENGTH', type: blockly.BlockValueType.NUMBER },
+      { name: 'STYLE', type: blockly.BlockValueType.STRING },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -623,9 +763,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.textBlockTitle(),
     apiName: 'text',
     args: [
-      { name: 'TEXT', type: 'string' },
-      { name: 'SIZE', type: 'Number' },
-      { name: 'COLOR', type: 'string' }
+      { name: 'TEXT', type: blockly.BlockValueType.STRING },
+      { name: 'SIZE', type: blockly.BlockValueType.NUMBER },
+      { name: 'COLOR', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -635,8 +775,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.overlayBlockTitle(),
     apiName: 'overlay',
     args: [
-      { name: 'TOP', type: 'image' },
-      { name: 'BOTTOM', type: 'image' },
+      { name: 'TOP', type: blockly.BlockValueType.IMAGE },
+      { name: 'BOTTOM', type: blockly.BlockValueType.IMAGE },
     ]
   });
 
@@ -645,8 +785,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.underlayBlockTitle(),
     apiName: 'underlay',
     args: [
-      { name: 'BOTTOM', type: 'image' },
-      { name: 'TOP', type: 'image' }
+      { name: 'BOTTOM', type: blockly.BlockValueType.IMAGE },
+      { name: 'TOP', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -655,9 +795,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.placeImageBlockTitle(),
     apiName: 'placeImage',
     args: [
-      { name: 'X', type: 'Number' },
-      { name: 'Y', type: 'Number' },
-      { name: 'IMAGE', type: 'image' }
+      { name: 'X', type: blockly.BlockValueType.NUMBER },
+      { name: 'Y', type: blockly.BlockValueType.NUMBER },
+      { name: 'IMAGE', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -666,9 +806,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.offsetBlockTitle(),
     apiName: 'offset',
     args: [
-      { name: 'X', type: 'Number' },
-      { name: 'Y', type: 'Number' },
-      { name: 'IMAGE', type: 'image' }
+      { name: 'X', type: blockly.BlockValueType.NUMBER },
+      { name: 'Y', type: blockly.BlockValueType.NUMBER },
+      { name: 'IMAGE', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -677,8 +817,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.rotateImageBlockTitle(),
     apiName: 'rotateImage',
     args: [
-      { name: 'DEGREES', type: 'Number' },
-      { name: 'IMAGE', type: 'image' }
+      { name: 'DEGREES', type: blockly.BlockValueType.NUMBER },
+      { name: 'IMAGE', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -687,8 +827,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.scaleImageBlockTitle(),
     apiName: 'scaleImage',
     args: [
-      { name: 'FACTOR', type: 'Number' },
-      { name: 'IMAGE', type: 'image' }
+      { name: 'FACTOR', type: blockly.BlockValueType.NUMBER },
+      { name: 'IMAGE', type: blockly.BlockValueType.IMAGE }
     ]
   });
 
@@ -697,10 +837,10 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'string_append',
     blockTitle: msg.stringAppendBlockTitle(),
     apiName: 'stringAppend',
-    returnType: 'string',
+    returnType: blockly.BlockValueType.STRING,
     args: [
-      { name: 'FIRST', type: 'string' },
-      { name: 'SECOND', type: 'string' }
+      { name: 'FIRST', type: blockly.BlockValueType.STRING },
+      { name: 'SECOND', type: blockly.BlockValueType.STRING }
     ]
   });
 
@@ -709,13 +849,13 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'string_length',
     blockTitle: msg.stringLengthBlockTitle(),
     apiName: 'stringLength',
-    returnType: 'Number',
+    returnType: blockly.BlockValueType.NUMBER,
     args: [
-      { name: 'STR', type: 'string' }
+      { name: 'STR', type: blockly.BlockValueType.STRING }
     ]
   });
 
-  functionalBlockUtils.installStringPicker(blockly, generator, {
+  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_style',
     values: [
       [msg.solid(), 'solid'],
@@ -733,11 +873,11 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
   var args = options.args;
-  var returnType = options.returnType || 'image';
+  var returnType = options.returnType || blockly.BlockValueType.IMAGE;
 
   blockly.Blocks[blockName] = {
     init: function () {
-      initTitledFunctionalBlock(this, blockTitle, returnType, args);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, returnType, args);
     }
   };
 
@@ -748,7 +888,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
       var apiArg = Blockly.JavaScript.statementToCode(this, arg.name, false);
       // Provide defaults
       if (!apiArg) {
-        if (arg.type === 'Number') {
+        if (arg.type === blockly.BlockValueType.NUMBER) {
           apiArg = '0';
         } else if (arg.name === 'STYLE') {
           apiArg = blockly.JavaScript.quote_('solid');
@@ -763,7 +903,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":190,"../../locale/current/eval":191,"../functionalBlockUtils":74,"../sharedFunctionalBlocks":143,"./evalUtils":59}],45:[function(require,module,exports){
+},{"../../locale/current/common":251,"../../locale/current/eval":252,"../sharedFunctionalBlocks":199,"./evalUtils":73}],59:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -838,10 +978,15 @@ exports.placeImage = function (x, y, image) {
   evalUtils.ensureNumber(y);
   evalUtils.ensureType(image, EvalImage);
 
-  // User inputs why in cartesian space. Convert to pixel space before sending
+  // origin at center
+  x = x + Eval.CANVAS_WIDTH / 2;
+  y = y + Eval.CANVAS_HEIGHT / 2;
+
+  // User inputs y in cartesian space. Convert to pixel space before sending
   // to our EvalImage.
   y = evalUtils.cartesianToPixel(y);
 
+  // relative to center of workspace
   image.place(x, y);
   return image;
 };
@@ -850,10 +995,10 @@ exports.offset = function (x, y, image) {
   evalUtils.ensureNumber(x);
   evalUtils.ensureNumber(y);
   evalUtils.ensureType(image, EvalImage);
-    
+
   x = image.x_ + x;
   y = image.y_ - y;
-    
+
   image.place(x, y);
   return image;
 };
@@ -884,7 +1029,7 @@ exports.stringLength = function (str) {
   return str.length;
 };
 
-},{"./evalCircle":49,"./evalEllipse":50,"./evalImage":52,"./evalMulti":53,"./evalPolygon":54,"./evalRect":55,"./evalStar":56,"./evalText":57,"./evalTriangle":58,"./evalUtils":59}],58:[function(require,module,exports){
+},{"./evalCircle":63,"./evalEllipse":64,"./evalImage":66,"./evalMulti":67,"./evalPolygon":68,"./evalRect":69,"./evalStar":70,"./evalText":71,"./evalTriangle":72,"./evalUtils":73}],72:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -935,7 +1080,7 @@ EvalTriangle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":52,"./evalUtils":59}],57:[function(require,module,exports){
+},{"./evalImage":66,"./evalUtils":73}],71:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -970,7 +1115,11 @@ EvalText.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":52,"./evalUtils":59}],56:[function(require,module,exports){
+EvalText.prototype.getText = function () {
+  return this.text_;
+};
+
+},{"./evalImage":66,"./evalUtils":73}],70:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1017,7 +1166,7 @@ EvalStar.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":52,"./evalUtils":59}],55:[function(require,module,exports){
+},{"./evalImage":66,"./evalUtils":73}],69:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1052,7 +1201,7 @@ EvalRect.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":52,"./evalUtils":59}],54:[function(require,module,exports){
+},{"./evalImage":66,"./evalUtils":73}],68:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1091,7 +1240,7 @@ EvalPolygon.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":52,"./evalUtils":59}],53:[function(require,module,exports){
+},{"./evalImage":66,"./evalUtils":73}],67:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1134,7 +1283,11 @@ EvalMulti.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":52,"./evalUtils":59}],50:[function(require,module,exports){
+EvalImage.prototype.getChildren = function () {
+  return [this.image1_, this.image2_];
+};
+
+},{"./evalImage":66,"./evalUtils":73}],64:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1167,7 +1320,7 @@ EvalCircle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":52,"./evalUtils":59}],49:[function(require,module,exports){
+},{"./evalImage":66,"./evalUtils":73}],63:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1202,7 +1355,7 @@ EvalCircle.prototype.rotate = function () {
   // a bitmap.
 };
 
-},{"./evalImage":52,"./evalUtils":59}],52:[function(require,module,exports){
+},{"./evalImage":66,"./evalUtils":73}],66:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 
 var EvalImage = function (style, color) {
@@ -1263,7 +1416,14 @@ EvalImage.prototype.scale = function (scaleX, scaleY) {
   this.scaleY_ = scaleY;
 };
 
-},{"./evalUtils":59}],59:[function(require,module,exports){
+/**
+ * Get child EvalObjects. overridden by children
+ */
+EvalImage.prototype.getChildren = function () {
+  return [];
+};
+
+},{"./evalUtils":73}],73:[function(require,module,exports){
 var CustomEvalError = require('./evalError');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -1361,7 +1521,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{"../utils":185,"./evalError":51}],51:[function(require,module,exports){
+},{"../utils":246,"./evalError":65}],65:[function(require,module,exports){
 var evalMsg = require('../../locale/current/eval');
 
 /**
@@ -1371,13 +1531,19 @@ var evalMsg = require('../../locale/current/eval');
  */
 var CustomEvalError = function (type, val) {
   this.type = type;
-  
+
   switch (type) {
     case CustomEvalError.Type.BadStyle:
       this.feedbackMessage = evalMsg.badStyleStringError({val: val});
       break;
     case CustomEvalError.Type.BadColor:
       this.feedbackMessage = evalMsg.badColorStringError({val: val});
+      break;
+    case CustomEvalError.Type.InfiniteRecursion:
+      this.feedbackMessage = evalMsg.infiniteRecursionError();
+      break;
+    case CustomEvalError.Type.UserCodeException:
+      this.feedbackMessage = evalMsg.userCodeException();
       break;
     default:
       this.feedbackMessag = '';
@@ -1388,9 +1554,11 @@ module.exports = CustomEvalError;
 
 CustomEvalError.Type = {
   BadStyle: 0,
-  BadColor: 1
+  BadColor: 1,
+  InfiniteRecursion: 2,
+  UserCodeException: 3
 };
 
-},{"../../locale/current/eval":191}],191:[function(require,module,exports){
+},{"../../locale/current/eval":252}],252:[function(require,module,exports){
 /*eval*/ module.exports = window.blockly.appLocale;
-},{}]},{},[61]);
+},{}]},{},[75]);

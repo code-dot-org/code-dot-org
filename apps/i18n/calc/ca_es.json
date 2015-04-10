@@ -1,9 +1,17 @@
 {
-  "compute": "calcular",
+  "divideByZeroError": "El teu programa dona com a resultat una divisió per zero.",
+  "emptyComputeBlock": "Has d'adjuntar un bloc al bloc \"avaluar\".",
   "equivalentExpression": "Intenta reordenant els teus arguments per aconseguir exactament la mateixa expressió.",
-  "extraTopBlocks": "Tens blocs no afegits.  Volies afegir aquests al bloc d'execució?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "evaluate": "avaluar",
+  "extraTopBlocks": "Alguns blocs estan lliures. Desitjes adjuntar-los al bloc \"avaluar\"?",
+  "failedInput": "La teva funció no retorna el resultat correcte per a tots els valors.",
   "goal": "Objectiu:",
-  "reinfFeedbackMsg": "Aquí està la teva història! Continuar-hi treballant, o passar al següent trencaclosques!",
-  "yourExpression": "La teva expressió:"
+  "levelIncompleteError": "La teva expressió no es correspon amb l'objectiu.",
+  "missingFunctionError": "Heu de definir una funció anomenada {functionName}.",
+  "missingVariableX": "Falta la variable {var} a la teva expressió.",
+  "reinfFeedbackMsg": "Aquí tens el teu càlcul! Continua treballant-hi, o passa al següent trencaclosques!",
+  "yourExpression": "La teva expressió:",
+  "wrongInput": "Has cridat la teva funció amb un valor erroni.",
+  "wrongOtherValuesX": "La teva expressió dona un resultat erroni si variem {var}.",
+  "wrongResult": "La teva expressió no retorna el resultat correcte."
 }

@@ -1,7 +1,9 @@
+@import "color";
+
 .admin {
-  border: 2px solid #888;
+  border: 2px solid $light_gray;
   padding: 10px;
-  background: #ccc;
+  background: $lighter_gray;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -15,6 +17,7 @@
 
   /* don't take over the whole window*/
   max-height: 50%;
+  max-width: 25%;
   /* only display scrollbars when needed */
   overflow: auto;
   /* admin box appears in front of the rest of the level */

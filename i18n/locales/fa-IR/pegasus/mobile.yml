@@ -6,11 +6,12 @@ fa-IR:
   csedweek_dates: 8-14 دسامبر، 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی</a> دارد میآید. همه‌ی دبیران و برنامه گزاران را صدا میزند، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی خود را برنامه‌ریزی کنید</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر را ببینید</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h2>ساعتِ کدنویسی</h2><h3>را امتحان کرده است</h3>'
+  n_have_learned_an_hoc: '<h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید#ارائه شده</h3>'
   anybody_can_learn: هر کسی می تواند یاد بگیرند.
   learn_now: همین حالا یاد بگیرید
   petition_message: هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته باشد
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به پیوندید.'
+  petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به #دیگران بپیوندید.'
   name: نام
   email: ایمیل
   zipcode: کدپستی یا کشور
@@ -23,7 +24,7 @@ fa-IR:
   hoc2014_teachers: دبیران
   hoc2014_host: آن را میزبانی کنید
   hoc2014_everyone: همه
-  hoc2014_support: حمایتش کن
+  hoc2014_support: 'حمایتش کن &#x25BE;'
   hoc2014_whatishoc: ساعتِ کدنویسی چيست؟
   twentyhours_trynow: هم اکنون شروع کنید
   california_heading: از مدرسه تان بخواهید که علوم کامپیوتر را آموزش بدهد
@@ -90,6 +91,7 @@ fa-IR:
   learn_classes: پیدا کردن کلاس های محلی
   hoc_is_here: 'زمانِ HourOfCode# رسید - امتحانش کنید! codeorg@'
   just_did_hoc: 'من HourOfCode# رو تموم کردم - امتحانش کنید! codeorg@'
+  twitter_teach_cs: 'چرا مدرسه های بیشتری علوم کامپیوتر درس نمی دهند؟ ما می توانیم این را اصلاح کنیم. http://youtu.be/nKIu9yen5nc. سایت  http://code.org/ را ببینید تا بیشتر بیاموزید.'
   learn_hoc: یک ساعت کدنویسی یاد بگیرید
   beyond_hoc: فراتر از یک ساعت
   what_gender: جنسیت شما چیست؟
@@ -104,10 +106,11 @@ fa-IR:
   students_and_lines: '%{students} دانش آموز ساعت کد را انجام داده اند و %{lines} خط کد نوشته شده است.'
   start_hoc: هم اکنون ساعتِ کدنویسی را آغاز کنید
   contact_form_topic_press: انتشارات/ رسانه ها (مصاحبه یا گپ زدن)
-  stats_michael: '"من <b> هیچ وقت، هرگز </b> دانش آموزانم را برای آموختن تا این حد هیجان زده ندیده ام." از میشل کلارک، معلم'
   stats_nina: '"هر روز همان نتایج به دست آمد &mdash; مشارکت صد در صدی." - نینا نیکولز پيري، معلم'
   stats_student: '"من می دانستم که این يك فرصت <b> تكرار نشدني</b> است." - ماریانا الزيت، كلاس پنجمي'
-  studiobar_title: " <a href='http://studio.code.org'>استودیوی برنامه نویسی</a> ما را کشف کنید"
+  stats_michael: '"من <b> هیچ وقت، هرگز </b> دانش آموزانم را برای آموختن تا این حد هیجان زده ندیده ام." از میشل کلارک، معلم'
+  studiobar_title: "<a href='http://studio.code.org'>استودیوی برنامه نویسی</a> ما را کشف کنید"
+  studiobar_title_nolink: استودیوی برنامه نویسی ما را کشف کنید
   studiobar_elementary_title: دوره‌های مقدماتی
   studiobar_elementary_body: 'سه درس جدید ما برای کلاس K&#8209;پنجمی ها'
   studiobar_hoc_title: ساعتی با کدنویسی
@@ -122,6 +125,88 @@ fa-IR:
   studiobar_donate_body: با هر دلاری که کمک می کنید یک کودک یاد می گیرد
   studiobar_shop_title: فروشگاه
   studiobar_shop_body: شکستن کلیشه ها. لوگوی ما را با غرور بپوش.
+  homepage_hero_text_malala: |
+    &ldquo;من دختران هر کشوری را به چالش آموختن یک ساعت کدزدن دعوت میکنم&rdquo;
+    مالالا، برنده جایزه نوبل
+  homepage_hero_text_susan: |
+    &ldquo;اگر شما بتوانید تکنولوژی را تغییر دهید، می توانید دنیا را تغییر دهید.&rdquo;
+    سوزان، مدیرعامل یوتیوب
+  homepage_hero_text_fistbump: |
+    &ldquo;فقط با گوشیتان بازی نکنید، برنامه نویسی اش کنید.&rdquo;
+    رئیس جمهور باراک اوباما
+  homepage_hero_text_sheryl: |
+    &ldquo;فرزندان ما&mdash;از جمله دخترهایمان&mdash;نیاز به فرصت یادگیری علوم کامپیوتر دارند.&rdquo;
+    شریل، رئیس ارشد اجرایی فیسبوک
+  homepage_hero_text_satya: |
+    &ldquo; علوم کامپیوتر می تواند بهترین فرصت های دنیا را ایجاد کند&rdquo;
+    ساتیا، مدیرعامل مایکروسافت
+  homepage_hero_text_bosh: |
+    &ldquo;اگر شما کد بزنید، می توانید مسیر زندگیتان را مشخص و انتخاب کنید.&rdquo;
+    کریس بوش
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: ساعتی با کدنویسی
+  homepage_slot_text_frozen: کارتون Frozen با آنا و السا
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: تمام آموزش های ما
+  homepage_slot_text_course4: دوره 4
+  homepage_slot_text_shop: فروشگاه
+  homepage_slot_text_flappy: کدنویسی Flappy
+  homepage_action_text_codevideo: فیلم را تماشا کنید
+  homepage_action_text_teachervideo: فیلم را تماشا کنید
+  homepage_action_text_learn: امروز یادگیری را شروع کنید
+  homepage_action_text_signpetition: درخواست را امضا کنید
+  homepage_signpetition_dropdown: 'درخواست ما را امضا کنید  &#x25BE;'
+  homepage_slot_text_title_hoc: ساعتی با کد
+  homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
+  homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
+  homepage_slot_text_link_host: میزبان یک ساعت کدزنی باشید
+  homepage_slot_text_link_hocserved: '# تائید شده'
+  homepage_slot_text_title_students: دانش آموزان
+  homepage_slot_text_blurb_students: تمام آموزش های ما را کشف کنید
+  homepage_slot_text_link_codestudio: استودیو ی کد را امتحان کنید
+  homepage_slot_text_link_local: یک کلاس محلی پیدا کنید
+  homepage_slot_text_link_othercourses: دوره های آنلاین دیگر
+  homepage_slot_text_title_educators: آموزگاران
+  homepage_slot_text_blurb_educators: به دانش آموزانتان درس بدهید
+  homepage_slot_text_link_k5: دوره هایی برای بچه های ابتدایی
+  homepage_slot_text_link_fullcurriculum: تمام برنامه درسی ما را ببینید
+  homepage_slot_text_link_pd: توسعه ی حرفه ای
+  homepage_slot_text_title_advocates: مدافعان
+  homepage_slot_text_blurb_advocates: از کار ما حمایت کنید
+  homepage_slot_text_link_stats: آمار ها را ببینید
+  homepage_slot_text_link_buy: یک کلاه یا تی شرت بخرید
+  homepage_slot_text_link_donate: پولی اهدا کنید
+  homepage_header_codestudio: ابداعات دانش آموزان استودیو ی کد
+  homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
+  homepage_donors_seall: تمامش را ببینید
+  homepage_donors_donate: کمک مالی بدهید
   contact_form_topic_student: من یک دانش آموز هستم
   contact_form_topic_parent: من پدر/مادر هستم
   contact_form_topic_teacher: من دبیر/استاد هستم
@@ -289,6 +374,8 @@ fa-IR:
   dashboard_login_picture: عکس
   dashboard_login_none: ایمیل
   dashboard_new_password: گذرواژه‌ی تازه
+  dashboard_progress_not_started: شروع نشده
+  dashboard_progress_in_progress: در حال اجرا
   dashboard_progress_not_completed: تکمیل نشده است
   dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
   dashboard_progress_completed_perfect: تکمیل, کامل

@@ -1,8 +1,11 @@
 {
+  "badColorStringError": "You used an invalid color string: {val}",
+  "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "دائرة (نصف القطر ، النمط ، اللون)",
   "displayBlockTitle": "عرض",
   "ellipseBlockTitle": "القطع الناقص (العرض ، الارتفاع ، النمط واللون )",
   "extraTopBlocks": "لديك كتل غير متصلة. هل تقصد بإتصال هذه إلى كتلة \"العرض\" ؟",
+  "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "تداخل (الأعلى، الأسفل)",
   "placeImageBlockTitle": "وضع الصورة (س، ص، صورة)",
   "offsetBlockTitle": "offset (x, y, image)",
@@ -21,5 +24,8 @@
   "underlayBlockTitle": "الأساس الذي تقوم عليه (أسفل، أعلى)",
   "outline": "موجز",
   "solid": "صلب",
-  "string": "السلسلة"
+  "string": "السلسلة",
+  "stringMismatchError": "You have a string with the wrong capitalization.",
+  "userCodeException": "An error occurred while executing your code.",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

@@ -8,8 +8,8 @@
   "catText": "text",
   "catVariables": "Proměnné",
   "continue": "Pokračovat",
-  "createHtmlBlock": "vytvoř html blok",
-  "createHtmlBlockTooltip": "Vytvoří blok kódu HTML v aplikaci.",
+  "container": "create container",
+  "containerTooltip": "Creates a division container and sets its inner HTML.",
   "finalLevel": "Dobrá práce! Vyřešil si poslední hádanku.",
   "nextLevel": "Dobrá práce! Dokončil jsi tuto hádanku.",
   "no": "Ne",
@@ -24,6 +24,6 @@
   "stepIn": "Krok",
   "stepOver": "Krok přes",
   "stepOut": "Krok ven",
-  "viewData": "View Data",
+  "viewData": "Zobrazit data",
   "yes": "Ano"
 }

@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "изчисляване"},
+"divideByZeroError":function(d){return "Резултатът от Вашата програма за делене на нула."},
+"emptyComputeBlock":function(d){return "Трябва да прикачите блок към блока за \"оценка\"."},
 "equivalentExpression":function(d){return "Опитайте пренареждане на аргументите, за да получите точно един и същи израз."},
-"extraTopBlocks":function(d){return "Имате незакачени блокове. Имате ли намерение да ги закачите към изчислителния блок?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "Оценка"},
+"extraTopBlocks":function(d){return "Имате несвързани блокове. Искате ли да ги свържете към блока за \"оценка\"?"},
+"failedInput":function(d){return "Вашата функция не връща правилният резултат за всички стойности."},
 "goal":function(d){return "Цел:"},
-"reinfFeedbackMsg":function(d){return "Тук е вашата история! Продължете работата по нея, или преминете към следващия пъзел!"},
-"yourExpression":function(d){return "Вашият израз:"}};
+"levelIncompleteError":function(d){return "Вашият израз не съответства на целта."},
+"missingFunctionError":function(d){return "Трябва да дефинирате функция, наречена "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Във Вашият израз липсва променлива "+appLocale.v(d,"var")+"."},
+"reinfFeedbackMsg":function(d){return "Ето вашето изчисление! Продължете работата по него, или да преминете към следващия пъзел!"},
+"yourExpression":function(d){return "Вашият израз:"},
+"wrongInput":function(d){return "Вие извикахте функция с грешна стойност."},
+"wrongOtherValuesX":function(d){return "Вашият резултат от израза води има грешна стойност ако ние варираме "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "Вашият израз не връща правилния резултат."}};

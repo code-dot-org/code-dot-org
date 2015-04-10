@@ -5,18 +5,6 @@
       %a{href: '#', onclick: '$(".admin .content").toggle(); return false;'} [hide/show]
     .content
 
-      %div
-        - if params[:load_previous]
-          Previous solution loaded!
-          = link_to 'Reset to Clean Slate', {load_previous: nil}, {class: 'btn btn-default'}
-        - else
-          Clean slate
-          - if current_user.last_attempt(@level).try(:level_source).try(:data)
-            = link_to 'Load Previous Solution', {load_previous: 1}, {class: 'btn btn-default'}
-          - else
-            (No previous solution)
-      %div
-        = render partial: 'levels/project_ui'
       #{@level.name}:
       = link_to 'play', @level
       - if can? :edit, @level
@@ -37,6 +25,8 @@
       - else
         |
         (Cannot edit)
+      |
+      = link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
       |
       = link_to 'stats', level_stats_path(@level)
 

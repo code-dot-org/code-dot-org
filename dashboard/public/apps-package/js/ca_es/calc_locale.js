@@ -154,10 +154,18 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"compute":function(d){return "calcular"},
+"divideByZeroError":function(d){return "El teu programa dona com a resultat una divisió per zero."},
+"emptyComputeBlock":function(d){return "Has d'adjuntar un bloc al bloc \"avaluar\"."},
 "equivalentExpression":function(d){return "Intenta reordenant els teus arguments per aconseguir exactament la mateixa expressió."},
-"extraTopBlocks":function(d){return "Tens blocs no afegits.  Volies afegir aquests al bloc d'execució?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "avaluar"},
+"extraTopBlocks":function(d){return "Alguns blocs estan lliures. Desitjes adjuntar-los al bloc \"avaluar\"?"},
+"failedInput":function(d){return "La teva funció no retorna el resultat correcte per a tots els valors."},
 "goal":function(d){return "Objectiu:"},
-"reinfFeedbackMsg":function(d){return "Aquí està la teva història! Continuar-hi treballant, o passar al següent trencaclosques!"},
-"yourExpression":function(d){return "La teva expressió:"}};
+"levelIncompleteError":function(d){return "La teva expressió no es correspon amb l'objectiu."},
+"missingFunctionError":function(d){return "Heu de definir una funció anomenada "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Falta la variable "+appLocale.v(d,"var")+" a la teva expressió."},
+"reinfFeedbackMsg":function(d){return "Aquí tens el teu càlcul! Continua treballant-hi, o passa al següent trencaclosques!"},
+"yourExpression":function(d){return "La teva expressió:"},
+"wrongInput":function(d){return "Has cridat la teva funció amb un valor erroni."},
+"wrongOtherValuesX":function(d){return "La teva expressió dona un resultat erroni si variem "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "La teva expressió no retorna el resultat correcte."}};

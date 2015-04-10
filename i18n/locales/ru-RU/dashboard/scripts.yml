@@ -22,7 +22,7 @@ ru:
           "Maze 2: Loops": 'Лабиринт 2: Циклы'
           "Bee 2: Loops": 'Пчела 2: Циклы'
           Multi & Match: Множество и соответствие
-          K-1 Flappy: K-1 Flappy
+          K-1 Flappy: Птичка для детского сада
           Flappy non blockly: Flappy без использования блоков
           title: Курс 1
           Artist 2: Художник 2
@@ -135,53 +135,53 @@ ru:
           description_short: Курс 3 является продолжением Курса 2.
         msm:
           title: Математика средней школы
-          description: Private work in progress for Middle School Math.
+          description: Происходит работа над разделами математики для средней школы.
           Graph Paper Programming: Программирование на бумаге в клеточку
           Assessments: Тесты
           Unit 1: Модуль 1
           Unit 2: Модуль 2
           Ninja Cat and the Coordinate Plane: Ниндзя-кот на координатной плоскости
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
-          "Artist: Strings and Images": 'Artist: Strings and Images'
+          "Calc: Circles of Evaluation": 'Калькулятор: круги оценивания'
+          "Artist: Strings and Images": 'Художник: строки и картинки'
           Contracts: Контракты
-          "Artist: Writing Contracts": 'Artist: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
+          "Artist: Writing Contracts": 'Художник: написание контрактов'
+          "Calc: Defining Variables": 'Калькулятор: определение переменных'
+          "Play Lab: Defining Variables": 'Лаборатория игр: определение переменных'
+          The Design Recipe: Создание рецепта
           "Artist: Defining Functions": 'Художник: Определение процедур'
-          "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
+          "Play Lab: Defining Functions": 'Лаборатория игр: создание рецепта'
           "Artist: Functions": 'Художник: Процедуры'
-          "Play Lab: Animation": 'Play Lab: Animation'
-          Booleans: Booleans
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Calc: Boolean Operators": 'Calc: Boolean Operators'
-          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          "Artist: Conditionals": 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
-          "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
-          "Eval: Functions": 'Eval: Design Recipe'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
-          "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
-          "Eval: Design Recipe": 'Eval: Design Recipe'
+          "Play Lab: Animation": 'Лаборатория игр: анимация'
+          Booleans: Логические выражения
+          "Play Lab: Booleans": 'Лаборатория игр: логические выражения'
+          "Calc: Boolean Operators": 'Калькулятор: логические операторы'
+          "Play Lab: Boolean Operators": 'Лаборатория игр: логические операторы'
+          Conditionals and Piecewise Functions: Условные выражения и сложные функции
+          "Artist: Conditionals": 'Художник: условия'
+          Collision Detection and the Distance Formula: Обнаружение столкновений и формула расстояния
+          "Play Lab: Collision Detection": 'Лаборатория игр: обнаружение столкновений'
+          "Unplugged: Ninja Cat and the Coordinate Plane": 'Урок без компьютера: кот-ниндзя и координатная плоскость'
+          "Eval: Strings and Images": 'Оценка: строки и картинки'
+          "Unplugged: Contracts": 'Урок без компьютера: контракты'
+          "Eval: Writing Contracts": 'Оценка: написание контрактов'
+          "Unplugged: The Design Recipe": 'Урок без компьютера: Создание рецепта'
+          "Eval: Defining Functions": 'Оценка: Быстрые процедуры'
+          "Eval: Functions": 'Оценка: Создание рецепта'
+          "Unplugged: Booleans": 'Урок без компьютера: Логические выражения'
+          "Unplugged: Conditionals and Piecewise Functions": 'Урок без компьютера: Условные выражения и сложные функции'
+          "Eval: Conditionals": 'Оценка: Условные выражения'
+          "Unplugged: Collision Detection and the Distance Formula": 'Урок без компьютера: Обнаружение столкновений и формула расстояния'
+          "Calc: Evaluation Blocks": 'Калькулятор: Блоки оценивания'
+          "Unplugged: Video Games and Coordinate Planes": 'Урок без компьютера: Видеоигры и координатные плоскости'
+          "Eval: Boolean Operators": 'Оценка: логические операторы'
+          Blocks to Math: Блоки для математики
+          "Play Lab: Defining Variables (Big Game)": 'Лаборатория игр: определение переменных (большая игра)'
+          "Play Lab: Animation (Big Game)": 'Лаборатория игр: анимация (большая игра)'
+          "Play Lab: Boolean (Big Game)": 'Лаборатория игр: логические выражения (большая игра)'
+          "Play Lab: Collision Detection (Big Game)": 'Лаборатория игр: обнаружение столкновений (большая игра)'
+          "Eval: Fast Functions": 'Оценка: Быстрые процедуры'
+          "Play Lab: Design Recipe": 'Лаборатория игр: создание рецепта'
+          "Eval: Design Recipe": 'Оценка: Создание рецепта'
         playlab:
           title: Лаборатория игр
           description: Создай историю или игру с Лабораторией игр!
@@ -189,13 +189,13 @@ ru:
           description_short: Создай историю или игру с Лабораторией игр!
         artist:
           title: Художник
-          description: Draw cool pictures and designs with the Artist!
+          description: Рисуйте картины и узоры вместе с Художником!
           Artist: Художник
-          description_short: Draw cool pictures and designs with the Artist!
+          description_short: Рисуйте картины и узоры вместе с Художником!
         scrat:
           title: Скрат
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Короткое описание Скрата.
+          description: Полное описание Скрата
           "Maze: Sequence": 'Лабиринт: Последовательность'
         hourofcode:
           Maze: Лабиринт
@@ -208,61 +208,39 @@ ru:
           Artist: Художник
           description_short: Давайте использовать код, чтобы присоединиться к Анне и Эльзе, открывающим магию и красоту льда.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+          description_short: Для изучения Курса 4, ученики должны предварительно пройти Курсы 2 и 3.
+          description: Курс 4 разработан для учеников, которые уже освоили Курсы 2 и 3. Учащиеся рассмотрят более подробно разделы программирования, с которыми ознакомились ранее, и будут разрабатывать гибкие решения для сложных задач. Во время обучения, учащиеся будут создавать интерактивные игры или истории, которыми смогут поделиться с другими. Рекомендуется для 4-8 классов.
           "Artist: Variables": 'Художник: Переменные'
-          "Bee: For Loops": 'Bee: For Loops'
+          "Bee: For Loops": 'Пчела: циклы с параметром'
           title: Курс 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          "Algorithms: Tangrams": 'Алгоритмы: Танграмы'
           Variables: Переменные
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
+          "Play Lab: Variables": 'Лаборатория игр: переменные'
+          "Play Lab: Functions with Parameters": 'Лаборатория игр: процедуры с параметрами'
           "Bee: Functions with Parameters": 'Пчела: Процедуры с параметрами'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Artist: For Loops": 'Художник: циклы с параметром'
+          "Play Lab: For Loops": 'Лаборатория игр: циклы с параметром'
           "Artist: Functions": 'Художник: Процедуры'
           "Artist: Functions with Paraqmeters": 'Художник: Процедуры с параметрами'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
+          "Unplugged: Tangrams": 'Урок без компьютера: Танграмы'
           Artist: Художник
           Bee: Пчела
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
+          "Unplugged: Envelope Variables": 'Урок без компьютера: конвертные переменные'
+          "Unplugged: Madlibs": 'Урок без компьютера: пропуски'
+          "Unplugged: For Loop Fun": 'Урок без компьютера: игра с циклами'
+          "Unplugged: Songwriting with Parameters": 'Урок без компьютера: написание песен с параметрами'
           "Artist: Functions with Parameters": 'Художник: Процедуры с параметрами'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
+          "Unplugged: Binary": 'Урок без компьютера: двоичная система'
+          Bee Binary: 'Пчела: двоичная система'
+          Farmer Binary: 'Фермер: двоичная система'
           Maze and Bee: Лабиринт и Пчела
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          Artist Binary: 'Художник: двоичная система'
+          description_audience: Возраст 10+ (после курса 3)
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Лабиринт: Последовательность'
-          "Artist: Sequence": 'Художник: Последовательность'
-          "Artist: Loops": 'Художник: Циклы'
-          "Bee: Conditionals": 'Пчела: Условные команды'
-          "Artist: Nested Loops": 'Художник: Вложенные циклы'
-          "Farmer: While Loops": 'Фермер: Циклы "Пока"'
-          "Bee: Nested Loops": 'Пчела: Вложенные циклы'
-          "Artist: Functions": 'Художник: Процедуры'
-          "Bee: Debugging": 'Пчела: Отладка'
-        course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Лабиринт: Последовательность'
-          "Artist: Sequence": 'Художник: Последовательность'
-          "Artist: Loops": 'Художник: Циклы'
-          "Bee: Conditionals": 'Пчела: Условные команды'
-          "Artist: Nested Loops": 'Художник: Вложенные циклы'
-          "Farmer: While Loops": 'Фермер: Циклы "Пока"'
-          "Bee: Nested Loops": 'Пчела: Вложенные циклы'
-          "Artist: Functions": 'Художник: Процедуры'
-          "Bee: Debugging": 'Пчела: Отладка'
-        Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          title: Знания, необходимые для курса 4
+          description_short: Краткое обобщение понятий для учеников, которые не проходили курсы 2 и 3.
+          description: Краткое обобщение понятий для учеников, которые не проходили курсы 2 и 3.
+          Course 4 Prerequisite: Знания, необходимые для курса 4
           "Maze: Sequence": 'Лабиринт: Последовательность'
           "Artist: Sequence": 'Художник: Последовательность'
           "Artist: Loops": 'Художник: Циклы'
@@ -273,82 +251,292 @@ ru:
           "Artist: Functions": 'Художник: Процедуры'
           "Bee: Debugging": 'Пчела: Отладка'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          Intro: Введение
+          Variables and For Loops: Переменные и циклы
+          Functions and Functions with Parameters: Процедуры и процедуры с параметрами
+          title: Тестирование практичности
           description_short: ""
-          description: A selection of Course 4 levels for usability testing.
+          description: Подборка из курса 4 для тестирования практичности.
           Variables: Переменные
-          For Loops: For Loops
+          For Loops: Циклы с параметром
           Binary: Двоичный
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: специальные
+          description_short: специальные
+          description: специальные
+          Special: Специальные
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: специальные
+          description_short: специальные
+          description: специальные
+          Special: Специальные
           Binary: Двоичный
         usabilitymsm:
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
-          Blocks to Math: Blocks to Math
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
-          Booleans: Booleans
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
+          Usability testing for MSM: Тестирование практичности для математики
+          Evaluation Blocks: Блоки оценивания
+          Blocks to Math: Блоки для математики
+          Strings and Images: Строки и картинки
+          Defining Variables: Определение переменных
+          Defining Functions: Определение процедур
+          Design Recipe: Создание рецепта
+          Booleans: Логические выражения
           Conditionals: Условные команды
-          Free Play: Free Play
+          Free Play: Свободная игра
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          title: Информатика в алгебре
+          description: Изучайте функциональное программирование используя алгебру
+          "Unplugged: Video Games and Coordinate Planes": 'Урок без компьютера: Видеоигры и координатные плоскости'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Строки и картинки
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
+          "Unplugged: The Design Recipe": 'Урок без компьютера: Создание рецепта'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Урок без компьютера: Условные выражения и сложные функции'
+          "Eval: Conditionals": Условные команды
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Лаборатория игр
-          description_short: Создай историю или игру с Лабораторией игр!
-          description: Создай историю или игру с Лабораторией игр!
+          title: Disney Infinity Play Lab
+          description_short: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
+          description: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
           Play Lab: Лаборатория игр
+          Infinity: Бесконечность
         algebrademo:
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          title: Демонстрация алгебры
+          description_short: Несколько задач, демонстрирующие среду и язык программирования, используемый в Code.org Информатика в Алгебре
+          description: Несколько задач, демонстрирующие среду и язык программирования, используемый в Code.org Информатика в Алгебре
+          Algebra Demo: Демонстрация алгебры
+          Evaluation Blocks: Блоки оценивания
+          Making Pictures: Сделать изображения
+          Defining Variables: Определение переменных
+          Defining Simple Functions: Определение простых функций
+          The Design Recipe: Создание рецепта
         K5PD:
-          Introduction to PD: Introduction to PD
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Введение в профессиональные разработки
+          Blockly Basics: Основы Блокли
+          Writing computer programs: Написание компьютерных программ
+          Navigating the teacher dashboard: Перемещение по учительской панели управления
+          Unplugged lessons: Уроки без компьютера
+          Classroom Culture: Культура в классе
+          Ways to go beyond Courses 1, 2, and 3: Способы обучения после курсов 1, 2, и 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Панель управления преподавателя
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Интернет симулятор
           description_short: ""
           description: ""
           Internet Simulator: Интернет симулятор
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Бесконечность
+          Unit 1: Модуль 1
+          Unit 2: Модуль 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Пикселизация
+          description: Создавайте картинки при помощи битов и байтов.
+          Pixelation: Пикселизация
+        20-hour:
+          title: 20-Hour Intro Course
+          description: Этот 20-часовой курс является введением в основы информатики. Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
+          Introduction to Computer Science: Введение в Информатику
+          The Maze: Лабиринт
+          Computational Thinking: Вычислительное мышление
+          Graph Paper Programming: Программирование на бумаге в клеточку
+          The Artist: Художник
+          Algorithms: Алгоритмы
+          The Artist 2: Художник 2
+          Functions: Процедуры
+          The Farmer: Фермер
+          Conditionals: Условные команды
+          The Artist 3: Художник 3
+          Song Writing: Написание песни
+          The Farmer 2: Фермер 2
+          Abstraction: Абстракция
+          The Artist 4: Художник 4
+          Relay Programming: Эстафетное программирование
+          The Farmer 3: Фермер 3
+          The Internet: Интернет
+          The Artist 5: Художник 5
+          Wrap-up: Итоги
+        edit-code:
+          title: Редактирование кода
+          description: ""
+          The Maze: Лабиринт
+          Applab: Applab
+          The Artist: Художник
+          Play Lab: Лаборатория игр
+        events:
+          title: События
+          description: ""
+          Bounce: Прыжок
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Порхающий код
+          description: 'Хотите написать собственную игру меньше, чем за 10 минут? Попробуйте наш учебник "Порхающий  код"!'
+          Flappy Code: Порхающий код
+        jigsaw:
+          title: Головоломки
+          description: ""
+          Jigsaw: Головоломки
+        step:
+          title: шаг
+          description: ""
+          Step: шаг
+        Hour of Code:
+          title: Час кода 2013
+          description: ""
+          Hour of Code 2013: Час кода 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Знания, необходимые для курса 4
+          description_short: Краткое обобщение понятий для учеников, которые не проходили курсы 2 и 3.
+          description: Краткое обобщение понятий для учеников, которые не проходили курсы 2 и 3.
+          Course 4 Prerequisite: Знания, необходимые для курса 4
+          "Maze: Sequence": 'Лабиринт: Последовательность'
+          "Artist: Sequence": 'Художник: Последовательность'
+          "Artist: Loops": 'Художник: Циклы'
+          "Bee: Conditionals": 'Пчела: Условные команды'
+          "Artist: Nested Loops": 'Художник: Вложенные циклы'
+          "Farmer: While Loops": 'Фермер: Циклы "Пока"'
+          "Bee: Nested Loops": 'Пчела: Вложенные циклы'
+          "Artist: Functions": 'Художник: Процедуры'
+          "Bee: Debugging": 'Пчела: Отладка'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Урок без компьютера: Видеоигры и координатные плоскости'
+          "Calc: Evaluation Blocks": 'Калькулятор: Блоки оценивания'
+          "Eval: Strings and Images": 'Оценка: строки и картинки'
+          "Unplugged: Contracts": 'Урок без компьютера: контракты'
+          "Eval: Writing Contracts": 'Оценка: написание контрактов'
+          "Calc: Defining Variables": 'Калькулятор: определение переменных'
+          "Play Lab: Defining Variables (Big Game)": 'Лаборатория игр: определение переменных (большая игра)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Урок без компьютера: Создание рецепта'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Лаборатория игр: анимация (большая игра)'
+          "Unplugged: Booleans": 'Урок без компьютера: Логические выражения'
+          "Eval: Boolean Operators": 'Оценка: логические операторы'
+          "Play Lab: Booleans": 'Лаборатория игр: логические выражения'
+          "Play Lab: Boolean (Big Game)": 'Лаборатория игр: логические выражения (большая игра)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Урок без компьютера: Условные выражения и сложные функции'
+          "Eval: Conditionals": 'Оценка: Условные выражения'
+          "Unplugged: Collision Detection and the Distance Formula": 'Урок без компьютера: Обнаружение столкновений и формула расстояния'
+          "Play Lab: Collision Detection (Big Game)": 'Лаборатория игр: обнаружение столкновений (большая игра)'
+          Evaluation Blocks: Блоки оценивания
+          Strings and Images: Строки и картинки
+          Contracts: Контракты
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: Создание рецепта
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Логические выражения
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Условные выражения и сложные функции
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Блоки оценивания
+          Strings and Images: Строки и картинки
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Логические выражения
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'Лаборатория игр: обнаружение столкновений (большая игра)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Введение в профессиональные разработки
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

@@ -3,14 +3,15 @@ el-GR:
   select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
   computer_science: Επιστήμη Υπολογιστών
   computer_science_edweek: Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 Δεκεμβρίου 2014
   csedweek_banner_hoc: 'H  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Ώρα του Κώδικα</a> πλησιάζει!. Καλούμε όλους τους εκπαιδευτικούς και διοργανωτές να σχεδιάσουν τη δική τους, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">  Ώρα του Κώδικα</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Είστε καθηγητής πληροφορικής; Δείτε άλλους πόρους του CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>έχουν δοκιμάσει την</h3><h2>Ώρα του Κώδικα</h2>'
+  n_have_learned_an_hoc: '<h1>Δοκιμάστε μια</h1><h2>Ώρα του κώδικα</h2><h3></h3>'
   anybody_can_learn: Οποιοσδήποτε μπορεί να μάθει.
   learn_now: Μάθε τώρα
   petition_message: Κάθε μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να μάθει την επιστήμη των υπολογιστών
   petition_sign_message: Είμαι
+  petition_sign_message_support: 'Για να μας στηρίξετε, υπογράψτε με το όνομά σας. Συμμετέχετε στο #others.'
   name: Όνομα
   email: Ηλεκτρονικό ταχυδρομείο
   zipcode: Ταχυδρομικός κώδικας (για κατοίκους Η.Π.Α) ή χώρα
@@ -23,7 +24,7 @@ el-GR:
   hoc2014_teachers: Δάσκαλοι
   hoc2014_host: Φιλοξενήστε την
   hoc2014_everyone: Όλοι
-  hoc2014_support: Υποστηρίξτε την
+  hoc2014_support: 'Υποστηρίξτε την &#x25BE;'
   hoc2014_whatishoc: 'Τι είναι η  Ώρα του Κώδικα;'
   twentyhours_trynow: Δοκιμάστε τώρα
   california_heading: Ζητήστε από το σχολείο σας να διδάξει την επιστήμη της Πληροφορικής
@@ -90,6 +91,7 @@ el-GR:
   learn_classes: Βρείτε τοπικές τάξεις
   hoc_is_here: 'H Ώρα του Κώδικα (#HourOfCode) είναι εδώ - ελέγξτε το! @codeorg'
   just_did_hoc: 'Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg'
+  twitter_teach_cs: 'Γιατί δεν διδάσκουν περισσότερα σχολεία Επιστήμη των Υπολογιστών; Αυτό μπορούμε να το διορθώσουμε.  http://youtu.be/nKIu9yen5nc. Επισκεφτείτε την σελίδα http://code.org/ για να μάθετε περισσότερα.'
   learn_hoc: Μάθε την Ώρα του Κώδικα
   beyond_hoc: Πέρα από Μία Ώρα
   what_gender: Ποιο είναι το φύλο σου;
@@ -104,10 +106,12 @@ el-GR:
   students_and_lines: '%{students} μαθητές έχουν ολοκληρώσει την Ώρα του Κώδικα και έχουν γράψει %{lines} γραμμές κώδικα.'
   start_hoc: Ξεκινήστε την Ώρα του Κώδικα τώρα
   contact_form_topic_press: Τύπος / Μέσα (συνέντευξη ή ομιλία)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_nina: '"Κάθε μέρα το αποτέλεσμα ήταν το ίδιο&mdash; 100% προσύλωση." - Nina Nichols Peery, Teacher'
+  stats_student: |-
+    "Ήξερα πως ήταν <b>μια ευκαιρία ζωής." - Mariana Alzate, Ε' τάξη
+  stats_michael: '"Δεν έχω <b>ξαναδεί του μαθητές μου</b> τόσο ενθουσιασμένους για την μάθηση" - Michael Clark, Δάσκαλος'
   studiobar_title: "Εξερευνήστε το <a href='http://studio.code.org'>Στούντιο Κώδικα</a>"
+  studiobar_title_nolink: Εξερευνήστε το Studio κώδικα
   studiobar_elementary_title: Βασικά μαθήματα
   studiobar_elementary_body: 'Τα τρία νέα μαθήματά μας για K &#8209; 5'
   studiobar_hoc_title: Η Ώρα του Κώδικα
@@ -120,8 +124,84 @@ el-GR:
   studiobar_frozen_body: Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με Άννα και Έλσα
   studiobar_donate_title: Κάντε μια δωρεά
   studiobar_donate_body: Ένα παιδί μαθαίνει για κάθε δολάριο που δίνετε
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Κατάστημα
+  studiobar_shop_body: 'Σπάστε τα στερεότυπα. Φορέστε  το λογότυπο μας με υπερηφάνεια.'
+  homepage_hero_text_malala: '&ldquo;Προκαλώ κορίτσια σε κάθε χώρα να μάθουν μία ώρα του κώδικα&rdquo; Malala, νικητής του Νόμπελ ειρήνης'
+  homepage_hero_text_susan: '&ldquo;Αν μπορείτε να αλλάξετε την τεχνολογία, μπορείτε να αλλάξετε τον κόσμο. &rdquo;Susan, Διευθύνων Σύμβουλος του YouTube'
+  homepage_hero_text_fistbump: ' Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα'
+  homepage_hero_text_sheryl: '&ldquo;Τα παιδιά μας &mdash; συμπεριλαμβανομένων και των κοριτσιών μας &mdash; χρειάζονται την ευκαιρία να μάθουν την επιστήμη των υπολογιστή .&rdquo;  Sheryl, COO του Facebook'
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: Η Ώρα του Κώδικα
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Μάθημα 4
+  homepage_slot_text_shop: Κατάστημα
+  homepage_slot_text_flappy: Flappy κώδικα
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Μαθητές
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Κάντε μια δωρεά
   contact_form_topic_student: Είμαι μαθητής
   contact_form_topic_parent: Είμαι γονέας
   contact_form_topic_teacher: Είμαι δάσκαλος/εκπαιδευτικός
@@ -289,6 +369,8 @@ el-GR:
   dashboard_login_picture: Εικόνα
   dashboard_login_none: Ηλεκτρονικό ταχυδρομείο
   dashboard_new_password: νέος κωδικός
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: δεν έχει ολοκληρωθεί
   dashboard_progress_completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
   dashboard_progress_completed_perfect: ολοκληρώθηκε, τέλειο

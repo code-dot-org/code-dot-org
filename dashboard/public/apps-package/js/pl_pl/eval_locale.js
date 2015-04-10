@@ -154,10 +154,13 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
+"badColorStringError":function(d){return "Użyłeś nieprawidłowej wartości opisującej kolor: "+appLocale.v(d,"val")},
+"badStyleStringError":function(d){return "Użyłeś nieprawidłowej wartości dla stylu: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "okrąg (promień, styl, kolor)"},
-"displayBlockTitle":function(d){return "wyświetl"},
+"displayBlockTitle":function(d){return "wykonaj"},
 "ellipseBlockTitle":function(d){return "elipsa (szerokość, wysokość, styl, kolor)"},
-"extraTopBlocks":function(d){return "Masz niedołączone bloki. Czy chcesz je dołączyć do bloku wyświetl?"},
+"extraTopBlocks":function(d){return "Masz niepodłączone bloki. Czy pomyślałeś by dołączyć je do bloku \"wykonywanego\"?"},
+"infiniteRecursionError":function(d){return "Twoja funkcja wywołuje się rekurencyjnie. Zatrzymaliśmy ją, w przeciwnym wypadku wywoływałaby się w nieskończoność."},
 "overlayBlockTitle":function(d){return "nakładka (góra, dół)"},
 "placeImageBlockTitle":function(d){return "położenie-obraz (x, y, obraz)"},
 "offsetBlockTitle":function(d){return "offset (x, y, obraz)"},
@@ -176,4 +179,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "underlayBlockTitle":function(d){return "podkładka (dół, góra)"},
 "outline":function(d){return "zarys"},
 "solid":function(d){return "trwały"},
-"string":function(d){return "łańcuch"}};
+"string":function(d){return "łańcuch"},
+"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
+"userCodeException":function(d){return "Wystąpił błąd podczas wykonywania twojego kodu."},
+"wrongBooleanError":function(d){return "Twoje bloki zwróciły złą wartość logiczną."}};

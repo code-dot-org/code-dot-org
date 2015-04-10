@@ -267,34 +267,11 @@
           Artist Binary: Kunstner binære
           description_audience: Fra 10 år (efter kursus 3)
         Course4pre:
+          title: Kursus 4 forudsætninger
           description_short: En kort opsamling af koncepter for elever, der ikke har
             taget kursus 2 og 3.
-          Course 4 Prerequisite: Kursus 4 forudsætninger
-          'Maze: Sequence': 'Labyrint: Sekvens'
-          'Artist: Sequence': 'Kunstner: Sekvens'
-          'Artist: Loops': 'Kunstner: Sløjfer'
-          'Bee: Conditionals': 'Bi: Betingelser'
-          'Artist: Nested Loops': 'Kunstner: Indlejrede løkker'
-          'Farmer: While Loops': 'Landmand: Når sløjfer'
-          'Bee: Nested Loops': 'Bi: Indlejrede løkker'
-          'Artist: Functions': 'Kunstner: Funktioner'
-          'Bee: Debugging': 'Bi: Fejlfinding'
-        course4pre:
-          description_short: En kort opsamling af koncepter for elever, der ikke har
-            taget kursus 2 og 3.
-          Course 4 Prerequisite: Kursus 4 forudsætninger
-          'Maze: Sequence': 'Labyrint: Sekvens'
-          'Artist: Sequence': 'Kunstner: Sekvens'
-          'Artist: Loops': 'Kunstner: Sløjfer'
-          'Bee: Conditionals': 'Bi: Betingelser'
-          'Artist: Nested Loops': 'Kunstner: Indlejrede løkker'
-          'Farmer: While Loops': 'Landmand: Når sløjfer'
-          'Bee: Nested Loops': 'Bi: Indlejrede løkker'
-          'Artist: Functions': 'Kunstner: Funktioner'
-          'Bee: Debugging': 'Bi: Fejlfinding'
-        Course4pre (Case Conflict):
-          description_short: En kort opsamling af koncepter for elever, der ikke har
-            taget kursus 2 og 3.
+          description: En kort opsamling af koncepter for elever, der ikke har taget
+            kursus 2 og 3.
           Course 4 Prerequisite: Kursus 4 forudsætninger
           'Maze: Sequence': 'Labyrint: Sekvens'
           'Artist: Sequence': 'Kunstner: Sekvens'
@@ -327,6 +304,9 @@
           Special: Speciel
           Binary: Binære
         usabilitymsm:
+          title: Usability Middle School Math
+          description_short: Usability testing for middle school math
+          description: Usability testing for middle school math
           Usability testing for MSM: Test af MSM-brugervenlighed
           Evaluation Blocks: Evalueringsblokke
           Blocks to Math: Blokke til matematik
@@ -343,7 +323,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
             og Coordinate Planes'
           'Calc: Evaluation Blocks': 'Calc: Evaluering blokke'
-          'Eval: Strings and Images': 'Eval: Strings og Images'
+          'Eval: Strings and Images': Strenge og billeder
           'Unplugged: Contracts': 'Unplugged: kontrakter'
           'Eval: Writing Contracts': 'Eval: Skrive kontrakter'
           'Calc: Defining Variables': 'Calc: Definere variabler'
@@ -360,17 +340,23 @@
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             og stykvise funktioner'
-          'Eval: Conditionals': 'Eval: Conditionals'
+          'Eval: Conditionals': Betingelser
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             detection og the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
         infinity:
           title: Play Lab
-          description_short: Opret en historie eller lav et spil med Play Lab!
-          description: Opret en historie eller lav et spil med Play Lab!
+          description_short: Brug Play Lab til at skabe en historie eller et spil
+            med karakterer fra Disneys Infinity
+          description: Brug Play Lab til at skabe en historie eller et spil med karakterer
+            fra Disneys Infinity
           Play Lab: Play Lab
+          Infinity: Uendelig
         algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and
+            programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
@@ -380,14 +366,230 @@
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: Design opskrift
         K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
           Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
+            3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
         netsim:
           title: Internet Simulator
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Uendelig
+          Unit 1: Enhed 1
+          Unit 2: Enhed 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+        pixelation:
+          title: Pixelation
+          description: Skab billeder med bits og bytes.
+          Pixelation: Pixelation
+        20-hour:
+          title: Grundskole introduktion til datalogi kursus (15-25 timer)
+          description: Dette 20-timers kursus introducerer centrale computer videnskabs
+            og programmering begreber. Kurset er designet til brug i folkeskolens
+            klasseværelser, men det er sjovt at lære i alle aldre.
+          Introduction to Computer Science: Introduktion til datalogi
+          The Maze: Labyrinten
+          Computational Thinking: Data-Tænkning
+          Graph Paper Programming: Programmering på millimeterpapir
+          The Artist: Kunstneren
+          Algorithms: Algoritmer
+          The Artist 2: Kunstneren 2
+          Functions: Funktioner
+          The Farmer: Landmanden
+          Conditionals: Betingelser
+          The Artist 3: Kunstneren 3
+          Song Writing: Sangskrivning
+          The Farmer 2: Landmanden 2
+          Abstraction: Abstraktion
+          The Artist 4: Kunstneren 4
+          Relay Programming: Stafet-programmering
+          The Farmer 3: Landmanden 3
+          The Internet: Internettet
+          The Artist 5: Kunstneren 5
+          Wrap-up: Afslutning
+        edit-code:
+          title: Rediger kode
+          description: ''
+          The Maze: Labyrinten
+          Applab: Applab
+          The Artist: Kunstneren
+          Play Lab: Play Lab
+        events:
+          title: Hændelser
+          description: ''
+          Bounce: Hoppe
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy kode
+          description: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv
+            vores Flappy kode undervisning!
+          Flappy Code: Flappy kode
+        jigsaw:
+          title: Puslespil
+          description: ''
+          Jigsaw: Puslespil
+        step:
+          title: Trin
+          description: ''
+          Step: Trin
+        Hour of Code:
+          title: Hour of Code 2013
+          description: ''
+          Hour of Code 2013: Hour of Code 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Kursus 4 forudsætninger
+          description_short: En kort opsamling af koncepter for elever, der ikke har
+            taget kursus 2 og 3.
+          description: En kort opsamling af koncepter for elever, der ikke har taget
+            kursus 2 og 3.
+          Course 4 Prerequisite: Kursus 4 forudsætninger
+          'Maze: Sequence': 'Labyrint: Sekvens'
+          'Artist: Sequence': 'Kunstner: Sekvens'
+          'Artist: Loops': 'Kunstner: Sløjfer'
+          'Bee: Conditionals': 'Bi: Betingelser'
+          'Artist: Nested Loops': 'Kunstner: Indlejrede løkker'
+          'Farmer: While Loops': 'Landmand: Når sløjfer'
+          'Bee: Nested Loops': 'Bi: Indlejrede løkker'
+          'Artist: Functions': 'Kunstner: Funktioner'
+          'Bee: Debugging': 'Bi: Fejlfinding'
+        cspunit1:
+          title: CSP Unit 1
+          description_short: Make Black and White Images with the pixelation tool
+          description: CSP Unit 1 Stages
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: Teach Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            og Coordinate Planes'
+          'Calc: Evaluation Blocks': 'Calc: Evaluering blokke'
+          'Eval: Strings and Images': 'Eval: Strings og Images'
+          'Unplugged: Contracts': 'Unplugged: kontrakter'
+          'Eval: Writing Contracts': 'Eval: Skrive kontrakter'
+          'Calc: Defining Variables': 'Calc: Definere variabler'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Definere variabler
+            (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Unplugged: Design opskrift'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          'Play Lab: Booleans': 'Play Lab: Boolske operatorer'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            og stykvise funktioner'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            detection og the Distance Formula'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          Evaluation Blocks: Evalueringsblokke
+          Strings and Images: Strenge og billeder
+          Contracts: Kontrakter
+          Your Game - Defining Variables: Your Game - Defining Variables
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: Design opskrift
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Conditionals and Piecewise Functions: Konditioner og stykvise funktioner
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evalueringsblokke
+          Strings and Images: Strenge og billeder
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: Your Game - Animation
+          Booleans: Booleans
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: Your Game - Booleans
+          Luigi's Pizza: Luigi's Pizza
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          Your Game - Player Movement: Your Game - Player Movement
+          Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

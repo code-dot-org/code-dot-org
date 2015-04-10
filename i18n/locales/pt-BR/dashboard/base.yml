@@ -10,8 +10,8 @@ pt-BR:
       user:
         name: Nome para exibição
         email: E-mail
-        username: nome de usuário
-        password: senha
+        username: Nome de usuário
+        password: Senha
         password_confirmation: Confirmação de senha
         current_password: Senha atual
         locale: Idioma
@@ -22,6 +22,7 @@ pt-BR:
           future: não pode estar no futuro
   hello: Olá, mundo
   welcome_back: 'Bem-vindo de volta, %{name}'
+  submit: Enviar
   add_teacher_form:
     code:
       label: 'Adicionar professor:'
@@ -218,6 +219,7 @@ pt-BR:
         artist: Desenhe alguma coisa
     user:
       classroom: Página inicial do professor
+      district_dashboard: Painel do distrito
       label: 'Oi, %{username}'
       stats: Meu progresso
       settings: Minha conta
@@ -258,7 +260,7 @@ pt-BR:
       trophies: troféus
     students:
       name: Nome
-      username: nome de usuário
+      username: Nome de usuário
       password: senha
       manage: Gerenciar alunos
       dashboard: Vá para o painel de controle do professor
@@ -296,6 +298,8 @@ pt-BR:
     student_teacher_disassociated: '%{teacher_name} foi removido como professor de %{student_name}'
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
+    email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
+    email_confirm_wrong_email: (Endereço de e-mail errado?)
     email_resend_confirm: Reenviar instruções de confirmação
     new_password_hint: (deixe em branco se não quiser fazer alteração)
     current_password_hint: (precisamos de sua senha atual para confirmar suas alterações)
@@ -434,6 +438,9 @@ pt-BR:
       body: Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários
     frozen:
       title: Frozen
+    infinity:
+      title: Laboratório infinito
+      body: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -463,6 +470,13 @@ pt-BR:
     wrong_body: Sua solução não está correta. Tente novamente!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+  contract_match:
+    wrong_title: Resposta incorreta
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Insira sua resposta aqui
   dialog:
@@ -478,7 +492,7 @@ pt-BR:
           title: Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes do ensino fundamental
           description: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
         Hour of Code:
-          title: Hora do Código
+          title: Hora do Código 2013
           description: ""
         edit-code:
           title: Editar o código
@@ -508,11 +522,44 @@ pt-BR:
     sign_out: 'Se você não quer informar sua idade, você pode <a href="%{url}">sair</a>.'
   zendesk_too_young_message: 'Desculpe, usuários mais jovens não podem se inscrever em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a> sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em contato conosco.'
   progress:
-    not_completed: não concluído
+    not_started: não iniciado
+    in_progress: em progresso
     completed_too_many_blocks: concluído, muitos blocos
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
+    assessment: avaliação
   studio:
     courses_working_on: Cursos que você está fazendo
     completed_courses: Cursos concluídos
     all_courses: Todos os cursos
+  project:
+    projects: Projetos
+    create: Criar projeto
+    create_a_project: 'Crie um novo projeto:'
+    new: Criar novo
+    rename: Renomear
+    save: Salvar
+    delete: Excluir
+    exit: Voltar ao curso
+    my_projects: Meus projetos
+    share: Compartilhar
+    share_title: Compartilhar seu projeto
+    share_copy_link: 'Copie o link:'
+    close: Fechar
+    more: Mais
+    name: Nome
+    updated: Atualizado
+    project_type: Tipo de projeto
+    help_text: 'Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma coisa</strong> abaixo para fazer um novo Laboratório ou Projeto de artista!<br/>Você pode voltar a trabalhar nos seus projetos a qualquer hora.'
+    need_help: Precisa de ajuda para começar?
+    really_delete: Excluir?
+    delete_yes: Sim
+    delete_no: Não
+    saved: Salvo
+    not_saved: Não salvo
+    cancel: Cancelar
+    delete_confirm_title: Tem certeza de que deseja excluir esse projeto?
+    delete_confirm_text: 'Ao excluir seu projeto, vai removê-lo permanentemente da sua lista "Meus projetos". As pessoas com quem você compartilhou o link não vão mais poder visualizar seu projeto.'
+    view_all: Visualizar meus projetos
+    remix: Remix
+    click_to_remix: 'Clique em "Remix" para fazer sua própria versão!'
