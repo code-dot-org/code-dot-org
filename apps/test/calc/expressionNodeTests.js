@@ -190,6 +190,20 @@ describe("ExpressionNode", function () {
       assert.equal(evaluation.result.toExact(), 2);
     });
 
+    it('can evaluate nested sqrt/sqr', function () {
+      node = new ExpressionNode('sqrt', [
+        new ExpressionNode('+', [
+          new ExpressionNode('sqr', [3]),
+          new ExpressionNode('sqr', [4])
+        ])
+      ]);
+      evaluation = node.evaluate({});
+      assert(!evaluation.err);
+      assert(isJsNumber(evaluation.result));
+      assert.equal(evaluation.result.toExact(), 5);
+
+    });
+
     it("can evaluate a more complex expression", function () {
       node = new ExpressionNode('*', [
         new ExpressionNode('-', [5, 3]),
@@ -888,6 +902,48 @@ describe("ExpressionNode", function () {
         new Token(')', false)
       ]);
     });
+
+    it('works with nested sqrt/sqr', function () {
+      node = new ExpressionNode('sqrt', [
+        new ExpressionNode('+', [
+          new ExpressionNode('sqr', [3]),
+          new ExpressionNode('sqr', [4])
+        ])
+      ]);
+
+      tokenList = node.getTokenList(false);
+      assert.deepEqual(tokenList, [
+        new Token('sqrt', false),
+        new Token('(', false),
+        new Token('(', false),
+        new Token(jsnums.makeFloat(3), false),
+        new Token(' ^ 2', false),
+        new Token(')', false),
+        new Token(' + ', false),
+        new Token('(', false),
+        new Token(jsnums.makeFloat(4), false),
+        new Token(' ^ 2', false),
+        new Token(')', false),
+        new Token(')', false)
+      ]);
+
+      tokenList = node.getTokenList(true);
+      assert.deepEqual(tokenList, [
+        new Token('sqrt', false),
+        new Token('(', false),
+        new Token('(', true),
+        new Token(jsnums.makeFloat(3), true),
+        new Token(' ^ 2', true),
+        new Token(')', true),
+        new Token(' + ', false),
+        new Token('(', false),
+        new Token(jsnums.makeFloat(4), false),
+        new Token(' ^ 2', false),
+        new Token(')', false),
+        new Token(')', false)
+      ]);
+    });
+
   });
 
   it("isEquivalentTo", function () {

@@ -7,6 +7,8 @@ nav: educate_nav
 # Teacher of the Month winners
 
 <%= view :totm3_winners %>
+</br>
+<a href="http://blog.code.org/tagged/TOTM"><button>See all</button></a>
 
 # Nominate a Teacher of the Month
 

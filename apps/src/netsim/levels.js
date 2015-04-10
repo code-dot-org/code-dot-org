@@ -19,6 +19,12 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {boolean} showRoutersInLobby - Whether router nodes should appear
  *           in the lobby list at all.
  *
+ * @property {boolean} canConnectToClients - Whether client nodes are selectable
+ *           and can be connected to
+ *
+ * @property {boolean} canConnectToRouters - Whether router nodes are selectable
+ *           and can be connected to
+ *
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
  *
@@ -91,6 +97,8 @@ levels.custom = {
   // Lobby configuration
   showClientsInLobby: false,
   showRoutersInLobby: false,
+  canConnectToClients: false,
+  canConnectToRouters: false,
   showAddRouterButton: false,
 
   // Packet header specification

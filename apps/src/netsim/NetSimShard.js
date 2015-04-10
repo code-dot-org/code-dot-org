@@ -41,6 +41,9 @@ if (window &&
  * @constructor
  */
 var NetSimShard = module.exports = function (shardID) {
+  /** @type {string} */
+  this.id = shardID;
+
   /** @type {NetSimTable} */
   this.nodeTable = new NetSimTable(
       new SharedTable(CHANNEL_PUBLIC_KEY, shardID + '_n'));
