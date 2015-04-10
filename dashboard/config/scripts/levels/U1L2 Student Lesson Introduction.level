@@ -9,12 +9,7 @@
     },
     "title": "title",
     "content1": "description here",
-    "markdown": "## Unit 1: Lesson 2 - Sending Binary Messages\n\n# Background\n\nThe simplest type of information that can be sent is a BINARY message. The word \"binary\" is not actually a term from computing. Binary is used to describe a state of things that involve only two possibilities. Messages on the Internet are sent as a series of binary signals. \n\n# Lesson\n\n* Think of a message that can be communicated with such a simple message. \n* Build a device from everyday objects to communicate the message across the room. \n* Work with your team mates in an iterative design process of rapidly building and improving your device.  \n\n\n# Resources\n\n* Activity Guide: [Sending Binary Numbers](https://docs.google.com/document/d/1s3qa6U2mPFSH_n6Uf0I9IHV2FOzXtOlxZ3LSTOM3JTQ/edit?usp=sharing)\n* Assessment: [Sending Binary Numbers Rubric](https://docs.google.com/document/d/1sO2881fgXnLSnF29qhYbCygfKDLPz-kdL5owZofp31I/edit?usp=sharing)\n\n\n",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ],
-    "name": "U1L2 Student Lesson Introduction"
+    "markdown": "## Unit 1: Lesson 2 - Sending Binary Messages\n\n# Background\n\nThe simplest type of information that can be sent is a BINARY message. The word \"binary\" is not actually a term from computing. Binary is used to describe a state of things that involve only two possibilities. Messages on the Internet are sent as a series of binary signals. \n\n# Lesson\n\n* Think of a message that can be communicated with such a simple message. \n* Build a device from everyday objects to communicate the message across the room. \n* Work with your team mates in an iterative design process of rapidly building and improving your device.  \n\n\n# Resources\n\n* Activity Guide: <a href=\"https://docs.google.com/document/d/1s3qa6U2mPFSH_n6Uf0I9IHV2FOzXtOlxZ3LSTOM3JTQ/edit?usp=sharing\" target=\"_blank\">Sending Binary Numbers</a>\n* Assessment:  <a href=\"https://docs.google.com/document/d/1sO2881fgXnLSnF29qhYbCygfKDLPz-kdL5owZofp31I/edit?usp=sharing\" target=\"_blank\">Sending Binary Numbers Rubric</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
   },
   "md5": "bc53c963906672fd99de653ccf9e8bb1"
 }]]></config>

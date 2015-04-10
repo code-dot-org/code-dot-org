@@ -8,12 +8,6 @@
     },
     "title": "Odometer Widget",
     "content1": "description here",
-    "type": "External",
-    "dsl_text": "name 'U1L6 Odometer Widget'\r\ntitle 'Odometer Widget'\r\ndescription 'description here'\r\nhref 'path/to/html/in/asset/folder'\r\nmarkdown <<MARKDOWN\r\n[Odometer Widget](http://cspdashboard-c9-bfranke.c9.io/Odometers/)\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ],
-    "name": "U1L6 Odometer Widget",
     "markdown": " Need to create a correct level type for this widget\n"
   },
   "md5": "70b4ab214176e40e1bd563e8953cf0cf"
