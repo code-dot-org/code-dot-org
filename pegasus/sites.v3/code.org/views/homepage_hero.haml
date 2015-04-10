@@ -2,10 +2,16 @@
 
   -# Generate a random set of hero images alternating between non-celeb and celeb.
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
-  - heroes.shuffle!
-  - heroes_nonceleb = heroes.select {|hero| hero[:param2_s] != "celeb"}
-  - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
-  - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
+  - if rack_env == :production
+    - heroes.shuffle!
+    - heroes_nonceleb = heroes.select {|hero| hero[:param2_s] != "celeb"}
+    - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
+    - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
+    - hero_display_time = 13 * 1000
+  - else
+    -# on non-production, show all heroes, and more quickly, for easier previewing
+    - heroes_arranged = heroes
+    - hero_display_time = 6 * 1000
 
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
@@ -131,5 +137,5 @@
 
   $.ready()
   {
-    timerId = setInterval(cycleImage, 13000);
+    timerId = setInterval(cycleImage, #{hero_display_time});
   }
