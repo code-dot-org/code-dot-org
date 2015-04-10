@@ -8,8 +8,8 @@
       "(7 * 6)"
     ],
     "title": "Convert Blocks to Math",
-    "content1": "Type out the arithmetic expression that matches this code",
     "placeholder": "Type the arithmetic expression here",
+    "content1": "Type out the arithmetic expression that matches this code",
     "content2": "Blocks to Math 2.blocks.start_blocks, 200"
   }
 }]]></config>

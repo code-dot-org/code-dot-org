@@ -14,17 +14,24 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false"
-  }
+  },
+  "md5": "fa6d9fd34f90bbd9c4dfb5bd2d693de9"
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="overlay"/>
-        <block type="functional_square"/>
-        <block type="functional_star"/>
-        <block type="functional_math_number"/>
-        <block type="functional_string"/>
-        <block type="functional_style"/>
+        <block type="overlay" inline="false"/>
+        <block type="functional_star" inline="false"/>
+        <block type="functional_square" inline="false"/>
+        <block type="functional_math_number">
+          <title name="NUM">0</title>
+        </block>
+        <block type="functional_string">
+          <title name="VAL"/>
+        </block>
+        <block type="functional_style">
+          <title name="VAL">solid</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

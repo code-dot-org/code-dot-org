@@ -3,12 +3,12 @@
   "game_id": 43,
   "created_at": "2015-03-05T17:20:11.000Z",
   "properties": {
-    "title": "testing",
-    "content1": "lkajsdfasdf",
-    "markdown": "fasdfas\n## asdfadsf\n",
     "options": {
       "skip_dialog": true
-    }
+    },
+    "title": "testing",
+    "content1": "lkajsdfasdf",
+    "markdown": "fasdfas\n## asdfadsf\n"
   },
   "md5": "546f20d086b06a6dea71074fe12d4b63"
 }]]></config>

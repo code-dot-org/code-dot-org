@@ -1,4 +1,4 @@
-title 'CSP Unit 1: Digital Information'
+title 'CSP Unit 1 - Digital Information'
 description 'This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.'
 description_short "Explore how digital information is represented and transferred"
 
@@ -19,9 +19,9 @@ level 'U1L3 Free response reflection question'
 stage 'Bit Sending Widget'
 level 'U1L4 Student Lesson Introduction'
 level 'U1L4 Widget Demo - Video'
-level 'NetSim_SendingABTest'
+level 'U1L4 NetSim SendAB'
 level 'U1L4 Free response reflection question'
-level'U1L4 Free Response Reflection'
+level 'U1L4 Free Response Reflection'
 
 
 stage 'Sending Bits in the Real World'
@@ -45,17 +45,13 @@ level 'U1L7 Free Response Assessment'
 level 'U1L7 Free Response Reflection'
 
 stage 'Lesson 14'
-level 'Pixelation - Video - Lesson 14 - B and W'
 level 'Pixelation - Lesson 14 - Make the Letter A'
 level 'Pixelation - Lesson 14 - Fix bit offset'
 level 'Pixelation - Lesson 14 - Make your own B and W Image'
 
 stage 'Lesson 15'
-level 'Pixelation - Video - Color 1'
 level 'Pixelation - Lesson 15 - Complete 3-bit color'
-level 'Pixelation - Video - Color 2'
 level 'Pixelation - Lesson 15 - Color Shades'
-level 'Pixelation - Video - Color 3'
 level 'Pixelation - Lesson 15 - Color Shades 4x4'
 level 'Pixelation Flappy'
 level 'Pixelation Bee'
