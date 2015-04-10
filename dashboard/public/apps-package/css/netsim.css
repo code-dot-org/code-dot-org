@@ -168,7 +168,7 @@ svg {
     font-size: 110%;
     font-weight: bold;
     line-height: 110%;
-    background-color: #00adbc;
+    background-color: #7665a0;
     color: #f5f5f5;
     border-radius: 0.3em 0.3em 0 0; }
     #netsim div.netsim-panel h1 .panel_controls {
@@ -179,7 +179,7 @@ svg {
     border-left: solid darkgray thin;
     border-right: solid darkgray thin;
     border-bottom: solid darkgray thin;
-    border-top: solid #00adbc thin;
+    border-top: solid #7665a0 thin;
     border-radius: 0 0 0.3em 0.3em; }
   #netsim div.netsim-panel.minimized h1 {
     border-radius: 0.3em; }
@@ -342,7 +342,7 @@ svg {
     margin: 10px 0 3px 0;
     border-bottom: solid darkgrey thin; }
   #netsim .netsim-tabs .ui-tabs-nav {
-    background: #00adbc;
+    background: #7665a0;
     border-left: none;
     border-right: none;
     border-top: none; }
