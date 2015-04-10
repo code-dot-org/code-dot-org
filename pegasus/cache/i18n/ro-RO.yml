@@ -1,9 +1,9 @@
 "ro-RO":
   hello: Salutare lume
-  select_language: Vă rugăm să selectaţi limba dvs.
+  select_language: Vă rugăm selectaţi limba dvs
   computer_science: Informatică
   computer_science_edweek: Săptămâna Informaticii
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 decembrie 2014
   csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white;
     text-decoration:underline; font-weight:bold"> Ora de cod</a>. Chemând toți profesorii
     şi organizatorii, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -11,13 +11,14 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Sunteți profesor de informatică ? Vedeți alte resurse
     CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>a încercat o</h3><h2>Oră de Cod</h2>
+  n_have_learned_an_hoc: <h1>Încercaţi o</h1><h2>Ora de cod</h2><h3># servit</h3>
   anybody_can_learn: Oricine poate învăța.
   learn_now: Învaţă Acum
   petition_message: Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea
     de a învăța tehnologia computerelor
   petition_sign_message: 'Dacă ești de acord, semnează-ți numele. Alătură-te altora
     #.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Nume
   email: Email
   zipcode: Cod poştal sau ţară
@@ -32,8 +33,8 @@
   hoc2014_teachers: Profesori
   hoc2014_host: Găzduiți
   hoc2014_everyone: Toată lumea
-  hoc2014_support: Susțineți
-  hoc2014_whatishoc: Care este ora de cod?
+  hoc2014_support: Susțineți &#x25BE;
+  hoc2014_whatishoc: Ce este Ora de Cod?
   twentyhours_trynow: Încearcă acum
   california_heading: Cere şcolii tale să te învețe tehnologia computerelor
   california_text: Orice profesor poate preda <a href='http://studio.code.org/'>cursuri
@@ -115,6 +116,8 @@
   learn_classes: Găsește clase local
   hoc_is_here: '#OraDeCod este aici - Hai să vezi despre ce e vorba! @codeorg'
   just_did_hoc: 'Tocmai am făcut #OraDeCod - Hai să vezi despre ce e vorba! @codeorg'
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   learn_hoc: Învață o Oră de Cod
   beyond_hoc: Peste de O Oră
   what_gender: Ce gen sexual ai?
@@ -130,13 +133,14 @@
     de linii de cod.'
   start_hoc: Începe Ora de Cod acum
   contact_form_topic_press: Presă/media (interviu sau angajamentul vorbit)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_nina: '"Fiecare zi a generat aceleaşi rezultate&mdash; 100% pasiune."- Nina
+    Nichols Peery, Profesor'
+  stats_student: '"Ştiam că acest lucru a fost o șansă <b>o dată în viața</b>."- Mariana
+    Alzate, elev de clasa a cincea'
+  stats_michael: Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați
+    să învețe."- Michael Clark, Profesor
   studiobar_title: Explorează <a href='http://studio.code.org'>Studio-ul Code</a>
+  studiobar_title_nolink: Explorează Studio-ul Code
   studiobar_elementary_title: Cursuri elementare
   studiobar_elementary_body: Cele trei cursuri noi pentru K&#8209;5
   studiobar_hoc_title: Ora de Programare
@@ -149,8 +153,88 @@
   studiobar_frozen_body: Crează un paradis de iarnă cu Anna şi Elsa
   studiobar_donate_title: Donează
   studiobar_donate_body: Un copil învaţă pentru fiecare dolar donat
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Magazin
+  studiobar_shop_body: Sparge stereotipurile. Poartă logo-ul nostru cu mândrie.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_susan: |
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: Ora de Programare
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Curs 4
+  homepage_slot_text_shop: Magazin
+  homepage_slot_text_flappy: Codul Flappy
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: '[șir gol]'
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_slot_text_title_hoc: Oră de Cod
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Încearcă Ora de Cod
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Elevi
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Donează
   contact_form_topic_student: Sunt student
   contact_form_topic_parent: Sunt părinte
   contact_form_topic_teacher: Sunt profesor/educator
@@ -163,11 +247,11 @@
   contact_form_label_message: Mesaj
   contact_form_label_submit: Trimite Mesaj
   class_submission_in_school: În şcoală
-  class_submission_in_school_daily_programming_course: Curs de programare zilnic
+  class_submission_in_school_daily_programming_course: Curs zilnic de programare
   class_submission_in_school_ap_computer_science: AP ştiinţa calculatoarelor
   class_submission_in_school_full_university_cs_curriculum: Curriculum-ul universitar
     CS complet
-  class_submission_in_school_robotics_club: Club de Robotică
+  class_submission_in_school_robotics_club: Club de robotică
   class_submission_in_school_programming_integrated_in_other_classes: Programarea
     integrată în alte cursuri (matematică, știinte, etc.)
   class_submission_in_school_summer_school_cs_program: Programul şcolii de vară CS
@@ -247,8 +331,8 @@
   dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Nu
   dashboard_action_confirm: Șterge?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Şterge
+  dashboard_action_remove_confirm: Ștergeţi?
   dashboard_action_done: Gata
   dashboard_action_required: necesar
   dashboard_navigation_home_page: Pagina de pornire a profesorului
@@ -299,7 +383,7 @@
     elevi</b> de mai sus.
   dashboard_students_placeholder_name: Numele elevului
   dashboard_students_name: Nume
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Progres
   dashboard_students_age: Vârsta
   dashboard_students_gender: Sex
   dashboard_students_male: De sex masculin
@@ -359,6 +443,8 @@
   dashboard_login_picture: Poză
   dashboard_login_none: E-mail
   dashboard_new_password: Parolă nouă
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: nefinalizat
   dashboard_progress_completed_too_many_blocks: finalizat, prea multe blocuri
   dashboard_progress_completed_perfect: finalizat, perfect
@@ -406,7 +492,7 @@
   carousel_heading_robots: Învață să programezi cu roboți
   carousel_heading_ide: Platforme populare printre profesori
   educator_notes: Notițe pentru educatori
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Cum să predai o Oră de Cod
   more_resources_educators: Mai multe resurse pentru profesori și educatori
   participants: participanți
   teachers_notes: Notițele profesorului
@@ -601,11 +687,11 @@
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
     Zombies. Învață algoritmi de bază, repeat-loops, conditionals. Disponibil în 34
     de limbi.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Folosind un limbaj fix "Vocabularul Robotului",
+    elevii vor căuta mijloace prin care care sa-și ghideze colegii să ducă la bun
+    sfârșit anumite acțiuni, fără a le discuta în prealabil. Această lecție învață
+    copiii legătura dintre simboluri și acțiuni, precum și deprinderea atât de necesară
+    de a depana.
   khan_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
     programând. Fă asta singur sau alături de clasă.
   khanes_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
@@ -704,10 +790,11 @@
     o serie de aplicații cu care sa va jucați și pe care sa le dați share. Tutoriale
     simple le dau chiar și celor mai mici posibilitatea de a programa în JavaScript,
     și cu cât sunt mai avansați cu atât vei ajunge mai departe.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a
-    brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
+  makegameswithus_longdescription: Învățați să codați realizând un joc pentru iPhone
+    folosind un  limbaj de programare nou și prietenos cu începătorii numit Swift!
+    Creați un joc de acțiune inspirat de Pok&eacute;mon și scrieți un cod pentru a
+    vă învăța monstrul mișcări noi. Veți învăța cum să folosiți variabile, metode,
+    și obiecte pentru a vă ajuta monstrul să câștige!
   touchdevelop_longdescription: 'Editorul touch-friendly vă va ghida în crearea de
     artă pixel, rezolvarea puzzle urs sau a face propriul joc cu pasăre săritoare. '
   appinventor_longdescription: Clipuri video interactive te ajută să creezi 3 aplicații

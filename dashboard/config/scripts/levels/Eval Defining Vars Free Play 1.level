@@ -8,15 +8,23 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Free Play: We've provided a function that fills your screen with my-shape. Change my-shape to see what patterns you can make.",
+    "instructions": "Free Play: We've provided a function that fills your screen with my-image. Change my-image to see what patterns you can make.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "true",
-    "open_function_definition": "my-image"
-  }
+    "open_function_definition": "my-image",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "03f135c8374d2ef067f48b673341a4e6"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -51,7 +59,7 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">my-image</title>
@@ -79,7 +87,7 @@
           <mutation>
             <arg name="rows" type="Number"/>
             <description>Repeats my-image in a spiral to fill the screen.</description>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">fill-screen</title>
           <functional_input name="STACK">
@@ -173,7 +181,7 @@
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="columns" type="Number"/>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">fill-row</title>
           <functional_input name="STACK">

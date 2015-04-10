@@ -22,6 +22,7 @@
  Match,
  Maze,
  Multi,
+ NetSim,
  Prize,
  PrizeProvider,
  Script,

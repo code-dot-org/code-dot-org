@@ -22,7 +22,7 @@ module StiFactory
       descendants.map(&:name).push(self.name)
     end
 
-    def new_with_factory(attributes = nil, options={})
+    def new_with_factory(attributes = nil, options = {})
       klass_name = identify_target_class attributes
       force_load_of_unreferenced_subclass klass_name
       klass = self.subclass_names.include?(klass_name) ? klass_name.constantize : self
@@ -38,7 +38,7 @@ module StiFactory
 
       class_name = attributes.delete(self.inheritance_column.to_sym)
       class_name ||= attributes.delete(self.inheritance_column)
-      class_name ||= self.name
+      class_name || self.name
     end
 
     def force_load_of_unreferenced_subclass(class_name)

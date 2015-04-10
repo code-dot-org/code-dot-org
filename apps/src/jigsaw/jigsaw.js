@@ -29,19 +29,18 @@ studioApp.setCheckForEmptyBlocks(true);
 Blockly.BUMP_UNCONNECTED = false;
 
 function useLargeNotches() {
-  Blockly.BlockSvg.NOTCH_WIDTH = 50;
-
   var notchHeight = 8;
   var notchWidthA = 6;
   var notchWidthB = 10;
 
   Blockly.BlockSvg.NOTCH_PATH_WIDTH = notchWidthA * 2 + notchWidthB;
+  Blockly.BlockSvg.NOTCH_WIDTH = 50;
 
-  Blockly.BlockSvg.NOTCH_PATH_LEFT = 'l ' +
+  var notchPathLeft = 'l ' +
     notchWidthA + ',' + notchHeight + ' ' +
     notchWidthB + ',0 ' +
     notchWidthA + ',-' + notchHeight;
-  Blockly.BlockSvg.NOTCH_PATH_RIGHT = 'l ' +
+  var notchPathRight = 'l ' +
     '-' + notchWidthA + ',' + notchHeight + ' ' +
     '-' + notchWidthB + ',0 ' +
     '-' + notchWidthA + ',-' + notchHeight;
@@ -52,11 +51,18 @@ function useLargeNotches() {
   var notchHighlightWidthA = notchWidthA + 0.5; //6.5;
   var notchHighlightWidthB = notchWidthB - 1; //2;
 
-  Blockly.BlockSvg.NOTCH_PATH_LEFT_HIGHLIGHT = 'l ' +
+  var notchPathLeftHighlight = 'l ' +
     notchHighlightWidthA + ',' + notchHighlightHeight + ' ' +
     notchHighlightWidthB + ',0 ' +
     notchHighlightWidthA + ',-' + notchHighlightHeight;
   // Blockly.BlockSvg.NOTCH_PATH_LEFT_HIGHLIGHT = 'l 6.5,4 2,0 6.5,-4';
+
+  Blockly.Connection.NOTCH_PATHS_OVERRIDE = {
+    left: notchPathLeft,
+    leftHighlight: notchPathLeftHighlight,
+    right: notchPathRight
+  };
+
 }
 
 

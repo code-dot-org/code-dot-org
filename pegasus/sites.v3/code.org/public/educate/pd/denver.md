@@ -24,23 +24,19 @@ Milestone Complete!
 ### Phase 3: Academic Year Development
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### Save The Dates:
-
-1/31/2015
-<br />
+#### Save The Date
 4/18/2015
 
 8:30am - 3:30pm
 <br />
 Breakfast and lunch will be served. 
 
-#### Location
-
-Holiday Inn Express & Suites: Denver Tech Center-Englewood
+#### April 18th Location
+Holiday Inn Lakewood
 <br />
-7380 South Clinton Street
+7390 W. Hampden Avenue
 <br />
-Englewood, Colorado 80112
+Lakewood, CO 80227
 
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
@@ -51,26 +47,9 @@ Laptop
 
 ### Phase 4: Post Year Development
 
-#### Save the Dates
-
-6/15/2015 - 6/17/2015
+Coming Summer 2015!
 
 [**Back to the top**](#top)
-
-
-<a id="admin"></a>
-## Administrator and Counselor Professional Development
-
-### Phase 1: Preparation and Reflection
-
-Milestone Complete!
-
-### Phase 2: Teaching and Learning Studio
-
-Milestone Complete!
-
-[**Back to the top**](#top)
-
 
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.

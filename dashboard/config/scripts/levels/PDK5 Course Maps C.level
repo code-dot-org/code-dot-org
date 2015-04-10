@@ -1,0 +1,14 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-02-26T21:37:53.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "markdown": "## Navigating Courses 1, 2, and 3\n\nCode.org's courses for students are displayed similarly like this online PD course. Below is what you would see as Course 1. Each row, or stage, is a lesson. Some stages are unplugged lessons, which are lessons that you will lead for your classrooms without the use of computers. There are student-facing videos for these lessons and also student assessments they can complete after the activity.\n\nThe online stages are the rows with many numbered circles on them. Each circle represents a puzzle where a student has to write a computer program to complete the goal of the puzzle. In these lessons, students can work at their own pace to complete all the puzzles in a stage, in order. There are tutorial videos and hints along the way that will help them complete these challenges.\n\nEach lesson comes with a lesson plan that is available when you click \"View lesson plan\" under the name of each lesson. Below is an image of what Course 1 looks like in Code Studio. \n\n</br>\n\n![image](http://staging.code.org/images/course1stagemap.png)\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n"
+  },
+  "md5": "bd12c6efd957c860381c2672495c4295"
+}]]></config>
+</External>

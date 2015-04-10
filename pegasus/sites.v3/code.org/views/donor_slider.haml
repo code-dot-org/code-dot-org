@@ -1,22 +1,30 @@
--supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s)
+- supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s).all
+- supporters.shuffle!
 
-%link{:href=>"/css/donor_slider.css", :rel=>"stylesheet"}
-%script{:src=>"/js/donor_slider.js"}
+#donorslider{style: "background-color:rgb(200, 193, 217); margin-top:20px; padding-top:10px; margin-bottom:0px"}
+  .container_responsive{style: "margin-top:0px; margin-bottom:0px; padding-bottom:15px; padding-top:5px"}
+    #donorheader{style: "position:relative; height:40px"}
+      %h1{style: "width:100%; font-size: 20px; margin: 0px; padding:0px; text-align:center; color: rgb(255,255,255); position: absolute; top:0px; font-family: 'Gotham 4r', sans-serif"}
+        -if request.language  == 'en'
+          = I18n.t(:homepage_header_donors)
+        -else
+          = I18n.t(:studiobar_donate_body)
 
-%div{:class=>'donor-slider'}
-  %h2{:id=>'level_indicator'} Platinum Supporters ($3,000,000+ contribution)
-  %div.badge-container
-    - supporters.each do |supporter, name_s|
-      - avatar_url = avatar_image(supporter[:name_s])
-      %a{:href=>supporter[:url_s]}
-        %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none; height: 90px"}
-          - if avatar_url != nil
-            - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
-              %img{:src=> avatar_url, :style=>"float: left"}
-            - else
-              %img{:src=> avatar_url}
-          - if supporter[:kind_s] != "corporate" &&  supporter[:name_s] != "Omidyar Network"
-            %p{:class=>"label"}
-              =supporter[:name_s]
+      #donorlinks.desktop-feature{style: "text-align:right; position:absolute; width:100%"}
+        %a{href: "/about/donors", style: "color:white"} 
+          -if request.language == 'en'
+            = I18n.t(:homepage_donors_seall)
+        &nbsp; &nbsp; &nbsp;
+        %a{href: "/donate", style: "color:white"} 
+          -if request.language == 'en'
+            = I18n.t(:homepage_donors_donate)
+          -else
+            = I18n.t(:studiobar_donate_title)
 
-  %a{:href=>'../about/donors'} See all donors
+    .donor-slider{style: "color:white; text-align:center; font-size:13px"}
+      - supporters.each_with_index do |supporter, index|
+        %a{:href=>supporter[:url_s], :target=> "_blank", :style=>"color:white; font-family: 'Gotham 4r', sans-serif;"}
+          - if index == supporters.length-1
+            = "#{supporter[:name_s]}"
+          - else
+            != "#{supporter[:name_s]}, "

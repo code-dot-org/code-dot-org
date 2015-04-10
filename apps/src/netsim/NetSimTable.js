@@ -12,14 +12,14 @@
 'use strict';
 
 var _ = require('../utils').getLodash();
-var ObservableEvent = require('./ObservableEvent');
+var ObservableEvent = require('../ObservableEvent');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
  * updates from the server.
  * @type {number}
  */
-var POLLING_DELAY_MS = 5000;
+var DEFAULT_POLLING_DELAY_MS = 5000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -58,53 +58,85 @@ var NetSimTable = module.exports = function (storageTable) {
    * @private
    */
   this.lastFullUpdateTime_ = 0;
+
+  /**
+   * Minimum time (in milliseconds) to wait between pulling full table contents
+   * from remote storage.
+   * @type {number}
+   * @private
+   */
+  this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 };
 
+/**
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.readAll = function (callback) {
-  this.remoteTable_.readAll(function (data) {
-    callback(data);
-    if (data !== null) {
+  this.remoteTable_.readAll(function (err, data) {
+    if (err === null) {
       this.fullCacheUpdate_(data);
     }
+    callback(err, data);
   }.bind(this));
 };
 
+/**
+ * @param {!number} id
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.read = function (id, callback) {
-  this.remoteTable_.read(id, function (data) {
-    callback(data);
-    if (data !== undefined) {
+  this.remoteTable_.read(id, function (err, data) {
+    if (err === null) {
       this.updateCacheRow_(id, data);
     }
+    callback(err, data);
   }.bind(this));
 };
 
+/**
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.create = function (value, callback) {
-  this.remoteTable_.create(value, function (data) {
-    callback(data);
-    if (data !== undefined) {
+  this.remoteTable_.create(value, function (err, data) {
+    if (err === null) {
       this.addRowToCache_(data);
     }
+    callback(err, data);
   }.bind(this));
 };
 
+/**
+ * @param {!number} id
+ * @param {Object} value
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.update = function (id, value, callback) {
-  this.remoteTable_.update(id, value, function (success) {
-    callback(success);
-    if (success) {
+  this.remoteTable_.update(id, value, function (err, success) {
+    if (err === null) {
       this.updateCacheRow_(id, value);
     }
+    callback(err, success);
   }.bind(this));
 };
 
+/**
+ * @param {!number} id
+ * @param {!NodeStyleCallback} callback
+ */
 NetSimTable.prototype.delete = function (id, callback) {
-  this.remoteTable_.delete(id, function (success) {
-    callback(success);
-    if (success) {
+  this.remoteTable_.delete(id, function (err, success) {
+    if (err === null) {
       this.removeRowFromCache_(id);
     }
+    callback(err, success);
   }.bind(this));
 };
 
+/**
+ * @param {Array} allRows
+ * @private
+ */
 NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Rebuild entire cache
   var newCache = allRows.reduce(function (prev, currentRow) {
@@ -121,11 +153,20 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   this.lastFullUpdateTime_ = Date.now();
 };
 
+/**
+ * @param {!Object} row
+ * @param {!number} row.id
+ * @private
+ */
 NetSimTable.prototype.addRowToCache_ = function (row) {
   this.cache_[row.id] = row;
   this.tableChange.notifyObservers(this.arrayFromCache_());
 };
 
+/**
+ * @param {!number} id
+ * @private
+ */
 NetSimTable.prototype.removeRowFromCache_ = function (id) {
   if (this.cache_[id] !== undefined) {
     delete this.cache_[id];
@@ -133,6 +174,11 @@ NetSimTable.prototype.removeRowFromCache_ = function (id) {
   }
 };
 
+/**
+ * @param {!number} id
+ * @param {!Object} row
+ * @private
+ */
 NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
   var newRow = row;
@@ -146,6 +192,10 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   }
 };
 
+/**
+ * @returns {Array}
+ * @private
+ */
 NetSimTable.prototype.arrayFromCache_ = function () {
   var result = [];
   for (var k in this.cache_) {
@@ -156,9 +206,20 @@ NetSimTable.prototype.arrayFromCache_ = function () {
   return result;
 };
 
+/**
+ * Changes how often this table fetches a full table update from the
+ * server.
+ * @param {number} intervalMs - milliseconds of delay between updates.
+ */
+NetSimTable.prototype.setPollingInterval = function (intervalMs) {
+  this.pollingInterval_ = intervalMs;
+};
+
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
-  if (Date.now() - this.lastFullUpdateTime_ > POLLING_DELAY_MS) {
+  var now = Date.now();
+  if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
+    this.lastFullUpdateTime_ = now;
     this.readAll(function () {});
   }
 };

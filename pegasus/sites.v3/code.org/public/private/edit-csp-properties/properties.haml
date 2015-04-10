@@ -1,0 +1,76 @@
+---
+layout: none
+theme: none
+---
+
+:scss
+  .properties {
+    table {
+      width: 850px; 
+      table-layout: auto;
+    }
+    th {
+      padding: 10px;
+      background-color: #ccc;
+      text-align: left;
+    }
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    input {
+      width: 100%;
+    }
+    .name {
+      font-size: 1.5em;
+    }
+  }
+
+  .level-buttons {
+    margin: 20px 5px;
+  }
+
+%div
+  %h2
+    Key/Value pairs
+
+  %table.properties
+    %colgroup
+      %col{width: "200"}
+      %col{width: "200"}
+      %col{width: "250"}
+    %tr
+      %th
+        key
+      %th
+        value
+      %th
+    %tr{"ng-repeat" => "key in keys"}
+      %td
+        %span
+          {{ key }}
+      %td
+        %span{"ng-hide" => "editing[key]"}
+          {{ properties[key] }}
+        %span{"ng-show" => "editing[key]"}
+          %input{"ng-model" => "properties[key]", type: "text"}/
+      %td
+        %button.btn.btn-default{"ng-click" => "editing[key] = true", "ng-hide" => "editing[key]"} Edit
+        %button.btn.btn-primary{"ng-click" => "saveProperty(key)", "ng-show" => "editing[key]"} Save
+        %button.btn.btn-danger{"ng-click" => "deleteProperty(key)"} Delete
+    %tr
+      %td
+        %span{"ng-show" => "editingNewProperty"}
+          %input{"ng-model" => "newKey", type: "text"}/
+      %td
+        %span{"ng-show" => "editingNewProperty"}
+          %input{"ng-model" => "newValue", type: "text"}/
+      %td
+        %button.btn.btn-primary{"ng-click" => "editingNewProperty = true", "ng-hide" => "editingNewProperty"} Add
+        %button.btn.btn-primary{"ng-click" => "saveNewProperty()", "ng-show" => "editingNewProperty"} Save
+        %button.btn.btn-danger{"ng-click" => "clearNewProperty()", "ng-show" => "editingNewProperty"} Delete
+        
+  %h3 Debug view of key/value pairs:
+  %pre{"ng-model" => "properties"}
+    {{ properties | json }}
+

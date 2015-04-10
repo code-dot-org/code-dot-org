@@ -1,6 +1,6 @@
 def only_one_running?(script)
   pidfile = "#{File.expand_path(script)}.pid"
-  if File.exists?(pidfile)
+  if File.exist?(pidfile)
     oldpid = File.read(pidfile).to_i
     # does that process exist?
     exists = true

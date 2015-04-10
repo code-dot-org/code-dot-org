@@ -5,13 +5,12 @@ require 'yaml'
 # Authentication instructions here:
 # https://github.com/google/google-api-ruby-client-samples/tree/master/service_account#setup-authentication
 #
-# After setting up authentication, provide the file 'ga_config.yml' with the following keys (example values below):
-#   service_account_email: xxx-abcdef@developer.gserviceaccount.com
-#   key_file: ga_api_key.p12
-#   key_secret: notasecret
-#   profileID: 01234567
-#   application_name: cdo-ga-analytics
-#   application_version: 0.0.1
+# After setting up authentication, provide the following CDO.* attributes (example values below):
+#   CDO.ga_service_account_email: xxx-abcdef@developer.gserviceaccount.com
+#   CDO.ga_api_key: ABCDEF123456 [Base64-encoded pkcs12 key file]
+#   CDO.ga_api_secret: notasecret
+#   CDO.ga_profile_id: 01234567 [this is the "View ID", not the "Account ID"]
+
 class GAClient
 # Modified from https://github.com/google/google-api-ruby-client-samples/blob/master/service_account/analytics.rb
   API_VERSION = 'v3'
@@ -43,23 +42,20 @@ class GAClient
       return [@@client, @@analytics]
     end
 
-    ## Read app credentials from a file
-    opts = YAML.load_file(File.join(__dir__, 'ga_config.yml'))
-
     ## Update these to match your own apps credentials in the ga_config.yml file
-    service_account_email = opts['service_account_email']  # Email of service account
-    key_file = File.join(__dir__, opts['key_file'])        # File containing your private key
-    key_secret = opts['key_secret']                        # Password to unlock private key
-    @@profile_id = opts['profileID'].to_s                    # Analytics profile ID.
+    service_account_email = CDO.ga_service_account_email   # Email of service account
+    pkcs12_key = Base64.strict_decode64(CDO.ga_api_key)     # private key
+    key_secret = CDO.ga_api_secret                         # Password to unlock private key
+    @@profile_id = CDO.ga_profile_id.to_s                   # Analytics profile ID.
 
 
 
     @@client = Google::APIClient.new(
-        :application_name => opts['application_name'],
-        :application_version => opts['application_version'])
+        :application_name => 'cdo-ga-analytics',
+        :application_version => '0.0.1')
 
     ## Load our credentials for the service account
-    signing_key = Google::APIClient::KeyUtils.load_from_pkcs12(key_file, key_secret)
+    signing_key = Google::APIClient::KeyUtils.load_from_pkcs12(pkcs12_key, key_secret)
 
     @@client.authorization = Signet::OAuth2::Client.new(
         :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',

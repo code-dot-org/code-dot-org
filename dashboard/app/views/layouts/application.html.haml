@@ -1,6 +1,5 @@
 !!! 5
-- show_footer = !(@share && browser.mobile?) && !@embed
-- show_header = !(@embed)
+- show_footer = !@no_footer_puzzle && !(@share && browser.mobile?) && !@embed
 %html{dir: locale_dir}
   %head
     %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
@@ -10,7 +9,6 @@
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    = javascript_include_tag '//cdn.optimizely.com/js/400912536.js' if Rails.env.production?
     = csrf_meta_tags
     = yield :head
     = render partial: 'layouts/analytics'
@@ -19,7 +17,7 @@
       = render partial: 'layouts/age_interstitial'
 
     .wrapper{style: ('background-color: #ffffff' if @embed)}
-      = render partial: 'layouts/header' if show_header
+      = render partial: 'layouts/header' unless @embed
       - page = yield
       - if @full_width
         .full_container{style: ('padding: 0px;' if @no_padding)}
@@ -31,7 +29,7 @@
       - if show_footer
         .push
 
-    - if show_footer 
+    - if show_footer
       = render partial: 'layouts/footer'
 
     = yield :body_scripts

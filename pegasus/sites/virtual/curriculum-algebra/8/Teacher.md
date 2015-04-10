@@ -1,40 +1,29 @@
 ---
-title: Eval Fast Functions
+title: Composite Functions
 view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg8'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 8, :unplugged=>false, :title=> 'Eval: Fast Functions',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-
-In the past lessons students have defined Variables - which allows students to easily write expressions that refer to the same value repeatedly. In this stage students will write simple functions that, like variables, allow students to abstract out repetitions elements of their programs.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
 ## Teaching Summary
 ### **Getting Started**
  
-1) [Introduction](#GetStarted)  
+1) [Vocabulary](#Vocab)<br/>
+2) [Introduction](#GetStarted)  
 
-### **Activity: Eval Fast Functions**  
+### **Activity: Composite Functions**  
 
 2) [Online Puzzles](#Activity1)
 
 [/summary]
-
-## Lesson Objectives 
-### Students will:
-
-- Decompose existing functions
-- Write contracts that describe functions
-
-[/together]
 
 [together]
 
@@ -43,11 +32,15 @@ In the past lessons students have defined Variables - which allows students to e
 ## Getting Started
 
 
-### <a name="GetStarted"></a> 1) Introduction
+### <a name="Vocab"></a> 1) Vocabulary
+This lesson has one new and important word:<br/>
 
-Defining a _value_ is helpful when a program has lots of identical expressions. Sometimes, however, a program has expressions that aren’t identical, but are just _very similar_. A program that has fifty solid, green triangles can be simplified by defining a single value, _as long as they are all the same size_. But what if a program has fifty green triangles of different sizes?
+- **Parameter** - A value or expression belonging to the domain.
+### <a name="GetStarted"></a> 2) Introduction
 
-Think about the Image functions you have already used, like star and circle. They take inputs and produce images. Similarly, we might want a green-triangle function that takes the size as an input and produces a green triangle. The programming language doesn’t provide this function, but it does let you define your own functions. We want to define our own function (let’s call it gt, for green triangle) that takes in a Number and produces a solid green triangle of whatever size we want. For example:
+Defining a _value_ is helpful when a program has lots of identical expressions. Sometimes, however, a program has expressions that aren’t identical, but are just _very similar_. A program that has fifty solid, green triangles can be simplified by defining a single value, _as long as they are all the same size_. But what if a program has fifty solid, green triangles of different sizes?
+
+Think about the Image functions you have already used, like star and circle. They take inputs and produce images. Similarly, we might want a green-triangle function that takes the size as an input and produces a green triangle. The programming language doesn’t provide this function, but it does let you define your own functions. We want to define our own function (let’s call it gt, for green triangle) that takes in a Number as the size parameter and produces a solid green triangle of whatever size we want. For example:
 <img src="gtShortcuts.png" style="width: 100%" />
 and so on...
 
@@ -55,43 +48,11 @@ and so on...
 
 [together]
 
-## Activity: Eval Fast Functions
+## Activity: Composite Functions
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-In this stage you'll define simple functions. Head to [MSM stage 8](http://studio.code.org/s/algebra/stage/8/puzzle/1) in Code Studio to get started programming.
+In this stage you'll define simple functions. Head to [CS in Algebra stage 8](http://studio.code.org/s/algebra/stage/8/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
-
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
-- 7.EE.3-4: The student uses numerical and algebraic expressions and equations to solve real-life and mathematical problems.
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- F-BF.1-2: The student models a relationship between two quantities by building a function.
-- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
-- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>

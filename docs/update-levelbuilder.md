@@ -29,9 +29,16 @@ This .md file should only contain information which is specific to Code.org engi
 1. `git add --all dashboard`
 1. `git commit -m "levelbuilder changes committed by YOUR NAME HERE"`
 1. `git push`
-1. On GitHub, open a pull request from `levelbuilder` into `staging`.
+1. On GitHub, open a pull request from `levelbuilder` into `staging`. link: https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder
 
 # Did it break?
+
+## Open issues and workarounds:
+
+- Updating English-language strings from .script file doesn't automatically update localized strings ([#82514628](https://www.pivotaltracker.com/story/show/82514628)). Workarounds:
+ 1. After updating the description in the .script file, delete the entry for the script in scripts.en.yml, then run rake seed:scripts (or rake seed:all.
+ 1. Modify the entry in scripts.en.yml directly to update description text (you don't even need to modify the text in the .script file).
+- Renaming a level in LB keeps the old .level file around ([#78597388](https://www.pivotaltracker.com/story/show/78597388)). Workaround: Manually delete the old level after rename.
 
 ## Record not found
 
@@ -70,6 +77,12 @@ To fix:
 ````
 > cd dashboard
 > rake seed:all FORCE_CUSTOM_LEVELS=1
+````
+
+If you also need to rebuild levelbuilder:
+````
+> cd ..
+> touch build-started
 ````
 
 (you may have to remove the .seeded file as above also).

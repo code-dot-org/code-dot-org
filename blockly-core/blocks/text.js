@@ -39,7 +39,7 @@ Blockly.Blocks.text = {
         .appendTitle(new Blockly.FieldTextInput(''), 'TEXT')
         .appendTitle(new Blockly.FieldImage(
               Blockly.assetUrl('media/quote1.png'), 12, 12));
-    this.setOutput(true, 'String');
+    this.setOutput(true, Blockly.BlockValueType.STRING);
     this.setTooltip(Blockly.Msg.TEXT_TEXT_TOOLTIP);
   }
 };
@@ -52,7 +52,7 @@ Blockly.Blocks.text_join = {
     this.appendValueInput('ADD0')
         .appendTitle(Blockly.Msg.TEXT_JOIN_TITLE_CREATEWITH);
     this.appendValueInput('ADD1');
-    this.setOutput(true, 'String');
+    this.setOutput(true, Blockly.BlockValueType.STRING);
     this.setMutator(new Blockly.Mutator(['text_create_join_item']));
     this.setTooltip(Blockly.Msg.TEXT_JOIN_TOOLTIP);
     this.itemCount_ = 2;
@@ -203,7 +203,7 @@ Blockly.Blocks.text_length = {
     this.interpolateMsg(Blockly.Msg.TEXT_LENGTH_TITLE,
                         ['VALUE', ['String', 'Array'], Blockly.ALIGN_RIGHT],
                         Blockly.ALIGN_RIGHT);
-    this.setOutput(true, 'Number');
+    this.setOutput(true, Blockly.BlockValueType.NUMBER);
     this.setTooltip(Blockly.Msg.TEXT_LENGTH_TOOLTIP);
   }
 };
@@ -216,7 +216,7 @@ Blockly.Blocks.text_isEmpty = {
     this.interpolateMsg(Blockly.Msg.TEXT_ISEMPTY_TITLE,
                         ['VALUE', ['String', 'Array'], Blockly.ALIGN_RIGHT],
                         Blockly.ALIGN_RIGHT);
-    this.setOutput(true, 'Boolean');
+    this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
     this.setTooltip(Blockly.Msg.TEXT_ISEMPTY_TOOLTIP);
   }
 };
@@ -229,12 +229,12 @@ Blockly.Blocks.text_indexOf = {
          [Blockly.Msg.TEXT_INDEXOF_OPERATOR_LAST, 'LAST']];
     this.setHelpUrl(Blockly.Msg.TEXT_INDEXOF_HELPURL);
     this.setColour(160);
-    this.setOutput(true, 'Number');
+    this.setOutput(true, Blockly.BlockValueType.NUMBER);
     this.appendValueInput('VALUE')
-        .setCheck('String')
+        .setCheck(Blockly.BlockValueType.STRING)
         .appendTitle(Blockly.Msg.TEXT_INDEXOF_INPUT_INTEXT);
     this.appendValueInput('FIND')
-        .setCheck('String')
+        .setCheck(Blockly.BlockValueType.STRING)
         .appendTitle(new Blockly.FieldDropdown(OPERATORS), 'END');
     if (Blockly.Msg.TEXT_INDEXOF_TAIL) {
       this.appendDummyInput().appendTitle(Blockly.Msg.TEXT_INDEXOF_TAIL);
@@ -255,9 +255,9 @@ Blockly.Blocks.text_charAt = {
          [Blockly.Msg.TEXT_CHARAT_RANDOM, 'RANDOM']];
     this.setHelpUrl(Blockly.Msg.TEXT_CHARAT_HELPURL);
     this.setColour(160);
-    this.setOutput(true, 'String');
+    this.setOutput(true, Blockly.BlockValueType.STRING);
     this.appendValueInput('VALUE')
-        .setCheck('String')
+        .setCheck(Blockly.BlockValueType.STRING)
         .appendTitle(Blockly.Msg.TEXT_CHARAT_INPUT_INTEXT);
     this.appendDummyInput('AT');
     this.setInputsInline(true);
@@ -285,7 +285,7 @@ Blockly.Blocks.text_charAt = {
     this.removeInput('ORDINAL', true);
     // Create either a value 'AT' input or a dummy input.
     if (isAt) {
-      this.appendValueInput('AT').setCheck('Number');
+      this.appendValueInput('AT').setCheck(Blockly.BlockValueType.NUMBER);
       if (Blockly.Msg.ORDINAL_NUMBER_SUFFIX) {
         this.appendDummyInput('ORDINAL')
             .appendTitle(Blockly.Msg.ORDINAL_NUMBER_SUFFIX);
@@ -328,7 +328,7 @@ Blockly.Blocks.text_getSubstring = {
     this.setHelpUrl(Blockly.Msg.TEXT_GET_SUBSTRING_HELPURL);
     this.setColour(160);
     this.appendValueInput('STRING')
-        .setCheck('String')
+        .setCheck(Blockly.BlockValueType.STRING)
         .appendTitle(Blockly.Msg.TEXT_GET_SUBSTRING_INPUT_IN_TEXT);
     this.appendDummyInput('AT1');
     this.appendDummyInput('AT2');
@@ -337,7 +337,7 @@ Blockly.Blocks.text_getSubstring = {
           .appendTitle(Blockly.Msg.TEXT_GET_SUBSTRING_TAIL);
     }
     this.setInputsInline(true);
-    this.setOutput(true, 'String');
+    this.setOutput(true, Blockly.BlockValueType.STRING);
     this.updateAt(1, true);
     this.updateAt(2, true);
     this.setTooltip(Blockly.Msg.TEXT_GET_SUBSTRING_TOOLTIP);
@@ -365,7 +365,7 @@ Blockly.Blocks.text_getSubstring = {
     this.removeInput('ORDINAL' + n, true);
     // Create either a value 'AT' input or a dummy input.
     if (isAt) {
-      this.appendValueInput('AT' + n).setCheck('Number');
+      this.appendValueInput('AT' + n).setCheck(Blockly.BlockValueType.NUMBER);
       if (Blockly.Msg.ORDINAL_NUMBER_SUFFIX) {
         this.appendDummyInput('ORDINAL' + n)
             .appendTitle(Blockly.Msg.ORDINAL_NUMBER_SUFFIX);
@@ -410,9 +410,9 @@ Blockly.Blocks.text_changeCase = {
     this.setHelpUrl(Blockly.Msg.TEXT_CHANGECASE_HELPURL);
     this.setColour(160);
     this.appendValueInput('TEXT')
-        .setCheck('String')
+        .setCheck(Blockly.BlockValueType.STRING)
         .appendTitle(new Blockly.FieldDropdown(OPERATORS), 'CASE');
-    this.setOutput(true, 'String');
+    this.setOutput(true, Blockly.BlockValueType.STRING);
     this.setTooltip(Blockly.Msg.TEXT_CHANGECASE_TOOLTIP);
   }
 };
@@ -427,9 +427,9 @@ Blockly.Blocks.text_trim = {
     this.setHelpUrl(Blockly.Msg.TEXT_TRIM_HELPURL);
     this.setColour(160);
     this.appendValueInput('TEXT')
-        .setCheck('String')
+        .setCheck(Blockly.BlockValueType.STRING)
         .appendTitle(new Blockly.FieldDropdown(OPERATORS), 'MODE');
-    this.setOutput(true, 'String');
+    this.setOutput(true, Blockly.BlockValueType.STRING);
     this.setTooltip(Blockly.Msg.TEXT_TRIM_TOOLTIP);
   }
 };
@@ -460,9 +460,9 @@ Blockly.Blocks.text_prompt = {
     this.setColour(160);
     var dropdown = new Blockly.FieldDropdown(TYPES, function(newOp) {
       if (newOp == 'NUMBER') {
-        thisBlock.outputConnection.setCheck('Number');
+        thisBlock.outputConnection.setCheck(Blockly.BlockValueType.NUMBER);
       } else {
-        thisBlock.outputConnection.setCheck('String');
+        thisBlock.outputConnection.setCheck(Blockly.BlockValueType.STRING);
       }
     });
     this.appendDummyInput()
@@ -472,7 +472,7 @@ Blockly.Blocks.text_prompt = {
         .appendTitle(new Blockly.FieldTextInput(''), 'TEXT')
         .appendTitle(new Blockly.FieldImage(
               Blockly.assetUrl('media/quote1.png'), 12, 12));
-    this.setOutput(true, 'String');
+    this.setOutput(true, Blockly.BlockValueType.STRING);
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
     this.setTooltip(function() {

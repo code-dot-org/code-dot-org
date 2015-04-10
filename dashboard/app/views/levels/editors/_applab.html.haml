@@ -1,0 +1,12 @@
+.field
+  = f.label :slider_speed, 'Slider speed'
+  %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
+  = f.number_field :slider_speed, :step => 0.1
+.field
+  = f.label :app_width
+  %p Integer representing the width of the app in pixel coordinates. Default is 320.
+  = f.number_field :app_width
+.field
+  = f.label :app_height
+  %p Integer representing the height of the app in pixel coordinates. Default is 480.
+  = f.number_field :app_height

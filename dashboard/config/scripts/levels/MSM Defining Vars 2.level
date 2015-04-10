@@ -14,22 +14,31 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "instructions": "If we wanted to make fifty green triangles, it would be a pain to repeat that block of code 50 times. Let's create a variable called \"my-shape\" and put the code for a 50 pixel solid green triangle inside."
-  }
+    "instructions": "If we wanted to make fifty green triangles, it would be a pain to repeat that block of code 50 times. Let's create a variable called \"my-shape\" and put the code for a 50 pixel solid green triangle inside.",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"MSM Defining Vars 2_callout1\",\r\n  \"callout_text\": \"Click \\\"edit\\\" to open the function editor to update the function\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": 15\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"right top\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "6e56bed7cf2652b31d440d27e2fed5d4"
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_definition" inline="false" uservisible="false">
+        <block type="functional_definition" inline="false">
           <mutation>
-            <outputtype>image</outputtype>
+            <outputtype>Image</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">my-shape</title>
         </block>
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="functional_call" movable="false">
+            <block type="functional_call" id="callout_here">
               <mutation name="my-shape"/>
             </block>
           </functional_input>

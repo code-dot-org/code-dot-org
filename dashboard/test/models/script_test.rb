@@ -9,25 +9,25 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'create script from DSL' do
-    scripts, _ = Script.setup([], [@script_file])
+    scripts, _ = Script.setup([@script_file])
     script = scripts[0]
     assert_equal 'Level 1', script.levels[0].name
     assert_equal 'Stage2', script.script_levels[3].stage.name
   end
 
   test 'should not change Script[Level] ID when reseeding' do
-    scripts, _ = Script.setup([], [@script_file])
+    scripts, _ = Script.setup([@script_file])
     script = scripts[0]
     script_id = script.script_levels[4].script_id
     script_level_id = script.script_levels[4].id
 
-    scripts,_ = Script.setup([], [@script_file])
+    scripts,_ = Script.setup([@script_file])
     assert_equal script_id, scripts[0].script_levels[4].script_id
     assert_equal script_level_id, scripts[0].script_levels[4].id
   end
 
   test 'should not change Script ID when changing script levels and options' do
-    scripts,_ = Script.setup([], [@script_file])
+    scripts,_ = Script.setup([@script_file])
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
@@ -44,13 +44,13 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should remove empty stages' do
-    scripts,_ = Script.setup([], [@script_file])
+    scripts,_ = Script.setup([@script_file])
     assert_equal 2, scripts[0].stages.count
 
     # Reupload a script of the same filename / name, but lacking the second stage.
     stage = scripts[0].stages.last
     script_file_empty_stage = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture.script")
-    scripts,_ = Script.setup([], [script_file_empty_stage])
+    scripts,_ = Script.setup([script_file_empty_stage])
     assert_equal 1, scripts[0].stages.count
     assert_not Stage.exists?(stage.id)
   end
@@ -58,7 +58,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'should remove empty stages, reordering stages' do
     script_file_3_stages = File.join(self.class.fixture_path, "test_fixture_3_stages.script")
     script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture_3_stages.script")
-    scripts,_ = Script.setup([], [script_file_3_stages])
+    scripts,_ = Script.setup([script_file_3_stages])
     assert_equal 3, scripts[0].stages.count
     first = scripts[0].stages[0]
     second = scripts[0].stages[1]
@@ -71,7 +71,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 3, third.position
 
     # Reupload a script of the same filename / name, but lacking the middle stage.
-    scripts,_ = Script.setup([], [script_file_middle_missing_reversed])
+    scripts,_ = Script.setup([script_file_middle_missing_reversed])
     assert_equal 2, scripts[0].stages.count
     assert_not Stage.exists?(second.id)
 
@@ -133,14 +133,14 @@ class ScriptTest < ActiveSupport::TestCase
     first_stage = create(:stage, script: script, position: 1)
     first_stage_last_level = create(:script_level, script: script, stage: first_stage, position: 1)
     second_stage = create(:stage, script: script, position: 2)
-    second_stage_first_level = create(:script_level, script: script, stage: second_stage, position:1)
-    second_stage_last_level = create(:script_level, script: script, stage: second_stage, position:2)
+    second_stage_first_level = create(:script_level, script: script, stage: second_stage, position: 1)
+    create(:script_level, script: script, stage: second_stage, position: 2)
 
     assert_equal second_stage_first_level, first_stage_last_level.next_progression_level
   end
 
   test 'script_level positions should reset' do
-    scripts,_ = Script.setup([], [@script_file])
+    scripts,_ = Script.setup([@script_file])
     first = scripts[0].stages[0].script_levels[0]
     second = scripts[0].stages[0].script_levels[1]
     assert_equal 1, first.position
@@ -148,13 +148,13 @@ class ScriptTest < ActiveSupport::TestCase
     promoted_level = second.level
     script_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture.script")
 
-    scripts,_ = Script.setup([], [script_file_remove_level])
+    scripts,_ = Script.setup([script_file_remove_level])
     new_first_script_level = ScriptLevel.where(script: scripts[0], level: promoted_level).first
     assert_equal 1, new_first_script_level.position
   end
 
   test 'script import is idempotent w.r.t. positions and count' do
-    scripts,_ = Script.setup([], [@script_file])
+    scripts,_ = Script.setup([@script_file])
     original_count = ScriptLevel.count
     first = scripts[0].stages[0].script_levels[0]
     second = scripts[0].stages[0].script_levels[1]
@@ -162,7 +162,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
-    scripts,_ = Script.setup([], [@script_file])
+    scripts,_ = Script.setup([@script_file])
     first = scripts[0].stages[0].script_levels[0]
     second = scripts[0].stages[0].script_levels[1]
     third = scripts[0].stages[0].script_levels[2]
@@ -174,12 +174,12 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'unplugged in script' do
     @script_file = File.join(self.class.fixture_path, 'test_unplugged.script')
-    scripts, _ = Script.setup([], [@script_file])
+    scripts, _ = Script.setup([@script_file])
     assert_equal 'Unplugged', scripts[0].script_levels[1].level['type']
   end
 
   test 'blockly level in custom script' do
-    script_data, i18n = ScriptDSL.parse(
+    script_data, _ = ScriptDSL.parse(
                      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
 
     script = Script.add_script({name: 'test script'},
@@ -190,14 +190,17 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab artist course1 course2 course3 course4 frozen hourofcode}
+    visible_scripts = %w{20-hour flappy playlab infinity artist course1 course2 course3 course4 frozen hourofcode algebra}.
+      map{|s| Script.find_by_name(s)}
+
     visible_scripts.each do |s|
-      assert !Script.find_by_name(s).hidden?, "#{s} is hidden when it should not be"
+      assert !s.hidden?, "#{s.name} is hidden when it should not be"
     end
 
-    hidden_scripts = %w{edit-code events jigsaw step msm test course4pre netsim} + ['Hour of Code']
+    # all other scripts are hidden
+    hidden_scripts = Script.all - visible_scripts
     hidden_scripts.each do |s|
-      assert Script.find_by_name(s).hidden?, "#{s} is not hidden when it should be"
+      assert s.hidden?, "#{s.name} is not hidden when it should be"
     end
   end
 
@@ -210,7 +213,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.script_cache_to_cache # in test this is in non-distributed memory
 
     Script.script_cache_from_cache # we do some nonsense here to make sure models are loaded, which cause db access in test env
-    
+
     Script.connection.disconnect!     # we don't need no stinkin db
 
     assert_equal 'Flappy', Script.get_from_cache('flappy').script_levels[3].level.game.name

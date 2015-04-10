@@ -12,6 +12,7 @@
     "embed": "false",
     "instructions": "Create your own story or game! Your code is saved as a project you can return to at any time.",
     "is_k1": "false",
+    "is_project_level": "true",
     "skip_instructions_popup": "true",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
@@ -33,9 +34,17 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "maze_data": null,
-    "callout_json": "[\r\n  {\"localization_key\":\"New Play Lab Project_callout1\",\"callout_text\":\"Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program\",\"element_id\":\"#when_run\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":-75,\"y\":100},\"my\":\"left center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"New Play Lab Project_callout2\",\"callout_text\":\"Hit \\\"Run\\\" to try your program\",\"element_id\":\"#runButton\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":15,\"y\":null},\"my\":\"bottom left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]"
-  }
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"New Play Lab Project_callout1\",\r\n  \"callout_text\": \"Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program\",\r\n  \"element_id\": \"#when_run\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": -75,\r\n     \"y\": 100\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"New Play Lab Project_callout2\",\r\n  \"callout_text\": \"Hit \\\"Run\\\" to save and run your program\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": 15,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top left\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "min_workspace_height": "1250",
+    "maze_data": null
+  },
+  "md5": "8625801c74d54f66de9edfd9989e7c51"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -217,6 +226,18 @@
             <title name="TITLE">type title here</title>
             <title name="TEXT">type text here</title>
           </block>
+          <block type="studio_setSpriteEmotion">
+            <title name="SPRITE">0</title>
+            <title name="VALUE">0</title>
+          </block>
+          <block type="studio_vanishSprite">
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_changeScore"/>
         </category>
         <category name="Events">
           <block type="studio_whenSpriteCollided">

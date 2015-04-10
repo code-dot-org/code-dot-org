@@ -7,14 +7,20 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Can you add to this code so that it calculates how many hours there are in \"age\" years?",
+    "instructions": "Can you add to this code so that it uses the \"age\" variable to calculate age in hours?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
-    "free_play": "false"
+    "free_play": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false"
   }
 }]]></config>
   <blocks>

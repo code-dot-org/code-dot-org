@@ -8,6 +8,18 @@
   </div>
 <% } -%>
 
+<% if (data.cancel) { -%>
+<button id="again-button">
+    <%= msg.dialogCancel() %>
+</button>
+<% } -%>
+
+<% if (data.clearPuzzle) { -%>
+<button id="continue-button" class="launch" style="float: right">
+    <%= msg.clearPuzzle() %>
+</button>
+<% } -%>
+
 <% if (data.previousLevel) { -%>
   <button id="back-button" class="launch">
     <%= msg.backToPreviousLevel() %>
@@ -18,7 +30,7 @@
   <% if (data.isK1 && !data.freePlay) { -%>
     <div id="again-button" class="launch arrow-container arrow-left">
       <div class="arrow-head"><img src="<%= data.assetUrl('media/tryagain-arrow-head.png') %>" alt="Arrowhead" width="67" height="130"/></div>
-      <div class="arrow-text"><%= msg.tryAgain() %></div>
+      <div class="arrow-text"><%= data.tryAgain %></div>
     </div>
   <% } else { -%>
     <% if (data.hintRequestExperiment === "left") { -%>
@@ -26,18 +38,18 @@
         <%= msg.hintRequest() %>
       </button>
       <button id="again-button" class="launch">
-        <%= msg.tryAgain() %>
+        <%= data.tryAgain %>
       </button>
     <% } else if (data.hintRequestExperiment == "right") { -%>
       <button id="again-button" class="launch">
-        <%= msg.tryAgain() %>
+        <%= data.tryAgain %>
       </button>
       <button id="hint-request-button" class="launch">
         <%= msg.hintRequest() %>
       </button>
     <% } else { -%>
       <button id="again-button" class="launch">
-        <%= msg.tryAgain() %>
+        <%= data.tryAgain %>
       </button>
     <% } -%>
   <% } -%>

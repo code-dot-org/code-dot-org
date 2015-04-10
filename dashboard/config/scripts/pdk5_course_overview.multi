@@ -1,0 +1,15 @@
+name 'PDK5 Course Overview'
+title 'Overview of K-5 Courses'
+
+markdown <<MARKDOWN
+We believe that every student should have the opportunity to learn computer science, and the reasons are far more varied than simply having a strong resume. Critical thinking, logic, persistence, and creativity help students excel at problem-solving in all subject areas, no matter what their age.
+
+At Code.org, we recognize that this benefit begins early. That's why we have partnered with Thinkersmith and Common Sense Media to develop an exciting and engaging curriculum that allows students to explore the limitless world of technology, beginning in elementary school.
+
+Watch this video to understand our offerings of computer science courses for elementary school students.
+
+<iframe width="640" height="390" src="https://www.youtube.com/embed/0OJlxaOIQMA" frameborder="0" allowfullscreen></iframe>
+MARKDOWN
+
+question 'Are you ready to move on?'
+right 'Yes'

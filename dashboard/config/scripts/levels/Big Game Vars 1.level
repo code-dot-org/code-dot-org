@@ -28,7 +28,16 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n  {\"localization_key\":\"big_game_finish\",\"callout_text\":\"Click the finish button when you're ready to move to the next level.\",\"element_id\":\"#finish\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"big_game_finish\",\r\n  \"callout_text\": \"Click the finish button when you're ready to move to the next level.\",\r\n  \"element_id\": \"#finish\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "maze_data": null,
+    "custom_game_type": "Big Game",
+    "min_workspace_height": "1500"
   }
 }]]></config>
   <blocks/>

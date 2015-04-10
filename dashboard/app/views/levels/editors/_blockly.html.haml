@@ -1,9 +1,14 @@
 :css
-  textarea { width: 100% }
+  textarea {
+    width: 100%
+  }
 
-- content_for(:head) do
-  = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
-  = javascript_include_tag 'editor/blockly_editor'
+  button {
+    font-size: 100%;
+  }
+
+.field
+  = f.label :edit_code, @level.game.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
 .field
   = f.label :instructions
   = f.text_area :instructions, placeholder: 'Instructions', rows: 4
@@ -27,8 +32,22 @@
   = f.label :default_num_example_blocks, 'Default # of example blocks in contract editor'
   = f.number_field :default_num_example_blocks
 .field
+  = f.label :disable_examples, 'Hide examples section in contract editor'
+  = boolean_check_box f, :disable_examples
+.field
   = f.label :open_function_definition, 'Auto-open function definition'
   = f.text_field :open_function_definition, placeholder: 'name of function to open'
+%table.contract-editor-config
+  %tr
+    %th Section
+    %th Highlight
+    %th Collapse
+  -%w(contract examples definition).each_with_index do |section, i|
+    %tr
+      %td #{i + 1}. #{section.titleize}
+      %td= boolean_check_box f, "#{section}_highlight".to_sym
+      %td= boolean_check_box f, "#{section}_collapse".to_sym
+
 .field
   = f.label :disable_param_editing, 'Enable param editing in function blocks'
   = f.check_box :disable_param_editing, {}, 'false', 'true'
@@ -44,21 +63,34 @@
     = f.radio_button :scrollbars, true
     False:
     = f.radio_button :scrollbars, false
+- if @level.game.uses_droplet?
+  .field
+    = f.label :code_functions, 'Edit Droplet Palette'
+    = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: JSON.pretty_generate(@level.code_functions)
+    :javascript
+      codeMirror('code_functions', 'javascript');
+- else
+  .field
+    = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
+    = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+    :javascript
+      codeMirror('toolbox_blocks', 'xml');
 .field
-  = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-  = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+  - if @level.game.uses_droplet?
+    = f.label :start_blocks, 'Edit Starting JavaScript Program'
+  - else
+    = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
+  = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.game.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
   :javascript
-    codeMirror('toolbox');
+    codeMirror('start_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
-  = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-  = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.pretty_block('start')
-  :javascript
-    codeMirror('start');
-.field
-  = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
+  - if @level.game.uses_droplet?
+    = f.label :required_blocks, 'Edit Required Blocks'
+  - else
+    = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
   = f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
   :javascript
-    codeMirror('required');
+    codeMirror('required_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
   = f.label :ideal, 'Ideal block number'
   = f.number_field :ideal
@@ -69,81 +101,6 @@
   = f.label :step_speed, 'Step speed'
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
-
-.field.callouteditor
-  - (0...3).each do |x|
-    %label Callout #{x+1}
-
-    %div{class: "callouts#{x}"}
-      %table
-        %tr
-          %td Use callout?
-          %td Element ID
-          %td Localization Key
-          %td Callout text
-        %tr
-          %td
-            %input{class: "use_callout_#{x}", type: 'checkbox'}
-          %td
-            %input{class: "element_id_#{x}", type: 'text', placeholder: '#runButton'}          
-          %td
-            %input{class: "localization_key_#{x}", type: 'text', placeholder: 'level_name_callout1'}
-          %td{colspan: 3}
-            %input{class: "callout_text_#{x}", type: 'text', placeholder: 'Text of callout', style: "width: 97%"}
-        %tr
-          %td Hide qtip?
-          %td Qtip on callout
-          %td Qtip points to Element
-          %td X distance
-          %td Y distance
-          %td On function   
-        %tr    
-          %td
-            %input{class: "qtip_hide_#{x}", type: 'checkbox'}
-          %td
-            %select{class: "qtip_position_my_#{x}"}
-              %option{value: 'top left'} Top left
-              %option{value: 'top center'} Top center
-              %option{value: 'top right'} Top right
-              %option{value: 'right top'} Right top
-              %option{value: 'right center'} Right center
-              %option{value: 'right bottom'} Right bottom
-              %option{value: 'bottom right'} Bottom right
-              %option{value: 'bottom center'} Bottom center
-              %option{value: 'bottom left'} Bottom left
-              %option{value: 'left bottom'} Left bottom
-              %option{value: 'left center'} Left center
-              %option{value: 'left top'} Left top  
-          %td
-            %select{class: "qtip_position_at_#{x}"}
-              %option{value: 'top left'} Top left
-              %option{value: 'top center'} Top center
-              %option{value: 'top right'} Top right
-              %option{value: 'right top'} Right top
-              %option{value: 'right center'} Right center
-              %option{value: 'right bottom'} Right bottom
-              %option{value: 'bottom right'} Bottom right
-              %option{value: 'bottom center'} Bottom center
-              %option{value: 'bottom left'} Bottom left
-              %option{value: 'left bottom'} Left bottom
-              %option{value: 'left center'} Left center
-              %option{value: 'left top'} Left top  
-          %td
-            %input{class: "qtip_position_adjust_x_#{x}", type: 'number', style: 'width: 80px;'}
-          %td
-            %input{class: "qtip_position_adjust_y_#{x}", type: 'number', style: 'width: 80px;'}
-          %td
-            %input{class: "on_#{x}", type: 'text', placeholder: 'function_editor_opened'}
-    - unless x==2
-      %hr
-    
-
-.field
-  = f.label :callout_json
-  %div{style: '-webkit-user-select: text'}
-    %pre
-      = preserve "Example: [\n  {\"localization_key\": \"run\", \"callout_text\": \"Hit \"Run\" to try your program\", \"element_id\": \"#runButton\"},\n  {\"localization_key\": \"drag_blocks\", \"callout_text\": \"Drag a \"move\" block and snap it below the other block\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":60}},\n    \"style\": { \"classes\": \"no-tip\" }}\n  }\n]"
-  = f.text_area :callout_json, rows: 4
 - if @level.respond_to? :free_play
   .field
     = f.label :free_play, 'Free Play'
@@ -159,6 +116,10 @@
     = f.label :embed, 'Embed'
     %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
     = boolean_check_box f, :embed
+- if @level.respond_to? :coordinate_grid_background
+  .field
+    = f.label :coordinate_grid_background, 'Coordinate grid background'
+    = boolean_check_box f, :coordinate_grid_background
 .field
   = f.label :project_template_level_name, 'Project Template Level Name'
   %p What this does:
@@ -168,114 +129,23 @@
     %li autocreate a project that is shared with all levels with the same project template level
   %p (Leave blank if you do not want all of this)
   = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
+.field
+  = f.label :failure_message_override, 'Failure Message Override'
+  %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
+  = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
+-if @level.respond_to? :input_output_table
+  = f.label :input_output_table, 'Input/Output Table'
+  %p An array of tuples where each tuple is [input, output].
+  %p i.e. The table for f(x) = x - 5 might look like: [ [15, 10], [10, 5], [25, 20] ]
+  = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: @level.input_output_table
+  :javascript
+      codeMirror('input_output_table', 'javascript')
 -if @level.respond_to? :solution_blocks
   .field
-    = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
+    - if @level.game.uses_droplet?
+      = f.label :solution_blocks, 'Edit Solution Blocks'
+    - else
+      = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
     = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
     :javascript
-      codeMirror('solution');
-
-:javascript
-  // <![CDATA[
-    var callout_editor = CodeMirror.fromTextArea($('#level_callout_json').get(0), {
-      mode: 'javascript',
-      viewportMargin: Infinity,
-      matchBrackets: true
-    });
-
-    var callouts = callout_editor.getValue();
-
-    if (callouts.length > 0) {
-      var parsecallouts = JSON.parse(callouts);
-
-      for(var i=0; i<callouts.length; i++) {
-        if (parsecallouts[i]) {
-          $(".use_callout_" + i).prop("checked", true);
-          $(".localization_key_" + i).val(parsecallouts[i].localization_key);
-          $(".callout_text_" + i).val(parsecallouts[i].callout_text);
-          $(".element_id_" + i).val(parsecallouts[i].element_id);
-          $(".on_" + i).val(parsecallouts[i].on);
-          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
-            $(".qtip_position_my_" + i).val(parsecallouts[i].qtip_config.position.my);
-          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position))
-            $(".qtip_position_at_" + i).val(parsecallouts[i].qtip_config.position.at);
-          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position) && (parsecallouts[i].qtip_config.position.adjust))
-            $(".qtip_position_adjust_x_" + i).val(parsecallouts[i].qtip_config.position.adjust.x);
-          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.position) && (parsecallouts[i].qtip_config.position.adjust))
-            $(".qtip_position_adjust_y_" + i).val(parsecallouts[i].qtip_config.position.adjust.y);
-          if ((parsecallouts[i].qtip_config) && (parsecallouts[i].qtip_config.style) && (parsecallouts[i].qtip_config.style.classes) && (parsecallouts[i].qtip_config.style.classes == "no-tip"))
-            $(".qtip_hide_" + i).prop("checked", true);
-        }
-      }
-    }
-
-    var updated_callouts_0 = {};
-    var updated_callouts_1 = {};
-    var updated_callouts_2 = {};
-    var updated_callouts = [updated_callouts_0, updated_callouts_1, updated_callouts_2];
-
-    for(i=0; i<updated_callouts.length; i++) {
-      updated_callouts[i].localization_key = "";
-      updated_callouts[i].callout_text = "";
-      updated_callouts[i].element_id = "";
-      updated_callouts[i].on = "";
-      updated_callouts[i].qtip_config = {};
-      updated_callouts[i].qtip_config.position = {};
-      updated_callouts[i].qtip_config.position.adjust = {};
-      updated_callouts[i].qtip_config.style = {};
-
-      if ($('.localization_key_' + i).val().length > 0)
-        updated_callouts[i].localization_key = $('.localization_key_' + i).val();
-      if ($('.callout_text_' + i).val().length > 0)
-        updated_callouts[i].callout_text = $('.callout_text_' + i).val();
-      if ($('.element_id_' + i).val().length > 0)
-        updated_callouts[i].element_id = $('.element_id_' + i).val();
-      if ($('.on_' + i).val().length > 0)
-        updated_callouts[i].on = $('.on_' + i).val();
-      if ($('.qtip_position_my_' + i).val().length > 0)
-        updated_callouts[i].qtip_config.position.my = $('.qtip_position_my_' + i).val();
-      if ($('.qtip_position_at_' + i).val().length > 0)
-        updated_callouts[i].qtip_config.position.at = $('.qtip_position_at_' + i).val();
-      if ($('.qtip_position_adjust_x_' + i).val().length > 0)
-        updated_callouts[i].qtip_config.position.adjust.x = $('.qtip_position_adjust_x_' + i).val();
-      if ($('.qtip_position_adjust_y_' + i).val().length > 0)
-        updated_callouts[i].qtip_config.position.adjust.y = $('.qtip_position_adjust_y_' + i).val();
-      if ($(".qtip_hide_" + i).prop("checked") == true)
-        updated_callouts[i].qtip_config.style.classes = "no-tip";
-    }
-
-    $(".callouteditor input, .callouteditor select").change(function() {
-      for(i=0; i<updated_callouts.length; i++) {
-        updated_callouts[i].localization_key = $(".localization_key_" + i).val();
-        updated_callouts[i].callout_text = $(".callout_text_" + i).val();
-        updated_callouts[i].element_id = $(".element_id_" + i).val();
-        updated_callouts[i].on = $(".on_" + i).val();
-        updated_callouts[i].qtip_config.position.my = $(".qtip_position_my_" + i).val();
-        updated_callouts[i].qtip_config.position.at = $(".qtip_position_at_" + i).val();
-        updated_callouts[i].qtip_config.position.adjust.x = parseInt($(".qtip_position_adjust_x_" + i).val());
-        updated_callouts[i].qtip_config.position.adjust.y = parseInt($(".qtip_position_adjust_y_" + i).val());
-
-        if ($(".qtip_hide_" + i).prop("checked") == true)
-          updated_callouts[i].qtip_config.style.classes = "no-tip";
-        else
-          updated_callouts[i].qtip_config.style.classes = "";
-      }
-      
-      callout_editor.setValue("[\r")
-      if ($(".use_callout_0").prop("checked") == true) {
-        var stringified_callouts_0 = JSON.stringify(updated_callouts[0]);
-        callout_editor.replaceRange("  " + stringified_callouts_0 + "\r", CodeMirror.Pos(callout_editor.lastLine()));
-      }
-
-      if ($(".use_callout_1").prop("checked") == true) {
-        var stringified_callouts_1 = JSON.stringify(updated_callouts[1]);
-        callout_editor.replaceRange(",  " + stringified_callouts_1 + "\r", CodeMirror.Pos(callout_editor.lastLine()));
-      }
-
-      if ($(".use_callout_2").prop("checked") == true) {
-        var stringified_callouts_2 = JSON.stringify(updated_callouts[2]);
-        callout_editor.replaceRange(",  " + stringified_callouts_2 + "\r", CodeMirror.Pos(callout_editor.lastLine()));
-      }
-      callout_editor.replaceRange("]", CodeMirror.Pos(callout_editor.lastLine()));
-    })
-  // ]]>
+      codeMirror('solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');

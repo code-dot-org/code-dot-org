@@ -21,16 +21,23 @@ var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var BigGameLogic = require('./bigGameLogic');
+var RocketHeightLogic = require('./rocketHeightLogic');
+var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
+var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 
-if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
-  var rgbcolor = require('../canvg/rgbcolor.js');
-  var stackBlur = require('../canvg/StackBlur.js');
-  var canvg = require('../canvg/canvg.js');
-  var svgToDataUrl = require('../canvg/svg_todataurl');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  // Loading these modules extends SVGElement and puts canvg in the global
+  // namespace
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/canvg.js');
+  require('../canvg/svg_todataurl');
 }
 
 var Direction = constants.Direction;
@@ -70,15 +77,6 @@ var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
 // if we name a projectile class 'left' for example.
-
-var ProjectileClassNames = [
-  'blue_fireball',
-  'purple_fireball',
-  'red_fireball',
-  'purple_hearts',
-  'red_hearts',
-  'yellow_hearts',
-];
 
 var EdgeClassNames = [
   'top',
@@ -158,9 +156,11 @@ function loadLevel() {
     case 'Big Game':
       Studio.customLogic = new BigGameLogic(Studio);
       break;
-    case 'SamTheButterfly':
-      // Going forward, we may also want to move Sam the Butterfly logic
-      // into code
+    case 'Rocket Height':
+      Studio.customLogic = new RocketHeightLogic(Studio);
+      break;
+    case 'Sam the Bat':
+      Studio.customLogic = new SamBatLogic(Studio);
       break;
   }
 
@@ -232,6 +232,16 @@ var drawMap = function () {
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
     svg.appendChild(tile);
+  }
+
+  if (level.coordinateGridBackground) {
+    studioApp.createCoordinateGridBackground({
+      svg: 'svgStudio',
+      origin: 0,
+      firstLabel: 100,
+      lastLabel: 300,
+      increment: 100
+    });
   }
 
   if (Studio.spriteStart_) {
@@ -567,6 +577,20 @@ function callHandler (name, allowQueueExtension) {
   });
 }
 
+/**
+ * This is a little weird, but is effectively a way for us to call api code
+ * (i.e. the methods in studio/api.js) so that we can essentially simulate
+ * generated code. It does this by creating an event handler for the given name,
+ * calling the handler - which results in func being executed to generate a
+ * command queue - and then executing the command queue.
+ */
+Studio.callApiCode = function (name, func) {
+  registerEventHandler(Studio.eventHandlers, name, func);
+  // generate the cmdQueue
+  callHandler(name);
+  Studio.executeQueue(name);
+};
+
 Studio.onTick = function() {
   Studio.tickCount++;
 
@@ -686,9 +710,17 @@ Studio.onTick = function() {
 
     var isWalking = true;
 
-    // After 5 ticks of no movement, turn sprite forward
+    // After 5 ticks of no movement, turn sprite forward.
     if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
       Studio.sprite[i].dir = Direction.SOUTH;
+      isWalking = false;
+    }
+
+    // Also if the character has never moved, they are also not walking.
+    // Separate to the above case because we don't want to force them to
+    // face south in this case.  They are still allowed to face a different
+    // direction even if they've never walked.
+    if (Studio.sprite[i].lastMove === Infinity) {
       isWalking = false;
     }
 
@@ -837,8 +869,8 @@ function checkForCollisions() {
     for (j = 0; j < EdgeClassNames.length; j++) {
       executeCollision(i, EdgeClassNames[j]);
     }
-    for (j = 0; j < ProjectileClassNames.length; j++) {
-      executeCollision(i, ProjectileClassNames[j]);
+    for (j = 0; j < skin.ProjectileClassNames.length; j++) {
+      executeCollision(i, skin.ProjectileClassNames[j]);
     }
   }
 }
@@ -1023,14 +1055,15 @@ Studio.init = function(config) {
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
 
+  var showFinishButton = !level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: finishButtonFirstLine
+    finishButton: finishButtonFirstLine && showFinishButton
   });
   var extraControlsRow = require('./extraControlRows.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine
+    finishButton: !finishButtonFirstLine && showFinishButton
   });
 
   config.html = page({
@@ -1043,7 +1076,8 @@ Studio.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      inputOutputTable: level.inputOutputTable
     }
   });
 
@@ -1108,18 +1142,21 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = studioApp.assetUrl('media/promo.png');
 
-  // Disable "show code" button in feedback dialog and workspace.
+  // Disable "show code" button in feedback dialog and workspace if blockly.
   // Note - if turned back on, be sure it remains hidden when config.level.embed
-  config.enableShowCode = false;
+  config.enableShowCode = utils.valueOr(studioApp.editCode, false);
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
+  config.dropletConfig = dropletConfig;
 
   Studio.initSprites();
 
   studioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
-  dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+  if (finishButton) {
+    dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
+  }
 
   // pre-load images asynchronously
   // (to reduce the likelihood that there is a delay when images
@@ -1147,8 +1184,8 @@ var preloadBackgroundImages = function() {
 };
 
 var preloadProjectileImages = function() {
-  for (var i = 0; i < ProjectileClassNames.length; i++) {
-    preloadImage(skin[ProjectileClassNames[i]]);
+  for (var i = 0; i < skin.ProjectileClassNames.length; i++) {
+    preloadImage(skin[skin.ProjectileClassNames[i]]);
   }
 };
 
@@ -1202,6 +1239,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
 studioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
+  var svg = document.getElementById('svgStudio');
 
   // Soft buttons
   var softButtonCount = 0;
@@ -1219,6 +1257,10 @@ studioApp.reset = function(first) {
     var projectile = Studio.projectiles.pop();
     projectile.removeElement();
   }
+
+  // True if we should fail before execution, even if freeplay
+  Studio.preExecutionFailure = false;
+  Studio.message = null;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1291,8 +1333,6 @@ studioApp.reset = function(first) {
     }
   }
 
-  var svg = document.getElementById('svgStudio');
-
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
     goalAsset = skin[level.goalOverride.goal];
@@ -1336,7 +1376,8 @@ studioApp.runButtonClick = function() {
   Studio.startTime = new Date();
   Studio.execute();
 
-  if (level.freePlay && (!studioApp.hideSource || level.showFinish)) {
+  if (level.freePlay && !level.isProjectLevel &&
+      (!studioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -1356,13 +1397,15 @@ var displayFeedback = function() {
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
+      tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && (level.freePlay),
+      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      message: Studio.message,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
@@ -1462,7 +1505,7 @@ var registerHandlersWithMultipleSpriteParams =
                        blockParam2,
                        String(j));
     }
-    ProjectileClassNames.forEach(registerHandlersForClassName);
+    skin.ProjectileClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_actor');
@@ -1501,29 +1544,50 @@ var nativeGetCallback = function () {
 };
 
 /**
+ * Looks for failures that should prevent execution.
+ * @returns {boolean} True if we have a pre-execution failure
+ */
+Studio.checkForPreExecutionFailure = function () {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Studio.message = commonMsg.emptyFunctionalBlock();
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  if (studioApp.hasExtraTopBlocks()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the story
  */
 Studio.execute = function() {
-  var code;
   Studio.result = studioApp.UNSET;
   Studio.testResults = TestResults.NO_TESTS_RUN;
   Studio.waitingForReport = false;
   Studio.response = null;
-  var i;
-
-  if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
-    code += studioApp.editor.getValue();
-  }
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
+    if (Studio.checkForPreExecutionFailure()) {
+      return Studio.onPuzzleComplete();
+    }
+
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -1550,7 +1614,7 @@ Studio.execute = function() {
   studioApp.reset(false);
 
   if (level.editCode) {
-    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, null, 'Studio');
+    var codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += studioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
@@ -1570,9 +1634,10 @@ Studio.execute = function() {
 
 
       var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-      var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                     nativeGetCallback,
-                                                     null);
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: nativeGetCallback,
+      });
       interpreter.setProperty(scope,
                               'getCallback',
                               interpreter.createNativeFunction(wrapper));
@@ -1599,7 +1664,7 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function() {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (level.freePlay) {
+  } else if (level.freePlay && !Studio.preExecutionFailure) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -1612,7 +1677,10 @@ Studio.onPuzzleComplete = function() {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Studio.testResults = TestResults.FREE_PLAY;
+    if (!Studio.preExecutionFailure) {
+      Studio.testResults = TestResults.FREE_PLAY;
+    }
+    // If preExecutionFailure testResults should already be set
   } else {
     Studio.testResults = studioApp.getTestResults(levelComplete);
   }
@@ -1651,7 +1719,9 @@ Studio.onPuzzleComplete = function() {
     });
   };
 
-  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') { // don't try it if function is not defined
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
     document.getElementById('svgStudio').toDataURL("image/png", {
@@ -1780,6 +1850,16 @@ Studio.displaySprite = function(i, isWalking) {
   var xOffset, yOffset;
 
   if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
+
+    // One exception: don't show the walk sprite if we're already playing an explosion animation for
+    // that sprite.  (Ideally, we would show the sprite in place while explosion plays over the top,
+    // but this is not a common case for now and this keeps the change small.)
+    var explosion = document.getElementById('explosion' + i);
+    if (explosion && explosion.getAttribute('visibility') !== 'hidden') {
+      spriteWalkIcon.setAttribute('visibility', 'hidden');
+      return;
+    }
+
     // Show walk sprite, and hide regular sprite.
     spriteRegularIcon.setAttribute('visibility', 'hidden');
     spriteWalkIcon.setAttribute('visibility', 'visible');
@@ -2041,8 +2121,13 @@ Studio.callCmd = function (cmd) {
 
 Studio.vanishActor = function (opts) {
   var svg = document.getElementById('svgStudio');
+
   var sprite = document.getElementById('sprite' + opts.spriteIndex);
-  if (!sprite || sprite.getAttribute('visibility') === 'hidden') {
+  var spriteShowing = sprite && sprite.getAttribute('visibility') !== 'hidden';
+  var spriteWalk = document.getElementById('spriteWalk' + opts.spriteIndex);
+  var spriteWalkShowing = spriteWalk && spriteWalk.getAttribute('visibility') !== 'hidden';
+
+  if (!spriteShowing && !spriteWalkShowing) {
     return;
   }
 
@@ -2611,7 +2696,7 @@ function isEdgeClass(className) {
 }
 
 function isProjectileClass(className) {
-  return ProjectileClassNames.indexOf(className) !== -1;
+  return skin.ProjectileClassNames.indexOf(className) !== -1;
 }
 
 /**
@@ -2867,20 +2952,30 @@ Studio.allGoalsVisited = function() {
 };
 
 var checkFinished = function () {
-  // if we have a succcess condition and have accomplished it, we're done and successful
-  if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
+
+  var hasGoals = Studio.spriteGoals_.length !== 0;
+  var achievedGoals = Studio.allGoalsVisited();
+  var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;
+  var achievedOptionalSuccessCondition = !hasSuccessCondition || utils.valueOr(level.goal.successCondition(), true);
+  var achievedRequiredSuccessCondition = hasSuccessCondition && utils.valueOr(level.goal.successCondition(), false);
+
+  // Levels with goals (usually images that need to be touched) can have an optional success
+  // condition that can explicitly return false to prevent the level from completing.
+  // In very rare cases, a level might have goals but not care whether they're touched or not
+  // to succeed, relying instead solely on the success function.  In such a case, the level should
+  // have completeOnSuccessConditionNotGoals set to true.
+  // In the remainder of levels which do not have goals, they simply require a success condition
+  // that returns true.
+
+  if ((hasGoals && achievedGoals && achievedOptionalSuccessCondition) ||
+      (hasGoals && level.completeOnSuccessConditionNotGoals && achievedRequiredSuccessCondition) ||
+      (!hasGoals && achievedRequiredSuccessCondition)) {
     Studio.result = ResultType.SUCCESS;
     return true;
   }
 
-  // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
     Studio.result = ResultType.FAILURE;
-    return true;
-  }
-
-  if (Studio.allGoalsVisited()) {
-    Studio.result = ResultType.SUCCESS;
     return true;
   }
 

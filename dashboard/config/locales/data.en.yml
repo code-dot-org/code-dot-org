@@ -214,7 +214,7 @@ en:
         'turtle_3_5': "Now create a new \"draw a house\" function and use it to house two cats. Hint: create a new function using the \"do something\" block, and type your own text to name the block."
         'turtle_3_6': "Using \"draw a square\" as an example, add an input named \"length\" to \"draw a triangle\". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)"
         'turtle_3_7': "Add an input named \"length\" to \"draw a house\" and build a big house for the elephant (with edges 150 pixels long)"
-        'turtle_3_8': "Here are all of the blocks from the previous puzzle.  Modify \"draw a house\" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses."
+        'turtle_3_8': "Modify \"draw a house\" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses."
         'turtle_3_9': "Can you re-create the \"draw a house\" function without help? Try it, and then draw a row of houses."
         'turtle_3_10': "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
         'maze_karel_debug_seq_1': "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
@@ -445,6 +445,21 @@ en:
         'playlab_intro' : 'Introduction to Play Lab'
         'playlab_events' : 'Play Lab Events'
         'playlab_repeat_forever' : 'Play Lab Repeat Forever'
+        'tutorial_puzzle_challenge': 'Tutorial Puzzle Challenge'
+        'msm_1_intro': 'CS in Algebra Chapter 1 Introduction'
+        'msm_2_eval_block': 'Evaluation Blocks'
+        'msm_3_pemdas': 'PEMDAS'
+        'msm_6_variables': 'Variables'
+        'msm_7_functions': 'Functions'
+        'infinity_playlab_intro' : 'Play Lab - Introduction'
+        'infinity_playlab_events' : 'Play Lab - Events'
+        'infinity_playlab_repeat_forever' : 'Play Lab - Repeat Forever'
+        'csp_concept_rgb' : 'A Little Bit About Pixels'
+        'csp_pixelation_color_1' : 'Color pixelation widget - Part 1'
+        'csp_pixelation_color_2' : 'Color pixelation widget - Part 2'
+        'csp_pixelation_color_3' : 'Color pixelation widget - Part 3'
+        'csp_pixelation_bw' : 'Black and white pixelation widget'
+        'csp_U1L14_tipstricks' : 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         # Keyed by #{callout.localization_key}
@@ -512,3 +527,8 @@ en:
         arrows_move_actor: "Use the arrows to move the actor"
         right_arrow_fireball: "Use the right arrow to shoot fireballs"
         name_function: "Write the name of your function here"
+        Infinity_move_right_runbutton: "Add move block here"
+        Infinity_move_directions_callout: "Which block will make Baymax move up when the up arrow is pressed?"
+        Infinity_move_directions_callout_arrow: "Use these arrows to steer"
+        Infinity_move_collide_callout: "Play a sound when this event occurs."
+        Infinity_repeat_callout: "Place Move blocks inside here"

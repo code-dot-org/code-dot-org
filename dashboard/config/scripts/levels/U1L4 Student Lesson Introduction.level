@@ -1,0 +1,21 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-03T21:09:04.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "title": "title",
+    "content1": "description here",
+    "markdown": "## Unit 1: Lesson 4 - Bit Sending Widget\n\n# Background\nComputer science involves being comfortable with multiple layers of abstraction in order to focus on specific problems at hand and also to break problems down into manageable parts. Using the bit-sending simulator you can solve the problem of how to coordinate sending messages between two devices more quickly. If you solve the problem using the simulator, you will be able to try it out on your bit-sending device. \n\n# Lesson\n\n* Use the \"Bit Sending Widget\" simulation to send bits between two points. \n* Create a protocol for encoding messages to be sent using the widget.\n* Interpret the bits as they are received by the widget.\n\n\n# Resources\n\n<!-- * [Bit Sending Widget](http://bit.ly/sendingBits_AB -->\n<!-- * Video [Demonstration of the Widget](http://youtu.be/dubPPv_ECPA)  -->\n* Student Activity [The Weathervane](https://docs.google.com/document/d/1QUuYyC0y4N_-rwPrMuUWYgaPmzjFADaqzKx1Ur7bblE/edit?usp=sharing)\n\n\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ],
+    "name": "U1L4 Student Lesson Introduction"
+  },
+  "md5": "9223d11cf65fd5deab9bdaf0250204ea"
+}]]></config>
+</External>

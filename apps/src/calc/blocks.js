@@ -28,9 +28,6 @@ var commonMsg = require('../../locale/current/common');
 
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 
-var functionalBlockUtils = require('../functionalBlockUtils');
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
-
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -49,36 +46,12 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-function initFunctionalBlock(block, title, numArgs) {
-  block.setHSV(184, 1.00, 0.74);
-  block.setFunctional(true, {
-    headerHeight: 30,
-  });
-
-  var options = {
-    fixedSize: { height: 35 },
-    fontSize: 25 // in pixels
-  };
-
-  block.appendDummyInput()
-      .appendTitle(new Blockly.FieldLabel(title, options))
-      .setAlign(Blockly.ALIGN_CENTRE);
-  for (var i = 1; i <= numArgs; i++) {
-    block.appendFunctionalInput('ARG' + i)
-         .setInline(i > 1)
-         .setHSV(184, 1.00, 0.74)
-         .setCheck('Number');
-  }
-
-  block.setFunctionalOutput(true, 'Number');
-}
-
 function installCompute(blockly, generator, gensym) {
   blockly.Blocks.functional_compute = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, msg.compute(), 'none', [
-        { name: 'ARG1', type: 'Number' }
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, msg.evaluate(), blockly.BlockValueType.NONE, [
+        { name: 'ARG1', type: blockly.BlockValueType.NUMBER }
       ]);
     }
   };

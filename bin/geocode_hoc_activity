@@ -15,7 +15,7 @@ def main()
           "SELECT id,started_ip,pixel_started_ip,pixel_finished_ip,finished_ip FROM hoc_activity WHERE id > #{at} AND id < #{at + BATCH_SIZE} ORDER BY id ASC"
         ).each do |row|
           next if (row[:id] % THREAD_COUNT) != segment
-          
+
           ip_address = row[:started_ip] || row[:pixel_started_ip] || row[:pixel_finished_ip] || row[:finished_ip]
           if location = Geocoder.search(ip_address).first
             position = "#{location.latitude}, #{location.longitude}" if location.latitude && location.longitude

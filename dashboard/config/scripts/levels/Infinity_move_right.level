@@ -7,11 +7,11 @@
   "properties": {
     "skin": "infinity",
     "background": "icy",
-    "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  // Let's wait 2 seconds before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
+    "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  if (Studio.levelRestarted) {\r\n    window.successTime = null;\r\n  }\r\n  Studio.levelRestarted = false;\r\n  \r\n  // Let's wait before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    Studio.vanishActor({spriteIndex: 1});\r\n    \r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Move Hiro right to Baymax.",
+    "instructions": "Hiro is \"actor 1\".  Use the Move block to move Hiro right to touch Baymax.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -28,14 +28,23 @@
     "first_sprite_index": "2",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "maze_data": null,
-    "callout_json": "[\r\n  {\"localization_key\":\"Infinity_move_right_runbutton\",\"callout_text\":\"Add move block here\",\"element_id\":\"#whenRun\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
-  }
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Infinity_move_right_runbutton\",\r\n  \"callout_text\": \"Add move block here\",\r\n  \"element_id\": \"[block-id='1']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": 240,\r\n     \"y\": 10\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "timeout_failure_tick": "100",
+    "video_key": "infinity_playlab_intro",
+    "maze_data": null
+  },
+  "md5": "fb99157ac76d8138bd2e6c00566d4ae5"
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" x="100" id="whenRun"/>
+        <block type="when_run" deletable="false" movable="false" id="whenRun"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -45,7 +54,34 @@
           <title name="DIR">2</title>
           <title name="DISTANCE">200</title>
         </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">8</title>
+          <title name="DISTANCE">200</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">200</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">4</title>
+          <title name="DISTANCE">200</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
+        </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">200</title>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Studio>

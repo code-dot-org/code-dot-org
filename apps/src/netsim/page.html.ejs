@@ -1,6 +1,5 @@
 <%
   var msg = require('../../locale/current/common');
-  var netsimMsg = require('../../locale/current/netsim');
 %>
 
 <div id="rotateContainer" style="background-image: url(<%= assetUrl('media/mobile_tutorial_turnphone.png') %>)">
@@ -30,34 +29,42 @@
   </div>
 <% }; -%>
 
-<% // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) { -%>
-  <% if (html) { -%>
-    <div id="helpArea">
-      <%- html %>
-    </div>
-  <% } -%>
-<% }; -%>
-
 <div id="appcontainer">
-  <div id="netsim_lobby_container"></div>
-  <div id="netsim">
-    <div id="netsim_rightcol">
-      <div id="netsim_vizualization">
-        <img src="<%= assetUrl('media/netsim/netsim_viz_mock.png') %>" />
-      </div>
-      <div id="netsim_tabpanel"></div>
-    </div>
-    <div id="netsim_leftcol">
-      <div id="netsim_received"></div>
-      <div id="netsim_sent"></div>
-      <div id="netsim_send"></div>
-    </div>
+  <!-- Should disable spell-check on all netsim elements -->
+  <div id="netsim"  autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">
+    <div id="netsim-rightcol">
+      <div id="netsim-status"></div>
+      <div id="netsim-visualization">
+        <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
 
+          <filter id="backgroundBlur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+            <feComponentTransfer>
+              <feFuncA slope="0.5" type="linear"></feFuncA>
+            </feComponentTransfer>
+          </filter>
+
+          <g id="centered-group" transform="translate(150,150)">
+            <g id="background-group" filter="url(#backgroundBlur)"></g>
+            <g id="foreground-group"></g>
+          </g>
+        </svg>
+      </div>
+      <div id="netsim-tabs"></div>
+    </div>
+    <div id="netsim-leftcol">
+      <div class="leftcol-disconnected">
+        <div class="lobby-panel"></div>
+      </div>
+      <div class="leftcol-connected">
+        <div id="netsim-received"></div>
+        <div id="netsim-sent"></div>
+        <div id="netsim-send"></div>
+      </div>
+    </div>
   </div>
   <div id="footers" dir="<%= data.localeDirection %>">
     <% instructions() %>
-    <% helpArea(data.helpHtml) %>
   </div>
 </div>
 

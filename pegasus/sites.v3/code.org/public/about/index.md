@@ -34,15 +34,11 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Number Served | <%= stats['number_served'] %> |
-| Students Registered | <%= stats['number_students'] %> |
-| Teachers Registered | <%= stats['number_teachers'] %> |
-| Females Registered | <%= stats['percent_female'] %>% |
-| Inspire students | Tens of millions of students have tried the [Hour of Code](/learn). 48% female. |
-| Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
-| Reach classrooms | Our [intro courses](http://studio.code.org) are in 100,000 classrooms, reaching almost 5M students |
-| Improve diversity in CS | In our online courses, 43% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
-| Prep new CS teachers | We've prepared 5,000 new teachers across grades K-12. |
+| Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(stats['number_served']) %> served. 48% female) |
+| Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org) |
+| Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our [intro courses](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled |
+| Improve diversity in CS | In our online courses, <%= stats['percent_female'] %>% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
+| Prep new CS teachers | We've prepared 7,000 new teachers to teach CS across grades K-12. |
 | Change school district curriculum | [60+ districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including all the largest 7 in the US|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 30+ languages, used in all 180+ countries. |
@@ -56,7 +52,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 <br/>
 
 ## More information, history, and philosophy
-Code.org launched in 2013 as a project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. Our goal is for computer science to be a fixed part of school curriculum. 
+Code.org launched in 2013 as a bootstrapped project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. Our goal is for computer science to be a fixed part of school curriculum. 
 
 To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 
 

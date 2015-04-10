@@ -1,9 +1,9 @@
 "et-EE":
-  hello: Hello world
+  hello: Tere maailm
   select_language: Palun vali oma keel
   computer_science: Informaatika
   computer_science_edweek: Informaatika Hariduse Nädal
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 Detsember, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Koodi Tund</a> on saabumas. Üleskutse kõigile õpetajatele ja
     korraldajatele,<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -11,13 +11,14 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Oled sa informaatika õpetaja? Vaata teisi Informaatika
     Hariduse Nädala materjale</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>on proovinud</h3><h2>Koodi Tundi</h2>
+  n_have_learned_an_hoc: <h1>Proovi</h1><h2>Tund Koodi</h2><h3># served</h3>
   anybody_can_learn: Igaüks saab õppida.
   learn_now: Õpi nüüd
   petition_message: Igal õpilasel igas koolis peaks olema võimalus õppida informaatikat
   petition_sign_message: 'Kui nõustud, logi sisse enda nimega. Liitu # teistega.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Nimi
-  email: Email
+  email: E-post
   zipcode: Postikood või riik
   submit: Esita
   twentyhours_heading: Proovige meie sissejuhatus-kursust informaatikasse
@@ -25,12 +26,12 @@
     programmeerimise mõistete kohta selle järgneva kursuse abil.
   hoc2014_heading: Liitu <a href="http://hourofcode.com">Koodi Tunniga</a><br/>8-14
     detsembril, 2014<br/>
-  hoc2014_students: Students
+  hoc2014_students: Õpilased
   hoc2014_try: Proovi seda
   hoc2014_teachers: Õpetajad
   hoc2014_host: Korralda seda
   hoc2014_everyone: Kõik
-  hoc2014_support: Toeta seda
+  hoc2014_support: Toeta seda &#x25BE;
   hoc2014_whatishoc: Mis on Koodi Tund?
   twentyhours_trynow: Proovi nüüd
   california_heading: Palu oma koolil õpetada informaatikat
@@ -55,7 +56,7 @@
   go: Mine
   thank_you_: Aitäh!
   congratulations: Palju õnne!
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_on_completing_hoc: Palju õnne, oled lõpetanud Tunni Koodi
   get_a_certificate_of_achievement: Saa tunnistus lõpetamise kohta
   enter_valid_email: Palun sisestage kehtiv e-posti aadress
   get_a_certificate_message: Me saadame sulle tunnistuse ja info, kuidas <a href='/learn/beyond'>õppida
@@ -84,7 +85,7 @@
   thanks_for_voting: Aitäh hääletamast!
   share_on_facebook: Jaga Facebookis
   share_on_twitter: Jaga Twitteris
-  beyond_an_hour: Beyond an Hour of Code
+  beyond_an_hour: Peale Tundi Koodi
   get_started: Alusta
   i_agree: Olen nõus
   participant_select: '- Vali -'
@@ -93,16 +94,16 @@
   participant_educator: Koolitaja
   participant_engineer: Tarkvara insener
   participant_other: Mitte ükski eelnimetatutest
-  print_all: Print all
-  print_ice_art: Print your ice art
+  print_all: Prindi kõik
+  print_ice_art: Prindi oma jääkunsti
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ma olen
   never_spam: Me ei saada sulle kunagi rämpsposti
   enter_country: Sisestage riik kui asute väljaspool Ameerika Ühendriike
   used_infrequent_updates: Kasutatakse ainult harvade uuenduste jaoks
-  privacy_practices_children: See our privacy practices for children
+  privacy_practices_children: Vaata meie privaatsustavasid lastele
   petition_thankyou: Täname, et andsite petitsioonile oma allkirja
-  continue_learning_header: Continue learning beyond One Hour
+  continue_learning_header: Jätka õppimist peale Ühte Tundi koodi
   continue_learning_body: Võimalusi on mitmesuguseid. Võid õppida veebis, või kohalikus
     koolis, või suvelaagris.
   learn_next_level: Jätka järgmisel tasemel
@@ -110,6 +111,8 @@
   learn_classes: Otsi kodulähedasi kursuseid
   hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
+  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
+    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   learn_hoc: Läbi Koodi Tundi
   beyond_hoc: Lisaks Koodi Tunnile
   what_gender: Mis soost sa oled?
@@ -125,13 +128,14 @@
     %{lines} lines of code.'
   start_hoc: Alusta Koodi Tunniga praegu
   contact_form_topic_press: Press/media (interview or speaking engagement)
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
     - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
     Alzate, 5th grader'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
   studiobar_title: Avasta <a href='http://studio.code.org'>Code Studio't</a>
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Baaskursused
   studiobar_elementary_body: Meie kolm uut kursust K&#8209;5 jaoks
   studiobar_hoc_title: Koodi Tund
@@ -141,11 +145,91 @@
   studiobar_teacher_title: Valmistatud õpetajate jaoks
   studiobar_teacher_body: Tutvusta Code Studio't oma klassis
   studiobar_frozen_title: Koodi Tund
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_frozen_body: Loo Talve võlumaa koos Anna ja Elsaga
+  studiobar_donate_title: Anneta
+  studiobar_donate_body: Üks laps õpib iga dollari eest mis te kingite
+  studiobar_shop_title: Pood
+  studiobar_shop_body: Murra stereotüüpe. Kanna uhkusega meie logo.
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_susan: |
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
+  homepage_slot_text_hoc: Koodi Tund
+  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: Pood
+  homepage_slot_text_flappy: Flappy Code
+  homepage_action_text_codevideo: Watch the video
+  homepage_action_text_teachervideo: ''
+  homepage_action_text_learn: Start learning today
+  homepage_action_text_signpetition: Sign the petition
+  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_slot_text_title_hoc: Koodi Tund
+  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_link_hoc: Proovi Koodi Tundi
+  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_title_students: Õpilased
+  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_title_educators: Educators
+  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_donate: Make a donation
+  homepage_header_codestudio: Code Studio student creations
+  homepage_header_donors: Code.org thanks its supporters
+  homepage_donors_seall: See all
+  homepage_donors_donate: Anneta
   contact_form_topic_student: Ma olen õpilane
   contact_form_topic_parent: Ma olen lapsevanem
   contact_form_topic_teacher: Ma olen õpetaja/koolitaja
@@ -213,8 +297,8 @@
   dashboard_landing_new_k5courses: Uus! Proovi meie kursust algklassiõpilastele.
   dashboard_landing_useful_links: Muud kasulikud lingid (ainult inglise keeles)
   dashboard_landing_office_hours: Küsi isiklikult! Külastage meie igakuist videoülekannet.
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
+  dashboard_landing_print_certificates: Saate printida tunnistusi õpilastele, kes
+    selle kursuse lõpetasid
   dashboard_landing_educator_blog: Read about news and updates to our materials at
     our Educator Blog
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
@@ -234,17 +318,17 @@
   dashboard_action_delete_yes: Jah
   dashboard_action_delete_no: Ei
   dashboard_action_confirm: Kas kustutada?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Eemalda
+  dashboard_action_remove_confirm: Eemalda?
   dashboard_action_done: Valmis
   dashboard_action_required: nõutud
   dashboard_navigation_home_page: Õpetaja esilehekülg
   dashboard_navigation_section_student_progress: Õpilaste kontod ja edenemine
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: Sinu kursuse progress
   dashboard_navigation_section_lesson_plans: Tunnikavad ja ressursid
-  dashboard_navigation_section_community: Help and Community
-  dashboard_navigation_section_pd: Professional Development
-  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
+  dashboard_navigation_section_community: Abi ja Kogukond
+  dashboard_navigation_section_pd: Professionaalne arendus
+  dashboard_navigation_section_speakers: Arvutiteadus<br/>Külalisesinejad
   dashboard_navigation_all_sections: Õpilaste kontod ja edenemine
   dashboard_navigation_view_progress: Vaata edenemist
   dashboard_navigation_add_students: Lisa õpilasi
@@ -257,12 +341,12 @@
   dashboard_sections_jumbotron_instruction: Loo uusi osi ja lisa neisse õpilasi. Osad
     aitavad organiseerida õpilasi väiksematesse rühmadess, et saaks paremini jälgida
     nende edenemist ja hallata nende kontosid.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: Jaotis
   dashboard_sections_table_secret: Sisselogimise tüüp
-  dashboard_sections_table_grade: Grade
+  dashboard_sections_table_grade: Klass
   dashboard_sections_table_course: Kursus
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
+  dashboard_sections_table_students: Õpilased
+  dashboard_sections_table_code: Jaotise kood
   dashboard_sections_name: Osa nimi
   dashboard_sections_choose_secret: Kui soovid õpilastele kontod luua vali salajane
     tüüp <b>sõna</b> või <b>pilt</b> vastava osa jaoks.
@@ -275,7 +359,7 @@
     <b>none</b>.
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
+  dashboard_sections_switch_section: 'Vaheta jagu:'
   dashboard_students_add_student: Lisa õpilane
   dashboard_students_add_students: Lisa mitu õpilast
   dashboard_students_add_multiple: 'Kirjutage või kopeerige oma õpilaste nimed, igale
@@ -287,31 +371,31 @@
   dashboard_students_progress: Progress
   dashboard_students_age: Vanus
   dashboard_students_gender: Sugu
-  dashboard_students_male: Male
-  dashboard_students_female: Female
+  dashboard_students_male: Mees
+  dashboard_students_female: Naine
   dashboard_students_secret: Saladus
   dashboard_students_password: Salasõna
   dashboard_students_username: 'Kasutajanimi: %{student_username}'
   dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: Läbitud tasemed
   dashboard_students_total_lines: Koodiridade arv
-  dashboard_students_show_secret: Show secret
+  dashboard_students_show_secret: Näita saladust
   dashboard_students_auto_generated: Automaatselt genereeritud
-  dashboard_students_reset_secret: Reset secret
+  dashboard_students_reset_secret: Lähtesta saladus
   dashboard_students_reset_password: Vaheta salasõna
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
   dashboard_students_print_info: Prindi välja kaardid oma õpilaste sisselogimise infoga.
-  dashboard_students_secret_picture: Secret Picture
+  dashboard_students_secret_picture: Salajane Pilt
   dashboard_students_reset_picture: You may reset a student's secret picture at any
     time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
     picture will be generated for that student to use when they sign in.
-  dashboard_students_secret_word: Secret Word
+  dashboard_students_secret_word: Salasõna
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time
     by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
     words will be generated for that student to use when they sign in. '
-  dashboard_students_join_link: Tell your students to create their own accounts and
-    join your section at
+  dashboard_students_join_link: Öelge oma õpilastele et nad teeksid endale kasutaja
+    ja liituks teie üksusega
   dashboard_students_no_email: If your students do not have email addresses, or you
     would like to create accounts for them, change this section's secret type to <b>word</b>
     or <b>picture</b>.
@@ -338,8 +422,10 @@
   dashboard_grade_other: Muu
   dashboard_login_word: Sõna
   dashboard_login_picture: Pilt
-  dashboard_login_none: Email
+  dashboard_login_none: E-post
   dashboard_new_password: Uus salasõna
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: not completed
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: tehtud, suurepärane
@@ -360,8 +446,8 @@
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: The Hour of Code is here - December 8-14!
+  dashboard_faq: Korduma Kippuvad Küsimused
+  code_hoc_coming: Tund koodi on siin- 8-14 Detsember!
   code_sign_up: Registreeru kasutajaks, et osaleda Arvutiteaduse Hariduse Nädalal
   learn_more: Lisateave
   hoc2014_try_new_tutorials: Proovi meie uut Koodi Tunni juhendeid
@@ -371,7 +457,7 @@
   carousel_heading_international: Juhendid sinu keeles
   carousel_heading_domestic: Õpetused saadaval inglise keeles
   carousel_heading_beginners: Õpetused algajatele
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: Tunnid kus õpetatakse JavaScripti
   carousel_heading_unplugged: Pole seadmeid või internetti? Proovi arvutivabu tegevusi
     klassis
   carousel_heading_devices: Juhendite rakendused telefonile ja tahvelarvutile
@@ -382,11 +468,11 @@
   carousel_heading_robots: Õpi roboteid programmeerima
   carousel_heading_ide: Õpetajate seas populaarsed platvormid
   educator_notes: Õpetaja märkmed
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Kuidas õpetada Tundi Koodi
   more_resources_educators: Rohkem vahendeid õpetajatele
   participants: osalejad
   teachers_notes: Õpetaja märkmed
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Õpetajad: Lugege olulisi koolitaja märkmeid siit'
   previous: Eelmine
   next: Järgmine
   older_systems: Õpetused, mis töötavad vanematel süsteemidel
@@ -484,7 +570,7 @@
   khanfr_platformtext: Kaasaegsed veebibrauserid
   khanpl_platformtext: Kaasaegsed veebibrauserid
   tynker_platformtext: Kaasaegsed veebibrauserid
-  scratch_platformtext: Desktop-only web browsers (not tablets)
+  scratch_platformtext: Ainult-töölaua brauseritele (mitte tahvelarvutitele)
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged

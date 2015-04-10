@@ -31,7 +31,7 @@ class SessionsController < Devise::SessionsController
     if user && user.oauth?
       return oauth_sign_out_path(user.provider)
     end
-    
+
     'http:' + code_org_root_path
   end
 end

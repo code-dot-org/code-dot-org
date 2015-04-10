@@ -8,9 +8,10 @@
 - if script_level
   %span#left_off #{t('home.student_left_off')}
   %span#puzzle
-    = stage_title(script, script_level.stage_or_game)
-    #{t('puzzle')} #{script_level.stage_or_game_position}
+    = script_level.stage.localized_title
+    #{t('puzzle')} #{script_level.position}
+  &nbsp;
   = link_to build_script_level_url(script_level) do
-    %button.btn.btn-primary.button-continue#continue_button= t('continue')
+    %button.btn.btn-primary.button-continue#continue_button{class: role_class}= t('continue')
 - elsif include_finished
   = render partial: 'shared/student_finished'

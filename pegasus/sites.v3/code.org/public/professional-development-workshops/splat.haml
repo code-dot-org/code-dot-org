@@ -53,8 +53,9 @@ title: Register for a workshop
       .col-sm-4{style: "text-align: right;"} Location:
       .col-sm-8
         = data['location_name_s']
-        %br/
-        = data['location_address_s']
+        - if data['location_address_s'] != data['location_name_s']
+          %br/
+          = data['location_address_s']
 
     -unless data['notes_s'].nil_or_empty?
       %p{style: "margin-top: 1em;"}= data['notes_s']
@@ -166,8 +167,8 @@ title: Register for a workshop
   -if File.file?(sites_v3_dir("code.org/views/workshop_affiliates/#{affiliate[:id]}_bio.md"))
     .col-sm-5.col-sm-offset-1
       %h2{style: "font-size: 18px;"} Facilitated by:
-      -if File.file?(shared_dir("images/workshop-affiliates/#{affiliate[:id]}.jpg"))
-        %img{src: "/shared/images/workshop-affiliates/fit-180/#{affiliate[:id]}.jpg", style: "margin-bottom: .5em;"}
+      -if File.file?(pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{affiliate[:id]}.jpg"))
+        %img{src: "/images/affiliate-images/fit-180/#{affiliate[:id]}.jpg", style: "margin-bottom: .5em;"}
       %div
         =view "workshop_affiliates/#{affiliate[:id]}_bio"
 
@@ -197,8 +198,9 @@ title: Register for a workshop
           .col-sm-4{style: "text-align: right;"} Location:
           .col-sm-8
             = data['location_name_s']
-            %br/
-            = data['location_address_s']
+            - if data['location_address_s'] != data['location_name_s']
+              %br/
+              = data['location_address_s']
 
         .row
           .col-sm-4{style: "text-align: right;"} Workshop facilitator:
@@ -252,6 +254,22 @@ title: Register for a workshop
 
     function processResponse(data)
     {
+      // Facebook Conversion Tracking Pixel script START
+      (function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+      var fbds = document.createElement('script');
+      fbds.async = true;
+      fbds.src = '//connect.facebook.net/en_US/fbds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(fbds, s);
+      _fbq.loaded = true;
+      }
+      })();
+      window._fbq = window._fbq || [];
+      window._fbq.push(['track', '6023436586161', {'value':'0.01','currency':'USD'}]);
+      // Facebook Conversion Tracking Pixel script END
+
       $('#affiliate-workshop-signup-form-wrapper').hide();
       $('#thanks').show();
     }

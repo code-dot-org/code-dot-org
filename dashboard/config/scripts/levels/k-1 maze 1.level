@@ -14,8 +14,19 @@
     "skip_instructions_popup": "false",
     "ideal": "3",
     "video_key": "C1_maze_intro_sequencing",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
     "maze_data": null
-  }
+  },
+  "md5": "822fc167b989878775351bed7efd1895"
 }]]></config>
   <blocks>
     <toolbox_blocks>

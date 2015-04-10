@@ -90,7 +90,7 @@ function installNumberDropdown(blockly) {
       this.setHSV(258, 0.35, 0.62);
       this.appendDummyInput()
         .appendTitle(new blockly.FieldDropdown(), 'NUM');
-      this.setOutput(true, 'Number');
+      this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
     }
   };
@@ -153,6 +153,9 @@ function installWhenRun(blockly, skin, isK1) {
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
+    },
+    shouldBeGrayedOut: function () {
+      return false;
     }
   };
 

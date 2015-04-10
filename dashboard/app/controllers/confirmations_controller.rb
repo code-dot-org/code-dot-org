@@ -1,7 +1,7 @@
 class ConfirmationsController < Devise::ConfirmationsController
 
   protected
-  
+
   # The path used after resending confirmation instructions.
   def after_resending_confirmation_instructions_path_for(resource_name)
     if request.referer # go back to previous page if exists

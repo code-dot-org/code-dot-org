@@ -30,7 +30,7 @@
       <xml>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>string</outputtype>
+            <outputtype>String</outputtype>
           </mutation>
           <title name="NAME">background</title>
           <functional_input name="STACK">

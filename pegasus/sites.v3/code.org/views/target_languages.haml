@@ -1,53 +1,14 @@
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/ar/', :target=>'_blank'}
-    %img{:src=>"/images/flag-arabic.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Arabic
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/zh-CN/', :target=>'_blank'}
-    %img{:src=>"/images/flag-chinese-simplified.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Chinese Simplified
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/zh-TW/', :target=>'_blank'}
-    %img{:src=>"/images/flag-chinese-traditional.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Chinese Traditional
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/cs/', :target=>'_blank'}
-    %img{:src=>"/images/flag-czech.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Czech
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/hi/', :target=>'_blank'}
-    %img{:src=>"/images/flag-hindi.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Hindi
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/ja/', :target=>'_blank'}
-    %img{:src=>"/images/flag-japanese.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Japanese
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/pl/', :target=>'_blank'}
-    %img{:src=>"/images/flag-polish.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Polish
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/ru/', :target=>'_blank'}
-    %img{:src=>"/images/flag-russian.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Russian
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/tr/', :target=>'_blank'}
-    %img{:src=>"/images/flag-turkish.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Turkish
-%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
-  %a{:href=>'http://crowdin.com/project/codeorg/vi/', :target=>'_blank'}
-    %img{:src=>"/images/flag-vietnamese.png", :style=>'max-width: 48px; max-height: 48px;'}
-  %br
-  Vietnamese
+- languages = { 'Albanian' => 'sq', 'Arabic' => 'ar', 'Armenian' => 'hy-AM', 'Azerbaijani' => 'az', 'Basque' => 'eu', 'Bengali' => 'bn', 'Bosnian' => 'bs', 'Bulgarian' => 'bg', 'Catalan' => 'ca', 'Chinese Simplified' => 'zh-CN', 'Chinese Traditional' => 'zh-TW', 'Croatian' => 'hr', 'Czech' => 'cs', 'Danish' => 'da', 'Dari' => 'fa-AF', 'Dutch' => 'nl', 'Estonian' => 'et', 'Filipino' => 'fil', 'Finnish' => 'fi', 'French' => 'fr', 'Galician' => 'gl', 'Georgian' => 'ka', 'German' => 'de', 'Greek' => 'el', 'Hebrew' => 'he', 'Hindi' => 'hi', 'Hungarian' => 'hu', 'Icelandic' => 'is', 'Indonesian' => 'id', 'Italian' => 'it', 'Japanese' => 'ja', 'Khmer' => 'km', 'Korean' => 'ko', 'Latvian' => 'lv', 'Lithuanian' => 'lt', 'Macedonian (FYROM)' => 'mk', 'Malay' => 'ms', 'Maltese' => 'mt', 'Nepali' => 'ne-NP', 'Norwegian' => 'no', 'Norwegian Nynorsk' => 'nn-NO', 'Pashto' => 'ps', 'Persian' => 'fa', 'Polish' => 'pl', 'Portuguese' => 'pt-PT', 'Portuguese, Brazilian' => 'pt-BR', 'Romanian' => 'ro', 'Russian' => 'ru', 'Serbian (Cyrillic)' => 'sr', 'Slovak' => 'sk', 'Slovenian' => 'sl', 'Spanish' => 'es-ES', 'Spanish, Argentina' => 'es-AR', 'Swedish' => 'sv-SE', 'Tamil' => 'ta', 'Thai' => 'th', 'Turkish' => 'tr', 'Ukrainian' => 'uk', 'Urdu (Pakistan)' => 'ur-PK', 'Vietnamese' => 'vi'}
 
-%br
-%br
+#language{:style=>'width: 780px; padding: 0; margin: 0;'}
+  - languages.each_slice(6) do |group|
+    .language_row{:style=>'width: 780px; padding: 0; margin: 0;'}
+      - group.each do |name, code|
+        .language_column{:style=>'width: 130px; height: 130px; float: left; display: table;'}
+          %div
+            - project_url = "http://crowdin.com/project/codeorg/#{code}"
+            - image_url = "https://d1ztvzf22lmr1j.cloudfront.net/images/flags/#{code}.png"
+            %a{:href=>project_url, :style=>'display: table-cell;'}
+              %img{:src=>image_url, :style=>'max-width: 130px; max-height: 130px;'}
+              %br{:style=>'clear: both;'}= name
+    

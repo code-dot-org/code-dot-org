@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.uk_ua');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "фактичне";
+Blockly.Msg.ACTUAL = "виклик";
 Blockly.Msg.ADD = "Додати";
 Blockly.Msg.ADD_COMMENT = "Додати коментар";
 Blockly.Msg.ADD_PARAMETER = "Додати параметр";
@@ -24,9 +24,10 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "червоний";
 Blockly.Msg.COLOUR_RGB_TITLE = "зафарбувати у";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Створити колір зі вказаним співвідношенням червоного, зеленого та синього.  Усі значення мають бути від 0 до 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Створення рецепту";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "перервати цикл";
-Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "продовжити з наступної ітерації циклу";
+Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "продовжити з наступним виконанням циклу";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK = "Перервати внутрішній цикл.";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE = "Пропустити залишок цього циклу і перейти до виконання наступної ітерації.";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_WARNING = "Попередження: цей блок може бути використаний тільки в межах циклу.";
@@ -74,7 +75,7 @@ Blockly.Msg.EXAMPLE = "Приклад";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Визначає приклад з очікуваної та фактичної поведінки";
 Blockly.Msg.EXPAND_ALL = "Розгорнути блоки";
 Blockly.Msg.EXPAND_BLOCK = "Розгорнути блок";
-Blockly.Msg.EXPECTED = "очікувалося";
+Blockly.Msg.EXPECTED = "результат";
 Blockly.Msg.EXTERNAL_INPUTS = "Зовнішні входи";
 Blockly.Msg.FUNCTION_CREATE = "Створити функцію";
 Blockly.Msg.FUNCTION_EDIT = "редагувати";

@@ -1,5 +1,5 @@
 class HocSurvey2014
-  
+
   def self.normalize(data)
     result = {}
 
@@ -38,13 +38,13 @@ class HocSurvey2014
 
     result
   end
-  
+
   def self.process(data)
     {}.tap do |results|
       results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s']);
     end
   end
-  
+
   def self.receipt()
     'hoc_survey_2014_receipt'
   end
@@ -169,7 +169,7 @@ class HocSurvey2014
 
     type = type.downcase
     return 'None' if type == 'none'
-  
+
     begin
       rows_updated = DB[:hoc_survey_prizes].where(claimant:nil, type:type).limit(1).update(
         claimant:email,

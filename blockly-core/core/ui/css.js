@@ -57,16 +57,13 @@ Blockly.Css.styleSheet_ = null;
  * b) It speeds up loading by not blocking on a separate HTTP transfer.
  * c) The CSS content may be made dynamic depending on init options.
  */
-Blockly.Css.inject = function() {
+Blockly.Css.inject = function(container) {
   var text = Blockly.Css.CONTENT.join('\n');
 
   // Expand paths.
   text = text
-    .replace('%HAND_OPEN_PATH%', Blockly.assetUrl('media/handopen.cur'))
-    .replace('%HAND_CLOSED_PATH%', Blockly.assetUrl('media/handclosed.cur'))
-    .replace('%HAND_DELETE_PATH%', Blockly.assetUrl('media/handdelete.cur'))
-    .replace('%TREE_PATH%', Blockly.assetUrl('media/tree.png'))
-    .replace('%SPRITES_PATH%', Blockly.assetUrl('media/sprites.png'));
+    .replace(/%CONTAINER_ID%/g, container.id)
+    .replace(/%TREE_PATH%/g, Blockly.assetUrl('media/tree.png'));
   Blockly.Css.styleSheet_ = goog.cssom.addCssText(text).sheet;
   Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN);
 };
@@ -137,29 +134,29 @@ Blockly.Css.CONTENT = [
   '.blocklyDraggable {',
     // Placeholder for cursor rule. Must be first rule (index 0).
   '}',
-  '#blockly {',
+  '#%CONTAINER_ID% {',
   '  border: 1px solid #ddd;',
   '}',
-  '#blockly .userHidden {',
+  '#%CONTAINER_ID% .userHidden {',
   '  display: none;',
   '}',
-  '#blockly .hiddenFlyout {',
+  '#%CONTAINER_ID% .hiddenFlyout {',
   '  display: none !important;',
   '}',
-  '#blockly.readonly .userHidden {',
+  '#%CONTAINER_ID%.readonly .userHidden {',
   '  display: inline;',
   '}',
-  '#blockly.readonly {',
+  '#%CONTAINER_ID%.readonly {',
   '  border: 0;',
   '}',
-  '#blockly.edit .userHidden {',
+  '#%CONTAINER_ID%.edit .userHidden {',
   '  display: inline;',
   '  fill-opacity: 0.5;',
   '}',
-  '#blockly.edit .userHidden .blocklyPath {',
+  '#%CONTAINER_ID%.edit .userHidden .blocklyPath {',
   '  fill-opacity: 0.5;',
   '}',
-  '#blockly.edit .userHidden .blocklyPathDark, #blockly.edit .userHidden .blocklyPathLight {',
+  '#%CONTAINER_ID%.edit .userHidden .blocklyPathDark, #%CONTAINER_ID%.edit .userHidden .blocklyPathLight {',
   '  display: none;',
   '}',
   '.blocklySvg {',
@@ -234,10 +231,32 @@ Blockly.Css.CONTENT = [
   '  font-size: 11pt;',
   '  fill: #fff;',
   '}',
+  '.contractEditor #paramAddButton {',
+  '  margin-top: 3px;',
+  '  margin-left: 10px;',
+  '  margin-bottom: 4px;',
+  '}',
   '.contractEditorHeaderText {',
   '  cursor: default;',
   '  font-size: 18pt;',
   '  fill: #fff;',
+  '}',
+  '.contract-type-hint {',
+  '  color: #898989;',
+  '  font-size: 11px;',
+  '  display: block;',
+  '  margin-top: -5px;',
+  '}',
+  '.color-square-icon {',
+  '  float: left;',
+  '  width: 21px;',
+  '  height: 18px;',
+  '  margin-right: 9px !important;',
+  '  margin-left: 6px !important;',
+  '}',
+  '.goog-menuitem .color-square-icon {',
+  '  margin-left: -3px !important;',
+  '  margin-top: 2px !important;',
   '}',
   '.blocklyNonEditableText>text {',
   '  pointer-events: none;',
@@ -347,9 +366,10 @@ Blockly.Css.CONTENT = [
   '  top: 120px;',
   '  left: 600px;',
   '}',
-  '#paramTypeDropdown .goog-flat-menu-button-caption,',
-  '#outputTypeDropdown .goog-flat-menu-button-caption {',
-  '  color: white;',
+  '#modalContainer .goog-flat-menu-button-caption {',
+  '  color: #555555;',
+  '  margin-left: 1px;',
+  '  margin-right: 0;',
   '}',
   '.blocklyContextMenuOptions>.blocklyMenuDiv,',
   '.blocklyContextMenuOptions>.blocklyMenuDivDisabled,',
@@ -446,11 +466,12 @@ Blockly.Css.CONTENT = [
   '  padding-bottom: 0px !important;',
   '  padding-top: 0px !important;',
   '}',
-  '.colored-type-dropdown .goog-menuitem-highlight .goog-menuitem-content {',
-  '  color: blue;',
-  '}',
   '.colored-type-dropdown .goog-menuitem-content {',
-  '  color: white;',
+  '  color: #555555;',
+  '  float: left;',
+  '}',
+  '.colored-type-dropdown > .goog-menuitem {',
+  '  padding: 0px 40px 2px 13px;',
   '}',
   '.blocklyRectangularDropdownMenu img {',
   '  -webkit-border-radius: 5px;',

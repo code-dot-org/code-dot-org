@@ -10,10 +10,13 @@
 #   an RDS database, MongoDB, or even just a regular log file and eliminate the cost of
 #   LogEntries.
 #
-require File.expand_path('../../dashboard/config/environment', __FILE__)
+# including dashboard environment doesn't work if not in the dashboard dir
+Dir.chdir(File.expand_path('../../dashboard', __FILE__))
+require_relative '../dashboard/config/environment'
 require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
+
 
 FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000
@@ -191,33 +194,33 @@ def main()
   finish = DateTime.new(now.year, now.month, now.day, now.hour, now.minute).new_offset(0).strftime('%Q').to_i
   start = finish - (hours * OneHour)
 
-    Monitor.collate(start:start, finish:finish).each_by_browser do |i|
-      next if excluded_browser?(i[:browser])
-      next if ExcludedLevels.include?(i[:level])
+  Monitor.collate(start:start, finish:finish).each_by_browser do |i|
+    next if excluded_browser?(i[:browser])
+    next if ExcludedLevels.include?(i[:level])
 
-      starts = i[:starts]
-      finishes = [starts, i[:finishes]].min
+    starts = i[:starts]
+    finishes = [starts, i[:finishes]].min
 
-      minAttemptsPerHour =  HardLevelAttemptsPerHour[i[:level]] || MinimumAttemptsPerHour
+    min_attempts_per_hour =  HardLevelAttemptsPerHour[i[:level]] || MinimumAttemptsPerHour
 
-      status = :pass if finishes > 0 || starts == 0
-      status ||= :fail if starts > (minAttemptsPerHour * hours)
-      status ||= :warn
+    status = :pass if finishes > 0 || starts == 0
+    status ||= :fail if starts > (min_attempts_per_hour * hours)
+    status ||= :warn
 
-      rate = starts == 0 ? 1.0 : finishes.to_f / starts.to_f
+    starts == 0 ? 1.0 : finishes.to_f / starts.to_f
 
-      if status == :fail
-        level_url = "http://learn.code.org/levels/#{i[:level]}"
+    if status == :fail
+      level_url = "http://learn.code.org/levels/#{i[:level]}"
 
-        log_string = %Q[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)]
-        sl = Level.find(i[:level]).script_levels.first
-        if sl
-          level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"
-        end
-        log_string += %Q[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">&#x2708; Repro It</a>]
-        HipChat.notify('ActivityMonitor', log_string, color:'red', notify:1)
-        HipChat.log log_string, color:'red'
+      log_string = %[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)]
+      sl = Level.find(i[:level]).script_levels.first
+      if sl
+        level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"
       end
+      log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">&#x2708; Repro It</a>]
+      HipChat.notify('ActivityMonitor', log_string, color:'red', notify:1)
+      HipChat.log log_string, color:'red'
+    end
   end
 end
 

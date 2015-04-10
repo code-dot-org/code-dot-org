@@ -63,7 +63,7 @@
                   </functional_input>
                   <functional_input name="ARG2">
                     <block type="functional_math_number">
-                      <title name="NUM">2</title>
+                      <title name="NUM">4</title>
                     </block>
                   </functional_input>
                 </block>

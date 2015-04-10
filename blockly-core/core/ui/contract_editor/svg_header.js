@@ -31,7 +31,7 @@ Blockly.SvgHeader = function (parent, opt_options) {
     this.textElement_.textContent = options.headerText;
   }
   if (options.onMouseDown) {
-    Blockly.bindEvent_(this.svgGroup_, 'mousedown', null, options.onMouseDown);
+    Blockly.bindEvent_(this.svgGroup_, 'click', null, options.onMouseDown);
   }
 };
 
@@ -54,6 +54,10 @@ Blockly.SvgHeader.prototype.setPositionSize = function (yOffset, width, height) 
 
 Blockly.SvgHeader.prototype.setText = function (text) {
   this.textElement_.textContent = text;
+};
+
+Blockly.SvgHeader.prototype.setVisible = function (visible) {
+  goog.style.showElement(this.svgGroup_, visible);
 };
 
 Blockly.SvgHeader.prototype.removeSelf = function () {

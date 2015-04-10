@@ -133,6 +133,8 @@ Blockly.FieldDropdown.prototype.showEditor_ = function() {
   menuDom.style.borderColor = 'hsla(' + this.sourceBlock_.getColour() + ', ' +
     this.sourceBlock_.getSaturation() * 100 + '%, ' +
     this.sourceBlock_.getValue() * 100 + '%' + ', 0.5)';
+  menuDom.style.overflowY = "auto";
+  menuDom.style["max-height"] = "250px";
 
   // Record menuSize after adding menu.
   var menuSize = goog.style.getSize(menuDom);

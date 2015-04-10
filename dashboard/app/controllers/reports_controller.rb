@@ -16,7 +16,7 @@ class ReportsController < ApplicationController
 
     #@recent_activity = Activity.where(['user_id = ?', user.id]).order('id desc').includes({level: :game}).limit(2)
     @recent_levels = UserLevel.find_by_sql(<<SQL)
-select ul.*, sl.game_chapter, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
+select ul.*, sl.position, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
 from user_levels ul
 inner join script_levels sl on sl.level_id = ul.level_id
 inner join levels l on l.id = ul.level_id
@@ -49,7 +49,7 @@ SQL
 
   def admin_stats
     authorize! :read, :reports
-    
+
     SeamlessDatabasePool.use_persistent_read_connection do
       @user_count = User.count
       @teacher_count = User.where(:user_type => 'teacher').count
@@ -59,10 +59,10 @@ SQL
       @users_with_confirmed_email = User.where('confirmed_at IS NOT NULL').count
       @girls = User.where(:gender => 'f').count
       @boys = User.where(:gender => 'm').count
- 
+
       @prizes_redeemed = Prize.where('user_id IS NOT NULL').group(:prize_provider).count
       @prizes_available = Prize.where('user_id IS NULL').group(:prize_provider).count
-      
+
       @student_prizes_earned = User.where(:prize_earned => true).count
       @student_prizes_redeemed = Prize.where('user_id IS NOT NULL').count
       @student_prizes_available = Prize.where('user_id IS NULL').count
@@ -70,7 +70,7 @@ SQL
       @teacher_prizes_earned = User.where(:teacher_prize_earned => true).count
       @teacher_prizes_redeemed = TeacherPrize.where('user_id IS NOT NULL').count
       @teacher_prizes_available = TeacherPrize.where('user_id IS NULL').count
-      
+
       @teacher_bonus_prizes_earned = User.where(:teacher_bonus_prize_earned => true).count
       @teacher_bonus_prizes_redeemed = TeacherBonusPrize.where('user_id IS NOT NULL').count
       @teacher_bonus_prizes_available = TeacherBonusPrize.where('user_id IS NULL').count
@@ -79,11 +79,11 @@ SQL
 
   def admin_progress
     authorize! :read, :reports
-    
+
     SeamlessDatabasePool.use_persistent_read_connection do
       @user_count = User.count
       @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
- 
+
       @levels_attempted = User.joins(:user_levels).group(:level_id).where('best_result > 0').count
       @levels_attempted.default = 0
       @levels_passed = User.joins(:user_levels).group(:level_id).where('best_result >= 20').count
@@ -241,6 +241,6 @@ SQL
 
   # Use callbacks to share common setup or constraints between actions.
   def set_script
-    @script = Script.find(params[:script_id]) if params[:script_id]
+    @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
   end
 end

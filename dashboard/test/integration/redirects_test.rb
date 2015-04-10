@@ -64,6 +64,28 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/c/1/generate_image'
   end
 
+  test 'redirects cartoon network quick links' do
+    get '/flappy/lang/ar'
+    assert_redirected_to '/flappy/1'
+
+    get '/playlab/lang/ar'
+    assert_redirected_to '/s/playlab/stage/1/puzzle/1'
+
+    get '/artist/lang/ar'
+    assert_redirected_to '/s/artist/stage/1/puzzle/1'
+  end
+
+  test 'redirects lang parameter' do
+    get '/lang/es'
+    assert_redirected_to '/'
+
+    get '/s/frozen/lang/es'
+    assert_redirected_to '/s/frozen'
+
+    get '/s/course1/stage/1/puzzle/1/lang/es'
+    assert_redirected_to '/s/course1/stage/1/puzzle/1'
+  end
+
   test "old teacher dashboard redirects to new teacher dashboard" do
     urls = %w{/followers /followers/manage /followers/sections /stats/students /sections/new /sections/1/edit}
 
@@ -74,4 +96,10 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test 'old script id paths redirect to named paths' do
+    %w(2:Hour%20of%20Code 3:edit-code 4:events 7:jigsaw).map{ |s| s.split ':' }.each do |before, after|
+      get "/s/#{before}"
+      assert_redirected_to "/s/#{after}"
+    end
+  end
 end

@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.el_gr');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "πραγματική";
+Blockly.Msg.ACTUAL = "κλήση";
 Blockly.Msg.ADD = "Πρόσθεσε";
 Blockly.Msg.ADD_COMMENT = "Πρόσθεσε σχόλιο";
 Blockly.Msg.ADD_PARAMETER = "Προσθέστε  παράμετρο";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "κόκκινο";
 Blockly.Msg.COLOUR_RGB_TITLE = "χρωμάτισε με";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Δημιουργήστε ένα χρώμα με το συγκεκριμένο ποσό του κόκκινου, πράσινου και μπλε.  Όλες οι τιμές πρέπει να είναι μεταξύ 0 και 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Συνταγή σχεδιασμού";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Μπλοκ_Τερματισμού_Βρόγχων";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "σταμάτα την επανάληψη";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "συνέχισε με την επόμενη επανάληψη";
@@ -74,7 +75,7 @@ Blockly.Msg.EXAMPLE = "Παράδειγμα";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Ορίζει ένα παράδειγμα με την αναμενόμενη και πραγματική συμπεριφορά";
 Blockly.Msg.EXPAND_ALL = "Επέκταση Πλακιδίων";
 Blockly.Msg.EXPAND_BLOCK = "Μπλοκ επέκτασης";
-Blockly.Msg.EXPECTED = "αναμενόμενος";
+Blockly.Msg.EXPECTED = "αποτέλεσμα";
 Blockly.Msg.EXTERNAL_INPUTS = "Εξωτερικές εισόδοι";
 Blockly.Msg.FUNCTION_CREATE = "Δημιουργήστε μια συνάρτηση";
 Blockly.Msg.FUNCTION_EDIT = "επεξεργάσου";

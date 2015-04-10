@@ -1,0 +1,11 @@
+<div class="function-name">
+  <% if (signatureOverride) { -%>
+    <%= signatureOverride %>
+  <% } else { -%>
+    <%= functionName %>(<% for (var i = 0; i < parameters.length; i++) { -%><%- parameters[i] -%><% if (i < parameters.length - 1) { -%>, <% } -%><% } -%>)
+  <% } %>
+</div>
+<% if (functionShortDescription) { %><div><%= functionShortDescription %></div><% } %>
+<div class="tooltip-example-link">
+  <a href="<%= fullDocumentationURL %>" target="_blank">See examples</a>
+</div>

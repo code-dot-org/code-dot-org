@@ -9,6 +9,10 @@ class ScriptLevel < ActiveRecord::Base
 
   NEXT = 'next'
 
+  def script
+    Script.get_from_cache(script_id)
+  end
+
   # this is a temporary (request-scope) variable set by User.rb#levels_from_script to find the UserLevel
   # corresponding to this ScriptLevel for a specific user
   attr_accessor :user_level
@@ -40,48 +44,72 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def end_of_stage?
-    stage ? stage.script_levels.to_a.last == self :
-      next_progression_level && (level.game_id != next_progression_level.level.game_id)
-  end
-
-  def stage_position_str
-    stage ? I18n.t('stage_number', number: stage.position) : I18n.t("data.script.name.#{script.name}.#{level.game.name}")
+    stage.script_levels.to_a.last == self
   end
 
   def name
-    I18n.t("data.script.name.#{script.name}.#{stage ? stage.name : level.game.name}")
+    I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
 
   def report_bug_url(request)
-    stage_text = stage ? "Stage #{stage.position} " : ' '
-    message = "Bug in Course #{script.name} #{stage_text}Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
+    message = "Bug in Course #{script.name} Stage #{stage.position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
   def level_display_text
     if level.unplugged?
       I18n.t('user_stats.classroom_activity')
-    elsif stage && stage.unplugged?
-      stage_or_game_position - 1
+    elsif stage.unplugged?
+      position - 1
     else
-      stage_or_game_position
+      position
     end
   end
 
-  def stage_or_game
-    stage ? stage : level.game
+  def stage_total
+    stage.script_levels.to_a.count
   end
 
-  def stage_or_game_position
-    self.stage ? self.position : self.game_chapter
-  end
-
-  def stage_or_game_total
-    if stage
-      script.script_levels.to_a.count {|sl| sl.stage_id == stage_id}
+  def summarize
+    if level.unplugged?
+      kind = 'unplugged'
+    elsif assessment
+      kind = 'assessment'
     else
-      script.script_levels.to_a.count {|sl| sl.level.game_id == level.game_id}
+      kind = 'puzzle'
     end
+
+    summary = {
+        id: level.id,
+        position: position,
+        kind: kind,
+        title: level_display_text,
+    }
+
+    # Add a previous pointer if it's not the obvious (level-1)
+    if previous_level
+      if previous_level.stage.position != stage.position
+        summary[:previous] = [previous_level.stage.position, previous_level.position]
+      end
+    else
+      # This is the first level in the script
+      summary[:previous] = false
+    end
+
+    # Add a next pointer if it's not the obvious (level+1)
+    if end_of_stage?
+      if next_level
+        summary[:next] = [next_level.stage.position, next_level.position]
+      else
+        # This is the final level in the script
+        summary[:next] = false
+        if script.wrapup_video
+          summary[:wrapupVideo] = script.wrapup_video.summarize
+        end
+      end
+    end
+
+    summary
   end
 
   def self.cache_find(id)

@@ -116,7 +116,7 @@ class ClassSubmission
   def self.levels_with_i18n_labels(*levels)
     results = {}
     levels.each do |level|
-      results[level] = I18n.t("class_submission_level_#{level.to_s}")
+      results[level] = I18n.t("class_submission_level_#{level}")
     end
     results
   end
@@ -130,10 +130,10 @@ class ClassSubmission
   end
 
   def self.process(data)
-    sleep 0.10
-    {
-      'location_p' => data['location_p'] || geocode_address(data['school_address_s'])
-    }
+    {}.tap do |results|
+      location = search_for_address(data['school_address_s'])
+      results.merge! location.to_solr if location
+    end
   end
 
   def self.index(data)
@@ -146,7 +146,10 @@ class ClassSubmission
     end
 
     data['class_languages_all_ss'] = data['class_languages_ss'] - ['Other']
-    data['class_languages_all_ss'].concat(data['class_languages_other_ss'] || []).sort.uniq;
+    data['class_languages_all_ss'].concat(data['class_languages_other_ss'] || []).sort.uniq
+
+    # Create a case-insensitive version of the name for sorting.
+    data['school_name_sort_s'] = data['school_name_s'].downcase
 
     data
   end
@@ -180,6 +183,7 @@ class ClassSubmission
       facet:true,
       'facet.field'=>['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
       rows:rows,
+      sort:"school_name_s asc"
     }
   end
 

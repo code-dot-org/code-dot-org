@@ -1,12 +1,12 @@
 goog.provide('Blockly.Msg.hr_hr');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "stvarno";
+Blockly.Msg.ACTUAL = "pozovi";
 Blockly.Msg.ADD = "Dodaj";
 Blockly.Msg.ADD_COMMENT = "Dodaj komentar";
 Blockly.Msg.ADD_PARAMETER = "Dodaj parametar";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Promijeni vrijednost:";
 Blockly.Msg.COLLAPSE_ALL = "Smanji blokove";
-Blockly.Msg.COLLAPSE_BLOCK = "Smanji blokove";
+Blockly.Msg.COLLAPSE_BLOCK = "Smanji blok";
 Blockly.Msg.COLOUR_BLEND_COLOUR1 = "boja 1";
 Blockly.Msg.COLOUR_BLEND_COLOUR2 = "boja 2";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "crvena";
 Blockly.Msg.COLOUR_RGB_TITLE = "oboji s";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Stvara boju sa zadanim udjelom crvene, zelene i plave. Sve vrijednosti moraju biti između 0 i 100.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "izađi iz petlje";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "nastavi s idućim prolaskom kroz petlju";
@@ -59,7 +60,7 @@ Blockly.Msg.CONTROLS_REPEAT_TOOLTIP = "Ponavlja određene naredbe nekoliko puta.
 Blockly.Msg.CONTROLS_WHILEUNTIL_HELPURL = "http://code.google.com/p/blockly/wiki/Repeat";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "ponavljaj dok ne bude";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "ponavljaj dok je";
-Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Dok uvjet nije ispunjen, izvršava zadane naredbe.";
+Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Dok uvjet nije ispunjen, onda izvrši neke naredbe.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Dok je uvjet ispunjen, izvršava zadane naredbe.";
 Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definicija";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Definirati";

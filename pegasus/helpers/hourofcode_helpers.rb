@@ -55,7 +55,7 @@ def hoc_canonicalized_i18n_path(uri)
 
   path = uri if resolve_document(uri)
 
-  return "/#{path.to_s}"
+  return "/#{path}"
 end
 
 def hoc_detect_country()
@@ -80,14 +80,14 @@ def hoc_uri(uri)
   File.join(['/', (@company or @country), @user_language, uri].select{|i| !i.nil_or_empty?})
 end
 
-def codeorg_url() 
+def codeorg_url()
   if @country == 'ar'
     return 'ar.code.org'
   elsif @country == 'br'
     return 'br.code.org'
-  elsif @country == 'ro' 
+  elsif @country == 'ro'
     return 'ro.code.org'
-  elsif @country == 'uk' 
+  elsif @country == 'uk'
     return 'uk.code.org'
   else
     return 'code.org'
@@ -104,4 +104,3 @@ def company_count(company)
   end
   return company_count
 end
-

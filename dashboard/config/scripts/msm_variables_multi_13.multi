@@ -1,6 +1,6 @@
 name 'msm variables multi 13'
-title 'f(x) = x * 17'
-question 'What is f(1)?'
+title '/script_assets/msm/define_f.png, 300'
+question 'What should f(1) produce?'
 wrong 'x'
 wrong '117'
 right '17'

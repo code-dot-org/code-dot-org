@@ -1,0 +1,8 @@
+name 'Pixelation 4x4 Empty'
+title 'Pixelation 4x4 Empty'
+description 'Create images with bits and bytes.'
+href 'pixelation/pixelation.html'
+
+version '2'
+instructions "The width and height are now encoded in the pixel data. Can you figure out how to adjust the dimensions?"
+data '0000 0100 0000 0100'

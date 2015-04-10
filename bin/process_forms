@@ -64,8 +64,22 @@ def index_batch_of_forms(batch_size)
 
       begin
         index_data = JSON.load(form[:data]).merge(JSON.load(form[:processed_data]))
-        index_data = index_data.merge(id:form[:id], kind_s:form[:kind], review_s:form[:review], user_i:form[:user_id], parent_form_i:form[:parent_id])
+        index_data = index_data.merge('id'=>form[:id], 'kind_s'=>form[:kind], 'review_s'=>form[:review], 'user_i'=>form[:user_id], 'parent_form_i'=>form[:parent_id])
         index_data = kind.index(index_data) if kind.respond_to?(:index)
+
+        address_to_search = index_data['school_address_s'].to_s.strip
+        address_to_search = index_data['zip_code_s'].to_s.strip if address_to_search.empty?
+        sleep(0.03) unless address_to_search.empty?
+        address_to_search = form[:created_ip].to_s.strip if address_to_search.empty?
+        location = Geocoder.search(address_to_search).first
+        if location
+          index_data['create_ip_city_s'] = location.city
+          index_data['create_ip_state_s'] = location.state
+          index_data['create_ip_country_s'] = location.country
+          index_data['create_ip_postal_code_s'] = location.postal_code
+          index_data['create_ip_location_p'] = "#{location.latitude},#{location.longitude}" if location.latitude && location.longitude
+        end
+
         documents << index_data
       rescue
         HipChat.log "Form #{form[:id]} couldn't be indexed.", color:'red', notify:1
@@ -82,7 +96,7 @@ def index_batch_of_forms(batch_size)
         begin
           SOLR.update([document])
         rescue => e
-          HipChat.log "Unable to index form #{document[:id]}: #{e}"
+          HipChat.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color:'red', notify:1
           raise
         end
       end

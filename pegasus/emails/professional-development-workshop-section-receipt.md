@@ -10,7 +10,7 @@
   image.format = 'jpg'
 %>
 from: "Hadi Partovi (Code.org) <hadi_partovi@code.org>"
-subject: "Your Code.org certificate and no-cost teaching supplies"
+subject: "Your Code.org certificate and teaching supplies"
 litmus_tracking_id: "4o1xaamz"
 attachments:
   certificate.jpg: '<%= Base64::encode64(image.to_blob) %>'
@@ -25,7 +25,7 @@ twitter_link = "https://twitter.com/intent/tweet?#{twitter.to_query}"
 Dear <%= recipient.name %>,
 <% end %>
 
-Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %><%= start_date ? " on #{Chronic.parse(start_date).strftime('%A, %B %d %Y')}" : '' %> at <%= location_name %>! We hope you had an awesome time and that you feel prepared to bring computer science to your little learners!
+Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %><%= start_date ? " on #{Chronic.parse(start_date).strftime('%A, %B %d %Y')}" : '' %>! We hope you had an awesome time and that you feel prepared to bring computer science to your little learners! If you had a good experience, please spread the word about the [Code.org K-5 program](http://code.org/k5). 
 
 <div><!--[if mso]>
   <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<%= facebook_link %>" style="height:45px;v-text-anchor:middle;width:180px;" arcsize="9%" stroke="f" fillcolor="#7e5ca2">
@@ -49,10 +49,13 @@ style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-b
   </v:roundrect>
 <![endif]-->
 </div>
+<br>
 
-Attached to this email, you will find a personalized certificate acknowledging your successful completion of Code.org's K-5 Professional Development.
+**Classroom supplies, free of charge:**
 
 Please take a moment to complete [this short survey](http://code.org/professional-development-workshop-surveys/<%= workshop_id %>) to rate your facilitator and workshop experience. Completing the survey will qualify you to receive supplies at no cost for the unplugged activities from Course 1, 2 or 3. It will also help us improve our K-5 Professional Development program.
+
+Attached to this email, you will also find a personalized certificate acknowledging your successful completion of Code.org's K-5 Professional Development.
 
 For more support, check out Code.org's [online office hours](http://code.org/educate/k5/k5officehours), [K-5 forum](http://support.code.org/hc/communities/public/topics) and [FAQ](http://support.code.org/). Or [contact us](http://code.org/contact).
 
@@ -60,6 +63,8 @@ Thanks again for your support,
 
 Hadi Partovi<br/>
 Founder, Code.org
+
+Follow us [on Facebook](http://facebook.com/code.org) or [on Twitter](http://twitter.com/codeorg)
 
 Code.org is a public 501c3. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 

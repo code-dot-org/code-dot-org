@@ -1,0 +1,33 @@
+<%
+  var EncodingType = require('./netsimConstants').EncodingType;
+  var i18n = require('../../locale/current/netsim');
+
+  /**
+   * @param {EncodingType} encodingType
+   * @param {string} encodingLabel
+   */
+  function makeCheckbox(encodingType, encodingLabel) {
+    var divClasses = ['encoding_checkboxes_' + encodingType];
+    if (level.showEncodingControls.indexOf(encodingType) === -1) {
+      divClasses.push('hidden-control');
+    }
+    %>
+    <div class="<%= divClasses.join(' ') %>">
+      <input type="checkbox"
+             name="encoding_checkboxes"
+             id="encoding_checkboxes_<%= encodingType %>"
+             value="<%= encodingType %>"
+          />
+      <label for="encoding_checkboxes_<%= encodingType %>"><%= encodingLabel %></label>
+    </div>
+    <%
+  }
+%>
+<div class="netsim-encoding-selector">
+  <h1><%= i18n.encoding() %></h1>
+  <% makeCheckbox(EncodingType.ASCII, i18n.ascii()); %>
+  <% makeCheckbox(EncodingType.DECIMAL, i18n.decimal()); %>
+  <% makeCheckbox(EncodingType.HEXADECIMAL, i18n.hexadecimal()); %>
+  <% makeCheckbox(EncodingType.BINARY, i18n.binary()); %>
+  <% makeCheckbox(EncodingType.A_AND_B, i18n.a_and_b()); %>
+</div>

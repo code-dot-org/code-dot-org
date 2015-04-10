@@ -4,28 +4,32 @@
  * Copyright 2014-2015 Code.org
  *
  */
+/* global $ */
 
 'use strict';
-
+require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../../locale/current/common');
 var applabMsg = require('../../locale/current/applab');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var page = require('../templates/page.html');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
 var Slider = require('../slider');
 var AppStorage = require('./appStorage');
-var FormStorage = require('./formStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
+var apiTimeoutList = require('../timeoutList');
+var RGBColor = require('./rgbcolor.js');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -37,6 +41,7 @@ var Applab = module.exports;
 
 var level;
 var skin;
+var user;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -81,10 +86,51 @@ function loadLevel() {
 }
 
 //
+// Adjust a media height rule (if needed). This is called by adjustAppSizeStyles
+// for all media rules. We look for a specific set of rules that should be in
+// the stylesheet and swap out the defaultHeightRules with the newHeightRules
+//
+
+function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
+  // The media rules we are looking for always have two components. The first
+  // component is for screen width, which we ignore. The second is for screen
+  // height, which we want to modify:
+  if (mediaList.length === 2) {
+    var lastHeightRuleIndex = defaultHeightRules.length - 1;
+    for (var i = 0; i <= lastHeightRuleIndex; i++) {
+      if (-1 !== mediaList.item(1).indexOf("(min-height: " +
+          (defaultHeightRules[i] + 1) + "px)")) {
+        if (i === 0) {
+          // Matched the first rule (no max height)
+          mediaList.mediaText = mediaList.item(0) +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)";
+        } else {
+          // Matched one of the middle rules with a min and a max height
+          mediaList.mediaText = mediaList.item(0) +
+              ", screen and (min-height: " + (newHeightRules[i] + 1) + "px)" +
+              " and (max-height: " + newHeightRules[i - 1] + "px)";
+        }
+        break;
+      } else if (mediaList.item(1) === "screen and (max-height: " +
+                 defaultHeightRules[lastHeightRuleIndex] + "px)") {
+        // Matched the last rule (no min height)
+        mediaList.mediaText = mediaList.item(0) +
+            ", screen and (max-height: " +
+            newHeightRules[lastHeightRuleIndex] + "px)";
+        break;
+      }
+    }
+  }
+}
+
+//
 // The visualization area adjusts its size using a series of CSS rules that are
 // tuned to make adjustments assuming a 400x400 visualization. Since applab
 // allows its visualization size to be set on a per-level basis, the function
 // below modifies the CSS rules to account for the per-level coordinates
+//
+// It also adjusts the height rules based on the adjusted visualization size
+// and the offset where the app has been embedded in the page
 //
 // The visualization column will remain at 400 pixels wide in the max-width
 // case and scale downward from there. The visualization height will be set
@@ -96,10 +142,11 @@ function loadLevel() {
 // result in a scaled-down version of divApplab
 //
 
-function adjustAppSizeStyles() {
+function adjustAppSizeStyles(container) {
   var vizScale = 1;
   // We assume these are listed in this order:
-  var scaleFactors = [ 1.0, 0.875, 0.75, 0.675, 0.5 ];
+  var defaultScaleFactors = [ 1.0, 0.875, 0.75, 0.625, 0.5 ];
+  var scaleFactors = defaultScaleFactors.slice(0);
   if (vizAppWidth !== Applab.appWidth) {
     vizScale = vizAppWidth / Applab.appWidth;
     for (var ind = 0; ind < scaleFactors.length; ind++) {
@@ -107,6 +154,24 @@ function adjustAppSizeStyles() {
     }
   }
   var vizAppHeight = Applab.appHeight * vizScale;
+
+  // Compute new height rules:
+  // (1) defaults are scaleFactors * defaultAppHeight + 200 (belowViz estimate)
+  // (2) we adjust the height rules to take into account where the codeApp
+  // div is anchored on the page. If this changes after this function is called,
+  // the media rules for height are no longer valid.
+  // (3) we assume that there is nothing below codeApp on the page that also
+  // needs to be included in the height rules
+  // (4) there is no 5th height rule in the array because the 5th rule in the
+  // stylesheet has no minimum specified. It just uses the max-height from the
+  // 4th item in the array.
+  var defaultHeightRules = [ 600, 550, 500, 450 ];
+  var newHeightRules = defaultHeightRules.slice(0);
+  for (var z = 0; z < newHeightRules.length; z++) {
+    newHeightRules[z] += container.offsetTop +
+        (vizAppHeight - defaultAppHeight) * defaultScaleFactors[z];
+  }
+
   var ss = document.styleSheets;
   for (var i = 0; i < ss.length; i++) {
     if (ss[i].href && (ss[i].href.indexOf('applab.css') !== -1)) {
@@ -124,9 +189,11 @@ function adjustAppSizeStyles() {
                                    "px; width: " + vizAppWidth + "px;";
           changedRules++;
         } else if (rules[j].media && childRules) {
+          adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
+
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 3; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -137,6 +204,21 @@ function adjustAppSizeStyles() {
             } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+              // set the max-width for the parent visualizationColumn (with_padding)
+              childRules[k].style.cssText = "max-width: " +
+                  (Applab.appWidth * scale + 2) + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "div#codeWorkspace") {
+              // set the left for the codeWorkspace
+              childRules[k].style.cssText = "left: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
+              // set the right for the codeWorkspace (RTL mode)
+              childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
@@ -164,18 +246,16 @@ var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
   divApplab.style.height = Applab.appHeight + "px";
-
-  // TODO: one-time initial drawing
-
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = vizAppWidth + 'px';
 };
+
+function stepSpeedFromSliderSpeed(sliderSpeed) {
+  return 300 * Math.pow(1 - sliderSpeed, 2);
+}
 
 function getCurrentTickLength() {
   var stepSpeed = Applab.scale.stepSpeed;
   if (Applab.speedSlider) {
-    stepSpeed = 300 * Math.pow(1 - Applab.speedSlider.getValue(), 2);
+    stepSpeed = stepSpeedFromSliderSpeed(Applab.speedSlider.getValue());
   }
   return stepSpeed;
 }
@@ -197,6 +277,101 @@ function outputApplabConsole(output) {
     debugOutput.value = output;
   }
   debugOutput.scrollTop = debugOutput.scrollHeight;
+}
+
+var apiWarn = outputApplabConsole;
+
+var OPTIONAL = true;
+
+function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  if (typeof opts[validatedTypeKey] === 'undefined') {
+    var properType;
+    if (expectedType === 'color') {
+      // Special handling for colors, must be a string and a valid RGBColor:
+      properType = (typeof varValue === 'string');
+      if (properType) {
+        var color = new RGBColor(varValue);
+        properType = color.ok;
+      }
+    } else if (expectedType === 'function') {
+      // Special handling for functions, it must be an interpreter function:
+      properType = (typeof varValue === 'object') && (varValue.type === 'function');
+    } else {
+      properType = (typeof varValue === expectedType);
+    }
+    properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
+    if (!properType) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
+              " parameter value (" + varValue + ") is not a " + expectedType + ".");
+    }
+    opts[validatedTypeKey] = properType;
+  }
+}
+
+function apiValidateTypeAndRange(opts, funcName, varName, varValue,
+                                 expectedType, minValue, maxValue) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedRangeKey = 'validated_range_' + varName;
+  apiValidateType(opts, funcName, varName, varValue, expectedType);
+  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
+    var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
+    if (inRange) {
+      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
+    }
+    if (!inRange) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
+              " parameter value (" + varValue + ") is not in the expected range.");
+    }
+    opts[validatedRangeKey] = inRange;
+  }
+}
+
+function apiValidateActiveCanvas(opts, funcName) {
+  var validatedActiveCanvasKey = 'validated_active_canvas';
+  if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
+    var activeCanvas = Boolean(Applab.activeCanvas);
+    if (!activeCanvas) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName +
+              "() called without an active canvas. Call createCanvas() first.");
+    }
+    if (opts) {
+      opts[validatedActiveCanvasKey] = activeCanvas;
+    }
+  }
+}
+
+function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shouldExist) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedDomKey = 'validated_id_' + varName;
+  apiValidateType(opts, funcName, varName, id, 'string');
+  if (opts[validatedTypeKey] && typeof opts[validatedDomKey] === 'undefined') {
+    var element = document.getElementById(id);
+    var exists = Boolean(element && divApplab.contains(element));
+    var valid = exists == shouldExist;
+    if (!valid) {
+      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                Applab.cumulativeLength,
+                                                Applab.userCodeStartOffset,
+                                                Applab.userCodeLength);
+      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
+              " parameter refers to an id (" + id + ") which " +
+              (exists ? "already exists." : "does not exist."));
+    }
+    opts[validatedDomKey] = valid;
+  }
 }
 
 function onDebugInputKeyDown(e) {
@@ -258,14 +433,28 @@ function handleExecutionError(err, lineNumber) {
     // this while executing (in which case, it would already have been selected)
     selectEditorRowCol(lineNumber - 1, err.loc.column);
   }
+  if (!lineNumber && Applab.interpreter) {
+    lineNumber = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+  }
   if (lineNumber) {
-    outputApplabConsole('Line ' + lineNumber + ': ' + String(err));
+    outputApplabConsole('ERROR: Line ' + lineNumber + ': ' + String(err));
   } else {
-    outputApplabConsole(String(err));
+    outputApplabConsole('ERROR: ' + String(err));
   }
   Applab.executionError = err;
   Applab.onPuzzleComplete();
 }
+
+Applab.getCode = function () {
+  return studioApp.editor.getValue();
+};
+
+Applab.getHtml = function () {
+  return Applab.levelHtml;
+};
 
 Applab.onTick = function() {
   if (!Applab.running) {
@@ -278,15 +467,27 @@ Applab.onTick = function() {
   if (Applab.interpreter) {
     Applab.executeInterpreter();
   } else {
-    if (Applab.tickCount === 1) {
-      try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
-    }
+    Applab.executeNativeJS();
   }
 
   if (checkFinished()) {
     Applab.onPuzzleComplete();
   }
 };
+
+Applab.executeNativeJS = function () {
+  if (Applab.tickCount === 1) {
+    try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+  }
+};
+
+function safeStepInterpreter() {
+  try {
+    Applab.interpreter.step();
+  } catch (err) {
+    return err;
+  }
+}
 
 Applab.executeInterpreter = function (runUntilCallbackReturn) {
   Applab.runUntilCallbackReturn = runUntilCallbackReturn;
@@ -313,7 +514,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // step out to - and store that in stepOutToStackDepth:
         if (Applab.interpreter && typeof Applab.stepOutToStackDepth === 'undefined') {
           Applab.stepOutToStackDepth = 0;
-          for (var i = Applab.interpreter.stateStack.length - 1; i > 0; i--) {
+          for (var i = Applab.maxValidCallExpressionDepth; i > 0; i--) {
             if (Applab.callExpressionSeenAtDepth[i]) {
               Applab.stepOutToStackDepth = i;
               break;
@@ -330,12 +531,10 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
   var inUserCode;
   var userCodeRow;
   var session = studioApp.editor.aceEditor.getSession();
-  // NOTE: when running with no source visible or at max speed with blocks, we
+  // NOTE: when running with no source visible or at max speed, we
   // call a simple function to just get the line number, otherwise we call a
   // function that also selects the code:
-  var selectCodeFunc =
-    (studioApp.hideSource ||
-     (atMaxSpeed && !Applab.paused && studioApp.editor.currentlyUsingBlocks)) ?
+  var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
           codegen.getUserCodeLine :
           codegen.selectCurrentCode;
 
@@ -346,12 +545,13 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
     if ((reachedBreak && !unwindingAfterStep) ||
-        (doneUserLine && !atMaxSpeed) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||
         (runUntilCallbackReturn && Applab.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
-      // (2) completed a line of user code (while not running atMaxSpeed) OR
+      // (2) completed a line of user code and are are done unwinding
+      //     (while not running atMaxSpeed) OR
       // (3) have seen an empty event queue in nativeGetCallback (no events) OR
       // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
@@ -404,33 +604,44 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
       Applab.stoppedAtBreakpointRow = userCodeRow;
       Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
     }
-    try {
-      Applab.interpreter.step();
+    var err = safeStepInterpreter();
+    if (!err) {
       doneUserLine = doneUserLine ||
         (inUserCode && Applab.interpreter.stateStack[0] && Applab.interpreter.stateStack[0].done);
 
+      var stackDepth = Applab.interpreter.stateStack.length;
       // Remember the stack depths of call expressions (so we can implement 'step out')
 
       // Truncate any history of call expressions seen deeper than our current stack position:
-      Applab.callExpressionSeenAtDepth.length = Applab.interpreter.stateStack.length + 1;
+      for (var depth = stackDepth + 1;
+            depth <= Applab.maxValidCallExpressionDepth;
+            depth++) {
+        Applab.callExpressionSeenAtDepth[depth] = false;
+      }
+      Applab.maxValidCallExpressionDepth = stackDepth;
 
       if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
         // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
-        Applab.callExpressionSeenAtDepth[Applab.interpreter.stateStack.length] = true;
+        Applab.callExpressionSeenAtDepth[stackDepth] = true;
       }
 
       if (Applab.paused) {
         // Store the first call expression stack depth seen while in this step operation:
         if (inUserCode && Applab.interpreter.stateStack[0].node.type === "CallExpression") {
           if (typeof Applab.firstCallStackDepthThisStep === 'undefined') {
-            Applab.firstCallStackDepthThisStep = Applab.interpreter.stateStack.length;
+            Applab.firstCallStackDepthThisStep = stackDepth;
           }
         }
+        // If we've arrived at a BlockStatement, set doneUserLine even though the
+        // the stateStack doesn't have "done" set, so that stepping in the debugger makes
+        // sense (otherwise we'll skip over the first line in loops):
+        doneUserLine = doneUserLine ||
+          (inUserCode && Applab.interpreter.stateStack[0].node.type === "BlockStatement");
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
             inUserCode &&
             Applab.nextStep === StepType.IN &&
-            Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+            stackDepth > Applab.firstCallStackDepthThisStep) {
           reachedBreak = true;
         }
         // After the interpreter says a node is "done" (meaning it is time to stop), we will
@@ -457,11 +668,11 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
 
         if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
           if (Applab.nextStep === StepType.OUT &&
-              Applab.interpreter.stateStack.length > Applab.stepOutToStackDepth) {
+              stackDepth > Applab.stepOutToStackDepth) {
             // trying to step out, but we didn't get out yet... continue on.
           } else if (Applab.nextStep === StepType.OVER &&
               typeof Applab.firstCallStackDepthThisStep !== 'undefined' &&
-              Applab.interpreter.stateStack.length > Applab.firstCallStackDepthThisStep) {
+              stackDepth > Applab.firstCallStackDepthThisStep) {
             // trying to step over, and we're in deeper inside a function call... continue next onTick
           } else {
             // Our step operation is complete, reset nextStep to StepType.RUN to
@@ -470,7 +681,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
-              Applab.stoppedAtBreakpointStackDepth = Applab.interpreter.stateStack.length;
+              Applab.stoppedAtBreakpointStackDepth = stackDepth;
             }
             delete Applab.stepOutToStackDepth;
             delete Applab.firstCallStackDepthThisStep;
@@ -479,8 +690,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
           }
         }
       }
-    }
-    catch(err) {
+    } else {
       handleExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
       return;
     }
@@ -533,22 +743,24 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles();
+  adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: finishButtonFirstLine
+    finishButton: true
   });
   var extraControlsRow = require('./extraControlRows.html')({
     assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
+  });
+  var designProperties = require('./designProperties.html')({tagName:null});
+  var designModeBox = require('./designModeBox.html')({
+    designProperties: designProperties
   });
 
   config.html = page({
@@ -561,13 +773,15 @@ Applab.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      pinWorkspaceToBottom: true,
+      hasDesignMode: true,
+      designModeBox: designModeBox
     }
   });
 
   config.loadAudio = function() {
     studioApp.loadAudio(skin.winSound, 'win');
-    studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
@@ -606,7 +820,7 @@ Applab.init = function(config) {
         e.stop();
       });
     }
-    
+
     if (studioApp.share) {
       // automatically run in share mode:
       window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
@@ -624,6 +838,7 @@ Applab.init = function(config) {
   config.noButtonsBelowOnMobileShare = true;
 
   config.dropletConfig = dropletConfig;
+  config.pinWorkspaceToBottom = true;
 
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
@@ -631,7 +846,25 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
+  Applab.levelHtml = level.levelHtml || "";
+
   studioApp.init(config);
+
+  var viz = document.getElementById('visualization');
+  var vizCol = document.getElementById('visualizationColumn');
+
+  if (!config.noPadding) {
+    viz.className += " with_padding";
+    vizCol.className += " with_padding";
+  }
+
+  if (config.embed || config.hideSource) {
+    // no responsive styles active in embed or hideSource mode, so set sizes:
+    viz.style.width = Applab.appWidth + 'px';
+    viz.style.height = Applab.appHeight + 'px';
+    // Use offsetWidth of viz so we can include any possible border width:
+    vizCol.style.maxWidth = viz.offsetWidth + 'px';
+  }
 
   if (level.editCode) {
     // Initialize the slider.
@@ -668,7 +901,192 @@ Applab.init = function(config) {
     if (viewDataButton) {
       dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
     }
+    var designModeButton = document.getElementById('designModeButton');
+    if (designModeButton) {
+      dom.addClickTouchEvent(designModeButton, Applab.onDesignModeButton);
+    }
+    var codeModeButton = document.getElementById('codeModeButton');
+    if (codeModeButton) {
+      dom.addClickTouchEvent(codeModeButton, Applab.onCodeModeButton);
+    }
+    var designModeClear = document.getElementById('designModeClear');
+    if (designModeClear) {
+      dom.addClickTouchEvent(designModeClear, Applab.onDesignModeClear);
+    }
+
+    // Allow elements to be dragged and dropped from the design mode
+    // element tray to the play space.
+    if (window.$) {
+      $('.new-design-element').draggable({
+        containment:"#codeApp",
+        helper:"clone",
+        appendTo:"#codeApp",
+        revert: 'invalid',
+        zIndex: 2,
+        start: function() {
+          studioApp.resetButtonClick();
+        }
+      });
+      var scale = vizAppWidth / Applab.appWidth;
+      var gridSize = 20;
+      $('#visualization').droppable({
+        accept: '.new-design-element',
+        drop: function (event, ui) {
+          var elementType = ui.draggable[0].dataset.elementType;
+
+          var left = ui.position.left / scale;
+          left = Math.round(left - left % gridSize);
+          var top = ui.position.top / scale;
+          top = Math.round(top - top % gridSize);
+
+          Applab.createElement(elementType, left, top);
+        }
+      });
+    }
+
   }
+
+  user = {applabUserId: config.applabUserId};
+};
+
+/**
+ * The types of acceptable HTML elements in the levelHtml.
+ * @type {{BUTTON: string, LABEL: string, INPUT: string}}
+ */
+var ElementType = {
+  BUTTON: 'button',
+  LABEL: 'label',
+  INPUT: 'input'
+};
+Applab.ElementType = ElementType;
+
+/**
+ * A map from prefix to the next numerical suffix to try to
+ * use as an id in the applab app's DOM.
+ * @type {Object.<string, number>}
+ */
+Applab.nextElementIdMap = {};
+
+/**
+ * Returns an element id with the given prefix which is unused within
+ * the applab app's DOM.
+ * @param {string} prefix
+ * @returns {string}
+ */
+Applab.getUnusedElementId = function (prefix) {
+  var divApplab = $('#divApplab');
+  var i = Applab.nextElementIdMap[prefix] || 1;
+  while (divApplab.find("#" + prefix + i).length !== 0) {
+    i++;
+  }
+  Applab.nextElementIdMap[prefix] = i + 1;
+  return prefix + i;
+};
+
+/**
+ * Create a new element of the specified type within the play space.
+ * @param {ElementType} elementType HTML element type to create.
+ * @param {number} left Position from left.
+ * @param {number} top Position from top.
+ */
+Applab.createElement = function (elementType, left, top) {
+  var el = document.createElement(elementType);
+  switch (elementType) {
+    case ElementType.BUTTON:
+      el.appendChild(document.createTextNode('Button'));
+      el.style.margin = 0;
+      break;
+    case ElementType.LABEL:
+      el.appendChild(document.createTextNode("text"));
+      el.style.margin = '10px';
+      break;
+    case ElementType.INPUT:
+      el.style.margin = '10px';
+      break;
+    default:
+      throw "unrecognized element type " + elementType;
+  }
+  el.id = Applab.getUnusedElementId(elementType);
+  el.style.position = 'absolute';
+  el.style.left = left + 'px';
+  el.style.top = top + 'px';
+
+  var divApplab = document.getElementById('divApplab');
+  divApplab.appendChild(el);
+  Applab.levelHtml = divApplab.innerHTML;
+};
+
+Applab.onDivApplabClick = function (event) {
+  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+    return;
+  }
+  event.preventDefault();
+  Applab.editElementProperties(event.target);
+};
+
+// Currently there is a 1:1 mapping between applab element types and HTML tag names
+// (input, label, button, ...), so elements are simply identified by tag name.
+Applab.editElementProperties = function(el) {
+  var tagName = el.tagName.toLowerCase();
+  if (!Applab.isValidElementType(tagName)) {
+   Applab.clearProperties();
+   return;
+  }
+
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: tagName,
+    props: {
+      id: el.id,
+      left: el.style.left,
+      top: el.style.top,
+      width: el.style.width,
+      height: el.style.height,
+      text: $(el).text()
+    }
+  });
+  var savePropertiesButton = document.getElementById('savePropertiesButton');
+  var onSave = Applab.onSavePropertiesButton.bind(this, el);
+  if (savePropertiesButton) {
+    dom.addClickTouchEvent(savePropertiesButton, onSave);
+  }
+  var deletePropertiesButton = document.getElementById('deletePropertiesButton');
+  var onDelete = Applab.onDeletePropertiesButton.bind(this, el);
+  if (deletePropertiesButton) {
+    dom.addClickTouchEvent(deletePropertiesButton, onDelete);
+  }
+};
+
+Applab.clearProperties = function () {
+  var designPropertiesEl = document.getElementById('design-properties');
+  designPropertiesEl.innerHTML = require('./designProperties.html')({
+    tagName: null
+  });
+};
+
+Applab.isValidElementType = function (type) {
+  for (var prop in Applab.ElementType) {
+    if (type === Applab.ElementType[prop]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+Applab.onSavePropertiesButton = function(el, event) {
+  el.id = document.getElementById('design-property-id').value;
+  el.style.left = document.getElementById('design-property-left').value;
+  el.style.top = document.getElementById('design-property-top').value;
+  el.style.width = document.getElementById('design-property-width').value;
+  el.style.height = document.getElementById('design-property-height').value;
+  $(el).text(document.getElementById('design-property-text').value);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+};
+
+Applab.onDeletePropertiesButton = function(el, event) {
+  el.parentNode.removeChild(el);
+  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.clearProperties();
 };
 
 /**
@@ -722,6 +1140,8 @@ studioApp.reset = function(first) {
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
   Applab.turtle.y = Applab.appHeight / 2;
+  apiTimeoutList.clearTimeouts();
+  apiTimeoutList.clearIntervals();
 
   var divApplab = document.getElementById('divApplab');
 
@@ -732,6 +1152,13 @@ studioApp.reset = function(first) {
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
+
+  divApplab = document.getElementById('divApplab');
+  if (Applab.levelHtml) {
+    divApplab.innerHTML = Applab.levelHtml;
+  }
+  divApplab.addEventListener('click', Applab.onDivApplabClick);
+
 
   // Reset goal successState:
   if (level.goal) {
@@ -745,6 +1172,7 @@ studioApp.reset = function(first) {
     delete Applab.firstCallStackDepthThisStep;
     delete Applab.stoppedAtBreakpointRow;
     delete Applab.stoppedAtBreakpointStackDepth;
+    Applab.maxValidCallExpressionDepth = 0;
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
@@ -797,6 +1225,12 @@ studioApp.runButtonClick = function() {
   studioApp.reset(false);
   studioApp.attempts++;
   Applab.execute();
+
+  // Show view data button now that channel id is available.
+  var viewDataButton = document.getElementById('viewDataButton');
+  if (viewDataButton) {
+    viewDataButton.style.display = "inline-block";
+  }
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
@@ -926,14 +1360,24 @@ JSONApi.stringify = function(object) {
   return JSON.stringify(object);
 };
 
-// Commented out, but available in case we want to expose the droplet/pencilcode
-// style random (with a min, max value)
-/*
-exports.random = function (min, max)
-{
-    return Math.floor(Math.random()*(max-min+1)+min);
-};
-*/
+function populateNonMarshalledFunctions(interpreter, scope, parent) {
+  for (var i = 0; i < dropletConfig.blocks.length; i++) {
+    var block = dropletConfig.blocks[i];
+    if (block.dontMarshal) {
+      var func = parent[block.func];
+      // 4th param is false to indicate: don't marshal params
+      var wrapper = codegen.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: parent,
+          dontMarshal: true
+      });
+      interpreter.setProperty(scope,
+                              block.func,
+                              interpreter.createNativeFunction(wrapper));
+    }
+  }
+}
 
 /**
  * Execute the app
@@ -945,15 +1389,13 @@ Applab.execute = function() {
   Applab.response = null;
   var i;
 
-  studioApp.playAudio('start');
-
   studioApp.reset(false);
 
   // Set event handlers and start the onTick timer
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, dropletConfig, 'Applab');
+    codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Applab');
     Applab.userCodeStartOffset = codeWhenRun.length;
     Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
     codeWhenRun += studioApp.editor.getValue();
@@ -990,19 +1432,24 @@ Applab.execute = function() {
                                     console: consoleApi,
                                     JSON: JSONApi });
 
+        populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
+
         // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
-        var wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                       nativeGetCallback,
-                                                       null,
-                                                       5);
+        var wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeGetCallback,
+            maxDepth: 5
+        });
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
 
-        wrapper = codegen.makeNativeMemberFunction(interpreter,
-                                                   nativeSetCallbackRetVal);
+        wrapper = codegen.makeNativeMemberFunction({
+            interpreter: interpreter,
+            nativeFunc: nativeSetCallbackRetVal,
+        });
         interpreter.setProperty(scope,
                                 'setCallbackRetVal',
                                 interpreter.createNativeFunction(wrapper));
@@ -1102,8 +1549,41 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.tempEncryptedAppId,
+    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
+};
+
+Applab.onDesignModeButton = function() {
+  studioApp.resetButtonClick();
+  Applab.toggleDesignMode(true);
+};
+
+Applab.onCodeModeButton = function() {
+  Applab.toggleDesignMode(false);
+};
+
+Applab.onDesignModeClear = function() {
+  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
+Applab.toggleDesignMode = function(enable) {
+  var codeModeHeaders = document.getElementById('codeModeHeaders');
+  codeModeHeaders.style.display = enable ? 'none' : 'block';
+  var designModeHeaders = document.getElementById('designModeHeaders');
+  designModeHeaders.style.display = enable ? 'block' : 'none';
+
+  var codeTextbox = document.getElementById('codeTextbox');
+  codeTextbox.style.display = enable ? 'none' : 'block';
+  var designModeBox = document.getElementById('designModeBox');
+  designModeBox.style.display = enable ? 'block' : 'none';
+
+  var designModeButton = document.getElementById('designModeButton');
+  designModeButton.style.display = enable ? 'none' : 'block';
+  var codeModeButton = document.getElementById('codeModeButton');
+  codeModeButton.style.display = enable ? 'block' : 'none';
+
+  var debugArea = document.getElementById('debug-area');
+  debugArea.style.display = enable ? 'none' : 'block';
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1199,14 +1679,26 @@ Applab.container = function (opts) {
   var divApplab = document.getElementById('divApplab');
 
   var newDiv = document.createElement("div");
-  newDiv.id = opts.elementId;
+  if (typeof opts.elementId !== "undefined") {
+    newDiv.id = opts.elementId;
+  }
   newDiv.innerHTML = opts.html;
 
   return Boolean(divApplab.appendChild(newDiv));
 };
 
+Applab.write = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'write', 'html', opts.html, 'string');
+  return Applab.container(opts);
+};
+
 Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
+
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
+  apiValidateType(opts, 'button', 'text', opts.text, 'string');
 
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
@@ -1217,6 +1709,10 @@ Applab.button = function (opts) {
 };
 
 Applab.image = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'image', 'src', opts.src, 'string');
+
   var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
@@ -1270,6 +1766,7 @@ function getTurtleContext() {
     turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
+    turtleImage.ondragstart = function () { return false; };
     divApplab.appendChild(turtleImage);
   }
 
@@ -1301,6 +1798,8 @@ Applab.hide = function (opts) {
 };
 
 Applab.moveTo = function (opts) {
+  apiValidateType(opts, 'moveTo', 'x', opts.x, 'number');
+  apiValidateType(opts, 'moveTo', 'y', opts.y, 'number');
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -1314,16 +1813,18 @@ Applab.moveTo = function (opts) {
 };
 
 Applab.move = function (opts) {
-  var newOpts = {};
-  newOpts.x = Applab.turtle.x + opts.x;
-  newOpts.y = Applab.turtle.y + opts.y;
-  Applab.moveTo(newOpts);
+  apiValidateType(opts, 'move', 'x', opts.x, 'number');
+  apiValidateType(opts, 'move', 'y', opts.y, 'number');
+  opts.x += Applab.turtle.x;
+  opts.y += Applab.turtle.y;
+  Applab.moveTo(opts);
 };
 
 Applab.moveForward = function (opts) {
   var newOpts = {};
   var distance = 25;
   if (typeof opts.distance !== 'undefined') {
+    apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number');
     distance = opts.distance;
   }
   newOpts.x = Applab.turtle.x +
@@ -1335,7 +1836,8 @@ Applab.moveForward = function (opts) {
 
 Applab.moveBackward = function (opts) {
   var distance = -25;
-  if (opts.distance !== 'undefined') {
+  if (typeof opts.distance !== 'undefined') {
+    apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number');
     distance = -opts.distance;
   }
   Applab.moveForward({'distance': distance });
@@ -1347,6 +1849,8 @@ Applab.turnRight = function (opts) {
 
   var degrees = 90;
   if (typeof opts.degrees !== 'undefined') {
+    // TODO: cpirich: may need to update param name
+    apiValidateType(opts, 'turnRight', 'degrees', opts.degrees, 'number');
     degrees = opts.degrees;
   }
 
@@ -1358,12 +1862,16 @@ Applab.turnRight = function (opts) {
 Applab.turnLeft = function (opts) {
   var degrees = -90;
   if (typeof opts.degrees !== 'undefined') {
+    // TODO: cpirich: may need to update param name
+    apiValidateType(opts, 'turnLeft', 'degrees', opts.degrees, 'number');
     degrees = -opts.degrees;
   }
   Applab.turnRight({'degrees': degrees });
 };
 
 Applab.turnTo = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'turnTo', 'degrees', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
   Applab.turnRight({'degrees': degrees });
 };
@@ -1373,6 +1881,10 @@ Applab.turnTo = function (opts) {
 // if opts.counterclockwise, the center point is 90 degrees counterclockwise
 
 Applab.arcRight = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'arcRight', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
+
   // call this first to ensure there is a turtle (in case this is the first API)
   var centerAngle = opts.counterclockwise ? -90 : 90;
   var clockwiseDegrees = opts.counterclockwise ? -opts.degrees : opts.degrees;
@@ -1401,6 +1913,10 @@ Applab.arcRight = function (opts) {
 };
 
 Applab.arcLeft = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'arcLeft', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcLeft', 'radius', opts.radius, 'number');
+
   opts.counterclockwise = true;
   Applab.arcRight(opts);
 };
@@ -1421,12 +1937,24 @@ Applab.getDirection = function (opts) {
 };
 
 Applab.dot = function (opts) {
+  apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up and the color has been changed, use that color:
+      ctx.strokeStyle = Applab.turtle.penUpColor;
+    }
+    var savedLineWidth = ctx.lineWidth;
+    ctx.lineWidth = 1;
     ctx.arc(Applab.turtle.x, Applab.turtle.y, opts.radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
+    if (Applab.turtle.penUpColor) {
+      // If the pen is up, reset strokeStyle back to transparent:
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
+    ctx.lineWidth = savedLineWidth;
     return true;
   }
 
@@ -1435,8 +1963,10 @@ Applab.dot = function (opts) {
 Applab.penUp = function (opts) {
   var ctx = getTurtleContext();
   if (ctx) {
-    Applab.turtle.penUpColor = ctx.strokeStyle;
-    ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    if (ctx.strokeStyle !== "rgba(255, 255, 255, 0)") {
+      Applab.turtle.penUpColor = ctx.strokeStyle;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)";
+    }
   }
 };
 
@@ -1444,12 +1974,13 @@ Applab.penDown = function (opts) {
   var ctx = getTurtleContext();
   if (ctx && Applab.turtle.penUpColor) {
     ctx.strokeStyle = Applab.turtle.penUpColor;
-    ctx.fillStyle = Applab.turtle.penUpColor;
     delete Applab.turtle.penUpColor;
   }
 };
 
 Applab.penWidth = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.lineWidth = opts.width;
@@ -1457,6 +1988,7 @@ Applab.penWidth = function (opts) {
 };
 
 Applab.penColor = function (opts) {
+  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
@@ -1464,13 +1996,26 @@ Applab.penColor = function (opts) {
       Applab.turtle.penUpColor = opts.color;
     } else {
       ctx.strokeStyle = opts.color;
-      ctx.fillStyle = opts.color;
     }
+    ctx.fillStyle = opts.color;
+  }
+};
+
+Applab.speed = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateTypeAndRange(opts, 'speed', 'percent', opts.percent, 'number', 0, 100);
+  if (opts.percent >= 0 && opts.percent <= 100) {
+    var sliderSpeed = opts.percent / 100;
+    if (Applab.speedSlider) {
+      Applab.speedSlider.setValue(sliderSpeed);
+    }
+    Applab.scale.stepSpeed = stepSpeedFromSliderSpeed(sliderSpeed);
   }
 };
 
 Applab.createCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'createCanvas', 'canvasId', opts.elementId, false);
 
   var newElement = document.createElement("canvas");
   var ctx = newElement.getContext("2d");
@@ -1479,6 +2024,8 @@ Applab.createCanvas = function (opts) {
     // default width/height if params are missing
     var width = opts.width || Applab.appWidth;
     var height = opts.height || Applab.appHeight;
+    apiValidateType(opts, 'createCanvas', 'width', width, 'number');
+    apiValidateType(opts, 'createCanvas', 'height', height, 'number');
     newElement.width = width;
     newElement.height = height;
     newElement.style.width = width + 'px';
@@ -1487,6 +2034,7 @@ Applab.createCanvas = function (opts) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
     }
+    ctx.lineCap = "round";
 
     if (!Applab.activeCanvas && !opts.turtleCanvas) {
       // If there is no active canvas and this isn't the turtleCanvas,
@@ -1501,6 +2049,8 @@ Applab.createCanvas = function (opts) {
 
 Applab.setActiveCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
   var canvas = document.getElementById(opts.elementId);
   if (divApplab.contains(canvas)) {
     Applab.activeCanvas = canvas;
@@ -1510,6 +2060,11 @@ Applab.setActiveCanvas = function (opts) {
 };
 
 Applab.line = function (opts) {
+  apiValidateActiveCanvas(opts, 'line');
+  apiValidateType(opts, 'line', 'x1', opts.x1, 'number');
+  apiValidateType(opts, 'line', 'x2', opts.x2, 'number');
+  apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
+  apiValidateType(opts, 'line', 'y2', opts.y2, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -1522,6 +2077,10 @@ Applab.line = function (opts) {
 };
 
 Applab.circle = function (opts) {
+  apiValidateActiveCanvas(opts, 'circle');
+  apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
+  apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
+  apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -1534,6 +2093,11 @@ Applab.circle = function (opts) {
 };
 
 Applab.rect = function (opts) {
+  apiValidateActiveCanvas(opts, 'rect');
+  apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
+  apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
+  apiValidateType(opts, 'rect', 'width', opts.width, 'number');
+  apiValidateType(opts, 'rect', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -1546,6 +2110,8 @@ Applab.rect = function (opts) {
 };
 
 Applab.setStrokeWidth = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeWidth');
+  apiValidateTypeAndRange(opts, 'setStrokeWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.lineWidth = opts.width;
@@ -1555,6 +2121,8 @@ Applab.setStrokeWidth = function (opts) {
 };
 
 Applab.setStrokeColor = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeColor');
+  apiValidateType(opts, 'setStrokeColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.strokeStyle = String(opts.color);
@@ -1564,6 +2132,9 @@ Applab.setStrokeColor = function (opts) {
 };
 
 Applab.setFillColor = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'setFillColor');
+  apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.fillStyle = String(opts.color);
@@ -1573,6 +2144,7 @@ Applab.setFillColor = function (opts) {
 };
 
 Applab.clearCanvas = function (opts) {
+  apiValidateActiveCanvas(opts, 'clearCanvas');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.clearRect(0,
@@ -1586,15 +2158,22 @@ Applab.clearCanvas = function (opts) {
 
 Applab.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'drawImage');
+  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'imageId', opts.imageId, true);
+  apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
+  apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
   var image = document.getElementById(opts.imageId);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx && divApplab.contains(image)) {
     var xScale, yScale;
     xScale = yScale = 1;
-    if (opts.width) {
+    if (typeof opts.width !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'width', opts.width, 'number');
       xScale = xScale * (opts.width / image.width);
     }
-    if (opts.height) {
+    if (typeof opts.height !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'height', opts.height, 'number');
       yScale = yScale * (opts.height / image.height);
     }
     ctx.save();
@@ -1607,6 +2186,11 @@ Applab.drawImage = function (opts) {
 };
 
 Applab.getImageData = function (opts) {
+  apiValidateActiveCanvas(opts, 'getImageData');
+  apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
+  apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
+  apiValidateType(opts, 'getImageData', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
@@ -1614,6 +2198,11 @@ Applab.getImageData = function (opts) {
 };
 
 Applab.putImageData = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'putImageData');
+  apiValidateType(opts, 'putImageData', 'imageData', opts.imageData, 'object');
+  apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     // Create tmpImageData and initialize it because opts.imageData is not
@@ -1627,6 +2216,9 @@ Applab.putImageData = function (opts) {
 
 Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
@@ -1637,6 +2229,10 @@ Applab.textInput = function (opts) {
 
 Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textLabel', 'text', opts.text, 'string');
+  apiValidateType(opts, 'textLabel', 'forId', opts.forId, 'string', OPTIONAL);
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
@@ -1652,6 +2248,9 @@ Applab.textLabel = function (opts) {
 
 Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'checkbox', 'id', opts.elementId, false);
+  // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
 
   var newCheckbox = document.createElement("input");
   newCheckbox.setAttribute("type", "checkbox");
@@ -1663,6 +2262,10 @@ Applab.checkbox = function (opts) {
 
 Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'radioButton', 'id', opts.elementId, false);
+  // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
+  apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
 
   var newRadio = document.createElement("input");
   newRadio.setAttribute("type", "radio");
@@ -1675,12 +2278,15 @@ Applab.radioButton = function (opts) {
 
 Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'dropdown', 'id', opts.elementId, false);
 
   var newSelect = document.createElement("select");
 
   if (opts.optionsArray) {
     for (var i = 0; i < opts.optionsArray.length; i++) {
       var option = document.createElement("option");
+      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'string');
       option.text = opts.optionsArray[i];
       newSelect.add(option);
     }
@@ -1715,6 +2321,9 @@ Applab.setAttribute = function (opts) {
 
 Applab.getText = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getText', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
@@ -1730,6 +2339,10 @@ Applab.getText = function (opts) {
 
 Applab.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setText', 'text', opts.text, 'string');
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
@@ -1746,6 +2359,9 @@ Applab.setText = function (opts) {
 
 Applab.getChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getChecked', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
     return element.checked;
@@ -1755,6 +2371,10 @@ Applab.getChecked = function (opts) {
 
 Applab.setChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setChecked', 'id', opts.elementId, true);
+  // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
     element.checked = opts.checked;
@@ -1765,6 +2385,9 @@ Applab.setChecked = function (opts) {
 
 Applab.getImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getImageURL', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
@@ -1781,6 +2404,10 @@ Applab.getImageURL = function (opts) {
 
 Applab.setImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setImageURL', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setImageURL', 'src', opts.src, 'string');
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = opts.src;
@@ -1790,6 +2417,9 @@ Applab.setImageURL = function (opts) {
 };
 
 Applab.playSound = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
+
   if (studioApp.cdoSounds) {
     studioApp.cdoSounds.playURL(opts.url,
                                {volume: 1.0,
@@ -1811,6 +2441,9 @@ Applab.innerHTML = function (opts) {
 
 Applab.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'deleteElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     // Special check to see if the active canvas is being deleted
@@ -1824,6 +2457,9 @@ Applab.deleteElement = function (opts) {
 
 Applab.showElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'showElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.visibility = 'visible';
@@ -1834,6 +2470,9 @@ Applab.showElement = function (opts) {
 
 Applab.hideElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'hideElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.visibility = 'hidden';
@@ -1865,6 +2504,13 @@ Applab.setParent = function (opts) {
 
 Applab.setPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
+  apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
+  apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+  apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.position = 'absolute';
@@ -1875,6 +2521,40 @@ Applab.setPosition = function (opts) {
     return true;
   }
   return false;
+};
+
+Applab.getXPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getXPosition', 'id', opts.elementId, true);
+
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var x = div.offsetLeft;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      x += div.offsetLeft;
+    }
+    return x;
+  }
+  return 0;
+};
+
+Applab.getYPosition = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getYPosition', 'id', opts.elementId, true);
+
+  var div = document.getElementById(opts.elementId);
+  if (divApplab.contains(div)) {
+    var y = div.offsetTop;
+    while (div !== divApplab) {
+      div = div.offsetParent;
+      y += div.offsetTop;
+    }
+    return y;
+  }
+  return 0;
 };
 
 Applab.onEventFired = function (opts, e) {
@@ -1904,6 +2584,9 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
+  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
+  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   // Special case the id of 'body' to mean the app's container (divApplab)
   // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
   if (opts.elementId === 'body') {
@@ -1955,44 +2638,70 @@ Applab.onEvent = function (opts) {
 };
 
 Applab.onHttpRequestEvent = function (opts) {
-  if (this.readyState === 4) {
-    Applab.eventQueue.push({
-      'fn': opts.func,
-      'arguments': [
-        Number(this.status),
-        String(this.getResponseHeader('content-type')),
-        String(this.responseText)]
-    });
+  // Ensure that this event was requested by the same instance of the interpreter
+  // that is currently active before proceeding...
+  if (opts.interpreter === Applab.interpreter) {
+    if (this.readyState === 4) {
+      Applab.eventQueue.push({
+        'fn': opts.func,
+        'arguments': [
+          Number(this.status),
+          String(this.getResponseHeader('content-type')),
+          String(this.responseText)]
+      });
+    }
   }
 };
 
 Applab.startWebRequest = function (opts) {
+  apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
+  apiValidateType(opts, 'startWebRequest', 'function', opts.func, 'function');
+  opts.interpreter = Applab.interpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
   req.open('GET', String(opts.url), true);
   req.send();
 };
 
-Applab.onTimeoutFired = function (opts) {
+Applab.onTimerFired = function (opts) {
+  // ensure that this event came from the active interpreter instance:
   Applab.eventQueue.push({
     'fn': opts.func
   });
-  if (Applab.interpreter) {
-    // NOTE: the interpreter will not execute forever, if the event handler
-    // takes too long, executeInterpreter() will return and the rest of the
-    // user's code will execute in the next onTick()
-    Applab.executeInterpreter(true);
-  }
+  // NOTE: the interpreter will not execute forever, if the event handler
+  // takes too long, executeInterpreter() will return and the rest of the
+  // user's code will execute in the next onTick()
+  Applab.executeInterpreter(true);
 };
 
 Applab.setTimeout = function (opts) {
-  return window.setTimeout(Applab.onTimeoutFired.bind(this, opts), opts.milliseconds);
+  apiValidateType(opts, 'setTimeout', 'function', opts.func, 'function');
+  apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
+
+  return apiTimeoutList.setTimeout(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearTimeout = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'clearTimeout', 'timeoutId', opts.timeoutId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setTimeout() function
-  window.clearTimeout(opts.timeoutId);
+  apiTimeoutList.clearTimeout(opts.timeoutId);
+};
+
+Applab.setInterval = function (opts) {
+  apiValidateType(opts, 'setInterval', 'function', opts.func, 'function');
+  apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
+
+  return apiTimeoutList.setInterval(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
+};
+
+Applab.clearInterval = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'clearInterval', 'intervalId', opts.intervalId, 'number');
+  // NOTE: we do not currently check to see if this is a timer created by
+  // our Applab.setInterval() function
+  apiTimeoutList.clearInterval(opts.intervalId);
 };
 
 Applab.createRecord = function (opts) {
@@ -2072,11 +2781,11 @@ Applab.updateRecord = function (opts) {
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateRecord = function(successCallback) {
+Applab.handleUpdateRecord = function(successCallback, record) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
-      'arguments': []
+      'arguments': [record]
     });
   }
 };
@@ -2096,6 +2805,12 @@ Applab.handleDeleteRecord = function(successCallback) {
   }
 };
 
+Applab.getUserId = function (opts) {
+  if (!user.applabUserId) {
+    throw new Error("User ID failed to load.");
+  }
+  return user.applabUserId;
+};
 
 /*
 var onWaitComplete = function (opts) {

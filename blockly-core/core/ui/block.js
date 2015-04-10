@@ -78,6 +78,9 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
+  // Used to hide function blocks when not in modal workspace. This property
+  // is not serialized/deserialized.
+  this.currentlyHidden_ = false;
   /**
    * The label which can be clicked to edit this block. This field is
    * currently set only for functional_call blocks.
@@ -118,6 +121,21 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   if (goog.isFunction(this.init)) {
     this.init();
   }
+
+  if (this.shouldHideIfInMainBlockSpace && this.shouldHideIfInMainBlockSpace() &&
+      this.blockSpace === Blockly.mainBlockSpace) {
+    this.setCurrentlyHidden(true);
+  }
+
+  /** @type {goog.events.EventTarget} */
+  this.blockEvents = new goog.events.EventTarget();
+};
+
+/**
+ * @enum {string}
+ */
+Blockly.Block.EVENTS = {
+  AFTER_DISPOSED: 'afterDisposed'
 };
 
 /**
@@ -201,6 +219,7 @@ Blockly.Block.prototype.initSvg = function() {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
                        this.onMouseDown_);
   }
+  this.setCurrentlyHidden(this.currentlyHidden_);
   this.moveToFrontOfBlockSpace_();
 };
 
@@ -324,6 +343,15 @@ Blockly.Block.prototype.unselect = function() {
 };
 
 /**
+ * Whether this block can be copied, cut, and pasted.
+ * Can be overridden by individual block types.
+ * @returns {boolean}
+ */
+Blockly.Block.prototype.isCopyable = function() {
+  return true;
+};
+
+/**
  * Dispose of this block.
  * @param {boolean} healStack If true, then try to heal any gap by connecting
  *     the next statement with the previous statement.  Otherwise, dispose of
@@ -391,6 +419,8 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
     this.svg_.dispose();
     this.svg_ = null;
   }
+
+  this.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DISPOSED);
 };
 
 /**
@@ -446,7 +476,7 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
     var element = this.svg_.getRootElement();
     do {
       // Loop through this block and every parent.
-      var xy = Blockly.getRelativeXY_(element);
+      var xy = Blockly.getRelativeXY(element);
       x += xy.x;
       y += xy.y;
       element = element.parentNode;
@@ -484,11 +514,24 @@ Blockly.Block.prototype.moveBy = function(dx, dy) {
  * @return {!Object} Object with height and width properties.
  */
 Blockly.Block.prototype.getHeightWidth = function() {
+  var bBox;
+
   try {
-    if (Blockly.ieVersion() && Blockly.ieVersion() <= 10) {
-      this.getSvgRoot().style.display = "inline";   /* reqd for IE */
+    var ie10OrOlder = Blockly.ieVersion() && Blockly.ieVersion() <= 10;
+    var initialStyle;
+
+    if (ie10OrOlder) {
+      // Required to set display to inline during calculation in IE <= 10
+      initialStyle = this.getSvgRoot().style.display;
+      this.getSvgRoot().style.display = "inline";
     }
-    var bBox = goog.object.clone(this.getSvgRoot().getBBox());
+
+    bBox = goog.object.clone(this.getSvgRoot().getBBox());
+
+    if (ie10OrOlder) {
+      // Reset to original display value
+      this.getSvgRoot().style.display = initialStyle;
+    }
   } catch (e) {
     // Firefox has trouble with hidden elements (Bug 528969).
     return {height: 0, width: 0};
@@ -520,6 +563,15 @@ Blockly.Block.prototype.getHeightWidth = function() {
 Blockly.Block.prototype.onMouseDown_ = function(e) {
   // Stop the browser from scrolling/zooming the page
   e.preventDefault();
+
+  // If we're clicking on an input target, don't do anything with the event
+  // at the block level
+  var targetClass = e.target.getAttribute && e.target.getAttribute('class');
+  if (targetClass === 'inputClickTarget') {
+    e.stopPropagation();
+    return;
+  }
+
   // ...but this prevents blurring of inputs, so do it manually
   document.activeElement && document.activeElement.blur
     && document.activeElement.blur();
@@ -530,8 +582,11 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   // Update Blockly's knowledge of its own location.
   this.blockSpace.blockSpaceEditor.svgResize();
   Blockly.BlockSpaceEditor.terminateDrag_();
+
   this.select();
+
   this.blockSpace.blockSpaceEditor.hideChaff();
+
   if (Blockly.isRightButton(e)) {
     // Right-click.
     // Unlike google Blockly, we don't want to show a context menu
@@ -1248,7 +1303,18 @@ Blockly.Block.prototype.isDeletable = function() {
  */
 Blockly.Block.prototype.setDeletable = function(deletable) {
   this.deletable_ = deletable;
-  this.svg_ && this.svg_.updateGrayOutCSS();
+  if (this.svg_) {
+    this.svg_.grayOut(this.shouldBeGrayedOut());
+  }
+};
+
+/**
+ * @returns {boolean} whether this block should be rendered as grayed out
+ */
+Blockly.Block.prototype.shouldBeGrayedOut = function() {
+  return Blockly.grayOutUndeletableBlocks
+    && !this.isDeletable()
+    && !Blockly.readOnly;
 };
 
 /**
@@ -1305,10 +1371,11 @@ Blockly.Block.prototype.isUserVisible = function() {
 };
 
 /**
- * Set whether this block is visible to the user.
+ * Set whether this block and all child blocks are visible to the user.
  * @param {boolean} userVisible True if visible to user.
+ * @param {boolean} opt_renderAfterVisible True if should render once if set to visible
  */
-Blockly.Block.prototype.setUserVisible = function(userVisible) {
+Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVisible) {
   this.userVisible_ = userVisible;
   if (userVisible) {
     this.svg_ && Blockly.removeClass_(this.svg_.svgGroup_, 'userHidden');
@@ -1317,8 +1384,49 @@ Blockly.Block.prototype.setUserVisible = function(userVisible) {
   }
   // Apply to all children recursively
   this.childBlocks_.forEach(function (child) {
-    child.setUserVisible(userVisible);
+    child.setUserVisible(userVisible, opt_renderAfterVisible);
   });
+
+  if (opt_renderAfterVisible && userVisible && this.childBlocks_.length === 0) {
+    // At leaf node blocks, renders up through the root
+    this.svg_ && this.render();
+  }
+};
+
+/**
+ * Check whether this block is currently hidden (a non-persistent property)
+ */
+Blockly.Block.prototype.isCurrentlyHidden_ = function () {
+  return this.currentlyHidden_;
+};
+
+/**
+ * Set whether this block is currently hidden (a non-persistent property)
+ * Note: Does not set children to currently hidden, but they will display as hidden
+ */
+Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
+  this.currentlyHidden_ = hidden;
+  if (this.svg_) {
+    this.svg_.setVisible(!hidden);
+    if (!hidden) {
+      this.refreshRender();
+    }
+  }
+};
+
+/**
+ * Account for the fact that we have two different visibility states.
+ * UserVisible is a persisent property used to create blocks that can be seen
+ * by level builders, but not by the user.
+ * CurrentlyHidden is a non-persistent property used to hide certain blocks
+ * (like function definitions/examples) that should only be visible when using
+ * the modal function editor.
+ * This method calculates whether this block is currently visible
+ * @returns true if both visibility conditions are met.
+ */
+Blockly.Block.prototype.isVisible = function () {
+  var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
+  return visibleThroughParent && this.isUserVisible() && !this.isCurrentlyHidden_();
 };
 
 /**
@@ -1563,10 +1671,7 @@ Blockly.Block.prototype.setPreviousStatement = function(hasPrevious, opt_check) 
         new Blockly.Connection(this, Blockly.PREVIOUS_STATEMENT);
     this.previousConnection.setCheck(opt_check);
   }
-  if (this.rendered) {
-    this.render();
-    this.bumpNeighbours_();
-  }
+  this.refreshRender();
 };
 
 /**
@@ -1591,10 +1696,7 @@ Blockly.Block.prototype.setNextStatement = function(hasNext, opt_check) {
         new Blockly.Connection(this, Blockly.NEXT_STATEMENT);
     this.nextConnection.setCheck(opt_check);
   }
-  if (this.rendered) {
-    this.render();
-    this.bumpNeighbours_();
-  }
+  this.refreshRender();
 };
 
 /**
@@ -1623,12 +1725,15 @@ Blockly.Block.prototype.setOutput = function(hasOutput, opt_check) {
         new Blockly.Connection(this, Blockly.OUTPUT_VALUE);
     this.outputConnection.setCheck(opt_check);
   }
+  this.refreshRender();
+};
+
+Blockly.Block.prototype.refreshRender = function () {
   if (this.rendered) {
     this.render();
     this.bumpNeighbours_();
   }
 };
-
 /**
  * Set whether this is a functional block that returns a value. Currently this
  * will be displayed as previous connection that will only connect with
@@ -1657,21 +1762,18 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
         new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
     this.previousConnection.setCheck(opt_check);
   }
-  if (this.rendered) {
-    this.render();
-    this.bumpNeighbours_();
-  }
+  this.refreshRender();
 };
 
+/**
+ * Sets this block to have a new functional output type
+ * @param {Blockly.BlockValueType} newType
+ */
 Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
-  this.setHSV.apply(this, Blockly.ContractEditor.typesToColorsHSV[newType]);
+  this.setHSV.apply(this, Blockly.FunctionalTypeColors[newType]);
   this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
   this.previousConnection.setCheck(newType);
-
-  if (this.rendered) {
-    this.render();
-    this.bumpNeighbours_();
-  }
+  this.refreshRender();
 };
 
 /**
@@ -2111,6 +2213,10 @@ Blockly.Block.prototype.setWarningText = function(text) {
   }
 };
 
+Blockly.Block.prototype.svgInitialized = function() {
+  return !!this.svg_;
+};
+
 /**
  * Render the block.
  * Lays out and reflows a block based on its contents and settings.
@@ -2122,21 +2228,34 @@ Blockly.Block.prototype.render = function() {
   this.svg_.render();
 };
 
-
-/**
- * Set the blocks visibility.
- * @param {string} visible Whether or not the block should be visible
- */
-Blockly.Block.prototype.setVisible = function (visible) {
-  if (!this.svg_) {
-    throw 'Uninitialized block cannot set visibility.  Call block.initSvg()';
-  }
-  this.svg_.setVisible(visible);
-};
-
 /**
  * Exposes this block's BlockSvg
  */
 Blockly.Block.prototype.getSvgRenderer = function () {
   return this.svg_;
-}
+};
+
+/**
+ * Get the oldest ancestor of this block.
+ */
+Blockly.Block.prototype.getRootBlock = function () {
+  var rootBlock;
+  var current = this;
+  while (current) {
+    rootBlock = current;
+    current = current.getParent();
+  }
+
+  return rootBlock;
+};
+
+/**
+ * @returns True if any of this blocks inputs have a connection that is unfilled
+ */
+Blockly.Block.prototype.hasUnfilledFunctionalInput = function () {
+  // Does this block have a connection without a block attached
+  return this.inputList.some(function (input) {
+    return input.type === Blockly.FUNCTIONAL_INPUT && input.connection &&
+      !input.connection.targetBlock();
+  });
+};

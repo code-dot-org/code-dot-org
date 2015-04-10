@@ -1,5 +1,6 @@
-stage 'Course 4 Prerequisite'
+title 'Course 4 Prerequisite'
 description_short "A brief rampup of concepts for students who have not taken Course 2 and 3."
+description "A brief rampup of concepts for students who have not taken Course 2 and 3."
 
 stage 'Maze: Sequence'
 level '2-3 Maze 1'

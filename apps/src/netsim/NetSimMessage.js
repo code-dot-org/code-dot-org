@@ -6,7 +6,6 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 5,
  maxstatements: 200
  */
 'use strict';
@@ -48,6 +47,12 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
   this.toNodeID = messageRow.toNodeID;
 
   /**
+   * ID of the node responsible for operations on this message.
+   * @type {number}
+   */
+  this.simulatedBy = messageRow.simulatedBy;
+
+  /**
    * All other message content, including the 'packets' students will send.
    * @type {*}
    */
@@ -61,17 +66,18 @@ NetSimMessage.inherits(NetSimEntity);
  * @param {!NetSimShard} shard
  * @param {!number} fromNodeID - sender node ID
  * @param {!number} toNodeID - destination node ID
+ * @param {!number} simulatedBy - node ID of client simulating message
  * @param {*} payload - message content
- * @param {!function} onComplete (success)
+ * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimMessage.send = function (shard, fromNodeID, toNodeID, payload, onComplete) {
+NetSimMessage.send = function (shard, fromNodeID, toNodeID, simulatedBy,
+    payload, onComplete) {
   var entity = new NetSimMessage(shard);
   entity.fromNodeID = fromNodeID;
   entity.toNodeID = toNodeID;
+  entity.simulatedBy = simulatedBy;
   entity.payload = payload;
-  entity.getTable_().create(entity.buildRow_(), function (row) {
-    onComplete(row !== undefined);
-  });
+  entity.getTable_().create(entity.buildRow_(), onComplete);
 };
 
 /**
@@ -82,11 +88,25 @@ NetSimMessage.prototype.getTable_ = function () {
   return this.shard_.messageTable;
 };
 
-/** Build own row for the message table  */
+/**
+ * @typedef {Object} messageRow
+ * @property {number} fromNodeID - this message in-flight-from node
+ * @property {number} toNodeID - this message in-flight-to node
+ * @property {number} simulatedBy - Node ID of the client responsible for
+ *           all operations involving this message.
+ * @property {string} payload - binary message content, all of which can be
+ *           exposed to the student.  May contain headers of its own.
+ */
+
+/**
+ * Build own row for the message table
+ * @returns {messageRow}
+ */
 NetSimMessage.prototype.buildRow_ = function () {
   return {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
+    simulatedBy: this.simulatedBy,
     payload: this.payload
   };
 };

@@ -1,46 +1,9 @@
+= render partial: 'shared/sharing_meta_tags'
+
 - if @game.share_mobile_fullscreen? && browser.safari?
   <script>
   if (!window.navigator.standalone) { window.addEventListener("load", function() { addToHome.show(true); }, false); }
   </script>
-- content_for :head do
-  - if @game.supports_sharing?
-    = tag('meta', :property => 'fb:app_id', :content => '500177453358606')
-    = tag('meta', :property => 'og:site_name', :content => 'Code.org')
-    = tag('meta', :property => 'og:type', :content => 'article')
-    = tag('meta', :property => 'og:title', :content => t('share_code.check_out_what_i_made'))
-    = tag('meta', :property => 'og:description', :content => t('share_code.og_description'))
-    = tag('meta', :property => 'og:image', :content => meta_image_url(level_source: @level_source))
-    = tag('meta', :property => 'article:publisher', :content => 'https://www.facebook.com/Code.org')
-    = tag('meta', :property => 'og:url', :content => request.original_url)
-
-    = tag('meta', :name => 'twitter:title', :content => t('share_code.check_out_what_i_made'))
-    = tag('meta', :name => 'twitter:description', :content => t('share_code.og_description'))
-    = tag('meta', :name => 'twitter:site', :content => '@codeorg')
-    = tag('meta', :name => 'twitter:card', :content => 'photo')
-    = tag('meta', :name => 'twitter:image', :content => meta_image_url(level_source: @level_source))
-    = tag('meta', :name => 'twitter:url', :content => request.original_url)
-
-    - if @game.app == Game::ARTIST
-      - meta_image_width = 500
-      - meta_image_height = 261
-    - else
-      - meta_image_width = 400
-      - meta_image_height = 400
-
-    = tag('meta', :property => 'og:image:width', :content => meta_image_width)
-    = tag('meta', :property => 'og:image:height', :content => meta_image_height)
-    = tag('meta', :name => 'twitter:image:width', :content => meta_image_width)
-    = tag('meta', :name => 'twitter:image:height', :content => meta_image_height)
-
-    - if @game.share_mobile_fullscreen?
-      = tag :meta, name: 'apple-mobile-web-app-capable', content: 'yes'
-      = tag :meta, name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'
-      - if @level_source.try(:level_source_image).try(:image)
-        = tag :link, rel: 'apple-touch-icon', href: meta_image_url(level_source: @level_source)
-      - elsif @game.flappy?
-        = tag :link, rel: 'apple-touch-icon', href: asset_url('flappy_icon.png')
-      - else
-        = tag :link, rel: 'apple-touch-icon', href: asset_url('logo_noalpha.png')
 
 - if !@game.share_mobile_fullscreen?
   - @page_title = t('share_code.title')

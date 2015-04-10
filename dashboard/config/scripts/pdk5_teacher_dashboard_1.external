@@ -1,0 +1,16 @@
+name 'PDK5 Teacher Dashboard 1'
+title 'Dashboard 1'
+css 'unplugged'
+skip_dialogue true
+
+markdown <<MARKDOWN
+## Tour of Teacher Dashboard
+
+This section is a tour of the teacher tools in Code Studio. Below is what the Teacher Dashboard looks like, and each tile has different teacher supports. Now, we'll go over the information within each tile. You can always get back to your teacher dashboard by clicking on your name on the orange button in the upper-right hand corner and choosing "Teacher Home Page"
+
+![image](http://staging.code.org/images/teacher-dashboard/teacher-homepage.png)
+
+</br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

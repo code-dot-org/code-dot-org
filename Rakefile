@@ -26,6 +26,9 @@ def with_retries(count=5)
   end
 end
 
+task :lint do
+  RakeUtils.system 'rubocop'
+end
 
 ##################################################################################################
 ##
@@ -38,7 +41,7 @@ end
 namespace :build do
 
   task :configure do
-    if CDO.chef_managed && !CDO.daemon
+    if CDO.chef_managed
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
@@ -58,6 +61,15 @@ namespace :build do
 
       HipChat.log 'Building <b>blockly-core</b>...'
       RakeUtils.system './deploy.sh'
+    end
+  end
+
+  task :core_and_apps_dev do
+    Dir.chdir(blockly_core_dir) do
+      RakeUtils.system './deploy.sh', 'debug'
+    end
+    Dir.chdir(apps_dir) do
+      RakeUtils.system 'MOOC_DEV=1 grunt build'
     end
   end
 
@@ -111,22 +123,6 @@ namespace :build do
       if rack_env?(:production)
         RakeUtils.system 'rake', "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
       end
-    end
-  end
-  
-  task :jupiter do
-    Dir.chdir(jupiter_dir) do
-      HipChat.log 'Stopping JUPITER service'
-      RakeUtils.stop_service 'jupiter' unless rack_env?(:development)
-
-      HipChat.log 'Migrating JUPITER database'
-      with_retries { RakeUtils.rake 'db:migrate' }
-
-      #HipChat.log 'Seeding JUPITER database'
-      #with_retries { RakeUtils.rake 'seed:migrate' }
-
-      HipChat.log 'Starting JUPITER service'
-      RakeUtils.start_service 'jupiter' unless rack_env?(:development)
     end
   end
 
@@ -221,17 +217,6 @@ namespace :install do
     end
   end
 
-  task :jupiter do
-    if rack_env?(:development) && !CDO.chef_managed
-      Dir.chdir(jupiter_dir) do
-        RakeUtils.bundle_install
-        create_database CDO.jupiter_database
-        RakeUtils.rake 'db:migrate'
-        #RakeUtils.rake 'seed:migrate'
-      end
-    end
-  end
-
   task :pegasus do
     if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(pegasus_dir) do
@@ -247,7 +232,6 @@ namespace :install do
   #tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
-  tasks << :jupiter if CDO.build_jupiter
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
 

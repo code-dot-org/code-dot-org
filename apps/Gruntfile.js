@@ -95,6 +95,7 @@ config.clean = {
 
 var ace_suffix = DEV ? '' : '-min';
 var droplet_suffix = DEV ? '' : '.min';
+var tooltipster_suffix = DEV ? '' : '.min';
 var requirejs_dir = DEV ? 'full' : 'min';
 
 config.copy = {
@@ -154,13 +155,33 @@ config.copy = {
         expand: true,
         cwd: 'lib/droplet',
         src: ['droplet-full' + droplet_suffix + '.js'],
-        dest: 'build/package/js/droplet/'
+        dest: 'build/package/js/droplet/',
+        rename: function (src, dest) {
+          // dest name should be the same, whether or not minified
+          return src + dest.replace(/\.min.js$/, '.js');
+        }
       },
       {
         expand: true,
         cwd: 'lib/droplet',
         src: ['droplet.min.css'],
         dest: 'build/package/css/droplet/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/tooltipster',
+        src: ['jquery.tooltipster' + tooltipster_suffix + '.js'],
+        dest: 'build/package/js/tooltipster/',
+        rename: function (src, dest) {
+          // dest name should be the same, whether or not minified
+          return src + dest.replace(/\.min.js$/, '.js');
+        }
+      },
+      {
+        expand: true,
+        cwd: 'lib/tooltipster',
+        src: ['tooltipster.min.css'],
+        dest: 'build/package/css/tooltipster/'
       },
       {
         expand: true,
@@ -187,7 +208,8 @@ config.lodash = {
 config.sass = {
   all: {
     options: {
-      outputStyle: (MINIFY ? 'compressed' : 'nested')
+      outputStyle: (MINIFY ? 'compressed' : 'nested'),
+      includePaths: ['../shared/css/']
     },
     files: {
       'build/package/css/common.css': 'style/common.scss',
@@ -354,7 +376,8 @@ config.jshint = {
     '!src/hammer.js',
     '!src/lodash.js',
     '!src/lodash.min.js',
-    '!src/canvg/*.js'
+    '!src/canvg/*.js',
+    '!src/calc/js-numbers/js-numbers.js'
   ]
 };
 

@@ -14,8 +14,18 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
-  }
+    "free_play": "false",
+    "default_num_example_blocks": "0",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "input_output_table": "[[15,5],[20,10],[33,23],[42,32]]"
+  },
+  "md5": "9e17676fb6226a44b86d5f6eda7d8c8e"
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -49,16 +59,16 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_definition" inline="false" uservisible="false">
+        <block type="functional_definition" inline="false" movable="false">
           <mutation>
             <arg name="x" type="Number"/>
             <outputtype>Number</outputtype>
           </mutation>
           <title name="NAME">f</title>
           <functional_input name="STACK">
-            <block type="functional_minus" inline="false" uservisible="false">
+            <block type="functional_minus" inline="false">
               <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
+                <block type="functional_parameters_get">
                   <mutation>
                     <outputtype>Number</outputtype>
                   </mutation>
@@ -66,7 +76,7 @@
                 </block>
               </functional_input>
               <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
+                <block type="functional_math_number">
                   <title name="NUM">10</title>
                 </block>
               </functional_input>

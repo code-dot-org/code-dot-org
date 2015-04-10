@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.ja_jp');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "実際の";
+Blockly.Msg.ACTUAL = "コール";
 Blockly.Msg.ADD = "ついか";
 Blockly.Msg.ADD_COMMENT = "コメントを追加";
 Blockly.Msg.ADD_PARAMETER = "パラメータを追加します。";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "赤";
 Blockly.Msg.COLOUR_RGB_TITLE = "色";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "赤、緑、青、それぞれを指定して色を作ります。値は０から１００の間で指定します。";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "ループから抜け出す";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "ループの次の反復処理を続行します。";

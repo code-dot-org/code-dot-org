@@ -1,0 +1,9 @@
+title 'Tutorial - Code Studio Puzzle Challenge'
+description_short "Challenge yourself!"
+description "Try out these fun coding puzzles. Do your best!"
+hidden 'true'
+
+stage 'Puzzles'
+level 'Code Studio Puzzle Challenge Artist Screencast'
+level 'Code Studio Puzzle Challenge Artist Screencast 2'
+level 'Code Studio Puzzle Challenge Bee Screencast'

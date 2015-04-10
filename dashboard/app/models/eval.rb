@@ -2,16 +2,13 @@ class Eval < Blockly
   serialized_attrs %w(
     solution_blocks
     free_play
+    coordinate_grid_background
   )
 
   before_save :update_ideal_level_source
 
   def xml_blocks
     super + %w(solution_blocks)
-  end
-
-  def self.builder
-    @@eval_builder ||= Level.find_by(name: 'builder')
   end
 
   # List of possible skins, the first is used as a default.
@@ -43,6 +40,9 @@ class Eval < Blockly
         <block type="functional_math_number_dropdown">
           <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
         </block>
+        <block type="functional_sqrt"></block>
+        <block type="functional_squared"></block>
+        <block type="functional_pow"></block>
       </category>
       <category name="String">
         <block type="functional_string"></block>
@@ -88,4 +88,20 @@ class Eval < Blockly
   def toolbox(type)
     Eval.toolbox
   end
+
+  # What blocks should be embedded for the given block_xml
+  def blocks_to_embed(block_xml)
+    # Solution blocks are defined in the form
+    # <block type="functional_display" (some attributes)>
+    #   <block type="function_input" (some attributes)>
+    #     (the blocks we care about)
+    #   </block>
+    # </block>
+    embed_xml = block_xml
+    # This regex extracts the blocks we care about
+    match = /<xml><block type="functional_display".*?><functional_input.*?>(.*)<\/functional_input><\/block><\/xml>/.match(block_xml)
+    embed_xml = match[1] if match and match[1]
+    return embed_xml
+  end
+
 end

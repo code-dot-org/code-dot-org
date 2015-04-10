@@ -173,7 +173,7 @@ Blockly.Icon.prototype.setIconLocation = function(x, y) {
 Blockly.Icon.prototype.computeIconLocation = function() {
   // Find coordinates for the centre of the icon and update the arrow.
   var blockXY = this.block_.getRelativeToSurfaceXY();
-  var iconXY = Blockly.getRelativeXY_(this.iconGroup_);
+  var iconXY = Blockly.getRelativeXY(this.iconGroup_);
   var newX = blockXY.x + iconXY.x + Blockly.Icon.RADIUS;
   var newY = blockXY.y + iconXY.y + Blockly.Icon.RADIUS;
   if (newX !== this.iconX_ || newY !== this.iconY_) {

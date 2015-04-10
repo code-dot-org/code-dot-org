@@ -1,6 +1,6 @@
 goog.provide('Blockly.Msg.az_az');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "faktiki";
+Blockly.Msg.ACTUAL = "çağırış";
 Blockly.Msg.ADD = "Əlavə et";
 Blockly.Msg.ADD_COMMENT = "Şərh əlavə et";
 Blockly.Msg.ADD_PARAMETER = "Parametr əlavə edin";
@@ -24,6 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "qırmızı";
 Blockly.Msg.COLOUR_RGB_TITLE = "rəngin komponentləri";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Göstərilən miqdarda qırmızı, yaşıl və göy komponenti olan bir rəng düzəlt. Bütün qiymətlər 0 və 100 arasında olmalıdır.";
+Blockly.Msg.CONTRACT_EDITOR_HEADER = "Design Recipe";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "dövrdən çıx";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "dövrün növbəti addımından davam et";
@@ -74,7 +75,7 @@ Blockly.Msg.EXAMPLE = "Nümunə";
 Blockly.Msg.EXAMPLE_DESCRIPTION = "Gözlənilən və faktiki davranışa malik bir nüminə təyin edir";
 Blockly.Msg.EXPAND_ALL = "Blokları aç";
 Blockly.Msg.EXPAND_BLOCK = "Bloku aç";
-Blockly.Msg.EXPECTED = "gözlənilən";
+Blockly.Msg.EXPECTED = "nəticə";
 Blockly.Msg.EXTERNAL_INPUTS = "Xarici girişlər";
 Blockly.Msg.FUNCTION_CREATE = "Funksiya yarat";
 Blockly.Msg.FUNCTION_EDIT = "redaktə et";

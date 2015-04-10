@@ -1,23 +1,92 @@
+- variant ||= "unknown"
+
+:css
+
+  .arrow_box:after {
+    bottom: 100%;
+    left: 50px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(54, 72, 84, 0);
+    border-bottom-color: rgb(88, 103, 113);
+    border-width: 8px;
+    margin-left: -10px;
+  }
+
+  #headerlinks {
+    float: right; 
+    position: relative;
+  }
+
+  #learnlink {
+    cursor: pointer;
+  }
+
+  #learnoptions {
+    position: absolute; 
+    top: 45px; 
+    left: 10px; 
+    background-color: rgb(88, 103, 113); 
+    color: white; 
+    padding: 10px; 
+    text-align: left; 
+    margin-top: 10px; 
+    border-radius: 4px; 
+    width: 560px;
+    display: none;
+  }
+
+  .downorangearrow {
+    display: inline-block;
+  }
+
+  .downorangearrow:hover:after,
+  .downorangearrow:active:after {
+    top: 100%;
+    left: 40px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(54, 72, 84, 0);
+    border-top-color: rgb(255, 128, 0);
+    border-width: 8px;
+    margin-left: 0px;  
+  }
+
 #pageheader-wrapper
-  - pageheader_class = request.path_info == "/index2" ? "pageheader_translucent" : ""
+  - pageheader_class = request.path_info == "/" ? "pageheader_translucent" : ""
   #pageheader{class: pageheader_class}
     .content
       #left
         %a{:href=>"/"}
-          %img#logo{:src=>'/images/logo.png'}
+          %img#logo{:src=>'/images/logo.png', :style=>'margin-left:5px'}
 
       #right
         #sign_in_or_user{:style=>'display:block; float: right; margin: .6875em 0 0 30px;'}
 
-        %a.headerlink{:href=>"/learn"}LEARN
-        %a.headerlink{:href=>"/educate"}TEACH
-        %a.headerlink{:href=>"/promote"}STATS
-        - if request.path_info == "/index2"
-          %a.headerlink{:href=>"/help"}HELP US
-          %a.headerlink{:href=>"/about"}ABOUT
-        - else
-          %a.headerlink{:href=>"/help"}HOW TO HELP
-          %a.headerlink{:href=>"/about"}ABOUT
+        -if page_translated? && !partner_site?
+        -else
+          .desktop-feature
+            #headerlinks
+              .downorangearrow{style: "margin: 0.9375em 0 0 30px;"}
+                #learnlink.headerlink{style: "margin: 0px"} LEARN
+              %a.headerlink{:href=>"/educate"}TEACH
+              %a.headerlink{:href=>"/promote"}STATS
+              %a.headerlink{:href=>"/help"}HELP US
+              %a.headerlink{:href=>"/about"}ABOUT
+
+              #learnoptions.arrow_box{style: ""}
+                %a.learnoption{id: "headerlearnlink_#{variant}", style: "color: white; cursor: pointer; margin-right:35px; margin-left:10px", href: "/learn"} Hour of Code
+                %a.learnoption{style: "color: white; cursor: pointer; margin-right:35px", href: CDO.studio_url} Code Studio
+                %a.learnoption{style: "color: white; cursor: pointer; margin-right:35px", href: "/learn/beyond"} Other Courses
+                %a.learnoption{style: "color: white; cursor: pointer; margin-right:10px", href: "/learn/local"} Local Classes
 
     #clear{:style=>'clear:both'}
 
@@ -26,8 +95,15 @@
         =view banner
 
 :javascript
+  var headerSetup = false;
+
   $ = jQuery;
   $(document).ready(function() {
+    if (headerSetup) {
+      return;
+    }
+    headerSetup = true;
+
     $.ajax({
       type: "GET",
       url: '/dashboardapi/user_menu',
@@ -36,5 +112,9 @@
         // data is ur summary
         $('#sign_in_or_user').html(data);
       }
+    });
+
+    $("#learnlink").click(function() {
+      $("#learnoptions").fadeToggle();
     });
   });

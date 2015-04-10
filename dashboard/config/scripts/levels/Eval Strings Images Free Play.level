@@ -14,9 +14,17 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "true",
-    "scrollbars": "false",
-    "embed": "false"
-  }
+    "embed": "false",
+    "min_workspace_height": "1500",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "005b1457a9260a52c3020096e0073c58"
 }]]></config>
   <blocks>
     <toolbox_blocks>

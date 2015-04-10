@@ -1,0 +1,29 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - 'apps/**/*'
+    - 'dashboard/scripts/**/*'
+  RunRailsCops: true
+  DisplayCopNames: true
+
+Style/BarePercentLiterals:
+  Enabled: false
+
+# The following rules are disabled in Rubocop by default, but must be explicitly specified for Hound CI.
+# https://github.com/bbatsov/rubocop/blob/master/config/disabled.yml
+
+Style/CollectionMethods:
+  Enabled: false
+
+Style/InlineComment:
+  Enabled: false
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Enabled: false

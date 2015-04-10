@@ -16,20 +16,9 @@ def csv_contacts(path, params={})
   end
 end
 
-def dashboard_teachers(params={})
-  fields = params[:fields] if params[:fields]
-  
-  [].tap do |results|
-    DASHBOARD_DB[:users].where(user_type:'teacher').each do |i|
-      i = yield(i) if block_given?
-      results << {email:i[:email].downcase.strip, name:i[:name]}.merge(i.to_hash.slice(*fields)) if i
-    end
-  end
-end
-
 def export_contacts_to_csv(contacts, path)
   columns = nil
-  
+
   CSV.open(path, 'wb') do |results|
     contacts.values.each do |contact|
       unless columns
@@ -78,7 +67,7 @@ puts "#{ORGANIZERS.count} organizers loaded."
 
 DOMESTIC_TEACHERS = {}.tap do |results|
   (
-    dashboard_teachers +
+    query_contacts(q:'kind_s:"user" && role_s:"teacher" && country_s:"united states"') +
     query_contacts(q:'kind_s:"Petition" && role_s:"educator" && country_s:"united states"') +
     query_contacts(q:'kind_s:"BringToSchool2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && country_s:"united states"') +
     query_contacts(q:'kind_s:"CSEdWeekEvent2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && country_s:"united states"') +
@@ -92,6 +81,7 @@ puts "#{DOMESTIC_TEACHERS.count} domestic teachers loaded."
 
 INTERNATIONAL_TEACHERS = {}.tap do |results|
   (
+    query_contacts(q:'kind_s:"user" && role_s:"teacher" && -country_s:"united states"') +
     query_contacts(q:'kind_s:"Petition" && role_s:"educator" && -country_s:"united states"') +
     query_contacts(q:'kind_s:"BringToSchool2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && -country_s:"united states"') +
     query_contacts(q:'kind_s:"CSEdWeekEvent2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && -country_s:"united states"')

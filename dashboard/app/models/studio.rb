@@ -17,6 +17,8 @@ class Studio < Grid
     generate_function_pass_blocks
     timeout_after_when_run
     custom_game_type
+    complete_on_success_condition_not_goals
+    input_output_table
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -312,6 +314,8 @@ class Studio < Grid
     <title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>
   </block>
   <block type="functional_sqrt"></block>
+  <block type="functional_squared"></block>
+  <block type="functional_pow"></block>
 </category>
 <category name="Functional Boolean">
   <block type="functional_greater_than" />

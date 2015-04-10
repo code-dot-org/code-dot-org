@@ -158,7 +158,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(196, 1.0, 0.79);
-      this.setOutput(true, 'Boolean');
+      this.setOutput(true, blockly.BlockValueType.NUMBER);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldDropdown(this.DIRECTIONS), 'DIR');
       this.setTooltip(msg.isPathTooltip());

@@ -1,5 +1,5 @@
 name 'msm variables multi 10'
-title 'f(x) = x * 17'
+title '/script_assets/msm/define_f.png, 300'
 question 'What is the name of the function?'
 right 'f'
 wrong 'x'

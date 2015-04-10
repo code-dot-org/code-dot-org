@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Your school is holding a bake sale, and you are in charge of writing computer programs to track the cost of making each treat, the money customers give you, and the total profit from selling them. Cookies cost $0.25 each to bake, and sell for $1.00/cookie.\r\n\r\nWrite the function `cookie-cost`, which takes in the number of cookies you intend to sell, and gives you back the amount of money it would cost to produce that number of cookies.",
+    "instructions": "Your school is holding a bake sale, and you need to track the cost of making each cookie, the money paid, and the total profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite the function `cost`, which takes in the number of cookies you intend to sell, and returns the cost of making those cookies.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -16,8 +16,16 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "default_num_example_blocks": "2",
-    "min_workspace_height": "1000"
-  }
+    "min_workspace_height": "1000",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
+  },
+  "md5": "9afea3f4c25829759b4f43e77b9bacbf"
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -37,7 +45,7 @@
         <block type="functional_compute" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
-              <mutation name="cookie-cost">
+              <mutation name="cost">
                 <arg name="cookies" type="Number"/>
               </mutation>
               <functional_input name="ARG0">
@@ -53,7 +61,7 @@
             <arg name="cookies" type="Number"/>
             <outputtype>Number</outputtype>
           </mutation>
-          <title name="NAME">cookie-cost</title>
+          <title name="NAME">cost</title>
           <functional_input name="STACK">
             <block type="functional_times" inline="false" uservisible="false">
               <functional_input name="ARG1">
@@ -75,7 +83,7 @@
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="cookie-cost">
+              <mutation name="cost">
                 <arg name="cookies" type="Number"/>
               </mutation>
             </block>
@@ -84,7 +92,7 @@
         <block type="functional_example" inline="false" uservisible="false">
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
-              <mutation name="cookie-cost">
+              <mutation name="cost">
                 <arg name="cookies" type="Number"/>
               </mutation>
             </block>

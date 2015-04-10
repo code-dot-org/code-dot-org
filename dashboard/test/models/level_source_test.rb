@@ -7,7 +7,7 @@ class LevelSourceTest < ActiveSupport::TestCase
         hint: selected_message,
         status: LevelSourceHint::STATUS_SELECTED,
         source: source)
-     experiment_messages.each do |message|
+    experiment_messages.each do |message|
       LevelSourceHint.create!(level_source_id: level_source_id,
                               hint: message,
                               status: LevelSourceHint::STATUS_EXPERIMENT,

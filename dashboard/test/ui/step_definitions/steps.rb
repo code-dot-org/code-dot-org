@@ -15,7 +15,7 @@ Given /^I am on "([^"]*)"$/ do |url|
   @browser.navigate.to "#{url}"
 end
 
-When /^I wait to see "([.#])([^"]*)"$/ do |selector_symbol, name|
+When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
   wait.until { @browser.find_element(selection_criteria) }
@@ -26,9 +26,9 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   @browser.find_element(selection_criteria)
 end
 
-When /^I wait until element "([^"]*)" has text "([^"]*)"$/ do |selector, text|
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
-  wait.until { element_has_text(selector, text) }
+  wait.until { @browser.execute_script("return $(\"#{selector}\").text();").include? text }
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
@@ -41,8 +41,8 @@ Then /^check that I am on "([^"]*)"$/ do |url|
   @browser.current_url.should eq url
 end
 
-When /^I wait for (\d+) seconds?$/ do |seconds|
-  sleep seconds.to_i
+When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
+  sleep seconds.to_f
 end
 
 When /^I submit$/ do
@@ -65,12 +65,60 @@ When /^I press "([^"]*)"$/ do |button|
   @button.click
 end
 
+When /^I press the first "([^"]*)" element$/ do |selector|
+  @element = @browser.find_element(:css, selector)
+  @element.click
+end
+
+When /^I press the "([^"]*)" button$/ do |buttonText|
+  @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+  @button.click
+end
+
 When /^I press "([^"]*)" using jQuery$/ do |selector|
   @browser.execute_script("$('" + selector + "').click()");
 end
 
+When /^I press SVG selector "([^"]*)"$/ do |selector|
+  @browser.execute_script("$('" + selector + "').simulate('drag', function(){});")
+end
+
+When /^I press the last button with text "([^"]*)"$/ do |name|
+  name_selector = "button:contains(#{name})"
+  @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
+end
+
+When /^I press the SVG text "([^"]*)"$/ do |name|
+  name_selector = "text:contains(#{name})"
+  @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
+end
+
+When /^I open the topmost blockly category "([^"]*)"$/ do |name|
+  name_selector = ".blocklyTreeLabel:contains(#{name})"
+  @browser.execute_script("$('" + name_selector + "').last().simulate('drag', function(){});")
+end
+
+And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
+  # jQuery needs \\s to allow :s and .s in ID selectors
+  # Escaping those gives us \\\\ per-character
+  category_selector = "#\\\\:#{id}\\\\.label"
+  @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
+end
+
+When /^I press dropdown button with text "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.goog-flat-menu-button-caption:contains(#{text})').simulate('drag', function(){});")
+end
+
+When /^I press dropdown item with text "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.goog-menuitem:contains(#{text})').last().simulate('drag', function(){});")
+end
+
+When /^I press the edit button on a function call named "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first().simulate('drag', function(){})")
+end
+
 When /^I press dropdown item "([^"]*)"$/ do |index|
-  @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){})");
+  @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){});")
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
@@ -95,6 +143,12 @@ end
 When /^I hold key "([^"]*)"$/ do |keyCode|
   script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{keyCode}']})"
   @browser.execute_script(script)
+end
+
+When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
+  @browser.execute_script("$('" + selector + "').val('" + inputText + "')")
+  @browser.execute_script("$('" + selector + "').keyup()")
+  @browser.execute_script("$('" + selector + "').change()")
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
@@ -133,11 +187,23 @@ Then /^element "([^"]*)" is hidden$/ do |selector|
   visible.should eq false
 end
 
+def has_class(selector, className)
+  @browser.execute_script("return $('#{selector}').hasClass('#{className}')")
+end
+
+Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, className|
+  has_class(selector, className).should eq true
+end
+
+Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, className|
+  has_class(selector, className).should eq false
+end
+
 def is_disabled(selector)
   @browser.execute_script("return $('#{selector}')[0].getAttribute('disabled') !== null || $('#{selector}').hasClass('disabled')")
 end
 
-Then /^element "([^"]*)" is not disabled$/ do |selector|
+Then /^element "([^"]*)" is (?:enabled|not disabled)$/ do |selector|
   is_disabled(selector).should eq false
 end
 
@@ -202,6 +268,17 @@ end
 Then(/^check that level (\d+) on this stage is not done$/) do |level|
   undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
   undone
+end
+
+Then(/^I reload the page$/) do
+  @browser.navigate.refresh
+end
+
+Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
+  @child_item = @browser.find_element(:css, child)
+  @parent_item = @browser.find_element(:css, parent)
+  @actual_parent_item = @child_item.find_element(:xpath, "..")
+  @parent_item.should eq @actual_parent_item
 end
 
 def encrypted_cookie(user_id)

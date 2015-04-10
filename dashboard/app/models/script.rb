@@ -8,21 +8,13 @@ class Script < ActiveRecord::Base
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
-  # Hardcoded scriptID constants used throughout the code
-  TWENTY_HOUR_ID = 1
-  HOC_ID = 2 # this is the old (2013) hour of code
-  EDIT_CODE_ID = 3
-  TWENTY_FOURTEEN_LEVELS_ID = 4
-  BUILDER_ID = 5
-  FLAPPY_ID = 6
-  JIGSAW_ID = 7
+  # Names used throughout the code
+  HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
+  EDIT_CODE_NAME = 'edit-code'
+  TWENTY_FOURTEEN_NAME = 'events'
+  JIGSAW_NAME = 'jigsaw'
 
-  MAX_DEFAULT_LEVEL_ID = 8
-
-  # name of the new (2014) hour of code script (which is a levelbuilder script, so does not have a deterministic id)
-  HOC_NAME = 'hourofcode'
-
-  # other scripts identified by names not ids
+  HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
 
@@ -35,7 +27,7 @@ class Script < ActiveRecord::Base
   COURSE4_NAME = 'course4'
 
   def Script.twenty_hour_script
-    Script.get_from_cache(Script::TWENTY_HOUR_ID)
+    Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
 
@@ -52,7 +44,7 @@ class Script < ActiveRecord::Base
   # distributed cache (Rails.cache)
   @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
-  
+
   def self.script_cache_to_cache
     Rails.cache.write(SCRIPT_CACHE_KEY, script_cache_from_db)
   end
@@ -68,7 +60,7 @@ class Script < ActiveRecord::Base
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
         script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
-        
+
         cache[script.name] = script
         cache[script.id.to_s] = script
       end
@@ -78,6 +70,10 @@ class Script < ActiveRecord::Base
   def self.script_cache
     @@script_cache ||=
       script_cache_from_cache || script_cache_from_db
+  end
+
+  def cached
+    self.class.get_from_cache(id)
   end
 
   def self.get_from_cache(id)
@@ -94,46 +90,29 @@ class Script < ActiveRecord::Base
   end
 
   def to_param
-    if self.twenty_hour? || self.id == HOC_ID
-      super
-    else
-      name
-    end
+    name
   end
 
-  def multiple_games?
-    # simplified check to see if we are in a script that has only one game (stage)
-    stages.many? ||
-      (stages.empty? && script_levels.first.level.game_id != script_levels.last.level.game_id)
-  end
-
+  # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
-    default_script?
+    [TWENTY_HOUR_NAME, HOC_2013_NAME, EDIT_CODE_NAME, TWENTY_FOURTEEN_NAME, FLAPPY_NAME, JIGSAW_NAME].include? self.name
   end
 
   def twenty_hour?
-    self.id == TWENTY_HOUR_ID
+    self.name == TWENTY_HOUR_NAME
   end
 
   def hoc?
-    # note that now multiple scripts can be an 'hour of code' script
-    self.id == HOC_ID || self.name == HOC_NAME || self.name == FROZEN_NAME || self.flappy? || self.name == PLAYLAB_NAME
+    # Note that now multiple scripts can be an 'hour of code' script.
+    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME].include? self.name
   end
 
   def flappy?
-    self.id == FLAPPY_ID
-  end
-
-  def default_script?
-    self.id <= MAX_DEFAULT_LEVEL_ID
+    self.name == FLAPPY_NAME
   end
 
   def find_script_level(level_id)
     self.script_levels.detect { |sl| sl.level_id == level_id }
-  end
-
-  def self.builder_script
-    Script.find(BUILDER_ID)
   end
 
   def get_script_level_by_id(script_level_id)
@@ -141,6 +120,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
+    stage_position ||= 1
     self.script_levels.to_a.find do |sl|
       sl.stage.position == stage_position.to_i && sl.position == puzzle_position.to_i
     end
@@ -148,13 +128,18 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_chapter(chapter)
     chapter = chapter.to_i
+    return nil if chapter < 1 || chapter > self.script_levels.count
     self.script_levels[chapter - 1] # order is by chapter
   end
 
   def feedback_url
-    feedback_url_keys = { "course1"=>"RJH5D5F", "course2"=>"H8JLN38", "course3"=>"6T8NZY5" }
-    feedback_url_key = feedback_url_keys[self.name]
-    "https://www.surveymonkey.com/s/" + feedback_url_key if feedback_url_key
+    feedback_url_keys = {
+      course1: 'RJH5D5F',
+      course2: 'H8JLN38',
+      course3: '6T8NZY5',
+    }
+    feedback_url_key = feedback_url_keys[self.name.to_sym]
+    "https://www.surveymonkey.com/s/#{feedback_url_key}" if feedback_url_key
   end
 
   def beta?
@@ -162,7 +147,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == "course4" || name == "edit-code"
+    name == 'course4' || name == 'edit-code'
   end
 
   def is_k1?
@@ -174,7 +159,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    return ['course1', 'course2', 'course3', 'course4'].include? self.name
+    %w(course1 course2 course3 course4).include? self.name
   end
 
   def show_report_bug_link?
@@ -182,19 +167,19 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || ['msm', 'algebra'].include?(self.name)
+    k5_course? || %w(msm algebra).include?(self.name)
+  end
+
+  def show_freeplay_links?
+    name != 'algebra'
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
   SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
-  def self.setup(default_files, custom_files)
+  def self.setup(custom_files)
     transaction do
       scripts_to_add = []
-      # Load default scripts from yml (csv embedded)
-      default_files.map { |yml| load_yaml(yml, SCRIPT_MAP) }
-      .sort_by { |options, _| options['id'] }
-      .map { |options, data| scripts_to_add << [options, data]}
 
       custom_i18n = {}
       # Load custom scripts from Script DSL format
@@ -207,6 +192,7 @@ class Script < ActiveRecord::Base
           name: name,
           trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          wrapup_video: script_data[:wrapup_video],
           id: script_data[:id],
         }, stages.map{|stage| stage[:levels]}.flatten]
       end
@@ -221,75 +207,71 @@ class Script < ActiveRecord::Base
 
   def self.add_script(options, data)
     script = fetch_script(options)
-    chapter = 0; game_chapter = Hash.new(0)
+    chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
     script_stages = []
     script_levels_by_stage = {}
-    levels_by_name = script.levels.index_by(&:name)
-    levels_by_num = script.levels.index_by do |level|
-      "#{level.game_id} #{level.level_num}"
-    end
+    levels_by_key = script.levels.index_by(&:key)
 
     # Overwrites current script levels
     script.script_levels = data.map do |row|
       row.symbolize_keys!
 
       # Concepts are comma-separated, indexed by name
-#      if row[:concepts]
-        row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-          (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-        end
-#      end
-
-        # TODO use Level.find_by_key
-      if row[:name].try(:start_with?, 'blockly:')
-        row[:name], row[:game], row[:level_num] = row.delete(:name).split(':')
+      row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
+        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
       end
+
       row_data = row.dup
       stage_name = row.delete(:stage)
       assessment = row.delete(:assessment)
-      begin
-        # if :level_num is present, find/create the reference to the Blockly level.
-        if row[:level_num]
-          key = {game_id: Game.by_name(row.delete(:game)), level_num: row.delete(:level_num)}
-          level = levels_by_num["#{key[:game_id]} #{key[:level_num]}"] ||
-          Level.includes(:concepts).create_with(name: row.delete(:name)).find_or_create_by!(key)
-          row[:type] ||= 'Blockly'
-        else
-          name = row.delete(:name)
-          level = levels_by_name[name] ||
-            Level.find_by(name: name) ||
-            raise(ActiveRecord::RecordNotFound)
-        end
-      rescue ActiveRecord::RecordNotFound => e
-        raise e, "#{$!}, Level: #{row_data.to_json}, Script: #{script.name}", e.backtrace
+
+      key = row.delete(:name)
+
+      if row[:level_num] && !key.starts_with?('blockly')
+        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
+        key = ['blockly', row.delete(:game), row.delete(:level_num)].join(':')
       end
 
-      level = level.with_type(row.delete(:type)) if level.type.nil?
-      level.update(row) if row_data[:level_num]
+      level = levels_by_key[key] || Level.find_by_key(key)
+
+      if key.starts_with?('blockly')
+        # this level is defined in levels.js. find/create the reference to this level
+        level = Level.
+          create_with(name: 'blockly').
+          find_or_create_by!(Level.key_to_params(key))
+        level = level.with_type(row.delete(:type) || 'Blockly') if level.type.nil?
+        level.update(row)
+      end
+
+      unless level
+        raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
+      end
 
       script_level_attributes = {
         script_id: script.id,
         level_id: level.id,
         chapter: (chapter += 1),
-        game_chapter: (game_chapter[level.game_id] += 1),
         assessment: assessment
       }
-      script_level = script.script_levels.detect{ |sl|
+      script_level = script.script_levels.detect{|sl|
         script_level_attributes.all?{ |k, v| sl.send(k) == v }
       } || ScriptLevel.find_or_create_by(script_level_attributes)
       # Set/create Stage containing custom ScriptLevel
       if stage_name
-        stage = script.stages.detect{|stage| stage.name == stage_name} ||
+        stage = script.stages.detect{|s| s.name == stage_name} ||
           Stage.find_or_create_by(
             name: stage_name,
             script: script
           )
         script_level_attributes.merge!(
           stage_id: stage.id,
-          position: (script_level_position[stage] += 1)
+          position: (script_level_position[stage.id] += 1)
         )
-        (script_levels_by_stage[stage] ||= []) << script_level
+        script_level.reload
+        script_level.assign_attributes(script_level_attributes)
+        script_level.save! if script_level.changed?
+        (script_levels_by_stage[stage.id] ||= []) << script_level
         unless script_stages.include?(stage)
           stage.assign_attributes(position: (stage_position += 1))
           stage.save! if stage.changed?
@@ -301,7 +283,7 @@ class Script < ActiveRecord::Base
       script_level
     end
     script_stages.each do |stage|
-      stage.script_levels = script_levels_by_stage[stage]
+      stage.script_levels = script_levels_by_stage[stage.id]
     end
     script.stages = script_stages
     script.reload.stages
@@ -323,13 +305,15 @@ class Script < ActiveRecord::Base
     begin
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_params[:name])
-        Script.add_script({name: script_params[:name],
-                           trophies: script_data[:trophies],
-                           hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
-          script_data[:stages].map { |stage| stage[:levels] }.flatten)
+        Script.add_script({
+          name: script_params[:name],
+          trophies: script_data[:trophies],
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          wrapup_video: script_data[:wrapup_video],
+        }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)
       end
-    rescue Exception => e
+    rescue StandardError => e
       errors.add(:base, e.to_s)
       return false
     end
@@ -338,7 +322,7 @@ class Script < ActiveRecord::Base
       filename = "config/scripts/#{script_params[:name]}.script"
       File.write(filename, script_text)
       true
-    rescue Exception => e
+    rescue StandardError => e
       errors.add(:base, e.to_s)
       return false
     end
@@ -354,13 +338,32 @@ class Script < ActiveRecord::Base
 
   def self.update_i18n(custom_i18n)
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
-    i18n = File.exists?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
-    i18n.deep_merge!(custom_i18n) { |i, old, new| old } # deep reverse merge
-    File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml)
+    i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
+    i18n.deep_merge!(custom_i18n){|_, old, _| old} # deep reverse merge
+    File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
   end
 
-  private
-  def Script.clear_cache
+  def hoc_finish_url
+    if name == Script::HOC_2013_NAME
+      CDO.code_org_url '/api/hour/finish'
+    else
+      CDO.code_org_url "/api/hour/finish/#{name}"
+    end
+  end
+
+  def summarize
+    summary = {
+      id: id,
+      name: name,
+      stages: stages.map(&:summarize),
+    }
+
+    summary[:trophies] = Concept.summarize_all if trophies
+
+    summary
+  end
+
+  def self.clear_cache
     # only call this in a test!
    @@script_cache = nil
   end

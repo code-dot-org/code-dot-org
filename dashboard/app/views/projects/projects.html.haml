@@ -1,88 +1,66 @@
-- @page_title = 'Projects'
+- @page_title = t('project.projects')
 
-:scss
-  .projects {
-    th {
-      padding: 10px;
-      background-color: #ccc;
-      text-align: left;
-    }
-    td {
-      padding: 10px;
-      border: 1px solid #ccc;
-    }
-    .name {
-      font-size: 1.5em;
-    }
-  }
+.projects-page
+  .row
+    .span12
+      %h1= @page_title
 
-  .level-buttons {
-    margin: 20px 5px;
-  }
+  .row
+    .span2
+    .span8.infobox= t('project.help_text').html_safe
+    .span2
+  %br
+  %br
+  .row
+    .projects-table-wrapper.center
+      = render partial: 'projects/links'
 
-%div
-  .alert
-    Hi! This is a skeleton page to see your projects. Visible to admins only ;)
+      %table.projects{'ng-show' => 'projects.length > 0'}
+        %colgroup
+          %col{width: "250"}
+          %col{width: "200"}
+          %col{width: "200"}
+        %tr
+          %th
+            %a{href: "", "ng-click" => "order = 'name'; reverse=!reverse"}
+              = t('projects.name')
+              %i.fa.fa-caret-down{'ng-show' => "order == 'name' && reverse == true"}
+              %i.fa.fa-caret-up{'ng-show' => "order == 'name' && reverse == false"}
+          %th
+            %a{href: "", "ng-click" => "order = 'updatedAt'; reverse=!reverse"}
+              = t('projects.updated')
+              %i.fa.fa-caret-down{'ng-show' => "order == 'updatedAt' && reverse == true"}
+              %i.fa.fa-caret-up{'ng-show' => "order == 'updatedAt' && reverse == false"}
+          %th
+        %tr{"ng-repeat" => "project in projects | filter:projectVisible | orderBy:order:reverse"}
+          %td.name
+            %span{'ng-hide' => 'project.editing'}
+              %a{href: '', "ng-href" => '{{ project.editUrl() }}'}
+                {{ project.name }}
+            %span{'ng-show' => 'project.editing'}
+              %input{"ng-model" => "project.name", type: 'text'}/
+          %td
+            {{ project.updatedAt | date: 'short' }}
+          %td
+            %button.btn.btn-default{'ng-click' => 'project.editing = true', 'ng-hide' => 'project.editing || project.deleting'}= t('project.rename')
+            %button.btn.btn-primary{'ng-click' => 'project.$save({id: project.id}); project.editing = false', 'ng-show' => 'project.editing'}= t('project.save')
 
-  %div
-    %span New project:
-    .btn-group.level-buttons{role: "group"}
-      %a.btn{href: ''}
-        (TODO) Standalone
-        %i.fa.fa-pencil
-      %a.btn{href: ''}
-        (TODO) Standalone
-        %i.fa.fa-rocket
-      %a.btn{href: artist_freeplay_path}
-        Freeplay
-        %i.fa.fa-pencil
-      %a.btn{href: playlab_freeplay_path}
-        Freeplay
-        %i.fa.fa-rocket
+            %button.btn.btn-danger{'ng-click'=>'project.deleting = true', 'ng-hide' => 'project.deleting'}= I18n.t('project.delete')
+            %span{'ng-show' => 'project.deleting'}
+              = t('project.really_delete')
+              %button.btn.btn-danger{'ng-click' => 'removeProject(project)'}= t('project.delete_yes')
+              %button.btn.btn-white{'ng-click' => 'project.deleting = false'}= I18n.t('project.delete_no')
 
-  %table.projects{style: "width:850px; table-layout:auto;", 'ng-show' => 'projects.length > 0'}
-    %colgroup
-      %col{width: "200"}
-      %col{width: "200"}
-      %col{width: "200"}
-      %col{width: "250"}
-    %tr
-      %th
-        %a{href: "", "ng-click" => "order = 'name'; reverse=!reverse"}
-          Name
-          %i.fa.fa-caret-down{'ng-show' => "order == 'name' && reverse == true"}
-          %i.fa.fa-caret-up{'ng-show' => "order == 'name' && reverse == false"}
-      %th
-        %a{href: "", "ng-click" => "order = 'updatedAt'; reverse=!reverse"}
-          UpdatedAt
-          %i.fa.fa-caret-down{'ng-show' => "order == 'updatedAt' && reverse == true"}
-          %i.fa.fa-caret-up{'ng-show' => "order == 'updatedAt' && reverse == false"}
-      %th
-        %a{href: "", "ng-click" => "order = 'createdAt'; reverse=!reverse" }
-          CreatedAt
-          %i.fa.fa-caret-down{'ng-show' => "order == 'createdAt' && reverse == true"}
-            %i.fa.fa-caret-up{'ng-show' => "order == 'createdAt' && reverse == false"}
-      %th
-    %tr{"ng-repeat" => "project in projects | orderBy:order:reverse", style: "vertical-align:top"}
-      %td
-        %span{'ng-hide' => 'project.editing'}
-          %span.name{'ng-if' => 'project.url()'}
-            %a{"ng-href" => '{{ project.url() }}'}
-              {{ project.name }}
-          %span.name{'ng-if' => '!project.url()'}
-            {{ project.name }}
-        %span{'ng-show' => 'project.editing'}
-          %input{"ng-model" => "project.name", style: "width: 100%", type: "text"}/
-      %td
-        {{ project.updatedAt | date: 'short' }}
-      %td
-        {{ project.createdAt | date: 'short' }}
-      %td
-        %button.btn.btn-default{'ng-click' => 'project.editing = true', 'ng-hide' => 'project.editing'} Edit
-        %button.btn.btn-primary{'ng-click' => 'project.$save(project); project.editing = false', 'ng-show' => 'project.editing'} Save
-        %button.btn.btn-danger{'ng-click' => 'project.$remove({id: project.id}) && projects.splice($index,1)'} Delete
-  %h3 Debug
-  %h4 projects
-  %pre
-    {{ projects | json }}
 
+  .row
+    .span12
+      %h2.lesson{style: 'text-align:center'}
+        = t('project.need_help')
+  .row
+    .center{style: 'width: 480px;'}
+      = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
+      = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
+
+
+- if current_user.try(:admin?)
+  = render partial: 'projects/admin'

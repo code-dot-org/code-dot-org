@@ -18,6 +18,7 @@ var page = require('../templates/page.html');
 var dom = require('../dom');
 var Hammer = require('../hammer');
 var utils = require('../utils');
+var dropletUtils = require('../dropletUtils');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
 
@@ -1054,7 +1055,7 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions, null, 'Bounce');
+    code = dropletUtils.generateCodeAliases(null, 'Bounce');
     code += studioApp.editor.getValue();
   }
 

@@ -1,94 +1,131 @@
--dont_cache
+---
+title: "View Applab Table"
+theme: angular
+angular: recordsApp
+---
 
--encrypted_app_id = request.splat_path_info[1..-1].split('/').first
--app_id = storage_decrypt_app_id(encrypted_app_id).last.to_s
+-channel_id = request.splat_path_info[1..-1].split('/').first
 -table_name = request.splat_path_info[1..-1].split('/').last
--api_base_url = "/v3/apps/#{encrypted_app_id}/shared-tables/#{table_name}"
--records = DB[:app_tables].where(app_id:app_id, table_name:table_name, storage_id:nil)
--jsonExample = '{"key1":"value1", "key2":2}'
+-api_base_url = "/v3/shared-tables/#{channel_id}/#{table_name}"
 
-:css
-  button {
-   margin-left: 5px;
-  }
-  .button-column {
-    min-width: 200px;
-  }
-  td {
-    padding: 0;
-  }
-
-%h2 Edit table
-
-%h3 Records
-%table
-  %tr
-    %td record id
-    %td record data
-    %td action
-  -records.each do |record|
-    %tr
-      %td
-        #{record[:row_id]}
-      %td
-        %textarea{id: "#{record[:row_id]}-textarea", name:"record", value:"#{record[:value]}", cols:"80", rows:"2"}= record[:value]
-      %td.button-column
-        %button{id:"#{record[:row_id]}-save"}
-          Save
-        %button{id:"#{record[:row_id]}-delete"}
-          Delete
-  %tr
-    %td (new)
-    %td
-      %textarea{id: "new-record-textarea", name:'record', cols:"80", rows:"2"}= jsonExample
-    %td
-      %button#new-record-add Add
+%div{"ng-app" => "recordsApp", "ng-view" => ""}
 
 :javascript
-  function processResponse(data) {
-    window.location.reload()
-  }
-  function processError(data) {
-    window.alert(data.status + '\n' + data.responseJSON);
-  }
-  function saveRecordData(url, recordData) {
-    try {
-      JSON.parse(recordData); // make sure it parses
-      $.ajax({
-        url: url,
-        type: 'post',
-        data: recordData,
-        processData: false,
-        contentType: 'application/json; charset=utf-8'
-      }).done(processResponse).fail(processError);
-    } catch (e) {
-      window.alert(
-          'Error parsing JSON:\n' +
-          '\tinput: ' + recordData + '\n' +
-          '\terror: "' + e.message + '"\n\n' +
-          'example of valid JSON: \n\t#{jsonExample}');
+  'use strict';
+
+  // Declare app level module which depends on filters, and services
+  angular.module('recordsApp', [
+    'ngRoute',
+    'ngResource',
+    'recordsApp.controllers',
+    'recordsApp.services'
+  ]).config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/',
+                        {templateUrl: '/private/edit-csp-table/records',
+                         controller: 'RecordsController'});
+    $routeProvider.otherwise({redirectTo: '/'});
+  }]);
+
+  // SERVICES
+  var services = angular.module('recordsApp.services', []).
+      value('version', '0.1');
+
+  services.factory('recordsService', ['$resource',
+    function($resource) {
+      var Record = $resource("#{api_base_url}/:recordId", {recordId:'@id'}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method: 'GET'},
+        //  'save':   {method: 'POST'},
+        //  'query':  {method: 'GET', isArray:true},
+        //  'remove': {method: 'DELETE'},
+        //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
+      });
+
+      return Record;
+    }]);
+
+  // CONTROLLERS
+
+  var controllers = angular.module('recordsApp.controllers', []).
+      value('version', '0.1');
+
+  controllers.controller('RecordsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'recordsService',
+      function($scope, $route, $routeParams, $location, $window, recordsService) {
+    $scope.records = recordsService.query();
+    $scope.newColumnName = '';
+    $scope.newRecord = new recordsService();
+    $scope.tableName = "#{table_name}";
+    $scope.channelId = "#{channel_id}";
+    $scope.importing = false;
+    $scope.reverse = true;
+
+    $scope.records.$promise.then(function(records) {
+      $scope.columns = getColumns(records);
+    }).catch($scope.genericError);
+
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+
+    $scope.addColumn = function() {
+      if ($scope.newColumnName == '') return;
+      $scope.columns.push($scope.newColumnName);
+      $scope.newColumnName = '';
     }
-    return false;
+
+    $scope.saveRecord = function(record) {
+      record.editing = undefined;
+      var props = Object.keys(record);
+      for (var i = 0; i < props.length; i++) {
+        // Do not cast 'id' or properties added by angular.
+        if (props[i].indexOf('$') === 0 || props[i] == 'id') continue;
+        record[props[i]] = castValue(record[props[i]]);
+      }
+      record.$save(record).then(function(record) {
+        // TODO(dave): remove once update API returns id as a number.
+        record.id = parseInt(record.id);
+      });
+    }
+
+    $scope.deleteRecord = function(record) {
+      record.$remove(record);
+      var index = $scope.records.indexOf(record);
+      if (index > -1) {
+        $scope.records.splice(index, 1);
+      }
+    }
+
+    $scope.saveNewRecord = function() {
+      $scope.saveRecord($scope.newRecord);
+      $scope.records.push($scope.newRecord);
+      $scope.newRecord = new recordsService();
+    }
+
+    $scope.deleteNewRecord = function() {
+      $scope.newRecord = new recordsService();
+    }
+
+    function castValue(val) {
+      if (val == '') return undefined;
+      if (val == 'true' || val === true) return true;
+      if (val == 'false' || val === false ) return false;
+      if (!isNaN(val)) return parseInt(val);
+      return val;
+    }
+
+  }]);
+
+  function getColumns(records) {
+    var columns = [];
+    for (var i = 0; i < records.length; i++) {
+      var props = Object.keys(records[i]);
+      for (var j = 0; j < props.length; j++) {
+        var prop = props[j];
+        if (prop != 'id' && columns.indexOf(prop) == -1) {
+          columns.push(prop);
+        }
+      }
+    }
+    return columns;
   }
 
-  $('#new-record-add').click(
-    function(e) {
-      var recordData = document.getElementById('new-record-textarea').value;
-      saveRecordData('#{api_base_url}', recordData);
-    }
-  );
-
--records.each do |record|
-  -row_id = record[:row_id]
-  :javascript
-    $('##{row_id}-save').click(function(e) {
-      var recordData = document.getElementById('#{row_id}-textarea').value;
-      return saveRecordData('#{api_base_url}/#{row_id}', recordData);
-    });
-
-    $('##{row_id}-delete').click(function(e) {
-      $.ajax({
-        url: '#{api_base_url}/#{row_id}/delete',
-        type: 'post'
-      }).done(processResponse).fail(processError);
-    });

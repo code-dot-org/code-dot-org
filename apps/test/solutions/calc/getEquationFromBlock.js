@@ -3,7 +3,7 @@ var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 var blockUtils = require(testUtils.buildPath('block_utils'));
 var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 var EquationSet = require(testUtils.buildPath('calc/equationSet'));
-var Equation = EquationSet.Equation;
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
 var ExpressionNode = require(testUtils.buildPath('calc/expressionNode'));
 
 /**
@@ -93,6 +93,21 @@ module.exports = {
         validateGeneratedEquation(assert,
           blockUtils.calcBlockXml('functional_dividedby', [7, 8]),
           new Equation(null, [], new ExpressionNode('/', [7, 8]))
+        );
+
+        validateGeneratedEquation(assert,
+          blockUtils.calcBlockXml('functional_pow', [2, 4]),
+          new Equation(null, [], new ExpressionNode('pow', [2, 4]))
+        );
+
+        validateGeneratedEquation(assert,
+          blockUtils.calcBlockXml('functional_sqrt', [4]),
+          new Equation(null, [], new ExpressionNode('sqrt', [4]))
+        );
+
+        validateGeneratedEquation(assert,
+          blockUtils.calcBlockXml('functional_squared', [2]),
+          new Equation(null, [], new ExpressionNode('sqr', [2]))
         );
 
         validateGeneratedEquation(assert,

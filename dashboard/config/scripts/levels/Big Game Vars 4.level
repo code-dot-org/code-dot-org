@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Awesome, now you can update the variables for your Player, Target, and Danger. Feel free to play with all of the variables at this point to make your game look like you'd like it to. Click 'finish' when you're done.",
+    "instructions": "Awesome! Now you can update the variables for your Player, Target, and Danger. Feel free to play with all of the variables at this point to make your game look like you'd like it to. Click \"Finish\" when you're done.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -29,8 +29,17 @@
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
     "callout_json": "[\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "custom_game_type": "Big Game",
+    "min_workspace_height": "1500",
     "maze_data": null
-  }
+  },
+  "md5": "ae867be55f2c71f254f4ad42b682e4b7"
 }]]></config>
   <blocks/>
 </Studio>

@@ -13,8 +13,9 @@ gem 'seamless_database_pool'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
-gem 'google_drive', '~> 0.3.10'
+gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
+gem 'parallel'
 
 group :development do
   gem 'rerun', '~> 0.10.0'
@@ -45,7 +46,6 @@ group :development, :test do
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
-  gem 'parallel'
   gem 'spring'
   gem 'spring-commands-testunit'
   gem 'minitest-reporters'
@@ -77,7 +77,8 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
-gem 'cancan'
+gem 'devise_invitable', '~> 1.3.4'
+gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
@@ -87,17 +88,17 @@ gem 'omniauth-clever', git: 'https://github.com/code-dot-org/omniauth-clever.git
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
 
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 5.0.3'
 
 gem 'nokogiri', '1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger'
+gem 'honeybadger', '~> 1.11.2',  group: [:staging, :production] # error monitoring
+
+gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.1.1'
-
-gem 'newrelic_rpm'
 
 gem 'geocoder'
 
@@ -134,3 +135,9 @@ gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rail
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
+gem 'react-rails', '~> 1.0'
+# JSON model serializer for REST APIs
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '32343d'
+gem 'aws-sdk', '~> 2'
+
+gem 'rubocop', require: false, group: [:development, :staging]

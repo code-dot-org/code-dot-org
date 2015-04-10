@@ -1,19 +1,15 @@
 ---
-title: Eval Boolean Operators
+title: Boolean Operators
 view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg14'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 14, :unplugged=>false, :title=> 'Eval: Boolean Operators',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-
-Using Boolean operators, students will write code that compares values to return either true or false.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -22,72 +18,36 @@ Using Boolean operators, students will write code that compares values to return
  
 1) [Introduction](#GetStarted)  
 
-### **Eval: Boolean Operators**  
+### **Activity: Boolean Operators**  
 
 2) [Online Puzzles](#Activity1)
 
 [/summary]
 
-## Lesson Objectives 
-### Students will:
-
-- Use Boolean operators to compare values
-- Apply Boolean logic, such as AND, OR, and NOT, to compose complex Boolean comparisons
-
-[/together]
-
 [together]
 
 # Teaching Guide
 
-## Getting Started
+## Materials, Resources, and Prep
 
+### For the Teacher
+- [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1hWgXUeeBMh_ah8GUTBshhy_5GAbiIwNj87M-8MkVJH4/)
+
+## Getting Started
 
 ### <a name="GetStarted"></a> 1) Introduction
 
-Booleans, true/false, review it!
+Creating some sample boolean expressions - both simple and complex - is an excellent warm-up activity before the puzzle stages.  Some examples have been included in the slide deck.  The slide deck also has extra practice related to expressions that the students will have seen in the puzzles.
 
 [/together]
 
 [together]
 
-## Activity: Eval Design Recpie
+## Activity: Boolean Operators
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-Head to [MSM stage 14](http://studio.code.org/s/algebra/stage/14/puzzle/1) in Code Studio to get started programming.
+Head to [CS in Algebra stage 14](http://studio.code.org/s/algebra/stage/14/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
-
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 7.EE.3-4: The student uses numerical and algebraic expressions and equations to solve real-life and mathematical problems.
-- 8.F.1-3: The student defines, evaluates, and compares functions.
-- A-CED.1-4: The student solves equations and inequalities in one or more variable that describe numbers or relationships.
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
-- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>

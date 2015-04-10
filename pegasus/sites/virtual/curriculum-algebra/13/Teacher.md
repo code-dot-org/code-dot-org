@@ -1,18 +1,15 @@
 ---
-title: Booleans
+title: Booleans and Logic
 view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg13'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'Booleans',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-Booleans are the fourth and final data type that students will learn about in this course.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -22,32 +19,28 @@ Booleans are the fourth and final data type that students will learn about in th
 1) [Vocabulary](#Vocab)<br/>
 2) [Booleans - True or False?](#GetStarted)  
 
-### **Activity: Booleans**  
+### **Activity: Booleans 20 Questions**  
 
 3) [Boolean 20 Questions](#Activity1)   
 
+<!--
 ### **Assessment**
 4) [Boolean Assessment](#Assessment)
+-->
 
 [/summary]
-
-## Lesson Objectives 
-### Students will:
-- Use the Design Recipe to define functions to solve word problems
-
-[/together]
 
 [together]
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 
 ### For the Teacher
 - [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1lUA5nx8ILAPwjAEl70Hw0ADGflzOtX1L2pIXtNU2B0U/)
 
 ### For the Students
-- 3x5 cards, pens or pencils
+- 3 x 5 cards, pens or pencils
 
 [/together]
 
@@ -57,9 +50,10 @@ Booleans are the fourth and final data type that students will learn about in th
 
 
 ### <a name="Vocab"></a> 1) Vocabulary
-This lesson has one new and important word:<br/>
+This lesson has two new and important words:<br/>
 
-- **Boolean** - a type of data with two values: true and false
+- **Boolean** - a type of data with two values: true and false.
+- **Return** - used as a synonym for output of a function.
 
 ### <a name="GetStarted"></a> 2) Booleans - True or False?
 
@@ -82,11 +76,10 @@ The last expression, **(3 < 4)**, uses a new function that compares Numbers, ret
 
 The function **<** tests if one number is less than another. Can you think of some other tests?
 
-Functions like **<**, **>** and **=** all consume two Numbers as their Domain, and produce a special value called a Boolean as their Range. Booleans are answers to a yes-or-no question, and Boolean functions are used to perform tests. In a videogame, you might test if a player has walked into a wall, or if their health is equal to zero. A machine in a doctor’s office might use Booleans to test if a patient’s heartrate is above or below a certain level. 
+Functions like **<**, **>** and **=** all consume two Numbers as their Domain, and produce a special value called a Boolean as their Range. Booleans are answers to a yes-or-no question, and Boolean functions are used to perform tests. In a videogame, you might test if a player has walked into a wall, or if their health is equal to zero. A machine in a doctor’s office might use Booleans to test if a patient’s heart rate is above or below a certain level. 
 
 **Boolean values can only be true or false.**
  
-
 [/together]
 
 [together]
@@ -107,60 +100,48 @@ Give each student a card and have them answer the following questions on it (fee
 
 Then collect the cards and shuffle them. To play the game, follow these steps:
 
-- Select a card
-- Read the answer to #8 and say this is the person we are looking for
-- Have all the students stand up.
-- Begin asking true/false based on the card questions
-    - Start with simple true/false questions like "is your hair brown?" or "is your favorite number greater than 7?"
-    - After a few simple questions, move on to questions using "and," "or," and "not." eg:
-        - Do you have siblings OR wear glasses?
-        - Is the last digit of your phone number greater than 5 AND less than 8?
-        - Is your favorite color NOT purple?
-    - Students who answer False to a question must sit down.
-    - The person who is still standing at the end is the person.
+ - Select a card
+ - Say: I’m going to read the answer to #8 but if it is you, don’t say anything.
+ - Say: Now everyone stand up and we are going to ask some questions with Boolean answers to help determine who this person is.
+ - Begin the following true/false questions.  Preface each one with “If you answer false to the following question, please sit down.”  The person whose card you are reading should always answer true so you will need to change the example questions below.  For this example, the answers were:
+ 
+1. What is your hair color? - **brown**
+2. Do you wear glasses or contacts? - **yes**
+3. What is your favorite number? - **13**
+4. What is your favorite color? - **blue**
+5. What month were you born? - **December**
+6. Do you have any siblings? - **yes**
+7. What is the last digit of your phone number? - **7**
 
-After one round, explain about boolean logic and how x and y means both x and y are true. X or Y means only x or y has to be true. You can also talk about the amount of information you get from a question. If you have time, let students take turns as the quizmaster, coming up with their own Boolean questions.
+With that example, you might make the following statements:
+
+- My hair color is brown.
+- I wear contacts or glasses.  (you only have to answer true to One of these to remain standing)
+- My favorite number is greater than 10 and less than 20. (you must answer true to both these.)
+- My favorite color is blue or green.
+- I was not born in April.
+- I have at least one sibling.
+- The last digit of my phone number is a prime number.
+
+Because of how numbers 3,4, 5, and 7 were asked it is likely that some people will still be standing.  You will need to revisit these and ask them again in a more narrow fashion such as “My favorite color is blue”.
+
+Play this several times.  Be creative with using _or_s and _and_s.  Remind students that the OR means that either part of the statement being true will result in the entire statement being true.  In English, an “or” is often an “exclusive or” such as “You can have chicken or fish.”  In English, you only get to pick one, but with Boolean logic you could have chicken, fish, or both!!  For the example person above, “I was born in December OR my favorite number is 13” is true.  Note that “I was born in December AND my favorite number is 13” is also true.
+
+Have a student try to act as the quizmaster after several rounds.  If a mistake is made by you, a student quizmaster, or the person whose card you are reading, see if you can analyze where the mistake was made or why the question being asked might not have been clear.
+
+How does this activity connect with our game? In our game, we may need to determine: Is a target too far left or too far right?  If so, then perhaps some action should occur.
 
 [/together]
 
 [together]
 
+<!--
 ## Assessment 
 ### <a name="Assessment"></a>4) Booleans Assessment
 
-Visit [MSM Stage 13](http://studio.code.org/s/algebra/stage/13/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 13](http://studio.code.org/s/algebra/stage/13/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 7.EE.3-4: The student uses numerical and algebraic expressions and equations to solve real-life and mathematical problems.
-- 8.F.1-3: The student defines, evaluates, and compares functions.
-- A-CED.1-4: The student solves equations and inequalities in one or more variable that describe numbers or relationships.
-- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
-- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
-- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>

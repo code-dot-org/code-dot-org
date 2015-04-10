@@ -11,13 +11,21 @@
     "instructions": "Using the Design Recipe, write a function \"striped-flag\" that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "min_workspace_height": "1000",
+    "min_workspace_height": "1500",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "default_num_example_blocks": "2",
-    "free_play": "false"
-  }
+    "free_play": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false"
+  },
+  "md5": "36683c2761e2abbea91404af65d98d91"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -26,8 +34,8 @@
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
               <mutation name="striped-flag">
-                <arg name="color1" type="string"/>
-                <arg name="color2" type="string"/>
+                <arg name="color1" type="String"/>
+                <arg name="color2" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string">
@@ -44,9 +52,9 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="color1" type="string"/>
-            <arg name="color2" type="string"/>
-            <outputtype>image</outputtype>
+            <arg name="color1" type="String"/>
+            <arg name="color2" type="String"/>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">striped-flag</title>
         </block>
@@ -106,8 +114,8 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="striped-flag">
-                <arg name="color1" type="string"/>
-                <arg name="color2" type="string"/>
+                <arg name="color1" type="String"/>
+                <arg name="color2" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string" uservisible="false">
@@ -126,8 +134,8 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="striped-flag">
-                <arg name="color1" type="string"/>
-                <arg name="color2" type="string"/>
+                <arg name="color1" type="String"/>
+                <arg name="color2" type="String"/>
               </mutation>
             </block>
           </functional_input>
@@ -244,9 +252,9 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="color1" type="string"/>
-            <arg name="color2" type="string"/>
-            <outputtype>image</outputtype>
+            <arg name="color1" type="String"/>
+            <arg name="color2" type="String"/>
+            <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">striped-flag</title>
         </block>
@@ -306,8 +314,8 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="striped-flag">
-                <arg name="color1" type="string"/>
-                <arg name="color2" type="string"/>
+                <arg name="color1" type="String"/>
+                <arg name="color2" type="String"/>
               </mutation>
               <functional_input name="ARG0">
                 <block type="functional_string" uservisible="false">
@@ -326,8 +334,8 @@
           <functional_input name="ACTUAL">
             <block type="functional_call" inline="false" uservisible="false">
               <mutation name="striped-flag">
-                <arg name="color1" type="string"/>
-                <arg name="color2" type="string"/>
+                <arg name="color1" type="String"/>
+                <arg name="color2" type="String"/>
               </mutation>
             </block>
           </functional_input>

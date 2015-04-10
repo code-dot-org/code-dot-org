@@ -5,21 +5,28 @@
 - elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
 
-.header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if @script_level && @script.show_report_bug_link?)}
-  - if @script_level && @script.show_report_bug_link?
+- show_bug_links = (@script_level && @script.show_report_bug_link?) || (@level && @level.try(:is_project_level))
+
+.header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if show_bug_links)}
+  - if show_bug_links
+    - report_url = @script_level ? @script_level.report_bug_url(request) : @level.report_bug_url(request)
     #betainfo
-      - if @script.feedback_url
-        = link_to t('landing.feedback'), @script.feedback_url
+      - if @script_level && @script.show_report_bug_link? && @script.feedback_url
+        = link_to t('landing.feedback'), @script.feedback_url, target: '_blank'
         |
-      = link_to t('landing.report_bug'), @script_level.report_bug_url(request), target: '_blank'
+      - elsif @level && @level.try(:is_project_level) && @level.game == Game.applab
+        = link_to t('landing.feedback'), 'https://www.surveymonkey.com/r/csp-applab', target: '_blank'
+        |
+      = link_to t('landing.report_bug'), report_url, target: '_blank'
 
   .navbar-static-top.header{class: 'hide_on_mobile'}
     .container{style: (@full_width ? 'width: 880px;' : '')}
       .navbar-header
         .row.header_row
-          .header_logo
-            = link_to(image_tag('codeorg-studio-logo.png'), '/')
-
+          .header_left
+            .header_logo
+              = link_to(image_tag('codeorg-studio-logo.png'), '/')
+            %span.project_info
           .header_middle
             - if @script_level
               = render partial: 'shared/header_progress'
@@ -27,16 +34,15 @@
               .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
           .header_right
             %span.freeplay_links{style: 'display: none;'}
-              %a.header_status_bar.level_free_play{title: t('nav.header.free_play.playlab'), href: playlab_freeplay_path}
+              %a.header_status_bar.level_free_play{title: t('nav.header.free_play.playlab'), href: playlab_projects_path}
                 %i.fa.fa-rocket
-              %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_freeplay_path}
+              %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_projects_path}
                 %i.fa.fa-pencil
             - if params[:controller] !~ /^sessions/
-              .header_user
-                = render partial: 'shared/user_header'
+              = render partial: 'shared/user_header'
 
 - if @script_level
   :javascript
     //<![CDATA[
-    dashboard.buildHeader(#{header_progress(@script_level).to_json});
+    dashboard.buildHeader(#{@script_level.stage.summarize.to_json}, #{summarize_user_progress(@script_level.script).to_json}, #{@script_level.try(:level_id)});
     //]]>

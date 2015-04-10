@@ -66,9 +66,9 @@
           = link_to build_script_level_path(sl) do
             = data_t_suffix('script.name', sl.script.name, "title")
             %br
-            = stage_title(sl.script, sl.stage_or_game)
+            = sl.stage.localized_title
             = t('puzzle')
-            = sl.try(:game_chapter)
+            = sl.position
       %td
         = time_ago_in_words(activity.updated_at)
         ago

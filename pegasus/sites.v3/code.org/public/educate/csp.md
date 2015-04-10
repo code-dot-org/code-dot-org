@@ -25,20 +25,14 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
 - Use, share, and customize the resources, as they are distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
+### Watch a preview of CS Principles
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
 
 
 ### <a name="overview"></a>Overview
 
 Several documents describe the overarching themes and direction of the course.
-
-### 2014
-
-- A [one-pager](/files/CSPCurriculumFlyer.pdf) describing Code.org's CSP curriculum project, rationale, and features.
-- A [visual explanation](/files/CSPCurriculumMap.png) of Code.org's CSP curriculum units and overarching themes.  
-- A longer [overview](/files/CSPCurriculumOverview.pdf) of Code.org's CSP curriculum.
-
-### 2015
-Revisions and updates to the 2014 docs are coming soon that will include:
 
 - CS Principles [Curriculum Overview 2015](/files/CSPCurriculumOverview2015.pdf) (rev. Feb. 2015)
 - An [image of the curriculum](/files/CSPCurriculumMap2015.png)
@@ -52,23 +46,21 @@ Revisions and updates to the 2014 docs are coming soon that will include:
 
 | Link| Unit Description |
 | :------------------:|-----------|
-|  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Sending Bits and Encoding Information** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols | 
-|*Coming Soon*| **The Internet** Build students' problem solving skills through unplugged and computer-based problems. Students are asked to express algorithmic solutions with increasing formality of language to analyze algorithms. Topics include: encryption, security, computationally hard problems, and internet protocols|
-|*Coming Soon*| **Programming** Introduces a formal programming language, JavaScript. The programming sequence enables students to write simple programs to be executed in web pages. |
-|*Coming Soon*| **Data** Students will develop an understanding of the nature and structure of data that enables them to ask and answer questions about the data effectively.|
-|*Coming Soon*| **Innovation** Synthesizes the topics covered in the previous units and leads students through a the practice of researching and understanding the technology behind some modern innovations.|
-|*Coming Soon*| **Web Apps** Create web applications in an open-ended integrated development environment (IDE) that supports both text and visual programming. Students will learn about the structure of modern web applications and build a few small examples of certain types of applications.|
+|  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Digital Information** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols |
+|*Coming Soon*| **The Internet** Students continue to work together to invent solutions and protocols to many of the problems that arise in the structure and function of the Internet. Topics include the Internet Protocol, DNS, TCP/IP, cryptography and other security and hacking concerns. Topics include: encryption, security, computationally hard problems, and internet protocols|
+|*Coming Soon*| **Programming** Students learn the fundamentals programming constructs of javascript by solving problems with “turtle graphics.”  Then move on to programming simple event driven apps.  An emphasis is placed on enabling students to solve problems and write code in teams. |
+|*Coming Soon*| **Data** Students continue programming and building web apps, now with a view towards data: processing it with algorithms, and the implications of storing data collected from and by others on the web.  Students explore “big data” by making queries against a data analysis api.|
+|*Coming Soon*| **Explore and Create** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create.|
 
 <br />
 
 ## Frequently Asked Questions
 
 <br />
-	
+
 #### When will lessons be published?
 
-Code.org’s CS Principles curriculum will be released publicly on a rolling basis during the 2014-15 school year as lessons are tested in classrooms and supporting materials refined. Check back often as batches of lessons will be released on a rolling basis from now until Summer 2015 when the entire curriculum will be publicly available.  They will still be considered “drafts” at that point, but they will at least have gone through one iteration of testing/revision with real teachers in real classrooms.  
-
+Code.org’s CS Principles curriculum will be released publicly on a rolling basis as engineering and field testing of lessons permit. Batches of lessons may be released on a rolling basis from now until Summer 2015.  In Summer of 2015 the full curriculum will be available for viewing.  We will be making ongoing modifications (mostly adding supports) during the 2015-16 school year based on feedback from pilot instructors.
 <br />
 
 #### Can I test lessons and give feedback?
@@ -79,7 +71,13 @@ Yes, please!  As lessons are published on the website we invite anyone to try th
 
 #### How/Where can I get professional development for this course?
 
-In-person professional development for the Code.org CSP course will be available in select partner districts starting in summer 2015. After one year of piloting and refining the PD program we will make all of our PD agendas, schedules, and other materials available to the public. This includes all of our online and in-person PD programs. 
+In-person professional development for the Code.org CSP course will be available in select partner districts starting in summer 2015. After one year of piloting and refining the PD program we will make all of our PD agendas, schedules, and other materials available to the public. This includes all of our online and in-person PD programs.
+
+<br />
+
+#### How can I learn more about the progress of the curriculum?
+
+We're now sending out a monthly status email for members of the Computer Science education community who are interested in peeking under the hood as we actively work to develop the curriculum and tools for the course. [Sign up for future emails](http://code.org/educate/csp/CSPStatus_Signup).
 
 <br />
 

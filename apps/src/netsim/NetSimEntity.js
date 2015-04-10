@@ -10,8 +10,6 @@
  */
 'use strict';
 
-var ObservableEvent = require('./ObservableEvent');
-
 /**
  * Client model of simulated network entity, which lives in a shard table.
  *
@@ -38,13 +36,6 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
    * @type {number}
    */
   this.entityID = entityRow.id;
-
-  /**
-   * Change event fired when entity's state changes in a way that
-   * should be reported.
-   * @type {ObservableEvent}
-   */
-  this.onChange = new ObservableEvent();
 };
 
 /**
@@ -53,16 +44,16 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
  * @param {!function} EntityType - The constructor for the entity type you want
  *        to create.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
 NetSimEntity.create = function (EntityType, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable_().create(entity.buildRow_(), function (row) {
-    if (row) {
-      onComplete(new EntityType(shard, row));
+  entity.getTable_().create(entity.buildRow_(), function (err, row) {
+    if (err) {
+      onComplete(err, null);
     } else {
-      onComplete(null);
+      onComplete(null, new EntityType(shard, row));
     }
   });
 };
@@ -75,23 +66,23 @@ NetSimEntity.create = function (EntityType, shard, onComplete) {
  *        to find.
  * @param {!number} entityID - The row ID for the entity you'd like to find.
  * @param {!NetSimShard} shard
- * @param {!function} onComplete - Method that will be given the
+ * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
 NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable_().read(entityID, function (row) {
-    if (row) {
-      onComplete(new EntityType(shard, row));
+  entity.getTable_().read(entityID, function (err, row) {
+    if (err) {
+      onComplete(err, null);
     } else {
-      onComplete(null);
+      onComplete(err, new EntityType(shard, row));
     }
   });
 };
 
 /**
  * Push entity state into remote storage.
- * @param {function} [onComplete] - Optional success callback.
+ * @param {NodeStyleCallback} [onComplete] - Optional completion callback.
  */
 NetSimEntity.prototype.update = function (onComplete) {
   onComplete = onComplete || function () {};
@@ -99,7 +90,10 @@ NetSimEntity.prototype.update = function (onComplete) {
   this.getTable_().update(this.entityID, this.buildRow_(), onComplete);
 };
 
-/** Remove entity from remote storage. */
+/**
+ * Remove entity from remote storage.
+ * @param {NodeStyleCallback} [onComplete] - Optional completion callback
+ */
 NetSimEntity.prototype.destroy = function (onComplete) {
   onComplete = onComplete || function () {};
 
@@ -115,4 +109,26 @@ NetSimEntity.prototype.getTable_ = function () {
 /** Construct table row for this entity. */
 NetSimEntity.prototype.buildRow_ = function () {
   return {};
+};
+
+/**
+ * Destroys all provided entities (from remote storage) asynchronously, and
+ * calls onComplete when all entities have been destroyed and/or an error occurs.
+ * @param {NetSimEntity[]} entities
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimEntity.destroyEntities = function (entities, onComplete) {
+  if (entities.length === 0) {
+    onComplete(null, true);
+    return;
+  }
+
+  entities[0].destroy(function (err, result) {
+    if (err) {
+      onComplete(err, result);
+      return;
+    }
+
+    NetSimEntity.destroyEntities(entities.slice(1), onComplete);
+  }.bind(this));
 };

@@ -152,3 +152,76 @@ exports.runOnStudioTick = function (tick, fn) {
     studioOnTick();
   });
 };
+
+/**
+ * Deep equality check of two values with more useful assertion failure
+ * message.  Depends on lodash isEqual.
+ * @param {*} left
+ * @param {*} right
+ */
+exports.assertEqual = function (left, right) {
+  assert(_.isEqual(left, right),
+      JSON.stringify(left) + ' equals ' + JSON.stringify(right));
+};
+
+/**
+ * Check that two numbers are close, within a given threshold.
+ * @param {number} left
+ * @param {number} right
+ * @param {number} maxDelta
+ */
+exports.assertWithinRange = function (left, right, maxDelta) {
+  assert(Math.abs(left - right) <= maxDelta, "Values " + left + " and " +
+      right + " are more than " + maxDelta + " apart.");
+};
+
+/**
+ * Checks that executing certain code results in an exception of the
+ * exact given type being thrown.  Produces usable output when assertions
+ * fail.
+ *
+ * @param {function} exceptionType - constructor for the exception type you
+ *        expect to be generated.  Cannot be an ancestor of the exception
+ *        type; assertThrows(Error, function () { throw new TypeError(); });
+ *        will fail.
+ * @param {function} fn - Function expected to generate an exception. Receives
+ *        no arguments, not expected to return a value.
+ *
+ * @example Passing assertion
+ * assertThrows(Error, function () { throw new Error(); });
+ *
+ * @example Failing assertion
+ * // Will produce output "Didn't throw!"
+ * assertThrows(TypeError, function () { });
+ *
+ * @example Failing assertion
+ * // Will produce output "Threw Error, expected TypeError; exception: {}"
+ * assertThrows(TypeError, function () { throw new Error(); });
+ */
+exports.assertThrows = function (exceptionType, fn) {
+  var x;
+  try {
+    fn();
+  } catch (e) {
+    x = e;
+  }
+  assert(x !== undefined, "Didn't throw!");
+  assert(x.constructor === exceptionType,
+      "Threw " + x.constructor.name +
+      ", expected " + exceptionType.name +
+      "; exception: " + x.message);
+};
+
+/**
+ * Checks that an object has a property with the given name, independent
+ * of its prototype.
+ *
+ * @param {*} obj - Object that should contain the property.
+ * @param {string} propertyName - Name of the property the object should
+ *        contain at own depth.
+ */
+exports.assertOwnProperty = function (obj, propertyName) {
+  assert(obj.hasOwnProperty(propertyName), "Expected " +
+      obj.constructor.name + " to have a property '" +
+      propertyName + "' but no such property was found.");
+};

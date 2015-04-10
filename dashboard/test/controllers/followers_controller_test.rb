@@ -27,8 +27,8 @@ class FollowersControllerTest < ActionController::TestCase
 
     assert_response :success
     assert assigns(:user)
-    
-    assert ! assigns(:user).persisted?
+
+    assert !assigns(:user).persisted?
   end
 
   test "student_user_new when signed in" do
@@ -37,7 +37,7 @@ class FollowersControllerTest < ActionController::TestCase
     assert_creates(Follower) do
       get :student_user_new, section_code: @chris_section.code
     end
-    
+
     assert_redirected_to '/'
     assert_equal "You've registered for #{@chris_section.name}.", flash[:notice]
 
@@ -53,7 +53,7 @@ class FollowersControllerTest < ActionController::TestCase
     assert_does_not_create(Follower) do
       get :student_user_new, section_code: @laurel_section_2.code
     end
-    
+
     assert_redirected_to '/'
     assert_equal "You've registered for #{@laurel_section_2.name}.", flash[:notice]
 
@@ -88,7 +88,7 @@ class FollowersControllerTest < ActionController::TestCase
     assert_does_not_create(Follower) do
       get :student_user_new, section_code: @chris_section.code
     end
-    
+
     assert_redirected_to '/'
     assert_equal "Sorry, you can't join your own section.", flash[:alert]
   end
@@ -103,7 +103,7 @@ class FollowersControllerTest < ActionController::TestCase
                         password: "apassword",
                         gender: 'F',
                         age: '13'}
-      
+
       assert_creates(User, Follower) do
         post :student_register, section_code: @chris_section.code, user: student_params
       end
@@ -127,7 +127,7 @@ class FollowersControllerTest < ActionController::TestCase
                         password: "apassword",
                         gender: 'F',
                         age: '11'}
-      
+
       assert_creates(User, Follower) do
         post :student_register, section_code: @chris_section.code, user: student_params
       end
@@ -153,7 +153,7 @@ class FollowersControllerTest < ActionController::TestCase
 
     follower = Follower.last
 
-    assert_equal @laurel_section_1, follower.section 
+    assert_equal @laurel_section_1, follower.section
     assert_equal @laurel, follower.user
     assert_equal @student, follower.student_user
 
@@ -253,7 +253,7 @@ class FollowersControllerTest < ActionController::TestCase
                       password: "apassword",
                       gender: 'F',
                       age: '13'}
-    
+
     assert_creates(User, Follower, UserScript) do
       post :student_register, section_code: @laurel_section_script.code, user: student_params
     end
@@ -277,4 +277,3 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal @laurel_section_script.script, @student.primary_script
   end
 end
-

@@ -1,6 +1,8 @@
-#petitionblock.greybox{style: " background-image: url('/images/petition_background.jpg');   /*height:300px; padding-top:50px; margin-top:0px; padding-left: 200px; padding-right:200px*/ margin-bottom:10px"}
 
-  #petition_message{:style=>"font-size: 21px; line-height:28px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t:petition_message
+
+#petitionblock.greybox{style: "/* background-color:rgb(231, 232, 234); */  background-color:white; padding: 10px 20px 10px 20px; color: rgb(91,103,112)"}
+
+  #petition_message{:style=>"font-size: 22px; line-height:28px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t:petition_message
 
   #form.container_responsive{style: "display:none"}
     #petition_sign_message.desktop-feature{:style=>"font-size: 18px; line-height:20px; font-weight:400; margin-top:10px"}=I18n.t(:petition_sign_message).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
@@ -14,26 +16,26 @@
 
       #fields
         .col-18
-          %input#name.grey_input{:name=>"name_s", :placeholder=>I18n.t(:name), :type=>'text', :style=>'width: 160px; height: 34px; margin-bottom:10px'}
+          %input#name.grey_input{:name=>"name_s", :placeholder=>I18n.t(:name), :type=>'text', :style=>'width: 160px; height: 34px; margin-bottom:10px; background-color: rgb(82, 82, 82); color: rgb(173,173,173)'}
         .col-18
-          %input#email.grey_input{:name=>"email_s", :placeholder=>I18n.t(:email), :type=>'email', :style=>'width: 160px; height: 34px; margin-bottom:10px'}
-          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; color: rgb(220,220,220); text-align: left; margin-left: 10px; margin-top:-5px'}=I18n.t :used_infrequent_updates
+          %input#email.grey_input{:name=>"email_s", :placeholder=>I18n.t(:email), :type=>'email', :style=>'width: 160px; height: 34px; margin-bottom:10px; background-color: rgb(82, 82, 82); color: rgb(173,173,173)'}
+          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; color: rgb(91,103,112); text-align: left; margin-left: 10px; margin-top:-5px'}=I18n.t :used_infrequent_updates
         .col-18
-          %input#zip_code_or_country.grey_input{:name=>"zip_code_or_country_s", :placeholder=>I18n.t(:zipcode), :type=>'text', :style=>'width: 160px; height: 34px; margin-bottom:10px'}
-          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; color: rgb(220,220,220); text-align: left; margin-left: 10px; margin-top:-5px'}=I18n.t :enter_country
+          %input#zip_code_or_country.grey_input{:name=>"zip_code_or_country_s", :placeholder=>I18n.t(:zipcode), :type=>'text', :style=>'width: 160px; height: 34px; margin-bottom:10px; background-color: rgb(82, 82, 82); color: rgb(173,173,173)'}
+          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; color: rgb(91,103,112); text-align: left; margin-left: 10px; margin-top:-5px'}=I18n.t :enter_country
         .col-18
           %span
             =I18n.t :petition_age
-            %select.dropdown{:name=>"age_i", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px'}
+            %select.dropdown{:name=>"age_i", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px; background-color: rgb(82, 82, 82); color: rgb(173,173,173); -webkit-appearance:none; padding-left:5px'}
               %option{value:0}= '-'
               -(1..100).each do |age|
                 %option{value:age}= age
-          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; color: rgb(220,220,220); text-align: left; margin-left: 15px; margin-top:-5px'}
-            %a{href: '/privacy'}= I18n.t :privacy_practices_children
+          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; text-align: left; margin-left: 15px; margin-top:-5px'}
+            %a{href: '/privacy', style: "color: rgb(91,103,112)"}= I18n.t :privacy_practices_children
         .col-18
           %span
             =I18n.t :i_am_a
-            %select.dropdown{:name=>"role_s", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px'}
+            %select.dropdown{:name=>"role_s", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px; background-color: rgb(82, 82, 82); color: rgb(173,173,173); -webkit-appearance:none; padding-left:5px'}
               %option{:value=>"other"}=I18n.t :participant_select
               %option{:value=>"student"}=I18n.t :participant_student
               %option{:value=>"parent"}=I18n.t :participant_parent
@@ -52,17 +54,28 @@
   %div{style: "clear:both"}
   .container_responsive{style: "margin-top:10px"}
     #threedivs{style: "text-align:center"}
-      %span#signpetitionclick{style: "cursor: pointer; font-weight:bold; padding-right:40px; vertical-align: 5px;", onclick: "expandPetition();"}
-        Sign our petition &#x25BE;
+      %div#signpetitionclick{style: "display:inline-block; vertical-align:top; cursor: pointer; font-weight:bold; padding-right:40px; vertical-align: 5px;"}
+        %button{onclick: "expandPetition();", style: "margin-bottom:5px"}
+          -if request.language  == 'en'
+            = I18n.t :homepage_signpetition_dropdown
+          -else
+            = I18n.t :hoc2014_support
 
-      -# TODO: Need to generate this with corect appId!
-      %span
-        <iframe style="width:80px; height:20px;" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fcodeorg&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=744615728903015" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+      -#%span
+        <iframe style="width:80px; height:20px;" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fcodeorg&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=1560940110839035" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
 
-      %span
+      %div{style: "display:inline-block; vertical-align:top; padding-right:40px; overflow:hidden"}
+        <div class="fb-like" data-href="https://www.facebook.com/Code.org" data-width="80" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+
+      %div{style: "display:inline-block; vertical-align:top;"}
         <a href="https://twitter.com/codeorg" class="twitter-follow-button" data-show-count="false">Follow @codeorg</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
+-# = request.env.inspect.to_json
+
+
 :javascript
+
+  var petitionClickReported = false;
 
   function expandPetition()
   {
@@ -132,5 +145,56 @@
       data: $('#petition_form').serialize()
     }).done(this.processResponse).fail(this.processError);
 
+    // Let's just try to report a petition click once.
+    if (! petitionClickReported) {
+
+      if (console && console.log)
+        console.log("Recording petition click", "#{request.path}");
+
+      ga('send', 'event', 'petition', 'click', {'page': "#{request.path}"});   
+      petitionClickReported = true;
+    }
+
     return false;
   }
+
+  $(document).ready()
+  {
+    petition = new Petition();
+  }
+  
+
+:javascript
+  function trackFacebook(opt_pagePath) {
+    try {
+      if (FB && FB.Event && FB.Event.subscribe) {
+        FB.Event.subscribe('edge.create', function(targetUrl) {
+          if (console && console.log)
+            console.log("Recording facebook like", "http://#{request.host + request.path}");
+          ga('send', 'social', 'facebook', 'like', "http://#{request.host + request.path}");
+          ga('send','event','button','click',{eventLabel:'facebook_like'});
+        });
+      }
+    } catch(e) {}
+  };
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1560940110839035',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+
+    // Send back some analytics.
+    trackFacebook();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+ 

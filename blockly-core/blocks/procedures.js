@@ -29,9 +29,12 @@ goog.require('Blockly.Blocks');
 
 
 Blockly.Blocks.procedures_defnoreturn = {
+  shouldHideIfInMainBlockSpace: function () {
+    return Blockly.useModalFunctionEditor;
+  },
   // Define a procedure with no return value.
   init: function() {
-    var showParamEditIcon = !Blockly.disableParamEditing;
+    var showParamEditIcon = !Blockly.disableParamEditing && !Blockly.useModalFunctionEditor;
 
     this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);
     this.setHSV(94, 0.84, 0.60);
@@ -247,10 +250,16 @@ Blockly.Blocks.procedures_defnoreturn = {
     }
   },
   userCreated: false,
+  shouldBeGrayedOut: function () {
+    return false;
+  },
   callType_: 'procedures_callnoreturn'
 };
 
 Blockly.Blocks.procedures_defreturn = {
+  shouldHideIfInMainBlockSpace: function () {
+    return Blockly.useModalFunctionEditor;
+  },
   // Define a procedure with a return value.
   init: function() {
     this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFRETURN_HELPURL);
@@ -295,6 +304,7 @@ Blockly.Blocks.procedures_defreturn = {
   renameVar: Blockly.Blocks.procedures_defnoreturn.renameVar,
   customContextMenu: Blockly.Blocks.procedures_defnoreturn.customContextMenu,
   userCreated: Blockly.Blocks.procedures_defnoreturn.userCreated,
+  shouldBeGrayedOut: Blockly.Blocks.procedures_defnoreturn.shouldBeGrayedOut,
   callType_: 'procedures_callreturn'
 };
 
@@ -354,12 +364,9 @@ Blockly.Blocks.procedures_callnoreturn = {
     this.parameterIDsToArgumentConnections = null;
     this.currentParameterIDs = null;
   },
-  openEditor: function(e) {
+  openEditor: function (e) {
     e.stopPropagation();
-    var functionName = this.getTitleValue('NAME');
-    this.blockSpace.blockSpaceEditor.hideChaff();
-    Blockly.functionEditor.hideIfOpen();
-    Blockly.functionEditor.openAndEditFunction(functionName);
+    Blockly.functionEditor.openEditorForCallBlock_(this);
   },
   getCallName: function() {
     return this.getTitleValue('NAME');
@@ -541,7 +548,7 @@ Blockly.Blocks.procedures_ifreturn = {
     this.setHelpUrl('http://c2.com/cgi/wiki?GuardClause');
     this.setHSV(94, 0.84, 0.60);
     this.appendValueInput('CONDITION')
-        .setCheck('Boolean')
+        .setCheck(Blockly.BlockValueType.BOOLEAN)
         .appendTitle(Blockly.Msg.CONTROLS_IF_MSG_IF);
     this.appendValueInput('VALUE')
         .appendTitle(Blockly.Msg.PROCEDURES_DEFRETURN_RETURN);

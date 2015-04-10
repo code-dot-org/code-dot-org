@@ -8,14 +8,24 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Write a function called 'half' that takes a number 'x' and returns half that number. Once you've written the function, use it to calculate half(20)",
+    "instructions": "Write a function called 'half' that takes a number 'x' and returns half that number. Once you've written the function, use it to calculate half(21)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
-  }
+    "free_play": "false",
+    "default_num_example_blocks": "0",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "input_output_table": "[[2,1],[4,2],[21,10.5],[32.5,16.25]]"
+  },
+  "md5": "211daeab961c5e27fa4710b5b0a350a9"
 }]]></config>
   <blocks>
     <toolbox_blocks>

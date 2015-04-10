@@ -32,18 +32,13 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "show should redirect to flappy" do
-    get :show, id: Script::FLAPPY_ID
-    assert_redirected_to "/s/flappy"
-  end
-
   test "should get show of hoc" do
-    get :show, id: Script::HOC_ID
+    get :show, id: Script::HOC_NAME
     assert_response :success
   end
 
   test "should get show of k-8" do
-    get :show, id: Script::TWENTY_HOUR_ID
+    get :show, id: Script::TWENTY_HOUR_NAME
     assert_response :success
   end
 
@@ -70,14 +65,14 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should get show if not signed in" do
     sign_out @admin
-    get :show, id: Script::FLAPPY_ID
-    assert_redirected_to "/s/flappy"
+    get :show, id: Script::FLAPPY_NAME
+    assert_response :success
   end
 
   test "should get show if not admin" do
     sign_in @not_admin
-    get :show, id: Script::FLAPPY_ID
-    assert_redirected_to "/s/flappy"
+    get :show, id: Script::FLAPPY_NAME
+    assert_response :success
   end
 
   test "should use script name as param where script name is words but looks like a number" do
@@ -129,5 +124,18 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_equal script, assigns(:script)
     assert assigns(:script_file)
+  end
+
+  # These two tests are the only remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in
+  # production. On a fresh db the only guarantee that '20-hour.script' has id:1 is by manually specifying ID in the DSL.
+
+  test "should redirect old k-8" do
+    get :show, id: 1
+    assert_redirected_to script_path(Script.twenty_hour_script)
+  end
+
+  test "show should redirect to flappy" do
+    get :show, id: 6
+    assert_redirected_to "/s/flappy"
   end
 end

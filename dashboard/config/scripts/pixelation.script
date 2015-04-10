@@ -3,5 +3,10 @@ description "Create images with bits and bytes."
 
 stage 'Pixelation'
 level 'Pixelation 1'
+level 'Pixelation 4x4 Empty'
 level 'Pixelation 2'
-level 'Pixelation 3'
+level 'Code Logo v3'
+level 'Pixelation 3 Bit Colors'
+level 'Mixing Colors'
+level 'Pixelation Flappy'
+level 'Pixelation Bee'

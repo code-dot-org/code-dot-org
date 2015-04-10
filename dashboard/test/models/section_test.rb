@@ -3,7 +3,7 @@ require 'test_helper'
 class SectionTest < ActiveSupport::TestCase
   test "do not attempt to create sections with duplicate random codes" do
     teacher = create(:teacher)
-    
+
     srand 1
     s1 = Section.create!(user: teacher, name: "section 1")
 
@@ -52,7 +52,7 @@ class SectionTest < ActiveSupport::TestCase
   test "cannot destroy section with students" do
     teacher = create(:teacher)
     follower = create(:follower, user: teacher)
-    
+
     section = follower.section
 
     assert !section.destroy
@@ -61,7 +61,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test "can destroy section without students" do
     section = create(:section)
-    
+
     assert section.destroy
 
     assert !Section.exists?(section.id)

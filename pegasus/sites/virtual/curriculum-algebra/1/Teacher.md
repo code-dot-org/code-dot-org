@@ -4,15 +4,12 @@ view: page_curriculum
 theme: none
 ---
 
+<%
+lesson_id = 'alg1'
+lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
+%>
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'Video Games and Coordinate Planes',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>'30-60') %>
-
-[content]
-
-[together]
-
-## Lesson Overview
-Students discuss the components of their favorite video games, and discover that they can be reduced to a series of coordinates. They then explore coordinates in Cartesian space, and identify the coordinates for the characters in a game at various points in time. Once they are comfortable with coordinates, they brainstorm their own games and create sample coordinate lists for different points in time in their own game.
+<%= partial('../docs/_header', :lesson => lesson) %>
 
 [summary]
 
@@ -24,31 +21,27 @@ Students discuss the components of their favorite video games, and discover that
 
 ### **Activity: Video Games and the Coordinate Plane**
 
-3) [Dissecting a Demo](#Activity1)<br/>
+3) [Reverse Engineer a Demo](#Activity1)<br/>
 4) [Coordinate Planes](#Activity2)  
 
 ### **Wrap-up**
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Brainstorming a Game](#WrapUp)  
 
+<!--
 ### **Assessment**
 6) [Coordinate Plane Assessment](#Assessment)
+-->
 
 [/summary]
-
-## Lesson Objectives 
-### Students will:
-- Create a data model that describes a simple videogame
-- Describe the movements of videogame characters by their change in coordinates
-
-[/together]
 
 [together]
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
-- Blank sheet of paper
+- [Reverse Engineering Table](../docs/worksheets/reverse_engineering.pdf) (in the student workbook)
+- [Videogame Design Template](../docs/worksheets/game_planning.pdf) (in the student workbook)
 
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1DF3XNkI4yellzRJL8ItqZU546UT9BaXWeKY7AmI0gsc/)
@@ -61,25 +54,24 @@ Students discuss the components of their favorite video games, and discover that
 
 ## Getting Started
 
-
 ### <a name="Vocab"></a> 1) Vocabulary
 This lesson has three new and important words:<br/>
 
 - **Apply** - use a given function on some inputs
-- **Arguments** - the inputs to a function; expressions for arguments follow the name of a function
-- **Programming Language** - a set of rules for writing code that a computer can evaluate
+- **Reverse Engineer** - to extract knowledge or design information from an existing product
+- **Sprite** - a graphic character on the screen.  Sometimes called a bitmap or an image.
 
 ### <a name="GetStarted"></a> 2) Learning a Language
-Welcome to Code.org CS in Algebra! In this course, you’ll be learning a new programming language - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you’ll have to learn. Fortunately, the language you’ll be using here has a lot in common with simple math that you already know!
+Welcome to Code.org CS in Algebra! In this course you’ll be learning a new programming language - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you’ll have to learn. Fortunately, the language you’ll be using here has a lot in common with the simple math that you already know!
 
-_Connect the material that’s to come with things students already know:_
+_Connect this material with things students already know:_
 
 - What makes a language?
 - Does anyone speak a second (or third) language? Do you speak a different language than your parents/grandparents?
-- Are there languages that share features in common such as a common root (Romance, Germanic) or alphabet (Latin, Cyrillic, Arabic, Kanji)?
+- Are there languages that share features, such as a common root (Romance, Germanic) or a similar alphabet (Latin, Cyrillic, Arabic, Kanji)?
 - Are there languages that are designed for specific purposes or within certain constraints (sign language, Esperanto)?
 - Math is a language, just like English, Spanish, or any other language!
-  - We use nouns, like "bread", "tomato", "mustard" and "cheese" to describe physical objects. Math has values, like the numbers 1, 2 or 3, to describe quantities
+  - We use nouns, like "bread", "tomato", "mustard" and "cheese" to describe physical objects. Math has values, like the numbers 1, 2 or 3, to describe quantities.
   - We also use verbs like "toast", "slice", "spread" and "melt" to describe operations on these nouns. Mathematics has functions like addition and subtraction, which are operations performed on numbers.
   - Just as you can "slice piece of bread", a person can also "add four and five".
 
@@ -90,11 +82,11 @@ A mathematical expression is like a sentence: it’s an instruction for doing so
 [together]
 
 ## Activities:
-### <a name="Activity1"></a> 3) Dissecting a Demo
+### <a name="Activity1"></a> 3) Reverse Engineer a Demo
 
-Let’s begin by exploring a simple video game, and then figuring out how it works. Open this link to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!
+Let’s begin by exploring a simple video game, and then figuring out how it works. Open [this link](http://studio.code.org/s/algebra/stage/1/puzzle/2/) to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the up and down - try to catch the unicorn and avoid the dragon!
 
-This game is made up of characters, each of which has its own behavior. The unicorn moves from the right to the left, as does the dragon. The ninja only moves when you hit the arrow keys, and can move left, right, up and down. We can figure out how the game works by first understanding how each character works.
+This game is made up of characters, each of which has its own behavior. The unicorn moves from the left to the right, while the dragon moves in the opposite direction. The ninja only moves when you hit the arrow keys, and can move up and down. We can figure out how the game works by first understanding how each character works.
 
 **Directions:**
 
@@ -104,7 +96,7 @@ This game is made up of characters, each of which has its own behavior. The unic
 
 > 3) As students demo the game, ask them to fill in the "Thing in the game..." column with every object they see in the game.
 
-> 4)  Discuss whith the whole group which things they came up with. All for characters? Background? Score?
+> 4)  Discuss with the whole group which things they came up with. Characters? Background? Score?
 
 > 5)  Next, for each of the things in the game, fill in the column describing what changes. Size? Movement? Value?
 
@@ -114,7 +106,7 @@ This game is made up of characters, each of which has its own behavior. The unic
 ### <a name="Activity2"></a> 4) Coordinate Planes
 
 <img src="number_line.png" style="float:right; width: 200px; padding: 0 0 10px 10px"/>
-Computers use numbers to represent a character’s position on screen, using number lines as rulers to measure the distance from the bottom-left corner of the screen. For our video game, we will place the number line so that the screen runs from 0 (on the left) to 400 (on the right). We can take the image of the Dragon, stick it anywhere on the line, and measure the distance back to the lefthand edge. Anyone else who knows about our number line will be able to duplicate the exact position of the Dragon, knowing only the number. What is the coordinate of the Dragon on the righthand side of the screen? The center? What coordinate would place the Dragon beyond the lefthand edge of the screen?
+Computers use numbers to represent a character’s position on screen, using number lines as rulers to measure the distance from the bottom-left corner of the screen. For our video game, we will place the number line so that the screen runs from 0 (on the left) to 400 (on the right). We can take the image of the Dragon, stick it anywhere on the line, and measure the distance back to the left hand edge. Anyone else who knows about our number line will be able to duplicate the exact position of the Dragon, knowing only the number. What is the coordinate of the Dragon on the right hand side of the screen? The center? What coordinate would place the Dragon beyond the left hand edge of the screen?
 
 [tip]
 
@@ -132,8 +124,10 @@ A coordinate represents a single point, and an image is (by definition) many poi
 When we write down these coordinates, we always put the x before the y (just like in the alphabet!). Most of the time, you’ll see coordinates written like this: (200, 50) meaning that the x-coordinate is 200 and the y-coordinate is 50.
 
 Depending on how a character moves, their position might change only along the x-axis, only along the y-axis, or both. Look back to the table you made. Can the Ninja move up and down in the game? Can he move left and right? So what’s changing: his x-coordinate, his y-coordinate, or both? What about the clouds? Do they move up and down? Left and right? Both?
+
+OPTIONAL ACTIVITY:  Depending on timing and the background of your students, having one student place a character on a large graph and another student stating the coordinates is excellent practice.  Students often need extra practice remembering which coordinate comes first.  Coordinates do not have to be exact but they should be in the correct order.  Extending this to all four quadrants to include negative numbers is also excellent practice.
  
-Fill in the rest of the table, identifying what is changing for each of your characters.
+Fill in the rest of the reverse-engineering table, identifying what is changing for each of your characters.
 
 [/together]
 
@@ -142,8 +136,8 @@ Fill in the rest of the table, identifying what is changing for each of your cha
 ## Wrap-up
 ### <a name="WrapUp"></a> 5) Brainstorming for a Game
 
-Use the [game planning template](needatemplate.pdf) for you to make your own game. Just like we made a list of everything in the Ninja game, we’re going to start with a list of everything in your game.
-To start, your game will have with four things in it:
+Use the [game planning template](../docs/worksheets/game_planning.pdf) to make your own game. Just like we made a list of everything in the Ninja game, we’re going to start with a list of everything in your game.
+To start, your game will have four things in it:
 
 - A Background, such as a forest, a city, space, etc.
 - A Player, who can move when the user hits a key.
@@ -162,45 +156,13 @@ The structure of your students' games will very closely resemble the demo they'v
 
 [together]
 
+<!--
 ## Assessment
 ### <a name="Assessment"></a>6) Video Games and Coordinate Planes Assessment
 
-Visit [MSM Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
+-->
 
 [/together]
 
-[standards]
-
-<details>
-<summary>Standards Alignment</summary>
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 4. Model with mathematics.
-- 5. Use appropriate tools strategically.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
-
-### Common Core Math Standards
-
-- 5.G.1-2: Graph points on the coordinate plane to solve real-world and mathematical problems.
-- 5.OA.1-2: Write and interpret numerical expressions.
-- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
-- N-Q: The student reasons quantitatively in using units to solve problems.
-
-### CSTA K-12 Computer Science Standards
-
-- L2:CT:6: Describe and analyze a sequence of instructions being followed 
-
-
-</details>
-
-[/standards]
-
-[/content]
-
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<%= partial('../docs/_footer', :lesson => lesson) %>

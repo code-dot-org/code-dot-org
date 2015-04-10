@@ -1,0 +1,36 @@
+<% if (tagName) { %>
+<table>
+  <tr>
+    <th>name</th>
+    <th>value</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td><input id="design-property-id" value="<%= props.id %>"></td>
+  </tr>
+  <tr>
+    <td>x position</td>
+    <td><input id="design-property-left" value="<%= props.left %>"></td>
+  </tr>
+  <tr>
+    <td>y position</td>
+    <td><input id="design-property-top" value="<%= props.top %>"></td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td><input id="design-property-width" value="<%= props.width%>"></td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td><input id="design-property-height" value="<%= props.height %>"></td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td><input id="design-property-text" value="<%= props.text %>"></td>
+  </tr>
+</table>
+<button id="savePropertiesButton" class="share">Save</button>
+<button id="deletePropertiesButton" class="share">Delete</button>
+<% } else { %>
+  Click on an element to edit its properties.
+<% } %>

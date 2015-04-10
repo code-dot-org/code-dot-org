@@ -17,7 +17,7 @@
 .field
   = f.label :custom_game_type, 'Custom game type'
   %p Used to tell playlab we want to run some of our custom onTick logic.
-  = f.select :custom_game_type, options_for_select(["", "Big Game"], @level.custom_game_type)
+  = f.select :custom_game_type, options_for_select(["", "Big Game", "Rocket Height", "Sam the Bat"], @level.custom_game_type)
 .field
   = f.label :success_condition, 'Success condition'
   %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately succeeds.
@@ -47,9 +47,6 @@
 .field
   = f.label :sprites_hidden_to_start, 'Sprites hidden to start'
   = boolean_check_box f, :sprites_hidden_to_start
-.field
-  = f.label :coordinate_grid_background, 'Coordinate grid background'
-  = boolean_check_box f, :coordinate_grid_background
 .field
   = f.label :generate_function_pass_blocks, 'Generate function pass blocks'
   %p If set, this custom functions will get both a call and a pass block

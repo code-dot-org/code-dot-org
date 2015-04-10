@@ -8,6 +8,7 @@
     "skin": "artist",
     "instructions": "Draw something awesome! Your code is saved as a project that you can return to at any time.",
     "is_k1": "false",
+    "is_project_level": "true",
     "skip_instructions_popup": "true",
     "slider_speed": "0.9",
     "disable_param_editing": "false",
@@ -15,14 +16,21 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "start_direction": "90",
-    "x": "150",
-    "y": "250",
+    "x": "200",
+    "y": "200",
     "free_play": "true",
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"New Artist Project_callout1\",\"callout_text\":\"Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program\",\"element_id\":\"#when_run\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":-125,\"y\":100},\"my\":\"left center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"New Artist Project_callout2\",\"callout_text\":\"Hit \\\"Run\\\" to try your program\",\"element_id\":\"#runButton\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":15,\"y\":null},\"my\":\"bottom left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]"
-  }
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"New Artist Project_callout1\",\r\n  \"callout_text\": \"Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program\",\r\n  \"element_id\": \"#when_run\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": -125,\r\n     \"y\": 100\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"New Artist Project_callout2\",\r\n  \"callout_text\": \"Hit \\\"Run\\\" to save and run your program\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": 15,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top left\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false"
+  },
+  "md5": "f702681e02eb04651e39498e455f4ba5"
 }]]></config>
   <blocks>
     <start_blocks>

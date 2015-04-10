@@ -10,12 +10,18 @@ class LevelsControllerTest < ActionController::TestCase
     @program = '<hey/>'
 
     @not_admin = create(:user)
+    # Most tests in levels controller assume we're working within the 'levelbuilder' environment.
+    # Run 'unset_levelbuiler_env' for a levels controller test in the normal 'test' environment.
     Rails.env = 'levelbuilder'
     # Prevent custom levels from being written out to files when emulating 'levelbuilder' environment in this test class
     ENV['FORCE_CUSTOM_LEVELS'] = '1'
   end
 
   teardown do
+    unset_levelbuilder_env
+  end
+
+  def unset_levelbuilder_env
     Rails.env = "test"
     ENV.delete 'FORCE_CUSTOM_LEVELS'
   end
@@ -52,7 +58,7 @@ class LevelsControllerTest < ActionController::TestCase
     level_4 = create(:level, user: @user, name: "Z10")
     level_5 = create(:level, user: @user, name: "Z2")
 
-    get :new, game_id: @level.game, type: "Maze"
+    get :new, game_id: @level.game
 
     assert_equal [level_2, level_1, level_3, level_5, level_4], assigns(:levels)
   end
@@ -174,13 +180,13 @@ class LevelsControllerTest < ActionController::TestCase
     begin
       post :create, :level => { :name => level_name, :type => 'Artist' }, :game_id => Game.find_by_name("Custom").id, :program => @program
       level = Level.find_by(name: level_name)
-      file_path = Level.level_file_path(level.name)
+      file_path = LevelLoader.level_file_path(level.name)
       assert_equal true, file_path && File.exist?(file_path)
       delete :destroy, id: level
       assert_equal false, file_path && File.exist?(file_path)
     ensure
       ENV['FORCE_CUSTOM_LEVELS'] = old_env
-      file_path = Level.level_file_path(level_name)
+      file_path = LevelLoader.level_file_path(level_name)
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
@@ -423,13 +429,13 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("Custom")
     old = create(:level, game_id: game.id, name: "Fun Level")
     assert_difference('Level.count') do
-      post :clone, level_id: old.id
+      post :clone, level_id: old.id, name: "Fun Level (copy 1)"
     end
 
     new_level = assigns(:level)
     assert_equal new_level.game, old.game
     assert_equal new_level.name, "Fun Level (copy 1)"
-    assert_redirected_to "/levels/#{new_level.id}/edit"
+    assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
   end
 
   test 'cannot update level name with just a case change' do
@@ -472,29 +478,68 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'different name', level.name
   end
 
-  test 'can show embed level when not signed in' do
-    level = create(:artist)
-    sign_out(@user)
+  test 'can show level when not signed in' do
+    unset_levelbuilder_env
+
+    level = create :artist
+    sign_out @user
+
+    get :edit, id: level
+    assert_response :redirect
 
     get :show, id: level
-    assert_response :redirect
+    assert_response :success
+  end
 
-    get :edit, id: level, embed:true
-    assert_response :redirect
+  test 'can show embed level when not signed in' do
+    unset_levelbuilder_env
 
-    get :show, id: level, embed:true
+    level = create :artist
+    sign_out @user
+
+    get :embed_level, level_id: level
     assert_response :success
   end
 
   test 'can show embed blocks when not signed in' do
-    level = create(:artist)
-    sign_out(@user)
+    unset_levelbuilder_env
 
-    get :show, id: level
-    assert_response :redirect
+    level = create :artist
+    sign_out @user
 
     get :embed_blocks, level_id: level, block_type: :solution_blocks
     assert_response :success
   end
 
+  test 'artist project level has sharing meta tags' do
+    get :show, key: 'New Artist Project'
+
+    assert_response :success
+    assert_sharing_meta_tags(url: 'http://test.host/p/artist',
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 500,
+                            image_height: 261)
+  end
+
+  test 'applab project level has sharing meta tags' do
+    get :show, key: 'New App Lab Project'
+
+    assert_response :success
+    assert_sharing_meta_tags(url: 'http://test.host/p/applab',
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 400,
+                            image_height: 400,
+                            apple_mobile_web_app: true)
+  end
+
+  test 'playlab project level has sharing meta tags' do
+    get :show, key: 'New Play Lab Project'
+
+    assert_response :success
+    assert_sharing_meta_tags(url: 'http://test.host/p/playlab',
+                            image: 'http://test.host/assets/sharing_drawing.png',
+                            image_width: 400,
+                            image_height: 400,
+                            apple_mobile_web_app: true)
+  end
 end

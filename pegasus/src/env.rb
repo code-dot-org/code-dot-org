@@ -5,6 +5,7 @@ require 'i18n/backend/fallbacks'
 require 'logger'
 require 'bcrypt'
 require 'chronic'
+require 'nokogiri'
 
 def slog(h)
   CDO.slog ({ application: :pegasus }).merge(h)
@@ -27,7 +28,7 @@ def src_dir(*paths)
 end
 
 module Pegasus
-  
+
   def self.logger()
     @@logger ||= create_logger
   end
@@ -37,7 +38,7 @@ module Pegasus
     logger ||= Logger.new pegasus_dir('log', "#{rack_env}.log")
 
     logger.level = Logger::INFO if rack_env?(:production)
-    
+
     logger
   end
 end

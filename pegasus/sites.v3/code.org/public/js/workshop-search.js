@@ -5,7 +5,6 @@ var gmap,
 $(document).ready(function() {
   initializeMap();
   loadWorkshops();
-  addGeocomplete();
 });
 
 function initializeMap() {
@@ -57,7 +56,7 @@ function loadWorkshops() {
         }
       }
     });
-  }).fail(displayQueryError);
+  }).done(addGeocomplete).fail(displayQueryError);
 }
 
 function compileHtml(workshop, first) {
@@ -105,7 +104,7 @@ function addGeocomplete() {
       var bounds = gmap.getBounds();
       var marker_found = false;
 
-      while (!marker_found) {
+      while (!marker_found && gmap.getZoom() > 4) {
         $.each(markers, function(index, marker) {
           if( bounds.contains(marker.getPosition()) ){
             marker_found = true;

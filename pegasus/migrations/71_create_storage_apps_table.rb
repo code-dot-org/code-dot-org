@@ -4,7 +4,7 @@ Sequel.migration do
       primary_key :id, unsigned:true, null:false
       foreign_key :storage_id, index:true
       Text :value
-      
+
       DateTime :updated_at, null:false
       String :updated_ip, size:39, null:false
     end
