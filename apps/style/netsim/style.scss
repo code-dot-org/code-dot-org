@@ -1,21 +1,14 @@
 $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
-$white: #ffffff;
-$whitesmoke: #f5f5f5;
-$medium-gray: #ddd;
-$dark-gray: #a9a9a9;
-$black: #000000;
-$red: #ff0000;
-$code-org-pacific-blue: #00adbc;
-$code-org-purple: #7665a0;
-$code-org-web-orange: #ffa400;
-$own-node-background-color: white;
-$user-row-hover-color: #e0ffff;
-$router-row-hover-color: rgba(255, 140, 0, 0.21);
-$to-address-color: rgba(255, 233, 238, 0.85);
-$from-address-color: lightcyan;
-$packet-info-color: rgba(212, 238, 212, 0.90);
-$message-color: white;
+@import 'color';
+
+$own-node-background-color: $white;
+$user-row-hover-color: $lightest_teal;
+$router-row-hover-color: $lighter_orange;
+$to-address-color: $lightest_cyan;
+$from-address-color: $lightest_yellow;
+$packet-info-color: $lighter_green;
+$message-color: $white;
 
 // For aligning table columns across panels
 $narrow-column-width: 50px;
@@ -74,7 +67,7 @@ svg {
   
   .router-node {
     circle {
-      fill: $code-org-web-orange;
+      fill: $orange;
     }
   }
   
@@ -169,7 +162,7 @@ svg {
   // Orange SPAN button
   .netsim-button {
     display: inline-block;
-    background-color: $code-org-web-orange;
+    background-color: $orange;
     color: $white;
     border-radius: 3px;
     font-family: "Gotham 4r", sans-serif;
@@ -246,14 +239,14 @@ svg {
 
     .empty-row {
       text-align: center;
-      color: $medium-gray;
+      color: $lightest_gray;
       font-style: italic;
     }
 
     .selectable-row {
       cursor: pointer;
       &:hover {
-        border-left: solid $code-org-web-orange 3px;
+        border-left: solid $orange 3px;
       }
     }
 
@@ -278,7 +271,7 @@ svg {
 
 
     .selected-row {
-      background-color: $code-org-web-orange !important;
+      background-color: $orange !important;
       color: white !important;
       font-weight: bold;
     }
@@ -303,8 +296,8 @@ svg {
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
-      background-color: $code-org-purple;
-      color: $whitesmoke;
+      background-color: $purple;
+      color: $white;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
       .panel_controls {
@@ -318,7 +311,7 @@ svg {
       border-left: solid darkgray thin;
       border-right: solid darkgray thin;
       border-bottom: solid darkgray thin;
-      border-top: solid $code-org-purple thin;
+      border-top: solid $purple thin;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
     }
 
@@ -346,10 +339,10 @@ svg {
       padding: 5px;
       border: solid darkgray thin;
       border-radius: 3px;
-      background-color: $medium-gray;
+      background-color: $lightest_gray;
 
       td {
-        border-color: $medium-gray;
+        border-color: $lightest_gray;
       }
     }
 
@@ -424,7 +417,7 @@ svg {
 
     .netsim-packet {
       border: solid darkgray thin;
-      background-color: $medium-gray;
+      background-color: $lightest_gray;
       margin: 10px;
       padding: 0.5em;
       border-radius: 0.5em;
@@ -456,12 +449,12 @@ svg {
       }
 
       .watermark {
-        color: $medium-gray;
+        color: $lightest_gray;
       }
 
       .bit-counter {
         text-align: right;
-        color: $dark-gray;
+        color: $light_gray;
         &.oversized {
           color: $red;
         }
@@ -626,7 +619,7 @@ svg {
 
     // Modify actual tabs at top of tab area
     .ui-tabs-nav {
-      background: $code-org-purple;
+      background: $purple;
       border-left: none;
       border-right: none;
       border-top: none;
@@ -699,7 +692,7 @@ svg {
 
     tr.dns-node {
       color: $white;
-      background-color: $code-org-web-orange;
+      background-color: $orange;
     }
   }
 
