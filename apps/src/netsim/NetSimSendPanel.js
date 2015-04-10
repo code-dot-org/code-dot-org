@@ -19,7 +19,9 @@ var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
-var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
+var netsimConstants = require('./netsimConstants');
+var MessageGranularity = netsimConstants.MessageGranularity;
+var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
 /**
  * Generator and controller for message sending view.
@@ -101,10 +103,13 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
    * @private
    */
   this.packetSizeControl_ = null;
-  
+
+  var panelTitle = (levelConfig.messageGranularity === MessageGranularity.PACKET) ?
+      i18n.sendAMessage() : i18n.sendBits();
+
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-send-panel',
-    panelTitle: i18n.sendAMessage()
+    panelTitle: panelTitle
   });
 };
 NetSimSendPanel.inherits(NetSimPanel);
