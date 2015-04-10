@@ -45,10 +45,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="string_append" inline="false"/>
         <block type="functional_string">
           <title name="VAL"/>
         </block>
-        <block type="string_append" inline="false"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

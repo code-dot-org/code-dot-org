@@ -3,9 +3,11 @@
   "game_id": 29,
   "created_at": "2014-11-26T22:42:18.000Z",
   "properties": {
-    "title": "Video game Coordinates",
-    "content1": "Ninjacat Demo Embed.level",
-    "markdown": "### Which of these statements describes the unicorn's movements in the **most precise way**?\n",
+    "questions": [
+      {
+        "text": "Which of these statements describes the unicorn's movements in the most precise way?"
+      }
+    ],
     "answers": [
       {
         "text": "The unicorn moves across the screen",
@@ -23,7 +25,9 @@
         "text": "The unicorn's x value decreases",
         "correct": true
       }
-    ]
+    ],
+    "title": "Video game Coordinates",
+    "content1": "Ninjacat Demo Embed.level"
   },
   "md5": "6c6ba5b2e84c12b179220a6a494563f6"
 }]]></config>
