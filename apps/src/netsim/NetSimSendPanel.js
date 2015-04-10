@@ -128,7 +128,7 @@ NetSimSendPanel.prototype.render = function () {
   // Add packet size slider control
   if (this.levelConfig_.showPacketSizeControl) {
     this.packetSizeControl_ = new NetSimPacketSizeControl(
-        this.rootDiv_.find('.packet_size'),
+        this.rootDiv_.find('.packet-size'),
         this.packetSizeChangeCallback_.bind(this),
         {
           minimumPacketSize: Packet.Encoder.getHeaderLength(this.packetSpec_),
@@ -140,10 +140,10 @@ NetSimSendPanel.prototype.render = function () {
   // Bind useful elements and add handlers
   this.packetsDiv_ = this.getBody().find('.send-widget-packets');
   this.getBody()
-      .find('#add_packet_button')
+      .find('#add-packet-button')
       .click(this.addPacket_.bind(this));
   this.getBody()
-      .find('#send_button')
+      .find('#send-button')
       .click(this.onSendButtonPress_.bind(this));
   this.getBody()
       .find('#set-wire-button')
