@@ -184,7 +184,7 @@ NetSimShardCleaner.prototype.tick = function (clock) {
 NetSimShardCleaner.prototype.cleanShard = function () {
   this.getCleaningLock(function (err) {
     if (err) {
-      logger.warn(err.message);
+      logger.warn("Failed to get cleaning lock: " + err.message);
       return;
     }
 
@@ -365,6 +365,7 @@ DestroyEntity.inherits(Command);
 DestroyEntity.prototype.onBegin_ = function () {
   this.entity_.destroy(function (err) {
     if (err) {
+      logger.warn("Failed to destroy entity: " + err.message);
       this.fail();
       return;
     }
