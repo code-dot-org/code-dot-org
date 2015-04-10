@@ -19,9 +19,14 @@ var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
+var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
+
+var EncodingType = netsimConstants.EncodingType;
 var MessageGranularity = netsimConstants.MessageGranularity;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+
+var binaryToAB = dataConverters.binaryToAB;
 
 /**
  * Generator and controller for message sending view.
@@ -184,7 +189,8 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     maxPacketSize: this.maxPacketSize_,
     chunkSize: this.chunkSize_,
     enabledEncodings: this.enabledEncodings_,
-    removePacketCallback: this.removePacket_.bind(this)
+    removePacketCallback: this.removePacket_.bind(this),
+    contentChangeCallback: this.onContentChange_.bind(this)
   });
 
   // Attach the new packet to this SendPanel
@@ -230,6 +236,39 @@ NetSimSendPanel.prototype.resetPackets_ = function () {
 };
 
 /**
+ * When any packet editor's binary content changes, we may want
+ * to update UI wrapper elements (like the "set next bit" button)
+ * in response
+ * @private
+ */
+NetSimSendPanel.prototype.onContentChange_ = function () {
+  var nextBit = this.getNextBit_();
+
+  // Special case: If we have the "A/B" encoding enabled but _not_ "Binary",
+  // format this button label using the "A/B" convention
+  if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
+      !this.isEncodingEnabled_(EncodingType.BINARY)) {
+    nextBit = binaryToAB(nextBit);
+  }
+
+  this.getBody()
+      .find('#set-wire-button')
+      .text(i18n.setWireToValue({ value: nextBit }));
+};
+
+/**
+ * Check whether the given encoding is currently displayed by the panel.
+ * @param {EncodingType} queryEncoding
+ * @returns {boolean}
+ * @private
+ */
+NetSimSendPanel.prototype.isEncodingEnabled_ = function (queryEncoding) {
+  return this.enabledEncodings_.some(function (enabledEncoding) {
+    return enabledEncoding === queryEncoding;
+  });
+};
+
+/**
  * Update from address for the panel, update all the packets to reflect this.
  * @param {number} [fromAddress] default zero
  */
@@ -267,14 +306,7 @@ NetSimSendPanel.prototype.onSendButtonPress_ = function () {
 NetSimSendPanel.prototype.onSetWireButtonPress_ = function () {
   // Find the first bit of the first packet.  Set the wire to 0/off if
   // there is no first bit.
-  var firstBit = 0;
-  if (this.packets_.length > 0) {
-    var packetBinary = this.packets_[0].getPacketBinary();
-    if (packetBinary.length > 0) {
-      firstBit = packetBinary.substr(0, 1);
-    }
-  }
-
+  var firstBit = this.getNextBit_();
   var myNode = this.netsim_.myNode;
   if (myNode) {
     this.disableEverything();
@@ -283,6 +315,16 @@ NetSimSendPanel.prototype.onSetWireButtonPress_ = function () {
       this.enableEverything();
     }.bind(this));
   }
+};
+
+/**
+ * Get the next bit that would be sent, if sending the entered message one
+ * bit at a time.
+ * @returns {string} single bit as a "0" or "1"
+ * @private
+ */
+NetSimSendPanel.prototype.getNextBit_ = function () {
+  return this.packets_.length > 0 ? this.packets_[0].getFirstBit() : '0';
 };
 
 /** Disable all controls in this panel, usually during network activity. */
@@ -319,6 +361,7 @@ NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
   this.packets_.forEach(function (packetEditor) {
     packetEditor.setEncodings(newEncodings);
   });
+  this.onContentChange_();
 };
 
 /**

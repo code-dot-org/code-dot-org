@@ -57,6 +57,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @param {number} [initialConfig.chunkSize]
  * @param {EncodingType[]} [initialConfig.enabledEncodings]
  * @param {function} initialConfig.removePacketCallback
+ * @param {function} initialConfig.contentChangeCallback
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
@@ -121,6 +122,14 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.removePacketCallback_ = initialConfig.removePacketCallback;
+
+  /**
+   * Method to notify our parent container that the packet's binary
+   * content has changed.
+   * @type {function}
+   * @private
+   */
+  this.contentChangeCallback_ = initialConfig.contentChangeCallback;
 
   /**
    * @type {jQuery}
@@ -457,6 +466,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   });
 
   this.updateBitCounter();
+  this.contentChangeCallback_();
 };
 
 /**
@@ -484,6 +494,15 @@ NetSimPacketEditor.prototype.getPacketBinary = function () {
         packetCount: this.packetCount
       }),
       this.message);
+};
+
+/**
+ * Get just the first bit of the packet binary, for single-bit sending mode.
+ * @returns {string} a single bit, as "0" or "1"
+ */
+NetSimPacketEditor.prototype.getFirstBit = function () {
+  var binary = this.getPacketBinary();
+  return binary.length > 0 ? binary.substr(0, 1) : '0';
 };
 
 /** @param {number} fromAddress */
