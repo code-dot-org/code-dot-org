@@ -71,14 +71,14 @@ Our code is segmented into four parts:
 1. `cd code-dot-org`
 2. `rake build:dashboard` (Generally, do this after each pull)
 3. `bin/dashboard-server`
-4. Visit [http://localhost:3000/](http://localhost:3000/)
+4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
 
 ## Running Pegasus
 
 1. `cd code-dot-org`
 2. `rake build:pegasus` (Generally, do this after each pull)
 3. `bin/pegasus-server`
-4. Visit [http://localhost:9393/](http://localhost:9393/)
+4. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
 
 ## Building Apps and Blockly-core (optional)
 
