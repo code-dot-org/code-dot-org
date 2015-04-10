@@ -208,7 +208,8 @@ config.lodash = {
 config.sass = {
   all: {
     options: {
-      outputStyle: (MINIFY ? 'compressed' : 'nested')
+      outputStyle: (MINIFY ? 'compressed' : 'nested'),
+      includePaths: ['../shared/css/']
     },
     files: {
       'build/package/css/common.css': 'style/common.scss',
