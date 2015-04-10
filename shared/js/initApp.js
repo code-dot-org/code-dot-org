@@ -148,6 +148,8 @@ dashboard.deleteProject = function(callback) {
 };
 
 dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
+  console.log('enter loadEmbeddedProject');
+
   var deferred = new $.Deferred();
   // get all projects (TODO: filter on server side?)
   channels().all(function(data) {
@@ -167,17 +169,21 @@ dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
         channels().create(options, function(app) {
           if (app) {
             dashboard.currentApp = app;
+            console.log('resolve loadEmbeddedProject');
             deferred.resolve();
           } else {
+            console.log('reject loadEmbeddedProject');
             deferred.reject(); // failed to create project
           }
         });
       } else {
         // use the existing project
         dashboard.currentApp = projects[0];
+        console.log('finish loadEmbeddedProject');
         deferred.resolve();
       }
     } else {
+      console.log('reject loadEmbeddedProject');
       deferred.reject(); // failed to list projects
     }
   });
@@ -272,7 +278,12 @@ function parseHash() {
   }
 }
 
-function loadProject(promise) {
+/**
+ * @returns Promise
+ */
+function loadProject() {
+  var deferred = new $.Deferred();
+
   if (appOptions.level.isProjectLevel) {
     var hashData = parseHash();
     if (hashData.channelId) {
@@ -283,18 +294,14 @@ function loadProject(promise) {
       }
 
       // Load the project ID, if one exists
-      promise = promise.then(function () {
-        var deferred = new $.Deferred();
-        channels().fetch(hashData.channelId, function (data) {
-          if (data) {
-            dashboard.currentApp = data;
-            deferred.resolve();
-          } else {
-            // Project not found, redirect to the new project experience.
-            location.href = location.pathname;
-          }
-        });
-        return deferred;
+      channels().fetch(hashData.channelId, function (data) {
+        if (data) {
+          dashboard.currentApp = data;
+          deferred.resolve();
+        } else {
+          // Project not found, redirect to the new project experience.
+          location.href = location.pathname;
+        }
       });
     } else {
       dashboard.isEditingProject = true;
@@ -302,9 +309,9 @@ function loadProject(promise) {
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
     dashboard.isEditingProject = true;
-    promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
+    return dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName);
   }
-  return promise;
+  return deferred;
 }
 
 loadStyle('common');
@@ -319,14 +326,17 @@ if (appOptions.droplet) {
       .then(loadSource('ace/mode-javascript'))
       .then(loadSource('ace/ext-language_tools'))
       .then(loadSource('droplet/droplet-full'))
-      .then(loadSource('tooltipster/jquery.tooltipster'));
-  promise = loadProject(promise);
+      .then(loadSource('tooltipster/jquery.tooltipster'))
+      .then(loadProject());
 } else {
   promise = loadSource('blockly')()
-    .then(loadSource(appOptions.locale + '/blockly_locale'));
-  promise = loadProject(promise);
+    .then(loadSource(appOptions.locale + '/blockly_locale'))
+    .then(loadProject);
 }
-promise = promise.then(loadSource('common' + appOptions.pretty))
+promise = promise.then(function () {
+    console.log('post loadProject')
+  })
+  .then(loadSource('common' + appOptions.pretty))
   .then(loadSource(appOptions.locale + '/common_locale'))
   .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
   .then(loadSource(appOptions.app + appOptions.pretty))

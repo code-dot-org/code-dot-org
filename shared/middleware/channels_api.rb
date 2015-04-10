@@ -37,6 +37,7 @@ class ChannelsApi < Sinatra::Base
   # Returns all of the channels registered to the current user
   #
   get '/v3/channels' do
+    sleep(5)
     dont_cache
     content_type :json
     StorageApps.new(storage_id('user')).to_a.to_json
