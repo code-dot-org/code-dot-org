@@ -27,7 +27,7 @@ Sets the amount of blue (ranging from 0 to 255) in the color of the pixel locate
 
 **Displaying changed colors**: Using setBlue() on image data will not automatically update what you see on the screen. You will use setBlue() to change the contents of image data then call [putImageData()](/applab/docs/putImageData) to visually update what is in the canvas element and shown on screen.
 
-**How pixel colors work**: The color you see in a pixel on the screen is made up of 4 values. The red, green, blue, and alpha values of a pixel determine exactly the shade of color that appears on the screen. Each of these values ranges from a minimum of 0 up to a maximum of 255. They are usually listed in the order of Red, Green, Blue, then Alpha - or RGBA. A fully blue (and only blue) pixel would be written as (0, 0, 255, 255). The alpha value is special because it shows how transparent the pixel should be in comparison to other pixels on the same spot at the screen. So an alpha value of 0 would make a pixel fully transparent (regardless of the other color values) and 255 is fully visible.
+**How pixel colors work**: The color you see in a pixel on the screen is made up of 4 values. The red, green, blue, and alpha values of a pixel determine exactly the shade of color that appears on the screen. Each of these values ranges from a minimum of 0 up to a maximum of 255. They are usually listed in the order of Red, Green, Blue, then Alpha - or RGBA. A fully blue (and only blue) pixel would be written as (0, 0, 255, 255). A black pixel is (0, 0, 0, 255). So reducing a pixel's color values will cause it to be closer to black. The alpha value is special because it shows how opaque the pixel should be in comparison to other pixels on the same spot at the screen. So an alpha value of 0 would make a pixel fully transparent (regardless of the other color values) and 255 is fully visible.
 
 [/description]
 
@@ -46,7 +46,7 @@ setFillColor('blue'); //Set the fill color of future drawn shapes
 rect(0, 0, 100, 200); //Draw a 100x200 pixel rectangle at x:0 y:0 on the screen
 var imageData = getImageData(0, 0, 320, 480); //Get image data of the canvas (from x:0 y:0 to x:320 y:480)
 
-//Print blue value of pixel at x:50 y:50 in imageData to the debugging console. Again we will see 255.
+//Print blue value of pixel at x:50 y:50 in imageData to the debugging console. We will see 255.
 console.log(getBlue(imageData, 50, 50));
 
 //First change the blue value of a pixel in the image data then update the canvas
@@ -148,7 +148,7 @@ No return value. Only modifies the input image data object. setBlue() will not a
 
 ### Tips
 - Get image data by using [getImageData()](/applab/docs/getImageData)
-- Use this function with [getBlue()](/applab/docs/setBlue)
+- Use this function with [getBlue()](/applab/docs/getBlue)
 - You will have to use [putImageData()](/applab/docs/putImageData) to update the canvas with modified image data
 
 [/tips]
