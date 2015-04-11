@@ -320,6 +320,10 @@ NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
     return;
   }
 
+  // TODO: This should attempt to remove messages controlled by this node;
+  // TODO: they no longer represent the state of this wire.
+  // TODO: Keep it clean, people!
+
   // Find the first bit of the first packet.  Set the wire to 0/off if
   // there is no first bit.
   var firstBit = this.getNextBit_();
