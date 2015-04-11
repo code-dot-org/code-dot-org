@@ -1929,7 +1929,7 @@ button:active {
   border: 1px solid $light_gray !important;
 }
 button:hover {
-  @include box-shadow(2px 2px 5px rgba(0,0,0,0.5));
+  @include box-shadow(2px 2px 5px $shadow);
 }
 button.disabled, button[disabled=disabled] {
   border: 1px solid $lighter_gray;
