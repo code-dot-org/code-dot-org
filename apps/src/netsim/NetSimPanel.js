@@ -158,7 +158,7 @@ NetSimPanel.prototype.addButton = function(buttonText, pressCallback) {
       .addClass('netsim-button')
       .html(buttonText)
       .click(pressCallback)
-      .appendTo(this.rootDiv_.find('.panel_controls'));
+      .appendTo(this.rootDiv_.find('.panel-controls'));
 };
 
 /**

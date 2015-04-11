@@ -49,6 +49,7 @@
   "packet": "Packet",
   "packetInfo": "Packet Info",
   "pickASection": "Pick a Section",
+  "readWire": "Read Wire",
   "receiveBits": "Receive Bits",
   "receivedMessageLog": "Received Message Log",
   "removePacket": "Remove Packet",

@@ -17,12 +17,15 @@ var markup = require('./NetSimBitLogPanel.html');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 
+var logger = require('./NetSimLogger').getSingleton();
+
 /**
  * Generator and controller for bit-log, which receives bits one at a time.
  * @param {jQuery} rootDiv
  * @param {Object} options
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
+ * @param {function} [options.receiveButtonCallback]
  * @constructor
  * @augments NetSimPanel
  * @implements INetSimLogPanel
@@ -56,6 +59,13 @@ var NetSimBitLogPanel = module.exports = function (rootDiv, options) {
    */
   this.logTitle_ = options.logTitle;
 
+  /**
+   * Method to call when the receive button is pressed.
+   * @type {function}
+   * @private
+   */
+  this.receiveButtonCallback_ = options.receiveButtonCallback;
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
@@ -78,11 +88,13 @@ NetSimBitLogPanel.prototype.render = function () {
   this.getBody().html(newMarkup);
   NetSimEncodingControl.hideRowsByEncoding(this.getBody(), this.encodings_);
 
+  // If we have a receive callback, add a receive button
+  if (this.receiveButtonCallback_) {
+    this.addButton(i18n.readWire(), this.onReceiveButtonPress_.bind(this));
+  }
+
   // Add a clear button to the panel header
   this.addButton(i18n.clear(), this.onClearButtonPress_.bind(this));
-
-  // Bind reference to scrollArea for use when logging.
-  this.scrollArea_ = this.getBody().find('.scroll-area');
 };
 
 /**
@@ -92,6 +104,28 @@ NetSimBitLogPanel.prototype.render = function () {
 NetSimBitLogPanel.prototype.onClearButtonPress_ = function () {
   this.binary_ = '';
   this.render();
+};
+
+/**
+ * Asynchronously fetch the wire state from remote storage, and log it.
+ * @private
+ */
+NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function () {
+  // TODO: Disable receive button (at least) while retrieving wire state
+  this.receiveButtonCallback_(function (err, message) {
+    if (err) {
+      logger.warn("Error reading wire state: " + err.message);
+      return;
+    }
+
+    if (message) {
+      this.log(message.payload);
+    } else {
+      // A successful fetch with a null message means there's nothing
+      // on the wire.  We should log its default state: off/zero
+      this.log('0');
+    }
+  }.bind(this));
 };
 
 /**
