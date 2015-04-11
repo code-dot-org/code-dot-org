@@ -53,7 +53,7 @@ theme: none
 
 %h3 Teachers
 
-%div{'ng-show' => 'cohort.teachers.length > 0'}
+%div{'ng-show' => 'newTeachers.length > 0 || cohort.teachers.length > 0'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-form' => 'allForm', class: 'cohort-teachers'}
     %colgroup
       %col{width: "130"}/
