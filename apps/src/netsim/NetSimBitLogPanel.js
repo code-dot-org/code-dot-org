@@ -108,13 +108,20 @@ NetSimBitLogPanel.prototype.onClearButtonPress_ = function () {
 
 /**
  * Asynchronously fetch the wire state from remote storage, and log it.
+ * @param {Event} jQueryEvent
  * @private
  */
-NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function () {
-  // TODO: Disable receive button (at least) while retrieving wire state
+NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function (jQueryEvent) {
+  var thisButton = $(jQueryEvent.target);
+  if (thisButton.is('[disabled]')) {
+    return;
+  }
+
+  thisButton.attr('disabled', 'disabled');
   this.receiveButtonCallback_(function (err, message) {
     if (err) {
       logger.warn("Error reading wire state: " + err.message);
+      thisButton.removeAttr('disabled');
       return;
     }
 
@@ -125,6 +132,7 @@ NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function () {
       // on the wire.  We should log its default state: off/zero
       this.log('0');
     }
+    thisButton.removeAttr('disabled');
   }.bind(this));
 };
 
