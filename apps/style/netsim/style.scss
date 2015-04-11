@@ -315,10 +315,15 @@ svg {
       color: $white;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
-      .panel_controls {
+      .panel-controls {
         float: right;
         margin-top: -0.3em;
         padding-top: 3px;
+
+        // Special margin for buttons in this control area, so they don't squish together.
+        .netsim-button {
+          margin-left: 3px;
+        }
       }
     }
 
@@ -341,6 +346,16 @@ svg {
 
       div.panel-body {
         display: none;
+      }
+    }
+
+    .panel-footer {
+      margin: 10px;
+      overflow: hidden;
+
+      .right-side-controls {
+        float: right;
+        text-align: right;
       }
     }
   }
@@ -543,18 +558,8 @@ svg {
       }
     }
 
-    .send-widget-footer {
-      margin: 10px;
-      overflow: hidden;
-
-      .right-side-controls {
-        float: right;
-        text-align: right;
-      }
-
-      .packet-size {
-        width: 400px;
-      }
+    .packet-size {
+      width: 400px;
     }
   }
 

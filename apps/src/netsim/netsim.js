@@ -289,7 +289,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
   } else if (this.level.messageGranularity === MessageGranularity.BITS) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
-      isMinimized: false
+      isMinimized: false,
+      receiveButtonCallback: this.receiveBit_.bind(this)
     });
 
     this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
@@ -546,6 +547,17 @@ NetSim.prototype.connectToRouter = function (routerID) {
 NetSim.prototype.disconnectFromRemote = function (onComplete) {
   onComplete = utils.valueOr(onComplete, function () {});
   this.myNode.disconnectRemote(onComplete);
+};
+
+/**
+ * Asynchronous fetch of the latest message shared between the local
+ * node and its connected remote.
+ * Used only in simplex & bit-granular mode.
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSim.prototype.receiveBit_ = function (onComplete) {
+  this.myNode.getLatestMessageOnSimplexWire(onComplete);
 };
 
 /**
