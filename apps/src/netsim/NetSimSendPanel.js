@@ -283,8 +283,17 @@ NetSimSendPanel.prototype.setFromAddress = function (fromAddress) {
   }.bind(this));
 };
 
-/** Send message to connected remote */
-NetSimSendPanel.prototype.onSendButtonPress_ = function () {
+/**
+ * Send message to connected remote
+ * @param {Event} jQueryEvent
+ * @private
+ */
+NetSimSendPanel.prototype.onSendButtonPress_ = function (jQueryEvent) {
+  var thisButton = $(jQueryEvent.target);
+  if (thisButton.is('[disabled]')) {
+    return;
+  }
+
   // Make sure to perform packet truncation here.
   var packetBinaries = this.packets_.map(function (packetEditor) {
     return packetEditor.getPacketBinary().substr(0, this.maxPacketSize_);
@@ -302,9 +311,15 @@ NetSimSendPanel.prototype.onSendButtonPress_ = function () {
 
 /**
  * Send a single bit, manually 'setting the wire state'.
+ * @param {Event} jQueryEvent
  * @private
  */
-NetSimSendPanel.prototype.onSetWireButtonPress_ = function () {
+NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
+  var thisButton = $(jQueryEvent.target);
+  if (thisButton.is('[disabled]')) {
+    return;
+  }
+
   // Find the first bit of the first packet.  Set the wire to 0/off if
   // there is no first bit.
   var firstBit = this.getNextBit_();
@@ -331,12 +346,13 @@ NetSimSendPanel.prototype.getNextBit_ = function () {
 /** Disable all controls in this panel, usually during network activity. */
 NetSimSendPanel.prototype.disableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', true);
-  // TODO: Update these methods to disable netsim-buttons as well
+  this.getBody().find('.netsim-button').attr('disabled', 'disabled');
 };
 
 /** Enable all controls in this panel, usually after network activity. */
 NetSimSendPanel.prototype.enableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', false);
+  this.getBody().find('.netsim-button').removeAttr('disabled');
 };
 
 /**
