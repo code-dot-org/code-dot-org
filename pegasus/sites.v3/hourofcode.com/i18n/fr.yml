@@ -5,10 +5,10 @@ fr:
   coming_soon: Prochainement
   front_header_banner: "Rejoignez le plus grand cours en ligne de l'Histoire, du 8 au 14 décembre 2014"
   front_intro_default: |
-    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays. 
+    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays.
     Tout le monde peut organiser, depuis partout dans le monde, un événement une Heure de code. Un tutoriel est disponible dans plus de 30 langues.  <strong>Offert à tous de 4 à 104 ans.</strong>
   front_intro_default_uk: |
-    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays. 
+    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays.
     Tout le monde peut organiser un événement une Heure de code. Plus de 3M de personnes ont fait la première heure du Code au Royaume-Uni. Nous allons le doublé en décembre ! <strong>Aucune expérience nécessaire. Offert à tous de 4 à 104 ans.</strong>
   front_watch_video: Regardez la nouvelle vidéo
   header_menu_resources: Ressources
@@ -152,7 +152,7 @@ fr:
   hoc_faq_frozen_q: Où est le tutoriel avec Anna et Elsa ?
   hoc_faq_frozen_a: "Il a maintenant été publié sur <a href='http://code.org/learn'> Code.org/learn</a>. Nous espérons qu'il vous plaira !"
   hoc_faq_high_school_q: Quelle activité faire avec des élèves du secondaire ?
-  hoc_faq_high_school_a: "Pour tous les âges, nous vous recommandons d'essayer tout d'abord un des tutoriels pour débutants sur <a href='http://code.org/learn'> Code.org/learn</a>, par exemple le tutoriel avec Angry Birds ou Anna et Elsa. Un élève du secondaire doit être en mesure de terminer l'un d'entre eux en 30 minutes et peut alors essayer un tutoriel plus avancé en JavaScript, par exemple KhanAcademy ou CodeHS."
+  hoc_faq_high_school_a: "Pour tous les âges, nous vous recommandons d'essayer tout d'abord un des tutoriels pour débutants sur <a href='http://code.org/learn'> Code.org/learn</a>, par exemple le tutoriel avec Angry Birds ou Anna et Elsa. Un élève du secondaire doit être en mesure de terminer l'un d'entre eux en 30 minutes et peut alors essayer un tutoriel plus avancé en JavaScript, par exemple Khan Academy ou CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -178,7 +178,7 @@ fr:
     "Je savais que c'était une chance <b>unique</b> ."-Mariana Alzate, élève de 5e
   stats_michael: |
     "Je n'ai<b>jamais</b> mes étudiants aussi excités pour apprendre" - Michael Clark, Professeur
-    
+
   resources_how_to: Guide pratique pour les enseignants
   resources_how_to_events: Guide pratique pour les évènements
   resources_how_to_districts: Guide pratique pour les districts
