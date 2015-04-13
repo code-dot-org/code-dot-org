@@ -6,7 +6,9 @@ template: none
 %h1
   Attendance for {{workshop.name}}
 
-%table
+%div.jumbotron{'ng-show' => 'teachers.length <= 0'}
+  No teachers registered for this workshop.
+%table{'ng-show' => 'teachers.length > 0'}
   %tr
     %th
     %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
