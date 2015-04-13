@@ -443,6 +443,9 @@ title: "Ops Dashboard"
             complete: function(results) {
               if (results.data) {
                 for (var i = 0; i < results.data.length; i++) {
+                  if ($scope.isBlankObject(results.data[i])) {
+                    continue; // skip blank lines
+                  }
                   // turn on editing
                   results.data[i].editing = true;
                   // look up the district by name
@@ -454,8 +457,8 @@ title: "Ops Dashboard"
                       results.data[i].district = $scope.cohort.districts[j];
                     }
                   }
+                  $scope.newTeachers.push(results.data[i]);
                 }
-                $scope.cohort.teachers = $scope.cohort.teachers.concat(results.data);
                 $scope.$apply();
               }
             }
@@ -463,17 +466,19 @@ title: "Ops Dashboard"
         }
       };
 
+      $scope.isBlankObject = function(obj) {
+        // all values are empty string or null
+        var values = Object.keys(obj).map(function (key) { return obj[key];});
+        return $.grep(values, function(value) {return (value !== null && value !== "");}).length == 0
+      };
+
+
       $scope.editingAny = function(things) {
         if (!things) {
           return false;
         }
-        for (var i = 0; i < things.length; i++) {
-          if (things[i].editing) {
-            return true;
-          }
-        }
-        return false;
-      }
+        return $.grep(things, function(thing) {return thing.editing;}).length > 0
+      };
 
       $scope.edit = function(teacher) {
         teacher.editing = true;
