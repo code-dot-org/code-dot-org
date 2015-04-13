@@ -83,8 +83,10 @@ template: none
         %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.deletion = true', 'ng-hide' => 'workshop.deletion == true'} Delete
         %div{'ng-show' => 'workshop.deletion'}
           Really?
-        %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1)', 'ng-show' => 'workshop.deletion == true'} Yes
-        %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.deletion = false', 'ng-show' => 'workshop.deletion == true'} No
+        %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1)', 'ng-show' => 'workshop.deletion == true'}
+          Yes
+        %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.deletion = false', 'ng-show' => 'workshop.deletion == true'}
+          No
 
 :css
   a {
