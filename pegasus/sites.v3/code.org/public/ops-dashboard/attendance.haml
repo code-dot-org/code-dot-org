@@ -16,9 +16,9 @@ template: none
       %br
       {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
 
-  %tr{'ng-repeat' => 'teacher in teachers'}
+  %tr{'ng-repeat' => 'teacher in teachers | orderBy:"ops_last_name"'}
     %td{'ng-model' => 'workshop_attendance.teacher_id'}
-      {{teacher.name}}
+      {{teacher.ops_last_name}}, {{teacher.ops_first_name}}
     %td{'ng-repeat' => 'segment in attendances.segments'}
       %form
         %label
