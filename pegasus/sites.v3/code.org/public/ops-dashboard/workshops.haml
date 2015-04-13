@@ -79,8 +79,10 @@ template: none
         {{workshop.location}}
     - if dashboard_user[:admin]
       %td
-        %a.btn.btn-white.btn-xs{href:'#/workshops/{{workshop.id}}/edit', 'ng-hide' => 'workshop.deletion == true'} Edit
-        %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.deletion = true', 'ng-hide' => 'workshop.deletion == true'} Delete
+        %a.btn.btn-white.btn-xs{href:'#/workshops/{{workshop.id}}/edit', 'ng-hide' => 'workshop.deletion == true'}
+          Edit
+        %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.deletion = true', 'ng-hide' => 'workshop.deletion == true'}
+          Delete
         %div{'ng-show' => 'workshop.deletion'}
           Really?
         %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1)', 'ng-show' => 'workshop.deletion == true'}
