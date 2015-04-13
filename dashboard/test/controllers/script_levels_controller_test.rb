@@ -94,7 +94,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
-    assert_not_nil assigns(:level_view_options)[:autoplay_video_info]
+    assert_not_nil assigns(:view_options)[:autoplay_video]
   end
 
   test 'should not have autoplay video when noautoplay param is set' do
@@ -102,7 +102,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: level_with_autoplay_video.script, stage_id: '1', id: '1', noautoplay: 'true'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
-    assert_nil assigns(:level_view_options)[:autoplay_video_info]
+    assert_nil assigns(:view_options)[:autoplay_video]
   end
 
   test 'should track video play even if noautoplay param is set' do
@@ -113,11 +113,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     stage = create(:stage, script: script, name: 'Testing Stage 1', position: 1)
     level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, :position => 1)
     assert_nil session[:videos_seen]
+
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1', noautoplay: 'true'
-    assert_nil assigns(:level_view_options)[:autoplay_video_info]
+    assert_nil assigns(:view_options)[:autoplay_video]
     assert_not_empty session[:videos_seen]
+
+    @controller = ScriptLevelsController.new
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1'
-    assert_nil assigns(:level_view_options)[:autoplay_video_info]
+    assert_nil assigns(:view_options)[:autoplay_video]
   end
 
   test "shouldn't show autoplay video when already seen" do
@@ -128,7 +131,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
-    assert_nil assigns(:level_view_options)[:autoplay_video_info]
+    assert_nil assigns(:view_options)[:autoplay_video]
   end
 
   test 'non-legacy script level with concepts should have related but not autoplay video' do
@@ -137,7 +140,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
-    assert_nil assigns(:level_view_options)[:autoplay_video_info]
+    assert_nil assigns(:view_options)[:autoplay_video]
   end
 
   test "show redirects to canonical url for 20 hour" do

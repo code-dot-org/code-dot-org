@@ -104,13 +104,13 @@ class LevelSourcesController < ApplicationController
     @game = @level.game
     @phone_share_url = send_to_phone_url
     view_options(
-        full_width: true,
-        no_footer: @game == Game.applab,
-        no_padding: browser.mobile? && @game.share_mobile_fullscreen?
+      callouts: [],
+      full_width: true,
+      no_footer: @game == Game.applab,
+      no_padding: browser.mobile? && @game.share_mobile_fullscreen?
     )
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
     level_view_options(
-      callouts: [],
       start_blocks: @level_source.data,
       share: true
     )
