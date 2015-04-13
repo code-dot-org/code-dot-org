@@ -395,7 +395,7 @@ button:active {
   border: 1px solid #888 !important; }
 
 button:hover {
-  box-shadow: 2px 2px 5px #888; }
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
 
 button.disabled, button[disabled=disabled], button:disabled {
   border: 1px solid #C7C7C7;
@@ -480,7 +480,7 @@ input[type="radio"] {
   border: 1px solid #000;
   position: absolute;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   padding: 10px;
   z-index: 20000; }
 
@@ -490,7 +490,7 @@ input[type="radio"] {
   background-color: #fff;
   color: #000;
   border-radius: 6px;
-  box-shadow: 5px 5px 5px #888; }
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
 
 #dialogShadow {
   height: 100%;
@@ -947,9 +947,9 @@ body.readonly.embed-block #codeWorkspace .userHidden {
   border: none;
   background: #0094ca;
   color: #ffffff;
-  -webkit-box-shadow: 5px 5px 5px 0 #888888;
-  -moz-box-shadow: 5px 5px 5px 0 #888888;
-  box-shadow: 5px 5px 5px 0 #888888; }
+  -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3); }
 
 .droplet-block-tooltipster .tooltipster-content {
   font-family: "Gotham 4r";
