@@ -59,17 +59,11 @@
   function packetControls() {
     %>
       <div class="packet-controls">
-
-        <% if (isUnread) { %>
-          <span class="netsim-button mark-as-read-button" title="<%= i18n.markAsRead() %>"><i class="fa fa-check"></i></span>
-        <% } %>
-
         <% if (isMinimized) { %>
           <span class="netsim-button maximize-button" title="<%= i18n.expand() %>"><i class="fa fa-expand"></i></span>
         <% } else { %>
           <span class="netsim-button minimize-button" title="<%= i18n.collapse() %>"><i class="fa fa-compress"></i></span>
         <% } %>
-
       </div>
     <%
   }
