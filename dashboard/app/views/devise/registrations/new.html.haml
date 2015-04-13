@@ -14,6 +14,10 @@
         %p
           = t('signup_form.overview_teacher').html_safe
 
+      - teacher_count = number_with_delimiter(User.where(user_type: 'teacher').count, :delimiter => ',')
+      - student_count = number_with_delimiter(User.where(user_type: 'student').count, :delimiter => ',')
+      %p= resource.student? ? t('signup_form.student_count', count: student_count) : t('signup_form.teacher_count', count: teacher_count)
+
   .row
     .span8.signupblock
       = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'signupform' }) do |f|
