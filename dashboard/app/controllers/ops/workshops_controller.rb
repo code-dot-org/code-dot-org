@@ -1,5 +1,7 @@
 module Ops
   class WorkshopsController < OpsControllerBase
+    before_filter :convert_facilitators, only: [:create, :update]
+
     load_and_authorize_resource
 
     # GET /ops/workshops/1/cohort
@@ -12,7 +14,7 @@ module Ops
 
     # POST /ops/workshops
     def create
-      @workshop.save!
+      @workshop.update!(params[:workshop])
       respond_with :ops, @workshop
     end
 
@@ -27,7 +29,7 @@ module Ops
           Workshop.includes(cohort: :districts).where(districts: {contact_id: current_user.try(:id)})
         elsif current_user.permission?('facilitator')
           # For facilitators, list all workshops they're facilitating.
-          Workshop.joins(:facilitators).where(facilitators_workshops: {facilitator_id: current_user.try(:id)})
+          current_user.workshops_as_facilitator
         else
           # For other teachers, list all workshops they're attending.
           Workshop.includes(:teachers).where(users: {id: current_user.try(:id)})
@@ -62,8 +64,20 @@ module Ops
         :location,
         :instructions,
         :cohort_id,
-        :facilitator_id
+        facilitators: [:ops_first_name, :ops_last_name, :email]
       )
+    end
+
+    def convert_facilitators
+      return unless params[:workshop]
+      facilitator_param_list = params[:workshop].delete :facilitators
+      return unless facilitator_param_list
+
+      params[:workshop][:facilitators] = facilitator_param_list.map do |facilitator_params|
+        next if facilitator_params[:email].blank?
+
+        User.find_or_create_facilitator(facilitator_params, current_user)
+      end
     end
   end
 end
