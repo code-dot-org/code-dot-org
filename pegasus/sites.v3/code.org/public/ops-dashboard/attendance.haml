@@ -32,5 +32,8 @@ template: none
           %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'excused'}
           %input{style:'display:none', 'ng-model' => 'workshop_attendance.teacher_id', type:'text'}
         %br
+        %input{type:'textarea', placeholder:'Additional notes', style:'width: 100%; height:100px'}
+        %br
+        %br
         %button.btn.btn-primary
           Save
