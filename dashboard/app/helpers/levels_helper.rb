@@ -1,7 +1,7 @@
 require 'digest/sha1'
 
 module LevelsHelper
-
+  include ViewOptionsHelper
   def build_script_level_path(script_level)
     if script_level.script.name == Script::HOC_NAME
       hoc_chapter_path(script_level.chapter)
@@ -21,8 +21,8 @@ module LevelsHelper
   end
 
   def set_videos_and_callouts
-    level_view_options(
-        autoplay_video_info: select_and_track_autoplay_video,
+    view_options(
+        autoplay_video: select_and_track_autoplay_video,
         callouts: select_and_remember_callouts(params[:show_callouts])
     )
   end
@@ -70,10 +70,8 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
-    {
-      autoplayVideo: @autoplay_video_info,
-      callouts: @callouts
-    }
+    return blockly_options if @level.is_a? Blockly
+    Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
   end
 
   # Code for generating the blockly options hash
@@ -86,7 +84,7 @@ module LevelsHelper
 
     # Locale-dependent option
     # Fetch localized strings
-    if l.level_num_custom?
+    if l.custom?
       loc_val = data_t("instructions", "#{l.name}_instruction")
       unless I18n.locale.to_s == 'en-us' || loc_val.nil?
         level_options['instructions'] = loc_val
@@ -124,17 +122,17 @@ module LevelsHelper
     level_overrides = level_view_options.dup
     if level_options['embed'] || level_overrides[:embed]
       level_overrides.merge!(hide_source: true, show_finish: true, embed: true)
-      app_view_options(no_padding: true, no_header: true, no_footer: true, white_background: true)
+      view_options(no_padding: true, no_header: true, no_footer: true, white_background: true)
     end
-    app_view_options(no_footer: true) if level_overrides[:share] && browser.mobile?
+    view_options(no_footer: true) if level_overrides[:share] && browser.mobile?
 
-    level_overrides.merge!(no_padding: app_view_options[:no_padding])
+    level_overrides.merge!(no_padding: view_options[:no_padding])
 
     # Add all level view options to the level_options hash
     level_options.merge!(Hash[level_overrides.map{|key, value|[key.to_s.camelize(:lower), value]}])
 
     # Move these values up to the app_options hash
-    %w(hideSource share noPadding embed callouts autoplayVideoInfo).each do |key|
+    %w(hideSource share noPadding embed).each do |key|
       if level_options[key]
         app_options[key.to_sym] = level_options.delete key
       end
@@ -157,30 +155,23 @@ module LevelsHelper
     app_options
   end
 
-  # Sets custom options to be used by the view layer. The option hash is immutable once read.
-  # (Same as ApplicationHelper#view_options)
-  def app_view_options(opts = nil)
-    @view_options ||= {}
-    if opts.blank?
-      @view_options_locked = true
-      @view_options
-    elsif @view_options_locked
-      throw ArgumentError("Can't update locked view options")
-    else
-      @view_options.merge!(opts)
-    end
-  end
-
-  # Sets custom level options to be used by the view layer. The option hash is immutable once read.
+  LevelViewOptions = Struct.new *%i(
+    success_condition
+    start_blocks
+    toolbox_blocks
+    edit_blocks
+    skip_instructions_popup
+    embed
+    share
+    hide_source
+  )
+  # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
-    @level_view_options ||= {}
+    @level_view_options ||= LevelViewOptions.new
     if opts.blank?
-      @level_view_options_locked = true
-      @level_view_options
-    elsif @level_view_options_locked
-      throw ArgumentError("Can't update locked level view options")
+      @level_view_options.freeze.to_h
     else
-      @level_view_options.merge!(opts)
+      opts.each{|k, v| @level_view_options[k] = v}
     end
   end
 
@@ -190,7 +181,7 @@ module LevelsHelper
     if %w(.jpg .png .gif).include? File.extname(path)
       "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
     elsif File.extname(path).ends_with? '_blocks'
-      # '.start_blocks' takes the XML from the start_bslocks of the specified level.
+      # '.start_blocks' takes the XML from the start_blocks of the specified level.
       ext = File.extname(path)
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
