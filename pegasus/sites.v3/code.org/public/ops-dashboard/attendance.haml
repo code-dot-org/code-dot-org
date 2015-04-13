@@ -6,7 +6,9 @@ template: none
 %h1
   Attendance for {{workshop.name}}
 
-%table
+%div.jumbotron{'ng-show' => 'teachers.length <= 0'}
+  No teachers registered for this workshop.
+%table{'ng-show' => 'teachers.length > 0'}
   %tr
     %th
     %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
@@ -14,9 +16,9 @@ template: none
       %br
       {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
 
-  %tr{'ng-repeat' => 'teacher in teachers'}
+  %tr{'ng-repeat' => 'teacher in teachers | orderBy:"ops_last_name"'}
     %td{'ng-model' => 'workshop_attendance.teacher_id'}
-      {{teacher.name}}
+      {{teacher.ops_last_name}}, {{teacher.ops_first_name}}
     %td{'ng-repeat' => 'segment in attendances.segments'}
       %form
         %label
@@ -29,6 +31,9 @@ template: none
           Excused absence
           %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'excused'}
           %input{style:'display:none', 'ng-model' => 'workshop_attendance.teacher_id', type:'text'}
+        %br
+        %input{type:'textarea', placeholder:'Additional notes', style:'width: 100%; height:100px'}
+        %br
         %br
         %button.btn.btn-primary
           Save
