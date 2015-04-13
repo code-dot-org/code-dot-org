@@ -14,8 +14,10 @@ template: none
 %span
   PD Workshop Management
 
-%h1{'ng-show' => 'workshop.id'} Edit {{workshop.name}}
-%h1{'ng-show' => '!workshop.id'} Add a workshop
+%h1{'ng-show' => 'workshop.id'}
+  Edit {{workshop}}
+%h1{'ng-show' => '!workshop.id'}
+  Add a workshop
 
 %h3
   Workshop Name
