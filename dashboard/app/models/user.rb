@@ -33,8 +33,15 @@ class User < ActiveRecord::Base
   has_many :workshops, through: :cohorts
   has_many :segments, through: :workshops
 
+  has_and_belongs_to_many :workshops_as_facilitator,
+    class_name: Workshop,
+    foreign_key: :facilitator_id,
+    join_table: :facilitators_workshops
+
   # you can be associated with a district if you are the district contact
-  has_one :district_as_contact, class_name: 'District', foreign_key: 'contact_id'
+  has_one :district_as_contact,
+    class_name: 'District',
+    foreign_key: 'contact_id'
 
   belongs_to :invited_by, :polymorphic => true
 
@@ -67,7 +74,7 @@ class User < ActiveRecord::Base
     District.find(district_id) if district_id
   end
 
-  def User.find_or_create_district_contact(params, invited_by_user)
+  def User.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user
       if params[:ops_first_name] || params[:ops_last_name]
@@ -80,27 +87,20 @@ class User < ActiveRecord::Base
 
     user.update!(params.merge(user_type: TYPE_TEACHER))
 
-    user.permission = UserPermission::DISTRICT_CONTACT
-    user.save!
-    user
-  end
-
-  def User.find_or_create_teacher(params, invited_by_user)
-    user = User.find_by_email_or_hashed_email(params[:email])
-    unless user
-      if params[:ops_first_name] || params[:ops_last_name]
-        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
-      end
-
-      user = User.invite!(email: params[:email],
-                           user_type: TYPE_TEACHER, age: 21)
-      user.invited_by = invited_by_user
+    if permission
+      user.permission = permission
+      user.save!
     end
-
-    user.update!(params.merge(user_type: TYPE_TEACHER))
     user
   end
 
+  def User.find_or_create_district_contact(params, invited_by_user)
+    find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
+  end
+
+  def User.find_or_create_facilitator(params, invited_by_user)
+    find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
+  end
 
   # a district contact can see the teachers from their district that are part of a cohort
   def district_teachers(cohort = nil)
