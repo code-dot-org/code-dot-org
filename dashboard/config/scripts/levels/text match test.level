@@ -1,0 +1,18 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2014-11-07T21:41:06.000Z",
+  "properties": {
+    "answers": [
+      "(9-3)+(4*7)",
+      "(9-3)+4*7",
+      "9-3+4*7"
+    ],
+    "title": "Mathematical Expression Assessment",
+    "placeholder": "Type the arithmetic expression here",
+    "content1": "Type out the arithmetic expression that this circle of evaluation evaluates to",
+    "content2": "/script_assets/msm/Unit 1/Exercise_5_question_2.png"
+  },
+  "md5": "6ac8ea573dcd45d7ec8ef8387669567a"
+}]]></config>
+</TextMatch>

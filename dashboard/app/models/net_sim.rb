@@ -2,6 +2,8 @@ class NetSim < Blockly
   serialized_attrs %w(
     show_clients_in_lobby
     show_routers_in_lobby
+    can_connect_to_clients
+    can_connect_to_routers
     show_add_router_button
     router_expects_packet_header
     client_initial_packet_header
@@ -47,7 +49,7 @@ class NetSim < Blockly
     create!(level_params.merge(
               user: params[:user],
               game: Game.netsim,
-              level_num: 'default'
+              level_num: 'custom'
             ))
   end
 end

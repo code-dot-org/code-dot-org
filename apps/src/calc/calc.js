@@ -168,7 +168,9 @@ Calc.init = function(config) {
     svg.setAttribute('height', CANVAS_HEIGHT);
 
     if (level.freePlay) {
-      document.getElementById('goalHeader').setAttribute('visibility', 'hidden');
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        '/blockly/media/skins/calc/background_freeplay.png');
     }
 
     // This is hack that I haven't been able to fully understand. Furthermore,
@@ -344,7 +346,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   var targetEvaluation = targetSet.evaluateWithExpression(expression);
   var userEvaluation = userSet.evaluateWithExpression(expression);
   if (targetEvaluation.err || userEvaluation.err) {
-    return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
+    return divZeroOrFailure(targetEvaluation.err || userEvaluation.err);
   }
   if (!jsnums.equals(targetEvaluation.result, userEvaluation.result)) {
     outcome.result = ResultType.FAILURE;
@@ -370,7 +372,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     targetEvaluation = targetSet.evaluateWithExpression(expression);
     userEvaluation = userSet.evaluateWithExpression(expression);
     if (targetEvaluation.err || userEvaluation.err) {
-      return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
+      return divZeroOrFailure(targetEvaluation.err || userEvaluation.err);
     }
     if (!jsnums.equals(targetEvaluation.result, userEvaluation.result)) {
       outcome.failedInput = _.clone(values);
@@ -399,19 +401,31 @@ function appSpecificFailureOutcome(message, failedInput) {
     result: ResultType.FAILURE,
     testResults: TestResults.APP_SPECIFIC_FAIL,
     message: message,
-    failedInput: failedInput
+    failedInput: utils.valueOr(failedInput, null)
   };
 }
 
 /**
  * Looks to see if given error is a divide by zero error. If it is, we fail
- * with an app specific method. If not, we throw the error
+ * with an app specific method. If not, we throw a standard failure
  */
-function divZeroOrThrowErr(err) {
+function divZeroOrFailure(err) {
   if (err instanceof ExpressionNode.DivideByZeroError) {
     return appSpecificFailureOutcome(calcMsg.divideByZeroError(), null);
   }
-  throw err;
+
+  // One way we know we can fail is with infinite recursion. Log if we fail
+  // for some other reason
+  if (!utils.isInfiniteRecursionError(err)) {
+    console.log('Unexpected error: ' + err);
+  }
+
+  return {
+    result: ResultType.FAILURE,
+    testResults: TestResults.LEVEL_INCOMPLETE_FAIL,
+    message: null,
+    failedInput: null
+  };
 }
 
 /**
@@ -466,7 +480,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
   // gives the same result as evaluating the user set.
   var evaluation = userSet.evaluate();
   if (evaluation.err) {
-    return divZeroOrThrowErr(evaluation.err);
+    return divZeroOrFailure(evaluation.err);
   }
   var userResult = evaluation.result;
 
@@ -498,7 +512,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
 
     evaluation = targetClone.evaluate();
     if (evaluation.err) {
-      return divZeroOrThrowErr(evaluation.err);
+      return divZeroOrFailure(evaluation.err);
     }
     if (!jsnums.equals(userResult, evaluation.result)) {
       return appSpecificFailureOutcome(calcMsg.wrongResult());
@@ -519,7 +533,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     var userEvaluation = userClone.evaluate();
     var err = targetEvaluation.err || userEvaluation.err;
     if (err) {
-      return divZeroOrThrowErr(err);
+      return divZeroOrFailure(err);
     }
 
     if (!jsnums.equals(targetEvaluation.result, userEvaluation.result)) {
@@ -563,6 +577,10 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     if (targetSet.isIdenticalTo(userSet)) {
       outcome.result = ResultType.SUCCESS;
       outcome.testResults = TestResults.ALL_PASS;
+    } else if (targetSet.isEquivalentTo(userSet)) {
+      outcome.result = ResultType.FAILURE;
+      outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+      outcome.message = calcMsg.equivalentExpression();
     } else {
       outcome.result = ResultType.FAILURE;
       outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
@@ -801,16 +819,13 @@ function tokenListForEvaluation_(userSet, targetSet) {
   var evaluation = userSet.evaluate();
 
   // Check for div zero
-  var divZeroInUserSet = false;
   if (evaluation.err) {
-    if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
-      divZeroInUserSet = true;
+    if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+        utils.isInfiniteRecursionError(evaluation.err)) {
+      // Expected type of error, do nothing.
     } else {
-      throw evaluation.err;
+      console.log('Unexpected error: ' + evaluation.err);
     }
-  }
-
-  if (divZeroInUserSet) {
     return [];
   }
 

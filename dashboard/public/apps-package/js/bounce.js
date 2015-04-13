@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({32:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({33:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Bounce = require('./bounce');
@@ -16,7 +16,7 @@ window.bounceMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":28,"./bounce":29,"./levels":31,"./skins":33}],33:[function(require,module,exports){
+},{"../appMain":5,"./blocks":29,"./bounce":30,"./levels":32,"./skins":34}],34:[function(require,module,exports){
 /**
  * Load Skin for Bounce.
  */
@@ -109,7 +109,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":196}],31:[function(require,module,exports){
+},{"../skins":200}],32:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -540,7 +540,7 @@ module.exports = {
   },
 };
 
-},{"../block_utils":25,"./tiles":34}],29:[function(require,module,exports){
+},{"../block_utils":26,"./tiles":35}],30:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -1956,7 +1956,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/bounce":245,"../../locale/current/common":247,"../StudioApp":4,"../codegen":53,"../constants":55,"../dom":56,"../dropletUtils":57,"../hammer":87,"../skins":196,"../templates/page.html":221,"../timeoutList":227,"../utils":242,"./api":27,"./controls.html":30,"./tiles":34,"./visualization.html":35}],35:[function(require,module,exports){
+},{"../../locale/current/bounce":249,"../../locale/current/common":251,"../StudioApp":4,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../hammer":88,"../skins":200,"../templates/page.html":225,"../timeoutList":231,"../utils":246,"./api":28,"./controls.html":31,"./tiles":35,"./visualization.html":36}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1976,7 +1976,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":263}],30:[function(require,module,exports){
+},{"ejs":267}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1999,7 +1999,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/bounce":245,"../../locale/current/common":247,"ejs":263}],28:[function(require,module,exports){
+},{"../../locale/current/bounce":249,"../../locale/current/common":251,"ejs":267}],29:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2494,9 +2494,9 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/current/bounce":245,"../codegen":53}],245:[function(require,module,exports){
+},{"../../locale/current/bounce":249,"../codegen":54}],249:[function(require,module,exports){
 /*bounce*/ module.exports = window.blockly.appLocale;
-},{}],27:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -2678,7 +2678,7 @@ exports.bounceBall = function(id) {
   }
 };
 
-},{"../StudioApp":4,"./tiles":34}],34:[function(require,module,exports){
+},{"../StudioApp":4,"./tiles":35}],35:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2717,4 +2717,4 @@ exports.SquareType = {
   OBSTACLE: 64
 };
 
-},{}]},{},[32]);
+},{}]},{},[33]);

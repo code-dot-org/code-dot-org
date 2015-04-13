@@ -78,6 +78,11 @@
           </mutation>
           <title name="NAME">aqua-star</title>
         </block>
+        <block type="functional_call" inline="false">
+          <mutation name="aqua-star">
+            <arg name="radius" type="Number"/>
+          </mutation>
+        </block>
       </xml>
     </required_blocks>
     <solution_blocks>

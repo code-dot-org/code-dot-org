@@ -256,6 +256,7 @@
         artist: Teikn noko
     user:
       classroom: Lærar heimeside
+      district_dashboard: District Dashboard
       label: Hei %{username}
       stats: Min fremdrift
       settings: Min konto
@@ -503,6 +504,9 @@
       body: Sjå eit galleri av app- og artist-bilder laga av brukarane våre
     frozen:
       title: Frost
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Elevar teikna desse ved å kode!
     students_made_these_with_code: Elever laga desse ved å kode!
@@ -539,6 +543,14 @@
     wrong_body: Løysinga du har gitt er ikkje rett.  Prøv på nytt!
     correct_title: Rett
     correct_body: Det er rett svar.
+  contract_match:
+    wrong_title: Feil svar
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Gi svaret ditt her
   dialog:
@@ -634,3 +646,5 @@
     delete_confirm_text: Slettes prosjektet, fjernes det permanent fra listen Mine
       prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
     view_all: Vis mine prosjekter
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

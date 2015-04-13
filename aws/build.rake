@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # BUILD.RAKE used to contain everything that is now in the top-level Rakefile, i.e. it used to be
 # the entire build system and developers needed to remember seperate steps to build each project
 # or wait for CI. Since then, the building of projects has been moved out to the top-level Rakefile
@@ -217,14 +218,17 @@ end
 task 'websites' => [$websites] {}
 
 #
-# This is the mail build task when running on the test instance. It performs a normal local build
+# This is the build task when running on the test instance. It performs a normal local build
 # via the top-level Rakefile and then runs our tests.
 #
-$websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
+
+task :build do
   Dir.chdir(deploy_dir) do
     RakeUtils.system 'rake', 'build'
   end
+end
 
+task :pegasus_unit_tests do
   Dir.chdir(pegasus_dir) do
     HipChat.log 'Running <b>pegasus</b> unit tests...'
     begin
@@ -235,7 +239,9 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
       raise
     end
   end
+end
 
+task :shared_unit_tests do
   Dir.chdir(shared_dir) do
     HipChat.log 'Running <b>shared</b> unit tests...'
     begin
@@ -246,7 +252,9 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
       raise
     end
   end
+end
 
+task :dashboard_unit_tests do
   Dir.chdir(dashboard_dir) do
     # Unit tests mess with the database so stop the service before running them and
     # reset the database afterward.
@@ -264,20 +272,30 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
     HipChat.log "Reseeding <b>dashboard</b>..."
     RakeUtils.rake 'seed:all'
     RakeUtils.start_service CDO.dashboard_unicorn_name
+  end
+end
 
+task :dashboard_browserstack_ui_tests do
+  Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
       failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test.learn.code.org', '-p', '10', '-a', '--html'
       if failed_browser_count == 0
-        message = 'UI tests for <b>dashboard</b> succeeded.'
+        message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
         HipChat.developers message, color:'green'
       else
-        message = "UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+        message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
         HipChat.log message, color:'red'
         HipChat.developers message, color:'red', notify:1
       end
+    end
+  end
+end
 
+task :dashboard_eyes_ui_tests do
+  Dir.chdir(dashboard_dir) do
+    Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
       failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'Chrome33Win7', '-d', 'test.learn.code.org', '--eyes'
       if failed_browser_count == 0
@@ -292,4 +310,10 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
     end
   end
 end
-task 'test-websites' => [$websites_test] {}
+
+# do the eyes and browserstack ui tests in parallel
+multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
+
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+
+task 'test-websites' => [$websites_test]

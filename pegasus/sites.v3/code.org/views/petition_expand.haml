@@ -54,17 +54,20 @@
   %div{style: "clear:both"}
   .container_responsive{style: "margin-top:10px"}
     #threedivs{style: "text-align:center"}
-      %div#signpetitionclick{style: "display:inline-block; cursor: pointer; font-weight:bold; padding-right:40px; vertical-align: 5px;", onclick: "expandPetition();"}
-        = I18n.t(:homepage_signpetition_dropdown)
+      %div#signpetitionclick{style: "display:inline-block; vertical-align:top; cursor: pointer; font-weight:bold; padding-right:40px; vertical-align: 5px;"}
+        %button{onclick: "expandPetition();", style: "margin-bottom:5px"}
+          -if request.language  == 'en'
+            = I18n.t :homepage_signpetition_dropdown
+          -else
+            = I18n.t :hoc2014_support
 
-      -# TODO: Need to generate this with corect appId!
       -#%span
-        <iframe style="width:80px; height:20px;" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fcodeorg&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=744615728903015" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+        <iframe style="width:80px; height:20px;" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fcodeorg&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=80&amp;appId=1560940110839035" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
 
-      %div{style: "display:inline-block; padding-right:15px; overflow:hidden"}
+      %div{style: "display:inline-block; vertical-align:top; padding-right:40px; overflow:hidden"}
         <div class="fb-like" data-href="https://www.facebook.com/Code.org" data-width="80" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
 
-      %div{style: "display:inline-block"}
+      %div{style: "display:inline-block; vertical-align:top;"}
         <a href="https://twitter.com/codeorg" class="twitter-follow-button" data-show-count="false">Follow @codeorg</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 -# = request.env.inspect.to_json
@@ -155,6 +158,11 @@
     return false;
   }
 
+  $(document).ready()
+  {
+    petition = new Petition();
+  }
+  
 
 :javascript
   function trackFacebook(opt_pagePath) {
@@ -172,7 +180,7 @@
 
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '744615728903015',
+      appId      : '1560940110839035',
       xfbml      : true,
       version    : 'v2.1'
     });

@@ -155,15 +155,14 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "A programod nullával való osztást eredményezett."},
-"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
-"emptyFunctionalBlock":function(d){return "Van egy blokkod kitöltetlen bemenettel."},
+"emptyComputeBlock":function(d){return "A kiértékeléshez először csatlakoztatni kell egy blokkot."},
 "equivalentExpression":function(d){return "Próbáld meg átrendezni az érveidet, hogy pontosan ugyanazt a kifejezést kapd."},
 "evaluate":function(d){return "kiértékel"},
-"extraTopBlocks":function(d){return "Vannak szabad blokkjaid. Ezeket a \"számítás\" blokkhoz szeretted volna csatolni?"},
+"extraTopBlocks":function(d){return "Néhány blokk nincs csatlakoztatva. Csatolni akarja ezeket az értékelendő blokkhoz?"},
 "failedInput":function(d){return "A függvényed nem ad vissza minden változóhoz helyes eredményt."},
 "goal":function(d){return "Cél:"},
 "levelIncompleteError":function(d){return "A kifejezésed nem a célt eredményezi."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "Meg kell határozni a "+appLocale.v(d,"functionName")+" függvényt."},
 "missingVariableX":function(d){return "A kifejezésből hiányzik a "+appLocale.v(d,"var")+" változó."},
 "reinfFeedbackMsg":function(d){return "Íme a számításod! Folytathatod vele a munkát, vagy menj a következő blokkra."},
 "yourExpression":function(d){return "A kifejezésed:"},

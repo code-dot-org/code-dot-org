@@ -6,9 +6,9 @@ nav: educate_nav
 
 Code.org is looking to partner with school districts to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to district elementary school teachers to teach computer science in a format that's fun and accessible.
 
-Ideal partnerships are with school districts interested in bringing computer science to **all** elementary school students and have 30+ elementary school teachers to professionally development.  
+Ideal partnerships are with school districts interested in bringing computer science to **all** elementary school students and have 30+ elementary school teachers to develop.  
 <br />
-[<button>Appy Now</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)&nbsp;&nbsp;[<button>Learn about the K-5 curriculum</button>](/k5)
+[<button>Apply Now</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)&nbsp;&nbsp;[<button>Learn about the K-5 curriculum</button>](/k5)
 <br />
 <br />
 

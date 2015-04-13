@@ -3,15 +3,15 @@ hu-HU:
   select_language: Válassz nyelvet
   computer_science: Számítógép-tudomány
   computer_science_edweek: Számítógép Tudomány Oktatási Hét
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 2014. december 8-14
   csedweek_banner_hoc: 'Hamarosan itt a <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kódolás Órája</a>. Kérünk minden tanárt és szervezőt, hogy tervezze meg a <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">saját Kódolás Órája programját</a>!'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Számítástechnika tanár vagy? Nézz meg más CSEdWeek anyagokat is!</a>'
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Próbálj ki egy</h1><h2>Kódolás óráját</h2><h3># ember már kipróbálta</h3>'
   anybody_can_learn: Mindenki tanulhat.
   learn_now: Tanulj most
   petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget, hogy számítástechnikát tanuljon
   petition_sign_message: 'Ha elfogadod, írd be a nevedet. Csatlakozz # másokhoz.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Ha támogatsz, írd alá. Csatlakozz egy # fős csapathoz.'
   name: Név
   email: Email
   zipcode: Irányítószám vagy ország
@@ -24,7 +24,7 @@ hu-HU:
   hoc2014_teachers: Tanárok
   hoc2014_host: Szervezd
   hoc2014_everyone: Mindenki
-  hoc2014_support: Támogasd
+  hoc2014_support: 'Támogasd &#x25BE;'
   hoc2014_whatishoc: Mi az a Kódolás Órája?
   twentyhours_trynow: Próbálja ki most
   california_heading: Kérd a sulidban, hogy tanítsanak számítstechnikát
@@ -91,7 +91,7 @@ hu-HU:
   learn_classes: Találjon helyi osztályokat
   hoc_is_here: 'Elérkezett a #HourOfCode - nézd meg! @codeorg'
   just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Miért nem tanítanak több iskolában programozást? Van megoldásunk. http://youtu.be/nKIu9yen5nc. Látogasd meg a http://code.org/ honlapot, hogy többet megtudj róla.
   learn_hoc: Ismerd meg a Kódolás Óráját
   beyond_hoc: Az első órán túl
   what_gender: Milyen nemű vagy?
@@ -106,10 +106,11 @@ hu-HU:
   students_and_lines: '%{students} tanuló fejezte be a Kód Óráját, s írt %{lines} sort a kódból.'
   start_hoc: Kezdd el a Kódolás Órája programot most
   contact_form_topic_press: Sajtó/média (interjú vagy igéret)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '„Minden egyes nap ugyanazzal az eredménnyel&mdash; 100%-os elkötelezettség.” - Nina Nichols Peery, tanár'
+  stats_student: '"Tudtam, hogy ez egy <b>egyszeri lehetőség az életemben</b>." - Mariana Alzate, 5. osztályos'
+  stats_michael: '"<b>Soha életemben</b> nem láttam még ennyire izgatottnak a diákjaimat tanulás közben." - Michael Clark, tanár'
   studiobar_title: "Fedezd fel a <a href='http://studio.code.org'>Code Studio-t</a>"
+  studiobar_title_nolink: Fedezd fel a Code Studio-t
   studiobar_elementary_title: Kurzusok alsósoknak
   studiobar_elementary_body: 'Három új tanfolyamunk k &#8209; 5 nek'
   studiobar_hoc_title: A kódolás órája
@@ -123,58 +124,94 @@ hu-HU:
   studiobar_donate_title: Támogatás
   studiobar_donate_body: Egy gyermek tanulását támogatja minden egyes dollár adományozásával
   studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_body: Számoljunk le az előítéletekkel. Viseld büszkén a logónkat.
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
     to learn one Hour of Code&rdquo; 
-    Malala
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Ha változtatni tudsz a technológián,
+    a világot is meg tudod változtatni.&rdquo;
+    Susan, a YouTube vezérigazgatója
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Ne csak játssz a telefonodon,
+    programozd is.&rdquo;
+    Barack Obama, az USA elnöke
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;A számítástechnika a világ
+    legjobb lehetőségeit nyitja meg.&rdquo;
+    Satya, a Microsoft vezérigazgatója
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: A kódolás órája
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Jégvarázs Annával és Elsával
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Az összes gyakorlatunk
   homepage_slot_text_course4: 4. tanfolyam
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy kód
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_action_text_codevideo: Nézd meg a videót
+  homepage_action_text_teachervideo: Nézd meg a videót
+  homepage_action_text_learn: Kezdd el a tanulást még ma
+  homepage_action_text_signpetition: Írd alá a petíciót
+  homepage_signpetition_dropdown: 'Írd alá a petíciót &#x25BE;'
   homepage_slot_text_title_hoc: A kódolás órája
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Tarts egy Kódolás óráját
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Diákok
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
+  homepage_slot_text_link_codestudio: Próbáld ki a Kódolóstúdiót
+  homepage_slot_text_link_local: Keress egy helyi osztályt
+  homepage_slot_text_link_othercourses: További online tanfolyamok
+  homepage_slot_text_title_educators: Oktatók
+  homepage_slot_text_blurb_educators: Tanítsd a diákjaidat
+  homepage_slot_text_link_k5: Tanfolyamok alsó tagozatosoknak
+  homepage_slot_text_link_fullcurriculum: Teljes tananyag megtekintése
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_advocates: Támogasd munkánkat
+  homepage_slot_text_link_stats: Nézd meg a statisztikákat
+  homepage_slot_text_link_buy: Vásárolj egy pólót vagy sapkát
+  homepage_slot_text_link_donate: Adományozz
+  homepage_header_codestudio: Kódolóstúdiós diákalkotások
+  homepage_header_donors: A Code.org megköszöni a támogatásokat
+  homepage_donors_seall: Összes megtekintése
   homepage_donors_donate: Támogatás
   contact_form_topic_student: Diák vagyok
   contact_form_topic_parent: Szülő vagyok
@@ -256,8 +293,8 @@ hu-HU:
   dashboard_action_delete_yes: Igen
   dashboard_action_delete_no: Nem
   dashboard_action_confirm: Biztos törölni akarod?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Töröl
+  dashboard_action_remove_confirm: Törlöd?
   dashboard_action_done: Kész
   dashboard_action_required: szükséges
   dashboard_navigation_home_page: Tanári kezdőlap

@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "نتایج برنامه شما در تقسیم بر صفر."},
 "emptyComputeBlock":function(d){return "شما باید یک بلوک به بلوک \"compute\" متصل کنید."},
-"emptyFunctionalBlock":function(d){return "شما یک بلوک با یک ورودی پر نشده دارید."},
 "equivalentExpression":function(d){return "سعی کنید ایده ها و فکرهایتان را منظم و مرتب کنید تا دقیقا همان عبارت را به دست بیاورید."},
 "evaluate":function(d){return "ارزیابی کنید"},
 "extraTopBlocks":function(d){return "شما بلوک های متصل نشده دارید. آیا منظورتان متصل کردن اینها به بلوک \"محاسبه\" بود؟"},

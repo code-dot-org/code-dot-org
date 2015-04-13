@@ -309,7 +309,7 @@ en:
           "Unplugged: Collision Detection and the Distance Formula": crwdns35310:0crwdne35310:0
           "Play Lab: Collision Detection (Big Game)": crwdns35311:0crwdne35311:0
         infinity:
-          title: crwdns29007:0crwdne29007:0
+          title: crwdns36051:0crwdne36051:0
           description_short: crwdns35312:0crwdne35312:0
           description: crwdns35313:0crwdne35313:0
           Play Lab: crwdns29010:0crwdne29010:0
@@ -353,11 +353,6 @@ en:
           "Unit 1: Sending Bits": crwdns35330:0crwdne35330:0
           "Unit 2: Routing and DNS": crwdns35331:0crwdne35331:0
           Internet Simulator Templates: crwdns35332:0crwdne35332:0
-        Infinity:
-          title: crwdns29011:0crwdne29011:0
-          description_short: crwdns35333:0crwdne35333:0
-          description: crwdns35334:0crwdne35334:0
-          Infinity: crwdns29014:0crwdne29014:0
         pixelation:
           title: crwdns34820:0crwdne34820:0
           description: crwdns34821:0crwdne34821:0
@@ -460,17 +455,28 @@ en:
           "Artist: Functions": crwdns23545:0crwdne23545:0
           "Bee: Debugging": crwdns23546:0crwdne23546:0
         cspunit1:
-          title: crwdns35386:0crwdne35386:0
-          description: crwdns35387:0crwdne35387:0
+          title: crwdns36285:0crwdne36285:0
+          description_short: crwdns36286:0crwdne36286:0
+          description: crwdns36287:0crwdne36287:0
           Lesson14: crwdns35388:0crwdne35388:0
           Lesson 14: crwdns35389:0crwdne35389:0
           Lesson 14 v2: crwdns35390:0crwdne35390:0
           Lesson 15: crwdns35391:0crwdne35391:0
-          description_short: crwdns35392:0crwdne35392:0
           Lesson 8: crwdns35670:0crwdne35670:0
           Lesson 5: crwdns35707:0crwdne35707:0
           Lesson 3: crwdns35708:0crwdne35708:0
           Lesson 4: crwdns35709:0crwdne35709:0
+          Lesson 6: crwdns36052:0crwdne36052:0
+          Lesson 2: crwdns36053:0crwdne36053:0
+          Lesson 7: crwdns36251:0crwdne36251:0
+          Lesson 1: crwdns36252:0crwdne36252:0
+          Innovation: crwdns36253:0crwdne36253:0
+          Sending Binary Messages: crwdns36254:0crwdne36254:0
+          Sending More Complex Messages: crwdns36255:0crwdne36255:0
+          Bit Sending Widget: crwdns36256:0crwdne36256:0
+          Sending Bits in the Real World: crwdns36257:0crwdne36257:0
+          Number Systems: crwdns36258:0crwdne36258:0
+          Binary Numbers: crwdns36259:0crwdne36259:0
         algebraPD:
           title: crwdns35393:0crwdne35393:0
           description: crwdns35394:0crwdne35394:0
@@ -522,3 +528,15 @@ en:
           "Play Lab: Collision Detection (Big Game)": crwdns35439:0crwdne35439:0
           Your Game - Player Movement: crwdns35440:0crwdne35440:0
           Your Game - Collision Detection: crwdns35441:0crwdne35441:0
+        text-compression:
+          title: crwdns35939:0crwdne35939:0
+          description: crwdns35940:0crwdne35940:0
+          Text Compression: crwdns35941:0crwdne35941:0
+        CSPPD:
+          new stage: crwdns36054:0crwdne36054:0
+          Introduction to PD: crwdns36055:0crwdne36055:0
+        CSPLessonSamples:
+          title: crwdns36056:0crwdne36056:0
+          description_short: crwdns36057:0crwdne36057:0
+          Lesson 14: crwdns36058:0crwdne36058:0
+          Lesson 15: crwdns36059:0crwdne36059:0

@@ -1,0 +1,29 @@
+name 'U1L4 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 1: Lesson 4 - Bit Sending Widget
+
+# Background
+Computer science involves being comfortable with multiple layers of abstraction in order to focus on specific problems at hand and also to break problems down into manageable parts. Using the bit-sending simulator you can solve the problem of how to coordinate sending messages between two devices more quickly. If you solve the problem using the simulator, you will be able to try it out on your bit-sending device. 
+
+# Lesson
+
+* Use the “Bit Sending Widget” simulation to send bits between two points. 
+* Create a protocol for encoding messages to be sent using the widget.
+* Interpret the bits as they are received by the widget.
+
+
+# Resources
+
+<!-- * [Bit Sending Widget](http://bit.ly/sendingBits_AB -->
+<!-- * Video [Demonstration of the Widget](http://youtu.be/dubPPv_ECPA)  -->
+* Student Activity <a href="https://docs.google.com/document/d/1QUuYyC0y4N_-rwPrMuUWYgaPmzjFADaqzKx1Ur7bblE/edit?usp=sharing" target="_blank">The Weathervane</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

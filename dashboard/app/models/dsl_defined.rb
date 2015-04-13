@@ -10,6 +10,7 @@ class DSLDefined < Level
 
   def self.setup(data)
     level = find_or_create_by({ name: data[:name] })
+    level.send(:write_attribute, 'properties', {})
     level.update!(name: data[:name], game_id: Game.find_by(name: self.to_s).id, properties: data[:properties])
     level
   end
@@ -33,6 +34,7 @@ class DSLDefined < Level
     transaction do
       # Parse data, save updated level data to database
       data, i18n = dsl_class.parse(text, '')
+      data[:properties].merge! level_params
       level = setup data
 
       # Save updated level data to external file
@@ -51,13 +53,13 @@ class DSLDefined < Level
 
   def filename
     # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
-    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts"
+    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts --color=never"
     `#{grep_string}`.chomp.presence || "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
   end
 
   def update(params)
     if params[:dsl_text].present?
-      self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, {name: name})
+      self.class.create_from_level_builder({dsl_text: params.delete(:dsl_text)}, params.merge(name: name))
     else
       super(params)
     end

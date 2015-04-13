@@ -11,7 +11,7 @@ id-ID:
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan untuk mempelajari ilmu komputer
   petition_sign_message: 'Jika Anda setuju, bubuhkan nama Anda.  Bergabung dengan # orang lain.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Jika Anda mendukung kami, cantumkan nama Anda.  Bergabung dengan # orang lainnya.'
   name: Nama
   email: Email
   zipcode: poskode atau negara
@@ -24,7 +24,7 @@ id-ID:
   hoc2014_teachers: Guru
   hoc2014_host: Adakanlah
   hoc2014_everyone: Semua orang
-  hoc2014_support: Dukunglah
+  hoc2014_support: 'Dukunglah &#x25BE;'
   hoc2014_whatishoc: Apa itu Hour of Code?
   twentyhours_trynow: Coba sekarang
   california_heading: Minta sekolah anda untuk mengajarkan ilmu komputer
@@ -91,7 +91,7 @@ id-ID:
   learn_classes: Cari kelas kursus
   hoc_is_here: '#HourOfCode ada di sini – coba lihat! @codeorg'
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Mengapa tidak lebih banyak sekolah mengajarkan ilmu komputer? Kita dapat memperbaiki ini. http://youtu.be/nKIu9yen5nc. Kunjungi http://code.org/ untuk mempelajari lebih lanjut.
   learn_hoc: Belajar Kode selama satu Jam
   beyond_hoc: Setelah Satu Jam
   what_gender: Apa jenis kelamin Anda?
@@ -110,6 +110,7 @@ id-ID:
   stats_student: '"Aku tahu ini adalah kesempatan <b>sekali dalam seumur hidup</b>."-Mariana Alzate, anak kelas 5'
   stats_michael: 'Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira belajar. "-Michael Clark, guru'
   studiobar_title: "Kunjungi <a href='http://studio.code.org'>Code Studio</a>"
+  studiobar_title_nolink: Kunjungi Code Studio
   studiobar_elementary_title: Latihan-latihan dasar
   studiobar_elementary_body: 'Tiga latihan terbaru kami untuk for K&#8209;5'
   studiobar_hoc_title: Jam kode
@@ -124,57 +125,87 @@ id-ID:
   studiobar_donate_body: Satu anak belajar untuk setiap US dollar yang Anda sumbangkan
   studiobar_shop_title: Belanja
   studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
-  homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala
+  homepage_hero_text_malala: '&ldquo;Saya menantang anak-anak di setiap negara untuk belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian'
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Jika Anda bisa mengubah teknologi,
+    Anda bisa mengubah dunia.&rdquo;
+    Susan, Direktur Utam YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Jangan hanya memainkan ponselmu, programkanlah..&rdquo;
+    Presiden AS, Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Anak cucu kita&mdash; termasuk yang perempuan &mdash;
+    memerlukan kesempatan untuk belajar ilmu komputer..&rdquo;
+    Sheryl, Ketua Pegawai Operasi Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Ilmu komputer dapat membuka kesempatan-kesempatan terbaik di dunia.&rdquo;
+    Satya, Direktur Utama Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;Jika Anda belajar mengkode, Anda dapat mempelajari pelajaran terbaik dalam kehidupan Anda.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Jam kode
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frozen bersama Anna dan Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Semua panduan kami
   homepage_slot_text_course4: Kursus 4
   homepage_slot_text_shop: Belanja
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_action_text_codevideo: Tonton videonya
+  homepage_action_text_teachervideo: Tonton videonya
+  homepage_action_text_learn: Mulailah belajar hari ini
+  homepage_action_text_signpetition: Tandatangani petisi
+  homepage_signpetition_dropdown: 'Tandatangani petisi kami &#x25BE;'
   homepage_slot_text_title_hoc: Jam kode
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: 'Cobalah "Hour of Code"'
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Selenggarakan Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Siswa
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_blurb_students: Jelajahi semua panduan kami
+  homepage_slot_text_link_codestudio: Coba kode Studio
+  homepage_slot_text_link_local: Temukan kelas setempat
+  homepage_slot_text_link_othercourses: Kursus daring lainnya
+  homepage_slot_text_title_educators: Pendidik
+  homepage_slot_text_blurb_educators: Ajari siswa Anda
+  homepage_slot_text_link_k5: Kursus untuk kelas K-5
+  homepage_slot_text_link_fullcurriculum: Lihat kurikulum kami sepenuhnya
+  homepage_slot_text_link_pd: Pengembangan profesional
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_blurb_advocates: Dukung pekerjaan kami
+  homepage_slot_text_link_stats: Lihat statistiknya
   homepage_slot_text_link_buy: Buy a T-shirt or hat
   homepage_slot_text_link_donate: Make a donation
   homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_header_donors: Code.org mengucapkan terima kasih kepada para pendukungnya
+  homepage_donors_seall: Lihat semua
   homepage_donors_donate: Donasi
   contact_form_topic_student: Saya seorang siswa
   contact_form_topic_parent: Saya orang tua
@@ -420,8 +451,8 @@ id-ID:
   groklearning_name: Eliza si Dokter Celoteh
   quorum_name: Pemrogaman yang bisa diakses (dengan dukungan screenreader)
   codespark_name: The Foos (pra-pembaca dapat bergabung)
-  kodable_name: Kodable (pre-readers welcome)
-  tynkerapp_name: 'Tynker - on tablets'
+  kodable_name: Kodable (pra-pembaca selamat datang)
+  tynkerapp_name: 'Tynker - di tablet'
   robomindnl_name: Bikinlah program robot maya
   flappy_name: Membuat permainan Flappy
   bitsbox_name: 'Bitsbox - buatlah permainan'
@@ -484,12 +515,12 @@ id-ID:
   khanfr_platformtext: Web browser modern
   khanpl_platformtext: Web browser modern
   tynker_platformtext: Web browser modern
-  scratch_platformtext: Desktop-only web browsers (not tablets)
+  scratch_platformtext: Perambah web komputer saja (tidak untuk tablet)
   lightbot_platformtext: Semua browser dan iOS, Android, atau konsol permainan
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (atau web browser)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Perambah web terkini. (Kursus lanjutan memerlukan $$)
   codecademy_platformtext: Web browser modern. iOS, Android apps
   codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
   codemonkey_platformtext: Web browser modern
@@ -698,7 +729,7 @@ id-ID:
   w3schools_beyond_platformtext: Browser Web modern
   codeavengers_beyond_platformtext: Browser Web modern
   mozilla_beyond_platformtext: Browser Web modern
-  codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
+  codecombat_beyond_platformtext: Berbasis web (Firefox, Chrome, Safari, IE9 +)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Pembelian robot
   finch_beyond_platformtext: Pembelian robot
@@ -719,7 +750,7 @@ id-ID:
   groklearning_beyond_shortdescription: Intro dasar pemrograman python
   hacketyhack_beyond_shortdescription: Belajar Ruby dari tingkat dasar
   robomind_beyond_shortdescription: Menulis kode untuk virtual robot
-  makegameswithus_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makegameswithus_beyond_shortdescription: Belajar membuat permainan iPhone dalam satu jam
   appinventor_beyond_shortdescription: Membuat aplikasi Anda sendiri! (hanya untuk Android)
   touchdevelop_beyond_shortdescription: Kodekan aplikasi mobile langsung pada telepon Anda, tablet atau laptop
   codehs_beyond_shortdescription: Belajar pemrograman JavaScript dengan lingkungan visual menyenangkan
@@ -739,10 +770,10 @@ id-ID:
   codea_beyond_shortdescription: Membuat aplikasi di iPad Anda
   lego_beyond_shortdescription: Membangun dan memprogramkan robot
   finch_beyond_shortdescription: Robot untuk pendidikan sains komputer
-  arduino_beyond_shortdescription: "Learn Arduino with Sparkfun's Digital Sandbox."
-  processing_beyond_shortdescription: Learn the Processing languages
-  alice_beyond_shortdescription: Teach programming in a 3D environment
-  sphero_beyond_shortdescription: SPRK lessons give kids a fun crash course in programming robots while sharpening skills in math and science.
+  arduino_beyond_shortdescription: "Pelajari Arduino dengan Sparkfun's Digital Sandbox."
+  processing_beyond_shortdescription: Belajar bahasa pengolahan
+  alice_beyond_shortdescription: Ajarkan pemrograman dalam lingkungan 3 dimensi
+  sphero_beyond_shortdescription: Pelajaran SPRK memberikan anak-anak kursus kilat pemrograman robot yang menyenangkan sambil mengasah keterampilan dalam matematika dan sains.
   codeorg_beyond_longdescription: 'Learn the basic concepts of Computer Science with drag and drop programming. 3 full courses, each consists of 15-20 lessons that blend "unplugged" classroom activities interspersed with game-like, self-directed tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions, and variables.'
   khan_beyond_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
   tynker_beyond_longdescription: 'Tynker makes it fun & easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.'
@@ -752,8 +783,8 @@ id-ID:
   kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
   scratchjr_beyond_longdescription: ScratchJr is an introductory programming language that enables young children to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing
   hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the Hopscotch programming language. Students will build games and apps for their iPad on their iPad. Students can work individually or with friends (up to 3 per iPad).
-  pocketcode_beyond_longdescription: Create your own game on your smart phone with Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with friends and other users to try!
-  groklearning_beyond_longdescription: "An introductory course using the programming language Python for people with no programming experience. Our unique mix of introductory content and challenges will bring you to a thorough understanding of Python and programming itself. We've taught this content to students of varying ages from diverse backgrounds and we're sure it'll suit you too."
+  pocketcode_beyond_longdescription: Buat permainan Anda sendiri pada ponsel cerdas Anda dengan Pocket Code! Bantulah pasukan penerjun payung Steve untuk memberikan paket-paketnya. Anda dapat membagikannya kepada teman dan pengguna lain untuk mencoba!
+  groklearning_beyond_longdescription: Kursus Pengantar menggunakan bahasa pemrograman Python untuk orang-orang tanpa pengalaman pemrograman. Campuran konten pengantar dan tantangan kami yang umik akan membawa Anda ke pemahaman yang menyeluruh tentang Python dan pemrograman itu sendiri. Kami telah diajarkan konten ini kepada murid-murid dari segala usia dari latar belakang yang berbeda dan kami yakin itu akan cocok dengan Anda juga.
   hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
   robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
   makegameswithus_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."

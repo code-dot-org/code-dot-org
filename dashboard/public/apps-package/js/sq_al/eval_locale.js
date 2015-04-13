@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "rreth (rreze, stil, ngjyrë)"},
 "displayBlockTitle":function(d){return "përcakto"},
 "ellipseBlockTitle":function(d){return "elips (gjerësi, gjatësi, stil, ngjyrë)"},
-"emptyFunctionalBlock":function(d){return "Ti ke një bllok me një input të pambushur."},
 "extraTopBlocks":function(d){return "Ti ke blloqe të pa bashkuar. A ke menduar t'i bashkangjitësh këto me bllokun e \"shfaqur\"?"},
 "infiniteRecursionError":function(d){return "Funksioni juaj po thërret vetveten. Ne e ndaluam atë, përndryshe do të kishte vazhduar te thërriste vetveten përgjithmonë."},
 "overlayBlockTitle":function(d){return "mbivendosje (lart, poshtë)"},

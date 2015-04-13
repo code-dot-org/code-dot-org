@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "cerc (raza, stil, culoare)"},
 "displayBlockTitle":function(d){return "afişare"},
 "ellipseBlockTitle":function(d){return "elipsă (lăţime, înălţime, stil, culoare)"},
-"emptyFunctionalBlock":function(d){return "Ai un bloc necompletat."},
 "extraTopBlocks":function(d){return "Aveţi blocuri neataşate. Aţi vrut să le ataşaţi la blocul \"afișare\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "suprapunere (sus, jos)"},

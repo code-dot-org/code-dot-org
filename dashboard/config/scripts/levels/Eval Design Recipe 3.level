@@ -15,7 +15,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "open_function_definition": "rect-wide",
+    "open_function_definition": "wide-rect",
     "default_num_example_blocks": "2",
     "min_workspace_height": "1500",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"function_editor_draw_square\",\r\n  \"callout_text\": \"This is your function definition. These blocks run everytime you use the \\\"draw a square\\\" block\",\r\n  \"element_id\": \"[block-id='38']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
@@ -25,7 +25,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "disable_examples": "false"
   },
   "md5": "e10e2af40c8f13c546bfe5642245cd72"
 }]]></config>

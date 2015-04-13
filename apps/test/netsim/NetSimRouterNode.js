@@ -807,7 +807,7 @@ describe("NetSimRouterNode", function () {
         assertHowManyDropped(4);
       });
 
-      it ("drops packets when a memory capacity is reduced below queue size", function () {
+      it ("drops packets when memory capacity is reduced below queue size", function () {
         sendMessageOfSize(16 * 8);
         sendMessageOfSize(16 * 8);
         sendMessageOfSize(16 * 8);
@@ -825,6 +825,27 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'messageTable', 2);
         assertRouterQueueSize(32 * 8);
         assertHowManyDropped(1);
+      });
+
+      it ("can drop multiple packets when memory capacity is reduced below" +
+          " queue size", function () {
+        sendMessageOfSize(20 * 8);
+        sendMessageOfSize(20 * 8);
+        sendMessageOfSize(8 * 8);
+
+        // All three should fit in our 64-byte memory
+        assertTableSize(testShard, 'messageTable', 3);
+        assertRouterQueueSize(48 * 8);
+        assertHowManyDropped(0);
+
+        // Cut router memory to 32 bytes.
+        router.setMemory(16 * 8);
+
+        // This should kick the first and second messages out of memory, but
+        // the third message should fit.
+        assertTableSize(testShard, 'messageTable', 1);
+        assertRouterQueueSize(8 * 8);
+        assertHowManyDropped(2);
       });
 
       it ("getMemoryInUse() reports correct memory usage", function () {

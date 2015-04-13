@@ -1,0 +1,39 @@
+@import 'color';
+
+.user_menu {
+  padding: 7px 14px;
+  .user_options {
+    background-color: white;
+    border: 1px solid black;
+    z-index: 100001;
+    text-align: left;
+    white-space: nowrap;
+    position: absolute;
+    right: -14px;
+    top: 7px;
+    padding: 0;
+
+    a {
+      display: block;
+      padding: 10px;
+      font-family: 'Gotham 5r', sans-serif;
+      color: $charcoal;
+
+      $transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out;
+      transition: $transition;
+      -moz-transition: $transition;
+      -webkit-transition: $transition;
+      -o-transition: $transition;
+    }
+
+    a:hover {
+      background-color: $lightest_gray;
+      color: $charcoal;
+      text-decoration: none;
+    }
+
+    a + a {
+      border-top: 1px solid $charcoal;
+    }
+  }
+}

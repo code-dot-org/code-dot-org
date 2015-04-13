@@ -273,6 +273,7 @@
         artist: Disegna qualcosa
     user:
       classroom: Cruscotto di Controllo dell'insegnante
+      district_dashboard: District Dashboard
       label: Ciao %{username}
       stats: I miei progressi
       settings: Il mio account
@@ -536,6 +537,9 @@
       body: Guarda una collezione di app e immagini artistiche create dai nostri utenti
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
@@ -572,6 +576,14 @@
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
     correct_title: Molto bene!
     correct_body: Questa risposta è corretta.
+  contract_match:
+    wrong_title: Risposta non corretta
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Inserisci qui la tua risposta
   dialog:
@@ -671,3 +683,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

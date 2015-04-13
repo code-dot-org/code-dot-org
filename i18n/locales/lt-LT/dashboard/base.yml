@@ -221,6 +221,7 @@ lt:
         artist: Nupiešk ką nors
     user:
       classroom: Mokytojo namų puslapis
+      district_dashboard: District Dashboard
       label: 'Sveiki, %{username}'
       stats: Mano pažanga
       settings: Mano paskyra
@@ -439,6 +440,9 @@ lt:
       body: Peržiūrėkite su menininku sukurtų piešinių galeriją
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Mokinių sukurti pavyzdžiai.
@@ -468,6 +472,13 @@ lt:
     wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!
     correct_title: Teisingai
     correct_body: Tai yra teisingas atsakymas.
+  contract_match:
+    wrong_title: Neteisingas atsakymas
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Įveskite savo atsakymą čia
   dialog:
@@ -552,3 +563,5 @@ lt:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

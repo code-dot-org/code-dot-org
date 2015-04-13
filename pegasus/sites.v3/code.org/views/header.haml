@@ -1,3 +1,5 @@
+- variant ||= "unknown"
+
 :css
 
   .arrow_box:after {
@@ -59,7 +61,7 @@
   }
 
 #pageheader-wrapper
-  - pageheader_class = ["/index2", "/index3", "/index4"].any? { |path| request.path_info.include? path } ? "pageheader_translucent" : ""
+  - pageheader_class = request.path_info == "/" ? "pageheader_translucent" : ""
   #pageheader{class: pageheader_class}
     .content
       #left
@@ -77,15 +79,11 @@
                 #learnlink.headerlink{style: "margin: 0px"} LEARN
               %a.headerlink{:href=>"/educate"}TEACH
               %a.headerlink{:href=>"/promote"}STATS
-              - if request.path_info == "/index2"
-                %a.headerlink{:href=>"/help"}HELP US
-                %a.headerlink{:href=>"/about"}ABOUT
-              - else
-                %a.headerlink{:href=>"/help"}HOW TO HELP
-                %a.headerlink{:href=>"/about"}ABOUT
+              %a.headerlink{:href=>"/help"}HELP US
+              %a.headerlink{:href=>"/about"}ABOUT
 
               #learnoptions.arrow_box{style: ""}
-                %a.learnoption{style: "color: white; cursor: pointer; margin-right:35px; margin-left:10px", href: "/learn"} Hour of Code
+                %a.learnoption{id: "headerlearnlink_#{variant}", style: "color: white; cursor: pointer; margin-right:35px; margin-left:10px", href: "/learn"} Hour of Code
                 %a.learnoption{style: "color: white; cursor: pointer; margin-right:35px", href: CDO.studio_url} Code Studio
                 %a.learnoption{style: "color: white; cursor: pointer; margin-right:35px", href: "/learn/beyond"} Other Courses
                 %a.learnoption{style: "color: white; cursor: pointer; margin-right:10px", href: "/learn/local"} Local Classes

@@ -224,6 +224,7 @@ sv:
         artist: Rita något
     user:
       classroom: Lärare hemsida
+      district_dashboard: District Dashboard
       label: 'Hej %{username}'
       stats: Mina framsteg
       settings: Mitt konto
@@ -444,6 +445,9 @@ sv:
       body: Se ett galleri av app och artist bilder som skapats av våra användare
     frozen:
       title: Frost
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Elever gjorde dessa med kod!
@@ -473,6 +477,13 @@ sv:
     wrong_body: 'Din lösning är inte rätt.  Försök pånytt!'
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
+  contract_match:
+    wrong_title: Felaktigt svar
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Skriv in ditt svar här
   dialog:
@@ -557,3 +568,5 @@ sv:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

@@ -1,5 +1,7 @@
 /* SECTION/STUDENT MANAGEMENT */
 
+@import 'color';
+
 th.manage-th {
   height: 45px;
   padding-top: 5px;
@@ -31,7 +33,7 @@ span.required {
   display: none;
 }
 
-input.ng-invalid-required + span.required, 
+input.ng-invalid-required + span.required,
 select.ng-invalid-required + span.required {
   display: inline;
   position: absolute;
@@ -43,13 +45,6 @@ select.ng-invalid-required + span.required {
 }
 
 /* PROGRESS */
-
-$level_perfect: rgb(14, 190, 14);
-$level_passed: rgb(159, 212, 159);
-$level_attempted: yellow;
-$level_not_tried: #fefefe;
-
-$progress_background: #eee;
 
 table#progress {
   th {
@@ -63,12 +58,12 @@ table#progress {
 
 .progressheader .stage {
   box-sizing: border-box;
-  background-color: #aaa;
-  color: white; 
+  background-color: $lighter_gray;
+  color: white;
   float:left;
   height:50px;
   padding: 5px 0 0 5px;
-  border-left: 1px solid #888;
+  border-left: 1px solid $light_gray;
 }
 
 .studentzone {
@@ -91,12 +86,12 @@ table#progress {
 
 .studentzone .stage {
   box-sizing: border-box;
-  background-color: #eee;
+  background-color: $lightest_gray;
   color: white;
   float:left;
   padding: 5px 0 0 5px;
-  height:40px; 
-  border-left: 1px solid #ccc
+  height:40px;
+  border-left: 1px solid $lighter_gray
 }
 
 .studentname {
@@ -148,10 +143,10 @@ table#progress {
 .dot {
   box-sizing: content-box;
   border-radius: 20px;
-  border: 2px solid #ccc;
+  border: 2px solid $lighter_gray;
   background-color: $level_not_tried;
   padding: 5px 7px 9px 7px;
-  color: #333;
+  color: $charcoal;
   width: 18px;
   height: 18px;
   font-family: 'Gotham 5r', sans-serif;
@@ -185,7 +180,7 @@ table#progress {
 .key {
   margin: 10px 0;
   float: left;
-  background-color: #eee;
+  background-color: $lightest_gray;
   padding: 10px;
   dl {
     margin: 0;
@@ -219,7 +214,7 @@ table#progress {
 }
 .signin_card {
   width: 400px;
-  border: 1px dashed #666;
+  border: 1px dashed $charcoal;
   padding: 10px;
   margin: 10px;
   float: left;
@@ -228,4 +223,3 @@ table#progress {
 }
 .signin_card dl dd {
 }
-

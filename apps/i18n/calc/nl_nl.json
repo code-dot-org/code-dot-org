@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Je programma resulteert in een deling door nul.",
   "emptyComputeBlock": "Je moet een blok aan het \"evalueren\" blok koppelen.",
-  "emptyFunctionalBlock": "Je hebt een blok zonder waarde.",
   "equivalentExpression": "Probeer jouw argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen.",
   "evaluate": "evalueren",
   "extraTopBlocks": "Je hebt niet-gekoppelde blokken. Was het de bedoeling om deze aan het \"evalueren\" blok te koppelen?",

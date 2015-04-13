@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## x = 0
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Variables
 
 [/category]
 
@@ -19,11 +19,11 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Assigns a value to a variable.  
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+**Note**: The variable must be declared using "var x" before it can be assigned another value.  Variables can be assigned to a static value or the result of a function or expression.
 
 [/description]
 
@@ -33,8 +33,9 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+var x = 0;
+x = 5;
+console.log("x has the value " + x)
 </pre>
 
 [/example]
@@ -44,9 +45,37 @@ ____________________________________________________
 [example]
 
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+// simple Fibonacci
+var x = 1;
+var y = 1;
+var z = 2;
+console.log(x + " " + y + " " + z)
+
+x = y + z;
+y = z + x;
+z = x + y;
+console.log(x + " " + y + " " + z)
+
+x = y + z;
+y = z + x;
+z = x + y;
+console.log(x + " " + y + " " + z)
+</pre>
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+<pre>
+textInput("myTextInput", "Hi")
+button("myButton","Click Me")
+onEvent("myButton", "click", function(event) {
+  var myText;
+  myText = getText("myTextInput");
+  console.log(myText)
+})
 </pre>
 
 
@@ -58,7 +87,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+x = 5
 </pre>
 
 [/syntax]
@@ -69,25 +98,44 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| x | variable name | Yes | The variable name being assigned to  |
+| value | any type | Yes | The value the variable is being assigned to.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+Usually you do not think of assignment returning a value, you simply think of it as completing the assignment of the variable to the value.  However, the expression technically does return the value that the variable was assigned to.
+For instance the following code displays "Value is 4"
+<pre>
+var x = 1;
+var y = 2*(x=2)
+console.log("Value is " + y)
+</pre>
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+- You can use the current value of a variable in the calculation of the new value of a variable.  
+- Be careful in your if statements that you don't accidentally do an assignment.  if(x=1) is very different than if(x==1).  These bugs can be very hard to catch because if(x=1) is a valid statement, but isn't probably what you intended.
+- In some programming languages, the return result of assignment is 'true' or 'false', so you can test if your assignment happened using an if statement.  That is not the case in Javascript.  
+- If you're assigning a value to some complicated mathematical expression (say E = m*c*c) it can be helpful to add a comment letting the next developer know you're calculating the energy in the mass using Einstein's theory of relativity.
+- Puzzler for you: what does the following code print...
+
+<pre>
+var x = 1
+x = x + (x=3)
+console.log(x)
+
+x = 1
+x = (x=3) + x
+console.log(x)
+// Neat isn't it!  
+</pre>
+
 
 [/tips]
 

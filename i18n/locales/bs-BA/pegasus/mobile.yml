@@ -24,7 +24,7 @@ bs-BA:
   hoc2014_teachers: Učitelji
   hoc2014_host: Budite domaćin
   hoc2014_everyone: Svi
-  hoc2014_support: Pružite podršku
+  hoc2014_support: 'Pružite podršku &#x25BE;'
   hoc2014_whatishoc: Šta je to Sat Kodiranja?
   twentyhours_trynow: Probaj sad
   california_heading: Pitaj svoju školu da predaje računarske nauke
@@ -110,6 +110,7 @@ bs-BA:
   stats_student: '"Znao sam da ovo je <b>životna</b> prilika."-Mariana Alzate, učenik 5-og razreda'
   stats_michael: '"Još <b>nikada</b> nisam vidio svoje učenike toliko uzbuđene u vezi učenja." - Michael Clark, Nastavnik'
   studiobar_title: "Istraži <a href='http://studio.code.org'> Studio Kodiranja</a>"
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Osnovni kursevi
   studiobar_elementary_body: 'Naša nova tri kursa za K&#8209;5'
   studiobar_hoc_title: Sat Kodiranja
@@ -127,19 +128,55 @@ bs-BA:
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
     to learn one Hour of Code&rdquo; 
-    Malala
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Sat Kodiranja
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Nadzorna Ploča za Nastavnike

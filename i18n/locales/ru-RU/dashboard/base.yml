@@ -214,6 +214,7 @@ ru:
         artist: Нарисовать что-нибудь
     user:
       classroom: Домашняя страница Преподавателя
+      district_dashboard: District Dashboard
       label: 'Привет, %{username}'
       stats: Мои результаты
       settings: Моя регистрация
@@ -432,6 +433,9 @@ ru:
       body: Показать галерею приложений и картинок, созданных нашими пользователями
     frozen:
       title: '"Холодное сердце"'
+    infinity:
+      title: Лаборатория игр Infinity
+      body: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!
@@ -461,6 +465,13 @@ ru:
     wrong_body: 'Твоё решение неверно.  Пожалуйста, попробуй еще раз!'
     correct_title: Верно
     correct_body: Это правильный ответ.
+  contract_match:
+    wrong_title: Неправильный ответ
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Внеси сюда свой ответ
   dialog:
@@ -511,7 +522,7 @@ ru:
     completed_too_many_blocks: Завершено, слишком много блоков
     completed_perfect: Завершено, отлично
     furthest_level_attempted: запрошен слишком высокий уровень
-    assessment: тест
+    assessment: оценка
   studio:
     courses_working_on: Курсы, в процессе изучения
     completed_courses: Завершенные курсы
@@ -545,3 +556,5 @@ ru:
     delete_confirm_title: Вы уверены, что хотите удалить этот проект?
     delete_confirm_text: Удаление вашего проекта окончательно удалит его из вашего списка Мои проекты. Если вы поделились ссылкой на этот проект с друзьями, у них больше не будет доступа к этому проекту.
     view_all: Посмотреть Мои проекты
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

@@ -3,7 +3,7 @@ cs-CZ:
   select_language: Prosím, zvolte jazyk
   computer_science: Informatika
   computer_science_edweek: Týden vzdělávání Informatiky
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8.–14. prosince 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hodina kódu</a> se blíží. Vyzýváme všechny učitele a organizátory, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> naplánujte si svou Hodinu kódu</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Učíte informatiku? Podívejte se také na další zdroje CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
@@ -11,7 +11,7 @@ cs-CZ:
   learn_now: Učit se teď
   petition_message: Každý student v každé škole by měl mít možnost se naučit informatiku
   petition_sign_message: 'Pokud souhlasíš, napiš své jméno. Přidej se mezi # dalších.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Pokud nás podporujete, podepište se. Přidejte se k # ostatním.'
   name: Jméno
   email: Email
   zipcode: PSČ nebo země
@@ -24,7 +24,7 @@ cs-CZ:
   hoc2014_teachers: Učitelé
   hoc2014_host: Zorganizujte ji
   hoc2014_everyone: Kdokoli
-  hoc2014_support: Podpořte ji
+  hoc2014_support: 'Podpořte ji &#x25BE;'
   hoc2014_whatishoc: Co to je Hodina kódu?
   twentyhours_trynow: Vyzkoušej hned
   california_heading: Požádejte svou školu, aby vyučovala informatiku
@@ -66,7 +66,7 @@ cs-CZ:
   thanks_for_voting: Díky za hlasování!
   share_on_facebook: Sdílet na Facebooku
   share_on_twitter: Sdílet na Twitteru
-  beyond_an_hour: Beyond an Hour of Code
+  beyond_an_hour: Za Hodinou kódu
   get_started: Spustit
   i_agree: Souhlasím
   participant_select: '- Vybrat -'
@@ -75,7 +75,7 @@ cs-CZ:
   participant_educator: Vyučující
   participant_engineer: Softwarový inženýr
   participant_other: Žádný z výše uvedených
-  print_all: Print all
+  print_all: Vytisknout vše
   print_ice_art: Print your ice art
   create_art_with_zombie: nebo vytvoř pokročilé umění se zombie
   i_am_a: Jsem
@@ -91,7 +91,7 @@ cs-CZ:
   learn_classes: Najdi místní kurzy
   hoc_is_here: '#HourOfCode je tady - podívejte! @codeorg'
   just_did_hoc: 'Právě jsem dokončil #HourOfCode - vyzkoušej to! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Proč více škol nevyučuje informatiku? Můžeme to napravit. http://youtu.be/nKIu9yen5nc. Navštivte http://code.org/ a dozvíte se víc.
   learn_hoc: Učte se s Hodinou Kódu
   beyond_hoc: Po Jedné Hodině
   what_gender: Jakého jsi pohlaví?
@@ -106,10 +106,11 @@ cs-CZ:
   students_and_lines: '%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines} řádků kódu.'
   start_hoc: Začni Hodinu Kódu teď
   contact_form_topic_press: Tisk/média (rozhovor nebo mluvené setkání)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '„Každičký den přinesl stejné výsledky&mdash; 100% zapojení." - Nina Nichols Peery, učitelka'
+  stats_student: '„Věděla jsem, že to byla šance <b>jedinkrát za život</b>.“ - Mariana Alzate, žákyně 5. třídy'
+  stats_michael: '„<b>Ještě nikdy</b> jsem neviděl své žáky tak nadšené učením.“ - Michael Clark, učitel'
   studiobar_title: "Prozkoumejte <a href='http://studio.code.org'> Code Studio</a>"
+  studiobar_title_nolink: Prozkoumejte Code Studio
   studiobar_elementary_title: Základní kurzy
   studiobar_elementary_body: Naše tři nové kurzy pro první stupeň ZŠ
   studiobar_hoc_title: Hodina kódu
@@ -119,27 +120,62 @@ cs-CZ:
   studiobar_teacher_title: Připraveno pro učitele
   studiobar_teacher_body: Zaveďte studio programování (Code Studio) do vaší třídy
   studiobar_frozen_title: Hodina kódu
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_frozen_body: Vytvořte s Annou a Elsou zimní říši divů
   studiobar_donate_title: Přispějte
   studiobar_donate_body: 'Jedno dítě se učí za každý dollar, který darujetehttps://crowdin.com/translate/codeorg/56/enus-cs#'
   studiobar_shop_title: Obchod
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_body: Opusťte stereotypy. Noste hrdě naše logo.
   homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala
+    „Vyzývám děvčata každé země, aby se naučila jednu Hodinu kódu“ 
+    Malala, držitelka Nobely ceny míru
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Hodina kódu
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard

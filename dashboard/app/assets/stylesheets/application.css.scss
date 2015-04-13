@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  * Gem assets
- *= require jquery.ui.all
+ *= require jquery-ui
  *= require video-js
  *
  * Vendor assets
@@ -20,15 +20,19 @@
  * Application assets
  *= require_self
  *= require_directory .
+ *
+ * Shared
+ *= require user-menu
  */
+
+@import "color";
 
 $baseFontFamily: 'Gotham 4r', sans-serif;
 $headingsFontWeight: normal;
-$btnPrimaryBackground: orange;
-$btnPrimaryBackgroundHighlight: orange;
+$btnPrimaryBackground: $orange;
+$btnPrimaryBackgroundHighlight: $orange;
 
 @import "bootstrap";
-@import "color";
 @import "font-awesome";
 
 @mixin unselectable {
@@ -57,7 +61,7 @@ body {
 h1 {
   font-family: 'Gotham 7r', sans-serif;
   font-weight: normal;
-  color: #7665a0;
+  color: $purple;
 }
 
 h2 {
@@ -66,12 +70,12 @@ h2 {
 }
 
 hr {
-  border-color: #0094ca;
+  border-color: $teal;
   border-bottom: none;
 }
 
 th {
-  background-color: #5b6770;
+  background-color: $charcoal;
   color: white;
   border: 1px solid white;
   text-align: left;
@@ -107,10 +111,6 @@ em strong {
 
 .navbar {
   margin-bottom: 30px;
-}
-
-.production {
-  background-color: lightgray;
 }
 
 .trophy_gold {
@@ -170,7 +170,7 @@ em strong {
   font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
   color: white;
-  border: 2px solid #ccc;
+  border: 2px solid $lighter_gray;
 
 
   $transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out;
@@ -182,7 +182,7 @@ em strong {
 
 .level_link.not_tried, .level_link.not_tried:link, .level_link.not_tried:visited {
   background-color: $level_not_tried;
-  color: #666 !important;
+  color: $charcoal !important;
   &:hover {
     background-color: $level_current;
     color: white;
@@ -192,7 +192,7 @@ em strong {
 
 .level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
   background-color: $level_attempted;
-  color: #666 !important;
+  color: $charcoal !important;
   &:hover {
     background-color: $level_current;
     color: white;
@@ -223,7 +223,7 @@ em strong {
 
 .level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
   background-color: $level_attempted;
-  color: #666 !important;
+  color: $charcoal !important;
   &:hover {
     background-color: $level_attempted;
     text-decoration: none;
@@ -265,8 +265,8 @@ em strong {
 }
 
 .game-group {
-  border-bottom: 2px solid #ccc;
-  background-color: #eee;
+  border-bottom: 2px solid $lighter_gray;
+  background-color: $lightest_gray;
   display: table;
   table-layout: fixed;
   padding: 10px;
@@ -335,7 +335,7 @@ em strong {
 }
 
 a.header_status_bar:hover {
-  background-color: orange;
+  background-color: $orange;
 }
 
 .header_text {
@@ -448,7 +448,7 @@ html, body {
 }
 
 .modal {
-  a:hover {color:#FF0000; background-color: white; }
+  a:hover {color:$red; background-color: white; }
 }
 
 .modal-body {
@@ -466,7 +466,7 @@ html, body {
 
 .btn#dataConfirmOK:hover {
   color: white;
-  background-color: orange;
+  background-color: $orange;
 }
 
 #video {
@@ -554,7 +554,7 @@ html, body {
 }
 
 .project_save[disabled] {
-  background: #aaa;
+  background: $light_gray;
 }
 
 #project-share .social-buttons a {
@@ -568,12 +568,12 @@ html, body {
     height: 45px;
     border-radius: 5px;
     background: $purple;
-    color: #fff;
+    color: white;
     text-align: center;
     vertical-align: middle;
     font-size: 24pt;
     &:hover {
-      box-shadow: 2px 2px 5px #888;
+      box-shadow: 2px 2px 5px $light_gray;
     }
   }
 }
@@ -600,8 +600,8 @@ html, body {
   white-space: nowrap;
 
   .progress_container {
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: $lightest_gray;
+    border: 1px solid $lighter_gray;
     display: inline-block;
     padding: 4px 8px;
     border-radius: 5px;
@@ -675,7 +675,7 @@ html, body {
 
 .header_button {
   display: inline-block;
-  background-color: rgb(255, 164, 0);
+  background-color: $orange;
   border-radius: 5px;
   padding: 7px 14px;
   font-size: 14px;
@@ -684,7 +684,7 @@ html, body {
   cursor: pointer;
   a:hover {
     text-decoration: none;
-    background-color: rgb(255, 164, 0);
+    background-color: $orange;
   }
 }
 
@@ -698,6 +698,7 @@ input.header_input {
   text-align: right;
   margin-left: 5px;
 }
+
 .header_popup {
   display: none;
   position: absolute;
@@ -719,7 +720,7 @@ input.header_input {
   margin: 10px 0;
   float: left;
   padding: 10px;
-  background-color: #eee;
+  background-color: $lightest_gray;
   dl {
     margin: 0;
     float: left;
@@ -752,7 +753,7 @@ input.header_input {
   overflow-y: auto;
   display: block;
   min-height: 1100px;
-  color: #333;
+  color: $charcoal;
 
   .loading {
     height: 400px;
@@ -800,7 +801,7 @@ input.header_input {
 
 .header_popup_link_glyph {
   font-size: 22px;
-  color: orange;
+  color: $orange;
   line-height: 10px;
 }
 
@@ -817,7 +818,7 @@ input.header_input {
 }
 
 #alert {
-  color: red;
+  color: $red;
   font-size: 130%;
   border-style: solid;
   border-width: 2px;
@@ -860,7 +861,7 @@ input.header_input {
   margin-top: 20px;
 
   .help_title {
-    color: #1180be;
+    color: $cyan;
     font-family: 'Gotham 7r', sans-serif;
     font-weight: normal;
     font-size: 17.5px;
@@ -879,7 +880,6 @@ input.header_input {
 
   .video_name {
     text-align: center;
-    width: 183px;
   }
 
   .help_subtitle {
@@ -925,7 +925,7 @@ input.header_input {
         background: $dark_color;
         color: white;
         &:hover {
-          color: $light_green;
+          color: $green;
         }
         &:focus {
           outline: 0;
@@ -989,7 +989,7 @@ input.header_input {
 .qtip-content {
   font-size: 20px;
   line-height: 28px;
-  color: #7E5BA0;
+  color: $purple;
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
 }
@@ -1000,11 +1000,11 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+  background-color: white;
+  color: $charcoal;
+  border: 1px solid $charcoal;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px $light_gray;
   padding: 10px;
 }
 
@@ -1045,11 +1045,11 @@ a.download-video {
   padding: 5px 20px;
   font-size: 28px;
   line-height: 32px;
-  background-color: orange;
+  background-color: $orange;
   text-align: center;
   color: white;
   a, a:visited {
-    color: #08c;
+    color: $cyan;
   }
   a:hover {
     background: transparent;
@@ -1086,7 +1086,7 @@ a.download-video {
 
 #landingpage {
   .row#continue {
-    background-color: #00adbc;
+    background-color: $teal;
     color: white;
     font-size: 24.5px;
     padding: 5px 0;
@@ -1126,7 +1126,7 @@ a.download-video {
       height: 154px;
       width: 154px;
       img {
-        border: 2px solid #ccc;
+        border: 2px solid $lighter_gray;
         background-color: white;
       }
     }
@@ -1142,7 +1142,7 @@ a.download-video {
 
   .row.navcontainer {
     margin: 30px 0 10px -20px;
-    background-color: #eee;
+    background-color: $lightest_gray;
   }
 
   ul.nav.nav-pills {
@@ -1154,8 +1154,8 @@ a.download-video {
 
     li.active a, li.active a:hover, li.active a:link {
       background-color: white;
-      color: #7665a0;
-      border: 2px solid #7665a0;
+      color: $purple;
+      border: 2px solid $purple;
     }
     li a:hover, a:focus {
       text-decoration: none;
@@ -1173,15 +1173,15 @@ a.download-video {
       font-size:18px; line-height:30px;
     }
     #maintext {
-      text-align:left; padding-left:20px; color:#666;
+      text-align:left; padding-left:20px; color:$charcoal;
     }
     #helptext {
-      text-align:right; padding-right:20px; color:#888;
+      text-align:right; padding-right:20px; color:$light_gray;
     }
   }
 
   #lesson {
-    background-color:rgb(88, 103, 113);
+    background-color: $charcoal;
     #heading {
       -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 20px 10px 0px;
       .whitetext {
@@ -1197,7 +1197,7 @@ a.download-video {
         margin-bottom:5px;
       }
       a {
-        color: #ddd;
+        color: $lightest_gray;
         font-family: 'Gotham 4r', sans-serif; font-weight: normal;
       }
       .white {
@@ -1208,18 +1208,18 @@ a.download-video {
       color:white; font-size:15px;
     }
     .lightgreytext {
-      color: #ddd;
+      color: $lightest_gray;
     }
   }
   #stats {
-    background-color:#eeeeee;
+    background-color:$lightest_gray;
     #rightside {
       -moz-box-sizing:border-box; box-sizing:border-box; padding:10px;
     }
   }
   .twolineheader {
     h2 {
-      font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: #7665a0; font-size: 24px; margin-bottom: 0px; line-height: 30px;
+      font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: $purple; font-size: 24px; margin-bottom: 0px; line-height: 30px;
     }
     h1 {
       margin-top: 0px; line-height: 30px; font-size: 30px;   font-family: 'Gotham 5r', sans-serif; font-weight: normal;
@@ -1227,7 +1227,7 @@ a.download-video {
   }
 
   #edit_teachers {
-    background-color: #eee;
+    background-color: $lightest_gray;
     margin: 20px 0 20px -20px;
     form {
       margin: 0;
@@ -1236,11 +1236,11 @@ a.download-video {
 }
 
 .betatext {
-  color: yellow;
+  color: $realyellow;
 }
 
 .miniblock {
-  background-color:#ddd;
+  background-color:$lightest_gray;
   height:100px;
   .heading {
     -moz-box-sizing: border-box;
@@ -1249,27 +1249,39 @@ a.download-video {
   }
   h3 {
     margin: 0;
-    color: rgb(88, 103, 113);
+    color: $charcoal;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 24px;
   }
   .smalltext {
     font-size:13px;
     padding-right:10px;
     font-family: 'Gotham 4r', sans-serif;
     font-weight:normal;
-    color:rgb(88, 103, 113);
+    color:$charcoal;
   }
   .whitetext {
-    color:#ddd;
+    color:$lightest_gray;
   }
   .greytext {
-    color:rgb(88, 103, 113);
+    color:$charcoal;
   }
   .imgspan {
     margin-left: 0px;
     text-align: right;
+  }
+  .audience {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    background-color: $charcoal;
   }
 }
 
@@ -1318,10 +1330,10 @@ a.download-video {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      background-color: rgba(116, 128, 136, 0.37);
+      background-color: $light_gray;
       padding-left: 5px;
       padding-right: 5px;
-      font-size: 24.5px;
+      font-size: 24px;
       height: 35px;
       line-height: 40px;
       width: 60px;
@@ -1356,9 +1368,9 @@ a.download-video {
   ul.students li,
   ul.pictures li {
     list-style-type: none;
-    border: 1px solid #ccc;
+    border: 1px solid $lighter_gray;
     border-radius: 5px;
-    background-color: #eee;
+    background-color: $lightest_gray;
     float: left;
     margin: 5px;
     padding: 5px;
@@ -1367,18 +1379,18 @@ a.download-video {
 
   ul.students li:hover,
   ul.pictures li:hover {
-    background-color: lightyellow;
+    background-color: $light_yellow;
   }
 
   ul.students li.selected,
   ul.pictures li.selected {
-    background-color: yellow;
+    background-color: $yellow;
   }
 }
 
 #signup {
   .signupblock {
-    background-color: #fafafa;
+    background-color: $lightest_gray;
   }
   .signupform {
     padding:20px;
@@ -1421,7 +1433,7 @@ a.download-video {
   .registertext {
     display:inline-block;
     font-size:16px;
-    color:#586771;
+    color:$charcoal;
     margin-top:15px;
   }
 }
@@ -1457,7 +1469,7 @@ a.download-video {
   li {
     padding-top: 1px;
     padding-bottom: 1px;
-    background-color: lightgrey;
+    background-color: $lighter_gray;
     padding-left: 4px;
     padding-right: 4px;
     width: 220px;
@@ -1472,7 +1484,7 @@ a.download-video {
     margin-left:0px;
     li {
       background-color: white;
-      border-color: #c6cacd;
+      border-color: $lighter_gray;
     }
   }
   li {
@@ -1482,8 +1494,8 @@ a.download-video {
     list-style-type: none;
     margin-left: 0px;
     .emptyslot {
-      background-color: #e7e8ea;
-      border-color: #e7e8ea;
+      background-color: $lightest_gray;
+      border-color: $lightest_gray;
       .giantmark {
         .text {
           opacity: 0.8;
@@ -1493,18 +1505,18 @@ a.download-video {
     }
     .active {
       border-style: dotted;
-      border-color: #ffdb74;
+      border-color: $light_yellow;
     }
     .active.emptyslot {
-      background-color: lightyellow;
+      background-color: $lighter_yellow;
     }
   }
   .answer {
     background-color: white;
-    border-color: #a6daed;
+    border-color: $lighter_cyan;
   }
   .answer:hover {
-    border-color: #d1d567;
+    border-color: $light_green;
     cursor: move;
   }
   #answerdest {
@@ -1553,7 +1565,7 @@ a.download-video {
   }
 }
 #script-updated {
-  color: green;
+  color: $green;
   display: none;
 }
 #edit-script-content {
@@ -1579,7 +1591,7 @@ a.download-video {
 .edit_level {
   .field {
     margin-bottom: 10px;
-    border-top: 2px solid #eee;
+    border-top: 2px solid $lightest_gray;
     padding-top: 10px;
   }
 
@@ -1604,7 +1616,7 @@ div.gallery_activity {
     border: $img_border_size groove lightgray;
   }
   .caption {
-    color: #666;
+    color: $charcoal;
     margin: 0 auto;
     clear: both;
     max-width: $img_size;
@@ -1630,7 +1642,7 @@ div.mini_gallery_activity {
 }
 
 .infobox {
-  background-color: rgb(88, 103, 113);
+  background-color: $charcoal;
   color: white;
   font-size: 13px;
   padding-right: 10px;
@@ -1649,6 +1661,10 @@ $information-desktop: "only screen and (min-width: 1024px)";
 .multi {
 
   margin: auto;
+
+  h2 {
+    text-align: center;
+  }
 
   .question {
     float: left;
@@ -1776,11 +1792,11 @@ $modal-image-margin-gap: 10px;
   .feedback-callout {
     border: solid;
     border-radius: 10px;
-    border-color: red;
+    border-color: $red;
 
     p {
       margin: 15px;
-      color: red;
+      color: $red;
       padding-right: 20%;
     }
 
@@ -1879,15 +1895,15 @@ button {
   margin: 5px;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #ddd;
+  border: 1px solid $lightest_gray;
   font-size: large;
-  background-color: #eee;
+  background-color: $lightest_gray;
   color: #000;
 }
 button.launch {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
-  color: #fff;
+  border: 1px solid $orange;
+  background-color: $orange;
+  color: white;
   font-size: large;
   min-width: 96px;
   margin-left: 0px;
@@ -1910,14 +1926,14 @@ button:hover>img {
   opacity: 1;
 }
 button:active {
-  border: 1px solid #888 !important;
+  border: 1px solid $light_gray !important;
 }
 button:hover {
-  @include box-shadow(2px 2px 5px #888);
+  @include box-shadow(2px 2px 5px $light_gray);
 }
 button.disabled, button[disabled=disabled] {
-  border: 1px solid #C7C7C7;
-  background-color: #C7C7C7;
+  border: 1px solid $lighter_gray;
+  background-color: $lighter_gray;
   @include box-shadow(none);
 }
 button.disabled:hover>img {
@@ -1935,7 +1951,7 @@ button.notext {
 }
 
 @mixin rounded-border {
-  border: 2px solid #A4A4A4;
+  border: 2px solid $light_gray;
   border-radius: 25px;
 }
 

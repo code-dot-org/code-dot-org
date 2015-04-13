@@ -1,6 +1,6 @@
 class ExternalDSL < ContentDSL
   def initialize
-    @hash = {href: '', options: {}}
+    @hash = {href: '', options: {skip_dialog: true}}
   end
 
   def href(url)

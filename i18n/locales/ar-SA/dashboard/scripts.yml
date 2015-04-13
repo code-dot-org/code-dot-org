@@ -309,7 +309,7 @@ ar:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: مختبر اللعب
+          title: Disney Infinity Play Lab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: مختبر اللعب
@@ -353,11 +353,6 @@ ar:
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
-        Infinity:
-          title: Infinity Playlab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          Infinity: ما لانهاية
         pixelation:
           title: Pixelation
           description: 'انشئ  صور مع ال bits و bytes.'
@@ -460,17 +455,28 @@ ar:
           "Artist: Functions": 'الرسام : المهام'
           "Bee: Debugging": 'النحلة: تصحيح الأخطاء'
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           Lesson14: Lesson14
           Lesson 14: Lesson 14
           Lesson 14 v2: Lesson 14 v2
           Lesson 15: Lesson 15
-          description_short: Make Black and White Images with the pixelation tool
           Lesson 8: Lesson 8
           Lesson 5: Lesson 5
           Lesson 3: Lesson 3
           Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -522,3 +528,15 @@ ar:
           "Play Lab: Collision Detection (Big Game)": 'مختبر اللعب: الكشف عن التصادم (اللعبة الكبرى)'
           Your Game - Player Movement: 'Your Game - Player Movement'
           Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15

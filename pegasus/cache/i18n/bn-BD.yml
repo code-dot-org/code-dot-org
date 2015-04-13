@@ -33,7 +33,7 @@
   hoc2014_teachers: শিক্ষকদের
   hoc2014_host: এটা উদযাপন করুন
   hoc2014_everyone: সবাই
-  hoc2014_support: এটা সমর্থন করুন
+  hoc2014_support: এটা সমর্থন করুন &#x25BE;
   hoc2014_whatishoc: Hour of Code কি?
   twentyhours_trynow: এখন চেষ্টা করুন
   california_heading: আপনা্দের স্কুলে কম্পিউটার সায়েন্স শেখানোর ব্যাপারে কথা বলুন
@@ -140,6 +140,7 @@
   stats_michael: '"আমি  <b>কখনোই,  </b> আমার ছাত্রদের শেখার ব্যাপারে এত উত্তেজিত হতে
     দেখিনি।" - মাইকেল ক্লার্ক , শিক্ষক'
   studiobar_title: <a href='http://studio.code.org'> কোড স্টুডিও</a> অনুসন্ধান করো।
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: মৌলিক কোর্স।
   studiobar_elementary_body: আমাদের তিনটি নতুন কোর্স জন্য K &#8209; 5
   studiobar_hoc_title: কোডিং এর এক ঘণ্টা
@@ -156,19 +157,49 @@
   studiobar_shop_title: দোকান
   studiobar_shop_body: বাঁধাধরা নিয়ম থেকে বেরিয়ে এসে গর্বের সাথে আমাদের লোগো লাগাও।
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: কোডিং এর এক ঘণ্টা
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard

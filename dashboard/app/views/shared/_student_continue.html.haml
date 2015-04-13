@@ -10,7 +10,8 @@
   %span#puzzle
     = script_level.stage.localized_title
     #{t('puzzle')} #{script_level.position}
+  &nbsp;
   = link_to build_script_level_url(script_level) do
-    %button.btn.btn-primary.button-continue#continue_button= t('continue')
+    %button.btn.btn-primary.button-continue#continue_button{class: role_class}= t('continue')
 - elsif include_finished
   = render partial: 'shared/student_finished'

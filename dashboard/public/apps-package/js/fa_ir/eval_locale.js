@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "دایره (شعاع، سبک، رنگ)"},
 "displayBlockTitle":function(d){return "ارزیابی کنید"},
 "ellipseBlockTitle":function(d){return "بیضی (عرض، ارتفاع، سبک، رنگ)"},
-"emptyFunctionalBlock":function(d){return "شما یک بلوک با یک ورودی پر نشده دارید."},
 "extraTopBlocks":function(d){return "تو چندتا بلوک وصل نشده داری. آیا میخواستی به بلوک \"نمایش\" وصلشان کنی؟"},
 "infiniteRecursionError":function(d){return "تابع شما دارد خودش را صدا می زند. ما متوقفش کردیم، در غیر این صورت برای همیشه به صدا زدن خودش ادامه میداد."},
 "overlayBlockTitle":function(d){return "پوشش (بالا، پایین)"},

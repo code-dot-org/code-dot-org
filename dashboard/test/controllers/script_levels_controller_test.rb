@@ -147,6 +147,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to build_script_level_path(sl)
   end
 
+
+  test "ridiculous chapter number throws NotFound instead of RangeError" do
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, script_id: Script.twenty_hour_script, chapter: '99999999999999999999999999'
+    end
+  end
+
+
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)

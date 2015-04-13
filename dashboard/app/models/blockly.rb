@@ -21,7 +21,6 @@ class Blockly < Level
     use_contract_editor
     default_num_example_blocks
     open_function_definition
-    callout_json
     contract_highlight
     contract_collapse
     examples_highlight

@@ -1,0 +1,34 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/up.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/right.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/unplugged_images/left.png"
+      }
+    ],
+    "title": "Matching",
+    "content1": "Match the Map to the arrow that gets the Flurb to the treasure",
+    "height": "150"
+  },
+  "md5": "21c517c6629be3dee882d33fa7658e98"
+}]]></config>
+</Match>

@@ -143,13 +143,16 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
 BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
 
+  // sprite.y is the top. get the center
+  var centerY = playerSprite.y + playerSprite.height / 2;
+  
   // invert Y
-  var userSpaceY = this.studio_.MAZE_HEIGHT - playerSprite.y;
+  var userSpaceY = this.studio_.MAZE_HEIGHT - centerY;
 
   var newUserSpaceY = this.update_player(key, userSpaceY);
 
   // reinvertY
-  playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
+  playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY - playerSprite.height / 2;
 };
 
 /**

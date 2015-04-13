@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "Sa pead siduma ploki \"arvuta\" plokiga."},
-"emptyFunctionalBlock":function(d){return "Teil on täitmata sisendiga plokk."},
 "equivalentExpression":function(d){return "Proovi vahetada oma argumentide järjekorda ning saada täpselt sama avaldis."},
 "evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"arvuta\" klotsi külge?"},

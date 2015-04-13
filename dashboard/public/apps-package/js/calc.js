@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({45:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({46:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":196,"./blocks":36,"./calc":37,"./levels":44}],37:[function(require,module,exports){
+},{"../appMain":5,"../skins":200,"./blocks":37,"./calc":38,"./levels":45}],38:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -182,7 +182,9 @@ Calc.init = function(config) {
     svg.setAttribute('height', CANVAS_HEIGHT);
 
     if (level.freePlay) {
-      document.getElementById('goalHeader').setAttribute('visibility', 'hidden');
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        '/blockly/media/skins/calc/background_freeplay.png');
     }
 
     // This is hack that I haven't been able to fully understand. Furthermore,
@@ -358,7 +360,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
   var targetEvaluation = targetSet.evaluateWithExpression(expression);
   var userEvaluation = userSet.evaluateWithExpression(expression);
   if (targetEvaluation.err || userEvaluation.err) {
-    return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
+    return divZeroOrFailure(targetEvaluation.err || userEvaluation.err);
   }
   if (!jsnums.equals(targetEvaluation.result, userEvaluation.result)) {
     outcome.result = ResultType.FAILURE;
@@ -384,7 +386,7 @@ Calc.evaluateFunction_ = function (targetSet, userSet) {
     targetEvaluation = targetSet.evaluateWithExpression(expression);
     userEvaluation = userSet.evaluateWithExpression(expression);
     if (targetEvaluation.err || userEvaluation.err) {
-      return divZeroOrThrowErr(targetEvaluation.err || userEvaluation.err);
+      return divZeroOrFailure(targetEvaluation.err || userEvaluation.err);
     }
     if (!jsnums.equals(targetEvaluation.result, userEvaluation.result)) {
       outcome.failedInput = _.clone(values);
@@ -413,19 +415,31 @@ function appSpecificFailureOutcome(message, failedInput) {
     result: ResultType.FAILURE,
     testResults: TestResults.APP_SPECIFIC_FAIL,
     message: message,
-    failedInput: failedInput
+    failedInput: utils.valueOr(failedInput, null)
   };
 }
 
 /**
  * Looks to see if given error is a divide by zero error. If it is, we fail
- * with an app specific method. If not, we throw the error
+ * with an app specific method. If not, we throw a standard failure
  */
-function divZeroOrThrowErr(err) {
+function divZeroOrFailure(err) {
   if (err instanceof ExpressionNode.DivideByZeroError) {
     return appSpecificFailureOutcome(calcMsg.divideByZeroError(), null);
   }
-  throw err;
+
+  // One way we know we can fail is with infinite recursion. Log if we fail
+  // for some other reason
+  if (!utils.isInfiniteRecursionError(err)) {
+    console.log('Unexpected error: ' + err);
+  }
+
+  return {
+    result: ResultType.FAILURE,
+    testResults: TestResults.LEVEL_INCOMPLETE_FAIL,
+    message: null,
+    failedInput: null
+  };
 }
 
 /**
@@ -480,7 +494,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
   // gives the same result as evaluating the user set.
   var evaluation = userSet.evaluate();
   if (evaluation.err) {
-    return divZeroOrThrowErr(evaluation.err);
+    return divZeroOrFailure(evaluation.err);
   }
   var userResult = evaluation.result;
 
@@ -512,7 +526,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
 
     evaluation = targetClone.evaluate();
     if (evaluation.err) {
-      return divZeroOrThrowErr(evaluation.err);
+      return divZeroOrFailure(evaluation.err);
     }
     if (!jsnums.equals(userResult, evaluation.result)) {
       return appSpecificFailureOutcome(calcMsg.wrongResult());
@@ -533,7 +547,7 @@ Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
     var userEvaluation = userClone.evaluate();
     var err = targetEvaluation.err || userEvaluation.err;
     if (err) {
-      return divZeroOrThrowErr(err);
+      return divZeroOrFailure(err);
     }
 
     if (!jsnums.equals(targetEvaluation.result, userEvaluation.result)) {
@@ -577,6 +591,10 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
     if (targetSet.isIdenticalTo(userSet)) {
       outcome.result = ResultType.SUCCESS;
       outcome.testResults = TestResults.ALL_PASS;
+    } else if (targetSet.isEquivalentTo(userSet)) {
+      outcome.result = ResultType.FAILURE;
+      outcome.testResults = TestResults.APP_SPECIFIC_FAIL;
+      outcome.message = calcMsg.equivalentExpression();
     } else {
       outcome.result = ResultType.FAILURE;
       outcome.testResults = TestResults.LEVEL_INCOMPLETE_FAIL;
@@ -815,16 +833,13 @@ function tokenListForEvaluation_(userSet, targetSet) {
   var evaluation = userSet.evaluate();
 
   // Check for div zero
-  var divZeroInUserSet = false;
   if (evaluation.err) {
-    if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
-      divZeroInUserSet = true;
+    if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+        utils.isInfiniteRecursionError(evaluation.err)) {
+      // Expected type of error, do nothing.
     } else {
-      throw evaluation.err;
+      console.log('Unexpected error: ' + evaluation.err);
     }
-  }
-
-  if (divZeroInUserSet) {
     return [];
   }
 
@@ -1093,7 +1108,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":246,"../../locale/current/common":247,"../StudioApp":4,"../block_utils":25,"../dom":56,"../skins":196,"../templates/page.html":221,"../timeoutList":227,"../utils":242,"./controls.html":38,"./equation":39,"./equationSet":40,"./expressionNode":41,"./inputIterator":42,"./js-numbers/js-numbers.js":43,"./levels":44,"./token":46,"./visualization.html":47}],47:[function(require,module,exports){
+},{"../../locale/current/calc":250,"../../locale/current/common":251,"../StudioApp":4,"../block_utils":26,"../dom":57,"../skins":200,"../templates/page.html":225,"../timeoutList":231,"../utils":246,"./controls.html":39,"./equation":40,"./equationSet":41,"./expressionNode":42,"./inputIterator":43,"./js-numbers/js-numbers.js":44,"./levels":45,"./token":47,"./visualization.html":48}],48:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1105,7 +1120,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 100)">\n  </g>\n  <text x="0" y="330" class="calcHeader" id="goalHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <image id="background" height="400" width="400" x="0" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/blockly/media/skins/calc/background.png"></image>\n  <g id="userExpression" class="expr" transform="translate(0, 100)">\n  </g>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -1113,7 +1128,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":246,"ejs":263}],44:[function(require,module,exports){
+},{"../../locale/current/calc":250,"ejs":267}],45:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -1152,7 +1167,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":246,"../block_utils":25}],42:[function(require,module,exports){
+},{"../../locale/current/calc":250,"../block_utils":26}],43:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1206,11 +1221,12 @@ InputIterator.prototype.remaining = function () {
   return this.remaining_;
 };
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
 var jsnums = require('./js-numbers/js-numbers');
+var utils = require('../utils');
 
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally
@@ -1388,6 +1404,34 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
 };
 
 /**
+ * Are two EquationSets equivalent? This is considered to be true if their
+ * compute expression are equivalent and all of their equations have the same
+ * names and equivalent expressions. Equivalence is a less strict requirement
+ * than identical that allows params to be reordered.
+ */
+EquationSet.prototype.isEquivalentTo = function (otherSet) {
+  if (this.equations_.length !== otherSet.equations_.length) {
+    return false;
+  }
+
+  var otherCompute = otherSet.computeEquation().expression;
+  if (!this.compute_.expression.isEquivalentTo(otherCompute)) {
+    return false;
+  }
+
+  for (var i = 0; i < this.equations_.length; i++) {
+    var thisEquation = this.equations_[i];
+    var otherEquation = otherSet.getEquation(thisEquation.name);
+    if (!otherEquation ||
+        !thisEquation.expression.isEquivalentTo(otherEquation.expression)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+/**
  * Returns a list of the non-compute equations (vars/functions) sorted by name.
  */
 EquationSet.prototype.sortedEquations = function () {
@@ -1453,10 +1497,15 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         // see if we can map if we replace our params
         // note that params override existing vars in our testMapping
         testMapping = _.clone(mapping);
+        testMapping[equation.name] = {
+          variables: equation.params,
+          expression: equation.expression
+        };
         equation.params.forEach(setTestMappingToOne);
         evaluation = equation.expression.evaluate(testMapping);
         if (evaluation.err) {
-          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+              utils.isInfiniteRecursionError(evaluation.err)) {
             return { err: evaluation.err };
           }
           continue;
@@ -1578,7 +1627,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":242,"./equation":39,"./expressionNode":41,"./js-numbers/js-numbers":43}],41:[function(require,module,exports){
+},{"../utils":246,"./equation":40,"./expressionNode":42,"./js-numbers/js-numbers":44}],42:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -1987,7 +2036,8 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     return this.getTokenListDiff(null);
   }
 
-  if (this.getType_() !== ValueType.ARITHMETIC) {
+  if (this.getType_() !== ValueType.ARITHMETIC &&
+      this.getType_() !== ValueType.EXPONENTIAL) {
     // Don't support getTokenList for functions
     throw new Error("Unsupported");
   }
@@ -1997,8 +2047,16 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
     rightDeeper = this.children_[1].depth() > this.children_[0].depth();
   }
 
+  var prefix = new Token('(', false);
+  var suffix = new Token(')', false);
+
+  if (this.value_ === 'sqrt') {
+    prefix = new Token('sqrt', false);
+    suffix = null;
+  }
+
   var tokens = [
-    new Token('(', false),
+    prefix,
     this.children_[0].getTokenList(markDeepest && !rightDeeper),
   ];
   if (this.children_.length > 1) {
@@ -2007,7 +2065,9 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
       this.children_[1].getTokenList(markDeepest && rightDeeper)
     ]);
   }
-  tokens.push(new Token(')', false));
+  if (suffix) {
+    tokens.push(suffix);
+  }
   return _.flatten(tokens);
 };
 
@@ -2178,7 +2238,7 @@ ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
   return tokenList;
 };
 
-},{"../utils":242,"./js-numbers/js-numbers":43,"./token":46}],46:[function(require,module,exports){
+},{"../utils":246,"./js-numbers/js-numbers":44,"./token":47}],47:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -2295,7 +2355,7 @@ Token.numberWithCommas_ = function (x) {
   return parts.join(".");
 };
 
-},{"./js-numbers/js-numbers":43}],43:[function(require,module,exports){
+},{"./js-numbers/js-numbers":44}],44:[function(require,module,exports){
 // Scheme numbers.
 
 // NOTE: This top bit differs from the version at https://github.com/bootstrapworld/js-numbers/blob/master/src/js-numbers.js
@@ -6627,7 +6687,7 @@ module.exports = jsnums;
 
 })();
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 /**
  * An equation is an expression attached to a particular name. For example:
  *   f(x) = x + 1
@@ -6667,7 +6727,7 @@ Equation.prototype.clone = function () {
   return new Equation(this.name, this.params.slice(), this.expression.clone());
 };
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6690,7 +6750,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":246,"../../locale/current/common":247,"ejs":263}],36:[function(require,module,exports){
+},{"../../locale/current/calc":250,"../../locale/current/common":251,"ejs":267}],37:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -6755,6 +6815,6 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":246,"../../locale/current/common":247,"../sharedFunctionalBlocks":195}],246:[function(require,module,exports){
+},{"../../locale/current/calc":250,"../../locale/current/common":251,"../sharedFunctionalBlocks":199}],250:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
-},{}]},{},[45]);
+},{}]},{},[46]);

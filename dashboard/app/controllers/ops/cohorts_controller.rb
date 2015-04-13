@@ -1,13 +1,15 @@
 module Ops
   class CohortsController < OpsControllerBase
     before_filter :convert_teachers, :convert_districts_to_cohorts_districts_attributes, :timestamp_cutoff_date, only: [:create, :update]
-    after_filter :notify_district_contact_added_teachers, only: [:update]
+    after_filter :notify_district_contact, only: [:update, :destroy_teacher]
 
     load_and_authorize_resource except: [:index]
 
     # DELETE /ops/cohorts/1/teachers/:teacher_id
     def destroy_teacher
-      @cohort.teachers.delete User.find(params[:teacher_id])
+      user = User.find(params[:teacher_id])
+      @removed_teachers = [user]
+      @cohort.teachers.delete user
       @cohort.save!
       respond_with @cohort
     end
@@ -38,6 +40,7 @@ module Ops
       # this should really be done with the 'scope' feature in ActiveModel::Serializers but I can't figure out their git branches
       unless current_user.admin?
         @cohort.teachers = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
+        @cohort.deleted_teachers = @cohort.deleted_teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
         @cohort.cohorts_districts = @cohort.cohorts_districts.where(district_id: current_user.district_as_contact.id)
       end
 
@@ -112,16 +115,17 @@ module Ops
     def timestamp_cutoff_date
       return unless params[:cohort]
       cutoff_date = params[:cohort].delete :cutoff_date
-      return unless cutoff_date
+      return unless cutoff_date.present?
 
       params[:cohort][:cutoff_date] = Chronic.parse(cutoff_date).strftime('%Y-%m-%d 00:00:00')
     end
 
-    def notify_district_contact_added_teachers
-      # notification to ops team that a district contact added teachers
-      if @added_teachers.present? && current_user.district_contact?
-        OpsMailer.district_contact_added_teachers(current_user, @cohort, @added_teachers).deliver
-      end
+    def notify_district_contact
+      # notification to ops team that a district contact added/removed teachers from a cohort
+      return unless @added_teachers.present? || @removed_teachers.present?
+      return unless current_user.district_contact?
+
+      OpsMailer.district_contact_added_teachers(current_user, @cohort, @added_teachers, @removed_teachers).deliver
     end
   end
 end

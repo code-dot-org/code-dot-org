@@ -434,6 +434,15 @@ ko:
         msm_3_pemdas: PEMDAS
         msm_6_variables: 변수
         msm_7_functions: 함수
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
@@ -500,3 +509,7 @@ ko:
         arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
         right_arrow_fireball: 파이어볼을 쏘기 위해 오른쪽 방향키를 사용하세요.
         name_function: 함수의 이름을 여기에 작성하세요.
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

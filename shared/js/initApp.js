@@ -7,71 +7,12 @@ var baseOptions = {
   cdoSounds: CDOSounds,
   position: { blockYCoordinateInterval: 25 },
   onInitialize: function() {
-    this.createCallouts();
+    dashboard.createCallouts(this.callouts);
     if (window.wrapExistingClipPaths && window.handleClipPathChanges) {
       wrapExistingClipPaths();
       handleClipPathChanges();
     }
     $(document).trigger('appInitialized');
-  },
-  createCallouts: function() {
-    $.fn.qtip.zindex = 500;
-    this.callouts && this.callouts.every(function(callout) {
-      var selector = callout.element_id; // jquery selector.
-      if ($(selector).length === 0 && !callout.on) {
-        return true;
-      }
-
-      var defaultConfig = {
-        content: {
-          text: callout.localized_text,
-          title: {
-            button: $('<div class="tooltip-x-close"/>')
-          }
-        },
-        style: {
-          classes: "",
-          tip: {
-            width: 20,
-            height: 20
-          }
-        },
-        position: {
-          my: "bottom left",
-          at: "top right"
-        },
-        hide: {
-          event: 'click mousedown touchstart'
-        },
-        show: false // don't show on mouseover
-      };
-
-      var customConfig = $.parseJSON(callout.qtip_config);
-      var config = $.extend(true, {}, defaultConfig, customConfig);
-      config.style.classes = config.style.classes.concat(" cdo-qtips");
-
-      // Reverse callouts in RTL mode
-      if (Blockly.RTL) {
-        config.position.my = reverseCallout(config.position.my);
-        config.position.at = reverseCallout(config.position.at);
-        if (config.position.adjust) {
-          config.position.adjust.x *= -1;
-        }
-      }
-
-      if (callout.on) {
-        window.addEventListener(callout.on, function() {
-          if (!callout.seen && $(selector).length > 0) {
-            callout.seen = true;
-            $(selector).qtip(config).qtip('show');
-          }
-        });
-      } else {
-        $(selector).qtip(config).qtip('show');
-      }
-
-      return true;
-    });
   },
   onAttempt: function(report) {
     if (appOptions.level.isProjectLevel) {
@@ -119,26 +60,8 @@ var baseOptions = {
     }
   }
 };
-$.extend(appOptions, baseOptions);
+$.extend(true, appOptions, baseOptions, blocklyOptions);
 
-function reverseDirection(token) {
-  if (/left/i.test(token)) {
-    token = 'right';
-  } else if (/right/i.test(token)) {
-    token = 'left';
-  }
-  return token;
-}
-function reverseCallout(position) {
-  position = position.split(/\s+/);
-  var a = position[0];
-  var b = position[1];
-  return reverseDirection(a) + reverseDirection(b);
-}
-// Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
-$(window).on('function_editor_closed', function() {
-  $('.cdo-qtips').qtip('hide');
-});
 // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
 // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
 (function fixUpFunctions(node) {
@@ -355,6 +278,8 @@ function loadProject(promise) {
     if (hashData.channelId) {
       if (hashData.isEditingProject) {
         dashboard.isEditingProject = true;
+      } else {
+        $('#betainfo').hide();
       }
 
       // Load the project ID, if one exists
@@ -377,7 +302,9 @@ function loadProject(promise) {
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
     dashboard.isEditingProject = true;
-    promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
+    promise = promise.then(function () {
+      return dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName);
+    });
   }
   return promise;
 }

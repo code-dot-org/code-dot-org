@@ -1,12 +1,14 @@
-
 - bgc_head =  "51, 169, 213"  # "0,148,202" * 0.8
 - bgc_body = "255, 164, 0"        # "0,148,202" * 0.05
 
-#gallerycolumn.same-height-column{:style=>"width: 100%; margin-bottom:20px; margin-top:40px; display: table-cell; border: 5px solid white"}
+#gallerycolumn.same-height-column
   %a.nounderscorehover{href: "http://studio.code.org/gallery"}
-    .headingbox{style: "background-color: rgb(#{bgc_body}); left:0px;color:white; width:100%; padding:10px; font-size:20px; text-align:left; font-family: 'Gotham 5r', sans-serif; text-align:center"}
-      Code Studio student creations
-    .thelinks{style: "padding: 10px; height:100% "}
+    .headingbox{style: "background-color: rgb(#{bgc_body})"}
+      -if request.language  == 'en'
+        = I18n.t(:homepage_header_codestudio)
+      -else
+        = I18n.t(:studiobar_title_nolink)
+    .thelinks
       %img.col-50{src:"/shared/images/gallery/artist_gallery_thumbnails.png"}
       %img.col-50{src:"/shared/images/gallery/playlab_gallery_thumbnails.png"}
 

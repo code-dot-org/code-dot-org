@@ -11,11 +11,11 @@ is-IS:
   learn_now: Læra núna
   petition_message: Allir nemendur í öllum skólum ættu að fá tækifæri til að læra tölvunarfræði
   petition_sign_message: 'Skráðu nafn þitt ef þú ert sammála. Slástu í hóp með # öðrum.'
-  petition_sign_message_support: 'Styddu okkar með því að skrá nafn þitt. Slástu í hóp með # öðrum.'
+  petition_sign_message_support: 'Styddu okkur með því að skrá nafn þitt. Slástu í hóp með # öðrum.'
   name: Nafn
   email: Netfang
   zipcode: Póstnúmer eða land
-  submit: Senda
+  submit: Senda inn
   twentyhours_heading: Prófaðu námskeiðið okkar Inngangur að tölvunarfræði
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
   hoc2014_heading: 'Vertu með í <a href="http://hourofcode.com">Klukkustund kóðunar</a><br/>8. - 14. desember 2014<br/>'
@@ -24,7 +24,7 @@ is-IS:
   hoc2014_teachers: Kennarar
   hoc2014_host: Miðlið henni
   hoc2014_everyone: Allir
-  hoc2014_support: Styðjið þetta
+  hoc2014_support: 'Styðjið þetta &#x25BE;'
   hoc2014_whatishoc: Hvað er Klukkustund kóðunar?
   twentyhours_trynow: Prófa núna
   california_heading: Biddu skólann þinn að kenna tölvunarfræði
@@ -112,8 +112,9 @@ is-IS:
   stats_student: '"Ég vissi að þetta væri <b>einstakt tækifæri</b> á ævinni." - Mariana Alzate, 5. bekk'
   stats_michael: '"I hef <b>aldrei, aldrei</b> séð nemendur mína svona æsta í að læra." - Michael Clark, kennari'
   studiobar_title: "Prófa <a href='http://studio.code.org'>Kóðastúdíóið</a>"
+  studiobar_title_nolink: Prófa Kóðastúdíóið
   studiobar_elementary_title: Grunnskólanámskeið
-  studiobar_elementary_body: 'Þrjú ný námskeið okkar fyrir 11 - 12 ára (K&#8209;5)'
+  studiobar_elementary_body: 'Þrjú ný námskeið okkar fyrir 5 - 10 ára (K-5)'
   studiobar_hoc_title: Klukkustund kóðunar
   studiobar_hoc_body: Lærðu að kóða með Angry Birds
   studiobar_flappy_title: Flappy kóði
@@ -127,52 +128,91 @@ is-IS:
   studiobar_shop_title: Verslun
   studiobar_shop_body: Klæðstu merkinu okkar með stolti.
   homepage_hero_text_malala: |
-    &ldquo;Ég skora á stúlkur í hverju einasta landi að læra Klukkustund kóðunar&rdquo; 
-    Malala
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;Það er aldrei of seint að læra&rdquo;
-    Susan, aðalframkvæmdastjóri YouTube
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Láttu ekki nægja að spila á símann þinn, forritaðu hann.&rdquo;
     Barack Obama, forseti Bandaríkjanna
   homepage_hero_text_sheryl: |
-    &ldquo;Skilningur á tölvunarfræði er að verða sífellt nauðsynlegri...&rdquo;
-    Sheryl, framkvæmdastjóri hjá Facebook
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Klukkustund kóðunar
   homepage_slot_text_frozen: Frozen með Önnu og Elsu
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Stjórnborð kennara
   homepage_slot_text_studio: Allt kennsluefni okkar
   homepage_slot_text_course4: Námskeið 4
   homepage_slot_text_shop: Verslun
   homepage_slot_text_flappy: Flappy kóði
-  homepage_action_text_codevideo: Horfa á myndskeiðið
-  homepage_action_text_teachervideo: Horfa á myndskeiðið
+  homepage_action_text_codevideo: Horfðu á myndbandið
+  homepage_action_text_teachervideo: Horfðu á myndbandið
   homepage_action_text_learn: Byrjaðu að læra í dag
-  homepage_action_text_signpetition: Skrifa undir áskorunina
-  homepage_signpetition_dropdown: 'Skrifa undir áskorun okkar &#x25BE;'
+  homepage_action_text_signpetition: Skrifaðu undir áskorunina
+  homepage_signpetition_dropdown: 'Skrifaðu undir áskorun okkar &#x25BE;'
   homepage_slot_text_title_hoc: Klukkustund kóðunar
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Allir geta lært. Byrjaðu í dag
   homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Haltu Klukkustund kóðunar
+  homepage_slot_text_link_hocserved: '# þjónað'
   homepage_slot_text_title_students: Nemendur
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Skoða allt kennsluefni okkar
+  homepage_slot_text_link_codestudio: Prófa Kóðastúdíóið
+  homepage_slot_text_link_local: Finna nám í nágrenninu
+  homepage_slot_text_link_othercourses: Önnur námskeið á netinu
+  homepage_slot_text_title_educators: Fræðsluaðilar
+  homepage_slot_text_blurb_educators: Kennið nemendum ykkar
+  homepage_slot_text_link_k5: 'Námskeið fyrir 5 - 10 ára bekki (K-5)'
+  homepage_slot_text_link_fullcurriculum: Sjá allt námsefni okkar
+  homepage_slot_text_link_pd: Fagmenntun
+  homepage_slot_text_title_advocates: Talsmenn
+  homepage_slot_text_blurb_advocates: Styðjið starf okkar
+  homepage_slot_text_link_stats: Sjá tölfræðina
+  homepage_slot_text_link_buy: Kaupa bol eða húfu
+  homepage_slot_text_link_donate: Styrkja með peningagjöf
+  homepage_header_codestudio: Sköpunarverk nemenda í Kóðastúdíói
+  homepage_header_donors: Code.org þakkar stuðningsaðilum
+  homepage_donors_seall: Sjá allt
   homepage_donors_donate: Styrkja
   contact_form_topic_student: Ég er nemandi
   contact_form_topic_parent: Ég er foreldri
@@ -231,9 +271,9 @@ is-IS:
   dashboard_landing_view_as_student: Skoða þennan vef sem nemandi
   dashboard_landing_students_title: Nemendur þínir
   dashboard_landing_students_manage: Skoða og hafa umsjón með nemendum þínum
-  dashboard_landing_news_title: 'Auðlindir kennara 10 - 11 ára (aðeins á ensku)'
-  dashboard_landing_new_beta: 'Nýtt! Prófaðu beta námskeiðin okkar fyrir 10 - 11 ára.'
-  dashboard_landing_new_k5courses: 'Nýtt! Prófaðu námskeiðin okkar fyrir 10 - 11 ára.'
+  dashboard_landing_news_title: 'Efniviður kennara 5 - 10 ára bekkja (á ensku)'
+  dashboard_landing_new_beta: 'Nýtt! Prófaðu beta námskeiðin okkar fyrir 5 - 10 ára.'
+  dashboard_landing_new_k5courses: 'Nýtt! Prófaðu námskeiðin fyrir 5 - 10 ára bekki.'
   dashboard_landing_useful_links: Aðrar gagnlegar krækjur (aðeins á ensku)
   dashboard_landing_office_hours: Spurðu í eigin persónu! Komdu í mánaðarlega myndspjallstíma okkar.
   dashboard_landing_print_certificates: Prenta skírteini fyrir nemendur sem ljúka þessu námskeiði
@@ -322,7 +362,7 @@ is-IS:
   dashboard_students_print_page: Prenta þessa síðu
   dashboard_students_url: Vefslóð
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Smelltu hér</a> til að sækja persónuverndarskjal okkar sem þú getur deilt eða prentað handa nemendum.'
-  dashboard_curriculum_overview: 'Yfirlit 10 - 11 ára námsefnis'
+  dashboard_curriculum_overview: 'Yfirlit 5 - 10 ára (K-5) námsefnis'
   dashboard_view_all_lesson_plans: Sjá allar kennsluáætlanir
   dashboard_course1: 'Námskeið 1:'
   dashboard_course2: 'Námskeið 2:'
@@ -594,7 +634,7 @@ is-IS:
   hourofcode_longdescription: Staðgengill fyrir nýtt code.org/hoc
   frozen_longdescription: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna töfra og fegurð íssins. Þú munt búa til snjókorn og mynstur með því að láta þær skauta um ísinn og svo getur þú búið til eigin vetrarveröld til að deila með vinum!
   playlab_longdescription: Búðu til sögu eða leik með Leikjasmiðjunni! Láttu dýr, sjóræningja, uppvakninga, ninjur og fleiri leikverur hreyfast, gefa frá sér hljóð, skora stig og jafnvel kasta eldhnöttum!
-  codeorg_beyond_name: Kynning á tölvunarfræði (13 ára)
+  codeorg_beyond_name: 'Kynning á tölvunarfræði (5 - 13 ára bekkir)'
   khan_beyond_name: Lærðu tölvuforritun
   tynker_beyond_name: Lærðu forritun heima
   scratch_beyond_name: Virkjaðu sköpunargleðina með forritun

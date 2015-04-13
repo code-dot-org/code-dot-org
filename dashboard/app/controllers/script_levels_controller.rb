@@ -116,8 +116,6 @@ private
       no_footer: (@game == Game.applab)
     )
 
-    @applab_user_id = applab_user_id
-
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
       success: milestone_response(script_level: @script_level, solved?: true),

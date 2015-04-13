@@ -1,0 +1,14 @@
+<ContractMatch>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2015-01-06T17:22:23.000Z",
+  "properties": {
+    "answers": [
+      "Square|Image|Number|String"
+    ],
+    "title": "Square Contract",
+    "content1": "Write a contract for a purple square that is 15 pixels in size.",
+    "content2": "Example 2.solution_blocks, 300"
+  }
+}]]></config>
+</ContractMatch>

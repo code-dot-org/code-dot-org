@@ -84,7 +84,7 @@ Metrics/BlockNesting:
 # Offense count: 45
 # Configuration parameters: CountComments.
 Metrics/ClassLength:
-  Max: 634
+  Max: 1000
 
 # Offense count: 70
 Metrics/CyclomaticComplexity:
@@ -418,11 +418,6 @@ Style/MultilineOperationIndentation:
 
 # Offense count: 4
 Style/MultilineTernaryOperator:
-  Enabled: false
-
-# Offense count: 8
-# Cop supports --auto-correct.
-Style/NegatedIf:
   Enabled: false
 
 # Offense count: 8

@@ -208,11 +208,10 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
     # Select the first script block containing 'appOptions', then execute it in a JavaScript engine
     # and return the computed value we want to compare against.
-    element = css('script').select{|x|x.to_s.match(/appOptions/) }.first
-    level_source_id = ExecJS.exec("#{element.child.text};\nreturn appOptions.level_source_id")
+    element = css('script').select{|x|x.to_s.match(/blocklyOptions/) }.first
+    level_source_id = ExecJS.exec("#{element.child.text};\nreturn blocklyOptions.level_source_id")
     assert_equal @level_source.id, level_source_id
   end
-
 
   test 'artist levelsource has sharing meta tags' do
     level_source = create(:level_source, level: Artist.first)
