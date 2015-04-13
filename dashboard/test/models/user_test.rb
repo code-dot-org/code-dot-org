@@ -863,4 +863,25 @@ class UserTest < ActiveSupport::TestCase
     assert !user.confirmation_required?
     assert !user.confirmed_at
   end
+
+
+  test 'levels_from_script does not include userlevels from other scripts' do
+    user = create :user
+
+    script = Script.find(2) # original hoc script
+    shared_level = script.script_levels.first.level
+
+    assert shared_level.script_levels.count > 1
+
+    other_script = (shared_level.script_levels.collect(&:script) - [script]).first
+    assert other_script
+
+    other_script_user_level = UserLevel.create!(script_id: other_script.id, level_id: shared_level.id, user_id: user.id)
+    user_level = UserLevel.create!(script_id: script.id, level_id: shared_level.id, user_id: user.id)
+
+    lfs = user.levels_from_script(script)
+
+    assert_not_equal other_script_user_level, lfs.first.user_level
+    assert_equal user_level, lfs.first.user_level
+  end
 end

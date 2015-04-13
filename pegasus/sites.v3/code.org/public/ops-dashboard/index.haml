@@ -587,10 +587,16 @@ title: "Ops Dashboard"
         return 'N/A';
       }
 
+      $scope.editingAny = function(things) {
+        if (!things) {
+          return false;
+        }
+        return $.grep(things, function(thing) {return thing.editing;}).length > 0
+      };
+
       $scope.save = function (workshop) {
          if (workshop.id) {
-           var newWorkshop = new workshopsService($scope.workshop);
-           workshopsService.update({id: workshop.id}, workshop);
+           workshopsService.update({id: workshop.id}, {workshop: workshop});
            $('#save-confirmation').css('display', 'inline');
            $('#save-confirmation').fadeOut(2500);
          } else {
@@ -619,6 +625,6 @@ title: "Ops Dashboard"
             });
           }
         );
-      }
+      };
     }
   ]);
