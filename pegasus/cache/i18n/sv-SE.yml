@@ -30,7 +30,7 @@
   hoc2014_teachers: Lärare
   hoc2014_host: Anordna
   hoc2014_everyone: Alla
-  hoc2014_support: Stötta
+  hoc2014_support: Stötta &#x25BE;
   hoc2014_whatishoc: Vad är kodtimmen?
   twentyhours_trynow: Prova nu
   california_heading: Be din skola undervisa datavetenskap
@@ -134,6 +134,7 @@
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     - Michael Clark, Teacher'
   studiobar_title: Utforska <a href='http://studio.code.org'>kodstudion</a>
+  studiobar_title_nolink: Utforska kodstudion
   studiobar_elementary_title: Grundkurser
   studiobar_elementary_body: Våra tre nya kurser för grundskolan
   studiobar_hoc_title: Timme med Kod
@@ -149,19 +150,49 @@
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Timme med Kod
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard

@@ -26,7 +26,7 @@
   "CONTRACT_EDITOR_HEADER": "Створення рецепту",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "перервати цикл",
-  "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "продовжити з наступної ітерації циклу",
+  "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "продовжити з наступним виконанням циклу",
   "CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK": "Перервати внутрішній цикл.",
   "CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE": "Пропустити залишок цього циклу і перейти до виконання наступної ітерації.",
   "CONTROLS_FLOW_STATEMENTS_WARNING": "Попередження: цей блок може бути використаний тільки в межах циклу.",

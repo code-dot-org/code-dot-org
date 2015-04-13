@@ -1258,8 +1258,9 @@ studioApp.reset = function(first) {
     projectile.removeElement();
   }
 
-  // True if we should failure despite being freeplay
-  Studio.freePlayFailure = false;
+  // True if we should fail before execution, even if freeplay
+  Studio.preExecutionFailure = false;
+  Studio.message = null;
 
   // Reset the score and title screen.
   Studio.playerScore = 0;
@@ -1399,7 +1400,7 @@ var displayFeedback = function() {
       tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && level.freePlay && !Studio.freePlayFailure,
+      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -1543,6 +1544,29 @@ var nativeGetCallback = function () {
 };
 
 /**
+ * Looks for failures that should prevent execution.
+ * @returns {boolean} True if we have a pre-execution failure
+ */
+Studio.checkForPreExecutionFailure = function () {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Studio.message = commonMsg.emptyFunctionalBlock();
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  if (studioApp.hasExtraTopBlocks()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the story
  */
 Studio.execute = function() {
@@ -1553,11 +1577,7 @@ Studio.execute = function() {
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
-    if (studioApp.hasUnfilledFunctionalBlock()) {
-      Studio.result = false;
-      Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-      Studio.message = commonMsg.emptyFunctionalBlock();
-      Studio.freePlayFailure = true;
+    if (Studio.checkForPreExecutionFailure()) {
       return Studio.onPuzzleComplete();
     }
 
@@ -1644,7 +1664,7 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function() {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (level.freePlay && !Studio.freePlayFailure) {
+  } else if (level.freePlay && !Studio.preExecutionFailure) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -1657,10 +1677,10 @@ Studio.onPuzzleComplete = function() {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    if (!Studio.freePlayFailure) {
+    if (!Studio.preExecutionFailure) {
       Studio.testResults = TestResults.FREE_PLAY;
     }
-    // If freePlayFailure testResults should already be set
+    // If preExecutionFailure testResults should already be set
   } else {
     Studio.testResults = studioApp.getTestResults(levelComplete);
   }

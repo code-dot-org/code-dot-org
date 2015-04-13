@@ -33,17 +33,25 @@ var SLIDER_DEFAULT_MAX_VALUE = 100;
  * @param {jQuery} rootDiv - element whose content we replace with the slider
  *        on render()
  * @param {Object} options
- * @param {function} onChange - a function invoked whenever the slider-value
- *        is changed by the student.  Passed the new value as an argument.
- * @param {number} value - Initial value of the slider
- * @param {number} min - Lowest possible value of the slider; next-to-lowest
- *        if lowerBoundInfinite is true.
- * @param {number} max - Highest possible value of the slider; next-to-highest
- *        if upperBoundInfinite is true.
- * @param {number} step - Step-value of jQueryUI slider - not necessarily
- *        related to min and max values if you provide custom value converters.
- * @param {boolean} upperBoundInfinite
- * @param {boolean} lowerBoundInfinite
+ * @param {function} [options.onChange] - a function invoked whenever the
+ *        slider-value is changed by the student.  Passed the new value as an
+ *        argument.
+ * @param {function} [options.onStop] - a function invoked only when the
+ *        slider-handle is released by the student.  Passed the new value as an
+ *        argument.
+ * @param {number} [options.value] - Initial value of the slider.  Defaults to
+ *        slider minimum value.
+ * @param {number} [options.min] - Lowest possible value of the slider;
+ *        next-to-lowest if lowerBoundInfinite is true.  Defaults to zero.
+ * @param {number} [options.max] - Highest possible value of the slider;
+ *        next-to-highest if upperBoundInfinite is true.  Defaults to 100.
+ * @param {number} [options.step] - Step-value of jQueryUI slider - not
+ *        necessarily related to min and max values if you provide custom value
+ *        converters. Defaults to 1.
+ * @param {boolean} [options.upperBoundInfinite] - if TRUE, the highest value
+ *        on the slider will be Infinity/Unlimited.  Default FALSE.
+ * @param {boolean} [options.lowerBoundInfinite] - if TRUE, the lowest value
+ *        on the slider will be -Infinity/Unlimited.  Default FALSE.
  */
 var NetSimSlider = module.exports = function (rootDiv, options) {
   /**
@@ -64,10 +72,18 @@ var NetSimSlider = module.exports = function (rootDiv, options) {
   /**
    * A function invoked whenever the slider-value is changed by the student.
    * Passed the new value (not slider position) as an argument.
-   * @type function
+   * @type {function}
    * @private
    */
   this.changeCallback_ = utils.valueOr(options.onChange, function () {});
+
+  /**
+   * A function invoked only when the slider-handle is released by the student.
+   * Passed the new value (not slider position) as an argument
+   * @type {function}
+   * @private
+   */
+  this.stopCallback_ = utils.valueOr(options.onStop, function () {});
 
   /**
    * @type {number}
@@ -138,7 +154,8 @@ NetSimSlider.prototype.render = function () {
         min: minPosition,
         max: maxPosition,
         step: this.step_,
-        slide: this.onSliderValueChange_.bind(this)
+        slide: this.onSliderValueChange_.bind(this),
+        stop: this.onSliderStop_.bind(this)
       });
   this.setLabelFromValue_(this.value_);
 };
@@ -158,14 +175,17 @@ NetSimSlider.prototype.setValue = function (newValue) {
   this.setLabelFromValue_(newValue);
 };
 
-/**
- * @private
- */
+/** @private */
 NetSimSlider.prototype.onSliderValueChange_ = function (event, ui) {
   var newValue = this.sliderPositionToValue(ui.value);
   this.value_ = newValue;
   this.setLabelFromValue_(newValue);
   this.changeCallback_(newValue);
+};
+
+/** @private */
+NetSimSlider.prototype.onSliderStop_ = function () {
+  this.stopCallback_(this.value_);
 };
 
 /**
@@ -246,8 +266,9 @@ var LOGARITHMIC_DEFAULT_BASE = 2;
 
 /**
  * @param {jQuery} rootDiv
- * @param {Object} options - takes NetSimSlider options, and:
- * @param {number} options.logBase - factor by which the value increases
+ * @param {Object} options - takes NetSimSlider options, except:
+ * @param {number} [options.min] - same as base slider, but defaults to 1.
+ * @param {number} [options.logBase] - factor by which the value increases
  *        with every slider step.  Default base 2.
  * @constructor
  * @augments NetSimSlider

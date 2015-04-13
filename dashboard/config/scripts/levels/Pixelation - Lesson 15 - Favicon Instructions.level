@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-07T16:40:07.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "title": "Pixelation - Lesson 15 - Favicon Instructions",
+    "content1": "description here",
+    "markdown": "# Project: Personal Favicon\n<img src = \"http://staging.code.org/images/cspunit1/code-pixel.png\" align=right width=50 hspace=20>\nA favicon is a small image, usually 16x16 pixels, that is typically shown in a web browser's address bar next to the title of the page or web address for a particular site. It is typically a small version of a company logo or some other symbol for the site. A favicon for Code.org is shown to the right.\n\nFavicons are designed by artists and programmed into web pages by web designers. Below are some examples of favicons---you might recognize some!\n<div>\n<img src = \"http://staging.code.org/images/cspunit1/faviconExamplesAndScreenCap.png\" align=center width=90% hspace=20>\n</div>\n<br>\nDo a google search for *Favicon* and see what comes up.\n\n**Directions:**\n\n* Create a personal 16x16 favicon and encode it using the Pixelation Widget \n* You must encode with 3 bits per pixel or greater\n* The image you make should represent your personality in some distinctive way. You will be using this favicon in future lessons and web sites that you make so be creative and thoughtful. \n* After you have finished your favicon, share it with others in the class by sending them the bits with the Internet Simulator Widget!\n* Click continue to get started\n</br><br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
+  },
+  "md5": "d198ad3b8bf0f9271c53bad651d05840"
+}]]></config>
+</External>

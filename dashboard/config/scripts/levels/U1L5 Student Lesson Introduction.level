@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-03T21:26:16.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "title": "title",
+    "content1": "description here",
+    "markdown": "## Unit 1: Lesson 5 - Sending Bits in the Real World\n\n# Background\nThe Internet is an interconnected system of various types of bit-sending devices. In the \"real world,\" a copper wire is used to transmit binary messages using electricity - a voltage on the wire means one thing, and no voltage means the other. Fiber-optic cables use light (literally on or off) to transmit a binary message. Bits are sent using a variety of mediums, each of which has benefits and drawbacks. \n\n# What happens in this lesson?\n* Investigate how bits are transmitted on the Internet.\n* Present your finding to your classmates.\n\n\n# Resources\n\n* Activity Guide: <a href=\"https://docs.google.com/document/d/1js03d0cgeLa0k05nufURz96Bb4py6tjtwavFYCV0c1U/edit?usp=sharing\" target=\"_blank\">Sending Bits in the Real World</a>\n* Assessment: <a href=\"https://docs.google.com/document/d/19ovLcsWFg7Oi-qm9bUV1ouS3jsDyII-C-reVCA-AbmE/edit?usp=sharing\" target=\"_blank\">Research and Presentation Rubric</a>\n* Video [How the Internet Works] need url\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
+  },
+  "md5": "642045112c17119b079085e5e15e72db"
+}]]></config>
+</External>

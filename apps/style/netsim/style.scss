@@ -1,19 +1,14 @@
 $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
-$white: #ffffff;
-$whitesmoke: #f5f5f5;
-$medium-gray: #ddd;
-$dark-gray: #a9a9a9;
-$black: #000000;
-$red: #ff0000;
-$code-org-pacific-blue: #00adbc;
-$code-org-web-orange: #ffa400;
-$own-node-background-color: #e0ffff;
-$router-row-hover-color: rgba(255, 140, 0, 0.21);
-$to-address-color: rgba(255, 233, 238, 0.85);
-$from-address-color: lightcyan;
-$packet-info-color: rgba(212, 238, 212, 0.90);
-$message-color: white;
+@import 'color';
+
+$own-node-background-color: $white;
+$user-row-hover-color: $lightest_teal;
+$router-row-hover-color: $lighter_orange;
+$to-address-color: $lightest_cyan;
+$from-address-color: $lightest_yellow;
+$packet-info-color: $lighter_green;
+$message-color: $white;
 
 // For aligning table columns across panels
 $narrow-column-width: 50px;
@@ -72,7 +67,7 @@ svg {
   
   .router-node {
     circle {
-      fill: $code-org-web-orange;
+      fill: $orange;
     }
   }
   
@@ -167,7 +162,7 @@ svg {
   // Orange SPAN button
   .netsim-button {
     display: inline-block;
-    background-color: $code-org-web-orange;
+    background-color: $orange;
     color: $white;
     border-radius: 3px;
     font-family: "Gotham 4r", sans-serif;
@@ -183,27 +178,53 @@ svg {
   //
   //General two-column layout rules
   //
-  #netsim_rightcol {
+  #netsim-rightcol {
     float: right;
     width: 300px;
 
-    #netsim_visualization {
+    #netsim-visualization {
       img {
         width: 100%;
       }
     }
   }
 
-  #netsim_leftcol {
+  #netsim-leftcol {
     margin-right: 320px;
   }
 
+  .netsim-shard-selection-panel {
+    overflow: hidden;
+
+    .content-wrap {
+      margin: 1em;
+    }
+
+    .field-box {
+      float: left;
+      margin-right: 1em;
+    }
+
+    .clearfix {
+      clear:both;
+    }
+  }
+
+  .netsim-lobby-panel {
+    .content-wrap {
+      margin: 1em;
+    }
+
+    ul {
+      margin: 0 0 10px 0;
+    }
+  }
 
   .netsim-panel.netsim-lobby div.panel-body {
     padding: 1em;
   }
 
-  #netsim_lobby_list {
+  .netsim-lobby-list {
     background-color: $white;
     padding: 0.5em;
     border: inset darkslategray thin;
@@ -211,32 +232,48 @@ svg {
 
     li {
       background-color: $white;
-      padding: 0.3em;
+      border-left: solid white 3px;
+      border-right: solid white 3px;
+      padding: 0.3em 0.8em;
+    }
+
+    .empty-row {
+      text-align: center;
+      color: $lightest_gray;
+      font-style: italic;
+    }
+
+    .selectable-row {
+      cursor: pointer;
+      &:hover {
+        border-left: solid $orange 3px;
+      }
     }
 
     .own-row {
-      font-weight: bold;
       background-color: $own-node-background-color;
+      font-style: italic;
     }
 
     .user-row {
-
+      &.selectable-row:hover {
+        background-color: $user-row-hover-color;
+        color: $black;
+      }
     }
 
     .router-row {
-      cursor: pointer;
-    }
-    .router-row:hover {
-      background-color: $router-row-hover-color;
-      color: $black;
+      &.selectable-row:hover {
+        background-color: $router-row-hover-color;
+        color: $black;
+      }
     }
 
+
     .selected-row {
-      background-color: $code-org-web-orange;
-      color: white;
-    }
-    .selected-row:hover {
-      background-color: $code-org-web-orange;
+      background-color: $orange !important;
+      color: white !important;
+      font-weight: bold;
     }
   }
 
@@ -259,8 +296,8 @@ svg {
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
-      background-color: $code-org-pacific-blue;
-      color: $whitesmoke;
+      background-color: $purple;
+      color: $white;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
       .panel_controls {
@@ -274,7 +311,7 @@ svg {
       border-left: solid darkgray thin;
       border-right: solid darkgray thin;
       border-bottom: solid darkgray thin;
-      border-top: solid $code-org-pacific-blue thin;
+      border-top: solid $purple thin;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
     }
 
@@ -302,10 +339,10 @@ svg {
       padding: 5px;
       border: solid darkgray thin;
       border-radius: 3px;
-      background-color: $medium-gray;
+      background-color: $lightest_gray;
 
       td {
-        border-color: $medium-gray;
+        border-color: $lightest_gray;
       }
     }
 
@@ -380,7 +417,7 @@ svg {
 
     .netsim-packet {
       border: solid darkgray thin;
-      background-color: $medium-gray;
+      background-color: $lightest_gray;
       margin: 10px;
       padding: 0.5em;
       border-radius: 0.5em;
@@ -412,12 +449,12 @@ svg {
       }
 
       .watermark {
-        color: $medium-gray;
+        color: $lightest_gray;
       }
 
       .bit-counter {
         text-align: right;
-        color: $dark-gray;
+        color: $light_gray;
         &.oversized {
           color: $red;
         }
@@ -480,6 +517,7 @@ svg {
 
     .send_widget_footer {
       margin: 10px;
+      overflow: hidden;
 
       .right-side-controls {
         float: right;
@@ -581,7 +619,7 @@ svg {
 
     // Modify actual tabs at top of tab area
     .ui-tabs-nav {
-      background: $code-org-pacific-blue;
+      background: $purple;
       border-left: none;
       border-right: none;
       border-top: none;
@@ -654,7 +692,7 @@ svg {
 
     tr.dns-node {
       color: $white;
-      background-color: $code-org-web-orange;
+      background-color: $orange;
     }
   }
 

@@ -31,13 +31,13 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 ## Materials, Resources, and Prep
 
 ### For the Teacher
-- [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1hWgXUeeBMh_ah8GUTBshhy_5GAbiIwNj87M-8MkVJH4/edit#slide=id.g63497456e_010/)
+- [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1hWgXUeeBMh_ah8GUTBshhy_5GAbiIwNj87M-8MkVJH4/)
 
 ## Getting Started
 
 ### <a name="GetStarted"></a> 1) Introduction
 
-Creating some simple booleans and some more complex expressions prior to the progressions is an excellent warm-up activity.  Some examples have been included in the slide deck.  The slide deck also has extra practice related to expressions that the students will have seen in the puzzles.
+Creating some sample boolean expressions - both simple and complex - is an excellent warm-up activity before the puzzle stages.  Some examples have been included in the slide deck.  The slide deck also has extra practice related to expressions that the students will have seen in the puzzles.
 
 [/together]
 

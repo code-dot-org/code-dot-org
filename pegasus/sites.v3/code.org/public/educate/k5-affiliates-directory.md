@@ -2,7 +2,9 @@
 title: K-5 Program
 nav: educate_nav
 ---
+<a name="top"></a>
 # Find a K-5 Affiliate
+Below is a list of all K-5 Affiliates. To find and sign up for a workshop they are hosting, visit our [professional development workshops page](http://code.org/professional-development-workshops).
 
 [col-25]
 
@@ -11,7 +13,7 @@ nav: educate_nav
 - [Arizona](#az)
 - [California](#ca)
 - [Colorado](#co)
-- [Connecticut](#co)
+- [Connecticut](#ct)
 - [Florida](#fl)
 - [Georgia](#ga)
 - [Hawaii](#hi)
@@ -22,7 +24,7 @@ nav: educate_nav
 [col-25]
 
 - [Idaho](#id)
-- [Illinois](il)
+- [Illinois](#il)
 - [Iowa](#ia)
 - [Louisiana](#la)
 - [Maine](#me)
@@ -42,7 +44,7 @@ nav: educate_nav
 - [Nebraska](#ne)
 - [New Hampshire](#nh)
 - [New Jersey](#nj)
-- [Nevada](#ne)
+- [Nevada](#nv)
 - [New York](#ny)
 - [Ohio](#oh)
 - [Oklahoma](#ok)
@@ -53,6 +55,8 @@ nav: educate_nav
 
 [col-25]
 
+
+- [Oregon](#or)
 - [Pennsylvania](#pa)
 - [Rhode Island](#ri)
 - [South Carolina](#sc)
@@ -92,7 +96,7 @@ angeloff@pd.code.org
 
 <a id="ca"></a>
 ## California
-## Bay Area
+### Bay Area
 [col-33]
 
 ### Ben Chun
@@ -107,7 +111,7 @@ chun@pd.code.org
 ### Swetha Bhattacharya
 San Jose, CA
 
-Bhattacharya@pd.code.org
+bhattacharya@pd.code.org
 
 [/col-33]
 
@@ -122,7 +126,7 @@ lemon@pd.code.org
 
 <p style="clear:both">&nbsp;</p>
 
-## Sacramento Region
+### Sacramento Area
 [col-33]
 ### Matthew Rowland
 Sacramento, CA
@@ -151,7 +155,7 @@ feder@pd.code.org
 
 <p style="clear:both">&nbsp;</p>
 
-## Los Angeles Area
+### Los Angeles Area
 [col-33]
 ### Dave Dawson
 Lancaster, CA
@@ -225,7 +229,7 @@ casas@pd.code.org
 
 <p style="clear:both">&nbsp;</p>
 
-## San Diego Area
+### San Diego Area
 [col-33]
 ### Frank Carmody
 San Diego, CA
@@ -353,7 +357,9 @@ davis@pd.code.org
 
 <a id="hi"></a>
 ## Hawaii
+Honolulu, HI
 
+asselstine@pd.code.org
 <a id="id"></a>
 ## Idaho
 ### Heidi Pluska
@@ -471,7 +477,7 @@ style="clear:both">&nbsp;
 
 <a id="mn"></a>
 ## Minnesota
-### Teri SUe Hitchcock
+### Teri Sue Hitchcock
 Apple Valley, MN
 
 hitchcock@pd.code.org
@@ -525,7 +531,7 @@ steen@pd.code.org
 ### Karen Locke
 Hopkinton, NH
 
-locke@Pd.code.org
+locke@pd.code.org
 
 <a id="nj"></a>
 ## New Jersey
@@ -536,15 +542,97 @@ drakes@pd.code.org
 
 <a id="nv"></a>
 ## Nevada
+[col-33]
+### Cindi Chang
+Las Vegas, NV
+
+chang@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Nancy Lee
+Las Vegas, NV
+
+lee@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
 
 <a id="ny"></a>
 ## New York
+[col-33]
+### Alana Aaron
+New York, NY
+
+aaron@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Lionel Bergeron
+New York, NY
+
+bergeron@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Keledy Kenkel
+New York, NY
+
+kenkel@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Melissa Brennan
+Briarcliff Manor, NY
+
+brennan@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Pamela Trincado
+Forest Hills, NY
+
+trincado@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
 
 <a id="oh"></a>
 ## Ohio
+### Nigamanth Sridhar
+Cleveland, OH
+
+sridhar@pd.code.org
 
 <a id="ok"></a>
 ## Oklahoma
+### Adam Carr
+Blanchard, OK
+
+carr@pd.code.org
+
+<a id="or"></a>
+## Oregon
+### Kiki Prottsman
+Eugene, OR
+
+prottsman@pd.code.org
 
 <a id="pa"></a>
 ## Pennsylvania
@@ -562,24 +650,143 @@ ficarra@pd.code.org
 
 <a id="sc"></a>
 ## South Carolina
+### Ann Puckett
+Columbia, SC
+
+puckett@pd.code.org
 
 <a id="tn"></a>
 ## Tennessee
+### Keith Jackson
+Oak Ridge, TN
+
+jackson@pd.code.org
 
 <a id="tx"></a>
 ## Texas
+### Austin
+[col-33]
+### Phillip Eaglin
+Austin, TX
+
+eaglin@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Vanessa Jones
+Austin, TX
+
+vjones@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Hal Speed
+Austin, TX
+
+speed@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
+
+### Dallas
+### Kimberly Lane
+Dallas, TX
+
+lane@pd.code.org
+
+### Houston
+[col-33]
+### Ruth Hanson
+Houston, TX
+
+hanson@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Karen North
+Houston, TX
+
+north@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
 
 <a id="ut"></a>
 ## Utah
+[col-33]
+### Carl Lyman
+Spanish Fork, UT
+
+lyman@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Rachel Ramsay
+St. George, UT
+
+ramsay@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
 
 <a id="va"></a>
 ## Virginia
+### Rebecca Dovi
+Richmond, VA
+
+dovi@pd.code.org
 
 <a id="wa"></a>
 ## Washington
+[col-33]
+### Kristen Olson
+Seattle, WA
+
+olson@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Tammie Schrader
+Cheney, WA
+
+schrader@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
 
 <a id="wi"></a>
 ## Wisconsin
+### Dennis Brylow
+Milwaukee, WI
+
+brylow@pd.code.org
 
 
-
+<br />
+<br />
+<a href="#top">Back to top</a>
+<p
+style="clear:both";>&nbsp;
+</p>

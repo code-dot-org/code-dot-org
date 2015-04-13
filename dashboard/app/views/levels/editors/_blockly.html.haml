@@ -7,9 +7,6 @@
     font-size: 100%;
   }
 
-- content_for(:head) do
-  = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
-  = javascript_include_tag 'editor/blockly_editor'
 .field
   = f.label :edit_code, @level.game.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
 .field
@@ -104,75 +101,6 @@
   = f.label :step_speed, 'Step speed'
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
-
-.field.callouteditor
-  %label Callout Editor
-  %div{id: "callout_template", style: "display: none;"}
-    %div
-      %table
-        %tr
-          %td Element ID
-          %td Localization Key
-          %td Callout text
-        %tr
-          %td
-            %input{class: "element_id", type: 'text', placeholder: '#runButton'}
-          %td
-            %input{class: "localization_key", type: 'text', placeholder: 'level_name_callout1'}
-          %td{colspan: 4}
-            %input{class: "callout_text", type: 'text', placeholder: 'Text of callout', style: "width: 100%"}
-        %tr
-          %td Qtip on callout
-          %td Qtip points to Element
-          %td Show when
-          %td X distance
-          %td Y distance
-          %td Hide qtip?
-        %tr
-          %td
-            %select{class: "qtip_position_my"}
-              %option{value: 'top left'} Top left
-              %option{value: 'top center'} Top center
-              %option{value: 'top right'} Top right
-              %option{value: 'right top'} Right top
-              %option{value: 'right center'} Right center
-              %option{value: 'right bottom'} Right bottom
-              %option{value: 'bottom right'} Bottom right
-              %option{value: 'bottom center'} Bottom center
-              %option{value: 'bottom left'} Bottom left
-              %option{value: 'left bottom'} Left bottom
-              %option{value: 'left center'} Left center
-              %option{value: 'left top'} Left top
-          %td
-            %select{class: "qtip_position_at"}
-              %option{value: 'top left'} Top left
-              %option{value: 'top center'} Top center
-              %option{value: 'top right'} Top right
-              %option{value: 'right top'} Right top
-              %option{value: 'right center'} Right center
-              %option{value: 'right bottom'} Right bottom
-              %option{value: 'bottom right'} Bottom right
-              %option{value: 'bottom center'} Bottom center
-              %option{value: 'bottom left'} Bottom left
-              %option{value: 'left bottom'} Left bottom
-              %option{value: 'left center'} Left center
-              %option{value: 'left top'} Left top
-          %td
-            %input{class: "on", type: 'text', placeholder: 'function_editor_opened'}
-          %td
-            %input{class: "qtip_position_adjust_x" , type: 'number', style: 'width: 80px;'}
-          %td
-            %input{class: "qtip_position_adjust_y", type: 'number', style: 'width: 80px;'}
-          %td
-            %input{class: "qtip_hide", type: 'checkbox'}
-      %button{id: "remove_callout", type: 'button'} X Remove callout
-      %hr
-  %div{id: "all_callouts_editor"}
-  %button{id: "add_callout", type: 'button'} + Add a callout
-
-.field
-  = f.label :callout_json
-  = f.text_area :callout_json, rows: 4
 - if @level.respond_to? :free_play
   .field
     = f.label :free_play, 'Free Play'
@@ -209,7 +137,7 @@
   = f.label :input_output_table, 'Input/Output Table'
   %p An array of tuples where each tuple is [input, output].
   %p i.e. The table for f(x) = x - 5 might look like: [ [15, 10], [10, 5], [25, 20] ]
-  = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: (JSON.pretty_generate(@level.input_output_table) if @level.input_output_table)
+  = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: @level.input_output_table
   :javascript
       codeMirror('input_output_table', 'javascript')
 -if @level.respond_to? :solution_blocks
@@ -221,125 +149,3 @@
     = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
     :javascript
       codeMirror('solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
-
-:javascript
-  // <![CDATA[
-    var callout_editor = CodeMirror.fromTextArea($('#level_callout_json').get(0), {
-      mode: 'javascript',
-      viewportMargin: Infinity,
-      matchBrackets: true
-    });
-
-    var callout_spaces = [];
-    var updated_callouts = [];
-    var space_id = 0;
-
-    fill_form_with_existing_callouts();
-
-    function fill_form_with_existing_callouts() {
-      var callout_json = callout_editor.getValue();
-      var callouts = [];
-
-      if(callout_json.length > 0) {
-        callouts = JSON.parse(callout_json);
-      }
-
-      for(var i=0; i<callouts.length; i++) {
-        if(callouts[i].callout_text) {
-          create_new_callout_space();
-          id = callout_spaces[i];
-          var calloutSpace = $('.callout_' + id);
-
-          calloutSpace.find(".localization_key").val(callouts[i].localization_key);
-          calloutSpace.find(".callout_text").val(callouts[i].callout_text);
-          calloutSpace.find(".element_id").val(callouts[i].element_id);
-          calloutSpace.find(".on").val(callouts[i].on);
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position)) {
-            calloutSpace.find(".qtip_position_my").val(callouts[i].qtip_config.position.my);
-          }
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position)) {
-            calloutSpace.find(".qtip_position_at").val(callouts[i].qtip_config.position.at);
-          }
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position) && (callouts[i].qtip_config.position.adjust)) {
-            calloutSpace.find(".qtip_position_adjust_x").val(callouts[i].qtip_config.position.adjust.x);
-          }
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.position) && (callouts[i].qtip_config.position.adjust)) {
-            calloutSpace.find(".qtip_position_adjust_y").val(callouts[i].qtip_config.position.adjust.y);
-          }
-          if ((callouts[i].qtip_config) && (callouts[i].qtip_config.style) && (callouts[i].qtip_config.style.classes) && (callouts[i].qtip_config.style.classes == "no-tip")) {
-            calloutSpace.find(".qtip_hide").prop("checked", true);
-          }
-        }
-        update_callout_json();
-      }
-    }
-
-    function update_callout_json() {
-      for(i=0; i<updated_callouts.length; i++) {
-        save_callouts_in_updated_callouts(i);
-      }
-      callout_json = JSON.stringify(updated_callouts, null, ' ');
-      callout_editor.setValue(callout_json);
-    }
-
-    function save_callouts_in_updated_callouts(i) {
-      id = callout_spaces[i];
-      var calloutSpace = $('.callout_' + id);
-
-      updated_callouts[i].localization_key = calloutSpace.find('.localization_key').val();
-      updated_callouts[i].callout_text = calloutSpace.find('.callout_text').val();
-      updated_callouts[i].element_id = calloutSpace.find('.element_id').val();
-      updated_callouts[i].on = calloutSpace.find('.on').val();
-      updated_callouts[i].qtip_config.position.my = calloutSpace.find('.qtip_position_my').val();
-      updated_callouts[i].qtip_config.position.at = calloutSpace.find('.qtip_position_at').val();
-      updated_callouts[i].qtip_config.position.adjust.x = parseInt(calloutSpace.find('.qtip_position_adjust_x').val());
-      updated_callouts[i].qtip_config.position.adjust.y = parseInt(calloutSpace.find('.qtip_position_adjust_y').val());
-
-      if ($('.callout_' + id + ' .qtip_hide').prop("checked") == true) {
-        updated_callouts[i].qtip_config.style.classes = "no-tip";
-      }
-      else {
-        updated_callouts[i].qtip_config.style.classes = "";
-      }
-    }
-
-    function add_empty_callout() {
-      var callout = {};
-      callout.localization_key = "";
-      callout.callout_text = "";
-      callout.element_id = "";
-      callout.on = "";
-      callout.qtip_config = {};
-      callout.qtip_config.position = {};
-      callout.qtip_config.position.adjust = {};
-      callout.qtip_config.style = {};
-      updated_callouts.push(callout);
-    }
-
-    function create_new_callout_space() {
-      $("#callout_template").children(":first").clone().addClass("callout_" + space_id).appendTo("#all_callouts_editor").show();
-      callout_spaces.push(space_id++);
-      add_empty_callout();
-    }
-
-    $(document).on("click", "#add_callout", function(){
-      create_new_callout_space();
-      update_callout_json();
-    });
-
-    $(document).on("click", "#remove_callout", function(){
-      callout_class = $(this).parent().attr('class');
-      $("." + callout_class).remove();
-
-      id = callout_class.match(/\d+/g);
-      var index = callout_spaces.indexOf(parseInt(id));
-      callout_spaces.splice(index, 1);
-      updated_callouts.splice(index, 1);
-
-      update_callout_json();
-    });
-
-    $(document).on("change", ".callouteditor input, .callouteditor select", function() {
-      update_callout_json();
-    });
-  // ]]>

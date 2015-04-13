@@ -20,7 +20,13 @@
   = render partial: 'levels/blockly'
 - elsif @level.is_a?(DSLDefined)
   = render partial: "levels/#{@level.class.to_s.underscore}"
-  %div{style: 'width: 400px'}= render partial: 'levels/reference_area'
+  :javascript
+    var appOptions = #{app_options.to_json};
+    dashboard.createCallouts(appOptions.callouts);
+    if (appOptions.autoplayVideo) {
+      showVideoDialog(appOptions.autoplayVideo);
+    }
+  = render partial: 'levels/reference_area'
 - else
   = render partial: 'levels/blockly'
 

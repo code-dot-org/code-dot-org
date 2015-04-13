@@ -62,13 +62,13 @@ This lesson has three new and important words:<br/>
 - **Sprite** - a graphic character on the screen.  Sometimes called a bitmap or an image.
 
 ### <a name="GetStarted"></a> 2) Learning a Language
-Welcome to Code.org CS in Algebra! In this course you’ll be learning a new programming language - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you’ll have to learn. Fortunately, the language you’ll be using here has a lot in common with simple math that you already know!
+Welcome to Code.org CS in Algebra! In this course you’ll be learning a new programming language - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you’ll have to learn. Fortunately, the language you’ll be using here has a lot in common with the simple math that you already know!
 
-_Connect the material that’s to come with things students already know:_
+_Connect this material with things students already know:_
 
 - What makes a language?
 - Does anyone speak a second (or third) language? Do you speak a different language than your parents/grandparents?
-- Are there languages that share features in common such as a common root (Romance, Germanic) or alphabet (Latin, Cyrillic, Arabic, Kanji)?
+- Are there languages that share features, such as a common root (Romance, Germanic) or a similar alphabet (Latin, Cyrillic, Arabic, Kanji)?
 - Are there languages that are designed for specific purposes or within certain constraints (sign language, Esperanto)?
 - Math is a language, just like English, Spanish, or any other language!
   - We use nouns, like "bread", "tomato", "mustard" and "cheese" to describe physical objects. Math has values, like the numbers 1, 2 or 3, to describe quantities.
@@ -84,7 +84,7 @@ A mathematical expression is like a sentence: it’s an instruction for doing so
 ## Activities:
 ### <a name="Activity1"></a> 3) Reverse Engineer a Demo
 
-Let’s begin by exploring a simple video game, and then figuring out how it works. Open [this link](http://studio.code.org/s/algebra/stage/1/puzzle/2/) to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!
+Let’s begin by exploring a simple video game, and then figuring out how it works. Open [this link](http://studio.code.org/s/algebra/stage/1/puzzle/2/) to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the up and down - try to catch the unicorn and avoid the dragon!
 
 This game is made up of characters, each of which has its own behavior. The unicorn moves from the left to the right, while the dragon moves in the opposite direction. The ninja only moves when you hit the arrow keys, and can move up and down. We can figure out how the game works by first understanding how each character works.
 
@@ -106,7 +106,7 @@ This game is made up of characters, each of which has its own behavior. The unic
 ### <a name="Activity2"></a> 4) Coordinate Planes
 
 <img src="number_line.png" style="float:right; width: 200px; padding: 0 0 10px 10px"/>
-Computers use numbers to represent a character’s position on screen, using number lines as rulers to measure the distance from the bottom-left corner of the screen. For our video game, we will place the number line so that the screen runs from 0 (on the left) to 400 (on the right). We can take the image of the Dragon, stick it anywhere on the line, and measure the distance back to the lefthand edge. Anyone else who knows about our number line will be able to duplicate the exact position of the Dragon, knowing only the number. What is the coordinate of the Dragon on the righthand side of the screen? The center? What coordinate would place the Dragon beyond the lefthand edge of the screen?
+Computers use numbers to represent a character’s position on screen, using number lines as rulers to measure the distance from the bottom-left corner of the screen. For our video game, we will place the number line so that the screen runs from 0 (on the left) to 400 (on the right). We can take the image of the Dragon, stick it anywhere on the line, and measure the distance back to the left hand edge. Anyone else who knows about our number line will be able to duplicate the exact position of the Dragon, knowing only the number. What is the coordinate of the Dragon on the right hand side of the screen? The center? What coordinate would place the Dragon beyond the left hand edge of the screen?
 
 [tip]
 
@@ -136,7 +136,7 @@ Fill in the rest of the reverse-engineering table, identifying what is changing 
 ## Wrap-up
 ### <a name="WrapUp"></a> 5) Brainstorming for a Game
 
-Use the [game planning template](../docs/worksheets/game_planning.pdf) for you to make your own game. Just like we made a list of everything in the Ninja game, we’re going to start with a list of everything in your game.
+Use the [game planning template](../docs/worksheets/game_planning.pdf) to make your own game. Just like we made a list of everything in the Ninja game, we’re going to start with a list of everything in your game.
 To start, your game will have four things in it:
 
 - A Background, such as a forest, a city, space, etc.

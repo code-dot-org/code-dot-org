@@ -5,6 +5,7 @@ require 'i18n/backend/fallbacks'
 require 'logger'
 require 'bcrypt'
 require 'chronic'
+require 'nokogiri'
 
 def slog(h)
   CDO.slog ({ application: :pegasus }).merge(h)

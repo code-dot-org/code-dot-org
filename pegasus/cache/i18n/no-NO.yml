@@ -15,7 +15,8 @@
   learn_now: Lær nå
   petition_message: Alle skoleelever burde ha muligheten til å lære koding
   petition_sign_message: 'Om du samtykker, signer med navnet ditt. Bli med # andre.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Signer dette dersom du ønsker å støtte oss. Gjør
+    som # andre.'
   name: Navn
   email: E-post
   zipcode: Postnummer eller land
@@ -30,14 +31,14 @@
   hoc2014_teachers: lærere
   hoc2014_host: Arranger
   hoc2014_everyone: Alle
-  hoc2014_support: Støtt det
+  hoc2014_support: Støtt det &#x25BE;
   hoc2014_whatishoc: Hva er kodetimen?
   twentyhours_trynow: Prøv nå
   california_heading: Spør skolen din om å lære koding
   california_text: Alle lærere kan tilby våre <a href='http://studio.code.org/'>gratiskurs</a>.
     Alle barneskoler kan <a href='http://code.org/educate/k5'>lære bort koding</a>.
     Spør videregående skoler om å <a href='http://code.org/educate/districts'> samarbeide
-    med oss.
+    med oss</a>.
   california_button: Lær mer
   flappy_heading: En flaksende bursdag til Code.org
   flappy_text: Code.org fylte akkurat 1 år. <br/><br/> Feir med oss ved å lage ditt
@@ -110,8 +111,8 @@
   learn_classes: Finn lokale kodeklubber
   hoc_is_here: '#Kodetimen er her - sjekk den ut! @kidsakoder'
   just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Hvorfor tilbyr ikke flere skoler undervisning i informatikk? Vi
+    kan fikse dette. http://youtu.be/nKIu9yen5nc. Les mer på http://code.org/.
   learn_hoc: Lær en Time med Kode
   beyond_hoc: Utover en time
   what_gender: Er du jente eller gutt?
@@ -134,6 +135,7 @@
   stats_michael: '"Jeg har <b>aldri, noensinne</b> sett elevene mine så interessert
     i å lære." - Michael Clark, Lærer'
   studiobar_title: Utforsk <a href='http://studio.code.org'>«Code Studio»</a>
+  studiobar_title_nolink: Utforsk Code Studio
   studiobar_elementary_title: Grunnleggende kurs
   studiobar_elementary_body: Våre tre nye kurs for K&#8209;5
   studiobar_hoc_title: Time med Kode
@@ -149,55 +151,75 @@
     med
   studiobar_shop_title: Butikk
   studiobar_shop_body: Bryt stereotyper. Bruk vår logo med stolthet.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
-  homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+  homepage_hero_text_malala: '"Jeg utfordrer jenter i alle land til å lære en kodetime"
+    Malala, fredsprisvinner'
+  homepage_hero_text_susan: '"Hvis du kan endre teknologi, kan du endre verden." Susan,
+    administrerende direktør i YouTube'
+  homepage_hero_text_fistbump: '"Ikke bare spill på telefonen, programmér den." President
+    Barack Obama'
+  homepage_hero_text_sheryl: '"Våre barn - inkludert våre jenter - trenger å lære
+    informatikk." Sheryl, COO i Facebook'
+  homepage_hero_text_satya: «Informatikk kan åpne for de beste mulighetene i verden.»
+    Satya, CEO i Microsoft
+  homepage_hero_text_bosh: '"Hvis du kan programmere, kan du velge og vrake retningen
+    til ditt eget liv." Chris Bosh'
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Time med Kode
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frost med Anna og Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Alle våre opplæringsprogrammer
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Butikk
   homepage_slot_text_flappy: Flappy kode
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: Se videoen
+  homepage_action_text_teachervideo: Se videoen
+  homepage_action_text_learn: Start å lære i dag
+  homepage_action_text_signpetition: Signér oppropet
+  homepage_signpetition_dropdown: Signér vår underskriftskampanje ▾
   homepage_slot_text_title_hoc: Hour of Code (kodetimen)
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Alle kan lære. Start i dag
   homepage_slot_text_link_hoc: Prøv Kodetimen
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Bli vertskap for Kodetimen
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Elever
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_blurb_students: Utforsk alle våre opplæringsprogrammer
+  homepage_slot_text_link_codestudio: Prøv Code Studio
+  homepage_slot_text_link_local: Finn et lokalt kurs
+  homepage_slot_text_link_othercourses: Andre nettbaserte kurs
+  homepage_slot_text_title_educators: Lærere
+  homepage_slot_text_blurb_educators: Lær opp elevene dine
+  homepage_slot_text_link_k5: Kurs for barnehage til 5.trinn
+  homepage_slot_text_link_fullcurriculum: Se vår fullstendige læreplan
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_blurb_advocates: Støtt vårt arbeid
+  homepage_slot_text_link_stats: Se statistikken
+  homepage_slot_text_link_buy: Kjøpe en t-skjorte eller lue
+  homepage_slot_text_link_donate: Gi et bidrag
   homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_header_donors: Code.org takker sine støttespillere
+  homepage_donors_seall: Se alt
   homepage_donors_donate: Gi bidrag
   contact_form_topic_student: Jeg er en student
   contact_form_topic_parent: Jeg er en forelder
