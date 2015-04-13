@@ -373,9 +373,12 @@ class UserTest < ActiveSupport::TestCase
     # now you do
     assert user.secret_words
 
-    old = user.secret_words
-    user.reset_secret_words
-    assert_not_equal old, user.secret_words
+    words = 1.upto(5).map do
+      user.reset_secret_words
+      user.secret_words
+    end
+
+    assert words.uniq.length > 1
   end
 
   test 'users under 13 have hashed email not plaintext email' do
