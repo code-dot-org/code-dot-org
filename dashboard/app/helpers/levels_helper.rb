@@ -130,6 +130,7 @@ module LevelsHelper
 
     # Add all level view options to the level_options hash
     level_options.merge!(Hash[level_overrides.map{|key, value|[key.to_s.camelize(:lower), value]}])
+    app_options.merge!(Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}])
 
     # Move these values up to the app_options hash
     %w(hideSource share noPadding embed).each do |key|

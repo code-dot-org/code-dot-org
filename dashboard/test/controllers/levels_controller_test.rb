@@ -395,6 +395,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :show, id: level, game_id: level.game
     assert_select '.pdf-button'
 
+    @controller = LevelsController.new
     student = create(:student)
     sign_out(teacher)
     sign_in(student)
@@ -418,6 +419,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :show, id: level, game_id: level.game
     assert_select '.pdf-button'
 
+    @controller = LevelsController.new
     student = create(:student)
     sign_out(teacher)
     sign_in(student)
