@@ -270,12 +270,14 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.receivedMessageLog_ = new NetSimLogPanel($('#netsim-received'), {
     logTitle: i18n.receivedMessageLog(),
     isMinimized: false,
+    hasUnreadMessages: true,
     packetSpec: this.level.clientInitialPacketHeader
   });
 
   this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
     logTitle: i18n.sentMessageLog(),
     isMinimized: true,
+    hasUnreadMessages: false,
     packetSpec: this.level.clientInitialPacketHeader
   });
 

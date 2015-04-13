@@ -159,6 +159,21 @@ svg {
     @include user_select(none);
   }
 
+  .single-line-with-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    padding-right: 1em;
+  }
+
+  .user-data {
+    font-family: monospace;
+
+    // Make sure user data can always be selected and copied
+    @include user_select(text);
+  }
+
   // Orange SPAN button
   .netsim-button {
     display: inline-block;
@@ -344,11 +359,24 @@ svg {
       td {
         border-color: $lightest_gray;
       }
+
+      .packet-controls {
+        float: right;
+        text-align: right;
+      }
+
+      &.unread {
+        background-color: $lighter_gray;
+
+        td {
+          border-color: $lighter_gray;
+        }
+      }
     }
 
     .scroll_area {
       margin: 0.5em 0 0.5em 0;
-      max-height: 180px;
+      max-height: 300px;
       width: 100%;
       overflow-y: auto;
     }

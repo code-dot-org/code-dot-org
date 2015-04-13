@@ -117,6 +117,7 @@ NetSimPanel.prototype.render = function () {
  */
 NetSimPanel.prototype.setPanelTitle = function (newTitle) {
   this.panelTitle_ = newTitle;
+  this.rootDiv_.find('.title-text').text(newTitle);
 };
 
 /**
