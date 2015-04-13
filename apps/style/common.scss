@@ -506,7 +506,7 @@ button:active {
   border: 1px solid #888 !important;
 }
 button:hover {
-  box-shadow: $shadow;
+  box-shadow: 2px 2px 5px $shadow;
 }
 button.disabled, button[disabled=disabled], button:disabled {
   border: 1px solid #C7C7C7;
@@ -606,7 +606,7 @@ input[type="radio"] {
   border: 1px solid #000;
   position: absolute;
   border-radius: 8px;
-  box-shadow: $shadow;
+  box-shadow: 5px 5px 5px $shadow;
   padding: 10px;
   z-index: 20000;
 }
@@ -616,7 +616,7 @@ input[type="radio"] {
   background-color: #fff;
   color: #000;
   border-radius: 6px;
-  box-shadow: $shadow;
+  box-shadow: 5px 5px 5px $shadow;
 }
 #dialogShadow {
   @include fill-container;
