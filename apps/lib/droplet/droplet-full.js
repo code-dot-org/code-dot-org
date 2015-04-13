@@ -2690,16 +2690,16 @@ QUAD.init = function (args) {
         return selfClone;
       };
 
-      Container.prototype.stringify = function(emptyToken) {
-        var head, state, str;
-        if (emptyToken == null) {
-          emptyToken = '';
-        }
+      Container.prototype.stringify = function(config) {
+        var emptyIndent, emptySocket, head, state, str;
+        emptySocket = config.empty || '';
+        emptyIndent = config.emptyIndent || '';
         str = '';
         head = this.start.next;
         state = {
           indent: '',
-          emptyToken: emptyToken
+          emptySocket: emptySocket,
+          emptyIndent: emptyIndent
         };
         while (head !== this.end) {
           str += head.stringify(state);
@@ -3300,7 +3300,7 @@ QUAD.init = function (args) {
 
       SocketStartToken.prototype.stringify = function(state) {
         if (this.next === this.container.end || this.next.type === 'text' && this.next.value === '') {
-          return state.emptyToken;
+          return state.emptySocket;
         } else {
           return '';
         }
@@ -3390,7 +3390,7 @@ QUAD.init = function (args) {
           state.indent = state.indent.slice(0, -this.container.prefix.length);
         }
         if (this.previousVisibleToken().previousVisibleToken() === this.container.start) {
-          return state.emptyToken;
+          return state.emptyIndent;
         } else {
           return '';
         }
@@ -5780,6 +5780,7 @@ QUAD.init = function (args) {
       }
     };
     Parser.empty = '';
+    Parser.emptyIndent = '';
     exports.wrapParser = function(CustomParser) {
       var CustomParserFactory;
       return CustomParserFactory = (function(superClass) {
@@ -5788,6 +5789,7 @@ QUAD.init = function (args) {
         function CustomParserFactory(opts1) {
           this.opts = opts1 != null ? opts1 : {};
           this.empty = CustomParser.empty;
+          this.emptyIndent = CustomParser.emptyIndent;
         }
 
         CustomParserFactory.prototype.createParser = function(text) {
@@ -6351,7 +6353,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
                 }
               }
               return results1;
-            } else if (node.base.nodeType() === 'Literal' && node.base.value === '') {
+            } else if (node.base.nodeType() === 'Literal' && (node.base.value === '' || node.base.value === this.empty)) {
               fakeBlock = this.csBlock(node.base, depth, 0, wrappingParen, ANY_DROP);
               return fakeBlock.flagToRemove = true;
             } else if (node.base.nodeType() === 'Literal' && /^#/.test(node.base.value)) {
@@ -6864,6 +6866,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return lines.splice(n + 1, 0, leading[0] + '  ``');
     };
     CoffeeScriptParser.empty = "``";
+    CoffeeScriptParser.emptyIndent = "``";
     CoffeeScriptParser.drop = function(block, context, pred) {
       var ref, ref1;
       if (context.type === 'socket') {
@@ -10228,6 +10231,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return helper.DISCOURAGE;
     };
     JavaScriptParser.empty = "__";
+    JavaScriptParser.emptyIndent = "";
     return parser.wrapParser(JavaScriptParser);
   });
 
@@ -11274,7 +11278,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     Editor.prototype.reparseRawReplace = function(oldBlock) {
       var e, newBlock, newParse, pos;
       try {
-        newParse = this.mode.parse(oldBlock.stringify(this.mode.empty), {
+        newParse = this.mode.parse(oldBlock.stringify(this.mode), {
           wrapAtRoot: true
         });
         newBlock = newParse.start.next.container;
@@ -11619,7 +11623,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         block = data.block;
         hoverDiv = document.createElement('div');
         hoverDiv.className = 'droplet-hover-div';
-        hoverDiv.title = (ref2 = data.title) != null ? ref2 : block.stringify(this.mode.empty);
+        hoverDiv.title = (ref2 = data.title) != null ? ref2 : block.stringify(this.mode);
         bounds = this.view.getViewNodeFor(block).totalBounds;
         hoverDiv.style.top = bounds.y + "px";
         hoverDiv.style.left = bounds.x + "px";
@@ -11744,11 +11748,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     Editor.prototype.redrawTextInput = function() {
       var endRow, head, line, newp, oldp, rect, sameLength, startRow, textFocusView, treeView;
-      sameLength = this.textFocus.stringify(this.mode.empty).split('\n').length === this.hiddenInput.value.split('\n').length;
+      sameLength = this.textFocus.stringify(this.mode).split('\n').length === this.hiddenInput.value.split('\n').length;
       this.populateSocket(this.textFocus, this.hiddenInput.value);
       textFocusView = this.view.getViewNodeFor(this.textFocus);
-      startRow = this.textFocus.stringify(this.mode.empty).slice(0, this.hiddenInput.selectionStart).split('\n').length - 1;
-      endRow = this.textFocus.stringify(this.mode.empty).slice(0, this.hiddenInput.selectionEnd).split('\n').length - 1;
+      startRow = this.textFocus.stringify(this.mode).slice(0, this.hiddenInput.selectionStart).split('\n').length - 1;
+      endRow = this.textFocus.stringify(this.mode).slice(0, this.hiddenInput.selectionEnd).split('\n').length - 1;
       if (sameLength && startRow === endRow) {
         line = endRow;
         head = this.textFocus.start;
@@ -11788,11 +11792,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         scrollIntoView = false;
       }
       textFocusView = this.view.getViewNodeFor(this.textFocus);
-      startRow = this.textFocus.stringify(this.mode.empty).slice(0, this.hiddenInput.selectionStart).split('\n').length - 1;
-      endRow = this.textFocus.stringify(this.mode.empty).slice(0, this.hiddenInput.selectionEnd).split('\n').length - 1;
-      lines = this.textFocus.stringify(this.mode.empty).split('\n');
-      startPosition = textFocusView.bounds[startRow].x + this.view.opts.textPadding + this.mainCtx.measureText(last_(this.textFocus.stringify(this.mode.empty).slice(0, this.hiddenInput.selectionStart).split('\n'))).width + (this.textFocus.hasDropdown() ? helper.DROPDOWN_ARROW_WIDTH : 0);
-      endPosition = textFocusView.bounds[endRow].x + this.view.opts.textPadding + this.mainCtx.measureText(last_(this.textFocus.stringify(this.mode.empty).slice(0, this.hiddenInput.selectionEnd).split('\n'))).width + (this.textFocus.hasDropdown() ? helper.DROPDOWN_ARROW_WIDTH : 0);
+      startRow = this.textFocus.stringify(this.mode).slice(0, this.hiddenInput.selectionStart).split('\n').length - 1;
+      endRow = this.textFocus.stringify(this.mode).slice(0, this.hiddenInput.selectionEnd).split('\n').length - 1;
+      lines = this.textFocus.stringify(this.mode).split('\n');
+      startPosition = textFocusView.bounds[startRow].x + this.view.opts.textPadding + this.mainCtx.measureText(last_(this.textFocus.stringify(this.mode).slice(0, this.hiddenInput.selectionStart).split('\n'))).width + (this.textFocus.hasDropdown() ? helper.DROPDOWN_ARROW_WIDTH : 0);
+      endPosition = textFocusView.bounds[endRow].x + this.view.opts.textPadding + this.mainCtx.measureText(last_(this.textFocus.stringify(this.mode).slice(0, this.hiddenInput.selectionEnd).split('\n'))).width + (this.textFocus.hasDropdown() ? helper.DROPDOWN_ARROW_WIDTH : 0);
       if (this.hiddenInput.selectionStart === this.hiddenInput.selectionEnd) {
         this.cursorCtx.lineWidth = 1;
         this.cursorCtx.strokeStyle = '#000';
@@ -11834,7 +11838,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.addMicroUndoOperation('CAPTURE_POINT');
         this.addMicroUndoOperation(new TextChangeOperation(this.textFocus, this.oldFocusValue, this));
         this.oldFocusValue = null;
-        originalText = this.textFocus.stringify(this.mode.empty);
+        originalText = this.textFocus.stringify(this.mode);
         shouldPop = false;
         shouldRecoverCursor = false;
         cursorPosition = cursorParent = null;
@@ -11844,7 +11848,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         }
         if (!this.textFocus.handwritten) {
           newParse = null;
-          string = this.textFocus.stringify(this.mode.empty).trim();
+          string = this.textFocus.stringify(this.mode).trim();
           try {
             newParse = this.mode.parse(unparsedValue = string, {
               wrapAtRoot: false
@@ -11885,12 +11889,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         this.dropletElement.focus();
         return;
       }
-      this.oldFocusValue = focus.stringify(this.mode.empty);
+      this.oldFocusValue = focus.stringify(this.mode);
       this.textFocus = focus;
-      this.populateSocket(focus, focus.stringify(this.mode.empty));
+      this.populateSocket(focus, focus.stringify(this.mode));
       this.textFocus.notifyChange();
       this.moveCursorTo(focus.end);
-      this.hiddenInput.value = this.textFocus.stringify(this.mode.empty);
+      this.hiddenInput.value = this.textFocus.stringify(this.mode);
       if ((selectionStart != null) && (selectionEnd == null)) {
         selectionEnd = selectionStart;
       }
@@ -11940,7 +11944,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       row = Math.max(row, 0);
       row = Math.min(row, textFocusView.lineLength - 1);
       column = Math.max(0, Math.round((point.x - textFocusView.bounds[row].x - this.view.opts.textPadding - (this.textFocus.hasDropdown() ? helper.DROPDOWN_ARROW_WIDTH : 0)) / this.mainCtx.measureText(' ').width));
-      lines = this.textFocus.stringify(this.mode.empty).split('\n').slice(0, +row + 1 || 9e9);
+      lines = this.textFocus.stringify(this.mode).split('\n').slice(0, +row + 1 || 9e9);
       lines[lines.length - 1] = lines[lines.length - 1].slice(0, column);
       return lines.join('\n').length;
     };
@@ -11951,8 +11955,8 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     Editor.prototype.selectDoubleClick = function(point) {
       var after, before, position, ref1, ref2, ref3, ref4;
       position = this.getTextPosition(point);
-      before = (ref1 = (ref2 = this.textFocus.stringify(this.mode.empty).slice(0, position).match(/\w*$/)[0]) != null ? ref2.length : void 0) != null ? ref1 : 0;
-      after = (ref3 = (ref4 = this.textFocus.stringify(this.mode.empty).slice(position).match(/^\w*/)[0]) != null ? ref4.length : void 0) != null ? ref3 : 0;
+      before = (ref1 = (ref2 = this.textFocus.stringify(this.mode).slice(0, position).match(/\w*$/)[0]) != null ? ref2.length : void 0) != null ? ref1 : 0;
+      after = (ref3 = (ref4 = this.textFocus.stringify(this.mode).slice(position).match(/^\w*/)[0]) != null ? ref4.length : void 0) != null ? ref3 : 0;
       this.textInputAnchor = position - before;
       this.textInputHead = position + after;
       return this.hiddenInput.setSelectionRange(this.textInputAnchor, this.textInputHead);
@@ -13484,7 +13488,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         newParse = this.mode.parse(value, {
           wrapAtRoot: true
         });
-        if (value !== this.tree.stringify(this.mode.empty)) {
+        if (value !== this.tree.stringify(this.mode)) {
           this.addMicroUndoOperation('CAPTURE_POINT');
         }
         this.addMicroUndoOperation(new SetValueOperation(this.tree, newParse));
@@ -13531,7 +13535,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
     };
     Editor.prototype.getValue = function() {
       if (this.currentlyUsingBlocks) {
-        return this.addEmptyLine(this.tree.stringify(this.mode.empty));
+        return this.addEmptyLine(this.tree.stringify(this.mode));
       } else {
         return this.getAceValue();
       }
@@ -13986,7 +13990,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           this.copyPasteInput.focus();
           window.scrollTo(x, y);
           if (this.lassoSegment != null) {
-            this.copyPasteInput.value = this.lassoSegment.stringify(this.mode.empty);
+            this.copyPasteInput.value = this.lassoSegment.stringify(this.mode);
           }
           return this.copyPasteInput.setSelectionRange(0, this.copyPasteInput.value.length);
         }
