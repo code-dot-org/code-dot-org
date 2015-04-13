@@ -366,10 +366,10 @@ svg {
       }
 
       &.unread {
-        background-color: $dark-gray;
+        background-color: $lighter_gray;
 
         td {
-          border-color: $dark-gray;
+          border-color: $lighter_gray;
         }
       }
     }

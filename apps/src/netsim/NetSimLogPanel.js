@@ -232,6 +232,7 @@ var NetSimLogPacket = function (packetBinary, options) {
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('packet');
+  this.rootDiv_.click(this.markAsRead.bind(this));
 
   // Initial content population
   this.render();
@@ -246,13 +247,11 @@ NetSimLogPacket.prototype.render = function () {
     packetSpec: this.packetSpec_,
     enabledEncodings: this.encodings_,
     chunkSize: this.chunkSize_,
-    isUnread: this.isUnread,
     isMinimized: this.isMinimized
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   this.rootDiv_.html(jQueryWrap);
-  this.rootDiv_.find('.mark-as-read-button').click(this.markAsRead.bind(this));
   this.rootDiv_.find('.minimize-button').click(this.minimize.bind(this));
   this.rootDiv_.find('.maximize-button').click(this.maximize.bind(this));
 
@@ -291,9 +290,11 @@ NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
  * button.
  */
 NetSimLogPacket.prototype.markAsRead = function () {
-  this.isUnread = false;
-  this.render();
-  this.markAsReadCallback_();
+  if (this.isUnread) {
+    this.isUnread = false;
+    this.render();
+    this.markAsReadCallback_();
+  }
 };
 
 NetSimLogPacket.prototype.minimize = function () {
