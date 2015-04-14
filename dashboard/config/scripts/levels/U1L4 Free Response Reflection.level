@@ -5,7 +5,7 @@
   "properties": {
     "title": "Reflect on this lesson",
     "placeholder": "Enter your reflection here.",
-    "markdown": "Summarize what they have learned in the lesson by recording their responses to these three questions.\n\nWHAT?---What have you learned?\n\nSO WHAT?---What difference does it make?\n\nNOW WHAT?---What can you do with this information?\n"
+    "markdown": "Summarize what you have learned in the lesson by recording your responses to these three questions.\n\nWHAT?---What have you learned?\n\nSO WHAT?---What difference does it make?\n\nNOW WHAT?---What can you do with this information?\n"
   },
   "md5": "45313f2e497e3c548aed6dd50c5a2d0d"
 }]]></config>
