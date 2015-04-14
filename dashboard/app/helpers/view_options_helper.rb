@@ -12,7 +12,7 @@ module ViewOptionsHelper
   def view_options(opts = nil)
     @view_options ||= AppViewOptions.new
     if opts.blank?
-      @view_options.freeze.to_h
+      @view_options.freeze.to_h.delete_if { |k, v| v.nil? }
     else
       opts.each{|k, v| @view_options[k] = v}
     end

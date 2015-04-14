@@ -170,7 +170,7 @@ module LevelsHelper
   def level_view_options(opts = nil)
     @level_view_options ||= LevelViewOptions.new
     if opts.blank?
-      @level_view_options.freeze.to_h
+      @level_view_options.freeze.to_h.delete_if { |k, v| v.nil? }
     else
       opts.each{|k, v| @level_view_options[k] = v}
     end
