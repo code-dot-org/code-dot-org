@@ -296,12 +296,14 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.receivedMessageLog_ = new NetSimLogPanel($('#netsim-received'), {
     logTitle: i18n.receivedMessageLog(),
     isMinimized: false,
+    hasUnreadMessages: true,
     packetSpec: this.level.clientInitialPacketHeader
   });
 
   this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
     logTitle: i18n.sentMessageLog(),
     isMinimized: true,
+    hasUnreadMessages: false,
     packetSpec: this.level.clientInitialPacketHeader
   });
 
@@ -5607,11 +5609,19 @@ var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 
 /**
+ * How long the "entrance" animation for new messages lasts, in milliseconds.
+ * @type {number}
+ * @const
+ */
+var MESSAGE_SLIDE_IN_DURATION_MS = 400;
+
+/**
  * Generator and controller for message log.
  * @param {jQuery} rootDiv
  * @param {Object} options
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
+ * @param {boolean} [options.hasUnreadMessages] defaults to FALSE
  * @param {packetHeaderSpec} options.packetSpec
  * @constructor
  * @augments NetSimPanel
@@ -5644,6 +5654,20 @@ var NetSimLogPanel = module.exports = function (rootDiv, options) {
    */
   this.currentChunkSize_ = 8;
 
+  /**
+   * Localized panel title
+   * @type {string}
+   * @private
+   */
+  this.logTitle_ = options.logTitle;
+
+  /**
+   * Whether newly logged messages in this log should be marked as unread
+   * @type {boolean}
+   * @private
+   */
+  this.hasUnreadMessages_ = !!(options.hasUnreadMessages);
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
@@ -5666,6 +5690,8 @@ NetSimLogPanel.prototype.render = function () {
 
   // Bind reference to scrollArea for use when logging.
   this.scrollArea_ = this.getBody().find('.scroll_area');
+
+  this.updateUnreadCount();
 };
 
 /**
@@ -5675,28 +5701,41 @@ NetSimLogPanel.prototype.render = function () {
 NetSimLogPanel.prototype.onClearButtonPress_ = function () {
   this.scrollArea_.empty();
   this.packets_.length = 0;
+
+  this.updateUnreadCount();
 };
 
 /**
  * Put a message into the log.
  */
 NetSimLogPanel.prototype.log = function (packetBinary) {
-  var scrollArea = this.scrollArea_;
-  var wasScrolledToEnd =
-      scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
-      scrollArea.outerHeight();
-
   var newPacket = new NetSimLogPacket(packetBinary, {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
-    chunkSize: this.currentChunkSize_
+    chunkSize: this.currentChunkSize_,
+    isUnread: this.hasUnreadMessages_,
+    markAsReadCallback: this.updateUnreadCount.bind(this)
   });
-  newPacket.getRoot().appendTo(this.scrollArea_);
-  this.packets_.push(newPacket);
+  newPacket.getRoot().hide();
+  newPacket.getRoot().prependTo(this.scrollArea_);
+  newPacket.getRoot().slideDown(MESSAGE_SLIDE_IN_DURATION_MS);
+  this.packets_.unshift(newPacket);
 
-  // Auto-scroll
-  if (wasScrolledToEnd) {
-    scrollArea.scrollTop(scrollArea[0].scrollHeight);
+  this.updateUnreadCount();
+};
+
+NetSimLogPanel.prototype.updateUnreadCount = function () {
+  var unreadCount = this.packets_.reduce(function (prev, cur) {
+    return prev + (cur.isUnread ? 1 : 0);
+  }, 0);
+
+  if (unreadCount > 0) {
+    this.setPanelTitle(i18n.appendCountToTitle({
+      title: this.logTitle_,
+      count: unreadCount
+    }));
+  } else {
+    this.setPanelTitle(this.logTitle_);
   }
 };
 
@@ -5731,6 +5770,9 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * @param {EncodingType[]} options.encodings - which display style to use initially
  * @param {number} options.chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
+ * @param {boolean} options.isUnread - whether this packet should be styled
+ *        as "unread" and have a "mark as read" button
+ * @param {function} options.markAsReadCallback
  * @constructor
  */
 var NetSimLogPacket = function (packetBinary, options) {
@@ -5759,11 +5801,28 @@ var NetSimLogPacket = function (packetBinary, options) {
   this.chunkSize_ = options.chunkSize;
 
   /**
+   * @type {boolean}
+   */
+  this.isUnread = options.isUnread;
+
+  /**
+   * @type {boolean}
+   */
+  this.isMinimized = false;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.markAsReadCallback_ = options.markAsReadCallback;
+
+  /**
    * Wrapper div that we create once, and fill repeatedly with render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('packet');
+  this.rootDiv_.click(this.markAsRead.bind(this));
 
   // Initial content population
   this.render();
@@ -5776,11 +5835,17 @@ NetSimLogPacket.prototype.render = function () {
   var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
     packetSpec: this.packetSpec_,
-    chunkSize: this.chunkSize_
+    enabledEncodings: this.encodings_,
+    chunkSize: this.chunkSize_,
+    isMinimized: this.isMinimized
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   this.rootDiv_.html(jQueryWrap);
+  this.rootDiv_.find('.minimize-button').click(this.minimize.bind(this));
+  this.rootDiv_.find('.maximize-button').click(this.maximize.bind(this));
+
+  this.rootDiv_.toggleClass('unread', this.isUnread);
 };
 
 /**
@@ -5807,6 +5872,28 @@ NetSimLogPacket.prototype.setEncodings = function (newEncodings) {
  */
 NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
+  this.render();
+};
+
+/**
+ * Mark the packet as read, changing its style and removing the "mark as read"
+ * button.
+ */
+NetSimLogPacket.prototype.markAsRead = function () {
+  if (this.isUnread) {
+    this.isUnread = false;
+    this.render();
+    this.markAsReadCallback_();
+  }
+};
+
+NetSimLogPacket.prototype.minimize = function () {
+  this.isMinimized = true;
+  this.render();
+};
+
+NetSimLogPacket.prototype.maximize = function () {
+  this.isMinimized = false;
   this.render();
 };
 
@@ -5875,62 +5962,91 @@ with (locals || {}) { (function(){
   var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
-/**
- * @param {EncodingType} encodingType
- * @param {string} toAddress
- * @param {string} fromAddress
- * @param {string} packetInfo
- * @param {string} message
- */
-  function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
-    ; buf.push('\n      <tr class="', escape((43,  encodingType )), '">\n        <th nowrap class="', escape((44,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((44,  getEncodingLabel(encodingType) )), '</th>\n        ');45; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((46,  PacketUIColumnType.TO_ADDRESS )), '">', escape((46,  toAddress )), '</td>\n        ');47; } ; buf.push('\n        ');48; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((49,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((49,  fromAddress )), '</td>\n        ');50; } ; buf.push('\n        ');51; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((52,  PacketUIColumnType.PACKET_INFO )), '">', escape((52,  packetInfo )), '</td>\n        ');53; } ; buf.push('\n        <td class="', escape((54,  PacketUIColumnType.MESSAGE )), '">', escape((54,  message )), '</td>\n      </tr>\n  ');56;
+  function isEncodingEnabled(queryEncoding) {
+    return enabledEncodings.some(function (enabledEncoding) {
+      return enabledEncoding === queryEncoding;
+    });
   }
- ; buf.push('\n<table>\n  <thead>\n    <tr>\n      <th nowrap class="', escape((62,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n      ');63; if (showToAddress) { ; buf.push('\n        <th nowrap class="', escape((64,  PacketUIColumnType.TO_ADDRESS )), '">', escape((64,  i18n.to() )), '</th>\n      ');65; } ; buf.push('\n      ');66; if (showFromAddress) { ; buf.push('\n        <th nowrap class="', escape((67,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((67,  i18n.from() )), '</th>\n      ');68; } ; buf.push('\n      ');69; if (showPacketInfo) { ; buf.push('\n        <th nowrap class="', escape((70,  PacketUIColumnType.PACKET_INFO )), '">', escape((70,  i18n.packet() )), '</th>\n      ');71; } ; buf.push('\n      <th nowrap class="', escape((72,  PacketUIColumnType.MESSAGE )), '">', escape((72,  i18n.message() )), '</th>\n    </tr>\n  </thead>\n  <tbody>\n  ');76;
+
+  /**
+   * Packet one-line summary should only use the highest-level enabled encoding.
+   */
+  function getOneLinePacketSummary() {
+    var messageBinary = packet.getBodyAsBinary();
+    if (isEncodingEnabled(EncodingType.ASCII)) {
+      return binaryToAscii(messageBinary, chunkSize);
+    } else if (isEncodingEnabled(EncodingType.DECIMAL)) {
+      return alignDecimal(binaryToDecimal(messageBinary, chunkSize));
+    } else if (isEncodingEnabled(EncodingType.HEXADECIMAL)) {
+      return formatHex(binaryToHex(messageBinary), chunkSize);
+    } else if (isEncodingEnabled(EncodingType.BINARY)) {
+      return formatBinary(messageBinary, chunkSize);
+    } else if (isEncodingEnabled(EncodingType.A_AND_B)) {
+      return formatAB(binaryToAB(messageBinary), chunkSize);
+    }
+    return messageBinary;
+  }
+
+  function packetControls() {
+    ; buf.push('\n      <div class="packet-controls">\n        ');62; if (isMinimized) { ; buf.push('\n          <span class="netsim-button maximize-button" title="', escape((63,  i18n.expand() )), '"><i class="fa fa-expand"></i></span>\n        ');64; } else { ; buf.push('\n          <span class="netsim-button minimize-button" title="', escape((65,  i18n.collapse() )), '"><i class="fa fa-compress"></i></span>\n        ');66; } ; buf.push('\n      </div>\n    ');68;
+  }
+
+  /**
+   * @param {EncodingType} encodingType
+   * @param {string} toAddress
+   * @param {string} fromAddress
+   * @param {string} packetInfo
+   * @param {string} message
+   */
+  function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
+    ; buf.push('\n      <tr class="', escape((80,  encodingType )), '">\n        <th nowrap class="', escape((81,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((81,  getEncodingLabel(encodingType) )), '</th>\n        ');82; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((83,  PacketUIColumnType.TO_ADDRESS )), '">', escape((83,  toAddress )), '</td>\n        ');84; } ; buf.push('\n        ');85; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((86,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((86,  fromAddress )), '</td>\n        ');87; } ; buf.push('\n        ');88; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((89,  PacketUIColumnType.PACKET_INFO )), '">', escape((89,  packetInfo )), '</td>\n        ');90; } ; buf.push('\n        <td class="', escape((91,  PacketUIColumnType.MESSAGE )), '">', escape((91,  message )), '</td>\n      </tr>\n  ');93;
+  }
+ ; buf.push('\n  ');96;
     var toAddress = showToAddress ? packet.getHeaderAsBinary(Packet.HeaderType.TO_ADDRESS) : '';
     var fromAddress = showFromAddress ? packet.getHeaderAsBinary(Packet.HeaderType.FROM_ADDRESS) : '';
     var packetIndex = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_INDEX) : '';
     var packetCount = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_COUNT) : '';
     var message = packet.getBodyAsBinary();
+  ; buf.push('\n  ');103; if (isMinimized) { ; buf.push('\n      ');104; packetControls(); ; buf.push('\n      <div class="single-line-with-ellipsis user-data">', escape((105,  getOneLinePacketSummary() )), '</div>\n  ');106; } else { ; buf.push('\n    <table>\n      <thead>\n        <tr>\n          <th nowrap class="', escape((110,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n          ');111; if (showToAddress) { ; buf.push('\n            <th nowrap class="', escape((112,  PacketUIColumnType.TO_ADDRESS )), '">', escape((112,  i18n.to() )), '</th>\n          ');113; } ; buf.push('\n          ');114; if (showFromAddress) { ; buf.push('\n            <th nowrap class="', escape((115,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((115,  i18n.from() )), '</th>\n          ');116; } ; buf.push('\n          ');117; if (showPacketInfo) { ; buf.push('\n            <th nowrap class="', escape((118,  PacketUIColumnType.PACKET_INFO )), '">', escape((118,  i18n.packet() )), '</th>\n          ');119; } ; buf.push('\n          <th class="', escape((120,  PacketUIColumnType.MESSAGE )), '">\n            ');121; packetControls(); ; buf.push('\n            ', escape((122,  i18n.message() )), '\n          </th>\n        </tr>\n      </thead>\n      <tbody>\n      ');127;
+        logRow(EncodingType.ASCII,
+            binaryToInt(toAddress),
+            binaryToInt(fromAddress),
+            i18n.xOfYPackets({
+              x: binaryToInt(packetIndex),
+              y: binaryToInt(packetCount)
+            }),
+            binaryToAscii(message, chunkSize));
 
-    logRow(EncodingType.ASCII,
-        binaryToInt(toAddress),
-        binaryToInt(fromAddress),
-        i18n.xOfYPackets({
-          x: binaryToInt(packetIndex),
-          y: binaryToInt(packetCount)
-        }),
-        binaryToAscii(message, chunkSize));
+        logRow(EncodingType.DECIMAL,
+            binaryToInt(toAddress),
+            binaryToInt(fromAddress),
+            i18n.xOfYPackets({
+              x: binaryToInt(packetIndex),
+              y: binaryToInt(packetCount)
+            }),
+            alignDecimal(binaryToDecimal(message, chunkSize)));
 
-    logRow(EncodingType.DECIMAL,
-        binaryToInt(toAddress),
-        binaryToInt(fromAddress),
-        i18n.xOfYPackets({
-          x: binaryToInt(packetIndex),
-          y: binaryToInt(packetCount)
-        }),
-        alignDecimal(binaryToDecimal(message, chunkSize)));
+        logRow(EncodingType.HEXADECIMAL,
+            binaryToHex(toAddress),
+            binaryToHex(fromAddress),
+            i18n.xOfYPackets({
+              x: binaryToHex(packetIndex),
+              y: binaryToHex(packetCount)
+            }),
+            formatHex(binaryToHex(message), chunkSize));
 
-    logRow(EncodingType.HEXADECIMAL,
-        binaryToHex(toAddress),
-        binaryToHex(fromAddress),
-        i18n.xOfYPackets({
-          x: binaryToHex(packetIndex),
-          y: binaryToHex(packetCount)
-        }),
-        formatHex(binaryToHex(message), chunkSize));
+        logRow(EncodingType.BINARY,
+            formatBinary(toAddress, 4),
+            formatBinary(fromAddress, 4),
+            formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
+            formatBinary(message, chunkSize));
 
-    logRow(EncodingType.BINARY,
-        formatBinary(toAddress, 4),
-        formatBinary(fromAddress, 4),
-        formatBinary(packetIndex, 4) + ' ' + formatBinary(packetCount, 4),
-        formatBinary(message, chunkSize));
-
-    logRow(EncodingType.A_AND_B,
-        binaryToAB(toAddress),
-        binaryToAB(fromAddress),
-        binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
-        formatAB(binaryToAB(message), chunkSize));
-   ; buf.push('\n  </tbody>\n</table>'); })();
+        logRow(EncodingType.A_AND_B,
+            binaryToAB(toAddress),
+            binaryToAB(fromAddress),
+            binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
+            formatAB(binaryToAB(message), chunkSize));
+       ; buf.push('\n      </tbody>\n    </table>\n  ');169; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -10065,6 +10181,7 @@ NetSimPanel.prototype.render = function () {
  */
 NetSimPanel.prototype.setPanelTitle = function (newTitle) {
   this.panelTitle_ = newTitle;
+  this.rootDiv_.find('.title-text').text(newTitle);
 };
 
 /**
@@ -10127,7 +10244,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="netsim_panel_', escape((1,  instanceID )), '"\n     class="netsim-panel ', escape((2,  className )), '">\n  <h1>\n    <span class="minimizer">\n      ');5; if (canMinimize) { ; buf.push('\n        <i class="fa fa-minus-square"></i>\n      ');7; } ; buf.push('\n      ', escape((8,  panelTitle )), '\n    </span>\n    <div class="panel_controls">\n    </div>\n  </h1>\n  <div class="panel-body">\n  </div>\n</div>\n'); })();
+ buf.push('<div id="netsim_panel_', escape((1,  instanceID )), '"\n     class="netsim-panel ', escape((2,  className )), '">\n  <h1>\n    <div class="panel_controls"></div>\n    <div class="minimizer single-line-with-ellipsis">\n      ');6; if (canMinimize) { ; buf.push('\n        <i class="fa fa-minus-square"></i>\n      ');8; } ; buf.push('\n      <span class="title-text">', escape((9,  panelTitle )), '</span>\n    </div>\n  </h1>\n  <div class="panel-body">\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
 };

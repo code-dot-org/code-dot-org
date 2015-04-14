@@ -89,6 +89,19 @@ svg {
   -ms-user-select: none;
   -khtml-user-select: none;
   user-select: none; }
+#netsim .single-line-with-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  padding-right: 1em; }
+#netsim .user-data {
+  font-family: monospace;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  -khtml-user-select: text;
+  user-select: text; }
 #netsim .netsim-button {
   display: inline-block;
   background-color: #ffa400;
@@ -195,9 +208,16 @@ svg {
   background-color: #e7e8ea; }
   #netsim .netsim-log-panel .packet td {
     border-color: #e7e8ea; }
+  #netsim .netsim-log-panel .packet .packet-controls {
+    float: right;
+    text-align: right; }
+  #netsim .netsim-log-panel .packet.unread {
+    background-color: #c6cacd; }
+    #netsim .netsim-log-panel .packet.unread td {
+      border-color: #c6cacd; }
 #netsim .netsim-log-panel .scroll_area {
   margin: 0.5em 0 0.5em 0;
-  max-height: 180px;
+  max-height: 300px;
   width: 100%;
   overflow-y: auto; }
 #netsim .netsim-log-panel table th {
