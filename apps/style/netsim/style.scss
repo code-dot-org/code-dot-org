@@ -159,6 +159,21 @@ svg {
     @include user_select(none);
   }
 
+  .single-line-with-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    padding-right: 1em;
+  }
+
+  .user-data {
+    font-family: monospace;
+
+    // Make sure user data can always be selected and copied
+    @include user_select(text);
+  }
+
   // Orange SPAN button
   .netsim-button {
     display: inline-block;
@@ -173,6 +188,10 @@ svg {
 
     // Button text should not be selectable
     @include user_select(none);
+
+    &[disabled] {
+      background-color: $lighter_gray;
+    }
   }
 
   //
@@ -300,10 +319,15 @@ svg {
       color: $white;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
-      .panel_controls {
+      .panel-controls {
         float: right;
         margin-top: -0.3em;
         padding-top: 3px;
+
+        // Special margin for buttons in this control area, so they don't squish together.
+        .netsim-button {
+          margin-left: 3px;
+        }
       }
     }
 
@@ -328,6 +352,16 @@ svg {
         display: none;
       }
     }
+
+    .panel-footer {
+      margin: 10px;
+      overflow: hidden;
+
+      .right-side-controls {
+        float: right;
+        text-align: right;
+      }
+    }
   }
 
   // Log panel rules
@@ -344,11 +378,24 @@ svg {
       td {
         border-color: $lightest_gray;
       }
+
+      .packet-controls {
+        float: right;
+        text-align: right;
+      }
+
+      &.unread {
+        background-color: $lighter_gray;
+
+        td {
+          border-color: $lighter_gray;
+        }
+      }
     }
 
-    .scroll_area {
+    .scroll-area {
       margin: 0.5em 0 0.5em 0;
-      max-height: 180px;
+      max-height: 300px;
       width: 100%;
       overflow-y: auto;
     }
@@ -515,18 +562,8 @@ svg {
       }
     }
 
-    .send_widget_footer {
-      margin: 10px;
-      overflow: hidden;
-
-      .right-side-controls {
-        float: right;
-        text-align: right;
-      }
-
-      .packet_size {
-        width: 400px;
-      }
+    .packet-size {
+      width: 400px;
     }
   }
 
