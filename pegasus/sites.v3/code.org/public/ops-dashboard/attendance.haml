@@ -9,14 +9,22 @@ template: none
 
 %div.jumbotron{'ng-show' => 'teachers.length <= 0'}
   No teachers registered for this workshop.
-%a.btn.btn-white{"ng-click" => ""}
+%a.btn.btn-white{"ng-click" => "teacherAddition = true"}
   Add a new teacher to this workshop
 %br
 %br
-%div{style:"width:970px; overflow-x:scroll;"}
+%form{'ng-show' => 'teacherAddition == true'}
+  %label
+    First Name
+    %input{type:'text'}
+    Last Name
+    %input{type:'text'}
+    Email
+    %input{type:'text'}
+    District
+    %input{type:'text'}
+%div.table-wrapper{style:"width:970px; overflow-x:scroll;"}
   %table.table-wrapper{'ng-show' => 'teachers.length > 0'}
-    %colgroup
-      %col{span:"1"}/
     %tr
       %th
       %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
