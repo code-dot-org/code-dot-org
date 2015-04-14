@@ -553,7 +553,7 @@ NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function (onComp
       return;
     }
 
-    var lastRow = rowsOnWire[rowsOnWire.length -1];
+    var lastRow = rowsOnWire[rowsOnWire.length - 1];
     onComplete(null, new NetSimMessage(this.shard_, lastRow));
   }.bind(this));
 };
