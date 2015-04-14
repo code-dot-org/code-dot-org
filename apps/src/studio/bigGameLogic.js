@@ -159,11 +159,15 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
  * Reset sprite to the opposite side of the screen
  */
 BigGameLogic.prototype.resetSprite_ = function (sprite) {
-  if (sprite.dir === Direction.EAST) {
-    sprite.x = 0 - sprite.width;
-  } else {
-    sprite.x = this.studio_.MAZE_WIDTH;
-  }
+  // Center of the play area, offset by the sprite radius
+  var centerOffset = (this.studio_.MAZE_WIDTH / 2) - (sprite.width / 2);
+
+  // Offset sprite.x so that we can mirror it across the center of the play area
+  var offsetX = sprite.x - centerOffset;
+  
+  // Mirror across the center of the play area and reset the offset
+  sprite.x = (offsetX * -1) + centerOffset;
+  
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
 };
 
