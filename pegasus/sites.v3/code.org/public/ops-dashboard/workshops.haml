@@ -68,7 +68,10 @@ template: none
     %td
       %ul{style:'margin:0'}
         %li{'ng-repeat' => 'facilitator in workshop.facilitators'}
-          {{facilitator}}
+          {{facilitator.ops_first_name}}
+          {{facilitator.ops_last_name}}
+          %a{'ng-href' => "mailto:{{facilitator.email}}"}
+            {{facilitator.email}}
     %td
       %div{'ng-repeat' => 'segment in workshop.segments'}
         %p
