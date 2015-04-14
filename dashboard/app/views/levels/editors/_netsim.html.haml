@@ -24,6 +24,18 @@
       %td= f.label :show_add_router_button, 'Show "Add Router" Button'
       %td Whether the "Add Router" button should be available to students.
 
+%h3 Simulation Configuration
+.field
+  = f.label :message_granularity, 'Message Granularity'
+  %p Whether the simulator puts a single bit into storage at a time, or a whole packet. Should use 'bits' for variant 1 (levels about the coordination problem), and 'packets' for levels where the coordination problem is abstracted away.
+  = f.select :message_granularity, options_for_select(@level.class.message_granularity_options, @level.message_granularity)
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :automatic_receive
+      %td= f.label :automatic_receive, 'Auto-receive'
+      %td Whether the local node will watch the message table and automatically pick up messages directed to itself, dumping them into the message log.  If false, some other method must be used for receiving data (like a manual 'receive' button)
+
 %h3 Packet Headers
 .field
   %p Packet headers can be customized to different header column combinations, orderings, and sizes with a JSON spec.
