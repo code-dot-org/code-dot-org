@@ -11,7 +11,8 @@ template: none
 %span{href:'/ops-dashboard/workshops'}
   PD Workshops
 
-%h1 PD Workshops
+%h1
+  PD Workshops
 - if dashboard_user[:admin]
   %a.btn.btn-white{href:'#/workshops/new'}
     Create New PD Workshop
@@ -24,22 +25,26 @@ template: none
 
 %table{style:'width:970px; layout:fixed; margin-top:20px;'}
   %colgroup
-    %col{width: "135"}/
     %col{width: "120"}/
-    %col{width: "140"}/
-    %col{width: "160"}/
+    %col{width: "90"}/
+    %col{width: "100"}/
     %col{width: "150"}/
-    %col{width: "160"}/
+    %col{width: "145"}/
+    %col{width: "150"}/
+    %col{width: "110"}/
   %tr
     %th.manage-th
       %a{'ng-click' => 'order = "name"'}
-        Workshop Name
+        Name
     %th.manage-th
       %span
-        Program Type
+        Program
     %th.manage-th
       %span
-        Teacher Cohort
+        Cohort
+    %th.manage-th
+      %span
+        Facilitators
     %th.manage-th
       Dates
     %th.manage-th
@@ -53,13 +58,20 @@ template: none
       %p
         {{workshop.name}}
       %a{href:'#/workshops/{{workshop.id}}/attendance'}
-        View attendance
+        Attendance
     %td
       %span
         {{program_types[workshop.program_type].short_name}}
     %td
       %span
         {{cohortName(workshop.cohort_id)}}
+    %td
+      %ul{style:'margin:0'}
+        %li{'ng-repeat' => 'facilitator in workshop.facilitators'}
+          {{facilitator.ops_first_name}}
+          {{facilitator.ops_last_name}}
+          %a{'ng-href' => "mailto:{{facilitator.email}}"}
+            {{facilitator.email}}
     %td
       %div{'ng-repeat' => 'segment in workshop.segments'}
         %p
@@ -71,17 +83,18 @@ template: none
         {{workshop.location}}
     - if dashboard_user[:admin]
       %td
-        %a.btn.btn-white{href:'#/workshops/{{workshop.id}}/edit', 'ng-hide' => 'workshop.deletion == true'} Edit
-        %button.btn.btn-danger{'ng-click' => 'workshop.deletion = true', 'ng-hide' => 'workshop.deletion == true'} Delete
-        %p{'ng-show' => 'workshop.deletion'}
-          Are you sure?
-        %button.btn.btn-danger{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1)', 'ng-show' => 'workshop.deletion == true'} Yes
-        %button.btn.btn-white{'ng-click' => 'workshop.deletion = false', 'ng-show' => 'workshop.deletion == true'} No
+        %a.btn.btn-white.btn-xs{href:'#/workshops/{{workshop.id}}/edit', 'ng-hide' => 'workshop.deletion == true'}
+          Edit
+        %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.deletion = true', 'ng-hide' => 'workshop.deletion == true'}
+          Delete
+        %div{'ng-show' => 'workshop.deletion'}
+          Really?
+        %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.$remove({id: workshop.id}) && workshops.splice($index, 1)', 'ng-show' => 'workshop.deletion == true'}
+          Yes
+        %a.btn.btn-white.btn-xs{'ng-click' => 'workshop.deletion = false', 'ng-show' => 'workshop.deletion == true'}
+          No
 
 :css
-  td .btn {
-    width: 48%;
-  }
   a {
     color: white;
   }

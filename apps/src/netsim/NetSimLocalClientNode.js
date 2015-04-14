@@ -20,6 +20,8 @@ var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
 var ObservableEvent = require('../ObservableEvent');
 
+var MessageGranularity = require('./netsimConstants').MessageGranularity;
+
 var logger = NetSimLogger.getSingleton();
 
 /**
@@ -353,12 +355,8 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
   var localNodeID = this.myWire.localNodeID;
   var remoteNodeID = this.myWire.remoteNodeID;
 
-  // Who simulates?  Normally the receiving node
-  var simulatingNodeID = remoteNodeID;
-  // If sending to a router, we will do our own simulation
-  if (this.myRouter && this.myRouter.entityID === remoteNodeID) {
-    simulatingNodeID = localNodeID;
-  }
+  // Who will be responsible for picking up/cleaning up this message?
+  var simulatingNodeID = this.selectSimulatingNode_(localNodeID, remoteNodeID);
 
   var self = this;
   NetSimMessage.send(this.shard_, localNodeID, remoteNodeID, simulatingNodeID,
@@ -378,6 +376,28 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         onComplete(null);
       }
   );
+};
+
+/**
+ * Decide whether the local node or the remote node will be responsible
+ * for picking up and cleaning up this message from remote storage.
+ * @param {number} localNodeID
+ * @param {number} remoteNodeID
+ * @returns {number} one of the two IDs provided
+ */
+NetSimLocalClientNode.prototype.selectSimulatingNode_ = function (localNodeID,
+    remoteNodeID) {
+  if (this.levelConfig_.messageGranularity === MessageGranularity.BITS) {
+    // In simplex wire mode, the local node cleans up its own messages
+    // when it knows they are no longer current.
+    return localNodeID;
+  } else if (this.myRouter && this.myRouter.entityID === remoteNodeID) {
+    // If sending to a router, we will do our own simulation on the router's
+    // behalf
+    return localNodeID;
+  }
+  // Default case: The designated recipient must pick up the message.
+  return remoteNodeID;
 };
 
 /**
@@ -441,6 +461,12 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
  * @private
  */
 NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
+  if (!this.levelConfig_.automaticReceive) {
+    // In this level, we will not automatically pick up messages directed
+    // at us.  We must manually call a receive method instead.
+    return;
+  }
+
   if (this.isProcessingMessages_) {
     // We're already in this method, getting called recursively because
     // we are making changes to the table.  Ignore this call.
@@ -494,4 +520,102 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
   if (this.receivedLog_) {
     this.receivedLog_.log(message.payload);
   }
+};
+
+/**
+ * Asynchronously receive the latest message shared between this node
+ * and its connected remote node.
+ * @param {!NodeStyleCallback} onComplete - given the message as a result, or
+ *        NULL if no messages exist.
+ */
+NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function (onComplete) {
+  if (!this.myWire) {
+    onComplete(new Error("Unable to retrieve message; not connected."));
+    return;
+  }
+
+  // Does an asynchronous request to the message table to ensure we have
+  // the latest contents
+  this.shard_.messageTable.readAll(function (err, messageRows) {
+    if (err) {
+      onComplete(err);
+      return;
+    }
+
+    // We only care about rows on our (simplex) wire
+    var rowsOnWire = messageRows.filter(function (row) {
+      return this.myWire.isMessageRowOnSimplexWire(row);
+    }.bind(this));
+
+    // If there are no rows, complete successfully but pass null result.
+    if (rowsOnWire.length === 0) {
+      onComplete(null, null);
+      return;
+    }
+
+    var lastRow = rowsOnWire[rowsOnWire.length - 1];
+    onComplete(null, new NetSimMessage(this.shard_, lastRow));
+  }.bind(this));
+};
+
+/**
+ * Asynchronously set the state of the shared wire.
+ * @param {string} newState - probably ought to be "0" or "1"
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimLocalClientNode.prototype.setSimplexWireState = function (newState, onComplete) {
+  this.sendMessage(newState, function (err) {
+    if (err) {
+      logger.warn(err.message);
+      onComplete(new Error("Failed to set wire state."));
+      return;
+    }
+
+    // We're not done!  Also do our part to keep the message table clean.
+    this.removeMyOldMessagesFromWire_(onComplete);
+  }.bind(this));
+
+};
+
+/**
+ * Removes all messages on the current wire that are simulated by the local
+ * node and are not the latest message on the wire.
+ * Used by simplex configurations where we only care about the wire's current
+ * (latest) state.
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onComplete) {
+  if (!this.myWire) {
+    onComplete(new Error("Unable to retrieve message; not connected."));
+    return;
+  }
+
+  // Does an asynchronous request to the message table to ensure we have
+  // the latest contents
+  this.shard_.messageTable.readAll(function (err, messageRows) {
+    if (err) {
+      onComplete(err);
+      return;
+    }
+
+    // We only care about rows on our (simplex) wire
+    var rowsOnWire = messageRows.filter(function (row) {
+      return this.myWire.isMessageRowOnSimplexWire(row);
+    }, this);
+
+    // "Old" rows are all but the last element (the latest one)
+    var oldRowsOnWire = rowsOnWire.slice(0, -1);
+
+    // We are only in charge of deleting messages that we are simulating
+    var myOldRowsOnWire = oldRowsOnWire.filter(function (row) {
+      return row.simulatedBy === this.entityID;
+    }, this);
+
+    // Convert to message entities so we can destroy them
+    var myOldMessagesOnWire = myOldRowsOnWire.map(function (row) {
+      return new NetSimMessage(this.shard_, row);
+    }, this);
+
+    NetSimEntity.destroyEntities(myOldMessagesOnWire, onComplete);
+  }.bind(this));
 };
