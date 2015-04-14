@@ -1,0 +1,13 @@
+name 'U1L11 Assessment 1'
+title 'Assessment: Sending Formatted Text'
+description 'Question #1'
+question 'What is ASCII text?'
+wrong 'American Strict Conformance of Internet Interchange'
+wrong 'Authentication Standards for Commerce in Interstate Information'
+right 'American Standard Code for Information Interchange'
+wrong 'Automatic Serial Coding for Interface Interchange'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
