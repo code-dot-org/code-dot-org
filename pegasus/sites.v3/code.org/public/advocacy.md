@@ -19,11 +19,20 @@ We support the implementation of the eight following policies to make computer s
 For a more in-depth description of our state policy agenda, please see our [state policy outline](/files/Making_CS_Fundamental.pdf).
 
 
+## Map
+
+<%= view :interactive_map, use_url: false %>
+
+
+<div style="clear:both">
+</div>
+
+
 ## Federal Policy
 
 
-
 ## Members
+
 * Microsoft
 * The College Board 
 * Google
@@ -39,3 +48,12 @@ For a more in-depth description of our state policy agenda, please see our [stat
 * Students First
 * Teach for America
 * TechNet
+
+
+[#tools-section]
+
+## Tools to help you advocate locally
+
+<%= view :promote_tools, state: nil %>
+
+[/tools-section]
