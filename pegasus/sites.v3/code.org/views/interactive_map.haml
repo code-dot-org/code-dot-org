@@ -17,29 +17,32 @@
   var webServiceLocation = "/promote/state/";
 
   $(document).ready(function() {
-    // Check if the URL specifies a specific state. If so, load the state
-    if (window.location.pathname.replace("/promote", "") !== "") {
-      var state = window.location.pathname.replace("/promote/", "");
-      $.ajax({
-        url: webServiceLocation + state.toLowerCase(),
-        type: "get",
-      }).done(function(data) {
-        $("#infobox").html(data);
-      }).fail(function () {
-        if (window.history.replaceState) {
-          history.replaceState({}, "", "../promote");
-        }
-      });
+    if (#{use_url}) {
+      // Check if the URL specifies a specific state. If so, load the state
+      if (window.location.pathname.replace("/promote", "") !== "") {
+        var state = window.location.pathname.replace("/promote/", "");
+        $.ajax({
+          url: webServiceLocation + state.toLowerCase(),
+          type: "get",
+        }).done(function(data) {
+          $("#infobox").html(data);
+        }).fail(function () {
+          if (window.history.replaceState) {
+            history.replaceState({}, "", "../promote");
+          }
+        });
+      }
     }
 
     // Load the SVG into the #map div
     $('#map').usmap({
       click: function(event, data) {
-        // Add data and URL to browser history when the user clicks a state
-
-        if (window.history.replaceState) {
+        if (#{use_url}) {
+          // Add data and URL to browser history when the user clicks a state
           if (window.history.replaceState) {
-            history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+            if (window.history.replaceState) {
+              history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+            }
           }
         }
 
@@ -50,7 +53,9 @@
         }).done(function(data) {
           $("#infobox").html(data);
         }).fail(function () {
-          window.location = "/promote"
+          if (#{use_url}) {
+            window.location = "/promote"
+          }
         });
       },
 
@@ -64,24 +69,28 @@
     });
 
     // "Click" the current state if page is loaded with state in URL.
-    if (window.location.pathname.replace("/promote", "") !== "") {
-      $("#" + state.toUpperCase()).click();
+    if (#{use_url}) {
+      if (window.location.pathname.replace("/promote", "") !== "") {
+        $("#" + state.toUpperCase()).click();
+      }
     }
   });
 
   // When the user uses the "back" button, load previous data into infobox and URL bar
   window.onpopstate = function(event) {
-    $.ajax({
-      url: webServiceLocation + event.state["state"].toLowerCase(),
-      type: "get",
-    }).done(function(data) {
-      $("#infobox").html(data);
-      $("#" + event.state["state"]).click();
-    }).fail(function () {
-      if (window.history.replaceState) {
-        history.replaceState({}, "", "../promote");
-      }
-    });
+    if (#{use_url}) {
+      $.ajax({
+        url: webServiceLocation + event.state["state"].toLowerCase(),
+        type: "get",
+      }).done(function(data) {
+        $("#infobox").html(data);
+        $("#" + event.state["state"]).click();
+      }).fail(function () {
+        if (window.history.replaceState) {
+          history.replaceState({}, "", "../promote");
+        }
+      });
+    }
   };
 
 :css
