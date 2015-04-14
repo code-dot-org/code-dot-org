@@ -268,6 +268,7 @@
   "missingBlocksErrorMsg": "Try one or more of the blocks below to solve this puzzle.",
   "nextLevel": "Congratulations! You completed Puzzle {puzzleNumber}.",
   "nextLevelTrophies": "Congratulations! You completed Puzzle {puzzleNumber} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
+  "nextPuzzle": "Next Puzzle",
   "nextStage": "Congratulations! You completed {stageName}.",
   "nextStageTrophies": "Congratulations! You completed {stageName} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "numBlocksNeeded": "Congratulations! You completed Puzzle {puzzleNumber}. (However, you could have used only {numBlocks, plural, one {1 block} other {# blocks}}.)",
