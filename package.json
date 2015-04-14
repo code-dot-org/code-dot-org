@@ -10,7 +10,8 @@
   "scripts": {
     "gulp": "FORCE_COLOR=true gulp --cwd=. --gulpfile=lib/frontend/gulpfile.js",
     "start": "npm run gulp -- dev",
-    "build": "npm run gulp -- build"
+    "build": "npm run gulp -- build",
+    "test": "(cd apps && npm test)"
   },
   "dependencies": {
     "@cdo/apps-build": "0.0.1",
