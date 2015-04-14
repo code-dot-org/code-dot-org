@@ -27,7 +27,7 @@ The fill color controls the interior color of shapes drawn with [rect](/applab/d
 
 Setting the fill color affects all subsequent [`rect()`](/applab/docs/rect) and [`circle()`](/applab/docs/circle) calls. Any shapes that have already been drawn are not affected.
 
-Colors can be specified by name (eg, "red", "green", "blue") or by hex code (eg, "#FF000", "#00FF00", "#0000FF").
+Colors can be specified by name (eg, "red", "green", "blue"), or by hex code (eg, "#FF000", "#00FF00", "#0000FF"), or by rgb value (eg, "rgb(255,0,0)", "rgb(0,255,0)", "rgb(0,0,255)").
 
 **Note**: A canvas element must be created before the fill color can be changed. Create a canvas element in Design mode first, or call [`createCanvas()`](/applab/docs/createCanvas) before calling `setFillColor()`.
 
@@ -54,15 +54,33 @@ ____________________________________________________
 This example draws a worried emoticon face using filled shapes.
 
 <pre>
-createCanvas(); //Create a canvas on which to draw
+createCanvas();         //Create a canvas on which to draw
 setFillColor("yellow");
-circle(160, 240, 100); // Draw a big, yellow circle for a head
+circle(160, 240, 100);  //Draw a big, yellow circle for a head
 setFillColor("black");
-circle(125, 215, 20); // Draw two solid black circles for eyes
+circle(125, 215, 20);   //Draw two solid black circles for eyes
 circle(195, 215, 20);
 setFillColor("white");
-rect(100, 260, 120, 20); // Draw a white rectangle for a mouth
+rect(100, 260, 120, 20);//Draw a white rectangle for a mouth
 
+</pre>
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+This example draws three filled yellow rectangles, using three different ways of specifying the color yellow.
+
+<pre>
+createCanvas();
+setFillColor("yellow");
+rect(80, 50, 160, 40);
+setFillColor("#FFFF00");
+rect(80, 100, 160, 40);
+setFillColor("rgb(255,255,0)");
+rect(80, 150, 160, 40);
 </pre>
 
 [/example]
