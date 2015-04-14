@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## randomNumber(min, max)
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Math
 
 [/category]
 
@@ -19,11 +19,11 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Returns a [pseudorandom](http://en.wikipedia.org/wiki/Pseudorandom_number_generator) number ranging from the first number (min) to the second number (max), including both numbers in the range.
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+The number returned is not truly random as defined in mathematics.
 
 [/description]
 
@@ -32,9 +32,11 @@ ____________________________________________________
 
 [example]
 
+**Example 1**
+
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+console.log(randomNumber(5, 20));       // generates a pseudorandom number in the range 5 to 20 (inclusive)
+                                        //    and then prints it to the console
 </pre>
 
 [/example]
@@ -43,10 +45,63 @@ ____________________________________________________
 
 [example]
 
+**Example 2**
+
+This example prints out 5 pseudorandom numbers in the range -10 to 10 to the console.
+
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+for (var i = 0; i < 5; i++) {           // repeats the code inside of this block 5 times
+  console.log(randomNumber(-10, 10));   // calculates a pseudorandom number in the range -10 to 10
+                                        //    and then prints it to the console
+}
+</pre>
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example 3**
+
+This example asks the user for a number and then draws that number of bird images on the screen in random locations.
+
+<pre>
+textLabel("birds_label", "How many birds would you like to create?"); // creates a text label for the number
+                                                                      // of birds input
+
+textInput("birds_input", "", 100);                                    // creates a text box for the user
+                                                                      // to enter the number of birds they
+                                                                      // want drawn on the canvas
+
+image("bird", "http://studio.code.org/blockly/media/skins/studio/bird_thumb.png");  // creates the bird image
+setPosition("bird", 0, 60, 100, 100);                                 // sets the location of the bird image
+                                                                      // so that it is below the text label
+                                                                      // and text box
+
+createCanvas("id", 320, 480);                                         // creates the canvas
+
+function moveFromText(event) {                                        // creates a function for when the user
+                                                                      // moves out of the text box
+
+  hideElement("bird");                                                // hides the original bird image
+  var birds = getText("birds_input");                                 // gets the number the user entered and
+                                                                      // stores it into the birds variable
+
+  clearCanvas();                                                      // clears the canvas, this allows the
+                                                                      // user to change the value in the
+                                                                      // text box
+  for (var i = 0; i < birds; i++) {                                   // this loop will draw the
+                                                                      // correct number of birds based on
+                                                                      // what the user entered
+    drawImage("bird", randomNumber(-5, 220), randomNumber(60, 370));  // this draws the birds at random
+                                                                      // location within the size of
+                                                                      // the canvas
+  }
+}
+onEvent("birds_input", "change", moveFromText);                       // when the user moves from the
+                                                                      // text box, the function moveFromText
+                                                                      // will be called
 </pre>
 
 
@@ -58,7 +113,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+randomNumber(min, max);
 </pre>
 
 [/syntax]
@@ -69,25 +124,23 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| min | number | Yes | The minimum number returned  |
+| max | number | Yes | The maximum number returned  |
+
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+Returns a pseudorandom number in the range min to max (inclusive). The number returned will always be an integer.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+
 
 [/tips]
 
