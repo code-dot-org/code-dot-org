@@ -433,7 +433,9 @@ Blockly.BlockSvg.connectionUiStep_ = function(ripple) {
 };
 
 /**
- * Change the colour of a block.
+ * Change the display colour of a block. In the case of block.shouldBeGrayedOut
+ * this means the block color on the block object and the display color (gray)
+ * are potentially out of sync.
  */
 Blockly.BlockSvg.prototype.updateColour = function() {
   if (this.block_.disabled) {

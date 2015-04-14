@@ -27,7 +27,7 @@ goog.provide('Blockly.FunctionalTypeColors');
 goog.require('Blockly.BlockValueType');
 
 var typesToColors = {};
-typesToColors[Blockly.BlockValueType.NONE] = [0, 0, 0.6];
+typesToColors[Blockly.BlockValueType.NONE] = [0, 0, 0]; // 000000
 typesToColors[Blockly.BlockValueType.NUMBER] = [192, 1.00, 0.99]; // 00ccff
 typesToColors[Blockly.BlockValueType.STRING] = [180, 1.00, 0.60]; // 0099999
 typesToColors[Blockly.BlockValueType.IMAGE] = [285, 1.00, 0.80]; // 9900cc
@@ -66,12 +66,8 @@ Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function (block, title,
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
     input.setInline(i > 0);
-    if (arg.type === Blockly.BlockValueType.NONE) {
-      input.setHSV(0, 0, 0.99);
-    } else {
-      input.setHSV.apply(input, Blockly.FunctionalTypeColors[arg.type]);
-      input.setCheck(arg.type);
-    }
+    input.setHSV.apply(input, Blockly.FunctionalTypeColors[arg.type]);
+    input.setCheck(arg.type);
     input.setAlign(Blockly.ALIGN_CENTRE);
   }
 
@@ -116,6 +112,7 @@ Blockly.FunctionalBlockUtils.installFunctionalApiCallBlock = function(blockly, g
   var blockArgs = args.filter(function(arg) {
     return arg.constantValue === undefined;
   });
+  // TODO - should this be Blockly.BlockValueType.NONE?
   var blockType = 'none';
   blockly.Blocks[blockName] = {
     init: function () {
