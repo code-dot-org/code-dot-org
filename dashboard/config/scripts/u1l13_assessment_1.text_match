@@ -1,0 +1,13 @@
+name 'U1L13 Assessment 1'
+title 'Assessment 1: Text Compression'
+content1 'Write (in the space below) a segment of text that should compress effectively and efficiently.'
+
+markdown <<MARKDOWN
+Return to the Text Compression Tool. Compress the text. 
+
+Calculate the compression rate. 
+
+Record your results here. Explain why you would rate this as a "good" compression.
+
+What are the characteristics of the text that resulted in a "good" compression?
+MARKDOWN
