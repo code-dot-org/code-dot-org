@@ -19,7 +19,7 @@ Category: Math
 
 [short_description]
 
-Rounds x to the nearest integer.
+Rounds a number to the nearest integer.
 
 [/short_description]
 
@@ -61,9 +61,9 @@ ____________________________________________________
 function floor(n) {
   //Let a be an integer such that a <= n < a+1
   //The floor of n is a (it is the nearest integer smaller than n)
-  //With a simple subtraction, we know that a-0.5 <= n-0.5 <a+0.5
+  //With a simple subtraction, we know that a-0.5 <= n-0.5 < a+0.5
   var m = n-0.5;
-  //For every number m where a-0.5 <= m <a+0.5 and a is an integer, Math.round(m) = a
+  //For every number m where a-0.5 <= m < a+0.5 and a is an integer, Math.round(m) = a
   return Math.round(m);
 }
 var y = floor(-23.5); //Take the floor value of -23.5 and store it in variable y
