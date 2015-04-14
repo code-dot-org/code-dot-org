@@ -120,4 +120,10 @@ class LevelsHelperTest < ActionView::TestCase
 
     assert callouts.any?{ |c| c['localized_text'] == 'Hit "Run" to try your program'}
   end
+
+  test 'app_options returns camelCased view option on Blockly level' do
+    @level.start_blocks = '<test/>'
+    options = app_options
+    assert_equal '<test/>', options[:level]['startBlocks']
+  end
 end
