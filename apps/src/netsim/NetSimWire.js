@@ -113,7 +113,7 @@ NetSimWire.prototype.isMessageRowOnDuplexWire = function (messageRow) {
  */
 NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
   var onWire = this.isMessageRowOnDuplexWire(messageRow);
-  var onReverseWire = this.localNodeID === messageRow.toNodeID && this.
-          remoteNodeID === messageRow.fromNodeID;
+  var onReverseWire = this.localNodeID === messageRow.toNodeID &&
+      this.remoteNodeID === messageRow.fromNodeID;
   return onWire || onReverseWire;
 };
