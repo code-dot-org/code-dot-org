@@ -566,8 +566,8 @@ NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function (onComp
 NetSimLocalClientNode.prototype.setSimplexWireState = function (newState, onComplete) {
   this.sendMessage(newState, function (err) {
     if (err) {
-      err.message = "Failed to set wire state: " + err.message;
-      onComplete(err);
+      logger.warn(err.message);
+      onComplete(new Error("Failed to set wire state."));
       return;
     }
 
