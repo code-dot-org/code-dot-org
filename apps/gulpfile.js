@@ -3,6 +3,9 @@
  *  gulp build: compile/concatenate all source files
  *  gulp dev: Run watch-mode incremental compilation
 **/
+require('child_process').spawnSync = require('spawn-sync');
+var checkDeps = require('check-dependencies');
+checkDeps.sync({'onlySpecified': true, 'install': true});
 
 var gulp = require('gulp');
 gulp.task('build', [(process.env.NODE_ENV == 'production' ? 'compress' : 'bundle-js'), 'media', 'sass', 'messages']);
@@ -44,6 +47,11 @@ gulp.task('bundle-js', ['vendor'], function() {
 });
 
 function browserify(watch) {
+  require('mkdirp')('./src/node_modules');
+  require('child_process').spawnSync = require('spawn-sync');
+  var checkDeps = require('check-dependencies');
+  checkDeps.sync({'packageDir': './src', 'onlySpecified': true, 'install': true});
+
   var bundle = require('@cdo/cdo/lib/frontend/browserify');
   var extend = require('util')._extend;
   var config = appsBrowserifyConfig;
