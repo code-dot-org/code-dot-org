@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## penWidth(x)
+## penWidth(width)
 
 [/name]
 
@@ -19,10 +19,11 @@ Category: Turtle
 
 [short_description]
 
-Changes the thickness of the line the turtle leaves behind as it moves on the screen.
+Changes the diameter of the circles drawn behind the turtle as it moves.
 
 [/short_description]
 
+**Note**: Even though it may look like a line, circles are actually being drawn behind the turtle as it moves. The width passed to penWidth sets the diameter of these circles.
 
 [/description]
 
@@ -31,9 +32,11 @@ ____________________________________________________
 
 [example]
 
+**Example 1**
+
 <pre>
-penWidth(10);
-moveForward(100);
+penWidth(10);             // sets the diameter of the circles drawn behind the turtle to 10 pixels
+moveForward(100);         // moves the turtle forward 100 pixels
 </pre>
 
 [/example]
@@ -42,15 +45,24 @@ ____________________________________________________
 
 [example]
 
+**Example 2**
+
+This example illustrates different pixel thicknesses from 10 - 90.
+
 <pre>
-var amount_turned = 0;
-while ((amount_turned < 360)) {
-  var rand_amount = (randomNumber(50));
-  penWidth(rand_amount);
-  moveForward(100);
-  moveBackward(100);
-  turnRight(rand_amount);
-  amount_turned = (amount_turned + rand_amount);
+penUp();                        // stops leaving a trail behind the turtle as it moves
+moveTo(0, 0);                   // moves the turtle to the coordinate (0,0)
+turnRight(90);                  // turns the turtle 90 degrees to the right
+for (var i = 1; i < 10; i++) {  // repeats the code inside of this block 9 times
+  penDown();                    // starts leaving a trail behind the turtle as it moves
+  penWidth(i * 10);             // sets the diameter of the circles drawn behind the turtle
+                                //    to a multiple of 10
+  moveForward(250);             // moves the turtle forward 250 pixels
+  moveBackward(250);            // moves the turtle backward 250 pixels
+  penUp();                      // stops leaving a trail behind the turtle as it moves
+  turnRight(90);                // turns the turtle 90 degrees to the left
+  moveForward(i * 10 + 10);     // moves the turtle forward a multiple of 10 plus 10 pixels for padding
+  turnLeft(90);                 // turns the turtle 90 degrees to the left
 }
 </pre>
 
@@ -63,7 +75,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-penWidth(x);
+penWidth(width);
 </pre>
 
 [/syntax]
@@ -74,9 +86,7 @@ penWidth(x);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The thickness of the line drawn as the turtle moves  |
-
-Note: A number less than or equal to zero will result in a thickness of 1
+| width | number | Yes | The diameter of the circles drawn behind the turtle as it moves  |
 
 [/parameters]
 
