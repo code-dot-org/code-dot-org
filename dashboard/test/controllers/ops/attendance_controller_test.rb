@@ -80,12 +80,25 @@ module Ops
       segment = @attendance.segment
 
       teacher = create(:teacher)
+      teacher2 = create(:teacher)
       cohort = @attendance.segment.workshop.cohort
       cohort.teachers << teacher
+      cohort.teachers << teacher2
       cohort.save!
 
-      post :batch, segment_id: segment.id, attendance: [[teacher.id, 'tardy']]
+      assert_difference('WorkshopAttendance.count', 2) do
+        post :batch, segment_id: segment.id,
+          attendance: [[teacher.id, 'tardy', 'with notes'], [teacher2.id, 'present']]
+      end
       assert_response :success
+
+      teacher_attendance = WorkshopAttendance.find_by_teacher_id(teacher.id)
+      assert_equal 'tardy', teacher_attendance.status
+      assert_equal 'with notes', teacher_attendance.notes
+
+      teacher2_attendance = WorkshopAttendance.find_by_teacher_id(teacher2.id)
+      assert_equal 'present', teacher2_attendance.status
+      assert_equal nil, teacher2_attendance.notes
     end
 
     # Test index + CRUD controller actions
@@ -124,15 +137,20 @@ module Ops
     test 'Ops team can mark attendance' do
       assert_routing({ path: "#{API}/segments/1/attendance", method: :post }, { controller: 'ops/workshop_attendance', segment_id: '1', action: 'create' })
 
-      assert_difference 'WorkshopAttendance.count' do
-        teacher = create(:teacher)
-        cohort = @attendance.segment.workshop.cohort
-        cohort.teachers << teacher
-        cohort.save!
+      teacher = create(:teacher)
+      cohort = @attendance.segment.workshop.cohort
+      cohort.teachers << teacher
+      cohort.save!
 
-        post :create, segment_id: @attendance.segment.id, workshop_attendance: {teacher_id: teacher, status: 'present'}
+      assert_creates WorkshopAttendance do
+        post :create, segment_id: @attendance.segment.id, workshop_attendance: {teacher_id: teacher, status: 'present', notes: 'The notes'}
       end
       assert_response :success
+
+      attendance = WorkshopAttendance.last
+      assert_equal 'The notes', attendance.notes
+      assert_equal 'present', attendance.status
+      assert_equal teacher, attendance.teacher
     end
 
     test 'read attendance info' do
@@ -146,10 +164,11 @@ module Ops
       assert_routing({ path: "#{API}/attendance/1", method: :patch }, { controller: 'ops/workshop_attendance', action: 'update', id: '1' })
 
       new_status = 'tardy'
-      patch :update, id: @attendance.id, workshop_attendance: {status: new_status}
+      patch :update, id: @attendance.id, workshop_attendance: {status: new_status, notes: 'Notes'}
 
       get :show, id: @attendance.id
       assert_equal new_status, JSON.parse(@response.body)['status']
+      assert_equal 'Notes', JSON.parse(@response.body)['notes']
       assert_response :success
     end
 
