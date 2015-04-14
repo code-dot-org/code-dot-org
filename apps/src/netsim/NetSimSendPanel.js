@@ -28,6 +28,8 @@ var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
 var binaryToAB = dataConverters.binaryToAB;
 
+var logger = require('./NetSimLogger').getSingleton();
+
 /**
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
@@ -320,21 +322,23 @@ NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
     return;
   }
 
-  // TODO: This should attempt to remove messages controlled by this node;
-  // TODO: they no longer represent the state of this wire.
-  // TODO: Keep it clean, people!
+  var myNode = this.netsim_.myNode;
+  if (!myNode) {
+    throw new Error("Tried to set wire state when no connection is established.");
+  }
 
   // Find the first bit of the first packet.  Set the wire to 0/off if
   // there is no first bit.
-  var firstBit = this.getNextBit_();
-  var myNode = this.netsim_.myNode;
-  if (myNode) {
-    this.disableEverything();
-    myNode.sendMessages([firstBit], function () {
-      this.consumeFirstBit();
-      this.enableEverything();
-    }.bind(this));
-  }
+  this.disableEverything();
+  myNode.setSimplexWireState(this.getNextBit_(), function (err) {
+    if (err) {
+      logger.warn(err.message);
+      return;
+    }
+
+    this.consumeFirstBit();
+    this.enableEverything();
+  }.bind(this));
 };
 
 /**
