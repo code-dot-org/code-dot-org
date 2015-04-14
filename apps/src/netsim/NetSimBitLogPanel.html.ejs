@@ -7,15 +7,6 @@
   var EncodingType = netsimConstants.EncodingType;
   var PacketUIColumnType = netsimConstants.PacketUIColumnType;
 
-  var formatAB = dataConverters.formatAB;
-  var formatBinary = dataConverters.formatBinary;
-  var formatHex = dataConverters.formatHex;
-  var alignDecimal = dataConverters.alignDecimal;
-  var binaryToAB = dataConverters.binaryToAB;
-  var binaryToHex = dataConverters.binaryToHex;
-  var binaryToDecimal = dataConverters.binaryToDecimal;
-  var binaryToAscii = dataConverters.binaryToAscii;
-
   /**
    * @param {EncodingType} encodingType
    * @param {string} encodedContent
@@ -35,15 +26,15 @@
       <table>
         <tbody>
           <%
-            logRow(EncodingType.ASCII, binaryToAscii(binary, chunkSize));
+            logRow(EncodingType.ASCII, dataConverters.binaryToAscii(binary, chunkSize));
 
-            logRow(EncodingType.DECIMAL, alignDecimal(binaryToDecimal(binary, chunkSize)));
+            logRow(EncodingType.DECIMAL, dataConverters.alignDecimal(dataConverters.binaryToDecimal(binary, chunkSize)));
 
-            logRow(EncodingType.HEXADECIMAL, formatHex(binaryToHex(binary), chunkSize));
+            logRow(EncodingType.HEXADECIMAL, dataConverters.formatHex(dataConverters.binaryToHex(binary), chunkSize));
 
-            logRow(EncodingType.BINARY, formatBinary(binary, chunkSize));
+            logRow(EncodingType.BINARY, dataConverters.formatBinary(binary, chunkSize));
 
-            logRow(EncodingType.A_AND_B, formatAB(binaryToAB(binary), chunkSize));
+            logRow(EncodingType.A_AND_B, dataConverters.formatAB(dataConverters.binaryToAB(binary), chunkSize));
           %>
         </tbody>
       </table>
