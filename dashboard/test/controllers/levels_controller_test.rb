@@ -256,7 +256,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get edit blocks" do
     @level.update(toolbox_blocks: @program)
     get :edit_blocks, level_id: @level.id, type: 'toolbox_blocks'
-    assert_equal @program, assigns[:start_blocks]
+    assert_equal @program, assigns[:level_view_options][:start_blocks]
   end
 
   test "should update level" do
@@ -395,6 +395,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :show, id: level, game_id: level.game
     assert_select '.pdf-button'
 
+    @controller = LevelsController.new
     student = create(:student)
     sign_out(teacher)
     sign_in(student)
@@ -418,6 +419,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :show, id: level, game_id: level.game
     assert_select '.pdf-button'
 
+    @controller = LevelsController.new
     student = create(:student)
     sign_out(teacher)
     sign_in(student)
