@@ -78,66 +78,6 @@ Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function (block, title,
   }
 };
 
-/**
- * Installs a block which generates code that makes an API call, which
- * looks roughly like:
- *
- *     apiName(block_id, arg1 [,arg2 ...])
- *
- * where args with "constantValue" defined are pre-specified arguments,
- * and other args are read from functional inputs. For example:
- *
- *     options = {
- *       blockName: 'functional_setSpriteZeroSpeed',
- *       blockTitle: 'set sprite zero speed',
- *       apiName: 'Studio.setSpriteSpeed',
- *       args: [{constantValue: '0'}, // spriteIndex
- *              {name: 'SPEED', type: 'Number', default:'7'}]
- *     }
- *
- * creates a block which, with an id of '43' and an input of '12', would
- * generate the following code:
- *
- *     'Studio.setSpriteSpeed(block_id_43, 0, 12)'
- *
- * if no apiName is specified, a "dummy" block is generated which
- * accepts arguments but generates no code.
- */
-Blockly.FunctionalBlockUtils.installFunctionalApiCallBlock = function(blockly, generator, options) {
-  var blockName = options.blockName;
-  var blockTitle = options.blockTitle;
-  var apiName = options.apiName;
-  var args = options.args;
-
-  var blockArgs = args.filter(function(arg) {
-    return arg.constantValue === undefined;
-  });
-  // TODO - should this be Blockly.BlockValueType.NONE?
-  var blockType = 'none';
-  blockly.Blocks[blockName] = {
-    init: function () {
-      Blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, blockType, blockArgs);
-    }
-  };
-
-  // The generator function depends on "this" being the block object.
-  generator[blockName] = function() {
-    if (!apiName) {
-      return '';
-    }
-    var apiArgs = [];
-    apiArgs.push('\'block_id_' + this.id + '\'');
-    for (var i = 0; i < args.length; i++) {
-      var arg = args[i];
-      var value = arg.constantValue !== undefined ?
-        arg.constantValue :
-      Blockly.JavaScript.statementToCode(this, arg.name, false) || arg['default'];
-      apiArgs.push(value);
-    }
-    return apiName + '(' + apiArgs.join(',') + ');\n';
-  };
-};
-
 Blockly.FunctionalBlockUtils.installStringPicker = function(blockly, generator, options) {
   var values = options.values;
   var blockName = options.blockName;
