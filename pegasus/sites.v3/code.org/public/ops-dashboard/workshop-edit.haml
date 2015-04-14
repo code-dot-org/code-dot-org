@@ -14,8 +14,10 @@ template: none
 %span
   PD Workshop Management
 
-%h1{'ng-show' => 'workshop.id'} Edit {{workshop.name}}
-%h1{'ng-show' => '!workshop.id'} Add a workshop
+%h1{'ng-show' => 'workshop.id'}
+  Edit {{workshop.name}}
+%h1{'ng-show' => '!workshop.id'}
+  Add a workshop
 
 %h3
   Workshop Name
@@ -69,3 +71,55 @@ template: none
     %br
   %button{'ng-click' => 'saveSegment(segment)'}
     Save Segment
+
+%h3 Facilitators
+
+%div
+  %table{style: "width:950px; table-layout:fixed;", 'ng-form' => 'allForm', class: 'workshop-facilitators'}
+    %colgroup
+      %col{width: "200"}/
+      %col{width: "200"}/
+      %col{width: "300"}/
+      %col{width: "200"}/
+    %tr
+      %th.manage-th
+        First name
+      %th.manage-th
+        Last name
+      %th.manage-th
+        Email
+      %th.manage-th
+        %div
+          %a.btn.btn-primary{"ng-click" => "save(workshop)", "ng-show" => "editingAny(workshop.facilitators)", "ng-disabled" => "allForm.$invalid"} Save All
+    %tr{"ng-repeat" => "facilitator in workshop.facilitators", style: "vertical-align:top", 'ng-form' => 'form'}
+      %td
+        %div{"ng-hide" => "facilitator.editing"}
+          {{facilitator.ops_first_name}}
+        %div{"ng-show" => "facilitator.editing"}
+          %input.form-control{"ng-model" => "facilitator.ops_first_name", placeholder: "First name", style: "width: 100%", type: "text", required: "true", name: 'ops_first_name'}/
+          %span.error{'ng-show' => 'form.ops_first_name.$error.required'} required
+      %td
+        %div{"ng-hide" => "facilitator.editing"}
+          {{facilitator.ops_last_name}}
+        %div{"ng-show" => "facilitator.editing"}
+          %input.form-control{"ng-model" => "facilitator.ops_last_name", placeholder: "Last name", style: "width: 100%", type: "text", required: "true", name: 'ops_last_name'}/
+          %span.error{'ng-show' => 'form.ops_last_name.$error.required'} required
+      %td
+        %div{"ng-hide" => "facilitator.editing"}
+          {{facilitator.email}}
+        %div{"ng-show" => "facilitator.editing"}
+          %input.form-control{"ng-model" => "facilitator.email", placeholder: "Email address", style: "width: 100%", type: 'email', required: "true", name: 'email'}/
+          %span.error{'ng-show' => 'form.email.$error.required'} required
+          %span.error{'ng-show' => 'form.email.$error.email'} Invalid email address
+      %td{nowrap: true, style: 'white-space: nowrap;'}
+        %span{"ng-show" => "facilitator.confirmDelete"}
+          %span Delete?
+          %br
+          %a.btn.btn-danger.btn-xs{"ng-click"=>'del(facilitator)'} Yes
+          %a.btn.btn-success.btn-xs{"ng-click"=>'facilitator.confirmDelete = false'} No
+        %span{"ng-hide" => "facilitator.confirmDelete"}
+          %a.btn.btn-white.btn-xs{"ng-click" => "edit(facilitator)", "ng-hide" => "facilitator.editing"} Edit
+          %a.btn.btn-white.btn-xs{"ng-click" => "cancel(facilitator);", "ng-show" => "facilitator.editing"} Cancel
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(facilitator)", "ng-show" => "!facilitator.editing && facilitator.id"} Delete
+
+%button.btn.btn-white{"ng-click" => "workshop.facilitators.push({editing: true})"} + Add Facilitator
