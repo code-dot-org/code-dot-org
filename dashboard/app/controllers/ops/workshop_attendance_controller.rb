@@ -59,11 +59,11 @@ module Ops
       attendances = params.require(:attendance)
       workshop = @segment.workshop
       teachers = workshop.teacher_ids
-      attendances.each do |id, status|
+      attendances.each do |id, status, notes|
         raise("Teacher id #{id} not in workshop #{workshop.name}. Teachers: #{teachers}") unless teachers.include? id.to_i
-        WorkshopAttendance.create_with(status: status)
+        WorkshopAttendance.create_with(status: status, notes: notes)
             .find_or_create_by(teacher_id: id, segment_id: @segment.id)
-            .update!(status: status)
+            .update!(status: status, notes: notes)
       end
       render text: 'OK'
     end
@@ -103,7 +103,8 @@ module Ops
       params.require(:workshop_attendance).permit(
           :teacher_id,
           :segment_id,
-          :status
+          :status,
+          :notes
       )
     end
   end
