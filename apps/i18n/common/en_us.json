@@ -295,7 +295,7 @@
   "dropletBlock_turnLeft_param0": "angle",
   "dropletBlock_turnRight_description": "Changes the turtle's direction to the right by the specified angle in degrees",
   "dropletBlock_turnRight_param0": "angle",
-  "dropletBlock_turnTo_description": "Changes the turtle's to a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left",
+  "dropletBlock_turnTo_description": "Changes the turtle's direction to a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left",
   "dropletBlock_turnTo_param0": "angle",
   "dropletBlock_updateRecord_description": "Using App Lab's table data storage, updates the provided record in tableName. record must be uniquely identified with its id field. When the call is completed, the callbackFunction is called",
   "dropletBlock_updateRecord_param0": "tableName",
