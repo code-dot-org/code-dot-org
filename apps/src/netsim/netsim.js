@@ -22,9 +22,10 @@ var i18n = require('../../locale/current/netsim');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html');
+var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
-var DnsMode = require('./netsimConstants').DnsMode;
 var DashboardUser = require('./DashboardUser');
+var NetSimBitLogPanel = require('./NetSimBitLogPanel');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var NetSimLogger = require('./NetSimLogger');
@@ -36,6 +37,9 @@ var NetSimShardCleaner = require('./NetSimShardCleaner');
 var NetSimStatusPanel = require('./NetSimStatusPanel');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimVisualization = require('./NetSimVisualization');
+
+var DnsMode = netsimConstants.DnsMode;
+var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
 
@@ -115,13 +119,13 @@ var NetSim = module.exports = function () {
 
   // -- Components --
   /**
-   * @type {NetSimLogPanel}
+   * @type {INetSimLogPanel}
    * @private
    */
   this.receivedMessageLog_ = null;
 
   /**
-   * @type {NetSimLogPanel}
+   * @type {INetSimLogPanel}
    * @private
    */
   this.sentMessageLog_ = null;
@@ -267,19 +271,33 @@ NetSim.prototype.shouldShowAnyTabs = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.receivedMessageLog_ = new NetSimLogPanel($('#netsim-received'), {
-    logTitle: i18n.receivedMessageLog(),
-    isMinimized: false,
-    hasUnreadMessages: true,
-    packetSpec: this.level.clientInitialPacketHeader
-  });
+  // Create log panels according to level configuration
+  if (this.level.messageGranularity === MessageGranularity.PACKETS) {
+    this.receivedMessageLog_ = new NetSimLogPanel($('#netsim-received'), {
+      logTitle: i18n.receivedMessageLog(),
+      isMinimized: false,
+      hasUnreadMessages: true,
+      packetSpec: this.level.clientInitialPacketHeader
+    });
 
-  this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
-    logTitle: i18n.sentMessageLog(),
-    isMinimized: true,
-    hasUnreadMessages: false,
-    packetSpec: this.level.clientInitialPacketHeader
-  });
+    this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
+      logTitle: i18n.sentMessageLog(),
+      isMinimized: true,
+      hasUnreadMessages: false,
+      packetSpec: this.level.clientInitialPacketHeader
+    });
+  } else if (this.level.messageGranularity === MessageGranularity.BITS) {
+    this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
+      logTitle: i18n.receiveBits(),
+      isMinimized: false,
+      receiveButtonCallback: this.receiveBit_.bind(this)
+    });
+
+    this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
+      logTitle: i18n.sentBitsLog(),
+      isMinimized: false
+    });
+  }
 
   this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
       this.disconnectFromRemote.bind(this, function () {}));
@@ -529,6 +547,17 @@ NetSim.prototype.connectToRouter = function (routerID) {
 NetSim.prototype.disconnectFromRemote = function (onComplete) {
   onComplete = utils.valueOr(onComplete, function () {});
   this.myNode.disconnectRemote(onComplete);
+};
+
+/**
+ * Asynchronous fetch of the latest message shared between the local
+ * node and its connected remote.
+ * Used only in simplex & bit-granular mode.
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSim.prototype.receiveBit_ = function (onComplete) {
+  this.myNode.getLatestMessageOnSimplexWire(onComplete);
 };
 
 /**

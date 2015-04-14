@@ -188,6 +188,10 @@ svg {
 
     // Button text should not be selectable
     @include user_select(none);
+
+    &[disabled] {
+      background-color: $lighter_gray;
+    }
   }
 
   //
@@ -315,10 +319,15 @@ svg {
       color: $white;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
-      .panel_controls {
+      .panel-controls {
         float: right;
         margin-top: -0.3em;
         padding-top: 3px;
+
+        // Special margin for buttons in this control area, so they don't squish together.
+        .netsim-button {
+          margin-left: 3px;
+        }
       }
     }
 
@@ -341,6 +350,16 @@ svg {
 
       div.panel-body {
         display: none;
+      }
+    }
+
+    .panel-footer {
+      margin: 10px;
+      overflow: hidden;
+
+      .right-side-controls {
+        float: right;
+        text-align: right;
       }
     }
   }
@@ -374,7 +393,7 @@ svg {
       }
     }
 
-    .scroll_area {
+    .scroll-area {
       margin: 0.5em 0 0.5em 0;
       max-height: 300px;
       width: 100%;
@@ -543,18 +562,8 @@ svg {
       }
     }
 
-    .send_widget_footer {
-      margin: 10px;
-      overflow: hidden;
-
-      .right-side-controls {
-        float: right;
-        text-align: right;
-      }
-
-      .packet_size {
-        width: 400px;
-      }
+    .packet-size {
+      width: 400px;
     }
   }
 

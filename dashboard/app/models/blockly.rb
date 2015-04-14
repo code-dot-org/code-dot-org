@@ -236,6 +236,8 @@ class Blockly < Level
         can_connect_to_clients
         can_connect_to_routers
         show_add_router_button
+        message_granularity
+        automatic_receive
         router_expects_packet_header
         client_initial_packet_header
         show_add_packet_button
