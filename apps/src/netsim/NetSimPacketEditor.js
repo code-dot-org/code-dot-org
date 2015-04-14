@@ -505,6 +505,44 @@ NetSimPacketEditor.prototype.getPacketBinary = function () {
 };
 
 /**
+ * Sets editor fields from a complete packet binary, according to
+ * the configured header specification.
+ * @param {string} rawBinary
+ */
+NetSimPacketEditor.prototype.setPacketBinary = function (rawBinary) {
+  var packet = new Packet(this.packetSpec_, rawBinary);
+
+  if (this.specContainsHeader_(Packet.HeaderType.TO_ADDRESS)) {
+    this.toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+  }
+
+  if (this.specContainsHeader_(Packet.HeaderType.FROM_ADDRESS)) {
+    this.fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+  }
+
+  if (this.specContainsHeader_(Packet.HeaderType.PACKET_INDEX)) {
+    this.packetIndex = packet.getHeaderAsInt(Packet.HeaderType.PACKET_INDEX);
+  }
+
+  if (this.specContainsHeader_(Packet.HeaderType.PACKET_COUNT)) {
+    this.packetCount = packet.getHeaderAsInt(Packet.HeaderType.PACKET_COUNT);
+  }
+
+  this.message = packet.getBodyAsBinary();
+};
+
+/**
+ * @param {Packet.HeaderType} headerKey
+ * @returns {boolean}
+ * @private
+ */
+NetSimPacketEditor.prototype.specContainsHeader_ = function (headerKey) {
+  return this.packetSpec_.some(function (headerSpec) {
+    return headerSpec.key === headerKey;
+  });
+};
+
+/**
  * Get just the first bit of the packet binary, for single-bit sending mode.
  * @returns {string} a single bit, as "0" or "1"
  */
@@ -588,7 +626,6 @@ NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function () {
  * at a time.
  */
 NetSimPacketEditor.prototype.consumeFirstBit = function () {
-  // TODO: Better support for doing this through packet headers
-  this.message = this.message.substr(1);
+  this.setPacketBinary(this.getPacketBinary().substr(1));
   this.updateFields_();
 };
