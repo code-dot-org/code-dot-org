@@ -14,17 +14,19 @@
 var markup = require('./NetSimMyDeviceTab.html');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
+var NetSimMetronome = require('./NetSimMetronome');
 
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
+ * @param {RunLoop} runLoop
  * @param {function} chunkSizeChangeCallback
  * @param {function} encodingChangeCallback
  * @constructor
  */
 var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
-    chunkSizeChangeCallback, encodingChangeCallback) {
+    runLoop, chunkSizeChangeCallback, encodingChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -38,6 +40,8 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    */
   this.levelConfig_ = levelConfig;
 
+  this.runLoop_ = runLoop;
+
   /**
    * @type {function}
    * @private
@@ -49,6 +53,12 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    * @private
    */
   this.encodingChangeCallback_ = encodingChangeCallback;
+
+  /**
+   * @type {NetSimMetronome}
+   * @private
+   */
+  this.metronome_ = null;
 
   /**
    * @type {NetSimChunkSizeControl}
@@ -71,6 +81,11 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
 NetSimMyDeviceTab.prototype.render = function () {
   var renderedMarkup = $(markup({}));
   this.rootDiv_.html(renderedMarkup);
+
+  this.metronome_ = new NetSimMetronome(
+      this.rootDiv_.find('.metronome'),
+      this.runLoop_);
+
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk_size'),
       this.chunkSizeSliderChangeCallback_);
