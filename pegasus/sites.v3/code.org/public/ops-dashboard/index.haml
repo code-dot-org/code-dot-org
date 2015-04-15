@@ -4,7 +4,7 @@ angular: opsApp
 title: "Ops Dashboard"
 ---
 - authentication_required!
-- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
+- forbidden! unless have_permission?('district_contact') || have_permission?('facilitator') || dashboard_user[:admin]
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
