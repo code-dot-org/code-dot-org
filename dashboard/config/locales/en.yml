@@ -341,6 +341,7 @@ en:
     classroom_activity: 'Unplugged Activity'
   home:
     title: "Code Studio"
+    lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
     all_courses: "Overview of Courses 1, 2, and 3"
     lesson_plans: "Lesson plans"
     signin_message: "Already registered? %{link}"
