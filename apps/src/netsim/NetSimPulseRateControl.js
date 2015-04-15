@@ -12,30 +12,30 @@
 
 // Utils required only for Function.prototype.inherits()
 require('../utils');
-var netsimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var i18n = require('../../locale/current/netsim');
 var NetSimSlider = require('./NetSimSlider');
 
 /**
  * Generator and controller for packet size slider/selector
  * @param {jQuery} rootDiv
+ * @param {number} initialValue - in pulses/second
  * @param {function} sliderChangeCallback
  * @constructor
  */
-var NetSimBitrateControl = module.exports = function (rootDiv,
+var NetSimPulseRateControl = module.exports = function (rootDiv, initialValue,
     sliderChangeCallback) {
-  NetSimSlider.call(this, rootDiv, {
+  NetSimSlider.DecimalPrecisionSlider.call(this, rootDiv, {
     onChange: sliderChangeCallback,
-    value: Infinity,
-    min: 0.2,
-    max: 5.0,
-    step: 0.2
+    value: initialValue,
+    min: 0.1,
+    max: 2.0,
+    step: 0.1
   });
 
   // Auto-render, unlike our base class
   this.render();
 };
-NetSimBitrateControl.inherits(NetSimSlider);
+NetSimPulseRateControl.inherits(NetSimSlider.DecimalPrecisionSlider);
 
 /**
  * Converts a numeric bitrate value (in bits per second) into a
@@ -44,8 +44,11 @@ NetSimBitrateControl.inherits(NetSimSlider);
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimBitrateControl.prototype.valueToLabel = function (val) {
-  return netsimUtils.bitrateToLocalizedRoundedBitrate(val);
+NetSimPulseRateControl.prototype.valueToLabel = function (val) {
+  if (val === 1) {
+    return i18n.xPulsePerSecond({ x: val });
+  }
+  return i18n.xPulsesPerSecond({ x: val });
 };
 
 /**
@@ -55,6 +58,6 @@ NetSimBitrateControl.prototype.valueToLabel = function (val) {
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimBitrateControl.prototype.valueToShortLabel = function (val) {
-  return netsimUtils.bitrateToLocalizedRoundedBitrate(val);
+NetSimPulseRateControl.prototype.valueToShortLabel = function (val) {
+  return val;
 };

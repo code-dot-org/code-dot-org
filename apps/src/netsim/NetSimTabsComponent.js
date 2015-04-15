@@ -49,6 +49,10 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig, runLo
    */
   this.levelConfig_ = levelConfig;
 
+  /**
+   * @type {RunLoop}
+   * @private
+   */
   this.runLoop_ = runLoop;
 
   /**
