@@ -22,7 +22,6 @@ var DEFAULT_TOOLTIP_CONFIG = {
   maxWidth: 450,
   position: 'right',
   contentAsHTML: true,
-  functionReady: repositionLastTooltip,
   theme: 'droplet-block-tooltipster'
   /**
    * hideOnClick does not work with the droplet hover overlay
@@ -70,17 +69,3 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
     }));
   });
 };
-
-function repositionLastTooltip() {
-  var tooltipBase = $(".tooltipster-base").last();
-  var tooltipOffset = tooltipBase.offset();
-  var dropletToolboxArea = $('.droplet-palette-wrapper');
-  var rightSideOfToolbox = dropletToolboxArea.offset().left +
-    dropletToolboxArea.width();
-  var rightSideOfBlock = tooltipOffset.left;
-  var tipWidth = 8;
-  tooltipOffset.left = Math.min(rightSideOfBlock, rightSideOfToolbox + tipWidth);
-  var blockNotchHeight = 4;
-  tooltipOffset.top -= blockNotchHeight / 2;
-  tooltipBase.offset(tooltipOffset);
-}
