@@ -18,7 +18,7 @@ var NetSimSlider = require('./NetSimSlider');
 /**
  * Generator and controller for packet size slider/selector
  * @param {jQuery} rootDiv
- * @param {number} initialValue - in pulses/second
+ * @param {number} initialValue - in seconds per pulse
  * @param {function} sliderChangeCallback
  * @constructor
  */
@@ -27,9 +27,9 @@ var NetSimPulseRateControl = module.exports = function (rootDiv, initialValue,
   NetSimSlider.DecimalPrecisionSlider.call(this, rootDiv, {
     onChange: sliderChangeCallback,
     value: initialValue,
-    min: 0.1,
-    max: 2.0,
-    step: 0.1
+    min: 0.5,
+    max: 5.0,
+    step: -0.25
   });
 
   // Auto-render, unlike our base class
@@ -38,7 +38,7 @@ var NetSimPulseRateControl = module.exports = function (rootDiv, initialValue,
 NetSimPulseRateControl.inherits(NetSimSlider.DecimalPrecisionSlider);
 
 /**
- * Converts a numeric bitrate value (in bits per second) into a
+ * Converts a numeric rate value (in seconds per pulse) into a
  * localized string representation of that value.
  * @param {number} val - numeric value of the control
  * @returns {string} - localized string representation of value
@@ -46,13 +46,13 @@ NetSimPulseRateControl.inherits(NetSimSlider.DecimalPrecisionSlider);
  */
 NetSimPulseRateControl.prototype.valueToLabel = function (val) {
   if (val === 1) {
-    return i18n.xPulsePerSecond({ x: val });
+    return i18n.xSecondPerPulse({ x: val });
   }
-  return i18n.xPulsesPerSecond({ x: val });
+  return i18n.xSecondsPerPulse({ x: val });
 };
 
 /**
- * Converts a numeric bitrate value (in bits per second) into a compact
+ * Converts a numeric rate value (in seconds per pulse) into a compact
  * localized string representation of that value, used for ends of the slider.
  * @param {number} val - numeric value of the control
  * @returns {string} - localized string representation of value

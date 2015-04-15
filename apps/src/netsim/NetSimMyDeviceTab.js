@@ -126,12 +126,12 @@ NetSimMyDeviceTab.prototype.render = function () {
 
 /**
  * Handler for changing the position of the pulse-rate slider
- * @param {number} newPulseRate in pulses per second
+ * @param {number} secondsPerPulse in seconds per pulse
  * @private
  */
-NetSimMyDeviceTab.prototype.pulseRateSliderChange_ = function (newPulseRate) {
-  this.pulseRate_ = newPulseRate;
-  this.metronome_.setFrequency(newPulseRate);
+NetSimMyDeviceTab.prototype.pulseRateSliderChange_ = function (secondsPerPulse) {
+  this.pulseRate_ = 1 / secondsPerPulse;
+  this.metronome_.setFrequency(this.pulseRate_);
 };
 
 /**
