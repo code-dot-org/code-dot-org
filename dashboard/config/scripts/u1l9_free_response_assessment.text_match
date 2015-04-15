@@ -1,0 +1,10 @@
+name 'U1L9 Free Response Assessment'
+title 'Assessment: Real-world Numbers '
+content1 ''
+
+
+markdown <<MARKDOWN
+Of all the number systems in the world, why do you think modern computers have settled on binary? 
+
+Why didn't someone build a computer that used base-10?
+MARKDOWN

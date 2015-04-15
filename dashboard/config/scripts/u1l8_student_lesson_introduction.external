@@ -4,7 +4,7 @@ description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 markdown <<MARKDOWN
-## Unit 1: Lesson 1 - Sending Numbers
+## Unit 1: Lesson 8 - Sending Numbers
 
 # Background
 All communication protocols solve the problem of how to send (binary encoded) information from one place to another. This requires that the sender and receiver agree on how many bits form a proper message, how big the “chunks” of bits should be, and how to indicate the beginning and end of the message.
@@ -18,9 +18,11 @@ All communication protocols solve the problem of how to send (binary encoded) in
 
 # Resources
   
-* Activity Guide: [Sending Numbers](https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit)
-* Handout: [Widget Diagram](https://docs.google.com/document/d/1q_czj1JXG3aCH_kLuzVPRvrAHJlzp3GLCOeTClw0FUo/edit?usp=sharing)
-* Rubric [Sending Numbers Protocol Checklist](https://docs.google.com/document/d/1rAlZiJjc84C0DlJHtIypWCf3IGFHJ7gqJgQQQQdnATw/edit?usp=sharing)
+* Activity Guide: <a href="https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit" target="_blank">Sending Numbers</a>
+* Handout: <a href="https://docs.google.com/document/d/1q_czj1JXG3aCH_kLuzVPRvrAHJlzp3GLCOeTClw0FUo/edit?usp=sharing"target="_blank">Widget Diagram</a>
+* Rubric <a href="https://docs.google.com/document/d/1rAlZiJjc84C0DlJHtIypWCf3IGFHJ7gqJgQQQQdnATw/edit?usp=sharing" target="_blank">Sending Numbers Protocol Checklist</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 
 

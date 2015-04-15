@@ -5,5 +5,7 @@ placeholder 'Enter your reflection here.'
 
 
 markdown <<MARKDOWN
-Describe how you contributed to this project through effective collaboration with team members. Cite specific examples of working together to solve problems. Explain your role.
+Describe how you contributed to this project through effective collaboration with team members. 
+
+Cite specific examples of working together to solve problems. Explain your role.
 MARKDOWN
