@@ -121,7 +121,9 @@ module LevelsHelper
     # Process level view options
     level_overrides = level_view_options.dup
     if level_options['embed'] || level_overrides[:embed]
-      level_overrides.merge!(hide_source: true, show_finish: true, embed: true)
+      level_overrides.merge!(hide_source: true, show_finish: true)
+    end
+    if level_overrides[:embed]
       view_options(no_padding: true, no_header: true, no_footer: true, white_background: true)
     end
     view_options(no_footer: true) if level_overrides[:share] && browser.mobile?

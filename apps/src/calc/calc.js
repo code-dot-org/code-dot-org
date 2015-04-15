@@ -1060,6 +1060,7 @@ function displayFeedback() {
     level: level,
     feedbackType: appState.testResults,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined, 
     appStrings: {
       reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
     },
