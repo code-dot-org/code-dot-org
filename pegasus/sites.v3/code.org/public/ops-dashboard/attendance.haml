@@ -4,6 +4,16 @@ template: none
 ---
 - authentication_required!
 - forbidden! unless have_permission?('facilitator') || dashboard_user[:admin]
+
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%a{href:'/ops-dashboard/workshops'}
+  PD Workshops
+>
+%span
+  {{workshop.name}}
+
 %h1
   Attendance for {{workshop.name}}
 
