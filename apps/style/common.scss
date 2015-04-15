@@ -1223,12 +1223,5 @@ $see-examples-thick-underline-color: $yellow-dark;
 }
 
 .droplet-hover-div {
-  /**
-   * Should match the effective value in: apps/lib/droplet/droplet.js
-   *    of `this.paletteCanvas.width`
-   */
-  $block-left-offset: 5px;
-  $palette-canvas-width: 228px;
-  $hover-div-width: $palette-canvas-width - $block-left-offset;
-  max-width: $hover-div-width !important;
+  max-width: 100% !important;
 }
