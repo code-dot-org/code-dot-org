@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Your school is holding a bake sale, and you need to track the cost of making each cookie, the money paid, and the total profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite the function `cost`, which takes in the number of cookies you intend to sell, and returns the cost of making those cookies.",
+    "instructions": "Your school is holding a bake sale, and you need to track the cost of making each cookie, the money paid, and the total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite the function `cost`, which takes in the number of cookies you intend to sell, and returns the cost of making those cookies.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

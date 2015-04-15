@@ -1,6 +1,7 @@
 name 'PDK5 Pair programming match'
 title 'Pair programming match'
 description 'Match the definitions to the words you were introduced to in the last video.'
+height 100
 
 question 'Pair programming'
 answer 'When two students work at one computer to write a program together'

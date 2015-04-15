@@ -1389,6 +1389,7 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSpriteParams = {
       helpUrl: '',
       init: function() {
+        this.VALUES = skin.spriteChoices;
         var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
         // default to first item after random/hidden
         dropdown.setValue(skin.spriteChoices[2][1]);

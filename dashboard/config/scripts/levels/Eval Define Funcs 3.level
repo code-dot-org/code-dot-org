@@ -24,7 +24,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Make our function use the radius parameter instead of always have a radius of 50.\",\r\n  \"element_id\": \"#hard_coded_radius\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Make our function use the radius parameter instead of always having a radius of 50.\",\r\n  \"element_id\": \"#hard_coded_radius\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "disable_examples": "false"
   },
   "md5": "f620f743c930c59a261f8de5b2c5bdf0"
 }]]></config>
