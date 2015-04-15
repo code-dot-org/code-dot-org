@@ -17,10 +17,10 @@ social:
 -twitter = {:url=>"http://#{request.site}/leaderboards", :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:who_has_done_hoc)}
 -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:who_has_done_hoc).include? '#HourOfCode'
 
--hoc_metrics = PROPERTIES.fetch_hoc_metrics
+-hoc_metrics = fetch_hoc_metrics
 -started = format_integer_with_commas(hoc_metrics['started'])
 
--loc = format_integer_with_commas(PROPERTIES.fetch_metrics['lines_of_code'])
+-loc = format_integer_with_commas(fetch_metrics['lines_of_code'])
 
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
   %h1{:style=>'margin-bottom:10px'} The Hour of Code Leaderboards
