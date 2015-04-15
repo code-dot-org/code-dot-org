@@ -12,6 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimMyDeviceTab.html');
+var NetSimPulseRateControl = require('./NetSimPulseRateControl');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimMetronome = require('./NetSimMetronome');
@@ -40,7 +41,18 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    */
   this.levelConfig_ = levelConfig;
 
+  /**
+   * @type {RunLoop}
+   * @private
+   */
   this.runLoop_ = runLoop;
+
+  /**
+   * Frequency of metronome pulses, in pulses per second
+   * @type {number}
+   * @private
+   */
+  this.pulseRate_ = 1;
 
   /**
    * @type {function}
@@ -59,6 +71,12 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    * @private
    */
   this.metronome_ = null;
+
+  /**
+   * @type {NetSimPulseRateControl}
+   * @private
+   */
+  this.pulseRateControl_ = null;
 
   /**
    * @type {NetSimChunkSizeControl}
@@ -84,10 +102,16 @@ NetSimMyDeviceTab.prototype.render = function () {
 
   this.metronome_ = new NetSimMetronome(
       this.rootDiv_.find('.metronome'),
-      this.runLoop_);
+      this.runLoop_,
+      this.pulseRate_);
+
+  this.pulseRateControl_ = new NetSimPulseRateControl(
+      this.rootDiv_.find('.pulse-rate'),
+      this.pulseRate_,
+      this.pulseRateSliderChange_.bind(this));
 
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
-      this.rootDiv_.find('.chunk_size'),
+      this.rootDiv_.find('.chunk-size'),
       this.chunkSizeSliderChangeCallback_);
 
   if (this.levelConfig_.showEncodingControls.length > 0) {
@@ -96,6 +120,16 @@ NetSimMyDeviceTab.prototype.render = function () {
         this.levelConfig_,
         this.encodingChangeCallback_);
   }
+};
+
+/**
+ * Handler for changing the position of the pulse-rate slider
+ * @param {number} newPulseRate in pulses per second
+ * @private
+ */
+NetSimMyDeviceTab.prototype.pulseRateSliderChange_ = function (newPulseRate) {
+  this.pulseRate_ = newPulseRate;
+  this.metronome_.setFrequency(newPulseRate);
 };
 
 /**

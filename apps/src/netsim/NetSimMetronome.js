@@ -20,9 +20,10 @@ var markup = require('./NetSimMetronome.html');
  *
  * @param {jQuery} rootDiv
  * @param {RunLoop} runLoop
+ * @param {number} initialRate in pulses/second
  * @constructor
  */
-var NetSimMetronome = module.exports = function (rootDiv, runLoop) {
+var NetSimMetronome = module.exports = function (rootDiv, runLoop, initialRate) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -42,7 +43,8 @@ var NetSimMetronome = module.exports = function (rootDiv, runLoop) {
    * @type {number}
    * @private
    */
-  this.pulseInterval_ = 2000;
+  this.pulseInterval_ = 0;
+  this.setFrequency(initialRate);
 
   /**
    * Normalized progress toward the next pulse, from 0.0 to 1.0
@@ -63,6 +65,10 @@ var NetSimMetronome = module.exports = function (rootDiv, runLoop) {
   runLoop.render.register(this.render.bind(this));
 };
 
+/**
+ * Update internal state as time passes.
+ * @param {RunLoop.Clock} clock
+ */
 NetSimMetronome.prototype.tick = function (clock) {
   if (!this.lastPulseTime_) {
     this.lastPulseTime_ = clock.time;
@@ -88,4 +94,16 @@ NetSimMetronome.prototype.render = function () {
     pulseAge: this.pulseAge_
   }));
   this.rootDiv_.html(renderedMarkup);
+};
+
+/**
+ * Change the metronome speed
+ * @param {number} pulsesPerSecond
+ */
+NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
+  if (pulsesPerSecond === 0) {
+    this.pulseInterval_ = Infinity;
+    return;
+  }
+  this.pulseInterval_ = 1000 / pulsesPerSecond;
 };
