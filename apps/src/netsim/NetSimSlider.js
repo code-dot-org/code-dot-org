@@ -47,7 +47,8 @@ var SLIDER_DEFAULT_MAX_VALUE = 100;
  *        next-to-highest if upperBoundInfinite is true.  Defaults to 100.
  * @param {number} [options.step] - Step-value of jQueryUI slider - not
  *        necessarily related to min and max values if you provide custom value
- *        converters. Defaults to 1.
+ *        converters. Defaults to 1.  If negative, the slider is reversed and
+ *        puts the min value on the right.  Cannot be zero or noninteger.
  * @param {boolean} [options.upperBoundInfinite] - if TRUE, the highest value
  *        on the slider will be Infinity/Unlimited.  Default FALSE.
  * @param {boolean} [options.lowerBoundInfinite] - if TRUE, the lowest value
@@ -123,12 +124,14 @@ var NetSimSlider = module.exports = function (rootDiv, options) {
    * @private
    */
   this.step_ = utils.valueOr(options.step, 1);
-  if (this.step_ <= 0) {
-    throw new Error("NetSimSlider does not support zero or negative step values.");
+  if (this.step_ === 0) {
+    throw new Error("NetSimSlider does not support zero step values.");
   } else if (this.step_ % 1 !== 0) {
     throw new Error("NetSimSlider does not support non-integer step values. " +
         " Use DecimalPrecisionSlider instead.");
   }
+
+  this.negativeStep_ = (this.step_ < 0);
 };
 
 /**
@@ -144,13 +147,13 @@ NetSimSlider.uniqueIDCounter = 0;
 NetSimSlider.prototype.render = function () {
   var minValue = this.isLowerBoundInfinite_ ? -Infinity : this.minValue_;
   var maxValue = this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
-  var minPosition = this.valueToSliderPosition(minValue);
-  var maxPosition = this.valueToSliderPosition(maxValue);
+  var minPosition = this.valueToSliderPosition(this.negativeStep_ ? maxValue : minValue);
+  var maxPosition = this.valueToSliderPosition(this.negativeStep_ ? minValue : maxValue);
 
   var renderedMarkup = $(markup({
     instanceID: this.instanceID_,
-    minValue: this.valueToShortLabel(minValue),
-    maxValue: this.valueToShortLabel(maxValue)
+    minValue: this.valueToShortLabel(this.negativeStep_ ? maxValue : minValue),
+    maxValue: this.valueToShortLabel(this.negativeStep_ ? minValue : maxValue)
   }));
   this.rootDiv_.html(renderedMarkup);
 
@@ -159,7 +162,7 @@ NetSimSlider.prototype.render = function () {
         value: this.valueToSliderPosition(this.value_),
         min: minPosition,
         max: maxPosition,
-        step: this.step_,
+        step: (this.negativeStep_ ? -this.step_ : this.step_),
         slide: this.onSliderValueChange_.bind(this),
         stop: this.onSliderStop_.bind(this)
       });
@@ -221,7 +224,8 @@ NetSimSlider.prototype.valueToSliderPosition = function (val) {
   } else if (this.isLowerBoundInfinite_ && val < this.minValue_) {
     return this.valueToSliderPosition(this.minValue_) - this.step_;
   }
-  return Math.max(this.minValue_, Math.min(this.maxValue_, val));
+  return Math.max(this.minValue_, Math.min(this.maxValue_, val)) *
+      (this.negativeStep_ ? -1 : 1);
 };
 
 /**
@@ -232,12 +236,21 @@ NetSimSlider.prototype.valueToSliderPosition = function (val) {
  * @returns {number} - external-facing value
  */
 NetSimSlider.prototype.sliderPositionToValue = function (pos) {
-  if (pos > this.valueToSliderPosition(this.maxValue_)) {
-    return this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
-  } else if (pos < this.valueToSliderPosition(this.minValue_)) {
-    return this.isLowerBoundInfinite_ ? -Infinity : this.minValue_;
+  if (this.negativeStep_) {
+    if (pos < this.valueToSliderPosition(this.maxValue_)) {
+      return this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
+    } else if (pos > this.valueToSliderPosition(this.minValue_)) {
+      return this.isLowerBoundInfinite_ ? -Infinity : this.minValue_;
+    }
+    return -pos;
+  } else {
+    if (pos > this.valueToSliderPosition(this.maxValue_)) {
+      return this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
+    } else if (pos < this.valueToSliderPosition(this.minValue_)) {
+      return this.isLowerBoundInfinite_ ? -Infinity : this.minValue_;
+    }
+    return pos;
   }
-  return pos;
 };
 
 /**

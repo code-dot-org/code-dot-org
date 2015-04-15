@@ -37,6 +37,36 @@ describe("NetSimSlider", function () {
     });
   });
 
+  describe("with negative step value", function () {
+    beforeEach(function () {
+      slider = new NetSimSlider(null, {
+        min: 0,
+        max: 100,
+        step: -1
+      });
+    });
+
+    it ("value round-trip is identity within slider range", function () {
+      // Range is 100-0
+      assertEqual(100, roundTrip(100));
+      assertEqual(99, roundTrip(99));
+      assertEqual(42, roundTrip(42));
+      assertEqual(1, roundTrip(1));
+      assertEqual(0, roundTrip(0));
+    });
+
+    it ("clamps values to default range", function () {
+      // Range is 100-0
+      assertEqual(100, roundTrip(101));
+      assertEqual(100, roundTrip(500));
+      assertEqual(100, roundTrip(Infinity));
+
+      assertEqual(0, roundTrip(-1));
+      assertEqual(0, roundTrip(-100));
+      assertEqual(0, roundTrip(-Infinity));
+    });
+  });
+
   describe("with infinte bounds", function () {
     beforeEach(function () {
       slider = new NetSimSlider(null, {
@@ -77,13 +107,9 @@ describe("NetSimSlider", function () {
       });
     });
 
-    it ("throws when initialized with a zero or negative step value", function () {
+    it ("throws when initialized with a zero step value", function () {
       assertThrows(Error, function () {
         slider = new NetSimSlider(null, { step: 0 });
-      });
-
-      assertThrows(Error, function () {
-        slider = new NetSimSlider(null, { step: -1 });
       });
     });
   });
