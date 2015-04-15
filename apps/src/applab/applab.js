@@ -1747,10 +1747,9 @@ Applab.imageUploadButton = function (opts) {
 };
 
 // These offset are used to ensure that the turtle image is centered over
-// its x,y coordinates. The image is currently 44x44, with the center at
-// (24, 20), rendered at a size of 22x22.
-var TURTLE_X_OFFSET = 24 / 2;
-var TURTLE_Y_OFFSET = 20 / 2;
+// its x,y coordinates. The image is currently 48x48, rendered at 24x24.
+var TURTLE_X_OFFSET = -12;
+var TURTLE_Y_OFFSET = -12;
 var TURTLE_ROTATION_OFFSET = -45;
 
 function getTurtleContext() {
@@ -1765,7 +1764,7 @@ function getTurtleContext() {
     Applab.turtle.visible = true;
     var divApplab = document.getElementById('divApplab');
     var turtleImage = document.createElement("img");
-    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-44px.png');
+    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
     turtleImage.ondragstart = function () { return false; };
@@ -1779,18 +1778,13 @@ function updateTurtleImage(turtleImage) {
   if (!turtleImage) {
     turtleImage = document.getElementById('turtleImage');
   }
-  turtleImage.style.left = (Applab.turtle.x - TURTLE_X_OFFSET) + 'px';
-  turtleImage.style.top = (Applab.turtle.y - TURTLE_Y_OFFSET) + 'px';
+  turtleImage.style.left = (Applab.turtle.x + TURTLE_X_OFFSET) + 'px';
+  turtleImage.style.top = (Applab.turtle.y + TURTLE_Y_OFFSET) + 'px';
   var heading = Applab.turtle.heading + TURTLE_ROTATION_OFFSET;
   var transform = 'rotate(' + heading + 'deg)';
   turtleImage.style.transform = transform;
   turtleImage.style.msTransform = transform;
   turtleImage.style.webkitTransform = transform;
-  var transformOrigin = TURTLE_X_OFFSET + 'px ' + TURTLE_Y_OFFSET + 'px';
-  turtleImage.style.transformOrigin = transformOrigin;
-  turtleImage.style.msTransformOrigin = transformOrigin;
-  turtleImage.style.webkitTransformOrigin = transformOrigin;
-
 }
 
 function turtleSetVisibility (visible) {
