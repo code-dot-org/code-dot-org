@@ -17,10 +17,17 @@ template: none
 %h1
   Attendance for {{workshop.name}}
 
+#learn-tabs{'ng-hide' => 'teachers.length <= 0', style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
+  %ul.nav.nav-tabs{style: "float: left;"}
+    %li.active.tab
+      %a{'ng-href' => "#/workshops/{{workshop.id}}/attendance"} Attendance
+    %li
+      %a{'ng-href' => "#/workshops/{{workshop.id}}/attendance-info"} Teacher Information
+  %button.btn.btn-white{'ng-click' => 'teacherAddition = true', 'ng-hide' => 'teacherAddition == true', style: "float:right"}
+    Add a new teacher
+
 %div.jumbotron{'ng-show' => 'teachers.length <= 0'}
   No teachers registered for this workshop.
-%a.btn.btn-white{'ng-click' => 'teacherAddition = true', 'ng-hide' => 'teacherAddition == true'}
-  Add a new teacher to this workshop
 %form{'ng-show' => 'teacherAddition == true', style:'width:30%'}
   %h2
     New teacher information
