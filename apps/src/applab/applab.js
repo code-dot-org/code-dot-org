@@ -1165,13 +1165,15 @@ Applab.serializeToLevelHtml = function () {
   return s.serializeToString(clone);
 };
 
-Applab.parseFromLevelHtml = function(rootEl) {
+Applab.parseFromLevelHtml = function(rootEl, isDesignMode) {
   if (Applab.levelHtml) {
     var keepScripts = false;
     var levelDom = $.parseHTML(Applab.levelHtml, document, keepScripts);
     var children = $(levelDom).children();
     children.appendTo(rootEl);
-    Applab.makeDraggable(children);
+    if (isDesignMode) {
+      Applab.makeDraggable(children);
+    }
   }
 };
 
@@ -1240,7 +1242,8 @@ studioApp.reset = function(first) {
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
   divApplab = document.getElementById('divApplab');
-  Applab.parseFromLevelHtml(divApplab);
+  var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
+  Applab.parseFromLevelHtml(divApplab, isDesignMode);
 
   divApplab.addEventListener('click', Applab.onDivApplabClick);
 
@@ -1669,6 +1672,13 @@ Applab.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
+
+  var children = $('#divApplab').children();
+  if (enable) {
+    Applab.makeDraggable(children);
+  } else if (children.data('uiDraggable')) {
+    children.draggable('destroy');
+  }
 };
 
 Applab.onPuzzleComplete = function() {
