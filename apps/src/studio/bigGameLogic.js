@@ -133,11 +133,14 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
   // side. We could add a delay if we want.
   if (!this.onscreen(newCenterX)) {
     // reset to other side if it is visible
-    if (sprite.visible) this.resetSprite_(sprite);
+    if (sprite.visible) {
+      this.resetSprite_(sprite);
+    }
   } else if (!sprite.visible) {
     // sprite has returned to screen, make it visible again
-    this.studio_.setSprite({spriteIndex: this.studio_.sprite.indexOf(sprite),
-                            value:"visible"});
+    this.studio_.setSprite({
+      spriteIndex: this.studio_.sprite.indexOf(sprite),
+      value:"visible"});
   }
 };
 
@@ -170,8 +173,9 @@ BigGameLogic.prototype.resetSprite_ = function (sprite) {
   }
   
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
-  this.studio_.setSprite({spriteIndex: this.studio_.sprite.indexOf(sprite),
-                          value:"hidden"});
+  this.studio_.setSprite({
+    spriteIndex: this.studio_.sprite.indexOf(sprite),
+    value:"hidden"});
 };
 
 /**
