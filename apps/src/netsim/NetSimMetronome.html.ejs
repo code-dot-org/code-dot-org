@@ -16,14 +16,14 @@
   }
 
   /**
-   * Outer radius of progress border
+   * Outer radius of progress meter
    * @type {number}
    * @const
    */
   var OUTER_RADUS = 45;
 
   /**
-   * Inner radius of progress border, and maximum radius of pulse circle
+   * Inner radius of progress meter, and maximum radius of pulse dot
    * @type {number}
    * @const
    */
@@ -37,11 +37,12 @@
   var PULSE_FALLOFF_MS = 500;
 
   /**
-   * Radius of the pulse circle, based on the pulse age.  Starts full size, then shrinks
+   * Radius of the inner pulse dot, based on the pulse age.  Starts full size, then shrinks
    * to r=0 over PULSE_FALLOFF_MS.
    * @type {number}
    */
-  var pulseCircleRadius = INNER_RADIUS * (1 - Math.min(pulseAge / PULSE_FALLOFF_MS, 1));
+  var pulseFalloffNormalizedProgress = Math.min(pulseAge/ PULSE_FALLOFF_MS, 1);
+  var pulseDotRadius = INNER_RADIUS * (1 - pulseFalloffNormalizedProgress);
 
 
   /**
@@ -49,12 +50,12 @@
    * generates a data string for a "path" svg object that draws a partially-filled arc
    * sweeping the appropriate percentage of a circle.
    * Progress begins its sweep at "east" and proceeds clockwise.
-   * @param {number} progressNormal - number from 0.0 to 1.0
+   * @param {number} normalizedProgress - number from 0.0 to 1.0
    * @returns {string} data string of commands for SVG path
    */
-  function progressBorderData(progressNormal) {
-    var terminalRadians = 2 * Math.PI * progressNormal
-    var largeArc = (progressNormal >= 0.5) ? 1 : 0;
+  function progressMeterSvgPathData(normalizedProgress) {
+    var terminalRadians = 2 * Math.PI * normalizedProgress
+    var largeArc = (normalizedProgress >= 0.5) ? 1 : 0;
     var sinAngle = Math.sin(terminalRadians);
     var cosAngle = Math.cos(terminalRadians);
     var outerTerminalX = OUTER_RADUS * cosAngle;
@@ -76,9 +77,9 @@
       <circle r="48" cx="0" cy="0" fill="darkgray"></circle>
       <circle r="48" cx="-1" cy="1" fill="lightgray"></circle>
       <circle r="46" cx="0" cy="0" fill="#f5f5f5"></circle>
-      <circle class="pulse-circle" r="<%= pulseCircleRadius %>" cx="0" cy="0"></circle>
+      <circle class="pulse-dot" r="<%= pulseDotRadius %>" cx="0" cy="0"></circle>
       <g transform="rotate(-90)">
-        <path class="progress-border" d="<%= progressBorderData(progress) %>"></path>
+        <path class="progress-meter" d="<%= progressMeterSvgPathData(progress) %>"></path>
       </g>
     </g>
   </svg>

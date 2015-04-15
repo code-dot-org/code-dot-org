@@ -52,7 +52,7 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    * @type {number}
    * @private
    */
-  this.pulseRate_ = 1;
+  this.pulsesPerSecond_ = 1;
 
   /**
    * @type {function}
@@ -103,12 +103,12 @@ NetSimMyDeviceTab.prototype.render = function () {
   if (this.levelConfig_.showMetronome) {
     this.metronome_ = new NetSimMetronome(
         this.rootDiv_.find('.metronome'),
-        this.runLoop_,
-        this.pulseRate_);
+        this.runLoop_);
+    this.metronome_.setFrequency(this.pulsesPerSecond_);
 
     this.pulseRateControl_ = new NetSimPulseRateControl(
         this.rootDiv_.find('.pulse-rate'),
-        this.pulseRate_,
+        1 / this.pulsesPerSecond_,
         this.pulseRateSliderChange_.bind(this));
   }
 
@@ -130,8 +130,8 @@ NetSimMyDeviceTab.prototype.render = function () {
  * @private
  */
 NetSimMyDeviceTab.prototype.pulseRateSliderChange_ = function (secondsPerPulse) {
-  this.pulseRate_ = 1 / secondsPerPulse;
-  this.metronome_.setFrequency(this.pulseRate_);
+  this.pulsesPerSecond_ = 1 / secondsPerPulse;
+  this.metronome_.setFrequency(this.pulsesPerSecond_);
 };
 
 /**

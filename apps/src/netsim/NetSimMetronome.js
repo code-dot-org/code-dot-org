@@ -20,10 +20,9 @@ var markup = require('./NetSimMetronome.html');
  *
  * @param {jQuery} rootDiv
  * @param {RunLoop} runLoop
- * @param {number} initialRate in pulses/second
  * @constructor
  */
-var NetSimMetronome = module.exports = function (rootDiv, runLoop, initialRate) {
+var NetSimMetronome = module.exports = function (rootDiv, runLoop) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -43,8 +42,7 @@ var NetSimMetronome = module.exports = function (rootDiv, runLoop, initialRate) 
    * @type {number}
    * @private
    */
-  this.pulseInterval_ = 0;
-  this.setFrequency(initialRate);
+  this.pulseIntervalMillis_ = 0;
 
   /**
    * Normalized progress toward the next pulse, from 0.0 to 1.0
@@ -75,12 +73,13 @@ NetSimMetronome.prototype.tick = function (clock) {
   }
 
   this.pulseAge_ = clock.time - this.lastPulseTime_;
-  this.progress_ = Math.min(this.pulseAge_ / this.pulseInterval_, 1);
+  this.progress_ = Math.min(this.pulseAge_ / this.pulseIntervalMillis_, 1);
 
-  if (this.pulseAge_ >= this.pulseInterval_) {
+  if (this.pulseAge_ >= this.pulseIntervalMillis_) {
     // Pulse
-    while (this.lastPulseTime_ < (clock.time - this.pulseInterval_)) {
-      this.lastPulseTime_ += this.pulseInterval_;
+    var minimumLastPulseTime = clock.time - this.pulseIntervalMillis_;
+    while (this.lastPulseTime_ < minimumLastPulseTime) {
+      this.lastPulseTime_ += this.pulseIntervalMillis_;
     }
   }
 };
@@ -102,8 +101,8 @@ NetSimMetronome.prototype.render = function () {
  */
 NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
   if (pulsesPerSecond === 0) {
-    this.pulseInterval_ = Infinity;
+    this.pulseIntervalMillis_ = Infinity;
     return;
   }
-  this.pulseInterval_ = 1000 / pulsesPerSecond;
+  this.pulseIntervalMillis_ = 1000 / pulsesPerSecond;
 };

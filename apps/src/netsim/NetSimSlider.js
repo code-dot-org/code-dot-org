@@ -130,8 +130,6 @@ var NetSimSlider = module.exports = function (rootDiv, options) {
     throw new Error("NetSimSlider does not support non-integer step values. " +
         " Use DecimalPrecisionSlider instead.");
   }
-
-  this.negativeStep_ = (this.step_ < 0);
 };
 
 /**
@@ -142,18 +140,28 @@ var NetSimSlider = module.exports = function (rootDiv, options) {
 NetSimSlider.uniqueIDCounter = 0;
 
 /**
+ * @returns {boolean} TRUE if the step value is less than zero.
+ * @private
+ */
+NetSimSlider.prototype.isStepNegative_ = function () {
+  return this.step_ < 0;
+};
+
+/**
  * Fill the root div with new elements reflecting the current state
  */
 NetSimSlider.prototype.render = function () {
   var minValue = this.isLowerBoundInfinite_ ? -Infinity : this.minValue_;
   var maxValue = this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
-  var minPosition = this.valueToSliderPosition(this.negativeStep_ ? maxValue : minValue);
-  var maxPosition = this.valueToSliderPosition(this.negativeStep_ ? minValue : maxValue);
+  var minPosition = this.valueToSliderPosition(
+      this.isStepNegative_() ? maxValue : minValue);
+  var maxPosition = this.valueToSliderPosition(
+      this.isStepNegative_() ? minValue : maxValue);
 
   var renderedMarkup = $(markup({
     instanceID: this.instanceID_,
-    minValue: this.valueToShortLabel(this.negativeStep_ ? maxValue : minValue),
-    maxValue: this.valueToShortLabel(this.negativeStep_ ? minValue : maxValue)
+    minValue: this.valueToShortLabel(this.isStepNegative_() ? maxValue : minValue),
+    maxValue: this.valueToShortLabel(this.isStepNegative_() ? minValue : maxValue)
   }));
   this.rootDiv_.html(renderedMarkup);
 
@@ -162,7 +170,7 @@ NetSimSlider.prototype.render = function () {
         value: this.valueToSliderPosition(this.value_),
         min: minPosition,
         max: maxPosition,
-        step: (this.negativeStep_ ? -this.step_ : this.step_),
+        step: Math.abs(this.step_),
         slide: this.onSliderValueChange_.bind(this),
         stop: this.onSliderStop_.bind(this)
       });
@@ -225,7 +233,7 @@ NetSimSlider.prototype.valueToSliderPosition = function (val) {
     return this.valueToSliderPosition(this.minValue_) - this.step_;
   }
   return Math.max(this.minValue_, Math.min(this.maxValue_, val)) *
-      (this.negativeStep_ ? -1 : 1);
+      (this.isStepNegative_() ? -1 : 1);
 };
 
 /**
@@ -236,7 +244,7 @@ NetSimSlider.prototype.valueToSliderPosition = function (val) {
  * @returns {number} - external-facing value
  */
 NetSimSlider.prototype.sliderPositionToValue = function (pos) {
-  if (this.negativeStep_) {
+  if (this.isStepNegative_()) {
     if (pos < this.valueToSliderPosition(this.maxValue_)) {
       return this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
     } else if (pos > this.valueToSliderPosition(this.minValue_)) {
