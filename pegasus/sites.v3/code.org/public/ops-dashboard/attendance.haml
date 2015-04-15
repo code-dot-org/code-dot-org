@@ -4,26 +4,49 @@ template: none
 ---
 - authentication_required!
 - forbidden! unless have_permission?('facilitator') || dashboard_user[:admin]
+
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%a{href:'/ops-dashboard/workshops'}
+  PD Workshops
+>
+%span
+  {{workshop.name}}
+
 %h1
   Attendance for {{workshop.name}}
 
 %div.jumbotron{'ng-show' => 'teachers.length <= 0'}
   No teachers registered for this workshop.
-%a.btn.btn-white{"ng-click" => "teacherAddition = true"}
+%a.btn.btn-white{'ng-click' => 'teacherAddition = true', 'ng-hide' => 'teacherAddition == true'}
   Add a new teacher to this workshop
-%br
-%br
-%form{'ng-show' => 'teacherAddition == true'}
-  %label
-    First Name
-    %input{type:'text'}
-    Last Name
-    %input{type:'text'}
-    Email
-    %input{type:'text'}
-    District
-    %input{type:'text'}
-%div.table-wrapper{style:"width:970px; overflow-x:scroll;"}
+%form{'ng-show' => 'teacherAddition == true', style:'width:30%'}
+  %h2
+    New teacher information
+  %input.form-control{type:'text', placeholder:'First Name', 'ng-model' => 'newTeacher.firstName'}
+  %br
+  %input.form-control{type:'text', placeholder:'Last Name', 'ng-model' => 'newTeacher.lastName'}
+  %br
+  %input.form-control{type:'text', placeholder:'Email', 'ng-model' => 'newTeacher.email'}
+  %br
+  %input.form-control{type:'text', placeholder:'District', 'ng-model' => 'newTeacher.district'}
+  %br
+  %select.form-control{'ng-model' => 'newTeacher.gender'}
+    %option{value:'', disabled:'true', selected:'true'}
+      Gender
+    %option
+      Male
+    %option
+      Female
+  %br
+  %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
+  %br
+  %a.btn.btn-success.btn-xs{'ng-click' =>''}
+    Save
+  %a.btn.btn-white.btn-xs{'ng-click' => 'teacherAddition = false'}
+    Cancel
+%div.table-wrapper{style:"width:970px; overflow-x:scroll; margin-top:10px"}
   %table.table-wrapper{'ng-show' => 'teachers.length > 0'}
     %tr
       %th
