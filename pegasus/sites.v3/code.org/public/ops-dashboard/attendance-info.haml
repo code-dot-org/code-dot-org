@@ -23,3 +23,28 @@ template: none
       %a{href:"#/workshops/{{workshop.id}}/attendance"} Attendance
     %li.active.tab
       %a{href:"#/workshops/{{workshop.id}}/attendance-info"} Teacher Information
+
+%table{'ng-show' => 'teachers.length > 0'}
+  %tr
+    %th.manage-th
+      Name
+    %th.manage-th
+      Email
+    %th.manage-th
+      School
+    %th.manage-th
+      District
+    %th.manage-th
+      Gender
+
+  %tr{'ng-repeat' => 'teacher in teachers | orderBy:"ops_last_name"'}
+    %td
+      {{teacher.ops_last_name}}, {{teacher.ops_first_name}}
+    %td
+      {{teacher.email}}
+    %td
+      {{teacher.ops_school}}
+    %td
+      {{teacher.district.name}}
+    %td
+      {{teacher.ops_gender}}
