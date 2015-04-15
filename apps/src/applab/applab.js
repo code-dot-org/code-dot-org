@@ -1069,21 +1069,20 @@ Applab.getVizScaleFactor = function () {
   var width = $('body').width();
   var vizScaleBreakpoints = [1150, 1100, 1050, 1000, 0];
   if (vizScaleBreakpoints.length !== Applab.vizScaleFactors.length) {
-    throw 'Wrong number of elements in Applab.vizScaleFactors '
-        + Applab.vizScaleFactors;
+    throw 'Wrong number of elements in Applab.vizScaleFactors ' +
+        Applab.vizScaleFactors;
   }
   for (var i = 0; i < vizScaleBreakpoints.length; i++) {
     if (width > vizScaleBreakpoints[i]) {
       return Applab.vizScaleFactors[i];
     }
   }
-  window.console && console.warn('Unexpected body width: ' + width);
-  return 1.0;
+  throw 'Unexpected body width: ' + width;
 };
 
 Applab.onDivApplabClick = function (event) {
-  if (!window.$ || $('#designModeButton').is(':visible')
-      || $('#resetButton').is(':visible')) {
+  if (!window.$ || $('#designModeButton').is(':visible') ||
+      $('#resetButton').is(':visible')) {
     return;
   }
   event.preventDefault();
@@ -1160,20 +1159,19 @@ Applab.serializeToLevelHtml = function () {
   var divApplab = document.getElementById('divApplab');
   var clone = divApplab.cloneNode(true);
   // Remove unwanted classes added by jQuery.draggable.
-  // TODO(dave): Traverse children recursively once we support containers.
-  $(clone).children().removeAttr('class');
+  $(clone).find('*').removeAttr('class');
   return s.serializeToString(clone);
 };
 
 Applab.parseFromLevelHtml = function(rootEl, isDesignMode) {
-  if (Applab.levelHtml) {
-    var keepScripts = false;
-    var levelDom = $.parseHTML(Applab.levelHtml, document, keepScripts);
-    var children = $(levelDom).children();
-    children.appendTo(rootEl);
-    if (isDesignMode) {
-      Applab.makeDraggable(children);
-    }
+  if (!Applab.levelHtml) {
+    return;
+  }
+  var levelDom = $.parseHTML(Applab.levelHtml);
+  var children = $(levelDom).children();
+  children.appendTo(rootEl);
+  if (isDesignMode) {
+    Applab.makeDraggable(children);
   }
 };
 
