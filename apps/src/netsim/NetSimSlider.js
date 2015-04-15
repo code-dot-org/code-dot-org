@@ -123,6 +123,12 @@ var NetSimSlider = module.exports = function (rootDiv, options) {
    * @private
    */
   this.step_ = utils.valueOr(options.step, 1);
+  if (this.step_ <= 0) {
+    throw new Error("NetSimSlider does not support zero or negative step values.");
+  } else if (this.step_ % 1 !== 0) {
+    throw new Error("NetSimSlider does not support non-integer step values. " +
+        " Use DecimalPrecisionSlider instead.");
+  }
 };
 
 /**
@@ -248,6 +254,58 @@ NetSimSlider.prototype.valueToLabel = function (val) {
  */
 NetSimSlider.prototype.valueToShortLabel = function (val) {
   return this.valueToLabel(val);
+};
+
+/**
+ * Since jQueryUI sliders don't support noninteger step values, this is
+ * a simple helper wrapped around NetSimSlider that adds support for
+ * fractional step values down to a given precision.
+ * @param {jQuery} rootDiv
+ * @param {Object} options - takes NetSimSlider options, except:
+ * @param {number} [options.step] - values between 0 and 1 are allowed.
+ * @param {number} [options.precision] - number of decimal places of precision
+ *        this slider needs (can match the number of decimal places in your
+ *        step value).  Default 2.
+ * @constructor
+ */
+NetSimSlider.DecimalPrecisionSlider = function (rootDiv, options) {
+  /**
+   * Number of decimal places of precision added to the default slider
+   * functionality.
+   * @type {number}
+   * @private
+   */
+  this.precision_ = utils.valueOr(options.precision, 2);
+
+  // We convert the given step value by the requested precision before passing
+  // it on to NetSimSlider, so that we give NetSimSlider an integer step value.
+  options.step = options.step * Math.pow(10, this.precision_);
+
+  NetSimSlider.call(this, rootDiv, options);
+};
+NetSimSlider.DecimalPrecisionSlider.inherits(NetSimSlider);
+
+/**
+ * @param {number} val - external-facing value
+ * @returns {number} - internal slider value
+ * @override
+ */
+NetSimSlider.DecimalPrecisionSlider.prototype.valueToSliderPosition = function (val) {
+  // Use clamping from parent class, which should be applied before our transform.
+  return NetSimSlider.prototype.valueToSliderPosition.call(this, val) *
+      Math.pow(10, this.precision_);
+};
+
+/**
+ * Should be an inverse of valueToSliderPosition
+ * @param {number} pos - internal slider value
+ * @returns {number} - external-facing value
+ * @override
+ */
+NetSimSlider.DecimalPrecisionSlider.prototype.sliderPositionToValue = function (pos) {
+  // Use clamping from parent class, which should be applied before our transform.
+  return NetSimSlider.prototype.sliderPositionToValue.call(this, pos) /
+      Math.pow(10, this.precision_);
 };
 
 /**
