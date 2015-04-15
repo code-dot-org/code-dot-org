@@ -75,7 +75,7 @@ template: none
 %h3 Facilitators
 
 %div
-  %table{style: "width:950px; table-layout:fixed;", 'ng-form' => 'allForm', class: 'workshop-facilitators'}
+  %table{style: "width:950px; table-layout:fixed; margin-bottom:10px", 'ng-form' => 'allForm', class: 'workshop-facilitators'}
     %colgroup
       %col{width: "200"}/
       %col{width: "200"}/
@@ -115,11 +115,11 @@ template: none
         %span{"ng-show" => "facilitator.confirmDelete"}
           %span Delete?
           %br
-          %a.btn.btn-danger.btn-xs{"ng-click"=>'del(facilitator)'} Yes
+          %a.btn.btn-danger.btn-xs{"ng-click"=>'workshop.facilitators.splice(workshop.facilitators.indexOf(facilitator), 1) && save(workshop)'} Yes
           %a.btn.btn-success.btn-xs{"ng-click"=>'facilitator.confirmDelete = false'} No
         %span{"ng-hide" => "facilitator.confirmDelete"}
-          %a.btn.btn-white.btn-xs{"ng-click" => "edit(facilitator)", "ng-hide" => "facilitator.editing"} Edit
-          %a.btn.btn-white.btn-xs{"ng-click" => "cancel(facilitator);", "ng-show" => "facilitator.editing"} Cancel
-          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(facilitator)", "ng-show" => "!facilitator.editing && facilitator.id"} Delete
+          %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.editing = true", "ng-hide" => "facilitator.editing"} Edit
+          %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.editing = false;", "ng-show" => "facilitator.editing"} Cancel
+          %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.confirmDelete = true", "ng-show" => "!facilitator.editing && facilitator.id"} Delete
 
 %button.btn.btn-white{"ng-click" => "workshop.facilitators.push({editing: true})"} + Add Facilitator

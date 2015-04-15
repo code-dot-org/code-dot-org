@@ -23,7 +23,10 @@ template: none
   To:
   %input.form-control.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeEnd', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
 
-%table{style:'width:970px; layout:fixed; margin-top:20px;'}
+%div.jumbotron{'ng-show' => 'workshops.length <= 0'}
+  There are currently no workshops you are authorized to view.
+
+%table{style:'width:970px; layout:fixed; margin-top:20px;', 'ng-hide' => 'workshops.length <= 0'}
   %colgroup
     %col{width: "120"}/
     %col{width: "90"}/
