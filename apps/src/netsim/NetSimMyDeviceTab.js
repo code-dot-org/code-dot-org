@@ -100,15 +100,17 @@ NetSimMyDeviceTab.prototype.render = function () {
   var renderedMarkup = $(markup({}));
   this.rootDiv_.html(renderedMarkup);
 
-  this.metronome_ = new NetSimMetronome(
-      this.rootDiv_.find('.metronome'),
-      this.runLoop_,
-      this.pulseRate_);
+  if (this.levelConfig_.showMetronome) {
+    this.metronome_ = new NetSimMetronome(
+        this.rootDiv_.find('.metronome'),
+        this.runLoop_,
+        this.pulseRate_);
 
-  this.pulseRateControl_ = new NetSimPulseRateControl(
-      this.rootDiv_.find('.pulse-rate'),
-      this.pulseRate_,
-      this.pulseRateSliderChange_.bind(this));
+    this.pulseRateControl_ = new NetSimPulseRateControl(
+        this.rootDiv_.find('.pulse-rate'),
+        this.pulseRate_,
+        this.pulseRateSliderChange_.bind(this));
+  }
 
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk-size'),
