@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## getImageURL(id)
+## getImageURL(imageId)
 
 [/name]
 
@@ -35,11 +35,11 @@ Add the Code.org logo to the screen
 
 <pre>
 // add the Code.org logo to the screen from the url
-image("logo", "http://code.org/images/logo.png"); 
+image("logo", "http://code.org/images/logo.png");
 
 // get the url for the image element with the provided url
 // store the url in the variable imageURL
-var imageURL = getImageURL("logo"); 
+var imageURL = getImageURL("logo");
 
 // output the contents of the variable ("http://code.org/images/logo.png") to the console
 console.log(imageURL);
@@ -68,15 +68,15 @@ var beeImageURL = "http://studio.code.org/blockly/media/skins/bee/static_avatar.
 // create an image element with the dog character
 image(imageId, dogImageURL);
 
-// create a button element 
+// create a button element
 button(buttonId, "Change Character");
 
 // add a click event to the button to change the character
 onEvent(buttonId, "click", function(event) {
-  
+
   // get the current character image URL
   var currentCharacterURL = getImageURL(imageId);
-  
+
   // determine which character is currently displayed on the screen
   // check if the current character URL is the same URL as the dog character's
   if (currentCharacterURL == dogImageURL) {
@@ -100,7 +100,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-getImageURL(id);
+getImageURL(imageId);
 </pre>
 
 [/syntax]
@@ -111,7 +111,7 @@ getImageURL(id);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | Yes | The id of the image element. |
+| imageId | string | Yes | The id of the image element. |
 
 [/parameters]
 
