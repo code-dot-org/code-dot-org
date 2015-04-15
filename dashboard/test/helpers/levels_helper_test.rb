@@ -126,4 +126,11 @@ class LevelsHelperTest < ActionView::TestCase
     options = app_options
     assert_equal '<test/>', options[:level]['startBlocks']
   end
+
+  test "embedded-freeplay level doesn't remove header and footer" do
+    @level.embed = true
+    options = app_options
+    assert_equal nil, view_options[:no_header]
+    assert_equal nil, view_options[:no_footer]
+  end
 end
