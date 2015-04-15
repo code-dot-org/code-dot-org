@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## button(id, text)
+## button(buttonId, text)
 
 [/name]
 
@@ -97,7 +97,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-button(id,text)
+button(buttonId,text)
 </pre>
 
 [/syntax]
@@ -109,7 +109,7 @@ button(id,text)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | yes | A unique identifier for the button. The id is used for referencing the created button. For example, to assign event handlers. |
+| buttonId | string | yes | A unique identifier for the button. The id is used for referencing the created button. For example, to assign event handlers. |
 | text | string | yes | The text displayed within the button. |
 [/parameters]
 
