@@ -139,7 +139,11 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
 // The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
 // The scale values are then adjusted such that the max-width case may result
 // in a scaled-up version of divApplab and the min-width case will typically
-// result in a scaled-down version of divApplab
+// result in a scaled-down version of divApplab.
+//
+// @returns {Array.<number>} Array of scale factors which will be used
+//     on the applab app area at the following screen widths, respectively:
+//     1151px+; 1101-1150px; 1051-1100px; 1001-1050px; 0-1000px.
 //
 
 function adjustAppSizeStyles(container) {
@@ -240,6 +244,7 @@ function adjustAppSizeStyles(container) {
       break;
     }
   }
+  return scaleFactors;
 }
 
 var drawDiv = function () {
@@ -745,7 +750,7 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles(document.getElementById(config.containerId));
+  Applab.vizScaleFactors = adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -1015,11 +1020,70 @@ Applab.createElement = function (elementType, left, top) {
 
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(el);
+  Applab.makeDraggable($(el));
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
+/**
+ *
+ * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
+ */
+Applab.makeDraggable = function (jq) {
+  var gridSize = 20;
+  jq.draggable({
+    cancel: false,  // allow buttons and inputs to be dragged
+    drag: function(event, ui) {
+      // draggables are not compatible with CSS transform-scale,
+      // so adjust the position in various ways here.
+
+      // dragging
+      var scale = Applab.getVizScaleFactor();
+      var changeLeft = ui.position.left - ui.originalPosition.left;
+      var newLeft  = (ui.originalPosition.left + changeLeft) / scale;
+      var changeTop = ui.position.top - ui.originalPosition.top;
+      var newTop = (ui.originalPosition.top + changeTop) / scale;
+
+      // containment
+      var container = $('#divApplab');
+      var maxLeft = container.width() - ui.helper.outerWidth(true);
+      var maxTop = container.height() - ui.helper.outerHeight(true);
+      newLeft = Math.min(newLeft, maxLeft);
+      newLeft = Math.max(newLeft, 0);
+      newTop = Math.min(newTop, maxTop);
+      newTop = Math.max(newTop, 0);
+
+      // grid
+      newLeft -= newLeft % gridSize;
+      newTop -= newTop % gridSize;
+
+      ui.position.left = newLeft;
+      ui.position.top = newTop;
+    },
+    stop: function(event, ui) {
+      Applab.levelHtml = Applab.serializeToLevelHtml();
+    }
+  });
+};
+
+Applab.getVizScaleFactor = function () {
+  var width = $('body').width();
+  var vizScaleBreakpoints = [1150, 1100, 1050, 1000, 0];
+  if (vizScaleBreakpoints.length !== Applab.vizScaleFactors.length) {
+    throw 'Wrong number of elements in Applab.vizScaleFactors '
+        + Applab.vizScaleFactors;
+  }
+  for (var i = 0; i < vizScaleBreakpoints.length; i++) {
+    if (width > vizScaleBreakpoints[i]) {
+      return Applab.vizScaleFactors[i];
+    }
+  }
+  window.console && console.warn('Unexpected body width: ' + width);
+  return 1.0;
+};
+
 Applab.onDivApplabClick = function (event) {
-  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+  if (!window.$ || $('#designModeButton').is(':visible')
+      || $('#resetButton').is(':visible')) {
     return;
   }
   event.preventDefault();
@@ -1103,8 +1167,11 @@ Applab.serializeToLevelHtml = function () {
 
 Applab.parseFromLevelHtml = function(rootEl) {
   if (Applab.levelHtml) {
-    var levelDom = $.parseHTML(Applab.levelHtml, document, false);
-    $(levelDom).children().appendTo(rootEl);
+    var keepScripts = false;
+    var levelDom = $.parseHTML(Applab.levelHtml, document, keepScripts);
+    var children = $(levelDom).children();
+    children.appendTo(rootEl);
+    Applab.makeDraggable(children);
   }
 };
 
