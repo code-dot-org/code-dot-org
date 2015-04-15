@@ -621,13 +621,19 @@ $wide-column-width: 121px;
         .max-value {
           float: right;
           text-align: right;
-          width: 4em;
+          width: 3em;
         }
 
         .min-value {
           float: left;
           text-align: left;
-          width: 4em;
+          width: 3em;
+        }
+
+        &.wide-labels {
+          .max-value, .min-value {
+            width: 4em;
+          }
         }
 
         .current-value {

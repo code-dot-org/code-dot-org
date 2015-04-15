@@ -163,6 +163,12 @@ NetSimSlider.prototype.render = function () {
         slide: this.onSliderValueChange_.bind(this),
         stop: this.onSliderStop_.bind(this)
       });
+
+  // Use wider labels if we have an infinite bound
+  if (this.isLowerBoundInfinite_ || this.isUpperBoundInfinite_) {
+    this.rootDiv_.find('.slider-labels').addClass('wide-labels');
+  }
+
   this.setLabelFromValue_(this.value_);
 };
 
