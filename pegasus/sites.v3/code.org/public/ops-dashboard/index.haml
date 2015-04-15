@@ -88,7 +88,6 @@ title: "Ops Dashboard"
         //  'query':  {method:'GET', isArray:true},
         //  'remove': {method:'DELETE'},
         //  'delete': {method:'DELETE'}
-        //removeFacilitator: {method: 'PUT', url:}
         update: {method:'PUT', url: '/dashboardapi/workshops/:id'}
       });
 
@@ -614,15 +613,6 @@ title: "Ops Dashboard"
            );
          }
       }
-
-      $scope.del = function(facilitator) {
-        workshopsService.removeFacilitator({id: $scope.workshop.id, facilitator_id: facilitator.id}).$promise.then(
-          function () {
-            $scope.workshop.facilitators.splice($scope.workshop.facilitators.indexOf(facilitator), 1); // remove from array
-          }
-        ); // service call
-        facilitator.confirmDelete = false;
-      };
 
       $scope.saveSegment = function (segment) {
         var newSegment = new segmentsService($scope.segment);
