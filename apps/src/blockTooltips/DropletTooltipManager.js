@@ -22,7 +22,8 @@ var DEFAULT_TOOLTIP_CONFIG = {
   maxWidth: 450,
   position: 'right',
   contentAsHTML: true,
-  theme: 'droplet-block-tooltipster'
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2
   /**
    * hideOnClick does not work with the droplet hover overlay
    * (passing through click events?)
@@ -64,8 +65,18 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
     }
 
     var funcName = $(blockHoverDiv).attr('title');
-    $(blockHoverDiv).tooltipster($.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-      content: self.getDropletTooltip(funcName).getTooltipHTML()
-    }));
+
+    var hoverDivWidth = $(blockHoverDiv).width();
+    var hoverDivLeftToToolboxRight = $(".droplet-palette-canvas").width()
+      - parseInt(blockHoverDiv.style.left, 10);
+    var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
+    var tooltipOffsetX = desiredXPosition - hoverDivWidth;
+
+    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+      content: self.getDropletTooltip(funcName).getTooltipHTML(),
+      offsetX: tooltipOffsetX
+    });
+
+    $(blockHoverDiv).tooltipster(configuration);
   });
 };
