@@ -510,6 +510,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "missingBlocksErrorMsg":function(d){return "Try one or more of the blocks below to solve this puzzle."},
 "nextLevel":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+"."},
 "nextLevelTrophies":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+" and won "+locale.p(d,"numTrophies",0,"en",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextPuzzle":function(d){return "Next Puzzle"},
 "nextStage":function(d){return "Congratulations! You completed "+locale.v(d,"stageName")+"."},
 "nextStageTrophies":function(d){return "Congratulations! You completed "+locale.v(d,"stageName")+" and won "+locale.p(d,"numTrophies",0,"en",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
 "numBlocksNeeded":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+". (However, you could have used only "+locale.p(d,"numBlocks",0,"en",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},

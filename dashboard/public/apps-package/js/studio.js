@@ -1417,6 +1417,7 @@ var displayFeedback = function() {
       skin: skin.id,
       feedbackType: Studio.testResults,
       tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+      continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined, 
       response: Studio.response,
       level: level,
       showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
@@ -6819,6 +6820,7 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSpriteParams = {
       helpUrl: '',
       init: function() {
+        this.VALUES = skin.spriteChoices;
         var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
         // default to first item after random/hidden
         dropdown.setValue(skin.spriteChoices[2][1]);
@@ -7543,7 +7545,7 @@ BigGameLogic.prototype.onTick = function () {
 
     // send sprite back offscreen
     this.resetSprite_(targetSprite);
-}
+  }
 
   if (this.studio_.playerScore <= 0) {
     var score = document.getElementById('score');
@@ -7589,8 +7591,15 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
   // Current behavior is that as soon as we go offscreen, we reset to the other
   // side. We could add a delay if we want.
   if (!this.onscreen(newCenterX)) {
-    // reset to other side
-    this.resetSprite_(sprite);
+    // reset to other side if it is visible
+    if (sprite.visible) {
+      this.resetSprite_(sprite);
+    }
+  } else if (!sprite.visible) {
+    // sprite has returned to screen, make it visible again
+    this.studio_.setSprite({
+      spriteIndex: this.studio_.sprite.indexOf(sprite),
+      value:"visible"});
   }
 };
 
@@ -7616,16 +7625,16 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
  * Reset sprite to the opposite side of the screen
  */
 BigGameLogic.prototype.resetSprite_ = function (sprite) {
-  // Center of the play area, offset by the sprite radius
-  var centerOffset = (this.studio_.MAZE_WIDTH / 2) - (sprite.width / 2);
-
-  // Offset sprite.x so that we can mirror it across the center of the play area
-  var offsetX = sprite.x - centerOffset;
-  
-  // Mirror across the center of the play area and reset the offset
-  sprite.x = (offsetX * -1) + centerOffset;
+  if (sprite.dir === Direction.EAST) {
+    sprite.x = 0 - sprite.width;
+  } else {
+    sprite.x = this.studio_.MAZE_WIDTH;
+  }
   
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
+  this.studio_.setSprite({
+    spriteIndex: this.studio_.sprite.indexOf(sprite),
+    value:"hidden"});
 };
 
 /**

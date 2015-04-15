@@ -1,0 +1,25 @@
+---
+layout: none
+template: none
+---
+- authentication_required!
+- forbidden! unless have_permission?('facilitator') || dashboard_user[:admin]
+
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%a{href:'/ops-dashboard/workshops'}
+  PD Workshops
+>
+%span
+  {{workshop.name}}
+
+%h1
+  Information for {{workshop.name}}
+
+#learn-tabs{'ng-hide' => 'teachers.length <= 0', style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
+  %ul.nav.nav-tabs{style: "float: left;"}
+    %li
+      %a{href:"#/workshops/{{workshop.id}}/attendance"} Attendance
+    %li.active.tab
+      %a{href:"#/workshops/{{workshop.id}}/attendance-info"} Teacher Information
