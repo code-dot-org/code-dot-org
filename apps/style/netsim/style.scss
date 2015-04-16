@@ -152,6 +152,7 @@ $wide-column-width: 121px;
 
     &[disabled] {
       background-color: $lighter_gray;
+      cursor: default;
     }
   }
 
