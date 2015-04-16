@@ -594,6 +594,10 @@ title: "Ops Dashboard"
         return $.grep(things, function(thing) {return thing.editing;}).length > 0
       };
 
+      $scope.newSegment = function() {
+        $scope.workshopSegments.unshift({editing: true});
+      };
+
       $scope.save = function (workshop) {
          if (workshop.id) {
            workshopsService.update({id: workshop.id}, {workshop: workshop});
