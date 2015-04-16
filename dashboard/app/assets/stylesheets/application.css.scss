@@ -949,7 +949,7 @@ input.header_input {
   }
 }
 
-@mixin close-button($cornerOffset) {
+@mixin close-button($cornerOffset, $filp: false) {
   $startWidth: 61px;
   $startHeight: 59px;
   $growth: 3px;
@@ -972,13 +972,23 @@ input.header_input {
     height: $startHeight + $growth;
   }
 
-  html[dir=rtl] & {
+  html[dir=rtl] &, .flip-x-close & {
     right: auto;
     left: $cornerOffset;
   }
-  html[dir=rtl] &:hover {
+  html[dir=rtl] &:hover, .flip-x-close &:hover {
     right: auto;
     left: $cornerOffset - $movement;
+  }
+
+  html[dir=rtl] .flip-x-close & {
+    left: auto;
+    right: $cornerOffset;
+  }
+
+  html[dir=rtl] .flip-x-close &:hover {
+    left: auto;
+    right: $cornerOffset - $movement;
   }
 }
 
@@ -1014,10 +1024,10 @@ html[dir=rtl] .qtip-content {
 
 .cdo-qtips {
   z-index: 1;
+}
 
-  .tooltip-x-close {
-    @include close-button($cornerOffset: -35px);
-  }
+.tooltip-x-close.qtip-icon {
+  @include close-button($cornerOffset: -35px);
 }
 
 a.download-video {
