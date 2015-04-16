@@ -338,7 +338,7 @@ title: "Ops Dashboard"
         return attendance;
       }
 
-      $scope.save = function (attendance, $event) {
+      $scope.save = function (attendance) {
         if (attendance.id) {
           attendancesService.update({attendanceid: attendance.id}, {workshop_attendance: attendance});
         } else {
