@@ -111,6 +111,13 @@ var NetSim = module.exports = function () {
   this.chunkSize_ = 8;
 
   /**
+   * The "my device" bitrate in bits per second
+   * @type {number}
+   * @private
+   */
+  this.myDeviceBitRate_ = 8;
+
+  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -322,6 +329,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
         this.runLoop_,
         {
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
+          myDeviceBitRateChangeCallback: this.setMyDeviceBitRate.bind(this),
           encodingChangeCallback: this.changeEncodings.bind(this),
           routerBandwidthSliderChangeCallback: this.setRouterBandwidth.bind(this),
           routerBandwidthSliderStopCallback: this.changeRemoteRouterBandwidth.bind(this),
@@ -338,6 +346,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.chunkSize_);
+  this.setMyDeviceBitRate(this.myDeviceBitRate_);
   this.setRouterBandwidth(this.level.defaultRouterBandwidth);
   this.setRouterMemory(this.level.defaultRouterMemory);
   this.setDnsMode(this.level.defaultDnsMode);
@@ -596,6 +605,18 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendPanel_.setChunkSize(newChunkSize);
+};
+
+/**
+ * Update bitrate for the local device, which affects send-animation speed.
+ * @param {number} newBitRate in bits per second
+ */
+NetSim.prototype.setMyDeviceBitRate = function (newBitRate) {
+  this.myDeviceBitRate_ = newBitRate;
+  if (this.tabs_) {
+    this.tabs_.setMyDeviceBitRate(newBitRate);
+  }
+  this.sendPanel_.setBitRate(newBitRate);
 };
 
 /** @param {number} creationTimestampMs */

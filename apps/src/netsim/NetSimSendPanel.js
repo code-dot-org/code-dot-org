@@ -90,6 +90,14 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.chunkSize_ = BITS_PER_BYTE;
 
   /**
+   * Local device bitrate in bits-per-second, which affects send animation
+   * speed.
+   * @type {number}
+   * @private
+   */
+  this.bitRate_ = Infinity;
+
+  /**
    * What encodings are currently selected and displayed in each
    * packet and packet editor.
    * @type {EncodingType[]}
@@ -249,6 +257,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     packetCount: newPacketCount,
     maxPacketSize: this.maxPacketSize_,
     chunkSize: this.chunkSize_,
+    bitRate: this.bitRate_,
     enabledEncodings: this.enabledEncodings_,
     removePacketCallback: this.removePacket_.bind(this),
     contentChangeCallback: this.onContentChange_.bind(this)
@@ -444,6 +453,17 @@ NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
   this.packets_.forEach(function (packetEditor) {
     packetEditor.setChunkSize(newChunkSize);
+  });
+};
+
+/**
+ * Change the local device bitrate which affects send animation speed.
+ * @param {number} newBitRate in bits per second
+ */
+NetSimSendPanel.prototype.setBitRate = function (newBitRate) {
+  this.bitRate_ = newBitRate;
+  this.packets_.forEach(function (packetEditor) {
+    packetEditor.setBitRate(newBitRate);
   });
 };
 

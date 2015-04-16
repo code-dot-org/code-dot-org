@@ -56,6 +56,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @param {string} [initialConfig.message]
  * @param {number} [initialConfig.maxPacketSize]
  * @param {number} [initialConfig.chunkSize]
+ * @param {number} [initialConfig.bitRate]
  * @param {EncodingType[]} [initialConfig.enabledEncodings]
  * @param {function} initialConfig.removePacketCallback
  * @param {function} initialConfig.contentChangeCallback
@@ -114,6 +115,13 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.currentChunkSize_ = initialConfig.chunkSize || BITS_PER_BYTE;
+
+  /**
+   * Local device bitrate (bps), which affects send-animation speed.
+   * @type {number}
+   * @private
+   */
+  this.bitRate_ = initialConfig.bitRate || Infinity;
 
   /**
    * Which encodings should be visible in the editor.
@@ -273,11 +281,9 @@ NetSimPacketEditor.prototype.tick = function (clock) {
     this.lastBitSentTime_ = clock.time;
   }
 
-  var bitrateBps = 8;
-
-  // How many characters to we eat?
+  // How many characters should be consumed this tick?
   var msSinceLastBitConsumed = clock.time - this.lastBitSentTime_;
-  var msPerBit = 1000 * (1 / bitrateBps);
+  var msPerBit = 1000 * (1 / this.bitRate_);
   var maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
   if (maxBitsToSendThisTick > 0) {
     this.lastBitSentTime_ = clock.time;
@@ -712,6 +718,14 @@ NetSimPacketEditor.prototype.setEncodings = function (newEncodings) {
 NetSimPacketEditor.prototype.setChunkSize = function (newChunkSize) {
   this.currentChunkSize_ = newChunkSize;
   this.updateFields_();
+};
+
+/**
+ * Change local device bitrate which changes send animation speed.
+ * @param {number} newBitRate in bits per second
+ */
+NetSimPacketEditor.prototype.setBitRate = function (newBitRate) {
+  this.bitRate_ = newBitRate;
 };
 
 /**
