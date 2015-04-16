@@ -1191,7 +1191,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
     }
 
-    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager = new DropletTooltipManager(this.editor);
     this.dropletTooltipManager.registerBlocksFromList(
       dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 

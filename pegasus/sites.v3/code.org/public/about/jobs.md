@@ -3,17 +3,45 @@ title: Jobs at Code.org
 nav: about_nav
 ---
 
-# Job Openings at Code.org	
+# Job Openings at Code.org
+
+- [Evaluation Manager](#Eval)	
 - [Technical Product Manager](#Tech-PM)
 - [K-5 Affiliate Program Manager](#K-5-PM)
 - [Hour of Code Campaign Coordinator](#HOC-Temp)
 - [Head of Engineering](#head-engineering)
 - [High School Program Manager](#HS-PM)
 - [Regional Program Manager (Los Angeles, New York City, Ft. Lauderdale/Miami area)](#reg-PM)
-- [Policy Research Analyst](#advocacy-researcher)
 - [Data Scientist / Quantitative Data Analyst](#data-scientist)
 - [Operations/Developer](#ops-dev)
 - [Software Engineer](#engineer)
+
+## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA)</a>
+**Job Summary:**
+
+The Evaluation Manager plays a critical role in managing and directing the evaluation of Code.org programs including the relationship with Code.org’s external evaluator. Candidates considered for this role must have direct experience in evaluation of a high-scale K-12 educational program. Responsibilities of the position include:
+
+- Collaborating with cross-organizational teams to develop a comprehensive organizational strategy for K-12 program evaluation and identify key programmatic and strategic questions for evaluation design
+- Advising the Education team on program improvements as a result of evaluation results
+Act as liaison between Code.org and all external evaluation projects and organizations
+- Developing evaluation reports, analyzing and summarizing key findings to share with internal and external parties (funders, districts, educators)
+- Designing and implementing data collection instruments to measure and improve the K-12 professional development programs and student learning outcomes, such as pre/post-tests, surveys, assessments, interview guides, and focus group protocols
+- Working closely with the Data Engineer to develop questions and reports for automation
+- Working closely with Code.org’s fundraising team to provide outcome information for proposal writing and author text for evaluation plans
+- Promoting a culture of reflection, learning, and data-based decision making among Code.org staff and affiliates
+
+**Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- A Bachelor’s degree (Master’s preferred) in Education or a related field that includes a background in research and evaluation, outcome measurement, or statistics; deep familiarity with computer science, math, or science K-12 evaluation strongly preferred. 
+- Minimum of 5 years of experience in formal K-12 program evaluation 
+- Professional demeanor, possessing excellent communication, organizational, project management and interpersonal skills
+- Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. 
+- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must, especially spreadsheets.
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 
 ## <a name="Tech-PM"href="#Tech-PM">Technical Product Manager (Seattle,WA)</a>
 **Job Summary:**
@@ -41,6 +69,7 @@ In addition, candidates:
 - Must pass a pre-employment background check
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 ## <a name="K-5-PM"href="#K-5-PM">K-5 Affiliate Program Manager (Seattle, WA)</a>
 **Job Summary:**
 
@@ -103,32 +132,6 @@ Responsibilities of this position include:
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-## <a name="advocacy-researcher" href="#advocacy-researcher">Policy Research Analyst (Seattle, WA preferred)</a>    
-**Job Summary:**
-
-Code.org is recruiting for an Policy Research Analyst who will provide assistance with our state policy and advocacy research needs. **Part-time, long-term contract (6 months, with a possible extension based on need).** 
-Responsibilities of the position include:
-
-- Research and analysis of state policy issues, including:
-	- State standards for K-12 education
-	- University admission requirements
-	- Teacher certification programs and pathways
-	- Course code implementation at the State Department of Education level and with local school districts
-	- Graduation credit requirements
-	- Pre-service teacher requirements
-- Develop policy recommendations and reports
-- Regularly update relevant statistics for messaging and advocacy  
-
-**Qualifications:**
-
-- 5-10 years experience in education policy and research (required)
-- Advanced Excel skills for data analysis (required)
-- Knowledge of K-12 computer science issues (preferred)
-- Strong writing and analytical skills
-- Ability to work in a fast-paced, team-based environment
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 

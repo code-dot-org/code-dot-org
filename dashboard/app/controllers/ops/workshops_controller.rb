@@ -58,6 +58,11 @@ module Ops
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def workshop_params
+      #This is necessary because rails turns empty arrays into nil
+      if params[:workshop]
+        params[:workshop][:facilitators] ||= [] if params[:workshop].has_key?(:facilitators)
+      end
+
       params.require(:workshop).permit(
         :name,
         :program_type,
@@ -69,7 +74,7 @@ module Ops
     end
 
     def convert_facilitators
-      return unless params[:workshop]
+      return unless params[:workshop] && params[:workshop][:facilitators]
       facilitator_param_list = params[:workshop].delete :facilitators
       return unless facilitator_param_list
 

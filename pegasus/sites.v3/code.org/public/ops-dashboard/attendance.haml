@@ -4,19 +4,57 @@ template: none
 ---
 - authentication_required!
 - forbidden! unless have_permission?('facilitator') || dashboard_user[:admin]
+
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%a{href:'/ops-dashboard#/workshops'}
+  PD Workshops
+>
+%span
+  {{workshop.name}}
+
 %h1
   Attendance for {{workshop.name}}
 
-%div.jumbotron{'ng-show' => 'teachers.length <= 0'}
+#learn-tabs{'ng-hide' => 'workshop.teachers.length <= 0', style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
+  %ul.nav.nav-tabs{style: "float: left;"}
+    %li.active.tab
+      %a{'ng-href' => "#/workshops/{{workshop.id}}/attendance"} Attendance
+    %li
+      %a{'ng-href' => "#/workshops/{{workshop.id}}/attendance-info"} Teacher Information
+  %button.btn.btn-white{'ng-click' => 'teacherAddition = true', 'ng-hide' => 'teacherAddition == true', style: "float:right"}
+    Add a new teacher
+
+%div.jumbotron{'ng-show' => 'workshop.teachers.length <= 0'}
   No teachers registered for this workshop.
-%a.btn.btn-white{"ng-click" => ""}
-  Add a new teacher to this workshop
-%br
-%br
-%div{style:"width:970px; overflow-x:scroll;"}
-  %table.table-wrapper{'ng-show' => 'teachers.length > 0'}
-    %colgroup
-      %col{span:"1"}/
+%form{'ng-show' => 'teacherAddition == true', style:'width:30%'}
+  %h2
+    New teacher information
+  %input.form-control{type:'text', placeholder:'First Name', 'ng-model' => 'newTeacher.firstName'}
+  %br
+  %input.form-control{type:'text', placeholder:'Last Name', 'ng-model' => 'newTeacher.lastName'}
+  %br
+  %input.form-control{type:'text', placeholder:'Email', 'ng-model' => 'newTeacher.email'}
+  %br
+  %input.form-control{type:'text', placeholder:'District', 'ng-model' => 'newTeacher.district'}
+  %br
+  %select.form-control{'ng-model' => 'newTeacher.gender'}
+    %option{value:'', disabled:'true', selected:'true'}
+      Gender
+    %option
+      Male
+    %option
+      Female
+  %br
+  %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
+  %br
+  %a.btn.btn-success.btn-xs{'ng-click' =>''}
+    Save
+  %a.btn.btn-white.btn-xs{'ng-click' => 'teacherAddition = false'}
+    Cancel
+%div.table-wrapper{style:"width:970px; overflow-x:scroll; margin-top:10px"}
+  %table{'ng-show' => 'workshop.teachers.length > 0'}
     %tr
       %th
       %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
@@ -24,23 +62,23 @@ template: none
         %br
         {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
 
-    %tr{'ng-repeat' => 'teacher in teachers | orderBy:"ops_last_name"'}
+    %tr{'ng-repeat' => 'teacher in workshop.teachers | orderBy:"ops_last_name"'}
       %td{'ng-model' => 'workshop_attendance.teacher_id'}
         {{teacher.ops_last_name}}, {{teacher.ops_first_name}}
-      %td{'ng-repeat' => 'segment in attendances.segments'}
+      %td{'ng-repeat' => 'attendance in teacher.attendances'}
         %form
           %label
             Attended
-            %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'present'}
+            %input{type:'radio', 'ng-model' => 'attendance.status', value:'present'}
           %label
             Absent
-            %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'absent'}
+            %input{type:'radio', 'ng-model' => 'attendance.status', value:'absent'}
           %label
             Excused absence
-            %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'excused'}
-            %input{style:'display:none', 'ng-model' => 'workshop_attendance.teacher_id', type:'text'}
+            %input{type:'radio', 'ng-model' => 'attendance.status', value:'excused'}
+            %input{style:'display:none', 'ng-model' => 'attendance.teacher_id', type:'text'}
           %br
-          %textarea{placeholder:'Additional notes', cols:'20', rows:'3'}
+          %textarea{placeholder:'Additional notes', 'ng-model' => 'attendance.notes', cols:'20', rows:'3'}
           %br
-          %a.btn.btn-white.btn-xs
+          %a.btn.btn-white.btn-xs{'ng-click' => 'save(workshop)'}
             Save

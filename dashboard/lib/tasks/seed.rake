@@ -80,7 +80,7 @@ namespace :seed do
         Multi.setup data
         multi_strings.deep_merge! i18n
       end
-      File.write("config/locales/multi.en.yml", multi_strings.to_yaml(options = {:line_width => -1}))
+      File.write("config/locales/multi.en.yml", multi_strings.to_yaml(line_width: -1))
     end
   end
 
@@ -101,7 +101,7 @@ namespace :seed do
         Match.setup data
         match_strings.deep_merge! i18n
       end
-      File.write("config/locales/match.en.yml", match_strings.to_yaml(options = {:line_width => -1}))
+      File.write("config/locales/match.en.yml", match_strings.to_yaml(line_width: -1))
     end
   end
 
@@ -124,7 +124,7 @@ namespace :seed do
           data, i18n = dsl_class.parse_file(filename)
           dsl_class.setup data
           i18n_strings.deep_merge! i18n
-        rescue Exception => e
+        rescue Exception
           puts "Error parsing #{filename}"
           raise
         end

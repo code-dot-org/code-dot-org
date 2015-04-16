@@ -271,12 +271,14 @@ function outputApplabConsole(output) {
   }
   // then put it in the applab console visible to the user:
   var debugOutput = document.getElementById('debug-output');
-  if (debugOutput.value.length > 0) {
-    debugOutput.value += '\n' + output;
-  } else {
-    debugOutput.value = output;
+  if (debugOutput) {
+    if (debugOutput.value.length > 0) {
+      debugOutput.value += '\n' + output;
+    } else {
+      debugOutput.value = output;
+    }
+    debugOutput.scrollTop = debugOutput.scrollHeight;
   }
-  debugOutput.scrollTop = debugOutput.scrollHeight;
 }
 
 var apiWarn = outputApplabConsole;
@@ -1747,9 +1749,10 @@ Applab.imageUploadButton = function (opts) {
 };
 
 // These offset are used to ensure that the turtle image is centered over
-// its x,y coordinates. The image is currently 31x45, so these offsets are 50%
-var TURTLE_X_OFFSET = -15;
-var TURTLE_Y_OFFSET = -22;
+// its x,y coordinates. The image is currently 48x48, rendered at 24x24.
+var TURTLE_WIDTH = 24;
+var TURTLE_HEIGHT = 24;
+var TURTLE_ROTATION_OFFSET = -45;
 
 function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
@@ -1763,7 +1766,7 @@ function getTurtleContext() {
     Applab.turtle.visible = true;
     var divApplab = document.getElementById('divApplab');
     var turtleImage = document.createElement("img");
-    turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
+    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
     turtleImage.ondragstart = function () { return false; };
@@ -1777,9 +1780,13 @@ function updateTurtleImage(turtleImage) {
   if (!turtleImage) {
     turtleImage = document.getElementById('turtleImage');
   }
-  turtleImage.style.left = (Applab.turtle.x + TURTLE_X_OFFSET) + 'px';
-  turtleImage.style.top = (Applab.turtle.y + TURTLE_Y_OFFSET) + 'px';
-  turtleImage.style.transform = 'rotate(' + Applab.turtle.heading + 'deg)';
+  turtleImage.style.left = (Applab.turtle.x - TURTLE_WIDTH / 2) + 'px';
+  turtleImage.style.top = (Applab.turtle.y - TURTLE_HEIGHT / 2) + 'px';
+  var heading = Applab.turtle.heading + TURTLE_ROTATION_OFFSET;
+  var transform = 'rotate(' + heading + 'deg)';
+  turtleImage.style.transform = transform;
+  turtleImage.style.msTransform = transform;
+  turtleImage.style.webkitTransform = transform;
 }
 
 function turtleSetVisibility (visible) {
