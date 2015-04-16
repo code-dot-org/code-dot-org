@@ -7,7 +7,7 @@ class Table
   end
 
   def initialize(channel_id, storage_id, table_name)
-    channel_owner, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
+    _, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
     @table_name = table_name
 
@@ -97,7 +97,7 @@ class DynamoTable
   end
 
   def initialize(channel_id, storage_id, table_name)
-    channel_owner, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
+    _, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
     @table_name = table_name
 
