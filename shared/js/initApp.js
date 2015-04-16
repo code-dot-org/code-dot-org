@@ -219,6 +219,7 @@ function initApp() {
       appOptions.level.lastAttempt = dashboard.currentApp.levelSource;
       appOptions.hideSource = true;
       appOptions.callouts = [];
+      dashboard.showMinimalProjectHeader();
     }
   } else if (appOptions.isLegacyShare && appToProjectUrl[appOptions.app]) {
     dashboard.currentApp = {

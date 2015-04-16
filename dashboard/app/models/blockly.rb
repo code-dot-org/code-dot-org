@@ -245,6 +245,7 @@ class Blockly < Level
         default_packet_size_limit
         show_tabs
         default_tab_index
+        show_metronome
         show_encoding_controls
         default_enabled_encodings
         show_router_bandwidth_control

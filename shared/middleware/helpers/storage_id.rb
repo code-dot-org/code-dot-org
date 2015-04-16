@@ -24,7 +24,7 @@ def storage_decrypt(encrypted)
 end
 
 def storage_decrypt_id(encrypted)
-  ignore, id, ignore = storage_decrypt(encrypted).split(':')
+  _, id, _ = storage_decrypt(encrypted).split(':')
   id = id.to_i
   raise ArgumentError, "`id` must be an integer > 0" unless id > 0
   return id
