@@ -24,11 +24,13 @@ var NetSimMetronome = require('./NetSimMetronome');
  * @param {netsimLevelConfiguration} levelConfig
  * @param {RunLoop} runLoop
  * @param {function} chunkSizeChangeCallback
+ * @param {function} bitRateChangeCallback
  * @param {function} encodingChangeCallback
  * @constructor
  */
 var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
-    runLoop, chunkSizeChangeCallback, encodingChangeCallback) {
+    runLoop, chunkSizeChangeCallback, bitRateChangeCallback,
+    encodingChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -60,6 +62,12 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    * @private
    */
   this.chunkSizeSliderChangeCallback_ = chunkSizeChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.bitRateChangeCallback_ = bitRateChangeCallback;
 
   /**
    * @type {function}
@@ -118,13 +126,15 @@ NetSimMyDeviceTab.prototype.render = function () {
     this.pulseRateControl_ = new NetSimPulseRateControl(
         this.rootDiv_.find('.pulse-rate'),
         1 / this.bitsPerSecond_,
-        this.pulseRateSliderChange_.bind(this));
+        function (secondsPerBit) {
+          this.bitRateChangeCallback_(1 / secondsPerBit);
+        }.bind(this));
   }
 
   this.bitRateControl_ = new NetSimBitRateControl(
       this.rootDiv_.find('.bitrate'),
       this.bitsPerSecond_,
-      this.setBitRate.bind(this));
+      this.bitRateChangeCallback_);
 
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk-size'),
