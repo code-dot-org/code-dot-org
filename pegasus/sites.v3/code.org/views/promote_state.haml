@@ -91,7 +91,7 @@
 -if data[:action_text_s] && data[:action_url_s]
   %a{href: data[:action_url_s], target: '_blank'}
     %button{class: 'state-petition-btn'}
-      Sign Petition
+      = data[:action_text_s]
 - else
   %a{href: data[:action_url_s], target: '_blank'}
     %button{class: 'state-petition-btn', style: 'visibility: hidden'}

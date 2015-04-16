@@ -11,7 +11,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":5,"../skins":200,"./blocks":60,"./eval":62,"./levels":74}],62:[function(require,module,exports){
+},{"../appMain":5,"../skins":205,"./blocks":60,"./eval":62,"./levels":74}],62:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -467,6 +467,7 @@ var displayFeedback = function(response) {
     response: response,
     level: level,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined, 
     showingSharing: !level.disableSharing && (level.freePlay),
     // allow users to save freeplay levels to their gallery
     saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
@@ -497,7 +498,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":251,"../../locale/current/eval":252,"../StudioApp":4,"../block_utils":26,"../canvg/StackBlur.js":49,"../canvg/canvg.js":50,"../canvg/rgbcolor.js":51,"../canvg/svg_todataurl":52,"../codegen":54,"../dom":57,"../skins":200,"../templates/page.html":225,"../utils":246,"./api":59,"./controls.html":61,"./evalError":65,"./evalText":71,"./levels":74,"./visualization.html":76}],76:[function(require,module,exports){
+},{"../../locale/current/common":256,"../../locale/current/eval":257,"../StudioApp":4,"../block_utils":26,"../canvg/StackBlur.js":49,"../canvg/canvg.js":50,"../canvg/rgbcolor.js":51,"../canvg/svg_todataurl":52,"../codegen":54,"../dom":57,"../skins":205,"../templates/page.html":230,"../utils":251,"./api":59,"./controls.html":61,"./evalError":65,"./evalText":71,"./levels":74,"./visualization.html":76}],76:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -517,7 +518,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":267}],74:[function(require,module,exports){
+},{"ejs":272}],74:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -585,7 +586,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":252,"../block_utils":26}],61:[function(require,module,exports){
+},{"../../locale/current/eval":257,"../block_utils":26}],61:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -608,7 +609,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":251,"../../locale/current/eval":252,"ejs":267}],60:[function(require,module,exports){
+},{"../../locale/current/common":256,"../../locale/current/eval":257,"ejs":272}],60:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -903,7 +904,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":251,"../../locale/current/eval":252,"../sharedFunctionalBlocks":199,"./evalUtils":73}],59:[function(require,module,exports){
+},{"../../locale/current/common":256,"../../locale/current/eval":257,"../sharedFunctionalBlocks":204,"./evalUtils":73}],59:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -1521,7 +1522,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{"../utils":246,"./evalError":65}],65:[function(require,module,exports){
+},{"../utils":251,"./evalError":65}],65:[function(require,module,exports){
 var evalMsg = require('../../locale/current/eval');
 
 /**
@@ -1559,6 +1560,6 @@ CustomEvalError.Type = {
   UserCodeException: 3
 };
 
-},{"../../locale/current/eval":252}],252:[function(require,module,exports){
+},{"../../locale/current/eval":257}],257:[function(require,module,exports){
 /*eval*/ module.exports = window.blockly.appLocale;
 },{}]},{},[75]);

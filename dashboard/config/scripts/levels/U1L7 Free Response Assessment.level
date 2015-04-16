@@ -3,17 +3,8 @@
   "game_id": 38,
   "created_at": "2015-04-08T19:39:04.000Z",
   "properties": {
-    "answers": [
-      "Enter answer here"
-    ],
     "title": "Assessment: Binary Numbers",
-    "markdown": "Imagine that you have a list of 10 numbers that you want to send in binary to a friend using the bit-sending widget. The numbers are all between 0 and 100. \n\nWhat issues or problems do you imagine that you and your friend would encounter in trying to do this?\n\nHow would you solve these problems?\n",
-    "type": "TextMatch",
-    "dsl_text": "name 'U1L7 Free Response Assessment'\r\ntitle 'Assessment: Binary Numbers'\r\ncontent1 ''\r\nanswer 'Enter answer here'\r\n\r\nmarkdown <<MARKDOWN\r\nImagine that you have a list of 10 numbers that you want to send in binary to a friend using the bit-sending widget. The numbers are all between 0 and 100. \r\nWhat issues or problems do you imagine that you and your friend would encounter in trying to do this. \r\nHow would you solve these problems?\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ],
-    "name": "U1L7 Free Response Assessment"
+    "markdown": "Imagine that you have a list of 10 numbers that you want to send in binary to a friend using the bit-sending widget. The numbers are all between 0 and 100. \n\nWhat issues or problems do you imagine that you and your friend would encounter in trying to do this?\n\nHow would you solve these problems?\n"
   }
 }]]></config>
 </TextMatch>

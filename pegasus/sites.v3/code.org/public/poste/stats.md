@@ -3,7 +3,13 @@ title: Poste Stats
 ---
 
 <%
-  rows = DB.fetch('
+  PER_PAGE = 10
+  page = params[:page] || 1
+  page = page.to_i
+
+  offset = (page - 1) * PER_PAGE
+
+  rows = DB.fetch("
 SELECT
   poste_messages.name AS message,
   COUNT(poste_deliveries.id) AS deliveries,
@@ -19,11 +25,27 @@ LEFT JOIN poste_opens ON poste_opens.delivery_id = poste_deliveries.id
 LEFT JOIN poste_clicks ON poste_clicks.delivery_id = poste_deliveries.id
 GROUP BY poste_messages.name
 ORDER BY poste_messages.name
-')
+LIMIT #{PER_PAGE}
+OFFSET #{offset}
+")
+
+  total = DB[:poste_messages].count
+  pages = (1.0 * total / PER_PAGE).ceil
 %>
 
 <br/>
 <br/>
+
+<ol class="pagination">
+<% 1.upto(pages) do |page_num| %>
+ <% if page_num == page %>
+  <li class="active">
+ <% else %>
+  <li>
+ <% end %>
+  <a href="/poste/stats?page=<%= page_num%>"><%= page_num %></a></li>
+<% end %>
+</ol>
 
 <table>
   <tr>

@@ -117,6 +117,7 @@ NetSimPanel.prototype.render = function () {
  */
 NetSimPanel.prototype.setPanelTitle = function (newTitle) {
   this.panelTitle_ = newTitle;
+  this.rootDiv_.find('.title-text').text(newTitle);
 };
 
 /**
@@ -157,7 +158,7 @@ NetSimPanel.prototype.addButton = function(buttonText, pressCallback) {
       .addClass('netsim-button')
       .html(buttonText)
       .click(pressCallback)
-      .appendTo(this.rootDiv_.find('.panel_controls'));
+      .appendTo(this.rootDiv_.find('.panel-controls'));
 };
 
 /**
