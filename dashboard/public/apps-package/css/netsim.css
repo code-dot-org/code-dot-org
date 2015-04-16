@@ -7,28 +7,6 @@
 .clearfix {
   clear: both; }
 
-svg {
-  background-color: white;
-  border: solid black thin;
-  border-radius: 25px; }
-  svg .viz-node text {
-    text-anchor: middle; }
-  svg .viz-node circle {
-    stroke: black;
-    stroke-width: 2;
-    fill: white; }
-  svg .viz-node rect.address-box {
-    stroke: black;
-    stroke-width: 2px;
-    fill: white; }
-  svg .viz-node text.address-box {
-    font-weight: bold; }
-  svg .router-node circle {
-    fill: #ffa400; }
-  svg .viz-wire {
-    stroke: black;
-    stroke-width: 2; }
-
 .icon21 {
   height: 21px;
   width: 21px;
@@ -122,10 +100,29 @@ svg {
 #netsim #netsim-rightcol {
   float: right;
   width: 300px; }
-  #netsim #netsim-rightcol #netsim-visualization img {
-    width: 100%; }
 #netsim #netsim-leftcol {
   margin-right: 320px; }
+#netsim #netsim-visualization svg {
+  background-color: white;
+  border: solid black thin;
+  border-radius: 25px; }
+  #netsim #netsim-visualization svg .viz-node text {
+    text-anchor: middle; }
+  #netsim #netsim-visualization svg .viz-node circle {
+    stroke: black;
+    stroke-width: 2;
+    fill: white; }
+  #netsim #netsim-visualization svg .viz-node rect.address-box {
+    stroke: black;
+    stroke-width: 2px;
+    fill: white; }
+  #netsim #netsim-visualization svg .viz-node text.address-box {
+    font-weight: bold; }
+  #netsim #netsim-visualization svg .router-node circle {
+    fill: #ffa400; }
+  #netsim #netsim-visualization svg .viz-wire {
+    stroke: black;
+    stroke-width: 2; }
 #netsim .netsim-shard-selection-panel {
   overflow: hidden; }
   #netsim .netsim-shard-selection-panel .content-wrap {
@@ -349,10 +346,12 @@ svg {
       #netsim .netsim-slider .slider-inline-wrap .slider-labels .max-value {
         float: right;
         text-align: right;
-        width: 4em; }
+        width: 3em; }
       #netsim .netsim-slider .slider-inline-wrap .slider-labels .min-value {
         float: left;
         text-align: left;
+        width: 3em; }
+      #netsim .netsim-slider .slider-inline-wrap .slider-labels.wide-labels .max-value, #netsim .netsim-slider .slider-inline-wrap .slider-labels.wide-labels .min-value {
         width: 4em; }
       #netsim .netsim-slider .slider-inline-wrap .slider-labels .current-value {
         text-align: center; }
@@ -380,6 +379,12 @@ svg {
     padding: 0.8em 0.5em; }
     #netsim .netsim-tabs .ui-tabs-panel p {
       margin: 0 1em 10px 1em; }
+#netsim .netsim-metronome {
+  text-align: center; }
+  #netsim .netsim-metronome .pulse-dot {
+    fill: #7665a0; }
+  #netsim .netsim-metronome .progress-meter {
+    fill: #7665a0; }
 #netsim .netsim-encoding-selector div.hidden-control {
   display: none; }
 #netsim .netsim-encoding-selector input[type="checkbox"] {
