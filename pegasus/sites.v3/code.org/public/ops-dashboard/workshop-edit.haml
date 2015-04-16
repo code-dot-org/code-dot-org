@@ -42,35 +42,48 @@ template: none
 %hr
 %h2{'ng-hide' => 'workshopSegments.length <= 0'}
   Workshop segments
-%div{'ng-repeat' => 'segment in workshopSegments'}
-  %p
-    {{segment.start | utc | date:'longDate'}}
-  %span
-    {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
-  %br
-  %br
-  %button.btn-danger{'ng-click' => 'segment.deletion = true', 'ng-hide' => 'segment.deletion == true'}
-    Delete Segment
-  %span{'ng-show' => 'segment.deletion == true'}
-    Are you sure?
-  %br
-  %button.btn-danger{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);', 'ng-show' => 'segment.deletion == true'}
-    Yes
-  %button.btn-white{'ng-click' => 'segment.deletion = false', 'ng-show' => 'segment.deletion == true'}
-    No
-  %hr
+%table
+  %tr
+    %th
+      day
+    %th
+      time
+    %th
+      manage
+  %tr{'ng-repeat' => 'segment in workshopSegments'}
+    %td{'ng-show' => 'segment.editing'}
+      %input{type:'datetime-local', 'ng-model' => 'segment.start'}
+    %td{'ng-hide' => 'segment.editing'}
+      {{segment.start | utc | date:'longDate'}}
+    %td{'ng-show' => 'segment.editing'}
+      %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+    %td{'ng-hide' => 'segment.editing'}
+      {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
+    %td{'ng-show' => 'segment.editing'}
+      %button{'ng-click' => 'saveSegment(segment)'}
+        Save Segment
+    %td{'ng-hide' => 'segment.editing'}
+      %a.btn.btn-white.btn-xs{'ng-click' => 'segment.deletion = true', 'ng-hide' => 'segment.deletion == true'}
+        Delete
+      %span{'ng-show' => 'segment.deletion == true'}
+        Are you sure?
+      %br
+      %a.btn.btn-white.btn-xs{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);', 'ng-show' => 'segment.deletion == true'}
+        Yes
+      %a.btn.btn-white.btn-xs{'ng-click' => 'segment.deletion = false', 'ng-show' => 'segment.deletion == true'}
+        No
 %div{'ng-show' => 'workshop.id'}
-  %h2
+  %a.btn.btn-white.btn-xs{'ng-click' => 'newSegment()'}
     Add a new segment
-  %div
-    Segment Start
-    %input{type:'datetime-local', 'ng-model' => 'segment.start'}
-    Segment End
-    %input{type:'datetime-local', 'ng-model' => 'segment.end'}
-    %br
-    %br
-  %button{'ng-click' => 'saveSegment(segment)'}
-    Save Segment
+  -#%div
+  -#  Segment Start
+  -#  %input{type:'datetime-local', 'ng-model' => 'segment.start'}
+  -#  Segment End
+  -#  %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+  -#  %br
+  -#  %br
+  -#%button{'ng-click' => 'saveSegment(segment)'}
+  -#  Save Segment
 
 %h3 Facilitators
 
