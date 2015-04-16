@@ -67,8 +67,8 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
     var funcName = $(blockHoverDiv).attr('title');
 
     var hoverDivWidth = $(blockHoverDiv).width();
-    var hoverDivLeftToToolboxRight = $(".droplet-palette-canvas").width()
-      - parseInt(blockHoverDiv.style.left, 10);
+    var hoverDivLeftToToolboxRight = $(".droplet-palette-canvas").width() -
+      parseInt(blockHoverDiv.style.left, 10);
     var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
     var tooltipOffsetX = desiredXPosition - hoverDivWidth;
 
