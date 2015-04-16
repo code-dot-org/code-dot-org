@@ -1602,7 +1602,6 @@ Studio.execute = function() {
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
@@ -5183,10 +5182,8 @@ levels.full_sandbox =  {
              '<title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>' +
            '</block>') +
        createCategory('Functional Start',
-           blockOfType('functional_start_setBackground') +
            blockOfType('functional_start_setSpeeds') +
-           blockOfType('functional_start_setBackgroundAndSpeeds') +
-           blockOfType('functional_start_dummyOnMove')) +
+           blockOfType('functional_start_setBackgroundAndSpeeds')) +
        createCategory('Functional Logic',
            blockOfType('functional_greater_than') +
            blockOfType('functional_less_than') +
@@ -7251,19 +7248,6 @@ exports.install = function(blockly, blockInstallOptions) {
       Studio.customLogic.cacheBlock(arg.name, inputBlock);
     }, this);
   };
-
-  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_start_dummyOnMove',
-    blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: blockly.BlockValueType.FUNCTION}]
-  });
-
-  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_start_setBackground',
-    blockTitle: 'start (background)',
-    apiName: 'Studio.setBackground',
-    args: [{ name: 'BACKGROUND', type: blockly.BlockValueType.STRING, default: 'space'}]
-  });
 
   blockly.Blocks.functional_start_setSpeeds = {
     init: function() {
