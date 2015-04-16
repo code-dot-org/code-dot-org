@@ -89,7 +89,6 @@ title: "Ops Dashboard"
         //  'remove': {method:'DELETE'},
         //  'delete': {method:'DELETE'}
         update: {method:'PUT', url: '/dashboardapi/workshops/:id'}
-        markAttendance: {method:'PUT', url: '/dashboardapi/workshops/:id'}
       });
 
       return Workshop;
@@ -144,7 +143,7 @@ title: "Ops Dashboard"
       var Attendance = $resource('/dashboardapi/attendance/workshop/:workshopid', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method:'GET'},
-        //  'save':   {method:'POST', url:'/dashboardapi/segments/:segmentid/attendance'},
+        //  'save':   {method:'POST'},
         //  'query':  {method:'GET', isArray:true},
         //  'remove': {method:'DELETE'},
         //  'delete': {method:'DELETE'}
@@ -339,7 +338,6 @@ title: "Ops Dashboard"
       }
 
       $scope.save = function (workshop) {
-        workshopsService.markAttendance({id: workshop.id}, {workshop: workshop});
       }
   }]);
 
