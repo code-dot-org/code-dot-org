@@ -28,7 +28,8 @@ var NetSimBitRateControl = module.exports = function (rootDiv, initialValue,
     onChange: sliderChangeCallback,
     value: initialValue,
     min: 1,
-    max: 20
+    max: 20,
+    upperBoundInfinite: true
   });
 
   // Auto-render, unlike our base class
