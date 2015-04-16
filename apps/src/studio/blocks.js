@@ -1821,19 +1821,6 @@ exports.install = function(blockly, blockInstallOptions) {
     }, this);
   };
 
-  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_start_dummyOnMove',
-    blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: blockly.BlockValueType.FUNCTION}]
-  });
-
-  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_start_setBackground',
-    blockTitle: 'start (background)',
-    apiName: 'Studio.setBackground',
-    args: [{ name: 'BACKGROUND', type: blockly.BlockValueType.STRING, default: 'space'}]
-  });
-
   blockly.Blocks.functional_start_setSpeeds = {
     init: function() {
       var blockName = 'start (player-speed, enemy-speed)';
