@@ -1239,11 +1239,10 @@ studioApp.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
-  divApplab = document.getElementById('divApplab');
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
-  Applab.parseFromLevelHtml(divApplab, isDesignMode);
+  Applab.parseFromLevelHtml(newDivApplab, isDesignMode);
 
-  divApplab.addEventListener('click', Applab.onDivApplabClick);
+  newDivApplab.addEventListener('click', Applab.onDivApplabClick);
 
 
   // Reset goal successState:
