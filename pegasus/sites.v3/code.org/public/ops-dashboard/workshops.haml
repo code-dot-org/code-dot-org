@@ -3,12 +3,12 @@ layout: none
 template: none
 ---
 - authentication_required!
-- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
+- forbidden! unless have_permission?('district_contact') || have_permission?('facilitator') || dashboard_user[:admin]
 
 %a{href:'/ops-dashboard'}
   Dashboard
 >
-%span{href:'/ops-dashboard/workshops'}
+%span
   PD Workshops
 
 %h1
@@ -17,13 +17,16 @@ template: none
   %a.btn.btn-white{href:'#/workshops/new'}
     Create New PD Workshop
 
-%form.form-inline{style:'float:right'}
+%div.jumbotron{'ng-show' => 'workshops.length <= 0'}
+  There are currently no workshops you are authorized to view.
+
+%form.form-inline{style:'float:right', 'ng-hide' => 'workshops.length <= 0'}
   From:
   %input.form-control.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeStart', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
   To:
   %input.form-control.date{"data-provide" => "datepicker", type:'text', 'ng-model' => 'dateRangeEnd', "data-date-format" => "yyyy-mm-dd", placeholder:'yyyy-mm-dd'}
 
-%table{style:'width:970px; layout:fixed; margin-top:20px;'}
+%table{style:'width:970px; layout:fixed; margin-top:20px;', 'ng-hide' => 'workshops.length <= 0'}
   %colgroup
     %col{width: "120"}/
     %col{width: "90"}/
@@ -73,7 +76,7 @@ template: none
           %a{'ng-href' => "mailto:{{facilitator.email}}"}
             {{facilitator.email}}
     %td
-      %div{'ng-repeat' => 'segment in workshop.segments'}
+      %div{'ng-repeat' => 'segment in workshop.segments | orderBy:"start"'}
         %p
           {{segment.start | utc | date:'longDate'}}
           %br

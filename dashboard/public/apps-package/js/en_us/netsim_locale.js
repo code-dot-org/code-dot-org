@@ -229,6 +229,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "waitingForNodeToConnect":function(d){return "Waiting for "+appLocale.v(d,"node")+" to connect..."},
 "workspaceHeader":function(d){return "Internet Simulator"},
 "xOfYPackets":function(d){return appLocale.v(d,"x")+" of "+appLocale.v(d,"y")},
+"xSecondPerPulse":function(d){return appLocale.v(d,"x")+" second per pulse"},
+"xSecondsPerPulse":function(d){return appLocale.v(d,"x")+" seconds per pulse"},
 "x_Gbps":function(d){return appLocale.v(d,"x")+"Gbps"},
 "x_Mbps":function(d){return appLocale.v(d,"x")+"Mbps"},
 "x_Kbps":function(d){return appLocale.v(d,"x")+"Kbps"},

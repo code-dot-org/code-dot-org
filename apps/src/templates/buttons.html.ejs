@@ -59,11 +59,11 @@
   <% if (data.isK1 && !data.freePlay) { -%>
     <div id="continue-button" class="launch arrow-container arrow-right">
       <div class="arrow-head"><img src="<%= data.assetUrl('media/next-arrow-head.png') %>" alt="Arrowhead" width="66" height="130"/></div>
-      <div class="arrow-text"><%= msg.continue() %></div>
+      <div class="arrow-text"><%= data.continueText %></div>
     </div>
   <% } else { -%>
     <button id="continue-button" class="launch" style="float: right">
-      <%= msg.continue() %>
+      <%= data.continueText %>
     </button>
   <% } -%>
 <% } -%>

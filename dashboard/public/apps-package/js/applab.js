@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":202}],18:[function(require,module,exports){
+},{"../skins":205}],18:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":250,"../block_utils":26,"../utils":248}],10:[function(require,module,exports){
+},{"../../locale/current/applab":253,"../block_utils":26,"../utils":251}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -2044,9 +2044,10 @@ Applab.imageUploadButton = function (opts) {
 };
 
 // These offset are used to ensure that the turtle image is centered over
-// its x,y coordinates. The image is currently 31x45, so these offsets are 50%
-var TURTLE_X_OFFSET = -15;
-var TURTLE_Y_OFFSET = -22;
+// its x,y coordinates. The image is currently 48x48, rendered at 24x24.
+var TURTLE_WIDTH = 24;
+var TURTLE_HEIGHT = 24;
+var TURTLE_ROTATION_OFFSET = -45;
 
 function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
@@ -2060,7 +2061,7 @@ function getTurtleContext() {
     Applab.turtle.visible = true;
     var divApplab = document.getElementById('divApplab');
     var turtleImage = document.createElement("img");
-    turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
+    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
     turtleImage.ondragstart = function () { return false; };
@@ -2074,9 +2075,13 @@ function updateTurtleImage(turtleImage) {
   if (!turtleImage) {
     turtleImage = document.getElementById('turtleImage');
   }
-  turtleImage.style.left = (Applab.turtle.x + TURTLE_X_OFFSET) + 'px';
-  turtleImage.style.top = (Applab.turtle.y + TURTLE_Y_OFFSET) + 'px';
-  turtleImage.style.transform = 'rotate(' + Applab.turtle.heading + 'deg)';
+  turtleImage.style.left = (Applab.turtle.x - TURTLE_WIDTH / 2) + 'px';
+  turtleImage.style.top = (Applab.turtle.y - TURTLE_HEIGHT / 2) + 'px';
+  var heading = Applab.turtle.heading + TURTLE_ROTATION_OFFSET;
+  var transform = 'rotate(' + heading + 'deg)';
+  turtleImage.style.transform = transform;
+  turtleImage.style.msTransform = transform;
+  turtleImage.style.webkitTransform = transform;
 }
 
 function turtleSetVisibility (visible) {
@@ -3378,7 +3383,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":250,"../../locale/current/common":253,"../StudioApp":4,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../skins":202,"../slider":203,"../templates/page.html":227,"../timeoutList":233,"../utils":248,"../xml":249,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./rgbcolor.js":20,"./visualization.html":22}],22:[function(require,module,exports){
+},{"../../locale/current/applab":253,"../../locale/current/common":256,"../StudioApp":4,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../skins":205,"../slider":206,"../templates/page.html":230,"../timeoutList":236,"../utils":251,"../xml":252,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./rgbcolor.js":20,"./visualization.html":22}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3398,7 +3403,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":269}],20:[function(require,module,exports){
+},{"ejs":272}],20:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -3668,7 +3673,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":250,"../../locale/current/common":253,"ejs":269}],15:[function(require,module,exports){
+},{"../../locale/current/applab":253,"../../locale/current/common":256,"ejs":272}],15:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -3761,7 +3766,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":269}],13:[function(require,module,exports){
+},{"ejs":272}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3781,7 +3786,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":269}],12:[function(require,module,exports){
+},{"ejs":272}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3801,7 +3806,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":253,"ejs":269}],11:[function(require,module,exports){
+},{"../../locale/current/common":256,"ejs":272}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3874,7 +3879,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":250,"../../locale/current/common":253,"../codegen":54,"../utils":248}],250:[function(require,module,exports){
+},{"../../locale/current/applab":253,"../../locale/current/common":256,"../codegen":54,"../utils":251}],253:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],9:[function(require,module,exports){
 'use strict';

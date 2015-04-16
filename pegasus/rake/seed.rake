@@ -108,7 +108,7 @@ class CsvToSqlTable
 
   def set_table_mtime(mtime)
     seed_info = DB[:seed_info]
-    if seed = seed_info.where(table:@table.to_s).first
+    if seed_info.where(table:@table.to_s).first
       seed_info.where(table:@table.to_s).update(mtime:mtime)
     else
       seed_info.insert(table:@table.to_s, mtime:mtime)
@@ -242,7 +242,6 @@ namespace :seed do
     if extname == '.gsheet'
       gsheet = path[0..-(extname.length+1)]
       path = "cache/#{path.gsub(File::SEPARATOR,'_')}.csv"
-      extname = File.extname(path)
 
       sync = "sync:#{table}"
       task sync do

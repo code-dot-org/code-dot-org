@@ -958,3 +958,6 @@ body.readonly.embed-block #codeWorkspace .userHidden {
   padding: 8px 10px;
   overflow: hidden;
   font-weight: normal; }
+
+.droplet-hover-div {
+  max-width: 100% !important; }
