@@ -1492,8 +1492,7 @@ Blockly.Blocks.functional_parameters_get = {init:function() {
   this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
   this.setHSV(312, 0.32, 0.62);
   this.setFunctional(!0, {headerHeight:30});
-  var b = {fixedSize:{height:35}};
-  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing ? new Blockly.FieldLabel(a, b) : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL).setAlign(Blockly.ALIGN_CENTRE);
+  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(a, "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL).setAlign(Blockly.ALIGN_CENTRE);
   this.setFunctionalOutput(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)
 }, renameVar:function(a, b) {
