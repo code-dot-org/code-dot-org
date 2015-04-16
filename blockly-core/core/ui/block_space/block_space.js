@@ -121,12 +121,20 @@ Blockly.BlockSpace.prototype.pageYOffset = 0;
 Blockly.BlockSpace.prototype.trashcan = null;
 
 /**
- * PID of upcoming firing of a change event.  Used to fire only one event
- * after multiple changes.
+ * PID of upcoming firing of a blockSpace change event.  Used to fire only one
+ * event after multiple changes.
  * @type {?number}
  * @private
  */
 Blockly.BlockSpace.prototype.fireChangeEventPid_ = null;
+
+/**
+ * PID of upcoming firing of a global change event.  Used to fire only one event
+ * after multiple changes.
+ * @type {?number}
+ * @private
+ */
+var fireGlobalChangeEventPid_ = null;
 
 /**
  * This blockSpace's scrollbars, if they exist.
@@ -418,6 +426,7 @@ Blockly.BlockSpace.prototype.highlightBlock = function(id, spotlight) {
  * a tree of blocks being deleted) are merged into one event.
  * Applications may hook blockSpace changes by listening for
  * 'blocklyBlockSpaceChange' on Blockly.mainBlockSpace.getCanvas().
+ * To hook changes across all blockSpaces, listen for 'blocklyChange' on window.
  */
 Blockly.BlockSpace.prototype.fireChangeEvent = function() {
   if (this.fireChangeEventPid_) {
@@ -427,10 +436,17 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
   if (canvas) {
     var self = this;
     this.fireChangeEventPid_ = window.setTimeout(function() {
-        self.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
-        Blockly.fireUiEvent(canvas, 'blocklyBlockSpaceChange');
+      self.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
+      Blockly.fireUiEvent(canvas, 'blocklyBlockSpaceChange');
     }, 0);
   }
+
+  if (fireGlobalChangeEventPid_) {
+    window.clearTimeout(fireGlobalChangeEventPid_);
+  }
+  fireGlobalChangeEventPid_ = window.setTimeout(function () {
+    Blockly.fireUiEvent(window, 'blocklyChange');
+  }, 0);
 };
 
 /**
