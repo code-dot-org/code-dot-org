@@ -107,12 +107,12 @@ var appToProjectUrl = {
   applab: '/p/applab'
 };
 
-dashboard.saveProject = function(callback) {
+dashboard.saveProject = function(callback, overrideSource) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
   var channelId = dashboard.currentApp.id;
-  dashboard.currentApp.levelSource = window.Blockly
+  dashboard.currentApp.levelSource = overrideSource || (window.Blockly
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
-      : window.Applab && Applab.getCode();
+      : window.Applab && Applab.getCode());
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
   dashboard.currentApp.level = appToProjectUrl[appOptions.app];
   if (channelId && dashboard.currentApp.isOwner) {
@@ -213,10 +213,15 @@ function initApp() {
           hasProjectChanged = true;
         });
         window.setInterval(function () {
-          if (hasProjectChanged) {
-            dashboard.saveProject(function () {
-              hasProjectChanged = false;
-            });
+          if (appOptions.droplet || hasProjectChanged) {
+            var source = window.Blockly
+                ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+                : window.Applab && Applab.getCode();
+            if (dashboard.currentApp.levelSource !== source) {
+              dashboard.saveProject(function() {
+                hasProjectChanged = false;
+              }, source);
+            }
           }
         }, AUTOSAVE_INTERVAL);
 
