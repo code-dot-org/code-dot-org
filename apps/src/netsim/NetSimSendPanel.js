@@ -117,14 +117,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
    * @type {boolean}
    * @private
    */
-  this.isAnimatingSending_ = false;
-
-  /**
-   * Callback for exiting the "sending" mode.
-   * @type {function}
-   * @private
-   */
-  this.onSendingComplete_ = undefined;
+  this.isPlayingSendAnimation_ = false;
 
   var panelTitle = (levelConfig.messageGranularity === MessageGranularity.PACKETS) ?
       i18n.sendAMessage() : i18n.sendBits();
@@ -140,52 +133,49 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
 NetSimSendPanel.inherits(NetSimPanel);
 
 /**
+ * Puts send panel in a "sending packets" noninteractive state and begins
+ * sending packets to remote.
+ * @private
+ */
+NetSimSendPanel.prototype.beginSendingPackets_ = function () {
+  this.isPlayingSendAnimation_ = true;
+  this.disableEverything();
+};
+
+/**
+ * Resets send panel, emptying packets, making it interactive, and stopping
+ * the remote-send process.
+ * @private
+ */
+NetSimSendPanel.prototype.stopSendingPackets_ = function () {
+  this.resetPackets_();
+  this.enableEverything();
+  this.isPlayingSendAnimation_ = false;
+};
+
+/**
  * Send panel uses its tick to "send" packets at different bitrates, animating
  * the binary draining out of the widget and actually posting each packet
  * to storage as it completes.
  * @param {RunLoop.Clock} clock
  */
 NetSimSendPanel.prototype.tick = function (clock) {
-  if (!this.isAnimatingSending_) {
+  if (!this.isPlayingSendAnimation_) {
     return;
   }
 
-  // Kick off sending the packet at the top of the editor.
-  // Do this in a loop - in some circiumstances (empty packets, infinite bitrate)
-  // sending might complete immediately.
-  while (this.packets_.length > 0 && !this.packets_[0].isPlayingSendAnimation()) {
-    this.beginSendingPacket_(this.packets_[0]);
+  // Nothing left to send, we're done.
+  if (this.packets_.length === 0) {
+    this.stopSendingPackets_();
+    return;
   }
 
-  // If there are still packets, tick the top packet so it can advance its animation
-  if (this.packets_.length > 0) {
-    this.packets_[0].tick(clock);
+  var firstPacket = this.packets_[0];
+  if (firstPacket.isSending()) {
+    firstPacket.tick(clock);
   } else {
-    // If all the packets are gone, we're totally done.
-    this.onSendingComplete_();
+    firstPacket.beginSending(this.netsim_.myNode);
   }
-};
-
-/**
- * Start the "animated send" process for given packet, and hook up the
- * completion callback that actually sends the packet and removes the empty
- * editor.
- * @param {NetSimPacketEditor} firstPacket
- * @private
- */
-NetSimSendPanel.prototype.beginSendingPacket_ = function (firstPacket) {
-  var firstPacketBinary = firstPacket.getPacketBinary().substr(0, this.maxPacketSize_);
-  firstPacket.beginSendAnimation(function () {
-    var myNode = this.netsim_.myNode;
-    if (!myNode) {
-      this.removePacket_(firstPacket);
-      return;
-    }
-
-    myNode.sendMessage(firstPacketBinary, function () {
-      this.removePacket_(firstPacket);
-    }.bind(this));
-  }.bind(this));
 };
 
 /** Replace contents of our root element with our own markup. */
@@ -364,16 +354,7 @@ NetSimSendPanel.prototype.onSendButtonPress_ = function (jQueryEvent) {
     return;
   }
 
-  // Enter "sending" state, and set up the callback to exit "sending" state
-  // when we're done.
-  this.disableEverything();
-  this.isAnimatingSending_ = true;
-  this.onSendingComplete_ = function () {
-    this.resetPackets_();
-    this.enableEverything();
-    this.isAnimatingSending_ = false;
-    this.onSendingComplete_ = undefined;
-  }.bind(this);
+  this.beginSendingPackets_();
 };
 
 /**
