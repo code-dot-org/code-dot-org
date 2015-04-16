@@ -223,7 +223,8 @@ exports.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
     return i18n.x_Kbps({ x: kbps });
   }
 
-  return i18n.x_bps({ x: bitsPerSecond });
+  var bps = Math.floor(bitsPerSecond * 100) / 100;
+  return i18n.x_bps({ x: bps });
 };
 
 exports.zeroPadLeft = function (string, desiredWidth) {

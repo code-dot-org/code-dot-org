@@ -12,6 +12,7 @@
 'use strict';
 
 var markup = require('./NetSimMyDeviceTab.html');
+var NetSimBitRateControl = require('./NetSimBitRateControl');
 var NetSimPulseRateControl = require('./NetSimPulseRateControl');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
@@ -52,7 +53,7 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    * @type {number}
    * @private
    */
-  this.pulsesPerSecond_ = 1;
+  this.bitsPerSecond_ = 1;
 
   /**
    * @type {function}
@@ -79,6 +80,12 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
   this.pulseRateControl_ = null;
 
   /**
+   * @type {NetSimBitRateControl}
+   * @private
+   */
+  this.bitRateControl_ = null;
+
+  /**
    * @type {NetSimChunkSizeControl}
    * @private
    */
@@ -97,20 +104,27 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimMyDeviceTab.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
+  var renderedMarkup = $(markup({
+    level: this.levelConfig_
+  }));
   this.rootDiv_.html(renderedMarkup);
 
   if (this.levelConfig_.showMetronome) {
     this.metronome_ = new NetSimMetronome(
         this.rootDiv_.find('.metronome'),
         this.runLoop_);
-    this.metronome_.setFrequency(this.pulsesPerSecond_);
+    this.metronome_.setFrequency(this.bitsPerSecond_);
 
     this.pulseRateControl_ = new NetSimPulseRateControl(
         this.rootDiv_.find('.pulse-rate'),
-        1 / this.pulsesPerSecond_,
+        1 / this.bitsPerSecond_,
         this.pulseRateSliderChange_.bind(this));
   }
+
+  this.bitRateControl_ = new NetSimBitRateControl(
+      this.rootDiv_.find('.bitrate'),
+      this.bitsPerSecond_,
+      this.setBitRate.bind(this));
 
   this.chunkSizeControl_ = new NetSimChunkSizeControl(
       this.rootDiv_.find('.chunk-size'),
@@ -130,8 +144,26 @@ NetSimMyDeviceTab.prototype.render = function () {
  * @private
  */
 NetSimMyDeviceTab.prototype.pulseRateSliderChange_ = function (secondsPerPulse) {
-  this.pulsesPerSecond_ = 1 / secondsPerPulse;
-  this.metronome_.setFrequency(this.pulsesPerSecond_);
+  this.setBitRate(1 / secondsPerPulse);
+};
+
+/**
+ * @param {number} bitsPerSecond
+ */
+NetSimMyDeviceTab.prototype.setBitRate = function (bitsPerSecond) {
+  this.bitsPerSecond_ = bitsPerSecond;
+
+  if (this.metronome_) {
+    this.metronome_.setFrequency(bitsPerSecond);
+  }
+
+  if (this.bitRateControl_) {
+    this.bitRateControl_.setValue(bitsPerSecond);
+  }
+
+  if (this.pulseRateControl_) {
+    this.pulseRateControl_.setValue(1 / bitsPerSecond);
+  }
 };
 
 /**
