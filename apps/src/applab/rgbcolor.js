@@ -179,7 +179,7 @@ module.exports = function(color_string)
     // array of color definition objects
     var color_defs = [
         {
-            re: /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/,
+            re: /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/,
             example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
             process: function (bits){
                 return [
@@ -190,7 +190,7 @@ module.exports = function(color_string)
             }
         },
         {
-          re: /^rgba\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3}),\s*([0-9.]+)\)$/,
+          re: /^rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*((?:\d+(?:\.\d+)?)|(?:\.\d+))\s*\)$/,
           example: ['rgba(123, 234, 45, .33)', 'rgba(255,234,245,1)'],
           process: function (bits){
             return [
@@ -245,7 +245,7 @@ module.exports = function(color_string)
     this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
     this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
     this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
-    this.a = (this.a < 0) ? 0 : ((this.b > 1 || isNaN(this.a)) ? 1 : this.a);
+    this.a = (this.a < 0) ? 0 : ((this.a > 1 || isNaN(this.a)) ? 1 : this.a);
 
     // some getters
     this.toRGB = function () {
