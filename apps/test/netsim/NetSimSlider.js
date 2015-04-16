@@ -1,5 +1,6 @@
 var testUtils = require('../util/testUtils');
 var assertEqual = testUtils.assertEqual;
+var assertThrows = testUtils.assertThrows;
 
 var NetSimSlider = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimSlider');
 
@@ -36,6 +37,36 @@ describe("NetSimSlider", function () {
     });
   });
 
+  describe("with negative step value", function () {
+    beforeEach(function () {
+      slider = new NetSimSlider(null, {
+        min: 0,
+        max: 100,
+        step: -1
+      });
+    });
+
+    it ("value round-trip is identity within slider range", function () {
+      // Range is 100-0
+      assertEqual(100, roundTrip(100));
+      assertEqual(99, roundTrip(99));
+      assertEqual(42, roundTrip(42));
+      assertEqual(1, roundTrip(1));
+      assertEqual(0, roundTrip(0));
+    });
+
+    it ("clamps values to default range", function () {
+      // Range is 100-0
+      assertEqual(100, roundTrip(101));
+      assertEqual(100, roundTrip(500));
+      assertEqual(100, roundTrip(Infinity));
+
+      assertEqual(0, roundTrip(-1));
+      assertEqual(0, roundTrip(-100));
+      assertEqual(0, roundTrip(-Infinity));
+    });
+  });
+
   describe("with infinte bounds", function () {
     beforeEach(function () {
       slider = new NetSimSlider(null, {
@@ -63,6 +94,69 @@ describe("NetSimSlider", function () {
       assertEqual(Infinity, roundTrip(500));
       assertEqual(Infinity, roundTrip(Infinity));
     });
+  });
+
+  describe("bad configurations", function () {
+    it ("throws when initialized with noninteger step values", function () {
+      assertThrows(Error, function () {
+        slider = new NetSimSlider(null, { step: 0.1 });
+      });
+
+      assertThrows(Error, function () {
+        slider = new NetSimSlider(null, { step: 5.1 });
+      });
+    });
+
+    it ("throws when initialized with a zero step value", function () {
+      assertThrows(Error, function () {
+        slider = new NetSimSlider(null, { step: 0 });
+      });
+    });
+  });
+});
+
+describe("NetSimSlider.DecimalPrecisionSlider", function () {
+  var slider;
+
+  var roundTrip = function (val) {
+    return slider.sliderPositionToValue(slider.valueToSliderPosition(val));
+  };
+
+  it ("has default precision of 2 decimal places", function () {
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.1 });
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.01 });
+    assertThrows(Error, function () {
+      slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.001 });
+    });
+  });
+
+  it ("can be constructed with greater precision", function () {
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, { precision: 3, step: 0.001 });
+    assertThrows(Error, function () {
+      slider = new NetSimSlider.DecimalPrecisionSlider(null, { precision: 3, step: 0.0001 });
+    });
+  });
+
+  it("value round-trip is identity within slider range", function () {
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, { min: 0.1, max: 1.0, step: 0.1 });
+
+    assertEqual(0.1, roundTrip(0.1));
+    assertEqual(0.2, roundTrip(0.2));
+    assertEqual(0.4, roundTrip(0.4));
+    assertEqual(0.9, roundTrip(0.9));
+    assertEqual(1.0, roundTrip(1.0));
+  });
+
+  it("clamps values to default range", function () {
+    slider = new NetSimSlider.DecimalPrecisionSlider(null, { min: 0.1, max: 1.0, step: 0.1 });
+
+    assertEqual(0.1, roundTrip(0.09));
+    assertEqual(0.1, roundTrip(0));
+    assertEqual(0.1, roundTrip(-Infinity));
+
+    assertEqual(1.0, roundTrip(1.01));
+    assertEqual(1.0, roundTrip(5));
+    assertEqual(1.0, roundTrip(Infinity));
   });
 });
 
