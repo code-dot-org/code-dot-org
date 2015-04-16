@@ -338,6 +338,8 @@ title: "Ops Dashboard"
       }
 
       $scope.save = function (workshop) {
+        attendancesService.save({segmentid: segment.id});
+        //workshopsService.update({id: workshop.id}, {workshop: workshop});
       }
   }]);
 
