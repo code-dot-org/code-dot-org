@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-16T18:19:33.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "ECS Curriculum Overview",
+    "content1": "Overview of Curriculum",
+    "markdown": "## ECS Curriculum Overview\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  }
+}]]></config>
+</External>

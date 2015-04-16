@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Now that you've got safe-left?, let's fill in safe-right? - it should take in a sprite's x coordinate and return true if the sprite hasn't gone off the right side of the screen.",
+    "instructions": "Now that you've got safe-left?, let's fill in safe-right? - it should take in a sprite's x coordinate and return true if that coordinate is less than 450. Once your safe-right? is complete you should see the Target go off the right side of the screen and return on the left.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -36,8 +36,10 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
+    "disable_examples": "false",
     "maze_data": null
-  }
+  },
+  "md5": "98a1a503d8a891edca81a3625e04ea31"
 }]]></config>
   <blocks/>
 </Studio>
