@@ -6,11 +6,9 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "UNDER CONSTRUCTION: This version of NetSim is not yet functional. It will allow students to manually set/read individual As and Bs on a simplex wire.",
+    "instructions": "Connect to another student.  Each of you can set the value of the wire between you to \"A\" or \"B\".  See if you can send a complete message!",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
-    "can_connect_to_clients": "true",
-    "can_connect_to_routers": "false",
     "show_add_router_button": "false",
     "show_add_packet_button": "false",
     "show_packet_size_control": "false",
@@ -39,7 +37,12 @@
     "disable_examples": "false",
     "router_expects_packet_header": "[]",
     "client_initial_packet_header": "[]",
-    "show_encoding_controls": "[]"
+    "show_encoding_controls": "[]",
+    "can_connect_to_clients": "true",
+    "can_connect_to_routers": "false",
+    "message_granularity": "bits",
+    "automatic_receive": "false",
+    "show_metronome": "true"
   },
   "md5": "13aa54fe5ba01be70df9968139596ac9"
 }]]></config>

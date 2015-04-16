@@ -9,8 +9,6 @@
     "instructions": "In this version of the simulator, you will connect to a Router instead of directly to another student. Enter an address in the \"To\" box to send a message to another student.",
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
-    "can_connect_to_clients": "false",
-    "can_connect_to_routers": "true",
     "show_add_router_button": "true",
     "router_expects_packet_header": "[{\"key\":\"toAddress\", \"bits\":4}, {\"key\":\"fromAddress\", \"bits\":4}]",
     "show_add_packet_button": "false",
@@ -39,7 +37,11 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "client_initial_packet_header": "[{\"key\":\"toAddress\", \"bits\":4}, {\"key\":\"fromAddress\", \"bits\":4}]"
+    "client_initial_packet_header": "[{\"key\":\"toAddress\", \"bits\":4}, {\"key\":\"fromAddress\", \"bits\":4}]",
+    "can_connect_to_clients": "false",
+    "can_connect_to_routers": "true",
+    "message_granularity": "packets",
+    "automatic_receive": "true"
   },
   "md5": "49b2e73595ea23f29f3ccfc5739949fd"
 }]]></config>

@@ -1,0 +1,6 @@
+name 'PDK5 Loops 2'
+title 'The Importance of Loops'
+
+markdown <<MARKDOWN
+In the last puzzle, you used a loop to get the bird to the pig with 2 blocks instead of using 5 "move forward" blocks. Why do you think it's important to write computer programs efficiently?
+MARKDOWN
