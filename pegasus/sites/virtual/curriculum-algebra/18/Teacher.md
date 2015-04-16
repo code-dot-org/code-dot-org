@@ -30,6 +30,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources, and Prep
 ### For the Student
+- [Cost Design Recipe](../docs/worksheets/cost.pdf) (in the student workbook)
 - [Update-player Design Recipe](../docs/worksheets/update_player.pdf) (in the student workbook)
 - [Key Code Reference](../docs/worksheets/keycode_ref.pdf) (in the student workbook)
 
