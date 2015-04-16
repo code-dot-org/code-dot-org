@@ -58,7 +58,7 @@ template: none
     %td
       %a.btn.btn-white.btn-xs{'ng-click' => 'saveSegment(segment)'}
         Save Segment
-  %tr{'ng-repeat' => 'segment in workshopSegments'}
+  %tr{'ng-repeat' => 'segment in workshopSegments | orderBy:"start"'}
     %td{'ng-hide' => 'segment.editing'}
       {{segment.start | utc | date:'longDate'}}
     %td{'ng-hide' => 'segment.editing'}
