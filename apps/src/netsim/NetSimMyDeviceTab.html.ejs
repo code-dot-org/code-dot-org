@@ -1,8 +1,17 @@
 <div class="netsim-my-device-tab">
-  <h1>Pulse rate</h1>
-  <div class="pulse-rate"></div>
-  <div class="metronome"></div>
-  <div class="encoding"></div>
+  <% if (level.showMetronome) { %>
+    <h1>Pulse rate</h1>
+    <div class="pulse-rate"></div>
+    <div class="metronome"></div>
+  <% } %>
+
+  <% if (level.showEncodingControls.length > 0) { %>
+    <div class="encoding"></div>
+  <% } %>
+
+  <h1>Bitrate</h1>
+  <div class="bitrate"></div>
+
   <h1>Chunk size</h1>
   <div class="chunk-size"></div>
 </div>
