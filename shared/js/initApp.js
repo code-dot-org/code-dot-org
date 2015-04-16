@@ -1,3 +1,6 @@
+// Attempt to save projects every 30 seconds
+var AUTOSAVE_INTERVAL = 30000;
+var hasProjectChanged = false;
 
 // Sets up default options and initializes blockly
 startTiming('Puzzle', script_path, '');
@@ -204,6 +207,19 @@ function initApp() {
         if (dashboard.currentApp.levelSource) {
           appOptions.level.lastAttempt = dashboard.currentApp.levelSource;
         }
+
+        // Autosave every AUTOSAVE_INTERVAL milliseconds
+        $(window).on('blocklyChange', function () {
+          hasProjectChanged = true;
+        });
+        window.setInterval(function () {
+          if (hasProjectChanged) {
+            dashboard.saveProject(function () {
+              hasProjectChanged = false;
+            });
+          }
+        }, AUTOSAVE_INTERVAL);
+
       } else {
         dashboard.currentApp = {
           name: 'My Project'
