@@ -6885,7 +6885,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
     }
 
-    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager = new DropletTooltipManager(this.editor);
     this.dropletTooltipManager.registerBlocksFromList(
       dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
@@ -17278,14 +17278,23 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**
  * Store for finding tooltips for blocks
+ * @param {Droplet.Editor} dropletEditor
  * @constructor
  */
-var DropletTooltipManager = module.exports = function () {
+var DropletTooltipManager = function (dropletEditor) {
   /**
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
    */
   this.blockTypeToTooltip = {};
+
+  /**
+   * @type {Droplet.Editor}
+   * @private
+   */
+  this.dropletEditor_ = dropletEditor;
+
+  this.hideTooltipsOnBlockPick_();
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -17296,10 +17305,20 @@ var DEFAULT_TOOLTIP_CONFIG = {
   contentAsHTML: true,
   theme: 'droplet-block-tooltipster',
   offsetY: 2
-  /**
-   * hideOnClick does not work with the droplet hover overlay
-   * (passing through click events?)
-   */
+};
+
+/**
+ * Tooltipster's hideOnClick setting does not work with the droplet hover
+ * overlay as-is. Hide the tooltip on block picking explicitly.
+ */
+DropletTooltipManager.prototype.hideTooltipsOnBlockPick_ = function () {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  this.dropletEditor_.on('pickblock', function () {
+    $('.tooltipstered').tooltipster('hide');
+  });
 };
 
 /**
@@ -17352,6 +17371,8 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
     $(blockHoverDiv).tooltipster(configuration);
   });
 };
+
+module.exports = DropletTooltipManager;
 
 },{"./DropletFunctionTooltip":24}],24:[function(require,module,exports){
 var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html');
