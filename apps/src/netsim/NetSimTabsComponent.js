@@ -163,9 +163,11 @@ NetSimTabsComponent.prototype.render = function () {
         this.rootDiv_.find('#tab_my_device'),
         this.levelConfig_,
         this.runLoop_,
-        this.chunkSizeSliderChangeCallback_,
-        this.myDeviceBitRateChangeCallback_,
-        this.encodingChangeCallback_);
+        {
+          chunkSizeChangeCallback: this.chunkSizeSliderChangeCallback_,
+          bitRateChangeCallback: this.myDeviceBitRateChangeCallback_,
+          encodingChangeCallback: this.encodingChangeCallback_
+        });
   }
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.ROUTER)) {
