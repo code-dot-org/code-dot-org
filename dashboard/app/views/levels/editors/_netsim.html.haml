@@ -83,6 +83,12 @@
 
 %h3 My Device Tab
 .field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_metronome
+      %td= f.label :show_metronome, 'Show metronome'
+      %td Whether the visual metronome (and its related speed control) are visible on the "My Device" tab.
+.field
   = f.label :show_encoding_controls, 'Show which encoding controls?'
   %p An array of encoding types ("ascii", "binary", etc.) which should have visible checkbox controls on the "My Device" tab.  Valid encoding names are "a_and_b", "binary", "hexadecimal", "decimal" and "ascii".  Example: <tt>["a_and_b", "binary", "ascii"]</tt>
   = f.text_area :show_encoding_controls, placeholder: 'Which encodings can the student control?', rows: 4

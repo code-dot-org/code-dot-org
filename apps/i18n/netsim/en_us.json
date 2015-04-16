@@ -74,6 +74,8 @@
   "waitingForNodeToConnect": "Waiting for {node} to connect...",
   "workspaceHeader": "Internet Simulator",
   "xOfYPackets": "{x} of {y}",
+  "xSecondPerPulse": "{x} second per pulse",
+  "xSecondsPerPulse": "{x} seconds per pulse",
   "x_Gbps": "{x}Gbps",
   "x_Mbps": "{x}Mbps",
   "x_Kbps": "{x}Kbps",
