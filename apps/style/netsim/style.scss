@@ -37,45 +37,6 @@ $wide-column-width: 121px;
   clear: both;
 }
 
-// Visualization styles
-svg {
-  background-color: $white;
-  border: solid $black thin;
-  border-radius: 25px;
-
-  .viz-node {
-    text {
-      text-anchor: middle;
-    }
-
-    circle {
-      stroke: $black;
-      stroke-width: 2;
-      fill: $own-node-background-color;
-    }
-
-    rect.address-box {
-      stroke: $black;
-      stroke-width: 2px;
-      fill: $white;
-    }
-
-    text.address-box {
-      font-weight: bold;
-    }
-  }
-  
-  .router-node {
-    circle {
-      fill: $orange;
-    }
-  }
-  
-  .viz-wire {
-    stroke: $black;
-    stroke-width: 2;
-  }
-}
 
 // Sprited icons.
 .icon21 {
@@ -200,16 +161,52 @@ svg {
   #netsim-rightcol {
     float: right;
     width: 300px;
-
-    #netsim-visualization {
-      img {
-        width: 100%;
-      }
-    }
   }
 
   #netsim-leftcol {
     margin-right: 320px;
+  }
+
+  // Visualization styles
+  #netsim-visualization {
+    svg {
+      background-color: $white;
+      border: solid $black thin;
+      border-radius: 25px;
+
+      .viz-node {
+        text {
+          text-anchor: middle;
+        }
+
+        circle {
+          stroke: $black;
+          stroke-width: 2;
+          fill: $own-node-background-color;
+        }
+
+        rect.address-box {
+          stroke: $black;
+          stroke-width: 2px;
+          fill: $white;
+        }
+
+        text.address-box {
+          font-weight: bold;
+        }
+      }
+
+      .router-node {
+        circle {
+          fill: $orange;
+        }
+      }
+
+      .viz-wire {
+        stroke: $black;
+        stroke-width: 2;
+      }
+    }
   }
 
   .netsim-shard-selection-panel {
@@ -624,13 +621,19 @@ svg {
         .max-value {
           float: right;
           text-align: right;
-          width: 4em;
+          width: 3em;
         }
 
         .min-value {
           float: left;
           text-align: left;
-          width: 4em;
+          width: 3em;
+        }
+
+        &.wide-labels {
+          .max-value, .min-value {
+            width: 4em;
+          }
         }
 
         .current-value {
@@ -679,6 +682,18 @@ svg {
       p {
         margin: 0 1em 10px 1em;
       }
+    }
+  }
+
+  .netsim-metronome {
+    text-align: center;
+
+    .pulse-dot {
+      fill: $purple;
+    }
+
+    .progress-meter {
+      fill: $purple;
     }
   }
 
