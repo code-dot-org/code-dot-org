@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "In order to know if two of our sprites are touching, we first need to measure the distance between their center points. Use the Pythagorean Theorem to complete this distance function so that it returns the distance between the player's center coordinates (px, py), and the center coordinates of another character (cx, cy). We've provided a working line-length function to help you out.",
+    "instructions": "Let's fix this distance function so our collision detection works. Use the Distance Formula to complete this distance function so that it returns the distance between the player's center coordinates (px, py), and the center coordinates of another character (cx, cy). We've provided a working line-length function to help you out.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -27,7 +27,7 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Collision 3\",\r\n  \"callout_text\": \"Complete this 'distance' function before moving to the next level. You can use the existing 'line-length' function to calculate the distance from px to cx, and from py to cy.\",\r\n  \"element_id\": \"#functionNameText\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"no-tip\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Collision 3\",\r\n  \"callout_text\": \"Fix this 'distance' function to make your collision detection work. You can use the existing 'line-length' function to calculate the distance from px to cx, and from py to cy.\",\r\n  \"element_id\": \"#functionNameText\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"no-tip\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -37,7 +37,8 @@
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
     "open_function_definition": "distance",
-    "maze_data": null
+    "maze_data": null,
+    "disable_examples": "false"
   },
   "md5": "32e59c502895e9b3cb78c3a8d4d930c9"
 }]]></config>
