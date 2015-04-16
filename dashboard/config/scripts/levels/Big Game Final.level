@@ -40,7 +40,8 @@
       "downButton",
       "upButton"
     ],
-    "maze_data": null
+    "maze_data": null,
+    "disable_examples": "false"
   },
   "md5": "9f198fc7652ee6e8751d17a1c524261f"
 }]]></config>
