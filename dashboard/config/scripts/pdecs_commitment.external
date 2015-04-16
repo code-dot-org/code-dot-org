@@ -1,0 +1,15 @@
+name 'PDECS commitment'
+title 'ECS PD commitments'
+description 'overview of program commitments'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Program Timeline
+
+The program you're about to begin spans through the next academic year and into next summer. This time is set aside to support your growth in teaching this course, and each phase of Professional Development will leverage your level experience with the curriculum at that point. You'll work with a support network formed by your local community of teachers and facilitators to move through the first year and beyond. 
+
+![program commitments](https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/ddEG8gHVFjedVDo/Screen%20Shot%202015-04-16%20at%204.27.43%20PM.png)
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

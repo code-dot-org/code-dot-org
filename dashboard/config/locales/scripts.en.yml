@@ -343,6 +343,7 @@ en:
           Personal Reflection: Personal Reflection
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -524,6 +525,7 @@ en:
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Introduction to PD
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -551,3 +553,10 @@ en:
           description_short: lesson samples for csp
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
+        ECSPD:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference

@@ -330,11 +330,28 @@ en:
       Coordinates Multi 1:
         Video game Coordinates: Video game Coordinates
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which of these statements describes the unicorn's movements in the most precise way?: Which of these statements describes the unicorn's movements in the most precise way?
+        ? Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?
+        : Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?
         The unicorn moves across the screen: The unicorn moves across the screen
         The unicorn's y value changes: The unicorn's y value changes
         The unicorn moves to the left: The unicorn moves to the left
         The unicorn's x value decreases: The unicorn's x value decreases
+      ECSPD growth mindset in the classroom:
+        Growth Mindset in the Classroom: Growth Mindset in the Classroom
+        How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
+        praise students for getting the right answer: praise students for getting the right answer
+        praise the process that students use to solve problems: praise the process that students use to solve problems
+        praise students for their intelligence: praise students for their intelligence
+      ECSPD growth mindset question:
+        Impact of Growth Mindset: Impact of Growth Mindset
+        Based on the video you saw before, please answer the following question.: Based on the video you saw before, please answer the following question.
+        ? In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?
+        : In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?
+        more effort: more effort
+        more strategies: more strategies
+        more engagement over longer periods of time: more engagement over longer periods of time
+        more perseverance: more perseverance
+        all of the above: all of the above
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -581,7 +598,7 @@ en:
         x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
         What is the value of a + b?: What is the value of a + b?
         '8': '8'
-        function: function
+        a function: a function
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
@@ -651,12 +668,9 @@ en:
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
         Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
-      my_multi:
-        g(y) = y + 3: g(y) = y + 3
-        What is the name of this function?: What is the name of this function?
-        g: g
-        y: y
-        '3': '3'
+      PDECS attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
+        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
       PDK5 Basic CS:
         Video Follow-up Question: Video Follow-up Question
         Answer this question based on the video you just watched.: Answer this question based on the video you just watched.
@@ -725,7 +739,7 @@ en:
         Why are visual programming languages easier to learn than text-based programming languages?: Why are visual programming languages easier to learn than text-based programming languages?
         Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
         Because you can focus on the logic of programming: Because you can focus on the logic of programming
-        Because the commands are available in a menu rather than having to remember them yourself: Because the commands are available in a menu rather than having to remember them yourself
+        Because the commands are listed in a menu rather than having to remember them yourself: Because the commands are listed in a menu rather than having to remember them yourself
         All of the above: All of the above
       PDK5 What is CS:
         What is Computer Science?: What is Computer Science?
@@ -823,7 +837,7 @@ en:
         '10': '10'
         '12': '12'
       unique level name here:
-        line1<br/>line2: line1<br/>line2
+        title: title
         description here: description here
         Question: Question
         wrong answer: wrong answer

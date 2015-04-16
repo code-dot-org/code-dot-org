@@ -322,6 +322,8 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   this.setupAfterExampleBlocksAdded_();
 
   this.position_();
+  this.resetParamIDs_();
+  this.refreshParamsEverywhere();
 };
 
 Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlight) {

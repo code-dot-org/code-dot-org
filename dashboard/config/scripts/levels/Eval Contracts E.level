@@ -34,10 +34,10 @@
           <title name="NUM">0</title>
         </block>
         <block type="functional_string">
-          <title name="VAL">Hello, world!</title>
+          <title name="VAL"/>
         </block>
         <block type="functional_string">
-          <title name="VAL">teal</title>
+          <title name="VAL">Hello, world!</title>
         </block>
       </xml>
     </toolbox_blocks>
