@@ -213,7 +213,7 @@ NetSimSendPanel.prototype.render = function () {
   this.packetsDiv_ = this.getBody().find('.send-widget-packets');
   this.getBody()
       .find('#add-packet-button')
-      .click(this.addPacket_.bind(this));
+      .click(this.onAddPacketButtonPress_.bind(this));
   // TODO: NetSim buttons in this panel need to do nothing if disabled!
   this.getBody()
       .find('#send-button')
@@ -353,6 +353,19 @@ NetSimSendPanel.prototype.setFromAddress = function (fromAddress) {
 };
 
 /**
+ * @param {Event} jQueryEvent
+ * @private
+ */
+NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
+  var thisButton = $(jQueryEvent.target);
+  if (thisButton.is('[disabled]')) {
+    return;
+  }
+
+  this.addPacket_();
+};
+
+/**
  * Send message to connected remote
  * @param {Event} jQueryEvent
  * @private
@@ -410,12 +423,14 @@ NetSimSendPanel.prototype.getNextBit_ = function () {
 NetSimSendPanel.prototype.disableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', true);
   this.getBody().find('.netsim-button').attr('disabled', 'disabled');
+  this.packetSizeControl_.disable();
 };
 
 /** Enable all controls in this panel, usually after network activity. */
 NetSimSendPanel.prototype.enableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', false);
   this.getBody().find('.netsim-button').removeAttr('disabled');
+  this.packetSizeControl_.enable();
 };
 
 /**

@@ -747,9 +747,17 @@ NetSimPacketEditor.prototype.updateBitCounter = function () {
 /**
  * Handler for the "Remove Packet" button. Calls handler provided by
  * parent, passing self, so that parent can remove this packet.
+ * @param {Event} jQueryEvent
  * @private
  */
-NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function () {
+NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function (jQueryEvent) {
+  var thisButton = $(jQueryEvent.target);
+  // We also check parent elements here, because this button uses a font-awesome
+  // glyph that can receive the event instead of the actual button.
+  if (thisButton.is('[disabled]') || thisButton.parents().is('[disabled]')) {
+    return;
+  }
+
   this.removePacketCallback_(this);
 };
 
