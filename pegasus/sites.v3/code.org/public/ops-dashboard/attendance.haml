@@ -69,16 +69,16 @@ template: none
         %form
           %label
             Attended
-            %input{type:'radio', 'ng-model' => 'attendance.status', value:'present'}
+            %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'present'}
           %label
             Absent
-            %input{type:'radio', 'ng-model' => 'attendance.status', value:'absent'}
+            %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'absent'}
           %label
             Excused absence
-            %input{type:'radio', 'ng-model' => 'attendance.status', value:'excused'}
+            %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'excused'}
             %input{style:'display:none', 'ng-model' => 'attendance.teacher_id', type:'text'}
           %br
-          %textarea{placeholder:'Additional notes', 'ng-model' => 'attendance.notes', cols:'20', rows:'3'}
+          %textarea{placeholder:'Additional notes', 'ng-model' => 'attendance.notes', 'ng-change' => 'save(attendance)', cols:'20', rows:'3'}
           %br
-          %a.btn.btn-white.btn-xs{'ng-click' => 'save(workshop)'}
-            Save
+          %a.btn.btn-white.btn-xs{'ng-click' => 'clearAttendance(attendance)'}
+            Clear
