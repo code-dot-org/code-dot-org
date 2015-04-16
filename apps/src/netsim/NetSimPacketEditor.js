@@ -149,6 +149,37 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.bitCounter_ = null;
+
+  /**
+   * Flag noting whether this packet editor is in a non-interactive mode
+   * where it animates bits draining/being sent.
+   * @type {boolean}
+   * @private
+   */
+  this.isPlayingSendAnimation_ = false;
+
+  /**
+   * We capture the packet binary before we start the sending animation,
+   * and drain this variable as we go; mostly because getPacketBinary()
+   * will always include packet headers.
+   * @type {string}
+   * @private
+   */
+  this.remainingBinary_ = '';
+
+  /**
+   * Function to call when there are no bits left to send.
+   * @type {function}
+   * @private
+   */
+  this.onSendAnimationComplete_ = undefined;
+
+  /**
+   * Simulation-time timestamp (ms) of the last bit-send animation.
+   * @type {number}
+   * @private
+   */
+  this.lastBitSentTime_ = undefined;
   
   this.render();
 };
@@ -172,6 +203,67 @@ NetSimPacketEditor.prototype.render = function () {
   this.updateFields_();
   this.updateRemoveButtonVisibility_();
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
+};
+
+/**
+ * Put this packet in a mode where it's not editable.  Instead, it will drain
+ * its binary at the current bitrate and call the given callback when all
+ * of the binary has been drained/"sent"
+ * @param {function} onAnimationComplete
+ */
+NetSimPacketEditor.prototype.beginSendAnimation = function (onAnimationComplete) {
+  // Early-out if there's nothing to send
+  this.remainingBinary_ = this.getPacketBinary();
+  if (this.remainingBinary_.length === 0) {
+    onAnimationComplete();
+    return;
+  }
+
+  this.isPlayingSendAnimation_ = true;
+  this.onSendAnimationComplete_ = onAnimationComplete;
+};
+
+/**
+ * @returns {boolean} TRUE if this packet is in the noneditable/sending animation
+ *          mode
+ */
+NetSimPacketEditor.prototype.isPlayingSendAnimation = function () {
+  return this.isPlayingSendAnimation_;
+};
+
+/**
+ * Packet Editor tick is called (manually by the NetSimSendPanel) to advance
+ * its sending animation.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimPacketEditor.prototype.tick = function (clock) {
+  if (!this.isPlayingSendAnimation_) {
+    return;
+  }
+
+  if (!this.lastBitSentTime_) {
+    this.lastBitSentTime_ = clock.time;
+  }
+
+  var bitrateBps = 8;
+
+  // How many characters to we eat?
+  var msSinceLastBitConsumed = clock.time - this.lastBitSentTime_;
+  var msPerBit = 1000 * (1 / bitrateBps);
+  var maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
+  if (maxBitsToSendThisTick > 0) {
+    this.lastBitSentTime_ = clock.time;
+    this.remainingBinary_ = this.remainingBinary_.substr(maxBitsToSendThisTick);
+    this.setPacketBinary(this.remainingBinary_);
+    this.updateFields_();
+  }
+
+  if (this.remainingBinary_.length === 0) {
+    this.isPlayingSendAnimation_ = false;
+    this.onSendAnimationComplete_();
+    this.onSendAnimationComplete_ = undefined;
+    this.lastBitSentTime_ = undefined;
+  }
 };
 
 /**
