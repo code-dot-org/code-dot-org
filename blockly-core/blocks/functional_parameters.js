@@ -43,8 +43,7 @@ Blockly.Blocks.functional_parameters_get = {
     };
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
-        .appendTitle(Blockly.disableVariableEditing ? new Blockly.FieldLabel(fieldLabel, options)
-            : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        .appendTitle(fieldLabel, 'VAR')
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL)
         .setAlign(Blockly.ALIGN_CENTRE);
     this.setFunctionalOutput(true);
