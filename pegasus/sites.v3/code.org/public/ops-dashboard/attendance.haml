@@ -8,7 +8,7 @@ template: none
 %a{href:'/ops-dashboard'}
   Dashboard
 >
-%a{href:'/ops-dashboard/workshops'}
+%a{href:'/ops-dashboard#/workshops'}
   PD Workshops
 >
 %span
@@ -54,7 +54,7 @@ template: none
   %a.btn.btn-white.btn-xs{'ng-click' => 'teacherAddition = false'}
     Cancel
 %div.table-wrapper{style:"width:970px; overflow-x:scroll; margin-top:10px"}
-  %table.table-wrapper{'ng-show' => 'teachers.length > 0'}
+  %table{'ng-show' => 'teachers.length > 0'}
     %tr
       %th
       %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
