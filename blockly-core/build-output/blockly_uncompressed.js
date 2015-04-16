@@ -22249,7 +22249,9 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock.setDeletable(false);
   this.moveExampleBlocksToModal_(functionName);
   this.setupAfterExampleBlocksAdded_();
-  this.position_()
+  this.position_();
+  this.resetParamIDs_();
+  this.refreshParamsEverywhere()
 };
 Blockly.ContractEditor.prototype.setSectionHighlighted = function(viewToHighlight) {
   this.allSections_.forEach(function(view) {
