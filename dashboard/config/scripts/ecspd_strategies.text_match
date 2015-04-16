@@ -1,0 +1,8 @@
+name 'ECSPD strategies'
+title 'Classroom Strategies'
+content1 'Enter prompt here'
+answer 'Enter answer here'
+
+markdown <<MARKDOWN
+
+MARKDOWN

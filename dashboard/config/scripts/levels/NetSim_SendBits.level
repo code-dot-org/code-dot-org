@@ -6,11 +6,9 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "UNDER CONSTRUCTION: This version of NetSim is not yet functional. It will allow students to send binary as zeroes and ones to one another",
+    "instructions": "Connect to another student.  You can now set your wire to \"0\" or \"1\".  Send a message to your partner!",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
-    "can_connect_to_clients": "true",
-    "can_connect_to_routers": "false",
     "show_add_router_button": "false",
     "show_add_packet_button": "false",
     "show_packet_size_control": "false",
@@ -37,7 +35,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "show_encoding_controls": "[\"a_and_b\"]"
+    "show_encoding_controls": "[\"a_and_b\"]",
+    "can_connect_to_clients": "true",
+    "can_connect_to_routers": "false",
+    "message_granularity": "bits",
+    "automatic_receive": "false",
+    "show_metronome": "true"
   },
   "md5": "9f6f0cde0bc6cc27930e6eb9d81016f2"
 }]]></config>

@@ -568,12 +568,14 @@ function outputApplabConsole(output) {
   }
   // then put it in the applab console visible to the user:
   var debugOutput = document.getElementById('debug-output');
-  if (debugOutput.value.length > 0) {
-    debugOutput.value += '\n' + output;
-  } else {
-    debugOutput.value = output;
+  if (debugOutput) {
+    if (debugOutput.value.length > 0) {
+      debugOutput.value += '\n' + output;
+    } else {
+      debugOutput.value = output;
+    }
+    debugOutput.scrollTop = debugOutput.scrollHeight;
   }
-  debugOutput.scrollTop = debugOutput.scrollHeight;
 }
 
 var apiWarn = outputApplabConsole;

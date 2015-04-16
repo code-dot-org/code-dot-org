@@ -15,14 +15,15 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Calc Vars 1_edit_option\",\r\n  \"callout_text\": \"Click on edit to change the value of this variable\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Calc Vars1_edit_option\",\r\n  \"callout_text\": \"Use the drop down and select the age you want, then click on \\\"Save and Close\\\" at the top right\",\r\n  \"element_id\": \"#callout_here1\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 35\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Calc Vars 1_edit_option\",\r\n  \"callout_text\": \"Click on edit to change the value of this variable\",\r\n  \"element_id\": \"[block-id='8'] > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "video_key": "msm_6_variables"
+    "video_key": "msm_6_variables",
+    "disable_examples": "false"
   },
   "md5": "01cd6aa3c0ba34eaef2831ef282f98f5"
 }]]></config>
