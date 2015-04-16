@@ -1,6 +1,6 @@
 module OPS
-  API = 'api' if !defined? API
-  DASHBOARDAPI = 'dashboardapi' if !defined? DASHBOARDAPI
+  API = 'api' unless defined? API
+  DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
 end
 
 Dashboard::Application.routes.draw do
@@ -68,7 +68,8 @@ Dashboard::Application.routes.draw do
     omniauth_callbacks: 'omniauth_callbacks',
     registrations: 'registrations',
     confirmations: 'confirmations',
-    sessions: 'sessions'
+    sessions: 'sessions',
+    passwords: 'passwords'
   }
   get 'discourse/sso' => 'discourse_sso#sso'
 

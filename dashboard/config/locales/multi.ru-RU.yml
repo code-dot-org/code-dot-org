@@ -63,7 +63,7 @@
           - 2'
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500
-        Choose the best blocks: Выбрать лучшие блоки
+        Choose the best blocks.: Выбери лучшие блоки.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -99,8 +99,8 @@
       2-3 Algorithms Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Выбери алгоритм для предоставленного
-          изображения
+        Choose an algorithm for the image provided.: Choose an algorithm for the image
+          provided.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Начать
           с квадрата <br/>Поместить треугольник над квадратом<br/>Поместить треугольник
           под квадратом
@@ -175,36 +175,33 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
-          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
-          <br> size block'
-        Blue colored blocks are associated with __________ ?: Blue colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Blue colored blocks are associated with __________ ?: Блоки синего цвета связаны
+          с __________?
+        a image: изображение
+        a number: число
+        a string: строка
+        boolean: логическое значение
       2-3 multi match 2:
-        Purple colored blocks are associated with __________ ?: Purple colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Purple colored blocks are associated with __________ ?: Блоки фиолетового
+          цвета связаны с __________ ?
+        a image: изображение
+        a number: число
+        a string: строка
+        boolean: логическое значение
       2-3 multi match 3:
-        Teal colored blocks are associated with __________ ?: Teal colored blocks
-          are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Teal colored blocks are associated with __________ ?: Блоки зеленовато-голубого
+          цвета связаны с __________ ?
+        a image: изображение
+        a number: число
+        a string: строка
+        boolean: логическое значение
       2-3 multi match 4:
         Green colored blocks are associated with __________ ?: Green colored blocks
           are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        a image: изображение
+        a number: число
+        a string: строка
+        boolean: логическое значение
       4-5 artist multi 1:
         Artist Multiple Choice: 'Художник: Выбор варианта'
         Which blocks draw a rectangle with a perimeter of 100?: Какие блоки рисуют
@@ -310,23 +307,22 @@
         Multiple Choice: Выбор варианта
         Which one of these items is hardest to describe an algorithm for?: Какой из
           этих элементов труднее для описания алгоритма?
-        <h4>Brushing your teeth</h4>: <h4>Почисти зубы</h4>
-        <h4>Baking cookies</h4>: <h4>Печём печенье</h4>
-        <h4>Shopping from a grocery list</h4>: <h4>Покупки по списку</h4>
-        <h4>Banana</h4>: <h4>Банан</h4>
+        Brushing your teeth: Brushing your teeth
+        Baking cookies: Baking cookies
+        Shopping from a grocery list: Shopping from a grocery list
+        Banana: Banana
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Выбор варианта
         0: '? Ниже приведены три предложения. Какой из шаблонов подходит ко всем трем
           предложениям?'
         1: ': Ниже приведены три предложения. Какой из шаблонов ниже подходит ко всем
           трем предложениям?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Москва
-          - это большой город. <br/>Самара - это город средней величины.<br/> Тында
-          - это маленький город.</h4>
-        <h4>Seattle _____ a _____ _____.</h4>: <h4>Москва - _____ _____ _____.</h4>
-        <h4>_____ is a _____ city.</h4>: <h4>_____ - это город _____ величины.</h4>
-        <h4>_____ is _____ a _____.</h4>: <h4>_____ - это _____ _____.</h4>
-        <h4>Eugene is a _____ city.</h4>: <h4>Тында — это _____ город.</h4>
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
+          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        Eugene is a _____ city.: Eugene is a _____ city.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Выбор варианта
         Which of these pictures best represents crowdsourcing?: Какая из этих картинок
@@ -337,37 +333,36 @@
         Multiple Choice: Выбор варианта
         Which one of these activities would be best for practicing crowdsourcing?: Какой
           из этих видов деятельности больше подходит для краудсорсинга?
-        <h4>Cleaning your room</h4>: <h4>Уборка комнаты</h4>
-        <h4>Eating your dessert</h4>: <h4>Поедание десерта</h4>
-        <h4>Brushing your hair</h4>: <h4>Расчёсывание волос</h4>
-        <h4>Washing your face</h4>: <h4>Умывание</h4>
+        Cleaning your room: Cleaning your room
+        Eating your dessert: Eating your dessert
+        Brushing your hair: Brushing your hair
+        Washing your face: Washing your face
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Выбор варианта
         Which piece of information listed below is okay to share on the internet?: Какой
           информацией из перечисленных ниже можно поделиться в Интернете?
-        <h4>Your birthday</h4>: <h4>Ваш день рождения</h4>
-        <h4>Your favorite food</h4>: <h4>Ваше любимое блюдо</h4>
-        <h4>Your address</h4>: <h4>Домашний адрес</h4>
-        <h4>Your parent's credit card number</h4>: <h4>Номер кредитной карты твоих
-          родителей</h4>
+        Your birthday: Your birthday
+        Your favorite food: Your favorite food
+        Your address: Your address
+        Your parent's credit card number: Your parent's credit card number
       4-5 Internet Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Когда
           вы заходите на code.org, на какой IP-адрес Вас скорее всего направят?
-        <h4>23.23.224.106</h4>: <h4>23.23.224.106</h4>
-        <h4>54.209.61.132</h4>: <h4>54.209.61.132</h4>
-        <h4>64.14.68.10</h4>: <h4>64.14.68.10</h4>
-        <h4>54.243.71.82</h4>: <h4>54.243.71.82</h4>
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: Выбор варианта
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Если
           DNS отправил тебя на страницу с IP-адресом 100.42.50.110, на каком ты сайте?
-        <h4>code.org</h4>: <h4>code.org</h4>
-        <h4>csisfun.com</h4>: <h4>csisfun.com</h4>
-        <h4>thinkersmith.org</h4>: <h4>thinkersmith.org</h4>
-        <h4>khanacademy.org</h4>: <h4>khanacademy.org</h4>
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
@@ -394,9 +389,9 @@
       4-5 Suncatchers Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Какие
-          из программ ниже <em>не</em> сделают точно такую же последовательность,
-          как программа 1?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
+          of the programs below <em>does not</em> make the exact same sequence as
+          Program 1?
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -407,8 +402,7 @@
         The unicorn's y value changes: У единорога изменяется значение координаты
           Y
         The unicorn moves to the left: Единорог двигается влево
-        The unicorn's x value changes: У единорога изменяется значение координаты
-          X
+        The unicorn's x value decreases: The unicorn's x value decreases
       K-1 Artist 1 Multi 1:
         Multiple Choice: Выбор варианта
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -657,6 +651,7 @@
         (rectangle (+ 8 2) (- 7 5) solid red): (прямоугольник (+ 8 2) (- 7 5) сплошной
           красный)
       msm variables multi 1:
+        x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
         What is the value of x?: Какое значение переменной x?
         a function: функция
         15: '15'
@@ -681,7 +676,7 @@
         17: '17'
       msm variables multi 13:
         /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What should f(1) produce?: What should f(1) produce?
+        What should f(1) produce?: Какое значение вернёт функция f(1)?
         x: x
         117: '117'
         17: '17'
@@ -756,17 +751,17 @@
         y: true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: 'Несколько вариантов: строки и изображения'
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Какой из этих оценочных
           блоков нарисуют изображение
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images
-          1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images
-          1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images
-          1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images
-          1.blocks4.start_blocks, 300, 100
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
+          1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
+          1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
+          1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
+          1.blocks4.start_blocks, 350, 100
       PDK5 Basic CS:
         Video Follow-up Question: Видео вопрос
         Answer this question based on the video you just watched.: Ответьте на этот
@@ -778,48 +773,48 @@
           даются компьютеру для исполнения
         a secret password: секретный пароль
       PDK5 Beyond:
-        What do I do now?: What do I do now?
-        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This
-          is the last piece of our online PD. Congratulations! Click Im finished when
-          you are ready!
-        Im finished: Im finished
+        What do I do now?: Что теперь делать?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: Это
+          последняя часть нашей онлайн программы повышения квалификации. Поздравляем!
+          Нажмите "Я закончил" когда  будете готовы!
+        Im finished: Я закончил
       PDK5 Blockly Intro:
-        Writing your first computer program!: Writing your first computer program!
-        Are you ready to move on?: Are you ready to move on?
+        Writing your first computer program!: Напишите вашу первую программу!
+        Are you ready to move on?: Вы готовы продолжить?
         'Yes': Да
       PDK5 Classroom Culture:
         Classroom Culture: Культура в классе
-        Are you ready to move on?: Are you ready to move on?
+        Are you ready to move on?: Вы готовы продолжить?
         'Yes': Да
       PDK5 Course Maps:
-        Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
-        Are you ready to move on?: Are you ready to move on?
+        Navigating Courses 1, 2, and 3: Перемещение по курсам 1, 2, и 3
+        Are you ready to move on?: Вы готовы продолжить?
         'Yes': Да
       PDK5 Course Overview:
-        Overview of K-5 Courses: Overview of K-5 Courses
-        Are you ready to move on?: Are you ready to move on?
+        Overview of K-5 Courses: Обзор курсов для начальных классов
+        Are you ready to move on?: Вы готовы продолжить?
         'Yes': Да
       PDK5 Glossary:
         Glossary: Словарь терминов
-        Are you ready to move on?: Are you ready to move on?
+        Are you ready to move on?: Вы готовы продолжить?
         'Yes': Да
       PDK5 Intro:
-        Welcome!: Welcome!
-        Before now, have you ever participated in an online PD program?: Before now,
-          have you ever participated in an online PD program?
+        Welcome!: Добро пожаловать!
+        Before now, have you ever participated in an online PD program?: Вы когда-нибудь
+          участвовали в онлайн программах повышения квалификации?
         'Yes': Да
         'No': Нет
       PDK5 Sequence2:
-        More Sequencing: More Sequencing
-        The grey rectangle to the left of the workspace is called the: The grey rectangle
-          to the left of the workspace is called the
-        toolbox: toolbox
-        shelf: shelf
-        bin: bin
-        dropdown: dropdown
+        More Sequencing: Продолжение Последовательностей
+        The grey rectangle to the left of the workspace is called the: Серый прямоугольник
+          слева от рабочей области называется
+        toolbox: панель инструментов
+        shelf: полка
+        bin: корзина
+        dropdown: выпадающий список
       PDK5 Teacher Dashboard:
-        Teacher Dashboard: Teacher Dashboard
-        Are you ready to move on?: Are you ready to move on?
+        Teacher Dashboard: Панель управления преподавателя
+        Are you ready to move on?: Вы готовы продолжить?
         'Yes': Да
       PDK5 Test1:
         title: название
@@ -829,20 +824,19 @@
         right answer: правильный ответ
       PDK5 Unplugged Intro:
         What is an unplugged activity?: Что такое урок без компьютера?
-        Are you ready to move on?: Are you ready to move on?
+        Are you ready to move on?: Вы готовы продолжить?
         'Yes': Да
       PDK5 UVideo Overview:
-        Teacher Guides to all our unplugged activities: Teacher Guides to all our
-          unplugged activities
-        Are you ready to move on?: Are you ready to move on?
+        Teacher Guides to all our unplugged activities: Руководства для учителей для
+          всех наших уроков без компьютера
+        Are you ready to move on?: Вы готовы продолжить?
         'Yes': Да
       PDK5 Visual Languages:
-        Visual Programming Languages: Visual Programming Languages
-        Based on the video you saw before, please answer the question below.: Based
-          on the video you saw before, please answer the question below.
-        Why are visual programming languages easier to learn than text-based programming languages?: Why
-          are visual programming languages easier to learn than text-based programming
-          languages?
+        Visual Programming Languages: Визуальные языки программирования
+        Based on the video you saw before, please answer the question below.: Ответьте
+          пожалуйста на вопрос ниже, основываясь на видео, которое вы только что посмотрели.
+        Why are visual programming languages easier to learn than text-based programming languages?: Почему
+          визуальные языки программирования легче изучать, чем текстовые языки программирования?
         Because you dont have to worry about syntax as much, like where to put a semi-colon: Because
           you dont have to worry about syntax as much, like where to put a semi-colon
         Because you can focus on the logic of programming: Because you can focus on
@@ -850,9 +844,9 @@
         Because the commands are available in a menu rather than having to remember them yourself: Because
           the commands are available in a menu rather than having to remember them
           yourself
-        All of the above: All of the above
+        All of the above: Все выше
       PDK5 What is CS:
-        What is Computer Science?: What is Computer Science?
+        What is Computer Science?: Что такое информатика?
         'A computer program, or code, is:': 'Компьютерная программа, или код, это:'
         a part inside of a computer: часть внутри компьютера
         a set of instructions a person gives a computer to execute: a set of instructions
@@ -915,6 +909,15 @@
         this is a question?: Это вопрос?
         wrong answer: неправильный ответ
         right answer: правильный ответ
+      U1L6 Assessment multiple choice:
+        'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
+        If you just had a circle and a square, how many 3-shape rows could you make?: If
+          you just had a circle and a square, how many 3-shape rows could you make?
+        4: '4'
+        6: '6'
+        8: '8'
+        10: '10'
+        12: '12'
       unique level name here:
         line1<br/>line2: линия1<br/>линия2
         description here: Описание здесь

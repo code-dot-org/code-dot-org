@@ -50,7 +50,7 @@ th:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Choose the best blocks
+        Choose the best blocks.: Choose the best blocks.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -83,7 +83,7 @@ th:
       2-3 Algorithms Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Choose an algorithm for the image provided
+        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square'
         0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
         1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
@@ -141,7 +141,6 @@ th:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
         Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
         a image: a image
         a number: a number
@@ -256,19 +255,19 @@ th:
       4-5 Algorithms Multi 1:
         Multiple Choice: Multiple Choice
         Which one of these items is hardest to describe an algorithm for?: Which one of these items is hardest to describe an algorithm for?
-        <h4>Brushing your teeth</h4>: '<h4>Brushing your teeth</h4>'
-        <h4>Baking cookies</h4>: '<h4>Baking cookies</h4>'
-        <h4>Shopping from a grocery list</h4>: '<h4>Shopping from a grocery list</h4>'
-        <h4>Banana</h4>: '<h4>Banana</h4>'
+        Brushing your teeth: Brushing your teeth
+        Baking cookies: Baking cookies
+        Shopping from a grocery list: Shopping from a grocery list
+        Banana: Banana
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Multiple Choice
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Seattle _____ a _____ _____.</h4>'
-        <h4>_____ is a _____ city.</h4>: '<h4>_____ is a _____ city.</h4>'
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ is _____ a _____.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene is a _____ city.</h4>'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        Eugene is a _____ city.: Eugene is a _____ city.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Multiple Choice
         Which of these pictures best represents crowdsourcing?: Which of these pictures best represents crowdsourcing?
@@ -277,33 +276,33 @@ th:
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Multiple Choice
         Which one of these activities would be best for practicing crowdsourcing?: Which one of these activities would be best for practicing crowdsourcing?
-        <h4>Cleaning your room</h4>: '<h4>Cleaning your room</h4>'
-        <h4>Eating your dessert</h4>: '<h4>Eating your dessert</h4>'
-        <h4>Brushing your hair</h4>: '<h4>Brushing your hair</h4>'
-        <h4>Washing your face</h4>: '<h4>Washing your face</h4>'
+        Cleaning your room: Cleaning your room
+        Eating your dessert: Eating your dessert
+        Brushing your hair: Brushing your hair
+        Washing your face: Washing your face
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Multiple Choice
         Which piece of information listed below is okay to share on the internet?: Which piece of information listed below is okay to share on the internet?
-        <h4>Your birthday</h4>: '<h4>Your birthday</h4>'
-        <h4>Your favorite food</h4>: '<h4>Your favorite food</h4>'
-        <h4>Your address</h4>: '<h4>Your address</h4>'
-        <h4>Your parent's credit card number</h4>: "<h4>Your parent's credit card number</h4>"
+        Your birthday: Your birthday
+        Your favorite food: Your favorite food
+        Your address: Your address
+        Your parent's credit card number: "Your parent's credit card number"
       4-5 Internet Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When you try to log on to code.org, which IP address is the DNS most likely to take you to?
-        <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
-        <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
-        <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
-        <h4>54.243.71.82</h4>: '<h4>54.243.71.82</h4>'
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: Multiple Choice
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?
-        <h4>code.org</h4>: '<h4>code.org</h4>'
-        <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
-        <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
-        <h4>khanacademy.org</h4>: '<h4>khanacademy.org</h4>'
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
@@ -318,7 +317,7 @@ th:
       4-5 Suncatchers Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -328,7 +327,7 @@ th:
         The unicorn moves across the screen: The unicorn moves across the screen
         The unicorn's y value changes: "The unicorn's y value changes"
         The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: "The unicorn's x value changes"
+        The unicorn's x value decreases: "The unicorn's x value decreases"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -542,6 +541,7 @@ th:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
       msm variables multi 1:
+        x = 15<br>a = 2<br>b = 6: 'x = 15<br>a = 2<br>b = 6'
         What is the value of x?: What is the value of x?
         a function: a function
         15: "15"
@@ -638,12 +638,12 @@ th:
         "y": true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images 1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images 1.blocks4.start_blocks, 300, 100
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
       PDK5 Basic CS:
         Video Follow-up Question: Video Follow-up Question
         Answer this question based on the video you just watched.: Answer this question based on the video you just watched.
@@ -765,6 +765,14 @@ th:
         this is a question?: this is a question?
         wrong answer: wrong answer
         right answer: right answer
+      U1L6 Assessment multiple choice:
+        "Multiple Choice: Number Systems": 'Multiple Choice: Number Systems'
+        If you just had a circle and a square, how many 3-shape rows could you make?: If you just had a circle and a square, how many 3-shape rows could you make?
+        4: "4"
+        6: "6"
+        8: "8"
+        10: "10"
+        12: "12"
       unique level name here:
         line1<br/>line2: 'line1<br/>line2'
         description here: description here

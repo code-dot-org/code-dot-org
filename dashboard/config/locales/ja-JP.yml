@@ -234,6 +234,7 @@
         artist: 何かの絵を描く
     user:
       classroom: 先生用ホームページ
+      district_dashboard: District Dashboard
       label: こんにちは  %{username}
       stats: 私の進捗状況
       settings: 私のアカウント
@@ -296,9 +297,9 @@
     sections:
       add: Add section
       manage: セクションの管理
-      section: Section
-      students: Students
-      section_code: Section Code
+      section: セクション
+      students: 生徒
+      section_code: セクション・コード
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
@@ -471,6 +472,9 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: アナと雪の女王
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: これらの作品は、生徒たちがコードを使って描きました！
     students_made_these_with_code: これらの作品は、生徒たちがコードを使って創りました！
@@ -505,6 +509,14 @@
     wrong_body: うまく解決できていません。もう一度やってみてください。
     correct_title: 正解
     correct_body: 正解です。
+  contract_match:
+    wrong_title: 不正解
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: ここに答えを入力
   dialog:
@@ -599,3 +611,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

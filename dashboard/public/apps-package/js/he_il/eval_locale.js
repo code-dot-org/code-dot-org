@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "מעגל (רדיוס, סגנון, צבע)"},
 "displayBlockTitle":function(d){return "תצוגה"},
 "ellipseBlockTitle":function(d){return "אליפסה (רוחב, גובה, סגנון, צבע)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "יש לך בלוקים לא מחוברים. האם התכוונת לצרף אותם לבלוק ה\"תצוגה\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "שכבת-על (למעלה, למטה)"},

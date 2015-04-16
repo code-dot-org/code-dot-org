@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "அதே தொடர் சரியாக பெற உங்கள் வாதங்களை மீள்ஒழுங்குபடுத்தி முயற்சிக்கவும்.",
   "evaluate": "evaluate",
   "extraTopBlocks": "உங்களிடம் இணைக்கப்படாத தொகுதிகள் உள்ளன. \"கணிப்புக்கு \" இந்த தொகுதிகளை  இணைக்க வேண்டும் என்று கருதுகிறிர்களா?",

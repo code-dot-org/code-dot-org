@@ -1,56 +1,41 @@
-"uk-UA":
+uk-UA:
   hello: Привіт, світ!
   select_language: Будь ласка, виберіть мову
   computer_science: Інформатика
   computer_science_edweek: Тиждень інформатичної освіти
   csedweek_dates: 8-14 грудня 2014 року
-  csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color:
-    white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо
-    усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white;
-    text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
-  n_have_learned_an_hoc: <h1>Спробувати на</h1><h2>Година коду</h2><h3># служив</h3>
+  csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
+  n_have_learned_an_hoc: '<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>'
   anybody_can_learn: Кожен може вчитися.
   learn_now: Почати навчання
   petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
-  petition_sign_message: 'Якщо ви згодні, то напишіть своє ім''я.  Приєднайтеся до
-    # інших.'
+  petition_sign_message: "Якщо ви згодні, то напишіть своє ім'я.  Приєднайтеся до # інших."
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Ім’я
   email: Електронна пошта
   zipcode: Поштовий індекс або країна
   submit: Надіслати
   twentyhours_heading: Спробуйте наш курс вступу до інформатики
-  twentyhours_text: Завершили свою першу Годину Коду? Дізнайтеся більше про основні
-    поняття комп'ютерних наук та програмування на подальших курсах.
-  hoc2014_heading: Приєднуйтеся до <a href="http://hourofcode.com">Години коду</a>
-    <br/> 8-14 грудня 2014 року <br/>
+  twentyhours_text: "Завершили свою першу Годину Коду? Дізнайтеся більше про основні поняття комп'ютерних наук та програмування на подальших курсах."
+  hoc2014_heading: 'Приєднуйтеся до <a href="http://hourofcode.com">Години коду</a> <br/> 8-14 грудня 2014 року <br/>'
   hoc2014_students: Учні
   hoc2014_try: Спробуйте
   hoc2014_teachers: Вчителі
   hoc2014_host: Проведіть
   hoc2014_everyone: Усі
-  hoc2014_support: "Підтримайте &#x25BE;"
+  hoc2014_support: 'Підтримайте &#x25BE;'
   hoc2014_whatishoc: Що таке Година коду?
   twentyhours_trynow: Спробувати
   california_heading: Попросіть свою школу викладати інформатику
-  california_text: Кожен вчитель може провести наш <a href='http://studio.code.org/'>безкоштовний
-    вступний курс</a>. Кожна початкова школа може <a href='http://code.org/educate/k5'>навчати
-    інформатиці</a>. Запросіть старшу школу <a href='http://code.org/educate/districts'>
-    до партнерства.
+  california_text: "Кожен вчитель може провести наш <a href='http://studio.code.org/'>безкоштовний вступний курс</a>. Кожна початкова школа може <a href='http://code.org/educate/k5'>навчати інформатиці</a>. Запросіть старшу школу <a href='http://code.org/educate/districts'> до партнерства."
   california_button: Дізнатися більше
   flappy_heading: З Днем Народження Code.org
-  flappy_text: Code.org щойно виповнився 1 рік.<br/><br/> Святкуйте з нами, створюючи
-    свою власну гру в <b>Пурха (Flappy Bird)</b>. Кодуйте свої власні правила та діліться
-    грою з друзями!
+  flappy_text: 'Code.org щойно виповнився 1 рік.<br/><br/> Святкуйте з нами, створюючи свою власну гру в <b>Пурха (Flappy Bird)</b>. Кодуйте свої власні правила та діліться грою з друзями!'
   view_english_site: Переглянути англомовний сайт
   non_english_tutorials: 'Підручники перекладені на кілька мов:'
-  write_your_first_program: Напишіть свою першу комп'ютерну програму
-  learn_cs_concepts: Вивчайте основні поняття програмування через перетягування блоків.
-    У цьому відео-підручнику, схожому на гру, знімались Біл Гейтс, Марк Цукенберг,
-    Angry Birds та Plants vs. Zombies. Дізнайтеся про цикли, розгалуження та прості
-    алгоритми.
+  write_your_first_program: "Напишіть свою першу комп'ютерну програму"
+  learn_cs_concepts: Вивчайте основні поняття програмування через перетягування блоків. У цьому відео-підручнику, схожому на гру, знімались Біл Гейтс, Марк Цукенберг, Angry Birds та Plants vs. Zombies. Дізнайтеся про цикли, розгалуження та прості алгоритми.
   all_ages: Всі вікові групи
   beginner: Початківець
   n_participants: '# учасників'
@@ -60,20 +45,13 @@
   congratulations_on_completing_hoc: Вітаємо із завершенням першої Години коду
   get_a_certificate_of_achievement: Отримати сертифікат досягнень
   enter_valid_email: Будь ласка, введіть електронну адресу
-  get_a_certificate_message: Ми надішлемо вам сертифікат та інформацію про те, як
-    <a href='/learn/beyond'>вчитися далі після однієї години коду</a>
-  get_a_certificate_message_after: Клацніть на сертифікаті, щоб завантажити або роздрукувати
-    його. А далі, продовжуйте навчатись на <a href='http://studio.code.org'>20-годинному
-    курсі</a>, або розгляньте інші варіанти <a href='/learn/beyond'>навчання поза
-    однією Годиною</a>.
+  get_a_certificate_message: "Ми надішлемо вам сертифікат та інформацію про те, як <a href='/learn/beyond'>вчитися далі після однієї години коду</a>"
+  get_a_certificate_message_after: "Клацніть на сертифікаті, щоб завантажити або роздрукувати його. А далі, продовжуйте навчатись на <a href='http://studio.code.org'>20-годинному курсі</a>, або розгляньте інші варіанти <a href='/learn/beyond'>навчання поза однією Годиною</a>."
   thanks_for_submitting: Дякуємо за участь!
-  if_you_enjoyed: Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчати
-    увесь світ.
+  if_you_enjoyed: Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчати увесь світ.
   personalize_certificate: Персоналізувати ваш сертифікат
   share_achievement: Поділитись досягненнями
-  beyond_hour_message: Продовжуйте навчання на нашому <a href='http://studio.code.org'>20-годинному
-    курсі</a>, або перегляньте інші варіанти <a href='/learn/beyond'>навчання поза
-    однією Годиною</a>.
+  beyond_hour_message: "Продовжуйте навчання на нашому <a href='http://studio.code.org'>20-годинному курсі</a>, або перегляньте інші варіанти <a href='/learn/beyond'>навчання поза однією Годиною</a>."
   leaderboards_for_hoc: Лідери „Години Коду“.
   support_url: http://support.code.org/
   country: Країна
@@ -102,20 +80,18 @@
   create_art_with_zombie: або створити складніші узори із зомбі
   i_am_a: 'Я - '
   never_spam: Ми ніколи не будемо спамити вам
-  enter_country: Введіть країну, якщо ви - за межами США
+  enter_country: 'Введіть країну, якщо ви - за межами США'
   used_infrequent_updates: Використовується лише для нечастих оновлень
   privacy_practices_children: Переглянути політику конфіденційності для дітей
   petition_thankyou: Дякуємо вам за підписання петиції
   continue_learning_header: Продовжити навчання поза Однією годиною
-  continue_learning_body: Існує багато варіантів. Можна вчитись онлайн, у місцевій
-    школі або в літньому таборі.
+  continue_learning_body: Існує багато варіантів. Можна вчитись онлайн, у місцевій школі або в літньому таборі.
   learn_next_level: Продовжити до наступного рівня
   learn_online: Спробуйте інші курси онлайн
   learn_classes: Знайти місцеві класи
   hoc_is_here: '#HourOfCode вже тут - подивіться, що там! @codeorg'
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Більше Однієї Години
   what_gender: Якої ви статі?
@@ -123,23 +99,20 @@
   boy: Хлопець
   help_recruit_coders: Допоможіть залучити більше програмістів у свою команду!
   help_recruit: Допоможіть залучити більше програмістів!
-  lines_of_code: ДОСІ НАПИСАНО <b># РЯДКІВ КОДУ</b>.
-  lines_of_code_alt: УЧНЯМИ НАПИСАНО <b>#</b> РЯДКІВ КОДУ
+  lines_of_code: 'ДОСІ НАПИСАНО <b># РЯДКІВ КОДУ</b>.'
+  lines_of_code_alt: 'УЧНЯМИ НАПИСАНО <b>#</b> РЯДКІВ КОДУ'
   who_has_done_hoc: 'Хто пройшов Годину коду #HourOfCode? @codeorg'
   hoc_leaderboards: Лідери Години коду
-  students_and_lines: '%{students} учнів пройшли Годину коду і написали  %{lines}
-    рядків коду.'
+  students_and_lines: '%{students} учнів пройшли Годину коду і написали  %{lines} рядків коду.'
   start_hoc: Почати Годину коду
   contact_form_topic_press: Преса/ЗМІ (інтерв’ю або розмова)
-  stats_nina: '"Кожен день давав однаковий результат &mdash; 100% інтересу."-Ніна
-    Ніколс Пірі, педагог'
-  stats_student: '"Я знала, що це був <b> унікальний</b> шанс." - Маріана Альсате,
-    5 клас'
-  stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням."
-    - Майкл Кларк, педагог'
-  studiobar_title: Познайомтесь зі Студією коду
+  stats_nina: '"Кожен день давав однаковий результат &mdash; 100% інтересу."-Ніна Ніколс Пірі, педагог'
+  stats_student: '"Я знала, що це був <b> унікальний</b> шанс." - Маріана Альсате, 5 клас'
+  stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням." - Майкл Кларк, педагог'
+  studiobar_title: "Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>"
+  studiobar_title_nolink: Познайомтесь зі Студією коду
   studiobar_elementary_title: Базові курси
-  studiobar_elementary_body: Три нові курси для K&#8209;5
+  studiobar_elementary_body: 'Три нові курси для K&#8209;5'
   studiobar_hoc_title: Година Коду
   studiobar_hoc_body: Вчимося програмувати зі Злими Птахами
   studiobar_flappy_title: Код Пурха
@@ -152,20 +125,58 @@
   studiobar_donate_body: На кожен долар пожертв ми навчимо одну дитину
   studiobar_shop_title: Магазин
   studiobar_shop_body: Ламайте стереотипи. Гордо носіть наш логотип.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Година Коду
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -174,10 +185,10 @@
   homepage_slot_text_shop: Магазин
   homepage_slot_text_flappy: Код Пурха
   homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
+  homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   homepage_slot_text_title_hoc: Година Коду
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Спробуйте годину коду
@@ -216,11 +227,9 @@
   class_submission_in_school: У школі
   class_submission_in_school_daily_programming_course: Щоденний курс програмування
   class_submission_in_school_ap_computer_science: Поглиблений курс інформатики
-  class_submission_in_school_full_university_cs_curriculum: Повний університетський
-    курс комп'ютерних наук
+  class_submission_in_school_full_university_cs_curriculum: "Повний університетський курс комп'ютерних наук"
   class_submission_in_school_robotics_club: Клуб робототехніки
-  class_submission_in_school_programming_integrated_in_other_classes: Програмування
-    на інших уроках (математика, природничі науки тощо)
+  class_submission_in_school_programming_integrated_in_other_classes: Програмування на інших уроках (математика, природничі науки тощо)
   class_submission_in_school_summer_school_cs_program: Програма літньої школи з інформатики
   class_submission_in_school_exploring_computer_science: Відкриваючи інформатику
   class_submission_in_school_other: Інше у школі
@@ -248,19 +257,14 @@
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 годин на тиждень
   volunteer_engineer_submission_commitment_more: Більше
   volunteer_engineer_submission_location_flexibility_onsite: На території школи
-  volunteer_engineer_submission_location_flexibility_remote: Віддалене навчання (вчителі
-    або учні)
-  volunteer_engineer_submission_location_flexibility_curriculum: Бажую зробити свій
-    внесок до відкритих навчальних проектів
+  volunteer_engineer_submission_location_flexibility_remote: Віддалене навчання (вчителі або учні)
+  volunteer_engineer_submission_location_flexibility_curriculum: Бажую зробити свій внесок до відкритих навчальних проектів
   volunteer_engineer_submission_experience_unspecified: Не вказано
-  volunteer_engineer_submission_experience_university_student_or_researcher: Студент
-    університету (або дослідник)
-  volunteer_engineer_submission_experience_software_professional: Фахівець-розробник
-    ПЗ
+  volunteer_engineer_submission_experience_university_student_or_researcher: Студент університету (або дослідник)
+  volunteer_engineer_submission_experience_software_professional: Фахівець-розробник ПЗ
   petition_age: Вік
   dashboard_landing_title: Домашня сторінка вчителя
-  dashboard_landing_welcome: Вітаємо в оновленій та покращеній вчительській панелі
-    керування.
+  dashboard_landing_welcome: Вітаємо в оновленій та покращеній вчительській панелі керування.
   dashboard_landing_video: Перегляньте це відео
   dashboard_landing_watch_video: для ознайомлення з новими можливостями!
   dashboard_landing_view_as_student: Переглянути сайт в ролі учня
@@ -268,24 +272,18 @@
   dashboard_landing_students_manage: Перегляд та керування учнями
   dashboard_landing_news_title: Ресурси для вчителів початкової школи (лише англійською)
   dashboard_landing_new_beta: Новинка! Спробуйте наші бета-курси для учнів 1-5 класу.
-  dashboard_landing_new_k5courses: Новинка! Спробуйте наші нові курси для учнів до
-    5 класу.
+  dashboard_landing_new_k5courses: Новинка! Спробуйте наші нові курси для учнів до 5 класу.
   dashboard_landing_useful_links: Інші корисні посилання (лише англійською)
-  dashboard_landing_office_hours: Задайте своє питання! Відвідайте щомісячний вебінар
-    за розкладом.
-  dashboard_landing_print_certificates: Надрукуйте сертифікати для учнів, які завершили
-    цей курс
-  dashboard_landing_educator_blog: Читати про новини та оновлення наших матеріалів
-    на нашому педагогічному блозі
-  dashboard_landing_smart_hints: Будь ласка, допоможіть нам додати смарт-теги у підручники
-    на Code.org
+  dashboard_landing_office_hours: Задайте своє питання! Відвідайте щомісячний вебінар за розкладом.
+  dashboard_landing_print_certificates: Надрукуйте сертифікати для учнів, які завершили цей курс
+  dashboard_landing_educator_blog: Читати про новини та оновлення наших матеріалів на нашому педагогічному блозі
+  dashboard_landing_smart_hints: Будь ласка, допоможіть нам додати смарт-теги у підручники на Code.org
   dashboard_landing_video_player: Випробуйте наш новий відео-плеєр у своїй школі
   dashboard_landing_progress_title: Прогрес класу
   dashboard_landing_progress_biggest: Це прогрес Вашої найбільшої групи.
-  dashboard_landing_view_progress: Переглянути прогрес для %{biggest_section}
+  dashboard_landing_view_progress: 'Переглянути прогрес для %{biggest_section}'
   dashboard_landing_available_title: Доступні курси
-  dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні
-    для Вас і Ваших учнів.
+  dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні для Вас і Ваших учнів.
   dashboard_landing_loading: Завантаження...
   dashboard_action_edit: Редагувати
   dashboard_action_save: зберегти
@@ -305,7 +303,7 @@
   dashboard_navigation_section_lesson_plans: Плани уроків та ресурси
   dashboard_navigation_section_community: Довідка та спільнота
   dashboard_navigation_section_pd: Підвищення кваліфікації
-  dashboard_navigation_section_speakers: Запрошені гості <br/> з галузі інформатики
+  dashboard_navigation_section_speakers: 'Запрошені гості <br/> з галузі інформатики'
   dashboard_navigation_all_sections: Облікові записи учнів та їх прогрес
   dashboard_navigation_view_progress: Перегляд прогресу
   dashboard_navigation_add_students: Додати учнів
@@ -315,9 +313,7 @@
   dashboard_navigation_section: 'Група: %{section_name}'
   dashboard_navigation_student: 'Учень: %{student_name}'
   dashboard_sections_new_section: Нова група
-  dashboard_sections_jumbotron_instruction: Створюйте нові групи і додавайте до них
-    учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження
-    прогресу та керування обліковими записами.
+  dashboard_sections_jumbotron_instruction: Створюйте нові групи і додавайте до них учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження прогресу та керування обліковими записами.
   dashboard_sections_table_section: Група
   dashboard_sections_table_secret: Тип логіну
   dashboard_sections_table_grade: Бал
@@ -325,24 +321,17 @@
   dashboard_sections_table_students: Учні
   dashboard_sections_table_code: Код групи
   dashboard_sections_name: Назва групи
-  dashboard_sections_choose_secret: Якщо Ви хочете створити облікові записи для своїх
-    учнів, оберіть таємне  <b>слово</b> або  <b>зображення</b> для цієї групи.
-  dashboard_sections_secret_word: <b>Слово</b> дозволяє задати таємне слово для кожного
-    учня.
-  dashboard_sections_secret_picture: <b>Зображення</b>дозволяє задати таємне зображення
-    для кожного учня - ідеальний варіант для молодших школярів, які не вміють друкувати.
-  dashboard_sections_secret_none: Якщо Ви хочете, щоб учні самі створювали облікові
-    записи і задавали паролі, оберіть таємне слово<b>жодне</b>.
-  dashboard_sections_print_secrets: Можете роздрукувати аркуш карток, що містять інформацію
-    про облікові записи учнів та індивідуально роздати їх учням.
+  dashboard_sections_choose_secret: 'Якщо Ви хочете створити облікові записи для своїх учнів, оберіть таємне  <b>слово</b> або  <b>зображення</b> для цієї групи.'
+  dashboard_sections_secret_word: '<b>Слово</b> дозволяє задати таємне слово для кожного учня.'
+  dashboard_sections_secret_picture: '<b>Зображення</b>дозволяє задати таємне зображення для кожного учня - ідеальний варіант для молодших школярів, які не вміють друкувати.'
+  dashboard_sections_secret_none: 'Якщо Ви хочете, щоб учні самі створювали облікові записи і задавали паролі, оберіть таємне слово<b>жодне</b>.'
+  dashboard_sections_print_secrets: Можете роздрукувати аркуш карток, що містять інформацію про облікові записи учнів та індивідуально роздати їх учням.
   dashboard_sections_switch_section: 'Перемикач груп:'
   dashboard_students_add_student: Додати учня
   dashboard_students_add_students: Додати учнів
-  dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному
-    на рядок:'
-  dashboard_students_new_section: Ви створили нову групу! Тепер додавайте учнів, використовуючи
-    кнопки <b>Додати учня</b> та <b>Додати учнів</b>.
-  dashboard_students_placeholder_name: Ім'я учня
+  dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному на рядок:'
+  dashboard_students_new_section: 'Ви створили нову групу! Тепер додавайте учнів, використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>.'
+  dashboard_students_placeholder_name: "Ім'я учня"
   dashboard_students_name: Ім’я
   dashboard_students_progress: Прогрес
   dashboard_students_age: Вік
@@ -351,7 +340,7 @@
   dashboard_students_female: Жінка
   dashboard_students_secret: Таємний код
   dashboard_students_password: пароль
-  dashboard_students_username: 'Ім''я користувача: %{student_username}'
+  dashboard_students_username: "Ім'я користувача: %{student_username}"
   dashboard_students_email: 'Електронна скринька: %{student_email}'
   dashboard_students_completed_levels: Завершені рівні
   dashboard_students_total_lines: Рядків коду
@@ -362,23 +351,14 @@
   dashboard_students_share_section: 'Надайте адресу сторінки входу для своїх учнів:'
   dashboard_students_print_info: Роздрукуйте картки з вхідною інформацією своїх учнів.
   dashboard_students_secret_picture: Таємне зображення
-  dashboard_students_reset_picture: Можете скинути таємне зображення у будь-який момент,
-    обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створено
-    нове таємне зображення, яке потрібно використати для наступного входу цього учня.
+  dashboard_students_reset_picture: 'Можете скинути таємне зображення у будь-який момент, обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створено нове таємне зображення, яке потрібно використати для наступного входу цього учня.'
   dashboard_students_secret_word: Таємне слово
-  dashboard_students_reset_word: 'Можете скинути таємне слово у будь-який момент,
-    обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створена
-    нова пара таємних слів, які потрібно використати для наступного входу цього учня. '
-  dashboard_students_join_link: Скеруйте учнів для створення власних облікових записів
-    та приєднання до Ваших груп
-  dashboard_students_no_email: Якщо Ваші учні не мають електронних скриньок, або Ви
-    б хотіли створити для них облікові записи, вкажіть у цьому розділі таємний код
-    у формі <b>слова </b> або <b>зображення</b>.
+  dashboard_students_reset_word: 'Можете скинути таємне слово у будь-який момент, обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створена нова пара таємних слів, які потрібно використати для наступного входу цього учня. '
+  dashboard_students_join_link: Скеруйте учнів для створення власних облікових записів та приєднання до Ваших груп
+  dashboard_students_no_email: 'Якщо Ваші учні не мають електронних скриньок, або Ви б хотіли створити для них облікові записи, вкажіть у цьому розділі таємний код у формі <b>слова </b> або <b>зображення</b>.'
   dashboard_students_print_page: Роздрукуйте цю сторінку
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Клацніть
-    тут</a> щоб переглянути угоду конфіденційності, яку можна роздрукувати та обговорити
-    з учнями.
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Клацніть тут</a> щоб переглянути угоду конфіденційності, яку можна роздрукувати та обговорити з учнями.'
   dashboard_curriculum_overview: Огляд навчальної програми
   dashboard_view_all_lesson_plans: Переглянути всі конспекти уроків
   dashboard_course1: 'Курс 1:'
@@ -391,7 +371,7 @@
   dashboard_glossary: Глосарій
   dashboard_classroom_strategies: Прийоми для вчителів
   dashboard_debugging: 'Налагодження:'
-  dashboard_puzzle_solving: 'Розв''язання задач:'
+  dashboard_puzzle_solving: "Розв'язання задач:"
   dashboard_student_worksheet: інструкція для учня
   dashboard_teacher_worksheet: інструкція для вчителя
   dashboard_grade_k: Kлас
@@ -406,8 +386,7 @@
   dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
   dashboard_progress_completed_perfect: виконано, ідеально
   dashboard_progress_furthest_level_attempted: останній відкритий рівень
-  stats_hoc_2013_heading: 'Неймовірна статистика з минулорічної Години коду. Лише
-    за тиждень:'
+  stats_hoc_2013_heading: 'Неймовірна статистика з минулорічної Години коду. Лише за тиждень:'
   stats_hoc_2013_image_alt: Статистика Години коду 2013 року
   dashboard_teacher: Вчитель
   dashboard_student: Учень
@@ -417,15 +396,12 @@
   dashboard_sections_picture_account_creation: Малюнок, виданий Code.org
   dashboard_sections_word_account_creation: Слово, видане Code.org
   dashboard_sections_sign_in_question: Де точка входу учнів?
-  dashboard_sections_sign_in_unique: Унікальна веб-сторінка на вкладці "Керування
-    учнями"
-  dashboard_sections_sign_in_main: http://code.org і клацніть "Увійти"
+  dashboard_sections_sign_in_unique: 'Унікальна веб-сторінка на вкладці "Керування учнями"'
+  dashboard_sections_sign_in_main: 'http://code.org і клацніть "Увійти"'
   dashboard_sections_password_account_creation: Пароль, створений учнем
-  dashboard_sections_login_type_explanation: Подана нижче таблиця ілюструє різні типи
-    логінів, <b>зображень, слів та електронних скриньок</b>, які можна обрати для
-    групи.
+  dashboard_sections_login_type_explanation: 'Подана нижче таблиця ілюструє різні типи логінів, <b>зображень, слів та електронних скриньок</b>, які можна обрати для групи.'
   dashboard_faq: Запитання й відповіді
-  code_hoc_coming: Година коду вже тут - 8-14 грудня!
+  code_hoc_coming: 'Година коду вже тут - 8-14 грудня!'
   code_sign_up: Зареєструватися для участі протягом тижня інформатики
   learn_more: Дізнатися більше
   hoc2014_try_new_tutorials: Спробуйте наш новий підручник Години коду
@@ -436,8 +412,7 @@
   carousel_heading_domestic: Підручники англійською мовою
   carousel_heading_beginners: Посібники для початківців
   carousel_heading_javascript: Посібники з вивчення Javascript
-  carousel_heading_unplugged: Немає пристроїв або Інтернету? Спробуйте безмашинні
-    вправи
+  carousel_heading_unplugged: Немає пристроїв або Інтернету? Спробуйте безмашинні вправи
   carousel_heading_devices: Підручники для телефонів та планшетів
   carousel_heading_languages: Підручники інших мов програмування
   carousel_heading_apps_games: Створіть власні програми чи ігри
@@ -446,7 +421,7 @@
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
   educator_notes: Інформація для вчителя
-  how_to_teach_hoc: Як викладати "Годину коду"
+  how_to_teach_hoc: 'Як викладати "Годину коду"'
   more_resources_educators: Більше ресурсів для вчителів та освітян
   participants: учасники
   teachers_notes: Інформація для вчителя
@@ -454,13 +429,11 @@
   previous: Назад
   next: Далі
   older_systems: Підручники для старих машин
-  older_systems_subheading: Ці підручники працюватимуть на старих версіях браузерів.
-    Для доступу до всіх підручників, оновіть <a href="http://browsehappy.com/" target="_blank">браузер
-    до останньої версії.</a>
+  older_systems_subheading: 'Ці підручники працюватимуть на старих версіях браузерів. Для доступу до всіх підручників, оновіть <a href="http://browsehappy.com/" target="_blank">браузер до останньої версії.</a>'
   mobile_devices: Підручники для мобільних пристроїв
   frozen_name: Програмуємо з Анною та Ельзою
-  codeorg_name: Напишіть свою першу комп'ютерну програму
-  codeintl_name: Напишіть свою першу комп'ютерну програму
+  codeorg_name: "Напишіть свою першу комп'ютерну програму"
+  codeintl_name: "Напишіть свою першу комп'ютерну програму"
   thinkersmithspanish_name: Мої друзі-роботи
   khan_name: Вступ до JavaScript
   khanes_name: Вступ до JavaScript
@@ -481,14 +454,14 @@
   codeavengers_name: Створення гри з JavaScript
   processing_name: Код малювання
   robomind_name: Програмування віртуального робота
-  groklearning_name: Еліза - балакучий лікар
+  groklearning_name: 'Еліза - балакучий лікар'
   quorum_name: Особливе програмування (з підтримкою читання екрану)
   codespark_name: Сімейка Фо (для тих, хто ще не читає)
   kodable_name: Kodable (для тих, хто ще не читає)
-  tynkerapp_name: Tynker - для планшетів
+  tynkerapp_name: 'Tynker - для планшетів'
   robomindnl_name: Програмування віртуального робота
   flappy_name: Створіть гру Пурха
-  bitsbox_name: Bitsbox - створимо гру
+  bitsbox_name: 'Bitsbox - створимо гру'
   makegameswithus_name: Створити гру для iPhone у браузері!
   touchdevelop_name: TouchDevelop
   appinventor_name: Година коду від AppInventor
@@ -548,7 +521,7 @@
   khanfr_platformtext: Сучасні веб-браузери
   khanpl_platformtext: Сучасні веб-браузери
   tynker_platformtext: Сучасні веб-браузери
-  scratch_platformtext: Лише для веб-браузерів на комп'ютері (не планшети)
+  scratch_platformtext: "Лише для веб-браузерів на комп'ютері (не планшети)"
   lightbot_platformtext: ВСІ браузери та iOS, Android або ігрова консоль
   thinkersmith_platformtext: Безмашинні вправи
   condcards_platformtext: Безмашинні вправи
@@ -587,184 +560,77 @@
   khanhe_shortdescription: Вчимося малювати в JavaScript
   khanfr_shortdescription: Вчимося малювати в JavaScript
   khanpl_shortdescription: Вчимося малювати в JavaScript
-  tynker_shortdescription: Вчіться програмувати, розв'язуючи задачі та створюючи власні
-    мобільні ігри.
+  tynker_shortdescription: "Вчіться програмувати, розв'язуючи задачі та створюючи власні мобільні ігри."
   scratch_shortdescription: Створюйте інтерактивні ігри, історії та анімації.
-  lightbot_shortdescription: Запрограмуйте Світлячка, щоб розв'язати завдання з процедурами
-    та циклами!
-  thinkersmith_shortdescription: Безмашинні вправи для груп без комп'ютерів
+  lightbot_shortdescription: "Запрограмуйте Світлячка, щоб розв'язати завдання з процедурами та циклами!"
+  thinkersmith_shortdescription: "Безмашинні вправи для груп без комп'ютерів"
   condcards_shortdescription: Вивчайте алгоритми з колодою карт
   lightbotintl_shortdescription: Гра вивчення базових понять програмування
-  codehs_shortdescription: Розпочніть програмувати з собакою Карел - це цікавий та
-    візуальний вступ до програмування!
+  codehs_shortdescription: 'Розпочніть програмувати з собакою Карел - це цікавий та візуальний вступ до програмування!'
   codecademy_shortdescription: Вивчайте основи програмування JavaScript у веб-браузері
-  codecombat_shortdescription: Перемагайте людожерів, вивчаючи Python або JavaScript
-    у цій епічній грі в програмування!
+  codecombat_shortdescription: Перемагайте людожерів, вивчаючи Python або JavaScript у цій епічній грі в програмування!
   codemonkey_shortdescription: Учні програмують мавпу, щоб вона ловила банани.
   codeavengers_shortdescription: Вивчайте основи програмування JavaScript у веб-браузері
   processing_shortdescription: Годинний підручник програмування на мові Processing
   robomind_shortdescription: Напишіть код для віртуального робота
-  groklearning_shortdescription: Навчіть балакучу Елізу справляти враження справжнього
-    співрозмовника!
+  groklearning_shortdescription: Навчіть балакучу Елізу справляти враження справжнього співрозмовника!
   quorum_shortdescription: Приєднуйтесь до Мері на екскурсію мовою програмування Quorum.
-  codespark_shortdescription: Фо - це весела та зрозуміла гра з вивченням програмування.
+  codespark_shortdescription: 'Фо - це весела та зрозуміла гра з вивченням програмування.'
   kodable_shortdescription: Цікава гра для iPad із вивчення базових понять програмування
-  tynkerapp_shortdescription: 'Навчіться програмувати, розв''язуючи цікаві завдання
-    з програмування. '
+  tynkerapp_shortdescription: "Навчіться програмувати, розв'язуючи цікаві завдання з програмування. "
   robomindnl_shortdescription: Напишіть код для віртуального робота
-  flappy_shortdescription: Створіть власну гру - Пурха, Акулу чи Підводного човна
-  bitsbox_shortdescription: Створіть набір програм мовою JavaScript, у які можна грати
-    та поділитися з іншими.
-  makegameswithus_shortdescription: Створіть гру для iPhone! Дізнайтесь, як писати
-    код, котрий навчить монстра новим рухам!
-  touchdevelop_shortdescription: 'Розв''язуйте задачки, створюйте ігри та вчіться
-    програмувати за допомогою свого телефону. '
+  flappy_shortdescription: 'Створіть власну гру - Пурха, Акулу чи Підводного човна'
+  bitsbox_shortdescription: Створіть набір програм мовою JavaScript, у які можна грати та поділитися з іншими.
+  makegameswithus_shortdescription: Створіть гру для iPhone! Дізнайтесь, як писати код, котрий навчить монстра новим рухам!
+  touchdevelop_shortdescription: "Розв'язуйте задачки, створюйте ігри та вчіться програмувати за допомогою свого телефону. "
   appinventor_shortdescription: Розробіть власну програму! (лише Android)
   blockly_shortdescription: Завантажте архів ZIP для навчання оффлайн
-  thinkersmith2_shortdescription: Дізнайтесь, як інформація подається в комп'ютері
-    за допомогою 0 та 1
+  thinkersmith2_shortdescription: "Дізнайтесь, як інформація подається в комп'ютері за допомогою 0 та 1"
   kodableunplugged_shortdescription: Веселі безмашинні вправи
-  projguts_shortdescription: Спробуйте змоделювати гру "камінь-ножиці-папір"
+  projguts_shortdescription: 'Спробуйте змоделювати гру "камінь-ножиці-папір"'
   hourofcode_shortdescription: Бланк для нового code.org/hoc
-  frozen_shortdescription: Вивчимо програмування, приєднавшись до Анни та Ельзи у
-    подорожі чарівною зимовою казкою.
+  frozen_shortdescription: Вивчимо програмування, приєднавшись до Анни та Ельзи у подорожі чарівною зимовою казкою.
   playlab_shortdescription: Складіть історію або створіть гру в Ігровій студії!
-  codeorg_longdescription: Вивчайте основи програмування шляхом перетягування блоків.
-    Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла
-    Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові
-    алгоритми як цикли та умови. Перекладено 34 мовами.
-  codeintl_longdescription: Вивчайте основи програмування шляхом перетягування блоків.
-    Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла
-    Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові
-    алгоритми як цикли та умови. Перекладено 34 мовами.
-  thinkersmithspanish_longdescription: За допомогою визначеного словника робота, учні
-    навчаться скеровувати один одного для досягнення певної мети, без попередніх домовленостей.
-    Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває
-    навик відлагодження. "Мої друзі-роботи" працює найкраще як групова діяльність,
-    і містить робочі аркуші вчителя для використання у класі.
-  khan_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
-  khanes_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
-  khanpt_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
-  khanhe_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
-  khanfr_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
-  khanpl_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
-  tynker_longdescription: Створюйте власні ігри та діліться ними з друзями! Розв'язуйте
-    цікаві задачі з програмування та вивчайте базові поняття на кожному рівні. Додавайте
-    до гри анімованих персонажів, розробляйте кілька рівнів та розставляйте скарби.
-    Включайте у грі правила фізики. Переглядайте роботу коду блоків на JavaScript.
-    Передавайте свої ігри на планшети iPad та Android. Обирайте з-поміж десятків вправ!
-  scratch_longdescription: Зі Scratch ви можете створювати власні інтерактивні ігри,
-    історії, анімації &mdash; та ділитися ними з друзями. Почніть з анімації свого
-    імені, створення святкової листівки чи створення гри у теніс.
-  lightbot_longdescription: Покеруйте Світлячком, щоб він запалив усі сині плити!
-    Світлячок використовує ігрове програмування для практичного вивчення основних
-    понять інформатики. Навчіться складати послідовні вказівки, писати процедури та
-    використовувати цикли для проходження рівнів. Ідеально підходить для будь-якого
-    віку.
-  thinkersmith_longdescription: За допомогою визначеного словника робота, учні навчаться
-    скеровувати один одного для досягнення певної мети, без попередніх домовленостей.
-    Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває
-    навик відлагодження. "Мої друзі-роботи" працює найкраще як групова діяльність,
-    і містить робочі аркуші вчителя для використання у класі.
-  condcards_longdescription: Дізнавайтесь про алгоритми та умовні команди у цій безмашинній
-    вправі з колодою карт. Учні можуть виконувати завдання у групах, кожна з яких
-    працюватиме зі своєю колодою.
-  lightbotintl_longdescription: Вивчайте базову логіку програмування, починаючи з
-    найпростіших понять. Для дітей від 4 років. Працює на платформах iOS та Android
-    (та у веб-браузерах). Вивчіть команди послідовного виконання, ідентифікуйте шаблони,
-    навчіться використовувати процедури та цикли!
-  codehs_longdescription: Віддавати команди для комп'ютера, власне в чому й полягає
-    програмування, так само, як давати команди собаці. Вивчайте програмування з собакою
-    Карел&mdash;цікавий, доступний візуальний вступ до програмування, який пропонує
-    вивчення базових понять, таких як команди та функції, для абсолютних початківців.
-    Вправи призначені для самостійної роботи, але вчителі можуть зареєструватись для
-    відстеження статистики успішності своїх учнів!
-  codecademy_longdescription: Codecademy - це інтерактивне, кероване учнем, навчання,
-    котре охоплює основи інформатики через вивчення JavaScript десятками мільйонів
-    учнів по всьому світу. Ми підготували цілісне заняття Години коду з тестами та
-    слайдами, в кінці якого учень створить завершений проект.
-  codecombat_longdescription: Перемагайте людожерів, вивчаючи Python або JavaScript
-    у цій епічній грі в програмування!
-  codemonkey_longdescription: 'CodeMonkey це онлайнова гра, котра навчає програмуванню
-    справжньою мовою програмування! Учням потрібно зробити так, щоб мавпа ловила банани,
-    що стає все складнішим із кожним рівнем. За рішення можна отримати значки-зірочки,
-    якими можна поділитись одним клацанням. '
-  codeavengers_longdescription: Створіть двовимірну гру для двох гравців, виконуючи
-    10 коротких вправ на JavaScript. Далі продовжуйте вивчення основ програмування
-    (змінні та умови), створюючи Тест, яким поділитесь із друзями. В ході роботи отримуйте
-    бали та значки, змагаючись за перші місця таблиці лідерів рейтингу програмування.
-  processing_longdescription: Вступ до програмування в контексті візуального мистецтва
-    за допомогою мови програмування Processing. Короткі відео-уроки знайомлять з простими
-    вправами з проектування інтерактивної програми малювання
-  robomind_longdescription: 'Учні вивчають основи програмування, контролюючи власного
-    віртуального робота. Цей онлайновий курс повністю самодостатній, і містить короткі
-    презентації, відео-ролики, тести та автоматизовані підказки, котрі допомагають
-    виконати завдання з програмування. '
-  groklearning_longdescription: Створіть програму на Python для балакучої Елізи, котра
-    хоче стати роботом-психотерапевтом. Ви навчите Елізу говорити правильні слова.
-    Зможете переконати своїх друзів, що з ними розмовляє людина, а не комп'ютер?
-  quorum_longdescription: Цей підручник доступний для людей з вадами зору, які працюють
-    з програмами читання з екрану. Приєднуйтесь до Мері на екскурсію в біологічну
-    лабораторію та вивчайте мову програмування Quorum. Цей підручник на основі онлайнових
-    вправ призначений для самостійного опрацювання учнями.
-  codespark_longdescription: Сімейка Фо допоможе весело й доступно познайомитись з
-    програмуванням. Милі персонажі, котрим потрібно вирішити задачі та оживити віртуальний
-    світ. Ця гра не містить слів, тож грати можуть всі!
-  kodable_longdescription: Kodable - це самостійне гра для iPad, котра знайомить дітей
-    від 5 років з основами програмування. Супровід вчителя чи іншого дорослого не
-    обов'язковий, хоча й бажаний.
-  tynkerapp_longdescription: Навчіться програмувати, розв'язуючи цікаві завдання з
-    програмування. Легко створюйте ігри та історії, використовуючи тематичну графіку,
-    більше 10 ігрових комплектів та редагованих персонажів. Не потрібне підключення
-    до Інтернету. Можна отримати доступ до результатів роботи через Інтернет.
-  robomindnl_longdescription: 'Учні вивчають основи програмування, контролюючи власного
-    віртуального робота. Цей онлайновий курс повністю самодостатній, і містить короткі
-    презентації, відео-ролики, тести та автоматизовані підказки, котрі допомагають
-    виконати завдання з програмування. '
-  flappy_longdescription: Використовуючи перетягування блоків, створіть гру в Пурха,
-    налаштовуючи її різний вигляд (Акула, Санта, як завгодно). Перенесіть гру на свій
-    телефон одним клацанням.
-  bitsbox_longdescription: За допомогою власного віртуального планшету можна створити
-    кілька ігрових програм та поділитися ними. Прості інструкції дозволяють дітям
-    вивчити справжній Javascript, і чим краще ви вчитеся, тим більшого досягнете.
-  makegameswithus_longdescription: Навчіться програмувати, створюючи гру для iPhone
-    за допомогою нової мови, призначеної для початківців - Swift! Створюйте гру, натхненну
-    покемонами - пишіть код, щоб навчити монстриків виконувати нові рухи. Ви навчитеся
-    використовувати змінні, методи та об'єкти, щоб привести персонажів до перемоги!
-  touchdevelop_longdescription: 'Сенсорний редактор допоможе створити піксельну графіку,
-    розв''язувати ведмежі задачки чи розробити власну гру зі стрибаючим птахом. '
-  appinventor_longdescription: Розважальні, швидкі відео-уроки поетапного створення
-    трьох простих додатків телефону або планшета на Android. Призначені як для новачків,
-    так досвідчених учнів, ці уроки Години коду допоможуть розпочати програмування
-    власних проектів. І уявіть собі, можна поділитися своїми творіннями з друзями!
-    Ці навчальні діяльності підходять як для індивідуальної, так і групової роботи
-    з вчителем.
-  blockly_longdescription: Маєте комп'ютери з повільним (чи відсутнім) Інтернетом?
-    Завантажте вправи Blockly, попередники вправ на Code.org - ZIP-архів на 3MB можна
-    завантажити на комп'ютер або запустити з флешки.
-  thinkersmith2_longdescription: 'Учні дізнаються про представлення та зберігання
-    символів у двійковому вигляді, як функцій ВКЛ та ВИКЛ. У кінці заняття учні класу
-    закодують власні ініціали та заберуть їх з собою додому. '
-  kodableunplugged_longdescription: 'Вправа fuzzFamily Frenzy розроблена для використання
-    на звичайному папері, і слугує вступом в алгоритмічну логіку для дітей віком від
-    5 років. Вчитель повинен пояснити правила гри, а учні створять вказівки однокласникам
-    з метою подолання смуги перешкод. '
-  projguts_longdescription: Ця безмашинна вправа допоможе учням дізнатися про моделювання,
-    створюючи різні версії гри "камінь-папір-ножиці", і спостерігаючи результати цих
-    експериментів.
+  codeorg_longdescription: 'Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами.'
+  codeintl_longdescription: 'Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами.'
+  thinkersmithspanish_longdescription: 'За допомогою визначеного словника робота, учні навчаться скеровувати один одного для досягнення певної мети, без попередніх домовленостей. Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває навик відлагодження. "Мої друзі-роботи" працює найкраще як групова діяльність, і містить робочі аркуші вчителя для використання у класі.'
+  khan_longdescription: Вивчайте основи програмування на JavaScript шляхом створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanes_longdescription: Вивчайте основи програмування на JavaScript шляхом створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanpt_longdescription: Вивчайте основи програмування на JavaScript шляхом створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanhe_longdescription: Вивчайте основи програмування на JavaScript шляхом створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanfr_longdescription: Вивчайте основи програмування на JavaScript шляхом створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanpl_longdescription: Вивчайте основи програмування на JavaScript шляхом створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  tynker_longdescription: "Створюйте власні ігри та діліться ними з друзями! Розв'язуйте цікаві задачі з програмування та вивчайте базові поняття на кожному рівні. Додавайте до гри анімованих персонажів, розробляйте кілька рівнів та розставляйте скарби. Включайте у грі правила фізики. Переглядайте роботу коду блоків на JavaScript. Передавайте свої ігри на планшети iPad та Android. Обирайте з-поміж десятків вправ!"
+  scratch_longdescription: 'Зі Scratch ви можете створювати власні інтерактивні ігри, історії, анімації &mdash; та ділитися ними з друзями. Почніть з анімації свого імені, створення святкової листівки чи створення гри у теніс.'
+  lightbot_longdescription: Покеруйте Світлячком, щоб він запалив усі сині плити! Світлячок використовує ігрове програмування для практичного вивчення основних понять інформатики. Навчіться складати послідовні вказівки, писати процедури та використовувати цикли для проходження рівнів. Ідеально підходить для будь-якого віку.
+  thinkersmith_longdescription: 'За допомогою визначеного словника робота, учні навчаться скеровувати один одного для досягнення певної мети, без попередніх домовленостей. Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває навик відлагодження. "Мої друзі-роботи" працює найкраще як групова діяльність, і містить робочі аркуші вчителя для використання у класі.'
+  condcards_longdescription: Дізнавайтесь про алгоритми та умовні команди у цій безмашинній вправі з колодою карт. Учні можуть виконувати завдання у групах, кожна з яких працюватиме зі своєю колодою.
+  lightbotintl_longdescription: Вивчайте базову логіку програмування, починаючи з найпростіших понять. Для дітей від 4 років. Працює на платформах iOS та Android (та у веб-браузерах). Вивчіть команди послідовного виконання, ідентифікуйте шаблони, навчіться використовувати процедури та цикли!
+  codehs_longdescription: "Віддавати команди для комп'ютера, власне в чому й полягає програмування, так само, як давати команди собаці. Вивчайте програмування з собакою Карел&mdash;цікавий, доступний візуальний вступ до програмування, який пропонує вивчення базових понять, таких як команди та функції, для абсолютних початківців. Вправи призначені для самостійної роботи, але вчителі можуть зареєструватись для відстеження статистики успішності своїх учнів!"
+  codecademy_longdescription: 'Codecademy - це інтерактивне, кероване учнем, навчання, котре охоплює основи інформатики через вивчення JavaScript десятками мільйонів учнів по всьому світу. Ми підготували цілісне заняття Години коду з тестами та слайдами, в кінці якого учень створить завершений проект.'
+  codecombat_longdescription: Перемагайте людожерів, вивчаючи Python або JavaScript у цій епічній грі в програмування!
+  codemonkey_longdescription: 'CodeMonkey це онлайнова гра, котра навчає програмуванню справжньою мовою програмування! Учням потрібно зробити так, щоб мавпа ловила банани, що стає все складнішим із кожним рівнем. За рішення можна отримати значки-зірочки, якими можна поділитись одним клацанням. '
+  codeavengers_longdescription: Створіть двовимірну гру для двох гравців, виконуючи 10 коротких вправ на JavaScript. Далі продовжуйте вивчення основ програмування (змінні та умови), створюючи Тест, яким поділитесь із друзями. В ході роботи отримуйте бали та значки, змагаючись за перші місця таблиці лідерів рейтингу програмування.
+  processing_longdescription: Вступ до програмування в контексті візуального мистецтва за допомогою мови програмування Processing. Короткі відео-уроки знайомлять з простими вправами з проектування інтерактивної програми малювання
+  robomind_longdescription: 'Учні вивчають основи програмування, контролюючи власного віртуального робота. Цей онлайновий курс повністю самодостатній, і містить короткі презентації, відео-ролики, тести та автоматизовані підказки, котрі допомагають виконати завдання з програмування. '
+  groklearning_longdescription: "Створіть програму на Python для балакучої Елізи, котра хоче стати роботом-психотерапевтом. Ви навчите Елізу говорити правильні слова. Зможете переконати своїх друзів, що з ними розмовляє людина, а не комп'ютер?"
+  quorum_longdescription: Цей підручник доступний для людей з вадами зору, які працюють з програмами читання з екрану. Приєднуйтесь до Мері на екскурсію в біологічну лабораторію та вивчайте мову програмування Quorum. Цей підручник на основі онлайнових вправ призначений для самостійного опрацювання учнями.
+  codespark_longdescription: Сімейка Фо допоможе весело й доступно познайомитись з програмуванням. Милі персонажі, котрим потрібно вирішити задачі та оживити віртуальний світ. Ця гра не містить слів, тож грати можуть всі!
+  kodable_longdescription: "Kodable - це самостійне гра для iPad, котра знайомить дітей від 5 років з основами програмування. Супровід вчителя чи іншого дорослого не обов'язковий, хоча й бажаний."
+  tynkerapp_longdescription: "Навчіться програмувати, розв'язуючи цікаві завдання з програмування. Легко створюйте ігри та історії, використовуючи тематичну графіку, більше 10 ігрових комплектів та редагованих персонажів. Не потрібне підключення до Інтернету. Можна отримати доступ до результатів роботи через Інтернет."
+  robomindnl_longdescription: 'Учні вивчають основи програмування, контролюючи власного віртуального робота. Цей онлайновий курс повністю самодостатній, і містить короткі презентації, відео-ролики, тести та автоматизовані підказки, котрі допомагають виконати завдання з програмування. '
+  flappy_longdescription: Використовуючи перетягування блоків, створіть гру в Пурха, налаштовуючи її різний вигляд (Акула, Санта, як завгодно). Перенесіть гру на свій телефон одним клацанням.
+  bitsbox_longdescription: За допомогою власного віртуального планшету можна створити кілька ігрових програм та поділитися ними. Прості інструкції дозволяють дітям вивчити справжній Javascript, і чим краще ви вчитеся, тим більшого досягнете.
+  makegameswithus_longdescription: "Навчіться програмувати, створюючи гру для iPhone за допомогою нової мови, призначеної для початківців - Swift! Створюйте гру, натхненну покемонами - пишіть код, щоб навчити монстриків виконувати нові рухи. Ви навчитеся використовувати змінні, методи та об'єкти, щоб привести персонажів до перемоги!"
+  touchdevelop_longdescription: "Сенсорний редактор допоможе створити піксельну графіку, розв'язувати ведмежі задачки чи розробити власну гру зі стрибаючим птахом. "
+  appinventor_longdescription: Розважальні, швидкі відео-уроки поетапного створення трьох простих додатків телефону або планшета на Android. Призначені як для новачків, так досвідчених учнів, ці уроки Години коду допоможуть розпочати програмування власних проектів. І уявіть собі, можна поділитися своїми творіннями з друзями! Ці навчальні діяльності підходять як для індивідуальної, так і групової роботи з вчителем.
+  blockly_longdescription: "Маєте комп'ютери з повільним (чи відсутнім) Інтернетом? Завантажте вправи Blockly, попередники вправ на Code.org - ZIP-архів на 3MB можна завантажити на комп'ютер або запустити з флешки."
+  thinkersmith2_longdescription: 'Учні дізнаються про представлення та зберігання символів у двійковому вигляді, як функцій ВКЛ та ВИКЛ. У кінці заняття учні класу закодують власні ініціали та заберуть їх з собою додому. '
+  kodableunplugged_longdescription: 'Вправа fuzzFamily Frenzy розроблена для використання на звичайному папері, і слугує вступом в алгоритмічну логіку для дітей віком від 5 років. Вчитель повинен пояснити правила гри, а учні створять вказівки однокласникам з метою подолання смуги перешкод. '
+  projguts_longdescription: 'Ця безмашинна вправа допоможе учням дізнатися про моделювання, створюючи різні версії гри "камінь-папір-ножиці", і спостерігаючи результати цих експериментів.'
   hourofcode_longdescription: Бланк для нового code.org/hoc
-  frozen_longdescription: Скористаємось вмінням програмувати, щоб допомогти Анні та
-    Ельзі познайомитись із красою чарівних крижинок. Ви складете сніжинки та узори,
-    покатаєтесь на ковзанах та створите зимову казку, якою зможете поділитися з друзями!
-  playlab_longdescription: Створіть історію або гру в Ігровій лабораторії! Запрограмуйте
-    тварин, піратів, зомбі, ніндзя і багато інших персонажів, щоб вони рухалися, говорили,
-    набирали бали і навіть запускали вогняні кулі!
+  frozen_longdescription: Скористаємось вмінням програмувати, щоб допомогти Анні та Ельзі познайомитись із красою чарівних крижинок. Ви складете сніжинки та узори, покатаєтесь на ковзанах та створите зимову казку, якою зможете поділитися з друзями!
+  playlab_longdescription: Створіть історію або гру в Ігровій лабораторії! Запрограмуйте тварин, піратів, зомбі, ніндзя і багато інших персонажів, щоб вони рухалися, говорили, набирали бали і навіть запускали вогняні кулі!
   codeorg_beyond_name: Вступ до інформатики (до 8 класу)
   khan_beyond_name: Вивчайте програмування
   tynker_beyond_name: Вивчайте програмування вдома
@@ -876,30 +742,23 @@
   processing_beyond_platformtext: Сучасні веб-браузери
   alice_beyond_platformtext: Windows або Mac (потрібна установка)
   sphero_beyond_platformtext: Покупка робота
-  codeorg_beyond_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими
-    птахами!
+  codeorg_beyond_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими птахами!
   khan_beyond_shortdescription: Вчимося малювати в JavaScript
   tynker_beyond_shortdescription: Веселий та цікавий курс для учнів 4-8 класів
   scratch_beyond_shortdescription: Створюйте інтерактивні ігри, історії та анімації.
   lightbot_beyond_shortdescription: Гра вивчення базових понять програмування
   codecademy_beyond_shortdescription: Вивчайте основи програмування JavaScript у веб-браузері
-  kodable_beyond_shortdescription: Цікава гра для iPad із вивчення базових понять
-    програмування
-  scratchjr_beyond_shortdescription: 'Створюйте інтерактивні історії та ігри за допомогою
-    ScratchJr. '
+  kodable_beyond_shortdescription: Цікава гра для iPad із вивчення базових понять програмування
+  scratchjr_beyond_shortdescription: 'Створюйте інтерактивні історії та ігри за допомогою ScratchJr. '
   hopscotch_beyond_shortdescription: Вчимо візуальне програмування на iPad
-  pocketcode_beyond_shortdescription: Створіть гру на смартфоні та поділіться нею
-    з друзями!
+  pocketcode_beyond_shortdescription: Створіть гру на смартфоні та поділіться нею з друзями!
   groklearning_beyond_shortdescription: Базовий вступ до програмування на Python
   hacketyhack_beyond_shortdescription: Вивчайте Ruby з самого початку
   robomind_beyond_shortdescription: Напишіть код для віртуального робота
-  makegameswithus_beyond_shortdescription: Навчіться створювати гру для iPhone за
-    годину
+  makegameswithus_beyond_shortdescription: Навчіться створювати гру для iPhone за годину
   appinventor_beyond_shortdescription: Розробіть власну програму! (лише Android)
-  touchdevelop_beyond_shortdescription: Створіть мобільну програму прямо на телефоні,
-    планшеті чи ноутбуці
-  codehs_beyond_shortdescription: Вчіться програмувати на JavaScript у веселому візуальному
-    середовищі
+  touchdevelop_beyond_shortdescription: Створіть мобільну програму прямо на телефоні, планшеті чи ноутбуці
+  codehs_beyond_shortdescription: Вчіться програмувати на JavaScript у веселому візуальному середовищі
   udemy_beyond_shortdescription: Десятки онлайнових курсів програмування
   lynda_beyond_shortdescription: Десятки онлайнових курсів програмування
   edx_beyond_shortdescription: Найпопулярніший курс Гарварду
@@ -916,195 +775,44 @@
   codea_beyond_shortdescription: Створіть програми на своєму iPad
   lego_beyond_shortdescription: Створіть та запрограмуйте робота
   finch_beyond_shortdescription: Робот для уроків інформатики
-  arduino_beyond_shortdescription: Вивчайте Arduino з Sparkfun's Digital Sandbox.
+  arduino_beyond_shortdescription: "Вивчайте Arduino з Sparkfun's Digital Sandbox."
   processing_beyond_shortdescription: Вивчення мови Processing
   alice_beyond_shortdescription: Навчайте програмуванню в 3D-середовищі
-  sphero_beyond_shortdescription: Уроки SPRK містять цікавий прискорений курс програмування
-    роботів, водночас розвиваючи математичні та природничі знання та навики.
-  codeorg_beyond_longdescription: Вивчайте основи інформатики за допомогою візуального
-    програмування. 3 повні курси, кожен з яких складається з 15-20 уроків, які поєднують
-    "змішані" вправи та ігроподібні інструкції, призначені для самостійної роботи,
-    поряд з відео-лекціями від Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants
-    vs. Zombies. Ознайомтесь з циклами, умовами, простими алгоритмами, функціями та
-    змінними.
-  khan_beyond_longdescription: Вивчайте основи програмування на JavaScript шляхом
-    створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
-  tynker_beyond_longdescription: Tynker робить програмування цікавим та легким, робить
-    його візуальним. Діти створюють ігри та мобільні застосунки, впорядковуючи блоки
-    коду. При цьому відпадає необхідність вивчати синтаксис програмування. Діти одразу
-    втілюють свої ідеї в анімованих історіях та математичних виразах - це сприяє прогресивному
-    навчанню. Навчаючи основам, Tynker також знайомить зі складнішими поняттями, такими
-    як синтаксичне програмування.
-  scratch_beyond_longdescription: Зі Scratch ви можете створювати власні інтерактивні
-    ігри, історії, анімації &mdash; та ділитися ними з друзями. Почніть з анімації
-    свого імені, створення святкової листівки чи створення гри у теніс.
-  lightbot_beyond_longdescription: Вивчайте базову логіку програмування, починаючи
-    з найпростіших понять. Для дітей від 4 років. Працює на платформах iOS та Android
-    (та у веб-браузерах). Вивчіть команди послідовного виконання, ідентифікуйте шаблони,
-    навчіться використовувати процедури та цикли!
-  codecademy_beyond_longdescription: Codecademy - це інтерактивне, кероване учнем,
-    навчання, котре охоплює основи інформатики через вивчення JavaScript десятками
-    мільйонів учнів по всьому світу. Ми підготували цілісне заняття Години коду з
-    тестами та слайдами, в кінці якого учень створить завершений проект.
-  kodable_beyond_longdescription: Kodable - це самостійне гра для iPad, котра знайомить
-    дітей від 5 років з основами програмування. Супровід вчителя чи іншого дорослого
-    не обов'язковий, хоча й бажаний.
-  scratchjr_beyond_longdescription: ScratchJr це вступна мова програмування, котра
-    дозволяє дітям створювати власні інтерактивні історії та ігри. Потрібно складати
-    графічні блоки команд, щоб змусити персонажів рухатись, стрибати, танцювати та
-    співати
-  hopscotch_beyond_longdescription: 'Підручник на iPad з використанням мови програмування
-    Hopscotch. Учні у власному темпі створюють ігри та програми на своїх мобільних
-    пристроях, працюючи індивідуально чи в малих групах (до 3 учнів на пристрій). '
-  pocketcode_beyond_longdescription: Створіть власну гру на телефоні з Pocket Code!
-    Допоможіть парашутистові Стіву доставити пакунки. Ви зможете поділитись грою з
-    друзями!
-  groklearning_beyond_longdescription: Вступний курс інформатики на основі мови програмування
-    Python для тих, хто не має попереднього досвіду програмування. Наше унікальне
-    поєднання базового матеріалу з цікавими завданнями допоможе розібратись як у мові
-    Python, так і з самим програмуванням. Ми апробували навчальні матеріали з учнями
-    різного віку з різним базовим рівнем і переконані, що вони підійдуть і вам.
-  hacketyhack_beyond_longdescription: 'Hackety Hack навчить абсолютним основам програмування
-    із самого початку. Не потрібно попереднього досвіду вивчення програмування! З
-    Hackety Hack ви вивчите мову Ruby, котра використовується для різних типів програм,
-    включаючи настільні розробки та веб-сайти. [Примітка: потрібна установка програми]'
-  robomind_beyond_longdescription: 'Учні вивчать основи програмування, контролюючи
-    власного віртуального робота. Цей онлайновий курс повністю самодостатній, і містить
-    короткі презентації, відео-ролики, тести та автоматизовані підказки, котрі допоможуть
-    виконати завдання з програмування. '
-  makegameswithus_beyond_longdescription: Вже знаєте трохи ObjectiveC? Тоді навчіться
-    створювати гру для iPhone за одну годину! Ми покажемо, як можна спроектувати,
-    запрограмувати, протестувати та пограти у гру в своєму браузері, а потім поділитись
-    нею з друзями на Facebook! Попередній досвід розробки для iPhone не потрібен.
-    Потрібне розуміння змінних, методів та об'єктів.
-  appinventor_beyond_longdescription: Розважальні, швидкі відео-уроки поетапного створення
-    трьох простих додатків телефону або планшета на Android. Призначені як для новачків,
-    так досвідчених учнів, ці уроки Години коду допоможуть розпочати програмування
-    власних проектів. І уявіть собі, можна поділитися своїми творіннями з друзями!
-    Ці навчальні діяльності підходять як для індивідуальної, так і групової роботи
-    з вчителем.
-  touchdevelop_beyond_longdescription: TouchDevelop дозволяє створювати програми на
-    iPad, iPhone, Android, PC, Mac, Windows Phone. Наш сенсорний редактор зробить
-    програмування цікавим, навіть на телефоні чи планшеті!
-  codehs_beyond_longdescription: 'Вивчайте основи програмування з цуценям Карелом
-    - це веселий, доступний та візуальний вступ до програмування, де команди для комп''ютера
-    віддаються, як команди для собаки. Цей підручник найкраще опрацьовувати із вчителем,
-    але можна вчитися й самостійно. [Примітка: потрібна оплата]'
-  udemy_beyond_longdescription: 'Незалежно від того, чи ви не написали жодного рядка
-    коду, чи заробляєте програмуванням на життя, на Udemy є курс саме для вас, із
-    супроводом професійного викладача. [Примітка: потрібна оплата]'
-  lynda_beyond_longdescription: 'Дізнайтеся, як писати код, створювати і розробляти
-    веб-застосунки, від самих основ об''єктно-орієнтованого програмування на мові
-    C і С++, до Java. Наші уроки допоможуть навчитися програмувати мобільні додатки,
-    працювати з PHP і базами даних MySQL, ознайомитись з мовою статистичної обробки
-    R і багато іншого.  [Примітка: потрібна оплата]'
-  edx_beyond_longdescription: CS50x це вступ до інтелектуальної сфери інформатики
-    та мистецтва програмування для студентів різних спеціальностей від Гарварду. Курс
-    охоплює такі теми як абстрації, алгоритми, структури даних, інкапсуляція, керування
-    ресурсами, безпека, розробка програм та веб-розробка. В курсі використовуються
-    такі мови як  C, PHP та JavaScript, а також SQL, CSS та HTML. Очний курс CS50x
-    є другим за масовістю курсом Гарварду.
-  coursera_beyond_longdescription: 'Курс CS 101 від Стенфорду викладає Нік Парланте
-    (безкоштовно!) CS101 містить базові поняття інформатики для аудиторії без попередньої
-    підготовки. Можна експериментувати з короткими фрагментами коду і пробувати розібратись
-    у можливостях та обмеженнях комп''ютерів. CS101 також знайомить із загальними
-    основами комп''ютерної техніки: що таке комп''ютер, його апаратне та програмне
-    забезпечення, що таке Інтернет. Не вимагається попередній рівень знань, окрім
-    вміння користуватись браузером.'
-  udacity_beyond_longdescription: У цьому курси можна вивчити базові поняття інформатики
-    і навчитися писати власні програми в контексті розробки веб-сканера. Для навчання
-    не потрібен попередній досвід програмування. Ласкаво просимо початківців! По завершенню
-    курсу, ви вивчите основи інформатики та вмітимете писати програми мовою Python
-    для розв'язання власних задач. Цей курс може слугувати підготовкою до подальших
-    курсів інформатики середнього рівня.
-  teachingtree_beyond_longdescription: TeachingTree є відкритою платформою, котра
-    дозволяє організовувати навчальні матеріали. Нашою метою є надати учням легкий
-    доступ до конкретних фрагментів, щоб дізнатися про окремі поняття. Ми запрошуємо
-    всіх розміщувати відео та додавати теги до понять.
-  kodu_beyond_longdescription: Kodu дозволяє створювати ігри для комп'ютера та XBox
-    за допомогою простої візуальної мови програмування. Kodu можна використовувати
-    для навчання креативності, навичок розв'язування задач, подання сюжетних історій,
-    а також програмування. Kodu доступний для кожного, хто хоче створити гру, незалежно
-    від віку та попередніх знань. Для комп'ютера Kodu можна завантажити безкоштовно.
-    Kodu для XBox доступний у США через XBox Marketplace, у Indie Games channel вартістю
-    $5.
-  cargobot_beyond_longdescription: Cargo-Bot це головоломка, у якій роботу потрібно
-    навчитись переміщувати ящики. Звучить просто, чи не так? Тут є 36 складнющих завдань,
-    вражаючої музики та дивовижної графіки. Можете навіть записати своє рішення і
-    викласти на YouTube, щоб показати своїм друзям.
-  kidsruby_beyond_longdescription: 'Створюйте ігри, розважаючись, або й полегшуйте
-    собі роботу над домашніми завданнями за допомогою Ruby! Просто скажіть батькам
-    та вчителям, що ви вивчаєте мову програмування Ruby... ;) Це безкоштовно і працюватиме
-    на будь-якому комп''ютері. [Примітка: потрібна установка програми]'
-  w3schools_beyond_longdescription: Навчіться створювати веб-сайти на власному комп'ютері.
-    Ознайомтеся з серверними основами менш, ніж за один день. Навчіться підключати
-    бази даних до свого сайту
-  codeavengers_beyond_longdescription: Навчіться програмувати ігри, додатки та веб-сайти.
-    Розроблені фахівцями збірники з ідеальним для початківців рівнем складності, легкими
-    для розуміння інструкціями та корисними підказками, коли це потрібно. Наші курси
-    HTML, CSS та JavaScript містять завдання з написання коду та ігрові перевірки,
-    які роблять навчання веселим і ефективним для учнів різного віку.
-  mozilla_beyond_longdescription: Thimble робить створення та розміщення веб-сторінок
-    дивовижно простим. Пишіть та редагуйте HTML та CSS прямо у браузері, й одразу
-    переглядайте результат роботи. Розмістити завершений проект в Інтернеті та розіслати
-    його друзям можна за одне клацання мишею. Ідеально для початківців та фахівців.
-  codecombat_beyond_longdescription: Грайте як Маг, використовуючи код (заклинання)
-    для керування героями, проходження лабіринтів, перемог над людожерами, перехитрювання
-    ворогів та порятунку союзників! Вивчайте JavaScript у цій веб-грі на HTML 5 для
-    абсолютних початківців у програмуванні.
-  codea_beyond_longdescription: Codea для iPad дозволяє створювати ігри та симуляції  &mdash;
-    або реалізовувати будь-яку візуальну ідею. Перетворіть свої думки на інтерактивні
-    об'єкти, користуючись такими можливостями iPad як мульти-тач та акселерометр.
-    Ми вважаємо, що Codea є найкрасивішим редактором коду, й до того ж простим. Codea
-    створений для того, щоб ви могли торкнутися коду. Хочете змінити число? Торкніться
-    та перетягніть. Як щодо кольорів чи зображень? Торкання викличе візуальний редактор,
-    де можна обрати потрібну настройку.
-  lego_beyond_longdescription: Створюйте невеликих настроюваних та програмованих роботів
-    з кубиків LEGO.
-  finch_beyond_longdescription: Finch - це новий робот для навчання інформатиці. Його
-    розробили в результаті чотирирічних досліджень у лабораторії CREATE у Carnegie
-    Mellon. Finch створений для захоплюючого ознайомлення з мистецтвом програмування.
-    Він розуміє більше десятка мов та середовищ програмування, включаючи кілька таких,
-    що підійдуть для молодших учнів, віком від 8 років. Finch розроблений для того,
-    щоб дозволити учням створювати програми, збагачені інтерактивністю.
-  arduino_beyond_longdescription: Arduino - це популярна платформа, створена для того,
-    щоб допомогти художникам та дизайнерам працювати зі справжніми сенсорами, світлодіодами,
-    зумерами та іншим. Sparkfun Virtual Sandbox навчить програмувати Arduino прямо
-    в браузері.
-  processing_beyond_longdescription: Processing - це мова програмування, середовище
-    розробки та онлайнова спільнота. З 2001, Processing сприяє інформатичній грамотності
-    у візуальному мистецтві, та візуальній грамотності у технологіях. Початково створена
-    для розробки програмних макетів та викладання основ програмування у графічному
-    аспекті, Processing перетворилась на інструмент розробки для фахівців. На нинішній
-    день десятки тисяч учнів, студентів, художників, дизайнерів, дослідників та любителів
-    використовують Processing для навчання, створення прототипів та готових проектів.
-  alice_beyond_longdescription: Використовуючи інноваційне середовище програмування
-    для створення 3D-анімацій, проект Alice пропонує інструменти та навчальні матеріали
-    для навчання обчислювального мислення, навичок розв'язання задач та програмування
-    для учнів різних класів та рівнів.
-  sphero_beyond_longdescription: Чи ви є педагогом чи батьком, уроки SPRK пропонують
-    цікавий прискорений курс програмування роботів, водночас розвиваючи математичні
-    та природничі знання та навики.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "
+  sphero_beyond_shortdescription: Уроки SPRK містять цікавий прискорений курс програмування роботів, водночас розвиваючи математичні та природничі знання та навики.
+  codeorg_beyond_longdescription: 'Вивчайте основи інформатики за допомогою візуального програмування. 3 повні курси, кожен з яких складається з 15-20 уроків, які поєднують "змішані" вправи та ігроподібні інструкції, призначені для самостійної роботи, поряд з відео-лекціями від Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Ознайомтесь з циклами, умовами, простими алгоритмами, функціями та змінними.'
+  khan_beyond_longdescription: Вивчайте основи програмування на JavaScript шляхом створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  tynker_beyond_longdescription: 'Tynker робить програмування цікавим та легким, робить його візуальним. Діти створюють ігри та мобільні застосунки, впорядковуючи блоки коду. При цьому відпадає необхідність вивчати синтаксис програмування. Діти одразу втілюють свої ідеї в анімованих історіях та математичних виразах - це сприяє прогресивному навчанню. Навчаючи основам, Tynker також знайомить зі складнішими поняттями, такими як синтаксичне програмування.'
+  scratch_beyond_longdescription: 'Зі Scratch ви можете створювати власні інтерактивні ігри, історії, анімації &mdash; та ділитися ними з друзями. Почніть з анімації свого імені, створення святкової листівки чи створення гри у теніс.'
+  lightbot_beyond_longdescription: Вивчайте базову логіку програмування, починаючи з найпростіших понять. Для дітей від 4 років. Працює на платформах iOS та Android (та у веб-браузерах). Вивчіть команди послідовного виконання, ідентифікуйте шаблони, навчіться використовувати процедури та цикли!
+  codecademy_beyond_longdescription: 'Codecademy - це інтерактивне, кероване учнем, навчання, котре охоплює основи інформатики через вивчення JavaScript десятками мільйонів учнів по всьому світу. Ми підготували цілісне заняття Години коду з тестами та слайдами, в кінці якого учень створить завершений проект.'
+  kodable_beyond_longdescription: "Kodable - це самостійне гра для iPad, котра знайомить дітей від 5 років з основами програмування. Супровід вчителя чи іншого дорослого не обов'язковий, хоча й бажаний."
+  scratchjr_beyond_longdescription: ScratchJr це вступна мова програмування, котра дозволяє дітям створювати власні інтерактивні історії та ігри. Потрібно складати графічні блоки команд, щоб змусити персонажів рухатись, стрибати, танцювати та співати
+  hopscotch_beyond_longdescription: 'Підручник на iPad з використанням мови програмування Hopscotch. Учні у власному темпі створюють ігри та програми на своїх мобільних пристроях, працюючи індивідуально чи в малих групах (до 3 учнів на пристрій). '
+  pocketcode_beyond_longdescription: Створіть власну гру на телефоні з Pocket Code! Допоможіть парашутистові Стіву доставити пакунки. Ви зможете поділитись грою з друзями!
+  groklearning_beyond_longdescription: Вступний курс інформатики на основі мови програмування Python для тих, хто не має попереднього досвіду програмування. Наше унікальне поєднання базового матеріалу з цікавими завданнями допоможе розібратись як у мові Python, так і з самим програмуванням. Ми апробували навчальні матеріали з учнями різного віку з різним базовим рівнем і переконані, що вони підійдуть і вам.
+  hacketyhack_beyond_longdescription: 'Hackety Hack навчить абсолютним основам програмування із самого початку. Не потрібно попереднього досвіду вивчення програмування! З Hackety Hack ви вивчите мову Ruby, котра використовується для різних типів програм, включаючи настільні розробки та веб-сайти. [Примітка: потрібна установка програми]'
+  robomind_beyond_longdescription: 'Учні вивчать основи програмування, контролюючи власного віртуального робота. Цей онлайновий курс повністю самодостатній, і містить короткі презентації, відео-ролики, тести та автоматизовані підказки, котрі допоможуть виконати завдання з програмування. '
+  makegameswithus_beyond_longdescription: "Вже знаєте трохи ObjectiveC? Тоді навчіться створювати гру для iPhone за одну годину! Ми покажемо, як можна спроектувати, запрограмувати, протестувати та пограти у гру в своєму браузері, а потім поділитись нею з друзями на Facebook! Попередній досвід розробки для iPhone не потрібен. Потрібне розуміння змінних, методів та об'єктів."
+  appinventor_beyond_longdescription: Розважальні, швидкі відео-уроки поетапного створення трьох простих додатків телефону або планшета на Android. Призначені як для новачків, так досвідчених учнів, ці уроки Години коду допоможуть розпочати програмування власних проектів. І уявіть собі, можна поділитися своїми творіннями з друзями! Ці навчальні діяльності підходять як для індивідуальної, так і групової роботи з вчителем.
+  touchdevelop_beyond_longdescription: TouchDevelop дозволяє створювати програми на iPad, iPhone, Android, PC, Mac, Windows Phone. Наш сенсорний редактор зробить програмування цікавим, навіть на телефоні чи планшеті!
+  codehs_beyond_longdescription: "Вивчайте основи програмування з цуценям Карелом - це веселий, доступний та візуальний вступ до програмування, де команди для комп'ютера віддаються, як команди для собаки. Цей підручник найкраще опрацьовувати із вчителем, але можна вчитися й самостійно. [Примітка: потрібна оплата]"
+  udemy_beyond_longdescription: 'Незалежно від того, чи ви не написали жодного рядка коду, чи заробляєте програмуванням на життя, на Udemy є курс саме для вас, із супроводом професійного викладача. [Примітка: потрібна оплата]'
+  lynda_beyond_longdescription: "Дізнайтеся, як писати код, створювати і розробляти веб-застосунки, від самих основ об'єктно-орієнтованого програмування на мові C і С++, до Java. Наші уроки допоможуть навчитися програмувати мобільні додатки, працювати з PHP і базами даних MySQL, ознайомитись з мовою статистичної обробки R і багато іншого.  [Примітка: потрібна оплата]"
+  edx_beyond_longdescription: 'CS50x це вступ до інтелектуальної сфери інформатики та мистецтва програмування для студентів різних спеціальностей від Гарварду. Курс охоплює такі теми як абстрації, алгоритми, структури даних, інкапсуляція, керування ресурсами, безпека, розробка програм та веб-розробка. В курсі використовуються такі мови як  C, PHP та JavaScript, а також SQL, CSS та HTML. Очний курс CS50x є другим за масовістю курсом Гарварду.'
+  coursera_beyond_longdescription: "Курс CS 101 від Стенфорду викладає Нік Парланте (безкоштовно!) CS101 містить базові поняття інформатики для аудиторії без попередньої підготовки. Можна експериментувати з короткими фрагментами коду і пробувати розібратись у можливостях та обмеженнях комп'ютерів. CS101 також знайомить із загальними основами комп'ютерної техніки: що таке комп'ютер, його апаратне та програмне забезпечення, що таке Інтернет. Не вимагається попередній рівень знань, окрім вміння користуватись браузером."
+  udacity_beyond_longdescription: "У цьому курси можна вивчити базові поняття інформатики і навчитися писати власні програми в контексті розробки веб-сканера. Для навчання не потрібен попередній досвід програмування. Ласкаво просимо початківців! По завершенню курсу, ви вивчите основи інформатики та вмітимете писати програми мовою Python для розв'язання власних задач. Цей курс може слугувати підготовкою до подальших курсів інформатики середнього рівня."
+  teachingtree_beyond_longdescription: TeachingTree є відкритою платформою, котра дозволяє організовувати навчальні матеріали. Нашою метою є надати учням легкий доступ до конкретних фрагментів, щоб дізнатися про окремі поняття. Ми запрошуємо всіх розміщувати відео та додавати теги до понять.
+  kodu_beyond_longdescription: "Kodu дозволяє створювати ігри для комп'ютера та XBox за допомогою простої візуальної мови програмування. Kodu можна використовувати для навчання креативності, навичок розв'язування задач, подання сюжетних історій, а також програмування. Kodu доступний для кожного, хто хоче створити гру, незалежно від віку та попередніх знань. Для комп'ютера Kodu можна завантажити безкоштовно. Kodu для XBox доступний у США через XBox Marketplace, у Indie Games channel вартістю $5."
+  cargobot_beyond_longdescription: Cargo-Bot це головоломка, у якій роботу потрібно навчитись переміщувати ящики. Звучить просто, чи не так? Тут є 36 складнющих завдань, вражаючої музики та дивовижної графіки. Можете навіть записати своє рішення і викласти на YouTube, щоб показати своїм друзям.
+  kidsruby_beyond_longdescription: "Створюйте ігри, розважаючись, або й полегшуйте собі роботу над домашніми завданнями за допомогою Ruby! Просто скажіть батькам та вчителям, що ви вивчаєте мову програмування Ruby... ;) Це безкоштовно і працюватиме на будь-якому комп'ютері. [Примітка: потрібна установка програми]"
+  w3schools_beyond_longdescription: "Навчіться створювати веб-сайти на власному комп'ютері. Ознайомтеся з серверними основами менш, ніж за один день. Навчіться підключати бази даних до свого сайту"
+  codeavengers_beyond_longdescription: Навчіться програмувати ігри, додатки та веб-сайти. Розроблені фахівцями збірники з ідеальним для початківців рівнем складності, легкими для розуміння інструкціями та корисними підказками, коли це потрібно. Наші курси HTML, CSS та JavaScript містять завдання з написання коду та ігрові перевірки, які роблять навчання веселим і ефективним для учнів різного віку.
+  mozilla_beyond_longdescription: Thimble робить створення та розміщення веб-сторінок дивовижно простим. Пишіть та редагуйте HTML та CSS прямо у браузері, й одразу переглядайте результат роботи. Розмістити завершений проект в Інтернеті та розіслати його друзям можна за одне клацання мишею. Ідеально для початківців та фахівців.
+  codecombat_beyond_longdescription: Грайте як Маг, використовуючи код (заклинання) для керування героями, проходження лабіринтів, перемог над людожерами, перехитрювання ворогів та порятунку союзників! Вивчайте JavaScript у цій веб-грі на HTML 5 для абсолютних початківців у програмуванні.
+  codea_beyond_longdescription: "Codea для iPad дозволяє створювати ігри та симуляції  &mdash; або реалізовувати будь-яку візуальну ідею. Перетворіть свої думки на інтерактивні об'єкти, користуючись такими можливостями iPad як мульти-тач та акселерометр. Ми вважаємо, що Codea є найкрасивішим редактором коду, й до того ж простим. Codea створений для того, щоб ви могли торкнутися коду. Хочете змінити число? Торкніться та перетягніть. Як щодо кольорів чи зображень? Торкання викличе візуальний редактор, де можна обрати потрібну настройку."
+  lego_beyond_longdescription: Створюйте невеликих настроюваних та програмованих роботів з кубиків LEGO.
+  finch_beyond_longdescription: 'Finch - це новий робот для навчання інформатиці. Його розробили в результаті чотирирічних досліджень у лабораторії CREATE у Carnegie Mellon. Finch створений для захоплюючого ознайомлення з мистецтвом програмування. Він розуміє більше десятка мов та середовищ програмування, включаючи кілька таких, що підійдуть для молодших учнів, віком від 8 років. Finch розроблений для того, щоб дозволити учням створювати програми, збагачені інтерактивністю.'
+  arduino_beyond_longdescription: 'Arduino - це популярна платформа, створена для того, щоб допомогти художникам та дизайнерам працювати зі справжніми сенсорами, світлодіодами, зумерами та іншим. Sparkfun Virtual Sandbox навчить програмувати Arduino прямо в браузері.'
+  processing_beyond_longdescription: 'Processing - це мова програмування, середовище розробки та онлайнова спільнота. З 2001, Processing сприяє інформатичній грамотності у візуальному мистецтві, та візуальній грамотності у технологіях. Початково створена для розробки програмних макетів та викладання основ програмування у графічному аспекті, Processing перетворилась на інструмент розробки для фахівців. На нинішній день десятки тисяч учнів, студентів, художників, дизайнерів, дослідників та любителів використовують Processing для навчання, створення прототипів та готових проектів.'
+  alice_beyond_longdescription: "Використовуючи інноваційне середовище програмування для створення 3D-анімацій, проект Alice пропонує інструменти та навчальні матеріали для навчання обчислювального мислення, навичок розв'язання задач та програмування для учнів різних класів та рівнів."
+  sphero_beyond_longdescription: Чи ви є педагогом чи батьком, уроки SPRK пропонують цікавий прискорений курс програмування роботів, водночас розвиваючи математичні та природничі знання та навики.

@@ -3,7 +3,7 @@
   select_language: โปรดเลือกภาษาของคุณ
   computer_science: วิทยาการคอมพิวเตอร์
   computer_science_edweek: สัปดาห์การศึกษาวิทยาศาสตร์คอมพิวเตอร์
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 ธันวาคม 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> กำลังจะมาถึง. บอกคุณครูของคุณ, <a href="http://hourofcode.com"
     style="color: white; text-decoration:underline; font-weight:bold"> เพื่อช่วยคุณวางแผนการเรียนโครงการ
@@ -15,7 +15,8 @@
   learn_now: เรียนตอนนี้
   petition_message: นักเรียนทุกคนจากทุกโรงเรียนควรมีโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์
   petition_sign_message: 'ถ้าคุณเห็นด้วย ลงชื่อของคุณได้เลย มาเข้าร่วม #'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'ถ้าคุณสนับสนุนเรา ลงชื่อของคุณ เข้าร่วมกับคนอื่นอีก
+    # คน'
   name: ชื่อ
   email: อีเมล
   zipcode: รหัสไปรษณีย์หรือประเทศ
@@ -28,9 +29,9 @@
   hoc2014_students: Students
   hoc2014_try: ลอง
   hoc2014_teachers: ครูผู้สอน
-  hoc2014_host: Host it
+  hoc2014_host: เป็นเจ้าภาพ
   hoc2014_everyone: ทุกคน
-  hoc2014_support: สนับสนุน
+  hoc2014_support: สนับสนุน &#x25BE;
   hoc2014_whatishoc: Hour of Code คืออะไร?
   twentyhours_trynow: ลองตอนนี้
   california_heading: ขอโรงเรียนของคุณให้สอนวิทยาศาสตร์คอมพิวเตอร์
@@ -108,8 +109,8 @@
   learn_classes: ค้นหาชั้นเรียนในท้องถิ่น
   hoc_is_here: ' นี่คือ #HourOfCode - เข้าร่วมเรียน! @codeorg'
   just_did_hoc: 'ฉันเพิ่งเรียน #HourOfCode - เข้าร่วมเรียน! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: ทำไมโรงเรียนไม่หันมาสอนวิทยาการคอมพิวเตอร์ให้มากขึ้น เราสามารถแก้ไขปัญหานี้ได้
+    http://youtu.be/nKIu9yen5nc เยี่ยมชม http://code.org/ เพื่อเรียนรู้เพิ่มเติม
   learn_hoc: เข้าร่วมเรียน Hour of Code
   beyond_hoc: เกินหนึ่งชั่วโมง
   what_gender: คุณเพศอะไร
@@ -127,11 +128,12 @@
   contact_form_topic_press: สื่อ (การสัมภาษณ์)
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
     - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_student: '"ฉันรู้เลยว่านี่เป็นโอกาส<b>ครั้งหนึ่งในชีวิต</b>" - Mariana Alzate
+    นักเรียนประถม 5'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     - Michael Clark, Teacher'
   studiobar_title: ทำความรู้จัก <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: หลักสูตรพื้นฐาน
   studiobar_elementary_body: สามหลักสูตรใหม่ของเราสำหรับ K &#8209; 5
   studiobar_hoc_title: The Hour of Code
@@ -144,28 +146,58 @@
   studiobar_frozen_body: สร้างเมืองน้ำแข็งกับ Anna และ Elsa
   studiobar_donate_title: บริจาค/สนับสนุน
   studiobar_donate_body: เด็กจะได้รับการศึกษาจากแต่ละดอลลาร์ที่คุณบริจาค
-  studiobar_shop_title: Shop
+  studiobar_shop_title: ร้านค้า
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: ร้านค้า
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Watch the video
   homepage_action_text_teachervideo: ''
@@ -178,10 +210,10 @@
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_blurb_students: สำรวจบทเรียนของเราทั้งหมด
   homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_link_local: ค้นหาชั้นเรียนในท้องถิ่น
+  homepage_slot_text_link_othercourses: หลักสูตรออนไลน์อื่นๆ
   homepage_slot_text_title_educators: Educators
   homepage_slot_text_blurb_educators: Teach your students
   homepage_slot_text_link_k5: Courses for grades K-5
@@ -1005,26 +1037,3 @@
     3D โครงการ Alice มีเครื่องมือและวัสดุสำหรับการสอนและการเรียนเรียนรู้เกี่ยวกับ
     การคิดคำนวณ การแก้ปัญหา และการเขียนโปรแกรมสำหรับทุกเพศทุกวัย
   sphero_beyond_longdescription: ไม่ว่าคุณจะเป็นผู้สอหรือผู้ปกครอง บทเรียน SPRK จะสอนให้เด็กๆสนุกกับการเขียนโปรแกรมหุ่นยนต์ในขณะที่ฝึกทักษะในทางคณิตศาสตร์และวิทยาศาสตร์ไปพร้อมๆกัน
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "

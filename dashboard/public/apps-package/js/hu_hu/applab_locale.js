@@ -52,8 +52,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "szöveg"},
 "catVariables":function(d){return "változók"},
 "continue":function(d){return "Tovább"},
-"container":function(d){return "create container"},
-"containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
+"container":function(d){return "Tároló létrehozása"},
+"containerTooltip":function(d){return "Létrehoz egy osztály tárolót és beállítja a belső HTML-t."},
 "finalLevel":function(d){return "Gratulálok, megoldottad az utolsó feladatot."},
 "nextLevel":function(d){return "Gratulálok! Ezt a feladatot megoldottad."},
 "no":function(d){return "Nem"},
@@ -68,5 +68,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "Belépés"},
 "stepOver":function(d){return "Átlépés"},
 "stepOut":function(d){return "Kilépés"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "Adat megtekintése"},
 "yes":function(d){return "Igen"}};

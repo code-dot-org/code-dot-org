@@ -4,7 +4,6 @@
   "circleBlockTitle": "круг (радиус, стил, боја)",
   "displayBlockTitle": "Покажи",
   "ellipseBlockTitle": "елипса (ширина, висина, стил, боја)",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "extraTopBlocks": "Имате неповрзани блокови. Дали мислевте да се закачите на овие на \"Прикажи\" блок?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "шалче (горе, долу)",

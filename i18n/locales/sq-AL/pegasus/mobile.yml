@@ -1,57 +1,41 @@
-"sq-AL":
+sq-AL:
   hello: Pershendetje Botë
   select_language: Ju lutem zgjedheni gjuhën tuaj
   computer_science: Shkenca Kompjuterike
   computer_science_edweek: Java Edukuese per Shkencat Kompjuterike
   csedweek_dates: Dhjetor 8-14, 2014
-  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Ora e kodimit</a> po vjen. Të thirrur të gjithë mësuesit/ mësueset
-    dhe organizatorët, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">planifikojeni Oren tuaj të Kodimit</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">A je ti nje mesues CS? Shiko burimet e Javes CS</a>'
-  n_have_learned_an_hoc: <h1>Provo</h1><h2>Ora e Kodimit</h2><h3># të shërbyer</h3>
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora e kodimit</a> po vjen. Të thirrur të gjithë mësuesit/ mësueset dhe organizatorët, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifikojeni Oren tuaj të Kodimit</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">A je ti nje mesues CS? Shiko burimet e Javes CS</a>'
+  n_have_learned_an_hoc: '<h1>Provo</h1><h2>Ora e Kodimit</h2><h3># të shërbyer</h3>'
   anybody_can_learn: Cdokush mund te mesoj.
   learn_now: Meso tani
-  petition_message: Cdo student ne cdo shkolle duhet te kete mundesine te mesoje shkencat
-    kompjuterike
-  petition_sign_message: 'Nëse ju pranoni, nënshkruani emrin e juaj. Bashkangjitu
-    me # të tjerë.'
+  petition_message: Cdo student ne cdo shkolle duhet te kete mundesine te mesoje shkencat kompjuterike
+  petition_sign_message: 'Nëse ju pranoni, nënshkruani emrin e juaj. Bashkangjitu me # të tjerë.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   name: Emri
   email: Email
   zipcode: Kodi Postar ose Shteti
   submit: Dorëzo
   twentyhours_heading: Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike
-  twentyhours_text: E mbaruat oren e pare te Kodimit? Tani mesoni me shume per Shkencen
-    Kompjuterike dhe konceptet e programimit ne mesimin ne vazhdim.
-  hoc2014_heading: Bashkohu ne <a href="http://hourofcode.com"> Oren e Kodimit</a><br/>8-14
-    Dhjetor,2014<br/>
+  twentyhours_text: E mbaruat oren e pare te Kodimit? Tani mesoni me shume per Shkencen Kompjuterike dhe konceptet e programimit ne mesimin ne vazhdim.
+  hoc2014_heading: 'Bashkohu ne <a href="http://hourofcode.com"> Oren e Kodimit</a><br/>8-14 Dhjetor,2014<br/>'
   hoc2014_students: Studentët
   hoc2014_try: Provoje
   hoc2014_teachers: Mesuesit
   hoc2014_host: Behu ti miku i ketij eventi
   hoc2014_everyone: Kushdo
-  hoc2014_support: Përkrahe
+  hoc2014_support: 'Përkrahe &#x25BE;'
   hoc2014_whatishoc: Çfarë është Ora e Kodimit?
   twentyhours_trynow: Provo tani
   california_heading: Pyete shkollen tende qe te te mesoje shkence kompjuterike
-  california_text: Cdo mesues mund te ofroje <a href='http://studio.code.org/'> falas
-    mesimet tona</a>. Cdo shkolle fillore mund <a href='http://code.org/educate/k5'>
-    te jape mesim shkenca komjuterike</a>. Pyetni shkollat e mesme te <a href='http://code.org/educate/districts'>
-    behen partnere me ne.
+  california_text: "Cdo mesues mund te ofroje <a href='http://studio.code.org/'> falas mesimet tona</a>. Cdo shkolle fillore mund <a href='http://code.org/educate/k5'> te jape mesim shkenca komjuterike</a>. Pyetni shkollat e mesme te <a href='http://code.org/educate/districts'> behen partnere me ne."
   california_button: Meso me shume
   flappy_heading: Ditëlindja Flappy te Code.org
-  flappy_text: Code.org sapo mbushi nje vit qe ekziston.<br/><br/> Festo me ne duke
-    krijuar lojen tende <b>Flappy</b>. Kodo rregullat e tua dhe ndaje ate qe krijon
-    me shoket e tu!
+  flappy_text: 'Code.org sapo mbushi nje vit qe ekziston.<br/><br/> Festo me ne duke krijuar lojen tende <b>Flappy</b>. Kodo rregullat e tua dhe ndaje ate qe krijon me shoket e tu!'
   view_english_site: Shfaq faqen ne gjuhen Angleze
   non_english_tutorials: 'Mësimet e përkthyera në shumë gjuhë:'
   write_your_first_program: Shkruani programin e parë kompjuterik tuajin
-  learn_cs_concepts: Mësoni konceptet fillestare të Shkencave Kompjuterike me programim
-    merr dhe lësho. Ky është një mësim sikurse lojë me video me mësimë nga Bill Gates,
-    Mark Zuckerberg, Zogjët e Zemëruar dhe Bimët kundër Lugatëve. Mësoni unazat-kthyese,
-    fjalitë nëse-atëherë, dhe alegoritme fillestare.
+  learn_cs_concepts: Mësoni konceptet fillestare të Shkencave Kompjuterike me programim merr dhe lësho. Ky është një mësim sikurse lojë me video me mësimë nga Bill Gates, Mark Zuckerberg, Zogjët e Zemëruar dhe Bimët kundër Lugatëve. Mësoni unazat-kthyese, fjalitë nëse-atëherë, dhe alegoritme fillestare.
   all_ages: Te gjitha moshat
   beginner: Fillestar
   n_participants: '# pjesmarrës'
@@ -61,18 +45,13 @@
   congratulations_on_completing_hoc: Urime për përfundimin e një Orë Kodimi
   get_a_certificate_of_achievement: Merr një çertifikatë të arritjes
   enter_valid_email: Ju lutem shkruani një email adresë të vlefshme
-  get_a_certificate_message: Ne do tu dergojme nje certifikate dhe informacione se
-    si mund te mesoni <a href='/learn/beyond'>pertej Ores se Kodimit</a>
-  get_a_certificate_message_after: Kliko ne certifikate qe ta shkarkosh ose ta printosh.
-    Tani vazhdo me <a href='http://studio.code.org'> mesimet e tjera</a>, ose shiko
-    opsione te tjera ne <a href='/learn/beyond'> Meso me teper se nje ore.</a>
+  get_a_certificate_message: "Ne do tu dergojme nje certifikate dhe informacione se si mund te mesoni <a href='/learn/beyond'>pertej Ores se Kodimit</a>"
+  get_a_certificate_message_after: "Kliko ne certifikate qe ta shkarkosh ose ta printosh. Tani vazhdo me <a href='http://studio.code.org'> mesimet e tjera</a>, ose shiko opsione te tjera ne <a href='/learn/beyond'> Meso me teper se nje ore.</a>"
   thanks_for_submitting: Faleminderit për dorëzimin!
-  if_you_enjoyed: Ne qofte se u perlqeu te mesuarit, pyesni miqte ta provojne gjithashtu!
-    Ne duam qe e gjithe bota te mesoje.
+  if_you_enjoyed: Ne qofte se u perlqeu te mesuarit, pyesni miqte ta provojne gjithashtu! Ne duam qe e gjithe bota te mesoje.
   personalize_certificate: Personalizo certifikaten tende
   share_achievement: Shperndaj arritjet tuaja
-  beyond_hour_message: Vazhdo me <a href='http://studio.code.org'>kurse të tjera</a>,
-    ose shiko më shumë mundësi tek <a href='/learn/beyond'>Mëso përtej Një Ore</a>.
+  beyond_hour_message: "Vazhdo me <a href='http://studio.code.org'>kurse të tjera</a>, ose shiko më shumë mundësi tek <a href='/learn/beyond'>Mëso përtej Një Ore</a>."
   leaderboards_for_hoc: Tabela e udhëheqësve për Orën e Kodimin.
   support_url: http://support.code.org/
   country: Vend
@@ -106,15 +85,13 @@
   privacy_practices_children: Shiko praktikat tona të privatësisë për fëmijët
   petition_thankyou: Faleminderit për nënshkrimin e peticionit
   continue_learning_header: Vazhdo te mesosh pertej Ores Se Kodimit
-  continue_learning_body: Ekzistojne shume mundesi. Ju ,und te mesoni online, ne nje
-    shkolle te afert, ose ne nje kamp veror.
+  continue_learning_body: Ekzistojne shume mundesi. Ju ,und te mesoni online, ne nje shkolle te afert, ose ne nje kamp veror.
   learn_next_level: Vazhdo te niveli tjetër
   learn_online: Provo kurse të tjera online
   learn_classes: Gjej klasa te aferta
   hoc_is_here: '#OraPerKodim eshte ketu - provoje! @codeorg'
   just_did_hoc: 'Une sapo mbarova #OrenPerKodim - provoje! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Meso nje Ore kodim
   beyond_hoc: Pertej Ores se Kodimit
   what_gender: Cfare gjinie jeni ju?
@@ -122,23 +99,20 @@
   boy: Djale
   help_recruit_coders: Na ndihmoni te rekrutojme me shume kodues ne skuadren tone!
   help_recruit: Na ndihmo te rekrutojme me shume kodues!
-  lines_of_code: MBI <b># VIJAT E KODIT</b> SHKRUAR NE KOHE.
-  lines_of_code_alt: <b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET
+  lines_of_code: 'MBI <b># VIJAT E KODIT</b> SHKRUAR NE KOHE.'
+  lines_of_code_alt: '<b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET'
   who_has_done_hoc: 'Kush ka kryer #OrenPerKodim? @codeorg'
   hoc_leaderboards: Tabela e udheheqesve te Ores Se Kodimit
-  students_and_lines: '%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
-    %{lines} rrjeshta me kode.'
+  students_and_lines: '%{students} studente kane kryer Oren e Kodimit dhe jane shkruar %{lines} rrjeshta me kode.'
   start_hoc: Fillo Oren e Kodimit tani
   contact_form_topic_press: Shtypi/media (intervista ose angazhime të foluri)
-  stats_nina: '"Cdo ditë kishte të njëjtat rezultate&mdash;me një angazhim 100%."
-    - - Nina Nichols Peery, Mësuese'
-  stats_student: '"E dija që kjo ishte një mundësi që të vjen <b>një herë në jetë</b>."
-    - Mariana Alzate, nxënëse e klasës së 5-të'
-  stats_michael: '"Nuk i kam parë<b> kurrë më parë</b> studentët e mi kaq të emocionuar
-    për të mësuar." - Michael Clark, Mësuese'
-  studiobar_title: Eksploro <a href='http://studio.code.org'>Code Studio</a>
+  stats_nina: '"Cdo ditë kishte të njëjtat rezultate&mdash;me një angazhim 100%." - - Nina Nichols Peery, Mësuese'
+  stats_student: '"E dija që kjo ishte një mundësi që të vjen <b>një herë në jetë</b>." - Mariana Alzate, nxënëse e klasës së 5-të'
+  stats_michael: '"Nuk i kam parë<b> kurrë më parë</b> studentët e mi kaq të emocionuar për të mësuar." - Michael Clark, Mësuese'
+  studiobar_title: "Eksploro <a href='http://studio.code.org'>Code Studio</a>"
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Kurset elementare
-  studiobar_elementary_body: Tre kurset tona të reja për K&#8209;5
+  studiobar_elementary_body: 'Tre kurset tona të reja për K&#8209;5'
   studiobar_hoc_title: Ora e Kodimit
   studiobar_hoc_body: Mëso të kodosh me Angry Birds
   studiobar_flappy_title: Kodi Flappy
@@ -151,20 +125,58 @@
   studiobar_donate_body: Një fëmijë mëson për çdo dollar që ti dhuron
   studiobar_shop_title: Bli
   studiobar_shop_body: Anashkalo stereotipat. Vish logon tonë me krenari.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_malala: |
+    &ldquo;I challenge girls in every single country
+    to learn one Hour of Code&rdquo; 
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Ora e Kodimit
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -173,10 +185,10 @@
   homepage_slot_text_shop: Bli
   homepage_slot_text_flappy: Kodi Flappy
   homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
+  homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   homepage_slot_text_title_hoc: Ora e Kodit
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
@@ -215,11 +227,9 @@
   class_submission_in_school: Në shkollë
   class_submission_in_school_daily_programming_course: Kursi i përditshëm i programimit
   class_submission_in_school_ap_computer_science: AP shkencë kompjuterike
-  class_submission_in_school_full_university_cs_curriculum: Kurrikulumi i universitetit
-    të plotë CS
+  class_submission_in_school_full_university_cs_curriculum: Kurrikulumi i universitetit të plotë CS
   class_submission_in_school_robotics_club: Klubet robotike
-  class_submission_in_school_programming_integrated_in_other_classes: Programim i
-    integruar në klasa të tjera (matematikë, shkencë, etj)
+  class_submission_in_school_programming_integrated_in_other_classes: Programim i integruar në klasa të tjera (matematikë, shkencë, etj)
   class_submission_in_school_summer_school_cs_program: Programi shkollës verore CS
   class_submission_in_school_exploring_computer_science: Eksplorimi i Shkencës Kompjuterike
   class_submission_in_school_other: Të tjerë në shkollë
@@ -247,18 +257,14 @@
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 orë në javë
   volunteer_engineer_submission_commitment_more: Më shumë
   volunteer_engineer_submission_location_flexibility_onsite: Merr pjesë te një shkollë
-  volunteer_engineer_submission_location_flexibility_remote: Trajnim në distancë (mësuesë
-    ose studentë)
-  volunteer_engineer_submission_location_flexibility_curriculum: Të gatshëm për të
-    ndihmuar në kontributin e kurrikulës së projekteve open-source
+  volunteer_engineer_submission_location_flexibility_remote: Trajnim në distancë (mësuesë ose studentë)
+  volunteer_engineer_submission_location_flexibility_curriculum: Të gatshëm për të ndihmuar në kontributin e kurrikulës së projekteve open-source
   volunteer_engineer_submission_experience_unspecified: I/e paspecifikuar
-  volunteer_engineer_submission_experience_university_student_or_researcher: Student
-    i universitetit të momentit (ose studiues)
+  volunteer_engineer_submission_experience_university_student_or_researcher: Student i universitetit të momentit (ose studiues)
   volunteer_engineer_submission_experience_software_professional: Software profesional
   petition_age: Mosha
   dashboard_landing_title: Faqja Kryesore e Mësuesit
-  dashboard_landing_welcome: Mirë se erdhët në panelin e ri dhe të përmirësuar të
-    mësuesve.
+  dashboard_landing_welcome: Mirë se erdhët në panelin e ri dhe të përmirësuar të mësuesve.
   dashboard_landing_video: Shiko këtë video
   dashboard_landing_watch_video: për një turne karakteristikash të reja!
   dashboard_landing_view_as_student: Shiko këtë faqe si student
@@ -268,21 +274,16 @@
   dashboard_landing_new_beta: E re! Provo kurset tona beta për studentët e K-5.
   dashboard_landing_new_k5courses: E re! Provo kurset tona për studentët e K-5.
   dashboard_landing_useful_links: Linke të tjera të dobishme (vetëm në Anglisht)
-  dashboard_landing_office_hours: Bëj një pyetje në privat! Vizito videon tonë mujore
-    të orëve të zyrës.
-  dashboard_landing_print_certificates: Printo çertifikatat për studentët që mbarojnë
-    këtë kurs
-  dashboard_landing_educator_blog: Lexo rreth të rejave dhe përditësimeve të materialeve
-    tona në Blogun Educator
-  dashboard_landing_smart_hints: Ju lutem na ndihmoni të shtojmë ndihma më të goditura
-    tek tutorialet e Code.org
+  dashboard_landing_office_hours: Bëj një pyetje në privat! Vizito videon tonë mujore të orëve të zyrës.
+  dashboard_landing_print_certificates: Printo çertifikatat për studentët që mbarojnë këtë kurs
+  dashboard_landing_educator_blog: Lexo rreth të rejave dhe përditësimeve të materialeve tona në Blogun Educator
+  dashboard_landing_smart_hints: Ju lutem na ndihmoni të shtojmë ndihma më të goditura tek tutorialet e Code.org
   dashboard_landing_video_player: Testoni video playerin e ri në shkollën tuaj
   dashboard_landing_progress_title: Ecuria e klasës kryesore
   dashboard_landing_progress_biggest: Kjo është ecuria për pjesën tënde më të madhe.
-  dashboard_landing_view_progress: Shiko Ecurinë për %{biggest_section}
+  dashboard_landing_view_progress: 'Shiko Ecurinë për %{biggest_section}'
   dashboard_landing_available_title: Kurset e disponueshëm
-  dashboard_landing_available_courses: Këtu janë kurset e disponueshme për momentin
-    për ty dhe studentët e tu.
+  dashboard_landing_available_courses: Këtu janë kurset e disponueshme për momentin për ty dhe studentët e tu.
   dashboard_landing_loading: Në ngarkim...
   dashboard_action_edit: Redakto
   dashboard_action_save: Ruaj
@@ -302,7 +303,7 @@
   dashboard_navigation_section_lesson_plans: Planet Mësimore dhe Burimet
   dashboard_navigation_section_community: Ndihma dhe Komuniteti
   dashboard_navigation_section_pd: Zhvillimi Profesional
-  dashboard_navigation_section_speakers: Shkenca Kompjuterike <br/> Folësit e të Ftuarve
+  dashboard_navigation_section_speakers: 'Shkenca Kompjuterike <br/> Folësit e të Ftuarve'
   dashboard_navigation_all_sections: Llogaritë dhe Ecuria e Studentit
   dashboard_navigation_view_progress: Shiko Ecurinë
   dashboard_navigation_add_students: Shto Studentë
@@ -312,9 +313,7 @@
   dashboard_navigation_section: 'Pjesa: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: Pjesa e re
-  dashboard_sections_jumbotron_instruction: Krijo seksione të reja dhe shto studentë
-    në to. Seksionet të ndihmojnë për të organizuar studentët në grupe më të vogla
-    kështu që ti mund të shohësh ecurinë e tyre dhe të menaxhosh llogaritë e tyre.
+  dashboard_sections_jumbotron_instruction: Krijo seksione të reja dhe shto studentë në to. Seksionet të ndihmojnë për të organizuar studentët në grupe më të vogla kështu që ti mund të shohësh ecurinë e tyre dhe të menaxhosh llogaritë e tyre.
   dashboard_sections_table_section: Pjesë
   dashboard_sections_table_secret: Tipi i Login
   dashboard_sections_table_grade: Notë
@@ -322,25 +321,16 @@
   dashboard_sections_table_students: Studentët
   dashboard_sections_table_code: Pjesë Kodi
   dashboard_sections_name: Emri Seksionit
-  dashboard_sections_choose_secret: Nëse ti dëshiron të sigurosh llogari për studentët
-    e tu, zgjidh një tip të fshehtë <b>fjale</b> ose <b>figure</b> për atë pjesë.
-  dashboard_sections_secret_word: Një <b>fjalë</b> të lejon ty të vendosësh një fjalë
-    të fshehtë për çdo student.
-  dashboard_sections_secret_picture: Një <b>figurë</b> të lejon ty të vendosësh një
-    figurë të fshehtë për çdo student, ideale për studentët, të cilët nuk mund të
-    shkruajnë ende.
-  dashboard_sections_secret_none: Nëse ti dëshiron që studentët e tu të menaxhojnë
-    llogarinë e tyre vetë, duke përfshirë zgjedhjen e fjalëkalimeve nga vetë ata,
-    zgjidh një tip të fshehtë të <b>asgjëje</b>.
-  dashboard_sections_print_secrets: Ti mund të printosh më pas një grup letrash që
-    përmbajnë informacion llogarie për ti shpërndarë te studentët e tu në mënyrë individuale.
+  dashboard_sections_choose_secret: 'Nëse ti dëshiron të sigurosh llogari për studentët e tu, zgjidh një tip të fshehtë <b>fjale</b> ose <b>figure</b> për atë pjesë.'
+  dashboard_sections_secret_word: 'Një <b>fjalë</b> të lejon ty të vendosësh një fjalë të fshehtë për çdo student.'
+  dashboard_sections_secret_picture: 'Një <b>figurë</b> të lejon ty të vendosësh një figurë të fshehtë për çdo student, ideale për studentët, të cilët nuk mund të shkruajnë ende.'
+  dashboard_sections_secret_none: 'Nëse ti dëshiron që studentët e tu të menaxhojnë llogarinë e tyre vetë, duke përfshirë zgjedhjen e fjalëkalimeve nga vetë ata, zgjidh një tip të fshehtë të <b>asgjëje</b>.'
+  dashboard_sections_print_secrets: Ti mund të printosh më pas një grup letrash që përmbajnë informacion llogarie për ti shpërndarë te studentët e tu në mënyrë individuale.
   dashboard_sections_switch_section: 'Seksioni i ndërrimit:'
   dashboard_students_add_student: Shto studentë
   dashboard_students_add_students: Shto studentë të shumëfishtë
   dashboard_students_add_multiple: 'Shtyp emrat e studentëve të tu, një për çdo rresht:'
-  dashboard_students_new_section: Ti ke krijuar një seksion të ri! Tani shto studentët
-    e tu duke përdorur <b>Shto studentë</b> dhe <b>Shto studentë të shumëfishtë</b>
-    butonat lart.
+  dashboard_students_new_section: 'Ti ke krijuar një seksion të ri! Tani shto studentët e tu duke përdorur <b>Shto studentë</b> dhe <b>Shto studentë të shumëfishtë</b> butonat lart.'
   dashboard_students_placeholder_name: Emri Studentit
   dashboard_students_name: Emri
   dashboard_students_progress: Ecuri
@@ -358,30 +348,17 @@
   dashboard_students_auto_generated: Auto-gjeneruar
   dashboard_students_reset_secret: Rivendos sekretin
   dashboard_students_reset_password: Rivendos fjalëkalimin
-  dashboard_students_share_section: 'Ndaj këtë pjesë faqeje të rregjistrimit me studentët
-    e tu:'
-  dashboard_students_print_info: Printo karta me informacionin e login-it të studentëve
-    të tu.
+  dashboard_students_share_section: 'Ndaj këtë pjesë faqeje të rregjistrimit me studentët e tu:'
+  dashboard_students_print_info: Printo karta me informacionin e login-it të studentëve të tu.
   dashboard_students_secret_picture: Figura e Fshehur
-  dashboard_students_reset_picture: Ti mund të rivendosësh një figurë të fshehur të
-    studentit në çdo kohë duke zgjedhur <b>Trego të fshehtën</b> dhe pastaj <b>Rivendos
-    të fshehtën</b>. Një figurë e re e fshehur do të gjenerohet për ata studentë që
-    ta përdorin kur të futen.
+  dashboard_students_reset_picture: 'Ti mund të rivendosësh një figurë të fshehur të studentit në çdo kohë duke zgjedhur <b>Trego të fshehtën</b> dhe pastaj <b>Rivendos të fshehtën</b>. Një figurë e re e fshehur do të gjenerohet për ata studentë që ta përdorin kur të futen.'
   dashboard_students_secret_word: Fjala e Fshehur
-  dashboard_students_reset_word: 'Ti mund të rivendosësh një figurë të fshehur të
-    studentit në çdo kohë duke zgjedhur <b>Trego të fshehtën</b> dhe pastaj <b>Rivendos
-    të fshehtën</b>. Një çift fjalësh të fshehta do të gjenerohen për ata studentë
-    që ta përdorin kur të futen. '
-  dashboard_students_join_link: Thuaju studentëve të krijojnë llogaritë e tyre dhe
-    të bashkohen ne pjesën tënde tek
-  dashboard_students_no_email: Nëse studentët e tu nuk kanë adresa emaili ose ti dëshiron
-    të krijosh llogari për ata, ndrysho këtë tip të fshehtë pjese në <b>fjalë</b>
-    ose <b>figurë</b>.
+  dashboard_students_reset_word: 'Ti mund të rivendosësh një figurë të fshehur të studentit në çdo kohë duke zgjedhur <b>Trego të fshehtën</b> dhe pastaj <b>Rivendos të fshehtën</b>. Një çift fjalësh të fshehta do të gjenerohen për ata studentë që ta përdorin kur të futen. '
+  dashboard_students_join_link: Thuaju studentëve të krijojnë llogaritë e tyre dhe të bashkohen ne pjesën tënde tek
+  dashboard_students_no_email: 'Nëse studentët e tu nuk kanë adresa emaili ose ti dëshiron të krijosh llogari për ata, ndrysho këtë tip të fshehtë pjese në <b>fjalë</b> ose <b>figurë</b>.'
   dashboard_students_print_page: Printo këtë faqe
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kliko
-    këtu</a> për dokumentat tona të privatësisë që mund të ndahen ose printohen për
-    studentët e tu.
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Kliko këtu</a> për dokumentat tona të privatësisë që mund të ndahen ose printohen për studentët e tu.'
   dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
   dashboard_view_all_lesson_plans: Shiko të gjithë planet mësimore
   dashboard_course1: 'Kursi 1:'
@@ -409,27 +386,22 @@
   dashboard_progress_completed_too_many_blocks: e përfunduar, shumë blloqe
   dashboard_progress_completed_perfect: e përfunduar, perfekte
   dashboard_progress_furthest_level_attempted: përpjekja e nivelit më të largët
-  stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar.
-    Në vetëm një javë:'
+  stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar. Në vetëm një javë:'
   stats_hoc_2013_image_alt: Statistikat nga Ora e Kodimit 2013
   dashboard_teacher: Mësues
-  dashboard_student: student
-  dashboard_sections_email_question: A kanë të gjithë studentët një adresë emaili
-    të vlefshme?
+  dashboard_student: Student
+  dashboard_sections_email_question: A kanë të gjithë studentët një adresë emaili të vlefshme?
   dashboard_sections_account_creation_question: Kush i krijon llogaritë e studentëve?
-  dashboard_sections_password_question: Çfarë përdorin studentët si një "fjalëkalim"?
+  dashboard_sections_password_question: 'Çfarë përdorin studentët si një "fjalëkalim"?'
   dashboard_sections_picture_account_creation: Një figurë e caktuar nga Code.org
   dashboard_sections_word_account_creation: Një fjalë e thjeshtë e caktuar nga Code.org
   dashboard_sections_sign_in_question: Ku futen studentët?
-  dashboard_sections_sign_in_unique: Web-page-t unike janë të listuar tek pjesa "Menaxho
-    Studentët"
-  dashboard_sections_sign_in_main: http://code.org dhe kliko "Futu"
+  dashboard_sections_sign_in_unique: 'Web-page-t unike janë të listuar tek pjesa "Menaxho Studentët"'
+  dashboard_sections_sign_in_main: 'http://code.org dhe kliko "Futu"'
   dashboard_sections_password_account_creation: Password tekst i krijuar nga studentët
-  dashboard_sections_login_type_explanation: Kjo tabele ndihmon në shpjeigmin se cili
-    nga këto tipe logini, <b>figura, fjalë ose email</b>, do të duash të zgjedhësh
-    për një seksion.
+  dashboard_sections_login_type_explanation: 'Kjo tabele ndihmon në shpjeigmin se cili nga këto tipe logini, <b>figura, fjalë ose email</b>, do të duash të zgjedhësh për një seksion.'
   dashboard_faq: Pyetjet më të shpeshta
-  code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
+  code_hoc_coming: 'Ora e Kodimit është këtu - Dhjetor 8-14!'
   code_sign_up: Rregjistrohu për të marrë pjesë gjatë Javës së Edukimit CS
   learn_more: Mëso më Shumë
   hoc2014_try_new_tutorials: Provo tutorialet e reja të Orës së Kodimit
@@ -440,8 +412,7 @@
   carousel_heading_domestic: Tutorialet e vlefshme në Anglisht
   carousel_heading_beginners: Tutorialet për Fillestarët
   carousel_heading_javascript: Tutorialet që mësojnë JavaScript
-  carousel_heading_unplugged: Nuk ke pajisje ose Internet? Provo shkencën kompjuterike
-    'unplugged'
+  carousel_heading_unplugged: "Nuk ke pajisje ose Internet? Provo shkencën kompjuterike 'unplugged'"
   carousel_heading_devices: Aplikacionet tutoriale për telefona dhe tableta
   carousel_heading_languages: Tutoriale në gjuhë të tjera programimi
   carousel_heading_apps_games: Bëj aplikacionet ose lojrat e tua
@@ -458,9 +429,7 @@
   previous: Para ardhëse
   next: Tjetra
   older_systems: Tutorialet që punojnë në sistemet e vjetra
-  older_systems_subheading: Këto duhej të punojnë në browserat e vjetër Web. Për të
-    aksesuar të gjithë tutorialet, përmirëso te një <a href="http://browsehappy.com/"
-    target="_blank"> browser Webi i kohës.</a>
+  older_systems_subheading: 'Këto duhej të punojnë në browserat e vjetër Web. Për të aksesuar të gjithë tutorialet, përmirëso te një <a href="http://browsehappy.com/" target="_blank"> browser Webi i kohës.</a>'
   mobile_devices: Tutorialet për pajisje mobile
   frozen_name: Kodo me Ann-en dhe Elsa-n
   codeorg_name: Shkruani programin tuaj të parë kompjuterik
@@ -489,10 +458,10 @@
   quorum_name: Programimi i aksesueshëm (me suportim në tableta)
   codespark_name: The Foos (të mirëpritur lexuesit fillestarë)
   kodable_name: Kodable (të mirëpritur lexuesit fillestarë)
-  tynkerapp_name: Tynker - në tableta
+  tynkerapp_name: 'Tynker - në tableta'
   robomindnl_name: Programo një robot virtual
   flappy_name: Bëj një lojë Flappy
-  bitsbox_name: Bitsbox - bëj një lojë
+  bitsbox_name: 'Bitsbox - bëj një lojë'
   makegameswithus_name: Ndërto një lojë iPhone në browserin tënd!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Ora e Kodimit
@@ -591,194 +560,78 @@
   khanhe_shortdescription: Mëso të vizatosh në JavaScript
   khanfr_shortdescription: Mëso të vizatosh në JavaScript
   khanpl_shortdescription: Mëso të vizatosh në JavaScript
-  tynker_shortdescription: Mëso të kodosh duke zgjidhur puzzle argëtuesë dhe ndërto
-    lojërat e tua në celular.
+  tynker_shortdescription: Mëso të kodosh duke zgjidhur puzzle argëtuesë dhe ndërto lojërat e tua në celular.
   scratch_shortdescription: Krijo lojëra interaktive, histori dhe animime.
-  lightbot_shortdescription: Programoje Lightbot të zgjidhë puzzle duke përdorur proçedura
-    dhe cikle!
+  lightbot_shortdescription: Programoje Lightbot të zgjidhë puzzle duke përdorur proçedura dhe cikle!
   thinkersmith_shortdescription: Tutorial unplugged për një grup pa pajisje
   condcards_shortdescription: Mëso algoritmet me letra bixhozi
   lightbotintl_shortdescription: Një lojë për të shpjeguar konceptet e kodimit
-  codehs_shortdescription: Fillo të kodosh me Qenin Karel, një hyrje argëtuese dhe
-    vizuale në programim!
+  codehs_shortdescription: Fillo të kodosh me Qenin Karel, një hyrje argëtuese dhe vizuale në programim!
   codecademy_shortdescription: Mëso programimin në JavaScript , në një web browser
-  codecombat_shortdescription: Shkatërro viganin për të mësuar Python ose JavaScript
-    në këtë lojë epike programimi!
+  codecombat_shortdescription: Shkatërro viganin për të mësuar Python ose JavaScript në këtë lojë epike programimi!
   codemonkey_shortdescription: Studentët programojnë një majmun që kap banane.
   codeavengers_shortdescription: Mëso programimin në JavaScript , në një web browser
   processing_shortdescription: Një tutorial një orësh në gjuhët e Proçesimit
   robomind_shortdescription: Shkruaj kod për një robot virtual
-  groklearning_shortdescription: Mësoji "Eliza-s" programin që të ngatërrosh shokët
-    e tu nëse ajo është njeri!
-  quorum_shortdescription: Bashko Mary-n në një tur të udhëhequr ndërkohë që ajo mëson
-    gjuhën e programimit Quorum.
-  codespark_shortdescription: Foos është një lojë argëtuese, e shoqërueshme për fëmijë
-    që të mëson rreth programimit.
-  kodable_shortdescription: NjV lojV argVtuese iPad-i për të të mësuar konceptet e
-    programimit të kompjuterit
+  groklearning_shortdescription: 'Mësoji "Eliza-s" programin që të ngatërrosh shokët e tu nëse ajo është njeri!'
+  quorum_shortdescription: Bashko Mary-n në një tur të udhëhequr ndërkohë që ajo mëson gjuhën e programimit Quorum.
+  codespark_shortdescription: Foos është një lojë argëtuese, e shoqërueshme për fëmijë që të mëson rreth programimit.
+  kodable_shortdescription: NjV lojV argVtuese iPad-i për të të mësuar konceptet e programimit të kompjuterit
   tynkerapp_shortdescription: 'Mëso të programosh duke zgjidhur puzzle-a kodimi argëtues. '
   robomindnl_shortdescription: Shkruaj kod për një robot virtual
-  flappy_shortdescription: Bëj lojën tënde - Flappy Bird, Shark ose Submarine
-  bitsbox_shortdescription: Kodo një seri aplikacionesh për të luajtur dhe shpërndarë
-    duke përdorur JavaScript të vërtetë.
-  makegameswithus_shortdescription: Bëj një lojë iPhone! Mëso të shkruash kod që t'ju
-    mësosh monstrave të tua lëvizje të reja!
-  touchdevelop_shortdescription: 'Zgjidh puzzle-a, krijo lojëra dhe mëso të kodosh
-    gjithçka në telefonin tënd. '
+  flappy_shortdescription: 'Bëj lojën tënde - Flappy Bird, Shark ose Submarine'
+  bitsbox_shortdescription: Kodo një seri aplikacionesh për të luajtur dhe shpërndarë duke përdorur JavaScript të vërtetë.
+  makegameswithus_shortdescription: "Bëj një lojë iPhone! Mëso të shkruash kod që t'ju mësosh monstrave të tua lëvizje të reja!"
+  touchdevelop_shortdescription: 'Zgjidh puzzle-a, krijo lojëra dhe mëso të kodosh gjithçka në telefonin tënd. '
   appinventor_shortdescription: Bëj aplikacionin tënd ! (vetëm në Android)
   blockly_shortdescription: Shkarko një dosje ZIP për të mësuar offline
-  thinkersmith2_shortdescription: Mëso se si kompjuterat përdorin 1 dhe 0 për të paraqitur
-    informacionin
+  thinkersmith2_shortdescription: Mëso se si kompjuterat përdorin 1 dhe 0 për të paraqitur informacionin
   kodableunplugged_shortdescription: Një ushtrim unplugged argëtues
   projguts_shortdescription: Përpiqu të modelosh dhe të simulosh duke përdorur gurin/letrën/gërshërët
   hourofcode_shortdescription: Vendi për new code.org/hoc
-  frozen_shortdescription: Le të përodrim kod për të bashkuar Anna-n dhe Elsa-n ndërkohë
-    që ato eksplorojnë magjinë dhe bukurinë e akullit.
+  frozen_shortdescription: Le të përodrim kod për të bashkuar Anna-n dhe Elsa-n ndërkohë që ato eksplorojnë magjinë dhe bukurinë e akullit.
   playlab_shortdescription: Krijo një histori ose bëj një lojë me Play Lab!
-  codeorg_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin
-    drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione
-    në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies.
-    Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar në 34 gjuhë.
-  codeintl_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin
-    drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione
-    në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies.
-    Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar ne 34 gjuhë.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon vizatime
-    argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
-  khanes_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon vizatime
-    argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
-  khanpt_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke
-    krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
-  khanhe_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke
-    krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
-  khanfr_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke
-    krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
-  khanpl_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke
-    krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
-  tynker_longdescription: Ndërto lojërat e tua dhe ndaji me miqtë! Zgjidh puzzle kodimi
-    argëtuesë dhe mëso konceptet e programimit në çdo nivel. Personalizoji lojërat
-    me karaktere të animuara, nivele të shumëfishta, objekte të pasura. Bëje lojën
-    tënde reale duke përdorur fizikën. Shiko kodin si blloqet e dukshme ose JavaScript.
-    Merr lojërat e tua mobile në iPad-e dhe tableta Android. Shumë aktivitete argëtuese
-    për të zgjedhur!
-  scratch_longdescription: Me Scatch-in, ti mund të krijosh lojërat e tua interaktive
-    , historitë, animimet &mdash; dhe shpërndaji ato me shokët e tu. Fillo duke animuar
-    emrin tënd, duke krijuar një kartë pushimesh ose bëj një lojë pong.
-  lightbot_longdescription: Udhëzoje Lightbot-in të ndriçojë gjithë pllakat blu! Lightbot
-    është një lojë puzlle që përodr mekanikat e lojës së programimit për të lejuar
-    lojtarët të fitojnë një kuptim praktik në kodimin fillestar. Mëso të sekuencosh
-    udhëzimet, të shkruash proçedura dhe të shfrytëzosh ciklet për të zgjidhur nivelet.
-    Ideale për të gjitha moshat.
-  thinkersmith_longdescription: Duke përdorur një "Fjalor Roboti" të para përcaktuar,
-    studentët do kuptojnë se si të udhëheqin njëri tjetrin të përmbushin detyrat specifike
-    pa i diskutuar së pari. Ky mësim u mëson fëmijëve lidhjen ndërmjet simboleve dhe
-    veprimeve, ashtu si dhe njohuria e paçmueshme e rregullimit të kodit. "Shokët
-    e mi Robotë" punojnë shumë mirë si veprimatri grupi dhe përfshin një libër pune
-    mësuesish për përdorim klase.
-  condcards_longdescription: Mëso rreth algoritmeve dhe formulave të kushteve në këtë
-    aktivitet "unplugged" duke përdorur letrat e bixhozit. Studentët bëjnë këtë aktivitet
-    në ekip dhe ju duhet një palë letra për çdo ekip.
-  lightbotintl_longdescription: Mëso logjikën e bërthams së programimit, duke filluar
-    nga programimi bazë, për moshat 4+, në iOS ose Android (ose Web browser). Mëso
-    si të sekuencosh komandat, identifikosh format, të përdorësh proçedurat dhe përdor
-    ciklet!
-  codehs_longdescription: Ti japësh komanda një kompjuteri, është ajo çfarë është
-    i gjithë programimi, është si ti japësh komanda një qeni. Mëso si të mësosh me
-    Qenin Karel&mdash; një hyrje zbavitse, e aksesueshme dhe vizuale në programim  që
-    mëson konceptet bazë si komandat dhe funksionet për fillestarët absolutë. Tutoriali
-    është i drejtuar nga studentë, por mësuesit mund të rregjistrohen për të aksesuar
-    mjetet e mësuesit dhe të shohin suksesin e studentit!
-  codecademy_longdescription: Codecademy është një hyrje interaktive, e udhëhequr
-    nga studentë në bazat e CS midis JavaScript që përodret nga dhjetra miliona studentë
-    rreth botës. Ne kemi përgatitur një eksperiencë Orë Kodimi jo të bezdisshme shoqëruar
-    me quizze, slide dhe një projekt për studentët në fund.
-  codecombat_longdescription: Mund viganin për të mësuar Python ose JavaScript në
-    këtë lojë epike programimi!
-  codemonkey_longdescription: 'CodeMonkey është një lojë online që të mëson të kodosh
-    në një gjuhë të vërtetë programimi! Studentët programojnë një majmun që të kapë
-    banane ndërsa bëhet pak më shumë e komplikuar në çdo nivel. Ata marrin pikë yje
-    në çdo zgjidhje dhe mund ta ndajnë atë me një klikim të vetëm. '
-  codeavengers_longdescription: Ndërto një lojë 2D me 2 lojtarë në JavaScript me 10
-    detyra të shkurtra. Më pas vazhdo të mësosh baza programimi (variabla dhe formula
-    If) ndërsa krijon një Quiz për ta shpërndarë me shokët. Gjatë rrugës fito pikë
-    dhe simbole ndërsa konkurron të arrish majën e klasifikimit të klasës.
-  processing_longdescription: Një hyrje në programim në kontekstin e arteve vizuale
-    duke përdorur gjuhën e programimit të Proçesimit. Mësime të shkurtra në video
-    prezantojnë ushtrimet e kodimit që të drejtonë tek dizenjimi i një programi vizatimi
-    interaktiv
-  robomind_longdescription: 'Studentët mësojnë bazat e programimit duke kontrolluar
-    robotin e tyre virtual. Kursi online është plot me përmbajtje prezantimesh të
-    shkurtra, filma, quizze dhe ndihma automatike për të ndihmuar me ushtrimet e programimit. '
-  groklearning_longdescription: Përdor gjuhën e programimit Python për të ndërtuar
-    një chatbot të quajtur "Eliza" që të veprojë si një robot psikoterapist. Ti do
-    ti mësosh Eliza-s si të flasë dhe të thotë gjëra të duhura. A mund t'ja u hedhi
-    shokëve të tu që të mendojnë ata që është njeri dhe jo kompjuter?
-  quorum_longdescription: Tutoriali është i aksesueshëm për të paaftët në shikim dge
-    punon edhe me përdoruesit e tabletave,. Bashkohu me Maryn në një tur sapo ajo
-    të bashkohet në një laborator biologjik si programuese dhe mëson gjuhën e programimit
-    Quorum. Ky tutorial është i udhëhequr nga studentët me aktivitete shembujsh online.
-  codespark_longdescription: Foos është një mënyrë zbavitëse dhe e shoqërushme për
-    fëmijët rreth programimit në kompjuter. Programo karaktere të lezetshme për të
-    zgjidhur dhe për të sjellë një botë virtuale në jetë. Loja është "e lirë në fjalë"
-    kështu që mund të luajnë të gjithë!
-  kodable_longdescription: Kodable është një lojë e vetë udhëhequr në iPad që i prezanton
-    fëmijëve të moshave 5+ bazat e programimit. të kesh një mësues ose prind afër
-    është optimale, por jo e domosdoshme.
-  tynkerapp_longdescription: Mëso të programosh duke zgjidhur puzzle-a kodimi argëtues.
-    Ndërto lojëra lehtësisht dhe histori duke përodorur me motive grafike, 10+ lojëra
-    dhe karaktere të ndryshueshëm. Nuk kërkohet lidhje me Internetin. Ti gjithashtu
-    mund ti akesosh krijimet e tua në web.
-  robomindnl_longdescription: 'Studentët mësojnë bazat e programimit duke kontrolluar
-    robotin e tyre virtual. Kursi online është plot me përmbajtje prezantimesh të
-    shkurtra, filma, quizze dhe ndihma automatike për të ndihmuar me ushtrimet e programimit. '
-  flappy_longdescription: Përdor programimin drag dhe drop për të bërë lojën tënde
-    Flappy Bird dhe përshtate për tu dukur ndryshe (Flappy Shark, Flappy Santa, çfarëdo
-    qoftë). Shto lojën tek telefoni jot me një klikim.
-  bitsbox_longdescription: Rregullo tabletën tënde virtuale, më pas kodo një seri
-    aplikacionesh për të luajtur dhe për të shpërndarë. Ecje të thjeshta e bëjnë të
-    mundur edhe pë femijë shumë të vegjël për të programuar JavaScript të vërtetë
-    dhe sa më i avancuar të jesh aq më larg do shkosh.
-  makegameswithus_longdescription: Mëso të kodosh duke bërë një lojë iPhoni duke përdorur
-    një gjuhë të re dhe fillestare-të shoqërueshme të quajtur Swift! Krijo një Pok&eacute;
-    lojë aksioni inspiruese dhe shkruaj kod për t'ju mësuar monstrave të tua lëvizje
-    të reja. Ti do të mësosh se si të përdorësh variabla, metoda dhe objekte për të
-    ndihmuar monstrat e tua të fitojnë!
-  touchdevelop_longdescription: 'Redaktori prekës-i shoqërueshëm do të udhëheqë ty
-    në krijimin e artit të pikselave, zgjidhjen e puzzla-ve ari ose në krijimin e
-    lojës tënde të zogut kërcyes. '
-  appinventor_longdescription: Duke u argëtuar, video të shpejta tutoriale do të të
-    çojnë në ndërtimin e tre aplikacioneve të thjeshta për telefonin tënd ose tabletën
-    Android. Dizenjuar për fillestarë dhe ekspertë, kjo orë kodimi do të të çojë ty
-    të fillosh ndërtimin e aplikacioneve të tua përpara se ti ta dish. Imagjino shpërndarjen
-    e krijimeve të tua të aplikacioneve me shokët e tu! Këto aktivitete janë të përshtatshme
-    për tu bërë individualisht dhe për mësues që udhëheqin klasat.
-  blockly_longdescription: Ke PC me internet të ngadaltë (ose jo ekzistues)? Shkarko
-    tutorialet Blockly që ishin para rendësit e tutorialeve Code.org - një dosje ZIP
-    vetëm prej 3MB mund të shkarkohet në çdo kompjuter ose përdorimi të një memorizuesi
-  thinkersmith2_longdescription: Studentët mësojnë rreth paraqitjes dhe letrave të
-    ruajtura në binare, si funksione on dhe off. Në fund, klasa mëson të kodojë inicialet
-    e veta për ti marrë me vete në shtëpi.
-  kodableunplugged_longdescription: 'Dizenjuar për përodrim me letër të pastër, fuzzFamily
-    Frenzy është një hyrje në programimin logjik për fëmijë të moshës 5 dhe sipër.
-    Një mësues duhet të shpjegojë lojën, më pas studentët programojnë një partner
-    për të përfunduar një kurs të thjeshtë. '
-  projguts_longdescription: Ky aktivitet "unplugged" ndihmon studentët të mësojnë
-    se si funksionon modelimi dhe simulimi duke pasur një grup studentësh që luajnë
-    versione të ndryshme të lojës Guri/ Letra/ Gërshërët dhe shikojnë rezultatet si
-    eksperimente të ndryshme modelimi.
+  codeorg_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies. Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar në 34 gjuhë.
+  codeintl_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies. Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar ne 34 gjuhë.
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  khan_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
+  khanes_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
+  khanpt_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
+  khanhe_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
+  khanfr_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
+  khanpl_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
+  tynker_longdescription: Ndërto lojërat e tua dhe ndaji me miqtë! Zgjidh puzzle kodimi argëtuesë dhe mëso konceptet e programimit në çdo nivel. Personalizoji lojërat me karaktere të animuara, nivele të shumëfishta, objekte të pasura. Bëje lojën tënde reale duke përdorur fizikën. Shiko kodin si blloqet e dukshme ose JavaScript. Merr lojërat e tua mobile në iPad-e dhe tableta Android. Shumë aktivitete argëtuese për të zgjedhur!
+  scratch_longdescription: 'Me Scatch-in, ti mund të krijosh lojërat e tua interaktive , historitë, animimet &mdash; dhe shpërndaji ato me shokët e tu. Fillo duke animuar emrin tënd, duke krijuar një kartë pushimesh ose bëj një lojë pong.'
+  lightbot_longdescription: Udhëzoje Lightbot-in të ndriçojë gjithë pllakat blu! Lightbot është një lojë puzlle që përodr mekanikat e lojës së programimit për të lejuar lojtarët të fitojnë një kuptim praktik në kodimin fillestar. Mëso të sekuencosh udhëzimet, të shkruash proçedura dhe të shfrytëzosh ciklet për të zgjidhur nivelet. Ideale për të gjitha moshat.
+  thinkersmith_longdescription: 'Duke përdorur një "Fjalor Roboti" të para përcaktuar, studentët do kuptojnë se si të udhëheqin njëri tjetrin të përmbushin detyrat specifike pa i diskutuar së pari. Ky mësim u mëson fëmijëve lidhjen ndërmjet simboleve dhe veprimeve, ashtu si dhe njohuria e paçmueshme e rregullimit të kodit. "Shokët e mi Robotë" punojnë shumë mirë si veprimatri grupi dhe përfshin një libër pune mësuesish për përdorim klase.'
+  condcards_longdescription: 'Mëso rreth algoritmeve dhe formulave të kushteve në këtë aktivitet "unplugged" duke përdorur letrat e bixhozit. Studentët bëjnë këtë aktivitet në ekip dhe ju duhet një palë letra për çdo ekip.'
+  lightbotintl_longdescription: Mëso logjikën e bërthams së programimit, duke filluar nga programimi bazë, për moshat 4+, në iOS ose Android (ose Web browser). Mëso si të sekuencosh komandat, identifikosh format, të përdorësh proçedurat dhe përdor ciklet!
+  codehs_longdescription: 'Ti japësh komanda një kompjuteri, është ajo çfarë është i gjithë programimi, është si ti japësh komanda një qeni. Mëso si të mësosh me Qenin Karel&mdash; një hyrje zbavitse, e aksesueshme dhe vizuale në programim  që mëson konceptet bazë si komandat dhe funksionet për fillestarët absolutë. Tutoriali është i drejtuar nga studentë, por mësuesit mund të rregjistrohen për të aksesuar mjetet e mësuesit dhe të shohin suksesin e studentit!'
+  codecademy_longdescription: Codecademy është një hyrje interaktive, e udhëhequr nga studentë në bazat e CS midis JavaScript që përodret nga dhjetra miliona studentë rreth botës. Ne kemi përgatitur një eksperiencë Orë Kodimi jo të bezdisshme shoqëruar me quizze, slide dhe një projekt për studentët në fund.
+  codecombat_longdescription: Mund viganin për të mësuar Python ose JavaScript në këtë lojë epike programimi!
+  codemonkey_longdescription: 'CodeMonkey është një lojë online që të mëson të kodosh në një gjuhë të vërtetë programimi! Studentët programojnë një majmun që të kapë banane ndërsa bëhet pak më shumë e komplikuar në çdo nivel. Ata marrin pikë yje në çdo zgjidhje dhe mund ta ndajnë atë me një klikim të vetëm. '
+  codeavengers_longdescription: Ndërto një lojë 2D me 2 lojtarë në JavaScript me 10 detyra të shkurtra. Më pas vazhdo të mësosh baza programimi (variabla dhe formula If) ndërsa krijon një Quiz për ta shpërndarë me shokët. Gjatë rrugës fito pikë dhe simbole ndërsa konkurron të arrish majën e klasifikimit të klasës.
+  processing_longdescription: Një hyrje në programim në kontekstin e arteve vizuale duke përdorur gjuhën e programimit të Proçesimit. Mësime të shkurtra në video prezantojnë ushtrimet e kodimit që të drejtonë tek dizenjimi i një programi vizatimi interaktiv
+  robomind_longdescription: 'Studentët mësojnë bazat e programimit duke kontrolluar robotin e tyre virtual. Kursi online është plot me përmbajtje prezantimesh të shkurtra, filma, quizze dhe ndihma automatike për të ndihmuar me ushtrimet e programimit. '
+  groklearning_longdescription: |-
+    Përdor gjuhën e programimit Python për të ndërtuar një chatbot të quajtur "Eliza" që të veprojë si një robot psikoterapist. Ti do ti mësosh Eliza-s si të flasë dhe të thotë gjëra të duhura. A mund t'ja u hedhi shokëve të tu që të mendojnë ata që është njeri dhe jo kompjuter?
+  quorum_longdescription: Tutoriali është i aksesueshëm për të paaftët në shikim dge punon edhe me përdoruesit e tabletave,. Bashkohu me Maryn në një tur sapo ajo të bashkohet në një laborator biologjik si programuese dhe mëson gjuhën e programimit Quorum. Ky tutorial është i udhëhequr nga studentët me aktivitete shembujsh online.
+  codespark_longdescription: 'Foos është një mënyrë zbavitëse dhe e shoqërushme për fëmijët rreth programimit në kompjuter. Programo karaktere të lezetshme për të zgjidhur dhe për të sjellë një botë virtuale në jetë. Loja është "e lirë në fjalë" kështu që mund të luajnë të gjithë!'
+  kodable_longdescription: Kodable është një lojë e vetë udhëhequr në iPad që i prezanton fëmijëve të moshave 5+ bazat e programimit. të kesh një mësues ose prind afër është optimale, por jo e domosdoshme.
+  tynkerapp_longdescription: Mëso të programosh duke zgjidhur puzzle-a kodimi argëtues. Ndërto lojëra lehtësisht dhe histori duke përodorur me motive grafike, 10+ lojëra dhe karaktere të ndryshueshëm. Nuk kërkohet lidhje me Internetin. Ti gjithashtu mund ti akesosh krijimet e tua në web.
+  robomindnl_longdescription: 'Studentët mësojnë bazat e programimit duke kontrolluar robotin e tyre virtual. Kursi online është plot me përmbajtje prezantimesh të shkurtra, filma, quizze dhe ndihma automatike për të ndihmuar me ushtrimet e programimit. '
+  flappy_longdescription: Përdor programimin drag dhe drop për të bërë lojën tënde Flappy Bird dhe përshtate për tu dukur ndryshe (Flappy Shark, Flappy Santa, çfarëdo qoftë). Shto lojën tek telefoni jot me një klikim.
+  bitsbox_longdescription: Rregullo tabletën tënde virtuale, më pas kodo një seri aplikacionesh për të luajtur dhe për të shpërndarë. Ecje të thjeshta e bëjnë të mundur edhe pë femijë shumë të vegjël për të programuar JavaScript të vërtetë dhe sa më i avancuar të jesh aq më larg do shkosh.
+  makegameswithus_longdescription: "Mëso të kodosh duke bërë një lojë iPhoni duke përdorur një gjuhë të re dhe fillestare-të shoqërueshme të quajtur Swift! Krijo një Pok&eacute; lojë aksioni inspiruese dhe shkruaj kod për t'ju mësuar monstrave të tua lëvizje të reja. Ti do të mësosh se si të përdorësh variabla, metoda dhe objekte për të ndihmuar monstrat e tua të fitojnë!"
+  touchdevelop_longdescription: 'Redaktori prekës-i shoqërueshëm do të udhëheqë ty në krijimin e artit të pikselave, zgjidhjen e puzzla-ve ari ose në krijimin e lojës tënde të zogut kërcyes. '
+  appinventor_longdescription: Duke u argëtuar, video të shpejta tutoriale do të të çojnë në ndërtimin e tre aplikacioneve të thjeshta për telefonin tënd ose tabletën Android. Dizenjuar për fillestarë dhe ekspertë, kjo orë kodimi do të të çojë ty të fillosh ndërtimin e aplikacioneve të tua përpara se ti ta dish. Imagjino shpërndarjen e krijimeve të tua të aplikacioneve me shokët e tu! Këto aktivitete janë të përshtatshme për tu bërë individualisht dhe për mësues që udhëheqin klasat.
+  blockly_longdescription: 'Ke PC me internet të ngadaltë (ose jo ekzistues)? Shkarko tutorialet Blockly që ishin para rendësit e tutorialeve Code.org - një dosje ZIP vetëm prej 3MB mund të shkarkohet në çdo kompjuter ose përdorimi të një memorizuesi'
+  thinkersmith2_longdescription: Studentët mësojnë rreth paraqitjes dhe letrave të ruajtura në binare, si funksione on dhe off. Në fund, klasa mëson të kodojë inicialet e veta për ti marrë me vete në shtëpi.
+  kodableunplugged_longdescription: 'Dizenjuar për përodrim me letër të pastër, fuzzFamily Frenzy është një hyrje në programimin logjik për fëmijë të moshës 5 dhe sipër. Një mësues duhet të shpjegojë lojën, më pas studentët programojnë një partner për të përfunduar një kurs të thjeshtë. '
+  projguts_longdescription: 'Ky aktivitet "unplugged" ndihmon studentët të mësojnë se si funksionon modelimi dhe simulimi duke pasur një grup studentësh që luajnë versione të ndryshme të lojës Guri/ Letra/ Gërshërët dhe shikojnë rezultatet si eksperimente të ndryshme modelimi.'
   hourofcode_longdescription: Vendi për new code.org/hoc
-  frozen_longdescription: Le të përdorim kodin për të lidhur Ann-en dhe Elsa-n ndërsa
-    ato eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë dëbore
-    dhe modele ndërkohë që bën patinazh në akull dhe bën një magji dimërore që mund
-    ta ndash me shokët e tu!
-  playlab_longdescription: Krijo një histori ose bëj një lojë me Play Lab! Bëj kafshë,
-    piratë, zombi, ninxha, dhe shumë lëvizje të tjera karakteresh, bëj tinguj, shëno
-    pikë dhe madje hidh topa zjarri!
+  frozen_longdescription: Le të përdorim kodin për të lidhur Ann-en dhe Elsa-n ndërsa ato eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë dëbore dhe modele ndërkohë që bën patinazh në akull dhe bën një magji dimërore që mund ta ndash me shokët e tu!
+  playlab_longdescription: Krijo një histori ose bëj një lojë me Play Lab! Bëj kafshë, piratë, zombi, ninxha, dhe shumë lëvizje të tjera karakteresh, bëj tinguj, shëno pikë dhe madje hidh topa zjarri!
   codeorg_beyond_name: Hyrje Shkenca Kompjuterike (klasat K-8)
   khan_beyond_name: Mëso programimin në kompjuter
   tynker_beyond_name: Mëso programimin në shtëpi
@@ -868,8 +721,7 @@
   robomind_beyond_platformtext: Browserat modern të webit, webi i pajisjeve mobile
   makegameswithus_beyond_platformtext: Browserat modern të webit
   appinventor_beyond_platformtext: Browserat Modern + Android
-  touchdevelop_beyond_platformtext: Browserat modern të webit, smartphones, gjithë
-    pajisjet
+  touchdevelop_beyond_platformtext: Browserat modern të webit, smartphones, gjithë pajisjet
   codehs_beyond_platformtext: Broswerat modern ($$ kërkohet)
   udemy_beyond_platformtext: Bazuar në Web
   lynda_beyond_platformtext: Bazuar në web ($$ kërkohet)
@@ -893,28 +745,21 @@
   sphero_beyond_platformtext: Blerje roboti
   codeorg_beyond_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
   khan_beyond_shortdescription: Mëso të vizatosh në JavaScript
-  tynker_beyond_shortdescription: NJë kurs argëtues dhe tërheqës për fëmijë në moshat
-    klasat 4-8
+  tynker_beyond_shortdescription: NJë kurs argëtues dhe tërheqës për fëmijë në moshat klasat 4-8
   scratch_beyond_shortdescription: Krijo lojëra interaktive, histori dhe animime.
   lightbot_beyond_shortdescription: Një lojë për të shpjeguar konceptet e kodimit
-  codecademy_beyond_shortdescription: Mëso programimin në JavaScript , në një web
-    browser
-  kodable_beyond_shortdescription: NjV lojV argVtuese iPad-i për të të mësuar konceptet
-    e programimit të kompjuterit
-  scratchjr_beyond_shortdescription: 'Krijo lojra dhe histori interaktive duke përodrur
-    ScratchJr. '
+  codecademy_beyond_shortdescription: Mëso programimin në JavaScript , në një web browser
+  kodable_beyond_shortdescription: NjV lojV argVtuese iPad-i për të të mësuar konceptet e programimit të kompjuterit
+  scratchjr_beyond_shortdescription: 'Krijo lojra dhe histori interaktive duke përodrur ScratchJr. '
   hopscotch_beyond_shortdescription: Mëso programimin vizual në një iPad
-  pocketcode_beyond_shortdescription: Krijo një lojë në smartphone-in tënd dhe shpërndaje
-    me shokët e tu që ta provojnë!
+  pocketcode_beyond_shortdescription: Krijo një lojë në smartphone-in tënd dhe shpërndaje me shokët e tu që ta provojnë!
   groklearning_beyond_shortdescription: Hyrje bazë në programimin python
   hacketyhack_beyond_shortdescription: Mëso Ruby nga fillimi
   robomind_beyond_shortdescription: Shkruaj kod për një robot virtual
   makegameswithus_beyond_shortdescription: Mëso të bësh një lojë iPhone në një orë
   appinventor_beyond_shortdescription: Bëj aplikacionin tënd ! (vetëm në Android)
-  touchdevelop_beyond_shortdescription: Kodo aplikacione celulari direkt në celularin
-    tënd, tabletën ose laptopin
-  codehs_beyond_shortdescription: Mëso programimin në JavaScript me ambiente vizuale
-    argëtuese
+  touchdevelop_beyond_shortdescription: Kodo aplikacione celulari direkt në celularin tënd, tabletën ose laptopin
+  codehs_beyond_shortdescription: Mëso programimin në JavaScript me ambiente vizuale argëtuese
   udemy_beyond_shortdescription: Shumicë kursesh programimi online
   lynda_beyond_shortdescription: Shumicë kursesh programimi online
   edx_beyond_shortdescription: Klasa më popullore në Harvard
@@ -931,202 +776,44 @@
   codea_beyond_shortdescription: Bëj aplikacione në Ipadin tënd
   lego_beyond_shortdescription: Ndërto dhe programo një robot
   finch_beyond_shortdescription: Një robot për edukimin në shkencën kompjuterike
-  arduino_beyond_shortdescription: Mëso Arduino me Sparkfun's Digital Sandbox.
+  arduino_beyond_shortdescription: "Mëso Arduino me Sparkfun's Digital Sandbox."
   processing_beyond_shortdescription: Mëso gjuhët e Proçesimit
   alice_beyond_shortdescription: Mësoju programimin në një mjedis 3D
-  sphero_beyond_shortdescription: Mësimet SPRK i japin fëmijëve një kurs argëtues
-    në programimin e robotëve ndërsa thellojnë njohuritë në matematikë dhe shkencë.
-  codeorg_beyond_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me
-    programimin drag and drop. 3 kurse të plota, secila konsiston në 15-20 mësime
-    që përzihen në aktivitetet "unplugged" të klasës që shpërndahen me lojra, tutoriale
-    të vetë udhëhequra duke paraqitur video leksionesh nga Bill Gates, Mark Zuckerberg,
-    Angry Birds dhe Plants vs. Zombies. Mëso tciklet përsëritëse, kushtet, algoritmet
-    bazë, funksionet dhe variablat.
-  khan_beyond_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon
-    vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
-  tynker_beyond_longdescription: Tynker e bën të lehtë dhe argëtues mësimin e programimit.
-    E bën të dukshëm. Fëmijët ndërtojnë lojra dhe aplikacione mobile duke rregulluar
-    blloqet e kodit. Zhduk nevojën për të ditur sintaksën e programimit. Fëmijët transformojnë
-    idenë në histori të animuara dhe në art matematike menjëherë. Promovon mësimin
-    progresiv. Kur fëmijët mësojnë themelet, Tynker prezanton koncepte më të avancuara
-    duke përfshirë sintaksën e programimit.
-  scratch_beyond_longdescription: Me Scatch-in, ti mund të krijosh lojërat e tua interaktive
-    , historitë, animimet &mdash; dhe shpërndaji ato me shokët e tu. Fillo duke animuar
-    emrin tënd, duke krijuar një kartë pushimesh ose bëj një lojë pong.
-  lightbot_beyond_longdescription: Mëso logjikën e bërthams së programimit, duke filluar
-    nga programimi bazë, për moshat 4+, në iOS ose Android (ose Web browser). Mëso
-    si të sekuencosh komandat, identifikosh format, të përdorësh proçedurat dhe përdor
-    ciklet!
-  codecademy_beyond_longdescription: Codecademy është një hyrje interaktive, e udhëhequr
-    nga studentë në bazat e CS midis JavaScript që përodret nga dhjetra miliona studentë
-    rreth botës. Ne kemi përgatitur një eksperiencë Orë Kodimi jo të bezdisshme shoqëruar
-    me quizze, slide dhe një projekt për studentët në fund.
-  kodable_beyond_longdescription: Kodable është një lojë e vetë udhëhequr në iPad
-    që i prezanton fëmijëve të moshave 5+ bazat e programimit. të kesh një mësues
-    ose prind afër është optimale, por jo e domosdoshme.
-  scratchjr_beyond_longdescription: ScratchJr është një gjuhë hyrëse programimi që
-    ju mundëson fëmijëve të krijojnë historitë dhe lojrat e tyre interaktive. Fëmijët
-    kapin së bashku blloqe grafiku programimi për të bërë karakteret të lëvizin, të
-    hidhen, të kërcejnë dhe të këndojnë
-  hopscotch_beyond_longdescription: Tutorial për studentët në iPad duke përdorur gjuhën
-    e programimit Hopscotch. Studentët do të ndërtojnë lojëra dhe aplikacione për
-    iPadin e tyre në iPad. Studentët mund të punojnë individualisht ose me shokët
-    (mbi 3 persona në çdo iPad).
-  pocketcode_beyond_longdescription: Krijo lojën tënde në smartphone-in tënd me Kodin
-    Pocket! Ndihmoje Steve të dërgojë pakot e tij. Ti mund ta ndash atë me shokët
-    dhe me të tjerë përdorues për ta përdorur!
-  groklearning_beyond_longdescription: Një kurs hyrës duke përdorur gjuhën e programimit
-    Python për njerëz pa eksperiencë në programim. Përmbajtja jonë unike përzierë
-    me sfida do të çojnë në kuptimin e plotë të Pythonit dhe programimit vetë. Ne
-    ja u kemi mësuar këtë përmbajtje studentëve të moshave të ndryshme nga backgorunde
-    të ndryshme dhe jemi të sigurtë qe do të përshtatet edhe ty gjithashtu.
-  hacketyhack_beyond_longdescription: 'Hackety Hack do të mësojë ty bazat absolute
-    të programimit nga fillimi. Nuk nevojitet asnjë eksperiencë e mëparshme në programim!
-    Me Hackety Hack, ti do të mësosh gjuhën e programimit Ruby. Ruby përdoret për
-    gjithë llojet e programeve, duke përfshirë aplikimet dekstop dhe websitet. [Shënim:
-    kërkohet instalimi Desktop]'
-  robomind_beyond_longdescription: 'Studentët mësojnë bazat e programimit duke kontrolluar
-    robotin e tyre virtual. Kursi online është plot me përmbajtje prezantimesh të
-    shkurtra, filma, quizze dhe ndihma automatike për të ndihmuar me ushtrimet e programimit. '
-  makegameswithus_beyond_longdescription: A di pak ObjectiveC? Mëso të bësh një lojë
-    iPhone në një orë! Ne do t'ju udhëheqim ju drejt proçesit, te kodi, testi, dhe
-    luaj lojën tënde të gijthën në browser dhe më pas shpërndaje atë në Facebook për
-    shokët që ta provojnë! Nuk kërkohet eksperiencë e mëparshme në zhvillim iPhone
-    kodi. Ti duhet të kuptosh çfarë janë variablat, metodat dhe objektet.
-  appinventor_beyond_longdescription: Duke u argëtuar, video të shpejta tutoriale
-    do të të çojnë në ndërtimin e tre aplikacioneve të thjeshta për telefonin tënd
-    ose tabletën Android. Dizenjuar për fillestarë dhe ekspertë, kjo orë kodimi do
-    të të çojë ty të fillosh ndërtimin e aplikacioneve të tua përpara se ti ta dish.
-    Imagjino shpërndarjen e krijimeve të tua të aplikacioneve me shokët e tu! Këto
-    aktivitete janë të përshtatshme për tu bërë individualisht dhe për mësues që udhëheqin
-    klasat.
-  touchdevelop_beyond_longdescription: TouchDevelop të lejon ty të krijosh aplikacione
-    në iPad, iPhone, Android, PC, Mac, Windows Phone. Editori jonë miqësor e bën kodimin
-    argëtues edhe në telefonin tënd ose tabletën!
-  codehs_beyond_longdescription: 'Mëso bazat e programimit me Qenin Karel,një hyrje
-    argëtuese, aksesueshme dhe e dukshme në kodim, ku ti japësh komanda një kompjuteri
-    është njësoj sikur ti japësh komanda një qeni. Ky tutorial është i mrekullueshëm
-    nëse udhëhiqet nga një mësues, por mund të bëhet edhe në mënyrë të pavarur gjithashtu.
-    [Shënim: pagesa është e kërkuar]'
-  udemy_beyond_longdescription: 'Nëse ti nuk ke parë kurrë një rresht kodi ose kodin
-    tënd, Udemy ka një kurs për ty, mësuar nga instruktorë profesionalë. [Shënim:
-    pagesa është e kërkuar]'
-  lynda_beyond_longdescription: 'Mëso si të kodosh, krijosh dhe ndërtosh aplikacione
-    webi, nga themeluesit e programimit te orientuar në objekte në C dhe C++ tek  si
-    të shkruash Java. Tutorialet e zhvilluesëve tanë mund të të ndihmojnë të mësosh
-    si të zhvillosh dhe krijosh  aplikacione mobile, të punosh me PHP dhe databazat
-    MySQL, fillon me gjuhën proçesuese të statistikave R, dhe më shumë. [Shënim: pagesa
-    është e kërkuar]'
-  edx_beyond_longdescription: CS50x është hyrja e Kolegjit Harvard tek kompanitë intelektuale
-    të shkencës kompjuterike dhe artit të programimit për të mëdhenjtë dhe të vegjlit,
-    me ose pa eksperienë të mëparshme në programim. Temat përfshijnë abstraksion,
-    algortime, struktura të dhënash, enkapsulim, menaxhim burimesh, siguri, inxhinieri
-    software, dhe zhvillim web. Gjuhët përfshijnë C, PHP, dhe JavaScript plus SQL,
-    CSS dhe HTML. Versioni në kampus i CS50x është kursi i dytë më i madh në Harvard.
-  coursera_beyond_longdescription: 'Klasa CS 101 E Stanford mësuar nga Nick Parlante
-    (FALAS!). CS101 të mëson idetë esenciale të Shkencës Kompjuterike për një audiencë
-    me zero-parapak-eksperiencë. Luaj dhe eksperimento me bite të shkurtra kodi për
-    të sjellë në jetë fuqinë dhe limitimet e kompjuterave. CS101 gjithashtu të siguron
-    një background të përgjithshëm në kompjuterat sot: çfarë është një kompjuter,
-    çfarë është hardware, çfarë është software, çfarë është interneti. Nuk kërkohet
-    eksperiencë e mëparshme sesa aftësia për të përdorur një web browser.'
-  udacity_beyond_longdescription: Në këtë kurs ti do të mësosh konceptet kyç në shkencën
-    kompjuterike dhe mëso si të shkruash programet e tua në kontekstin e ndërtimit
-    të një web crawler. Nuk kërkohet njohuri e mëparshme programimi  për këtë kurs.
-    Fillestarët janë të mirëseardhur! Në fund të këtij kursi, ti do të kesh mësuar
-    konceptet kyç në shkencën kompjuterike dhe mjaftueshëm programim për të qënë i
-    aftë të shkruash programe Python për të zgjidhur problemet vetë. Ky kurs do të
-    përgatisë të kalosh në nivelin mesatar të kurseve kompjuterike.
-  teachingtree_beyond_longdescription: TeachingTree është një platformë e hapur që
-    lejon çdo njeri të organizojë përmbajtjen edukative. Qëllimi ynë është për studentët
-    që të aksesojnë shpejt klipet ekzakte që ju nevojiten në mënyrë që të mësojnë
-    konceptet individuale. Çdo njeri është i inkurajuar për të ndihmuar duke shtuar
-    video ose të tagg koncepte.
-  kodu_beyond_longdescription: Kodu lejon fëmijët të krijojnë lojëra në Pc dhe XBox
-    nga një gjuhë programimi e thjeshtë vizuale. Kodu mund të përdoret për të mësuar
-    kreativitet, zgjidhje problemesh, tregime, ashtu si edhe programim. Çdo njeri
-    mund të përodrë Kodu që të bëjë një lojë, fëmijët ashtu edhe të rriturit pa dizajn
-    ose njohuri programimi. Kodu për PC është i mundshëm të shkarkohet falas. Kodu
-    për XBox është gjithashtu i mundshëm në USA në Shitjet e XBox, në kanalin e Lojërave
-    Indie për rreth $5.
-  cargobot_beyond_longdescription: Cargo-Bot ëhstë një lojë puzzle ku ti mëson një
-    robot si të lëvizë arkat. Duket e lehtë? Paraqet 36 puzzle të zgjuar djallëzorë,
-    duke gjuajtur muzikë dhe grafikë të mrekullueshëm retine. Ti madje mund të rregjistrosh
-    zgjidhjet e tua dhe të ndash ato në YouTube për tja treguar shokëve të tu.
-  kidsruby_beyond_longdescription: 'Argëtohu dhe bëj lojra, ose merr detyrat e tua
-    të shtëpisë duke përdorur Ruby! Thjesht thuaju prindërve të tu ose mësuesëve që
-    po ëson programim Ruby...;). Falas dhe punon në çdo kompjuter, [Shënim: kërkohet
-    instalim Desktop]'
-  w3schools_beyond_longdescription: Mëso të krijosh website në kompjuterin tënd. Mëso
-    bazat e serverit në më pak se një ditë. Mëso të shtosh databaza tek website jot
-  codeavengers_beyond_longdescription: Mëso si të programosh lojra, aplikacione dhe
-    website. Dizenjuar nga ekspertë me nivel perfekt të vështirësisë për fillestarët,
-    i lehtë për të kuptuar udhëzimet dhe ndihmë e madhe kur ti ke nevojë. Kurset tona
-    HTML, CSS dhe JavaScript përfshijnë sfida kodimi dhe lojra ë bëjnë të mësuarin
-    argëtues dhe efektiv për të gjitha moshat.
-  mozilla_beyond_longdescription: Thimble e bën atë në mënyrë qesharake të thjeshtë
-    për tu krijuar dhe ndarë faqet tuaja web. Shkruaj dhe redakto HTML dhe CSS direkt
-    në browserin tënd, më pas shikoje në çast punën tënde. Vendos dhe ndaj projektet
-    e përfunduara me një klikim të vetëm. Perfekt për fillestarët dhe ekspertët.
-  codecombat_beyond_longdescription: Luaj si një Magjistar duke përdorur kod (magjira)
-    për të kontrolluar heronjtë tuaj, të navigosh labirintet, të mundësh viganët,
-    të mashtrosh armiqtë dhe të shpëtosh aleatët! Mëso JavaScript në këtë HTML 5 lojë
-    webi për fillestarët.
-  codea_beyond_longdescription: Codea për iPad të lejon ty të krijosh lojëra dhe simulime
-    &mdash; ose thjesht rreth një ideje vizuale që ti ke. Kthe mendimet e tua në krijime
-    interaktive që bën përdorimin e tipareve të iPad si Multi-Touch dhe accelerometrin.
-    Ne mendojmë Codea është editori më i bukut që ti do të përdorësh dhe është i thjeshtë.
-    Codea është dizenjuar për të lejuar ty të prekësh kodin tënd. Dëshiron të ndryshosh
-    ndonjë numër? Thjesht shtyp dhe lëvize atë. Si thua për një ngjyrë ose një imazh?
-    Duke e shtypur do të nxjerrë editime vizuale që të lejon ty të zgjedhësh saktësisht
-    çfarë të duash.
-  lego_beyond_longdescription: Krijo robotë të vegjël, të rregulluar dhe të programueshëm
-    duke përdorur pjesë LEGO.
-  finch_beyond_longdescription: Finchi është një robot i ri për edukimin në shkencën
-    kompjuterike. Dizenjimi i tij është rezultati i 4 viteve studimi tek labortori
-    krijimit Carnegie Mellon. Finchi është dizenjuar për të suportuar një hyrje tërheqëse
-    tek arti i programimit. Ka suport për shumë gjuhë programimi dhe mjedisesh, duke
-    përfshirë mjedise të ndryshme të përshtatshëm për studentët më të vegjel se tetë
-    vjeç. Finchi ishte dizenjuar për të lejuar studentët të shkruajnë programe të
-    pasura interaktive.
-  arduino_beyond_longdescription: Arduino është një platformë popullore e dizenjuar
-    për të lejuar artistët dhe dizenjuesit të punojnë me sensorë realë, LED-e, sirena
-    dhe më shumë. Sandbox Virtual Sparkfun do të mësojë ty kodin e vërtetë Arduino
-    direkt në browserin tënd.
-  processing_beyond_longdescription: Proçesimi është një gjuhë programimi, mjedis
-    zhvillimi dhe komunitet online. Që nga 2001, Proçesimi ka promovuar software e
-    shkrimit brenda arteve vizule dhe shklrimit vizual brenda teknologjisë. Fillimisht
-    u krijua për të shërbyer si një software sketchbook dhe për të mësuar themelet
-    e programimit kompjuterik brenda një konteksti vizual, Procesimi evoloi në pajisje
-    zhvillimi për profesionistët. Sot, ka dhejtra e mijëra studentë, artistë, dizenjuesë,
-    kërkues që përdorin Proçesimin për të mësuar dhe prodhuar.
-  alice_beyond_longdescription: Duke përdorur një mjedis programimi inovativ që suporton
-    krijimet e animimeve 3D, Projetki Alice siguron mjete dhe materiale për të mësuar
-    dhe shpjeguar mendimin kompjuterik, zgjidhjen e problemeve, dhe programimin kompjuterik
-    ndërmjet një spektrumi moshash dhe nivelesh.
-  sphero_beyond_longdescription: Nëse je edukues ose prind, mësimet SPRK i japin fëmijëve
-    një kurs argëtues në programim robotash ndërsa mprehin njohuritë e tyre në matematikë
-    dhe shkencë.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "
+  sphero_beyond_shortdescription: Mësimet SPRK i japin fëmijëve një kurs argëtues në programimin e robotëve ndërsa thellojnë njohuritë në matematikë dhe shkencë.
+  codeorg_beyond_longdescription: 'Mëso konceptet bazë të Shkencës Kompjuterike me programimin drag and drop. 3 kurse të plota, secila konsiston në 15-20 mësime që përzihen në aktivitetet "unplugged" të klasës që shpërndahen me lojra, tutoriale të vetë udhëhequra duke paraqitur video leksionesh nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies. Mëso tciklet përsëritëse, kushtet, algoritmet bazë, funksionet dhe variablat.'
+  khan_beyond_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
+  tynker_beyond_longdescription: Tynker e bën të lehtë dhe argëtues mësimin e programimit. E bën të dukshëm. Fëmijët ndërtojnë lojra dhe aplikacione mobile duke rregulluar blloqet e kodit. Zhduk nevojën për të ditur sintaksën e programimit. Fëmijët transformojnë idenë në histori të animuara dhe në art matematike menjëherë. Promovon mësimin progresiv. Kur fëmijët mësojnë themelet, Tynker prezanton koncepte më të avancuara duke përfshirë sintaksën e programimit.
+  scratch_beyond_longdescription: 'Me Scatch-in, ti mund të krijosh lojërat e tua interaktive , historitë, animimet &mdash; dhe shpërndaji ato me shokët e tu. Fillo duke animuar emrin tënd, duke krijuar një kartë pushimesh ose bëj një lojë pong.'
+  lightbot_beyond_longdescription: Mëso logjikën e bërthams së programimit, duke filluar nga programimi bazë, për moshat 4+, në iOS ose Android (ose Web browser). Mëso si të sekuencosh komandat, identifikosh format, të përdorësh proçedurat dhe përdor ciklet!
+  codecademy_beyond_longdescription: Codecademy është një hyrje interaktive, e udhëhequr nga studentë në bazat e CS midis JavaScript që përodret nga dhjetra miliona studentë rreth botës. Ne kemi përgatitur një eksperiencë Orë Kodimi jo të bezdisshme shoqëruar me quizze, slide dhe një projekt për studentët në fund.
+  kodable_beyond_longdescription: Kodable është një lojë e vetë udhëhequr në iPad që i prezanton fëmijëve të moshave 5+ bazat e programimit. të kesh një mësues ose prind afër është optimale, por jo e domosdoshme.
+  scratchjr_beyond_longdescription: ScratchJr është një gjuhë hyrëse programimi që ju mundëson fëmijëve të krijojnë historitë dhe lojrat e tyre interaktive. Fëmijët kapin së bashku blloqe grafiku programimi për të bërë karakteret të lëvizin, të hidhen, të kërcejnë dhe të këndojnë
+  hopscotch_beyond_longdescription: Tutorial për studentët në iPad duke përdorur gjuhën e programimit Hopscotch. Studentët do të ndërtojnë lojëra dhe aplikacione për iPadin e tyre në iPad. Studentët mund të punojnë individualisht ose me shokët (mbi 3 persona në çdo iPad).
+  pocketcode_beyond_longdescription: Krijo lojën tënde në smartphone-in tënd me Kodin Pocket! Ndihmoje Steve të dërgojë pakot e tij. Ti mund ta ndash atë me shokët dhe me të tjerë përdorues për ta përdorur!
+  groklearning_beyond_longdescription: Një kurs hyrës duke përdorur gjuhën e programimit Python për njerëz pa eksperiencë në programim. Përmbajtja jonë unike përzierë me sfida do të çojnë në kuptimin e plotë të Pythonit dhe programimit vetë. Ne ja u kemi mësuar këtë përmbajtje studentëve të moshave të ndryshme nga backgorunde të ndryshme dhe jemi të sigurtë qe do të përshtatet edhe ty gjithashtu.
+  hacketyhack_beyond_longdescription: 'Hackety Hack do të mësojë ty bazat absolute të programimit nga fillimi. Nuk nevojitet asnjë eksperiencë e mëparshme në programim! Me Hackety Hack, ti do të mësosh gjuhën e programimit Ruby. Ruby përdoret për gjithë llojet e programeve, duke përfshirë aplikimet dekstop dhe websitet. [Shënim: kërkohet instalimi Desktop]'
+  robomind_beyond_longdescription: 'Studentët mësojnë bazat e programimit duke kontrolluar robotin e tyre virtual. Kursi online është plot me përmbajtje prezantimesh të shkurtra, filma, quizze dhe ndihma automatike për të ndihmuar me ushtrimet e programimit. '
+  makegameswithus_beyond_longdescription: "A di pak ObjectiveC? Mëso të bësh një lojë iPhone në një orë! Ne do t'ju udhëheqim ju drejt proçesit, te kodi, testi, dhe luaj lojën tënde të gijthën në browser dhe më pas shpërndaje atë në Facebook për shokët që ta provojnë! Nuk kërkohet eksperiencë e mëparshme në zhvillim iPhone kodi. Ti duhet të kuptosh çfarë janë variablat, metodat dhe objektet."
+  appinventor_beyond_longdescription: Duke u argëtuar, video të shpejta tutoriale do të të çojnë në ndërtimin e tre aplikacioneve të thjeshta për telefonin tënd ose tabletën Android. Dizenjuar për fillestarë dhe ekspertë, kjo orë kodimi do të të çojë ty të fillosh ndërtimin e aplikacioneve të tua përpara se ti ta dish. Imagjino shpërndarjen e krijimeve të tua të aplikacioneve me shokët e tu! Këto aktivitete janë të përshtatshme për tu bërë individualisht dhe për mësues që udhëheqin klasat.
+  touchdevelop_beyond_longdescription: TouchDevelop të lejon ty të krijosh aplikacione në iPad, iPhone, Android, PC, Mac, Windows Phone. Editori jonë miqësor e bën kodimin argëtues edhe në telefonin tënd ose tabletën!
+  codehs_beyond_longdescription: 'Mëso bazat e programimit me Qenin Karel,një hyrje argëtuese, aksesueshme dhe e dukshme në kodim, ku ti japësh komanda një kompjuteri është njësoj sikur ti japësh komanda një qeni. Ky tutorial është i mrekullueshëm nëse udhëhiqet nga një mësues, por mund të bëhet edhe në mënyrë të pavarur gjithashtu. [Shënim: pagesa është e kërkuar]'
+  udemy_beyond_longdescription: 'Nëse ti nuk ke parë kurrë një rresht kodi ose kodin tënd, Udemy ka një kurs për ty, mësuar nga instruktorë profesionalë. [Shënim: pagesa është e kërkuar]'
+  lynda_beyond_longdescription: 'Mëso si të kodosh, krijosh dhe ndërtosh aplikacione webi, nga themeluesit e programimit te orientuar në objekte në C dhe C++ tek  si të shkruash Java. Tutorialet e zhvilluesëve tanë mund të të ndihmojnë të mësosh si të zhvillosh dhe krijosh  aplikacione mobile, të punosh me PHP dhe databazat MySQL, fillon me gjuhën proçesuese të statistikave R, dhe më shumë. [Shënim: pagesa është e kërkuar]'
+  edx_beyond_longdescription: CS50x është hyrja e Kolegjit Harvard tek kompanitë intelektuale të shkencës kompjuterike dhe artit të programimit për të mëdhenjtë dhe të vegjlit, me ose pa eksperienë të mëparshme në programim. Temat përfshijnë abstraksion, algortime, struktura të dhënash, enkapsulim, menaxhim burimesh, siguri, inxhinieri software, dhe zhvillim web. Gjuhët përfshijnë C, PHP, dhe JavaScript plus SQL, CSS dhe HTML. Versioni në kampus i CS50x është kursi i dytë më i madh në Harvard.
+  coursera_beyond_longdescription: 'Klasa CS 101 E Stanford mësuar nga Nick Parlante (FALAS!). CS101 të mëson idetë esenciale të Shkencës Kompjuterike për një audiencë me zero-parapak-eksperiencë. Luaj dhe eksperimento me bite të shkurtra kodi për të sjellë në jetë fuqinë dhe limitimet e kompjuterave. CS101 gjithashtu të siguron një background të përgjithshëm në kompjuterat sot: çfarë është një kompjuter, çfarë është hardware, çfarë është software, çfarë është interneti. Nuk kërkohet eksperiencë e mëparshme sesa aftësia për të përdorur një web browser.'
+  udacity_beyond_longdescription: 'Në këtë kurs ti do të mësosh konceptet kyç në shkencën kompjuterike dhe mëso si të shkruash programet e tua në kontekstin e ndërtimit të një web crawler. Nuk kërkohet njohuri e mëparshme programimi  për këtë kurs. Fillestarët janë të mirëseardhur! Në fund të këtij kursi, ti do të kesh mësuar konceptet kyç në shkencën kompjuterike dhe mjaftueshëm programim për të qënë i aftë të shkruash programe Python për të zgjidhur problemet vetë. Ky kurs do të përgatisë të kalosh në nivelin mesatar të kurseve kompjuterike.'
+  teachingtree_beyond_longdescription: TeachingTree është një platformë e hapur që lejon çdo njeri të organizojë përmbajtjen edukative. Qëllimi ynë është për studentët që të aksesojnë shpejt klipet ekzakte që ju nevojiten në mënyrë që të mësojnë konceptet individuale. Çdo njeri është i inkurajuar për të ndihmuar duke shtuar video ose të tagg koncepte.
+  kodu_beyond_longdescription: Kodu lejon fëmijët të krijojnë lojëra në Pc dhe XBox nga një gjuhë programimi e thjeshtë vizuale. Kodu mund të përdoret për të mësuar kreativitet, zgjidhje problemesh, tregime, ashtu si edhe programim. Çdo njeri mund të përodrë Kodu që të bëjë një lojë, fëmijët ashtu edhe të rriturit pa dizajn ose njohuri programimi. Kodu për PC është i mundshëm të shkarkohet falas. Kodu për XBox është gjithashtu i mundshëm në USA në Shitjet e XBox, në kanalin e Lojërave Indie për rreth $5.
+  cargobot_beyond_longdescription: Cargo-Bot ëhstë një lojë puzzle ku ti mëson një robot si të lëvizë arkat. Duket e lehtë? Paraqet 36 puzzle të zgjuar djallëzorë, duke gjuajtur muzikë dhe grafikë të mrekullueshëm retine. Ti madje mund të rregjistrosh zgjidhjet e tua dhe të ndash ato në YouTube për tja treguar shokëve të tu.
+  kidsruby_beyond_longdescription: 'Argëtohu dhe bëj lojra, ose merr detyrat e tua të shtëpisë duke përdorur Ruby! Thjesht thuaju prindërve të tu ose mësuesëve që po ëson programim Ruby...;). Falas dhe punon në çdo kompjuter, [Shënim: kërkohet instalim Desktop]'
+  w3schools_beyond_longdescription: Mëso të krijosh website në kompjuterin tënd. Mëso bazat e serverit në më pak se një ditë. Mëso të shtosh databaza tek website jot
+  codeavengers_beyond_longdescription: Mëso si të programosh lojra, aplikacione dhe website. Dizenjuar nga ekspertë me nivel perfekt të vështirësisë për fillestarët, i lehtë për të kuptuar udhëzimet dhe ndihmë e madhe kur ti ke nevojë. Kurset tona HTML, CSS dhe JavaScript përfshijnë sfida kodimi dhe lojra ë bëjnë të mësuarin argëtues dhe efektiv për të gjitha moshat.
+  mozilla_beyond_longdescription: Thimble e bën atë në mënyrë qesharake të thjeshtë për tu krijuar dhe ndarë faqet tuaja web. Shkruaj dhe redakto HTML dhe CSS direkt në browserin tënd, më pas shikoje në çast punën tënde. Vendos dhe ndaj projektet e përfunduara me një klikim të vetëm. Perfekt për fillestarët dhe ekspertët.
+  codecombat_beyond_longdescription: Luaj si një Magjistar duke përdorur kod (magjira) për të kontrolluar heronjtë tuaj, të navigosh labirintet, të mundësh viganët, të mashtrosh armiqtë dhe të shpëtosh aleatët! Mëso JavaScript në këtë HTML 5 lojë webi për fillestarët.
+  codea_beyond_longdescription: 'Codea për iPad të lejon ty të krijosh lojëra dhe simulime &mdash; ose thjesht rreth një ideje vizuale që ti ke. Kthe mendimet e tua në krijime interaktive që bën përdorimin e tipareve të iPad si Multi-Touch dhe accelerometrin. Ne mendojmë Codea është editori më i bukut që ti do të përdorësh dhe është i thjeshtë. Codea është dizenjuar për të lejuar ty të prekësh kodin tënd. Dëshiron të ndryshosh ndonjë numër? Thjesht shtyp dhe lëvize atë. Si thua për një ngjyrë ose një imazh? Duke e shtypur do të nxjerrë editime vizuale që të lejon ty të zgjedhësh saktësisht çfarë të duash.'
+  lego_beyond_longdescription: Krijo robotë të vegjël, të rregulluar dhe të programueshëm duke përdorur pjesë LEGO.
+  finch_beyond_longdescription: Finchi është një robot i ri për edukimin në shkencën kompjuterike. Dizenjimi i tij është rezultati i 4 viteve studimi tek labortori krijimit Carnegie Mellon. Finchi është dizenjuar për të suportuar një hyrje tërheqëse tek arti i programimit. Ka suport për shumë gjuhë programimi dhe mjedisesh, duke përfshirë mjedise të ndryshme të përshtatshëm për studentët më të vegjel se tetë vjeç. Finchi ishte dizenjuar për të lejuar studentët të shkruajnë programe të pasura interaktive.
+  arduino_beyond_longdescription: Arduino është një platformë popullore e dizenjuar për të lejuar artistët dhe dizenjuesit të punojnë me sensorë realë, LED-e, sirena dhe më shumë. Sandbox Virtual Sparkfun do të mësojë ty kodin e vërtetë Arduino direkt në browserin tënd.
+  processing_beyond_longdescription: Proçesimi është një gjuhë programimi, mjedis zhvillimi dhe komunitet online. Që nga 2001, Proçesimi ka promovuar software e shkrimit brenda arteve vizule dhe shklrimit vizual brenda teknologjisë. Fillimisht u krijua për të shërbyer si një software sketchbook dhe për të mësuar themelet e programimit kompjuterik brenda një konteksti vizual, Procesimi evoloi në pajisje zhvillimi për profesionistët. Sot, ka dhejtra e mijëra studentë, artistë, dizenjuesë, kërkues që përdorin Proçesimin për të mësuar dhe prodhuar.
+  alice_beyond_longdescription: Duke përdorur një mjedis programimi inovativ që suporton krijimet e animimeve 3D, Projetki Alice siguron mjete dhe materiale për të mësuar dhe shpjeguar mendimin kompjuterik, zgjidhjen e problemeve, dhe programimin kompjuterik ndërmjet një spektrumi moshash dhe nivelesh.
+  sphero_beyond_longdescription: Nëse je edukues ose prind, mësimet SPRK i japin fëmijëve një kurs argëtues në programim robotash ndërsa mprehin njohuritë e tyre në matematikë dhe shkencë.

@@ -41,6 +41,7 @@ Online lessons are in regular text and unplugged activities are in **bolded** te
 | 21 | Artist: Patterns            | Students write programs that draw interesting and beautiful patterns.                                                                                                                          |
 
 
+
 [/lesson-table]
 
 [/content]

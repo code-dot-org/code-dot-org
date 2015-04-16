@@ -398,13 +398,6 @@
           'Unit 1: Sending Bits': 'Unité 1 : Envoi de bits'
           'Unit 2: Routing and DNS': 'Unité 2 : routage et DNS'
           Internet Simulator Templates: Modèles de simulateur d'Internet
-        Infinity:
-          title: Playlab Infini
-          description_short: Utilisez le labo pour créer une histoire ou un jeu mettant
-            en vedette les personnages de Disney Infiny.
-          description: Utilisez le labo pour créer une histoire ou un jeu mettant
-            en vedette les personnages de Disney Infiny.
-          Infinity: Infini
         pixelation:
           title: Pixellisation
           description: Créer des images avec des bits et des octets.
@@ -519,16 +512,27 @@
           'Bee: Debugging': 'Abeilles : Le débogage'
         cspunit1:
           title: CSP unité 1
+          description_short: Faire des Images noir et blanc avec l'outil de pixellisation
           description: CSP unité 1 étapes
           Lesson14: Lesson14
           Lesson 14: Leçon 14
           Lesson 14 v2: Leçon 14 v2
           Lesson 15: Leçon 15
-          description_short: Faire des Images noir et blanc avec l'outil de pixellisation
           Lesson 8: Leçon 8
           Lesson 5: Leçon 5
           Lesson 3: Leçon 3
           Lesson 4: Leçon 4
+          Lesson 6: Leçon 6
+          Lesson 2: Leçon 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
         algebraPD:
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -587,3 +591,15 @@
             (grand jeu)'
           Your Game - Player Movement: Votre jeu - mouvement des joueurs
           Your Game - Collision Detection: Votre jeu - détection de Collision
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: nouvelle étape
+          Introduction to PD: Introduction au développement professionnel
+        CSPLessonSamples:
+          title: Échantillons de leçon CSP
+          description_short: échantillons de leçon pour le csp
+          Lesson 14: Leçon 14
+          Lesson 15: Leçon 15

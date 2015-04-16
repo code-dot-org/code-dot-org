@@ -72,3 +72,24 @@
       not_saved:
         one: '1 erro impede esse %{resource} de ser salvo:'
         other: '%{count} erros impedem esse %{resource} de ser salvo:'
+    invitations:
+      send_instructions: Foi enviado um e-mail de convite para %{email}.
+      invitation_token_invalid: A chave de convite fornecida não é válida!
+      updated: Sua senha foi salva com êxito. Agora você está conectado.
+      no_invitations_remaining: Nenhum convite restante
+      invitation_removed: Seu convite foi removido.
+      new:
+        header: Enviar convite
+        submit_button: Enviar um convite
+      edit:
+        header: Escolha uma senha
+        submit_button: Definir minha senha
+    mailer:
+      invitation_instructions:
+        subject: Instruções de convite
+        hello: Olá %{email}
+        someone_invited_you: Alguém o convidou para %{url}, você pode aceitar o convite
+          por meio do link abaixo.
+        accept: Aceitar convite
+        ignore: Se você não quiser aceitar o convite, ignore este e-mail.<br />Sua
+          conta não será criada até que você acesse o link acima e defina sua senha.

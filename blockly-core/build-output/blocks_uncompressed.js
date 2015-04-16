@@ -1492,8 +1492,7 @@ Blockly.Blocks.functional_parameters_get = {init:function() {
   this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
   this.setHSV(312, 0.32, 0.62);
   this.setFunctional(!0, {headerHeight:30});
-  var b = {fixedSize:{height:35}};
-  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing ? new Blockly.FieldLabel(a, b) : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL).setAlign(Blockly.ALIGN_CENTRE);
+  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(a, "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL).setAlign(Blockly.ALIGN_CENTRE);
   this.setFunctionalOutput(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)
 }, renameVar:function(a, b) {
@@ -1502,15 +1501,15 @@ Blockly.Blocks.functional_parameters_get = {init:function() {
   var a = document.createElement("mutation");
   if(this.description_) {
     var b = document.createElement("description");
-    b.innerHTML = this.description_;
+    b.textContent = this.description_;
     a.appendChild(b)
   }
-  this.outputType_ && (b = document.createElement("outputtype"), b.innerHTML = this.outputType_, a.appendChild(b));
+  this.outputType_ && (b = document.createElement("outputtype"), b.textContent = this.outputType_, a.appendChild(b));
   return a
 }, domToMutation:function(a) {
   for(var b = 0, c;c = a.childNodes[b];b++) {
     var d = c.nodeName.toLowerCase();
-    "description" === d ? this.description_ = c.innerHTML : "outputtype" === d && (this.outputType_ = c.innerHTML, this.changeFunctionalOutput(this.outputType_))
+    "description" === d ? this.description_ = c.textContent : "outputtype" === d && (this.outputType_ = c.textContent, this.changeFunctionalOutput(this.outputType_))
   }
 }};
 

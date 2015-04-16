@@ -219,6 +219,7 @@ ne:
         artist: Draw Something
     user:
       classroom: Teacher Home Page
+      district_dashboard: District Dashboard
       label: 'Hi %{username}'
       stats: My progress
       settings: My account
@@ -438,6 +439,9 @@ ne:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -467,6 +471,13 @@ ne:
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: Correct
     correct_body: That is the correct answer.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Enter your answer here
   dialog:
@@ -551,3 +562,5 @@ ne:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

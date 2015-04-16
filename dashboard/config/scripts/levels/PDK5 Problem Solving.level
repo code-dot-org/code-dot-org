@@ -1,0 +1,12 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-03-11T17:55:07.000Z",
+  "properties": {
+    "title": "Problem Solving Methods",
+    "placeholder": "I could integrate this in my classroom by...",
+    "markdown": "\nCreating a positive classroom culture before you start writing programs with your class goes a long way. Discuss with your students the strategies they should try, either individually or with a partner, to help get themselves unstuck while trying solve a puzzle or write a program. Having common vocabulary as a class can be very helpful, so that when a student asks you for help, you can ask them what parts of the puzzle-solving process they have executed. Here are the 4 main steps:\n\n- Understand the puzzle\n- Create a plan\n- Perform and perfect the plan\n- Check your work\n\n[This worksheet](http://code.org/curriculum/docs/k-5/PuzzleSolvingStudent.pdf) is available in the Teacher Dashboard in the \"Lesson Plans and Resources\" tile. \n\n</br>\n\n![image](http://staging.code.org/images/puzzlesolving.png)\n\n</br>\n\n### How could you integrate this in your classroom? \n\n"
+  },
+  "md5": "b7c24f8320e5627d529fd8e5d79a3a3f"
+}]]></config>
+</TextMatch>

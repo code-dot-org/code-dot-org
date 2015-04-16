@@ -155,15 +155,14 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
-"emptyComputeBlock":function(d){return "Bloğu \"hesapla\" bloğuna tutturmak zorundasınız."},
-"emptyFunctionalBlock":function(d){return "Doldurulmamış bir giriş bloğunuz bulunuyor."},
+"emptyComputeBlock":function(d){return "\"Değerlendir\" bloğuna bir blok eklemelisiniz."},
 "equivalentExpression":function(d){return "Tam olarak aynı ifade almak için argümanlar yeniden deneyin."},
 "evaluate":function(d){return "değerlendirme"},
-"extraTopBlocks":function(d){return "Bağlantı yapılmamış bloklarınız var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?"},
+"extraTopBlocks":function(d){return "Blokları ayırdınız. Bunları \"değerlendir\" bloğuna eklemek mi istiyorsunuz?"},
 "failedInput":function(d){return "Fonksiyonunuz tüm değerler için doğru sonuca dönmüyor."},
 "goal":function(d){return "Hedef:\n"},
 "levelIncompleteError":function(d){return "Tanımın hedefle eşleşmiyor."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return appLocale.v(d,"functionName")+" adında bir işlev tanımlamalısınız."},
 "missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "İşte senin hesaplaman! Üzerinde çalışmaya devam et, yada sıradaki bulmacaya geç!"},
 "yourExpression":function(d){return "İfadeniz:"},

@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-12T21:52:08.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged",
+      "skip_dialogue": true
+    },
+    "title": "Dashboard 2",
+    "markdown": "\n<img align=\"left\" src=\"http://staging.code.org/images/teacher-dashboard/student-accounts.png\" height=\"200\" width=\"250\" hspace=\"20\" vspace=\"20\">\n\n\n</br>\n</br>\n\n\n## Student Accounts and Progress\n\nWhen you click the \"Student Accounts and Progress\" tile, you'll see a list of all of the sections you have. Below is an example of what a section looks like on this page. To create a new section, click \"New Section\"\n\n![image](http://staging.code.org/images/teacher-dashboard/sections.png)\n\n</br>\n\nTo decide which log-in type to use for your sections, use the table below. In your teacher dashboard, this table is listed below all of your sections for reference. \n\n</br>\n\n![image](http://staging.code.org/images/teacher-dashboard/login-type.png)\n\n</br>\n\nOnce you've created your sections of students, you'll be able to click on the name of the section to see students' progress, view stats, and reset their passwords.\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "dc05d0adb9f5e466f815b9d25208a5a5"
+}]]></config>
+</External>

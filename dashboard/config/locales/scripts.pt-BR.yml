@@ -341,7 +341,7 @@
           'Eval: Defining Functions': Funções compostas
           'Unplugged: The Design Recipe': 'Offline: a receita de design'
           'Play Lab: Defining Functions': Altura do foguete
-          'Eval: Functions': Resolução de programas com a receita de design
+          'Eval: Functions': Resolução de problemas com a receita de design
           'Play Lab: Animation (Big Game)': O grande jogo - animação
           'Unplugged: Booleans': 'Offline: booleanos e lógica'
           'Eval: Boolean Operators': Operadores booleanos
@@ -355,7 +355,7 @@
           'Play Lab: Collision Detection (Big Game)': O grande jogo - detecção de
             colisão
         infinity:
-          title: Laboratório
+          title: Laboratório Infinito Disney
           description_short: Use o Laboratório para criar uma história ou um jogo
             usando personagens da Disney Infinity.
           description: Use o Laboratório para criar uma história ou um jogo usando
@@ -375,9 +375,9 @@
           Defining Simple Functions: Definindo Funções Simples
           The Design Recipe: A receita de design
         K5PD:
-          title: Desenvolvimento profissional K5
-          description: Desenvolvimento profissional para cursos K5
-          description_short: Desenvolvimento profissional para cursos K5
+          title: Desenvolvimento profissional para o Ensino Fundamental
+          description: Desenvolvimento profissional para cursos do Ensino Fundamental
+          description_short: Desenvolvimento profissional para cursos do Ensino Fundamental
           Introduction to PD: Introdução a PD
           Blockly Basics: Princípios do Blockly
           Writing computer programs: Escrevendo programas de computador
@@ -386,7 +386,7 @@
           Classroom Culture: Cultura de sala de aula
           Ways to go beyond Courses 1, 2, and 3: Formas de ir além dos cursos 1, 2
             e 3
-          K-5 Courses: Cursos K-5
+          K-5 Courses: Cursos do Ensino Fundamental
           Writing computer programs in Blockly: Escrevendo programas de computador
             em Blockly
           Teacher Dashboard: Painel de controle do professor
@@ -405,13 +405,6 @@
           'Unit 1: Sending Bits': 'Unidade 1: envio de bits'
           'Unit 2: Routing and DNS': 'Unidade 2: roteamento e DNS'
           Internet Simulator Templates: Modelos de simulador de internet
-        Infinity:
-          title: Laboratório infinito
-          description_short: Use o Laboratório para criar uma história ou um jogo
-            usando personagens da Disney Infinity.
-          description: Use o Laboratório para criar uma história ou um jogo usando
-            personagens da Disney Infinity.
-          Infinity: Infinito
         pixelation:
           title: Pixelização
           description: Crie imagens com bits e bytes.
@@ -485,13 +478,13 @@
             melhor de si!
           Puzzles: Desafios
         Test - Code Studio Puzzle Challenge:
-          title: Desafio teste Code Studio
+          title: Teste - Desafio Code Studio
           description_short: Desafie-se!
           description: Experimente esses divertidos desafios de programação. Dê o
             melhor de si!
           Puzzles: Desafios
         How to do the Code Studio Puzzle Challenge:
-          title: Desafio teste Code Studio
+          title: Teste - Desafio Code Studio
           description_short: Desafie-se!
           description: Experimente esses divertidos desafios de programação. Dê o
             melhor de si!
@@ -525,17 +518,28 @@
           'Artist: Functions': 'Artista: Funções'
           'Bee: Debugging': 'Abelha: Depuração'
         cspunit1:
-          title: CSP Unidade 1
-          description: Estágios CSP Unidade 1
+          title: CSP - Unidade 1
+          description_short: Faça imagens em preto e branco com a ferramenta de pixelização
+          description: CSP - Unidade 1 - Fases
           Lesson14: Lição14
           Lesson 14: Lição 14
           Lesson 14 v2: Lição 14 v2
           Lesson 15: Lição 15
-          description_short: Faça imagens em preto e branco com a ferramenta de pixelização
           Lesson 8: Lição 8
           Lesson 5: Lição 5
           Lesson 3: Lição 3
           Lesson 4: Lição 4
+          Lesson 6: Lição 6
+          Lesson 2: Lição 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
         algebraPD:
           title: Ciência da computação em álgebra PD
           description: Ensine programação funcional com álgebra
@@ -594,3 +598,15 @@
             (O Grande Jogo)'
           Your Game - Player Movement: Seu jogo - movimento do jogador
           Your Game - Collision Detection: Seu jogo - detecção de colisão
+        text-compression:
+          title: Compressão de texto
+          description: Comprima o texto identificando padrões repetidos.
+          Text Compression: Compressão de texto
+        CSPPD:
+          new stage: nova fase
+          Introduction to PD: Introdução a PD
+        CSPLessonSamples:
+          title: Exemplos de lição para CSP
+          description_short: exemplos de lição para csp
+          Lesson 14: Lição 14
+          Lesson 15: Lição 15

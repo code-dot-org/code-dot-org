@@ -220,6 +220,7 @@ el:
         artist: Ζωγραφίστε κάτι
     user:
       classroom: H Αρχική Σελίδα του Εκπαιδευτικού
+      district_dashboard: District Dashboard
       label: 'Γεια σου %{username}'
       stats: Η πρόοδός μου
       settings: Ο λογαριασμός μου
@@ -438,6 +439,9 @@ el:
       body: 'Δείτε μια συλλογή απο εφαρμογές  και εικόνες καλλιτεχνών που δημιουργούνται από τους χρήστες μας'
     frozen:
       title: Ψυχρά κι ανάποδα
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
     students_made_these_with_code: Οι μαθητές τα δημιούργησαν αυτά με κώδικα!
@@ -467,6 +471,13 @@ el:
     wrong_body: 'Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε ξανά!'
     correct_title: Σωστό
     correct_body: Αυτή είναι η σωστή απάντηση.
+  contract_match:
+    wrong_title: Λανθασμένη απάντηση
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Εισάγετε την απάντησή σας εδώ
   dialog:
@@ -551,3 +562,5 @@ el:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

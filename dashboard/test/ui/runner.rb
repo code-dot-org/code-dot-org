@@ -133,11 +133,13 @@ end
 
 def run_tests(arguments)
   start_time = Time.now
-  Open3.popen2("cucumber #{arguments}") do |stdin, stdout, wait_thr|
+  puts "cucumber #{arguments}"
+  Open3.popen3("cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
     stdin.close
-    return_value = stdout.read
+    stdout = stdout.read
+    stderr = stderr.read
     succeeded = wait_thr.value.exitstatus == 0
-    return succeeded, return_value, Time.now - start_time
+    return succeeded, stdout, stderr, Time.now - start_time
   end
 end
 
@@ -209,7 +211,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
-  arguments += " -f html -o #{browser['name']}_output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
+  arguments += " --format html --out #{browser['name']}_output.html -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
 
   # return all text after "Failing Scenarios"
   def output_synopsis(output_text)
@@ -235,27 +237,35 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
     end
   end
 
-  succeeded, output_text, test_duration = run_tests(arguments)
+  # if autorertrying, output a rerun file so on retry we only run failed tests
+  rerun_filename = (browser['name'] || 'UnknownBrowser') + '.rerun'
+  first_time_arguments = $options.auto_retry ? " --format rerun --out #{rerun_filename}" : ""
+
+  FileUtils.rm rerun_filename, force: true
+
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + first_time_arguments)
 
   if !succeeded && $options.auto_retry
-    # TODO:
-    # Use --format rerun --out features.txt to write out failing
-    # features. You can rerun them with cucumber @rerun.txt.
-    HipChat.log "<pre>#{output_synopsis(output_text)}</pre>"
+    HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
+    HipChat.log "<pre>#{output_stderr}</pre>"
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)}), retrying..."
 
-    succeeded, output_text, test_duration = run_tests(arguments)
+    second_time_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
+
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + second_time_arguments)
   end
 
   $lock.synchronize do
     if succeeded
       log_success Time.now
       log_success browser.to_yaml
-      log_success output_text
+      log_success output_stdout
+      log_success output_stderr
     else
       log_error Time.now
       log_error browser.to_yaml
-      log_error output_text
+      log_error output_stdout
+      log_error output_stderr
       log_browser_error browser.to_yaml
     end
   end
@@ -263,7 +273,8 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   if succeeded
     HipChat.log "<b>dashboard</b> UI tests passed with <b>#{browser_name}</b> (#{format_duration(test_duration)})"
   else
-    HipChat.log "<pre>#{output_synopsis(output_text)}</pre>"
+    HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
+    HipChat.log "<pre>#{output_stderr}</pre>"
     message = "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{format_duration(test_duration)})"
 
     if $options.html

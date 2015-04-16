@@ -2,6 +2,10 @@
   display:none;
 }
 
+.clear {
+  clear: both;
+}
+
 h1 {
   color: #7665a0;
   font-size: 32px;
@@ -187,11 +191,6 @@ th a:link, th a:visited, th a:hover, th a:active {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 971px) {
-  .homepage-caption-bottom {
-    top:200px;
-  }
-}
 
 #index #gap {
   height: 20px

@@ -28,7 +28,10 @@
   fill: white; }
 
 .errorToken {
-  fill: red; }
+  fill: #f24118; }
 
 .expr {
   font-size: 20px; }
+
+#answerExpression {
+  fill: #3c3c3c; }

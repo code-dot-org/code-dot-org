@@ -258,6 +258,7 @@
         artist: Draw Something
     user:
       classroom: Laman Utama Guru
+      district_dashboard: District Dashboard
       label: Hi %{username}
       stats: Kemajuan saya
       settings: Akaun saya
@@ -509,6 +510,9 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Pelajar telah melukis ini dengan kod!
     students_made_these_with_code: Students made these with code!
@@ -545,6 +549,14 @@
     wrong_body: Penyelesaian yang anda masukkan tidak betul.  Sila cuba lagi!
     correct_title: Betul
     correct_body: Itulah jawapan yang betul.
+  contract_match:
+    wrong_title: Jawapan yang salah
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Enter your answer here
   dialog:
@@ -642,3 +654,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

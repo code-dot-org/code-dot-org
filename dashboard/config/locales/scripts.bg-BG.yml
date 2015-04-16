@@ -3,15 +3,15 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Мозайката: Научете се да плъзгате и пускате'
-          The Maze: Лабиринтът
+          'Jigsaw: Learn to drag and drop': 'Мозайка: Научете се да плъзгане и пускане'
+          The Maze: Лабиринт
           Multi: Мулти
-          Match: Съответствие
+          Match: свързване
           Math Image: Математическо изображение
-          title: Тест към курса
-          description: Вътрешен тест към курса.
+          title: Тест
+          description: Просто един вътрешен тест за курса.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Мозайката: Научете се да плъзгате и пускате'
+          'Jigsaw: Learn to drag and drop': 'Мозайката: Научете за плъзгане и пускане'
           'Maze: Sequence': 'Лабиринт: последователност'
           'Maze: Debugging': 'Лабиринт: отстраняване на грешки'
           'Artist 1: Intro': 'Художник 1: Въведение'
@@ -28,11 +28,11 @@
           Artist 2: Художник 2
           Happy Maps: Щастливи карти
           Move it, Move it: Преместите го, преместете го
-          'Real-life Algorithms: Plant a Seed': 'Алгоритми в живота: Засадете семената'
+          'Real-life Algorithms: Plant a Seed': 'Реални алгоритми: Засадете семената'
           Building a Foundation: Изграждане на база
           Getting Loopy: Да повтаряме
           The Big Event: Голямото събитие
-          Going Places Safely: Предвижваме се безопасно
+          Going Places Safely: Придвижваме се безопасно
           description: Курс 1 е предназначен за малките читатели, които искат за създават
             компютърни програми. Курсът ще им помогне да се научат да си сътрудничат
             с други ученици, ще подпомогне развитието на умения за решаване на проблеми
@@ -47,10 +47,10 @@
           'Bee: Loops': 'Пчела: цикли'
           'Studio: Create a Story': 'Театрална лаборатория: Създаване на история'
           'Artist: Loops': Художник - цикли
-          description_audience: Възраст 4 + (за неможещи да четат)
-          description_short: Курс 1 е предназначен за малките читатели.
+          description_audience: Възраст 4 + (за не можещи да четат)
+          description_short: Курс 1 е предназначен за начинаещи читатели.
         course2:
-          The Maze: Лабиринтът
+          The Maze: Лабиринт
           Suzi: Сузи
           The Artist: Художникът
           Artist Debugging: 'Художник: отстраняване на грешки'
@@ -60,14 +60,14 @@
           Bee Conditionals: Пчела - условия
           Flappy: Flappy
           title: Курс 2
-          Bee Loops: Пчела - цикли
-          Artist Functions: Художник- функции
+          Bee Loops: Пчела повторения
+          Artist Functions: 'Художник: функции'
           The Artist Debugging: 'Художникът: отстраняване на грешки'
           Bee Debugging: Пчела - отстраняване на грешки
           Bee Functions: Пчела - функции
-          Maze Loops: Лабиринт- повторения
+          Maze Loops: Лабиринт повторения
           Graph Paper Programming: Програмиране на милиметрова хартия
-          'Real-life Algorithms: Paper Planes': 'Алгоритми от живота: Хартиени самолети'
+          'Real-life Algorithms: Paper Planes': 'Реални алгоритми: Хартиени самолети'
           Getting Loopy: Да повтаряме
           Relay programming: Щафета на програмирането
           Conditionals: Условия
@@ -80,7 +80,7 @@
             които ще могат да споделят с приятели. Препоръчва се за 2-5 клас.
           'Maze: Sequence': 'Лабиринт: последователност'
           'Artist: Sequence': 'Художник: последователност'
-          'Maze: Loops': 'Лабиринт: повторения'
+          'Maze: Loops': 'Лабиринт: цикли'
           'Artist: Loops': Художник - цикли
           'Bee: Loops': 'Пчела: цикли'
           'Bee: Debugging': 'Пчела: отстраняване на грешки'
@@ -89,10 +89,10 @@
           'Artist: Sequence2': 'Художник: последователност 2'
           'Maze: Sequence2': 'Лабиринт: последователност 2'
           'Artist: Nested Loops': 'Художник: въвеждане на цикли'
-          description_audience: Възраст 6 + (четене е необходимо)
+          description_audience: Възраст 6 + (умения за четене са необходими)
           description_short: Курс 2 е предназначен за ученици, които могат да четат.
         course3:
-          The Maze: Лабиринтът
+          The Maze: Лабиринт
           'Studio: Create a Story': 'Театрална лаборатория: Създаване на история'
           The Artist: Художникът
           title: Курс 3
@@ -100,7 +100,7 @@
           Artist For Loops: Художник - за циклите
           Artist Nested Loops: Художник - въвеждане на цикли
           Bee Conditionals: Пчела - условия
-          Bee Nested Loops: Пчела - влождане на цикли
+          Bee Nested Loops: Пчела - въвеждане на цикли
           Bee Debuggin: Пчела - отстраняване на грешки
           Bee Debugging: Пчела - отстраняване на грешки
           Bee Functions: Пчела - функции
@@ -114,7 +114,7 @@
           Dice Race: Състезание със зарове
           Internet: Интернет
           Crowdsourcing: Групово решение
-          Digital Citizenship: Дигитални граждани
+          Digital Citizenship: Цифрови граждани
           Farmer - While Loops: Фермер - цикли "докато"
           description: Курс 3 е предназначен за ученици, които са преминали курс 2.
             Учениците ще задълбочат и разширят уменията и знанията си за програмирането,
@@ -122,7 +122,7 @@
             при разрешаването на по-сложни проблеми. До края на този курс, учениците
             ще създават интерактивни истории и игри, които да споделят с всички. Препоръчва
             се за 4-5 клас.
-          'Studio: Create a Game': 'Театрална лабораторията: Създаване на игра'
+          'Studio: Create a Game': Театрална лаборатория - Създаване на игра
           Maze: Лабиринт
           Artist: Художник
           'Artist: Functions': 'Художник: функции'
@@ -130,7 +130,7 @@
           'Bee: Conditionals': 'Пчела: условия'
           'Maze: Conditionals': 'Лабиринт: услоия'
           'Artist: Nested Loops': 'Художник: въвеждане на цикли'
-          'Farmer: While Loops': 'Фермер: повторения "докато"'
+          'Farmer: While Loops': Фермер - цикли "докато"
           'Bee: Nested Loops': 'Пчела:  въвеждане на цикли'
           'Bee: Debugging': 'Пчела: отстраняване на грешки'
           Maze2: Лабиринт 2
@@ -140,7 +140,7 @@
           'Bee: Conditionals2': 'Пчела: условия 2'
           'Maze: Conditionals2': 'Лабиринт: условия 2'
           'Artist: Nested Loops2': 'Художник: въвеждане на цикли 2'
-          'Farmer: While Loops2': 'Фермер: повторения "докато" 2'
+          'Farmer: While Loops2': Фермер - цикли "докато" 2
           'Bee: Nested Loops2': 'Пчела:  въвеждане на цикли 2'
           'Bee: Debugging2': 'Пчела: отстраняване на грешки 2'
           'Artist: Patterns': 'Художник: модели'
@@ -163,7 +163,7 @@
           'Calc: Defining Variables': 'Изчисление: Определяне на променливите'
           'Play Lab: Defining Variables': 'Театрална лаборатория: Определяне на променливите'
           The Design Recipe: Рецепта за дизайн
-          'Artist: Defining Functions': 'Художник: Деиниране на функции'
+          'Artist: Defining Functions': 'Художник: Дефиниране на функции'
           'Play Lab: Defining Functions': 'Игрална лаборатория: Рецепта за дизайн'
           'Artist: Functions': 'Художник: функции'
           'Play Lab: Animation': 'Театрална лаборатория: анимация'
@@ -212,13 +212,13 @@
           description_short: Създайте история или направете игра с Театрална лаборатория!
         artist:
           title: Художник
-          description: Начертайте готини картинки и дизайни с художникът!
+          description: Начертайте готини картинки и дизайни с художника!
           Artist: Художник
-          description_short: Начертайте готини картинки и дизайни с художникът!
+          description_short: Начертайте готини картинки и дизайни с художника!
         scrat:
           title: Scrat
-          description_short: Scrat кратко описание.
-          description: Scrat дълго описание
+          description_short: 'Scrat: кратко описание.'
+          description: 'Scrat: дълго описание'
           'Maze: Sequence': 'Лабиринт: последователност'
         hourofcode:
           Maze: Лабиринт
@@ -266,10 +266,10 @@
           'Unplugged: Songwriting with Parameters': 'Ънплъгд: Писане на песни с параметри'
           'Artist: Functions with Parameters': Художник - Функции с Параметри
           'Unplugged: Binary': 'Ънплъгд: двоичен код'
-          Bee Binary: Пчела двоичен код
-          Farmer Binary: Фермер двоичен код
+          Bee Binary: 'Пчела: двоичен код'
+          Farmer Binary: 'Фермер: двоичен код'
           Maze and Bee: Лабиринт и Пчела
-          Artist Binary: Художник Бинарен код
+          Artist Binary: 'Художник: Бинарен код'
           description_audience: Възраст 10 + (след курс 3)
         Course4pre:
           title: Курс 4 предпоставка (необходимо условие)
@@ -283,7 +283,7 @@
           'Artist: Loops': Художник - цикли
           'Bee: Conditionals': 'Пчела: условия'
           'Artist: Nested Loops': 'Художник: въвеждане на цикли'
-          'Farmer: While Loops': 'Фермер: повторения "докато"'
+          'Farmer: While Loops': Фермер - цикли "докато"
           'Bee: Nested Loops': 'Пчела:  въвеждане на цикли'
           'Artist: Functions': 'Художник: функции'
           'Bee: Debugging': 'Пчела: отстраняване на грешки'
@@ -349,11 +349,11 @@
             Detection и Питагорова теорема'
           'Play Lab: Collision Detection (Big Game)': Голямата игра - Collision Detection
         infinity:
-          title: Театрална лаборатория
-          description_short: Използвайте Игрална Лаборатория за да създадете история
-            или игра с участието на Дисни Инфинити героите.
-          description: Използвайте Игрална Лаборатория за да създадете история или
-            игра с участието на Дисни Инфинити героите.
+          title: Дисни Инфинити Игрална лаборатория
+          description_short: Използвайте "Игрална лаборатория", за да създадете история
+            или игра с участието на героите от Дисни Инфинити.
+          description: Използвайте "Игрална лаборатория", за да създадете история
+            или игра с участието на героите от Дисни Инфинити.
           Play Lab: Театрална лаборатория
           Infinity: Безкрайност
         algebrademo:
@@ -398,13 +398,6 @@
           'Unit 1: Sending Bits': 'Урок 1: Изпращане на битове'
           'Unit 2: Routing and DNS': 'Раздел 2: Маршрут и DNS'
           Internet Simulator Templates: Интернет симулатор шаблони
-        Infinity:
-          title: Безкрайност Игрална лаборатория
-          description_short: Използвайте Игрална Лаборатория за да създадете история
-            или игра с участието на Дисни Инфинити героите.
-          description: Използвайте Игрална Лаборатория за да създадете история или
-            игра с участието на Дисни Инфинити героите.
-          Infinity: Безкрайност
         pixelation:
           title: Пикселизация
           description: Създаване на изображения с битове и байтове.
@@ -420,20 +413,20 @@
           Graph Paper Programming: Програмиране на милиметрова хартия
           The Artist: Художникът
           Algorithms: Алгоритми
-          The Artist 2: Художникът 2
+          The Artist 2: Художника 2
           Functions: Функции
-          The Farmer: Фермерът
+          The Farmer: Фермера
           Conditionals: Условия
-          The Artist 3: Художникът 3
+          The Artist 3: Художника 3
           Song Writing: Писане на песен
-          The Farmer 2: Фермерът 2
+          The Farmer 2: Фермера 2
           Abstraction: Абстракция
-          The Artist 4: Художникът 4
-          Relay Programming: Щафетно програмиране
-          The Farmer 3: Фермерът 3
+          The Artist 4: Художника 4
+          Relay Programming: Поеми програмирането
+          The Farmer 3: Фермера 3
           The Internet: Интернет
-          The Artist 5: Художникът 5
-          Wrap-up: Изводи
+          The Artist 5: Художника 5
+          Wrap-up: Заключение
         edit-code:
           title: Редактиране на кода
           description: ''
@@ -444,19 +437,19 @@
         events:
           title: Събития
           description: ''
-          Bounce: Bounce
+          Bounce: Скачане
           Studio: Студио
           Calc: Calc
           Eval: Оценяване
         flappy:
           title: Flappy код
-          description: Искате ли да напишете своя собствена игра за по-малко от 10
-            минути? Опитайте нашите Flappy код уроци!
+          description: Искате ли да напишете своя собствена игра по-малко от 10 минути?
+            Опитайте нашите Flappy код уроци!
           Flappy Code: Flappy код
         jigsaw:
-          title: Мозайка
+          title: Мозайката
           description: ''
-          Jigsaw: Мозайка
+          Jigsaw: Мозайката
         step:
           title: Стъпка
           description: ''
@@ -513,22 +506,33 @@
           'Artist: Loops': Художник - цикли
           'Bee: Conditionals': 'Пчела: условия'
           'Artist: Nested Loops': 'Художник: въвеждане на цикли'
-          'Farmer: While Loops': 'Фермер: повторения "докато"'
+          'Farmer: While Loops': Фермер - цикли "докато"
           'Bee: Nested Loops': 'Пчела:  въвеждане на цикли'
           'Artist: Functions': 'Художник: функции'
           'Bee: Debugging': 'Пчела: отстраняване на грешки'
         cspunit1:
           title: CSP блок 1
+          description_short: Направи черно-бели изображения с инструмента за пикселизация
           description: CSP единица 1 етапи
           Lesson14: Урок14
           Lesson 14: Урок 14
           Lesson 14 v2: Урок 14 v2
           Lesson 15: Урок 15
-          description_short: Направи черно-бели изображения с инструмента за пикселизация
           Lesson 8: Урок 8
           Lesson 5: Урок 5
           Lesson 3: Урок 3
           Lesson 4: Урок 4
+          Lesson 6: Урок 6
+          Lesson 2: Урок 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
         algebraPD:
           title: Компютърни науки в алгебрата
           description: Научете функционално програмиране чрез алгебра
@@ -587,3 +591,15 @@
             Detection (голямата игра)'
           Your Game - Player Movement: Вашата игра - движение на героя
           Your Game - Collision Detection: Вашата игра - Collision Detection
+        text-compression:
+          title: Компресия на текста
+          description: Компресиране на текст чрез идентифициране на повтарящи се модели.
+          Text Compression: Компресия на текста
+        CSPPD:
+          new stage: нов етап
+          Introduction to PD: Въведение в PD
+        CSPLessonSamples:
+          title: CSP пробни уроци
+          description_short: пробни уроци за csp
+          Lesson 14: Урок 14
+          Lesson 15: Урок 15

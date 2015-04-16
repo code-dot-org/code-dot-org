@@ -1,17 +1,16 @@
 {
-  "badColorStringError": "Utilizaste una cadena de color no válido: {val}",
-  "badStyleStringError": "Utilizaste una cadena estilo válido: {val}",
+  "badColorStringError": "Utilizaste una cadena de color no válida: {val}",
+  "badStyleStringError": "Utilizaste una cadena de estilo no válida: {val}",
   "circleBlockTitle": "círculo (radio, estilo, color)",
   "displayBlockTitle": "evaluar",
   "ellipseBlockTitle": "elipse (anchura, altura, estilo, color)",
-  "emptyFunctionalBlock": "Tienes un bloque con una entrada vacía.",
-  "extraTopBlocks": "Dejaste bloques sin unir. ¿Tenías la intención de  adjuntarlos al bloque de \"pantalla\"?",
-  "infiniteRecursionError": "La función hace referencia hacia si misma. Nosotros paramos la ejecución, de otro modo hubiera seguido llamandose asimisma infinitamente.",
+  "extraTopBlocks": "Usted tiene bloques sueltos \"separados\". Quiso decir adjuntar estos para el bloque de \"evaluar\"?",
+  "infiniteRecursionError": "Tu función hace referencia a sí misma. Hemos detenido la ejecución, de otro modo hubiera seguido llamándose a sí misma indefinidamente.",
   "overlayBlockTitle": "superposición (arriba, abajo)",
   "placeImageBlockTitle": "lugar-imagen (x, y, imagen)",
   "offsetBlockTitle": "offset (x, y, imagen)",
   "rectangleBlockTitle": "rectángulo (anchura, altura, estilo, color)",
-  "reinfFeedbackMsg": "Presionar el Boton \"Seguir jugando\" para editar el dibujo.",
+  "reinfFeedbackMsg": "Puedes presionar el botón \"Seguir jugando\" para editar tu dibujo.",
   "rotateImageBlockTitle": "Girar (grados, imagen)",
   "scaleImageBlockTitle": "escala (factor, imagen)",
   "squareBlockTitle": "cuadrado (tamaño, estilo, color)",
@@ -26,7 +25,7 @@
   "outline": "contorno",
   "solid": "sólido",
   "string": "cadena",
-  "stringMismatchError": "La cadena de caracteres tiene una o mas letras capitales de forma erronea.",
-  "userCodeException": "Ocurrio un error mientras se ejecutaba el codigo.",
-  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
+  "stringMismatchError": "Tienes una cadena con letras mayúsculas y minúsculas errónea.",
+  "userCodeException": "Ocurrió un error mientras se ejecutaba tu código.",
+  "wrongBooleanError": "Tus bloques evalúan al valor booleano equivocado."
 }

@@ -155,18 +155,17 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Το πρόγραμμά σας καταλήγει σε διαίρεση με το μηδέν."},
-"emptyComputeBlock":function(d){return "Στο μπλοκ πρέπει να εισάγετε ένα εμφωλευμένο μπλόκ (ένα υπό-μπλόκ)."},
-"emptyFunctionalBlock":function(d){return "Έχετε ένα μπλόκ με κενό περιεχόμενο."},
+"emptyComputeBlock":function(d){return "Πρέπει να επισυνάψετε ένα μπλοκ στο μπλοκ \"αξιολόγηση\"."},
 "equivalentExpression":function(d){return "Δοκιμάστε να αναδιατάξετε τα ορίσματά σας έτσι ώστε να έχετε την ίδια έκφραση."},
 "evaluate":function(d){return "υπολογισμός"},
-"extraTopBlocks":function(d){return "Έχετε ασύνδετα μπλοκ. Μήπως θα θέλατε να τα συνδέσετε στο μπλοκ \"υπολόγισε\";"},
+"extraTopBlocks":function(d){return "Έχετε ασύνδετα μποκ. Μήπως ενοούσατε να τα επισυνάψετε στο μπλοκ \"αξιολόγηση\";"},
 "failedInput":function(d){return "Η συνάρτηση δεν επιστρέφει το σωστό αποτέλεσμα για όλες τις τιμές."},
 "goal":function(d){return "Στόχος:"},
 "levelIncompleteError":function(d){return "Η έκφραση σας δεν ταιριάζει με την αναμενόμενη του στόχου."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "Πρέπει να ορίσετε μία συνάρτηση με το όνομα "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Η έκφρασή σας δεν περιέχει την μεταβλητή "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Εδώ είναι το αποτέλεσμα σας! Συνεχίστε να εργάζεστε εδω ή προχωρήστε στον επόμενο γρίφο!"},
 "yourExpression":function(d){return "Η έκφρασή σας:"},
 "wrongInput":function(d){return "Κάνετε κλήση μίας συνάρτησης με την λανθασμένη τιμή."},
-"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Η έκφρασή σας οδηγεί σε λάθος αποτέλεσμα αν αλλάξουμε την "+appLocale.v(d,"var")+"."},
 "wrongResult":function(d){return "H έκφρασή σας δεν επιστρέφει το σωστό αποτέλεσμα."}};

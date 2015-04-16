@@ -156,7 +156,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "equivalentExpression":function(d){return "அதே தொடர் சரியாக பெற உங்கள் வாதங்களை மீள்ஒழுங்குபடுத்தி முயற்சிக்கவும்."},
 "evaluate":function(d){return "evaluate"},
 "extraTopBlocks":function(d){return "உங்களிடம் இணைக்கப்படாத தொகுதிகள் உள்ளன. \"கணிப்புக்கு \" இந்த தொகுதிகளை  இணைக்க வேண்டும் என்று கருதுகிறிர்களா?"},

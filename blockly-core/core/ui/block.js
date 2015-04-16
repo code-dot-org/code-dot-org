@@ -1408,6 +1408,9 @@ Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
   this.currentlyHidden_ = hidden;
   if (this.svg_) {
     this.svg_.setVisible(!hidden);
+    if (!hidden) {
+      this.refreshRender();
+    }
   }
 };
 
@@ -1668,10 +1671,7 @@ Blockly.Block.prototype.setPreviousStatement = function(hasPrevious, opt_check) 
         new Blockly.Connection(this, Blockly.PREVIOUS_STATEMENT);
     this.previousConnection.setCheck(opt_check);
   }
-  if (this.rendered) {
-    this.render();
-    this.bumpNeighbours_();
-  }
+  this.refreshRender();
 };
 
 /**
@@ -1696,10 +1696,7 @@ Blockly.Block.prototype.setNextStatement = function(hasNext, opt_check) {
         new Blockly.Connection(this, Blockly.NEXT_STATEMENT);
     this.nextConnection.setCheck(opt_check);
   }
-  if (this.rendered) {
-    this.render();
-    this.bumpNeighbours_();
-  }
+  this.refreshRender();
 };
 
 /**
@@ -1728,12 +1725,15 @@ Blockly.Block.prototype.setOutput = function(hasOutput, opt_check) {
         new Blockly.Connection(this, Blockly.OUTPUT_VALUE);
     this.outputConnection.setCheck(opt_check);
   }
+  this.refreshRender();
+};
+
+Blockly.Block.prototype.refreshRender = function () {
   if (this.rendered) {
     this.render();
     this.bumpNeighbours_();
   }
 };
-
 /**
  * Set whether this is a functional block that returns a value. Currently this
  * will be displayed as previous connection that will only connect with
@@ -1762,10 +1762,7 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
         new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
     this.previousConnection.setCheck(opt_check);
   }
-  if (this.rendered) {
-    this.render();
-    this.bumpNeighbours_();
-  }
+  this.refreshRender();
 };
 
 /**
@@ -1776,11 +1773,7 @@ Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
   this.setHSV.apply(this, Blockly.FunctionalTypeColors[newType]);
   this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
   this.previousConnection.setCheck(newType);
-
-  if (this.rendered) {
-    this.render();
-    this.bumpNeighbours_();
-  }
+  this.refreshRender();
 };
 
 /**

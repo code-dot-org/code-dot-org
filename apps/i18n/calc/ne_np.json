@@ -1,8 +1,7 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
-  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
+  "divideByZeroError": "तपाईको प्रोग्रामको नतिजा सुन्य बाट भाग गरेको आउछ।",
+  "emptyComputeBlock": "\"evaluate\" खण्डमा एउटा खणड जोडेको हुनुपर्छ ।",
+  "equivalentExpression": "ठ्याक्कै त्यहि \"expression\" ल्याउन तपाईले दिनुभएका \"arguments\" हरुका स्थान पुन: मिलाएर हे्र्नुहोस् ।",
   "evaluate": "evaluate",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
   "failedInput": "Your function does not return the right result for all values.",

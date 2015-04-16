@@ -261,6 +261,7 @@
         artist: Tegn noget
     user:
       classroom: Lærerens Startside
+      district_dashboard: District Dashboard
       label: Hej %{username}
       stats: Mine fremskridt
       settings: Min konto
@@ -513,6 +514,10 @@
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Brug Play Lab til at skabe en historie eller et spil med karakterer fra
+        Disneys Infinity
   gallery:
     students_drew_these_with_code: Elever har tegnet disse med kode!
     students_made_these_with_code: Elever har lavet disse med kode!
@@ -549,6 +554,14 @@
     wrong_body: Den løsning, du har angivet er ikke korrekte.  Prøv venligst igen!
     correct_title: Rigtigt
     correct_body: Det er det korrekte svar.
+  contract_match:
+    wrong_title: Forkert svar
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Skriv dit svar her
   dialog:
@@ -645,3 +658,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

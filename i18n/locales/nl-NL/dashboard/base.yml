@@ -62,15 +62,15 @@ nl:
     windowslive: Microsoft Account
     forgot_password: Wachtwoord vergeten?
     need_confirmation: Geen bevestigingsinstructies ontvangen?
-    need_unlock: Nog niet uw ontgrendel instructies ontvangen?
+    need_unlock: Nog geen unlock instructies ontvangen?
   signup_form:
-    overview_student: 'Meld je aan voor een account om je voortgang bij te houden. Je e-mail wordt in eerste instantie gebruikt om je te laten inloggen en om je wachtwoord aan te passen. Zie voor meer informatie onze <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: 'Leer computer techniek in uw klaslokaal, maak een gebruikersnaam aan. <p/> U kan uw leerlingen toevoegen en hun vooruitgang zien.'
+    overview_student: 'Meld je aan voor een account om je voortgang bij te houden. Je e-mail wordt in eerste instantie gebruikt om je te laten inloggen en om je wachtwoord aan te passen. Zie voor meer informatie ons <a href="http://code.org/privacy">Privacy-beleid </a>.'
+    overview_teacher: 'Geef les in Informatica in je klaslokaal, maak een gebruikersnaam aan. <p/> Je kunt je leerlingen toevoegen en hun voortgang zien.'
     no_signup_message: 'Je kunt <a target="_blank" href="http://learn.code.org">de verschillende niveaus en levels bekijken</a>, maar om je voortgang te bewaren moet je je aanmelden.'
     teacher_educator_guide: Kijk in de lerarengids
     teacher_pitch: Registreer als leraar voor Code.org
     teacher_title: Inschrijven voor leraren
-    student_pitch: Registreren als leerling voor Code.org
+    student_pitch: Registreer als leerling voor Code.org
     student_title: Registreren als leerling
     school_name: School naam (optioneel)
     school_address: Schooladres (optioneel)
@@ -78,7 +78,7 @@ nl:
     gender: Geslacht (optioneel)
     birthday: Verjaardag (optioneel)
     age: Leeftijd
-    user_type: Bent u een leerling of een leraar?
+    user_type: Bent je leerling of leraar?
     submit: Meld je aan
     teacher: Ben je een leraar?
     valid_username: Beschikbaar!
@@ -87,9 +87,9 @@ nl:
     valid_password: Geldig wachtwoord!
     invalid_password: Wachtwoord moet ten minste 6 tekens lang zijn
     mismatch_password: De twee wachtwoorden komen niet overeen
-    student_terms: "Ik ben het eens te worden gebonden door de Code.org <a href='http://code.org/tos'> gebruiksvoorwaarden</a>. Als ik jonger dan 13 jaar ben, bevestig ik dit door het indienen van dit formulier waarvoor ik door mijn ouders of wettelijke voogd toestemming heb gekregen om gebruik te maken van de diensten van Code.org  <br/>Voor gebruikers onder de 13, worden e-mailadressen niet opgeslagen in een vorm die het mogelijk maakt om hen te contacteren."
-    teacher_terms: "Ik ben het eens te worden gebonden door de Code.org <a href='http://code.org/tos'> gebruiksvoorwaarden</a>."
-    additional_information: We moeten enige aanvullende informatie hebben om u te kunnen aanmelden.
+    student_terms: "Ik zal me houden aan de Code.org <a href='http://code.org/tos'> gebruiksvoorwaarden</a>. Als ik jonger dan 13 jaar ben, bevestig ik dit door het indienen van dit formulier waarvoor ik door mijn ouders of wettelijke voogd toestemming heb gekregen om gebruik te maken van de diensten van Code.org  <br/>Voor gebruikers onder de 13, worden e-mailadressen niet opgeslagen in een vorm die het mogelijk maakt om contact met hen op te nemen."
+    teacher_terms: "Ik zal me houden aan de Code.org <a href='http://code.org/tos'> gebruiksvoorwaarden</a>."
+    additional_information: We hebben nog meer informatie nodig om je te kunnen aanmelden.
   signin_form:
     title: Heb je al een account? Log in
     login: Email of gebruikersnaam
@@ -99,12 +99,12 @@ nl:
   signin:
     try_heading: Wil je proberen te programmeren zonder te registreren?
     try_hoc: Probeer eerst een Hour of Code
-    try_20hours: Probeer onze 20-urige introductie tot de informatica
+    try_20hours: Probeer onze Inleiding tot de Informatica (20 uur)
   signinsection:
     welcome: 'Welkom bij %{section_name}'
-    name: Kies uw naam
-    picture: Zoek nu uw geheime afbeelding
-    words: Vul nu uw geheime woorden in
+    name: Kies je naam
+    picture: Zoek nu je geheime afbeelding
+    words: Vul nu je geheime woorden in
     login: Aanmelden
   password:
     reset_form:
@@ -128,49 +128,49 @@ nl:
       %{name}
   follower:
     invite_sent: Uitnodiging verstuurd
-    added_teacher: '%{name} toegevoegd als je leraar'
+    added_teacher: '%{name} toegevoegd als jouw leraar'
     registered: 'Je hebt je aangemeld voor %{section_name}.'
     error:
-      signed_in: Log uit om verder te gaan
+      signed_in: Log uit voordat je doorgaat
       username_not_found: 'Gebruikersnaam %{username} niet gevonden'
       username_in_use: '%{username} wordt al gebruikt, kies een andere'
-      no_teacher: "Er is niemand ingelogd met '%{teacher_email_or_code}'. Vraag ze hier aan te melden en probeer ze dan nog eens toe te voegen"
+      no_teacher: "Er is niemand ingelogd met '%{teacher_email_or_code}'. Vraag ze zich hier aan te melden en probeer ze dan nog eens toe te voegen"
       section_not_found: "Kan geen onderdeel vinden met code '%{section_code}'."
-      blank_code: Voer een onderdeel code in
+      blank_code: Voer een sectiecode in
       cant_join_own_section: Sorry, je kan niet aan je eigen onderdeel deelnemen.
     mail:
       invite_student:
         subject: 'Doe mee met een klas met %{teacher_name} op Code.org!'
       student_disassociated:
-        subject: 'Code.org melding: %{student_name} is niet langer ale student aan je gekoppeld.'
+        subject: 'Code.org melding: %{student_name} is niet langer ale student aan jou gekoppeld.'
       teacher_disassociated:
-        subject: 'Code.org melding: %{teacher_name} is niet langer als leraar aan je gekoppeld.'
+        subject: 'Code.org melding: %{teacher_name} is niet langer als leraar aan jou gekoppeld.'
   reports:
     error:
       access_denied: Je hebt geen toegang tot de statistieken van deze persoon
   redeem_prizes:
     title: 'Geef prijzen vrij: %{name}'
-    provider: 'Aanbieder:'
+    provider: 'Provider:'
     code: 'Code:'
     redeem_header: 'Vrijgeven:'
     donorschoose_register: Registreer je als leraar op DonorsChoose.org
-    donorschoose_project: Een project posten
-    donorschoose_how_to: Hoe gebruiken u uw code
+    donorschoose_project: Een project plaatsen
+    donorschoose_how_to: Hoe gebruik je jouw code
     success: Je prijs is vrijgegeven, gebruik de code hieronder.
     error: Je prijs kon niet worden vrijgegeven, probeer het opnieuw.
     error_us_only: Prijzen zijn alleen geldig voor gebruikers in de Verenigde Staten.
     error_not_earned: Deze prijs heb je nog niet verdiend.
     error_already_redeemed: Je hebt je prijs al gekregen.
-    no_prizes_available: sorry, maar er zijn momenteel geen prijzen beschikbaar.
-    teacher_info_required: 'Voor de prijzen voor leerkrachten hebben we de schoolnaam en -adres nodig:'
+    no_prizes_available: Sorry, maar er zijn momenteel geen prijzen beschikbaar.
+    teacher_info_required: 'Voor de prijzen voor leerkrachten hebben we schoolnaam en -adres nodig:'
     teacher_email_required: 'Voor de prijzen voor leerkrachten hebben we een bevestigd emailadres nodig:'
     confirm:
       title: Bevestigen
       "no": Nee
       "yes": Ja
-      msg: "Weet je zeker dat je de prijs '%{prize_name}' wil kiezen?"
-      msg_student: 'Let op: je kunt maar een soort prijs kiezen.'
-      msg_publicschool: Bevestig dat u een Amerikaanse openbare-schoolleerkracht bent.
+      msg: "Weet je zeker dat je de prijs '%{prize_name}' wilt kiezen?"
+      msg_student: 'Let op: je kunt maar één soort prijs kiezen.'
+      msg_publicschool: Bevestig dat je leerkracht bent op een Amerikaanse public school.
       msg_visit_website: Website bezoeken
     providers:
       apple_itunes: $10 iTunes Gift Card
@@ -219,8 +219,9 @@ nl:
         artist: Teken iets
     user:
       classroom: Leerkracht Home Page
+      district_dashboard: District Ovezicht
       label: 'Hallo %{username}'
-      stats: Mijn vooruitgang
+      stats: Mijn voortgang
       settings: Mijn account
       prizes: Prijzen
       logout: Uitloggen
@@ -228,7 +229,7 @@ nl:
       signup: Meld je aan
       already_registered: Al geregistreerd?
     popup:
-      progress: Je vooruitgang
+      progress: Je voortgang
       lines: 'Totaal aantal regels code: %{lines}'
       close: SLUITEN
       mastery: Begrippen
@@ -263,7 +264,7 @@ nl:
       password: wachtwoord
       manage: Beheer leerling
       dashboard: Leerkrachten Dashboard
-      add: voeg leerling toe
+      add: Voeg leerlingen toe
       remove: leerling verwijderen
       confirm_remove: Weet je zeker dat je deze leerling wilt verwijderen?
       help_reassign: Je kunt je klas in meerdere groepen verdelen door leerlingen aan een nieuwe groep toe te wijzen.
@@ -308,7 +309,7 @@ nl:
     delete_confirm: Weet je zeker dat je jouw account wil verwijderen?
   user_level:
     completed: Voltooid
-    tried: Probeerde
+    tried: Geprobeerd
   user_stats:
     recent_activity: Recente activiteiten
     show_more: Toon meer
@@ -438,6 +439,9 @@ nl:
       body: Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
     students_made_these_with_code: Leerlingen hebben dit gemaakt met code!
@@ -467,6 +471,13 @@ nl:
     wrong_body: 'De oplossing die je hebt ingevoerd is niet juist.  Probeer het opnieuw!'
     correct_title: Juist
     correct_body: Dat is het juiste antwoord.
+  contract_match:
+    wrong_title: Onjuist antwoord
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Voer uw antwoord hier in
   dialog:
@@ -551,3 +562,5 @@ nl:
     delete_confirm_title: Weet je zeker dat je dit project wilt verwijderen?
     delete_confirm_text: Bij het verwijderen van je project verdwijnt deze definitief uit jouw Mijn Projecten-lijst. Iedereen met wie je de link naar het project gedeeld hebt, zal niet langer je project kunnen bekijken.
     view_all: Mijn Projecten Bekijken
+    remix: Remix
+    click_to_remix: "Klik op 'Remix' om een spin-off voor je eigen versie te maken!"

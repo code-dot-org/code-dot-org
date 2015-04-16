@@ -43,8 +43,6 @@ def process_command_line(argv=ARGV)
     i = 0
     c = argv.count
 
-    flag = nil
-
     while(i < c)
       if argv[i] == '--threads'
         raise ArgumentError, 'no value for --threads flag provided.' unless (i += 1) < c
@@ -124,7 +122,7 @@ def main()
     end
   end
 
-  for i in 1..params[:threads]
+  params[:threads].times do
     workers << Thread.new do
       until queue.empty?
         item = queue.pop(true) rescue nil

@@ -194,6 +194,9 @@ Blockly.ContractEditor.prototype.create_ = function() {
       headerText: "Definition", /** TODO(bjordan) i18n */
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
         this.flyout_.setVisibility(!isNowCollapsed);
+        if (!isNowCollapsed) {
+          this.refreshParamsInFlyout_();
+        }
         this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this),
           this.hiddenDefinitionBlocks_);
@@ -445,12 +448,15 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
           '<div>' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '</div>'
         + '<div><input id="functionNameText" type="text"></div>'
         + '<div id="domain-label">' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
+        + '<div class="contract-type-hint" id="domain-hint">(the domain is the type of input)</div>'
         + '<div id="domain-area" style="margin: 0;">'
         + '</div>'
+        + '<div class="clear" style="margin: 0;"></div>'
         + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + '</button>'
         + '<div class="clear" style="margin: 0;"></div>'
         + '<div id="range-area" style="margin: 0;">'
           + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</div>'
+          + '<div class="contract-type-hint clear" id="range-hint" style="margin-left: 11px; ">(the range is the type of output)</div>'
           + '<span id="outputTypeDropdown"></span>'
         + '</div>'
         + '<div id="description-area" style="margin: 0px;">'
@@ -515,6 +521,8 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
   goog.style.showElement(goog.dom.getElement('domain-label'), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement('paramAddButton'), !isEditingVariable);
   goog.style.showElement(goog.dom.getElement('description-area'), !isEditingVariable);
+  goog.style.showElement(goog.dom.getElement('range-hint'), !isEditingVariable);
+  goog.style.showElement(goog.dom.getElement('domain-hint'), !isEditingVariable);
 };
 
 Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {

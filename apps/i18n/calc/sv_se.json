@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Försök ordna om dina argument för att få exakt samma uttryck.",
   "evaluate": "evaluate",
   "extraTopBlocks": "Du har okopplade block. Menade du att fästa dessa till \"beräkna\" blocket?",

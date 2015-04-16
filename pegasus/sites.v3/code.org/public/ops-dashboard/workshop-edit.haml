@@ -14,8 +14,10 @@ template: none
 %span
   PD Workshop Management
 
-%h1{'ng-show' => 'workshop.id'} Edit {{workshop.name}}
-%h1{'ng-show' => '!workshop.id'} Add a workshop
+%h1{'ng-show' => 'workshop.id'}
+  Edit {{workshop.name}}
+%h1{'ng-show' => '!workshop.id'}
+  Add a workshop
 
 %h3
   Workshop Name
@@ -38,33 +40,90 @@ template: none
 %p#save-confirmation{style:'display:none'}
   Saved!
 %hr
-%h2{'ng-hide' => 'workshopSegments.length <= 0'}
+%h2{'ng-show' => 'workshop.id'}
   Workshop segments
-%div{'ng-repeat' => 'segment in workshopSegments'}
-  %p
-    {{segment.start | utc | date:'longDate'}}
-  %span
-    {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
-  %br
-  %br
-  %button.btn-danger{'ng-click' => 'segment.deletion = true', 'ng-hide' => 'segment.deletion == true'}
-    Delete
-  %span{'ng-show' => 'segment.deletion == true'}
-    Are you sure?
-  %button.btn-danger{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);', 'ng-show' => 'segment.deletion == true'}
-    Yes
-  %button.btn-danger{'ng-click' => 'segment.deletion = false', 'ng-show' => 'segment.deletion == true'}
-    No
-  %hr
+%table{'ng-show' => 'workshop.id'}
+  %tr
+    %th
+      day
+    %th
+      time
+    %th
+      manage
+  %tr
+    %td
+      %input{type:'datetime-local', 'ng-model' => 'segment.start'}
+    %td
+      %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+    %td
+      %a.btn.btn-white.btn-xs{'ng-click' => 'saveSegment(segment)'}
+        Save Segment
+  %tr{'ng-repeat' => 'segment in workshopSegments | orderBy:"start"'}
+    %td{'ng-hide' => 'segment.editing'}
+      {{segment.start | utc | date:'longDate'}}
+    %td{'ng-hide' => 'segment.editing'}
+      {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
+    %td{'ng-hide' => 'segment.editing'}
+      %a.btn.btn-white.btn-xs{'ng-click' => 'segment.deletion = true', 'ng-hide' => 'segment.deletion == true'}
+        Delete
+      %span{'ng-show' => 'segment.deletion == true'}
+        Are you sure?
+      %br
+      %a.btn.btn-white.btn-xs{'ng-click' => 'segment.$remove({id: segment.id}) && workshopSegments.splice($index, 1);', 'ng-show' => 'segment.deletion == true'}
+        Yes
+      %a.btn.btn-white.btn-xs{'ng-click' => 'segment.deletion = false', 'ng-show' => 'segment.deletion == true'}
+        No
+
+%h3{'ng-show' => 'workshop.id'}
+  Facilitators
+
 %div{'ng-show' => 'workshop.id'}
-  %h2
-    Add a new segment
-  %div
-    Segment Start
-    %input{type:'datetime-local', 'ng-model' => 'segment.start'}
-    Segment End
-    %input{type:'datetime-local', 'ng-model' => 'segment.end'}
-    %br
-    %br
-  %button{'ng-click' => 'saveSegment(segment)'}
-    Save Segment
+  %table{style: "width:950px; table-layout:fixed; margin-bottom:10px", 'ng-form' => 'allForm', class: 'workshop-facilitators'}
+    %colgroup
+      %col{width: "200"}/
+      %col{width: "200"}/
+      %col{width: "300"}/
+      %col{width: "200"}/
+    %tr
+      %th.manage-th
+        First name
+      %th.manage-th
+        Last name
+      %th.manage-th
+        Email
+      %th.manage-th
+        %div
+          %a.btn.btn-primary{"ng-click" => "save(workshop)", "ng-show" => "editingAny(workshop.facilitators)", "ng-disabled" => "allForm.$invalid"} Save All
+    %tr{"ng-repeat" => "facilitator in workshop.facilitators", style: "vertical-align:top", 'ng-form' => 'form'}
+      %td
+        %div{"ng-hide" => "facilitator.editing"}
+          {{facilitator.ops_first_name}}
+        %div{"ng-show" => "facilitator.editing"}
+          %input.form-control{"ng-model" => "facilitator.ops_first_name", placeholder: "First name", style: "width: 100%", type: "text", required: "true", name: 'ops_first_name'}/
+          %span.error{'ng-show' => 'form.ops_first_name.$error.required'} required
+      %td
+        %div{"ng-hide" => "facilitator.editing"}
+          {{facilitator.ops_last_name}}
+        %div{"ng-show" => "facilitator.editing"}
+          %input.form-control{"ng-model" => "facilitator.ops_last_name", placeholder: "Last name", style: "width: 100%", type: "text", required: "true", name: 'ops_last_name'}/
+          %span.error{'ng-show' => 'form.ops_last_name.$error.required'} required
+      %td
+        %div{"ng-hide" => "facilitator.editing"}
+          {{facilitator.email}}
+        %div{"ng-show" => "facilitator.editing"}
+          %input.form-control{"ng-model" => "facilitator.email", placeholder: "Email address", style: "width: 100%", type: 'email', required: "true", name: 'email'}/
+          %span.error{'ng-show' => 'form.email.$error.required'} required
+          %span.error{'ng-show' => 'form.email.$error.email'} Invalid email address
+      %td{nowrap: true, style: 'white-space: nowrap;'}
+        %span{"ng-show" => "facilitator.confirmDelete"}
+          %span Delete?
+          %br
+          %a.btn.btn-danger.btn-xs{"ng-click"=>'workshop.facilitators.splice(workshop.facilitators.indexOf(facilitator), 1) && save(workshop)'} Yes
+          %a.btn.btn-success.btn-xs{"ng-click"=>'facilitator.confirmDelete = false'} No
+        %span{"ng-hide" => "facilitator.confirmDelete"}
+          %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.editing = true", "ng-hide" => "facilitator.editing"} Edit
+          %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.editing = false;", "ng-show" => "facilitator.editing"} Cancel
+          %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.confirmDelete = true", "ng-show" => "!facilitator.editing && facilitator.id"} Delete
+
+%button.btn.btn-white{"ng-click" => "workshop.facilitators.push({editing: true})", 'ng-show' => 'workshop.id'}
+  + Add Facilitator

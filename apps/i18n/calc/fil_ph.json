@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "Dapat kang maglakip ng isang block sa \"compute\" block.",
-  "emptyFunctionalBlock": "Mayroon kang isang block na walang nailagay na input .",
   "equivalentExpression": "Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon.",
   "evaluate": "evaluate",
   "extraTopBlocks": "Mayroon kang hindi nakasama na mga block. Ibig mo bang isama ito sa \"compute\" block?",

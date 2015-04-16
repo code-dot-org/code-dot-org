@@ -155,15 +155,14 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "０による割り算を行ってしまいました。"},
-"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
-"emptyFunctionalBlock":function(d){return "入力値が空のブロックがあります。"},
+"emptyComputeBlock":function(d){return "「evaluate」ブロックにブロックを追加する必要があります"},
 "equivalentExpression":function(d){return "同じ式になるよう引数を並べ替えてください。"},
 "evaluate":function(d){return "計算する"},
-"extraTopBlocks":function(d){return "使っていないブロックがあります。使っていないブロックを\"計算\"ブロックにつなげるつもりでしたか？"},
+"extraTopBlocks":function(d){return "関連付けられていないブロックがあります。このブロックを「evaluate」ブロックに追加しますか？"},
 "failedInput":function(d){return "あなたの関数は正しい結果を返していません。"},
 "goal":function(d){return "ゴール: "},
 "levelIncompleteError":function(d){return "あなたの式はゴールと合っていません。"},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return appLocale.v(d,"functionName")+" という関数を定義してください"},
 "missingVariableX":function(d){return "あなたの式には、変数"+appLocale.v(d,"var")+"がありません。"},
 "reinfFeedbackMsg":function(d){return "あなたの計算結果です！このパズルを続けるか、次のパズルに進んでください！"},
 "yourExpression":function(d){return "あなたの式:"},

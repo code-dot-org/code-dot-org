@@ -372,6 +372,7 @@ en:
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
+    no_primary_course: "Try a course at Code Studio"
   gender:
     male: 'Male'
     female: 'Female'
@@ -493,6 +494,14 @@ en:
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: "Correct"
     correct_body: "That is the correct answer."
+  contract_match:
+    wrong_title: "Incorrect answer"
+    badname: "Your contract has the wrong name."
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: "Your contract has the wrong range."
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: "One or more of your domain items has the wrong name."
+    baddomaintype: "One or more of your domain items has the wrong type, or they are in the wrong order."
   text_match:
     placeholder: "Enter your answer here"
   dialog:

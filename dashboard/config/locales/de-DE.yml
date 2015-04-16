@@ -42,7 +42,7 @@
   less: WENIGER
   beta: Beta
   try_hoc: Probiere "The Hour of Code" aus, klicke hier >> 
-  try_k8intro: Versuche unseren Einführungskurs in die Informatik (15-25 Stunden)
+  try_k8intro: Probiere unseren Einführungskurs in die Informatik (15-25 Stunden)
   k8intro: Einführung in die Informatik (15-25 Stunden)
   already_started: Schon begonnen? Hier fortsetzen >> 
   demos: 'Admin: Alle Demos'
@@ -75,9 +75,9 @@
       verschiedenen Level und Puzzle</a> durchsuchen, aber um Deinen Fortschritt zu
       speichern musst Du dich anmelden.
     teacher_educator_guide: Lehrer-Handbuch
-    teacher_pitch: Registrierung für LehrerInnen
-    teacher_title: Anmelden (Lehrer)
-    student_pitch: Anmeldung für SchülerInnen
+    teacher_pitch: Lehrer-Registrierung für Code.org
+    teacher_title: Registrierung (Lehrer)
+    student_pitch: Schüler-Registrierung für Code.org
     student_title: Registrierung für Schüler
     school_name: Name der Schule (optional)
     school_address: Adresse der Schule (optional)
@@ -111,8 +111,8 @@
     submit: Anmelden
   signin:
     try_heading: Willst Du mit dem Programmieren anfangen, ohne Dich anzumelden?
-    try_hoc: Versuche zuerst eine Hour of Code
-    try_20hours: Versuche unsere 20-stündige Einführung in die Informatik
+    try_hoc: Probiere zuerst eine Hour of Code
+    try_20hours: Probiere unsere 20-stündige Einführung in die Informatik
   signinsection:
     welcome: Willkommen im Kapitel %{section_name}
     name: Wähle deinen Namen
@@ -123,7 +123,7 @@
     reset_form:
       title: Passwort vergessen?
       email: E-Mail-Adresse
-      submit: Sende mir Anweisungen um das Kennwort zurückzusetzen
+      submit: Sende mir Anweisungen um das Passwort zurückzusetzen
     change_form:
       title: Ändern Sie Ihr Passwort
       new_password: Neues Passwort
@@ -142,7 +142,7 @@
   follower:
     invite_sent: Einladung gesendet
     added_teacher: '%{name} wurde als Ihr Lehrer hinzugefügt'
-    registered: Sie haben Sich registriert als %{section_name}.
+    registered: Sie haben Sich für %{section_name} registriert.
     error:
       signed_in: Bitte melden Sie sich ab bevor Sie fortfahren
       username_not_found: Benutzername %{username} wurde nicht gefunden
@@ -266,6 +266,7 @@
         artist: Zeichne etwas
     user:
       classroom: Lehrer-Homepage
+      district_dashboard: District Dashboard
       label: Hallo %{username}
       stats: Mein Fortschritt
       settings: Mein Account
@@ -314,7 +315,7 @@
       remove: Schüler entfernen
       confirm_remove: Sind Sie sicher, dass Sie diesen Schüler entfernen möchten?
       help_reassign: Um die Klasse in mehrere Abschnitte zu unterteilen, wählen Sie
-        die Studenten aus, die einem neuen Abschnitt zugewiesen werden sollen.
+        die Schüler aus, die einem neuen Abschnitt zugewiesen werden sollen.
       help_register: Anstatt viel Zeit damit zu verbringen die Schülerdaten zu importieren,
         können Sie ihre Klasse registrieren indem sich jeder Schüler selbst anmeldet.
         Ihre Schüler müssen dazu einen Username und ein Passwort angeben, jedoch keine
@@ -343,7 +344,7 @@
       email: Als e-Mail senden
     rollup: Fortschrittsanzeige
     activity: Letzte Aktivitäten der Klasse
-    user_not_found: Der Lehrer oder Student konnte nicht gefunden werden
+    user_not_found: Der Lehrer oder Schüler konnte nicht gefunden werden
     cant_remove_student_no_email: '%{student_name} kann nicht von ihren Schülern entfernt
       werden, da %{student_name} nicht mit einer E-Mail-Adresse registriert ist'
     cant_remove_teacher_no_email: '%{teacher_name} kann nicht als dein Lehrer entfernt
@@ -356,7 +357,7 @@
     email_confirm_wrong_email: (Falsche E-Mail-Adresse?)
     email_resend_confirm: Anmeldebestätigung erneut senden
     new_password_hint: (freilassen, wenn Sie es nicht verändern möchten)
-    current_password_hint: (wir benötigen Ihr aktuelle Kennwort, um Ihre Änderungen
+    current_password_hint: (wir benötigen dein aktuelles Passwort, um deine Änderungen
       zu bestätigen)
     delete: Lösche deinen Account
     delete_text: Klicke auf den unteren Button um deinen Account zu löschen.
@@ -377,7 +378,7 @@
     signin_message: Schon registriert? %{link}
     student_reg_link: Studenten Anmeldung
     teacher_reg_link: Lehrer Anmeldung
-    signin_directions: Melde Dich an, um Deinen Fortschritt festzuhalten.<br/> LehrerInnen
+    signin_directions: Melde Dich an, um Deinen Fortschritt festzuhalten.<br/> Lehrer
       können den Fortschritt der gesamten Klasse verfolgen.
     teacher_dashboard: Fortschrittsanzeige einsehen
     teacher_student_count_one: Sie haben %{count} Schüler.
@@ -405,7 +406,7 @@
     20hour_overview: Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der
       Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den
       Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.
-    test_videos_help: Testen Sie unseren neuen Video-Player an Ihrer Schule
+    test_videos_help: Teste unseren neuen Video-Player an deiner Schule
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Schüler der Schulstufen
       1-6
     use_as_teacher: Verwende diese Seite als Lehrer
@@ -413,7 +414,7 @@
     heading_elementary: <h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>
     heading_apps: <h2>Spass für</h2><h1>Alle</h1>
     heading_legacy: <h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>
-    your_gallery: Gallerie
+    your_gallery: Galerie
   gender:
     male: Männlich
     female: Weiblich
@@ -514,13 +515,17 @@
       body: Versuche unseren 20-Stunden Informatik-Einführungskurs.
     hoc2014:
       try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde aus
-      try_frozen: Künstler mit Anna und Elsa, aus Gefrorenem
+      try_frozen: Künstler mit Anna und Elsa, aus Die Eiskönigin
     gallery:
-      title: Gallerie
+      title: Galerie
       body: Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die
         von unseren Nutzern erstellt wurden
     frozen:
-      title: Gefroren
+      title: Die Eiskönigin
+    infinity:
+      title: Infinity Spiele Lab
+      body: Benutze den Spiele Lab, um eine Geschichte oder ein Spiel mit dem Disney
+        Infinity Charakteren z u erstellen.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -535,7 +540,7 @@
     more: Mehr &rarr;
     caption_by_name_age: Von%{name}, Alter %{age}
     caption_time_ago: '%{time_ago} früher'
-    header: Gallerie
+    header: Galerie
     header_playlab: Play Lab
     header_artist: Künstler
   landing:
@@ -560,6 +565,14 @@
       es erneut!
     correct_title: Richtig
     correct_body: Das ist die richtige Antwort.
+  contract_match:
+    wrong_title: Falsche Antwort
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
   text_match:
     placeholder: Gebe hier deine Antwort ein
   dialog:
@@ -657,3 +670,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

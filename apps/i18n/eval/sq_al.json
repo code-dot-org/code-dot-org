@@ -4,7 +4,6 @@
   "circleBlockTitle": "rreth (rreze, stil, ngjyrë)",
   "displayBlockTitle": "përcakto",
   "ellipseBlockTitle": "elips (gjerësi, gjatësi, stil, ngjyrë)",
-  "emptyFunctionalBlock": "Ti ke një bllok me një input të pambushur.",
   "extraTopBlocks": "Ti ke blloqe të pa bashkuar. A ke menduar t'i bashkangjitësh këto me bllokun e \"shfaqur\"?",
   "infiniteRecursionError": "Funksioni juaj po thërret vetveten. Ne e ndaluam atë, përndryshe do të kishte vazhduar te thërriste vetveten përgjithmonë.",
   "overlayBlockTitle": "mbivendosje (lart, poshtë)",

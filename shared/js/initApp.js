@@ -60,7 +60,7 @@ var baseOptions = {
     }
   }
 };
-$.extend(true, appOptions, baseOptions, blocklyOptions);
+$.extend(true, appOptions, baseOptions);
 
 // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
 // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
@@ -219,6 +219,7 @@ function initApp() {
       appOptions.level.lastAttempt = dashboard.currentApp.levelSource;
       appOptions.hideSource = true;
       appOptions.callouts = [];
+      dashboard.showMinimalProjectHeader();
     }
   } else if (appOptions.isLegacyShare && appToProjectUrl[appOptions.app]) {
     dashboard.currentApp = {
@@ -302,7 +303,9 @@ function loadProject(promise) {
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
     dashboard.isEditingProject = true;
-    promise = promise.then(dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName));
+    promise = promise.then(function () {
+      return dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName);
+    });
   }
   return promise;
 }

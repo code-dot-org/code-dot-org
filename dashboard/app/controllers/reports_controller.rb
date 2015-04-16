@@ -130,13 +130,13 @@ SQL
         unsuccessful_code_map[activity.level_source_id][:count] += 1
       end
 
-      if !activity.best?
+      unless activity.best?
         all_but_best_code_map[activity.level_source_id][:count] += 1
       end
     end
 
     # Setting up the popular incorrect code
-    if !all_but_best_code_map.empty?
+    unless all_but_best_code_map.empty?
       sorted_all_but_best_code = all_but_best_code_map.values.sort_by {|v| -v[:count] }
       pop_level_source_ids = Array.new([sorted_all_but_best_code.length - 1, 9].min)
       for idx in 0..[sorted_all_but_best_code.length - 1, 9].min

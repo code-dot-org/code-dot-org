@@ -165,7 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "!!-place-image (x, y, image)-!!"},
 "offsetBlockTitle":function(d){return "!!-offset (x, y, image)-!!"},
 "rectangleBlockTitle":function(d){return "!!-rectangle (width, height, style, color)-!!"},
-"reinfFeedbackMsg":function(d){return "!!-You can press the \"Keep Playing\" button to edit your drawing.-!!"},
+"reinfFeedbackMsg":function(d){return "!!-You can press the \"Keep Playing\" button to edit your program.-!!"},
 "rotateImageBlockTitle":function(d){return "!!-rotate (degrees, image)-!!"},
 "scaleImageBlockTitle":function(d){return "!!-scale (factor, image)-!!"},
 "squareBlockTitle":function(d){return "!!-square (size, style, color)-!!"},

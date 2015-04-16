@@ -35,7 +35,7 @@
   hoc2014_teachers: دبیران
   hoc2014_host: آن را میزبانی کنید
   hoc2014_everyone: همه
-  hoc2014_support: حمایتش کن
+  hoc2014_support: حمایتش کن &#x25BE;
   hoc2014_whatishoc: ساعتِ کدنویسی چيست؟
   twentyhours_trynow: هم اکنون شروع کنید
   california_heading: از مدرسه تان بخواهید که علوم کامپیوتر را آموزش بدهد
@@ -143,8 +143,9 @@
     الزيت، كلاس پنجمي'
   stats_michael: '"من <b> هیچ وقت، هرگز </b> دانش آموزانم را برای آموختن تا این حد
     هیجان زده ندیده ام." از میشل کلارک، معلم'
-  studiobar_title: ' <a href=''http://studio.code.org''>استودیوی برنامه نویسی</a>
-    ما را کشف کنید'
+  studiobar_title: <a href='http://studio.code.org'>استودیوی برنامه نویسی</a> ما را
+    کشف کنید
+  studiobar_title_nolink: استودیوی برنامه نویسی ما را کشف کنید
   studiobar_elementary_title: دوره‌های مقدماتی
   studiobar_elementary_body: سه درس جدید ما برای کلاس K&#8209;پنجمی ها
   studiobar_hoc_title: ساعتی با کدنویسی
@@ -160,19 +161,45 @@
   studiobar_shop_title: فروشگاه
   studiobar_shop_body: شکستن کلیشه ها. لوگوی ما را با غرور بپوش.
   homepage_hero_text_malala: |
-    &ldquo;من دختران هر کشوری را به چالش
-    آموختن یک ساعت کد نویسی دعوت می کنم&rdquo;
-    مالالا
+    &ldquo;من دختران هر کشوری را به چالش آموختن یک ساعت کدزدن دعوت میکنم&rdquo;
+    مالالا، برنده جایزه نوبل
   homepage_hero_text_susan: |
-    &ldquo;هیچ وقت برای یادگرفتن دیر نیست&rdquo;
+    &ldquo;اگر شما بتوانید تکنولوژی را تغییر دهید، می توانید دنیا را تغییر دهید.&rdquo;
     سوزان، مدیرعامل یوتیوب
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;فقط با گوشیتان بازی نکنید، برنامه نویسی اش کنید.&rdquo;
+    رئیس جمهور باراک اوباما
   homepage_hero_text_sheryl: |
-    &ldquo; درک علوم کامپیوتر به طور گسترده ای حیاتی می شود&rdquo;
-    شریل،مامور ارشد اجرایی فیسبوک
+    &ldquo;فرزندان ما&mdash;از جمله دخترهایمان&mdash;نیاز به فرصت یادگیری علوم کامپیوتر دارند.&rdquo;
+    شریل، رئیس ارشد اجرایی فیسبوک
+  homepage_hero_text_satya: |
+    &ldquo; علوم کامپیوتر می تواند بهترین فرصت های دنیا را ایجاد کند&rdquo;
+    ساتیا، مدیرعامل مایکروسافت
+  homepage_hero_text_bosh: |
+    &ldquo;اگر شما کد بزنید، می توانید مسیر زندگیتان را مشخص و انتخاب کنید.&rdquo;
+    کریس بوش
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: ساعتی با کدنویسی
   homepage_slot_text_frozen: کارتون Frozen با آنا و السا
   homepage_slot_text_teacher: Teacher Dashboard
@@ -182,32 +209,32 @@
   homepage_slot_text_flappy: کدنویسی Flappy
   homepage_action_text_codevideo: فیلم را تماشا کنید
   homepage_action_text_teachervideo: فیلم را تماشا کنید
-  homepage_action_text_learn: Start learning today
+  homepage_action_text_learn: امروز یادگیری را شروع کنید
   homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_signpetition_dropdown: درخواست ما را امضا کنید  &#x25BE;
   homepage_slot_text_title_hoc: ساعتی با کد
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: میزبان یک ساعت کدزنی باشید
+  homepage_slot_text_link_hocserved: '# تائید شده'
   homepage_slot_text_title_students: دانش آموزان
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: تمام آموزش های ما را کشف کنید
+  homepage_slot_text_link_codestudio: استودیو ی کد را امتحان کنید
+  homepage_slot_text_link_local: یک کلاس محلی پیدا کنید
+  homepage_slot_text_link_othercourses: دوره های آنلاین دیگر
+  homepage_slot_text_title_educators: آموزگاران
+  homepage_slot_text_blurb_educators: به دانش آموزانتان درس بدهید
+  homepage_slot_text_link_k5: دوره هایی برای بچه های ابتدایی
+  homepage_slot_text_link_fullcurriculum: تمام برنامه درسی ما را ببینید
+  homepage_slot_text_link_pd: توسعه ی حرفه ای
+  homepage_slot_text_title_advocates: مدافعان
+  homepage_slot_text_blurb_advocates: از کار ما حمایت کنید
+  homepage_slot_text_link_stats: آمار ها را ببینید
+  homepage_slot_text_link_buy: یک کلاه یا تی شرت بخرید
+  homepage_slot_text_link_donate: پولی اهدا کنید
+  homepage_header_codestudio: ابداعات دانش آموزان استودیو ی کد
+  homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
+  homepage_donors_seall: تمامش را ببینید
   homepage_donors_donate: کمک مالی بدهید
   contact_form_topic_student: من یک دانش آموز هستم
   contact_form_topic_parent: من پدر/مادر هستم
@@ -1133,26 +1160,3 @@
   sphero_beyond_longdescription: اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
     های آن ها در ریاضی و علوم را تقویت می کند.
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: "&ldquo;These skills have changed my future.\nNot to
-    mention, it's just plain fun.&rdquo; "
-  homepage_hero_text_student2: "&ldquo;I have never, ever seen my kids\nso excited
-    about learning.&rdquo; "
-  homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; "
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; "
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo; "
-  homepage_hero_text_teacher2: "&ldquo;This program got 100% of my students\nengaged,
-    involved and participating.&rdquo; "

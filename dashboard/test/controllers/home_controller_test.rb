@@ -22,7 +22,7 @@ class HomeControllerTest < ActionController::TestCase
 
     assert_equal "es-ES", cookies[:language_]
 
-    assert_match "language_=es-ES; domain=.code.org; path=/; expires=#{10.years.from_now.rfc2822}"[0..-7], @response.headers["Set-Cookie"]
+    assert_match "language_=es-ES; domain=.code.org; path=/; expires=#{10.years.from_now.rfc2822}"[0..-15], @response.headers["Set-Cookie"]
 
     assert_redirected_to 'http://blahblah'
   end
