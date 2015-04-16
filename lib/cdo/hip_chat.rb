@@ -17,7 +17,7 @@ class HipChat
 
   def self.message(room, message, options={})
     uri = URI.parse('http://api.hipchat.com/v1/rooms/message')
-    response = Net::HTTP.post_form(uri, ({
+    Net::HTTP.post_form(uri, ({
       color: 'gray',
     }).merge(
       options

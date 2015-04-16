@@ -110,7 +110,7 @@ class Deliverer
     encrypted_id = Poste.encrypt_id(delivery[:id])
     params = JSON.parse(delivery[:params])
 
-    header, html, text = load_template(message[:name]).render(params.merge({
+    header, html, _ = load_template(message[:name]).render(params.merge({
       recipient:OpenStruct.new(recipient),
       encrypted_id:encrypted_id,
       unsubscribe_link:poste_url("/u/#{encrypted_id}"),
