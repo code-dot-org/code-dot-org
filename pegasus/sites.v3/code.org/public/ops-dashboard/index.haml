@@ -89,6 +89,7 @@ title: "Ops Dashboard"
         //  'remove': {method:'DELETE'},
         //  'delete': {method:'DELETE'}
         update: {method:'PUT', url: '/dashboardapi/workshops/:id'}
+        markAttendance: {method:'PUT', url: '/dashboardapi/workshops/:id'}
       });
 
       return Workshop;
@@ -143,7 +144,7 @@ title: "Ops Dashboard"
       var Attendance = $resource('/dashboardapi/attendance/workshop/:workshopid', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method:'GET'},
-        //  'save':   {method:'POST'},
+        //  'save':   {method:'POST', url:'/dashboardapi/segments/:segmentid/attendance'},
         //  'query':  {method:'GET', isArray:true},
         //  'remove': {method:'DELETE'},
         //  'delete': {method:'DELETE'}
@@ -326,8 +327,6 @@ title: "Ops Dashboard"
 
       $scope.workshop = workshopsService.get({id: $routeParams.workshopid});
       $scope.districts = districtsService.query();
-      $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
-      $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
 
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
         var attendance = 'unrecorded';
@@ -337,6 +336,10 @@ title: "Ops Dashboard"
           }
         });
         return attendance;
+      }
+
+      $scope.save = function (workshop) {
+        workshopsService.markAttendance({id: workshop.id}, {workshop: workshop});
       }
   }]);
 
