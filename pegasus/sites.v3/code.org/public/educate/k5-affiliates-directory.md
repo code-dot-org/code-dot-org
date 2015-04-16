@@ -357,7 +357,9 @@ davis@pd.code.org
 
 <a id="hi"></a>
 ## Hawaii
+Honolulu, HI
 
+asselstine@pd.code.org
 <a id="id"></a>
 ## Idaho
 ### Heidi Pluska

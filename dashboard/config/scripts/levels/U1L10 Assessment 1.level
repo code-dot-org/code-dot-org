@@ -1,0 +1,37 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-14T11:38:24.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "2 bits",
+        "correct": false
+      },
+      {
+        "text": "3 bits",
+        "correct": false
+      },
+      {
+        "text": "4 bits",
+        "correct": false
+      },
+      {
+        "text": "5 bits",
+        "correct": true
+      },
+      {
+        "text": "6 bits",
+        "correct": false
+      }
+    ],
+    "title": "Assessment: Encoding Text",
+    "content1": "Question #1"
+  }
+}]]></config>
+</Multi>

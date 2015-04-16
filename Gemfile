@@ -88,7 +88,7 @@ gem 'omniauth-clever', git: 'https://github.com/code-dot-org/omniauth-clever.git
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
 
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 5.0.3'
 
 gem 'nokogiri', '1.6.1'
 
@@ -135,7 +135,7 @@ gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rail
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
-gem 'react-rails'
+gem 'react-rails', '~> 1.0'
 # JSON model serializer for REST APIs
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '32343d'
 gem 'aws-sdk', '~> 2'

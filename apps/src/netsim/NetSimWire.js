@@ -68,7 +68,7 @@ NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
   entity.localNodeID = localNodeID;
   entity.remoteNodeID = remoteNodeID;
   entity.getTable_().create(entity.buildRow_(), function (err, row) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, null);
       return;
     }
@@ -94,4 +94,26 @@ NetSimWire.prototype.buildRow_ = function () {
     localHostname: this.localHostname,
     remoteHostname: this.remoteHostname
   };
+};
+
+/**
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if the given message is travelling between the nodes
+ *          that this wire connects, in the wire's direction.
+ */
+NetSimWire.prototype.isMessageRowOnDuplexWire = function (messageRow) {
+  return this.localNodeID === messageRow.fromNodeID &&
+      this.remoteNodeID === messageRow.toNodeID;
+};
+
+/**
+ * @param {messageRow} messageRow
+ * @returns {boolean} TRUE if the given message is travelling between the nodes
+ *          that this wire connects, in either direction.
+ */
+NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
+  var onWire = this.isMessageRowOnDuplexWire(messageRow);
+  var onReverseWire = this.localNodeID === messageRow.toNodeID &&
+      this.remoteNodeID === messageRow.fromNodeID;
+  return onWire || onReverseWire;
 };

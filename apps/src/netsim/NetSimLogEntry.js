@@ -125,7 +125,7 @@ NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
   entity.status = status;
   entity.timestamp = Date.now();
   entity.getTable_().create(entity.buildRow_(), function (err, result) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, null);
       return;
     }

@@ -1,3 +1,5 @@
+@import "color";
+
 $common_root: '/blockly/media/common_images/';
 $cyan: #0094ca;
 $charcoal: #5b6770;
@@ -113,68 +115,87 @@ div.droplet-palette-group-header-selected {
   color: #000;
 }
 
+$droplet-light-green: #D3E965;
+$droplet-blue: #64B5F6;
+$droplet-yellow: #FFF176;
+$droplet-orange: #FFB74D;
+$droplet-red: #F78183;
+$droplet-cyan: #4DD0E1;
+$droplet-pink: #F57AC6;
+$droplet-purple: #BB77C7;
+$droplet-green: #68D995;
+$droplet-white: #FFFFFF;
+
 div.droplet-palette-group-header.yellow {
-  border-left:10px solid rgb(255, 213, 79);
+  border-left:10px solid $droplet-yellow;
 }
 
 div.droplet-palette-group-header-selected.yellow {
-  background-color: rgb(255, 213, 79);
+  background-color: $droplet-yellow;
 }
 
 div.droplet-palette-group-header.red {
-  border-left:10px solid rgb(248, 116, 119);
+  border-left:10px solid $droplet-red;
 }
 
 div.droplet-palette-group-header-selected.red {
-  background-color: rgb(248, 116, 119);
+  background-color: $droplet-red;
 }
 
 div.droplet-palette-group-header.cyan {
-  border-left:10px solid rgb(0, 210, 226);
+  border-left:10px solid $droplet-cyan;
 }
 
 div.droplet-palette-group-header-selected.cyan {
-  background-color: rgb(0, 210, 226);
+  background-color: $droplet-cyan;
+}
+
+div.droplet-palette-group-header.pink {
+  border-left:10px solid $droplet-pink;
+}
+
+div.droplet-palette-group-header-selected.pink {
+  background-color: $droplet-pink;
 }
 
 div.droplet-palette-group-header.lightgreen {
-  border-left:10px solid rgb(211, 233, 101);
+  border-left:10px solid $droplet-light-green;
 }
 
 div.droplet-palette-group-header-selected.lightgreen {
-  background-color: rgb(211, 233, 101);
+  background-color: $droplet-light-green;
 }
 
 div.droplet-palette-group-header.purple {
-  border-left:10px solid rgb(177, 89, 171);
+  border-left:10px solid $droplet-purple;
 }
 
 div.droplet-palette-group-header-selected.purple {
-  background-color: rgb(177, 89, 171);
-}
-
-div.droplet-palette-group-header.deeppurple {
-  border-left:10px solid rgb(163, 139, 195);
-}
-
-div.droplet-palette-group-header-selected.deeppurple {
-  background-color: rgb(163, 139, 195);
+  background-color: $droplet-purple;
 }
 
 div.droplet-palette-group-header.blue {
-  border-left:10px solid rgb(25, 195, 225);
+  border-left:10px solid $droplet-blue;
 }
 
 div.droplet-palette-group-header-selected.blue {
-  background-color: rgb(25, 195, 225);
+  background-color: $droplet-blue;
 }
 
 div.droplet-palette-group-header.green {
-  border-left:10px solid rgb(72, 216, 130);
+  border-left:10px solid $droplet-green;
 }
 
 div.droplet-palette-group-header-selected.green {
-  background-color: rgb(72, 216, 130);
+  background-color: $droplet-green;
+}
+
+div.droplet-palette-group-header.orange {
+  border-left:10px solid $droplet-orange;
+}
+
+div.droplet-palette-group-header-selected.orange {
+  background-color: $droplet-orange;
 }
 
 .droplet-wrapper-div {
@@ -485,7 +506,7 @@ button:active {
   border: 1px solid #888 !important;
 }
 button:hover {
-  box-shadow: 2px 2px 5px #888;
+  box-shadow: 2px 2px 5px $shadow;
 }
 button.disabled, button[disabled=disabled], button:disabled {
   border: 1px solid #C7C7C7;
@@ -585,7 +606,7 @@ input[type="radio"] {
   border: 1px solid #000;
   position: absolute;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px $shadow;
   padding: 10px;
   z-index: 20000;
 }
@@ -595,7 +616,7 @@ input[type="radio"] {
   background-color: #fff;
   color: #000;
   border-radius: 6px;
-  box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px $shadow;
 }
 #dialogShadow {
   @include fill-container;
@@ -1154,7 +1175,7 @@ $linkColor: #ffffff;
 $tooltipBackground: $cyan-dark;
 $text-color: #ffffff;
 $tooltip-border-radius: 14px;
-$tooltip-shadow-color: rgba(136,136,136,1);
+$tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
 
 $tooltip-font: $gotham-regular;
@@ -1201,4 +1222,8 @@ $see-examples-thick-underline-color: $yellow-dark;
   padding: 8px 10px;
   overflow: hidden;
   font-weight: normal;
+}
+
+.droplet-hover-div {
+  max-width: 100% !important;
 }

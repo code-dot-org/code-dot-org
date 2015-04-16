@@ -4,9 +4,9 @@ class DistrictTest < ActiveSupport::TestCase
   test "destroying district removes it from a cohort" do
     cd = create :cohorts_district
     district = cd.district
-    district = district.reload
+    district.reload
     cohort = cd.cohort
-    cohort = cohort.reload
+    cohort.reload
 
     assert_no_difference "Cohort.count" do
       assert_difference "District.count", -1 do

@@ -19,7 +19,8 @@ Category: UI controls
 
 [short_description]
 
-Creates a checkbox button. A checkbox is used to choose between two options.
+Creates a checkbox button. A checkbox is used to choose between two options and can be referenced by the specified id.
+
 [/short_description]
 
 [/description]
@@ -30,22 +31,9 @@ ____________________________________________________
 [example]
 
 <pre>
-// Create a choice between male or female
-radioButton("Male",false, "MaleFemale");
-radioButton("Female", true, "MaleFemale");
-</pre>
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-**The Checked Item**
-Determine which radio button within a group is checked.
-
-<pre>
-
+// Create a checkbox with a corresponding label
+checkbox("Agree",false);
+textLabel("IAgreeLabel","I Agree","Agree");
 </pre>
 
 [/example]
@@ -56,7 +44,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-button("uniqueIdentifier",false, "GroupName")
+button(id, checked)
 </pre>
 
 [/syntax]
@@ -68,7 +56,7 @@ button("uniqueIdentifier",false, "GroupName")
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | yes | A unique identifier for the checkbox button. The id is used for referencing the radio button text input. For example, to assign event handlers. |
+| id | string | yes | A unique identifier for the checkbox button. The id is used for referencing the checkBox control. For example, to assign event handlers. |
 | checked | boolean | yes | Whether the checkbox is initially checked. |
 [/parameters]
 
@@ -83,6 +71,8 @@ No Return Value
 
 ### Tips
 All checkbox buttons should always have an associated textLabel. If you have more than 2 choices, consider using a radioButton or dropdown list.
+
+The checkbox can also be used in design mode.
 
 [/tips]
 

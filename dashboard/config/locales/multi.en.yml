@@ -330,10 +330,11 @@ en:
       Coordinates Multi 1:
         Video game Coordinates: Video game Coordinates
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which of these statements describes the unicorn's movements in the most precise way?: Which of these statements describes the unicorn's movements in the most precise way?
         The unicorn moves across the screen: The unicorn moves across the screen
         The unicorn's y value changes: The unicorn's y value changes
         The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: The unicorn's x value changes
+        The unicorn's x value decreases: The unicorn's x value decreases
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -547,6 +548,7 @@ en:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
       msm variables multi 1:
+        x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
         What is the value of x?: What is the value of x?
         a function: a function
         '15': '15'
@@ -643,7 +645,7 @@ en:
         y: y
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
@@ -770,6 +772,50 @@ en:
         this is a question?: this is a question?
         wrong answer: wrong answer
         right answer: right answer
+      U1L10 Assessment 1:
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        'Question #1': 'Question #1'
+        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?
+        2 bits: 2 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+      U1L10 Assessment 2:
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        'Question # 2': 'Question # 2'
+        ? "The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?"
+        : "The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?"
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+      U1L11 Assessment 1:
+        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
+        'Question #1': 'Question #1'
+        What is ASCII text?: What is ASCII text?
+        American Strict Conformance of Internet Interchange: American Strict Conformance of Internet Interchange
+        Authentication Standards for Commerce in Interstate Information: Authentication Standards for Commerce in Interstate Information
+        American Standard Code for Information Interchange: American Standard Code for Information Interchange
+        Automatic Serial Coding for Interface Interchange: Automatic Serial Coding for Interface Interchange
+      U1L11 Assessment 2:
+        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
+        'Question #2': 'Question #2'
+        How many bytes are used to encode a single ASCII character?: How many bytes are used to encode a single ASCII character?
+        1 byte: 1 byte
+        2 bytes: 2 bytes
+        4 bytes: 4 bytes
+        8 bytes: 8 bytes
+        16 bytes: 16 bytes
+      U1L6 Assessment multiple choice:
+        'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
+        If you just had a circle and a square, how many 3-shape rows could you make?: If you just had a circle and a square, how many 3-shape rows could you make?
+        '4': '4'
+        '6': '6'
+        '8': '8'
+        '10': '10'
+        '12': '12'
       unique level name here:
         line1<br/>line2: line1<br/>line2
         description here: description here

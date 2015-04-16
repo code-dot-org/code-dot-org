@@ -1,8 +1,9 @@
+- full_width = local_assigns[:full_width]
 .navbar-static-top.footer
-  .container{ style: 'padding: 10px;' + (@full_width ? 'width: 855px; margin-left: 25px;' : '') }
+  .container{ style: 'padding: 10px;' + (full_width ? 'width: 855px; margin-left: 25px;' : '') }
     .row
-      .span8{style: (@full_width ? 'width: 560px;' : '')}
-        - piped_spaces = @full_width ? ' | ' : '&nbsp; &nbsp; | &nbsp; &nbsp;'
+      .span8{style: (full_width ? 'width: 560px;' : '')}
+        - piped_spaces = full_width ? ' | ' : '&nbsp; &nbsp; | &nbsp; &nbsp;'
         = link_to t('footer.translate'), 'http://eepurl.com/Im_In'
         .dim
           != piped_spaces
@@ -20,14 +21,14 @@
           %br/
           = sanitize(t('footer.powered_by_aws'), tags: %w(a br), attributes: %w(href))
 
-      .span3{style: 'text-align: right;' + (@full_width ? 'width: 140px; margin-left: 0px' : '')}
+      .span3{style: 'text-align: right;' + (full_width ? 'width: 140px; margin-left: 0px' : '')}
 
         = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
           = hidden_field_tag :return_to, request.url
           = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();'
         %small.dim
           = link_to t('footer.tos'), CDO.code_org_url('/tos')
-          - if @full_width
+          - if full_width
             |
           - else
             &nbsp; &nbsp; | &nbsp; &nbsp;

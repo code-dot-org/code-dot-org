@@ -1,19 +1,14 @@
 $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
-$white: #ffffff;
-$whitesmoke: #f5f5f5;
-$medium-gray: #ddd;
-$dark-gray: #a9a9a9;
-$black: #000000;
-$red: #ff0000;
-$code-org-pacific-blue: #00adbc;
-$code-org-web-orange: #ffa400;
-$own-node-background-color: #e0ffff;
-$router-row-hover-color: rgba(255, 140, 0, 0.21);
-$to-address-color: rgba(255, 233, 238, 0.85);
-$from-address-color: lightcyan;
-$packet-info-color: rgba(212, 238, 212, 0.90);
-$message-color: white;
+@import 'color';
+
+$own-node-background-color: $white;
+$user-row-hover-color: $lightest_teal;
+$router-row-hover-color: $lighter_orange;
+$to-address-color: $lightest_cyan;
+$from-address-color: $lightest_yellow;
+$packet-info-color: $lighter_green;
+$message-color: $white;
 
 // For aligning table columns across panels
 $narrow-column-width: 50px;
@@ -42,45 +37,6 @@ $wide-column-width: 121px;
   clear: both;
 }
 
-// Visualization styles
-svg {
-  background-color: $white;
-  border: solid $black thin;
-  border-radius: 25px;
-
-  .viz-node {
-    text {
-      text-anchor: middle;
-    }
-
-    circle {
-      stroke: $black;
-      stroke-width: 2;
-      fill: $own-node-background-color;
-    }
-
-    rect.address-box {
-      stroke: $black;
-      stroke-width: 2px;
-      fill: $white;
-    }
-
-    text.address-box {
-      font-weight: bold;
-    }
-  }
-  
-  .router-node {
-    circle {
-      fill: $code-org-web-orange;
-    }
-  }
-  
-  .viz-wire {
-    stroke: $black;
-    stroke-width: 2;
-  }
-}
 
 // Sprited icons.
 .icon21 {
@@ -164,10 +120,25 @@ svg {
     @include user_select(none);
   }
 
+  .single-line-with-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    padding-right: 1em;
+  }
+
+  .user-data {
+    font-family: monospace;
+
+    // Make sure user data can always be selected and copied
+    @include user_select(text);
+  }
+
   // Orange SPAN button
   .netsim-button {
     display: inline-block;
-    background-color: $code-org-web-orange;
+    background-color: $orange;
     color: $white;
     border-radius: 3px;
     font-family: "Gotham 4r", sans-serif;
@@ -178,32 +149,98 @@ svg {
 
     // Button text should not be selectable
     @include user_select(none);
+
+    &[disabled] {
+      background-color: $lighter_gray;
+    }
   }
 
   //
   //General two-column layout rules
   //
-  #netsim_rightcol {
+  #netsim-rightcol {
     float: right;
     width: 300px;
+  }
 
-    #netsim_visualization {
-      img {
-        width: 100%;
+  #netsim-leftcol {
+    margin-right: 320px;
+  }
+
+  // Visualization styles
+  #netsim-visualization {
+    svg {
+      background-color: $white;
+      border: solid $black thin;
+      border-radius: 25px;
+
+      .viz-node {
+        text {
+          text-anchor: middle;
+        }
+
+        circle {
+          stroke: $black;
+          stroke-width: 2;
+          fill: $own-node-background-color;
+        }
+
+        rect.address-box {
+          stroke: $black;
+          stroke-width: 2px;
+          fill: $white;
+        }
+
+        text.address-box {
+          font-weight: bold;
+        }
+      }
+
+      .router-node {
+        circle {
+          fill: $orange;
+        }
+      }
+
+      .viz-wire {
+        stroke: $black;
+        stroke-width: 2;
       }
     }
   }
 
-  #netsim_leftcol {
-    margin-right: 320px;
+  .netsim-shard-selection-panel {
+    overflow: hidden;
+
+    .content-wrap {
+      margin: 1em;
+    }
+
+    .field-box {
+      float: left;
+      margin-right: 1em;
+    }
+
+    .clearfix {
+      clear:both;
+    }
   }
 
+  .netsim-lobby-panel {
+    .content-wrap {
+      margin: 1em;
+    }
+
+    ul {
+      margin: 0 0 10px 0;
+    }
+  }
 
   .netsim-panel.netsim-lobby div.panel-body {
     padding: 1em;
   }
 
-  #netsim_lobby_list {
+  .netsim-lobby-list {
     background-color: $white;
     padding: 0.5em;
     border: inset darkslategray thin;
@@ -211,32 +248,48 @@ svg {
 
     li {
       background-color: $white;
-      padding: 0.3em;
+      border-left: solid white 3px;
+      border-right: solid white 3px;
+      padding: 0.3em 0.8em;
+    }
+
+    .empty-row {
+      text-align: center;
+      color: $lightest_gray;
+      font-style: italic;
+    }
+
+    .selectable-row {
+      cursor: pointer;
+      &:hover {
+        border-left: solid $orange 3px;
+      }
     }
 
     .own-row {
-      font-weight: bold;
       background-color: $own-node-background-color;
+      font-style: italic;
     }
 
     .user-row {
-
+      &.selectable-row:hover {
+        background-color: $user-row-hover-color;
+        color: $black;
+      }
     }
 
     .router-row {
-      cursor: pointer;
-    }
-    .router-row:hover {
-      background-color: $router-row-hover-color;
-      color: $black;
+      &.selectable-row:hover {
+        background-color: $router-row-hover-color;
+        color: $black;
+      }
     }
 
+
     .selected-row {
-      background-color: $code-org-web-orange;
-      color: white;
-    }
-    .selected-row:hover {
-      background-color: $code-org-web-orange;
+      background-color: $orange !important;
+      color: white !important;
+      font-weight: bold;
     }
   }
 
@@ -259,14 +312,19 @@ svg {
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
-      background-color: $code-org-pacific-blue;
-      color: $whitesmoke;
+      background-color: $purple;
+      color: $white;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
-      .panel_controls {
+      .panel-controls {
         float: right;
         margin-top: -0.3em;
         padding-top: 3px;
+
+        // Special margin for buttons in this control area, so they don't squish together.
+        .netsim-button {
+          margin-left: 3px;
+        }
       }
     }
 
@@ -274,7 +332,7 @@ svg {
       border-left: solid darkgray thin;
       border-right: solid darkgray thin;
       border-bottom: solid darkgray thin;
-      border-top: solid $code-org-pacific-blue thin;
+      border-top: solid $purple thin;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
     }
 
@@ -291,6 +349,16 @@ svg {
         display: none;
       }
     }
+
+    .panel-footer {
+      margin: 10px;
+      overflow: hidden;
+
+      .right-side-controls {
+        float: right;
+        text-align: right;
+      }
+    }
   }
 
   // Log panel rules
@@ -302,16 +370,29 @@ svg {
       padding: 5px;
       border: solid darkgray thin;
       border-radius: 3px;
-      background-color: $medium-gray;
+      background-color: $lightest_gray;
 
       td {
-        border-color: $medium-gray;
+        border-color: $lightest_gray;
+      }
+
+      .packet-controls {
+        float: right;
+        text-align: right;
+      }
+
+      &.unread {
+        background-color: $lighter_gray;
+
+        td {
+          border-color: $lighter_gray;
+        }
       }
     }
 
-    .scroll_area {
+    .scroll-area {
       margin: 0.5em 0 0.5em 0;
-      max-height: 180px;
+      max-height: 300px;
       width: 100%;
       overflow-y: auto;
     }
@@ -380,7 +461,7 @@ svg {
 
     .netsim-packet {
       border: solid darkgray thin;
-      background-color: $medium-gray;
+      background-color: $lightest_gray;
       margin: 10px;
       padding: 0.5em;
       border-radius: 0.5em;
@@ -412,12 +493,12 @@ svg {
       }
 
       .watermark {
-        color: $medium-gray;
+        color: $lightest_gray;
       }
 
       .bit-counter {
         text-align: right;
-        color: $dark-gray;
+        color: $light_gray;
         &.oversized {
           color: $red;
         }
@@ -478,18 +559,8 @@ svg {
       }
     }
 
-    .send_widget_footer {
-      margin: 10px;
-      overflow: hidden;
-
-      .right-side-controls {
-        float: right;
-        text-align: right;
-      }
-
-      .packet_size {
-        width: 400px;
-      }
+    .packet-size {
+      width: 400px;
     }
   }
 
@@ -550,13 +621,19 @@ svg {
         .max-value {
           float: right;
           text-align: right;
-          width: 4em;
+          width: 3em;
         }
 
         .min-value {
           float: left;
           text-align: left;
-          width: 4em;
+          width: 3em;
+        }
+
+        &.wide-labels {
+          .max-value, .min-value {
+            width: 4em;
+          }
         }
 
         .current-value {
@@ -582,7 +659,7 @@ svg {
 
     // Modify actual tabs at top of tab area
     .ui-tabs-nav {
-      background: $code-org-pacific-blue;
+      background: $purple;
       border-left: none;
       border-right: none;
       border-top: none;
@@ -605,6 +682,18 @@ svg {
       p {
         margin: 0 1em 10px 1em;
       }
+    }
+  }
+
+  .netsim-metronome {
+    text-align: center;
+
+    .pulse-dot {
+      fill: $purple;
+    }
+
+    .progress-meter {
+      fill: $purple;
     }
   }
 
@@ -655,7 +744,7 @@ svg {
 
     tr.dns-node {
       color: $white;
-      background-color: $code-org-web-orange;
+      background-color: $orange;
     }
   }
 

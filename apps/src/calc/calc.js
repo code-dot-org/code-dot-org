@@ -168,7 +168,9 @@ Calc.init = function(config) {
     svg.setAttribute('height', CANVAS_HEIGHT);
 
     if (level.freePlay) {
-      document.getElementById('goalHeader').setAttribute('visibility', 'hidden');
+      var background = document.getElementById('background');
+      background.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        '/blockly/media/skins/calc/background_freeplay.png');
     }
 
     // This is hack that I haven't been able to fully understand. Furthermore,
@@ -1058,6 +1060,7 @@ function displayFeedback() {
     level: level,
     feedbackType: appState.testResults,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined, 
     appStrings: {
       reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
     },

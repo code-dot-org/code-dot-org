@@ -15,7 +15,8 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false"
-  }
+  },
+  "md5": "8b54482036b0dcfee5a2ae7a12d2d871"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -44,14 +45,16 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="string_length" inline="false"/>
         <block type="functional_math_number_dropdown">
           <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
         </block>
-        <block type="functional_string"/>
-        <block type="string_length"/>
-        <block type="functional_greater_than"/>
-        <block type="functional_less_than"/>
-        <block type="functional_number_equals"/>
+        <block type="functional_string">
+          <title name="VAL"/>
+        </block>
+        <block type="functional_greater_than" inline="false"/>
+        <block type="functional_less_than" inline="false"/>
+        <block type="functional_number_equals" inline="false"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>

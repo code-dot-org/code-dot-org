@@ -21,7 +21,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "disable_examples": "false"
   },
   "md5": "a20fbd14db20dc096e24b24b263ba152"
 }]]></config>
@@ -105,6 +106,18 @@
         <block type="functional_logical_or" inline="false"/>
         <block type="functional_call">
           <mutation name="y"/>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">y</title>
+          <functional_input name="STACK">
+            <block type="functional_math_number_dropdown" uservisible="false">
+              <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
+            </block>
+          </functional_input>
         </block>
       </xml>
     </required_blocks>

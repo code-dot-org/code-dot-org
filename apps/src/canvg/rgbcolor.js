@@ -213,7 +213,7 @@ function RGBColor(color_string)
         var processor = color_defs[i].process;
         var bits = re.exec(color_string);
         if (bits) {
-            channels = processor(bits);
+            var channels = processor(bits);
             this.r = channels[0];
             this.g = channels[1];
             this.b = channels[2];

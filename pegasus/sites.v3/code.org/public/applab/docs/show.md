@@ -18,11 +18,11 @@ Category: Turtle
 
 [short_description]
 
-Shows the turtle on the screen, by making it visible at its current location.
+Shows the turtle by making it visible at its current location.
 
 [/short_description]
 
-**Note**: [hide()](/applab/docs/hide) is often used with show
+**Note**: [hide()](/applab/docs/hide) is often used with show.
 
 [/description]
 
@@ -31,12 +31,11 @@ ____________________________________________________
 
 [example]
 
-<pre>
-/*  Example 1
-*/
+**Example 1**
 
-shows();              // shows the turtle so that it is visible on the screen at its current location
-moveForward(100);     // moves the turtle forward 100 pixels
+<pre>
+show();              // shows the turtle by making it visible at its current location
+moveForward(100);    // moves the turtle forward 100 pixels
 </pre>
 
 [/example]
@@ -45,18 +44,19 @@ ____________________________________________________
 
 [example]
 
+**Example 2**
+
+This example creates two buttons that allow you to switch between showing and hiding the turtle.
+
 <pre>
-/*  Example 2
-
-    This example creates two buttons that allow you to switch between showing and hiding the turtle
-*/
-
-button("hide-turtle", "hide");                  // creates a hide button
-button("show-turtle", "show");                  // creates a show button
-onEvent("hide-turtle", "click", function(event) {  // when the hide button is clicked the turtle will hide
+button("hide-turtle", "hide");                      // creates a hide button
+button("show-turtle", "show");                      // creates a show button
+onEvent("hide-turtle", "click", function(event) {   // when the hide button is clicked the turtle will
+                                                    //    no longer be visible
   hide();
 });
-onEvent("show-turtle", "click", function(event) {  // when the show button is clicked the turtle will show
+onEvent("show-turtle", "click", function(event) {   // when the show button is clicked the turtle will
+                                                    //    be visible
   show();
 });
 </pre>
@@ -91,7 +91,7 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- [hide()](/applab/docs/hide) is often used with show
+- [hide()](/applab/docs/hide) is often used with show.
 
 [/tips]
 

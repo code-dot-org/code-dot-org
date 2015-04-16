@@ -1,20 +1,20 @@
 id_s!,type_s,text1_s,param1_s,param2_s,param3_s,param4_s,watermark_s,image_t,site_s,active_s,language_supported_s
-hero_malala,widehero,homepage_hero_text_malala,50% 30%,celeb,,,,/images/homepage/malala.jpg,both,show,en
-hero_susan,widehero,homepage_hero_text_susan,52% 6%,celeb,,,,/images/homepage/susan.jpg,both,show,en
-hero_satya,widehero,homepage_hero_text_satya,47% 21%,celeb,,,,/images/homepage/satya.jpg,both,show,en
-hero_sheryl,widehero,homepage_hero_text_sheryl,59% 22%,celeb,,,,/images/homepage/sheryl.jpg,both,show,en
-hero_fistbump,widehero,homepage_hero_text_fistbump,55% 9%,celeb,,,,/images/homepage/fistbump.jpg,both,show,en
-hero_student_girl,widehero,homepage_hero_text_student1,50% 30%,student,,,,/images/homepage/girl.jpg,both,show,en
-hero_student_boyblue,widehero,homepage_hero_text_student2,55% 7%,student,,,,/images/homepage/boy5.jpg,both,show,en
-hero_student_boybosh,widehero,homepage_hero_text_bosh,24% 33%,student,,,,/images/homepage/boy7.jpg,both,show,en
-hero_student_girlsmile,widehero,homepage_hero_text_student4,41% 20%,student,,,,/images/homepage/kids4.jpg,both,show,en
-hero_student_boycomputer,widehero,homepage_hero_text_student5,45% 31%,student,,,,/images/homepage/boy3.jpg,both,show,en
-hero_teacher_girl,widehero,homepage_hero_text_teacher1,24% 11%,teacher,,,,/images/homepage/girl10.jpg,both,show,en
-hero_teacher_man,widehero,homepage_hero_text_teacher2,49% 17%,teacher,,,,/images/homepage/kids10.jpg,both,show,en
-hero_student_girlsmile_noten,widehero,anybody_can_learn,41% 20%,student,,,,/images/homepage/kids4.jpg,both,show,not en
-hero_teacher_man_noten,widehero,stats_michael,49% 17%,teacher,,,,/images/homepage/kids10.jpg,both,show,not en
-hero_student_boyblue_noten,widehero,anybody_can_learn,55% 7%,student,,,,/images/homepage/boy5.jpg,both,show,not en
-hero_teacher_girl_noten,widehero,stats_nina,24% 11%,teacher,,,,/images/homepage/girl10.jpg,both,show,not en
+hero_malala,widehero,homepage_hero_text_malala,50% 30%,celeb,bottom,,,/images/homepage/malala.jpg,both,show,en
+hero_susan,widehero,homepage_hero_text_susan,52% 6%,celeb,top,,,/images/homepage/susan.jpg,both,show,en
+hero_satya,widehero,homepage_hero_text_satya,47% 21%,celeb,bottom,,,/images/homepage/satya.jpg,both,show,en
+hero_sheryl,widehero,homepage_hero_text_sheryl,59% 22%,celeb,bottom,,,/images/homepage/sheryl.jpg,both,show,en
+hero_fistbump,widehero,homepage_hero_text_fistbump,55% 9%,celeb,bottom,,,/images/homepage/fistbump.jpg,both,show,en
+hero_student_girl,widehero,homepage_hero_text_student1,50% 30%,student,bottom,,,/images/homepage/girl.jpg,both,show,en
+hero_student_boyblue,widehero,homepage_hero_text_student2,55% 7%,student,top,,,/images/homepage/boy5.jpg,both,show,en
+hero_student_boybosh,widehero,homepage_hero_text_bosh,62% 33%,celeb,bottom,,,/images/homepage/boy7.jpg,both,show,en
+hero_student_girlsmile,widehero,homepage_hero_text_student4,41% 20%,student,bottom,,,/images/homepage/kids4.jpg,both,show,en
+hero_student_boycomputer,widehero,homepage_hero_text_student5,45% 31%,student,top,,,/images/homepage/boy3.jpg,both,show,en
+hero_teacher_girl,widehero,homepage_hero_text_teacher1,24% 11%,teacher,bottom,,,/images/homepage/girl10.jpg,both,show,en
+hero_teacher_man,widehero,homepage_hero_text_teacher2,49% 17%,teacher,bottom,,,/images/homepage/kids10.jpg,both,show,en
+hero_student_girlsmile_noten,widehero,anybody_can_learn,41% 20%,student,bottom,,,/images/homepage/kids4.jpg,both,show,not en
+hero_teacher_man_noten,widehero,stats_michael,49% 17%,teacher,bottom,,,/images/homepage/kids10.jpg,both,show,not en
+hero_student_boyblue_noten,widehero,anybody_can_learn,55% 7%,student,top,,,/images/homepage/boy5.jpg,both,show,not en
+hero_teacher_girl_noten,widehero,stats_nina,24% 11%,teacher,bottom,,,/images/homepage/girl10.jpg,both,show,not en
 action_codevideo,action,homepage_action_text_codevideo,video,nKIu9yen5nc,,,,,code.org,show,en
 action_teachervideo,action,homepage_action_text_teachervideo,video,rH7AjDMz_dc,,,,,csedweek.org,show,en
 action_learn,action,homepage_action_text_learn,learn,,,,,,both,show,en
@@ -44,7 +44,7 @@ blocklink_k5,blocklink,block_educators,homepage_slot_text_link_k5,/educate/k5,,,
 blocklink_fullcurriculum,blocklink,block_educators,homepage_slot_text_link_fullcurriculum,/educate/curriculum,,,,,code.org,show,en
 blocklink_pd,blocklink,block_educators,homepage_slot_text_link_pd,/educate/professional-development,,,,,code.org,show,en
 blocklink_stats,blocklink,block_advocates,homepage_slot_text_link_stats,/promote,,,,,code.org,show,en
-blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_buy,/shop,,,,,code.org,show,en
+blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_buy,/help,,,,,code.org,show,en
 blocklink_donate,blocklink,block_advocates,homepage_slot_text_link_donate,/donate,,,,,code.org,show,en
 blockshort_hoc_noten,blockshort,studiobar_frozen_title,learn_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_hoc.jpg,code.org,show,not en
 blockshort_students_noten,blockshort,hoc2014_students,write_your_first_program,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,not en

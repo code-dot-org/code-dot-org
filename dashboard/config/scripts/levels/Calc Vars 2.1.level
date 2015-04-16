@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "You can actually set a variable using the value of another variable! Here's a new variable called \"age-in-months\" - use the expression you came up with in the last puzzle to set \"age-in-months\" to the number of months in \"age\"",
+    "instructions": "Here's a new variable called \"age-in-months\" - use the variable \"age\" to set \"age-in-months\"",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,8 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
+    "definition_collapse": "false",
+    "disable_examples": "false"
   },
   "md5": "e1b21f4dcfa4f9b8fe6ad3c2cb0b02ee"
 }]]></config>

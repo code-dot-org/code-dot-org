@@ -6,14 +6,23 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**
  * Store for finding tooltips for blocks
+ * @param {Droplet.Editor} dropletEditor
  * @constructor
  */
-var DropletTooltipManager = module.exports = function () {
+var DropletTooltipManager = function (dropletEditor) {
   /**
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
    */
   this.blockTypeToTooltip = {};
+
+  /**
+   * @type {Droplet.Editor}
+   * @private
+   */
+  this.dropletEditor_ = dropletEditor;
+
+  this.hideTooltipsOnBlockPick_();
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -22,12 +31,22 @@ var DEFAULT_TOOLTIP_CONFIG = {
   maxWidth: 450,
   position: 'right',
   contentAsHTML: true,
-  functionReady: repositionLastTooltip,
-  theme: 'droplet-block-tooltipster'
-  /**
-   * hideOnClick does not work with the droplet hover overlay
-   * (passing through click events?)
-   */
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2
+};
+
+/**
+ * Tooltipster's hideOnClick setting does not work with the droplet hover
+ * overlay as-is. Hide the tooltip on block picking explicitly.
+ */
+DropletTooltipManager.prototype.hideTooltipsOnBlockPick_ = function () {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  this.dropletEditor_.on('pickblock', function () {
+    $('.tooltipstered').tooltipster('hide');
+  });
 };
 
 /**
@@ -65,22 +84,20 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
     }
 
     var funcName = $(blockHoverDiv).attr('title');
-    $(blockHoverDiv).tooltipster($.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-      content: self.getDropletTooltip(funcName).getTooltipHTML()
-    }));
+
+    var hoverDivWidth = $(blockHoverDiv).width();
+    var hoverDivLeftToToolboxRight = $(".droplet-palette-canvas").width() -
+      parseInt(blockHoverDiv.style.left, 10);
+    var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
+    var tooltipOffsetX = desiredXPosition - hoverDivWidth;
+
+    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+      content: self.getDropletTooltip(funcName).getTooltipHTML(),
+      offsetX: tooltipOffsetX
+    });
+
+    $(blockHoverDiv).tooltipster(configuration);
   });
 };
 
-function repositionLastTooltip() {
-  var tooltipBase = $(".tooltipster-base").last();
-  var tooltipOffset = tooltipBase.offset();
-  var dropletToolboxArea = $('.droplet-palette-wrapper');
-  var rightSideOfToolbox = dropletToolboxArea.offset().left +
-    dropletToolboxArea.width();
-  var rightSideOfBlock = tooltipOffset.left;
-  var tipWidth = 8;
-  tooltipOffset.left = Math.min(rightSideOfBlock, rightSideOfToolbox + tipWidth);
-  var blockNotchHeight = 4;
-  tooltipOffset.top -= blockNotchHeight / 2;
-  tooltipBase.offset(tooltipOffset);
-}
+module.exports = DropletTooltipManager;
