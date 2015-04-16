@@ -47,7 +47,8 @@ var asciiToBinary = dataConverters.asciiToBinary;
 /**
  * Generator and controller for message sending view.
  * @param {Object} initialConfig
- * @param {packetHeaderSpec} packetSpec
+ * @param {MessageGranularity} initialConfig.messageGranularity
+ * @param {packetHeaderSpec} initialConfig.packetSpec
  * @param {number} [initialConfig.toAddress]
  * @param {number} [initialConfig.fromAddress]
  * @param {number} [initialConfig.packetIndex]
@@ -57,6 +58,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @param {number} [initialConfig.chunkSize]
  * @param {EncodingType[]} [initialConfig.enabledEncodings]
  * @param {function} initialConfig.removePacketCallback
+ * @param {function} initialConfig.contentChangeCallback
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
@@ -66,6 +68,12 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('netsim-packet');
+
+  /**
+   * @type {MessageGranularity}
+   * @private
+   */
+  this.messageGranularity_ = initialConfig.messageGranularity;
 
   /**
    * @type {packetHeaderSpec}
@@ -123,6 +131,14 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.removePacketCallback_ = initialConfig.removePacketCallback;
 
   /**
+   * Method to notify our parent container that the packet's binary
+   * content has changed.
+   * @type {function}
+   * @private
+   */
+  this.contentChangeCallback_ = initialConfig.contentChangeCallback;
+
+  /**
    * @type {jQuery}
    * @private
    */
@@ -148,6 +164,7 @@ NetSimPacketEditor.prototype.getRoot = function () {
 /** Replace contents of our root element with our own markup. */
 NetSimPacketEditor.prototype.render = function () {
   var newMarkup = $(markup({
+    messageGranularity: this.messageGranularity_,
     packetSpec: this.packetSpec_
   }));
   this.rootDiv_.html(newMarkup);
@@ -457,6 +474,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   });
 
   this.updateBitCounter();
+  this.contentChangeCallback_();
 };
 
 /**
@@ -484,6 +502,53 @@ NetSimPacketEditor.prototype.getPacketBinary = function () {
         packetCount: this.packetCount
       }),
       this.message);
+};
+
+/**
+ * Sets editor fields from a complete packet binary, according to
+ * the configured header specification.
+ * @param {string} rawBinary
+ */
+NetSimPacketEditor.prototype.setPacketBinary = function (rawBinary) {
+  var packet = new Packet(this.packetSpec_, rawBinary);
+
+  if (this.specContainsHeader_(Packet.HeaderType.TO_ADDRESS)) {
+    this.toAddress = packet.getHeaderAsInt(Packet.HeaderType.TO_ADDRESS);
+  }
+
+  if (this.specContainsHeader_(Packet.HeaderType.FROM_ADDRESS)) {
+    this.fromAddress = packet.getHeaderAsInt(Packet.HeaderType.FROM_ADDRESS);
+  }
+
+  if (this.specContainsHeader_(Packet.HeaderType.PACKET_INDEX)) {
+    this.packetIndex = packet.getHeaderAsInt(Packet.HeaderType.PACKET_INDEX);
+  }
+
+  if (this.specContainsHeader_(Packet.HeaderType.PACKET_COUNT)) {
+    this.packetCount = packet.getHeaderAsInt(Packet.HeaderType.PACKET_COUNT);
+  }
+
+  this.message = packet.getBodyAsBinary();
+};
+
+/**
+ * @param {Packet.HeaderType} headerKey
+ * @returns {boolean}
+ * @private
+ */
+NetSimPacketEditor.prototype.specContainsHeader_ = function (headerKey) {
+  return this.packetSpec_.some(function (headerSpec) {
+    return headerSpec.key === headerKey;
+  });
+};
+
+/**
+ * Get just the first bit of the packet binary, for single-bit sending mode.
+ * @returns {string} a single bit, as "0" or "1"
+ */
+NetSimPacketEditor.prototype.getFirstBit = function () {
+  var binary = this.getPacketBinary();
+  return binary.length > 0 ? binary.substr(0, 1) : '0';
 };
 
 /** @param {number} fromAddress */
@@ -554,4 +619,13 @@ NetSimPacketEditor.prototype.updateBitCounter = function () {
  */
 NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function () {
   this.removePacketCallback_(this);
+};
+
+/**
+ * Remove the first bit of the packet binary, used when sending one bit
+ * at a time.
+ */
+NetSimPacketEditor.prototype.consumeFirstBit = function () {
+  this.setPacketBinary(this.getPacketBinary().substr(1));
+  this.updateFields_();
 };

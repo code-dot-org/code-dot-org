@@ -1,0 +1,11 @@
+name 'U1L10 Assessment Free Response'
+title 'Assessment: Encoding Text'
+content1 'A follow-up to the Assessment Question #2:'
+markdown <<MARKDOWN
+
+Do you have any “extra bits” left over from the number required for the QWERTY keyboard question? How many?
+
+If so, what else you might want to encode with those bits?
+
+Why did you select those elements?
+MARKDOWN

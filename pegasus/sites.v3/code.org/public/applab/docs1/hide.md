@@ -19,13 +19,12 @@ Category: Turtle
 
 [short_description]
 
-Hides the turtle so it is not shown on the screen.
+Hides the turtle so it is no longer visible.
 
 [/short_description]
 
-**Note**: When the turtle is hidden [penDown()](/applab/docs/penDown) can still be used to draw a line behind the turtle as it moves.
-<br />
-**Note**: [show()](/applab/docs/show) is often used with hide
+**Note**: When the turtle is hidden [penDown()](/applab/docs/penDown) can still be used to draw a trail behind the turtle as it moves.  
+**Note**: [show()](/applab/docs/show) is often used with hide.
 
 [/description]
 
@@ -37,7 +36,7 @@ ____________________________________________________
 **Example 1**
 
 <pre>
-hide();               // hides the turtle so it is no longer visible on the screen
+hide();               // hides the turtle so it is no longer visible
 moveForward(100);     // moves the turtle forward 100 pixels
 </pre>
 
@@ -54,10 +53,12 @@ This example creates two buttons that allow you to switch between showing and hi
 <pre>
 button("hide-turtle", "hide");                      // creates a hide button
 button("show-turtle", "show");                      // creates a show button
-onEvent("hide-turtle", "click", function(event) {   // when the hide button is clicked the turtle will hide
+onEvent("hide-turtle", "click", function(event) {   // when the hide button is clicked the turtle will
+                                                    //    no longer be visible
   hide();
 });
-onEvent("show-turtle", "click", function(event) {   // when the show button is clicked the turtle will show
+onEvent("show-turtle", "click", function(event) {   // when the show button is clicked the turtle will
+                                                    //    be visible
   show();
 });
 </pre>
@@ -93,7 +94,7 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- [show()](/applab/docs/show) is often used with hide
+- [show()](/applab/docs/show) is often used with hide.
 
 [/tips]
 

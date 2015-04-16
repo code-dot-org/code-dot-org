@@ -8,8 +8,8 @@
       "(4+5)"
     ],
     "title": "Convert Blocks to Math",
-    "content1": "Type out the arithmetic expression that matches this code",
     "placeholder": "Type the arithmetic expression here",
+    "content1": "Type out the arithmetic expression that matches this code",
     "content2": "Blocks to Math 1.blocks.start_blocks, 200"
   },
   "md5": "edc85b185e637684781ac074e3242698"
