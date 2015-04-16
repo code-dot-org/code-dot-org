@@ -6,14 +6,17 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**
  * Store for finding tooltips for blocks
+ * @param {Droplet.Editor} dropletEditor
  * @constructor
  */
-var DropletTooltipManager = module.exports = function () {
+var DropletTooltipManager = module.exports = function (dropletEditor) {
   /**
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
    */
   this.blockTypeToTooltip = {};
+
+  this.dropletEditor_ = dropletEditor;
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -78,5 +81,9 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
     });
 
     $(blockHoverDiv).tooltipster(configuration);
+  });
+
+  this.dropletEditor_.on('pickblock', function () {
+    $('.tooltipstered').tooltipster('hide');
   });
 };
