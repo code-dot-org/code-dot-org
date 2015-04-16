@@ -425,8 +425,8 @@ Blockly.BlockSpace.prototype.highlightBlock = function(id, spotlight) {
  * edits, mutations, connections, etc.  Groups of simultaneous changes (e.g.
  * a tree of blocks being deleted) are merged into one event.
  * Applications may hook blockSpace changes by listening for
- * 'blocklyBlockSpaceChange' on Blockly.mainBlockSpace.getCanvas().
- * To hook changes across all blockSpaces, listen for 'blocklyChange' on window.
+ * 'blocklyBlockSpaceChange' on Blockly.mainBlockSpace.getCanvas().  To hook
+ * changes across all blockSpaces, listen for 'workspaceChange' on window.
  */
 Blockly.BlockSpace.prototype.fireChangeEvent = function() {
   if (this.fireChangeEventPid_) {
@@ -445,7 +445,7 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
     window.clearTimeout(fireGlobalChangeEventPid_);
   }
   fireGlobalChangeEventPid_ = window.setTimeout(function () {
-    Blockly.fireUiEvent(window, 'blocklyChange');
+    Blockly.fireUiEvent(window, 'workspaceChange');
   }, 0);
 };
 
