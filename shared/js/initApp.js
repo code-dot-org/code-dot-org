@@ -209,7 +209,7 @@ function initApp() {
         }
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
-        $(window).on('blocklyChange', function () {
+        $(window).on('workspaceChange', function () {
           hasProjectChanged = true;
         });
         window.setInterval(function () {
