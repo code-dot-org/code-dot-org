@@ -40,9 +40,9 @@ template: none
 %p#save-confirmation{style:'display:none'}
   Saved!
 %hr
-%h2{'ng-hide' => 'workshopSegments.length <= 0'}
+%h2{'ng-show' => 'workshop.id'}
   Workshop segments
-%table
+%table{'ng-show' => 'workshop.id'}
   %tr
     %th
       day
@@ -50,18 +50,19 @@ template: none
       time
     %th
       manage
-  %tr{'ng-repeat' => 'segment in workshopSegments'}
-    %td{'ng-show' => 'segment.editing'}
+  %tr
+    %td
       %input{type:'datetime-local', 'ng-model' => 'segment.start'}
+    %td
+      %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+    %td
+      %a.btn.btn-white.btn-xs{'ng-click' => 'saveSegment(segment)'}
+        Save Segment
+  %tr{'ng-repeat' => 'segment in workshopSegments'}
     %td{'ng-hide' => 'segment.editing'}
       {{segment.start | utc | date:'longDate'}}
-    %td{'ng-show' => 'segment.editing'}
-      %input{type:'datetime-local', 'ng-model' => 'segment.end'}
     %td{'ng-hide' => 'segment.editing'}
       {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
-    %td{'ng-show' => 'segment.editing'}
-      %button{'ng-click' => 'saveSegment(segment)'}
-        Save Segment
     %td{'ng-hide' => 'segment.editing'}
       %a.btn.btn-white.btn-xs{'ng-click' => 'segment.deletion = true', 'ng-hide' => 'segment.deletion == true'}
         Delete
@@ -72,22 +73,11 @@ template: none
         Yes
       %a.btn.btn-white.btn-xs{'ng-click' => 'segment.deletion = false', 'ng-show' => 'segment.deletion == true'}
         No
+
+%h3{'ng-show' => 'workshop.id'}
+  Facilitators
+
 %div{'ng-show' => 'workshop.id'}
-  %a.btn.btn-white.btn-xs{'ng-click' => 'newSegment()'}
-    Add a new segment
-  -#%div
-  -#  Segment Start
-  -#  %input{type:'datetime-local', 'ng-model' => 'segment.start'}
-  -#  Segment End
-  -#  %input{type:'datetime-local', 'ng-model' => 'segment.end'}
-  -#  %br
-  -#  %br
-  -#%button{'ng-click' => 'saveSegment(segment)'}
-  -#  Save Segment
-
-%h3 Facilitators
-
-%div
   %table{style: "width:950px; table-layout:fixed; margin-bottom:10px", 'ng-form' => 'allForm', class: 'workshop-facilitators'}
     %colgroup
       %col{width: "200"}/
@@ -135,4 +125,5 @@ template: none
           %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.editing = false;", "ng-show" => "facilitator.editing"} Cancel
           %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.confirmDelete = true", "ng-show" => "!facilitator.editing && facilitator.id"} Delete
 
-%button.btn.btn-white{"ng-click" => "workshop.facilitators.push({editing: true})"} + Add Facilitator
+%button.btn.btn-white{"ng-click" => "workshop.facilitators.push({editing: true})", 'ng-show' => 'workshop.id'}
+  + Add Facilitator
