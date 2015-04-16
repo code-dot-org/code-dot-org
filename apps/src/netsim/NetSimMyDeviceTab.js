@@ -23,14 +23,14 @@ var NetSimMetronome = require('./NetSimMetronome');
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
  * @param {RunLoop} runLoop
- * @param {function} chunkSizeChangeCallback
- * @param {function} bitRateChangeCallback
- * @param {function} encodingChangeCallback
+ * @param {Object} callbacks
+ * @param {function} callbacks.chunkSizeChangeCallback
+ * @param {function} callbacks.bitRateChangeCallback
+ * @param {function} callbacks.encodingChangeCallback
  * @constructor
  */
 var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
-    runLoop, chunkSizeChangeCallback, bitRateChangeCallback,
-    encodingChangeCallback) {
+    runLoop, callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -61,19 +61,19 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
    * @type {function}
    * @private
    */
-  this.chunkSizeSliderChangeCallback_ = chunkSizeChangeCallback;
+  this.chunkSizeSliderChangeCallback_ = callbacks.chunkSizeChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.bitRateChangeCallback_ = bitRateChangeCallback;
+  this.bitRateChangeCallback_ = callbacks.bitRateChangeCallback;
 
   /**
    * @type {function}
    * @private
    */
-  this.encodingChangeCallback_ = encodingChangeCallback;
+  this.encodingChangeCallback_ = callbacks.encodingChangeCallback;
 
   /**
    * @type {NetSimMetronome}
