@@ -1,6 +1,6 @@
 ---
 title: Region PD
-nav: pd_nav
+nav: pd2_nav
 ---
 <a id="top"></a>
 
@@ -23,8 +23,8 @@ The first phase of professional development is a two-hour online introduction th
 
 ### Save the dates
 
-Monday, June 1, 2015 - Friday, June 5, 2015
-
+Monday, June 22, 2015 - Friday, June 26, 2015
+<br/>
 8:30am - 3:30pm
 <br />
 Breakfast and lunch will be served. 
@@ -35,7 +35,7 @@ Nova Southeastern University (NSU)
 <br />
 Carl DeSantis Building
 <br />
-Room 1048
+Room 3031
 <br />
 3301 College Avenue
 <br />
@@ -49,15 +49,14 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop not required, but you can bring if you'd like
+Laptop optional, not required
 
 </br>
 </br>
 **Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
 
-More info coming soon!
+More info coming soon!  
 
-</br>
 </br>
 **Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
 
@@ -79,8 +78,8 @@ The first phase of professional development is a two-hour introduction that focu
 
 ### Save the dates
 
-Monday, June 1, 2015 - Friday, June 5, 2015
-
+Monday, June 8, 2015 - Friday, June 12, 2015
+<br/>
 8:30am - 3:30pm
 <br />
 Breakfast and lunch will be served. 
@@ -91,7 +90,7 @@ Nova Southeastern University (NSU)
 <br />
 Carl DeSantis Building
 <br />
-Room 1048
+Room 3047
 <br />
 3301 College Avenue
 <br />
@@ -105,7 +104,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop not required, but you can bring if you'd like
+Laptop optional, not required
 
 </br>
 </br>
@@ -135,9 +134,9 @@ The first phase of professional development is a two-hour online introduction th
 
 ### Save the dates
 
-Monday, June 1, 2015 - Friday, June 5, 2015
-
-8:30am - 3:30pm
+Wednesday, June 10, 2015 - Friday, June 12, 2015
+<br/>
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served. 
 
@@ -147,7 +146,7 @@ Nova Southeastern University (NSU)
 <br />
 Carl DeSantis Building
 <br />
-Room 1048
+Room 3049
 <br />
 3301 College Avenue
 <br />
@@ -161,7 +160,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop not required, but you can bring if you'd like
+Laptop
 
 </br>
 </br>
@@ -184,8 +183,8 @@ The first phase of professional development is a two-hour online introduction th
 
 ### Save the dates
 
-Monday, June 1, 2015 - Friday, June 5, 2015
-
+Monday, June 8, 2015 - Friday, June 10, 2015
+<br/>
 8:30am - 3:30pm
 <br />
 Breakfast and lunch will be served. 
@@ -196,7 +195,7 @@ Nova Southeastern University (NSU)
 <br />
 Carl DeSantis Building
 <br />
-Room 1048
+Room 1047
 <br />
 3301 College Avenue
 <br />
@@ -210,7 +209,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop not required, but you can bring if you'd like
+Laptop
 
 </br>
 </br>

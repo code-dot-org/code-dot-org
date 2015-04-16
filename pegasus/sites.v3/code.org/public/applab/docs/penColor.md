@@ -24,7 +24,8 @@ Sets the color of the trail drawn behind the turtle as it moves.
 [/short_description]
 
 **Note**: If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.  
-**Note**: The color can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [colors](http://www.w3schools.com/HTML/html_colornames.asp) for a complete list of all available colors.
+**Note**: The color can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [HTML colors](http://www.w3schools.com/HTML/html_colornames.asp) for a complete list of all available colors.
+**Note**: You can also use any of the valid CSS color naming conventions, especially, rgba(...) which allows you set a color with some amount of transparency. Reference [CSS colors](http://www.w3schools.com/cssref/css_colors_legal.asp)
 
 
 [/description]
@@ -49,15 +50,21 @@ ____________________________________________________
 
 **Example 2**
 
-This demonstrates all 3 ways to give a color to the penColor() function.
+This demonstrates all 4 ways to give a color to the penColor() function.
 
 <pre>
-penColor("chartreuse");       // sets the color using a string
-moveForward(50);              // moves the turtle forward 50 pixels
-penColor("7fff00");           // sets the color using a hex value
-moveForward(50);              // moves the turtle forward 50 pixels
-penColor("rgb(127, 255, 0)"); // sets the color using a rgb value
-moveForward(50);              // moves the turtle forward 50 pixels
+penColor("chartreuse");     		 // sets the color using a string
+moveForward(50);            	 	 // moves the turtle forward 50 pixels
+
+penColor("7fff00");          		 // sets the color using a hex value
+moveForward(50);              		 // moves the turtle forward 50 pixels
+
+penColor("rgb(127, 255, 0)"); 		 // sets the color using a rgb value
+moveForward(50);              		 // moves the turtle forward 50 pixels
+
+penColor("rgba(127, 255, 0, 0.5)"); // sets the color using a rgba value, the last value is amount 
+									 //   of transparency, a percentage between 0.0 and 1.0
+moveForward(50);              		 // moves the turtle forward 50 pixels
 </pre>
 
 [/example]

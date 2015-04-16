@@ -326,8 +326,6 @@ title: "Ops Dashboard"
 
       $scope.workshop = workshopsService.get({id: $routeParams.workshopid});
       $scope.districts = districtsService.query();
-      $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
-      $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
 
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
         var attendance = 'unrecorded';
@@ -337,6 +335,9 @@ title: "Ops Dashboard"
           }
         });
         return attendance;
+      }
+
+      $scope.save = function (workshop) {
       }
   }]);
 
