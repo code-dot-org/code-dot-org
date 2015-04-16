@@ -236,7 +236,7 @@ NetSimPacketEditor.prototype.render = function () {
  */
 NetSimPacketEditor.prototype.beginSending = function (myNode) {
   this.isPlayingSendAnimation_ = true;
-  this.originalBinary_ = this.getPacketBinary();
+  this.originalBinary_ = this.getPacketBinary().substr(0, this.maxPacketSize_);
   this.remainingBinary_ = this.originalBinary_;
   this.myNode_ = myNode;
 
