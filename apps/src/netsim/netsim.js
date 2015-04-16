@@ -115,7 +115,7 @@ var NetSim = module.exports = function () {
    * @type {number}
    * @private
    */
-  this.myDeviceBitRate_ = 8;
+  this.myDeviceBitRate_ = Infinity;
 
   /**
    * Current dns mode.
@@ -345,8 +345,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
-  this.setChunkSize(this.chunkSize_);
-  this.setMyDeviceBitRate(this.myDeviceBitRate_);
+  this.setChunkSize(this.level.defaultChunkSizeBits);
+  this.setMyDeviceBitRate(this.level.defaultBitRateBitsPerSecond);
   this.setRouterBandwidth(this.level.defaultRouterBandwidth);
   this.setRouterMemory(this.level.defaultRouterMemory);
   this.setDnsMode(this.level.defaultDnsMode);
