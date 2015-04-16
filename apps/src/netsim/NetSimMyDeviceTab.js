@@ -171,7 +171,7 @@ NetSimMyDeviceTab.prototype.setBitRate = function (bitsPerSecond) {
     this.bitRateControl_.setValue(bitsPerSecond);
   }
 
-  if (this.pulseRateControl_) {
+  if (this.pulseRateControl_ && bitsPerSecond < Infinity) {
     this.pulseRateControl_.setValue(1 / bitsPerSecond);
   }
 };
