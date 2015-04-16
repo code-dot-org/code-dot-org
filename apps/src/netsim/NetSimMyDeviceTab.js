@@ -131,14 +131,24 @@ NetSimMyDeviceTab.prototype.render = function () {
         }.bind(this));
   }
 
-  this.bitRateControl_ = new NetSimBitRateControl(
-      this.rootDiv_.find('.bitrate'),
-      this.bitsPerSecond_,
-      this.bitRateChangeCallback_);
+  if (this.levelConfig_.showBitRateControl) {
+    this.bitRateControl_ = new NetSimBitRateControl(
+        this.rootDiv_.find('.bitrate'),
+        this.bitsPerSecond_,
+        this.bitRateChangeCallback_);
+    if (this.levelConfig_.lockBitRateControl) {
+      this.bitRateControl_.disable();
+    }
+  }
 
-  this.chunkSizeControl_ = new NetSimChunkSizeControl(
-      this.rootDiv_.find('.chunk-size'),
-      this.chunkSizeSliderChangeCallback_);
+  if (this.levelConfig_.showChunkSizeControl) {
+    this.chunkSizeControl_ = new NetSimChunkSizeControl(
+        this.rootDiv_.find('.chunk-size'),
+        this.chunkSizeSliderChangeCallback_);
+    if (this.levelConfig_.lockChunkSizeControl) {
+      this.chunkSizeControl_.disable();
+    }
+  }
 
   if (this.levelConfig_.showEncodingControls.length > 0) {
     this.encodingControl_ = new NetSimEncodingControl(
@@ -181,7 +191,9 @@ NetSimMyDeviceTab.prototype.setBitRate = function (bitsPerSecond) {
  * @param {number} newChunkSize
  */
 NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
-  this.chunkSizeControl_.setValue(newChunkSize);
+  if (this.chunkSizeControl_) {
+    this.chunkSizeControl_.setValue(newChunkSize);
+  }
 };
 
 /**

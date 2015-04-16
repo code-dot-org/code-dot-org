@@ -9,9 +9,13 @@
     <div class="encoding"></div>
   <% } %>
 
-  <h1>Bitrate</h1>
-  <div class="bitrate"></div>
+  <% if (level.showBitRateControl) { %>
+    <h1>Bitrate</h1>
+    <div class="bitrate"></div>
+  <% } %>
 
-  <h1>Chunk size</h1>
-  <div class="chunk-size"></div>
+  <% if (level.showChunkSizeControl) { %>
+    <h1>Chunk size</h1>
+    <div class="chunk-size"></div>
+  <% } %>
 </div>
