@@ -42,7 +42,7 @@ template: none
 %hr
 %h2{'ng-show' => 'workshop.id'}
   Workshop segments
-%button.btn.btn-white{"ng-click" => "segment.addition = true"}
+%button.btn.btn-white{'ng-click' => 'segment.addition = true', 'ng-show' => 'workshop.id'}
   Add Segment
 %table{'ng-show' => 'workshop.id', style:'margin-top:10px; width:100%; table-layout:fixed;'}
   %colgroup
