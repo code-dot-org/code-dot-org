@@ -44,11 +44,7 @@ template: none
   Workshop segments
 %button.btn.btn-white{'ng-click' => 'segment.addition = true', 'ng-show' => 'workshop.id'}
   Add Segment
-%table{'ng-show' => 'workshop.id', style:'margin-top:10px; width:100%; table-layout:fixed;'}
-  %colgroup
-    %col{width: "45"}/
-    %col{width: "200"}/
-    %col{width: "40"}/
+%table{'ng-show' => 'workshop.id', style:'margin-top:10px; width:100%;'}
   %tr
     %th
       day
@@ -58,11 +54,12 @@ template: none
       manage
   %tr{'ng-show' => 'segment.addition'}
     %td
+      %input{type:'date', 'ng-model' => 'segment.date'}
     %td
-      Start
-      %input{type:'datetime-local', 'ng-model' => 'segment.start'}
-      End
-      %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+      Start Time
+      %input{type:'time', 'ng-model' => 'segment.startTime'}
+      End Time
+      %input{type:'time', 'ng-model' => 'segment.endTime'}
     %td
       %a.btn.btn-white.btn-xs{'ng-click' => 'saveSegment(segment)'}
         Save
