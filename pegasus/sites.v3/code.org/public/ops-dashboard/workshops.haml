@@ -73,6 +73,7 @@ template: none
         %li{'ng-repeat' => 'facilitator in workshop.facilitators'}
           {{facilitator.ops_first_name}}
           {{facilitator.ops_last_name}}
+          %br
           %a{'ng-href' => "mailto:{{facilitator.email}}"}
             {{facilitator.email}}
     %td
