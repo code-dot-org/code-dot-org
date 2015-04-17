@@ -19,12 +19,13 @@
     "free_play": "false",
     "default_num_example_blocks": "2",
     "contract_highlight": "false",
-    "contract_collapse": "false",
+    "contract_collapse": "true",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "disable_examples": "false"
   },
   "md5": "425f147f8dbb7c822d52af961a7962cc"
 }]]></config>

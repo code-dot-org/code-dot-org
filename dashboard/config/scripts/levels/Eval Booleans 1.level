@@ -21,8 +21,11 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
-  }
+    "coordinate_grid_background": "false",
+    "video_key": "alg_9_booleans",
+    "disable_examples": "false"
+  },
+  "md5": "ead26ddb4d2cb5078d6c06a2a49462c2"
 }]]></config>
   <blocks>
     <start_blocks>

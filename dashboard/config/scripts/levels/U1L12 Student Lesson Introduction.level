@@ -9,6 +9,7 @@
     "title": "title",
     "content1": "description here",
     "markdown": "## Unit 1: Lesson 12 - Data Storage: Bytes and File Sizes\n# Background\n\nEarly computers stored and ran 8-bit instructions and most relied on representing and exchanging messages encoded in ASCII text. The 8-bit chunk, or \"byte\" became a very common chunk-size or unit of data for representing information. It became the fundamental unit with which we measure the \"size\" of data on computers (kilobyte, megabyte, gigabyte, terabyte, etc). \n\n# Lesson\n\n* Understand the relationships between bytes, kilobytes, megabytes, gigabytes.\n* Find the size of computer files on your computer. \n* Compare the sizes of various types of data files. \n\n# Resources\n\n* Activity Guide: <a href=\"https://docs.google.com/document/d/1E_-dJy-vqPYLCekzlI22YOXnF3iWI2smhTtbyYHE-NE/edit?usp=sharing\" target=\"_blank\">Storing Data</a>\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
-  }
+  },
+  "md5": "c6b9c946a9395885e3011848c22f08c9"
 }]]></config>
 </External>

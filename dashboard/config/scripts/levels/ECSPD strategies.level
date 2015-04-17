@@ -3,11 +3,9 @@
   "game_id": 38,
   "created_at": "2015-04-16T19:18:36.000Z",
   "properties": {
-    "answers": [
-      "Enter answer here"
-    ],
-    "title": "Classroom Strategies",
-    "content1": "Enter prompt here"
-  }
+    "title": "Classroom Strategies Journal",
+    "markdown": "\nThis space is your __digital journal for documenting strategies__ you've picked up during Professional Development and while teaching the course. We'll revisit this often during PD, and you should refer back to it while planning lessons to remind yourself of strategies you want to try in class. \n\n\n"
+  },
+  "md5": "8a4e90c9b326a3df4711f28ba4a5810a"
 }]]></config>
 </TextMatch>
