@@ -43,7 +43,9 @@
     "definition_collapse": "false",
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
-    "maze_data": null
+    "maze_data": null,
+    "video_key": "alg_17_sambat_compound_booleans",
+    "disable_examples": "false"
   },
   "md5": "95ca73d179360f9afbc2cb28f54ce6ee"
 }]]></config>

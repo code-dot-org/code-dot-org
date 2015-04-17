@@ -16,16 +16,16 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "open_function_definition": "green shape",
-    "scrollbars": "true",
     "min_workspace_height": "1500",
     "default_num_example_blocks": "4",
     "contract_highlight": "false",
-    "contract_collapse": "false",
+    "contract_collapse": "true",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "disable_examples": "false"
   },
   "md5": "97e5df30b42f47a025b60c2be796c210"
 }]]></config>

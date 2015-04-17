@@ -6,6 +6,7 @@
     "title": "Reflection: Sending Formatted Text",
     "content1": "Respond to this prompt or to another as directed by your teacher.",
     "markdown": "How long did it take to send a formatted text message using your protocol? \n\nHow many extra characters (or bits) did your encoding scheme need to communicate the text?\n\n\n"
-  }
+  },
+  "md5": "9201df57029e866ef65034bd0fe648ea"
 }]]></config>
 </TextMatch>

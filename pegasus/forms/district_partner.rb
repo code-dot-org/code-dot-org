@@ -1,6 +1,6 @@
 require 'cdo/date'
 
-  class DistrictPartnerSubmission
+class DistrictPartnerSubmission
 
   def self.normalize(data)
     result = {}

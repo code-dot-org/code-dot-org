@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "To move the player up and down, we'll need to use a conditional block to figure out which key is pressed and respond accordingly. Computers read keypresses as numeric key codes - the up arrow is 38 and the down arrow is 40. You can lookup other key codes in your student workbook. Edit the 'update-player' function so that if moves the player up when the up arrow is pressed, or down when the down arrow is pressed.",
+    "instructions": "To move the player up and down, we'll need to use a conditional block to figure out which key is pressed and respond accordingly. Computers read keypresses as numeric key codes - the up arrow is 38 and the down arrow is 40. You can lookup other key codes in your student workbook. Edit the 'update-player' function so the player moves up when the up arrow is pressed, and moves down when the down arrow is pressed.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -40,7 +40,8 @@
       "downButton",
       "upButton"
     ],
-    "maze_data": null
+    "maze_data": null,
+    "disable_examples": "false"
   },
   "md5": "ad69f76b343d089d8fcd7c9c5a58a1b0"
 }]]></config>
