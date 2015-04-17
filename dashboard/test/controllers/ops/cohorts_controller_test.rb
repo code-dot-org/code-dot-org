@@ -338,6 +338,7 @@ module Ops
     test 'district contact cannot update cohort districts' do
       sign_in @district.contact
 
+      old_districts = @cohort.districts.to_a
       d1 = create(:district)
       d2 = create(:district)
 
@@ -349,7 +350,7 @@ module Ops
       assert_response :success
 
       # only the two new districts
-      assert_equal [d1, d2], @cohort.reload.districts
+      assert_equal old_districts, @cohort.reload.districts
     end
 
 
