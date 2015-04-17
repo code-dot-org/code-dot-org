@@ -107,12 +107,20 @@ var appToProjectUrl = {
   applab: '/p/applab'
 };
 
+/**
+ * @returns {string} The serialized level source from the editor.
+ */
 dashboard.getEditorSource = function() {
   return window.Blockly
       ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
       : window.Applab && Applab.getCode();
 };
 
+/**
+ * Saves the project to the Channels API. Calls `callback` on success if a
+ * callback function was provided. If `overrideSource` is set it will save that
+ * string instead of calling `dashboard.getEditorSource()`.
+ */
 dashboard.saveProject = function(callback, overrideSource) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
   var channelId = dashboard.currentApp.id;
@@ -221,6 +229,7 @@ function initApp() {
 
       // Autosave every AUTOSAVE_INTERVAL milliseconds
       $(window).on('appInitialized', function () {
+        // Get the initial app code as a baseline
         dashboard.currentApp.levelSource = dashboard.getEditorSource();
       });
       $(window).on('workspaceChange', function () {
@@ -231,6 +240,7 @@ function initApp() {
         if (dashboard.currentApp.levelSource == undefined) {
           return;
         }
+        // `dashboard.getEditorSource()` is expensive for Blockly so only call if `workspaceChange` fires
         if (appOptions.droplet || hasProjectChanged) {
           var source = dashboard.getEditorSource();
           if (dashboard.currentApp.levelSource !== source) {
