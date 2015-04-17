@@ -187,7 +187,7 @@ FactoryGirl.define do
   end
 
   factory :district do
-    name 'District 13'
+    sequence(:name) { |n| "District #{n}" }
     location 'Panem'
     contact {create(:district_contact).tap{|dc|dc.permission = 'district_contact'}}
   end
