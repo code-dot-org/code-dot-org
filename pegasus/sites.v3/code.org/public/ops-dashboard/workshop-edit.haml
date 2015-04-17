@@ -46,24 +46,35 @@ template: none
   Add Segment
 %div.jumbotron{'ng-show' => 'workshopSegments <= 0 && !segment.addition'}
   There are currently no facilitators assigned to this workshop.
-%table{'ng-show' => '(workshop.id && workshopSegments > 0) || segment.addition', style:'width:100%;'}
+%table{'ng-hide' => 'workshopSegments <= 0 && !segment.addition', style:'width:100%;'}
   %tr
     %th
-      day
+      Date
     %th
-      time
+      Start
     %th
-      manage
-  %tr{'ng-show' => 'segment.addition'}
+      End
+    %th
+      Manage
+  %tr{'ng-show' => 'segment.addition', 'ng-form' => 'form'}
     %td
-      %input{type:'date', 'ng-model' => 'segment.date'}
+      %input{type:'date', 'ng-model' => 'segment.date', 'ng-required' => 'true', name:'date'}
+      %div.error{'ng-show' => 'form.date.$error.required'}
+        Required
     %td
       Start Time
-      %input{type:'time', 'ng-model' => 'segment.startTime'}
-      End Time
-      %input{type:'time', 'ng-model' => 'segment.endTime'}
+      %input{type:'time', 'ng-model' => 'segment.startTime', 'ng-required' => 'true', name:'start'}
+      %div.error{'ng-show' => 'form.start.$error.required'}
+        Required
     %td
-      %a.btn.btn-white.btn-xs{'ng-click' => 'saveSegment(segment)'}
+      End Time
+      %input{type:'time', 'ng-model' => 'segment.endTime', 'ng-required' => 'true', name:'end'}
+      %div.error{'ng-show' => 'segment.startTime >= segment.endTime'}
+        End time cannot be before start time
+      %div.error{'ng-show' => 'form.end.$error.required'}
+        Required
+    %td
+      %a.btn.btn-white.btn-xs{'ng-click' => 'saveSegment(segment)', 'ng-disabled' => 'form.$invalid || segment.startTime >= segment.endTime'}
         Save
       %a.btn.btn-white.btn-xs{'ng-click' => 'segment.addition = false'}
         Cancel
@@ -71,7 +82,9 @@ template: none
     %td{'ng-hide' => 'segment.editing'}
       {{segment.start | utc | date:'longDate'}}
     %td{'ng-hide' => 'segment.editing'}
-      {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
+      {{segment.start | utc | date:'shortTime'}}
+    %td
+      {{segment.end | utc | date:'shortTime'}}
     %td{'ng-hide' => 'segment.editing'}
       %a.btn.btn-white.btn-xs{'ng-click' => 'segment.deletion = true', 'ng-hide' => 'segment.deletion == true'}
         Delete
@@ -136,3 +149,11 @@ template: none
           %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.editing = true", "ng-hide" => "facilitator.editing"} Edit
           %a.btn.btn-white.btn-xs{"ng-click" => "workshop.facilitators.splice(workshop.facilitators.indexOf(facilitator), 1)", "ng-show" => "facilitator.editing"} Cancel
           %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.confirmDelete = true", "ng-show" => "!facilitator.editing && facilitator.id"} Delete
+:css
+  .error {
+    top: 20px;
+    left: 0px;
+    font-size: 0.6em;
+    font-family: 'Gotham 7r', sans-serif;
+    color: #900;
+  }
