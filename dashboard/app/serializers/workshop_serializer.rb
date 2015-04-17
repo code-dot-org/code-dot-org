@@ -7,7 +7,7 @@ class WorkshopSerializer < ActiveModel::Serializer
   def teachers
     object.teachers.map do |teacher|
       teacher_attendances = object.segments.map do |segment|
-        WorkshopAttendanceSerializer.new(WorkshopAttendance.find_by(teacher_id: teacher.id, segment_id: segment.id)).attributes
+        WorkshopAttendanceSerializer.new(WorkshopAttendance.find_or_initialize_by(teacher_id: teacher.id, segment_id: segment.id)).attributes
       end
       UserSerializer.new(teacher).attributes.merge(attendances:teacher_attendances)
     end

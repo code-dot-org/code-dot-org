@@ -11,6 +11,7 @@ require 'tables_api'
 require 'shared_resources'
 
 require 'bootstrap-sass'
+require 'cdo/hash'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

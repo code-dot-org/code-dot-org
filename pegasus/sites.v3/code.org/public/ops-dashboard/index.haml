@@ -140,13 +140,14 @@ title: "Ops Dashboard"
 
   services.factory('attendancesService', ['$resource',
     function($resource){
-      var Attendance = $resource('/dashboardapi/attendance/workshop/:workshopid', {}, {
+      var Attendance = $resource('/dashboardapi/segments/:segmentid/attendance', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method:'GET'},
         //  'save':   {method:'POST'},
         //  'query':  {method:'GET', isArray:true},
-        //  'remove': {method:'DELETE'},
+          remove: {method:'DELETE', url:'/dashboardapi/attendance/:attendanceid'},
         //  'delete': {method:'DELETE'}
+        update: {method:'PATCH', url:'/dashboardapi/attendance/:attendanceid'}
       });
 
       return Attendance;
@@ -337,7 +338,20 @@ title: "Ops Dashboard"
         return attendance;
       }
 
-      $scope.save = function (workshop) {
+      $scope.save = function (attendance) {
+        if (attendance.id) {
+          attendancesService.update({attendanceid: attendance.id}, {workshop_attendance: attendance});
+        } else {
+          attendancesService.save({segmentid: attendance.segment_id}, {workshop_attendance: attendance}, function (response) {
+            this.attendance = response;
+          }.bind(this));
+        }
+      }
+
+      $scope.clearAttendance = function (attendance) {
+        attendance.status = null;
+        attendance.notes = null;
+        attendancesService.remove({attendanceid: attendance.id}, {workshop_attendance: attendance});
       }
   }]);
 
