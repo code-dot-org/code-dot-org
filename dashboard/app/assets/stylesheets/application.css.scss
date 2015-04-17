@@ -949,7 +949,7 @@ input.header_input {
   }
 }
 
-@mixin close-button($cornerOffset, $filp: false) {
+@mixin close-button($cornerOffset) {
   $startWidth: 61px;
   $startHeight: 59px;
   $growth: 3px;
