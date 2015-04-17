@@ -5,6 +5,8 @@ class NetSim < Blockly
     can_connect_to_clients
     can_connect_to_routers
     show_add_router_button
+    message_granularity
+    automatic_receive
     router_expects_packet_header
     client_initial_packet_header
     show_add_packet_button
@@ -12,6 +14,7 @@ class NetSim < Blockly
     default_packet_size_limit
     show_tabs
     default_tab_index
+    show_metronome
     show_encoding_controls
     default_enabled_encodings
     show_router_bandwidth_control
@@ -43,6 +46,11 @@ class NetSim < Blockly
   # DNS modes, used by levelbuilder
   def self.dns_modes
     %w( none manual automatic )
+  end
+
+  # Message granularity options, used by levelbuilder
+  def self.message_granularity_options
+    %w( bits packets )
   end
 
   def self.create_from_level_builder(params, level_params)

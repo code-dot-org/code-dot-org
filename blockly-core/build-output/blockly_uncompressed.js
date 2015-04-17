@@ -13671,6 +13671,14 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function
     input.connection.tighten_()
   }
 };
+Blockly.BlockSvgFunctional.prototype.updateToColour_ = function(hexColour) {
+  goog.base(this, "updateToColour_", hexColour);
+  if(!this.divider_) {
+    return
+  }
+  var lightColor = goog.color.lighten(goog.color.hexToRgb(hexColour), 0.3);
+  this.divider_.setAttribute("fill", goog.color.rgbArrayToHex(lightColor))
+};
 Blockly.BlockSvgFunctional.prototype.dispose = function() {
   goog.base(this, "dispose");
   this.blockClipRect_ = null;
@@ -19903,7 +19911,7 @@ goog.provide("Blockly.FunctionalBlockUtils");
 goog.provide("Blockly.FunctionalTypeColors");
 goog.require("Blockly.BlockValueType");
 var typesToColors = {};
-typesToColors[Blockly.BlockValueType.NONE] = [0, 0, 0.6];
+typesToColors[Blockly.BlockValueType.NONE] = [0, 0, 0];
 typesToColors[Blockly.BlockValueType.NUMBER] = [192, 1, 0.99];
 typesToColors[Blockly.BlockValueType.STRING] = [180, 1, 0.6];
 typesToColors[Blockly.BlockValueType.IMAGE] = [285, 1, 0.8];
@@ -19919,44 +19927,14 @@ Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function(block, title, 
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
     input.setInline(i > 0);
-    if(arg.type === Blockly.BlockValueType.NONE) {
-      input.setHSV(0, 0, 0.99)
-    }else {
-      input.setHSV.apply(input, Blockly.FunctionalTypeColors[arg.type]);
-      input.setCheck(arg.type)
-    }
+    input.setHSV.apply(input, Blockly.FunctionalTypeColors[arg.type]);
+    input.setCheck(arg.type);
     input.setAlign(Blockly.ALIGN_CENTRE)
   }
   if(type === Blockly.BlockValueType.NONE) {
     block.setFunctionalOutput(false)
   }else {
     block.setFunctionalOutput(true, type)
-  }
-};
-Blockly.FunctionalBlockUtils.installFunctionalApiCallBlock = function(blockly, generator, options) {
-  var blockName = options.blockName;
-  var blockTitle = options.blockTitle;
-  var apiName = options.apiName;
-  var args = options.args;
-  var blockArgs = args.filter(function(arg) {
-    return arg.constantValue === undefined
-  });
-  var blockType = "none";
-  blockly.Blocks[blockName] = {init:function() {
-    Blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, blockType, blockArgs)
-  }};
-  generator[blockName] = function() {
-    if(!apiName) {
-      return""
-    }
-    var apiArgs = [];
-    apiArgs.push("'block_id_" + this.id + "'");
-    for(var i = 0;i < args.length;i++) {
-      var arg = args[i];
-      var value = arg.constantValue !== undefined ? arg.constantValue : Blockly.JavaScript.statementToCode(this, arg.name, false) || arg["default"];
-      apiArgs.push(value)
-    }
-    return apiName + "(" + apiArgs.join(",") + ");\n"
   }
 };
 Blockly.FunctionalBlockUtils.installStringPicker = function(blockly, generator, options) {
@@ -22271,7 +22249,9 @@ Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock.setDeletable(false);
   this.moveExampleBlocksToModal_(functionName);
   this.setupAfterExampleBlocksAdded_();
-  this.position_()
+  this.position_();
+  this.resetParamIDs_();
+  this.refreshParamsEverywhere()
 };
 Blockly.ContractEditor.prototype.setSectionHighlighted = function(viewToHighlight) {
   this.allSections_.forEach(function(view) {

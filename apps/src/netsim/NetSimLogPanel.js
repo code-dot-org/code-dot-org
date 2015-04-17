@@ -19,14 +19,50 @@ var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 
 /**
+ * How long the "entrance" animation for new messages lasts, in milliseconds.
+ * @type {number}
+ * @const
+ */
+var MESSAGE_SLIDE_IN_DURATION_MS = 400;
+
+/**
+ * Object that can be sent data to be browsed by the user at their discretion
+ * @interface
+ * @name INetSimLogPanel
+ */
+
+/**
+ * Put data into the log
+ * @function
+ * @name INetSimLogPanel#log
+ * @param {string} binary
+ */
+
+/**
+ * Show or hide parts of the log based on the currently selected encoding mode.
+ * @function
+ * @name INetSimLogPanel#setEncodings
+ * @param {EncodingType[]} newEncodings
+ */
+
+/**
+ * Change how binary input in interpreted and formatted in the log.
+ * @function
+ * @name INetSimLogPanel#setChunkSize
+ * @param {number} newChunkSize
+ */
+
+/**
  * Generator and controller for message log.
  * @param {jQuery} rootDiv
  * @param {Object} options
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
+ * @param {boolean} [options.hasUnreadMessages] defaults to FALSE
  * @param {packetHeaderSpec} options.packetSpec
  * @constructor
  * @augments NetSimPanel
+ * @implements INetSimLogPanel
  */
 var NetSimLogPanel = module.exports = function (rootDiv, options) {
   /**
@@ -56,6 +92,20 @@ var NetSimLogPanel = module.exports = function (rootDiv, options) {
    */
   this.currentChunkSize_ = 8;
 
+  /**
+   * Localized panel title
+   * @type {string}
+   * @private
+   */
+  this.logTitle_ = options.logTitle;
+
+  /**
+   * Whether newly logged messages in this log should be marked as unread
+   * @type {boolean}
+   * @private
+   */
+  this.hasUnreadMessages_ = !!(options.hasUnreadMessages);
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
@@ -77,7 +127,9 @@ NetSimLogPanel.prototype.render = function () {
   this.addButton(i18n.clear(), this.onClearButtonPress_.bind(this));
 
   // Bind reference to scrollArea for use when logging.
-  this.scrollArea_ = this.getBody().find('.scroll_area');
+  this.scrollArea_ = this.getBody().find('.scroll-area');
+
+  this.updateUnreadCount();
 };
 
 /**
@@ -87,28 +139,41 @@ NetSimLogPanel.prototype.render = function () {
 NetSimLogPanel.prototype.onClearButtonPress_ = function () {
   this.scrollArea_.empty();
   this.packets_.length = 0;
+
+  this.updateUnreadCount();
 };
 
 /**
  * Put a message into the log.
  */
 NetSimLogPanel.prototype.log = function (packetBinary) {
-  var scrollArea = this.scrollArea_;
-  var wasScrolledToEnd =
-      scrollArea[0].scrollHeight - scrollArea[0].scrollTop <=
-      scrollArea.outerHeight();
-
   var newPacket = new NetSimLogPacket(packetBinary, {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
-    chunkSize: this.currentChunkSize_
+    chunkSize: this.currentChunkSize_,
+    isUnread: this.hasUnreadMessages_,
+    markAsReadCallback: this.updateUnreadCount.bind(this)
   });
-  newPacket.getRoot().appendTo(this.scrollArea_);
-  this.packets_.push(newPacket);
+  newPacket.getRoot().hide();
+  newPacket.getRoot().prependTo(this.scrollArea_);
+  newPacket.getRoot().slideDown(MESSAGE_SLIDE_IN_DURATION_MS);
+  this.packets_.unshift(newPacket);
 
-  // Auto-scroll
-  if (wasScrolledToEnd) {
-    scrollArea.scrollTop(scrollArea[0].scrollHeight);
+  this.updateUnreadCount();
+};
+
+NetSimLogPanel.prototype.updateUnreadCount = function () {
+  var unreadCount = this.packets_.reduce(function (prev, cur) {
+    return prev + (cur.isUnread ? 1 : 0);
+  }, 0);
+
+  if (unreadCount > 0) {
+    this.setPanelTitle(i18n.appendCountToTitle({
+      title: this.logTitle_,
+      count: unreadCount
+    }));
+  } else {
+    this.setPanelTitle(this.logTitle_);
   }
 };
 
@@ -143,6 +208,9 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * @param {EncodingType[]} options.encodings - which display style to use initially
  * @param {number} options.chunkSize - (or bytesize) to use when interpreting and
  *        formatting the data.
+ * @param {boolean} options.isUnread - whether this packet should be styled
+ *        as "unread" and have a "mark as read" button
+ * @param {function} options.markAsReadCallback
  * @constructor
  */
 var NetSimLogPacket = function (packetBinary, options) {
@@ -171,11 +239,28 @@ var NetSimLogPacket = function (packetBinary, options) {
   this.chunkSize_ = options.chunkSize;
 
   /**
+   * @type {boolean}
+   */
+  this.isUnread = options.isUnread;
+
+  /**
+   * @type {boolean}
+   */
+  this.isMinimized = false;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.markAsReadCallback_ = options.markAsReadCallback;
+
+  /**
    * Wrapper div that we create once, and fill repeatedly with render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = $('<div>').addClass('packet');
+  this.rootDiv_.click(this.markAsRead.bind(this));
 
   // Initial content population
   this.render();
@@ -188,11 +273,17 @@ NetSimLogPacket.prototype.render = function () {
   var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
     packetSpec: this.packetSpec_,
-    chunkSize: this.chunkSize_
+    enabledEncodings: this.encodings_,
+    chunkSize: this.chunkSize_,
+    isMinimized: this.isMinimized
   });
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   this.rootDiv_.html(jQueryWrap);
+  this.rootDiv_.find('.minimize-button').click(this.minimize.bind(this));
+  this.rootDiv_.find('.maximize-button').click(this.maximize.bind(this));
+
+  this.rootDiv_.toggleClass('unread', this.isUnread);
 };
 
 /**
@@ -219,5 +310,27 @@ NetSimLogPacket.prototype.setEncodings = function (newEncodings) {
  */
 NetSimLogPacket.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
+  this.render();
+};
+
+/**
+ * Mark the packet as read, changing its style and removing the "mark as read"
+ * button.
+ */
+NetSimLogPacket.prototype.markAsRead = function () {
+  if (this.isUnread) {
+    this.isUnread = false;
+    this.render();
+    this.markAsReadCallback_();
+  }
+};
+
+NetSimLogPacket.prototype.minimize = function () {
+  this.isMinimized = true;
+  this.render();
+};
+
+NetSimLogPacket.prototype.maximize = function () {
+  this.isMinimized = false;
   this.render();
 };

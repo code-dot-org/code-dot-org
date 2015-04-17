@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-13T21:53:08.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "title": "title",
+    "content1": "description here",
+    "markdown": "## Unit 1: Lesson 16 - Assessment: Encoding Complex Information\n# Background\n\n\nReal-world, complex information that you encounter everyday can be encoded with the correct protocol. This activity is an individual project that will provide practice for the AP Principles Performance Task.\n\n# Lesson\n\n* Select a personally meaningful, complex real-world \"thing\" or information to encode.\n* Design a protocol for encoding it into bits.\n* Consult with a peer to check you thinking.\n* Create a visual representation of your idea.  \n\n\n# Resources\n\n* Activity Guide: <a href=\"https://docs.google.com/document/d/1YnEyXcUz8N-goWSXMZRIhpZ2ogI29-YDY--RcO3erFc/edit?usp=sharing\"target=\"_blank\">Unit 1 Assessment</a>\n* Rubric <a href=\"https://docs.google.com/document/d/1pbywKpevOUoA6INGTd3dKKkQxCgPSoRPiUannk2C714/edit?usp=sharing\"target=\"_blank\">Assessment Rubric</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  }
+}]]></config>
+</External>

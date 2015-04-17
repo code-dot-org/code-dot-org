@@ -143,5 +143,4 @@ class Blockly < Level
   def blocks_to_embed(block_xml)
     return block_xml
   end
-
 end

@@ -20,7 +20,7 @@ Category: UI Controls
 
 [short_description]
 
-Play the MP3, OGG, or WAV sound file from the specified URL.
+Play the MP3, OGG, or WAV sound file from the provided URL.
 
 [/short_description]
 

@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-16T17:57:37.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "ECS PD commitments",
+    "content1": "overview of program commitments",
+    "markdown": "## Program Timeline\n\nThe program you're about to begin spans through the next academic year and into next summer. This time is set aside to support your growth in teaching this course, and each phase of Professional Development will leverage your level experience with the curriculum at that point. You'll work with a support network formed by your local community of teachers and facilitators to move through the first year and beyond. \n\n![program commitments](https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/ddEG8gHVFjedVDo/Screen%20Shot%202015-04-16%20at%204.27.43%20PM.png)\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  }
+}]]></config>
+</External>

@@ -74,7 +74,7 @@ module Ops
           :district_ids => [],
           :district_names => [],
           :districts => [:id, :max_teachers, :_destroy],
-          :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender] # permit array of objects with specified keys
+          :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
       )
     end
 

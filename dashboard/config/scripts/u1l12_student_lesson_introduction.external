@@ -1,0 +1,22 @@
+name 'U1L12 Student Lesson Introduction'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+## Unit 1: Lesson 12 - Data Storage: Bytes and File Sizes
+# Background
+
+Early computers stored and ran 8-bit instructions and most relied on representing and exchanging messages encoded in ASCII text. The 8-bit chunk, or “byte” became a very common chunk-size or unit of data for representing information. It became the fundamental unit with which we measure the “size” of data on computers (kilobyte, megabyte, gigabyte, terabyte, etc). 
+
+# Lesson
+
+* Understand the relationships between bytes, kilobytes, megabytes, gigabytes.
+* Find the size of computer files on your computer. 
+* Compare the sizes of various types of data files. 
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/document/d/1E_-dJy-vqPYLCekzlI22YOXnF3iWI2smhTtbyYHE-NE/edit?usp=sharing" target="_blank">Storing Data</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

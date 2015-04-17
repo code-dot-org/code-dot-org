@@ -70,10 +70,40 @@ module Ops
       #87054134
       assert_routing({ path: "#{API}/workshops", method: :post }, { controller: 'ops/workshops', action: 'create' })
 
-      assert_difference 'Workshop.count' do
-        post :create, workshop: {name: 'test workshop', program_type: '1', cohort_id: @cohort, facilitator_ids: [@facilitator]}
+      facilitator_params = [
+                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}]
+
+      assert_creates(Workshop, User) do
+        post :create, workshop: {name: 'test workshop', program_type: '1', cohort_id: @cohort, facilitators:facilitator_params}
       end
       assert_response :success
+
+      # created a facilitator
+      workshop = Workshop.last
+      user = User.last
+      assert user.facilitator?
+      assert_equal [user], workshop.facilitators
+      assert_equal [workshop], user.workshops_as_facilitator
+    end
+
+    test 'ops team can add facilitators to workshops' do
+      assert_routing({ path: "#{API}/workshops/1", method: :patch }, { controller: 'ops/workshops', action: 'update', id: '1' })
+
+      facilitator_params = @workshop.facilitators.map {|facilitator| {ops_first_name: facilitator.name, email: facilitator.email, id: facilitator.id}}
+      facilitator_params += [
+                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}]
+
+      assert_creates(User) do
+        assert_difference('@workshop.reload.facilitators.count') do
+          patch :update, id: @workshop.id, workshop: {facilitators: facilitator_params}
+        end
+      end
+
+      # created a facilitator
+      user = User.last
+      assert user.facilitator?
+      assert @workshop.facilitators.include? user
+      assert_equal [@workshop], user.workshops_as_facilitator
     end
 
     test 'read workshop info' do

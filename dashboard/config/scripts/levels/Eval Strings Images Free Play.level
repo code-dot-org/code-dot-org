@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Free Play: Explore the blocks available to draw something interesting. Make sure to save and share your favorite images.",
+    "instructions": "Free Play: Explore the blocks available to create something interesting. Make sure to share your favorite creations.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "disable_examples": "false"
   },
   "md5": "005b1457a9260a52c3020096e0073c58"
 }]]></config>

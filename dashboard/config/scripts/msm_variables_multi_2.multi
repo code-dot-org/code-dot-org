@@ -2,6 +2,6 @@ name 'msm variables multi 2'
 title 'x = 15<br>a = 2<br>b = 6'
 question 'What is the value of a + b?'
 right '8'
-wrong 'function'
+wrong 'a function'
 wrong 'ab'
 

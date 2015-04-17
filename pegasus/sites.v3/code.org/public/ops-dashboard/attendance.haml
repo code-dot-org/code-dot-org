@@ -3,37 +3,103 @@ layout: none
 template: none
 ---
 - authentication_required!
+- forbidden! unless have_permission?('facilitator') || have_permission?('district_contact') || dashboard_user[:admin]
+
+%a{href:'/ops-dashboard'}
+  Dashboard
+>
+%a{href:'/ops-dashboard#/workshops'}
+  PD Workshops
+>
+%span
+  {{workshop.name}}
+
 %h1
   Attendance for {{workshop.name}}
 
-%div.jumbotron{'ng-show' => 'teachers.length <= 0'}
-  No teachers registered for this workshop.
-%table{'ng-show' => 'teachers.length > 0'}
-  %tr
-    %th
-    %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
-      {{segment.start | date:'shortDate'}}
-      %br
-      {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
+#learn-tabs{'ng-hide' => 'workshop.teachers.length <= 0', style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
+  %ul.nav.nav-tabs{style: "float: left;"}
+    %li.active.tab
+      %a{'ng-href' => "#/workshops/{{workshop.id}}/attendance"} Attendance
+    %li
+      %a{'ng-href' => "#/workshops/{{workshop.id}}/attendance-info"} Teacher Information
+  -if dashboard_user[:admin] || have_permission?('facilitator')
+    %button.btn.btn-white{'ng-click' => 'teacherAddition = true', 'ng-hide' => 'teacherAddition == true', style: "float:right"}
+      Add a new teacher
 
-  %tr{'ng-repeat' => 'teacher in teachers | orderBy:"ops_last_name"'}
-    %td{'ng-model' => 'workshop_attendance.teacher_id'}
-      {{teacher.ops_last_name}}, {{teacher.ops_first_name}}
-    %td{'ng-repeat' => 'segment in attendances.segments'}
-      %form
-        %label
-          Attended
-          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'present'}
-        %label
-          Absent
-          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'absent'}
-        %label
-          Excused absence
-          %input{type:'radio', 'ng-model' => 'workshop_attendance.status', value:'excused'}
-          %input{style:'display:none', 'ng-model' => 'workshop_attendance.teacher_id', type:'text'}
+%div.jumbotron{'ng-show' => 'workshop.teachers.length <= 0'}
+  No teachers registered for this workshop.
+
+-if dashboard_user[:admin] || have_permission?('facilitator')
+  %form{'ng-show' => 'teacherAddition == true', style:'width:30%'}
+    %h2
+      New teacher information
+    %input.form-control{type:'text', placeholder:'First Name', 'ng-model' => 'newTeacher.firstName'}
+    %br
+    %input.form-control{type:'text', placeholder:'Last Name', 'ng-model' => 'newTeacher.lastName'}
+    %br
+    %input.form-control{type:'text', placeholder:'Email', 'ng-model' => 'newTeacher.email'}
+    %br
+    %input.form-control{type:'text', placeholder:'District', 'ng-model' => 'newTeacher.district'}
+    %br
+    %select.form-control{'ng-model' => 'newTeacher.gender'}
+      %option{value:'', disabled:'true', selected:'true'}
+        Gender
+      %option
+        Male
+      %option
+        Female
+    %br
+    %input.form-control{type:'text', placeholder:'School', 'ng-model' => 'newTeacher.school'}
+    %br
+    %a.btn.btn-success.btn-xs{'ng-click' =>''}
+      Save
+    %a.btn.btn-white.btn-xs{'ng-click' => 'teacherAddition = false'}
+      Cancel
+%div.table-wrapper{style:"width:970px; overflow-x:scroll; margin-top:10px"}
+  %table{'ng-show' => 'workshop.teachers.length > 0'}
+    %tr
+      %th
+      %th.manage-th{'ng-repeat' => 'segment in workshop.segments'}
+        {{segment.start | date:'shortDate'}}
         %br
-        %input{type:'textarea', placeholder:'Additional notes', style:'width: 100%; height:100px'}
-        %br
-        %br
-        %button.btn.btn-primary
-          Save
+        {{segment.start | date:'shortTime'}} - {{segment.end | date:'shortTime'}}
+
+    %tr{'ng-repeat' => 'teacher in workshop.teachers | orderBy:"ops_last_name"'}
+      %td{'ng-model' => 'workshop_attendance.teacher_id'}
+        {{teacher.ops_last_name}}, {{teacher.ops_first_name}}
+      %td{'ng-repeat' => 'attendance in teacher.attendances'}
+        -if have_permission?('district_contact')
+          %form
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', value:'present', disabled:'true'}
+              Attended
+            %br
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', value:'absent', disabled:'true'}
+              Absent
+            %br
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', value:'excused', disabled:'true'}
+              Excused absence
+            %br
+            %textarea{placeholder:'Additional notes', 'ng-model' => 'attendance.notes', cols:'20', rows:'3', disabled:'true'}
+        -if dashboard_user[:admin] || have_permission?('facilitator')
+          %form
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'present'}
+              Attended
+            %br
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'absent'}
+              Absent
+            %br
+            %label
+              %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'excused'}
+              Excused absence
+            %input{style:'display:none', 'ng-model' => 'attendance.teacher_id', type:'text'}
+            %br
+            %textarea{placeholder:'Additional notes', 'ng-model' => 'attendance.notes', 'ng-change' => 'save(attendance)', cols:'20', rows:'3'}
+            %br
+            %a.btn.btn-white.btn-xs{'ng-click' => 'clearAttendance(attendance)'}
+              Clear
