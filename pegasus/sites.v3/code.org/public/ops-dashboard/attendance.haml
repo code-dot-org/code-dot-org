@@ -69,7 +69,7 @@ template: none
       %td{'ng-model' => 'workshop_attendance.teacher_id'}
         {{teacher.ops_last_name}}, {{teacher.ops_first_name}}
       %td{'ng-repeat' => 'attendance in teacher.attendances'}
-        -if have_permission?('district_contact')
+        -if have_permission?('district_contact') &&  !dashboard_user[:admin]
           %form
             %label
               %input{type:'radio', 'ng-model' => 'attendance.status', value:'present', disabled:'true'}
@@ -84,7 +84,7 @@ template: none
               Excused absence
             %br
             %textarea{placeholder:'Additional notes', 'ng-model' => 'attendance.notes', cols:'20', rows:'3', disabled:'true'}
-        -if have_permission?('facilitator')
+        -if have_permission?('facilitator') || dashboard_user[:admin]
           %form
             %label
               %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'present'}
