@@ -38,12 +38,12 @@ Lint/UselessAccessModifier:
 
 # Offense count: 258
 Metrics/AbcSize:
-  Max: 330
+  Enabled: false
 
 # Offense count: 2446
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
-  Max: 801
+  Enabled: false
 
 # Offense count: 7
 # Configuration parameters: Include.
