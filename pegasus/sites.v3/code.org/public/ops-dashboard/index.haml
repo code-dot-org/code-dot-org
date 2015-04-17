@@ -627,6 +627,7 @@ title: "Ops Dashboard"
                  $scope.workshops = workshops;
                  $('#save-confirmation').css('display', 'inline');
                  $('#save-confirmation').fadeOut(2500);
+                 window.location = '#/workshops/' + $scope.workshop.id + '/edit';
                });
              }
            );
