@@ -460,6 +460,7 @@ en:
         'csp_pixelation_color_3' : 'Color pixelation widget - Part 3'
         'csp_pixelation_bw' : 'Black and white pixelation widget'
         'csp_U1L14_tipstricks' : 'Unit 1 Lesson 14 Teacher Tips & Tricks'
+        'csp_textcompression' : 'Text compression widget'
     callout:
       text:
         # Keyed by #{callout.localization_key}
