@@ -1,5 +1,5 @@
 // Attempt to save projects every 30 seconds
-var AUTOSAVE_INTERVAL = 30000;
+var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
 // Sets up default options and initializes blockly
@@ -97,7 +97,7 @@ dashboard.updateTimestamp = function() {
         .append($('<span class="timestamp">').attr('title', dashboard.currentApp.updatedAt)).show();
     $('.project_updated_at span.timestamp').timeago();
   } else {
-    $('.project_updated_at').text("Click 'Run' to save"); // TODO i18n
+    $('.project_updated_at').text("Not saved"); // TODO i18n
   }
 };
 
@@ -107,12 +107,16 @@ var appToProjectUrl = {
   applab: '/p/applab'
 };
 
+dashboard.getEditorSource = function() {
+  return window.Blockly
+      ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+      : window.Applab && Applab.getCode();
+};
+
 dashboard.saveProject = function(callback, overrideSource) {
   $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
   var channelId = dashboard.currentApp.id;
-  dashboard.currentApp.levelSource = overrideSource || (window.Blockly
-      ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
-      : window.Applab && Applab.getCode());
+  dashboard.currentApp.levelSource = overrideSource || dashboard.getEditorSource();
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
   dashboard.currentApp.level = appToProjectUrl[appOptions.app];
   if (channelId && dashboard.currentApp.isOwner) {
@@ -207,24 +211,6 @@ function initApp() {
         if (dashboard.currentApp.levelSource) {
           appOptions.level.lastAttempt = dashboard.currentApp.levelSource;
         }
-
-        // Autosave every AUTOSAVE_INTERVAL milliseconds
-        $(window).on('workspaceChange', function () {
-          hasProjectChanged = true;
-        });
-        window.setInterval(function () {
-          if (appOptions.droplet || hasProjectChanged) {
-            var source = window.Blockly
-                ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
-                : window.Applab && Applab.getCode();
-            if (dashboard.currentApp.levelSource !== source) {
-              dashboard.saveProject(function() {
-                hasProjectChanged = false;
-              }, source);
-            }
-          }
-        }, AUTOSAVE_INTERVAL);
-
       } else {
         dashboard.currentApp = {
           name: 'My Project'
@@ -232,6 +218,30 @@ function initApp() {
       }
 
       $(window).on('run_button_pressed', dashboard.saveProject);
+
+      // Autosave every AUTOSAVE_INTERVAL milliseconds
+      $(window).on('appInitialized', function () {
+        dashboard.currentApp.levelSource = dashboard.getEditorSource();
+      });
+      $(window).on('workspaceChange', function () {
+        hasProjectChanged = true;
+      });
+      window.setInterval(function () {
+        // Bail if a baseline levelSource doesn't exist (app not yet initialized)
+        if (dashboard.currentApp.levelSource == undefined) {
+          return;
+        }
+        if (appOptions.droplet || hasProjectChanged) {
+          var source = dashboard.getEditorSource();
+          if (dashboard.currentApp.levelSource !== source) {
+            dashboard.saveProject(function() {
+              hasProjectChanged = false;
+            }, source);
+          } else {
+            hasProjectChanged = false;
+          }
+        }
+      }, AUTOSAVE_INTERVAL);
 
       if (!dashboard.currentApp.hidden && (dashboard.currentApp.isOwner || location.hash === '')) {
         dashboard.showProjectHeader();
