@@ -120,7 +120,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
-  has_many :user_levels
+  has_many :user_levels, -> {order 'id desc'}
   has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
@@ -335,22 +335,27 @@ class User < ActiveRecord::Base
     end
   end
 
+  def user_levels_by_level(script)
+    user_levels.
+      where(script_id: [script.id, nil]).
+      index_by(&:level_id)
+  end
+
   def levels_from_script(script, stage = nil)
-    ul_map = self.user_levels.includes({level: [:game, :concepts]}).index_by(&:level_id)
-    q = script.script_levels.includes({ level: :game }, :script, :stage).order(:position)
+    ul_map = user_levels_by_level(script)
+    q = script.script_levels.includes(:level, :script, :stage).order(:position)
 
     if stage
       q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
     end
 
     q.each do |sl|
-      ul = ul_map[sl.level_id]
-      sl.user_level = ul
+      sl.user_level = ul_map[sl.level_id]
     end
   end
 
   def next_unpassed_progression_level(script)
-    user_levels_by_level = self.user_levels.index_by(&:level_id)
+    user_levels_by_level = user_levels_by_level(script)
 
     script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
