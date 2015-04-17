@@ -86,17 +86,21 @@ Blockly.Variables.allVariables = function(opt_block) {
  * @param {Blockly.BlockSpace} blockSpace BlockSpace to rename child blocks of
  */
 Blockly.Variables.renameVariable = function(oldName, newName, blockSpace) {
-  var blocks = blockSpace.getAllBlocks({shareMainModal: false});
-  if (Blockly.modalBlockSpace) {
-    blocks = blocks.concat(
-        Blockly.functionEditor.flyout_.blockSpace_.getTopBlocks());
+  if (newName === oldName) {
+    return;
   }
+  var blocks = blockSpace.getAllBlocks({shareMainModal: false});
   // Iterate through every block.
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].renameVar;
     if (func) {
       func.call(blocks[x], oldName, newName);
     }
+  }
+
+  if (Blockly.modalBlockSpace) {
+    Blockly.functionEditor.renameParameter(oldName, newName);
+    Blockly.functionEditor.refreshParamsEverywhere();
   }
 };
 
