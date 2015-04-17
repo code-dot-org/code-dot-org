@@ -139,7 +139,7 @@ SQL
     unless all_but_best_code_map.empty?
       sorted_all_but_best_code = all_but_best_code_map.values.sort_by {|v| -v[:count] }
       pop_level_source_ids = Array.new([sorted_all_but_best_code.length - 1, 9].min)
-      for idx in 0..[sorted_all_but_best_code.length - 1, 9].min
+      (0..[sorted_all_but_best_code.length - 1, 9].min).each do |idx|
         pop_level_source_id = sorted_all_but_best_code[idx][:level_source_id]
         pop_level_source_ids[idx] = pop_level_source_id
         if passing_code_map.has_key?(pop_level_source_id)
