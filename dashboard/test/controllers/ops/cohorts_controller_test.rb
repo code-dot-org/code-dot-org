@@ -40,7 +40,7 @@ module Ops
         assert_difference('User.count', 2) do
           assert_no_difference('@cohort.districts.count') do
             patch :update, id: @cohort.id, cohort: {teachers: teacher_params}
-            end
+          end
         end
       end
 
