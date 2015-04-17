@@ -127,10 +127,18 @@ namespace :build do
 
       if CDO.daemon
         HipChat.log 'Migrating <b>pegasus</b> database...'
-        RakeUtils.rake 'db:migrate'
+        begin
+          RakeUtils.rake 'db:migrate'
+        rescue => e
+          HipChat.log "/quote #{e.message} #{e.backtrace.join("\n")}", message_format: 'text'
+        end
 
         HipChat.log 'Seeding <b>pegasus</b>...'
-        RakeUtils.rake 'seed:migrate'
+        begin
+          RakeUtils.rake 'seed:migrate'
+        rescue => e
+          HipChat.log "/quote #{e.message} #{e.backtrace.join("\n")}", message_format: 'text'
+        end
       end
 
       if CDO.daemon && !rack_env?(:development)

@@ -37,12 +37,6 @@ Metrics/LineLength:
 Rails/Output:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/AccessModifierIndentation:
-  Enabled: false
-
 # Offense count: 24
 # Cop supports --auto-correct.
 Style/AlignArray:
@@ -177,11 +171,6 @@ Style/EmptyLinesAroundModuleBody:
 Style/FirstParameterIndentation:
   Enabled: false
 
-# Offense count: 5
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/For:
-  Enabled: false
-
 # Offense count: 465
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -208,11 +197,6 @@ Style/IndentationConsistency:
 # Cop supports --auto-correct.
 # Configuration parameters: Width.
 Style/IndentationWidth:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/InfiniteLoop:
   Enabled: false
 
 # Offense count: 83

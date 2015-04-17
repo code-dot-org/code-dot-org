@@ -647,6 +647,8 @@ title: "Ops Dashboard"
       }
 
       $scope.saveSegment = function (segment) {
+        $scope.segment.start = $scope.segment.date + "T" + $scope.segment.startTime;
+        $scope.segment.end = $scope.segment.date + "T" + $scope.segment.endTime;
         var newSegment = new segmentsService($scope.segment);
         newSegment.$save({id: $scope.workshop.id}).then(
           function(saved) {
