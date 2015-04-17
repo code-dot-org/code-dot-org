@@ -17,14 +17,6 @@ def create_database(uri)
   system command.join(' ')
 end
 
-def with_retries(count = 5)
-  yield if block_given?
-rescue
-  raise if (count -= 1) == 0
-  sleep 2.25
-  retry
-end
-
 task :lint do
   RakeUtils.system 'rubocop'
 end
@@ -135,10 +127,10 @@ namespace :build do
 
       if CDO.daemon
         HipChat.log 'Migrating <b>pegasus</b> database...'
-        with_retries { RakeUtils.rake 'db:migrate' }
+        RakeUtils.rake 'db:migrate'
 
         HipChat.log 'Seeding <b>pegasus</b>...'
-        with_retries { RakeUtils.rake 'seed:migrate' }
+        RakeUtils.rake 'seed:migrate'
       end
 
       if CDO.daemon && !rack_env?(:development)
