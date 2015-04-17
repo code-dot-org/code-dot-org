@@ -10,6 +10,7 @@
     "title": "Welcome Video",
     "content1": "Welcome to Online PD for ECS",
     "markdown": "## Welcome! \ninsert welcome video here\n<iframe></iframe>\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
-  }
+  },
+  "md5": "195a16e0e4e96c1cfe608f4b853d0a8b"
 }]]></config>
 </External>

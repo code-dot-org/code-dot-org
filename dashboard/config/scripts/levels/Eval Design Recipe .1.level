@@ -25,7 +25,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "video_key": "alg_8_design_recipe",
+    "disable_examples": "false"
   },
   "md5": "97f3210eb4da03d437df4acc6192fc01"
 }]]></config>

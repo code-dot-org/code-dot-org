@@ -5891,6 +5891,7 @@ Blockly.BlockSpace.prototype.pageXOffset = 0;
 Blockly.BlockSpace.prototype.pageYOffset = 0;
 Blockly.BlockSpace.prototype.trashcan = null;
 Blockly.BlockSpace.prototype.fireChangeEventPid_ = null;
+var fireGlobalChangeEventPid_ = null;
 Blockly.BlockSpace.prototype.scrollbar = null;
 Blockly.BlockSpace.prototype.debugLogOnEvents = function() {
   goog.object.forEach(Blockly.BlockSpace.EVENTS, function(eventIdentifier, eventConstant) {
@@ -6076,6 +6077,12 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
       Blockly.fireUiEvent(canvas, "blocklyBlockSpaceChange")
     }, 0)
   }
+  if(fireGlobalChangeEventPid_) {
+    window.clearTimeout(fireGlobalChangeEventPid_)
+  }
+  fireGlobalChangeEventPid_ = window.setTimeout(function() {
+    Blockly.fireUiEvent(window, "workspaceChange")
+  }, 0)
 };
 Blockly.BlockSpace.prototype.paste = function(clipboard) {
   var xmlBlock = clipboard.dom;

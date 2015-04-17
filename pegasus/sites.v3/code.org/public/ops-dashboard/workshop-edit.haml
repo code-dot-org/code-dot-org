@@ -42,29 +42,39 @@ template: none
 %hr
 %h2{'ng-show' => 'workshop.id'}
   Workshop segments
-%button.btn.btn-white{"ng-click" => "segment.addition = true"}
+%button.btn.btn-white{'ng-click' => 'segment.addition = true', 'ng-show' => 'workshop.id', style:'margin-bottom:10px;'}
   Add Segment
-%table{'ng-show' => 'workshop.id', style:'margin-top:10px; width:100%; table-layout:fixed;'}
-  %colgroup
-    %col{width: "45"}/
-    %col{width: "200"}/
-    %col{width: "40"}/
+%div.jumbotron{'ng-show' => 'workshopSegments <= 0 && !segment.addition'}
+  There are currently no facilitators assigned to this workshop.
+%table{'ng-hide' => 'workshopSegments <= 0 && !segment.addition', style:'width:100%;'}
   %tr
     %th
-      day
+      Date
     %th
-      time
-    %th
-      manage
-  %tr{'ng-show' => 'segment.addition'}
-    %td
-    %td
       Start
-      %input{type:'datetime-local', 'ng-model' => 'segment.start'}
+    %th
       End
-      %input{type:'datetime-local', 'ng-model' => 'segment.end'}
+    %th
+      Manage
+  %tr{'ng-show' => 'segment.addition', 'ng-form' => 'form'}
     %td
-      %a.btn.btn-white.btn-xs{'ng-click' => 'saveSegment(segment)'}
+      %input{type:'date', 'ng-model' => 'segment.date', 'ng-required' => 'true', name:'date'}
+      %div.error{'ng-show' => 'form.date.$error.required'}
+        Required
+    %td
+      Start Time
+      %input{type:'time', 'ng-model' => 'segment.startTime', 'ng-required' => 'true', name:'start'}
+      %div.error{'ng-show' => 'form.start.$error.required'}
+        Required
+    %td
+      End Time
+      %input{type:'time', 'ng-model' => 'segment.endTime', 'ng-required' => 'true', name:'end'}
+      %div.error{'ng-show' => 'segment.startTime >= segment.endTime'}
+        End time cannot be before start time
+      %div.error{'ng-show' => 'form.end.$error.required'}
+        Required
+    %td
+      %a.btn.btn-white.btn-xs{'ng-click' => 'saveSegment(segment)', 'ng-disabled' => 'form.$invalid || segment.startTime >= segment.endTime'}
         Save
       %a.btn.btn-white.btn-xs{'ng-click' => 'segment.addition = false'}
         Cancel
@@ -72,7 +82,9 @@ template: none
     %td{'ng-hide' => 'segment.editing'}
       {{segment.start | utc | date:'longDate'}}
     %td{'ng-hide' => 'segment.editing'}
-      {{segment.start | utc | date:'shortTime'}} - {{segment.end | utc | date:'shortTime'}}
+      {{segment.start | utc | date:'shortTime'}}
+    %td
+      {{segment.end | utc | date:'shortTime'}}
     %td{'ng-hide' => 'segment.editing'}
       %a.btn.btn-white.btn-xs{'ng-click' => 'segment.deletion = true', 'ng-hide' => 'segment.deletion == true'}
         Delete
@@ -86,10 +98,12 @@ template: none
 
 %h2{'ng-show' => 'workshop.id'}
   Facilitators
-%button.btn.btn-white{"ng-click" => "workshop.facilitators.unshift({editing: true})", 'ng-show' => 'workshop.id'}
+%button.btn.btn-white{"ng-click" => "workshop.facilitators.unshift({editing: true})", 'ng-show' => 'workshop.id', style:'margin-bottom:10px'}
   Add Facilitator
-%div{'ng-show' => 'workshop.id'}
-  %table{style: "width:100%; table-layout:fixed; margin-top:10px", 'ng-form' => 'allForm', class: 'workshop-facilitators'}
+%div.jumbotron{'ng-show' => 'workshop.facilitators <= 0'}
+  There are currently no facilitators assigned to this workshop.
+%div{'ng-hide' => 'workshop.id && workshop.facilitators <= 0'}
+  %table{style: "width:100%; table-layout:fixed;", 'ng-form' => 'allForm', class: 'workshop-facilitators'}
     %colgroup
       %col{width: "200"}/
       %col{width: "200"}/
@@ -135,3 +149,11 @@ template: none
           %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.editing = true", "ng-hide" => "facilitator.editing"} Edit
           %a.btn.btn-white.btn-xs{"ng-click" => "workshop.facilitators.splice(workshop.facilitators.indexOf(facilitator), 1)", "ng-show" => "facilitator.editing"} Cancel
           %a.btn.btn-white.btn-xs{"ng-click" => "facilitator.confirmDelete = true", "ng-show" => "!facilitator.editing && facilitator.id"} Delete
+:css
+  .error {
+    top: 20px;
+    left: 0px;
+    font-size: 0.6em;
+    font-family: 'Gotham 7r', sans-serif;
+    color: #900;
+  }

@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Let's fix this distance function so our collision detection works. Use the Distance Formula to complete this distance function so that it returns the distance between the player's center coordinates (px, py), and the center coordinates of another character (cx, cy). We've provided a working line-length function to help you out.",
+    "instructions": "Let's fix this distance function so our collision detection works properly. Use the Distance Formula, so the distance function returns the distance between the player's center coordinates (px, py) and another sprite's center coordinates (cx, cy). We've provided a working line-length function to help you out.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

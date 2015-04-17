@@ -16,13 +16,14 @@
     "free_play": "false",
     "embed": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Calc Circles of Eval .1\",\r\n  \"callout_text\": \"This is the evaluation block. Click on the drop down box to change the number\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right top\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
-    "video_key": "msm_1_intro",
+    "video_key": "alg_1_intro",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
+    "definition_collapse": "false",
+    "disable_examples": "false"
   },
   "md5": "bef049c73771d8ea46a2745f1408abda"
 }]]></config>
