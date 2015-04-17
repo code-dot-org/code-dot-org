@@ -11,7 +11,7 @@
     "timeout_after_when_run": "false",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "At this point your danger should run across the screen from right to left, your target should run across from left to right, and they should both return to the opposite side. Take a minute to make sure your game is working like you want it to, and then click finish to move on.",
+    "instructions": "At this point your danger should run across the screen from right to left, your target should run across from left to right, and they should both return to the opposite side, repeatedly. Take a minute to make sure your game is working like you want it to, and then click Finish to move on.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -38,7 +38,8 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
-    "maze_data": null
+    "maze_data": null,
+    "disable_examples": "false"
   },
   "md5": "8fa63c3dd9519e0026061b9900952251"
 }]]></config>

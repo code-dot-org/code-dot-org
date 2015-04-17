@@ -11,8 +11,8 @@
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
     "show_add_router_button": "true",
-    "router_expects_packet_header": "[\r\n  {\"key\":\"toAddress\", \"bits\":4}, \r\n  {\"key\":\"fromAddress\", \"bits\":4}, \r\n  {\"key\":\"packetIndex\", \"bits\":4}, \r\n  {\"key\":\"packetCount\", \"bits\":4}\r\n]",
-    "client_initial_packet_header": "[\r\n  {\"key\":\"toAddress\", \"bits\":4}, \r\n  {\"key\":\"fromAddress\", \"bits\":4}, \r\n  {\"key\":\"packetIndex\", \"bits\":4}, \r\n  {\"key\":\"packetCount\", \"bits\":4}\r\n]",
+    "router_expects_packet_header": "[\r\n  {\"key\":\"toAddress\", \"bits\":4}, \r\n  {\"key\":\"fromAddress\", \"bits\":4}\r\n]",
+    "client_initial_packet_header": "[\r\n  {\"key\":\"toAddress\", \"bits\":4}, \r\n  {\"key\":\"fromAddress\", \"bits\":4}\r\n]",
     "show_add_packet_button": "true",
     "show_packet_size_control": "true",
     "default_packet_size_limit": "Infinity",
@@ -41,7 +41,8 @@
     "can_connect_to_clients": "false",
     "can_connect_to_routers": "true",
     "message_granularity": "packets",
-    "automatic_receive": "true"
+    "automatic_receive": "true",
+    "show_metronome": "false"
   },
   "md5": "dd07bd55e62ab21acc1ab752c99154a2"
 }]]></config>
