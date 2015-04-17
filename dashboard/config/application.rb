@@ -11,6 +11,7 @@ require 'tables_api'
 require 'shared_resources'
 
 require 'bootstrap-sass'
+require 'cdo/hash'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -67,7 +68,7 @@ module Dashboard
 
     # Hack for cache busting.
     # Extracts version number from package.json of Blockly apps.
-    # See also Blockly#cache_bust.
+    # See also LevelsHelper#blockly_cache_bust.
     cache_bust_path = Rails.root.join('.cache_bust')
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 

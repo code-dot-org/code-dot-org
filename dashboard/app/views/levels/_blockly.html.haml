@@ -15,7 +15,8 @@
     //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     var appOptions = #{app_options.to_json};
-    appOptions.locale = '#{js_locale}';
+    var blocklyOptions = #{blockly_options(local_assigns).to_json};
+    blocklyOptions.locale = '#{js_locale}';
     //]]>
 
   %script{src: '/shared/js/client_api.js'}

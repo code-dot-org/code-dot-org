@@ -59,6 +59,26 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = DEFAULT_LOCALE
   end
 
+  test "leave non-coercible strings alone" do
+    assert_equal "test", blockly_value('test')
+  end
+
+  test "force integer strings to integers" do
+    assert_equal 5, blockly_value('5')
+    assert_equal -5, blockly_value('-5')
+    assert_equal 0, blockly_value('0')
+  end
+
+  test "force float strings to floats" do
+    assert_equal 5.00001, blockly_value('5.00001')
+    assert_equal -5.00001, blockly_value('-5.00001')
+  end
+
+  test "force boolean strings to boolean" do
+    assert_equal false, blockly_value('false')
+    assert_equal true, blockly_value('true')
+  end
+
   test "get video choices" do
     choices_cached = video_key_choices
     assert_equal(choices_cached.count, Video.count)
@@ -119,18 +139,5 @@ class LevelsHelperTest < ActionView::TestCase
     callouts = select_and_remember_callouts
 
     assert callouts.any?{ |c| c['localized_text'] == 'Hit "Run" to try your program'}
-  end
-
-  test 'app_options returns camelCased view option on Blockly level' do
-    @level.start_blocks = '<test/>'
-    options = app_options
-    assert_equal '<test/>', options[:level]['startBlocks']
-  end
-
-  test "embedded-freeplay level doesn't remove header and footer" do
-    @level.embed = true
-    app_options
-    assert_equal nil, view_options[:no_header]
-    assert_equal nil, view_options[:no_footer]
   end
 end
