@@ -10,6 +10,7 @@
     "title": "Sending Numbers",
     "content1": "description here",
     "markdown": "## Unit 1: Lesson 8 - Sending Numbers\n\n# Background\nAll communication protocols solve the problem of how to send (binary encoded) information from one place to another. This requires that the sender and receiver agree on how many bits form a proper message, how big the \"chunks\" of bits should be, and how to indicate the beginning and end of the message.\n\n# Lesson\n\n* Invent your own communication protocol to send a list of numbers to create an image on a grid.\n* Use the bit-sending widget to send the numbers to a friend.\n* Could your friend draw the image based upon your message?\n\n\n# Resources\n  \n* Activity Guide: <a href=\"https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit\" target=\"_blank\">Sending Numbers</a>\n* Handout: <a href=\"https://docs.google.com/document/d/1q_czj1JXG3aCH_kLuzVPRvrAHJlzp3GLCOeTClw0FUo/edit?usp=sharing\"target=\"_blank\">Widget Diagram</a>\n* Rubric <a href=\"https://docs.google.com/document/d/1rAlZiJjc84C0DlJHtIypWCf3IGFHJ7gqJgQQQQdnATw/edit?usp=sharing\" target=\"_blank\">Sending Numbers Protocol Checklist</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n\n"
-  }
+  },
+  "md5": "54f92d44acf1e5e8a4c47e491142867a"
 }]]></config>
 </External>
