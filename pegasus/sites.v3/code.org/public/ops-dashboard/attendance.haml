@@ -84,7 +84,7 @@ template: none
               Excused absence
             %br
             %textarea{placeholder:'Additional notes', 'ng-model' => 'attendance.notes', cols:'20', rows:'3', disabled:'true'}
-        -if dashboard_user[:admin] || have_permission?('facilitator')
+        -if have_permission?('facilitator')
           %form
             %label
               %input{type:'radio', 'ng-model' => 'attendance.status', 'ng-change' => 'save(attendance)', value:'present'}
