@@ -60,7 +60,7 @@ var baseOptions = {
     }
   }
 };
-$.extend(true, appOptions, baseOptions);
+$.extend(true, appOptions, baseOptions, blocklyOptions);
 
 // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
 // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
