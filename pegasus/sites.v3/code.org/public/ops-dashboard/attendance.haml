@@ -103,3 +103,9 @@ template: none
             %br
             %a.btn.btn-white.btn-xs{'ng-click' => 'clearAttendance(attendance)'}
               Clear
+            %span{'ng-show' => 'attendance.saved'}
+              Saved!
+            %span{'ng-show' => 'attendance.cleared'}
+              Cleared!
+            %span{'ng-show' => 'attendance.updated'}
+              Updated!
