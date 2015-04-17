@@ -127,7 +127,11 @@ namespace :build do
 
       if CDO.daemon
         HipChat.log 'Migrating <b>pegasus</b> database...'
-        RakeUtils.rake 'db:migrate'
+        begin
+          RakeUtils.rake 'db:migrate'
+        rescue => e
+          HipChat.log "#{e.message} #{e.backtrace.join('\n')}"
+        end
 
         HipChat.log 'Seeding <b>pegasus</b>...'
         RakeUtils.rake 'seed:migrate'
