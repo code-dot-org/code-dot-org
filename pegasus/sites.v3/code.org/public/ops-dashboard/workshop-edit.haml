@@ -42,9 +42,11 @@ template: none
 %hr
 %h2{'ng-show' => 'workshop.id'}
   Workshop segments
-%button.btn.btn-white{'ng-click' => 'segment.addition = true', 'ng-show' => 'workshop.id'}
+%button.btn.btn-white{'ng-click' => 'segment.addition = true', 'ng-show' => 'workshop.id', style:'margin-bottom:10px;'}
   Add Segment
-%table{'ng-show' => 'workshop.id', style:'margin-top:10px; width:100%;'}
+%div.jumbotron{'ng-show' => 'workshopSegments <= 0 && !segment.addition'}
+  There are currently no facilitators assigned to this workshop.
+%table{'ng-show' => '(workshop.id && workshopSegments > 0) || segment.addition', style:'width:100%;'}
   %tr
     %th
       day
@@ -83,10 +85,12 @@ template: none
 
 %h2{'ng-show' => 'workshop.id'}
   Facilitators
-%button.btn.btn-white{"ng-click" => "workshop.facilitators.unshift({editing: true})", 'ng-show' => 'workshop.id'}
+%button.btn.btn-white{"ng-click" => "workshop.facilitators.unshift({editing: true})", 'ng-show' => 'workshop.id', style:'margin-bottom:10px'}
   Add Facilitator
-%div{'ng-show' => 'workshop.id'}
-  %table{style: "width:100%; table-layout:fixed; margin-top:10px", 'ng-form' => 'allForm', class: 'workshop-facilitators'}
+%div.jumbotron{'ng-show' => 'workshop.facilitators <= 0'}
+  There are currently no facilitators assigned to this workshop.
+%div{'ng-hide' => 'workshop.id && workshop.facilitators <= 0'}
+  %table{style: "width:100%; table-layout:fixed;", 'ng-form' => 'allForm', class: 'workshop-facilitators'}
     %colgroup
       %col{width: "200"}/
       %col{width: "200"}/
