@@ -14,9 +14,17 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "video_key": "msm_3_pemdas",
-    "embed": "false"
-  }
+    "video_key": "alg_3_pemdas",
+    "embed": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
+  },
+  "md5": "548229f35ff6b1a02f5112d5100258a1"
 }]]></config>
   <blocks>
     <start_blocks>

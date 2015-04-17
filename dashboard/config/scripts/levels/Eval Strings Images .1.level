@@ -22,7 +22,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "video_key": "alg_4_data_types",
+    "disable_examples": "false"
   },
   "md5": "e74a5652a1c1a0b3973329843a384abc"
 }]]></config>

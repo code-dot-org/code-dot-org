@@ -34,10 +34,13 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
     "custom_game_type": "Big Game",
-    "min_workspace_height": "1500"
-  }
+    "min_workspace_height": "1500",
+    "video_key": "alg_13_biggame_animation",
+    "disable_examples": "false",
+    "maze_data": null
+  },
+  "md5": "eaa280dd2c1b460317d0f614d46c0bdc"
 }]]></config>
   <blocks/>
 </Studio>
