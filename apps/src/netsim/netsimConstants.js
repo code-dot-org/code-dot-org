@@ -69,6 +69,17 @@ exports.NodeType = {
 };
 
 /**
+ * What type of message makes up the 'atom' of communication for this
+ * simulator mode - single-bit messages (variant 1) or whole packets (variants
+ * 2 and up)
+ * @enum {string}
+ */
+exports.MessageGranularity = {
+  PACKETS: 'packets',
+  BITS: 'bits'
+};
+
+/**
  * DNS modes for the simulator.  Only applies in variant 3, when connecting
  * to a router.
  * @enum {string}

@@ -139,7 +139,11 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
 // The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
 // The scale values are then adjusted such that the max-width case may result
 // in a scaled-up version of divApplab and the min-width case will typically
-// result in a scaled-down version of divApplab
+// result in a scaled-down version of divApplab.
+//
+// @returns {Array.<number>} Array of scale factors which will be used
+//     on the applab app area at the following screen widths, respectively:
+//     1151px+; 1101-1150px; 1051-1100px; 1001-1050px; 0-1000px.
 //
 
 function adjustAppSizeStyles(container) {
@@ -240,6 +244,7 @@ function adjustAppSizeStyles(container) {
       break;
     }
   }
+  return scaleFactors;
 }
 
 var drawDiv = function () {
@@ -271,12 +276,14 @@ function outputApplabConsole(output) {
   }
   // then put it in the applab console visible to the user:
   var debugOutput = document.getElementById('debug-output');
-  if (debugOutput.value.length > 0) {
-    debugOutput.value += '\n' + output;
-  } else {
-    debugOutput.value = output;
+  if (debugOutput) {
+    if (debugOutput.value.length > 0) {
+      debugOutput.value += '\n' + output;
+    } else {
+      debugOutput.value = output;
+    }
+    debugOutput.scrollTop = debugOutput.scrollHeight;
   }
-  debugOutput.scrollTop = debugOutput.scrollHeight;
 }
 
 var apiWarn = outputApplabConsole;
@@ -743,7 +750,7 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles(document.getElementById(config.containerId));
+  Applab.vizScaleFactors = adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -1013,11 +1020,69 @@ Applab.createElement = function (elementType, left, top) {
 
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(el);
-  Applab.levelHtml = divApplab.innerHTML;
+  Applab.makeDraggable($(el));
+  Applab.levelHtml = Applab.serializeToLevelHtml();
+};
+
+/**
+ *
+ * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
+ */
+Applab.makeDraggable = function (jq) {
+  var gridSize = 20;
+  jq.draggable({
+    cancel: false,  // allow buttons and inputs to be dragged
+    drag: function(event, ui) {
+      // draggables are not compatible with CSS transform-scale,
+      // so adjust the position in various ways here.
+
+      // dragging
+      var scale = Applab.getVizScaleFactor();
+      var changeLeft = ui.position.left - ui.originalPosition.left;
+      var newLeft  = (ui.originalPosition.left + changeLeft) / scale;
+      var changeTop = ui.position.top - ui.originalPosition.top;
+      var newTop = (ui.originalPosition.top + changeTop) / scale;
+
+      // containment
+      var container = $('#divApplab');
+      var maxLeft = container.width() - ui.helper.outerWidth(true);
+      var maxTop = container.height() - ui.helper.outerHeight(true);
+      newLeft = Math.min(newLeft, maxLeft);
+      newLeft = Math.max(newLeft, 0);
+      newTop = Math.min(newTop, maxTop);
+      newTop = Math.max(newTop, 0);
+
+      // grid
+      newLeft -= newLeft % gridSize;
+      newTop -= newTop % gridSize;
+
+      ui.position.left = newLeft;
+      ui.position.top = newTop;
+    },
+    stop: function(event, ui) {
+      Applab.levelHtml = Applab.serializeToLevelHtml();
+    }
+  });
+};
+
+Applab.getVizScaleFactor = function () {
+  var width = $('body').width();
+  var vizScaleBreakpoints = [1150, 1100, 1050, 1000, 0];
+  if (vizScaleBreakpoints.length !== Applab.vizScaleFactors.length) {
+    throw 'Wrong number of elements in Applab.vizScaleFactors ' +
+        Applab.vizScaleFactors;
+  }
+  for (var i = 0; i < vizScaleBreakpoints.length; i++) {
+    if (width > vizScaleBreakpoints[i]) {
+      return Applab.vizScaleFactors[i];
+    }
+  }
+  throw 'Unexpected body width: ' + width;
 };
 
 Applab.onDivApplabClick = function (event) {
-  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+  if (!window.$ || $('#designModeButton').is(':visible') ||
+      $('#resetButton').is(':visible')) {
     return;
   }
   event.preventDefault();
@@ -1080,13 +1145,34 @@ Applab.onSavePropertiesButton = function(el, event) {
   el.style.width = document.getElementById('design-property-width').value;
   el.style.height = document.getElementById('design-property-height').value;
   $(el).text(document.getElementById('design-property-text').value);
-  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
 Applab.onDeletePropertiesButton = function(el, event) {
   el.parentNode.removeChild(el);
-  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.levelHtml = Applab.serializeToLevelHtml();
   Applab.clearProperties();
+};
+
+Applab.serializeToLevelHtml = function () {
+  var s = new XMLSerializer();
+  var divApplab = document.getElementById('divApplab');
+  var clone = divApplab.cloneNode(true);
+  // Remove unwanted classes added by jQuery.draggable.
+  $(clone).find('*').removeAttr('class');
+  return s.serializeToString(clone);
+};
+
+Applab.parseFromLevelHtml = function(rootEl, isDesignMode) {
+  if (!Applab.levelHtml) {
+    return;
+  }
+  var levelDom = $.parseHTML(Applab.levelHtml);
+  var children = $(levelDom).children();
+  children.appendTo(rootEl);
+  if (isDesignMode) {
+    Applab.makeDraggable(children);
+  }
 };
 
 /**
@@ -1153,11 +1239,10 @@ studioApp.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
-  divApplab = document.getElementById('divApplab');
-  if (Applab.levelHtml) {
-    divApplab.innerHTML = Applab.levelHtml;
-  }
-  divApplab.addEventListener('click', Applab.onDivApplabClick);
+  var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
+  Applab.parseFromLevelHtml(newDivApplab, isDesignMode);
+
+  newDivApplab.addEventListener('click', Applab.onDivApplabClick);
 
 
   // Reset goal successState:
@@ -1584,6 +1669,13 @@ Applab.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
+
+  var children = $('#divApplab').children();
+  if (enable) {
+    Applab.makeDraggable(children);
+  } else if (children.data('uiDraggable')) {
+    children.draggable('destroy');
+  }
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1747,9 +1839,10 @@ Applab.imageUploadButton = function (opts) {
 };
 
 // These offset are used to ensure that the turtle image is centered over
-// its x,y coordinates. The image is currently 31x45, so these offsets are 50%
-var TURTLE_X_OFFSET = -15;
-var TURTLE_Y_OFFSET = -22;
+// its x,y coordinates. The image is currently 48x48, rendered at 24x24.
+var TURTLE_WIDTH = 24;
+var TURTLE_HEIGHT = 24;
+var TURTLE_ROTATION_OFFSET = -45;
 
 function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
@@ -1763,7 +1856,7 @@ function getTurtleContext() {
     Applab.turtle.visible = true;
     var divApplab = document.getElementById('divApplab');
     var turtleImage = document.createElement("img");
-    turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
+    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
     turtleImage.ondragstart = function () { return false; };
@@ -1777,9 +1870,13 @@ function updateTurtleImage(turtleImage) {
   if (!turtleImage) {
     turtleImage = document.getElementById('turtleImage');
   }
-  turtleImage.style.left = (Applab.turtle.x + TURTLE_X_OFFSET) + 'px';
-  turtleImage.style.top = (Applab.turtle.y + TURTLE_Y_OFFSET) + 'px';
-  turtleImage.style.transform = 'rotate(' + Applab.turtle.heading + 'deg)';
+  turtleImage.style.left = (Applab.turtle.x - TURTLE_WIDTH / 2) + 'px';
+  turtleImage.style.top = (Applab.turtle.y - TURTLE_HEIGHT / 2) + 'px';
+  var heading = Applab.turtle.heading + TURTLE_ROTATION_OFFSET;
+  var transform = 'rotate(' + heading + 'deg)';
+  turtleImage.style.transform = transform;
+  turtleImage.style.msTransform = transform;
+  turtleImage.style.webkitTransform = transform;
 }
 
 function turtleSetVisibility (visible) {

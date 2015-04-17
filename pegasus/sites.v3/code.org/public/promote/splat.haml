@@ -31,7 +31,7 @@ social:
     - if state != "thanks"
       #interactive-map.section.clear
         %h2{:style=>"margin-top: 0px"} Choose a State
-        = view :interactive_map
+        = view :interactive_map, use_url: true
 
     #stats-section.section.clear
       %h2 What’s wrong with this picture? Share these stats.
@@ -49,7 +49,7 @@ social:
   - if state == "thanks"
     #interactive-map.section.clear
       %h2{:style=>"margin-top: 0px"} Choose a State
-      = view :interactive_map
+      = view :interactive_map, use_url: true
 
   %div{:id=>'universal_content'}
     #youtube-section.section.clear

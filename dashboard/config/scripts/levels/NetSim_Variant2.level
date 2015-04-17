@@ -7,11 +7,9 @@
   "properties": {
     "skin": "netsim",
     "skip_instructions_popup": "true",
-    "instructions": "NetSim: Variant 2 template: Students connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
+    "instructions": "NetSim: Variant 2: Students connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
-    "can_connect_to_clients": "true",
-    "can_connect_to_routers": "false",
     "show_add_router_button": "false",
     "show_add_packet_button": "false",
     "show_packet_size_control": "false",
@@ -19,7 +17,7 @@
     "show_tabs": "[\"instructions\", \"my_device\"]",
     "default_tab_index": "0",
     "show_encoding_controls": "[\"a_and_b\", \"binary\", \"hexadecimal\", \"decimal\", \"ascii\"]",
-    "default_enabled_encodings": "[\"binary\", \"ascii\"]",
+    "default_enabled_encodings": "[\"binary\", \"decimal\", \"ascii\"]",
     "show_router_bandwidth_control": "false",
     "default_router_bandwidth": "Infinity",
     "show_router_memory_control": "false",
@@ -37,7 +35,11 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "can_connect_to_clients": "true",
+    "can_connect_to_routers": "false",
+    "message_granularity": "packets",
+    "automatic_receive": "true"
   },
   "md5": "fb9046bd11093543368cac44819bfc7d"
 }]]></config>

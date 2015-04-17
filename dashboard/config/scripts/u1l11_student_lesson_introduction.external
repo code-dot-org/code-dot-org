@@ -1,0 +1,26 @@
+name 'U1L11 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+## Unit 1: Lesson 11 - Sending Formatted Text
+# Background
+
+ASCII encoding is the standard number-to-text encoding scheme used in computers and on the Internet. The ASCII set of characters is known as “plain text.” ASCII characters can be used in a protocol to encode text formatting such as fonts, colors, and sizes. This is similar to what happens in HTML or "markup" languages.
+
+# Lesson
+
+* Learn about the ASCII encoding scheme.
+* Invent a text formatting language
+* Design a protocol for sending formatted text.
+* Discover the challenges of encoding meta-information.
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/document/d/1zL5pzxXcK3s3Xq0yg1tXJMxShMABZk2hP8BhEMdc5Eo/edit?usp=sharing" target="_blank">Sending Formatted Text</a>
+* Rubric <a href= "https://docs.google.com/document/d/1nHFEshJrvQ0q92YZ46i1HGnAm-bK8wwvVorPIDjEmFc/edit?usp=sharing"target="_blank">Sending Formatted Text</a>
+* Resource <a href= "https://docs.google.com/document/d/1gfc2M2t5D_93cz0axgvkwQao7fmYCFncS6Hi52ENnHE/edit?usp=sharing"target="_blank">Widget Diagram</a> 
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

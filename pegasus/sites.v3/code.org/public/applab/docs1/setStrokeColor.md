@@ -27,7 +27,7 @@ The stroke color controls the color of lines drawn with [line](/applab/docs/line
 
 Setting the stroke color affects all subsequent [`line()`](/applab/docs/line), [`circle()`](/applab/docs/circle), and [`rect()`](/applab/docs/rect) calls. Any lines or shapes that have already been drawn are not affected.
 
-Colors can be specified by name (eg, "red", "green", "blue") or by hex code (eg, "#FF000", "#00FF00", "#0000FF").
+Colors can be specified by name (eg, "red", "green", "blue"), or by hex code (eg, "#FF000", "#00FF00", "#0000FF"), or by rgb value (eg, "rgb(255,0,0)", "rgb(0,255,0)", "rgb(0,0,255)").
 
 **Note**: A canvas element must be created before the stroke color can be changed. Create a canvas element in Design mode first, or call [`createCanvas()`](/applab/docs/createCanvas) before calling `setStrokeColor()`.
 

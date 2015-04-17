@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Remember the safe-left? and safe-right? functions from Sam the Bat? We're going to use that same logic to figure out when the target and danger leave the screen. Go to the \"Functions\" section of the toolbox and complete the safe-left? function.",
+    "instructions": "Now that your onscreen? function is checking safe-left? and safe-right? we can complete those functions. Go to the \"Functions\" section of the toolbox and complete the safe-left? function so that it returns true if the sprite's x coordinate is greater than -50. If you're successful you should see the Danger go off the left side and then return on right side.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

@@ -1,0 +1,25 @@
+name 'U1L13 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+## Unit 1: Lesson 13 - Text
+ Compression
+# Background
+
+Compression is a method or protocol for using fewer bits to represent the original information. Compression can be achieved in a variety of methods including looking for patterns and substituting symbols for the larger patterns of data. Compression is one of the "hard problems" for computers because it is difficult to verify a good solution in a reasonable amount of time.
+
+# Lesson 
+
+* Compress a piece of text using the Text Compression Widget.
+* Experience a problem that humans can solve but is “computationally hard.” 
+* Describe why compression is challenging.
+ 
+# Resources 
+
+* Activity Guide: <a href= https://docs.google.com/document/d/1k_7idFW88iQ9s-xdj3z9K5sTANpGNPtRbE-i8RqbPD0/edit?usp=sharing" target="_blank">Compressing Text</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

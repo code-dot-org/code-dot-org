@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":200}],18:[function(require,module,exports){
+},{"../skins":205}],18:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":248,"../block_utils":26,"../utils":246}],10:[function(require,module,exports){
+},{"../../locale/current/applab":253,"../block_utils":26,"../utils":251}],10:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -436,7 +436,11 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
 // The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
 // The scale values are then adjusted such that the max-width case may result
 // in a scaled-up version of divApplab and the min-width case will typically
-// result in a scaled-down version of divApplab
+// result in a scaled-down version of divApplab.
+//
+// @returns {Array.<number>} Array of scale factors which will be used
+//     on the applab app area at the following screen widths, respectively:
+//     1151px+; 1101-1150px; 1051-1100px; 1001-1050px; 0-1000px.
 //
 
 function adjustAppSizeStyles(container) {
@@ -537,6 +541,7 @@ function adjustAppSizeStyles(container) {
       break;
     }
   }
+  return scaleFactors;
 }
 
 var drawDiv = function () {
@@ -568,12 +573,14 @@ function outputApplabConsole(output) {
   }
   // then put it in the applab console visible to the user:
   var debugOutput = document.getElementById('debug-output');
-  if (debugOutput.value.length > 0) {
-    debugOutput.value += '\n' + output;
-  } else {
-    debugOutput.value = output;
+  if (debugOutput) {
+    if (debugOutput.value.length > 0) {
+      debugOutput.value += '\n' + output;
+    } else {
+      debugOutput.value = output;
+    }
+    debugOutput.scrollTop = debugOutput.scrollHeight;
   }
-  debugOutput.scrollTop = debugOutput.scrollHeight;
 }
 
 var apiWarn = outputApplabConsole;
@@ -1040,7 +1047,7 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles(document.getElementById(config.containerId));
+  Applab.vizScaleFactors = adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -1310,11 +1317,69 @@ Applab.createElement = function (elementType, left, top) {
 
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(el);
-  Applab.levelHtml = divApplab.innerHTML;
+  Applab.makeDraggable($(el));
+  Applab.levelHtml = Applab.serializeToLevelHtml();
+};
+
+/**
+ *
+ * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
+ */
+Applab.makeDraggable = function (jq) {
+  var gridSize = 20;
+  jq.draggable({
+    cancel: false,  // allow buttons and inputs to be dragged
+    drag: function(event, ui) {
+      // draggables are not compatible with CSS transform-scale,
+      // so adjust the position in various ways here.
+
+      // dragging
+      var scale = Applab.getVizScaleFactor();
+      var changeLeft = ui.position.left - ui.originalPosition.left;
+      var newLeft  = (ui.originalPosition.left + changeLeft) / scale;
+      var changeTop = ui.position.top - ui.originalPosition.top;
+      var newTop = (ui.originalPosition.top + changeTop) / scale;
+
+      // containment
+      var container = $('#divApplab');
+      var maxLeft = container.width() - ui.helper.outerWidth(true);
+      var maxTop = container.height() - ui.helper.outerHeight(true);
+      newLeft = Math.min(newLeft, maxLeft);
+      newLeft = Math.max(newLeft, 0);
+      newTop = Math.min(newTop, maxTop);
+      newTop = Math.max(newTop, 0);
+
+      // grid
+      newLeft -= newLeft % gridSize;
+      newTop -= newTop % gridSize;
+
+      ui.position.left = newLeft;
+      ui.position.top = newTop;
+    },
+    stop: function(event, ui) {
+      Applab.levelHtml = Applab.serializeToLevelHtml();
+    }
+  });
+};
+
+Applab.getVizScaleFactor = function () {
+  var width = $('body').width();
+  var vizScaleBreakpoints = [1150, 1100, 1050, 1000, 0];
+  if (vizScaleBreakpoints.length !== Applab.vizScaleFactors.length) {
+    throw 'Wrong number of elements in Applab.vizScaleFactors ' +
+        Applab.vizScaleFactors;
+  }
+  for (var i = 0; i < vizScaleBreakpoints.length; i++) {
+    if (width > vizScaleBreakpoints[i]) {
+      return Applab.vizScaleFactors[i];
+    }
+  }
+  throw 'Unexpected body width: ' + width;
 };
 
 Applab.onDivApplabClick = function (event) {
-  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+  if (!window.$ || $('#designModeButton').is(':visible') ||
+      $('#resetButton').is(':visible')) {
     return;
   }
   event.preventDefault();
@@ -1377,13 +1442,34 @@ Applab.onSavePropertiesButton = function(el, event) {
   el.style.width = document.getElementById('design-property-width').value;
   el.style.height = document.getElementById('design-property-height').value;
   $(el).text(document.getElementById('design-property-text').value);
-  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
 Applab.onDeletePropertiesButton = function(el, event) {
   el.parentNode.removeChild(el);
-  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.levelHtml = Applab.serializeToLevelHtml();
   Applab.clearProperties();
+};
+
+Applab.serializeToLevelHtml = function () {
+  var s = new XMLSerializer();
+  var divApplab = document.getElementById('divApplab');
+  var clone = divApplab.cloneNode(true);
+  // Remove unwanted classes added by jQuery.draggable.
+  $(clone).find('*').removeAttr('class');
+  return s.serializeToString(clone);
+};
+
+Applab.parseFromLevelHtml = function(rootEl, isDesignMode) {
+  if (!Applab.levelHtml) {
+    return;
+  }
+  var levelDom = $.parseHTML(Applab.levelHtml);
+  var children = $(levelDom).children();
+  children.appendTo(rootEl);
+  if (isDesignMode) {
+    Applab.makeDraggable(children);
+  }
 };
 
 /**
@@ -1450,11 +1536,10 @@ studioApp.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
-  divApplab = document.getElementById('divApplab');
-  if (Applab.levelHtml) {
-    divApplab.innerHTML = Applab.levelHtml;
-  }
-  divApplab.addEventListener('click', Applab.onDivApplabClick);
+  var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
+  Applab.parseFromLevelHtml(newDivApplab, isDesignMode);
+
+  newDivApplab.addEventListener('click', Applab.onDivApplabClick);
 
 
   // Reset goal successState:
@@ -1881,6 +1966,13 @@ Applab.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
+
+  var children = $('#divApplab').children();
+  if (enable) {
+    Applab.makeDraggable(children);
+  } else if (children.data('uiDraggable')) {
+    children.draggable('destroy');
+  }
 };
 
 Applab.onPuzzleComplete = function() {
@@ -2044,9 +2136,10 @@ Applab.imageUploadButton = function (opts) {
 };
 
 // These offset are used to ensure that the turtle image is centered over
-// its x,y coordinates. The image is currently 31x45, so these offsets are 50%
-var TURTLE_X_OFFSET = -15;
-var TURTLE_Y_OFFSET = -22;
+// its x,y coordinates. The image is currently 48x48, rendered at 24x24.
+var TURTLE_WIDTH = 24;
+var TURTLE_HEIGHT = 24;
+var TURTLE_ROTATION_OFFSET = -45;
 
 function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
@@ -2060,7 +2153,7 @@ function getTurtleContext() {
     Applab.turtle.visible = true;
     var divApplab = document.getElementById('divApplab');
     var turtleImage = document.createElement("img");
-    turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
+    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
     turtleImage.ondragstart = function () { return false; };
@@ -2074,9 +2167,13 @@ function updateTurtleImage(turtleImage) {
   if (!turtleImage) {
     turtleImage = document.getElementById('turtleImage');
   }
-  turtleImage.style.left = (Applab.turtle.x + TURTLE_X_OFFSET) + 'px';
-  turtleImage.style.top = (Applab.turtle.y + TURTLE_Y_OFFSET) + 'px';
-  turtleImage.style.transform = 'rotate(' + Applab.turtle.heading + 'deg)';
+  turtleImage.style.left = (Applab.turtle.x - TURTLE_WIDTH / 2) + 'px';
+  turtleImage.style.top = (Applab.turtle.y - TURTLE_HEIGHT / 2) + 'px';
+  var heading = Applab.turtle.heading + TURTLE_ROTATION_OFFSET;
+  var transform = 'rotate(' + heading + 'deg)';
+  turtleImage.style.transform = transform;
+  turtleImage.style.msTransform = transform;
+  turtleImage.style.webkitTransform = transform;
 }
 
 function turtleSetVisibility (visible) {
@@ -3378,7 +3475,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":248,"../../locale/current/common":251,"../StudioApp":4,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../skins":200,"../slider":201,"../templates/page.html":225,"../timeoutList":231,"../utils":246,"../xml":247,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./rgbcolor.js":20,"./visualization.html":22}],22:[function(require,module,exports){
+},{"../../locale/current/applab":253,"../../locale/current/common":256,"../StudioApp":4,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../skins":205,"../slider":206,"../templates/page.html":230,"../timeoutList":236,"../utils":251,"../xml":252,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./rgbcolor.js":20,"./visualization.html":22}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3398,7 +3495,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":267}],20:[function(require,module,exports){
+},{"ejs":272}],20:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -3409,6 +3506,7 @@ return buf.join('');
  // hex regular expressions updated to require [0-9a-f] (cpirich)
  // channels declared as local variable to avoid conflicts (cpirich)
  // cleanup jshint errors (cpirich)
+ // add rgba support (davidsbailey)
  
 module.exports = function(color_string)
 {
@@ -3579,7 +3677,7 @@ module.exports = function(color_string)
     // array of color definition objects
     var color_defs = [
         {
-            re: /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/,
+            re: /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/,
             example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
             process: function (bits){
                 return [
@@ -3588,6 +3686,18 @@ module.exports = function(color_string)
                     parseInt(bits[3])
                 ];
             }
+        },
+        {
+          re: /^rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*((?:\d+(?:\.\d+)?)|(?:\.\d+))\s*\)$/,
+          example: ['rgba(123, 234, 45, .33)', 'rgba(255,234,245,1)'],
+          process: function (bits){
+            return [
+              parseInt(bits[1]),
+              parseInt(bits[2]),
+              parseInt(bits[3]),
+              parseInt(bits[4])
+            ];
+          }
         },
         {
             re: /^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/,
@@ -3623,6 +3733,7 @@ module.exports = function(color_string)
             this.r = channels[0];
             this.g = channels[1];
             this.b = channels[2];
+            this.a = channels[3];
             this.ok = true;
         }
 
@@ -3632,10 +3743,14 @@ module.exports = function(color_string)
     this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
     this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
     this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
+    this.a = (this.a < 0) ? 0 : ((this.a > 1 || isNaN(this.a)) ? 1 : this.a);
 
     // some getters
     this.toRGB = function () {
         return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
+    };
+    this.toRGBA = function () {
+      return 'rgba(' + this.r + ', ' + this.g + ', ' + this.b + ', ' + this.a + ')';
     };
     this.toHex = function () {
         var r = this.r.toString(16);
@@ -3668,7 +3783,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":248,"../../locale/current/common":251,"ejs":267}],15:[function(require,module,exports){
+},{"../../locale/current/applab":253,"../../locale/current/common":256,"ejs":272}],15:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -3761,7 +3876,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":267}],13:[function(require,module,exports){
+},{"ejs":272}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3773,7 +3888,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="designModeBox" width="100%" style="display:none;">\n  ');2; /* contains temporary unlocalized strings */ ; buf.push('\n  Welcome to Design mode! Under construction.<br>\n  Drag the elements below into your app, then press \'Run\' to save. Press \'Clear\' to start over.<br>\n  <table>\n    <colgroup>\n      <col width="50%">\n      <col width="50%">\n    </colgroup>\n    <tr>\n      <td><h3>Elements</h3></td>\n      <td><h3>Properties</h3></td>\n    </tr>\n    <tr>\n      <td>\n        <div id="design-elements">\n          <div data-element-type="button" class="new-design-element">button</div>\n          <div data-element-type="label" class="new-design-element">label</div>\n          <div data-element-type="input" class="new-design-element">input</div>\n          <button id="designModeClear" class="share">Clear</button><br>\n        </div>\n      </td>\n      <td>\n        <div id="design-properties">\n          ', (25,  designProperties ), '\n        </div>\n      </td>\n    </tr>\n  </table>\n\n</div>\n'); })();
+ buf.push('<div id="designModeBox" width="100%" style="display:none;">\n  ');2; /* contains temporary unlocalized strings */ ; buf.push('\n  Welcome to Design mode! Under construction.<br>\n  Drag the elements below into your app, then press \'Run\' to save. Press \'Clear\' to start over.<br>\n  <table width="100%">\n    <colgroup>\n      <col width="50%">\n      <col width="50%">\n    </colgroup>\n    <tr>\n      <td><h3>Elements</h3></td>\n      <td><h3>Properties</h3></td>\n    </tr>\n    <tr>\n      <td>\n        <div id="design-elements">\n          <div data-element-type="button" class="new-design-element">button</div>\n          <div data-element-type="label" class="new-design-element">label</div>\n          <div data-element-type="input" class="new-design-element">input</div>\n          <button id="designModeClear" class="share">Clear</button><br>\n        </div>\n      </td>\n      <td>\n        <div id="design-properties">\n          ', (25,  designProperties ), '\n        </div>\n      </td>\n    </tr>\n  </table>\n\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3781,7 +3896,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":267}],12:[function(require,module,exports){
+},{"ejs":272}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3801,7 +3916,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":251,"ejs":267}],11:[function(require,module,exports){
+},{"../../locale/current/common":256,"ejs":272}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3874,7 +3989,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":248,"../../locale/current/common":251,"../codegen":54,"../utils":246}],248:[function(require,module,exports){
+},{"../../locale/current/applab":253,"../../locale/current/common":256,"../codegen":54,"../utils":251}],253:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],9:[function(require,module,exports){
 'use strict';
