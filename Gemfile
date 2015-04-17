@@ -137,7 +137,7 @@ gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at 
 
 gem 'react-rails', '~> 1.0'
 # JSON model serializer for REST APIs
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '32343d'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
 gem 'rubocop', require: false, group: [:development, :staging]

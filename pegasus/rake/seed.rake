@@ -45,8 +45,8 @@ class CsvToSqlTable
   private
 
   def hash_from_keys_and_values(keys, values)
-    h={}
-    for i in 0..keys.count-1
+    h = {}
+    (0..keys.count-1).each do |i|
       key_name = keys[i].to_s
       case key_name[key_name.rindex('_')..-1]
       when '_b'
