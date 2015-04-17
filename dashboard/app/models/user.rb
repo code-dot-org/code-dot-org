@@ -74,6 +74,10 @@ class User < ActiveRecord::Base
     District.find(district_id) if district_id
   end
 
+  def district_name
+    district.try(:name)
+  end
+
   def User.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user
@@ -738,4 +742,12 @@ SQL
     track_script_progress(script)
   end
 
+  def User.csv_attributes
+    # same as in UserSerializer
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender]
+  end
+
+  def to_csv
+    User.csv_attributes.map{ |attr| self.send(attr) }
+  end
 end
