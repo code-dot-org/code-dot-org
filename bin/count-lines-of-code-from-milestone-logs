@@ -43,7 +43,7 @@ def main
   marker = nil
   total = 0
 
-  while true
+  loop do
     objects = AWS::S3::Bucket.objects('cdo-logs', marker:marker, prefix:'hosts')
     break if objects.size == 0
 
