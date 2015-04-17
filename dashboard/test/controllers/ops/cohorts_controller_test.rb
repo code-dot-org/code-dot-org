@@ -38,7 +38,7 @@ module Ops
       # we add these two new teachers and did not remove the old ones
       assert_difference('@cohort.reload.teachers.count', 2) do
         assert_difference('User.count', 2) do
-          assert_no_difference('@cohort.districts.count') do
+          assert_no_difference('@cohort.reload.districts.count') do
             patch :update, id: @cohort.id, cohort: {teachers: teacher_params}
           end
         end
@@ -204,7 +204,9 @@ module Ops
 
       sign_in contact
 
-      get :show, id: cohort.id
+      assert_no_difference('cohort.reload.districts.count') do
+        get :show, id: cohort.id
+      end
       assert_response :success
       assert_equal cohort, assigns(:cohort)
 
