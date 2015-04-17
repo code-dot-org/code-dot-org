@@ -80,7 +80,7 @@ template: none
         Cancel
   %tr{'ng-repeat' => 'segment in workshopSegments | orderBy:"start"'}
     %td{'ng-hide' => 'segment.editing'}
-      {{segment.start | utc | date:'longDate'}}
+      {{segment.start | utc | date:'EEEE, MMMM d, y'}}
     %td{'ng-hide' => 'segment.editing'}
       {{segment.start | utc | date:'shortTime'}}
     %td
