@@ -56,6 +56,11 @@ Blockly.Blocks.functional_parameters_get = {
     }
     Blockly.functionEditor.renameParameter(oldName, newName);
     Blockly.functionEditor.refreshParamsEverywhere();
+    // TODO - there are times when we dont have a VAR title. why?
+    var title = this.getTitle_('VAR');
+    if (title) {
+      title.setText(newName);
+    }
   },
   removeVar: Blockly.Blocks.variables_get.removeVar,
   mutationToDom: function() {
