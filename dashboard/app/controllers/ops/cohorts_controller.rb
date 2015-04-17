@@ -36,25 +36,11 @@ module Ops
 
     # GET /ops/cohorts/1
     def show
-      # filter cohort info for current user.
-      # this should really be done with the 'scope' feature in ActiveModel::Serializers but I can't figure out their git branches
-      unless current_user.admin?
-        @cohort.teachers = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
-        @cohort.deleted_teachers = @cohort.deleted_teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
-        @cohort.cohorts_districts = @cohort.cohorts_districts.where(district_id: current_user.district_as_contact.id)
-      end
-
       respond_with @cohort
     end
 
     # GET /ops/cohorts/1/teachers
     def teachers
-      # filter cohort info for current user.
-      # this should really be done with the 'scope' feature in ActiveModel::Serializers but I can't figure out their git branches
-      unless current_user.admin?
-        @cohort.teachers = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
-      end
-
       respond_with (@cohort.teachers) do |format|
         format.csv do
           render text: CSV.generate(write_headers: true, headers: User.csv_attributes) {|csv| @cohort.teachers.each {|teacher| csv << teacher.to_csv}}
