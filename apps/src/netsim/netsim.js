@@ -163,6 +163,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {netsimLevelConfiguration} config.level
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
+ * @param {string} config.html - rendered markup to be created inside this method
  */
 NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
@@ -411,7 +412,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
  * Given a lobby table has already been configured, connects to that table
  * by inserting a row for ourselves into that table and saving the row ID.
  * @param {!string} displayName
- * @param {!nodeStyleCallback} onComplete - result is new local node
+ * @param {!NodeStyleCallback} onComplete - result is new local node
  * @private
  */
 NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {

@@ -35,6 +35,7 @@ var NetSimWire = module.exports = function (shard, wireRow) {
    * @type {number}
    */
   this.localNodeID = wireRow.localNodeID;
+  /** @type {number} */
   this.remoteNodeID = wireRow.remoteNodeID;
 
   /**
@@ -43,6 +44,7 @@ var NetSimWire = module.exports = function (shard, wireRow) {
    * @type {number}
    */
   this.localAddress = wireRow.localAddress;
+  /** @type {number} */
   this.remoteAddress = wireRow.remoteAddress;
 
   /**
@@ -51,6 +53,7 @@ var NetSimWire = module.exports = function (shard, wireRow) {
    * @type {string}
    */
   this.localHostname = wireRow.localHostname;
+  /** @type {string} */
   this.remoteHostname = wireRow.remoteHostname;
 };
 NetSimWire.inherits(NetSimEntity);
