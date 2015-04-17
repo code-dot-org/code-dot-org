@@ -340,10 +340,17 @@ title: "Ops Dashboard"
 
       $scope.save = function (attendance) {
         if (attendance.id) {
-          attendancesService.update({attendanceid: attendance.id}, {workshop_attendance: attendance});
+          attendancesService.update({attendanceid: attendance.id}, {workshop_attendance: attendance}, function (response) {
+            this.attendance.saved = false;
+            this.attendance.updated = true;
+            this.attendance.cleared = false;
+          }.bind(this));
         } else {
           attendancesService.save({segmentid: attendance.segment_id}, {workshop_attendance: attendance}, function (response) {
             this.attendance = response;
+            this.attendance.saved = true;
+            this.attendance.updated = false;
+            this.attendance.cleared = false;
           }.bind(this));
         }
       }
@@ -351,7 +358,12 @@ title: "Ops Dashboard"
       $scope.clearAttendance = function (attendance) {
         attendance.status = null;
         attendance.notes = null;
-        attendancesService.remove({attendanceid: attendance.id}, {workshop_attendance: attendance});
+
+        attendance.saved = false;
+        attendance.updated = false;
+        attendance.cleared = true;
+
+        attendancesService.update({attendanceid: attendance.id}, {workshop_attendance: attendance});
       }
   }]);
 
