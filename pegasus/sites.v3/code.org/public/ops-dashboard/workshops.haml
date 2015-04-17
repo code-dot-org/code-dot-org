@@ -28,12 +28,12 @@ template: none
 
 %table{style:'width:970px; layout:fixed; margin-top:20px;', 'ng-hide' => 'workshops.length <= 0'}
   %colgroup
-    %col{width: "120"}/
     %col{width: "90"}/
-    %col{width: "100"}/
+    %col{width: "70"}/
+    %col{width: "80"}/
+    %col{width: "80"}/
     %col{width: "150"}/
-    %col{width: "145"}/
-    %col{width: "150"}/
+    %col{width: "90"}/
     %col{width: "110"}/
   %tr
     %th.manage-th
@@ -104,4 +104,7 @@ template: none
   a:hover {
     cursor: pointer;
     text-decoration: none;
+  }
+  td {
+    padding: 10px;
   }
