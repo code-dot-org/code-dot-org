@@ -43,8 +43,9 @@
     "definition_collapse": "false",
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Sam the Butterfly 3 1\",\r\n  \"callout_text\": \"Edit this function to keep Sam from going off the right side\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
-    "maze_data": null
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Sam the Butterfly 3 1\",\r\n  \"callout_text\": \"Edit this function to keep Sam from going off the right side\",\r\n  \"element_id\": \"[block-id='2'] > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "maze_data": null,
+    "disable_examples": "false"
   },
   "md5": "b866f48822969e619192aaed75d09139"
 }]]></config>

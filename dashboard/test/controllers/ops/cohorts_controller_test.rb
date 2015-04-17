@@ -13,20 +13,34 @@ module Ops
     end
 
     test 'district contact can add teachers to a cohort' do
-      sign_in @district.contact
+      @cohort.teachers << create(:teacher, district_id: @district.id)
+      @cohort.save!
+
+      new_cohorts_district = create(:cohorts_district, cohort: @cohort)
+      new_district = new_cohorts_district.district
+
+      @cohort.reload
+
+      # we already have a teacher from the old district
+      assert_equal 1, @cohort.teachers.count
+      assert_equal 2, @cohort.districts.count
+
+      sign_in new_district.contact
       #87054720 (part 1)
       #can click "Add Teacher" button to add a teacher
       assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
 
-      teacher_params = @cohort.teachers.map {|teacher| {ops_first_name: teacher.name, email: teacher.email, id: teacher.id}}
-      teacher_params += [
-                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', district: @district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'},
-                         {ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.xx', district: @district.name, ops_school: 'Jefferson Middle School', ops_gender: 'Male'}
+      teacher_params = [
+                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', district: new_district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'},
+                         {ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.xx', district: new_district.name, ops_school: 'Jefferson Middle School', ops_gender: 'Male'}
                         ]
 
+      # we add these two new teachers and did not remove the old ones
       assert_difference('@cohort.reload.teachers.count', 2) do
         assert_difference('User.count', 2) do
-          patch :update, id: @cohort.id, cohort: {teachers: teacher_params}
+          assert_no_difference('@cohort.districts.count') do
+            patch :update, id: @cohort.id, cohort: {teachers: teacher_params}
+          end
         end
       end
 
@@ -321,6 +335,24 @@ module Ops
       assert_equal [d1, d2], @cohort.reload.districts
     end
 
+    test 'district contact cannot update cohort districts' do
+      sign_in @district.contact
+
+      old_districts = @cohort.districts.to_a
+      d1 = create(:district)
+      d2 = create(:district)
+
+      assert_no_difference('@cohort.reload.districts.count') do
+        assert_no_difference('CohortsDistrict.count') do
+          put :update, id: @cohort.id, cohort: {name: 'Cohort name', districts: [{id: @district.id, _destroy: 1}, {id: d1.id, max_teachers: 3}, {id: d2.id, max_teachers: 5}]}
+        end
+      end
+      assert_response :success
+
+      # only the two new districts
+      assert_equal old_districts, @cohort.reload.districts
+    end
+
 
     test 'updating Cohort with existing district updates count' do
       sign_in @admin
@@ -384,6 +416,27 @@ module Ops
       # Ensure extra association info is provided in the right format
       assert_equal response['districts'].map{|d|d['id']}, @cohort.district_ids
     end
+
+    test 'ops team can list teachers in a cohort as a csv' do
+      teacher1 = create(:teacher, ops_first_name: '1', ops_last_name: '2', district_id: @district.id)
+      teacher2 = create(:teacher, ops_first_name: '3', ops_last_name: '4', district_id: @district.id)
+      @cohort.teachers << teacher1
+      @cohort.teachers << teacher2
+      @cohort.save!
+
+      sign_in @admin
+
+      assert_routing({ path: "#{API}/cohorts/1/teachers.csv", method: :get }, { controller: 'ops/cohorts', action: 'teachers', id: '1',  format: 'csv'})
+      get :teachers, id: @cohort.id, format: 'csv'
+
+      expected_response = <<EOS
+id,email,ops_first_name,ops_last_name,district_name,ops_school,ops_gender
+#{teacher1.id},#{teacher1.email},1,2,#{@district.name},,
+#{teacher2.id},#{teacher2.email},3,4,#{@district.name},,
+EOS
+      assert_equal expected_response, @response.body
+    end
+
 
     test 'update cohort info' do
       sign_in @admin
