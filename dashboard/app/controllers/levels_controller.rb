@@ -204,39 +204,40 @@ class LevelsController < ApplicationController
   end
 
   private
-    def can_modify?
-      unless Rails.env.levelbuilder? || Rails.env.development?
-        raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+
+  def can_modify?
+    unless Rails.env.levelbuilder? || Rails.env.development?
+      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+    end
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_level
+    @level =
+      if params.include? :key
+        Level.find_by_key params[:key]
+      else
+        Level.find(params[:id])
       end
-    end
+    @game = @level.game
+  end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_level
-      @level =
-        if params.include? :key
-          Level.find_by_key params[:key]
-        else
-          Level.find(params[:id])
-        end
-      @game = @level.game
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def level_params
+    permitted_params = [
+      :name,
+      :type,
+      :level_num,
+      :user,
+      :dsl_text,
+      {concept_ids: []},
+      {soft_buttons: []}
+    ]
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def level_params
-      permitted_params = [
-        :name,
-        :type,
-        :level_num,
-        :user,
-        :dsl_text,
-        {concept_ids: []},
-        {soft_buttons: []}
-      ]
+    # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
+    params[:level][:soft_buttons].delete_if{ |s| s.empty? } if params[:level][:soft_buttons].is_a? Array
 
-      # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
-      params[:level][:soft_buttons].delete_if{ |s| s.empty? } if params[:level][:soft_buttons].is_a? Array
-
-      permitted_params.concat(Level.serialized_properties.values.flatten)
-      params[:level].permit(permitted_params)
-    end
+    permitted_params.concat(Level.serialized_properties.values.flatten)
+    params[:level].permit(permitted_params)
+  end
 end
