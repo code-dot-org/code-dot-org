@@ -54,11 +54,12 @@ Blockly.Blocks.functional_parameters_get = {
       // Params should only be used in the FunctionEditor but better to be safe
       return;
     }
-    Blockly.functionEditor.renameParameter(oldName, newName);
-    Blockly.functionEditor.refreshParamsEverywhere();
     // TODO - there are times when we dont have a VAR title. why?
     var title = this.getTitle_('VAR');
-    if (title) {
+    if (title && title.getText() === oldName) {
+      Blockly.functionEditor.renameParameter(oldName, newName);
+      Blockly.functionEditor.refreshParamsEverywhere();
+
       title.setText(newName);
     }
   },
