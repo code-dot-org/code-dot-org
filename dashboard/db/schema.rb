@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414173537) do
+ActiveRecord::Schema.define(version: 20150416231806) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -486,7 +486,7 @@ ActiveRecord::Schema.define(version: 20150414173537) do
   create_table "workshop_attendance", force: true do |t|
     t.integer  "teacher_id", null: false
     t.integer  "segment_id", null: false
-    t.string   "status",     null: false
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "notes"

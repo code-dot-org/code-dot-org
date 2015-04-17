@@ -65,8 +65,13 @@ dashboard.createCallouts = function(callouts) {
       }
     }
 
+    // Flip the close button if it would overlap the qtip
+    if (config.position.my === 'top right' || config.position.my === 'right top') {
+      config.style.classes += ' flip-x-close';
+    }
+
     if (callout.on) {
-      window.addEventListener(callout.on, function() {
+      $(window).on(callout.on, function() {
         if (!callout.seen && $(selector).length > 0) {
           callout.seen = true;
           $(selector).qtip(config).qtip('show');
