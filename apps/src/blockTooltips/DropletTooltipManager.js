@@ -32,7 +32,8 @@ var DEFAULT_TOOLTIP_CONFIG = {
   position: 'right',
   contentAsHTML: true,
   theme: 'droplet-block-tooltipster',
-  offsetY: 2
+  offsetY: 2,
+  delay: 400
 };
 
 /**

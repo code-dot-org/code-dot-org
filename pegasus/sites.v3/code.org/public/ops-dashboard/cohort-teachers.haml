@@ -21,9 +21,17 @@ theme: none
       %a{'ng-href' => "#/teacher-cohorts/{{cohort.id}}/teachers"} Manage
 
   .managebuttons{"ng-if" => "tab == 'manage' || 1", style: "float:right"}
-    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = false; new_teacher()"} Add teacher
+    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = false; new_teacher()"}
+      %i.fa.fa-user-plus
+      Add teacher
     - if dashboard_user[:admin]
-      %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"} Import teachers
+      %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"}
+        %i.fa.fa-upload
+        Import teachers
+      %a{"ng-href" => '/dashboardapi/cohorts/{{cohort.id}}/teachers.csv'}
+        %button.btn.btn-white
+          %i.fa.fa-download
+          Download teachers
 
 .jumbotron{"ng-show" => "teachers_bulk_import.uploading"}
   %h3 Example format (please include the heading line in your uploaded file):

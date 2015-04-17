@@ -19,9 +19,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "free_play": "false",
+    "free_play": "true",
     "coordinate_grid_background": "false",
-    "instructions": "Free Play: Try out some creations of your own using Booleans."
+    "instructions": "Free Play: Try out some creations of your own using Booleans.",
+    "disable_examples": "false"
   },
   "md5": "db47d839037a1e43ac1b906167d2279e"
 }]]></config>

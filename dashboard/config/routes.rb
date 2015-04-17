@@ -183,7 +183,10 @@ Dashboard::Application.routes.draw do
       end
     end
     resources :cohorts do
-      delete 'teachers/:teacher_id', action: 'destroy_teacher', on: :member
+      member do
+        get 'teachers'
+        delete 'teachers/:teacher_id', action: 'destroy_teacher'
+      end
     end
     resources :workshops do
       resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting

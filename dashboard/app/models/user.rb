@@ -74,6 +74,10 @@ class User < ActiveRecord::Base
     District.find(district_id) if district_id
   end
 
+  def district_name
+    district.try(:name)
+  end
+
   def User.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user
@@ -116,7 +120,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
-  has_many :user_levels
+  has_many :user_levels, -> {order 'id desc'}
   has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
@@ -331,22 +335,27 @@ class User < ActiveRecord::Base
     end
   end
 
+  def user_levels_by_level(script)
+    user_levels.
+      where(script_id: [script.id, nil]).
+      index_by(&:level_id)
+  end
+
   def levels_from_script(script, stage = nil)
-    ul_map = self.user_levels.includes({level: [:game, :concepts]}).index_by(&:level_id)
-    q = script.script_levels.includes({ level: :game }, :script, :stage).order(:position)
+    ul_map = user_levels_by_level(script)
+    q = script.script_levels.includes(:level, :script, :stage).order(:position)
 
     if stage
       q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
     end
 
     q.each do |sl|
-      ul = ul_map[sl.level_id]
-      sl.user_level = ul
+      sl.user_level = ul_map[sl.level_id]
     end
   end
 
   def next_unpassed_progression_level(script)
-    user_levels_by_level = self.user_levels.index_by(&:level_id)
+    user_levels_by_level = user_levels_by_level(script)
 
     script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
@@ -738,4 +747,12 @@ SQL
     track_script_progress(script)
   end
 
+  def User.csv_attributes
+    # same as in UserSerializer
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender]
+  end
+
+  def to_csv
+    User.csv_attributes.map{ |attr| self.send(attr) }
+  end
 end

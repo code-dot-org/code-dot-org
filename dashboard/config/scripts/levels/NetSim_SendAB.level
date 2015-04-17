@@ -37,7 +37,6 @@
     "disable_examples": "false",
     "router_expects_packet_header": "[]",
     "client_initial_packet_header": "[]",
-    "show_encoding_controls": "[]",
     "can_connect_to_clients": "true",
     "can_connect_to_routers": "false",
     "message_granularity": "bits",

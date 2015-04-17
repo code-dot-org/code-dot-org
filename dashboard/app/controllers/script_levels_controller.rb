@@ -53,7 +53,8 @@ class ScriptLevelsController < ApplicationController
          locale: locale) unless @script_level.level.unplugged?
   end
 
-private
+  private
+
   def next_script_level
     user_or_session_level || @script.starting_level
   end

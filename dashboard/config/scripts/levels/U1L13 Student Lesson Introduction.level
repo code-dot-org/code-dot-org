@@ -10,6 +10,7 @@
     "title": "title",
     "content1": "description here",
     "markdown": "## Unit 1: Lesson 13 - Text\n Compression\n# Background\n\nCompression is a method or protocol for using fewer bits to represent the original information. Compression can be achieved in a variety of methods including looking for patterns and substituting symbols for the larger patterns of data. Compression is one of the \"hard problems\" for computers because it is difficult to verify a good solution in a reasonable amount of time.\n\n# Lesson \n\n* Compress a piece of text using the Text Compression Widget.\n* Experience a problem that humans can solve but is \"computationally hard.\" \n* Describe why compression is challenging.\n \n# Resources \n\n* Activity Guide: <a href= https://docs.google.com/document/d/1k_7idFW88iQ9s-xdj3z9K5sTANpGNPtRbE-i8RqbPD0/edit?usp=sharing\" target=\"_blank\">Compressing Text</a>\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
-  }
+  },
+  "md5": "3b22e258fcf647ecbd47ea4c4be8a4b6"
 }]]></config>
 </External>

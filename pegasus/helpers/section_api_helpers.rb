@@ -113,8 +113,6 @@ class DashboardStudent
       and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}")
   end
 
-  private
-
   VALID_GENDERS = %w(m f)
   def self.valid_gender?(gender)
     VALID_GENDERS.include?(gender)
@@ -407,8 +405,6 @@ class DashboardSection
 
     fetch_if_allowed(section_id, user_id)
   end
-
-  private
 
   def self.fields()
     [
