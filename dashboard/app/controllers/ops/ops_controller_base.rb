@@ -1,6 +1,7 @@
 module Ops
   class OpsControllerBase < ::ApplicationController
-    respond_to :json
+    respond_to :json, :csv
+
     check_authorization
     skip_before_filter :verify_authenticity_token
 
@@ -15,6 +16,7 @@ module Ops
     end
 
     def always_respond_with_json
+      return if request.format.csv? # unless it's csv
       request.format = :json
     end
   end

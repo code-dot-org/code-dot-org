@@ -47,10 +47,41 @@ module Ops
       respond_with @cohort
     end
 
+    # GET /ops/cohorts/1/teachers
+    def teachers
+      # filter cohort info for current user.
+      # this should really be done with the 'scope' feature in ActiveModel::Serializers but I can't figure out their git branches
+      unless current_user.admin?
+        @cohort.teachers = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
+      end
+
+      respond_with (@cohort.teachers) do |format|
+        format.csv do
+          render text: CSV.generate(write_headers: true, headers: User.csv_attributes) {|csv| @cohort.teachers.each {|teacher| csv << teacher.to_csv}}
+        end
+        # json is handled by ActiveModelSerializers by default
+      end
+    end
+
     # PATCH/PUT /ops/cohorts/1
     def update
-      if params[:cohort][:teachers]
-        @added_teachers = params[:cohort][:teachers] - @cohort.teachers
+      teachers = params[:cohort].delete(:teachers)
+      if teachers
+        @added_teachers = teachers - @cohort.teachers
+
+        if current_user.admin?
+          # replace
+          @cohort.teachers = teachers
+        elsif current_user.district_as_contact
+          # replace only those in the district
+          teachers_in_district = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
+          @cohort.teachers = @cohort.teachers - teachers_in_district + teachers
+
+          # cannoy modify districts
+        else
+          # weird.
+          # don't do anything
+        end
       end
 
       @cohort.update!(params[:cohort])
@@ -67,15 +98,22 @@ module Ops
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def cohort_params
-      params.require(:cohort).permit(
-          :name,
-          :program_type,
-          :cutoff_date,
-          :district_ids => [],
-          :district_names => [],
-          :districts => [:id, :max_teachers, :_destroy],
-          :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
-      )
+      if current_user.try(:admin?)
+        params.require(:cohort).permit(
+            :name,
+            :program_type,
+            :cutoff_date,
+            :district_ids => [],
+            :district_names => [],
+            :districts => [:id, :max_teachers, :_destroy],
+            :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
+        )
+      elsif current_user.try(:district_contact?)
+        # district contacts can only edit teachers
+        params.require(:cohort).permit(
+            :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
+        )
+      end
     end
 
     # Support district_names in the API
