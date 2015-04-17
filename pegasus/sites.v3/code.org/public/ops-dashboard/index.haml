@@ -342,7 +342,9 @@ title: "Ops Dashboard"
         if (attendance.id) {
           attendancesService.update({attendanceid: attendance.id}, {workshop_attendance: attendance});
         } else {
-          attendancesService.save({segmentid: attendance.segment_id}, {workshop_attendance: attendance});
+          attendancesService.save({segmentid: attendance.segment_id}, {workshop_attendance: attendance}, function (response) {
+            this.attendance = response;
+          }.bind(this));
         }
       }
 
