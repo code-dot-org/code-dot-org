@@ -1,0 +1,13 @@
+- facebook ||= nil
+- twitter ||= nil
+- download_filename ||= nil
+- download_path ||= nil
+- caption ||= nil
+
+.videothumbnail{:onclick => "return showVideo_#{id}()", :style => "cursor:pointer"}
+  %div{:style => "position:relative; overflow:hidden"}
+    %img{:src => image, :width => "60%"}
+    %img{:src => "/shared/images/play-button.png", :style => "position:absolute; top:100px; left:30%", :width => "40"}
+  .video_caption_link= caption
+
+= view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path
