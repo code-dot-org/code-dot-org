@@ -740,11 +740,3 @@ label {
 .video_caption_link {
   font-family: 'Gotham 5r', sans-serif;
 }
-
-body.modal-open .supreme-container{
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);
-}
