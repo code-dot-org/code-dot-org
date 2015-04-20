@@ -63,7 +63,7 @@ post '/v2/poste/send-message' do
   template_params = JSON.parse(params[:params]) unless params[:params].to_s.empty?
   template_params ||= {}
 
-  recipients = params[:recipients].to_s.split(/[\n,;]/).map{|i| i.strip}
+  recipients = params[:recipients].to_s.split(/[\n,;]/).map(&:strip)
 
   recipients.each do |email|
     recipient = Poste2.ensure_recipient(email, ip_address:request.ip)
