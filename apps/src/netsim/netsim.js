@@ -363,6 +363,11 @@ NetSim.prototype.initWithUserName_ = function (user) {
  * @private
  */
 NetSim.prototype.onBeforeUnload_ = function () {
+  // TODO: 1) If connected, this handler should return a string, causing it to
+  // TODO:    display a confirmation box before navigating away from the page.
+  // TODO: 2) The actual disconnectFromShard() logic should move into an
+  // TODO:    onUnload handler, and MUST use synchronous AJAX requests to ensure
+  // TODO:    that the disconnect completes before navigating away
   if (this.isConnectedToShard()) {
     this.disconnectFromShard();
   }
