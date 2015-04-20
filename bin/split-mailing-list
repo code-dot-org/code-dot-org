@@ -46,7 +46,7 @@ def main()
     i += 1
   end
 
-  puts groups.map{|group| group.count}.join("\n")
+  puts groups.map(&:count).join("\n")
 end
 
 main

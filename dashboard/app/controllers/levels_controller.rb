@@ -234,7 +234,7 @@ class LevelsController < ApplicationController
       ]
 
       # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
-      params[:level][:soft_buttons].delete_if{ |s| s.empty? } if params[:level][:soft_buttons].is_a? Array
+      params[:level][:soft_buttons].delete_if(&:empty?) if params[:level][:soft_buttons].is_a? Array
 
       permitted_params.concat(Level.serialized_properties.values.flatten)
       params[:level].permit(permitted_params)
