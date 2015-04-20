@@ -356,7 +356,7 @@ require src_dir 'course'
 
 class CurriculumRouter < Pegasus::Base
 
-  get '/curriculum/mss*' do 
+  get '/curriculum/mss*' do
     redirect "/curriculum/science/#{params['splat'][0]}"
   end
 
