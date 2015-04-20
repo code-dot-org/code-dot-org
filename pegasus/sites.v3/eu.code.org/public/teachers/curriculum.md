@@ -31,9 +31,9 @@ These workshops will be led by experienced Code.org K-5 Facilitators in over 60 
 
 There are two interdisciplinary modules at the middle school level: CS in Science and CS in Math. Each module exists as multiple sets of topical lessons that are able to be integrated into pre-existing Science and Math classes.
 
-### [CS in Science: Project GUTS](http://code.org/curriculum/mss)
+### [CS in Science: Project GUTS](http://code.org/curriculum/science)
 
-Code.org has partnered with the award-winning [Project GUTS](http://www.projectguts.org/) (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences and prepare students to pursue formal, year-long courses in computer science during high school. The CS in Science program is aligned to the Next Generation Science Standards. Visit the [program page](http://code.org/curriculum/mss), or download a [brief](/files/Code.org_MS_Science_Program_two-pager.pdf) or [full](/files/Code.org_MS_Science_Program_four-pager.pdf) description.    
+Code.org has partnered with the award-winning [Project GUTS](http://www.projectguts.org/) (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences and prepare students to pursue formal, year-long courses in computer science during high school. The CS in Science program is aligned to the Next Generation Science Standards. Visit the [program page](http://code.org/curriculum/science), or download a [brief](/files/Code.org_MS_Science_Program_two-pager.pdf) or [full](/files/Code.org_MS_Science_Program_four-pager.pdf) description.    
 
 ### [CS in Math: Bootstrap](http://code.org/curriculum/msm)
 

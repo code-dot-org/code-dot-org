@@ -35,7 +35,7 @@ Code.org offers an elementary school curriculum that allows even the youngest st
 
 ### Middle School
 
-Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of 4 instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. For more information on the curriculum visit [Code.org/curriculum/mss.](Code.org/curriculum/mss)
+Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of 4 instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. For more information on the curriculum visit [Code.org/curriculum/science.](Code.org/curriculum/science)
 
 - There is no cost for schools to apply
 - Per-session stipends to teachers are paid by Code.org
