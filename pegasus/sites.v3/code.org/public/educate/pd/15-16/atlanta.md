@@ -28,8 +28,10 @@ The first phase of professional development is a two-hour introduction that focu
 
 Monday, June 1, 2015 - Friday, June 5, 2015
 <br/>
-8:30am - 3:30pm
+Mon - Thurs: 8:30am - 3:30pm
 <br />
+Friday: 8:30 - 1:30pm
+<br/>
 Breakfast and lunch will be served. 
 
 ### Location
@@ -45,21 +47,17 @@ Grant Park Multi-Purpose Room
 Alpharetta, GA 30009
 <br />
 
-NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
-
 #### What do I bring to Phase 2? ####
 Water Bottle
 <br />
 Snacks
 <br />
 Laptop optional, not required
-
 </br>
 </br>
 **Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
 
 More info coming soon!
-
 </br>
 </br>
 **Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
@@ -84,24 +82,22 @@ The first phase of professional development is a two-hour online introduction th
 
 Wednesday, June 10, 2015 - Friday, June 12, 2015
 <br/>
-8:00am - 4:00pm
+8:00am - 4:30pm
 <br />
 Breakfast and lunch will be served. 
 
 ### Location
 
-Nova Southeastern University (NSU)
+Microsoft Campus
 <br />
-Carl DeSantis Building
+Third Floor
 <br />
-Room 3049
+Suite 101/Piedmont Park Multi-Purpose Room
 <br />
-3301 College Avenue
+1125 Sanctuary Parkway
 <br />
-Fort-Lauderdale-Davie, FL 33314
+Alpharetta, GA 30009
 <br />
-
-NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
 
 #### What do I bring to Phase 2? ####
 Water Bottle
@@ -109,7 +105,6 @@ Water Bottle
 Snacks
 <br />
 Laptop
-
 </br>
 </br>
 **Phase 3: Academic Year Development (2 days in-person & ~10 hours online)**
@@ -133,24 +128,22 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, June 8, 2015 - Friday, June 10, 2015
 <br/>
-8:30am - 3:30pm
+8:30am - 4:30pm
 <br />
 Breakfast and lunch will be served. 
 
 ### Location
 
-Nova Southeastern University (NSU)
+Microsoft Campus
 <br />
-Carl DeSantis Building
+Third Floor
 <br />
-Room 1047
+Piedmont Park Multi-Purpose Room
 <br />
-3301 College Avenue
+1125 Sanctuary Parkway
 <br />
-Fort-Lauderdale-Davie, FL 33314
+Alpharetta, GA 30009
 <br />
-
-NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
 
 #### What do I bring to Phase 2? ####
 Water Bottle
@@ -158,7 +151,6 @@ Water Bottle
 Snacks
 <br />
 Laptop
-
 </br>
 </br>
 **Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)**
