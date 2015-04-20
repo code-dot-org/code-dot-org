@@ -95,7 +95,11 @@ end
 
 When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
-  @browser.execute_script("$('" + name_selector + "').last().simulate('drag', function(){});")
+  # seems we usually have two of these item, and want the second if the function
+  # editor is open, the first if it isn't
+  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " +
+    "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
+  @browser.execute_script(script)
 end
 
 And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
@@ -324,4 +328,13 @@ end
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
+end
+
+And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
+  if key === ":backspace"
+    key = :backspace
+  end
+  element = @browser.find_element(:css, selector)
+  # Note: Safari webdriver does not support actions API
+  element.send_keys(key)
 end
