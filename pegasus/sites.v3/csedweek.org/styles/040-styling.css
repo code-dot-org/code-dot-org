@@ -736,3 +736,7 @@ label {
     line-height: 16px;
   }
 }
+
+.video_caption_link {
+  font-family: 'Gotham 5r', sans-serif;
+}
