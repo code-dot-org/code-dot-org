@@ -1,6 +1,18 @@
 :javascript
   $(document).ready(function() {
-    $('a.window-popup').bind('click', function() {
+    setupPopupWindows();
+  });
+
+
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+
+  function setupPopupWindows() {
+ 
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+
+    $('a.window-popup').unbind().bind('click', function() {
       // Don't open a new window for Facebook on the mobile front page.
       if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
         return false;
@@ -16,4 +28,4 @@
       if (window.focus) { share.focus() }
       return false;
     });
-  });
+  }
