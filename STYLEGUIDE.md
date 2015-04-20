@@ -40,10 +40,10 @@ Fallback: https://github.com/styleguide/ruby
   Prefer single quotes for non-interpolated strings.
   <sup>[[link](#ruby-string-quotes)]</sup>
   ```ruby
-  #bad
+  # bad
   "Double-quoted string without interpolation"
 
-  #good
+  # good
   'Single quotes for normal strings'
   ```
 
@@ -75,7 +75,7 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
   };
   ```
 
-* <a name="js-indentation"></a>
+* <a name="js-block-braces"></a>
   Always use braces for blocks.
   <sup>[[link](#js-block-braces)]</sup>
   ```javascript
@@ -108,14 +108,14 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
 * <a name="js-event-handlers"></a>
   Separate event handlers from markup.
   <sup>[[link](#js-event-handlers)]</sup>
-  ```javascript
-  # bad
-  .header_popup{onclick: ‘/* do something... */'}
+  ```haml
+  -# bad
+  .header_popup{onclick: '/* do something... */'}
 
-  # good
+  -# good
   .header_popup
   :javascript
-  $(‘.header_popup').click(function () {
+  $('.header_popup').click(function () {
     /* do something... */
   });
   ```
