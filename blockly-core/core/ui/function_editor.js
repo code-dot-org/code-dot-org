@@ -275,7 +275,6 @@ Blockly.FunctionEditor.prototype.refreshParamsEverywhere = function() {
 };
 
 Blockly.FunctionEditor.prototype.refreshParamsInFlyout_ = function() {
-  this.flyout_.hide();
   this.flyout_.show(this.orderedParamIDsToBlocks_.getValues());
 };
 
