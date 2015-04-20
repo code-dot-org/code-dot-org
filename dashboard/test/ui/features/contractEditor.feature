@@ -94,3 +94,4 @@ Scenario: Changing Parameter names
   And I press keys "2" for element "#domain-area input"
   And I press "modalEditorClose"
   And I see no difference for "only one function's radius param changed"
+  And I close my eyes
