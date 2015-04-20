@@ -700,5 +700,5 @@ Blockly.ContractEditor.prototype.changeParameterType_ = function(paramID, newTyp
 Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newName) {
   var paramInfo = this.getParamNameType(paramID);
   var oldName = paramInfo.name;
-  Blockly.Variables.renameVariable(oldName, newName, Blockly.mainBlockSpace)
+  Blockly.Variables.renameVariable(oldName, newName, Blockly.modalBlockSpace)
 };
