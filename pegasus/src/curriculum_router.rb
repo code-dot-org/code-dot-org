@@ -356,6 +356,11 @@ require src_dir 'course'
 
 class CurriculumRouter < Pegasus::Base
 
+  get '/curriculum/mss*' do 
+    puts params['splat']
+    redirect "/curriculum/science/#{params['splat'][0]}"
+  end
+
   get '/curriculum/:kind' do |kind|
     # Temporarily prevent non K-5/MSM curriculum from appearing on production.
     unless Course::PRODUCTION_COURSES.include? kind
