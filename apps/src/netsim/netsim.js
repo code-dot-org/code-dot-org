@@ -355,17 +355,44 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   // Try and gracefully disconnect when closing the window
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
+  window.addEventListener('unload', this.onUnload_.bind(this));
 };
 
 /**
- * Before-unload handler, used to try and disconnect gracefully when
- * navigating away instead of just letting our record time out.
+ * Before-unload handler, used to warn the user (if necessary) of what they
+ * are abandoning if they navigate away from the page.
+ *
+ * This event has some weird special properties and inconsistent behavior
+ * across browsers.
+ *
+ * See:
+ * https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload
+ * http://www.zachleat.com/web/dont-let-the-door-hit-you-onunload-and-onbeforeunload/
+ * http://www.hunlock.com/blogs/Mastering_The_Back_Button_With_Javascript
+ *
+ * @param {Event} event
  * @private
  */
-NetSim.prototype.onBeforeUnload_ = function () {
-  // TODO: 1) If connected, this handler should return a string, causing it to
-  // TODO:    display a confirmation box before navigating away from the page.
-  // TODO: 2) The actual disconnectFromShard() logic should move into an
+NetSim.prototype.onBeforeUnload_ = function (event) {
+  // No need to warn about navigating away if the student is not connected,
+  // or is still in the lobby.
+  if (this.isConnectedToRemote()) {
+    event.returnValue = i18n.onBeforeUnloadWarning();
+    return i18n.onBeforeUnloadWarning();
+  }
+};
+
+/**
+ * Unload handler.  Used to attempt a clean disconnect from the simulation
+ * using synchronous AJAX calls to remove our own rows from remote storage.
+ *
+ * See:
+ * https://developer.mozilla.org/en-US/docs/Web/Events/unload
+ *
+ * @private
+ */
+NetSim.prototype.onUnload_ = function () {
+  // TODO: 1) The actual disconnectFromShard() logic should move into an
   // TODO:    onUnload handler, and MUST use synchronous AJAX requests to ensure
   // TODO:    that the disconnect completes before navigating away
   if (this.isConnectedToShard()) {
