@@ -72,7 +72,8 @@ NetSimMetronome.prototype.tick = function (clock) {
     this.lastPulseTime_ = clock.time;
   }
 
-  // An infinite interval means we're effectively paused, so snap to "empty"
+  // An infinite interval means we're effectively paused, so snap to zero
+  // progress (visualized as an "empty" meter)
   if (this.pulseIntervalMillis_ === Infinity) {
     this.progress_ = 0;
     this.pulseAge_ = Infinity;
