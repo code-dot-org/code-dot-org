@@ -5974,9 +5974,15 @@ Blockly.BlockSpace.prototype.removeTopBlock = function(block) {
   }
   this.fireChangeEvent()
 };
-Blockly.BlockSpace.prototype.getTopBlocks = function(ordered) {
+Blockly.BlockSpace.prototype.getTopBlocks = function(ordered, shareMainModal) {
+  if(ordered === undefined) {
+    ordered = false
+  }
+  if(shareMainModal === undefined) {
+    shareMainModal = true
+  }
   var blocks = [];
-  if(this === Blockly.mainBlockSpace || this === Blockly.modalBlockSpace) {
+  if(shareMainModal && (this === Blockly.mainBlockSpace || this === Blockly.modalBlockSpace)) {
     blocks = blocks.concat(Blockly.mainBlockSpace.topBlocks_).concat(Blockly.modalBlockSpace ? Blockly.modalBlockSpace.topBlocks_ : [])
   }else {
     blocks = blocks.concat(this.topBlocks_)
@@ -5999,8 +6005,9 @@ Blockly.BlockSpace.prototype.getAllVisibleBlocks = function() {
     return block.isUserVisible()
   })
 };
-Blockly.BlockSpace.prototype.getAllBlocks = function() {
-  var blocks = this.getTopBlocks(false);
+Blockly.BlockSpace.prototype.getAllBlocks = function(options) {
+  options = options || {};
+  var blocks = this.getTopBlocks(false, options.shareMainModal);
   for(var x = 0;x < blocks.length;x++) {
     blocks = blocks.concat(blocks[x].getChildren())
   }
@@ -18462,19 +18469,23 @@ Blockly.Variables.allVariables = function(opt_block) {
   return variableList
 };
 Blockly.Variables.renameVariable = function(oldName, newName, blockSpace) {
-  var blocks = blockSpace.getAllBlocks();
-  if(Blockly.modalBlockSpace) {
-    blocks = blocks.concat(Blockly.functionEditor.flyout_.blockSpace_.getTopBlocks())
+  if(newName === oldName) {
+    return
   }
+  var blocks = blockSpace.getAllBlocks({shareMainModal:false});
   for(var x = 0;x < blocks.length;x++) {
     var func = blocks[x].renameVar;
     if(func) {
       func.call(blocks[x], oldName, newName)
     }
   }
+  if(Blockly.modalBlockSpace) {
+    Blockly.functionEditor.renameParameter(oldName, newName);
+    Blockly.functionEditor.refreshParamsEverywhere()
+  }
 };
 Blockly.Variables.deleteVariable = function(nameToRemove, blockSpace) {
-  var blocks = blockSpace.getAllBlocks();
+  var blocks = blockSpace.getAllBlocks({shareMainModal:false});
   for(var x = 0;x < blocks.length;x++) {
     var func = blocks[x].removeVar;
     if(func) {
@@ -19669,7 +19680,6 @@ Blockly.FunctionEditor.prototype.refreshParamsEverywhere = function() {
   this.refreshParamsOnFunction_()
 };
 Blockly.FunctionEditor.prototype.refreshParamsInFlyout_ = function() {
-  this.flyout_.hide();
   this.flyout_.show(this.orderedParamIDsToBlocks_.getValues())
 };
 Blockly.FunctionEditor.prototype.resetParamIDs_ = function() {
@@ -22490,7 +22500,7 @@ Blockly.ContractEditor.prototype.changeParameterType_ = function(paramID, newTyp
 Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newName) {
   var paramInfo = this.getParamNameType(paramID);
   var oldName = paramInfo.name;
-  Blockly.Variables.renameVariable(oldName, newName, Blockly.mainBlockSpace)
+  Blockly.Variables.renameVariable(oldName, newName, Blockly.modalBlockSpace)
 };
 goog.provide("Blockly.FieldIcon");
 goog.require("Blockly.FieldLabel");
