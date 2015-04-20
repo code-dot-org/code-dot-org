@@ -58,7 +58,7 @@ theme: none
         .panel-body
           .row{"ng-repeat" => "cohort_district in cohort.districts", "ng-class" => "cohort_district._destroy == 1 ? 'destroying' : ''"}
             .form-group.col-sm-8{style: "margin-bottom: 0;"}
-              %select.district-name.form-control{"ng-model" => "cohort_district.id", "ng-options"=>"district.id as district.name for district in districts", selectize: true}
+              %select.district-name.form-control{"ng-model" => "cohort_district.id", "ng-options"=>"district.id as district.name for district in districts | orderBy:'name'", selectize: true}
             .col-sm-2
               %input.district-max-teachers.form-control{type: "text", "ng-model" => "cohort_district.max_teachers"}
             .col-sm-2
