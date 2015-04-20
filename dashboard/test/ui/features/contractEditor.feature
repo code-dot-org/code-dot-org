@@ -61,3 +61,36 @@ Scenario: Creating and modifying a new contract
   And I see no difference for "opened self from the contract editor"
 
   And I close my eyes
+
+Scenario: Changing Parameter names
+  When I open my eyes to test "changing contract parameters"
+  Given I am on "http://learn.code.org/s/algebra/stage/8/puzzle/3?noautoplay=true"
+  And I rotate to landscape
+  And I press "x-close"
+  And I press "modalEditorClose"
+  When I open the topmost blockly category "Functions"
+  And I press the SVG text "Create a Function"
+  And I press "paramAddButton"
+  And I press "paramAddButton"
+  And I see no difference for "added two variables"
+
+  Then I open the topmost blockly category "Number"
+  And I drag block "36" to block "32"
+  And I drag block "34" to block "41"
+  And I drag block "35" to block "41" plus offset 60, 40
+  And I see no difference for "used variables in definition"
+
+  Then I press keys ":backspace" for element "#domain-area input"
+  Then I press keys "radius" for element "#domain-area input"
+  And I see no difference for "changed one variable"
+
+  Then I press "modalEditorClose"
+  And I open the topmost blockly category "Functions"
+  And I drag block "62" to block "10" plus offset 0, 100
+  And I see no difference for "two blocks have same name params"
+
+  Then I open the topmost blockly category "Functions"
+  And I press the edit button on a function call named "something"
+  And I press keys "2" for element "#domain-area input"
+  And I press "modalEditorClose"
+  And I see no difference for "only one function's radius param changed"
