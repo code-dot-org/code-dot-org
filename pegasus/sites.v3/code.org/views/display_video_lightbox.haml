@@ -23,7 +23,8 @@
 
   window["showVideo_#{id}"] = function()
   {
-    $("#showVideo_#{id}").modal('show')
+    $("#showVideo_#{id}").modal('show');
+    setupPopupWindows();
   };
 
   $("#showVideo_#{id}").on('hidden.bs.modal', function () 
