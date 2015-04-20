@@ -90,6 +90,14 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.chunkSize_ = BITS_PER_BYTE;
 
   /**
+   * Local device bitrate in bits-per-second, which affects send animation
+   * speed.
+   * @type {number}
+   * @private
+   */
+  this.bitRate_ = Infinity;
+
+  /**
    * What encodings are currently selected and displayed in each
    * packet and packet editor.
    * @type {EncodingType[]}
@@ -111,8 +119,19 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
    */
   this.packetSizeControl_ = null;
 
+  /**
+   * Flag for whether this panel is in "sending" mode, non-interactive while
+   * it animates the send process for the current message.
+   * @type {boolean}
+   * @private
+   */
+  this.isPlayingSendAnimation_ = false;
+
   var panelTitle = (levelConfig.messageGranularity === MessageGranularity.PACKETS) ?
       i18n.sendAMessage() : i18n.sendBits();
+
+  // TODO: Bad private member access
+  this.netsim_.runLoop_.tick.register(this.tick.bind(this));
 
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-send-panel',
@@ -120,6 +139,52 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   });
 };
 NetSimSendPanel.inherits(NetSimPanel);
+
+/**
+ * Puts send panel in a "sending packets" noninteractive state and begins
+ * sending packets to remote.
+ * @private
+ */
+NetSimSendPanel.prototype.beginSendingPackets_ = function () {
+  this.isPlayingSendAnimation_ = true;
+  this.disableEverything();
+};
+
+/**
+ * Resets send panel, emptying packets, making it interactive, and stopping
+ * the remote-send process.
+ * @private
+ */
+NetSimSendPanel.prototype.stopSendingPackets_ = function () {
+  this.resetPackets_();
+  this.enableEverything();
+  this.isPlayingSendAnimation_ = false;
+};
+
+/**
+ * Send panel uses its tick to "send" packets at different bitrates, animating
+ * the binary draining out of the widget and actually posting each packet
+ * to storage as it completes.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimSendPanel.prototype.tick = function (clock) {
+  if (!this.isPlayingSendAnimation_) {
+    return;
+  }
+
+  // Nothing left to send, we're done.
+  if (this.packets_.length === 0) {
+    this.stopSendingPackets_();
+    return;
+  }
+
+  var firstPacket = this.packets_[0];
+  if (firstPacket.isSending()) {
+    firstPacket.tick(clock);
+  } else {
+    firstPacket.beginSending(this.netsim_.myNode);
+  }
+};
 
 /** Replace contents of our root element with our own markup. */
 NetSimSendPanel.prototype.render = function () {
@@ -148,7 +213,8 @@ NetSimSendPanel.prototype.render = function () {
   this.packetsDiv_ = this.getBody().find('.send-widget-packets');
   this.getBody()
       .find('#add-packet-button')
-      .click(this.addPacket_.bind(this));
+      .click(this.onAddPacketButtonPress_.bind(this));
+  // TODO: NetSim buttons in this panel need to do nothing if disabled!
   this.getBody()
       .find('#send-button')
       .click(this.onSendButtonPress_.bind(this));
@@ -191,6 +257,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     packetCount: newPacketCount,
     maxPacketSize: this.maxPacketSize_,
     chunkSize: this.chunkSize_,
+    bitRate: this.bitRate_,
     enabledEncodings: this.enabledEncodings_,
     removePacketCallback: this.removePacket_.bind(this),
     contentChangeCallback: this.onContentChange_.bind(this)
@@ -286,6 +353,19 @@ NetSimSendPanel.prototype.setFromAddress = function (fromAddress) {
 };
 
 /**
+ * @param {Event} jQueryEvent
+ * @private
+ */
+NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
+  var thisButton = $(jQueryEvent.target);
+  if (thisButton.is('[disabled]')) {
+    return;
+  }
+
+  this.addPacket_();
+};
+
+/**
  * Send message to connected remote
  * @param {Event} jQueryEvent
  * @private
@@ -296,19 +376,7 @@ NetSimSendPanel.prototype.onSendButtonPress_ = function (jQueryEvent) {
     return;
   }
 
-  // Make sure to perform packet truncation here.
-  var packetBinaries = this.packets_.map(function (packetEditor) {
-    return packetEditor.getPacketBinary().substr(0, this.maxPacketSize_);
-  }.bind(this));
-
-  var myNode = this.netsim_.myNode;
-  if (myNode && packetBinaries.length > 0) {
-    this.disableEverything();
-    myNode.sendMessages(packetBinaries, function () {
-      this.resetPackets_();
-      this.enableEverything();
-    }.bind(this));
-  }
+  this.beginSendingPackets_();
 };
 
 /**
@@ -355,12 +423,14 @@ NetSimSendPanel.prototype.getNextBit_ = function () {
 NetSimSendPanel.prototype.disableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', true);
   this.getBody().find('.netsim-button').attr('disabled', 'disabled');
+  this.packetSizeControl_.disable();
 };
 
 /** Enable all controls in this panel, usually after network activity. */
 NetSimSendPanel.prototype.enableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', false);
   this.getBody().find('.netsim-button').removeAttr('disabled');
+  this.packetSizeControl_.enable();
 };
 
 /**
@@ -398,6 +468,17 @@ NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
   this.packets_.forEach(function (packetEditor) {
     packetEditor.setChunkSize(newChunkSize);
+  });
+};
+
+/**
+ * Change the local device bitrate which affects send animation speed.
+ * @param {number} newBitRate in bits per second
+ */
+NetSimSendPanel.prototype.setBitRate = function (newBitRate) {
+  this.bitRate_ = newBitRate;
+  this.packets_.forEach(function (packetEditor) {
+    packetEditor.setBitRate(newBitRate);
   });
 };
 
