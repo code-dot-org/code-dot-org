@@ -331,10 +331,9 @@ And(/^I ctrl-([^"]*)$/) do |key|
 end
 
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
-  if key === ":backspace"
-    key = :backspace
+  if key.start_with?(':')
+    key = key[1..-1].to_sym
   end
   element = @browser.find_element(:css, selector)
-  # Note: Safari webdriver does not support actions API
   element.send_keys(key)
 end
