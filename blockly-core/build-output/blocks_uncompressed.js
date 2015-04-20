@@ -1496,7 +1496,10 @@ Blockly.Blocks.functional_parameters_get = {init:function() {
   this.setFunctionalOutput(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)
 }, renameVar:function(a, b) {
-  Blockly.functionEditor && (Blockly.functionEditor.renameParameter(a, b), Blockly.functionEditor.refreshParamsEverywhere())
+  if(Blockly.functionEditor) {
+    var c = this.getTitle_("VAR");
+    c.getText() === a && c.setText(b)
+  }
 }, removeVar:Blockly.Blocks.variables_get.removeVar, mutationToDom:function() {
   var a = document.createElement("mutation");
   if(this.description_) {
