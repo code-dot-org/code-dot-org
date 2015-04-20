@@ -48,7 +48,7 @@ Middle School Math Teachers - May 1st
 <br/>
 Middle School Science Teachers - May 1st 
 <br/>
-[Phase 1 Middle School Science Agenda (pdf)](/files/Phase1AgendaforMSScienceTeachers.pdf) 
+[Phase 1 Middle School Science Agenda (pdf)](/files/Phase1AgendaforsciencecienceTeachers.pdf) 
 
 <br/>
 Elementary School Teachers - June 1st
@@ -56,9 +56,13 @@ Elementary School Teachers - June 1st
 [Phase 1 K-5 Intro to Computer Science Agenda (pdf)](/files/K-5_PD1_Agenda.pdf) 
 
 
-<br />
+<br />
+
 
 
 ----------
-Please visit [FAQs](/educate/pd/faq) for more information.<br /><br />
+Please visit [FAQs](/educate/pd/faq) for more information.
+
+<br />
+<br />
 
