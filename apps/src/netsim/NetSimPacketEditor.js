@@ -56,6 +56,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @param {string} [initialConfig.message]
  * @param {number} [initialConfig.maxPacketSize]
  * @param {number} [initialConfig.chunkSize]
+ * @param {number} [initialConfig.bitRate]
  * @param {EncodingType[]} [initialConfig.enabledEncodings]
  * @param {function} initialConfig.removePacketCallback
  * @param {function} initialConfig.contentChangeCallback
@@ -116,6 +117,13 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.currentChunkSize_ = initialConfig.chunkSize || BITS_PER_BYTE;
 
   /**
+   * Local device bitrate (bps), which affects send-animation speed.
+   * @type {number}
+   * @private
+   */
+  this.bitRate_ = initialConfig.bitRate || Infinity;
+
+  /**
    * Which encodings should be visible in the editor.
    * @type {EncodingType[]}
    * @private
@@ -149,6 +157,52 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.bitCounter_ = null;
+
+  /**
+   * Flag noting whether this packet editor is in a non-interactive mode
+   * where it animates bits draining/being sent.
+   * @type {boolean}
+   * @private
+   */
+  this.isPlayingSendAnimation_ = false;
+
+  /**
+   * Flag for whether this editor is in the middle of an async send command.
+   * @type {boolean}
+   * @private
+   */
+  this.isSendingPacketToRemote_ = false;
+
+  /**
+   * Reference to local client node, used for sending messages.
+   * @type {NetSimLocalClientNode}
+   * @private
+   */
+  this.myNode_ = null;
+
+  /**
+   * Capture packet binary before the send animation begins so that we can
+   * send the whole packet to remote storage when the animation is done.
+   * @type {string}
+   * @private
+   */
+  this.originalBinary_ = '';
+
+  /**
+   * We capture the packet binary before we start the sending animation,
+   * and drain this variable as we go; mostly because getPacketBinary()
+   * will always include packet headers.
+   * @type {string}
+   * @private
+   */
+  this.remainingBinary_ = '';
+
+  /**
+   * Simulation-time timestamp (ms) of the last bit-send animation.
+   * @type {number}
+   * @private
+   */
+  this.lastBitSentTime_ = undefined;
   
   this.render();
 };
@@ -172,6 +226,73 @@ NetSimPacketEditor.prototype.render = function () {
   this.updateFields_();
   this.updateRemoveButtonVisibility_();
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
+};
+
+/**
+ * Put this packet in a mode where it's not editable.  Instead, it will drain
+ * its binary at the current bitrate and call the given callback when all
+ * of the binary has been drained/"sent"
+ * @param {NetSimLocalClientNode} myNode
+ */
+NetSimPacketEditor.prototype.beginSending = function (myNode) {
+  this.isPlayingSendAnimation_ = true;
+  this.originalBinary_ = this.getPacketBinary().substr(0, this.maxPacketSize_);
+  this.remainingBinary_ = this.originalBinary_;
+  this.myNode_ = myNode;
+
+  // Finish now if the packet is empty.
+  if (this.remainingBinary_.length === 0) {
+    this.finishSending();
+  }
+};
+
+/**
+ * Kick off the async send-to-remote operation for the original packet binary.
+ * When it's done, remove this now-empty packet.
+ */
+NetSimPacketEditor.prototype.finishSending = function () {
+  this.isPlayingSendAnimation_ = false;
+  this.isSendingPacketToRemote_ = true;
+  this.myNode_.sendMessage(this.originalBinary_, function () {
+    this.isSendingPacketToRemote_ = false;
+    this.removePacketCallback_(this);
+  }.bind(this));
+};
+
+/**
+ * @returns {boolean} TRUE if this packet is currently being sent.
+ */
+NetSimPacketEditor.prototype.isSending = function () {
+  return this.isPlayingSendAnimation_ || this.isSendingPacketToRemote_;
+};
+
+/**
+ * Packet Editor tick is called (manually by the NetSimSendPanel) to advance
+ * its sending animation.
+ * @param {RunLoop.Clock} clock
+ */
+NetSimPacketEditor.prototype.tick = function (clock) {
+  // Before we start animating, or after we are done animating, do nothing.
+  if (!this.isPlayingSendAnimation_ || this.isSendingPacketToRemote_) {
+    return;
+  }
+
+  if (!this.lastBitSentTime_) {
+    this.lastBitSentTime_ = clock.time;
+  }
+
+  // How many characters should be consumed this tick?
+  var msSinceLastBitConsumed = clock.time - this.lastBitSentTime_;
+  var msPerBit = 1000 * (1 / this.bitRate_);
+  var maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
+  if (maxBitsToSendThisTick > 0) {
+    this.lastBitSentTime_ = clock.time;
+    this.remainingBinary_ = this.remainingBinary_.substr(maxBitsToSendThisTick);
+    this.setPacketBinary(this.remainingBinary_);
+    if (this.remainingBinary_.length === 0) {
+      this.finishSending();
+    }
+  }
 };
 
 /**
@@ -529,6 +650,9 @@ NetSimPacketEditor.prototype.setPacketBinary = function (rawBinary) {
   }
 
   this.message = packet.getBodyAsBinary();
+
+  // Re-render all encodings
+  this.updateFields_();
 };
 
 /**
@@ -597,6 +721,14 @@ NetSimPacketEditor.prototype.setChunkSize = function (newChunkSize) {
 };
 
 /**
+ * Change local device bitrate which changes send animation speed.
+ * @param {number} newBitRate in bits per second
+ */
+NetSimPacketEditor.prototype.setBitRate = function (newBitRate) {
+  this.bitRate_ = newBitRate;
+};
+
+/**
  * Update the visual state of the bit counter to reflect the current
  * message binary length and maximum packet size.
  */
@@ -615,9 +747,17 @@ NetSimPacketEditor.prototype.updateBitCounter = function () {
 /**
  * Handler for the "Remove Packet" button. Calls handler provided by
  * parent, passing self, so that parent can remove this packet.
+ * @param {Event} jQueryEvent
  * @private
  */
-NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function () {
+NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function (jQueryEvent) {
+  var thisButton = $(jQueryEvent.target);
+  // We also check parent elements here, because this button uses a font-awesome
+  // glyph that can receive the event instead of the actual button.
+  if (thisButton.is('[disabled]') || thisButton.parents().is('[disabled]')) {
+    return;
+  }
+
   this.removePacketCallback_(this);
 };
 
@@ -627,5 +767,4 @@ NetSimPacketEditor.prototype.onRemovePacketButtonClick_ = function () {
  */
 NetSimPacketEditor.prototype.consumeFirstBit = function () {
   this.setPacketBinary(this.getPacketBinary().substr(1));
-  this.updateFields_();
 };

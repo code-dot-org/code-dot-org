@@ -13941,7 +13941,7 @@ Blockly.FieldLabel = function(text, customOptions) {
   this.textElement_ = Blockly.createSvgElement("text", {"class":"blocklyText"}, null);
   var loadingSize = {width:0, height:25};
   this.forceSize_ = customOptions.hasOwnProperty("fixedSize");
-  this.forceZeroWidth_ = customOptions.fixedSize && customOptions.fixedSize.width === 0;
+  this.forceWidth_ = this.forceSize_ && customOptions.fixedSize.width !== undefined;
   this.fontSize_ = customOptions.fontSize;
   this.size_ = this.forceSize_ ? customOptions.fixedSize : loadingSize;
   this.setText(text)
@@ -13958,7 +13958,7 @@ Blockly.FieldLabel.prototype.init = function(block) {
   Blockly.Tooltip && Blockly.Tooltip.bindMouseEvents(this.textElement_)
 };
 Blockly.FieldLabel.prototype.getSize = function() {
-  if(!this.size_.width && !this.forceZeroWidth_) {
+  if(!this.size_.width && !this.forceWidth_) {
     this.updateWidth_()
   }
   return this.size_
@@ -13984,7 +13984,7 @@ Blockly.FieldLabel.prototype.setText = function(text) {
   if(this.fontSize_) {
     this.textElement_.style.fontSize = this.fontSize_ + "px"
   }
-  if(!this.forceSize_) {
+  if(!this.forceWidth_) {
     this.size_.width = 0
   }
   this.refreshRender()

@@ -444,7 +444,7 @@ title: "Ops Dashboard"
 
   controllers.controller('CohortTeachersController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
-
+      $scope.order = '[ops_last_name, ops_first_name]';
       $scope.teachers_bulk_import = {uploading: false};
       $scope.newTeachers = [];
 
