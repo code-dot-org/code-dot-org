@@ -184,19 +184,12 @@ Blockly.FunctionEditor.prototype.paramNameTypeFromXML_ = function(blockXML) {
   return infoObject;
 };
 
-/**
- * @param {?Function} opt_blockCreationCallback function to call on newly created block
- *  just before opening the editor
- */
-Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
+Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
   this.ensureCreated_();
 
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
   tempFunctionDefinitionBlock.userCreated = true;
-  if (opt_blockCreationCallback) {
-    opt_blockCreationCallback(tempFunctionDefinitionBlock);
-  }
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
 };
 
