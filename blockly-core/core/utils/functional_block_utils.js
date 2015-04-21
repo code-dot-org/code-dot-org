@@ -46,6 +46,8 @@ Blockly.FunctionalTypeColors = typesToColors;
  * @param {string} type Block type which appears in xml.
  * @param {Array} args Arguments to this block.
  * @param {number=} config_opt.titleFontSize Optional title font size
+ * @param {boolean=} config_opt.verticallyStackInputs Inputs are stacked
+ *   vertically instead of horizontally.
  */
 Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function (block, title, type, args, config_opt) {
   config_opt = config_opt || {};
@@ -65,7 +67,7 @@ Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function (block, title,
   for (var i = 0; i < args.length; i++) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
-    input.setInline(i > 0);
+    input.setInline(i > 0 && !config_opt.verticallyStackInputs);
     input.setHSV.apply(input, Blockly.FunctionalTypeColors[arg.type]);
     input.setCheck(arg.type);
     input.setAlign(Blockly.ALIGN_CENTRE);
