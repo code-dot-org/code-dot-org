@@ -4,34 +4,38 @@ DB = PEGASUS_DB
 class Properties
   public
 
-  def initialize()
-    @table = DB[:properties]
-  end
+  @@table = DB[:properties]
 
-  def get(key)
-    i = @table.where(key:key.to_s).first
+  def self.get(key)
+    i = @@table.where(key:key.to_s).first
     return nil unless i
     JSON.load(StringIO.new(i[:value]))
   end
 
-  def set(key, value)
+  def self.set(key, value)
     key = key.to_s
 
-    i = @table.where(key:key).first
+    i = @@table.where(key:key).first
     if i.nil?
-      @table.insert(key:key, value:value.to_json)
+      @@table.insert(key:key, value:value.to_json)
     else
-      @table.where(key:key).update(value:value.to_json)
+      @@table.where(key:key).update(value:value.to_json)
     end
 
     value
   end
 
+  def self.get_user_metrics()
+    @@teacher_count = User.where(user_type: 'teacher').count unless defined? @@teacher_count
+    @@student_count = User.where(user_type: 'student').count unless defined? @@student_count
+
+    { 'teacher_count' => @@teacher_count, 'student_count' => @@student_count }
+  end
+
 end
-PROPERTIES = Properties.new
 
 def fetch_metrics()
-  metrics = PROPERTIES.get(:metrics)||{
+  metrics = Properties.get(:metrics)||{
     'created_at'=>"2013-12-31T23:59:59+00:00",
     'created_on'=>"2013-12-31",
     'csedweek_organizers'=>0,
@@ -46,7 +50,7 @@ def fetch_metrics()
 end
 
 def fetch_hoc_metrics()
-  metrics = PROPERTIES.get(:hoc_metrics)||{
+  metrics = Properties.get(:hoc_metrics)||{
     'started'=>0,
     'finished'=>0,
     'tutorials'=>{'codeorg'=>0},
@@ -55,4 +59,8 @@ def fetch_hoc_metrics()
   }
   metrics['started'] += 409216
   metrics
+end
+
+def fetch_user_metrics()
+  Properties.get_user_metrics()
 end

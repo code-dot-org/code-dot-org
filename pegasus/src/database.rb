@@ -1,5 +1,4 @@
 require 'cdo/db'
-DB = PEGASUS_DB
 
 class Tutorials
 
