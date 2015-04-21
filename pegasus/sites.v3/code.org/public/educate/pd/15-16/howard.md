@@ -6,7 +6,6 @@ nav: pd2_nav
 
 # Howard Professional Development
 
-
 <a id="ecs"></a>
 
 ## Exploring Computer Science
@@ -32,9 +31,8 @@ Breakfast and lunch will be served.
 
 More details coming soon!
 
+### What do I bring to Phase 2?
 
-
-#### What do I bring to Phase 2? ####
 Water Bottle
 <br />
 Snacks
@@ -58,7 +56,7 @@ More info coming soon!
 
 
 ----------
-Please visit [FAQs](/educate/pd/faq) for more information.
+Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 
 <br />
 <br />
