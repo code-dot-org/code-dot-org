@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Try using the \"text\" function to write this \"Hello, World!\" in teal at size 40.",
+    "instructions": "Try using the \"text\" function to write this \"Hello, world!\" in teal at size 40.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
