@@ -212,6 +212,15 @@ function test_initializeFunctionEditor() {
   Blockly.useModalFunctionEditor = true;
   Blockly.functionEditor = new Blockly.FunctionEditor();
   Blockly.functionEditor.autoOpenFunction('test-function');
+
+  var definitionBlock = Blockly.functionEditor.functionDefinitionBlock;
+  assertNotNull(definitionBlock);
+  assertEquals('procedures_defnoreturn', definitionBlock.type);
+  assertEquals(false, definitionBlock.isMovable());
+  assertEquals(false, definitionBlock.shouldBeGrayedOut());
+  assertEquals(false, definitionBlock.isDeletable());
+  assertEquals(false, definitionBlock.isEditable());
+
   Blockly.functionEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }
