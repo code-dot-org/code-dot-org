@@ -209,18 +209,24 @@
       VideoGamesCoordinatePlanes:
         title: 비디오 게임과 좌표 평면
         desc: 비디오 게임과 좌표 평면 강의 내용
+        video: alg_11_coordinate_plane
       Contracts:
         title: 제한조건
         desc: 제한조건 언플러그드 수업 설명
+        video: alg_5_contracts
       DesignRecipe:
         title: 디자인 레시피
         desc: 디자인 레시피 수업 설명
+        video: alg_8_design_recipe
       Booleans:
         title: 불(참 또는 거짓)값들
         desc: 불(참 또는 거짓)값들 수업 설명
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: 조건선택과 불연속 함수
         desc: 조건선택과 불연속 함수 수업 설명
+        video: alg_10_conditionals
       CollisionDetection:
         title: 충돌 감지
         desc: 충돌 감지 수업 설명
+        video: alg_16_biggame_collision_detection

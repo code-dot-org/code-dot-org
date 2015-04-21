@@ -161,7 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "endGameTooltip":function(d){return "Приключва играта."},
 "finalLevel":function(d){return "Поздравления! Ти реши последния пъзел."},
 "flap":function(d){return "плесни с крила"},
-"flapRandom":function(d){return "плесни на случайно разстояние"},
+"flapRandom":function(d){return "пляскане с крила случаен брой пъти"},
 "flapVerySmall":function(d){return "плесни на много малко разстояние"},
 "flapSmall":function(d){return "плесни на малко разстояние"},
 "flapNormal":function(d){return "плесни на нормално разстояние"},

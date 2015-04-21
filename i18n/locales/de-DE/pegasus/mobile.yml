@@ -42,7 +42,7 @@ de-DE:
   go: Start
   thank_you_: Vielen Dank!
   congratulations: Herzlichen Glückwunsch!
-  congratulations_on_completing_hoc: Herzlichen Glückwunsch zum Abschluss einer Stunde Code
+  congratulations_on_completing_hoc: Herzlichen Glückwunsch zum Abschluss einer Hour of Code
   get_a_certificate_of_achievement: Erhalte eine Bescheinigung für das Geleistete
   enter_valid_email: Bitte geben Sie eine gültige E-Mail-Adresse ein
   get_a_certificate_message: "Wir schicken Ihnen ein Zertifikat und Informationen über <a href='/learn/beyond'>lerne innerhalb einer Stunde</a>"
@@ -199,7 +199,7 @@ de-DE:
   homepage_slot_text_title_advocates: Befürworter
   homepage_slot_text_blurb_advocates: Unterstütze unsere Arbeit
   homepage_slot_text_link_stats: Sehe die Statistik
-  homepage_slot_text_link_buy: Kaufe ein T-Shirt oder ein Hut
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Spende
   homepage_header_codestudio: Kreationen der Schüler im Code Studio
   homepage_header_donors: Code.org dankt seinen Unterstützern
@@ -366,14 +366,14 @@ de-DE:
   dashboard_puzzle_solving: 'Lösen von Puzzles:'
   dashboard_student_worksheet: Schüler Arbeitsblatt
   dashboard_teacher_worksheet: Lehrer Arbeitsblatt
-  dashboard_grade_k: K
+  dashboard_grade_k: Kindergarten
   dashboard_grade_other: Andere
   dashboard_login_word: Wort
   dashboard_login_picture: Bild
   dashboard_login_none: E-Mail
   dashboard_new_password: Neues Passwort
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: Nicht gestartet
+  dashboard_progress_in_progress: In Bearbeitung
   dashboard_progress_not_completed: Nicht erfüllt
   dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
   dashboard_progress_completed_perfect: Abgeschlossen, perfekt
@@ -569,7 +569,7 @@ de-DE:
     Bringe dem Roboter "Eliza" bei, Deine Freunde hinter's Licht zu führen, in dem sie vorgibt, ein Mensch zu sein!
   quorum_shortdescription: Begleite Mary wie sie die Programmiersprache Quorum lernt.
   codespark_shortdescription: '"Foos" ist ein Spiel, das Spass macht und bei dem Kinder das Programmieren lernen.'
-  kodable_shortdescription: Ein iPad-Spiel, das Spass macht und Methoden der Programmierung vermittelt
+  kodable_shortdescription: Ein lustiges iPad-Spiel vermittelt Methoden der Programmierung
   tynkerapp_shortdescription: Lerne programmieren durch das lösen von spaßigen Codierungsrätseln.
   robomindnl_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
   flappy_shortdescription: Entwickele Dein eigenes Spiel, z.B. Flappy Bird, Shark oder Submarine
@@ -745,7 +745,7 @@ de-DE:
   scratch_beyond_shortdescription: Erstelle interaktive Spiele, Geschichten und Animationen.
   lightbot_beyond_shortdescription: Ein Spiel zum Erlernen von Programmier-Konzepten
   codecademy_beyond_shortdescription: Erlerne JavaScript-Programmierung in einem Web-Browser
-  kodable_beyond_shortdescription: Ein iPad-Spiel, das Spass macht und Methoden der Programmierung vermittelt
+  kodable_beyond_shortdescription: Ein lustiges iPad-Spiel vermittelt Methoden der Programmierung
   scratchjr_beyond_shortdescription: 'Erstelle interactive Programme und Spiele durch die Nutzung von "ScratchJr"'
   hopscotch_beyond_shortdescription: 'Lerne "visuelles Programmieren" auf dem iPad'
   pocketcode_beyond_shortdescription: Entwickele ein Spiel auf Deinem SmartPhone und teile es mit Deinen Freunden.

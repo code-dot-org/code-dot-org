@@ -1,7 +1,7 @@
 "sv":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Rätta följande fel:'
   activerecord:
     errors:
       messages:
@@ -253,7 +253,7 @@
         artist: Rita något
     user:
       classroom: Lärare hemsida
-      district_dashboard: District Dashboard
+      district_dashboard: Distrikt Dashboard
       label: Hej %{username}
       stats: Mina framsteg
       settings: Mitt konto
@@ -340,16 +340,16 @@
       %{student_name}'
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
+    email_confirm_wrong_email: (Fel e-postadress?)
     email_resend_confirm: Skicka instruktioner för bekräftelse igen
     new_password_hint: (lämna tomt om du inte vill ändra det)
     current_password_hint: (vi behöver ditt nuvarande lösenord att bekräfta dina ändringar)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Ta bort ditt konto
+    delete_text: Ett klick på knappen nedan kommer att ta bort ditt konto.
+    delete_text_teacher_note: 'Observera: genom att ta bort ditt konto tas inte elevernas
+      konton bort.'
+    delete_confirm: Är du säker du vill ta bort ditt konto?
   user_level:
     completed: Avklarade
     tried: Försökte
@@ -401,6 +401,7 @@
     heading_apps: <h2>Kul för</h2><h1>Alla</h1>
     heading_legacy: <h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>
     your_gallery: Galleri
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Man
     female: Kvinna
@@ -510,7 +511,8 @@
       title: Frost
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Använd Play Lab för att skapa en berättelse eller ett spel med Disney
+        Infinity karaktärer i huvudrollen .
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Elever gjorde dessa med kod!
@@ -549,12 +551,13 @@
     correct_body: Det är det rätta svaret.
   contract_match:
     wrong_title: Felaktigt svar
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
+    badname: Ditt kontrakt har fel namn.
+    badname_case: Funktionsnamn är skiftlägeskänsliga. Prova att ändra ditt kontraktsnamn.
+    badrange: Ditt kontrakt har fel omfång.
+    baddomainsize: Ditt kontrakt har inte rätt antal objekt i domänen.
+    baddomainname: En eller flera av dina domän objekt har fel namn.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Skriv in ditt svar här
   dialog:
@@ -573,7 +576,7 @@
             från förskoleklass till årskurs 8, men det är roligt att lära sig i alla
             åldrar.
         Hour of Code:
-          title: Timmen med Kod
+          title: Timme av Kod 2013
           description: ''
         edit-code:
           title: Redigera kod
@@ -609,48 +612,48 @@
     Du kan besöka<a href="http://support.code.org"> support.code.org</a> utan att
     logga in eller be din förälder eller lärare att kontakta oss.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: inte startat
+    in_progress: pågående
     completed_too_many_blocks: Avklarad med för många block
     completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
-    assessment: assessment
+    assessment: Test
   studio:
     courses_working_on: Kurser du påbörjat
     completed_courses: Avslutade kurser
     all_courses: Alla kurser
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projekt
+    create: Skapa projekt
+    create_a_project: 'Skapa ett nytt projekt:'
+    new: Skapa ny
+    rename: Ändra namn
     save: Spara
     delete: Ta bort
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Tillbaka till kursen
+    my_projects: Mina projekt
     share: Dela
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Dela ditt projekt
+    share_copy_link: 'Kopiera länken:'
+    close: Avsluta
     more: Mer
     name: Namn
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Uppdaterad
+    project_type: Projekttyp
+    help_text: Klicka på <strong>Gör en App</strong> eller <strong>Rita något</strong>
+      nedan för att göra ett nytt Spel Lab eller Artist projekt! <br/>Du kan komma
+      tillbaka och arbeta med ditt projekt när som helst.
+    need_help: Behöver du hjälp att komma igång?
     really_delete: Ta bort?
     delete_yes: Ja
     delete_no: Nej
-    saved: Saved
-    not_saved: Not saved
+    saved: Sparade
+    not_saved: Inte sparad
     cancel: Avbryt
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Är du säker på att du vill ta bort detta projekt?
+    delete_confirm_text: Genom att Ta bort ditt projekt kommer det att tas bort permanent
+      från listan Mina projekt. Någon du har delat länken till kommer inte längre
+      att kunna se ditt projekt.
+    view_all: Titta på mina projekt
     remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    click_to_remix: Klicka på "Remix" för att göra en spin-off som din egen version!

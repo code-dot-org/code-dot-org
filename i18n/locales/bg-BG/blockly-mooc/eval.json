@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"място-изображение (x, y, изображение)",
   "offsetBlockTitle":"изместване (x, y, изображение)",
   "rectangleBlockTitle":"правоъгълник (ширина, височина, стил, цвят)",
-  "reinfFeedbackMsg":"Можете да натиснете бутона \"Продължете да  играете\", за да редактирате вашата рисунка.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"завъртане (градуси, изображение)",
   "scaleImageBlockTitle":"скала (фактор, изображение)",
   "squareBlockTitle":"квадрат (размер, стил, цвят)",

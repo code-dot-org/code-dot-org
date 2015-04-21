@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"kép elhelyezése (x, y, kép)",
   "offsetBlockTitle":"eltolás (x, y, kép)",
   "rectangleBlockTitle":"téglalap (szélesség, magasság, stílus, szín)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"forgatás (fok,kép)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"négyzet (méret, stílus, szín)",

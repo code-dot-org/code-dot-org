@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"aseta kuva (x, y, kuva)",
   "offsetBlockTitle":"siirtymä (x, y, kuva)",
   "rectangleBlockTitle":"suorakulmio (leveys, korkeus, tyyli, väri)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"kierrä (astetta, kuva)",
   "scaleImageBlockTitle":"skaalaa (kerroin, kuva)",
   "squareBlockTitle":"neliö (koko, tyyli, väri)",

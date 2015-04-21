@@ -97,6 +97,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareGame":function(d){return "Deel je app:"},
 "stepIn":function(d){return "Ga in"},
 "stepOver":function(d){return "Sla over"},
-"stepOut":function(d){return "Ga uit"},
+"stepOut":function(d){return "Stap uit"},
 "viewData":function(d){return "Bekijk de Data"},
 "yes":function(d){return "Ja"}};

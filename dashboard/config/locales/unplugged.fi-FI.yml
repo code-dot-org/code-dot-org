@@ -269,18 +269,24 @@
       VideoGamesCoordinatePlanes:
         title: Tietokonepelit ja koordinaattitasot
         desc: Tietokonepelit ja koordinaattiavaruus -oppitunnin kuvaus
+        video: alg_11_coordinate_plane
       Contracts:
         title: Sopimukset
         desc: 'Sopimukset: tietokoneettoman tekemisen oppitunnin kuvaus'
+        video: alg_5_contracts
       DesignRecipe:
         title: Suunnitteluresepti
         desc: Suunnitteluresepti-oppitunnin kuvaus
+        video: alg_8_design_recipe
       Booleans:
         title: Totuusarvot
         desc: 'Totuusarvot: oppitunnin kuvaus'
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Ehtolauseet ja paloittaiset funktiot
         desc: Ehtolauseet ja osittaiset funktiot -oppitunnin kuvaus
+        video: alg_10_conditionals
       CollisionDetection:
         title: Törmäyksen tunnistaminen
         desc: Törmäyksen tunnistaminen -oppitunnin kuvaus
+        video: alg_16_biggame_collision_detection

@@ -11,7 +11,7 @@ ru-RU:
   learn_now: Начать изучение
   petition_message: Каждый ученик в каждой школе должен иметь возможность для изучения информатики
   petition_sign_message: 'Если Вы согласны, впишите свое имя.  Присоединяйтесь к # подписавших.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Если вы поддерживаете нас, подпишите свое имя.  Присоединяйтесь к #остальным.'
   name: Имя
   email: Электронная почта
   zipcode: Почтовый индекс или страна
@@ -91,7 +91,7 @@ ru-RU:
   learn_classes: Найти организации в которых обучают программированию
   hoc_is_here: '#HourOfCode уже здесь - посмотрите! @codeorg'
   just_did_hoc: 'Я только что закончил #HourOfCode - посмотрите! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Почему мало школ учат информатике? Мы можем исправить это. http://youtu.be/nKIu9yen5nc. Посетите http://code.org/ чтобы узнать больше.
   learn_hoc: Учитесь программировать с Часом Кода
   beyond_hoc: После первого часа
   what_gender: Какого Вы пола?
@@ -125,93 +125,54 @@ ru-RU:
   studiobar_donate_body: За каждый пожертвованный доллар, один ребенок получает возможность учиться
   studiobar_shop_title: Магазин
   studiobar_shop_body: Ломайте стереотипы. Носите наш логотип с гордостью.
-  homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
-  homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
-  homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
-  homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+  homepage_hero_text_malala: «Я призываю девочек в каждой стране, чтобы учиться одному Часу Кода» Малала, лауреат Нобелевской премии мира
+  homepage_hero_text_susan: «Если вы сможете изменить технологию, вы сможете изменить мир.» Сьюзен, Генеральный директор YouTube
+  homepage_hero_text_fistbump: «Не просто играйте на вашем телефоне, программируйте на нём» Президент Barack Obama
+  homepage_hero_text_sheryl: '«Нашим детям - в том числе девочкам - нужна возможность изучать информатику.» Sheryl, главный операционный директор Facebook'
+  homepage_hero_text_satya: «Компьютерная наука может раскрыть лучшие возможности в мире.» Сатья, Генеральный директор Microsoft
+  homepage_hero_text_bosh: «Если вы программируете, вы можете выбрать направление вашей жизни.» Chris Bosh
+  homepage_hero_text_student1: '«Эти навыки изменили мое будущее. Не говоря уже о том, что это просто весело." Luna, 7-й класс'
+  homepage_hero_text_student2: «Я никогда не видел моих детей такими увлеченными обучением.» Майкл, учитель
+  homepage_hero_text_student3: «Компьютерная наука — это поле, вы не можете знать, понравится вам или нет, прежде чем вы попробуете» Джексон, 6-й класс
+  homepage_hero_text_student4: «Вы можете сделать всё, что ваш разум хочет сделать с программированием.» Майя, 2 класс
+  homepage_hero_text_student5: '«Информатика - это наука не для кого-то другого. Это наука для вас, здесь, сейчас." Geraldo, преподаватель'
+  homepage_hero_text_teacher1: '«Искры творчества, вдохновения и инноваций при кодировании - все что имеет важное значение в любой карьере.» Floresa, учитель'
+  homepage_hero_text_teacher2: '«Эта программа привлекла, вовлекла принять участие 100% моих учеников.» Адам, учитель'
   homepage_slot_text_hoc: Час кода
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Холодное сердце с Анной и Эльзой
   homepage_slot_text_teacher: Панель управления преподавателя
   homepage_slot_text_studio: Все наши учебники
   homepage_slot_text_course4: Курс 4
   homepage_slot_text_shop: Магазин
   homepage_slot_text_flappy: Порхающий код
-  homepage_action_text_codevideo: Посмотреть видео
-  homepage_action_text_teachervideo: Посмотреть видео
-  homepage_action_text_learn: Start learning today
+  homepage_action_text_codevideo: Посмотрите видео
+  homepage_action_text_teachervideo: Посмотрите видео
+  homepage_action_text_learn: Начни обучение сегодня
   homepage_action_text_signpetition: Подписать петицию
   homepage_signpetition_dropdown: 'Подписать нашу петицию &#x25BE;'
   homepage_slot_text_title_hoc: Hour of Code
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Любой может научиться. Начни сегодня
   homepage_slot_text_link_hoc: Попробуйте Час кода
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Провести Час Кода
+  homepage_slot_text_link_hocserved: Попробовало
   homepage_slot_text_title_students: Ученики
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Изучите все наши обучающие курсы
+  homepage_slot_text_link_codestudio: Попробуйте Студию Кода
+  homepage_slot_text_link_local: Найти местный класс
+  homepage_slot_text_link_othercourses: Другие онлайн курсы
+  homepage_slot_text_title_educators: Преподаватели
+  homepage_slot_text_blurb_educators: Научите ваших учеников
+  homepage_slot_text_link_k5: Курсы для классов K-5
+  homepage_slot_text_link_fullcurriculum: Посмотрите наш полный курс обучения
+  homepage_slot_text_link_pd: Профессиональная разработка
+  homepage_slot_text_title_advocates: Единомышленники
+  homepage_slot_text_blurb_advocates: Поддержите нашу работу
+  homepage_slot_text_link_stats: Посмотреть статистику
+  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_donate: Сделать пожертвование
+  homepage_header_codestudio: Творения учеников Студии Кода
+  homepage_header_donors: Code.org благодарит своих сторонников
+  homepage_donors_seall: Просмотреть всё
   homepage_donors_donate: Пожертвовать
   contact_form_topic_student: Я ученик
   contact_form_topic_parent: Я родитель

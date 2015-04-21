@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"setja-mynd (x, y, mynd)",
   "offsetBlockTitle":"hliðrun (x, y, mynd)",
   "rectangleBlockTitle":"rétthyrningur (breidd, hæð, gerð, litur)",
-  "reinfFeedbackMsg":"Þú getur ýtt á hnappinn \"Spila áfram\" til að breyta teikningunni þinni.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"snúa (gráður, mynd)",
   "scaleImageBlockTitle":"kvarða (stuðull, mynd)",
   "squareBlockTitle":"ferningur (hlið, gerð, litur)",

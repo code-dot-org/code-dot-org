@@ -1,207 +1,96 @@
 "is":
   data:
-    text_match:
-      Blocks to Bools 1:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        /script_assets/msm/unit6/blockstomath1.png, 500: /script_assets/msm/unit6/blockstomath1.png,
-          500
-        (4+5) > 9: (4+5) > 9
-        ((4+5) > 9): ((4+5) > 9)
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Bools 2:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png,
-          500
-        (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
-        (10 > 11) OR (7 <= 9): (10 > 11) EÐA (7 <= 9)
-        (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Bools 3:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
-          500
-        (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
-        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
-        (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
-        (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
-        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
-        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
-        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
-        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Bools 4:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
-          500
-        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR
-          ((8 < x) AND (x < 10))
-        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
-          ((8 < x) And (x < 10))
-        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
-          ((8 < x) and (x < 10))
-        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
-          < x) && (x < 10))
-        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5))
-          OR ((8 < x) AND (x < 10)))
-        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5))
-          Or ((8 < x) And (x < 10)))
-        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
-          or ((8 < x) and (x < 10)))
-        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) ||
-          ((8 < x) && (x < 10)))
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Math 1:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        Blocks to Math 1.blocks.start_blocks, 200: Kubbastærðfræði 1.blocks.start_blocks,
-          200
-        4 + 5: 4 + 5
-        (4+5): (4+5)
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Math 2:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        Blocks to Math 2.blocks.start_blocks, 200: Kubbastærðfræði 2.blocks.start_blocks,
-          200
-        7 * 6: 7 * 6
-        (7 * 6): (7 * 6)
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Math 3:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        Blocks to Math 3.blocks.start_blocks: Kubbastærðfræði 3.blocks.start_blocks
-        (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
-        2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
-        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
-        2 * 3 - 1 + 0: 2 * 3 - 1 + 0
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Math 4:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        Blocks to Math 4.blocks.start_blocks: Kubbastærðfræði 4.blocks.start_blocks
-        (5 + 8) - 12: (5 + 8) - 12
-        5 + 8 - 12: 5 + 8 - 12
-        ((5 + 8) - 12): ((5 + 8) - 12)
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Math 5:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        Blocks to Math 5.blocks.start_blocks: Kubbastærðfræði 5.blocks.start_blocks
-        (-2) * (-6):
-        - 2 * -6: -2 * -6
-        ((-2) * (-6)): ((-2) * (-6))
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Math 6:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        Blocks to Math 6.blocks.start_blocks: Kubbastærðfræði 6.blocks.start_blocks
-        ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
-        ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
-        (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
-        (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
-        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Blocks to Math 7:
-        Convert Blocks to Math: Breyta kubbum í stærðfræði
-        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
-          sem samsvarar þessum kóða
-        Blocks to Math 7.blocks.start_blocks: Kubbastærðfræði 7.blocks.start_blocks
-        10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
-        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
-      Open text response example:
-        Open text response example: Dæmi um opið textasvar
-        I loved it because...: Mér líkaði það vegna ...
-      PDK5 Classroom Culture 2:
-        Facilitating a positive learning environment in your computer science classroom: Stuðlar
-          að jákvæðu námsumhverfi í tölvunarfræðitímum
-        0: '? Nú þegar þú veist meira um námsefni okkar, hvaða aðferðir vilt þú þá
-          nota til að stuðla að heilbrigðu andrúmslofti í tölvunarfræðitímum sem þú
-          kennir?'
-        1: ': Nú þegar þú veist meira um námsefni okkar, hvaða aðferðir vilt þú þá
-          nota til að stuðla að heilbrigðu andrúmslofti í tölvunarfræðitímum sem þú
-          kennir?'
-        In my classroom, I want to...: Í kennslutímum mínum vil ég ...
-      PDK5 Course Descriptions:
-        Course Structure: Skipulag námskeiðs
-        I am going to start with Course...: Ég ætla að byrja á námskeiði...
-      PDK5 Difficulty:
-        Degree of Difficulty: Erfiðleikastig
-        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Var
-          forritun eins erfið og þú bjóst við? Útskýrðu hvers vegna (ekki). Hvaða
-          áhrif hefur það á kennslu þína í tölvunarfræði?
-        Your thoughts here: Hugsanir þínar hér
-      PDK5 Foundation:
-        Computer Science as a Foundational Skill: Tölvunarfræði sem grunnfærni
-        Do you see computer science as a foundational skill for your students? Why or why not?: Álítur
-          þú að tölvunarfræði eigi að vera grundvallarfærni fyrir nemendur þína? Hvers
-          vegna (ekki)?
-        Your thoughts here: Hugsanir þínar hér
-      PDK5 Impact 1:
-        Impact for students: Áhrif fyrir nemendur
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Álítur
-          þú að nemendum þínum muni finnast netverkefnin á 5-11 ára (K-5) námskeiðunum
-          skemmtileg og grípandi? Hvers vegna (ekki)?
-        Your thoughts here: Hugsanir þínar hér
-      PDK5 Impact 2:
-        Connections to other Subjects: Tengingar við önnur fög
-        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Tengist
-          tölvunarfræði öðru efni eða fögum sem nemendur þínir eru að læra? Útskýrðu
-          hvers vegna (ekki).
-        Your thoughts here: Hugsanir þínar hér
-      PDK5 Impact 3:
-        Real-world applications for Students: Gagnsemi fyrir nemendur í raunheimi
-        0: '? Does learning about computer science help students grow into the kind
-          of citizens you are preparing them to be? Explain why or why not.'
-        1: ': Hjálpar það að læra um tölvunarfræði nemendum að verða að þeim þjóðfélagsþegnum
-          sem þú ert að undirbúa þá fyrir að verða? Útskýrðu hvers vegna (ekki).'
-        Your thoughts here: Hugsanir þínar hér
-      PDK5 Problem Solving:
-        Problem Solving Methods: Aðferðir við lausn verkefna
-        I could integrate this in my classroom by...: Ég gæti samþætt þetta kennslu
-          minni með því að...
-      PDK5 Promo Video:
-        'Code Studio: Kid tested, Teacher approved': 'Kóðastúdíó: Krakkaprófað, kennaravottað'
-      PDK5 Promo Video 2:
-        'Code Studio: Kid tested, Teacher approved': 'Kóðastúdíó: Krakkaprófað, kennaravottað'
-        My first impressions of Code Studio are...: Fyrstu viðbrögð mín við Kóðastúdíói
-          eru...
-      PDK5 Strategies O:
-        Strategies for Teaching Computer Science: Stefnur í kennslu tölvunarfræði
-        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'Ég
-          álít að kennsla tölvunarfræði verði ólík kennslu annarra faga á eftirfarandi
-          hátt: ...'
-      Test Markdown level:
-        Enter title here: Skráðu titil hér
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: Stór þríhyrningur
+        Big Triangle|Image|Number|String: stór þríhyrningur | mynd | tala | strengur
+        EXAMPLE 1.solution_blocks, 300: DÆMI 1.solution_blocks, 300
+        Write a contract for a big red triangle that is 100 pixels in size: Skrifaðu
+          samning fyrir stóran rauðan þríhyrning sem er 100 dílar á stærð
+      Creating Contracts From Examples 2:
+        Example 2.solution_blocks, 300: Dæmi 2.solution_blocks, 300
+        Square Contract: Samningur fyrir "square"
+        Square|Image|Number|String: ferningur | mynd | tala | strengur
+        Write a contract for a purple square that is 15 pixels in size.: Skrifa samning
+          fyrir fjólubláan ferning sem er 15 dílar á stærð.
+      Creating Contracts From Examples 3A:
+        Banner Contract: Samningur fyrir "banner"
+        Banner Function block: Kubbur fallsins "Borði"
+        Examples 3.solution_blocks, 300: Dæmi 3.solution_blocks, 300
+        banner|Image|String: borði | mynd | strengur
+      Creating Contracts From Examples 4:
+        Examples 4.solution_blocks, 300: Dæmi 4.solution_blocks, 300
+        Shrink Contract: Samningur fyrir "shrink"
+        Try using the "shrink" function.: Prófaðu að nota fallið "minnka".
+        shrink|Image|Image: minnka | mynd | mynd
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
+        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
+          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
+          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        wide-rect|Image|Number|String: breiður-rétth | mynd | tala | strengur
+      Enter name here:
+        Contract Name|Number|Number|String: heiti samnings | tala | tala | strengur
         Enter prompt here: Skráðu kvaðningu hér
-      text match test:
-        Mathematical Expression Assessment: Mat á reikningsdæmi
-        Type out the arithmetic expression that this circle of evaluation evaluates to: Skrifaðu
-          reikningsdæmið sem þessi matshringur samsvarar
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
-          1/Exercise_5_question_2.png
-        (9-3)+(4*7): (9-3)+(4*7)
-        (9-3)+4: 
-        9-3+4: 
-        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+        Enter title here: Skráðu titil hér
+      Eval Contracts 1 B:
+        Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks,
+          300
+        Star Contract: Samningur fyrir "star"
+        Write a contract for the star function: Skrifaðu samning fyrir fallið "star"
+          (stjarna)
+        star|Image|String|Number|String: stjarna | mynd | strengur | tala | strengur
+      Eval Contracts 2 B:
+        Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks,
+          300
+        Rotate Contract: Samningur fyrir "rotate"
+        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "rotate"
+          (snúa)
+        rotate|Image|Number|Image: snúa | mynd | tala | mynd
+      Eval Contracts 3 B:
+        Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks,
+          300
+        Text Contract: Samningur fyrir "texti"
+        Write a contract for the text function: Skrifaðu samning fyrir fallið "text"
+          (texti)
+        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
+      Eval Contracts 4 B:
+        Eval Contracts 4 A.solution_blocks, 300: Mat Samningar 4 A.solution_blocks,
+          300
+        Scale Contract: Samningur fyrir "kvarða"
+        Write a contract for the scale function: Skrifaðu samning fyrir fallið "scale"
+          (kvarða)
+        scale|Image|Number|Image: kvarða | mynd | tala | mynd
+      Eval Contracts B:
+        Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks,
+          300
+        Star Contract: Samningur fyrir "star"
+        Write a contract for the star function: Skrifaðu samning fyrir fallið "star"
+          (stjarna)
+        star|Image|Number|String|String: stjarna | mynd | tala | strengur | strengur
+      Eval Contracts D:
+        Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks,
+          300
+        Rotate Contract: Samningur fyrir "rotate"
+        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "rotate"
+          (snúa)
+        rotate|Image|Number|Image: snúa | mynd | tala | mynd
+      Eval Contracts F:
+        Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks,
+          300
+        Text Contract: Samningur fyrir "texti"
+        Write a contract for the text function: Skrifaðu samning fyrir fallið "text"
+          (texti)
+        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
+        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
+          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
+          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        wide-rect|Image|Number|String: breiður-rétth | mynd | tala | strengur
     external:
-      Code Logo v3:
-        title: titill
-        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Leiðbeiningar: Umkóðun stafsins A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -209,17 +98,50 @@
           K1K5 - Sending bita í raunheiminum
         description here: lýsing hér
       CSPStudentLessonPlanTemplate:
-        title: titill
         description here: lýsing hér
+        title: titill
+      Code Logo v3:
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+        title: titill
+      ECSPD PD overview:
+        ECS PD Overview: ECS PD Overview
+      ECSPD curriculum overview:
+        ECS Curriculum Overview: ECS Curriculum Overview
+        Overview of Curriculum: Overview of Curriculum
+      ECSPD growth mindset strategies:
+        Growth Mindset Strategies: Growth Mindset Strategies
+      ECSPD meet facilitator:
+        Meet your Facilitator!: Meet your Facilitator!
+      ECSPD program overview:
+        ECS Program Overview: ECS Program Overview
+        Overview of ECS Program: Overview of ECS Program
+      ECSPD what is growth mindset:
+        An exploration of Growth Mindset: An exploration of Growth Mindset
+        What is Growth Mindset?: What is Growth Mindset?
       External level test (will):
         first computer program: fyrsta tölvuforrit
       Hour of Code test content: []
       Mixing Colors:
-        title: titill
         description here: lýsing hér
+        title: titill
+      PDAlg Intro: []
       PDCSP Intro: []
+      PDECS Intro:
+        PD Intro: PD Intro
+        Welcome to ECS Online PD: Welcome to ECS Online PD
+      PDECS Welcome Video:
+        Welcome Video: Welcome Video
+        Welcome to Online PD for ECS: Welcome to Online PD for ECS
+      PDECS commitment:
+        ECS PD commitments: ECS PD commitments
+        overview of program commitments: overview of program commitments
+      PDECS tour:
+        Tour of PD Space: Tour of PD Space
+        tour of the PD space: tour of the PD space
       PDK5 Beyond C:
         Beyond: Áframhald
+      PDK5 CS overview:
+        Overview of programming concepts: Overview of programming concepts
       PDK5 Classroom Culture C:
         Classroom Culture: Bekkjarmenning
       PDK5 Course Maps C: []
@@ -241,40 +163,15 @@
         Course Progress: Framvinda námskeiðs
       PDK5 Teacher Dashboard C:
         Teacher Dashboard: Stjórnborð kennara
-      PDK5 Unplugged Intro C:
-        Unplugged intro: Kynning án tölvu
       PDK5 UVideo Overview C:
         Kiki video overview: Kiki myndskeiðsyfirlit
+      PDK5 Unplugged Intro C:
+        Unplugged intro: Kynning án tölvu
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Hvers vegna kenna tölvunarfræði
           í grunnskóla?
-      Pixelation 1:
-        Pixelation 1: Dílamynstur 1
-        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
-      Pixelation 2:
-        Pixelation 2: Dílamynstur 2
-        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
-      Pixelation 3:
-        Pixelation 3: Dílamynstur 3
-        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
-      Pixelation 3 Bit Colors:
-        title: titill
-        description here: lýsing hér
-      Pixelation 4:
-        Pixelation 4 - Baker test of External level -- NOT REAL: Dílamynstur 4 - Baker
-          mæling á ytri stöðu -- SÝNDAR
-        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
-      Pixelation 4x4 Empty:
-        Pixelation 4x4 Empty: Dílamynstur 4x4 tómt
-        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
-      Pixelation Bee:
-        title: titill
-        description here: lýsing hér
-      Pixelation Flappy:
-        title: titill
-        description here: lýsing hér
       Pixelation - Hadi Emoji:
-        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
+        Pixelation - Hadi Emoji: Dílamynstur - Hadi Emoji
         description here: lýsing hér
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: Dílamynstur - Kennslustund 14 - Hliðrun
@@ -293,14 +190,14 @@
           villuna'
         description here: lýsing hér
       Pixelation - Lesson 14 - Make the Letter A:
-        title: titill
         description here: lýsing hér
+        title: titill
       Pixelation - Lesson 14 - Make your own B and W Image:
-        title: titill
         description here: lýsing hér
+        title: titill
       Pixelation - Lesson 14 - Make your own B&W Image:
-        title: titill
         description here: lýsing hér
+        title: titill
       Pixelation - Lesson 15 - Color Free Play:
         Pixelation - Lesson 15 - Color Free Play: Dílamynstur - Kennslustund 15 -
           Litir, frjálst
@@ -346,130 +243,396 @@
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Dílamynstur - Myndskeið - Ráð og refabrögð
         description here: lýsing hér
-      test demo level:
-        demo title: demo title
-        demo description: demo description
+      Pixelation 1:
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+        Pixelation 1: Dílamynstur 1
+      Pixelation 2:
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+        Pixelation 2: Dílamynstur 2
+      Pixelation 3:
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+        Pixelation 3: Dílamynstur 3
+      Pixelation 3 Bit Colors:
+        description here: lýsing hér
+        title: titill
+      Pixelation 4:
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+        Pixelation 4 - Baker test of External level -- NOT REAL: Dílamynstur 4 - Baker
+          mæling á ytri stöðu -- SÝNDAR
+      Pixelation 4x4 Empty:
+        Create images with bits and bytes.: Búa til myndir með bitum og bætum.
+        Pixelation 4x4 Empty: Dílamynstur 4x4 tómt
+      Pixelation Bee:
+        description here: lýsing hér
+        title: titill
+      Pixelation Flappy:
+        description here: lýsing hér
+        title: titill
       Test discourse forum-comment level:
         Degree of Difficulty: Erfiðleikastig
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Var
           forritun eins erfið og þú bjóst við? Útskýrðu hvers vegna (ekki). Hvaða
           áhrif hefur það á kennslu þína í tölvunarfræði?
-      test html katie:
-        testing: testing
-        lkajsdfasdf: lkajsdfasdf
       Text Compression 1:
-        Text Compression 1: Text Compression 1
         Compress text by identifying repeated patterns.: Þjappa texta með því að greina
           endurtekin mynstur.
+        Text Compression 1: Þjöppun texta 1
       Text Compression Peter Piper:
-        Text Compression Peter Piper: Text Compression Peter Piper
         Compress text by identifying repeated patterns.: Þjappa texta með því að greina
           endurtekin mynstur.
-      U1L5 Student Lesson:
-        title: titill
+        Text Compression Peter Piper: Þjöppun texta Peter Piper
+      U1L1 Student Lesson Introduction:
         description here: lýsing hér
-      U1L6 Student Lesson Plan:
         title: titill
+      U1L10 Student Lesson Introduction:
         description here: lýsing hér
+        title: titill
+      U1L11 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L12 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L13 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L16 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L2 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L3 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L4 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L4 Widget Demo - Video:
+        Widget Demonstration - Video: Widget Demonstration - Video
+        description here: lýsing hér
+      U1L5 How the Internet Works - Video:
+        How the Internet Works - Video: How the Internet Works - Video
+        description here: lýsing hér
+      U1L5 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L6 Odometer Widget:
+        Odometer Widget: Odometer Widget
+        description here: lýsing hér
+      U1L6 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L7 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      U1L8 Student Lesson Introduction:
+        Sending Numbers: Sending Numbers
+        description here: lýsing hér
+      U1L9 Student Lesson Introduction:
+        description here: lýsing hér
+        title: titill
+      test demo level:
+        demo description: demo description
+        demo title: demo title
+      test html katie:
+        lkajsdfasdf: lkajsdfasdf
+        testing: testing
       unique level name here:
-        title: titill
         description here: lýsing hér
-    contract_match:
-      CREATING CONTRACTS FROM EXAMPLES 1:
-        Big Triangle: Stór þríhyrningur
-        Write a contract for a big red triangle that is 100 pixels in size: Skrifaðu
-          samning fyrir stóran rauðan þríhyrning sem er 100 dílar á stærð
-        EXAMPLE 1.solution_blocks, 300: DÆMI 1.solution_blocks, 300
-        Big Triangle|Image|Number|String: stór þríhyrningur | mynd | tala | strengur
-      Creating Contracts From Examples 2:
-        Square Contract: Samningur fyrir "square"
-        Write a contract for a purple square that is 15 pixels in size.: Skrifa samning
-          fyrir fjólubláan ferning sem er 15 dílar á stærð.
-        Example 2.solution_blocks, 300: Dæmi 2.solution_blocks, 300
-        Square|Image|Number|String: ferningur | mynd | tala | strengur
-      Creating Contracts From Examples 3A:
-        Banner Contract: Samningur fyrir "banner"
-        Banner Function block: Kubbur fallsins "Borði"
-        Examples 3.solution_blocks, 300: Dæmi 3.solution_blocks, 300
-        banner|Image|String: borði | mynd | strengur
-      Creating Contracts From Examples 4:
-        Shrink Contract: Samningur fyrir "shrink"
-        Try using the "shrink" function.: Prófaðu að nota fallið "minnka".
-        Examples 4.solution_blocks, 300: Dæmi 4.solution_blocks, 300
-        shrink|Image|Image: minnka | mynd | mynd
-      Design Recipe 1.contract:
-        Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
-        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
-          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
-          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        wide-rect|Image|Number|String: breiður-rétth | mynd | tala | strengur
-      Enter name here:
-        Enter title here: Skráðu titil hér
+        title: titill
+    text_match:
+      Blocks to Bools 1:
+        ((4+5) > 9): ((4+5) > 9)
+        (4+5) > 9: (4+5) > 9
+        /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png,
+          300
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Bools 2:
+        (10 > 11) OR (7 <= 9): (10 > 11) EÐA (7 <= 9)
+        (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
+        (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png,
+          500
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Bools 3:
+        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
+        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
+        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
+        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
+        (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
+        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
+        (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
+          500
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Bools 4:
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) ||
+          ((8 < x) && (x < 10)))
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5))
+          OR ((8 < x) AND (x < 10)))
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5))
+          Or ((8 < x) And (x < 10)))
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
+          or ((8 < x) and (x < 10)))
+        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
+          < x) && (x < 10))
+        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR
+          ((8 < x) AND (x < 10))
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
+          ((8 < x) And (x < 10))
+        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
+          ((8 < x) and (x < 10))
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
+          500
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Math 1:
+        (4+5): (4+5)
+        4 + 5: 4 + 5
+        Blocks to Math 1.blocks.start_blocks, 200: Kubbastærðfræði 1.blocks.start_blocks,
+          200
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Math 2:
+        (7 * 6): (7 * 6)
+        7 * 6: 7 * 6
+        Blocks to Math 2.blocks.start_blocks, 200: Kubbastærðfræði 2.blocks.start_blocks,
+          200
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Math 3:
+        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
+        (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
+        (2 * 3) - 1 + 0: (2 * 3) - 1 + 0
+        2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
+        2 * 3 - 1 + 0: 2 * 3 - 1 + 0
+        Blocks to Math 3.blocks.start_blocks: Kubbastærðfræði 3.blocks.start_blocks
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Math 4:
+        ((5 + 8) - 12): ((5 + 8) - 12)
+        (5 + 8) - 12: (5 + 8) - 12
+        5 + 8 - 12: 5 + 8 - 12
+        Blocks to Math 4.blocks.start_blocks: Kubbastærðfræði 4.blocks.start_blocks
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Math 5:
+        ((-2) * (-6)): ((-2) * (-6))
+        (-2) * (-6):
+        - 2 * -6: -2 * -6
+        Blocks to Math 5.blocks.start_blocks: Kubbastærðfræði 5.blocks.start_blocks
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Math 6:
+        ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
+        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
+        ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
+        (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
+        (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
+        Blocks to Math 6.blocks.start_blocks: Kubbastærðfræði 6.blocks.start_blocks
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      Blocks to Math 7:
+        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
+        10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
+        Blocks to Math 7.blocks.start_blocks: Kubbastærðfræði 7.blocks.start_blocks
+        Convert Blocks to Math: Breyta kubbum í stærðfræði
+        Type out the arithmetic expression that matches this code: Skrifaðu reikningsdæmið
+          sem samsvarar þessum kóða
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér
+      ECSPD strategies:
+        Classroom Strategies Journal: Classroom Strategies Journal
+      ECSPD your goals:
+        Documenting Your Goals: Documenting Your Goals
+      Open text response example:
+        I loved it because...: Mér líkaði það vegna ...
+        Open text response example: Dæmi um opið textasvar
+      PDK5 Challenges:
+        Biggest Challenges: Biggest Challenges
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Stuðlar
+          að jákvæðu námsumhverfi í tölvunarfræðitímum
+        In my classroom, I want to...: Í kennslutímum mínum vil ég ...
+        0: '? Nú þegar þú veist meira um námsefni okkar, hvaða aðferðir vilt þú þá
+          nota til að stuðla að heilbrigðu andrúmslofti í tölvunarfræðitímum sem þú
+          kennir?'
+        1: ': Nú þegar þú veist meira um námsefni okkar, hvaða aðferðir vilt þú þá
+          nota til að stuðla að heilbrigðu andrúmslofti í tölvunarfræðitímum sem þú
+          kennir?'
+      PDK5 Course Descriptions:
+        Course Structure: Skipulag námskeiðs
+        I am going to start with Course...: Ég ætla að byrja á námskeiði...
+      PDK5 Difficulty:
+        Degree of Difficulty: Erfiðleikastig
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Var
+          forritun eins erfið og þú bjóst við? Útskýrðu hvers vegna (ekki). Hvaða
+          áhrif hefur það á kennslu þína í tölvunarfræði?
+        Your thoughts here: Hugsanir þínar hér
+      PDK5 Foundation:
+        Computer Science as a Foundational Skill: Tölvunarfræði sem grunnfærni
+        Do you see computer science as a foundational skill for your students? Why or why not?: Álítur
+          þú að tölvunarfræði eigi að vera grundvallarfærni fyrir nemendur þína? Hvers
+          vegna (ekki)?
+        Your thoughts here: Hugsanir þínar hér
+      PDK5 Goals:
+        Goals for using Code.org in your Classroom: Goals for using Code.org in your
+          Classroom
+      PDK5 Impact 1:
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Álítur
+          þú að nemendum þínum muni finnast netverkefnin á 5-11 ára (K-5) námskeiðunum
+          skemmtileg og grípandi? Hvers vegna (ekki)?
+        Impact for students: Áhrif fyrir nemendur
+        Your thoughts here: Hugsanir þínar hér
+      PDK5 Impact 2:
+        Connections to other Subjects: Tengingar við önnur fög
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Tengist
+          tölvunarfræði öðru efni eða fögum sem nemendur þínir eru að læra? Útskýrðu
+          hvers vegna (ekki).
+        Your thoughts here: Hugsanir þínar hér
+      PDK5 Loops 2:
+        The Importance of Loops: The Importance of Loops
+      PDK5 Problem Solving:
+        I could integrate this in my classroom by...: Ég gæti samþætt þetta kennslu
+          minni með því að...
+        Problem Solving Methods: Aðferðir við lausn verkefna
+      PDK5 Promo Video:
+        'Code Studio: Kid tested, Teacher approved': 'Kóðastúdíó: Krakkaprófað, kennaravottað'
+      PDK5 Promo Video 2:
+        'Code Studio: Kid tested, Teacher approved': 'Kóðastúdíó: Krakkaprófað, kennaravottað'
+        My first impressions of Code Studio are...: Fyrstu viðbrögð mín við Kóðastúdíói
+          eru...
+      PDK5 Strategies O:
+        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'Ég
+          álít að kennsla tölvunarfræði verði ólík kennslu annarra faga á eftirfarandi
+          hátt: ...'
+        Strategies for Teaching Computer Science: Stefnur í kennslu tölvunarfræði
+      PDK5 Test5:
+        Big Test: Big Test
+      Test Free Response Assessment Question:
+        Enter your reflection here: Enter your reflection here
+        0: '? Imagine that you have to send a list of 10 numbers to friend in binary
+          using the bit-sending widget. The numbers are all between 0 and 100. Describe
+          the issues or problems that you and your friend would encounter in trying
+          to do this. How would you address these problem?'
+        1: ': Imagine that you have to send a list of 10 numbers to friend in binary
+          using the bit-sending widget. The numbers are all between 0 and 100. Describe
+          the issues or problems that you and your friend would encounter in trying
+          to do this. How would you address these problem?'
+        Sending Numbers Free Response: Sending Numbers Free Response
+      Test Markdown level:
         Enter prompt here: Skráðu kvaðningu hér
-        Contract Name|Number|Number|String: heiti samnings | tala | tala | strengur
-      Eval Contracts 1 B:
-        Star Contract: Samningur fyrir "star"
-        Write a contract for the star function: Skrifaðu samning fyrir fallið "star"
-          (stjarna)
-        Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks,
-          300
-        star|Image|String|Number|String: stjarna | mynd | strengur | tala | strengur
-      Eval Contracts 2 B:
-        Rotate Contract: Samningur fyrir "rotate"
-        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "rotate"
-          (snúa)
-        Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks,
-          300
-        rotate|Image|Number|Image: snúa | mynd | tala | mynd
-      Eval Contracts 3 B:
-        Text Contract: Samningur fyrir "texti"
-        Write a contract for the text function: Skrifaðu samning fyrir fallið "text"
-          (texti)
-        Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks,
-          300
-        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
-      Eval Contracts 4 B:
-        Scale Contract: Samningur fyrir "kvarða"
-        Write a contract for the scale function: Skrifaðu samning fyrir fallið "scale"
-          (kvarða)
-        Eval Contracts 4 A.solution_blocks, 300: Mat Samningar 4 A.solution_blocks,
-          300
-        scale|Image|Number|Image: kvarða | mynd | tala | mynd
-      Eval Contracts B:
-        Star Contract: Samningur fyrir "star"
-        Write a contract for the star function: Skrifaðu samning fyrir fallið "star"
-          (stjarna)
-        Eval Contracts 1 A.solution_blocks, 300: Mat Samningar 1 A.solution_blocks,
-          300
-        star|Image|Number|String|String: stjarna | mynd | tala | strengur | strengur
-      Eval Contracts D:
-        Rotate Contract: Samningur fyrir "rotate"
-        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "rotate"
-          (snúa)
-        Eval Contracts 2 A.solution_blocks, 300: Mat Samningar 2 A.solution_blocks,
-          300
-        rotate|Image|Number|Image: snúa | mynd | tala | mynd
-      Eval Contracts F:
-        Text Contract: Samningur fyrir "texti"
-        Write a contract for the text function: Skrifaðu samning fyrir fallið "text"
-          (texti)
-        Eval Contracts 3 A.solution_blocks, 300: Mat Samningar 3 A.solution_blocks,
-          300
-        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
-      Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Hönnunaruppskrift 1 Samningur
-        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
-          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        1: ': Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með
-          tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
-        wide-rect|Image|Number|String: breiður-rétth | mynd | tala | strengur
-      Rocket Contract 1:
-        Contract for rocket-height: Samningur fyrir "hæð-flaugar"
-        0: '? Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu samning
-          fyrir fallið "hæð-flaugar" sem tekur inn tímann sem flugið hefur staðið
-          talið í sekúndum og skilar hæð eldflaugarinnar á þeim tíma.'
-        1: ': Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu samning
-          fyrir fallið "hæð-flaugar" sem tekur inn tímann sem flugið hefur staðið
-          talið í sekúndum og skilar hæð eldflaugarinnar á þeim tíma.'
-        rocket-height|Number|Number: hæð-flaugar | tala | tala
+        Enter title here: Skráðu titil hér
+      U1L10 Assessment Free Response:
+        'A follow-up to the Assessment Question #2:': 'A follow-up to the Assessment
+          Question #2:'
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+      U1L10 Journal Free Response:
+        'Free Response: Encoding Text': 'Free Response: Encoding Text'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L11 Reflection Free Response:
+        'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L12 Reflection Free Response:
+        'Reflection: Data Storage': 'Reflection: Data Storage'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L13 Assessment 1:
+        'Assessment 1: Text Compression': 'Assessment 1: Text Compression'
+        Write (in the space below) a segment of text that should compress effectively and efficiently.: Write
+          (in the space below) a segment of text that should compress effectively
+          and efficiently.
+      U1L13 Assessment 2:
+        'Assessment 2: Text Compression': 'Assessment 2: Text Compression'
+        Write (in the space below) a segment of text that will not compress well.: Write
+          (in the space below) a segment of text that will not compress well.
+      U1L13 Reflection Free Response:
+        'Reflection: Text Compression': 'Reflection: Text Compression'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L16 Reflection Free Response:
+        'Reflection: Encoding Complex data': 'Reflection: Encoding Complex data'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L2 Free response assessment question:
+        'Assessment: Sending Binary Messages': 'Assessment: Sending Binary Messages'
+        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
+        Enter your response here.: Enter your response here.
+      U1L2 Free response reflection question:
+        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
+        Enter your reflection here.: Enter your reflection here.
+        'Reflection: Sending Binary Messages': 'Reflection: Sending Binary Messages'
+      U1L3 Free response reflection question:
+        Complete the Lesson 3 Rubric.: Complete the Lesson 3 Rubric.
+        Enter your reflection here.: Enter your reflection here.
+        'Reflection: Sending Complex Messages': 'Reflection: Sending Complex Messages'
+      U1L4 Free Response Reflection:
+        Enter your reflection here.: Enter your reflection here.
+        Reflect on this lesson: Reflect on this lesson
+      U1L4 Free response reflection question:
+        'Assessment: Bit sending Widget': 'Assessment: Bit sending Widget'
+        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
+        Enter your reflection here.: Enter your reflection here.
+      U1L5 Free Response Assessment:
+        Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.: Complete
+          the rubric for Lesson 5. Then respond to this prompt using approximately
+          100 words.
+        Free Response Assessment: Free Response Assessment
+      U1L5 Free Response Lesson Review:
+        Complete these three sentences.: Complete these three sentences.
+        Lesson Review: Lesson Review
+      U1L6 Free Response Assessment:
+        'Assessment: Number Systems': 'Assessment: Number Systems'
+      U1L6 Free Response Reflection:
+        'Reflection: Number Systems': 'Reflection: Number Systems'
+      U1L7 Free Response Assessment:
+        'Assessment: Binary Numbers': 'Assessment: Binary Numbers'
+      U1L7 Free Response Reflection:
+        'Reflect on your learning in this lesson. In the space below, enter:': 'Reflect
+          on your learning in this lesson. In the space below, enter:'
+        'Reflection: Binary Numbers': 'Reflection: Binary Numbers'
+      U1L8 Free Response Getting Started:
+        'Getting Started: Sending Numbers ': 'Getting Started: Sending Numbers '
+        Respond to the following question.: Respond to the following question.
+      U1L8 Free Response Reflection:
+        Complete the Sending Numbers Checklist and then respond to the following prompt.: Complete
+          the Sending Numbers Checklist and then respond to the following prompt.
+        'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
+      U1L9 Free Response Assessment:
+        'Assessment: Real-world Numbers ': 'Assessment: Real-world Numbers '
+      text match test:
+        (9-3)+(4*7): (9-3)+(4*7)
+        (9-3)+4: 
+        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
+          1/Exercise_5_question_2.png
+        9-3+4: 
+        Mathematical Expression Assessment: Mat á reikningsdæmi
+        Type out the arithmetic expression that this circle of evaluation evaluates to: Skrifaðu
+          reikningsdæmið sem þessi matshringur samsvarar
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér

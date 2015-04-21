@@ -2,7 +2,7 @@
   "badColorStringError": "You used an invalid color string: {val}",
   "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "apskritimas(spindulys, stilius, spalva)",
-  "displayBlockTitle": "parodyk",
+  "displayBlockTitle": "įvertinti",
   "ellipseBlockTitle": "elipsė(plotis, aukštis, stilius, spalva)",
   "extraTopBlocks": "Yra neprijungtų blokelių. Ar norėjai juos prijungti prie \"parodyk\"?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",

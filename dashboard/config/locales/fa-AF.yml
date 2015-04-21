@@ -254,7 +254,7 @@
         artist: چیزی بکش
     user:
       classroom: صفحه اصلی معلم
-      district_dashboard: District Dashboard
+      district_dashboard: محدوده ی داشبورد
       label: سلام %{username}
       stats: پیشرفت من
       settings: حساب کاربری من
@@ -405,6 +405,7 @@
     heading_apps: <h2>سرگرم کننده برای</h2><h1>برای همه</h1>
     heading_legacy: <h2> دوره عمومی ما </h2><h1>همه سنین</h1>
     your_gallery: گالری
+    no_primary_course: Try a course at Code Studio
   gender:
     male: مرد
     female: زن
@@ -512,7 +513,7 @@
     frozen:
       title: منجمد
     infinity:
-      title: Infinity Play Lab
+      title: آزمایشگاه بازی نامحدود
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!
@@ -551,12 +552,14 @@
     correct_body: این پاسخ صحیح است
   contract_match:
     wrong_title: پاسخ اشتباه
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
+    badname: نام تابع شما اشتباه است.
+    badname_case: اسامی تابع ها به بزرگی و کوچکی حروف حساس هستند. عوض کردن بزرگی و
+      کوچکی اسم تابع خود را امتحان کنید.
+    badrange: محدوده ی تابع شما اشتباه است.
+    baddomainsize: تابع شما تعداد درست موارد لازم در ورودی را ندارد.
+    baddomainname: اسم یک یا تعدادی از موارد ورودی تابع شما اشتباه است.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: پاسخ خود را اینجا وارد کنید
   dialog:
@@ -626,7 +629,7 @@
   project:
     projects: پروژه ها
     create: پروژه ایجاد کنید
-    create_a_project: 'Create a new project:'
+    create_a_project: 'یک پروژه جدید بساز:'
     new: جدید ایجاد کنید
     rename: تغییر نام
     save: ذخيره
@@ -656,5 +659,5 @@
       شما حذف خواهد کرد. هرکسی که لینک را با او به اشتراک گذاشته اید دیگر قادر نخواهد
       بود پروژه شما را ببیند.
     view_all: پروژه های من را ببینید
-    remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    remix: ترکیب دوباره
+    click_to_remix: روی 'Remix' کلیک کنید تا نسخه ی خودتان را ایجاد کنید!

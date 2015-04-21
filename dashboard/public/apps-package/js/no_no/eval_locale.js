@@ -160,7 +160,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "displayBlockTitle":function(d){return "beregn"},
 "ellipseBlockTitle":function(d){return "ellipse (bredde, høyde, stil, farge)"},
 "extraTopBlocks":function(d){return "Du har løse blokker. Mente du å feste disse til «vis» blokken?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
+"infiniteRecursionError":function(d){return "Funksjonen kaller seg selv. Vi har stoppet den, ellers ville den ha fortsatt å kalle seg selv til evig tid."},
 "overlayBlockTitle":function(d){return "overlegg (topp, bunn)"},
 "placeImageBlockTitle":function(d){return "plasser-bildet (x, y, bilde)"},
 "offsetBlockTitle":function(d){return "forskyvning (x, y, bilde)"},
@@ -181,5 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "heil"},
 "string":function(d){return "streng"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."},
+"userCodeException":function(d){return "Det oppsto en feil under utføring av koden."},
 "wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

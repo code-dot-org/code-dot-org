@@ -226,10 +226,10 @@
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
   homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_link_donate: تبرع
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_donors_seall: عرض الكل
   homepage_donors_donate: تبرع
   contact_form_topic_student: أنا طالب
   contact_form_topic_parent: أنا والد
@@ -368,7 +368,7 @@
     <b>إضافة الطالب</b> و <b>إضافة العديد من الطلاب</b> أعلاه.
   dashboard_students_placeholder_name: اسم التلميذ
   dashboard_students_name: الاسم
-  dashboard_students_progress: Progress
+  dashboard_students_progress: في تقدم
   dashboard_students_age: العمر
   dashboard_students_gender: الجنس
   dashboard_students_male: ذكر

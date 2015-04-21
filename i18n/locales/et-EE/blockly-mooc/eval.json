@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"place-image (x, y, image)",
   "offsetBlockTitle":"offset (x, y, image)",
   "rectangleBlockTitle":"ristkülik (laius, kõrgus, stiil, värv)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"rotate (degrees, image)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"ruut (suurus, stiil, värv)",

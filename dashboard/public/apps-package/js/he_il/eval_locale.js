@@ -157,7 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "מעגל (רדיוס, סגנון, צבע)"},
-"displayBlockTitle":function(d){return "תצוגה"},
+"displayBlockTitle":function(d){return "לאמוד"},
 "ellipseBlockTitle":function(d){return "אליפסה (רוחב, גובה, סגנון, צבע)"},
 "extraTopBlocks":function(d){return "יש לך בלוקים לא מחוברים. האם התכוונת לצרף אותם לבלוק ה\"תצוגה\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},

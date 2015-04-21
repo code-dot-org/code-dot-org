@@ -155,10 +155,10 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "你的程序因除以 0 而结束。"},
-"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyComputeBlock":function(d){return "您必须将一个块附加到\"评价\"块。"},
 "equivalentExpression":function(d){return "试着重新排列你的参数来得到完全相同的表达式。"},
 "evaluate":function(d){return "评估"},
-"extraTopBlocks":function(d){return "您有未连接的语句块。您要将其连接到“compute”语句块吗？"},
+"extraTopBlocks":function(d){return "你还有未使用的块。你是要将它们附加到\"评价\"块吗？"},
 "failedInput":function(d){return "你的函数没有返回所有的正确值。"},
 "goal":function(d){return "目标："},
 "levelIncompleteError":function(d){return "你的表达式没有匹配目标。"},

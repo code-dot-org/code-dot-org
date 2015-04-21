@@ -142,12 +142,12 @@
           'Maze: Conditionals2': 'Labirin: Kondisional2'
           'Artist: Nested Loops2': 'Artis: Sarang Pengulangan2'
           'Farmer: While Loops2': 'Farmer: While Loops2'
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
-          'Bee: Debugging2': 'Bee: Debugging2'
+          'Bee: Nested Loops2': 'Lebah/Bee: Pengulangan Bersarang2/ Nested Loops2'
+          'Bee: Debugging2': 'Lebah/Bee: Debugging'
           'Artist: Patterns': 'Artis: Pola'
           Songwriting: Penulis lagu
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Usia 8 + (setelah kursus 2)
+          description_short: Kursus 3 merupakan tindak lanjut ke kursus 2.
         msm:
           title: Matematika Sekolah Menengah Pertama
           description: Pekerjaan pribadi dalam proses untuk Matematika Sekolah Menengah
@@ -156,59 +156,59 @@
           Assessments: Penilaian
           Unit 1: Unit 1
           Unit 2: Unit 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
-          'Artist: Strings and Images': 'Artist: Strings and Images'
+          Ninja Cat and the Coordinate Plane: Ninja Cat  dan Koordinat pesawat
+          'Calc: Circles of Evaluation': 'Calc: Lingkaran evaluasi'
+          'Artist: Strings and Images': 'Artist: String dan Gambar'
           Contracts: Kontrak
-          'Artist: Writing Contracts': 'Artist: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          'Artist: Defining Functions': 'Artist: Defining Functions'
-          'Play Lab: Defining Functions': 'Play Lab: Design Recipe'
+          'Artist: Writing Contracts': 'Penyanyi: Menulis kontrak'
+          'Calc: Defining Variables': 'Calc: Mendefinisikan variabel'
+          'Play Lab: Defining Variables': 'Play Lab: Mendefinisikan variabel'
+          The Design Recipe: Resep desain
+          'Artist: Defining Functions': 'Artist: Mendefinisikan fungsi'
+          'Play Lab: Defining Functions': 'Play Lab:  Resep Desain'
           'Artist: Functions': 'Artis: Fungsi'
-          'Play Lab: Animation': 'Play Lab: Animation'
+          'Play Lab: Animation': 'Play Lab: Animasi'
           Booleans: Boolean
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Calc: Boolean Operators': 'Calc: Boolean Operators'
-          'Play Lab: Boolean Operators': 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          'Artist: Conditionals': 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the
-            Distance Formula
-          'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
-            the Coordinate Plane'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Eval: Defining Functions': 'Eval: Fast Functions'
-          'Eval: Functions': 'Eval: Design Recipe'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
-          'Eval: Conditionals': 'Eval: Conditionals'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
-          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+          'Play Lab: Booleans': 'Play Lab: Boolean'
+          'Calc: Boolean Operators': 'Calc: Operator Boolean'
+          'Play Lab: Boolean Operators': 'Play Lab: Operator Boolean'
+          Conditionals and Piecewise Functions: Kondisional dan fungsi Piecewise
+          'Artist: Conditionals': 'Artis: Kondisional'
+          Collision Detection and the Distance Formula: Pendetekdi benturan dan Formula
+            jarak
+          'Play Lab: Collision Detection': 'Play Lab: Pendeteksi benturan'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged/tidak terpasang:
+            Ninja Cat and the Coordinate Plane'
+          'Eval: Strings and Images': 'Eval: String dan gambar'
+          'Unplugged: Contracts': 'Unplugged/tidak terpasang: kontrak'
+          'Eval: Writing Contracts': 'Eval: Menulis kontrak'
+          'Unplugged: The Design Recipe': 'Unplugged/tidak terpasang: Resep desain'
+          'Eval: Defining Functions': 'Eval: Fungsi Fast/cepat'
+          'Eval: Functions': 'Eval:  Resep Desain'
+          'Unplugged: Booleans': 'Unplugged/tidak terpasang: Boolean'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged/tidak terpasang:
+            Kondisional dan fungsi Piecewise'
+          'Eval: Conditionals': 'Eval: Kondisional'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged/tidak
+            terpasang: pendeeteksi benturan dan Formula jarak'
+          'Calc: Evaluation Blocks': 'Calc: Blok Evaluasi'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged.tidak terpasang
+            : Video Games dan Coordinate Planes'
+          'Eval: Boolean Operators': 'Eval: Operator Boolean'
+          Blocks to Math: Blok untuk matematika
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Mendefinisikan variabel
             (Big Game)'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animasi (Big Game)'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+          'Play Lab: Collision Detection (Big Game)': 'Bermain Lab: Pendeteksi benturan
             (Big Game)'
-          'Eval: Fast Functions': 'Eval: Fast Functions'
-          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
-          'Eval: Design Recipe': 'Eval: Design Recipe'
+          'Eval: Fast Functions': 'Eval: Fungsi Fast/cepat'
+          'Play Lab: Design Recipe': 'Play Lab:  Resep Desain'
+          'Eval: Design Recipe': 'Eval:  Resep Desain'
         playlab:
-          title: Play Lab
+          title: Play Lab/Lab Permainan
           description: Buat cerita atau buat permainan dengan Play Lab!
-          Play Lab: Play Lab
+          Play Lab: Play Lab/Lab Permainan
           description_short: Buat cerita atau buat permainan dengan Play Lab!
         artist:
           title: Artis
@@ -218,8 +218,8 @@
             the Artist!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Deskripsi singkat Scrat.
+          description: Deskripsi panjang Scrat
           'Maze: Sequence': 'Labirin: Urutan'
         hourofcode:
           Maze: Labirin
@@ -311,83 +311,85 @@
           Special: Spesial
           Binary: Biner
         usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
-          Blocks to Math: Blocks to Math
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          title: Kegunaan matematika pada sekolah menengah
+          description_short: Kegunaan tes untuk matematika pada sekolah menengah
+          description: Kegunaan tes untuk matematika pada sekolah menengah
+          Usability testing for MSM: Kegunaan tes untuk MSM
+          Evaluation Blocks: Blok Evaluasi
+          Blocks to Math: Blok untuk matematika
+          Strings and Images: String dan gambar
+          Defining Variables: Mendefinisikan variabel
+          Defining Functions: Mendefinisikan fungsi
+          Design Recipe: Desain resep
           Booleans: Boolean
           Conditionals: Kondisi
           Free Play: Permainan Gratis
         algebra:
           title: Ilmu Komputer dalam Aljabar
-          description: Learn Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
-          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          description: Belajar pemrograman fungsional melalui aljabar
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged.tidak terpasang
+            : Video Games dan Coordinate Planes'
+          'Calc: Evaluation Blocks': Blok Evaluasi dan Ekspresi Aritmatika
+          'Eval: Strings and Images': String dan gambar
+          'Unplugged: Contracts': 'Unplugged/tidak terpasang: Kontrak, Domain dan
+            Range'
+          'Eval: Writing Contracts': Menulis kontrak
+          'Calc: Defining Variables': Mendefinisikan variabel dan substitusi
+          'Play Lab: Defining Variables (Big Game)': Big Game - variabel
+          'Eval: Defining Functions': Fungsi komposit
+          'Unplugged: The Design Recipe': 'Unplugged/tidak terpasang: Resep desain'
+          'Play Lab: Defining Functions': Ketinggian roket
+          'Eval: Functions': Pemecahan permasalah kata dengan resep desain
+          'Play Lab: Animation (Big Game)': Big Game - animasi
+          'Unplugged: Booleans': 'Unplugged/tidak terpasang : Boolean dan logika'
+          'Eval: Boolean Operators': Operator Boolean
           'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
+          'Play Lab: Boolean (Big Game)': Big Game - Boolean
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged/tidak terpasang:
+            Kondisional dan fungsi Piecewise'
           'Eval: Conditionals': Kondisi
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged/tidak
+            terpasang : Pendeteksian Benturan dan Teorema Pythagoras'
+          'Play Lab: Collision Detection (Big Game)': Big Game - Pendeteksian Benturan
         infinity:
           title: Play Lab
-          description_short: Buat cerita atau buat permainan dengan Play Lab!
-          description: Buat cerita atau buat permainan dengan Play Lab!
-          Play Lab: Play Lab
+          description_short: Gunakan Play Lab untuk membuat sebuah cerita atau permainan
+            yang dibintangi karakter Disney tak terbatas.
+          description: Gunakan Play Lab untuk membuat sebuah cerita atau permainan
+            yang dibintangi karakter Disney tak terbatas.
+          Play Lab: Play Lab/Lab Permainan
           Infinity: ∞
         algebrademo:
-          title: Algebra Demo
-          description_short: A handful of puzzles to demonstrate the environment and
-            programming language used in Code.org CS in Algebra
-          description: A handful of puzzles to demonstrate the environment and programming
-            language used in Code.org CS in Algebra
-          Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          title: Demo Aljabar
+          description_short: Sejumlah teka-teki untuk menunjukkan lingkungan dan bahasa
+            pemrograman yang digunakan dalam Code.org CS di Aljabar
+          description: Sejumlah teka-teki untuk menunjukkan lingkungan dan bahasa
+            pemrograman yang digunakan dalam Code.org CS di Aljabar
+          Algebra Demo: Demo Aljabar
+          Evaluation Blocks: Blok Evaluasi
+          Making Pictures: Membuat gambar
+          Defining Variables: Mendefinisikan variabel
+          Defining Simple Functions: Mendefinisikan fungsi sederhana
+          The Design Recipe: Resep desain
         K5PD:
-          title: K5 Professional Development
-          description: Professional Development for K5 Courses
-          description_short: Professional Development for K5 Courses
-          Introduction to PD: Introduction to PD
-          Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
-          Navigating the teacher dashboard: Navigating the teacher dashboard
-          Unplugged lessons: Unplugged lessons
-          Classroom Culture: Classroom Culture
-          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
-            3
-          K-5 Courses: K-5 Courses
-          Writing computer programs in Blockly: Writing computer programs in Blockly
+          title: Pengembangan profesional K5
+          description: Pengembangan profesional untuk kursus K5
+          description_short: Pengembangan profesional untuk kursus K5
+          Introduction to PD: Pengantar PD
+          Blockly Basics: Blockly dasar
+          Writing computer programs: Menulis program komputer
+          Navigating the teacher dashboard: Menavigasi dashboard guru
+          Unplugged lessons: Pelajaran Unplugged/tidak terpasang
+          Classroom Culture: budaya Kelas
+          Ways to go beyond Courses 1, 2, and 3: Cara untuk melampaui Program 1, 2,
+            dan 3
+          K-5 Courses: kursus K-5
+          Writing computer programs in Blockly: Menulis program komputer di Blockly
           Teacher Dashboard: Teacher Dashboard
-          Personal Reflection: Personal Reflection
-          Next Steps: Next Steps
-          Computer Science Pedagogy: Computer Science Pedagogy
+          Personal Reflection: Refleksi pribadi
+          Next Steps: Langkah berikutnya
+          Computer Science Pedagogy: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
+          Programming Concepts: Programming Concepts
         netsim:
           title: Simulator Internet
           description_short: ''
@@ -395,17 +397,17 @@
           Internet Simulator: Simulator Internet
           Unit 1: Unit 1
           Unit 2: Unit 2
-          Sending Bits: Sending Bits
-          Routing and DNS: Routing and DNS
-          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
-          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
-          Internet Simulator Templates: Internet Simulator Templates
+          Sending Bits: Mengirimkan bit
+          Routing and DNS: Routing dan DNS
+          'Unit 1: Sending Bits': 'Unit 1: Mengirim bit'
+          'Unit 2: Routing and DNS': 'Unit 2: Routing dan DNS'
+          Internet Simulator Templates: template Simulator Internet
         pixelation:
-          title: Pixelation
+          title: Pixelation / pikselasi
           description: Create images with bits and bytes.
-          Pixelation: Pixelation
+          Pixelation: Pixelation / pikselasi
         20-hour:
-          title: K-8 Kursus pengenalan Ilmu komputer (15-25 jam)
+          title: Pengenalan Kursus 20 jam
           description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat
             dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan
             di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan
@@ -436,7 +438,7 @@
           The Maze: Labirin
           Applab: Applab
           The Artist: Artis
-          Play Lab: Play Lab
+          Play Lab: Play Lab/Lab Permainan
         events:
           title: kegiatan
           description: ''
@@ -462,35 +464,41 @@
           description: ''
           Hour of Code 2013: Koding satu jam 2013
         Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Tantangan Puzzle Kode Studio
+          description_short: Tantang diri Anda!
+          description: Cobalah ini coding teka-teki yang menyenangkan ini. Lakukan
+            yang terbaik!
+          Puzzles: Puzzles/Teka-teki
         CodeStudioPuzzleChallenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Tantangan Puzzle Kode Studio
+          description_short: Tantang diri Anda!
+          description: Cobalah ini coding teka-teki yang menyenangkan ini. Lakukan
+            yang terbaik!
+          Puzzles: Puzzles/Teka-teki
         Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Uji Tantangan Puzzle Kode Studio
+          description_short: Tantang diri Anda!
+          description: Cobalah ini coding teka-teki yang menyenangkan ini. Lakukan
+            yang terbaik!
+          Puzzles: Puzzles/Teka-teki
         How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Uji Tantangan Puzzle Kode Studio
+          description_short: Tantang diri Anda!
+          description: Cobalah ini coding teka-teki yang menyenangkan ini. Lakukan
+            yang terbaik!
+          Puzzles: Puzzles/Teka-teki
         Tutorial - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Tutorial - Tantangan Puzzle Kode Studio
+          description_short: Tantang diri Anda!
+          description: Cobalah ini coding teka-teki yang menyenangkan ini. Lakukan
+            yang terbaik!
+          Puzzles: Puzzles/Teka-teki
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Tutorial - Tantangan Puzzle Kode Studio
+          description_short: Tantang diri Anda!
+          description: Cobalah ini coding teka-teki yang menyenangkan ini. Lakukan
+            yang terbaik!
+          Puzzles: Puzzles/Teka-teki
         course4pre:
           title: Kursus 4 Prasyarat
           description_short: Sbuah ringkasan rampup dari konsep bagi siswa yang belum
@@ -508,94 +516,116 @@
           'Artist: Functions': 'Artis: Fungsi'
           'Bee: Debugging': 'Lebah: Debugging'
         cspunit1:
-          title: CSP Unit 1
-          description_short: Make Black and White Images with the pixelation tool
-          description: CSP Unit 1 Stages
-          Lesson14: Lesson14
-          Lesson 14: Lesson 14
-          Lesson 14 v2: Lesson 14 v2
-          Lesson 15: Lesson 15
-          Lesson 8: Lesson 8
-          Lesson 5: Lesson 5
-          Lesson 3: Lesson 3
-          Lesson 4: Lesson 4
-          Lesson 6: Lesson 6
-          Lesson 2: Lesson 2
-          Lesson 7: Lesson 7
-          Lesson 1: Lesson 1
-          Innovation: Innovation
-          Sending Binary Messages: Sending Binary Messages
-          Sending More Complex Messages: Sending More Complex Messages
-          Bit Sending Widget: Bit Sending Widget
-          Sending Bits in the Real World: Sending Bits in the Real World
-          Number Systems: Number Systems
-          Binary Numbers: Binary Numbers
+          title: CSP Unit 1 - informasi Digital
+          description_short: Jelajahi bagaimana informasi digital diwakili dan ditransfer
+          description: Unit ini membahas tantangan teknis dan pertanyaan yang muncul
+            dari kebutuhan untuk mewakili informasi digital di komputer dan mentransferkannya
+            antara manusia dan perangkat komputasi.
+          Lesson14: Pelajaran14
+          Lesson 14: Pelajaran ke- 14
+          Lesson 14 v2: Pelajaran ke- 14 v2
+          Lesson 15: Pelajaran ke- 15
+          Lesson 8: Pelajaran ke- 8
+          Lesson 5: Pelajaran ke-5
+          Lesson 3: Pelajaran ke- 3
+          Lesson 4: Pelajaran ke- 4
+          Lesson 6: Pelajaran ke- 6
+          Lesson 2: Pelajaran ke- 2
+          Lesson 7: Pelajaran ke-7
+          Lesson 1: Pelajaran 1
+          Innovation: Inovasi
+          Sending Binary Messages: Mengirim pesan biner
+          Sending More Complex Messages: Mengirim pesan yang lebih kompleks
+          Bit Sending Widget: Bit Widget pengiriman
+          Sending Bits in the Real World: Mengirimkan bit di dunia nyata
+          Number Systems: Sistem nomor
+          Binary Numbers: Bilangan Biner
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: kompresi Teks
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
+            Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
         algebraPD:
-          title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
-          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+          title: Ilmu komputer dalam aljabar PD
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged.tidak terpasang
+            : Video Games dan Coordinate Planes'
+          'Calc: Evaluation Blocks': 'Calc: Blok Evaluasi'
+          'Eval: Strings and Images': 'Eval: String dan gambar'
+          'Unplugged: Contracts': 'Unplugged/tidak terpasang: kontrak'
+          'Eval: Writing Contracts': 'Eval: Menulis kontrak'
+          'Calc: Defining Variables': 'Calc: Mendefinisikan variabel'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Mendefinisikan variabel
             (Big Game)'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 'Play Lab: Booleans'
+          'Eval: Defining Functions': 'Eval: Mendefinisikan fungsi'
+          'Unplugged: The Design Recipe': 'Unplugged/tidak terpasang: Resep desain'
+          'Play Lab: Defining Functions': 'Play Lab: Mendefinisikan fungsi'
+          'Eval: Functions': 'Eval: fungsi'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animasi (Big Game)'
+          'Unplugged: Booleans': 'Unplugged/tidak terpasang: Boolean'
+          'Eval: Boolean Operators': 'Eval: Operator Boolean'
+          'Play Lab: Booleans': 'Play Lab: Boolean'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
-          'Eval: Conditionals': 'Eval: Conditionals'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged/tidak terpasang:
+            Kondisional dan fungsi Piecewise'
+          'Eval: Conditionals': 'Eval: Kondisional'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged/tidak
+            terpasang: pendeeteksi benturan dan Formula jarak'
+          'Play Lab: Collision Detection (Big Game)': 'Bermain Lab: Pendeteksi benturan
             (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Blok Evaluasi
+          Strings and Images: String dan gambar
           Contracts: Kontrak
-          Your Game - Defining Variables: Your Game - Defining Variables
-          Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
-          Your Game - Animation: Your Game - Animation
+          Your Game - Defining Variables: Your Game - mendefinisikan variabel
+          Simple Function Definition: Definisi fungsi sederhana
+          The Design Recipe: Resep desain
+          Your Game - Animation: Your Game - animasi
           Booleans: Boolean
           Sam the Bat: Sam the Bat
-          Your Game - Booleans: Your Game - Booleans
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          Rocket-Height: Rocket-Height
-          Design Recipe Practice: Design Recipe Practice
+          Your Game - Booleans: Your Game - Boolean
+          Conditionals and Piecewise Functions: Kondisional dan fungsi Piecewise
+          Rocket-Height: Ketinggian roket
+          Design Recipe Practice: Desain resep praktek
+          Introduction to PD: Pengantar PD
         algPDmiami:
-          title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Rocket-Height: Rocket-Height
-          Design Recipe Practice: Design Recipe Practice
-          Your Game - Animation: Your Game - Animation
+          title: Ilmu komputer dalam aljabar PD
+          description: Mengajarkan aljabar melalui pemrograman fungsional
+          Evaluation Blocks: Blok Evaluasi
+          Strings and Images: String dan gambar
+          Rocket-Height: Ketinggian roket
+          Design Recipe Practice: Desain resep praktek
+          Your Game - Animation: Your Game - animasi
           Booleans: Boolean
           Sam the Bat: Sam the Bat
-          Your Game - Booleans: Your Game - Booleans
-          Luigi's Pizza: Luigi's Pizza
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+          Your Game - Booleans: Your Game - Boolean
+          Luigi's Pizza: Pizza Luigi
+          'Play Lab: Collision Detection (Big Game)': 'Bermain Lab: Pendeteksi benturan
             (Big Game)'
-          Your Game - Player Movement: Your Game - Player Movement
-          Your Game - Collision Detection: Your Game - Collision Detection
+          Your Game - Player Movement: Your Game - gerakan pemain
+          Your Game - Collision Detection: Permainan Anda - Pendeteksian benturan
         text-compression:
-          title: Text Compression
-          description: Compress text by identifying repeated patterns.
-          Text Compression: Text Compression
+          title: kompresi Teks
+          description: Kompres teks dengan mengidentifikasi pola yang berulang-ulang.
+          Text Compression: kompresi Teks
         CSPPD:
-          new stage: new stage
-          Introduction to PD: Introduction to PD
+          new stage: tahap baru
+          Introduction to PD: Pengantar PD
         CSPLessonSamples:
-          title: CSP Lesson Samples
-          description_short: lesson samples for csp
-          Lesson 14: Lesson 14
-          Lesson 15: Lesson 15
+          title: sampel pelajaran CSP
+          description_short: sampel pelajaran untuk csp
+          Lesson 14: Pelajaran ke- 14
+          Lesson 15: Pelajaran ke- 15
+        ECSPD:
+          Introduction to PD: Pengantar PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Pengantar PD

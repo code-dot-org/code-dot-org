@@ -80,9 +80,9 @@ pt-PT:
   create_art_with_zombie: ou fazer arte avançada com zombie
   i_am_a: Eu sou
   never_spam: Nós nunca te enviaremos spam
-  enter_country: Introduzir nome do país se estiver fora dos Estados Unidos
-  used_infrequent_updates: Usado apenas para atualizações não frequentes
-  privacy_practices_children: Veja as nossas práticas de privacidade para crianças
+  enter_country: Digita o nome do país se não estiveres nos E.U.A.
+  used_infrequent_updates: Será utilizado apenas para atualizações não regulares
+  privacy_practices_children: Lê a política de segurança para saberes mais
   petition_thankyou: Obrigado por assinares a petição
   continue_learning_header: Vê o que podes fazer além da Hora de Código
   continue_learning_body: Existem muitas opções. Podes aprender online, numa escola local ou num acampamento de verão.
@@ -116,13 +116,13 @@ pt-PT:
   studiobar_hoc_title: A Hora de Código
   studiobar_hoc_body: Aprenda a programar com o Angry Birds
   studiobar_flappy_title: Flappy Bird
-  studiobar_flappy_body: 'Cria e partilha a tua versão do jogo "Flappy Bird"'
+  studiobar_flappy_body: 'Cria e partilha a tua própria versão do jogo "Flappy Bird"'
   studiobar_teacher_title: Salas de aula únicas
   studiobar_teacher_body: Se for Professor, pode usar o Code Studio na sala de aula
   studiobar_frozen_title: Hora de Código
   studiobar_frozen_body: Cria obras de arte na neve com a Anna e com a Elsa
   studiobar_donate_title: Doar
-  studiobar_donate_body: Para cada dólar que doar, mais um aluno poderá aprender a programar
+  studiobar_donate_body: Por cada dólar que doar, mais um aluno poderá aprender a programar
   studiobar_shop_title: Comprar
   studiobar_shop_body: Quebre os estereótipos. Use o nosso logótipo com orgulho.
   homepage_hero_text_malala: |
@@ -207,7 +207,7 @@ pt-PT:
   homepage_slot_text_title_advocates: Advogados
   homepage_slot_text_blurb_advocates: Apoia o nosso trabalho
   homepage_slot_text_link_stats: Vê as estatísticas
-  homepage_slot_text_link_buy: Comprar uma t-shirt ou um boné
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Faz uma doação
   homepage_header_codestudio: Criações de alunos no Code Studio
   homepage_header_donors: Agradecemos a quem nos apoia
@@ -412,7 +412,7 @@ pt-PT:
   carousel_heading_domestic: Tutorias disponíveis em inglês
   carousel_heading_beginners: Tutoriais para iniciantes
   carousel_heading_javascript: Tutoriais que ensinam JavaScript
-  carousel_heading_unplugged: Sem dispositivo ou internet? Tente ciências da computação desconectado
+  carousel_heading_unplugged: Não tens um dispositivo nem acesso à Internet?
   carousel_heading_devices: Aplicativos de tutoriais para telefones e tablets
   carousel_heading_languages: Tutorias em outras linguagens de programação
   carousel_heading_apps_games: Crie seus próprios aplicativos ou jogos

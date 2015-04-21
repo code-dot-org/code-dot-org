@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "We've provided a couple of empty functions for safe-left? and safe-right? The first thing you need to do is complete the onscreen? function so that it checks whether both safe-left? and safe-right? are true. TIP - even after you add safe-left? and safe-right? your sprites won't return to the screen. That will happen in the next puzzles when we make sure that safe-left? and safe-right? actually work.",
+    "instructions": "We've provided a couple of empty functions for safe-left? and safe-right? The first thing you need to do is complete the onscreen? function so that it checks whether both safe-left? and safe-right? are true. TIP - even after you add safe-left? and safe-right? your sprites won't return to the screen - why do you think that is?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

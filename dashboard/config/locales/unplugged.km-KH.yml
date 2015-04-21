@@ -270,18 +270,24 @@
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description
+        video: alg_5_contracts
       DesignRecipe:
         title: The Design Recipe
         desc: Design Recipe lesson description
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans
         desc: Booleans lesson description
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
+        video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lesson description
+        video: alg_16_biggame_collision_detection

@@ -45,8 +45,8 @@
           'Bee: Loops': 'Bitė: kartojimas'
           'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
           'Artist: Loops': 'Menininkas: kartojimas'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Amžius 4+ (pradedantiesiems skaityti)
+          description_short: 1 kursas yra skirtas pradedantiesiems skaityti.
         course2:
           The Maze: Labirintas
           Suzi: Suzi
@@ -88,7 +88,7 @@
           'Maze: Sequence2': 'Labirintas: seka2'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
           description_audience: Nuo 6 metų (reikia mokėti skaityti)
-          description_short: Course 2 is designed for students who can read.
+          description_short: 2 kursas yra skirtas mokiniams, kurie jau moka skaityti.
         course3:
           The Maze: Labirintas
           'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
@@ -138,8 +138,8 @@
           'Bee: Debugging2': 'Bitė: klaidų ieškojimas2'
           'Artist: Patterns': 'Menininkas: raštai'
           Songwriting: Dainų rašymas
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Amžius 8+ (po 2 kurso)
+          description_short: 3 kursas yra antrojo kurso tęsinys.
         msm:
           title: Vidurinės mokyklos matematika
           description: Private work in progress for Middle School Math.
@@ -167,8 +167,8 @@
           'Artist: Conditionals': 'Menininkas: sąlygos'
           Collision Detection and the Distance Formula: Susidūrimai ir atstumo formulė
           'Play Lab: Collision Detection': 'Žaidimų laboratorija: susidūrimai'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
-            the Coordinate Plane'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Papildoma pamokėlė: katinas
+            nindzė ir koordinačių plokštuma'
           'Eval: Strings and Images': 'Eval: Strings and Images'
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
@@ -179,16 +179,17 @@
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
           'Eval: Conditionals': 'Eval: Conditionals'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
+          'Unplugged: Collision Detection and the Distance Formula': 'Papildoma pamokėlė:
+            susidūrimo aptikimas ir atstumo formulė'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          'Unplugged: Video Games and Coordinate Planes': 'Papildoma pamokėlė: kompiuteriniai
+            žaidimai ir koordinačių plokštuma'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
           Blocks to Math: Blocks to Math
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Defining Variables (Big Game)': 'Žaidimų laboratorija: kintamųjų
+            apibrėžimas (Didysis žaidimas)'
+          'Play Lab: Animation (Big Game)': 'Žaidimų laboratorija: animacijos (Didysis
+            žaidimas)'
           'Play Lab: Boolean (Big Game)': 'Žaidimų laboratorija: Logika (Big Game)'
           'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
             nustatymas (Big Game)'
@@ -206,16 +207,16 @@
           Artist: Menininkas
           description_short: Nupiešk šaunius piešinius ir ornamentus su menininku!
         scrat:
-          title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          title: Voverė
+          description_short: Voverės trumpas aprašymas.
+          description: Voverės ilgas aprašymas
           'Maze: Sequence': 'Labirintas: seka'
         hourofcode:
           Maze: Labirintas
           title: „Programavimo valanda“
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Išmėginkite programavimo pradmenis kartu su personažais iš
+            Angry Birds, Plants vs. Zombies ir vovere iš Ledynmečio!
+          description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
         frozen:
           title: Programuokite kartu su Ana ir Elze
           description: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo grožį
@@ -225,8 +226,7 @@
           description_short: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
             grožį ir magiją.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
+          description_short: Mokiniai turėtų pradėti 4 kursą tik užbaigę 2 ir 3 kursus.
           description: Kursas 4 skirtas tiems, kas jau išbandė 2 ir 3. Užduotėlės
             bus sudėtingesnės, orientuota 4-8 kl. moksleiviams.
           'Artist: Variables': 'Menininkas: kintamieji'
@@ -256,7 +256,7 @@
           Farmer Binary: Farmer Binary
           Maze and Bee: Labirintas ir bitė
           Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Amžius 10+ (pabaigus 3 kursą)
         Course4pre:
           title: Course 4 Prerequisite
           description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
@@ -272,61 +272,60 @@
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Intro: Įvadas
+          Variables and For Loops: Kintamieji ir kartojimas
+          Functions and Functions with Parameters: Komandos ir komandos su parametrais
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
           Variables: Kintamieji
-          For Loops: For Loops
-          Binary: Binary
+          For Loops: Kartojimas
+          Binary: Dvejetainis
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: specialus
+          description_short: specialus
+          description: specialus
+          Special: Specialus
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
-          Binary: Binary
+          title: specialus
+          description_short: specialus
+          description: specialus
+          Special: Specialus
+          Binary: Dvejetainis
         usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
+          title: Vidurinės mokyklos matematikos panaudojimas
+          description_short: Vidurinės mokyklos matematikos panaudojimas testavimui
+          description: Vidurinės mokyklos matematikos panaudojimas testavimui
           Usability testing for MSM: Usability testing for MSM
           Evaluation Blocks: Evaluation Blocks
           Blocks to Math: Blocks to Math
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Strings and Images: Eilutės ir paveikslėliai
+          Defining Variables: Kintamųjų apibrėžimas
+          Defining Functions: Komandų apibrėžimas
           Design Recipe: Design Recipe
           Booleans: Loginės reikšmės
           Conditionals: Sąlyginiai sakiniai
           Free Play: Free Play
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          title: Informatika algebroje
+          description: Išmokite programuoti funkcijas panaudojant algebrą
+          'Unplugged: Video Games and Coordinate Planes': 'Papildoma pamokėlė: kompiuteriniai
+            žaidimai ir koordinačių plokštuma'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Eval: Strings and Images': Eilutės ir paveikslėliai
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
+          'Play Lab: Defining Variables (Big Game)': Didysis žaidimas – kintamieji
           'Eval: Defining Functions': 'Eval: Defining Functions'
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Play Lab: Defining Functions': Raketos aukštis
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 'Žaidimų laboratorija: loginės reikšmės'
-          'Play Lab: Boolean (Big Game)': 'Žaidimų laboratorija: Logika (Big Game)'
+          'Play Lab: Animation (Big Game)': Didysis žaidimas – animacija
+          'Unplugged: Booleans': 'Papildoma pamokėlė: Būlio kintamieji ir logika'
+          'Eval: Boolean Operators': Būlio loginiai operatoriai
+          'Play Lab: Booleans': Šikšnosparnis Semas
+          'Play Lab: Boolean (Big Game)': Didysis žaidimas – Būlio kintamieji
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
           'Eval: Conditionals': Sąlyginiai sakiniai
@@ -336,8 +335,10 @@
             nustatymas (Big Game)'
         infinity:
           title: Laboratorija
-          description_short: Sukurk istoriją arba žaidimą!
-          description: Sukurk istoriją arba žaidimą!
+          description_short: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje
+            bus Disnėjaus Infinity personažai.
+          description: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje
+            bus Disnėjaus Infinity personažai.
           Play Lab: Laboratorija
           Infinity: Begalybė
         algebrademo:
@@ -349,7 +350,7 @@
           Algebra Demo: Algebra Demo
           Evaluation Blocks: Evaluation Blocks
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Kintamųjų apibrėžimas
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: The Design Recipe
         K5PD:
@@ -357,37 +358,39 @@
           description: Professional Development for K5 Courses
           description_short: Professional Development for K5 Courses
           Introduction to PD: Introduction to PD
-          Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
-          Navigating the teacher dashboard: Navigating the teacher dashboard
-          Unplugged lessons: Unplugged lessons
-          Classroom Culture: Classroom Culture
+          Blockly Basics: Blockly pagrindai
+          Writing computer programs: Kompiuterinių programų rašymas
+          Navigating the teacher dashboard: Mokytojo prietaisų skydelio valdymas
+          Unplugged lessons: Papildomos pamokėlės
+          Classroom Culture: Klasės kultūra
           Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
             3
-          K-5 Courses: K-5 Courses
-          Writing computer programs in Blockly: Writing computer programs in Blockly
-          Teacher Dashboard: Teacher Dashboard
+          K-5 Courses: Kursai pradinių klasių mokiniams
+          Writing computer programs in Blockly: Kompiuterinių programų rašymas su
+            Blockly
+          Teacher Dashboard: Mokytojo prietaisų skydelis
           Personal Reflection: Personal Reflection
-          Next Steps: Next Steps
-          Computer Science Pedagogy: Computer Science Pedagogy
+          Next Steps: Kiti žingsniai
+          Computer Science Pedagogy: Informatikos pedagogika
+          Programming Concepts: Programming Concepts
         netsim:
-          title: Internet Simulator
+          title: Interneto simuliatorius
           description_short: ''
           description: ''
-          Internet Simulator: Internet Simulator
+          Internet Simulator: Interneto simuliatorius
           Unit 1: Skyrius 1
           Unit 2: Skyrius 2
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
           'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
-          Internet Simulator Templates: Internet Simulator Templates
+          Internet Simulator Templates: Interneto simuliatoriaus šablonai
         pixelation:
-          title: Pixelation
+          title: Pikseliavimas
           description: Create images with bits and bytes.
-          Pixelation: Pixelation
+          Pixelation: Pikseliavimas
         20-hour:
-          title: Programavimo įvado kursas (15-25 valandos)
+          title: 20-ties valandų įvadiniai kursai
           description: Šis 20-ties valandų informatikos kursas supažindina su programavimo
             pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
             esant bet kurioje amžiaus grupėje.
@@ -439,39 +442,39 @@
           description: ''
           Step: Žingsnis
         Hour of Code:
-          title: Hour of Code 2013
+          title: Programavimo valanda 2013
           description: ''
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: Programavimo valanda 2013
         Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Kodavimo studijos galvosūkiai
+          description_short: Iššūkis tau!
+          description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
+          Puzzles: Galvosūkiai
         CodeStudioPuzzleChallenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Kodavimo studijos galvosūkiai
+          description_short: Iššūkis tau!
+          description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
+          Puzzles: Galvosūkiai
         Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Išmėgink Kodavimo studijos galvosūkius
+          description_short: Iššūkis tau!
+          description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
+          Puzzles: Galvosūkiai
         How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Išmėgink Kodavimo studijos galvosūkius
+          description_short: Iššūkis tau!
+          description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
+          Puzzles: Galvosūkiai
         Tutorial - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Pamoka – Kodavimo studijos galvosūkiai
+          description_short: Iššūkis tau!
+          description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
+          Puzzles: Galvosūkiai
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Pamoka – Kodavimo studijos galvosūkiai
+          description_short: Iššūkis tau!
+          description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
+          Puzzles: Galvosūkiai
         course4pre:
           title: Course 4 Prerequisite
           description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
@@ -490,42 +493,53 @@
           title: CSP Unit 1
           description_short: Make Black and White Images with the pixelation tool
           description: CSP Unit 1 Stages
-          Lesson14: Lesson14
-          Lesson 14: Lesson 14
-          Lesson 14 v2: Lesson 14 v2
-          Lesson 15: Lesson 15
-          Lesson 8: Lesson 8
-          Lesson 5: Lesson 5
-          Lesson 3: Lesson 3
-          Lesson 4: Lesson 4
-          Lesson 6: Lesson 6
-          Lesson 2: Lesson 2
-          Lesson 7: Lesson 7
-          Lesson 1: Lesson 1
-          Innovation: Innovation
-          Sending Binary Messages: Sending Binary Messages
-          Sending More Complex Messages: Sending More Complex Messages
+          Lesson14: 14 pamoka
+          Lesson 14: 14 pamoka
+          Lesson 14 v2: 14 pamoka v2
+          Lesson 15: 15 pamoka
+          Lesson 8: 8 pamoka
+          Lesson 5: 5 pamoka
+          Lesson 3: 3 pamoka
+          Lesson 4: 4 pamoka
+          Lesson 6: 6 pamoka
+          Lesson 2: 2 pamoka
+          Lesson 7: 7 pamoka
+          Lesson 1: 1 pamoka
+          Innovation: Inovacija
+          Sending Binary Messages: Dvejetainių žinučių siuntimas
+          Sending More Complex Messages: Sudėtingų žinučių siuntimas
           Bit Sending Widget: Bit Sending Widget
-          Sending Bits in the Real World: Sending Bits in the Real World
-          Number Systems: Number Systems
-          Binary Numbers: Binary Numbers
+          Sending Bits in the Real World: Bitų persiuntimas realiame pasaulyje
+          Number Systems: Skaičių sistemos
+          Binary Numbers: Dvejetainiai skaičiai
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
+            Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
         algebraPD:
-          title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          title: Informatika algebroje
+          description: Išmokite programuoti funkcijas panaudojant algebrą
+          'Unplugged: Video Games and Coordinate Planes': 'Papildoma pamokėlė: kompiuteriniai
+            žaidimai ir koordinačių plokštuma'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
           'Eval: Strings and Images': 'Eval: Strings and Images'
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
+          'Play Lab: Defining Variables (Big Game)': 'Žaidimų laboratorija: kintamųjų
+            apibrėžimas (Didysis žaidimas)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Play Lab: Defining Functions': 'Žaidimų laboratorija: komandų apibrėžimas'
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Žaidimų laboratorija: animacijos (Didysis
+            žaidimas)'
           'Unplugged: Booleans': 'Unplugged: Booleans'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
           'Play Lab: Booleans': 'Žaidimų laboratorija: loginės reikšmės'
@@ -533,48 +547,58 @@
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
           'Eval: Conditionals': 'Eval: Conditionals'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
+          'Unplugged: Collision Detection and the Distance Formula': 'Papildoma pamokėlė:
+            susidūrimo aptikimas ir atstumo formulė'
           'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
             nustatymas (Big Game)'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: Eilutės ir paveikslėliai
           Contracts: Contracts
-          Your Game - Defining Variables: Your Game - Defining Variables
-          Simple Function Definition: Simple Function Definition
+          Your Game - Defining Variables: Tavo žaidimas – kintamųjų apibrėžimas
+          Simple Function Definition: Paprastų komandų apibrėžimas
           The Design Recipe: The Design Recipe
-          Your Game - Animation: Your Game - Animation
+          Your Game - Animation: Tavo žaidimas – animacijos
           Booleans: Loginės reikšmės
-          Sam the Bat: Sam the Bat
-          Your Game - Booleans: Your Game - Booleans
+          Sam the Bat: Šikšnosparnis Semas
+          Your Game - Booleans: Tavo žaidimas – Loginės reikšmės
           Conditionals and Piecewise Functions: Sąlygos ir funkcijos iš dalių
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Introduction to PD
         algPDmiami:
-          title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
+          title: Informatika algebroje
+          description: Algebros mokymas per funkcijų programavimą
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: Eilutės ir paveikslėliai
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
-          Your Game - Animation: Your Game - Animation
+          Your Game - Animation: Tavo žaidimas – animacijos
           Booleans: Loginės reikšmės
-          Sam the Bat: Sam the Bat
-          Your Game - Booleans: Your Game - Booleans
+          Sam the Bat: Šikšnosparnis Semas
+          Your Game - Booleans: Tavo žaidimas – Loginės reikšmės
           Luigi's Pizza: Luigi's Pizza
           'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
             nustatymas (Big Game)'
-          Your Game - Player Movement: Your Game - Player Movement
-          Your Game - Collision Detection: Your Game - Collision Detection
+          Your Game - Player Movement: Tavo žaidimas – veikėjų judėjimas
+          Your Game - Collision Detection: Tavo žaidimas – susidūrimo aptikimas
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
         CSPPD:
-          new stage: new stage
+          new stage: naujas lygis
           Introduction to PD: Introduction to PD
         CSPLessonSamples:
           title: CSP Lesson Samples
           description_short: lesson samples for csp
-          Lesson 14: Lesson 14
-          Lesson 15: Lesson 15
+          Lesson 14: 14 pamoka
+          Lesson 15: 15 pamoka
+        ECSPD:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Introduction to PD

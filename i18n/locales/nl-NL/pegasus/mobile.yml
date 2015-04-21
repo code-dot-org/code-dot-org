@@ -136,33 +136,33 @@ nl-NL:
   homepage_hero_text_satya: '&ldquo;Informatica geeft je toegang tot de mooiste kansen ter wereld.&rdquo; Satya, directeur van Microsoft'
   homepage_hero_text_bosh: '&ldquo;Als je programmeert kun je zelf je leven bepalen.&rdquo; Chris Bosh'
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Deze vaardigheden hebben mijn toekomst
+    veranderd. Maar het is ook gewoon leuk.&rdquo;
+    Luna, brugklas
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Mijn kinderen waren nog nooit zo
+    enthousiast over leren.&rdquo;
+    Michael, leraar
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;Van computerkunde weet je pas of je
+    't leuk vindt, wanneer je het probeert&rdquo;
+    Jackson, groep 8
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;Met programmeren kun je alles
+    doen wat je brein kan bedenken.&rdquo;
+    Maya, groep 4
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;Computerkunde is niet iets voor een ander.
+    Het is iets voor jou, hier, nu.&rdquo;
+    Geraldo, leraar
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;Programmeren bevordert creativiteit, inspiratie en innovatie &mdash;
+    zaken die belangrijk zijn voor elke carrière.&rdquo;
+    Floresa, lerares
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;100% van mijn leerlingen raakte door dit
+    programma geëngageerd en betrokken en deed actief mee.&rdquo;
+    Adam, leraar
   homepage_slot_text_hoc: Het Uur Code
   homepage_slot_text_frozen: Frozen met Anna en Elsa
   homepage_slot_text_teacher: Dashboard Leerkrachten
@@ -193,7 +193,7 @@ nl-NL:
   homepage_slot_text_title_advocates: Pleitbezorgers
   homepage_slot_text_blurb_advocates: Ondersteun ons werk
   homepage_slot_text_link_stats: Bekijk de statistieken
-  homepage_slot_text_link_buy: Koop een t-shirt of een pet
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Doneer
   homepage_header_codestudio: Creaties van Code Studio leerlingen
   homepage_header_donors: Code.org dankt zijn aanhangers

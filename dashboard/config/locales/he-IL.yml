@@ -252,7 +252,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Teacher Home Page
+      classroom: דף הבית של המורה
       district_dashboard: District Dashboard
       label: היי %{username}
       stats: ההתקדמות שלי
@@ -396,6 +396,7 @@
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: גלריה
+    no_primary_course: Try a course at Code Studio
   gender:
     male: גבר
     female: אישה
@@ -545,6 +546,8 @@
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Enter your answer here
   dialog:
@@ -614,8 +617,8 @@
     create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
-    save: Save
-    delete: Delete
+    save: שמור
+    delete: מחק
     exit: Return to Course
     my_projects: My Projects
     share: שתף
@@ -630,7 +633,7 @@
       below to make a new Play Lab or Artist project!<br/>You can come back and work
       on your projects at any time.
     need_help: Need help getting started?
-    really_delete: Delete?
+    really_delete: למחוק?
     delete_yes: כן
     delete_no: לא
     saved: Saved

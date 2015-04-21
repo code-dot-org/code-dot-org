@@ -418,6 +418,7 @@
     heading_apps: <h2>Diversión para</h2><h1>Todos</h1>
     heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     your_gallery: Galeria
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Varón
     female: Mujer
@@ -573,6 +574,8 @@
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Escribe aquí tu respuesta
   dialog:
