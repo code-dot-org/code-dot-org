@@ -45,8 +45,8 @@ Blockly.FieldLabel = function(text, customOptions) {
 
   var loadingSize = {width: 0, height: 25};
   this.forceSize_ = customOptions.hasOwnProperty('fixedSize');
-  this.forceZeroWidth_ = customOptions.fixedSize &&
-    customOptions.fixedSize.width === 0;
+  this.forceWidth_ = this.forceSize_ && customOptions.fixedSize.width !== undefined;
+
   // ideally we would dynamically resize based on fontSize. instead we depend
   // on fixedSize being set if you want to also change the size
   this.fontSize_ = customOptions.fontSize;
@@ -78,7 +78,7 @@ Blockly.FieldLabel.prototype.init = function(block) {
 
 Blockly.FieldLabel.prototype.getSize = function() {
   // Update the width if we don't have one, unless we've forced the size to 0
-  if (!this.size_.width && !this.forceZeroWidth_) {
+  if (!this.size_.width && !this.forceWidth_) {
     this.updateWidth_();
   }
   return this.size_;
@@ -116,7 +116,7 @@ Blockly.FieldLabel.prototype.setText = function(text) {
   }
 
   // Cached width is obsolete.  Clear it.
-  if (!this.forceSize_) {
+  if (!this.forceWidth_) {
     this.size_.width = 0;
   }
 
