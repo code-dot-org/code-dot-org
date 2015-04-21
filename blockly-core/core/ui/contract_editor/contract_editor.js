@@ -54,7 +54,7 @@ goog.require('goog.array');
 /**
  * Class for a functional block-specific contract editor.
  * @param {Object} configuration - configuration parameters
- * @param {string} configuration.disableExamples - whether to never show examples
+ * @param {boolean} configuration.disableExamples - whether to never show examples
  * @constructor
  */
 Blockly.ContractEditor = function(configuration) {
@@ -334,6 +334,7 @@ Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlig
 
 Blockly.ContractEditor.prototype.addNewExampleBlock_ = function () {
   this.addNewExampleBlockForFunction_(this.functionDefinitionBlock);
+  this.refreshBlockInputTypes_();
 };
 
 /**
@@ -366,6 +367,35 @@ Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(ex
 };
 
 /**
+ * Update examples and the function definition's input types to match
+ * the function definition block's type.
+ * @private
+ */
+Blockly.ContractEditor.prototype.refreshBlockInputTypes_ = function () {
+  this.setBlockInputsToType_(this.currentFunctionDefinitionType_());
+};
+
+Blockly.ContractEditor.prototype.setBlockInputsToType_ = function (newType) {
+  var blocksToUpdate = this.exampleBlocks.concat(this.functionDefinitionBlock);
+  blocksToUpdate.forEach(function (exampleBlock) {
+    exampleBlock.updateInputsToType(newType);
+  }, this);
+};
+
+/**
+ * @returns {Blockly.BlockValueType}
+ * @private
+ */
+Blockly.ContractEditor.prototype.currentFunctionDefinitionType_ = function () {
+  var functionDefinitionCheck = this.functionDefinitionBlock.previousConnection.getCheck();
+  if (!functionDefinitionCheck || functionDefinitionCheck.length !== 1) {
+    throw "Contract editor function definition should have exactly one type check";
+  }
+
+  return functionDefinitionCheck[0];
+};
+
+/**
  * Removes the given example block from the example block list
  * @param block
  * @private
@@ -390,6 +420,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
     for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
       this.addNewExampleBlockForFunction_(tempFunctionDefinitionBlock);
     }
+    this.refreshBlockInputTypes_();
   }
 
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
@@ -528,6 +559,8 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
 };
 
 Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {
+  this.refreshBlockInputTypes_();
+
   var isEditingVariable = this.functionDefinitionBlock.isVariable();
 
   if (isEditingVariable) {
@@ -662,9 +695,12 @@ Blockly.ContractEditor.prototype.addRangeEditor_ = function() {
 Blockly.ContractEditor.prototype.outputTypeChanged_ = function (newType) {
   this.updateFrameColorForType_(newType);
   if (this.functionDefinitionBlock) {
+    // avoid disconnection during type change by allowing any type temporarily
+    this.setBlockInputsToType_(Blockly.BlockValueType.NONE);
     this.functionDefinitionBlock.updateOutputType(newType);
-    this.modalBlockSpace.events.dispatchEvent(
-      Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
+    this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
+    this.refreshBlockInputTypes_();
+    this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
   }
 };
 
@@ -700,5 +736,5 @@ Blockly.ContractEditor.prototype.changeParameterType_ = function(paramID, newTyp
 Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newName) {
   var paramInfo = this.getParamNameType(paramID);
   var oldName = paramInfo.name;
-  Blockly.Variables.renameVariable(oldName, newName, Blockly.mainBlockSpace)
+  Blockly.Variables.renameVariable(oldName, newName, Blockly.modalBlockSpace)
 };

@@ -62,7 +62,7 @@
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "În timp ce o valoare este falsă, atunci fă unele declaraţii.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "În timp ce o valoare este adevărată, atunci fă unele declaraţii.",
   "DEFINE_HEADER_DEFINITION": "Definiţie",
-  "DEFINE_FUNCTION_DEFINE": "Defineste",
+  "DEFINE_FUNCTION_DEFINE": "Defineşte",
   "DELETE_BLOCK": "Șterge Bloc",
   "DELETE_PARAMETER": "Șterge parametrul...",
   "DELETE_PARAMETER_TITLE": "Aceasta va şterge toate apariţiile parametrului '%1'. Eşti sigur?",

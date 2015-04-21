@@ -35,7 +35,7 @@ Our 20-hour courses help even the youngest students try computer science
 <br/>
 Learn how computer programmers use algebra and geometry to develop video games 
 
-[CS in Science](/curriculum/mss/)
+[CS in Science](/curriculum/science/)
 <br/>
 Explore and develop complex scientific models through agent-based programming 
 
