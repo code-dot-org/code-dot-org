@@ -27,7 +27,7 @@ template: none
 %input.form-control{'ng-model' => 'workshop.cohort_id', type:'text', 'ng-model' => 'workshop.location'}
 %h3
   Time Zone
-%select{'ng-model' => 'workshop.time_zone', name:'timeZone', "ng-options"=>"timeZone as timeZone for timeZone in ['Hawaii Time', 'Alaska Time', 'Pacific Time', 'Mountain Time', 'Central Time', 'Eastern Time']"}
+%select.form-control{'ng-model' => 'workshop.time_zone', name:'timeZone', "ng-options"=>"timeZone as timeZone for timeZone in ['Hawaii Time', 'Alaska Time', 'Pacific Time', 'Mountain Time', 'Central Time', 'Eastern Time']"}
 %h3
   Program Type
 %select.form-control{'ng-model' => 'workshop.program_type'}
