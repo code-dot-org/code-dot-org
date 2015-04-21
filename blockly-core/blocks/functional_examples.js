@@ -60,7 +60,7 @@ Blockly.Blocks.functional_example = {
    * Updates the functional examples' usage types
    * @param {Blockly.BlockValueType} newType
    */
-  updateUsageType: function (newType) {
+  updateInputsToType: function (newType) {
     this.updateInputType_(this.getInput('EXPECTED'), newType);
     this.updateInputType_(this.getInput('ACTUAL'), newType);
     this.render();
