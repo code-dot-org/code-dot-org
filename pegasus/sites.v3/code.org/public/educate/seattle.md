@@ -46,7 +46,7 @@ Code.org offers an elementary school curriculum that allows even the youngest st
 
 Schools and teachers can [sign up now](http://www.jotformpro.com/form/50198109848969) to offer two middle school programs consisting of instructional modules and professional development for the introduction of computer science concepts into math and science classrooms.
 
-Learn more about curriculum for [Computer Science in Science](/curriculum/mss) and [Computer Science in Algebra](/curriculum/msm).
+Learn more about curriculum for [Computer Science in Science](/curriculum/science) and [Computer Science in Algebra](/curriculum/msm).
 
 - There is no cost for schools to apply
 - Stipends to teachers are paid by Code.org

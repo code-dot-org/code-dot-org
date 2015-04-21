@@ -53,6 +53,8 @@ var SLIDER_DEFAULT_MAX_VALUE = 100;
  *        on the slider will be Infinity/Unlimited.  Default FALSE.
  * @param {boolean} [options.lowerBoundInfinite] - if TRUE, the lowest value
  *        on the slider will be -Infinity/Unlimited.  Default FALSE.
+ * @param {boolean} [options.isDisabled] - if TRUE the slider value is locked
+ *        and cannot be changed.
  */
 var NetSimSlider = module.exports = function (rootDiv, options) {
   /**
@@ -130,6 +132,13 @@ var NetSimSlider = module.exports = function (rootDiv, options) {
     throw new Error("NetSimSlider does not support non-integer step values. " +
         " Use DecimalPrecisionSlider instead.");
   }
+
+  /**
+   * Whether the slider is disabled and noninteractable.
+   * @type {boolean}
+   * @private
+   */
+  this.isDisabled_ = utils.valueOr(options.isDisabled, false);
 };
 
 /**
@@ -172,7 +181,8 @@ NetSimSlider.prototype.render = function () {
         max: maxPosition,
         step: Math.abs(this.step_),
         slide: this.onSliderValueChange_.bind(this),
-        stop: this.onSliderStop_.bind(this)
+        stop: this.onSliderStop_.bind(this),
+        disabled: this.isDisabled_
       });
 
   // Use wider labels if we have an infinite bound
@@ -181,6 +191,22 @@ NetSimSlider.prototype.render = function () {
   }
 
   this.setLabelFromValue_(this.value_);
+};
+
+/**
+ * Disable this slider, so the user can't change its value
+ */
+NetSimSlider.prototype.disable = function () {
+  this.isDisabled_ = true;
+  this.rootDiv_.find('.slider').slider('option', 'disabled', true);
+};
+
+/**
+ * Enable this slider, so the user can change its value
+ */
+NetSimSlider.prototype.enable = function () {
+  this.isDisabled_ = false;
+  this.rootDiv_.find('.slider').slider('option', 'disabled', false);
 };
 
 /**

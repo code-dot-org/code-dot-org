@@ -276,7 +276,7 @@ module Pegasus
     end
 
     def http_vary_add_type(vary,type)
-      types = vary.to_s.split(',').map { |v| v.strip }
+      types = vary.to_s.split(',').map(&:strip)
       return vary if types.include?('*') || types.include?(type)
       types.push(type).join(',')
     end
@@ -355,6 +355,10 @@ end
 require src_dir 'course'
 
 class CurriculumRouter < Pegasus::Base
+
+  get '/curriculum/mss*' do
+    redirect "/curriculum/science/#{params['splat'][0]}"
+  end
 
   get '/curriculum/:kind' do |kind|
     # Temporarily prevent non K-5/MSM curriculum from appearing on production.

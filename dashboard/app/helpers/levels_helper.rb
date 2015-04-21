@@ -238,6 +238,12 @@ module LevelsHelper
       show_metronome
       show_encoding_controls
       default_enabled_encodings
+      show_bit_rate_control
+      lock_bit_rate_control
+      default_bit_rate_bits_per_second
+      show_chunk_size_control
+      lock_chunk_size_control
+      default_chunk_size_bits
       show_router_bandwidth_control
       default_router_bandwidth
       show_router_memory_control

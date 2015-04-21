@@ -75,6 +75,23 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           included in the visible controls will be enabled and cannot be
  *           disabled by the student.
  *
+ * @property {boolean} showBitRateControl - Whether the bit rate slider should
+ *           be displayed on the "My Device" tab.
+ *
+ * @property {boolean} lockBitRateControl - Whether the bit rate slider should
+ *           be adjustable by the student.
+ *
+ * @property {number} defaultBitRateBitsPerSecond - Default bit rate on level
+ *           load.  Also sets the pulse rate for levels with the metronome.
+ *
+ * @property {boolean} showChunkSizeControl - Whether the chunk size slider
+ *           should be displayed on the "My Device" tab.
+ *
+ * @property {boolean} lockChunkSizeControl - Whether the chunk size slider
+ *           should be adjustable by the student.
+ *
+ * @property {number} defaultChunkSizeBits- Default chunk size on level load.
+ *
  * @property {boolean} showRouterBandwidthControl - Whether students should be
  *           able to see and manipulate the slider that adjusts the router's
  *           max throughput speed.
@@ -141,6 +158,12 @@ levels.custom = {
   showMetronome: false,
   showEncodingControls: [],
   defaultEnabledEncodings: [],
+  showBitRateControl: false,
+  lockBitRateControl: false,
+  defaultBitRateBitsPerSecond: Infinity,
+  showChunkSizeControl: false,
+  lockChunkSizeControl: false,
+  defaultChunkSizeBits: 8,
 
   // Router tab and its controls
   showRouterBandwidthControl: false,

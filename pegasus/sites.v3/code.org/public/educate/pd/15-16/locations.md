@@ -26,7 +26,7 @@ nav: pd2_nav
 <br />
 [MD - Howard](/educate/pd/15-16/howard)
 <br />
-[MD - Prince Geroge's County](/educate/pd/15-16/pg)
+[MD - Prince George's County](/educate/pd/15-16/pg)
 <br />
 [NC - Durham](/educate/pd/15-16/durham)
 <br />
