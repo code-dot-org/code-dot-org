@@ -73,5 +73,8 @@ Code.org will require the Evaluator to use and maintain any data given to the Ev
 The Entity will be responsible, where applicable, for implementing annual notifications, obtaining any necessary student, parent or guardian consents, record-keeping and other such privacy requirements relating to these services.
 
 
+</br></br>
 
+===
 
+Side note: in the case of Chicago Public Schools, the Code.org contract specifies additional clauses with respect to student data, but the actual implementation is no different than the above. [More info](/educate/cpscontract)
