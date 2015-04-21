@@ -264,8 +264,7 @@ function initializeWithContractEditor(xmlString) {
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.hasTrashcan = true;
-  var functionalDefinitionXML = xmlString;
-  var xml = Blockly.Xml.textToDom(functionalDefinitionXML);
+  var xml = Blockly.Xml.textToDom(xmlString);
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
   Blockly.useModalFunctionEditor = true;
   Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
