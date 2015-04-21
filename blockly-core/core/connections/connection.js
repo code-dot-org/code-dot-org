@@ -647,13 +647,23 @@ Blockly.Connection.prototype.acceptsType = function(type) {
  *     (to allow chaining).
  */
 Blockly.Connection.prototype.setCheck = function(check) {
-  if (check && check !== Blockly.BlockValueType.NONE) {
+  if (check) {
     // Ensure that check is in an array.
     if (!(check instanceof Array)) {
       check = [check];
     }
 
     this.check_ = check;
+
+    var legacyTypeFound = Blockly.Connection.findLegacyType_(check);
+    if (legacyTypeFound) {
+      /**
+       * Intended for temporary post-rename debugging
+       * Should not be hit by normal usage
+       * TODO(bjordan): Remove once confident no remaining usages
+       */
+      throw "Legacy type format found: " + legacyTypeFound;
+    }
 
     // The new value type may not be compatible with the existing connection.
     if (this.targetConnection && !this.checkAllowedConnectionType_(this.targetConnection)) {
@@ -672,11 +682,29 @@ Blockly.Connection.prototype.setCheck = function(check) {
 };
 
 /**
- * @returns {?Array.<Blockly.BlockValueType>}
+ * Tries to find a legacy type check on this connection
+ * @returns {*}
+ * @private
+ * @param checkArray
  */
-Blockly.Connection.prototype.getCheck = function () {
-  return this.check_;
+Blockly.Connection.findLegacyType_ = function(checkArray) {
+  if (!checkArray) {
+    return false;
+  }
+  for (var i = 0; i < checkArray.length; i++) {
+    var type = checkArray[i];
+    if (Blockly.Connection.isLegacyType_(type)) {
+      return type;
+    }
+  }
+  return null;
 };
+
+Blockly.Connection.isLegacyType_ = function(type) {
+  var startsWithLowercase = /^[a-z]/.test(type);
+  return startsWithLowercase;
+};
+
 
 /**
  * Find all nearby compatible connections to this connection.
