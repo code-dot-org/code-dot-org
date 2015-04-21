@@ -334,7 +334,7 @@ Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlig
 
 Blockly.ContractEditor.prototype.addNewExampleBlock_ = function () {
   this.addNewExampleBlockForFunction_(this.functionDefinitionBlock);
-  this.updateInputTypes_();
+  this.refreshBlockInputTypes_();
 };
 
 /**
@@ -367,24 +367,15 @@ Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(ex
 };
 
 /**
- * Updates examples and the function definition to allow any type of input.
- * Used to avoid disconnection in the middle of a type switch-over.
- * @private
- */
-Blockly.ContractEditor.prototype.updateInputsToAcceptAnything_ = function () {
-  this.updateInputsToType_(Blockly.BlockValueType.NONE);
-};
-
-/**
  * Update examples and the function definition's input types to match
  * the function definition block's type.
  * @private
  */
-Blockly.ContractEditor.prototype.updateInputTypes_ = function () {
-  this.updateInputsToType_(this.currentFunctionDefinitionType_());
+Blockly.ContractEditor.prototype.refreshBlockInputTypes_ = function () {
+  this.setBlockInputsToType_(this.currentFunctionDefinitionType_());
 };
 
-Blockly.ContractEditor.prototype.updateInputsToType_ = function (newType) {
+Blockly.ContractEditor.prototype.setBlockInputsToType_ = function (newType) {
   var blocksToUpdate = this.exampleBlocks.concat(this.functionDefinitionBlock);
   blocksToUpdate.forEach(function (exampleBlock) {
     exampleBlock.updateInputsToType(newType);
@@ -426,7 +417,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
     for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
       this.addNewExampleBlockForFunction_(tempFunctionDefinitionBlock);
     }
-    this.updateInputTypes_();
+    this.refreshBlockInputTypes_();
   }
 
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
@@ -565,7 +556,7 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
 };
 
 Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {
-  this.updateInputTypes_();
+  this.refreshBlockInputTypes_();
 
   var isEditingVariable = this.functionDefinitionBlock.isVariable();
 
@@ -701,10 +692,11 @@ Blockly.ContractEditor.prototype.addRangeEditor_ = function() {
 Blockly.ContractEditor.prototype.outputTypeChanged_ = function (newType) {
   this.updateFrameColorForType_(newType);
   if (this.functionDefinitionBlock) {
-    this.updateInputsToAcceptAnything_();
+    // avoid disconnection during type change by allowing any type temporarily
+    this.setBlockInputsToType_(Blockly.BlockValueType.NONE);
     this.functionDefinitionBlock.updateOutputType(newType);
     this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
-    this.updateInputTypes_();
+    this.refreshBlockInputTypes_();
     this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
   }
 };
