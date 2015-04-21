@@ -65,7 +65,7 @@ Blockly.Blocks.functional_definition = {
    * Updates the function definition's input type
    * @param {Blockly.BlockValueType} newType
    */
-  updateUsageType: function (newType) {
+  updateInputsToType: function (newType) {
     this.updateInputType_(this.getInput('STACK'), newType);
     this.render();
   },

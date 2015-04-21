@@ -334,7 +334,7 @@ Blockly.ContractEditor.prototype.setSectionHighlighted = function (viewToHighlig
 
 Blockly.ContractEditor.prototype.addNewExampleBlock_ = function () {
   this.addNewExampleBlockForFunction_(this.functionDefinitionBlock);
-  this.updateExampleInputTypes_();
+  this.updateInputTypes_();
 };
 
 /**
@@ -367,26 +367,27 @@ Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(ex
 };
 
 /**
- * Updates examples to allow any type of input.
+ * Updates examples and the function definition to allow any type of input.
  * Used to avoid disconnection in the middle of a type switch-over.
  * @private
  */
-Blockly.ContractEditor.prototype.updateExamplesToAnyType_ = function () {
-  this.updateExampleInputsToType_(Blockly.BlockValueType.NONE);
+Blockly.ContractEditor.prototype.updateInputsToAcceptAnything_ = function () {
+  this.updateInputsToType_(Blockly.BlockValueType.NONE);
 };
 
 /**
- * Update examples' input types to match the function definition block's type
+ * Update examples and the function definition's input types to match
+ * the function definition block's type.
  * @private
  */
-Blockly.ContractEditor.prototype.updateExampleInputTypes_ = function () {
-  this.updateExampleInputsToType_(this.currentFunctionDefinitionType_());
+Blockly.ContractEditor.prototype.updateInputTypes_ = function () {
+  this.updateInputsToType_(this.currentFunctionDefinitionType_());
 };
 
-Blockly.ContractEditor.prototype.updateExampleInputsToType_ = function (newType) {
+Blockly.ContractEditor.prototype.updateInputsToType_ = function (newType) {
   var blocksToUpdate = this.exampleBlocks.concat(this.functionDefinitionBlock);
   blocksToUpdate.forEach(function (exampleBlock) {
-    exampleBlock.updateUsageType(newType);
+    exampleBlock.updateInputsToType(newType);
   }, this);
 };
 
@@ -425,7 +426,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
     for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
       this.addNewExampleBlockForFunction_(tempFunctionDefinitionBlock);
     }
-    this.updateExampleInputTypes_();
+    this.updateInputTypes_();
   }
 
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
@@ -564,7 +565,7 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
 };
 
 Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {
-  this.updateExampleInputTypes_();
+  this.updateInputTypes_();
 
   var isEditingVariable = this.functionDefinitionBlock.isVariable();
 
@@ -700,10 +701,10 @@ Blockly.ContractEditor.prototype.addRangeEditor_ = function() {
 Blockly.ContractEditor.prototype.outputTypeChanged_ = function (newType) {
   this.updateFrameColorForType_(newType);
   if (this.functionDefinitionBlock) {
-    this.updateExamplesToAnyType_();
+    this.updateInputsToAcceptAnything_();
     this.functionDefinitionBlock.updateOutputType(newType);
     this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
-    this.updateExampleInputTypes_();
+    this.updateInputTypes_();
     this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
   }
 };
