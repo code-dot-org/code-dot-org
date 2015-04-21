@@ -383,13 +383,16 @@ Blockly.ContractEditor.prototype.setBlockInputsToType_ = function (newType) {
 };
 
 /**
- * Gets the current function definition type, assuming there is only one type
- * check on the function definition block.
  * @returns {Blockly.BlockValueType}
  * @private
  */
 Blockly.ContractEditor.prototype.currentFunctionDefinitionType_ = function () {
-  return this.functionDefinitionBlock.previousConnection.check_[0];
+  var functionDefinitionCheck = this.functionDefinitionBlock.previousConnection.getCheck();
+  if (!functionDefinitionCheck || functionDefinitionCheck.length !== 1) {
+    throw "Contract editor function definition should have exactly one type check";
+  }
+
+  return functionDefinitionCheck[0];
 };
 
 /**

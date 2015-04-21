@@ -672,29 +672,11 @@ Blockly.Connection.prototype.setCheck = function(check) {
 };
 
 /**
- * Tries to find a legacy type check on this connection
- * @returns {*}
- * @private
- * @param checkArray
+ * @returns {?Array.<Blockly.BlockValueType>}
  */
-Blockly.Connection.findLegacyType_ = function(checkArray) {
-  if (!checkArray) {
-    return false;
-  }
-  for (var i = 0; i < checkArray.length; i++) {
-    var type = checkArray[i];
-    if (Blockly.Connection.isLegacyType_(type)) {
-      return type;
-    }
-  }
-  return null;
+Blockly.Connection.prototype.getCheck = function () {
+  return this.check_;
 };
-
-Blockly.Connection.isLegacyType_ = function(type) {
-  var startsWithLowercase = /^[a-z]/.test(type);
-  return startsWithLowercase;
-};
-
 
 /**
  * Find all nearby compatible connections to this connection.
