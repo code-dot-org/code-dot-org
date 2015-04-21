@@ -13,7 +13,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "ideal": "9",
+    "ideal": "10",
     "slider_speed": "0.4",
     "embed": "false",
     "disable_param_editing": "true",
@@ -21,8 +21,16 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "disable_sharing": "false"
-  }
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
+  },
+  "md5": "3472e524c82b59564ba2180ea5cb2c38"
 }]]></config>
   <blocks>
     <toolbox_blocks>
