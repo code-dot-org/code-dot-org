@@ -79,8 +79,8 @@ module LevelsHelper
     l = @level
     throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
-    app_options = l.blockly_options
-    level_options = app_options[:level]
+    app_options = l.blockly_options.dup
+    level_options = app_options[:level] = app_options[:level].dup
 
     # Locale-dependent option
     # Fetch localized strings
