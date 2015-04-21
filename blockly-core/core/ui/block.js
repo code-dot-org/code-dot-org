@@ -2090,7 +2090,7 @@ Blockly.Block.prototype.removeInput = function(name, opt_quiet) {
 /**
  * Fetches the named input object.
  * @param {string} name The name of the input.
- * @return {Blockly.Input|null} The input object, or null of the input does not exist.
+ * @return {Object} The input object, or null of the input does not exist.
  */
 Blockly.Block.prototype.getInput = function(name) {
   for (var x = 0, input; input = this.inputList[x]; x++) {

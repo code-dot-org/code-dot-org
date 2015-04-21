@@ -1271,12 +1271,6 @@ Blockly.Blocks.functional_definition = {shouldHideIfInMainBlockSpace:function() 
   this.parameterNames_ = [];
   this.paramIds_ = [];
   this.parameterTypes_ = []
-}, updateInputsToType:function(a) {
-  this.updateInputType_(this.getInput("STACK"), a);
-  this.render()
-}, updateInputType_:function(a, b) {
-  a.setHSV.apply(a, Blockly.FunctionalTypeColors[b]);
-  a.setCheck(b)
 }, mutationToDom:function() {
   for(var a = document.createElement("mutation"), b = 0;b < this.parameterNames_.length;b++) {
     var c = document.createElement("arg");
@@ -1490,13 +1484,6 @@ Blockly.Blocks.functional_example = {shouldHideIfInMainBlockSpace:function() {
 }, updateOutputType:function(a) {
   this.outputType_ = a;
   this.changeFunctionalOutput(this.outputType_)
-}, updateInputsToType:function(a) {
-  this.updateInputType_(this.getInput("EXPECTED"), a);
-  this.updateInputType_(this.getInput("ACTUAL"), a);
-  this.render()
-}, updateInputType_:function(a, b) {
-  a.setHSV.apply(a, Blockly.FunctionalTypeColors[b]);
-  a.setCheck(b)
 }};
 Blockly.Blocks.functionalParameters = {};
 Blockly.Blocks.functional_parameters_get = {init:function() {
