@@ -420,7 +420,7 @@ a.about_list_item {
   padding: 0px;
   padding-bottom: 5px;
   margin-top: 26px;
-  /* background-color: rgb(255, 128, 0); color:white */
+  /* background-color: rgb(255, 164, 0); color:white */
 }
 
 .studiobar a:link, .studiobar a:visited, .studiobar a:hover, .studiobar a:active {
@@ -520,8 +520,8 @@ a.about_list_item {
 }
 
 #congrats .button_enabled {
-  background-color: rgb(255, 128, 0) !important;
-  border-color: rgb(255, 128, 0) !important;
+  background-color: rgb(255, 164, 0) !important;
+  border-color: rgb(255, 164, 0) !important;
   color: white !important;
 }
 
@@ -567,8 +567,8 @@ button {
   -webkit-user-select: none;
   -webkit-writing-mode: horizontal-tb;
   align-items: flex-start;
-  background-color: rgb(255, 128, 0) ;
-  border-color: rgb(255, 128, 0) ;
+  background-color: rgb(255, 164, 0) ;
+  border-color: rgb(255, 164, 0) ;
   background-image: none;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
