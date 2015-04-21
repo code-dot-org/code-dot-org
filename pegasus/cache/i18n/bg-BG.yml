@@ -172,28 +172,22 @@
     в света."&rdquo; Сатя, изпълнителен директор на Microsoft'
   homepage_hero_text_bosh: '&ldquo;"Ако се научите да програмирате , можете да определите
     и изберете посоката на вашия живот."&rdquo; Крис Бош'
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+  homepage_hero_text_student1: '&ldquo;"Тези умения промениха бъдещето ми. Да не говорим,
+    че това е забавно."&rdquo; Луна, 7-ми клас'
+  homepage_hero_text_student2: '&ldquo;"Аз никога, никога не съм виждал децата ми
+    толкова развълнувани от обучението."&rdquo; Майкъл, учител'
+  homepage_hero_text_student3: '&ldquo;"Компютърните науки са област, която няма как
+    да разберете дали ви харесва или не, око не сте се пробвали да програмирате"&rdquo;
+    Джаксън, 6-ти клас'
+  homepage_hero_text_student4: '&ldquo;"Можете да направите всичко, което ви хрумне
+    с програмиране."&rdquo; Мая, 2-ри клас'
+  homepage_hero_text_student5: '&ldquo;"Компютърните науки не са за други хора. Те
+    са за вас, тук и сега."&rdquo; Джералдо, учител'
+  homepage_hero_text_teacher1: '&ldquo;"Кодирането разпалва креативност, вдъхновение
+    и иновации, &mdash; които са от съществено значение за всяка кариера."&rdquo;
+    Флорес, учител'
+  homepage_hero_text_teacher2: '&ldquo;Тази програма ангажира и увлича  учениците
+    ми на 100%&rdquo; Адам, учител'
   homepage_slot_text_hoc: Един Час Програмиране
   homepage_slot_text_frozen: Замръзнали (Frozen) с Анна и Елза
   homepage_slot_text_teacher: Учителско табло
