@@ -6931,6 +6931,9 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
  * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
 StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
+  if (config.level.edit_blocks) {
+    loadLastAttempt = false;
+  }
   var startBlocks = config.level.startBlocks || '';
   if (loadLastAttempt) {
     startBlocks = config.level.lastAttempt || startBlocks;
