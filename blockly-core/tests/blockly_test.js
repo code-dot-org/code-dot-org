@@ -229,23 +229,52 @@ function test_contractEditor_add_examples() {
 }
 
 function test_contractEditor_change_output_types() {
-  var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title></block></xml>';
+  var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title><functional_input name="STACK"><block type="functional_call"><mutation name="functional-function"></mutation></block></functional_input></block></xml>';
   var container = initializeWithContractEditor(singleDefinitionString);
   Blockly.contractEditor.addNewExampleBlock_();
   Blockly.contractEditor.addNewExampleBlock_();
 
   var firstExample = Blockly.contractEditor.exampleBlocks[0];
+  var fnDefInput = Blockly.contractEditor.functionDefinitionBlock.getInput('STACK');
+  assertEquals('functional_call', fnDefInput.connection.targetBlock().type);
 
-  assertEquals('Number', Blockly.contractEditor.currentFunctionDefinitionType_());
-  assertEquals('Number', firstExample.getInput('ACTUAL').connection.check_[0]);
-  assertEquals('Number', firstExample.getInput('EXPECTED').connection.check_[0]);
-  assertEquals('Number', Blockly.contractEditor.functionDefinitionBlock.getInput('STACK').connection.check_[0]);
+  assertEquals('Function definition has correct initial type', 'Number',
+    Blockly.contractEditor.currentFunctionDefinitionType_());
+  assertEquals('Example actual slot has correct initial type', 'Number',
+    firstExample.getInput('ACTUAL').connection.check_[0]);
+  assertEquals('Example expected slot has correct initial type', 'Number',
+    firstExample.getInput('EXPECTED').connection.check_[0]);
+  assertEquals('Function definition slot has correct initial type', 'Number',
+    fnDefInput.connection.check_[0]);
+  var exampleFnCallBlockBefore = firstExample.getInput('ACTUAL').connection.targetBlock();
+  assertEquals('Example default function call block has correct type', 'Number',
+    exampleFnCallBlockBefore.previousConnection.check_[0]);
+  assertEquals('Function definition call block has correct type', 'Number',
+    fnDefInput.connection.targetBlock().previousConnection.check_[0]);
 
   Blockly.contractEditor.outputTypeChanged_('String');
 
-  assertEquals('String', Blockly.contractEditor.currentFunctionDefinitionType_());
-  assertEquals('String', firstExample.getInput('ACTUAL').connection.check_[0]);
-  assertEquals('String', firstExample.getInput('EXPECTED').connection.check_[0]);
+  assertEquals('Example actual has correct input type after type change', 'String',
+    firstExample.getInput('ACTUAL').connection.check_[0]);
+  assertEquals('Example expected has correct input type after type change', 'String',
+    firstExample.getInput('EXPECTED').connection.check_[0]);
+
+  var exampleFnCallBlockAfter = firstExample.getInput('ACTUAL').connection.targetBlock();
+  assertNotNull('Example actual call block is connected after type change',
+    exampleFnCallBlockAfter);
+  assertEquals('Example actual call block has correct type', 'String',
+    exampleFnCallBlockAfter.previousConnection.check_[0]);
+
+  assertEquals('Function definition changes type', 'String',
+    Blockly.contractEditor.currentFunctionDefinitionType_());
+  assertEquals('Function definition has correct input type after type change', 'String',
+    fnDefInput.connection.check_[0]);
+
+  var fnDefInputBlockAfter = fnDefInput.connection.targetBlock();
+  assertNotNull('Function call block still connected to function definition after type change',
+    fnDefInputBlockAfter);
+  assertEquals('Function definition call block has correct new type', 'String',
+    fnDefInputBlockAfter.previousConnection.check_[0]);
 
   Blockly.contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
