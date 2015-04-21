@@ -255,18 +255,24 @@
       VideoGamesCoordinatePlanes:
         title: 電玩遊戲和座標平面
         desc: Video Games and Coordinate Planes lesson description
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description
+        video: alg_5_contracts
       DesignRecipe:
         title: The Design Recipe
         desc: Design Recipe lesson description
+        video: alg_8_design_recipe
       Booleans:
         title: 布林值和邏輯
         desc: 布林值課程說明
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
+        video: alg_10_conditionals
       CollisionDetection:
         title: 碰撞檢測
         desc: 碰撞檢測的課程說明
+        video: alg_16_biggame_collision_detection

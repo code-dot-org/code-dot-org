@@ -74,24 +74,24 @@
         one: '1 error mengagalkan informasi %{resource} ini untuk disimpan:'
         other: '%{count} error menggagalkan informasi %{resource} ini untuk disimpan:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: Email undangan telah dikirim ke %{email}.
+      invitation_token_invalid: Token undangan yang disediakan tidak valid!
+      updated: Kata sandi berhasil diubah. Anda sekarang telah masuk.
+      no_invitations_remaining: Tidak ada undangan yang tersisa
+      invitation_removed: Undangan Anda telah dihapus.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Kirim undangan
+        submit_button: Kirim sebuah undangan
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Atur kata sandi Anda
+        submit_button: Mengatur sandi saya
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: petunjuk Undangan
+        hello: Halo %{email}
+        someone_invited_you: Seseorang telah mengundang Anda untuk %{url}, Anda dapat
+          menerimanya melalui link di bawah ini.
+        accept: Terima undangan
+        ignore: Jika Anda tidak ingin menerima undangan, harap Abaikan email ini.
+          < br / Akun Anda tidak dapat dibuat sampai Anda mengakses link di atas dan
+          mengatur sandi Anda.

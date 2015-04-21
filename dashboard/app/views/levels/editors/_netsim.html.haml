@@ -83,12 +83,6 @@
 
 %h3 My Device Tab
 .field
-  %table.checkboxes
-    %tr
-      %td= boolean_check_box f, :show_metronome
-      %td= f.label :show_metronome, 'Show metronome'
-      %td Whether the visual metronome (and its related speed control) are visible on the "My Device" tab.
-.field
   = f.label :show_encoding_controls, 'Show which encoding controls?'
   %p An array of encoding types ("ascii", "binary", etc.) which should have visible checkbox controls on the "My Device" tab.  Valid encoding names are "a_and_b", "binary", "hexadecimal", "decimal" and "ascii".  Example: <tt>["a_and_b", "binary", "ascii"]</tt>
   = f.text_area :show_encoding_controls, placeholder: 'Which encodings can the student control?', rows: 4
@@ -100,6 +94,36 @@
   = f.text_area :default_enabled_encodings, placeholder: 'Which encodings are enabled by default?', rows: 4
   :javascript
       codeMirror('default_enabled_encodings', 'javascript');
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_metronome
+      %td= f.label :show_metronome, 'Show metronome'
+      %td Whether the visual metronome (and its related speed control) are visible on the "My Device" tab.
+    %tr
+      %td= boolean_check_box f, :show_bit_rate_control
+      %td= f.label :show_bit_rate_control, 'Show bit rate control'
+      %td Whether the bit rate slider should be displayed on the "My Device" tab.
+    %tr
+      %td= boolean_check_box f, :lock_bit_rate_control
+      %td= f.label :lock_bit_rate_control, 'Lock bit rate control'
+      %td Whether the bit rate slider can be manipulated by the student
+    %tr
+      %td= boolean_check_box f, :show_chunk_size_control
+      %td= f.label :show_chunk_size_control, 'Show chunk size control'
+      %td Whether the chunk size slider should be displayed on the "My Device" tab.
+    %tr
+      %td= boolean_check_box f, :lock_chunk_size_control
+      %td= f.label :lock_chunk_size_control, 'Lock chunk size control'
+      %td Whether the chunk size slider can be manipulated by the student
+.field
+  = f.label :default_bit_rate_bits_per_second
+  %p Default local device bit rate on level load.  Also sets the pulse rate for levels with the metronome.
+  = f.text_field :default_bit_rate_bits_per_second, placeholder: 'Bit rate in bits per second, e.g. "1024" or "Infinity".'
+.field
+  = f.label :default_chunk_size_bits
+  %p Default chunk size on level load.
+  = f.text_field :default_chunk_size_bits, placeholder: 'Chunk size in bits, e.g. "8".'
 
 %h3 Router Tab
 .field

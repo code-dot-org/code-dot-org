@@ -1,179 +1,126 @@
 en:
   data:
-    text_match:
-      Blocks to Bools 1:
-        Convert Blocks to Math: crwdns24832:0crwdne24832:0
-        Type out the arithmetic expression that matches this code: crwdns24833:0crwdne24833:0
-        /script_assets/msm/unit6/blockstomath1.png, 500: crwdns35968:0crwdne35968:0
-        (4+5) > 9: crwdns24835:0crwdne24835:0
-        ((4+5) > 9): crwdns35736:0crwdne35736:0
-        Type the arithmetic expression here: crwdns24836:0crwdne24836:0
-      Blocks to Bools 2:
-        Convert Blocks to Math: crwdns24837:0crwdne24837:0
-        Type out the arithmetic expression that matches this code: crwdns24838:0crwdne24838:0
-        /script_assets/msm/unit6/blockstomath2.png, 500: crwdns35969:0crwdne35969:0
-        (10 > 11) or (7 <= 9): crwdns24840:0crwdne24840:0
-        (10 > 11) OR (7 <= 9): crwdns24841:0crwdne24841:0
-        (10 > 11) || (7 <= 9): crwdns24842:0crwdne24842:0
-        Type the arithmetic expression here: crwdns24843:0crwdne24843:0
-      Blocks to Bools 3:
-        Convert Blocks to Math: crwdns24844:0crwdne24844:0
-        Type out the arithmetic expression that matches this code: crwdns24845:0crwdne24845:0
-        /script_assets/msm/unit6/blockstomath3.png, 500: crwdns35970:0crwdne35970:0
-        (5 < 10) and (10 < 15): crwdns24847:0crwdne24847:0
-        (5 < 10) And (10 < 15): crwdns35971:0crwdne35971:0
-        (5 < 10) AND (10 < 15): crwdns24848:0crwdne24848:0
-        (5 < 10) && (10 < 15): crwdns24849:0crwdne24849:0
-        ((5 < 10) and (10 < 15)): crwdns35972:0crwdne35972:0
-        ((5 < 10) And (10 < 15)): crwdns35973:0crwdne35973:0
-        ((5 < 10) AND (10 < 15)): crwdns35974:0crwdne35974:0
-        ((5 < 10) && (10 < 15)): crwdns35975:0crwdne35975:0
-        Type the arithmetic expression here: crwdns24850:0crwdne24850:0
-      Blocks to Bools 4:
-        Convert Blocks to Math: crwdns24851:0crwdne24851:0
-        Type out the arithmetic expression that matches this code: crwdns24852:0crwdne24852:0
-        /script_assets/msm/unit6/blockstomath4.png, 500: crwdns35976:0crwdne35976:0
-        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): crwdns24854:0crwdne24854:0
-        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): crwdns35977:0crwdne35977:0
-        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): crwdns24855:0crwdne24855:0
-        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): crwdns24856:0crwdne24856:0
-        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): crwdns35978:0crwdne35978:0
-        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): crwdns35979:0crwdne35979:0
-        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): crwdns35980:0crwdne35980:0
-        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): crwdns35981:0crwdne35981:0
-        Type the arithmetic expression here: crwdns24857:0crwdne24857:0
-      Blocks to Math 1:
-        Convert Blocks to Math: crwdns24858:0crwdne24858:0
-        Type out the arithmetic expression that matches this code: crwdns24859:0crwdne24859:0
-        Blocks to Math 1.blocks.start_blocks, 200: crwdns27797:0crwdne27797:0
-        4 + 5: crwdns24861:0crwdne24861:0
-        (4+5): crwdns33887:0crwdne33887:0
-        Type the arithmetic expression here: crwdns24862:0crwdne24862:0
-      Blocks to Math 2:
-        Convert Blocks to Math: crwdns24863:0crwdne24863:0
-        Type out the arithmetic expression that matches this code: crwdns24864:0crwdne24864:0
-        Blocks to Math 2.blocks.start_blocks, 200: crwdns27798:0crwdne27798:0
-        7 * 6: crwdns24866:0crwdne24866:0
-        (7 * 6): crwdns33888:0crwdne33888:0
-        Type the arithmetic expression here: crwdns24867:0crwdne24867:0
-      Blocks to Math 3:
-        Convert Blocks to Math: crwdns24868:0crwdne24868:0
-        Type out the arithmetic expression that matches this code: crwdns24869:0crwdne24869:0
-        Blocks to Math 3.blocks.start_blocks: crwdns27799:0crwdne27799:0
-        (2 * 3) - (1 + 0): crwdns24871:0crwdne24871:0
-        2 * 3 - (1 + 0): crwdns24872:0crwdne24872:0
-        ((2 * 3) - (1 + 0)): crwdns33889:0crwdne33889:0
-        2 * 3 - 1 + 0: crwdns35982:0crwdne35982:0
-        Type the arithmetic expression here: crwdns24873:0crwdne24873:0
-      Blocks to Math 4:
-        Convert Blocks to Math: crwdns24874:0crwdne24874:0
-        Type out the arithmetic expression that matches this code: crwdns24875:0crwdne24875:0
-        Blocks to Math 4.blocks.start_blocks: crwdns27800:0crwdne27800:0
-        (5 + 8) - 12: crwdns24877:0crwdne24877:0
-        5 + 8 - 12: crwdns24878:0crwdne24878:0
-        ((5 + 8) - 12): crwdns33890:0crwdne33890:0
-        Type the arithmetic expression here: crwdns24879:0crwdne24879:0
-      Blocks to Math 5:
-        Convert Blocks to Math: crwdns24880:0crwdne24880:0
-        Type out the arithmetic expression that matches this code: crwdns24881:0crwdne24881:0
-        Blocks to Math 5.blocks.start_blocks: crwdns27801:0crwdne27801:0
-        (-2) * (-6):
-          - 
-            2 * -6: crwdns24883:0crwdne24883:0
-        ((-2) * (-6)): crwdns33891:0crwdne33891:0
-        Type the arithmetic expression here: crwdns24884:0crwdne24884:0
-      Blocks to Math 6:
-        Convert Blocks to Math: crwdns24885:0crwdne24885:0
-        Type out the arithmetic expression that matches this code: crwdns24886:0crwdne24886:0
-        Blocks to Math 6.blocks.start_blocks: crwdns27802:0crwdne27802:0
-        ((4 - 1) * (-2)) + 12: crwdns24888:0crwdne24888:0
-        ((4 - 1) * -2) + 12: crwdns24889:0crwdne24889:0
-        (4 - 1) * (-2) + 12: crwdns24890:0crwdne24890:0
-        (4 - 1) * -2 + 12: crwdns24891:0crwdne24891:0
-        ((4 - 1) * (-2)) + 12): crwdns33892:0crwdne33892:0
-        Type the arithmetic expression here: crwdns24892:0crwdne24892:0
-      Blocks to Math 7:
-        Convert Blocks to Math: crwdns24893:0crwdne24893:0
-        Type out the arithmetic expression that matches this code: crwdns24894:0crwdne24894:0
-        Blocks to Math 7.blocks.start_blocks: crwdns27803:0crwdne27803:0
-        10 / (2 * (3 + 1)): crwdns24896:0crwdne24896:0
-        (10 / (2 * (3 + 1)): crwdns33893:0crwdne33893:0
-        Type the arithmetic expression here: crwdns24897:0crwdne24897:0
-      Open text response example:
-        Open text response example: crwdns35069:0crwdne35069:0
-        I loved it because...: crwdns35070:0crwdne35070:0
-      PDK5 Classroom Culture 2:
-        Facilitating a positive learning environment in your computer science classroom: crwdns35071:0crwdne35071:0
-        0: crwdns35072:0crwdne35072:0
-        1: crwdns35073:0crwdne35073:0
-        In my classroom, I want to...: crwdns35074:0crwdne35074:0
-      PDK5 Course Descriptions:
-        Course Structure: crwdns35590:0crwdne35590:0
-        I am going to start with Course...: crwdns35076:0crwdne35076:0
-      PDK5 Difficulty:
-        Degree of Difficulty: crwdns35077:0crwdne35077:0
-        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: crwdns35078:0crwdne35078:0
-        Your thoughts here: crwdns35079:0crwdne35079:0
-      PDK5 Foundation:
-        Computer Science as a Foundational Skill: crwdns35080:0crwdne35080:0
-        Do you see computer science as a foundational skill for your students? Why or why not?: crwdns35081:0crwdne35081:0
-        Your thoughts here: crwdns35082:0crwdne35082:0
-      PDK5 Impact 1:
-        Impact for students: crwdns35083:0crwdne35083:0
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: crwdns35084:0crwdne35084:0
-        Your thoughts here: crwdns35085:0crwdne35085:0
-      PDK5 Impact 2:
-        Connections to other Subjects: crwdns35086:0crwdne35086:0
-        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: crwdns35087:0crwdne35087:0
-        Your thoughts here: crwdns35088:0crwdne35088:0
-      PDK5 Impact 3:
-        Real-world applications for Students: crwdns35089:0crwdne35089:0
-        0: crwdns35090:0crwdne35090:0
-        1: crwdns35091:0crwdne35091:0
-        Your thoughts here: crwdns35092:0crwdne35092:0
-      PDK5 Problem Solving:
-        Problem Solving Methods: crwdns35591:0crwdne35591:0
-        I could integrate this in my classroom by...: crwdns35592:0crwdne35592:0
-      PDK5 Promo Video:
-        "Code Studio: Kid tested, Teacher approved": crwdns35093:0crwdne35093:0
-      PDK5 Promo Video 2:
-        "Code Studio: Kid tested, Teacher approved": crwdns35593:0crwdne35593:0
-        My first impressions of Code Studio are...: crwdns35594:0crwdne35594:0
-      PDK5 Strategies O:
-        Strategies for Teaching Computer Science: crwdns35595:0crwdne35595:0
-        "I think teaching computer science will be different than teaching other subjects in these ways: ...": crwdns35596:0crwdne35596:0
-      Test Markdown level:
-        Enter title here: crwdns35095:0crwdne35095:0
-        Enter prompt here: crwdns35096:0crwdne35096:0
-      text match test:
-        Mathematical Expression Assessment: crwdns23416:0crwdne23416:0
-        Type out the arithmetic expression that this circle of evaluation evaluates to: crwdns23417:0crwdne23417:0
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: crwdns23418:0crwdne23418:0
-        (9-3)+(4*7): crwdns23419:0crwdne23419:0
-        (9-3)+4: null
-        9-3+4: null
-        Type the arithmetic expression here: crwdns23420:0crwdne23420:0
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: crwdns33894:0crwdne33894:0
+        Big Triangle|Image|Number|String: crwdns35113:0crwdne35113:0
+        EXAMPLE 1.solution_blocks, 300: crwdns27905:0crwdne27905:0
+        Write a contract for a big red triangle that is 100 pixels in size: crwdns27904:0crwdne27904:0
+      Creating Contracts From Examples 2:
+        Example 2.solution_blocks, 300: crwdns27909:0crwdne27909:0
+        Square Contract: crwdns33895:0crwdne33895:0
+        Square|Image|Number|String: crwdns35114:0crwdne35114:0
+        Write a contract for a purple square that is 15 pixels in size.: crwdns27908:0crwdne27908:0
+      Creating Contracts From Examples 3A:
+        Banner Contract: crwdns33896:0crwdne33896:0
+        Banner Function block: crwdns27912:0crwdne27912:0
+        Examples 3.solution_blocks, 300: crwdns27913:0crwdne27913:0
+        banner|Image|String: crwdns35115:0crwdne35115:0
+      Creating Contracts From Examples 4:
+        Examples 4.solution_blocks, 300: crwdns27917:0crwdne27917:0
+        Shrink Contract: crwdns33897:0crwdne33897:0
+        Try using the "shrink" function.: crwdns33898:0crwdne33898:0
+        shrink|Image|Image: crwdns35116:0crwdne35116:0
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: crwdns27804:0crwdne27804:0
+        0: crwdns27805:0crwdne27805:0
+        1: crwdns27806:0crwdne27806:0
+        wide-rect|Image|Number|String: crwdns35117:0crwdne35117:0
+      Enter name here:
+        Contract Name|Number|Number|String: crwdns35118:0crwdne35118:0
+        Enter prompt here: crwdns27809:0crwdne27809:0
+        Enter title here: crwdns27808:0crwdne27808:0
+      Eval Contracts 1 B:
+        Eval Contracts 1 A.solution_blocks, 300: crwdns27813:0crwdne27813:0
+        Star Contract: crwdns28002:0crwdne28002:0
+        Write a contract for the star function: crwdns27812:0crwdne27812:0
+        star|Image|String|Number|String: crwdns35119:0crwdne35119:0
+      Eval Contracts 2 B:
+        Eval Contracts 2 A.solution_blocks, 300: crwdns27817:0crwdne27817:0
+        Rotate Contract: crwdns28003:0crwdne28003:0
+        Write a contract for the rotate function: crwdns27816:0crwdne27816:0
+        rotate|Image|Number|Image: crwdns35120:0crwdne35120:0
+      Eval Contracts 3 B:
+        Eval Contracts 3 A.solution_blocks, 300: crwdns27821:0crwdne27821:0
+        Text Contract: crwdns28004:0crwdne28004:0
+        Write a contract for the text function: crwdns27820:0crwdne27820:0
+        text|Image|String|Number|String: crwdns35121:0crwdne35121:0
+      Eval Contracts 4 B:
+        Eval Contracts 4 A.solution_blocks, 300: crwdns27825:0crwdne27825:0
+        Scale Contract: crwdns28005:0crwdne28005:0
+        Write a contract for the scale function: crwdns27824:0crwdne27824:0
+        scale|Image|Number|Image: crwdns35122:0crwdne35122:0
+      Eval Contracts B:
+        Eval Contracts 1 A.solution_blocks, 300: crwdns33901:0crwdne33901:0
+        Star Contract: crwdns33899:0crwdne33899:0
+        Write a contract for the star function: crwdns33900:0crwdne33900:0
+        star|Image|Number|String|String: crwdns35123:0crwdne35123:0
+      Eval Contracts D:
+        Eval Contracts 2 A.solution_blocks, 300: crwdns33905:0crwdne33905:0
+        Rotate Contract: crwdns33903:0crwdne33903:0
+        Write a contract for the rotate function: crwdns33904:0crwdne33904:0
+        rotate|Image|Number|Image: crwdns35124:0crwdne35124:0
+      Eval Contracts F:
+        Eval Contracts 3 A.solution_blocks, 300: crwdns33909:0crwdne33909:0
+        Text Contract: crwdns33907:0crwdne33907:0
+        Write a contract for the text function: crwdns33908:0crwdne33908:0
+        text|Image|String|Number|String: crwdns35125:0crwdne35125:0
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: crwdns27827:0crwdne27827:0
+        0: crwdns27828:0crwdne27828:0
+        1: crwdns27829:0crwdne27829:0
+        wide-rect|Image|Number|String: crwdns35126:0crwdne35126:0
     external:
-      Code Logo v3:
-        title: crwdns35097:0crwdne35097:0
-        Create images with bits and bytes.: crwdns35098:0crwdne35098:0
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": crwdns35597:0crwdne35597:0
       CSP Student Plan - U1L5 - Sending Bits in the real world:
         CSP Student Plan - U1L5 - Sending Bits in the real world: crwdns35716:0crwdne35716:0
         description here: crwdns35717:0crwdne35717:0
       CSPStudentLessonPlanTemplate:
-        title: crwdns35718:0crwdne35718:0
         description here: crwdns35719:0crwdne35719:0
+        title: crwdns35718:0crwdne35718:0
+      Code Logo v3:
+        Create images with bits and bytes.: crwdns35098:0crwdne35098:0
+        title: crwdns35097:0crwdne35097:0
+      ECSPD PD overview:
+        ECS PD Overview: crwdns36323:0crwdne36323:0
+      ECSPD curriculum overview:
+        ECS Curriculum Overview: crwdns36324:0crwdne36324:0
+        Overview of Curriculum: crwdns36325:0crwdne36325:0
+      ECSPD growth mindset strategies:
+        Growth Mindset Strategies: crwdns36326:0crwdne36326:0
+      ECSPD meet facilitator:
+        Meet your Facilitator!: crwdns36327:0crwdne36327:0
+      ECSPD program overview:
+        ECS Program Overview: crwdns36328:0crwdne36328:0
+        Overview of ECS Program: crwdns36329:0crwdne36329:0
+      ECSPD what is growth mindset:
+        An exploration of Growth Mindset: crwdns36330:0crwdne36330:0
+        What is Growth Mindset?: crwdns36331:0crwdne36331:0
       External level test (will):
         first computer program: crwdns35598:0crwdne35598:0
       Hour of Code test content: [ ]
       Mixing Colors:
-        title: crwdns35101:0crwdne35101:0
         description here: crwdns35102:0crwdne35102:0
+        title: crwdns35101:0crwdne35101:0
+      PDAlg Intro: [ ]
       PDCSP Intro: [ ]
+      PDECS Intro:
+        PD Intro: crwdns36332:0crwdne36332:0
+        Welcome to ECS Online PD: crwdns36333:0crwdne36333:0
+      PDECS Welcome Video:
+        Welcome Video: crwdns36334:0crwdne36334:0
+        Welcome to Online PD for ECS: crwdns36335:0crwdne36335:0
+      PDECS commitment:
+        ECS PD commitments: crwdns36336:0crwdne36336:0
+        overview of program commitments: crwdns36337:0crwdne36337:0
+      PDECS tour:
+        Tour of PD Space: crwdns36338:0crwdne36338:0
+        tour of the PD space: crwdns36339:0crwdne36339:0
       PDK5 Beyond C:
         Beyond: crwdns35599:0crwdne35599:0
+      PDK5 CS overview:
+        Overview of programming concepts: crwdns36340:0crwdne36340:0
       PDK5 Classroom Culture C:
         Classroom Culture: crwdns35600:0crwdne35600:0
       PDK5 Course Maps C: [ ]
@@ -195,36 +142,12 @@ en:
         Course Progress: crwdns35607:0crwdne35607:0
       PDK5 Teacher Dashboard C:
         Teacher Dashboard: crwdns35608:0crwdne35608:0
-      PDK5 Unplugged Intro C:
-        Unplugged intro: crwdns35609:0crwdne35609:0
       PDK5 UVideo Overview C:
         Kiki video overview: crwdns35610:0crwdne35610:0
+      PDK5 Unplugged Intro C:
+        Unplugged intro: crwdns35609:0crwdne35609:0
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: crwdns35611:0crwdne35611:0
-      Pixelation 1:
-        Pixelation 1: crwdns33911:0crwdne33911:0
-        Create images with bits and bytes.: crwdns33912:0crwdne33912:0
-      Pixelation 2:
-        Pixelation 2: crwdns33913:0crwdne33913:0
-        Create images with bits and bytes.: crwdns33914:0crwdne33914:0
-      Pixelation 3:
-        Pixelation 3: crwdns33915:0crwdne33915:0
-        Create images with bits and bytes.: crwdns33916:0crwdne33916:0
-      Pixelation 3 Bit Colors:
-        title: crwdns35103:0crwdne35103:0
-        description here: crwdns35104:0crwdne35104:0
-      Pixelation 4:
-        Pixelation 4 - Baker test of External level -- NOT REAL: crwdns35105:0crwdne35105:0
-        Create images with bits and bytes.: crwdns35106:0crwdne35106:0
-      Pixelation 4x4 Empty:
-        Pixelation 4x4 Empty: crwdns35107:0crwdne35107:0
-        Create images with bits and bytes.: crwdns35108:0crwdne35108:0
-      Pixelation Bee:
-        title: crwdns35109:0crwdne35109:0
-        description here: crwdns35110:0crwdne35110:0
-      Pixelation Flappy:
-        title: crwdns35111:0crwdne35111:0
-        description here: crwdns35112:0crwdne35112:0
       Pixelation - Hadi Emoji:
         Pixelation - Hadi Emoji: crwdns35985:0crwdne35985:0
         description here: crwdns35986:0crwdne35986:0
@@ -241,14 +164,14 @@ en:
         "Lesson 14 - Task 2: fix the error": crwdns35617:0crwdne35617:0
         description here: crwdns35618:0crwdne35618:0
       Pixelation - Lesson 14 - Make the Letter A:
-        title: crwdns35619:0crwdne35619:0
         description here: crwdns35620:0crwdne35620:0
+        title: crwdns35619:0crwdne35619:0
       Pixelation - Lesson 14 - Make your own B and W Image:
-        title: crwdns35621:0crwdne35621:0
         description here: crwdns35622:0crwdne35622:0
+        title: crwdns35621:0crwdne35621:0
       Pixelation - Lesson 14 - Make your own B&W Image:
-        title: crwdns35623:0crwdne35623:0
         description here: crwdns35624:0crwdne35624:0
+        title: crwdns35623:0crwdne35623:0
       Pixelation - Lesson 15 - Color Free Play:
         Pixelation - Lesson 15 - Color Free Play: crwdns35625:0crwdne35625:0
         description here: crwdns35626:0crwdne35626:0
@@ -287,102 +210,328 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: crwdns35648:0crwdne35648:0
         description here: crwdns35649:0crwdne35649:0
-      test demo level:
-        demo title: crwdns35650:0crwdne35650:0
-        demo description: crwdns35651:0crwdne35651:0
+      Pixelation 1:
+        Create images with bits and bytes.: crwdns33912:0crwdne33912:0
+        Pixelation 1: crwdns33911:0crwdne33911:0
+      Pixelation 2:
+        Create images with bits and bytes.: crwdns33914:0crwdne33914:0
+        Pixelation 2: crwdns33913:0crwdne33913:0
+      Pixelation 3:
+        Create images with bits and bytes.: crwdns33916:0crwdne33916:0
+        Pixelation 3: crwdns33915:0crwdne33915:0
+      Pixelation 3 Bit Colors:
+        description here: crwdns35104:0crwdne35104:0
+        title: crwdns35103:0crwdne35103:0
+      Pixelation 4:
+        Create images with bits and bytes.: crwdns35106:0crwdne35106:0
+        Pixelation 4 - Baker test of External level -- NOT REAL: crwdns35105:0crwdne35105:0
+      Pixelation 4x4 Empty:
+        Create images with bits and bytes.: crwdns35108:0crwdne35108:0
+        Pixelation 4x4 Empty: crwdns35107:0crwdne35107:0
+      Pixelation Bee:
+        description here: crwdns35110:0crwdne35110:0
+        title: crwdns35109:0crwdne35109:0
+      Pixelation Flappy:
+        description here: crwdns35112:0crwdne35112:0
+        title: crwdns35111:0crwdne35111:0
       Test discourse forum-comment level:
         Degree of Difficulty: crwdns35652:0crwdne35652:0
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: crwdns35653:0crwdne35653:0
-      test html katie:
-        testing: crwdns35654:0crwdne35654:0
-        lkajsdfasdf: crwdns35655:0crwdne35655:0
       Text Compression 1:
-        Text Compression 1: crwdns35987:0crwdne35987:0
         Compress text by identifying repeated patterns.: crwdns35988:0crwdne35988:0
+        Text Compression 1: crwdns35987:0crwdne35987:0
       Text Compression Peter Piper:
-        Text Compression Peter Piper: crwdns35989:0crwdne35989:0
         Compress text by identifying repeated patterns.: crwdns35990:0crwdne35990:0
-      U1L5 Student Lesson:
-        title: crwdns35991:0crwdne35991:0
-        description here: crwdns35992:0crwdne35992:0
-      U1L6 Student Lesson Plan:
-        title: crwdns35993:0crwdne35993:0
-        description here: crwdns35994:0crwdne35994:0
+        Text Compression Peter Piper: crwdns35989:0crwdne35989:0
+      U1L1 Student Lesson Introduction:
+        description here: crwdns36341:0crwdne36341:0
+        title: crwdns36342:0crwdne36342:0
+      U1L10 Student Lesson Introduction:
+        description here: crwdns36343:0crwdne36343:0
+        title: crwdns36344:0crwdne36344:0
+      U1L11 Student Lesson Introduction:
+        description here: crwdns36345:0crwdne36345:0
+        title: crwdns36346:0crwdne36346:0
+      U1L12 Student Lesson Introduction:
+        description here: crwdns36347:0crwdne36347:0
+        title: crwdns36348:0crwdne36348:0
+      U1L13 Student Lesson Introduction:
+        description here: crwdns36349:0crwdne36349:0
+        title: crwdns36350:0crwdne36350:0
+      U1L16 Student Lesson Introduction:
+        description here: crwdns36351:0crwdne36351:0
+        title: crwdns36352:0crwdne36352:0
+      U1L2 Student Lesson Introduction:
+        description here: crwdns36353:0crwdne36353:0
+        title: crwdns36354:0crwdne36354:0
+      U1L3 Student Lesson Introduction:
+        description here: crwdns36355:0crwdne36355:0
+        title: crwdns36356:0crwdne36356:0
+      U1L4 Student Lesson Introduction:
+        description here: crwdns36357:0crwdne36357:0
+        title: crwdns36358:0crwdne36358:0
+      U1L4 Widget Demo - Video:
+        Widget Demonstration - Video: crwdns36359:0crwdne36359:0
+        description here: crwdns36360:0crwdne36360:0
+      U1L5 How the Internet Works - Video:
+        How the Internet Works - Video: crwdns36361:0crwdne36361:0
+        description here: crwdns36362:0crwdne36362:0
+      U1L5 Student Lesson Introduction:
+        description here: crwdns36363:0crwdne36363:0
+        title: crwdns36364:0crwdne36364:0
+      U1L6 Odometer Widget:
+        Odometer Widget: crwdns36365:0crwdne36365:0
+        description here: crwdns36366:0crwdne36366:0
+      U1L6 Student Lesson Introduction:
+        description here: crwdns36367:0crwdne36367:0
+        title: crwdns36368:0crwdne36368:0
+      U1L7 Student Lesson Introduction:
+        description here: crwdns36369:0crwdne36369:0
+        title: crwdns36370:0crwdne36370:0
+      U1L8 Student Lesson Introduction:
+        Sending Numbers: crwdns36371:0crwdne36371:0
+        description here: crwdns36372:0crwdne36372:0
+      U1L9 Student Lesson Introduction:
+        description here: crwdns36373:0crwdne36373:0
+        title: crwdns36374:0crwdne36374:0
+      test demo level:
+        demo description: crwdns35651:0crwdne35651:0
+        demo title: crwdns35650:0crwdne35650:0
+      test html katie:
+        lkajsdfasdf: crwdns35655:0crwdne35655:0
+        testing: crwdns35654:0crwdne35654:0
       unique level name here:
-        title: crwdns35656:0crwdne35656:0
         description here: crwdns35657:0crwdne35657:0
-    contract_match:
-      CREATING CONTRACTS FROM EXAMPLES 1:
-        Big Triangle: crwdns33894:0crwdne33894:0
-        Write a contract for a big red triangle that is 100 pixels in size: crwdns27904:0crwdne27904:0
-        EXAMPLE 1.solution_blocks, 300: crwdns27905:0crwdne27905:0
-        Big Triangle|Image|Number|String: crwdns35113:0crwdne35113:0
-      Creating Contracts From Examples 2:
-        Square Contract: crwdns33895:0crwdne33895:0
-        Write a contract for a purple square that is 15 pixels in size.: crwdns27908:0crwdne27908:0
-        Example 2.solution_blocks, 300: crwdns27909:0crwdne27909:0
-        Square|Image|Number|String: crwdns35114:0crwdne35114:0
-      Creating Contracts From Examples 3A:
-        Banner Contract: crwdns33896:0crwdne33896:0
-        Banner Function block: crwdns27912:0crwdne27912:0
-        Examples 3.solution_blocks, 300: crwdns27913:0crwdne27913:0
-        banner|Image|String: crwdns35115:0crwdne35115:0
-      Creating Contracts From Examples 4:
-        Shrink Contract: crwdns33897:0crwdne33897:0
-        Try using the "shrink" function.: crwdns33898:0crwdne33898:0
-        Examples 4.solution_blocks, 300: crwdns27917:0crwdne27917:0
-        shrink|Image|Image: crwdns35116:0crwdne35116:0
-      Design Recipe 1.contract:
-        Design Recipe 1 Contract: crwdns27804:0crwdne27804:0
-        0: crwdns27805:0crwdne27805:0
-        1: crwdns27806:0crwdne27806:0
-        wide-rect|Image|Number|String: crwdns35117:0crwdne35117:0
-      Enter name here:
-        Enter title here: crwdns27808:0crwdne27808:0
-        Enter prompt here: crwdns27809:0crwdne27809:0
-        Contract Name|Number|Number|String: crwdns35118:0crwdne35118:0
-      Eval Contracts 1 B:
-        Star Contract: crwdns28002:0crwdne28002:0
-        Write a contract for the star function: crwdns27812:0crwdne27812:0
-        Eval Contracts 1 A.solution_blocks, 300: crwdns27813:0crwdne27813:0
-        star|Image|String|Number|String: crwdns35119:0crwdne35119:0
-      Eval Contracts 2 B:
-        Rotate Contract: crwdns28003:0crwdne28003:0
-        Write a contract for the rotate function: crwdns27816:0crwdne27816:0
-        Eval Contracts 2 A.solution_blocks, 300: crwdns27817:0crwdne27817:0
-        rotate|Image|Number|Image: crwdns35120:0crwdne35120:0
-      Eval Contracts 3 B:
-        Text Contract: crwdns28004:0crwdne28004:0
-        Write a contract for the text function: crwdns27820:0crwdne27820:0
-        Eval Contracts 3 A.solution_blocks, 300: crwdns27821:0crwdne27821:0
-        text|Image|String|Number|String: crwdns35121:0crwdne35121:0
-      Eval Contracts 4 B:
-        Scale Contract: crwdns28005:0crwdne28005:0
-        Write a contract for the scale function: crwdns27824:0crwdne27824:0
-        Eval Contracts 4 A.solution_blocks, 300: crwdns27825:0crwdne27825:0
-        scale|Image|Number|Image: crwdns35122:0crwdne35122:0
-      Eval Contracts B:
-        Star Contract: crwdns33899:0crwdne33899:0
-        Write a contract for the star function: crwdns33900:0crwdne33900:0
-        Eval Contracts 1 A.solution_blocks, 300: crwdns33901:0crwdne33901:0
-        star|Image|Number|String|String: crwdns35123:0crwdne35123:0
-      Eval Contracts D:
-        Rotate Contract: crwdns33903:0crwdne33903:0
-        Write a contract for the rotate function: crwdns33904:0crwdne33904:0
-        Eval Contracts 2 A.solution_blocks, 300: crwdns33905:0crwdne33905:0
-        rotate|Image|Number|Image: crwdns35124:0crwdne35124:0
-      Eval Contracts F:
-        Text Contract: crwdns33907:0crwdne33907:0
-        Write a contract for the text function: crwdns33908:0crwdne33908:0
-        Eval Contracts 3 A.solution_blocks, 300: crwdns33909:0crwdne33909:0
-        text|Image|String|Number|String: crwdns35125:0crwdne35125:0
-      Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: crwdns27827:0crwdne27827:0
-        0: crwdns27828:0crwdne27828:0
-        1: crwdns27829:0crwdne27829:0
-        wide-rect|Image|Number|String: crwdns35126:0crwdne35126:0
-      Rocket Contract 1:
-        Contract for rocket-height: crwdns27922:0crwdne27922:0
-        0: crwdns35658:0crwdne35658:0
-        1: crwdns35659:0crwdne35659:0
-        rocket-height|Number|Number: crwdns35127:0crwdne35127:0
+        title: crwdns35656:0crwdne35656:0
+    text_match:
+      Blocks to Bools 1:
+        ((4+5) > 9): crwdns35736:0crwdne35736:0
+        (4+5) > 9: crwdns24835:0crwdne24835:0
+        /script_assets/msm/unit6/blockstomath1.png, 300: crwdns36375:0crwdne36375:0
+        Convert Blocks to Math: crwdns24832:0crwdne24832:0
+        Type out the arithmetic expression that matches this code: crwdns24833:0crwdne24833:0
+        Type the arithmetic expression here: crwdns24836:0crwdne24836:0
+      Blocks to Bools 2:
+        (10 > 11) OR (7 <= 9): crwdns24841:0crwdne24841:0
+        (10 > 11) or (7 <= 9): crwdns24840:0crwdne24840:0
+        (10 > 11) || (7 <= 9): crwdns24842:0crwdne24842:0
+        /script_assets/msm/unit6/blockstomath2.png, 500: crwdns35969:0crwdne35969:0
+        Convert Blocks to Math: crwdns24837:0crwdne24837:0
+        Type out the arithmetic expression that matches this code: crwdns24838:0crwdne24838:0
+        Type the arithmetic expression here: crwdns24843:0crwdne24843:0
+      Blocks to Bools 3:
+        ((5 < 10) && (10 < 15)): crwdns35975:0crwdne35975:0
+        ((5 < 10) AND (10 < 15)): crwdns35974:0crwdne35974:0
+        ((5 < 10) And (10 < 15)): crwdns35973:0crwdne35973:0
+        ((5 < 10) and (10 < 15)): crwdns35972:0crwdne35972:0
+        (5 < 10) && (10 < 15): crwdns24849:0crwdne24849:0
+        (5 < 10) AND (10 < 15): crwdns24848:0crwdne24848:0
+        (5 < 10) And (10 < 15): crwdns35971:0crwdne35971:0
+        (5 < 10) and (10 < 15): crwdns24847:0crwdne24847:0
+        /script_assets/msm/unit6/blockstomath3.png, 500: crwdns35970:0crwdne35970:0
+        Convert Blocks to Math: crwdns24844:0crwdne24844:0
+        Type out the arithmetic expression that matches this code: crwdns24845:0crwdne24845:0
+        Type the arithmetic expression here: crwdns24850:0crwdne24850:0
+      Blocks to Bools 4:
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): crwdns35981:0crwdne35981:0
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): crwdns35978:0crwdne35978:0
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): crwdns35979:0crwdne35979:0
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): crwdns35980:0crwdne35980:0
+        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): crwdns24856:0crwdne24856:0
+        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): crwdns24854:0crwdne24854:0
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): crwdns35977:0crwdne35977:0
+        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): crwdns24855:0crwdne24855:0
+        /script_assets/msm/unit6/blockstomath4.png, 500: crwdns35976:0crwdne35976:0
+        Convert Blocks to Math: crwdns24851:0crwdne24851:0
+        Type out the arithmetic expression that matches this code: crwdns24852:0crwdne24852:0
+        Type the arithmetic expression here: crwdns24857:0crwdne24857:0
+      Blocks to Math 1:
+        (4+5): crwdns33887:0crwdne33887:0
+        4 + 5: crwdns24861:0crwdne24861:0
+        Blocks to Math 1.blocks.start_blocks, 200: crwdns27797:0crwdne27797:0
+        Convert Blocks to Math: crwdns24858:0crwdne24858:0
+        Type out the arithmetic expression that matches this code: crwdns24859:0crwdne24859:0
+        Type the arithmetic expression here: crwdns24862:0crwdne24862:0
+      Blocks to Math 2:
+        (7 * 6): crwdns33888:0crwdne33888:0
+        7 * 6: crwdns24866:0crwdne24866:0
+        Blocks to Math 2.blocks.start_blocks, 200: crwdns27798:0crwdne27798:0
+        Convert Blocks to Math: crwdns24863:0crwdne24863:0
+        Type out the arithmetic expression that matches this code: crwdns24864:0crwdne24864:0
+        Type the arithmetic expression here: crwdns24867:0crwdne24867:0
+      Blocks to Math 3:
+        ((2 * 3) - (1 + 0)): crwdns33889:0crwdne33889:0
+        (2 * 3) - (1 + 0): crwdns24871:0crwdne24871:0
+        (2 * 3) - 1 + 0: crwdns36376:0crwdne36376:0
+        2 * 3 - (1 + 0): crwdns24872:0crwdne24872:0
+        2 * 3 - 1 + 0: crwdns35982:0crwdne35982:0
+        Blocks to Math 3.blocks.start_blocks: crwdns27799:0crwdne27799:0
+        Convert Blocks to Math: crwdns24868:0crwdne24868:0
+        Type out the arithmetic expression that matches this code: crwdns24869:0crwdne24869:0
+        Type the arithmetic expression here: crwdns24873:0crwdne24873:0
+      Blocks to Math 4:
+        ((5 + 8) - 12): crwdns33890:0crwdne33890:0
+        (5 + 8) - 12: crwdns24877:0crwdne24877:0
+        5 + 8 - 12: crwdns24878:0crwdne24878:0
+        Blocks to Math 4.blocks.start_blocks: crwdns27800:0crwdne27800:0
+        Convert Blocks to Math: crwdns24874:0crwdne24874:0
+        Type out the arithmetic expression that matches this code: crwdns24875:0crwdne24875:0
+        Type the arithmetic expression here: crwdns24879:0crwdne24879:0
+      Blocks to Math 5:
+        ((-2) * (-6)): crwdns33891:0crwdne33891:0
+        (-2) * (-6):
+          - 
+            2 * -6: crwdns24883:0crwdne24883:0
+        Blocks to Math 5.blocks.start_blocks: crwdns27801:0crwdne27801:0
+        Convert Blocks to Math: crwdns24880:0crwdne24880:0
+        Type out the arithmetic expression that matches this code: crwdns24881:0crwdne24881:0
+        Type the arithmetic expression here: crwdns24884:0crwdne24884:0
+      Blocks to Math 6:
+        ((4 - 1) * (-2)) + 12: crwdns24888:0crwdne24888:0
+        ((4 - 1) * (-2)) + 12): crwdns33892:0crwdne33892:0
+        ((4 - 1) * -2) + 12: crwdns24889:0crwdne24889:0
+        (4 - 1) * (-2) + 12: crwdns24890:0crwdne24890:0
+        (4 - 1) * -2 + 12: crwdns24891:0crwdne24891:0
+        Blocks to Math 6.blocks.start_blocks: crwdns27802:0crwdne27802:0
+        Convert Blocks to Math: crwdns24885:0crwdne24885:0
+        Type out the arithmetic expression that matches this code: crwdns24886:0crwdne24886:0
+        Type the arithmetic expression here: crwdns24892:0crwdne24892:0
+      Blocks to Math 7:
+        (10 / (2 * (3 + 1)): crwdns33893:0crwdne33893:0
+        10 / (2 * (3 + 1)): crwdns24896:0crwdne24896:0
+        Blocks to Math 7.blocks.start_blocks: crwdns27803:0crwdne27803:0
+        Convert Blocks to Math: crwdns24893:0crwdne24893:0
+        Type out the arithmetic expression that matches this code: crwdns24894:0crwdne24894:0
+        Type the arithmetic expression here: crwdns24897:0crwdne24897:0
+      ECSPD strategies:
+        Classroom Strategies Journal: crwdns36377:0crwdne36377:0
+      ECSPD your goals:
+        Documenting Your Goals: crwdns36714:0crwdne36714:0
+      Open text response example:
+        I loved it because...: crwdns35070:0crwdne35070:0
+        Open text response example: crwdns35069:0crwdne35069:0
+      PDK5 Challenges:
+        Biggest Challenges: crwdns36381:0crwdne36381:0
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: crwdns35071:0crwdne35071:0
+        In my classroom, I want to...: crwdns35074:0crwdne35074:0
+        0: crwdns35072:0crwdne35072:0
+        1: crwdns35073:0crwdne35073:0
+      PDK5 Course Descriptions:
+        Course Structure: crwdns35590:0crwdne35590:0
+        I am going to start with Course...: crwdns35076:0crwdne35076:0
+      PDK5 Difficulty:
+        Degree of Difficulty: crwdns35077:0crwdne35077:0
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: crwdns35078:0crwdne35078:0
+        Your thoughts here: crwdns35079:0crwdne35079:0
+      PDK5 Foundation:
+        Computer Science as a Foundational Skill: crwdns35080:0crwdne35080:0
+        Do you see computer science as a foundational skill for your students? Why or why not?: crwdns35081:0crwdne35081:0
+        Your thoughts here: crwdns35082:0crwdne35082:0
+      PDK5 Goals:
+        Goals for using Code.org in your Classroom: crwdns36382:0crwdne36382:0
+      PDK5 Impact 1:
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: crwdns35084:0crwdne35084:0
+        Impact for students: crwdns35083:0crwdne35083:0
+        Your thoughts here: crwdns35085:0crwdne35085:0
+      PDK5 Impact 2:
+        Connections to other Subjects: crwdns35086:0crwdne35086:0
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: crwdns35087:0crwdne35087:0
+        Your thoughts here: crwdns35088:0crwdne35088:0
+      PDK5 Loops 2:
+        The Importance of Loops: crwdns36384:0crwdne36384:0
+      PDK5 Problem Solving:
+        I could integrate this in my classroom by...: crwdns35592:0crwdne35592:0
+        Problem Solving Methods: crwdns35591:0crwdne35591:0
+      PDK5 Promo Video:
+        "Code Studio: Kid tested, Teacher approved": crwdns35093:0crwdne35093:0
+      PDK5 Promo Video 2:
+        "Code Studio: Kid tested, Teacher approved": crwdns35593:0crwdne35593:0
+        My first impressions of Code Studio are...: crwdns35594:0crwdne35594:0
+      PDK5 Strategies O:
+        "I think teaching computer science will be different than teaching other subjects in these ways: ...": crwdns35596:0crwdne35596:0
+        Strategies for Teaching Computer Science: crwdns35595:0crwdne35595:0
+      PDK5 Test5:
+        Big Test: crwdns36385:0crwdne36385:0
+      Test Free Response Assessment Question:
+        Enter your reflection here: crwdns36386:0crwdne36386:0
+        0: crwdns36387:0crwdne36387:0
+        1: crwdns36388:0crwdne36388:0
+        Sending Numbers Free Response: crwdns36389:0crwdne36389:0
+      Test Markdown level:
+        Enter prompt here: crwdns35096:0crwdne35096:0
+        Enter title here: crwdns35095:0crwdne35095:0
+      U1L10 Assessment Free Response:
+        "A follow-up to the Assessment Question #2:": crwdns36390:0crwdne36390:0
+        "Assessment: Encoding Text": crwdns36391:0crwdne36391:0
+      U1L10 Journal Free Response:
+        "Free Response: Encoding Text": crwdns36392:0crwdne36392:0
+        Respond to this prompt or to another as directed by your teacher.: crwdns36393:0crwdne36393:0
+      U1L11 Reflection Free Response:
+        "Reflection: Sending Formatted Text": crwdns36394:0crwdne36394:0
+        Respond to this prompt or to another as directed by your teacher.: crwdns36395:0crwdne36395:0
+      U1L12 Reflection Free Response:
+        "Reflection: Data Storage": crwdns36396:0crwdne36396:0
+        Respond to this prompt or to another as directed by your teacher.: crwdns36397:0crwdne36397:0
+      U1L13 Assessment 1:
+        "Assessment 1: Text Compression": crwdns36398:0crwdne36398:0
+        Write (in the space below) a segment of text that should compress effectively and efficiently.: crwdns36399:0crwdne36399:0
+      U1L13 Assessment 2:
+        "Assessment 2: Text Compression": crwdns36400:0crwdne36400:0
+        Write (in the space below) a segment of text that will not compress well.: crwdns36401:0crwdne36401:0
+      U1L13 Reflection Free Response:
+        "Reflection: Text Compression": crwdns36402:0crwdne36402:0
+        Respond to this prompt or to another as directed by your teacher.: crwdns36403:0crwdne36403:0
+      U1L16 Reflection Free Response:
+        "Reflection: Encoding Complex data": crwdns36404:0crwdne36404:0
+        Respond to this prompt or to another as directed by your teacher.: crwdns36405:0crwdne36405:0
+      U1L2 Free response assessment question:
+        "Assessment: Sending Binary Messages": crwdns36406:0crwdne36406:0
+        Complete the Lesson 2 Rubric.: crwdns36407:0crwdne36407:0
+        Enter your response here.: crwdns36408:0crwdne36408:0
+      U1L2 Free response reflection question:
+        Complete the Lesson 2 Rubric.: crwdns36409:0crwdne36409:0
+        Enter your reflection here.: crwdns36410:0crwdne36410:0
+        "Reflection: Sending Binary Messages": crwdns36411:0crwdne36411:0
+      U1L3 Free response reflection question:
+        Complete the Lesson 3 Rubric.: crwdns36412:0crwdne36412:0
+        Enter your reflection here.: crwdns36413:0crwdne36413:0
+        "Reflection: Sending Complex Messages": crwdns36414:0crwdne36414:0
+      U1L4 Free Response Reflection:
+        Enter your reflection here.: crwdns36415:0crwdne36415:0
+        Reflect on this lesson: crwdns36416:0crwdne36416:0
+      U1L4 Free response reflection question:
+        "Assessment: Bit sending Widget": crwdns36417:0crwdne36417:0
+        Complete the Lesson 2 Rubric.: crwdns36418:0crwdne36418:0
+        Enter your reflection here.: crwdns36419:0crwdne36419:0
+      U1L5 Free Response Assessment:
+        Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.: crwdns36420:0crwdne36420:0
+        Free Response Assessment: crwdns36421:0crwdne36421:0
+      U1L5 Free Response Lesson Review:
+        Complete these three sentences.: crwdns36422:0crwdne36422:0
+        Lesson Review: crwdns36423:0crwdne36423:0
+      U1L6 Free Response Assessment:
+        "Assessment: Number Systems": crwdns36424:0crwdne36424:0
+      U1L6 Free Response Reflection:
+        "Reflection: Number Systems": crwdns36425:0crwdne36425:0
+      U1L7 Free Response Assessment:
+        "Assessment: Binary Numbers": crwdns36426:0crwdne36426:0
+      U1L7 Free Response Reflection:
+        "Reflect on your learning in this lesson. In the space below, enter:": crwdns36427:0crwdne36427:0
+        "Reflection: Binary Numbers": crwdns36428:0crwdne36428:0
+      U1L8 Free Response Getting Started:
+        "Getting Started: Sending Numbers ": crwdns36429:0crwdne36429:0
+        Respond to the following question.: crwdns36430:0crwdne36430:0
+      U1L8 Free Response Reflection:
+        Complete the Sending Numbers Checklist and then respond to the following prompt.: crwdns36431:0crwdne36431:0
+        "Reflection: Sending Numbers ": crwdns36432:0crwdne36432:0
+      U1L9 Free Response Assessment:
+        "Assessment: Real-world Numbers ": crwdns36433:0crwdne36433:0
+      text match test:
+        (9-3)+(4*7): crwdns23419:0crwdne23419:0
+        (9-3)+4: null
+        /script_assets/msm/Unit 1/Exercise_5_question_2.png: crwdns23418:0crwdne23418:0
+        9-3+4: null
+        Mathematical Expression Assessment: crwdns23416:0crwdne23416:0
+        Type out the arithmetic expression that this circle of evaluation evaluates to: crwdns23417:0crwdne23417:0
+        Type the arithmetic expression here: crwdns23420:0crwdne23420:0

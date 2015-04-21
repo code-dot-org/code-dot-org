@@ -405,6 +405,7 @@
     heading_apps: <h2>Цікавинки</h2><h1>для усіх</h1>
     heading_legacy: <h2>Загальний курс</h2><h1>для будь-якого віку</h1>
     your_gallery: Галерея
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Чоловік
     female: Жінка
@@ -552,6 +553,8 @@
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Введіть свою відповідь тут
   dialog:

@@ -437,11 +437,6 @@ fr:
         playlab_events: Évènements du Play Lab
         playlab_repeat_forever: Play Lab Répétition Infinie
         tutorial_puzzle_challenge: Tutoriel Puzzle Challenge
-        msm_1_intro: CS en algèbre chapitre 1 Introduction
-        msm_2_eval_block: "Blocs d'évaluation"
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Variables
-        msm_7_functions: Fonctions
         infinity_playlab_intro: 'Play Lab - Introduction'
         infinity_playlab_events: 'Play Lab - événements'
         infinity_playlab_repeat_forever: Play Lab Répétition Infinie
@@ -451,6 +446,24 @@ fr:
         csp_pixelation_color_3: 'Color pixelation widget - Part 3'
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
+        csp_textcompression: Text compression widget
+        alg_1_intro: 'CS in Algebra - Introduction'
+        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
+        alg_3_pemdas: 'CS in Algebra - Order of Operations'
+        alg_4_data_types: 'CS in Algebra - Data Types'
+        alg_5_contracts: 'CS in Algebra - Contracts'
+        alg_6_variables: 'CS in Algebra - Variables'
+        alg_7_function: 'CS in Algebra - Functions'
+        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
+        alg_9_booleans: 'CS in Algebra - Booleans'
+        alg_10_conditionals: 'CS in Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
+        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
+        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
+        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
+        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
+        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
     callout:
       text:
         drag_blocks: "Attrape un bloc « avancer plus » et attache-le sous l'autre bloc"
@@ -521,5 +534,6 @@ fr:
         name_function: Écris le now de ta fonction ici
         Infinity_move_right_runbutton: Ajouter déplacer bloc ici
         Infinity_move_directions_callout: 'Quel bloc fera déplacer Baymax  vers le haut lorsque vous appuyez sur la flèche vers le haut ?'
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
         Infinity_move_collide_callout: Jouer un son lorsque cet événement se produit.
         Infinity_repeat_callout: "Place un bloc de déplacement à l'intérieur d'ici"

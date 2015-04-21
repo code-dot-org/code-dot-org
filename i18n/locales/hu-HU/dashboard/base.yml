@@ -345,6 +345,7 @@ hu:
     heading_apps: '<h2>Vidámság </h2><h1>Mindenkinek</h1>'
     heading_legacy: '<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>'
     your_gallery: Galéria
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Férfi
     female: Nő
@@ -473,6 +474,7 @@ hu:
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Itt add meg a válaszod
   dialog:

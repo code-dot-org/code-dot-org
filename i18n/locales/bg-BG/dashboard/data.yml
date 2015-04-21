@@ -225,7 +225,7 @@ bg:
         maze_3_2: Напишете ми програма, така че да мога да стигна до прасето.
         maze_3_3: Как трябва да стигна до прасето? Уверете се, че няма да вляза в кутията с TNT!
         maze_3_4: Ах! Напишете ми програма, която ме води около TNT и прасето.
-        bounce_1: 'Долепете блокче до блокчето "Когато лявата стрелка" и натиснете "Стартирай програмата". Преместете греблото с лявата стрелка, за да достигнете финалната цел.'
+        bounce_1: 'Долепете блокче до блокчето "Когато е натисната стрелка наляво" и натиснете "Старт". Преместете платформата с лявата стрелка, за да достигнете финалната цел.'
         bounce_2: 'Долепете блокче до блокчетата "Когато е натисната стрелка надясно" и "Когато е натисната стрелка наляво". Натиснете "Старт ". Местете платформата така, че да достигне и двете цели.'
         bounce_3: 'Сега опитайте нещо подобно с блокчето "Когато е натисната стрелка нагоре". Преместете платформата до финалната цел на върха.'
         bounce_4: Този път трябва да добавите четири блокчета. Преместете платформата до всички четири цели, за да завършите тази задача.
@@ -429,20 +429,33 @@ bg:
         playlab_events: Игрална Лабораторията събития
         playlab_repeat_forever: Игрална Лаборатория повторение завинаги
         tutorial_puzzle_challenge: 'Урок - пъзел предизвикателство'
-        msm_1_intro: CS в алгебра глава 1 Въведение
-        msm_2_eval_block: Блокове за оценка
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Променливи
-        msm_7_functions: Функции
         infinity_playlab_intro: 'Игрална лаборатория - Въведение'
         infinity_playlab_events: 'Игрална лаборатория - Събития'
-        infinity_playlab_repeat_forever: 'Игрална лаборатория - вечно повтаряне'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
-        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
-        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
+        infinity_playlab_repeat_forever: 'Игрална Лаборатория - повторение завинаги'
+        csp_concept_rgb: Малко за пикселите
+        csp_pixelation_color_1: 'Приспособление за цветова пикселизация - част 1'
+        csp_pixelation_color_2: 'Приспособление за цветова пикселизация - част 2'
+        csp_pixelation_color_3: 'Приспособление за цветова пикселизация - част 3'
+        csp_pixelation_bw: 'Приспособление за черно- бяла пикселизация '
+        csp_U1L14_tipstricks: 'Част 1 урок 14 съвети & трикове за учителя'
+        csp_textcompression: Text compression widget
+        alg_1_intro: 'CS in Algebra - Introduction'
+        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
+        alg_3_pemdas: 'CS in Algebra - Order of Operations'
+        alg_4_data_types: 'CS in Algebra - Data Types'
+        alg_5_contracts: 'CS in Algebra - Contracts'
+        alg_6_variables: 'CS in Algebra - Variables'
+        alg_7_function: 'CS in Algebra - Functions'
+        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
+        alg_9_booleans: 'CS in Algebra - Booleans'
+        alg_10_conditionals: 'CS in Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
+        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
+        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
+        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
+        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
+        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок
@@ -510,6 +523,7 @@ bg:
         right_arrow_fireball: Използвайте дясната стрелка за да стреляте с огнени топки
         name_function: Напишете името на функцията си тук
         Infinity_move_right_runbutton: Добави блок за движение тук
-        Infinity_move_directions_callout: Кой блок ще накара Баймакс да се премести нагоре при натискане на стрелка нагоре?
-        Infinity_move_collide_callout: Издай звук, когато това събитие се появи.
-        Infinity_repeat_callout: Постави блокове за движение тук вътре
+        Infinity_move_directions_callout: Кой блок ще накара Баумакс да се премести нагоре при натискане на стрелка нагоре?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Издай звук, когато това събитие се случи.
+        Infinity_repeat_callout: Постави блоковете за движение тук вътре

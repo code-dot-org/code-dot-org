@@ -1,7 +1,7 @@
 "zh":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: '请更正以下错误:'
   activerecord:
     errors:
       messages:
@@ -307,7 +307,7 @@
     student_teacher_disassociated: '%{teacher_name} 已被移为 %{student_name}的一位老师'
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_needed_required: 你的电子邮件地址尚未确认 %{email}：
     email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 重新发送确认指令
     new_password_hint: （如果你不想改变它，留空白）
@@ -358,6 +358,7 @@
     heading_apps: <h2>为乐趣</h2><h1>每个人</h1>
     heading_legacy: <h2>我们的一般课程</h2><h1>所有年龄</h1>
     your_gallery: 画廊
+    no_primary_course: Try a course at Code Studio
   gender:
     male: 男性
     female: 女性
@@ -451,7 +452,7 @@
     frozen:
       title: 冻结
     infinity:
-      title: Infinity Play Lab
+      title: 无限发挥实验室
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: 学生使用代码画这些!
@@ -464,7 +465,7 @@
     caption_time_ago: '%{time_ago}之前'
     header: 画廊
     header_playlab: 播放实验室
-    header_artist: Artist
+    header_artist: 艺术家
   landing:
     prerelease: 本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 当收到 反馈,
       它会受修订并改善.
@@ -485,12 +486,14 @@
     correct_body: 这是正确的答案。
   contract_match:
     wrong_title: 不正确的答案
-    badname: Your contract has the wrong name.
+    badname: 你的合同中含有错误的名称。
     badname_case: Function names are case-sensitive. Try changing the case of your
       contract's name.
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: 在这里输入你的答案
   dialog:
@@ -506,7 +509,7 @@
           title: K-8计算机科学入门课程（15-25小时）
           description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
         Hour of Code:
-          title: 编程一小时
+          title: 编程一小时2013
           description: ''
         edit-code:
           title: 编辑代码
@@ -538,8 +541,8 @@
   zendesk_too_young_message: 对不起，年轻的用户不能登录到我们的支持站点。你无需登录能浏览 <a href="http://support.code.org">
     support.code.org</a> 或询问你的父母或老师为你与我们联系。
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: 未启动
+    in_progress: 正在进行
     completed_too_many_blocks: 完成，使用太多块
     completed_perfect: 完成了, 完美
     furthest_level_attempted: 尝试过最远的水平
@@ -550,10 +553,10 @@
     all_courses: 所有的课程
   project:
     projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
+    create: 创建项目
+    create_a_project: 创建一个新项目：
     new: Create New
-    rename: Rename
+    rename: 重命名
     save: 保存​​
     delete: 刪除
     exit: Return to Course

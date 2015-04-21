@@ -103,12 +103,12 @@ zh:
         Jigsaw: 拼图
         MazeStep: 迷宫步模式
         Wordsearch: 字谜
-        Webapp: App Lab
+        Webapp: 应用实验室
         ArtistEC: 艺术家
         TextMatch: 文本匹配
         StudioEC: 播放实验室
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: 应用实验室
+        NetSim: 互联网模拟器
     trophy:
       name:
         Bronze: 铜色
@@ -358,37 +358,37 @@ zh:
         Unplug4: 算法
         Unplug5: 函数
         Unplug6: 条件语句
-        Unplug7: Songwriting
+        Unplug7: 写歌
         Unplug8: 抽象化
         Unplug9: Relay programming
-        Unplug10: Internet
+        Unplug10: 互联网
         Unplug11: 总结
         C1_happy_maps_unplugged: 幸福地图
         C1_moveitmoveit_unplugged: 移动它，移动它！
         C1_bigevent_unplugged: 大事件
         C1_getting_loopy: 越来越糊涂
-        C1_pair_programming: Pair Programming
+        C1_pair_programming: 结对编程
         C1_maze_intro_sequencing: 迷宫测序介绍
         C1_maze_debugging: 迷宫： 调试中
         C1_bee_level_intro: 'Bee Level - Intro'
         C1_artist_intro: 艺术家简介
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
+        C1_zuck_repeat_loop: 迷宫循环
+        C1_bee_loops: 蜜蜂循环
+        C1_maze_loops: 迷宫循环
+        C1_playlab_storytelling: 'Play Lab: 创建一个故事'
         C1_planting_seed: 种植一颗种子
         C1_building_foundation: 打基础
         C1_going_places_safely: 去安全的地方
         C2_maze_intro: 迷宫简介
         C2_artist_intro: 艺术家简介
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
+        C2_zuck_repeat_loop: 迷宫循环
+        C2_artist_loops: 艺术家循环
         C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
+        C2_bee_loops: 蜜蜂循环
         C2_bee_debugging: 蜜蜂调试
         C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_playlab_createstory: 'Play Lab: 创建一个故事'
         C2_graph_paper: 方格纸编程
         C2_conditionals_with_cards: 条件语句
         C2_binary_bracelets: Binary Bracelets
@@ -396,10 +396,10 @@ zh:
         C2_paper_airplanes: 纸飞机
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
-        C3_maze_level_4: Maze Loops
+        C3_maze_level_4: 迷宫循环
         C3_artist_intro: 艺术家简介
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
+        C3_artist_functions: 艺术家函数
+        C3_bee_functions: 蜜蜂函数
         C3_bee_conditionals: Bee Conditionals
         C3_maze_conditionals: Maze Conditionals
         C3_artist_nested_loops: 循环嵌套
@@ -407,41 +407,36 @@ zh:
         C3_bee_nested_loops: 循环嵌套
         C3_bee_debugging: 蜜蜂调试
         C3_bounce: 跳
-        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_playlab_create_game: Play Lab — 创建一个游戏
         C3_computational_thinking: 计算性思维
-        C3_dice_race: Dice Race
-        C3_internet: Internet
+        C3_dice_race: 骰子比赛
+        C3_internet: 互联网
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C4_intro: 介绍
         C4_bee_conditional: Bee Conditionals
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
-        C4_for_loops: For Loops
+        C4_variables_artist: 变量 —— 艺术家
+        C4_variables_playlab: 变量 — — Play Lab
+        C4_for_loops: For 循环
         C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_function_edit: 编辑函数
+        C4_function_create: 创建函数
         C4_function_parameters: 有参数的函数
         C4_conditionals: 条件语句
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_algorithms: 七巧板算法
+        C4_unplugged_madlibs: 疯狂字谜
+        C4_unplugged_variables: 信封中的变量
+        C4_unplugged_forloops: For 循环
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: 二进制
-        frozen_intro: Hour of Code Intro
+        frozen_intro: 1小时的编程介绍
         frozen_loops: 循环介绍
-        frozen_functions: Introduction to Functions
+        frozen_functions: 函数介绍
         playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
+        playlab_events: 创新实验室事件
         playlab_repeat_forever: Play Lab Repeat Forever
         tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Evaluation Blocks
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: 变量
-        msm_7_functions: 函数
         infinity_playlab_intro: 'Play Lab - Introduction'
         infinity_playlab_events: 'Play Lab - Events'
         infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
@@ -451,6 +446,24 @@ zh:
         csp_pixelation_color_3: 'Color pixelation widget - Part 3'
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
+        csp_textcompression: Text compression widget
+        alg_1_intro: 'CS in Algebra - Introduction'
+        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
+        alg_3_pemdas: 'CS in Algebra - Order of Operations'
+        alg_4_data_types: 'CS in Algebra - Data Types'
+        alg_5_contracts: 'CS in Algebra - Contracts'
+        alg_6_variables: 'CS in Algebra - Variables'
+        alg_7_function: 'CS in Algebra - Functions'
+        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
+        alg_9_booleans: 'CS in Algebra - Booleans'
+        alg_10_conditionals: 'CS in Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
+        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
+        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
+        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
+        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
+        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
     callout:
       text:
         drag_blocks: '拖动一个"移动"的块和捕捉低于它的其他块'
@@ -520,5 +533,6 @@ zh:
         name_function: Write the name of your function here
         Infinity_move_right_runbutton: Add move block here
         Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
         Infinity_move_collide_callout: Play a sound when this event occurs.
         Infinity_repeat_callout: Place Move blocks inside here

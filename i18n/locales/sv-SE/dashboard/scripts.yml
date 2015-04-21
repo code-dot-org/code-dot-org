@@ -272,75 +272,76 @@ sv:
           Special: Särskilda
           Binary: Binära
         usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          title: Användbarhet högstadiet Matte
+          description_short: Användbarhet test för högstadiet matematik
+          description: Användbarhet test för högstadiet matematik
+          Usability testing for MSM: Användbarhet test för MSM
+          Evaluation Blocks: Utvärderingsblock
           Blocks to Math: Block till matematik
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Strings and Images: Strängar och bilder
+          Defining Variables: Definiera variabler
+          Defining Functions: Definiera funktioner
+          Design Recipe: Designa recept
           Booleans: Booleska värden
           Conditionals: Villkor
-          Free Play: Free Play
+          Free Play: Fri lek
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
+          title: Datavetenskap i Algebra
+          description: Lär dig funktionell programmering genom algebra
           "Unplugged: Video Games and Coordinate Planes": 'Ouppkopplad: videospel och koordinat-plan'
-          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
-          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
-          "Eval: Writing Contracts": Writing Contracts
-          "Calc: Defining Variables": Defining Variables and Substitution
-          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
-          "Eval: Defining Functions": Composite Functions
+          "Calc: Evaluation Blocks": Utvärderingsblock och aritmetiska uttryck
+          "Eval: Strings and Images": Strängar och bilder
+          "Unplugged: Contracts": 'Unplugged: Kontrakt, domän och utbud'
+          "Eval: Writing Contracts": Skriva kontrakt
+          "Calc: Defining Variables": Definiera variabler och Substitution
+          "Play Lab: Defining Variables (Big Game)": 'Big Game - variabler'
+          "Eval: Defining Functions": Sammansatta funktioner
           "Unplugged: The Design Recipe": 'Ouppkopplad: Design recept'
-          "Play Lab: Defining Functions": Rocket Height
-          "Eval: Functions": Solving Word Problems with the Design Recipe
-          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
-          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
-          "Eval: Boolean Operators": Boolean Operators
-          "Play Lab: Booleans": Sam the Bat
-          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Play Lab: Defining Functions": Rakethöjd
+          "Eval: Functions": Lös ordproblem med design recept
+          "Play Lab: Animation (Big Game)": 'Big Game - animation'
+          "Unplugged: Booleans": 'Unplugged: Booleska värden och logik'
+          "Eval: Boolean Operators": Booleska operatorer
+          "Play Lab: Booleans": Sam Bat
+          "Play Lab: Boolean (Big Game)": 'Big Game - booleska värden'
           "Unplugged: Conditionals and Piecewise Functions": 'Ouppkopplad: Villkorssatser och styckevis funktioner'
           "Eval: Conditionals": Villkor
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
-          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Kollisions-detektion och Pythagoras sats'
+          "Play Lab: Collision Detection (Big Game)": 'Big Game - kollision-detektion'
         infinity:
           title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description_short: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
+          description: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
           Play Lab: Play Lab
           Infinity: Oändligt
         algebrademo:
           title: Algebra Demo
-          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
-          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          description_short: En handfull pussel för att demonstrera miljön och programmeringsspråket som används i Code.org CS i Algebra
+          description: En handfull pussel för att demonstrera miljön och programmeringsspråket som används i Code.org CS i Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
+          Evaluation Blocks: Utvärderingsblock
+          Making Pictures: Att göra bilder
+          Defining Variables: Definiera variabler
+          Defining Simple Functions: Definiera enkla funktioner
           The Design Recipe: Design recept
         K5PD:
-          title: K5 Professional Development
-          description: Professional Development for K5 Courses
-          description_short: Professional Development for K5 Courses
-          Introduction to PD: Introduction to PD
-          Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
-          Navigating the teacher dashboard: Navigating the teacher dashboard
-          Unplugged lessons: Unplugged lessons
-          Classroom Culture: Classroom Culture
-          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
-          K-5 Courses: K-5 Courses
-          Writing computer programs in Blockly: Writing computer programs in Blockly
-          Teacher Dashboard: Teacher Dashboard
-          Personal Reflection: Personal Reflection
-          Next Steps: Next Steps
-          Computer Science Pedagogy: Computer Science Pedagogy
+          title: K5 Professionell utveckling
+          description: Professionell utveckling för K5 kurser
+          description_short: Professionell utveckling för K5 kurser
+          Introduction to PD: Introduktion till PD
+          Blockly Basics: Blockly grunder
+          Writing computer programs: Skriva datorprogram
+          Navigating the teacher dashboard: Navigera på instrumentpanelen för lärare
+          Unplugged lessons: Unplugged lektioner
+          Classroom Culture: Klassrumskultur
+          Ways to go beyond Courses 1, 2, and 3: Sätt att gå vidare efter kurserna 1, 2 och 3
+          K-5 Courses: K-5 kurser
+          Writing computer programs in Blockly: Skriva datorprogram i Blockly
+          Teacher Dashboard: Lärare Dashboard
+          Personal Reflection: Personlig reflektion
+          Next Steps: Nästa steg
+          Computer Science Pedagogy: Datavetenskapens pedagogik
+          Programming Concepts: Programming Concepts
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -348,17 +349,17 @@ sv:
           Internet Simulator: Internet Simulator
           Unit 1: Enhet 1
           Unit 2: Enhet 2
-          Sending Bits: Sending Bits
-          Routing and DNS: Routing and DNS
-          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
-          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
-          Internet Simulator Templates: Internet Simulator Templates
+          Sending Bits: Skicka bitar
+          Routing and DNS: Routning och DNS
+          "Unit 1: Sending Bits": 'Enhet 1: Skicka bitar'
+          "Unit 2: Routing and DNS": 'Enhet 2: Routning och DNS'
+          Internet Simulator Templates: Internet Simulator mallar
         pixelation:
-          title: Pixelation
+          title: Pixelering
           description: Create images with bits and bytes.
-          Pixelation: Pixelation
+          Pixelation: Pixelering
         20-hour:
-          title: 20-Hour Intro Course
+          title: 20 timmars Intro kurs
           description: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
           Introduction to Computer Science: Introduktion till Datavetenskap
           The Maze: Labyrinten
@@ -407,39 +408,39 @@ sv:
           description: ""
           Step: steg
         Hour of Code:
-          title: Hour of Code 2013
+          title: Timme av Kod 2013
           description: ""
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: Timme av Kod 2013
         Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Kod Studio pussel utmaning
+          description_short: Utmana dig själv!
+          description: 'Prova dessa roliga kodnings- pusslen. Gör ditt bästa!'
+          Puzzles: Pussel
         CodeStudioPuzzleChallenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Kod Studio pussel utmaning
+          description_short: Utmana dig själv!
+          description: 'Prova dessa roliga kodnings- pusslen. Gör ditt bästa!'
+          Puzzles: Pussel
         Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: 'Testa Kod Studio pussel- utmaning'
+          description_short: Utmana dig själv!
+          description: 'Prova dessa roliga kodnings- pusslen. Gör ditt bästa!'
+          Puzzles: Pussel
         How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: 'Testa Kod Studio pussel- utmaning'
+          description_short: Utmana dig själv!
+          description: 'Prova dessa roliga kodnings- pusslen. Gör ditt bästa!'
+          Puzzles: Pussel
         Tutorial - Code Studio Puzzle Challenge:
-          title: 'Tutorial - Code Studio Puzzle Challenge'
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: 'Tutorial - Kod Studio pussel utmaning'
+          description_short: Utmana dig själv!
+          description: 'Prova dessa roliga kodnings- pusslen. Gör ditt bästa!'
+          Puzzles: Pussel
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: 'Tutorial - Code Studio Puzzle Challenge'
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: 'Tutorial - Kod Studio pussel utmaning'
+          description_short: Utmana dig själv!
+          description: 'Prova dessa roliga kodnings- pusslen. Gör ditt bästa!'
+          Puzzles: Pussel
         course4pre:
           title: Kurs 4 förutsättning
           description_short: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
@@ -455,31 +456,40 @@ sv:
           "Artist: Functions": Artist Funktioner
           "Bee: Debugging": Bee felsökning
         cspunit1:
-          title: 'CSP Unit 1 - Digital Information'
-          description_short: Explore how digital information is represented and transferred
-          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
-          Lesson14: Lesson14
-          Lesson 14: Lesson 14
-          Lesson 14 v2: Lesson 14 v2
-          Lesson 15: Lesson 15
-          Lesson 8: Lesson 8
-          Lesson 5: Lesson 5
-          Lesson 3: Lesson 3
-          Lesson 4: Lesson 4
-          Lesson 6: Lesson 6
-          Lesson 2: Lesson 2
-          Lesson 7: Lesson 7
-          Lesson 1: Lesson 1
+          title: 'CSP enhet 1 - Digital Information'
+          description_short: Utforska hur digital information är representerad och överförd
+          description: 'Denna enhet utforskar de tekniska utmaningar och frågor som uppkommer av behovet att representera digital information i datorer och överföra det mellan människor och data- enheter.'
+          Lesson14: Lektion14
+          Lesson 14: Lektion 14
+          Lesson 14 v2: Lektion 14 v2
+          Lesson 15: Lektion 15
+          Lesson 8: Lektion 8
+          Lesson 5: Lektion 5
+          Lesson 3: Lektion 3
+          Lesson 4: Lektion 4
+          Lesson 6: Lektion 6
+          Lesson 2: Lektion 2
+          Lesson 7: Lektion 7
+          Lesson 1: Lektion 1
           Innovation: Innovation
-          Sending Binary Messages: Sending Binary Messages
-          Sending More Complex Messages: Sending More Complex Messages
-          Bit Sending Widget: Bit Sending Widget
-          Sending Bits in the Real World: Sending Bits in the Real World
-          Number Systems: Number Systems
-          Binary Numbers: Binary Numbers
+          Sending Binary Messages: Skicka binära meddelanden
+          Sending More Complex Messages: Skicka mer komplexa meddelanden
+          Bit Sending Widget: 'Bit- sändande Widget'
+          Sending Bits in the Real World: Skicka bitar i den verkliga världen
+          Number Systems: Talsystem
+          Binary Numbers: Binära tal
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text komprimering
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
         algebraPD:
-          title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
+          title: Datavetenskap i Algebra PD
+          description: Lär ut funktionell programmering genom algebra
           "Unplugged: Video Games and Coordinate Planes": 'Ouppkopplad: videospel och koordinat-plan'
           "Calc: Evaluation Blocks": 'Calc: Utvärderings- block'
           "Eval: Strings and Images": 'Eval: Strängar och bilder'
@@ -487,10 +497,10 @@ sv:
           "Eval: Writing Contracts": 'Eval: Skriva kontrakt'
           "Calc: Defining Variables": 'Calc: Definiera variabler'
           "Play Lab: Defining Variables (Big Game)": 'Play labb: Definiera variabler (Big Game)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Eval: Defining Functions": 'Eval: Definiera funktioner'
           "Unplugged: The Design Recipe": 'Ouppkopplad: Design recept'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Defining Functions": 'Play lab: Definiera funktioner'
+          "Eval: Functions": 'Eval: funktioner'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
           "Unplugged: Booleans": 'Ouppkopplad: booleska värden'
           "Eval: Boolean Operators": 'Eval: Booleska operatorer'
@@ -500,43 +510,53 @@ sv:
           "Eval: Conditionals": 'Eval: villkorssatser'
           "Unplugged: Collision Detection and the Distance Formula": 'Ouppkopplad: Kollisions-detektion och avstånds- formeln'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kollisions-detektion (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Utvärderingsblock
+          Strings and Images: Strängar och bilder
           Contracts: Kontrakt
-          Your Game - Defining Variables: 'Your Game - Defining Variables'
-          Simple Function Definition: Simple Function Definition
+          Your Game - Defining Variables: 'Ditt spel - definiera variabler'
+          Simple Function Definition: Enkel funktionsdefinition
           The Design Recipe: Design recept
-          Your Game - Animation: 'Your Game - Animation'
+          Your Game - Animation: 'Ditt spel - Animation'
           Booleans: Booleska värden
-          Sam the Bat: Sam the Bat
-          Your Game - Booleans: 'Your Game - Booleans'
+          Sam the Bat: Sam Bat
+          Your Game - Booleans: 'Ditt spel - booleska värden'
           Conditionals and Piecewise Functions: Villkorssatser och styckevis funktioner
-          Rocket-Height: Rocket-Height
-          Design Recipe Practice: Design Recipe Practice
+          Rocket-Height: Rakethöjd
+          Design Recipe Practice: Design-recept praxis
+          Introduction to PD: Introduktion till PD
         algPDmiami:
-          title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Rocket-Height: Rocket-Height
-          Design Recipe Practice: Design Recipe Practice
-          Your Game - Animation: 'Your Game - Animation'
+          title: Datavetenskap i Algebra PD
+          description: Undervisa i algebra genom funktionell programmering
+          Evaluation Blocks: Utvärderingsblock
+          Strings and Images: Strängar och bilder
+          Rocket-Height: Rakethöjd
+          Design Recipe Practice: Design-recept praxis
+          Your Game - Animation: 'Ditt spel - Animation'
           Booleans: Booleska värden
-          Sam the Bat: Sam the Bat
-          Your Game - Booleans: 'Your Game - Booleans'
+          Sam the Bat: Sam Bat
+          Your Game - Booleans: 'Ditt spel - booleska värden'
           Luigi's Pizza: "Luigi's Pizza"
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kollisions-detektion (Big Game)'
-          Your Game - Player Movement: 'Your Game - Player Movement'
-          Your Game - Collision Detection: 'Your Game - Collision Detection'
+          Your Game - Player Movement: 'Ditt spel - spelarrörelse'
+          Your Game - Collision Detection: 'Ditt spel - kollisionsdetektion'
         text-compression:
-          title: Text Compression
-          description: Compress text by identifying repeated patterns.
-          Text Compression: Text Compression
+          title: Text komprimering
+          description: Komprimera text genom att identifiera upprepade mönster.
+          Text Compression: Text komprimering
         CSPPD:
-          new stage: new stage
-          Introduction to PD: Introduction to PD
+          new stage: ny etapp
+          Introduction to PD: Introduktion till PD
         CSPLessonSamples:
-          title: CSP Lesson Samples
-          description_short: lesson samples for csp
-          Lesson 14: Lesson 14
-          Lesson 15: Lesson 15
+          title: CSP lektionsexempel
+          description_short: lektionsexempel för csp
+          Lesson 14: Lektion 14
+          Lesson 15: Lektion 15
+        ECSPD:
+          Introduction to PD: Introduktion till PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Introduktion till PD

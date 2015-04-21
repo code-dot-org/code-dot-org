@@ -23,7 +23,7 @@
   "COLOUR_RGB_RED":"crvena",
   "COLOUR_RGB_TITLE":"boja sa",
   "COLOUR_RGB_TOOLTIP":"Kreiraj boju sa zadatom količinom crvene, zelene i plave. Sve vrijednosti moraju biti između 0 i 100.",
-  "CONTRACT_EDITOR_HEADER":"Design Recipe",
+  "CONTRACT_EDITOR_HEADER":"Recept za Dizajn",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"oslobodi se",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"Nastavi sa sljedećom petljom",

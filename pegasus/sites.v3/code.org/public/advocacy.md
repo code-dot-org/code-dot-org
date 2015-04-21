@@ -29,6 +29,13 @@ For a more in-depth description of our state policy agenda, please see our [stat
 
 
 ## Federal Policy
+Despite demand for computer science skills and professionals, the country’s K-12 education system continues to marginalize computer science education.  Decisions about what is taught in elementary, middle and high schools are vested in state and local authority but federal, state and local education policy must support putting students on a path to fill high-demand, high-skilled, high-paying computing jobs across all sectors of the country’s economy. 
+
+* The US Congress should ensure there are minimal barriers in federal policies for K-12 computer science education. 
+* Professional development efforts supported by federal dollars should explicitly include computer science teachers.
+* Federal policies that affect teacher preparation programs at colleges and universities must be leveraged to grow a computer science teaching workforce that currently faces confusing professional pathways and certification and licensure processes. 
+* The billions of dollars the US government invests in STEM education programs at 13 federal agencies should adequately support computer science education.
+For more information on Code.org’s federal policy agenda, contact XXXXX.
 
 
 ## Members

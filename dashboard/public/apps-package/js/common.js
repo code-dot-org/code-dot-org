@@ -4150,7 +4150,7 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}],204:[function(require,module,exports){
+},{}],205:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4544,8 +4544,8 @@ function installCond(blockly, generator) {
       this.setHSV.apply(this, Blockly.FunctionalTypeColors.None);
 
       var plusField = new Blockly.FieldIcon('+');
-      plusField.getRootElement().addEventListener('mousedown',
-        _.bind(this.addConditionalRow, this));
+      Blockly.bindEvent_(plusField.getRootElement(), 'mousedown',
+        this, this.addConditionalRow);
 
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('cond', options))
@@ -4590,8 +4590,8 @@ function installCond(blockly, generator) {
 
       if (this.pairs_.length > 1) {
         var minusField = new Blockly.FieldIcon('-');
-        minusField.getRootElement().addEventListener('mousedown',
-          _.bind(this.removeConditionalRow, this, id));
+        Blockly.bindEvent_(minusField.getRootElement(), 'mousedown',
+          this, _.bind(this.removeConditionalRow, this, id));
         minusInput.appendTitle(minusField);
       }
 
@@ -4700,7 +4700,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":256,"./utils":251}],236:[function(require,module,exports){
+},{"../locale/current/common":257,"./utils":252}],237:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -4764,7 +4764,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],230:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4787,7 +4787,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":256,"ejs":272}],206:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],207:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -5052,7 +5052,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":57}],205:[function(require,module,exports){
+},{"./dom":57}],206:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5203,7 +5203,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":27,"./dom":57,"./required_block_utils":203,"./utils":251}],203:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":27,"./dom":57,"./required_block_utils":204,"./utils":252}],204:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -5523,7 +5523,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":256,"./block_utils":26,"./utils":251,"./xml":252}],27:[function(require,module,exports){
+},{"../locale/current/common":257,"./block_utils":26,"./utils":252,"./xml":253}],27:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5691,7 +5691,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":256}],4:[function(require,module,exports){
+},{"../locale/current/common":257}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -7105,7 +7105,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":256,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":25,"./block_utils":26,"./constants.js":56,"./dom":57,"./dropletUtils":58,"./feedback":77,"./templates/builder.html":224,"./templates/buttons.html":225,"./templates/instructions.html":227,"./templates/learn.html":228,"./templates/makeYourOwn.html":229,"./utils":251,"./xml":252,"url":271}],271:[function(require,module,exports){
+},{"../locale/current/common":257,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":25,"./block_utils":26,"./constants.js":56,"./dom":57,"./dropletUtils":58,"./feedback":77,"./templates/builder.html":225,"./templates/buttons.html":226,"./templates/instructions.html":228,"./templates/learn.html":229,"./templates/makeYourOwn.html":230,"./utils":252,"./xml":253,"url":272}],272:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7814,13 +7814,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":267,"querystring":270}],270:[function(require,module,exports){
+},{"punycode":268,"querystring":271}],271:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":268,"./encode":269}],269:[function(require,module,exports){
+},{"./decode":269,"./encode":270}],270:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7907,7 +7907,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],268:[function(require,module,exports){
+},{}],269:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7993,7 +7993,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],267:[function(require,module,exports){
+},{}],268:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8504,7 +8504,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],229:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8524,7 +8524,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":256,"ejs":272}],228:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],229:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8546,7 +8546,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":256,"ejs":272}],227:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],228:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8566,7 +8566,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":256,"ejs":272}],224:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],225:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8586,7 +8586,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":272}],77:[function(require,module,exports){
+},{"ejs":273}],77:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -9805,7 +9805,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":256,"./codegen":54,"./constants":56,"./dom":57,"./feedbackBlocks":78,"./templates/buttons.html":225,"./templates/code.html":226,"./templates/shareFailure.html":232,"./templates/sharing.html":233,"./templates/showCode.html":234,"./templates/trophy.html":235,"./utils":251,"./xml":252}],235:[function(require,module,exports){
+},{"../locale/current/common":257,"./codegen":54,"./constants":56,"./dom":57,"./feedbackBlocks":78,"./templates/buttons.html":226,"./templates/code.html":227,"./templates/shareFailure.html":233,"./templates/sharing.html":234,"./templates/showCode.html":235,"./templates/trophy.html":236,"./utils":252,"./xml":253}],236:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9825,7 +9825,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":272}],234:[function(require,module,exports){
+},{"ejs":273}],235:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9845,7 +9845,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":256,"ejs":272}],233:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],234:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9865,7 +9865,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":256,"ejs":272}],232:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],233:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9885,7 +9885,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":272}],226:[function(require,module,exports){
+},{"ejs":273}],227:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9905,7 +9905,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":272}],225:[function(require,module,exports){
+},{"ejs":273}],226:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9925,7 +9925,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":256,"ejs":272}],78:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],78:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -10054,7 +10054,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":56,"./templates/readonly.html":231}],231:[function(require,module,exports){
+},{"./constants":56,"./templates/readonly.html":232}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10075,7 +10075,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":272}],54:[function(require,module,exports){
+},{"ejs":273}],54:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -10971,7 +10971,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
     .concat(configuredBlocks);
 };
 
-},{"./utils":251}],251:[function(require,module,exports){
+},{"./utils":252}],252:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -11225,7 +11225,7 @@ exports.isInfiniteRecursionError = function (err) {
   return false;
 };
 
-},{"./hammer":88,"./lodash":96,"./xml":252}],96:[function(require,module,exports){
+},{"./hammer":88,"./lodash":96,"./xml":253}],96:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -17241,7 +17241,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
     '</block>';
 };
 
-},{"./xml":252}],252:[function(require,module,exports){
+},{"./xml":253}],253:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -17495,7 +17495,7 @@ DropletFunctionTooltip.prototype.getTooltipHTML = function () {
 
 module.exports = DropletFunctionTooltip;
 
-},{"../../locale/current/common":256,"./DropletBlockTooltip.html":23}],256:[function(require,module,exports){
+},{"../../locale/current/common":257,"./DropletBlockTooltip.html":23}],257:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],23:[function(require,module,exports){
 module.exports= (function() {
@@ -17517,7 +17517,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":272}],272:[function(require,module,exports){
+},{"ejs":273}],273:[function(require,module,exports){
 
 /*!
  * EJS
@@ -17872,7 +17872,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":273,"./utils":274,"fs":264,"path":265}],274:[function(require,module,exports){
+},{"./filters":274,"./utils":275,"fs":265,"path":266}],275:[function(require,module,exports){
 
 /*!
  * EJS
@@ -17896,7 +17896,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],273:[function(require,module,exports){
+},{}],274:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -18095,7 +18095,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],265:[function(require,module,exports){
+},{}],266:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -18323,7 +18323,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":266}],266:[function(require,module,exports){
+},{"_process":267}],267:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -18382,7 +18382,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],264:[function(require,module,exports){
+},{}],265:[function(require,module,exports){
 
 },{}],2:[function(require,module,exports){
 /**

@@ -56,9 +56,13 @@ Elementary School Teachers - June 1st
 [Phase 1 K-5 Intro to Computer Science Agenda (pdf)](/files/K-5_PD1_Agenda.pdf) 
 
 
-<br />
+<br />
+
 
 
 ----------
-Please visit [FAQs](/educate/pd/faq) for more information.<br /><br />
+Please visit [FAQs](/educate/pd/faq) for more information.
+
+<br />
+<br />
 

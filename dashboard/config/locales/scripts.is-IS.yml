@@ -343,7 +343,7 @@
             árekstra og regla Pýþagórasar'
           'Play Lab: Collision Detection (Big Game)': Stórleikur - Skynjun árekstra
         infinity:
-          title: Leikjasmiðja
+          title: Disney Infinity leikjasmiðja
           description_short: Nota Leikjasmiðjuna til að búa til sögu eða leik með
             Disney Infinity persónum.
           description: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney
@@ -380,6 +380,7 @@
           Personal Reflection: Persónulegar hugleiðingar
           Next Steps: Næstu skref
           Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
+          Programming Concepts: Programming Concepts
         netsim:
           title: Internet hermir
           description_short: ''
@@ -499,9 +500,12 @@
           'Artist: Functions': 'Listamaður: Föll'
           'Bee: Debugging': 'Býfluga: Villuleit'
         cspunit1:
-          title: CSP Kafli 1
-          description_short: Búa til svarthvítar myndir með dílamynstursverkfærinu
-          description: CSP Kafli 1 - áfangar
+          title: CSP Kafli1 - Stafrænar upplýsingar
+          description_short: Kanna hvernig stafrænar upplýsingar eru settar fram og
+            fluttar
+          description: Þessi kafli kannar þær tæknilegu áskoranir og spurningar sem
+            koma upp út frá þörfinni fyrir að setja stafrænar upplýsingar fram í tölvum
+            og flytja þær milli manna og tölvutækja.
           Lesson14: Kennslustund14
           Lesson 14: Kennslustund 14
           Lesson 14 v2: Kennslustund 14 útg. 2
@@ -510,17 +514,27 @@
           Lesson 5: Kennslustund 5
           Lesson 3: Kennslustund 3
           Lesson 4: Kennslustund 4
-          Lesson 6: Lesson 6
-          Lesson 2: Lesson 2
-          Lesson 7: Lesson 7
-          Lesson 1: Lesson 1
-          Innovation: Innovation
-          Sending Binary Messages: Sending Binary Messages
-          Sending More Complex Messages: Sending More Complex Messages
-          Bit Sending Widget: Bit Sending Widget
-          Sending Bits in the Real World: Sending Bits in the Real World
-          Number Systems: Number Systems
-          Binary Numbers: Binary Numbers
+          Lesson 6: Kennslustund 6
+          Lesson 2: Kennslustund 2
+          Lesson 7: Kennslustund 7
+          Lesson 1: Kennslustund 1
+          Innovation: Nýbreytni
+          Sending Binary Messages: Sending stafrænna skilaboða
+          Sending More Complex Messages: Sending flóknari skilaboða
+          Bit Sending Widget: Bitasendigræja
+          Sending Bits in the Real World: Sending bita í raunheimi
+          Number Systems: Talnakerfi
+          Binary Numbers: Tvíundartölur
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Þjöppun texta
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
+            Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
         algebraPD:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna fallmiðaða forritun í gegnum algebru
@@ -562,6 +576,7 @@
           Conditionals and Piecewise Functions: Skilyrði og Piecewise föll
           Rocket-Height: Hæð-flaugar
           Design Recipe Practice: Hönnunaruppskrift æfð
+          Introduction to PD: Kynning á PD
         algPDmiami:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna algebru með fallmiðaðri forritun
@@ -583,10 +598,19 @@
           description: Þjappa texta með því að greina endurtekin mynstur.
           Text Compression: Þjöppun texta
         CSPPD:
-          new stage: new stage
+          new stage: nýr áfangi
           Introduction to PD: Kynning á PD
         CSPLessonSamples:
-          title: CSP Lesson Samples
-          description_short: lesson samples for csp
+          title: Sýnishorn CSP kennslustunda
+          description_short: sýnishorn kennslustunda fyrir csp
           Lesson 14: Kennslustund 14
           Lesson 15: Kennslustund 15
+        ECSPD:
+          Introduction to PD: Kynning á PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Kynning á PD

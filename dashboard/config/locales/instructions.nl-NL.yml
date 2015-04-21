@@ -3,11 +3,12 @@
     instructions:
       10A_instruction: Oké, laten we deze puzzel afmaken met een groen vierkant dat
         175 pixels groot is.
-      2-3 _instruction: Paarse bloemen mogen alleen 1 OF 0 nectar hebben. Wees voorzichtig,
-        verzamel geen nectar van paarse bloemen ALS deze bloemen geen nectar hebben.
-      2-3 Artist 1 new_instruction: Hoi, ik ben een kunstenaar. Je kan mij programmeren
-        om bijna alles te tekenen. Gebruik een paar blokken om mij over de grijze
-        lijnen in de afbeelding te laten tekenen. (Elke lijn is 100 pixels breed)
+      2-3 _instruction: 'Paarse bloemen mogen alleen 1 of  0 nectar hebben. Wees voorzichtig:
+        verzamel geen nectar van paarse bloemen als deze geen nectar hebben.'
+      2-3 Artist 1 new_instruction: Hoi, ik ben een kunstenaar. Je kan programmeren
+        om mij bijna alles te laten tekenen. Gebruik een paar blokken om mij over
+        de grijze lijnen in de afbeelding te laten tekenen. (Elke lijn is 100 pixels
+        lang)
       2-3 Artist 11_instruction: 'Geef het stopteken een rand door een achthoek te
         maken, waarvan de zijden elk 100 pixels lang zijn. Hoeveel graden moet je
         draaien? (Hint: Wat is 360 gedeeld door 8?) '
@@ -20,8 +21,8 @@
       2-3 Artist 2_instruction: Dit huis heeft een half-afgemaakte muur. Iedere zijde
         is 100 maar de half-afgemaakte maar 50. Maak de muur af.
       2-3 Artist 3.4_instruction: |
-        Het sprong blok verplaatst de artiest zonder een lijn te tekenen.
-        Om een stippellijn te maken gebruik je de sprong blok tegelijk met het teken blok.
+        Het spring blok verplaatst de artiest zonder te tekenen.
+        Om een stippellijn te maken gebruik je het spring blok tegelijk met het teken blok.
       2-3 Artist 3_instruction: Deze hoed is 100 pixels hoog. Teken een hoed die 70
         pixels minder hoog is.
       2-3 Artist 3new_instruction: De rode hoe is 100 pixels hoog. Maak een zwarte
@@ -324,10 +325,11 @@
         tot' blok!
       2-3 Maze 16 before_instruction: Breng me naar het biggetje.
       2-3 Maze 16_instruction: Breng me naar de zonnebloem. Gebruik een lus!
-      2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
+      2-3 Maze 2_instruction: Het biggetje werkt me op mijn zenuwen. Help me bij hem
+        te komen!
       2-3 Maze 3_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or feathers will fly!
+        Volg het pad en breng me naar het malle varken. Vermijd de
+        TNT, want anders zullen de veren in het rond vliegen!
       2-3 Maze 4_instruction: Breng me naar de groene naarling! (Pas op voor dynamiet)
       2-3 Maze 5_instruction: Breng me naar de groene naarling! (Pas op voor dynamiet)
       2-3 Maze 6_instruction: Rustig blijven, help me het slechte biggetje te vinden.
@@ -342,49 +344,51 @@
       2-3 Maze Loops 21_instruction: Help me tot bij de zonnebloem!
       2-3 Maze Loops Assessment 1_instruction: 'Opdracht: Breng me naar de zonnebloem
         met slechts 5 blokken! '
-      2-3 Maze sq1 _instruction: |
-        This pig is ruffling my feathers.  Help me find
-        him!
-      2-3 Maze sq10_instruction: Get me to the pig! What blocks got repeated?
-      2-3 Maze sq10v2_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq11_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
+      2-3 Maze sq1 _instruction: Het biggetje werkt me op mijn zenuwen. Help me het
+        te vinden!
+      2-3 Maze sq10_instruction: Breng me naar het varken! Welke blokken werden herhaald?
+      2-3 Maze sq10v2_instruction: Breng me naar het varken! Welke blokken werden
+        herhaald?
+      2-3 maze sq11_instruction: Breng me naar het varken! Welke blokken werden herhaald?
+      2-3 maze sq12_instruction: Kunt u het vorige antwoord vervangen met een lus
+        door een blok "herhaal x keer" te gebruiken?
       2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
+        Geachte persoon. Ik zombie. Moet...naar...zonnebloem.
+        Maak een lus met een "herhaal tot" blok.
+      2-3 maze sq14_instruction: Lukt het je om bij de zonnebloem te komen door maar
+        vier blokken te gebruiken?
+      2-3 maze sq15_instruction: Lukt het je om bij de zonnebloem te komen door maar
+        vijf blokken te gebruiken?
       2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
+        Ok, dit lijkt erop, maar dan een klein beetje anders. Lukt het
+        je met maar vijf blokken?
       2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+        Volg het pad en breng me naar het malle varken. Vermijd de
+        TNT, want anders zullen de veren in het rond vliegen!
       2-3 Maze sq3_instruction: Breng me naar de groene naarling! (Pas op voor dynamiet)
       2-3 Maze sq4_instruction: Rustig blijven, help me het slechte biggetje te vinden.
         Anders word ik misschien nog boos!
       2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
-      2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
-      2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
-      4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
-        long) \n"
-      4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
+        Breng me naar het varken? Hoe vaak dien je een blok
+        te herhalen?
+      2-3 Maze sq6_instruction: "Kun je het vorige antwoord vervangen door eentje
+        \nmet maar twee blokken? (Hint: Maak een lus door een \"herhaal x keer\" \nblok
+        te gebruiken.)\n"
+      2-3 Maze sq7_instruction: breng me naar de groene indringer met behulp van slechts
+        drie blokken.
+      2-3 Maze sq8_instruction: Breng me naar het varken! (Waar is dat blok "herhaal
+        keer" wanneer ik het nodig heb?)
+      2-3 Maze sq9_instruction: Maak loops om naar het varken te gaan met minder blokken.
+      2-3level1_instruction: Help de vogel het ondeugende varken te vangen door het
+        vooruit te bewegen
+      4-5 Artist 1_instruction: "Help me om mijn vierkant te tekenen. (Elke lijn is
+        300 \npixels lang) \n"
+      4-5 Artist 10_instruction: "Druk op \"Uitvoeren\" om de code uit te proberen.
+        \nHerhaal het daarna vaak genoeg om de tekening af te maken. De kleuren zullen
+        telkens anders zijn.\n"
       4-5 Artist 11_instruction: |
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
+        Voltooi de groene lijnen. De lijnen zijn 300 pixels
+        lang en liggen 15 pixels uiteen.
       4-5 Artist 2_instruction: Can you loop this code to complete the square?
       4-5 Artist 3.5_instruction: |
         Ok, try to figure out what happens if you run
@@ -396,14 +400,12 @@
       4-5 Artist 4_instruction: |
         How many degrees are in a circle?  Loop the blocks
         to create a circle of colors.
-      4-5 Artist 5_instruction: What angle do you use?
-      4-5 Artist 6_instruction: |
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
-      4-5 Artist 7_instruction: |
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length is double the height of 100 pixels. Complete
-        the drawing.
+      4-5 Artist 5_instruction: Welke hoek gebruik je?
+      4-5 Artist 6_instruction: Deze gelijkzijdige driehoek heeft hoeken van 60, 60
+        en 60 graden. Elke zijde is 200 pixels. Maak de tekening af.
+      4-5 Artist 7_instruction: Deze rechthoekige driehoek heeft hoeken van 30, 60
+        en 90 graden. De lengte van de schuine zijde is tweemaal de hoogte van 100
+        pixels. Maak de tekening af.
       4-5 Artist 8_instruction: |
         The halfway line on a soccer field is perpendicular
         to the sidelines. This field has a perimeter of 800 pixels and it is 240 pixels
@@ -703,7 +705,8 @@
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Maze 10_instruction: Lukt het je om bij de zonnebloem te komen door maar
+        vier blokken te gebruiken?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
@@ -978,10 +981,10 @@
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
       Big Game Animation 2_instruction: |
-        The function 'update-target' function
-        takes the target's current x value, and returns an updated value. Complete
-        the 'update-target' function so that it adds to the x value each time it
-        is called. The more you add to x, the faster the target will go.
+        The 'update-target' function takes the
+        target's current x value, and returns an updated value. Complete the 'update-target'
+        function so that it adds to the x value each time it is called. The more you
+        add to x, the faster the target will go.
       Big Game Animation 3_instruction: |
         The 'update-danger' function should work
         just like 'update-target', except that the danger should move from the right
@@ -1000,24 +1003,30 @@
         finish and we'll work on making those sprites reappear on screen after they've
         left.
       Big Game Booleans 2_instruction: |
-        Remember the safe-left? and safe-right? functions
-        from Sam the Bat? We're going to use that same logic to figure out when the
-        target and danger leave the screen. Go to the "Functions" section of the
-        toolbox and complete the safe-left? function.
+        Now that your onscreen? function is checking
+        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
+        section of the toolbox and complete the safe-left? function so that it returns
+        true if the sprite's x coordinate is greater than -50. If you're successful
+        you should see the Danger go off the left side and then return on right side.
       Big Game Booleans 3_instruction: |
         Now that you've got safe-left?, let's fill
         in safe-right? - it should take in a sprite's x coordinate and return true
-        if the sprite hasn't gone off the right side of the screen.
+        if that coordinate is less than 450. Once your safe-right? is complete you
+        should see the Target go off the right side of the screen and return on the
+        left.
       Big Game Booleans 4_instruction: |
-        Great, now that you have functions to check
-        the left and right side of the screen, edit the on-screen? function so that
-        it checks safe-left? AND safe-right?, just like you did with Sam the Bat.
+        We've provided a couple of empty functions
+        for safe-left? and safe-right? The first thing you need to do is complete
+        the onscreen? function so that it checks whether both safe-left? and safe-right?
+        are true. TIP - even after you add safe-left? and safe-right? your sprites
+        won't return to the screen. That will happen in the next puzzles when we
+        make sure that safe-left? and safe-right? actually work.
       Big Game Booleans 5_instruction: |
         At this point your danger should run across
         the screen from right to left, your target should run across from left to
-        right, and they should both return to the opposite side. Take a minute to
-        make sure your game is working like you want it to, and then click finish
-        to move on.
+        right, and they should both return to the opposite side, repeatedly. Take
+        a minute to make sure your game is working like you want it to, and then click
+        Finish to move on.
       Big Game Collision 1 (copy 1)_instruction: |
         When you last worked on your game
         we got our target and danger sprites to fly across the screen, but they never
@@ -1038,18 +1047,20 @@
         workbook. Edit the 'update-player' function so that if moves the player
         up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Collision 3_instruction: |
-        In order to know if two of our sprites are
-        touching, we first need to measure the distance between their center points.
-        Use the Pythagorean Theorem to complete this distance function so that it
-        returns the distance between the player's center coordinates (px, py), and
-        the center coordinates of another character (cx, cy). We've provided a working
+        Let's fix this distance function so our
+        collision detection works properly. Use the Distance Formula, so the distance
+        function returns the distance between the player's center coordinates (px,
+        py) and another sprite's center coordinates (cx, cy). We've provided a working
         line-length function to help you out.
       Big Game Collision 4_instruction: |
-        Now that you have a way to measure the distance
-        between two points, you just need to decide when those points are close enough
-        to be considered touching. Complete the 'collide?' function so that it checks
-        the distance function and returns true if the two points are close enough
-        to touch (100 pixels apart is a good place to start).
+        We've got a function called distance that
+        should return the distance between two sprites, and using that we can decide
+        when those sprites are close enough to be considered touching. Complete the
+        'collide?' function so that it checks the distance function and returns
+        true if the two points are close enough to touch (100 pixels apart is a good
+        place to start). TIP: the distance function doesn't work yet (it always returns
+        zero), so if you're successful you'll see that your sprites are instantly
+        "colliding," but we'll fix that in a second!
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -1063,16 +1074,17 @@
         you'll have an opportunity to share a link to your game. Good work!
       Big Game Player 1_instruction: |
         We're getting really close to a finished game!
-        Last time you work on your game, you used booleans to make your Target and
-        Danger return to the screen once the've left. Click Run to see how your game
-        looks right now, and then we'll get to making your Player move up and down.
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
         accordingly. Computers read keypresses as numeric key codes - the up arrow
         is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
+        workbook. Edit the 'update-player' function so the player moves up when
+        the up arrow is pressed, and moves down when the down arrow is pressed.
       Big Game Testing_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1239,18 +1251,18 @@
         cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
         need to track the cost of making each cookie, the money paid, and the\ntotal
-        profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe
+        profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe
         function `cost`, which takes in the number of cookies you intend to sell,\nand
         returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
-        to buy those cookies (each cookie costs $1.50).
+        to buy those cookies (each cookie is sold at $1.50).
       Calc Design Recipe 4_instruction: |
-        Free Play: Using the two functions we just
-        wrote, write the function `cookie-profit`, which takes in the number of cookies
-        you sold, and gives you back the total profit you make from selling your cookies,
-        accounting for the cost of baking them.
+        Using the two functions we just wrote, write
+        the function `profit`, which takes in the number of cookies you sold, and
+        gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
@@ -2297,7 +2309,7 @@
         pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
-        to draw something interesting. Make sure to save and share your favorite images.
+        to create something interesting. Make sure to share your favorite creations.
       Examples 4_instruction: Shrink function
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
@@ -2708,37 +2720,35 @@
       NetSim_AutomaticDNS_instruction: |
         In this version of the simulator a DNS service
         is provided for you. Send a message in the form GET [hostname] to the DNS
-        service to get a student's address.
+        service at address 15 to get a student's address.
       NetSim_ManualDNS_instruction: |
         In this version of the simulator you can't
         see the other students' addresses.  Instead, one of you must act as a name
         service, to help share addresses with each other.
       NetSim_SendAB_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is not
-        yet functional. It will allow students to manually set/read individual As
-        and Bs on a simplex wire.
+        Connect to another student.  Each of you can set
+        the value of the wire between you to "A" or "B".  See if you can send
+        a complete message!
       NetSim_SendAscii_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send ASCII to each other.
+        In this version of the simulator, you can send
+        numbers or ASCII characters to one another, one bit at a time.
       NetSim_SendBits_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send binary as zeroes and ones
-        to one another
+        Connect to another student.  You can now set
+        your wire to "0" or "1".  Send a message to your partner!
       NetSim_SendingABTest_instruction: |
         This is Sarah's test of making a netsim
         level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        NetSim: Variant 1 allows students to manually
+        work out the timing of sending bits back and forth.
       NetSim_Variant2_instruction: |
-        NetSim: Variant 2 template: UNDER CONSTRUCTION:
-        Variant 2 is not yet functional because P2P connections have not been implemented.
+        NetSim: Variant 2: Students connect directly
+        to one another and send entire packets back and forth, exploring systems of
+        encoding data.
       NetSim_Variant3_instruction: |
-        NetSim: Variant 3 template: Connects groups of
-        2-6 students with a router, and explores issues in routing and DNS
+        NetSim: Variant 3: Connects groups of 2-6 students
+        with a router, and explores issues in routing and DNS
       NEW Artist Artist Functions 3_instruction: "Here is a new type of Block. It\nis
         called a \"Function block.\" Click on \"RUN\" to see what it can do. \n"
       New Artist Project_instruction: |
@@ -2940,6 +2950,22 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDK5 Conditionals 1_instruction: |
+        Purple flowers may have either 1 or 0 nectar,
+        but you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
+      PDK5 Events 1_instruction: "So far all of the programs we've written are executed\nin
+        order from top to bottom. In this puzzle, we'll use \"Events\" to respond\nto
+        an action on demand. Make the octopus say \"Hello\" only when you click\non
+        the Octopus. \n"
+      PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
+        \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
+        this is called a \"loop.\" \n"
+      PDK5 Loops 3_instruction: |
+        Here's another puzzle to practice loops. What happens
+        if you use the repeat block to run the code already provided on the workspace
+        4 times?
       perpendicular_instruction: |
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
@@ -3215,4 +3241,9 @@
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
+      U1L4 NetSim SendAB_instruction: |
+        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
+        Variant 1 is not yet functional because P2P connections have not been implemented.
+        Variant 1 allows students to manually work out the timing of sending bits
+        back and forth.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

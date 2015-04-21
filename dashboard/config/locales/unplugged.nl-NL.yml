@@ -285,11 +285,13 @@
           wiskunde gebruiken! Ontdek hoe wiskundige formules en het coördinatenstelsel
           ons kunnen leren hoe videospellen werken en begin dan met het ontwerpen
           van het videospel dat jij gaat maken.
+        video: alg_11_coordinate_plane
       Contracts:
         title: Ontwerp, Domein en Bereik
         desc: Functiedeclaraties helpen ons functies te begrijpen en ze te kunnen
           bespreken. In deze les behandelen hoe een functiedeclaratie ons kan helpen
           om een nieuwe programmeertaal of een functie te begrijpen.
+        video: alg_5_contracts
       DesignRecipe:
         title: Het ontwerp Recept
         desc: Op het vorige niveau schreven de leerlingen enkele zeer simpele functies.
@@ -297,11 +299,13 @@
           Design Recipe is een gestructureerde aanpak om functies te schrijven, die
           eveneens het schrijven van testcases voorschrijft om te verzekeren dat de
           functie werkt zoals verwacht.
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans en logica
         desc: Booleans zijn het vierde en laatste gegevenstype dat je in deze cursus
           leert kennen. In deze praktijkopdracht zul je leren wat Booleans zijn en
           hoe ze ons helpen om functies te schrijven die logisch denken
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionele en stuksgewijze functies
         desc: De parameters die we aan functies meegeven zorgen ervoor dat de uitvoer
@@ -309,6 +313,7 @@
           waarden een uitvoer willen maken volgens een specifiek patroon en met andere
           waarden volgens een ander patroon. Dat is waar voorwaardelijke instructies
           voor nodig zijn...
+        video: alg_10_conditionals
       CollisionDetection:
         title: Botsingdetectie en de stelling van Pythagoras
         desc: Bepalen wanneer objecten op het scherm elkaar raken is een belangrijk
@@ -316,3 +321,4 @@
           van Pythagoras en de afstandsformule kunnen worden gebruikt voor het meten
           van de afstand tussen twee punten op een plat vlak, om vervolgens te beslissen
           of die twee punten (of spelfiguren) elkaar raken.
+        video: alg_16_biggame_collision_detection

@@ -349,6 +349,7 @@ pt-BR:
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
     heading_legacy: '<h2>Nosso curso geral para</h2><h1>todas as idades</h1>'
     your_gallery: Galeria
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Masculino
     female: Feminino
@@ -472,11 +473,12 @@ pt-BR:
     correct_body: Essa é a resposta correta.
   contract_match:
     wrong_title: Resposta incorreta
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
-    baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
+    badname: Seu contrato tem o nome errado.
+    badname_case: Os nomes das funções diferenciam letras maiúsculas de minúsculas. Tente alterar o uso de maiúsculas e minúsculas no nome do seu contrato.
+    badrange: Seu contrato tem a imagem errada.
+    baddomainsize: Seu contrato não tem o número correto de itens no domínio.
+    baddomainname: Um ou mais de seus itens de domínio têm o nome errado.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Insira sua resposta aqui
   dialog:

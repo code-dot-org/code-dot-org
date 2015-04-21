@@ -159,7 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "圆 （半径、 样式、 颜色）"},
 "displayBlockTitle":function(d){return "评估"},
 "ellipseBlockTitle":function(d){return "椭圆 （宽度、 高度、 样式、 颜色）"},
-"extraTopBlocks":function(d){return "您有未连接的语句块。您要将其连接至“显示”语句块吗？"},
+"extraTopBlocks":function(d){return "你还有未使用的块。你是要将它们附加到\"评价\"块吗？"},
 "infiniteRecursionError":function(d){return "你的函数正在调用它自己。我们已经将它停止，否则它将会永久持续地调用它自己。"},
 "overlayBlockTitle":function(d){return "覆盖 （顶部、 底部）"},
 "placeImageBlockTitle":function(d){return "放置图像（X轴坐标，Y轴坐标，图像）"},

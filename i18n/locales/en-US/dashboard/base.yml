@@ -342,6 +342,7 @@ en:
     heading_apps: crwdns8816:0crwdne8816:0
     heading_legacy: crwdns8843:0crwdne8843:0
     your_gallery: crwdns23431:0crwdne23431:0
+    no_primary_course: crwdns36301:0crwdne36301:0
   gender:
     male: crwdns2618:0crwdne2618:0
     female: crwdns2619:0crwdne2619:0
@@ -470,6 +471,7 @@ en:
     badrange: crwdns36224:0crwdne36224:0
     baddomainsize: crwdns36225:0crwdne36225:0
     baddomainname: crwdns36226:0crwdne36226:0
+    baddomaintype: crwdns36302:0crwdne36302:0
   text_match:
     placeholder: crwdns22206:0crwdne22206:0
   dialog:

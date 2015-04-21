@@ -99,11 +99,11 @@
         Jigsaw: Rompecabezas
         MazeStep: Modo paso a paso de laberinto
         Wordsearch: Sopa de Letras
-        Webapp: Laboratorio de aplicaciones
+        Webapp: Laboratorio de App
         ArtistEC: El artista
         TextMatch: Combinación de texto
         StudioEC: Laboratorio de Juegos
-        Applab: Laboratorio de aplicaciones
+        Applab: Laboratorio de App
         NetSim: Simulador de internet
     trophy:
       name:
@@ -331,9 +331,9 @@
         turtle_3_7: Agrega una entrada denominada "longitud" a "dibujar una casa"
           y construye una casa grande para el elefante (con bordes de 150 píxeles
           de largo)
-        turtle_3_8: Aquí están todos los bloques del puzzle anterior.  Modifica "dibujar
-          una casa" así termino en la esquina inferior derecha después de dibujar
-          una nueva casa. Utiliza esta función modificada para dibujar tres casas.
+        turtle_3_8: Modificar "dibuja una casa" así que termino en la esquina inferior
+          derecha después de dibujar una nueva casa. Utilice esta función modificada
+          para dibujar tres casas.
         turtle_3_9: ¿Puedes volver a crear la función "dibujar una casa" sin ayuda?
           Pruébalo y luego dibuja una hilera de casas.
         turtle_3_10: ¡Has aprendido mucho! Ahora úsalo para dibujar lo que quieras.
@@ -693,21 +693,34 @@
         playlab_intro: Introducción al laboratorio de juegos
         playlab_events: Eventos del laboratorio de juegos
         playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Bloques de evaluación
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Variables
-        msm_7_functions: Funciones
-        infinity_playlab_intro: Play Lab - Introduction
-        infinity_playlab_events: Play Lab - Events
-        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
+        tutorial_puzzle_challenge: Tutorial Desafío de rompecabezas
+        infinity_playlab_intro: Jugar Lab - introducción
+        infinity_playlab_events: Jugar Lab - eventos
+        infinity_playlab_repeat_forever: Jugar Lab - repetir por siempre
+        csp_concept_rgb: Un poco más de píxeles
+        csp_pixelation_color_1: Reproductor Color pixelación - parte 1
+        csp_pixelation_color_2: Reproductor Color pixelación - parte 2
+        csp_pixelation_color_3: Reproductor Color pixelación - parte 3
+        csp_pixelation_bw: Blanco y negro pixelados reproductor
+        csp_U1L14_tipstricks: Unidad 1 lección 14 consejos para profesor & trucos
+        csp_textcompression: Text compression widget
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
@@ -810,8 +823,10 @@
         arrows_move_actor: Usa las flechas para mover el actor
         right_arrow_fireball: Use la flecha derecha para disparar bolas de fuego
         name_function: Escriba el nombre de su función aquí
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when
-          the up arrow is pressed?
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_move_right_runbutton: Añadir movimiento bloque aquí
+        Infinity_move_directions_callout: ¿Qué bloque hará Baymax subir cuando se
+          presiona la flecha hacia arriba?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Reproducir un sonido cuando se produce este
+          evento.
+        Infinity_repeat_callout: Lugar para mover bloques dentro de aquí

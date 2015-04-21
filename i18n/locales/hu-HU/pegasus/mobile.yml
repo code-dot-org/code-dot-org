@@ -178,7 +178,7 @@ hu-HU:
     engaged, involved and participating.&rdquo;
     Adam, teacher
   homepage_slot_text_hoc: A kódolás órája
-  homepage_slot_text_frozen: Jégvarázs Annával és Elsával
+  homepage_slot_text_frozen: Jégvarázs Annával és Elzával
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Az összes gyakorlatunk
   homepage_slot_text_course4: 4. tanfolyam
@@ -193,7 +193,7 @@ hu-HU:
   homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_hocserved: '# fő már kipróbálta'
   homepage_slot_text_title_students: Diákok
   homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
   homepage_slot_text_link_codestudio: Próbáld ki a Kódolóstúdiót
@@ -207,7 +207,7 @@ hu-HU:
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Támogasd munkánkat
   homepage_slot_text_link_stats: Nézd meg a statisztikákat
-  homepage_slot_text_link_buy: Vásárolj egy pólót vagy sapkát
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Adományozz
   homepage_header_codestudio: Kódolóstúdiós diákalkotások
   homepage_header_donors: A Code.org megköszöni a támogatásokat

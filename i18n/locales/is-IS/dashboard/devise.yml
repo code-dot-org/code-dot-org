@@ -56,21 +56,21 @@ is:
         one: '1 villa kom í veg fyrir vistun %{resource}:'
         other: '%{count} villur komu í veg fyrir vistun %{resource}:'
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: 'Tölvupóstur með boði hefur verið sendur á %{email}.'
+      invitation_token_invalid: Boðsmerkið, sem gefið var upp, er ógilt!
+      updated: Stilling lykilorðs tókst. Þú ert nú skráð/ur inn.
+      no_invitations_remaining: Engin boð eftir
+      invitation_removed: Boðið til þín var fjarlægt.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Senda boð
+        submit_button: Senda boð
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Stilla lykilorð
+        submit_button: Stilla lykilorðið mitt
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: Accept invitation
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        subject: Leiðbeiningar varðandi boð
+        hello: 'Hæ %{email}'
+        someone_invited_you: 'Einhver hefur boðið þér á %{url}. Þú getur þekkst boðið í gegnum tengilinn hér fyrir neðan.'
+        accept: Þekkjast boðið
+        ignore: 'Hunsaðu þennan tölvupóst ef þú vilt ekki þekkjast boðið.<br/>Aðgangur þinn verður ekki búinn til nema að þú notir tengilinn hér fyrir neðan til að stilla lykilorð þitt.'

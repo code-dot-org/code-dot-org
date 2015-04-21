@@ -7,7 +7,7 @@ nav: pd_nav
 # Professional Development - Fort Lauderdale
 
 - [I'm attending High School PD...](#hs)
-- [I'm attending Middle School Science PD...](#mss)
+- [I'm attending Middle School Science PD...](#science)
 - [I'm attending Middle School Math PD...](#msm)
 
 <a id="hs"></a>
@@ -71,7 +71,7 @@ Fort-Lauderdale-Davie, FL 33314
 <br />
 
 [**Back to the top**](#top)
-<a id="mss"></a>
+<a id="science"></a>
 ## Middle School Science Professional Development
 
 ### Phase 1: Preparation and Reflection

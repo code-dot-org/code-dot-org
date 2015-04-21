@@ -405,6 +405,7 @@
     heading_apps: <h2>Забавление за</h2><h1>Всеки</h1>
     heading_legacy: <h2>Нашият общ курс за</h2><h1>Всички възрасти</h1>
     your_gallery: Галерия
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Мъж
     female: Жена
@@ -514,7 +515,7 @@
     frozen:
       title: Frozen
     infinity:
-      title: Безкрайна Игрална лаборатория
+      title: Инфинити Игрална лаборатория
       body: Използвайте "Игрална лаборатория", за да създадете история или игра с
         участието на героите от Дисни Инфинити.
   gallery:
@@ -555,12 +556,14 @@
     correct_body: Това е верният отговор.
   contract_match:
     wrong_title: Неправилен отговор
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
+    badname: Вашият договор е с грешно име.
+    badname_case: В имената на функциите се използват главни и малки букви. Опитайте
+      се да промените размера на буквите в с името на вашия контакт.
+    badrange: Вашият договор е грешен диапазон.
+    baddomainsize: Вашият договор няма точния брой на елементите в домейна.
+    baddomainname: Един или повече елементи на вашия домейн са/е с грешно име.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Въведете отговора си тук
   dialog:

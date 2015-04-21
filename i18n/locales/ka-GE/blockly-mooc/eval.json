@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"სასურათე ადგილი (x, y, სურათი)",
   "offsetBlockTitle":"წანაცვლება (x, y, სურათი)",
   "rectangleBlockTitle":"მართკუთხედი (სიგანე, სიმაღლე, სტილი, ფერი)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"მობრუნება, (კუთხე, სურათი)",
   "scaleImageBlockTitle":"სკალა (ფაქტორი, სურათი)",
   "squareBlockTitle":"კვადრატი : (ზომა, სტილი, ფერი)",

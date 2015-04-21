@@ -4,7 +4,7 @@
   "circleBlockTitle": "círculo (radio, estilo, color)",
   "displayBlockTitle": "evaluar",
   "ellipseBlockTitle": "elipse (anchura, altura, estilo, color)",
-  "extraTopBlocks": "Usted tiene bloques sueltos \"separados\". Quiso decir adjuntar estos para el bloque de \"evaluar\"?",
+  "extraTopBlocks": "Tienes bloques separados. Quisiste decir adjuntar estos bloques a el bloque de \"evaluar\"?",
   "infiniteRecursionError": "Tu función hace referencia a sí misma. Hemos detenido la ejecución, de otro modo hubiera seguido llamándose a sí misma indefinidamente.",
   "overlayBlockTitle": "superposición (arriba, abajo)",
   "placeImageBlockTitle": "lugar-imagen (x, y, imagen)",

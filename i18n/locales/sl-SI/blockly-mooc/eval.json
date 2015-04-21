@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"postavi sliko (x, y, slika)",
   "offsetBlockTitle":"zamik (x, y, slika)",
   "rectangleBlockTitle":"pravokotnik (širina, višina, slog, barva)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"zasukaj (stopinj, slika)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"kvadrat (velikost, slog, barva)",

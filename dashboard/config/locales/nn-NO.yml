@@ -400,6 +400,7 @@
     heading_apps: <h2>Moro for</h2><h1>Alle</h1>
     heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldrar</h1>
     your_gallery: Galleri
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Mann
     female: Kvinne
@@ -551,6 +552,8 @@
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Gi svaret ditt her
   dialog:

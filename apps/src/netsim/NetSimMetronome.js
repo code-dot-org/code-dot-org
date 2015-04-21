@@ -72,6 +72,14 @@ NetSimMetronome.prototype.tick = function (clock) {
     this.lastPulseTime_ = clock.time;
   }
 
+  // An infinite interval means we're effectively paused, so snap to zero
+  // progress (visualized as an "empty" meter)
+  if (this.pulseIntervalMillis_ === Infinity) {
+    this.progress_ = 0;
+    this.pulseAge_ = Infinity;
+    return;
+  }
+
   this.pulseAge_ = clock.time - this.lastPulseTime_;
   this.progress_ = Math.min(this.pulseAge_ / this.pulseIntervalMillis_, 1);
 
@@ -100,7 +108,7 @@ NetSimMetronome.prototype.render = function () {
  * @param {number} pulsesPerSecond
  */
 NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
-  if (pulsesPerSecond === 0) {
+  if (pulsesPerSecond === 0 || pulsesPerSecond === Infinity) {
     this.pulseIntervalMillis_ = Infinity;
     return;
   }

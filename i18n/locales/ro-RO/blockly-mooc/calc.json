@@ -1,17 +1,17 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
-  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
+  "divideByZeroError":"Programul rezultă prin împărţirea la zero.",
+  "emptyComputeBlock":"Trebuie să ataşaţi un block la block-ul \"evalueză\".",
   "equivalentExpression":"Încercaţi să vă reordonați argumentele pentru a obţine exact aceeaşi expresie.",
-  "evaluate":"evaluate",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "evaluate":"evaluează",
+  "extraTopBlocks":"Aveţi block-uri neataşate. Aţi vrut să ataşaţi aceste block-uri la block-ul \"evalueză\"?",
   "failedInput":"Funcția ta nu returnează rezultatul corect pentru toate valorile.",
   "goal":"Obiectiv:",
   "levelIncompleteError":"Expresia nu se potriveşte obiectivului.",
-  "missingFunctionError":"You must define a function named {functionName}.",
-  "missingVariableX":"Your expression is missing variable {var}.",
+  "missingFunctionError":"Trebuie să definiţi o funcţie prin nume {functionName}.",
+  "missingVariableX":"În expresia ta lipsește variabila {var}.",
   "reinfFeedbackMsg":"Aici este calculul tău! Continuă să lucrezi la el, sau treci la următorul puzzle!",
   "yourExpression":"Expresia dvs.:",
   "wrongInput":"Apelezi funcţia cu o valoare greşită.",
-  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expression does not return the correct result."
+  "wrongOtherValuesX":"Rezultatul expresiei tale este greșit dacă modificăm valoarea variabilei {var}.",
+  "wrongResult":"Expresia nu se întoarce rezultatul corect."
 }

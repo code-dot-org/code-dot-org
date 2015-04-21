@@ -27,5 +27,5 @@
   "string": "kata",
   "stringMismatchError": "Anda memiliki sebuah string dengan kapitalisasi yang salah.",
   "userCodeException": "Kesalahan terjadi ketika menjalankan kode Anda.",
-  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
+  "wrongBooleanError": "Blok Anda mengevaluasi ke nilai boolean yang salah."
 }

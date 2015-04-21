@@ -272,9 +272,9 @@ es-AR:
           Special: Especial
           Binary: Binario
         usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
+          title: Usabilidad secundaria matemáticas
+          description_short: Usabilidad de pruebas para las matemáticas en la escuela intermedia
+          description: Usabilidad de pruebas para las matemáticas en la escuela intermedia
           Usability testing for MSM: Pruebas de usabilidad para MSM
           Evaluation Blocks: Bloques de evaluación
           Blocks to Math: Bloques para matemáticas
@@ -289,29 +289,29 @@ es-AR:
           title: Ciencias de la computación en álgebra
           description: Aprender programación funcional a través del álgebra
           "Unplugged: Video Games and Coordinate Planes": 'Desconectado: videojuegos y planos de coordenadas'
-          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Calc: Evaluation Blocks": Bloques de evaluación y expresiones aritméticas
           "Eval: Strings and Images": Cadenas de texto e imágenes
-          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
-          "Eval: Writing Contracts": Writing Contracts
-          "Calc: Defining Variables": Defining Variables and Substitution
-          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
-          "Eval: Defining Functions": Composite Functions
+          "Unplugged: Contracts": 'Desconectado: Contratos, dominio y rango'
+          "Eval: Writing Contracts": Contratos de redacción
+          "Calc: Defining Variables": Definición de Variables y sustitución
+          "Play Lab: Defining Variables (Big Game)": 'El gran juego - Variables'
+          "Eval: Defining Functions": Funciones compuestas
           "Unplugged: The Design Recipe": 'Desconectado: La receta de diseño'
           "Play Lab: Defining Functions": Rocket Height
-          "Eval: Functions": Solving Word Problems with the Design Recipe
-          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
-          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
-          "Eval: Boolean Operators": Boolean Operators
-          "Play Lab: Booleans": Sam the Bat
-          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Eval: Functions": Resolución de problemas con la receta de diseño
+          "Play Lab: Animation (Big Game)": 'El gran juego - animación'
+          "Unplugged: Booleans": 'Desconectado: Booleanos y lógica'
+          "Eval: Boolean Operators": Operadores booleanos
+          "Play Lab: Booleans": Sam el Bat
+          "Play Lab: Boolean (Big Game)": 'El gran juego - valores booleanos'
           "Unplugged: Conditionals and Piecewise Functions": 'Desconectado: Condicionales y funciones por partes'
           "Eval: Conditionals": Condicionales
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
-          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+          "Unplugged: Collision Detection and the Distance Formula": 'Desconectado: Detección de colisiones y el teorema de Pitágoras'
+          "Play Lab: Collision Detection (Big Game)": 'El gran juego - detección de colisiones'
         infinity:
-          title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: Disney Infinity Lab de juego
+          description_short: 'Utilice el  laboratorio jugar para crear una historia o juego protagonizada por personajes de Disney infinito.'
+          description: 'Utilice el  laboratorio jugar para crear una historia o juego protagonizada por personajes de Disney infinito.'
           Play Lab: Laboratorio de Juegos
           Infinity: Infinito
         algebrademo:
@@ -320,27 +320,28 @@ es-AR:
           description: Un puñado de puzzles para demostrar el entorno y el lenguaje de programación utilizado en Code.org CS en Álgebra
           Algebra Demo: Demo de álgebra
           Evaluation Blocks: Bloques de evaluación
-          Making Pictures: Making Pictures
+          Making Pictures: Haciendo Fotos
           Defining Variables: Definición de Variables
           Defining Simple Functions: Definiendo funciones simples
           The Design Recipe: La receta de diseño
         K5PD:
-          title: K5 Professional Development
-          description: Professional Development for K5 Courses
-          description_short: Professional Development for K5 Courses
+          title: K5 Desarrollo profesional
+          description: Desarrollo profesional para los cursos de K5
+          description_short: Desarrollo profesional para los cursos de K5
           Introduction to PD: Introducción al DP
           Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
-          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Writing computer programs: Programas informáticos de escritura
+          Navigating the teacher dashboard: Navegando el tablero de maestro
           Unplugged lessons: Unplugged lessons
-          Classroom Culture: Classroom Culture
-          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
-          K-5 Courses: K-5 Courses
+          Classroom Culture: Aula de cultura
+          Ways to go beyond Courses 1, 2, and 3: Maneras de ir más allá de los cursos de 1, 2 y 3
+          K-5 Courses: Cursos de K-5
           Writing computer programs in Blockly: Writing computer programs in Blockly
           Teacher Dashboard: Teacher Dashboard
-          Personal Reflection: Personal Reflection
-          Next Steps: Next Steps
-          Computer Science Pedagogy: Computer Science Pedagogy
+          Personal Reflection: Reflexión personal
+          Next Steps: Próximos pasos
+          Computer Science Pedagogy: Pedagogía de la ciencia informática
+          Programming Concepts: Programming Concepts
         netsim:
           title: Simulador de internet
           description_short: ""
@@ -348,17 +349,17 @@ es-AR:
           Internet Simulator: Simulador de internet
           Unit 1: Unidad 1
           Unit 2: Unidad 2
-          Sending Bits: Sending Bits
-          Routing and DNS: Routing and DNS
-          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
-          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
-          Internet Simulator Templates: Internet Simulator Templates
+          Sending Bits: Envío de Bits
+          Routing and DNS: Enrutamiento y DNS
+          "Unit 1: Sending Bits": 'Unidad 1: Envío de Bits'
+          "Unit 2: Routing and DNS": 'Unidad 2: Enrutamiento y DNS'
+          Internet Simulator Templates: Internet simulador de plantillas
         pixelation:
-          title: Pixelation
+          title: Pixelación
           description: Crear imágenes con bits y bytes.
-          Pixelation: Pixelation
+          Pixelation: Pixelación
         20-hour:
-          title: 20-Hour Intro Course
+          title: Curso de 20 horas introducción
           description: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  '
           Introduction to Computer Science: Introducción al Arte de las Ciencias de la Computación
           The Maze: El laberinto
@@ -384,7 +385,7 @@ es-AR:
           title: Editar el código
           description: ""
           The Maze: El laberinto
-          Applab: Applab
+          Applab: AppLab
           The Artist: El artista
           Play Lab: Laboratorio de Juegos
         events:
@@ -411,35 +412,35 @@ es-AR:
           description: ""
           Hour of Code 2013: Hora del código 2013
         Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Código Studio Desafio de Rompecabezas
+          description_short: Desafíate tu mismo!
+          description: Pruebe estos divertidos rompecabezas de codificación. Lo mejor!
+          Puzzles: Rompecabezas
         CodeStudioPuzzleChallenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Código Studio Desafio de Rompecabezas
+          description_short: Desafíate tu mismo!
+          description: Pruebe estos divertidos rompecabezas de codificación. Lo mejor!
+          Puzzles: Rompecabezas
         Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Prueba código Studio Desafío de Rompecabezas
+          description_short: Desafíate tu mismo!
+          description: Pruebe estos divertidos rompecabezas de codificación. Lo mejor!
+          Puzzles: Rompecabezas
         How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Prueba código Studio Desafío de Rompecabezas
+          description_short: Desafíate tu mismo!
+          description: Pruebe estos divertidos rompecabezas de codificación. Lo mejor!
+          Puzzles: Rompecabezas
         Tutorial - Code Studio Puzzle Challenge:
-          title: 'Tutorial - Code Studio Puzzle Challenge'
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: 'Tutorial - código Studio Desafio de Rompecabezas'
+          description_short: Desafíate tu mismo!
+          description: Pruebe estos divertidos rompecabezas de codificación. Lo mejor!
+          Puzzles: Rompecabezas
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: 'Tutorial - Code Studio Puzzle Challenge'
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: 'Tutorial - código Studio Desafio de Rompecabezas'
+          description_short: Desafíate tu mismo!
+          description: Pruebe estos divertidos rompecabezas de codificación. Lo mejor!
+          Puzzles: Rompecabezas
         course4pre:
           title: Prerequisito del Curso 4
           description_short: Un breve resumen de conceptos para los estudiantes que no han tomado los cursos 2 y 3.
@@ -455,31 +456,40 @@ es-AR:
           "Artist: Functions": 'Artista: Funciones'
           "Bee: Debugging": 'Abeja: Depuración'
         cspunit1:
-          title: 'CSP Unit 1 - Digital Information'
-          description_short: Explore how digital information is represented and transferred
-          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
-          Lesson14: Lesson14
-          Lesson 14: Lesson 14
-          Lesson 14 v2: Lesson 14 v2
-          Lesson 15: Lesson 15
-          Lesson 8: Lesson 8
-          Lesson 5: Lesson 5
-          Lesson 3: Lesson 3
-          Lesson 4: Lesson 4
-          Lesson 6: Lesson 6
-          Lesson 2: Lesson 2
-          Lesson 7: Lesson 7
-          Lesson 1: Lesson 1
-          Innovation: Innovation
-          Sending Binary Messages: Sending Binary Messages
-          Sending More Complex Messages: Sending More Complex Messages
+          title: 'CSP Unit 1 - información Digital'
+          description_short: Explore como la información digital está representada y transferida
+          description: Esta unidad explora los desafíos técnicos y las preguntas que surgen de la necesidad de representar la información digital en computadoras y transferencia entre las personas y los dispositivos computacionales.
+          Lesson14: Lección 14
+          Lesson 14: Lección 14
+          Lesson 14 v2: Lección 14 v2
+          Lesson 15: Lección 15
+          Lesson 8: Lección 8
+          Lesson 5: Lección 5
+          Lesson 3: Lección 3
+          Lesson 4: Lección 4
+          Lesson 6: Lección 6
+          Lesson 2: Lección 2
+          Lesson 7: Lección 7
+          Lesson 1: Lección 1
+          Innovation: Innovación
+          Sending Binary Messages: Envío de mensajes binarios
+          Sending More Complex Messages: Envío de mensajes más complejos
           Bit Sending Widget: Bit Sending Widget
-          Sending Bits in the Real World: Sending Bits in the Real World
-          Number Systems: Number Systems
-          Binary Numbers: Binary Numbers
+          Sending Bits in the Real World: Envío de Bits en el mundo Real
+          Number Systems: Sistemas de numeración
+          Binary Numbers: Números binarios
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Compresión de texto
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
         algebraPD:
-          title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
+          title: Ciencias de la computación en álgebra PD
+          description: Enseñar programación funcional a través de álgebra
           "Unplugged: Video Games and Coordinate Planes": 'Desconectado: videojuegos y planos de coordenadas'
           "Calc: Evaluation Blocks": 'Calc: Bloques de evaluación'
           "Eval: Strings and Images": 'Eval: Cadenas e imágenes'
@@ -487,10 +497,10 @@ es-AR:
           "Eval: Writing Contracts": 'Eval: Redacción de contratos'
           "Calc: Defining Variables": 'Calc: Definiendo Variables'
           "Play Lab: Defining Variables (Big Game)": 'Laboratorio de juegos: Definición de Variables (Big Game)'
-          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Eval: Defining Functions": 'Eval: Definición de funciones'
           "Unplugged: The Design Recipe": 'Desconectado: La receta de diseño'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Defining Functions": 'Laboratorio de juego: Definición de funciones'
+          "Eval: Functions": 'Evaluación: funciones'
           "Play Lab: Animation (Big Game)": 'Laboratorio de juegos: Animación (Big Game)'
           "Unplugged: Booleans": 'Desconectado: Booleanos'
           "Eval: Boolean Operators": 'Eval: Operadores booleanos'
@@ -503,40 +513,50 @@ es-AR:
           Evaluation Blocks: Bloques de evaluación
           Strings and Images: Cadenas de texto e imágenes
           Contracts: Contratos
-          Your Game - Defining Variables: 'Your Game - Defining Variables'
-          Simple Function Definition: Simple Function Definition
+          Your Game - Defining Variables: 'Tu juego - definir Variables'
+          Simple Function Definition: Definición de función simple
           The Design Recipe: La receta de diseño
-          Your Game - Animation: 'Your Game - Animation'
+          Your Game - Animation: 'Tu juego - animación'
           Booleans: Valores booleanos
-          Sam the Bat: Sam the Bat
-          Your Game - Booleans: 'Your Game - Booleans'
+          Sam the Bat: Sam el Bat
+          Your Game - Booleans: 'Tu juego - valores booleanos'
           Conditionals and Piecewise Functions: Funciones por partes y condicionales
           Rocket-Height: Rocket-Height
-          Design Recipe Practice: Design Recipe Practice
+          Design Recipe Practice: Práctica del diseño receta
+          Introduction to PD: Introducción al DP
         algPDmiami:
-          title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
+          title: Ciencias de la computación en álgebra PD
+          description: Enseñar álgebra a través de programación funcional
           Evaluation Blocks: Bloques de evaluación
           Strings and Images: Cadenas de texto e imágenes
           Rocket-Height: Rocket-Height
-          Design Recipe Practice: Design Recipe Practice
-          Your Game - Animation: 'Your Game - Animation'
+          Design Recipe Practice: Práctica del diseño receta
+          Your Game - Animation: 'Tu juego - animación'
           Booleans: Valores booleanos
-          Sam the Bat: Sam the Bat
-          Your Game - Booleans: 'Your Game - Booleans'
-          Luigi's Pizza: "Luigi's Pizza"
+          Sam the Bat: Sam el Bat
+          Your Game - Booleans: 'Tu juego - valores booleanos'
+          Luigi's Pizza: Pizza de Luigi
           "Play Lab: Collision Detection (Big Game)": 'Laboratorio de juegos: Detección de colisiones (Big Game)'
-          Your Game - Player Movement: 'Your Game - Player Movement'
-          Your Game - Collision Detection: 'Your Game - Collision Detection'
+          Your Game - Player Movement: 'Tu juego - movimiento de jugador'
+          Your Game - Collision Detection: 'Tu juego - detección de colisiones'
         text-compression:
-          title: Text Compression
-          description: Compress text by identifying repeated patterns.
-          Text Compression: Text Compression
+          title: Compresión de texto
+          description: Comprimir texto mediante la identificación de patrones repetidos.
+          Text Compression: Compresión de texto
         CSPPD:
-          new stage: new stage
+          new stage: nueva etapa
           Introduction to PD: Introducción al DP
         CSPLessonSamples:
-          title: CSP Lesson Samples
-          description_short: lesson samples for csp
-          Lesson 14: Lesson 14
-          Lesson 15: Lesson 15
+          title: CSP lección muestras
+          description_short: muestras de lección para csp
+          Lesson 14: Lección 14
+          Lesson 15: Lección 15
+        ECSPD:
+          Introduction to PD: Introducción al DP
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Introducción al DP

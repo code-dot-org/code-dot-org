@@ -276,18 +276,24 @@
       VideoGamesCoordinatePlanes:
         title: Jocuri Video și Planuri de coordonate
         desc: Descrierea lecției Jocuri Video și Planuri de coordonate
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracte
         desc: Descrierea lecției fără calculator Contracte
+        video: alg_5_contracts
       DesignRecipe:
         title: Rețeta pentru design
         desc: Descrierea lecției Rețete pentru Design
+        video: alg_8_design_recipe
       Booleans:
         title: Booleene
         desc: Descrierea lecției Valori booleene
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Decizii și porțiuni de funcții
         desc: Descrierea lecției Decizii și Funcții inteligente
+        video: alg_10_conditionals
       CollisionDetection:
         title: Detectarea coliziunilor
         desc: Detectarea coliziunilor - prezentare
+        video: alg_16_biggame_collision_detection

@@ -54,8 +54,10 @@ Blockly.Blocks.functional_parameters_get = {
       // Params should only be used in the FunctionEditor but better to be safe
       return;
     }
-    Blockly.functionEditor.renameParameter(oldName, newName);
-    Blockly.functionEditor.refreshParamsEverywhere();
+    var title = this.getTitle_('VAR');
+    if (title.getText() === oldName) {
+      title.setText(newName);
+    }
   },
   removeVar: Blockly.Blocks.variables_get.removeVar,
   mutationToDom: function() {

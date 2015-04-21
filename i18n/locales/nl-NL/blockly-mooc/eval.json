@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"plaats-afbeelding (x, y, afbeelding)",
   "offsetBlockTitle":"offset (x, y, beeld)",
   "rectangleBlockTitle":"rechthoek (breedte, hoogte, stijl, kleur)",
-  "reinfFeedbackMsg":"Klik op \"blijf spelen\" om je tekening te bewerken.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"draaien (graden, afbeelding)",
   "scaleImageBlockTitle":"schaal (factor, afbeelding)",
   "squareBlockTitle":"vierkant (grootte, stijl, kleur)",
