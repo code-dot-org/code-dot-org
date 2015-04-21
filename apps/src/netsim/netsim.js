@@ -392,11 +392,8 @@ NetSim.prototype.onBeforeUnload_ = function (event) {
  * @private
  */
 NetSim.prototype.onUnload_ = function () {
-  // TODO: 1) The actual disconnectFromShard() logic should move into an
-  // TODO:    onUnload handler, and MUST use synchronous AJAX requests to ensure
-  // TODO:    that the disconnect completes before navigating away
   if (this.isConnectedToShard()) {
-    this.disconnectFromShard();
+    this.synchronousDisconnectFromShard_();
   }
 };
 
@@ -462,6 +459,25 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
       onComplete(err, node);
     });
   }.bind(this));
+};
+
+/**
+ * Synchronous disconnect, for use when navigating away from the page
+ * @private
+ */
+NetSim.prototype.synchronousDisconnectFromShard_ = function () {
+  if (this.isConnectedToRemote()) {
+    this.myNode.synchronousDisconnectRemote();
+  }
+
+  // TODO: Anything else that should be deleted here?
+  // 1. My heartbeats
+  // 2. My messages
+  // 3. Router nodes? (last one out turn off the lights?)
+
+  this.myNode.stopSimulation();
+  this.myNode.synchronousDestroy();
+  this.shardChange.notifyObservers(null, null); // Worth it?
 };
 
 /**

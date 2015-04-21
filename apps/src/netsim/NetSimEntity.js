@@ -100,6 +100,16 @@ NetSimEntity.prototype.destroy = function (onComplete) {
   this.getTable_().delete(this.entityID, onComplete);
 };
 
+/**
+ * Remove entity from remote storage, using a synchronous call.
+ * For use when navigating away from the page; otherwise, async version
+ * is preferred.
+ * @returns {Error|null} error if entity delete fails
+ */
+NetSimEntity.prototype.synchronousDestroy = function () {
+  return this.getTable_().synchronousDelete(this.entityID);
+};
+
 /** Get storage table for this entity type. */
 NetSimEntity.prototype.getTable_ = function () {
   // This method should be implemented by a child class.

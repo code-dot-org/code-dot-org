@@ -134,6 +134,16 @@ NetSimTable.prototype.delete = function (id, callback) {
 };
 
 /**
+ * Delete a row using a synchronous call. For use when navigating away from
+ * the page; most of the time an asynchronous call is preferred.
+ * @param id
+ */
+NetSimTable.prototype.synchronousDelete = function (id) {
+  this.remoteTable_.synchronousDelete(id);
+  this.removeRowFromCache_(id);
+};
+
+/**
  * @param {Array} allRows
  * @private
  */

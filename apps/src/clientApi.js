@@ -123,14 +123,33 @@ ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback) {
 ApiRequestHelper.prototype.delete = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
-    type: 'delete'
-  }).done(function (/*data, textStatus, jqXHR*/) {
-    callback(null, null);
-  }).fail(function (jqXHR, textStatus, errorThrown) {
-    callback(
-        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
-        null);
+    type: 'delete',
+    success: function (/*data, textStatus, jqXHR*/) {
+      callback(null, null);
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      callback(
+          new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+          null);
+    }
   });
+};
+
+/**
+ * @param {!string} localUrl
+ * @returns {Error|null} an error if the request fails
+ */
+ApiRequestHelper.prototype.synchronousDelete = function (localUrl) {
+  var error = null;
+  $.ajax({
+    url: this.apiBaseUrl_ + localUrl,
+    type: 'delete',
+    async: false,
+    error: function (jqXHR, textStatus, errorThrown) {
+      error = new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
+    }
+  });
+  return error;
 };
 
 /**
@@ -179,6 +198,14 @@ clientApi.Channel.prototype.update = function (id, value, callback) {
  */
 clientApi.Channel.prototype.delete = function (id, callback) {
   this.requestHelper_.delete('/' + id, callback);
+};
+
+/**
+ * @param {!string} id
+ * @returns {Error|null} error if delete fails
+ */
+clientApi.Channel.prototype.synchronousDelete = function (id) {
+  return this.requestHelper_.synchronousDelete('/' + id);
 };
 
 /**
