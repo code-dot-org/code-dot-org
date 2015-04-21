@@ -197,12 +197,120 @@ function test_initializeBlockSpace() {
   goog.dom.removeNode(container);
 }
 
-function test_initializeBlockSpace() {
+function test_initializeFunctionEditor() {
   var container = document.createElement('div');
   document.body.appendChild(container);
   Blockly.assetUrl = function(){return ''};
   Blockly.Css.inject(container);
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
+  Blockly.hasTrashcan = true;
+  var functionalDefinitionXML = '<xml><block type="procedures_defnoreturn" editable="false"><mutation></mutation><title name="NAME">test-function</title></block></xml>'
+  var xml = Blockly.Xml.textToDom(functionalDefinitionXML);
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+  Blockly.useModalFunctionEditor = true;
+  Blockly.functionEditor = new Blockly.FunctionEditor();
+  Blockly.functionEditor.autoOpenFunction('test-function');
+
+  var definitionBlock = Blockly.functionEditor.functionDefinitionBlock;
+  assertNotNull(definitionBlock);
+  assertEquals('procedures_defnoreturn', definitionBlock.type);
+  assertEquals(false, definitionBlock.isMovable());
+  assertEquals(false, definitionBlock.shouldBeGrayedOut());
+  assertEquals(false, definitionBlock.isDeletable());
+  assertEquals(false, definitionBlock.isEditable());
+
+  Blockly.functionEditor.hideIfOpen();
   goog.dom.removeNode(container);
+}
+
+function test_contractEditor_add_examples() {
+  var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title></block></xml>';
+  var container = initializeWithContractEditor(singleDefinitionString);
+  assertEquals('Has zero examples', 0, Blockly.contractEditor.exampleBlocks.length);
+  Blockly.contractEditor.addNewExampleBlock_();
+  Blockly.contractEditor.addNewExampleBlock_();
+  assertEquals('Added two examples', 2, Blockly.contractEditor.exampleBlocks.length);
+  Blockly.contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
+function test_contractEditor_change_output_types() {
+  var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title><functional_input name="STACK"><block type="functional_call"><mutation name="functional-function"></mutation></block></functional_input></block></xml>';
+  var container = initializeWithContractEditor(singleDefinitionString);
+  Blockly.contractEditor.addNewExampleBlock_();
+  Blockly.contractEditor.addNewExampleBlock_();
+
+  var firstExample = Blockly.contractEditor.exampleBlocks[0];
+  var fnDefInput = Blockly.contractEditor.functionDefinitionBlock.getInput('STACK');
+  assertEquals('functional_call', fnDefInput.connection.targetBlock().type);
+
+  assertEquals('Function definition has correct initial type', 'Number',
+    Blockly.contractEditor.currentFunctionDefinitionType_());
+  assertEquals('Example actual slot has correct initial type', 'Number',
+    firstExample.getInput('ACTUAL').connection.check_[0]);
+  assertEquals('Example expected slot has correct initial type', 'Number',
+    firstExample.getInput('EXPECTED').connection.check_[0]);
+  assertEquals('Function definition slot has correct initial type', 'Number',
+    fnDefInput.connection.check_[0]);
+  var exampleFnCallBlockBefore = firstExample.getInput('ACTUAL').connection.targetBlock();
+  assertEquals('Example default function call block has correct type', 'Number',
+    exampleFnCallBlockBefore.previousConnection.check_[0]);
+  assertEquals('Function definition call block has correct type', 'Number',
+    fnDefInput.connection.targetBlock().previousConnection.check_[0]);
+
+  Blockly.contractEditor.outputTypeChanged_('String');
+
+  assertEquals('Example actual has correct input type after type change', 'String',
+    firstExample.getInput('ACTUAL').connection.check_[0]);
+  assertEquals('Example expected has correct input type after type change', 'String',
+    firstExample.getInput('EXPECTED').connection.check_[0]);
+
+  var exampleFnCallBlockAfter = firstExample.getInput('ACTUAL').connection.targetBlock();
+  assertNotNull('Example actual call block is connected after type change',
+    exampleFnCallBlockAfter);
+  assertEquals('Example actual call block has correct type', 'String',
+    exampleFnCallBlockAfter.previousConnection.check_[0]);
+
+  assertEquals('Function definition changes type', 'String',
+    Blockly.contractEditor.currentFunctionDefinitionType_());
+  assertEquals('Function definition has correct input type after type change', 'String',
+    fnDefInput.connection.check_[0]);
+
+  var fnDefInputBlockAfter = fnDefInput.connection.targetBlock();
+  assertNotNull('Function call block still connected to function definition after type change',
+    fnDefInputBlockAfter);
+  assertEquals('Function definition call block has correct new type', 'String',
+    fnDefInputBlockAfter.previousConnection.check_[0]);
+
+  Blockly.contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
+/**
+ * Initializes an instance of Blockly with a contract editor open
+ * @returns {HTMLElement}
+ */
+function initializeWithContractEditor(xmlString) {
+  var container = document.createElement('div');
+  document.body.appendChild(container);
+  Blockly.assetUrl = function () {
+    return ''
+  };
+  Blockly.Css.inject(container);
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
+  Blockly.hasTrashcan = true;
+  var xml = Blockly.Xml.textToDom(xmlString);
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+  Blockly.useModalFunctionEditor = true;
+  Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
+    disableExamples: false
+  });
+  Blockly.contractEditor.autoOpenWithLevelConfiguration({
+    autoOpenFunction: 'functional-function'
+  });
+  return container;
 }
