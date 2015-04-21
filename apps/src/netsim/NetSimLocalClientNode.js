@@ -316,6 +316,26 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 };
 
 /**
+ * Synchronously destroy my outgoing wire.  Used when navigating away from
+ * the page - in normal circumstances use async version.
+ */
+NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
+  if (this.myWire) {
+    this.myWire.synchronousDestroy();
+    this.myWire = null;
+  }
+
+  if (this.myRouter) {
+    //this.myRouter.synchronousUpdate();
+    this.myRouter.stopSimulation();
+  }
+
+  this.myRemoteClient = null;
+  this.myRouter = null;
+  this.remoteChange.notifyObservers(null, null);
+};
+
+/**
  * @param {NodeStyleCallback} [onComplete]
  */
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
