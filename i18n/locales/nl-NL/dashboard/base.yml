@@ -349,6 +349,7 @@ nl:
     heading_apps: '<h2>Leuk voor</h2><h1>Iedereen</h1>'
     heading_legacy: '<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>'
     your_gallery: Galerij
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Man
     female: Vrouw
@@ -441,7 +442,7 @@ nl:
       title: Frozen
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren in de hoofdrol.
   gallery:
     students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
     students_made_these_with_code: Leerlingen hebben dit gemaakt met code!
@@ -473,11 +474,12 @@ nl:
     correct_body: Dat is het juiste antwoord.
   contract_match:
     wrong_title: Onjuist antwoord
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
-    baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
+    badname: Je ontwerp heeft de verkeerde naam.
+    badname_case: 'Functienamen zijn hoofdlettergevoelig. Probeer het hoofdlettergebruik van je  ontwerp aan te passen.'
+    badrange: Je ontwerp heeft het verkeerde bereik.
+    baddomainsize: Je ontwerp heeft niet het juiste aantal variabeletypen.
+    baddomainname: Een of meer van je variabeletypen heeft een verkeerde naam.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Voer uw antwoord hier in
   dialog:

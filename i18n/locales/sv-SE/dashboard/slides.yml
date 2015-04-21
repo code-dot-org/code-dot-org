@@ -364,29 +364,27 @@ sv:
         text: 'I det första pusslet är vår skådespelare en pingvin och vi kommer att få den att säga "Hej!" genom att dra ut "säg"-blocket, koppla ihop det med "när startar"-blocket, och skriva in "Hej." Vi kan också får pingvinen att flytta sig med "flytta höger" och "flytta vänster"-blocken. När du har satt ihop block, tryck knappen Kör för att se vad du har programmerat.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: 'Kom igång  nu och i slutet kommer du att kunna skapa ditt eget spel med alla typer av spelare som kan interagera, vara glada eller ledsna, samla poäng, eller kasta eldklot eller till och med låta varandra försvinna. Det är upp till dig och det spel du vill göra.'
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: Vi ska nu lära oss om något som alla spel programmerare använder varje dag. Det kallas händelser. En händelse talar om för ditt program att lyssna efter när något händer. När det där händer, utför det en åtgärd.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: Några exempel på händelser är att lyssna efter ett musklick, en pilknapp eller ett tryck på skärmen.
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: 'Här ska vi göra så att spacebot hälsar på jordbor när en spelare klickar på honom. Vi använder "vid klickning" blocket och bifogar blocket "säger" till det. När spelaren klickar på spacebot, kommer allt som är kopplat till "vid klickning" händelseblocket  att utföras. Vad säger din alien?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'Det finns också "när pilen" block. Om du länkar "flytta" block till dessa, kan du börja flytta ditt aktörer upp, ner, vänster, eller till höger. Steg för steg blir dina spel mer interaktiva.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'Detta är blocket "Upprepa för alltid". Allt inuti detta block kommer att hända för alltid i spelet.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Om vi vill att en aktör skagöra något flera gånger, utan att spelaren behövergöra något, ska vi lägga dessa block inuti blocket "Upprepa forever".'
       3:
         image: notes/playlab_repeat_forever_3.png
         text: I nästa pussel, är vårt mål att hjälpa trollkarlen patrullera gränserna av kungariket, vänster och höger kontinuerligt. Lära sig hur upprepnings kommandon fungerar, kommer att spara dig massor av tid senare när du gör ditt eget spel.

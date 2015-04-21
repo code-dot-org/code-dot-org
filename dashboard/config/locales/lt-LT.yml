@@ -1,14 +1,14 @@
 "lt":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Ištaisykite šias klaidas:'
   activerecord:
     errors:
       messages:
         blank: reikalingas
     attributes:
       user:
-        name: Rodyti vardą
+        name: Tavo vardas
         email: El. pašto adresas
         username: Naudotojo vardas
         password: Slaptažodis
@@ -43,7 +43,7 @@
   beta: beta
   try_hoc: 'Išmėgink „Programavimo valandą“, spausk čia >> '
   try_k8intro: Išmėginkite mūsų programavimo įvado kursą (15-25 valandos)
-  k8intro: Programavimo įvado kursas (15-25 valandos)
+  k8intro: Programavimo įvadas 5-8 klasėms (15-25 valandos)
   already_started: 'Jau esate pradėjęs? Tęskite čia >> '
   demos: 'Administratorius: Visos demonstracijos'
   continue: Tęsti
@@ -243,7 +243,7 @@
         artist: Nupiešk ką nors
     user:
       classroom: Mokytojo namų puslapis
-      district_dashboard: District Dashboard
+      district_dashboard: Prietaisų skydelis
       label: Sveiki, %{username}
       stats: Mano pažanga
       settings: Mano paskyra
@@ -328,16 +328,16 @@
     student_teacher_disassociated: '%{teacher_name} buvo pašalintas %{student_name}'
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
+    email_confirm_wrong_email: (Klaidingas el. pašto adresas?)
     email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
     new_password_hint: (palikite tuščią, jei nenorite pakeisti)
     current_password_hint: (įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Pašalinti savo paskyrą
+    delete_text: Nuspaudus mygtuką panaikinsite savo paskyrą.
+    delete_text_teacher_note: 'Pastaba: pašalinus Jūsų paskyrą, mokinių paskyros nebus
+      panaikintos.'
+    delete_confirm: Ar tikrai norite panaikinti savo paskyrą?
   user_level:
     completed: Baigta
     tried: Išbandyta
@@ -382,11 +382,13 @@
     test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
     try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
     use_as_teacher: Naudokite šią svetainę kaip mokytojas
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
+    heading_hoc2014: <h2>Programavimo valanda</h2><h1>Visoms amžiaus grupėms</h1>
+    heading_elementary: <h2>20 valandų kursas</h2><h1>Pradedantiesiems (visoms amžiaus
+      grupėms)</h1>
     heading_apps: <h2>Smagumynai</h2><h1>visiems</h1>
     heading_legacy: <h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>
     your_gallery: Galerija
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Vyras
     female: Moteris
@@ -398,9 +400,9 @@
     help_from_html: Google, Microsoft, Facebook ir Twitter inžinieriai padėjo sukurti
       šias pamokėles.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. All Rights Reserved.
-    powered_by_aws: Powered by Amazon Web Services
+      Visos teisės saugomos.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. Visos teisės saugomos.
+    powered_by_aws: 'Rėmėjas: Amazon Web Services'
     feedback: Pateikti atsiliepimus
     translate: Padėkite mums išversti į savo kalbą
     support: Pagalba
@@ -451,7 +453,7 @@
     title: Nuspausk „Paleisti“, kad programa būtų įvykdyta
     bounce_og_title: Peržiūrėk mano Bounce žaidimą
     flappy_og_title: Išmėginkite žaidimą my Flappy Game
-    studio_og_title: Peržiūrėk mano istoriją
+    studio_og_title: Peržiūrėk mano Žaidimų laboratorijos programėlę
     check_out_what_i_made: Pažiūrėkite, ką aš sukūriau
     og_description: Aš pats parašiau kodą Code.org svetainėje
     phone_number_not_allowed: Panašu, kad yra įrašytas kažkieno telefono numeris.
@@ -490,10 +492,11 @@
       title: Galerija
       body: Peržiūrėkite su menininku sukurtų piešinių galeriją
     frozen:
-      title: Frozen
+      title: Ledo šalis
     infinity:
-      title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      title: Žaidimų laboratorija Infinity
+      body: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus
+        Infinity personažai.
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Mokinių sukurti pavyzdžiai.
@@ -507,7 +510,7 @@
     caption_by_name_age: sukūrė %{name}  (%{age} m.)
     caption_time_ago: 'prieš %{time_ago} '
     header: Galerija
-    header_playlab: Laboratorija
+    header_playlab: Žaidimų laboratorija
     header_artist: Menininkas
   landing:
     prerelease: Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad
@@ -536,6 +539,8 @@
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Įveskite savo atsakymą čia
   dialog:
@@ -553,7 +558,7 @@
             pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
             esant bet kurioje amžiaus grupėje.
         Hour of Code:
-          title: Programavimo valanda
+          title: Programavimo valanda 2013
           description: ''
         edit-code:
           title: Redaguoti kodą
@@ -590,48 +595,48 @@
     support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad
     susisiektų su mumis už jus.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: nepradėta
+    in_progress: pradėta
     completed_too_many_blocks: baigtas, panaudota per daug blokų
     completed_perfect: puikiai išspręsta
     furthest_level_attempted: išmėgintas aukščiausias lygis
-    assessment: assessment
+    assessment: vertinimas
   studio:
-    courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kursai, kuriuose dalyvaujate
+    completed_courses: Užbaigti kursai
+    all_courses: Visi kursai
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projektai
+    create: Sukurti projektą
+    create_a_project: 'Sukurti naują projektą:'
+    new: Sukurti naują
+    rename: Pervadinti
     save: Išsaugoti
     delete: Ištrinti
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Grįžti prie kursų
+    my_projects: Mano projektai
     share: Dalintis
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Bendrinti savo projektą
+    share_copy_link: 'Kopijuoti nuorodą:'
+    close: Užverti
     more: Daugiau
     name: Vardas
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Atnaujinta
+    project_type: Projekto rūšis
+    help_text: Nuspauskite <strong>Sukurti programėlę</strong> arba <strong>Kažką
+      nupiešti</strong> žemiau, kad sukurtumėte Žaidimo laboratorijos projektą!<br/>Bet
+      kuriuo metu galėsite sugrįžti ir pratęsti savo projektą.
+    need_help: Nežinote nuo ko pradėti?
     really_delete: Ištrinti?
     delete_yes: Taip
     delete_no: Ne
-    saved: Saved
-    not_saved: Not saved
+    saved: Išsaugota
+    not_saved: Neišsaugota
     cancel: Atšaukti
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
-    remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    delete_confirm_title: Ar tikrai norite ištrinti šį projektą?
+    delete_confirm_text: Jei ištrinsite projektą, jis bus visam laikui pašalintas
+      iš projektų sąrašo. Kiekvienas žmogus, kuriam buvote nusiuntęs nuorodą į jį,
+      nebegalės jo peržiūrėti.
+    view_all: Peržiūrėti mano projektus
+    remix: Remiksas
+    click_to_remix: Spustelėkite „Remiksas“ ir iškraipysite savo versiją!

@@ -346,6 +346,7 @@ bs:
     heading_apps: '<h2>Zabava za</h2><h1>sve</h1>'
     heading_legacy: '<h2>Naš opšti kurs za</h2><h1>sve uzraste</h1>'
     your_gallery: Galerija
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Muško
     female: Žensko
@@ -437,7 +438,7 @@ bs:
       title: Sniježno kraljevstvo
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
   gallery:
     students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
     students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!
@@ -449,7 +450,7 @@ bs:
     caption_time_ago: 'prije %{time_ago}'
     header: Galerija
     header_playlab: Play Lab
-    header_artist: Artist
+    header_artist: Umjetnik
   landing:
     prerelease: "Ovaj kurs je u <span class='betatext'> beta fazi</span>. To znači da ovo nije konačna verzija kursa, te da podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
     prerelease_hoc2014: "Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
@@ -474,6 +475,7 @@ bs:
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Ovdje unesite vaš odgovor
   dialog:

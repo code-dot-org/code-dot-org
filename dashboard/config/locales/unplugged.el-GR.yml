@@ -293,18 +293,24 @@
       VideoGamesCoordinatePlanes:
         title: Βιντεοπαιχνίδια και επίπεδα συντονισμού
         desc: Βιντεοπαιχνίδια και επίπεδα συντονισμού - περιγραφή μαθήματος
+        video: alg_11_coordinate_plane
       Contracts:
         title: Συμβόλαια
         desc: Contracts unplugged - περιγραφή μαθήματος
+        video: alg_5_contracts
       DesignRecipe:
         title: Η Συνταγή του Σχεδιασμού
         desc: Συνταγή σχεδιασμού - περιγραφή μαθήματος
+        video: alg_8_design_recipe
       Booleans:
         title: Δυαδικοί
         desc: Περιγραφή μαθήματος Δυαδικών Τιμών
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Συνθήκες και Συναρτήσεις Piecewise
         desc: Συνθήκες και συναρτήσεις - περιγραφή μαθήματος
+        video: alg_10_conditionals
       CollisionDetection:
         title: Ανίχνευση Σύγκρουσης
         desc: Περιγραφή μαθήματος Ανίχνευσης Σύγκρουσης
+        video: alg_16_biggame_collision_detection

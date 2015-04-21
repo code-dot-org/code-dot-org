@@ -214,7 +214,7 @@ ru:
         artist: Нарисовать что-нибудь
     user:
       classroom: Домашняя страница Преподавателя
-      district_dashboard: District Dashboard
+      district_dashboard: Панель управления области
       label: 'Привет, %{username}'
       stats: Мои результаты
       settings: Моя регистрация
@@ -344,6 +344,7 @@ ru:
     heading_apps: '<h2>Развлечения для</h2><h1>всех</h1>'
     heading_legacy: '<h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>'
     your_gallery: Галерея
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Мужской
     female: Женский
@@ -467,11 +468,12 @@ ru:
     correct_body: Это правильный ответ.
   contract_match:
     wrong_title: Неправильный ответ
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
-    baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
+    badname: Ваше определение имеет неправильное имя.
+    badname_case: В именах функций учитывается регистр. Попробуйте изменить регистр букв в имени вашего определения.
+    badrange: Ваше определение имеет неправильный диапазон.
+    baddomainsize: Ваше определение имеет неправильное число элементов в домене.
+    baddomainname: Один или несколько элементов в вашем домене имеют неправильное имя.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Внеси сюда свой ответ
   dialog:
@@ -556,5 +558,5 @@ ru:
     delete_confirm_title: Вы уверены, что хотите удалить этот проект?
     delete_confirm_text: Удаление вашего проекта окончательно удалит его из вашего списка Мои проекты. Если вы поделились ссылкой на этот проект с друзьями, у них больше не будет доступа к этому проекту.
     view_all: Посмотреть Мои проекты
-    remix: Remix
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    remix: Ремикс
+    click_to_remix: Нажмите «Ремикс», чтобы воспроизвести вашу собственную версию!

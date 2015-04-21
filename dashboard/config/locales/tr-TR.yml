@@ -254,7 +254,7 @@
         artist: Bir şeyler çizin
     user:
       classroom: Öğretmen ana sayfa
-      district_dashboard: District Dashboard
+      district_dashboard: Kontrol Paneli Bölgesi
       label: Merhaba %{username}
       stats: İlerlemem
       settings: Hesabım
@@ -401,6 +401,7 @@
     heading_apps: <h1>Herkes</h1> için <h2>eğlence</h2>
     heading_legacy: <h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>
     your_gallery: Galeri
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Erkek
     female: Kadın
@@ -507,7 +508,7 @@
     frozen:
       title: Donmuş
     infinity:
-      title: Infinity Play Lab
+      title: Sınırsız oyun laboratuarı
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
@@ -546,12 +547,14 @@
     correct_body: İşte bu doğru cevap.
   contract_match:
     wrong_title: Yanlış cevap
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
+    badname: Senin sözleşmende yanlış isim var.
+    badname_case: Fonksiyon isimleri büyük-küçük harfe duyarlıdır. Fonksiyon gövdesindeki
+      ismin büyüklüğünü   değiştirmeyi deneyin.
+    badrange: Senin sözleşmen yanlış bir diziye sahip.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Cevabınızı buraya girin
   dialog:
@@ -642,7 +645,7 @@
     delete_yes: Evet
     delete_no: Hayır
     saved: Kaydedildi
-    not_saved: Not saved
+    not_saved: Kaydedilmedi
     cancel: İptal
     delete_confirm_title: Bu projeyi silmek istediğinizden emin misiniz?
     delete_confirm_text: Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır.

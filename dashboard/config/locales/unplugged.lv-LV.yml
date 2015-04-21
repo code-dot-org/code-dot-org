@@ -259,18 +259,24 @@
       VideoGamesCoordinatePlanes:
         title: Video spēles un koordinātu plakne
         desc: Video spēļu un koordinātu plaknes nodarbības apraksts
+        video: alg_11_coordinate_plane
       Contracts:
         title: Līgumi
         desc: Contracts unplugged, nodarbības apraksts
+        video: alg_5_contracts
       DesignRecipe:
         title: Dizaina recepte
         desc: Noformējuma padomi - nodarbības apraksts
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans
         desc: Booleans nodarbības apraksts
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Nosacījumi un hibrīdfunkcijas
         desc: Nosacījumi un Piecewise funkcija, nodarbības apraksts
+        video: alg_10_conditionals
       CollisionDetection:
         title: Sadursmes noteikšana
         desc: Sadrusmes noteikšanas nodarbības apraksts
+        video: alg_16_biggame_collision_detection

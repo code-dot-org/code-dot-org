@@ -289,18 +289,24 @@
       VideoGamesCoordinatePlanes:
         title: Videogiochi e Piani Cartesiani
         desc: Descrizione della lezione Videogiochi e Piani Cartesiani
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contratti
         desc: 'Descrizione della lezione "senza rete": Contratti'
+        video: alg_5_contracts
       DesignRecipe:
         title: La Ricetta della Progettazione
         desc: 'Descrizione della lezione: La Ricetta della Progettazione'
+        video: alg_8_design_recipe
       Booleans:
         title: Valori Booleani
         desc: 'Descrizione della lezione: Valori Booleani'
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Istruzioni Condizionali e Funzioni a Tratti
         desc: 'Descrizione della lezione: Istruzioni Condizionali e Funzioni a Tratti'
+        video: alg_10_conditionals
       CollisionDetection:
         title: Rilevamento delle Collisioni
         desc: 'Descrizione della lezione: Rilevamento delle Collisioni'
+        video: alg_16_biggame_collision_detection

@@ -1,7 +1,7 @@
 "el":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:'
   activerecord:
     errors:
       messages:
@@ -361,14 +361,16 @@
       του %{student_name}
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου
+      %{email}  δεν έχει επιβεβαιωθεί:'
+    email_confirm_wrong_email: (Λάθος διεύθυνση ηλεκτρονικού ταχυδρομείου;)
     email_resend_confirm: Επανάληψη αποστολής οδηγιών επιβεβαίωσης
     new_password_hint: (άστο κενό εάν δεν θέλεις να τον αλλάξεις)
     current_password_hint: (χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν
       οι αλλαγές)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
+    delete: Διαγράψτε τον λογαριασμό σας
+    delete_text: Κάνοντας κλικ στο παρακάτω κουμπί , θα διαγράψετε τον λογαριασμό
+      σας.
     delete_text_teacher_note: 'Please note: deleting your account will not delete
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
@@ -424,6 +426,7 @@
     heading_apps: <h2>Διασκέδαση για</h2><h1>όλους</h1>
     heading_legacy: <h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>
     your_gallery: Συλλογή φωτογραφιών
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Αγόρι
     female: Κορίτσι
@@ -535,7 +538,7 @@
     frozen:
       title: Ψυχρά κι ανάποδα
     infinity:
-      title: Infinity Play Lab
+      title: αιώνιο εργαστήρι παιχνιδιού
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
@@ -585,6 +588,8 @@
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Εισάγετε την απάντησή σας εδώ
   dialog:
@@ -642,7 +647,7 @@
     μαζί μας.
   progress:
     not_started: not started
-    in_progress: in progress
+    in_progress: σε εξέλιξη
     completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
     completed_perfect: ολοκληρώθηκε, τέλειο
     furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε

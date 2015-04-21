@@ -171,32 +171,35 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
+          <br> size block'
         Blue colored blocks are associated with __________ ?: Blue colored blocks
           are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
+        a image: een afbeelding
+        a number: een getal
+        a string: een tekenreeks
         boolean: boolean
       2-3 multi match 2:
         Purple colored blocks are associated with __________ ?: Purple colored blocks
           are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
+        a image: een afbeelding
+        a number: een getal
+        a string: een tekenreeks
         boolean: boolean
       2-3 multi match 3:
         Teal colored blocks are associated with __________ ?: Teal colored blocks
           are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
+        a image: een afbeelding
+        a number: een getal
+        a string: een tekenreeks
         boolean: boolean
       2-3 multi match 4:
         Green colored blocks are associated with __________ ?: Green colored blocks
           are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
+        a image: een afbeelding
+        a number: een getal
+        a string: een tekenreeks
         boolean: boolean
       4-5 artist multi 1:
         Artist Multiple Choice: Kunstenaar Meerkeuze
@@ -303,10 +306,10 @@
         Multiple Choice: Meerkeuze
         Which one of these items is hardest to describe an algorithm for?: Welk van
           deze items is het moeilijkst in een algoritme te schrijven?
-        Brushing your teeth: Brushing your teeth
-        Baking cookies: Baking cookies
-        Shopping from a grocery list: Shopping from a grocery list
-        Banana: Banana
+        Brushing your teeth: Tandenpoetsen
+        Baking cookies: Koekjes bakken
+        Shopping from a grocery list: Winkelen met een boodschappenlijst
+        Banana: Banaan
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Meerkeuze
         0: '? Hier zijn drie zinnen. Welk van onderstaande sjablonen abstraheert op
@@ -315,10 +318,10 @@
           de juiste manier zodat ze alle drie hetzelfde patroon hebben als het sjabloon?'
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
           is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        _____ is a _____ city.: _____ is a _____ city.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Seattle _____ a _____ _____.: Seattle _____ een _____ _____.
+        _____ is a _____ city.: _____ is een _____ stad.
+        _____ is _____ a _____.: _____ is _____ een _____.
+        Eugene is a _____ city.: Eugene is een _____ stad.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Meerkeuze
         Which of these pictures best represents crowdsourcing?: Welk plaatje geeft
@@ -329,19 +332,19 @@
         Multiple Choice: Meerkeuze
         Which one of these activities would be best for practicing crowdsourcing?: Welke
           activiteit is de beste oefening voor crowdsourcing?
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
-        Brushing your hair: Brushing your hair
-        Washing your face: Washing your face
+        Cleaning your room: Je kamer opruimen
+        Eating your dessert: Toetjes eten
+        Brushing your hair: Je haar borstelen
+        Washing your face: Je gezicht wassen
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Meerkeuze
         Which piece of information listed below is okay to share on the internet?: Welk
           van de hieronder genoemde stukjes informatie zijn geschikt om de delen op
           internet?
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your address: Your address
-        Your parent's credit card number: Your parent's credit card number
+        Your birthday: Je verjaardag
+        Your favorite food: Je favoriete eten
+        Your address: Je adres
+        Your parent's credit card number: Het creditcardnummer van je ouders
       4-5 Internet Multi 1:
         Multiple Choice: Meerkeuze
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
@@ -399,10 +402,41 @@
       Coordinates Multi 1:
         Video game Coordinates: Video game coördinaten
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        0: '? Given what you know about video games and the coordinate plane, which
+          of these statements describes the unicorn''s movements in the most precise
+          way?'
+        1: ': Given what you know about video games and the coordinate plane, which
+          of these statements describes the unicorn''s movements in the most precise
+          way?'
         The unicorn moves across the screen: De Eenhoorn beweegt over het scherm
         The unicorn's y value changes: De Eenhoorn zijn y waarde wordt gewijzigd
         The unicorn moves to the left: De Eenhoorn beweegt naar links
         The unicorn's x value decreases: The unicorn's x value decreases
+      ECSPD growth mindset in the classroom:
+        Growth Mindset in the Classroom: Growth Mindset in the Classroom
+        How can we use praise to encourage Growth Mindset in our students?: How can
+          we use praise to encourage Growth Mindset in our students?
+        praise students for getting the right answer: praise students for getting
+          the right answer
+        praise the process that students use to solve problems: praise the process
+          that students use to solve problems
+        praise students for their intelligence: praise students for their intelligence
+      ECSPD growth mindset question:
+        Impact of Growth Mindset: Impact of Growth Mindset
+        Based on the video you saw before, please answer the following question.: Based
+          on the video you saw before, please answer the following question.
+        0: '? In the video, Carol Dweck describes an online math game that rewarded
+          student effort, strategy, and progress. What results did they see from students
+          who played this game?'
+        1: ': In the video, Carol Dweck describes an online math game that rewarded
+          student effort, strategy, and progress. What results did they see from students
+          who played this game?'
+        more effort: more effort
+        more strategies: more strategies
+        more engagement over longer periods of time: more engagement over longer periods
+          of time
+        more perseverance: more perseverance
+        all of the above: all of the above
       K-1 Artist 1 Multi 1:
         Multiple Choice: Meerkeuze
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -678,7 +712,7 @@
         17: '17'
       msm variables multi 13:
         /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What should f(1) produce?: What should f(1) produce?
+        What should f(1) produce?: Wat zou de uitkomst moeten zijn van f(1)?
         x: x
         117: '117'
         17: '17'
@@ -686,7 +720,7 @@
         x = 15<br>a = 2<br>b = 6: x = 15<br>a = 2<br>b = 6
         What is the value of a + b?: Wat is de waarde van a + b?
         8: '8'
-        function: functie
+        a function: een functie
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
@@ -700,18 +734,18 @@
         What is the value of x?: Wat is de waarde van x?
         3: '3'
         15: '15'
-        do not know: do not know
+        do not know: weet niet
       msm variables multi 5:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
           600
-        What is the value of (p - x)?: What is the value of (p - x)?
+        What is the value of (p - x)?: Wat is de waarde van (p - x)?
         q: q
         3: '3'
         5: '5'
       msm variables multi 6:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png,
           600
-        What is the value of string-length(q)?: What is the value of string-length(q)?
+        What is the value of string-length(q)?: Welk resultaat geeft string-length(q)?
         1: '1'
         hello: hallo
         5: '5'
@@ -729,7 +763,7 @@
         3: '3'
       msm variables multi 9:
         f(x) = x + 3: f(x) = x + 3
-        What is f(2)?: What is f(2)?
+        What is f(2)?: Wat is f(2)?
         6: '6'
         5: '5'
         x: x
@@ -764,25 +798,30 @@
           1.blocks3.start_blocks, 350, 100
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
           1.blocks4.start_blocks, 350, 100
+      PDECS attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please
+          confirm that you have read the Attendance Policy and will work to follow
+          it.
+        I have read and agree to the Attendance Policy: I have read and agree to the
+          Attendance Policy
       PDK5 Basic CS:
         Video Follow-up Question: Video Follow-up Question
         Answer this question based on the video you just watched.: Answer this question
           based on the video you just watched.
         'A computer program, or code, is:': 'A computer program, or code, is:'
-        a part inside of a computer: a part inside of a computer
-        a week-long course to learn about computers: a week-long course to learn about
-          computers
-        a set of instructions you give a computer to execute: a set of instructions
-          you give a computer to execute
-        a secret password: a secret password
+        a part inside of a computer: een onderdeel van een computer
+        a week-long course to learn about computers: een computercursus van een week
+        a set of instructions you give a computer to execute: een reeks instructies
+          die je door een computer laat uitvoeren
+        a secret password: een geheim wachtwoord
       PDK5 Beyond:
-        What do I do now?: What do I do now?
+        What do I do now?: Wat moet ik nu doen?
         This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This
           is the last piece of our online PD. Congratulations! Click Im finished when
           you are ready!
-        Im finished: Im finished
+        Im finished: Ik ben klaar
       PDK5 Blockly Intro:
-        Writing your first computer program!: Writing your first computer program!
+        Writing your first computer program!: Schrijf je eerste computerprogramma!
         Are you ready to move on?: Are you ready to move on?
         'Yes': Ja
       PDK5 Classroom Culture:
@@ -845,19 +884,17 @@
           you dont have to worry about syntax as much, like where to put a semi-colon
         Because you can focus on the logic of programming: Because you can focus on
           the logic of programming
-        Because the commands are available in a menu rather than having to remember them yourself: Because
-          the commands are available in a menu rather than having to remember them
-          yourself
+        Because the commands are listed in a menu rather than having to remember them yourself: Because
+          the commands are listed in a menu rather than having to remember them yourself
         All of the above: All of the above
       PDK5 What is CS:
         What is Computer Science?: What is Computer Science?
         'A computer program, or code, is:': 'A computer program, or code, is:'
-        a part inside of a computer: a part inside of a computer
+        a part inside of a computer: een onderdeel van een computer
         a set of instructions a person gives a computer to execute: a set of instructions
           a person gives a computer to execute
-        a week-long course to learn about computers: a week-long course to learn about
-          computers
-        a secret password: a secret password
+        a week-long course to learn about computers: een computercursus van een week
+        a secret password: een geheim wachtwoord
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
         rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds +
@@ -917,6 +954,59 @@
         this is a question?: this is a question?
         wrong answer: verkeerd antwoord
         right answer: juist antwoord
+      U1L10 Assessment 1:
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        'Question #1': 'Question #1'
+        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What
+          is the minimum number of bits you need to encode the 26 letters of alphabet
+          plus a space?
+        2 bits: 2 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+      U1L10 Assessment 2:
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        'Question # 2': 'Question # 2'
+        0: "? \"The standard QWERTY keyboard has 47 keys that when pressed cause a
+          character show up on the screen. Consider also that the shift key, which
+          when pressed at the same time as a character key, changes the resulting
+          character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered
+          in this question). \n\nHow many bits would you need to encode everything
+          that could be typed on this keyboard?\""
+        1: ": \"The standard QWERTY keyboard has 47 keys that when pressed cause a
+          character show up on the screen. Consider also that the shift key, which
+          when pressed at the same time as a character key, changes the resulting
+          character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered
+          in this question). \n\nHow many bits would you need to encode everything
+          that could be typed on this keyboard?\""
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+      U1L11 Assessment 1:
+        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
+        'Question #1': 'Question #1'
+        What is ASCII text?: What is ASCII text?
+        American Strict Conformance of Internet Interchange: American Strict Conformance
+          of Internet Interchange
+        Authentication Standards for Commerce in Interstate Information: Authentication
+          Standards for Commerce in Interstate Information
+        American Standard Code for Information Interchange: American Standard Code
+          for Information Interchange
+        Automatic Serial Coding for Interface Interchange: Automatic Serial Coding
+          for Interface Interchange
+      U1L11 Assessment 2:
+        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
+        'Question #2': 'Question #2'
+        How many bytes are used to encode a single ASCII character?: How many bytes
+          are used to encode a single ASCII character?
+        1 byte: 1 byte
+        2 bytes: 2 bytes
+        4 bytes: 4 bytes
+        8 bytes: 8 bytes
+        16 bytes: 16 bytes
       U1L6 Assessment multiple choice:
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
         If you just had a circle and a square, how many 3-shape rows could you make?: If
@@ -927,7 +1017,7 @@
         10: '10'
         12: '12'
       unique level name here:
-        line1<br/>line2: line1<br/>line2
+        title: titel
         description here: beschrijving hier
         Question: Vraag
         wrong answer: verkeerd antwoord

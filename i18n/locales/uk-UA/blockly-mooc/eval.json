@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"розмістити-зображення (x, y, зображення)",
   "offsetBlockTitle":"зсув (x, y, зображення)",
   "rectangleBlockTitle":"прямокутник (ширина, висота, стиль, колір)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"обертати (градуси, зображення)",
   "scaleImageBlockTitle":"масштаб (множник, зображення)",
   "squareBlockTitle":"квадрат (розмір, стиль, колір)",

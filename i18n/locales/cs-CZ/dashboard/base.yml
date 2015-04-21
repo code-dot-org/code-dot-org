@@ -349,6 +349,7 @@ cs:
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>'
     your_gallery: Galerie
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Muž
     female: Žena
@@ -477,6 +478,7 @@ cs:
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Zadejte svou odpověď zde
   dialog:

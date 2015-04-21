@@ -31,7 +31,7 @@
   "CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE": "Bỏ qua phần còn lại trong vòng lặp này, chuyển sang lần lặp tiếp theo.",
   "CONTROLS_FLOW_STATEMENTS_WARNING": "Chú ý: Khối này chỉ có thế dùng trong phạm vi các vòng lặp.",
   "CONTROLS_FOREACH_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#for_each",
-  "CONTROLS_FOREACH_INPUT_INLIST": "trong dánh sách",
+  "CONTROLS_FOREACH_INPUT_INLIST": "trong danh sách",
   "CONTROLS_FOREACH_INPUT_INLIST_TAIL": "",
   "CONTROLS_FOREACH_INPUT_ITEM": "với mỗi vật",
   "CONTROLS_FOREACH_TOOLTIP": "Với mỗi thành phần trong danh sách, gán/chuyển giá trị của biến \"%1\" cho thành phần đó, rồi thực hiện các lệnh.",

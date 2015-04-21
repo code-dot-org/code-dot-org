@@ -653,20 +653,34 @@
         playlab_events: Leikjasmiðja, atvik
         playlab_repeat_forever: Leikjasmiðja, endurtaka endalaust
         tutorial_puzzle_challenge: Þrautaáskorun
-        msm_1_intro: Tölvunarfræði með algebru - Kafli 1 Inngangur
-        msm_2_eval_block: Matskubbar
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Breytur
-        msm_7_functions: Föll
         infinity_playlab_intro: Leikjasmiðja - kynning
         infinity_playlab_events: Leikjasmiðja - Atvik
         infinity_playlab_repeat_forever: Leikjasmiðja - Endurtaka endalaust
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
+        csp_concept_rgb: Svolítið bitastætt um díla
+        csp_pixelation_color_1: Litadílamynstursgræja - 1. hluti
+        csp_pixelation_color_2: Litadílamynstursgræja - 2. hluti
+        csp_pixelation_color_3: Litadílamynstursgræja - 3. hluti
+        csp_pixelation_bw: Svarthvítdílamynstursgræja
+        csp_U1L14_tipstricks: Ráð & refabrögð kennara fyrir 1. kafla, kennslustund
+          14
+        csp_textcompression: Text compression widget
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn
@@ -767,5 +781,6 @@
         Infinity_move_right_runbutton: Bæta "færa" kubbi við hér
         Infinity_move_directions_callout: Hvaða kubbur mun láta Baymax færast upp
           þegar ýtt er á upp örina?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
         Infinity_move_collide_callout: Spila hljóð þegar þetta atvik á sér stað.
         Infinity_repeat_callout: Setja "færa" kubba hér innan í

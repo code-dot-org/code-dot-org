@@ -429,11 +429,6 @@ en:
         playlab_events: crwdns25664:0crwdne25664:0
         playlab_repeat_forever: crwdns25665:0crwdne25665:0
         tutorial_puzzle_challenge: crwdns35063:0crwdne35063:0
-        msm_1_intro: crwdns35064:0crwdne35064:0
-        msm_2_eval_block: crwdns35065:0crwdne35065:0
-        msm_3_pemdas: crwdns35066:0crwdne35066:0
-        msm_6_variables: crwdns35067:0crwdne35067:0
-        msm_7_functions: crwdns35068:0crwdne35068:0
         infinity_playlab_intro: crwdns35943:0crwdne35943:0
         infinity_playlab_events: crwdns35944:0crwdne35944:0
         infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
@@ -443,6 +438,24 @@ en:
         csp_pixelation_color_3: crwdns36230:0crwdne36230:0
         csp_pixelation_bw: crwdns36231:0crwdne36231:0
         csp_U1L14_tipstricks: crwdns36232:0crwdne36232:0
+        csp_textcompression: crwdns36303:0crwdne36303:0
+        alg_1_intro: crwdns36304:0crwdne36304:0
+        alg_2_eval_block: crwdns36305:0crwdne36305:0
+        alg_3_pemdas: crwdns36306:0crwdne36306:0
+        alg_4_data_types: crwdns36307:0crwdne36307:0
+        alg_5_contracts: crwdns36308:0crwdne36308:0
+        alg_6_variables: crwdns36309:0crwdne36309:0
+        alg_7_function: crwdns36310:0crwdne36310:0
+        alg_8_design_recipe: crwdns36311:0crwdne36311:0
+        alg_9_booleans: crwdns36312:0crwdne36312:0
+        alg_10_conditionals: crwdns36313:0crwdne36313:0
+        alg_11_coordinate_plane: crwdns36314:0crwdne36314:0
+        alg_12_biggame_variables: crwdns36315:0crwdne36315:0
+        alg_13_biggame_animation: crwdns36316:0crwdne36316:0
+        alg_14_biggame_booleans: crwdns36317:0crwdne36317:0
+        alg_15_biggame_update_player: crwdns36318:0crwdne36318:0
+        alg_16_biggame_collision_detection: crwdns36319:0crwdne36319:0
+        alg_17_sambat_compound_booleans: crwdns36320:0crwdne36320:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0
@@ -511,5 +524,6 @@ en:
         name_function: crwdns25677:0crwdne25677:0
         Infinity_move_right_runbutton: crwdns36218:0crwdne36218:0
         Infinity_move_directions_callout: crwdns36219:0crwdne36219:0
+        Infinity_move_directions_callout_arrow: crwdns36321:0crwdne36321:0
         Infinity_move_collide_callout: crwdns36220:0crwdne36220:0
         Infinity_repeat_callout: crwdns36221:0crwdne36221:0

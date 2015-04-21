@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"放置圖片(x,y,圖片)",
   "offsetBlockTitle":"偏移量 (x,y,圖片)",
   "rectangleBlockTitle":"矩形 (寬度, 高度,樣式 , 顏色)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"旋轉(度數,圖片)",
   "scaleImageBlockTitle":"比例 (要素、圖像)",
   "squareBlockTitle":"正方形(大小,樣式,顏色)",

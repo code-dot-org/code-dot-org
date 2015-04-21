@@ -132,33 +132,26 @@ es-ES:
   homepage_hero_text_satya: '&ldquo;Las ciencias de la computación pueden permitirle acceder a las mejores oportunidades en el mundo.&rdquo; Satya, CEO de Microsoft'
   homepage_hero_text_bosh: '"Si programas, puedes elegir el curso de tu vida." Chris Bosh'
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Estas habilidades han cambiado mi futuro. Sin mencionar, esto es simplemente diversión.&ldquo;
+    Luna, 7 º grado
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Yo nunca había visto mis hijos tan emocionados por aprender&ldquo;
+    Michael, profesor
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;Ciencias de la computación es un campo que no puedes saber si te gusta o no antes de intentarlo&ldquo;
+    Jackson, 6to grado
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;Puedes hacer cualquier cosa que tu mente quiere hacer con programación.&ldquo;
+    Maya, 2º grado
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;Las ciencias de la computación no son para otras personas. Es para ti, aquí, ahora.&ldquo;
+    Geraldo, profesor
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;Programar genera chispas de creatividad, inspiración e innovación &mdash; todas las cuales son esenciales en cualquier carrera.&ldquo;
+    Floresa, profesor
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;Este programa tiene al 100% de mis estudiantes comprometidos, involucrados y participando.&ldquo;
+    Adam, profesor
   homepage_slot_text_hoc: La Hora de Programación
   homepage_slot_text_frozen: Congelados con Anna y Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -189,7 +182,7 @@ es-ES:
   homepage_slot_text_title_advocates: Defensores
   homepage_slot_text_blurb_advocates: Apoye nuestro trabajo
   homepage_slot_text_link_stats: Ver las estadísticas
-  homepage_slot_text_link_buy: Comprar una camiseta o gorra
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Haga una donación
   homepage_header_codestudio: Creaciones de los estudiante de Code Studio
   homepage_header_donors: Code.org agradece a sus colaboradores
@@ -276,7 +269,7 @@ es-ES:
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: ¿Borrar?
   dashboard_action_remove: Eliminar
-  dashboard_action_remove_confirm: ¿eliminar?
+  dashboard_action_remove_confirm: ¿Eliminar?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
   dashboard_navigation_home_page: Página de inicio del maestro

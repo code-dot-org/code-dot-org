@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"Ort-Bild (x, y, Bild)",
   "offsetBlockTitle":"versatz (x,y,Bild)",
   "rectangleBlockTitle":"Rechteck (Breite, Höhe, Stil, Farbe)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"Drehen (Grad, Bild)",
   "scaleImageBlockTitle":"Maßstab (Faktor, Bild)",
   "squareBlockTitle":"Quadrat (Größe, Stil, Farbe)",

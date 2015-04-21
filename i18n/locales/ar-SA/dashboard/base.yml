@@ -350,6 +350,7 @@ ar:
     heading_apps: '<h2>المتعة</h2><h1>للجميع</h1>'
     heading_legacy: '<h2>دورتنا عامة لـ</h2><h1>جميع الأعمار</h1>'
     your_gallery: معرض
+    no_primary_course: Try a course at Code Studio
   gender:
     male: ذكر
     female: أنثى
@@ -478,6 +479,7 @@ ar:
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: 'ادخل إجابتك هنا '
   dialog:

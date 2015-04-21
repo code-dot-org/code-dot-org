@@ -191,7 +191,7 @@
           dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: 互联网
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
         video: C3_internet
@@ -202,7 +202,7 @@
           if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: 数字公民
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
@@ -250,18 +250,24 @@
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description
+        video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
+        title: 设计食谱
         desc: Design Recipe lesson description
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans
         desc: Booleans lesson description
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
+        video: alg_10_conditionals
       CollisionDetection:
         title: 抵觸檢測
         desc: 抵觸檢測教學詳述
+        video: alg_16_biggame_collision_detection

@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"umístit obrázek (x, y, obrázek)",
   "offsetBlockTitle":"offset (x, y, obrázek)",
   "rectangleBlockTitle":"obdélník (šířka, výška, styl, barva)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"otočení (stupně, obrázek)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"čtverec (velikost, styl, barva)",

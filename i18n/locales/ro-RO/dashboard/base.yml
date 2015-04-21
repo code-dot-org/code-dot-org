@@ -349,6 +349,7 @@ ro:
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
     heading_legacy: '<h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
+    no_primary_course: Try a course at Code Studio
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -477,6 +478,7 @@ ro:
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Completați răspunsul aici
   dialog:
