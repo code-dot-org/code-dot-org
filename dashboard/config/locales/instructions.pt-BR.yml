@@ -883,7 +883,7 @@
       add 2_instruction: |
         Belo trabalho no último desafio, vamos tentar novamente.
         Desta vez, vamos fazer esse design bacana com hexágonos de 60 pixels.
-      Alice Test_instruction: Aqui estão algumas instruções!
+      Alice Test_instruction: Veja aqui algumas instruções!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Agora, vamos desenhar 6 quadrados, cada
         um com uma cor aleatória. Que ângulo devemos usar para virar entre cada quadrado para
@@ -1089,10 +1089,10 @@
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
       Big Game Animation 2_instruction: |
-        A função "atualize-alvo"
-        recebe o atual valor de x do alvo e retorna um valor atualizado. Complete
-        a função "atualize-alvo" para que ela some ao valor de x toda vez que ela
-        for chamada. Quanto mais você adicionar ao x, mais rápido o alvo será.
+        The 'update-target' function takes the
+        target's current x value, and returns an updated value. Complete the 'update-target'
+        function so that it adds to the x value each time it is called. The more you
+        add to x, the faster the target will go.
       Big Game Animation 3_instruction: |
         A função "atualize-inimigo" deve funcionar
         como a função "atualize-alvo", exceto pelo fato de o perigo se mover do lado direito
@@ -1111,24 +1111,30 @@
         em concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem
         saído.
       Big Game Booleans 2_instruction: |
-        Lembra-se das funções esquerda-segura? e direita-segura?
-        do Morcego Sam? Vamos usar a mesma lógica para descobrir quando o
-        alvo e o inimigo saírem da tela. Acesse a seção "Funções" da
-        caixa de ferramentas e complete a função esquerda-segura?.
+        Now that your onscreen? function is checking
+        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
+        section of the toolbox and complete the safe-left? function so that it returns
+        true if the sprite's x coordinate is greater than -50. If you're successful
+        you should see the Danger go off the left side and then return on right side.
       Big Game Booleans 3_instruction: |
-        Agora que você completou a esquerda-segura?, vamos preencher
-        a direita-segura? - ela deve receber a coordenada de x de um gráfico e retornar verdadeiro
-        se o gráfico não tiver saído da tela pelo lado direito.
+        Now that you've got safe-left?, let's fill
+        in safe-right? - it should take in a sprite's x coordinate and return true
+        if that coordinate is less than 450. Once your safe-right? is complete you
+        should see the Target go off the right side of the screen and return on the
+        left.
       Big Game Booleans 4_instruction: |
-        Excelente, agora que você tem funções para verificar
-        a esquerda e a direita da tela, edite a função na tela? para que
-        ela verifique esquerda-segura? E direita-segura?, como você fez com o Morcego Sam.
+        We've provided a couple of empty functions
+        for safe-left? and safe-right? The first thing you need to do is complete
+        the onscreen? function so that it checks whether both safe-left? and safe-right?
+        are true. TIP - even after you add safe-left? and safe-right? your sprites
+        won't return to the screen. That will happen in the next puzzles when we
+        make sure that safe-left? and safe-right? actually work.
       Big Game Booleans 5_instruction: |
-        Nesse ponto do seu jogo, seu inimigo deve percorrer
-        a tela da direita para a esquerda, seu alvo deve percorrer a tela da esquerda para
-        a direita e eles devem retornar para o lado oposto. Veja
-        se seu jogo está funcionando como você gostaria e então clique em Concluir
-        para seguir em frente.
+        At this point your danger should run across
+        the screen from right to left, your target should run across from left to
+        right, and they should both return to the opposite side, repeatedly. Take
+        a minute to make sure your game is working like you want it to, and then click
+        Finish to move on.
       Big Game Collision 1 (copy 1)_instruction: |
         Da última vez que você trabalhou em seu jogo
         fizemos nossos alvo e inimigo voarem pela tela, mas eles nunca
@@ -1149,18 +1155,20 @@
         para que ela mova o jogador para cima quando \na seta para cima está pressionada,
         ou para baixo quando a seta para baixo está pressionada.\n"
       Big Game Collision 3_instruction: |
-        Para saber se dois dos nossos personagens gráficos estão
-        se tocando, primeiro precisamos medir a distância entre seus pontos centrais.
-        Use o teorema de Pitágoras para completar essa função de distância para que ela
-        retorne a distância entre as coordenadas centrais do jogador (px, py) e as
-        coordenadas centrais de outro personagem (cx, cy). Para ajudá-lo, fornecemos uma
-        função de comprimento de reta.
+        Let's fix this distance function so our
+        collision detection works properly. Use the Distance Formula, so the distance
+        function returns the distance between the player's center coordinates (px,
+        py) and another sprite's center coordinates (cx, cy). We've provided a working
+        line-length function to help you out.
       Big Game Collision 4_instruction: |
-        Agora que você tem uma forma de medir a distância
-        entre dois pontos, você só precisa decidir quando esses pontos estão perto o suficiente
-        para considerar que estão se tocando. Complete a função "colisão?" para que ela verifique
-        a função distância e retorne verdadeiro se os dois pontos estiverem próximos o suficiente
-        para se tocarem (separados por 100 pixels é uma boa medida para começar).
+        We've got a function called distance that
+        should return the distance between two sprites, and using that we can decide
+        when those sprites are close enough to be considered touching. Complete the
+        'collide?' function so that it checks the distance function and returns
+        true if the two points are close enough to touch (100 pixels apart is a good
+        place to start). TIP: the distance function doesn't work yet (it always returns
+        zero), so if you're successful you'll see that your sprites are instantly
+        "colliding," but we'll fix that in a second!
       Big Game Complete (copy 1)_instruction: |
         Uma demonstração do projeto Grande Jogo
         da Álgebra em CC completo
@@ -1173,17 +1181,18 @@
         finais. Quando você estiver feliz com o produto final, clique em Concluir e
         você terá a oportunidade de compartilhar um link para o seu jogo. Bom trabalho!
       Big Game Player 1_instruction: |
-        Estamos próximos de terminar o jogo!
-        Na última vez que você trabalhou no seu jogo, você usou booleanos para fazer seu alvo e seu
-        inimigo retornarem para a tela ao saírem. Clique em Executar para ver como seu jogo
-        está agora, e então vamos fazer seu jogador se mover para cima e para baixo.
-      Big Game Player 2_instruction: "Para mover o jogador para cima e para baixo,
-        vamos precisar\nusar um bloco condicional para descobrir qual tecla está pressionada
-        e responder\nde acordo. Os computadores leem teclas pressionadas como códigos
-        numéricos - a seta para\ncima é 38 e a seta para baixo é 40. Você pode consultar
-        outros códigos de teclas em seu material.\nEdite a função \"atualizar-jogador\"
-        para que ela mova o jogador para cima quando \na seta para cima está pressionada,
-        ou para baixo quando a seta para baixo está pressionada.\n"
+        We're getting really close to a finished game!
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
+      Big Game Player 2_instruction: |
+        To move the player up and down, we'll need
+        to use a conditional block to figure out which key is pressed and respond
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so the player moves up when
+        the up arrow is pressed, and moves down when the down arrow is pressed.
       Big Game Testing_instruction: |
         Uma demonstração do projeto Grande Jogo da Álgebra em CC
         completo
@@ -1275,9 +1284,10 @@
         Esse bloco de cálculo é uma função
         de multiplicação que recebe dois números e retorna o produto desses números.
         Edite esse bloco para que ele multiplique 2 * 5
-      Calc Circles of Eval .3_instruction: Aqui está uma função de adição que leva
-        dois números e retorna a soma. Use este bloco de adição para adicionar 3 +
-        6.
+      Calc Circles of Eval .3_instruction: |
+        Esta é uma função de Adição que
+        usa dois números e retorna sua soma. Use este bloco Adição para somar 3
+        + 6.
       Calc Circles of Eval .4_instruction: |
         Temos aqui um bloco de adição aninhado
         dentro de um bloco de multiplicação. Complete esse código para que ele multiplique 3 por (4
@@ -1347,19 +1357,20 @@
         de número e retornar o número dado elevado à terceira potência. Lembre-se de escrever
         dois casos de exemplo! Quando você terminar, use sua nova função para calcular 7
         elevado ao cubo.
-      Calc Design Recipe 2_instruction: "Sua escola está fazendo uma venda de bolos,
-        e você precisa controlar o custo para a produção de cada biscoito, o dinheiro
-        pago, e o lucro total. Cada biscoito custa $0,25 para ser produzido, e deve
-        ser vendido por $1,50 cada um.\r Escreva uma função 'custo', que leva o número
-        de biscoitos que você pretende vender, e retorna o custo para fazer os biscoitos."
-      Calc Design Recipe 3_instruction: "Escreva a função `vendas` que recebe \no
-        número de cookies vendidos e retorna quanto dinheiro os clientes gastaram\npara
-        comprar esses cookies (cada cookie custa R$1,50).\n"
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
+        need to track the cost of making each cookie, the money paid, and the\ntotal
+        profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe
+        function `cost`, which takes in the number of cookies you intend to sell,\nand
+        returns the cost of making those cookies."
+      Calc Design Recipe 3_instruction: |
+        Write the function `sales` which takes in
+        the number of cookies sold, and produces the amount of money customers spent
+        to buy those cookies (each cookie is sold at $1.50).
       Calc Design Recipe 4_instruction: |
-        Atividade livre: usando as duas funções que acabamos
-        de escrever, escreva a função `lucro-cookie`, que recebe o número de cookies
-        que você vendeu e retorna o lucro total obtido com a venda dos cookies,
-        considerando o custo para assá-los.
+        Using the two functions we just wrote, write
+        the function `profit`, which takes in the number of cookies you sold, and
+        gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: |
         Atividade livre: escreva funções e algoritmos com seu
         próprio design!
@@ -1386,8 +1397,9 @@
       Calc Vars 2 (copy 1)_instruction: |
         Aqui, definimos a variável "idade" como
         17 - você pode escrever uma expressão que calcula "idade" em meses?
-      Calc Vars 2.1_instruction: Aqui está uma variável chamada "idade em meses" -
-        use a variável "idade" para definir "idade em meses"
+      Calc Vars 2.1_instruction: |
+        Aqui temos uma variável chamada "idade-em-meses"
+        - use a variável "idade" para definir "idade-em-meses"
       Calc Vars 2_instruction: |
         Você pode escrever uma expressão que calcula "idade"
         em meses?
@@ -2285,8 +2297,9 @@
       Eval Contracts C_instruction: |
         Confira a função "rotacione" - você pode
         usá-la para rotacionar esse quadrado verde de 90 pixels em 45 graus?
-      Eval Contracts E_instruction: Tente usar a função "texto" para escrever este
-        "Olá, Mundo!" em verde-azulado no tamanho 40.
+      Eval Contracts E_instruction: |
+        Tente usar a função "texto" para escrever
+        "Olá, mundo!" em azul no tamanho 40.
       Eval Contracts shrink_instruction: "Você pode completar essa imagem usando o
         bloco\nde função \"encolha\"? O raio é 20. \n"
       Eval Define Funcs 1_instruction: |
@@ -2394,17 +2407,18 @@
       Eval Strings Images 6_instruction: |
         Use a função sobreposição para colocar uma estrela
         amarela com raio de 75 pixels em cima de um quadrado azul com 150 pixels de comprimento.
-      Eval Strings Images 7_instruction: O bloco "deslocamento" permite você mover
-        uma imagem em relação a onde ele normalmente seria colocado. Use este bloco
-        para deslocar o quadrado por 100 pixels pelo eixo y.
+      Eval Strings Images 7_instruction: |
+        O bloco "deslocamento" permite que você mova uma imagem
+        com relação a onde ela normalmente estaria posicionada. Use esse bloco para deslocar o
+        quadrado 100 pixels no eixo y.
       Eval Strings Images 8_instruction: |
         Temos aqui um tipo diferente de bloco de estrela
         - ele é chamado "estrela-radial" e permite que você desenhe estrelas com qualquer número
         de pontos! Use-o para criar uma estrela laranja sólida com um raio interno de 75
         pixels e um raio externo de 175 pixels.
       Eval Strings Images Free Play_instruction: |
-        Atividade livre: explore os blocos disponíveis
-        para desenhar algo interessante. Lembre-se de salvar e compartilhar suas imagens favoritas.
+        Free Play: Explore the blocks available
+        to create something interesting. Make sure to share your favorite creations.
       Examples 4_instruction: Função de encolhimento
       frozen circle function (copy 1)_instruction: |
         Use o novo bloco "crie um círculo"
@@ -2538,9 +2552,9 @@
       Infinity_touch_four_instruction: |
         Mova Anna para cima, para a esquerda e para a direita para tocar
         cada um dos quatro flocos de neve.
-      Infinity_touch_score_instruction: Faça Anna marcar um ponto quando ela tocar
-        em um floco de neve. Depois clique em "Executar" e faça ela tocar uma vez
-        em cada floco de neve.
+      Infinity_touch_score_instruction: |
+        Faça Anna marcar um ponto quando ela tocar
+        em um floco de neve. Depois clique em "Executar" e faça ela tocar uma vez em cada floco de neve.
       K-1 Artist 1 Assessment 1_instruction: |
         Desenhe uma pequena reta para cima e uma
         grande para a direita!
@@ -2776,7 +2790,7 @@
         a função de custo do Luigi\nainda melhor? Tente usar uma (ou mais) das seguintes
         opções:\r\n- Mostrar uma\nimagem da pizza escolhida\r\n- Permitir a combinação
         de vários sabores\r\n-\nPermitir o pedido de várias pizzas\r\n- Adicionar
-        um cupom com código para um desconto 50%"
+        um cupom com código para um desconto de 50%"
       maze level test_instruction: Faça isso!
       Maze screenshot Work_instruction: Testar instruções
       MSM Big Game Empty_instruction: |
@@ -2851,39 +2865,37 @@
         se conectar a um roteador ao invés de se conectar diretamente a outro aluno. Insira um
         endereço no campo "para" para enviar uma mensagem a outro aluno.
       NetSim_AutomaticDNS_instruction: |
-        Nessa versão do simulador, um serviço DNS
-        é fornecido para você. Envie uma mensagem no formulário GET [hostname] para o serviço DNS
-        para obter o endereço de um aluno.
+        In this version of the simulator a DNS service
+        is provided for you. Send a message in the form GET [hostname] to the DNS
+        service at address 15 to get a student's address.
       NetSim_ManualDNS_instruction: |
         Nessa versão do simulador você não pode
         ver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um
         serviço de nome, para ajudar a compartilhar os endereços entre si.
       NetSim_SendAB_instruction: |
-        EM CONSTRUÇÃO: Esta versão do NetSim ainda não
-        está funcionando. Ela permitirá que os alunos definam manualmente / leiam As e Bs
-        individuais em um simplex wire.
+        Connect to another student.  Each of you can set
+        the value of the wire between you to "A" or "B".  See if you can send
+        a complete message!
       NetSim_SendAscii_instruction: |
-        EM CONSTRUÇÃO: Esta versão do NetSim ainda
-        não está funcionando. Ela permitirá que os alunos enviem ASCII uns para os outros.
+        In this version of the simulator, you can send
+        numbers or ASCII characters to one another, one bit at a time.
       NetSim_SendBits_instruction: |
-        EM CONSTRUÇÃO: Esta versão do NetSim ainda
-        não está funcionando. Ela permitirá que os alunos enviem binários como zeros e uns
-        entre si
+        Connect to another student.  You can now set
+        your wire to "0" or "1".  Send a message to your partner!
       NetSim_SendingABTest_instruction: |
         Esse é o teste de Sarah para fazer um nível
         netsim
       NetSim_Superuser_instruction: Você carregou o NetSim no modo superusuário.
       NetSim_Variant1_instruction: |
-        NetSim: Variante 1 - parque de diversões: EM CONSTRUÇÃO:
-        A variante 1 ainda não está funcionando porque conexões P2P ainda não foram implementadas.
-        A variante 1 permite que os alunos elaborem manualmente o tempo do envio de bits
-        para frente e para trás.
+        NetSim: Variant 1 allows students to manually
+        work out the timing of sending bits back and forth.
       NetSim_Variant2_instruction: |
-        NetSim: Variante 2 - modelo: EM CONSTRUÇÃO:
-        A variante 2 ainda não está funcionando porque as conexões P2P ainda não foram implementadas.
+        NetSim: Variant 2: Students connect directly
+        to one another and send entire packets back and forth, exploring systems of
+        encoding data.
       NetSim_Variant3_instruction: |
-        NetSim: Variante 3 - modelo: conecta grupos de
-        2 a 6 alunos com um roteador e explora as questões de roteamento e DNS
+        NetSim: Variant 3: Connects groups of 2-6 students
+        with a router, and explores issues in routing and DNS
       NEW Artist Artist Functions 3_instruction: "Temos aqui um novo tipo de bloco.
         Ele\né chamado de \"bloco de função\". Clique em \"Executar\" para ver o que
         ele pode fazer. \n"
@@ -3091,34 +3103,53 @@
         e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
         ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
         achar que já descobriu como o jogo funciona, clique em "Concluir"
+      PDK5 Conditionals 1_instruction: |
+        Purple flowers may have either 1 or 0 nectar,
+        but you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
+      PDK5 Events 1_instruction: "So far all of the programs we've written are executed\nin
+        order from top to bottom. In this puzzle, we'll use \"Events\" to respond\nto
+        an action on demand. Make the octopus say \"Hello\" only when you click\non
+        the Octopus. \n"
+      PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
+        \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
+        this is called a \"loop.\" \n"
+      PDK5 Loops 3_instruction: |
+        Here's another puzzle to practice loops. What happens
+        if you use the repeat block to run the code already provided on the workspace
+        4 times?
       perpendicular_instruction: |
         Agora, vamos ver se podemos criar duas retas perpendiculares.
         Retas perpendiculares são duas retas que se interceptam em um ângulo de 90 graus,
         ou ângulo reto.
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: 'Algo aconteceu com
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Algo aconteceu com
+        os bits desta imagem! Ache o erro e corrija-o! Dica: alguns poucos bits
+        extras foram adicionados. Você somente precisará remover alguns bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Algo aconteceu com
         os bits desta imagem! Ache o erro e corrija-o! Dica: alguns poucos bits extras
-        foram adicionados. Você deveria somente precisar remover alguns bits.'
-      Pixelation - Lesson 14 - Fix the error_instruction: 'Algo aconteceu com os bits
-        desta imagem! Ache o erro e corrija-o! Dica: alguns poucos bits extras foram
-        adicionados. Você deveria somente precisar remover alguns bits.'
-      Pixelation - Lesson 14 - Make the Letter A_instruction: Faça uma carta 'A' de
-        3X5. O widget está definido com as dimensões incorretas. A sua primeira tarefa
-        é definir o segundo byte para o código binário de 8-bits para 5:0000 0101.
-        Então comece introduzindo os dados do pixel.
+        foram adicionados. Você somente precisará remover alguns bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Faça uma letra "A"
+        3x5.  O widget está configurado com as dimensões incorretas. Sua primeira tarefa
+        é definir o segundo byte com o código binário de 8 bits para 5: 0000 0101.  Então,
+        comece a inserir os dados do pixel.
       Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
-        Now make
-        your own image! We've started you off with a 10x10 canvas but you can make
-        it whatever size you want.  Happy pixeling!
+        Agora, crie
+        sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la
+        do tamanho que você quiser.  Feliz pixelização!
       Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
-        Now make your
-        own image! We've started you off with a 10x10 canvas but you can make it
-        whatever size you want.  Happy pixeling!
+        Agora, crie sua
+        própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la
+        do tamanho que você quiser.  Feliz pixelização!
       Pixelation 2_instruction: |
-        Something happened to the bits in this image!  Find
-        error and fix it!
+        Algo aconteceu com os bits nessa imagem!  Encontre
+        o erro e conserte-o!
       Pixelation 4x4 Empty_instruction: |
-        The width and height are now encoded in
-        the pixel data. Can you figure out how to adjust the dimensions?
+        Agora, a largura e a altura estão codificadas nos
+        dados do pixel. Você consegue descobrir como ajustar as dimensões?
       Play Lab Rocket 1_instruction: |
         Um foguete dispara, viajando a 15 metros
         por segundo... pressione "Executar" para ver como esse problema fica na forma de animação.
@@ -3363,9 +3394,14 @@
         Desenhe três quadrados parcialmente sobrepostos usando o bloco
         repita
       Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
+        Esse poema foi comprimido com
+        a substituição de duas frases comuns por símbolos do dicionário. Você consegue identificar
+        outro padrão comum para comprimir ainda mais o poema?
       toby-test5-16-1_instruction: dafsfas
+      U1L4 NetSim SendAB_instruction: |
+        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
+        Variant 1 is not yet functional because P2P connections have not been implemented.
+        Variant 1 allows students to manually work out the timing of sending bits
+        back and forth.
       XML Scratchpad_instruction: Use este nível de teste para pegar xml para testes
         de unidade

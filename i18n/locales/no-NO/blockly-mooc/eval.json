@@ -5,12 +5,12 @@
   "displayBlockTitle":"beregn",
   "ellipseBlockTitle":"ellipse (bredde, høyde, stil, farge)",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
-  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
+  "infiniteRecursionError":"Funksjonen kaller seg selv. Vi har stoppet den, ellers ville den ha fortsatt å kalle seg selv til evig tid.",
   "overlayBlockTitle":"overlegg (topp, bunn)",
   "placeImageBlockTitle":"plasser-bildet (x, y, bilde)",
   "offsetBlockTitle":"forskyvning (x, y, bilde)",
   "rectangleBlockTitle":"rektangel (bredde, høyde, stil, farge)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"roter (grader, bilde)",
   "scaleImageBlockTitle":"skaler (faktor, bilde)",
   "squareBlockTitle":"kvadrat (størrelse, stil, farge)",
@@ -26,6 +26,6 @@
   "solid":"solid",
   "string":"streng",
   "stringMismatchError":"You have a string with the wrong capitalization.",
-  "userCodeException":"An error occurred while executing your code.",
+  "userCodeException":"Det oppsto en feil under utføring av koden.",
   "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

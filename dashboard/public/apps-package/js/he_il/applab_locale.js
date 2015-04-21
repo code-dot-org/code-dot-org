@@ -39,7 +39,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catText":function(d){return "טקסט"},
 "catVariables":function(d){return "משתנים"},
 "continue":function(d){return "המשך"},
-"container":function(d){return "create container"},
+"container":function(d){return "צור חלוקה"},
 "containerTooltip":function(d){return "Creates a division container and sets its inner HTML."},
 "finalLevel":function(d){return "מזל טוב! פתרת את החידה האחרונה."},
 "nextLevel":function(d){return "מזל טוב! השלמת את הפאזל הזה."},
@@ -55,5 +55,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "stepIn":function(d){return "היכנס"},
 "stepOver":function(d){return "עבור מעל"},
 "stepOut":function(d){return "צא"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "ראה נתונים"},
 "yes":function(d){return "כן"}};

@@ -56,7 +56,7 @@ tr:
         one: '1 hata %{resource} kaynağın kaydedilmesini engelledi:'
         other: '%{count} hata %{resource} kaynağının kaydedilmesini engelledi:'
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
+      send_instructions: '%{email} adresine davetiye e-postası gönderildi.'
       invitation_token_invalid: The invitation token provided is not valid!
       updated: Your password was set successfully. You are now signed in.
       no_invitations_remaining: No invitations remaining
@@ -65,12 +65,12 @@ tr:
         header: Send invitation
         submit_button: Send an invitation
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: şifreni belirle
+        submit_button: şifremi belirli
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: Accept invitation
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        subject: Davetiye yönergeleri
+        hello: 'Merhaba  %{email}'
+        someone_invited_you: 'Birileri sizi %{url},adrese davet etti. Aşağıdaki bağlantıdan kabul edebilirsiniz.'
+        accept: 'daveti  kabul et'
+        ignore: 'davetiyeyi almak istemiyorsanız, lütfen bu e-postayı yoksayın. .<br /> Aşağıdaki bağlantıya tıklamadan ve şifre oluşturmadan hesabınız oluşturulmayacak.'

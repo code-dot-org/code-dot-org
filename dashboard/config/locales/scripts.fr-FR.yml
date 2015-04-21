@@ -386,6 +386,7 @@
           Personal Reflection: Réflexion personnelle
           Next Steps: Prochaines étapes
           Computer Science Pedagogy: Pédagogie des sciences informatiques
+          Programming Concepts: Programming Concepts
         netsim:
           title: Simulateur d'Internet
           description_short: ''
@@ -531,8 +532,18 @@
           Sending More Complex Messages: Sending More Complex Messages
           Bit Sending Widget: Bit Sending Widget
           Sending Bits in the Real World: Sending Bits in the Real World
-          Number Systems: Number Systems
-          Binary Numbers: Binary Numbers
+          Number Systems: Systèmes de numération
+          Binary Numbers: Nombres binaires
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
+            Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
         algebraPD:
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -575,6 +586,7 @@
             fonctions par morceaux
           Rocket-Height: Hauteur de la fusée
           Design Recipe Practice: Pratique de conception de recette
+          Introduction to PD: Introduction au développement professionnel
         algPDmiami:
           title: Informatique en DP d'algèbre
           description: Enseigner l'algèbre par le biais de la programmation fonctionnelle
@@ -593,7 +605,7 @@
           Your Game - Collision Detection: Votre jeu - détection de Collision
         text-compression:
           title: Text Compression
-          description: Compress text by identifying repeated patterns.
+          description: Contracter le texte en identifiant des structures répétées.
           Text Compression: Text Compression
         CSPPD:
           new stage: nouvelle étape
@@ -603,3 +615,12 @@
           description_short: échantillons de leçon pour le csp
           Lesson 14: Leçon 14
           Lesson 15: Leçon 15
+        ECSPD:
+          Introduction to PD: Introduction au développement professionnel
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Introduction au développement professionnel

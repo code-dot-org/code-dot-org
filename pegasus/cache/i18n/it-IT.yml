@@ -181,13 +181,11 @@
     &ldquo;Se scrivi codice, puoi determinare il corso della tua vita.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Queste abilità hanno cambiato il mio futuro.
+    Per non dire che è puro divertimento.&rdquo;
+    Luna, 2' media
+  homepage_hero_text_student2: "&ldquo;Non ho mai visto i miei alunni \ncosì entusiasti
+    di imparare.&rdquo; \nMichele, insegnante\n"
   homepage_hero_text_student3: |
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
@@ -232,7 +230,7 @@
   homepage_slot_text_title_advocates: Sostenitori
   homepage_slot_text_blurb_advocates: Supporta il nostro lavoro
   homepage_slot_text_link_stats: Guarda le statistiche
-  homepage_slot_text_link_buy: Compra una T-shirt o un cappello
+  homepage_slot_text_link_buy: Mettiti in gioco
   homepage_slot_text_link_donate: Fai una donazione
   homepage_header_codestudio: Creazioni degli studenti di Code Studio
   homepage_header_donors: Code.org ringrazia i suoi sostenitori

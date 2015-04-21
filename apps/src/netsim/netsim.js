@@ -111,6 +111,13 @@ var NetSim = module.exports = function () {
   this.chunkSize_ = 8;
 
   /**
+   * The "my device" bitrate in bits per second
+   * @type {number}
+   * @private
+   */
+  this.myDeviceBitRate_ = Infinity;
+
+  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -156,6 +163,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {netsimLevelConfiguration} config.level
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
+ * @param {string} config.html - rendered markup to be created inside this method
  */
 NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
@@ -322,6 +330,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
         this.runLoop_,
         {
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
+          myDeviceBitRateChangeCallback: this.setMyDeviceBitRate.bind(this),
           encodingChangeCallback: this.changeEncodings.bind(this),
           routerBandwidthSliderChangeCallback: this.setRouterBandwidth.bind(this),
           routerBandwidthSliderStopCallback: this.changeRemoteRouterBandwidth.bind(this),
@@ -337,7 +346,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
-  this.setChunkSize(this.chunkSize_);
+  this.setChunkSize(this.level.defaultChunkSizeBits);
+  this.setMyDeviceBitRate(this.level.defaultBitRateBitsPerSecond);
   this.setRouterBandwidth(this.level.defaultRouterBandwidth);
   this.setRouterMemory(this.level.defaultRouterMemory);
   this.setDnsMode(this.level.defaultDnsMode);
@@ -402,7 +412,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
  * Given a lobby table has already been configured, connects to that table
  * by inserting a row for ourselves into that table and saving the row ID.
  * @param {!string} displayName
- * @param {!nodeStyleCallback} onComplete - result is new local node
+ * @param {!NodeStyleCallback} onComplete - result is new local node
  * @private
  */
 NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
@@ -596,6 +606,18 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendPanel_.setChunkSize(newChunkSize);
+};
+
+/**
+ * Update bitrate for the local device, which affects send-animation speed.
+ * @param {number} newBitRate in bits per second
+ */
+NetSim.prototype.setMyDeviceBitRate = function (newBitRate) {
+  this.myDeviceBitRate_ = newBitRate;
+  if (this.tabs_) {
+    this.tabs_.setMyDeviceBitRate(newBitRate);
+  }
+  this.sendPanel_.setBitRate(newBitRate);
 };
 
 /** @param {number} creationTimestampMs */

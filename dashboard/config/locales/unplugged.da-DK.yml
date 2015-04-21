@@ -277,18 +277,24 @@
       VideoGamesCoordinatePlanes:
         title: Videospil og koordinere fly
         desc: Videospil og koordinerese flys lektionsbeskrivelse
+        video: alg_11_coordinate_plane
       Contracts:
         title: Kontrakter
         desc: Kontrakter unplugged lektions beskrivelser
+        video: alg_5_contracts
       DesignRecipe:
         title: Design opskrift
         desc: Design opskrifter lektionsbeskrivelse
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans
         desc: Booleans lektionsbeskrivelser
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Konditioner og stykvise funktioner
         desc: Conditionals og Piecewise Functions lektionsbeskrivelse
+        video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lektionsbeskrivelse
+        video: alg_16_biggame_collision_detection

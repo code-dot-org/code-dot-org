@@ -181,7 +181,7 @@ bs-BA:
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Nadzorna Ploča za Nastavnike
   homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Idi u kupovinu
   homepage_slot_text_flappy: Flappy kôd
   homepage_action_text_codevideo: Watch the video
@@ -207,7 +207,7 @@ bs-BA:
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Make a donation
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
@@ -431,7 +431,7 @@ bs-BA:
   older_systems: Tutorijali koji rade na starijim sistemima
   older_systems_subheading: 'Ovo bi trebalo raditi na starijim browserima. Za pristup svim tutorijalima, nadogradite na<a href="http://browsehappy.com/" target="_blank">moderni browser.</a>'
   mobile_devices: Tutorijali za mobilne uređaje
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Programiraj sa Anna i Elsa
   codeorg_name: Napiši svoj prvi kompjuterski program
   codeintl_name: Napiši svoj prvi kompjuterski program
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -629,7 +629,7 @@ bs-BA:
   kodableunplugged_longdescription: 'Napravljen za upotrebu uz obični papir, Fuzz Family Frenzy je uvod u logiku programiranja za djecu u dobi 5+. Učitelj treba objasniti pravila igre, a zatim učenici programiraju svog partnera čija svrha je savladavanja prepreka. '
   projguts_longdescription: Ova izvanmrežna aktivnost pomaže učenicima naučiti kako radi modeliranje i simuliranje na način da grupa učenika igra različite verzije igre Kamen / Makaze / Papir i opažaju rezultate eksperimenta za različite modele.
   hourofcode_longdescription: Prostor za novi code.org/hoc
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  frozen_longdescription: Hajde da programiramo sa Anna-om i Elsom pri njihovom istraživanju magičnog i predivnog leda. Napraviti ćeš pahulje snijega dok se kližeš i praviš zimsku idilu koju možeš onda podijeliti sa svojim prijateljima!
   playlab_longdescription: Napravi priču ili igru pomoću Laboratorije Igara! Napravi da se životinje, gusari, zombiji, ninje i mnogi drugi likovi miču, prave zvukove, skupljaju bodove, pa čak i da bacaju vatrene kugle!
   codeorg_beyond_name: Uvod u Računarstvo (dob 5-8)
   khan_beyond_name: Nauči programirati kompjuter

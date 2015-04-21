@@ -128,56 +128,47 @@ is-IS:
   studiobar_shop_title: Verslun
   studiobar_shop_body: Klæðstu merkinu okkar með stolti.
   homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
+    &ldquo;Ég skora á stúlkur í hverju einasta landi að læra Klukkustund kóðunar&rdquo; 
+    Malala, Nóbelsverðlaunahafi
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Getir þú breytt tækninni, getur þú breytt heiminum.&rdquo;
+    Susan, aðalframkvæmdastjóri YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Láttu ekki nægja að spila á símann þinn, forritaðu hann.&rdquo;
     Barack Obama, forseti Bandaríkjanna
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Börnin okkar &mdash; líka stúlkurnar &mdash;
+    þurfa að fá tækifæri til að læra tölvunarfræði.&rdquo;
+    Sheryl, forstjóri Facebook
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Tölvunarfræði getur verið lykillinn að bestu tækifærunum í heiminum.&rdquo;
+    Satya, aðalframkvæmdastjóri Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Ef þú kannt að kóða, hefur þú valkosti í lífinu.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Þessi færni hefur breytt framtíð minni.
+    Svo ég nefni ekki hvað þetta er skemmtilegt.&rdquo;
+    Luna, 7. bekk
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Ég hef aldrei nokkurn tímann séð börnin svona spennt að læra.&rdquo;
+    Michael, kennari
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;Tölvunarfræði er þannig að þú getur ekki vitað hvort þér líkar hún nema þú prófir hana.&rdquo;
+    Jackson, 6. bekk
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;Þú getur gert allt sem hugur þinn vill með forritun.&rdquo; 
+    Maya, 2. bekk
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;Tölvunarfræði er ekki fyrir einhvern annan. Hún er fyrir þig, hér og nú.&rdquo; 
+    Geraldo, kennari
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;Forritun er neisti til sköpunar, innblásturs og nýbreytni &mdash; 
+    sem allt eru ómissandi þættir í hvaða starfsferli sem er.&rdquo;
+    Floresa, kennari
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;Í þessu verkefni voru 100% nemenda minna virkir, áhugasamir þátttakendur.&rdquo;
+    Adam, kennari
   homepage_slot_text_hoc: Klukkustund kóðunar
   homepage_slot_text_frozen: Frozen með Önnu og Elsu
   homepage_slot_text_teacher: Stjórnborð kennara
@@ -208,7 +199,7 @@ is-IS:
   homepage_slot_text_title_advocates: Talsmenn
   homepage_slot_text_blurb_advocates: Styðjið starf okkar
   homepage_slot_text_link_stats: Sjá tölfræðina
-  homepage_slot_text_link_buy: Kaupa bol eða húfu
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Styrkja með peningagjöf
   homepage_header_codestudio: Sköpunarverk nemenda í Kóðastúdíói
   homepage_header_donors: Code.org þakkar stuðningsaðilum

@@ -138,11 +138,11 @@ class Deliverer
     attachments = header['attachments'] || {}
 
     #unless attachments.empty?
-      marker = "==_mimepart_#{SecureRandom.hex(17)}"
-      message.puts "Content-Type: multipart/mixed; boundary=\"#{marker}\""
+    marker = "==_mimepart_#{SecureRandom.hex(17)}"
+    message.puts "Content-Type: multipart/mixed; boundary=\"#{marker}\""
 
-      message.puts ''
-      message.puts "--#{marker}"
+    message.puts ''
+    message.puts "--#{marker}"
     #end
 
     message.puts 'Content-Type: text/html; charset=UTF-8'

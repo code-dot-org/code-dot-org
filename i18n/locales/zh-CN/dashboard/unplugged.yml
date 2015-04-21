@@ -138,7 +138,7 @@ zh:
         desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: 互联网
         desc: Students send messages representing various Internet transmission methods using pieces of paper.
         video: C3_internet
       Crowdsourcing:
@@ -146,7 +146,7 @@ zh:
         desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: 数字公民
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
         title: Tangram Algorithms
@@ -175,18 +175,24 @@ zh:
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
         desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts, Domain, and Range
         desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
+        title: 设计食谱
         desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans and Logic
         desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection and the Pythagorean Theorem
         desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        video: alg_16_biggame_collision_detection

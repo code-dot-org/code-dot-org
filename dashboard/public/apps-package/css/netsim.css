@@ -13,17 +13,17 @@
   background-image: url("/blockly/media/turtle/icons.png"); }
 
 .code {
-  background-position: -42px 0px; }
+  background-position: -42px 0; }
 
 .link {
-  background-position: -21px 0px; }
+  background-position: -21px 0; }
 
 .run {
   background-position: -63px -21px;
   margin-right: 3px; }
 
 .stop {
-  background-position: -63px 0px;
+  background-position: -63px 0;
   margin-right: 3px; }
 
 .calcHeader {
@@ -96,7 +96,8 @@
   -khtml-user-select: none;
   user-select: none; }
   #netsim .netsim-button[disabled] {
-    background-color: #c6cacd; }
+    background-color: #c6cacd;
+    cursor: default; }
 #netsim #netsim-rightcol {
   float: right;
   width: 300px; }

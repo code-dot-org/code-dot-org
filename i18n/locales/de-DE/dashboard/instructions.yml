@@ -10,9 +10,7 @@ de:
       2-3 Artist 2_instruction: 'Dieses Haus hat eine halb fertige Wand. Jede Seite ist 100 pixel lang, aber die halbfertigen Wand ist nur 50 pixel lang. Beende die Wand. '
       2-3 Artist 3.4_instruction: 'Der Sprung-Block bewegt den Künstler ohne zu zeichnen. Zeichne die gestrichelte Linie mithilfe sowohl des Sprung- als auch des Zeichnen-Blocks.'
       2-3 Artist 3_instruction: Dieser Hut ist 100 Pixel hoch. Zeichne einen Hut, der 70 Pixel kleiner ist.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+      2-3 Artist 3new_instruction: 'Der rote Hut ist 100 Pixel groß.  Zeichne einen schwarzen Hut, der 70 Pixel kleiner ist, zu Ende. Die Breite des schwarzen Hutes beträgt 50 Pixel.'
       2-3 Artist 4_instruction: Hilf mir, das Haus für diese Katze abschließen.
       2-3 Artist 5_instruction: 'Ersetze diesen Code mit einem "Wiederholen" Block, um das gleiche Haus mit nur 3 Blöcken zu zeichnen.'
       2-3 Artist 6_instruction: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis: Alle drei Seiten sind gleich lang.'
@@ -66,245 +64,102 @@ de:
       2-3 Artist Loops New 9_instruction: Zeichne ein einfaches V, wo beide Seiten 50 Pixel lang sind, um den Pfeil zu vervollständigen.
       2-3 Artist Match Hex Pic_instruction: 'Match: Hilf, das Sechseck zu beenden.'
       2-3 Artist Match Rho Pic_instruction: 'Match: Ergänze den fehlenden Code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
+      2-3 Artist Match Sq Pic_instruction: 'Spiel: Ergänze den fehlenden Code'
+      2-3 Artist Match Tri pic_instruction: 'Passend: Füge den fehlenden Code ein.'
       2-3 Artist Nested Loops 1_instruction: "Du hast bereits Schlaufen gebraucht um Formen zu zeichnen.\nWusstest du, das du auch eine Schlaufe in einer anderen Schlaufe setzten kannst?\r\nWiederhole diesen Code-Baustein 3 mal um das Muster zu zeichnen."
       2-3 Artist Nested Loops 10_instruction: Wiederhole diesen Code 12 mal um das Muster zu zeichen.
       2-3 Artist Nested Loops 11_instruction: Wiederhole diesen Code 4 mal um das Muster zu vervolständigen und drehe es um 90 Grad nach jedem Kreis.
       2-3 Artist Nested Loops 12_instruction: Wiederhole diesen Code 12 mal um die Wirbel zu vervollständigen.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
-      2-3 Artist Nested Loops 7_instruction: |
-        Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
-      2-3 Artist Nested Loops 8_instruction: |
-        Now let's add some grass to our picture.
-        Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_instruction: |
-        We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
+      2-3 Artist Nested Loops 2_instruction: 'Jetzt soll das Dreieck 6 mal durchlaufen werden. Nach jedem Dreiecksdurchlauf musst du eine 60 Grad- Drehung ausführen, bevor du das nächste zeichnest.'
+      2-3 Artist Nested Loops 3_instruction: Du musst das Dreieck 12 mal durchlaufen, um dieses Muster zu zeichnen. Teile die Gradzahl eines Kreises (360) durch die Zahl der Figuren, die du zeichnest (12), um herauszufinden, um wieviel Grad du drehen musst, nachdem eine Figur gezeichnet wurde.
+      2-3 Artist Nested Loops 4_instruction: 'Durlaufe diesen Diamanten 12 mal, um eine Blume zu zeichnen. Hinweis: 12 Diamanten sind vergleichbar mit den 12 Dreiecken, die du gemacht hast - wieviel Grad musste die Drehung betragen, die Du nach jeder Figur ausführen musstest?'
+      2-3 Artist Nested Loops 5_instruction: Setze mithilfe einer verschachtelten Schleife Fenster in das Gebäude. Die Fenster sind 20 Pixel lang und liegen 20 Pixel auseinander.
+      2-3 Artist Nested Loops 6_instruction: Dieser Dinosaurier hat 8 Spitzen am Schwanz; jede Spitze ist 30 Pixel lang. Das Dreieck muss 8 mal durchlaufen werden, aber sorge dafür, dass es sich nach jedem Durchlauf vorwärts bewegt.
+      2-3 Artist Nested Loops 7_instruction: Wiederhole dieses Dreieck 10 mal, um die Sonne zu zeichnen. Nach jedem Durchlauf muss eine Verschiebung und eine Drehung erfolgen. Du kannst herausfinden, wie groß die Drehung sein muss, indem du die Gradzahl eines Kreises durch die Anzahl der Figuren teilst, aus denen die Sonne besteht.
+      2-3 Artist Nested Loops 8_instruction: Wir wollen nun etwas Gras zu unserem Bild hinzufügen. Die Grasbüschel liegen 50 Pixel auseinander.
+      2-3 Artist Nested Loops 9_instruction: Wir vollenden das Bild, indem wir eine Blume hinzufügen. Wiederhole den Diamanten 12 Mal und zeichne so deine Blume.
+      2-3 Artist Nested Loops Free Play_instruction: Freies Spiel, zeichne irgendetwas cooles mit verschachtelten Schleifen.
       2-3 Bee Conditionals 1_instruction: Hallo! Ich bin eine Biene. Hilf mir Nektar aus der Blüte zu holen.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar. Be careful not to collect nectar from a purple flower if it doesn't\nhave any.\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
-      2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
+      2-3 Bee Conditionals 10_instruction: "Lila Blüten können entweder 1 oder 0 Nektar haben. Pass auf, dass kein Nektar von einer lila Blüte gesammelt wird, wenn sie keinen hat.\r\n\n\n\n"
+      2-3 Bee Conditionals 11_instruction: Sammle den Nektar dort, wo die Blüten Nektar haben.
+      2-3 Bee Conditionals 12_instruction: Benutze eine Schleife, um dies zu prüfen und sammle den Nektar aller dieser Blüten.
       2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
+        Sammle Nektar und mache Honig. Hinweis: 
+        Was passiert, wenn du die "if Necktar"- Bedingung auf eine rote Blüte anwendest? Kannst du dies mit einer Schleife vervollständigen?
+      2-3 Bee Conditionals 14_instruction: Sammle Necktar und mache Honig. Achte darauf, dass du keinen Necktar aus einer lila Blüte sammelst, wenn sie keinen hat.
       2-3 Bee Conditionals 15_instruction: Sammle Nektar von allen vier Blumen.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
+      2-3 Bee Conditionals 2_instruction: Hallo, ich bin eine Biene. Hilf mir, den ganzen Necktar aus den Blüten zu sammeln. Benutze eine Schleife.
+      2-3 Bee Conditionals 3_instruction: Hilf mir, den ganzen Necktar aus den Blüten zu sammeln. Benutze eine Schleife.
+      2-3 Bee Conditionals 4_instruction: Hallo, ich bin eine Biene. Hilf mir, den ganzen Necktar aus den Blüten zu sammeln und den ganzen Honig zu machen.
+      2-3 Bee Conditionals 5_instruction: 'Lila Blüten können entweder 1 oder 0 Necktar haben, aber du weist nicht, was zutrifft!  Pass auf, dass kein Nektar von einer lila Blüte gesammelt wird, wenn sie keinen hat. Prüfe, ob Necktar gleich 1 ist, indem du den Wenn- Baustein benutzt.'
+      2-3 Bee Conditionals 6_instruction: 'Überprüfe diese Blüte mit einem "Wenn"- Baustein um zu erkennen, ob Necktar zur Verfügung steht.'
+      2-3 Bee Conditionals 7_instruction: Sammle Necktar von jeder Blüte, wenn sie welchen hat.
       2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
+        Auf diesem Feld gibt es rote und lila Blüten.
+        Rote Blüten haben eine bekannte Necktarmenge, während die der lila Blüten unbekannt ist. Sammle den ganzen Necktar.
       2-3 Bee Conditionals 9_instruction: Sammle den ganzen Nektar von allen Blumen.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey. 
-      2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
-      2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
-      2-3 Bee Functions 10_instruction: |
-        Purple flowers may have either 1 or 0 nectar.  Create
-        a function that collects nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
-        use a loop to get an ideal block count, too.
+      2-3 Bee Conditionals Assessment 1_instruction: 'Beurteilung: Sammle den ganzen Necktar. Achte darauf, dass du keinen Necktar aus einer Blüte sammelst, wenn sie keinen hat.'
+      2-3 Bee Debugging 1_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+      2-3 Bee Debugging 10_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+      2-3 Bee Debugging 2_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+      2-3 Bee Debugging 3_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+      2-3 Bee Debugging 4_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+      2-3 Bee Debugging 5_instruction: 'Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig. Du kannst jetzt Schritt für Schritt "Ausführen" benutzen.'
+      2-3 Bee Debugging 6_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+      2-3 Bee Debugging 7_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+      2-3 Bee Debugging 8_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+      2-3 Bee Debugging 9_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.
+      2-3 Bee Debugging Assessment 1_instruction: 'Bewertung: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Necktar und mache den ganzen Honig.'
+      2-3 Bee Functions 1_instruction: 'Funktionen sind Code- Bausteine, die einen Auftrag ausführen. Benutze die "Hole 2 Necktar"- Funktion, um Necktar von jeder Blüte zu sammeln.'
+      2-3 Bee Functions 10_instruction: 'Lila Blüten haben entweder 1 oder 0 Nektar.  Erstellen Sie eine Funktion, die Nektar nur aus den lila Blüten sammelt, die Nektar haben.'
+      2-3 Bee Functions 2_instruction: 'Funktionen sind Codeblöcke, die einen Auftrag ausführen. Verwende die "hole 5"- Funktion, um gleichzeitig 5 mal Nektar zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale Blockzählung ermöglicht.'
       2-3 Bee Functions 3_instruction: Sammle den ganzen Nektar von allen Blumen.
-      2-3 Bee Functions 4_instruction: |
-        The "move and get nectar" function turns
-        the bee, collects nectar, and then returns the bee to where it started. Use
-        the function to collect all of the nectar.
+      2-3 Bee Functions 4_instruction: 'Die "bewege und hole Necktar"- Funktion dreht die Biene, sammelt Necktar und bringt die Biene an den Ausgangsort zurück. Benutze die Funktion, um den ganzen Necktar zu sammeln.'
       2-3 Bee Functions 5_instruction: |
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
-      2-3 Bee Functions 9_instruction: |
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: |
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers. 
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
-      2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
-      2-3 Bee Loops 9_instruction: |
-        The while loop can perform the same action as
-        an if statement in a loop. Add a while loop to this code to perform the same
-        task.
-      2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
-      2-3 Maze 1_instruction: |
-        Can you help me to catch the naughty pig? Stack a
-        couple of "move forward" blocks together and press "Run". 
+        Die Blüten haben jetzt mehr Necktar.
+        Bearbeite die gegebene Funktion so, dass sie 4 Portionen Necktar sammelt und benutze sie, um den ganzen Necktar von den Blüten zu sammeln.
+      2-3 Bee Functions 6_instruction: Jetzt benutze dieselbe Funktion, um Necktar von den drei Blüten zu sammeln.
+      2-3 Bee Functions 7_instruction: Die Blüten sind jetzt weiter weg. Bearbeite die gegebene Funktion und benutze sie, um den ganzen Necktar aus den Blüten zu sammeln.
+      2-3 Bee Functions 8_instruction: 'Erzeuge deine eigene Funktion, die 7 Portionen Necktar holt, nach vorn geht  7 mal Honig macht. Benutze die Funktion, um bei jeder Blüte Necktar zu sammeln und bei jeder Wabe Honig zu machen.'
+      2-3 Bee Functions 9_instruction: Erzeuge deine eigene Funktion, die einen Weg entlanggeht, Necktar holt, Honig macht und dann die Biene zum Anfang des Weges zurückbringt.
+      2-3 Bee Functions Assessment 1_instruction: 'Bewertung: Benutze die gegebene Funktion, um von jeder Blüte Necktar zu sammeln.'
+      2-3 Bee Functions Assessment 2_instruction: 'Bewertung: Erzeuge eine Funktion, mit der man gleichzeitig 3 mal Honig machen kann.'
+      2-3 Bee Loops 1_instruction: 'Jede Blüte enthält eine Einheit Necktar. Sammle Necktar von jeder Blüte. '
+      2-3 Bee Loops 10_instruction: Kannst Du eine innerhalb zwei anderer Schleifen while-Schleife benutzen, um den ganzen Necktar zu sammeln?
+      2-3 Bee Loops 11_instruction: 'Benutze while- Schleifen, um den ganzen Necktar aller Blumen auf diesem Feld zu sammeln.'
+      2-3 Bee Loops 12_instruction: 'Benutze while- Schleifen, um den ganzen Necktar aller Blumen auf diesem Feld zu sammeln.'
+      2-3 Bee Loops 2_instruction: Benutze eine Schleife, um den Necktar zu sammeln und Honig zu machen.
+      2-3 Bee Loops 3_instruction: Sammle Necktar aus jeder Blüte und mache Honig bei jeder Wabe.
+      2-3 Bee Loops 4_instruction: Benutze eine ähnliche Schleife wie im letzten Puzzle, aber arbeite eine Drehung ein.
+      2-3 Bee Loops 5_instruction: Benutze eine Schleife, um die Stufen herabzusteigen und den Necktar zu sammeln.
+      2-3 Bee Loops 6_instruction: Benutze eine Schleife, um Necktar von jeder Blüte zu sammeln und Honig bei jeder Wabe zu machen.
+      2-3 Bee Loops 7_instruction: Füge diese Bausteine in eine Schleife ein, um Honig von jeder Blüte zu sammeln.
+      2-3 Bee Loops 8_instruction: 'Diese lila Blüten haben eine unbekannte Menge Necktar. Benutze die "while Necktar"- Schleife, um den ganzen Necktar zu sammeln. Diese Schleife wird solange durchlaufen, wie die Bedingung - in diesem Fall: Necktar > 0 - wahr ist.'
+      2-3 Bee Loops 9_instruction: 'Die while- Schleife kann dasselbe bewirken wie eine if- Anweisung in einer Schleife. Füge eine while- Schleife zu dem Code hinzu, so dass dieselbe Aufgabe erledigt wird.'
+      2-3 Bee Loops Assessment 1_instruction: 'Bewertung - Benutze eine while- Schleife, um den ganzen Necktar dieser Blüte zu sammeln.'
+      2-3 Maze 1_instruction: 'Kannst du mir helfen, das freche Schwein zu fangen? Stecke ein paar "vorwärts bewegen"- Bausteine zusammen und drücke auf "ausführen". '
       2-3 Maze 10_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
-      2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
-      2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |
-        Get me to the pig, now with the Repeat times
-        block!
+      2-3 Maze 11_instruction: Hol mir die Blüte, ich bin hungrig! Wie oft musst Du den Block wiederholen?
+      2-3 Maze 12 (copy 1)_instruction: 'Kannst du die vorige Bearbeitung durch eine Lösung ersetzen, in der nur zwei Bausteine verwendet werden? (Hinweis: Erstelle eine Schleife, die einen "wiederhole ...-mal" - Baustein enthält.)'
+      2-3 Maze 12 (copy 2)_instruction: 'Kannst du die vorige Bearbeitung durch eine Lösung ersetzen, in der nur zwei Bausteine verwendet werden? (Hinweis: Erstelle eine Schleife, die einen "wiederhole ...-mal" - Baustein enthält.)'
+      2-3 Maze 12 (old)_instruction: 'Hole mir das Schwein, jetzt mit dem "wiederhole ... -mal"- Baustein!'
       2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
-        block!
-      2-3 Maze 13_instruction: Get me to the pig using only two blocks.
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 14_instruction: |
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 15_instruction: Use two loops to get to the pig using fewer blocks.
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
+        Kannst du diese fünf Bausteine durch nur zwei Bausteine ersetzen?
+        (Hinweis: Erstelle eine Schleife mit einem "wiederhole ...-mal"- Baustein.)
+      2-3 Maze 13 (old)_instruction: 'Hole mir das Schwein, jetzt mit dem "Wiederholen bis"- Baustein!'
+      2-3 Maze 13_instruction: Hole mir das Schwein mit nur zwei Blöcken.
+      2-3 Maze 14 (old)_instruction: 'Hole mir das Schweint mit dem "Wiederholen bis"- Baustein!'
+      2-3 Maze 14_instruction: 'Hole mir die Sonnenblume! (Wo ist dieser "wiederhole ...-mal"- Baustein, wenn ich ihn brauche?)'
+      2-3 Maze 15 (old)_instruction: 'Hole mir das Schweint mit dem "Wiederholen bis"- Baustein!'
+      2-3 Maze 15_instruction: Benutze zwei Schleifen, um das Schein zu holen; benutze dabei weniger Bausteine.
+      2-3 Maze 16 (old)_instruction: 'Hole mir das Schweint mit dem "Wiederholen bis"- Baustein!'
       2-3 Maze 16 before_instruction: Bring mich zum Schwein.
-      2-3 Maze 16_instruction: Get me to the sunflower. Loop the sequence!
-      2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
-      2-3 Maze 3_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or feathers will fly!
+      2-3 Maze 16_instruction: Hole mir die Sonnenblume. Lass die Anweisungsfolge in einer Schleife laufen!
+      2-3 Maze 2_instruction: Dieses Schwein zerzaust meine Federn. Hilf mir, zu ihm zu kommen!
+      2-3 Maze 3_instruction: Finde den Weg und führe mich zu dem dummen Schwein. Meide das TNT, sonst fliegen die Federn!
       2-3 Maze 4_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
       2-3 Maze 5_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
-      2-3 Maze 6_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+      2-3 Maze 6_instruction: Bleib ruhig und hilf mir, das Schwein zu suchen. Sonst werde ich böse!
       2-3 Maze 7_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
       2-3 Maze 8_instruction: Bring mich zum Schwein!
       2-3 Maze 9_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
@@ -313,329 +168,130 @@ de:
       2-3 Maze Loops 19_instruction: Bring mich zu der Sonnenblume!
       2-3 Maze Loops 20_instruction: Bring mich zu der Sonnenblume!
       2-3 Maze Loops 21_instruction: Bring mich zu der Sonnenblume!
-      2-3 Maze Loops Assessment 1_instruction: |
-        Assessment:  Get me to the sunflower
-        using only 5 blocks! 
-      2-3 Maze sq1 _instruction: |
-        This pig is ruffling my feathers.  Help me find
-        him!
+      2-3 Maze Loops Assessment 1_instruction: 'Bewertung: Hole mir die Sonnenblume und benutze dabei 5 Bausteine! '
+      2-3 Maze sq1 _instruction: Das Schwein zerzaust meine Federn. Hilf mir, es zu finden!
       2-3 Maze sq10_instruction: Bring mich zum Schwein! Welche Blöcke wurden wiederholt?
       2-3 Maze sq10v2_instruction: Bring mich zum Schwein! Welche Blöcke wurden wiederholt?
       2-3 maze sq11_instruction: Bring mich zum Schwein! Welche Blöcke wurden wiederholt?
-      2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
+      2-3 maze sq12_instruction: 'Kannst du die vorige Lösung durch eine Schleife ersetzen, indem du einen "wiederhole ...-mal"- Baustein verwendest?'
       2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
-      2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
-      2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+        Lieber Mensch. Ich Zombie. Muss ... zur Sonnnenblume.
+        Erstelle eine Schleife mit dem "Wiederholen bis"- Baustein.
+      2-3 maze sq14_instruction: Kannst du die Sonnenblume holen und dabei nur vier Bausteine benutzen?
+      2-3 maze sq15_instruction: Kannst du die Sonnenblume holen und dabei nur fünf Bausteine benutzen?
+      2-3 maze sq16_instruction: Okay, das ist ähnlich, aber etwas anders. Kannst du das mit nur fünf Bausteinen machen?
+      2-3 Maze sq2_instruction: Finde den Weg und führe mich zu dem dummen Schwein. Meide das TNT, sonst fliegen die Federn!
       2-3 Maze sq3_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
-      2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
-      2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
-      2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
-      4-5 Artist 1_instruction: |
-        Help me finish drawing my box. (Each line is 300
-        pixels long) 
-      4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
-      4-5 Artist 11_instruction: |
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: Can you loop this code to complete the square?
-      4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
+      2-3 Maze sq4_instruction: Bleib ruhig und hilf mir, das Schwein zu suchen. Sonst werde ich böse!
+      2-3 Maze sq5_instruction: Bringe mich zu dem Schwein! Wie oft musst du eine Anweisung (Baustein) wiederholen?
+      2-3 Maze sq6_instruction: 'Kannst du die vorige Bearbeitung durch eine Lösung ersetzen, in der nur zwei Bausteine verwendet werden? (Hinweis: Erstelle eine Schleife, die einen "wiederhole ...-mal" - Baustein enthält.)'
+      2-3 Maze sq7_instruction: Bringe mir den grünen Eindringling. Benutze nur zwei Bausteine.
+      2-3 Maze sq8_instruction: 'Hole mir das Schwein! (Wo ist dieser "wiederhole ...-mal"- Baustein, wenn ich ihn brauche?)'
+      2-3 Maze sq9_instruction: Erstelle Schleifen um das Schwein zu fangen und benutze dabei weniger Bausteine.
+      2-3level1_instruction: Hilf dem Vogel, das freche Schwein zu fangen, in dem du es vorwärts bewegst
+      4-5 Artist 1_instruction: 'Hilf mir, mein Kästchen zu Ende zu zeichnen. (Jede Linie ist 300 Pixel lang) '
+      4-5 Artist 10_instruction: 'Drück auf "ausführen", um den Code auszuprobieren. Dann wiederhole ihn so oft, bis die Zeichnung fertig ist. Die Farben sind jedes Mal anders.'
+      4-5 Artist 11_instruction: Vervollständige die grünen Linien. Die Linien sind 300 Pixel lang und liegen 15 Pixel auseinander.
+      4-5 Artist 2_instruction: Kannst du diesen Code in eine Schleife einschließen und so das Quadrat vervollständigen?
+      4-5 Artist 3.5_instruction: 'Okay, versuche herauszufinden was passiert, wenn du diesen Code ausführen lässt (oder drücke auf "ausführen", um es auszuprobieren). Anschließend wiederhole dies so lange, bis die Zeichnung fertig ist. Die Farben werden (höchstwahrscheinlich) jedes mal anders sein.'
       4-5 Artist 3_instruction: |
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle.
-      4-5 Artist 4_instruction: |
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
+        Das rechteckige Blumenbeet hat einen Umfang von 600.
+        Die lange Seite hat eine Länge von 200. Zeichne das Rechteck.
+      4-5 Artist 4_instruction: Wieviel Grad hat ein Kreis? Schließe die Bausteine in eine Schleife ein, um einen Farbenkreis zu erstellen.
       4-5 Artist 5_instruction: Welchem Winkel verwendest du?
-      4-5 Artist 6_instruction: |
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
-      4-5 Artist 7_instruction: |
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length is double the height of 100 pixels. Complete
-        the drawing.
-      4-5 Artist 8_instruction: |
-        The halfway line on a soccer field is perpendicular
-        to the sidelines. This field has a perimeter of 800 pixels and it is 240 pixels
-        long. How wide is it? Draw the bounds and the halfway line.
-      4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
-      4-5 Artist Assessment 1_instruction: |
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
-      4-5 Artist For Loops 10_instruction: "Complete the \"for\" block so that it\ncounts 10, 20, 30, 40, 50. What number do you start counting from? What number\ndo you count to? How much do you count by?\r\n (bold the words from, to, and\nby)"
-      4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
-      4-5 Artist For Loops 12_instruction: |
-        What happens if you reverse the "from"
-        and "to" numbers? Complete the "for" block so that it counts 200, 180,
-        160, 140, 120...0. 
-      4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
-      4-5 Artist For Loops 5_instruction: |
-        Edit these blocks so that the lines are
-        double what they were before.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+      4-5 Artist 6_instruction: Dieses gleichseitige Dreieck hat die Winkel 60, 60, 60 Grad. Jede Seitenlänge beträgt 200 Pixel. Vervollständige die Zeichnung.
+      4-5 Artist 7_instruction: Dieses Dreieck hat die Winkel 30, 60, 90 Grad. Die Länge der schrägen Seite beträgt das doppelte der Höhe (100 Pixel). Vervollständige die Zeichnung.
+      4-5 Artist 8_instruction: Die Mittellinie eines Fußballfeldes steht senkrecht auf den Seitenlinien. Dieses Feld hat einen Umfang von 800 Pixeln und es ist 240 Pixel lang. Wie breit ist es? Zeiche die Begrenzungslinien und die Mittellinie.
+      4-5 Artist 9_instruction: Zeiche die andere Hälfte, so dass der Entwurf symmetrisch ist. Die Dreiecke sind gleichseitig und 50 Pixel lang.
+      4-5 Artist Assessment 1_instruction: 'Bewertung: Benutze eine Schleife, um ein gleichseitiges Dreieck zu zeichnen. Jede Seite hat eine Länge von 300 Pixeln.'
+      4-5 Artist For Loops 1_instruction: 'Setze die Zahlen 1 bis 10 in die "Breite"- Bausteine ein und führe den Code aus.'
+      4-5 Artist For Loops 10_instruction: "Vervollständige den \"Für\"-Baustein, sodass er wie folgt zählt: 10, 20, 30, 40, 50.  Ab welcher Zahl beginnst du zu zählen? Bis zu welcher Zahl zählst du? In welchen Schritten zählst du?\r\n(die Wörter Ab, Bis, In welchen Schritten fett gedruckt)"
+      4-5 Artist For Loops 11_instruction: 'Vervollständige den "Für"-Baustein, sodass er wie folgt zählt: 0, 20, 40, 60, 80... 200.'
+      4-5 Artist For Loops 12_instruction: 'Was passiert, wenn du die "Für"- und "Bis"-Zahlen miteinander tauscht? Vervollständige den "Für"-Baustein, sodass er wie folgt zählt: 200, 180, 160, 140, 120... 0. '
+      4-5 Artist For Loops 13_instruction: 'Dieser Lösungsansatz beginnt ohne "for"- Schleife und es werden zu viele Bausteine! benötigt. Benutze einen "for"- Baustein, um die Spirale zu vervollständigen. Hinweis: Die Länge des letzten Strichs beträgt 250 Pixel.'
+      4-5 Artist For Loops 14_instruction: 'Jemand hat hat bereits mit dem Code begonnen und dann festgestellt, dass es einen schnelleren Weg geben muss. Nutze den "Für"-Baustein, um die bereits vorhandenen Bausteine auszutauschen und zeichne die Dreiecksspirale zu Ende. (Hinweis: Die letzte Linie ist 300 Pixel lang.'
+      4-5 Artist For Loops 15_instruction: 'Jemand hat hat bereits mit dem Code begonnen und dann festgestellt, dass es einen schnelleren Weg geben muss. Nutze den "Für"-Baustein, um die bereits vorhandenen Bausteine auszutauschen und zeichne die Sechsecksspirale zu Ende. (Hinweis: Die letzte Linie ist 200 Pixel lang.'
+      4-5 Artist For Loops 2_instruction: 'Das ist ein "Für"-Baustein. Anstatt 1,2,3... 10 zu schreiben, kann der "Für"-Baustein in sich Bausteine wiederholen und für dich mitzählen. Schreibe die Zahl 10 in den "Bis"-Bereich des "Für"-Bausteins.'
+      4-5 Artist For Loops 3_instruction: 'Wie können wir von 1 bis 50 zählen? Ändere den "Für"-Baustein.'
+      4-5 Artist For Loops 4_instruction: 'Vervollständige den "for"- Baustein, so dass er in 1er- Schritten von 1 bis 10 zählt.'
+      4-5 Artist For Loops 5_instruction: Bearbeite diese Bausteine, so dass die Linien die doppelte Länge bekommen.
+      4-5 Artist For Loops 6_instruction: 'Zeichne Quadrate mit den Seitenlängen 50, 60, 70, 80 und 90 Pixeln. Du musst die "Zeichne ein Quadrat"- Funktion fünf mal benutzen.'
+      4-5 Artist For Loops 7_instruction: 'Zeichne dieselben Quadrate, aber benutze einen "count with"- Baustein um die Größe zu ändern. Positioniere den "Zähler"- Baustein in der "Zeichne ein Quadrat"- Funktion. Hinweis: Er gehört zur Kategorie "Variablen".'
+      4-5 Artist For Loops 8_instruction: 'Kannst du das Programm vervollständigen, indem in eine "for"- Schleife einschließt, die in 10er - Schritten von 200 bis 10 zählt? Du findest den "for"- Baustein in der "Schleifen"- Kategorie.'
       4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist For Loops Assessment 1_instruction: |
-        Complete the "for" block
-        so that it counts 10, 20, 30, 40, 50... 200.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
-      4-5 Artist Functions 10_instruction: |
-        Draw a snowflake using the 'draw a square'
-        function.  Repeat the square function to create 10 squares of 50 pixels each.  How
-        much do you turn each time a circle is made?  Hint: Turn (360 / 10) degrees.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
+        Diese Kreise haben die Größe 5, 10, 15, 20,
+        25, 30, und 35. Zeichne die Kreise. Benutze einen "for"-Baustein.
+      4-5 Artist For Loops Assessment 1_instruction: 'Vervollständige den "for"- Baustein, so dass er 10, 20, 30, 40, 50... 200 durchzählt.'
+      4-5 Artist Free Draw 1_instruction: Freies Zeichnen! Zeichne, was deine Inspiration dir eingibt.
+      4-5 Artist Functions 1_instruction: 'Benutze eine "wiederholen"- Schleife, um dieses Dreieck zu zeichnen.'
+      4-5 Artist Functions 10_instruction: 'Zeichne eine Schneeflocke und benutze dazu die "Zeichne ein Quadrat"- Funktion. Wieviele Drehungen führst du jedesmal beim Zeichnen eines Kreises aus? Hinweis: "turn"-Baustein (360 / 10) Grad.'
+      4-5 Artist Functions 10a_instruction: 'Füge diesen Code in die "Zeichne eine Schneeflocke"- Funktion ein und ersetze die 50 durch den Parameter "Größe". Die Funktion ist schon einmal aufgerufen worden, um eine 100- Pixel- Schneeflocke zu machen.'
+      4-5 Artist Functions 10b_instruction: 'Benutze die "Zeichne eine Schneeflocke"- Funktion um Schneeflocken verschiedener Größe zu erstellen. Hinweis: die erste Schneeflocke hat eine Länge von 25 und jede Schneeflocke ist doppelt so groß wie die vorige.'
+      4-5 Artist Functions 11_instruction: 'Diese "Zeichne ein Sechseck"- Funktion benutzt die "Zeichne ein Dreieck"- Funktion. Vervollständige die Sechseck- Funktion. (Hinweis: Ein Sechseck hat sechs Seiten, jede ist 100 Pixel lang)'
+      4-5 Artist Functions 12_instruction: 'Vervollständige die "Zeichne Wellen"- Funktion. Jede Welle besteht aus einer oberen und einer unteren Welle. Hinweis: Zeichne 5 blaue Wellen.'
+      4-5 Artist Functions 13 Free play_instruction: Hier sind einige Funktionen, mit denen man Planeten, Sterne, Raketen und Roboter zeichnen kann. Benutze sie wie du es magst für Bilder, die du mit deinen Freunden teilen kannst.
+      4-5 Artist Functions 14 Free play_instruction: 'Wir haben dir hier einge Funktionen zur Verfügung gestellt. Benutze sie wie du es willst innerhalb einer oder mehrerer Schleifen und male Bilder, die du mit deinen Freunden teilen kannst. Klicke auf "Ausführen", um dir ein Beispiel anzusehen.'
+      4-5 Artist Functions 15 Assessment_instruction: 'Bewertung: Benutze die "Zeichne ein Quadrat"- Funktion, um Quadrate zu erzeugen. Die Quadrate haben 50, 100, und 150 Pixel.'
+      4-5 Artist Functions 2a_instruction: 'Füge diese Bausteine jetzt in eine neue Funktion mit dem Namen "Zeichne ein kleines Dreieck" ein und rufe sie auf.'
+      4-5 Artist Functions 2b_instruction: 'Jetzt erzeuge eine Funktion mit dem Namen "Zeichne ein kleines Dreieck". Benutze dabei die vorbereiteten Bausteine.'
       4-5 Artist Functions 3_instruction: |
-        Now create the functions "draw a medium
-        triangle" and "draw a large triangle". The "draw a small triangle" function
-        is done for you. The triangles have side lengths of 50 (small), 100 (medium),
-        and 150 (large). 
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
-      4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
+        Jetzt erzeuge die Funktionen "Zeichne ein mittelgroßes Dreieck" und "Zeichne ein großes Dreieck". Die "Zeichne ein kleines Dreieck"- Funktion ist für dich erledigt. Die Dreiecke haben Seitenlängen von 50 (klein), 100 (mittelgroß),
+        und 150 (groß). 
+      4-5 Artist Functions 4_instruction: 'Diese neue "Zeichne ein Dreieck"- Funktion hat einen Parameter und kann die Arbeit von allen drei vorigen Funktionen übernehmen. Benutze diese neue Funktion, um die gleichen Dreiecke zu zeichnen.'
+      4-5 Artist Functions 5_instruction: 'Kannst du die "Zeichne ein Dreieck"- Funktion in eine "Zeichne ein Quadrat"- Funktion verwandeln und so die Zeichnung ändern?'
+      4-5 Artist Functions 6_instruction: 'Kannst du die  Benutze die "Zeichne ein Quadrat"- und "Zeichne ein Dreieck"- Funktionen um ein Haus zu zeichnen. (Hinweis: Die Seiten des Quadrates sind 200 Pixel lang)'
+      4-5 Artist Functions 6b_instruction: 'Benutze die "Zeichne ein Quadrat"- und die Dreieck- Funktionen zugleich mit anderen Blöcken, um ein Haus zu zeichnen, indem du sie zur "Zeichne ein Haus"- Funktion hinzufügst und aufrufst.'
+      4-5 Artist Functions 7_instruction: 'Benutze die "Zeichne ein Haus"- Funktion, um Häuser der Größe 100 Pixel und 50 Pixel zu zeichnen. Beide Häuser trennen 50 Pixel.'
+      4-5 Artist Functions 8_instruction: 'Die "Zeichne eine Blume"- Funktion hat einen Parameter, der es gestattet, die Länge des Stiels festzulegen. Setze sie auf 200 und sieh dir an, was passiert.'
+      4-5 Artist Functions 9_instruction: Zeichne diese 3 Blumen. Die Höhe der ersten beträgt 100, und die der folgenden Blume beträgt immer 50 Pixel mehr als die der vorigen. Außerdem liegen die Blumen 100 Pixel auseinander.
       4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times do draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
+        Kannst du dieses Quadrat zeichen, indem du eine Schleife benutzt?
+        Jede Seite ist 20 Pixel lang.
+      4-5 Artist Patterns 10_instruction: 'Dieser Code zeichnet zwei Spalten Sechsecke - wiederhole das ganze 4 Mal per Schleife und zeichne das ganze Wabenwerk. Hinweis: Du musst in deiner äußeren Schleife 120 Pixel zurückspringen um sicherzustellen, dass der Künstler nicht außerhalb des Bildschirms zeichnet.'
+      4-5 Artist Patterns 11_instruction: 'Wie oft muss die Schleife durchlaufen werden, damit ein Halbkreis gezeichnet wird? Hinweis: Wenn ein Kreis 360 Grad hat und jeder Schleifendurchlauf eine Verschiebung um 3 Grad bewirkt, wie oft muss die Schleife dann durchlaufen werden, damit ein Vollkreis gezeichnet wird?'
+      4-5 Artist Patterns 12_instruction: Wenn du die Schleife kopierst und eine Rechtsdrehung anstelle einer Linksdrehung ausführst, was passiert dann? Kannst du das wiederholen, um eine Welle zu zeichnen?
+      4-5 Artist Patterns 13_instruction: 'Jetzt wollen wir das ganze vier mal durchlufen lassen und so den Bilderrahmen machen. Pass auf die Ecken auf - du kannst nicht einfach eine 90- Grad- Drehung machen! Wenn eine Verschiebung um 3 Grad, 60 mal ausgeführt, einen Halbkreis erzeugt, welcher dieser Code- Bausteine erzeugt dann einen Viertelkreis für die Ecken?'
+      4-5 Artist Patterns 2_instruction: Wenn du deine Quadratschleife in eine andere Schleife einschließt, nennen wir das eine verschachtelte Schleife. Was musst du zu deiner äußeren Schleife hinzufügen, um sicherzustellen, dass sich alle 15 Quadrate aneinanderreihen?
+      4-5 Artist Patterns 3_instruction: 'Wir gehen jetzt eine Ebene nach unten. Wir haben den ganzen Code- Baustein in eine andere Schleife geschachtelt, aber du musst den Künstler wieder zurückholen, damit er die nächste Zeile zeichnet. Welchen dieser Code- Bausteine kannst du am Schluss der äußeren Schleife einfügen, damit das ganze Gitternetz gezeichnet wird?'
+      4-5 Artist Patterns 4_instruction: Dieser Diamant hat 50 Pixel lange Seiten und Winkel von 120 und 60 Grad. Benutze eine Schleife, um ihn zu zeichnen.
+      4-5 Artist Patterns 5.5_instruction: Wie oft musst du diesen Baustein wiederholen, um das ganze Diamantenraster zu zeichnen?
+      4-5 Artist Patterns 5_instruction: 'Wir wollen das Wiederholen und so eine Zeile von 6 Diamanten machen. Beachte, dass wir unseren Diamantencode so verändert haben, dass 3 statt 2 Wiederholungen stattfinden - was glaubst du, warum?'
+      4-5 Artist Patterns 6_instruction: Wie oft musst du diesen Baustein wiederholen, damit das ganze Diamantenraster gezeichnet wird?
+      4-5 Artist Patterns 7_instruction: 'Wir wollen die Code des letzten Puzzles etwas verändern und so ein komplizierteres Muster erzeugen. Achte darauf, wie die Diamanten sich jetzt überdecken. Versuche es mit einer Änderung des ersten "Rücksprungs" von 100 auf 50 (halb so weit). Wie weit sollte der Künstler das zweite Mal "zurückspringen"?'
+      4-5 Artist Patterns 8_instruction: Benutze eine Schleife, um dieses Sechseck mit 40 Pixeln Seitenlänge und 60-Grad-Winkeln zu zeichnen.
+      4-5 Artist Patterns 9.5_instruction: Wir wollen diesen Code in einer Schleife laufen lassen, um zwei Reihen Sechsecke zu zeichnen. Beachte, wie unsere zweite Reihe nach rechts verschoben wird.
+      4-5 Artist Patterns 9_instruction: 'Wiederhole den Code jetzt 3 mal, um die ganze Reihe zu zeichnen. Hinweis: Jedes Sechseck hat einen Durchmesser von 80 Pixeln, gemessen von links nach rechts zwischen den Punkten, die am weitesten auseinander liegen.'
+      4-5 Artist Patterns Free Play_instruction: 'Freies Spielen - versuche dein Glück beim Entwerfen deines eigenen Musters!'
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: Die Biene kann nicht unterscheiden, ob das eine Blüte oder eine Wabe ist. Sammle den Necktar nur aus Blüten, aber prüfe erst, ob es sich um eine Wabe oder um eine Blüte handelt.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right now. Remember,
-        not all objects are flowers, so check to gather nectar only at flowers.
-      4-5 Bee Conditionals 3_instruction: |
-        Now the bee just wants to make honey.
-        Check to make honey only at honeycombs.
+      4-5 Bee Conditionals 2_instruction: 'Die Biene will nur Necktar, und zwar sofort. Erinnere dich: Nicht alle Objekte sind Blüten, also prüfe, damit nur aus Blüten Necktar gesammelt wird.'
+      4-5 Bee Conditionals 3_instruction: Jetzt will die Biene nur noch Honig machen. Prüfe, damit nur bei Waben Honig gemacht wird.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        The unknown object is either a flower
-        or a honeycomb. Use the if/else block to collect nectar if it is a flower,
-        else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 5_instruction: |
-        There might be a flower or a honeycomb
-        under those clouds. Use the if/else block to collect nectar if there is a
-        flower, else to make honey (because there is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: 'Das unbekannte Objekt ist entweder eine Blüte oder eine Wabe. Benutze den "wenn/ansonsten"- Baustein um Necktar zu machen, wenn es eine Blüte ist, "ansonsten", um Honig zu machen (weil es eine Wabe ist).'
+      4-5 Bee Conditionals 5_instruction: 'Vielleicht ist eine Blüte oder eine Wabe unter diesen Wolken. Benutze den "wenn/ansonsten"- Baustein um Necktar zu machen, wenn dort eine Blüte ist, "ansonsten", um Honig zu machen (weil dort eine Wabe ist).'
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write a function inside the block called
-        "check flower make honey." Your function should check how much nectar the
-        purple flower has and collect it, move forward, and then make honey.
-      4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
+      4-5 Bee Conditionals 6_instruction: 'Diese lila Blüte kann entweder  3, 2, oder 1 Necktar haben. Hier ist ein "wenn/ansonsten"-Baustein mit einem weiteren "wenn/ansonsten"- Baustein kombiniert, damit ein "wenn", "ansonsten-wenn", "ansonsten" - Block erzeugt wird. Vervollständige die Lösung, um eine Unbekannte Menge Necktar zu sammeln.'
+      4-5 Bee Conditionals 7_instruction: 'Bedenke, dass lila Blüten 3, 2, oder 1 Necktar haben können. Vervollständige die "Prüfe lila Blüte"- Funktion und benutze sie, um den ganzen Necktar bei den Blüten zu sammeln.'
+      4-5 Bee Conditionals 8_instruction: 'Schreibe innerhalb des Bausteins eine Funktion mit dem Namen "Prüfe Blüte mache Honig". Deine Funktion soll prüfen, wieviel Necktar die lila Blüte hat und diesen sammeln, weitergehen, und dann Honig machen.'
+      4-5 Bee Conditionals Assessment 1_instruction: 'Bewertung: Dieser Code ist Fehlerhaft. Vervollständige die  "Prüfe Blüte mache Honig"- Funktion, dann rufe sie auf um  den ganzen Necktar und Honig zu machen. Bedenke, dass lila Blüten 3, 2, oder 1 Necktar haben können.'
+      4-5 Bee Debugging 1_instruction: Diese Bausteine nerven mich wirklich. Kannst du sie in Ordnung bringen?
       4-5 Bee Debugging 10_instruction: Finde die Fehler und behebe sie.
       4-5 Bee Debugging 11_instruction: Zählt dies richtig?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
+      4-5 Bee Debugging 2_instruction: Hilf der Biene, Necktar zu holen und Honig zu machen.
       4-5 Bee Debugging 3_instruction: Finde die Fehler und behebe sie.
       4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
       4-5 Bee Debugging 5_instruction: Etwas stimmt hier nicht...
@@ -682,7 +338,7 @@ de:
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Maze 10_instruction: Kannst du die Sonnenblume holen und dabei nur vier Bausteine benutzen?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
@@ -963,10 +619,10 @@ de:
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
       Big Game Animation 2_instruction: |
-        The function 'update-target' function
-        takes the target's current x value, and returns an updated value. Complete
-        the 'update-target' function so that it adds to the x value each time it
-        is called. The more you add to x, the faster the target will go.
+        The 'update-target' function takes the
+        target's current x value, and returns an updated value. Complete the 'update-target'
+        function so that it adds to the x value each time it is called. The more you
+        add to x, the faster the target will go.
       Big Game Animation 3_instruction: |
         The 'update-danger' function should work
         just like 'update-target', except that the danger should move from the right
@@ -985,24 +641,30 @@ de:
         finish and we'll work on making those sprites reappear on screen after they've
         left.
       Big Game Booleans 2_instruction: |
-        Remember the safe-left? and safe-right? functions
-        from Sam the Bat? We're going to use that same logic to figure out when the
-        target and danger leave the screen. Go to the "Functions" section of the
-        toolbox and complete the safe-left? function.
+        Now that your onscreen? function is checking
+        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
+        section of the toolbox and complete the safe-left? function so that it returns
+        true if the sprite's x coordinate is greater than -50. If you're successful
+        you should see the Danger go off the left side and then return on right side.
       Big Game Booleans 3_instruction: |
         Now that you've got safe-left?, let's fill
         in safe-right? - it should take in a sprite's x coordinate and return true
-        if the sprite hasn't gone off the right side of the screen.
+        if that coordinate is less than 450. Once your safe-right? is complete you
+        should see the Target go off the right side of the screen and return on the
+        left.
       Big Game Booleans 4_instruction: |
-        Great, now that you have functions to check
-        the left and right side of the screen, edit the on-screen? function so that
-        it checks safe-left? AND safe-right?, just like you did with Sam the Bat.
+        We've provided a couple of empty functions
+        for safe-left? and safe-right? The first thing you need to do is complete
+        the onscreen? function so that it checks whether both safe-left? and safe-right?
+        are true. TIP - even after you add safe-left? and safe-right? your sprites
+        won't return to the screen. That will happen in the next puzzles when we
+        make sure that safe-left? and safe-right? actually work.
       Big Game Booleans 5_instruction: |
         At this point your danger should run across
         the screen from right to left, your target should run across from left to
-        right, and they should both return to the opposite side. Take a minute to
-        make sure your game is working like you want it to, and then click finish
-        to move on.
+        right, and they should both return to the opposite side, repeatedly. Take
+        a minute to make sure your game is working like you want it to, and then click
+        Finish to move on.
       Big Game Collision 1 (copy 1)_instruction: |
         When you last worked on your game
         we got our target and danger sprites to fly across the screen, but they never
@@ -1023,18 +685,20 @@ de:
         workbook. Edit the 'update-player' function so that if moves the player
         up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Collision 3_instruction: |
-        In order to know if two of our sprites are
-        touching, we first need to measure the distance between their center points.
-        Use the Pythagorean Theorem to complete this distance function so that it
-        returns the distance between the player's center coordinates (px, py), and
-        the center coordinates of another character (cx, cy). We've provided a working
+        Let's fix this distance function so our
+        collision detection works properly. Use the Distance Formula, so the distance
+        function returns the distance between the player's center coordinates (px,
+        py) and another sprite's center coordinates (cx, cy). We've provided a working
         line-length function to help you out.
       Big Game Collision 4_instruction: |
-        Now that you have a way to measure the distance
-        between two points, you just need to decide when those points are close enough
-        to be considered touching. Complete the 'collide?' function so that it checks
-        the distance function and returns true if the two points are close enough
-        to touch (100 pixels apart is a good place to start).
+        We've got a function called distance that
+        should return the distance between two sprites, and using that we can decide
+        when those sprites are close enough to be considered touching. Complete the
+        'collide?' function so that it checks the distance function and returns
+        true if the two points are close enough to touch (100 pixels apart is a good
+        place to start). TIP: the distance function doesn't work yet (it always returns
+        zero), so if you're successful you'll see that your sprites are instantly
+        "colliding," but we'll fix that in a second!
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -1048,16 +712,17 @@ de:
         you'll have an opportunity to share a link to your game. Good work!
       Big Game Player 1_instruction: |
         We're getting really close to a finished game!
-        Last time you work on your game, you used booleans to make your Target and
-        Danger return to the screen once the've left. Click Run to see how your game
-        looks right now, and then we'll get to making your Player move up and down.
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
         accordingly. Computers read keypresses as numeric key codes - the up arrow
         is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
+        workbook. Edit the 'update-player' function so the player moves up when
+        the up arrow is pressed, and moves down when the down arrow is pressed.
       Big Game Testing_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1222,16 +887,16 @@ de:
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
-        to buy those cookies (each cookie costs $1.50).
+        to buy those cookies (each cookie is sold at $1.50).
       Calc Design Recipe 4_instruction: |
-        Free Play: Using the two functions we just
-        wrote, write the function `cookie-profit`, which takes in the number of cookies
-        you sold, and gives you back the total profit you make from selling your cookies,
-        accounting for the cost of baking them.
+        Using the two functions we just wrote, write
+        the function `profit`, which takes in the number of cookies you sold, and
+        gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
@@ -2286,7 +1951,7 @@ de:
         pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
-        to draw something interesting. Make sure to save and share your favorite images.
+        to create something interesting. Make sure to share your favorite creations.
       Examples 4_instruction: Schrumpf-Funktion
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
@@ -2702,37 +2367,35 @@ de:
       NetSim_AutomaticDNS_instruction: |
         In this version of the simulator a DNS service
         is provided for you. Send a message in the form GET [hostname] to the DNS
-        service to get a student's address.
+        service at address 15 to get a student's address.
       NetSim_ManualDNS_instruction: |
         In this version of the simulator you can't
         see the other students' addresses.  Instead, one of you must act as a name
         service, to help share addresses with each other.
       NetSim_SendAB_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is not
-        yet functional. It will allow students to manually set/read individual As
-        and Bs on a simplex wire.
+        Connect to another student.  Each of you can set
+        the value of the wire between you to "A" or "B".  See if you can send
+        a complete message!
       NetSim_SendAscii_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send ASCII to each other.
+        In this version of the simulator, you can send
+        numbers or ASCII characters to one another, one bit at a time.
       NetSim_SendBits_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send binary as zeroes and ones
-        to one another
+        Connect to another student.  You can now set
+        your wire to "0" or "1".  Send a message to your partner!
       NetSim_SendingABTest_instruction: |
         This is Sarah's test of making a netsim
         level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        NetSim: Variant 1 allows students to manually
+        work out the timing of sending bits back and forth.
       NetSim_Variant2_instruction: |
-        NetSim: Variant 2 template: UNDER CONSTRUCTION:
-        Variant 2 is not yet functional because P2P connections have not been implemented.
+        NetSim: Variant 2: Students connect directly
+        to one another and send entire packets back and forth, exploring systems of
+        encoding data.
       NetSim_Variant3_instruction: |
-        NetSim: Variant 3 template: Connects groups of
-        2-6 students with a router, and explores issues in routing and DNS
+        NetSim: Variant 3: Connects groups of 2-6 students
+        with a router, and explores issues in routing and DNS
       NEW Artist Artist Functions 3_instruction: |
         Here is a new type of Block. It
         is called a "Function block." Click on "RUN" to see what it can do. 
@@ -2943,6 +2606,24 @@ de:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDK5 Conditionals 1_instruction: |
+        Purple flowers may have either 1 or 0 nectar,
+        but you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
+      PDK5 Events 1_instruction: |
+        So far all of the programs we've written are executed
+        in order from top to bottom. In this puzzle, we'll use "Events" to respond
+        to an action on demand. Make the octopus say "Hello" only when you click
+        on the Octopus. 
+      PDK5 Loops 1_instruction: |
+        Instead of using 5 "move forward" blocks, use
+        the "repeat" block with a "move forward" block inside of it. In computer
+        science, this is called a "loop." 
+      PDK5 Loops 3_instruction: |
+        Here's another puzzle to practice loops. What happens
+        if you use the repeat block to run the code already provided on the workspace
+        4 times?
       perpendicular_instruction: |
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
@@ -3222,4 +2903,9 @@ de:
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
+      U1L4 NetSim SendAB_instruction: |
+        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
+        Variant 1 is not yet functional because P2P connections have not been implemented.
+        Variant 1 allows students to manually work out the timing of sending bits
+        back and forth.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

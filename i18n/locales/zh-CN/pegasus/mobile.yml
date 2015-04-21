@@ -163,7 +163,7 @@ zh-CN:
   homepage_slot_text_frozen: 与安娜与埃尔莎一起来玩冰雪奇缘
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: 我们的所有教程
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: 课程 4
   homepage_slot_text_shop: 商店
   homepage_slot_text_flappy: 飞扬的代码
   homepage_action_text_codevideo: 观看视频
@@ -189,7 +189,7 @@ zh-CN:
   homepage_slot_text_title_advocates: 倡导
   homepage_slot_text_blurb_advocates: 支持我们的工作
   homepage_slot_text_link_stats: 请看统计信息
-  homepage_slot_text_link_buy: 买一件 t 恤衫或帽子
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: 捐一笔钱
   homepage_header_codestudio: 编程工作室 学生作品
   homepage_header_donors: Code.org 感谢各位支持者
@@ -362,8 +362,8 @@ zh-CN:
   dashboard_login_picture: 图片
   dashboard_login_none: 电子邮件
   dashboard_new_password: 新密码
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: 未启动
+  dashboard_progress_in_progress: 正在进行
   dashboard_progress_not_completed: 未完成
   dashboard_progress_completed_too_many_blocks: 完成，使用太多块
   dashboard_progress_completed_perfect: 完成了, 完美

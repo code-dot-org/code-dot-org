@@ -191,7 +191,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "insufficientNectar":function(d){return "Tu utilises correctement tous les blocs, mais tu dois collecter la bonne quantité de nectar."},
 "make":function(d){return "faire"},
 "moveBackward":function(d){return "reculer"},
-"moveEastTooltip":function(d){return "Déplace-moi d'un espace vers l'Est."},
+"moveEastTooltip":function(d){return "Déplace-moi d'une case vers l'Est."},
 "moveForward":function(d){return "avancer plus"},
 "moveForwardTooltip":function(d){return "Me fait avancer d'un espace."},
 "moveNorthTooltip":function(d){return "Déplace-moi d'un espace vers le Nord."},

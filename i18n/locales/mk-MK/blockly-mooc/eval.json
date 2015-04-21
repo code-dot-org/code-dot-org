@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"место-на сликата (x, y, слика)",
   "offsetBlockTitle":"offset (x, y, image)",
   "rectangleBlockTitle":"правоаголник (ширина, висина, стил, боја)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"ротираат (степени, слика)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"Коцка (големина, стил, боја)",

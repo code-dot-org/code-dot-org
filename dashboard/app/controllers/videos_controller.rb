@@ -68,14 +68,15 @@ class VideosController < ApplicationController
   end
 
   private
-    def allow_iframe
-      response.headers['X-Frame-Options'] = 'ALLOWALL'
-    end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_video
-      @video = Video.find(params[:id])
-    end
+  def allow_iframe
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_video
+    @video = Video.find(params[:id])
+  end
 
   def set_video_by_key
     @video = Video.find_by_key(params[:key])

@@ -376,24 +376,24 @@ en:
       Big Game Animation 1 (copy 1)_instruction: crwdns34923:0crwdne34923:0
       Big Game Animation 1_instruction: crwdns34924:0crwdne34924:0
       Big Game Animation 2 (copy 1)_instruction: crwdns34925:0crwdne34925:0
-      Big Game Animation 2_instruction: crwdns34926:0crwdne34926:0
+      Big Game Animation 2_instruction: crwdns36434:0crwdne36434:0
       Big Game Animation 3_instruction: crwdns34928:0crwdne34928:0
       Big Game Animation 4_instruction: crwdns35130:0crwdne35130:0
       Big Game Booleans 1_instruction: crwdns35131:0crwdne35131:0
-      Big Game Booleans 2_instruction: crwdns34934:0crwdne34934:0
-      Big Game Booleans 3_instruction: crwdns34936:0crwdne34936:0
-      Big Game Booleans 4_instruction: crwdns34937:0crwdne34937:0
-      Big Game Booleans 5_instruction: crwdns35995:0crwdne35995:0
+      Big Game Booleans 2_instruction: crwdns36435:0crwdne36435:0
+      Big Game Booleans 3_instruction: crwdns36436:0crwdne36436:0
+      Big Game Booleans 4_instruction: crwdns36437:0crwdne36437:0
+      Big Game Booleans 5_instruction: crwdns36438:0crwdne36438:0
       Big Game Collision 1 (copy 1)_instruction: crwdns34939:0crwdne34939:0
       Big Game Collision 1_instruction: crwdns35677:0crwdne35677:0
       Big Game Collision 2_instruction: crwdns35678:0crwdne35678:0
-      Big Game Collision 3_instruction: crwdns35679:0crwdne35679:0
-      Big Game Collision 4_instruction: crwdns35680:0crwdne35680:0
+      Big Game Collision 3_instruction: crwdns36439:0crwdne36439:0
+      Big Game Collision 4_instruction: crwdns36440:0crwdne36440:0
       Big Game Complete (copy 1)_instruction: crwdns34947:0crwdne34947:0
       Big Game Complete_instruction: crwdns34948:0crwdne34948:0
       Big Game Final_instruction: crwdns34949:0crwdne34949:0
-      Big Game Player 1_instruction: crwdns35681:0crwdne35681:0
-      Big Game Player 2_instruction: crwdns35682:0crwdne35682:0
+      Big Game Player 1_instruction: crwdns36441:0crwdne36441:0
+      Big Game Player 2_instruction: crwdns36442:0crwdne36442:0
       Big Game Testing_instruction: crwdns34950:0crwdne34950:0
       Big Game Vars 1 (copy 1)_instruction: crwdns34951:0crwdne34951:0
       Big Game Vars 1_instruction: crwdns34952:0crwdne34952:0
@@ -442,9 +442,9 @@ en:
       Calc Define Funcs 3_instruction: crwdns35661:0crwdne35661:0
       Calc Define Funcs 4_instruction: crwdns35662:0crwdne35662:0
       Calc Design Recipe 1_instruction: crwdns35739:0crwdne35739:0
-      Calc Design Recipe 2_instruction: crwdns36235:0crwdne36235:0
-      Calc Design Recipe 3_instruction: crwdns35999:0crwdne35999:0
-      Calc Design Recipe 4_instruction: crwdns36000:0crwdne36000:0
+      Calc Design Recipe 2_instruction: crwdns36443:0crwdne36443:0
+      Calc Design Recipe 3_instruction: crwdns36444:0crwdne36444:0
+      Calc Design Recipe 4_instruction: crwdns36445:0crwdne36445:0
       Calc Free Play_instruction: crwdns34262:0crwdne34262:0
       Calc Rocket 1 (copy 1)_instruction: crwdns35136:0crwdne35136:0
       Calc Rocket 1_instruction: crwdns34264:0crwdne34264:0
@@ -734,7 +734,7 @@ en:
       Eval Strings Images 6_instruction: crwdns34497:0crwdne34497:0
       Eval Strings Images 7_instruction: crwdns36239:0crwdne36239:0
       Eval Strings Images 8_instruction: crwdns36009:0crwdne36009:0
-      Eval Strings Images Free Play_instruction: crwdns34500:0crwdne34500:0
+      Eval Strings Images Free Play_instruction: crwdns36446:0crwdne36446:0
       Examples 4_instruction: crwdns30916:0crwdne30916:0
       frozen circle function (copy 1)_instruction: crwdns34502:0crwdne34502:0
       frozen circle function in circle_instruction: crwdns34503:0crwdne34503:0
@@ -920,16 +920,16 @@ en:
       MSM Play Lab Game 3_instruction: crwdns34590:0crwdne34590:0
       Neat Eval Functions_instruction: crwdns31087:0crwdne31087:0
       NetSim_AddressingMessages_instruction: crwdns35176:0crwdne35176:0
-      NetSim_AutomaticDNS_instruction: 'crwdns35177:0[hostname]crwdne35177:0'
+      NetSim_AutomaticDNS_instruction: 'crwdns36447:0[hostname]crwdne36447:0'
       NetSim_ManualDNS_instruction: crwdns35178:0crwdne35178:0
-      NetSim_SendAB_instruction: crwdns35179:0crwdne35179:0
-      NetSim_SendAscii_instruction: crwdns35180:0crwdne35180:0
-      NetSim_SendBits_instruction: crwdns35181:0crwdne35181:0
+      NetSim_SendAB_instruction: crwdns36448:0crwdne36448:0
+      NetSim_SendAscii_instruction: crwdns36449:0crwdne36449:0
+      NetSim_SendBits_instruction: crwdns36450:0crwdne36450:0
       NetSim_SendingABTest_instruction: crwdns35669:0crwdne35669:0
       NetSim_Superuser_instruction: crwdns35182:0crwdne35182:0
-      NetSim_Variant1_instruction: crwdns35183:0crwdne35183:0
-      NetSim_Variant2_instruction: crwdns35184:0crwdne35184:0
-      NetSim_Variant3_instruction: crwdns35185:0crwdne35185:0
+      NetSim_Variant1_instruction: crwdns36451:0crwdne36451:0
+      NetSim_Variant2_instruction: crwdns36452:0crwdne36452:0
+      NetSim_Variant3_instruction: crwdns36453:0crwdne36453:0
       NEW Artist Artist Functions 3_instruction: crwdns34591:0crwdne34591:0
       New Artist Project_instruction: crwdns35007:0crwdne35007:0
       NEW Course 2 Artist Functions 12_instruction: crwdns34592:0crwdne34592:0
@@ -992,6 +992,10 @@ en:
       New Play Lab Project_instruction: crwdns35010:0crwdne35010:0
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
       Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
+      PDK5 Conditionals 1_instruction: crwdns36454:0crwdne36454:0
+      PDK5 Events 1_instruction: crwdns36455:0crwdne36455:0
+      PDK5 Loops 1_instruction: crwdns36456:0crwdne36456:0
+      PDK5 Loops 3_instruction: crwdns36457:0crwdne36457:0
       perpendicular_instruction: crwdns34649:0crwdne34649:0
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: crwdns36240:0crwdne36240:0
       Pixelation - Lesson 14 - Fix the error_instruction: crwdns36241:0crwdne36241:0
@@ -1072,4 +1076,5 @@ en:
       TestK1-1_instruction: crwdns34703:0crwdne34703:0
       Text Compression Peter Piper_instruction: crwdns36247:0crwdne36247:0
       toby-test5-16-1_instruction: crwdns31217:0crwdne31217:0
+      U1L4 NetSim SendAB_instruction: crwdns36458:0crwdne36458:0
       XML Scratchpad_instruction: crwdns31218:0crwdne31218:0

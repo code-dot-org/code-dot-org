@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"画像を配置 (縦座標、横座標、画像)",
   "offsetBlockTitle":"ずらす (縦座標、横座標、画像)",
   "rectangleBlockTitle":"長方形 (幅、高さ、スタイル、色)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"回転させる (角度、画像)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"正方形 (サイズ、スタイル、色)",

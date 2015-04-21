@@ -682,11 +682,6 @@
         playlab_events: A Játéklabor eseményei
         playlab_repeat_forever: Játéklabor Végtelen ciklus
         tutorial_puzzle_challenge: Bemutató a feladvány megoldásához
-        msm_1_intro: CS-Algebra 1. fejezet - bevezetés
-        msm_2_eval_block: Evaluation Blocks
-        msm_3_pemdas: PEMDAS (több műveletes kifejezések)
-        msm_6_variables: Változók
-        msm_7_functions: Függvények
         infinity_playlab_intro: Játéklabor - bevezetés
         infinity_playlab_events: Játéklabor - események
         infinity_playlab_repeat_forever: Játéklabor - végtelen ismétlés
@@ -696,6 +691,24 @@
         csp_pixelation_color_3: Color pixelation widget - Part 3
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
+        csp_textcompression: Text compression widget
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
@@ -802,5 +815,6 @@
         Infinity_move_right_runbutton: Itt adj hozzá mozgasd blokkot
         Infinity_move_directions_callout: Melyik blokk mozgatja majd Baymaxot fölfelé,
           ha megnyomjuk a fel gombot?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
         Infinity_move_collide_callout: Lejátszik egy hangot, amikor az esemény bekövetkezik.
         Infinity_repeat_callout: Ide húzz be Mozgasd blokkokat

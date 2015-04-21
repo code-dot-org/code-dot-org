@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"เอารูปวาง (x, y, รูป)",
   "offsetBlockTitle":"ออฟเซ็ต (x, y รูปภาพ)",
   "rectangleBlockTitle":"สี่เหลี่ยม (กว้าง สูง รูปแบบ สี)",
-  "reinfFeedbackMsg":"คุณสามารถกดปุ่ม \"เล่นต่อ\" เพื่อแก้ไขรูปวาดของคุณ.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"การหมุน (องศา รูป)",
   "scaleImageBlockTitle":"การหดขยายมาตราส่วน (ปัจจัย รูปภาพ)",
   "squareBlockTitle":"สี่เหลี่ยมจตุรัส (ขนาด รูปแบบ สี)",

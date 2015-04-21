@@ -262,7 +262,7 @@
         artist: Teikna eitthvað
     user:
       classroom: Heimasíða kennara
-      district_dashboard: District Dashboard
+      district_dashboard: Stjórnborð umdæmis
       label: Hæ %{username}
       stats: Framvindan mín
       settings: Reikningurinn minn
@@ -411,6 +411,7 @@
     heading_apps: <h2>Skemmtun fyrir</h2><h1>alla</h1>
     heading_legacy: <h2>Almenna námskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>
     your_gallery: Safn
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -555,12 +556,14 @@
     correct_body: Þetta svar er rétt.
   contract_match:
     wrong_title: Rangt svar
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
+    badname: Samningurinn þinn heitir röngu nafni.
+    badname_case: Heiti falla þurfa að vera stafrétt. Prófaðu að breyta hástöfum/lágstöfum
+      í heiti samningsins.
+    badrange: Samningurinn þinn hefur rangt svið.
+    baddomainsize: Samningurinn þinn hefur ekki réttan fjölda atriða í gildamenginu.
+    baddomainname: Eitt eða fleiri atriði í gildamenginu heitir röngu nafni.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Skráðu svar þitt hér
   dialog:
@@ -658,5 +661,5 @@
       listanum Verkefni mín. Ef þú hefur deilt verkefninu með öðrum, munu þeir ekki
       lengur sjá það.
     view_all: Sýna verkefnin mín
-    remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    remix: Endurblanda
+    click_to_remix: Smelltu á "Endurblanda" til að stofna afleidda útgáfu!

@@ -393,6 +393,7 @@
           Personal Reflection: Reflexão pessoal
           Next Steps: Próximas etapas
           Computer Science Pedagogy: Pedagogia em ciência da computação
+          Programming Concepts: Programming Concepts
         netsim:
           title: Simulador de internet
           description_short: ''
@@ -518,9 +519,11 @@
           'Artist: Functions': 'Artista: Funções'
           'Bee: Debugging': 'Abelha: Depuração'
         cspunit1:
-          title: CSP - Unidade 1
-          description_short: Faça imagens em preto e branco com a ferramenta de pixelização
-          description: CSP - Unidade 1 - Fases
+          title: CSP - Unidade 1 - Informação digital
+          description_short: Explore como a informação digital é representada e transferida
+          description: Esta unidade explora os desafios e questões técnicas que surgem
+            da necessidade de representar a informação digital em computadores e transferi-la
+            entre pessoas e dispositivos computacionais.
           Lesson14: Lição14
           Lesson 14: Lição 14
           Lesson 14 v2: Lição 14 v2
@@ -531,15 +534,25 @@
           Lesson 4: Lição 4
           Lesson 6: Lição 6
           Lesson 2: Lição 2
-          Lesson 7: Lesson 7
-          Lesson 1: Lesson 1
-          Innovation: Innovation
-          Sending Binary Messages: Sending Binary Messages
-          Sending More Complex Messages: Sending More Complex Messages
-          Bit Sending Widget: Bit Sending Widget
-          Sending Bits in the Real World: Sending Bits in the Real World
-          Number Systems: Number Systems
-          Binary Numbers: Binary Numbers
+          Lesson 7: Lição 7
+          Lesson 1: Lição 1
+          Innovation: Inovação
+          Sending Binary Messages: Enviando mensagens binárias
+          Sending More Complex Messages: Enviando mensagens mais complexas
+          Bit Sending Widget: Widget de envio de bits
+          Sending Bits in the Real World: Enviando bits no mundo real
+          Number Systems: Sistemas numéricos
+          Binary Numbers: Números binários
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Compressão de texto
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
+            Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
         algebraPD:
           title: Ciência da computação em álgebra PD
           description: Ensine programação funcional com álgebra
@@ -582,6 +595,7 @@
             partes
           Rocket-Height: Altura do foguete
           Design Recipe Practice: Prática de receita de design
+          Introduction to PD: Introdução a PD
         algPDmiami:
           title: Ciência da computação em álgebra PD
           description: Ensine álgebra com programação funcional
@@ -610,3 +624,12 @@
           description_short: exemplos de lição para csp
           Lesson 14: Lição 14
           Lesson 15: Lição 15
+        ECSPD:
+          Introduction to PD: Introdução a PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Introdução a PD

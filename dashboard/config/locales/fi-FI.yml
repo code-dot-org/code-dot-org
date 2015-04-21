@@ -395,6 +395,7 @@
     heading_apps: <h2>Hauskaa</h2><h1>kaikille</h1>
     heading_legacy: <h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>
     your_gallery: Galleria
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Mies
     female: Nainen
@@ -544,6 +545,8 @@
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Kirjoita vastauksesi tähän
   dialog:

@@ -188,11 +188,6 @@ Style/IndentArray:
 Style/IndentHash:
   Enabled: false
 
-# Offense count: 20
-# Cop supports --auto-correct.
-Style/IndentationConsistency:
-  Enabled: false
-
 # Offense count: 21
 # Cop supports --auto-correct.
 # Configuration parameters: Width.
@@ -376,12 +371,6 @@ Style/StringLiteralsInInterpolation:
 
 # Offense count: 1
 Style/StructInheritance:
-  Enabled: false
-
-# Offense count: 20
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoredMethods.
-Style/SymbolProc:
   Enabled: false
 
 # Offense count: 3

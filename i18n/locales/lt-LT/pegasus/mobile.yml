@@ -207,7 +207,7 @@ lt-LT:
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Make a donation
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
@@ -380,8 +380,8 @@ lt-LT:
   dashboard_login_picture: Paveikslėlis
   dashboard_login_none: El. paštas
   dashboard_new_password: naujas slaptažodis
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: nepradėta
+  dashboard_progress_in_progress: pradėta
   dashboard_progress_not_completed: nebaigtas
   dashboard_progress_completed_too_many_blocks: baigtas, panaudota per daug blokų
   dashboard_progress_completed_perfect: puikiai išspręsta

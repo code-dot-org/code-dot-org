@@ -268,18 +268,24 @@
       VideoGamesCoordinatePlanes:
         title: Видеоигры и координатные плоскости
         desc: Описание урока Видеоигры и координатные плоскости
+        video: alg_11_coordinate_plane
       Contracts:
         title: Контракты, домен, и диапазон
         desc: Описание урока без компьютера Контракты
+        video: alg_5_contracts
       DesignRecipe:
         title: Создание рецепта
         desc: Описание урока Создание рецепта
+        video: alg_8_design_recipe
       Booleans:
         title: Логика и логические выражения
         desc: Описание урока логические выражения
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Условные выражения и сложные функции
         desc: Описание урока условные выражения и сложные функции
+        video: alg_10_conditionals
       CollisionDetection:
         title: Обнаружение столкновений
         desc: Описание урока обнаружения столкновений
+        video: alg_16_biggame_collision_detection

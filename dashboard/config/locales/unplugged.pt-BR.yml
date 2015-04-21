@@ -281,28 +281,33 @@
           pela álgebra! Explore como expressões algébricas e o plano cartesiano podem
           nos ajudar a entender como os video games funcionam e então comece a planejar
           o jogo que você vai criar.
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contratos, domínio e imagem
         desc: Os contratos nos dão uma forma de entender e discutir funções. Nesta
           lição, vamos ver como os contratos podem nos ajudar a entender uma nova
           linguagem de programação ou função.
+        video: alg_5_contracts
       DesignRecipe:
         title: A receita de design
         desc: No último estágio, os alunos escreveram algumas funções bastante simples
           - mas funções mais sofisticadas exigem uma abordagem mais profunda. A fórmula
           de design é uma abordagem estruturada para escrever funções que inclui casos
           de teste para garantir que a função trabalhe como esperado.
+        video: alg_8_design_recipe
       Booleans:
         title: Booleanos e lógica
         desc: Booleanos são o quarto e último tipo de dado que você vai aprender neste
           curso. Nesta atividade, você vai aprender o que são booleanos e como eles
           podem nos ajudar a escrever funções que pensam de forma lógica
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Condicionais e funções definidas por partes
         desc: Os parâmetros que passamos para as funções fazem as saídas variarem
           com base em um padrão bastante rígido. Suponha que queremos parâmetros com
           alguns valores para criar saídas usando um padrão, mas outros valores para
           usar um padrão diferente. É aí que as condicionais são necessárias...
+        video: alg_10_conditionals
       CollisionDetection:
         title: Detecção de colisão e o teorema de Pitágoras
         desc: Determinar quando os objetos na tela se tocam é um aspecto importante
@@ -310,3 +315,4 @@
           e a fórmula da distância podem ser usados para medir a distância entre dois
           pontos no plano, e então decidir se esses dois pontos (ou personagens do
           jogo) estão se tocando.
+        video: alg_16_biggame_collision_detection

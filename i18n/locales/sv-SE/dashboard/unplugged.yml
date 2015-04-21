@@ -172,19 +172,25 @@ sv:
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videospel och koordinat-plan
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        desc: Upptäck hur de datorspel du älskar att spela är algebra! Utforska hur algebraiska uttryck och koordinatplanet kan hjälpa oss förstå hur spel fungerar, och börja sedan planera för TV-spelet som du ska skapa.
+        video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts, Domain, and Range
-        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        title: Kontrakt, domän och utbud
+        desc: Kontrakt ger oss ett sätt att förstå och diskutera funktioner. I den här lektionen ska vi titta på hur kontrakt kan hjälpa oss att få en känsla för ett nytt programmeringsspråk eller funktion.
+        video: alg_5_contracts
       DesignRecipe:
         title: Design recept
-        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        desc: 'I den sista scenen  skrev eleverna några mycket enkla funktioner - men mer sofistikerade funktioner kräver en mer genomtänkt strategi. Designreceptet är ett strukturerat sätt att skriva funktioner som inkluderar att skriva testfall för att se till att funktionen fungerar som förväntat.'
+        video: alg_8_design_recipe
       Booleans:
-        title: Booleans and Logic
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        title: Booleska värden och logik
+        desc: Booleans är den fjärde och sista datatyp som du lär dig om i denna kurs. I denna aktivitet lär du dig vad booleans är, och hur de kan hjälpa oss skriva funktioner som tänker logiskt
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Villkorssatser och styckevis funktioner
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: De parametrar som vi ger till funktioner orsakar att utfallet varierar beroende på ett mycket stelbent mönster. Antag att vi vill ha parametrar med värden som skapar utfall med ett mönster men andra värden för att använda olika mönster. Det är här villkorssatser behövs...
+        video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        title: Kollisionsdetektion och Pythagoras sats
+        desc: 'Att avgöra när objekt på skärmen rör vid något är en viktig aspekt av de flesta spel. I den här lektionen ska vi titta på hur Pythagoras sats och distans- formeln kan användas för att mäta avståndet mellan två punkter på planet och sedan besluta om dessa två punkter (eller spelkaraktärer) rör vid något.'
+        video: alg_16_biggame_collision_detection

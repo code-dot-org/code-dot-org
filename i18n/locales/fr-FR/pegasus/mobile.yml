@@ -138,34 +138,26 @@ fr-FR:
     "Nos enfants &mdash; y compris nos filles &mdash; ont besoin d'apprendre les sciences informatiques." Sheryl, COO de Facebook
   homepage_hero_text_satya: "« L'informatique peut vous apporter les meilleures opportunités dans le monde. » Satya, PDG de Microsoft"
   homepage_hero_text_bosh: « Si vous codez, vous pouvez choisir le cours de votre vie. » Chris Bosh
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+  homepage_hero_text_student1: "&ldquo;Ces compétences ont changé mon futur. Sans oublier que c'est juste très amusant.&rdquo;Luna, 5ème"
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Je n'ai jamais, jamais vu mes élèves aussi excités d'apprendre.&rdquo;
+    Michael, enseignant
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;L'informatique est un domaine dont vous ne pouvez pas savoir si vous l'aimez avant de l'avoir essayé.&rdquo;
+    Jackson, 6ème
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;Vous pouvez faire tout ce que votre cerveau veut faire avec la programmation.&rdquo; 
+    Maya, CE1
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;L'informatique n'est pour personne d'autre. C'est pour vous, ici, maintenant.&rdquo;
+    Geraldo, enseignant
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;Le code éveille la créativité, l'inspiration et l'innovation&mdash;
+    tout ce qui est indispensable à n'importe quelle carrière.&rdquo;
+    Floresa, enseignante
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;Tous mes élèves se sont sentis impliqués, investis et ont participé à ce programme.&rdquo;
+    Adam, enseignant
   homepage_slot_text_hoc: "L'Heure de Code"
   homepage_slot_text_frozen: La reine des neige, avec Anna et Elsa
   homepage_slot_text_teacher: Tableau de bord enseignant
@@ -196,7 +188,7 @@ fr-FR:
   homepage_slot_text_title_advocates: Avocats
   homepage_slot_text_blurb_advocates: Nous soutenir
   homepage_slot_text_link_stats: Afficher les statistiques
-  homepage_slot_text_link_buy: Acheter un T-shirt ou un chapeau
+  homepage_slot_text_link_buy: Impliquez-vous
   homepage_slot_text_link_donate: Faire un don
   homepage_header_codestudio: Créations des étudiants de Code Studio
   homepage_header_donors: Code.org remercie ses soutiens

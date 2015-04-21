@@ -291,10 +291,10 @@ def encrypted_cookie(user_id)
       iterations:1000
     )
 
-    encryptor = ActiveSupport::MessageEncryptor.new(
-      key_generator.generate_key('encrypted cookie'),
-      key_generator.generate_key('signed encrypted cookie')
-    )
+  encryptor = ActiveSupport::MessageEncryptor.new(
+    key_generator.generate_key('encrypted cookie'),
+    key_generator.generate_key('signed encrypted cookie')
+  )
 
   cookie = {'warden.user.user.key' => [[user_id]]}
 

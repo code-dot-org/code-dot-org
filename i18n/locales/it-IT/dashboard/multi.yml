@@ -141,6 +141,7 @@ it:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
         Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
         a image: a image
         a number: a number
@@ -326,10 +327,28 @@ it:
       Coordinates Multi 1:
         Video game Coordinates: Coordinate del Videogioco
         Ninjacat Demo Embed.level: Livello della versione demo del Gatto Ninja
+        0: "? Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?"
+        1: ": Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?"
         The unicorn moves across the screen: "L'unicorno si muove sullo schermo"
         The unicorn's y value changes: "Il valore y dell'unicorno cambia"
         The unicorn moves to the left: "L'unicorno si muove verso sinistra"
         The unicorn's x value decreases: "The unicorn's x value decreases"
+      ECSPD growth mindset in the classroom:
+        Growth Mindset in the Classroom: Growth Mindset in the Classroom
+        How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
+        praise students for getting the right answer: praise students for getting the right answer
+        praise the process that students use to solve problems: praise the process that students use to solve problems
+        praise students for their intelligence: praise students for their intelligence
+      ECSPD growth mindset question:
+        Impact of Growth Mindset: Impact of Growth Mindset
+        Based on the video you saw before, please answer the following question.: Based on the video you saw before, please answer the following question.
+        0: '? In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?'
+        1: ': In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?'
+        more effort: more effort
+        more strategies: more strategies
+        more engagement over longer periods of time: more engagement over longer periods of time
+        more perseverance: more perseverance
+        all of the above: all of the above
       K-1 Artist 1 Multi 1:
         Multiple Choice: Esercizio di Verifica (Risposte Multiple)
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -576,7 +595,7 @@ it:
         x = 15<br>a = 2<br>b = 6: 'x = 15<br>a = 2<br>b = 6'
         What is the value of a + b?: Qual è il valore di a + b?
         8: "8"
-        function: funzione
+        a function: una funzione
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
@@ -646,6 +665,9 @@ it:
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
         Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
+      PDECS attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
+        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
       PDK5 Basic CS:
         Video Follow-up Question: Domanda a proposito del video
         Answer this question based on the video you just watched.: Rispondi a questa domanda in base al video che hai appena visto.
@@ -714,7 +736,7 @@ it:
         Why are visual programming languages easier to learn than text-based programming languages?: Why are visual programming languages easier to learn than text-based programming languages?
         Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
         Because you can focus on the logic of programming: Because you can focus on the logic of programming
-        Because the commands are available in a menu rather than having to remember them yourself: Because the commands are available in a menu rather than having to remember them yourself
+        Because the commands are listed in a menu rather than having to remember them yourself: Because the commands are listed in a menu rather than having to remember them yourself
         All of the above: All of the above
       PDK5 What is CS:
         What is Computer Science?: What is Computer Science?
@@ -767,6 +789,42 @@ it:
         this is a question?: Questa è una domanda?
         wrong answer: risposta sbagliata
         right answer: risposta giusta
+      U1L10 Assessment 1:
+        "Assessment: Encoding Text": 'Assessment: Encoding Text'
+        "Question #1": 'Question #1'
+        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?
+        2 bits: 2 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+      U1L10 Assessment 2:
+        "Assessment: Encoding Text": 'Assessment: Encoding Text'
+        "Question # 2": 'Question # 2'
+        0: "? \"The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?\""
+        1: ": \"The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?\""
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+      U1L11 Assessment 1:
+        "Assessment: Sending Formatted Text": 'Assessment: Sending Formatted Text'
+        "Question #1": 'Question #1'
+        What is ASCII text?: What is ASCII text?
+        American Strict Conformance of Internet Interchange: American Strict Conformance of Internet Interchange
+        Authentication Standards for Commerce in Interstate Information: Authentication Standards for Commerce in Interstate Information
+        American Standard Code for Information Interchange: American Standard Code for Information Interchange
+        Automatic Serial Coding for Interface Interchange: Automatic Serial Coding for Interface Interchange
+      U1L11 Assessment 2:
+        "Assessment: Sending Formatted Text": 'Assessment: Sending Formatted Text'
+        "Question #2": 'Question #2'
+        How many bytes are used to encode a single ASCII character?: How many bytes are used to encode a single ASCII character?
+        1 byte: 1 byte
+        2 bytes: 2 bytes
+        4 bytes: 4 bytes
+        8 bytes: 8 bytes
+        16 bytes: 16 bytes
       U1L6 Assessment multiple choice:
         "Multiple Choice: Number Systems": 'Multiple Choice: Number Systems'
         If you just had a circle and a square, how many 3-shape rows could you make?: If you just had a circle and a square, how many 3-shape rows could you make?
@@ -776,7 +834,7 @@ it:
         10: "10"
         12: "12"
       unique level name here:
-        line1<br/>line2: 'linea1 <br/> linea2'
+        title: titolo
         description here: Descrizione qui
         Question: Domanda
         wrong answer: risposta sbagliata

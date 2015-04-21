@@ -61,14 +61,15 @@ class GalleryActivitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_gallery_activity
-      @gallery_activity = GalleryActivity.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def gallery_activity_params
-      params[:gallery_activity][:user_id] ||= current_user.id if params[:gallery_activity] && current_user
-      params.require(:gallery_activity).permit(:activity_id, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_gallery_activity
+    @gallery_activity = GalleryActivity.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def gallery_activity_params
+    params[:gallery_activity][:user_id] ||= current_user.id if params[:gallery_activity] && current_user
+    params.require(:gallery_activity).permit(:activity_id, :user_id)
+  end
 end
