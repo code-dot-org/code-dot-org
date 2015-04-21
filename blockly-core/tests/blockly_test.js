@@ -220,10 +220,12 @@ function test_initializeFunctionEditor() {
 function test_contractEditor_add_examples() {
   var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title></block></xml>';
   var container = initializeWithContractEditor(singleDefinitionString);
-  assertEquals('Has zero examples', 0, Blockly.contractEditor.__testonly__.exampleBlocks.length);
+  assertEquals('Has zero examples', 0, Blockly.contractEditor.exampleBlocks.length);
   Blockly.contractEditor.addNewExampleBlock_();
   Blockly.contractEditor.addNewExampleBlock_();
-  assertEquals('Added two examples', 2, Blockly.contractEditor.__testonly__.exampleBlocks.length);
+  assertEquals('Added two examples', 2, Blockly.contractEditor.exampleBlocks.length);
+  Blockly.contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
 }
 
 function test_contractEditor_change_output_types() {
@@ -232,7 +234,7 @@ function test_contractEditor_change_output_types() {
   Blockly.contractEditor.addNewExampleBlock_();
   Blockly.contractEditor.addNewExampleBlock_();
 
-  var firstExample = Blockly.contractEditor.__testonly__.exampleBlocks[0];
+  var firstExample = Blockly.contractEditor.exampleBlocks[0];
 
   assertEquals('Number', Blockly.contractEditor.currentFunctionDefinitionType_());
   assertEquals('Number', firstExample.getInput('ACTUAL').connection.check_[0]);
