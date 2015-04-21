@@ -647,23 +647,13 @@ Blockly.Connection.prototype.acceptsType = function(type) {
  *     (to allow chaining).
  */
 Blockly.Connection.prototype.setCheck = function(check) {
-  if (check) {
+  if (check && check !== Blockly.BlockValueType.NONE) {
     // Ensure that check is in an array.
     if (!(check instanceof Array)) {
       check = [check];
     }
 
     this.check_ = check;
-
-    var legacyTypeFound = Blockly.Connection.findLegacyType_(check);
-    if (legacyTypeFound) {
-      /**
-       * Intended for temporary post-rename debugging
-       * Should not be hit by normal usage
-       * TODO(bjordan): Remove once confident no remaining usages
-       */
-      throw "Legacy type format found: " + legacyTypeFound;
-    }
 
     // The new value type may not be compatible with the existing connection.
     if (this.targetConnection && !this.checkAllowedConnectionType_(this.targetConnection)) {

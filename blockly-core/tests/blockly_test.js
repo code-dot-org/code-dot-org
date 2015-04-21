@@ -197,12 +197,82 @@ function test_initializeBlockSpace() {
   goog.dom.removeNode(container);
 }
 
-function test_initializeBlockSpace() {
+function test_initializeFunctionEditor() {
   var container = document.createElement('div');
   document.body.appendChild(container);
   Blockly.assetUrl = function(){return ''};
   Blockly.Css.inject(container);
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
+  Blockly.hasTrashcan = true;
+  var functionalDefinitionXML = '<xml><block type="procedures_defnoreturn" editable="false"><mutation></mutation><title name="NAME">test-function</title></block></xml>'
+  var xml = Blockly.Xml.textToDom(functionalDefinitionXML);
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+  Blockly.useModalFunctionEditor = true;
+  Blockly.functionEditor = new Blockly.FunctionEditor();
+  Blockly.functionEditor.autoOpenFunction('test-function');
+  Blockly.functionEditor.hideIfOpen();
   goog.dom.removeNode(container);
+}
+
+
+function test_contractEditor_add_examples() {
+  var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title></block></xml>';
+  var container = initializeWithContractEditor(singleDefinitionString);
+  assertEquals('Has zero examples', 0, Blockly.contractEditor.__testonly__.exampleBlocks.length);
+  Blockly.contractEditor.addNewExampleBlock_();
+  Blockly.contractEditor.addNewExampleBlock_();
+  assertEquals('Added two examples', 2, Blockly.contractEditor.__testonly__.exampleBlocks.length);
+}
+
+function test_contractEditor_change_output_types() {
+  var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title></block></xml>';
+  var container = initializeWithContractEditor(singleDefinitionString);
+  Blockly.contractEditor.addNewExampleBlock_();
+  Blockly.contractEditor.addNewExampleBlock_();
+
+  var firstExample = Blockly.contractEditor.__testonly__.exampleBlocks[0];
+
+  assertEquals('Number', Blockly.contractEditor.currentFunctionDefinitionType_());
+  assertEquals('Number', firstExample.getInput('ACTUAL').connection.check_[0]);
+  assertEquals('Number', firstExample.getInput('EXPECTED').connection.check_[0]);
+  assertEquals('Number', Blockly.contractEditor.functionDefinitionBlock.getInput('STACK').connection.check_[0]);
+
+  Blockly.contractEditor.outputTypeChanged_('String');
+
+  assertEquals('String', Blockly.contractEditor.currentFunctionDefinitionType_());
+  assertEquals('String', firstExample.getInput('ACTUAL').connection.check_[0]);
+  assertEquals('String', firstExample.getInput('EXPECTED').connection.check_[0]);
+
+  Blockly.contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
+/**
+ * Initializes an instance of Blockly with a contract editor open
+ * @returns {HTMLElement}
+ */
+function initializeWithContractEditor(xmlString) {
+  var container = document.createElement('div');
+  document.body.appendChild(container);
+  Blockly.assetUrl = function () {
+    return ''
+  };
+  Blockly.Css.inject(container);
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
+  Blockly.hasTrashcan = true;
+  var functionalDefinitionXML = xmlString;
+  var xml = Blockly.Xml.textToDom(functionalDefinitionXML);
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+  Blockly.useModalFunctionEditor = true;
+  Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
+    disableExamples: false
+  });
+  Blockly.contractEditor.autoOpenWithLevelConfiguration({
+    autoOpenFunction: 'functional-function'
+  });
+  return container;
 }
