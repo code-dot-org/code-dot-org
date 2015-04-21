@@ -12,7 +12,7 @@ Computer science is about learning how to build technology that'll change the wo
 
 ## Middle School Computer Science Program
 
-### [CS in Science](http://code.org/curriculum/mss)
+### [CS in Science](http://code.org/curriculum/science)
 
 Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences and prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is aligned to the Next Generation Science Standards. Download a [brief](/files/Code.org_MS_Science_Program_two-pager.pdf) or [full](/files/Code.org_MS_Science_Program_four-pager.pdf) description.    
 
