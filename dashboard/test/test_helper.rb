@@ -111,7 +111,7 @@ class ActiveSupport::TestCase
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
       # rubocop:enable Lint/Eval
     }
-    before = exps.map { |e| e.call }
+    before = exps.map(&:call)
 
     yield
 
@@ -132,7 +132,7 @@ class ActiveSupport::TestCase
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
       # rubocop:enable Lint/Eval
     }
-    before = exps.map { |e| e.call }
+    before = exps.map(&:call)
 
     yield
 

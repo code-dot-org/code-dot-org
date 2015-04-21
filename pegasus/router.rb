@@ -24,7 +24,7 @@ require src_dir 'forms'
 require src_dir 'curriculum_router'
 
 def http_vary_add_type(vary,type)
-  types = vary.to_s.split(',').map { |v| v.strip }
+  types = vary.to_s.split(',').map(&:strip)
   return vary if types.include?('*') || types.include?(type)
   types.push(type).join(',')
 end

@@ -23,7 +23,7 @@
   "COLOUR_RGB_RED": "merah",
   "COLOUR_RGB_TITLE": "warnai dengan",
   "COLOUR_RGB_TOOLTIP": "Buat warna dengan kombinasi merah, hijau, dan biru yang ditentukan. Semua nilai harus diantara 0 dan 100.",
-  "CONTRACT_EDITOR_HEADER": "Design Recipe",
+  "CONTRACT_EDITOR_HEADER": "Desain resep",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "Keluar dari loop ",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "Lanjutkan dengan langkah loop berikutnya",

@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Now that you've learned to write simple linear functions, let's work on using them to add some movement to our game. Click play to see what your game can currently do (not much!), update any variables you like, and then click finish to move on.",
+    "instructions": "Now that you've learned to write simple linear functions, let's work on using them to add some movement to our game. Click run to see what your game can currently do (not much!), update any variables you like, and then click finish to move on.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

@@ -13,7 +13,7 @@ module RakeUtils
 
   def self.command_(*args)
     # BUGBUG: Should escape for shell here and verify no callers do that.
-    args.map{|i|i.to_s}.join(' ')
+    args.map(&:to_s).join(' ')
   end
 
   def self.start_service(id)

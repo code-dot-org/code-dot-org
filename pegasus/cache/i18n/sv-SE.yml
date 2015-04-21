@@ -3,19 +3,20 @@
   select_language: Vänligen välj ditt språk
   computer_science: Datavetenskap
   computer_science_edweek: Utbildningsvecka för Dataveteskap
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 december 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> Kodtimmen</a> kommer. Kalla till dig alla lärare och arrangörer,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> planera din kodtimme</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Är du en CS lärare? Se andra CSEdWeek resurser</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>har provat</h3><h2>Hour of Code</h2>
+  n_have_learned_an_hoc: <h1>Prova en</h1><h2>Timme av kod</h2><h3># serverad</h3>
   anybody_can_learn: Vem som helst kan lära sig.
   learn_now: Lär dig nu
   petition_message: Alla elever i alla skolor borde ha möjligheten att lära sig datavetenskap
   petition_sign_message: 'Om du håller med så skriv ditt namn. Delta # andra.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Om du stöder oss, skriv ditt namn.  Kom tillsammans
+    med  # andra.'
   name: Namn
   email: E-post
   zipcode: Postnummer eller land
@@ -110,8 +111,8 @@
   learn_classes: Hitta lokala klasser
   hoc_is_here: '#HourOfCode/Timmen med Kod är här - kolla! @codeorg'
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Varför undervisar  inte fler skolor i datavetenskap? Vi kan ordna
+    detta. http://youtu.be/nKIu9yen5nc. Besök http://code.org/ för mer information.
   learn_hoc: Lär dig med en Timme av Kod
   beyond_hoc: Efter Timmen med Kod
   what_gender: Vilket kön har du?
@@ -127,12 +128,12 @@
     rader med kod.'
   start_hoc: Starta en Timme med Kod nu
   contact_form_topic_press: Press/media (intervjuer eller föredrag)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
+  stats_nina: '"Varje dag blev det samma resultat &mdash; 100% engagemang."-Nina Nichols
+    Peery, lärare'
+  stats_student: '"Jag visste att detta var en <b>unik</b> chans."-Mariana Alzate,
+    femteklassare'
+  stats_michael: '"Jag har <b>aldrig, aldrig</b> sett mina elever så exalterade över
+    lärande."-Michael Clark, lärare'
   studiobar_title: Utforska <a href='http://studio.code.org'>kodstudion</a>
   studiobar_title_nolink: Utforska kodstudion
   studiobar_elementary_title: Grundkurser
@@ -147,87 +148,79 @@
   studiobar_frozen_body: Skapa ett vinterlandskap med Anna och Elsa
   studiobar_donate_title: Donera
   studiobar_donate_body: Ett barn lär sig för varje dollar du donerar
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+  studiobar_shop_title: Butik
+  studiobar_shop_body: Bryt stereotyper. Bär vår logotyp med stolthet.
+  homepage_hero_text_malala: '&ldquo;Jag utmanar flickor i varje enskilt land att
+    lära sig en Timme av Kod&rdquo; Malala, vinnare av Nobels fredspris'
+  homepage_hero_text_susan: '&ldquo; Om du kan förändra tekniken, kan du förändra
+    världen.&rdquo;Susan, CEO av YouTube'
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
+    &ldquo;Använd inte telefonen bara till att spela på, programmera den..&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
+    &ldquo;Våra barn &mdash; inklusive våra flickor &mdash;
+    behöver möjligheten att lära datavetenskap.&rdquo;
     Sheryl, COO of Facebook
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
+    &ldquo;Datavetenskap kan ge dig de bästa möjligheter i världen.&rdquo;
     Satya, CEO of Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Om du kodar, kan du välja och vraka i livet.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
+    &ldquo;Dessa kunskaper har förändrat min framtid. För att inte tala om att det helt enkelt är roligt.&rdquo;
     Luna, 7th grade
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
+    &ldquo;Jag har aldrig sett mina elever så exalterade i undervisningen.&rdquo;
     Michael, teacher
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+    &ldquo;Datavetenskap är något du inte kan veta om du gillar innan du provat.&rdquo;
+    Jackson, 6:e klass
+  homepage_hero_text_student4: "&ldquo;Du kan göra allt du kan föreställa dig med
+    programmering.&rdquo; \nMaya, 2:a klass\n"
+  homepage_hero_text_student5: "&ldquo;Datavetenskap är inte för någon annan. Det
+    är för dig, nu.&rdquo; \nGeraldo, lärare\n"
+  homepage_hero_text_teacher1: "&ldquo;Kodning får igång kreativitet, inspiration
+    och uppfinningslusta &mdash; \nvilka alla är viktiga i alla karriärer.&rdquo;\nFloresa,
+    teacher\n"
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;Det här programmet fick 100% av mina elever att bli engagerade, involverade och deltagande.&rdquo;
+    Adam, lärare
   homepage_slot_text_hoc: Timme med Kod
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_frozen: Frozen med Anna och Elsa
+  homepage_slot_text_teacher: Lärare Dashboard
+  homepage_slot_text_studio: Alla våra tutorials
   homepage_slot_text_course4: Kurs 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: Butik
   homepage_slot_text_flappy: Flappy kod
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: Titta på videon
+  homepage_action_text_teachervideo: Titta på videon
+  homepage_action_text_learn: Börja lära dig idag
+  homepage_action_text_signpetition: Skriv på uppropet
+  homepage_signpetition_dropdown: Underteckna vår namninsamling &#x25BE;
   homepage_slot_text_title_hoc: Timmen med Kod
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Alla kan lära sig. Börja idag
   homepage_slot_text_link_hoc: Prova Kodtimmen
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Var värd för  en Timme av Kod
+  homepage_slot_text_link_hocserved: '# serverad'
   homepage_slot_text_title_students: Elever
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_blurb_students: Utforska alla våra tutorials
+  homepage_slot_text_link_codestudio: Prova KodStudio
+  homepage_slot_text_link_local: Hitta en klass i närheten
+  homepage_slot_text_link_othercourses: Andra online-kurser
+  homepage_slot_text_title_educators: Lärare
+  homepage_slot_text_blurb_educators: Lär dina elever
+  homepage_slot_text_link_k5: Kurser för årskurserna K-5
+  homepage_slot_text_link_fullcurriculum: Se vår fullständiga läroplan
+  homepage_slot_text_link_pd: Professionell utveckling
+  homepage_slot_text_title_advocates: Förespråkar
+  homepage_slot_text_blurb_advocates: Stöd vårt arbete
+  homepage_slot_text_link_stats: Se statistik
   homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_link_donate: Gör en donation
+  homepage_header_codestudio: Kod Studio elev arbeten
+  homepage_header_donors: Code.org tackar alla sina anhängare
+  homepage_donors_seall: Se alla
   homepage_donors_donate: Donera
   contact_form_topic_student: Jag är en elev
   contact_form_topic_parent: Jag är förälder
@@ -318,8 +311,8 @@
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nej
   dashboard_action_confirm: Ta bort?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Ta bort
+  dashboard_action_remove_confirm: Ta bort?
   dashboard_action_done: Klart
   dashboard_action_required: obligatorisk
   dashboard_navigation_home_page: Lärare hemsida
@@ -368,7 +361,7 @@
     ovan.
   dashboard_students_placeholder_name: Studentnamn
   dashboard_students_name: Namn
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Framsteg
   dashboard_students_age: Ålder
   dashboard_students_gender: Kön
   dashboard_students_male: Man
@@ -425,8 +418,8 @@
   dashboard_login_picture: Bild
   dashboard_login_none: E-post
   dashboard_new_password: nytt lösenord
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: inte startat
+  dashboard_progress_in_progress: pågående
   dashboard_progress_not_completed: Ej avklarad
   dashboard_progress_completed_too_many_blocks: Avklarad med för många block
   dashboard_progress_completed_perfect: Avklarad perfekt
@@ -469,7 +462,7 @@
   carousel_heading_robots: Lär dig att programmera med robotar
   carousel_heading_ide: Plattformar som är populära bland lärare
   educator_notes: Pedagog anteckningar
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Hur man undervisar med en Timme av Kod
   more_resources_educators: Mer resurser för lärare och utbildare
   participants: deltagare
   teachers_notes: Lärarens anteckningar

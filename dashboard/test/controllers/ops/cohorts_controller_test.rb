@@ -398,8 +398,8 @@ module Ops
       assert_equal teacher.name, teacher.reload.name
 
       # Existing teacher added to cohort along with new teachers
-      assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_first_name]}.sort, teachers.map{|x| x.ops_first_name}.sort
-      assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_last_name]}.sort, teachers.map{|x| x.ops_last_name}.sort
+      assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_first_name]}.sort, teachers.map(&:ops_first_name).sort
+      assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_last_name]}.sort, teachers.map(&:ops_last_name).sort
       cd = CohortsDistrict.last
       assert_equal @district, cd.district
       assert_equal Cohort.last, cd.cohort

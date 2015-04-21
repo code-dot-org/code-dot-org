@@ -1,12 +1,12 @@
 require 'twilio-ruby'
 class SmsController < ApplicationController
 
-# put your own credentials here
-ACCOUNT_SID = CDO.twilio_sid
-AUTH_TOKEN = CDO.twilio_auth
-SMS_FROM = CDO.twilio_phone
+  # put your own credentials here
+  ACCOUNT_SID = CDO.twilio_sid
+  AUTH_TOKEN = CDO.twilio_auth
+  SMS_FROM = CDO.twilio_phone
 
-# set up a client to talk to the Twilio REST API
+  # set up a client to talk to the Twilio REST API
 
   def send_to_phone
     if params[:level_source] && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
