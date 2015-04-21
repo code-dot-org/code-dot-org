@@ -76,7 +76,6 @@ Blockly.ContractEditor = function(configuration) {
    * @private
    */
   this.exampleBlocks = [];
-  this.__testonly__.exampleBlocks = this.exampleBlocks;
 
   /**
    * @type {Array.<Blockly.DomainEditor>}
@@ -742,8 +741,4 @@ Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newNam
   var paramInfo = this.getParamNameType(paramID);
   var oldName = paramInfo.name;
   Blockly.Variables.renameVariable(oldName, newName, Blockly.mainBlockSpace)
-};
-
-// export private function(s) to expose to unit testing
-Blockly.ContractEditor.prototype.__testonly__ = {
 };
