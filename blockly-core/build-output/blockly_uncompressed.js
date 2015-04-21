@@ -19918,7 +19918,7 @@ Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function(block, title, 
   for(var i = 0;i < args.length;i++) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
-    input.setInline(i > 0);
+    input.setInline(i > 0 && !config_opt.verticallyStackInputs);
     input.setHSV.apply(input, Blockly.FunctionalTypeColors[arg.type]);
     input.setCheck(arg.type);
     input.setAlign(Blockly.ALIGN_CENTRE)
