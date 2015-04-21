@@ -54,7 +54,7 @@ goog.require('goog.array');
 /**
  * Class for a functional block-specific contract editor.
  * @param {Object} configuration - configuration parameters
- * @param {string} configuration.disableExamples - whether to never show examples
+ * @param {boolean} configuration.disableExamples - whether to never show examples
  * @constructor
  */
 Blockly.ContractEditor = function(configuration) {
