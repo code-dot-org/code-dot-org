@@ -133,4 +133,15 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal nil, view_options[:no_header]
     assert_equal nil, view_options[:no_footer]
   end
+
+  test 'Blockly#blockly_options not modified by levels helper' do
+    level = create(:level, :blockly, :with_autoplay_video)
+    blockly_options = level.blockly_options
+
+    @level = level
+    set_videos_and_callouts
+    app_options
+
+    assert_equal blockly_options, level.blockly_options
+  end
 end

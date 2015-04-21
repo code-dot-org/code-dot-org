@@ -146,7 +146,7 @@ class Blockly < Level
 
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
   def blockly_options
-    Rails.cache.fetch("#{cache_key}/blockly_level_options") do
+    options = Rails.cache.fetch("#{cache_key}/blockly_level_options") do
       level = self
       # Use values from properties json when available (use String keys instead of Symbols for consistency)
       level_prop = level.properties.dup || {}
@@ -308,9 +308,9 @@ class Blockly < Level
                              droplet: level.game.try(:uses_droplet?),
                              pretty: Rails.configuration.pretty_apps ? '' : '.min',
                          })
-
-      app_options
     end
+    options[:level].freeze
+    options.freeze
   end
 
   # XXX Since Blockly doesn't play nice with the asset pipeline, a query param
