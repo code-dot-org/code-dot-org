@@ -52,12 +52,19 @@
     }
   }
   $("#completionTable").handsontable({
-    data: data, startRows: 10, startCols: 8,
+    data: data, startRows: 10, startCols: 9,
     colHeaders: [
-      'Puzzle', 'Total\nAttempts', 'Unique\nAttempts', 'Total Successful\nAttempts', 'Unique Successful\nAttempts',
-      'Avg. Success\nRate', 'Avg. #attempts\nper Completion', 'Avg. Unique\nSuccess Rate'
+      'Puzzle',
+      'Total\nAttempts',
+      'Total Successful\nAttempts',
+      'Avg. Success\nRate',
+      'Avg. #attempts\nper Completion',
+      'Unique\nAttempts',
+      'Unique Successful\nAttempts',
+      'Perceived Dropout',
+      'Avg. Unique\nSuccess Rate',
     ],
-    colWidths: [200, 100, 100, 100, 100, 100, 100, 100],
+    colWidths: [200, 100, 100, 100, 100, 100, 100, 100, 100],
     stretchH: 'none',
     columnSorting: true,
     manualColumnResize: true,
@@ -70,15 +77,7 @@
         type: 'numeric',
       },
       {
-        data: "UniqueAttempt",
-        type: 'numeric',
-      },
-      {
         data: "TotalSuccess",
-        type: 'numeric',
-      },
-      {
-        data: "UniqueSuccess",
         type: 'numeric',
       },
       {
@@ -92,15 +91,27 @@
         format: '0.00',
       },
       {
+        data: "UniqueAttempt",
+        type: 'numeric',
+      },
+      {
+        data: "UniqueSuccess",
+        type: 'numeric',
+      },
+      {
+        data: "Perceived Dropout",
+        type: 'numeric'
+      },
+      {
         data: "Avg Unique Success Rate",
         type: 'numeric',
         format: '0.00%',
       },
     ],
     cells: function(row, col, prop) {
-      if(col == 5) {
+      if(col == 3) {
         return {renderer: successRateRenderer};
-      } else if (col == 7) {
+      } else if (col == 8) {
         return {renderer: uniqueSuccessRateRenderer};
       }
       return {};
