@@ -225,7 +225,6 @@ function test_initializeFunctionEditor() {
   goog.dom.removeNode(container);
 }
 
-
 function test_contractEditor_add_examples() {
   var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title></block></xml>';
   var container = initializeWithContractEditor(singleDefinitionString);
