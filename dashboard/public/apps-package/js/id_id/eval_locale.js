@@ -182,4 +182,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "string":function(d){return "kata"},
 "stringMismatchError":function(d){return "Anda memiliki sebuah string dengan kapitalisasi yang salah."},
 "userCodeException":function(d){return "Kesalahan terjadi ketika menjalankan kode Anda."},
-"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
+"wrongBooleanError":function(d){return "Blok Anda mengevaluasi ke nilai boolean yang salah."}};

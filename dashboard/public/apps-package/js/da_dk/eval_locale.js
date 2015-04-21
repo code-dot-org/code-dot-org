@@ -182,4 +182,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "string":function(d){return "string"},
 "stringMismatchError":function(d){return "Du har en streng med den forkerte kapitalisering."},
 "userCodeException":function(d){return "Der opstod en fejl under eksekvering af din kode."},
-"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
+"wrongBooleanError":function(d){return "Dine blokke evaluerer til den forkerte boolesk værdi."}};

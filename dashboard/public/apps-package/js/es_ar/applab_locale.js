@@ -52,7 +52,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForeverTooltip":function(d){return "Ejecuta repetidamente las acciones en este bloque mientras la aplicación está ejecutando."},
 "shareApplabTwitter":function(d){return "Revise la aplicación que he creado.  La escribí yo mismo con @codeorg"},
 "shareGame":function(d){return "Comparte tu aplicación:"},
-"stepIn":function(d){return "Entrar"},
+"stepIn":function(d){return "Paso: Dentro del Método"},
 "stepOver":function(d){return "Saltar"},
 "stepOut":function(d){return "Salir"},
 "viewData":function(d){return "Ver datos"},
