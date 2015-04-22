@@ -279,10 +279,7 @@ class Blockly < Level
       level_prop['scale'] = {'stepSpeed' => level_prop['step_speed'].to_i} if level_prop['step_speed'].present?
 
       # Blockly requires these fields to be objects not strings
-      (
-      %w(map initialDirt finalDirt goal soft_buttons inputOutputTable)
-          .concat NetSim.json_object_attrs
-      ).each do |x|
+      %w(map initialDirt finalDirt goal softButtons inputOutputTable).concat(NetSim.json_object_attrs).each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
       end
 
