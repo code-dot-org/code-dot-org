@@ -801,8 +801,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'generate username' do
     def create_user_with_username(username)
-    user = create(:user)
-    user.update_attribute(:username, username)
+      user = create(:user)
+      user.update_attribute(:username, username)
     end
     # username regex: /\A[a-z0-9\-\_\.]+\z/
 
