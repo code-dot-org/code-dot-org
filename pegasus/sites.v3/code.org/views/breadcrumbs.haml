@@ -1,9 +1,13 @@
 %div.breadcrumbs
   - trail.each_with_index do |crumb, index|
     - if !crumb[:url] || index == trail.size - 1
-      %span.crumb.active
+      %strong.crumb.active
         #{crumb[:text]}
     - else
       %a.crumb.inactive{href:"#{crumb[:url]}"}
         #{crumb[:text]}
       >
+:css
+  .active {
+    color:orange;
+  }
