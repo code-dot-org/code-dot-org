@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({19:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({20:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Applab = require('./applab');
@@ -16,7 +16,7 @@ window.applabMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./applab":10,"./blocks":11,"./levels":18,"./skins":21}],21:[function(require,module,exports){
+},{"../appMain":5,"./applab":11,"./blocks":12,"./levels":19,"./skins":22}],22:[function(require,module,exports){
 /**
  * Load Skin for Applab.
  */
@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":206}],18:[function(require,module,exports){
+},{"../skins":207}],19:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":254,"../block_utils":26,"../utils":252}],10:[function(require,module,exports){
+},{"../../locale/current/applab":255,"../block_utils":27,"../utils":253}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -327,6 +327,7 @@ var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
+var annotationList = require('./acemode/annotationList');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -361,6 +362,11 @@ var StepType = {
   IN:   1,
   OVER: 2,
   OUT:  3,
+};
+
+var ErrorLevel = {
+  WARNING: 'WARNING',
+  ERROR: 'ERROR'
 };
 
 // The typical width of the visualization area (indepdendent of appWidth)
@@ -583,7 +589,23 @@ function outputApplabConsole(output) {
   }
 }
 
-var apiWarn = outputApplabConsole;
+/**
+ * Output error to console and gutter as appropriate
+ * @param {string} warning Text for warning
+ * @param {ErrorLevel} level
+ * @param {number} lineNum One indexed line number
+ */
+function outputError(warning, level, lineNum) {
+  var text = level + ': ';
+  if (lineNum !== undefined) {
+    text += 'Line: ' + lineNum + ': ';
+  }
+  text += warning;
+  outputApplabConsole(text);
+  if (lineNum !== undefined) {
+    annotationList.addRuntimeAnnotation(level, lineNum, warning);
+  }
+}
 
 var OPTIONAL = true;
 
@@ -606,12 +628,13 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                Applab.cumulativeLength,
-                                                Applab.userCodeStartOffset,
-                                                Applab.userCodeLength);
-      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
-              " parameter value (" + varValue + ") is not a " + expectedType + ".");
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not a " + expectedType + ".";
+      outputError(errorString, ErrorLevel.WARNING, line);
     }
     opts[validatedTypeKey] = properType;
   }
@@ -628,12 +651,13 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
       inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
     }
     if (!inRange) {
-      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                Applab.cumulativeLength,
-                                                Applab.userCodeStartOffset,
-                                                Applab.userCodeLength);
-      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
-              " parameter value (" + varValue + ") is not in the expected range.");
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not in the expected range.";
+      outputError(errorString, ErrorLevel.WARNING, line);
     }
     opts[validatedRangeKey] = inRange;
   }
@@ -644,12 +668,13 @@ function apiValidateActiveCanvas(opts, funcName) {
   if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
     var activeCanvas = Boolean(Applab.activeCanvas);
     if (!activeCanvas) {
-      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                Applab.cumulativeLength,
-                                                Applab.userCodeStartOffset,
-                                                Applab.userCodeLength);
-      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName +
-              "() called without an active canvas. Call createCanvas() first.");
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() called without an active canvas. Call " +
+        "createCanvas() first.";
+      outputError(errorString, ErrorLevel.WARNING, line);
     }
     if (opts) {
       opts[validatedActiveCanvasKey] = activeCanvas;
@@ -666,13 +691,14 @@ function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shoul
     var exists = Boolean(element && divApplab.contains(element));
     var valid = exists == shouldExist;
     if (!valid) {
-      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                Applab.cumulativeLength,
-                                                Applab.userCodeStartOffset,
-                                                Applab.userCodeLength);
-      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
-              " parameter refers to an id (" + id + ") which " +
-              (exists ? "already exists." : "does not exist."));
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName +
+        " parameter refers to an id (" +id + ") which " +
+        (exists ? "already exists." : "does not exist.");
+      outputError(errorString, ErrorLevel.WARNING, line);
     }
     opts[validatedDomKey] = valid;
   }
@@ -743,11 +769,7 @@ function handleExecutionError(err, lineNumber) {
                                                     Applab.userCodeStartOffset,
                                                     Applab.userCodeLength);
   }
-  if (lineNumber) {
-    outputApplabConsole('ERROR: Line ' + lineNumber + ': ' + String(err));
-  } else {
-    outputApplabConsole('ERROR: ' + String(err));
-  }
+  outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
   Applab.onPuzzleComplete();
 }
@@ -1791,6 +1813,7 @@ Applab.execute = function() {
       'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
                  'setCallbackRetVal(ret); }}';
     var session = studioApp.editor.aceEditor.getSession();
+    annotationList.attachToSession(session);
     Applab.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
@@ -3478,7 +3501,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":254,"../../locale/current/common":257,"../StudioApp":4,"../codegen":54,"../constants":56,"../dom":57,"../dropletUtils":58,"../skins":206,"../slider":207,"../templates/page.html":231,"../timeoutList":237,"../utils":252,"../xml":253,"./acemode/mode-javascript_codeorg":7,"./api":8,"./appStorage":9,"./blocks":11,"./controls.html":12,"./designModeBox.html":13,"./designProperties.html":14,"./dontMarshalApi":15,"./dropletConfig":16,"./extraControlRows.html":17,"./rgbcolor.js":20,"./visualization.html":22}],22:[function(require,module,exports){
+},{"../../locale/current/applab":255,"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../skins":207,"../slider":208,"../templates/page.html":232,"../timeoutList":238,"../utils":253,"../xml":254,"./acemode/annotationList":6,"./acemode/mode-javascript_codeorg":8,"./api":9,"./appStorage":10,"./blocks":12,"./controls.html":13,"./designModeBox.html":14,"./designProperties.html":15,"./dontMarshalApi":16,"./dropletConfig":17,"./extraControlRows.html":18,"./rgbcolor.js":21,"./visualization.html":23}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3498,7 +3521,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":273}],20:[function(require,module,exports){
+},{"ejs":274}],21:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -3766,7 +3789,7 @@ module.exports = function(color_string)
     };
 };
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3786,7 +3809,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":254,"../../locale/current/common":257,"ejs":273}],15:[function(require,module,exports){
+},{"../../locale/current/applab":255,"../../locale/current/common":258,"ejs":274}],16:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -3859,7 +3882,7 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
   }
 };
 
-},{"./applab":10}],14:[function(require,module,exports){
+},{"./applab":11}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3879,7 +3902,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":273}],13:[function(require,module,exports){
+},{"ejs":274}],14:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3899,7 +3922,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":273}],12:[function(require,module,exports){
+},{"ejs":274}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3919,7 +3942,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":257,"ejs":273}],11:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],12:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -3992,9 +4015,9 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":254,"../../locale/current/common":257,"../codegen":54,"../utils":252}],254:[function(require,module,exports){
+},{"../../locale/current/applab":255,"../../locale/current/common":258,"../codegen":55,"../utils":253}],255:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 'use strict';
 
 /* global dashboard */
@@ -4253,7 +4276,7 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   onSuccess();
 };
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 
 exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);
@@ -4757,10 +4780,10 @@ exports.penColor = function (blockId, color) {
 };
 
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 var dropletConfig = require('../dropletConfig');
 var dropletUtils = require('../../dropletUtils');
-var errorMapper = require('./errorMapper');
+var annotationList = require('./annotationList');
 
 // define ourselves for ace, so that it knows where to get us
 ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
@@ -4835,13 +4858,11 @@ oop.inherits(Mode, JavaScriptMode);
       newOptions.predef[block.func] = false;
     });
 
+    annotationList.attachToSession(session);
+
     worker.send("changeOptions", [newOptions]);
 
-    worker.on("jslint", function(results) {
-      errorMapper.processResults(results);
-
-      session.setAnnotations(results.data);
-    });
+    worker.on("jslint", annotationList.setJSLintAnnotations);
 
     worker.on("terminate", function() {
       session.clearAnnotations();
@@ -4854,7 +4875,7 @@ oop.inherits(Mode, JavaScriptMode);
 exports.Mode = Mode;
 });
 
-},{"../../dropletUtils":58,"../dropletConfig":16,"./errorMapper":6}],16:[function(require,module,exports){
+},{"../../dropletUtils":59,"../dropletConfig":17,"./annotationList":6}],17:[function(require,module,exports){
 var COLOR_LIGHT_GREEN = '#D3E965';
 var COLOR_BLUE = '#19C3E1';
 var COLOR_RED = '#F78183';
@@ -4982,6 +5003,63 @@ module.exports.categories = {
 };
 
 },{}],6:[function(require,module,exports){
+var errorMapper = require('./errorMapper');
+
+var annotations = [];
+var aceSession;
+
+/**
+ * Update gutter with our annotation list
+ * @private
+ */
+function updateGutter() {
+  if (!aceSession) {
+    return;
+  }
+  aceSession.setAnnotations(annotations);
+}
+
+/**
+ * Object for tracking annotations placed in gutter. General design is as
+ * follows:
+ * When jslint runs (i.e. code changes) display just jslint errors
+ * When code runs, display jslint errors and runtime errors. Runtime errors will
+ * go away the next time jstlint gets run (when code changes)
+ */
+module.exports = {
+  attachToSession: function (session) {
+    if (aceSession && session !== aceSession) {
+      throw new Error('Already attached to ace session');
+    }
+    aceSession = session;
+  },
+
+  setJSLintAnnotations: function (jslintResults) {
+    errorMapper.processResults(jslintResults);
+    // clone annotations in case anyone else has a reference to data
+    annotations = jslintResults.data.slice();
+    updateGutter();
+  },
+
+  /**
+   * @param {string} level
+   * @param {number} lineNumber One index line number
+   * @param {string} text Error string
+   */
+  addRuntimeAnnotation: function (level, lineNumber, text) {
+    var annotation = {
+      row: lineNumber - 1,
+      col: 0,
+      raw: text,
+      text: text,
+      type: level.toLowerCase()
+    };
+    annotations.push(annotation);
+    updateGutter();
+  },
+};
+
+},{"./errorMapper":7}],7:[function(require,module,exports){
 var errorMap = [
   {
     original: /Assignment in conditional expression/,
@@ -5014,4 +5092,4 @@ module.exports.processResults = function (results) {
   });
 };
 
-},{}]},{},[19]);
+},{}]},{},[20]);
