@@ -23,6 +23,9 @@ function updateGutter() {
  */
 module.exports = {
   attachToSession: function (session) {
+    if (aceSession && session !== aceSession) {
+      throw new Error('Already attached to ace session');
+    }
     aceSession = session;
   },
 
