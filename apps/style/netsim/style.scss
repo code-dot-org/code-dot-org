@@ -313,7 +313,7 @@ $wide-column-width: 121px;
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
-      background-color: $purple;
+      background-color: $cyan;
       color: $white;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
@@ -333,7 +333,7 @@ $wide-column-width: 121px;
       border-left: solid darkgray thin;
       border-right: solid darkgray thin;
       border-bottom: solid darkgray thin;
-      border-top: solid $purple thin;
+      border-top: solid $cyan thin;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
     }
 
@@ -660,7 +660,7 @@ $wide-column-width: 121px;
 
     // Modify actual tabs at top of tab area
     .ui-tabs-nav {
-      background: $purple;
+      background: $cyan;
       border-left: none;
       border-right: none;
       border-top: none;
