@@ -225,6 +225,7 @@ SQL
       output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
       output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
       output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+      output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
     end
 
     @data_array = output_data.map do |key, value|
