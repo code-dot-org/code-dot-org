@@ -466,9 +466,6 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
  * @private
  */
 NetSim.prototype.synchronousDisconnectFromShard_ = function () {
-  // TODO: Anything else that should be deleted here?
-  // 3. Router nodes? (last one out turn off the lights?)
-
   this.myNode.stopSimulation();
   this.myNode.synchronousDestroy();
   this.myNode = null;
