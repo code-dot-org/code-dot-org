@@ -1,4 +1,5 @@
 <%
+  var i18n = require('../../locale/current/netsim');
   var netsimConstants = require('./netsimConstants');
   var dataConverters = require('./dataConverters');
 
@@ -41,3 +42,10 @@
     </div>
   </div>
 </div>
+<% if (showReadWireButton) { %>
+  <div class="panel-footer">
+    <div class="right-side-controls">
+      <span class="netsim-button" id="read-wire-button"><%= i18n.readWire() %></span>
+    </div>
+  </div>
+<% } %>
