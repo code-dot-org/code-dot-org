@@ -1,4 +1,5 @@
 class LevelSourceHintsController < ApplicationController
+  include LevelsHelper
   before_filter :authenticate_user!
   before_action :set_level_source_hint, only: [:update]
   load_and_authorize_resource
@@ -210,12 +211,17 @@ class LevelSourceHintsController < ApplicationController
   protected
   def common(level_source_id)
     @level_source = LevelSource.find(level_source_id)
-    @start_blocks = @level_source.data
     @level = @level_source.level
     @game = @level.game
-    @full_width = true
-    @hide_source = false
-    @share = true
+
+    level_view_options(
+      start_blocks: @level_source.data,
+      hide_source: false,
+      share: true
+    )
+    view_options(
+      full_width: true
+    )
   end
 
   private

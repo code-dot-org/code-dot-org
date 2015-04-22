@@ -16,10 +16,11 @@ If there’s a person in one of our proposed expansion areas that you think coul
 [2014](https://drive.google.com/a/code.org/folderview?id=0BxyTbG_YHa8EfjJaeHZBblFmVUFsUUpoYXN1RTR0QkhYX3J5U1A4bDVFVG9ic3g5YXZ5QWs&usp=sharing)
 
 ## Affiliate Dashboard Links
-* Affiliate Playbook (link to pdf or googledoc)
+* [Manage workshops](http://code.org/manage-professional-development-workshops) (affiliate access only)
 * [Map of workshops](http://code.org/professional-development-workshops)
-* [Post/view workshop](http://code.org/manage-professional-development-workshops) (affiliate access only)
 * [List all affiliate workshops and signups](http://code.org/manage-professional-development-workshops/workshop-signups) (affiliate access only)
+* Affiliate Playbook (link to pdf or googledoc)
+
 * [Affiliate Payment Link](http://code.org/educate/affiliate-payment-info)
 
 ## Quick Links to Resources

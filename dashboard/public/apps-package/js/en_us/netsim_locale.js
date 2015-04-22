@@ -199,6 +199,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "number":function(d){return "Number"},
 "numBitsPerPacket":function(d){return appLocale.v(d,"x")+" bits per packet"},
 "numBitsPerChunk":function(d){return appLocale.v(d,"numBits")+" bits per chunk"},
+"onBeforeUnloadWarning":function(d){return "You will be disconnected from the simulation."},
 "outgoingConnectionRequests":function(d){return "Outgoing connection requests"},
 "_of_":function(d){return " of "},
 "packet":function(d){return "Packet"},

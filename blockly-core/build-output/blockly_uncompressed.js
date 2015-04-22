@@ -5841,7 +5841,7 @@ Blockly.Trashcan.prototype.getHeight = function() {
   return Blockly.Trashcan.HEIGHT_
 };
 Blockly.Trashcan.prototype.getRect = function() {
-  var trashXY = Blockly.getSvgXY_(this.svgGroup_);
+  var trashXY = Blockly.getSvgXY_(this.svgGroup_, this.blockSpace_.blockSpaceEditor.svg_);
   return new goog.math.Rect(trashXY.x - Blockly.Trashcan.MARGIN_HOTSPOT_, trashXY.y - Blockly.Trashcan.MARGIN_HOTSPOT_, Blockly.Trashcan.WIDTH_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_, Blockly.Trashcan.HEIGHT_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_)
 };
 Blockly.Trashcan.prototype.setOpen_ = function(state) {
@@ -6156,7 +6156,7 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
   }
 };
 Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
-  var mouseXY = Blockly.mouseToSvg(e);
+  var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
   if(this.deleteAreaTrash_) {
     if(this.deleteAreaTrash_.contains(xy)) {
@@ -13350,15 +13350,11 @@ Blockly.Connection.prototype.acceptsType = function(type) {
   return!this.check_ || goog.array.contains(this.check_, type)
 };
 Blockly.Connection.prototype.setCheck = function(check) {
-  if(check) {
+  if(check && check !== Blockly.BlockValueType.NONE) {
     if(!(check instanceof Array)) {
       check = [check]
     }
     this.check_ = check;
-    var legacyTypeFound = Blockly.Connection.findLegacyType_(check);
-    if(legacyTypeFound) {
-      throw"Legacy type format found: " + legacyTypeFound;
-    }
     if(this.targetConnection && !this.checkAllowedConnectionType_(this.targetConnection)) {
       if(this.isSuperior()) {
         this.targetBlock().setParent(null)
@@ -13372,21 +13368,8 @@ Blockly.Connection.prototype.setCheck = function(check) {
   }
   return this
 };
-Blockly.Connection.findLegacyType_ = function(checkArray) {
-  if(!checkArray) {
-    return false
-  }
-  for(var i = 0;i < checkArray.length;i++) {
-    var type = checkArray[i];
-    if(Blockly.Connection.isLegacyType_(type)) {
-      return type
-    }
-  }
-  return null
-};
-Blockly.Connection.isLegacyType_ = function(type) {
-  var startsWithLowercase = /^[a-z]/.test(type);
-  return startsWithLowercase
+Blockly.Connection.prototype.getCheck = function() {
+  return this.check_
 };
 Blockly.Connection.prototype.neighbours_ = function(maxLimit) {
   var oppositeType = Blockly.OPPOSITE_TYPE[this.type];
@@ -15837,12 +15820,7 @@ Blockly.Flyout.prototype.createFunction_ = function() {
   Blockly.functionEditor.openWithNewFunction()
 };
 Blockly.Flyout.prototype.createFunctionalVariable_ = function() {
-  Blockly.functionEditor.openWithNewFunction(function(block) {
-    if(!block.type === "functional_definition") {
-      throw"Non-functional definition block cannot be used as functional variable";
-    }
-    block.convertToVariable()
-  })
+  Blockly.contractEditor.openWithNewVariable()
 };
 Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
   var flyout = this;
@@ -19611,13 +19589,10 @@ Blockly.FunctionEditor.prototype.paramNameTypeFromXML_ = function(blockXML) {
   infoObject.type = blockXML.childNodes[1].textContent;
   return infoObject
 };
-Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
+Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
   this.ensureCreated_();
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
   tempFunctionDefinitionBlock.userCreated = true;
-  if(opt_blockCreationCallback) {
-    opt_blockCreationCallback(tempFunctionDefinitionBlock)
-  }
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue("NAME"))
 };
 Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
@@ -19943,7 +19918,7 @@ Blockly.FunctionalBlockUtils.initTitledFunctionalBlock = function(block, title, 
   for(var i = 0;i < args.length;i++) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
-    input.setInline(i > 0);
+    input.setInline(i > 0 && !config_opt.verticallyStackInputs);
     input.setHSV.apply(input, Blockly.FunctionalTypeColors[arg.type]);
     input.setCheck(arg.type);
     input.setAlign(Blockly.ALIGN_CENTRE)
@@ -22276,7 +22251,8 @@ Blockly.ContractEditor.prototype.setSectionHighlighted = function(viewToHighligh
   }, this)
 };
 Blockly.ContractEditor.prototype.addNewExampleBlock_ = function() {
-  this.addNewExampleBlockForFunction_(this.functionDefinitionBlock)
+  this.addNewExampleBlockForFunction_(this.functionDefinitionBlock);
+  this.refreshBlockInputTypes_()
 };
 Blockly.ContractEditor.prototype.addNewExampleBlockForFunction_ = function(functionDefinitionBlock) {
   var createdExampleBlock = this.createExampleBlock_(functionDefinitionBlock);
@@ -22294,18 +22270,36 @@ Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(ex
   this.exampleBlocks.push(movedExampleBlock);
   movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED, this.removeExampleBlock_.bind(this, movedExampleBlock), false, this)
 };
+Blockly.ContractEditor.prototype.refreshBlockInputTypes_ = function() {
+  this.setBlockInputsToType_(this.currentFunctionDefinitionType_())
+};
+Blockly.ContractEditor.prototype.setBlockInputsToType_ = function(newType) {
+  var blocksToUpdate = this.exampleBlocks.concat(this.functionDefinitionBlock);
+  blocksToUpdate.forEach(function(exampleBlock) {
+    exampleBlock.updateInputsToType(newType)
+  }, this)
+};
+Blockly.ContractEditor.prototype.currentFunctionDefinitionType_ = function() {
+  var functionDefinitionCheck = this.functionDefinitionBlock.previousConnection.getCheck();
+  if(!functionDefinitionCheck || functionDefinitionCheck.length !== 1) {
+    throw"Contract editor function definition should have exactly one type check";
+  }
+  return functionDefinitionCheck[0]
+};
 Blockly.ContractEditor.prototype.removeExampleBlock_ = function(block) {
   goog.array.remove(this.exampleBlocks, block);
   this.position_()
 };
-Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
+Blockly.ContractEditor.prototype.openWithNewVariable = function() {
+  this.openWithNewFunction(true)
+};
+Blockly.ContractEditor.prototype.openWithNewFunction = function(isVariable) {
   this.ensureCreated_();
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
   tempFunctionDefinitionBlock.updateOutputType(Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE);
-  if(opt_blockCreationCallback) {
-    opt_blockCreationCallback(tempFunctionDefinitionBlock)
-  }
-  if(!tempFunctionDefinitionBlock.isVariable()) {
+  if(isVariable) {
+    tempFunctionDefinitionBlock.convertToVariable()
+  }else {
     for(var i = 0;i < Blockly.defaultNumExampleBlocks;i++) {
       this.addNewExampleBlockForFunction_(tempFunctionDefinitionBlock)
     }
@@ -22378,6 +22372,7 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
   goog.style.showElement(goog.dom.getElement("domain-hint"), !isEditingVariable)
 };
 Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {
+  this.refreshBlockInputTypes_();
   var isEditingVariable = this.functionDefinitionBlock.isVariable();
   if(isEditingVariable) {
     this.setupSectionsForVariable_()
@@ -22470,7 +22465,10 @@ Blockly.ContractEditor.prototype.addRangeEditor_ = function() {
 Blockly.ContractEditor.prototype.outputTypeChanged_ = function(newType) {
   this.updateFrameColorForType_(newType);
   if(this.functionDefinitionBlock) {
+    this.setBlockInputsToType_(Blockly.BlockValueType.NONE);
     this.functionDefinitionBlock.updateOutputType(newType);
+    this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
+    this.refreshBlockInputTypes_();
     this.modalBlockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE)
   }
 };
@@ -24239,88 +24237,6 @@ Blockly.Css.CONTENT = [".blocklyDraggable {", "}", "#%CONTAINER_ID% {", "  borde
 "  margin: 4px 0;", "  padding: 0;", "}", ".goog-flat-menu-button {", "  background-color: #fff;", "  border: 1px solid #c9c9c9;", "  color: #333;", "  cursor: pointer;", "  font: normal 95%;", "  list-style: none;", "  margin: 0 2px;", "  outline: none;", "  padding: 1px 4px;", "  position: relative;", "  text-decoration: none;", "  vertical-align: middle;", "}", ".goog-flat-menu-button-disabled * {", "  border-color: #ccc;", "  color: #999;", "  cursor: default;", "}", ".goog-flat-menu-button-hover {", 
 "  border-color: #9cf #69e #69e #7af !important; /* Hover border wins. */", "}", ".goog-flat-menu-button-active {", "  background-color: #bbb;", "  background-position: bottom left;", "}", ".goog-flat-menu-button-focused {", "  border-color: #bbb;", "}", ".goog-flat-menu-button-caption {", "  padding-right: 10px;", "  vertical-align: top;", "}", ".goog-flat-menu-button-dropdown {", "  /* Client apps may override the URL at which they serve the sprite. */", "  background: url(https://ssl.gstatic.com/editor/editortoolbar.png) no-repeat -388px 0;", 
 "  position: absolute;", "  right: 2px;", "  top: 0;", "  vertical-align: top;", "  width: 7px;", "}", ".goog-inline-block {", "  position: relative;", "  display: -moz-inline-box; /* Ignored by FF3 and later. */", "  display: inline-block;", "}", ""];
-goog.provide("Blockly.inject");
-goog.require("Blockly.Css");
-goog.require("Blockly.BlockSpaceEditor");
-goog.require("goog.dom");
-Blockly.inject = function(container, opt_options, opt_audioPlayer) {
-  if(!goog.dom.contains(document, container)) {
-    throw"Error: container is not in current document.";
-  }
-  if(opt_options) {
-    goog.mixin(Blockly, Blockly.parseOptions_(opt_options))
-  }
-  goog.ui.Component.setDefaultRightToLeft(Blockly.RTL);
-  Blockly.Css.inject(container);
-  if(opt_audioPlayer) {
-    Blockly.audioPlayer = opt_audioPlayer;
-    Blockly.registerUISounds_(Blockly.audioPlayer)
-  }
-  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
-  Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
-  if(Blockly.useModalFunctionEditor) {
-    Blockly.functionEditor = new Blockly.FunctionEditor
-  }else {
-    if(Blockly.useContractEditor) {
-      Blockly.functionEditor = new Blockly.ContractEditor({disableExamples:opt_options && opt_options.disableExamples});
-      Blockly.contractEditor = Blockly.functionEditor
-    }
-  }
-  Blockly.focusedBlockSpace = Blockly.mainBlockSpace
-};
-Blockly.parseOptions_ = function(options) {
-  var hasCategories, hasTrashcan, hasCollapse, grayOutUndeletableBlocks, tree, hasScrollbars;
-  var readOnly = !!options["readOnly"];
-  if(readOnly) {
-    hasCategories = false;
-    hasTrashcan = false;
-    hasCollapse = false;
-    grayOutUndeletableBlocks = false;
-    tree = null
-  }else {
-    var tree = options["toolbox"];
-    if(tree) {
-      if(typeof tree != "string" && typeof XSLTProcessor == "undefined") {
-        tree = tree.outerHTML
-      }
-      if(typeof tree == "string") {
-        tree = Blockly.Xml.textToDom(tree)
-      }
-      hasCategories = !!tree.getElementsByTagName("category").length
-    }else {
-      tree = null;
-      hasCategories = false
-    }
-    hasTrashcan = options["trashcan"];
-    if(hasTrashcan === undefined) {
-      hasTrashcan = hasCategories
-    }
-    hasCollapse = options["collapse"];
-    if(hasCollapse === undefined) {
-      hasCollapse = hasCategories
-    }
-    grayOutUndeletableBlocks = options["grayOutUndeletableBlocks"];
-    if(grayOutUndeletableBlocks === undefined) {
-      grayOutUndeletableBlocks = false
-    }
-  }
-  if(tree && !hasCategories) {
-    hasScrollbars = false
-  }else {
-    hasScrollbars = options["scrollbars"];
-    if(hasScrollbars === undefined) {
-      hasScrollbars = false
-    }
-  }
-  return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
-    return"./" + path
-  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, generateFunctionPassBlocks:options["generateFunctionPassBlocks"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, disableExamples:options["disableExamples"] || 
-  false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
-};
-Blockly.registerUISounds_ = function(audioPlayer) {
-  audioPlayer.register({id:"click", mp3:Blockly.assetUrl("media/click.mp3"), wav:Blockly.assetUrl("media/click.wav"), ogg:Blockly.assetUrl("media/click.ogg")});
-  audioPlayer.register({id:"delete", mp3:Blockly.assetUrl("media/delete.mp3"), wav:Blockly.assetUrl("media/delete.wav"), ogg:Blockly.assetUrl("media/delete.ogg")})
-};
 goog.provide("Blockly.WidgetDiv");
 goog.require("Blockly.Css");
 goog.require("goog.dom");
@@ -24437,6 +24353,88 @@ Blockly.FieldParameter.dropdownChange = function(text) {
     }
   }
   return null
+};
+goog.provide("Blockly.inject");
+goog.require("Blockly.Css");
+goog.require("Blockly.BlockSpaceEditor");
+goog.require("goog.dom");
+Blockly.inject = function(container, opt_options, opt_audioPlayer) {
+  if(!goog.dom.contains(document, container)) {
+    throw"Error: container is not in current document.";
+  }
+  if(opt_options) {
+    goog.mixin(Blockly, Blockly.parseOptions_(opt_options))
+  }
+  goog.ui.Component.setDefaultRightToLeft(Blockly.RTL);
+  Blockly.Css.inject(container);
+  if(opt_audioPlayer) {
+    Blockly.audioPlayer = opt_audioPlayer;
+    Blockly.registerUISounds_(Blockly.audioPlayer)
+  }
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  if(Blockly.useModalFunctionEditor) {
+    Blockly.functionEditor = new Blockly.FunctionEditor
+  }else {
+    if(Blockly.useContractEditor) {
+      Blockly.functionEditor = new Blockly.ContractEditor({disableExamples:opt_options && opt_options.disableExamples});
+      Blockly.contractEditor = Blockly.functionEditor
+    }
+  }
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace
+};
+Blockly.parseOptions_ = function(options) {
+  var hasCategories, hasTrashcan, hasCollapse, grayOutUndeletableBlocks, tree, hasScrollbars;
+  var readOnly = !!options["readOnly"];
+  if(readOnly) {
+    hasCategories = false;
+    hasTrashcan = false;
+    hasCollapse = false;
+    grayOutUndeletableBlocks = false;
+    tree = null
+  }else {
+    var tree = options["toolbox"];
+    if(tree) {
+      if(typeof tree != "string" && typeof XSLTProcessor == "undefined") {
+        tree = tree.outerHTML
+      }
+      if(typeof tree == "string") {
+        tree = Blockly.Xml.textToDom(tree)
+      }
+      hasCategories = !!tree.getElementsByTagName("category").length
+    }else {
+      tree = null;
+      hasCategories = false
+    }
+    hasTrashcan = options["trashcan"];
+    if(hasTrashcan === undefined) {
+      hasTrashcan = hasCategories
+    }
+    hasCollapse = options["collapse"];
+    if(hasCollapse === undefined) {
+      hasCollapse = hasCategories
+    }
+    grayOutUndeletableBlocks = options["grayOutUndeletableBlocks"];
+    if(grayOutUndeletableBlocks === undefined) {
+      grayOutUndeletableBlocks = false
+    }
+  }
+  if(tree && !hasCategories) {
+    hasScrollbars = false
+  }else {
+    hasScrollbars = options["scrollbars"];
+    if(hasScrollbars === undefined) {
+      hasScrollbars = false
+    }
+  }
+  return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
+    return"./" + path
+  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, generateFunctionPassBlocks:options["generateFunctionPassBlocks"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, disableExamples:options["disableExamples"] || 
+  false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
+};
+Blockly.registerUISounds_ = function(audioPlayer) {
+  audioPlayer.register({id:"click", mp3:Blockly.assetUrl("media/click.mp3"), wav:Blockly.assetUrl("media/click.wav"), ogg:Blockly.assetUrl("media/click.ogg")});
+  audioPlayer.register({id:"delete", mp3:Blockly.assetUrl("media/delete.mp3"), wav:Blockly.assetUrl("media/delete.wav"), ogg:Blockly.assetUrl("media/delete.ogg")})
 };
 goog.provide("Blockly.FieldAngle");
 goog.require("Blockly.FieldTextInput");
@@ -24579,6 +24577,7 @@ goog.require("Blockly.Procedures");
 goog.require("Blockly.Toolbox");
 goog.require("Blockly.WidgetDiv");
 goog.require("Blockly.BlockSpace");
+goog.require("Blockly.Blocks");
 goog.require("Blockly.inject");
 goog.require("Blockly.utils");
 goog.require("goog.dom");

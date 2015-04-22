@@ -156,6 +156,7 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
 NetSimPanel.prototype.addButton = function(buttonText, pressCallback) {
   $('<span>')
       .addClass('netsim-button')
+      .addClass('secondary')
       .html(buttonText)
       .click(pressCallback)
       .appendTo(this.rootDiv_.find('.panel-controls'));

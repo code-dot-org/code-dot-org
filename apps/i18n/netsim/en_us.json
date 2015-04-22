@@ -44,6 +44,7 @@
   "number": "Number",
   "numBitsPerPacket": "{x} bits per packet",
   "numBitsPerChunk": "{numBits} bits per chunk",
+  "onBeforeUnloadWarning": "You will be disconnected from the simulation.",
   "outgoingConnectionRequests": "Outgoing connection requests",
   "_of_": " of ",
   "packet": "Packet",

@@ -835,12 +835,6 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
   var inUserCode;
   var userCodeRow;
   var session = studioApp.editor.aceEditor.getSession();
-  // NOTE: when running with no source visible or at max speed, we
-  // call a simple function to just get the line number, otherwise we call a
-  // function that also selects the code:
-  var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
-          codegen.getUserCodeLine :
-          codegen.selectCurrentCode;
 
   // In each tick, we will step the interpreter multiple times in a tight
   // loop as long as we are interpreting code that the user can't see
@@ -848,6 +842,15 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
   for (var stepsThisTick = 0;
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
+    // Re-check this because the speed may have changed...
+    atMaxSpeed = getCurrentTickLength() === 0;
+    // NOTE: when running with no source visible or at max speed, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
+            codegen.getUserCodeLine :
+            codegen.selectCurrentCode;
+
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||

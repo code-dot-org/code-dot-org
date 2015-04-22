@@ -35,9 +35,8 @@ Breakfast and lunch will be served.
 
 More details coming soon!
 
+### What do I bring to Phase 2?
 
-
-#### What do I bring to Phase 2? ####
 Water Bottle
 <br />
 Snacks
@@ -65,7 +64,7 @@ More info coming soon!
 
 **Phase 1: Online Introduction (~2 hours)**
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Algebra course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
+The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Science course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
 </br>
 </br>
 **Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
@@ -82,7 +81,8 @@ Breakfast and lunch will be served.
 
 More details coming soon!
 
-#### What do I bring to Phase 2? ####
+### What do I bring to Phase 2?
+
 Water Bottle
 <br />
 Snacks
@@ -99,7 +99,7 @@ More info coming soon!
 [**Back to the top**](#top)
 
 ----------
-Please visit [FAQs](/educate/pd/faq) for more information.
+Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 
 <br />
 <br />

@@ -405,22 +405,23 @@ Blockly.ContractEditor.prototype.removeExampleBlock_ = function(block) {
   this.position_();
 };
 
-Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
+Blockly.ContractEditor.prototype.openWithNewVariable = function() {
+  this.openWithNewFunction(true);
+};
+
+Blockly.ContractEditor.prototype.openWithNewFunction = function(isVariable) {
   this.ensureCreated_();
 
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
   tempFunctionDefinitionBlock.updateOutputType(Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE);
 
-  if (opt_blockCreationCallback) {
-    opt_blockCreationCallback(tempFunctionDefinitionBlock);
-  }
-
-  if (!tempFunctionDefinitionBlock.isVariable()) {
+  if (isVariable) {
+    tempFunctionDefinitionBlock.convertToVariable();
+  } else {
     for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
       this.addNewExampleBlockForFunction_(tempFunctionDefinitionBlock);
     }
-    this.refreshBlockInputTypes_();
   }
 
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));

@@ -381,16 +381,49 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   // Try and gracefully disconnect when closing the window
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
+  window.addEventListener('unload', this.onUnload_.bind(this));
 };
 
 /**
- * Before-unload handler, used to try and disconnect gracefully when
- * navigating away instead of just letting our record time out.
+ * Before-unload handler, used to warn the user (if necessary) of what they
+ * are abandoning if they navigate away from the page.
+ *
+ * This event has some weird special properties and inconsistent behavior
+ * across browsers.
+ *
+ * See:
+ * https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload
+ * http://www.zachleat.com/web/dont-let-the-door-hit-you-onunload-and-onbeforeunload/
+ * http://www.hunlock.com/blogs/Mastering_The_Back_Button_With_Javascript
+ *
+ * @param {Event} event
+ * @returns {string|undefined} If we want to warn the user before they leave
+ *          the page, this method will return a warning string, which may or
+ *          may not actually be used by the browser to present a warning.  If
+ *          we don't want to warn the user, this method doesn't return anything.
  * @private
  */
-NetSim.prototype.onBeforeUnload_ = function () {
+NetSim.prototype.onBeforeUnload_ = function (event) {
+  // No need to warn about navigating away if the student is not connected,
+  // or is still in the lobby.
+  if (this.isConnectedToRemote()) {
+    event.returnValue = i18n.onBeforeUnloadWarning();
+    return i18n.onBeforeUnloadWarning();
+  }
+};
+
+/**
+ * Unload handler.  Used to attempt a clean disconnect from the simulation
+ * using synchronous AJAX calls to remove our own rows from remote storage.
+ *
+ * See:
+ * https://developer.mozilla.org/en-US/docs/Web/Events/unload
+ *
+ * @private
+ */
+NetSim.prototype.onUnload_ = function () {
   if (this.isConnectedToShard()) {
-    this.disconnectFromShard();
+    this.synchronousDisconnectFromShard_();
   }
 };
 
@@ -456,6 +489,17 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
       onComplete(err, node);
     });
   }.bind(this));
+};
+
+/**
+ * Synchronous disconnect, for use when navigating away from the page
+ * @private
+ */
+NetSim.prototype.synchronousDisconnectFromShard_ = function () {
+  this.myNode.stopSimulation();
+  this.myNode.synchronousDestroy();
+  this.myNode = null;
+  this.shardChange.notifyObservers(null, null);
 };
 
 /**
@@ -3712,6 +3756,13 @@ NetSimTable.prototype.readAll = function (callback) {
 };
 
 /**
+ * @returns {Array} all locally cached table rows
+ */
+NetSimTable.prototype.readAllCached = function () {
+  return this.arrayFromCache_();
+};
+
+/**
  * @param {!number} id
  * @param {!NodeStyleCallback} callback
  */
@@ -3762,6 +3813,16 @@ NetSimTable.prototype.delete = function (id, callback) {
     }
     callback(err, success);
   }.bind(this));
+};
+
+/**
+ * Delete a row using a synchronous call. For use when navigating away from
+ * the page; most of the time an asynchronous call is preferred.
+ * @param id
+ */
+NetSimTable.prototype.synchronousDelete = function (id) {
+  this.remoteTable_.synchronousDelete(id);
+  this.removeRowFromCache_(id);
 };
 
 /**
@@ -4368,7 +4429,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var i18n = require('../../locale/current/netsim');
   var MessageGranularity = require('./netsimConstants').MessageGranularity;
-; buf.push('\n<div class="send-widget-packets"></div>\n<div class="panel-footer">\n  <div class="right-side-controls">\n    ');8; if (level.showAddPacketButton) { ; buf.push('\n      <span class="netsim-button" id="add-packet-button">', escape((9,  i18n.addPacket() )), '</span>\n    ');10; } ; buf.push('\n    ');11; if (level.messageGranularity === MessageGranularity.PACKETS) { ; buf.push('\n      <span class="netsim-button" id="send-button">', escape((12,  i18n.send() )), '</span>\n    ');13; } else if (level.messageGranularity === MessageGranularity.BITS) { ; buf.push('\n      <span class="netsim-button" id="set-wire-button">', escape((14,  i18n.setWire() )), '</span>\n    ');15; } ; buf.push('\n  </div>\n  <div class="packet-size"></div>\n</div>\n'); })();
+; buf.push('\n<div class="send-widget-packets"></div>\n<div class="panel-footer">\n  <div class="right-side-controls">\n    ');8; if (level.showAddPacketButton) { ; buf.push('\n      <span class="netsim-button secondary" id="add-packet-button">', escape((9,  i18n.addPacket() )), '</span>\n    ');10; } ; buf.push('\n    ');11; if (level.messageGranularity === MessageGranularity.PACKETS) { ; buf.push('\n      <span class="netsim-button" id="send-button">', escape((12,  i18n.send() )), '</span>\n    ');13; } else if (level.messageGranularity === MessageGranularity.BITS) { ; buf.push('\n      <span class="netsim-button" id="set-wire-button">', escape((14,  i18n.setWire() )), '</span>\n    ');15; } ; buf.push('\n  </div>\n  <div class="packet-size"></div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -5941,7 +6002,7 @@ with (locals || {}) { (function(){
    * Write the table header to the page, with the appropriate packet-header columns enabled.
    */
   function tableHeader() {
-    ; buf.push('\n      <thead>\n        <tr>\n          <th nowrap class="', escape((39,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n          ');40; if (showToAddress) { ; buf.push('\n          <th nowrap class="', escape((41,  PacketUIColumnType.TO_ADDRESS )), '">', escape((41,  i18n.to() )), '</th>\n          ');42; } ; buf.push('\n          ');43; if (showFromAddress) { ; buf.push('\n          <th nowrap class="', escape((44,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((44,  i18n.from() )), '</th>\n          ');45; } ; buf.push('\n          ');46; if (showPacketInfo) { ; buf.push('\n          <th nowrap class="', escape((47,  PacketUIColumnType.PACKET_INFO )), '">', escape((47,  i18n.packet() )), '</th>\n          ');48; } ; buf.push('\n          <th class="', escape((49,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((50,  i18n.message() )), '\n            <div class="packet-controls">\n              <span class="netsim-button remove-packet-button" title="', escape((52,  i18n.removePacket() )), '"><i class="fa fa-times"></i></span>\n            </div>\n          </th>\n        </tr>\n      </thead>\n    ');57;
+    ; buf.push('\n      <thead>\n        <tr>\n          <th nowrap class="', escape((39,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n          ');40; if (showToAddress) { ; buf.push('\n          <th nowrap class="', escape((41,  PacketUIColumnType.TO_ADDRESS )), '">', escape((41,  i18n.to() )), '</th>\n          ');42; } ; buf.push('\n          ');43; if (showFromAddress) { ; buf.push('\n          <th nowrap class="', escape((44,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((44,  i18n.from() )), '</th>\n          ');45; } ; buf.push('\n          ');46; if (showPacketInfo) { ; buf.push('\n          <th nowrap class="', escape((47,  PacketUIColumnType.PACKET_INFO )), '">', escape((47,  i18n.packet() )), '</th>\n          ');48; } ; buf.push('\n          <th class="', escape((49,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((50,  i18n.message() )), '\n            <div class="packet-controls">\n              <span class="netsim-button secondary remove-packet-button" title="', escape((52,  i18n.removePacket() )), '"><i class="fa fa-times"></i></span>\n            </div>\n          </th>\n        </tr>\n      </thead>\n    ');57;
   }
 
   /**
@@ -6808,9 +6869,7 @@ NetSimLogPacket.prototype.render = function () {
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   this.rootDiv_.html(jQueryWrap);
-  this.rootDiv_.find('.minimize-button').click(this.minimize.bind(this));
-  this.rootDiv_.find('.maximize-button').click(this.maximize.bind(this));
-
+  this.rootDiv_.find('.expander').click(this.toggleMinimized.bind(this));
   this.rootDiv_.toggleClass('unread', this.isUnread);
 };
 
@@ -6853,13 +6912,8 @@ NetSimLogPacket.prototype.markAsRead = function () {
   }
 };
 
-NetSimLogPacket.prototype.minimize = function () {
-  this.isMinimized = true;
-  this.render();
-};
-
-NetSimLogPacket.prototype.maximize = function () {
-  this.isMinimized = false;
+NetSimLogPacket.prototype.toggleMinimized = function () {
+  this.isMinimized = !this.isMinimized;
   this.render();
 };
 
@@ -6953,10 +7007,6 @@ with (locals || {}) { (function(){
     return messageBinary;
   }
 
-  function packetControls() {
-    ; buf.push('\n      <div class="packet-controls">\n        ');62; if (isMinimized) { ; buf.push('\n          <span class="netsim-button maximize-button" title="', escape((63,  i18n.expand() )), '"><i class="fa fa-expand"></i></span>\n        ');64; } else { ; buf.push('\n          <span class="netsim-button minimize-button" title="', escape((65,  i18n.collapse() )), '"><i class="fa fa-compress"></i></span>\n        ');66; } ; buf.push('\n      </div>\n    ');68;
-  }
-
   /**
    * @param {EncodingType} encodingType
    * @param {string} toAddress
@@ -6965,15 +7015,15 @@ with (locals || {}) { (function(){
    * @param {string} message
    */
   function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
-    ; buf.push('\n      <tr class="', escape((80,  encodingType )), '">\n        <th nowrap class="', escape((81,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((81,  getEncodingLabel(encodingType) )), '</th>\n        ');82; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((83,  PacketUIColumnType.TO_ADDRESS )), '">', escape((83,  toAddress )), '</td>\n        ');84; } ; buf.push('\n        ');85; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((86,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((86,  fromAddress )), '</td>\n        ');87; } ; buf.push('\n        ');88; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((89,  PacketUIColumnType.PACKET_INFO )), '">', escape((89,  packetInfo )), '</td>\n        ');90; } ; buf.push('\n        <td class="', escape((91,  PacketUIColumnType.MESSAGE )), '">', escape((91,  message )), '</td>\n      </tr>\n  ');93;
+    ; buf.push('\n      <tr class="', escape((68,  encodingType )), '">\n        <th nowrap class="', escape((69,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((69,  getEncodingLabel(encodingType) )), '</th>\n        ');70; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((71,  PacketUIColumnType.TO_ADDRESS )), '">', escape((71,  toAddress )), '</td>\n        ');72; } ; buf.push('\n        ');73; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((74,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((74,  fromAddress )), '</td>\n        ');75; } ; buf.push('\n        ');76; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((77,  PacketUIColumnType.PACKET_INFO )), '">', escape((77,  packetInfo )), '</td>\n        ');78; } ; buf.push('\n        <td class="', escape((79,  PacketUIColumnType.MESSAGE )), '">', escape((79,  message )), '</td>\n      </tr>\n  ');81;
   }
- ; buf.push('\n  ');96;
+ ; buf.push('\n  ');84;
     var toAddress = showToAddress ? packet.getHeaderAsBinary(Packet.HeaderType.TO_ADDRESS) : '';
     var fromAddress = showFromAddress ? packet.getHeaderAsBinary(Packet.HeaderType.FROM_ADDRESS) : '';
     var packetIndex = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_INDEX) : '';
     var packetCount = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_COUNT) : '';
     var message = packet.getBodyAsBinary();
-  ; buf.push('\n  ');103; if (isMinimized) { ; buf.push('\n      ');104; packetControls(); ; buf.push('\n      <div class="single-line-with-ellipsis user-data">', escape((105,  getOneLinePacketSummary() )), '</div>\n  ');106; } else { ; buf.push('\n    <table>\n      <thead>\n        <tr>\n          <th nowrap class="', escape((110,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n          ');111; if (showToAddress) { ; buf.push('\n            <th nowrap class="', escape((112,  PacketUIColumnType.TO_ADDRESS )), '">', escape((112,  i18n.to() )), '</th>\n          ');113; } ; buf.push('\n          ');114; if (showFromAddress) { ; buf.push('\n            <th nowrap class="', escape((115,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((115,  i18n.from() )), '</th>\n          ');116; } ; buf.push('\n          ');117; if (showPacketInfo) { ; buf.push('\n            <th nowrap class="', escape((118,  PacketUIColumnType.PACKET_INFO )), '">', escape((118,  i18n.packet() )), '</th>\n          ');119; } ; buf.push('\n          <th class="', escape((120,  PacketUIColumnType.MESSAGE )), '">\n            ');121; packetControls(); ; buf.push('\n            ', escape((122,  i18n.message() )), '\n          </th>\n        </tr>\n      </thead>\n      <tbody>\n      ');127;
+  ; buf.push('\n  ');91; if (isMinimized) { ; buf.push('\n      <div class="minimized-packet single-line-with-ellipsis user-data">\n        <i class="fa fa-plus-square expander"></i>\n        ', escape((94,  getOneLinePacketSummary() )), '\n      </div>\n  ');96; } else { ; buf.push('\n    <table class="maximized-packet">\n      <thead>\n        <tr>\n          <th nowrap class="', escape((100,  PacketUIColumnType.ENCODING_LABEL )), '">\n            <i class="fa fa-minus-square expander"></i>\n          </th>\n          ');103; if (showToAddress) { ; buf.push('\n            <th nowrap class="', escape((104,  PacketUIColumnType.TO_ADDRESS )), '">', escape((104,  i18n.to() )), '</th>\n          ');105; } ; buf.push('\n          ');106; if (showFromAddress) { ; buf.push('\n            <th nowrap class="', escape((107,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((107,  i18n.from() )), '</th>\n          ');108; } ; buf.push('\n          ');109; if (showPacketInfo) { ; buf.push('\n            <th nowrap class="', escape((110,  PacketUIColumnType.PACKET_INFO )), '">', escape((110,  i18n.packet() )), '</th>\n          ');111; } ; buf.push('\n          <th class="', escape((112,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((113,  i18n.message() )), '\n          </th>\n        </tr>\n      </thead>\n      <tbody>\n      ');118;
         logRow(EncodingType.ASCII,
             binaryToInt(toAddress),
             binaryToInt(fromAddress),
@@ -7012,7 +7062,7 @@ with (locals || {}) { (function(){
             binaryToAB(fromAddress),
             binaryToAB(packetIndex) + ' ' + binaryToAB(formatBinary(packetCount)),
             formatAB(binaryToAB(message), chunkSize));
-       ; buf.push('\n      </tbody>\n    </table>\n  ');169; } ; buf.push('\n'); })();
+       ; buf.push('\n      </tbody>\n    </table>\n  ');160; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -7336,6 +7386,97 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
       this.update(onComplete);
     }.bind(this));
   }.bind(this));
+};
+
+/**
+ * Synchronously destroy the local node.  Use on page unload, normally prefer
+ * async steps.
+ */
+NetSimLocalClientNode.prototype.synchronousDestroy = function () {
+  // If connected to remote, synchronously disconnect
+  if (this.myRemoteClient || this.myRouter) {
+    this.synchronousDisconnectRemote();
+  }
+
+  // Remove messages being simulated by me
+  this.shard_.messageTable.readAllCached().forEach(function (row) {
+    if (row.simulatedBy === this.entityID) {
+      var message = new NetSimMessage(this.shard_, row);
+      message.synchronousDestroy();
+    }
+  }, this);
+
+  // Remove my heartbeat row(s)
+  this.heartbeat_.synchronousDestroy();
+  this.heartbeat_ = null;
+
+  // Finally, call super-method
+  NetSimLocalClientNode.superPrototype.synchronousDestroy.call(this);
+};
+
+/**
+ * Destroy the local node; performs appropriate clean-up leading up to
+ * node destruction.
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimLocalClientNode.prototype.destroy = function (onComplete) {
+  // If connected to remote, asynchronously disconnect then try destroy again.
+  if (this.myRemoteClient || this.myRouter) {
+    this.disconnectRemote(function (err) {
+      if (err) {
+        onComplete(err);
+        return;
+      }
+      this.destroy(onComplete);
+    }.bind(this));
+    return;
+  }
+
+  // Remove messages being simulated by this node
+  var myMessages = this.shard_.messageTable.readAllCached().filter(function (row) {
+    return row.simulatedBy === this.entityID;
+  }, this).map(function (row) {
+    return new NetSimMessage(this.shard_, row);
+  }, this);
+  if (myMessages.length > 0) {
+    NetSimEntity.destroyEntities(myMessages, function (err) {
+      if (err) {
+        onComplete(err);
+        return;
+      }
+      this.destroy(onComplete);
+    }.bind(this));
+    return;
+  }
+
+  // Remove heartbeat row, then self
+  this.heartbeat_.destroy(function (err) {
+    if (err) {
+      onComplete(err);
+      return;
+    }
+
+    NetSimLocalClientNode.superPrototype.destroy.call(this, onComplete);
+  });
+};
+
+/**
+ * Synchronously destroy my outgoing wire.  Used when navigating away from
+ * the page - in normal circumstances use async version.
+ */
+NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
+  if (this.myWire) {
+    this.myWire.synchronousDestroy();
+    this.myWire = null;
+  }
+
+  if (this.myRouter) {
+    this.myRouter.stopSimulation();
+  }
+
+  this.myRemoteClient = null;
+  this.myRouter = null;
+  this.remoteChange.notifyObservers(null, null);
 };
 
 /**
@@ -11925,6 +12066,16 @@ NetSimEntity.prototype.destroy = function (onComplete) {
   this.getTable_().delete(this.entityID, onComplete);
 };
 
+/**
+ * Remove entity from remote storage, using a synchronous call.
+ * For use when navigating away from the page; otherwise, async version
+ * is preferred.
+ * @returns {Error|null} error if entity delete fails
+ */
+NetSimEntity.prototype.synchronousDestroy = function () {
+  return this.getTable_().synchronousDelete(this.entityID);
+};
+
 /** Get storage table for this entity type. */
 NetSimEntity.prototype.getTable_ = function () {
   // This method should be implemented by a child class.
@@ -12394,6 +12545,7 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
 NetSimPanel.prototype.addButton = function(buttonText, pressCallback) {
   $('<span>')
       .addClass('netsim-button')
+      .addClass('secondary')
       .html(buttonText)
       .click(pressCallback)
       .appendTo(this.rootDiv_.find('.panel-controls'));
@@ -14520,13 +14672,15 @@ ApiRequestHelper.prototype.get = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'get',
-    dataType: 'json'
-  }).done(function (data /*, textStatus, jqXHR*/) {
-    callback(null, data);
-  }).fail(function (jqXHR, textStatus, errorThrown) {
-    callback(
-        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
-        null);
+    dataType: 'json',
+    success: function (data) {
+      callback(null, data);
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      callback(
+          new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+          null);
+    }
   });
 };
 
@@ -14540,13 +14694,15 @@ ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
     contentType: 'application/json; charset=utf-8',
-    data: JSON.stringify(data)
-  }).done(function (/*data, textStatus, jqXHR*/) {
-    callback(null, null);
-  }).fail(function (jqXHR, textStatus, errorThrown) {
-    callback(
-        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
-        null);
+    data: JSON.stringify(data),
+    success: function () {
+      callback(null, null);
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      callback(
+          new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+          null);
+    }
   });
 };
 
@@ -14560,13 +14716,15 @@ ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback) {
     url: this.apiBaseUrl_ + localUrl,
     type: 'post',
     contentType: 'application/json; charset=utf-8',
-    data: JSON.stringify(data)
-  }).done(function (data /*, textStatus, jqXHR*/) {
-    callback(null, data);
-  }).fail(function (jqXHR, textStatus, errorThrown) {
-    callback(
-        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
-        null);
+    data: JSON.stringify(data),
+    success: function (data) {
+      callback(null, data);
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      callback(
+          new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+          null);
+    }
   });
 };
 
@@ -14577,14 +14735,33 @@ ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback) {
 ApiRequestHelper.prototype.delete = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
-    type: 'delete'
-  }).done(function (/*data, textStatus, jqXHR*/) {
-    callback(null, null);
-  }).fail(function (jqXHR, textStatus, errorThrown) {
-    callback(
-        new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
-        null);
+    type: 'delete',
+    success: function () {
+      callback(null, null);
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      callback(
+          new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown),
+          null);
+    }
   });
+};
+
+/**
+ * @param {!string} localUrl
+ * @returns {Error|null} an error if the request fails
+ */
+ApiRequestHelper.prototype.synchronousDelete = function (localUrl) {
+  var error = null;
+  $.ajax({
+    url: this.apiBaseUrl_ + localUrl,
+    type: 'delete',
+    async: false,
+    error: function (jqXHR, textStatus, errorThrown) {
+      error = new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
+    }
+  });
+  return error;
 };
 
 /**
@@ -14633,6 +14810,14 @@ clientApi.Channel.prototype.update = function (id, value, callback) {
  */
 clientApi.Channel.prototype.delete = function (id, callback) {
   this.requestHelper_.delete('/' + id, callback);
+};
+
+/**
+ * @param {!string} id
+ * @returns {Error|null} error if delete fails
+ */
+clientApi.Channel.prototype.synchronousDelete = function (id) {
+  return this.requestHelper_.synchronousDelete('/' + id);
 };
 
 /**
