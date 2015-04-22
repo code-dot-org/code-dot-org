@@ -77,6 +77,8 @@ template: none
           %a{'ng-href' => "mailto:{{facilitator.email}}"}
             {{facilitator.email}}
     %td
+      %strong
+        ({{workshop.time_zone}})
       %div{'ng-repeat' => 'segment in workshop.segments | orderBy:"start"'}
         %p
           {{segment.start | utc | date:'longDate'}}

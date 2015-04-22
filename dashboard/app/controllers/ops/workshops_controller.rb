@@ -67,6 +67,7 @@ module Ops
         :name,
         :program_type,
         :location,
+        :time_zone,
         :instructions,
         :cohort_id,
         facilitators: [:ops_first_name, :ops_last_name, :email]

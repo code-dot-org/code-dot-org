@@ -655,7 +655,6 @@ title: "Ops Dashboard"
             $scope.segment = null;
             segmentsService.query({id: $routeParams.id}).$promise.then(function (segments) {
               $scope.workshopSegments = segments;
-              $scope.workshops = workshops;
             });
           }
         );
