@@ -115,6 +115,9 @@ en:
         description here: description here
         title: title
       PDAlg Intro: {}
+      PDAlg commitment:
+        CS in Algebra PD commitments: CS in Algebra PD commitments
+        overview of program commitments: overview of program commitments
       PDCSP Intro: {}
       PDECS Intro:
         PD Intro: PD Intro
@@ -308,15 +311,40 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      sciPD Intro: {}
       test demo level:
         demo description: demo description
         demo title: demo title
+      test discourse level type:
+        this is a discourse forum: this is a discourse forum
+        title: title
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
       unique level name here:
         description here: description here
         title: title
+    multi:
+      Choose it!:
+        Really choose it: Really choose it
+        Something to choose: Something to choose
+        What is your favorite choice?: What is your favorite choice?
+        another bad choice: another bad choice
+        pick me!: pick me!
+        wrong answer, stupid: wrong answer, stupid
+      ECSPD unit:
+        Based on what you just read about the ECS course, answer the following question: Based on what you just read about the ECS course, answer the following question
+        ECS Curriculum: ECS Curriculum
+        ECSPD unit: ECSPD unit
+        'Unit 1: Human Computer Interaction': 'Unit 1: Human Computer Interaction'
+        'Unit 2: Problem Solving': 'Unit 2: Problem Solving'
+        'Unit 3: Web Design': 'Unit 3: Web Design'
+        'Unit 4: Introduction to Programming': 'Unit 4: Introduction to Programming'
+        'Unit 5: Computing and Data Analysis': 'Unit 5: Computing and Data Analysis'
+        'Unit 6: Robotics': 'Unit 6: Robotics'
+        What unit from the ECS curriculum are you most interested in?: What unit from the ECS curriculum are you most interested in?
+        What unit of the ECS curriculum are you most excited to teach?: What unit of the ECS curriculum are you most excited to teach?
+        based on what you just read about the ECS course, answer the following question: based on what you just read about the ECS course, answer the following question
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)

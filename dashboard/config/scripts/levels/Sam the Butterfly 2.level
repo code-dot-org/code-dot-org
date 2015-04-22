@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onTick = function() {\r\n    originalOnTick();\r\n    Studio.Globals.succeeded = this.stopped.left && this.sam.x < 0;\r\n  }\r\n  return Studio.Globals.succeeded;\r\n}",
+    "success_condition": "function () {\r\n  var customLogic = Studio.customLogic;\r\n  return customLogic.stopped.left && customLogic.sam && customLogic.sam.x < 0;\r\n}",
     "failure_condition": "function () {\r\n  return (Studio.sprite[0].x < -100);\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
@@ -44,7 +44,8 @@
     "definition_collapse": "false",
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "maze_data": null
   },
   "md5": "e1a7a760c68755d3d79b203c720377d9"
 }]]></config>
