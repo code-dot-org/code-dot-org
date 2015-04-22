@@ -378,11 +378,6 @@ $wide-column-width: 121px;
       border-radius: 3px;
       background-color: $lightest_gray;
 
-      .packet-controls {
-        float: right;
-        text-align: right;
-      }
-
       &.unread {
         background-color: $alabaster;
         border-color: $black;
@@ -390,6 +385,20 @@ $wide-column-width: 121px;
         th {
           font-weight: bold;
         }
+      }
+
+      .expander {
+        cursor: pointer;
+      }
+
+      // The top-left cell that contains the expander icon
+      .maximized-packet thead th.encodingLabel {
+        text-align: left;
+      }
+
+      // Nudge the minimized expander to line up with the maximized one
+      .minimized-packet .expander {
+        padding: 0 5px;
       }
     }
 
