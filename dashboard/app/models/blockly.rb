@@ -176,7 +176,7 @@ class Blockly < Level
 
       if level.is_a? Blockly
         level_prop['startBlocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
-        level_prop['toolboxBlocks'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
+        level_prop['toolbox'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
         level_prop['codeFunctions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
       end
 
