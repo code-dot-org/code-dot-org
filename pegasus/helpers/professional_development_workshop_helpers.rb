@@ -120,7 +120,7 @@ def generate_professional_development_workshops_report(from=nil, to=nil)
       map do |signup|
         signup_data = JSON.parse(signup[:data]) rescue {}
         signup_count += 1 unless signup_data['status_s'] == 'cancelled'
-    end
+      end
 
     {
       Name: data['name_s'],
