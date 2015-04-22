@@ -5,10 +5,10 @@ fr:
   coming_soon: Prochainement
   front_header_banner: "Rejoignez le plus grand cours en ligne de l'Histoire, du 8 au 14 décembre 2014"
   front_intro_default: |
-    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays. 
+    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays.
     Tout le monde peut organiser, depuis partout dans le monde, un événement une Heure de code. Un tutoriel est disponible dans plus de 30 langues.  <strong>Offert à tous de 4 à 104 ans.</strong>
   front_intro_default_uk: |
-    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays. 
+    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays.
     Tout le monde peut organiser un événement une Heure de code. Plus de 3M de personnes ont fait la première heure du Code au Royaume-Uni. Nous allons le doublé en décembre ! <strong>Aucune expérience nécessaire. Offert à tous de 4 à 104 ans.</strong>
   front_watch_video: Regardez la nouvelle vidéo
   header_menu_resources: Ressources
@@ -178,7 +178,7 @@ fr:
     "Je savais que c'était une chance <b>unique</b> ."-Mariana Alzate, élève de 5e
   stats_michael: |
     "Je n'ai<b>jamais</b> mes étudiants aussi excités pour apprendre" - Michael Clark, Professeur
-    
+
   resources_how_to: Guide pratique pour les enseignants
   resources_how_to_events: Guide pratique pour les évènements
   resources_how_to_districts: Guide pratique pour les districts
@@ -202,7 +202,7 @@ fr:
   events_orgs_title: "Tous les événements de l'heure de Code organisés par des organisations partenaires"
   event: événement
   events: événements
-  footer_copyright_message: Copyright 2014 Code.org. Tous droits réservés.
+  footer_copyright_message: Copyright 2015 Code.org. Tous droits réservés.
   footer_trademark_message: Heure de Code™ est une marque de Code.org.
   footer_menu_partners: Partenaires
   footer_menu_contact: Contactez-nous

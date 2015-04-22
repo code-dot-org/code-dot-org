@@ -7,7 +7,7 @@ ja:
   front_intro_default: 'Hour of Codeは、180カ国以上の生徒数千万人が参加する世界的な運動です。誰でもどこでもHour of Codeのイベントを主催する事が出来ます。1時間のチュートリアルは 30 以上の言語で利用可能です。<strong>経験は必要ありません。4歳から104歳が対象です。</strong>。'
   front_intro_default_uk: |
     Hour of Codeは 180 以上の国で数千万人が参加する規模の世界的な運動です。誰でもHouf of Codeのイベントを主催することができます。イギリスでは３百万人以上の人が初めてのHour of Codeを試しました。12月にはその数を倍にしましょう!<strong>経験は必要ありません。対象年令は４才から104才です。</strong>
-    
+
   front_watch_video: 新しいビデオを見る
   header_menu_resources: リソース
   header_menu_faq: FAQ
@@ -83,7 +83,7 @@ ja:
   signup_your_event: イベントにサインアップする。
   signup_name_placeholder: |
     お名前
-    
+
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 例えば、リンカーン ・ ハイスクール
   signup_event_location_placeholder: "郵便番号と国名または住所。 \r (地図上にあなたの位置情報をピンで表示するのに使います。)"
@@ -96,7 +96,7 @@ ja:
   signup_thank_you_header: Hour of Codeのイベントを主催していただきありがとうございます。
   signup_thank_you_message: |
     始める前に知っておくと役立つ情報が入った確認メールを送りました。
-    
+
   map_header: '# 世界中のHour of Code'
   map_header_company: '# 会社主催'
   map_search_placeholder: Hour of Codeのイベントを検索する
@@ -201,7 +201,7 @@ ja:
   events_orgs_title: パートナーを組んでいる組織によってHour of Codeのイベントが成り立っています。
   event: イベント
   events: イベント
-  footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
+  footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ は Code.orgの商標です。
   footer_menu_partners: パートナー
   footer_menu_contact: お問い合わせ
