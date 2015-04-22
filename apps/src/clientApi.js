@@ -67,7 +67,7 @@ ApiRequestHelper.prototype.get = function (localUrl, callback) {
     url: this.apiBaseUrl_ + localUrl,
     type: 'get',
     dataType: 'json',
-    success: function (data /*, textStatus, jqXHR*/) {
+    success: function (data) {
       callback(null, data);
     },
     error: function (jqXHR, textStatus, errorThrown) {
@@ -89,7 +89,7 @@ ApiRequestHelper.prototype.post = function (localUrl, data, callback) {
     type: 'post',
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data),
-    success: function (/*data, textStatus, jqXHR*/) {
+    success: function () {
       callback(null, null);
     },
     error: function (jqXHR, textStatus, errorThrown) {
@@ -111,7 +111,7 @@ ApiRequestHelper.prototype.postToGet = function (localUrl, data, callback) {
     type: 'post',
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(data),
-    success: function (data /*, textStatus, jqXHR*/) {
+    success: function (data) {
       callback(null, data);
     },
     error: function (jqXHR, textStatus, errorThrown) {
@@ -130,7 +130,7 @@ ApiRequestHelper.prototype.delete = function (localUrl, callback) {
   $.ajax({
     url: this.apiBaseUrl_ + localUrl,
     type: 'delete',
-    success: function (/*data, textStatus, jqXHR*/) {
+    success: function () {
       callback(null, null);
     },
     error: function (jqXHR, textStatus, errorThrown) {
