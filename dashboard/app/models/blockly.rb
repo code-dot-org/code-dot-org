@@ -149,7 +149,7 @@ class Blockly < Level
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options") do
       level = self
       # Use values from properties json when available (use String keys instead of Symbols for consistency)
-      level_prop = level.properties.dup || {}
+      level_prop = {}
 
       # Map Dashboard-style names to Blockly-style names in level object.
       # Dashboard underscore_names mapped to Blockly lowerCamelCase, or explicit 'Dashboard:Blockly'
@@ -252,7 +252,7 @@ class Blockly < Level
           .each do |dashboard, blockly|
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
-        property = level_prop[dashboard].presence
+        property = level.properties[dashboard].presence
         value = JSONValue.value(property)
         level_prop[blockly] = value unless value.nil? # make sure we convert false
       end
