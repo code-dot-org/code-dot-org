@@ -334,13 +334,57 @@ NetSimLocalClientNode.prototype.synchronousDestroy = function () {
   }, this);
 
   // Remove my heartbeat row(s)
-  if (this.heartbeat_) {
-    this.heartbeat_.synchronousDestroy();
-    this.heartbeat_ = null;
-  }
+  this.heartbeat_.synchronousDestroy();
+  this.heartbeat_ = null;
 
   // Finally, call super-method
   NetSimLocalClientNode.superPrototype.synchronousDestroy.call(this);
+};
+
+/**
+ * Destroy the local node; performs appropriate clean-up leading up to
+ * node destruction.
+ * @param {!NodeStyleCallback} onComplete
+ */
+NetSimLocalClientNode.prototype.destroy = function (onComplete) {
+  // If connected to remote, asynchronously disconnect then try destroy again.
+  if (this.myRemoteClient || this.myRouter) {
+    this.disconnectRemote(function (err) {
+      if (err) {
+        onComplete(err);
+        return;
+      }
+      this.destroy(onComplete);
+    }.bind(this));
+    return;
+  }
+
+  // Remove messages being simulated by this node
+  var myMessages = this.shard_.messageTable.readAllCached().filter(function (row) {
+    return row.simulatedBy === this.entityID;
+  }, this).map(function (row) {
+    return new NetSimMessage(this.shard_, row);
+  }, this);
+  if (myMessages.length > 0) {
+    NetSimEntity.destroyEntities(myMessages, function (err) {
+      if (err) {
+        onComplete(err);
+        return;
+      }
+      this.destroy(onComplete);
+    }.bind(this));
+    return;
+  }
+
+  // Remove heartbeat row, then self
+  this.heartbeat_.destroy(function (err) {
+    if (err) {
+      onComplete(err);
+      return;
+    }
+
+    NetSimLocalClientNode.superPrototype.destroy.call(this, onComplete);
+  });
 };
 
 /**
