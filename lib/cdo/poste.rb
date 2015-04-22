@@ -99,17 +99,15 @@ module Poste2
   @@message_id_cache = {}
 
   def self.email_address?(address)
-    begin
-      email = Mail::Address.new(address)
-      return false unless email.address == address
-      return false unless email.domain # Must have a domain
-      # A valid domain must have dot_atom_text elements size > 1; user@localhost is excluded
-      # treetop must respond to domain; we exclude valid email values like <user@localhost.com>
-      return false unless (email.__send__(:tree).domain.dot_atom_text.elements.size > 1)
-      true
-    rescue
-      false
-    end
+    email = Mail::Address.new(address)
+    return false unless email.address == address
+    return false unless email.domain # Must have a domain
+    # A valid domain must have dot_atom_text elements size > 1; user@localhost is excluded
+    # treetop must respond to domain; we exclude valid email values like <user@localhost.com>
+    return false unless (email.__send__(:tree).domain.dot_atom_text.elements.size > 1)
+    true
+  rescue
+    false
   end
 
   def self.find_or_create_url(href)

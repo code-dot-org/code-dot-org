@@ -256,11 +256,6 @@ Style/ParenthesesAroundCondition:
 Style/PredicateName:
   Enabled: false
 
-# Offense count: 5
-# Cop supports --auto-correct.
-Style/RedundantBegin:
-  Enabled: false
-
 # Offense count: 6
 # Cop supports --auto-correct.
 Style/RedundantException:
