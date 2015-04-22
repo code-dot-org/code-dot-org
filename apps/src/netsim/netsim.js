@@ -371,6 +371,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
  * http://www.hunlock.com/blogs/Mastering_The_Back_Button_With_Javascript
  *
  * @param {Event} event
+ * @returns {string|undefined} If we want to warn the user before they leave
+ *          the page, this method will return a warning string, which may or
+ *          may not actually be used by the browser to present a warning.  If
+ *          we don't want to warn the user, this method doesn't return anything.
  * @private
  */
 NetSim.prototype.onBeforeUnload_ = function (event) {
