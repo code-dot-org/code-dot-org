@@ -91,16 +91,17 @@ $wide-column-width: 121px;
 
     th, td {
       padding: 1px 5px;
-      border: solid lightgray 1px;
       border-collapse: collapse;
     }
 
     th {
+      border: none;
       font-family: "Gotham 4r", sans-serif;
       font-size: 10pt;
     }
 
     td {
+      border: solid $lighter_gray 1px;
       font-family: "Gotham 4r", sans-serif;
 
       // Make sure table text can be selected and copied
@@ -376,10 +377,6 @@ $wide-column-width: 121px;
       border: solid darkgray thin;
       border-radius: 3px;
       background-color: $lightest_gray;
-
-      td {
-        border-color: $lightest_gray;
-      }
 
       .packet-controls {
         float: right;
