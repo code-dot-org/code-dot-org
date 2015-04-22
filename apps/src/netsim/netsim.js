@@ -469,7 +469,7 @@ NetSim.prototype.synchronousDisconnectFromShard_ = function () {
   this.myNode.stopSimulation();
   this.myNode.synchronousDestroy();
   this.myNode = null;
-  this.shardChange.notifyObservers(null, null); // Worth it?
+  this.shardChange.notifyObservers(null, null);
 };
 
 /**
