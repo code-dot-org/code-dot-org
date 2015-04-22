@@ -148,11 +148,11 @@ class Blockly < Level
   def blockly_options
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options") do
       level = self
-      # Use values from properties json when available (use String keys instead of Symbols for consistency)
       level_prop = {}
 
       # Map Dashboard-style names to Blockly-style names in level object.
-      # Dashboard underscore_names mapped to Blockly lowerCamelCase, or explicit 'Dashboard:Blockly'
+      # Dashboard sample_property will be mapped to Blockly sampleProperty by default.
+      # To override the default camelization add an entry to this hash.
       overrides = {
         required_blocks: 'levelBuilderRequiredBlocks',
         toolbox_blocks: 'toolbox',
@@ -167,8 +167,7 @@ class Blockly < Level
         blockly = overrides[dashboard.to_sym] || dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
-        property = level.properties[dashboard].presence
-        value = JSONValue.value(property)
+        value = JSONValue.value(level.properties[dashboard].presence)
         level_prop[blockly] = value unless value.nil? # make sure we convert false
       end
 
