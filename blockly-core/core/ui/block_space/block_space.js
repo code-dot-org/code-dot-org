@@ -556,7 +556,7 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
 * @return {boolean} True if event is in a delete area.
 */
 Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
-  var mouseXY = Blockly.mouseToSvg(e);
+  var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
 
   // Update trash can visual state

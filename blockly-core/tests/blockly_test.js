@@ -228,6 +228,9 @@ function test_initializeFunctionEditor() {
 function test_contractEditor_add_examples() {
   var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title></block></xml>';
   var container = initializeWithContractEditor(singleDefinitionString);
+  Blockly.contractEditor.autoOpenWithLevelConfiguration({
+    autoOpenFunction: 'functional-function'
+  });
   assertEquals('Has zero examples', 0, Blockly.contractEditor.exampleBlocks.length);
   Blockly.contractEditor.addNewExampleBlock_();
   Blockly.contractEditor.addNewExampleBlock_();
@@ -236,9 +239,43 @@ function test_contractEditor_add_examples() {
   goog.dom.removeNode(container);
 }
 
+function test_contractEditor_new_function_button() {
+  Blockly.defaultNumExampleBlocks = 2;
+  var container = initializeWithContractEditor('<xml/>');
+
+  Blockly.contractEditor.openWithNewFunction();
+
+  var definitionBlock = Blockly.contractEditor.functionDefinitionBlock;
+  assertNotNull(definitionBlock);
+  assertEquals('functional_definition', definitionBlock.type);
+  assertEquals('Has two examples', 2, Blockly.contractEditor.exampleBlocks.length);
+
+  Blockly.contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
+function test_contractEditor_new_variable_button() {
+  var container = initializeWithContractEditor('<xml/>');
+
+  Blockly.contractEditor.openWithNewVariable();
+
+  var definitionBlock = Blockly.contractEditor.functionDefinitionBlock;
+  assertNotNull(definitionBlock);
+  assertEquals('functional_definition', definitionBlock.type);
+  assert(Blockly.contractEditor.isEditingVariable());
+  assertEquals('Variables have no examples', 0,
+    Blockly.contractEditor.exampleBlocks.length);
+
+  Blockly.contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
 function test_contractEditor_change_output_types() {
   var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title><functional_input name="STACK"><block type="functional_call"><mutation name="functional-function"></mutation></block></functional_input></block></xml>';
   var container = initializeWithContractEditor(singleDefinitionString);
+  Blockly.contractEditor.autoOpenWithLevelConfiguration({
+    autoOpenFunction: 'functional-function'
+  });
   Blockly.contractEditor.addNewExampleBlock_();
   Blockly.contractEditor.addNewExampleBlock_();
 
@@ -308,9 +345,6 @@ function initializeWithContractEditor(xmlString) {
   Blockly.useModalFunctionEditor = true;
   Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
     disableExamples: false
-  });
-  Blockly.contractEditor.autoOpenWithLevelConfiguration({
-    autoOpenFunction: 'functional-function'
   });
   return container;
 }

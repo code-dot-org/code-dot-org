@@ -87,7 +87,7 @@ def country_name_from_code(code)
   country[:name_s]
 end
 def no_credit_count
-    DB[:cdo_state_promote].where(cs_counts_t:'No').exclude(state_code_s:'DC').count
+  DB[:cdo_state_promote].where(cs_counts_t:'No').exclude(state_code_s:'DC').count
 end
 def us_state_from_code(code)
   DB[:geography_us_states].where(code_s:code.to_s.strip.upcase).first

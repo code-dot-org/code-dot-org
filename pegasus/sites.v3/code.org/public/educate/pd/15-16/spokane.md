@@ -1,16 +1,11 @@
 ---
-title: Region PD
+title: Spokane PD
 nav: pd2_nav
 ---
 <a id="top"></a>
 
 # Spokane Professional Development
 
-- [I'm attending Computer Science Principles PD](#csp)
-
-
-
-<a id="csp"></a>
 ## Computer Science Principles
 
 **Phase 1: Online Introduction (~2 hours)**
@@ -41,7 +36,8 @@ Spokane WA 99258
 Parking will be free on level 3 and 4 of the BARC Parking Garage on Hamilton and Boone Ave.
 
 
-#### What do I bring to Phase 2? ####
+### What do I bring to Phase 2?
+
 Water Bottle
 <br />
 Snacks
@@ -63,7 +59,7 @@ More info coming soon!
 [**Back to the top**](#top)
 
 ----------
-Please visit [FAQs](/educate/pd/faq) for more information.
+Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 
 <br />
 <br />

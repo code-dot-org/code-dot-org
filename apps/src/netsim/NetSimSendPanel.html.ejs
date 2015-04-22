@@ -6,7 +6,7 @@
 <div class="panel-footer">
   <div class="right-side-controls">
     <% if (level.showAddPacketButton) { %>
-      <span class="netsim-button" id="add-packet-button"><%= i18n.addPacket() %></span>
+      <span class="netsim-button secondary" id="add-packet-button"><%= i18n.addPacket() %></span>
     <% } %>
     <% if (level.messageGranularity === MessageGranularity.PACKETS) { %>
       <span class="netsim-button" id="send-button"><%= i18n.send() %></span>
