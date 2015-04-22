@@ -1,3 +1,5 @@
+var errorMapper = require('./errorMapper');
+
 var annotations = [];
 var aceSession;
 
@@ -24,9 +26,10 @@ module.exports = {
     aceSession = session;
   },
 
-  setJSLintAnnotations: function (jslintAnnotations) {
-    // clone annotations
-    annotations = jslintAnnotations.slice();
+  setJSLintAnnotations: function (jslintResults) {
+    errorMapper.processResults(jslintResults);
+    // clone annotations in case anyone else has a reference to data
+    annotations = jslintResults.data.slice();
     updateGutter();
   },
 

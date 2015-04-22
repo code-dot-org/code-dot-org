@@ -1,6 +1,5 @@
 var dropletConfig = require('../dropletConfig');
 var dropletUtils = require('../../dropletUtils');
-var errorMapper = require('./errorMapper');
 var annotationList = require('./annotationList');
 
 // define ourselves for ace, so that it knows where to get us
@@ -80,11 +79,7 @@ oop.inherits(Mode, JavaScriptMode);
 
     worker.send("changeOptions", [newOptions]);
 
-    worker.on("jslint", function(results) {
-      errorMapper.processResults(results);
-
-      annotationList.setJSLintAnnotations(results.data);
-    });
+    worker.on("jslint", annotationList.setJSLintAnnotations);
 
     worker.on("terminate", function() {
       session.clearAnnotations();
