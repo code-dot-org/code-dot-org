@@ -14,9 +14,7 @@ class RequestTest < Minitest::Unit::TestCase
         ['localhost.studio.code.org:3000', 'code.org'],
         ['localhost:3000', 'localhost'],
         ['3548dd72.ngrok.com', '3548dd72.ngrok.com'],
-    ].each do |pair|
-      host = pair.first
-      cookie_domain = pair.last
+    ].each do |host, cookie_domain|
       req = Rack::Request.new({'HTTP_HOST' => host})
       assert_equal cookie_domain, req.shared_cookie_domain
     end
