@@ -148,15 +148,35 @@ class Blockly < Level
   def blockly_options
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options") do
       level = self
-      # Use values from properties json when available (use String keys instead of Symbols for consistency)
-      level_prop = level.properties.dup || {}
+      level_prop = {}
+
+      # Map Dashboard-style names to Blockly-style names in level object.
+      # Dashboard sample_property will be mapped to Blockly sampleProperty by default.
+      # To override the default camelization add an entry to this hash.
+      overrides = {
+        required_blocks: 'levelBuilderRequiredBlocks',
+        toolbox_blocks: 'toolbox',
+        x: 'initialX',
+        y: 'initialY',
+        maze: 'map',
+        ani_gif_url: 'aniGifURL',
+        success_condition: 'fn_successCondition',
+        failure_condition: 'fn_failureCondition',
+      }
+      level.properties.keys.each do |dashboard|
+        blockly = overrides[dashboard.to_sym] || dashboard.camelize(:lower)
+        # Select value from properties json
+        # Don't override existing valid (non-nil/empty) values
+        value = JSONValue.value(level.properties[dashboard].presence)
+        level_prop[blockly] = value unless value.nil? # make sure we convert false
+      end
 
       # Set some specific values
 
       if level.is_a? Blockly
-        level_prop['start_blocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
-        level_prop['toolbox_blocks'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
-        level_prop['code_functions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
+        level_prop['startBlocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
+        level_prop['toolbox'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
+        level_prop['codeFunctions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
       end
 
       if level.is_a?(Maze) && level.step_mode
@@ -165,124 +185,15 @@ class Blockly < Level
         level_prop['stepOnly'] = step_mode == 2
       end
 
-      # Map Dashboard-style names to Blockly-style names in level object.
-      # Dashboard underscore_names mapped to Blockly lowerCamelCase, or explicit 'Dashboard:Blockly'
-      Hash[%w(
-        start_blocks
-        solution_blocks
-        predraw_blocks
-        slider_speed
-        start_direction
-        instructions
-        initial_dirt
-        final_dirt
-        nectar_goal
-        honey_goal
-        flower_type
-        skip_instructions_popup
-        is_k1
-        required_blocks:levelBuilderRequiredBlocks
-        toolbox_blocks:toolbox
-        x:initialX
-        y:initialY
-        maze:map
-        ani_gif_url:aniGifURL
-        shapeways_url
-        images
-        free_play
-        min_workspace_height
-        permitted_errors
-        disable_param_editing
-        disable_variable_editing
-        success_condition:fn_successCondition
-        failure_condition:fn_failureCondition
-        first_sprite_index
-        protaganist_sprite_index
-        timeout_failure_tick
-        soft_buttons
-        edge_collisions
-        projectile_collisions
-        allow_sprites_outside_playspace
-        sprites_hidden_to_start
-        background
-        coordinate_grid_background
-        use_modal_function_editor
-        use_contract_editor
-        contract_highlight
-        contract_collapse
-        examples_highlight
-        examples_collapse
-        definition_highlight
-        definition_collapse
-        disable_examples
-        default_num_example_blocks
-        impressive
-        open_function_definition
-        disable_sharing
-        edit_code
-        code_functions
-        app_width
-        app_height
-        embed
-        generate_function_pass_blocks
-        timeout_after_when_run
-        custom_game_type
-        project_template_level_name
-        scrollbars
-        is_project_level
-        failure_message_override
-        show_clients_in_lobby
-        show_routers_in_lobby
-        can_connect_to_clients
-        can_connect_to_routers
-        show_add_router_button
-        message_granularity
-        automatic_receive
-        router_expects_packet_header
-        client_initial_packet_header
-        show_add_packet_button
-        show_packet_size_control
-        default_packet_size_limit
-        show_tabs
-        default_tab_index
-        show_metronome
-        show_encoding_controls
-        default_enabled_encodings
-        show_bit_rate_control
-        lock_bit_rate_control
-        default_bit_rate_bits_per_second
-        show_chunk_size_control
-        lock_chunk_size_control
-        default_chunk_size_bits
-        show_router_bandwidth_control
-        default_router_bandwidth
-        show_router_memory_control
-        default_router_memory
-        show_dns_mode_control
-        default_dns_mode
-        input_output_table
-        complete_on_success_condition_not_goals
-      ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
-          .each do |dashboard, blockly|
-        # Select value from properties json
-        # Don't override existing valid (non-nil/empty) values
-        property = level_prop[dashboard].presence
-        value = JSONValue.value(level_prop[blockly] || property)
-        level_prop[blockly] = value unless value.nil? # make sure we convert false
-      end
-
       level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
 
       # Blockly requires startDirection as an integer not a string
       level_prop['startDirection'] = level_prop['startDirection'].to_i if level_prop['startDirection'].present?
       level_prop['sliderSpeed'] = level_prop['sliderSpeed'].to_f if level_prop['sliderSpeed']
-      level_prop['scale'] = {'stepSpeed' => level_prop['step_speed'].to_i} if level_prop['step_speed'].present?
+      level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
 
       # Blockly requires these fields to be objects not strings
-      (
-      %w(map initialDirt finalDirt goal soft_buttons inputOutputTable)
-          .concat NetSim.json_object_attrs
-      ).each do |x|
+      %w(map initialDirt finalDirt goal softButtons inputOutputTable).concat(NetSim.json_object_attrs).each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
       end
 
@@ -303,7 +214,7 @@ class Blockly < Level
                              baseUrl: "#{ActionController::Base.asset_host}/blockly/",
                              app: level.game.try(:app),
                              levelId: level.level_num,
-                             level: level_prop,
+                             level: level_prop.reject!{|_, value| value.nil?},
                              cacheBust: level.class.cache_bust,
                              droplet: level.game.try(:uses_droplet?),
                              pretty: Rails.configuration.pretty_apps ? '' : '.min',
