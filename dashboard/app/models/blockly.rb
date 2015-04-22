@@ -214,7 +214,7 @@ class Blockly < Level
                              baseUrl: "#{ActionController::Base.asset_host}/blockly/",
                              app: level.game.try(:app),
                              levelId: level.level_num,
-                             level: level_prop,
+                             level: level_prop.reject!{|_, value| value.nil?},
                              cacheBust: level.class.cache_bust,
                              droplet: level.game.try(:uses_droplet?),
                              pretty: Rails.configuration.pretty_apps ? '' : '.min',
