@@ -285,13 +285,15 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
     return packetEditor !== packet;
   });
 
-  // Adjust numbering of remaining packets
-  var packetCount = this.packets_.length;
-  var packetIndex;
-  for (var i = 0; i < packetCount; i++) {
-    packetIndex = i + 1;
-    this.packets_[i].setPacketIndex(packetIndex);
-    this.packets_[i].setPacketCount(packetCount);
+  // Adjust numbering of remaining packets if we're not mid-send
+  if (!this.isPlayingSendAnimation_) {
+    var packetCount = this.packets_.length;
+    var packetIndex;
+    for (var i = 0; i < packetCount; i++) {
+      packetIndex = i + 1;
+      this.packets_[i].setPacketIndex(packetIndex);
+      this.packets_[i].setPacketCount(packetCount);
+    }
   }
 };
 
