@@ -560,7 +560,11 @@ en:
           Teaching Strategies: Teaching Strategies
           Preparing for in-person PD: Preparing for in-person PD
           reference: reference
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
         sciencePD:
           Introduction to PD: Introduction to PD
         rbo-reference:
           reference: reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro

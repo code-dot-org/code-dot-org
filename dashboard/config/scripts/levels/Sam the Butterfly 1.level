@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "This bat is named Sam, and the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can see, Sam is free to walk around the yard, and the coordinates at the top of the screen update to tell you his location. Use the arrow keys to move sam around his yard, making note of Sam's coordinates at different locations. Click \"Finish\" when you're ready to move on.",
+    "instructions": "This bat is named Sam, and the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can see, Sam is free to walk around the yard, and the coordinates at the top of the screen update to tell you his location. Use the arrow keys to move Sam around his yard, making note of Sam's coordinates at different locations. Click \"Finish\" when you're ready to move on.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -41,7 +41,8 @@
     "disable_sharing": "true",
     "generate_function_pass_blocks": "true",
     "timeout_after_when_run": "false",
-    "custom_game_type": "Sam the Bat"
+    "custom_game_type": "Sam the Bat",
+    "maze_data": null
   },
   "md5": "434c76b1d714c68ca21de776ceffce1b"
 }]]></config>
