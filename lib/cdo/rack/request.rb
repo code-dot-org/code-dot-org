@@ -50,13 +50,12 @@ module Rack
     end
 
     def shared_cookie_domain_from_host()
-      hostname = host.split(':').first
-      parts = hostname.split('.')
+      parts = host.split('.')
       if parts.count >= 2
-        domain_suffix = parts.last(2)
+        domain_suffix = parts.last(2).join('.')
         return domain_suffix if domain_suffix == 'code.org'
       end
-      hostname
+      host
     end
 
     def splat_path_info()
