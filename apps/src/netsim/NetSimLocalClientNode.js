@@ -398,7 +398,6 @@ NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
   }
 
   if (this.myRouter) {
-    //this.myRouter.synchronousUpdate(); // TODO: Should not be necessary
     this.myRouter.stopSimulation();
   }
 
