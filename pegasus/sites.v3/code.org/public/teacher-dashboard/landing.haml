@@ -2,7 +2,34 @@
 layout: none
 theme: none
 ---
- 
+= view :breadcrumbs, trail:[{url:'/teacher-dashboard', text:'Dashboard'}]
+
+-if dashboard_user[:admin]
+  %h1
+    Ops Dashboard
+-elsif have_permission?('district_contact')
+  %h1
+    District Dashboard
+-elsif have_permission?('facilitator')
+  %h1
+    Facilitator Dashboard
+
+-if dashboard_user[:admin]
+  %a{href:'/ops-dashboard#/districts'}
+    %h2
+      Manage Districts
+-if dashboard_user[:admin] || have_permission?('facilitator')
+  %a{href:'/ops-dashboard#/workshops'}
+    %h2
+      Manage PD Workshops
+-elsif have_permission?('district_contact')
+  %a{href:'/ops-dashboard#/workshops'}
+    %h2
+      View PD Workshops
+-if dashboard_user[:admin] || have_permission?('district_contact')
+  %a{href:'/ops-dashboard#/teacher-cohorts'}
+    %h2
+      Manage Teacher Cohorts
 %div
   %div{style: "float:left; width:100%"}
     %h1{style: "margin-bottom:10px"}= I18n.t('dashboard_landing_title')
