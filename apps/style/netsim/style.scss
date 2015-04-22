@@ -2,6 +2,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
 @import 'color';
 
+$alabaster: #fafafa;
 $own-node-background-color: $white;
 $user-row-hover-color: $lightest_teal;
 $router-row-hover-color: $lighter_orange;
@@ -383,10 +384,11 @@ $wide-column-width: 121px;
       }
 
       &.unread {
-        background-color: $lighter_gray;
+        background-color: $alabaster;
+        border-color: $black;
 
-        td {
-          border-color: $lighter_gray;
+        th {
+          font-weight: bold;
         }
       }
     }
