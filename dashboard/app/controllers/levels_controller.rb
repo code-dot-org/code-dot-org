@@ -23,9 +23,11 @@ class LevelsController < ApplicationController
   # GET /levels/1
   # GET /levels/1.json
   def show
-    set_videos_and_blocks_and_callouts
-    @full_width = true
-    @no_footer_puzzle = (@game == Game.applab)
+    set_videos_and_callouts
+    view_options(
+        full_width: true,
+        no_footer: @game == Game.applab
+    )
   end
 
   # GET /levels/1/edit
@@ -47,16 +49,18 @@ class LevelsController < ApplicationController
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
     blocks_xml = Blockly.convert_category_to_toolbox(blocks_xml) if type == 'toolbox_blocks'
-    @start_blocks = blocks_xml
-    @toolbox_blocks = @level.complete_toolbox(type)  # Provide complete toolbox for editing start/toolbox blocks.
+    level_view_options(
+      start_blocks: blocks_xml,
+      toolbox_blocks: @level.complete_toolbox(type), # Provide complete toolbox for editing start/toolbox blocks.
+      edit_blocks: type,
+      skip_instructions_popup: true
+    )
+    view_options(full_width: true)
     @game = @level.game
-    @full_width = true
     @callback = level_update_blocks_path @level, type
-    @edit_blocks = type
-    @skip_instructions_popup = true
 
     # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
-    @level.properties['success_condition'] = 'function () { return true; }' if @level.is_a? Studio
+    level_view_options(success_condition: 'function () { return true; }') if @level.is_a? Studio
 
     show
     render :show
@@ -196,12 +200,12 @@ class LevelsController < ApplicationController
     authorize! :read, :level
     @level = Level.find(params[:level_id])
     @game = @level.game
-    @hide_source = true
-    @embed = true
-    @share = false
-    @no_padding = true
-    @skip_instructions_popup = true
-    @full_width = true
+    level_view_options(
+      embed: true,
+      share: false,
+      skip_instructions_popup: true
+    )
+    view_options full_width: true
     render 'levels/show'
   end
 
