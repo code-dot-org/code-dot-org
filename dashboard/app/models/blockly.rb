@@ -151,20 +151,6 @@ class Blockly < Level
       # Use values from properties json when available (use String keys instead of Symbols for consistency)
       level_prop = level.properties.dup || {}
 
-      # Set some specific values
-
-      if level.is_a? Blockly
-        level_prop['start_blocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
-        level_prop['toolbox_blocks'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
-        level_prop['code_functions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
-      end
-
-      if level.is_a?(Maze) && level.step_mode
-        step_mode = JSONValue.value(level.step_mode)
-        level_prop['step'] = step_mode == 1 || step_mode == 2
-        level_prop['stepOnly'] = step_mode == 2
-      end
-
       # Map Dashboard-style names to Blockly-style names in level object.
       # Dashboard underscore_names mapped to Blockly lowerCamelCase, or explicit 'Dashboard:Blockly'
       Hash[%w(
@@ -271,12 +257,26 @@ class Blockly < Level
         level_prop[blockly] = value unless value.nil? # make sure we convert false
       end
 
+      # Set some specific values
+
+      if level.is_a? Blockly
+        level_prop['startBlocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
+        level_prop['toolboxBlocks'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
+        level_prop['codeFunctions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
+      end
+
+      if level.is_a?(Maze) && level.step_mode
+        step_mode = JSONValue.value(level.step_mode)
+        level_prop['step'] = step_mode == 1 || step_mode == 2
+        level_prop['stepOnly'] = step_mode == 2
+      end
+
       level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
 
       # Blockly requires startDirection as an integer not a string
       level_prop['startDirection'] = level_prop['startDirection'].to_i if level_prop['startDirection'].present?
       level_prop['sliderSpeed'] = level_prop['sliderSpeed'].to_f if level_prop['sliderSpeed']
-      level_prop['scale'] = {'stepSpeed' => level_prop['step_speed'].to_i} if level_prop['step_speed'].present?
+      level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
 
       # Blockly requires these fields to be objects not strings
       %w(map initialDirt finalDirt goal softButtons inputOutputTable).concat(NetSim.json_object_attrs).each do |x|
