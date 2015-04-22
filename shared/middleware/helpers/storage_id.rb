@@ -1,13 +1,11 @@
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
   storage_id = user_storage_ids_table.insert(user_id:nil)
-
-  site = request.site
-  site = 'code.org' if site == 'studio.code.org' # This cookie is shared!
+  cookie_domain = request.shared_cookie_domain
 
   response.set_cookie(storage_id_cookie_name, {
     value:CGI.escape(storage_encrypt_id(storage_id)),
-    domain:".#{site}",
+    domain:".#{cookie_domain}",
     path:'/v3',
     expires:Time.now + (365 * 24 * 3600)
   })
