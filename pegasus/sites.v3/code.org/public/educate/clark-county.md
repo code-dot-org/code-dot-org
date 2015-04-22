@@ -58,7 +58,7 @@ Schools and teachers can [sign up now](http://www.jotformpro.com/form/5019810984
 
 Help Code.org bring computer science courses to Las Vegas-area schools:
 
-* Share this page with your teacher or principal (see [sample letter](/promote/nycletter))
+* Share this page with your teacher or principal
 * Make a [generous donation to Code.org](/donate)
 * See [other ways to help](/help)
 

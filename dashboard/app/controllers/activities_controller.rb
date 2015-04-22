@@ -152,9 +152,9 @@ class ActivitiesController < ApplicationController
     end
 
     begin
-       trophy_check(current_user) if passed && @script_level && @script_level.script.trophies
+      trophy_check(current_user) if passed && @script_level && @script_level.script.trophies
     rescue StandardError => e
-       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
+      Rails.logger.error "Error updating trophy exception: #{e.inspect}"
     end
   end
 

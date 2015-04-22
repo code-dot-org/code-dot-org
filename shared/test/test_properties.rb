@@ -14,8 +14,8 @@ class PropertiesTest < Minitest::Unit::TestCase
   end
 
   def delete_channel
-     @channels.delete "/v3/channels/#{@channel_id}"
-     assert @channels.last_response.successful?
+    @channels.delete "/v3/channels/#{@channel_id}"
+    assert @channels.last_response.successful?
   end
 
   def set_key_value(key, value)
