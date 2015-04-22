@@ -150,6 +150,10 @@ If you'd like to grab a task, have ideas for projects or want to discuss an item
 
 ## Submitting Contributions
 
+### Code style
+
+Running `rake lint` locally will find any Ruby warnings. For other languages see the [style guide](STYLEGUIDE.md).
+
 ### Testing your changes
 
 #### Manually

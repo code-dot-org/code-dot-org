@@ -14,8 +14,8 @@ class TablesTest < Minitest::Unit::TestCase
   end
 
   def delete_channel
-     @channels.delete "/v3/channels/#{@channel_id}"
-     assert @channels.last_response.successful?
+    @channels.delete "/v3/channels/#{@channel_id}"
+    assert @channels.last_response.successful?
   end
 
   def create_record(record)

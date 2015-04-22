@@ -365,6 +365,6 @@ class Script < ActiveRecord::Base
 
   def self.clear_cache
     # only call this in a test!
-   @@script_cache = nil
+    @@script_cache = nil
   end
 end

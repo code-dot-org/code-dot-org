@@ -188,12 +188,6 @@ Style/IndentArray:
 Style/IndentHash:
   Enabled: false
 
-# Offense count: 21
-# Cop supports --auto-correct.
-# Configuration parameters: Width.
-Style/IndentationWidth:
-  Enabled: false
-
 # Offense count: 83
 # Cop supports --auto-correct.
 Style/LeadingCommentSpace:
@@ -254,11 +248,6 @@ Style/ParenthesesAroundCondition:
 # Offense count: 14
 # Configuration parameters: NamePrefix, NamePrefixBlacklist.
 Style/PredicateName:
-  Enabled: false
-
-# Offense count: 5
-# Cop supports --auto-correct.
-Style/RedundantBegin:
   Enabled: false
 
 # Offense count: 6
