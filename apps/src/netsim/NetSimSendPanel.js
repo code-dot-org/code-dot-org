@@ -423,14 +423,18 @@ NetSimSendPanel.prototype.getNextBit_ = function () {
 NetSimSendPanel.prototype.disableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', true);
   this.getBody().find('.netsim-button').attr('disabled', 'disabled');
-  this.packetSizeControl_.disable();
+  if (this.packetSizeControl_) {
+    this.packetSizeControl_.disable();
+  }
 };
 
 /** Enable all controls in this panel, usually after network activity. */
 NetSimSendPanel.prototype.enableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', false);
   this.getBody().find('.netsim-button').removeAttr('disabled');
-  this.packetSizeControl_.enable();
+  if (this.packetSizeControl_) {
+    this.packetSizeControl_.enable();
+  }
 };
 
 /**
