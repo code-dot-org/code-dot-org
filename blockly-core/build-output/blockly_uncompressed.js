@@ -5841,7 +5841,7 @@ Blockly.Trashcan.prototype.getHeight = function() {
   return Blockly.Trashcan.HEIGHT_
 };
 Blockly.Trashcan.prototype.getRect = function() {
-  var trashXY = Blockly.getSvgXY_(this.svgGroup_);
+  var trashXY = Blockly.getSvgXY_(this.svgGroup_, this.blockSpace_.blockSpaceEditor.svg_);
   return new goog.math.Rect(trashXY.x - Blockly.Trashcan.MARGIN_HOTSPOT_, trashXY.y - Blockly.Trashcan.MARGIN_HOTSPOT_, Blockly.Trashcan.WIDTH_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_, Blockly.Trashcan.HEIGHT_ + 2 * Blockly.Trashcan.MARGIN_HOTSPOT_)
 };
 Blockly.Trashcan.prototype.setOpen_ = function(state) {
@@ -6156,7 +6156,7 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
   }
 };
 Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
-  var mouseXY = Blockly.mouseToSvg(e);
+  var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
   if(this.deleteAreaTrash_) {
     if(this.deleteAreaTrash_.contains(xy)) {
