@@ -5,7 +5,7 @@ template: none
 - authentication_required!
 - forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
 
-= view :breadcrumbs, trail:[{url:'/teacher-dashboard', text:'Dashboard'}, {text:'Teacher cohorts'}]
+= view :breadcrumbs, trail: [{url: '/teacher-dashboard', text: 'Dashboard'}, {text: 'Teacher cohorts'}]
 
 %div{'ng-controller' => 'CohortsController'}
   %h1 Teacher cohorts
