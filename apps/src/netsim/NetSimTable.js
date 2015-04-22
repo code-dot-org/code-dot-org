@@ -81,6 +81,13 @@ NetSimTable.prototype.readAll = function (callback) {
 };
 
 /**
+ * @returns {Array} all locally cached table rows
+ */
+NetSimTable.prototype.readAllCached = function () {
+  return this.arrayFromCache_();
+};
+
+/**
  * @param {!number} id
  * @param {!NodeStyleCallback} callback
  */
