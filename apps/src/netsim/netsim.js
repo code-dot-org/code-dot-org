@@ -466,17 +466,12 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
  * @private
  */
 NetSim.prototype.synchronousDisconnectFromShard_ = function () {
-  if (this.isConnectedToRemote()) {
-    this.myNode.synchronousDisconnectRemote();
-  }
-
   // TODO: Anything else that should be deleted here?
-  // 1. My heartbeats
-  // 2. My messages
   // 3. Router nodes? (last one out turn off the lights?)
 
   this.myNode.stopSimulation();
   this.myNode.synchronousDestroy();
+  this.myNode = null;
   this.shardChange.notifyObservers(null, null); // Worth it?
 };
 
