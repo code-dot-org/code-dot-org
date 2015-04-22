@@ -267,7 +267,7 @@ class Blockly < Level
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
         property = level_prop[dashboard].presence
-        value = JSONValue.value(level_prop[blockly] || property)
+        value = JSONValue.value(property)
         level_prop[blockly] = value unless value.nil? # make sure we convert false
       end
 
