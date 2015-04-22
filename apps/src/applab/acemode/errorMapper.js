@@ -20,6 +20,10 @@ var errorMap = [
  */
 module.exports.processResults = function (results) {
   results.data.forEach(function (item) {
+    if (item.type === 'info') {
+      item.type = 'warning';
+    }
+
     errorMap.forEach(function (errorMapping) {
       if (!errorMapping.original.test(item.text)) {
         return;
