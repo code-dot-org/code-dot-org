@@ -138,8 +138,8 @@ $wide-column-width: 121px;
   // Orange SPAN button
   .netsim-button {
     display: inline-block;
-    background-color: $orange;
     color: $white;
+    background-color: $orange;
     border-radius: 3px;
     font-family: "Gotham 4r", sans-serif;
     font-size: 8pt;
@@ -149,6 +149,10 @@ $wide-column-width: 121px;
 
     // Button text should not be selectable
     @include user_select(none);
+
+    &.secondary {
+      background-color: $light_cyan;
+    }
 
     &[disabled] {
       background-color: $lighter_gray;
@@ -320,7 +324,7 @@ $wide-column-width: 121px;
       .panel-controls {
         float: right;
         margin-top: -0.3em;
-        padding-top: 3px;
+        padding-top: 2px;
 
         // Special margin for buttons in this control area, so they don't squish together.
         .netsim-button {
