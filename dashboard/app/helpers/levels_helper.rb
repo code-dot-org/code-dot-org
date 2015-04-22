@@ -20,7 +20,34 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
+  def set_channel
+    # This only works for logged-in users because the storage_id cookie is set
+    # on '/v3' path for non-logged-in users.
+    return unless current_user
+
+    # The channel should be associated with the template level, if present.
+    # Otherwise the current level.
+    host_level = @level.try(:project_template_level) || @level
+
+    channel_token = ChannelToken.find_by(level: host_level, user: current_user)
+    unless channel_token
+      # Get a new channel_id.
+      channel = ChannelsApi.call request.env.merge(
+        'REQUEST_METHOD' => 'POST',
+        'PATH_INFO' => '/v3/channels',
+        'REQUEST_PATH' => '/v3/channels',
+        'CONTENT_TYPE' => 'application/json;charset=utf-8',
+        'rack.input' => StringIO.new('{}')
+      )
+      channel = channel[1]['Location'].split('/').last
+      channel_token = ChannelToken.new(level: host_level, user: current_user, channel: channel)
+      channel_token.save!
+    end
+    view_options channel: channel_token.channel
+  end
+
   def set_videos_and_callouts
+    set_channel
     view_options(
         autoplay_video: select_and_track_autoplay_video,
         callouts: select_and_remember_callouts(params[:show_callouts])
