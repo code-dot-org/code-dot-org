@@ -629,13 +629,7 @@ Blockly.Flyout.prototype.createFunction_ = function() {
 };
 
 Blockly.Flyout.prototype.createFunctionalVariable_ = function() {
-  Blockly.functionEditor.openWithNewFunction(function(block) {
-    if (!block.type === 'functional_definition') {
-      throw "Non-functional definition block cannot be used as functional variable";
-    }
-
-    block.convertToVariable();
-  });
+  Blockly.contractEditor.openWithNewVariable();
 };
 
 /**

@@ -1310,9 +1310,9 @@ Artist.prototype.afterInject_ = function (config) {
   this.isDrawingAnswer_ = true;
   this.drawAnswer();
   this.isDrawingAnswer_ = false;
-  if (this.level.predraw_blocks) {
+  if (this.level.predrawBlocks) {
     this.isPredrawing_ = true;
-    this.drawBlocksOnCanvas(this.level.predraw_blocks, this.ctxPredraw);
+    this.drawBlocksOnCanvas(this.level.predrawBlocks, this.ctxPredraw);
     this.isPredrawing_ = false;
   }
 

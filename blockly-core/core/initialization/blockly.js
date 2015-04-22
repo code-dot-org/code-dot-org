@@ -56,6 +56,7 @@ goog.require('Blockly.Procedures');
 goog.require('Blockly.Toolbox');
 goog.require('Blockly.WidgetDiv');
 goog.require('Blockly.BlockSpace');
+goog.require('Blockly.Blocks');
 goog.require('Blockly.inject');
 goog.require('Blockly.utils');
 

@@ -1,5 +1,5 @@
 ---
-title: Region PD
+title: Las Vegas PD
 nav: pd2_nav
 ---
 <a id="top"></a>
@@ -7,9 +7,6 @@ nav: pd2_nav
 # Las Vegas Professional Development
 
 
-- [I'm attending Exploring Computer Science PD](#ecs)
-
-<a id="ecs"></a>
 
 ## Exploring Computer Science
 
@@ -24,7 +21,7 @@ The first phase of professional development is a two-hour introduction that focu
 
 Monday, June 8, 2015 - Friday, June 12, 2015
 <br/>
-Mon - Thurs: 8:30am - 3:30pm
+Mon. - Thurs.: 8:30am - 3:30pm
 <br/>
 Friday: 8:30am - 1:30pm
 <br />
@@ -62,7 +59,7 @@ More info coming soon!
 [**Back to the top**](#top)
 
 ----------
-Please visit [FAQs](/educate/pd/faq) for more information.
+Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 
 <br />
 <br />

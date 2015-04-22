@@ -1,13 +1,11 @@
 ---
-title: Region PD
+title: Durham PD
 nav: pd2_nav
 ---
 <a id="top"></a>
 
 # Durham Professional Development
 
-
-- [I'm attending Exploring Computer Science PD](#ecs)
 
 <a id="ecs"></a>
 
@@ -43,7 +41,8 @@ Suite 100
 Durham, NC 27701
 <br />
 
-#### What do I bring to Phase 2? ####
+#### What do I bring to Phase 2?
+
 Water Bottle
 <br />
 Snacks
@@ -65,7 +64,7 @@ More info coming soon!
 [**Back to the top**](#top)
 
 ----------
-Please visit [FAQs](/educate/pd/faq) for more information.
+Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 
 <br />
 <br />

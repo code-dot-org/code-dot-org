@@ -276,20 +276,20 @@ class DashboardSection
   end
 
   def self.fetch_user_sections(user_id)
-     DASHBOARD_DB[:sections].
-       join(:users, :id=>:user_id).
-       select(*fields).
-       where(user_id:user_id).
-       map{|row| self.new(row).to_owner_hash}
+    DASHBOARD_DB[:sections].
+      join(:users, :id=>:user_id).
+      select(*fields).
+      where(user_id:user_id).
+      map{|row| self.new(row).to_owner_hash}
   end
 
   def self.fetch_student_sections(student_id)
     DASHBOARD_DB[:sections].
-        select(*fields).
-        join(:followers, :section_id=>:id).
-        join(:users, :id=>:student_user_id).
-        where(student_user_id: student_id).
-        map{|row| self.new(row).to_member_hash}
+      select(*fields).
+      join(:followers, :section_id=>:id).
+      join(:users, :id=>:student_user_id).
+      where(student_user_id: student_id).
+      map{|row| self.new(row).to_member_hash}
   end
 
   def add_student(student)

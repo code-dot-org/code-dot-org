@@ -1029,7 +1029,7 @@ module.exports = {
   // assessment
   '13': {
     instructionsIcon: 'doggie',
-    is_k1: true,
+    isK1: true,
     image: {
       name: 'doggie',
       width: 200,

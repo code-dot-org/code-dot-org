@@ -87,9 +87,9 @@ class SingleSignOn
   def unsigned_payload
     payload = {}
     ACCESSORS.each do |k|
-     next if (val = send k).nil?
+      next if (val = send k).nil?
 
-     payload[k] = val
+      payload[k] = val
     end
 
     if @custom_fields
