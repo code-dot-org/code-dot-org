@@ -564,7 +564,7 @@ Blockly.Block.prototype.getHeightWidth = function() {
   }
 
   /**
-   * When font or other child content's boundaries extend beyond tops of
+   * When <text> or other child content's boundaries extend beyond tops of
    * blocks (e.g. due to IE MSDN issue #791152), bBox.y ends up being < 0.
    * Here we add bBox.y (which is otherwise typically 0) to the height to
    * discount the above-block content distance.
