@@ -26,18 +26,25 @@ $wide-column-width: 121px;
 
 // Reduce top margin to help fit everything above the fold
 .full_container {
-  padding-top: 2px;
+  position: absolute;
+  top: 85px;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+}
+
+#codeApp {
+  height: 100%;
+}
+
+#appContainer {
+  height: 100%;
 }
 
 // Hide the footer instructions, we put them in the instructions tab
 #prompt-table {
   display: none;
 }
-
-.clearfix {
-  clear: both;
-}
-
 
 // Sprited icons.
 .icon21 {
@@ -75,10 +82,55 @@ $wide-column-width: 121px;
   font-size: 20px;
 }
 
+.vflow-wrap {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.vflow-row {
+  display: table-row;
+  position: relative;
+
+  &.shrink-to-content {
+    height: 1%;
+  }
+}
+
 //
 // NetSim-specific styles
 //
 #netsim {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  #netsim-leftcol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    padding-right: 20px;
+    overflow-y: auto;
+  }
+
+  #netsim-rightcol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 320px);
+
+    #netsim-send {
+      // Collapse down to content-size
+      height: 1%;
+    }
+  }
+
   h1 {
     font-family: "Gotham 5r", sans-serif;
   }
@@ -162,23 +214,11 @@ $wide-column-width: 121px;
     }
   }
 
-  //
-  //General two-column layout rules
-  //
-  #netsim-rightcol {
-    float: right;
-    width: 300px;
-  }
-
-  #netsim-leftcol {
-    margin-right: 320px;
-  }
-
   // Visualization styles
   #netsim-visualization {
     svg {
       background-color: $white;
-      border: solid $black thin;
+      border: solid darkgray thin;
 
       .viz-node {
         text {
@@ -218,10 +258,6 @@ $wide-column-width: 121px;
   .netsim-shard-selection-panel {
     overflow: hidden;
 
-    .content-wrap {
-      margin: 1em;
-    }
-
     .field-box {
       float: left;
       margin-right: 1em;
@@ -233,9 +269,6 @@ $wide-column-width: 121px;
   }
 
   .netsim-lobby-panel {
-    .content-wrap {
-      margin: 1em;
-    }
 
     ul {
       margin: 0 0 10px 0;
@@ -307,9 +340,12 @@ $wide-column-width: 121px;
   $panel_border_radius: 0.3em;
 
   div.netsim-panel {
-    background-color: $white;
-    margin: 0 0 0.5em;
+    margin: 0;
     padding: 0;
+
+    & > .vflow-wrap {
+      margin-bottom: 10px;
+    }
 
     h1 {
       margin: 0;
@@ -335,11 +371,18 @@ $wide-column-width: 121px;
     }
 
     div.panel-body {
-      border-left: solid darkgray thin;
-      border-right: solid darkgray thin;
-      border-bottom: solid darkgray thin;
-      border-top: solid $cyan thin;
+      background-color: $white;
+      border-left: solid darkgray 1px;
+      border-right: solid darkgray 1px;
+      border-bottom: solid darkgray 1px;
+      border-top: solid $cyan 1px;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
+      width: calc(100% - 2px);
+      height: calc(100% - 10px);
+    }
+
+    .content-wrap {
+      margin: 1em;
     }
 
     // Minimized panel, contents are hidden.
@@ -660,7 +703,6 @@ $wide-column-width: 121px;
   }
 
   .netsim-tabs {
-    margin-top: 1em;
 
     h1 {
       font-size: 10pt;
@@ -768,13 +810,6 @@ $wide-column-width: 121px;
         height: 100px;
       }
       padding-right: 14px;
-    }
-  }
-
-  // Connection status panel, above visualization
-  .netsim-panel.netsim_status_panel {
-    div.panel-body {
-      padding: 1em;
     }
   }
 }
