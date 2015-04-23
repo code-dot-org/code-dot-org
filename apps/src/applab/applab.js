@@ -761,6 +761,10 @@ Applab.init = function(config) {
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+  user = {
+    applabUserId: config.applabUserId,
+    isAdmin: !!config.isAdmin
+  };
 
   loadLevel();
 
@@ -807,7 +811,7 @@ Applab.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       pinWorkspaceToBottom: true,
-      hasDesignMode: true,
+      hasDesignMode: user.isAdmin,
       designModeBox: designModeBox
     }
   });
@@ -977,8 +981,6 @@ Applab.init = function(config) {
     }
 
   }
-
-  user = {applabUserId: config.applabUserId};
 };
 
 /**
@@ -1664,7 +1666,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 
