@@ -1,7 +1,4 @@
 :css
-  .course_progress {
-    margin: 10px 0;
-  }
 
 - user_script ||= nil
 .course_progress
@@ -10,6 +7,7 @@
       %h3.whitetext{style: 'margin: 0; display: inline-block'}
         %a.expando{style: 'color: white'}
           %i.fa.fa-plus-square
+        = image_tag(script.logo_image, class: 'logo') if script.logo_image
         = data_t_suffix('script.name', script.name, "title")
       - if script.beta?
         %span.betatext{style: 'font-size: 24.5px'}

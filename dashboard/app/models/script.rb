@@ -154,8 +154,14 @@ class Script < ActiveRecord::Base
     name == 'course1'
   end
 
-  def has_banner_image?
-    k5_course?
+  def banner_image
+    if k5_course?
+      "banner_#{name}_cropped.jpg"
+    end
+  end
+
+  def logo_image
+    I18n.t(['data.script.name', name, 'logo_image'].join('.'), raise: true) rescue nil
   end
 
   def k5_course?
