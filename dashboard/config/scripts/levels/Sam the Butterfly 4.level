@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onTick = function() {\r\n    if (this.studio_.tickCount === 1) {\r\n      this.stopped = {left: false, up: false, right: false, down: false};\r\n    }\r\n    originalOnTick();\r\n    Studio.Globals.succeeded = (this.stopped.left && this.stopped.right) && (this.sam.x < 0 || this.sam.x > 300);\r\n  }\r\n  return Studio.Globals.succeeded;\r\n}",
+    "success_condition": "function () {\r\n  var customLogic = Studio.customLogic;\r\n  return customLogic.stopped.left && customLogic.stopped.right && customLogic.sam && (customLogic.sam.x < 0 || customLogic.sam.x > 300);\r\n}",
     "failure_condition": "function () {\r\n  return ((Studio.sprite[0].x < -100) || (Studio.sprite[0].x > 400));\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
