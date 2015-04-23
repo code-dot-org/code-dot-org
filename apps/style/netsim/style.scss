@@ -84,6 +84,7 @@ $wide-column-width: 121px;
 
 .vflow-wrap {
   display: table;
+  position: relative;
   table-layout: fixed;
   width: 100%;
   height: 100%;
@@ -94,7 +95,7 @@ $wide-column-width: 121px;
   position: relative;
 
   &.shrink-to-content {
-    height: 1%;
+    height: 1px;
   }
 }
 
