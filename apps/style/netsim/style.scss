@@ -453,8 +453,9 @@ $wide-column-width: 121px;
     }
 
     .scroll-area {
-      margin: 0.5em 0 0.5em 0;
-      max-height: 300px;
+      position: absolute;
+      top: 3px;
+      bottom: 10px;
       width: 100%;
       overflow-y: auto;
     }
