@@ -14469,6 +14469,8 @@ Blockly.Block.prototype.getHeightWidth = function() {
   if(bBox.height > 0) {
     bBox.height -= 1
   }
+  var heightWithoutContentAboveTop = bBox.height + bBox.y;
+  bBox.height = Math.max(0, heightWithoutContentAboveTop);
   return bBox
 };
 Blockly.Block.prototype.onMouseDown_ = function(e) {
