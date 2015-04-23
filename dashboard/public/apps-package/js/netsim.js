@@ -4204,13 +4204,15 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
     return packetEditor !== packet;
   });
 
-  // Adjust numbering of remaining packets
-  var packetCount = this.packets_.length;
-  var packetIndex;
-  for (var i = 0; i < packetCount; i++) {
-    packetIndex = i + 1;
-    this.packets_[i].setPacketIndex(packetIndex);
-    this.packets_[i].setPacketCount(packetCount);
+  // Adjust numbering of remaining packets if we're not mid-send
+  if (!this.isPlayingSendAnimation_) {
+    var packetCount = this.packets_.length;
+    var packetIndex;
+    for (var i = 0; i < packetCount; i++) {
+      packetIndex = i + 1;
+      this.packets_[i].setPacketIndex(packetIndex);
+      this.packets_[i].setPacketCount(packetCount);
+    }
   }
 };
 
@@ -4342,14 +4344,18 @@ NetSimSendPanel.prototype.getNextBit_ = function () {
 NetSimSendPanel.prototype.disableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', true);
   this.getBody().find('.netsim-button').attr('disabled', 'disabled');
-  this.packetSizeControl_.disable();
+  if (this.packetSizeControl_) {
+    this.packetSizeControl_.disable();
+  }
 };
 
 /** Enable all controls in this panel, usually after network activity. */
 NetSimSendPanel.prototype.enableEverything = function () {
   this.getBody().find('input, textarea').prop('disabled', false);
   this.getBody().find('.netsim-button').removeAttr('disabled');
-  this.packetSizeControl_.enable();
+  if (this.packetSizeControl_) {
+    this.packetSizeControl_.enable();
+  }
 };
 
 /**
@@ -12305,14 +12311,16 @@ NetSimBitLogPanel.prototype.render = function () {
   var newMarkup = $(markup({
     binary: this.binary_,
     enabledEncodings: this.encodings_,
-    chunkSize: this.chunkSize_
+    chunkSize: this.chunkSize_,
+    showReadWireButton: (this.receiveButtonCallback_ !== undefined)
   }));
   this.getBody().html(newMarkup);
   NetSimEncodingControl.hideRowsByEncoding(this.getBody(), this.encodings_);
 
   // If we have a receive callback, add a receive button
   if (this.receiveButtonCallback_) {
-    this.addButton(i18n.readWire(), this.onReceiveButtonPress_.bind(this));
+    this.getBody().find('#read-wire-button')
+        .click(this.onReceiveButtonPress_.bind(this));
   }
 
   // Add a clear button to the panel header
@@ -12749,6 +12757,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
+  var i18n = require('../../locale/current/netsim');
   var netsimConstants = require('./netsimConstants');
   var dataConverters = require('./dataConverters');
 
@@ -12762,9 +12771,9 @@ with (locals || {}) { (function(){
    * @param {string} encodedContent
    */
   function logRow(encodingType, encodedContent) {
-    ; buf.push('\n    <tr class="', escape((16,  encodingType )), '">\n      <th nowrap class="', escape((17,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((17,  getEncodingLabel(encodingType) )), '</th>\n      <td class="', escape((18,  PacketUIColumnType.MESSAGE )), '">', escape((18,  encodedContent )), '</td>\n    </tr>\n    ');20;
+    ; buf.push('\n    <tr class="', escape((17,  encodingType )), '">\n      <th nowrap class="', escape((18,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((18,  getEncodingLabel(encodingType) )), '</th>\n      <td class="', escape((19,  PacketUIColumnType.MESSAGE )), '">', escape((19,  encodedContent )), '</td>\n    </tr>\n    ');21;
   }
-; buf.push('\n<div>\n  <div class="scroll-area">\n    <div class="packet">\n      <table>\n        <tbody>\n          ');28;
+; buf.push('\n<div>\n  <div class="scroll-area">\n    <div class="packet">\n      <table>\n        <tbody>\n          ');29;
             logRow(EncodingType.ASCII, dataConverters.binaryToAscii(binary, chunkSize));
 
             logRow(EncodingType.DECIMAL, dataConverters.alignDecimal(dataConverters.binaryToDecimal(binary, chunkSize)));
@@ -12774,7 +12783,7 @@ with (locals || {}) { (function(){
             logRow(EncodingType.BINARY, dataConverters.formatBinary(binary, chunkSize));
 
             logRow(EncodingType.A_AND_B, dataConverters.formatAB(dataConverters.binaryToAB(binary), chunkSize));
-          ; buf.push('\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n'); })();
+          ; buf.push('\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n');45; if (showReadWireButton) { ; buf.push('\n  <div class="panel-footer">\n    <div class="right-side-controls">\n      <span class="netsim-button" id="read-wire-button">', escape((48,  i18n.readWire() )), '</span>\n    </div>\n  </div>\n');51; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -12782,7 +12791,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./dataConverters":195,"./netsimConstants":199,"./netsimUtils":201,"ejs":274}],195:[function(require,module,exports){
+},{"../../locale/current/netsim":263,"./dataConverters":195,"./netsimConstants":199,"./netsimUtils":201,"ejs":274}],195:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
