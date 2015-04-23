@@ -32,13 +32,13 @@ def main()
     HipChat.log "<b>#{projects}</b> built.", color:'green'
 
     HipChat.developers "<b>#{projects}</b> built.", color:'green'
-    HipChat.developers "/quote #{commit_log}", color:'gray', message_format:'text'
+    HipChat.developers "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", color:'gray', message_format:'text'
   else
     HipChat.log "<b>#{projects}</b>  failed to build!", color:'red'
     HipChat.log "/quote #{log}", color:'gray', message_format:'text'
 
     HipChat.developers "<b>#{projects}</b>  failed to build!", color:'red', notify:1
-    HipChat.developers "/quote #{commit_log}", color:'gray', message_format:'text'
+    HipChat.developers "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", color:'gray', message_format:'text'
   end
 
   # Return the same output and status code that BUILD returned.
