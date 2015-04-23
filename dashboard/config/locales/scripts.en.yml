@@ -591,12 +591,16 @@ en:
           description: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
           Evaluation Blocks: Evaluation Blocks
+          logo_image: nextech_logo.png
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
           Evaluation Blocks: Evaluation Blocks
+          logo_image: izone_logo.png
         sciencePD-NexTech:
           Introduction to PD: Introduction to PD
+          logo_image: nextech_logo.png
         sciencePD-iZone:
           Introduction to PD: Introduction to PD
+          logo_image: izone_logo.png
