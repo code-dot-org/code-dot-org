@@ -108,7 +108,7 @@ class TablesApi < Sinatra::Base
     #unsupported_media_type unless params[:import_file][:type]== 'text/csv'
 
     max_records = 5000
-    table_url = "/private/edit-csp-table/#{channel_id}/#{table_name}"
+    table_url = "/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
     table = TableType.new(channel_id, storage_id(endpoint), table_name)
     tempfile = params[:import_file][:tempfile]
