@@ -1345,6 +1345,10 @@ studioApp.runButtonClick = function() {
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
+    var designCell = document.getElementById('design-cell');
+    if (designCell) {
+      designCell.className = 'design-cell-enabled';
+    }
   }
 };
 
