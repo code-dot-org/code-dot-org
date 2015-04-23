@@ -388,3 +388,15 @@ button.arrow:focus {
   margin-bottom: 5px;
   font-size: 18px;
 }
+
+.ace_gutter-cell.ace_error {
+  background-image: url('/blockly/media/skins/applab/gutterError.png');
+  background-size: 16px 16px;
+  background-position: 2px 0px;
+}
+
+.ace_gutter-cell.ace_warning {
+  background-image: url('/blockly/media/skins/applab/gutterWarn.png');
+  background-size: 16px 16px;
+  background-position: 2px 0px;
+}

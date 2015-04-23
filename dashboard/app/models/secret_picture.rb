@@ -11,6 +11,7 @@ class SecretPicture < ActiveRecord::Base
   end
 
   def self.random
+    raise "there are no SecretPictures! Do you need to rake seed:secret_pictures?" if self.count <= 0
     # assumes that there are no holes in the ids!
     # 0 <= random_number < n
     self.find(SecureRandom.random_number(self.count) + 1)
