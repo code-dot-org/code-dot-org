@@ -113,9 +113,13 @@ $wide-column-width: 121px;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 300px;
-    padding-right: 20px;
+    width: 320px;
     overflow-y: auto;
+
+    & > .vflow-wrap {
+      // Fix column to 300px width, but allow scrollbar to appear outside of that.
+      width: 300px;
+    }
   }
 
   #netsim-rightcol {
@@ -123,7 +127,7 @@ $wide-column-width: 121px;
     top: 0;
     bottom: 0;
     right: 0;
-    width: calc(100% - 320px);
+    width: calc(100% - 330px);
 
     #netsim-send {
       // Collapse down to content-size
