@@ -285,15 +285,18 @@ NetSim.prototype.initWithUserName_ = function (user) {
       logTitle: i18n.receivedMessageLog(),
       isMinimized: false,
       hasUnreadMessages: true,
-      packetSpec: this.level.clientInitialPacketHeader
+      packetSpec: this.level.clientInitialPacketHeader,
+      expandCollapseCallback: this.onLogPanelExpandCollapse_.bind(this)
     });
 
     this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentMessageLog(),
       isMinimized: true,
       hasUnreadMessages: false,
-      packetSpec: this.level.clientInitialPacketHeader
+      packetSpec: this.level.clientInitialPacketHeader,
+      expandCollapseCallback: this.onLogPanelExpandCollapse_.bind(this)
     });
+
   } else if (this.level.messageGranularity === MessageGranularity.BITS) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
@@ -345,6 +348,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.sendPanel_ = new NetSimSendPanel($('#netsim-send'), this.level,
       this);
 
+  this.onLogPanelExpandCollapse_();
   this.changeEncodings(this.level.defaultEnabledEncodings);
   this.setChunkSize(this.level.defaultChunkSizeBits);
   this.setMyDeviceBitRate(this.level.defaultBitRateBitsPerSecond);
@@ -398,6 +402,25 @@ NetSim.prototype.onBeforeUnload_ = function (event) {
 NetSim.prototype.onUnload_ = function () {
   if (this.isConnectedToShard()) {
     this.synchronousDisconnectFromShard_();
+  }
+};
+
+/**
+ *
+ * @private
+ */
+NetSim.prototype.onLogPanelExpandCollapse_ = function () {
+  var receiveMinimized = this.receivedMessageLog_ &&
+      this.receivedMessageLog_.isMinimized();
+  var sentMinimized = this.sentMessageLog_ &&
+      this.sentMessageLog_.isMinimized();
+
+  if (receiveMinimized && sentMinimized) {
+    // Show invisible expander element to push collapsed logs to bottom of page
+    $('#netsim #netsim-logs .vflow-row.filler').show();
+  } else {
+    // Hide invisible expander element to let logs fill page height
+    $('#netsim #netsim-logs .vflow-row.filler').hide();
   }
 };
 

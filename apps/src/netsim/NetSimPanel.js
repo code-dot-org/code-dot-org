@@ -30,6 +30,8 @@ var markup = require('./NetSimPanel.html');
  *        (closed) by clicking on the title. Defaults to TRUE.
  * @param {boolean} [options.beginMinimized] - Whether this panel should be
  *        minimized (closed) when it is initially created.  Defaults to FALSE.
+ * @param {function} [options.expandCollapseCallback] - Method to call whenever
+ *        the panel is expanded or collapsed.
  * @constructor
  */
 var NetSimPanel = module.exports = function (rootDiv, options) {
@@ -78,6 +80,14 @@ var NetSimPanel = module.exports = function (rootDiv, options) {
    * @private
    */
   this.isMinimized_ = utils.valueOr(options.beginMinimized, false);
+
+  /**
+   * Function to call whenever this panel is expanded or collapsed.
+   * @type {function}
+   * @private
+   */
+  this.expandCollapseCallback_ = utils.valueOr(options.expandCollapseCallback,
+      function () {});
 
   // Initial render
   this.render();
@@ -148,6 +158,11 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
         .removeClass('fa-plus-square');
   }
   this.isMinimized_ = becomeMinimized;
+  this.expandCollapseCallback_();
+};
+
+NetSimPanel.prototype.isMinimized = function () {
+  return this.isMinimized_;
 };
 
 /**
