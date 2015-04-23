@@ -89,4 +89,5 @@ Dashboard::Application.configure do
 
   # Serve a production version of React
   config.react.variant = :production
+  config.lograge.enabled = true
 end
