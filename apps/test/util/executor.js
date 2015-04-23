@@ -52,9 +52,7 @@ function setGlobals () {
   jsdomRoot.dom.level3.html.HTMLElement.prototype.getBBox = function () {
     return {
       height: 0,
-      width: 0,
-      x: 0,
-      y: 0
+      width: 0
     };
   };
 
