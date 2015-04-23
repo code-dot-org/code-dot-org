@@ -63,6 +63,7 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 - [Tennessee](#tn)
 - [Texas](#tx)
 - [Utah](#ut)
+- [Vermont](#vt)
 - [Virginia](#va)
 - [Washington](#wa)
 - [Wisconsin](#wi)
@@ -464,13 +465,6 @@ golas@pd.code.org
 
 [col-33]
 
-### Danielle McAvoy
-Worcester, MA
-
-mcavoy@pd.code.org
-
-[/col-33]
-
 <p
 style="clear:both">&nbsp;
 </p>
@@ -539,6 +533,11 @@ locke@pd.code.org
 Newark, NJ
 
 drakes@pd.code.org
+
+### Joann Presbrey
+Jersey City, NJ
+
+presbrey@pd.code.org
 
 <a id="nv"></a>
 ## Nevada
@@ -746,6 +745,13 @@ ramsay@pd.code.org
 style="clear:both">&nbsp;
 </p>
 
+<a id="vt"></a>
+## Vermont
+### Danielle McAvoy
+Burlington, VT
+
+mcavoy@pd.code.org
+
 <a id="va"></a>
 ## Virginia
 ### Rebecca Dovi
@@ -765,10 +771,10 @@ olson@pd.code.org
 
 [col-33]
 
-### Tammie Schrader
-Cheney, WA
+### Tammie Scrader
+Spokane, Washington
 
-schrader@pd.code.org
+scrader@pd.code.org
 
 [/col-33]
 
