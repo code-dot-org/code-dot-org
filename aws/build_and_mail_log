@@ -23,19 +23,22 @@ def main()
   status = $?.exitstatus
   return status if status == 0 && log.empty?
 
-  # Notify the HipChat channels about what happened.
-  projects = ARGV.join(' ')
-  if status == 0
-    HipChat.log "<b>#{projects}</b> built.", color:'green'
+  Dir.chdir(deploy_dir) do
+    commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{RakeUtils.git_revision}"
+    # Notify the HipChat channels about what happened.
+    projects = ARGV.join(' ')
+    if status == 0
+      HipChat.log "<b>#{projects}</b> built.", color:'green'
 
-    HipChat.developers "<b>#{projects}</b> built.", color:'green'
-    HipChat.developers "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", color:'gray', message_format:'text'
-  else
-    HipChat.log "<b>#{projects}</b>  failed to build!", color:'red'
-    HipChat.log "/quote #{log}", color:'gray', message_format:'text'
+      HipChat.developers "<b>#{projects}</b> built.", color:'green'
+      HipChat.developers commit_url, color:'gray', message_format:'text'
+    else
+      HipChat.log "<b>#{projects}</b>  failed to build!", color:'red'
+      HipChat.log "/quote #{log}", color:'gray', message_format:'text'
 
-    HipChat.developers "<b>#{projects}</b>  failed to build!", color:'red', notify:1
-    HipChat.developers "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", color:'gray', message_format:'text'
+      HipChat.developers "<b>#{projects}</b>  failed to build!", color:'red', notify:1
+      HipChat.developers commit_url, color:'gray', message_format:'text'
+    end
   end
 
   # Return the same output and status code that BUILD returned.
