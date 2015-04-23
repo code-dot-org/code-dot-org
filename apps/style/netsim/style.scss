@@ -522,6 +522,11 @@ $wide-column-width: 121px;
   // Mimics the log panel styles as much as possible.
   .netsim-send-panel {
 
+    .send-panel-packets {
+      max-height: 265px;
+      overflow-y: auto;
+    }
+
     .netsim-packet {
       border: solid darkgray thin;
       background-color: $lightest_gray;
