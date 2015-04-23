@@ -23,9 +23,6 @@ def main()
   status = $?.exitstatus
   return status if status == 0 && log.empty?
 
-  # Something was built, so retrieve the commit message(s) that triggered the build.
-  commit_log = IO.read(deploy_dir('rebuild')).strip if File.file?(deploy_dir('rebuild'))
-
   # Notify the HipChat channels about what happened.
   projects = ARGV.join(' ')
   if status == 0
