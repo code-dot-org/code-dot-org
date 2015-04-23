@@ -56,18 +56,6 @@
     return messageBinary;
   }
 
-  function packetControls() {
-    %>
-      <div class="packet-controls">
-        <% if (isMinimized) { %>
-          <span class="netsim-button maximize-button" title="<%= i18n.expand() %>"><i class="fa fa-expand"></i></span>
-        <% } else { %>
-          <span class="netsim-button minimize-button" title="<%= i18n.collapse() %>"><i class="fa fa-compress"></i></span>
-        <% } %>
-      </div>
-    <%
-  }
-
   /**
    * @param {EncodingType} encodingType
    * @param {string} toAddress
@@ -101,13 +89,17 @@
     var message = packet.getBodyAsBinary();
   %>
   <% if (isMinimized) { %>
-      <% packetControls(); %>
-      <div class="single-line-with-ellipsis user-data"><%= getOneLinePacketSummary() %></div>
+      <div class="minimized-packet single-line-with-ellipsis user-data">
+        <i class="fa fa-plus-square expander"></i>
+        <%= getOneLinePacketSummary() %>
+      </div>
   <% } else { %>
-    <table>
+    <table class="maximized-packet">
       <thead>
         <tr>
-          <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
+          <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>">
+            <i class="fa fa-minus-square expander"></i>
+          </th>
           <% if (showToAddress) { %>
             <th nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= i18n.to() %></th>
           <% } %>
@@ -118,7 +110,6 @@
             <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
           <% } %>
           <th class="<%= PacketUIColumnType.MESSAGE %>">
-            <% packetControls(); %>
             <%= i18n.message() %>
           </th>
         </tr>
