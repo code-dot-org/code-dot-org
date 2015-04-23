@@ -60,6 +60,7 @@ var MESSAGE_SLIDE_IN_DURATION_MS = 400;
  * @param {boolean} [options.isMinimized] defaults to FALSE
  * @param {boolean} [options.hasUnreadMessages] defaults to FALSE
  * @param {packetHeaderSpec} options.packetSpec
+ * @param {function} [options.expandCollapseCallback]
  * @constructor
  * @augments NetSimPanel
  * @implements INetSimLogPanel
@@ -110,7 +111,8 @@ var NetSimLogPanel = module.exports = function (rootDiv, options) {
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
     panelTitle: options.logTitle,
-    beginMinimized: options.isMinimized
+    beginMinimized: options.isMinimized,
+    expandCollapseCallback: options.expandCollapseCallback
   });
 };
 NetSimLogPanel.inherits(NetSimPanel);
