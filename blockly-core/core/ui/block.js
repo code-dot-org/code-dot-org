@@ -552,16 +552,6 @@ Blockly.Block.prototype.getHeightWidth = function() {
     // Subtract one from the height due to the shadow.
     bBox.height -= 1;
   }
-
-  /**
-   * When font or other child content's boundaries extend beyond tops of
-   * blocks (e.g. due to IE MSDN issue #791152), bBox.y ends up being < 0.
-   * Here we add bBox.y (which is otherwise typically 0) to the height to
-   * discount the above-block distance.
-   */
-  var heightWithoutContentAboveTop = bBox.height + bBox.y;
-  bBox.height = Math.max(0, heightWithoutContentAboveTop);
-
   return bBox;
 };
 
