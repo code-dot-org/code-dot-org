@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420232015) do
+ActiveRecord::Schema.define(version: 20150416231806) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -473,7 +473,6 @@ ActiveRecord::Schema.define(version: 20150420232015) do
   add_index "users", ["teacher_bonus_prize_id", "deleted_at"], name: "index_users_on_teacher_bonus_prize_id_and_deleted_at", unique: true, using: :btree
   add_index "users", ["teacher_prize_id", "deleted_at"], name: "index_users_on_teacher_prize_id_and_deleted_at", unique: true, using: :btree
   add_index "users", ["unconfirmed_email", "deleted_at"], name: "index_users_on_unconfirmed_email_and_deleted_at", using: :btree
-  add_index "users", ["user_type"], name: "index_users_on_user_type", using: :btree
   add_index "users", ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
 
   create_table "videos", force: true do |t|
