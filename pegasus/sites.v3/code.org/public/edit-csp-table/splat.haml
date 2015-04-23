@@ -1,0 +1,131 @@
+---
+title: "View Applab Table"
+theme: angular
+angular: recordsApp
+---
+
+-channel_id = request.splat_path_info[1..-1].split('/').first
+-table_name = request.splat_path_info[1..-1].split('/').last
+-api_base_url = "/v3/shared-tables/#{channel_id}/#{table_name}"
+
+%div{"ng-app" => "recordsApp", "ng-view" => ""}
+
+:javascript
+  'use strict';
+
+  // Declare app level module which depends on filters, and services
+  angular.module('recordsApp', [
+    'ngRoute',
+    'ngResource',
+    'recordsApp.controllers',
+    'recordsApp.services'
+  ]).config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/',
+                        {templateUrl: '/edit-csp-table/records',
+                         controller: 'RecordsController'});
+    $routeProvider.otherwise({redirectTo: '/'});
+  }]);
+
+  // SERVICES
+  var services = angular.module('recordsApp.services', []).
+      value('version', '0.1');
+
+  services.factory('recordsService', ['$resource',
+    function($resource) {
+      var Record = $resource("#{api_base_url}/:recordId", {recordId:'@id'}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method: 'GET'},
+        //  'save':   {method: 'POST'},
+        //  'query':  {method: 'GET', isArray:true},
+        //  'remove': {method: 'DELETE'},
+        //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
+      });
+
+      return Record;
+    }]);
+
+  // CONTROLLERS
+
+  var controllers = angular.module('recordsApp.controllers', []).
+      value('version', '0.1');
+
+  controllers.controller('RecordsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'recordsService',
+      function($scope, $route, $routeParams, $location, $window, recordsService) {
+    $scope.records = recordsService.query();
+    $scope.newColumnName = '';
+    $scope.newRecord = new recordsService();
+    $scope.tableName = "#{table_name}";
+    $scope.channelId = "#{channel_id}";
+    $scope.importing = false;
+    $scope.reverse = true;
+
+    $scope.records.$promise.then(function(records) {
+      $scope.columns = getColumns(records);
+    }).catch($scope.genericError);
+
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+
+    $scope.addColumn = function() {
+      if ($scope.newColumnName == '') return;
+      $scope.columns.push($scope.newColumnName);
+      $scope.newColumnName = '';
+    }
+
+    $scope.saveRecord = function(record) {
+      record.editing = undefined;
+      var props = Object.keys(record);
+      for (var i = 0; i < props.length; i++) {
+        // Do not cast 'id' or properties added by angular.
+        if (props[i].indexOf('$') === 0 || props[i] == 'id') continue;
+        record[props[i]] = castValue(record[props[i]]);
+      }
+      record.$save(record).then(function(record) {
+        // TODO(dave): remove once update API returns id as a number.
+        record.id = parseInt(record.id);
+      });
+    }
+
+    $scope.deleteRecord = function(record) {
+      record.$remove(record);
+      var index = $scope.records.indexOf(record);
+      if (index > -1) {
+        $scope.records.splice(index, 1);
+      }
+    }
+
+    $scope.saveNewRecord = function() {
+      $scope.saveRecord($scope.newRecord);
+      $scope.records.push($scope.newRecord);
+      $scope.newRecord = new recordsService();
+    }
+
+    $scope.deleteNewRecord = function() {
+      $scope.newRecord = new recordsService();
+    }
+
+    function castValue(val) {
+      if (val == '') return undefined;
+      if (val == 'true' || val === true) return true;
+      if (val == 'false' || val === false ) return false;
+      if (!isNaN(val)) return parseInt(val);
+      return val;
+    }
+
+  }]);
+
+  function getColumns(records) {
+    var columns = [];
+    for (var i = 0; i < records.length; i++) {
+      var props = Object.keys(records[i]);
+      for (var j = 0; j < props.length; j++) {
+        var prop = props[j];
+        if (prop != 'id' && columns.indexOf(prop) == -1) {
+          columns.push(prop);
+        }
+      }
+    }
+    return columns;
+  }
+
