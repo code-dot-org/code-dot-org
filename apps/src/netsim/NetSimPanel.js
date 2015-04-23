@@ -135,11 +135,13 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
   var panelDiv = this.rootDiv_.find('.netsim-panel');
   var minimizer = panelDiv.find('.minimizer');
   if (becomeMinimized) {
+    this.rootDiv_.addClass('shrink-to-content');
     panelDiv.addClass('minimized');
     minimizer.find('.fa')
         .addClass('fa-plus-square')
         .removeClass('fa-minus-square');
   } else {
+    this.rootDiv_.removeClass('shrink-to-content');
     panelDiv.removeClass('minimized');
     minimizer.find('.fa')
         .addClass('fa-minus-square')
