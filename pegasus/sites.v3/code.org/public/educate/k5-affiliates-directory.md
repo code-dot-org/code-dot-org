@@ -25,6 +25,7 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 
 - [Idaho](#id)
 - [Illinois](#il)
+- [Indiana] (#in)
 - [Iowa](#ia)
 - [Louisiana](#la)
 - [Maine](#me)
@@ -76,10 +77,25 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 
 <a id="al"></a>
 ## Alabama
+[col-33]
 ### Jeff Gray
 Tuscloosa, AL
 
 gray@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Lisa Molyneux
+Mobile, AL
+
+molyneux@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both"&nbsp;
+</p>
 
 <a id="ar"></a>
 ## Arkansas
@@ -122,6 +138,14 @@ bhattacharya@pd.code.org
 Oakland, CA
 
 lemon@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Margaret Agbowo
+Oakland, Ca
+
+agbowo@pd.code.org
 
 [/col-33]
 
@@ -284,6 +308,22 @@ style="clear:both">&nbsp;
 <a id="fl"></a>
 ## Florida
 [col-33]
+### Evelyn Zayas
+Orlando, FL
+
+zayas@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Eileen Peters
+Tampa, FL
+
+peters@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Lisa Milenkovic
 Fort Lauderdale, FL
 
@@ -336,28 +376,42 @@ cruz@pd.code.org
 
 [/col-33]
 
-[col-33]
-
-### Evelyn Zayas
-Orlando, FL
-
-zayas@pd.code.org
-
-[/col-33]
-
 <p
 style="clear:both">&nbsp;
 </p>
 
 <a id="ga"></a>
 ## Georgia
+[col-33]
+### Ali Myles
+Kingsland, GA
+
+myles@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Diane Davis
 Dunwoody, GA
 
 davis@pd.code.org
 
+[/col-33]
+
+[col-33]
+### Tanisha Foust
+Atlanta, GA
+
+foust@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
 <a id="hi"></a>
 ## Hawaii
+Shane Asselstine
+
 Honolulu, HI
 
 asselstine@pd.code.org
@@ -387,9 +441,25 @@ putman@pd.code.org
 
 [/col-33]
 
+[col-33]
+### Faik Tanriseven
+Des Plaines, IL
+
+tanriseven@pd.code.org
+
+[/col-33]
+
 <p
 style="clear:both">&nbsp;
 </p>
+
+
+<a id="in"></a>
+## Indiana
+### Michele Roberts
+Indianapolis, IN
+
+roberts@pd.code.org
 
 <a id="ia"></a>
 ## Iowa
@@ -400,10 +470,23 @@ schafer@pd.code.org
 
 <a id="la"></a>
 ## Louisiana
+[col-33]
+### Craig Zeller
+New Orleans, LA
+
+zeller@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Vicky Jacobsen
 Baton Rouge, LA
 
 jacobsen@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 <a id="me"></a>
 ## Maine
@@ -462,8 +545,6 @@ Newton, MA
 golas@pd.code.org
 
 [/col-33]
-
-[col-33]
 
 <p
 style="clear:both">&nbsp;
@@ -529,18 +610,36 @@ locke@pd.code.org
 
 <a id="nj"></a>
 ## New Jersey
+[col-33]
 ### Jerri Drakes
 Newark, NJ
 
 drakes@pd.code.org
 
+[/col-33]
+
+[col-33]
 ### Joann Presbrey
 Jersey City, NJ
 
 presbrey@pd.code.org
 
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
+
 <a id="nv"></a>
 ## Nevada
+[col-33]
+### Julie Harpole
+Reno, NV
+
+harpole@pd.code.org
+
+[/col-33]
+
 [col-33]
 ### Cindi Chang
 Las Vegas, NV
@@ -591,7 +690,14 @@ kenkel@pd.code.org
 [/col-33]
 
 [col-33]
+### Matthew Coia
+Buffalo, NY
 
+coia@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Melissa Brennan
 Briarcliff Manor, NY
 
@@ -600,7 +706,6 @@ brennan@pd.code.org
 [/col-33]
 
 [col-33]
-
 ### Pamela Trincado
 Forest Hills, NY
 
@@ -614,10 +719,23 @@ style="clear:both">&nbsp;
 
 <a id="oh"></a>
 ## Ohio
+[col-33]
+### Gary Greenberg
+Cincinnati, OH
+
+greenberg@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Nigamanth Sridhar
 Cleveland, OH
 
 sridhar@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 <a id="ok"></a>
 ## Oklahoma
@@ -628,10 +746,25 @@ carr@pd.code.org
 
 <a id="or"></a>
 ## Oregon
+[col-33]
+### Chris Bartlo
+Portland, OR
+
+bartlo@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Kiki Prottsman
 Eugene, OR
 
 prottsman@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
 
 <a id="pa"></a>
 ## Pennsylvania
@@ -725,6 +858,14 @@ style="clear:both">&nbsp;
 <a id="ut"></a>
 ## Utah
 [col-33]
+### Michael Hight
+Salt Lake City, UT
+
+hight@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Carl Lyman
 Spanish Fork, UT
 
@@ -754,10 +895,23 @@ mcavoy@pd.code.org
 
 <a id="va"></a>
 ## Virginia
+[col-33]
+### Laura Angle
+Fairfax, VA
+
+angle@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Rebecca Dovi
 Richmond, VA
 
 dovi@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 <a id="wa"></a>
 ## Washington
