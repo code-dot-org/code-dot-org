@@ -204,6 +204,13 @@ $wide-column-width: 121px;
     // Button text should not be selectable
     @include user_select(none);
 
+    &.large-button {
+      font-size: 14px;
+      line-height: 20px;
+      border-radius: 5px;
+      padding: 7px 14px;
+    }
+
     &.secondary {
       background-color: $light_cyan;
     }
