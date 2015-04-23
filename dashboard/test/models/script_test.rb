@@ -105,7 +105,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'script_levels are in order' do
-    script = create(:script, name: 's1')
+    script = create(:script)
     s1 = create(:stage, script: script, position: 1)
     last = create(:script_level, script:script, stage:s1, chapter:3)
     second = create(:script_level, script:script, stage:s1, chapter:2)
@@ -129,7 +129,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'calling next_level on last script_level points to next stage' do
-    script = create(:script, name: 's1')
+    script = create(:script)
     first_stage = create(:stage, script: script, position: 1)
     first_stage_last_level = create(:script_level, script: script, stage: first_stage, position: 1)
     second_stage = create(:stage, script: script, position: 2)
@@ -219,4 +219,18 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Flappy', Script.get_from_cache('flappy').script_levels[3].level.game.name
     assert_equal 'anna', Script.get_from_cache('frozen').script_levels[5].level.skin
   end
+
+  test 'banner image' do
+    assert_equal nil, Script.find_by_name('flappy').banner_image
+    assert_equal 'banner_course1_cropped.jpg', Script.find_by_name('course1').banner_image
+    assert_equal 'banner_course2_cropped.jpg', Script.find_by_name('course2').banner_image
+  end
+
+  test 'logo image' do
+    # this is configured in scripts.en.yml
+    assert_equal nil, Script.find_by_name('flappy').logo_image
+    assert_equal nil, Script.find_by_name('ECSPD').logo_image
+    assert_equal 'nextech_logo.png', Script.find_by_name('ECSPD-NexTech').logo_image
+  end
+
 end
