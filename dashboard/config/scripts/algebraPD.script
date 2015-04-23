@@ -3,6 +3,7 @@ description "Teach Algebra through Functional Programming"
 
 stage 'Introduction to PD'
 level 'PDAlg Intro'
+level 'PDAlg commitment'
 level 'PDAlg attendance commitment'
 
 stage 'Evaluation Blocks'

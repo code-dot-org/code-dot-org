@@ -352,6 +352,16 @@ en:
         more engagement over longer periods of time: more engagement over longer periods of time
         more perseverance: more perseverance
         all of the above: all of the above
+      ECSPD unit:
+        ECS Curriculum: ECS Curriculum
+        Based on what you just read about the ECS course, answer the following question: Based on what you just read about the ECS course, answer the following question
+        What unit from the ECS curriculum are you most interested in?: What unit from the ECS curriculum are you most interested in?
+        'Unit 1: Human Computer Interaction': 'Unit 1: Human Computer Interaction'
+        'Unit 2: Problem Solving': 'Unit 2: Problem Solving'
+        'Unit 3: Web Design': 'Unit 3: Web Design'
+        'Unit 4: Introduction to Programming': 'Unit 4: Introduction to Programming'
+        'Unit 5: Computing and Data Analysis': 'Unit 5: Computing and Data Analysis'
+        'Unit 6: Robotics': 'Unit 6: Robotics'
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500

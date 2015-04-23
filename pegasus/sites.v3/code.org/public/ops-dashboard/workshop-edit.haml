@@ -5,14 +5,7 @@ template: none
 - authentication_required!
 - forbidden! unless dashboard_user[:admin]
 
-%a{href:'/ops-dashboard'}
-  Dashboard
->
-%a{href:'/ops-dashboard#/workshops'}
-  PD Workshops
->
-%span
-  PD Workshop Management
+= view :breadcrumbs, trail: [{url: '/teacher-dashboard', text: 'Dashboard'}, {url: '/ops-dashboard#/workshops', text: 'PD Workshops'}, {text: 'PD Workshop Management'}]
 
 %h1{'ng-show' => 'workshop.id'}
   Edit {{workshop.name}}

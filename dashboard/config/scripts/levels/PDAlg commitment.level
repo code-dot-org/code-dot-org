@@ -1,0 +1,20 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-22T16:45:51.132Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "CS in Algebra PD commitments",
+    "content1": "overview of program commitments",
+    "markdown": "## Program Timeline\n\nThe program you're about to begin spans through the upcoming academic year. During this time you will have access to three phases of professional development (PD) designed to leverage your experience with the curriculum and associated teaching strategies and to facilitate the development of a strong community of teachers. You'll work with a support network formed by that local community of teachers and facilitators to move through the first year and beyond. \n\nSee below for a timeline of these PD opportunities: \n![program commitments](http://staging.studio.code.org/script_assets/pd/algebra_timeline.png)\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\nhttp://staging.studio.code.org/script_assets/pd/algebra_timeline.png\n",
+    "type": "External",
+    "dsl_text": "name 'PDAlg commitment'\r\ntitle 'CS in Algebra PD commitments'\r\ndescription 'overview of program commitments'\r\ncss 'unplugged'\r\n\r\nmarkdown <<MARKDOWN\r\n## Program Timeline\r\n\r\nThe program you're about to begin spans through the upcoming academic year. During this time you will have access to three phases of professional development (PD) designed to leverage your experience with the curriculum and associated teaching strategies and to facilitate the development of a strong community of teachers. You'll work with a support network formed by that local community of teachers and facilitators to move through the first year and beyond. \r\n\r\nSee below for a timeline of these PD opportunities: \r\n![program commitments](http://staging.studio.code.org/script_assets/pd/algebra_timeline.png)\r\n\r\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\r\n\r\nhttp://staging.studio.code.org/script_assets/pd/algebra_timeline.png\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>

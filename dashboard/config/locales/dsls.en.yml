@@ -115,6 +115,9 @@ en:
         description here: description here
         title: title
       PDAlg Intro: {}
+      PDAlg commitment:
+        CS in Algebra PD commitments: CS in Algebra PD commitments
+        overview of program commitments: overview of program commitments
       PDCSP Intro: {}
       PDECS Intro:
         PD Intro: PD Intro
@@ -308,9 +311,13 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      sciPD Intro: {}
       test demo level:
         demo description: demo description
         demo title: demo title
+      test discourse level type:
+        this is a discourse forum: this is a discourse forum
+        title: title
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
