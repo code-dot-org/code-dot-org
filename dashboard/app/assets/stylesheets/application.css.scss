@@ -1245,6 +1245,15 @@ a.download-video {
   }
 }
 
+.course_progress {
+  margin: 10px 0;
+}
+
+#landingpage h3 img.logo,
+.course_progress h3 img.logo {
+  height: 40px;
+}
+
 .betatext {
   color: $realyellow;
 }
