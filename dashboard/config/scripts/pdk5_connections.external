@@ -1,0 +1,11 @@
+name 'PDK5 Connections'
+title 'Connections'
+markdown <<MARKDOWN
+## Connections to Other Subject Areas
+
+Do you think computer science connects to other topics or subjects your students are learning about? Explain why or why not.
+
+<div id="discourse-comments" />
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
