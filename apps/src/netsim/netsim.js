@@ -301,12 +301,14 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
       isMinimized: false,
-      receiveButtonCallback: this.receiveBit_.bind(this)
+      receiveButtonCallback: this.receiveBit_.bind(this),
+      expandCollapseCallback: this.onLogPanelExpandCollapse_.bind(this)
     });
 
     this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentBitsLog(),
-      isMinimized: false
+      isMinimized: false,
+      expandCollapseCallback: this.onLogPanelExpandCollapse_.bind(this)
     });
   }
 
