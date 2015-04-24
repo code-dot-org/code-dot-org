@@ -4,7 +4,7 @@ title: App Lab Docs
 
 [name]
 
-## var x = 0;
+## Declare a variable: var x = 0;
 
 [/name]
 
@@ -69,7 +69,7 @@ ____________________________________________________
 [example]
 
 <pre>
-//Bullseye
+//Water drop rings
 var canvasWidth = 320
 var canvasHeight = 480
 var strokeColor = "black"

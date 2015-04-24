@@ -1,8 +1,10 @@
 name 'U1L6 Free Response Reflection'
 title 'Reflection: Number Systems'
 content1 ''
-answer 'Enter answer here'
+
 
 markdown <<MARKDOWN
- In 50 words or less, describe the concept of a number system. Why are rules required for a number system to be useful?
+ In 50 words or less, describe the concept of a number system. 
+
+Why are rules required for a number system to be useful?
 MARKDOWN

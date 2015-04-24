@@ -19,12 +19,11 @@ Category: Turtle
 
 [short_description]
 
-Sets the color of the line drawn behind the turtle as it moves.
+Sets the color of the trail drawn behind the turtle as it moves.
 
 [/short_description]
 
-**Note**: If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first
-<br/>
+**Note**: If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.  
 **Note**: The color can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [colors](http://www.w3schools.com/HTML/html_colornames.asp) for a complete list of all available colors.
 
 
@@ -38,7 +37,7 @@ ____________________________________________________
 **Example 1**
 
 <pre>
-penColor("cyan");   // sets the color of the turtles trail to cyan
+penColor("cyan");   // sets the color of the trail drawn behind the turtle to cyan
 moveForward(100);   // moves the turtle forward by 100 pixels
 </pre>
 
@@ -71,7 +70,8 @@ ____________________________________________________
 
 <pre>
 var c = (prompt("Enter a color"));  // prompts the user for a color
-penColor(c);                        // sets the color of the turtles trail to the color the user entered
+penColor(c);                        // sets the color of trail drawn behind the turtle to the color
+                                    // the user entered
 moveForward(100);                   // moves the turtle forward by 100 pixels
 </pre>
 
@@ -89,7 +89,7 @@ This program draws a circle figure out of lines. It cycles through the colors ev
 <pre>
 var colors = ["red", "magenta", "pink", "purple"];  // creates an array of 4 strings representing colors
 for (var i = 0; i < 360; i++) {                     // loops 360 times
-  penColor(colors[i%4]);                            // sets the color of the turtles line
+  penColor(colors[i%4]);                            // sets the color of the turtles trail
                                                     // to a color from the array
   moveForward(100);                                 // moves the turtle forward by 100 pixels
   moveBackward(100);                                // moves the turtle backward by 100 pixels
@@ -120,7 +120,7 @@ penColor(color);
 |-----------------|------|-----------|-------------|
 | color | String | Yes | The color of the line left behind the turtle as it moves  |
 <br />
-`penColor()` can be passed a string representing the color, a string representing the hex value of the color or the rgb value of the color using the 'rgb(r, g, b)' function. Reference Example 2 above for more specifics.
+`penColor()` can be passed the name of the color, the hex value of the color, or the rgb value of the color. Reference Example 2 above for more specifics.
 
 [/parameters]
 
@@ -134,8 +134,8 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first
-- The color value being based in can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [colors](http://www.w3schools.com/HTML/html_colornames.asp) for a complete list of all available colors.
+- If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.
+- The color value being passed can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [colors](http://www.w3schools.com/HTML/html_colornames.asp) for a complete list of all available colors.
 
 [/tips]
 

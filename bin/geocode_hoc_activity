@@ -35,7 +35,7 @@ def main()
     end
   end
 
-  threads.each { |thread| thread.join }
+  threads.each(&:join)
 end
 
 main() if only_one_running?(__FILE__)

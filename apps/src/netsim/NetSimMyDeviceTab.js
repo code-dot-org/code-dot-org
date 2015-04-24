@@ -12,19 +12,25 @@
 'use strict';
 
 var markup = require('./NetSimMyDeviceTab.html');
+var NetSimBitRateControl = require('./NetSimBitRateControl');
+var NetSimPulseRateControl = require('./NetSimPulseRateControl');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
+var NetSimMetronome = require('./NetSimMetronome');
 
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
- * @param {function} chunkSizeChangeCallback
- * @param {function} encodingChangeCallback
+ * @param {RunLoop} runLoop
+ * @param {Object} callbacks
+ * @param {function} callbacks.chunkSizeChangeCallback
+ * @param {function} callbacks.bitRateChangeCallback
+ * @param {function} callbacks.encodingChangeCallback
  * @constructor
  */
 var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
-    chunkSizeChangeCallback, encodingChangeCallback) {
+    runLoop, callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -39,16 +45,53 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
   this.levelConfig_ = levelConfig;
 
   /**
-   * @type {function}
+   * @type {RunLoop}
    * @private
    */
-  this.chunkSizeSliderChangeCallback_ = chunkSizeChangeCallback;
+  this.runLoop_ = runLoop;
+
+  /**
+   * Frequency of metronome pulses, in pulses per second
+   * @type {number}
+   * @private
+   */
+  this.bitsPerSecond_ = 1;
 
   /**
    * @type {function}
    * @private
    */
-  this.encodingChangeCallback_ = encodingChangeCallback;
+  this.chunkSizeSliderChangeCallback_ = callbacks.chunkSizeChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.bitRateChangeCallback_ = callbacks.bitRateChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.encodingChangeCallback_ = callbacks.encodingChangeCallback;
+
+  /**
+   * @type {NetSimMetronome}
+   * @private
+   */
+  this.metronome_ = null;
+
+  /**
+   * @type {NetSimPulseRateControl}
+   * @private
+   */
+  this.pulseRateControl_ = null;
+
+  /**
+   * @type {NetSimBitRateControl}
+   * @private
+   */
+  this.bitRateControl_ = null;
 
   /**
    * @type {NetSimChunkSizeControl}
@@ -69,11 +112,43 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimMyDeviceTab.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
+  var renderedMarkup = $(markup({
+    level: this.levelConfig_
+  }));
   this.rootDiv_.html(renderedMarkup);
-  this.chunkSizeControl_ = new NetSimChunkSizeControl(
-      this.rootDiv_.find('.chunk_size'),
-      this.chunkSizeSliderChangeCallback_);
+
+  if (this.levelConfig_.showMetronome) {
+    this.metronome_ = new NetSimMetronome(
+        this.rootDiv_.find('.metronome'),
+        this.runLoop_);
+    this.metronome_.setFrequency(this.bitsPerSecond_);
+
+    this.pulseRateControl_ = new NetSimPulseRateControl(
+        this.rootDiv_.find('.pulse-rate'),
+        1 / this.bitsPerSecond_,
+        function (secondsPerBit) {
+          this.bitRateChangeCallback_(1 / secondsPerBit);
+        }.bind(this));
+  }
+
+  if (this.levelConfig_.showBitRateControl) {
+    this.bitRateControl_ = new NetSimBitRateControl(
+        this.rootDiv_.find('.bitrate'),
+        this.bitsPerSecond_,
+        this.bitRateChangeCallback_);
+    if (this.levelConfig_.lockBitRateControl) {
+      this.bitRateControl_.disable();
+    }
+  }
+
+  if (this.levelConfig_.showChunkSizeControl) {
+    this.chunkSizeControl_ = new NetSimChunkSizeControl(
+        this.rootDiv_.find('.chunk-size'),
+        this.chunkSizeSliderChangeCallback_);
+    if (this.levelConfig_.lockChunkSizeControl) {
+      this.chunkSizeControl_.disable();
+    }
+  }
 
   if (this.levelConfig_.showEncodingControls.length > 0) {
     this.encodingControl_ = new NetSimEncodingControl(
@@ -84,11 +159,41 @@ NetSimMyDeviceTab.prototype.render = function () {
 };
 
 /**
+ * Handler for changing the position of the pulse-rate slider
+ * @param {number} secondsPerPulse in seconds per pulse
+ * @private
+ */
+NetSimMyDeviceTab.prototype.pulseRateSliderChange_ = function (secondsPerPulse) {
+  this.setBitRate(1 / secondsPerPulse);
+};
+
+/**
+ * @param {number} bitsPerSecond
+ */
+NetSimMyDeviceTab.prototype.setBitRate = function (bitsPerSecond) {
+  this.bitsPerSecond_ = bitsPerSecond;
+
+  if (this.metronome_) {
+    this.metronome_.setFrequency(bitsPerSecond);
+  }
+
+  if (this.bitRateControl_) {
+    this.bitRateControl_.setValue(bitsPerSecond);
+  }
+
+  if (this.pulseRateControl_ && bitsPerSecond < Infinity) {
+    this.pulseRateControl_.setValue(1 / bitsPerSecond);
+  }
+};
+
+/**
  * Update the slider and its label to display the provided value.
  * @param {number} newChunkSize
  */
 NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
-  this.chunkSizeControl_.setValue(newChunkSize);
+  if (this.chunkSizeControl_) {
+    this.chunkSizeControl_.setValue(newChunkSize);
+  }
 };
 
 /**

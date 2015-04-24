@@ -7,10 +7,12 @@ class ScriptLevelsController < ApplicationController
     authorize! :show, ScriptLevel
     if current_user.teacher? || current_user.admin?
       @level = Level.find(params[:level_id])
-      @start_blocks = @level.ideal_level_source.try(:data)
       @game = @level.game
-      @full_width = true
-      @share = true
+      level_view_options(
+        start_blocks: @level.ideal_level_source.try(:data),
+        share: true
+      )
+      view_options(full_width: true)
       @level_source_id = @level.ideal_level_source_id
       @level_source = LevelSource.find(@level_source_id)
       render 'level_sources/show'
@@ -53,7 +55,8 @@ class ScriptLevelsController < ApplicationController
          locale: locale) unless @script_level.level.unplugged?
   end
 
-private
+  private
+
   def next_script_level
     user_or_session_level || @script.starting_level
   end
@@ -103,14 +106,16 @@ private
     @level = @script_level.level
     @game = @level.game
     @stage = @script_level.stage
-    @no_footer_puzzle = (@game == Game.applab)
 
-    set_videos_and_blocks_and_callouts
+    set_videos_and_callouts
 
     load_level_source
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
-    @full_width = true
+    view_options(
+      full_width: true,
+      no_footer: (@game == Game.applab)
+    )
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

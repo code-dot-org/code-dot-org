@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-16T19:12:07.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Growth Mindset Strategies",
+    "markdown": "\n## Growth Mindset Strategies \n\nCheck out the following article from EdWeek, which talks about concrete strategies you can use in your classroom to foster Growth Mindset in your students. Think about how you can use these strategies to support your students-- on the next page you'll have space to jot down strategies you want to try in class. [*(source)*](http://blogs.edweek.org/teachers/classroom_qa_with_larry_ferlazzo/2012/10/response_classroom_strategies_to_foster_a_growth_mindset.html)\n\n\n<iframe width=90% height = \"600\" src=\"http://blogs.edweek.org/teachers/classroom_qa_with_larry_ferlazzo/2012/10/response_classroom_strategies_to_foster_a_growth_mindset.html\"></iframe>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
+  },
+  "md5": "66de0e81a62b9648b4542c72ca0540ea"
+}]]></config>
+</External>

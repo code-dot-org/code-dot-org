@@ -373,9 +373,12 @@ class UserTest < ActiveSupport::TestCase
     # now you do
     assert user.secret_words
 
-    old = user.secret_words
-    user.reset_secret_words
-    assert_not_equal old, user.secret_words
+    words = 1.upto(5).map do
+      user.reset_secret_words
+      user.secret_words
+    end
+
+    assert words.uniq.length > 1
   end
 
   test 'users under 13 have hashed email not plaintext email' do
@@ -798,8 +801,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'generate username' do
     def create_user_with_username(username)
-    user = create(:user)
-    user.update_attribute(:username, username)
+      user = create(:user)
+      user.update_attribute(:username, username)
     end
     # username regex: /\A[a-z0-9\-\_\.]+\z/
 
@@ -862,5 +865,26 @@ class UserTest < ActiveSupport::TestCase
     user = create :student, email: 'my_email@test.xx'
     assert !user.confirmation_required?
     assert !user.confirmed_at
+  end
+
+
+  test 'levels_from_script does not include userlevels from other scripts' do
+    user = create :user
+
+    script = Script.find(2) # original hoc script
+    shared_level = script.script_levels.first.level
+
+    assert shared_level.script_levels.count > 1
+
+    other_script = (shared_level.script_levels.collect(&:script) - [script]).first
+    assert other_script
+
+    other_script_user_level = UserLevel.create!(script_id: other_script.id, level_id: shared_level.id, user_id: user.id)
+    user_level = UserLevel.create!(script_id: script.id, level_id: shared_level.id, user_id: user.id)
+
+    lfs = user.levels_from_script(script)
+
+    assert_not_equal other_script_user_level, lfs.first.user_level
+    assert_equal user_level, lfs.first.user_level
   end
 end

@@ -3,11 +3,9 @@
   "game_id": 38,
   "created_at": "2015-04-08T18:50:06.000Z",
   "properties": {
-    "answers": [
-      "Enter answer here"
-    ],
     "title": "Assessment: Number Systems",
-    "markdown": "If you had to represent numbers with A/B states from sending bits widget, could you? How? Write a represent of the numbers 0 through 15 using only the letters A and B.\n\n\n"
-  }
+    "markdown": "If you had to represent numbers with A/B states from sending-bits widget, could you?\n\nWrite a represent of the numbers 0 through 15 using only the letters A and B.\n\n\n"
+  },
+  "md5": "6b755abca0768a6c7457d46bd3b615d1"
 }]]></config>
 </TextMatch>

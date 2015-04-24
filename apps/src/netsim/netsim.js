@@ -22,9 +22,10 @@ var i18n = require('../../locale/current/netsim');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html');
+var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
-var DnsMode = require('./netsimConstants').DnsMode;
 var DashboardUser = require('./DashboardUser');
+var NetSimBitLogPanel = require('./NetSimBitLogPanel');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var NetSimLogger = require('./NetSimLogger');
@@ -36,6 +37,9 @@ var NetSimShardCleaner = require('./NetSimShardCleaner');
 var NetSimStatusPanel = require('./NetSimStatusPanel');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimVisualization = require('./NetSimVisualization');
+
+var DnsMode = netsimConstants.DnsMode;
+var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
 
@@ -107,6 +111,13 @@ var NetSim = module.exports = function () {
   this.chunkSize_ = 8;
 
   /**
+   * The "my device" bitrate in bits per second
+   * @type {number}
+   * @private
+   */
+  this.myDeviceBitRate_ = Infinity;
+
+  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -115,13 +126,13 @@ var NetSim = module.exports = function () {
 
   // -- Components --
   /**
-   * @type {NetSimLogPanel}
+   * @type {INetSimLogPanel}
    * @private
    */
   this.receivedMessageLog_ = null;
 
   /**
-   * @type {NetSimLogPanel}
+   * @type {INetSimLogPanel}
    * @private
    */
   this.sentMessageLog_ = null;
@@ -152,6 +163,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {netsimLevelConfiguration} config.level
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
+ * @param {string} config.html - rendered markup to be created inside this method
  */
 NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
@@ -267,17 +279,33 @@ NetSim.prototype.shouldShowAnyTabs = function () {
 NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
-  this.receivedMessageLog_ = new NetSimLogPanel($('#netsim-received'), {
-    logTitle: i18n.receivedMessageLog(),
-    isMinimized: false,
-    packetSpec: this.level.clientInitialPacketHeader
-  });
+  // Create log panels according to level configuration
+  if (this.level.messageGranularity === MessageGranularity.PACKETS) {
+    this.receivedMessageLog_ = new NetSimLogPanel($('#netsim-received'), {
+      logTitle: i18n.receivedMessageLog(),
+      isMinimized: false,
+      hasUnreadMessages: true,
+      packetSpec: this.level.clientInitialPacketHeader
+    });
 
-  this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
-    logTitle: i18n.sentMessageLog(),
-    isMinimized: true,
-    packetSpec: this.level.clientInitialPacketHeader
-  });
+    this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
+      logTitle: i18n.sentMessageLog(),
+      isMinimized: true,
+      hasUnreadMessages: false,
+      packetSpec: this.level.clientInitialPacketHeader
+    });
+  } else if (this.level.messageGranularity === MessageGranularity.BITS) {
+    this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
+      logTitle: i18n.receiveBits(),
+      isMinimized: false,
+      receiveButtonCallback: this.receiveBit_.bind(this)
+    });
+
+    this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
+      logTitle: i18n.sentBitsLog(),
+      isMinimized: false
+    });
+  }
 
   this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
       this.disconnectFromRemote.bind(this, function () {}));
@@ -299,8 +327,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.tabs_ = new NetSimTabsComponent(
         $('#netsim-tabs'),
         this.level,
+        this.runLoop_,
         {
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
+          myDeviceBitRateChangeCallback: this.setMyDeviceBitRate.bind(this),
           encodingChangeCallback: this.changeEncodings.bind(this),
           routerBandwidthSliderChangeCallback: this.setRouterBandwidth.bind(this),
           routerBandwidthSliderStopCallback: this.changeRemoteRouterBandwidth.bind(this),
@@ -316,7 +346,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
       this);
 
   this.changeEncodings(this.level.defaultEnabledEncodings);
-  this.setChunkSize(this.chunkSize_);
+  this.setChunkSize(this.level.defaultChunkSizeBits);
+  this.setMyDeviceBitRate(this.level.defaultBitRateBitsPerSecond);
   this.setRouterBandwidth(this.level.defaultRouterBandwidth);
   this.setRouterMemory(this.level.defaultRouterMemory);
   this.setDnsMode(this.level.defaultDnsMode);
@@ -324,16 +355,49 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   // Try and gracefully disconnect when closing the window
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
+  window.addEventListener('unload', this.onUnload_.bind(this));
 };
 
 /**
- * Before-unload handler, used to try and disconnect gracefully when
- * navigating away instead of just letting our record time out.
+ * Before-unload handler, used to warn the user (if necessary) of what they
+ * are abandoning if they navigate away from the page.
+ *
+ * This event has some weird special properties and inconsistent behavior
+ * across browsers.
+ *
+ * See:
+ * https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload
+ * http://www.zachleat.com/web/dont-let-the-door-hit-you-onunload-and-onbeforeunload/
+ * http://www.hunlock.com/blogs/Mastering_The_Back_Button_With_Javascript
+ *
+ * @param {Event} event
+ * @returns {string|undefined} If we want to warn the user before they leave
+ *          the page, this method will return a warning string, which may or
+ *          may not actually be used by the browser to present a warning.  If
+ *          we don't want to warn the user, this method doesn't return anything.
  * @private
  */
-NetSim.prototype.onBeforeUnload_ = function () {
+NetSim.prototype.onBeforeUnload_ = function (event) {
+  // No need to warn about navigating away if the student is not connected,
+  // or is still in the lobby.
+  if (this.isConnectedToRemote()) {
+    event.returnValue = i18n.onBeforeUnloadWarning();
+    return i18n.onBeforeUnloadWarning();
+  }
+};
+
+/**
+ * Unload handler.  Used to attempt a clean disconnect from the simulation
+ * using synchronous AJAX calls to remove our own rows from remote storage.
+ *
+ * See:
+ * https://developer.mozilla.org/en-US/docs/Web/Events/unload
+ *
+ * @private
+ */
+NetSim.prototype.onUnload_ = function () {
   if (this.isConnectedToShard()) {
-    this.disconnectFromShard();
+    this.synchronousDisconnectFromShard_();
   }
 };
 
@@ -381,7 +445,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
  * Given a lobby table has already been configured, connects to that table
  * by inserting a row for ourselves into that table and saving the row ID.
  * @param {!string} displayName
- * @param {!nodeStyleCallback} onComplete - result is new local node
+ * @param {!NodeStyleCallback} onComplete - result is new local node
  * @private
  */
 NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
@@ -399,6 +463,17 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
       onComplete(err, node);
     });
   }.bind(this));
+};
+
+/**
+ * Synchronous disconnect, for use when navigating away from the page
+ * @private
+ */
+NetSim.prototype.synchronousDisconnectFromShard_ = function () {
+  this.myNode.stopSimulation();
+  this.myNode.synchronousDestroy();
+  this.myNode = null;
+  this.shardChange.notifyObservers(null, null);
 };
 
 /**
@@ -530,6 +605,17 @@ NetSim.prototype.disconnectFromRemote = function (onComplete) {
 };
 
 /**
+ * Asynchronous fetch of the latest message shared between the local
+ * node and its connected remote.
+ * Used only in simplex & bit-granular mode.
+ * @param {!NodeStyleCallback} onComplete
+ * @private
+ */
+NetSim.prototype.receiveBit_ = function (onComplete) {
+  this.myNode.getLatestMessageOnSimplexWire(onComplete);
+};
+
+/**
  * Update encoding-view setting across the whole app.
  *
  * Propagates the change down into relevant child components, possibly
@@ -564,6 +650,18 @@ NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.receivedMessageLog_.setChunkSize(newChunkSize);
   this.sentMessageLog_.setChunkSize(newChunkSize);
   this.sendPanel_.setChunkSize(newChunkSize);
+};
+
+/**
+ * Update bitrate for the local device, which affects send-animation speed.
+ * @param {number} newBitRate in bits per second
+ */
+NetSim.prototype.setMyDeviceBitRate = function (newBitRate) {
+  this.myDeviceBitRate_ = newBitRate;
+  if (this.tabs_) {
+    this.tabs_.setMyDeviceBitRate(newBitRate);
+  }
+  this.sendPanel_.setBitRate(newBitRate);
 };
 
 /** @param {number} creationTimestampMs */

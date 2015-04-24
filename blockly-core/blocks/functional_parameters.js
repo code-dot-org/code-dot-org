@@ -43,8 +43,7 @@ Blockly.Blocks.functional_parameters_get = {
     };
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
-        .appendTitle(Blockly.disableVariableEditing ? new Blockly.FieldLabel(fieldLabel, options)
-            : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        .appendTitle(fieldLabel, 'VAR')
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL)
         .setAlign(Blockly.ALIGN_CENTRE);
     this.setFunctionalOutput(true);
@@ -55,8 +54,10 @@ Blockly.Blocks.functional_parameters_get = {
       // Params should only be used in the FunctionEditor but better to be safe
       return;
     }
-    Blockly.functionEditor.renameParameter(oldName, newName);
-    Blockly.functionEditor.refreshParamsEverywhere();
+    var title = this.getTitle_('VAR');
+    if (title.getText() === oldName) {
+      title.setText(newName);
+    }
   },
   removeVar: Blockly.Blocks.variables_get.removeVar,
   mutationToDom: function() {

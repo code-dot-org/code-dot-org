@@ -3,11 +3,9 @@
   "game_id": 38,
   "created_at": "2015-04-08T19:39:04.000Z",
   "properties": {
-    "answers": [
-      "Enter answer here"
-    ],
     "title": "Assessment: Binary Numbers",
     "markdown": "Imagine that you have a list of 10 numbers that you want to send in binary to a friend using the bit-sending widget. The numbers are all between 0 and 100. \n\nWhat issues or problems do you imagine that you and your friend would encounter in trying to do this?\n\nHow would you solve these problems?\n"
-  }
+  },
+  "md5": "a5d69b2d30fbe43e91e8e9748e0e8e58"
 }]]></config>
 </TextMatch>

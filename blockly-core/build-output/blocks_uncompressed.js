@@ -1271,6 +1271,12 @@ Blockly.Blocks.functional_definition = {shouldHideIfInMainBlockSpace:function() 
   this.parameterNames_ = [];
   this.paramIds_ = [];
   this.parameterTypes_ = []
+}, updateInputsToType:function(a) {
+  this.updateInputType_(this.getInput("STACK"), a);
+  this.render()
+}, updateInputType_:function(a, b) {
+  a.setHSV.apply(a, Blockly.FunctionalTypeColors[b]);
+  a.setCheck(b)
 }, mutationToDom:function() {
   for(var a = document.createElement("mutation"), b = 0;b < this.parameterNames_.length;b++) {
     var c = document.createElement("arg");
@@ -1484,6 +1490,13 @@ Blockly.Blocks.functional_example = {shouldHideIfInMainBlockSpace:function() {
 }, updateOutputType:function(a) {
   this.outputType_ = a;
   this.changeFunctionalOutput(this.outputType_)
+}, updateInputsToType:function(a) {
+  this.updateInputType_(this.getInput("EXPECTED"), a);
+  this.updateInputType_(this.getInput("ACTUAL"), a);
+  this.render()
+}, updateInputType_:function(a, b) {
+  a.setHSV.apply(a, Blockly.FunctionalTypeColors[b]);
+  a.setCheck(b)
 }};
 Blockly.Blocks.functionalParameters = {};
 Blockly.Blocks.functional_parameters_get = {init:function() {
@@ -1492,12 +1505,14 @@ Blockly.Blocks.functional_parameters_get = {init:function() {
   this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
   this.setHSV(312, 0.32, 0.62);
   this.setFunctional(!0, {headerHeight:30});
-  var b = {fixedSize:{height:35}};
-  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing ? new Blockly.FieldLabel(a, b) : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL).setAlign(Blockly.ALIGN_CENTRE);
+  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(a, "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL).setAlign(Blockly.ALIGN_CENTRE);
   this.setFunctionalOutput(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)
 }, renameVar:function(a, b) {
-  Blockly.functionEditor && (Blockly.functionEditor.renameParameter(a, b), Blockly.functionEditor.refreshParamsEverywhere())
+  if(Blockly.functionEditor) {
+    var c = this.getTitle_("VAR");
+    c.getText() === a && c.setText(b)
+  }
 }, removeVar:Blockly.Blocks.variables_get.removeVar, mutationToDom:function() {
   var a = document.createElement("mutation");
   if(this.description_) {

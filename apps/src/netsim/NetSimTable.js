@@ -81,6 +81,13 @@ NetSimTable.prototype.readAll = function (callback) {
 };
 
 /**
+ * @returns {Array} all locally cached table rows
+ */
+NetSimTable.prototype.readAllCached = function () {
+  return this.arrayFromCache_();
+};
+
+/**
  * @param {!number} id
  * @param {!NodeStyleCallback} callback
  */
@@ -131,6 +138,16 @@ NetSimTable.prototype.delete = function (id, callback) {
     }
     callback(err, success);
   }.bind(this));
+};
+
+/**
+ * Delete a row using a synchronous call. For use when navigating away from
+ * the page; most of the time an asynchronous call is preferred.
+ * @param id
+ */
+NetSimTable.prototype.synchronousDelete = function (id) {
+  this.remoteTable_.synchronousDelete(id);
+  this.removeRowFromCache_(id);
 };
 
 /**

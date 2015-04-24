@@ -1,15 +1,17 @@
 <!-- # Middle School CS in Math -->
 
-Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to offer their  introductory curriculum which teaches algebraic and geometric concepts through computer programming. The nine units focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Bootstrap demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
+
+## A New Take on Math Programming is Here!
+
+Code.org has developed a new a block-based adaptation of the Bootstrap curriculum in the style of our existing [Code Studio](http://studio.code.org) courses. Visit our [CS in Algebra](/curriculum/algebra) page to learn more.
+
+## The Bootstrap Curriculum
+
+Prior to the development of our own [CS in Algebra](/curriculum/algebra) course, Code.org partnered with [Bootstrap](http://www.BootstrapWorld.org) to offer their introductory curriculum which teaches algebraic and geometric concepts through computer programming. The nine units focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Bootstrap demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 
 At the end of the nine units, students will have a completed workbook filled with word problems, notes, and math challenges, as well as a video game of their own design to share with friends and family. 
 
 Bootstrap is aligned to Common Core Standards for Mathematics. This alignment makes it possible to integrate Bootstrap into the classroom smoothly. Bootstrap is also a model implementation of Common Core Standards for Mathematical Practice, offering explicit pedagogical recommendation across all eight practice standards. Bootstrap also satisfies several of the CSTA (Computer Science Teacher's Association) standards across levels 1 (grades K-6) and 2 (grades 6-9). Download a full [description.](/files/Code.org Middle School CS in Math Program.pdf) 
-
-## A New Take on Math Programming Coming Soon!
-
-Code.org is actively developing a block-based adaptation of the Bootstrap curriculum in the style of our existing [Code Studio](http://studio.code.org) courses. If you're planning on implementing CS in Math for the 15/16 school year or beyond, stay tuned!
-
 ## Videos 
 
 <%= partial('video_grid', :videos => [

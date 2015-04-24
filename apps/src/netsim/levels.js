@@ -3,6 +3,7 @@
 var netsimConstants = require('./netsimConstants');
 var Packet = require('./Packet');
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
+var MessageGranularity = netsimConstants.MessageGranularity;
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 var NetSimTabType = netsimConstants.NetSimTabType;
@@ -28,6 +29,17 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  * @property {boolean} showAddRouterButton - Whether the "Add Router" button
  *           should appear above the lobby list.
  *
+ * @property {MessageGranularity} messageGranularity - Whether the simulator
+ *           puts a single bit into storage at a time, or a whole packet.
+ *           Should use 'bits' for variant 1 (levels about the coordination
+ *           problem), and 'packets' for levels where the coordination problem
+ *           is abstracted away.
+ *
+ * @property {boolean} automaticReceive - Whether the local node will
+ *           automatically pick up messages to itself from the message table,
+ *           and dump them to the received message log.  If false, some other
+ *           method must be used for receiving messages.
+ *
  * @property {packetHeaderSpec} routerExpectsPacketHeader - The header format
  *           the router uses to parse incoming packets and figure out where
  *           to route them.
@@ -52,6 +64,9 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           that should be active by default, which depends on which tabs
  *           you have enabled.
  *
+ * @property {boolean} showMetronome - Whether the metronome (and its related
+ *           speed control) should show up on the "My Device" tab.
+ *
  * @property {EncodingType[]} showEncodingControls - Which encodings, (ASCII,
  *           binary, etc.) should have visible controls on the "My Device" tab.
  *
@@ -59,6 +74,23 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           be enabled on page load.  Note: An encoding enabled here but not
  *           included in the visible controls will be enabled and cannot be
  *           disabled by the student.
+ *
+ * @property {boolean} showBitRateControl - Whether the bit rate slider should
+ *           be displayed on the "My Device" tab.
+ *
+ * @property {boolean} lockBitRateControl - Whether the bit rate slider should
+ *           be adjustable by the student.
+ *
+ * @property {number} defaultBitRateBitsPerSecond - Default bit rate on level
+ *           load.  Also sets the pulse rate for levels with the metronome.
+ *
+ * @property {boolean} showChunkSizeControl - Whether the chunk size slider
+ *           should be displayed on the "My Device" tab.
+ *
+ * @property {boolean} lockChunkSizeControl - Whether the chunk size slider
+ *           should be adjustable by the student.
+ *
+ * @property {number} defaultChunkSizeBits- Default chunk size on level load.
  *
  * @property {boolean} showRouterBandwidthControl - Whether students should be
  *           able to see and manipulate the slider that adjusts the router's
@@ -101,6 +133,10 @@ levels.custom = {
   canConnectToRouters: false,
   showAddRouterButton: false,
 
+  // Simulator-wide setup
+  messageGranularity: MessageGranularity.BITS,
+  automaticReceive: false,
+
   // Packet header specification
   routerExpectsPacketHeader: [],
   clientInitialPacketHeader: [],
@@ -119,8 +155,15 @@ levels.custom = {
   //       be localized by the time it gets here.
 
   // "My Device" tab and its controls
+  showMetronome: false,
   showEncodingControls: [],
   defaultEnabledEncodings: [],
+  showBitRateControl: false,
+  lockBitRateControl: false,
+  defaultBitRateBitsPerSecond: Infinity,
+  showChunkSizeControl: false,
+  lockChunkSizeControl: false,
+  defaultChunkSizeBits: 8,
 
   // Router tab and its controls
   showRouterBandwidthControl: false,

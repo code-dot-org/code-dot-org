@@ -7,7 +7,7 @@ nav: pd_nav
 # Professional Development - Chicago
 
 - [I'm attending High School PD...](#hs)
-- [I'm attending Middle School Science PD...](#mss)
+- [I'm attending Middle School Science PD...](#science)
 - [I'm attending Middle School Math PD...](#msm)
 
 <a id="hs"></a>
@@ -59,7 +59,7 @@ Laptop
 [**Back to the top**](#top)
 
 
-<a id="mss"></a>
+<a id="science"></a>
 ## Middle School Science Professional Development
 
 ### Phase 1: Preparation and Reflection

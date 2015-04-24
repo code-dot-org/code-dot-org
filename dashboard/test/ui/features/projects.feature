@@ -4,7 +4,7 @@ Background:
   Given I am on "http://learn.code.org/p/artist"
   And I rotate to landscape
   And element "#runButton" is visible
-  And element ".project_updated_at" has text "Click 'Run' to save"
+  And element ".project_updated_at" has text "Not saved"
 
 Scenario: Save Project
   Then I open the topmost blockly category "Color"

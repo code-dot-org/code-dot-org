@@ -139,7 +139,7 @@ SQL
     unless all_but_best_code_map.empty?
       sorted_all_but_best_code = all_but_best_code_map.values.sort_by {|v| -v[:count] }
       pop_level_source_ids = Array.new([sorted_all_but_best_code.length - 1, 9].min)
-      for idx in 0..[sorted_all_but_best_code.length - 1, 9].min
+      (0..[sorted_all_but_best_code.length - 1, 9].min).each do |idx|
         pop_level_source_id = sorted_all_but_best_code[idx][:level_source_id]
         pop_level_source_ids[idx] = pop_level_source_id
         if passing_code_map.has_key?(pop_level_source_id)
@@ -216,15 +216,16 @@ SQL
       ga_data.data.rows.each do |r|
         label = r[0]
         output_data[label] ||= {}
-        output_data[label]["Total#{key}"] = r[1]
-        output_data[label]["Unique#{key}"] = r[2]
-        output_data[label]["Avg#{key}"] = r[3]
+        output_data[label]["Total#{key}"] = r[1].to_f
+        output_data[label]["Unique#{key}"] = r[2].to_f
+        output_data[label]["Avg#{key}"] = r[3].to_f
       end
     end
     output_data.each_key do |key|
       output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
       output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
       output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+      output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
     end
 
     @data_array = output_data.map do |key, value|

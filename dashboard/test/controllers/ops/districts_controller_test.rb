@@ -5,7 +5,6 @@ module Ops
     API = ::OPS::API
 
     setup do
-      @request.headers['Accept'] = 'application/json'
       @admin = create :admin
       sign_in @admin
       @district = create(:district)

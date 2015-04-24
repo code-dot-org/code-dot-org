@@ -8,9 +8,11 @@ nav: pd2_nav
 
 ## Click on your location for more information. ##
 
-[CA - Los Angeles (LAUSD only)](/educate/pd/15-16/la)
+[CA - Los Angeles (LAUSD only)](/educate/pd/15-16/lausd)
 <br />
 [CA - Orange County](/educate/pd/15-16/orange)
+<br />
+[CO - Denver](/educate/pd/15-16/denver)
 <br />
 [FL - Broward](/educate/pd/15-16/broward)
 <br />
@@ -22,11 +24,15 @@ nav: pd2_nav
 <br />
 [IL - Chicago](/educate/pd/15-16/chicago)
 <br />
+[MD - Boston](/educate/pd/15-16/boston)
+<br />
+[MD - Charles](/educate/pd/15-16/charles)
+<br />
 [MD - Frederick](/educate/pd/15-16/frederick)
 <br />
 [MD - Howard](/educate/pd/15-16/howard)
 <br />
-[MD - Prince Geroge's County](/educate/pd/15-16/pg)
+[MD - Prince George's County](/educate/pd/15-16/pg)
 <br />
 [NC - Durham](/educate/pd/15-16/durham)
 <br />
@@ -44,7 +50,7 @@ nav: pd2_nav
 <br />
 
 ----------
-Please visit [FAQs](/educate/pd/faq) for more information.
+Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 
 <br />
 <br />
