@@ -912,12 +912,12 @@ NetSim.prototype.render = function () {
 
   // Render left column
   if (this.isConnectedToRemote()) {
-    this.mainContainer_.find('.leftcol-disconnected').hide();
-    this.mainContainer_.find('.leftcol-connected').show();
+    this.mainContainer_.find('.rightcol-disconnected').hide();
+    this.mainContainer_.find('.rightcol-connected').show();
     this.sendPanel_.setFromAddress(myAddress);
   } else {
-    this.mainContainer_.find('.leftcol-disconnected').show();
-    this.mainContainer_.find('.leftcol-connected').hide();
+    this.mainContainer_.find('.rightcol-disconnected').show();
+    this.mainContainer_.find('.rightcol-connected').hide();
     this.lobby_.render();
   }
 
