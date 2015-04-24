@@ -12,6 +12,7 @@
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require 'cdo/hip_chat'
 require src_dir 'database'
+require 'cdo/properties'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
@@ -149,7 +150,7 @@ def main()
     day += 1
   end
 
-  PROPERTIES.set :hoc_metrics, {
+  Properties.set :hoc_metrics, {
     started: total_started,
     finished: total_finished,
     tutorials: total_tutorials,
@@ -162,7 +163,7 @@ def main()
   lines_of_code = rack_env?(:production) ? `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs')}`.to_i : 0
 
   time = DateTime.now
-  PROPERTIES.set :metrics, {
+  Properties.set :metrics, {
     created_at:               time,
     created_on:               time.to_date,
     csedweek_organizers:      38236,
@@ -179,7 +180,7 @@ def main()
   total_with_gender = total_females + total_males
   total_with_gender = 1 if total_with_gender == 0
 
-  PROPERTIES.set :about_stats, {
+  Properties.set :about_stats, {
     number_served: total_started,
     number_students: DASHBOARD_DB[:users].where(user_type:'student').count,
     number_teachers: DASHBOARD_DB[:users].where(user_type:'teacher').count,
