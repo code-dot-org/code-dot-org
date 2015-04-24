@@ -329,6 +329,12 @@ button.arrow:focus {
   #share-cell.share-cell-none {
     display: none; }
 
+#design-cell {
+  display: inline-block;
+  vertical-align: top; }
+  #design-cell.design-cell-none {
+    display: none; }
+
 .new-design-element {
   width: 100px;
   height: 40px;
