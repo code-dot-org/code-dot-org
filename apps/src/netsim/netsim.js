@@ -295,7 +295,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
       hasUnreadMessages: false,
       packetSpec: this.level.clientInitialPacketHeader
     });
-
   } else if (this.level.messageGranularity === MessageGranularity.BITS) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
