@@ -82,23 +82,6 @@ $wide-column-width: 121px;
   font-size: 20px;
 }
 
-.vflow-wrap {
-  display: table;
-  position: relative;
-  table-layout: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-.vflow-row {
-  display: table-row;
-  position: relative;
-
-  &.shrink-to-content {
-    height: 1px;
-  }
-}
-
 //
 // NetSim-specific styles
 //
@@ -116,11 +99,6 @@ $wide-column-width: 121px;
     left: 0;
     width: 320px;
     overflow-y: auto;
-
-    & > .vflow-wrap {
-      // Fix column to 300px width, but allow scrollbar to appear outside of that.
-      width: 300px;
-    }
   }
 
   #netsim-rightcol {
@@ -129,11 +107,7 @@ $wide-column-width: 121px;
     bottom: 0;
     right: 0;
     width: calc(100% - 330px);
-
-    #netsim-send {
-      // Collapse down to content-size
-      height: 1%;
-    }
+    overflow-y: auto;
   }
 
   h1 {
@@ -352,12 +326,8 @@ $wide-column-width: 121px;
   $panel_border_radius: 0.3em;
 
   div.netsim-panel {
-    margin: 0;
+    margin: 0 0 0.5em;
     padding: 0;
-
-    & > .vflow-wrap {
-      margin-bottom: 10px;
-    }
 
     h1 {
       margin: 0;
@@ -389,8 +359,6 @@ $wide-column-width: 121px;
       border-bottom: solid darkgray 1px;
       border-top: solid $cyan 1px;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
-      width: calc(100% - 2px);
-      height: calc(100% - 10px);
     }
 
     .content-wrap {
@@ -458,9 +426,7 @@ $wide-column-width: 121px;
     }
 
     .scroll-area {
-      position: absolute;
-      top: 3px;
-      bottom: 10px;
+      margin: 0.5em 0;
       width: 100%;
       overflow-y: auto;
     }
