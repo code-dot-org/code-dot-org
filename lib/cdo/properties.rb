@@ -2,7 +2,6 @@ require 'cdo/db'
 DB = PEGASUS_DB
 
 class Properties
-  public
 
   @@table = DB[:properties]
 
