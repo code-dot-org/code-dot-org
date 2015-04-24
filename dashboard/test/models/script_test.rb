@@ -8,6 +8,19 @@ class ScriptTest < ActiveSupport::TestCase
     @levels = (1..5).map { |n| create(:level, :name => "Level #{n}", :game => @game) }
   end
 
+  test 'login required setting in script file' do
+    file = File.join(self.class.fixture_path, "login_required.script")
+
+    scripts, _ = Script.setup([file])
+    script = scripts[0]
+    assert script.login_required?
+    assert_equal 'Level 1', script.levels[0].name
+
+    assert_equal false, Script.find(2).login_required?
+
+    assert_equal false, create(:script).login_required?
+  end
+
   test 'create script from DSL' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
