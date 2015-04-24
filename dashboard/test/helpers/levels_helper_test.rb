@@ -1,6 +1,14 @@
 require 'test_helper'
 
+# Mock the ChannelsApi to generate random tokens
+class ChannelsApi
+  def self.call(_)
+    [nil, {'Location' => "/#{rand}"}]
+  end
+end
+
 class LevelsHelperTest < ActionView::TestCase
+  include Devise::TestHelpers
   include LocaleHelper
 
   setup do
@@ -143,5 +151,26 @@ class LevelsHelperTest < ActionView::TestCase
     app_options
 
     assert_equal blockly_options, level.blockly_options
+  end
+
+  test 'app_options sets a channel' do
+    @user = create :user
+    sign_in @user
+    self.stubs(:current_user).returns @user
+
+    def request
+      OpenStruct.new(env: {})
+    end
+
+    set_channel
+    channel = @view_options[:channel]
+    # Request it again, should get the same channel
+    set_channel
+    assert_equal channel, @view_options[:channel]
+
+    # Request it for a different level, should get a different channel
+    @level = create :level, :blockly
+    set_channel
+    assert_not_equal channel, @view_options[:channel]
   end
 end
