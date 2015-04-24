@@ -4,7 +4,8 @@
 %h1 Level Completions
 %h2 From #{@start_date} to #{@end_date}
 #completionTable
-
+:css
+  .htNumeric { font-family: monospace; }
 :javascript
   var data = eval(#{@data_array.try(:to_json)});
   function successRateRenderer(instance, td, row, col, prop, value, cellProperties) {

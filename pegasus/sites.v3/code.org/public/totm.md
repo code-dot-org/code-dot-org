@@ -1,19 +1,14 @@
 ---
 title: Nominate Teacher of the Month
 nav: educate_nav
-rightbar: blank
 ---
 [#totm-intro]
 
 # Teacher of the Month winners
 
-- [Kimberly Burton-Regulski](http://blog.code.org/post/103221429853/totm8), Baltimore, MD
-- [Steve Isaacs](http://blog.code.org/post/99075187308/totm7), Bernards, NJ
-- [Elizabeth Bacon](http://blog.code.org/post/96187918138/totm6), Los Angeles, CA
-- [Jennifer Latimer](http://blog.code.org/post/90674368013/totm4), Maplewood, NJ
-- [Dr. Thomas Reinartz](http://blog.code.org/post/86527436473/totm30), St. Paul, MN
-- [Jaime Binning](http://codeorg.tumblr.com/post/83529925676/totm2), Roscoe, IL 
-- [Maria Garrett-Jackson](http://codeorg.tumblr.com/post/80268490173/totm1), Houston, TX 
+<%= view :totm3_winners %>
+</br>
+<a href="http://blog.code.org/tagged/TOTM"><button>See all</button></a>
 
 # Nominate a Teacher of the Month
 

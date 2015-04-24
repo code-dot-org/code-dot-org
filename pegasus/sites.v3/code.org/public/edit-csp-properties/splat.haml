@@ -1,0 +1,117 @@
+---
+title: "Applab Key/Value pairs"
+theme: angular
+angular: propertiesApp
+---
+
+-channel_id = request.splat_path_info[1..-1]
+-api_base_url = "/v3/shared-properties/#{channel_id}"
+
+%div{"ng-app" => "propertiesApp", "ng-view" => ""}
+
+:javascript
+  'use strict';
+
+  // Declare app level module which depends on filters, and services
+  angular.module('propertiesApp', [
+    'ngRoute',
+    'ngResource',
+    'propertiesApp.controllers',
+    'propertiesApp.services'
+  ]).config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/',
+                        {templateUrl: '/edit-csp-properties/properties',
+                         controller: 'PropertiesController'});
+    $routeProvider.otherwise({redirectTo: '/'});
+  }]);
+
+  // SERVICES
+  var services = angular.module('propertiesApp.services', []).
+      value('version', '0.1');
+
+  services.factory('propertiesService', ['$resource',
+    function($resource) {
+      var Property = $resource("#{api_base_url}/:key", {}, {
+        // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+        //  'get':    {method: 'GET'},
+        //  'save':   {method: 'POST'},
+        //  'query':  {method: 'GET', isArray:true},
+        //  'remove': {method: 'DELETE'},
+        //  'delete': {method: 'DELETE'} // don't use this because it doesn't work in IE9
+      });
+
+      return Property;
+    }]);
+
+  // CONTROLLERS
+
+  var controllers = angular.module('propertiesApp.controllers', []).
+      value('version', '0.1');
+
+  controllers.controller('PropertiesController', ['$scope', '$http', '$route', '$routeParams', '$location', '$window', 'propertiesService',
+      function($scope, $http, $route, $routeParams, $location, $window, propertiesService) {
+    $scope.properties = propertiesService.get();
+    $scope.keys = null;
+    $scope.editing = [];
+    $scope.editingNewProperty = false;
+    $scope.newKey = '';
+    $scope.newValue = '';
+
+    $scope.properties.$promise.then(function(properties) {
+      $scope.keys = getKeys(properties);
+    }).catch($scope.genericError);
+
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+
+    $scope.saveProperty = function(key) {
+      var value = castValue($scope.properties[key]);
+      $scope.properties[key] = value;
+      // The properties API doesn't quite fit Angular's $resource model.
+      $http.post("#{api_base_url}/" + key, JSON.stringify(value));
+      $scope.editing[key] = false;
+    }
+
+    $scope.deleteProperty = function(key) {
+      $scope.properties.$delete({key:key});
+      $scope.properties[key] = undefined;
+      var index = $scope.keys.indexOf(key);
+      if (index > -1) {
+        $scope.keys.splice(index, 1);
+      }
+      $scope.editing[key] = false;
+    }
+
+    $scope.saveNewProperty = function() {
+      var key = $scope.newKey;
+      var value = castValue($scope.newValue);
+      $scope.properties[key] = value;
+      $scope.keys.push(key);
+      // The properties API doesn't quite fit Angular's $resource model.
+      $http.post("#{api_base_url}/" + key, JSON.stringify(value));
+      $scope.clearNewProperty();
+    }
+
+    $scope.clearNewProperty = function() {
+      $scope.newKey = '';
+      $scope.newValue = '';
+      $scope.editingNewProperty = false;
+    }
+
+    function castValue(val) {
+      if (val == '') return undefined;
+      if (val == 'true' || val === true) return true;
+      if (val == 'false' || val === false ) return false;
+      if (!isNaN(val)) return parseInt(val);
+      return val;
+    }
+
+  }]);
+
+  function getKeys(properties) {
+    return Object.keys(properties).filter(function(prop) {
+      // Omit properties added by angular starting with '$'.
+      return (prop.indexOf('$') !== 0);
+    });
+  }

@@ -30,6 +30,7 @@ var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
+var annotationList = require('./acemode/annotationList');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -64,6 +65,11 @@ var StepType = {
   IN:   1,
   OVER: 2,
   OUT:  3,
+};
+
+var ErrorLevel = {
+  WARNING: 'WARNING',
+  ERROR: 'ERROR'
 };
 
 // The typical width of the visualization area (indepdendent of appWidth)
@@ -286,7 +292,23 @@ function outputApplabConsole(output) {
   }
 }
 
-var apiWarn = outputApplabConsole;
+/**
+ * Output error to console and gutter as appropriate
+ * @param {string} warning Text for warning
+ * @param {ErrorLevel} level
+ * @param {number} lineNum One indexed line number
+ */
+function outputError(warning, level, lineNum) {
+  var text = level + ': ';
+  if (lineNum !== undefined) {
+    text += 'Line: ' + lineNum + ': ';
+  }
+  text += warning;
+  outputApplabConsole(text);
+  if (lineNum !== undefined) {
+    annotationList.addRuntimeAnnotation(level, lineNum, warning);
+  }
+}
 
 var OPTIONAL = true;
 
@@ -309,12 +331,13 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                Applab.cumulativeLength,
-                                                Applab.userCodeStartOffset,
-                                                Applab.userCodeLength);
-      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
-              " parameter value (" + varValue + ") is not a " + expectedType + ".");
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not a " + expectedType + ".";
+      outputError(errorString, ErrorLevel.WARNING, line);
     }
     opts[validatedTypeKey] = properType;
   }
@@ -331,12 +354,13 @@ function apiValidateTypeAndRange(opts, funcName, varName, varValue,
       inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
     }
     if (!inRange) {
-      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                Applab.cumulativeLength,
-                                                Applab.userCodeStartOffset,
-                                                Applab.userCodeLength);
-      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
-              " parameter value (" + varValue + ") is not in the expected range.");
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not in the expected range.";
+      outputError(errorString, ErrorLevel.WARNING, line);
     }
     opts[validatedRangeKey] = inRange;
   }
@@ -347,12 +371,13 @@ function apiValidateActiveCanvas(opts, funcName) {
   if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
     var activeCanvas = Boolean(Applab.activeCanvas);
     if (!activeCanvas) {
-      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                Applab.cumulativeLength,
-                                                Applab.userCodeStartOffset,
-                                                Applab.userCodeLength);
-      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName +
-              "() called without an active canvas. Call createCanvas() first.");
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() called without an active canvas. Call " +
+        "createCanvas() first.";
+      outputError(errorString, ErrorLevel.WARNING, line);
     }
     if (opts) {
       opts[validatedActiveCanvasKey] = activeCanvas;
@@ -369,13 +394,14 @@ function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shoul
     var exists = Boolean(element && divApplab.contains(element));
     var valid = exists == shouldExist;
     if (!valid) {
-      var line = codegen.getNearestUserCodeLine(Applab.interpreter,
-                                                Applab.cumulativeLength,
-                                                Applab.userCodeStartOffset,
-                                                Applab.userCodeLength);
-      apiWarn("WARNING: Line " + (line + 1) + ": " + funcName + "() " + varName +
-              " parameter refers to an id (" + id + ") which " +
-              (exists ? "already exists." : "does not exist."));
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName +
+        " parameter refers to an id (" +id + ") which " +
+        (exists ? "already exists." : "does not exist.");
+      outputError(errorString, ErrorLevel.WARNING, line);
     }
     opts[validatedDomKey] = valid;
   }
@@ -446,11 +472,7 @@ function handleExecutionError(err, lineNumber) {
                                                     Applab.userCodeStartOffset,
                                                     Applab.userCodeLength);
   }
-  if (lineNumber) {
-    outputApplabConsole('ERROR: Line ' + lineNumber + ': ' + String(err));
-  } else {
-    outputApplabConsole('ERROR: ' + String(err));
-  }
+  outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
   Applab.onPuzzleComplete();
 }
@@ -739,6 +761,10 @@ Applab.init = function(config) {
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+  user = {
+    applabUserId: config.applabUserId,
+    isAdmin: (config.isAdmin === true)
+  };
 
   loadLevel();
 
@@ -785,7 +811,7 @@ Applab.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       pinWorkspaceToBottom: true,
-      hasDesignMode: true,
+      hasDesignMode: user.isAdmin,
       designModeBox: designModeBox
     }
   });
@@ -955,8 +981,6 @@ Applab.init = function(config) {
     }
 
   }
-
-  user = {applabUserId: config.applabUserId};
 };
 
 /**
@@ -1323,6 +1347,10 @@ studioApp.runButtonClick = function() {
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
+    var designCell = document.getElementById('design-cell');
+    if (designCell) {
+      designCell.className = 'design-cell-enabled';
+    }
   }
 };
 
@@ -1494,6 +1522,7 @@ Applab.execute = function() {
       'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
                  'setCallbackRetVal(ret); }}';
     var session = studioApp.editor.aceEditor.getSession();
+    annotationList.attachToSession(session);
     Applab.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
@@ -1637,7 +1666,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 
