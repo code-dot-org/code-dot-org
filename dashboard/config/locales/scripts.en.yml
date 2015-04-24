@@ -344,6 +344,7 @@ en:
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
           Programming Concepts: Programming Concepts
+          Reflection: Reflection
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -526,6 +527,9 @@ en:
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -564,6 +568,8 @@ en:
           description: Online Introduction to ECS
         sciencePD:
           Introduction to PD: Introduction to PD
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
         rbo-reference:
           reference: reference
         Test Wednesday:

@@ -8,11 +8,7 @@
       "css": "unplugged"
     },
     "title": "Overview of programming concepts",
-    "markdown": "## Programming Concepts\n\nHere are the programming concepts you'll be introduced to in this stage:\n\n- Loops\n- Events\n- Conditionals\n- Functions\n",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "## Programming Concepts\n\nHere are the programming concepts you'll be introduced to in this stage:\n\n- Loops\n- Events\n- Conditionals\n- Functions\n"
   },
   "md5": "974aecb6bbc13729c05746afb4911e90"
 }]]></config>

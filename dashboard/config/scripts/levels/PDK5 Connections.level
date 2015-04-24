@@ -1,0 +1,13 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-23T20:47:38.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "Connections",
+    "markdown": "## Connections to Other Subject Areas\n\nDo you think computer science connects to other topics or subjects your students are learning about? Explain why or why not.\n\n<div id=\"discourse-comments\" />\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  }
+}]]></config>
+</External>
