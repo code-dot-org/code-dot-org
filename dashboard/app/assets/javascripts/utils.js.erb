@@ -10,9 +10,14 @@ var addClickTouchEvent = function(element, handler) {
 };
 
 function onURLBlocked(base_url, callback) {
-  $("<img width=0 height=0>")
+  $('<img width="0" height="0">')
       .on("error", callback)
       .attr("src", base_url + "?" + Math.random())
       .css("position", "absolute")
+      .css("bottom", 0)
+      .css("right", 0)
+      .css("z-index", -1)
+      .css("width", 0)
+      .css("height", 0)
       .appendTo("body");
 }
