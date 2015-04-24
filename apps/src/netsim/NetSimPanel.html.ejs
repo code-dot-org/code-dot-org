@@ -1,21 +1,13 @@
-<div class="vflow-wrap">
-  <div id="netsim-panel-<%= instanceID %>" class="netsim-panel vflow-row <%= className %>">
-    <div class="vflow-wrap">
-      <div class="vflow-row shrink-to-content">
-        <h1>
-          <div class="panel-controls"></div>
-          <div class="minimizer single-line-with-ellipsis">
-            <% if (canMinimize) { %>
-            <i class="fa fa-minus-square"></i>
-            <% } %>
-            <span class="title-text"><%= panelTitle %></span>
-          </div>
-        </h1>
-      </div>
-      <div class="vflow-row">
-        <div class="panel-body vflow-wrap">
-        </div>
-      </div>
+<div id="netsim-panel-<%= instanceID %>" class="netsim-panel <%= className %>">
+  <h1>
+    <div class="panel-controls"></div>
+    <div class="minimizer single-line-with-ellipsis">
+      <% if (canMinimize) { %>
+      <i class="fa fa-minus-square"></i>
+      <% } %>
+      <span class="title-text"><%= panelTitle %></span>
     </div>
+  </h1>
+  <div class="panel-body">
   </div>
 </div>
