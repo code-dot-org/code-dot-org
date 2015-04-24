@@ -1,0 +1,154 @@
+<%
+var utils = require('../utils');
+var _ = utils.getLodash();
+var i18n = require('../../locale/current/netsim');
+var NodeType = require('./netsimConstants').NodeType;
+
+
+/**
+ * @typedef {Object} rowMetadata
+ * @property {number} nodeID
+ * @property {string} classAttr
+ * @property {string} displayName
+ * @property {string} status
+ */
+
+/**
+ * For use with Array.prototype.filter()
+ * @param {NetSimNode} node
+ * @returns {boolean}
+ */
+var omitIncomingConnectionNodes = function (node) {
+  return undefined === _.find(incomingConnectionNodes, function (connectionRequestNode) {
+        return connectionRequestNode.entityID === node.entityID;
+      });
+};
+
+/**
+ * For use with Array.prototype.filter()
+ * @param {NetSimNode} node
+ * @returns {boolean}
+ */
+var omitOutgoingRequestTargets = function (node) {
+  return !remoteNode || (remoteNode.entityID !== node.entityID);
+};
+
+/**
+ * For use with Array.prototype.map()
+ * @param {NetSimNode} node
+ * @returns {rowMetadata}
+ */
+var nodeToRowMetadata = function (node) {
+  var classes = (node.getNodeType() === NodeType.ROUTER) ? ['router-row'] : ['user-row'];
+
+  if (controller.isMyNode(node)) {
+    classes.push('own-row');
+  }
+
+  if (!controller.hasOutgoingRequest() && controller.canConnectToNode(node)) {
+    classes.push('selectable-row');
+  }
+
+  if (controller.isSelectedNode(node)) {
+    classes.push('selected-row');
+  }
+
+  return {
+    nodeID: node.entityID,
+    classAttr: classes.join(' '),
+    displayName: node.getDisplayName(),
+    status: node.getStatus() + ' ' + node.getStatusDetail()
+  };
+};
+
+/**
+ * For use with Array.prototype.sort()
+ * @param {rowMetadata} a
+ * @param {rowMetadata} b
+ * @returns {number}
+ */
+var displayNameSort = function (a, b) {
+  return (a.displayName > b.displayName) ? 1 : -1;
+};
+
+var lobbyRows = nodesOnShard
+    .filter(controller.shouldShowNode.bind(controller))
+    .filter(omitIncomingConnectionNodes)
+    .filter(omitOutgoingRequestTargets)
+    .map(nodeToRowMetadata)
+    .sort(displayNameSort);
+
+var requestRows = incomingConnectionNodes
+    .filter(controller.shouldShowNode.bind(controller))
+    .filter(omitOutgoingRequestTargets)
+    .map(nodeToRowMetadata)
+    .sort(displayNameSort);
+
+var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
+    .filter(controller.shouldShowNode.bind(controller))
+    .map(nodeToRowMetadata);
+%>
+<div class="content-wrap">
+
+  <strong><%= i18n.lobby() %></strong>
+  <ul class="netsim-lobby-list">
+    <%
+
+    lobbyRows.forEach(function (row) {
+    %>
+    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+      <%= row.displayName %> : <%= row.status %>
+    </li>
+    <%
+    });
+
+    if (!controller.hasOutgoingRequest() && showAddRouterButton) {
+    %>
+    <li class="empty-row">
+      <input type="button" id="netsim-lobby-add-router" value="<%= i18n.addRouter() %>" />
+    </li>
+    <%
+    } else if (lobbyRows.length === 0) {
+    %>
+    <li class="empty-row"><%= i18n.lobbyIsEmpty() %></li>
+    <%
+    }
+    %>
+  </ul>
+
+  <% if (requestRows.length > 0) { %>
+  <strong><%= i18n.incomingConnectionRequests() %></strong>
+  <ul class="netsim-lobby-list">
+    <%
+    requestRows.forEach(function (row) {
+    %>
+    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+      <%= row.displayName %> : <%= row.status %>
+    </li>
+    <%
+    });
+    %>
+  </ul>
+  <% } %>
+
+  <% if (outgoingRequestRows.length > 0) { %>
+  <strong><%= i18n.outgoingConnectionRequests() %></strong>
+  <ul class="netsim-lobby-list">
+    <%
+    outgoingRequestRows.forEach(function (row) {
+    %>
+    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+      <%= row.displayName %> : <%= row.status %>
+    </li>
+    <%
+    });
+    %>
+  </ul>
+  <% } %>
+
+  <% if (controller.hasOutgoingRequest()) { %>
+    <p><%= i18n.waitingForNodeToConnect({ node: remoteNode.getDisplayName() }) %> <input type="button" id="netsim-lobby-cancel" value="<%= i18n.cancel() %>" /></p>
+  <% } else { %>
+    <input type="button" id="netsim-lobby-connect" value="<%= i18n.connect() %>" <% if (!controller.hasSelectedNode()) { %>disabled<% } %> />
+  <% } %>
+</div>

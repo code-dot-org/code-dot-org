@@ -11,7 +11,7 @@
     "instructions": "Use the Design Recipe to create a function \"starburst\" that has two domains. 1) a number of points and 2) a radius. \"starburst\" returns a yellow radial star with given points, and an inner radius that is half the outer radius.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "min_workspace_height": "1000",
+    "min_workspace_height": "1500",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -23,7 +23,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "disable_examples": "false"
   },
   "md5": "95bbaf51a7ff8f141c45230f3bcc993e"
 }]]></config>

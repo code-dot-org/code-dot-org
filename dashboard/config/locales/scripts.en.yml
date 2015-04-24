@@ -343,6 +343,7 @@ en:
           Personal Reflection: Personal Reflection
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -457,19 +458,37 @@ en:
           'Artist: Functions': 'Artist: Functions'
           'Bee: Debugging': 'Bee: Debugging'
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
+          title: CSP Unit 1 - Digital Information
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           Lesson14: Lesson14
           Lesson 14: Lesson 14
           Lesson 14 v2: Lesson 14 v2
           Lesson 15: Lesson 15
-          description_short: Make Black and White Images with the pixelation tool
           Lesson 8: Lesson 8
           Lesson 5: Lesson 5
           Lesson 3: Lesson 3
           Lesson 4: Lesson 4
           Lesson 6: Lesson 6
           Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -506,6 +525,7 @@ en:
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Introduction to PD
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -525,3 +545,26 @@ en:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15
+        ECSPD:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
+        sciencePD:
+          Introduction to PD: Introduction to PD
+        rbo-reference:
+          reference: reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro

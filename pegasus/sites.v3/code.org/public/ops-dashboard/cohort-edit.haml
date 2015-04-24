@@ -5,24 +5,7 @@ theme: none
 - authentication_required!
 - forbidden! unless dashboard_user[:admin]
 
-:css
-  .row {
-    padding: 10px;
-  }
-  .row.destroying {
-    background-color: #ccc;
-    opacity: 0.2;
-    text-decoration: line-through;
-  }
-
-%a{href:'/ops-dashboard'}
-  Dashboard
->
-%a{href:'/ops-dashboard#/teacher-cohorts'}
-  Teacher cohorts
->
-%span
-  Teacher cohort management
+= view :breadcrumbs, trail: [{url: '/teacher-dashboard', text: 'Dashboard'}, {url: '/ops-dashboard#/teacher-cohorts', text: 'PD Workshops'}, {text: 'Teacher cohort management'}]
 
 %h1{"ng-show" => "cohort.id"} Edit {{cohort.name}}
 %h1{"ng-show" => "!cohort.id"} Add teacher cohort
@@ -45,7 +28,7 @@ theme: none
       %label.control-label{for: "cohort-cutoff-date"} Cutoff Date
       %div
       %div
-        %input#cohort-cutoff-date.form-control{type: "text", "ng-model" => "cohort.cutoff_date"}
+        %input#cohort-cutoff-date.form-control{type: 'date', "ng-model" => "cohort.cutoff_date"}
   .row
     .col-sm-8
       .panel.panel-default
@@ -58,7 +41,7 @@ theme: none
         .panel-body
           .row{"ng-repeat" => "cohort_district in cohort.districts", "ng-class" => "cohort_district._destroy == 1 ? 'destroying' : ''"}
             .form-group.col-sm-8{style: "margin-bottom: 0;"}
-              %select.district-name.form-control{"ng-model" => "cohort_district.id", "ng-options"=>"district.id as district.name for district in districts", selectize: true}
+              %select.district-name.form-control{"ng-model" => "cohort_district.id", "ng-options"=>"district.id as district.name for district in districts | orderBy:'name'", selectize: true}
             .col-sm-2
               %input.district-max-teachers.form-control{type: "text", "ng-model" => "cohort_district.max_teachers"}
             .col-sm-2
@@ -75,3 +58,13 @@ theme: none
   .form-group.action-buttons
     %button#btn-save.btn.btn-default{type: "submit", "ng-click" => "save(cohort)"} Save
     %button#btn-cancel.btn.btn-link{"ng-click" => "cancel_edit()"} Cancel
+
+:css
+  .row {
+    padding: 10px;
+  }
+  .row.destroying {
+    background-color: #ccc;
+    opacity: 0.2;
+    text-decoration: line-through;
+  }

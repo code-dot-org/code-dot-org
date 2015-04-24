@@ -21,7 +21,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ### **Activity: Conditionals and Piecewise Functions**  
 
-3) [Conditionals](#Activity1)   
+3) [Conditionals and Piecewise Functions](#Activity1)   
 
 <!--
 ### **Assessment**
@@ -63,28 +63,13 @@ This lesson has three new and important words:<br/>
    - If the students succeed, point out right away that they succeeded, so they *do* get the reward.
    - Otherwise, point out that they were not completely quiet for a full thirty seconds, so they *do not* get the reward.
 - Ask the class "What was the *condition* of the reward?"
-  - The condition was *IF* you were quiet for 30 seconds
+  - The condition was if you were quiet for 30 seconds
      - If you were, the condition would be true, then you would get the reward.
-     - If you weren't, the condition would be false, then the reward woud not apply.
+     - If you weren't, the condition would be false, then the reward would not apply.
   - Can we come up with another conditional?
-     - If I say "question," then you raise your hand
+     - If I say "question," then you raise your hand.
      - If I sneeze, then you say "Gesundheit."
      - What examples can you come up with?
-- Sometimes, we want to have an extra condition, in case the "IF" statement is not true.
-  - This extra condition is called an "ELSE" statement
-  - When the "IF" condition isn't met, we can look at the "ELSE" for what to do
-     - Example: IF I draw a 7, then everybody claps. Or ELSE, everyone says "Awwwwww"
-     - Let's try it. (Draw a card and see if your class reacts appropriately.)
-  - Ask the class to analyze what just happened. 
-     - What was the IF?
-     - What was the ELSE?
-     - Which condition was met?
-  - Believe it or not, we have even one more option.
-     - What if I wanted you to clap if I draw a 7, or else if I draw something less than seven you say "YAY," or else you say "Awwwwwww"?
-         - This is why we have the terms If, Else If, and Else.
-         - If is the first condition
-         - Else-if gets looked at only if the "If" isn't true.
-         - Else gets looked at only if nothing before it is true.
 
 Up to now, all of the functions you’ve seen have done the same thing to their inputs:
 
@@ -96,15 +81,15 @@ Conditionals let our programs run differently based on the outcome of a conditio
 
 Let's look at a conditional piece by piece:
 
-          (x > 10)  ->  "That's pretty big"
+    (x > 10)  ->  "That's pretty big"
     (x < 10)  ->  "That's pretty small"
     else      ->  "That's exactly ten"
 
-If we define x = 11, this conditional will first check if x > 10, which returns TRUE, so we get the String "that's big" - and because we found a true condition we don't need to keep looking.
+If we define x = 11, this conditional will first check if x > 10, which returns TRUE, so we get the String "That's pretty big" - and because we found a true condition we don't need to keep looking.
 
-If we define x = 10, then we first check if x > 10 (FALSE), then we check x < 10 (FALSE), so then we hit the _else_ statement, which only returns if none of the other conditions were true. The _else_ statement should be considered the catch-all response - with that in mind, what's wrong with replying "That's exactly ten"? What if x = "yellow"? If you can state a precise question for a clause, write the precise question instead of else. It would have been  for beginners to write the two questions (x > 10) and (x <= 10). Explicit questions make it easier to read and maintain programs.
+If we define x = 10, then we first check if x > 10 (FALSE), then we check x < 10 (FALSE), so then we hit the _else_ statement, which only returns something if none of the other conditions were true. The _else_ statement should be considered the catch-all response - with that in mind, what's wrong with replying "That's exactly ten"? What if x = "yellow"? If you can state a precise question for a clause, write the precise question instead of else. It would have been better to write the two conditions as (x > 10) and (x <= 10). Explicit questions make it easier to read and maintain programs.
 
-Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without cond, you could only write a function that always moves the player up, or always moves it down, but not both.
+Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without conditionals, you could only write a function that always moves the player up, or always moves it down, but not both.
      
 Now let's play a game.
  
@@ -115,94 +100,76 @@ Now let's play a game.
 ## Activities:
 ### <a name="Activity1"></a> 3) Conditionals and Piecewise Functions
 
-Say to the class:
+Living Function Machines - Conditionals:
 
-- If I say *startAll*, then you all stand up and become computers that are obeying commands that are given.
-- If I say *shutDownAll*, then you all sit down and are no longer processing commands.  This is how we end the game.
-- If I say *shutDown*([“name1”,”name2”,...]), then any names listed must sit down.  When an individual makes a mistake, this is how they are removed from the game.  
-- Other than these commands, there is only one other command you know:  
-  *SimonSez*(“action”)
+Explain to the class that they will be playing the role of Function Machines, following a few simple rules:
+- Whenever your function is called, the only information you are allowed to take in is what's described in your Domain.
+- Your function must return only what is described in your Range.
+- You must follow the steps provided in your definition - no magic!
 
-The contract for SimonSez looks like this:
-SimonSez: String -> studentAction
+This time, however, everyone will be running the same function. And that function is called 'simon\_says' and it has the following Contract:
+simon_says: String -> Movement  
+Given a String that describes an action, produce the appropriate movement. If an unknown action is called, lower both hands.
 
-Review the contract parts:  name, domain, range, parameters(input types), return types(output values)
+Examples
 
-Say to the class: “Here is what the initial code looks like.  We will add several clauses but the clauses that are there will always be there and the final else action (often called the default result) will always be Left Hand Down.”
+    simon_says("left hand up")    = RaiseLeftHand
+    simon_says("right hand up")   = RaiseRightHand
+    simon_says("left hand down")  = LowerLeftHand
+    simon_says("right hand down") = LowerRightHand
 
-<pre><code>
-if (“Right Hand Up”) -> RaiseRightHand  
-elseif (“Right Hand Down”) -> LowerRightHand  
-elseif(“Left Hand Up”) -> LeftHandUp  
-else LeftHandDown  
-</code></pre>
+Definition
 
-Example Play: (before beginning, you may want to review right and left with them, perhaps even writing it on the board for the slightly dyslexic) 
+    simon_says(action) = cond {
+                       "left hand up"     : RaiseLeftHand,
+                       "right hand up"    : RaiseRightHand,
+                       "left hand down"   : LowerLeftHand,
+                       "right hand down"  : LowerRightHand,
+                       else               : LowerBothHands }
 
-- startAll
-- `SimonSez(“Right Hand Up”)`
-- `SimonSez(“Right Hand Down”)`
-- `SimonSez(“Left Hand Up”)`
-- `SimonSez(“Right Hand Up”)`
-- `SimonSez(“Hokey Pokey”)`   // should put left hand down.
-- `SimonSez(“Left Hand Up”)`
-- `SimonSez(“Right Down”)`      // “trick”.  No matches. Goes to default
+Review the contract parts:  name, domain, range, parameters (input types), return types (output values)
 
-If anyone makes a mistake above make sure to say `shutDown([“Sam”,”Pat”,Francis”...])`
+Say to the class: “Here is what the initial code looks like.  We will add several clauses but the clauses that are there will always be there and the final else action (often called the default result) will always be LowerBothHands
 
-You will likely want to go one more round before doing a restartAll.
+- `simon_says("right hand up")`
+- `simon_says("left hand up")` - both hands should be up
+- `simon_says("right hand up")` - both hands should still be up
+- `simon_says("left hand down")` - left should be down, right should be up
+- `simon_says("right hand up")` - left should be down, right should be up
+- `simon_says("hokey pokey")` - both hands should be down
+- `simon_says("left hand up")` - left hand should be up
+- `simon_says("right up")` - trick, there are no matches so the else statement is called
 
-Say to the class:  “We will now add the following clauses to the middle of our code.  All the other pieces are still there.”
+If anyone makes a mistake, they must "reboot" by sitting down and waiting for the next round to start.
 
-> elseif(“Turn 180”) -> Turn180Clockwise  
-> elseif(“Turn 90”) -> Turn90Clockwise  
+Say to the class:  “Now we're going to rewrite our function a little bit - instead of taking a String as its Domain, simon_says will take a Number. Here's what our new function looks like:
 
-Possible “tricks” to throw in as you randomly call out commands:  “Raise Right Hand”, “Lower Left Hand”, “Turn -90”, “Turn 270”, “Spin”
+    simon_says(action) = cond {
+					   (action < 10)					: RaiseLeftHand,
+					   (action < 20)					: RaiseRightHand,
+					   (action > 20) and (action < 50)	: LowerLeftHand,
+					   (action > 50) and (action < 100)	: LowerRightHand,
+					   else						        : LowerBothHands }
 
-Continue playing using both the commands in the clauses as well as the suggested “tricks” that will result in the default else of Left Hand Down.  Note that if Left Hand is already Down, this command still works but appears to do nothing.  Be sure to make students sit when then do things incorrectly.  Play until the students stop making errors and then add more clauses OR let one of the students be the controller and you join the ranks of the computers.
+Continue playing using numbers in the `simon_says` function, such as `simon_says(15)`, which should result in `RaiseRightHand`. As students get comfortable with the new rules, you can throw in some trick questions, such as `simon_says(20)` or `simon_says(50)`, both of which should call the else statement. You can extend this activity in many ways, for example:
 
-The next suggestion is a little tricky but will help them both process ands as well as realize that once a condition has been met that no additional else statements are evaluated.
-
-> elseif(“hands ”+# and #>1) -> TwoThumbsUp  
-> elseif(anything+# and #&lt;5) -> BothHandsDown 
-
-Remind students that this is really pseudocode.  To evaluate the conditionals properly, there would need to be some extra work to parse out the parts of the input string.
-
-The two new conditionals work like this.  
-If the command contains “hands” plus a number and that number is greater than 2 then they do two thumbs up (elbows bent).
-If the command contains ANY text (which includes none at all) and a number and that number is less than 5 then they put both hands back down in the relaxed position
-Example:
-
-> SimonSez(“hands 2”) -> TwoThumbsUp  (only!! Will not evaluate the #&lt;5)   
-> SimonSez(“whatever 2”) -> BothHandsDown  
-> SimonSez(“blah blah blah -1”) -> BothHandsDown  
-> SimonSez(“hands 1”) ->  BothHandsDown  
-> SimonSez(“hands 7”) ->  TwoThumbsUp  
-> SimonSez(“whatever 7”) -> LeftHandDown (falls all the way through)  
-> SimonSez(“4”)->BothHandsDown  
-
-Other suggestions to add (all at once or two at a time):
-> elseif(“Right Leg Forward”) -> RightLegForward  
-> elseif(“Right Leg Normal”) -> RightLegNormal  
-> elseif(“Left Leg Backward”) -> LeftLegBackward  
-> elseif(“Left Leg Normal”) -> LeftLegNormal  
-> elseif(“Head Look Up”) -> HeadLookUp  
-> elseif(“Head Look Normal”) -> HeadLookNormal  
-
-Note that if you want to add movement like step forward that you might want to add a sub-conditional such as “If way is blocked, ignore” or “If way is blocked, turn 180”.
+- Call the function with a simple expression, such as `simon_says(30 / 2)`
+- Add more conditions of your own
+- Create multiple functions and divide the class into groups
+- Allow students to take over as the 'programmer'
 
 ### Connection to Mathematics and Life
 
-There are piecewise functions in Mathematics as well.  The absolute value function y = |x| can be re-written as   
+There are piecewise functions in mathematics as well.  The absolute value function y = |x| can be re-written as   
 y = { -x : x<0 , x : x>0, 0 }  
 <img src="Abs_value.png" style="max-width: 100%"/><br/>
-Note that in mathematical terms, that the clause for the domain is usually listed second instead of first.  
+Note that in mathematical terms, the clause for the domain is usually listed second instead of first.  
 
 A data plan on a phone bill might be structured as:
 
 * $40 for less than 5 GB
 * $ 8 per GB for 5-10 GB
-* $12 per GB for using more than 10GB. 
+* $12 per GB for using more than 10GB
 
 This could be graphed with the following piecewise function y = { 40: x<5, 8x: 5 =< x =< 10, 12x: x>10 }
 
@@ -211,7 +178,7 @@ This could be graphed with the following piecewise function y = { 40: x<5, 8x: 5
 Another very common piecewise functions is for taxi cabs.
 
 * $3 for 0 to 2 miles
-* $1 for each part mile after that
+* $1 for each partial mile after that
 
 <img src="Telephone_Cab_3_for_first_2.png" style="max-width: 100%"/><br/>
 

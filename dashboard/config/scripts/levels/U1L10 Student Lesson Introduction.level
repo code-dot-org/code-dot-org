@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-13T17:59:57.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": "true",
+      "css": "unplugged"
+    },
+    "title": "title",
+    "content1": "description here",
+    "markdown": "## Unit 1: Lesson 10 - Encoding and Sending Text\n# Background\n\n\nProtocols are necessary for sending information between digital devices. When information is digitally represented it is encoded in binary and is in the same fundamental form as any other type of information used in digital devices. Sending text is essentially the same process as sending a list of numbers. The difference is that the number of bits needed to represent the information increases and so does the size of the message.\n\n# Lesson\n\n* Create a protocol for sending text messages.\n* Use the protocol to send a message with the bit-sending widget.\n* Explore abstractions that allow us to focus on new higher-level problems. \n\n\n# Resources\n\n* Activity Guide: <a href=\"https://docs.google.com/document/d/1cEdRy-VYx6eM_o_QzYT44-eDtmqGoKVOF0TQxSSq0dI/edit?usp=sharing\"target=\"_blank\">Encoding and Sending Text</a>\n* Rubric <a href=\"https://docs.google.com/document/d/1MctmH5qXEKgF9ylX9duw5MUwU1XBSKh0pbxrc9cpamE/edit?usp=sharing\"target=\"_blank\">Encoding and Sending Text</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "4392a9c6ba27f4991cf09aa9ffc63cf2"
+}]]></config>
+</External>

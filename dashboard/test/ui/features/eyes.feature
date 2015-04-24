@@ -106,5 +106,5 @@ Examples:
   | http://learn.code.org/s/course1/stage/3/puzzle/5?noautoplay=true   | jigsaw level              |
   | http://learn.code.org/s/course1/stage/18/puzzle/10?noautoplay=true | course1 artist level      |
   | http://learn.code.org/s/course4/stage/15/puzzle/10?noautoplay=true | auto open function editor |
-  | http://learn.code.org/s/msm/stage/10/puzzle/5?noautoplay=true      | auto open contract editor |
-  | http://learn.code.org/s/msm/stage/6/puzzle/6?noautoplay=true       | auto open variable editor |
+  | http://learn.code.org/s/algebra/stage/10/puzzle/6?noautoplay=true  | auto open contract editor |
+  | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true   | auto open variable editor |

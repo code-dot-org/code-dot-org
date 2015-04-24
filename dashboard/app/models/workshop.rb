@@ -3,7 +3,7 @@ class Workshop < ActiveRecord::Base
 
   validates_inclusion_of :program_type, in: PROGRAM_TYPES, on: :create
   # A Workshop has multiple well defined Time Segments (eg. each morning/afternoon of a workshop is a separate time segment)
-  has_many :segments, dependent: :destroy
+  has_many :segments, -> {order :start}, dependent: :destroy
 
   has_many :attendances, through: :segments
 

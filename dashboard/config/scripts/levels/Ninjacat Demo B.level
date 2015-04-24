@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n    var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n    function resetSprite(sprite){\r\n      if (sprite.dir === 2) {\r\n        sprite.x = 0 - sprite.width;\r\n      } else {\r\n        sprite.x = Studio.MAZE_WIDTH;\r\n      }\r\n      sprite.y = Math.floor(Math.random() * (Studio.MAZE_HEIGHT - sprite.height));\r\n    } \r\n   \r\n    // This wraps the existing onTick function (in bigGameLogic.js) in order to allow you to also\r\n    // add some of your own code. The idea is that code added here is done to be able to iterate quickly,\r\n    // and eventually will also end up in bigGameLogic.js\r\n    \r\n    Studio.customLogic.constructor.prototype.onTick = function () {\r\n      // run existing logic\r\n      originalOnTick();\r\n      \r\n      // run custom logic\r\n      //if (this.studio_.tickCount === 1) {\r\n      if (!this.studio_.playerScore) {\r\n      \tthis.studio_.playerScore = 100;\r\n      }\r\n      \r\n      var titleScreenTitle = document.getElementById('titleScreenTitle');\r\n      if (titleScreenTitle.getAttribute('visibility') === \"visible\") {\r\n        return;\r\n      }\r\n      \r\n      var playerSprite = this.studio_.sprite[this.playerSpriteIndex];\r\n      var targetSprite = this.studio_.sprite[this.targetSpriteIndex];\r\n      var dangerSprite = this.studio_.sprite[this.dangerSpriteIndex];\r\n\r\n      if (this.collide(playerSprite.x, playerSprite.y, dangerSprite.x, dangerSprite.y) && playerSprite.visible && dangerSprite.visible) {\r\n        this.studio_.vanishActor({spriteIndex:this.playerSpriteIndex});\r\n        setTimeout((function() {this.studio_.setSprite({spriteIndex:this.playerSpriteIndex,value:\"visible\"});}).bind(this), 500);\r\n        this.studio_.playerScore -= 20;\r\n        \r\n        // send sprite back offscreen\r\n        resetSprite(dangerSprite);\r\n      }\r\n\r\n      if (this.collide(playerSprite.x, playerSprite.y, targetSprite.x, targetSprite.y) && playerSprite.visible && targetSprite.visible) {\r\n        \r\n        this.studio_.playerScore += 10;\r\n        \r\n        // send sprite back offscreen\r\n        resetSprite(targetSprite);\r\n      }\r\n      if (this.studio_.playerScore <= 0) {\r\n        this.studio_.setScoreText({text:\"Game Over\"})\r\n        this.studio_.showTitleScreen({text:'click reset to play again'})\r\n        for (var i = 0; i < this.studio_.spriteCount; i++) {\r\n          this.studio_.vanishActor({spriteIndex:i});\r\n        }\r\n      }\r\n\r\n      this.studio_.displayScore();\r\n      \r\n    }\r\n  }\r\n}",
+    "success_condition": "function () {\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[16,16,16,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
@@ -20,7 +20,7 @@
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
+    "use_contract_editor": "true",
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "true",
@@ -36,15 +36,74 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
     "step_speed": "50",
-    "custom_game_type": "Big Game"
+    "custom_game_type": "Big Game",
+    "disable_examples": "false",
+    "maze_data": null,
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Ninjacat Demo B\",\r\n  \"callout_text\": \"Click `Run` to try out the game\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "md5": "527d3f037a95d92962636e608e5ec783"
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_start_setFuncs" inline="false" deletable="false" movable="false" editable="false" id="game_funcs">
+          <functional_input name="title">
+            <block type="functional_call" deletable="false">
+              <mutation name="title"/>
+            </block>
+          </functional_input>
+          <functional_input name="subtitle">
+            <block type="functional_call" deletable="false">
+              <mutation name="subtitle"/>
+            </block>
+          </functional_input>
+          <functional_input name="background">
+            <block type="functional_call" deletable="false">
+              <mutation name="bg"/>
+            </block>
+          </functional_input>
+          <functional_input name="target">
+            <block type="functional_call" deletable="false">
+              <mutation name="target"/>
+            </block>
+          </functional_input>
+          <functional_input name="danger">
+            <block type="functional_call" deletable="false">
+              <mutation name="danger"/>
+            </block>
+          </functional_input>
+          <functional_input name="player">
+            <block type="functional_call" deletable="false">
+              <mutation name="player"/>
+            </block>
+          </functional_input>
+          <functional_input name="update-target">
+            <block type="functional_pass">
+              <mutation name="update-target"/>
+            </block>
+          </functional_input>
+          <functional_input name="update-danger">
+            <block type="functional_pass">
+              <mutation name="update-danger"/>
+            </block>
+          </functional_input>
+          <functional_input name="update-player">
+            <block type="functional_pass">
+              <mutation name="update-player"/>
+            </block>
+          </functional_input>
+          <functional_input name="collide?">
+            <block type="functional_pass">
+              <mutation name="collide?"/>
+            </block>
+          </functional_input>
+          <functional_input name="on-screen?">
+            <block type="functional_pass">
+              <mutation name="onscreen?"/>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_definition" inline="false">
           <mutation>
             <outputtype>Image</outputtype>
@@ -114,63 +173,6 @@
           <functional_input name="STACK">
             <block type="functional_string">
               <title name="VAL">Ninja vs Dragon!</title>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_start_setFuncs" inline="false" deletable="false" movable="false" editable="false" id="game_funcs">
-          <functional_input name="title">
-            <block type="functional_call" deletable="false">
-              <mutation name="title"/>
-            </block>
-          </functional_input>
-          <functional_input name="subtitle">
-            <block type="functional_call" deletable="false">
-              <mutation name="subtitle"/>
-            </block>
-          </functional_input>
-          <functional_input name="background">
-            <block type="functional_call" deletable="false">
-              <mutation name="bg"/>
-            </block>
-          </functional_input>
-          <functional_input name="target">
-            <block type="functional_call" deletable="false">
-              <mutation name="target"/>
-            </block>
-          </functional_input>
-          <functional_input name="danger">
-            <block type="functional_call" deletable="false">
-              <mutation name="danger"/>
-            </block>
-          </functional_input>
-          <functional_input name="player">
-            <block type="functional_call" deletable="false">
-              <mutation name="player"/>
-            </block>
-          </functional_input>
-          <functional_input name="update-target">
-            <block type="functional_pass">
-              <mutation name="update-target"/>
-            </block>
-          </functional_input>
-          <functional_input name="update-danger">
-            <block type="functional_pass">
-              <mutation name="update-danger"/>
-            </block>
-          </functional_input>
-          <functional_input name="update-player">
-            <block type="functional_pass">
-              <mutation name="update-player"/>
-            </block>
-          </functional_input>
-          <functional_input name="collide?">
-            <block type="functional_pass">
-              <mutation name="collide?"/>
-            </block>
-          </functional_input>
-          <functional_input name="on-screen?">
-            <block type="functional_pass">
-              <mutation name="onscreen?"/>
             </block>
           </functional_input>
         </block>
@@ -1305,18 +1307,6 @@
               </mutation>
             </block>
           </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="title" type="String"/>
-            <arg name="subtitle" type="String"/>
-            <arg name="background" type="Image"/>
-            <arg name="danger" type="Image"/>
-            <arg name="target" type="Image"/>
-            <arg name="player" type="Image"/>
-            <outputtype>None</outputtype>
-          </mutation>
-          <title name="NAME">game-variables</title>
         </block>
         <block type="when_run" uservisible="false">
           <next>

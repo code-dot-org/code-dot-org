@@ -23,7 +23,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Eval Define Funcs 4\",\r\n  \"callout_text\": \"Go to the Functions drawer to \\\"Create a Function\\\"\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": 100\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Eval Define Funcs 4B\",\r\n  \"callout_text\": \"Click \\\"Add\\\" to add a domain radius, of type Number\",\r\n  \"element_id\": \"#paramAddButton\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Eval Define Funcs 4C\",\r\n  \"callout_text\": \"Set the range to Image\",\r\n  \"element_id\": \"#outputTypeDropdown\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Eval Define Funcs 4\",\r\n  \"callout_text\": \"Go to the Functions drawer to \\\"Create a Function\\\"\",\r\n  \"element_id\": \"[id=':4.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Eval Define Funcs 4B\",\r\n  \"callout_text\": \"Click \\\"Add\\\" to add a domain radius, of type Number\",\r\n  \"element_id\": \"#paramAddButton\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Eval Define Funcs 4C\",\r\n  \"callout_text\": \"Set the range to Image\",\r\n  \"element_id\": \"#outputTypeDropdown\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "disable_examples": "false"
   },
   "md5": "3610c5063effbcf02d0fa32497e25515"
 }]]></config>
@@ -77,6 +78,11 @@
             <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">aqua-star</title>
+        </block>
+        <block type="functional_call" inline="false">
+          <mutation name="aqua-star">
+            <arg name="radius" type="Number"/>
+          </mutation>
         </block>
       </xml>
     </required_blocks>

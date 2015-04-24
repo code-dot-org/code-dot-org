@@ -121,12 +121,20 @@ Blockly.BlockSpace.prototype.pageYOffset = 0;
 Blockly.BlockSpace.prototype.trashcan = null;
 
 /**
- * PID of upcoming firing of a change event.  Used to fire only one event
- * after multiple changes.
+ * PID of upcoming firing of a blockSpace change event.  Used to fire only one
+ * event after multiple changes.
  * @type {?number}
  * @private
  */
 Blockly.BlockSpace.prototype.fireChangeEventPid_ = null;
+
+/**
+ * PID of upcoming firing of a global change event.  Used to fire only one event
+ * after multiple changes.
+ * @type {?number}
+ * @private
+ */
+var fireGlobalChangeEventPid_ = null;
 
 /**
  * This blockSpace's scrollbars, if they exist.
@@ -272,12 +280,21 @@ Blockly.BlockSpace.prototype.removeTopBlock = function(block) {
 /**
  * Finds the top-level blocks and returns them.  Blocks are optionally sorted
  * by position; top to bottom (with slight LTR or RTL bias).
- * @param {boolean} ordered Sort the list if true.
+ * @param {boolean} [ordered=false] Sort the list if true.
+ * @param {boolean} [shareMainModal=true] Collate main/modal blockSpaces.
  * @return {!Array.<!Blockly.Block>} The top-level block objects.
  */
-Blockly.BlockSpace.prototype.getTopBlocks = function(ordered) {
+Blockly.BlockSpace.prototype.getTopBlocks = function(ordered, shareMainModal) {
+  if (ordered === undefined ) {
+    ordered = false;
+  }
+  if (shareMainModal === undefined ) {
+    shareMainModal = true;
+  }
+
   var blocks = [];
-  if (this === Blockly.mainBlockSpace || this === Blockly.modalBlockSpace) {
+  if (shareMainModal && (this === Blockly.mainBlockSpace ||
+      this === Blockly.modalBlockSpace)) {
     // Main + modal blockspaces share top blocks
     blocks = blocks.concat(Blockly.mainBlockSpace.topBlocks_)
       .concat(Blockly.modalBlockSpace ? Blockly.modalBlockSpace.topBlocks_ : []);
@@ -312,10 +329,13 @@ Blockly.BlockSpace.prototype.getAllVisibleBlocks = function() {
 
 /**
  * Find all blocks in this blockSpace.  No particular order.
+ * @param {object} options
+ * @param {boolean?} [options.shareMainModal]
  * @return {!Array.<!Blockly.Block>} Array of blocks.
  */
-Blockly.BlockSpace.prototype.getAllBlocks = function() {
-  var blocks = this.getTopBlocks(false);
+Blockly.BlockSpace.prototype.getAllBlocks = function(options) {
+  options = options || {};
+  var blocks = this.getTopBlocks(false, options.shareMainModal);
   for (var x = 0; x < blocks.length; x++) {
     blocks = blocks.concat(blocks[x].getChildren());
   }
@@ -417,7 +437,8 @@ Blockly.BlockSpace.prototype.highlightBlock = function(id, spotlight) {
  * edits, mutations, connections, etc.  Groups of simultaneous changes (e.g.
  * a tree of blocks being deleted) are merged into one event.
  * Applications may hook blockSpace changes by listening for
- * 'blocklyBlockSpaceChange' on Blockly.mainBlockSpace.getCanvas().
+ * 'blocklyBlockSpaceChange' on Blockly.mainBlockSpace.getCanvas().  To hook
+ * changes across all blockSpaces, listen for 'workspaceChange' on window.
  */
 Blockly.BlockSpace.prototype.fireChangeEvent = function() {
   if (this.fireChangeEventPid_) {
@@ -427,10 +448,17 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
   if (canvas) {
     var self = this;
     this.fireChangeEventPid_ = window.setTimeout(function() {
-        self.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
-        Blockly.fireUiEvent(canvas, 'blocklyBlockSpaceChange');
+      self.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
+      Blockly.fireUiEvent(canvas, 'blocklyBlockSpaceChange');
     }, 0);
   }
+
+  if (fireGlobalChangeEventPid_) {
+    window.clearTimeout(fireGlobalChangeEventPid_);
+  }
+  fireGlobalChangeEventPid_ = window.setTimeout(function () {
+    Blockly.fireUiEvent(window, 'workspaceChange');
+  }, 0);
 };
 
 /**
@@ -528,7 +556,7 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
 * @return {boolean} True if event is in a delete area.
 */
 Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
-  var mouseXY = Blockly.mouseToSvg(e);
+  var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
 
   // Update trash can visual state

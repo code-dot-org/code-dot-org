@@ -122,6 +122,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       tryAgainText: options.tryAgainText,
+      continueText: options.continueText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       hintRequestExperiment: options.hintRequestExperiment,
@@ -317,6 +318,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
         !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
       tryAgain: tryAgainText,
+      continueText: options.continueText || msg.continue(),
       nextLevel: this.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
@@ -399,7 +401,13 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
             msg.levelIncompleteError();
         break;
       case TestResults.EXTRA_TOP_BLOCKS_FAIL:
-        message = options.level.extraTopBlocks || msg.extraTopBlocks();
+        var hasWhenRun = Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
+          return block.type === 'when_run' && block.isUserVisible();
+        });
+
+        var defaultMessage = hasWhenRun ?
+          msg.extraTopBlocksWhenRun() : msg.extraTopBlocks();
+        message = options.level.extraTopBlocks || defaultMessage;
         break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;

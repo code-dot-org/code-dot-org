@@ -1,0 +1,14 @@
+<ContractMatch>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2015-01-08T18:39:05.000Z",
+  "properties": {
+    "answers": [
+      "Contract Name|Number|Number|String"
+    ],
+    "title": "Enter title here",
+    "content1": "Enter prompt here"
+  },
+  "md5": "6d08f0abc2d365327ed57fc4836774f9"
+}]]></config>
+</ContractMatch>

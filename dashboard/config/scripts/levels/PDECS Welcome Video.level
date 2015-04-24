@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-16T17:40:25.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Welcome Video",
+    "content1": "Welcome to Online PD for ECS",
+    "markdown": "## Welcome! \ninsert welcome video here\n<iframe></iframe>\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "195a16e0e4e96c1cfe608f4b853d0a8b"
+}]]></config>
+</External>

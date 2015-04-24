@@ -15,15 +15,17 @@
     "use_contract_editor": "true",
     "free_play": "false",
     "embed": "false",
-    "video_key": "msm_7_functions",
+    "video_key": "alg_7_function",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
-  }
+    "coordinate_grid_background": "false",
+    "disable_examples": "false"
+  },
+  "md5": "ef066e07f19f282c8a02ee5411ca88ba"
 }]]></config>
   <blocks>
     <start_blocks>

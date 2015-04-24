@@ -28,7 +28,7 @@ def main()
   lines.shuffle!
 
   groups = []
-  for group in 0...params[:groups].count
+  params[:groups].count.times do
     groups << [].tap do |results|
       results << columns
       while(results.count <= params[:size])
@@ -46,7 +46,7 @@ def main()
     i += 1
   end
 
-  puts groups.map{|group| group.count}.join("\n")
+  puts groups.map(&:count).join("\n")
 end
 
 main

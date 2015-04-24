@@ -1,0 +1,38 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-14T11:48:18.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "3 bits",
+        "correct": false
+      },
+      {
+        "text": "4 bits",
+        "correct": false
+      },
+      {
+        "text": "5 bits",
+        "correct": false
+      },
+      {
+        "text": "6 bits",
+        "correct": false
+      },
+      {
+        "text": "7 bits",
+        "correct": true
+      }
+    ],
+    "title": "Assessment: Encoding Text",
+    "content1": "Question # 2"
+  },
+  "md5": "1093f3608da4a210b7550a2ffae1b5cc"
+}]]></config>
+</Multi>

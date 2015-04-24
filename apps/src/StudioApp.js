@@ -374,7 +374,19 @@ StudioApp.prototype.init = function(config) {
     }, this));
 
     if (config.level.openFunctionDefinition) {
-      Blockly.functionEditor.openWithLevelConfiguration(config.level);
+      if (Blockly.contractEditor) {
+        Blockly.contractEditor.autoOpenWithLevelConfiguration({
+          autoOpenFunction: config.level.openFunctionDefinition,
+          contractCollapse: config.level.contractCollapse,
+          contractHighlight: config.level.contractHighlight,
+          examplesCollapse: config.level.examplesCollapse,
+          examplesHighlight: config.level.examplesHighlight,
+          definitionCollapse: config.level.definitionCollapse,
+          definitionHighlight: config.level.definitionHighlight
+        });
+      } else {
+        Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
+      }
     }
   }
 
@@ -1179,7 +1191,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
     }
 
-    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager = new DropletTooltipManager(this.editor);
     this.dropletTooltipManager.registerBlocksFromList(
       dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
@@ -1225,6 +1237,9 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
  * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
 StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
+  if (config.level.edit_blocks) {
+    loadLastAttempt = false;
+  }
   var startBlocks = config.level.startBlocks || '';
   if (loadLastAttempt) {
     startBlocks = config.level.lastAttempt || startBlocks;
@@ -1279,6 +1294,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
+    disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false)
@@ -1333,7 +1349,7 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 /**
  * @returns true if any non-example block in the workspace has an unfilled input
  */
-StudioApp.prototype.hasUnfilledBlock = function () {
+StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
@@ -1343,7 +1359,7 @@ StudioApp.prototype.hasUnfilledBlock = function () {
       return false;
     }
 
-    return block.hasUnfilledInput();
+    return block.hasUnfilledFunctionalInput();
   });
 };
 

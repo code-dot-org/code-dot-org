@@ -45,7 +45,7 @@ function installPlus(blockly, generator, gensym) {
   generator.functional_plus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " + " + arg2;
+    return "(" + arg1 + " + " + arg2 + ")";
   };
 }
 
@@ -63,7 +63,7 @@ function installMinus(blockly, generator, gensym) {
   generator.functional_minus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " - " + arg2;
+    return "(" + arg1 + " - " + arg2 + ")";
   };
 }
 
@@ -81,7 +81,7 @@ function installTimes(blockly, generator, gensym) {
   generator.functional_times = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " * " + arg2;
+    return "(" + arg1 + " * " + arg2 + ")";
   };
 }
 
@@ -99,7 +99,7 @@ function installDividedBy(blockly, generator, gensym) {
   generator.functional_dividedby = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " / " + arg2;
+    return "(" + arg1 + " / " + arg2 + ")";
   };
 }
 
@@ -388,9 +388,11 @@ function installCond(blockly, generator) {
         fixedSize: { height: 35 }
       };
 
+      this.setHSV.apply(this, Blockly.FunctionalTypeColors.None);
+
       var plusField = new Blockly.FieldIcon('+');
-      plusField.getRootElement().addEventListener('mousedown',
-        _.bind(this.addConditionalRow, this));
+      Blockly.bindEvent_(plusField.getRootElement(), 'mousedown',
+        this, this.addConditionalRow);
 
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('cond', options))
@@ -398,8 +400,9 @@ function installCond(blockly, generator) {
 
       this.appendDummyInput('ELSE')
         .appendTitle(new Blockly.FieldLabel('else', options));
-      this.appendFunctionalInput('DEFAULT')
+      var defaultInput = this.appendFunctionalInput('DEFAULT')
         .setInline(true);
+      defaultInput.setHSV.apply(defaultInput, Blockly.FunctionalTypeColors.None);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
@@ -424,8 +427,9 @@ function installCond(blockly, generator) {
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
       this.moveInputBefore('COND' + id, 'ELSE');
 
-      this.appendFunctionalInput('VALUE' + id)
+      var input = this.appendFunctionalInput('VALUE' + id)
         .setInline(true);
+      input.setHSV.apply(input, Blockly.FunctionalTypeColors.None);
       this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
@@ -433,8 +437,8 @@ function installCond(blockly, generator) {
 
       if (this.pairs_.length > 1) {
         var minusField = new Blockly.FieldIcon('-');
-        minusField.getRootElement().addEventListener('mousedown',
-          _.bind(this.removeConditionalRow, this, id));
+        Blockly.bindEvent_(minusField.getRootElement(), 'mousedown',
+          this, _.bind(this.removeConditionalRow, this, id));
         minusInput.appendTitle(minusField);
       }
 

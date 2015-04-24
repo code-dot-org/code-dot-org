@@ -1,0 +1,35 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-01-06T17:22:23.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which of these Evaluation Blocks will draw the image"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Multi Strings Images 1.blocks1.start_blocks, 350, 100",
+        "correct": false
+      },
+      {
+        "text": "Multi Strings Images 1.blocks2.start_blocks, 350, 100",
+        "correct": false
+      },
+      {
+        "text": "Multi Strings Images 1.blocks3.start_blocks, 350, 100",
+        "correct": true
+      },
+      {
+        "text": "Multi Strings Images 1.blocks4.start_blocks, 350, 100",
+        "correct": false
+      }
+    ],
+    "title": "Strings and Images Multiple Choice",
+    "content1": "http://staging.studio.code.org/script_assets/msm/green-rect.png",
+    "height": "100"
+  },
+  "md5": "e0d47abd2876a23be8dbf701f9b12694"
+}]]></config>
+</Multi>

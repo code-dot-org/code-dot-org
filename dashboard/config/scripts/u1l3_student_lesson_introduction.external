@@ -1,0 +1,28 @@
+name 'U1L3 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 1: Lesson 3 - Sending More Complex Messages
+
+# Background
+The word “bit” comes from the contraction: “binary digit.” A bit is the unit of a binary message, it is a name for the thing that can represent one of two possible states. A bit sending device can be used to send any kind of message, as long as the message is binary and a communication protocol has been established. Bits can be grouped together to send more complex messages.
+
+# Lesson
+
+* Use your bit-sending device to send a message that has more than two possibilities. 
+* Invented a system of communication that uses combinations of binary messages. 
+* Use the term "bit" as another way to describe a binary message. 
+
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/document/d/1FY6RjnY8P8cLd8CYwm8nNnvVqN2dFlww0kSi_LIMoDw/edit?usp=sharing" target="_blank">Bit-sending Device</a>
+* Assessment: <a href="https://docs.google.com/document/d/1N5lkggG807XKiu5kRLmBc1xm4ELQLfEoQhrLUKb59bw/edit?usp=sharing" target="_blank">Bit-sending Device Rubric</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

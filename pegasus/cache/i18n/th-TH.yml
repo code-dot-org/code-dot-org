@@ -3,19 +3,20 @@
   select_language: โปรดเลือกภาษาของคุณ
   computer_science: วิทยาการคอมพิวเตอร์
   computer_science_edweek: สัปดาห์การศึกษาวิทยาศาสตร์คอมพิวเตอร์
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: 8-14 ธันวาคม 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> กำลังจะมาถึง. บอกคุณครูของคุณ, <a href="http://hourofcode.com"
     style="color: white; text-decoration:underline; font-weight:bold"> เพื่อช่วยคุณวางแผนการเรียนโครงการ
     Hour of Code</a>'
   csedweek_banner_teachers: |
     <a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">คุณเป็นครูสอนวิทยาศาสตร์คอมพิวเตอร์หรือเปล่า? เรียกดูเนื้อหาจาก CSEdWeek ได้ที่นี่</a>
-  n_have_learned_an_hoc: <h1>#</h1><h3>รู้สึกเบื่อหน่ายกับ </h3><h2>Hour of Code</h2>
+  n_have_learned_an_hoc: <h1>ลองเรียน</h1><h2>Hour of Code</h2><h3># คน ได้เข่าร่วมแล้ว</h3>
   anybody_can_learn: ทุกคนก็สามารถเรียนรู้ได้
   learn_now: เรียนตอนนี้
   petition_message: นักเรียนทุกคนจากทุกโรงเรียนควรมีโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์
   petition_sign_message: 'ถ้าคุณเห็นด้วย ลงชื่อของคุณได้เลย มาเข้าร่วม #'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'ถ้าคุณสนับสนุนเรา ลงชื่อของคุณ เข้าร่วมกับคนอื่นอีก
+    # คน'
   name: ชื่อ
   email: อีเมล
   zipcode: รหัสไปรษณีย์หรือประเทศ
@@ -28,9 +29,9 @@
   hoc2014_students: Students
   hoc2014_try: ลอง
   hoc2014_teachers: ครูผู้สอน
-  hoc2014_host: Host it
+  hoc2014_host: เป็นเจ้าภาพ
   hoc2014_everyone: ทุกคน
-  hoc2014_support: สนับสนุน
+  hoc2014_support: สนับสนุน &#x25BE;
   hoc2014_whatishoc: Hour of Code คืออะไร?
   twentyhours_trynow: ลองตอนนี้
   california_heading: ขอโรงเรียนของคุณให้สอนวิทยาศาสตร์คอมพิวเตอร์
@@ -108,8 +109,8 @@
   learn_classes: ค้นหาชั้นเรียนในท้องถิ่น
   hoc_is_here: ' นี่คือ #HourOfCode - เข้าร่วมเรียน! @codeorg'
   just_did_hoc: 'ฉันเพิ่งเรียน #HourOfCode - เข้าร่วมเรียน! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: ทำไมโรงเรียนไม่หันมาสอนวิทยาการคอมพิวเตอร์ให้มากขึ้น เราสามารถแก้ไขปัญหานี้ได้
+    http://youtu.be/nKIu9yen5nc เยี่ยมชม http://code.org/ เพื่อเรียนรู้เพิ่มเติม
   learn_hoc: เข้าร่วมเรียน Hour of Code
   beyond_hoc: เกินหนึ่งชั่วโมง
   what_gender: คุณเพศอะไร
@@ -125,13 +126,14 @@
     %{lines} บรรทัด
   start_hoc: เริ่มเรียน Hour of Code ทันที
   contact_form_topic_press: สื่อ (การสัมภาษณ์)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
+  stats_nina: '"ในทุกๆวันจะได้ผลลัพธ์เหมือนกัน&mdash; การเข้าร่วม 100%." - Nina Nichols
+    Peery, ครู'
+  stats_student: '"ฉันรู้เลยว่านี่เป็นโอกาส<b>ครั้งหนึ่งในชีวิต</b>" - Mariana Alzate
+    นักเรียนประถม 5'
+  stats_michael: '"ผม<b>ไม่เคย</b>เห็นนักเรียนของผม ตื่นเต้นกับการเรียนรู้มากขนาดนี้มาก่อน"
+    - Michael Clark, ครู'
   studiobar_title: ทำความรู้จัก <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title_nolink: ทำความรู้จัก Code Studio
   studiobar_elementary_title: หลักสูตรพื้นฐาน
   studiobar_elementary_body: สามหลักสูตรใหม่ของเราสำหรับ K &#8209; 5
   studiobar_hoc_title: The Hour of Code
@@ -144,57 +146,81 @@
   studiobar_frozen_body: สร้างเมืองน้ำแข็งกับ Anna และ Elsa
   studiobar_donate_title: บริจาค/สนับสนุน
   studiobar_donate_body: เด็กจะได้รับการศึกษาจากแต่ละดอลลาร์ที่คุณบริจาค
-  studiobar_shop_title: Shop
+  studiobar_shop_title: ร้านค้า
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+  homepage_hero_text_malala: '"ฉันท้าทายผู้หญิงทุกประเทศ ให้ลองเรียน Hour of Code"
+    มาลาลา, ผู้ชนะรางวัลโนเบลสันติภาพ'
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo; ถ้าคุณสามารถเปลี่ยนแปลงเทคโนโลยี,
+    คุณสามารถเปลี่ยนแปลงโลกของเรา &rdquo;
+    Susan, ประธานกรรมการบริหาร YouTube
+  homepage_hero_text_fistbump: "&ldquo;อย่าเพียงแค่เล่นบนโทรศัพท์ของคุณ \nลองเขียนโปรแกรมให้มัน&rdquo;\nบารักโอบามา\n"
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;เด็กๆของเรา &mdash; รวมไปถึงผู้หญิง &mdash;
+    ต้องการโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์ &rdquo;
+    Sheryl, ประธานฝ่ายปฎิบัติการ Facebook
+  homepage_hero_text_satya: |
+    &ldquo;วิทยาการคอมพิวเตอร์สามารถปลดล็อค
+    โอกาสที่ดีที่สุดในโลกนี้ &rdquo;
+    Satya, ประธานกรรมการบริหาร Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;หากคุณโค้ด คุณสามารถเลือก
+    เส้นทางของชีวิตคุณได้ &rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: "\"ทักษะเหล่านี้ปลี่ยนแปลงอนาคตของฉัน \nยังไม่ได้พูดถึงความสนุกของมัน\"\n
+    Luna นักเรียนชั้นมัธยมศึกษาปีที่ 2\n"
+  homepage_hero_text_student2: "\"ผมไม่เคยเห็นเด็กๆ\n ตื่นเต้นกับการเรียนรู้มากขนาดนี้\"
+    \nMichael, ครู\n"
+  homepage_hero_text_student3: |
+    &ldquo; วิทยาการคอมพิวเตอร์ เป็นศาสตร์ที่คุณจะ
+    ไม่รู้ว่าคุณจะชอบหรือไม่ หากคุณไม่เคยลองมัน &rdquo;
+    Jackson, นักเรียนชั้นป.6
+  homepage_hero_text_student4: "&ldquo;คุณสามารถทำอะไรก็ได้ที่คุณต้องการ\nด้วยโปรแกรมมิ่ง&rdquo;
+    \nMaya, นักเรียนชั้นป.2\n"
+  homepage_hero_text_student5: "&ldquo;วิทนาการคอมพิวเตอร์ไม่ได้เป็นของใครอื่น\nมันสำหรับคุณ
+    ที่นี่ ตอนนี้ &rdquo; \nGeraldo, ครู\n"
+  homepage_hero_text_teacher1: |
+    &ldquo;การเขียนโปรแกรม กระตุ้นความคิดส้รางสรรค์ แรงบันดาลใจ และนวัตกรรม &mdash;
+    ซึ่งทักษะเหล่านี้มีความสำคัญในการประกอบอาชีพในอนาคต &rdquo;
+    Floresa, ครู
+  homepage_hero_text_teacher2: |
+    &ldquo;โครงการนี้ได้รับความร่วมมือ 100% จากนักเรียน &rdquo;
+    Adam, ครู
   homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frozen กับ เจ้าหญิงแอนนา และ เอลซ่า
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: บทเรียนของเราทั้งหมด
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: ร้านค้า
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: ดูวีดีโอ
+  homepage_action_text_teachervideo: ดูวีดีโอ
+  homepage_action_text_learn: เริ่มเรียนวันนี้
+  homepage_action_text_signpetition: ลงนามในคำร้อง
+  homepage_signpetition_dropdown: ลงนามในคำร้อง &#x25BE;
   homepage_slot_text_title_hoc: ช่วงเวลาของ Code
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: ทุกคนสามารถเรียนรู้ได้ เริ่มต้นวันนี้
   homepage_slot_text_link_hoc: ลองใช้ Hour of Code สิ
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: จัดงาน Hour of Code
+  homepage_slot_text_link_hocserved: '# คน เข้าร่วมแล้ว'
   homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_blurb_students: สำรวจบทเรียนของเราทั้งหมด
+  homepage_slot_text_link_codestudio: ลอง Code Studio
+  homepage_slot_text_link_local: ค้นหาชั้นเรียนในท้องถิ่น
+  homepage_slot_text_link_othercourses: หลักสูตรออนไลน์อื่นๆ
+  homepage_slot_text_title_educators: นักการศึกษา
+  homepage_slot_text_blurb_educators: สอนนักเรียนของคุณ
+  homepage_slot_text_link_k5: คอร์สสำหรับเด็กอนุบาลถึง ป.5
+  homepage_slot_text_link_fullcurriculum: ดูหลักสูตรทั้งหมด
+  homepage_slot_text_link_pd: การพัฒนาอย่างมืออาชีพ
+  homepage_slot_text_title_advocates: สนับสนุน
+  homepage_slot_text_blurb_advocates: สนับสนุนการทำงานของเรา
+  homepage_slot_text_link_stats: ดูสถิติ
   homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_link_donate: ร่วมบริจาค
+  homepage_header_codestudio: Code Studio สำหรับนักเรียน
+  homepage_header_donors: Code.org ขอขอบคุณพันธมิตร
+  homepage_donors_seall: ดูทั้งหมด
   homepage_donors_donate: บริจาค/สนับสนุน
   contact_form_topic_student: ฉันเป็นนักเรียน
   contact_form_topic_parent: ฉันเป็นผู้ปกครอง
@@ -282,8 +308,8 @@
   dashboard_action_delete_yes: ใช่
   dashboard_action_delete_no: ไม่ใช่
   dashboard_action_confirm: ลบหรือไม่?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: ลบ
+  dashboard_action_remove_confirm: ลบ?
   dashboard_action_done: เรียบร้อย
   dashboard_action_required: ต้องระบุ
   dashboard_navigation_home_page: หน้าแรกของคุณครู
@@ -327,7 +353,7 @@
     ด้วยปุ่มด้านบน
   dashboard_students_placeholder_name: ชื่อนักเรียน
   dashboard_students_name: ชื่อ
-  dashboard_students_progress: Progress
+  dashboard_students_progress: ความคืบหน้า
   dashboard_students_age: Age
   dashboard_students_gender: เพศ
   dashboard_students_male: Male
@@ -380,7 +406,7 @@
   dashboard_new_password: รหัสผ่านใหม่
   dashboard_progress_not_started: not started
   dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: not completed
+  dashboard_progress_not_completed: ไม่สมบูรณ์
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
@@ -421,7 +447,7 @@
   carousel_heading_robots: เรียนเขียนโปรแกรมกับหุ่นยนต์
   carousel_heading_ide: แพลตฟอร์มที่นิยมในหมู่คุณครู
   educator_notes: บันทึกของผู้สอน
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: วิธีการสอน Hour of Code
   more_resources_educators: แหล่งข้อมูลเพิ่มเติมสำหรับครูและนักศึกษา
   participants: ผู้เข้าร่วม
   teachers_notes: บันทึกของครู
@@ -648,10 +674,9 @@
   codemonkey_longdescription: CodeMonkey เป็นเกมออนไลน์ที่สอนการเขียนโค้ดสำหรับใช้ในชีวิตจริง!
     นักเรียนจะได้เขียนโปรแกรมให้ลิงไปหยิบกล้วย ซึ่งจะท้ายทายขึ้นตามเลเวลที่สูงขึ้น
     นักเรียนจะได้รับคะแนนเป็นดาว ซึ่งสามารถแชร์บอกเพื่อนๆได้ เพียงกดแค่คลิกเดียว
-  codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
-    in 10 short tasks. Then continue learning some basics of programming (variables
-    and if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
+  codeavengers_longdescription: สร้างเกม2มิติ ที่เล่นได้2คน ด้วย JavaScript ผ่าน10คำสั่งสั้นๆ
+    จากนั้นเรียนพื้นฐานของการเขียนโปรแกรม (ตัวแปรและคำสั่งเงื่อนไข if statement) เพื่อสร้างแบบทดสอบแล้วแชร์ให้เพื่อนๆ
+    ระหว่างนี้จะได้เก็บสะสมแต้มและเครื่องหมายหากคุณเป็นนักเรียนลำดับต้นๆของชั้นเรียน
   processing_longdescription: แนะนำการเขียนโปรแกรมในบริบทของทัศนศิลป์โดยใช้ภาษา Processing  บทเรียนวิดีโอสั้นๆนี้จะแนะนำแบบฝึกหัดการเขียนโค้ด
     ที่จะนำไปสู่การออกแบบโปรแกรมสำหรับวาดภาพ
   robomind_longdescription: นักเรียนเรียนรู้พื้นฐานของการเขียนโปรแกรมโดยการควบคุมหุ่นยนต์ของตนเอง
@@ -679,12 +704,11 @@
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real JavaScript, and the more advanced you are the further you'll
     go.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a
-    brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating
-    pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  makegameswithus_longdescription: เรียนรู้วิธีการโค้ด ผ่านการสร้างเกมใน iPhone ด้วยภาษาโปรแกรมมิ่งภาษาใหม่ที่เรียกว่า
+    Swift! สร้างเกมที่ได้แรงบันดาลใจจากเกม Pok&eacute;mon แล้วสอนมอนสเตอร์ของคุณให้เคลื่อนย้าย
+    คุณจะได้เรียนรู้เกี่ยวกับการใช้ตัวแปร เมธอด และวัตถุ (ออบเจ็กต์) เพื่อช่วยให่มอนสเตอร์ของคุณชนะ!
+  touchdevelop_longdescription: เครื่องมือแก้ไขนี้จะช่วยแนะนำคุณในการสร้างเม็ดสี แก้ปัญหาของหมี
+    รวมทั้งสร้างเกมของคุณเอง
   appinventor_longdescription: Entertaining, quick video tutorials walk you through
     building three simple apps for your Android phone or tablet. Designed for novices
     and experts alike, this hour of code will get you ready to start building your
@@ -894,9 +918,8 @@
   hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the
     Hopscotch programming language. Students will build games and apps for their iPad
     on their iPad. Students can work individually or with friends (up to 3 per iPad).
-  pocketcode_beyond_longdescription: Create your own game on your smart phone with
-    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
-    friends and other users to try!
+  pocketcode_beyond_longdescription: สร้างเกมของคุณบนสมาร์ทโฟนด้วย Pocket Code! ช่วยนักบินของเรา
+    สตีฟ ส่งเอกสารให้สำเร็จ คุณสามารถแชร์ให้เพื่อนๆของคุณได้ลองเล่นอีกด้วย
   groklearning_beyond_longdescription: An introductory course using the programming
     language Python for people with no programming experience. Our unique mix of introductory
     content and challenges will bring you to a thorough understanding of Python and
@@ -964,10 +987,9 @@
     young children as well as adults with no design or programming skills. Kodu for
     the PC is available to download for free. Kodu for the XBox is also available
     in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot
-    how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
-    haunting music and stunning retina graphics. You can even record your solutions
-    and share them on YouTube to show your friends.
+  cargobot_beyond_longdescription: Cargo-Bot เป็นเกมปริศนาที่คุณจะสั่งหุ่นยนต์ให้เคลื่อนย้ายกล่อง
+    ดูเหมือนจะง่ายใช่ไหม? ปริศนานี้มีถึง 36 ด่านให้คุณทดสอบ รวมทั้งเพลงและกราฟฟิคที่ตื่นเต้น
+    คุณสามารถบันทึกวิธีการของคุณแล้วแชร์ให้เพื่อนๆดูได้ผ่าน Youtube
   kidsruby_beyond_longdescription: สนุกกับการสร้างเกม หรือ แฮกการบ้านของคุณด้วยภาษา
     Ruby! เพียงแค่บอกผู้ปกครองหรือคุณครูว่าคุณกำลังเรียนเขียนโปรแกรมด้วยภาษา Ruby
     :) ฟรีและทำงานได้บนทุกคอมพิวเตอร์ (ต้องติดตั้ง)

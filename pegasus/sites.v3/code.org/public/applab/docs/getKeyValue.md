@@ -19,7 +19,7 @@ Category: Data
 
 [short_description]
 
-Retrieves the value stored at the provided `key` name in App Lab's remote data storage. The value is returned as a parameter to `callbackFunction` when the retrieval is finished. Data is accessible to your app and users of your app.
+Retrieves the value stored at the provided `key` name in App Lab's key/value data storage. The value is returned as a parameter to `callbackFunction` when the retrieval is finished. Data is accessible to your app and users of your app.
 
 [/short_description]
 

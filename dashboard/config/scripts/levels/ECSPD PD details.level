@@ -1,0 +1,17 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-17T21:45:08.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "ECSPD PD details",
+    "markdown": "## What's next? \n\nHere are materials and information that will help you prepare for your in person PD. \n\n# insert links to regional pages\n\n[CA ,\tLos Angeles](http://code.org/educate/pd/15-16/lausd)\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>

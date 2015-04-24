@@ -1,0 +1,31 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which blocks spell \"MOVE\"?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/k_1_images/move_blocks/EEES.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/k_1_images/move_blocks/EESS.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/k_1_images/move_blocks/ESSS.png",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "/script_assets/k_1_images/search_images/move.png, 450",
+    "height": "170"
+  },
+  "md5": "c6558a27a728fba5cb8eb2a3cceeb440"
+}]]></config>
+</Multi>

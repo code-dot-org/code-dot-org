@@ -1,0 +1,12 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-04-08T20:17:54.000Z",
+  "properties": {
+    "title": "Getting Started: Sending Numbers ",
+    "content1": "Respond to the following question.",
+    "markdown": "List two or three challenges you faced when trying to send multi-bit messages using the bit-sending widget during previous classes?\n"
+  },
+  "md5": "a25c07e46fb67702bc254b53ae4d9684"
+}]]></config>
+</TextMatch>

@@ -7,7 +7,7 @@ def create_session_row(row)
   begin
     row[:session] = SecureRandom.hex
     row[:id] = DB[:hoc_activity].insert(row)
-  end while row[:id] == 0 && (retires -= 1) > 0
+  end while row[:id] == 0 && (retries -= 1) > 0
 
   raise "Couldn't create a unique session row." if row[:id] == 0
 

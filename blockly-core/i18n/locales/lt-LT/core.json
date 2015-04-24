@@ -1,5 +1,5 @@
 {
-  "ACTUAL": "tikrasis",
+  "ACTUAL": "iškviesti",
   "ADD": "Pridėti",
   "ADD_COMMENT": "Pridėkite komentarą",
   "ADD_PARAMETER": "Pridėkite duomenų laukelį",
@@ -74,7 +74,7 @@
   "EXAMPLE_DESCRIPTION": "Apibrėžia tikrojo elgesio bei tikėtino elgesio pavyzdį",
   "EXPAND_ALL": "Išskleisti blokus",
   "EXPAND_BLOCK": "Išskleisti bloką",
-  "EXPECTED": "tikėtinas",
+  "EXPECTED": "rezultatas",
   "EXTERNAL_INPUTS": "Išdėstyti stulpeliu, kai daug parametrų",
   "FUNCTION_CREATE": "Sukurti naują komandą",
   "FUNCTION_EDIT": "redaguoti",

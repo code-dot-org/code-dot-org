@@ -61,6 +61,23 @@ Blockly.Blocks.functional_definition = {
     this.paramIds_ = [];
     this.parameterTypes_ = [];
   },
+  /**
+   * Updates the function definition's input type
+   * @param {Blockly.BlockValueType} newType
+   */
+  updateInputsToType: function (newType) {
+    this.updateInputType_(this.getInput('STACK'), newType);
+    this.render();
+  },
+  /**
+   * Updates given input to match a given functional value type
+   * @param {Blockly.Input} input
+   * @param {Blockly.BlockValueType} newType
+   */
+  updateInputType_: function (input, newType) {
+    input.setHSV.apply(input, Blockly.FunctionalTypeColors[newType]);
+    input.setCheck(newType);
+  },
   mutationToDom: function() {
     var container = document.createElement('mutation');
     // Add argument mutations
@@ -325,6 +342,9 @@ Blockly.Blocks.functional_call = {
   },
   getCallName: function() {
     return this.getTitleValue('NAME');
+  },
+  getParamTypes: function () {
+    return this.currentParameterTypes_;
   },
   renameProcedure: function(oldName, newName) {
     if (Blockly.Names.equals(oldName, this.getTitleValue('NAME'))) {

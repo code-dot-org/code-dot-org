@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-12T18:46:09.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged",
+      "skip_dialogue": true
+    },
+    "title": "Dashboard 1",
+    "markdown": "## Tour of Teacher Dashboard\n\nThis section is a tour of the teacher tools in Code Studio. Below is what the Teacher Dashboard looks like, and each tile has different teacher supports. Now, we'll go over the information within each tile. You can always get back to your teacher dashboard by clicking on your name on the orange button in the upper-right hand corner and choosing \"Teacher Home Page\"\n\n![image](http://staging.code.org/images/teacher-dashboard/teacher-homepage.png)\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "daf0e2a9e5f03d1227b538db9ba33a25"
+}]]></config>
+</External>

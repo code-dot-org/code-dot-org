@@ -29,7 +29,7 @@
     "disable_sharing": "false",
     "min_workspace_height": "1250",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"pass_function\",\r\n  \"callout_text\": \"This black block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"pass_function\",\r\n  \"callout_text\": \"This black block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"play lab rocket 2\",\r\n  \"callout_text\": \"Define your rocket-height function here\",\r\n  \"element_id\": \"#define_function\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": 25,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
     "timeout_after_when_run": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -38,6 +38,8 @@
     "definition_highlight": "true",
     "definition_collapse": "false",
     "custom_game_type": "Rocket Height",
+    "disable_examples": "false",
+    "video_key": "alg_8_design_recipe",
     "maze_data": null
   },
   "md5": "42c49605b9f052da87455dd2f92a7578"
@@ -84,26 +86,6 @@
           <next>
             <block type="studio_setBackground" uservisible="false">
               <title name="VALUE">"space"</title>
-              <next>
-                <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">time</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">0</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="variables_set" inline="false" uservisible="false">
-                      <title name="VAR">height</title>
-                      <value name="VALUE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">0</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </next>
             </block>
           </next>
         </block>
@@ -135,20 +117,13 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_definition" inline="false" uservisible="false">
+        <block type="functional_definition" inline="false" uservisible="false" id="define_function">
           <mutation>
             <arg name="seconds" type="Number"/>
             <description>Given a Number "seconds," return the height of a rocket traveling at 15 meters per second.</description>
             <outputtype>Number</outputtype>
           </mutation>
           <title name="NAME">rocket-height</title>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Number</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">time-elapsed</title>
         </block>
       </xml>
     </start_blocks>

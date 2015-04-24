@@ -5,11 +5,7 @@ template: none
 - authentication_required!
 - forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
 
-%a{href:'/ops-dashboard'}
-  Dashboard
->
-%span
-  Teacher cohorts
+= view :breadcrumbs, trail: [{url: '/teacher-dashboard', text: 'Dashboard'}, {text: 'Teacher cohorts'}]
 
 %div{'ng-controller' => 'CohortsController'}
   %h1 Teacher cohorts
@@ -33,7 +29,12 @@ template: none
     No cohorts are available.
 
   %div{'ng-show' => 'cohorts.length > 0'}
-    %table{style: "width:950px; table-layout:fixed;"}
+    %table{style: "width:970px; table-layout:fixed;"}
+      %colgroup
+        %col{width: "135"}/
+        %col{width: "60"}/
+        %col{width: "140"}/
+        %col{width: "100"}/
       %tr
         %th.manage-th
           %a{href: "", "ng-click" => "sortOrder = setSortOrder('name', sortOrder)"} Name

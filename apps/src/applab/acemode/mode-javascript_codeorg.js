@@ -1,6 +1,6 @@
 var dropletConfig = require('../dropletConfig');
 var dropletUtils = require('../../dropletUtils');
-var errorMapper = require('./errorMapper');
+var annotationList = require('./annotationList');
 
 // define ourselves for ace, so that it knows where to get us
 ace.define("ace/mode/javascript_codeorg",["require","exports","module","ace/lib/oop","ace/mode/javascript","ace/mode/javascript_highlight_rules","ace/worker/worker_client","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/config","ace/lib/net"], function(acerequire, exports, module) {
@@ -75,13 +75,11 @@ oop.inherits(Mode, JavaScriptMode);
       newOptions.predef[block.func] = false;
     });
 
+    annotationList.attachToSession(session);
+
     worker.send("changeOptions", [newOptions]);
 
-    worker.on("jslint", function(results) {
-      errorMapper.processResults(results);
-
-      session.setAnnotations(results.data);
-    });
+    worker.on("jslint", annotationList.setJSLintAnnotations);
 
     worker.on("terminate", function() {
       session.clearAnnotations();

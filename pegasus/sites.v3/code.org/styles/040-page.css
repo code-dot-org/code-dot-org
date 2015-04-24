@@ -2,6 +2,10 @@
   display:none;
 }
 
+.clear {
+  clear: both;
+}
+
 h1 {
   color: #7665a0;
   font-size: 32px;
@@ -186,6 +190,7 @@ th a:link, th a:visited, th a:hover, th a:active {
   color: #fff;
   text-decoration: underline;
 }
+
 
 #index #gap {
   height: 20px
@@ -733,4 +738,8 @@ label {
     font-size: 16px;
     line-height: 16px;
   }
+}
+
+.video_caption_link {
+  font-family: 'Gotham 5r', sans-serif;
 }

@@ -1,0 +1,15 @@
+<ContractMatch>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2015-01-06T17:22:23.000Z",
+  "properties": {
+    "answers": [
+      "text|Image|String|Number|String"
+    ],
+    "title": "Text Contract",
+    "content1": "Write a contract for the text function",
+    "content2": "Eval Contracts 3 A.solution_blocks, 300"
+  },
+  "md5": "870cf2d43ccc0394eab48a2571d43048"
+}]]></config>
+</ContractMatch>

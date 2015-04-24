@@ -30,7 +30,7 @@
   hoc2014_teachers: Mokytojai
   hoc2014_host: Organizuokite
   hoc2014_everyone: Visi
-  hoc2014_support: Paremkite
+  hoc2014_support: Paremkite &#x25BE;
   hoc2014_whatishoc: Kas yra „Programavimo valanda“?
   twentyhours_trynow: Išmėginkite dabar
   california_heading: Paprašykite savo mokyklos, kad galėtumėte mokyti programavimo
@@ -135,6 +135,7 @@
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     - Michael Clark, Teacher'
   studiobar_title: Peržiūrėkite <a href='http://studio.code.org'>programavimo kursus</a>
+  studiobar_title_nolink: Peržiūrėkite programavimo kursus
   studiobar_elementary_title: Kursai mažiems vaikams
   studiobar_elementary_body: Mūsų trys nauji kursai mažiems vaikams
   studiobar_hoc_title: Vienos Valandos Kodo kursas
@@ -150,19 +151,49 @@
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Vienos Valandos Kodo kursas
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -391,8 +422,8 @@
   dashboard_login_picture: Paveikslėlis
   dashboard_login_none: El. paštas
   dashboard_new_password: naujas slaptažodis
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: nepradėta
+  dashboard_progress_in_progress: pradėta
   dashboard_progress_not_completed: nebaigtas
   dashboard_progress_completed_too_many_blocks: baigtas, panaudota per daug blokų
   dashboard_progress_completed_perfect: puikiai išspręsta

@@ -6,6 +6,7 @@ module ApplicationHelper
 
   include LocaleHelper
   include ScriptLevelsHelper
+  include ViewOptionsHelper
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 
@@ -88,6 +89,10 @@ module ApplicationHelper
 
   def teacher_dashboard_url
     CDO.code_org_url '/teacher-dashboard'
+  end
+
+  def ops_dashboard_url
+    CDO.code_org_url '/ops-dashboard'
   end
 
   # used by devise to redirect user after signing in

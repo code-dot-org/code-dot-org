@@ -16,7 +16,7 @@
   petition_message: Jokaisen oppilaan jokaisessa koulussa pitää saada mahdollisuus
     oppia tietojenkäsittelytiedettä
   petition_sign_message: 'Jos olet samaa mieltä, allekirjoita. Ole yksi # joukossa.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Jos tuet meitä, allekirjoita nimesi.  Liity # joukkoon.'
   name: Nimi
   email: Sähköposti
   zipcode: Maa (tai postinumero Yhdysvalloissa)
@@ -31,7 +31,7 @@
   hoc2014_teachers: Opettajat
   hoc2014_host: Järjestä
   hoc2014_everyone: Kaikki
-  hoc2014_support: Tue
+  hoc2014_support: Tue &#x25BE;
   hoc2014_whatishoc: Mikä on koodaustunti?
   twentyhours_trynow: Kokeile nyt
   california_heading: Pyydä kouluasi opettamaan tietojenkäsittelytiedettä
@@ -111,8 +111,8 @@
   learn_classes: Etsi paikallisia oppitunteja
   hoc_is_here: '#Koodaustunti on täällä - Tsekkaa! @codeorg'
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: Miksi enemmän kouluja ei opeta tietojenkäsittelytiedettä? Voimme
+    korjata tämän. http://youtu.be/nKIu9yen5nc. Vieraile http://code.org/ ja opi lisää.
   learn_hoc: Opiskele Koodaustunnilla
   beyond_hoc: Koodaustunnin jälkeen
   what_gender: Mikä on sukupuolesi?
@@ -134,7 +134,8 @@
     Alzate, viidesluokkalainen'
   stats_michael: '"En ole<b>koskaan</b> nähnyt minun opiskelijoitani niin innostuneena
     oppimisestaan." - Michael Clark, opettaja'
-  studiobar_title: Tutustu <a href='http://studio.code.org'>Code Studio</a>on
+  studiobar_title: Tutustu <a href='http://studio.code.org'>Koodistudioon</a>
+  studiobar_title_nolink: Tutustu Koodistudioon
   studiobar_elementary_title: Alkeiskurssit
   studiobar_elementary_body: Kolme uutta kurssiamme alakoululaisille
   studiobar_hoc_title: Koodaustunti
@@ -150,54 +151,84 @@
   studiobar_shop_title: Myymälä
   studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Koodaustunti
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frozen Annan ja Elsan kanssa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Kaikki oppituntimme
   homepage_slot_text_course4: Kurssi 4
   homepage_slot_text_shop: Myymälä
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: Katso video
+  homepage_action_text_teachervideo: Katso video
+  homepage_action_text_learn: Aloita opiskeleminen tänään
+  homepage_action_text_signpetition: Allekirjoita vetoomus
+  homepage_signpetition_dropdown: Allekirjoita vetoomuksemme &#x25BE;
   homepage_slot_text_title_hoc: Koodaustunti
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
   homepage_slot_text_link_hoc: Kokeile koodaustuntia
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Järjestä Koodaustunti
+  homepage_slot_text_link_hocserved: '# käyttäjää'
   homepage_slot_text_title_students: Oppilaat
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_blurb_students: Tutki kaikki oppaat
+  homepage_slot_text_link_codestudio: Kokeile Koodistudiota
+  homepage_slot_text_link_local: Etsi kerho läheltäsi
+  homepage_slot_text_link_othercourses: Muut verkkokurssit
+  homepage_slot_text_title_educators: Opettajat
+  homepage_slot_text_blurb_educators: Opeta opiskelijoillesi
   homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
+  homepage_slot_text_link_fullcurriculum: Katso koko opetussuunnitelma
   homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_title_advocates: Kannattajat
+  homepage_slot_text_blurb_advocates: Tue työtämme
+  homepage_slot_text_link_stats: Katso tilastot
+  homepage_slot_text_link_buy: Ostaa t-paita tai hattu
+  homepage_slot_text_link_donate: Tee lahjoitus
+  homepage_header_codestudio: Koodistudion oppilas luomukset
+  homepage_header_donors: Code.org kiittää tukijoitaan
+  homepage_donors_seall: Näytä kaikki
   homepage_donors_donate: Lahjoita
   contact_form_topic_student: Olen oppilas
   contact_form_topic_parent: Olen vanhempi
@@ -395,8 +426,8 @@
   dashboard_login_picture: Kuva
   dashboard_login_none: Sähköposti
   dashboard_new_password: uusi salasana
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: ei aloitettu
+  dashboard_progress_in_progress: käynnissä
   dashboard_progress_not_completed: kesken
   dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
   dashboard_progress_completed_perfect: valmis, täydellinen

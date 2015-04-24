@@ -1,0 +1,29 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-02-09T22:37:08.000Z",
+  "properties": {
+    "answers": [
+      {
+        "text": "rocket-height(seconds) = seconds * 7 + 10",
+        "correct": false
+      },
+      {
+        "text": "rocket-height(seconds) = seconds * 10 + 7",
+        "correct": false
+      },
+      {
+        "text": "rocket-height(seconds) = seconds * 7 + 3",
+        "correct": false
+      },
+      {
+        "text": "rocket-height(seconds) = seconds * 10 - 3",
+        "correct": true
+      }
+    ],
+    "title": "Rocket Multiple Choice",
+    "markdown": "### Which function describes a rocket that reaches:\n#### 47 meters at 5 seconds\n#### 97 meters at 10 seconds\n#### 147 meters at 15 seconds\n"
+  },
+  "md5": "7abb53ce718b6e64456e22a68d86a762"
+}]]></config>
+</Multi>

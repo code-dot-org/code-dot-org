@@ -1,10 +1,13 @@
 <%
   var i18n = require('../../locale/current/netsim');
   var netsimConstants = require('./netsimConstants');
-  var EncodingType = netsimConstants.EncodingType;
-  var Packet = require('./Packet');
-  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
   var netsimUtils = require('./netsimUtils');
+  var Packet = require('./Packet');
+
+  var EncodingType = netsimConstants.EncodingType;
+  var MessageGranularity = netsimConstants.MessageGranularity;
+  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+
   var getEncodingLabel = netsimUtils.getEncodingLabel;
   var forEachEnumValue = netsimUtils.forEachEnumValue;
 
@@ -13,14 +16,51 @@
     return headerField.key;
   });
 
+  /** @type {boolean} */
   var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+
+  /** @type {boolean} */
   var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+
+  /** @type {boolean} */
   var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
-/**
- * @param {EncodingType} encodingType
- */
+  /** @type {boolean} */
+  var usePacketGranularity = (messageGranularity === MessageGranularity.PACKETS);
+
+  /**
+   * Write the table header to the page, with the appropriate packet-header columns enabled.
+   */
+  function tableHeader() {
+    %>
+      <thead>
+        <tr>
+          <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
+          <% if (showToAddress) { %>
+          <th nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= i18n.to() %></th>
+          <% } %>
+          <% if (showFromAddress) { %>
+          <th nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= i18n.from() %></th>
+          <% } %>
+          <% if (showPacketInfo) { %>
+          <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
+          <% } %>
+          <th class="<%= PacketUIColumnType.MESSAGE %>">
+            <%= i18n.message() %>
+            <div class="packet-controls">
+              <span class="netsim-button secondary remove-packet-button" title="<%= i18n.removePacket() %>"><i class="fa fa-times"></i></span>
+            </div>
+          </th>
+        </tr>
+      </thead>
+    <%
+  }
+
+  /**
+   * Write a table row to the page for the given data encoding.
+   * @param {EncodingType} encodingType
+   */
   function editorRow(encodingType) {
     %>
       <tr class="<%= encodingType %>">
@@ -40,32 +80,22 @@
   }
 %>
 <table>
-  <thead>
-  <tr>
-    <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"></th>
-    <% if (showToAddress) { %>
-      <th nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= i18n.to() %></th>
-    <% } %>
-    <% if (showFromAddress) { %>
-      <th nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= i18n.from() %></th>
-    <% } %>
-    <% if (showPacketInfo) { %>
-      <th nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= i18n.packet() %></th>
-    <% } %>
-    <th class="<%= PacketUIColumnType.MESSAGE %>">
-      <%= i18n.message() %>
-      <div class="packet-controls">
-        <span class="netsim-button remove-packet-button" title="<%= i18n.removePacket() %>"><i class="fa fa-times"></i></span>
-      </div>
-    </th>
-  </tr>
-  </thead>
-  <tbody>
   <%
-    forEachEnumValue(EncodingType, function (encodingType) {
-      editorRow(encodingType);
-    });
+    // Only write the header row if we are using packets
+    if (usePacketGranularity) {
+      tableHeader();
+    }
   %>
+  <tbody>
+    <%
+      // Write a body row for every packet encoding; we hide some of them post-render.
+      forEachEnumValue(EncodingType, function (encodingType) {
+        editorRow(encodingType);
+      });
+    %>
   </tbody>
 </table>
-<div class="bit-counter"></div>
+
+<% if (usePacketGranularity) { %>
+  <div class="bit-counter"></div>
+<% } %>

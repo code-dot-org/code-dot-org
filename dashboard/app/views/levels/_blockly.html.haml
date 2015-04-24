@@ -14,7 +14,7 @@
   :javascript
     //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
-    var appOptions = #{blockly_options(local_assigns).to_json};
+    var appOptions = #{app_options.to_json};
     appOptions.locale = '#{js_locale}';
     //]]>
 

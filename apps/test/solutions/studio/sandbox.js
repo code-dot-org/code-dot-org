@@ -771,10 +771,12 @@ module.exports = {
             SPRITE: 0,
             VALUE: 'random'
           },
-          blockUtils.blockOfType('studio_setBackground', {
+          blockUtils.blockWithNext('studio_setBackground', {
             VALUE: 'random'
-          })
+          },
+          '<block type="studio_setSpriteParams" inline="true"><title name="VALUE">random</title><value name="SPRITE"><block type="math_number"><title name="NUM">1</title></block></value></block>'
           )
+        )
         ) + '</xml>',
       runBeforeClick: function (assert) {
         testUtils.runOnStudioTick (5, function () {

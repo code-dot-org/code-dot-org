@@ -8,6 +8,7 @@
 goog.provide('Blockly.FunctionEditor');
 
 goog.require('Blockly.BlockSpace');
+goog.require('Blockly.BlockSpaceEditor');
 goog.require('Blockly.HorizontalFlyout');
 goog.require('goog.style');
 goog.require('goog.dom');
@@ -67,6 +68,8 @@ Blockly.FunctionEditor = function() {
   this.modalBlockSpace = null;
 };
 
+Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
+Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
 
 /**
  * The type of block to instantiate in the function editing area
@@ -82,13 +85,23 @@ Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
 Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
 
 /**
- * Opens the function editor with configuration parameters for a specific level
- * @param levelConfig {Object}
+ * @param {String} autoOpenFunction - name of function to auto-open
+ */
+Blockly.FunctionEditor.prototype.autoOpenFunction = function(autoOpenFunction) {
+  this.autoOpenWithLevelConfiguration({
+    autoOpenFunction: autoOpenFunction
+  });
+};
+
+/**
+ * Auto-opens the function editor with given configuration parameters
+ * @param {Object} configuration
+ * @param {string} configuration.autoOpenFunction - function to open
  * @protected
  */
-Blockly.FunctionEditor.prototype.openWithLevelConfiguration = function(levelConfig) {
-  if (levelConfig.openFunctionDefinition) {
-    this.openAndEditFunction(levelConfig.openFunctionDefinition);
+Blockly.FunctionEditor.prototype.autoOpenWithLevelConfiguration = function(configuration) {
+  if (configuration.autoOpenFunction) {
+    this.openAndEditFunction(configuration.autoOpenFunction);
   }
 };
 
@@ -114,6 +127,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock = this.moveToModalBlockSpace(targetFunctionDefinitionBlock);
   this.functionDefinitionBlock.setMovable(false);
   this.functionDefinitionBlock.setDeletable(false);
+  this.functionDefinitionBlock.setEditable(false);
   this.populateParamToolbox_();
   this.setupUIAfterBlockInEditor_();
 
@@ -170,19 +184,12 @@ Blockly.FunctionEditor.prototype.paramNameTypeFromXML_ = function(blockXML) {
   return infoObject;
 };
 
-/**
- * @param {?Function} opt_blockCreationCallback function to call on newly created block
- *  just before opening the editor
- */
-Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
+Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
   this.ensureCreated_();
 
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
   tempFunctionDefinitionBlock.userCreated = true;
-  if (opt_blockCreationCallback) {
-    opt_blockCreationCallback(tempFunctionDefinitionBlock);
-  }
   this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
 };
 
@@ -261,7 +268,6 @@ Blockly.FunctionEditor.prototype.refreshParamsEverywhere = function() {
 };
 
 Blockly.FunctionEditor.prototype.refreshParamsInFlyout_ = function() {
-  this.flyout_.hide();
   this.flyout_.show(this.orderedParamIDsToBlocks_.getValues());
 };
 
@@ -384,8 +390,8 @@ Blockly.FunctionEditor.prototype.moveToModalBlockSpace = function(blockToMove) {
   blockToMove.dispose(false, false, true);
   var newCopyOfBlock = Blockly.Xml.domToBlock(this.modalBlockSpace, dom);
   newCopyOfBlock.moveTo(Blockly.RTL
-    ? this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
-    : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+    ? this.modalBlockSpace.getMetrics().viewWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN
+    : Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN, Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN);
   newCopyOfBlock.setCurrentlyHidden(false);
   newCopyOfBlock.setUserVisible(true, true);
   return newCopyOfBlock;
@@ -442,7 +448,13 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'keydown', this,
       functionNameChange);
   function functionNameChange(e) {
-    this.functionDefinitionBlock.setTitleValue(e.target.value, 'NAME');
+    var value = e.target.value;
+    var disallowedCharacters = /\)|\(/g;
+    if (disallowedCharacters.test(value)) {
+      value = value.replace(disallowedCharacters, '');
+      goog.dom.getElement('functionNameText').value = value;
+    }
+    this.functionDefinitionBlock.setTitleValue(value, 'NAME');
   }
 
   Blockly.bindEvent_(this.contractDiv_, 'mousedown', null, function() {
@@ -529,8 +541,8 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
   }
 
   var currentX = Blockly.RTL ?
-    this.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE :
-    FRAME_MARGIN_SIDE;
+    this.modalBlockSpace.getMetrics().viewWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN :
+    Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
   var currentY = 0;
   currentY += this.flyout_.getHeight();
   this.flyout_.customYOffset = currentY;
@@ -538,7 +550,7 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
 
   this.modalBlockSpace.trashcan.setYOffset(currentY);
 
-  currentY += FRAME_MARGIN_TOP;
+  currentY += Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN;
   this.functionDefinitionBlock.moveTo(currentX, currentY);
 };
 

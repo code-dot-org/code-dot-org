@@ -30,11 +30,14 @@ var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 
-if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
-  var rgbcolor = require('../canvg/rgbcolor.js');
-  var stackBlur = require('../canvg/StackBlur.js');
-  var canvg = require('../canvg/canvg.js');
-  var svgToDataUrl = require('../canvg/svg_todataurl');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  // Loading these modules extends SVGElement and puts canvg in the global
+  // namespace
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/canvg.js');
+  require('../canvg/svg_todataurl');
 }
 
 var Direction = constants.Direction;
@@ -1047,6 +1050,11 @@ Studio.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  // In our Algebra course, we want to gray out undeletable blocks. I'm not sure
+  // whether or not that's desired in our other courses.
+  var isAlgebraLevel = !!level.useContractEditor;
+  config.grayOutUndeletableBlocks = isAlgebraLevel;
+
   loadLevel();
 
   window.addEventListener("keydown", Studio.onKey, false);
@@ -1073,7 +1081,8 @@ Studio.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      inputOutputTable: level.inputOutputTable
     }
   });
 
@@ -1254,6 +1263,10 @@ studioApp.reset = function(first) {
     projectile.removeElement();
   }
 
+  // True if we should fail before execution, even if freeplay
+  Studio.preExecutionFailure = false;
+  Studio.message = null;
+
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
@@ -1390,13 +1403,15 @@ var displayFeedback = function() {
       skin: skin.id,
       feedbackType: Studio.testResults,
       tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+      continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && (level.freePlay),
+      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      message: Studio.message,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
@@ -1535,6 +1550,29 @@ var nativeGetCallback = function () {
 };
 
 /**
+ * Looks for failures that should prevent execution.
+ * @returns {boolean} True if we have a pre-execution failure
+ */
+Studio.checkForPreExecutionFailure = function () {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Studio.message = commonMsg.emptyFunctionalBlock();
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  if (studioApp.hasExtraTopBlocks()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the story
  */
 Studio.execute = function() {
@@ -1545,8 +1583,11 @@ Studio.execute = function() {
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
+    if (Studio.checkForPreExecutionFailure()) {
+      return Studio.onPuzzleComplete();
+    }
+
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
@@ -1628,7 +1669,7 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function() {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (level.freePlay) {
+  } else if (level.freePlay && !Studio.preExecutionFailure) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -1641,7 +1682,10 @@ Studio.onPuzzleComplete = function() {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Studio.testResults = TestResults.FREE_PLAY;
+    if (!Studio.preExecutionFailure) {
+      Studio.testResults = TestResults.FREE_PLAY;
+    }
+    // If preExecutionFailure testResults should already be set
   } else {
     Studio.testResults = studioApp.getTestResults(levelComplete);
   }
@@ -1680,7 +1724,9 @@ Studio.onPuzzleComplete = function() {
     });
   };
 
-  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') { // don't try it if function is not defined
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
     document.getElementById('svgStudio').toDataURL("image/png", {
