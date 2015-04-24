@@ -67,4 +67,16 @@ My school district does not currently count computer science as a graduation req
 + Use the above letter to send to your district superintendent or administrator. This letter is tailored to your state and outlines where the Indiana Department of Education counts AP Computer Science A as a Core 40 graduation credit.  
 + Urge your school board to send a memo to all principals and guidance counselors clarifying that computer science will now count as a graduation credit in accordance with the Indiana Department of Education.  
 + Ask your school board to pass a proclamation to recognize the new graduation requirement. 
-+ Share this letter and information with computer science students and parents and urge them to contact your school board.  
++ Share this letter and information with computer science students and parents and urge them to contact your school board. 
+
+How will state universities count AP Computer Science and how will this affect the admissions process? 
+
++ While many universities defer to local and state graduation requirements and will accept qualifying AP scores as college credit, college admissions requirements completely depend on the state higher education system, and at times, the specific institution itself. Code.org recommends visiting the specific college or unversity website or speaking with an admissions officer to confirm how they count computer science courses. 
+
+While computer science counts as a mathematics and/or science graduation credit for my state or school district, my state university system does not count it as such. How can I help my state higher education system implement this policy? 
+
++ In some states, a higher education governing body may have the authority to change public institution admissions requirements, while in others the State Legislature has the authority. Using the above letter as a starting point, send a letter to your higher education governing board and state representatives, highlighting the discrepancies of how computer science is treated at the high school graduation level and the university admissions level.  
+
+How will the National Collegiate Athletic Association (NCAA) count AP Computer Science and how will this affect eligibility for athletic scholarships and recruitment? 
+
++ The NCAA recognizes the local and state high school graduation requirements for computer science. For example, if a school counts computer science as a mathematics or natural/ physical science graduation requirement, the NCAA will respect the graduation requirements set by the district and will also count a completed computer science course towards a mathematics and/or science credit. The NCAA policy on graduation credit eligibility can be found <a href="http://fs.ncaa.org/Docs/eligibility_center/CoreCourseInfo/Common_Core_Course_Questions/engage.html"_blank">here</a>.  

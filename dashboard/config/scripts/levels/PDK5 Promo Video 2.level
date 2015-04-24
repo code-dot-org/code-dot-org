@@ -3,7 +3,7 @@
   "game_id": 38,
   "created_at": "2015-02-27T19:37:18.000Z",
   "properties": {
-    "title": "Code Studio: Kid tested, Teacher approved",
+    "title": "Code Studio: Kid Tested, Teacher Approved!",
     "placeholder": "My first impressions of Code Studio are...",
     "markdown": "<iframe width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/rNIM1fzJ8u0\" frameborder=\"0\" allowfullscreen></iframe>\n\n#### What are your first impressions of Code Studio?\n"
   },

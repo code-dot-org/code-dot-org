@@ -761,6 +761,10 @@ Applab.init = function(config) {
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+  user = {
+    applabUserId: config.applabUserId,
+    isAdmin: (config.isAdmin === true)
+  };
 
   loadLevel();
 
@@ -807,7 +811,7 @@ Applab.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       pinWorkspaceToBottom: true,
-      hasDesignMode: true,
+      hasDesignMode: user.isAdmin,
       designModeBox: designModeBox
     }
   });
@@ -977,8 +981,6 @@ Applab.init = function(config) {
     }
 
   }
-
-  user = {applabUserId: config.applabUserId};
 };
 
 /**
@@ -1345,6 +1347,10 @@ studioApp.runButtonClick = function() {
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
+    var designCell = document.getElementById('design-cell');
+    if (designCell) {
+      designCell.className = 'design-cell-enabled';
+    }
   }
 };
 
@@ -1660,7 +1666,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 

@@ -23,22 +23,22 @@ def main()
   status = $?.exitstatus
   return status if status == 0 && log.empty?
 
-  # Something was built, so retrieve the commit message(s) that triggered the build.
-  commit_log = IO.read(deploy_dir('rebuild')).strip if File.file?(deploy_dir('rebuild'))
+  Dir.chdir(deploy_dir) do
+    commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{RakeUtils.git_revision}"
+    # Notify the HipChat channels about what happened.
+    projects = ARGV.join(' ')
+    if status == 0
+      HipChat.log "<b>#{projects}</b> built.", color:'green'
 
-  # Notify the HipChat channels about what happened.
-  projects = ARGV.join(' ')
-  if status == 0
-    HipChat.log "<b>#{projects}</b> built.", color:'green'
+      HipChat.developers "<b>#{projects}</b> built.", color:'green'
+      HipChat.developers commit_url, color:'gray', message_format:'text'
+    else
+      HipChat.log "<b>#{projects}</b>  failed to build!", color:'red'
+      HipChat.log "/quote #{log}", color:'gray', message_format:'text'
 
-    HipChat.developers "<b>#{projects}</b> built.", color:'green'
-    HipChat.developers "/quote #{commit_log}", color:'gray', message_format:'text'
-  else
-    HipChat.log "<b>#{projects}</b>  failed to build!", color:'red'
-    HipChat.log "/quote #{log}", color:'gray', message_format:'text'
-
-    HipChat.developers "<b>#{projects}</b>  failed to build!", color:'red', notify:1
-    HipChat.developers "/quote #{commit_log}", color:'gray', message_format:'text'
+      HipChat.developers "<b>#{projects}</b>  failed to build!", color:'red', notify:1
+      HipChat.developers commit_url, color:'gray', message_format:'text'
+    end
   end
 
   # Return the same output and status code that BUILD returned.

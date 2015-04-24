@@ -1,0 +1,14 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-23T17:56:31.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Classroom Strategies",
+    "markdown": "## Classroom Strategies\n\nWhat kind of strategies would you want to implement with your students to ensure that all students in your classroom are engaging in computer science? Do these strategies overlap with ones you use in other subject areas?\n\n<div id=\"discourse-comments\" />\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  }
+}]]></config>
+</External>
