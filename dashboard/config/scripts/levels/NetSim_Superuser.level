@@ -41,7 +41,14 @@
     "can_connect_to_clients": "true",
     "can_connect_to_routers": "true",
     "message_granularity": "packets",
-    "automatic_receive": "true"
+    "automatic_receive": "true",
+    "show_metronome": "true",
+    "show_bit_rate_control": "true",
+    "lock_bit_rate_control": "false",
+    "default_bit_rate_bits_per_second": "Infinity",
+    "show_chunk_size_control": "true",
+    "lock_chunk_size_control": "false",
+    "default_chunk_size_bits": "8"
   },
   "md5": "e9f562e16d9487b1f02353ac05fde04c"
 }]]></config>

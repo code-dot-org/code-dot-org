@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Here's a Design Recipe for a function called \"square-circle\" with domain Number String and range Image. Click Edit to write the function description (you will see two examples provided).",
+    "instructions": "Here's a Design Recipe for a function called \"square-circle\" with domain Number String and range Image. Click Edit to write the function definition (you will see two examples provided).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
