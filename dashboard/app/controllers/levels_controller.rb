@@ -26,7 +26,7 @@ class LevelsController < ApplicationController
     set_videos_and_callouts
     view_options(
         full_width: true,
-        no_footer: @game == Game.applab || @game == Game.netsim
+        no_footer: !@game.has_footer?
     )
   end
 

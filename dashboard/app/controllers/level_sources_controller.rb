@@ -106,7 +106,7 @@ class LevelSourcesController < ApplicationController
     view_options(
       callouts: [],
       full_width: true,
-      no_footer: @game == Game.applab || @game == Game.netsim,
+      no_footer: !@game.has_footer?,
       no_padding: browser.mobile? && @game.share_mobile_fullscreen?
     )
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
