@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "دائرة (نصف القطر ، النمط ، اللون)"},
 "displayBlockTitle":function(d){return "عرض"},
 "ellipseBlockTitle":function(d){return "القطع الناقص (العرض ، الارتفاع ، النمط واللون )"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "لديك كتل غير متصلة. هل تقصد بإتصال هذه إلى كتلة \"العرض\" ؟"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "تداخل (الأعلى، الأسفل)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "صلب"},
 "string":function(d){return "السلسلة"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

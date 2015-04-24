@@ -31,12 +31,6 @@ em {
 strong em, em strong {
   font-family: "Gotham 7i", sans-serif; }
 
-.farSide {
-  text-align: right; }
-
-html[dir="RTL"] .farSide {
-  text-align: left; }
-
 .clear {
   clear: both; }
 
@@ -72,52 +66,58 @@ div.droplet-palette-group-header-selected {
   color: #000; }
 
 div.droplet-palette-group-header.yellow {
-  border-left: 10px solid #ffd54f; }
+  border-left: 10px solid #FFF176; }
 
 div.droplet-palette-group-header-selected.yellow {
-  background-color: #ffd54f; }
+  background-color: #FFF176; }
 
 div.droplet-palette-group-header.red {
-  border-left: 10px solid #f87477; }
+  border-left: 10px solid #F78183; }
 
 div.droplet-palette-group-header-selected.red {
-  background-color: #f87477; }
+  background-color: #F78183; }
 
 div.droplet-palette-group-header.cyan {
-  border-left: 10px solid #00d2e2; }
+  border-left: 10px solid #4DD0E1; }
 
 div.droplet-palette-group-header-selected.cyan {
-  background-color: #00d2e2; }
+  background-color: #4DD0E1; }
+
+div.droplet-palette-group-header.pink {
+  border-left: 10px solid #F57AC6; }
+
+div.droplet-palette-group-header-selected.pink {
+  background-color: #F57AC6; }
 
 div.droplet-palette-group-header.lightgreen {
-  border-left: 10px solid #d3e965; }
+  border-left: 10px solid #D3E965; }
 
 div.droplet-palette-group-header-selected.lightgreen {
-  background-color: #d3e965; }
+  background-color: #D3E965; }
 
 div.droplet-palette-group-header.purple {
-  border-left: 10px solid #b159ab; }
+  border-left: 10px solid #BB77C7; }
 
 div.droplet-palette-group-header-selected.purple {
-  background-color: #b159ab; }
-
-div.droplet-palette-group-header.deeppurple {
-  border-left: 10px solid #a38bc3; }
-
-div.droplet-palette-group-header-selected.deeppurple {
-  background-color: #a38bc3; }
+  background-color: #BB77C7; }
 
 div.droplet-palette-group-header.blue {
-  border-left: 10px solid #19c3e1; }
+  border-left: 10px solid #64B5F6; }
 
 div.droplet-palette-group-header-selected.blue {
-  background-color: #19c3e1; }
+  background-color: #64B5F6; }
 
 div.droplet-palette-group-header.green {
-  border-left: 10px solid #48d882; }
+  border-left: 10px solid #68D995; }
 
 div.droplet-palette-group-header-selected.green {
-  background-color: #48d882; }
+  background-color: #68D995; }
+
+div.droplet-palette-group-header.orange {
+  border-left: 10px solid #FFB74D; }
+
+div.droplet-palette-group-header-selected.orange {
+  background-color: #FFB74D; }
 
 .droplet-wrapper-div {
   overflow: hidden;
@@ -395,7 +395,7 @@ button:active {
   border: 1px solid #888 !important; }
 
 button:hover {
-  box-shadow: 2px 2px 5px #888; }
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
 
 button.disabled, button[disabled=disabled], button:disabled {
   border: 1px solid #C7C7C7;
@@ -480,7 +480,7 @@ input[type="radio"] {
   border: 1px solid #000;
   position: absolute;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   padding: 10px;
   z-index: 20000; }
 
@@ -490,7 +490,7 @@ input[type="radio"] {
   background-color: #fff;
   color: #000;
   border-radius: 6px;
-  box-shadow: 5px 5px 5px #888; }
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
 
 #dialogShadow {
   height: 100%;
@@ -740,72 +740,11 @@ input[type="radio"] {
     overflow: scroll;
     max-height: 400px; }
 
-.modal-content {
-  margin-left: 110px; }
-  .modal-content p, .modal-content pre {
-    line-height: 27px;
-    font-size: 24px;
-    color: #7665a0; }
-  .modal-content .congrats {
-    font-size: 27px;
-    line-height: 30px;
-    margin-bottom: 15px; }
-  .modal-content .aniGif {
-    display: block;
-    margin: 0px auto 6px;
-    position: relative;
-    left: -50px;
-    z-index: -1; }
-  .modal-content .feedback-image {
-    width: 180px;
-    height: auto;
-    margin: 0 15px 0 0;
-    float: left;
-    border: lightgrey;
-    border-style: solid; }
-  .modal-content .feedback-links {
-    margin-top: 15px; }
-  .modal-content .feedback-callout {
-    border: solid;
-    border-radius: 10px;
-    border-color: red; }
-    .modal-content .feedback-callout p {
-      margin: 15px;
-      color: red;
-      padding-right: 20%; }
-    .modal-content .feedback-callout .congrats {
-      font-size: 24px;
-      line-height: 27px; }
-    .modal-content .feedback-callout .hint-header {
-      font-family: 'Gotham 7r', sans-serif;
-      font-weight: normal; }
-    .modal-content .feedback-callout .hint-image {
-      float: right;
-      width: 20%; }
-  .modal-content .lines-of-code-message {
-    font-size: 20px;
-    line-height: normal;
-    color: #5b6770;
-    margin: 0 0 8px; }
-
-.yellow-background {
-  background-color: #ffc459; }
-
 .light-yellow-background {
   background-color: #fff7df; }
 
 .white-background {
   background-color: white; }
-
-.dialog-title {
-  font-family: 'Gotham 7r', sans-serif;
-  font-weight: normal; }
-
-#ok-button {
-  background-color: #ffa400;
-  border: 1px solid #ffa400;
-  color: white;
-  min-width: 100px; }
 
 .arrow-container {
   background-color: white !important; }
@@ -895,31 +834,6 @@ input[type="radio"] {
 #shapeways-message {
   display: block;
   text-align: center; }
-
-.modal-image {
-  width: 100px;
-  height: auto;
-  margin-top: -60px;
-  float: left; }
-
-.modal-header {
-  border: none;
-  height: 20px; }
-
-.modal-body {
-  height: 100%;
-  overflow: visible; }
-
-#feedbackBlocks {
-  margin-left: 50px;
-  height: 100px;
-  width: 400px;
-  border: none; }
-
-#feedbackButtons:after {
-  content: '';
-  display: inline-block;
-  width: 100%; }
 
 .hide {
   display: none; }
@@ -1033,9 +947,9 @@ body.readonly.embed-block #codeWorkspace .userHidden {
   border: none;
   background: #0094ca;
   color: #ffffff;
-  -webkit-box-shadow: 5px 5px 5px 0 #888888;
-  -moz-box-shadow: 5px 5px 5px 0 #888888;
-  box-shadow: 5px 5px 5px 0 #888888; }
+  -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3); }
 
 .droplet-block-tooltipster .tooltipster-content {
   font-family: "Gotham 4r";
@@ -1044,3 +958,6 @@ body.readonly.embed-block #codeWorkspace .userHidden {
   padding: 8px 10px;
   overflow: hidden;
   font-weight: normal; }
+
+.droplet-hover-div {
+  max-width: 100% !important; }

@@ -1,5 +1,5 @@
 - if current_user
-  .user_menu
+  .header_button.header_user.user_menu
     %span= t('nav.user.label', username: h(current_user.short_name))
     %span.user_menu_glyph
       &#x25BC;
@@ -7,17 +7,16 @@
       .user_options{style: 'display: none;'}
         - if current_user.teacher?
           = link_to t('nav.user.classroom'), teacher_dashboard_url
-          %hr
+        - if current_user.district_contact? || current_user.facilitator? || current_user.admin?
+          = link_to t('nav.user.district_dashboard'), ops_dashboard_url
         = link_to t('nav.user.stats'), root_url
-        %br/
         = link_to t('nav.user.settings'), edit_user_registration_url
-        %br/
         - if current_user.teacher? && (current_user.teacher_prize || current_user.teacher_bonus_prize)
           = link_to t('nav.user.prizes'), my_prizes_url
-          %br/
         = link_to t('nav.user.logout'), destroy_user_session_url
 - else
-  = link_to(t('nav.user.signin'), new_user_session_url, class: 'button-signin', id: 'signin_button')
+  .header_button.header_user
+    = link_to(t('nav.user.signin'), new_user_session_url, class: 'button-signin', id: 'signin_button')
 
 :javascript
   function hideUserOptions() {

@@ -33,8 +33,15 @@ class User < ActiveRecord::Base
   has_many :workshops, through: :cohorts
   has_many :segments, through: :workshops
 
+  has_and_belongs_to_many :workshops_as_facilitator,
+    class_name: Workshop,
+    foreign_key: :facilitator_id,
+    join_table: :facilitators_workshops
+
   # you can be associated with a district if you are the district contact
-  has_one :district_as_contact, class_name: 'District', foreign_key: 'contact_id'
+  has_one :district_as_contact,
+    class_name: 'District',
+    foreign_key: 'contact_id'
 
   belongs_to :invited_by, :polymorphic => true
 
@@ -67,40 +74,40 @@ class User < ActiveRecord::Base
     District.find(district_id) if district_id
   end
 
-  def User.find_or_create_district_contact(params, invited_by_user)
+  def district_name
+    district.try(:name)
+  end
+
+  def User.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user
+      # initialize new users with name and school
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
+      params[:school] ||= params[:ops_school]
+
       user = User.invite!(email: params[:email],
                           user_type: TYPE_TEACHER, age: 21)
       user.invited_by = invited_by_user
     end
 
-    user.update!(params)
+    user.update!(params.merge(user_type: TYPE_TEACHER))
 
-    user.permission = UserPermission::DISTRICT_CONTACT
-    user.save!
-    user
-  end
-
-  def User.find_or_create_teacher(params, invited_by_user)
-    user = User.find_by_email_or_hashed_email(params[:email])
-    unless user
-      if params[:ops_first_name] || params[:ops_last_name]
-        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
-      end
-
-      user = User.invite!(email: params[:email],
-                           user_type: TYPE_TEACHER, age: 21)
-      user.invited_by = invited_by_user
+    if permission
+      user.permission = permission
+      user.save!
     end
-
-    user.update!(params)
     user
   end
 
+  def User.find_or_create_district_contact(params, invited_by_user)
+    find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
+  end
+
+  def User.find_or_create_facilitator(params, invited_by_user)
+    find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
+  end
 
   # a district contact can see the teachers from their district that are part of a cohort
   def district_teachers(cohort = nil)
@@ -116,7 +123,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
-  has_many :user_levels
+  has_many :user_levels, -> {order 'id desc'}
   has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
@@ -175,7 +182,23 @@ class User < ActiveRecord::Base
     update(admin: true) if Mail::Address.new(email).domain.try(:downcase) == 'code.org'
   end
 
-  before_save :hash_email, :hide_email_for_younger_users # order is important here ;)
+  before_save :dont_reconfirm_emails_that_match_hashed_email
+  def dont_reconfirm_emails_that_match_hashed_email
+    # we make users "reconfirm" when they change their email
+    # addresses. Skip reconfirmation when the user is using the same
+    # email but it appears that the email is changed because it was
+    # hashed and is not now hashed
+    if email.present? && hashed_email == User.hash_email(email.downcase)
+      skip_reconfirmation!
+    end
+  end
+
+  before_save :make_teachers_21, :dont_reconfirm_emails_that_match_hashed_email, :hash_email, :hide_email_for_younger_users # order is important here ;)
+
+  def make_teachers_21
+    return unless user_type == TYPE_TEACHER
+    self.age = 21
+  end
 
   def User.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
@@ -315,22 +338,27 @@ class User < ActiveRecord::Base
     end
   end
 
+  def user_levels_by_level(script)
+    user_levels.
+      where(script_id: [script.id, nil]).
+      index_by(&:level_id)
+  end
+
   def levels_from_script(script, stage = nil)
-    ul_map = self.user_levels.includes({level: [:game, :concepts]}).index_by(&:level_id)
-    q = script.script_levels.includes({ level: :game }, :script, :stage).order(:position)
+    ul_map = user_levels_by_level(script)
+    q = script.script_levels.includes(:level, :script, :stage).order(:position)
 
     if stage
       q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
     end
 
     q.each do |sl|
-      ul = ul_map[sl.level_id]
-      sl.user_level = ul
+      sl.user_level = ul_map[sl.level_id]
     end
   end
 
   def next_unpassed_progression_level(script)
-    user_levels_by_level = self.user_levels.index_by(&:level_id)
+    user_levels_by_level = user_levels_by_level(script)
 
     script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
@@ -504,6 +532,7 @@ SQL
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
+  attr_accessor :raw_token
   def User.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
@@ -514,7 +543,7 @@ SQL
 
     user = find_by_email_or_hashed_email(attributes[:email]) || User.new(email: attributes[:email])
     if user && user.persisted?
-      user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
+      user.raw_token = user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
     else
       user.errors.add :email, :not_found
     end
@@ -721,4 +750,12 @@ SQL
     track_script_progress(script)
   end
 
+  def User.csv_attributes
+    # same as in UserSerializer
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender]
+  end
+
+  def to_csv
+    User.csv_attributes.map{ |attr| self.send(attr) }
+  end
 end

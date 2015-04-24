@@ -20,13 +20,14 @@
       2-3 Artist 2_instruction: 'Bu evin yarısı tamamlanmış bir duvarı var. Her kenarı
         100 birim; fakat yarım tamamlanmış duvarı sadece 50 birim. Duvarı tamamlayın. '
       2-3 Artist 3.4_instruction: |
-        Zıplama kutusu, sanatçının çizmeden gitmesini sağlar.
-        Zıplama ve çizme kutularını kullanarak gidiş yolunu çizin.
+        Zıpla bloğu ressamı çizim yapmadan ilerletir.
+        Hem zıpla hem de çiz bloğunu kullanarak çizgileri birleştirin.
       2-3 Artist 3_instruction: Bu şapka 100 piksel yüksekliğinde.Yüksekliği 70 piksel
         daha az olan bir şapka çiz.
-      2-3 Artist 3new_instruction: Kırmızı şapka 100 piksel uzunluğunda. Çizimi bitirmek
-        için siyah şapka 70 pikselden kısa olmalı. Siyah şapkanın genişliği 50 piksel.
-      2-3 Artist 4_instruction: Bu evi kedi için tamamlamama yardım et.
+      2-3 Artist 3new_instruction: Kırmızı şapka 100 piksel uzunluğundadır. 70 piksel
+        daha kısa olan siyah bir şapka çizerek tamamla. Siyah şapkanın genişliği 50
+        pikseldir.
+      2-3 Artist 4_instruction: Kedi için bu evi tamamlamama yardım et.
       2-3 Artist 5_instruction: Sadece 3 kutu kullanarak aynı evi çizmek için bu kodu
         "kez tekrar et" kutusuyla değiştirin.
       2-3 Artist 6_instruction: Bu evin bir çatıya ihtiyacı var!Bir üçgen çiz. İpucu:Üç
@@ -77,292 +78,213 @@
       2-3 Artist Functions 1_instruction: 'Merhaba! Ben zombi sanatçısı. Ben çizim
         yapmayı seviyorum. Bana kare gözlük yapmak için yardımcı olur musun? İpucu:
         Gözlük camı arasındaki köprü kare uzunluğundan 25 piksel daha kısadır.'
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex
-        things multiple times. Can you use the \"draw a flower\" function\nto fill
-        the rest of the planter box?(Hint: The plants are all separated by\n100 pixels
-        length)  \n"
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      2-3 Artist Functions 10_instruction: Burada iki fonksiyon var, biri büyük diğeri
+        küçük çark çizmek için. Bunları kullanarak makinenin içini çiz!
+      2-3 Artist Functions 11.5_instruction: Işte bir "Altıgen Çiz" fonksiyonu daha.
+        Her döngüde sadece 60 derece dönersen ne olur?
+      2-3 Artist Functions 11_instruction: '"Kare çiz" fonksiyonunu "Altıgen çiz"
+        olarak yeniden adlandırdık, fakat kareler çizmeye devam ediyor! "Altıgen çiz"
+        fonksiyonunu 50 piksel kenarlı altıgen çizmek için düzenleyebilir ve fonksiyonu
+        kullanarak resmi çizebilir misin?'
+      2-3 Artist Functions 12_instruction: 'Fonksiyonlar karmaşık şeyleri birçok kez
+        çizmek için mükemmeldir. "Çiçek çiz" fonksiyonunu kullanarak saksının geri
+        kalanını doldurabilir misin? (İpucu: Tüm bitkiler birbirinden 100 piksel uzaktadır)  '
+      2-3 Artist Functions 13_instruction: "Sana dört fonksiyon sunuyoruz. \nBunları
+        bir veya daha fazla döngü içinde kullanarak resimler yap ve arkadaşlarınla
+        paylaş. Örnek için çalıştıra bas.\n"
+      2-3 Artist Functions 2_instruction: "Fonksiyonlaryeni bloklar tanımlamanı sağlar!Blokları
+        \"Kare çiz\" fonksiyonuna taşıdık. \"Kare çiz\" fonksiyonunu kullanarak bardakları
+        çizebilir misin? Kareler \n75 piksel uzaklıktadır.\n"
       2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
+        Fonksiyonu 115 piksel kenar uzunluğunda
+        bir kare çizmek için düzenlenve daha büyük bardaklar çiz. Kareler şimdi 45 piksel
+        uzaklığındalar.
       2-3 Artist Functions 4_instruction: Bu 3 kareyi çizmek için "tekrarla" bloğunu
         kullan.
       2-3 Artist Functions 7_instruction: Farklı iki parametre kullanarak iki ev çizmek
         için "ev çiz" fonksiyonunu kullan.(İpucu:İlk ev 100 piksel).
       2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
+        İşte bir kartanesi fonksiyonu. Bir kış
+        sahnesi yaratmak için onunla denemeler yap. Bu bir serbest oyun bölümü, yani çözmen gereken bir bilmece yok. İyi eğlenceler!
+      2-3 Artist Loops 1_instruction: Hücreyi tamamlamak için kenarları 100 piksel
+        uzunluğunda bir altıgen yapabilir misin? Unutma, sadece 60 derece dönmen gerekiyor!
+      2-3 Artist Loops 10_instruction: Eğer son adımımızı yarım adım daha ileriye
+        atarsak tasarıma ne olur?
       2-3 Artist Loops 11_instruction: Şimdi tüm kreasyonumuzun etrafına *başka* bir
-        döngü koyalım!Çıkış döngüsünün sonuna derece eklemeyi unutma.
-      2-3 Artist Loops 2_instruction: Şimdi tekrarla bloğu kullanarak hücreyi kabuk
+        döngü koyalım! Dış döngünün sonuna bir açı eklemeyi unutma.
+      2-3 Artist Loops 2_instruction: Şimdi tekrarla bloğunu kullanarak hücreyi kabuk
         yapın.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
+      2-3 Artist Loops 4_instruction: 'Bu şekli üst üst yeniden kullanarak tekrar
+        ettiğimizde ne olduğunu görmek ister misin? '
       2-3 Artist Loops 5_instruction: Hadi şimdi döngüde küçük bir değişiklik yapalım
         ve resmimiz nasıl değişiyor görelim.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
+      2-3 Artist Loops 6_instruction: 'Döngünün içine bir hamle ve bir dönüş daha
+        ekleyin ve tasarımın nasıl değiştiğini görün. '
+      2-3 Artist Loops 7_instruction: Döngüleri her çeşitte poligon yapmak için kullanabiliriz.
+        Bu altıgenin içine bir eşkenar dörtgen çizebilir misin?
       2-3 Artist Loops 8_instruction: Hadi döngünün içine iki öğeyi de koyalım.
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
-        we're going to add some distance between them.\r\nUse the same code as\nbefore,
-        but add a step forward at the end of the outer loop."
-      2-3 Artist Loops New 1_instruction: |
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
-      2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+      2-3 Artist Loops 9_instruction: |
+        Aynı elementleri kullanarak döngü oluşturacağız, fakat aralarına biraz mesafe ekleyeceğiz. /r
+        Daha önce yaptığımız gibi, aynı kodu kullan, ama bu sefer dış döngünün sonuna bir adım daha ekle.
+      2-3 Artist Loops New 1_instruction: "Hadi bu robotun başını çizelim! \nKenarları
+        100 piksel olan bir kare çizebilir misin?\n"
+      2-3 Artist Loops New 10_instruction: Hadi, şimdi birkaç V'yi onları bir döngüde
+        çizerek birbirine bağlayalım.
+      2-3 Artist Loops New 11_instruction: 'Bu sefer 24 kez çizelim. Bu koda sola
+        30 derece dönüş ekle ve hepsini tekrarla bloğuna yerleştir. '
+      2-3 Artist Loops New 12_instruction: "Kenarları 100 piksel olan bir elmas çiz.
+        \n"
       2-3 Artist Loops New 13_instruction: Şimdi elması döngü içinde 3 kere çizelim.
-      2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
+      2-3 Artist Loops New 14_instruction: Şimdi, 10 kez elmas çizelim. Ama her elmastan
+        sonra 90 derece dön.
       2-3 Artist Loops New 15_instruction: Eğlenceli bir şeyler çiz.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
+      2-3 Artist Loops New 2_instruction: Bunlar senin kare çizmek için kullandığın
+        kodların bazıları. Tekrarla bloğunu, bu kodu 4 kez çalıştırmak için kullanırsan
+        ne olur?
+      2-3 Artist Loops New 9_instruction: Oku tamamlamak için iki kenarı da 50 piksel
+        olan basit bir V çiz.
       2-3 Artist Match Hex Pic_instruction: 'Eşleştirme: Altıgeni bitirmeye yardım
         edin.'
       2-3 Artist Match Rho Pic_instruction: 'Eşleştirme: Eksik kodu bitirin.'
       2-3 Artist Match Sq Pic_instruction: 'Eşleştirme: Eksik kodu tamamlayın.'
       2-3 Artist Match Tri pic_instruction: 'Eşleştirme:  Eksik kodu dodurun.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut
-        did you know you can put a loop inside another loop?\r\nLoop this whole\nblock
-        of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
+      2-3 Artist Nested Loops 1_instruction: "Daha önce de şekiller çizmek için döngüleri
+        kullanmıştın. Biliyor musun, bir döngünün içine başka bir döngü yerleştirebilirsin./r\nBu
+        kod bloğu döngüsünü 3 kez çalıştırarak motifi çiz. \n"
+      2-3 Artist Nested Loops 10_instruction: 'Kodu 12 kez döngüleyerek motifi tamamlayın. '
       2-3 Artist Nested Loops 11_instruction: Örneği tamamlamak için bu kodu 4 kez
         tekrarlayın,her daireden sonra 90 derece döndürün.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
-      2-3 Artist Nested Loops 7_instruction: |
-        Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
-      2-3 Artist Nested Loops 8_instruction: |
-        Now let's add some grass to our picture.
-        Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_instruction: |
-        We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
-      2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar.
-        Be careful not to collect nectar from a purple flower if it doesn't\nhave
-        any.\r\n"
+      2-3 Artist Nested Loops 12_instruction: 'Bukleleri tamamlamak için bu kodu 12
+        kez döngüle. '
+      2-3 Artist Nested Loops 2_instruction: 'Şimdi, üçgeni 6 kez döngüle. Her üçgenden
+        sonra, yeni bir tane çizmeden önce 60 derece dönmen gerek. '
+      2-3 Artist Nested Loops 3_instruction: 'Bu motifi çizmek için üçgeni 12 kez
+        döngülemen gerekecek. Her şekilden sonra kaç derece döneceğini anlamak için
+        bir çemberin içindeki derecelerin sayısını (360), çizdiğin şekillerin sayısına
+        (12) böl. '
+      2-3 Artist Nested Loops 4_instruction: 'Çiçek çizmek için bu elması 12 kez döngüle.
+        İpucu: Elmaslar tıpkı yaptığın 12 üçgen gibidir - her şekilden sonra kaç derece
+        dönmen gerek?'
+      2-3 Artist Nested Loops 5_instruction: 'Bu binan pencerelerini içiçe döngüyle
+        doldur. Pencereler 20 piksel uzunluğunda ve 20 piksel uzaklıklatalar. '
+      2-3 Artist Nested Loops 6_instruction: 'Bu dinazorun kuruğu boyunca 8 boynuzu
+        var, her boynuz 30 piksel uzunluğunda. Üçgenleri 8 kez döngüle ve her seferinde
+        ilerlemeyi unutma. '
+      2-3 Artist Nested Loops 7_instruction: 'Güneş çizmek için üçgeni 10 kez döngüle.
+        Her üçgenden sonra hareket edip dönmen gerekecek. Ne kadar dönmen gerektiğini
+        bir çemberdeki derecelerin sayısını şekli oluşturmak için gereken sayıya bölerek
+        bulabilirsin. '
+      2-3 Artist Nested Loops 8_instruction: 'Şimdi, resmimize biraz da çimen ekleyelim.
+        Her tutam çimen birbirinden 50 piksel uzaklıktadır. '
+      2-3 Artist Nested Loops 9_instruction: 'Bu resmi bir çiçek ekleyerek bitireceğiz.
+        Çiçeğini çizmek için 12 kez elmas döngüsü oluştur. '
+      2-3 Artist Nested Loops Free Play_instruction: Serbest oyun, içiçe döngülerle
+        havalı bir şeyler çiz.
+      2-3 Bee Conditionals 1_instruction: Merhaba! Ben bir arıyım. Çiçekten nektar
+        toplamama yardım et.
+      2-3 Bee Conditionals 10_instruction: "Mor çiçeklerde 1 veya 0 nektar olabilir.
+        Nektarı olmayan mor çiçeklerden nektar almamaya dikkat et.\r"
       2-3 Bee Conditionals 11_instruction: Nektarı olan çiçeklerden nektar topla.
-      2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
-      2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
+      2-3 Bee Conditionals 12_instruction: 'Tüm bu çiçekleri kontrol edip nektar toplamak
+        için bir döngü kullan.  '
+      2-3 Bee Conditionals 13_instruction: 'Nektarı topla ve bal yap. İpucu: "eğer
+        nektar varsa" şartlı komutunu kırmızı çiçek üzerinde kullanırsan ne olur?
+        Bunu bir döngüyle tamamlayabilir misin?'
+      2-3 Bee Conditionals 14_instruction: 'Nektar topla ve bal yap. Eğer mor çiçekte
+        nektar yoksa, toplamamaya dikkat et. '
       2-3 Bee Conditionals 15_instruction: 4 çiçekten nektar toplayın.
       2-3 Bee Conditionals 2_instruction: Merhaba! Ben bir arıyım. Bana çiçeklerden
         nektar toplamak için yardım et. Bunun için döngü kullanın.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
-      2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: "These blocks are really bugging me. Fix the\nerror(s)
-        to collect all of the nectar and make all of the honey. \n"
-      2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
-      2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
-      2-3 Bee Functions 10_instruction: |
-        Purple flowers may have either 1 or 0 nectar.  Create
-        a function that collects nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
-        use a loop to get an ideal block count, too.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
-      2-3 Bee Functions 4_instruction: |
-        The "move and get nectar" function turns
-        the bee, collects nectar, and then returns the bee to where it started. Use
-        the function to collect all of the nectar.
-      2-3 Bee Functions 5_instruction: |
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
-      2-3 Bee Functions 9_instruction: |
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: "Each flower contains one unit of nectar. Collect\nnectar
-        from each of the flowers. \n"
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
+      2-3 Bee Conditionals 3_instruction: 'Çiçeklerden tüm nektarı toplayıp bal yapmama
+        yardım et. Döngü kullan. '
+      2-3 Bee Conditionals 4_instruction: 'Çiçeklerden tüm nektarı toplamama ve bal
+        yapmama yardım et. '
+      2-3 Bee Conditionals 5_instruction: 'Mor çiçeklerde ya 1 nektar olabilir ya
+        da 0 , fakat hangisini olduğunu bilmiyorsun. Nektarın 1 olup olmadığını eğer
+        bloğuyla öğren. '
+      2-3 Bee Conditionals 6_instruction: Alınabilir bir nektarın olup olmadığını
+        görmek için ''eğer '' bloğu ile bu çiçeği kontrol et.
+      2-3 Bee Conditionals 7_instruction: Eğer nektar varsa her bir çiçekten nektar
+        topla.
+      2-3 Bee Conditionals 8_instruction: Bu alan kırmızı ve mor çiçeklerin alanı.Kırmızı
+        çiçeklerin nectar miktarı biliniyor, fakat mor çiçeklerin nektar miktarları
+        bilinmiyor.Tüm nektarları topla.
+      2-3 Bee Conditionals 9_instruction: Her bir çiçekten tüm  nektarları topla.
+      2-3 Bee Conditionals Assessment 1_instruction: Değerlendirme:Tüm nektarları
+        topla. Nektarı olmayan mor çiçeklerden nektar toplamamaya dikkat et.
+      2-3 Bee Debugging 1_instruction: Bu bloklar gerçekten beni dinlemiyor. Bütün
+        balları yapıp ve bütün nektarları toplamak için hata(lar) düzelt.
+      2-3 Bee Debugging 10_instruction: Bu bloklar gerçekten beni dinlemiyor.tüm balları
+        yapmak ve tüm nektarları toplamak için hata(lar)'ı düzelt.
+      2-3 Bee Debugging 2_instruction: Bu bloklar gerçekten beni dinlemiyor. Bütün
+        balları yapıp ve bütün nektarları toplamak için hata(lar) düzelt.
+      2-3 Bee Debugging 3_instruction: Bu bloklar gerçekten beni dinlemiyor. Bütün
+        balları yapıp ve bütün nektarları toplamak için hata(lar) düzelt.
+      2-3 Bee Debugging 4_instruction: Bu bloklar gerçekten beni dinlemiyor. Bütün
+        balları yapıp ve bütün nektarları toplamak için hata(lar) düzelt.
+      2-3 Bee Debugging 5_instruction: Bu bloklar gerçekten beni dinlemiyor.Tüm baları
+        yapmak ve tüm nektarları toplamak için hata(lar)'ı düzelt.Şimdi çalıştır ve
+        adımı kullanabilirsin.
+      2-3 Bee Debugging 6_instruction: 'Bu bloklar gerçekten beni dinlemiyor. Tüm
+        balları yapmak ve tüm nektarları toplamak için hata(lar)''ı düzelt. '
+      2-3 Bee Debugging 7_instruction: Bu bloklar gerçekten beni dinlemiyor. Bütün
+        balları yapıp ve bütün nektarları toplamak için hata(lar) düzelt.
+      2-3 Bee Debugging 8_instruction: Bu bloklar gerçekten beni dinlemiyor. Bütün
+        balları yapıp ve bütün nektarları toplamak için hata(lar) düzelt.
+      2-3 Bee Debugging 9_instruction: Bu bloklar gerçekten beni dinlemiyor. Bütün
+        balları yapıp ve bütün nektarları toplamak için hata(lar) düzelt.
+      2-3 Bee Debugging Assessment 1_instruction: 'Değerlendirme: Bu bloklar gerçekten
+        beni dinlemiyor. Bütün balları yapmak ve bütün nektarları toplamak için hata(lar)''ı
+        düzelt.'
+      2-3 Bee Functions 1_instruction: Fonksiyonlar, bir görevi gerçekleştiren kod
+        bloklarıdır.
+      2-3 Bee Functions 10_instruction: Mor çiçekler, ya 1 nektar yada 0 nektara sahip.Sadece
+        nektar bulunan mor çiçeklerden nektar toplayan bir fonksiyon oluştur.
+      2-3 Bee Functions 2_instruction: Fonksiyonlar, bir görevi gerçekleştiren kod
+        bloklarıdır.Bir seferde 5 nektar almak için ''5 al''fonksiyonunu kulllan.En
+        ideal döngü bloğunu kullandığından emin ol.
+      2-3 Bee Functions 3_instruction: Her bir çiçekten tüm  nektarları topla.
+      2-3 Bee Functions 4_instruction: '''''taşı ve nektarı al'''' arıyı döndürür
+        ve nektarı toplar,sonra arıyı başladığı noktaya döndürür.Tüm nektarları toplamak
+        için fonksiyonu kullan.'
+      2-3 Bee Functions 5_instruction: Şimdi çiçeklerde daha fazla nektar var.4 nektar
+        toplamak için verilen fonksiyonu düzenle ve çiçeklerden tüm nektarları toplamak
+        için bunu kullan.
+      2-3 Bee Functions 6_instruction: Şimdi aynı fonksiyonu üç çiçekten nektar toplamak
+        için kullanın.
+      2-3 Bee Functions 7_instruction: Çiçekler şimdi daha da uzakta. Verilen fonksiyonu
+        düzenleyin ve çiçeklerden tüm nektarı toplamak için kullanın.
+      2-3 Bee Functions 8_instruction: 7 nektar toplayan ve ilerleyip 7 bal yapan
+        kendi fonksiyonunuzu oluşturun.Her petekte bal yapan ve her çiçekten nektar
+        toplayan fonksiyonu kullanın.
+      2-3 Bee Functions 9_instruction: Aşağı yola giden, nektar alan,bal yapan ve
+        sonra arıyı yolun tepesine geri döndüren kendi fonksiyonunuzu oluşturun.
+      2-3 Bee Functions Assessment 1_instruction: 'Değerlendirme : Her bir çiçekten
+        bal toplamak için verilen fonksiyonu kullanın.'
+      2-3 Bee Functions Assessment 2_instruction: 'Değerlendirme: bir seferde 3 bal
+        yapmak için bir fonksiyon  oluşturun.'
+      2-3 Bee Loops 1_instruction: 'Her çiçek bir ünite nektar içeriyor. Çiçeklerin
+        her birinden nektar toplayın. '
+      2-3 Bee Loops 10_instruction: Tüm nektarı toplamak için diğer iki döngünün içindeki
+        iken döngüsünü kullanabilir misin?
+      2-3 Bee Loops 11_instruction: Bu alandaki çiçeklerin tüm nektarlarını toplamak
+        için iken döngüsünü kullanın.
+      2-3 Bee Loops 12_instruction: Bu alandaki çiçeklerin tüm nektarlarını toplamak
+        için iken döngüsünü kullanın.
+      2-3 Bee Loops 2_instruction: Bal yapmak ve nektar toplamak için bir döngü kullanın.
       2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
-      2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
+        Her petekte bal yap ve her çiçekten nektar toplayın.
+      2-3 Bee Loops 4_instruction: Son bulmacadaki gibi benzer bir döngü kullan,fakat
+        içeri doğru bir dönüşe çalış.
+      2-3 Bee Loops 5_instruction: Aşağı tarafa gitmek ve nektarı toplamak için bir
+        döngü kullan.
+      2-3 Bee Loops 6_instruction: Her çiçekten nektar toplamak ve her petekte bal
+        yapmak için bir döngü kullan.
+      2-3 Bee Loops 7_instruction: Her çiçekten nektar toplamak için bu blokları döngünün
+        içine koy.
+      2-3 Bee Loops 8_instruction: Bu mor çiçeklerin sahip olduğu nektar miktarı bilinmiyor.Tüm
+        nektarları toplamak için ''while nectar'' döngüsünü kullan.Bu döngü'' nektar>0''
+        şartını sağladığı  sürece çalışacak.
       2-3 Bee Loops 9_instruction: |
         The while loop can perform the same action as
         an if statement in a loop. Add a while loop to this code to perform the same
@@ -864,6 +786,7 @@
       add 2_instruction: |
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -1064,10 +987,10 @@
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
       Big Game Animation 2_instruction: |
-        The function 'update-target' function
-        takes the target's current x value, and returns an updated value. Complete
-        the 'update-target' function so that it adds to the x value each time it
-        is called. The more you add to x, the faster the target will go.
+        The 'update-target' function takes the
+        target's current x value, and returns an updated value. Complete the 'update-target'
+        function so that it adds to the x value each time it is called. The more you
+        add to x, the faster the target will go.
       Big Game Animation 3_instruction: |
         The 'update-danger' function should work
         just like 'update-target', except that the danger should move from the right
@@ -1086,24 +1009,30 @@
         finish and we'll work on making those sprites reappear on screen after they've
         left.
       Big Game Booleans 2_instruction: |
-        Remember the safe-left? and safe-right? functions
-        from Sam the Bat? We're going to use that same logic to figure out when the
-        target and danger leave the screen. Go to the "Functions" section of the
-        toolbox and complete the safe-left? function.
+        Now that your onscreen? function is checking
+        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
+        section of the toolbox and complete the safe-left? function so that it returns
+        true if the sprite's x coordinate is greater than -50. If you're successful
+        you should see the Danger go off the left side and then return on right side.
       Big Game Booleans 3_instruction: |
         Now that you've got safe-left?, let's fill
         in safe-right? - it should take in a sprite's x coordinate and return true
-        if the sprite hasn't gone off the right side of the screen.
+        if that coordinate is less than 450. Once your safe-right? is complete you
+        should see the Target go off the right side of the screen and return on the
+        left.
       Big Game Booleans 4_instruction: |
-        Great, now that you have functions to check
-        the left and right side of the screen, edit the on-screen? function so that
-        it checks safe-left? AND safe-right?, just like you did with Sam the Bat.
+        We've provided a couple of empty functions
+        for safe-left? and safe-right? The first thing you need to do is complete
+        the onscreen? function so that it checks whether both safe-left? and safe-right?
+        are true. TIP - even after you add safe-left? and safe-right? your sprites
+        won't return to the screen. That will happen in the next puzzles when we
+        make sure that safe-left? and safe-right? actually work.
       Big Game Booleans 5_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right, and they should both return to the opposite side. Take
+        At this point your danger should run across
+        the screen from right to left, your target should run across from left to
+        right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
-        finish to move on.
+        Finish to move on.
       Big Game Collision 1 (copy 1)_instruction: |
         When you last worked on your game
         we got our target and danger sprites to fly across the screen, but they never
@@ -1124,18 +1053,20 @@
         workbook. Edit the 'update-player' function so that if moves the player
         up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Collision 3_instruction: |
-        In order to know if two of our sprites are
-        touching, we first need to measure the distance between their center points.
-        Use the Pythagorean Theorem to complete this distance function so that it
-        returns the distance between the player's center coordinates (px, py), and
-        the center coordinates of another character (cx, cy). We've provided a working
+        Let's fix this distance function so our
+        collision detection works properly. Use the Distance Formula, so the distance
+        function returns the distance between the player's center coordinates (px,
+        py) and another sprite's center coordinates (cx, cy). We've provided a working
         line-length function to help you out.
       Big Game Collision 4_instruction: |
-        Now that you have a way to measure the distance
-        between two points, you just need to decide when those points are close enough
-        to be considered touching. Complete the 'collide?' function so that it checks
-        the distance function and returns true if the two points are close enough
-        to touch (100 pixels apart is a good place to start).
+        We've got a function called distance that
+        should return the distance between two sprites, and using that we can decide
+        when those sprites are close enough to be considered touching. Complete the
+        'collide?' function so that it checks the distance function and returns
+        true if the two points are close enough to touch (100 pixels apart is a good
+        place to start). TIP: the distance function doesn't work yet (it always returns
+        zero), so if you're successful you'll see that your sprites are instantly
+        "colliding," but we'll fix that in a second!
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -1149,16 +1080,17 @@
         you'll have an opportunity to share a link to your game. Good work!
       Big Game Player 1_instruction: |
         We're getting really close to a finished game!
-        Last time you work on your game, you used booleans to make your Target and
-        Danger return to the screen once the've left. Click Run to see how your game
-        looks right now, and then we'll get to making your Player move up and down.
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
         accordingly. Computers read keypresses as numeric key codes - the up arrow
         is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
+        workbook. Edit the 'update-player' function so the player moves up when
+        the up arrow is pressed, and moves down when the down arrow is pressed.
       Big Game Testing_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1243,15 +1175,15 @@
         piles.  Help me to fill and remove them to make the ground flat.
       C3-Farmer While Loops Multi Pics_instruction: Çoktan Seçmeli
       Calc Circles of Eval .1_instruction: |
-        The code you'll be writing in this course
-        is called Evaluation Blocks, because each block of code evaluates to a single
-        value. Change the ??? in this code so that the block evaluates to 5.
+        You’ll be writing a kind of code called
+        Evaluation Blocks, because each block of code evaluates to a single value.
+        Change the ??? in this code so that the block evaluates to 5.
       Calc Circles of Eval .2_instruction: |
         This Evaluation Block is a multiplication
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -1269,9 +1201,8 @@
         Convert this statement to <some_shape>
         of evaluation.
       Calc Circles of Eval 2_instruction: |
-        Each Evaluation Block has a function at
-        the top, with the inputs to that function written below. Each of those arguments
-        can be a value, or another block.
+        Use a multiplication block to complete
+        this code.
       Calc Circles of Eval 3_instruction: |
         Complete the Evaluation Blocks to match
         this statement.
@@ -1325,20 +1256,18 @@
         two example cases! When you're done, use your new function to calculate 7
         cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
-        are in charge of writing computer programs to track the cost of making\neach
-        treat, the money customers give you, and the total profit from selling\nthem.
-        Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe
-        function `cookie-cost`, which takes in the number of cookies you intend\nto
-        sell, and gives you back the amount of money it would cost to produce that\nnumber
-        of cookies."
+        need to track the cost of making each cookie, the money paid, and the\ntotal
+        profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe
+        function `cost`, which takes in the number of cookies you intend to sell,\nand
+        returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales` which
-        takes in the number of cookies sold, and produces the amount of money customers
-        spent to buy those cookies (each cookie costs $1.50).
+        Write the function `sales` which takes in
+        the number of cookies sold, and produces the amount of money customers spent
+        to buy those cookies (each cookie is sold at $1.50).
       Calc Design Recipe 4_instruction: |
         Using the two functions we just wrote, write
-        the function `cookie-profit`, which takes in the number of cookies you sold,
-        and gives you back the total profit you make from selling your cookies, accounting
+        the function `profit`, which takes in the number of cookies you sold, and
+        gives you back the total profit you make from selling your cookies, accounting
         for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
@@ -1357,20 +1286,18 @@
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 years
-        - can you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years.
+        Can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
-        then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to your age and click run.
+        easily refer to them repeatedly throughout our programs. Here's a variable
+        called "age". Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -1384,6 +1311,7 @@
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ''
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: "Draw the line.\nIt
         is 200 pixels long. \n"
       Code Studio Puzzle Challenge 1 - Artist_instruction: "Draw the line. It is\n200
@@ -2088,7 +2016,7 @@
         vanish. If the score is every less than 0, make the player vanish.
       Course 4 Play Labs For Loops 1_instruction: |
         Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the speak block to speak the counter
+        number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         This time, let's try counting
@@ -2172,6 +2100,9 @@
         block flips true to false, or false to true. If you wrap this block of code
         in a NOT block, it should return true (because we are asking if the two expressions
         do NOT produce equal values).
+      Eval Booleans Free Play_instruction: |
+        Free Play: Try out some creations of
+        your own using Booleans.
       Eval Booleans_instruction: |
         Booleans allow us to compare different values,
         returning "true" if the are equal, or "false" if they are not. What do
@@ -2206,8 +2137,8 @@
         We can use the "string=?" function to make conditionals
         that respond to text input. Here's a function called "green shape" that
         takes a string parameter for the shape. Complete the conditions so that the
-        correct shape is drawn when the function is run with "square," "triangle,"
-        "circle," or "rectangle."
+        correct shape is drawn when the function is run with "circle," "triangle,"
+        "square," or "rectangle."
       Eval Cond 5_instruction: |
         Here's a similar function "red shape" with an
         additional parameter for size. Complete the conditionals so the correct image
@@ -2250,9 +2181,9 @@
         just made a circle of that size in the first place?
       Eval Contracts 4_instruction: |
         The "scale" function returns an image that
-        is scaled either larger or smaller than the input image. Try scaling this
-        circle by a factor of 10 - how is the resulting image different than if you'd
-        just made a circle of that size in the first place?
+        is either larger or smaller than the input image. Try scaling this circle
+        by a factor of 10. How is the returned image different than if you'd just
+        made a circle of that size in the first place?
       Eval Contracts 8A_instruction: |
         Can you complete this puzzle? The big-triangle
         is 200 pixels in size and purple?
@@ -2264,7 +2195,7 @@
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
       Eval Define Funcs 1_instruction: |
@@ -2294,8 +2225,8 @@
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
-        called "square-circle" with domain Number String and range Image. Look at
-        the two examples we've provided and write the function definition.
+        called "square-circle" with domain Number String and range Image. Click
+        Edit to write the function description (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         We're going to write a function
         that draws a solid rectangle of any color that is twice wide as it is high.
@@ -2376,15 +2307,15 @@
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
-        triangle 80 pixels on the y axis.
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Here's a different kinds of star block
+        Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
         of points! Use it to create a solid orange star with an inner radius of 75
         pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
-        to draw something interesting. Make sure to save and share your favorite images.
+        to create something interesting. Make sure to share your favorite creations.
       Examples 4_instruction: Shrink function
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
@@ -2516,8 +2447,8 @@
         Move Anna up, down left, and right to touch
         each of the four snowflakes.
       Infinity_touch_score_instruction: |
-        Score a point when a snowflake is touched.  Then
-        "Run", and steer Anna to touch each snowflake once.
+        Make Anna score a point when she touches
+        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2723,10 +2654,10 @@
         to those people, could you update the "else" clause so that we charge them
         a premium for toppings that we don't normally offer? Let's charge $10,000
         for a topping we don't carry.
-      Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven
-        better? Try one (or more) of the following:\r\n- Display an image of\nthe
-        chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering
-        multiple pizzas\r\n- Add a coupon code for a 50% discount"
+      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction
+        even better? Try one (or more) of the following:\r\n- Display an\nimage of
+        the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow
+        for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Bunu yap!
       Maze screenshot Work_instruction: Test instructions
       MSM Big Game Empty_instruction: |
@@ -2801,37 +2732,35 @@
       NetSim_AutomaticDNS_instruction: |
         In this version of the simulator a DNS service
         is provided for you. Send a message in the form GET [hostname] to the DNS
-        service to get a student's address.
+        service at address 15 to get a student's address.
       NetSim_ManualDNS_instruction: |
         In this version of the simulator you can't
         see the other students' addresses.  Instead, one of you must act as a name
         service, to help share addresses with each other.
       NetSim_SendAB_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is not
-        yet functional. It will allow students to manually set/read individual As
-        and Bs on a simplex wire.
+        Connect to another student.  Each of you can set
+        the value of the wire between you to "A" or "B".  See if you can send
+        a complete message!
       NetSim_SendAscii_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send ASCII to each other.
+        In this version of the simulator, you can send
+        numbers or ASCII characters to one another, one bit at a time.
       NetSim_SendBits_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send binary as zeroes and ones
-        to one another
+        Connect to another student.  You can now set
+        your wire to "0" or "1".  Send a message to your partner!
       NetSim_SendingABTest_instruction: |
         This is Sarah's test of making a netsim
         level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        NetSim: Variant 1 allows students to manually
+        work out the timing of sending bits back and forth.
       NetSim_Variant2_instruction: |
-        NetSim: Variant 2 template: UNDER CONSTRUCTION:
-        Variant 2 is not yet functional because P2P connections have not been implemented.
+        NetSim: Variant 2: Students connect directly
+        to one another and send entire packets back and forth, exploring systems of
+        encoding data.
       NetSim_Variant3_instruction: |
-        NetSim: Variant 3 template: Connects groups of
-        2-6 students with a router, and explores issues in routing and DNS
+        NetSim: Variant 3: Connects groups of 2-6 students
+        with a router, and explores issues in routing and DNS
       NEW Artist Artist Functions 3_instruction: "Here is a new type of Block. It\nis
         called a \"Function block.\" Click on \"RUN\" to see what it can do. \n"
       New Artist Project_instruction: |
@@ -3033,18 +2962,53 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDK5 Conditionals 1_instruction: |
+        Purple flowers may have either 1 or 0 nectar,
+        but you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
+      PDK5 Events 1_instruction: "So far all of the programs we've written are executed\nin
+        order from top to bottom. In this puzzle, we'll use \"Events\" to respond\nto
+        an action on demand. Make the octopus say \"Hello\" only when you click\non
+        the Octopus. \n"
+      PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
+        \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
+        this is called a \"loop.\" \n"
+      PDK5 Loops 3_instruction: |
+        Here's another puzzle to practice loops. What happens
+        if you use the repeat block to run the code already provided on the workspace
+        4 times?
       perpendicular_instruction: |
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
-      Play Lab Rocket 1 (copy 1)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
-      Play Lab Rocket 1 (copy 2)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -3136,20 +3100,20 @@
         your function works, Sam shouldn't be able to leave the yard from the left
         side.
       Sam the Butterfly 3_instruction: |
-        That's great, now Sam can't leave the yard
-        from the left side, but what about the right? Fill out the "safe-right?"
-        function to make sure Sam can't go past x = 425
+        In the last puzzle we kept Sam from leaving
+        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
+        function to make sure Sam can't go past x = 425.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
-        from going either direction? Try using the "AND" block program the function
+        from going either direction? Try using the "AND" block to program the function
         "on-screen?" to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter 'y' to the 'onscreen?' function. Can you update
         your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
-        either? Test your program my moving Sam as far as he can go in all four directions.
+        either? Test your program by moving Sam as far as he can go in all four directions.
         Click Finish when Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
@@ -3287,5 +3251,14 @@
       TestK1-1_instruction: |
         Draw three partially overlapping squares using the repeat
         block
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
+      U1L4 NetSim SendAB_instruction: |
+        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
+        Variant 1 is not yet functional because P2P connections have not been implemented.
+        Variant 1 allows students to manually work out the timing of sending bits
+        back and forth.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

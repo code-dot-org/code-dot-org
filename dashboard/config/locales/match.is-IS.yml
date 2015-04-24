@@ -2,7 +2,7 @@
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: Lykkjur listamanns - Samtengingar 1
+        Artist Loops Matching One: Lykkjur listamanns - Samsvörun 1
         Matching loops: Samsvarandi lykkjur
         Match the loop to the shape: Tengdu lykkjuna við formið
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
@@ -99,7 +99,7 @@
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Samsvörun
-        Match the grid to the program: Tengdu grind við forrit
+        Match the grid to the program.: Tengdu grind við forrit.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -292,9 +292,9 @@
         (480, 100): (480, 100)
         (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: Umbreyta reikningi í greiningarhring
+        Converting Math to Circles of Evaluation: Umbreyta reikningi í matshring
         Match each mathematical expression with the correct circle of evaluation!: Tengdu
-          hverja reikningsformúlu við samsvarandi greiningarhring!
+          hverja reikningsformúlu við samsvarandi matshring!
         (2 + 3) * 5 / 2: (2 + 3) * 5 / 2
         2 + 3 * (5 / 2): 2 + 3 * (5 / 2)
         (2 + 3 * 5) / 2: (2 + 3 * 5) / 2
@@ -308,7 +308,7 @@
           1/Exercise_4_question_4.png
       Match circles to code:
         Converting Circles to Code: Umbreyta hringjum í kóða
-        Match each circle of evaluation with the correct code!: Tengdu hvern greiningarhring
+        Match each circle of evaluation with the correct code!: Tengdu hvern matshring
           við rétta kóðann!
         (+ (- (/ 4 7) 9) 3): (+ (- (/ 4 7) 9) 3)
         (+ (- 9 3) (* 4 7)): (+ (- 9 3) (* 4 7))
@@ -325,8 +325,8 @@
       Match math to code:
         Converting Math to Code: Umbreyta reikningi í kóða
         Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Tengdu
-          hverja reikningsformúlu við rétta kóðann. Notaðu greiningarhring til að
-          hjálpa þér að finna svarið!
+          hverja reikningsformúlu við rétta kóðann. Notaðu matshring til að hjálpa
+          þér að finna svarið!
         (15 + 3) x (72 - 19): (15 + 3) x (72 - 19)
         3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
         72 + 3 - 19 x 15: 72 + 3 - 19 x 15
@@ -344,7 +344,7 @@
         image: mynd
         (yearbook-picture "Sally" 1992): (mynd "Sally" 1992)
         function name: heiti falls
-        domain: umfang
+        domain: gildamengi
         range: svið
         example: dæmi
       Match example to contract:
@@ -364,23 +364,22 @@
           string'
         'find-price: string -> number': 'find-price: string -> number'
       PDK5 Pair programming match:
-        Pair programming match: Pair programming match
-        Match the definitions to the words you were introduced to in the last video.: Match
-          the definitions to the words you were introduced to in the last video.
+        Pair programming match: Félagaforritun - samsvörun
+        Match the definitions to the words you were introduced to in the last video.: Tengdu
+          skilgreiningarnar við orðin sem voru kynnt fyrir þér í síðasta myndbandi.
         Pair programming: Félagaforritun
-        Driver: Driver
-        Navigator: Navigator
-        When two students work at one computer to write a program together: When two
-          students work at one computer to write a program together
-        The student who controls the keyboard, mouse, or touch screen: The student
-          who controls the keyboard, mouse, or touch screen
-        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The
-          student who thinks about the big-picture and looks for potential mistakes
-          or misunderstandings
+        Driver: Ökumaður
+        Navigator: Leiðsögumaður
+        When two students work at one computer to write a program together: Þegar
+          tveir nemendur vinna við eina tölvu og skrifa forrit saman
+        The student who controls the keyboard, mouse, or touch screen: Nemandinn sem
+          stjórnar lyklaborðinu, músinni eða snertiskjánum
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: Nemandinn
+          sem hugsar um heildarsýnina og leitar að hugsanlegum villum eða misskilningi
       PDK5 What is unplugged:
-        What is an unplugged activity?: What is an unplugged activity?
+        What is an unplugged activity?: Hvað er verkefni án tölvu?
         Question: Spurning
-        Answer 1: Answer 1
+        Answer 1: Svar 1
       test matching image:
         Matching Images Two: Samsvörun mynda 2
         Match up all the flowers by colour!: Tengdu öll blómin eftir lit!

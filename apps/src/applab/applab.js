@@ -29,6 +29,8 @@ var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
+var RGBColor = require('./rgbcolor.js');
+var annotationList = require('./acemode/annotationList');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -63,6 +65,11 @@ var StepType = {
   IN:   1,
   OVER: 2,
   OUT:  3,
+};
+
+var ErrorLevel = {
+  WARNING: 'WARNING',
+  ERROR: 'ERROR'
 };
 
 // The typical width of the visualization area (indepdendent of appWidth)
@@ -138,7 +145,11 @@ function adjustMediaHeightRule(mediaList, defaultHeightRules, newHeightRules) {
 // The divApplab coordinate space will be Applab.appWidth by Applab.appHeight.
 // The scale values are then adjusted such that the max-width case may result
 // in a scaled-up version of divApplab and the min-width case will typically
-// result in a scaled-down version of divApplab
+// result in a scaled-down version of divApplab.
+//
+// @returns {Array.<number>} Array of scale factors which will be used
+//     on the applab app area at the following screen widths, respectively:
+//     1151px+; 1101-1150px; 1051-1100px; 1001-1050px; 0-1000px.
 //
 
 function adjustAppSizeStyles(container) {
@@ -239,6 +250,7 @@ function adjustAppSizeStyles(container) {
       break;
     }
   }
+  return scaleFactors;
 }
 
 var drawDiv = function () {
@@ -270,12 +282,129 @@ function outputApplabConsole(output) {
   }
   // then put it in the applab console visible to the user:
   var debugOutput = document.getElementById('debug-output');
-  if (debugOutput.value.length > 0) {
-    debugOutput.value += '\n' + output;
-  } else {
-    debugOutput.value = output;
+  if (debugOutput) {
+    if (debugOutput.value.length > 0) {
+      debugOutput.value += '\n' + output;
+    } else {
+      debugOutput.value = output;
+    }
+    debugOutput.scrollTop = debugOutput.scrollHeight;
   }
-  debugOutput.scrollTop = debugOutput.scrollHeight;
+}
+
+/**
+ * Output error to console and gutter as appropriate
+ * @param {string} warning Text for warning
+ * @param {ErrorLevel} level
+ * @param {number} lineNum One indexed line number
+ */
+function outputError(warning, level, lineNum) {
+  var text = level + ': ';
+  if (lineNum !== undefined) {
+    text += 'Line: ' + lineNum + ': ';
+  }
+  text += warning;
+  outputApplabConsole(text);
+  if (lineNum !== undefined) {
+    annotationList.addRuntimeAnnotation(level, lineNum, warning);
+  }
+}
+
+var OPTIONAL = true;
+
+function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  if (typeof opts[validatedTypeKey] === 'undefined') {
+    var properType;
+    if (expectedType === 'color') {
+      // Special handling for colors, must be a string and a valid RGBColor:
+      properType = (typeof varValue === 'string');
+      if (properType) {
+        var color = new RGBColor(varValue);
+        properType = color.ok;
+      }
+    } else if (expectedType === 'function') {
+      // Special handling for functions, it must be an interpreter function:
+      properType = (typeof varValue === 'object') && (varValue.type === 'function');
+    } else {
+      properType = (typeof varValue === expectedType);
+    }
+    properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
+    if (!properType) {
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not a " + expectedType + ".";
+      outputError(errorString, ErrorLevel.WARNING, line);
+    }
+    opts[validatedTypeKey] = properType;
+  }
+}
+
+function apiValidateTypeAndRange(opts, funcName, varName, varValue,
+                                 expectedType, minValue, maxValue) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedRangeKey = 'validated_range_' + varName;
+  apiValidateType(opts, funcName, varName, varValue, expectedType);
+  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
+    var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
+    if (inRange) {
+      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
+    }
+    if (!inRange) {
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not in the expected range.";
+      outputError(errorString, ErrorLevel.WARNING, line);
+    }
+    opts[validatedRangeKey] = inRange;
+  }
+}
+
+function apiValidateActiveCanvas(opts, funcName) {
+  var validatedActiveCanvasKey = 'validated_active_canvas';
+  if (!opts || typeof opts[validatedActiveCanvasKey] === 'undefined') {
+    var activeCanvas = Boolean(Applab.activeCanvas);
+    if (!activeCanvas) {
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() called without an active canvas. Call " +
+        "createCanvas() first.";
+      outputError(errorString, ErrorLevel.WARNING, line);
+    }
+    if (opts) {
+      opts[validatedActiveCanvasKey] = activeCanvas;
+    }
+  }
+}
+
+function apiValidateDomIdExistence(divApplab, opts, funcName, varName, id, shouldExist) {
+  var validatedTypeKey = 'validated_type_' + varName;
+  var validatedDomKey = 'validated_id_' + varName;
+  apiValidateType(opts, funcName, varName, id, 'string');
+  if (opts[validatedTypeKey] && typeof opts[validatedDomKey] === 'undefined') {
+    var element = document.getElementById(id);
+    var exists = Boolean(element && divApplab.contains(element));
+    var valid = exists == shouldExist;
+    if (!valid) {
+      var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
+      var errorString = funcName + "() " + varName +
+        " parameter refers to an id (" +id + ") which " +
+        (exists ? "already exists." : "does not exist.");
+      outputError(errorString, ErrorLevel.WARNING, line);
+    }
+    opts[validatedDomKey] = valid;
+  }
 }
 
 function onDebugInputKeyDown(e) {
@@ -337,11 +466,13 @@ function handleExecutionError(err, lineNumber) {
     // this while executing (in which case, it would already have been selected)
     selectEditorRowCol(lineNumber - 1, err.loc.column);
   }
-  if (lineNumber) {
-    outputApplabConsole('Line ' + lineNumber + ': ' + String(err));
-  } else {
-    outputApplabConsole(String(err));
+  if (!lineNumber && Applab.interpreter) {
+    lineNumber = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
+                                                    Applab.cumulativeLength,
+                                                    Applab.userCodeStartOffset,
+                                                    Applab.userCodeLength);
   }
+  outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = err;
   Applab.onPuzzleComplete();
 }
@@ -429,12 +560,6 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
   var inUserCode;
   var userCodeRow;
   var session = studioApp.editor.aceEditor.getSession();
-  // NOTE: when running with no source visible or at max speed, we
-  // call a simple function to just get the line number, otherwise we call a
-  // function that also selects the code:
-  var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
-          codegen.getUserCodeLine :
-          codegen.selectCurrentCode;
 
   // In each tick, we will step the interpreter multiple times in a tight
   // loop as long as we are interpreting code that the user can't see
@@ -442,6 +567,15 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
   for (var stepsThisTick = 0;
        (stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK) || unwindingAfterStep;
        stepsThisTick++) {
+    // Re-check this because the speed may have changed...
+    atMaxSpeed = getCurrentTickLength() === 0;
+    // NOTE: when running with no source visible or at max speed, we
+    // call a simple function to just get the line number, otherwise we call a
+    // function that also selects the code:
+    var selectCodeFunc = (studioApp.hideSource || (atMaxSpeed && !Applab.paused)) ?
+            codegen.getUserCodeLine :
+            codegen.selectCurrentCode;
+
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         Applab.seenEmptyGetCallbackDuringExecution ||
@@ -641,7 +775,7 @@ Applab.init = function(config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles(document.getElementById(config.containerId));
+  Applab.vizScaleFactors = adjustAppSizeStyles(document.getElementById(config.containerId));
 
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
@@ -873,10 +1007,9 @@ Applab.nextElementIdMap = {};
  */
 Applab.getUnusedElementId = function (prefix) {
   var divApplab = $('#divApplab');
-  for (var i = Applab.nextElementIdMap[prefix] || 1;
-       divApplab.find("#" + prefix + i).length !== 0;
-       i++) {
-    // repeat until we find an unused id
+  var i = Applab.nextElementIdMap[prefix] || 1;
+  while (divApplab.find("#" + prefix + i).length !== 0) {
+    i++;
   }
   Applab.nextElementIdMap[prefix] = i + 1;
   return prefix + i;
@@ -912,11 +1045,69 @@ Applab.createElement = function (elementType, left, top) {
 
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(el);
-  Applab.levelHtml = divApplab.innerHTML;
+  Applab.makeDraggable($(el));
+  Applab.levelHtml = Applab.serializeToLevelHtml();
+};
+
+/**
+ *
+ * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
+ */
+Applab.makeDraggable = function (jq) {
+  var gridSize = 20;
+  jq.draggable({
+    cancel: false,  // allow buttons and inputs to be dragged
+    drag: function(event, ui) {
+      // draggables are not compatible with CSS transform-scale,
+      // so adjust the position in various ways here.
+
+      // dragging
+      var scale = Applab.getVizScaleFactor();
+      var changeLeft = ui.position.left - ui.originalPosition.left;
+      var newLeft  = (ui.originalPosition.left + changeLeft) / scale;
+      var changeTop = ui.position.top - ui.originalPosition.top;
+      var newTop = (ui.originalPosition.top + changeTop) / scale;
+
+      // containment
+      var container = $('#divApplab');
+      var maxLeft = container.width() - ui.helper.outerWidth(true);
+      var maxTop = container.height() - ui.helper.outerHeight(true);
+      newLeft = Math.min(newLeft, maxLeft);
+      newLeft = Math.max(newLeft, 0);
+      newTop = Math.min(newTop, maxTop);
+      newTop = Math.max(newTop, 0);
+
+      // grid
+      newLeft -= newLeft % gridSize;
+      newTop -= newTop % gridSize;
+
+      ui.position.left = newLeft;
+      ui.position.top = newTop;
+    },
+    stop: function(event, ui) {
+      Applab.levelHtml = Applab.serializeToLevelHtml();
+    }
+  });
+};
+
+Applab.getVizScaleFactor = function () {
+  var width = $('body').width();
+  var vizScaleBreakpoints = [1150, 1100, 1050, 1000, 0];
+  if (vizScaleBreakpoints.length !== Applab.vizScaleFactors.length) {
+    throw 'Wrong number of elements in Applab.vizScaleFactors ' +
+        Applab.vizScaleFactors;
+  }
+  for (var i = 0; i < vizScaleBreakpoints.length; i++) {
+    if (width > vizScaleBreakpoints[i]) {
+      return Applab.vizScaleFactors[i];
+    }
+  }
+  throw 'Unexpected body width: ' + width;
 };
 
 Applab.onDivApplabClick = function (event) {
-  if ($('#designModeButton').is(':visible') || $('#resetButton').is(':visible')) {
+  if (!window.$ || $('#designModeButton').is(':visible') ||
+      $('#resetButton').is(':visible')) {
     return;
   }
   event.preventDefault();
@@ -979,13 +1170,34 @@ Applab.onSavePropertiesButton = function(el, event) {
   el.style.width = document.getElementById('design-property-width').value;
   el.style.height = document.getElementById('design-property-height').value;
   $(el).text(document.getElementById('design-property-text').value);
-  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
 Applab.onDeletePropertiesButton = function(el, event) {
   el.parentNode.removeChild(el);
-  Applab.levelHtml = document.getElementById('divApplab').innerHTML;
+  Applab.levelHtml = Applab.serializeToLevelHtml();
   Applab.clearProperties();
+};
+
+Applab.serializeToLevelHtml = function () {
+  var s = new XMLSerializer();
+  var divApplab = document.getElementById('divApplab');
+  var clone = divApplab.cloneNode(true);
+  // Remove unwanted classes added by jQuery.draggable.
+  $(clone).find('*').removeAttr('class');
+  return s.serializeToString(clone);
+};
+
+Applab.parseFromLevelHtml = function(rootEl, isDesignMode) {
+  if (!Applab.levelHtml) {
+    return;
+  }
+  var levelDom = $.parseHTML(Applab.levelHtml);
+  var children = $(levelDom).children();
+  children.appendTo(rootEl);
+  if (isDesignMode) {
+    Applab.makeDraggable(children);
+  }
 };
 
 /**
@@ -1052,11 +1264,10 @@ studioApp.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
-  divApplab = document.getElementById('divApplab');
-  if (Applab.levelHtml) {
-    divApplab.innerHTML = Applab.levelHtml;
-  }
-  divApplab.addEventListener('click', Applab.onDivApplabClick);
+  var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
+  Applab.parseFromLevelHtml(newDivApplab, isDesignMode);
+
+  newDivApplab.addEventListener('click', Applab.onDivApplabClick);
 
 
   // Reset goal successState:
@@ -1305,6 +1516,7 @@ Applab.execute = function() {
       'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
                  'setCallbackRetVal(ret); }}';
     var session = studioApp.editor.aceEditor.getSession();
+    annotationList.attachToSession(session);
     Applab.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
@@ -1483,6 +1695,13 @@ Applab.toggleDesignMode = function(enable) {
 
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
+
+  var children = $('#divApplab').children();
+  if (enable) {
+    Applab.makeDraggable(children);
+  } else if (children.data('uiDraggable')) {
+    children.draggable('destroy');
+  }
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1587,11 +1806,17 @@ Applab.container = function (opts) {
 };
 
 Applab.write = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'write', 'html', opts.html, 'string');
   return Applab.container(opts);
 };
 
 Applab.button = function (opts) {
   var divApplab = document.getElementById('divApplab');
+
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
+  apiValidateType(opts, 'button', 'text', opts.text, 'string');
 
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
@@ -1602,6 +1827,10 @@ Applab.button = function (opts) {
 };
 
 Applab.image = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
+  apiValidateType(opts, 'image', 'src', opts.src, 'string');
+
   var divApplab = document.getElementById('divApplab');
 
   var newImage = document.createElement("img");
@@ -1636,9 +1865,10 @@ Applab.imageUploadButton = function (opts) {
 };
 
 // These offset are used to ensure that the turtle image is centered over
-// its x,y coordinates. The image is currently 31x45, so these offsets are 50%
-var TURTLE_X_OFFSET = -15;
-var TURTLE_Y_OFFSET = -22;
+// its x,y coordinates. The image is currently 48x48, rendered at 24x24.
+var TURTLE_WIDTH = 24;
+var TURTLE_HEIGHT = 24;
+var TURTLE_ROTATION_OFFSET = -45;
 
 function getTurtleContext() {
   var canvas = document.getElementById('turtleCanvas');
@@ -1652,7 +1882,7 @@ function getTurtleContext() {
     Applab.turtle.visible = true;
     var divApplab = document.getElementById('divApplab');
     var turtleImage = document.createElement("img");
-    turtleImage.src = studioApp.assetUrl('media/applab/turtle.png');
+    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
     turtleImage.id = 'turtleImage';
     updateTurtleImage(turtleImage);
     turtleImage.ondragstart = function () { return false; };
@@ -1666,9 +1896,13 @@ function updateTurtleImage(turtleImage) {
   if (!turtleImage) {
     turtleImage = document.getElementById('turtleImage');
   }
-  turtleImage.style.left = (Applab.turtle.x + TURTLE_X_OFFSET) + 'px';
-  turtleImage.style.top = (Applab.turtle.y + TURTLE_Y_OFFSET) + 'px';
-  turtleImage.style.transform = 'rotate(' + Applab.turtle.heading + 'deg)';
+  turtleImage.style.left = (Applab.turtle.x - TURTLE_WIDTH / 2) + 'px';
+  turtleImage.style.top = (Applab.turtle.y - TURTLE_HEIGHT / 2) + 'px';
+  var heading = Applab.turtle.heading + TURTLE_ROTATION_OFFSET;
+  var transform = 'rotate(' + heading + 'deg)';
+  turtleImage.style.transform = transform;
+  turtleImage.style.msTransform = transform;
+  turtleImage.style.webkitTransform = transform;
 }
 
 function turtleSetVisibility (visible) {
@@ -1687,6 +1921,8 @@ Applab.hide = function (opts) {
 };
 
 Applab.moveTo = function (opts) {
+  apiValidateType(opts, 'moveTo', 'x', opts.x, 'number');
+  apiValidateType(opts, 'moveTo', 'y', opts.y, 'number');
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -1700,16 +1936,18 @@ Applab.moveTo = function (opts) {
 };
 
 Applab.move = function (opts) {
-  var newOpts = {};
-  newOpts.x = Applab.turtle.x + opts.x;
-  newOpts.y = Applab.turtle.y + opts.y;
-  Applab.moveTo(newOpts);
+  apiValidateType(opts, 'move', 'x', opts.x, 'number');
+  apiValidateType(opts, 'move', 'y', opts.y, 'number');
+  opts.x += Applab.turtle.x;
+  opts.y += Applab.turtle.y;
+  Applab.moveTo(opts);
 };
 
 Applab.moveForward = function (opts) {
   var newOpts = {};
   var distance = 25;
   if (typeof opts.distance !== 'undefined') {
+    apiValidateType(opts, 'moveForward', 'pixels', opts.distance, 'number');
     distance = opts.distance;
   }
   newOpts.x = Applab.turtle.x +
@@ -1721,7 +1959,8 @@ Applab.moveForward = function (opts) {
 
 Applab.moveBackward = function (opts) {
   var distance = -25;
-  if (opts.distance !== 'undefined') {
+  if (typeof opts.distance !== 'undefined') {
+    apiValidateType(opts, 'moveBackward', 'pixels', opts.distance, 'number');
     distance = -opts.distance;
   }
   Applab.moveForward({'distance': distance });
@@ -1733,6 +1972,8 @@ Applab.turnRight = function (opts) {
 
   var degrees = 90;
   if (typeof opts.degrees !== 'undefined') {
+    // TODO: cpirich: may need to update param name
+    apiValidateType(opts, 'turnRight', 'degrees', opts.degrees, 'number');
     degrees = opts.degrees;
   }
 
@@ -1744,12 +1985,16 @@ Applab.turnRight = function (opts) {
 Applab.turnLeft = function (opts) {
   var degrees = -90;
   if (typeof opts.degrees !== 'undefined') {
+    // TODO: cpirich: may need to update param name
+    apiValidateType(opts, 'turnLeft', 'degrees', opts.degrees, 'number');
     degrees = -opts.degrees;
   }
   Applab.turnRight({'degrees': degrees });
 };
 
 Applab.turnTo = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'turnTo', 'degrees', opts.direction, 'number');
   var degrees = opts.direction - Applab.turtle.heading;
   Applab.turnRight({'degrees': degrees });
 };
@@ -1759,6 +2004,10 @@ Applab.turnTo = function (opts) {
 // if opts.counterclockwise, the center point is 90 degrees counterclockwise
 
 Applab.arcRight = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'arcRight', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcRight', 'radius', opts.radius, 'number');
+
   // call this first to ensure there is a turtle (in case this is the first API)
   var centerAngle = opts.counterclockwise ? -90 : 90;
   var clockwiseDegrees = opts.counterclockwise ? -opts.degrees : opts.degrees;
@@ -1787,6 +2036,10 @@ Applab.arcRight = function (opts) {
 };
 
 Applab.arcLeft = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'arcLeft', 'degrees', opts.degrees, 'number');
+  apiValidateType(opts, 'arcLeft', 'radius', opts.radius, 'number');
+
   opts.counterclockwise = true;
   Applab.arcRight(opts);
 };
@@ -1807,6 +2060,7 @@ Applab.getDirection = function (opts) {
 };
 
 Applab.dot = function (opts) {
+  apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.beginPath();
@@ -1848,6 +2102,8 @@ Applab.penDown = function (opts) {
 };
 
 Applab.penWidth = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateTypeAndRange(opts, 'penWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = getTurtleContext();
   if (ctx) {
     ctx.lineWidth = opts.width;
@@ -1855,6 +2111,7 @@ Applab.penWidth = function (opts) {
 };
 
 Applab.penColor = function (opts) {
+  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
@@ -1868,6 +2125,8 @@ Applab.penColor = function (opts) {
 };
 
 Applab.speed = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateTypeAndRange(opts, 'speed', 'percent', opts.percent, 'number', 0, 100);
   if (opts.percent >= 0 && opts.percent <= 100) {
     var sliderSpeed = opts.percent / 100;
     if (Applab.speedSlider) {
@@ -1879,6 +2138,7 @@ Applab.speed = function (opts) {
 
 Applab.createCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'createCanvas', 'canvasId', opts.elementId, false);
 
   var newElement = document.createElement("canvas");
   var ctx = newElement.getContext("2d");
@@ -1887,6 +2147,8 @@ Applab.createCanvas = function (opts) {
     // default width/height if params are missing
     var width = opts.width || Applab.appWidth;
     var height = opts.height || Applab.appHeight;
+    apiValidateType(opts, 'createCanvas', 'width', width, 'number');
+    apiValidateType(opts, 'createCanvas', 'height', height, 'number');
     newElement.width = width;
     newElement.height = height;
     newElement.style.width = width + 'px';
@@ -1910,6 +2172,8 @@ Applab.createCanvas = function (opts) {
 
 Applab.setActiveCanvas = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setActiveCanvas', 'canvasId', opts.elementId, true);
   var canvas = document.getElementById(opts.elementId);
   if (divApplab.contains(canvas)) {
     Applab.activeCanvas = canvas;
@@ -1919,6 +2183,11 @@ Applab.setActiveCanvas = function (opts) {
 };
 
 Applab.line = function (opts) {
+  apiValidateActiveCanvas(opts, 'line');
+  apiValidateType(opts, 'line', 'x1', opts.x1, 'number');
+  apiValidateType(opts, 'line', 'x2', opts.x2, 'number');
+  apiValidateType(opts, 'line', 'y1', opts.y1, 'number');
+  apiValidateType(opts, 'line', 'y2', opts.y2, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -1931,6 +2200,10 @@ Applab.line = function (opts) {
 };
 
 Applab.circle = function (opts) {
+  apiValidateActiveCanvas(opts, 'circle');
+  apiValidateType(opts, 'circle', 'centerX', opts.x, 'number');
+  apiValidateType(opts, 'circle', 'centerY', opts.y, 'number');
+  apiValidateType(opts, 'circle', 'radius', opts.radius, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -1943,6 +2216,11 @@ Applab.circle = function (opts) {
 };
 
 Applab.rect = function (opts) {
+  apiValidateActiveCanvas(opts, 'rect');
+  apiValidateType(opts, 'rect', 'upperLeftX', opts.x, 'number');
+  apiValidateType(opts, 'rect', 'upperLeftY', opts.y, 'number');
+  apiValidateType(opts, 'rect', 'width', opts.width, 'number');
+  apiValidateType(opts, 'rect', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.beginPath();
@@ -1955,6 +2233,8 @@ Applab.rect = function (opts) {
 };
 
 Applab.setStrokeWidth = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeWidth');
+  apiValidateTypeAndRange(opts, 'setStrokeWidth', 'width', opts.width, 'number', 0.0001);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.lineWidth = opts.width;
@@ -1964,6 +2244,8 @@ Applab.setStrokeWidth = function (opts) {
 };
 
 Applab.setStrokeColor = function (opts) {
+  apiValidateActiveCanvas(opts, 'setStrokeColor');
+  apiValidateType(opts, 'setStrokeColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.strokeStyle = String(opts.color);
@@ -1973,6 +2255,9 @@ Applab.setStrokeColor = function (opts) {
 };
 
 Applab.setFillColor = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'setFillColor');
+  apiValidateType(opts, 'setFillColor', 'color', opts.color, 'color');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.fillStyle = String(opts.color);
@@ -1982,6 +2267,7 @@ Applab.setFillColor = function (opts) {
 };
 
 Applab.clearCanvas = function (opts) {
+  apiValidateActiveCanvas(opts, 'clearCanvas');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     ctx.clearRect(0,
@@ -1995,15 +2281,22 @@ Applab.clearCanvas = function (opts) {
 
 Applab.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'drawImage');
+  apiValidateDomIdExistence(divApplab, opts, 'drawImage', 'imageId', opts.imageId, true);
+  apiValidateType(opts, 'drawImage', 'x', opts.x, 'number');
+  apiValidateType(opts, 'drawImage', 'y', opts.y, 'number');
   var image = document.getElementById(opts.imageId);
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx && divApplab.contains(image)) {
     var xScale, yScale;
     xScale = yScale = 1;
-    if (opts.width) {
+    if (typeof opts.width !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'width', opts.width, 'number');
       xScale = xScale * (opts.width / image.width);
     }
-    if (opts.height) {
+    if (typeof opts.height !== 'undefined') {
+      apiValidateType(opts, 'drawImage', 'height', opts.height, 'number');
       yScale = yScale * (opts.height / image.height);
     }
     ctx.save();
@@ -2016,6 +2309,11 @@ Applab.drawImage = function (opts) {
 };
 
 Applab.getImageData = function (opts) {
+  apiValidateActiveCanvas(opts, 'getImageData');
+  apiValidateType(opts, 'getImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'getImageData', 'y', opts.y, 'number');
+  apiValidateType(opts, 'getImageData', 'width', opts.width, 'number');
+  apiValidateType(opts, 'getImageData', 'height', opts.height, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     return ctx.getImageData(opts.x, opts.y, opts.width, opts.height);
@@ -2023,6 +2321,11 @@ Applab.getImageData = function (opts) {
 };
 
 Applab.putImageData = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateActiveCanvas(opts, 'putImageData');
+  apiValidateType(opts, 'putImageData', 'imageData', opts.imageData, 'object');
+  apiValidateType(opts, 'putImageData', 'x', opts.x, 'number');
+  apiValidateType(opts, 'putImageData', 'y', opts.y, 'number');
   var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
   if (ctx) {
     // Create tmpImageData and initialize it because opts.imageData is not
@@ -2036,6 +2339,9 @@ Applab.putImageData = function (opts) {
 
 Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
@@ -2046,6 +2352,10 @@ Applab.textInput = function (opts) {
 
 Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
+  apiValidateType(opts, 'textLabel', 'text', opts.text, 'string');
+  apiValidateType(opts, 'textLabel', 'forId', opts.forId, 'string', OPTIONAL);
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
@@ -2061,6 +2371,9 @@ Applab.textLabel = function (opts) {
 
 Applab.checkbox = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'checkbox', 'id', opts.elementId, false);
+  // apiValidateType(opts, 'checkbox', 'checked', opts.checked, 'boolean');
 
   var newCheckbox = document.createElement("input");
   newCheckbox.setAttribute("type", "checkbox");
@@ -2072,6 +2385,10 @@ Applab.checkbox = function (opts) {
 
 Applab.radioButton = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'radioButton', 'id', opts.elementId, false);
+  // apiValidateType(opts, 'radioButton', 'checked', opts.checked, 'boolean');
+  apiValidateType(opts, 'radioButton', 'group', opts.name, 'string', OPTIONAL);
 
   var newRadio = document.createElement("input");
   newRadio.setAttribute("type", "radio");
@@ -2084,12 +2401,15 @@ Applab.radioButton = function (opts) {
 
 Applab.dropdown = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'dropdown', 'id', opts.elementId, false);
 
   var newSelect = document.createElement("select");
 
   if (opts.optionsArray) {
     for (var i = 0; i < opts.optionsArray.length; i++) {
       var option = document.createElement("option");
+      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'string');
       option.text = opts.optionsArray[i];
       newSelect.add(option);
     }
@@ -2124,6 +2444,9 @@ Applab.setAttribute = function (opts) {
 
 Applab.getText = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getText', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
@@ -2139,6 +2462,10 @@ Applab.getText = function (opts) {
 
 Applab.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setText', 'text', opts.text, 'string');
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
@@ -2155,6 +2482,9 @@ Applab.setText = function (opts) {
 
 Applab.getChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getChecked', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
     return element.checked;
@@ -2164,6 +2494,10 @@ Applab.getChecked = function (opts) {
 
 Applab.setChecked = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setChecked', 'id', opts.elementId, true);
+  // apiValidateType(opts, 'setChecked', 'checked', opts.checked, 'boolean');
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'INPUT') {
     element.checked = opts.checked;
@@ -2174,6 +2508,9 @@ Applab.setChecked = function (opts) {
 
 Applab.getImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getImageURL', 'id', opts.elementId, true);
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
@@ -2190,6 +2527,10 @@ Applab.getImageURL = function (opts) {
 
 Applab.setImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setImageURL', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setImageURL', 'src', opts.src, 'string');
+
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = opts.src;
@@ -2199,6 +2540,9 @@ Applab.setImageURL = function (opts) {
 };
 
 Applab.playSound = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
+
   if (studioApp.cdoSounds) {
     studioApp.cdoSounds.playURL(opts.url,
                                {volume: 1.0,
@@ -2220,6 +2564,9 @@ Applab.innerHTML = function (opts) {
 
 Applab.deleteElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'deleteElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     // Special check to see if the active canvas is being deleted
@@ -2233,6 +2580,9 @@ Applab.deleteElement = function (opts) {
 
 Applab.showElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'showElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.visibility = 'visible';
@@ -2243,6 +2593,9 @@ Applab.showElement = function (opts) {
 
 Applab.hideElement = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'hideElement', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.visibility = 'hidden';
@@ -2274,6 +2627,13 @@ Applab.setParent = function (opts) {
 
 Applab.setPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'setPosition', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setPosition', 'left', opts.left, 'number');
+  apiValidateType(opts, 'setPosition', 'top', opts.top, 'number');
+  apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
+  apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     div.style.position = 'absolute';
@@ -2288,6 +2648,9 @@ Applab.setPosition = function (opts) {
 
 Applab.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getXPosition', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var x = div.offsetLeft;
@@ -2302,6 +2665,9 @@ Applab.getXPosition = function (opts) {
 
 Applab.getYPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  // TODO: cpirich: may need to update param name
+  apiValidateDomIdExistence(divApplab, opts, 'getYPosition', 'id', opts.elementId, true);
+
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var y = div.offsetTop;
@@ -2341,6 +2707,9 @@ Applab.onEventFired = function (opts, e) {
 
 Applab.onEvent = function (opts) {
   var divApplab = document.getElementById('divApplab');
+  apiValidateDomIdExistence(divApplab, opts, 'onEvent', 'id', opts.elementId, true);
+  apiValidateType(opts, 'onEvent', 'event', opts.eventName, 'string');
+  apiValidateType(opts, 'onEvent', 'function', opts.func, 'function');
   // Special case the id of 'body' to mean the app's container (divApplab)
   // TODO (cpirich): apply this logic more broadly (setStyle, etc.)
   if (opts.elementId === 'body') {
@@ -2408,6 +2777,8 @@ Applab.onHttpRequestEvent = function (opts) {
 };
 
 Applab.startWebRequest = function (opts) {
+  apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
+  apiValidateType(opts, 'startWebRequest', 'function', opts.func, 'function');
   opts.interpreter = Applab.interpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = Applab.onHttpRequestEvent.bind(req, opts);
@@ -2427,20 +2798,30 @@ Applab.onTimerFired = function (opts) {
 };
 
 Applab.setTimeout = function (opts) {
+  apiValidateType(opts, 'setTimeout', 'function', opts.func, 'function');
+  apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
+
   return apiTimeoutList.setTimeout(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearTimeout = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'clearTimeout', 'timeoutId', opts.timeoutId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setTimeout() function
   apiTimeoutList.clearTimeout(opts.timeoutId);
 };
 
 Applab.setInterval = function (opts) {
+  apiValidateType(opts, 'setInterval', 'function', opts.func, 'function');
+  apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
+
   return apiTimeoutList.setInterval(Applab.onTimerFired.bind(this, opts), opts.milliseconds);
 };
 
 Applab.clearInterval = function (opts) {
+  // TODO: cpirich: may need to update param name
+  apiValidateType(opts, 'clearInterval', 'intervalId', opts.intervalId, 'number');
   // NOTE: we do not currently check to see if this is a timer created by
   // our Applab.setInterval() function
   apiTimeoutList.clearInterval(opts.intervalId);
@@ -2523,11 +2904,11 @@ Applab.updateRecord = function (opts) {
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-Applab.handleUpdateRecord = function(successCallback) {
+Applab.handleUpdateRecord = function(successCallback, record) {
   if (successCallback) {
     Applab.eventQueue.push({
       'fn': successCallback,
-      'arguments': []
+      'arguments': [record]
     });
   }
 };

@@ -173,18 +173,24 @@ is:
       VideoGamesCoordinatePlanes:
         title: Tölvuleikir og hnitakerfi
         desc: Uppgötvaðu hvernig tölvuleikirnir, sem þér finnst svo gaman að spila, eru í raun keyrðir á algebru! Kannaðu hvernig algebruformúlur og hnitakerfið geta hjálpað okkur að skilja hvernig tölvuleikir virka, og byrjaðu svo að áætla hvernig leik þú munt búa til.
+        video: alg_11_coordinate_plane
       Contracts:
-        title: Samningar, gildismengi og svið
+        title: Samningar, gildamengi og svið
         desc: Samingar eru aðferð til að skilja og ræða um föll. Í þessari námseiningu munum við skoða hvernig samningar geta hjálpað okkur að skilja nýtt forritunarmál eða fall.
+        video: alg_5_contracts
       DesignRecipe:
         title: Hönnunaruppskriftin
         desc: 'Í síðasta áfanga skrifuðu nemendur nokkur mjög einföld föll. En til að búa til viðameiri föll þarf að leggjast í meiri hugsun. Hönnunaruppskriftin (enska: Design Recipe) er formleg aðferð við að skrifa föll. Hluti af henni er að búa til dæmatilfelli til að tryggja að fallið geri það sem það á að gera.'
+        video: alg_8_design_recipe
       Booleans:
-        title: Boole virkjar og rökvísi
+        title: Boole gildi og rökvísi
         desc: Boole gildi eru fjórða og síðasta gagnategundin sem þú lærir um á þessu námskeiði. Í þessu verkefni muntu læra hvað Boole gildi eru og hvernig þau hjálpa okkur að skrifa föll sem nota rökvísi
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Skilyrði og Piecewise föll
         desc: Með því að hafa mismunandi gildi í stikunum, sem föll taka inn, fáum við mismunandi úttök, en þau fylgja mjög ákveðnu mynstri. En hvað ef við viljum láta mismunandi gildi stika skila mismunandi mynstrum í úttaki? Þá koma skilyrði að góðu gagni...
+        video: alg_10_conditionals
       CollisionDetection:
         title: Skynjun árekstra og regla Pýþagórasar
         desc: Það er mikilvægur þáttur í flestum leikjum að skynja hvenær hlutir á skjánum snertast. Í þessari námseiningu munum við skoða hvernig regla Pýþagórasar og fjarlægðarformúlan nýtast til að mæla fjarlægðina milli tveggja punkta á skjánum og hvernig við ákveðum hvort þessi tveir punktar (eða leikverur) snertist.
+        video: alg_16_biggame_collision_detection

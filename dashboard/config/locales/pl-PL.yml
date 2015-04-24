@@ -263,6 +263,7 @@
         artist: Narysuj coś
     user:
       classroom: Domowa strona nauczyciela
+      district_dashboard: District Dashboard
       label: Witaj %{username}
       stats: Moje postępy
       settings: Moje konto
@@ -349,8 +350,8 @@
       %{student_name}'
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
+    email_confirm_wrong_email: (Zły adres email?)
     email_resend_confirm: Wyślij ponownie instrukcje potwierdzenia
     new_password_hint: (zostaw puste, jeśli nie chcesz tego zmienić)
     current_password_hint: (potrzebujemy Twojego aktualnego hasła, aby potwierdzić
@@ -411,6 +412,7 @@
     heading_apps: <h2>Zabawy dla</h2><h1>Wszystkich</h1>
     heading_legacy: <h2>Nasz ogólny kurs dla</h2><h1>Wszystkich grup wiekowych</h1>
     your_gallery: Galeria
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Mężczyzna
     female: Kobieta
@@ -517,6 +519,9 @@
         użytkowników
     frozen:
       title: Frosen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Uczniowie narysowali to z pomocą kodu!
     students_made_these_with_code: Uczniowie wykonali to z pomocą kodu!
@@ -553,6 +558,16 @@
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
     correct_title: Poprawnie
     correct_body: To jest poprawna odpowiedź.
+  contract_match:
+    wrong_title: Błędna odpowiedź
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Wprowadź swoją odpowiedź tutaj
   dialog:
@@ -571,7 +586,7 @@
             klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach
             wiekowych.
         Hour of Code:
-          title: Godzina kodowania
+          title: Godzina kodu 2013
           description: ''
         edit-code:
           title: Edytuj kod
@@ -609,46 +624,48 @@
     support.code.org</a> bez logowania się lub poprosić rodziców lub nauczyciela,
     by skontaktowali się z nami  w Twoim imieniu.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: nierozpoczęte
+    in_progress: w toku
     completed_too_many_blocks: zakończona, zbyt wiele bloków
     completed_perfect: zakończona, doskonale
     furthest_level_attempted: próbowano najdalszy poziom
-    assessment: assessment
+    assessment: oszacowanie
   studio:
     courses_working_on: Kursy, w których bierzesz udział
     completed_courses: Ukończone kursy
     all_courses: Wszystkie kursy
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projekty
+    create: Stwórz projekt
+    create_a_project: 'Stwórz nowy projekt:'
+    new: Stwórz nowy
+    rename: Zmień nazwę
     save: Zapisz
     delete: Usuń
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Powrót do kursu
+    my_projects: Moje projekty
     share: Udostępnij
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Udostępnij swój projekt
+    share_copy_link: 'Skopiuj odnośnik:'
+    close: Zamknij
     more: Więcej
     name: Imię/Nazwisko
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Zaktualizowano
+    project_type: Typ projektu
+    help_text: Kliknij, <strong>Stwórz aplikację</strong> lub <strong>Narysuj coś</strong>
+      aby stworzyć nowy projekt! <br/>Możesz wrócić i pracować nad swoimi projektami
+      w dowolnym momencie.
+    need_help: Potrzebujesz pomocy na start?
     really_delete: Usunąć?
     delete_yes: Tak
     delete_no: Nie
-    saved: Saved
-    not_saved: Not saved
+    saved: Zapisane
+    not_saved: Nie zapisane
     cancel: Anuluj
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Czy na pewno chcesz usunąć ten projekt?
+    delete_confirm_text: Usunięcie projektu trwale wykasuje go z listy twoich projektów.
+      Wszyscy, którym odnośnik został udostępniony nie będą mogli już więcej zobaczyć
+      tego projektu.
+    view_all: Zobacz moje projekty
+    remix: Remix
+    click_to_remix: Kliknij 'Remix', żeby utworzyć swoją wersję!

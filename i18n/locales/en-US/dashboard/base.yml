@@ -212,6 +212,7 @@ en:
         artist: crwdns20076:0crwdne20076:0
     user:
       classroom: crwdns22205:0crwdne22205:0
+      district_dashboard: crwdns35951:0crwdne35951:0
       label: 'crwdns2593:0%{username}crwdne2593:0'
       stats: crwdns3077:0crwdne3077:0
       settings: crwdns2963:0crwdne2963:0
@@ -341,6 +342,7 @@ en:
     heading_apps: crwdns8816:0crwdne8816:0
     heading_legacy: crwdns8843:0crwdne8843:0
     your_gallery: crwdns23431:0crwdne23431:0
+    no_primary_course: crwdns36301:0crwdne36301:0
   gender:
     male: crwdns2618:0crwdne2618:0
     female: crwdns2619:0crwdne2619:0
@@ -430,6 +432,9 @@ en:
       body: crwdns23627:0crwdne23627:0
     frozen:
       title: crwdns24790:0crwdne24790:0
+    infinity:
+      title: crwdns35937:0crwdne35937:0
+      body: crwdns35938:0crwdne35938:0
   gallery:
     students_drew_these_with_code: crwdns5091:0crwdne5091:0
     students_made_these_with_code: crwdns20426:0crwdne20426:0
@@ -459,6 +464,14 @@ en:
     wrong_body: crwdns5099:0crwdne5099:0
     correct_title: crwdns5344:0crwdne5344:0
     correct_body: crwdns5345:0crwdne5345:0
+  contract_match:
+    wrong_title: crwdns36222:0crwdne36222:0
+    badname: crwdns36223:0crwdne36223:0
+    badname_case: crwdns36271:0crwdne36271:0
+    badrange: crwdns36224:0crwdne36224:0
+    baddomainsize: crwdns36225:0crwdne36225:0
+    baddomainname: crwdns36226:0crwdne36226:0
+    baddomaintype: crwdns36302:0crwdne36302:0
   text_match:
     placeholder: crwdns22206:0crwdne22206:0
   dialog:
@@ -543,3 +556,5 @@ en:
     delete_confirm_title: crwdns35059:0crwdne35059:0
     delete_confirm_text: crwdns35060:0crwdne35060:0
     view_all: crwdns35061:0crwdne35061:0
+    remix: crwdns35952:0crwdne35952:0
+    click_to_remix: crwdns35953:0crwdne35953:0

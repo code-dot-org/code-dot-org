@@ -159,8 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "círculo (raio, estilo, cor)"},
 "displayBlockTitle":function(d){return "calcular"},
 "ellipseBlockTitle":function(d){return "elipse (largura, altura, estilo, cor)"},
-"emptyFunctionalBlock":function(d){return "Você tem um bloco com uma entrada sem preencher."},
-"extraTopBlocks":function(d){return "Alguns de seus blocos estão soltos. Você pretendia conectá-los ao bloco \"exibir\"?"},
+"extraTopBlocks":function(d){return "Você tem blocos não anexados. Você pretendia anexá-los ao bloco \"calcular\"?"},
 "infiniteRecursionError":function(d){return "Sua função está chamando a si mesma. Fizemos com que ela parasse, caso contrário ela teria continuado a chamar a si mesma para sempre."},
 "overlayBlockTitle":function(d){return "sobreposição (superior, inferior)"},
 "placeImageBlockTitle":function(d){return "lugar-imagem (x, y, imagem)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "sólido"},
 "string":function(d){return "string"},
 "stringMismatchError":function(d){return "Você tem uma string com a capitalização errada."},
-"userCodeException":function(d){return "Ocorreu um erro durante a execução do seu código."}};
+"userCodeException":function(d){return "Ocorreu um erro durante a execução do seu código."},
+"wrongBooleanError":function(d){return "Seus blocos retornam o valor booleano errado."}};

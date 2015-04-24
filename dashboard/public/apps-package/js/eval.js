@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({74:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({76:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -11,7 +11,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":5,"../skins":194,"./blocks":59,"./eval":61,"./levels":73}],61:[function(require,module,exports){
+},{"../appMain":5,"../skins":207,"./blocks":61,"./eval":63,"./levels":75}],63:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -49,12 +49,20 @@ var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
 var EvalText = require('./evalText');
+var utils = require('../utils');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-// requiring this loads canvg into the global namespace
+// Loading these modules extends SVGElement and puts canvg in the global
+// namespace
 require('../canvg/canvg.js');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/svg_todataurl');
+}
 var canvg = window.canvg || global.canvg;
 
 var level;
@@ -62,13 +70,16 @@ var skin;
 
 studioApp.setCheckForEmptyBlocks(false);
 
-var CANVAS_HEIGHT = 400;
-var CANVAS_WIDTH = 400;
+Eval.CANVAS_HEIGHT = 400;
+Eval.CANVAS_WIDTH = 400;
 
 // This property is set in the api call to draw, and extracted in evalCode
 Eval.displayedObject = null;
 
 Eval.answerObject = null;
+
+Eval.feedbackImage = null;
+Eval.encodedFeedbackImage = null;
 
 /**
  * Initialize Blockly and the Eval.  Called on page load.
@@ -108,8 +119,8 @@ Eval.init = function(config) {
     if (!svg) {
       throw "something bad happened";
     }
-    svg.setAttribute('width', CANVAS_WIDTH);
-    svg.setAttribute('height', CANVAS_HEIGHT);
+    svg.setAttribute('width', Eval.CANVAS_WIDTH);
+    svg.setAttribute('height', Eval.CANVAS_HEIGHT);
 
     // This is hack that I haven't been able to fully understand. Furthermore,
     // it seems to break the functional blocks in some browsers. As such, I'm
@@ -178,6 +189,8 @@ Eval.resetButtonClick = function () {
     user.removeChild(user.firstChild);
   }
 
+  Eval.feedbackImage = null;
+  Eval.encodedFeedbackImage = null;
 };
 
 /**
@@ -199,7 +212,7 @@ function evalCode (code) {
     if (e instanceof CustomEvalError) {
       return e;
     }
-    if (isInfiniteRecursionError(e)) {
+    if (utils.isInfiniteRecursionError(e)) {
       return new CustomEvalError(CustomEvalError.Type.InfiniteRecursion, null);
     }
 
@@ -214,39 +227,6 @@ function evalCode (code) {
 
     return new CustomEvalError(CustomEvalError.Type.UserCodeException, null);
   }
-}
-
-/**
- * Attempts to analyze whether or not err represents infinite recursion having
- * occurred. This error differs per browser, and it's possible that we don't
- * properly discover all cases.
- * Note: Other languages probably have localized messages, meaning we won't
- * catch them.
- */
-function isInfiniteRecursionError(err) {
-  // Chrome/Safari: message ends in a period in Safari, not in Chrome
-  if (err instanceof RangeError &&
-    /^Maximum call stack size exceeded/.test(err.message)) {
-    return true;
-  }
-
-  // Firefox
-  /* jshint ignore:start */
-  // Linter doesn't like our use of InternalError, even though we gate on its
-  // existence.
-  if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
-      err.message === 'too much recursion') {
-    return true;
-  }
-  /* jshint ignore:end */
-
-  // IE
-  if (err instanceof Error &&
-      err.message === 'Out of stack space') {
-    return true;
-  }
-
-  return false;
 }
 
 /**
@@ -364,10 +344,10 @@ Eval.execute = function() {
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  if (studioApp.hasUnfilledBlock()) {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Eval.message = evalMsg.emptyFunctionalBlock();
+    Eval.message = commonMsg.emptyFunctionalBlock();
   } else if (studioApp.hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
@@ -412,12 +392,26 @@ Eval.execute = function() {
     result: Eval.result,
     testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: onReportComplete
+    onComplete: onReportComplete,
+    image: Eval.encodedFeedbackImage
   };
 
-  studioApp.playAudio(Eval.result ? 'win' : 'failure');
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgEval').toDataURL === 'undefined') {
+    studioApp.report(reportData);
+  } else {
+    document.getElementById('svgEval').toDataURL("image/png", {
+      callback: function(pngDataUrl) {
+        Eval.feedbackImage = pngDataUrl;
+        Eval.encodedFeedbackImage = encodeURIComponent(Eval.feedbackImage.split(',')[1]);
 
-  studioApp.report(reportData);
+        studioApp.report(reportData);
+      }
+    });
+  }
+
+  studioApp.playAudio(Eval.result ? 'win' : 'failure');
 };
 
 /**
@@ -432,8 +426,8 @@ function outerHTML (element) {
 
 function imageDataForSvg(elementId) {
   var canvas = document.createElement('canvas');
-  canvas.width = CANVAS_WIDTH;
-  canvas.height = CANVAS_HEIGHT;
+  canvas.width = Eval.CANVAS_WIDTH;
+  canvas.height = Eval.CANVAS_HEIGHT;
   canvg(canvas, outerHTML(document.getElementById(elementId)));
 
   // canvg attaches an svg object to the canvas, and attaches a setInterval.
@@ -442,7 +436,7 @@ function imageDataForSvg(elementId) {
   canvas.svg.stop();
 
   var ctx = canvas.getContext('2d');
-  return ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  return ctx.getImageData(0, 0, Eval.CANVAS_WIDTH, Eval.CANVAS_HEIGHT);
 }
 
 function evaluateAnswer() {
@@ -473,6 +467,11 @@ var displayFeedback = function(response) {
     response: response,
     level: level,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined, 
+    showingSharing: !level.disableSharing && (level.freePlay),
+    // allow users to save freeplay levels to their gallery
+    saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
+    feedbackImage: Eval.feedbackImage,
     appStrings: {
       reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
     }
@@ -499,7 +498,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":245,"../../locale/current/eval":246,"../StudioApp":4,"../block_utils":25,"../canvg/canvg.js":49,"../codegen":53,"../dom":56,"../skins":194,"../templates/page.html":219,"./api":58,"./controls.html":60,"./evalError":64,"./evalText":70,"./levels":73,"./visualization.html":75}],75:[function(require,module,exports){
+},{"../../locale/current/common":258,"../../locale/current/eval":259,"../StudioApp":4,"../block_utils":27,"../canvg/StackBlur.js":50,"../canvg/canvg.js":51,"../canvg/rgbcolor.js":52,"../canvg/svg_todataurl":53,"../codegen":55,"../dom":58,"../skins":207,"../templates/page.html":232,"../utils":253,"./api":60,"./controls.html":62,"./evalError":66,"./evalText":72,"./levels":75,"./visualization.html":77}],77:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -519,7 +518,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],73:[function(require,module,exports){
+},{"ejs":274}],75:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -587,7 +586,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":246,"../block_utils":25}],60:[function(require,module,exports){
+},{"../../locale/current/eval":259,"../block_utils":27}],62:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -610,7 +609,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"../../locale/current/eval":246,"ejs":261}],59:[function(require,module,exports){
+},{"../../locale/current/common":258,"../../locale/current/eval":259,"ejs":274}],61:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -779,7 +778,8 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       { name: 'TOP', type: blockly.BlockValueType.IMAGE },
       { name: 'BOTTOM', type: blockly.BlockValueType.IMAGE },
-    ]
+    ],
+    verticallyStackInputs: true
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -789,7 +789,8 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       { name: 'BOTTOM', type: blockly.BlockValueType.IMAGE },
       { name: 'TOP', type: blockly.BlockValueType.IMAGE }
-    ]
+    ],
+    verticallyStackInputs: true
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
@@ -870,7 +871,7 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-function installFunctionalBlock (blockly, generator, gensym, options) {
+function installFunctionalBlock(blockly, generator, gensym, options) {
   var blockName = options.blockName;
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
@@ -879,7 +880,9 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
 
   blockly.Blocks[blockName] = {
     init: function () {
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, returnType, args);
+      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(this, blockTitle, returnType, args, {
+        verticallyStackInputs: options.verticallyStackInputs
+      });
     }
   };
 
@@ -905,7 +908,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":245,"../../locale/current/eval":246,"../sharedFunctionalBlocks":193,"./evalUtils":72}],58:[function(require,module,exports){
+},{"../../locale/current/common":258,"../../locale/current/eval":259,"../sharedFunctionalBlocks":206,"./evalUtils":74}],60:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -980,10 +983,15 @@ exports.placeImage = function (x, y, image) {
   evalUtils.ensureNumber(y);
   evalUtils.ensureType(image, EvalImage);
 
-  // User inputs why in cartesian space. Convert to pixel space before sending
+  // origin at center
+  x = x + Eval.CANVAS_WIDTH / 2;
+  y = y + Eval.CANVAS_HEIGHT / 2;
+
+  // User inputs y in cartesian space. Convert to pixel space before sending
   // to our EvalImage.
   y = evalUtils.cartesianToPixel(y);
 
+  // relative to center of workspace
   image.place(x, y);
   return image;
 };
@@ -992,10 +1000,10 @@ exports.offset = function (x, y, image) {
   evalUtils.ensureNumber(x);
   evalUtils.ensureNumber(y);
   evalUtils.ensureType(image, EvalImage);
-    
+
   x = image.x_ + x;
   y = image.y_ - y;
-    
+
   image.place(x, y);
   return image;
 };
@@ -1026,7 +1034,7 @@ exports.stringLength = function (str) {
   return str.length;
 };
 
-},{"./evalCircle":62,"./evalEllipse":63,"./evalImage":65,"./evalMulti":66,"./evalPolygon":67,"./evalRect":68,"./evalStar":69,"./evalText":70,"./evalTriangle":71,"./evalUtils":72}],71:[function(require,module,exports){
+},{"./evalCircle":64,"./evalEllipse":65,"./evalImage":67,"./evalMulti":68,"./evalPolygon":69,"./evalRect":70,"./evalStar":71,"./evalText":72,"./evalTriangle":73,"./evalUtils":74}],73:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1077,7 +1085,7 @@ EvalTriangle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":65,"./evalUtils":72}],70:[function(require,module,exports){
+},{"./evalImage":67,"./evalUtils":74}],72:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1116,7 +1124,7 @@ EvalText.prototype.getText = function () {
   return this.text_;
 };
 
-},{"./evalImage":65,"./evalUtils":72}],69:[function(require,module,exports){
+},{"./evalImage":67,"./evalUtils":74}],71:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1163,7 +1171,7 @@ EvalStar.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":65,"./evalUtils":72}],68:[function(require,module,exports){
+},{"./evalImage":67,"./evalUtils":74}],70:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1198,7 +1206,7 @@ EvalRect.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":65,"./evalUtils":72}],67:[function(require,module,exports){
+},{"./evalImage":67,"./evalUtils":74}],69:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1237,7 +1245,7 @@ EvalPolygon.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":65,"./evalUtils":72}],66:[function(require,module,exports){
+},{"./evalImage":67,"./evalUtils":74}],68:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1284,7 +1292,7 @@ EvalImage.prototype.getChildren = function () {
   return [this.image1_, this.image2_];
 };
 
-},{"./evalImage":65,"./evalUtils":72}],63:[function(require,module,exports){
+},{"./evalImage":67,"./evalUtils":74}],65:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1317,7 +1325,7 @@ EvalCircle.prototype.draw = function (parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalImage":65,"./evalUtils":72}],62:[function(require,module,exports){
+},{"./evalImage":67,"./evalUtils":74}],64:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1352,7 +1360,7 @@ EvalCircle.prototype.rotate = function () {
   // a bitmap.
 };
 
-},{"./evalImage":65,"./evalUtils":72}],65:[function(require,module,exports){
+},{"./evalImage":67,"./evalUtils":74}],67:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 
 var EvalImage = function (style, color) {
@@ -1420,7 +1428,7 @@ EvalImage.prototype.getChildren = function () {
   return [];
 };
 
-},{"./evalUtils":72}],72:[function(require,module,exports){
+},{"./evalUtils":74}],74:[function(require,module,exports){
 var CustomEvalError = require('./evalError');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -1518,7 +1526,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{"../utils":240,"./evalError":64}],64:[function(require,module,exports){
+},{"../utils":253,"./evalError":66}],66:[function(require,module,exports){
 var evalMsg = require('../../locale/current/eval');
 
 /**
@@ -1556,6 +1564,6 @@ CustomEvalError.Type = {
   UserCodeException: 3
 };
 
-},{"../../locale/current/eval":246}],246:[function(require,module,exports){
+},{"../../locale/current/eval":259}],259:[function(require,module,exports){
 /*eval*/ module.exports = window.blockly.appLocale;
-},{}]},{},[74]);
+},{}]},{},[76]);

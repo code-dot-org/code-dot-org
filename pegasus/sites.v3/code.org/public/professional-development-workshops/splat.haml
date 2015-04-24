@@ -254,6 +254,22 @@ title: Register for a workshop
 
     function processResponse(data)
     {
+      // Facebook Conversion Tracking Pixel script START
+      (function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+      var fbds = document.createElement('script');
+      fbds.async = true;
+      fbds.src = '//connect.facebook.net/en_US/fbds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(fbds, s);
+      _fbq.loaded = true;
+      }
+      })();
+      window._fbq = window._fbq || [];
+      window._fbq.push(['track', '6023436586161', {'value':'0.01','currency':'USD'}]);
+      // Facebook Conversion Tracking Pixel script END
+
       $('#affiliate-workshop-signup-form-wrapper').hide();
       $('#thanks').show();
     }

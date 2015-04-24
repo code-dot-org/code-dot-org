@@ -4,14 +4,13 @@
   "circleBlockTitle":"دایره (شعاع، سبک، رنگ)",
   "displayBlockTitle":"ارزیابی کنید",
   "ellipseBlockTitle":"بیضی (عرض، ارتفاع، سبک، رنگ)",
-  "emptyFunctionalBlock":"شما یک بلوک با یک ورودی پر نشده دارید.",
-  "extraTopBlocks":"تو چندتا بلوک وصل نشده داری. آیا میخواستی به بلوک \"نمایش\" وصلشان کنی؟",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "infiniteRecursionError":"تابع شما دارد خودش را صدا می زند. ما متوقفش کردیم، در غیر این صورت برای همیشه به صدا زدن خودش ادامه میداد.",
   "overlayBlockTitle":"پوشش (بالا، پایین)",
   "placeImageBlockTitle":"مکان تصویر (x، y، تصویر)",
   "offsetBlockTitle":"اُفسِت (x، y، تصویر)",
   "rectangleBlockTitle":"مستطیل (عرض، ارتفاع، سبک، رنگ)",
-  "reinfFeedbackMsg":"شما می توانید دکمه ی \"Keep Playing\" را فشار دهید تا طراحی خود را ویرایش کنید.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"چرخش (درجه، تصویر)",
   "scaleImageBlockTitle":"مقیاس (عامل، تصویر)",
   "squareBlockTitle":"مربع (اندازه، سبک، رنگ)",
@@ -27,5 +26,6 @@
   "solid":"تو پُر",
   "string":"رشته",
   "stringMismatchError":"شما یک رشته با حروف بزرگ اشتباه دارید.",
-  "userCodeException":"در زمان اجرای کد شما خطایی رخ داد."
+  "userCodeException":"در زمان اجرای کد شما خطایی رخ داد.",
+  "wrongBooleanError":"Your blocks evaluate to the wrong boolean value."
 }

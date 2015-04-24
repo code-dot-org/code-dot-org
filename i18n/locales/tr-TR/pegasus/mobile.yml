@@ -24,7 +24,7 @@ tr-TR:
   hoc2014_teachers: Öğretmenler
   hoc2014_host: Ev sahipliği yapın
   hoc2014_everyone: Herkes
-  hoc2014_support: Destekleyin
+  hoc2014_support: 'Destekleyin &#x25BE;'
   hoc2014_whatishoc: Kodlama Saati nedir?
   twentyhours_trynow: Şimdi dene
   california_heading: Okulunuzdan bilgisayar bilimleri kurslarını açmalarını isteyin
@@ -110,6 +110,7 @@ tr-TR:
   stats_student: '"Bunun <b>hayatta ancak bir kere</b> karşıma çıkacak bir şans olduğunu biliyordum." - Mariana Alzate, 5. sınıf öğrencisi'
   stats_michael: 'Öğrencilerimi <b>hiçbir zaman</b> öğrenme konusunda bu kadar heyecanlı görmemiştim." - Michael Clark, Öğretmen'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a>'yu Keşfedin"
+  studiobar_title_nolink: "Code Studio'yu Keşfedin"
   studiobar_elementary_title: Temel dersler
   studiobar_elementary_body: 'K&#8209;5 hazırlanan üç yeni dersimiz'
   studiobar_hoc_title: Kod Saati
@@ -124,17 +125,46 @@ tr-TR:
   studiobar_donate_body: Bağış yapacağın her dolar ile bir çocuk daha öğrenecek
   studiobar_shop_title: Mağaza
   studiobar_shop_body: Kalıplarını kır. Logomuzu gururla taşı.
-  homepage_hero_text_malala: '&ldquo;lHer ülkede kızlar kod saati öğrenmek için can atıyor&rdquo; '
-  homepage_hero_text_susan: |
-    &ldquo;öğrenmenin yaşı yoktur&rdquo;
-    Susan,  YouTube Seo'su
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+  homepage_hero_text_malala: |
+    &ldquo;Her bir ülkedeki kızları, bir saat boyunca kod öğrenmek için kendini zorlamaya davet ediyorum.&rdquo; Malala, Nobel Barış Ödüllü aktivist
+    
+  homepage_hero_text_susan: '&ldquo;Eğer teknolojiyi değiştirebilirseniz, dünyayı değiştirebilirsiniz.&rdquo; Susan, YouTube CEO'
+  homepage_hero_text_fistbump: '&ldquo;Telefonunuzu sadece oyun için kullanmayın, onu programlayın.&rdquo; ABD Başkanı Barack Obama'
   homepage_hero_text_sheryl: |
-    &ldquo;Bilgisayar bilimi anlayışı giderek önemli bir hale geliyor...&rdquo;
-    Sheryl, Facebook kurucusu
+    &ldquo;Çocuklarımız &mdash; kızlarımız dahil &mdash; 
+    bilgisayar bilimlerini öğrenmek için fırsata ihtiyacı vardır.&rdquo;
+    Sheryl, Facebook COo
+  homepage_hero_text_satya: '&ldquo;Bilgisayar bilimi dünyadaki en iyi fırsatların önünü açabilir.&rdquo; Satya, Microsoft CEO'
+  homepage_hero_text_bosh: |
+    &ldquo;Eğer kod yazıyorsanız, hayatınızın seyrini seçebilirsiniz.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &Idquo;Ben çocuklarımın öğrenmek için heyecanlandığını hiç görmemiştim,&
+    rdquoİ; Michael, öğretmen
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: Anna ve Elsa ile dondurulmuş
   homepage_slot_text_teacher: Teacher Dashboard
@@ -144,32 +174,32 @@ tr-TR:
   homepage_slot_text_flappy: Flappy Kod
   homepage_action_text_codevideo: Videoyu izle
   homepage_action_text_teachervideo: Videoyu izle
-  homepage_action_text_learn: Start learning today
+  homepage_action_text_learn: Öğrenmeye bugün başlayın
   homepage_action_text_signpetition: Üye dilekçesi
   homepage_signpetition_dropdown: 'Bizim üye dilekçemiz  &#x25BE;'
   homepage_slot_text_title_hoc: Saat Kodu
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
   homepage_slot_text_link_hoc: "Kodlama Saati'ni Deneyin"
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Hour of Code organize edin
+  homepage_slot_text_link_hocserved: '# hizmet'
   homepage_slot_text_title_students: Öğrenciler
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Tüm dersleri keşfedin
+  homepage_slot_text_link_codestudio: Code Studio deneyin
+  homepage_slot_text_link_local: En yakın sınıfı bulun
+  homepage_slot_text_link_othercourses: Diğer online kurslar
+  homepage_slot_text_title_educators: Eğitmenler
+  homepage_slot_text_blurb_educators: Öğrencilerinize öğretin
+  homepage_slot_text_link_k5: K-5 sınıflar için kurslar
+  homepage_slot_text_link_fullcurriculum: Müfredatımızın tamamına göz atın
+  homepage_slot_text_link_pd: Mesleki Gelişim
+  homepage_slot_text_title_advocates: Katkıda bulunanlar
+  homepage_slot_text_blurb_advocates: Bizi destekleyin
+  homepage_slot_text_link_stats: Istatistiklere göz atın
+  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_donate: Bağış yap
+  homepage_header_codestudio: Code Studio öğrencilerinin yaptıkları
+  homepage_header_donors: Code.org destekleyenlere teşekkürler
+  homepage_donors_seall: Tümünü göster
   homepage_donors_donate: Bağışla
   contact_form_topic_student: Bir öğrenciyim
   contact_form_topic_parent: Bir ebeveynim

@@ -50,7 +50,7 @@ sv:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bee Villkorssatser Flerval Två
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Välj de bästa blocken
+        Choose the best blocks.: Välj de bästa blocken.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -83,7 +83,7 @@ sv:
       2-3 Algorithms Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Välj en algoritm för bilden
+        Choose an algorithm for the image provided.: Välj en algoritm till den givna bilden.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Börja med en fyrkant <br/> sätt en triangel ovanför fyrkanten <br/> sätt en triangel under fyrkanten'
         0: '? Börja med en fyrkant <br/> sätt en triangel till höger om fyrkanten <br/> sätt ett parallellogram nedanför fyrkanten <br/> rSätt triangeln till höger om parallellogrammet'
         1: ': Start med en fyrkant <br/> sätt en triangel till höger om fyrkanten <br/> sätt ett parallellogram nedanför fyrkanten <br/> Sätt triangeln till höger om parallellogrammet'
@@ -142,29 +142,29 @@ sv:
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
         " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
-        Blue colored blocks are associated with __________ ?: Blue colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Blue colored blocks are associated with __________ ?: Blåfärgade block är associerade med __________?
+        a image: en bild
+        a number: ett antal
+        a string: en sträng
+        boolean: Booleskt värde
       2-3 multi match 2:
-        Purple colored blocks are associated with __________ ?: Purple colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Purple colored blocks are associated with __________ ?: Lilafärgade block är associerade med __________?
+        a image: en bild
+        a number: ett antal
+        a string: en sträng
+        boolean: Booleskt värde
       2-3 multi match 3:
-        Teal colored blocks are associated with __________ ?: Teal colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        Teal colored blocks are associated with __________ ?: Beigefärgade block är associerade med __________?
+        a image: en bild
+        a number: ett antal
+        a string: en sträng
+        boolean: Booleskt värde
       2-3 multi match 4:
         Green colored blocks are associated with __________ ?: Green colored blocks are associated with __________ ?
-        a image: a image
-        a number: a number
-        a string: a string
-        boolean: boolean
+        a image: en bild
+        a number: ett antal
+        a string: en sträng
+        boolean: Booleskt värde
       4-5 artist multi 1:
         Artist Multiple Choice: Artist Flerval
         Which blocks draw a rectangle with a perimeter of 100?: Vilket block ritar en rektangel med en omkrets av 100?
@@ -256,19 +256,19 @@ sv:
       4-5 Algorithms Multi 1:
         Multiple Choice: Flervalsfråga
         Which one of these items is hardest to describe an algorithm for?: Vilken av dessa objekt är svårast att skriva en algoritm för?
-        <h4>Brushing your teeth</h4>: '<h4>Borsta tänderna</h4>'
-        <h4>Baking cookies</h4>: '<h4>Baka kakor</h4>'
-        <h4>Shopping from a grocery list</h4>: '<h4>Shopping från en inköpslista</h4>'
-        <h4>Banana</h4>: '<h4>Banan</h4>'
+        Brushing your teeth: Borsta tänderna
+        Baking cookies: Baka kakor
+        Shopping from a grocery list: Handla från en inköpslista
+        Banana: Banan
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Flervalsfråga
         0: '? Här är tre meningar. Vilken av mallarna nedan abstraherar korrekt så att alla tre matchar samma mönster som mallen?'
         1: ': Här är tre meningar. Vilken av mallarna nedan abstraherar korrekt så att alla tre matchar samma mönster som mallen?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle är en storstad. <br/>Eugene är en medelstor stad <br/> Hillview är en liten stad.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Seattle _____ en _____ _____.</h4>'
-        <h4>_____ is a _____ city.</h4>: '<h4>_____ är en _____ stad.</h4>'
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ är _____ en _____.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene är en _____ stad.</h4>'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle är en storstad. <br/>Eugene är en medelstor stad <br/> Hillview är en liten stad.'
+        Seattle _____ a _____ _____.: Seattle _____ en _____ _____.
+        _____ is a _____ city.: _____ är en _____ stad.
+        _____ is _____ a _____.: _____ är _____ en _____.
+        Eugene is a _____ city.: Eugene är en _____ stad.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Flervalsfråga
         Which of these pictures best represents crowdsourcing?: Vilken av dessa bilder representerar bäst crowdsourcing?
@@ -277,33 +277,33 @@ sv:
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Flervalsfråga
         Which one of these activities would be best for practicing crowdsourcing?: Vilken av dessa verksamheter skulle vara bäst för crowdsourcing?
-        <h4>Cleaning your room</h4>: '<h4>Städa ditt rum</h4>'
-        <h4>Eating your dessert</h4>: '<h4>Äta din dessert</h4>'
-        <h4>Brushing your hair</h4>: '<h4>Borsta håret</h4>'
-        <h4>Washing your face</h4>: '<h4>Tvätta ansiktet</h4>'
+        Cleaning your room: Städa ditt rum
+        Eating your dessert: Ät din dessert
+        Brushing your hair: Borsta håret
+        Washing your face: Tvätta ansiktet
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Flervalsfråga
         Which piece of information listed below is okay to share on the internet?: Vilken del av informationen nedan är okej att dela på internet?
-        <h4>Your birthday</h4>: '<h4>Din födelsedag</h4>'
-        <h4>Your favorite food</h4>: '<h4>Din favoritmat</h4>'
-        <h4>Your address</h4>: '<h4>Din adress</h4>'
-        <h4>Your parent's credit card number</h4>: '<h4>Dina föräldrars kreditkortsnummer</h4>'
+        Your birthday: Din födelsedag
+        Your favorite food: Din favoritmat
+        Your address: Din adress
+        Your parent's credit card number: Dina föräldrars kreditkortsnummer
       4-5 Internet Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: När du försöker logga in på code.org, vilken IP-adress är mest sannolikt att DNS-servern tar dig till?
-        <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
-        <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
-        <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
-        <h4>54.243.71.82</h4>: '<h4>54.243.71.82</h4>'
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: Flervalsfråga
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Om DNS-servern har skickat dig till sidan på IP-adressen 100.42.50.110, vilken hemsida är du på?
-        <h4>code.org</h4>: '<h4>Code.org</h4>'
-        <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
-        <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
-        <h4>khanacademy.org</h4>: '<h4>khanacademy.org</h4>'
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
@@ -318,17 +318,35 @@ sv:
       4-5 Suncatchers Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: 'Vilket av programmen nedan gör <em>inte</em>  exakt samma sekvens som Program 1'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Vilket av programmen nedan <em>inte</em> skapar exakt samma sekvens som programmet 1?'
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
         Video game Coordinates: Videospels koordinater
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        0: "? Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?"
+        1: ": Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?"
         The unicorn moves across the screen: Enhörningen rör sig över skärmen
         The unicorn's y value changes: Enhörningens y-värde ändras
         The unicorn moves to the left: Enhörningen flyttar till vänster
-        The unicorn's x value changes: Enhörningens x-värde ändras
+        The unicorn's x value decreases: "Unicorn's x-värde minskar"
+      ECSPD growth mindset in the classroom:
+        Growth Mindset in the Classroom: Growth Mindset in the Classroom
+        How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
+        praise students for getting the right answer: praise students for getting the right answer
+        praise the process that students use to solve problems: praise the process that students use to solve problems
+        praise students for their intelligence: praise students for their intelligence
+      ECSPD growth mindset question:
+        Impact of Growth Mindset: Impact of Growth Mindset
+        Based on the video you saw before, please answer the following question.: Based on the video you saw before, please answer the following question.
+        0: '? In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?'
+        1: ': In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?'
+        more effort: more effort
+        more strategies: more strategies
+        more engagement over longer periods of time: more engagement over longer periods of time
+        more perseverance: more perseverance
+        all of the above: all of the above
       K-1 Artist 1 Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -542,155 +560,159 @@ sv:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rektangel (+ 8 2) (-7 5) "fylld" "röd")'
         (rectangle (+ 8 2) (- 7 5) solid red): (rektangel (+ 8 2) (-7 5) fylld röd)
       msm variables multi 1:
-        What is the value of x?: What is the value of x?
-        a function: a function
+        x = 15<br>a = 2<br>b = 6: 'x = 15 <br>en = 2 <br>b = 6'
+        What is the value of x?: Vad är värdet på x?
+        a function: en funktion
         15: "15"
         x: x
       msm variables multi 10:
-        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What is the name of the function?: What is the name of the function?
+        /script_assets/msm/define_f.png, 300: /script_assets/MSM/define_f.png, 300
+        What is the name of the function?: Vad är namnet på funktionen?
         f: f
         x: x
         17: "17"
       msm variables multi 11:
-        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What is the name of the parameter?: What is the name of the parameter?
+        /script_assets/msm/define_f.png, 300: /script_assets/MSM/define_f.png, 300
+        What is the name of the parameter?: Vad är namnet på parametern?
         f: f
         x: x
         17: "17"
       msm variables multi 12:
-        (define (f x) (*x 17)): '(define (f x) (*x 17))'
-        What is the name of the variable?: What is the name of the variable?
+        (define (f x) (*x 17)): '(definiera (f x) (* x 17))'
+        What is the name of the variable?: Vad är namnet på variabeln?
         f: f
         x: x
         17: "17"
       msm variables multi 13:
-        /script_assets/msm/define_f.png, 300: /script_assets/msm/define_f.png, 300
-        What should f(1) produce?: What should f(1) produce?
+        /script_assets/msm/define_f.png, 300: /script_assets/MSM/define_f.png, 300
+        What should f(1) produce?: Vad bör f(1) producera?
         x: x
         117: "117"
         17: "17"
       msm variables multi 2:
-        x = 15<br>a = 2<br>b = 6: 'x = 15<br>a = 2<br>b = 6'
-        What is the value of a + b?: What is the value of a + b?
+        x = 15<br>a = 2<br>b = 6: 'x = 15 <br>en = 2 <br>b = 6'
+        What is the value of a + b?: Vad är värdet av a + b?
         8: "8"
-        function: function
+        a function: en funktion
         ab: ab
       msm variables multi 3:
-        x = 15<br/>a = 2<br>b = 6: 'x = 15<br/>a = 2<br>b = 6'
-        What is the value of x-10?: What is the value of x-10?
-        a function: a function
+        x = 15<br/>a = 2<br>b = 6: 'x = 15<br>a = 2<br>b = 6'
+        What is the value of x-10?: Vad är värdet på x-10?
+        a function: en funktion
         5: "5"
         x: x
       msm variables multi 4:
-        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
-        What is the value of x?: What is the value of x?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/MSM/define_xpq.png, 600
+        What is the value of x?: Vad är värdet på x?
         3: "3"
         15: "15"
-        do not know: do not know
+        do not know: Vet inte
       msm variables multi 5:
-        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
-        What is the value of (p - x)?: 'What is the value of (p - x)?'
+        /script_assets/msm/define_xpq.png, 600: /script_assets/MSM/define_xpq.png, 600
+        What is the value of (p - x)?: 'Vad är värdet av (p - x)?'
         q: q
         3: "3"
         5: "5"
       msm variables multi 6:
-        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
-        What is the value of string-length(q)?: What is the value of string-length(q)?
+        /script_assets/msm/define_xpq.png, 600: /script_assets/MSM/define_xpq.png, 600
+        What is the value of string-length(q)?: Vad är värdet av stränglängd(q)?
         1: "1"
         hello: hej
         5: "5"
       msm variables multi 7:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the function?: What is the name of the function?
+        What is the name of the function?: Vad är namnet på funktionen?
         f: f
         x: x
         3: "3"
       msm variables multi 8:
         f(x) = x + 3: f(x) = x + 3
-        What is the name of the variable?: What is the name of the variable?
+        What is the name of the variable?: Vad är namnet på variabeln?
         f: f
         x: x
         3: "3"
       msm variables multi 9:
         f(x) = x + 3: f(x) = x + 3
-        What is f(2)?: What is f(2)?
+        What is f(2)?: Vad är f(2)?
         6: "6"
         5: "5"
         x: x
       Multi Define Funcs 1:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of this function?: What is the name of this function?
+        What is the name of this function?: Vad är namnet på denna funktion?
         g: g
         "y": true
         3: "3"
       Multi Define Funcs 2:
         g(y) = y + 3: g(y) = y + 3
-        What is the name of the parameter?: What is the name of the parameter?
+        What is the name of the parameter?: Vad är namnet på parametern?
         g: g
         "y": true
         3: "3"
       Multi Define Funcs 3:
         g(y) = y + 3: g(y) = y + 3
-        What should g(2) return?: What should g(2) return?
+        What should g(2) return?: Vad bör g(2) tillbaka?
         6: "6"
         5: "5"
         "y": true
       Multi Strings Images 1:
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
-        Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images 1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images 1.blocks4.start_blocks, 300, 100
+        Strings and Images Multiple Choice: Strängar och bilder flerval
+        "http://staging.studio.code.org/script_assets/msm/green-rect.png": http://staging.studio.code.org/script_assets/msm/green-rect.png
+        Which of these Evaluation Blocks will draw the image: Vilket av dessa utvärderingsblock kommer att rita bilden
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
+      PDECS attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
+        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
       PDK5 Basic CS:
-        Video Follow-up Question: Video Follow-up Question
-        Answer this question based on the video you just watched.: Answer this question based on the video you just watched.
-        "A computer program, or code, is:": 'A computer program, or code, is:'
-        a part inside of a computer: a part inside of a computer
-        a week-long course to learn about computers: a week-long course to learn about computers
-        a set of instructions you give a computer to execute: a set of instructions you give a computer to execute
-        a secret password: a secret password
+        Video Follow-up Question: Video följdfråga
+        Answer this question based on the video you just watched.: Besvara denna fråga utifrån den video som du just sett.
+        "A computer program, or code, is:": 'Ett datorprogram, eller kod, är:'
+        a part inside of a computer: en del i en dator
+        a week-long course to learn about computers: en veckolång kurs för att lära om datorer
+        a set of instructions you give a computer to execute: en uppsättning instruktioner som du ger en dator att utföra
+        a secret password: ett hemligt lösenord
       PDK5 Beyond:
-        What do I do now?: What do I do now?
-        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!
-        Im finished: Im finished
+        What do I do now?: Vad gör jag nu?
+        This is the last piece of our online PD. Congratulations! Click Im finished when you are ready!: Detta är den sista biten av vår online PD. Grattis! Klicka på Jag är färdig när du är redo!
+        Im finished: Jag är färdig
       PDK5 Blockly Intro:
-        Writing your first computer program!: Writing your first computer program!
-        Are you ready to move on?: Are you ready to move on?
+        Writing your first computer program!: Skriv ditt första datorprogram!
+        Are you ready to move on?: Är du redo att gå vidare?
         "Yes": Ja
       PDK5 Classroom Culture:
-        Classroom Culture: Classroom Culture
-        Are you ready to move on?: Are you ready to move on?
+        Classroom Culture: Klassrumskultur
+        Are you ready to move on?: Är du redo att gå vidare?
         "Yes": Ja
       PDK5 Course Maps:
-        Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
-        Are you ready to move on?: Are you ready to move on?
+        Navigating Courses 1, 2, and 3: Navigera kurser 1, 2 och 3
+        Are you ready to move on?: Är du redo att gå vidare?
         "Yes": Ja
       PDK5 Course Overview:
-        Overview of K-5 Courses: Overview of K-5 Courses
-        Are you ready to move on?: Are you ready to move on?
+        Overview of K-5 Courses: Översikt över K-5 kurser
+        Are you ready to move on?: Är du redo att gå vidare?
         "Yes": Ja
       PDK5 Glossary:
         Glossary: Ordlista
-        Are you ready to move on?: Are you ready to move on?
+        Are you ready to move on?: Är du redo att gå vidare?
         "Yes": Ja
       PDK5 Intro:
-        Welcome!: Welcome!
-        Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
+        Welcome!: Välkommen!
+        Before now, have you ever participated in an online PD program?: Har du någonsin deltagit i ett online PD-program innan?
         "Yes": Ja
         "No": Nej
       PDK5 Sequence2:
-        More Sequencing: More Sequencing
-        The grey rectangle to the left of the workspace is called the: The grey rectangle to the left of the workspace is called the
-        toolbox: toolbox
-        shelf: shelf
-        bin: bin
+        More Sequencing: Mer sekvensering
+        The grey rectangle to the left of the workspace is called the: Den grå rektangeln till vänster i arbetsytan kallas den
+        toolbox: verktygslåda
+        shelf: hylla
+        bin: papperskorg
         dropdown: dropdown
       PDK5 Teacher Dashboard:
-        Teacher Dashboard: Teacher Dashboard
-        Are you ready to move on?: Are you ready to move on?
+        Teacher Dashboard: Lärare Dashboard
+        Are you ready to move on?: Är du redo att gå vidare?
         "Yes": Ja
       PDK5 Test1:
         title: titel
@@ -699,46 +721,46 @@ sv:
         wrong answer: Fel svar
         right answer: rätt svar
       PDK5 Unplugged Intro:
-        What is an unplugged activity?: What is an unplugged activity?
-        Are you ready to move on?: Are you ready to move on?
+        What is an unplugged activity?: Vad är en unplugged aktivitet?
+        Are you ready to move on?: Är du redo att gå vidare?
         "Yes": Ja
       PDK5 UVideo Overview:
-        Teacher Guides to all our unplugged activities: Teacher Guides to all our unplugged activities
-        Are you ready to move on?: Are you ready to move on?
+        Teacher Guides to all our unplugged activities: Lärar guider till alla våra unplugged aktiviteter
+        Are you ready to move on?: Är du redo att gå vidare?
         "Yes": Ja
       PDK5 Visual Languages:
-        Visual Programming Languages: Visual Programming Languages
-        Based on the video you saw before, please answer the question below.: Based on the video you saw before, please answer the question below.
-        Why are visual programming languages easier to learn than text-based programming languages?: Why are visual programming languages easier to learn than text-based programming languages?
-        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
-        Because you can focus on the logic of programming: Because you can focus on the logic of programming
-        Because the commands are available in a menu rather than having to remember them yourself: Because the commands are available in a menu rather than having to remember them yourself
-        All of the above: All of the above
+        Visual Programming Languages: Visuellt programmeringsspråk
+        Based on the video you saw before, please answer the question below.: Baserat på videon du såg innan, vänligen svara på frågan nedan.
+        Why are visual programming languages easier to learn than text-based programming languages?: Varför är visuellt programmeringsspråk lättare att lära än text-baserat programmeringsspråk?
+        Because you dont have to worry about syntax as much, like where to put a semi-colon: Eftersom du inte behöver oroa dig för syntax så mycket, som var man sätter ett semikolon
+        Because you can focus on the logic of programming: Eftersom du kan fokusera på logiken i programmering
+        Because the commands are listed in a menu rather than having to remember them yourself: Because the commands are listed in a menu rather than having to remember them yourself
+        All of the above: Alla ovanstående
       PDK5 What is CS:
-        What is Computer Science?: What is Computer Science?
-        "A computer program, or code, is:": 'A computer program, or code, is:'
-        a part inside of a computer: a part inside of a computer
-        a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
-        a week-long course to learn about computers: a week-long course to learn about computers
-        a secret password: a secret password
+        What is Computer Science?: Vad är datavetenskap?
+        "A computer program, or code, is:": 'Ett datorprogram, eller kod, är:'
+        a part inside of a computer: en del i en dator
+        a set of instructions a person gives a computer to execute: en uppsättning instruktioner en person ger en dator att utföra
+        a week-long course to learn about computers: en veckolång kurs för att lära om datorer
+        a secret password: ett hemligt lösenord
       Play Lab Rocket 6:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        rocket-height(seconds) = seconds + 12: rocket-height(seconds) = seconds + 12
-        rocket-height(seconds) = seconds * 12: 'rocket-height(seconds) = seconds * 12'
-        rocket-height(seconds) = 48 / seconds: rocket-height(seconds) = 48 / seconds
-        rocket-height(seconds)  = seconds * 48: 'rocket-height(seconds)  = seconds * 48'
+        Rocket Multiple Choice: Raket flervalsfrågor
+        rocket-height(seconds) = seconds + 12: Rakethöjd(sekunder) = sekunder + 12
+        rocket-height(seconds) = seconds * 12: 'Rakethöjd(sekunder)= sekunder * 12'
+        rocket-height(seconds) = 48 / seconds: Rakethöjd(sekunder)= 48/sekunder
+        rocket-height(seconds)  = seconds * 48: 'Rakethöjd(sekunder)= sekunder * 48'
       Play Lab Rocket 7:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        rocket-height(seconds) = seconds * 2: 'rocket-height(seconds) = seconds * 2'
-        rocket-height(seconds) = seconds * seconds: 'rocket-height(seconds) = seconds * seconds'
-        rocket-height(seconds) = seconds * 4: 'rocket-height(seconds) = seconds * 4'
-        rocket-height(seconds) = seconds * 16: 'rocket-height(seconds) = seconds * 16'
+        Rocket Multiple Choice: Raket flervalsfrågor
+        rocket-height(seconds) = seconds * 2: 'Rakethöjd(sekunder)= sekunder * 2'
+        rocket-height(seconds) = seconds * seconds: 'Rakethöjd(sekunder)= sekunder * sekunder'
+        rocket-height(seconds) = seconds * 4: 'Rakethöjd(sekunder)= sekunder * 4'
+        rocket-height(seconds) = seconds * 16: 'Rakethöjd(sekunder)= sekunder * 16'
       Play Lab Rocket 8:
-        Rocket Multiple Choice: Rocket Multiple Choice
-        rocket-height(seconds) = seconds * 7 + 10: 'rocket-height(seconds) = seconds * 7 + 10'
-        rocket-height(seconds) = seconds * 10 + 7: 'rocket-height(seconds) = seconds * 10 + 7'
-        rocket-height(seconds) = seconds * 7 + 3: 'rocket-height(seconds) = seconds * 7 + 3'
-        rocket-height(seconds) = seconds * 10 - 3: 'rocket-height(seconds) = seconds * 10 - 3'
+        Rocket Multiple Choice: Raket flervalsfrågor
+        rocket-height(seconds) = seconds * 7 + 10: 'Rakethöjd(sekunder)= sekunder * 7 + 10'
+        rocket-height(seconds) = seconds * 10 + 7: 'Rakethöjd(sekunder)= sekunder * 10 + 7'
+        rocket-height(seconds) = seconds * 7 + 3: 'Rakethöjd(sekunder)= sekunder * 7 + 3'
+        rocket-height(seconds) = seconds * 10 - 3: 'Rakethöjd(sekunder)= sekunder * 10 -3'
       test multi image:
         Maze Multiple Choice Two: Labyrint Flerval Två
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -760,13 +782,57 @@ sv:
         George Washington: George Washington
         George Jetson: George Jetson
       Test 1:
-        This is a test: This is a test
-        whatever: whatever
-        this is a question?: this is a question?
+        This is a test: Det här är ett test
+        whatever: oavsett
+        this is a question?: Detta är en fråga?
         wrong answer: Fel svar
         right answer: rätt svar
+      U1L10 Assessment 1:
+        "Assessment: Encoding Text": 'Assessment: Encoding Text'
+        "Question #1": 'Question #1'
+        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?
+        2 bits: 2 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+      U1L10 Assessment 2:
+        "Assessment: Encoding Text": 'Assessment: Encoding Text'
+        "Question # 2": 'Question # 2'
+        0: "? \"The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?\""
+        1: ": \"The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?\""
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+      U1L11 Assessment 1:
+        "Assessment: Sending Formatted Text": 'Assessment: Sending Formatted Text'
+        "Question #1": 'Question #1'
+        What is ASCII text?: What is ASCII text?
+        American Strict Conformance of Internet Interchange: American Strict Conformance of Internet Interchange
+        Authentication Standards for Commerce in Interstate Information: Authentication Standards for Commerce in Interstate Information
+        American Standard Code for Information Interchange: American Standard Code for Information Interchange
+        Automatic Serial Coding for Interface Interchange: Automatic Serial Coding for Interface Interchange
+      U1L11 Assessment 2:
+        "Assessment: Sending Formatted Text": 'Assessment: Sending Formatted Text'
+        "Question #2": 'Question #2'
+        How many bytes are used to encode a single ASCII character?: How many bytes are used to encode a single ASCII character?
+        1 byte: 1 byte
+        2 bytes: 2 bytes
+        4 bytes: 4 bytes
+        8 bytes: 8 bytes
+        16 bytes: 16 bytes
+      U1L6 Assessment multiple choice:
+        "Multiple Choice: Number Systems": 'Flervalsfrågor: talsystem'
+        If you just had a circle and a square, how many 3-shape rows could you make?: Om du hade bara en cirkel och en kvadrat, hur många trekantiga rader kan du göra?
+        4: "4"
+        6: "6"
+        8: "8"
+        10: "10"
+        12: "12"
       unique level name here:
-        line1<br/>line2: 'line1<br/>line2'
+        title: titel
         description here: Beskrivning här
         Question: Fråga
         wrong answer: Fel svar

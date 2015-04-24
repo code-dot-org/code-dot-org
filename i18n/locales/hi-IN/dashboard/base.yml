@@ -1,36 +1,36 @@
 hi:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'कृपया निम्न गलतिया सुधारें:'
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: की आवश्यकता है
     attributes:
       user:
-        name: Display Name
-        email: Email
-        username: Username
-        password: Password
-        password_confirmation: Password confirmation
-        current_password: Current password
-        locale: Language
-        age: Age
-        gender: Gender
-        edit_header: Edit Account Details
+        name: प्रदर्शन नाम
+        email: ईमेल
+        username: उपयोगकर्ता नाम
+        password: पासवर्ड
+        password_confirmation: पासवर्ड पुष्टिकरण
+        current_password: वर्तमान पासवर्ड
+        locale: भाषा
+        age: आयु
+        gender: लिंग
+        edit_header: खाता विवरण संपादित करें
         error:
-          future: "can't be in the future"
-  hello: Hello world
-  welcome_back: 'Welcome back, %{name}'
+          future: भविष्य में नहीं किया जा सकता
+  hello: हैलो वर्ल्ड
+  welcome_back: 'वापस, %{name} में आपका स्वागत है'
   submit: सबमिट करें
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
-    submit: Add teacher
+      label: 'शिक्षक जोड़ें:'
+      placeholder: अनुभाग कोड (ABCDEF)
+    submit: शिक्षक जोड़ें
   add_hint_form:
-    placeholder: Please enter your hint here
-    submit: Add hint
+    placeholder: कृपया अपने सुझाव यहाँ दर्ज करें
+    submit: जोड़ने के संकेत
   appname: Code.org
   stage: Stage
   stage_number: 'Stage %{number}'
@@ -56,12 +56,12 @@ hi:
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: Already signed up?
     notyet_signedup: "Haven't joined yet?"
-    google_oauth2: Google Account
+    google_oauth2: गूगल खाता
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
-    forgot_password: Forgot your password?
-    need_confirmation: "Didn't receive confirmation instructions?"
+    windowslive: Microsoft खाता
+    forgot_password: अपना पासवर्ड भूल गए?
+    need_confirmation: पुष्टिकरण निर्देश प्राप्त नहीं हुआ?
     need_unlock: "Didn't receive unlock instructions?"
   signup_form:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
@@ -77,7 +77,7 @@ hi:
     address_placeholder: address, city, state, zip
     gender: Gender (optional)
     birthday: Birthday (optional)
-    age: Age
+    age: आयु
     user_type: Are you a student or teacher?
     submit: Sign up
     teacher: Are you a teacher?
@@ -93,7 +93,7 @@ hi:
   signin_form:
     title: Have an account already? Sign in
     login: Email or username
-    password: Password
+    password: पासवर्ड
     remember: Remember me
     submit: Sign in
   signin:
@@ -108,7 +108,7 @@ hi:
     login: Sign in
   password:
     reset_form:
-      title: Forgot your password?
+      title: अपना पासवर्ड भूल गए?
       email: Email address
       submit: Send me reset password instructions
     change_form:
@@ -219,6 +219,7 @@ hi:
         artist: Draw Something
     user:
       classroom: Teacher Home Page
+      district_dashboard: District Dashboard
       label: 'Hi %{username}'
       stats: My progress
       settings: My account
@@ -259,8 +260,8 @@ hi:
       trophies: Trophies
     students:
       name: नाम
-      username: Username
-      password: Password
+      username: उपयोगकर्ता नाम
+      password: पासवर्ड
       manage: Manage students
       dashboard: Go to Teacher Dashboard
       add: Add students
@@ -349,6 +350,7 @@ hi:
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Male
     female: Female
@@ -438,6 +440,9 @@ hi:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -467,6 +472,14 @@ hi:
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: Correct
     correct_body: That is the correct answer.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
   dialog:
@@ -551,3 +564,5 @@ hi:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

@@ -55,3 +55,22 @@ sv:
       not_saved:
         one: '1 fel förbjöd %{resource} från att sparas:'
         other: '%{count} fel förbjöd %{resource} från att sparas:'
+    invitations:
+      send_instructions: 'E-post inbjudan har skickats till %{email}.'
+      invitation_token_invalid: Inbjudnings symbolen som tillhandahålls är inte giltig!
+      updated: Lösenordet är korrekt. Du är nu inloggad.
+      no_invitations_remaining: Inga inbjudningar kvar
+      invitation_removed: Din inbjudan togs bort.
+      new:
+        header: Skicka inbjudan
+        submit_button: Skicka en inbjudan
+      edit:
+        header: Ange ditt lösenord
+        submit_button: Ange mitt lösenord
+    mailer:
+      invitation_instructions:
+        subject: Inbjudnings instruktioner
+        hello: 'Hej %{email}'
+        someone_invited_you: 'Någon har bjudit in dig till %{url}, du kan acceptera det via länken nedan.'
+        accept: Acceptera inbjudan
+        ignore: 'Om du inte vill acceptera inbjudan, Vänligen ignorera detta email. < br / > kontot skapas inte förrän går in på  länken ovan och anger ditt lösenord.'

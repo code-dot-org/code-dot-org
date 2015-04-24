@@ -60,7 +60,7 @@
         Bee Conditionals Multiple Choice Two: Abeille Conditions Choix multiple Deux
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500
-        Choose the best blocks: Choisis les meilleurs blocs
+        Choose the best blocks.: Choisissez les meilleurs blocs.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -97,8 +97,8 @@
       2-3 Algorithms Multi 1:
         Multiple Choice: Questions à choix multiples
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Choisis un algorithme pour l'image
-          fournie
+        Choose an algorithm for the image provided.: Choose an algorithm for the image
+          provided.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Commencer
           par un carré<br/>Mettez un triangle au-dessus du carré<br/>Mettez un triangle
           au-dessous du carré
@@ -171,36 +171,36 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' bloc
-          +<br>bloc -<br>bloc / <br>bloc * <br> bloc #0 <br>bloc  # ??? <br> bloc
-          de taille'
+        ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block': ' +
+          block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block
+          <br> size block'
         Blue colored blocks are associated with __________ ?: Les blocs de couleur
           bleue sont associés avec __________ ?
         a image: une image
         a number: un nombre
-        a string: une chaîne de caractères
-        boolean: un boolean
+        a string: une ligne de texte
+        boolean: booléen
       2-3 multi match 2:
-        Purple colored blocks are associated with __________ ?: Purple colored blocks
-          are associated with __________ ?
+        Purple colored blocks are associated with __________ ?: Les blocs de couleur
+          violette son associés avec __________ ?
         a image: une image
         a number: un nombre
-        a string: une chaîne de caractères
-        boolean: un boolean
+        a string: une ligne de texte
+        boolean: booléen
       2-3 multi match 3:
-        Teal colored blocks are associated with __________ ?: Teal colored blocks
-          are associated with __________ ?
+        Teal colored blocks are associated with __________ ?: Les blocs de couleurs
+          vives sont associés avec __________ ?
         a image: une image
         a number: un nombre
-        a string: une chaîne de caractères
-        boolean: un boolean
+        a string: une ligne de texte
+        boolean: booléen
       2-3 multi match 4:
         Green colored blocks are associated with __________ ?: Green colored blocks
           are associated with __________ ?
         a image: une image
         a number: un nombre
-        a string: une chaîne de caractères
-        boolean: un boolean
+        a string: une ligne de texte
+        boolean: booléen
       4-5 artist multi 1:
         Artist Multiple Choice: Questions à choix multiples de l'Artiste
         Which blocks draw a rectangle with a perimeter of 100?: Quels blocs permettent
@@ -311,24 +311,22 @@
         Multiple Choice: Questions à choix multiples
         Which one of these items is hardest to describe an algorithm for?: Pour laquelle
           de ces activités est-il le plus difficile de décrire un algorithme ?
-        <h4>Brushing your teeth</h4>: <h4>Te brosser les dents</h4>
-        <h4>Baking cookies</h4>: <h4>Préparer des cookies</h4>
-        <h4>Shopping from a grocery list</h4>: <h4>Faire des courses à partir d'une
-          liste</h4>
-        <h4>Banana</h4>: <h4>Banane</h4>
+        Brushing your teeth: Brushing your teeth
+        Baking cookies: Baking cookies
+        Shopping from a grocery list: Shopping from a grocery list
+        Banana: Banana
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Questions à choix multiples
         0: '? Voici trois phrases. Parmi les modèles ci-dessous, lequel fait la bonne
           abstraction pour que chacune des phrases corresponde à ce modèle ?'
         1: ': Voici trois phrases. Parmi les modèles ci-dessous, lequel fait la bonne
           abstraction pour que chacune des phrases corresponde à ce modèle ?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Seattle
-          est une grande ville.<br/>Eugene est une ville moyenne.<br/>Hillview est
-          une petite ville.</h4>
-        <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ une _____ _____.</h4>
-        <h4>_____ is a _____ city.</h4>: <h4>_____ est une _____ ville.</h4>
-        <h4>_____ is _____ a _____.</h4>: <h4>_____ est _____ une _____.</h4>
-        <h4>Eugene is a _____ city.</h4>: <h4>Eugene est une _____ ville.</h4>
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
+          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        Eugene is a _____ city.: Eugene is a _____ city.
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Questions à choix multiples
         Which of these pictures best represents crowdsourcing?: Laquelle de ces images
@@ -340,40 +338,39 @@
         Which one of these activities would be best for practicing crowdsourcing?: Laquelle
           de ces activités serait la meilleure pour s'entraîner à de la production
           participative ?
-        <h4>Cleaning your room</h4>: <h4>Nettoyer ta chambre</h4>
-        <h4>Eating your dessert</h4>: <h4>Manger ton dessert</h4>
-        <h4>Brushing your hair</h4>: <h4>Te brosser les cheveux</h4>
-        <h4>Washing your face</h4>: <h4>Te laver le visage</h4>
+        Cleaning your room: Cleaning your room
+        Eating your dessert: Eating your dessert
+        Brushing your hair: Brushing your hair
+        Washing your face: Washing your face
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Questions à choix multiples
         Which piece of information listed below is okay to share on the internet?: Quelles
           informations ci-dessous peuvent être partagées sans problème sur Internet
           ?
-        <h4>Your birthday</h4>: <h4>Votre anniversaire</h4>
-        <h4>Your favorite food</h4>: <h4>Ton plat préféré</h4>
-        <h4>Your address</h4>: <h4>Votre adresse</h4>
-        <h4>Your parent's credit card number</h4>: <h4>Le numéro de carte de crédit
-          de tes parents</h4>
+        Your birthday: Your birthday
+        Your favorite food: Your favorite food
+        Your address: Your address
+        Your parent's credit card number: Your parent's credit card number
       4-5 Internet Multi 1:
         Multiple Choice: Questions à choix multiples
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Quand
           tu essayes de te connecter à code.org, vers quelle adresse IP le DNS a-t-il
           le plus de chances de t'orienter ?
-        <h4>23.23.224.106</h4>: <h4>23.23.224.106</h4>
-        <h4>54.209.61.132</h4>: <h4>54.209.61.132</h4>
-        <h4>64.14.68.10</h4>: <h4>64.14.68.10</h4>
-        <h4>54.243.71.82</h4>: <h4>54.243.71.82</h4>
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        64.14.68.10: 64.14.68.10
+        54.243.71.82: 54.243.71.82
       4-5 Internet Multi 2:
         Multiple Choice: Questions à choix multiples
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Si
           le DNS t'a dirigé ver la page à l'adresse IP 100.42.50.110, sur quel site
           es-tu ?
-        <h4>code.org</h4>: <h4>code.org</h4>
-        <h4>csisfun.com</h4>: <h4>csisfun.com</h4>
-        <h4>thinkersmith.org</h4>: <h4>thinkersmith.org</h4>
-        <h4>khanacademy.org</h4>: <h4>khanacademy.org</h4>
+        code.org: code.org
+        csisfun.com: csisfun.com
+        thinkersmith.org: thinkersmith.org
+        khanacademy.org: khanacademy.org
       4-5 Songwriting Multi 1:
         Multiple Choice: Questions à choix multiples
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
@@ -402,19 +399,50 @@
       4-5 Suncatchers Multi 1:
         Multiple Choice: Questions à choix multiples
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Lequel
-          des programmes ci-dessous <em>ne</em> fais <em>pas</em> la même séquence
-          que le Programme 1
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
+          of the programs below <em>does not</em> make the exact same sequence as
+          Program 1?
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
         Video game Coordinates: Coordonnées de jeu vidéo
         Ninjacat Demo Embed.level: Ninjacat Démo Embed.level
+        0: '? Given what you know about video games and the coordinate plane, which
+          of these statements describes the unicorn''s movements in the most precise
+          way?'
+        1: ': Given what you know about video games and the coordinate plane, which
+          of these statements describes the unicorn''s movements in the most precise
+          way?'
         The unicorn moves across the screen: La licorne se déplace sur l'écran
         The unicorn's y value changes: La coordonnée y de la licorne change
         The unicorn moves to the left: La licorne bouge vers la gauche
-        The unicorn's x value changes: La coordonnée x de la licorne change
+        The unicorn's x value decreases: The unicorn's x value decreases
+      ECSPD growth mindset in the classroom:
+        Growth Mindset in the Classroom: Growth Mindset in the Classroom
+        How can we use praise to encourage Growth Mindset in our students?: How can
+          we use praise to encourage Growth Mindset in our students?
+        praise students for getting the right answer: praise students for getting
+          the right answer
+        praise the process that students use to solve problems: praise the process
+          that students use to solve problems
+        praise students for their intelligence: praise students for their intelligence
+      ECSPD growth mindset question:
+        Impact of Growth Mindset: Impact of Growth Mindset
+        Based on the video you saw before, please answer the following question.: Based
+          on the video you saw before, please answer the following question.
+        0: '? In the video, Carol Dweck describes an online math game that rewarded
+          student effort, strategy, and progress. What results did they see from students
+          who played this game?'
+        1: ': In the video, Carol Dweck describes an online math game that rewarded
+          student effort, strategy, and progress. What results did they see from students
+          who played this game?'
+        more effort: more effort
+        more strategies: more strategies
+        more engagement over longer periods of time: more engagement over longer periods
+          of time
+        more perseverance: more perseverance
+        all of the above: all of the above
       K-1 Artist 1 Multi 1:
         Multiple Choice: Questions à choix multiples
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -670,6 +698,7 @@
           "rouge")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solide rouge)
       msm variables multi 1:
+        x = 15<br>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of x?: Quelle est la valeur de x ?
         a function: une fonction
         15: '15'
@@ -702,7 +731,7 @@
         x = 15<br>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
         What is the value of a + b?: Quelle est la valeur de a + b ?
         8: '8'
-        function: fonction
+        a function: une fonction
         ab: ab
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: x = 15<br/>a = 2<br>b = 6
@@ -770,17 +799,23 @@
         y: true
       Multi Strings Images 1:
         Strings and Images Multiple Choice: Chaînes et Choix Multiple d'images
-        Multi Strings Images 1.blocks3.level: Multi chaînes Images 1.blocks3.level
+        http://staging.studio.code.org/script_assets/msm/green-rect.png: http://staging.studio.code.org/script_assets/msm/green-rect.png
         Which of these Evaluation Blocks will draw the image: Lequel de ces blocs
           d'évaluation dessinera l'image
-        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi chaînes Images
-          1.blocks1.start_blocks, 300, 100
-        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi chaînes Images
-          1.blocks2.start_blocks, 300, 100
-        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi chaînes Images
-          1.blocks3.start_blocks, 300, 100
-        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi chaînes Images
-          1.blocks4.start_blocks, 300, 100
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
+          1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
+          1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
+          1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
+          1.blocks4.start_blocks, 350, 100
+      PDECS attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please
+          confirm that you have read the Attendance Policy and will work to follow
+          it.
+        I have read and agree to the Attendance Policy: I have read and agree to the
+          Attendance Policy
       PDK5 Basic CS:
         Video Follow-up Question: Question de suivi vidéo
         Answer this question based on the video you just watched.: Répondez à cette
@@ -809,7 +844,7 @@
         Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 Course Maps:
-        Navigating Courses 1, 2, and 3: Navigating Courses 1, 2, and 3
+        Navigating Courses 1, 2, and 3: Navigation dans les cours 1, 2 et 3
         Are you ready to move on?: Êtes-vous prêt à passer ?
         'Yes': Oui
       PDK5 Course Overview:
@@ -866,9 +901,8 @@
           un point-virgule
         Because you can focus on the logic of programming: Parce que vous pouvez vous
           concentrer sur la logique de programmation
-        Because the commands are available in a menu rather than having to remember them yourself: Parce
-          que les commandes sont disponibles dans un menu plutôt que de devoir se
-          souvenir d'elles
+        Because the commands are listed in a menu rather than having to remember them yourself: Because
+          the commands are listed in a menu rather than having to remember them yourself
         All of the above: Toutes ces réponses
       PDK5 What is CS:
         What is Computer Science?: Qu'est-ce que l'informatique ?
@@ -941,8 +975,70 @@
         this is a question?: Il s'agit d'une question ?
         wrong answer: mauvaise réponse
         right answer: bonne réponse
+      U1L10 Assessment 1:
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        'Question #1': 'Question #1'
+        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What
+          is the minimum number of bits you need to encode the 26 letters of alphabet
+          plus a space?
+        2 bits: 2 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+      U1L10 Assessment 2:
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        'Question # 2': 'Question # 2'
+        0: "? \"The standard QWERTY keyboard has 47 keys that when pressed cause a
+          character show up on the screen. Consider also that the shift key, which
+          when pressed at the same time as a character key, changes the resulting
+          character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered
+          in this question). \n\nHow many bits would you need to encode everything
+          that could be typed on this keyboard?\""
+        1: ": \"The standard QWERTY keyboard has 47 keys that when pressed cause a
+          character show up on the screen. Consider also that the shift key, which
+          when pressed at the same time as a character key, changes the resulting
+          character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered
+          in this question). \n\nHow many bits would you need to encode everything
+          that could be typed on this keyboard?\""
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+      U1L11 Assessment 1:
+        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
+        'Question #1': 'Question #1'
+        What is ASCII text?: What is ASCII text?
+        American Strict Conformance of Internet Interchange: American Strict Conformance
+          of Internet Interchange
+        Authentication Standards for Commerce in Interstate Information: Authentication
+          Standards for Commerce in Interstate Information
+        American Standard Code for Information Interchange: American Standard Code
+          for Information Interchange
+        Automatic Serial Coding for Interface Interchange: Automatic Serial Coding
+          for Interface Interchange
+      U1L11 Assessment 2:
+        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
+        'Question #2': 'Question #2'
+        How many bytes are used to encode a single ASCII character?: How many bytes
+          are used to encode a single ASCII character?
+        1 byte: 1 byte
+        2 bytes: 2 bytes
+        4 bytes: 4 bytes
+        8 bytes: 8 bytes
+        16 bytes: 16 bytes
+      U1L6 Assessment multiple choice:
+        'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
+        If you just had a circle and a square, how many 3-shape rows could you make?: If
+          you just had a circle and a square, how many 3-shape rows could you make?
+        4: '4'
+        6: '6'
+        8: '8'
+        10: '10'
+        12: '12'
       unique level name here:
-        line1<br/>line2: ligne1 <br/> ligne2
+        title: titre
         description here: description ici
         Question: Question
         wrong answer: mauvaise réponse

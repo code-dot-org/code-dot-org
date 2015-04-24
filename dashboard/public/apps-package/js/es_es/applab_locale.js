@@ -31,12 +31,12 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "catActions":function(d){return "Acciones"},
-"catControl":function(d){return "vuelta"},
+"catControl":function(d){return "Bucles"},
 "catEvents":function(d){return "Eventos"},
 "catLogic":function(d){return "Lógica"},
 "catMath":function(d){return "Matemáticas"},
-"catProcedures":function(d){return "funciones"},
-"catText":function(d){return "texto"},
+"catProcedures":function(d){return "Funciones"},
+"catText":function(d){return "Texto"},
 "catVariables":function(d){return "variables"},
 "continue":function(d){return "Continuar"},
 "container":function(d){return "crear contenedor"},
@@ -52,8 +52,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForeverTooltip":function(d){return "Ejecuta repetidamente las acciones en este bloque mientras la aplicación está ejecutando."},
 "shareApplabTwitter":function(d){return "Échale un vistazo a la aplicación que hice. Yo mismo la escribí con @codeorg"},
 "shareGame":function(d){return "Comparte tu aplicación:"},
-"stepIn":function(d){return "Continuar"},
-"stepOver":function(d){return "Esquivar"},
+"stepIn":function(d){return "Paso: Dentro del Método"},
+"stepOver":function(d){return "paso final"},
 "stepOut":function(d){return "Salir"},
-"viewData":function(d){return "Ver información relacionada"},
+"viewData":function(d){return "Ver datos"},
 "yes":function(d){return "Sí"}};

@@ -431,11 +431,33 @@ ru:
         playlab_events: 'Лаборатория игр - события'
         playlab_repeat_forever: 'Лаборатория игр: Повторять бесконечно'
         tutorial_puzzle_challenge: 'Урок - Головоломка'
-        msm_1_intro: Информатика в алгебре. Глава 1 Введение
-        msm_2_eval_block: Блоки оценивания
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Переменные
-        msm_7_functions: Процедуры
+        infinity_playlab_intro: 'Лаборатория игр - введение'
+        infinity_playlab_events: 'Лаборатория игр - события'
+        infinity_playlab_repeat_forever: 'Лаборатория игр - повторять бесконечно'
+        csp_concept_rgb: Немного о пикселях
+        csp_pixelation_color_1: 'Инструмент пикселизации цвета - часть 1'
+        csp_pixelation_color_2: 'Инструмент пикселизации цвета - часть 2'
+        csp_pixelation_color_3: 'Инструмент пикселизации цвета - часть 3'
+        csp_pixelation_bw: Инструмент пикселизации чёрного и белого
+        csp_U1L14_tipstricks: 'Модуль 1, урок 14: советы для учителей'
+        csp_textcompression: Text compression widget
+        alg_1_intro: 'CS in Algebra - Introduction'
+        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
+        alg_3_pemdas: 'CS in Algebra - Order of Operations'
+        alg_4_data_types: 'CS in Algebra - Data Types'
+        alg_5_contracts: 'CS in Algebra - Contracts'
+        alg_6_variables: 'CS in Algebra - Variables'
+        alg_7_function: 'CS in Algebra - Functions'
+        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
+        alg_9_booleans: 'CS in Algebra - Booleans'
+        alg_10_conditionals: 'CS in Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
+        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
+        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
+        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
+        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
+        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока
@@ -502,3 +524,8 @@ ru:
         arrows_move_actor: Используйте стрелки для перемещения персонажа
         right_arrow_fireball: Используйте стрелку вправо для стрельбы огненными шарами
         name_function: Напишите здесь название вашей процедуры
+        Infinity_move_right_runbutton: 'Добавьте сюда блок "двигаться"'
+        Infinity_move_directions_callout: Какой блок сделают Baymax переместить при нажатии стрелки вверх?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Воспроизведение звука, когда происходит данное событие.
+        Infinity_repeat_callout: Место переместить блоки внутри здесь

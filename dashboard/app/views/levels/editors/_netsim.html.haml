@@ -12,9 +12,29 @@
       %td= f.label :show_routers_in_lobby, 'Show Routers in Lobby'
       %td Whether router nodes should appear in the lobby list at all.
     %tr
+      %td= boolean_check_box f, :can_connect_to_clients
+      %td= f.label :can_connect_to_clients, 'Can connect to clients'
+      %td Whether the student can connect directly to other students' client nodes.
+    %tr
+      %td= boolean_check_box f, :can_connect_to_routers
+      %td= f.label :can_connect_to_routers, 'Can connect to routers'
+      %td Whether the student can connect to router nodes.
+    %tr
       %td= boolean_check_box f, :show_add_router_button
       %td= f.label :show_add_router_button, 'Show "Add Router" Button'
-      %td Whether the "Add Router" button should be available to students
+      %td Whether the "Add Router" button should be available to students.
+
+%h3 Simulation Configuration
+.field
+  = f.label :message_granularity, 'Message Granularity'
+  %p Whether the simulator puts a single bit into storage at a time, or a whole packet. Should use 'bits' for variant 1 (levels about the coordination problem), and 'packets' for levels where the coordination problem is abstracted away.
+  = f.select :message_granularity, options_for_select(@level.class.message_granularity_options, @level.message_granularity)
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :automatic_receive
+      %td= f.label :automatic_receive, 'Auto-receive'
+      %td Whether the local node will watch the message table and automatically pick up messages directed to itself, dumping them into the message log.  If false, some other method must be used for receiving data (like a manual 'receive' button)
 
 %h3 Packet Headers
 .field
@@ -74,6 +94,36 @@
   = f.text_area :default_enabled_encodings, placeholder: 'Which encodings are enabled by default?', rows: 4
   :javascript
       codeMirror('default_enabled_encodings', 'javascript');
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_metronome
+      %td= f.label :show_metronome, 'Show metronome'
+      %td Whether the visual metronome (and its related speed control) are visible on the "My Device" tab.
+    %tr
+      %td= boolean_check_box f, :show_bit_rate_control
+      %td= f.label :show_bit_rate_control, 'Show bit rate control'
+      %td Whether the bit rate slider should be displayed on the "My Device" tab.
+    %tr
+      %td= boolean_check_box f, :lock_bit_rate_control
+      %td= f.label :lock_bit_rate_control, 'Lock bit rate control'
+      %td Whether the bit rate slider can be manipulated by the student
+    %tr
+      %td= boolean_check_box f, :show_chunk_size_control
+      %td= f.label :show_chunk_size_control, 'Show chunk size control'
+      %td Whether the chunk size slider should be displayed on the "My Device" tab.
+    %tr
+      %td= boolean_check_box f, :lock_chunk_size_control
+      %td= f.label :lock_chunk_size_control, 'Lock chunk size control'
+      %td Whether the chunk size slider can be manipulated by the student
+.field
+  = f.label :default_bit_rate_bits_per_second
+  %p Default local device bit rate on level load.  Also sets the pulse rate for levels with the metronome.
+  = f.text_field :default_bit_rate_bits_per_second, placeholder: 'Bit rate in bits per second, e.g. "1024" or "Infinity".'
+.field
+  = f.label :default_chunk_size_bits
+  %p Default chunk size on level load.
+  = f.text_field :default_chunk_size_bits, placeholder: 'Chunk size in bits, e.g. "8".'
 
 %h3 Router Tab
 .field

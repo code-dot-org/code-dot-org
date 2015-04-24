@@ -18,7 +18,7 @@ Category: UI controls
 [description]
 
 [short_description]
-Appends the specified HTML to the bottom of the document.
+Appends the specified HTML within a DIV element to the bottom of the document.
 [/short_description]
 
 [/description]
@@ -28,10 +28,12 @@ ____________________________________________________
 
 [example]
 
+**Display an Application Title**
+Creates and displays a title at the top of your application.
+
 <pre>
-// Create a choice between male or female
-radioButton("Male",false, "MaleFemale");
-radioButton("Female", true, "MaleFemale");
+write("&lt;H1>My Awesome Application&lt;/H1>");
+// Followed by the rest of your application
 </pre>
 
 [/example]
@@ -40,11 +42,29 @@ ____________________________________________________
 
 [example]
 
-**The Checked Item**
-Determine which radio button within a group is checked.
-
+**Ticker Tape Calculator**
+Creates a simple ticker tape calculator.
 <pre>
-
+textInput("value","0");
+write("&lt;br>");
+button("plus","+");
+button("minus","-");
+button("clear","clear");
+onEvent("plus");
+var total = 0;
+onEvent("plus","click", function(event) {
+  total += parseFloat(getText("value"));
+  write(total);
+})
+onEvent("minus","click", function(event) {
+  total -= parseFloat(getText("value"));
+  write(total);
+})
+onEvent("clear", "click", function(event) {
+  total = 0;
+  write(total);
+})
+write(total);
 </pre>
 
 [/example]
@@ -55,7 +75,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-button("uniqueIdentifier",false, "GroupName")
+write(html)
 </pre>
 
 [/syntax]
@@ -67,8 +87,7 @@ button("uniqueIdentifier",false, "GroupName")
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | yes | A unique identifier for the checkbox button. The id is used for referencing the radio button text input. For example, to assign event handlers. |
-| options | string | yes | Whether the checkbox is initially checked. |
+| html | string | yes | The HTML you want appended to the bottom of your application |
 [/parameters]
 
 [returns]
@@ -81,7 +100,8 @@ No Return Value
 [tips]
 
 ### Tips
-Be careful writing HTML in the page that may contain content inputted by your users.  The HTML can cause additional code to be executed.
+The HTML added to the bottom of your page. The HTML can also include executable code so be careful adding any HTML to the page that may contain content entered by your users.
+
 [/tips]
 
 [bug]

@@ -100,11 +100,11 @@
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
-        Webapp: Laboratorium Aplikasi
+        Webapp: Aplikasi Lab
         ArtistEC: Artis
         TextMatch: Cocok Teks
         StudioEC: Lab Permainan
-        Applab: Laboratorium Aplikasi
+        Applab: Aplikasi Lab
         NetSim: Simulator Internet
     trophy:
       name:
@@ -333,10 +333,9 @@
           ukuran. (Tips: Klik bintang untuk menambahkan masukan ke fungsi)'
         turtle_3_7: Tambahkan input bernama "tinggi" untuk "gambar rumah" dan membangun
           sebuah rumah yang besar untuk gajah (panjang 150 pixel)
-        turtle_3_8: Berikut adalah semua blok dari teka-teki sebelumnya.  Modifikasi
-          "gambar rumah" sehingga saya berada di sudut kanan bawah setelah mengambar
-          rumah baru. Gunakan fungsi yang telah dimodifikasi ini untuk menggambar
-          tiga rumah.
+        turtle_3_8: Memodifikasi "menggambar rumah" jadi saya berakhir di sudut kanan
+          bawah setelah menggambar sebuah rumah baru. Gunakan fungsi memodifikasi
+          ini untuk menggambar tiga rumah.
         turtle_3_9: Dapatkah Anda kembali membuat fungsi "gambar sebuah rumah" tanpa
           bantuan? Cobalah, dan kemudian gambarlah sederetan rumah.
         turtle_3_10: Anda telah banyak belajar! Sekarang cobalah untuk menggambar
@@ -694,12 +693,34 @@
         playlab_intro: Pengantar Lab Permainan
         playlab_events: 'Lab Permainan Event '
         playlab_repeat_forever: Lab Permainan Ulangi Selamanya
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Evaluation Blocks
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Variabel
-        msm_7_functions: Fungsi
+        tutorial_puzzle_challenge: Tutorial tantangan teka-teki
+        infinity_playlab_intro: Play Lab - Pendahuluan
+        infinity_playlab_events: Play Lab - Kegiatan
+        infinity_playlab_repeat_forever: Play Lab - ulangi selamanya
+        csp_concept_rgb: Sedikit tentang piksel
+        csp_pixelation_color_1: widget pixelation Warna - Bagian 1
+        csp_pixelation_color_2: widget pixelation Warna - Bagian 2
+        csp_pixelation_color_3: widget pixelation Warna - Bagian 3
+        csp_pixelation_bw: widget pixelation Hitam dan Putih - Bagian 1
+        csp_U1L14_tipstricks: Unit 1 pelajaran 14 Tips & Trik guru
+        csp_textcompression: Text compression widget
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain
@@ -718,56 +739,60 @@
         studio_say_text: Tuliskan apa yang anda inginkan untuk aktor katakan dalam
           tanda kutip tersebut
         jigsaw_click: Klik blok ini!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
+        move_elsa_forward: Tarik blok "Maju" dan pasang di bawah blok "Jalankan" untuk
+          membuat Elsa maju
+        turn_elsa: Gunakan block "Belok" untuk membuat Elsa berputar. Jumlah dalam
+          drop-down menentukan berapa banyak putaran Elsa
+        replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
+          angka
+        replace_questions_degree: Gunakan drop-down untuk menggantikan"???" dengan
+          derajat yang tepat untuk memutar
+        repeat_blocks: Gunakan blok "Ulangi" dan membungkusnya di sekitar blok ruang
+          kerja
+        repeat_blocks_1: (1) Gunakan blok ini dan Letakkan di sekitar blok abu-abu
+          didalam ruang kerja
+        repeat_blocks_2: (2)Gerakkan blok "Ulangi" di sini, dan tempatkan blok abu-abu
+          di dalamnya
+        snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
+        degrees_per_side: Bagilah 360 Dari jumlah sisi untuk mendapatkan ukuran masing-masing
+          sudut dalam derajat.
         set_sides: Gunakan blok ini untuk menetapkan "sisi" jumlah yang diperlukan
           untuk menyelesaikan teka-teki.
         set_length: Gunakan blok ini untuk menetapkan "panjang" dengan nilai yang
           benar.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?
+        which_equation: persamaan manakah yang membuat tiap sisi lebih pendek untuk
+          bentuk dengan banyak sisi?
         get_nectar: Gunakan blok baru "dapatkan nektar".
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
+        actions_category: Kotak alat ini punya tampilan baru! Blok "Tindakan" berada
+          di sini sekarang.
         draw_square_hint: 'Petunjuk: Menggunakan loop persegi yang baru saja Anda
           buat dalam teka-teki terakhir.'
         edit_function: Klik di sini untuk mengedit fungsi Anda.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        create_function: Klik di sini untuk membuka flyout "Fungsi", kemudian klik
+          tombol "Membuat fungsi".
+        house_hint: Tidak apa jika gambar tidak terlihat seperti rumah lagi. Kami
+          akan memperbaikinya dalam teka-teki berikutnya.
+        edit_draw_square: Gunakan tombol ini untuk mengedit fungsi dan menambahkan
+          loop.
+        edit_get_nectar: Gunakan tombol ini untuk mengedit fungsi dan mengubah arah
+          lebah akan berbalik untuk mendapatkan nektarnya.
+        logic_category: Buka flyout "Logika" untuk menemukan blok "jika/kecuali".
+        length_parameter: Dapatkah Anda memperbarui fungsi ini sehingga dapat menggunakan
+          parameter "panjang" ?
+        frozen_diamond_repeat: Gunakan blok ulangi untuk membuat bentuk ini.
+        frozen_circle_function_in_circle_turn: Jangan lupa untuk mengubahnya setelah
+          membuat setiap lingkaran.
+        frozen_circle_function_with_parameter_circle: Gunakan blok "create a circle"
+          dan ubahlah ukuran.
+        frozen_snowflake_branch: Menggunakan blok "create a snowflake branch"
+        frozen_create_square: lampirkan lebih banyak blok di sini untuk membuat persegi
+        playlab_drag_say: Seret blok "say" di sini dan ketik "Hello"
+        playlab_use_twice: Gunakan blok ini dua kali dan ingat untuk mengubah nomor
+          aktor
+        playlab_move_girl: Gunakan "pindah kanan" blok untuk memindahkan gadis Tenis
         playlab_play_sound: Tambahkan "putar suara" blok di sini
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
+        playlab_arrow_keys: Ingatlah untuk menggunakan ini untuk memindahkan penyihir
+          setelah mengklik jalankan
         playlab_add_move: Tambahkan blok "gerak" dalam blok berulang (repeat) ini
         playlab_add_score: Tambahkan Skor blok di sini
         playlab_add_blocks: Tambahkan blok anda disini
@@ -775,26 +800,34 @@
         place_variable: Tarik Anda variabel di dalam blok ini
         bee_for_loop: Tarik jumlah terbesar nektar lebah yang Anda inginkan disini
         place_counter_variable: Tarik variabel counter di dalam blok ini
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
+        function_editor_draw_square: Ini adalah definisi fungsi Anda. Blok ini dijalankan
+          setiap kali Anda menggunakan blok "draw a square"
         change_here: Buat perubahan Anda di sini
         write_draw_square_function: Tarik blok dari toolbox ke sini untuk menggambar
           persegi
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
+        write_draw_triangle_function: Tarik blok dari toolbox ke sini yang menggambar
+          segitiga
+        edit_add_parameter: Klik edit untuk menambahkan parameter ke dalam fungsi
+          Anda
+        add_and_drag_parameter: Tulis nama parameter Anda di sini, klik Tambahkan,
+          dan kemudian tarik ke definisi fungsi Anda
+        fill_in_actor: Isikan ??? dengan angka yang sesuai dengan masing-masing aktor
+          (1, 2, dan 3)
+        repeat: Menempatkan blok dalam loop untuk mengulangi perintah
+        if_bee_nectar: Gunakan blok "jika" untuk memutuskan apakah lebah harus mendapatkan
+          nektar
+        if_else_bee: Gunakan blok "jika/kecuali" sehingga lebah mendapat nektar dari
+          bunga, dan membuat madu jika bukan bunga
+        repeat_full_circle: Masukkan jumlah waktu zombie harus bergerak untuk membuat
+          lingkaran penuh
+        place_length_variable: Tariklah panjang variabel berikut untuk menggantikan
+          tanda tanya
         arrows_move_actor: Gunakan panah untuk memindahkan aktor
         right_arrow_fireball: Gunakan panah kanan untuk menembak bola api
         name_function: Menulis nama fungsi Anda di sini
+        Infinity_move_right_runbutton: Menambahkan blok gerak di sini
+        Infinity_move_directions_callout: Blok manakah yang akan membuat Baymax naik
+          ketika panah atas ditekan?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Mainkan suara ketika peristiwa ini terjadi.
+        Infinity_repeat_callout: Tempat blok gerak di sini

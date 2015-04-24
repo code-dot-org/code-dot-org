@@ -4,7 +4,7 @@ theme: none
 ---
 - authentication_required!
 
-%a{href:'/ops-dashboard'}
+%a{href:'/teacher-dashboard'}
   Dashboard
 
 %h1
@@ -14,7 +14,7 @@ theme: none
   %a{href:'/ops-dashboard#/districts'}
     %h2
       Manage Districts
--if dashboard_user[:admin]
+-if dashboard_user[:admin] || have_permission?('facilitator')
   %a{href:'/ops-dashboard#/workshops'}
     %h2
       Manage PD Workshops

@@ -1,6 +1,6 @@
 module OPS
-  API = 'api' if !defined? API
-  DASHBOARDAPI = 'dashboardapi' if !defined? DASHBOARDAPI
+  API = 'api' unless defined? API
+  DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
 end
 
 Dashboard::Application.routes.draw do
@@ -68,7 +68,8 @@ Dashboard::Application.routes.draw do
     omniauth_callbacks: 'omniauth_callbacks',
     registrations: 'registrations',
     confirmations: 'confirmations',
-    sessions: 'sessions'
+    sessions: 'sessions',
+    passwords: 'passwords'
   }
   get 'discourse/sso' => 'discourse_sso#sso'
 
@@ -182,7 +183,10 @@ Dashboard::Application.routes.draw do
       end
     end
     resources :cohorts do
-      delete 'teachers/:teacher_id', action: 'destroy_teacher', on: :member
+      member do
+        get 'teachers'
+        delete 'teachers/:teacher_id', action: 'destroy_teacher'
+      end
     end
     resources :workshops do
       resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting

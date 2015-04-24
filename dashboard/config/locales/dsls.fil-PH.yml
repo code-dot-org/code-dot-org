@@ -1,189 +1,91 @@
 "fil":
   data:
-    text_match:
-      Blocks to Bools 1:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        bools to math 1.blocks.start_blocks: bools to math 1.blocks.start_blocks
-        (4+5) > 9: (4+5) > 9
-        ((4+5) > 9): ((4+5) > 9)
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Bools 2:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
-        (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
-        (10 > 11) OR (7 <= 9): (10 > 11) || (7 <= 9)
-        (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Bools 3:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
-        (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
-        (5 < 10) AND (10 < 15): (5 < 10) and (10 < 15)
-        (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Bools 4:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
-        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR
-          ((8 < x) AND (x < 10))
-        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
-          ((8 < x) and (x < 10))
-        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
-          < x) && (x < 10))
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Math 1:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
-          200
-        4 + 5: 4 + 5
-        (4+5): (4+5)
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Math 2:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks,
-          200
-        7 * 6: 7 * 6
-        (7 * 6): (7 * 6)
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Math 3:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
-        (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
-        2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
-        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Math 4:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
-        (5 + 8) - 12: (5 + 8) - 12
-        5 + 8 - 12: 5 + 8 - 12
-        ((5 + 8) - 12): ((5 + 8) - 12)
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Math 5:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
-        (-2) * (-6):
-        - 2 * -6: -2 * -6
-        ((-2) * (-6)): ((-2) * (-6))
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Math 6:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
-        ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
-        ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
-        (4 - 1) * (-2) + 12: ((4 - 1) * (-2)) + 12
-        (4 - 1) * -2 + 12: ((4 - 1) * (-2)) + 12
-        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Blocks to Math 7:
-        Convert Blocks to Math: Kino-convert ang mga Block sa Math
-        Type out the arithmetic expression that matches this code: I-type ang arithmetic
-          expression na tumutugma sa code na ito
-        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
-        10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
-        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
-      Open text response example:
-        Open text response example: Open text response example
-        I loved it because...: I loved it because...
-      PDK5 Classroom Culture 2:
-        Facilitating a positive learning environment in your computer science classroom: Facilitating
-          a positive learning environment in your computer science classroom
-        0: '? Now that you know more about our curriculum, what practices do you want
-          to use to promote a healthy atmosphere in your computer science classroom?'
-        1: ': Now that you know more about our curriculum, what practices do you want
-          to use to promote a healthy atmosphere in your computer science classroom?'
-        In my classroom, I want to...: In my classroom, I want to...
-      PDK5 Course Descriptions:
-        Course Structure: Course Structure
-        I am going to start with Course...: I am going to start with Course...
-      PDK5 Difficulty:
-        Degree of Difficulty: Degree of Difficulty
-        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was
-          programming as hard as you expected? Explain why or why not. How does this
-          impact your teaching of computer science?
-        Your thoughts here: Your thoughts here
-      PDK5 Foundation:
-        Computer Science as a Foundational Skill: Computer Science as a Foundational
-          Skill
-        Do you see computer science as a foundational skill for your students? Why or why not?: Do
-          you see computer science as a foundational skill for your students? Why
-          or why not?
-        Your thoughts here: Your thoughts here
-      PDK5 Impact 1:
-        Impact for students: Impact for students
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do
-          you think your students will find the online activities in the K-5 courses
-          fun and engaging? Why or Why not?
-        Your thoughts here: Your thoughts here
-      PDK5 Impact 2:
-        Connections to other Subjects: Connections to other Subjects
-        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does
-          computer science connect to other topics or subjects your students are learning
-          about? Explain why or why not.
-        Your thoughts here: Your thoughts here
-      PDK5 Impact 3:
-        Real-world applications for Students: Real-world applications for Students
-        0: '? Does learning about computer science help students grow into the kind
-          of citizens you are preparing them to be? Explain why or why not.'
-        1: ': Does learning about computer science help students grow into the kind
-          of citizens you are preparing them to be? Explain why or why not.'
-        Your thoughts here: Your thoughts here
-      PDK5 Problem Solving:
-        Problem Solving Methods: Problem Solving Methods
-        I could integrate this in my classroom by...: I could integrate this in my
-          classroom by...
-      PDK5 Promo Video:
-        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
-          approved'
-      PDK5 Promo Video 2:
-        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
-          approved'
-        My first impressions of Code Studio are...: My first impressions of Code Studio
-          are...
-      PDK5 Strategies O:
-        Strategies for Teaching Computer Science: Strategies for Teaching Computer
-          Science
-        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'I
-          think teaching computer science will be different than teaching other subjects
-          in these ways: ...'
-      Test Markdown level:
-        Enter title here: Enter title here
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: Big Triangle
+        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
+        EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
+        Write a contract for a big red triangle that is 100 pixels in size: Write
+          a contract for a big red triangle that is 100 pixels in size
+      Creating Contracts From Examples 2:
+        Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
+        Square Contract: Square Contract
+        Square|Image|Number|String: Square|Image|Number|String
+        Write a contract for a purple square that is 15 pixels in size.: Write a contract
+          for a purple square that is 15 pixels in size.
+      Creating Contracts From Examples 3A:
+        Banner Contract: Banner Contract
+        Banner Function block: Banner Function block
+        Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
+        banner|Image|String: banner|Image|String
+      Creating Contracts From Examples 4:
+        Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
+        Shrink Contract: Shrink Contract
+        Try using the "shrink" function.: Try using the "shrink" function.
+        shrink|Image|Image: shrink|Image|Image
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: Design Recipe 1 Contract
+        0: '? Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.'
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.'
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+      Enter name here:
+        Contract Name|Number|Number|String: Contract Name|Number|Number|String
         Enter prompt here: Enter prompt here
-      text match test:
-        Mathematical Expression Assessment: Mathematical Expression Assessment
-        Type out the arithmetic expression that this circle of evaluation evaluates to: I-type
-          ang arithmetic na expression na ini-evaluate ng grupong ito sa
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
-          1/Exercise_5_question_2.png
-        (9-3)+(4*7): (3/9) + (4 * 7)
-        (9-3)+4: 
-        9-3+4: 
-        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+        Enter title here: Enter title here
+      Eval Contracts 1 B:
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+          300
+        Star Contract: Star Contract
+        Write a contract for the star function: Write a contract for the star function
+        star|Image|String|Number|String: star|Image|String|Number|String
+      Eval Contracts 2 B:
+        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
+          300
+        Rotate Contract: Rotate Contract
+        Write a contract for the rotate function: Write a contract for the rotate
+          function
+        rotate|Image|Number|Image: rotate|Image|Number|Image
+      Eval Contracts 3 B:
+        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
+          300
+        Text Contract: Text Contract
+        Write a contract for the text function: Write a contract for the text function
+        text|Image|String|Number|String: text|Image|String|Number|String
+      Eval Contracts 4 B:
+        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
+          300
+        Scale Contract: Scale Contract
+        Write a contract for the scale function: Write a contract for the scale function
+        scale|Image|Number|Image: scale|Image|Number|Image
+      Eval Contracts B:
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
+          300
+        Star Contract: Star Contract
+        Write a contract for the star function: Write a contract for the star function
+        star|Image|Number|String|String: star|Image|Number|String|String
+      Eval Contracts D:
+        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
+          300
+        Rotate Contract: Rotate Contract
+        Write a contract for the rotate function: Write a contract for the rotate
+          function
+        rotate|Image|Number|Image: rotate|Image|Number|Image
+      Eval Contracts F:
+        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
+          300
+        Text Contract: Text Contract
+        Write a contract for the text function: Write a contract for the text function
+        text|Image|String|Number|String: text|Image|String|Number|String
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: Design Recipe 1 Contract
+        0: '? Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.'
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle
+          of given height and color that is twice as wide as it is tall.'
+        wide-rect|Image|Number|String: wide-rect|Image|Number|String
     external:
-      Code Logo v3:
-        title: title
-        Create images with bits and bytes.: Create images with bits and bytes.
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -191,16 +93,50 @@
           - U1L5 - Sending Bits in the real world
         description here: description here
       CSPStudentLessonPlanTemplate:
-        title: title
         description here: description here
+        title: title
+      Code Logo v3:
+        Create images with bits and bytes.: Create images with bits and bytes.
+        title: title
+      ECSPD PD overview:
+        ECS PD Overview: ECS PD Overview
+      ECSPD curriculum overview:
+        ECS Curriculum Overview: ECS Curriculum Overview
+        Overview of Curriculum: Overview of Curriculum
+      ECSPD growth mindset strategies:
+        Growth Mindset Strategies: Growth Mindset Strategies
+      ECSPD meet facilitator:
+        Meet your Facilitator!: Meet your Facilitator!
+      ECSPD program overview:
+        ECS Program Overview: ECS Program Overview
+        Overview of ECS Program: Overview of ECS Program
+      ECSPD what is growth mindset:
+        An exploration of Growth Mindset: An exploration of Growth Mindset
+        What is Growth Mindset?: What is Growth Mindset?
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: []
       Mixing Colors:
-        title: title
         description here: description here
+        title: title
+      PDAlg Intro: []
+      PDCSP Intro: []
+      PDECS Intro:
+        PD Intro: PD Intro
+        Welcome to ECS Online PD: Welcome to ECS Online PD
+      PDECS Welcome Video:
+        Welcome Video: Welcome Video
+        Welcome to Online PD for ECS: Welcome to Online PD for ECS
+      PDECS commitment:
+        ECS PD commitments: ECS PD commitments
+        overview of program commitments: overview of program commitments
+      PDECS tour:
+        Tour of PD Space: Tour of PD Space
+        tour of the PD space: tour of the PD space
       PDK5 Beyond C:
         Beyond: Beyond
+      PDK5 CS overview:
+        Overview of programming concepts: Overview of programming concepts
       PDK5 Classroom Culture C:
         Classroom Culture: Classroom Culture
       PDK5 Course Maps C: []
@@ -223,37 +159,15 @@
         Course Progress: Course Progress
       PDK5 Teacher Dashboard C:
         Teacher Dashboard: Teacher Dashboard
-      PDK5 Unplugged Intro C:
-        Unplugged intro: Unplugged intro
       PDK5 UVideo Overview C:
         Kiki video overview: Kiki video overview
+      PDK5 Unplugged Intro C:
+        Unplugged intro: Unplugged intro
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Why teach computer science
           in elementary school?
-      Pixelation 1:
-        Pixelation 1: Pixelation 1
-        Create images with bits and bytes.: Create images with bits and bytes.
-      Pixelation 2:
-        Pixelation 2: Pixelation 2
-        Create images with bits and bytes.: Create images with bits and bytes.
-      Pixelation 3:
-        Pixelation 3: Pixelation 3
-        Create images with bits and bytes.: Create images with bits and bytes.
-      Pixelation 3 Bit Colors:
-        title: title
-        description here: description here
-      Pixelation 4:
-        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker
-          test of External level -- NOT REAL
-        Create images with bits and bytes.: Create images with bits and bytes.
-      Pixelation 4x4 Empty:
-        Pixelation 4x4 Empty: Pixelation 4x4 Empty
-        Create images with bits and bytes.: Create images with bits and bytes.
-      Pixelation Bee:
-        title: title
-        description here: description here
-      Pixelation Flappy:
-        title: title
+      Pixelation - Hadi Emoji:
+        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
         description here: description here
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit
@@ -271,14 +185,14 @@
         'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
         description here: description here
       Pixelation - Lesson 14 - Make the Letter A:
-        title: title
         description here: description here
+        title: title
       Pixelation - Lesson 14 - Make your own B and W Image:
-        title: title
         description here: description here
+        title: title
       Pixelation - Lesson 14 - Make your own B&W Image:
-        title: title
         description here: description here
+        title: title
       Pixelation - Lesson 15 - Color Free Play:
         Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free
           Play
@@ -324,113 +238,398 @@
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
-      test demo level:
-        demo title: demo title
-        demo description: demo description
+      Pixelation 1:
+        Create images with bits and bytes.: Create images with bits and bytes.
+        Pixelation 1: Pixelation 1
+      Pixelation 2:
+        Create images with bits and bytes.: Create images with bits and bytes.
+        Pixelation 2: Pixelation 2
+      Pixelation 3:
+        Create images with bits and bytes.: Create images with bits and bytes.
+        Pixelation 3: Pixelation 3
+      Pixelation 3 Bit Colors:
+        description here: description here
+        title: title
+      Pixelation 4:
+        Create images with bits and bytes.: Create images with bits and bytes.
+        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker
+          test of External level -- NOT REAL
+      Pixelation 4x4 Empty:
+        Create images with bits and bytes.: Create images with bits and bytes.
+        Pixelation 4x4 Empty: Pixelation 4x4 Empty
+      Pixelation Bee:
+        description here: description here
+        title: title
+      Pixelation Flappy:
+        description here: description here
+        title: title
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was
           programming as hard as you expected? Explain why or why not. How does this
           impact your teaching of computer science?
-      test html katie:
-        testing: testing
-        lkajsdfasdf: lkajsdfasdf
-      unique level name here:
-        title: title
+      Text Compression 1:
+        Compress text by identifying repeated patterns.: Compress text by identifying
+          repeated patterns.
+        Text Compression 1: Text Compression 1
+      Text Compression Peter Piper:
+        Compress text by identifying repeated patterns.: Compress text by identifying
+          repeated patterns.
+        Text Compression Peter Piper: Text Compression Peter Piper
+      U1L1 Student Lesson Introduction:
         description here: description here
-    contract_match:
-      CREATING CONTRACTS FROM EXAMPLES 1:
-        Big Triangle: Big Triangle
-        Write a contract for a big red triangle that is 100 pixels in size: Write
-          a contract for a big red triangle that is 100 pixels in size
-        EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
-      Creating Contracts From Examples 2:
-        Square Contract: Square Contract
-        Write a contract for a purple square that is 15 pixels in size.: Write a contract
-          for a purple square that is 15 pixels in size.
-        Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
-        Square|Image|Number|String: Square|Image|Number|String
-      Creating Contracts From Examples 3A:
-        Banner Contract: Banner Contract
-        Banner Function block: Banner Function block
-        Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        banner|Image|String: banner|Image|String
-      Creating Contracts From Examples 4:
-        Shrink Contract: Shrink Contract
-        Try using the "shrink" function.: Try using the "shrink" function.
-        Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        shrink|Image|Image: shrink|Image|Image
-      Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
-      Enter name here:
-        Enter title here: Enter title here
+        title: title
+      U1L10 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L11 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L12 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L13 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L16 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L2 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L3 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L4 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L4 Widget Demo - Video:
+        Widget Demonstration - Video: Widget Demonstration - Video
+        description here: description here
+      U1L5 How the Internet Works - Video:
+        How the Internet Works - Video: How the Internet Works - Video
+        description here: description here
+      U1L5 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L6 Odometer Widget:
+        Odometer Widget: Odometer Widget
+        description here: description here
+      U1L6 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L7 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U1L8 Student Lesson Introduction:
+        Sending Numbers: Sending Numbers
+        description here: description here
+      U1L9 Student Lesson Introduction:
+        description here: description here
+        title: title
+      test demo level:
+        demo description: demo description
+        demo title: demo title
+      test html katie:
+        lkajsdfasdf: lkajsdfasdf
+        testing: testing
+      unique level name here:
+        description here: description here
+        title: title
+    text_match:
+      Blocks to Bools 1:
+        ((4+5) > 9): ((4+5) > 9)
+        (4+5) > 9: (4+5) > 9
+        /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png,
+          300
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Bools 2:
+        (10 > 11) OR (7 <= 9): (10 > 11) || (7 <= 9)
+        (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
+        (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
+        /script_assets/msm/unit6/blockstomath2.png, 500: /script_assets/msm/unit6/blockstomath2.png,
+          500
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Bools 3:
+        ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
+        ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
+        ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
+        ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
+        (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
+        (5 < 10) AND (10 < 15): (5 < 10) and (10 < 15)
+        (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
+        (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
+        /script_assets/msm/unit6/blockstomath3.png, 500: /script_assets/msm/unit6/blockstomath3.png,
+          500
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Bools 4:
+        (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) ||
+          ((8 < x) && (x < 10)))
+        (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5))
+          OR ((8 < x) AND (x < 10)))
+        (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5))
+          Or ((8 < x) And (x < 10)))
+        (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5))
+          or ((8 < x) and (x < 10)))
+        ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
+          < x) && (x < 10))
+        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR
+          ((8 < x) AND (x < 10))
+        ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or
+          ((8 < x) And (x < 10))
+        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
+          ((8 < x) and (x < 10))
+        /script_assets/msm/unit6/blockstomath4.png, 500: /script_assets/msm/unit6/blockstomath4.png,
+          500
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Math 1:
+        (4+5): (4+5)
+        4 + 5: 4 + 5
+        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks,
+          200
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Math 2:
+        (7 * 6): (7 * 6)
+        7 * 6: 7 * 6
+        Blocks to Math 2.blocks.start_blocks, 200: Blocks to Math 2.blocks.start_blocks,
+          200
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Math 3:
+        ((2 * 3) - (1 + 0)): ((2 * 3) - (1 + 0))
+        (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
+        (2 * 3) - 1 + 0: (2 * 3) - 1 + 0
+        2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
+        2 * 3 - 1 + 0: 2 * 3 - 1 + 0
+        Blocks to Math 3.blocks.start_blocks: Blocks to Math 3.blocks.start_blocks
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Math 4:
+        ((5 + 8) - 12): ((5 + 8) - 12)
+        (5 + 8) - 12: (5 + 8) - 12
+        5 + 8 - 12: 5 + 8 - 12
+        Blocks to Math 4.blocks.start_blocks: Blocks to Math 4.blocks.start_blocks
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Math 5:
+        ((-2) * (-6)): ((-2) * (-6))
+        (-2) * (-6):
+        - 2 * -6: -2 * -6
+        Blocks to Math 5.blocks.start_blocks: Blocks to Math 5.blocks.start_blocks
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Math 6:
+        ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
+        ((4 - 1) * (-2)) + 12): ((4 - 1) * (-2)) + 12)
+        ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
+        (4 - 1) * (-2) + 12: ((4 - 1) * (-2)) + 12
+        (4 - 1) * -2 + 12: ((4 - 1) * (-2)) + 12
+        Blocks to Math 6.blocks.start_blocks: Blocks to Math 6.blocks.start_blocks
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      Blocks to Math 7:
+        (10 / (2 * (3 + 1)): (10 / (2 * (3 + 1))
+        10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
+        Blocks to Math 7.blocks.start_blocks: Blocks to Math 7.blocks.start_blocks
+        Convert Blocks to Math: Kino-convert ang mga Block sa Math
+        Type out the arithmetic expression that matches this code: I-type ang arithmetic
+          expression na tumutugma sa code na ito
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito
+      ECSPD strategies:
+        Classroom Strategies Journal: Classroom Strategies Journal
+      ECSPD your goals:
+        Documenting Your Goals: Documenting Your Goals
+      Open text response example:
+        I loved it because...: I loved it because...
+        Open text response example: Open text response example
+      PDK5 Challenges:
+        Biggest Challenges: Biggest Challenges
+      PDK5 Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Facilitating
+          a positive learning environment in your computer science classroom
+        In my classroom, I want to...: In my classroom, I want to...
+        0: '? Now that you know more about our curriculum, what practices do you want
+          to use to promote a healthy atmosphere in your computer science classroom?'
+        1: ': Now that you know more about our curriculum, what practices do you want
+          to use to promote a healthy atmosphere in your computer science classroom?'
+      PDK5 Course Descriptions:
+        Course Structure: Course Structure
+        I am going to start with Course...: I am going to start with Course...
+      PDK5 Difficulty:
+        Degree of Difficulty: Degree of Difficulty
+        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was
+          programming as hard as you expected? Explain why or why not. How does this
+          impact your teaching of computer science?
+        Your thoughts here: Your thoughts here
+      PDK5 Foundation:
+        Computer Science as a Foundational Skill: Computer Science as a Foundational
+          Skill
+        Do you see computer science as a foundational skill for your students? Why or why not?: Do
+          you see computer science as a foundational skill for your students? Why
+          or why not?
+        Your thoughts here: Your thoughts here
+      PDK5 Goals:
+        Goals for using Code.org in your Classroom: Goals for using Code.org in your
+          Classroom
+      PDK5 Impact 1:
+        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do
+          you think your students will find the online activities in the K-5 courses
+          fun and engaging? Why or Why not?
+        Impact for students: Impact for students
+        Your thoughts here: Your thoughts here
+      PDK5 Impact 2:
+        Connections to other Subjects: Connections to other Subjects
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does
+          computer science connect to other topics or subjects your students are learning
+          about? Explain why or why not.
+        Your thoughts here: Your thoughts here
+      PDK5 Loops 2:
+        The Importance of Loops: The Importance of Loops
+      PDK5 Problem Solving:
+        I could integrate this in my classroom by...: I could integrate this in my
+          classroom by...
+        Problem Solving Methods: Problem Solving Methods
+      PDK5 Promo Video:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
+          approved'
+      PDK5 Promo Video 2:
+        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher
+          approved'
+        My first impressions of Code Studio are...: My first impressions of Code Studio
+          are...
+      PDK5 Strategies O:
+        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'I
+          think teaching computer science will be different than teaching other subjects
+          in these ways: ...'
+        Strategies for Teaching Computer Science: Strategies for Teaching Computer
+          Science
+      PDK5 Test5:
+        Big Test: Big Test
+      Test Free Response Assessment Question:
+        Enter your reflection here: Enter your reflection here
+        0: '? Imagine that you have to send a list of 10 numbers to friend in binary
+          using the bit-sending widget. The numbers are all between 0 and 100. Describe
+          the issues or problems that you and your friend would encounter in trying
+          to do this. How would you address these problem?'
+        1: ': Imagine that you have to send a list of 10 numbers to friend in binary
+          using the bit-sending widget. The numbers are all between 0 and 100. Describe
+          the issues or problems that you and your friend would encounter in trying
+          to do this. How would you address these problem?'
+        Sending Numbers Free Response: Sending Numbers Free Response
+      Test Markdown level:
         Enter prompt here: Enter prompt here
-        Contract Name|Number|Number|String: Contract Name|Number|Number|String
-      Eval Contracts 1 B:
-        Star Contract: Star Contract
-        Write a contract for the star function: Write a contract for the star function
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
-          300
-        star|Image|String|Number|String: star|Image|String|Number|String
-      Eval Contracts 2 B:
-        Rotate Contract: Rotate Contract
-        Write a contract for the rotate function: Write a contract for the rotate
-          function
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
-          300
-        rotate|Image|Number|Image: rotate|Image|Number|Image
-      Eval Contracts 3 B:
-        Text Contract: Text Contract
-        Write a contract for the text function: Write a contract for the text function
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
-          300
-        text|Image|String|Number|String: text|Image|String|Number|String
-      Eval Contracts 4 B:
-        Scale Contract: Scale Contract
-        Write a contract for the scale function: Write a contract for the scale function
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks,
-          300
-        scale|Image|Number|Image: scale|Image|Number|Image
-      Eval Contracts B:
-        Star Contract: Star Contract
-        Write a contract for the star function: Write a contract for the star function
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks,
-          300
-        star|Image|Number|String|String: star|Image|Number|String|String
-      Eval Contracts D:
-        Rotate Contract: Rotate Contract
-        Write a contract for the rotate function: Write a contract for the rotate
-          function
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks,
-          300
-        rotate|Image|Number|Image: rotate|Image|Number|Image
-      Eval Contracts F:
-        Text Contract: Text Contract
-        Write a contract for the text function: Write a contract for the text function
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks,
-          300
-        text|Image|String|Number|String: text|Image|String|Number|String
-      Eval Design Recipe 1.contract:
-        Design Recipe 1 Contract: Design Recipe 1 Contract
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle
-          of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
-      Rocket Contract 1:
-        Contract for rocket-height: Contract for rocket-height
-        0: '? A rocket blasts off, traveling at 15 meters per second. Write a contract
-          for the function rocket-height that takes in the number of seconds that
-          have passed since the rocket took off, and which produces the height of
-          the rocket at that time.'
-        1: ': A rocket blasts off, traveling at 15 meters per second. Write a contract
-          for the function rocket-height that takes in the number of seconds that
-          have passed since the rocket took off, and which produces the height of
-          the rocket at that time.'
-        rocket-height|Number|Number: rocket-height|Number|Number
+        Enter title here: Enter title here
+      U1L10 Assessment Free Response:
+        'A follow-up to the Assessment Question #2:': 'A follow-up to the Assessment
+          Question #2:'
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+      U1L10 Journal Free Response:
+        'Free Response: Encoding Text': 'Free Response: Encoding Text'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L11 Reflection Free Response:
+        'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L12 Reflection Free Response:
+        'Reflection: Data Storage': 'Reflection: Data Storage'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L13 Assessment 1:
+        'Assessment 1: Text Compression': 'Assessment 1: Text Compression'
+        Write (in the space below) a segment of text that should compress effectively and efficiently.: Write
+          (in the space below) a segment of text that should compress effectively
+          and efficiently.
+      U1L13 Assessment 2:
+        'Assessment 2: Text Compression': 'Assessment 2: Text Compression'
+        Write (in the space below) a segment of text that will not compress well.: Write
+          (in the space below) a segment of text that will not compress well.
+      U1L13 Reflection Free Response:
+        'Reflection: Text Compression': 'Reflection: Text Compression'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L16 Reflection Free Response:
+        'Reflection: Encoding Complex data': 'Reflection: Encoding Complex data'
+        Respond to this prompt or to another as directed by your teacher.: Respond
+          to this prompt or to another as directed by your teacher.
+      U1L2 Free response assessment question:
+        'Assessment: Sending Binary Messages': 'Assessment: Sending Binary Messages'
+        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
+        Enter your response here.: Enter your response here.
+      U1L2 Free response reflection question:
+        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
+        Enter your reflection here.: Enter your reflection here.
+        'Reflection: Sending Binary Messages': 'Reflection: Sending Binary Messages'
+      U1L3 Free response reflection question:
+        Complete the Lesson 3 Rubric.: Complete the Lesson 3 Rubric.
+        Enter your reflection here.: Enter your reflection here.
+        'Reflection: Sending Complex Messages': 'Reflection: Sending Complex Messages'
+      U1L4 Free Response Reflection:
+        Enter your reflection here.: Enter your reflection here.
+        Reflect on this lesson: Reflect on this lesson
+      U1L4 Free response reflection question:
+        'Assessment: Bit sending Widget': 'Assessment: Bit sending Widget'
+        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
+        Enter your reflection here.: Enter your reflection here.
+      U1L5 Free Response Assessment:
+        Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.: Complete
+          the rubric for Lesson 5. Then respond to this prompt using approximately
+          100 words.
+        Free Response Assessment: Free Response Assessment
+      U1L5 Free Response Lesson Review:
+        Complete these three sentences.: Complete these three sentences.
+        Lesson Review: Lesson Review
+      U1L6 Free Response Assessment:
+        'Assessment: Number Systems': 'Assessment: Number Systems'
+      U1L6 Free Response Reflection:
+        'Reflection: Number Systems': 'Reflection: Number Systems'
+      U1L7 Free Response Assessment:
+        'Assessment: Binary Numbers': 'Assessment: Binary Numbers'
+      U1L7 Free Response Reflection:
+        'Reflect on your learning in this lesson. In the space below, enter:': 'Reflect
+          on your learning in this lesson. In the space below, enter:'
+        'Reflection: Binary Numbers': 'Reflection: Binary Numbers'
+      U1L8 Free Response Getting Started:
+        'Getting Started: Sending Numbers ': 'Getting Started: Sending Numbers '
+        Respond to the following question.: Respond to the following question.
+      U1L8 Free Response Reflection:
+        Complete the Sending Numbers Checklist and then respond to the following prompt.: Complete
+          the Sending Numbers Checklist and then respond to the following prompt.
+        'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
+      U1L9 Free Response Assessment:
+        'Assessment: Real-world Numbers ': 'Assessment: Real-world Numbers '
+      text match test:
+        (9-3)+(4*7): (3/9) + (4 * 7)
+        (9-3)+4: 
+        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
+          1/Exercise_5_question_2.png
+        9-3+4: 
+        Mathematical Expression Assessment: Mathematical Expression Assessment
+        Type out the arithmetic expression that this circle of evaluation evaluates to: I-type
+          ang arithmetic na expression na ini-evaluate ng grupong ito sa
+        Type the arithmetic expression here: I-type ang aritmetika na expression dito

@@ -7,7 +7,7 @@ class PropertyBag
   end
 
   def initialize(channel_id, storage_id)
-    channel_owner, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
+    _, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
 
     @table = PEGASUS_DB[:app_properties]
@@ -69,7 +69,7 @@ class DynamoPropertyBag
   end
 
   def initialize(channel_id, storage_id)
-    channel_owner, @channel_id = storage_decrypt_channel_id(channel_id)
+    _, @channel_id = storage_decrypt_channel_id(channel_id)
     @storage_id = storage_id
 
     @hash = "#{@channel_id}:#{storage_id}"

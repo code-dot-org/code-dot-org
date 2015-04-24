@@ -266,6 +266,7 @@
         artist: Gambarlah Sesuatu
     user:
       classroom: Beranda Guru
+      district_dashboard: Wilayah Dashboard
       label: Halo %{username}
       stats: Kemajuan saya
       settings: Akun saya
@@ -416,6 +417,7 @@
     heading_apps: <h2>Menyenagkan bagi</h2><h1>Semua orang</h1>
     heading_legacy: <h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>
     your_gallery: Galeri
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Laki-laki
     female: Wanita
@@ -518,6 +520,10 @@
       body: Lihat galeri gambarn aplikasi dan seniman yang dibuat oleh pengguna kami
     frozen:
       title: Frozen
+    infinity:
+      title: Play Lab tak tebatas
+      body: Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi
+        karakter Disney tak terbatas.
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
     students_made_these_with_code: Siswa membuat ini dengan kode program!
@@ -532,7 +538,7 @@
     caption_by_name_age: oleh %{name}, usia %{age}
     caption_time_ago: '%{time_ago} yang lalu'
     header: Galeri
-    header_playlab: Play Lab
+    header_playlab: Play Lab/Lab Permainan
     header_artist: Artis
   landing:
     prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
@@ -554,6 +560,16 @@
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
+  contract_match:
+    wrong_title: Jawaban Salah
+    badname: Kontrak Anda memiliki nama yang salah.
+    badname_case: Nama-nama fungsi bersifat case-sensitive. Cobalah mengubah bentuk
+      nama kontrak Anda.
+    badrange: Kontrak Anda memiliki jarak yang salah.
+    baddomainsize: Kontrak Anda tidak memiliki jumlah yang tepat dari item dalam domain.
+    baddomainname: Satu atau lebih dari item domain Anda memiliki nama yang salah.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Masukkan jawaban Anda di sini
   dialog:
@@ -610,46 +626,48 @@
     tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami.
     u.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: belum dimulai
+    in_progress: sedang berlangsung
     completed_too_many_blocks: selesai, terlalu banyak blok
     completed_perfect: selesai, sempurna
     furthest_level_attempted: tingkat terjauh yang dicoba
-    assessment: assessment
+    assessment: penilaian
   studio:
     courses_working_on: Kursus yang sedang Anda kerjakan
     completed_courses: Kursus yang telah diselesaikan
     all_courses: Semua kursus
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Proyek
+    create: Buat proyek
+    create_a_project: 'Buat proyek baru:'
+    new: Buat baru
+    rename: Ubah Nama
     save: Simpan
     delete: Hapus
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Kembali ke Kursus
+    my_projects: Project Saya
     share: Bagikan
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Bagikan proyek Anda
+    share_copy_link: 'Salin link:'
+    close: Tutup
     more: Lebih
     name: Nama
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Diperbarui
+    project_type: Jenis proyek
+    help_text: Klik <strong>Buat aplikasi</strong> atau <strong>Menggambar sesuatu</strong>
+      di bawah ini untuk membuat sebuah proyek Play Lab  atau artis baru! <br/>Anda
+      dapat kembali dan bekerja pada proyek Anda setiap saat.
+    need_help: Perlu bantuan untuk memulai?
     really_delete: Hapus?
     delete_yes: Ya
     delete_no: Tidak
-    saved: Saved
-    not_saved: Not saved
+    saved: Disimpan
+    not_saved: Tidak disimpan
     cancel: Batal
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Apakah Anda yakin Anda ingin menghapus proyek ini?
+    delete_confirm_text: Saat menghapus proyek Anda akan menghapusnya secara permanen
+      dari daftar proyek anda. Siapa saja yang telah Anda bagikan link tidak akan
+      lagi dapat melihat proyek Anda.
+    view_all: Lihat proyek saya
+    remix: Remix
+    click_to_remix: Klik 'Remix' untuk mematikan putaran versi Anda sendiri!

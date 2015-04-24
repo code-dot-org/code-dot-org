@@ -159,9 +159,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "çember (yarıçap,stil,renk)"},
 "displayBlockTitle":function(d){return "değerlendirme"},
 "ellipseBlockTitle":function(d){return "Elips (genişlik, yükseklik, stil, renk)"},
-"emptyFunctionalBlock":function(d){return "Doldurulmamış bir giriş bloğunuz bulunuyor."},
-"extraTopBlocks":function(d){return "Bağlantı yapılmamış bloklarınız var. Bunları \"görüntüleme\" bloğuyla mı ilişkilendirecek istediniz?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
+"extraTopBlocks":function(d){return "Bağlanmamış bloklarınız var. Bunları \"değerlendir\" bloğuna bağlamak mı istiyorsunuz?"},
+"infiniteRecursionError":function(d){return "Fonksiyonunuz kendi kendini çağırıyor. Onu durdurduk, yoksa sonsuza kadar kendisini çağırmaya devam edecekti."},
 "overlayBlockTitle":function(d){return "kaplama (üst, alt)"},
 "placeImageBlockTitle":function(d){return "Görüntü Yerleştir (x, y, resim)"},
 "offsetBlockTitle":function(d){return "uzaklık (x, y, resim)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "katı"},
 "string":function(d){return "dize"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

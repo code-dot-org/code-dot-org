@@ -15,6 +15,18 @@
   float: right;
 }
 
+#save_image {
+  margin: 3px 0 5px 0;
+}
+
+#actual_size_label {
+  margin-top: 9px;
+}
+
+#actual_size {
+  margin: 0;
+}
+
 #pixel_format {
   color: #fff;
   background: #000;

@@ -157,9 +157,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "Du hast einen ungültigen Farbnamen verwendet: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "Du hast einen ungültigen Stilnamen verwendet: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "Kreis (Radius, Stil, Farbe)"},
-"displayBlockTitle":function(d){return "Display"},
+"displayBlockTitle":function(d){return "Bewerten"},
 "ellipseBlockTitle":function(d){return "Ellipse (Breite, Höhe, Stil, Farbe)"},
-"emptyFunctionalBlock":function(d){return "Du hast einen Block ohne Eingabe."},
 "extraTopBlocks":function(d){return "Sie haben freie Blöcke. Möchtest du diese an den \"Anzeige\" Block anfügen?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "Overlay (oben, unten)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "fest"},
 "string":function(d){return "String"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

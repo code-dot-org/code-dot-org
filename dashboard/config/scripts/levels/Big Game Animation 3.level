@@ -28,7 +28,7 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Animation 3\",\r\n  \"callout_text\": \"Edit this function to animate the danger\",\r\n  \"element_id\": \"#game_update_danger\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Animation 3\",\r\n  \"callout_text\": \"Edit this function to animate the danger\",\r\n  \"element_id\": \"#game_update_danger > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "step_speed": "50",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -36,10 +36,12 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "maze_data": null,
     "custom_game_type": "Big Game",
-    "min_workspace_height": "1500"
-  }
+    "min_workspace_height": "1500",
+    "disable_examples": "false",
+    "maze_data": null
+  },
+  "md5": "4732e873bc06203d800f71619265ca75"
 }]]></config>
   <blocks/>
 </Studio>

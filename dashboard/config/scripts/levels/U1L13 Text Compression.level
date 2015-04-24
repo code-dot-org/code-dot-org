@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-17T22:42:17.000Z",
+  "properties": {
+    "href": "text-compression/text-compression.html",
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "U1L13 Text Compression",
+    "content1": "Compress text by identifying repeated patterns."
+  },
+  "md5": "700b7a101c5c10f16082720a7f2c969b"
+}]]></config>
+</External>

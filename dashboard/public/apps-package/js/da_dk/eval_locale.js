@@ -159,8 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "cirkel (radius, stil, farve)"},
 "displayBlockTitle":function(d){return "evaluér"},
 "ellipseBlockTitle":function(d){return "ellipse (bredde, højde, stil, farve)"},
-"emptyFunctionalBlock":function(d){return "Du har en blok med et ikke-udfyldt input."},
-"extraTopBlocks":function(d){return "Du har separate blokke. Mente du fastgøre disse til \"display\" blokken?"},
+"extraTopBlocks":function(d){return "Du har ikke-vedhæftede blokke. Ønskede du at vedhæfte disse til \"vurdér\"-blokken?"},
 "infiniteRecursionError":function(d){return "Din funktion kalder sig selv. Vi have stoppet den, da den ellers ville have fortsat med at kalder sig for evigt (loop)."},
 "overlayBlockTitle":function(d){return "overlay (top, bund)"},
 "placeImageBlockTitle":function(d){return "placer-billede (x, y, billede)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "solid"},
 "string":function(d){return "string"},
 "stringMismatchError":function(d){return "Du har en streng med den forkerte kapitalisering."},
-"userCodeException":function(d){return "Der opstod en fejl under eksekvering af din kode."}};
+"userCodeException":function(d){return "Der opstod en fejl under eksekvering af din kode."},
+"wrongBooleanError":function(d){return "Dine blokke evaluerer til den forkerte boolesk værdi."}};

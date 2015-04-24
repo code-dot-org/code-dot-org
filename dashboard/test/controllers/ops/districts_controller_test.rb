@@ -5,10 +5,19 @@ module Ops
     API = ::OPS::API
 
     setup do
-      @request.headers['Accept'] = 'application/json'
       @admin = create :admin
       sign_in @admin
       @district = create(:district)
+    end
+
+    test 'just return json whatever you ask for' do
+      @request.headers['Accept'] = 'text/html'
+
+      get :index
+      assert_response :success
+
+      # it's a json list
+      assert_equal 1, JSON.parse(@response.body).count
     end
 
     test 'Ops team can list all districts' do

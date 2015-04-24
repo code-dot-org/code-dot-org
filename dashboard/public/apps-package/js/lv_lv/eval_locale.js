@@ -157,10 +157,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "aplis (rādiuss, stils, krāsa)"},
-"displayBlockTitle":function(d){return "novērtē"},
+"displayBlockTitle":function(d){return "izpildīt"},
 "ellipseBlockTitle":function(d){return "elipse (platums, augstums, stils, krāsa)"},
-"emptyFunctionalBlock":function(d){return "Jums ir bloks ar neaizpildītu ievadi."},
-"extraTopBlocks":function(d){return "Tev ir nepievienoti  bloki. Vai tu vēlies tos pievienot \"rādīt\" blokam?"},
+"extraTopBlocks":function(d){return "Tev ir nepievienoti bloki. Vai tu vēlējies, lai tie bloki tiktu pievienoti \"izpildes\" blokam?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "pārklājums (augša, apakša)"},
 "placeImageBlockTitle":function(d){return "novietot-attēls (x, y, attēls)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "ciets"},
 "string":function(d){return "virkne"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

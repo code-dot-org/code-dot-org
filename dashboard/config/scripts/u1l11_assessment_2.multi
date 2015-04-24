@@ -1,0 +1,14 @@
+name 'U1L11 Assessment 2'
+title 'Assessment: Sending Formatted Text'
+description 'Question #2'
+question 'How many bytes are used to encode a single ASCII character?'
+right '1 byte'
+wrong '2 bytes'
+wrong '4 bytes'
+wrong '8 bytes'
+wrong '16 bytes'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

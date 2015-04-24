@@ -11,7 +11,7 @@ ro-RO:
   learn_now: Învaţă Acum
   petition_message: Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea de a învăța tehnologia computerelor
   petition_sign_message: 'Dacă ești de acord, semnează-ți numele. Alătură-te altora #.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: Dacă ne sprijiniți, completați-vă numele. Alăturați-vă celorlalți.
   name: Nume
   email: Email
   zipcode: Cod poştal sau ţară
@@ -24,7 +24,7 @@ ro-RO:
   hoc2014_teachers: Profesori
   hoc2014_host: Găzduiți
   hoc2014_everyone: Toată lumea
-  hoc2014_support: Susțineți
+  hoc2014_support: 'Susțineți &#x25BE;'
   hoc2014_whatishoc: Ce este Ora de Cod?
   twentyhours_trynow: Încearcă acum
   california_heading: Cere şcolii tale să te învețe tehnologia computerelor
@@ -92,7 +92,7 @@ ro-RO:
   learn_classes: Găsește clase local
   hoc_is_here: '#OraDeCod este aici - Hai să vezi despre ce e vorba! @codeorg'
   just_did_hoc: 'Tocmai am făcut #OraDeCod - Hai să vezi despre ce e vorba! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: 'De ce nu se predă informatica în mai multe școli? Putem repara asta. http://youtu.be/nKIu9yen5nc. Vizitați  http://code.org/ pentru a învăța mai mult.'
   learn_hoc: Învață o Oră de Cod
   beyond_hoc: Peste de O Oră
   what_gender: Ce gen sexual ai?
@@ -111,6 +111,7 @@ ro-RO:
   stats_student: '"Ştiam că acest lucru a fost o șansă <b>o dată în viața</b>."- Mariana Alzate, elev de clasa a cincea'
   stats_michael: 'Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați să învețe."- Michael Clark, Profesor'
   studiobar_title: "Explorează <a href='http://studio.code.org'>Studio-ul Code</a>"
+  studiobar_title_nolink: Explorează Studio-ul Code
   studiobar_elementary_title: Cursuri elementare
   studiobar_elementary_body: 'Cele trei cursuri noi pentru K&#8209;5'
   studiobar_hoc_title: Ora de Programare
@@ -126,56 +127,73 @@ ro-RO:
   studiobar_shop_title: Magazin
   studiobar_shop_body: Sparge stereotipurile. Poartă logo-ul nostru cu mândrie.
   homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala
-  homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Provoc fetele din fiecare țară să studieze o Oră de Cod”&rdquo;
+    Malala, câștigătoare a Premiului Nobel pentru Pace
+  homepage_hero_text_susan: '&ldquo;Dacă puteţi schimba tehnologia, atunci puteţi schimba lumea.&rdquo; Susan, CEO de YouTube'
+  homepage_hero_text_fistbump: '&ldquo;Nu doar vă jucați pe telefon, programați-l.&rdquo; Preşedintele Barack Obama'
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Copiii noștri &mdash; inclusiv fetele &mdash; au nevoie de oportunitatea de a învăța informatică.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: '&ldquo;Informatica poate debloca cele mai bune oportunităţi în lume.&rdquo; Satya, CEO al Microsoft'
+  homepage_hero_text_bosh: |
+    &ldquo;Dacă știi să programezi, atunci poți să decizi care este cursul vieții tale.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;Aceste abilități mi-au schimbat viitorul. Și sa nu mai menționăm că este și distractiv.&rdquo;
+    Luna, clasa a VII-a
+  homepage_hero_text_student2: |
+    &ldquo;Nu mi-am vazut copiii niciodată atât de entuziasmați să învețe ceva.&rdquo;
+    Michael, profesor
+  homepage_hero_text_student3: |
+    &ldquo;Informatica este un doumeniu despre care nu poți știi dacă îți place sau nu înainte de a-l încerca.&rdquo;
+    Jackson, clasa a VI-a
+  homepage_hero_text_student4: |
+    &ldquo;În programare, poți să faci orice îți trece prin minte.&rdquo;
+    Maya, clasa a II-a
+  homepage_hero_text_student5: |
+    &ldquo;Informatica nu este pentru altcineva. Ea este pentru tine, aici și acum.&rdquo;
+    Geraldo, profesor
+  homepage_hero_text_teacher1: |
+    &ldquo;Programarea stârnește creativitatea, inspirația și inovația &mdash; toate acestea sunt esențiale în orice carieră.&rdquo;
+    Floresa, profesor
+  homepage_hero_text_teacher2: |
+    &ldquo;100% din elevii mei s-au înscris, implicat și participat.&rdquo;
+    Adam, profesor
   homepage_slot_text_hoc: Ora de Programare
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frozen cu Anna și Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Toate tutorialele noastre
   homepage_slot_text_course4: Curs 4
   homepage_slot_text_shop: Magazin
   homepage_slot_text_flappy: Codul Flappy
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_action_text_codevideo: Urmarește secvența video
+  homepage_action_text_teachervideo: Urmarește secvența video
+  homepage_action_text_learn: Începe să inveți azi
+  homepage_action_text_signpetition: Semnează petiția
+  homepage_signpetition_dropdown: 'Semnează petiția noastră &#x25BE;'
   homepage_slot_text_title_hoc: Oră de Cod
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Oricine poate învăța. Începe azi
   homepage_slot_text_link_hoc: Încearcă Ora de Cod
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Găzduiește o Oră de Cod
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Elevi
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Explorați toate tutorialele noastre
+  homepage_slot_text_link_codestudio: Încercați Code Studio
+  homepage_slot_text_link_local: Găsiți un curs local
+  homepage_slot_text_link_othercourses: Alte cursuri online
+  homepage_slot_text_title_educators: Educatori
+  homepage_slot_text_blurb_educators: Predați-le elevilor dvs.
+  homepage_slot_text_link_k5: Cursuri pentru clasele I-V (primare)
+  homepage_slot_text_link_fullcurriculum: Vedeți întregul nostru curriculum
+  homepage_slot_text_link_pd: Dezvoltare profesională
+  homepage_slot_text_title_advocates: Avocaţii
+  homepage_slot_text_blurb_advocates: Sprijiniți-ne munca
+  homepage_slot_text_link_stats: Vedeți statistici
+  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_donate: Faceți o donație
+  homepage_header_codestudio: Creațiile elevilor cu Code Studio
+  homepage_header_donors: Code.org mulţumește suporterilor săi
+  homepage_donors_seall: Vedeți-le toate
   homepage_donors_donate: Donează
   contact_form_topic_student: Sunt student
   contact_form_topic_parent: Sunt părinte

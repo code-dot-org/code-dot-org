@@ -157,9 +157,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "Olet käyttänyt virheellistä värin merkkijonoa: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "Olet käyttänyt virheellistä tyylin merkkijonoa: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "ympyrä (säde, tyyli, väri)"},
-"displayBlockTitle":function(d){return "näytä"},
+"displayBlockTitle":function(d){return "arvioi"},
 "ellipseBlockTitle":function(d){return "ellipsi (leveys, korkeus, tyyli, väri)"},
-"emptyFunctionalBlock":function(d){return "Sinulla on lohko, josta puuttuu syöte."},
 "extraTopBlocks":function(d){return "Sinulla on vapaita lohkoja. Oliko tarkoituksesi liittää nämä \"näytä\" lohkoon?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "peitto (ylhäältä, alhaalta)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "kiinteä"},
 "string":function(d){return "merkkijono"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

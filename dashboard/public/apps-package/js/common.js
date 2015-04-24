@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({94:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({96:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,520 @@ exports.define = function(name) {
   };
 };
 
-},{}],49:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
+/**
+	The missing SVG.toDataURL library for your SVG elements.
+
+	Usage: SVGElement.toDataURL( type, { options } )
+
+	Returns: the data URL, except when using native PNG renderer (needs callback).
+
+	type	MIME type of the exported data.
+			Default: image/svg+xml.
+			Must support: image/png.
+			Additional: image/jpeg.
+
+	options is a map of options: {
+		callback: function(dataURL)
+			Callback function which is called when the data URL is ready.
+			This is only necessary when using native PNG renderer.
+			Default: undefined.
+
+		[the rest of the options only apply when type="image/png" or type="image/jpeg"]
+
+		renderer: "native"|"canvg"
+			PNG renderer to use. Native renderer¹ might cause a security exception.
+			Default: canvg if available, otherwise native.
+
+		keepNonSafe: true|false
+			Export non-safe (image and foreignObject) elements.
+			This will set the Canvas origin-clean property to false, if this data is transferred to Canvas.
+			Default: false, to keep origin-clean true.
+			NOTE: not currently supported and is just ignored.
+
+		keepOutsideViewport: true|false
+			Export all drawn content, even if not visible.
+			Default: false, export only visible viewport, similar to Canvas toDataURL().
+			NOTE: only supported with canvg renderer.
+	}
+
+	See original paper¹ for more info on SVG to Canvas exporting.
+
+	¹ http://svgopen.org/2010/papers/62-From_SVG_to_Canvas_and_Back/#svg_to_canvas
+*/
+
+SVGElement.prototype.toDataURL = function(type, options) {
+	var _svg = this;
+
+	function debug(s) {
+		// We could find to a way to make this display depending on environment, but
+		// for now I think it's okay to just disable.
+		// console.log("SVG.toDataURL:", s);
+	}
+
+	function exportSVG() {
+		var svg_xml = XMLSerialize(_svg);
+		var svg_dataurl = base64dataURLencode(svg_xml);
+		debug(type + " length: " + svg_dataurl.length);
+
+		// NOTE double data carrier
+		if (options.callback) options.callback(svg_dataurl);
+		return svg_dataurl;
+	}
+
+	function XMLSerialize(svg) {
+
+		// quick-n-serialize an SVG dom, needed for IE9 where there's no XMLSerializer nor SVG.xml
+		// s: SVG dom, which is the <svg> elemennt
+		function XMLSerializerForIE(s) {
+			var out = "";
+
+			out += "<" + s.nodeName;
+			for (var n = 0; n < s.attributes.length; n++) {
+				out += " " + s.attributes[n].name + "=" + "'" + s.attributes[n].value + "'";
+			}
+
+			if (s.hasChildNodes()) {
+				out += ">\n";
+
+				for (var n = 0; n < s.childNodes.length; n++) {
+					out += XMLSerializerForIE(s.childNodes[n]);
+				}
+
+				out += "</" + s.nodeName + ">" + "\n";
+
+			} else out += " />\n";
+
+			return out;
+		}
+
+
+		if (window.XMLSerializer) {
+			debug("using standard XMLSerializer.serializeToString")
+			return (new XMLSerializer()).serializeToString(svg);
+		} else {
+			debug("using custom XMLSerializerForIE")
+			return XMLSerializerForIE(svg);
+		}
+
+	}
+
+	function base64dataURLencode(s) {
+		var b64 = "data:image/svg+xml;base64,";
+
+		// https://developer.mozilla.org/en/DOM/window.btoa
+		if (window.btoa) {
+			debug("using window.btoa for base64 encoding");
+			b64 += btoa(s);
+		} else {
+			debug("using custom base64 encoder");
+			b64 += Base64.encode(s);
+		}
+
+		return b64;
+	}
+
+	function exportImage(type) {
+		var canvas = document.createElement("canvas");
+		var ctx = canvas.getContext('2d');
+
+		// TODO: if (options.keepOutsideViewport), do some translation magic?
+
+		var svg_img = new Image();
+		var svg_xml = XMLSerialize(_svg);
+		svg_img.src = base64dataURLencode(svg_xml);
+
+		svg_img.onload = function() {
+			debug("exported image size: " + [svg_img.width, svg_img.height])
+			canvas.width = svg_img.width;
+			canvas.height = svg_img.height;
+			ctx.drawImage(svg_img, 0, 0);
+
+			// SECURITY_ERR WILL HAPPEN NOW
+			var png_dataurl = canvas.toDataURL(type);
+			debug(type + " length: " + png_dataurl.length);
+
+			if (options.callback) options.callback( png_dataurl );
+			else debug("WARNING: no callback set, so nothing happens.");
+		}
+
+		svg_img.onerror = function() {
+			console.log(
+				"Can't export! Maybe your browser doesn't support " +
+				"SVG in img element or SVG input for Canvas drawImage?\n" +
+				"http://en.wikipedia.org/wiki/SVG#Native_support"
+			);
+		}
+
+		// NOTE: will not return anything
+	}
+
+	function exportImageCanvg(type) {
+		var canvas = document.createElement("canvas");
+		var ctx = canvas.getContext('2d');
+		var svg_xml = XMLSerialize(_svg);
+
+		// NOTE: canvg gets the SVG element dimensions incorrectly if not specified as attributes
+		//debug("detected svg dimensions " + [_svg.clientWidth, _svg.clientHeight])
+		//debug("canvas dimensions " + [canvas.width, canvas.height])
+
+		var keepBB = options.keepOutsideViewport;
+		if (keepBB) var bb = _svg.getBBox();
+
+		// NOTE: this canvg call is synchronous and blocks (no it does not)
+		canvg(canvas, svg_xml, {
+			ignoreMouse: true, ignoreAnimation: true,
+			offsetX: keepBB ? -bb.x : undefined,
+			offsetY: keepBB ? -bb.y : undefined,
+			scaleWidth: keepBB ? bb.width+bb.x : undefined,
+			scaleHeight: keepBB ? bb.height+bb.y : undefined,
+			renderCallback: function() {
+				debug("exported image dimensions " + [canvas.width, canvas.height]);
+				var png_dataurl = canvas.toDataURL(type);
+				debug(type + " length: " + png_dataurl.length);
+
+				if (options.callback) options.callback( png_dataurl );
+			}
+		});
+
+		// NOTE: return in addition to callback
+		return canvas.toDataURL(type);
+	}
+
+	// BEGIN MAIN
+
+	if (!type) type = "image/svg+xml";
+	if (!options) options = {};
+
+	if (options.keepNonSafe) debug("NOTE: keepNonSafe is NOT supported and will be ignored!");
+	if (options.keepOutsideViewport) debug("NOTE: keepOutsideViewport is only supported with canvg exporter.");
+
+	switch (type) {
+		case "image/svg+xml":
+			return exportSVG();
+			break;
+
+		case "image/png":
+		case "image/jpeg":
+
+			if (!options.renderer) {
+				if (window.canvg) options.renderer = "canvg";
+				else options.renderer="native";
+			}
+
+			switch (options.renderer) {
+				case "canvg":
+					debug("using canvg renderer for png export");
+					return exportImageCanvg(type);
+					break;
+
+				case "native":
+					debug("using native renderer for png export. THIS MIGHT FAIL.");
+					return exportImage(type);
+					break;
+
+				default:
+					debug("unknown png renderer given, doing noting (" + options.renderer + ")");
+			}
+
+			break;
+
+		default:
+			debug("Sorry! Exporting as '" + type + "' is not supported!")
+	}
+}
+
+},{}],52:[function(require,module,exports){
+/**
+ * A class to parse color values
+ * @author Stoyan Stefanov <sstoo@gmail.com>
+ * @link   http://www.phpied.com/rgb-color-parser-in-javascript/
+ * @license Use it if you like it
+ */
+function RGBColor(color_string)
+{
+    this.ok = false;
+
+    // strip any leading #
+    if (color_string.charAt(0) == '#') { // remove # if any
+        color_string = color_string.substr(1,6);
+    }
+
+    color_string = color_string.replace(/ /g,'');
+    color_string = color_string.toLowerCase();
+
+    // before getting into regexps, try simple matches
+    // and overwrite the input
+    var simple_colors = {
+        aliceblue: 'f0f8ff',
+        antiquewhite: 'faebd7',
+        aqua: '00ffff',
+        aquamarine: '7fffd4',
+        azure: 'f0ffff',
+        beige: 'f5f5dc',
+        bisque: 'ffe4c4',
+        black: '000000',
+        blanchedalmond: 'ffebcd',
+        blue: '0000ff',
+        blueviolet: '8a2be2',
+        brown: 'a52a2a',
+        burlywood: 'deb887',
+        cadetblue: '5f9ea0',
+        chartreuse: '7fff00',
+        chocolate: 'd2691e',
+        coral: 'ff7f50',
+        cornflowerblue: '6495ed',
+        cornsilk: 'fff8dc',
+        crimson: 'dc143c',
+        cyan: '00ffff',
+        darkblue: '00008b',
+        darkcyan: '008b8b',
+        darkgoldenrod: 'b8860b',
+        darkgray: 'a9a9a9',
+        darkgreen: '006400',
+        darkkhaki: 'bdb76b',
+        darkmagenta: '8b008b',
+        darkolivegreen: '556b2f',
+        darkorange: 'ff8c00',
+        darkorchid: '9932cc',
+        darkred: '8b0000',
+        darksalmon: 'e9967a',
+        darkseagreen: '8fbc8f',
+        darkslateblue: '483d8b',
+        darkslategray: '2f4f4f',
+        darkturquoise: '00ced1',
+        darkviolet: '9400d3',
+        deeppink: 'ff1493',
+        deepskyblue: '00bfff',
+        dimgray: '696969',
+        dodgerblue: '1e90ff',
+        feldspar: 'd19275',
+        firebrick: 'b22222',
+        floralwhite: 'fffaf0',
+        forestgreen: '228b22',
+        fuchsia: 'ff00ff',
+        gainsboro: 'dcdcdc',
+        ghostwhite: 'f8f8ff',
+        gold: 'ffd700',
+        goldenrod: 'daa520',
+        gray: '808080',
+        green: '008000',
+        greenyellow: 'adff2f',
+        honeydew: 'f0fff0',
+        hotpink: 'ff69b4',
+        indianred : 'cd5c5c',
+        indigo : '4b0082',
+        ivory: 'fffff0',
+        khaki: 'f0e68c',
+        lavender: 'e6e6fa',
+        lavenderblush: 'fff0f5',
+        lawngreen: '7cfc00',
+        lemonchiffon: 'fffacd',
+        lightblue: 'add8e6',
+        lightcoral: 'f08080',
+        lightcyan: 'e0ffff',
+        lightgoldenrodyellow: 'fafad2',
+        lightgrey: 'd3d3d3',
+        lightgreen: '90ee90',
+        lightpink: 'ffb6c1',
+        lightsalmon: 'ffa07a',
+        lightseagreen: '20b2aa',
+        lightskyblue: '87cefa',
+        lightslateblue: '8470ff',
+        lightslategray: '778899',
+        lightsteelblue: 'b0c4de',
+        lightyellow: 'ffffe0',
+        lime: '00ff00',
+        limegreen: '32cd32',
+        linen: 'faf0e6',
+        magenta: 'ff00ff',
+        maroon: '800000',
+        mediumaquamarine: '66cdaa',
+        mediumblue: '0000cd',
+        mediumorchid: 'ba55d3',
+        mediumpurple: '9370d8',
+        mediumseagreen: '3cb371',
+        mediumslateblue: '7b68ee',
+        mediumspringgreen: '00fa9a',
+        mediumturquoise: '48d1cc',
+        mediumvioletred: 'c71585',
+        midnightblue: '191970',
+        mintcream: 'f5fffa',
+        mistyrose: 'ffe4e1',
+        moccasin: 'ffe4b5',
+        navajowhite: 'ffdead',
+        navy: '000080',
+        oldlace: 'fdf5e6',
+        olive: '808000',
+        olivedrab: '6b8e23',
+        orange: 'ffa500',
+        orangered: 'ff4500',
+        orchid: 'da70d6',
+        palegoldenrod: 'eee8aa',
+        palegreen: '98fb98',
+        paleturquoise: 'afeeee',
+        palevioletred: 'd87093',
+        papayawhip: 'ffefd5',
+        peachpuff: 'ffdab9',
+        peru: 'cd853f',
+        pink: 'ffc0cb',
+        plum: 'dda0dd',
+        powderblue: 'b0e0e6',
+        purple: '800080',
+        red: 'ff0000',
+        rosybrown: 'bc8f8f',
+        royalblue: '4169e1',
+        saddlebrown: '8b4513',
+        salmon: 'fa8072',
+        sandybrown: 'f4a460',
+        seagreen: '2e8b57',
+        seashell: 'fff5ee',
+        sienna: 'a0522d',
+        silver: 'c0c0c0',
+        skyblue: '87ceeb',
+        slateblue: '6a5acd',
+        slategray: '708090',
+        snow: 'fffafa',
+        springgreen: '00ff7f',
+        steelblue: '4682b4',
+        tan: 'd2b48c',
+        teal: '008080',
+        thistle: 'd8bfd8',
+        tomato: 'ff6347',
+        turquoise: '40e0d0',
+        violet: 'ee82ee',
+        violetred: 'd02090',
+        wheat: 'f5deb3',
+        white: 'ffffff',
+        whitesmoke: 'f5f5f5',
+        yellow: 'ffff00',
+        yellowgreen: '9acd32'
+    };
+    for (var key in simple_colors) {
+        if (color_string == key) {
+            color_string = simple_colors[key];
+        }
+    }
+    // emd of simple type-in colors
+
+    // array of color definition objects
+    var color_defs = [
+        {
+            re: /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/,
+            example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1]),
+                    parseInt(bits[2]),
+                    parseInt(bits[3])
+                ];
+            }
+        },
+        {
+            re: /^(\w{2})(\w{2})(\w{2})$/,
+            example: ['#00ff00', '336699'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1], 16),
+                    parseInt(bits[2], 16),
+                    parseInt(bits[3], 16)
+                ];
+            }
+        },
+        {
+            re: /^(\w{1})(\w{1})(\w{1})$/,
+            example: ['#fb0', 'f0f'],
+            process: function (bits){
+                return [
+                    parseInt(bits[1] + bits[1], 16),
+                    parseInt(bits[2] + bits[2], 16),
+                    parseInt(bits[3] + bits[3], 16)
+                ];
+            }
+        }
+    ];
+
+    // search through the definitions to find a match
+    for (var i = 0; i < color_defs.length; i++) {
+        var re = color_defs[i].re;
+        var processor = color_defs[i].process;
+        var bits = re.exec(color_string);
+        if (bits) {
+            var channels = processor(bits);
+            this.r = channels[0];
+            this.g = channels[1];
+            this.b = channels[2];
+            this.ok = true;
+        }
+
+    }
+
+    // validate/cleanup values
+    this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
+    this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
+    this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
+
+    // some getters
+    this.toRGB = function () {
+        return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
+    }
+    this.toHex = function () {
+        var r = this.r.toString(16);
+        var g = this.g.toString(16);
+        var b = this.b.toString(16);
+        if (r.length == 1) r = '0' + r;
+        if (g.length == 1) g = '0' + g;
+        if (b.length == 1) b = '0' + b;
+        return '#' + r + g + b;
+    }
+
+    // help
+    this.getHelpXML = function () {
+
+        var examples = new Array();
+        // add regexps
+        for (var i = 0; i < color_defs.length; i++) {
+            var example = color_defs[i].example;
+            for (var j = 0; j < example.length; j++) {
+                examples[examples.length] = example[j];
+            }
+        }
+        // add type-in colors
+        for (var sc in simple_colors) {
+            examples[examples.length] = sc;
+        }
+
+        var xml = document.createElement('ul');
+        xml.setAttribute('id', 'rgbcolor-examples');
+        for (var i = 0; i < examples.length; i++) {
+            try {
+                var list_item = document.createElement('li');
+                var list_color = new RGBColor(examples[i]);
+                var example_div = document.createElement('div');
+                example_div.style.cssText =
+                        'margin: 3px; '
+                        + 'border: 1px solid black; '
+                        + 'background:' + list_color.toHex() + '; '
+                        + 'color:' + list_color.toHex()
+                ;
+                example_div.appendChild(document.createTextNode('test'));
+                var list_item_value = document.createTextNode(
+                    ' ' + examples[i] + ' -> ' + list_color.toRGB() + ' -> ' + list_color.toHex()
+                );
+                list_item.appendChild(example_div);
+                list_item.appendChild(list_item_value);
+                xml.appendChild(list_item);
+
+            } catch(e){}
+        }
+        return xml;
+
+    }
+
+}
+
+
+},{}],51:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3025,7 +3538,619 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],193:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
+/*
+
+StackBlur - a fast almost Gaussian Blur For Canvas
+
+Version: 	0.5
+Author:		Mario Klingemann
+Contact: 	mario@quasimondo.com
+Website:	http://www.quasimondo.com/StackBlurForCanvas
+Twitter:	@quasimondo
+
+In case you find this class useful - especially in commercial projects -
+I am not totally unhappy for a small donation to my PayPal account
+mario@quasimondo.de
+
+Or support me on flattr: 
+https://flattr.com/thing/72791/StackBlur-a-fast-almost-Gaussian-Blur-Effect-for-CanvasJavascript
+
+Copyright (c) 2010 Mario Klingemann
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+var mul_table = [
+        512,512,456,512,328,456,335,512,405,328,271,456,388,335,292,512,
+        454,405,364,328,298,271,496,456,420,388,360,335,312,292,273,512,
+        482,454,428,405,383,364,345,328,312,298,284,271,259,496,475,456,
+        437,420,404,388,374,360,347,335,323,312,302,292,282,273,265,512,
+        497,482,468,454,441,428,417,405,394,383,373,364,354,345,337,328,
+        320,312,305,298,291,284,278,271,265,259,507,496,485,475,465,456,
+        446,437,428,420,412,404,396,388,381,374,367,360,354,347,341,335,
+        329,323,318,312,307,302,297,292,287,282,278,273,269,265,261,512,
+        505,497,489,482,475,468,461,454,447,441,435,428,422,417,411,405,
+        399,394,389,383,378,373,368,364,359,354,350,345,341,337,332,328,
+        324,320,316,312,309,305,301,298,294,291,287,284,281,278,274,271,
+        268,265,262,259,257,507,501,496,491,485,480,475,470,465,460,456,
+        451,446,442,437,433,428,424,420,416,412,408,404,400,396,392,388,
+        385,381,377,374,370,367,363,360,357,354,350,347,344,341,338,335,
+        332,329,326,323,320,318,315,312,310,307,304,302,299,297,294,292,
+        289,287,285,282,280,278,275,273,271,269,267,265,263,261,259];
+        
+   
+var shg_table = [
+	     9, 11, 12, 13, 13, 14, 14, 15, 15, 15, 15, 16, 16, 16, 16, 17, 
+		17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 
+		19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20,
+		20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21,
+		21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+		21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 
+		22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22,
+		22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 
+		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
+		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
+		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 
+		23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 
+		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
+		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
+		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
+		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24 ];
+
+function stackBlurImage( imageID, canvasID, radius, blurAlphaChannel )
+{
+			
+ 	var img = document.getElementById( imageID );
+	var w = img.naturalWidth;
+    var h = img.naturalHeight;
+       
+	var canvas = document.getElementById( canvasID );
+      
+    canvas.style.width  = w + "px";
+    canvas.style.height = h + "px";
+    canvas.width = w;
+    canvas.height = h;
+    
+    var context = canvas.getContext("2d");
+    context.clearRect( 0, 0, w, h );
+    context.drawImage( img, 0, 0 );
+
+	if ( isNaN(radius) || radius < 1 ) return;
+	
+	if ( blurAlphaChannel )
+		stackBlurCanvasRGBA( canvasID, 0, 0, w, h, radius );
+	else 
+		stackBlurCanvasRGB( canvasID, 0, 0, w, h, radius );
+}
+
+
+function stackBlurCanvasRGBA( id, top_x, top_y, width, height, radius )
+{
+	if ( isNaN(radius) || radius < 1 ) return;
+	radius |= 0;
+	
+	var canvas  = document.getElementById( id );
+	var context = canvas.getContext("2d");
+	var imageData;
+	
+	try {
+	  try {
+		imageData = context.getImageData( top_x, top_y, width, height );
+	  } catch(e) {
+	  
+		// NOTE: this part is supposedly only needed if you want to work with local files
+		// so it might be okay to remove the whole try/catch block and just use
+		// imageData = context.getImageData( top_x, top_y, width, height );
+		try {
+			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+			imageData = context.getImageData( top_x, top_y, width, height );
+		} catch(e) {
+			alert("Cannot access local image");
+			throw new Error("unable to access local image data: " + e);
+			return;
+		}
+	  }
+	} catch(e) {
+	  alert("Cannot access image");
+	  throw new Error("unable to access image data: " + e);
+	}
+			
+	var pixels = imageData.data;
+			
+	var x, y, i, p, yp, yi, yw, r_sum, g_sum, b_sum, a_sum, 
+	r_out_sum, g_out_sum, b_out_sum, a_out_sum,
+	r_in_sum, g_in_sum, b_in_sum, a_in_sum, 
+	pr, pg, pb, pa, rbs;
+			
+	var div = radius + radius + 1;
+	var w4 = width << 2;
+	var widthMinus1  = width - 1;
+	var heightMinus1 = height - 1;
+	var radiusPlus1  = radius + 1;
+	var sumFactor = radiusPlus1 * ( radiusPlus1 + 1 ) / 2;
+	
+	var stackStart = new BlurStack();
+	var stack = stackStart;
+	for ( i = 1; i < div; i++ )
+	{
+		stack = stack.next = new BlurStack();
+		if ( i == radiusPlus1 ) var stackEnd = stack;
+	}
+	stack.next = stackStart;
+	var stackIn = null;
+	var stackOut = null;
+	
+	yw = yi = 0;
+	
+	var mul_sum = mul_table[radius];
+	var shg_sum = shg_table[radius];
+	
+	for ( y = 0; y < height; y++ )
+	{
+		r_in_sum = g_in_sum = b_in_sum = a_in_sum = r_sum = g_sum = b_sum = a_sum = 0;
+		
+		r_out_sum = radiusPlus1 * ( pr = pixels[yi] );
+		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1] );
+		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2] );
+		a_out_sum = radiusPlus1 * ( pa = pixels[yi+3] );
+		
+		r_sum += sumFactor * pr;
+		g_sum += sumFactor * pg;
+		b_sum += sumFactor * pb;
+		a_sum += sumFactor * pa;
+		
+		stack = stackStart;
+		
+		for( i = 0; i < radiusPlus1; i++ )
+		{
+			stack.r = pr;
+			stack.g = pg;
+			stack.b = pb;
+			stack.a = pa;
+			stack = stack.next;
+		}
+		
+		for( i = 1; i < radiusPlus1; i++ )
+		{
+			p = yi + (( widthMinus1 < i ? widthMinus1 : i ) << 2 );
+			r_sum += ( stack.r = ( pr = pixels[p])) * ( rbs = radiusPlus1 - i );
+			g_sum += ( stack.g = ( pg = pixels[p+1])) * rbs;
+			b_sum += ( stack.b = ( pb = pixels[p+2])) * rbs;
+			a_sum += ( stack.a = ( pa = pixels[p+3])) * rbs;
+			
+			r_in_sum += pr;
+			g_in_sum += pg;
+			b_in_sum += pb;
+			a_in_sum += pa;
+			
+			stack = stack.next;
+		}
+		
+		
+		stackIn = stackStart;
+		stackOut = stackEnd;
+		for ( x = 0; x < width; x++ )
+		{
+			pixels[yi+3] = pa = (a_sum * mul_sum) >> shg_sum;
+			if ( pa != 0 )
+			{
+				pa = 255 / pa;
+				pixels[yi]   = ((r_sum * mul_sum) >> shg_sum) * pa;
+				pixels[yi+1] = ((g_sum * mul_sum) >> shg_sum) * pa;
+				pixels[yi+2] = ((b_sum * mul_sum) >> shg_sum) * pa;
+			} else {
+				pixels[yi] = pixels[yi+1] = pixels[yi+2] = 0;
+			}
+			
+			r_sum -= r_out_sum;
+			g_sum -= g_out_sum;
+			b_sum -= b_out_sum;
+			a_sum -= a_out_sum;
+			
+			r_out_sum -= stackIn.r;
+			g_out_sum -= stackIn.g;
+			b_out_sum -= stackIn.b;
+			a_out_sum -= stackIn.a;
+			
+			p =  ( yw + ( ( p = x + radius + 1 ) < widthMinus1 ? p : widthMinus1 ) ) << 2;
+			
+			r_in_sum += ( stackIn.r = pixels[p]);
+			g_in_sum += ( stackIn.g = pixels[p+1]);
+			b_in_sum += ( stackIn.b = pixels[p+2]);
+			a_in_sum += ( stackIn.a = pixels[p+3]);
+			
+			r_sum += r_in_sum;
+			g_sum += g_in_sum;
+			b_sum += b_in_sum;
+			a_sum += a_in_sum;
+			
+			stackIn = stackIn.next;
+			
+			r_out_sum += ( pr = stackOut.r );
+			g_out_sum += ( pg = stackOut.g );
+			b_out_sum += ( pb = stackOut.b );
+			a_out_sum += ( pa = stackOut.a );
+			
+			r_in_sum -= pr;
+			g_in_sum -= pg;
+			b_in_sum -= pb;
+			a_in_sum -= pa;
+			
+			stackOut = stackOut.next;
+
+			yi += 4;
+		}
+		yw += width;
+	}
+
+	
+	for ( x = 0; x < width; x++ )
+	{
+		g_in_sum = b_in_sum = a_in_sum = r_in_sum = g_sum = b_sum = a_sum = r_sum = 0;
+		
+		yi = x << 2;
+		r_out_sum = radiusPlus1 * ( pr = pixels[yi]);
+		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1]);
+		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2]);
+		a_out_sum = radiusPlus1 * ( pa = pixels[yi+3]);
+		
+		r_sum += sumFactor * pr;
+		g_sum += sumFactor * pg;
+		b_sum += sumFactor * pb;
+		a_sum += sumFactor * pa;
+		
+		stack = stackStart;
+		
+		for( i = 0; i < radiusPlus1; i++ )
+		{
+			stack.r = pr;
+			stack.g = pg;
+			stack.b = pb;
+			stack.a = pa;
+			stack = stack.next;
+		}
+		
+		yp = width;
+		
+		for( i = 1; i <= radius; i++ )
+		{
+			yi = ( yp + x ) << 2;
+			
+			r_sum += ( stack.r = ( pr = pixels[yi])) * ( rbs = radiusPlus1 - i );
+			g_sum += ( stack.g = ( pg = pixels[yi+1])) * rbs;
+			b_sum += ( stack.b = ( pb = pixels[yi+2])) * rbs;
+			a_sum += ( stack.a = ( pa = pixels[yi+3])) * rbs;
+		   
+			r_in_sum += pr;
+			g_in_sum += pg;
+			b_in_sum += pb;
+			a_in_sum += pa;
+			
+			stack = stack.next;
+		
+			if( i < heightMinus1 )
+			{
+				yp += width;
+			}
+		}
+		
+		yi = x;
+		stackIn = stackStart;
+		stackOut = stackEnd;
+		for ( y = 0; y < height; y++ )
+		{
+			p = yi << 2;
+			pixels[p+3] = pa = (a_sum * mul_sum) >> shg_sum;
+			if ( pa > 0 )
+			{
+				pa = 255 / pa;
+				pixels[p]   = ((r_sum * mul_sum) >> shg_sum ) * pa;
+				pixels[p+1] = ((g_sum * mul_sum) >> shg_sum ) * pa;
+				pixels[p+2] = ((b_sum * mul_sum) >> shg_sum ) * pa;
+			} else {
+				pixels[p] = pixels[p+1] = pixels[p+2] = 0;
+			}
+			
+			r_sum -= r_out_sum;
+			g_sum -= g_out_sum;
+			b_sum -= b_out_sum;
+			a_sum -= a_out_sum;
+		   
+			r_out_sum -= stackIn.r;
+			g_out_sum -= stackIn.g;
+			b_out_sum -= stackIn.b;
+			a_out_sum -= stackIn.a;
+			
+			p = ( x + (( ( p = y + radiusPlus1) < heightMinus1 ? p : heightMinus1 ) * width )) << 2;
+			
+			r_sum += ( r_in_sum += ( stackIn.r = pixels[p]));
+			g_sum += ( g_in_sum += ( stackIn.g = pixels[p+1]));
+			b_sum += ( b_in_sum += ( stackIn.b = pixels[p+2]));
+			a_sum += ( a_in_sum += ( stackIn.a = pixels[p+3]));
+		   
+			stackIn = stackIn.next;
+			
+			r_out_sum += ( pr = stackOut.r );
+			g_out_sum += ( pg = stackOut.g );
+			b_out_sum += ( pb = stackOut.b );
+			a_out_sum += ( pa = stackOut.a );
+			
+			r_in_sum -= pr;
+			g_in_sum -= pg;
+			b_in_sum -= pb;
+			a_in_sum -= pa;
+			
+			stackOut = stackOut.next;
+			
+			yi += width;
+		}
+	}
+	
+	context.putImageData( imageData, top_x, top_y );
+	
+}
+
+
+function stackBlurCanvasRGB( id, top_x, top_y, width, height, radius )
+{
+	if ( isNaN(radius) || radius < 1 ) return;
+	radius |= 0;
+	
+	var canvas  = document.getElementById( id );
+	var context = canvas.getContext("2d");
+	var imageData;
+	
+	try {
+	  try {
+		imageData = context.getImageData( top_x, top_y, width, height );
+	  } catch(e) {
+	  
+		// NOTE: this part is supposedly only needed if you want to work with local files
+		// so it might be okay to remove the whole try/catch block and just use
+		// imageData = context.getImageData( top_x, top_y, width, height );
+		try {
+			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+			imageData = context.getImageData( top_x, top_y, width, height );
+		} catch(e) {
+			alert("Cannot access local image");
+			throw new Error("unable to access local image data: " + e);
+			return;
+		}
+	  }
+	} catch(e) {
+	  alert("Cannot access image");
+	  throw new Error("unable to access image data: " + e);
+	}
+			
+	var pixels = imageData.data;
+			
+	var x, y, i, p, yp, yi, yw, r_sum, g_sum, b_sum,
+	r_out_sum, g_out_sum, b_out_sum,
+	r_in_sum, g_in_sum, b_in_sum,
+	pr, pg, pb, rbs;
+			
+	var div = radius + radius + 1;
+	var w4 = width << 2;
+	var widthMinus1  = width - 1;
+	var heightMinus1 = height - 1;
+	var radiusPlus1  = radius + 1;
+	var sumFactor = radiusPlus1 * ( radiusPlus1 + 1 ) / 2;
+	
+	var stackStart = new BlurStack();
+	var stack = stackStart;
+	for ( i = 1; i < div; i++ )
+	{
+		stack = stack.next = new BlurStack();
+		if ( i == radiusPlus1 ) var stackEnd = stack;
+	}
+	stack.next = stackStart;
+	var stackIn = null;
+	var stackOut = null;
+	
+	yw = yi = 0;
+	
+	var mul_sum = mul_table[radius];
+	var shg_sum = shg_table[radius];
+	
+	for ( y = 0; y < height; y++ )
+	{
+		r_in_sum = g_in_sum = b_in_sum = r_sum = g_sum = b_sum = 0;
+		
+		r_out_sum = radiusPlus1 * ( pr = pixels[yi] );
+		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1] );
+		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2] );
+		
+		r_sum += sumFactor * pr;
+		g_sum += sumFactor * pg;
+		b_sum += sumFactor * pb;
+		
+		stack = stackStart;
+		
+		for( i = 0; i < radiusPlus1; i++ )
+		{
+			stack.r = pr;
+			stack.g = pg;
+			stack.b = pb;
+			stack = stack.next;
+		}
+		
+		for( i = 1; i < radiusPlus1; i++ )
+		{
+			p = yi + (( widthMinus1 < i ? widthMinus1 : i ) << 2 );
+			r_sum += ( stack.r = ( pr = pixels[p])) * ( rbs = radiusPlus1 - i );
+			g_sum += ( stack.g = ( pg = pixels[p+1])) * rbs;
+			b_sum += ( stack.b = ( pb = pixels[p+2])) * rbs;
+			
+			r_in_sum += pr;
+			g_in_sum += pg;
+			b_in_sum += pb;
+			
+			stack = stack.next;
+		}
+		
+		
+		stackIn = stackStart;
+		stackOut = stackEnd;
+		for ( x = 0; x < width; x++ )
+		{
+			pixels[yi]   = (r_sum * mul_sum) >> shg_sum;
+			pixels[yi+1] = (g_sum * mul_sum) >> shg_sum;
+			pixels[yi+2] = (b_sum * mul_sum) >> shg_sum;
+			
+			r_sum -= r_out_sum;
+			g_sum -= g_out_sum;
+			b_sum -= b_out_sum;
+			
+			r_out_sum -= stackIn.r;
+			g_out_sum -= stackIn.g;
+			b_out_sum -= stackIn.b;
+			
+			p =  ( yw + ( ( p = x + radius + 1 ) < widthMinus1 ? p : widthMinus1 ) ) << 2;
+			
+			r_in_sum += ( stackIn.r = pixels[p]);
+			g_in_sum += ( stackIn.g = pixels[p+1]);
+			b_in_sum += ( stackIn.b = pixels[p+2]);
+			
+			r_sum += r_in_sum;
+			g_sum += g_in_sum;
+			b_sum += b_in_sum;
+			
+			stackIn = stackIn.next;
+			
+			r_out_sum += ( pr = stackOut.r );
+			g_out_sum += ( pg = stackOut.g );
+			b_out_sum += ( pb = stackOut.b );
+			
+			r_in_sum -= pr;
+			g_in_sum -= pg;
+			b_in_sum -= pb;
+			
+			stackOut = stackOut.next;
+
+			yi += 4;
+		}
+		yw += width;
+	}
+
+	
+	for ( x = 0; x < width; x++ )
+	{
+		g_in_sum = b_in_sum = r_in_sum = g_sum = b_sum = r_sum = 0;
+		
+		yi = x << 2;
+		r_out_sum = radiusPlus1 * ( pr = pixels[yi]);
+		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1]);
+		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2]);
+		
+		r_sum += sumFactor * pr;
+		g_sum += sumFactor * pg;
+		b_sum += sumFactor * pb;
+		
+		stack = stackStart;
+		
+		for( i = 0; i < radiusPlus1; i++ )
+		{
+			stack.r = pr;
+			stack.g = pg;
+			stack.b = pb;
+			stack = stack.next;
+		}
+		
+		yp = width;
+		
+		for( i = 1; i <= radius; i++ )
+		{
+			yi = ( yp + x ) << 2;
+			
+			r_sum += ( stack.r = ( pr = pixels[yi])) * ( rbs = radiusPlus1 - i );
+			g_sum += ( stack.g = ( pg = pixels[yi+1])) * rbs;
+			b_sum += ( stack.b = ( pb = pixels[yi+2])) * rbs;
+			
+			r_in_sum += pr;
+			g_in_sum += pg;
+			b_in_sum += pb;
+			
+			stack = stack.next;
+		
+			if( i < heightMinus1 )
+			{
+				yp += width;
+			}
+		}
+		
+		yi = x;
+		stackIn = stackStart;
+		stackOut = stackEnd;
+		for ( y = 0; y < height; y++ )
+		{
+			p = yi << 2;
+			pixels[p]   = (r_sum * mul_sum) >> shg_sum;
+			pixels[p+1] = (g_sum * mul_sum) >> shg_sum;
+			pixels[p+2] = (b_sum * mul_sum) >> shg_sum;
+			
+			r_sum -= r_out_sum;
+			g_sum -= g_out_sum;
+			b_sum -= b_out_sum;
+			
+			r_out_sum -= stackIn.r;
+			g_out_sum -= stackIn.g;
+			b_out_sum -= stackIn.b;
+			
+			p = ( x + (( ( p = y + radiusPlus1) < heightMinus1 ? p : heightMinus1 ) * width )) << 2;
+			
+			r_sum += ( r_in_sum += ( stackIn.r = pixels[p]));
+			g_sum += ( g_in_sum += ( stackIn.g = pixels[p+1]));
+			b_sum += ( b_in_sum += ( stackIn.b = pixels[p+2]));
+			
+			stackIn = stackIn.next;
+			
+			r_out_sum += ( pr = stackOut.r );
+			g_out_sum += ( pg = stackOut.g );
+			b_out_sum += ( pb = stackOut.b );
+			
+			r_in_sum -= pr;
+			g_in_sum -= pg;
+			b_in_sum -= pb;
+			
+			stackOut = stackOut.next;
+			
+			yi += width;
+		}
+	}
+	
+	context.putImageData( imageData, top_x, top_y );
+	
+}
+
+function BlurStack()
+{
+	this.r = 0;
+	this.g = 0;
+	this.b = 0;
+	this.a = 0;
+	this.next = null;
+}
+},{}],206:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -3073,7 +4198,7 @@ function installPlus(blockly, generator, gensym) {
   generator.functional_plus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " + " + arg2;
+    return "(" + arg1 + " + " + arg2 + ")";
   };
 }
 
@@ -3091,7 +4216,7 @@ function installMinus(blockly, generator, gensym) {
   generator.functional_minus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " - " + arg2;
+    return "(" + arg1 + " - " + arg2 + ")";
   };
 }
 
@@ -3109,7 +4234,7 @@ function installTimes(blockly, generator, gensym) {
   generator.functional_times = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " * " + arg2;
+    return "(" + arg1 + " * " + arg2 + ")";
   };
 }
 
@@ -3127,7 +4252,7 @@ function installDividedBy(blockly, generator, gensym) {
   generator.functional_dividedby = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " / " + arg2;
+    return "(" + arg1 + " / " + arg2 + ")";
   };
 }
 
@@ -3416,9 +4541,11 @@ function installCond(blockly, generator) {
         fixedSize: { height: 35 }
       };
 
+      this.setHSV.apply(this, Blockly.FunctionalTypeColors.None);
+
       var plusField = new Blockly.FieldIcon('+');
-      plusField.getRootElement().addEventListener('mousedown',
-        _.bind(this.addConditionalRow, this));
+      Blockly.bindEvent_(plusField.getRootElement(), 'mousedown',
+        this, this.addConditionalRow);
 
       this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('cond', options))
@@ -3426,8 +4553,9 @@ function installCond(blockly, generator) {
 
       this.appendDummyInput('ELSE')
         .appendTitle(new Blockly.FieldLabel('else', options));
-      this.appendFunctionalInput('DEFAULT')
+      var defaultInput = this.appendFunctionalInput('DEFAULT')
         .setInline(true);
+      defaultInput.setHSV.apply(defaultInput, Blockly.FunctionalTypeColors.None);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
@@ -3452,8 +4580,9 @@ function installCond(blockly, generator) {
       cond.setCheck(blockly.BlockValueType.BOOLEAN);
       this.moveInputBefore('COND' + id, 'ELSE');
 
-      this.appendFunctionalInput('VALUE' + id)
+      var input = this.appendFunctionalInput('VALUE' + id)
         .setInline(true);
+      input.setHSV.apply(input, Blockly.FunctionalTypeColors.None);
       this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
@@ -3461,8 +4590,8 @@ function installCond(blockly, generator) {
 
       if (this.pairs_.length > 1) {
         var minusField = new Blockly.FieldIcon('-');
-        minusField.getRootElement().addEventListener('mousedown',
-          _.bind(this.removeConditionalRow, this, id));
+        Blockly.bindEvent_(minusField.getRootElement(), 'mousedown',
+          this, _.bind(this.removeConditionalRow, this, id));
         minusInput.appendTitle(minusField);
       }
 
@@ -3571,7 +4700,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":245,"./utils":240}],225:[function(require,module,exports){
+},{"../locale/current/common":258,"./utils":253}],238:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -3635,7 +4764,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],219:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3658,7 +4787,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],195:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],208:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -3923,7 +5052,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":56}],194:[function(require,module,exports){
+},{"./dom":58}],207:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -4074,7 +5203,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":26,"./dom":56,"./required_block_utils":192,"./utils":240}],192:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":28,"./dom":58,"./required_block_utils":205,"./utils":253}],205:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -4152,6 +5281,11 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
       case 'procedures_defreturn':
         requiredBlocksTests.push(testsFromProcedure(childNode));
         break;
+      case 'functional_definition':
+        break;
+      case 'functional_call':
+        requiredBlocksTests.push(testsFromFunctionalCall(childNode, blocksXml));
+        break;
       default:
         requiredBlocksTests.push([testFromBlock(childNode)]);
     }
@@ -4221,6 +5355,43 @@ function testsFromProcedure(node) {
     message: msg.errorRequiredParamsMissing(),
     blockDisplayXML: '<xml></xml>'
   }];
+}
+
+function testsFromFunctionalCall(node, blocksXml) {
+  var name = node.querySelector('mutation').getAttribute('name');
+  var argElements = node.querySelectorAll('arg');
+  var types = [];
+  for (var i = 0; i < argElements.length; i++) {
+    types.push(argElements[i].getAttribute('type'));
+  }
+
+  var definition = _.find(blocksXml.childNodes, function (sibling) {
+    if (sibling.getAttribute('type') !== 'functional_definition') {
+      return false;
+    }
+    var nameElement = sibling.querySelector('title[name="NAME"]');
+    if (!nameElement) {
+      return false;
+    }
+    return nameElement.textContent === name;
+  });
+
+  if (!definition) {
+    throw new Error('No matching definition for functional_call');
+  }
+
+  return [{
+    test: function (userBlock) {
+      if (userBlock.type !== 'functional_call' ||
+          userBlock.getCallName() !== name) {
+        return false;
+      }
+      var userTypes = userBlock.getParamTypes();
+      return _.isEqual(userTypes, types);
+    },
+    blockDisplayXML: xml.serialize(definition) + xml.serialize(node)
+  }];
+
 }
 
 /**
@@ -4352,7 +5523,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":245,"./block_utils":25,"./utils":240,"./xml":241}],26:[function(require,module,exports){
+},{"../locale/current/common":258,"./block_utils":27,"./utils":253,"./xml":254}],28:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -4520,7 +5691,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":245}],4:[function(require,module,exports){
+},{"../locale/current/common":258}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -4897,7 +6068,19 @@ StudioApp.prototype.init = function(config) {
     }, this));
 
     if (config.level.openFunctionDefinition) {
-      Blockly.functionEditor.openWithLevelConfiguration(config.level);
+      if (Blockly.contractEditor) {
+        Blockly.contractEditor.autoOpenWithLevelConfiguration({
+          autoOpenFunction: config.level.openFunctionDefinition,
+          contractCollapse: config.level.contractCollapse,
+          contractHighlight: config.level.contractHighlight,
+          examplesCollapse: config.level.examplesCollapse,
+          examplesHighlight: config.level.examplesHighlight,
+          definitionCollapse: config.level.definitionCollapse,
+          definitionHighlight: config.level.definitionHighlight
+        });
+      } else {
+        Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
+      }
     }
   }
 
@@ -5702,7 +6885,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
     }
 
-    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager = new DropletTooltipManager(this.editor);
     this.dropletTooltipManager.registerBlocksFromList(
       dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
@@ -5748,6 +6931,9 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
  * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
 StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
+  if (config.level.edit_blocks) {
+    loadLastAttempt = false;
+  }
   var startBlocks = config.level.startBlocks || '';
   if (loadLastAttempt) {
     startBlocks = config.level.lastAttempt || startBlocks;
@@ -5802,6 +6988,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
+    disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false)
@@ -5856,7 +7043,7 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 /**
  * @returns true if any non-example block in the workspace has an unfilled input
  */
-StudioApp.prototype.hasUnfilledBlock = function () {
+StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
@@ -5866,7 +7053,7 @@ StudioApp.prototype.hasUnfilledBlock = function () {
       return false;
     }
 
-    return block.hasUnfilledInput();
+    return block.hasUnfilledFunctionalInput();
   });
 };
 
@@ -5921,7 +7108,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":245,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":24,"./block_utils":25,"./constants.js":55,"./dom":56,"./dropletUtils":57,"./feedback":76,"./templates/builder.html":213,"./templates/buttons.html":214,"./templates/instructions.html":216,"./templates/learn.html":217,"./templates/makeYourOwn.html":218,"./utils":240,"./xml":241,"url":260}],260:[function(require,module,exports){
+},{"../locale/current/common":258,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":26,"./block_utils":27,"./constants.js":57,"./dom":58,"./dropletUtils":59,"./feedback":78,"./templates/builder.html":226,"./templates/buttons.html":227,"./templates/instructions.html":229,"./templates/learn.html":230,"./templates/makeYourOwn.html":231,"./utils":253,"./xml":254,"url":273}],273:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6630,13 +7817,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":256,"querystring":259}],259:[function(require,module,exports){
+},{"punycode":269,"querystring":272}],272:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":257,"./encode":258}],258:[function(require,module,exports){
+},{"./decode":270,"./encode":271}],271:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6723,7 +7910,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],257:[function(require,module,exports){
+},{}],270:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6809,7 +7996,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],256:[function(require,module,exports){
+},{}],269:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -7320,7 +8507,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],218:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7340,7 +8527,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],217:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],230:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7362,7 +8549,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],216:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],229:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7382,7 +8569,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],213:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],226:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7402,7 +8589,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],76:[function(require,module,exports){
+},{"ejs":274}],78:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -7527,6 +8714,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       tryAgainText: options.tryAgainText,
+      continueText: options.continueText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       hintRequestExperiment: options.hintRequestExperiment,
@@ -7722,6 +8910,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
         !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
       tryAgain: tryAgainText,
+      continueText: options.continueText || msg.continue(),
       nextLevel: this.canContinueToNextLevel(options.feedbackType),
       isK1: options.isK1,
       hintRequestExperiment: options.hintRequestExperiment &&
@@ -7804,7 +8993,13 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
             msg.levelIncompleteError();
         break;
       case TestResults.EXTRA_TOP_BLOCKS_FAIL:
-        message = options.level.extraTopBlocks || msg.extraTopBlocks();
+        var hasWhenRun = Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
+          return block.type === 'when_run' && block.isUserVisible();
+        });
+
+        var defaultMessage = hasWhenRun ?
+          msg.extraTopBlocksWhenRun() : msg.extraTopBlocks();
+        message = options.level.extraTopBlocks || defaultMessage;
         break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;
@@ -8613,7 +9808,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":245,"./codegen":53,"./constants":55,"./dom":56,"./feedbackBlocks":77,"./templates/buttons.html":214,"./templates/code.html":215,"./templates/shareFailure.html":221,"./templates/sharing.html":222,"./templates/showCode.html":223,"./templates/trophy.html":224,"./utils":240,"./xml":241}],224:[function(require,module,exports){
+},{"../locale/current/common":258,"./codegen":55,"./constants":57,"./dom":58,"./feedbackBlocks":79,"./templates/buttons.html":227,"./templates/code.html":228,"./templates/shareFailure.html":234,"./templates/sharing.html":235,"./templates/showCode.html":236,"./templates/trophy.html":237,"./utils":253,"./xml":254}],237:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8633,7 +9828,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],223:[function(require,module,exports){
+},{"ejs":274}],236:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8653,7 +9848,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],222:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],235:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8673,7 +9868,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],221:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],234:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8693,7 +9888,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],215:[function(require,module,exports){
+},{"ejs":274}],228:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8713,7 +9908,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],214:[function(require,module,exports){
+},{"ejs":274}],227:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8725,7 +9920,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  msg.continue() )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  msg.continue() )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/current/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancel) {; buf.push('<button id="again-button">\n    ', escape((10,  msg.dialogCancel() )), '\n</button>\n');12; }; buf.push('\n');13; if (data.clearPuzzle) {; buf.push('<button id="continue-button" class="launch" style="float: right">\n    ', escape((14,  msg.clearPuzzle() )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  data.continueText )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  data.continueText )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -8733,7 +9928,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],77:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],79:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html');
 
@@ -8862,7 +10057,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":55,"./templates/readonly.html":220}],220:[function(require,module,exports){
+},{"./constants":57,"./templates/readonly.html":233}],233:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8883,7 +10078,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],53:[function(require,module,exports){
+},{"ejs":274}],55:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -9388,7 +10583,32 @@ exports.getUserCodeLine = function (interpreter, cumulativeLength,
   return userCodeRow;
 };
 
-},{"./dropletUtils":57}],57:[function(require,module,exports){
+/**
+ * Finds the current line of code in droplet/ace editor. Walks up the stack if
+ * not currently in the user code area.
+ */
+exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
+                                           userCodeStartOffset, userCodeLength) {
+  var userCodeRow = -1;
+  for (var i = 0; i < interpreter.stateStack.length; i++) {
+    var node = interpreter.stateStack[i].node;
+    // Adjust start/end by userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only return a valid userCodeRow if the node being executed is inside the
+    // user's code (not inside code we inserted before or after their code that
+    // is not visible in the editor):
+    if (start >= 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+      break;
+    }
+  }
+  return userCodeRow;
+};
+
+},{"./dropletUtils":59}],59:[function(require,module,exports){
 var utils = require('./utils');
 
 /**
@@ -9406,6 +10626,14 @@ var utils = require('./utils');
  * @property {DropletBlock[]} blocks list of blocks
  * @property {Object} categories configuration of categories within which to place blocks
  */
+
+var COLOR_PINK = '#F57AC6';
+var COLOR_PURPLE = '#BB77C7';
+var COLOR_GREEN = '#68D995';
+var COLOR_LIGHT_GREEN = '#D3E965';
+var COLOR_WHITE = '#FFFFFF';
+var COLOR_BLUE = '#64B5F6';
+var COLOR_ORANGE = '#FFB74D';
 
 exports.randomNumber = function (min, max) {
   if (typeof max === 'undefined') {
@@ -9448,9 +10676,9 @@ var standardConfig = {};
 standardConfig.blocks = [
   // Control
   {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'category': 'Control' },
+  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
   {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
   {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
-  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
   {'func': 'getTime', 'block': 'getTime()', 'category': 'Control', type: 'value' },
 
   // Math
@@ -9489,22 +10717,22 @@ standardConfig.blocks = [
 standardConfig.categories = {
   'Control': {
     'color': 'blue',
-    'rgb': '#19C3E1',
+    'rgb': COLOR_BLUE,
     'blocks': []
   },
   'Math': {
-    'color': 'deeppurple',
-    'rgb': '#A38BC3',
+    'color': 'orange',
+    'rgb': COLOR_ORANGE,
     'blocks': []
   },
   'Variables': {
     'color': 'purple',
-    'rgb': '#B159AB',
+    'rgb': COLOR_PURPLE,
     'blocks': []
   },
   'Functions': {
     'color': 'green',
-    'rgb': '#48D882',
+    'rgb': COLOR_GREEN,
     'blocks': []
   },
 };
@@ -9704,7 +10932,22 @@ function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
  */
 exports.generateDropletModeOptions = function (dropletConfig) {
   var modeOptions = {
-    functions: []
+    functions: {
+    },
+    categories: {
+      arithmetic: { color: COLOR_ORANGE },
+      logic: { color: COLOR_ORANGE },
+      conditionals: { color: COLOR_BLUE },
+      loops: { color: COLOR_BLUE },
+      functions: { color: COLOR_GREEN },
+      returns: { color: COLOR_BLUE },
+      comments: { color: COLOR_WHITE },
+      containers: { color: COLOR_LIGHT_GREEN },
+      value: { color: COLOR_PURPLE },
+      command: { color: COLOR_GREEN },
+      assignments: { color: COLOR_PURPLE },
+      // errors: { },
+    }
   };
 
   populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
@@ -9731,7 +10974,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
     .concat(configuredBlocks);
 };
 
-},{"./utils":240}],240:[function(require,module,exports){
+},{"./utils":253}],253:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -9951,7 +11194,41 @@ exports.valueOr = function (val, defaultVal) {
   return val === undefined ? defaultVal : val;
 };
 
-},{"./hammer":87,"./lodash":95,"./xml":241}],95:[function(require,module,exports){
+
+/**
+ * Attempts to analyze whether or not err represents infinite recursion having
+ * occurred. This error differs per browser, and it's possible that we don't
+ * properly discover all cases.
+ * Note: Other languages probably have localized messages, meaning we won't
+ * catch them.
+ */
+exports.isInfiniteRecursionError = function (err) {
+  // Chrome/Safari: message ends in a period in Safari, not in Chrome
+  if (err instanceof RangeError &&
+    /^Maximum call stack size exceeded/.test(err.message)) {
+    return true;
+  }
+
+  // Firefox
+  /* jshint ignore:start */
+  // Linter doesn't like our use of InternalError, even though we gate on its
+  // existence.
+  if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
+      err.message === 'too much recursion') {
+    return true;
+  }
+  /* jshint ignore:end */
+
+  // IE
+  if (err instanceof Error &&
+      err.message === 'Out of stack space') {
+    return true;
+  }
+
+  return false;
+};
+
+},{"./hammer":89,"./lodash":97,"./xml":254}],97:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -13320,7 +14597,7 @@ exports.valueOr = function (val, defaultVal) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],87:[function(require,module,exports){
+},{}],89:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -15484,7 +16761,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],56:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -15591,7 +16868,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],55:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -15669,7 +16946,7 @@ exports.KeyCodes = {
   DELETE: 127
 };
 
-},{}],25:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -15967,7 +17244,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
     '</block>';
 };
 
-},{"./xml":241}],241:[function(require,module,exports){
+},{"./xml":254}],254:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -15995,7 +17272,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],24:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**
@@ -16004,14 +17281,23 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**
  * Store for finding tooltips for blocks
+ * @param {Droplet.Editor} dropletEditor
  * @constructor
  */
-var DropletTooltipManager = module.exports = function () {
+var DropletTooltipManager = function (dropletEditor) {
   /**
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
    */
   this.blockTypeToTooltip = {};
+
+  /**
+   * @type {Droplet.Editor}
+   * @private
+   */
+  this.dropletEditor_ = dropletEditor;
+
+  this.hideTooltipsOnBlockPick_();
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -16020,12 +17306,23 @@ var DEFAULT_TOOLTIP_CONFIG = {
   maxWidth: 450,
   position: 'right',
   contentAsHTML: true,
-  functionReady: repositionLastTooltip,
-  theme: 'droplet-block-tooltipster'
-  /**
-   * hideOnClick does not work with the droplet hover overlay
-   * (passing through click events?)
-   */
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2,
+  delay: 400
+};
+
+/**
+ * Tooltipster's hideOnClick setting does not work with the droplet hover
+ * overlay as-is. Hide the tooltip on block picking explicitly.
+ */
+DropletTooltipManager.prototype.hideTooltipsOnBlockPick_ = function () {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  this.dropletEditor_.on('pickblock', function () {
+    $('.tooltipstered').tooltipster('hide');
+  });
 };
 
 /**
@@ -16063,27 +17360,25 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
     }
 
     var funcName = $(blockHoverDiv).attr('title');
-    $(blockHoverDiv).tooltipster($.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-      content: self.getDropletTooltip(funcName).getTooltipHTML()
-    }));
+
+    var hoverDivWidth = $(blockHoverDiv).width();
+    var hoverDivLeftToToolboxRight = $(".droplet-palette-canvas").width() -
+      parseInt(blockHoverDiv.style.left, 10);
+    var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
+    var tooltipOffsetX = desiredXPosition - hoverDivWidth;
+
+    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+      content: self.getDropletTooltip(funcName).getTooltipHTML(),
+      offsetX: tooltipOffsetX
+    });
+
+    $(blockHoverDiv).tooltipster(configuration);
   });
 };
 
-function repositionLastTooltip() {
-  var tooltipBase = $(".tooltipster-base").last();
-  var tooltipOffset = tooltipBase.offset();
-  var dropletToolboxArea = $('.droplet-palette-wrapper');
-  var rightSideOfToolbox = dropletToolboxArea.offset().left +
-    dropletToolboxArea.width();
-  var rightSideOfBlock = tooltipOffset.left;
-  var tipWidth = 8;
-  tooltipOffset.left = Math.min(rightSideOfBlock, rightSideOfToolbox + tipWidth);
-  var blockNotchHeight = 4;
-  tooltipOffset.top -= blockNotchHeight / 2;
-  tooltipBase.offset(tooltipOffset);
-}
+module.exports = DropletTooltipManager;
 
-},{"./DropletFunctionTooltip":23}],23:[function(require,module,exports){
+},{"./DropletFunctionTooltip":25}],25:[function(require,module,exports){
 var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html');
 var msg = require('../../locale/current/common');
 
@@ -16203,9 +17498,9 @@ DropletFunctionTooltip.prototype.getTooltipHTML = function () {
 
 module.exports = DropletFunctionTooltip;
 
-},{"../../locale/current/common":245,"./DropletBlockTooltip.html":22}],245:[function(require,module,exports){
+},{"../../locale/current/common":258,"./DropletBlockTooltip.html":24}],258:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
-},{}],22:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -16225,7 +17520,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],261:[function(require,module,exports){
+},{"ejs":274}],274:[function(require,module,exports){
 
 /*!
  * EJS
@@ -16580,7 +17875,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":262,"./utils":263,"fs":253,"path":254}],263:[function(require,module,exports){
+},{"./filters":275,"./utils":276,"fs":266,"path":267}],276:[function(require,module,exports){
 
 /*!
  * EJS
@@ -16604,7 +17899,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],262:[function(require,module,exports){
+},{}],275:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -16803,7 +18098,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],254:[function(require,module,exports){
+},{}],267:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -17031,7 +18326,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":255}],255:[function(require,module,exports){
+},{"_process":268}],268:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -17090,7 +18385,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],253:[function(require,module,exports){
+},{}],266:[function(require,module,exports){
 
 },{}],2:[function(require,module,exports){
 /**

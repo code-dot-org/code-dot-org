@@ -1,0 +1,38 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-14T13:56:51.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "How many bytes are used to encode a single ASCII character?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "1 byte",
+        "correct": true
+      },
+      {
+        "text": "2 bytes",
+        "correct": false
+      },
+      {
+        "text": "4 bytes",
+        "correct": false
+      },
+      {
+        "text": "8 bytes",
+        "correct": false
+      },
+      {
+        "text": "16 bytes",
+        "correct": false
+      }
+    ],
+    "title": "Assessment: Sending Formatted Text",
+    "content1": "Question #2"
+  },
+  "md5": "687ef80bbfaf702decbb371a4540779f"
+}]]></config>
+</Multi>

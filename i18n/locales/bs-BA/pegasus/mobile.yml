@@ -24,7 +24,7 @@ bs-BA:
   hoc2014_teachers: Učitelji
   hoc2014_host: Budite domaćin
   hoc2014_everyone: Svi
-  hoc2014_support: Pružite podršku
+  hoc2014_support: 'Pružite podršku &#x25BE;'
   hoc2014_whatishoc: Šta je to Sat Kodiranja?
   twentyhours_trynow: Probaj sad
   california_heading: Pitaj svoju školu da predaje računarske nauke
@@ -110,6 +110,7 @@ bs-BA:
   stats_student: '"Znao sam da ovo je <b>životna</b> prilika."-Mariana Alzate, učenik 5-og razreda'
   stats_michael: '"Još <b>nikada</b> nisam vidio svoje učenike toliko uzbuđene u vezi učenja." - Michael Clark, Nastavnik'
   studiobar_title: "Istraži <a href='http://studio.code.org'> Studio Kodiranja</a>"
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Osnovni kursevi
   studiobar_elementary_body: 'Naša nova tri kursa za K&#8209;5'
   studiobar_hoc_title: Sat Kodiranja
@@ -127,24 +128,60 @@ bs-BA:
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
     to learn one Hour of Code&rdquo; 
-    Malala
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Sat Kodiranja
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Nadzorna Ploča za Nastavnike
   homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Idi u kupovinu
   homepage_slot_text_flappy: Flappy kôd
   homepage_action_text_codevideo: Watch the video
@@ -170,7 +207,7 @@ bs-BA:
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Make a donation
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
@@ -394,7 +431,7 @@ bs-BA:
   older_systems: Tutorijali koji rade na starijim sistemima
   older_systems_subheading: 'Ovo bi trebalo raditi na starijim browserima. Za pristup svim tutorijalima, nadogradite na<a href="http://browsehappy.com/" target="_blank">moderni browser.</a>'
   mobile_devices: Tutorijali za mobilne uređaje
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Programiraj sa Anna i Elsa
   codeorg_name: Napiši svoj prvi kompjuterski program
   codeintl_name: Napiši svoj prvi kompjuterski program
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -592,7 +629,7 @@ bs-BA:
   kodableunplugged_longdescription: 'Napravljen za upotrebu uz obični papir, Fuzz Family Frenzy je uvod u logiku programiranja za djecu u dobi 5+. Učitelj treba objasniti pravila igre, a zatim učenici programiraju svog partnera čija svrha je savladavanja prepreka. '
   projguts_longdescription: Ova izvanmrežna aktivnost pomaže učenicima naučiti kako radi modeliranje i simuliranje na način da grupa učenika igra različite verzije igre Kamen / Makaze / Papir i opažaju rezultate eksperimenta za različite modele.
   hourofcode_longdescription: Prostor za novi code.org/hoc
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  frozen_longdescription: Hajde da programiramo sa Anna-om i Elsom pri njihovom istraživanju magičnog i predivnog leda. Napraviti ćeš pahulje snijega dok se kližeš i praviš zimsku idilu koju možeš onda podijeliti sa svojim prijateljima!
   playlab_longdescription: Napravi priču ili igru pomoću Laboratorije Igara! Napravi da se životinje, gusari, zombiji, ninje i mnogi drugi likovi miču, prave zvukove, skupljaju bodove, pa čak i da bacaju vatrene kugle!
   codeorg_beyond_name: Uvod u Računarstvo (dob 5-8)
   khan_beyond_name: Nauči programirati kompjuter

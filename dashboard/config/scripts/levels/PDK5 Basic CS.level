@@ -1,0 +1,34 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-01-22T22:26:58.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "A computer program, or code, is:"
+      }
+    ],
+    "answers": [
+      {
+        "text": "a part inside of a computer",
+        "correct": false
+      },
+      {
+        "text": "a week-long course to learn about computers",
+        "correct": false
+      },
+      {
+        "text": "a set of instructions you give a computer to execute",
+        "correct": true
+      },
+      {
+        "text": "a secret password",
+        "correct": false
+      }
+    ],
+    "title": "Video Follow-up Question",
+    "content1": "Answer this question based on the video you just watched."
+  },
+  "md5": "156b40a3fe686ed89fd1b5a93a86592a"
+}]]></config>
+</Multi>

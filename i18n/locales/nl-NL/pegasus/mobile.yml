@@ -3,10 +3,11 @@ nl-NL:
   select_language: Kies de gewenste taal
   computer_science: Informatica
   computer_science_edweek: Week van het Informaticaonderwijs
-  csedweek_dates: December 8-14, 2014
-  csedweek_banner_hoc: 'Het <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> "Hour of Code"</a> komt eraan. Dit is een oproep aan alle leerkrachten en organisatoren, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan uw "Hour of Code"</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Bent u een Informaticadocent? Zie andere bronnen voor CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>Probeer</h1><h2>Het Uur Code</h2><h3># geholpen</h3>'
+  csedweek_dates: 8-14 December 2014
+  csedweek_banner_hoc: |-
+    De <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> 'Hour of Code' </a> komt eraan. Dit is een oproep aan alle leerkrachten en organisatoren, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan uw 'Hour of Code'</a>
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Bent u een Informaticadocent? Zie andere bronnen voor de CSEdWeek</a>'
+  n_have_learned_an_hoc: "<h1>Probeer een</h1><h2>'Hour of Code'</h2><h3># geholpen</h3>"
   anybody_can_learn: Iedereen kan het leren.
   learn_now: Nu leren
   petition_message: Elke leerling in elke school moet de kans krijgen om informatica te leren
@@ -16,15 +17,15 @@ nl-NL:
   email: E-mail
   zipcode: Postcode of land
   submit: Klaar
-  twentyhours_heading: Probeer onze introductiecursus computerkunde
-  twentyhours_text: Klaar met je eerste Hour of Code? Leer meer over kern computerkunde en programmeer concepten in deze vervolgcursus.
+  twentyhours_heading: Probeer onze introductiecursus Informatica
+  twentyhours_text: "Klaar met je eerste 'Hour of Code'? Leer meer over Informatica en programmeerconcepten in deze vervolgcursus."
   hoc2014_heading: 'Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br />8 - 14 december 2014<br/>'
   hoc2014_students: Leerlingen
   hoc2014_try: Probeer het
   hoc2014_teachers: Leerkrachten
   hoc2014_host: Organiseer het
   hoc2014_everyone: Iedereen
-  hoc2014_support: Ondersteun het
+  hoc2014_support: 'Ondersteun het &#x25BE;'
   hoc2014_whatishoc: Wat is het Hour of Code?
   twentyhours_trynow: Probeer nu
   california_heading: Vraag je school om je computerkunde te leren
@@ -42,17 +43,17 @@ nl-NL:
   go: Verder
   thank_you_: Bedankt!
   congratulations: Gefeliciteerd!
-  congratulations_on_completing_hoc: Gefeliciteerd met het volbrengen van een Uur Code
+  congratulations_on_completing_hoc: "Gefeliciteerd met het voltooien van een 'Hour of Code'"
   get_a_certificate_of_achievement: Ontvang een certificaat van verworvenheid
   enter_valid_email: Vul een correct email-adres in
   get_a_certificate_message: "We sturen je een certificaat en informatie hoe je  <a href='/learn/beyond'>Verder dan een Uur Code</a> kunt leren"
-  get_a_certificate_message_after: "Klik op de certificaat om het te downloaden of te printen. Ga verder met onze <a href='http://studio.code.org'>andere cursussen</a>, Of kijk naar meer opties voor het leren bij <a href='/learn/beyond'>Verder dan een Uur Code</a>."
+  get_a_certificate_message_after: "Klik op de certificaat om het te downloaden of te printen. Ga verder met onze <a href='http://studio.code.org'>andere cursussen</a>, Of kijk naar meer opties voor het leren bij <a href='/learn/beyond'>Verder dan een 'Hour of Code'</a>."
   thanks_for_submitting: Bedankt voor het opsturen!
   if_you_enjoyed: Als je het leuk vond dit te leren, vraag je vrienden of ze het ook willen proberen! We willen dat de hele wereld dit leert.
   personalize_certificate: Personaliseer je certificaat
   share_achievement: Deel je prestatie
-  beyond_hour_message: "Ga door met onze  <a href='http://studio.code.org'>andere cursussen</a>, of kijk naar meer opties bij <a href='/learn/beyond'>verder dan een UUr Code</a>."
-  leaderboards_for_hoc: Highscores voor het Uur Code.
+  beyond_hour_message: "Ga door met onze  <a href='http://studio.code.org'>andere cursussen</a>, of kijk naar meer opties bij <a href='/learn/beyond'>verder dan een 'Hour of Code'</a>."
+  leaderboards_for_hoc: "Highscores voor de 'Hour of Code'."
   support_url: http://support.code.org/
   country: Land
   city: Plaats
@@ -89,10 +90,10 @@ nl-NL:
   learn_next_level: Ga door naar het volgende niveau
   learn_online: Probeer andere cursussen online
   learn_classes: Zoek naar klassen in de buurt
-  hoc_is_here: 'Het #UurCode is zover - ga eens kijken! @codeorg'
-  just_did_hoc: "Ik heb net het #UurCode gedaan - ga ook 's kijken! @codeorg"
+  hoc_is_here: 'Het #HourOfCode is zover - check it out! @codeorg'
+  just_did_hoc: 'Ik heb net het #UurCode gedaan - check it out! @codeorg'
   twitter_teach_cs: Waarom wordt informatica niet op meer scholen onderwezen? Wij kunnen dit veranderen. http://youtu.be/nKIu9yen5nc. Bezoek http://code.org voor meer informatie.
-  learn_hoc: Leer een Hour of Code
+  learn_hoc: "Leer een 'Hour of Code'"
   beyond_hoc: Verder dan een Uur Code
   what_gender: Ben je een jongen of een meisje?
   girl: Meisje
@@ -101,15 +102,16 @@ nl-NL:
   help_recruit: Help ons meer programmeurs te vinden!
   lines_of_code: 'MEER DAN <b># REGELS CODE</b> GESCHREVEN TOT NU TOE.'
   lines_of_code_alt: '<b>#</b> REGELS CODE GESCHREVEN DOOR LEERLINGEN'
-  who_has_done_hoc: 'Wie heeft het #UurCode gedaan? @codeorg'
-  hoc_leaderboards: De Uur Code Highscores
+  who_has_done_hoc: 'Wie heeft het #HourOfCode gedaan? @codeorg'
+  hoc_leaderboards: "De 'Hour of Code' Highscores"
   students_and_lines: '%{students} leerlingen hebben het Uur Code gedaan en %{lines} regels code geschreven.'
-  start_hoc: Start het Uur Code nu
+  start_hoc: "Start de 'Hour of Code' nu"
   contact_form_topic_press: Pers/media (interview of met betrokkenen spreken)
   stats_nina: '"Iedere dag leverde hetzelfde resultaat &mdash; 100% deelname." -Nina Nichols Peery, lerares'
   stats_student: '"Ik wist dat dit een <b> een-keer-in-het-leven </b>  kans was" -Mariana Alzate, groep8-er'
   stats_michael: '"Ik heb <b> nog nooit </b> mijn leerlingen zo enthousiast gezien over leren" -Michael Clark, leraar'
   studiobar_title: "ontdek <a href='http://studio.code.org'>Code Studio</a>"
+  studiobar_title_nolink: ontdek Code Studio
   studiobar_elementary_title: Cursussen voor gevorderden
   studiobar_elementary_body: 'Onze drie Nieuwe Cursussen voor K&#8209;5'
   studiobar_hoc_title: Het Hour of Code
@@ -120,31 +122,52 @@ nl-NL:
   studiobar_teacher_body: Introduceer Code Studio in je klaslokaal
   studiobar_frozen_title: Een Uur Code
   studiobar_frozen_body: Maak een winterlandschap met Anna en Elsa
-  studiobar_donate_title: Doneer
+  studiobar_donate_title: Doneren
   studiobar_donate_body: Eén kind leert voor elke euro die u doneert
   studiobar_shop_title: winkel
   studiobar_shop_body: Breek stereotypes. Draag ons logo met trots.
-  homepage_hero_text_malala: |
-    &ldquo;Ik daag meisjes in alle landen uit 
-    om Een Uur Code te leren&rdquo;
-    Malala
-  homepage_hero_text_susan: |
-    &ldquo;Het is nooit te laat
-    om te leren&rdquo;
-    Susan, CEO van YouTube
+  homepage_hero_text_malala: "&ldquo;Ik daag meisjes in alle landen uit om één 'Hour of Code' te leren&rdquo; Malala, winnares Nobelprijs voor de Vrede"
+  homepage_hero_text_susan: '&ldquo;Als je technologie kunt veranderen, kun je de wereld veranderen.&rdquo; Susan, directeur van YouTube'
   homepage_hero_text_fistbump: |
     &ldquo;Speel niet alleen op je telefoon,
     programmeer hem&rdquo;
     President Barack Obama
-  homepage_hero_text_sheryl: |2
-    &ldquo;Een goed begrip van informatica
-     wordt steeds belangrijker...&rdquo;
-    Sheryl, COO van Facebook
-  homepage_slot_text_hoc: Het Hour of Code
+  homepage_hero_text_sheryl: '&ldquo;Onze kinderen &mdash; ook onze meisjes &mdash; moeten de kans krijgen informatica te leren&rdquo; Sheryl, directeur van Facebook'
+  homepage_hero_text_satya: '&ldquo;Informatica geeft je toegang tot de mooiste kansen ter wereld.&rdquo; Satya, directeur van Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Als je programmeert kun je zelf je leven bepalen.&rdquo; Chris Bosh'
+  homepage_hero_text_student1: |
+    &ldquo;Deze vaardigheden hebben mijn toekomst
+    veranderd. Maar het is ook gewoon leuk.&rdquo;
+    Luna, brugklas
+  homepage_hero_text_student2: |
+    &ldquo;Mijn kinderen waren nog nooit zo
+    enthousiast over leren.&rdquo;
+    Michael, leraar
+  homepage_hero_text_student3: |
+    &ldquo;Van computerkunde weet je pas of je
+    't leuk vindt, wanneer je het probeert&rdquo;
+    Jackson, groep 8
+  homepage_hero_text_student4: |
+    &ldquo;Met programmeren kun je alles
+    doen wat je brein kan bedenken.&rdquo;
+    Maya, groep 4
+  homepage_hero_text_student5: |
+    &ldquo;Computerkunde is niet iets voor een ander.
+    Het is iets voor jou, hier, nu.&rdquo;
+    Geraldo, leraar
+  homepage_hero_text_teacher1: |
+    &ldquo;Programmeren bevordert creativiteit, inspiratie en innovatie &mdash;
+    zaken die belangrijk zijn voor elke carrière.&rdquo;
+    Floresa, lerares
+  homepage_hero_text_teacher2: |
+    &ldquo;100% van mijn leerlingen raakte door dit
+    programma geëngageerd en betrokken en deed actief mee.&rdquo;
+    Adam, leraar
+  homepage_slot_text_hoc: Het Uur Code
   homepage_slot_text_frozen: Frozen met Anna en Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Dashboard Leerkrachten
   homepage_slot_text_studio: Al onze handleidingen
-  homepage_slot_text_course4: Les 4
+  homepage_slot_text_course4: Cursus 4
   homepage_slot_text_shop: winkel
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Bekijk de video
@@ -154,8 +177,8 @@ nl-NL:
   homepage_signpetition_dropdown: 'Teken onze petitie &#x25BE;'
   homepage_slot_text_title_hoc: Een Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
-  homepage_slot_text_link_hoc: 'Probeer "Hour of Code"'
-  homepage_slot_text_link_host: Organiseer een Uur Code
+  homepage_slot_text_link_hoc: Probeer een Uur Code
+  homepage_slot_text_link_host: "Organiseer een 'Hour of Code'"
   homepage_slot_text_link_hocserved: '# bediend'
   homepage_slot_text_title_students: Leerlingen
   homepage_slot_text_blurb_students: Verken onze handleidingen
@@ -170,12 +193,12 @@ nl-NL:
   homepage_slot_text_title_advocates: Pleitbezorgers
   homepage_slot_text_blurb_advocates: Ondersteun ons werk
   homepage_slot_text_link_stats: Bekijk de statistieken
-  homepage_slot_text_link_buy: Koop een t-shirt of een pet
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Doneer
   homepage_header_codestudio: Creaties van Code Studio leerlingen
   homepage_header_donors: Code.org dankt zijn aanhangers
   homepage_donors_seall: Alles weergeven
-  homepage_donors_donate: Doneer
+  homepage_donors_donate: Doneren
   contact_form_topic_student: Ik ben een leerling
   contact_form_topic_parent: Ik ben een ouder
   contact_form_topic_teacher: Ik ben een leraar
@@ -261,7 +284,7 @@ nl-NL:
   dashboard_action_done: Voltooid
   dashboard_action_required: verplicht
   dashboard_navigation_home_page: Startpagina voor de leerkracht
-  dashboard_navigation_section_student_progress: Studentenaccounts en vooruitgang
+  dashboard_navigation_section_student_progress: Leerlingaccounts en vooruitgang
   dashboard_navigation_section_teacher_progress: De vooruitgang van je cursus
   dashboard_navigation_section_lesson_plans: Lesplan en middelen
   dashboard_navigation_section_community: Help en Gemeenschap
@@ -345,14 +368,14 @@ nl-NL:
   dashboard_login_picture: Beeld
   dashboard_login_none: E-mail
   dashboard_new_password: Nieuw wachtwoord
-  dashboard_progress_not_started: niet gestart
-  dashboard_progress_in_progress: wordt uitgevoerd
+  dashboard_progress_not_started: niet begonnen
+  dashboard_progress_in_progress: mee bezig
   dashboard_progress_not_completed: niet voltooid
   dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
   dashboard_progress_completed_perfect: voltooid, perfect
-  dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
-  stats_hoc_2013_heading: 'Ongelooflijke Statistieken voor Uur van de Code van vorige jaar. In één week alleen al:'
-  stats_hoc_2013_image_alt: Statistieken van Uur van de Code van 2013
+  dashboard_progress_furthest_level_attempted: hoogste niveau geprobeerd
+  stats_hoc_2013_heading: "Ongelooflijke statistieken voor de 'Hour of Code' van vorig jaar. In één week alleen al:"
+  stats_hoc_2013_image_alt: "Statistieken van de 'Hour of Code' van 2013"
   dashboard_teacher: Leerkracht
   dashboard_student: Leerling
   dashboard_sections_email_question: Hebben alle studenten een geldig e-mailadres?
@@ -369,10 +392,10 @@ nl-NL:
   code_hoc_coming: 'Het Uur Code is hier - van 8 -14 december!'
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Leer meer
-  hoc2014_try_new_tutorials: Probeer onze nieuwe Uur Code-tutorials
-  hoc2014_try_new_tutorial: Probeer onze nieuwe Uur Code in beta
+  hoc2014_try_new_tutorials: "Probeer onze nieuwe 'Hour of Code'-tutorials"
+  hoc2014_try_new_tutorial: Probeer onze nieuwe Uur Code-cursus in beta
   hoc2014_try_scrat: Angry Birds, PvZ en Scrat
-  hoc2014_try_frozen: Maak kunst met Anna en Elsa van Frozen
+  hoc2014_try_frozen: Kunst met Anna en Elsa van Frozen
   carousel_heading_international: Opdrachten in jouw taal
   carousel_heading_domestic: Handleidingen beschikbaar in het Engels
   carousel_heading_beginners: Handleidingen voor Beginners
@@ -386,7 +409,7 @@ nl-NL:
   carousel_heading_robots: Leer robots te programmeren
   carousel_heading_ide: Platformen populair onder docenten
   educator_notes: Opvoeder notities
-  how_to_teach_hoc: Hoe leer je een Hour of Code
+  how_to_teach_hoc: Hoe les te geven met een Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
   participants: Deelnemers
   teachers_notes: "Leraar-nota's"
@@ -402,10 +425,10 @@ nl-NL:
   thinkersmithspanish_name: Mijn Robotvriend
   khan_name: Een inleiding tot JavaScript
   khanes_name: Een inleiding tot JavaScript
-  khanpt_name: Een inleiding tot JavaScript
-  khanhe_name: Een inleiding tot JavaScript
-  khanfr_name: Een inleiding tot JavaScript
-  khanpl_name: Een inleiding tot JavaScript
+  khanpt_name: Een inleiding in JavaScript
+  khanhe_name: Een inleiding in JavaScript
+  khanfr_name: Een inleiding in JavaScript
+  khanpl_name: Een inleiding in JavaScript
   tynker_name: Maak je eigen spel
   scratch_name: Wees creatief met programmeren
   lightbot_name: Lightbot
@@ -441,8 +464,8 @@ nl-NL:
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middelbare school +
   khanes_gradelevel: Middelbare school +
-  khanpt_gradelevel: Middelbare school +
-  khanhe_gradelevel: Middelbare school +
+  khanpt_gradelevel: Onderbouw middelbare school +
+  khanhe_gradelevel: Onderbouw middelbare school +
   khanfr_gradelevel: Middelbare school +
   khanpl_gradelevel: Middelbare school +
   tynker_gradelevel: Leeftijden 5-13
@@ -573,7 +596,7 @@ nl-NL:
   condcards_longdescription: 'Leer over algoritmen en voorwaardelijke statements in deze "unplugged" activiteit, met behulp van een kaartspel. leerlingen voeren deze activiteit in teams uit en hebben een kaartspel per team nodig.'
   lightbotintl_longdescription: 'Leer de kern  van de programmeerlogica, beginnend met super-basis programmeren, voor de leeftijd  4 +, op iOS of Android (of een webbrowser). Leer series programmeren, patronen identificeren, procedures gebruiken en loops te gebruiken!'
   codehs_longdescription: "Bij programmeren geef je opdrachten aan computer, net zoals je opdrachten geeft aan een hond. Leer programmeren met Karel de Hond&mdash;Een leuke, toegankelijke en grafische Inleiding in het programmeren dat de basisconcepten zoals commando's en functies leert aan de absolute beginner. De cursus is leerling-gericht maar leerkrachten kunnen zich registreren om toegang te krijgen tot leerkracht-tools en de voortgang van de leerling."
-  codecademy_longdescription: "Codecademy is een interactieve, leerling-geleide introductie tot de basis van CS via JavaScript dat wordt gebruikt door tientallen miljoenen leerlingen over de hele wereld. Wij hebben een geen-gedoe Uur van Code ervaring met begeleidende quizzen, dia's, en een voltooid project voor leerlingen aan het eind."
+  codecademy_longdescription: "Codecademy is een interactieve, leerling-gestuurde introductie tot de basis van informatica via JavaScript dat wordt gebruikt door tientallen miljoenen leerlingen over de hele wereld. Wij hebben een 'Hour of Code' ervaring zonder gedoe voorbereid met begeleidende quizzen, dia's, en een voltooid project voor leerlingen aan het eind."
   codecombat_longdescription: Versla ogres om Python of Javascript te leren in dit episch programmeer-spel!
   codemonkey_longdescription: 'CodeMonkey is een online spel dat leert programmeren in een echte programmeertaal! leerlingen programmeren een aap om bananen te vangen terwijl het geleidelijker moeilijker wordt. Ze scoren sterren voor elke oplossing en kunnen die delen met een simpele klik. '
   codeavengers_longdescription: Maak een 2D top-down game voor 2 spelers met JavaScript door 10 korte opdrachten uit te voeren. Ga daarna verder met het leren van de basis van het programmeren (variabelen en als-voorwaarden) wanneer je een Quiz maakt die je kunt delen met je vrienden. Gedurende je activiteiten verdien je punten en badges als je uitdagingen aangaat om de hoogste klassering van je klas te bereiken.
@@ -592,7 +615,7 @@ nl-NL:
   makegameswithus_longdescription: 'Leer programmeren door het maken van een iPhone spel met behulp van een gloednieuwe en beginners vriendelijke programmeertaal genaamd Swift! Maak een Pok&eacute;mon-geïnspireerd actiespel en schrijf code om uw nieuwe monster nieuwe moves te leren. U leert hoe variabelen, methoden en objecten  te gebruiken om uw monster te helpen winnen!'
   touchdevelop_longdescription: |-
     De aanraak-vriendelijke editor begeleidt je bij het maken van pixelkunst, het oplossen van de beer puzzel of bij het maken van je eigen "springende vogel' spel. 
-  appinventor_longdescription: Opbouwende korte videocursussen begeleiden je met het bouwen van drie simpele apps voor je Android of tablet. Deze cursus is ontwikkeld voor beginners en experts tegelijk. Deze Hour of Code maakt je voor je het weet een programmeur die zijn eigen apps maakt. Stel je voor dat je je eigen apps kunt delen met je vrienden! Deze activiteiten zijn geschikt voor individuelen en voor in de klas.
+  appinventor_longdescription: "Opbouwende korte videocursussen begeleiden je met het bouwen van drie simpele apps voor je Android telefoon of tablet. Deze cursus is ontwikkeld voor zowel beginners als experts. Deze 'Hour of Code' maakt je voor je het weet een programmeur die zijn eigen apps maakt. Stel je voor dat je je eigen apps kunt delen met je vrienden! Deze activiteiten zijn geschikt voor individuele leerlingen en voor in de klas."
   blockly_longdescription: Heb je computers met langzame (of zelfs zonder) internettoegang? Download dan de Blockly cursussen. Dat waren de voorlopers van de Code.org-cursussen, Een simpele 3 MB ZIP-bestand kan op elke computer worden geladen of gebruikt worden vanaf een USB-stick
   thinkersmith2_longdescription: Leerlingen leren over het binair weergeven en opslaan van letters, als functies van aan en uit. Als afsluiting gaat de klas zijn eigen initialen encoderen om mee naar huis te nemen.
   kodableunplugged_longdescription: Ontworpen om uit te voeren op papier, de fuzzFamily Frenzy is een introductie voor programmeerlogica voor kinderen van 5 jaar en ouder. Een docent moet het spel uitleggen, vervolgens moeten de leerlingen een medeleerling programmeren om eenvoudige hindernissen te passeren.
@@ -754,7 +777,7 @@ nl-NL:
   tynker_beyond_longdescription: 'Tynker maakt het leuk & gemakkelijk om te leren programmeren. Het maakt het visueel. Kinderen bouwen spelletjes en apps voor mobiele apparaten door blokken code te ordenen. Het leren van programmeersyntax wordt hierdoor overbodig gemaakt. Kinderen vormen ideeën gelijk om in bewegende verhalen en wiskundige kunst. Het bevordert de leerontwikkeling. Tegelijk met het leren van de basisprincipes, leren de kinderen met Tynker de geavanceerdere concepten, waaronder syntaxgestuurd programmeren.'
   scratch_beyond_longdescription: 'Met Scratch kun je je eigen interactieve spellen, verhalen, animaties maken &mdash; en ze met je vrienden delen. Begin door je naam te animeren, een vakantiekaart te maken, of je eigen pong spel te maken.'
   lightbot_beyond_longdescription: 'Leer de kern  van de programmeerlogica, beginnend met super-basis programmeren, voor de leeftijd  4 +, op iOS of Android (of een webbrowser). Leer series programmeren, patronen identificeren, procedures gebruiken en loops te gebruiken!'
-  codecademy_beyond_longdescription: "Codecademy is een interactieve, leerling-geleide introductie tot de basis van CS via JavaScript dat wordt gebruikt door tientallen miljoenen leerlingen over de hele wereld. Wij hebben een geen-gedoe Uur van Code ervaring met begeleidende quizzen, dia's, en een voltooid project voor leerlingen aan het eind."
+  codecademy_beyond_longdescription: "Codecademy is een interactieve, leerling-gestuurde introductie tot de basis van informatica via JavaScript dat wordt gebruikt door tientallen miljoenen leerlingen over de hele wereld. Wij hebben een 'Hour of Code' ervaring zonder gedoe voorbereid met begeleidende quizzen, dia's, en een voltooid project voor leerlingen aan het eind."
   kodable_beyond_longdescription: Kodable is een zelfsturende iPad spel dat kinderen vanaf 5 jaar introduceert aan de grondbeginselen van programmeren. De ondersteuning van ouders of leerkrachten is optimaal, maar niet noodzakelijk.
   scratchjr_beyond_longdescription: ScratchJr is een inleidende programmeertaal waarmme jonge kinderen hun eigen interactieve verhalen en spelletjes kunnen maken. Kinderen voegen grafische programmeer blokken samen om figuren te laten bewegen, springen, dansen en zingen
   hopscotch_beyond_longdescription: 'leerling-geleide cursus over de iPad met behulp van de  Hopscotch programmeertaal. Leerlingen zullen games en apps voor en op hun iPad bouwen. Leerlingen kunnen afzonderlijk  werken of met vrienden (maximaal 3 per iPad).'
@@ -763,7 +786,7 @@ nl-NL:
   hacketyhack_beyond_longdescription: "Hackety Hack leert je de absolute basis van programmeren, vanaf het allereerste begin. Er is helemaal geen ervaring met programmeren nodig! Met Hackety Hack leer je de programmeertaal Ruby. Ruby wordt voor allerlei soorten programma's gebruikt, inclusief desktop applicaties en websites. [Opmerking: Installatie op de computer is vereist]"
   robomind_beyond_longdescription: 'Leerlingen leren de basisprincipes van programmeren door hun eigen virtuele robot te besturen. De on-line cursus is volledig zelfondersteunend met korte presentaties, filmpjes, quizzen en automatische begeleiding/aanwijzingen om met de programmeeroefeningen te helpen. '
   makegameswithus_beyond_longdescription: Ken je wat ObjectiveC? Leer om in een uur een iPhone spel te maken! We zullen je helemaal begeleiden door het proces van coderen, testen en je spel in zijn geheel in de browser spelen om het vervolgens via Facebook te delen zodat je vrienden het kunnen uitproberen! Er is geen eerdere ervaring met het ontwikkelen voor iPhone nodig. Je moet begrijpen wat variabelen, methoden en objecten zijn.
-  appinventor_beyond_longdescription: Opbouwende korte videocursussen begeleiden je met het bouwen van drie simpele apps voor je Android of tablet. Deze cursus is ontwikkeld voor beginners en experts tegelijk. Deze Hour of Code maakt je voor je het weet een programmeur die zijn eigen apps maakt. Stel je voor dat je je eigen apps kunt delen met je vrienden! Deze activiteiten zijn geschikt voor individuelen en voor in de klas.
+  appinventor_beyond_longdescription: "Opbouwende korte videocursussen begeleiden je met het bouwen van drie simpele apps voor je Android telefoon of tablet. Deze cursus is ontwikkeld voor zowel beginners als experts. Deze 'Hour of Code' maakt je voor je het weet een programmeur die zijn eigen apps maakt. Stel je voor dat je je eigen apps kunt delen met je vrienden! Deze activiteiten zijn geschikt voor individuele leerlingen en voor in de klas."
   touchdevelop_beyond_longdescription: TouchDevelop laat je apps maken op een iPad, iPhone, Android, PC, Mac. Onze aanraakvriendelijke editor maakt coderen leuk, zelfs op je telefoon of tablet!
   codehs_beyond_longdescription: "Leer de basisprincipes van programmeren met Karel de Hond, een leuke, toegankelijke en visuele inleiding op coderen, waar het commando's geven aan een computer net zo is als het geven van commando's aan een hond. Deze cursus is geweldig als deze door een leraar begeleid wordt, maar kan ook individueel worden gedaan. [Opmerking: er moet voor worden betaald]"
   udemy_beyond_longdescription: 'Of je nog nooit een regel code hebt gezien, of je codeert voor je levensonderhoud, Udemy heeft een cursus voor je, onderwezen door professionele instructeurs. [Opmerking: er moet voor worden betaald]'

@@ -22,7 +22,7 @@
           future: má ekki vera í framtíð
   hello: Halló heimur
   welcome_back: Velkomin/n aftur, %{name}
-  submit: Senda
+  submit: Senda inn
   add_teacher_form:
     code:
       label: 'Bæta við kennara:'
@@ -262,6 +262,7 @@
         artist: Teikna eitthvað
     user:
       classroom: Heimasíða kennara
+      district_dashboard: Stjórnborð umdæmis
       label: Hæ %{username}
       stats: Framvindan mín
       settings: Reikningurinn minn
@@ -403,13 +404,14 @@
       og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13
       - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
     test_videos_help: Prófaðu nýja myndbandaspilarann okkar í skólanum þínum
-    try_beta_courses: Nýtt! Prófaðu beta námskeiðin okkar fyrir 10 - 11 ára nemendur
+    try_beta_courses: Nýtt! Prófaðu beta námskeiðin okkar fyrir K-5 nemendur
     use_as_teacher: Nota þennan vef sem kennari
     heading_hoc2014: <h2>Klukkustund kóðunar fyrir</h2><h1>alla aldurshópa</h1>
     heading_elementary: <h2>20 stunda námskeið fyrir</h2><h1>byrjendur (á öllum aldri)</h1>
     heading_apps: <h2>Skemmtun fyrir</h2><h1>alla</h1>
     heading_legacy: <h2>Almenna námskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>
     your_gallery: Safn
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -513,6 +515,9 @@
       body: Skoða safn forrita og mynda sem notendur okkar hafa búið til
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity leikjasmiðja
+      body: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
   gallery:
     students_drew_these_with_code: Nemendur teiknuðu þetta með kóða!
     students_made_these_with_code: Nemendur gerðu þetta með forritun!
@@ -549,6 +554,16 @@
     wrong_body: Lausnin sem þú gafst er ekki fullnægjandi. Vinsamlegast reyndu aftur!
     correct_title: Rétt
     correct_body: Þetta svar er rétt.
+  contract_match:
+    wrong_title: Rangt svar
+    badname: Samningurinn þinn heitir röngu nafni.
+    badname_case: Heiti falla þurfa að vera stafrétt. Prófaðu að breyta hástöfum/lágstöfum
+      í heiti samningsins.
+    badrange: Samningurinn þinn hefur rangt svið.
+    baddomainsize: Samningurinn þinn hefur ekki réttan fjölda atriða í gildamenginu.
+    baddomainname: Eitt eða fleiri atriði í gildamenginu heitir röngu nafni.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Skráðu svar þitt hér
   dialog:
@@ -646,3 +661,5 @@
       listanum Verkefni mín. Ef þú hefur deilt verkefninu með öðrum, munu þeir ekki
       lengur sjá það.
     view_all: Sýna verkefnin mín
+    remix: Endurblanda
+    click_to_remix: Smelltu á "Endurblanda" til að stofna afleidda útgáfu!

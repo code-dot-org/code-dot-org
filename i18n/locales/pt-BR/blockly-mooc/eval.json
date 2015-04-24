@@ -4,14 +4,13 @@
   "circleBlockTitle":"círculo (raio, estilo, cor)",
   "displayBlockTitle":"calcular",
   "ellipseBlockTitle":"elipse (largura, altura, estilo, cor)",
-  "emptyFunctionalBlock":"Você tem um bloco com uma entrada sem preencher.",
-  "extraTopBlocks":"Alguns de seus blocos estão soltos. Você pretendia conectá-los ao bloco \"exibir\"?",
+  "extraTopBlocks":"Você tem blocos não anexados. Você pretendia anexá-los ao bloco \"calcular\"?",
   "infiniteRecursionError":"Sua função está chamando a si mesma. Fizemos com que ela parasse, caso contrário ela teria continuado a chamar a si mesma para sempre.",
   "overlayBlockTitle":"sobreposição (superior, inferior)",
   "placeImageBlockTitle":"lugar-imagem (x, y, imagem)",
   "offsetBlockTitle":"offset (x, y, imagem)",
   "rectangleBlockTitle":"retângulo (largura, altura, estilo, cor)",
-  "reinfFeedbackMsg":"Você pode clicar no botão \"Continuar\" para editar seu desenho.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"rotacionar (graus, imagem)",
   "scaleImageBlockTitle":"escala (fator, imagem)",
   "squareBlockTitle":"quadrado (tamanho, estilo, cor)",
@@ -27,5 +26,6 @@
   "solid":"sólido",
   "string":"string",
   "stringMismatchError":"Você tem uma string com a capitalização errada.",
-  "userCodeException":"Ocorreu um erro durante a execução do seu código."
+  "userCodeException":"Ocorreu um erro durante a execução do seu código.",
+  "wrongBooleanError":"Seus blocos retornam o valor booleano errado."
 }

@@ -433,11 +433,33 @@ pt-BR:
         playlab_events: Eventos do Laboratório
         playlab_repeat_forever: 'Laboratório: repetir infinitamente'
         tutorial_puzzle_challenge: Desafio tutorial
-        msm_1_intro: 'Capítulo 1 - introdução à ciência da computação em álgebra'
-        msm_2_eval_block: Blocos de cálculo
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Variáveis
-        msm_7_functions: Funções
+        infinity_playlab_intro: 'Laboratório - Introdução'
+        infinity_playlab_events: 'Laboratório - Eventos'
+        infinity_playlab_repeat_forever: 'Laboratório - Repetir infinitamente'
+        csp_concept_rgb: Um pouco sobre pixels
+        csp_pixelation_color_1: 'Widget de pixelização de cores - Parte 1'
+        csp_pixelation_color_2: 'Widget de pixelização de cores - Parte 2'
+        csp_pixelation_color_3: 'Widget de pixelização de cores - Parte 3'
+        csp_pixelation_bw: Widget de pixelização em preto e branco
+        csp_U1L14_tipstricks: 'Unidade 1 - Lição 14 - Dicas e truques de professores'
+        csp_textcompression: Text compression widget
+        alg_1_intro: 'CS in Algebra - Introduction'
+        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
+        alg_3_pemdas: 'CS in Algebra - Order of Operations'
+        alg_4_data_types: 'CS in Algebra - Data Types'
+        alg_5_contracts: 'CS in Algebra - Contracts'
+        alg_6_variables: 'CS in Algebra - Variables'
+        alg_7_function: 'CS in Algebra - Functions'
+        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
+        alg_9_booleans: 'CS in Algebra - Booleans'
+        alg_10_conditionals: 'CS in Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
+        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
+        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
+        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
+        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
+        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'
@@ -504,3 +526,8 @@ pt-BR:
         arrows_move_actor: Use as setas para mover o personagem
         right_arrow_fireball: Use a seta para a direita para atirar bolas de fogo
         name_function: Escreva o nome da sua função aqui
+        Infinity_move_right_runbutton: Adicione um bloco Mova aqui
+        Infinity_move_directions_callout: Qual bloco fará Baymax se mover para cima quando a seta para cima estiver pressionada?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
+        Infinity_repeat_callout: Coloque blocos Mova aqui dentro

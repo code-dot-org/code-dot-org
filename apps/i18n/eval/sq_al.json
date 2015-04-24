@@ -4,7 +4,6 @@
   "circleBlockTitle": "rreth (rreze, stil, ngjyrë)",
   "displayBlockTitle": "përcakto",
   "ellipseBlockTitle": "elips (gjerësi, gjatësi, stil, ngjyrë)",
-  "emptyFunctionalBlock": "Ti ke një bllok me një input të pambushur.",
   "extraTopBlocks": "Ti ke blloqe të pa bashkuar. A ke menduar t'i bashkangjitësh këto me bllokun e \"shfaqur\"?",
   "infiniteRecursionError": "Funksioni juaj po thërret vetveten. Ne e ndaluam atë, përndryshe do të kishte vazhduar te thërriste vetveten përgjithmonë.",
   "overlayBlockTitle": "mbivendosje (lart, poshtë)",
@@ -27,5 +26,6 @@
   "solid": "solid",
   "string": "string",
   "stringMismatchError": "Keni nje varg me kapitalizimin e gabuar.",
-  "userCodeException": "Nje gabim ndodhi gjatë ekzekutimit të kodit tuaj."
+  "userCodeException": "Nje gabim ndodhi gjatë ekzekutimit të kodit tuaj.",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

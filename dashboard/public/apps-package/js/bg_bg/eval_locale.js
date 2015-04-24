@@ -159,8 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "кръг (радиус, стил, цвят)"},
 "displayBlockTitle":function(d){return "Оценка"},
 "ellipseBlockTitle":function(d){return "елипса (ширина, височина, стил, цвят)"},
-"emptyFunctionalBlock":function(d){return "Имате блок с незапълнено поле."},
-"extraTopBlocks":function(d){return "Имате не закачени блокове. Искате ли да ги прикачите към \"дисплей\" блока?"},
+"extraTopBlocks":function(d){return "Имате несвързани блокове. Искате ли да ги свържете към блока за \"оценка\"?"},
 "infiniteRecursionError":function(d){return "Вашата функция се стартира сама. Ние я спряхме, в противен случай щеше да продължи да се стартира безброй пъти."},
 "overlayBlockTitle":function(d){return "наслагване (отгоре, отдолу)"},
 "placeImageBlockTitle":function(d){return "място-изображение (x, y, изображение)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "твърд"},
 "string":function(d){return "поредица"},
 "stringMismatchError":function(d){return "Имате стринг с грешен капитализация."},
-"userCodeException":function(d){return "Възникна грешка при изпълнение на вашия код."}};
+"userCodeException":function(d){return "Възникна грешка при изпълнение на вашия код."},
+"wrongBooleanError":function(d){return "Вашите блокове дават грешна булева стойност."}};

@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "วงกลม (รัศมี แบบ สี)"},
 "displayBlockTitle":function(d){return "การทดสอบ"},
 "ellipseBlockTitle":function(d){return "วงรี (ความกว้าง ความสูง ลักษณะ สี)"},
-"emptyFunctionalBlock":function(d){return "คุณมีบล็อกที่ไม่ได้เติมข้อมูลเข้า."},
 "extraTopBlocks":function(d){return "คุณมีบล็อกที่แยกออกไป คุณหมายถึงว่าคุณจะแนบบล็อกเหล่านี้ไปที่ บล็อก \"การแสดงผล\" หรือไม่ ?"},
 "infiniteRecursionError":function(d){return "ฟังก์ชันของคุณกำลังเรียกตัวเอง เราหยุดมันไว้ มิฉะนั้น มันจะเรียกตัวมันเองไปตลอด."},
 "overlayBlockTitle":function(d){return "ซ้อนทับ (บน ล่าง)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "ของแข็ง"},
 "string":function(d){return "อักขระ"},
 "stringMismatchError":function(d){return "คุณมีสตริงที่มีการใช้อักษรตัวใหญ่ไม่ถูกต้อง."},
-"userCodeException":function(d){return "ความผิดพลาดเกิดขึ้น ในขณะที่มีการดำเนินการของโปรแกรม."}};
+"userCodeException":function(d){return "ความผิดพลาดเกิดขึ้น ในขณะที่มีการดำเนินการของโปรแกรม."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

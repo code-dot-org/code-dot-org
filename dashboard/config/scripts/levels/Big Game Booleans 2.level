@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Remember the safe-left? and safe-right? functions from Sam the Bat? We're going to use that same logic to figure out when the target and danger leave the screen. Go to the \"Functions\" section of the toolbox and complete the safe-left? function.",
+    "instructions": "Now that your onscreen? function is checking safe-left? and safe-right? we can complete those functions. Go to the \"Functions\" section of the toolbox and complete the safe-left? function so that it returns true if the sprite's x coordinate is greater than -50. If you're successful you should see the Danger go off the left side and then return on right side.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -27,7 +27,7 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Booleans 2\",\r\n  \"callout_text\": \"Open this drawer to find the safe-left? function\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": 170\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Booleans 2\",\r\n  \"callout_text\": \"Open this drawer to find the safe-left? function\",\r\n  \"element_id\": \"[id=':7.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -36,8 +36,11 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
-    "maze_data": null
-  }
+    "disable_examples": "false",
+    "maze_data": null,
+    "success_condition": "function() {\r\n}"
+  },
+  "md5": "92587fa7b46631faa7f10ceebb602f51"
 }]]></config>
   <blocks/>
 </Studio>

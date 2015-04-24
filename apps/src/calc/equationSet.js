@@ -2,6 +2,7 @@ var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
 var jsnums = require('./js-numbers/js-numbers');
+var utils = require('../utils');
 
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally
@@ -127,6 +128,20 @@ EquationSet.prototype.computesSingleConstant = function () {
 
 };
 
+EquationSet.prototype.isAnimatable = function () {
+  if (!this.compute_) {
+    return false;
+  }
+  if (this.hasVariablesOrFunctions()) {
+    return false;
+  }
+  if (this.compute_.expression.depth() === 0) {
+    return false;
+  }
+
+  return true;
+};
+
 /**
  * Returns a list of equations that consist of setting a variable to a constant
  * value, without doing any additional math. i.e. foo = 1
@@ -157,6 +172,34 @@ EquationSet.prototype.isIdenticalTo = function (otherSet) {
     var otherEquation = otherSet.getEquation(thisEquation.name);
     if (!otherEquation ||
         !thisEquation.expression.isIdenticalTo(otherEquation.expression)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+/**
+ * Are two EquationSets equivalent? This is considered to be true if their
+ * compute expression are equivalent and all of their equations have the same
+ * names and equivalent expressions. Equivalence is a less strict requirement
+ * than identical that allows params to be reordered.
+ */
+EquationSet.prototype.isEquivalentTo = function (otherSet) {
+  if (this.equations_.length !== otherSet.equations_.length) {
+    return false;
+  }
+
+  var otherCompute = otherSet.computeEquation().expression;
+  if (!this.compute_.expression.isEquivalentTo(otherCompute)) {
+    return false;
+  }
+
+  for (var i = 0; i < this.equations_.length; i++) {
+    var thisEquation = this.equations_[i];
+    var otherEquation = otherSet.getEquation(thisEquation.name);
+    if (!otherEquation ||
+        !thisEquation.expression.isEquivalentTo(otherEquation.expression)) {
       return false;
     }
   }
@@ -230,10 +273,15 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         // see if we can map if we replace our params
         // note that params override existing vars in our testMapping
         testMapping = _.clone(mapping);
+        testMapping[equation.name] = {
+          variables: equation.params,
+          expression: equation.expression
+        };
         equation.params.forEach(setTestMappingToOne);
         evaluation = equation.expression.evaluate(testMapping);
         if (evaluation.err) {
-          if (evaluation.err instanceof ExpressionNode.DivideByZeroError) {
+          if (evaluation.err instanceof ExpressionNode.DivideByZeroError ||
+              utils.isInfiniteRecursionError(evaluation.err)) {
             return { err: evaluation.err };
           }
           continue;

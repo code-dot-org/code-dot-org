@@ -239,7 +239,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
-          post :milestone, @milestone_params.merge(user_id: 0, lines: 9999999)
+        post :milestone, @milestone_params.merge(user_id: 0, lines: 9999999)
       end
     end
 
@@ -388,9 +388,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
-          assert_no_difference('@user.reload.total_lines') do # don't update total lines
-            post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
-          end
+        assert_no_difference('@user.reload.total_lines') do # don't update total lines
+          post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
+        end
       end
     end
 
@@ -408,9 +408,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-          assert_no_difference('@user.reload.total_lines') do # don't update total lines
-            post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
-          end
+        assert_no_difference('@user.reload.total_lines') do # don't update total lines
+          post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
+        end
       end
     end
 
@@ -428,7 +428,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
         assert_no_difference('@user.reload.total_lines') do # don't update total lines
-            post :milestone, @milestone_params.merge(result: 'false', testResult: 10, image: Base64.encode64(@good_image), save_to_gallery: 'true')
+          post :milestone, @milestone_params.merge(result: 'false', testResult: 10, image: Base64.encode64(@good_image), save_to_gallery: 'true')
         end
       end
     end
@@ -855,7 +855,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with phone number' do
     assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, @milestone_params.merge(program: studio_program_with_text('800-555-5555'))
+      post :milestone, @milestone_params.merge(program: studio_program_with_text('800-555-5555'))
     end
     assert_response :success
 
@@ -911,4 +911,18 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal true, new_level
     assert_equal false, new_level
   end
+
+  test 'trophy_check only on script with trophies' do
+    script_level_no_trophies = Script.where(trophies: false).first.script_levels.first
+    script_level_with_trophies = Script.where(trophies: true).first.script_levels.first
+
+    @controller.expects(:trophy_check).never
+    post :milestone, @milestone_params.merge(script_level_id: script_level_no_trophies)
+    assert_response :success
+
+    @controller.expects(:trophy_check).with(@user)
+    post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies)
+    assert_response :success
+  end
+
 end

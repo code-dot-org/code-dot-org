@@ -1,9 +1,7 @@
 it:
   data:
     instructions:
-      10A_instruction: |
-        Alright let's complete this puzzle with a Green Square that
-        is 175 pixels in size.
+      10A_instruction: Va bene completiamo questo puzzle con una Casella Vedre di dimensione 175 pixel.
       2-3 _instruction: I fiori viola possono avere 0 oppure 1 dose di nettare. Fai attenzione a non raccogliere il nettare da un fiore viola SE non ne ha.
       2-3 Artist 1 new_instruction: "Ciao, io sono un ARTISTA. Puoi scrivere CODICE per farmi disegnare praticamente qualsiasi cosa. Usa un po' di BLOCCHI per farmi disegnare sulle linee grigie in figura. (Ciascuna riga è lunga 100 PIXEL)"
       2-3 Artist 11_instruction: 'Fai un bordo al segnale di stop creando un ottagono con 8 lati, lunghi 100 PIXEL ciascuno. Di quanti gradi devi GIRARE? (SUGGERIMENTO: Quanto fa 360 diviso 8?) '
@@ -12,9 +10,7 @@ it:
       2-3 Artist 2_instruction: 'Questa casa ha un muro a metà. Ogni lato è lungo 100, ma il muro a metà è lungo solo 50. Completa il muro. '
       2-3 Artist 3.4_instruction: "Il BLOCCO salta muove l'ARTISTA senza che disegni. Disegna la linea tratteggiata utilizzando sia il BLOCCO salta sia il BLOCCO disegna."
       2-3 Artist 3_instruction: Questo cappello è alto 100 PIXEL. Disegna un cappello che sia 70 PIXEL più piccolo.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+      2-3 Artist 3new_instruction: Il cappello rosso è alto 100 pixel. Finisci disegnando un cappello nero che sia più corto di 70 pixel. La larghezza del cappello nero è di 50 pixel.
       2-3 Artist 4_instruction: Aiutami a completare la casa per questo gatto.
       2-3 Artist 5_instruction: 'Sostituisci questo codice con un blocco "ripeti ??? volte" per disegnare la stessa case utilizzando solo 3 blocchi.'
       2-3 Artist 6_instruction: 'Questa casa ha bisogno di un tetto! Disegna il triangolo. Suggerimento: tutti e tre i lati sono della stessa lunghezza.'
@@ -25,8 +21,8 @@ it:
       2-3 Artist Debugging 1_instruction: Puoi fare questo cappello con una lunghezza di 100?
       2-3 Artist Debugging 10_instruction: "L'area di controllo della direzione sul mio controller di gioco è troppo stretta. Suggerimento: allargala di 10 pixel"
       2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
+        Aiutami a completare il mio bellissimo fiocco di neve.
+        Quante volte devo "ripetere" per completarlo?
       2-3 Artist Debugging 12_instruction: "Dovrei aggiungere un'onda dell'oceano a questa scena.  Puoi aiutarmi?"
       2-3 Artist Debugging 2_instruction: 'Il codice per i tre baffi che vedi è sbagliato. Suggerimento: ciascun baffo è lungo 75 pixel. Correggi il codice per disegnare i baffi.'
       2-3 Artist Debugging 3_instruction: "La mia barca ha un buco! Puoi ripararle cambiando l'angolo della linea? Suggerimento: l'ultimo angolo è sbagliato di 15 gradi."
@@ -104,47 +100,24 @@ it:
       2-3 Bee Conditionals 2_instruction: "Ciao, sono un'ape! Aiutami a raccogliere tutto il nettare dai fiori. Usa un ciclo."
       2-3 Bee Conditionals 3_instruction: Aiutami a raccogliere tutto il nettare dai fiori per produrre del miele. Usa un ciclo.
       2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
+        Aiutami a cogliere tutto il polline dai fiori 
+        e trasformarlo in miele.
       2-3 Bee Conditionals 5_instruction: 'I fiori viola possono avere una quantità di nettare pari a 0 oppure 1, ma tu non lo sai! Fai attenzione a non raccogliere nettare da un fiore viola se ne ha una quantità pari a 0. Usa il blocco "se" per controllare se la quantità è 0 oppure 1.'
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
+      2-3 Bee Conditionals 6_instruction: 'Scegli questo fiore con un blocco "se" per vedere se ha polline.'
       2-3 Bee Conditionals 7_instruction: Raccogli il nettare da ogni fiore, se ne ha una quantità qualsiasi.
       2-3 Bee Conditionals 8_instruction: Su questo campo ci sono fiori rossi e viola. I fiori rossi possiedono una quantità nota di nettare, ma la quantità dei fiori viola è ignota. Raccogli tutto il nettare.
       2-3 Bee Conditionals 9_instruction: Raccogli tutto il nettare da ogni fiore.
       2-3 Bee Conditionals Assessment 1_instruction: 'Compito: raccogli tutto il nettare. Fai attenzione a non raccogliere nettare dai fiori viola se non ne hanno.'
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
-      2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey. 
-      2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+      2-3 Bee Debugging 1_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele.'
+      2-3 Bee Debugging 10_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele.'
+      2-3 Bee Debugging 2_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele.'
+      2-3 Bee Debugging 3_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele.'
+      2-3 Bee Debugging 4_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele.'
+      2-3 Bee Debugging 5_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele. Ora puoi utilizzare i comandi corri "run" e passo "step".'
+      2-3 Bee Debugging 6_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele. '
+      2-3 Bee Debugging 7_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele.'
+      2-3 Bee Debugging 8_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele.'
+      2-3 Bee Debugging 9_instruction: 'Questi blocchi mi stanno "bloccando". Corregi gli errori per raccogliere tutto il polline e trasformarlo in miele.'
       2-3 Bee Debugging Assessment 1_instruction: 'Compito: questi blocchi sono davvero fastidiosi per me. Sistema gli errori che impediscono di raccogliere tutto il nettare e produrre tutto il miele.'
       2-3 Bee Functions 1_instruction: 'Una funzione è un insieme di blocchi di codice che esegue un compito. Usa la funzione "raccogli 2 dosi di nettare" per raccogliere il nettare da ogni fiore.'
       2-3 Bee Functions 10_instruction: I fiori viola possono avere una quantità di nettare pari a 0 oppure 1. Definisci una funzione che raccoglie il nettare da un fiore viola solo se ne ha.
@@ -154,47 +127,24 @@ it:
         La funzione "vai a prendere il nettare" sposta l'ape sul fiore, raccoglie il nettare e fa tornare l'ape dove si trovava. Usa questa funzione per raccogliere tutto il nettare.
       2-3 Bee Functions 5_instruction: "Ora c'è più nettare nei fiori. Modifica la funzione data in modo che raccolga 4 dosi di nettare ed usala per raccogliere tutto il miele dai fiori."
       2-3 Bee Functions 6_instruction: Adesso usa la stessa funzione per raccogliere il nettare dai tre fiori.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
+      2-3 Bee Functions 7_instruction: I fiori adesso sono nuovamente fuori. Modifica la funzione e utilizzala per raccogliere tutto il polline e trasformarlo in miele.
       2-3 Bee Functions 8_instruction: Definisci la tua funzione per prendere 7 dosi di nettare, spostarsi in avanti e fare 7 dosi di miele. Usa questa funzione per raccogliere il nettare da ogni fiore e fare il miele su ogni favo.
       2-3 Bee Functions 9_instruction: "Definisci la tua funzione che si avvia lungo un cammino per prendere il nettare e fare il miele, per poi tornare all'inizio del cammino."
       2-3 Bee Functions Assessment 1_instruction: 'Questo è un esercizio di verifica -- Usa la funzione data per raccogliere il nettare da ogni fiore.'
       2-3 Bee Functions Assessment 2_instruction: 'Questo è un esercizio di verifica -- Definisci una funzione per fare 3 dosi di miele alla volta.'
-      2-3 Bee Loops 1_instruction: |
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers. 
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
-      2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
+      2-3 Bee Loops 1_instruction: "Ciascun fiore contiene un'unità di nettare. Raccogli il nettare da ogni fiore. "
+      2-3 Bee Loops 10_instruction: |-
+        Puoi utilizzare un ciclo mentre "while" all'interno degli altri cicli per raccogliere tutto il polline?
+      2-3 Bee Loops 11_instruction: 'Usa un ciclo mentre "while" per raccogliere il polline dai fiori in questo campo.'
+      2-3 Bee Loops 12_instruction: 'Usa un ciclo mentre "while" per raccogliere il polline dai fiori in questo campo.'
+      2-3 Bee Loops 2_instruction: Usa un ciclo per raccogliere il nettare e trasformarlo in miele.
+      2-3 Bee Loops 3_instruction: "Raccogli il polline da ciascun fiore e fare miele in ciascun nido d'ape."
+      2-3 Bee Loops 4_instruction: |-
+        Utilizza un ciclo simile all'ultimo puzzle, ma usa l'istruzione gira "turn".
+      2-3 Bee Loops 5_instruction: Usa il ciclo per scendere e raccogliere il polline.
+      2-3 Bee Loops 6_instruction: "Usa un ciclo per raccogliere il polline da ciascun fiore e fare miele in ciascun nido d'ape."
+      2-3 Bee Loops 7_instruction: "Metti questi blocchi all'interno di un ciclo per raccogliere polline da ciascun fiore."
+      2-3 Bee Loops 8_instruction: 'Questi fiori viola hanno una quantità sconosciuta di polline. Usa il ciclo mentre  polline "while" per raccoglierlo tutto. Questo ciclo durerà fino a quando la condizione è vera, in questo caso polline > 0.'
       2-3 Bee Loops 9_instruction: |
         The while loop can perform the same action as
         an if statement in a loop. Add a while loop to this code to perform the same
@@ -209,18 +159,14 @@ it:
       2-3 Maze 11_instruction: |
         Get me to the flower I'm hungry! How many times
         do you have to repeat a block?
-      2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
+      2-3 Maze 12 (copy 1)_instruction: 'Riesci a sostituire la risposta precedente con solo due blocchi? (Aiuto: Crea un ciclo usando un blocco "ripeti".)'
+      2-3 Maze 12 (copy 2)_instruction: 'Riesci a sostituire la risposta precedente con solo due blocchi? (Aiuto: Crea un ciclo usando un blocco "ripeti".)'
       2-3 Maze 12 (old)_instruction: |
         Get me to the pig, now with the Repeat times
         block!
       2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
+        Riesci a sostituire questi cinque blocchi con solo due blocchi?
+        (Aiuto: Crea un ciclo usando un blocco "ripeti".)
       2-3 Maze 13 (old)_instruction: |
         Get me to the pig, now with the Repeat until
         block!
@@ -241,8 +187,8 @@ it:
       2-3 Maze 4_instruction: Guidami verso quel cattivone verde! Fai attenzione alla dinamite (TNT)
       2-3 Maze 5_instruction: Guidami verso quel cattivone verde! Fai attenzione alla dinamite (TNT)
       2-3 Maze 6_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+        Mantieni la calma ed aiutami a trovare il maiale cattivo. Altrimenti
+        potrei arrabbiarmi!
       2-3 Maze 7_instruction: Guidami verso quel cattivone verde! Fai attenzione alla dinamite (TNT)
       2-3 Maze 8_instruction: Fammi arrivare al maialino!
       2-3 Maze 9_instruction: Guidami verso quel cattivone verde! Fai attenzione alla dinamite (TNT)
@@ -274,8 +220,8 @@ it:
         the TNT or the feathers will fly!
       2-3 Maze sq3_instruction: Guidami verso quel cattivone verde! Fai attenzione alla dinamite (TNT)
       2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+        Mantieni la calma ed aiutami a trovare il maiale cattivo. Altrimenti
+        potrei arrabbiarmi!
       2-3 Maze sq5_instruction: |
         Get me to the pig! How many times do you have to
         repeat a block?
@@ -289,9 +235,7 @@ it:
       2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
       2-3level1_instruction: "Aiuta l'uccellino a catturare il maialino cattivo muovendosi in avanti"
       4-5 Artist 1_instruction: Aiutami a disegnare il quadrato. (Ogni linea è lunga 300 pixel)
-      4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
+      4-5 Artist 10_instruction: 'Premi "Esegui" per provare il codice. Poi, ripetilo abbastanza volte per completare il disegno. I colori saranno diversi ogni volta.'
       4-5 Artist 11_instruction: Completa le linee verdi. Le linee sono lunghe 300 pixel e distanziate di 15 pixel.
       4-5 Artist 2_instruction: Riesci a ripetere questo codice per completare il quadrato?
       4-5 Artist 3.5_instruction: 'Cerca di immaginare cosa succede se si esegue questo codice (o premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.'
@@ -318,10 +262,8 @@ it:
         This design got started without a "for"
         loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
         the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.
+      4-5 Artist For Loops 14_instruction: |-
+        Qualcuno ha iniziato il codice, ma poi si è accorto che ci deve essere un modo più veloce! Usa un blocco "per" per sostituire i blocchi e completare la spirale triangolare. (Aiuto: la lunghezza dell'ultima linea è di 300 pixel.
       4-5 Artist For Loops 15_instruction: |
         Someone started the code, but then realized
         there must be a quicker way! Use a "for" block to replace the blocks and
@@ -381,14 +323,10 @@ it:
         wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
         waves.
       4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
+        Qui ci sono alcune funzioni per
+        disegnare pianeti, stelle, razzi, e robot. Usali nel modo che preferisci per creare
+        immagini che puoi condividere con i tuoi amici.
+      4-5 Artist Functions 14 Free play_instruction: 'Qui, ti abbiamo fornito di diverse funzioni. usale nel modo che preferisci in uno o più cicli per creare immagini che puoi condividere con i tuoi amici. Clicca "Esegui" per vedere un esempio.'
       4-5 Artist Functions 15 Assessment_instruction: 'Questo è un esercizio di verifica -- Usa la funzione "disegna un quadrato" per creare i quadrati. I quadrati hanno i lati di 50, 100 e 150 pixel.'
       4-5 Artist Functions 2a_instruction: |
         Now put these blocks into a new function
@@ -633,6 +571,7 @@ it:
       add 2_instruction: |
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
+      Alice Test_instruction: Here are some instructions!
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -839,10 +778,10 @@ it:
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
       Big Game Animation 2_instruction: |
-        The function 'update-target' function
-        takes the target's current x value, and returns an updated value. Complete
-        the 'update-target' function so that it adds to the x value each time it
-        is called. The more you add to x, the faster the target will go.
+        The 'update-target' function takes the
+        target's current x value, and returns an updated value. Complete the 'update-target'
+        function so that it adds to the x value each time it is called. The more you
+        add to x, the faster the target will go.
       Big Game Animation 3_instruction: |
         The 'update-danger' function should work
         just like 'update-target', except that the danger should move from the right
@@ -861,24 +800,30 @@ it:
         finish and we'll work on making those sprites reappear on screen after they've
         left.
       Big Game Booleans 2_instruction: |
-        Remember the safe-left? and safe-right? functions
-        from Sam the Bat? We're going to use that same logic to figure out when the
-        target and danger leave the screen. Go to the "Functions" section of the
-        toolbox and complete the safe-left? function.
+        Now that your onscreen? function is checking
+        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
+        section of the toolbox and complete the safe-left? function so that it returns
+        true if the sprite's x coordinate is greater than -50. If you're successful
+        you should see the Danger go off the left side and then return on right side.
       Big Game Booleans 3_instruction: |
         Now that you've got safe-left?, let's fill
         in safe-right? - it should take in a sprite's x coordinate and return true
-        if the sprite hasn't gone off the right side of the screen.
+        if that coordinate is less than 450. Once your safe-right? is complete you
+        should see the Target go off the right side of the screen and return on the
+        left.
       Big Game Booleans 4_instruction: |
-        Great, now that you have functions to check
-        the left and right side of the screen, edit the on-screen? function so that
-        it checks safe-left? AND safe-right?, just like you did with Sam the Bat.
+        We've provided a couple of empty functions
+        for safe-left? and safe-right? The first thing you need to do is complete
+        the onscreen? function so that it checks whether both safe-left? and safe-right?
+        are true. TIP - even after you add safe-left? and safe-right? your sprites
+        won't return to the screen. That will happen in the next puzzles when we
+        make sure that safe-left? and safe-right? actually work.
       Big Game Booleans 5_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right, and they should both return to the opposite side. Take
+        At this point your danger should run across
+        the screen from right to left, your target should run across from left to
+        right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
-        finish to move on.
+        Finish to move on.
       Big Game Collision 1 (copy 1)_instruction: |
         When you last worked on your game
         we got our target and danger sprites to fly across the screen, but they never
@@ -899,18 +844,20 @@ it:
         workbook. Edit the 'update-player' function so that if moves the player
         up when the up arrow is pressed, or down when the down arrow is pressed.
       Big Game Collision 3_instruction: |
-        In order to know if two of our sprites are
-        touching, we first need to measure the distance between their center points.
-        Use the Pythagorean Theorem to complete this distance function so that it
-        returns the distance between the player's center coordinates (px, py), and
-        the center coordinates of another character (cx, cy). We've provided a working
+        Let's fix this distance function so our
+        collision detection works properly. Use the Distance Formula, so the distance
+        function returns the distance between the player's center coordinates (px,
+        py) and another sprite's center coordinates (cx, cy). We've provided a working
         line-length function to help you out.
       Big Game Collision 4_instruction: |
-        Now that you have a way to measure the distance
-        between two points, you just need to decide when those points are close enough
-        to be considered touching. Complete the 'collide?' function so that it checks
-        the distance function and returns true if the two points are close enough
-        to touch (100 pixels apart is a good place to start).
+        We've got a function called distance that
+        should return the distance between two sprites, and using that we can decide
+        when those sprites are close enough to be considered touching. Complete the
+        'collide?' function so that it checks the distance function and returns
+        true if the two points are close enough to touch (100 pixels apart is a good
+        place to start). TIP: the distance function doesn't work yet (it always returns
+        zero), so if you're successful you'll see that your sprites are instantly
+        "colliding," but we'll fix that in a second!
       Big Game Complete (copy 1)_instruction: |
         A demo of the completed CS in Algebra
         Big Game project
@@ -924,16 +871,17 @@ it:
         you'll have an opportunity to share a link to your game. Good work!
       Big Game Player 1_instruction: |
         We're getting really close to a finished game!
-        Last time you work on your game, you used booleans to make your Target and
-        Danger return to the screen once the've left. Click Run to see how your game
-        looks right now, and then we'll get to making your Player move up and down.
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
         accordingly. Computers read keypresses as numeric key codes - the up arrow
         is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
+        workbook. Edit the 'update-player' function so the player moves up when
+        the up arrow is pressed, and moves down when the down arrow is pressed.
       Big Game Testing_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1020,15 +968,15 @@ it:
         Esercizio di Verifica (Risposte Multiple)
         
       Calc Circles of Eval .1_instruction: |
-        The code you'll be writing in this course
-        is called Evaluation Blocks, because each block of code evaluates to a single
-        value. Change the ??? in this code so that the block evaluates to 5.
+        You’ll be writing a kind of code called
+        Evaluation Blocks, because each block of code evaluates to a single value.
+        Change the ??? in this code so that the block evaluates to 5.
       Calc Circles of Eval .2_instruction: |
         This Evaluation Block is a multiplication
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -1046,9 +994,8 @@ it:
         Convert this statement to <some_shape>
         of evaluation.
       Calc Circles of Eval 2_instruction: |
-        Each Evaluation Block has a function at
-        the top, with the inputs to that function written below. Each of those arguments
-        can be a value, or another block.
+        Use a multiplication block to complete
+        this code.
       Calc Circles of Eval 3_instruction: |
         Complete the Evaluation Blocks to match
         this statement.
@@ -1101,15 +1048,15 @@ it:
         of Number, and return the given number to the power of 3. Make sure to write
         two example cases! When you're done, use your new function to calculate 7
         cubed.
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou are in charge of writing computer programs to track the cost of making\neach treat, the money customers give you, and the total profit from selling\nthem. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe function `cookie-cost`, which takes in the number of cookies you intend\nto sell, and gives you back the amount of money it would cost to produce that\nnumber of cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales` which
-        takes in the number of cookies sold, and produces the amount of money customers
-        spent to buy those cookies (each cookie costs $1.50).
+        Write the function `sales` which takes in
+        the number of cookies sold, and produces the amount of money customers spent
+        to buy those cookies (each cookie is sold at $1.50).
       Calc Design Recipe 4_instruction: |
         Using the two functions we just wrote, write
-        the function `cookie-profit`, which takes in the number of cookies you sold,
-        and gives you back the total profit you make from selling your cookies, accounting
+        the function `profit`, which takes in the number of cookies you sold, and
+        gives you back the total profit you make from selling your cookies, accounting
         for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
@@ -1120,20 +1067,18 @@ it:
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 years
-        - can you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years.
+        Can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
-        then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to your age and click run.
+        easily refer to them repeatedly throughout our programs. Here's a variable
+        called "age". Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age-in-months" - use
-        the expression you came up with in the last puzzle to set "age-in-months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -1147,6 +1092,7 @@ it:
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ""
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: |
         Draw the line.
         It is 200 pixels long. 
@@ -1242,9 +1188,7 @@ it:
         a variable "length" set to 180.
       copy 1_instruction: |-
         Prova ad usare il blocco "ripeti" per risolvere l'esercizio con meno blocchi...
-      course 1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both
-        the jump and draw blocks
+      course 1 artist 1 level 10_instruction: 'Disegna la linea tratteggiata usando sia i blocchi "salta" che quelli per disegnare'
       course 1 artist 1 level 9_instruction: Disegna la figura usando tre linee
       Course 2 Assessment Smiley_instruction: "Image: run space with unfinished drawing.\r\nAssessment:\nFinish drawing the last tooth."
       Course 2 Bee Functions 1_instruction: 'Una funzione è un insieme di blocchi di codice che esegue un compito. Usa la funzione "raccogli 2 dosi di nettare" per raccogliere il nettare da ogni fiore.'
@@ -1866,7 +1810,7 @@ it:
         vanish. If the score is every less than 0, make the player vanish.
       Course 4 Play Labs For Loops 1_instruction: |
         Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the speak block to speak the counter
+        number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         This time, let's try counting
@@ -1946,6 +1890,9 @@ it:
         block flips true to false, or false to true. If you wrap this block of code
         in a NOT block, it should return true (because we are asking if the two expressions
         do NOT produce equal values).
+      Eval Booleans Free Play_instruction: |
+        Free Play: Try out some creations of
+        your own using Booleans.
       Eval Booleans_instruction: |
         Booleans allow us to compare different values,
         returning "true" if the are equal, or "false" if they are not. What do
@@ -1980,8 +1927,8 @@ it:
         We can use the "string=?" function to make conditionals
         that respond to text input. Here's a function called "green shape" that
         takes a string parameter for the shape. Complete the conditions so that the
-        correct shape is drawn when the function is run with "square," "triangle,"
-        "circle," or "rectangle."
+        correct shape is drawn when the function is run with "circle," "triangle,"
+        "square," or "rectangle."
       Eval Cond 5_instruction: |
         Here's a similar function "red shape" with an
         additional parameter for size. Complete the conditionals so the correct image
@@ -2006,8 +1953,11 @@ it:
         teal text at size 40.
       Eval Contracts 4 A_instruction: |-
         La funzione "ridimensiona" restituisce l'immagine in ingresso ingrandita o rimpicciolita di un certo fattore. Prova a ridimensionare questo cerchio di un fattore 10: l'immagine che ne risulta quanto è diversa dall'immagine che avresti ottenuto disegnando subito un cerchio di quelle dimensioni?
-      Eval Contracts 4_instruction: |-
-        La funzione "ridimensiona" restituisce l'immagine in ingresso ingrandita o rimpicciolita di un certo fattore. Prova a ridimensionare questo cerchio di un fattore 10: l'immagine che ne risulta quanto è diversa dall'immagine che avresti ottenuto disegnando subito un cerchio di quelle dimensioni?
+      Eval Contracts 4_instruction: |
+        The "scale" function returns an image that
+        is either larger or smaller than the input image. Try scaling this circle
+        by a factor of 10. How is the returned image different than if you'd just
+        made a circle of that size in the first place?
       Eval Contracts 8A_instruction: |
         Can you complete this puzzle? The big-triangle
         is 200 pixels in size and purple?
@@ -2019,7 +1969,7 @@ it:
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
         function block? The radius is 20. 
@@ -2051,8 +2001,8 @@ it:
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
-        called "square-circle" with domain Number String and range Image. Look at
-        the two examples we've provided and write the function definition.
+        called "square-circle" with domain Number String and range Image. Click
+        Edit to write the function description (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         We're going to write a function
         that draws a solid rectangle of any color that is twice wide as it is high.
@@ -2133,13 +2083,15 @@ it:
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
-        triangle 80 pixels on the y axis.
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Here's a different kinds of star block
+        Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
         of points! Use it to create a solid orange star with an inner radius of 75
         pixels and an outer radius of 175 pixels.
-      Eval Strings Images Free Play_instruction: 'Gioco libero: esplora i blocchi disponibili per disegnare qualcosa di interessante. Assicurati di salvare e condividere le tue immagini preferite.'
+      Eval Strings Images Free Play_instruction: |
+        Free Play: Explore the blocks available
+        to create something interesting. Make sure to share your favorite creations.
       Examples 4_instruction: Shrink function
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
@@ -2243,38 +2195,19 @@ it:
         Use the new 'create a circle' block to create two
         circles
       Go Up Artist_instruction: "L'artista sale"
-      Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
-      Infinity_finale_instruction: Create anything you like and share it!
-      Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
-      Infinity_repeat_instruction: |
-        Use a "repeat forever" block to make Anna move
-        up and down 400 pixels.
-      Infinity_say_instruction: 'Make Anna say "Hi there." by using the Say block.'
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      Infinity_catch_instruction: 'Riesci a far sì che Elsa ("personaggio 2") raggiunga Anna usando i tasti freccia?'
+      Infinity_finale_instruction: Crea qualsiasi cosa desideri e condividilo!
+      Infinity_move_collide_instruction: 'Hiro è "personaggio 1". Spostalo verso Baymax e riproduci un suono quando si toccano.'
+      Infinity_move_directions_instruction: 'Baymax è "personaggio 2". Aggiungi blocchi di movimento e poi sposta Baymax usando i tasti freccia. Fagli toccare gli altri due personaggi.'
+      Infinity_move_right_instruction: 'Hiro è "personaggio 1". Use il blocco di spostamento per muovere Hiro fino a toccare Baymax.'
+      Infinity_repeat_instruction: 'Usa un blocco "ripeti per sempre" per far muovere Anna su e giù di 400 pixel.'
+      Infinity_say_instruction: 'Fai dire a Anna "Ciao" usando un blocco "dire".'
+      Infinity_shoot_instruction: 'Baymax è "personaggio 2". Fai lanciare a Baymax un razzo a Hiro.'
+      Infinity_shoot_directions_instruction: 'Hiro è "personaggio 3". Fai lanciare a Hiro un proiettile verso ognuno dei quattro personaggi. Aspetta un secondo tra ogni lancio.'
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: |
-        Move Anna up, down left, and right to touch
-        each of the four snowflakes.
-      Infinity_touch_score_instruction: |
-        Score a point when a snowflake is touched.  Then
-        "Run", and steer Anna to touch each snowflake once.
+      Infinity_touch_faster_instruction: Tocca ancora più fiocchi di neve!
+      Infinity_touch_four_instruction: Muovi Anna su, giù, a sinistra e a destra per toccare ognuno dei quattro fiocchi di neve.
+      Infinity_touch_score_instruction: 'Fai in modo che Anna faccia un punto quando tocca un fiocco di neve. Poi clicca su "Esegui" e  guidala a toccare una volta ogni fiocco di neve.'
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2293,9 +2226,7 @@ it:
       K-1 Artist Loops 9_instruction: 'Questo è un esercizio di verifica: usa un ciclo per disegnare gli scalini'
       K-1 Artist Loops Free Play_instruction: 'Tempo di giocare: disegna qualcosa di divertente!'
       K-1 Artist1 1_instruction: Disegna il piede della persona con una linea
-      K-1 Artist1 10_instruction: |
-        Draw and Jump to make the dashed path to the treasure
-        X
+      K-1 Artist1 10_instruction: Disegna e Salta per costruire la linea tratteggiata fino al tesoro
       K-1 Artist1 2_instruction: Disegna il baffo del gatto con due linee!
       K-1 Artist1 3_instruction: |
         Draw two lines east and two lines north to finish
@@ -2309,9 +2240,7 @@ it:
       K-1 Artist1 7_instruction: |
         Use the jump block to move without drawing. Jump
         up and draw a line.
-      K-1 Artist1 8_instruction: |
-        Draw the dashed line by using both the jump and
-        draw blocks
+      K-1 Artist1 8_instruction: 'Disegna la linea tratteggiata usando sia i blocchi "salta" che quelli per disegnare'
       K-1 Artist1 9_instruction: Disegna e Salta per costruire la linea tratteggiata
       K-1 Artist1 Assessment 1_instruction: Disegna le linee corte e quelle lunghe!
       K-1 Artist1 Assessment 2_instruction: Disegna le linee corte tratteggiate!
@@ -2478,7 +2407,7 @@ it:
         to those people, could you update the "else" clause so that we charge them
         a premium for toppings that we don't normally offer? Let's charge $10,000
         for a topping we don't carry.
-      Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven better? Try one (or more) of the following:\r\n- Display an image of\nthe chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
+      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even better? Try one (or more) of the following:\r\n- Display an\nimage of the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Do this!
       Maze screenshot Work_instruction: Test instructions
       MSM Big Game Empty_instruction: |
@@ -2553,37 +2482,35 @@ it:
       NetSim_AutomaticDNS_instruction: |
         In this version of the simulator a DNS service
         is provided for you. Send a message in the form GET [hostname] to the DNS
-        service to get a student's address.
+        service at address 15 to get a student's address.
       NetSim_ManualDNS_instruction: |
         In this version of the simulator you can't
         see the other students' addresses.  Instead, one of you must act as a name
         service, to help share addresses with each other.
       NetSim_SendAB_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is not
-        yet functional. It will allow students to manually set/read individual As
-        and Bs on a simplex wire.
+        Connect to another student.  Each of you can set
+        the value of the wire between you to "A" or "B".  See if you can send
+        a complete message!
       NetSim_SendAscii_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send ASCII to each other.
+        In this version of the simulator, you can send
+        numbers or ASCII characters to one another, one bit at a time.
       NetSim_SendBits_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send binary as zeroes and ones
-        to one another
+        Connect to another student.  You can now set
+        your wire to "0" or "1".  Send a message to your partner!
       NetSim_SendingABTest_instruction: |
         This is Sarah's test of making a netsim
         level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        NetSim: Variant 1 allows students to manually
+        work out the timing of sending bits back and forth.
       NetSim_Variant2_instruction: |
-        NetSim: Variant 2 template: UNDER CONSTRUCTION:
-        Variant 2 is not yet functional because P2P connections have not been implemented.
+        NetSim: Variant 2: Students connect directly
+        to one another and send entire packets back and forth, exploring systems of
+        encoding data.
       NetSim_Variant3_instruction: |
-        NetSim: Variant 3 template: Connects groups of
-        2-6 students with a router, and explores issues in routing and DNS
+        NetSim: Variant 3: Connects groups of 2-6 students
+        with a router, and explores issues in routing and DNS
       NEW Artist Artist Functions 3_instruction: |
         Here is a new type of Block. It
         is called a "Function block." Click on "RUN" to see what it can do. 
@@ -2789,18 +2716,55 @@ it:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDK5 Conditionals 1_instruction: |
+        Purple flowers may have either 1 or 0 nectar,
+        but you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
+      PDK5 Events 1_instruction: |
+        So far all of the programs we've written are executed
+        in order from top to bottom. In this puzzle, we'll use "Events" to respond
+        to an action on demand. Make the octopus say "Hello" only when you click
+        on the Octopus. 
+      PDK5 Loops 1_instruction: |
+        Instead of using 5 "move forward" blocks, use
+        the "repeat" block with a "move forward" block inside of it. In computer
+        science, this is called a "loop." 
+      PDK5 Loops 3_instruction: |
+        Here's another puzzle to practice loops. What happens
+        if you use the repeat block to run the code already provided on the workspace
+        4 times?
       perpendicular_instruction: |
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
-      Play Lab Rocket 1 (copy 1)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
-      Play Lab Rocket 1 (copy 2)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -2892,20 +2856,20 @@ it:
         your function works, Sam shouldn't be able to leave the yard from the left
         side.
       Sam the Butterfly 3_instruction: |
-        That's great, now Sam can't leave the yard
-        from the left side, but what about the right? Fill out the "safe-right?"
-        function to make sure Sam can't go past x = 425
+        In the last puzzle we kept Sam from leaving
+        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
+        function to make sure Sam can't go past x = 425.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
-        from going either direction? Try using the "AND" block program the function
+        from going either direction? Try using the "AND" block to program the function
         "on-screen?" to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter 'y' to the 'onscreen?' function. Can you update
         your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
-        either? Test your program my moving Sam as far as he can go in all four directions.
+        either? Test your program by moving Sam as far as he can go in all four directions.
         Click Finish when Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
@@ -3037,5 +3001,14 @@ it:
       TestK1-1_instruction: |
         Draw three partially overlapping squares using the repeat
         block
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
+      U1L4 NetSim SendAB_instruction: |
+        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
+        Variant 1 is not yet functional because P2P connections have not been implemented.
+        Variant 1 allows students to manually work out the timing of sending bits
+        back and forth.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

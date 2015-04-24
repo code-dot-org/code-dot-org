@@ -45,8 +45,8 @@ class CsvToSqlTable
   private
 
   def hash_from_keys_and_values(keys, values)
-    h={}
-    for i in 0..keys.count-1
+    h = {}
+    (0..keys.count-1).each do |i|
       key_name = keys[i].to_s
       case key_name[key_name.rindex('_')..-1]
       when '_b'
@@ -108,7 +108,7 @@ class CsvToSqlTable
 
   def set_table_mtime(mtime)
     seed_info = DB[:seed_info]
-    if seed = seed_info.where(table:@table.to_s).first
+    if seed_info.where(table:@table.to_s).first
       seed_info.where(table:@table.to_s).update(mtime:mtime)
     else
       seed_info.insert(table:@table.to_s, mtime:mtime)
@@ -161,9 +161,7 @@ class GSheetToCsv
     end
 
     begin
-      csv_uri = @file.raw_file.export_links['application/pdf'].gsub(/pdf$/,'csv')
-      buf = @@gdrive.raw_session.execute!(uri: csv_uri).body
-#      buf = @file.spreadsheet.worksheets.first.export_as_string
+      buf = @file.spreadsheet_csv
     rescue GoogleDrive::Error => e
       puts "Error on file: #{@gsheet_path}, #{e}"
       throw e
@@ -244,7 +242,6 @@ namespace :seed do
     if extname == '.gsheet'
       gsheet = path[0..-(extname.length+1)]
       path = "cache/#{path.gsub(File::SEPARATOR,'_')}.csv"
-      extname = File.extname(path)
 
       sync = "sync:#{table}"
       task sync do
@@ -253,7 +250,7 @@ namespace :seed do
           ctime = File.mtime(path).utc if File.file?(path)
           unless mtime.to_s == ctime.to_s
             puts "gdrive #{path}"
-            file.spreadsheet.export_as_file(path, nil, 0)
+            IO.write(path, file.spreadsheet_csv)
             File.utime(File.atime(path), mtime, path)
           end
         else

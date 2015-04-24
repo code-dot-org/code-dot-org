@@ -12,6 +12,30 @@
 'use strict';
 
 require('../utils'); // For String.prototype.repeat polyfill
+var netsimUtils = require('./netsimUtils');
+
+/**
+ * Converts an As and Bs string into its most compact representation, forced
+ * to uppercase.
+ * @param {string} abString
+ * @returns {string}
+ */
+exports.minifyAB = function (abString) {
+  return abString.replace(/[^AB]/gi, '').toUpperCase();
+};
+
+/**
+ * Converts an AB-binary string to a formatted representation, with chunks
+ * of a set size separated by a space.
+ * @param {string} abString
+ * @param {number} chunkSize
+ * @returns {string} formatted version
+ */
+exports.formatAB = function (abString, chunkSize) {
+  return exports.formatBinary(exports.abToBinary(abString), chunkSize)
+      .replace(/0/g, 'A')
+      .replace(/1/g, 'B');
+};
 
 /**
  * Converts a binary string into its most compact string representation.
@@ -121,6 +145,44 @@ exports.alignDecimal = function (decimalString) {
 };
 
 /**
+ * Interprets a string of As and Bs as binary where A is 0 and B is 1, then
+ * interprets that binary as a single number, and returns that number.
+ * @param {string} abString
+ * @returns {number}
+ */
+exports.abToInt = function (abString) {
+  return exports.binaryToInt(exports.abToBinary(abString));
+};
+
+/**
+ * Converts a number to an AB binary representation
+ * @param {number} num
+ * @param {number} width
+ * @returns {string}
+ */
+exports.intToAB = function (num, width) {
+  return exports.binaryToAB(exports.intToBinary(num, width));
+};
+
+/**
+ * Converts As and Bs to a binary string, where A is 0 and B is 1.
+ * @param {string} abString
+ * @returns {string}
+ */
+exports.abToBinary = function (abString) {
+  return exports.minifyAB(abString).replace(/A/g, '0').replace(/B/g, '1');
+};
+
+/**
+ * Converts binary into As and Bs, where 0 is A and 1 is B.
+ * @param {string} binaryString
+ * @returns {string}
+ */
+exports.binaryToAB = function (binaryString) {
+  return exports.minifyBinary(binaryString).replace(/0/g, 'A').replace(/1/g, 'B');
+};
+
+/**
  * Interprets a binary string as a single number, and returns that number.
  * @param {string} binaryString
  * @returns {number}
@@ -129,21 +191,11 @@ exports.binaryToInt = function (binaryString) {
   return parseInt(exports.minifyBinary(binaryString), 2);
 };
 
-exports.zeroPadLeft = function (string, desiredWidth) {
-  var padding = '0'.repeat(desiredWidth);
-  return (padding + string).slice(-desiredWidth);
-};
-
-exports.zeroPadRight = function (string, desiredWidth) {
-  var padding = '0'.repeat(desiredWidth);
-  return (string + padding).substr(0, desiredWidth);
-};
-
 var intToString = function (int, base, width) {
   if (width <= 0) {
     throw new RangeError("Output width must be greater than zero");
   }
-  return exports.zeroPadLeft(int.toString(base), width);
+  return netsimUtils.zeroPadLeft(int.toString(base), width);
 };
 
 /**
@@ -205,7 +257,8 @@ exports.binaryToHex = function (binaryString) {
   var chars = [];
   var uglyBinary = exports.minifyBinary(binaryString);
   for (var i = 0; i < uglyBinary.length; i += nibbleWidth) {
-    currentNibble = exports.zeroPadRight(uglyBinary.substr(i, nibbleWidth), nibbleWidth);
+    currentNibble = netsimUtils.zeroPadRight(
+        uglyBinary.substr(i, nibbleWidth), nibbleWidth);
     chars.push(exports.intToHex(exports.binaryToInt(currentNibble), 1));
   }
   return chars.join('');
@@ -243,7 +296,7 @@ exports.binaryToDecimal = function (binaryString, byteSize) {
   var numbers = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = exports.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = netsimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
     numbers.push(exports.binaryToInt(currentByte));
   }
   return numbers.join(' ');
@@ -282,7 +335,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   var chars = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = exports.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = netsimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');

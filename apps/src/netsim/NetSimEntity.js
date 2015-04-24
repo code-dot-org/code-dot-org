@@ -50,10 +50,10 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
 NetSimEntity.create = function (EntityType, shard, onComplete) {
   var entity = new EntityType(shard);
   entity.getTable_().create(entity.buildRow_(), function (err, row) {
-    if (err === null) {
-      onComplete(null, new EntityType(shard, row));
-    } else {
+    if (err) {
       onComplete(err, null);
+    } else {
+      onComplete(null, new EntityType(shard, row));
     }
   });
 };
@@ -72,11 +72,11 @@ NetSimEntity.create = function (EntityType, shard, onComplete) {
 NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   var entity = new EntityType(shard);
   entity.getTable_().read(entityID, function (err, row) {
-    var newEntity = null;
-    if (!err) {
-      newEntity = new EntityType(shard, row);
+    if (err) {
+      onComplete(err, null);
+    } else {
+      onComplete(err, new EntityType(shard, row));
     }
-    onComplete(err, newEntity);
   });
 };
 
@@ -98,6 +98,16 @@ NetSimEntity.prototype.destroy = function (onComplete) {
   onComplete = onComplete || function () {};
 
   this.getTable_().delete(this.entityID, onComplete);
+};
+
+/**
+ * Remove entity from remote storage, using a synchronous call.
+ * For use when navigating away from the page; otherwise, async version
+ * is preferred.
+ * @returns {Error|null} error if entity delete fails
+ */
+NetSimEntity.prototype.synchronousDestroy = function () {
+  return this.getTable_().synchronousDelete(this.entityID);
 };
 
 /** Get storage table for this entity type. */

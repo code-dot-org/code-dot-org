@@ -273,6 +273,7 @@
         artist: Disegna qualcosa
     user:
       classroom: Cruscotto di Controllo dell'insegnante
+      district_dashboard: District Dashboard
       label: Ciao %{username}
       stats: I miei progressi
       settings: Il mio account
@@ -428,6 +429,7 @@
     heading_legacy: <h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte
       le età</h1>
     your_gallery: La tua collezione
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Maschile
     female: Femminile
@@ -536,6 +538,9 @@
       body: Guarda una collezione di app e immagini artistiche create dai nostri utenti
     frozen:
       title: Frozen
+    infinity:
+      title: Il Laboratorio dell'Infinito
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
@@ -572,6 +577,16 @@
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
     correct_title: Molto bene!
     correct_body: Questa risposta è corretta.
+  contract_match:
+    wrong_title: Risposta non corretta
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Inserisci qui la tua risposta
   dialog:
@@ -639,11 +654,11 @@
     completed_courses: Corsi completati
     all_courses: Tutti i corsi
   project:
-    projects: Projects
+    projects: Progetti
     create: Create Project
     create_a_project: 'Create a new project:'
     new: Create New
-    rename: Rename
+    rename: Rinomina
     save: Salva
     delete: Elimina
     exit: Return to Course
@@ -654,7 +669,7 @@
     close: Close
     more: Di più
     name: Nome
-    updated: Updated
+    updated: Aggiornato
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
       below to make a new Play Lab or Artist project!<br/>You can come back and work
@@ -663,7 +678,7 @@
     really_delete: Elimina?
     delete_yes: Sì
     delete_no: 'No'
-    saved: Saved
+    saved: Salvato
     not_saved: Not saved
     cancel: Annulla
     delete_confirm_title: Are you sure you want to delete this project?
@@ -671,3 +686,5 @@
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

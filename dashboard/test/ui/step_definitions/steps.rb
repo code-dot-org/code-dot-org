@@ -95,7 +95,18 @@ end
 
 When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
-  @browser.execute_script("$('" + name_selector + "').last().simulate('drag', function(){});")
+  # seems we usually have two of these item, and want the second if the function
+  # editor is open, the first if it isn't
+  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " +
+    "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
+  @browser.execute_script(script)
+end
+
+And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
+  # jQuery needs \\s to allow :s and .s in ID selectors
+  # Escaping those gives us \\\\ per-character
+  category_selector = "#\\\\:#{id}\\\\.label"
+  @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
 end
 
 When /^I press dropdown button with text "([^"]*)"$/ do |text|
@@ -139,7 +150,9 @@ When /^I hold key "([^"]*)"$/ do |keyCode|
 end
 
 When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
-  @browser.execute_script("$('" + selector + "').val('" + inputText + "')");
+  @browser.execute_script("$('" + selector + "').val('" + inputText + "')")
+  @browser.execute_script("$('" + selector + "').keyup()")
+  @browser.execute_script("$('" + selector + "').change()")
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
@@ -278,10 +291,10 @@ def encrypted_cookie(user_id)
       iterations:1000
     )
 
-    encryptor = ActiveSupport::MessageEncryptor.new(
-      key_generator.generate_key('encrypted cookie'),
-      key_generator.generate_key('signed encrypted cookie')
-    )
+  encryptor = ActiveSupport::MessageEncryptor.new(
+    key_generator.generate_key('encrypted cookie'),
+    key_generator.generate_key('signed encrypted cookie')
+  )
 
   cookie = {'warden.user.user.key' => [[user_id]]}
 
@@ -315,4 +328,12 @@ end
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
+end
+
+And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
+  if key.start_with?(':')
+    key = key[1..-1].to_sym
+  end
+  element = @browser.find_element(:css, selector)
+  element.send_keys(key)
 end

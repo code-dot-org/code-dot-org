@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "We're getting really close to a finished game! Last time you work on your game, you used booleans to make your Target and Danger return to the screen once the've left. Click Run to see how your game looks right now, and then we'll get to making your Player move up and down.",
+    "instructions": "We're getting really close to a finished game! Last time you worked on your game, you used booleans to make your Target and Danger return to the screen once they've left. Click Run to see how your game looks right now, and then we'll get to making your Player move up and down.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -35,7 +35,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
-    "maze_data": null
+    "maze_data": null,
+    "disable_examples": "false",
+    "video_key": "alg_15_biggame_update_player"
   },
   "md5": "7fa155d784297c660e3c7e0f9f11d86d"
 }]]></config>

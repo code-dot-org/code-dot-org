@@ -155,15 +155,14 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Forritið þitt leiðir til deilingar með núlli."},
-"emptyComputeBlock":function(d){return "Þú verður að festa kubb við \"reikna\" kubbinn."},
-"emptyFunctionalBlock":function(d){return "Það er kubbur með óútfyllt inntak."},
+"emptyComputeBlock":function(d){return "Þú verður að tengja kubb við \"meta\" kubbinn."},
 "equivalentExpression":function(d){return "Prófaðu að umraða liðunum til að fá nákvæmlega sama dæmi."},
 "evaluate":function(d){return "meta"},
-"extraTopBlocks":function(d){return "Það eru ótengdir kubbar. Var meiningin að tengja þá við \"reikna\" kubbinn?"},
+"extraTopBlocks":function(d){return "Þú ert með ótengda kubba. Ætlaðir þú að tengja þá við \"meta\" kubbinn?"},
 "failedInput":function(d){return "Fallið þitt gefur stundum ekki rétta útkomu."},
 "goal":function(d){return "Markmið:"},
 "levelIncompleteError":function(d){return "Formúlan þín samsvarar ekki markmiðinu."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
+"missingFunctionError":function(d){return "Þú verður að skilgreina fall með heitinu "+appLocale.v(d,"functionName")+"."},
 "missingVariableX":function(d){return "Það vantar breytuna "+appLocale.v(d,"var")+" í formúluna þína."},
 "reinfFeedbackMsg":function(d){return "Hér er útreikningur þinn! Haltu áfram að vinna með þetta eða færðu þig í næstu þraut!"},
 "yourExpression":function(d){return "Formúlan þín:"},

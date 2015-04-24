@@ -1,7 +1,6 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
   "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
-  "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "equivalentExpression": "Eyni ifadəni almaq üçün arqumentlərinizin yerini dəyişməyə çalışın.",
   "evaluate": "evaluate",
   "extraTopBlocks": "Sizin qoşulmamış bloklarınız var. Bunları \"hesablamalı\" blokuna qoşmaq istərdinizmi?",

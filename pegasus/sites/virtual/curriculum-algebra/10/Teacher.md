@@ -35,7 +35,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 ## Getting Started
 
 
-### <a name="GetStarted"></a> 1) Introduction`
+### <a name="GetStarted"></a> 1) Introduction
 
 Functions are a key part of animation in computer programs. A function that draws a static picture of a bat, for example, can place the bat at a different location based on the input. When that input changes slightly based on time or user-interaction, the bat will appear to move. This is similar to the way that flip-book animations work, in which each page draws a static image that has changed by a small amount. When the pages are displayed quickly, the images appear to change smoothly.
 
@@ -46,7 +46,7 @@ Putting these images together, we arrive at an animation of the bat turning arou
 <img src="bat_animated_fast.gif" style="display: block; margin: 0 auto;"/>
 
 <img src="function_pass.png" style="float:right; margin 0 0 40px 20px; max-width: 33%; min-width: 250px;"/>
-In the online puzzles, students will find a black block for each function they create, in addition to colored blocks they are used to. The black function box, which has no parameter inputs, represents the function as a Type of data. This allows you to pass your function into the 'start' function, where it can be used to control the rocket animation.
+In the online puzzles, students will find a black block for each function they create, in addition to the colored blocks they are used to. The black function box, which has no parameter inputs, represents the function as a Type of data. This allows you to pass your function into the 'start' function, where it can be used to control the rocket animation.
 
 Another curiosity with this program is that the rocket-height function will be executed multiple times.  The periodic execution creates the flip-book effect.  As each second passes, the rocket-height function is executed again, the new location is calculated, and the rocket is re-drawn in its new location.  This drawing and re-drawing in different locations gives the appearance of motion.
 

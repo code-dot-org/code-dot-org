@@ -4,14 +4,13 @@
   "circleBlockTitle":"lingkaran(jari-jari, gaya, warna)",
   "displayBlockTitle":"evaluasi",
   "ellipseBlockTitle":"lonjong (lebar, panjang, gaya, warna)",
-  "emptyFunctionalBlock":"Kamu memiliki blok dengan masukan yang tidak terisi.",
-  "extraTopBlocks":"Anda memiliki blok yang tidak terpasang. Mungkin maksud Anda adalah untuk memasangnya di blok \"tampilan\"?",
+  "extraTopBlocks":"Anda memiliki blok terikat. Apakah maksud Anda untuk memasang ini ke \"evaluasi\" blok?",
   "infiniteRecursionError":"Fungsi Anda memanggil dirinya sendiri. Kami telah menghentikan fungsi Anda, jika tidak maka fungsi tersebut akan terus memanggil dirinya sendiri selamanya.",
   "overlayBlockTitle":"lapisan-atas (atas, bawah)",
   "placeImageBlockTitle":"tempat-gambar (x, y, gambar)",
   "offsetBlockTitle":"selisih (x, y, gambar)",
   "rectangleBlockTitle":"persegi-panjang (lebar, panjang, gaya, warna)",
-  "reinfFeedbackMsg":"Anda dapat menekan tombol \"Terus Bermain\" untuk mengedit gambar Anda.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"putar (derajat, gambar)",
   "scaleImageBlockTitle":"Skala (faktor, gambar)",
   "squareBlockTitle":"persegi (ukuran, gaya, warna)",
@@ -27,5 +26,6 @@
   "solid":"Pejal",
   "string":"kata",
   "stringMismatchError":"Anda memiliki sebuah string dengan kapitalisasi yang salah.",
-  "userCodeException":"Kesalahan terjadi ketika menjalankan kode Anda."
+  "userCodeException":"Kesalahan terjadi ketika menjalankan kode Anda.",
+  "wrongBooleanError":"Blok Anda mengevaluasi ke nilai boolean yang salah."
 }

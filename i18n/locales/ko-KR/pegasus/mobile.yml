@@ -24,7 +24,7 @@ ko-KR:
   hoc2014_teachers: 선생님들
   hoc2014_host: 주관하기
   hoc2014_everyone: 모든사람
-  hoc2014_support: 후원하기
+  hoc2014_support: '후원하기 &#x25BE;'
   hoc2014_whatishoc: Hour of Code 란?
   twentyhours_trynow: 해보기
   california_heading: 학교에 컴퓨터과학(정보과학) 수업을 요청하세요.
@@ -91,7 +91,7 @@ ko-KR:
   learn_classes: 학교 수업
   hoc_is_here: '@codeorg 에서  #HourOfCode 를 살펴보세요'
   just_did_hoc: '@codeorg 에서  #HourOfCode 를 완료했습니다'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: '왜 더 많은 학교들이 컴퓨터 과학을 가르치지 않을까요? 우리가 이를 해결 할 수 있습니다.  http://youtu.be/nKIu9yen5nc. http://code.org/ 에서 더 자세한 내용을 알아보세요.'
   learn_hoc: Hour of Code 해보기
   beyond_hoc: Hour of Code 이후 학습
   what_gender: 성별?
@@ -107,9 +107,10 @@ ko-KR:
   start_hoc: Hour of Code 를 지금 바로! 시작해 보세요!
   contact_form_topic_press: 보도/언론 (인터뷰, 발표)
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_student: '"저는 이것이 <b>평생에 단 한번뿐인</b> 기회라는 것을 알았습니다." - Mariana Alzate, 5학년'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> 살펴보기"
+  studiobar_title_nolink: Code Studio 살펴보기
   studiobar_elementary_title: 초등학생 코스
   studiobar_elementary_body: 'K&#8209;5 학생들을 위한 새로운 3개의 코스'
   studiobar_hoc_title: The Hour of Code
@@ -123,23 +124,59 @@ ko-KR:
   studiobar_donate_title: 기부하기
   studiobar_donate_body: 여러분이 기부할 때 마다 더 많은 학생들이 배울 수 있습니다.
   studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_body: 고정관념을 깨고, 우리의 로고와 긍지를 입어보세요.
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
     to learn one Hour of Code&rdquo; 
-    Malala
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -147,8 +184,8 @@ ko-KR:
   homepage_slot_text_course4: 과정4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: 플래피 코드
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_codevideo: 동영상 보기
+  homepage_action_text_teachervideo: 동영상 보기
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
@@ -170,11 +207,11 @@ ko-KR:
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Make a donation
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_donors_seall: 모두 보기
   homepage_donors_donate: 기부하기
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
@@ -256,8 +293,8 @@ ko-KR:
   dashboard_action_delete_yes: 예
   dashboard_action_delete_no: 아니요
   dashboard_action_confirm: 삭제하시겠습니까?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: 삭제
+  dashboard_action_remove_confirm: 삭제할까요?
   dashboard_action_done: 완료
   dashboard_action_required: 필수 항목
   dashboard_navigation_home_page: 교사 홈페이지
@@ -296,7 +333,7 @@ ko-KR:
   dashboard_students_new_section: '새로운 섹션을 만들었습니다! <b>학생 추가</b> <b>여러 학생 추가</b> 버튼을 눌러 학생들을 추가하세요.'
   dashboard_students_placeholder_name: 학생 이름
   dashboard_students_name: 이름
-  dashboard_students_progress: Progress
+  dashboard_students_progress: 진행도
   dashboard_students_age: 나이
   dashboard_students_gender: 성별
   dashboard_students_male: 남

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({206:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({219:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16,7 +16,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":198,"./levels":205,"./skins":210,"./studio":211}],211:[function(require,module,exports){
+},{"../appMain":5,"./blocks":211,"./levels":218,"./skins":223,"./studio":224}],224:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -49,11 +49,14 @@ var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 
-if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
-  var rgbcolor = require('../canvg/rgbcolor.js');
-  var stackBlur = require('../canvg/StackBlur.js');
-  var canvg = require('../canvg/canvg.js');
-  var svgToDataUrl = require('../canvg/svg_todataurl');
+// tests don't have svgelement
+if (typeof SVGElement !== 'undefined') {
+  // Loading these modules extends SVGElement and puts canvg in the global
+  // namespace
+  require('../canvg/rgbcolor.js');
+  require('../canvg/StackBlur.js');
+  require('../canvg/canvg.js');
+  require('../canvg/svg_todataurl');
 }
 
 var Direction = constants.Direction;
@@ -1066,6 +1069,11 @@ Studio.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  // In our Algebra course, we want to gray out undeletable blocks. I'm not sure
+  // whether or not that's desired in our other courses.
+  var isAlgebraLevel = !!level.useContractEditor;
+  config.grayOutUndeletableBlocks = isAlgebraLevel;
+
   loadLevel();
 
   window.addEventListener("keydown", Studio.onKey, false);
@@ -1092,7 +1100,8 @@ Studio.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      inputOutputTable: level.inputOutputTable
     }
   });
 
@@ -1273,6 +1282,10 @@ studioApp.reset = function(first) {
     projectile.removeElement();
   }
 
+  // True if we should fail before execution, even if freeplay
+  Studio.preExecutionFailure = false;
+  Studio.message = null;
+
   // Reset the score and title screen.
   Studio.playerScore = 0;
   Studio.scoreText = null;
@@ -1409,13 +1422,15 @@ var displayFeedback = function() {
       skin: skin.id,
       feedbackType: Studio.testResults,
       tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+      continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && (level.freePlay),
+      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      message: Studio.message,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
@@ -1554,6 +1569,29 @@ var nativeGetCallback = function () {
 };
 
 /**
+ * Looks for failures that should prevent execution.
+ * @returns {boolean} True if we have a pre-execution failure
+ */
+Studio.checkForPreExecutionFailure = function () {
+  if (studioApp.hasUnfilledFunctionalBlock()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Studio.message = commonMsg.emptyFunctionalBlock();
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  if (studioApp.hasExtraTopBlocks()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  return false;
+};
+
+/**
  * Execute the story
  */
 Studio.execute = function() {
@@ -1564,8 +1602,11 @@ Studio.execute = function() {
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
+    if (Studio.checkForPreExecutionFailure()) {
+      return Studio.onPuzzleComplete();
+    }
+
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');
@@ -1647,7 +1688,7 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function() {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (level.freePlay) {
+  } else if (level.freePlay && !Studio.preExecutionFailure) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -1660,7 +1701,10 @@ Studio.onPuzzleComplete = function() {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Studio.testResults = TestResults.FREE_PLAY;
+    if (!Studio.preExecutionFailure) {
+      Studio.testResults = TestResults.FREE_PLAY;
+    }
+    // If preExecutionFailure testResults should already be set
   } else {
     Studio.testResults = studioApp.getTestResults(levelComplete);
   }
@@ -1699,7 +1743,9 @@ Studio.onPuzzleComplete = function() {
     });
   };
 
-  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') { // don't try it if function is not defined
+  // don't try it if function is not defined, which should probably only be
+  // true in our test environment
+  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') {
     sendReport();
   } else {
     document.getElementById('svgStudio').toDataURL("image/png", {
@@ -2965,7 +3011,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":245,"../../locale/current/studio":251,"../StudioApp":4,"../canvg/StackBlur.js":48,"../canvg/canvg.js":49,"../canvg/rgbcolor.js":50,"../canvg/svg_todataurl":51,"../codegen":53,"../constants":55,"../dom":56,"../dropletUtils":57,"../skins":194,"../templates/page.html":219,"../utils":240,"../xml":241,"./api":196,"./bigGameLogic":197,"./blocks":198,"./collidable":199,"./constants":200,"./controls.html":201,"./dropletConfig":203,"./extraControlRows.html":204,"./projectile":207,"./rocketHeightLogic":208,"./samBatLogic":209,"./visualization.html":212}],212:[function(require,module,exports){
+},{"../../locale/current/common":258,"../../locale/current/studio":264,"../StudioApp":4,"../canvg/StackBlur.js":50,"../canvg/canvg.js":51,"../canvg/rgbcolor.js":52,"../canvg/svg_todataurl":53,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../skins":207,"../templates/page.html":232,"../utils":253,"../xml":254,"./api":209,"./bigGameLogic":210,"./blocks":211,"./collidable":212,"./constants":213,"./controls.html":214,"./dropletConfig":216,"./extraControlRows.html":217,"./projectile":220,"./rocketHeightLogic":221,"./samBatLogic":222,"./visualization.html":225}],225:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2985,7 +3031,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":261}],209:[function(require,module,exports){
+},{"ejs":274}],222:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3109,7 +3155,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 
 module.exports = SamBatLogic;
 
-},{"../codegen":53,"../constants":55,"./api":196,"./constants":200,"./customGameLogic":202}],208:[function(require,module,exports){
+},{"../codegen":55,"../constants":57,"./api":209,"./constants":213,"./customGameLogic":215}],221:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3171,7 +3217,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 
 module.exports = RocketHeightLogic;
 
-},{"../codegen":53,"./api":196,"./constants":200,"./customGameLogic":202}],207:[function(require,module,exports){
+},{"../codegen":55,"./api":209,"./constants":213,"./customGameLogic":215}],220:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3345,7 +3391,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":199,"./constants":200}],210:[function(require,module,exports){
+},{"./collidable":212,"./constants":213}],223:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3714,7 +3760,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../../locale/current/studio":251,"../skins":194,"./constants":200}],205:[function(require,module,exports){
+},{"../../locale/current/studio":264,"../skins":207,"./constants":213}],218:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -5141,10 +5187,8 @@ levels.full_sandbox =  {
              '<title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>' +
            '</block>') +
        createCategory('Functional Start',
-           blockOfType('functional_start_setBackground') +
            blockOfType('functional_start_setSpeeds') +
-           blockOfType('functional_start_setBackgroundAndSpeeds') +
-           blockOfType('functional_start_dummyOnMove')) +
+           blockOfType('functional_start_setBackgroundAndSpeeds')) +
        createCategory('Functional Logic',
            blockOfType('functional_greater_than') +
            blockOfType('functional_less_than') +
@@ -5216,7 +5260,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/current/studio":251,"../block_utils":25,"../utils":240,"./constants":200}],204:[function(require,module,exports){
+},{"../../locale/current/studio":264,"../block_utils":27,"../utils":253,"./constants":213}],217:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5236,7 +5280,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],203:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],216:[function(require,module,exports){
 var msg = require('../../locale/current/studio');
 
 module.exports.blocks = [
@@ -5260,7 +5304,7 @@ module.exports.categories = {
   },
 };
 
-},{"../../locale/current/studio":251}],201:[function(require,module,exports){
+},{"../../locale/current/studio":264}],214:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5280,7 +5324,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":245,"ejs":261}],199:[function(require,module,exports){
+},{"../../locale/current/common":258,"ejs":274}],212:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5386,7 +5430,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > studioApp.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"../StudioApp":4,"./constants":200}],198:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":213}],211:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -6778,6 +6822,7 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSpriteParams = {
       helpUrl: '',
       init: function() {
+        this.VALUES = skin.spriteChoices;
         var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
         // default to first item after random/hidden
         dropdown.setValue(skin.spriteChoices[2][1]);
@@ -7209,19 +7254,6 @@ exports.install = function(blockly, blockInstallOptions) {
     }, this);
   };
 
-  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_start_dummyOnMove',
-    blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: blockly.BlockValueType.FUNCTION}]
-  });
-
-  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_start_setBackground',
-    blockTitle: 'start (background)',
-    apiName: 'Studio.setBackground',
-    args: [{ name: 'BACKGROUND', type: blockly.BlockValueType.STRING, default: 'space'}]
-  });
-
   blockly.Blocks.functional_start_setSpeeds = {
     init: function() {
       var blockName = 'start (player-speed, enemy-speed)';
@@ -7411,9 +7443,9 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/current/common":245,"../../locale/current/studio":251,"../StudioApp":4,"../codegen":53,"../sharedFunctionalBlocks":193,"../utils":240,"./constants":200}],251:[function(require,module,exports){
+},{"../../locale/current/common":258,"../../locale/current/studio":264,"../StudioApp":4,"../codegen":55,"../sharedFunctionalBlocks":206,"../utils":253,"./constants":213}],264:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
-},{}],197:[function(require,module,exports){
+},{}],210:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7502,7 +7534,7 @@ BigGameLogic.prototype.onTick = function () {
 
     // send sprite back offscreen
     this.resetSprite_(targetSprite);
-}
+  }
 
   if (this.studio_.playerScore <= 0) {
     var score = document.getElementById('score');
@@ -7548,8 +7580,15 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
   // Current behavior is that as soon as we go offscreen, we reset to the other
   // side. We could add a delay if we want.
   if (!this.onscreen(newCenterX)) {
-    // reset to other side
-    this.resetSprite_(sprite);
+    // reset to other side if it is visible
+    if (sprite.visible) {
+      this.resetSprite_(sprite);
+    }
+  } else if (!sprite.visible) {
+    // sprite has returned to screen, make it visible again
+    this.studio_.setSprite({
+      spriteIndex: this.studio_.sprite.indexOf(sprite),
+      value:"visible"});
   }
 };
 
@@ -7559,13 +7598,16 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
 BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
 
+  // sprite.y is the top. get the center
+  var centerY = playerSprite.y + playerSprite.height / 2;
+  
   // invert Y
-  var userSpaceY = this.studio_.MAZE_HEIGHT - playerSprite.y;
+  var userSpaceY = this.studio_.MAZE_HEIGHT - centerY;
 
   var newUserSpaceY = this.update_player(key, userSpaceY);
 
   // reinvertY
-  playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY;
+  playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY - playerSprite.height / 2;
 };
 
 /**
@@ -7577,7 +7619,11 @@ BigGameLogic.prototype.resetSprite_ = function (sprite) {
   } else {
     sprite.x = this.studio_.MAZE_WIDTH;
   }
+  
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
+  this.studio_.setSprite({
+    spriteIndex: this.studio_.sprite.indexOf(sprite),
+    value:"hidden"});
 };
 
 /**
@@ -7632,7 +7678,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 
 module.exports = BigGameLogic;
 
-},{"../codegen":53,"./api":196,"./constants":200,"./customGameLogic":202}],202:[function(require,module,exports){
+},{"../codegen":55,"./api":209,"./constants":213,"./customGameLogic":215}],215:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7701,7 +7747,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 
 module.exports = CustomGameLogic;
 
-},{"../codegen":53,"./api":196,"./constants":200}],196:[function(require,module,exports){
+},{"../codegen":55,"./api":209,"./constants":213}],209:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7865,7 +7911,7 @@ exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
 
-},{"./constants":200}],200:[function(require,module,exports){
+},{"./constants":213}],213:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8042,1129 +8088,4 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
-},{}],51:[function(require,module,exports){
-/**
-	The missing SVG.toDataURL library for your SVG elements.
-
-	Usage: SVGElement.toDataURL( type, { options } )
-
-	Returns: the data URL, except when using native PNG renderer (needs callback).
-
-	type	MIME type of the exported data.
-			Default: image/svg+xml.
-			Must support: image/png.
-			Additional: image/jpeg.
-
-	options is a map of options: {
-		callback: function(dataURL)
-			Callback function which is called when the data URL is ready.
-			This is only necessary when using native PNG renderer.
-			Default: undefined.
-
-		[the rest of the options only apply when type="image/png" or type="image/jpeg"]
-
-		renderer: "native"|"canvg"
-			PNG renderer to use. Native renderer¹ might cause a security exception.
-			Default: canvg if available, otherwise native.
-
-		keepNonSafe: true|false
-			Export non-safe (image and foreignObject) elements.
-			This will set the Canvas origin-clean property to false, if this data is transferred to Canvas.
-			Default: false, to keep origin-clean true.
-			NOTE: not currently supported and is just ignored.
-
-		keepOutsideViewport: true|false
-			Export all drawn content, even if not visible.
-			Default: false, export only visible viewport, similar to Canvas toDataURL().
-			NOTE: only supported with canvg renderer.
-	}
-
-	See original paper¹ for more info on SVG to Canvas exporting.
-
-	¹ http://svgopen.org/2010/papers/62-From_SVG_to_Canvas_and_Back/#svg_to_canvas
-*/
-
-SVGElement.prototype.toDataURL = function(type, options) {
-	var _svg = this;
-
-	function debug(s) {
-		// We could find to a way to make this display depending on environment, but
-		// for now I think it's okay to just disable.
-		// console.log("SVG.toDataURL:", s);
-	}
-
-	function exportSVG() {
-		var svg_xml = XMLSerialize(_svg);
-		var svg_dataurl = base64dataURLencode(svg_xml);
-		debug(type + " length: " + svg_dataurl.length);
-
-		// NOTE double data carrier
-		if (options.callback) options.callback(svg_dataurl);
-		return svg_dataurl;
-	}
-
-	function XMLSerialize(svg) {
-
-		// quick-n-serialize an SVG dom, needed for IE9 where there's no XMLSerializer nor SVG.xml
-		// s: SVG dom, which is the <svg> elemennt
-		function XMLSerializerForIE(s) {
-			var out = "";
-
-			out += "<" + s.nodeName;
-			for (var n = 0; n < s.attributes.length; n++) {
-				out += " " + s.attributes[n].name + "=" + "'" + s.attributes[n].value + "'";
-			}
-
-			if (s.hasChildNodes()) {
-				out += ">\n";
-
-				for (var n = 0; n < s.childNodes.length; n++) {
-					out += XMLSerializerForIE(s.childNodes[n]);
-				}
-
-				out += "</" + s.nodeName + ">" + "\n";
-
-			} else out += " />\n";
-
-			return out;
-		}
-
-
-		if (window.XMLSerializer) {
-			debug("using standard XMLSerializer.serializeToString")
-			return (new XMLSerializer()).serializeToString(svg);
-		} else {
-			debug("using custom XMLSerializerForIE")
-			return XMLSerializerForIE(svg);
-		}
-
-	}
-
-	function base64dataURLencode(s) {
-		var b64 = "data:image/svg+xml;base64,";
-
-		// https://developer.mozilla.org/en/DOM/window.btoa
-		if (window.btoa) {
-			debug("using window.btoa for base64 encoding");
-			b64 += btoa(s);
-		} else {
-			debug("using custom base64 encoder");
-			b64 += Base64.encode(s);
-		}
-
-		return b64;
-	}
-
-	function exportImage(type) {
-		var canvas = document.createElement("canvas");
-		var ctx = canvas.getContext('2d');
-
-		// TODO: if (options.keepOutsideViewport), do some translation magic?
-
-		var svg_img = new Image();
-		var svg_xml = XMLSerialize(_svg);
-		svg_img.src = base64dataURLencode(svg_xml);
-
-		svg_img.onload = function() {
-			debug("exported image size: " + [svg_img.width, svg_img.height])
-			canvas.width = svg_img.width;
-			canvas.height = svg_img.height;
-			ctx.drawImage(svg_img, 0, 0);
-
-			// SECURITY_ERR WILL HAPPEN NOW
-			var png_dataurl = canvas.toDataURL(type);
-			debug(type + " length: " + png_dataurl.length);
-
-			if (options.callback) options.callback( png_dataurl );
-			else debug("WARNING: no callback set, so nothing happens.");
-		}
-
-		svg_img.onerror = function() {
-			console.log(
-				"Can't export! Maybe your browser doesn't support " +
-				"SVG in img element or SVG input for Canvas drawImage?\n" +
-				"http://en.wikipedia.org/wiki/SVG#Native_support"
-			);
-		}
-
-		// NOTE: will not return anything
-	}
-
-	function exportImageCanvg(type) {
-		var canvas = document.createElement("canvas");
-		var ctx = canvas.getContext('2d');
-		var svg_xml = XMLSerialize(_svg);
-
-		// NOTE: canvg gets the SVG element dimensions incorrectly if not specified as attributes
-		//debug("detected svg dimensions " + [_svg.clientWidth, _svg.clientHeight])
-		//debug("canvas dimensions " + [canvas.width, canvas.height])
-
-		var keepBB = options.keepOutsideViewport;
-		if (keepBB) var bb = _svg.getBBox();
-
-		// NOTE: this canvg call is synchronous and blocks (no it does not)
-		canvg(canvas, svg_xml, {
-			ignoreMouse: true, ignoreAnimation: true,
-			offsetX: keepBB ? -bb.x : undefined,
-			offsetY: keepBB ? -bb.y : undefined,
-			scaleWidth: keepBB ? bb.width+bb.x : undefined,
-			scaleHeight: keepBB ? bb.height+bb.y : undefined,
-			renderCallback: function() {
-				debug("exported image dimensions " + [canvas.width, canvas.height]);
-				var png_dataurl = canvas.toDataURL(type);
-				debug(type + " length: " + png_dataurl.length);
-
-				if (options.callback) options.callback( png_dataurl );
-			}
-		});
-
-		// NOTE: return in addition to callback
-		return canvas.toDataURL(type);
-	}
-
-	// BEGIN MAIN
-
-	if (!type) type = "image/svg+xml";
-	if (!options) options = {};
-
-	if (options.keepNonSafe) debug("NOTE: keepNonSafe is NOT supported and will be ignored!");
-	if (options.keepOutsideViewport) debug("NOTE: keepOutsideViewport is only supported with canvg exporter.");
-
-	switch (type) {
-		case "image/svg+xml":
-			return exportSVG();
-			break;
-
-		case "image/png":
-		case "image/jpeg":
-
-			if (!options.renderer) {
-				if (window.canvg) options.renderer = "canvg";
-				else options.renderer="native";
-			}
-
-			switch (options.renderer) {
-				case "canvg":
-					debug("using canvg renderer for png export");
-					return exportImageCanvg(type);
-					break;
-
-				case "native":
-					debug("using native renderer for png export. THIS MIGHT FAIL.");
-					return exportImage(type);
-					break;
-
-				default:
-					debug("unknown png renderer given, doing noting (" + options.renderer + ")");
-			}
-
-			break;
-
-		default:
-			debug("Sorry! Exporting as '" + type + "' is not supported!")
-	}
-}
-
-},{}],50:[function(require,module,exports){
-/**
- * A class to parse color values
- * @author Stoyan Stefanov <sstoo@gmail.com>
- * @link   http://www.phpied.com/rgb-color-parser-in-javascript/
- * @license Use it if you like it
- */
-function RGBColor(color_string)
-{
-    this.ok = false;
-
-    // strip any leading #
-    if (color_string.charAt(0) == '#') { // remove # if any
-        color_string = color_string.substr(1,6);
-    }
-
-    color_string = color_string.replace(/ /g,'');
-    color_string = color_string.toLowerCase();
-
-    // before getting into regexps, try simple matches
-    // and overwrite the input
-    var simple_colors = {
-        aliceblue: 'f0f8ff',
-        antiquewhite: 'faebd7',
-        aqua: '00ffff',
-        aquamarine: '7fffd4',
-        azure: 'f0ffff',
-        beige: 'f5f5dc',
-        bisque: 'ffe4c4',
-        black: '000000',
-        blanchedalmond: 'ffebcd',
-        blue: '0000ff',
-        blueviolet: '8a2be2',
-        brown: 'a52a2a',
-        burlywood: 'deb887',
-        cadetblue: '5f9ea0',
-        chartreuse: '7fff00',
-        chocolate: 'd2691e',
-        coral: 'ff7f50',
-        cornflowerblue: '6495ed',
-        cornsilk: 'fff8dc',
-        crimson: 'dc143c',
-        cyan: '00ffff',
-        darkblue: '00008b',
-        darkcyan: '008b8b',
-        darkgoldenrod: 'b8860b',
-        darkgray: 'a9a9a9',
-        darkgreen: '006400',
-        darkkhaki: 'bdb76b',
-        darkmagenta: '8b008b',
-        darkolivegreen: '556b2f',
-        darkorange: 'ff8c00',
-        darkorchid: '9932cc',
-        darkred: '8b0000',
-        darksalmon: 'e9967a',
-        darkseagreen: '8fbc8f',
-        darkslateblue: '483d8b',
-        darkslategray: '2f4f4f',
-        darkturquoise: '00ced1',
-        darkviolet: '9400d3',
-        deeppink: 'ff1493',
-        deepskyblue: '00bfff',
-        dimgray: '696969',
-        dodgerblue: '1e90ff',
-        feldspar: 'd19275',
-        firebrick: 'b22222',
-        floralwhite: 'fffaf0',
-        forestgreen: '228b22',
-        fuchsia: 'ff00ff',
-        gainsboro: 'dcdcdc',
-        ghostwhite: 'f8f8ff',
-        gold: 'ffd700',
-        goldenrod: 'daa520',
-        gray: '808080',
-        green: '008000',
-        greenyellow: 'adff2f',
-        honeydew: 'f0fff0',
-        hotpink: 'ff69b4',
-        indianred : 'cd5c5c',
-        indigo : '4b0082',
-        ivory: 'fffff0',
-        khaki: 'f0e68c',
-        lavender: 'e6e6fa',
-        lavenderblush: 'fff0f5',
-        lawngreen: '7cfc00',
-        lemonchiffon: 'fffacd',
-        lightblue: 'add8e6',
-        lightcoral: 'f08080',
-        lightcyan: 'e0ffff',
-        lightgoldenrodyellow: 'fafad2',
-        lightgrey: 'd3d3d3',
-        lightgreen: '90ee90',
-        lightpink: 'ffb6c1',
-        lightsalmon: 'ffa07a',
-        lightseagreen: '20b2aa',
-        lightskyblue: '87cefa',
-        lightslateblue: '8470ff',
-        lightslategray: '778899',
-        lightsteelblue: 'b0c4de',
-        lightyellow: 'ffffe0',
-        lime: '00ff00',
-        limegreen: '32cd32',
-        linen: 'faf0e6',
-        magenta: 'ff00ff',
-        maroon: '800000',
-        mediumaquamarine: '66cdaa',
-        mediumblue: '0000cd',
-        mediumorchid: 'ba55d3',
-        mediumpurple: '9370d8',
-        mediumseagreen: '3cb371',
-        mediumslateblue: '7b68ee',
-        mediumspringgreen: '00fa9a',
-        mediumturquoise: '48d1cc',
-        mediumvioletred: 'c71585',
-        midnightblue: '191970',
-        mintcream: 'f5fffa',
-        mistyrose: 'ffe4e1',
-        moccasin: 'ffe4b5',
-        navajowhite: 'ffdead',
-        navy: '000080',
-        oldlace: 'fdf5e6',
-        olive: '808000',
-        olivedrab: '6b8e23',
-        orange: 'ffa500',
-        orangered: 'ff4500',
-        orchid: 'da70d6',
-        palegoldenrod: 'eee8aa',
-        palegreen: '98fb98',
-        paleturquoise: 'afeeee',
-        palevioletred: 'd87093',
-        papayawhip: 'ffefd5',
-        peachpuff: 'ffdab9',
-        peru: 'cd853f',
-        pink: 'ffc0cb',
-        plum: 'dda0dd',
-        powderblue: 'b0e0e6',
-        purple: '800080',
-        red: 'ff0000',
-        rosybrown: 'bc8f8f',
-        royalblue: '4169e1',
-        saddlebrown: '8b4513',
-        salmon: 'fa8072',
-        sandybrown: 'f4a460',
-        seagreen: '2e8b57',
-        seashell: 'fff5ee',
-        sienna: 'a0522d',
-        silver: 'c0c0c0',
-        skyblue: '87ceeb',
-        slateblue: '6a5acd',
-        slategray: '708090',
-        snow: 'fffafa',
-        springgreen: '00ff7f',
-        steelblue: '4682b4',
-        tan: 'd2b48c',
-        teal: '008080',
-        thistle: 'd8bfd8',
-        tomato: 'ff6347',
-        turquoise: '40e0d0',
-        violet: 'ee82ee',
-        violetred: 'd02090',
-        wheat: 'f5deb3',
-        white: 'ffffff',
-        whitesmoke: 'f5f5f5',
-        yellow: 'ffff00',
-        yellowgreen: '9acd32'
-    };
-    for (var key in simple_colors) {
-        if (color_string == key) {
-            color_string = simple_colors[key];
-        }
-    }
-    // emd of simple type-in colors
-
-    // array of color definition objects
-    var color_defs = [
-        {
-            re: /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/,
-            example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
-            process: function (bits){
-                return [
-                    parseInt(bits[1]),
-                    parseInt(bits[2]),
-                    parseInt(bits[3])
-                ];
-            }
-        },
-        {
-            re: /^(\w{2})(\w{2})(\w{2})$/,
-            example: ['#00ff00', '336699'],
-            process: function (bits){
-                return [
-                    parseInt(bits[1], 16),
-                    parseInt(bits[2], 16),
-                    parseInt(bits[3], 16)
-                ];
-            }
-        },
-        {
-            re: /^(\w{1})(\w{1})(\w{1})$/,
-            example: ['#fb0', 'f0f'],
-            process: function (bits){
-                return [
-                    parseInt(bits[1] + bits[1], 16),
-                    parseInt(bits[2] + bits[2], 16),
-                    parseInt(bits[3] + bits[3], 16)
-                ];
-            }
-        }
-    ];
-
-    // search through the definitions to find a match
-    for (var i = 0; i < color_defs.length; i++) {
-        var re = color_defs[i].re;
-        var processor = color_defs[i].process;
-        var bits = re.exec(color_string);
-        if (bits) {
-            channels = processor(bits);
-            this.r = channels[0];
-            this.g = channels[1];
-            this.b = channels[2];
-            this.ok = true;
-        }
-
-    }
-
-    // validate/cleanup values
-    this.r = (this.r < 0 || isNaN(this.r)) ? 0 : ((this.r > 255) ? 255 : this.r);
-    this.g = (this.g < 0 || isNaN(this.g)) ? 0 : ((this.g > 255) ? 255 : this.g);
-    this.b = (this.b < 0 || isNaN(this.b)) ? 0 : ((this.b > 255) ? 255 : this.b);
-
-    // some getters
-    this.toRGB = function () {
-        return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
-    }
-    this.toHex = function () {
-        var r = this.r.toString(16);
-        var g = this.g.toString(16);
-        var b = this.b.toString(16);
-        if (r.length == 1) r = '0' + r;
-        if (g.length == 1) g = '0' + g;
-        if (b.length == 1) b = '0' + b;
-        return '#' + r + g + b;
-    }
-
-    // help
-    this.getHelpXML = function () {
-
-        var examples = new Array();
-        // add regexps
-        for (var i = 0; i < color_defs.length; i++) {
-            var example = color_defs[i].example;
-            for (var j = 0; j < example.length; j++) {
-                examples[examples.length] = example[j];
-            }
-        }
-        // add type-in colors
-        for (var sc in simple_colors) {
-            examples[examples.length] = sc;
-        }
-
-        var xml = document.createElement('ul');
-        xml.setAttribute('id', 'rgbcolor-examples');
-        for (var i = 0; i < examples.length; i++) {
-            try {
-                var list_item = document.createElement('li');
-                var list_color = new RGBColor(examples[i]);
-                var example_div = document.createElement('div');
-                example_div.style.cssText =
-                        'margin: 3px; '
-                        + 'border: 1px solid black; '
-                        + 'background:' + list_color.toHex() + '; '
-                        + 'color:' + list_color.toHex()
-                ;
-                example_div.appendChild(document.createTextNode('test'));
-                var list_item_value = document.createTextNode(
-                    ' ' + examples[i] + ' -> ' + list_color.toRGB() + ' -> ' + list_color.toHex()
-                );
-                list_item.appendChild(example_div);
-                list_item.appendChild(list_item_value);
-                xml.appendChild(list_item);
-
-            } catch(e){}
-        }
-        return xml;
-
-    }
-
-}
-
-
-},{}],48:[function(require,module,exports){
-/*
-
-StackBlur - a fast almost Gaussian Blur For Canvas
-
-Version: 	0.5
-Author:		Mario Klingemann
-Contact: 	mario@quasimondo.com
-Website:	http://www.quasimondo.com/StackBlurForCanvas
-Twitter:	@quasimondo
-
-In case you find this class useful - especially in commercial projects -
-I am not totally unhappy for a small donation to my PayPal account
-mario@quasimondo.de
-
-Or support me on flattr: 
-https://flattr.com/thing/72791/StackBlur-a-fast-almost-Gaussian-Blur-Effect-for-CanvasJavascript
-
-Copyright (c) 2010 Mario Klingemann
-
-Permission is hereby granted, free of charge, to any person
-obtaining a copy of this software and associated documentation
-files (the "Software"), to deal in the Software without
-restriction, including without limitation the rights to use,
-copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following
-conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-*/
-
-var mul_table = [
-        512,512,456,512,328,456,335,512,405,328,271,456,388,335,292,512,
-        454,405,364,328,298,271,496,456,420,388,360,335,312,292,273,512,
-        482,454,428,405,383,364,345,328,312,298,284,271,259,496,475,456,
-        437,420,404,388,374,360,347,335,323,312,302,292,282,273,265,512,
-        497,482,468,454,441,428,417,405,394,383,373,364,354,345,337,328,
-        320,312,305,298,291,284,278,271,265,259,507,496,485,475,465,456,
-        446,437,428,420,412,404,396,388,381,374,367,360,354,347,341,335,
-        329,323,318,312,307,302,297,292,287,282,278,273,269,265,261,512,
-        505,497,489,482,475,468,461,454,447,441,435,428,422,417,411,405,
-        399,394,389,383,378,373,368,364,359,354,350,345,341,337,332,328,
-        324,320,316,312,309,305,301,298,294,291,287,284,281,278,274,271,
-        268,265,262,259,257,507,501,496,491,485,480,475,470,465,460,456,
-        451,446,442,437,433,428,424,420,416,412,408,404,400,396,392,388,
-        385,381,377,374,370,367,363,360,357,354,350,347,344,341,338,335,
-        332,329,326,323,320,318,315,312,310,307,304,302,299,297,294,292,
-        289,287,285,282,280,278,275,273,271,269,267,265,263,261,259];
-        
-   
-var shg_table = [
-	     9, 11, 12, 13, 13, 14, 14, 15, 15, 15, 15, 16, 16, 16, 16, 17, 
-		17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 
-		19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20,
-		20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21,
-		21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
-		21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 
-		22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22,
-		22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 
-		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
-		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
-		23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 
-		23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 
-		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
-		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
-		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
-		24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24 ];
-
-function stackBlurImage( imageID, canvasID, radius, blurAlphaChannel )
-{
-			
- 	var img = document.getElementById( imageID );
-	var w = img.naturalWidth;
-    var h = img.naturalHeight;
-       
-	var canvas = document.getElementById( canvasID );
-      
-    canvas.style.width  = w + "px";
-    canvas.style.height = h + "px";
-    canvas.width = w;
-    canvas.height = h;
-    
-    var context = canvas.getContext("2d");
-    context.clearRect( 0, 0, w, h );
-    context.drawImage( img, 0, 0 );
-
-	if ( isNaN(radius) || radius < 1 ) return;
-	
-	if ( blurAlphaChannel )
-		stackBlurCanvasRGBA( canvasID, 0, 0, w, h, radius );
-	else 
-		stackBlurCanvasRGB( canvasID, 0, 0, w, h, radius );
-}
-
-
-function stackBlurCanvasRGBA( id, top_x, top_y, width, height, radius )
-{
-	if ( isNaN(radius) || radius < 1 ) return;
-	radius |= 0;
-	
-	var canvas  = document.getElementById( id );
-	var context = canvas.getContext("2d");
-	var imageData;
-	
-	try {
-	  try {
-		imageData = context.getImageData( top_x, top_y, width, height );
-	  } catch(e) {
-	  
-		// NOTE: this part is supposedly only needed if you want to work with local files
-		// so it might be okay to remove the whole try/catch block and just use
-		// imageData = context.getImageData( top_x, top_y, width, height );
-		try {
-			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
-			imageData = context.getImageData( top_x, top_y, width, height );
-		} catch(e) {
-			alert("Cannot access local image");
-			throw new Error("unable to access local image data: " + e);
-			return;
-		}
-	  }
-	} catch(e) {
-	  alert("Cannot access image");
-	  throw new Error("unable to access image data: " + e);
-	}
-			
-	var pixels = imageData.data;
-			
-	var x, y, i, p, yp, yi, yw, r_sum, g_sum, b_sum, a_sum, 
-	r_out_sum, g_out_sum, b_out_sum, a_out_sum,
-	r_in_sum, g_in_sum, b_in_sum, a_in_sum, 
-	pr, pg, pb, pa, rbs;
-			
-	var div = radius + radius + 1;
-	var w4 = width << 2;
-	var widthMinus1  = width - 1;
-	var heightMinus1 = height - 1;
-	var radiusPlus1  = radius + 1;
-	var sumFactor = radiusPlus1 * ( radiusPlus1 + 1 ) / 2;
-	
-	var stackStart = new BlurStack();
-	var stack = stackStart;
-	for ( i = 1; i < div; i++ )
-	{
-		stack = stack.next = new BlurStack();
-		if ( i == radiusPlus1 ) var stackEnd = stack;
-	}
-	stack.next = stackStart;
-	var stackIn = null;
-	var stackOut = null;
-	
-	yw = yi = 0;
-	
-	var mul_sum = mul_table[radius];
-	var shg_sum = shg_table[radius];
-	
-	for ( y = 0; y < height; y++ )
-	{
-		r_in_sum = g_in_sum = b_in_sum = a_in_sum = r_sum = g_sum = b_sum = a_sum = 0;
-		
-		r_out_sum = radiusPlus1 * ( pr = pixels[yi] );
-		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1] );
-		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2] );
-		a_out_sum = radiusPlus1 * ( pa = pixels[yi+3] );
-		
-		r_sum += sumFactor * pr;
-		g_sum += sumFactor * pg;
-		b_sum += sumFactor * pb;
-		a_sum += sumFactor * pa;
-		
-		stack = stackStart;
-		
-		for( i = 0; i < radiusPlus1; i++ )
-		{
-			stack.r = pr;
-			stack.g = pg;
-			stack.b = pb;
-			stack.a = pa;
-			stack = stack.next;
-		}
-		
-		for( i = 1; i < radiusPlus1; i++ )
-		{
-			p = yi + (( widthMinus1 < i ? widthMinus1 : i ) << 2 );
-			r_sum += ( stack.r = ( pr = pixels[p])) * ( rbs = radiusPlus1 - i );
-			g_sum += ( stack.g = ( pg = pixels[p+1])) * rbs;
-			b_sum += ( stack.b = ( pb = pixels[p+2])) * rbs;
-			a_sum += ( stack.a = ( pa = pixels[p+3])) * rbs;
-			
-			r_in_sum += pr;
-			g_in_sum += pg;
-			b_in_sum += pb;
-			a_in_sum += pa;
-			
-			stack = stack.next;
-		}
-		
-		
-		stackIn = stackStart;
-		stackOut = stackEnd;
-		for ( x = 0; x < width; x++ )
-		{
-			pixels[yi+3] = pa = (a_sum * mul_sum) >> shg_sum;
-			if ( pa != 0 )
-			{
-				pa = 255 / pa;
-				pixels[yi]   = ((r_sum * mul_sum) >> shg_sum) * pa;
-				pixels[yi+1] = ((g_sum * mul_sum) >> shg_sum) * pa;
-				pixels[yi+2] = ((b_sum * mul_sum) >> shg_sum) * pa;
-			} else {
-				pixels[yi] = pixels[yi+1] = pixels[yi+2] = 0;
-			}
-			
-			r_sum -= r_out_sum;
-			g_sum -= g_out_sum;
-			b_sum -= b_out_sum;
-			a_sum -= a_out_sum;
-			
-			r_out_sum -= stackIn.r;
-			g_out_sum -= stackIn.g;
-			b_out_sum -= stackIn.b;
-			a_out_sum -= stackIn.a;
-			
-			p =  ( yw + ( ( p = x + radius + 1 ) < widthMinus1 ? p : widthMinus1 ) ) << 2;
-			
-			r_in_sum += ( stackIn.r = pixels[p]);
-			g_in_sum += ( stackIn.g = pixels[p+1]);
-			b_in_sum += ( stackIn.b = pixels[p+2]);
-			a_in_sum += ( stackIn.a = pixels[p+3]);
-			
-			r_sum += r_in_sum;
-			g_sum += g_in_sum;
-			b_sum += b_in_sum;
-			a_sum += a_in_sum;
-			
-			stackIn = stackIn.next;
-			
-			r_out_sum += ( pr = stackOut.r );
-			g_out_sum += ( pg = stackOut.g );
-			b_out_sum += ( pb = stackOut.b );
-			a_out_sum += ( pa = stackOut.a );
-			
-			r_in_sum -= pr;
-			g_in_sum -= pg;
-			b_in_sum -= pb;
-			a_in_sum -= pa;
-			
-			stackOut = stackOut.next;
-
-			yi += 4;
-		}
-		yw += width;
-	}
-
-	
-	for ( x = 0; x < width; x++ )
-	{
-		g_in_sum = b_in_sum = a_in_sum = r_in_sum = g_sum = b_sum = a_sum = r_sum = 0;
-		
-		yi = x << 2;
-		r_out_sum = radiusPlus1 * ( pr = pixels[yi]);
-		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1]);
-		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2]);
-		a_out_sum = radiusPlus1 * ( pa = pixels[yi+3]);
-		
-		r_sum += sumFactor * pr;
-		g_sum += sumFactor * pg;
-		b_sum += sumFactor * pb;
-		a_sum += sumFactor * pa;
-		
-		stack = stackStart;
-		
-		for( i = 0; i < radiusPlus1; i++ )
-		{
-			stack.r = pr;
-			stack.g = pg;
-			stack.b = pb;
-			stack.a = pa;
-			stack = stack.next;
-		}
-		
-		yp = width;
-		
-		for( i = 1; i <= radius; i++ )
-		{
-			yi = ( yp + x ) << 2;
-			
-			r_sum += ( stack.r = ( pr = pixels[yi])) * ( rbs = radiusPlus1 - i );
-			g_sum += ( stack.g = ( pg = pixels[yi+1])) * rbs;
-			b_sum += ( stack.b = ( pb = pixels[yi+2])) * rbs;
-			a_sum += ( stack.a = ( pa = pixels[yi+3])) * rbs;
-		   
-			r_in_sum += pr;
-			g_in_sum += pg;
-			b_in_sum += pb;
-			a_in_sum += pa;
-			
-			stack = stack.next;
-		
-			if( i < heightMinus1 )
-			{
-				yp += width;
-			}
-		}
-		
-		yi = x;
-		stackIn = stackStart;
-		stackOut = stackEnd;
-		for ( y = 0; y < height; y++ )
-		{
-			p = yi << 2;
-			pixels[p+3] = pa = (a_sum * mul_sum) >> shg_sum;
-			if ( pa > 0 )
-			{
-				pa = 255 / pa;
-				pixels[p]   = ((r_sum * mul_sum) >> shg_sum ) * pa;
-				pixels[p+1] = ((g_sum * mul_sum) >> shg_sum ) * pa;
-				pixels[p+2] = ((b_sum * mul_sum) >> shg_sum ) * pa;
-			} else {
-				pixels[p] = pixels[p+1] = pixels[p+2] = 0;
-			}
-			
-			r_sum -= r_out_sum;
-			g_sum -= g_out_sum;
-			b_sum -= b_out_sum;
-			a_sum -= a_out_sum;
-		   
-			r_out_sum -= stackIn.r;
-			g_out_sum -= stackIn.g;
-			b_out_sum -= stackIn.b;
-			a_out_sum -= stackIn.a;
-			
-			p = ( x + (( ( p = y + radiusPlus1) < heightMinus1 ? p : heightMinus1 ) * width )) << 2;
-			
-			r_sum += ( r_in_sum += ( stackIn.r = pixels[p]));
-			g_sum += ( g_in_sum += ( stackIn.g = pixels[p+1]));
-			b_sum += ( b_in_sum += ( stackIn.b = pixels[p+2]));
-			a_sum += ( a_in_sum += ( stackIn.a = pixels[p+3]));
-		   
-			stackIn = stackIn.next;
-			
-			r_out_sum += ( pr = stackOut.r );
-			g_out_sum += ( pg = stackOut.g );
-			b_out_sum += ( pb = stackOut.b );
-			a_out_sum += ( pa = stackOut.a );
-			
-			r_in_sum -= pr;
-			g_in_sum -= pg;
-			b_in_sum -= pb;
-			a_in_sum -= pa;
-			
-			stackOut = stackOut.next;
-			
-			yi += width;
-		}
-	}
-	
-	context.putImageData( imageData, top_x, top_y );
-	
-}
-
-
-function stackBlurCanvasRGB( id, top_x, top_y, width, height, radius )
-{
-	if ( isNaN(radius) || radius < 1 ) return;
-	radius |= 0;
-	
-	var canvas  = document.getElementById( id );
-	var context = canvas.getContext("2d");
-	var imageData;
-	
-	try {
-	  try {
-		imageData = context.getImageData( top_x, top_y, width, height );
-	  } catch(e) {
-	  
-		// NOTE: this part is supposedly only needed if you want to work with local files
-		// so it might be okay to remove the whole try/catch block and just use
-		// imageData = context.getImageData( top_x, top_y, width, height );
-		try {
-			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
-			imageData = context.getImageData( top_x, top_y, width, height );
-		} catch(e) {
-			alert("Cannot access local image");
-			throw new Error("unable to access local image data: " + e);
-			return;
-		}
-	  }
-	} catch(e) {
-	  alert("Cannot access image");
-	  throw new Error("unable to access image data: " + e);
-	}
-			
-	var pixels = imageData.data;
-			
-	var x, y, i, p, yp, yi, yw, r_sum, g_sum, b_sum,
-	r_out_sum, g_out_sum, b_out_sum,
-	r_in_sum, g_in_sum, b_in_sum,
-	pr, pg, pb, rbs;
-			
-	var div = radius + radius + 1;
-	var w4 = width << 2;
-	var widthMinus1  = width - 1;
-	var heightMinus1 = height - 1;
-	var radiusPlus1  = radius + 1;
-	var sumFactor = radiusPlus1 * ( radiusPlus1 + 1 ) / 2;
-	
-	var stackStart = new BlurStack();
-	var stack = stackStart;
-	for ( i = 1; i < div; i++ )
-	{
-		stack = stack.next = new BlurStack();
-		if ( i == radiusPlus1 ) var stackEnd = stack;
-	}
-	stack.next = stackStart;
-	var stackIn = null;
-	var stackOut = null;
-	
-	yw = yi = 0;
-	
-	var mul_sum = mul_table[radius];
-	var shg_sum = shg_table[radius];
-	
-	for ( y = 0; y < height; y++ )
-	{
-		r_in_sum = g_in_sum = b_in_sum = r_sum = g_sum = b_sum = 0;
-		
-		r_out_sum = radiusPlus1 * ( pr = pixels[yi] );
-		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1] );
-		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2] );
-		
-		r_sum += sumFactor * pr;
-		g_sum += sumFactor * pg;
-		b_sum += sumFactor * pb;
-		
-		stack = stackStart;
-		
-		for( i = 0; i < radiusPlus1; i++ )
-		{
-			stack.r = pr;
-			stack.g = pg;
-			stack.b = pb;
-			stack = stack.next;
-		}
-		
-		for( i = 1; i < radiusPlus1; i++ )
-		{
-			p = yi + (( widthMinus1 < i ? widthMinus1 : i ) << 2 );
-			r_sum += ( stack.r = ( pr = pixels[p])) * ( rbs = radiusPlus1 - i );
-			g_sum += ( stack.g = ( pg = pixels[p+1])) * rbs;
-			b_sum += ( stack.b = ( pb = pixels[p+2])) * rbs;
-			
-			r_in_sum += pr;
-			g_in_sum += pg;
-			b_in_sum += pb;
-			
-			stack = stack.next;
-		}
-		
-		
-		stackIn = stackStart;
-		stackOut = stackEnd;
-		for ( x = 0; x < width; x++ )
-		{
-			pixels[yi]   = (r_sum * mul_sum) >> shg_sum;
-			pixels[yi+1] = (g_sum * mul_sum) >> shg_sum;
-			pixels[yi+2] = (b_sum * mul_sum) >> shg_sum;
-			
-			r_sum -= r_out_sum;
-			g_sum -= g_out_sum;
-			b_sum -= b_out_sum;
-			
-			r_out_sum -= stackIn.r;
-			g_out_sum -= stackIn.g;
-			b_out_sum -= stackIn.b;
-			
-			p =  ( yw + ( ( p = x + radius + 1 ) < widthMinus1 ? p : widthMinus1 ) ) << 2;
-			
-			r_in_sum += ( stackIn.r = pixels[p]);
-			g_in_sum += ( stackIn.g = pixels[p+1]);
-			b_in_sum += ( stackIn.b = pixels[p+2]);
-			
-			r_sum += r_in_sum;
-			g_sum += g_in_sum;
-			b_sum += b_in_sum;
-			
-			stackIn = stackIn.next;
-			
-			r_out_sum += ( pr = stackOut.r );
-			g_out_sum += ( pg = stackOut.g );
-			b_out_sum += ( pb = stackOut.b );
-			
-			r_in_sum -= pr;
-			g_in_sum -= pg;
-			b_in_sum -= pb;
-			
-			stackOut = stackOut.next;
-
-			yi += 4;
-		}
-		yw += width;
-	}
-
-	
-	for ( x = 0; x < width; x++ )
-	{
-		g_in_sum = b_in_sum = r_in_sum = g_sum = b_sum = r_sum = 0;
-		
-		yi = x << 2;
-		r_out_sum = radiusPlus1 * ( pr = pixels[yi]);
-		g_out_sum = radiusPlus1 * ( pg = pixels[yi+1]);
-		b_out_sum = radiusPlus1 * ( pb = pixels[yi+2]);
-		
-		r_sum += sumFactor * pr;
-		g_sum += sumFactor * pg;
-		b_sum += sumFactor * pb;
-		
-		stack = stackStart;
-		
-		for( i = 0; i < radiusPlus1; i++ )
-		{
-			stack.r = pr;
-			stack.g = pg;
-			stack.b = pb;
-			stack = stack.next;
-		}
-		
-		yp = width;
-		
-		for( i = 1; i <= radius; i++ )
-		{
-			yi = ( yp + x ) << 2;
-			
-			r_sum += ( stack.r = ( pr = pixels[yi])) * ( rbs = radiusPlus1 - i );
-			g_sum += ( stack.g = ( pg = pixels[yi+1])) * rbs;
-			b_sum += ( stack.b = ( pb = pixels[yi+2])) * rbs;
-			
-			r_in_sum += pr;
-			g_in_sum += pg;
-			b_in_sum += pb;
-			
-			stack = stack.next;
-		
-			if( i < heightMinus1 )
-			{
-				yp += width;
-			}
-		}
-		
-		yi = x;
-		stackIn = stackStart;
-		stackOut = stackEnd;
-		for ( y = 0; y < height; y++ )
-		{
-			p = yi << 2;
-			pixels[p]   = (r_sum * mul_sum) >> shg_sum;
-			pixels[p+1] = (g_sum * mul_sum) >> shg_sum;
-			pixels[p+2] = (b_sum * mul_sum) >> shg_sum;
-			
-			r_sum -= r_out_sum;
-			g_sum -= g_out_sum;
-			b_sum -= b_out_sum;
-			
-			r_out_sum -= stackIn.r;
-			g_out_sum -= stackIn.g;
-			b_out_sum -= stackIn.b;
-			
-			p = ( x + (( ( p = y + radiusPlus1) < heightMinus1 ? p : heightMinus1 ) * width )) << 2;
-			
-			r_sum += ( r_in_sum += ( stackIn.r = pixels[p]));
-			g_sum += ( g_in_sum += ( stackIn.g = pixels[p+1]));
-			b_sum += ( b_in_sum += ( stackIn.b = pixels[p+2]));
-			
-			stackIn = stackIn.next;
-			
-			r_out_sum += ( pr = stackOut.r );
-			g_out_sum += ( pg = stackOut.g );
-			b_out_sum += ( pb = stackOut.b );
-			
-			r_in_sum -= pr;
-			g_in_sum -= pg;
-			b_in_sum -= pb;
-			
-			stackOut = stackOut.next;
-			
-			yi += width;
-		}
-	}
-	
-	context.putImageData( imageData, top_x, top_y );
-	
-}
-
-function BlurStack()
-{
-	this.r = 0;
-	this.g = 0;
-	this.b = 0;
-	this.a = 0;
-	this.next = null;
-}
-},{}]},{},[206]);
+},{}]},{},[219]);

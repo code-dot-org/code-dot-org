@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "Círculo (raio, estilo, cor)"},
 "displayBlockTitle":function(d){return "Exibir"},
 "ellipseBlockTitle":function(d){return "Elipse (largura, altura, estilo, cor)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
 "extraTopBlocks":function(d){return "Você tem blocos não acoplados. Você quis dizer para anexar este para o bloco \"display\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "Degradê (Topo, Botão)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "solid"},
 "string":function(d){return "string"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "Ocorreu um erro ao tentar executar o teu código."}};
+"userCodeException":function(d){return "Ocorreu um erro ao tentar executar o teu código."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

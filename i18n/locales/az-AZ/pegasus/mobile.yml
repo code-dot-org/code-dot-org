@@ -4,8 +4,8 @@ az-AZ:
   computer_science: İnformatika
   computer_science_edweek: İnformatika təhsili həftəsi
   csedweek_dates: 8-14 dekabr 2014
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kod Saatı</a> gəlir. Bütün müəllim və təşkilaçıları səsləyirik, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">öz Kod Saatınızı planlaşdırın</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">İnformatika müəllimisiniz? İnformatika Təhsili Həftəsi üçün digər materiallarımızı nəzərdən keçirin</a>'
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Hər kəs öyrənə bilər.
   learn_now: İndi öyrən
@@ -24,7 +24,7 @@ az-AZ:
   hoc2014_teachers: Müəllimlər
   hoc2014_host: Təşkil edin
   hoc2014_everyone: Hamı
-  hoc2014_support: Dəstək verin
+  hoc2014_support: 'Dəstək verin &#x25BE;'
   hoc2014_whatishoc: Kod Saatı nədir?
   twentyhours_trynow: Elə indi sınaqdan keçirin
   california_heading: İnformatikanı tədris etməyi məktəbinizdən xahiş edin
@@ -67,7 +67,7 @@ az-AZ:
   share_on_facebook: '"Facebook"da bölüşün'
   share_on_twitter: '"Twitter"də bölüşün'
   beyond_an_hour: Beyond an Hour of Code
-  get_started: Start
+  get_started: Başlayın
   i_agree: Razıyam
   participant_select: '- Seçin -'
   participant_student: şagird
@@ -75,7 +75,7 @@ az-AZ:
   participant_educator: Təhsil işçisi
   participant_engineer: Proqramçı-mühəndis
   participant_other: Yuxarıdakılardan heç biri
-  print_all: Print all
+  print_all: Hamısını çap edin
   print_ice_art: Print your ice art
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: 'Mən kiməm:'
@@ -110,6 +110,7 @@ az-AZ:
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
+  studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: İbtidai kurslar
   studiobar_elementary_body: K-5 (11-12 yaşlılar) üçün üç yeni kursumuz
   studiobar_hoc_title: Kod Saatı
@@ -127,50 +128,86 @@ az-AZ:
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
     to learn one Hour of Code&rdquo; 
-    Malala
+    Malala, Nobel Peace Prize winner
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: |
+    &ldquo;You can do anything your mind
+    wants to do with programming.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Computer science isn't for someone
+    else. It's for you, here, now.&rdquo; 
+    Geraldo, teacher
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
+    all of which are essential in any career.&rdquo;
+    Floresa, teacher
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: Kod Saatı
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Anna və Elza ilə Buzlu ürək
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Qanadlı Kod
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_action_text_codevideo: Videoya baxın
+  homepage_action_text_teachervideo: Videoya baxın
+  homepage_action_text_learn: Öyrənməyə bu gün başlayın
+  homepage_action_text_signpetition: Petisiyaya qol çəkin
+  homepage_signpetition_dropdown: 'Petisiyamıza qol çəkin &#x25BE;'
   homepage_slot_text_title_hoc: Kod Saatı
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Hər kəs öyrənə bilər. Elə bu gün başlayın
   homepage_slot_text_link_hoc: Kod Saatında özünüzü sınayın
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Bir Kod Saatı təşkil edin
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Şagirdlər
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
+  homepage_slot_text_blurb_students: Bütün dərsliklərimizi nəzərdən keçirin
+  homepage_slot_text_link_codestudio: Kod Studiyasını sınaqdan keçirin
   homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_othercourses: Digər onlayn kurslar
+  homepage_slot_text_title_educators: Təlimçilər
+  homepage_slot_text_blurb_educators: Şagirdlərinizi öyrədin
   homepage_slot_text_link_k5: Courses for grades K-5
   homepage_slot_text_link_fullcurriculum: See our full curriculum
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support our work
   homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Make a donation
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters

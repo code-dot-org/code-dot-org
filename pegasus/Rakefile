@@ -4,16 +4,20 @@ def there_can_be_only_one(pidfile)
   if File.exist?(pidfile)
     oldpid = File.read(pidfile).to_i
     # does that process exist?
+
+    ps = `ps -Af | grep #{oldpid}`
+
     exists = true
     begin
-      Process.kill(0, oldpid)
+      Process.kill(0, oldpid) # signal is 0, meaning, no signal is sent, but error checking is still performed.
     rescue Errno::ESRCH
       File.delete(pidfile)
       exists = false
     rescue ::Exception   # for example on EPERM (process exists but does not belong to us)
       exists = true
+      raise
     end
-    raise StandardError.new("There can be only one #{pidfile} (#{oldpid}) on #{CDO.name} (#{rack_env})") if exists
+    raise StandardError.new("There can be only one #{pidfile} (#{oldpid}) on #{CDO.name} (#{rack_env}) \n#{ps}") if exists
   end
   File.open(pidfile, "w") { |f| f.puts $$ }
   at_exit { File.unlink(pidfile) }

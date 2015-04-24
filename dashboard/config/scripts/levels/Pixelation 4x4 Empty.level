@@ -1,0 +1,18 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-02-25T06:00:20.000Z",
+  "properties": {
+    "href": "pixelation/pixelation.html",
+    "options": {
+      "skip_dialog": true,
+      "version": "2",
+      "instructions": "The width and height are now encoded in the pixel data. Can you figure out how to adjust the dimensions?",
+      "data": "0000 0100 0000 0100"
+    },
+    "title": "Pixelation 4x4 Empty",
+    "content1": "Create images with bits and bytes."
+  },
+  "md5": "b7dec60e44da6da437a8976151cb8ee8"
+}]]></config>
+</External>

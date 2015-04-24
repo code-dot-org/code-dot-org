@@ -19,35 +19,11 @@ Category: Data
 
 [short_description]
 
-Using App Lab's table data storage, creates a record in the table name provided, and calls the callbackFunction when the action is finished. Data is accessible to your app and users of your app.
+Using App Lab's table data storage, creates a record with a unique id in the table name provided, and calls the callbackFunction when the action is finished. Data is accessible to your app and users of your app.
 
 [/short_description]
 
-**About App Lab's table data storage:**  
-App Lab's table data storage enables persistent data storage
- for an app. Whereas [setKeyValue()](/applab/docs/getKeyValue) and [getKeyValue()](/applab/docs/getKeyValue) can be used to store multiple independent key/value pairs, table data storage allows you to store similar data together in a table format.
-
- As a simple example, let's say you are building an app that
-  collects information about a person's name,
-   age, and favorite food so you can figure out if food
-    preferences are correlated with age.
-
-If you were storing this data on a piece of paper, or with a spreadsheet app, you might format the data like this:
-
-| Name  | Age | Food
-|-----------------|------|-----------|
-| Abby  | 17 | Ravioli |
-| Kamara  | 15 | Sushi |
-| Rachel  | 16 | Salad |
-<br>
-The table has a row of column names, and then each row that is added to the table fills in one or more
- of the columns. App Lab's table data storage let you store similarly formatted data, and provides simple
-  functions to [read](/applab/docs/readRecords), [create](/applab/docs/createRecords), [delete](/applab/docs/deleteRecord), and [update](/applab/docs/updateRecord) records (rows) in a table, right from your app.
-
-_Definitions:_  
-_Table:_ A collection of records with shared column names  
-_Record:_ A "row" of the table  
-
+**First time using App Lab table data storage?** Read a short overview of what it is and how to use it [here](/applab/docs/tabledatastorage).
 
 **Note:** View your app's table data by clicking 'View data' in App Lab and clicking the table name you want to view.
 
@@ -58,16 +34,17 @@ ____________________________________________________
 
 [example]
 
-**Add a record to a table** Continuing the example above, we can add a row with values
+**Add a single record to a table** In a simple example, we want to add a row to a table
+that is collecting data about people's favorite foods. From the app, we can add a row with values
  for the 3 columns named "name", "age", and "food". When the record is created in the table,
  it is automatically given a unique id. Click 'View Data' in App Lab to see the stored data.
 
 <pre>
 createRecord("Fav Foods", {name:'Sally', age: 15, food:"avocado"}, function() {
-  console.log("I'm executed after the record is created");
+  console.log("I'm executed after the record is done being created");
 });
 
-console.log("I'm executed immediately after");
+console.log("I'm executed right after the line above while the record is being created!");
 </pre>
 
 [/example]
@@ -90,10 +67,10 @@ button("submitButton", "Submit");
 
 //When the button is clicked, get the text from the 3 input boxes and create a record in the table
 onEvent("submitButton", "click", function() {
-  var myName = (getText("nameInput"));
-  var myAge = (getText("ageInput"));
-  var myFood = (getText("foodInput"));
-  createRecord("fav_foods", {name:myName, age: myAge, food:myFood}, function() {
+  var userName = getText("nameInput");
+  var userAge = getText("ageInput");
+  var userFood = getText("foodInput");
+  createRecord("fav_foods", {name:userName, age: userAge, food:userFood}, function() {
     console.log("Record created!");
   });
 });

@@ -6,12 +6,12 @@ id-ID:
   csedweek_dates: 8-14 Desember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code</a> akan datang. Memanggil semua guru dan penyelenggara, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> rencanakan Hour of Code Anda</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek lain</a>'
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Siapa pun bisa belajar.
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan untuk mempelajari ilmu komputer
   petition_sign_message: 'Jika Anda setuju, bubuhkan nama Anda.  Bergabung dengan # orang lain.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Jika Anda mendukung kami, cantumkan nama Anda.  Bergabung dengan # orang lainnya.'
   name: Nama
   email: Email
   zipcode: poskode atau negara
@@ -24,7 +24,7 @@ id-ID:
   hoc2014_teachers: Guru
   hoc2014_host: Adakanlah
   hoc2014_everyone: Semua orang
-  hoc2014_support: Dukunglah
+  hoc2014_support: 'Dukunglah &#x25BE;'
   hoc2014_whatishoc: Apa itu Hour of Code?
   twentyhours_trynow: Coba sekarang
   california_heading: Minta sekolah anda untuk mengajarkan ilmu komputer
@@ -91,7 +91,7 @@ id-ID:
   learn_classes: Cari kelas kursus
   hoc_is_here: '#HourOfCode ada di sini – coba lihat! @codeorg'
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Mengapa tidak lebih banyak sekolah mengajarkan ilmu komputer? Kita dapat memperbaiki ini. http://youtu.be/nKIu9yen5nc. Kunjungi http://code.org/ untuk mempelajari lebih lanjut.
   learn_hoc: Belajar Kode selama satu Jam
   beyond_hoc: Setelah Satu Jam
   what_gender: Apa jenis kelamin Anda?
@@ -110,6 +110,7 @@ id-ID:
   stats_student: '"Aku tahu ini adalah kesempatan <b>sekali dalam seumur hidup</b>."-Mariana Alzate, anak kelas 5'
   stats_michael: 'Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira belajar. "-Michael Clark, guru'
   studiobar_title: "Kunjungi <a href='http://studio.code.org'>Code Studio</a>"
+  studiobar_title_nolink: Kunjungi Code Studio
   studiobar_elementary_title: Latihan-latihan dasar
   studiobar_elementary_body: 'Tiga latihan terbaru kami untuk for K&#8209;5'
   studiobar_hoc_title: Jam kode
@@ -124,57 +125,83 @@ id-ID:
   studiobar_donate_body: Satu anak belajar untuk setiap US dollar yang Anda sumbangkan
   studiobar_shop_title: Belanja
   studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
-  homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala
+  homepage_hero_text_malala: '&ldquo;Saya menantang anak-anak di setiap negara untuk belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian'
   homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Jika Anda bisa mengubah teknologi,
+    Anda bisa mengubah dunia.&rdquo;
+    Susan, Direktur Utam YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Jangan hanya memainkan ponselmu, programkanlah..&rdquo;
+    Presiden AS, Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Anak cucu kita&mdash; termasuk yang perempuan &mdash;
+    memerlukan kesempatan untuk belajar ilmu komputer..&rdquo;
+    Sheryl, Ketua Pegawai Operasi Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Ilmu komputer dapat membuka kesempatan-kesempatan terbaik di dunia.&rdquo;
+    Satya, Direktur Utama Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;Jika Anda belajar mengkode, Anda dapat mempelajari pelajaran terbaik dalam kehidupan Anda.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;Keterampilan ini telah mengubah masa depan saya.
+    Bukan untuk mempersaksikan, itu hanya mengungkapkan kesenangan.&rdquo;
+    Luna, kelas 7
+  homepage_hero_text_student2: |
+    &ldquo;Saya telah pernah, pernah melihat anak-anak saya begitu gembira tentang pembelajaran.&rdquo;
+    Michael, guru
+  homepage_hero_text_student3: |
+    &ldquo;Ilmu komputer adalah bidang Anda tidak bisa
+    tahu apakah Anda suka atau tidak sebelum Anda mencobanya.&rdquo;
+    Jackson, kelas 6
+  homepage_hero_text_student4: |
+    &ldquo;Anda bisa melakukan apa-apa pikiran Anda ingin lakukan dengan pemrograman.&rdquo;
+    Maya, grade 2
+  homepage_hero_text_student5: |
+    &ldquo;Ilmu komputer bukan untuk orang lain. Ini adalah untuk Anda, di sini, sekarang.&rdquo; 
+    Geraldo, guru
+  homepage_hero_text_teacher1: |
+    &ldquo;Coding memicu kreativitas, inspirasi dan inovasi &mdash;
+    yang semuanya penting dalam setiap karir.&rdquo;
+    Floresa, guru
+  homepage_hero_text_teacher2: |
+    &ldquo;Program ini mendapat 100% dari murid-murid saya terlibat, terlibat dan berpartisipasi.&rdquo;
+    Adam, guru
   homepage_slot_text_hoc: Jam kode
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frozen bersama Anna dan Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Semua panduan kami
   homepage_slot_text_course4: Kursus 4
   homepage_slot_text_shop: Belanja
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_action_text_codevideo: Tonton videonya
+  homepage_action_text_teachervideo: Tonton videonya
+  homepage_action_text_learn: Mulailah belajar hari ini
+  homepage_action_text_signpetition: Tandatangani petisi
+  homepage_signpetition_dropdown: 'Tandatangani petisi kami &#x25BE;'
   homepage_slot_text_title_hoc: Jam kode
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: 'Cobalah "Hour of Code"'
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Selenggarakan Hour of Code
+  homepage_slot_text_link_hocserved: '# disajikan'
   homepage_slot_text_title_students: Siswa
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Jelajahi semua panduan kami
+  homepage_slot_text_link_codestudio: Coba kode Studio
+  homepage_slot_text_link_local: Temukan kelas setempat
+  homepage_slot_text_link_othercourses: Kursus daring lainnya
+  homepage_slot_text_title_educators: Pendidik
+  homepage_slot_text_blurb_educators: Ajari siswa Anda
+  homepage_slot_text_link_k5: Kursus untuk kelas K-5
+  homepage_slot_text_link_fullcurriculum: Lihat kurikulum kami sepenuhnya
+  homepage_slot_text_link_pd: Pengembangan profesional
+  homepage_slot_text_title_advocates: Pendukung
+  homepage_slot_text_blurb_advocates: Dukung pekerjaan kami
+  homepage_slot_text_link_stats: Lihat statistiknya
+  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_donate: Membuat sumbangan
+  homepage_header_codestudio: Code Studio kreasi siswa
+  homepage_header_donors: Code.org mengucapkan terima kasih kepada para pendukungnya
+  homepage_donors_seall: Lihat semua
   homepage_donors_donate: Donasi
   contact_form_topic_student: Saya seorang siswa
   contact_form_topic_parent: Saya orang tua
@@ -343,8 +370,8 @@ id-ID:
   dashboard_login_picture: Gambar
   dashboard_login_none: email
   dashboard_new_password: Kata sandi baru
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: belum dimulai
+  dashboard_progress_in_progress: sedang berlangsung
   dashboard_progress_not_completed: belum selesai
   dashboard_progress_completed_too_many_blocks: selesai, terlalu banyak blok
   dashboard_progress_completed_perfect: selesai, sempurna
@@ -420,8 +447,8 @@ id-ID:
   groklearning_name: Eliza si Dokter Celoteh
   quorum_name: Pemrogaman yang bisa diakses (dengan dukungan screenreader)
   codespark_name: The Foos (pra-pembaca dapat bergabung)
-  kodable_name: Kodable (pre-readers welcome)
-  tynkerapp_name: 'Tynker - on tablets'
+  kodable_name: Kodable (pra-pembaca selamat datang)
+  tynkerapp_name: 'Tynker - di tablet'
   robomindnl_name: Bikinlah program robot maya
   flappy_name: Membuat permainan Flappy
   bitsbox_name: 'Bitsbox - buatlah permainan'
@@ -433,7 +460,7 @@ id-ID:
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Batu, kertas, gunting
   hourofcode_name: Pengganti untuk code.org/hoc yang baru
-  playlab_name: Play Lab
+  playlab_name: Play Lab/Lab Permainan
   codeorg_gradelevel: Usia 4-104
   codeintl_gradelevel: Usia 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -476,7 +503,7 @@ id-ID:
   playlab_gradelevel: Usia 4-104
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet
-  thinkersmithspanish_platformtext: Unplugged
+  thinkersmithspanish_platformtext: Dicabut
   khan_platformtext: Web browser modern
   khanes_platformtext: Web browser modern
   khanpt_platformtext: Web browser modern
@@ -484,20 +511,20 @@ id-ID:
   khanfr_platformtext: Web browser modern
   khanpl_platformtext: Web browser modern
   tynker_platformtext: Web browser modern
-  scratch_platformtext: Desktop-only web browsers (not tablets)
+  scratch_platformtext: Perambah web komputer saja (tidak untuk tablet)
   lightbot_platformtext: Semua browser dan iOS, Android, atau konsol permainan
-  thinkersmith_platformtext: Unplugged
-  condcards_platformtext: Unuplugged
+  thinkersmith_platformtext: Dicabut
+  condcards_platformtext: Dicabut
   lightbotintl_platformtext: iOS, Android (atau web browser)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Perambah web terkini. (Kursus lanjutan memerlukan $$)
   codecademy_platformtext: Web browser modern. iOS, Android apps
-  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
+  codecombat_platformtext: Web browser modern (Mengikuti kursus membutuhkan $$)
   codemonkey_platformtext: Web browser modern
   codeavengers_platformtext: Web browser modern
   processing_platformtext: Web browser modern
   robomind_platformtext: Web browser modern, Mobile web
   groklearning_platformtext: Web browser modern
-  quorum_platformtext: Modern web browsers. Screen-readers supported
+  quorum_platformtext: Web browser modern. yang didukung pembaca layar
   codespark_platformtext: iOS, Android (atau web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, tablet Android
@@ -508,9 +535,9 @@ id-ID:
   touchdevelop_platformtext: Browser modern, smartphone, semua perangkat
   appinventor_platformtext: Browser modern + Android
   blockly_platformtext: Hanya browser modern
-  thinkersmith2_platformtext: Unplugged
-  kodableunplugged_platformtext: Unplugged
-  projguts_platformtext: Unplugged
+  thinkersmith2_platformtext: Dicabut
+  kodableunplugged_platformtext: Dicabut
+  projguts_platformtext: Dicabut
   hourofcode_platformtext: Browser modern, smartphone, tablet
   frozen_platformtext: Browser modern + tablet
   playlab_platformtext: Browser modern, smartphone, tablet
@@ -525,16 +552,16 @@ id-ID:
   khanpl_shortdescription: Belajar menggambar menggunakan JavaScript
   tynker_shortdescription: Belajar kode dengan memecahkan teka-teki menyenangkan dan membangun permainan mobile Anda sendiri.
   scratch_shortdescription: Buatlah permainan interaktif, cerita dan animasi.
-  lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and loops!
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
+  lightbot_shortdescription: program Lightbot untuk memecahkan teka-teki menggunakan prosedur dan loop!
+  thinkersmith_shortdescription: tutorial Unplugged untuk grup tanpa menggunakan perangkat
   condcards_shortdescription: Belajar algoritma menggunakan kartu-kartu
   lightbotintl_shortdescription: Sebuah permainan untuk mengajar konsep mengkode
-  codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro to programming!
+  codehs_shortdescription: Mulailah berkreasi dengan Karel the Dog, yang menyenangkan dan Pengenalan visual untuk pemrograman!
   codecademy_shortdescription: Belajar pemrograman JavaScript, di web browser
-  codecombat_shortdescription: Defeat ogres to learn Python or JavaScript in this epic programming game!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codecombat_shortdescription: Kalahkan raksasa untuk mempelajari Phyton atau JavaScript dalam pemrograman game epik ini!
+  codemonkey_shortdescription: Mahasiswa memprogram seekor monyet untuk menangkap pisang.
   codeavengers_shortdescription: Belajar pemrograman JavaScript, di web browser
-  processing_shortdescription: A one hour tutorial in the Processing languages
+  processing_shortdescription: satu jam tutorial dalam bahasa Processing
   robomind_shortdescription: Menulis kode untuk virtual robot
   groklearning_shortdescription: 'Ajarkan chatbot "Eliza" untuk menipu teman-teman Anda berpikir bahwa dia manusia!'
   quorum_shortdescription: Bergabunglah dengan Mary dalam tur saat dia belajar bahasa pemrograman Quorum.
@@ -556,54 +583,55 @@ id-ID:
   playlab_shortdescription: Buat cerita atau buat permainan dengan Play Lab!
   codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.
   codeintl_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  thinkersmithspanish_longdescription: 'Dengan menggunakan  "Kosakata Robot/ Vocabulary Robot" siswa akan mencari&aacute; cara untuk memandu satu sama lain untuk menyelesaikan tugas-tugas tertentu&iacute;  tanpa mendiskusikannya terlebih dahulu. Pelajaran ini&ntilde;  mengajarkan anak-anak hubungan&oacute;  antara simbol dan tindakan, &iacute; serta keterampilan yang sangat berharga dari debugging&oacute;.'
   khan_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
   khanes_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
   khanpt_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
   khanhe_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
   khanfr_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
   khanpl_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
-  tynker_longdescription: Build your own games and share with friends! Solve fun coding puzzles and learn programming concepts in each level. Personalize games with animated characters, multiple levels and rich props. Make your games realistic using physics. See the code as visual blocks or JavaScript. Take your games mobile on iPads and Android tablets. Over a dozen fun activities to choose from!
-  scratch_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
-  lightbot_longdescription: Guide Lightbot to light up all the blue tiles! Lightbot is a puzzle game that uses programming game mechanics to let players gain a practical understanding of basic coding. Learn to sequence instructions, write procedures, and utilize loops to solve levels. Ideal for all ages.
-  thinkersmith_longdescription: 'Using a pre-defined "Robot Vocabulary" students will figure out how to guide each other to accomplish specific tasks without discussing them first. This lesson teaches children the connection between symbols and actions, as well as the invaluable skill of debugging. "My Robotic Friends" works best as a group activity and includes a teacher workbook for classroom use.'
-  condcards_longdescription: 'Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.'
-  lightbotintl_longdescription: Learn core programming logic, starting from super-basic programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands, identify patterns, use procedures, and utilize loops!
-  codehs_longdescription: 'Giving commands to a computer, which is what programming is all about, is just like giving commands to a dog. Learn how to code with Karel the Dog&mdash;a fun, accessible, and visual introduction to programming that teaches fundamental concepts like commands and functions to absolute beginners. Tutorial is student-directed but teachers can sign up to access teacher tools and track student success!'
-  codecademy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
-  codecombat_longdescription: Defeat ogres to learn Python or JavaScript in this epic programming game!
-  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in a real programming language! Students program a monkey to catch bananas while it gets slightly more complicated on each level. They get star scores on each solution and can share it in a single click. '
-  codeavengers_longdescription: 'Build a 2 player 2D top-down game with JavaScript in 10 short tasks. Then continue learning some basics of programming (variables and if statements) as you create a Quiz to share with friends. Along the way  earn points and badges as you compete to reach the top of the class leaderboard.'
-  processing_longdescription: An introduction to programming in the context of the visual arts using the Processing programming language. Short video lessons introduce coding exercises that lead to designing an interactive drawing program
-  robomind_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
-  groklearning_longdescription: |-
-    Use the programming language Python to build a chatbot called "Eliza" to act as a robot psychotherapist. You'll teach Eliza how to talk and the right thing to say. Can she fool your friends into thinking she's a human not a computer?
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and works with screenreaders. Join Mary on a tour as she joins a biology lab as a programmer and learns the Quorum programming language. This tutorial is student-guided with online example activities.
-  codespark_longdescription: 'The Foos is a fun and kid-friendly way to learn about computer programming.  Program cute characters to solve puzzles and bring a virtual world to life.  The game is "word free" so all can play!'
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
-  robomindnl_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
-  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
-  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
-  blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
-  thinkersmith2_longdescription: Students learn about representing and storing letters in binary, as functions of on and off. At the end, the class gets to encode their own initials to take home with them.
-  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
-  projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
+  tynker_longdescription: 'Ciptakan permainan Anda sendiri dan bagikan dengan teman-teman! Memecahkan teka-teki  coding yang menyenangkan dan belajar konsep pemrograman di setiap tingkat. Personalisasi game dengan karakter animasi, berbagai tingkatan dan alat peraga yang kaya. Membuat game yang realistis menggunakan fisik. Lihat kode sebagai blok visual atau JavaScript. Ambil permainan ponsel Anda pada iPads dan tablet Android. Lebih dari belasan kegiatan yang menyenangkan yang dapat dipilih!'
+  scratch_longdescription: 'Dengan Scratch, Anda dapat membuat permainan, cerita, animasi interaktif Anda sendiri &mdash; dan membagikannya dengan teman Anda. Mulailah dengan menganimasikan nama Anda membuat kartu liburan, atau membuat permainan pong.'
+  lightbot_longdescription: bimbing Lightbot untuk menyalakan semua keramik biru! Lightbot adalah permainan puzzle yang menggunakan pemrograman mekanik permainan untuk memberitahu pemain dalam memperoleh pemahaman praktis dalam coding dasar. Belajarlah untuk mengurutkan instruksi, menulis prosedur, dan memanfaatkan loop untuk memecahkan tingkatan. Cocok untuk segala usia.
+  thinkersmith_longdescription: 'Menggunakan  "Kosakata Robot" telah ditetapkan agar siswa akan mencari cara untuk memandu dan saling menyelesaikan tugas-tugas tertentu tanpa mendiskusikannya terlebih dahulu. Pelajaran ini mengajarkan anak-anak hubungan antara simbol dan tindakan, serta keterampilan yang sangat berharga dari debugging. "Teman Robotic Saya" karya terbaik sebagai kegiatan kelompok dan termasuk buku kerja guru untuk dipergunakan di dalam kelas.'
+  condcards_longdescription: 'Pelajari tentang algoritma dan pernyataan bersyarat dalam aktivitas "unplugged" menggunakan setumpuk kartu. Siswa melakukan kegiatan ini dalam tim, dan perlu satu dek kartu per tim.'
+  lightbotintl_longdescription: Belajar logika pemrograman inti, mulai dari pemrograman Super basic, untuk usia 4 tahun keatas, menggunakan iOS atau Android (atau Web browser). Pelajari bagaimana mengurutkan perintah, mengidentifikasi pola-pola, menggunakan prosedur, dan memanfaatkan loop/perulangan!
+  codehs_longdescription: 'Memberikan perintah ke komputer, yang adalah tentang semua pemrograman, seperti memberi perintah untuk anjing. Pelajari bagaimana kode dengan Karel si anjing / Karel the Dog&mdash; yang menyenangkan, mudah diakses, dan pengenalan visual untuk pemrograman yang mengajarkan konsep dasar seperti perintah dan fungsi untuk pemula. Tutorial adalah siswa diarahkan namun guru dapat mendaftar untuk mengakses alat guru dan melacak keberhasilan siswa!'
+  codecademy_longdescription: 'Codecademy adalah pembelajara yang interaktif, siswa dipandu pengenalan dasar-dasar CS melalui JavaScript yang digunakan oleh puluhan juta siswa di seluruh dunia. Kami telah menyiapkan pengalaman di Hour of Code  tanpa kerumitan dan juga disertai kuis, slide, dan proyek yang diselesaikan siswa di akhir.'
+  codecombat_longdescription: Kalahkan raksasa untuk mempelajari Phyton atau JavaScript dalam pemrograman game epik ini!
+  codemonkey_longdescription: 'CodeMonkey adalah sebuah game online yang mengajarkan coding dalam bahasa pemrograman yang nyata! siswa memprogram seekor monyet untuk menangkap pisang ketika mendapat sedikit  beberapa rumit pada setiap tingkat. Mereka mendapatkan nilai bintang pada setiap solusinya dan dapat berbagi dalam satu klik. '
+  codeavengers_longdescription: Membangun 2 pemain game 2D top-down dengan JavaScript dalam 10 tugas singkat. Kemudian lanjutkan mempelajari beberapa dasar-dasar pemrograman (variabel dan pernyataan if) seperti Anda membuat Kuis untuk berbagi dengan teman-teman. Sepanjang perjalanan mengumpulkan poin dan lencana saat Anda bersaing untuk mencapai puncak kelas leaderboard.
+  processing_longdescription: Sebuah Pengantar pemrograman dalam konteks seni visual dengan menggunakan bahasa pemrograman Processing. Video pelajaran singkat yang Akan diperkenalkan latihan coding yang mengarah anda dalam merancang sebuah program gambar yang interaktif
+  robomind_longdescription: Siswa belajar dasar-dasar pemrograman dengan mengendalikan robot virtual mereka sendiri. Kursus online ini sepenuhnya serba lengkap dengan presentasi singkat, film, kuis dan bimbingan otomatis / petunjuk untuk membantu anda dalam latihan pemrograman.
+  groklearning_longdescription: 'Gunakan bahasa pemrograman Python untuk membangun ChatBot yang disebut "Eliza" untuk bertindak sebagai psikoterapis robot. Anda akan mengajari Eliza bagaimana cara berbicara dan hal yang benar untuk mengatakan. Bisakah dia menipu teman-teman Anda hingga berpikir bahwa dia adalah seorang manusia bukan komputer?'
+  quorum_longdescription: Tutorial ini dapat diakses untuk-tunanetra, dan bekerja dengan screenreaders. Gabungkan Mary ke dalam Tour saat dia bergabung dengan laboratorium biologi sebagai programmer dan belajar bahasa pemrograman Kuorum. didalam Tutorial ini siswa-dipandu dengan contoh kegiatan online.
+  codespark_longdescription: 'The Foos adalah cara yang menyenangkan dan ramah-anak untuk belajar tentang pemrograman komputer. Program karakter lucu untuk memecahkan teka-teki dan membawa dunia maya kedalam kehidupan. Permainan ini "Word Free / kata gratis" sehingga semua bisa bermain!'
+  kodable_longdescription: 'Kodable adalah permainan  self-guided iPad atau permainan yang membimbing diri sendiri melalui iPad yang memperkenalkan anak-anak usia 5 tahun ke atas ke dasar pemrograman. Milikilah seorang guru atau orang-tua dikat siswa agar lebih optimal, tetapi tidak terlalu diperlukan.'
+  tynkerapp_longdescription: Belajar program dengan memecahkan pengkodean teka-teki yang menyenangkan . Dengan mudah membangun permainan dan cerita dengan tema grafis, 10 + game-kit dan karakter dapat disesuaikan. Tidak ada konektivitas internet diperlukan. Anda juga dapat mengakses kreasi Anda di web.
+  robomindnl_longdescription: Siswa belajar dasar-dasar pemrograman dengan mengendalikan robot virtual mereka sendiri. Kursus online ini sepenuhnya serba lengkap dengan presentasi singkat, film, kuis dan bimbingan otomatis / petunjuk untuk membantu anda dalam latihan pemrograman.
+  flappy_longdescription: dengan menggunakan pemrograman drag-and-drop untuk membuat permainan Flappy Bird Anda sendiri , dan menyesuaikannya untuk terlihat berbeda (Flappy Shark, Flappy Santa, apa pun). Tambahkan permainan ke telepon Anda dalam satu klik.
+  bitsbox_longdescription: Sesuaikan tablet virtual Anda sendiri, kemudian kode sejumlah aplikasi untuk bermain dan berbagi. Penelusuran sederhana memungkinkan bahkan untuk anak-anak muda untuk program JavaScript yang nyata , dan jika anda lebih maju , maka semakin jauh Anda akan pergi.
+  makegameswithus_longdescription: 'Belajarlah untuk mengkode dengan membuat sebuah game iPhone menggunakan merek bahasa pemrograman baru dan ramah bagi pemula yang disebut Swift! Membuat permainan aksi Pok&eacute;mon-terinspirasi dan menulis kode untuk mengajar gerak baru untuk rakasa  Anda . Anda akan belajar bagaimana menggunakan variabel, metode, dan benda untuk membantu rakasa Anda menang!'
+  touchdevelop_longdescription: Sentuhan editor ramah akan menunjukan Anda dalam membuat piksel seni, memecahkan bear puzzle / teka-teki beruang atau membuat permainan burung melompat sendiri.
+  appinventor_longdescription: 'Menghibur, video tutorial cepat memandu Anda dalam membangun tiga aplikasi sederhana untuk ponsel Android Anda atau tablet. Dirancang untuk pemula dan juga ahli, hour of code ini  akan membuat Anda siap untuk mulai membangun aplikasi Anda sendiri sebelum Anda mengetahuinya. Bayangkan berbagi aplikasi kreasi Anda sendiri dengan teman-teman Anda! Kegiatan ini cocok untuk individu dan untuk guru kelas terkemuka.'
+  blockly_longdescription: 'Punya PC dengan akses internet lambat (atau tidak ada akses internet)? Download tutorial Blockly yang merupakan pendahulu dari tutorial Code.org - ukuran 3MB ZIP file tunggal dapat dimuat ke komputer atau digunakan dari memory stick'
+  thinkersmith2_longdescription: |
+    
+    Siswa belajar tentang merepresentasikan dan menyimpan surat-surat dalam bentuk biner, sebagai fungsi on dan off( nyala dan padam). Pada akhir materi ini, diharapkan kelas dapat mengkodekan (menyandikan) inisial mereka sendiri untuk mereka bawa pulang ke rumah.
+  kodableunplugged_longdescription: Dirancang untuk digunakan dengan kertas biasa, fuzzFamily Frenzy adalah sebuah pengantar pemrograman logika untuk anak-anak usia 5 dan diatasnya. Guru harus menjelaskan permainan, maka siswa memprogram mitra untuk menyelesaikan rintangan yang sederhana.
+  projguts_longdescription: 'Kegiatan  "unplugged" Ini membantu siswa belajar bagaimana pemodelan dan simulasi kerja dengan memiliki sekelompok siswa yang memainkan versi yang berbeda dari game Rock / Paper / Scissors, dan lihat hasilnya sebagai percobaan pemodelan yang berbeda.'
   hourofcode_longdescription: Pengganti untuk code.org/hoc yang baru
   frozen_longdescription: Mari gunakan kode untuk bergabung dengan Anna dan Elsa seperti mereka menjelajahi keajaiban dan keindahan es. Kamu akan membuat kepingan salju dan pola seperti kamu berselancar ski dan membuat musim dingin dunia impian yang yang kemudian dapat kamu bagi dengan teman-teman mu!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
-  codeorg_beyond_name: Intro Computer Science (grades K-8)
-  khan_beyond_name: Learn computer programming
-  tynker_beyond_name: Learn programming at home
+  playlab_longdescription: Membuat cerita atau membuat game dengan Play Lab! Membuat binatang, bajak laut, zombie, ninja, dan banyak lagi karakter bergerak, membuat suara, mencetak poin, dan bahkan melemparkan bola api!
+  codeorg_beyond_name: Pengenalan ilmu komputer (Grade K-8)
+  khan_beyond_name: Belajar pemrograman komputer
+  tynker_beyond_name: Belajar pemrograman di rumah
   scratch_beyond_name: Jadilah kreatif dengan menulis kode
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR for pre-readers
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  scratchjr_beyond_name: ScratchJR untuk pra-pembaca
+  hopscotch_beyond_name: 'Hopscotch: Pemrograman di iPad Anda'
   pocketcode_beyond_name: Saku kode
   groklearning_beyond_name: Belajar pemrograman Python
   hacketyhack_beyond_name: Belajar Ruby
@@ -698,7 +726,7 @@ id-ID:
   w3schools_beyond_platformtext: Browser Web modern
   codeavengers_beyond_platformtext: Browser Web modern
   mozilla_beyond_platformtext: Browser Web modern
-  codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
+  codecombat_beyond_platformtext: Berbasis web (Firefox, Chrome, Safari, IE9 +)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Pembelian robot
   finch_beyond_platformtext: Pembelian robot
@@ -719,7 +747,7 @@ id-ID:
   groklearning_beyond_shortdescription: Intro dasar pemrograman python
   hacketyhack_beyond_shortdescription: Belajar Ruby dari tingkat dasar
   robomind_beyond_shortdescription: Menulis kode untuk virtual robot
-  makegameswithus_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makegameswithus_beyond_shortdescription: Belajar membuat permainan iPhone dalam satu jam
   appinventor_beyond_shortdescription: Membuat aplikasi Anda sendiri! (hanya untuk Android)
   touchdevelop_beyond_shortdescription: Kodekan aplikasi mobile langsung pada telepon Anda, tablet atau laptop
   codehs_beyond_shortdescription: Belajar pemrograman JavaScript dengan lingkungan visual menyenangkan
@@ -739,44 +767,46 @@ id-ID:
   codea_beyond_shortdescription: Membuat aplikasi di iPad Anda
   lego_beyond_shortdescription: Membangun dan memprogramkan robot
   finch_beyond_shortdescription: Robot untuk pendidikan sains komputer
-  arduino_beyond_shortdescription: "Learn Arduino with Sparkfun's Digital Sandbox."
-  processing_beyond_shortdescription: Learn the Processing languages
-  alice_beyond_shortdescription: Teach programming in a 3D environment
-  sphero_beyond_shortdescription: SPRK lessons give kids a fun crash course in programming robots while sharpening skills in math and science.
-  codeorg_beyond_longdescription: 'Learn the basic concepts of Computer Science with drag and drop programming. 3 full courses, each consists of 15-20 lessons that blend "unplugged" classroom activities interspersed with game-like, self-directed tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions, and variables.'
+  arduino_beyond_shortdescription: "Pelajari Arduino dengan Sparkfun's Digital Sandbox."
+  processing_beyond_shortdescription: Belajar bahasa pengolahan
+  alice_beyond_shortdescription: Ajarkan pemrograman dalam lingkungan 3 dimensi
+  sphero_beyond_shortdescription: Pelajaran SPRK memberikan anak-anak kursus kilat pemrograman robot yang menyenangkan sambil mengasah keterampilan dalam matematika dan sains.
+  codeorg_beyond_longdescription: 'Mempelajari konsep-konsep dasar ilmu komputer dengan pemrograman drag dan drop . 3 program studi penuh, masing-masing terdiri dari 15-20 pelajaran yang memadukan kegiatan kelas "unplugged" diselingi dengan permainan-seperti, tutorial mandiri yang dibintangi video kuliah oleh Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Pelajari perulangan-loop, conditional, dasar algoritma, fungsi dan variabel.'
   khan_beyond_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
-  tynker_beyond_longdescription: 'Tynker makes it fun & easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.'
-  scratch_beyond_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
-  lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands, identify patterns, use procedures, and utilize loops!
-  codecademy_beyond_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language that enables young children to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing
-  hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the Hopscotch programming language. Students will build games and apps for their iPad on their iPad. Students can work individually or with friends (up to 3 per iPad).
-  pocketcode_beyond_longdescription: Create your own game on your smart phone with Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with friends and other users to try!
-  groklearning_beyond_longdescription: "An introductory course using the programming language Python for people with no programming experience. Our unique mix of introductory content and challenges will bring you to a thorough understanding of Python and programming itself. We've taught this content to students of varying ages from diverse backgrounds and we're sure it'll suit you too."
-  hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
-  robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
-  makegameswithus_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
-  touchdevelop_beyond_longdescription: TouchDevelop lets you create apps on iPad, iPhone, Android, PC, Mac, Windows Phone. Our touch-friendly editor makes coding fun, even on your phone or tablet!
-  codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog, a fun, accessible and visual introduction to coding, where giving commands to a computer is just like giving commands to a dog. This tutorial is great if led by a teacher, but can also be done independently. [Note: payment is required]'
-  udemy_beyond_longdescription: "Whether you've never seen a line of code or you code for a living, Udemy has a course for you, taught by professional instructors. [Note: payment is required]"
-  lynda_beyond_longdescription: 'Learn how to code, create, and build web applications, from the foundations of object-oriented programming in C and C++, to how to write Java. Our developer tutorials can help you learn to develop and create mobile apps, work with PHP and MySQL databases, get started with the statistical processing language R, and much more. [Note: payment is required]'
-  edx_beyond_longdescription: "CS50x is Harvard College's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, PHP, and JavaScript plus SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest course."
-  coursera_beyond_longdescription: "Stanford's CS 101 class taught by Nick Parlante (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience audience. Play and experiment with short bits of code to bring to life to the power and limitations of computers. CS101 also provides a general background on computers today: what is a computer, what is hardware, what is software, what is the internet. No previous experience is required other than the ability to use a web browser."
-  udacity_beyond_longdescription: In this course you will learn key concepts in computer science and learn how to write your own computer programs in the context of building a web crawler. There is no prior programming knowledge needed for this course. Beginners are welcome! At the end of this course, you will have learned key concepts in computer science and enough programming to be able to write Python programs to solve problems on your own. This course will prepare you to move on to intermediate-level computing courses.
-  teachingtree_beyond_longdescription: TeachingTree is an open platform that lets anybody organize educational content. Our goal is for students to quickly access the exact clips they need in order to learn individual concepts. Everyone is encouraged to help by adding videos or tagging concepts.
-  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the XBox is also available in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles, haunting music and stunning retina graphics. You can even record your solutions and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: "Have fun and make games, or hack your homework using Ruby! Just tell your parents or teachers you're learning Ruby programming... ;). Free and works on any computer. [Note: Desktop install required]"
-  w3schools_beyond_longdescription: Learn to create websites on your own computer. Learn the server basics in less than a day. Learn to add databases to your website
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites. Designed by experts with perfect level of difficulty for beginners, easy to understand instructions and great help when you need it. Our HTML, CSS and JavaScript courses include code challenges and revision games that make learning fun and effective for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike.
-  codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript in this HTML 5 web game for complete beginners.
-  codea_beyond_longdescription: "Codea for iPad lets you create games and simulations &mdash; or just about any visual idea you have. Turn your thoughts into interactive creations that make use of iPad features like Multi-Touch and the accelerometer. We think Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed to let you touch your code. Want to change a number? Just tap and drag it. How about a color, or an image? Tapping will bring up visual editors that let you choose exactly what you want."
-  lego_beyond_longdescription: Create small, customizable and programmable robots using LEGO pieces.
-  finch_beyond_longdescription: "The Finch is a new robot for computer science education. Its design is the result of a four year study at Carnegie Mellon's CREATE lab. The Finch is designed to support an engaging introduction to the art of programming. It has support for over a dozen programming languages and environments, including several environments appropriate for students as young as eight years old. The Finch was designed to allow students to write richly interactive programs."
-  arduino_beyond_longdescription: Arduino is a popular platform designed to allow artists and designers to work with real sensors, LEDs, buzzers, and more. The Sparkfun Virtual Sandbox will teach you real Arduino code right in your browser.
-  processing_beyond_longdescription: Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support the creation of 3D animations, the Alice Project provides tools and materials for teaching and learning computational thinking, problem solving, and computer programming across a spectrum of ages and grade levels.
-  sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
+  tynker_beyond_longdescription: 'Tynker membuatnya menyenangkan & mudah untuk belajar pemrograman. Hal ini membuatnya visual. Anak-anak membangun permainan dan aplikasi mobile dengan mengatur blok kode. Hal ini menghilangkan kebutuhan untuk mengetahui sintaks pemrograman . Anak-anak segera mengubah ide menjadi cerita animasi dan seni matematika . Hal ini mempromosikan pembelajaran yang maju. Sebagaimana anak-anak belajar pembelajaran dasar, Tynker memperkenalkan konsep yang lebih maju termasuk mendorong sintaks pemrograman  .'
+  scratch_beyond_longdescription: 'Dengan Scratch, Anda dapat membuat permainan, cerita, animasi interaktif Anda sendiri &mdash; dan membagikannya dengan teman Anda. Mulailah dengan menganimasikan nama Anda membuat kartu liburan, atau membuat permainan pong.'
+  lightbot_beyond_longdescription: Belajar logika pemrograman inti, mulai dari pemrograman Super basic, untuk usia 4 tahun keatas, menggunakan iOS atau Android (atau Web browser). Pelajari bagaimana mengurutkan perintah, mengidentifikasi pola-pola, menggunakan prosedur, dan memanfaatkan loop/perulangan!
+  codecademy_beyond_longdescription: 'Codecademy adalah pembelajara yang interaktif, siswa dipandu pengenalan dasar-dasar CS melalui JavaScript yang digunakan oleh puluhan juta siswa di seluruh dunia. Kami telah menyiapkan pengalaman di Hour of Code  tanpa kerumitan dan juga disertai kuis, slide, dan proyek yang diselesaikan siswa di akhir.'
+  kodable_beyond_longdescription: 'Kodable adalah permainan  self-guided iPad atau permainan yang membimbing diri sendiri melalui iPad yang memperkenalkan anak-anak usia 5 tahun ke atas ke dasar pemrograman. Milikilah seorang guru atau orang-tua dikat siswa agar lebih optimal, tetapi tidak terlalu diperlukan.'
+  scratchjr_beyond_longdescription: 'ScratchJr adalah pengantar bahasa pemrograman  yang memungkinkan anak-anak untuk membuat cerita interaktif dan permainan mereka sendiri. Anak-anak mengambil bersama blok pemrograman grafis untuk membuat karakter bergerak, melompat, menari dan menyanyi'
+  hopscotch_beyond_longdescription: Mahasiswa-dipandu tutorial di dalam iPad menggunakan bahasa pemrograman Hopscotch. Siswa akan membangun permainan dan aplikasi untuk iPad mereka pada iPad mereka. Siswa dapat bekerja secara individual atau dengan teman-teman (hingga 3 siswa per iPad).
+  pocketcode_beyond_longdescription: Buat permainan Anda sendiri pada ponsel cerdas Anda dengan Pocket Code! Bantulah pasukan penerjun payung Steve untuk memberikan paket-paketnya. Anda dapat membagikannya kepada teman dan pengguna lain untuk mencoba!
+  groklearning_beyond_longdescription: Kursus Pengantar menggunakan bahasa pemrograman Python untuk orang-orang tanpa pengalaman pemrograman. Campuran konten pengantar dan tantangan kami yang umik akan membawa Anda ke pemahaman yang menyeluruh tentang Python dan pemrograman itu sendiri. Kami telah diajarkan konten ini kepada murid-murid dari segala usia dari latar belakang yang berbeda dan kami yakin itu akan cocok dengan Anda juga.
+  hacketyhack_beyond_longdescription: 'Hackety Hack akan mengajarkan Anda dasar-dasar mutlak pemrograman dari bawah ke atas. Tidak ada pengalaman pemrograman sebelumnya diperlukan! Dengan Hackety Hack, Anda akan belajar bahasa pemrograman Ruby. Ruby digunakan untuk semua jenis program, termasuk aplikasi desktop dan website. [Catatan: diperlukan Instalasi Desktop]'
+  robomind_beyond_longdescription: 'Siswa belajar dasar-dasar pemrograman oleh pengontrolan robot virtual mereka sendiri. Kursus online sepenuhnya mandiri dengan dan didapatkan lewat presentasi singkat, film, kuis dan bimbingan/petunjuk otomatis untuk membantu siswa dalam latihan pemrograman. '
+  makegameswithus_beyond_longdescription: Apakah anda tahu tentang ObjectiveC? Belajarlah untuk membuat iPhone permainan dalam satu jam! Kami akan memandu Anda melalui proses, kode, pengujian, dan bermain game sepenuhnya didalam browser dan kemudian membagikannya di Facebook kepada teman-teman untuk mencobanya! Pengembangan iPhone sebelumnya tidak ada pengalaman diperlukan. Anda harus memahami apa itu variabel, metode, dan objek.
+  appinventor_beyond_longdescription: 'Menghibur, video tutorial cepat memandu Anda dalam membangun tiga aplikasi sederhana untuk ponsel Android Anda atau tablet. Dirancang untuk pemula dan juga ahli, hour of code ini  akan membuat Anda siap untuk mulai membangun aplikasi Anda sendiri sebelum Anda mengetahuinya. Bayangkan berbagi aplikasi kreasi Anda sendiri dengan teman-teman Anda! Kegiatan ini cocok untuk individu dan untuk guru kelas terkemuka.'
+  touchdevelop_beyond_longdescription: TouchDevelop memungkinkan Anda membuat aplikasi pada iPad, iPhone, Android, PC, Mac, Windows Phone. Editor sentuhan ramah kami membuat menyenangkan anda dalam pengkodean, bahkan dapat dilakukan melalui ponsel atau tablet Anda!
+  codehs_beyond_longdescription: 'Pelajari dasar-dasar pemrograman dengan Karel and Dog, pengenalan yang menyenangkan, dapat diakses dan pengenalan yang visual untuk coding, dimana anda dapat memberikan perintah kepada komputer adalah seperti memberikan perintah kepada seekor anjing. Tutorial ini bagus jika dipimpin oleh seorang guru, tetapi juga dapat dilakukan secara independen. [Catatan:  diperlukan pembayaran]'
+  udemy_beyond_longdescription: 'Apakah Anda pernah melihat baris kode atau kode Anda untuk hidup, Udemy memiliki kursus untuk Anda, diajarkan oleh instruktur profesional. [Catatan: diperlukan pembayaran]'
+  lynda_beyond_longdescription: 'Pelajari bagaimana cara melakukan kode, menciptakan dan membangun aplikasi web, dari dasar-dasar pemrograman berorientasi obyek C dan c + +, bagaimana menulis kode Java. Tutorial pengembang kami dapat membantu Anda belajar untuk mengembangkan dan membuat aplikasi seluler, bekerja dengan PHP dan MySQL database, memulai dengan bahasa pengolahan Statistik R, dan banyak lagi. [Catatan: diperlukan pembayaran]'
+  edx_beyond_longdescription: 'CS50x adalah pengenalan Harvard College perusahaan intelektual ilmu komputer dan seni pemrograman untuk jurusan dan  juga non-jurusan, dengan atau tanpa pengalaman pemrograman. Topik meliputi abstraksi, algoritma, struktur data, enkapsulasi, manajemen sumber daya, keamanan, rekayasa perangkat lunak, dan pengembangan web. Bahasa Pemograman termasuk C, PHP, dan JavaScript ditambah SQL, CSS dan HTML. Versi CS50x  adalah kursus terbesar kedua di kampus Harvard.'
+  coursera_beyond_longdescription: 'Kelas CS101 Stanford diajarkan oleh Nick Parlante (gratis!). CS101 mengajarkan ide-ide penting ilmu komputer untuk khalayak nol-sebelum-pengalaman. Bermain dan bereksperimen dengan bit singkat pada kode untuk membawa hidup kepada kekuatan dan keterbatasan dari komputer. CS101 juga menyediakan latar belakang umum pada komputer hari ini: apa itu komputer, Apakah itu perangkat keras, apa itu perangkat lunak, apa itu internet. Tidak ada pengalaman sebelumnya diperlukan selain kemampuan untuk menggunakan web browser.'
+  udacity_beyond_longdescription: Dalam kursus ini anda akan mempelajari konsep-konsep penting dalam ilmu komputer dan belajar bagaimana menulis program komputer sendiri dalam konteks membangun web crawler. Tidak ada pengetahuan pemrograman sebelumnya diperlukan untuk kursus ini. Pemula dipersilahkan! Pada akhir kursus ini, Anda akan belajar konsep-konsep penting dalam ilmu komputer dan pemrograman yang cukup untuk dapat menulis program Python untuk memecahkan masalah Anda sendiri. Kursus ini akan mempersiapkan Anda untuk beralih ke program komputasi tingkat menengah.
+  teachingtree_beyond_longdescription: TeachingTree adalah sebuah platform terbuka yang memungkinkan siapa pun mengatur konten pendidikan. Tujuan kami adalah agar siswa dengan mudah dan cepat mengakses clips dengan tepat yang mereka butuhkan untuk mempelajari konsep-konsep individu. Setiap orang didorong untuk membantu dengan menambahkan video atau penandaan konsep.
+  kodu_beyond_longdescription: Kodu memungkinkan anak-anak membuat game di PC dan Xbox melalui bahasa pemrograman visual yang sederhana. Kodu dapat digunakan untuk mengajarkan kreativitas, pemecahan masalah, bercerita, serta pemrograman. Siapapun dapat menggunakan Kodu untuk membuat game, anak-anak maupun orang dewasa tanpa desain atau pemrograman keterampilan. Kodu tersedia untuk PC dan dapat didownload secara gratis. Kodu tersedia juga untuk Xbox di Amerika Serikat pada Xbox Marketplace, di saluran Indie Games dengan harga sekitar $ 5.
+  cargobot_beyond_longdescription: 'Cargo-Bot adalah permainan puzzle yang di mana Anda seperti mengajarkan cara memindahkan peti pada sebuah robot . Terdengar sederhana, kan? terdapat  36 fitur teka-teki fiendishly pintar, membayangi musik dan memukau retina gambar. Anda bahkan dapat merekam solusi dan membagikannya di YouTube untuk menunjukkan ke teman-teman Anda.'
+  kidsruby_beyond_longdescription: 'Bersenang-senang dan membuat game, atau meretas (hack) pekerjaan rumah Anda menggunakan Ruby! semua itu hanya memberitahu orang tua Anda atau guru Anda bahwa anda sedang belajar pemrograman Ruby ...;). ini gratis dan bekerja di komputer manapun. [Catatan: Perlu diinstallkan di desktop anda]'
+  w3schools_beyond_longdescription: Belajar untuk membuat situs web pada komputer Anda sendiri. Pelajari dasar-dasar server dalam waktu kurang dari sehari. Belajar untuk menambahkan database ke situs web Anda
+  codeavengers_beyond_longdescription: 'Pelajari bagaimana memprogram permainan, aplikasi dan situs web. Dirancang oleh pakar-pakar dengan sempurna dengan tingkat kesulitan untuk pemula, mudah untuk memahami petunjuk dan sangat membantu ketika Anda membutuhkannya. Kursus  HTML, CSS dan JavaScript kami mencakup kode tantangan dan revisi permainan yang membuat belajar menyenangkan dan efektif untuk segala usia.'
+  mozilla_beyond_longdescription: 'Thimble membuatnya sederhana sekali untuk membuat dan berbagi halaman web Anda sendiri. Menulis dan mengedit HTML dan CSS tepat di browser Anda, kemudian langsung melihat pratinjau pekerjaan Anda.  Host dan Share proyek Anda yang telah selesai dengan satu kali klik. Sangat sempurna untuk pemula dan juga untuk ahli.'
+  codecombat_beyond_longdescription: |
+    
+    Bermain sebagai Wizard menggunakan kode (mantra) untuk mengontrol pahlawan Anda, menavigasi labirin,  mengalahkan raksasa, menipu musuh dan menyelamatkan sekutu ! Belajar JavaScript dalam permainan web HTML 5  untuk pemula yang telah selesai.
+  codea_beyond_longdescription: 'Kode untuk iPad memungkinkan Anda membuat game dan simulasi & mdash; atau hanya tentang ide visual yang Anda miliki. Mengubah pikiran Anda menjadi kreasi yang interaktif yang memanfaatkan fitur iPad seperti Multi-Touch dan accelerometer. Kami pikir Codea adalah editor kode yang paling indah yang akan Anda gunakan, dan sangat mudah. Codea dirancang untuk membiarkan Anda menyentuh kode Anda. Ingin mengubah nomor? Hanya tekan dan tarik. Bagaimana warna, atau gambar? dengan menekan akan memunculkan editor visual yang memungkinkan Anda memilih apa yang Anda inginkan.'
+  lego_beyond_longdescription: Membuat robot kecil, bisa kustomisasi dan diprogram menggunakan potongan-potongan LEGO.
+  finch_beyond_longdescription: The Finch adalah robot baru untuk pendidikan ilmu komputer. Desainnya merupakan hasil dari sebuah studi empat tahun di Carnegie Mellon CREATE lab. The Finch dirancang untuk mendukung pengenalan yang menarik untuk seni pemrograman. Memiliki dukungan untuk bahasa pemrograman lebih dari selusin dan lingkungan, termasuk beberapa lingkungan yang sesuai untuk siswa berumur delapan tahun. The Finch dirancang untuk memungkinkan siswa untuk menulis program yang kaya dengan interaktif.
+  arduino_beyond_longdescription: Arduino adalah platform populer dirancang untuk memungkinkan seniman dan desainer untuk bekerja dengan sensor nyata, LED, buzzers, dan banyak lagi. Sparkfun Virtual Sandbox akan mengajarkan Anda kode Arduino yang nyata tepat di browser Anda.
+  processing_beyond_longdescription: Pengolahan adalah bahasa pemrograman, lingkungan pengembangan, dan komunitas online. Sejak tahun 2001, Pengolahan telah mempromosikan keaksaraan software dalam seni visual dan literasi visual dalam teknologi. Awalnya dibuat untuk melayani sebagai buku sketsa perangkat lunak dan untuk mengajarkan dasar-dasar pemrograman komputer dalam konteks visual, Pengolahan berkembang menjadi alat pengembangan bagi para profesional. Saat ini, ada puluhan ribu siswa, seniman, desainer, peneliti, dan penggemar yang menggunakan Pengolahan untuk belajar, prototyping, dan produksi.
+  alice_beyond_longdescription: Menggunakan lingkungan pemrograman yang inovatif untuk mendukung penciptaan 3D animasi, Alice proyek menyediakan alat dan bahan untuk mengajar dan belajar berpikir secara komputasi, pemecahan masalah, dan pemrograman komputer di seluruh spektrum usia dan tingkat kelas.
+  sphero_beyond_longdescription: Apakah Anda seorang pendidik atau orangtua, pelajaran SPRK memberikan anak-anak kursus singkat yang menyenangkan dalam memprogram robot ketika mengasah keterampilan mereka dalam matematika dan sains.

@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "bilog (radius, klase, kulay)"},
 "displayBlockTitle":function(d){return "display"},
 "ellipseBlockTitle":function(d){return "ellipse (lapad, taas, style, kulay)"},
-"emptyFunctionalBlock":function(d){return "Mayroon kang isang block na walang nailagay na input ."},
 "extraTopBlocks":function(d){return "Mayroon kang hindi isinama na block. Ibig mo bang isama ito sa \"display\" block?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "overlay (taas, baba)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "solid"},
 "string":function(d){return "string"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

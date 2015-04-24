@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331173141) do
+ActiveRecord::Schema.define(version: 20150416231806) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -63,6 +63,14 @@ ActiveRecord::Schema.define(version: 20150331173141) do
 
   add_index "cohorts", ["name"], name: "index_cohorts_on_name", using: :btree
   add_index "cohorts", ["program_type"], name: "index_cohorts_on_program_type", using: :btree
+
+  create_table "cohorts_deleted_users", id: false, force: true do |t|
+    t.integer "user_id",   null: false
+    t.integer "cohort_id", null: false
+  end
+
+  add_index "cohorts_deleted_users", ["cohort_id", "user_id"], name: "index_cohorts_deleted_users_on_cohort_id_and_user_id", using: :btree
+  add_index "cohorts_deleted_users", ["user_id", "cohort_id"], name: "index_cohorts_deleted_users_on_user_id_and_cohort_id", using: :btree
 
   create_table "cohorts_districts", force: true do |t|
     t.integer "cohort_id",    null: false
@@ -478,9 +486,10 @@ ActiveRecord::Schema.define(version: 20150331173141) do
   create_table "workshop_attendance", force: true do |t|
     t.integer  "teacher_id", null: false
     t.integer  "segment_id", null: false
-    t.string   "status",     null: false
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "notes"
   end
 
   add_index "workshop_attendance", ["segment_id"], name: "index_workshop_attendance_on_segment_id", using: :btree

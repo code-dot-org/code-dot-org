@@ -23,7 +23,7 @@
   "COLOUR_RGB_RED":"röd",
   "COLOUR_RGB_TITLE":"färg med",
   "COLOUR_RGB_TOOLTIP":"Skapa en färg med angiven mängd rött, grönt och blått.  Alla värden måste vara mellan 0 och 100.",
-  "CONTRACT_EDITOR_HEADER":"Design Recipe",
+  "CONTRACT_EDITOR_HEADER":"Designa recept",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"bryt ut ur loop",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"fortsätt med nästa upprepning av loop",

@@ -1,0 +1,15 @@
+<ContractMatch>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2015-01-06T17:22:23.000Z",
+  "properties": {
+    "answers": [
+      "rotate|Image|Number|Image"
+    ],
+    "title": "Rotate Contract",
+    "content1": "Write a contract for the rotate function",
+    "content2": "Eval Contracts 2 A.solution_blocks, 300"
+  },
+  "md5": "5d1f4104b4071cb00219d415700947e0"
+}]]></config>
+</ContractMatch>

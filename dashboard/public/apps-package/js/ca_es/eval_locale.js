@@ -157,10 +157,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "cercle (radi, estil, color)"},
-"displayBlockTitle":function(d){return "mostra"},
+"displayBlockTitle":function(d){return "avaluar"},
 "ellipseBlockTitle":function(d){return "el·lipse (amplada, alçada, estil, color)"},
-"emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
-"extraTopBlocks":function(d){return "Teniu blocs no afegits. Et refereixes a adjuntar aquestes al bloc \"mostra\"?"},
+"extraTopBlocks":function(d){return "Alguns blocs estan lliures. Desitjes adjuntar-los al bloc \"avaluar\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "superposició (superior, inferior)"},
 "placeImageBlockTitle":function(d){return "lloc-imatge (x, y, imatge)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "sòlid"},
 "string":function(d){return "seqüència"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

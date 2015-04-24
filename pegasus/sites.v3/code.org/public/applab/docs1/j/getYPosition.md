@@ -1,5 +1,3 @@
-works across all UI controls, including canvas
-
 ---
 title: App Lab Docs
 ---
@@ -9,7 +7,6 @@ title: App Lab Docs
 ## getYPosition(id)
 
 [/name]
-
 
 [category]
 
@@ -21,10 +18,9 @@ Category: UI Controls
 
 [short_description]
 
-Get the element's y position.
+Get the element's y position, in pixels.
 
 [/short_description]
-
 
 [/description]
 
@@ -32,6 +28,8 @@ Get the element's y position.
 ____________________________________________________
 
 [example]
+
+**Example 1**
 
 <pre>
 createCanvas(); //Create a canvas to draw on first
@@ -44,12 +42,13 @@ ____________________________________________________
 
 [example]
 
+**Example 2**
+
 <pre>
 createCanvas(); //Create a canvas to draw on first
 setFillColor("red"); //Set the fill color of future drawn shapes
 rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
 </pre>
-
 
 [/example]
 
@@ -59,7 +58,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+getYPosition(id);
 </pre>
 
 [/syntax]
@@ -70,10 +69,7 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| id | string | Yes | The id of the element.  |
 
 [/parameters]
 

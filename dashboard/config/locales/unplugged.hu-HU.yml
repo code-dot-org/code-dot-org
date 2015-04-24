@@ -273,18 +273,24 @@
       VideoGamesCoordinatePlanes:
         title: Videó játékok és koordináta síkok
         desc: A videó játékok és koordináta síkok lecke leírása
+        video: alg_11_coordinate_plane
       Contracts:
         title: Szerződések
         desc: Szerződések "unplugged" lecke leírása
+        video: alg_5_contracts
       DesignRecipe:
         title: A dizájn receptje
         desc: '"Dizájn recept" lecke leírása'
+        video: alg_8_design_recipe
       Booleans:
         title: Logikai adattípus
         desc: Boolean lecke leírása
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Feltételes utasítások és összetett függvények
         desc: Feltételes és "Piecewise funkciók" lecke leírása
+        video: alg_10_conditionals
       CollisionDetection:
         title: Ütközés felismerés
         desc: Ütközés felismerés lecke leírása
+        video: alg_16_biggame_collision_detection

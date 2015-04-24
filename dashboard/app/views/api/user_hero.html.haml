@@ -1,24 +1,34 @@
 - if current_user
-  %div{style: 'margin-top: 20px; border-top: 1px solid lightgrey'}
-  #welcome= t('welcome_back', name: current_user.name)
 
-  #student{style: 'width: 100%; float: left; padding-left:20px; box-sizing: border-box;'}
-    - if current_user.primary_script
-      #student_progress #{t('home.student_progress')}:
-      - if current_user.primary_script.trophies?
-        = t('home.student_stats', trophy_count: current_user.trophy_count, trophy_max: Trophy::TROPHY_MAX)
-      = link_to t('home.see_details'), root_url
-      %br/
-      = render partial: 'shared/student_continue', locals: { include_finished: true, script: current_user.primary_script }
-    
-  - if current_user.teacher?
+  - role_class = current_user.user_type
+
+  #contents{style: 'margin-top: 20px; padding-left:5px; padding-right:5px'}
+    #welcome{class: role_class, style: "padding-left:5px"}= t('welcome_back', name: current_user.name)
+
+    #body{class: role_class}
+      #student.col-50{style: "padding:5px"}
+        - if current_user.primary_script
+          #student_progress #{t('home.student_progress')}:
+          - if current_user.primary_script.trophies?
+            = t('home.student_stats', trophy_count: current_user.trophy_count, trophy_max: Trophy::TROPHY_MAX)
+          = link_to t('home.see_details'), root_url
+          %br/
+          = render partial: 'shared/student_continue', locals: { include_finished: true, script: current_user.primary_script, role_class: role_class }
+        - else
+          = link_to t('home.no_primary_course'), root_url
+      - if current_user.teacher?
+        #teacherarea.col-50{style: "padding:5px"}
+          #classroom #{t('home.classroom')}:
+          #teacher
+            %span#student_count
+              - if current_user.students.length == 1
+                = t('home.teacher_student_count_one', count: current_user.students.length)
+              - else
+                = t('home.teacher_student_count', count: current_user.students.length)
+              &nbsp;
+            %a{href: teacher_dashboard_url, style: 'text-decoration:none'}
+              %button.btn.btn-primary.button-continue{class: role_class}= t('teacher.students.dashboard')
+            %br/
+      
     #clearboth{ style: 'clear:both;' }
-    #classroom #{t('home.classroom')}:
-    #teacher{ style: 'width: 100%; float: left; padding-left:20px'}
-      = t('home.teacher_student_count', count: current_user.students.length)
-      &nbsp;
-      %a{href: teacher_dashboard_url, style: 'text-decoration:none'}
-        %button.btn.btn-primary.button-continue= t('teacher.students.dashboard')
-      %br/
-
-  #clearboth{ style: 'clear:both;' }
+    %div{style: 'margin-bottom: 20px'}

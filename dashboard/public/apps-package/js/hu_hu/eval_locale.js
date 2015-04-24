@@ -159,8 +159,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "kör (sugár, stílus, szín)"},
 "displayBlockTitle":function(d){return "kiértékel"},
 "ellipseBlockTitle":function(d){return "ellipszis (szélesség, magasság, stílus, szín)"},
-"emptyFunctionalBlock":function(d){return "Van egy blokkod kitöltetlen bemenettel."},
-"extraTopBlocks":function(d){return "Vannak különálló blokkok a táblán. Csatold őket a \"Megjelenítés\" blokkhoz!"},
+"extraTopBlocks":function(d){return "Néhány blokk nincs csatlakoztatva. Csatolni akarja ezeket az értékelendő blokkhoz?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "borítás (felső, alsó)"},
 "placeImageBlockTitle":function(d){return "kép elhelyezése (x, y, kép)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "teli"},
 "string":function(d){return "szöveg"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

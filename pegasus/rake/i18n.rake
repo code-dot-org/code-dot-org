@@ -18,7 +18,7 @@ def yml_line_quoted_value(line)
   return line
 end
 def hash_to_yml_with_quoted_values(hash, yml_path)
-  buffer = StringIO.new(hash.to_yaml(options = {:line_width => -1}))
+  buffer = StringIO.new(hash.to_yaml(line_width: -1))
 
   File.open(yml_path, 'wb') do |file|
     buffer.each_line do |line|
@@ -45,7 +45,7 @@ namespace :i18n do
 
       en_us = {}
       line = 1
-      CSV.parse(file.spreadsheet.export_as_string('csv', 0)) do |row|
+      CSV.parse(file.spreadsheet_csv) do |row|
         en_us[row[0]]=row[1] unless line == 1
         line += 1
       end

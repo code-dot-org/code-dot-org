@@ -253,6 +253,7 @@
         artist: Rajzolj valamit
     user:
       classroom: Tanári kezdőlap
+      district_dashboard: District Dashboard
       label: Üdv %{username}
       stats: Fejlődésem
       settings: Profilom
@@ -401,6 +402,7 @@
     heading_apps: <h2>Vidámság </h2><h1>Mindenkinek</h1>
     heading_legacy: <h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>
     your_gallery: Galéria
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Férfi
     female: Nő
@@ -506,6 +508,10 @@
       body: Nézd meg a felhasználóink által készített alkalmazás és művész kép galériát
     frozen:
       title: Jégvarázs
+    infinity:
+      title: Infinity játéklabor
+      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney
+        Infinity karakterek szereplésével.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -543,6 +549,16 @@
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
     correct_title: Helyes
     correct_body: Ez a helyes válasz.
+  contract_match:
+    wrong_title: Helytelen válasz
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Itt add meg a válaszod
   dialog:
@@ -641,3 +657,5 @@
       listájából. Bárki, akivel korábban megosztottad azt, többé már nem fogja tudni
       megtekinteni a projektet.
     view_all: Projektjeim megtekintése
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

@@ -8,22 +8,22 @@ class LevelSourcesController < ApplicationController
   skip_authorize_resource only: [:edit, :generate_image, :original_image] # edit is more like show
 
   before_action :set_level_source
-  before_action :set_applab_user_id, only: [:show, :edit]
 
   def show
-    @hide_source = true
+    level_view_options hide_source: true
     @is_legacy_share = true
     if params[:embed]
-      @embed = true
-      @share = false
-      @no_padding = true
-      @skip_instructions_popup = true
+      level_view_options(
+        embed: true,
+        share: false,
+        skip_instructions_popup: true
+      )
     end
   end
 
   def edit
     authorize! :read, @level_source
-    @hide_source = false
+    level_view_options hide_source: false
     # currently edit is the same as show...
     render "show"
   end
@@ -94,26 +94,26 @@ class LevelSourcesController < ApplicationController
 
   protected
 
-  def set_applab_user_id
-    @applab_user_id = applab_user_id
-  end
-
   def set_level_source
     if current_user && current_user.admin?
       @level_source = LevelSource.find(params[:id])
     else
       @level_source = LevelSource.where(hidden: false).find(params[:id])
     end
-    @phone_share_url = send_to_phone_url
-    @start_blocks = @level_source.data
     @level = @level_source.level
     @game = @level.game
-    @full_width = true
-    @share = true
-    @no_footer_puzzle = (@game == Game.applab)
+    @phone_share_url = send_to_phone_url
+    view_options(
+      callouts: [],
+      full_width: true,
+      no_footer: @game == Game.applab,
+      no_padding: browser.mobile? && @game.share_mobile_fullscreen?
+    )
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
-    @no_padding = @share && browser.mobile? && @game.share_mobile_fullscreen?
-    @callouts = []
+    level_view_options(
+      start_blocks: @level_source.data,
+      share: true
+    )
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

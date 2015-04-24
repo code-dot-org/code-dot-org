@@ -24,7 +24,7 @@
   hoc2014_teachers: "Teachers"
   hoc2014_host: "Host it"
   hoc2014_everyone: "Everyone"
-  hoc2014_support: "Support it"
+  hoc2014_support: "Support it &#x25BE;"
   hoc2014_whatishoc: "What is the Hour of Code?"
   twentyhours_trynow: "Try now"
   california_heading: "Ask your school to teach computer science"
@@ -110,6 +110,7 @@
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
+  studiobar_title_nolink: "Explore Code Studio"
   studiobar_elementary_title: "Elementary courses"
   studiobar_elementary_body: "Our three new courses for K&#8209;5"
   studiobar_hoc_title: "The Hour of Code"
@@ -124,19 +125,46 @@
   studiobar_donate_body: "One child learns for each dollar you donate"
   studiobar_shop_title: "Shop"
   studiobar_shop_body: "Break stereotypes. Wear our logo with pride."
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto learn one Hour of Code&rdquo; \nMalala"
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner"
   homepage_hero_text_susan: |-
-    &ldquo;It's never too late
-    to learn&rdquo;
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
     Susan, CEO of YouTube
   homepage_hero_text_fistbump: |-
     &ldquo;Don't just play on your phone,
     program it.&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |-
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
     Sheryl, COO of Facebook
+  homepage_hero_text_satya: |-
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_bosh: |-
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |-
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |-
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |-
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do with programming.&rdquo; \nMaya, 2nd grade"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's for you, here, now.&rdquo; \nGeraldo, teacher"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher"
+  homepage_hero_text_teacher2: |-
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "Frozen with Anna and Elsa"
   homepage_slot_text_teacher: "Teacher Dashboard"
@@ -167,7 +195,7 @@
   homepage_slot_text_title_advocates: "Advocates"
   homepage_slot_text_blurb_advocates: "Support our work"
   homepage_slot_text_link_stats: "See the stats"
-  homepage_slot_text_link_buy: "Buy a T-shirt or hat"
+  homepage_slot_text_link_buy: "Get involved"
   homepage_slot_text_link_donate: "Make a donation"
   homepage_header_codestudio: "Code Studio student creations"
   homepage_header_donors: "Code.org thanks its supporters"

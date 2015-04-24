@@ -309,7 +309,7 @@ fr:
           "Unplugged: Collision Detection and the Distance Formula": 'Activité débranchée : la détection de Collision et le théorème de Pythagore'
           "Play Lab: Collision Detection (Big Game)": 'Le grand jeu - détection de Collision'
         infinity:
-          title: Labo
+          title: Disney Infinity Play Lab
           description_short: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infiny.
           description: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infiny.
           Play Lab: Labo
@@ -341,6 +341,7 @@ fr:
           Personal Reflection: Réflexion personnelle
           Next Steps: Prochaines étapes
           Computer Science Pedagogy: Pédagogie des sciences informatiques
+          Programming Concepts: Programming Concepts
         netsim:
           title: "Simulateur d'Internet"
           description_short: ""
@@ -353,11 +354,6 @@ fr:
           "Unit 1: Sending Bits": 'Unité 1 : Envoi de bits'
           "Unit 2: Routing and DNS": 'Unité 2 : routage et DNS'
           Internet Simulator Templates: "Modèles de simulateur d'Internet"
-        Infinity:
-          title: Playlab Infini
-          description_short: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infiny.
-          description: Utilisez le labo pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infiny.
-          Infinity: Infini
         pixelation:
           title: Pixellisation
           description: Créer des images avec des bits et des octets.
@@ -460,17 +456,37 @@ fr:
           "Artist: Functions": 'Artiste : les fonctions'
           "Bee: Debugging": 'Abeilles : Le débogage'
         cspunit1:
-          title: CSP unité 1
-          description: CSP unité 1 étapes
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           Lesson14: Lesson14
           Lesson 14: Leçon 14
           Lesson 14 v2: Leçon 14 v2
           Lesson 15: Leçon 15
-          description_short: "Faire des Images noir et blanc avec l'outil de pixellisation"
           Lesson 8: Leçon 8
           Lesson 5: Leçon 5
           Lesson 3: Leçon 3
           Lesson 4: Leçon 4
+          Lesson 6: Leçon 6
+          Lesson 2: Leçon 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Systèmes de numération
+          Binary Numbers: Nombres binaires
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
         algebraPD:
           title: "Informatique en DP d'algèbre"
           description: "Apprendre la programmation fonctionnelle par l'algèbre"
@@ -507,6 +523,7 @@ fr:
           Conditionals and Piecewise Functions: Instructions conditionnelles et des fonctions par morceaux
           Rocket-Height: Hauteur de la fusée
           Design Recipe Practice: Pratique de conception de recette
+          Introduction to PD: Introduction au développement professionnel
         algPDmiami:
           title: "Informatique en DP d'algèbre"
           description: "Enseigner l'algèbre par le biais de la programmation fonctionnelle"
@@ -522,3 +539,24 @@ fr:
           "Play Lab: Collision Detection (Big Game)": 'Labo : détection de Collision (grand jeu)'
           Your Game - Player Movement: 'Votre jeu - mouvement des joueurs'
           Your Game - Collision Detection: 'Votre jeu - détection de Collision'
+        text-compression:
+          title: Text Compression
+          description: Contracter le texte en identifiant des structures répétées.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: nouvelle étape
+          Introduction to PD: Introduction au développement professionnel
+        CSPLessonSamples:
+          title: Échantillons de leçon CSP
+          description_short: échantillons de leçon pour le csp
+          Lesson 14: Leçon 14
+          Lesson 15: Leçon 15
+        ECSPD:
+          Introduction to PD: Introduction au développement professionnel
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Introduction au développement professionnel

@@ -10,8 +10,8 @@ pt-BR:
       user:
         name: Nome para exibição
         email: E-mail
-        username: nome de usuário
-        password: senha
+        username: Nome de usuário
+        password: Senha
         password_confirmation: Confirmação de senha
         current_password: Senha atual
         locale: Idioma
@@ -219,6 +219,7 @@ pt-BR:
         artist: Desenhe alguma coisa
     user:
       classroom: Página inicial do professor
+      district_dashboard: Painel do distrito
       label: 'Oi, %{username}'
       stats: Meu progresso
       settings: Minha conta
@@ -259,7 +260,7 @@ pt-BR:
       trophies: troféus
     students:
       name: Nome
-      username: nome de usuário
+      username: Nome de usuário
       password: senha
       manage: Gerenciar alunos
       dashboard: Vá para o painel de controle do professor
@@ -348,6 +349,7 @@ pt-BR:
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
     heading_legacy: '<h2>Nosso curso geral para</h2><h1>todas as idades</h1>'
     your_gallery: Galeria
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Masculino
     female: Feminino
@@ -437,6 +439,9 @@ pt-BR:
       body: Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários
     frozen:
       title: Frozen
+    infinity:
+      title: Laboratório infinito
+      body: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -466,6 +471,14 @@ pt-BR:
     wrong_body: Sua solução não está correta. Tente novamente!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+  contract_match:
+    wrong_title: Resposta incorreta
+    badname: Seu contrato tem o nome errado.
+    badname_case: Os nomes das funções diferenciam letras maiúsculas de minúsculas. Tente alterar o uso de maiúsculas e minúsculas no nome do seu contrato.
+    badrange: Seu contrato tem a imagem errada.
+    baddomainsize: Seu contrato não tem o número correto de itens no domínio.
+    baddomainname: Um ou mais de seus itens de domínio têm o nome errado.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Insira sua resposta aqui
   dialog:
@@ -538,7 +551,7 @@ pt-BR:
     more: Mais
     name: Nome
     updated: Atualizado
-    project_type: Tipo do projeto
+    project_type: Tipo de projeto
     help_text: 'Clique em <strong>Crie um aplicativo</strong> ou <strong>Desenhe alguma coisa</strong> abaixo para fazer um novo Laboratório ou Projeto de artista!<br/>Você pode voltar a trabalhar nos seus projetos a qualquer hora.'
     need_help: Precisa de ajuda para começar?
     really_delete: Excluir?
@@ -547,6 +560,8 @@ pt-BR:
     saved: Salvo
     not_saved: Não salvo
     cancel: Cancelar
-    delete_confirm_title: Tem certeza que deseja excluir esse projeto?
-    delete_confirm_text: 'Excluir seu projeto vai removê-lo permanentemente da sua lista "Meus projetos". As pessoas com quem você compartilhou o link não vão mais poder visualizar seu projeto.'
+    delete_confirm_title: Tem certeza de que deseja excluir esse projeto?
+    delete_confirm_text: 'Ao excluir seu projeto, vai removê-lo permanentemente da sua lista "Meus projetos". As pessoas com quem você compartilhou o link não vão mais poder visualizar seu projeto.'
     view_all: Visualizar meus projetos
+    remix: Remix
+    click_to_remix: 'Clique em "Remix" para fazer sua própria versão!'

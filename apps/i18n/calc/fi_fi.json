@@ -1,9 +1,8 @@
 {
   "divideByZeroError": "Ohjelmasi johtaa nollalla jakamiseen.",
   "emptyComputeBlock": "Liitä lohko \"laske\"-lohkoon.",
-  "emptyFunctionalBlock": "Sinulla on lohko, josta puuttuu syöte.",
   "equivalentExpression": "Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen.",
-  "evaluate": "evaluate",
+  "evaluate": "arvioi",
   "extraTopBlocks": "Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?",
   "failedInput": "Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla.",
   "goal": "Tavoite:",

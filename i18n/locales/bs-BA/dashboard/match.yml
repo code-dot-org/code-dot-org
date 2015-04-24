@@ -95,7 +95,7 @@ bs:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Uparivanje
-        Match the grid to the program: Nađi odgovarajuću mrežu za program
+        Match the grid to the program.: Match the grid to the program.
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -339,7 +339,7 @@ bs:
         The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The student who thinks about the big-picture and looks for potential mistakes or misunderstandings
       PDK5 What is unplugged:
         What is an unplugged activity?: What is an unplugged activity?
-        Question: Question
+        Question: Pitanje
         Answer 1: Answer 1
       test matching image:
         Matching Images Two: Uporedba Slika Dva

@@ -159,7 +159,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "circleBlockTitle":function(d){return "圓(半徑、 樣式、 顏色)"},
 "displayBlockTitle":function(d){return "計算"},
 "ellipseBlockTitle":function(d){return "橢圓(寬度,高度,樣式, 顏色)"},
-"emptyFunctionalBlock":function(d){return "你有一塊未填充的程式積木。"},
 "extraTopBlocks":function(d){return "你有未連接的區塊，難道你要將它們附加到\"顯示\"區塊嗎?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "覆蓋 (頂部, 底部)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "實心"},
 "string":function(d){return "字串"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

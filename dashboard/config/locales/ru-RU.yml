@@ -249,6 +249,7 @@
         artist: Нарисовать что-нибудь
     user:
       classroom: Домашняя страница Преподавателя
+      district_dashboard: Панель управления области
       label: Привет, %{username}
       stats: Мои результаты
       settings: Моя регистрация
@@ -398,6 +399,7 @@
     heading_apps: <h2>Развлечения для</h2><h1>всех</h1>
     heading_legacy: <h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>
     your_gallery: Галерея
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Мужской
     female: Женский
@@ -502,6 +504,10 @@
       body: Показать галерею приложений и картинок, созданных нашими пользователями
     frozen:
       title: '"Холодное сердце"'
+    infinity:
+      title: Лаборатория игр Infinity
+      body: Используйте лабораторию игр, чтобы создать историю или игру с персонажами
+        Disney Infinity.
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!
@@ -540,6 +546,17 @@
     wrong_body: Твоё решение неверно.  Пожалуйста, попробуй еще раз!
     correct_title: Верно
     correct_body: Это правильный ответ.
+  contract_match:
+    wrong_title: Неправильный ответ
+    badname: Ваше определение имеет неправильное имя.
+    badname_case: В именах функций учитывается регистр. Попробуйте изменить регистр
+      букв в имени вашего определения.
+    badrange: Ваше определение имеет неправильный диапазон.
+    baddomainsize: Ваше определение имеет неправильное число элементов в домене.
+    baddomainname: Один или несколько элементов в вашем домене имеют неправильное
+      имя.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Внеси сюда свой ответ
   dialog:
@@ -600,7 +617,7 @@
     completed_too_many_blocks: Завершено, слишком много блоков
     completed_perfect: Завершено, отлично
     furthest_level_attempted: запрошен слишком высокий уровень
-    assessment: тест
+    assessment: оценка
   studio:
     courses_working_on: Курсы, в процессе изучения
     completed_courses: Завершенные курсы
@@ -638,3 +655,5 @@
       списка Мои проекты. Если вы поделились ссылкой на этот проект с друзьями, у
       них больше не будет доступа к этому проекту.
     view_all: Посмотреть Мои проекты
+    remix: Ремикс
+    click_to_remix: Нажмите «Ремикс», чтобы воспроизвести вашу собственную версию!

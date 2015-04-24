@@ -1,0 +1,36 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2014-09-20T02:30:59.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which version of the function will work?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png",
+        "correct": true
+      },
+      {
+        "text": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png",
+        "correct": false
+      },
+      {
+        "text": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png",
+        "correct": false
+      }
+    ],
+    "title": "Bee Debug Multiple Choice",
+    "content1": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png",
+    "content2": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png",
+    "height": "160"
+  },
+  "md5": "e7b4003ed1892801c0bc2336a77a9892"
+}]]></config>
+</Multi>

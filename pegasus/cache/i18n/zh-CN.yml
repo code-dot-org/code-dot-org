@@ -9,12 +9,12 @@
     style="color: white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>尝试了</h3><h2>编程一小时</h2>
+  n_have_learned_an_hoc: <h1>尝试</h1><h2>一小时编程</h2><h3># 送达</h3>
   anybody_can_learn: 人人都可以学。
   learn_now: 现在开始学习
   petition_message: 在每个学校每个学生都应该有机会学习计算机科学
   petition_sign_message: 如果你同意，签上你的名字。加入#其他人。
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 如果你支持我们，签上你的名字。加入# 其他。
   name: 姓名
   email: 电子邮件
   zipcode: 邮政编码或国家
@@ -27,7 +27,7 @@
   hoc2014_teachers: 教师
   hoc2014_host: 举办它
   hoc2014_everyone: 每个人
-  hoc2014_support: 支持它
+  hoc2014_support: 支持它 &#x25BE;
   hoc2014_whatishoc: 什么是编程一小时？
   twentyhours_trynow: 现在就试试
   california_heading: 邀请您的学校开展计算机科学教育。
@@ -98,8 +98,8 @@
   learn_classes: 查找本地的课程
   hoc_is_here: '#HourOfCode来了 —— 让我们试试看！@codeorg'
   just_did_hoc: '我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: 为什么没有更多的学校教计算机科学？我们可以解决这个问题。http://youtu.be/nKIu9yen5nc。请访问 http://code.org/
+    了解更多。
   learn_hoc: 学习编程一小时
   beyond_hoc: 一小时之后
   what_gender: 你的性别是什么？
@@ -118,6 +118,7 @@
   stats_student: '"我知到这是一个<b>千载难逢</b> 的机会。" - 马里亚纳.阿尔泽特，五年级学生'
   stats_michael: “我<b>从不曾</b>见到我的学生们抱有如此大的学习热情。”- 迈克尔.克拉克，教师
   studiobar_title: 探讨我们的 <a href='http://studio.code.org'>《编程工作室》</a>
+  studiobar_title_nolink: 探讨我们的 编程工作室
   studiobar_elementary_title: 初级课程
   studiobar_elementary_body: 为 K&#8209;5 所制的三项新课程
   studiobar_hoc_title: 编程一小时
@@ -132,55 +133,70 @@
   studiobar_donate_body: 你捐的每一美元让一个孩子学会
   studiobar_shop_title: 商店
   studiobar_shop_body: 突破束缚，展现我们自己的骄傲。
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
-  homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+  homepage_hero_text_malala: '&ldquo;我在每一个国家都向女孩子们发起学习一个小时编程的挑战&rdquo;诺贝尔和平奖得主马拉拉说'
+  homepage_hero_text_susan: '&ldquo;如果你能改变技术，你可以改变世界。&rdquo;苏珊，YouTube 首席执行官'
+  homepage_hero_text_fistbump: '&ldquo;别总在电话上玩，要去编程。&rdquo;奥巴马总统'
+  homepage_hero_text_sheryl: '&ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo;
+    谢丽尔，Facebook 首席运营官说'
+  homepage_hero_text_satya: '&ldquo;计算机科学可以打开这个世界里最好的机会&rdquo;萨提亚，微软首席执行官世界。'
+  homepage_hero_text_bosh: '&ldquo;如果你自己编程，你可以挑选自己生命中的那部分&rdquo;克里斯 波什说'
+  homepage_hero_text_student1: |
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
+  homepage_hero_text_student2: |
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
+  homepage_hero_text_student3: |
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_slot_text_hoc: 编程一小时
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: 与安娜与埃尔莎一起来玩冰雪奇缘
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_studio: 我们的所有教程
+  homepage_slot_text_course4: 课程 4
   homepage_slot_text_shop: 商店
   homepage_slot_text_flappy: 飞扬的代码
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: 观看视频
+  homepage_action_text_teachervideo: 观看视频
+  homepage_action_text_learn: 立即开始学习
+  homepage_action_text_signpetition: 在请愿书上签名
+  homepage_signpetition_dropdown: 签署我们请愿 &#x25BE;
   homepage_slot_text_title_hoc: 编程一小时
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: 任何人都可学习。立即开始
   homepage_slot_text_link_hoc: 来试试”编程一小时“项目！
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: 举办一个小时编程活动
+  homepage_slot_text_link_hocserved: '# 送达'
   homepage_slot_text_title_students: 学生
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: 体验我们所有的教程
+  homepage_slot_text_link_codestudio: 尝试编程工作室
+  homepage_slot_text_link_local: 找一个当地的班级
+  homepage_slot_text_link_othercourses: 其他在线的课程
+  homepage_slot_text_title_educators: 教育工作者
+  homepage_slot_text_blurb_educators: 教你的学生
+  homepage_slot_text_link_k5: K-5 年级的课程
+  homepage_slot_text_link_fullcurriculum: 请看我们完整的课程大纲
+  homepage_slot_text_link_pd: 职业发展培训
+  homepage_slot_text_title_advocates: 倡导
+  homepage_slot_text_blurb_advocates: 支持我们的工作
+  homepage_slot_text_link_stats: 请看统计信息
+  homepage_slot_text_link_buy: 买一件 t 恤衫或帽子
+  homepage_slot_text_link_donate: 捐一笔钱
+  homepage_header_codestudio: 编程工作室 学生作品
+  homepage_header_donors: Code.org 感谢各位支持者
+  homepage_donors_seall: 查看全部
   homepage_donors_donate: 捐赠
   contact_form_topic_student: 我是一个学生
   contact_form_topic_parent: 我是家长
@@ -304,7 +320,7 @@
   dashboard_students_new_section: 您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。
   dashboard_students_placeholder_name: 学生姓名
   dashboard_students_name: 姓名
-  dashboard_students_progress: Progress
+  dashboard_students_progress: 进度
   dashboard_students_age: 年龄
   dashboard_students_gender: 性别
   dashboard_students_male: 男性
@@ -352,8 +368,8 @@
   dashboard_login_picture: 图片
   dashboard_login_none: 电子邮件
   dashboard_new_password: 新密码
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: 未启动
+  dashboard_progress_in_progress: 正在进行
   dashboard_progress_not_completed: 未完成
   dashboard_progress_completed_too_many_blocks: 完成，使用太多块
   dashboard_progress_completed_perfect: 完成了, 完美

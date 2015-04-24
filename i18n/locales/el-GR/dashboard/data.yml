@@ -204,7 +204,7 @@ el:
         turtle_3_5: 'Τώρα δημιούργησε μια νέα συνάρτηση "σχεδίασε ένα σπίτι" και χρησιμοποίησέ την για να στεγάσεις δύο γάτες. Υπόδειξη: δημιούργησε μια καινούρια συνάρτηση χρησιμοποιώντας το  "κάνε κάτι" πλακίδιο και πληκτρολογήστε το δικό σου κείμενο για να ονομάσεις το πλακίδιο αυτό.'
         turtle_3_6: 'Χρησιμοποιώντας το "σχεδίασε ένα τετράγωνο" σαν παράδειγμα, πρόσθεσε ένα δεδομένο εισόδου με το όνομα "μήκος" στο "σχεδίασε ένα τρίγωνο". Στη συνέχεια, σχεδίασε τρίγωνα με διαφορετικά μεγέθη. (Συμβουλή: κάνε κλικ στο αστέρι για να προσθέσεις ένα δεδομένο εισόδου σε μια συνάρτηση)'
         turtle_3_7: 'Πρόσθεσε ένα δεδομένο εισόδου με όνομα "μήκος" ώστε να "σχεδιαστεί ένα σπίτι" και δημιούργησε ένα μεγάλο σπίτι για τον ελέφαντα (με πλευρές μήκους 150 εικονοστοιχεία)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'Τροποποιήστε το "σχεδιάστε ένα σπίτι" έτσι ώστε να καταλήξω στην κάτω δεξιά γωνία μετά τη σχεδίαση ενός σπιτιού. Χρησιμοποιήστε αυτήν την τροποποιημένη συνάρτηση για να σχεδιάσετε τρία σπίτια.'
         turtle_3_9: 'Μπορείς να δημιουργήσεις εκ νέου τη συνάρτηση "σχεδίασε ένα σπίτι" χωρίς βοήθεια; Δοκίμασέ το, και στη συνέχεια να σχεδιάσεις μια σειρά από σπίτια.'
         turtle_3_10: Έχεις μάθει πολλά! Αξιοποίησε τις γνώσεις σου ώστε να σχεδιάσεις οτιδήποτε θέλεις. Προσπάθησε να ζωγραφίσεις ένα αστέρι, ή μια σπείρα, ή μια φανταχτερή νιφάδα χιονιού.
         maze_karel_debug_seq_1: Καλωσόρισες στον εντοπισμό και στη διόρθωση σφαλμάτων (debugging)! Ο κώδικάς μου δεν λειτουργεί σωστά. Μπορείς να εντοπίσεις το πρόβλημα και να το διορθώσεις έτσι ώστε να μπορώ να κάνω το χωράφι μου επίπεδο και έτοιμο για φύτευση;
@@ -246,7 +246,7 @@ el:
         flappy_6: 'Δες αν μπορείς να πετύχεις πόντο μετά που θα μικρύνεις ή μεγαλώσεις το φτεροκόπημα του "Φτερογούλη".'
         flappy_7: 'Μετά, δοκίμασε να αλλάξεις τη σκηνή με την προσαρμογή ενός άλλου μπλοκ στο "όταν εκτελείται" μπλοκ.'
         flappy_8: Μπορείς να θέσεις οπτικά κάθε στιγμή, όχι μόνο όταν αρχίζει το παιχνίδι. Δοκίμασε τη ρύθμιση μιας ΤΥΧΑΙΑΣ σκηνής όταν άλλα γεγονότα συμβαίνουν, για παράδειγμα, όταν προσπερνά ένα εμπόδιο.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: Για να τα μπερδέψετε, όταν χτυπάτε ένα εμπόδιο, αντί να τελειώνετε το παιχνίδι προσπαθήστε να επαναφέρετε το σκορ στο 0.
         flappy_11: 'Δημιούργησε το δικό σου παιχνίδι του "Φτερογούλη". Μπορείς να αλλάξεις όλα τα γραφικά και τους κανόνες, ακόμη και την βαρύτητα. Όταν τα κάνεις, πάτα "Τέλος" και άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.'
         flappy_k1_1: 'Παίξε "Φτερογούλη"'
         flappy_k1_2: 'Προσάρμοσε ένα μπλοκ στο "Όταν πατήσεις με το ποντίκι" μπλοκ και πάτα "Εκτέλεση". Πάτα με το ποντίκι ή πίεσε στην οθόνη αφής για να μετακινήσεις τον "Φτερογούλη"  στον στόχο.'
@@ -327,7 +327,7 @@ el:
         maze_wordsearch_k_15: Μετακίνησέ με σε μια κατεύθυνση, μετά άλλος να πει τη λέξη ΕΠΑΝΩ
         maze_wordsearch_k_16: Μετακίνησέ με σε μια κατεύθυνση, μετά άλλος να πει τη λέξη ΚΑΤΩ
         maze_wordsearch_k_20: Αυτό είναι ένα τεστ! Μετακίνησέ με σε μια κατεύθυνση, μετά άλλος να πει τη λέξη ΣΕΝΑΡΙΟ
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Δημιουργήστε την εφαρμογή σας χρησιμοποιώντας τα μπλοκ της εργαλειοθήκης.
         turtle_ec_1_2: 'Τώρα σχεδίασε ένα τετράγωνο. ΣΗΜΕΙΩΣΗ: χρησιμοποίησε το αγαπημένο  σου χρώμα με  τη μεταφορά νέου "πέναΧρώματος" μπλοκ.'
         turtle_ec_1_10: |-
           Το'κανες! Τώρα, σχεδίασε ότι θέλεις. Κάποιες διασκεδαστικές ιδέες: ένα μπαστούνι, μια χιονονιφάδα, ή ένα σπιράλ. Ακόμη δοκίμασε το νέο "πάχοςΠένας" μπλοκ. Καλή διασκέδαση!
@@ -432,12 +432,34 @@ el:
         playlab_intro: Εισαγωγή στο εργαστήριο παιχνιδιού
         playlab_events: Εκδηλώσεις του Εργαστηρίου Παιχνιδιού
         playlab_repeat_forever: Παίξετε εργαστήριο επανάληψη για πάντα
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Evaluation Blocks
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Μεταβλητές
-        msm_7_functions: Συναρτήσεις
+        tutorial_puzzle_challenge: Οδηγός εκμάθησης για την πρόκληση των παζλ
+        infinity_playlab_intro: 'Εργαστηριακό παιχνίδι - Εισαγωγή'
+        infinity_playlab_events: 'Εργαστηριακό παιχνίδι - Γεγονότα'
+        infinity_playlab_repeat_forever: 'Εργαστηριακό παιχνίδι - Επανάλαβε Για πάντα'
+        csp_concept_rgb: Λίγα για τα Εικονοστοιχεία
+        csp_pixelation_color_1: 'Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 1'
+        csp_pixelation_color_2: 'Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 2'
+        csp_pixelation_color_3: 'Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 3'
+        csp_pixelation_bw: Βοήθημα Ασπρόμαυρης εικονοστοιχειοποίησης
+        csp_U1L14_tipstricks: Ενότητα 1 Μάθημα 14 Βοηθήματα για δασκάλους
+        csp_textcompression: Text compression widget
+        alg_1_intro: 'CS in Algebra - Introduction'
+        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
+        alg_3_pemdas: 'CS in Algebra - Order of Operations'
+        alg_4_data_types: 'CS in Algebra - Data Types'
+        alg_5_contracts: 'CS in Algebra - Contracts'
+        alg_6_variables: 'CS in Algebra - Variables'
+        alg_7_function: 'CS in Algebra - Functions'
+        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
+        alg_9_booleans: 'CS in Algebra - Booleans'
+        alg_10_conditionals: 'CS in Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
+        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
+        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
+        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
+        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
+        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
     callout:
       text:
         drag_blocks: |-
@@ -507,3 +529,8 @@ el:
         arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
         right_arrow_fireball: Χρησιμοποιείστε το δεξί βέλος για να ρίξετε μπάλες φωτιάς
         name_function: Γράψτε εδώ το όνομα της συνάρτησής σας
+        Infinity_move_right_runbutton: Προσθέστε εδώ το μπλοκ μετακίνησης
+        Infinity_move_directions_callout: Ποιο μπλοκ θα κάνει τον Baymax να μετακινηθεί προς τα πάνω όταν πατιέται το πάνω βελάκι;
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Παίξε έναν ήχο όταν συμβαίνει αυτό το γεγονός.
+        Infinity_repeat_callout: Τοποθετήστε τα μπλοκ μετακίνησης εδώ μέσα

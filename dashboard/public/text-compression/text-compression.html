@@ -37,7 +37,7 @@
       height: 100%;
     }
     .widgetRightHeader {
-      float: left;
+      float: right;
       width: 33%;
     }
     .widgetRight {
@@ -48,17 +48,18 @@
       bottom: 0;
     }
     .widgetLeftHeader, .widgetRightHeader {
+      clear: right;
       background: #7665a0;
       color: #fff;
       box-sizing: border-box;
       padding: 10px;
     }
-    #choosePoem {
-      margin-bottom: 5px;
-    }
-    #choosePoem > * {
-      margin: 0;
+    #menu > * {
+      margin: 0 0 8px 0;
       display: inline-block;
+    }
+    #finished {
+      float: right;
     }
     #compressedPoem {
       box-sizing: border-box;
@@ -75,10 +76,19 @@
       padding: 10px;
       white-space: pre-wrap;
       word-wrap: break-word;
-      font: 11pt monospace;
+      font: 13pt monospace;
       line-height: 1.2em;
       background-color: #000;
+      color: #fff;
+    }
+    #data .positive {
       color: #0c0;
+    }
+    #data .negative {
+      color: #c00;
+    }
+    #data .error {
+      color: #c00;
     }
     #compressedPoem {
       -moz-user-select: text;
@@ -116,6 +126,7 @@
     var SYMBOL_REGEX = '\\u' + FIRST_SYMBOL.toString(16) + '-\\u' + LAST_SYMBOL.toString(16);
     var dictEntries = [];
     var missingSymbolsMap = {
+      0x2601: 0x271a,
       0x2614: 0x2702,
       0x2615: 0x2706,
       0x2618: 0x2708,
@@ -141,8 +152,8 @@
         "Pease_porridge_hot_Pease_porridge_cold_Pease_porridge_in_the_pot_Nine_days_old._Some_like_it_hot_Some_like_it_cold_Some_like_it_in_the_pot_Nine_days_old.",
         "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     ];
-    var poemCalc = poemsList[0];
     var poemText = poemsList[0];
+    var compressedPoemSize = poemText.length;
 
     function poemChanged() {
       if (poemSelect.length == 0) {
@@ -186,27 +197,37 @@
     function setupPoemWithText(text) {
       text = text.replace(/[ \n]/g, "_");
       document.getElementById("compressedPoem").innerHTML = text;
-      poemCalc = text;
       poemText = text;
       calculateData();
     }
 
-    function calculateData() {
+    function calculateData(errorInDictionary) {
       var text = editor.getValue();
       var dictSize = text.length + 1;
       if (text.length === 0) {
         dictSize = 0;
       }
 
-      var poemSize = poemCalc.length;
-      var total = dictSize + poemSize;
+      var total = dictSize + compressedPoemSize;
       var compression = (1 - (total / poemText.length)) * 10000;
-      compression = Math.round(compression);
-      compression /= 100;
-      document.getElementById("data").innerHTML = "      poem size: " + poemSize + " bytes\n";
-      document.getElementById("data").innerHTML += "dictionary size: " + dictSize + " bytes\n";
-      document.getElementById("data").innerHTML += "          total: " + total + " bytes\n";
-      document.getElementById("data").innerHTML += "    compression: " + compression + "%\n";
+      compression = Math.round(compression) / 100;
+      var compressionClass = '';
+      if (errorInDictionary) {
+        compressionClass = 'error';
+        compression = 'Error in dictionary'
+      } else {
+        if (compression > 0) {
+          compressionClass = 'positive';
+        } else if (compression < 0) {
+          compressionClass = 'negative';
+        }
+        compression += '%';
+      }
+      document.getElementById("data").innerHTML =  "Compressed poem size: " + compressedPoemSize + " bytes\n"
+          + "     Dictionary size: " + dictSize + " bytes\n"
+          + "               Total: " + total + " bytes\n"
+          + "  Original poem size: " + poemText.length + " bytes\n"
+          + "         Compression: <span class='" + compressionClass + "'>" + compression + "</span>\n";
     }
 
     // From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
@@ -217,11 +238,13 @@
     function compress() {
       var poemDisplay = poemText;
       var dict = editor.getValue().split("\n").slice(0, MAX_DICT_ENTRIES);
+      var errorInDictionary = false;
 
       var validRules = dict.map(function (rule, index) {
         var line = editor.getLineHandle(index);
         if (new RegExp('[' + dictEntries[index] + '-\\u' + LAST_SYMBOL.toString(16) + ']').test(rule)) {
           editor.addLineClass(line, 'wrap', 'dict-error');
+          errorInDictionary = true;
           return '';
         }
         editor.removeLineClass(line, 'wrap', 'dict-error');
@@ -234,20 +257,22 @@
         }
       });
 
-      poemCalc = poemDisplay;
+      compressedPoemSize = poemDisplay.length;
       document.getElementById("compressedPoem").innerHTML = poemDisplay.replace(
           new RegExp('[' + SYMBOL_REGEX + ']+', "g"), "<mark>$&</mark>");
-      calculateData();
+      calculateData(errorInDictionary);
     }
   </script>
 </head>
 <body>
   <div id="widgetTop">
     <p id="widgetInstructions">Look at the poem for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the poem in place of the pattern.</p>
-    <div id="choosePoem">
-      <label for="poemsList">Choose a poem:</label>
-      <select id="poemsList" onChange="poemChanged();"></select>
-      <button id="writeYourOwn" class="btn">Write your own</button>
+    <div id="reference_area_target" data-minimal="true"></div>
+    <div id="menu">
+      <label for="poemsList" class="choosePoem">Choose a poem:</label>
+      <select id="poemsList" class="choosePoem" onChange="poemChanged();"></select>
+      <button id="writeYourOwn" class="btn choosePoem">Write your own</button>
+      <button id="finished" class="btn btn-primary submitButton">Finished! Continue to next stage</button>
     </div>
     <div class="widgetLeftHeader">Compressed:</div>
     <div class="widgetRightHeader">Dictionary:</div>
@@ -279,7 +304,7 @@
       } catch (e) { }
     }
     if (poemsList.length === 1) {
-      $('#choosePoem').hide();
+      $('.choosePoem').hide();
     }
     $dictionary.val(options.dictionary);
 

@@ -110,6 +110,12 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   NetSimNode.call(this, shard, row);
 
   /**
+   * Unix timestamp (local) of router creation time.
+   * @type {number}
+   */
+  this.creationTime = utils.valueOr(row.creationTime, Date.now());
+
+  /**
    * Sets current DNS mode for the router's local network.
    * This value is manipulated by all clients.
    * @type {DnsMode}
@@ -199,6 +205,14 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.stateChange = new ObservableEvent();
 
   /**
+   * Event others can observe, which we fire when the router statistics
+   * change (which may be very frequent...)
+   *
+   * @type {ObservableEvent}
+   */
+  this.statsChange = new ObservableEvent();
+
+  /**
    * Local cache of wires attached to this router, used for detecting and
    * broadcasting relevant changes.
    *
@@ -281,13 +295,13 @@ NetSimRouterNode.inherits(NetSimNode);
  */
 NetSimRouterNode.create = function (shard, onComplete) {
   NetSimEntity.create(NetSimRouterNode, shard, function (err, router) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, null);
       return;
     }
 
     NetSimHeartbeat.getOrCreate(shard, router.entityID, function (err, heartbeat) {
-      if (err !== null) {
+      if (err) {
         onComplete(err, null);
         return;
       }
@@ -315,13 +329,13 @@ NetSimRouterNode.create = function (shard, onComplete) {
  */
 NetSimRouterNode.get = function (routerID, shard, onComplete) {
   NetSimEntity.get(NetSimRouterNode, routerID, shard, function (err, router) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, null);
       return;
     }
 
     NetSimHeartbeat.getOrCreate(shard, routerID, function (err, heartbeat) {
-      if (err !== null) {
+      if (err) {
         onComplete(err, null);
         return;
       }
@@ -349,6 +363,7 @@ var RouterStatus = NetSimRouterNode.RouterStatus;
 
 /**
  * @typedef {Object} routerRow
+ * @property {number} creationTime - Unix timestamp (local)
  * @property {number} bandwidth - Router max transmission/processing rate
  *           in bits/second
  * @property {number} memory - Router max queue capacity in bits
@@ -367,6 +382,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
   return utils.extend(
       NetSimRouterNode.superPrototype.buildRow_.call(this),
       {
+        creationTime: this.creationTime,
         bandwidth: serializeNumber(this.bandwidth),
         memory: serializeNumber(this.memory),
         dnsMode: this.dnsMode,
@@ -382,6 +398,7 @@ NetSimRouterNode.prototype.buildRow_ = function () {
  * @private
  */
 NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
+  this.creationTime = remoteRow.creationTime;
   this.bandwidth = deserializeNumber(remoteRow.bandwidth);
   this.memory = deserializeNumber(remoteRow.memory);
   this.dnsMode = remoteRow.dnsMode;
@@ -689,6 +706,15 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID, packetSpec) 
     var newMessageHandler = this.onMessageTableChange_.bind(this);
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
     logger.info("Router registered for messageTable tableChange");
+
+    // Populate router log cache with initial data
+    this.shard_.logTable.readAll(function (err, rows) {
+      if (err) {
+        logger.warn("Failed to read from log table: " + err.message);
+        return;
+      }
+      this.onLogTableChange_(rows);
+    }.bind(this));
   }
 };
 
@@ -1033,7 +1059,6 @@ NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
 
   if (!_.isEqual(this.stateCache_, myRow)) {
     this.stateCache_ = myRow;
-    logger.info("Router state changed.");
     this.onMyStateChange_(myRow);
   }
 };
@@ -1083,6 +1108,33 @@ NetSimRouterNode.prototype.getLog = function () {
 };
 
 /**
+ * @returns {number} the number of packets in the router queue
+ */
+NetSimRouterNode.prototype.getQueuedPacketCount = function () {
+  return this.routerQueueCache_.length;
+};
+
+/**
+ * @returns {number} router memory currently in use, in bits
+ */
+NetSimRouterNode.prototype.getMemoryInUse = function () {
+  return this.routerQueueCache_.reduce(function (prev, cur) {
+    return prev + cur.payload.length;
+  }, 0);
+};
+
+/**
+ * @returns {number} expected router data rate (in bits per second) over the
+ *          next second
+ */
+NetSimRouterNode.prototype.getCurrentDataRate = function () {
+  // For simplicity, we're defining the 'curent data rate' as how many bits
+  // we expect to get processed in the next second; which is our queue size,
+  // capped at our bandwidth.
+  return Math.min(this.getMemoryInUse(), this.bandwidth);
+};
+
+/**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
  * @param {messageRow[]} rows
@@ -1118,32 +1170,33 @@ NetSimRouterNode.prototype.updateRouterQueue_ = function (rows) {
   this.routerQueueCache_ = newQueue;
   this.recalculateSchedule();
   this.enforceMemoryLimit_();
-
-  // Propagate notification of queue change (for stats, etc)
+  this.statsChange.notifyObservers(this);
 };
 
+/**
+ * Checks the router queue for packets beyond the router's memory limit,
+ * and drops the first one we simulate locally.  Since this will trigger
+ * a table change, this will occur async-recursively until all packets
+ * over the memory limit are dropped.
+ * @private
+ */
 NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
-  if (this.currentlyEnforcingMemoryLimit_) {
-    return;
-  }
-
   // Only proceed if a packet we simulate exists beyond the memory limit
   var droppablePacket = this.findFirstLocallySimulatedPacketOverMemoryLimit();
   if (!droppablePacket) {
     return;
   }
 
-  this.currentlyEnforcingMemoryLimit_ = true;
   this.removeRowFromSchedule_(droppablePacket);
   var droppableMessage = new NetSimMessage(this.shard_, droppablePacket);
   droppableMessage.destroy(function (err) {
     if (err) {
-      this.currentlyEnforcingMemoryLimit_ = false;
+      // Rarely, this could fire twice for one packet and have one drop fail.
+      // That's fine; just don't log if we didn't successfully drop.
       return;
     }
 
     this.log(droppableMessage.payload, NetSimLogEntry.LogStatus.DROPPED);
-    this.currentlyEnforcingMemoryLimit_ = false;
   }.bind(this));
 };
 

@@ -73,3 +73,25 @@
       not_saved:
         one: 'Įvyko klaida, kuri neleido šio %{resource} išsaugoti:'
         other: 'Įvyko %{count} klaidų, kurios neleido  išsaugoti šio %{resource}:'
+    invitations:
+      send_instructions: Laiškas su pakvietimu buvo išsiųstas gavėjui %{email}.
+      invitation_token_invalid: Pakvietimas nebegalioja!
+      updated: Jūsų slaptažodis sėkmingai sukurtas. Dabar esate prisijungęs.
+      no_invitations_remaining: Kvietimų nėra
+      invitation_removed: Jūsų kvietimas buvo pašalintas.
+      new:
+        header: Siųsti kvietimą
+        submit_button: Siųsti kvietimą
+      edit:
+        header: Nustatykite savo slaptažodį
+        submit_button: Sukurti slaptažodį
+    mailer:
+      invitation_instructions:
+        subject: Pakvietimų instrukcijos
+        hello: Sveiki %{email}
+        someone_invited_you: Kažkas Jus pakvietė į %{url}, galite priimti kvietimą
+          spausdami žemiau pateiktą nuorodą.
+        accept: Priimti pakvietimą
+        ignore: Jei nenorite priimti pakvietimo, ignoruokite šį laišką.<br />Jūsų
+          paskyra nebus sukurta, kol nenueisite į šią nuorodą ir nesukursite savo
+          slaptažodžio.

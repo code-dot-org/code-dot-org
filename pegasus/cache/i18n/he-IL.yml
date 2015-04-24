@@ -10,12 +10,12 @@
     הקוד שלכם</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">האם אתה מורה למדעי המחשב? ראה עוד משאבים של CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>ניסיתם</h3><h2>שעה של קוד</h2>
+  n_have_learned_an_hoc: <h1>נסו</h1><h2>שעת קוד</h2><h3># מוגשת</h3>
   anybody_can_learn: כל אחד יכול ללמוד.
   learn_now: למד עכשיו
   petition_message: כל תלמיד בכל בית-ספר זכאי להזדמנות ללמוד מדעי המחשב
   petition_sign_message: 'אם אתה מסכים, חתום בשמך. הצטרף ל- # אחרים.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: אם אתם תומכים בנו חיתמו את שמכם. צרפו# נוספים.
   name: שם
   email: דואר אלקטרוני
   zipcode: מיקוד או מדינה
@@ -30,7 +30,7 @@
   hoc2014_teachers: מורים
   hoc2014_host: ארח זאת
   hoc2014_everyone: כולם
-  hoc2014_support: תמוך בו
+  hoc2014_support: תמוך בו &#x25BE;
   hoc2014_whatishoc: מהו Hour of Code?
   twentyhours_trynow: נסה עכשיו
   california_heading: בקש מבית הספר שלך ללמד מדעי המחשב
@@ -108,8 +108,8 @@
   learn_classes: מצא כיתות מקומיות
   hoc_is_here: ה- HourOfCode# הגיע - לכו לבדוק! codeorg@
   just_did_hoc: בדיוק עכשיו עשיתי את ה-HourOfCode# - לכו לבדוק! codeorg@
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: מדוע אין יות ר בתי ספר המלמדים מדעי המחשב? אנחנו יכולים לתקן זאת.
+    http://youtu.be/nKIu9yen5nc . בקרו ב -  http://code.org/ למידע נוסף.
   learn_hoc: למד שעה של קוד
   beyond_hoc: מעבר לשעה אחת
   what_gender: מהו המין שלך?
@@ -131,6 +131,7 @@
   stats_michael: '" <b>מעולם לא</b> ראיתי את התלמידים שלי מתרגשים כך מלמידה." - מיכאל
     קלארק, מורה'
   studiobar_title: חקור את <a href='http://studio.code.org'> קוד סטודיו</a>
+  studiobar_title_nolink: חקור את  קוד סטודיו
   studiobar_elementary_title: קורסים בסיסיים
   studiobar_elementary_body: שלושת הקורסים החדשים שלנו עבור K &#8209; 5
   studiobar_hoc_title: שעה של קוד
@@ -142,58 +143,72 @@
   studiobar_frozen_title: שעה של קוד
   studiobar_frozen_body: צור עולם פלאים חורפי עם אלסה ואנה
   studiobar_donate_title: תרום
-  studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala\n"
-  homepage_hero_text_susan: |
-    &ldquo;It's never too late
-    to learn&rdquo;
-    Susan, CEO of YouTube
+  studiobar_donate_body: ילד אחד ילמד עבור כל דולר תרומה
+  studiobar_shop_title: חנות
+  studiobar_shop_body: שברו סטריאוטיפים. לבשו את הלוגו שלנו בגאווה.
+  homepage_hero_text_malala: "&ldquo; אני מאתגרת בנות בכל מדינה בעולם - לימדו שעת
+    קוד אחת&rdquo; \nמלאלה, זוכת פרס נובל לשלום\n"
+  homepage_hero_text_susan: '&ldquo;אם ביכולתכם לשנות את הטכנולוגיה, תוכלו לשנות את
+    העולם. &rdquo; סוזן, מנכלית YouTube'
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;An understanding of computer science
-    is becoming increasingly essential...&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;לא רק לשחק בטלפון,
+    לתכנת אותו.&rdquo;
+    הנשיא ברק אובמה
+  homepage_hero_text_sheryl: '&ldquo;לילדים שלנו&mdash; כולל הבנות שלנו&mdash; מגיעה
+    הזדמנות ללמוד מדעי המחשב&rdquo; שריל, מנכ"לית תפעול, פייסבוק'
+  homepage_hero_text_satya: '&ldquo;מדעי המחשב יכולים לפתוח את ההזדמנויות הטובות ביותר
+    בעולם.&rdquo; סטיה, מנכ"לית מיקרוסופט'
+  homepage_hero_text_bosh: '&ldquo;אם תכתוב קוד, תוכל לבחור את מהלך חייך.&rdquo; כריס
+    בוש'
+  homepage_hero_text_student1: '&ldquo;מיומנויות אלה שינו את העתיד שלי. מעבר לזה,
+    זה פשוט כיף.&rdquo; לונה, כיתה ז'''
+  homepage_hero_text_student2: '&ldquo;מעולם לא ראיתי את תלמידי נרגשים כל כך ללמוד
+    משהו.&rdquo; מייקל, מורה'
+  homepage_hero_text_student3: '&ldquo;אין לך אפשרות לדעת אם אתה אוהב מדעי המחשב או
+    לא לפני שניסית.&rdquo; ג''קסון, כיתה ו'''
+  homepage_hero_text_student4: '&ldquo;אתה יכול לעשות כל מה שאתה חושב באמצעות תכנות.&rdquo;
+    מאיה, כיתה ב'''
+  homepage_hero_text_student5: '&ldquo;מדעי המחשב הם לא בשביל מישהו אחר. הם עבורך,
+    כאן, עכשיו.&rdquo; ג''רלדו, מורה'
+  homepage_hero_text_teacher1: '&ldquo;תכנות דורש יצירתיות, השראה וחדשנות &mdash;
+    אשר חיוניים בכל קריירה שהיא.&rdquo; פלורסה, מורה'
+  homepage_hero_text_teacher2: '&ldquo;התוכנית הזו גרמה ל 1005 מהתלמידים שלי להיות
+    פעילים ומעורבים. &rdquo; אדם, מורה'
   homepage_slot_text_hoc: שעה של קוד
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: לשבור את הקרח עם אנה ואלזה
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: כל המדריכים שלנו
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: חנות
   homepage_slot_text_flappy: קוד מתנופף
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_action_text_codevideo: צפה בסרטון
+  homepage_action_text_teachervideo: צפה בסרטון
+  homepage_action_text_learn: התחל ללמוד היום
+  homepage_action_text_signpetition: חתום על העצומה
+  homepage_signpetition_dropdown: חתום על העצומה שלנו;
   homepage_slot_text_title_hoc: שעה של קוד
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: כל אחד יכול ללמוד. התחל היום
   homepage_slot_text_link_hoc: נסה את "שעת הקוד" (Hour of Code)
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: ארח שעה של קוד
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_link_codestudio: נסה את סטודיו הקוד
+  homepage_slot_text_link_local: מצא כיתה מקומית
+  homepage_slot_text_link_othercourses: קורסים אחרים באינטרנט
   homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_blurb_educators: למד את התלמידים שלך
   homepage_slot_text_link_k5: Courses for grades K-5
   homepage_slot_text_link_fullcurriculum: See our full curriculum
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_stats: ראה סטטיסטיקה
   homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_link_donate: תרום
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_donors_seall: ראה הכל
   homepage_donors_donate: תרום
   contact_form_topic_student: אני תלמיד
   contact_form_topic_parent: אני הורה
@@ -250,13 +265,13 @@
     באוניברסיטת הנוכחי (או חוקר)
   volunteer_engineer_submission_experience_software_professional: תוכנה מקצועית
   petition_age: גיל
-  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_title: דף הבית של המורה
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
-  dashboard_landing_video: Watch this video
+  dashboard_landing_video: צפה בסרטון זה
   dashboard_landing_watch_video: for a tour of the new features!
   dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
-  dashboard_landing_students_manage: View and manage your students
+  dashboard_landing_students_title: תלמידיך
+  dashboard_landing_students_manage: צפה ונהל את התלמידים שלך
   dashboard_landing_news_title: K-5 Educator Resources (in English only)
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
@@ -273,25 +288,25 @@
   dashboard_landing_available_title: Available courses
   dashboard_landing_available_courses: Here are the courses currently available for
     you and your students.
-  dashboard_landing_loading: Loading...
+  dashboard_landing_loading: טוען...
   dashboard_action_edit: ערוך
-  dashboard_action_save: Save
-  dashboard_action_save_all: Save all
+  dashboard_action_save: שמור
+  dashboard_action_save_all: שמור הכל
   dashboard_action_cancel: בטל
-  dashboard_action_delete: Delete
+  dashboard_action_delete: מחק
   dashboard_action_delete_yes: כן
   dashboard_action_delete_no: לא
-  dashboard_action_confirm: Delete?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
-  dashboard_action_done: Done
-  dashboard_action_required: required
+  dashboard_action_confirm: למחוק?
+  dashboard_action_remove: הסר
+  dashboard_action_remove_confirm: להסיר?
+  dashboard_action_done: מוכן
+  dashboard_action_required: דרוש
   dashboard_navigation_home_page: Teacher home page
   dashboard_navigation_section_student_progress: Student Accounts and Progress
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: התקדמות הקורס שלך
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
   dashboard_navigation_section_community: Help and Community
-  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_pd: פיתוח מקצועי
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: View Progress
@@ -330,27 +345,26 @@
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_placeholder_name: Student Name
+  dashboard_students_placeholder_name: שם תלמיד
   dashboard_students_name: שם
-  dashboard_students_progress: Progress
+  dashboard_students_progress: התקדמות
   dashboard_students_age: גיל
   dashboard_students_gender: מין
   dashboard_students_male: גבר
   dashboard_students_female: אישה
-  dashboard_students_secret: Secret
+  dashboard_students_secret: סוד
   dashboard_students_password: סיסמה
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
-  dashboard_students_show_secret: Show secret
+  dashboard_students_completed_levels: שלבים שהושלמו
+  dashboard_students_total_lines: שורות קוד
+  dashboard_students_show_secret: הראה סוד
   dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
-  dashboard_students_share_section: 'Share this section''s sign in page with your
-    students:'
-  dashboard_students_print_info: Print out cards with your students' login information.
-  dashboard_students_secret_picture: Secret Picture
+  dashboard_students_reset_secret: אפס סוד
+  dashboard_students_reset_password: אפס סיסמה
+  dashboard_students_share_section: 'שתף את חלק הכניסה עם התלמידים שלך:'
+  dashboard_students_print_info: הדפס כרטיסים עם מידע ההתחברות של התלמידים שלך.
+  dashboard_students_secret_picture: תמונה סודית
   dashboard_students_reset_picture: You may reset a student's secret picture at any
     time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
     picture will be generated for that student to use when they sign in.
@@ -376,21 +390,21 @@
   dashboard_framework: Framework
   dashboard_standards: Standards
   dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
+  dashboard_glossary: מילון
   dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
-  dashboard_puzzle_solving: 'Puzzle-solving:'
-  dashboard_student_worksheet: student worksheet
-  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_debugging: 'מציאת טעויות:'
+  dashboard_puzzle_solving: 'פתירת פאזל:'
+  dashboard_student_worksheet: דף עבודה לתלמיד
+  dashboard_teacher_worksheet: דף עבודה למורה
   dashboard_grade_k: K
   dashboard_grade_other: אחר
-  dashboard_login_word: Word
-  dashboard_login_picture: Picture
+  dashboard_login_word: מילה
+  dashboard_login_picture: תמונה
   dashboard_login_none: דואר אלקטרוני
-  dashboard_new_password: new password
+  dashboard_new_password: סיסמה חדשה
   dashboard_progress_not_started: not started
   dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: not completed
+  dashboard_progress_not_completed: לא הושלם
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted

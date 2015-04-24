@@ -157,10 +157,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "Bạn sử dụng một chuỗi màu sắc không hợp lệ: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "Bạn sử dụng một chuỗi phong cách không hợp lệ: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "vòng tròn (bán kính, phong cách, màu sắc)"},
-"displayBlockTitle":function(d){return "display"},
+"displayBlockTitle":function(d){return "đánh giá"},
 "ellipseBlockTitle":function(d){return "elip (chiều rộng, chiều cao, phong cách, màu sắc)"},
-"emptyFunctionalBlock":function(d){return "Bạn có một khối với input chưa điền."},
-"extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"},
+"extraTopBlocks":function(d){return "Bạn có những khối chưa đính vào. Bạn có muốn đính những khối này vào khối \"đánh giá\" ?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
 "overlayBlockTitle":function(d){return "overlay (top, bottom)"},
 "placeImageBlockTitle":function(d){return "place-image (x, y, image)"},
@@ -182,4 +181,5 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "solid":function(d){return "solid"},
 "string":function(d){return "string"},
 "stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."}};
+"userCodeException":function(d){return "An error occurred while executing your code."},
+"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};

@@ -281,18 +281,24 @@
       VideoGamesCoordinatePlanes:
         title: Videojuegos y planos de coordenadas
         desc: Descripción de la clase sobre videojuegos y planos de coordenadas
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contratos
         desc: Descripción de la clase sin conexión sobre contratos
+        video: alg_5_contracts
       DesignRecipe:
         title: La receta de diseño
         desc: Descripción de la clase sobre receta de diseño
+        video: alg_8_design_recipe
       Booleans:
         title: Valores booleanos
         desc: Descripción de la clase sobre booleanos
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Funciones por partes y condicionales
         desc: Descripción de la clase sobre funciones por partes y condicionales
+        video: alg_10_conditionals
       CollisionDetection:
         title: Detección de colisiones
         desc: Descripción de la clase sobre detección de colisiones
+        video: alg_16_biggame_collision_detection
