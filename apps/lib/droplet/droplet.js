@@ -8514,11 +8514,12 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })(parser.Parser);
     JavaScriptParser.parens = function(leading, trailing, node, context) {
-      var results;
+      var lineEnd, results;
       if ((context != null ? context.type : void 0) === 'socket' || ((context == null) && indexOf.call(node.classes, 'mostly-value') >= 0 || indexOf.call(node.classes, 'value-only') >= 0) || indexOf.call(node.classes, 'ends-with-brace') >= 0 || node.type === 'segment') {
         trailing(trailing().replace(/;?\s*$/, ''));
       } else {
-        trailing(trailing().replace(/;?\s*$/, ';'));
+        lineEnd = ';' + (context ? '' : '\n');
+        trailing(trailing().replace(/;?\s*$/, lineEnd));
       }
       if (context === null || context.type !== 'socket' || context.precedence > node.precedence) {
         results = [];
@@ -9126,29 +9127,25 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       gbr = this.paletteCanvas.getBoundingClientRect();
       return new this.draw.Point(point.x - gbr.left + this.scrollOffsets.palette.x, point.y - gbr.top + this.scrollOffsets.palette.y);
     };
-    Editor.prototype.trackerPointIsInMain = function(point) {
+    Editor.prototype.trackerPointIsInElement = function(point, element) {
       var gbr;
-      if (this.mainCanvas.offsetParent == null) {
+      if (element.offsetParent == null) {
         return false;
       }
-      gbr = this.mainCanvas.getBoundingClientRect();
+      gbr = element.getBoundingClientRect();
       return point.x >= gbr.left && point.x < gbr.right && point.y >= gbr.top && point.y < gbr.bottom;
+    };
+    Editor.prototype.trackerPointIsInMain = function(point) {
+      return this.trackerPointIsInElement(point, this.mainCanvas);
     };
     Editor.prototype.trackerPointIsInMainScroller = function(point) {
-      var gbr;
-      if (this.mainScroller.offsetParent == null) {
-        return false;
-      }
-      gbr = this.mainScroller.getBoundingClientRect();
-      return point.x >= gbr.left && point.x < gbr.right && point.y >= gbr.top && point.y < gbr.bottom;
+      return this.trackerPointIsInElement(point, this.mainScroller);
     };
     Editor.prototype.trackerPointIsInPalette = function(point) {
-      var gbr;
-      if (this.paletteCanvas.offsetParent == null) {
-        return false;
-      }
-      gbr = this.paletteCanvas.getBoundingClientRect();
-      return point.x >= gbr.left && point.x < gbr.right && point.y >= gbr.top && point.y < gbr.bottom;
+      return this.trackerPointIsInElement(point, this.paletteCanvas);
+    };
+    Editor.prototype.trackerPointIsInAce = function(point) {
+      return this.trackerPointIsInElement(point, this.aceElement);
     };
     Editor.prototype.hitTest = function(point, block) {
       var head, seek;
@@ -9318,31 +9315,29 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })(UndoOperation);
     Editor.prototype.spliceOut = function(node) {
-      var leading, ref1, trailing;
-      leading = node.getLeadingText();
-      if (node.start.next === node.end.prev) {
-        trailing = null;
-      } else {
-        trailing = node.getTrailingText();
-      }
-      ref1 = this.mode.parens(leading, trailing, node.getReader(), null), leading = ref1[0], trailing = ref1[1];
-      node.setLeadingText(leading);
-      node.setTrailingText(trailing);
+      this.prepareNode(node, null);
       return node.spliceOut();
     };
     Editor.prototype.spliceIn = function(node, location) {
-      var container, leading, ref1, ref2, ref3, ref4, trailing;
+      var container, ref1;
+      container = (ref1 = location.container) != null ? ref1 : location.visParent();
+      if (container.type === 'block') {
+        container = container.visParent();
+      }
+      this.prepareNode(node, container);
+      return node.spliceIn(location);
+    };
+    Editor.prototype.prepareNode = function(node, context) {
+      var leading, ref1, ref2, trailing;
       leading = node.getLeadingText();
       if (node.start.next === node.end.prev) {
         trailing = null;
       } else {
         trailing = node.getTrailingText();
       }
-      container = (ref1 = location.container) != null ? ref1 : location.visParent();
-      ref4 = this.mode.parens(leading, trailing, node.getReader(), (ref2 = (ref3 = (container.type === 'block' ? container.visParent() : container)) != null ? typeof ref3.getReader === "function" ? ref3.getReader() : void 0 : void 0) != null ? ref2 : null), leading = ref4[0], trailing = ref4[1];
+      ref2 = this.mode.parens(leading, trailing, node.getReader(), (ref1 = context != null ? typeof context.getReader === "function" ? context.getReader() : void 0 : void 0) != null ? ref1 : null), leading = ref2[0], trailing = ref2[1];
       node.setLeadingText(leading);
-      node.setTrailingText(trailing);
-      return node.spliceIn(location);
+      return node.setTrailingText(trailing);
     };
     hook('populate', 0, function() {
       this.clickedPoint = null;
@@ -9509,9 +9504,18 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     };
     hook('mousemove', 0, function(point, event, state) {
-      var best, head, mainPoint, min, palettePoint, position, rect, ref1, ref2, ref3, testPoints;
+      var best, head, mainPoint, min, palettePoint, pos, position, rect, ref1, ref2, ref3, testPoints;
       if (this.draggingBlock != null) {
         position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
+        if (!this.currentlyUsingBlocks) {
+          if (this.trackerPointIsInAce(position)) {
+            pos = this.aceEditor.renderer.screenToTextCoordinates(position.x, position.y);
+            this.aceEditor.focus();
+            this.aceEditor.session.selection.moveToPosition(pos);
+          } else {
+            this.aceEditor.blur();
+          }
+        }
         rect = this.wrapperElement.getBoundingClientRect();
         this.dragCanvas.style.top = (position.y - rect.top) + "px";
         this.dragCanvas.style.left = (position.x - rect.left) + "px";
@@ -9571,45 +9575,53 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.discourageDropTimeout = null;
     });
     hook('mouseup', 1, function(point, event, state) {
-      var head;
-      if ((this.draggingBlock != null) && (this.lastHighlight != null)) {
-        if (this.inTree(this.draggingBlock)) {
-          this.addMicroUndoOperation('CAPTURE_POINT');
-          this.addMicroUndoOperation(new PickUpOperation(this.draggingBlock));
-          this.spliceOut(this.draggingBlock);
-        }
-        this.clearHighlightCanvas();
-        switch (this.lastHighlight.type) {
-          case 'indent':
-          case 'socket':
-            this.addMicroUndoOperation(new DropOperation(this.draggingBlock, this.lastHighlight.start));
-            this.spliceIn(this.draggingBlock, this.lastHighlight.start);
-            break;
-          case 'block':
-            this.addMicroUndoOperation(new DropOperation(this.draggingBlock, this.lastHighlight.end));
-            this.spliceIn(this.draggingBlock, this.lastHighlight.end);
-            break;
-          default:
-            if (this.lastHighlight === this.tree) {
-              this.addMicroUndoOperation(new DropOperation(this.draggingBlock, this.tree.start));
-              this.spliceIn(this.draggingBlock, this.tree.start);
+      var head, position;
+      if (this.draggingBlock != null) {
+        if (!this.currentlyUsingBlocks) {
+          position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
+          if (this.trackerPointIsInAce(position)) {
+            this.prepareNode(this.draggingBlock, null);
+            return this.aceEditor.onTextInput(this.draggingBlock.stringify(this.mode));
+          }
+        } else if (this.lastHighlight != null) {
+          if (this.inTree(this.draggingBlock)) {
+            this.addMicroUndoOperation('CAPTURE_POINT');
+            this.addMicroUndoOperation(new PickUpOperation(this.draggingBlock));
+            this.spliceOut(this.draggingBlock);
+          }
+          this.clearHighlightCanvas();
+          switch (this.lastHighlight.type) {
+            case 'indent':
+            case 'socket':
+              this.addMicroUndoOperation(new DropOperation(this.draggingBlock, this.lastHighlight.start));
+              this.spliceIn(this.draggingBlock, this.lastHighlight.start);
+              break;
+            case 'block':
+              this.addMicroUndoOperation(new DropOperation(this.draggingBlock, this.lastHighlight.end));
+              this.spliceIn(this.draggingBlock, this.lastHighlight.end);
+              break;
+            default:
+              if (this.lastHighlight === this.tree) {
+                this.addMicroUndoOperation(new DropOperation(this.draggingBlock, this.tree.start));
+                this.spliceIn(this.draggingBlock, this.tree.start);
+              }
+          }
+          this.moveCursorTo(this.draggingBlock.end, true);
+          if (this.lastHighlight.type === 'socket') {
+            this.reparseRawReplace(this.draggingBlock.parent.parent);
+          } else {
+            head = this.draggingBlock.start;
+            while (!(head.type === 'socketStart' && head.container.isDroppable() || head === this.draggingBlock.end)) {
+              head = head.next;
             }
-        }
-        this.moveCursorTo(this.draggingBlock.end, true);
-        if (this.lastHighlight.type === 'socket') {
-          this.reparseRawReplace(this.draggingBlock.parent.parent);
-        } else {
-          head = this.draggingBlock.start;
-          while (!(head.type === 'socketStart' && head.container.isDroppable() || head === this.draggingBlock.end)) {
-            head = head.next;
+            if (head.type === 'socketStart') {
+              this.setTextInputFocus(null);
+              this.setTextInputFocus(head.container);
+            }
           }
-          if (head.type === 'socketStart') {
-            this.setTextInputFocus(null);
-            this.setTextInputFocus(head.container);
-          }
+          this.fireEvent('block-click');
+          return this.endDrag();
         }
-        this.fireEvent('block-click');
-        return this.endDrag();
       }
     });
     Editor.prototype.reparseRawReplace = function(oldBlock) {
