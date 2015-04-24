@@ -6,7 +6,6 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onscreen.bind = function(y) {\r\n    return this.resolveCachedBlock_('VALUE')(y);\r\n  };\r\n  Studio.customLogic.constructor.prototype.onTick = function() {  \r\n  \tif (this.studio_.tickCount === 1) {\r\n      this.stopped = {left: false, up: false, right: false, down: false};\r\n    }\r\n    originalOnTick();\r\n    Studio.Globals.succeeded = (this.stopped.up && this.stopped.down && this.stopped.left && this.stopped.right) &&\r\n      (this.sam.y < 0 || this.sam.y > 300 || this.sam.x < 0 || this.sam.x > 300);\r\n  }\r\n  //return Studio.Globals.succeeded;\r\n}",
     "failure_condition": "function () {\r\n  //return (Studio.sprite[0].y < -100 || Studio.sprite[0].y > 400 ||\r\n  //        Studio.sprite[0].x < -100 || Studio.sprite[0].y > 400);\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
@@ -43,7 +42,8 @@
     "generate_function_pass_blocks": "true",
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Sam the Butterfly 5 2\",\r\n  \"callout_text\": \"You can create new functions to check safe-up? and safe-down?\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": 70\r\n    },\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Sam the Butterfly 5 2\",\r\n  \"callout_text\": \"You can create new functions to check safe-up? and safe-down?\",\r\n  \"element_id\": \"[id=':3.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "disable_examples": "false",
     "maze_data": null
   },
   "md5": "bd90f776afb9b3a0f31eb3a5f0c582a1"

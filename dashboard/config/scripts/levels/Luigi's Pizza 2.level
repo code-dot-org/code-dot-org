@@ -22,10 +22,12 @@
     "free_play": "true",
     "coordinate_grid_background": "false",
     "project_template_level_name": "Luigi's Pizza",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"luigi's pizza 2\",\r\n  \"callout_text\": \"Edit this function to add your own toppings\",\r\n  \"element_id\": \"#topping\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"top right\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"luigi_pizza_2\",\r\n  \"callout_text\": \"Edit this function to add your own toppings\",\r\n  \"element_id\": \"[block-id='2'] > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions": "Right now there are only four choices available at Luigi's pizza - let's fix that! Add a couple of new toppings to the conditional block in the \"cost\" function. Once you've added your toppings, test out the function to make sure it works.",
-    "min_workspace_height": "2000"
-  }
+    "min_workspace_height": "2000",
+    "disable_examples": "false"
+  },
+  "md5": "db5ea50e7d06f3125d1182978c3aa275"
 }]]></config>
   <blocks>
     <toolbox_blocks>

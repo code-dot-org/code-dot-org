@@ -152,9 +152,9 @@ class ActivitiesController < ApplicationController
     end
 
     begin
-       trophy_check(current_user) if passed && @script_level && @script_level.script.trophies
+      trophy_check(current_user) if passed && @script_level && @script_level.script.trophies
     rescue StandardError => e
-       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
+      Rails.logger.error "Error updating trophy exception: #{e.inspect}"
     end
   end
 
@@ -186,7 +186,7 @@ class ActivitiesController < ApplicationController
   def trophy_check(user)
     @trophy_updates ||= []
     # called after a new activity is logged to assign any appropriate trophies
-    current_trophies = user.user_trophies.includes([:trophy, :concept]).index_by { |ut| ut.concept }
+    current_trophies = user.user_trophies.includes([:trophy, :concept]).index_by(&:concept)
     progress = user.concept_progress
 
     progress.each_pair do |concept, counts|

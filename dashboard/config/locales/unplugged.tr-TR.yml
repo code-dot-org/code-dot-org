@@ -275,18 +275,24 @@
       VideoGamesCoordinatePlanes:
         title: Video oyunları ve kordinat düzlemleri
         desc: Video Games and Coordinate Planes lesson description
+        video: alg_11_coordinate_plane
       Contracts:
         title: Teknikler
         desc: Contracts unplugged lesson description
+        video: alg_5_contracts
       DesignRecipe:
         title: Tasarım Tarifi
         desc: Design Recipe lesson description
+        video: alg_8_design_recipe
       Booleans:
         title: Boolean Değerleri
         desc: Booleans lesson description
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Koşullar ve Parçalı Fonksiyonlar
         desc: Conditionals and Piecewise Functions lesson description
+        video: alg_10_conditionals
       CollisionDetection:
         title: Çakışma Bulma
         desc: Çakışma Bulma dersi tanımı
+        video: alg_16_biggame_collision_detection

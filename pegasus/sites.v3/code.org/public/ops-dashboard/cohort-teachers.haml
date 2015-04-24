@@ -3,14 +3,8 @@ layout: none
 theme: none
 ---
 - authentication_required!
-%a{href:'/ops-dashboard'}
-  Dashboard
->
-%a{href:'/ops-dashboard#/teacher-cohorts'}
-  Teacher cohorts
->
-%span
-  Teacher cohort management
+
+= view :breadcrumbs, trail: [{url: '/teacher-dashboard', text: 'Dashboard'}, {url: '/ops-dashboard#/teacher-cohorts', text: 'PD Workshops'}, {text: 'Teacher cohort management'}]
 
 %h1{"ng-show" => "cohort.id"} Teachers in {{cohort.name}}
 
@@ -21,9 +15,17 @@ theme: none
       %a{'ng-href' => "#/teacher-cohorts/{{cohort.id}}/teachers"} Manage
 
   .managebuttons{"ng-if" => "tab == 'manage' || 1", style: "float:right"}
-    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = false; new_teacher()"} Add teacher
+    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = false; new_teacher()"}
+      %i.fa.fa-user-plus
+      Add teacher
     - if dashboard_user[:admin]
-      %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"} Import teachers
+      %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"}
+        %i.fa.fa-upload
+        Import teachers
+      %a{"ng-href" => '/dashboardapi/cohorts/{{cohort.id}}/teachers.csv'}
+        %button.btn.btn-white
+          %i.fa.fa-download
+          Download teachers
 
 .jumbotron{"ng-show" => "teachers_bulk_import.uploading"}
   %h3 Example format (please include the heading line in your uploaded file):
@@ -65,17 +67,23 @@ theme: none
       %col{width: "120"}/
     %tr
       %th.manage-th
-        First name
+        %a{'ng-click' => 'testOrder(); order = "ops_first_name"'}
+          First name
       %th.manage-th
-        Last name
+        %a{'ng-click' => 'order = "ops_last_name"'}
+          Last name
       %th.manage-th
-        Email
+        %a{'ng-click' => 'order = "email"'}
+          Email
       %th.manage-th
-        District
+        %a{'ng-click' => 'order = "district.name"'}
+          District
       %th.manage-th
-        School
+        %a{'ng-click' => 'order = "ops_school"'}
+          School
       %th.manage-th
-        Gender
+        %a{'ng-click' => 'order = "ops_gender"'}
+          Gender
       %th.manage-th
         %div
           %a.btn.btn-primary{"ng-click" => "saveAll(cohort)", "ng-show" => "editingAny(cohort.teachers) || editingAny(newTeachers)", "ng-disabled" => "allForm.$invalid || isTooManyTeachers()"} Save All
@@ -120,7 +128,7 @@ theme: none
           %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)", "ng-show" => "!teacher.editing && teacher.id"} Delete
 
 
-    %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:['ops_last_name', 'ops_first_name']", style: "vertical-align:top", 'ng-form' => 'form'}
+    %tr{"ng-repeat" => "teacher in cohort.teachers | orderBy:order", style: "vertical-align:top", 'ng-form' => 'form'}
       %td
         %div{"ng-hide" => "teacher.editing"}
           {{teacher.ops_first_name}}
@@ -233,4 +241,8 @@ theme: none
   }
   td {
     word-wrap: break-word;
+  }
+  th a {
+    color: white;
+    cursor: pointer;
   }

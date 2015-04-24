@@ -1,5 +1,4 @@
 !!! 5
-- show_footer = !@no_footer_puzzle && !(@share && browser.mobile?) && !@embed
 %html{dir: locale_dir}
   %head
     %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
@@ -16,20 +15,21 @@
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
-    .wrapper{style: ('background-color: #ffffff' if @embed)}
-      = render partial: 'layouts/header' unless @embed
+    .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
+      - unless view_options[:no_header]
+        = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, full_width: view_options[:full_width]}
       - page = yield
-      - if @full_width
-        .full_container{style: ('padding: 0px;' if @no_padding)}
+      - if view_options[:full_width]
+        .full_container{style: ('padding: 0px;' if view_options[:no_padding])}
           = page
       - else
         .container.main
           = show_flashes.html_safe
           = page
-      - if show_footer
+      - unless view_options[:no_footer]
         .push
 
-    - if show_footer
-      = render partial: 'layouts/footer'
+    - unless view_options[:no_footer]
+      = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
 
     = yield :body_scripts

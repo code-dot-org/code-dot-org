@@ -332,7 +332,7 @@ is:
       4-5 Maze Conditionals Assessment 1_instruction: 'Notaðu "endurtaka þar til" og "ef-annars" kubb til að koma mér til sólblómsins með sem fæstum kubbum.'
       A test level ArtistArtist_instruction: Prófunaráfangi listamanns
       add 2_instruction: Eftir þessa fínu vinnu með síðustu þraut skulum við æfa þetta einu sinni enn. Teiknaðu þetta með 60 díla sexhyrningum.
-      Alice Test_instruction: Here are some instructions!
+      Alice Test_instruction: Hér eru leiðbeiningar!
       Alpha 2-3 Artist Loops New 3_instruction: Nú skulum við teikna 6 ferninga í litum af handahófi. Hvað þarf að snúa um margar gráður eftir hvern ferning til að búa til heilan hring ferninga?
       Alpha Course 3 Artist Functions 5_instruction: 'Uppfærðu fallið "teikna ferning" svo það noti stikann "lengd" til að teikna ferninga. Teiknaðu svo ferning með 100 díla hliðar.'
       Alpha Course 3 Artist Functions 6_instruction: 'Hér er fallið "teikna ferning" með stika. Bættu við réttu kubbunum og breyttu núllinu í rétta tölu. Vísbending: Hliðar ferningsins eru 100 dílar.'
@@ -405,29 +405,73 @@ is:
         function takes the target's current x value, and returns an updated value.
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
-      Big Game Animation 2_instruction: 'Fallið "update-target" (uppfæra-mark) tekur núverandi x gildi marksins og skilar uppfærðu gildi. Ljúktu við fallið svo að bæti við x gildið í hvert sinn sem kallað er á það. Því meira sem er bætt við x, því hraðar hreyfist markið.'
+      Big Game Animation 2_instruction: |
+        The 'update-target' function takes the
+        target's current x value, and returns an updated value. Complete the 'update-target'
+        function so that it adds to the x value each time it is called. The more you
+        add to x, the faster the target will go.
       Big Game Animation 3_instruction: 'Fallið "update-danger" (uppfæra-hættu) ætti að virka alveg eins og fallið "update-target" (uppfæra-mark), nema hvað hættan á að færast frá hægri hlið yfir til vinstri. Ljúktu við fallið "update-danger" svo að hættan fljúgi yfir skjáinn.'
       Big Game Animation 4_instruction: Á þessu stigi í leiknum ætti hættan (danger) að hreyfast yfir skjáinn frá hægri til vinstri og markið (target) ætti að hreyfast frá vinstri til hægri. Eftir að hafa yfirgefið skjáinn koma þeir aldrei til baka, en við leysum það síðar. Gakktu úr skugga um að leikurinn virki eins og þú vilt og smelltu svo á ljúka til að halda áfram.
       Big Game Booleans 1_instruction: 'Síðast þegar við unnum með leikinn fóru leikverurnar mark (target) og hætta (danger) yfir skjáinn, en þær komu aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna að því að láta verurnar birtast aftur.'
-      Big Game Booleans 2_instruction: 'Manstu eftir föllunum "safe-left?" (öruggt-vinstri?) og "safe-right?" (öruggt-hægri?) hjá leðurblökunni Samma? Við ætlum að nota sömu reglu til finna út hvenær markið og hættan yfirgefa skjáinn. Farðu í flokkinn Functions (föll) í verkfærakassanum og ljúktu við "safe-left?" fallið.'
-      Big Game Booleans 3_instruction: 'Eftir "safe-left?" skulum við búa til "safe-right?" (öruggt-hægri?) - þetta fall á að taka x hnit leikveru og skila "true" ef kvikinn er ekki kominn út fyrir hægri brún skjás.'
-      Big Game Booleans 4_instruction: 'Nú höfum við föll til að athuga með vinstri og hægri brúnir skjásins. Breyttu fallinu "on-screen?" (á-skjá?) svo það noti föllin "safe-left?" og "safe-right?", alveg eins og þú gerðir hjá Samma leðurblöku.'
+      Big Game Booleans 2_instruction: |
+        Now that your onscreen? function is checking
+        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
+        section of the toolbox and complete the safe-left? function so that it returns
+        true if the sprite's x coordinate is greater than -50. If you're successful
+        you should see the Danger go off the left side and then return on right side.
+      Big Game Booleans 3_instruction: |
+        Now that you've got safe-left?, let's fill
+        in safe-right? - it should take in a sprite's x coordinate and return true
+        if that coordinate is less than 450. Once your safe-right? is complete you
+        should see the Target go off the right side of the screen and return on the
+        left.
+      Big Game Booleans 4_instruction: |
+        We've provided a couple of empty functions
+        for safe-left? and safe-right? The first thing you need to do is complete
+        the onscreen? function so that it checks whether both safe-left? and safe-right?
+        are true. TIP - even after you add safe-left? and safe-right? your sprites
+        won't return to the screen. That will happen in the next puzzles when we
+        make sure that safe-left? and safe-right? actually work.
       Big Game Booleans 5_instruction: |
         At this point your danger should run across
         the screen from right to left, your target should run across from left to
-        right, and they should both return to the opposite side. Take a minute to
-        make sure your game is working like you want it to, and then click finish
-        to move on.
+        right, and they should both return to the opposite side, repeatedly. Take
+        a minute to make sure your game is working like you want it to, and then click
+        Finish to move on.
       Big Game Collision 1 (copy 1)_instruction: 'Síðast þegar við unnum með leikinn fóru leikverurnar mark (target) og hætta (danger) yfir skjáinn, en þær komu aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna að því að láta verurnar birtast aftur.'
       Big Game Collision 1_instruction: 'Á þessu stigi hefur þú forritað tölvuleik með hreyfanlegu marki (target) og hættu (danger), sem bæði snúa aftur á skjáinn eftir að hafa yfirgefið hann, og leikmann (player) sem bregst við inntaki frá lyklaborði. Smelltu á keyra til að sjá hvernig leikurinn virkar nú. Síðan skulum við takast á við síðasta hlutann sem enn vantar - skynjun árekstra!'
       Big Game Collision 2_instruction: 'Til að færa leikmanninn upp og niður, munum við þurfa að nota skilyrðiskubb til að greina á hvaða lykil er ýtt og bregðast við því. Þegar ýtt er á lykil, túlkar tölvan það sem tölugildi - örvarlykil upp er 38 og ör niður er 40. Þú getur flett öðrum kóðum upp. Breyttu fallinu "update-player" (uppfæra leikmann) svo að það færi leikmanninn upp þegar ýtt er á örina upp og niður þegar ýtt er á örina niður.'
-      Big Game Collision 3_instruction: Til að vita hvort tvær leikverur snertast, þurfum við fyrst að mæla fjarlægðina á milli miðpunkta þeirra. Notaðu reglu Pýþagórasar til að ljúka við þetta fjarlægðarfall þannig að það gefi fjarlægðina á milli milli miðpunktshnita leikmannsins (px, py) og miðpunktshnita annarrar leikveru (cx, cy). Þú færð tilbúið línulengdarfall til að hjálpa þér.
-      Big Game Collision 4_instruction: 'Nú geturðu mælt fjarlægðina milli tveggja punkta, svo það er bara eftir að ákveða hvenær fjarlægðin er svo lítil að það teljist snerting. Ljúktu við fallið "collide?" (árekstur?) svo það noti fjarlægðarfallið og skili sönnu ef punktarnir snertast (það er ágætt að byrja á að miða við 100 díla fjarlægð).'
+      Big Game Collision 3_instruction: |
+        Let's fix this distance function so our
+        collision detection works properly. Use the Distance Formula, so the distance
+        function returns the distance between the player's center coordinates (px,
+        py) and another sprite's center coordinates (cx, cy). We've provided a working
+        line-length function to help you out.
+      Big Game Collision 4_instruction: |
+        We've got a function called distance that
+        should return the distance between two sprites, and using that we can decide
+        when those sprites are close enough to be considered touching. Complete the
+        'collide?' function so that it checks the distance function and returns
+        true if the two points are close enough to touch (100 pixels apart is a good
+        place to start). TIP: the distance function doesn't work yet (it always returns
+        zero), so if you're successful you'll see that your sprites are instantly
+        "colliding," but we'll fix that in a second!
       Big Game Complete (copy 1)_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Complete_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Final_instruction: Þér tókst þetta! Nú ætti leikurinn að hafa fulla virkni. Taktu þér tíma til að njóta hans og fínpússa ef með þarf. Þegar þú ert ánægð/ur með afraksturinn, skaltu smella á Ljúka og þá færðu tækifæri til að deila tengli á leikinn. Vel gert!
-      Big Game Player 1_instruction: Við erum næstum komin með fullbúinn leik! Í síðasta verkefni notaðir þú Boole gildi til að láta markið og hættuna snúa aftur á skjáinn ef þau fóru út af honum. Smelltu á Keyra til að sjá hvernig leikurinn kemur út núna og síðan skulum fara í að láta leikmanninn hreyfast upp og niður.
-      Big Game Player 2_instruction: 'Til að færa leikmanninn upp og niður, munum við þurfa að nota skilyrðiskubb til að greina á hvaða lykil er ýtt og bregðast við því. Þegar ýtt er á lykil, túlkar tölvan það sem tölugildi - örvarlykil upp er 38 og ör niður er 40. Þú getur flett öðrum kóðum upp. Breyttu fallinu "update-player" (uppfæra leikmann) svo að það færi leikmanninn upp þegar ýtt er á örina upp og niður þegar ýtt er á örina niður.'
+      Big Game Player 1_instruction: |
+        We're getting really close to a finished game!
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
+      Big Game Player 2_instruction: |
+        To move the player up and down, we'll need
+        to use a conditional block to figure out which key is pressed and respond
+        accordingly. Computers read keypresses as numeric key codes - the up arrow
+        is 38 and the down arrow is 40. You can lookup other key codes in your student
+        workbook. Edit the 'update-player' function so the player moves up when
+        the up arrow is pressed, and moves down when the down arrow is pressed.
       Big Game Testing_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Vars 1 (copy 1)_instruction: 'Byrjum nú á Stórleiknum þínum! Hér sérðu fullt af staðgengilskóða sem þú munt smám saman skipta út með þínum eigin, en fyrst um sinn ætlum við bara að fást við að skilgreina breytur. Smelltu á "Keyra" til að sjá hvernig leikurinn lítur út með upphaflegum gildum.'
       Big Game Vars 1_instruction: 'Byrjum nú á Stórleiknum þínum! Hér sérðu fullt af staðgengilskóða sem þú munt smám saman skipta út með þínum eigin, en fyrst um sinn ætlum við bara að fást við að skilgreina breytur. Smelltu á "Keyra" til að sjá hvernig leikurinn lítur út með upphaflegum gildum.'
@@ -454,22 +498,14 @@ is:
       C3-Farmer While Loops 8_instruction: ' Hér er mjög djúp hola og mjög stór moldarhaugur. Hve mörg skóflufylli þarf að flytja til að slétta yfirborðið? Vísbending: Notaðu "meðan" lykkju fyrir bæði.'
       C3-Farmer While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar. Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
       C3-Farmer While Loops Multi Pics_instruction: Valspurningar
-      Calc Circles of Eval .1_instruction: |
-        You’ll be writing a kind of code called
-        Evaluation Blocks, because each block of code evaluates to a single value.
-        Change the ??? in this code so that the block evaluates to 5.
+      Calc Circles of Eval .1_instruction: Hér notum við svonefnda matskubba, sem heita það því að hver kubbur er metinn þar til hann gefur stakt gildi. Breyttu ??? í þessum kóða svo að kubburinn gefi 5 við mat.
       Calc Circles of Eval .2_instruction: 'Þessi matskubbur er margföldunarfall sem tekur tvær tölur og skilar margfeldi þeirra. Breyttu kubbnum svo að hann margfaldi 2 * 5'
-      Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition which
-        takes two numbers and returns their sum. Use this Addition block to add 3
-        + 6.
+      Calc Circles of Eval .3_instruction: Hér er fall fyrir samlagningu sem tekur tvær tölur og skilar summu þeirra. Notaðu samlagningarkubbinn til að reikna 3 + 6.
       Calc Circles of Eval .4_instruction: Hér höfum við faldað kubbinn Samlagning innan í kubbinn Margföldun. Ljúktu kóðanum svo að hann margfaldi 3 með (4 + 1)
       Calc Circles of Eval 1 (copy 1)_instruction: 'Breyttu þessu dæmi í mat á <some_shape>.'
       Calc Circles of Eval 1_instruction: 'Hver reikningsaðgerð (+  -  *  / og fleiri) getur haft samsvarandi matskubb í kóða. Breyttu matskubbnum svo hann samsvari formúlunni.'
       Calc Circles of Eval 2 (copy 1)_instruction: 'Breyttu þessu dæmi í mat á <some_shape>.'
-      Calc Circles of Eval 2_instruction: |
-        Use a multiplication block to complete
-        this code.
+      Calc Circles of Eval 2_instruction: Notaðu margföldunarkubb til að ljúka þessum kóða.
       Calc Circles of Eval 3_instruction: Ljúktu við matskubbinn svo hann samsvari þessari formúlu.
       Calc Circles of Eval 4_instruction: Í þennan kóða vantar tvo matskubba. Gættu þess að hafa allt í réttri röð.
       Calc Circles of Eval 5_instruction: Ljúktu við matskubbana svo þeir samsvari þessari formúlu.
@@ -484,31 +520,26 @@ is:
       Calc Define Funcs 3_instruction: 'Við þurfum ekki alltaf að kalla fallið okkar "f". Búðu til fallið með heitinu "times-ten" (sinnum-tíu) sem hefur stikann "x" og skilar x * 10. Keyrðu svo fallið þannig: times-ten(50).'
       Calc Define Funcs 4_instruction: 'Skrifaðu nýtt fall "half" (helmingur) sem tekur tölu "x" og skilar helmingi hennar. Notaðu hana svo til að reikna half(21)'
       Calc Design Recipe 1_instruction: 'Nú skulum við nota hönnunaruppskriftina til að búa til fallið "cube" (3ja veldi). Það á að hafa gildamengið tala, sviðið tala og skila gefnu tölunni í þriðja veldi. Gættu þess að skrifa tvö dæmi! Notaðu svo nýja fallið þitt til að reikna þriðja veldið af 7.'
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function `cost`, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function `sales` which takes in
         the number of cookies sold, and produces the amount of money customers spent
-        to buy those cookies (each cookie costs $1.50).
+        to buy those cookies (each cookie is sold at $1.50).
       Calc Design Recipe 4_instruction: |
-        Free Play: Using the two functions we just
-        wrote, write the function `cookie-profit`, which takes in the number of cookies
-        you sold, and gives you back the total profit you make from selling your cookies,
-        accounting for the cost of baking them.
+        Using the two functions we just wrote, write
+        the function `profit`, which takes in the number of cookies you sold, and
+        gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: 'Frjáls æfing: Skrifaðu föll og algrím eftir eigin höfði!'
       Calc Rocket 1 (copy 1)_instruction: "Í síðustu þraut skrifaðir þú samning fyrir fallið \"rocket-height\" (hæð-flaugar), sem segir að sviðið sé Tala, gildamengið Tala og að það eigi að skila hæð flaugar, sem flýgur á 15 m/s, eftir tiltekinn fjölda sekúndna. Skrifum nú dæmi fyrir hæð flaugar eftir 3 sekúndur.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n"
       Calc Rocket 1_instruction: "Í síðustu þraut skrifaðir þú samning fyrir fallið \"rocket-height\" (hæð-flaugar), sem segir að sviðið sé Tala, gildamengið Tala og að það eigi að skila hæð flaugar, sem flýgur á 15 m/s, eftir tiltekinn fjölda sekúndna. Skrifum nú dæmi fyrir hæð flaugar eftir 3 sekúndur.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n"
       Calc Rocket 2_instruction: 'Þetta er fínt, en bætum öðru dæmi við áður en við skrifum fallið - hver ætti hæð flaugarinnar að vera eftir 30 sekúndur?'
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 years.
-        Can you write an expression that calculates "age" in days?
-      Calc Vars 1_instruction: |
-        Variables allow us to name values so that we can
-        easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age". Set its value to your age and click run.
+        Hér höfum við sett 17 ár í breytuna "age".
+        Getur þú skrifað formúlu sem umreiknar "age" í daga?
+      Calc Vars 1_instruction: 'Með breytum getum við gefið gildum heiti og þannig notað þau aftur og aftur í forriti. Hér er breytan "age" (aldur). Settu aldur þinn í breytuna og smelltu á "keyra"'
       Calc Vars 2 (copy 1)_instruction: 'Hér höfum stillt breytuna "age" (aldur) á 17 (ár). Getur þú skrifað formúlu sem umreiknar "age" í mánuði?'
-      Calc Vars 2.1_instruction: |
-        Here's a new variable called "age-in-months"
-        - use the variable "age" to set "age-in-months"
+      Calc Vars 2.1_instruction: 'Hér er ný breyta, "age-in-months" (aldur í mánuðum). Notaðu breytuna "age" til að setja gildi í "age-in-months"'
       Calc Vars 2_instruction: 'Getur þú skrifað formúlu sem umreiknar "age" (aldur) í mánuði?'
       Calc Vars 3 (copy 1)_instruction: 'Getur þú bætt við þennan kóða svo hann reikni hve margar klukkustundir eru í "age" (aldur) árum?'
       Calc Vars 3_instruction: 'Getur þú bætt við þennan kóða svo hann noti breytuna "age" (aldur) til að reikna aldurinn í klukkustundum?'
@@ -726,10 +757,7 @@ is:
       Course 4 Play Lab Vars 8_instruction: 'Stillum upp leiknum svo hundurinn geti unnið (eða tapað). Notaðu endalausa lykkju til að athuga skorið - ef skorið fer upp fyrir 20, á óvinurinn (kötturinn) að hverfa. Ef skorið fer undir 0, á leikmaðurinn (hundurinn) að hverfa. Smelltu á "Ljúka" þegar leikurinn virkar eins og þú vilt.'
       Course 4 Play Lab Vars 9_instruction: 'Frjáls æfing: Hér eru allar breyturnar sem við höfum notað hingað til og nokkrar í viðbót. Búðu til leik eða sögu með þessum breytum. Vísbending: Flettu niður til að sjá alla hlutina á vinnusvæðinu.'
       Course 4 Play Lab Vars_instruction: 'Enn ein breyting á leiknum - látum spilarinn geta unnið (eða tapað). Notaðu endalausa lykkju til að athuga skorið - ef skorið fer upp fyrir 20 á óvinurinn að hverfa. Ef skorið fer niður fyrir 0, á leikmaðurinn að hverfa.'
-      Course 4 Play Labs For Loops 1_instruction: |
-        Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the counter block to speak the counter
-        variable each time the loop is run.
+      Course 4 Play Labs For Loops 1_instruction: 'Við skulum láta hundinn segja hverja tölu frá 1 til 100. Notaðu "frá" lykkju og teljarakubbinn til að segja teljarann í hverri umferð lykkjunnar.'
       Course 4 Play Labs For Loops 2_instruction: Nú skulum við reyna að telja í oddatölum frá 1 til 100.
       Course 4 Play Labs For Loops 3_instruction: Ef við teljum í stærri tölum, getum við talið enn hærra á sama tíma. Prófaðu að láta hundinn telja frá 10 til 1000 um 10 í einu.
       Course 4 Play Labs For Loops 4 (copy 1)_instruction: Nú höfum við breytt aukanum sem talningin breytist um, en talningin er enn línuleg (aukinn er alltaf eins). Hvað ef við vildum láta sjálfan aukann breytast? Getur þú haft þessa lykkju óbreytta, en látið hana telja 1, 4, 9, 16, 25... (teljarinn í öðru veldi)?
@@ -755,21 +783,14 @@ is:
       Eval Booleans 4_instruction: 'Hér er matskubburinn AND (og). Hann skilar gildinu "true" (satt) ef báðir stikarnir eru sannir, annars skilar hann "false" (ósatt). Breyttu breytunni x svo að heildarútkoman sé "true".'
       Eval Booleans 5_instruction: 'OR (eða) kubbur skilar "true" (satt) ef annar hvor stikinn er sannur. Annars skilar hann "false" (ósatt). Settu gildi í breytuna y þannig að þessi formúla gefi "false" þegar hún er metin.'
       Eval Booleans 6_instruction: 'Hér er kubburinn NOT (ekki). Hann breytir "true" í "false" eða "false" í "true". Ef þú setur gefna kóðann inn í NOT kubb, ætti það að skila "true" (rökrétt vegna þess að við erum þá að fullyrða að formúlurnar gefi EKKI sömu útkomur).'
-      Eval Booleans Free Play_instruction: |
-        Free Play: Try out some creations of
-        your own using Booleans.
+      Eval Booleans Free Play_instruction: 'Frjáls æfing: Búðu til eigin verk með Boole gildum.'
       Eval Booleans_instruction: 'Með Boole aðgerðum getum við borið saman gildi og fengið "satt" (enska: true), ef þau eru eins, eða " ósatt" (enska: false), ef þau eru ekki eins. Hvaða útkomu heldur þú að þessi kóði muni gefa?'
       Eval Cond 1_instruction: 'Kubburinn "skilyrði" athugar samanburðina í vinstri dálkinum og þegar hann finnur samanburð sem gefur gildið "satt", keyrir hann samsvarandi kóða hægra megin. Ef enginn samanburður gefur "satt", keyrir hann neðsta kubbinn. Uppfærðu breytuna "hitastig" svo að þessi kubbur skili gildinu "alveg mátulegt"'
       Eval Cond 2 (copy 1)_instruction: 'Þetta skilyrði skilar mismunandi formum út frá innihaldi breytunnar "hliðar". Settu gildi í "hliðar" sem lætur skilyrðið gefa þríhyrning.'
       Eval Cond 2_instruction: 'Þetta skilyrði skilar mismunandi formum út frá innihaldi breytunnar "hliðar". Settu gildi í "hliðar" sem lætur skilyrðið gefa þríhyrning.'
       Eval Cond 3 (copy 1)_instruction: 'Getur þú skrifað skilyrði sem athugar breytuna "age" (aldur) og skilar "Má kjósa" ef aldur > 17, "Má aka bíl" ef aldur > 16 og "Má hvorki aka né kjósa" ef hvorugt skilyrðið er uppfyllt. Vísbending: Fyrsta skilyrðið sem gefur "satt" vinnur - gættu þess að skilyrðin séu í réttri röð.'
       Eval Cond 3_instruction: 'Getur þú skrifað skilyrði sem athugar breytuna "age" (aldur) og skilar "Má kjósa" ef aldur > 17, "Má aka bíl" ef aldur > 16 og "Má hvorki aka né kjósa" ef hvorugt skilyrðið er uppfyllt. Vísbending: Fyrsta skilyrðið sem gefur "satt" vinnur - gættu þess að skilyrðin séu í réttri röð.'
-      Eval Cond 4_instruction: |
-        We can use the "string=?" function to make conditionals
-        that respond to text input. Here's a function called "green shape" that
-        takes a string parameter for the shape. Complete the conditions so that the
-        correct shape is drawn when the function is run with "circle," "triangle,"
-        "square," or "rectangle."
+      Eval Cond 4_instruction: 'Við getum nota fallið "string=?" til að búa til skilyrðingar sem bregðast við textainntaki. Hér er fallið "green shape" (grænt form). Það hefur stika fyrir heiti á formi. Ljúktu við skilyrðin svo að rétta formið sé teiknað þegar fallið er keyrt með stikunum "circle", "triangle", "square" eða "rectangle".'
       Eval Cond 5_instruction: 'Hér er svipað fall "red shape" (rautt form) með viðbótarstika fyrir stærð. Ljúktu við skilyrðin svo að rétta myndin sé teiknuð.'
       Eval Cond 6_instruction: "Skrifaðu fallið \"matarrýnir\", sem tekur inn heiti matar og skilar streng, sem segir hvað þér finnst um þann mat. T.d. gæti (matarrýnir \"pizza\") gefið \"ljúffeng\", en (matarrýnir \"fúlegg\") gefið \"ógeð!\". Hafðu að minnsta kostar tvær tegundir matar til að gefa umsögn um, en þú mátt hafa fleiri ef þú vilt! Ekki gleyma að hafa \"annars\" hluta!\r\nÞú færð tilbúið eitt dæmi - og hluta af skilgreiningunni!"
       Eval Cond 7_instruction: "Frjáls æfing: Skrifaðu nýtt fall \"grænt-form\", sem tekur inn heiti forms og býr gegnheilt grænt form. Fallið ætti a.m.k. að ráða við orðin \"hringur\", \"stjarna\" og \"rétthyrningur\", en þú getur bætt við formum að vild. Þú mátt ráða stærð formanna. Ekki gleyma að hafa \"annars\" hluta!\r\nÞú færð tilbúið eitt dæmi - og hluta af skilgreiningunni!\r\n"
@@ -780,17 +801,11 @@ is:
       Eval Contracts 2_instruction: 'Skoðaðu þetta fall "snúa" - getur þú notað það til að snúa þessum 90 díla græna ferningi um 45 gráður?'
       Eval Contracts 3_instruction: 'Reyndu að nota fallið "texti" til að skrifa þennan blágræna texta í stærð 40.'
       Eval Contracts 4 A_instruction: 'Fallið "kvarða" skilar mynd sem er ýmist á stærri eða minni kvarða en frummyndin. Prófaðu að kvarða þennan hring með stuðlinum 10. Hvernig er hringurinn, sem verður til, öðruvísi en hringur sem þú hefðir teiknað upphaflega í þeirri stærð?'
-      Eval Contracts 4_instruction: |
-        The "scale" function returns an image that
-        is either larger or smaller than the input image. Try scaling this circle
-        by a factor of 10. How is the returned image different than if you'd just
-        made a circle of that size in the first place?
+      Eval Contracts 4_instruction: 'Fallið "scale" (kvarða) skilar mynd sem er ýmist stærri eða minni en inntaksmyndin. Prófaðu að kvarða þennan hring með stuðlinum 10. Hvernig er hringurinn, sem verður til, öðruvísi en hringur sem þú hefðir teiknað upphaflega í þeirri stærð?'
       Eval Contracts 8A_instruction: Getur þú lokið við þessa þraut? Stóri þríhyrningurinn er 200 dílar og fjólublár.
       Eval Contracts A_instruction: 'Notaðu fallið "stjarna" til að búa til gegnheila rauða stjörnu með 60 díla geisla'
       Eval Contracts C_instruction: 'Skoðaðu þetta fall "snúa" - getur þú notað það til að snúa þessum 90 díla græna ferningi um 45 gráður?'
-      Eval Contracts E_instruction: |
-        Try using the "text" function to write this
-        "Hello, World!" in teal at size 40.
+      Eval Contracts E_instruction: 'Reyndu að nota fallið "text" til að skrifa "Hello, World!" í blágrænu og stærð 40.'
       Eval Contracts shrink_instruction: 'Getur þú klárað þessa mynd með fallkubbnum "minnka"? Geislinn er 20. '
       Eval Define Funcs 1_instruction: 'Hér er nýtt fall "green-triangle" (grænn-þríhyrningur) sem tekur inn eina tölu fyrir stærð og skilar grænum þríhyrningi. Notaðu nýja fallið til að búa til 125 díla grænan þríhyrning'
       Eval Define Funcs 2_instruction: 'Skoðaðu innan í fallið "green-triangle" (grænn-þríhyrningur) til að skilja hvernig það virkar. Getur þú breytt því svo það teikni alltaf útlínu af grænum þríhyrningi?'
@@ -798,10 +813,7 @@ is:
       Eval Define Funcs 4_instruction: 'Búðu til nýtt fall "grænblá-stjarna" með gildamengið Number (tala) fyrir geisla, sviðið Image (mynd) og skilar stjörnu með gefna geislann og litinn "aqua". Keyrðu nýja fallið þitt með geislann 75.'
       Eval Define Funcs 5_instruction: 'Notum fallið "aqua-star" (grænblá-stjarna) til að búa til röð af misstórum stjörnum. Frá vinstri til hægri ættu stjörnurnar að hafa geislana 25, 50 og 75.'
       Eval Defining Vars Free Play 1_instruction: 'Frjáls æfing: Hér færðu fall sem fyllir skjáinn með mynd. Breyttu myndinni til að sjá hvaða mynstur þú getur búið til.'
-      Eval Design Recipe .1_instruction: |
-        Here's a Design Recipe for a function
-        called "square-circle" with domain Number String and range Image. Click
-        Edit to write the function description (you will see two examples provided).
+      Eval Design Recipe .1_instruction: 'Hér er hönnunaruppskrift fyrir fallið "square-circle" með gildamengið Tala Strengur og sviðið Mynd. Skoðaðu dæmin tvö sem við höfum lagt til og skrifaðu lýsingu fallsins.'
       Eval Design Recipe 1 (copy 1)_instruction: 'Við ætlum að skrifa fall, sem teiknar rétthyrning í einhverjum lit, með breidd sem er tvöföld hæðin. Byrjaðu með dæmi - teikna gegnheilan grænan rétthyrning með hæðina 100 dílar.'
       Eval Design Recipe 1_instruction: 'Gefum okkur samninginn breiður-rétth: Tala Strengur -> Mynd. Skrifaðu dæmi - teikna gegnheilan grænan rétthyrning með hæðina 100 dílar.'
       Eval Design Recipe 2 (copy 1)_instruction: 'Búum til enn eitt dæmi áður en við skrifum skilgreiningu fallsins - í þetta sinn er dæmið að teikna gegnheilan rauðan rétthyrning með hæðina 75 dílar.'
@@ -820,16 +832,11 @@ is:
       Eval Strings Images 4_instruction: 'Prófaðu að nota kubbinn "rétthyrningur" til að teikna þennan gegnheila rauða rétthyrning - hann er 175 dílar á breidd og 100 dílar á hæð.'
       Eval Strings Images 5_instruction: 'Prófaðu að nota þennan nýja matskubb "yfirlögn" til að leggja 100 díla hvítan þríhyrning yfir 200 díla rauðan hring.'
       Eval Strings Images 6_instruction: Notaðu yfirlagnarfallið til að leggja gula stjörnu með 75 díla geisla yfir 150 díla langan bláan ferning.
-      Eval Strings Images 7_instruction: |
-        The "offset" block lets you move an image
-        relative to where it would normally be placed. Use this block to offset the
-        square by 100 pixels on the y axis.
-      Eval Strings Images 8_instruction: |
-        Here's a different kind of star block
-        - it's called "radial-star" and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
-      Eval Strings Images Free Play_instruction: 'Frjáls æfing: Reyndu að nota kubbana til að búa til eitthvað áhugavert. Mundu að vista og deila bestu myndunum.'
+      Eval Strings Images 7_instruction: 'Með kubbnum "offset" (hliðrun) getur þú fært mynd út frá þeim stað sem hún annars væri sett. Notaðu þennan kubb til að hliðra ferningnum um 100 díla á y ásnum.'
+      Eval Strings Images 8_instruction: 'Hér er önnur tegund af stjörnukubb, sem nefnist "radial-star". Með honum geturðu teiknað stjörnur með mismunandi fjölda arma! Notaðu hann til að búa til appelsínugula stjörnu með 75 díla innri geisla og 175 díla ytri geisla.'
+      Eval Strings Images Free Play_instruction: |
+        Free Play: Explore the blocks available
+        to create something interesting. Make sure to share your favorite creations.
       Examples 4_instruction: 'Fallið "minnka"'
       frozen circle function (copy 1)_instruction: 'Notaðu nýja "búa til hring" kubbinn til að búa til 10 hringi sem skarast. Ekki gleyma að hoppa fram eftir hvern hring'
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast og snúum um 18 gráður eftir hvern hring.
@@ -875,9 +882,7 @@ is:
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Snertu enn fleiri snjókorn!
       Infinity_touch_four_instruction: Færðu Önnu upp, niður, vinstri og hægri til að snerta öll snjókornin fjögur.
-      Infinity_touch_score_instruction: |
-        Make Anna score a point when she touches
-        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Infinity_touch_score_instruction: 'Láttu Önnu fá stig þegar hún snertir snjókorn. Smelltu svo á "Keyra" og stýrðu henni svo hún snerti hvert snjókorn einu sinni.'
       K-1 Artist 1 Assessment 1_instruction: Teiknaðu stutta línu upp og langa til hægri!
       K-1 Artist Loops 1_instruction: Teiknaðu þetta strik með því að fara í Austur 4 sinnum.
       K-1 Artist Loops 2_instruction: Getur þú teiknað sama strik með lykkju?
@@ -1001,7 +1006,7 @@ is:
       Luigi's Pizza 2_instruction: 'Nú eru aðeins fjórir valkostir í boði á pítsustað Luigi - bætum úr því! Bættu tveimur nýjum áleggjum við skilyrðiskubbinn í fallinu "cost". Prófaðu síðan fallið með nýju áleggjunum til að tryggja að það virki.'
       Luigi's Pizza 3 (copy 1)_instruction: 'Þetta er betra. Allir vilja hafa meira úrval af pítsuáleggi! En það er ekki hægt að gera öllum til geðs og fólk kemur og pantar álegg sem Luigi er ekki með. Í stað þess að segja nei við það fólk, getur þú uppfært "annars" hlutann svo að það sé lagt á aukagjald fyrir álegg sem eru venjulega ekki í boði?'
       Luigi's Pizza 3_instruction: 'Þetta er betra. Allir vilja hafa meira úrval af pítsuáleggi! En það er ekki hægt að gera öllum til geðs og fólk kemur og pantar álegg sem Luigi er ekki með. Í stað þess að segja nei við það fólk, getur þú uppfært "annars" hlutann svo að það sé lagt á aukagjald fyrir álegg sem eru venjulega ekki í boði? Við skulum rukka 10.000 kr. fyrir sérpöntuð álegg.'
-      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even better? Try one (or more) of the following:\r\n- Display an\nimage of the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
+      Luigi's Pizza 4_instruction: "Frjáls æfing: Hvernig væri hægt að gera kostnaðarfall Luigi enn betra? Prófaðu eitthvað af eftirfarandi:\r\n- Sýna mynd af valinnu pítsu\r\n- Gera ráð fyrir mörgum samsetningum áleggs\r \n- Leyfa að fleiri en ein pítsa sé pöntuð í einu\r\n- Bæta við afsláttarkóða sem gefur 50% afslátt"
       maze level test_instruction: Gerðu þetta!
       Maze screenshot Work_instruction: Prófleiðbeiningar
       MSM Big Game Empty_instruction: Allar breytur og föll byrja hér sem innantómir stúfar. Hver þraut mun fást við að skilgreina nokkra í einu og þannig smám saman auka við virknina.
@@ -1029,16 +1034,33 @@ is:
       MSM Play Lab Game 3_instruction: 'Nú er kominn tími til að spila leik! Ýttu á "Keyra" hnappinn og notaðu örvarlyklana til að færa og skjóta. Prófaðu svo að breyta hlutum eins og bakgrunni og hraða leikmanna til að gera leikinn auðveldari eða erfiðari.'
       Neat Eval Functions_instruction: Kíktu á þessi flottu föll.
       NetSim_AddressingMessages_instruction: 'Í þessari útgáfu af herminum, munt þú tengjast við beini (enska: router) í stað þess að tengjast beint við annan nemanda. Settu vistfang í "Til" reitinn til að senda skilaboð til annars nemanda.'
-      NetSim_AutomaticDNS_instruction: 'Í þessari útgáfu af herminum færðu DNS þjónustu. Sendu skilaboð með sniðinu GET [hostname] til DNS þjónustunnar til að fá vistfang nemanda.'
+      NetSim_AutomaticDNS_instruction: |
+        In this version of the simulator a DNS service
+        is provided for you. Send a message in the form GET [hostname] to the DNS
+        service at address 15 to get a student's address.
       NetSim_ManualDNS_instruction: Í þessari útgáfu af herminum getur þú ekki séð vistföng hinna nemendanna. Í stað þess verður eitt ykkar að leika nafnaþjónustu sem sér um að útvega vistföngin.
-      NetSim_SendAB_instruction: 'Í VINNSLU: Þessi útgáfa af NetSim er enn ekki virk. Í henni munu nemendur geta handvirkt stillt einstök A og B á simplex rás.'
-      NetSim_SendAscii_instruction: 'Í VINNSLU: Þessi útgáfa af NetSim er enn ekki virk. Í henni munu nemendur geta sent hvor öðrum ASCII.'
-      NetSim_SendBits_instruction: 'Í VINNSLU: Þessi útgáfa af NetSim er enn ekki virk. Í henni munu nemendur geta sent tvíundir sem 0 og 1'
+      NetSim_SendAB_instruction: |
+        Connect to another student.  Each of you can set
+        the value of the wire between you to "A" or "B".  See if you can send
+        a complete message!
+      NetSim_SendAscii_instruction: |
+        In this version of the simulator, you can send
+        numbers or ASCII characters to one another, one bit at a time.
+      NetSim_SendBits_instruction: |
+        Connect to another student.  You can now set
+        your wire to "0" or "1".  Send a message to your partner!
       NetSim_SendingABTest_instruction: Þetta er tilraun Söru til að búa til netsim áfanga
       NetSim_Superuser_instruction: 'Þú hefur hlaðið NetSim í "superuser" ham.'
-      NetSim_Variant1_instruction: 'NetSim: Tilbrigði 1 leikvöllur: Í SMÍÐUM: Tilbrigði 1 er enn ekki virkt vegna þess að P2P tengingar hafa ekki verið innleiddar. Með Tilbrigði 1 geta nemendur handvirkt fundið út tímasetningar við sendingu bita fram og aftur.'
-      NetSim_Variant2_instruction: 'NetSim: Tilbrigði 2 sniðmát: Í SMÍÐUM: Tilbrigði 2 er enn ekki virkt vegna þess að P2P tengingar hafa ekki verið innleiddar.'
-      NetSim_Variant3_instruction: 'NetSim: Tilbrigði 3 sniðmát: Tengir hópa 2-6 nemenda með beini og skoðar mál sem koma upp við beinun gagna og DNS'
+      NetSim_Variant1_instruction: |
+        NetSim: Variant 1 allows students to manually
+        work out the timing of sending bits back and forth.
+      NetSim_Variant2_instruction: |
+        NetSim: Variant 2: Students connect directly
+        to one another and send entire packets back and forth, exploring systems of
+        encoding data.
+      NetSim_Variant3_instruction: |
+        NetSim: Variant 3: Connects groups of 2-6 students
+        with a router, and explores issues in routing and DNS
       NEW Artist Artist Functions 3_instruction: 'Hér er ný tegund af kubbi. Þetta er fallkubbur eða fall (enska: function). Smelltu á "Keyra" til að sjá hvað þetta fall gerir. '
       New Artist Project_instruction: Teiknaðu eitthvað flott! Kóðinn þinn vistast sem verkefni sem þú getur opnað aftur hvenær sem er.
       NEW Course 2 Artist Functions 12_instruction: 'Getur þú búið til nýtt fall með heitinu "teikna röð ferninga"?'
@@ -1103,34 +1125,32 @@ is:
         Við skulum byrja á að skoða einfaldan tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana til að færa ninjuna til vinstri og hægri og stökkva - reyndu að ná einhyrningnum en forðast drekann!
         
       Ninjacat Demo B_instruction: 'Við skulum byrja á að skoða einfaldan tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana til að færa ninjuna upp og niður - reyndu að ná einhyrningnum en forðast drekann! Þegar þú heldur að þú hafir skilið þetta skaltu smella á "Ljúka"'
+      PDK5 Conditionals 1_instruction: |
+        Purple flowers may have either 1 or 0 nectar,
+        but you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
+      PDK5 Events 1_instruction: |
+        So far all of the programs we've written are executed
+        in order from top to bottom. In this puzzle, we'll use "Events" to respond
+        to an action on demand. Make the octopus say "Hello" only when you click
+        on the Octopus. 
+      PDK5 Loops 1_instruction: |
+        Instead of using 5 "move forward" blocks, use
+        the "repeat" block with a "move forward" block inside of it. In computer
+        science, this is called a "loop." 
+      PDK5 Loops 3_instruction: |
+        Here's another puzzle to practice loops. What happens
+        if you use the repeat block to run the code already provided on the workspace
+        4 times?
       perpendicular_instruction: Nú skulum við sjá hvort við getum búið til tvær hornréttar línur. Hornréttar línur eru línur sem skerast í réttu (90 gráðu) horni.
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
-        Something happened
-        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
-        were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Fix the error_instruction: |
-        Something happened to
-        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
-        added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_instruction: |
-        Make a 3x5 letter
-        'A'.  The widget is setup with the incorrect dimensions. Your first task
-        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
-        start entering pixel data.
-      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
-        Now make
-        your own image! We've started you off with a 10x10 canvas but you can make
-        it whatever size you want.  Happy pixeling!
-      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
-        Now make your
-        own image! We've started you off with a 10x10 canvas but you can make it
-        whatever size you want.  Happy pixeling!
-      Pixelation 2_instruction: |
-        Something happened to the bits in this image!  Find
-        error and fix it!
-      Pixelation 4x4 Empty_instruction: |
-        The width and height are now encoded in
-        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: 'Eitthvað kom fyrir bitana í þessari mynd! Finndu villuna og lagaðu hana! Vísbending: nokkrum bitum er ofaukið.'
+      Pixelation - Lesson 14 - Fix the error_instruction: 'Eitthvað kom fyrir bitana í þessari mynd! Finndu villuna og lagaðu hana! Vísbending: nokkrum bitum er ofaukið.'
+      Pixelation - Lesson 14 - Make the Letter A_instruction: "Búðu til stafinn 'A' í 3x5. Græjan er nú með rangar víddir. Fyrsta verk þitt er að stilla annað bætið á 8-bita tvíundarrununa fyrir töluna 5: 0000 0101. Byrjaðu svo að setja inn díla."
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: Búðu nú til þína eigin mynd! Þú færð í byrjun myndflöt sem er 10x10, en þú getur haft hann í hvaða stærð sem er.
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: Búðu nú til þína eigin mynd! Þú færð í byrjun myndflöt sem er 10x10, en þú getur haft hann í hvaða stærð sem er.
+      Pixelation 2_instruction: Eitthvað kom fyrir bitana í þessari mynd! Finndu villuna og lagaðu hana!
+      Pixelation 4x4 Empty_instruction: Breiddin og hæðin eru nú hluti af gögnunum. Getur þú fundið út hvernig á að stilla þessar víddir?
       Play Lab Rocket 1_instruction: 'Eldflaug er skotið upp á 15 metra hraða á sekúndu... Ýttu á "Keyra" til að sjá hvernig þetta orðadæmi lítur út í hreyfimynd.'
       Play Lab Rocket 2 (copy 1)_instruction: 'Við höfum bætt samningi þínum og tveimur dæmum inn í hönnunaruppskriftina fyrir hæð-flaugar. Skrifaðu nú fallið "rocket-height" (hæð-flaugar).'
       Play Lab Rocket 2 (copy 2)_instruction: 'Við höfum byrjað á hönnunaruppskrift fyrir fallið "rocket-height" (hæð-flaugar) með því að nota samninginn og dæmin sem þú skrifaðir. Ljúktu við skilgreiningu fallsins "rocket-height" og keyrðu hreyfimyndina.'
@@ -1160,22 +1180,9 @@ is:
       Sam the Butterfly 1 (copy 1)_instruction: Þetta fiðrildi heitir Sammi og leiksvæðið er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum uppfærast til að sýna hvar hann er. Notaðu örvarlyklana til að færa Samma um garðinn sinn. Hjálpaðu Samma að safna öllum flöggunum til að komast áfram.
       Sam the Butterfly 1_instruction: Þessi leðurblaka heitir Sammi og leiksvæðið er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum uppfærast til að sýna hvar hann er. Notaðu örvarlyklana til að færa Samma um garðinn sinn. Hjálpaðu Samma að safna öllum flöggunum til að komast áfram.
       Sam the Butterfly 2_instruction: 'Móðir Samma vill vera viss um að hún sjái að minnsta kosti eitthvað af honum. Skrifum nú föll sem hjálpa til að hann fari ekki of langt út úr garðinum. Hér er fall sem heitir "safe-left?" (öruggt-vinstri?). Það á að hafa sem gildamengi tölu sem táknar x-hnit Samma og skila útkomunni "true" ef hann er innan vinstri marka garðsins (x > -25). Ef fallið þitt virkar á Sammi ekki að geta yfirgefið garðinn vinstra megin.'
-      Sam the Butterfly 3_instruction: |
-        In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
-        function to make sure Sam can't go past x = 425.
-      Sam the Butterfly 4_instruction: |
-        Huh, we can keep Sam from leaving on the
-        left, or we can keep him from leaving on the right, but how can we keep him
-        from going either direction? Try using the "AND" block to program the function
-        "on-screen?" to check if Sam is safe-left? AND safe-right?
-      Sam the Butterfly 5_instruction: |
-        Free Play: Awesome, now Sam can't leave
-        the yard from the left or the right, but what about up and down? We've added
-        an additional parameter 'y' to the 'onscreen?' function. Can you update
-        your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
-        either? Test your program by moving Sam as far as he can go in all four directions.
-        Click Finish when Sam is completely protected.
+      Sam the Butterfly 3_instruction: 'Í síðustu þraut hindruðum við Sam í að fara út vinstra megin. Gerum nú það sama fyrir hægri hliðina. Ljúktu við fallið "safe-right?" (öruggt-hægri) til að tryggja að Sam fari ekki framhjá x = 425.'
+      Sam the Butterfly 4_instruction: 'Nú getum við haldið Sam inni vinstra megin EÐA hægra megin, en hvernig getum við gert það báðum megin? Prófaðu að nota "AND" kubbinn til að forrita fallið "on-screen?" (á-skjá), sem athugar hvort Sam er öruggur vinstra megin OG öruggur hægra megin?'
+      Sam the Butterfly 5_instruction: 'Frjáls æfing: Vel gert. Nú getur Sam ekki yfirgefið garðinn til vinstri eða til hægri, en hvað með upp og niður? Við höfum bætt nýjum stika "y" við fallið "on-screen?". Getur þú uppfært forritið þitt svo að Sam geti ekki farið út að ofan (y = 425) eða neðan (y = -25)? Prófaðu forritið með því að færa Sam eins og langt og hann kemst í allar fjórar áttirnar. Smelltu á "Ljúka" þegar Sam er alveg öruggur.'
       Sam the Butterfly 6_instruction: 'Við höfum bætt við nýjum stika "y" við fallið "á-skjá?". Uppfærðu fallið "á-skjá?" svo það athugi hvort "öruggt-v?" OG " öruggt-h?" OG "öruggt-u?" eru öll sönn. Prófaðu svo fallið með því að reyna að fara út fyrir vinstri, hægri og efri hlið garðsins.'
       Sam the Butterfly 7 (copy 1)_instruction: |
         Only one last direction to worry
@@ -1233,9 +1240,11 @@ is:
       Testing Brian Level_instruction: Test Brian Level Nice
       testing_instruction: Prófáfangi
       TestK1-1_instruction: 'Notaðu "endurtaka" kubbinn til að teikna þrjá ferninga sem skarast að hluta'
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
+      Text Compression Peter Piper_instruction: Þessu ljóði hefur verið þjappað með því að skipta út tveimur algengum klausum fyrir tákn í orðabókinni. Getur þú komið auga á annað algengt mynstur til þjappa ljóðinu enn meira?
       toby-test5-16-1_instruction: dafsfas
+      U1L4 NetSim SendAB_instruction: |
+        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
+        Variant 1 is not yet functional because P2P connections have not been implemented.
+        Variant 1 allows students to manually work out the timing of sending bits
+        back and forth.
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf

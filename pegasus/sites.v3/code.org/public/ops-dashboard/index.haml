@@ -4,7 +4,7 @@ angular: opsApp
 title: "Ops Dashboard"
 ---
 - authentication_required!
-- forbidden! unless have_permission?('district_contact') || dashboard_user[:admin]
+- forbidden! unless have_permission?('district_contact') || have_permission?('facilitator') || dashboard_user[:admin]
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
@@ -30,13 +30,13 @@ title: "Ops Dashboard"
     'opsApp.filters',
     'selectize'
   ]).config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/',
-                        {templateUrl: '/ops-dashboard/landing'});
+    $routeProvider.when('/',                                          {templateUrl: '/ops-dashboard/landing'});
     $routeProvider.when('/districts',                                 {templateUrl: '/ops-dashboard/districts',       controller: 'DistrictsController'});
     $routeProvider.when('/workshops',                                 {templateUrl: '/ops-dashboard/workshops',       controller: 'WorkshopsController'});
     $routeProvider.when('/workshops/new',                             {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
     $routeProvider.when('/workshops/:id/edit',                        {templateUrl: '/ops-dashboard/workshop-edit',   controller: 'WorkshopController'});
     $routeProvider.when('/workshops/:workshopid/attendance',          {templateUrl: '/ops-dashboard/attendance',      controller: 'AttendanceController'});
+    $routeProvider.when('/workshops/:workshopid/attendance-info',     {templateUrl: '/ops-dashboard/attendance-info', controller: 'AttendanceController'});
     $routeProvider.when('/teacher-cohorts',                           {templateUrl: '/ops-dashboard/cohorts',         controller: 'CohortsController'});
     $routeProvider.when('/teacher-cohorts/new',                       {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
     $routeProvider.when('/teacher-cohorts/:id/edit',                  {templateUrl: '/ops-dashboard/cohort-edit',     controller: 'CohortController'});
@@ -140,13 +140,14 @@ title: "Ops Dashboard"
 
   services.factory('attendancesService', ['$resource',
     function($resource){
-      var Attendance = $resource('/dashboardapi/attendance/workshop/:workshopid', {}, {
+      var Attendance = $resource('/dashboardapi/segments/:segmentid/attendance', {}, {
         // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
         //  'get':    {method:'GET'},
         //  'save':   {method:'POST'},
         //  'query':  {method:'GET', isArray:true},
-        //  'remove': {method:'DELETE'},
+          remove: {method:'DELETE', url:'/dashboardapi/attendance/:attendanceid'},
         //  'delete': {method:'DELETE'}
+        update: {method:'PATCH', url:'/dashboardapi/attendance/:attendanceid'}
       });
 
       return Attendance;
@@ -326,8 +327,6 @@ title: "Ops Dashboard"
 
       $scope.workshop = workshopsService.get({id: $routeParams.workshopid});
       $scope.districts = districtsService.query();
-      $scope.teachers = teachersService.query({workshopid: $routeParams.workshopid});
-      $scope.attendances = attendancesService.get({workshopid: $routeParams.workshopid});
 
       $scope.getAttendanceFromTeacherAndSegment = function (teacher_id, attendancesForSingleSegment) {
         var attendance = 'unrecorded';
@@ -337,6 +336,34 @@ title: "Ops Dashboard"
           }
         });
         return attendance;
+      }
+
+      $scope.save = function (attendance) {
+        if (attendance.id) {
+          attendancesService.update({attendanceid: attendance.id}, {workshop_attendance: attendance}, function (response) {
+            this.attendance.saved = false;
+            this.attendance.updated = true;
+            this.attendance.cleared = false;
+          }.bind(this));
+        } else {
+          attendancesService.save({segmentid: attendance.segment_id}, {workshop_attendance: attendance}, function (response) {
+            this.attendance = response;
+            this.attendance.saved = true;
+            this.attendance.updated = false;
+            this.attendance.cleared = false;
+          }.bind(this));
+        }
+      }
+
+      $scope.clearAttendance = function (attendance) {
+        attendance.status = null;
+        attendance.notes = null;
+
+        attendance.saved = false;
+        attendance.updated = false;
+        attendance.cleared = true;
+
+        attendancesService.update({attendanceid: attendance.id}, {workshop_attendance: attendance});
       }
   }]);
 
@@ -417,7 +444,7 @@ title: "Ops Dashboard"
 
   controllers.controller('CohortTeachersController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
-
+      $scope.order = '[ops_last_name, ops_first_name]';
       $scope.teachers_bulk_import = {uploading: false};
       $scope.newTeachers = [];
 
@@ -587,10 +614,20 @@ title: "Ops Dashboard"
         return 'N/A';
       }
 
+      $scope.editingAny = function(things) {
+        if (!things) {
+          return false;
+        }
+        return $.grep(things, function(thing) {return thing.editing;}).length > 0
+      };
+
+      $scope.newSegment = function() {
+        $scope.workshopSegments.unshift({editing: true});
+      };
+
       $scope.save = function (workshop) {
          if (workshop.id) {
-           var newWorkshop = new workshopsService($scope.workshop);
-           workshopsService.update({id: workshop.id}, workshop);
+           workshopsService.update({id: workshop.id}, {workshop: workshop});
            $('#save-confirmation').css('display', 'inline');
            $('#save-confirmation').fadeOut(2500);
          } else {
@@ -602,6 +639,7 @@ title: "Ops Dashboard"
                  $scope.workshops = workshops;
                  $('#save-confirmation').css('display', 'inline');
                  $('#save-confirmation').fadeOut(2500);
+                 window.location = '#/workshops/' + $scope.workshop.id + '/edit';
                });
              }
            );
@@ -609,6 +647,8 @@ title: "Ops Dashboard"
       }
 
       $scope.saveSegment = function (segment) {
+        $scope.segment.start = $scope.segment.date + "T" + $scope.segment.startTime;
+        $scope.segment.end = $scope.segment.date + "T" + $scope.segment.endTime;
         var newSegment = new segmentsService($scope.segment);
         newSegment.$save({id: $scope.workshop.id}).then(
           function(saved) {
@@ -619,6 +659,6 @@ title: "Ops Dashboard"
             });
           }
         );
-      }
+      };
     }
   ]);

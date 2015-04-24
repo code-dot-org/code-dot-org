@@ -9,7 +9,7 @@ nav: pd_nav
 ## Click below to access program supports for your classroom ##
 
 - [High School](#hs)
-- [Middle School Science](#mss)
+- [Middle School Science](#science)
 - [Middle School Math](#msm)
 - [Elementary School](#es)
 
@@ -38,12 +38,12 @@ Coming Soon
 
 [**Back to the top**](#top)
 
-<a id="mss"></a>
+<a id="science"></a>
 
 
 ## Project GUTS Supports
 
-Find the Project GUTS curriculum and other resources at [code.org/curriculum/mss](http://code.org/curriculum/mss).
+Find the Project GUTS curriculum and other resources at [code.org/curriculum/science](http://code.org/curriculum/science).
 
 ### What are the technical requirements to teach Project GUTS?
 

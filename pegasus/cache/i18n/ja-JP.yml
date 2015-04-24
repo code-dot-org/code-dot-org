@@ -14,7 +14,7 @@
   learn_now: 今すぐ学ぶ
   petition_message: すべての学校の、すべての生徒が、コンピュータサイエンスを学ぶ機会を得るべきです
   petition_sign_message: 同意して、署名をする。参加する
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 私たちを支援して頂けるなら、あなたのお名前の署名をお願いします。＃ 他に参加をします。
   name: 名前
   email: Eメール
   zipcode: 郵便番号または国名
@@ -100,8 +100,8 @@
   learn_classes: 近くのクラスを見つける
   hoc_is_here: '#HourOfCode はここです - 見つける @codeorg'
   just_did_hoc: '私は #HourOfCode に挑戦しました - 見つける @codeorg'
-  twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_teach_cs: なぜ学校の多くはコンピューター科学を教えないのでしょうか？この問題を解決することができます。http://youtu.be/nKIu9yen5nc。詳細については
+    http://code.org/を参照してください。
   learn_hoc: Hour of Codeを学ぶ
   beyond_hoc: 1 時間を超えて
   what_gender: 性別は？
@@ -135,40 +135,33 @@
   studiobar_donate_body: 1ドルの寄付ごとに、一人の子供が学びます
   studiobar_shop_title: ショップ
   studiobar_shop_body: いままでの考え方を変えよう。誇りを持って私たちのロゴをつけよう。
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_malala: "&ldquo;私は各国々の女の子達にHour of Codeを１つ試させる事に挑戦しています。&rdquo;
+    \nマララ, ノーベル平和賞受賞者\n"
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;テクノロジーで世界を変える事ができます。&rdquo;
+    スーザン, YouTube 最高経営責任者
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;携帯で遊んでないで、それをプログラミングしてみなさい。&rdquo;
+    バラク・オバマ大統領
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;私の子供達 &mdash; 女の子を含んだ &mdash;
+    はコンピューター科学を学ぶ機会が必要です。&rdquo;
+    シェリル,  Facebook COO
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;コンピューター科学は世界中で最高の機会をアンロックする事ができます。&rdquo;
+    サティヤ, Microsoft CEO
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
+    &ldquo;コーディングするということは、あなたの人生のコースを選択できるということです。&rdquo;
+    クリス ボッシュ, NBAプレーヤー
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;これらのスキルは私の人生を変えました。言うまでもないけど、単純に楽しいです。&rdquo;
+    ルナ, 中学１年生
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;今までにこれほど子供達が学ぶことを楽しんでいる姿を見たことがありません。&rdquo;
+    マイケル, 教師
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;コンピューター科学とは試してみる前から好きかどうかなんてわからない分野です。&rdquo;
+    ジャクソン, 小学６年生
   homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
     with programming.&rdquo; \nMaya, 2nd grade\n"
   homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's

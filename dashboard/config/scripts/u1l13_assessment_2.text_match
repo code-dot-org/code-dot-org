@@ -1,0 +1,7 @@
+name 'U1L13 Assessment 2'
+title 'Assessment 2: Text Compression'
+content1 'Write (in the space below) a segment of text that will not compress well.' 
+
+markdown <<MARKDOWN
+Explain why this text sample will not compress well by comparing the characteristics of this text to the text in the previous question.
+MARKDOWN

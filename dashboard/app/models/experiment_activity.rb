@@ -56,22 +56,6 @@ class ExperimentActivity < ActiveRecord::Base
 
   def self.is_experimenting_feedback?(level_source)
     false
-=begin
-    return false if not level_source
-    level = level_source.level
-
-    # Stanford hints only exist for two levels:
-    # http://learn.code.org/s/1/level/5 (level_id == 3 in prod) and
-    # http://learn.code.org/s/1/level/19 (level_id == 17 in prod)
-    level.game.name == 'Maze' &&
-        (level.name == 'Level3' && level.level_num == '2_3' ||
-            level.name == 'Level17' && level.level_num == '2_17')
-=end
-  end
-
-  def self.feedback_experiment_param(url)
-    x = self.try_get_int_parameter(url, 'feedback_experiment')
-    return x && x != 0
   end
 
   FEEDBACK_EXPERIMENT_SOURCES = [LevelSourceHint::CROWDSOURCED,
@@ -91,10 +75,6 @@ class ExperimentActivity < ActiveRecord::Base
 
   def self.is_experimenting_hint_visibility?(level_source)
     false
-=begin
-    return false if not level_source
-    EXPERIMENT_LEVEL_NUMS.include? level_source.level.level_num
-=end
   end
 
   def self.feedback_experiment_param(url)

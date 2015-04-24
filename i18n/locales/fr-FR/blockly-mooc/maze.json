@@ -36,7 +36,7 @@
   "insufficientNectar":"Tu utilises correctement tous les blocs, mais tu dois collecter la bonne quantité de nectar.",
   "make":"faire",
   "moveBackward":"reculer",
-  "moveEastTooltip":"Déplace-moi d'un espace vers l'Est.",
+  "moveEastTooltip":"Déplace-moi d'une case vers l'Est.",
   "moveForward":"avancer plus",
   "moveForwardTooltip":"Me fait avancer d'un espace.",
   "moveNorthTooltip":"Déplace-moi d'un espace vers le Nord.",

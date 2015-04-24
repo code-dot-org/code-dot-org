@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"चित्र की जगह (x, y, चित्र)",
   "offsetBlockTitle":"ऑफ़सेट (x, y, चित्र)",
   "rectangleBlockTitle":"आयत (चौड़ाई, ऊँचाई, शैली, रंग)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"घुमाएँ (डिग्री,चित्र)",
   "scaleImageBlockTitle":"स्केल (कारक, छवि)",
   "squareBlockTitle":"स्क्वायर (आकार, शैली, रंग)",

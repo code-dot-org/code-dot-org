@@ -422,6 +422,7 @@
     heading_apps: <h2>Amusant pour</h2><h1>Tout le monde</h1>
     heading_legacy: <h2>Nos cours pour</h2><h1>Tous les âges</h1>
     your_gallery: Galerie
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Masculin
     female: Féminin
@@ -571,12 +572,14 @@
     correct_body: C'est la bonne réponse.
   contract_match:
     wrong_title: Réponse incorrecte
-    badname: Your contract has the wrong name.
+    badname: Votre contrat a le mauvais nom.
     badname_case: Function names are case-sensitive. Try changing the case of your
       contract's name.
     badrange: Your contract has the wrong range.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Entrez votre réponse ici
   dialog:

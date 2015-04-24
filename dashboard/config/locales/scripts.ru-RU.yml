@@ -348,7 +348,7 @@
           'Play Lab: Collision Detection (Big Game)': 'Лаборатория игр: обнаружение
             столкновений (большая игра)'
         infinity:
-          title: Лаборатория игр
+          title: Лаборатория игр Disney Infinity
           description_short: Используйте лабораторию игр, чтобы создать историю или
             игру с персонажами Disney Infinity.
           description: Используйте лабораторию игр, чтобы создать историю или игру
@@ -385,6 +385,7 @@
           Personal Reflection: Personal Reflection
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
         netsim:
           title: Интернет симулятор
           description_short: ''
@@ -526,6 +527,16 @@
           Sending Bits in the Real World: Sending Bits in the Real World
           Number Systems: Number Systems
           Binary Numbers: Binary Numbers
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
+            Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -568,6 +579,7 @@
           Conditionals and Piecewise Functions: Условные выражения и сложные функции
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Введение в профессиональные разработки
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -596,3 +608,12 @@
           description_short: lesson samples for csp
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
+        ECSPD:
+          Introduction to PD: Введение в профессиональные разработки
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Введение в профессиональные разработки

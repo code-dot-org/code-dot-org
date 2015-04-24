@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Now that you have a way to measure the distance between two points, you just need to decide when those points are close enough to be considered touching. Complete the 'collide?' function so that it checks the distance function and returns true if the two points are close enough to touch (100 pixels apart is a good place to start).",
+    "instructions": "We've got a function called distance that should return the distance between two sprites, and using that we can decide when those sprites are close enough to be considered touching. Complete the 'collide?' function so that it checks the distance function and returns true if the two points are close enough to touch (100 pixels apart is a good place to start). TIP: the distance function doesn't work yet (it always returns zero), so if you're successful you'll see that your sprites are instantly \"colliding,\" but we'll fix that in a second!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -27,7 +27,7 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Collision 4\",\r\n  \"callout_text\": \"Complete the 'collide?' function so that it checks whether the distance between a given pair of coordinates is close enough for them to be touching.\",\r\n  \"element_id\": \"#game_collide\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Collision 4\",\r\n  \"callout_text\": \"Complete the 'collide?' function so that it checks whether the distance between a given pair of coordinates is close enough for them to be touching.\",\r\n  \"element_id\": \"#game_collide > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -36,7 +36,8 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
-    "maze_data": null
+    "maze_data": null,
+    "disable_examples": "false"
   },
   "md5": "e062be943acb1cb6563601e0cc487a7e"
 }]]></config>

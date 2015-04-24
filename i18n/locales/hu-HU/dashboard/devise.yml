@@ -65,8 +65,8 @@ hu:
         header: Send invitation
         submit_button: Send an invitation
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Állítsd be a jelszavad
+        submit_button: Jelszavam beállítása
     mailer:
       invitation_instructions:
         subject: Invitation instructions

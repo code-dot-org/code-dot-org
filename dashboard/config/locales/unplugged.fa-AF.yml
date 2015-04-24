@@ -277,18 +277,24 @@
       VideoGamesCoordinatePlanes:
         title: بازیهای ویدئویی و هواپیماهای همآهنگ
         desc: شرح درس بازیهای ویدئویی و هواپیماهای همآهنگ
+        video: alg_11_coordinate_plane
       Contracts:
         title: قراردادها
         desc: شرح درس بدون دستگاه قراردادها
+        video: alg_5_contracts
       DesignRecipe:
         title: دستور العمل طرح
         desc: شرح درس دستور العمل طراحی
+        video: alg_8_design_recipe
       Booleans:
         title: بولی ها
         desc: شرح درس بولین
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: شرطی ها و توابع چند ضابطه ای
         desc: شرح درس شرطی ها و توابع چند ضابطه ای
+        video: alg_10_conditionals
       CollisionDetection:
         title: تشخیص تصادم
         desc: شرح درس تشخیص تصادم
+        video: alg_16_biggame_collision_detection

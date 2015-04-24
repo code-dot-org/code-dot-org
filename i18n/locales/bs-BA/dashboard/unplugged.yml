@@ -69,23 +69,23 @@ bs:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Vesele Mape
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Pomakni, pomakni
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
         desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Izrada Temelja
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
+        title: Zapetljavanje
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
@@ -98,11 +98,11 @@ bs:
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: Veliki Događaj
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: Sigurna Putovanja
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
@@ -126,7 +126,7 @@ bs:
         desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Funkcionalni Vitraži
         desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
         video: C3_functional_suncatchers
       SongwritingParameters:
@@ -146,7 +146,7 @@ bs:
         desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: Digitalno Državljanstvo
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
         title: Tangram Algorithms
@@ -175,18 +175,24 @@ bs:
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
         desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts, Domain, and Range
         desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
+        title: Recept za Dizajn
         desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans and Logic
         desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection and the Pythagorean Theorem
         desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        video: alg_16_biggame_collision_detection

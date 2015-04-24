@@ -179,8 +179,9 @@ zh:
         text: 这个语句块看起来和“if”(如果)条件语句块一样，但在它的下面多出了一个“else”(否则)语句块部分。 如果我加一个“前进”块到“do”(做)的地方，再加一个“turn left”(向左转)块到“else”的地方，这样一来，如果Scrat the Squirrel(小松鼠斯克莱特)的前方有路，那么他就会向前走。如果他前面没有路，斯科莱特就会向左转。
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: |-
-          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+        text: |
+          它是决策和执行基于这项决定的两个操作之一。并就像"if"块，你可以把放在"重复"的街区中的"if else"块。
+          判断之后，它会在两种动作之间做选择，执行其中一个动作。就像是if模块，你可以将if-else模块放到repeat模块之中。
       4:
         image: notes/saloni_ifelse_scrat4.jpg
         text: "Now let's help Scrat the squirrel get that acorn!"
@@ -270,35 +271,34 @@ zh:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: 嗨，我是Lyndsey,我是一名模特，演员，同时我也会写自己的app。让我们用编程加入Anna和Elsa探索美丽的冰雪奇缘世界的队伍吧！
       2:
         image: notes/frozen1_2.jpg
         text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: 在随后的一个小时，你将会学习编程的基础知识。传统的编程通常是使用文本，但我们将使用 积木块来编程，你可以拖放可视化的积木块来编写的程序。连大学生都是用这样的方式学习编程的基础知识。而实际上，你仍是在编程。
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: 程序是一组指令，它会告诉计算机需要什么。让我们生成一段代码或者程序，将会帮助Elsa画出一条简单的线条。以后，我们将使用这些技能去创建更多复杂的图案。
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: 您的屏幕被分成三个主要部分。在左边，是运行您的程序的位置。每个级别的说明的写屏幕的右下方。
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: 这中间的区域是工具箱，其中的每个块是艾尔莎和安娜能做出的动作。
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 右边的空白称为工作区，我们将在这里构建程序。你可以使用“向前走”模块来移动人物。
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: '在这里"向前走"模块是指"向前移动 100 个像素。"当我们按下"运行"时，将会发生什么？Elsa会向前移动一定距离，这个距离实际上是100 个像素 ！像素是计算机屏幕上很小的一个点。'
       9:
         image: notes/frozen1_9.jpg
         text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: 请记住，您可以通过单击旁边的箭头更改像素和度的数值。
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
@@ -373,10 +373,10 @@ zh:
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: 现在，我们来了解一个所有的游戏程序员每天都要用的东西，它被称为事件。事件可以告诉你的程序去侦听某事的发生。当那件事发生时，它执行相应的操作。
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: 一般事件会去侦听的动作有鼠标单击，按下方向键，屏幕触碰。
       3:
         image: notes/playlab_events_3.png
         text: |-

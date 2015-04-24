@@ -273,18 +273,24 @@
       VideoGamesCoordinatePlanes:
         title: Gry Wideo i Płaszczyzny Współrzędnych
         desc: Opis lekcji poświęconej grom wideo i płaszczyznom współrzednych
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description
+        video: alg_5_contracts
       DesignRecipe:
         title: The Design Recipe
         desc: Design Recipe lesson description
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans
         desc: Opis lekcji o wartościach logicznych
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Opis lekcji poświęconej warunkom i funkcjom sklejanym
+        video: alg_10_conditionals
       CollisionDetection:
         title: Wykrywanie kolizji
         desc: Opis lekcji wykrywanie kolizji
+        video: alg_16_biggame_collision_detection

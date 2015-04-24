@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"مکان تصویر (x، y، تصویر)",
   "offsetBlockTitle":"اُفسِت (x، y، تصویر)",
   "rectangleBlockTitle":"مستطیل (عرض، ارتفاع، سبک، رنگ)",
-  "reinfFeedbackMsg":"شما می توانید دکمه ی \"Keep Playing\" را فشار دهید تا طراحی خود را ویرایش کنید.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"چرخش (درجه، تصویر)",
   "scaleImageBlockTitle":"مقیاس (عامل، تصویر)",
   "squareBlockTitle":"مربع (اندازه، سبک، رنگ)",

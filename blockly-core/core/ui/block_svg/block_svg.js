@@ -433,7 +433,9 @@ Blockly.BlockSvg.connectionUiStep_ = function(ripple) {
 };
 
 /**
- * Change the colour of a block.
+ * Change the display colour of a block. In the case of block.shouldBeGrayedOut
+ * this means the block color on the block object and the display color (gray)
+ * are potentially out of sync.
  */
 Blockly.BlockSvg.prototype.updateColour = function() {
   if (this.block_.disabled) {
@@ -736,9 +738,9 @@ function thickenInlineRows (inputRows) {
 function inputRenderSize (input) {
   // Compute minimum input size.
   var renderHeight = BS.MIN_BLOCK_Y;
-  var renderWidth = BS.TAB_WIDTH + BS.SEP_SPACE_X
+  var renderWidth = BS.TAB_WIDTH + BS.SEP_SPACE_X;
   if (input.type === Blockly.FUNCTIONAL_INPUT) {
-    renderWidth = BS.NOTCH_WIDTH + BS.SEP_SPACE_X
+    renderWidth = BS.NOTCH_WIDTH + BS.SEP_SPACE_X;
   }
 
   // Expand input size if there is a connection.

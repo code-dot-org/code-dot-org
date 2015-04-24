@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"lloc-imatge (x, y, imatge)",
   "offsetBlockTitle":"desplaçament (x, y, imatge)",
   "rectangleBlockTitle":"rectangle (amplada, alçada, estil, color)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"rotar (graus, imatge)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"quadrat (mida, estil, color)",

@@ -349,6 +349,7 @@ es-AR:
     heading_apps: '<h2>Diversión para</h2><h1>Todos</h1>'
     heading_legacy: '<h2>Nuestro curso general para</h2><h1>Todas las edades</h1>'
     your_gallery: Galeria
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Varón
     female: Mujer
@@ -440,7 +441,7 @@ es-AR:
       title: Frozen
     infinity:
       title: Laboratorio de Juego Infinity
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: 'Utilice el  laboratorio jugar para crear una historia o juego protagonizada por personajes de Disney infinito.'
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!
@@ -473,10 +474,11 @@ es-AR:
   contract_match:
     wrong_title: Respuesta incorrecta
     badname: El contrato tiene el nombre equivocado.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badname_case: Los nombres de funciones distinguen mayúsculas de minúsculas. Intente cambiar el caso del nombre de su contrato.
     badrange: El contrato tiene el nombre equivocado.
     baddomainsize: El contrato no tiene el número de elementos en el dominio.
     baddomainname: Uno o más items de su dominio tienen el nombre equivocado.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Escribe aquí tu respuesta
   dialog:

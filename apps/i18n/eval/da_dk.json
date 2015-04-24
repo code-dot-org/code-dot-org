@@ -27,5 +27,5 @@
   "string": "string",
   "stringMismatchError": "Du har en streng med den forkerte kapitalisering.",
   "userCodeException": "Der opstod en fejl under eksekvering af din kode.",
-  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
+  "wrongBooleanError": "Dine blokke evaluerer til den forkerte boolesk værdi."
 }

@@ -141,6 +141,7 @@ en:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: crwdns8566:0crwdne8566:0
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: crwdns8567:0crwdne8567:0
       2-3 multi match 1:
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": crwdns36459:0crwdne36459:0
         Blue colored blocks are associated with __________ ?: crwdns35721:0__________crwdne35721:0
         a image: crwdns35722:0crwdne35722:0
         a number: crwdns35723:0crwdne35723:0
@@ -159,11 +160,11 @@ en:
         a string: crwdns35759:0crwdne35759:0
         boolean: crwdns35760:0crwdne35760:0
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: crwdns36296:0__________crwdne36296:0
-        a image: crwdns36297:0crwdne36297:0
-        a number: crwdns36298:0crwdne36298:0
-        a string: crwdns36299:0crwdne36299:0
-        boolean: crwdns36300:0crwdne36300:0
+        Green colored blocks are associated with __________ ?: crwdns36715:0__________crwdne36715:0
+        a image: crwdns36716:0crwdne36716:0
+        a number: crwdns36717:0crwdne36717:0
+        a string: crwdns36718:0crwdne36718:0
+        boolean: crwdns36719:0crwdne36719:0
       4-5 artist multi 1:
         Artist Multiple Choice: crwdns6306:0crwdne6306:0
         Which blocks draw a rectangle with a perimeter of 100?: crwdns6307:0crwdne6307:0
@@ -324,10 +325,28 @@ en:
       Coordinates Multi 1:
         Video game Coordinates: crwdns24898:0crwdne24898:0
         Ninjacat Demo Embed.level: crwdns24899:0crwdne24899:0
+        0: crwdns36463:0crwdne36463:0
+        1: crwdns36464:0crwdne36464:0
         The unicorn moves across the screen: crwdns24901:0crwdne24901:0
         The unicorn's y value changes: crwdns24902:0crwdne24902:0
         The unicorn moves to the left: crwdns24903:0crwdne24903:0
         The unicorn's x value decreases: crwdns36249:0crwdne36249:0
+      ECSPD growth mindset in the classroom:
+        Growth Mindset in the Classroom: crwdns36465:0crwdne36465:0
+        How can we use praise to encourage Growth Mindset in our students?: crwdns36466:0crwdne36466:0
+        praise students for getting the right answer: crwdns36467:0crwdne36467:0
+        praise the process that students use to solve problems: crwdns36468:0crwdne36468:0
+        praise students for their intelligence: crwdns36469:0crwdne36469:0
+      ECSPD growth mindset question:
+        Impact of Growth Mindset: crwdns36470:0crwdne36470:0
+        Based on the video you saw before, please answer the following question.: crwdns36471:0crwdne36471:0
+        0: crwdns36472:0crwdne36472:0
+        1: crwdns36473:0crwdne36473:0
+        more effort: crwdns36474:0crwdne36474:0
+        more strategies: crwdns36475:0crwdne36475:0
+        more engagement over longer periods of time: crwdns36476:0crwdne36476:0
+        more perseverance: crwdns36477:0crwdne36477:0
+        all of the above: crwdns36478:0crwdne36478:0
       K-1 Artist 1 Multi 1:
         Multiple Choice: crwdns6099:0crwdne6099:0
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: crwdns6100:0crwdne6100:0
@@ -574,7 +593,7 @@ en:
         x = 15<br>a = 2<br>b = 6: crwdns34729:0crwdne34729:0
         What is the value of a + b?: crwdns34730:0crwdne34730:0
         8: crwdns34731:0crwdne34731:0
-        function: crwdns34732:0crwdne34732:0
+        a function: crwdns36479:0crwdne36479:0
         ab: crwdns34733:0crwdne34733:0
       msm variables multi 3:
         x = 15<br/>a = 2<br>b = 6: crwdns34734:0crwdne34734:0
@@ -644,6 +663,9 @@ en:
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: crwdns36048:0crwdne36048:0
         Multi Strings Images 1.blocks3.start_blocks, 350, 100: crwdns36049:0crwdne36049:0
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: crwdns36050:0crwdne36050:0
+      PDECS attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: crwdns36480:0crwdne36480:0
+        I have read and agree to the Attendance Policy: crwdns36481:0crwdne36481:0
       PDK5 Basic CS:
         Video Follow-up Question: crwdns34781:0crwdne34781:0
         Answer this question based on the video you just watched.: crwdns34782:0crwdne34782:0
@@ -712,7 +734,7 @@ en:
         Why are visual programming languages easier to learn than text-based programming languages?: crwdns35275:0crwdne35275:0
         Because you dont have to worry about syntax as much, like where to put a semi-colon: crwdns35276:0crwdne35276:0
         Because you can focus on the logic of programming: crwdns35277:0crwdne35277:0
-        Because the commands are available in a menu rather than having to remember them yourself: crwdns35278:0crwdne35278:0
+        Because the commands are listed in a menu rather than having to remember them yourself: crwdns36482:0crwdne36482:0
         All of the above: crwdns35279:0crwdne35279:0
       PDK5 What is CS:
         What is Computer Science?: crwdns35280:0crwdne35280:0
@@ -765,6 +787,42 @@ en:
         this is a question?: crwdns34810:0crwdne34810:0
         wrong answer: crwdns34811:0crwdne34811:0
         right answer: crwdns34812:0crwdne34812:0
+      U1L10 Assessment 1:
+        "Assessment: Encoding Text": crwdns36483:0crwdne36483:0
+        "Question #1": crwdns36484:0crwdne36484:0
+        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: crwdns36485:0crwdne36485:0
+        2 bits: crwdns36486:0crwdne36486:0
+        3 bits: crwdns36487:0crwdne36487:0
+        4 bits: crwdns36488:0crwdne36488:0
+        5 bits: crwdns36489:0crwdne36489:0
+        6 bits: crwdns36490:0crwdne36490:0
+      U1L10 Assessment 2:
+        "Assessment: Encoding Text": crwdns36491:0crwdne36491:0
+        "Question # 2": crwdns36492:0crwdne36492:0
+        0: crwdns36493:0crwdne36493:0
+        1: crwdns36494:0crwdne36494:0
+        3 bits: crwdns36495:0crwdne36495:0
+        4 bits: crwdns36496:0crwdne36496:0
+        5 bits: crwdns36497:0crwdne36497:0
+        6 bits: crwdns36498:0crwdne36498:0
+        7 bits: crwdns36499:0crwdne36499:0
+      U1L11 Assessment 1:
+        "Assessment: Sending Formatted Text": crwdns36500:0crwdne36500:0
+        "Question #1": crwdns36501:0crwdne36501:0
+        What is ASCII text?: crwdns36502:0crwdne36502:0
+        American Strict Conformance of Internet Interchange: crwdns36503:0crwdne36503:0
+        Authentication Standards for Commerce in Interstate Information: crwdns36504:0crwdne36504:0
+        American Standard Code for Information Interchange: crwdns36505:0crwdne36505:0
+        Automatic Serial Coding for Interface Interchange: crwdns36506:0crwdne36506:0
+      U1L11 Assessment 2:
+        "Assessment: Sending Formatted Text": crwdns36507:0crwdne36507:0
+        "Question #2": crwdns36508:0crwdne36508:0
+        How many bytes are used to encode a single ASCII character?: crwdns36509:0crwdne36509:0
+        1 byte: crwdns36510:0crwdne36510:0
+        2 bytes: crwdns36511:0crwdne36511:0
+        4 bytes: crwdns36512:0crwdne36512:0
+        8 bytes: crwdns36513:0crwdne36513:0
+        16 bytes: crwdns36514:0crwdne36514:0
       U1L6 Assessment multiple choice:
         "Multiple Choice: Number Systems": crwdns36278:0crwdne36278:0
         If you just had a circle and a square, how many 3-shape rows could you make?: crwdns36279:0crwdne36279:0
@@ -774,7 +832,7 @@ en:
         10: crwdns36283:0crwdne36283:0
         12: crwdns36284:0crwdne36284:0
       unique level name here:
-        line1<br/>line2: crwdns34813:0crwdne34813:0
+        title: crwdns36515:0crwdne36515:0
         description here: crwdns21784:0crwdne21784:0
         Question: crwdns21785:0crwdne21785:0
         wrong answer: crwdns21786:0crwdne21786:0

@@ -282,18 +282,24 @@
       VideoGamesCoordinatePlanes:
         title: Video Games dhe Plane Koordinative
         desc: Video Games dhe Plane Koordinative përshkrim mësimi
+        video: alg_11_coordinate_plane
       Contracts:
         title: Marrëveshjet
         desc: Përshkrim mësimi i kontratave unplugged
+        video: alg_5_contracts
       DesignRecipe:
         title: Receta e Dizenjimit
         desc: Përshkrimi i mësimit të Recetës së Dizenjimit
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans
         desc: Përshkrimi i mësimit të Booleans
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Kushtet dhe Funksionet Piecewise
         desc: Përshkrimi i mësimit të Kushteve dhe Funksioneve Piecewise
+        video: alg_10_conditionals
       CollisionDetection:
         title: Zbulimi i Përplasjeve
         desc: Përshkrimi i mësimit të Zbulimit të Përpjasjeve
+        video: alg_16_biggame_collision_detection

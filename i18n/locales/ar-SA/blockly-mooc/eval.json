@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"وضع الصورة (س، ص، صورة)",
   "offsetBlockTitle":"offset (x, y, image)",
   "rectangleBlockTitle":"المستطيل (العرض, الارتفاع، النمط, الون)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"تدوير (درجات، الصورة)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"مربع (حجم، نمط، لون)",

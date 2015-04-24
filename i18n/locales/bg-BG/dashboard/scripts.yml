@@ -302,11 +302,11 @@ bg:
           "Play Lab: Animation (Big Game)": 'Голямата игра - анимация'
           "Unplugged: Booleans": 'Ънплъгд: Booleans и логика'
           "Eval: Boolean Operators": Booleans оператори
-          "Play Lab: Booleans": Сам прилепа
+          "Play Lab: Booleans": Сам прилепът
           "Play Lab: Boolean (Big Game)": 'Голямата игра - Booleans'
           "Unplugged: Conditionals and Piecewise Functions": 'Ънплъгд: Условия и Piecewise функции'
           "Eval: Conditionals": Условия
-          "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и Питагорова теорема'
+          "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и Питагоровата теорема'
           "Play Lab: Collision Detection (Big Game)": 'Голямата игра - Collision Detection'
         infinity:
           title: Дисни Инфинити Игрална лаборатория
@@ -316,8 +316,8 @@ bg:
           Infinity: Безкрайност
         algebrademo:
           title: Алгебра демо
-          description_short: 'Една шепа  пъзели, за демонстриране на  средата и езикът за програмиране, които се използвт в Code.org CS и в алгебрата'
-          description: 'Една шепа  пъзели, за демонстриране на  средата и езикът за програмиране, които се използвт в Code.org CS и в алгебрата'
+          description_short: 'Една шепа  пъзели, за демонстриране на  средата и езика за програмиране, които се използвт в Code.org CS и в алгебрата'
+          description: 'Една шепа  пъзели, за демонстриране на  средата и езика за програмиране, които се използвт в Code.org CS и в алгебрата'
           Algebra Demo: Алгебра демо
           Evaluation Blocks: Блокове за оценка
           Making Pictures: Правене на снимки
@@ -341,6 +341,7 @@ bg:
           Personal Reflection: Лична рефлексия
           Next Steps: Следващи стъпки
           Computer Science Pedagogy: Педагогика на Компютърните науки
+          Programming Concepts: Programming Concepts
         netsim:
           title: Интернет симулатор
           description_short: ""
@@ -455,9 +456,9 @@ bg:
           "Artist: Functions": 'Художник: функции'
           "Bee: Debugging": 'Пчела: отстраняване на грешки'
         cspunit1:
-          title: 'CSP Unit 1 - Digital Information'
-          description_short: Explore how digital information is represented and transferred
-          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          title: 'CSP Част 1 - Дигитална информация'
+          description_short: Изследвай как цифрова информация е представена и преведена
+          description: Тази част изследва техническите предизвикателства и въпроси, които възникват от необходимостта да се въвежда цифровата информация в компютрите и как се предава тя между хората и изчислителните устройства.
           Lesson14: Урок14
           Lesson 14: Урок 14
           Lesson 14 v2: Урок 14 v2
@@ -468,15 +469,24 @@ bg:
           Lesson 4: Урок 4
           Lesson 6: Урок 6
           Lesson 2: Урок 2
-          Lesson 7: Lesson 7
-          Lesson 1: Lesson 1
-          Innovation: Innovation
-          Sending Binary Messages: Sending Binary Messages
-          Sending More Complex Messages: Sending More Complex Messages
-          Bit Sending Widget: Bit Sending Widget
-          Sending Bits in the Real World: Sending Bits in the Real World
-          Number Systems: Number Systems
-          Binary Numbers: Binary Numbers
+          Lesson 7: Урок 7
+          Lesson 1: Урок 1
+          Innovation: Иновация
+          Sending Binary Messages: Изпращане на бинарни съобщения
+          Sending More Complex Messages: Изпращане на по-сложни съобщения
+          Bit Sending Widget: Приспособление за изпращане на битове
+          Sending Bits in the Real World: Изпращане на битове в реалния свят
+          Number Systems: Бройни системи
+          Binary Numbers: Бинарни числа
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Компресия на текста
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
         algebraPD:
           title: Компютърни науки в алгебрата
           description: Научете функционално програмиране чрез алгебра
@@ -508,11 +518,12 @@ bg:
           The Design Recipe: Рецепта за дизайн
           Your Game - Animation: 'Вашата игра - анимация'
           Booleans: Booleans
-          Sam the Bat: Сам прилепа
+          Sam the Bat: Сам прилепът
           Your Game - Booleans: 'Вашата игра - Booleans'
           Conditionals and Piecewise Functions: Условни и линейни функции
           Rocket-Height: Ракетна височина
           Design Recipe Practice: 'Дизайн на рецепта - практика'
+          Introduction to PD: Въведение в PD
         algPDmiami:
           title: Компютърни науки в алгебрата
           description: Научи алгебра чрез функционално програмиране
@@ -522,7 +533,7 @@ bg:
           Design Recipe Practice: 'Дизайн на рецепта - практика'
           Your Game - Animation: 'Вашата игра - анимация'
           Booleans: Booleans
-          Sam the Bat: Сам прилепа
+          Sam the Bat: Сам прилепът
           Your Game - Booleans: 'Вашата игра - Booleans'
           Luigi's Pizza: Луиджи пица
           "Play Lab: Collision Detection (Big Game)": 'Игрална лаборатория: Collision Detection (голямата игра)'
@@ -540,3 +551,12 @@ bg:
           description_short: пробни уроци за csp
           Lesson 14: Урок 14
           Lesson 15: Урок 15
+        ECSPD:
+          Introduction to PD: Въведение в PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Въведение в PD

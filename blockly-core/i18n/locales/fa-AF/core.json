@@ -171,7 +171,7 @@
   "LOGIC_BOOLEAN_TRUE": "صحیح",
   "LOGIC_COMPARE_HELPURL": "http://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C",
   "LOGIC_COMPARE_TOOLTIP_EQ": "بازگشت صحیح اگر هر دو ورودی با یکدیگر برابر باشد.",
-  "LOGIC_COMPARE_TOOLTIP_GT": "بازگرداندن صحیح اگر ورودی اول بزرگتر از ورودی دوم باشد.",
+  "LOGIC_COMPARE_TOOLTIP_GT": "بازگرداندن مقدار بولین true اگر ورودی اول  از ورودی دوم بزرگتر باشد.",
   "LOGIC_COMPARE_TOOLTIP_GTE": "اگر ورودی اول بزرگتر یا مساوی ورودی دوم باشد، مقدار بولین true را برمی گرداند.",
   "LOGIC_COMPARE_TOOLTIP_LT": "بازگرداندن مقدار بولین true، اگر ورودی اول کوچکتر از ورودی دوم باشد.",
   "LOGIC_COMPARE_TOOLTIP_LTE": "اگر ورودی اول کوچکتر یا مساوی ورودی دوم باشد، مقدار بولین true را برگردان.",

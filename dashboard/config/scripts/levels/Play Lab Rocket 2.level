@@ -39,6 +39,7 @@
     "definition_collapse": "false",
     "custom_game_type": "Rocket Height",
     "disable_examples": "false",
+    "video_key": "alg_8_design_recipe",
     "maze_data": null
   },
   "md5": "42c49605b9f052da87455dd2f92a7578"
@@ -85,26 +86,6 @@
           <next>
             <block type="studio_setBackground" uservisible="false">
               <title name="VALUE">"space"</title>
-              <next>
-                <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">time</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">0</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="variables_set" inline="false" uservisible="false">
-                      <title name="VAR">height</title>
-                      <value name="VALUE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">0</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </next>
             </block>
           </next>
         </block>

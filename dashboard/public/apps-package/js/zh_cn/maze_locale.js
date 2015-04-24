@@ -178,7 +178,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "holePresent":function(d){return "地上有一个坑"},
 "honey":function(d){return "做蜂蜜"},
 "honeyAvailable":function(d){return "蜂蜜"},
-"honeyTooltip":function(d){return "做花酿蜂蜜"},
+"honeyTooltip":function(d){return "用花粉酿蜂蜜"},
 "honeycombFullError":function(d){return "这蜂窝没有房间放置更多的蜂蜜。"},
 "ifCode":function(d){return "如果"},
 "ifInRepeatError":function(d){return "你需要放一个”如果“块在”重复“块里。如果你忘记了怎么做，重新试试上一题，看看你是怎么做的。"},
@@ -224,8 +224,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatUntilBlocked":function(d){return "当前面有路"},
 "repeatUntilFinish":function(d){return "重复直到完成"},
 "step":function(d){return "踏步"},
-"totalHoney":function(d){return "所有蜂蜜"},
-"totalNectar":function(d){return "所有花蜜"},
+"totalHoney":function(d){return "蜂蜜总量"},
+"totalNectar":function(d){return "花蜜总量"},
 "turnLeft":function(d){return "向左转"},
 "turnRight":function(d){return "向右转"},
 "turnTooltip":function(d){return "把我向左或者向右转90度。"},
@@ -235,4 +235,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "重复块所包含的操作直到完成。"},
 "word":function(d){return "找到一个单词"},
 "yes":function(d){return "是"},
-"youSpelled":function(d){return "你拼写"}};
+"youSpelled":function(d){return "你拼写的"}};

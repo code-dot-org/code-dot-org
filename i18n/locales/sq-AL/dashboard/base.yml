@@ -397,6 +397,7 @@ sq:
     heading_apps: '<h2>Zbavitje për</h2><h1>Të Gjithë</h1>'
     heading_legacy: '<h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>'
     your_gallery: Galeria
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Mashkull
     female: Femër
@@ -525,6 +526,7 @@ sq:
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Shtyp përgjigjen tënde këtu
   dialog:

@@ -5,7 +5,7 @@ module Solr
   class Server
 
     def initialize(params={})
-      @host, @port = params[:host].to_s.split(':').map{|i| i.strip}
+      @host, @port = params[:host].to_s.split(':').map(&:strip)
       @port ||= '8983'
       @http = Net::HTTP.new(@host, @port)
     end

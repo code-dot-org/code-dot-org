@@ -284,21 +284,27 @@
           gesteuert werden. Erkunde wie algebraischer Ausdrücke und das Koordinatensystem
           uns verstehen helfen können wie Videospiele funktionieren und beginne dann
           das Videospiel zu planen, das du selbst bauen wirst.
+        video: alg_11_coordinate_plane
       Contracts:
         title: Verträge
         desc: Beschreibung der Lektion zu "Contracts unplugged"
+        video: alg_5_contracts
       DesignRecipe:
         title: Das Design-Rezept
         desc: Beschreibung der Lektion für Design-Rezepte
+        video: alg_8_design_recipe
       Booleans:
         title: Boolesche Werte und Logik
         desc: Boolesche Werte sind der vierte und letzte Datentyp, den du in diesem
           Kurs kennenlernen wirst. Bei dieser Übung wirst du erfahren was boolesche
           Werte sind und wie sie uns dabei helfen können, Funktionen zu schreiben,
           die logisch denken
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Lektion zu Conditionals und Piecewise
+        video: alg_10_conditionals
       CollisionDetection:
         title: Erkennen eines Zusammenstosses
         desc: Beschreibung der Lektion zur Erzeugung eines Zusammenstosses
+        video: alg_16_biggame_collision_detection

@@ -149,33 +149,33 @@ pt-BR:
     o rumo da sua vida.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Essas habilidades mudaram meu futuro.
+    Sem contar que elas são muito divertidas.&rdquo;
+    Luna, aluna do 7º ano
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Eu nunca vi meus alunos tão
+    animados em aprender.&rdquo;
+    Michael, professor
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;A ciência da computação é um campo que
+    não tem como você saber se gosta ou não antes de experimentar.&rdquo;
+    Jackson, aluno do 6º ano
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;Você pode fazer o que quiser
+    com a programação.&rdquo; 
+    Maya, 2º ano
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;A ciência da computação não é para
+    outra pessoa. É para você, aqui e agora.&rdquo; 
+    Geraldo, professor
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;A programação estimula a criatividade, inspiração e inovação &mdash; 
+    e tudo isso é essencial em qualquer carreira.&rdquo;
+    Floresa, professora
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;Esse programa manteve 100% dos meus alunos
+    engajados, envolvidos e participando.&rdquo;
+    Adam, professor
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel de controle do professor
@@ -206,7 +206,7 @@ pt-BR:
   homepage_slot_text_title_advocates: Apoiadores
   homepage_slot_text_blurb_advocates: Apoie nosso trabalho
   homepage_slot_text_link_stats: Veja as estatísticas
-  homepage_slot_text_link_buy: Comprar uma camiseta ou um boné
+  homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Fazer uma doação
   homepage_header_codestudio: Criações de alunos no Code Studio
   homepage_header_donors: A Code.org agradece a seus colaboradores

@@ -10,7 +10,7 @@
   "placeImageBlockTitle":"place-image (x, y, image)",
   "offsetBlockTitle":"offset (x, y, image)",
   "rectangleBlockTitle":"ចតុកោណ​កែង (ទទឹង, កម្ពស់, ស្ទីល, ពណ៌)",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your drawing.",
+  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to edit your program.",
   "rotateImageBlockTitle":"បង្វិល (ដឺក្រេ, រូបភាព)",
   "scaleImageBlockTitle":"scale (factor, image)",
   "squareBlockTitle":"ការ៉េ (ទំហំ, ស្ទីល, ពណ៌)",

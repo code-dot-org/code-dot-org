@@ -109,13 +109,6 @@ end
 def main()
   return unless only_one_running?(__FILE__)
 
-  total_started = 0
-  total_finished = 0
-  total_tutorials = {}
-  total_cities = {}
-  total_states = {}
-  total_countries = {}
-
   to_date = JSON.load(IO.read(pegasus_dir("cache/HourOfActivity_Totals_2014-12-05.json")))
 
   total_started = to_date['started']

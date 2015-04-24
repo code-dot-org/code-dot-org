@@ -1050,6 +1050,11 @@ Studio.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  // In our Algebra course, we want to gray out undeletable blocks. I'm not sure
+  // whether or not that's desired in our other courses.
+  var isAlgebraLevel = !!level.useContractEditor;
+  config.grayOutUndeletableBlocks = isAlgebraLevel;
+
   loadLevel();
 
   window.addEventListener("keydown", Studio.onKey, false);
@@ -1398,6 +1403,7 @@ var displayFeedback = function() {
       skin: skin.id,
       feedbackType: Studio.testResults,
       tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+      continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
       level: level,
       showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
@@ -1582,7 +1588,6 @@ Studio.execute = function() {
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
         'whenGameStarts');

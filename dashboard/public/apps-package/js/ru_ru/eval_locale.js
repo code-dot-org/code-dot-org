@@ -157,7 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "Вы использовали неправильную строку цвета: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "Вы использовали неправильную строку стиля: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "круг (радиус, стиль, цвет)"},
-"displayBlockTitle":function(d){return "оценить"},
+"displayBlockTitle":function(d){return "проверить"},
 "ellipseBlockTitle":function(d){return "эллипс (ширина, высота, стиль, цвет)"},
 "extraTopBlocks":function(d){return "У вас есть неприсоединённые блоки.  Вы хотели присоединить их к блоку «оценить»?"},
 "infiniteRecursionError":function(d){return "Ваша функция вызывает сама себя. Мы вынуждены это остановить, иначе она бы вызывала себя постоянно."},
@@ -182,4 +182,4 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "string":function(d){return "строка"},
 "stringMismatchError":function(d){return "В вашей строке перепутаны заглавные и строчные буквы."},
 "userCodeException":function(d){return "Во время исполнения вашей программы произошла ошибка."},
-"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
+"wrongBooleanError":function(d){return "Ваши блоки возвращают неправильное логическое значение."}};

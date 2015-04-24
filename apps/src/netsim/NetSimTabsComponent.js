@@ -22,8 +22,10 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
+ * @param {RunLoop} runLoop
  * @param {Object} callbacks
  * @param {function} callbacks.chunkSizeSliderChangeCallback
+ * @param {function} callbacks.myDeviceBitRateChangeCallback
  * @param {function} callbacks.encodingChangeCallback
  * @param {function} callbacks.routerBandwidthSliderChangeCallback
  * @param {function} callbacks.routerBandwidthSliderStopCallback
@@ -33,7 +35,7 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
  * @param {function} callbacks.becomeDnsCallback
  * @constructor
  */
-var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
+var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig, runLoop,
     callbacks) {
   /**
    * Component root, which we fill whenever we call render()
@@ -49,10 +51,22 @@ var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig,
   this.levelConfig_ = levelConfig;
 
   /**
+   * @type {RunLoop}
+   * @private
+   */
+  this.runLoop_ = runLoop;
+
+  /**
    * @type {function}
    * @private
    */
   this.chunkSizeSliderChangeCallback_ = callbacks.chunkSizeSliderChangeCallback;
+
+  /**
+   * @type {function}
+   * @private
+   */
+  this.myDeviceBitRateChangeCallback_ = callbacks.myDeviceBitRateChangeCallback;
 
   /**
    * @type {function}
@@ -148,8 +162,12 @@ NetSimTabsComponent.prototype.render = function () {
     this.myDeviceTab_ = new NetSimMyDeviceTab(
         this.rootDiv_.find('#tab_my_device'),
         this.levelConfig_,
-        this.chunkSizeSliderChangeCallback_,
-        this.encodingChangeCallback_);
+        this.runLoop_,
+        {
+          chunkSizeChangeCallback: this.chunkSizeSliderChangeCallback_,
+          bitRateChangeCallback: this.myDeviceBitRateChangeCallback_,
+          encodingChangeCallback: this.encodingChangeCallback_
+        });
   }
 
   if (shouldShowTab(this.levelConfig_, NetSimTabType.ROUTER)) {
@@ -177,6 +195,13 @@ NetSimTabsComponent.prototype.render = function () {
 NetSimTabsComponent.prototype.setChunkSize = function (newChunkSize) {
   if (this.myDeviceTab_) {
     this.myDeviceTab_.setChunkSize(newChunkSize);
+  }
+};
+
+/** @param {number} newBitRate in bits per second */
+NetSimTabsComponent.prototype.setMyDeviceBitRate = function (newBitRate) {
+  if (this.myDeviceTab_) {
+    this.myDeviceTab_.setBitRate(newBitRate);
   }
 };
 

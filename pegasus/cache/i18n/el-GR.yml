@@ -167,71 +167,62 @@
   homepage_hero_text_sheryl: '&ldquo;Τα παιδιά μας &mdash; συμπεριλαμβανομένων και
     των κοριτσιών μας &mdash; χρειάζονται την ευκαιρία να μάθουν την επιστήμη των
     υπολογιστή .&rdquo;  Sheryl, COO του Facebook'
-  homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+  homepage_hero_text_satya: '&ldquo;Η επιστήμη υπολογιστών μπορεί να ξεκλειδώσει τις
+    καλύτερες ευκαιρίες στον κόσμο.&rdquo; Satya, Διευθύνων Σύμβουλος της Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Αν μπορείτε να γράψετε κώδικα, μπορείτε να επιλέξετε
+    την πορεία της ζωής σας.&rdquo; Chris Μπος'
+  homepage_hero_text_student1: '&ldquo;Αυτές οι δεξιότητες έχουν αλλάξει το μέλλον
+    μου. Για να μην αναφέρουμε ότι είναι απλώς  διασκέδαση. &rdquo; Luna, 7η τάξη'
+  homepage_hero_text_student2: '&ldquo;Δεν έχω δει ποτέ τα παιδιά μου τόσο ενθουσιασμένα
+    για μάθηση.&rdquo; Michael, δάσκαλος'
+  homepage_hero_text_student3: '&ldquo; Η Επιστήμη των υπολογιστών είναι ένα πεδίο
+    που δεν μπορείτε να ξέρετε αν σας αρέσει ή όχι πριν το δοκιμάσετε.&rdquo;  Jackson,
+    6η δημοτικού'
+  homepage_hero_text_student4: '&ldquo;Μπορείτε να κάνετε οτιδήποτε  θέλει το μυαλό
+    σας με τον προγραμματισμό.&rdquo; Μάγια, 2ης τάξης'
+  homepage_hero_text_student5: '&ldquo; Η Επιστήμη υπολογιστών δεν είναι για κάποιον
+    άλλο. Είναι για σας, εδώ, τώρα.&rdquo; Geraldo, δάσκαλος'
+  homepage_hero_text_teacher1: '&ldquo; Το γράψιμο κώδικα ξυπνά την δημιουργικότητα,
+    την έμπνευση και την καινοτομία &mdash; οι οποίες είναι απαραίτητες για κάθε σταδιοδρομία.&rdquo;
+    Floresa, δάσκαλος'
+  homepage_hero_text_teacher2: '&ldquo; Αυτό το πρόγραμμα, πήρε το 100% από τους μαθητές
+    μου που ασχολούνται, συμμετέχουν. .&rdquo; Αδάμ, δάσκαλος'
   homepage_slot_text_hoc: Η Ώρα του Κώδικα
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_frozen: Ταινία Frozen με την Άννα και την Έλσα
+  homepage_slot_text_teacher: πίνακας Δασκάλου
+  homepage_slot_text_studio: Όλα τα σεμινάρια μας
   homepage_slot_text_course4: Μάθημα 4
   homepage_slot_text_shop: Κατάστημα
-  homepage_slot_text_flappy: Flappy κώδικα
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_slot_text_flappy: Flappy κώδικας
+  homepage_action_text_codevideo: Δείτε το βίντεο
+  homepage_action_text_teachervideo: Δείτε το βίντεο
+  homepage_action_text_learn: Αρχίστε να μαθαίνετε σήμερα
+  homepage_action_text_signpetition: |
+    Υπογράψτε την συλλογή υπογραφών
+  homepage_signpetition_dropdown: Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Φιλοξενήστε μια ώρα του κώδικα
+  homepage_slot_text_link_hocserved: '# ΕχουνΕξυπηρετηθεί'
   homepage_slot_text_title_students: Μαθητές
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_blurb_students: Διερευνήστε όλα τα σεμινάρια μας
+  homepage_slot_text_link_codestudio: Δοκιμάστε το Studio κώδικα
+  homepage_slot_text_link_local: Βρείτε μια τάξη κοντά στον τόπο σας
+  homepage_slot_text_link_othercourses: Άλλα online μαθήματα
+  homepage_slot_text_title_educators: Εκπαιδευτικοί
+  homepage_slot_text_blurb_educators: Διδάξτε τους μαθητές σας
+  homepage_slot_text_link_k5: Μαθήματα για τη βαθμίδα Κ-5
+  homepage_slot_text_link_fullcurriculum: Δείτε το πλήρες πρόγραμμα σπουδών μας
+  homepage_slot_text_link_pd: Επαγγελματική εξέλιξη
+  homepage_slot_text_title_advocates: Τάσσεται υπέρ της
+  homepage_slot_text_blurb_advocates: Στηρίξτε το έργο μας
+  homepage_slot_text_link_stats: Δείτε τα στατιστικά
   homepage_slot_text_link_buy: Buy a T-shirt or hat
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_link_donate: Κάντε μια δωρεά
+  homepage_header_codestudio: Studio Κώδικα δημιουργίες σπουδαστών
+  homepage_header_donors: Το Code.org ευχαριστεί τους υποστηρικτές του
+  homepage_donors_seall: Εμφάνιση όλων
   homepage_donors_donate: Κάντε μια δωρεά
   contact_form_topic_student: Είμαι μαθητής
   contact_form_topic_parent: Είμαι γονέας
@@ -329,8 +320,8 @@
   dashboard_action_delete_yes: Ναι
   dashboard_action_delete_no: Όχι
   dashboard_action_confirm: Διαγραφή;
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove: Διαγραφή
+  dashboard_action_remove_confirm: Διαγραφή?
   dashboard_action_done: Ολοκληρώθηκε
   dashboard_action_required: απαιτείται
   dashboard_navigation_home_page: Αρχική Σελίδα Εκπαιδευτή
@@ -383,7 +374,7 @@
     <b>Προσθήκη πολλών μαθητών</b>.
   dashboard_students_placeholder_name: Όνομα μαθητή
   dashboard_students_name: Όνομα
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Πρόοδος
   dashboard_students_age: Ηλικία
   dashboard_students_gender: Φύλο
   dashboard_students_male: Αγόρι
@@ -443,8 +434,8 @@
   dashboard_login_picture: Εικόνα
   dashboard_login_none: Ηλεκτρονικό ταχυδρομείο
   dashboard_new_password: νέος κωδικός
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: δεν ξεκίνησε
+  dashboard_progress_in_progress: σε εξέλιξη
   dashboard_progress_not_completed: δεν έχει ολοκληρωθεί
   dashboard_progress_completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
   dashboard_progress_completed_perfect: ολοκληρώθηκε, τέλειο
@@ -495,7 +486,7 @@
   carousel_heading_robots: Μάθετε να προγραμματίζετε με ρομπότ
   carousel_heading_ide: Δημοφιλείς ψηφιακές πλατφόρμες μεταξύ των εκπαιδευτικών
   educator_notes: Σημειώσεις επιμορφωτή
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Πώς να διδάξετε μια ώρα του κώδικα
   more_resources_educators: Περισσότεροι πόροι για τους εκπαιδευτικούς και τους επιμορφωτές
   participants: συμμετέχοντες
   teachers_notes: Σημειώσεις εκπαιδευτικού
@@ -597,7 +588,7 @@
   khanfr_platformtext: Σύγρονα Προγράμματα περιήγησης
   khanpl_platformtext: Σύγρονα Προγράμματα περιήγησης
   tynker_platformtext: Σύγρονα Προγράμματα περιήγησης
-  scratch_platformtext: Desktop-only web browsers (not tablets)
+  scratch_platformtext: Φυλλομετρητές μόνο για προσωπικούς υπολογιστές(όχι για τάμπλετ)
   lightbot_platformtext: ΟΛΑ προγράμματα περιήγησης και iOS, Android, ή κονσόλες παιχνιδιών
   thinkersmith_platformtext: Χωρίς σύνδεση
   condcards_platformtext: Χωρίς σύνδεση
@@ -605,7 +596,8 @@
   codehs_platformtext: Σύγχρονα προγράμματα περιήγησης (browsers). (Για τα επόμενα
     μαθήματα απαιτούνται $$)
   codecademy_platformtext: Σύγχρονα προγράμματα περιήγησης. iOS, Android εφαρμογές
-  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
+  codecombat_platformtext: Σύγχρονοι φυλλομετρητές( Η παρακολούθηση της σειράς των
+    μαθηματων απαιτεί $$)
   codemonkey_platformtext: Σύγρονα Προγράμματα περιήγησης
   codeavengers_platformtext: Σύγρονα Προγράμματα περιήγησης
   processing_platformtext: Σύγρονα Προγράμματα περιήγησης
@@ -703,11 +695,11 @@
     μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα
     Αngry Birds και τα Φυτά  εναντίον Ζόμπι. Μάθετε επαναληπτικούς βρόχους, συνθήκες
     και βασικούς αλγορίθμους. Διαθέσιμο σε 34 γλώσσες.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Οι μαθητές χρησιμοποιώντας ένα προκαθορισμένο
+    "Λεξικό του Ρομπότ" θα ανακαλύψουν τρόπους  να  κατευθύνουν ο ένας τον άλλο ώστε
+    να τελειώσουν συγκεκριμένες εργασίες για τις οποίες δεν έχουν συζητήσει προηγουμένως.  Με
+    αυτό το μάθημα τα παιδιά μαθαίνουν την σύνδεση ανάμεσα στα σύμβολα και τις ενέργειες,
+    όπως επίσης και την ανεκτίμητη δεξιότητα του εντοπισμού σφαλμάτων.
   khan_longdescription: Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ  δημιουργείτε  διασκεδαστικά
     σχέδια με τον κώδικα σας. Κάνετε το μόνοι σας ή με την τάξη σας!
   khanes_longdescription: Μάθετε τα βασικά του προγραμματισμού σε JavaScript, ενώ  δημιουργείτε  διασκεδαστικά

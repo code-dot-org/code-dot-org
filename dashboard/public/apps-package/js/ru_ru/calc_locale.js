@@ -154,10 +154,10 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"divideByZeroError":function(d){return "Ваша программа пытается разделить на ноль."},
+"divideByZeroError":function(d){return "Ваша программа приводит к делению на ноль."},
 "emptyComputeBlock":function(d){return "Вам необходимо присоединить блок к блоку «оценить»."},
 "equivalentExpression":function(d){return "Попробуйте переназначить ваши аргументы, чтобы получить точно такое же выражение."},
-"evaluate":function(d){return "оценить"},
+"evaluate":function(d){return "проверить"},
 "extraTopBlocks":function(d){return "У вас есть неприсоединённые блоки.  Вы хотели присоединить их к блоку «оценить»?"},
 "failedInput":function(d){return "Ваша процедура возвращает неверный результат для некоторых значений."},
 "goal":function(d){return "Цель:"},
