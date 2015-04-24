@@ -24,10 +24,6 @@ $wide-column-width: 121px;
   user-select: $val;
 }
 
-.full_container {
-  padding-top: 2px;
-}
-
 // Hide the footer instructions, we put them in the instructions tab
 #prompt-table {
   display: none;
@@ -35,42 +31,6 @@ $wide-column-width: 121px;
 
 .clearfix {
   clear: both;
-}
-
-// Sprited icons.
-.icon21 {
-  height: 21px;
-  width: 21px;
-  background-image: url("#{$root}icons.png");
-}
-.code {
- background-position: -42px 0;
-}
-.link {
-  background-position: -21px 0;
-}
-.run {
-  background-position: -63px -21px;
-  margin-right: 3px;
-}
-.stop {
-  background-position: -63px 0;
-  margin-right: 3px;
-}
-.calcHeader {
-  font-size: 25px;
-}
-
-.markedToken {
-  fill: $white;
-}
-
-.errorToken {
-  fill: $red;
-}
-
-.expr {
-  font-size: 20px;
 }
 
 //
