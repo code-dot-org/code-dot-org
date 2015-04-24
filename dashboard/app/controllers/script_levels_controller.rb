@@ -4,7 +4,8 @@ class ScriptLevelsController < ApplicationController
   include LevelsHelper
 
   def solution
-    authorize! :show, ScriptLevel
+    authorize! :read, ScriptLevel
+
     if current_user.teacher? || current_user.admin?
       @level = Level.find(params[:level_id])
       @game = @level.game
@@ -23,7 +24,8 @@ class ScriptLevelsController < ApplicationController
   end
 
   def show
-    authorize! :show, ScriptLevel
+    authorize! :read, ScriptLevel
+
     @script = Script.get_from_cache(params[:script_id])
 
     if params[:reset]
@@ -91,6 +93,7 @@ class ScriptLevelsController < ApplicationController
       @script_level = @script.get_script_level_by_id(params[:id])
     end
     raise ActiveRecord::RecordNotFound unless @script_level
+    authorize! :read, @script_level
   end
 
   def load_level_source

@@ -39,4 +39,22 @@ class BaseDSL
   def i18n_strings
   end
 
+  def self.boolean(name)
+    define_method(name) do |val|
+      instance_variable_set "@#{name}", ActiveRecord::ConnectionAdapters::Column::value_to_boolean(val)
+  	end
+  end
+
+  def self.string(name)
+    define_method(name) do |val|
+      instance_variable_set  "@#{name}", val
+  	end
+  end
+
+  def self.integer(name)
+    define_method(name) do |val|
+      instance_variable_set "@#{name}", ActiveRecord::ConnectionAdapters::Column::value_to_integer(val)
+  	end
+  end
+
 end
