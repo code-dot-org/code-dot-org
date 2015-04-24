@@ -59,7 +59,7 @@ function browserify(watch) {
   return bundle(config)();
 }
 
-gulp.task('dev', ['media', 'sass', 'messages'], function() {
+gulp.task('dev', ['media', 'sass', 'messages', 'vendor'], function() {
   gulp.watch(Object.keys(mediaFiles), ['media']);
   gulp.watch(Object.keys(cssFiles), ['sass']);
   return browserify(true);
