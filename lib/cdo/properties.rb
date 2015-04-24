@@ -25,17 +25,16 @@ class Properties
   end
 
   def self.get_user_metrics()
-    metrics = self.get(:about_stats)||{
+    self.get(:about_stats)||{
       'number_students'=>5420082,
       'number_teachers'=>124291
     }
-    metrics
   end
 
 end
 
 def fetch_metrics()
-  metrics = Properties.get(:metrics)||{
+  Properties.get(:metrics)||{
     'created_at'=>"2013-12-31T23:59:59+00:00",
     'created_on'=>"2013-12-31",
     'csedweek_organizers'=>0,
@@ -46,7 +45,6 @@ def fetch_metrics()
     'petition_signatures'=>0,
     'lines_of_code'=>0,
   }
-  metrics
 end
 
 def fetch_hoc_metrics()
