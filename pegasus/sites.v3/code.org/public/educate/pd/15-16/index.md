@@ -8,13 +8,13 @@ nav: pd2_nav
 **Click below to find your program-specific welcome kit!**
 <br/>
 <br/>
-[Computer Science Principles](code.org/welcome-csp)
+[Computer Science Principles](/files/CSPTeacherWelcomeKit.pdf)
 <br/>
-[Exploring Computer Science](code.org/welcome-ecs)
+[Exploring Computer Science](/files/ECSTeacherWelcomeKit.pdf)
 <br/>
-[Computer Science in Algebra](code.org/welcome-algebra)
+[Computer Science in Algebra](/files/CSinAlgebraTeacherWelcomeKit.pdf)
 <br/>
-[Computer Science in Science](code.org/welcome-science)
+[Computer Science in Science](/files/CSinScienceTeacherWelcomeKit.pdf)
 <br/>
 <br/>
 

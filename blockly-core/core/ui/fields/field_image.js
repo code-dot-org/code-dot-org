@@ -136,14 +136,6 @@ Blockly.FieldImage.prototype.dispose = function() {
 };
 
 /**
- * Sets the image's preserveAspectRatio attribute
- * @param {string} value Value for preserveAspectRatio
- */
-Blockly.FieldImage.prototype.setPreserveAspectRatio = function(value) {
-  this.imageElement_.setAttribute('preserveAspectRatio', value);
-};
-
-/**
  * Returns the click target for this image
  * @returns {Element}
  */
@@ -181,14 +173,4 @@ Blockly.FieldImage.prototype.setText = function(src) {
   this.src_ = src;
   this.imageElement_.setAttributeNS('http://www.w3.org/1999/xlink',
       'xlink:href', goog.isString(src) ? src : '');
-};
-
-/**
- * Update the image and recalculate its size
- * @param {?string} src New source.
- * @override
- */
-Blockly.FieldImage.prototype.setTextAndRefreshSize = function(src) {
-  this.setText(src);
-  this.getDimensionsThenUpdate_(src);
 };

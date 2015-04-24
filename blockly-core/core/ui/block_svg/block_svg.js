@@ -738,9 +738,9 @@ function thickenInlineRows (inputRows) {
 function inputRenderSize (input) {
   // Compute minimum input size.
   var renderHeight = BS.MIN_BLOCK_Y;
-  var renderWidth = BS.TAB_WIDTH + BS.SEP_SPACE_X
+  var renderWidth = BS.TAB_WIDTH + BS.SEP_SPACE_X;
   if (input.type === Blockly.FUNCTIONAL_INPUT) {
-    renderWidth = BS.NOTCH_WIDTH + BS.SEP_SPACE_X
+    renderWidth = BS.NOTCH_WIDTH + BS.SEP_SPACE_X;
   }
 
   // Expand input size if there is a connection.
