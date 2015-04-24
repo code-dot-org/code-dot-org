@@ -6,17 +6,17 @@ title: Computational Thinking view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unplugged=>true, :title=> 'Computational Thinking',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>25) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 For this activity, no instructions are provided. Instead, students will use examples of what imaginary players have done to figure out how to play the game. This lesson gives students the opportunity to practice the four arts of computational thinking (decomposition, pattern matching, abstraction, and algorithms) in one cohesive activity.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -29,16 +29,16 @@ For this activity, no instructions are provided. Instead, students will use exam
 
 ### **Wrap-up** - 10 minutes
 
-4) [Flash Chat](#WrapUp) - What did we learn?  
-5) [Vocab Shmocab](#Shmocab)
+4) [Flash Chat](#WrapUp) - ¿Qué aprendimos?u  
+5) [Vocabulario Shmocab](#Shmocab)
 
 ### **Assessment** - 5 minutes
 
 6) [Computational Thinking Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -46,43 +46,44 @@ For this activity, no instructions are provided. Instead, students will use exam
   * Match identical portions of similar phrases to match patterns
   * Identify differences in similar phrases and abstract them out 
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * One die per group
   * One [Computational Thinking Kit](Activity1-ComputationalThinking.pdf) per group
   * Pens, Pencils, & Scissors
   * [Computational Thinking Assessment](Assessment1-CompThinking.pdf) for each student
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/7sHTZsGMQuQ?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * This Teacher Lesson Guide
   * Print one [Computational Thinking Kit](Activity1-ComputationalThinking.pdf) per group
   * Print one [Computational Thinking Assessment](Assessment1-CompThinking.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
 ## Getting Started (15 min)
 
-### <a name="Vocab"></a> 1) Vocabulary
+### <a name="Vocab"></a> 1) Vocabulario
 
 This lesson has four new and important words:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Algorithm** - Say it with me: Al-go-ri-thm   
 A list of steps that you can follow to finish a task
@@ -129,7 +130,7 @@ Finding similarities between things
 
 "This is all to show that if you use the tools of Computational Thinking (decomposition, pattern matching, abstraction, and algorithms), then you can figure out how to solve problems that no one has already taught you how to solve...just like we did here! This will be an extremely powerful skill for the rest of your life!"
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -157,26 +158,26 @@ Students will be guided toward discovering the rules using the steps of computat
 > 
 > 7) Have students play the game using the algorithm that they just made. Each player should get at least two turns.
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
-### <a name="WrapUp"></a> 4) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 4) Flash Chat: ¿Qué aprendimos?
 
   * What should you try to do when you're asked to do something and you don't know how?
   * If a problem is too hard, what should you try to do?
   * If you find similarities in lots of solutions to different problems, what does that probably tell you? 
   * If you have a problem that is just a little different from a problem that you have a solution for, what would you do? 
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 5) Vocab Shmocab
 
@@ -189,7 +190,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -200,7 +201,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->

@@ -1,60 +1,60 @@
 * * *
 
-title: "Farmer: While Loops" view: page_curriculum theme: none
+title: "Fazendeira: laços while" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>12, :title=> 'Farmer: While Loops', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>12, :title=> 'Fazendeira: laços while', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-Using while loops, students control a farmer shovel dirt into holes until they’re full and remove dirt from piles until it’s all gone.
+Usando laços, os estudantes movem a pá da fazendeira para encher os buracos e removem a sujeira das pilhas até acabar.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Farmer: While Loops**
+### **Atividade: Fazendeira: laços enquanto (while)**
 
-[Farmer: While Loops](#Activity)
+[Fazendeira: laços enquanto (while)](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activities](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Distinguish between loops that repeat a fixed number of times and loops that repeat until a condition is met
-  * Use a while loop to create programs that can solve problems with unknown values
-
-[/together]
-
-[together]
-
-## Getting Started
-
-### <a name="GetStarted"></a> Introduction
+  * Distinguir entre laços que se repetem um número fixo de vezes e laços que se repetem até que uma condição seja satisfeita
+  * Usar um laço enquanto (while) para criar programas que podem resolver problemas com valores desconhecidos
 
 [/together]
 
 [together]
 
-## Activity
+## Primeiros passos
 
-### <a name="Activity"></a> [Farmer: While Loops](http://learn.code.org/s/course3/stage/12/puzzle/1)
+### <a name="GetStarted"></a> Introdução
+
+[/together]
+
+[together]
+
+## Atividade
+
+### <a name="Activity"></a> [Fazendeira: laços enquanto (while)](http://learn.code.org/s/course3/stage/12/puzzle/1)
 
 [/together]
 
@@ -63,85 +63,85 @@ Using while loops, students control a farmer shovel dirt into holes until they�
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### So Moving
+### Vamos mexer
 
-  * Give the students pictures of actions or dance moves that they can do. 
-      * Have students arrange moves and add loops to choreograph their own dance.
-  * Share the dances with the rest of the class.
+  * Dê aos alunos imagens de ações ou passos de dança que eles podem realizar. 
+      * Peça aos alunos que organizem passos e adicionem laços para coreografar sua própria dança.
+  * Compartilhe as danças com o resto da turma.
 
-### Connect It Back
+### Faça a conexão de volta
 
-  * Find some YouTube videos of popular dances that repeat themselves.
-  * Can your class find the loops?
-  * Try the same thing with songs! 
+  * Encontre vídeos no YouTube de danças populares que apresentam repetições.
+  * Você consegue encontrar os laços?
+  * Tente fazer a mesma coisa com músicas! 
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Select and drag / slide
-  * Select object
-  * Use video player
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Selecionar e arrastar / deslizar
+  * Selecionar objeto
+  * Usar player de vídeo
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
-  * 6.c - Troubleshoot systems and applications.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-07. Represent data in a variety of ways: text, sounds, pictures, numbers.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub problems. 
-  * CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions. 
-  * CT.L3A-03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CT.L1:6-01. Entender e usar os passos básicos na resolução de um problema com um algoritmo.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-07. Representar dados de várias formas: textos, sons, imagens, números.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores. 
+  * CT.L2-14. Examinar as conexões entre elementos de matemática e ciência da computação, inclusive números binários, lógica, conjuntos e funções. 
+  * CT.L3A-03. Explicar como sequência, seleção, iteração, e recursividade são blocos de construção de algoritmos.
 
 ### Next-Gen Science Standards
 
-  * 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * 3-5-ETS1-2. Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 3.OA.3 - Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities.
-  * 4.NBT.B.4 - Fluently add and subtract multi-digit whole numbers using the standard algorithm.
-  * 5.NBT.B.5 - Fluently multiply multi-digit whole numbers using the standard algorithm.
+  * 3.OA.3 - Usar multiplicação e divisão até 100 para resolver os problemas em situações envolvendo grupos iguais, arrays e unidades de medida.
+  * 4.NBT.B. 4 - Somar e subtrair números inteiros com vários dígitos usando o algoritmo padrão com facilidade.
+  * 5.NBT.B.5 - Multiplicar números inteiros com vários algarismos usando o algoritmo padrão com facilidade.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
-  * L.4.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
-  * L.5.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
+  * L.4.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam ações, emoções, ou estados de espírito precisos, e que sejam básicos em um tópico em particular.
+  * L.5.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam contraste, adição e outras relações lógicas.
 
 [/standards]
 
