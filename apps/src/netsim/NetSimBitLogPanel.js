@@ -26,6 +26,7 @@ var logger = require('./NetSimLogger').getSingleton();
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
  * @param {function} [options.receiveButtonCallback]
+ * @param {function} [options.expandCollapseCallback]
  * @constructor
  * @augments NetSimPanel
  * @implements INetSimLogPanel
@@ -70,7 +71,8 @@ var NetSimBitLogPanel = module.exports = function (rootDiv, options) {
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
     panelTitle: options.logTitle,
-    beginMinimized: options.isMinimized
+    beginMinimized: options.isMinimized,
+    expandCollapseCallback: options.expandCollapseCallback
   });
 };
 NetSimBitLogPanel.inherits(NetSimPanel);
