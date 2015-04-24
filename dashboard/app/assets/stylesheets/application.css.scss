@@ -673,7 +673,11 @@ html, body {
   text-align: center;
 }
 
+
 .header_button {
+  &.header_button_light {
+    background-color: #a6e3e8;
+  }
   display: inline-block;
   background-color: $orange;
   border-radius: 5px;
