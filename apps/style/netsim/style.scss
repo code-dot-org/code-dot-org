@@ -24,26 +24,17 @@ $wide-column-width: 121px;
   user-select: $val;
 }
 
-// Reduce top margin to help fit everything above the fold
 .full_container {
-  position: absolute;
-  top: 85px;
-  bottom: 150px;
-  left: 0;
-  right: 0;
-}
-
-#codeApp {
-  height: 100%;
-}
-
-#appContainer {
-  height: 100%;
+  padding-top: 2px;
 }
 
 // Hide the footer instructions, we put them in the instructions tab
 #prompt-table {
   display: none;
+}
+
+.clearfix {
+  clear: both;
 }
 
 // Sprited icons.
@@ -99,6 +90,10 @@ $wide-column-width: 121px;
     left: 0;
     width: 320px;
     overflow-y: auto;
+
+    & > .column-width-limiter {
+      width: 300px;
+    }
   }
 
   #netsim-rightcol {
