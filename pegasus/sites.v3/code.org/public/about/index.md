@@ -4,7 +4,7 @@ nav: about_nav
 ---
 
 <%
-  stats = PROPERTIES.get(:about_stats)
+  stats = Properties.get(:about_stats)
 %>
 
 # About Us
