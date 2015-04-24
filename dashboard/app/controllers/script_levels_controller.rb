@@ -114,7 +114,7 @@ class ScriptLevelsController < ApplicationController
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     view_options(
       full_width: true,
-      no_footer: (@game == Game.applab || @game == Game.netsim)
+      no_footer: !@game.has_footer?
     )
 
     @@fallback_responses ||= {}
