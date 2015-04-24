@@ -763,7 +763,7 @@ Applab.init = function(config) {
   level = config.level;
   user = {
     applabUserId: config.applabUserId,
-    isAdmin: !!config.isAdmin
+    isAdmin: (config.isAdmin === true)
   };
 
   loadLevel();
