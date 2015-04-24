@@ -323,6 +323,26 @@ img#turtleImage {
   background-position: 0px -42px;
   margin-right: 3px;
 }
+.pause-btn {
+  background-position: 0px -84px;
+  margin-right: 3px;
+}
+.continue-btn {
+  background-position: -21px -84px;
+  margin-right: 3px;
+}
+.step-in-btn {
+  background-position: 0px -105px;
+  margin-right: 3px;
+}
+.step-out-btn {
+  background-position: -21px -105px;
+  margin-right: 3px;
+}
+.step-over-btn {
+  background-position: 0px -126px;
+  margin-right: 3px;
+}
 
 button.arrow {
   border: 1px solid #FFA000;
