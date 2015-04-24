@@ -1,4 +1,5 @@
 require 'cdo/db'
+require 'cdo/properties'
 
 class Tutorials
 

@@ -26,10 +26,11 @@ class Properties
   end
 
   def self.get_user_metrics()
-    @@teacher_count = User.where(user_type: 'teacher').count unless defined? @@teacher_count
-    @@student_count = User.where(user_type: 'student').count unless defined? @@student_count
-
-    { 'teacher_count' => @@teacher_count, 'student_count' => @@student_count }
+    metrics = self.get(:about_stats)||{
+      'number_students'=>5420082,
+      'number_teachers'=>124291
+    }
+    metrics
   end
 
 end
