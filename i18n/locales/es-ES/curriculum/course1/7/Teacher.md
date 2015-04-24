@@ -6,17 +6,17 @@ title: "Bee: Sequence" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>7, :title=> 'Bee: Sequence', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this lesson students will help their bees to collect nectar from flowers and create honey in honeycombs. This builds on the Maze levels by adding action blocks to the movement blocks students are already familiar with.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ In this lesson students will help their bees to collect nectar from flowers and 
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -44,7 +44,7 @@ In this lesson students will help their bees to collect nectar from flowers and 
   * Distinguish between flowers and honeycombs.
   * Express the relationships between flowers, nectar, honeycombs, and honey.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -59,7 +59,7 @@ In this lesson students will help their bees to collect nectar from flowers and 
       * When you see a flower, collect nectar.
       * When you see a honeycomb, make honey.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -71,7 +71,7 @@ Point out to students that each flower and honeycomb has a little number next to
 
   * Have students count their nectar and honey blocks out loud.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -82,7 +82,7 @@ Point out to students that each flower and honeycomb has a little number next to
 
 <a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
-[/together]
+[/juntos]
 
 [standards]
 

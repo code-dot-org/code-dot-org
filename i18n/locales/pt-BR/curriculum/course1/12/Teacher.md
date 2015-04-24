@@ -1,68 +1,69 @@
 * * *
 
-title: Getting Loopy view: page_curriculum theme: none
+title: Repetindo view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Getting Loopy', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
+<%= partial('curriculum_header', :title=> 'Repetindo', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>15) %>
 
 [content]
 
-## Lesson Overview
+## Visão geral da aula
 
-Loops are a handy way of describing actions that repeat a certain numbers of times. In this lesson, students will practice converting sets of actions into a single loop.
+Laços são uma maneira prática de descrever ações que se repetem um determinado número de vezes. Nessa aula, os alunos vão praticar a conversão de conjuntos de ações em um único laço.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 15 minutes
+### **Primeiros passos** - 15 minutos
 
-1) [Review](#Review)   
-2) [Vocabulary](#Vocab)  
-3) [Repeat After Me](#GetStarted)
+1) [Revisão](#Review)   
+2) [Vocabulário](#Vocab)  
+3) [Repita depois de mim](#GetStarted)
 
-### **Activity: Loops** - 15 minutes
+### **Atividade: Laços** - 15 minutos
 
-4) [Getting Loopy](#Activity1)
+4) [Repetindo](#Activity1)
 
-### **Wrap-up** - 10 minutes
+### **Resumo** - 10 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
 
 
-### **Assessment** - 10 minutes
+### **Avaliação** - 10 minutos
 
-6) [Getting Loopy Assessment](#Assessment)
+6) [Avaliação da atividade repetindo](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Repeat actions initiated by the instructor
-  * Translate a picture program into a live-action dance
-  * Convert a series of multiple actions into a single loop
+  * Repetir ações iniciadas pelo instrutor
+  * Traduzir um programa de imagem em uma animação de dança
+  * Converter uma série de várias ações em um único laço
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * Open Space for Dancing/Moving
-  * Assessment Worksheet: [Getting Loopy Assessment](/curriculum/course1/12/Assessment12-GettingLoopy.pdf)
-  * Pens/Pencils/Markers
+  * Espaço para dança/movimentos
+  * Folha de avaliação: [Avaliação da atividade repetindo](/curriculum/course1/12/Assessment12-GettingLoopy.pdf)
+  * Canetas/lápis/marcadores
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/Vo2woYRRogA?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
   * Teacher Lesson Guide
   * Print one [Getting Loopy Activity Worksheet](/curriculum/course1/12/Activity12-GettingLoopy.pdf) for the class
   * Print Assessment Worksheet: [Getting Loopy Assessment](/curriculum/course1/12/Assessment12-GettingLoopy.pdf) for each student
@@ -71,33 +72,33 @@ Loops are a handy way of describing actions that repeat a certain numbers of tim
 
 [together]
 
-## Getting Started (15 min)
+## Primeiros passos (15 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. You can do this as one large group or have students discuss with an elbow partner.
+Este é um excelente momento para revisar a última aula que você deu à turma. Você pode fazer isso com a turma toda ou pedir para que os alunos discutam em duplas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one new and important vocabulary word:  
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -106,173 +107,173 @@ This lesson has one new and important vocabulary word:
 
 [/centerIt]
 
-**Loop** - Say it with me: Loop   
-The action of doing something over and over again
+**Laço** - Repita comigo: la-ço  
+A ação de fazer algo várias vezes
 
 [/together]
 
-### <a name="GetStarted"></a> 3) Repeat After Me
+### <a name="GetStarted"></a> 3) Repita depois de mim
 
-  * Ask for a volunteer and have them stand
+  * Peça para que um voluntário fique de pé
     
-      * Instruct your volunteer to walk around the table (or their chair, or a friend)
-      * When they finish, instruct them to do it again, using the exact same words you did before
-      * When they finish, instruct again
-      * Then again
+      * Instrua o voluntário a caminhar ao redor da mesa (ou da cadeira, ou de um amigo)
+      * Quando ele terminar, instrua-o a fazer isso de novo, usando exatamente as mesmas palavras que você usou antes
+      * Quando ele terminar, instrua-o de novo
+      * E de novo
 
-  * Would it have been easier for me to just ask you to go around the table four times?
+  * Não teria sido mais fácil simplesmente pedir ao voluntário que andasse ao redor da mesa quatro vezes?
     
-      * What if I wanted you to do it ten times?
+      * E se eu quisesse que você fizesse isso dez vezes?
 
-  * If I want you to repeat an action 10 times, that's called "looping."
+  * Se eu quero que você repita uma ação 10 vezes, isso é chamado de "laço".
 
-  * When I know in advance that I want you to do something a certain number of times, it's easier for both of us if I just ask you to "Repeat it that many times."
+  * Quando eu sei com antecedência que eu quero que você faça alguma coisa um determinado número de vezes, é mais fácil para nós dois se eu simplesmente pedir "repita isso tantas vezes".
 
-  * Can you think of some other things that we could loop?
+  * Quais outras coisas interessantes poderíamos fazer usando laços?
 
 [together]
 
-## Activity: (15 min)
+## Atividade: (15 min)
 
-### <a name="Activity1"></a> 4) [Getting Loopy](/curriculum/course1/12/Activity12-GettingLoopy.pdf)
+### <a name="Activity1"></a> 4) [Repetindo](/curriculum/course1/12/Activity12-GettingLoopy.pdf)
 
-Today, we're going to have a dance party!
+Hoje, vamos fazer uma festa dançante!
 
-Sometimes, when you know that you will be doing something over and over, it is helpful to know how many times it needs to be done before you begin. That way, you can keep track of how many actions you have left as you go.
+Às vezes, quando você sabe que vai fazer uma coisa várias vezes, é bom saber quantas vezes você precisa repetir antes de começar. Assim, você pode saber quantas ações ainda precisará realizar.
 
-Example:
+Exemplo:
 
-> If your mom wanted you to play her favorite song over and over, she wouldn’t say:
+> Se sua mãe quisesse que você tocasse sua música favorita várias vezes, ela não diria:
 > 
-> > *“Please play my song, play my song, play my song, play my song.”*
+> > *"Filho, toque a música, toque a música, toque a música, toque a música".*
 > 
-> She would most likely say:
+> Ela provavelmente diria:
 > 
-> > *“Please play my song four times.”*
+> > *"Filho, toque a música quatro vezes".*
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Looking for some good music?  
-Here are some great places to find some:
+Procurando boa música?  
+Estes são ótimos lugares para encontrar:
 
   * [Radio Disney](http://music.disney.com/radio-disney)
   * [Kidz Bop Radio](http://www.jango.com/music/Kidz+Bop+Kids?l=0)
 
 [/tip]
 
-> **Directions:**
+> **Instruções:**
 > 
->   1. Look at the dance moves provided on the [Getting Loopy Worksheet](/curriculum/course1/12/Activity12-GettingLoopy.pdf). ![](iteration.png)
+>   1. Veja os passos de dança fornecidos na [folha de atividade Repetindo](/curriculum/course1/12/Activity12-GettingLoopy.pdf). ![](iteration.png)
 > 
->   2. Show the class what the entire dance looks like done at full-speed.
+>   2. Mostre para a turma como é a dança toda na velocidade normal.
 > 
->   3. Run through the dance slowly, one instruction at a time, with the class.
->   4. Can you find the loop in the instructions? 
->       * What would the dance look like if we only repeated the main part 2 times?
->       * What if we repeated the main part 4 times?
->   5. Can you find anything else in the dance that we could use a loop for? 
+>   3. Passe a coreografia com a turma devagar, uma instrução por vez.
+>   4. Consegue encontrar o laço nas instruções? 
+>       * Como a dança seria se apenas repetíssemos a parte principal 2 vezes?
+>       * E se repetíssemos a parte principal 4 vezes?
+>   5. Você consegue encontrar algo mais na dança em que poderíamos usar um laço? 
 
 [/together]
 
 [together]
 
-## Wrap-up (10 min)
+## Resumo (10 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * Do you think it is easier to add more pictures to the screen or change the number of times we loop? 
-      * Would your answer be the same if we wanted to loop 100 times?
-  * Could we use these same loops with different dance moves?
-  * Do you know any dances that are done inside a loop?
-  * What was your favorite part about that activity?
-
-[/together]
-
-[together]
-
-## Assessment (10 min)
-
-### <a name="Assessment"></a>6) Assessment Worksheet: [Getting Loopy Assessment](/curriculum/course1/12/Assessment12-GettingLoopy.pdf)
-
-  * Hand out the worksheet titled "Getting Loopy" and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Você acha que é mais fácil adicionar mais imagens à tela ou mudar o número de iterações do laço? 
+      * Sua resposta seria a mesma se quiséssemos iterar 100 vezes no laço?
+  * Poderíamos usar os mesmos laços com passos de dança diferentes?
+  * Você conhece alguma dança que é feita dentro de um laço?
+  * Qual foi a parte da atividade que você mais gostou?
 
 [/together]
 
 [together]
 
-## Extended Learning
+## Avaliação (10 min)
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+### <a name="Assessment"></a>6) Folha de avaliação: [Avaliação da atividade repetindo](/curriculum/course1/12/Assessment12-GettingLoopy.pdf)
 
-### So Moving
+  * Distribua a folha de atividade "Repetindo" e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
-  * Give the students pictures of actions or dance moves that they can do. 
-      * Have students arrange moves and add loops to choreograph their own dance.
-  * Share the dances with the rest of the class.
+[/together]
 
-### Connect It Back
+[together]
 
-  * Find some YouTube videos of popular dances that repeat themselves.
-  * Can your class find the loops?
-  * Try the same thing with songs! 
+## Aprendizagem estendida
+
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
+
+### Vamos mexer
+
+  * Dê aos alunos imagens de ações ou passos de dança que eles podem realizar. 
+      * Peça aos alunos que organizem passos e adicionem laços para coreografar sua própria dança.
+  * Compartilhe as danças com o resto da turma.
+
+### Faça a conexão de volta
+
+  * Encontre vídeos no YouTube de danças populares que apresentam repetições.
+  * Você consegue encontrar os laços?
+  * Tente fazer a mesma coisa com músicas! 
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 2.d - Contribute to project teams to solve problems. 
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems. 
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 2.d - Contribuir com equipes de projeto para resolver problemas. 
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CT.L1:3-03. Understand how to arrange information into useful order without using a computer.
-  * CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
-  * CT.L1:6-02. Develop a simple understanding of an algorithm using computer-free exercise.
-  * CT.L1:6-05. Make a list of sub-problems to consider while addressing a larger problem.
-  * CPP.L1.3-04. Construct a set of statements to be acted out to accomplish a simple task.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CT.L2-03. Define an algorithm as a sequence of instructions that can be processed by a computer.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
+  * CT.L1:3-03. Entender como é possível organizar informações em uma ordem útil sem usar um computador.
+  * CT.L1:6-01. Entender e usar os passos básicos na resolução de um problema com um algoritmo.
+  * CT.L1:6-02. Desenvolver uma compreensão simples de um algoritmo com exercícios que não usem computador.
+  * CT.L1:6-05. Fazer uma lista de subproblemas que devem ser considerados ao se tratar um problema maior.
+  * CPP.L1.3-04. Construir um conjunto de comandos para realizar uma tarefa simples.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CT.L2-03. Definir um algoritmo como uma sequência de instruções que podem ser processadas por um computador.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
 
-### NGSS Science and Engineering Practices
+### Práticas de engenharia e ciência NGSS
 
-  * K-2-PS3-2 - Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem. 
+  * K-2-PS3-2 - Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning. 
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido. 
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * K.CC.4 - Understand the relationship between numbers and quantities; connect counting to cardinality.
-  * K.CC.6 - Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group, e.g., by using matching and counting strategies.
-  * K.MD.3 - Classify objects into given categories; count the numbers of objects in each category and sort the categories by count.
+  * K.CC.4 - Entender a relação entre números e quantidades; relacionar contagem e cardinalidade.
+  * K.CC.6 - Identificar se o número de objetos em um grupo é maior, menor ou igual ao número de objetos em outro grupo, por exemplo, usando estratégias de associação e contagem.
+  * K.MD.3 - Classificar os objetos de acordo com as categorias dadas; contar o número de objetos em cada categoria e ordenar as categorias de acordo com a contagem.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.K.1 - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
-  * SL.K.2 - Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.
-  * L.K.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships (e.g., because).
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
+  * SL.K.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos da educação infantil e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.K.2 - Confirmar a compreensão de um texto lido em voz alta ou de informações apresentadas de forma oral por outro tipo de mídia, perguntando e respondendo questões sobre detalhes importantes e pedindo explicações se algo não for entendido.
+  * L.K.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples (por exemplo, porque).
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
 
 [/standards]
 

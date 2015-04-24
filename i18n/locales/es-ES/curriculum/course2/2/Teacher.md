@@ -6,15 +6,15 @@ title: Real-Life Algorithms | Paper Airplanes view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Real-Life Algorithms: Paper Airplanes', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
-[content]
+[contenido]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this lesson, students will relate the concept of algorithms back to everyday real-life activities by making paper airplanes. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -26,7 +26,7 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 
 4) [Real-Life Algorithms](#Activity1): Paper Airplanes
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 
@@ -35,11 +35,11 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 
 6) [Daily Algorithms](#Assessment)
 
-[/summary]
+[/resumen]
 
 [together]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,29 +47,30 @@ In this lesson, students will relate the concept of algorithms back to everyday 
   * Decompose large activities into a series of smaller events
   * Arrange sequential events into their logical order
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Paper for folding into airplane
   * [Real-Life Algorithms Worksheet](Activity2-RealLifeAlgorithms.pdf): Paper Airplanes
   * Assessment Worksheet: [Daily Algorithms](Assessment2-EverydayAlgorithms.pdf)
-  * Scissors
-  * Glue
+  * Tijeras
+  * Pegamento
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/EEwe28TF1VE?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * Teacher Lesson Guide
   * [Real-Life Algorithms Worksheet](Activity2-RealLifeAlgorithms.pdf): Paper Airplanes
   * Print Assessment Worksheet: [Daily Algorithms](Assessment2-EverydayAlgorithms.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -89,24 +90,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
 This lesson has one vocabulary word that is important to review:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Algorithm** - Say it with me: Al-go-ri-thm   
 A list of steps that you can follow to finish a task
@@ -126,7 +127,7 @@ A list of steps that you can follow to finish a task
         
   * Let's try doing this with a new and fun activity, like making paper airplanes!
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -134,13 +135,13 @@ A list of steps that you can follow to finish a task
 
 ### <a name="Activity1"></a> 4) [Real-Life Algorithm Worksheet](Activity2-RealLifeAlgorithms.pdf): Paper Airplanes
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 You know your classroom best. As the teacher, decide if students should do this individually or if students should work in pairs or small groups.
 
-[/tip]
+[/sugerencia]
 
   * You can use algorithms to help describe things that people do every day. In this activity, we will create an algorithm to help each other fold a paper airplane.
 
@@ -152,23 +153,23 @@ You know your classroom best. As the teacher, decide if students should do this 
 >   4. Trade the finished algorithm with another person or group and let them use it to make their plane!
 >   5. If you are concerned about injury when your students begin flying their paper airplanes, we recommend having them blunt the tip of the plane by either folding it inward or ripping it off and covering the ripped edges with tape. 
 
-[/together]
+[/juntos]
 
 [together]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 If deciding on the correct steps seems too difficult for your students, do that piece together as a class before you break up into teams.
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -180,7 +181,7 @@ If deciding on the correct steps seems too difficult for your students, do that 
           * What if it were forty steps?
   * What was your favorite part about that activity?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -191,7 +192,7 @@ If deciding on the correct steps seems too difficult for your students, do that 
   * Hand out the worksheet titled "Daily Algorithms" and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -206,7 +207,7 @@ Use these activities to enhance student learning. They can be used as outside of
   * Gather teams back together into one big group and have one team share their steps, without letting anyone know what the activity was that they had chosen.
   * Allow the rest of the class to try to guess what activity the algorithm is for.
 
-[/together]
+[/juntos]
 
 [standards]
 

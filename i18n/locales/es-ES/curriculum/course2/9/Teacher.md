@@ -6,15 +6,15 @@ title: Relay Programming view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Relay Programming', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
-[content]
+[contenido]
 
-## Lesson Overview
+## Contenido de la Lección
 
 This activity will begin with a short review of Graph Paper Programming, then will quickly move to a race against the clock, as students break into teams and work together to create a program, one instruction at a time.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -36,9 +36,9 @@ This activity will begin with a short review of Graph Paper Programming, then wi
 
 7) [Relay Programming Assessment](#Assessment):Debugging
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 Students will:
 
@@ -46,19 +46,20 @@ Students will:
   * Use teamwork to complete a task
   * Verify the work of their teammates to ensure a successful outcome
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Blank Paper or Index Cards for programs 
   * Sheets of 4x4 paper grids for the students to use as practice (These are provided as part of the [Relay Programming Activity Packet](/curriculum/course2/9/Activity9-RelayProgramming.pdf), but if you have the students create their own, you can include Common Core Math standard 2.G.2.)
   * Markers, pens, or pencils
   * [Relay Programming Assessment](Assessment9-RelayProgramming.pdf)
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/fvpFCI8yoeA?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * Locate a wide open space for this activity, such as the gym or outdoor field
   * Print out one [Relay Programming Activity Packet](/curriculum/course2/9/Activity9-RelayProgramming.pdf) for each group 
   * Print one [Relay Programming Assessment](Assessment9-RelayProgramming.pdf) for each student 
@@ -82,24 +83,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a>2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Debugging** - Say it with me: De-bugg-ing   
 Finding and fixing problems in your algorithm or program
@@ -133,7 +134,7 @@ The rules of this game are simple:
 
 Play through this several times, with images of increasing difficulty.
 
-[tip]
+[sugerencia]
 
 # Clarifications
 
@@ -144,7 +145,7 @@ Here are some clarifications that need to be shared from time to time:
   * It *is* okay to discuss algorithms with the rest of the group in line, even up to the point of planning who is going to write what when they get to the image.
   * When a student debugs a program by crossing out an incorrect instruction, they must also cross out the rest of the program after that. This counts as their entire turn. The next player is allowed to continue from the last *correct* instruction.
 
-[/tip]
+[/sugerencia]
 
 ## Wrap-up (10 min)
 

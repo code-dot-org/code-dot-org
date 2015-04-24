@@ -6,17 +6,17 @@ title: "Bee: Nested Loops" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>13, :title=> 'Bee: Nested Loops', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Students use the Bee environment to write programs using nested loops.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,16 +31,16 @@ Students use the Bee environment to write programs using nested loops.
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
   * Break a sequence of steps into a hierarchy or looped sequences 
   * Nest loops and conditionals to analyze multiple value conditions using if, else if, else logic
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -48,7 +48,7 @@ Students use the Bee environment to write programs using nested loops.
 
 ### <a name="GetStarted"></a> Introduction
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -56,7 +56,7 @@ Students use the Bee environment to write programs using nested loops.
 
 ### <a name="Activity"></a> [Bee: Nested Loops](http://learn.code.org/s/course3/stage/13/puzzle/1)
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -67,7 +67,7 @@ Students use the Bee environment to write programs using nested loops.
 
 <a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
-[/together]
+[/juntos]
 
 [standards]
 

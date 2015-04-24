@@ -6,17 +6,17 @@ title: Move It, Move It view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Move It, Move It', :lesson=>2, :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 This lesson will help students realize that in order to give clear instructions, they need a common language. Students will practice controlling one another using a simple combination of hand gestures. Once they understand the language, they will begin to "program" one another by giving multiple instructions in advance.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -28,7 +28,7 @@ This lesson will help students realize that in order to give clear instructions,
 
 4) [Move It, Move It: Multi-Step Adventure](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 6) [Vocab Shmocab](#Shmocab)
@@ -37,9 +37,9 @@ This lesson will help students realize that in order to give clear instructions,
 
 7) [Move the Flurbs 2](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -48,28 +48,29 @@ This lesson will help students realize that in order to give clear instructions,
   * Convert movements into symbolic instructions
   * Relate algorithms as programs to teammates 
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Maps and Key from [Move It, Move It: Multi-Step Adventure](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf)
   * Assessment Worksheet: [Move the Flurbs 2](/curriculum/course1/2/Assessment2-MoveIt.pdf)
-  * Scissors
-  * Glue
+  * Tijeras
+  * Pegamento
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
   * Teacher Lesson Guide
   * Print one [Move It, Move It: Multi-Step Adventure](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf) activity pack on Cardstock for each group
   * Print Assessment Worksheet: [Move the Flurbs 2](/curriculum/course1/2/Assessment2-MoveIt.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -89,24 +90,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Program** - Say it with me: Pro-gram   
 An algorithm that has been coded into something that can be run by a machine.
@@ -132,15 +133,15 @@ An algorithm that has been coded into something that can be run by a machine.
     
   * We're going to play a game that allows us to program each other...and you'll do it all with your arms!
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Feel free to do an example map with the students as a class before breaking them into groups or even describing the rules (beyond how to react to each of the arm gestures). Learning through play is often more effective than spouting off all of the rules at this age.
 
-[/tip]
+[/sugerencia]
 
 [together]
 
@@ -162,27 +163,27 @@ Feel free to do an example map with the students as a class before breaking them
 
   * The Controller (and anyone else in the group who is not the Walking Machine) can set up a map made of paper, based on one of the Move It Map cards.
 
-[centerIt]
+[céntrala]
 
 ![](MoveItMap.png)
 
-[/centerIt]
+[/céntrala]
 
   * Remember that the smiley face map page should actually be set facing the ground, so that the Walking Machine cannot easily tell where their final location is.
 
   * The Walking Machine begins by standing on the piece of paper imprinted with the compass rose.
 
-[centerIt]
+[céntrala]
 
 ![](rose.png)
 
-[/centerIt]
+[/céntrala]
 
 [together]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
   
 Here are some useful links in case your class hasn't yet talked about the compass rose and cardinal directions:
@@ -192,9 +193,9 @@ Here are some useful links in case your class hasn't yet talked about the compas
 
 These topics will be important in the online lessons that follow, so taking an extra couple of minutes to be sure that your students correlate North with Up, South with Down, East with Right, and West with Left will continue to be helpful hereafter.
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
   * The Controller uses arm movements to guide the Walking Machine. Encourage the Controller to be facing the same direction as the Walking Machine to avoid having them get confused by "East is Right" and "West is Left."
 
@@ -204,25 +205,29 @@ These topics will be important in the online lessons that follow, so taking an e
     
       * Ideally, by the time the lesson is complete, the students will relay the entire "program" to the Walking Machine before the Walking Machine even takes their first step.
 
-[centerIt]
+[céntrala]
 
 ![](arms.png)
 
-[/centerIt]
+[/céntrala]
 
-[/together]
-
-\[together\] \[tip\]
-
-# Lesson Tip
-
-Note that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.
-
-\[/tip\] \[/together\]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+[tip]
+
+# Sugerencia para la Lección
+
+Note that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.
+
+[/tip]
+
+[/juntos]
+
+[together]
+
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -243,7 +248,7 @@ Note that the rules are not the most important thing here. Feel free to clarify 
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 

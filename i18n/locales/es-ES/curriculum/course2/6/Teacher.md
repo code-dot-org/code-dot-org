@@ -6,17 +6,17 @@ title: "Maze: Loops" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>6, :title=> 'Maze: Loops', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Building on the concept of repeating instructions from Getting Loopy, this stage will have students using loops to more effeciently traverse the maze.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ Building on the concept of repeating instructions from Getting Loopy, this stage
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -43,7 +43,7 @@ Building on the concept of repeating instructions from Getting Loopy, this stage
   * Create a program for a given task which loops a sequence of commands
   * Employ a combination of sequential and looped commands to reach the end of a maze
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -56,7 +56,7 @@ Review with students the Getting Loopy activity:
   * What are loops?
   * Why do we use them?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -66,7 +66,7 @@ Review with students the Getting Loopy activity:
 
 As students work through the puzzles, see if they can figure out how many fewer blocks they use with a loop vs. not using a loop.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -89,7 +89,7 @@ As students work through the puzzles, see if they can figure out how many fewer 
   * Can your class find the loops?
   * Try the same thing with songs! 
 
-[/together]
+[/juntos]
 
 [standards]
 
