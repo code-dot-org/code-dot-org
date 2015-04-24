@@ -42,7 +42,12 @@
     "router_expects_packet_header": "[]",
     "client_initial_packet_header": "[]",
     "show_encoding_controls": "[\"a_and_b\", \"binary\", \"hexadecimal\", \"decimal\", \"ascii\"]",
-    "show_metronome": "true"
+    "show_metronome": "true",
+    "show_bit_rate_control": "false",
+    "lock_bit_rate_control": "false",
+    "default_bit_rate_bits_per_second": "1",
+    "show_chunk_size_control": "false",
+    "lock_chunk_size_control": "false"
   },
   "md5": "4f6c2be7a81200975d6f6540230868a7"
 }]]></config>

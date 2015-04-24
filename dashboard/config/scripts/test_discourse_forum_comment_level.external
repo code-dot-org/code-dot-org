@@ -8,15 +8,4 @@ markdown <<MARKDOWN
 Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
 
 <div id="discourse-comments"></div>
-
-<script type="text/javascript">
-  var discourseUrl = "http://discourse.code.org/",
-      discourseEmbedUrl = 'http://levelbuilder.studio.code.org/levels/1811';
-
-  (function() {
-    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-      d.src = discourseUrl + 'javascripts/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-  })();
-</script>
 MARKDOWN

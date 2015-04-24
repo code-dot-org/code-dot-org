@@ -1,0 +1,25 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-23T00:36:15.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Yes",
+        "correct": true
+      },
+      {
+        "text": "No",
+        "correct": true
+      }
+    ],
+    "title": "Pre-Survey Question 2"
+  },
+  "md5": "b838376cc3f24f8633575b0cd467fa44"
+}]]></config>
+</Multi>
