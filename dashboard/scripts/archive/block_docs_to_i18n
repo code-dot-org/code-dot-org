@@ -3,7 +3,6 @@
 # Script to grab parameter information from block documentation .md files
 # and write it out to a .json localization file, following a key format
 
-require_relative '../../config/environment'
 require 'json'
 
 CDO_ROOT = '../../../'
@@ -58,12 +57,15 @@ def update_docs_i18n_file(functions, i18n_filename)
   json_file = i18n_filename
   data_hash = File.exist?(json_file) ? JSON.parse(File.read(json_file)) : {}
 
-  modified_data_hash = data_hash.deep_merge(new_strings)
+  modified_data_hash = data_hash.merge(new_strings)
   sorted_data_hash = Hash[modified_data_hash.sort]
 
-  File.write(json_file, JSON.pretty_generate(sorted_data_hash))
+  File.write(json_file, JSON.pretty_generate(sorted_data_hash) + "\n")
 end
 
 doc_files = Dir.glob("#{CDO_ROOT}pegasus/**/applab/docs/*.md").select { |e| File.file? e }
+puts "Processing #{doc_files.count} doc files..."
 function_infos = parse_function_docs(doc_files)
+puts "Updating i18n lines..."
 update_docs_i18n_file(function_infos, "#{CDO_ROOT}apps/i18n/common/en_us.json")
+puts "⊙‿⊙"
