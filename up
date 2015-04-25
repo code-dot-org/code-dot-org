@@ -23,6 +23,13 @@ def load_gem(name, require = nil)
   require require || name
 end
 
+# Ensure npm version meets minimum requirements
+if `npm -v`.to_i < 2
+  puts 'Your npm version is out of date. Running `sudo npm install -g npm` (may require password)'
+  `sudo npm install -g npm`
+end
+
+
 `bundle install --quiet --full-index`
 load_gem 'foreman'
 system "foreman start -f #{procfile.path} -d #{__dir__}"
