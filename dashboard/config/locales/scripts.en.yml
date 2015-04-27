@@ -598,15 +598,25 @@ en:
           Introduction to PD: Introduction to PD
           Evaluation Blocks: Evaluation Blocks
           logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
           Evaluation Blocks: Evaluation Blocks
           logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
         sciencePD-NexTech:
           Introduction to PD: Introduction to PD
           logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
         sciencePD-iZone:
           Introduction to PD: Introduction to PD
           logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
