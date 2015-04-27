@@ -6,15 +6,15 @@ title: Graph Paper Programming view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Graph Paper Programming', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
-[content]
+[contenido]
 
-## Lesson Overview
+## Contenido de la Lección
 
 By "programming" one another to draw pictures, students will begin to understand what programming is really about. The class will begin by having students instruct each other to color squares in on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -26,7 +26,7 @@ By "programming" one another to draw pictures, students will begin to understand
 
 4) [Four-by-Fours](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
 5) [Flash Chat: What did we learn?](#FlashChat)  
 6) [Vocab Shmocab](#Shmocab)
@@ -35,9 +35,9 @@ By "programming" one another to draw pictures, students will begin to understand
 
 7) [Graph Paper Programming Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 Students will:
 
@@ -45,11 +45,11 @@ Students will:
   * Learn that ideas may feel clear and yet still be misinterpreted by a computer 
   * Practice communicating ideas through codes and symbols
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf)
   * [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf)
@@ -57,24 +57,25 @@ Students will:
   * Blank paper or index cards for programs
   * Markers, pens, or pencils
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/Yy1zbkfRtIg?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * Print out one [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf) for each group 
   * Print one [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf) for each student 
   * Supply each group with several drawing grids, paper, and pens/pencils
 
 ## Getting Started (15 min)
 
-### <a name="Vocab"></a>1) Vocabulary
+### <a name="Vocab"></a>1) Vocabulario
 
 This lesson has two new and important words:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Algorithm** - Say it with me: Al-go-ri-thm   
 A list of steps that you can follow to finish a task
@@ -100,29 +101,29 @@ For this exercise, we will use sheets of 4x4 graph paper. Starting at the upper 
 For example, here’s how we would write an algorithm to instruct a friend (who is pretending to be a drawing machine) to color their blank grid so that it looks like the image below:  
 
 
-[centerIt]
+[céntrala]
 
 ![](easy.png)
 
-[/centerIt]
+[/céntrala]
 
 That’s simple enough, but it would take a lot of writing to provide instructions for a square like this:  
 
 
-[centerIt]
+[céntrala]
 
 ![](tough.png)
 
-[/centerIt]
+[/céntrala]
 
 With one little substitution, we can do this much more easily! Instead of having to write out an entire phrase for each instruction, we can use arrows.   
 
 
-[centerIt]
+[céntrala]
 
 ![](key.png)
 
-[/centerIt]
+[/céntrala]
 
 In this instance, the arrow symbols are the “program” code and the words are the “algorithm” piece. This means that we could write the algorithm:
 
@@ -130,34 +131,34 @@ In this instance, the arrow symbols are the “program” code and the words are
 
 and that would correspond to the program:
 
-> ![image](program.png)
+> ![imagen](program.png)
 
 Using arrows, we can redo the code from the previous image much more easily!
 
-[centerIt]
+[céntrala]
 
 ![](wArrows.png)
 
-[/centerIt]
+[/céntrala]
 
 ### <a name="Practice"></a>3) Practice Together
 
 Start your class off in the world of programming by drawing or projecting the provided key onto the board.  
 
 
-[centerIt]
+[céntrala]
 
 ![](key.png)
 
-[/centerIt]
+[/céntrala]
 
 Select a simple drawing, such as this one to use as an example.
 
-[centerIt]
+[céntrala]
 
 ![](checkerboard.png)
 
-[/centerIt]
+[/céntrala]
 
 This is a good way to introduce all of the symbols in the key. To begin, fill in the graph for the class -- square by square -- then ask them to help describe what you’ve just done. First, you can speak the algorithm out loud, then you can turn your verbal instructions into a program.
 
@@ -171,21 +172,21 @@ Some of your class may notice that there is an unnecessary step, but hold them o
   
 Walk the class through translating the algorithm into the program:
 
-> ![image](program1.png)
+> ![imagen](program1.png)
 
 The classroom may be buzzing with suggestions by this point. If the class gets the gist of the exercise, this is a good place to discuss alternate ways of filling out the same grid. If there is still confusion, save that piece for another day and work with another example.
 
-> ![image](program2.png)
+> ![imagen](program2.png)
 
 If the class can shout out the algorithm and define the correct symbols to use for each step, they’re ready to move on. Depending on your class and their age, you can either try doing a more complicated grid together or skip straight to having them work in groups on their [Four-by-Fours Activity Worksheet](/curriculum/course2/1/Activity1-GraphPaperProgramming.pdf).
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Have the class imagine that your arm is an Automatic Realization Machine (ARM). The idea of "algorithms" and "programs" will be brought to life even further if students feel like they're actually in control of your movements.
 
-[/tip]
+[/sugerencia]
 
 ## Activity: Graph Paper Programming (20 min)
 
@@ -201,13 +202,13 @@ Have the class imagine that your arm is an Automatic Realization Machine (ARM). 
   
 
 
-[centerIt]
+[céntrala]
 
 ![](fourByFours.png)
 
-[/centerIt]
+[/céntrala]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="FlashChat"></a>5) Flash Chat: What did we learn?
 

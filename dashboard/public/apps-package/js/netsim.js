@@ -219,6 +219,7 @@ NetSim.prototype.init = function(config) {
   });
 
   config.enableShowCode = false;
+  config.pinWorkspaceToBottom = true;
   config.loadAudio = this.loadAudio_.bind(this);
 
   // Override certain StudioApp methods - netsim does a lot of configuration
@@ -882,6 +883,18 @@ NetSim.prototype.loadAudio_ = function () {
 NetSim.prototype.configureDomOverride_ = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+
+  var vizHeight = this.MIN_WORKSPACE_HEIGHT;
+  var visualizationColumn = document.getElementById('netsim-leftcol');
+
+  if (config.pinWorkspaceToBottom) {
+    document.body.style.overflow = "hidden";
+    container.className = container.className + " pin_bottom";
+    visualizationColumn.className = visualizationColumn.className + " pin_bottom";
+  } else {
+    visualizationColumn.style.minHeight = vizHeight + 'px';
+    container.style.minHeight = vizHeight + 'px';
+  }
 };
 
 /**
@@ -925,12 +938,12 @@ NetSim.prototype.render = function () {
 
   // Render left column
   if (this.isConnectedToRemote()) {
-    this.mainContainer_.find('.leftcol-disconnected').hide();
-    this.mainContainer_.find('.leftcol-connected').show();
+    this.mainContainer_.find('.rightcol-disconnected').hide();
+    this.mainContainer_.find('.rightcol-connected').show();
     this.sendPanel_.setFromAddress(myAddress);
   } else {
-    this.mainContainer_.find('.leftcol-disconnected').show();
-    this.mainContainer_.find('.leftcol-connected').hide();
+    this.mainContainer_.find('.rightcol-disconnected').show();
+    this.mainContainer_.find('.rightcol-connected').hide();
     this.lobby_.render();
   }
 
@@ -1109,7 +1122,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
   var msg = require('../../locale/current/common');
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((5,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((7,  msg.rotateText() )), '<br>', escape((7,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');11; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((25,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');29; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim"  autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n    <div id="netsim-rightcol">\n      <div id="netsim-status"></div>\n      <div id="netsim-visualization">\n        <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">\n\n          <filter id="backgroundBlur">\n            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n            <feComponentTransfer>\n              <feFuncA slope="0.5" type="linear"></feFuncA>\n            </feComponentTransfer>\n          </filter>\n\n          <g id="centered-group" transform="translate(150,150)">\n            <g id="background-group" filter="url(#backgroundBlur)"></g>\n            <g id="foreground-group"></g>\n          </g>\n        </svg>\n      </div>\n      <div id="netsim-tabs"></div>\n    </div>\n    <div id="netsim-leftcol">\n      <div class="leftcol-disconnected">\n        <div class="lobby-panel"></div>\n      </div>\n      <div class="leftcol-connected">\n        <div id="netsim-received"></div>\n        <div id="netsim-sent"></div>\n        <div id="netsim-send"></div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((64,  data.localeDirection )), '">\n    ');65; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((5,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((7,  msg.rotateText() )), '<br>', escape((7,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');11; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((25,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');29; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n\n    <div id="netsim-leftcol">\n      <div class="column-width-limiter">\n\n        <div id="netsim-status"></div>\n\n        <div id="netsim-visualization">\n          <svg version="1.1" width="298" height="298" xmlns="http://www.w3.org/2000/svg">\n\n            <filter id="backgroundBlur">\n              <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n              <feComponentTransfer>\n                <feFuncA slope="0.5" type="linear"></feFuncA>\n              </feComponentTransfer>\n            </filter>\n\n            <g id="centered-group" transform="translate(150,150)">\n              <g id="background-group" filter="url(#backgroundBlur)"></g>\n              <g id="foreground-group"></g>\n            </g>\n          </svg>\n        </div>\n\n        <div id="netsim-tabs"></div>\n\n      </div>\n    </div>\n\n    <div id="netsim-rightcol">\n\n      <div class="rightcol-disconnected">\n        <div class="lobby-panel"></div>\n      </div>\n\n      <div class="rightcol-connected">\n        <div id="netsim-logs">\n          <div id="netsim-received"></div>\n          <div id="netsim-sent"></div>\n        </div>\n        <div id="netsim-send"></div>\n      </div>\n\n    </div>\n\n  </div>\n  <div id="footers" dir="', escape((78,  data.localeDirection )), '">\n    ');79; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -2985,7 +2998,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 var i18n = require('../../locale/current/netsim');
-; buf.push('\n');4; if (remoteNodeName) { ; buf.push('\n<p>Connected to ', escape((5,  remoteNodeName )), '</p>\n');6; } ; buf.push('\n\n');8; if (myHostname) { ; buf.push('\n<p>My hostname: ', escape((9,  myHostname )), '</p>\n');10; } ; buf.push('\n\n');12; if (myAddress) { ; buf.push('\n<p>My address: ', escape((13,  myAddress )), '</p>\n');14; } ; buf.push('\n\n');16; if (shareLink) { ; buf.push('\n<p><a href="', escape((17,  shareLink )), '">', escape((17,  i18n.shareThisNetwork() )), '</a></p>\n');18; } ; buf.push('\n'); })();
+; buf.push('\n<div class="content-wrap">\n  ');5; if (remoteNodeName) { ; buf.push('\n  <p>Connected to ', escape((6,  remoteNodeName )), '</p>\n  ');7; } ; buf.push('\n\n  ');9; if (myHostname) { ; buf.push('\n  <p>My hostname: ', escape((10,  myHostname )), '</p>\n  ');11; } ; buf.push('\n\n  ');13; if (myAddress) { ; buf.push('\n  <p>My address: ', escape((14,  myAddress )), '</p>\n  ');15; } ; buf.push('\n\n  ');17; if (shareLink) { ; buf.push('\n  <p><a href="', escape((18,  shareLink )), '">', escape((18,  i18n.shareThisNetwork() )), '</a></p>\n  ');19; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4129,7 +4142,7 @@ NetSimSendPanel.prototype.render = function () {
   }
 
   // Bind useful elements and add handlers
-  this.packetsDiv_ = this.getBody().find('.send-widget-packets');
+  this.packetsDiv_ = this.getBody().find('.send-panel-packets');
   this.getBody()
       .find('#add-packet-button')
       .click(this.onAddPacketButtonPress_.bind(this));
@@ -4284,6 +4297,10 @@ NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
   }
 
   this.addPacket_();
+
+  // Scroll to end of packet area
+  var scrollingArea = this.getBody().find('.send-panel-packets');
+  scrollingArea.animate({ scrollTop: scrollingArea[0].scrollHeight }, 'fast');
 };
 
 /**
@@ -4435,7 +4452,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var i18n = require('../../locale/current/netsim');
   var MessageGranularity = require('./netsimConstants').MessageGranularity;
-; buf.push('\n<div class="send-widget-packets"></div>\n<div class="panel-footer">\n  <div class="right-side-controls">\n    ');8; if (level.showAddPacketButton) { ; buf.push('\n      <span class="netsim-button secondary" id="add-packet-button">', escape((9,  i18n.addPacket() )), '</span>\n    ');10; } ; buf.push('\n    ');11; if (level.messageGranularity === MessageGranularity.PACKETS) { ; buf.push('\n      <span class="netsim-button" id="send-button">', escape((12,  i18n.send() )), '</span>\n    ');13; } else if (level.messageGranularity === MessageGranularity.BITS) { ; buf.push('\n      <span class="netsim-button" id="set-wire-button">', escape((14,  i18n.setWire() )), '</span>\n    ');15; } ; buf.push('\n  </div>\n  <div class="packet-size"></div>\n</div>\n'); })();
+; buf.push('\n<div class="send-panel-packets"></div>\n<div class="panel-footer">\n  <div class="right-side-controls">\n    ');8; if (level.showAddPacketButton) { ; buf.push('\n      <span class="netsim-button secondary large-button" id="add-packet-button">', escape((9,  i18n.addPacket() )), '</span>\n    ');10; } ; buf.push('\n    ');11; if (level.messageGranularity === MessageGranularity.PACKETS) { ; buf.push('\n      <span class="netsim-button large-button" id="send-button">', escape((12,  i18n.send() )), '</span>\n    ');13; } else if (level.messageGranularity === MessageGranularity.BITS) { ; buf.push('\n      <span class="netsim-button large-button" id="set-wire-button">', escape((14,  i18n.setWire() )), '</span>\n    ');15; } ; buf.push('\n  </div>\n  <div class="packet-size"></div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -6935,7 +6952,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div>\n  <div class="scroll-area">\n  </div>\n</div>\n'); })();
+ buf.push('<div class="scroll-area">\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -12773,17 +12790,17 @@ with (locals || {}) { (function(){
   function logRow(encodingType, encodedContent) {
     ; buf.push('\n    <tr class="', escape((17,  encodingType )), '">\n      <th nowrap class="', escape((18,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((18,  getEncodingLabel(encodingType) )), '</th>\n      <td class="', escape((19,  PacketUIColumnType.MESSAGE )), '">', escape((19,  encodedContent )), '</td>\n    </tr>\n    ');21;
   }
-; buf.push('\n<div>\n  <div class="scroll-area">\n    <div class="packet">\n      <table>\n        <tbody>\n          ');29;
-            logRow(EncodingType.ASCII, dataConverters.binaryToAscii(binary, chunkSize));
+; buf.push('\n<div class="scroll-area bit-log-scroll-area">\n  <div class="packet">\n    <table>\n      <tbody>\n        ');28;
+          logRow(EncodingType.ASCII, dataConverters.binaryToAscii(binary, chunkSize));
 
-            logRow(EncodingType.DECIMAL, dataConverters.alignDecimal(dataConverters.binaryToDecimal(binary, chunkSize)));
+          logRow(EncodingType.DECIMAL, dataConverters.alignDecimal(dataConverters.binaryToDecimal(binary, chunkSize)));
 
-            logRow(EncodingType.HEXADECIMAL, dataConverters.formatHex(dataConverters.binaryToHex(binary), chunkSize));
+          logRow(EncodingType.HEXADECIMAL, dataConverters.formatHex(dataConverters.binaryToHex(binary), chunkSize));
 
-            logRow(EncodingType.BINARY, dataConverters.formatBinary(binary, chunkSize));
+          logRow(EncodingType.BINARY, dataConverters.formatBinary(binary, chunkSize));
 
-            logRow(EncodingType.A_AND_B, dataConverters.formatAB(dataConverters.binaryToAB(binary), chunkSize));
-          ; buf.push('\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n');45; if (showReadWireButton) { ; buf.push('\n  <div class="panel-footer">\n    <div class="right-side-controls">\n      <span class="netsim-button" id="read-wire-button">', escape((48,  i18n.readWire() )), '</span>\n    </div>\n  </div>\n');51; } ; buf.push('\n'); })();
+          logRow(EncodingType.A_AND_B, dataConverters.formatAB(dataConverters.binaryToAB(binary), chunkSize));
+        ; buf.push('\n      </tbody>\n    </table>\n  </div>\n  ');42; if (showReadWireButton) { ; buf.push('\n    <div class="panel-footer bit-log-panel-footer">\n      <div class="right-side-controls">\n        <span class="netsim-button large-button" id="read-wire-button">', escape((45,  i18n.readWire() )), '</span>\n      </div>\n    </div>\n  ');48; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };

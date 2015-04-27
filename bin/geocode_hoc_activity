@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
+require 'cdo/properties'
 
 BATCH_SIZE = 4000
 THREAD_COUNT = 2
@@ -10,7 +11,7 @@ def main()
     THREAD_COUNT.times do |segment|
       threads << Thread.new do
         counter_key = "hoc_activity.last_id-#{segment}"
-        at = PROPERTIES.get(counter_key).to_i
+        at = Properties.get(counter_key).to_i
         DB.fetch(
           "SELECT id,started_ip,pixel_started_ip,pixel_finished_ip,finished_ip FROM hoc_activity WHERE id > #{at} AND id < #{at + BATCH_SIZE} ORDER BY id ASC"
         ).each do |row|
@@ -29,7 +30,7 @@ def main()
             )
           end
 
-          PROPERTIES.set counter_key, row[:id]
+          Properties.set counter_key, row[:id]
         end
       end
     end

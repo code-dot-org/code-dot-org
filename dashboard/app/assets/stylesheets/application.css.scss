@@ -1095,6 +1095,21 @@ a.download-video {
 }
 
 #landingpage {
+  .lines_of_code_header {
+    width: 100%;
+    color: $charcoal;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 30px;
+  }
+
+  a.lines_of_code_link {
+    color: $charcoal;
+    text-decoration: none;
+    font-family: 'Gotham 5r', sans-serif;
+    font-weight: normal;
+  }
+
   .row#continue {
     background-color: $teal;
     color: white;
@@ -1243,6 +1258,15 @@ a.download-video {
       margin: 0;
     }
   }
+}
+
+.course_progress {
+  margin: 10px 0;
+}
+
+#landingpage h3 img.logo,
+.course_progress h3 img.logo {
+  height: 40px;
 }
 
 .betatext {

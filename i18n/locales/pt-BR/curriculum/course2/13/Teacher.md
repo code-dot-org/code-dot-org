@@ -1,71 +1,71 @@
 * * *
 
-title: "Bee: Conditionals" view: page_curriculum theme: none
+title: "Abelha: condicionais" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>13, :title=> 'Bee: Conditionals', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Curso 2', :lesson=>13, :title=> 'Abelha: Condicionais', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-Up until this point all the programs your students have written should run exactly the same way every time - reliable, but not very flexible. In this stage we introduce the conditional statement, code that functions differently depending on the conditions it encounters.
+Até agora, todos os programas que os alunos escreveram deveriam ser executados exatamente da mesma forma toda vez - confiável, mas não muito flexível. Nesta etapa, vamos introduzir o comando condicional, um código que funciona de forma diferente dependendo das condições que ele encontra.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Bee: Conditionals**
+### **Atividade: Abelha: condicionais**
 
-[Bee: Conditionals](#Activity)
+[Abelha: condicionais](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activities](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Compare values using the = operator
-  * Translate spoken language conditional statements into a program
-  * Identify when a conditional can be used to deal with unknown values
-  * Execute an algorithm with a conditional statement
-  * Solve puzzles using a combination of looped sequences and conditionals
-
-[/together]
-
-[together]
-
-## Getting Started
-
-### <a name="GetStarted"></a> Introduction
-
-Review the Conditionals with Cards activity with your students.
-
-  * What is a conditional statement?
-  * When is it useful?
-  * What are some of the conditions you used in the Unplugged activity?
-
-Now we're going to use conditionals with our bee to help us deal with some mysterious purple flowers. We don't know if those flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.
+  * Comparar valores usando o operador "="
+  * Traduzir comandos condicionais da linguagem falada para um programa
+  * Identificar quando uma condição pode ser usada para lidar com valores desconhecidos
+  * Executar um algoritmo com um comando condicional
+  * Resolver desafios usando uma combinação de sequências em laços e condicionais
 
 [/together]
 
 [together]
 
-## Activity
+## Primeiros passos
 
-### <a name="Activity"></a> [Bee: Conditionals](http://learn.code.org/s/course2/stage/13/puzzle/1)
+### <a name="GetStarted"></a> Introdução
+
+Faça uma revisão da atividade "Condicionais com cartas" com os alunos.
+
+  * O que é um comando condicional?
+  * Quando ele é útil?
+  * Quais são algumas das condições que você usou na atividade offline?
+
+Agora vamos usar condicionais com nossa abelha para que ela nos ajude a lidar com algumas flores roxas misteriosas. Não sabemos se essas flores têm néctar ou não, então vamos precisar usar condicionais para que coletemos néctar se houver, mas não queremos tentar coletar néctar de uma flor caso ela não tenha.
+
+[/together]
+
+[together]
+
+## Atividade
+
+### <a name="Activity"></a> [Abelha: Condicionais](http://learn.code.org/s/course2/stage/13/puzzle/1)
 
 [/together]
 
@@ -74,107 +74,107 @@ Now we're going to use conditionals with our bee to help us deal with some myste
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### True/False Tag
+### Tag Verdadeiro/Falso
 
-  * Line students up as if to play [Red Light / Green Light](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).
-  * Select one person to stand in front as the Caller.
-  * The Caller chooses a condition and asks everyone who meets that condition to take a step forward. 
-      * If you have a red belt, step forward.
-      * If you are wearing sandals, take a step forward.
-  * Try switching it up by saying things like "If you are *not* blonde, step forward."
+  * Organize os alunos como se eles fossem jogar [Sinal vermelho / Sinal verde](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).
+  * Selecione uma pessoa para ficar na frente, como o mestre.
+  * O mestre escolhe uma condição e pede para que todos que satisfazem a condição deem um passo à frente. 
+      * Se você tem um cinto vermelho, dê um passo à frente.
+      * Se você estiver usando sandálias, dê um passo à frente.
+  * Troque as frases, e diga coisas como "Se você *não* for loiro, dê um passo à frente".
 
-### Nesting
+### Aninhamento
 
-  * Break students up into pairs or small groups.
-  * Have them write if statements for playing cards on strips of paper, such as: 
-      * If the suit is clubs
-      * If the color is red
-  * Have students create similar strips for outcomes. 
-      * Add one point
-      * Subtract one point
-  * Once that's done, have students choose three of each type of strip and three playing cards, paying attention to the order selected.
-  * Using three pieces of paper, have students write three different programs using only the sets of strips that they selected, in any order. 
-      * Encourage students to put some if statements inside other if statements.
-  * Now, students should run through all three programs using the cards that they drew, in the same order for each program.  
-      * Did any two programs return the same answer?
-      * Did any return something different?
+  * Divida os alunos em pares ou pequenos grupos.
+  * Peça que eles escrevam os comandos "se" para jogar cartas em tiras de papel, como: 
+      * Se o naipe for de paus
+      * Se a cor for vermelha
+  * Peça para os alunos criarem tiras semelhantes para os resultados. 
+      * Some um ponto
+      * Subtraia um ponto
+  * Quando tiver terminado, peça aos alunos que escolham três de cada tipo de tira, e três cartas para jogar, prestando atenção à ordem selecionada.
+  * Usando três pedaços de papel, peça aos alunos que escrevam três programas diferentes, usando somente os conjuntos de tiras que eles escolheram, em qualquer ordem. 
+      * Incentive os alunos a colocar alguns comandos "se" dentro de outros comandos "se".
+  * Agora, os alunos devem executar todos os três programas usando as cartas que eles pegaram, na mesma ordem para cada programa.  
+      * Dois programas retornaram a mesma resposta?
+      * Algum programa retornou algo diferente?
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Select and drag / slide
-  * Select object
-  * Use video player
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Selecionar e arrastar / deslizar
+  * Selecionar objeto
+  * Usar player de vídeo
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
-  * 6.a - Understand and use technology systems.
-  * 6.c - Troubleshoot systems and applications.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 4.d - Usar múltiplos processos e diversas perspectivas para explorar soluções alternativas.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out. 
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-07. Represent data in a variety of ways: text, sounds, pictures, numbers.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub problems. 
-  * CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions.
-  * CT.L3A-03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo. 
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L1:6-01. Entender e usar os passos básicos na resolução de um problema com um algoritmo.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-07. Representar dados de várias formas: textos, sons, imagens, números.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores. 
+  * CT.L2-14. Examinar as conexões entre elementos de matemática e ciência da computação, inclusive números binários, lógica, conjuntos e funções.
+  * CT.L3A-03. Explicar como sequência, seleção, iteração, e recursividade são blocos de construção de algoritmos.
 
 ### Next-Gen Science Standards
 
-  * K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
-  * K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
-  * 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * K-2-PS3-2. Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico.
+  * K-2-ETS1-1. Fazer perguntas, observações e reunir informações sobre uma situação que as pessoas querem mudar para definir um problema simples que pode ser resolvido com o desenvolvimento de uma ferramenta ou objeto novo, ou melhorado.
+  * 3-5-ETS1-2. Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 1.OA.1 - Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.
-  * 2.OA.1 - Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.
-  * 2.G.2 - Partition a rectangle into rows and columns of same-size squares and count to find the total number of them.
-  * 2.MD.5 - Use addition and subtraction within 100 to solve word problems involving lengths that are given in the same units, e.g., by using drawings (such as drawings of rulers) and equations with a symbol for the unknown number to represent the problem.
-  * 2.NBT.A.4 - Compare two three-digit numbers based on meanings of the hundreds, tens, and ones digits, using >, =, and < symbols to record the results of comparisons. 
-  * 3.OA.3 - Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities.
+  * 1.OA.1 - Usar adição e subtração até 20 para resolver problemas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições, por exemplo, usando objetos, desenhos e equações com um símbolo que substitui o número desconhecido para representar o problema.
+  * 2.OA.1 - Usar adição e subtração até 100 para resolver problemas de uma ou duas etapas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições, por exemplo, usando objetos, desenhos e equações com um símbolo que substitui o número desconhecido para representar o problema.
+  * 2.G.2 - Dividir um retângulo em linhas e colunas de quadrados com o mesmo tamanho e contar para encontrar o número total deles.
+  * 2.MD.5 - Usar adição e subtração até 100 para resolver problemas que envolvam comprimentos que são dados nas mesmas unidades, por exemplo, usando desenhos (como desenhos de réguas) e equações que contêm um símbolo para o número desconhecido, para representar o problema.
+  * 2.NBT.A.4 - Comparar dois números de três algarismos com base nos significados das casas de centena, dezena e unidade, usando os símbolos >, =, e < para registrar os resultados das comparações. 
+  * 3.OA.3 - Usar multiplicação e divisão até 100 para resolver os problemas em situações envolvendo grupos iguais, arrays e unidades de medida.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships (e.g., because).
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe (e.g., When other kids are happy that makes me happy).
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples (por exemplo, porque).
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição (por exemplo, quando outras crianças estão felizes, eu também fico feliz).
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
 
 [/standards]
 

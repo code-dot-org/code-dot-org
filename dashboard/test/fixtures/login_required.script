@@ -1,0 +1,4 @@
+login_required 'true'
+
+stage 'Stage1'
+level 'Level 1'

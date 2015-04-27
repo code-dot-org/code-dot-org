@@ -1,70 +1,70 @@
 * * *
 
-title: "Artist: Debugging" view: page_curriculum theme: none
+title: "Artista: Depuração" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>11, :title=> 'Artist: Debugging', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Curso 2', :lesson=>11, :title=> 'Artista: Depuração', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-In this stage, students will continue practicing their debugging skills by helping the Artist to fix pictures that aren't coming out quite right.
+Nesta etapa, os alunos vão continuar praticando suas habilidades em depuração, ajudando o Artista a consertar imagens que não estão corretas.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Artist: Debugging**
+### **Atividade: Artista: Depuração**
 
-[Artist: Debugging](#Activity)
+[Artista: Depuração](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activities](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Predict where a program will fail
-  * Modify an existing program to solve errors
-  * Identify an algorithm that is unsuccessful when the steps are out of order
-  * Reflect on the debugging process in an age-appropriate way
-
-[/together]
-
-[together]
-
-## Getting Started
-
-### <a name="GetStarted"></a> Introduction
-
-By now students should be pretty comfortable digging in and finding bugs. This is a great time to bring the class together to share debugging tactics and difficulties.
-
-  * What kinds of bugs are easiest for you to see? Why?
-  * Which bugs were the hardest to find? How did you eventually fix them?
-  * What's the first thing you look for in a buggy program?
+  * Prever onde um programa vai falhar
+  * Modificar um programa existente para resolver erros
+  * Identificar um algoritmo que não funciona quando os passos estão fora de ordem
+  * Refletir sobre o processo de depuração de uma forma apropriada à idade
 
 [/together]
 
 [together]
 
-## Activity
+## Primeiros passos
 
-### <a name="Activity"></a> [Artist: Debugging](http://learn.code.org/s/course1/stage/11/puzzle/1)
+### <a name="GetStarted"></a> Introdução
 
-Some students are averse to running a program until they've fixed it. Sometimes the easiest way to figure out what's wrong with a program is to watch it fail, so there's nothing wrong with running a program before we've finished fixing it. The only time we care if they got it right the first time is on the assessment levels.
+Agora, os alunos devem estar se sentindo confortáveis na busca por erros. Essa é uma excelente hora para juntar a classe e compartilhar táticas e dificuldades na depuração.
+
+  * Quais tipos de erros são mais fáceis de ver? Por quê?
+  * Quais erros foram mais difíceis de encontrar? Como você eventualmente os corrigiu?
+  * Qual é a primeira coisa que você procura em um programa que não funciona bem?
+
+[/together]
+
+[together]
+
+## Atividade
+
+### <a name="Activity"></a> [Artista: Depuração](http://learn.code.org/s/course1/stage/11/puzzle/1)
+
+Alguns alunos relutam em executar um programa até que o tenham consertado. Às vezes, o caminho mais fácil para descobrir o que está errado em um programa é assistir ao erro, então não há nada de errado em executar um programa antes de terminar de consertá-lo. A única vez que é importante que eles acertem de primeira é nos níveis de avaliação.
 
 [/together]
 
@@ -73,84 +73,84 @@ Some students are averse to running a program until they've fixed it. Sometimes 
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### Planting bugs
+### Implantar erros
 
-Have students go back through previous levels, purposefully adding bugs to their solutions. They can then ask other students to debug their work. This can also be done with paper puzzles.
+Peça aos alunos que voltem para os níveis anteriores e adicionem erros às soluções intencionalmente. Eles podem pedir para que outros alunos depurem seu trabalho. Isso também pode ser feito com desafios em papel.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Select object
-  * Use video player
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Selecionar objeto
+  * Usar player de vídeo
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
-  * 6.a - Understand and use technology systems.
-  * 6.c - Troubleshoot systems and applications.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 4.d - Usar múltiplos processos e diversas perspectivas para explorar soluções alternativas.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions. 
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub problems. 
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L3A-03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CT.L1:6-01. Entender e usar os passos básicos na resolução de um problema com um algoritmo.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções. 
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores. 
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L3A-03. Explicar como sequência, seleção, iteração, e recursividade são blocos de construção de algoritmos.
 
 ### Next-Gen Science Standards
 
-  * K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
-  * K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
-  * 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * K-2-PS3-2. Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico.
+  * K-2-ETS1-1 - Fazer perguntas, observações e reunir informações sobre uma situação que as pessoas querem mudar para definir um problema simples que pode ser resolvido com o desenvolvimento de uma ferramenta ou objeto novo, ou melhorado. 
+  * 3-5-ETS1-2 - Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics.
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos.
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 1.OA.1 - Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations.
-  * 1.G.A.1 - Distinguish between defining attributes (e.g., triangles are closed and three-sided) versus non-defining attributes (e.g., color, orientation, overall size); build and draw shapes to possess defining attributes.
-  * 1.G.A.2 - Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape.
-  * 2.OA.1 - Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions.
-  * 2.G.A.1 - Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces. 
-  * 3.OA.3 - Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities.
-  * 3.G.A.2 - Partition shapes into parts with equal areas. Express the area of each part as a unit fraction of the whole.
+  * 1.OA.1 - Usar adição e subtração até 20 para resolver problemas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições, por exemplo, usando objetos, desenhos e equações.
+  * 1.G.A.1 - Diferenciar atributos de definição (por exemplo, triângulos são formas fechadas e têm três lados) e atributos que não são de definição (por exemplo, cor, direção, dimensão); criar e desenhar formas que tenham atributos de definição.
+  * 1.G.A.2 - Compor formas bidimensionais (retângulos, quadrados, trapézios, triângulos, semicírculos e quartos de círculo) ou formas tridimensionais (cubos, prismas retangulares retos, cones circulares retos e cilindros circulares retos) para criar uma forma composta, e compor novas formas a partir da forma composta.
+  * 2.OA.1 - Usar adição e subtração até 100 para resolver problemas de uma ou duas etapas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições.
+  * 2.G.A.1 - Reconhecer e desenhar formas a partir de atributos específicos, como um dado número de ângulos ou um dado número de faces iguais. 
+  * 3.OA.3 - Usar multiplicação e divisão até 100 para resolver os problemas em situações envolvendo grupos iguais, arrays e unidades de medida.
+  * 3.G.A.2 - Dividir formas em partes com áreas iguais. Expressar a área de cada parte em uma fração de unidade do todo.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships (e.g., because).
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe (e.g., When other kids are happy that makes me happy).
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples (por exemplo, porque).
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição (por exemplo, quando outras crianças estão felizes, eu também fico feliz).
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
 
 [/standards]
 

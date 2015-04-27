@@ -1,79 +1,79 @@
 * * *
 
-title: "Jigsaw: Learn to drag and drop" view: page_curriculum theme: none
+title: "Quebra-cabeça: aprenda a arrastar e soltar" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>3, :title=> 'Jigsaw: Learn to drag and drop', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Curso 1', :lesson=>3, :title=> 'Quebra-cabeça: aprenda a arrastar e soltar', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## K-1 Lesson Overview
+## Visão geral da aula para pré-escola
 
-In this first online activity students will become familiar with basic mouse use and the block-based programming interface they will be using throughout the course. Students will begin by simply dragging images on screen and then progress to dragging puzzle pieces into the proper order.
+Nessa primeira atividade on-line, os alunos vão se familiarizar com o uso do mouse e com a interface de programação com blocos, conhecimentos que serão usados ao longo do curso. Os alunos vão começar simplesmente arrastando imagens pela tela, e depois vão começar a arrastar peças para organizá-las na ordem correta.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Jigsaw: Learn to drag and drop**
+### **Atividade: Quebra-cabeça: aprenda a arrastar e soltar**
 
-[Jigsaw: Learn to drag and drop](#Activity)
+[Quebra-cabeça: aprenda a arrastar e soltar](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activies](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Use a mouse to input information into a computer
-  * Recall and apply the rules of pair programming
-  * Use pair programming to complete collaborative tasks with or without a computer
-  * Identify situations when the rules of pair programming are not followed
-  * Arrange puzzle pieces into the proper order
-
-[/together]
-
-[together]
-
-## Getting Started
-
-### <a name="GetStarted"></a>Introduction
-
-Ask students if they have ever used a computer mouse before (or trackpad, touchscreen, whatever device they'll be using).
-
-  * What does the mouse do?
-  * How does moving the mouse affect the cursor on the screen?
-  * You will now be using the mouse to put together puzzle pieces on the computer.
-  * Pushing down on the mouse button is like closing your hand on a real puzzle piece and letting go of the button is like opening your hand to drop the piece. Make sure you keep your mouse button pressed while you drag each piece.
-  * Watch the pair programming video together and discuss the role of the driver and navigator.
+  * User um mouse para inserir informações em um computador
+  * Relembrar e aplicar as regras de programação em dupla
+  * Usar programação em dupla para realizar tarefas colaborativas, com ou sem um computador
+  * Identificar situações nas quais as regras da programação em dupla não são seguidas
+  * Organizar as peças do quebra-cabeça na ordem correta
 
 [/together]
 
 [together]
 
-## Activity
+## Primeiros passos
 
-### <a name="Activity"></a>[Jigsaw: Learn to drag and drop](http://learn.code.org/s/course1/stage/3/puzzle/1)
+### <a name="GetStarted"></a>Introdução
 
-Pair programming works best with two students to a computer and clear expectations of who is the driver and who is the navigator. You may want to create a visual reminder, like hats or sashes, to identify the driver and the navigator.
+Pergunte aos alunos se eles já usaram um mouse antes (ou trackpad, touchscreen, seja qual for o dispositivo que eles estiverem usando).
+
+  * O que o mouse faz?
+  * Como mover o mouse afeta o cursor na tela?
+  * Agora você vai usar o mouse para juntar peças de desafio no computador.
+  * Apertar o botão do mouse é como fechar sua mão para pegar uma peça de um quebra-cabeça de verdade, e soltar o botão é como abrir sua mão para soltar a peça. Lembre-se de manter o botão do mouse pressionado enquanto você arrasta as peças.
+  * Assista ao vídeo sobre programação em dupla e discuta sobre o papel do piloto e do navegador.
+
+[/together]
+
+[together]
+
+## Atividade
+
+### <a name="Activity"></a>[Quebra-cabeça: aprenda a arrastar e soltar](http://learn.code.org/s/course1/stage/3/puzzle/1)
+
+A programação em dupla funciona melhor com dois alunos por computador, e com as expectativas claras sobre quem é o piloto e quem é o navegador. Você pode criar meios visuais, como chapéus ou faixas, para identificar o piloto e o navegador.
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-When puzzle pieces are connected and you want to separate them, you have to drag off from the bottom of the stack. Dragging the top will move the whole stack of pieces.
+Quando as peças do quebra-cabeça estão conectadas e você quer separá-las, você precisa arrastá-las a partir do fundo da pilha. Se você arrastar o topo, toda a pilha será movida.
 
 [/tip]
 
@@ -84,71 +84,71 @@ When puzzle pieces are connected and you want to separate them, you have to drag
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### Human Computer
+### Computador humano
 
-Use real puzzle pieces and pair students into the computer and the user. The user "controls" the computer with a mouse to put the puzzle together.
+Use peças de quebra-cabeça reais e divida os alunos em pares, sendo um o computador e o outro o usuário. O usuário "controla" o computador com um mouse para montar o quebra-cabeça.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Select object
-  * Use video player
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Selecionar objeto
+  * Usar player de vídeo
 
-### ISTE Standards
+### Padrões ISTE
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 2.d - Contribute to project teams to produce original works or solve problems.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 2.d - Contribuir com equipes de projeto para produzir trabalhos originais ou resolver problemas.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CD.L1:3-01. Use standard input and output devices to successfully operate computer and related technologies.
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
+  * CD.L1:3-01. Usar dispositivos-padrão de entrada e saída para operar o computador e as tecnologias relacionadas de forma efetiva.
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
 
 ### Next-Gen Science Standards
 
-  * K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem. 
+  * K-2-PS3-2. Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * K.G.A.1 - Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.
+  * K.G.A.1 - Descrever objetos no ambiente usando nomes de formas, e descrever as posições relativas desses objetos usando termos como acima, abaixo, ao lado, na frente, atrás e próximo a.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.K.1 - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
-  * L.K.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
+  * SL.K.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos da educação infantil e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.K.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
 
 [/standards]
 
