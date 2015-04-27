@@ -256,7 +256,7 @@ title: "Ops Dashboard"
       $scope.del = function (district) {
         $scope.districts.splice($scope.districts.indexOf(district), 1); // remove from array
         districtsService.remove({id: district.id}); // service call
-      }
+      };
 
       $scope.save = function (district) {
         if (district.id) {
@@ -278,7 +278,7 @@ title: "Ops Dashboard"
             }
           );
         }
-      }
+      };
 
       $scope.districts.$promise.then(function(districts) {
         $scope.districtsLoaded = true;
@@ -306,7 +306,7 @@ title: "Ops Dashboard"
           }
         }
         return "N/A";
-      }
+      };
 
       $scope.load = function() {
         $('.date').on('focus click', function() {
@@ -336,7 +336,7 @@ title: "Ops Dashboard"
           }
         });
         return attendance;
-      }
+      };
 
       $scope.save = function (attendance) {
         if (attendance.id) {
@@ -353,7 +353,7 @@ title: "Ops Dashboard"
             this.attendance.cleared = false;
           }.bind(this));
         }
-      }
+      };
 
       $scope.clearAttendance = function (attendance) {
         attendance.status = null;
@@ -381,7 +381,7 @@ title: "Ops Dashboard"
 
       $scope.confirm_delete = function(cohort) {
         cohort.confirmDelete = true;
-      }
+      };
 
       $scope.del = function(cohort) {
         $scope.cohorts.splice($scope.cohorts.indexOf(cohort), 1); // remove from array
@@ -612,7 +612,7 @@ title: "Ops Dashboard"
           }
         }
         return 'N/A';
-      }
+      };
 
       $scope.editingAny = function(things) {
         if (!things) {
@@ -626,25 +626,26 @@ title: "Ops Dashboard"
       };
 
       $scope.save = function (workshop) {
-         if (workshop.id) {
-           workshopsService.update({id: workshop.id}, {workshop: workshop});
-           $('#save-confirmation').css('display', 'inline');
-           $('#save-confirmation').fadeOut(2500);
-         } else {
-           var newWorkshop = new workshopsService($scope.workshop);
-           newWorkshop.$save().then(
-             function(saved) {
-               $scope.workshop = saved; /* just in case it has been modified on server */
-               workshopsService.query().$promise.then(function (workshops) {
-                 $scope.workshops = workshops;
-                 $('#save-confirmation').css('display', 'inline');
-                 $('#save-confirmation').fadeOut(2500);
-                 window.location = '#/workshops/' + $scope.workshop.id + '/edit';
-               });
-             }
-           );
-         }
-      }
+        var saveConfirmation = $('#save-confirmation');
+        if (workshop.id) {
+          workshopsService.update({id: workshop.id}, {workshop: workshop});
+          saveConfirmation.css('display', 'inline');
+          saveConfirmation.fadeOut(2500);
+        } else {
+          var newWorkshop = new workshopsService($scope.workshop);
+          newWorkshop.$save().then(
+            function(saved) {
+              $scope.workshop = saved; /* just in case it has been modified on server */
+              workshopsService.query().$promise.then(function (workshops) {
+                $scope.workshops = workshops;
+                saveConfirmation.css('display', 'inline');
+                saveConfirmation.fadeOut(2500);
+                window.location = '#/workshops/' + $scope.workshop.id + '/edit';
+              });
+            }
+          );
+        }
+      };
 
       $scope.saveSegment = function (segment) {
         $scope.segment.start = $scope.segment.date + "T" + $scope.segment.startTime;
