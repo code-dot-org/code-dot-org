@@ -17,7 +17,7 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
-  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait = Selenium::WebDriver::Wait.new(:timeout => 60)
   wait.until { @browser.find_element(selection_criteria) }
 end
 
