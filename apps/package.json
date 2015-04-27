@@ -33,7 +33,8 @@
     "unpack": "./unpack.sh",
     "start": "gulp dev & node server.js",
     "lint": "jshint --reporter node_modules/jshint-stylish/stylish .",
-    "test": "npm run lint & node ./test/util/runTests.js"
+    "test": "npm run lint & node ./test/util/runTests.js",
+    "mochaTest": "node ./test/util/runTests.js"
   },
   "browserify": {
     "transform": [

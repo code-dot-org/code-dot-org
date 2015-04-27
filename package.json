@@ -11,7 +11,8 @@
     "gulp": "FORCE_COLOR=true gulp --cwd=. --gulpfile=lib/frontend/gulpfile.js",
     "start": "npm run gulp -- dev",
     "build": "npm run gulp -- build",
-    "test": "(cd apps && npm test)"
+    "test": "(cd apps && npm test)",
+    "mochaTest": "(cd apps && npm run mochaTest)"
   },
   "dependencies": {
     "@cdo/apps-build": "0.0.1",
