@@ -5,26 +5,34 @@
 **/
 require('child_process').spawnSync = require('spawn-sync');
 var checkDeps = require('check-dependencies');
-checkDeps.sync({'onlySpecified': true, 'install': true});
+checkDeps.sync({
+  'onlySpecified': true,
+  'install': true
+});
 
 var gulp = require('gulp');
-gulp.task('build', [(process.env.NODE_ENV == 'production' ? 'compress' : 'bundle-js'), 'media', 'sass', 'messages']);
+gulp.task('build', [
+  (process.env.NODE_ENV == 'production' ? 'compress' : 'bundle-js'),
+  'media', 'sass', 'messages'
+]);
 
 var newer = require('gulp-newer');
 var rename = require("gulp-rename");
 
 function configString(id) {
-  return process.env['npm_package_config_'+id];
+  return process.env['npm_package_config_' + id];
 }
 
 // Convert npm-style package-config array entries to the original array
 function configArray(id) {
-  var item = null,
-    i = 0,
-    array = [];
+  var item = null;
+  var i = 0;
+  var array = [];
   do {
     item = process.env['npm_package_config_' + id + '_' + i++];
-    if(item) array.push(item);
+    if(item) {
+      array.push(item);
+    }
   } while(item);
   return array;
 }
@@ -39,7 +47,11 @@ APPS.forEach(function (app) {
   appFilesSrc.push('./src/' + app + '/main.js');
   appFilesDest.push(JS_OUTPUT + app + '.js');
 });
-var appsBrowserifyConfig = {src: appFilesSrc, dest: JS_OUTPUT + 'common.js', factorBundleDest: appFilesDest};
+var appsBrowserifyConfig = {
+  src: appFilesSrc,
+  dest: JS_OUTPUT + 'common.js',
+  factorBundleDest: appFilesDest
+};
 
 // Bundle commonJS module graphs into a single file
 gulp.task('bundle-js', ['vendor'], function() {
@@ -48,14 +60,15 @@ gulp.task('bundle-js', ['vendor'], function() {
 
 function browserify(watch) {
   require('mkdirp')('./src/node_modules');
-  require('child_process').spawnSync = require('spawn-sync');
   var checkDeps = require('check-dependencies');
   checkDeps.sync({'packageDir': './src', 'onlySpecified': true, 'install': true});
 
   var bundle = require('@cdo/cdo/lib/frontend/browserify');
   var extend = require('util')._extend;
   var config = appsBrowserifyConfig;
-  if(watch) config = extend(config, {watch: true});
+  if(watch) {
+    config = extend(config, {watch: true});
+  }
   return bundle(config)();
 }
 
@@ -70,8 +83,12 @@ var STYLESHEETS = configArray('stylesheets');
 var MEDIA = configArray('media');
 var mediaFiles = {},
   cssFiles = {};
-MEDIA.forEach(function(media) {mediaFiles[media] = APPS_OUTPUT + 'media/';});
-STYLESHEETS.forEach(function(css) {cssFiles[css] = APPS_OUTPUT + 'css/';});
+MEDIA.forEach(function(media) {
+  mediaFiles[media] = APPS_OUTPUT + 'media/';
+});
+STYLESHEETS.forEach(function(css) {
+  cssFiles[css] = APPS_OUTPUT + 'css/';
+});
 
 // Synchronize static files to a public folder
 gulp.task('media', require('@cdo/cdo/lib/frontend/media')(mediaFiles));
