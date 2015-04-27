@@ -5,12 +5,11 @@ class ScriptsControllerTest < ActionController::TestCase
 
   setup do
     @admin = create(:admin)
-    sign_in(@admin)
-
     @not_admin = create(:user)
   end
 
   test "should get index" do
+    sign_in(@admin)
     get :index
     assert_response :success
     assert_not_nil assigns(:scripts)
@@ -18,7 +17,6 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should not get index if not signed in" do
-    sign_out @admin
     get :index
 
     assert_redirected_to_sign_in
@@ -47,6 +45,17 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get show of ECSPD if signed in" do
+    sign_in @not_admin
+    get :show, id: 'ECSPD'
+    assert_response :success
+  end
+
+  test "should not get show of ECSPD if not signed in" do
+    get :show, id: 'ECSPD'
+    assert_redirected_to_sign_in
+  end
+
   test "should redirect to /s/course1" do
     get :show, id: Script.find_by_name("course1").id
     assert_redirected_to "/s/course1"
@@ -64,7 +73,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
 
   test "should get show if not signed in" do
-    sign_out @admin
     get :show, id: Script::FLAPPY_NAME
     assert_response :success
   end
@@ -104,7 +112,6 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should not get edit if not signed in" do
-    sign_out @admin
     get :edit, id: 'course1'
 
     assert_redirected_to_sign_in
@@ -112,13 +119,13 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should not get edit if not admin" do
     sign_in @not_admin
-
     get :edit, id: 'course1'
 
     assert_response :forbidden
   end
 
   test "edit" do
+    sign_in @admin
     script = Script.find_by_name('course1')
     get :edit, id: script.name
 
