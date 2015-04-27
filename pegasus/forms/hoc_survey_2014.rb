@@ -157,7 +157,7 @@ class HocSurvey2014
       'Other teachers in my school',
       'My principal',
       'From the state superintendent (US) or ministry of education (outside US)',
-      'From KhanAcademy',
+      'From Khan Academy',
       'From DonorsChoose.org',
       'From Teach For America',
       'Other',

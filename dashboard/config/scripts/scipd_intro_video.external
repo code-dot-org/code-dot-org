@@ -1,0 +1,12 @@
+name 'sciPD intro video'
+title 'Welcome to CS in Science'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<iframe width="640" height="390" src="https://www.youtube.com/embed/iDSluSl9I3o" frameborder="0" allowfullscreen></iframe>
+
+</br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+<div id="discourse-comments"></div>
+MARKDOWN

@@ -1,18 +1,20 @@
 <%
 var i18n = require('../../locale/current/netsim');
 %>
-<% if (remoteNodeName) { %>
-<p>Connected to <%= remoteNodeName %></p>
-<% } %>
+<div class="content-wrap">
+  <% if (remoteNodeName) { %>
+  <p>Connected to <%= remoteNodeName %></p>
+  <% } %>
 
-<% if (myHostname) { %>
-<p>My hostname: <%= myHostname %></p>
-<% } %>
+  <% if (myHostname) { %>
+  <p>My hostname: <%= myHostname %></p>
+  <% } %>
 
-<% if (myAddress) { %>
-<p>My address: <%= myAddress %></p>
-<% } %>
+  <% if (myAddress) { %>
+  <p>My address: <%= myAddress %></p>
+  <% } %>
 
-<% if (shareLink) { %>
-<p><a href="<%= shareLink %>"><%= i18n.shareThisNetwork() %></a></p>
-<% } %>
+  <% if (shareLink) { %>
+  <p><a href="<%= shareLink %>"><%= i18n.shareThisNetwork() %></a></p>
+  <% } %>
+</div>

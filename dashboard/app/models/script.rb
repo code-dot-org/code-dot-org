@@ -154,8 +154,14 @@ class Script < ActiveRecord::Base
     name == 'course1'
   end
 
-  def has_banner_image?
-    k5_course?
+  def banner_image
+    if k5_course?
+      "banner_#{name}_cropped.jpg"
+    end
+  end
+
+  def logo_image
+    I18n.t(['data.script.name', name, 'logo_image'].join('.'), raise: true) rescue nil
   end
 
   def k5_course?
@@ -188,10 +194,12 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse_file(script)
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
+        # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
         scripts_to_add << [{
           name: name,
           trophies: script_data[:trophies],
-          hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
+          login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           id: script_data[:id],
         }, stages.map{|stage| stage[:levels]}.flatten]
@@ -309,6 +317,7 @@ class Script < ActiveRecord::Base
           name: script_params[:name],
           trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
         }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)

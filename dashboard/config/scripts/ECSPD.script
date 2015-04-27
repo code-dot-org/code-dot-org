@@ -1,5 +1,6 @@
 title 'Exploring Computer Science PD'
 description 'Online Introduction to ECS'
+login_required 'true'
 
 stage 'Introduction to PD'
 level 'PDECS Welcome Video'
@@ -17,17 +18,16 @@ level 'ECSPD PD overview'
 level 'ECSPD PD goals'
 
 
-stage 'Growth Mindset' 
+stage 'Growth Mindset'
 level 'ECSPD what is growth mindset'
 level 'ECSPD growth mindset in the classroom'
 level 'ECSPD growth mindset question'
 level 'ECSPD growth mindset strategies'
 
-stage 'Teaching Strategies' 
+stage 'Teaching Strategies'
 level 'ECSPD teaching strategies video'
 level 'ECSPD strategies'
 
 stage 'Preparing for in-person PD'
 level 'ECSPD meet facilitator'
 level 'ECSPD PD details'
-
