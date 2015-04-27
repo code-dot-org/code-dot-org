@@ -313,7 +313,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -1081,18 +1081,18 @@ Applab.init = function(config) {
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var firstControlsRow = require('./controls.html')({
+  var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
     finishButton: true
   });
-  var extraControlsRow = require('./extraControlRows.html')({
+  var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designProperties = require('./designProperties.html')({tagName:null});
-  var designModeBox = require('./designModeBox.html')({
+  var designProperties = require('./designProperties.html.ejs')({tagName:null});
+  var designModeBox = require('./designModeBox.html.ejs')({
     designProperties: designProperties
   });
 
@@ -1100,7 +1100,7 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
+      visualization: require('./visualization.html.ejs')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -1423,7 +1423,7 @@ Applab.editElementProperties = function(el) {
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
+  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: tagName,
     props: {
       id: el.id,
@@ -1448,7 +1448,7 @@ Applab.editElementProperties = function(el) {
 
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
+  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: null
   });
 };
@@ -3507,7 +3507,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":255,"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../skins":207,"../slider":208,"../templates/page.html":232,"../timeoutList":238,"../utils":253,"../xml":254,"./acemode/annotationList":6,"./acemode/mode-javascript_codeorg":8,"./api":9,"./appStorage":10,"./blocks":12,"./controls.html":13,"./designModeBox.html":14,"./designProperties.html":15,"./dontMarshalApi":16,"./dropletConfig":17,"./extraControlRows.html":18,"./rgbcolor.js":21,"./visualization.html":23}],23:[function(require,module,exports){
+},{"../../locale/current/applab":255,"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../skins":207,"../slider":208,"../templates/page.html.ejs":232,"../timeoutList":238,"../utils":253,"../xml":254,"./acemode/annotationList":6,"./acemode/mode-javascript_codeorg":8,"./api":9,"./appStorage":10,"./blocks":12,"./controls.html.ejs":13,"./designModeBox.html.ejs":14,"./designProperties.html.ejs":15,"./dontMarshalApi":16,"./dropletConfig":17,"./extraControlRows.html.ejs":18,"./rgbcolor.js":21,"./visualization.html.ejs":23}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

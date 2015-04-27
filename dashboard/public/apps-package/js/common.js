@@ -6150,7 +6150,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
   // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
   var upSale = document.createElement('div');
   if (options.makeYourOwn) {
-    upSale.innerHTML = require('./templates/makeYourOwn.html')({
+    upSale.innerHTML = require('./templates/makeYourOwn.html.ejs')({
       data: {
         makeUrl: options.makeUrl,
         makeString: options.makeString,
@@ -6162,7 +6162,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
     }
     belowVisualization.appendChild(upSale);
   } else if (typeof options.makeYourOwn === 'undefined') {
-    upSale.innerHTML = require('./templates/learn.html')({
+    upSale.innerHTML = require('./templates/learn.html.ejs')({
       assetUrl: this.assetUrl
     });
     belowVisualization.appendChild(upSale);
@@ -6394,10 +6394,10 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
-  instructionsDiv.innerHTML = require('./templates/instructions.html')(level);
+  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')(level);
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }
@@ -6529,7 +6529,7 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
 // to the server.
 StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html')();
+  builderDetails.innerHTML = require('./templates/builder.html.ejs')();
   var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: builderDetails,
@@ -7108,7 +7108,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":258,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":26,"./block_utils":27,"./constants.js":57,"./dom":58,"./dropletUtils":59,"./feedback":78,"./templates/builder.html":226,"./templates/buttons.html":227,"./templates/instructions.html":229,"./templates/learn.html":230,"./templates/makeYourOwn.html":231,"./utils":253,"./xml":254,"url":273}],273:[function(require,module,exports){
+},{"../locale/current/common":258,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":26,"./block_utils":27,"./constants.js":57,"./dom":58,"./dropletUtils":59,"./feedback":78,"./templates/builder.html.ejs":226,"./templates/buttons.html.ejs":227,"./templates/instructions.html.ejs":229,"./templates/learn.html.ejs":230,"./templates/makeYourOwn.html.ejs":231,"./utils":253,"./xml":254,"url":273}],273:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8612,7 +8612,7 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var trophy = require('./templates/trophy.html');
+var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
 var _ = utils.getLodash();
 var codegen = require('./codegen');
@@ -8904,7 +8904,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
     tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
   }
 
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       previousLevel:
         !this.canContinueToNextLevel(options.feedbackType) &&
@@ -8930,7 +8930,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
 FeedbackUtils.prototype.getShareFailure_ = function(options) {
   var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
-  shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
+  shareFailureDiv.innerHTML = require('./templates/shareFailure.html.ejs')({shareFailure: shareFailure});
   return shareFailureDiv;
 };
 
@@ -9151,7 +9151,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
-  sharingDiv.innerHTML = require('./templates/sharing.html')({
+  sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
 
@@ -9263,7 +9263,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
       (options.response.total_lines !== numLinesWritten));
   var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
 
-  showCodeDiv.innerHTML = require('./templates/showCode.html')({
+  showCodeDiv.innerHTML = require('./templates/showCode.html.ejs')({
     numLinesWritten: numLinesWritten,
     totalNumLinesWritten: totalNumLinesWritten
   });
@@ -9314,7 +9314,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
   var code = this.getGeneratedCodeString_();
 
   var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = require('./templates/code.html')({
+  codeDiv.innerHTML = require('./templates/code.html.ejs')({
     message: infoMessage,
     code: code
   });
@@ -9329,7 +9329,7 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = this.getGeneratedCodeElement_();
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }
@@ -9363,7 +9363,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
       '<p>' + msg.clearPuzzleConfirm() + '</p>';
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       clearPuzzle: true,
       cancel: true
@@ -9404,7 +9404,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }
@@ -9808,7 +9808,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":258,"./codegen":55,"./constants":57,"./dom":58,"./feedbackBlocks":79,"./templates/buttons.html":227,"./templates/code.html":228,"./templates/shareFailure.html":234,"./templates/sharing.html":235,"./templates/showCode.html":236,"./templates/trophy.html":237,"./utils":253,"./xml":254}],237:[function(require,module,exports){
+},{"../locale/current/common":258,"./codegen":55,"./constants":57,"./dom":58,"./feedbackBlocks":79,"./templates/buttons.html.ejs":227,"./templates/code.html.ejs":228,"./templates/shareFailure.html.ejs":234,"./templates/sharing.html.ejs":235,"./templates/showCode.html.ejs":236,"./templates/trophy.html.ejs":237,"./utils":253,"./xml":254}],237:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9930,7 +9930,7 @@ return buf.join('');
 }());
 },{"../../locale/current/common":258,"ejs":274}],79:[function(require,module,exports){
 var constants = require('./constants');
-var readonly = require('./templates/readonly.html');
+var readonly = require('./templates/readonly.html.ejs');
 
 var TestResults = constants.TestResults;
 
@@ -10057,7 +10057,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":57,"./templates/readonly.html":233}],233:[function(require,module,exports){
+},{"./constants":57,"./templates/readonly.html.ejs":233}],233:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17379,7 +17379,7 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
 module.exports = DropletTooltipManager;
 
 },{"./DropletFunctionTooltip":25}],25:[function(require,module,exports){
-var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html');
+var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html.ejs');
 var msg = require('../../locale/current/common');
 
 /**
@@ -17498,7 +17498,7 @@ DropletFunctionTooltip.prototype.getTooltipHTML = function () {
 
 module.exports = DropletFunctionTooltip;
 
-},{"../../locale/current/common":258,"./DropletBlockTooltip.html":24}],258:[function(require,module,exports){
+},{"../../locale/current/common":258,"./DropletBlockTooltip.html.ejs":24}],258:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],24:[function(require,module,exports){
 module.exports= (function() {
