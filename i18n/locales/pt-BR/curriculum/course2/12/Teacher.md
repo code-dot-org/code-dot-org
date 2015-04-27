@@ -1,69 +1,70 @@
 * * *
 
-title: Conditionals with Cards view: page_curriculum theme: none
+title: Condicionais com cartas view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=>'Conditionals with Cards', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
+<%= partial('curriculum_header', :title=>'Condicionais com cartas', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-We don’t always know ahead of time what things will be like when we run our computer programs. Different users have different needs, and sometimes you will want to do something based off of one user's need that you don’t want to do with someone else. That is where conditionals come in. This lesson demonstrates how conditionals can be used to tailor a program to specific information.
+Nem sempre sabemos com antecedência como as coisas vão ser quando executamos nossos programas de computador. Usuários diferentes têm necessidades diferentes, e às vezes você vai querer fazer algo com base nas necessidades de um usuário que você não quer fazer para os demais. É aí que entram os condicionais. Esta aula mostra como condicionais podem ser usados para direcionar o programa para uma informação específica.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 15 minutes
+### **Primeiros passos** - 15 minutos
 
-1) [Review](#Review)  
-2) [Vocabulary](#Vocab)   
-3) [On One Condition](#GetStarted)
+1) [Revisão](#Review)  
+2) [Vocabulário](#Vocab)   
+3) [Com uma condição](#GetStarted)
 
-### **Activity: Conditionals with Cards** - 30 minutes
+### **Atividade: Condicionais com cartas** - 30 minutos
 
-4) [Conditionals with Cards](#Activity1)
+4) [Condicionais com cartas](#Activity1)
 
-### **Wrap-up** - 10 minutes
+### **Resumo** - 10 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
-6) [Vocab Shmocab](#Shmocab)
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
+6) [Jogo de palavras](#Shmocab)
 
-### **Assessment** - 5 minutes
+### **Avaliação** - 5 minutos
 
-7) [Conditionals with Cards Assessment](#Assessment)
+7) [Avaliação de condicionais com cartas](#Assessment)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Define circumstances when certain parts of programs should run and when they shouldn't
-  * Determine whether a conditional is met based on criteria 
-  * Traverse a program and predict the outcome, given a set of input
+  * Definir circunstâncias nas quais certas partes dos programas devem ser executadas, e outras nas quais elas não devem
+  * Determinar se uma condição é atendida com base em critérios 
+  * Percorrer um programa e prever o resultado, dado um conjunto de entrada
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * Playing Cards
-  * Paper for keeping track of how a program reacts to a card
-  * Pens & Pencils
-  * [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf)
+  * Cartas de baralho
+  * Papel para manter o controle de como um programa reage a uma carta
+  * Canetas e lápis
+  * [Avaliação de condicionais com cartas](/curriculum/course2/12/Assessment12-Conditionals.pdf)
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/IcEL5ibSvTs?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * This Teacher Lesson Guide
   * One [Sample Program](/curriculum/course2/12/Activity12-Conditionals.pdf) for the class to look at
   * Print one [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf) for each student
@@ -72,33 +73,33 @@ We don’t always know ahead of time what things will be like when we run our co
 
 [together]
 
-## Getting Started (20 min)
+## Primeiros passos (20 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. You can do this as one large group or have students discuss with an elbow partner.
+Este é um excelente momento para revisar a última aula que você deu à turma. Você pode fazer isso com a turma toda ou pedir para que os alunos discutam em duplas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one new and important word:  
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -107,84 +108,84 @@ This lesson has one new and important word:
 
 [/centerIt]
 
-**Conditionals** - Say it with me: Con-di-shun-uls   
-Statements that only run under certain conditions
+**Condicionais** - Repita comigo: Con-di-ci-o-nais   
+Comandos que são executados somente sob certas condições ou situações
 
-### <a name="GetStarted"></a> 3) On One Condition
+### <a name="GetStarted"></a> 3) Com uma condição
 
-  * We can start this lesson off right away 
-      * Let the class know that if they can be completely quiet for thirty seconds, you will do something like: 
-          * Sing an opera song
-          * Give five more minutes of recess
-          * or Do a handstand
-      * Start counting right away.
-      * If the students succeed, point out right away that they succeeded, so they *do* get the reward.
-      * Otherwise, point out that they were not completely quiet for a full thirty seconds, so they *do not* get the reward.
-  * Ask the class "What was the *condition* of the reward?" 
-      * The condition was *IF* you were quiet for 30 seconds 
-          * If you were, the condition would be true, and you would get the reward.
-          * If you weren't, the condition would be false, so the reward woud not apply.
-      * Can we come up with another conditional? 
-          * If I say "question," you raise your hand
-          * If I sneeze, you say "Gesundheit."
-          * What examples can you come up with?
-  * Sometimes, we want to have an extra condition, in case the "IF" statement is not true. 
-      * This extra condition is called an "ELSE" statement
-      * When the "IF" condition isn't met, we can look at the "ELSE" for what to do 
-          * Example: IF I draw a 7, everybody claps. Or ELSE, everyone says "Awwwwwwe."
-          * Let's try it. (Draw a card and see if your class reacts appropriately.)
-      * Ask the class to analyze what just happened. 
-          * What was the IF?
-          * What was the ELSE?
-          * Which condition was met?
-      * Believe it or not, we have even one more option. 
-          * What if I wanted you to clap if I draw a 7, or else if I draw something less than seven you say "YAY," or else you say "Awwwwwwwe"? 
-              * This is why we have the terms If, Else If, and Else.
-              * If is the first condition
-              * Else-if gets looked at only if the "If" isn't true.
-              * Else gets looked at only if nothing before it is true.
+  * Podemos começar a aula imediatamente 
+      * Diga à classe que, se eles fizerem silêncio absoluto por 30 segundos, você vai fazer algo como: 
+          * Cantar uma ópera
+          * Dar mais cinco minutos de intervalo
+          * Plantar bananeira
+      * Comece a contar imediatamente.
+      * Se os alunos conseguirem, diga imediatamente que eles conseguiram, então eles *vão* receber a recompensa prometida.
+      * Caso contrário, diga que eles não fizeram silêncio absoluto durante 30 segundos, então eles *não* vão receber a recompensa.
+  * Pergunte à sala "Qual foi a *condição* da recompensa?" 
+      * A condição foi *SE* vocês fizessem silêncio por 30 segundos 
+          * Se vocês tivessem feito, a condição seria verdadeira, e vocês ganhariam a recompensa.
+          * Se vocês não tivessem feito, a condição seria falsa, então a recompensa não seria dada.
+      * Podemos pensar em outra condição? 
+          * Se eu disser "pergunta", levantem as mãos
+          * Se eu espirrar, digam "saúde".
+          * Em quais exemplos você consegue pensar?
+  * Às vezes, queremos ter uma condição extra, caso o comando "SE" não seja verdadeiro. 
+      * Essa condição extra é chamada de "SENÃO"
+      * Quando a condição "SE" não for satisfeita, podemos olhar para o "SENÃO" para ver o que fazer 
+          * Exemplo: SE eu desenhar um 7, todos batem palmas, SENÃO, todos dizem "Ahhhhhhhhhh".
+          * Vamos tentar. (Faça desenhe uma carta e veja se a sala reage de forma apropriada).
+      * Peça à sala para analisar o que aconteceu. 
+          * Qual era o SE?
+          * Qual era o SENÃO?
+          * Que condição foi satisfeita?
+      * Acredite ou não, temos ainda mais uma opção. 
+          * E se eu quisesse que vocês batessem palmas se eu desenhasse um 7, ou senão, se eu desenhasse algo menor que sete, vocês dissessem "OBA", ou senão vocês dissessem "Ahhhhhhhhh"? 
+              * É por isso que temos os termos Se, Senão Se, e Senão.
+              * Se é a primeira condição
+              * Senão-se é observado somente se o "Se" não for verdadeiro.
+              * Senão é observado somente se nada observado anteriormente for verdadeiro.
 
-Now let's play a game.
+Agora, vamos jogar um jogo.
 
 [/together]
 
 [together]
 
-## Activities: (20 min)
+## Atividades (20 min)
 
-### <a name="Activity1"></a> 4) [Conditionals with Cards](/curriculum/course2/12/Activity12-Conditionals.pdf)
+### <a name="Activity1"></a> 4) [Condicionais com cartas](/curriculum/course2/12/Activity12-Conditionals.pdf)
 
-**Directions:**
+**Instruções:**
 
-> 1) Create a few programs with your class that depend on things like a card's suit, color, or value to award or subtract points. You can write the program as an algorithm, pseudocode, or actual code.
+> 1) Crie alguns programas com sua turma que dependam de coisas como o naipe, a cor ou o valor de uma carta para somar ou subtrair pontos. Você pode escrever o programa como um algoritmo, pseudocódigo, ou codificá-lo de verdade.
 
-Here is a sample algorithm:
+Temos aqui um algoritmo simples:
 
 ![](alg1.png)
 
-Here is a sample of the same program in pseudocode:
+Aqui temos um exemplo do mesmo programa, em pseudocódigo:
 
 ![](pseudo1.png)
 
-> 2) Decide how you want to split your class into teams.
+> 2) Decida como você quer dividir sua sala em equipes.
 > 
-> 3) Each team should have a pile of cards (at least as many cards as team members) nearby.
+> 3) Cada equipe deve ter um monte de cartas (o número de cartas deve ser pelo menos igual ao número de membros da equipe).
 > 
-> 4) Put one of your “Programs” up on the board for all to see.
+> 4) Coloque um dos seus "programas" na lousa para que todos vejam.
 > 
-> 5) Have the teams take turns drawing cards and following the program to see how many points they score in each round.
+> 5) Peça para que as equipes peguem cartas em turnos e sigam o programa para ver quantos pontos eles fazem em cada rodada.
 > 
-> 6) Play several times with several different programs to help the students really understand conditionals.
+> 6) Jogue várias vezes, com vários programas diferentes, para ajudar os alunos a entender bem o uso de condicionais.
 
   
   
 
 
-Once the class has had some practice, you can encourage students to **nest** conditionals inside one another:
+Quando a sala já tiver praticado um pouco, você pode incentivar os alunos a **aninhar** os condicionais, um dentro do outro:
 
 ![](alg.png)
 
-Here is the same program in pseudocode:
+Aqui temos o mesmo programa em pseudocódigo:
 
 ![](pseudo.png)
 
@@ -192,48 +193,48 @@ Here is the same program in pseudocode:
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * If you were going to code this up in Blocky, what would you need to add around your conditionals to let the code run more than one time?
-  * What other things do you do during the day under certain conditions?
-  * If you are supposed to do something when the value of a card is more than 5, and you draw a 5, do you meet that condition?
-  * Notice that conditions are either "True" or "False." There is no assessment of a condition that evaluates to "Banana."
-  * When you need to meet several combinations of conditions, we can use something called "nested conditionals." 
-      * What do you think that means? 
-      * Can you give an example of where we saw that during the game?
-  * What part of that game did you like the best?
+  * Se você fosse codificar isso usando blocos, o que você precisaria adicionar a seus condicionais para que o programa fosse executado mais de uma vez?
+  * Quais outras coisas você faz durante o dia dependendo de certas condições?
+  * Se você tiver que fazer alguma coisa quando o valor de uma carta for maior que 5, e você pegar um 5, você satisfaz essa condição?
+  * Perceba que uma condição pode ser "verdadeira" ou "falsa". Não há como avaliar uma condição que resulta em "banana".
+  * Quando você precisa satisfazer várias combinações de condições, podemos usar uma coisa chamada "condicionais aninhados". 
+      * O que você acha que isso significa? 
+      * Você pode dar um exemplo de onde vimos isso durante o jogo?
+  * De qual parte do jogo você gostou mais?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+As perguntas do Bate-papo têm a finalidade de incentivar reflexões sobre como as aulas se relacionam com o mundo e com o futuro brilhante dos alunos. Use os conhecimentos que tem sobre sua sala de aula para decidir se vocês vão discutir isso em turma, em grupos, ou em duplas.
 
 [/tip]
 
-### <a name="Shmocab"></a> 6) Vocab Shmocab
+### <a name="Shmocab"></a> 6) Jogo de palavras
 
-  * Which one of these definitions did we learn a word for today?
+  * Para qual dessas definições aprendemos uma palavra hoje?
 
-> "Adding additional space to the beginning of a line of text"   
-> "A combination of yellow and green"   
-> "Statements that only run under certain conditions"  
+> "Inserir espaço adicional no começo de uma linha de texto"   
+> "Uma combinação de amarelo e verde"   
+> "Comandos que são executados somente sob certas condições ou situações"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ...e qual é a palavra que aprendemos?
 
 [/together]
 
 [together]
 
-## Assessment (5 min)
+## Avaliação (5 min)
 
-### <a name="Assessment"></a>7) [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf)
+### <a name="Assessment"></a>7) [Avaliação de condicionais com cartas](/curriculum/course2/12/Assessment12-Conditionals.pdf)
 
-  * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Distribua a folha de avaliação e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
 [/together]
 
@@ -242,91 +243,91 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### True/False Tag
+### Tag Verdadeiro/Falso
 
-  * Line students up as if to play [Red Light / Green Light](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).
-  * Select one person to stand in front as the Caller.
-  * The Caller chooses a condition and asks everyone who meets that condition to take a step forward. 
-      * If you have a red belt, step forward.
-      * If you are wearing sandals, take a step forward.
-  * Try switching it up by saying things like "If you are *not* blonde, step forward."
+  * Organize os alunos como se eles fossem jogar [Sinal vermelho / Sinal verde](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).
+  * Selecione uma pessoa para ficar na frente, como o mestre.
+  * O mestre escolhe uma condição e pede para que todos que satisfazem a condição deem um passo à frente. 
+      * Se você tem um cinto vermelho, dê um passo à frente.
+      * Se você estiver usando sandálias, dê um passo à frente.
+  * Troque as frases, e diga coisas como "Se você *não* for loiro, dê um passo à frente".
 
-### Nesting
+### Aninhamento
 
-  * Break students up into pairs or small groups.
-  * Have them write if statements for playing cards on strips of paper, such as: 
-      * If the suit is clubs
-      * If the color is red
-  * Have students create similar strips for outcomes. 
-      * Add one point
-      * Subtract one point
-  * Once that's done, have students choose three of each type of strip and three playing cards, paying attention to the order selected.
-  * Using three pieces of paper, have students write three different programs using only the sets of strips that they selected, in any order. 
-      * Encourage students to put some if statements inside other if statements.
-  * Now, students should run through all three programs using the cards that they drew, in the same order for each program.  
-      * Did any two programs return the same answer?
-      * Did any return something different?
+  * Divida os alunos em pares ou pequenos grupos.
+  * Peça que eles escrevam os comandos "se" para jogar cartas em tiras de papel, como: 
+      * Se o naipe for de paus
+      * Se a cor for vermelha
+  * Peça para os alunos criarem tiras semelhantes para os resultados. 
+      * Some um ponto
+      * Subtraia um ponto
+  * Quando tiver terminado, peça aos alunos que escolham três de cada tipo de tira, e três cartas para jogar, prestando atenção à ordem selecionada.
+  * Usando três pedaços de papel, peça aos alunos que escrevam três programas diferentes, usando somente os conjuntos de tiras que eles escolheram, em qualquer ordem. 
+      * Incentive os alunos a colocar alguns comandos "se" dentro de outros comandos "se".
+  * Agora, os alunos devem executar todos os três programas usando as cartas que eles pegaram, na mesma ordem para cada programa.  
+      * Dois programas retornaram a mesma resposta?
+      * Algum programa retornou algo diferente?
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 2.d - Contribute to project teams to solve problems.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 2.d - Contribuir com equipes de projeto para resolver problemas.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CT.L1:3-03. Understand how to arrange information into useful order without using a computer. 
-  * CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
-  * CT.L1:6-02. Develop a simple understanding of an algorithm using computer-free exercise.
-  * CT.L1:6-05. Make a list of sub-problems to consider while addressing a larger problem.
-  * CPP.L1.3-04. Construct a set of statements to be acted out to accomplish a simple task.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1.3-04. Construct a set of statements to be acted out to accomplish a simple task.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CT.L2-03. Define an algorithm as a sequence of instructions that can be processed by a computer.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L3A-03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
+  * CT.L1:3-03. Entender como é possível organizar informações em uma ordem útil sem usar um computador. 
+  * CT.L1:6-01. Entender e usar os passos básicos na resolução de um problema com um algoritmo.
+  * CT.L1:6-02. Desenvolver uma compreensão simples de um algoritmo com exercícios que não usem computador.
+  * CT.L1:6-05. Fazer uma lista de subproblemas que devem ser considerados ao se tratar um problema maior.
+  * CPP.L1.3-04. Construir um conjunto de comandos para realizar uma tarefa simples.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1.3-04. Construir um conjunto de comandos para realizar uma tarefa simples.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CT.L2-03. Definir um algoritmo como uma sequência de instruções que podem ser processadas por um computador.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L3A-03. Explicar como sequência, seleção, iteração, e recursividade são blocos de construção de algoritmos.
 
-### NGSS Science and Engineering Practices
+### Práticas de engenharia e ciência NGSS
 
-  * 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * 3-5-ETS1-2 - Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning. 
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido. 
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 1.MD.4. - Organize, represent, and interpret data with up to three categories; ask and answer questions about the total number of data points, how many in each category, and how many more or less are in one category than in another.
+  * 1.MD.4. - Organizar, representar e interpretar dados em até três categorias; perguntar e responder a questões sobre o número total de pontos de dados, quantos existem em cada categoria, e quantos pontos uma categoria tem a mais ou a menos que outra.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * SL.3.3 - Perguntar e responder a questões sobre informações dadas por um orador, com elaboração e detalhes adequados.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
 
 [/standards]
 

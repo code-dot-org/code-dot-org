@@ -19,6 +19,7 @@ Feature: Using the Internet Simulator Lobby
     And element "#netsim-shard-select" contains text "My Private Network"
 
     When I add a router
+    And I wait for 2 seconds
     Then element "#netsim-lobby-connect" is disabled
 
     When I select the first router

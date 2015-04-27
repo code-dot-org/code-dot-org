@@ -193,6 +193,7 @@ NetSim.prototype.init = function(config) {
   });
 
   config.enableShowCode = false;
+  config.pinWorkspaceToBottom = true;
   config.loadAudio = this.loadAudio_.bind(this);
 
   // Override certain StudioApp methods - netsim does a lot of configuration
@@ -856,6 +857,18 @@ NetSim.prototype.loadAudio_ = function () {
 NetSim.prototype.configureDomOverride_ = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+
+  var vizHeight = this.MIN_WORKSPACE_HEIGHT;
+  var visualizationColumn = document.getElementById('netsim-leftcol');
+
+  if (config.pinWorkspaceToBottom) {
+    document.body.style.overflow = "hidden";
+    container.className = container.className + " pin_bottom";
+    visualizationColumn.className = visualizationColumn.className + " pin_bottom";
+  } else {
+    visualizationColumn.style.minHeight = vizHeight + 'px';
+    container.style.minHeight = vizHeight + 'px';
+  }
 };
 
 /**
@@ -899,12 +912,12 @@ NetSim.prototype.render = function () {
 
   // Render left column
   if (this.isConnectedToRemote()) {
-    this.mainContainer_.find('.leftcol-disconnected').hide();
-    this.mainContainer_.find('.leftcol-connected').show();
+    this.mainContainer_.find('.rightcol-disconnected').hide();
+    this.mainContainer_.find('.rightcol-connected').show();
     this.sendPanel_.setFromAddress(myAddress);
   } else {
-    this.mainContainer_.find('.leftcol-disconnected').show();
-    this.mainContainer_.find('.leftcol-connected').hide();
+    this.mainContainer_.find('.rightcol-disconnected').show();
+    this.mainContainer_.find('.rightcol-connected').hide();
     this.lobby_.render();
   }
 

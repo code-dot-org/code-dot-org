@@ -8,7 +8,7 @@
       "css": "unplugged"
     },
     "title": "first computer program",
-    "markdown": "## Writing your first computer program!\n\nThe basics of computer science are about sequence. We want to find the right sequence of instructions to tell the computer what to do. Watch this video below which explains the very first program that students write in Course 1. Then, on the next page, you'll get to write your own program that's very similar. \n\n<iframe width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/7gvqTj4V9o0\" frameborder=\"0\" allowfullscreen></iframe>\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n<div id=\"discourse-comments\"></div>\n"
+    "markdown": "## Writing your first computer program!\n\nAt its base, this style of computer science is about sequence. We want to find the right sequence of instructions to tell the computer what to do. Watch this video below which explains the very first program that students write in Course 1. Then, on the next page, you'll get to write your own program that's very similar. \n\n<iframe width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/7gvqTj4V9o0\" frameborder=\"0\" allowfullscreen></iframe>\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n"
   },
   "md5": "072a936ef658cade2e0c1d391071d9f9"
 }]]></config>
