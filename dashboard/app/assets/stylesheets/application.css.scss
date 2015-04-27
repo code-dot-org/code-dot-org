@@ -674,6 +674,9 @@ html, body {
 }
 
 .header_button {
+  &.header_button_light {
+    background-color: $lightish_teal;
+  }
   display: inline-block;
   background-color: $orange;
   border-radius: 5px;
