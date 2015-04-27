@@ -43,6 +43,15 @@ $wide-column-width: 121px;
   left: 0;
   right: 0;
 
+  #netsim-disconnected {
+    display: block;
+    position: relative;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+    overflow-y: auto;
+  }
+
   #netsim-leftcol {
     position: absolute;
     top: 0;

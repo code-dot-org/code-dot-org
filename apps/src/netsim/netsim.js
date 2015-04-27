@@ -912,8 +912,8 @@ NetSim.prototype.render = function () {
 
   if (this.isConnectedToRemote()) {
     // Swap in 'connected' div
-    this.mainContainer_.find('.netsim-disconnected').hide();
-    this.mainContainer_.find('.netsim-connected').show();
+    this.mainContainer_.find('#netsim-disconnected').hide();
+    this.mainContainer_.find('#netsim-connected').show();
 
     // Render right column
     this.sendPanel_.setFromAddress(myAddress);
@@ -931,8 +931,8 @@ NetSim.prototype.render = function () {
     }
   } else {
     // Swap in 'disconnected' div
-    this.mainContainer_.find('.netsim-disconnected').show();
-    this.mainContainer_.find('.netsim-connected').hide();
+    this.mainContainer_.find('#netsim-disconnected').show();
+    this.mainContainer_.find('#netsim-connected').hide();
 
     // Render lobby
     this.lobby_.render();
