@@ -89,66 +89,69 @@ var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
     .map(nodeToRowMetadata);
 %>
 <div class="content-wrap">
+  <div class="instructions">Click the 'Join' button next to any router to be added to the router. Create a new router to join by clicking the 'Add room' button.</div>
+  <div class="controls">
+    <strong><%= i18n.lobby() %></strong>
+    <ul class="netsim-lobby-list">
+      <%
 
-  <strong><%= i18n.lobby() %></strong>
-  <ul class="netsim-lobby-list">
-    <%
+      lobbyRows.forEach(function (row) {
+      %>
+      <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+        <%= row.displayName %> : <%= row.status %>
+      </li>
+      <%
+      });
 
-    lobbyRows.forEach(function (row) {
-    %>
-    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
-      <%= row.displayName %> : <%= row.status %>
-    </li>
-    <%
-    });
+      if (!controller.hasOutgoingRequest() && showAddRouterButton) {
+      %>
+      <li class="empty-row">
+        <input type="button" id="netsim-lobby-add-router" value="<%= i18n.addRouter() %>" />
+      </li>
+      <%
+      } else if (lobbyRows.length === 0) {
+      %>
+      <li class="empty-row"><%= i18n.lobbyIsEmpty() %></li>
+      <%
+      }
+      %>
+    </ul>
 
-    if (!controller.hasOutgoingRequest() && showAddRouterButton) {
-    %>
-    <li class="empty-row">
-      <input type="button" id="netsim-lobby-add-router" value="<%= i18n.addRouter() %>" />
-    </li>
-    <%
-    } else if (lobbyRows.length === 0) {
-    %>
-    <li class="empty-row"><%= i18n.lobbyIsEmpty() %></li>
-    <%
-    }
-    %>
-  </ul>
+    <% if (requestRows.length > 0) { %>
+    <strong><%= i18n.incomingConnectionRequests() %></strong>
+    <ul class="netsim-lobby-list">
+      <%
+      requestRows.forEach(function (row) {
+      %>
+      <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+        <%= row.displayName %> : <%= row.status %>
+      </li>
+      <%
+      });
+      %>
+    </ul>
+    <% } %>
 
-  <% if (requestRows.length > 0) { %>
-  <strong><%= i18n.incomingConnectionRequests() %></strong>
-  <ul class="netsim-lobby-list">
-    <%
-    requestRows.forEach(function (row) {
-    %>
-    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
-      <%= row.displayName %> : <%= row.status %>
-    </li>
-    <%
-    });
-    %>
-  </ul>
-  <% } %>
+    <% if (outgoingRequestRows.length > 0) { %>
+    <strong><%= i18n.outgoingConnectionRequests() %></strong>
+    <ul class="netsim-lobby-list">
+      <%
+      outgoingRequestRows.forEach(function (row) {
+      %>
+      <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
+        <%= row.displayName %> : <%= row.status %>
+      </li>
+      <%
+      });
+      %>
+    </ul>
+    <% } %>
 
-  <% if (outgoingRequestRows.length > 0) { %>
-  <strong><%= i18n.outgoingConnectionRequests() %></strong>
-  <ul class="netsim-lobby-list">
-    <%
-    outgoingRequestRows.forEach(function (row) {
-    %>
-    <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
-      <%= row.displayName %> : <%= row.status %>
-    </li>
-    <%
-    });
-    %>
-  </ul>
-  <% } %>
-
-  <% if (controller.hasOutgoingRequest()) { %>
-    <p><%= i18n.waitingForNodeToConnect({ node: remoteNode.getDisplayName() }) %> <input type="button" id="netsim-lobby-cancel" value="<%= i18n.cancel() %>" /></p>
-  <% } else { %>
-    <input type="button" id="netsim-lobby-connect" value="<%= i18n.connect() %>" <% if (!controller.hasSelectedNode()) { %>disabled<% } %> />
-  <% } %>
+    <% if (controller.hasOutgoingRequest()) { %>
+      <p><%= i18n.waitingForNodeToConnect({ node: remoteNode.getDisplayName() }) %> <input type="button" id="netsim-lobby-cancel" value="<%= i18n.cancel() %>" /></p>
+    <% } else { %>
+      <input type="button" id="netsim-lobby-connect" value="<%= i18n.connect() %>" <% if (!controller.hasSelectedNode()) { %>disabled<% } %> />
+    <% } %>
+  </div>
+  <div class="clear"></div>
 </div>

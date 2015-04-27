@@ -219,6 +219,14 @@ $wide-column-width: 121px;
   }
 
   .netsim-lobby-panel {
+    .instructions {
+      float: left;
+      width: 30%;
+    }
+
+    .controls {
+      margin-left: calc(30% + 1em);
+    }
 
     ul {
       margin: 0 0 10px 0;
