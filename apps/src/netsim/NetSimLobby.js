@@ -19,7 +19,6 @@ var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
-var markup = require('./NetSimLobby.html');
 
 var logger = require('./NetSimLogger').getSingleton();
 
@@ -172,29 +171,29 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
  * Recreate markup within panel body.
  */
 NetSimLobby.prototype.render = function () {
-  // Add our own content markup
-  var newMarkup = $(markup({}));
-  this.rootDiv_.html(newMarkup);
+  var isConnectedToShard = (this.shard_ !== null);
+  if (!isConnectedToShard) {
 
-  // Shard selection panel: Controls for setting display name and picking
-  // a section, if they aren't set automatically.
-  this.shardSelectionPanel_ = new NetSimShardSelectionPanel(
-      this.rootDiv_.find('.shard-select'),
-      {
-        displayName: this.displayName_,
-        shardChoices: this.shardChoices_,
-        selectedShardID: this.selectedShardID_
-      },
-      {
-        setNameCallback: this.setDisplayName.bind(this),
-        setShardCallback: this.setShardID.bind(this)
-      });
+    // Shard selection panel: Controls for setting display name and picking
+    // a section, if they aren't set automatically.
+    this.shardSelectionPanel_ = new NetSimShardSelectionPanel(
+        this.rootDiv_,
+        {
+          displayName: this.displayName_,
+          shardChoices: this.shardChoices_,
+          selectedShardID: this.selectedShardID_
+        },
+        {
+          setNameCallback: this.setDisplayName.bind(this),
+          setShardCallback: this.setShardID.bind(this)
+        });
 
-  // Node selection panel: The lobby list of who we can connect to, and
-  // controls for picking one and connecting.
-  if (this.shard_) {
+  } else {
+
+    // Node selection panel: The lobby list of who we can connect to, and
+    // controls for picking one and connecting.
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
-        this.rootDiv_.find('.remote-node-select'),
+        this.rootDiv_,
         {
           levelConfig: this.levelConfig_,
           nodesOnShard: this.nodesOnShard_,
@@ -209,6 +208,7 @@ NetSimLobby.prototype.render = function () {
           connectButtonCallback: this.onConnectButtonClick_.bind(this),
           cancelButtonCallback: this.onCancelButtonClick_.bind(this)
         });
+
   }
 };
 
