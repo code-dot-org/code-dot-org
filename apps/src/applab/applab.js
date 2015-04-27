@@ -345,6 +345,9 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     } else if (expectedType === 'function') {
       // Special handling for functions, it must be an interpreter function:
       properType = (typeof varValue === 'object') && (varValue.type === 'function');
+    } else if (expectedType === 'number') {
+      properType = (typeof varValue === 'number' ||
+                    (typeof varValue === 'string' && !isNaN(varValue)));
     } else if (expectedType === 'primitive') {
       properType = isPrimitiveType(varValue);
       if (!properType) {
