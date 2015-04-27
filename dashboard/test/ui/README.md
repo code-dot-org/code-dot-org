@@ -13,7 +13,7 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 3. `cd` to the directory of this README.
 4. `bundle install`
 5. `rbenv rehash`
-6. `./runner.rb -l -m -d localhost:3000 -p localhost:9393`
+6. `./runner.rb -l -m -d localhost.studio.code.org:3000 -p localhost.code.org:3000`
   - `-l` makes it use the chromedriver
   - `-m` maximizes the window on startup
   - `-d` sets the test domain for dashboard
@@ -28,7 +28,7 @@ Running tests remotely on [Browserstack automate](http://browserstack.com/automa
 
 We are currently **limited to 2 concurrent test runs**, so you and one other person can be running your test suites at the same time. Browserstack shows how many tests are running at the top left. If it says 2/2, wait or ask for one to free up.
 
-#### Credentials 
+#### Credentials
 
 BrowserStack requires credentials to be set in the environment first.
 
