@@ -2,9 +2,11 @@
   display:none;
 }
 
-.clear {
+/* for homepage 2.0.. */
+#homepage .clear {
   clear: both;
 }
+/* ..end homepage 2.0 */
 
 h1 {
   color: #7665a0;
