@@ -28,15 +28,13 @@ var NodeType = require('./netsimConstants').NodeType;
  * @param {netsimLevelConfiguration} options.levelConfig
  * @param {NetSimNode[]} options.nodesOnShard
  * @param {NetSimNode[]} options.incomingConnectionNodes
- * @param {NetSimNode} options.selectedNode
  * @param {NetSimNode} options.remoteNode - null if not attempting to connect
  * @param {number} options.myNodeID
  *
  * @param {Object} callbacks
  * @param {function} callbacks.addRouterCallback
- * @param {function} callbacks.selectNodeCallback
- * @param {function} callbacks.connectButtonCallback
  * @param {function} callbacks.cancelButtonCallback
+ * @param {function} callbacks.joinButtonCallback
  *
  * @constructor
  * @augments NetSimPanel
@@ -62,13 +60,6 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   this.incomingConnectionNodes_ = options.incomingConnectionNodes;
 
   /**
-   * Which node in the lobby is currently selected
-   * @type {NetSimNode}
-   * @private
-   */
-  this.selectedNode_ = options.selectedNode;
-
-  /**
    * @type {NetSimNode}
    * @private
    */
@@ -88,25 +79,18 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   this.addRouterCallback_ = callbacks.addRouterCallback;
 
   /**
-   * Handler for selecting a node row
-   * @type {function}
-   * @private
-   */
-  this.selectNodeCallback_ = callbacks.selectNodeCallback;
-
-  /**
-   * Handler for connect button
-   * @type {function}
-   * @private
-   */
-  this.connectButtonCallback_ = callbacks.connectButtonCallback;
-
-  /**
    * Handler for cancel button (backs out of non-mutual connection)
    * @type {function}
    * @private
    */
   this.cancelButtonCallback_ = callbacks.cancelButtonCallback;
+
+  /**
+   * Handler for "join" button next to each connectable node.
+   * @type {function}
+   * @private
+   */
+  this.joinButtonCallback_ = callbacks.joinButtonCallback;
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -137,37 +121,27 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
 
-  this.connectButton_ = this.getBody().find('#netsim-lobby-connect');
-  this.connectButton_.click(this.connectButtonCallback_);
-
-  this.cancelButton_ = this.getBody().find('#netsim-lobby-cancel');
-  this.cancelButton_.click(this.cancelButtonCallback_);
-
-  this.getBody().find('.selectable-row').click(this.onRowClick_.bind(this));
+  this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
+  this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
+  this.getBody().find('.cancel-button').click(this.cancelButtonCallback_);
 };
 
 /**
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimRemoteNodeSelectionPanel.prototype.onRowClick_ = function (jQueryEvent) {
+NetSimRemoteNodeSelectionPanel.prototype.onJoinClick_ = function (jQueryEvent) {
   var target = $(jQueryEvent.target);
+  if (target.is('[disabled]')) {
+    return;
+  }
+
   var nodeID = target.data('nodeId');
   var clickedNode = _.find(this.nodesOnShard_, function (node) {
     return node.entityID === nodeID;
   });
 
-  // Don't even allow clicking on nodes we can't connect to.
-  if (!clickedNode || !this.canConnectToNode(clickedNode)) {
-    return;
-  }
-
-  // If the selected node was clicked, we want to deselect.
-  if (this.selectedNode_ && this.selectedNode_.entityID === clickedNode.entityID) {
-    this.selectNodeCallback_(null);
-  } else {
-    this.selectNodeCallback_(clickedNode);
-  }
+  this.joinButtonCallback_(clickedNode);
 };
 
 /**
@@ -196,23 +170,6 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connection
   var allowClients = this.levelConfig_.canConnectToClients;
   var allowRouters = this.levelConfig_.canConnectToRouters;
   return (isClient && allowClients) || (isRouter && allowRouters);
-};
-
-/**
- * @returns {boolean} TRUE if a node is selected in the listing.
- */
-NetSimRemoteNodeSelectionPanel.prototype.hasSelectedNode = function () {
-  return !!(this.selectedNode_);
-};
-
-/**
- * @param {NetSimNode} node
- * @returns {boolean} TRUE if the given node has the same ID as the currently
- *          selected node.
- */
-NetSimRemoteNodeSelectionPanel.prototype.isSelectedNode = function (node) {
-  return node && this.selectedNode_ &&
-      node.entityID === this.selectedNode_.entityID;
 };
 
 /**
