@@ -137,13 +137,6 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
   this.incomingConnectionNodes_ = [];
 
   /**
-   * Which node in the lobby is currently selected
-   * @type {NetSimClientNode|NetSimRouterNode}
-   * @private
-   */
-  this.selectedNode_ = null;
-
-  /**
    * @type {NetSimNode}
    * @private
    */
@@ -198,15 +191,13 @@ NetSimLobby.prototype.render = function () {
           levelConfig: this.levelConfig_,
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
-          selectedNode: this.selectedNode_,
           remoteNode: this.remoteNode_,
           myNodeID: this.myNode_.entityID
         },
         {
           addRouterCallback: this.addRouterToLobby.bind(this),
-          selectNodeCallback: this.selectNode.bind(this),
-          connectButtonCallback: this.onConnectButtonClick_.bind(this),
-          cancelButtonCallback: this.onCancelButtonClick_.bind(this)
+          cancelButtonCallback: this.onCancelButtonClick_.bind(this),
+          joinButtonCallback: this.onJoinButtonClick_.bind(this)
         });
 
   }
@@ -317,23 +308,14 @@ NetSimLobby.prototype.addRouterToLobby = function () {
 };
 
 /**
- * @param {NetSimNode} node
+ * Handler for clicking the "Join" button.
+ * @param {NetSimClientNode|NetSimRouterNode} nodeToJoin
  */
-NetSimLobby.prototype.selectNode = function (node) {
-  this.selectedNode_ = node;
-  this.render();
-};
-
-/** Handler for clicking the "Connect" button. */
-NetSimLobby.prototype.onConnectButtonClick_ = function () {
-  if (!this.selectedNode_) {
-    return;
-  }
-
-  if (this.selectedNode_ instanceof NetSimRouterNode) {
-    this.netsim_.connectToRouter(this.selectedNode_.entityID);
-  } else if (this.selectedNode_ instanceof NetSimClientNode) {
-    this.myNode_.connectToClient(this.selectedNode_, function () {});
+NetSimLobby.prototype.onJoinButtonClick_ = function (nodeToJoin) {
+  if (nodeToJoin instanceof NetSimRouterNode) {
+    this.netsim_.connectToRouter(nodeToJoin.entityID);
+  } else if (nodeToJoin instanceof NetSimClientNode) {
+    this.myNode_.connectToClient(nodeToJoin, function () {});
   }
 };
 

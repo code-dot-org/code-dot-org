@@ -91,7 +91,7 @@ $wide-column-width: 121px;
     }
 
     th {
-      border: none;
+      border: solid $charcoal 1px;
       font-family: "Gotham 4r", sans-serif;
       font-size: 10pt;
     }
@@ -228,8 +228,23 @@ $wide-column-width: 121px;
       margin-left: calc(30% + 1em);
     }
 
-    ul {
-      margin: 0 0 10px 0;
+    table {
+      margin-bottom: 1em;
+    }
+
+    td {
+      height: 40px;
+      vertical-align: middle;
+    }
+
+    .empty-row {
+      text-align: center;
+      border: none;
+    }
+
+    .button-column {
+      width: 1px;
+      text-align: right;
     }
   }
 
@@ -405,6 +420,7 @@ $wide-column-width: 121px;
 
     table {
       th {
+        border: none;
         background-color: transparent;
         color: $black;
       }
@@ -483,6 +499,7 @@ $wide-column-width: 121px;
       }
 
       th {
+        border: none;
         background-color: transparent;
         color: $black;
       }

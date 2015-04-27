@@ -57,7 +57,8 @@ var nodeToRowMetadata = function (node) {
     nodeID: node.entityID,
     classAttr: classes.join(' '),
     displayName: node.getDisplayName(),
-    status: node.getStatus() + ' ' + node.getStatusDetail()
+    status: node.getStatus() + ' ' + node.getStatusDetail(),
+    canConnectToNode: controller.canConnectToNode(node)
   };
 };
 
@@ -87,71 +88,125 @@ var requestRows = incomingConnectionNodes
 var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
     .filter(controller.shouldShowNode.bind(controller))
     .map(nodeToRowMetadata);
+
+/**
+ * @param {string} buttonText
+ * @param {string} buttonID
+ * @param {string[]} extraClasses
+ * @param {Object} extraAttributes
+ * @returns {string} markup for NetSim-style button
+ */
+function buttonMarkup(buttonText, buttonID, extraClasses, extraAttributes) {
+  var classes = utils.valueOr(extraClasses, []);
+  classes.push('netsim-button');
+  classes.push('large-button');
+
+  extraAttributes = utils.valueOr(extraAttributes, {});
+
+  var markup = '<span class="' + classes.join(' ') + '" ';
+
+  // ID attribute for span tag
+  if (buttonID) {
+    markup += 'id="' + buttonID + '" ';
+  }
+
+  // Extra attributes for span tag
+  for (var key in extraAttributes) {
+    if (extraAttributes.hasOwnProperty(key)) {
+      markup += key + '="' + extraAttributes[key] + '" ';
+    }
+  }
+
+  markup += '>' + buttonText + '</span>';
+  return markup;
+}
+
+function writeHeader(headerText) {
+  %>
+    <tr>
+      <th colspan="3"><%= headerText %></th>
+    </tr>
+  <%
+}
+
+function writeEmptyRow(contents) {
+  contents = utils.valueOr(contents, '');
+  %>
+    <tr>
+      <td colspan="3" class="empty-row"><%- contents %></td>
+    </tr>
+  <%
+}
+
+function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
+  %>
+    <tr>
+      <td><%= nodeName %></td>
+      <td><%= nodeStatus %></td>
+      <td class="button-column">
+        <%
+          var markup = '';
+          if (buttonType === 'join-button') {
+            markup = buttonMarkup('Join', undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
+          } else if (buttonType === 'accept-button') {
+            markup = buttonMarkup('Accept', undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
+          } else if (buttonType === 'cancel-button') {
+            markup = buttonMarkup('Cancel', undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': nodeID });
+          }
+        %>
+        <%- markup %>
+      </td>
+    </tr>
+  <%
+}
+
 %>
 <div class="content-wrap">
   <div class="instructions">Click the 'Join' button next to any router to be added to the router. Create a new router to join by clicking the 'Add room' button.</div>
   <div class="controls">
-    <strong><%= i18n.lobby() %></strong>
-    <ul class="netsim-lobby-list">
-      <%
+    <table>
 
-      lobbyRows.forEach(function (row) {
-      %>
-      <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
-        <%= row.displayName %> : <%= row.status %>
-      </li>
       <%
-      });
+        // Primary lobby list
+        writeHeader(i18n.lobby());
+        lobbyRows.forEach(function (row) {
+          var buttonType;
+          if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
+            buttonType = 'join-button';
+          }
+          writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
+        });
 
-      if (!controller.hasOutgoingRequest() && showAddRouterButton) {
-      %>
-      <li class="empty-row">
-        <input type="button" id="netsim-lobby-add-router" value="<%= i18n.addRouter() %>" />
-      </li>
-      <%
-      } else if (lobbyRows.length === 0) {
-      %>
-      <li class="empty-row"><%= i18n.lobbyIsEmpty() %></li>
-      <%
-      }
-      %>
-    </ul>
+        if (!controller.hasOutgoingRequest() && showAddRouterButton) {
+          writeEmptyRow(buttonMarkup(i18n.addRouter(), 'netsim-lobby-add-router', ['secondary']));
+        } else if (lobbyRows.length === 0) {
+          writeEmptyRow(i18n.lobbyIsEmpty());
+        }
 
-    <% if (requestRows.length > 0) { %>
-    <strong><%= i18n.incomingConnectionRequests() %></strong>
-    <ul class="netsim-lobby-list">
-      <%
-      requestRows.forEach(function (row) {
-      %>
-      <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
-        <%= row.displayName %> : <%= row.status %>
-      </li>
-      <%
-      });
-      %>
-    </ul>
-    <% } %>
+        // Incoming requests table
+        if (requestRows.length > 0) {
+          writeEmptyRow();
+          writeHeader(i18n.incomingConnectionRequests());
+          requestRows.forEach(function (row) {
+            var buttonType;
+            if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
+              buttonType = 'accept-button';
+            }
+            writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
+          });
+        }
 
-    <% if (outgoingRequestRows.length > 0) { %>
-    <strong><%= i18n.outgoingConnectionRequests() %></strong>
-    <ul class="netsim-lobby-list">
-      <%
-      outgoingRequestRows.forEach(function (row) {
+        // Outgoing request table
+        if (outgoingRequestRows.length > 0) {
+          writeEmptyRow();
+          writeHeader(i18n.outgoingConnectionRequests());
+          outgoingRequestRows.forEach(function (row) {
+            writeNodeRow(row.nodeID, row.displayName, row.status, 'cancel-button', row.classAttr);
+          });
+        }
       %>
-      <li class="<%= row.classAttr %>" data-node-id="<%= row.nodeID %>">
-        <%= row.displayName %> : <%= row.status %>
-      </li>
-      <%
-      });
-      %>
-    </ul>
-    <% } %>
 
-    <% if (controller.hasOutgoingRequest()) { %>
-      <p><%= i18n.waitingForNodeToConnect({ node: remoteNode.getDisplayName() }) %> <input type="button" id="netsim-lobby-cancel" value="<%= i18n.cancel() %>" /></p>
-    <% } else { %>
-      <input type="button" id="netsim-lobby-connect" value="<%= i18n.connect() %>" <% if (!controller.hasSelectedNode()) { %>disabled<% } %> />
-    <% } %>
+    </table>
   </div>
   <div class="clear"></div>
 </div>
