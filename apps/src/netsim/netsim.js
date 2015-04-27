@@ -910,27 +910,32 @@ NetSim.prototype.render = function () {
 
   shareLink = this.lobby_.getShareLink();
 
-  // Render left column
   if (this.isConnectedToRemote()) {
-    this.mainContainer_.find('.rightcol-disconnected').hide();
-    this.mainContainer_.find('.rightcol-connected').show();
-    this.sendPanel_.setFromAddress(myAddress);
-  } else {
-    this.mainContainer_.find('.rightcol-disconnected').show();
-    this.mainContainer_.find('.rightcol-connected').hide();
-    this.lobby_.render();
-  }
+    // Swap in 'connected' div
+    this.mainContainer_.find('.netsim-disconnected').hide();
+    this.mainContainer_.find('.netsim-connected').show();
 
-  // Render right column
-  if (this.statusPanel_) {
-    this.statusPanel_.render({
-      isConnected: isConnected,
-      statusString: clientStatus,
-      myHostname: myHostname,
-      myAddress: myAddress,
-      remoteNodeName: remoteNodeName,
-      shareLink: shareLink
-    });
+    // Render right column
+    this.sendPanel_.setFromAddress(myAddress);
+
+    // Render left column
+    if (this.statusPanel_) {
+      this.statusPanel_.render({
+        isConnected: isConnected,
+        statusString: clientStatus,
+        myHostname: myHostname,
+        myAddress: myAddress,
+        remoteNodeName: remoteNodeName,
+        shareLink: shareLink
+      });
+    }
+  } else {
+    // Swap in 'disconnected' div
+    this.mainContainer_.find('.netsim-disconnected').show();
+    this.mainContainer_.find('.netsim-connected').hide();
+
+    // Render lobby
+    this.lobby_.render();
   }
 };
 
