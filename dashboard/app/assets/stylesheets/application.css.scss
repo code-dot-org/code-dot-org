@@ -673,10 +673,9 @@ html, body {
   text-align: center;
 }
 
-
 .header_button {
   &.header_button_light {
-    background-color: #80d6de;
+    background-color: $lightish_teal;
   }
   display: inline-block;
   background-color: $orange;
