@@ -5,7 +5,7 @@ def create_storage_id_cookie
   response.set_cookie(storage_id_cookie_name, {
     value:CGI.escape(storage_encrypt_id(storage_id)),
     domain:".#{request.shared_cookie_domain}",
-    path:'/v3',
+    path:'/',
     expires:Time.now + (365 * 24 * 3600)
   })
 
@@ -67,7 +67,7 @@ def storage_id(endpoint)
 end
 
 def storage_id_cookie_name()
-  name = "storage"
+  name = "storage_id"
   name += "_#{rack_env}" unless rack_env?(:production)
   name
 end
