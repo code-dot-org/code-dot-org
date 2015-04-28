@@ -21,7 +21,7 @@ var utils = require('../utils');
 var i18n = require('../../locale/current/netsim');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
-var page = require('./page.html');
+var page = require('./page.html.ejs');
 var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var DashboardUser = require('./DashboardUser');
@@ -194,7 +194,7 @@ NetSim.prototype.init = function(config) {
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl})
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
     },
     hideRunButton: true
   });

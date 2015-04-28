@@ -44,6 +44,8 @@ Scenario:
   And I close my eyes
 
 Scenario:
+  Given I am on "http://learn.code.org/"
+  And I am a student
   When I open my eyes to test "embedded ninjacat"
   Given I am on "http://learn.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true"
   And I rotate to landscape
@@ -60,6 +62,8 @@ Scenario:
   And I close my eyes
 
 Scenario:
+  Given I am on "http://learn.code.org/"
+  And I am a student
   When I open my eyes to test "calc expression evaluation"
   Given I am on "http://learn.code.org/s/algebra/stage/2/puzzle/6?noautoplay=true"
   And I rotate to landscape
@@ -75,6 +79,8 @@ Scenario:
   And I close my eyes
 
 Scenario:
+  Given I am on "http://learn.code.org/"
+  And I am a student
   When I open my eyes to test "calc variable"
   Given I am on "http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true"
   And I rotate to landscape
@@ -90,6 +96,8 @@ Scenario:
   And I close my eyes
 
 Scenario Outline: Simple blockly level page view
+  Given I am on "http://learn.code.org/"
+  And I am a student
   When I open my eyes to test "<test_name>"
   And I am on "<url>"
   When I rotate to landscape

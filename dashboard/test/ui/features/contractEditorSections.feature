@@ -1,7 +1,9 @@
 Feature: Contract Editor section configuration and manipulation
 
 Background:
-  Given I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
+  Given I am on "http://learn.code.org/"
+  And I am a student
+  And I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
   And I press "x-close"
   Then element "#runButton" is visible
