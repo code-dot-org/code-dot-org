@@ -19,7 +19,12 @@ class CreateChannelTokens < ActiveRecord::Migration
         channel = storage_encrypt_channel_id(row[:storage_id], row[:id])
         user = user_storage_ids_table.where(id: row[:storage_id]).first
         if user && user[:user_id]
-          ChannelToken.create!(channel: channel, user_id: user[:user_id], level_id: big_game_template)
+          begin
+            ChannelToken.create!(channel: channel, user_id: user[:user_id], level_id: big_game_template)
+          rescue => e
+            puts "Failed to import channel '#{channel}' with ID '#{row[:id]}' and user '#{user[:user_id]}'"
+            puts e.backtrace.join("\n")
+          end
         end
       end
     end
