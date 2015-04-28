@@ -907,8 +907,9 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // Overwrite the nextStep value. (If we hit a breakpoint during a step
         // out or step over, this will cancel that step operation early)
         Applab.nextStep = StepType.RUN;
+        Applab.updatePauseUIState();
       } else {
-        Applab.onPauseButton();
+        Applab.onPauseContinueButton();
       }
       // Store some properties about where we stopped:
       Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -1007,6 +1008,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             // Our step operation is complete, reset nextStep to StepType.RUN to
             // return to a normal 'break' state:
             Applab.nextStep = StepType.RUN;
+            Applab.updatePauseUIState();
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -1221,11 +1223,13 @@ Applab.init = function(config) {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      dom.addClickTouchEvent(pauseButton, Applab.onPauseButton);
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      dom.addClickTouchEvent(pauseButton, Applab.onPauseContinueButton);
+      dom.addClickTouchEvent(continueButton, Applab.onPauseContinueButton);
       dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
@@ -1513,12 +1517,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   }
 
   var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
   var stepInButton = document.getElementById('stepInButton');
   var stepOverButton = document.getElementById('stepOverButton');
   var stepOutButton = document.getElementById('stepOutButton');
-  if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-    pauseButton.textContent = applabMsg.pause();
+  if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+    pauseButton.style.display = "inline-block";
     pauseButton.disabled = true;
+    continueButton.style.display = "none";
     stepInButton.disabled = true;
     stepOverButton.disabled = true;
     stepOutButton.disabled = true;
@@ -1585,12 +1591,14 @@ studioApp.reset = function(first) {
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.textContent = applabMsg.pause();
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = true;
+      continueButton.style.display = "none";
       stepInButton.disabled = false;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1884,11 +1892,14 @@ Applab.execute = function() {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = false;
+      continueButton.style.display = "none";
       stepInButton.disabled = true;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1908,27 +1919,40 @@ Applab.execute = function() {
   queueOnTick();
 };
 
-Applab.onPauseButton = function() {
+Applab.onPauseContinueButton = function() {
   if (Applab.running) {
-    var pauseButton = document.getElementById('pauseButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
     // We have code and are either running or paused
-    if (Applab.paused) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
       Applab.paused = false;
-      Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.pause();
     } else {
       Applab.paused = true;
       Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.continue();
     }
+    Applab.updatePauseUIState();
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
     stepInButton.disabled = !Applab.paused;
     stepOverButton.disabled = !Applab.paused;
     stepOutButton.disabled = !Applab.paused;
-    document.getElementById('spinner').style.visibility =
-        Applab.paused ? 'hidden' : 'visible';
+  }
+};
+
+Applab.updatePauseUIState = function() {
+  var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
+  var spinner = document.getElementById('spinner');
+
+  if (pauseButton && continueButton && spinner) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
+      pauseButton.style.display = "none";
+      continueButton.style.display = "inline-block";
+      spinner.style.visibility = 'hidden';
+    } else {
+      pauseButton.style.display = "inline-block";
+      continueButton.style.display = "none";
+      spinner.style.visibility = 'visible';
+    }
   }
 };
 
@@ -1936,25 +1960,25 @@ Applab.onStepOverButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OVER;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
 Applab.onStepInButton = function() {
   if (!Applab.running) {
     studioApp.runButtonClick();
-    Applab.onPauseButton();
+    Applab.onPauseContinueButton();
   }
   Applab.paused = true;
   Applab.nextStep = StepType.IN;
-  document.getElementById('spinner').style.visibility = 'visible';
+  Applab.updatePauseUIState();
 };
 
 Applab.onStepOutButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OUT;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
@@ -3807,7 +3831,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        ', escape((9,  applabMsg.pause() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        ', escape((12,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        ', escape((15,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        ', escape((18,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((21,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');25; } ; buf.push('\n\n  ');27; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');35; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((10,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((13,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((14,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((18,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((21,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((22,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((25,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((26,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((29,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');33; } ; buf.push('\n\n  ');35; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');43; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
