@@ -29,21 +29,7 @@ module LevelsHelper
     # Otherwise the current level.
     host_level = @level.try(:project_template_level) || @level
 
-    channel_token = ChannelToken.find_by(level: host_level, user: current_user)
-    unless channel_token
-      # Get a new channel_id.
-      channel = ChannelsApi.call request.env.merge(
-        'REQUEST_METHOD' => 'POST',
-        'PATH_INFO' => '/v3/channels',
-        'REQUEST_PATH' => '/v3/channels',
-        'CONTENT_TYPE' => 'application/json;charset=utf-8',
-        'rack.input' => StringIO.new('{"hidden":"true"}')
-      )
-      channel = channel[1]['Location'].split('/').last
-      channel_token = ChannelToken.new(level: host_level, user: current_user, channel: channel)
-      channel_token.save!
-    end
-    view_options channel: channel_token.channel
+    view_options channel: ChannelToken.unique_for_user_and_level(current_user, host_level)
   end
 
   def set_videos_and_callouts
