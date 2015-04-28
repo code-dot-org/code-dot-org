@@ -45,19 +45,11 @@ var nodeToRowMetadata = function (node) {
     classes.push('own-row');
   }
 
-  if (!controller.hasOutgoingRequest() && controller.canConnectToNode(node)) {
-    classes.push('selectable-row');
-  }
-
-  if (controller.isSelectedNode(node)) {
-    classes.push('selected-row');
-  }
-
   return {
     nodeID: node.entityID,
     classAttr: classes.join(' '),
     displayName: node.getDisplayName(),
-    status: node.getStatus() + ' ' + node.getStatusDetail(),
+    status: node.getStatus(),
     canConnectToNode: controller.canConnectToNode(node)
   };
 };
@@ -141,7 +133,7 @@ function writeEmptyRow(contents) {
 function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
   %>
     <tr>
-      <td><%= nodeName %></td>
+      <td nowrap><%= nodeName %></td>
       <td><%= nodeStatus %></td>
       <td class="button-column">
         <%
