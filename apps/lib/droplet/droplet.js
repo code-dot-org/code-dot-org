@@ -8514,12 +8514,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
 
     })(parser.Parser);
     JavaScriptParser.parens = function(leading, trailing, node, context) {
-      var lineEnd, results;
+      var results;
       if ((context != null ? context.type : void 0) === 'socket' || ((context == null) && indexOf.call(node.classes, 'mostly-value') >= 0 || indexOf.call(node.classes, 'value-only') >= 0) || indexOf.call(node.classes, 'ends-with-brace') >= 0 || node.type === 'segment') {
         trailing(trailing().replace(/;?\s*$/, ''));
       } else {
-        lineEnd = ';' + (context ? '' : '\n');
-        trailing(trailing().replace(/;?\s*$/, lineEnd));
+        trailing(trailing().replace(/;?\s*$/, ';'));
       }
       if (context === null || context.type !== 'socket' || context.precedence > node.precedence) {
         results = [];
@@ -9575,13 +9574,24 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       return this.discourageDropTimeout = null;
     });
     hook('mouseup', 1, function(point, event, state) {
-      var head, position;
+      var head, leadingWhitespace, line, pos, position, prefix, text;
       if (this.draggingBlock != null) {
         if (!this.currentlyUsingBlocks) {
           position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
           if (this.trackerPointIsInAce(position)) {
+            pos = this.aceEditor.renderer.screenToTextCoordinates(position.x, position.y);
+            line = this.aceEditor.session.getLine(pos.row);
+            leadingWhitespace = /^(\s*)/.exec(line)[0];
+            prefix = '';
+            if (pos.column === line.length && leadingWhitespace.length !== line.length) {
+              prefix = '\n' + leadingWhitespace;
+            }
             this.prepareNode(this.draggingBlock, null);
-            return this.aceEditor.onTextInput(this.draggingBlock.stringify(this.mode));
+            text = prefix + this.draggingBlock.stringify(this.mode);
+            if (!prefix && text[text.length - 1] === ';') {
+              text += '\n' + leadingWhitespace;
+            }
+            return this.aceEditor.onTextInput(text);
           }
         } else if (this.lastHighlight != null) {
           if (this.inTree(this.draggingBlock)) {
