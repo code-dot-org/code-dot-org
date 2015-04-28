@@ -44,6 +44,13 @@ var MessageGranularity = netsimConstants.MessageGranularity;
 var logger = NetSimLogger.getSingleton();
 
 /**
+ * Initial time between connecting to the shard and starting
+ * the first cleaning cycle.
+ * @type {number}
+ */
+var INITIAL_CLEANING_DELAY_MS = 10000; // 10 seconds
+
+/**
  * The top-level Internet Simulator controller.
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
@@ -434,7 +441,8 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
 
   this.shard_ = new NetSimShard(shardID);
   if (this.shouldEnableCleanup()) {
-    this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+    this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
+        INITIAL_CLEANING_DELAY_MS);
   }
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;

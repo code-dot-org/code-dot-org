@@ -284,8 +284,25 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
       }
 
       this.onWireTableChange_(rows);
+
+      // On initial connect, if we are connecting to routers and no routers
+      // are present, add one automatically.
+      if (this.levelConfig_.canConnectToRouters &&
+          !this.doesShardContainRouter()) {
+        this.addRouterToLobby();
+      }
     }.bind(this));
   }.bind(this));
+};
+
+/**
+ * @returns {boolean} whether the currently cached node data for the shard
+ *          includes a router node.
+ */
+NetSimLobby.prototype.doesShardContainRouter = function () {
+  return undefined !== _.find(this.nodesOnShard_, function (shardNode) {
+        return shardNode instanceof NetSimRouterNode;
+      });
 };
 
 /**
