@@ -2,11 +2,49 @@
   = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
   = javascript_include_tag 'editor/blockly_editor'
 %h1 Level Completions
-%h2 From #{@start_date} to #{@end_date}
+%h2
+  From
+  %input#dateFrom{style: 'position: relative; z-index: 102;'}
+  To
+  %input#dateTo{style: 'position: relative; z-index: 102;'}
+  Filter
+  %input#filter
+%a#dateUpdate{style: 'display: none'} Update
 #completionTable
 :css
   .htNumeric { font-family: monospace; }
 :javascript
+  var basePage = '#{ level_completions_path }';
+  var baseFilter = '#{ params[:filter]}';
+  $(function() {
+    var filter = $('#filter');
+    var from = $('#dateFrom');
+    var to = $('#dateTo');
+    filter.val(baseFilter);
+    from.datepicker({ dateFormat: 'yy-mm-dd' });
+    to.datepicker({ dateFormat: 'yy-mm-dd' });
+    from.datepicker('setDate', '#{ @start_date }');
+    to.datepicker('setDate', '#{ @end_date }');
+    filter.change(function() {
+      updateDate();
+    });
+    from.change(function() {
+      updateDate();
+    });
+    to.change(function() {
+      updateDate();
+    });
+  });
+  function updateDate() {
+    var href = basePage + '/' + $('#dateFrom').val() + '/' + $('#dateTo').val();
+    var filter = $('#filter');
+    if(filter.val()) {
+      href = href + '/filter/' + filter.val().replace('/','_');
+    }
+    console.log('new href=' + href);
+    $('#dateUpdate').attr('href', href);
+    $('#dateUpdate').show();
+  }
   var data = eval(#{@data_array.try(:to_json)});
   function successRateRenderer(instance, td, row, col, prop, value, cellProperties) {
   var conditions = [
