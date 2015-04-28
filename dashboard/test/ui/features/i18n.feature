@@ -1,4 +1,4 @@
-Feature: See Hour of Code and Frozen tutorial in Spanish, Portuguese, and Arabic
+Feature: See Hour of Code and Frozen tutorial in Spanish, Portuguese, and Arabic then reset back to English
 
 Scenario: HoC tutorial in Spanish
   Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/es"
@@ -10,6 +10,7 @@ Scenario: HoC tutorial in Spanish
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "es" text from key "data.level.instructions.maze_2_15"
+  Given I am on "http://learn.code.org/reset_session/lang/en"
 
 Scenario: Frozen tutorial in Spanish
   Given I am on "http://learn.code.org/s/frozen/stage/1/puzzle/2/lang/es"
@@ -21,6 +22,7 @@ Scenario: Frozen tutorial in Spanish
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "es" text from key "data.instructions.frozen perpendicular_instruction"
+  Given I am on "http://learn.code.org/reset_session/lang/en"
 
 Scenario: HoC tutorial in Portuguese
   Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/pt-br"
@@ -32,6 +34,7 @@ Scenario: HoC tutorial in Portuguese
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "pt-br" text from key "data.level.instructions.maze_2_15"
+  Given I am on "http://learn.code.org/reset_session/lang/en"
 
 Scenario: Frozen tutorial in Portuguese
   Given I am on "http://learn.code.org/s/frozen/stage/1/puzzle/2/lang/pt-br"
@@ -43,6 +46,7 @@ Scenario: Frozen tutorial in Portuguese
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
+  Given I am on "http://learn.code.org/reset_session/lang/en"
 
 Scenario: HoC tutorial in Arabic
   Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16/lang/ar"
@@ -54,6 +58,7 @@ Scenario: HoC tutorial in Arabic
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "ar" text from key "data.level.instructions.maze_2_15"
+  Given I am on "http://learn.code.org/reset_session/lang/en"
 
 Scenario: Frozen tutorial in Arabic
   Given I am on "http://learn.code.org/s/frozen/stage/1/puzzle/2/lang/ar"
@@ -65,3 +70,4 @@ Scenario: Frozen tutorial in Arabic
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then element "#prompt" has "ar" text from key "data.instructions.frozen perpendicular_instruction"
+  Given I am on "http://learn.code.org/reset_session/lang/en"
