@@ -6,15 +6,13 @@ nav: educate_nav
 
 Code.org is looking to partner with school districts to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to district elementary school teachers to teach computer science in a format that's fun and accessible.
 
-**Ideal partnerships are with school districts:**
-
-- interested in bringing computer science to **all** elementary school students.
-- with 30+ elementary school teachers to professionally development.  
-
-[<button>Appy Now</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)&nbsp;&nbsp;[<button>Learn about the K-5 curriculum</button>](/k5)
+Ideal partnerships are with school districts interested in bringing computer science to **all** elementary school students and have 30+ elementary school teachers to develop.  
+<br />
+[<button>Apply Now</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)&nbsp;&nbsp;[<button>Learn about the K-5 curriculum</button>](/k5)
 <br />
 <br />
-**Can't partner?** Teachers in your district can attend a K-5 workshop hosted by Code.org K-5 Affiliates near you. 
+
+**Unable to partner?** Teachers in your district can attend a [K-5 workshop](/professional-development-workshops) hosted by a local Code.org Affiliate. 
 
 [<button>Find a K-5 Workshop</button>](/professional-development-workshops)
 
@@ -49,24 +47,26 @@ This is a significant enough commitment from Code.org that we can only support a
 
 [<button>K-5 District Application</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)
 
+We will review applications on a rolling basis until June 2015. After that we will review applications once every 3 months. **This program is currently only operated in the US.**
+
 ## Encourage your school district to apply
 
 ### If you are a parent, teacher, or local advocate and want to encourage your district to work with us, send this email:
+**Subject Line:** Bring computer science to our school district!
 
+<br />
 Dear [Insert Name]
 
 Computer science is foundational knowledge for all students in the 21st century. But a lot of schools don’t teach it, especially at the elementary level.
 
-But now our elementary schools can, with the help of Code.org and at no cost to the district!
+But now our elementary schools can, at no cost, with the help of Code.org. [Learn more](/educate/k5-district-partnership).
 
-Code.org is looking to partner with school districts to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to district elementary school teachers to teach computer science in a format that's fun and accessible. If accepted, Code.org would cover all costs of training the Facilitator, and would provide, free of charge, the Code Studio curriculum, supplies needed to host the workshops including take home materials for attending teachers such as a printed curriculum guide, classroom supplies to teach the unplugged activities and fun Code.org swag.  
+Code.org is looking to [partner with school districts](/educate/k5-district-partnership) to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to district elementary school teachers to teach computer science in a format that's fun and accessible. 
+
+If accepted, Code.org would cover all costs of training the Facilitator, and would provide, free of charge, the Code Studio curriculum, supplies needed to host the workshops, including take home materials for attending teachers such as a printed curriculum guide, classroom supplies to teach the unplugged activities and fun Code.org swag.
 
 In return, the district would be responsible for identifying a member of the district staff to facilitate the Code Studio professional development workshops and prepare district teachers to offer the Code Studio curriculum broadly within grades K-5.
 
-As a concerned member of our community I strongly urge our school district apply to partner with Code.org to bring life-changing skills to our children! 
+As a member of our community I strongly urge our school district [apply to partner](/educate/k5-district-partnership) with Code.org to bring these life-changing skills to our children! [Sign up](/educate/k5-district-partnership)!
 
-Sincerely, 
-
-[Your Name]
-
-
+Sincerely,

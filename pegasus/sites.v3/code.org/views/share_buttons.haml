@@ -1,5 +1,7 @@
 -gplus ||= nil
 
+= view 'popup_window.js'
+
 .share-buttons.clear
   -if gplus
     %a.window-popup{:href=>"https://plus.google.com/share?#{gplus.to_query}"}<

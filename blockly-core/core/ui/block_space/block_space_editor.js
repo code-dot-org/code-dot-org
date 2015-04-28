@@ -25,6 +25,7 @@
 goog.provide('Blockly.BlockSpaceEditor');
 goog.require('Blockly.BlockSpace');
 goog.require('goog.array');
+goog.require('goog.style');
 
 /**
  * Class for a top-level block editing blockSpace.
@@ -49,6 +50,18 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
   this.createDom_(container);
   this.init_();
 };
+
+/**
+ * Padding (in pixels) within the inside of the block space.
+ * Blocks dropped with their top-left origin within this padding (or outside of
+ * the block space) will be bumped until their top-left is within the padding.
+ * @type {number}
+ * @const
+ */
+Blockly.BlockSpaceEditor.BUMP_PADDING_TOP = 15;
+Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT = 15;
+Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM = 25;
+Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT = 25;
 
 /**
  * Create an SVG element containing SVG filter and pattern definitions usable
@@ -277,23 +290,19 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
     return;
   }
 
-  /** @const */
-  var MARGIN = 25;
-
-  /** @const */
-  var MARGIN_TOP = 15;
-
   // Calculate bounds of view, including bump padding
-  var viewInnerTop = metrics.viewTop + MARGIN_TOP;
-  var viewInnerLeft = metrics.viewLeft + MARGIN;
-  var viewInnerBottom = metrics.viewTop + metrics.viewHeight - MARGIN;
-  var viewInnerRight = metrics.viewLeft + metrics.viewWidth - MARGIN
+  var viewInnerTop = metrics.viewTop + Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
+  var viewInnerLeft = metrics.viewLeft + Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
+  var viewInnerBottom = metrics.viewTop + metrics.viewHeight
+    - Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM;
+  var viewInnerRight = metrics.viewLeft + metrics.viewWidth
+    - Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT;
   var viewInnerWidth = viewInnerRight - viewInnerLeft;
   var viewInnerHeight = viewInnerBottom - viewInnerTop;
 
   // Check every block, and bump if needed.
   this.blockSpace.getTopBlocks(false).forEach(function (block) {
-    if (block.isCurrentlyHidden()) {
+    if (!block.isVisible()) {
       return;
     }
     // Skip block if it doesn't fit in the view anyway.
@@ -417,23 +426,33 @@ Blockly.BlockSpaceEditor.prototype.svgSize = function() {
  */
 Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   var svg = this.svg_;
-  var style = window.getComputedStyle(svg);
-  var borderWidth = 0;
-  if (style) {
-    borderWidth = parseInt(style.borderLeftWidth, 10) +
-      parseInt(style.borderRightWidth, 10);
+  var svgStyle = window.getComputedStyle(svg);
+  var svgBorderWidth = 0;
+  if (svgStyle) {
+    svgBorderWidth = parseInt(svgStyle.borderLeftWidth, 10) +
+      parseInt(svgStyle.borderRightWidth, 10);
   }
-  var div = svg.parentNode;
-  var width = div.offsetWidth - borderWidth;
-  var height = div.offsetHeight;
-  if (svg.cachedWidth_ != width) {
-    svg.setAttribute('width', width + 'px');
-    svg.cachedWidth_ = width;
+
+  // Subtract any pixels present above the svg element from the available height
+  // (only need to do this for mainBlockSpaceEditor's svg element, but fall back
+  // to this.svg_ during mainBlockSpaceEditor's creation)
+  var containerDiv = svg.parentNode;
+  var topmostSvgElement = Blockly.mainBlockSpaceEditor ? Blockly.mainBlockSpaceEditor.svg_ : svg;
+  var headerHeight = goog.style.getPageOffsetTop(topmostSvgElement)
+    - goog.style.getPageOffsetTop(containerDiv);
+
+  var svgWidth = containerDiv.clientWidth - svgBorderWidth;
+  var svgHeight = containerDiv.clientHeight - headerHeight;
+
+  if (svg.cachedWidth_ != svgWidth) {
+    svg.setAttribute('width', svgWidth + 'px');
+    svg.cachedWidth_ = svgWidth;
   }
-  if (svg.cachedHeight_ != height) {
-    svg.setAttribute('height', height + 'px');
-    svg.cachedHeight_ = height;
+  if (svg.cachedHeight_ != svgHeight) {
+    svg.setAttribute('height', svgHeight + 'px');
+    svg.cachedHeight_ = svgHeight;
   }
+
   // Update the scrollbars (if they exist).
   if (this.blockSpace.scrollbar) {
     this.blockSpace.scrollbar.resize();
@@ -585,7 +604,9 @@ Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
       e.preventDefault();
     }
   } else if (e.altKey || e.ctrlKey || e.metaKey) {
-    if (Blockly.selected && Blockly.selected.isDeletable()) {
+    if (Blockly.selected &&
+      Blockly.selected.isDeletable() &&
+      Blockly.selected.isCopyable()) {
       this.hideChaff();
       if (e.keyCode == 67) {
         // 'c' for copy.

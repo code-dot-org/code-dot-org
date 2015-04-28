@@ -1,0 +1,18 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-02T20:26:09.000Z",
+  "properties": {
+    "href": "pixelation/pixelation.html",
+    "options": {
+      "skip_dialog": true,
+      "version": "2",
+      "data": "0001 0111\n0001 0111\n1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 \n0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 \n0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 \n0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 \n0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 \n0 1 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 \n0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 \n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 \n1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 \n1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 \n0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 \n0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 1 1 0 0 0 0 \n0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 \n0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 \n0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 \n1 "
+    },
+    "title": "Pixelation - Lesson 14 - Fix bit offset",
+    "content1": "Pixelation - Lesson 14 - Fix bit offset",
+    "markdown": "# Task 2: Find and Fix the Error\n\nOh no! The Code.org logo got messed up. An extra bit was added to this image during transmission.<br>\nYour task is to find the extra bit and remove it to fix the Code.org logo. <br>\nHINT: one bit early on would make it look like many bits were out of order. <br>\n"
+  },
+  "md5": "976c1cd828dd09d9ab2b75013f51b222"
+}]]></config>
+</External>

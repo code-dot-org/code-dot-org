@@ -6,7 +6,8 @@ var testUtils = require('../util/testUtils');
 
 var ExpressionNode = require('@cdo/apps/calc/expressionNode');
 var EquationSet = require('@cdo/apps/calc/equationSet');
-var Equation = require('@cdo/apps/calc/equation.js');
+var Equation = require('@cdo/apps/calc/equation');
+var utils = require('@cdo.apps/utils');
 
 describe('EquationSet', function () {
   describe('addEquation_', function () {
@@ -79,45 +80,6 @@ describe('EquationSet', function () {
     it('returns true when we have a variable or function', function () {
       set.addEquation_(new Equation('x', [], new ExpressionNode(1)));
       assert.equal(set.hasVariablesOrFunctions(), true);
-    });
-  });
-
-  describe('hasSingleFunction', function () {
-    it('returns false if we have no functions or variables', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      assert.equal(set.hasSingleFunction(), false);
-    });
-
-    it('returns false if we have no functions, but do have variables', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      set.addEquation_(new Equation('x', [], new ExpressionNode(1)));
-      assert.equal(set.hasSingleFunction(), false);
-    });
-
-    it('returns false if we have multiple functions', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      set.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
-      set.addEquation_(new Equation('g', ['x'], new ExpressionNode('+', ['x', 1])));
-      assert.equal(set.hasSingleFunction(), false);
-    });
-
-    it('returns false if we have one function and one or more variables', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      set.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
-      set.addEquation_(new Equation('y', [], new ExpressionNode(1)));
-      assert.equal(set.hasSingleFunction(), false);
-    });
-
-    it('returns true if we have exactly one function and no variables', function () {
-      var set = new EquationSet();
-      set.addEquation_(new Equation(null, [], new ExpressionNode(0)));
-      var functionEquation = new Equation('f', ['x'], new ExpressionNode('+', ['x', 1]));
-      set.addEquation_(functionEquation);
-      assert.equal(set.hasSingleFunction(), true);
     });
   });
 
@@ -207,6 +169,76 @@ describe('EquationSet', function () {
       set2.addEquation_(new Equation('three', [], expression3));
 
       assert.equal(set1.isIdenticalTo(set2), true);
+    });
+  });
+
+  describe('isEquivalentTo', function () {
+    var onePlusTwo = new ExpressionNode('+', [1, 2]);
+    var twoPlusOne = new ExpressionNode('+', [2, 1]);
+    var onePlusThree = new ExpressionNode('+', [1, 3]);
+
+
+    it('returns false when compute expression are not equivalent', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], onePlusThree));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), false);
+      assert.strictEqual(set2.isEquivalentTo(set1), false);
+    });
+
+    it('returns false if non-compute expressions are not equivalent', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set1.addEquation_(new Equation('foo', [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], onePlusTwo));
+      set2.addEquation_(new Equation('foo', [], onePlusThree));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), false);
+      assert.strictEqual(set2.isEquivalentTo(set1), false);
+    });
+
+    it('returns true if two sets are identical', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set1.addEquation_(new Equation('foo', [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], onePlusTwo));
+      set2.addEquation_(new Equation('foo', [], onePlusTwo));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), true);
+      assert.strictEqual(set2.isEquivalentTo(set1), true);
+    });
+
+    it('returns true if compute expressions are equivalent but not identical', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set1.addEquation_(new Equation('foo', [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], twoPlusOne));
+      set2.addEquation_(new Equation('foo', [], onePlusTwo));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), true);
+      assert.strictEqual(set2.isEquivalentTo(set1), true);
+    });
+
+    it('returns true if non-compute expressions are equivalent but not identical', function () {
+      var set1 = new EquationSet();
+      var set2 = new EquationSet();
+
+      set1.addEquation_(new Equation(null, [], onePlusTwo));
+      set1.addEquation_(new Equation('foo', [], onePlusTwo));
+      set2.addEquation_(new Equation(null, [], onePlusTwo));
+      set2.addEquation_(new Equation('foo', [], twoPlusOne));
+
+      assert.strictEqual(set1.isEquivalentTo(set2), true);
+      assert.strictEqual(set2.isEquivalentTo(set1), true);
     });
   });
 
@@ -358,6 +390,16 @@ describe('EquationSet', function () {
       var evaluation = set.evaluate();
       assert.equal(evaluation.result, undefined);
       assert(evaluation.err instanceof ExpressionNode.DivideByZeroError);
+    });
+
+    it('fails to evaluate infinite recursion', function () {
+      var set = new EquationSet();
+      set.addEquation_(new Equation('f', ['x'], new ExpressionNode('f', [0])));
+      set.addEquation_(new Equation(null, [], new ExpressionNode('f', [1])));
+
+      var evaluation = set.evaluate();
+      assert.strictEqual(evaluation.result, undefined);
+      assert(utils.isInfiniteRecursionError(evaluation.err));
     });
   });
 

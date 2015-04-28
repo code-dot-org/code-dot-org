@@ -1389,6 +1389,7 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSpriteParams = {
       helpUrl: '',
       init: function() {
+        this.VALUES = skin.spriteChoices;
         var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
         // default to first item after random/hidden
         dropdown.setValue(skin.spriteChoices[2][1]);
@@ -1819,19 +1820,6 @@ exports.install = function(blockly, blockInstallOptions) {
       Studio.customLogic.cacheBlock(arg.name, inputBlock);
     }, this);
   };
-
-  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_start_dummyOnMove',
-    blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: blockly.BlockValueType.FUNCTION}]
-  });
-
-  blockly.FunctionalBlockUtils.installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_start_setBackground',
-    blockTitle: 'start (background)',
-    apiName: 'Studio.setBackground',
-    args: [{ name: 'BACKGROUND', type: blockly.BlockValueType.STRING, default: 'space'}]
-  });
 
   blockly.Blocks.functional_start_setSpeeds = {
     init: function() {

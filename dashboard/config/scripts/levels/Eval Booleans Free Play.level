@@ -19,9 +19,12 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "free_play": "false",
-    "coordinate_grid_background": "false"
-  }
+    "free_play": "true",
+    "coordinate_grid_background": "false",
+    "instructions": "Free Play: Try out some creations of your own using Booleans.",
+    "disable_examples": "false"
+  },
+  "md5": "db47d839037a1e43ac1b906167d2279e"
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -31,10 +34,10 @@
           <block type="functional_minus"/>
           <block type="functional_times"/>
           <block type="functional_dividedby"/>
+          <block type="functional_sqrt"/>
+          <block type="functional_squared"/>
+          <block type="functional_pow"/>
           <block type="functional_math_number"/>
-          <block type="functional_math_number_dropdown">
-            <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
-          </block>
         </category>
         <category name="String">
           <block type="functional_string"/>

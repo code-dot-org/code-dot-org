@@ -10,7 +10,7 @@ class ActivitiesController < ApplicationController
   # protect_from_forgery except: :milestone
 
   MAX_INT_MILESTONE = 2147483647
-  USER_ENTERED_TEXT_TITLE_NAMES = %w(TITLE TEXT)
+  USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
 
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
@@ -50,7 +50,7 @@ class ActivitiesController < ApplicationController
       @level_source_image = LevelSourceImage.find_by(level_source_id: @level_source.id)
       unless @level_source_image
         @level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
-        if !@level_source_image.save_to_s3(Base64.decode64(params[:image]))
+        unless @level_source_image.save_to_s3(Base64.decode64(params[:image]))
           @level_source_image = nil
         end
       end
@@ -94,7 +94,7 @@ class ActivitiesController < ApplicationController
   private
 
   def find_share_failure(program)
-    return nil unless program.match /(#{USER_ENTERED_TEXT_TITLE_NAMES.join('|')})/
+    return nil unless program.match /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
 
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
@@ -152,9 +152,9 @@ class ActivitiesController < ApplicationController
     end
 
     begin
-       trophy_check(current_user) if passed
+      trophy_check(current_user) if passed && @script_level && @script_level.script.trophies
     rescue StandardError => e
-       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
+      Rails.logger.error "Error updating trophy exception: #{e.inspect}"
     end
   end
 
@@ -186,7 +186,7 @@ class ActivitiesController < ApplicationController
   def trophy_check(user)
     @trophy_updates ||= []
     # called after a new activity is logged to assign any appropriate trophies
-    current_trophies = user.user_trophies.includes([:trophy, :concept]).index_by { |ut| ut.concept }
+    current_trophies = user.user_trophies.includes([:trophy, :concept]).index_by(&:concept)
     progress = user.concept_progress
 
     progress.each_pair do |concept, counts|

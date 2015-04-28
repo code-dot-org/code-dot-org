@@ -31,17 +31,22 @@ var tweens = require('./tweens');
  *        will be created.
  * @param {RunLoop} runLoop - Loop providing tick and render events that the
  *        visualization can hook up to and respond to.
- * @param {NetSimConnection} connection - Reference to the connection manager,
- *        which provides the hooks we need to get the shard, the local node,
- *        and to attach to the shared network state.
+ * @param {NetSim} netsim - core app controller, provides access to change
+ *        events and connection information.
  * @constructor
  */
-var NetSimVisualization = module.exports = function (svgRoot, runLoop, connection) {
+var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   /**
    * @type {jQuery}
    * @private
    */
   this.svgRoot_ = svgRoot;
+
+  /**
+   * @type {NetSim}
+   * @private
+   */
+  this.netsim_ = netsim;
 
   /**
    * The shard currently being represented.
@@ -51,7 +56,7 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, connectio
    * @private
    */
   this.shard_ = null;
-  connection.shardChange.register(this.onShardChange_.bind(this));
+  netsim.shardChange.register(this.onShardChange_.bind(this));
 
   /**
    * List of VizEntities, which are all the elements that will actually show up
@@ -74,16 +79,10 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, connectio
   this.visualizationHeight = 300;
 
   /**
-   * Key used to unregister from the node table.
+   * Event registration information
    * @type {Object}
    */
-  this.nodeTableChangeKey = undefined;
-
-  /**
-   * Key used to unregister from the wire table.
-   * @type {Object}
-   */
-  this.wireTableChangeKey = undefined;
+  this.eventKeys = {};
 
   // Hook up tick and render methods
   runLoop.tick.register(this.tick.bind(this));
@@ -139,26 +138,25 @@ NetSimVisualization.prototype.onShardChange_= function (newShard, localNode) {
  * @param {?NetSimShard} newShard - null if disconnected
  */
 NetSimVisualization.prototype.setShard = function (newShard) {
-  if (this.nodeTableChangeKey !== undefined) {
-    this.shard_.nodeTable.tableChange.unregister(this.nodeTableChangeKey);
-    this.nodeTableChangeKey = undefined;
-  }
-
-  if (this.wireTableChangeKey !== undefined) {
-    this.shard_.wireTable.tableChange.unregister(this.wireTableChangeKey);
-    this.wireTableChangeKey = undefined;
-  }
-
   this.shard_ = newShard;
-  if (!this.shard_) {
-    return;
+
+  // If we were registered for shard events, unregister old handlers.
+  if (this.eventKeys.registeredWithShard) {
+    this.eventKeys.registeredWithShard.nodeTable.tableChange.unregister(
+        this.eventKeys.nodeTable);
+    this.eventKeys.registeredWithShard.wireTable.tableChange.unregister(
+        this.eventKeys.wireTable);
+    this.eventKeys.registeredWithShard = null;
   }
 
-  this.nodeTableChangeKey = this.shard_.nodeTable.tableChange.register(
-      this.onNodeTableChange_.bind(this));
-
-  this.wireTableChangeKey = this.shard_.wireTable.tableChange.register(
-      this.onWireTableChange_.bind(this));
+  // If we have a new shard, register new handlers.
+  if (newShard) {
+    this.eventKeys.nodeTable = newShard.nodeTable.tableChange.register(
+        this.onNodeTableChange_.bind(this));
+    this.eventKeys.wireTable = newShard.wireTable.tableChange.register(
+        this.onWireTableChange_.bind(this));
+    this.eventKeys.registeredWithShard = newShard;
+  }
 };
 
 /**
@@ -168,19 +166,44 @@ NetSimVisualization.prototype.setShard = function (newShard) {
  * @param {?NetSimLocalClientNode} newLocalNode - null if disconnected
  */
 NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
+  // Unregister old handlers
+  if (this.eventKeys.registeredWithLocalNode) {
+    this.eventKeys.registeredWithLocalNode.remoteChange.unregister(
+        this.eventKeys.remoteChange);
+    this.eventKeys.registeredWithLocalNode = null;
+  }
+
+  // Register new handlers
+  if (newLocalNode) {
+    this.eventKeys.remoteChange = newLocalNode.remoteChange.register(
+        this.onRemoteChange_.bind(this));
+    this.eventKeys.registeredWithLocalNode = newLocalNode;
+  }
+
+  // Create viznode for local node
   if (newLocalNode) {
     if (this.localNode) {
       this.localNode.configureFrom(newLocalNode);
     } else {
       this.localNode = new NetSimVizNode(newLocalNode);
       this.entities_.push(this.localNode);
-      this.svgRoot_.find('#background_group').append(this.localNode.getRoot());
+      this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
     this.localNode.isLocalNode = true;
   } else {
     this.localNode.kill();
   }
   this.pullElementsToForeground();
+};
+
+/**
+ * Called whenever the local node notifies that we've been connected to,
+ * or disconnected from, a router.
+ * @private
+ */
+NetSimVisualization.prototype.onRemoteChange_ = function () {
+  this.pullElementsToForeground();
+  this.distributeForegroundNodes();
 };
 
 /**
@@ -204,7 +227,10 @@ NetSimVisualization.prototype.getEntityByID = function (entityType, entityID) {
 NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
   return this.entities_.filter(function (entity) {
     return entity instanceof NetSimVizWire &&
-        (entity.localVizNode === vizNode || entity.remoteVizNode === vizNode);
+        (
+        (entity.localVizNode === vizNode) ||
+        (vizNode.isRouter && entity.remoteVizNode === vizNode)
+        );
   });
 };
 
@@ -306,7 +332,7 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
  */
 NetSimVisualization.prototype.addVizEntity_ = function (vizEntity) {
   this.entities_.push(vizEntity);
-  this.svgRoot_.find('#background_group').prepend(vizEntity.getRoot());
+  this.svgRoot_.find('#background-group').prepend(vizEntity.getRoot());
 };
 
 /**
@@ -337,29 +363,35 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
     vizEntity.visited = false;
   });
 
-  // Use a simple stack for our list of nodes that need visiting.
-  // If we have a local node, push it onto the stack as our starting point.
-  // (If we don't have a local node, the next step is REALLY EASY)
-  var toExplore = [];
-  if (this.localNode) {
-    toExplore.push(this.localNode);
-  }
+  if (this.netsim_.isConnectedToRemote()) {
+    // Use a simple stack for our list of nodes that need visiting.
+    // If we have a local node, push it onto the stack as our starting point.
+    // (If we don't have a local node, the next step is REALLY EASY)
+    var toExplore = [];
+    if (this.localNode) {
+      toExplore.push(this.localNode);
+    }
 
-  // While there are still nodes that need visiting,
-  // visit the next node, marking it as "foreground/visited" and
-  // pushing all of its unvisited connections onto the stack.
-  var currentVizEntity;
-  while (toExplore.length > 0) {
-    currentVizEntity = toExplore.pop();
-    currentVizEntity.visited = true;
-    toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizEntity));
+    // While there are still nodes that need visiting,
+    // visit the next node, marking it as "foreground/visited" and
+    // pushing all of its unvisited connections onto the stack.
+    var currentVizEntity;
+    while (toExplore.length > 0) {
+      currentVizEntity = toExplore.pop();
+      currentVizEntity.visited = true;
+      toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizEntity));
+    }
+  } else if (this.localNode) {
+    // ONLY pull the local node to the foreground if we don't have a connection
+    // yet.
+    this.localNode.visited = true;
   }
 
   // Now, visited nodes belong in the foreground.
   // Move all nodes to their new, correct layers
   // Possible optimization: Can we do this with just one operation on the live DOM?
-  var foreground = this.svgRoot_.find('#foreground_group');
-  var background = this.svgRoot_.find('#background_group');
+  var foreground = this.svgRoot_.find('#foreground-group');
+  var background = this.svgRoot_.find('#background-group');
   this.entities_.forEach(function (vizEntity) {
     var isForeground = $.contains(foreground[0], vizEntity.getRoot()[0]);
 

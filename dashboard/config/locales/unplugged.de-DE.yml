@@ -5,23 +5,23 @@
         title: Einführung in die Informatik
         desc: Diese Lektion führt die Schüler in die Konzepte der Informatik ein und
           erklärt, was ein Informatiker macht. Die Schüler können dabei in die Rolle
-          eines Informatikers schlüpfen. Am Ende der Lektion können alle SchülerInnen
-          etwas wertvolles mit nach Hause nehmen. Sie sind vielleicht versucht gewisse
-          Wörter, welche erst in späteren Lektionen vertieft werden, auszulassen.
-          Sie werden in dieser Lektion jedoch in einer lustigen und spielerischen
-          Art präsentiert, was die Lernerfahrung stark steigert.
+          eines Informatikers schlüpfen. Am Ende der Lektion können alle Schüler etwas
+          wertvolles mit nach Hause nehmen. Sie sind vielleicht versucht gewisse Wörter,
+          welche erst in späteren Lektionen vertieft werden, auszulassen. Sie werden
+          in dieser Lektion jedoch in einer lustigen und spielerischen Art präsentiert,
+          was die Lernerfahrung stark steigert.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
         title: Computerorientiertes Denken
-        desc: Mit nichts als Papier und Stift, lernen die Schüler/-innen die vier
-          Schritte des Computerbezogenen Denkens. Nach einer kurzen Einführung sollten
-          die Schüler/-innen in Teams aufgeteilt werden, wo sie Anweisungen für andere
-          Teams erstellen, um ein bestimmtes Monster (aus einem Katalog von vorausgewählten
+        desc: Mit nichts als Papier und Stift, lernen die Schüler die vier Schritte
+          des Computer-bezogenen Denkens. Nach einer kurzen Einführung sollten die
+          Schüler in Teams aufgeteilt werden, wo sie Anweisungen für andere Teams
+          erstellen, um ein bestimmtes Monster (aus einem Katalog von vorausgewählten
           Monster) zu zeichnen. Der gesamte Vorgang soll zersetzt werden, danach werden
           die Teams die Monter auf Muster überprüfen, verschiedene Details abstrahieren
-          und diese Informationen zu einem Algorithmus(Anweisungen) zusammenstellen,
+          und diese Informationen zu einem Algorithmus (Anweisungen) zusammenstellen,
           welcher beschreibt wie das Monster zu zeichnen ist. Die Teams tauschen dann
           ihre Algorithmen untereinander aus und zeichnen das Monster basierend auf
           dem erhaltenen Algorithmus. Ist das Monster so wie vom ursprünglichen Team
@@ -31,12 +31,11 @@
         video: Unplug2
       Unplug3:
         title: Millimeterpapier Programmierung
-        desc: Die Schüler/-innen "programmieren" sich gegenseitig Bilder zu zeichnen,
-          wodurch sie schnell verstehen um was es beim programmieren eigentlich geht.
-          Die Lektion beginnt mit Schüler/-innen, welche sich gegenseitig anweisen
-          farbige Quadrate auf Millimeterpapier zu zeichnen, um das ursprüngliche
-          Bild zu rekonstruieren. Ist noch Zeit vorhanden, so können die Schüler/-innen
-          eigene Bilder entwerfen.
+        desc: Die Schüler "programmieren" sich gegenseitig Bilder zu zeichnen, wodurch
+          sie schnell verstehen um was es beim programmieren eigentlich geht. Die
+          Lektion beginnt mit Schülern, welche sich gegenseitig anweisen farbige Quadrate
+          auf Millimeterpapier zu zeichnen, um das ursprüngliche Bild zu rekonstruieren.
+          Ist noch Zeit vorhanden, so können die Schüler eigene Bilder entwerfen.
         pdfs:
         - unplug3
         video: Unplug3
@@ -52,18 +51,17 @@
         video: Unplug4
       Unplug5:
         title: Funktionen
-        desc: In dieser Lektion werden die Studenten einen Sonnenfänger aus Faden,
-          Perlen und einem besonderen Talisman machen. Die Schüler werden einer Reihe
-          sich wiederholender Schritten folgen und dann aufgefordert bestimmte Arbeitsschritte,
+        desc: In dieser Lektion werden die Schüler einen Sonnenfänger aus Faden, Perlen
+          und einem besonderen Talisman machen. Die Schüler werden einer Reihe sich
+          wiederholender Schritten folgen und dann aufgefordert bestimmte Arbeitsschritte,
           welche immer wieder gemacht werden, zu identifizieren. Sobald diese Arbeitsschrite
           definiert sind, werden sie aus einem Hauptprogramm aufgerufen und der ganze
           rafinierte Herstellungsprozess wird auf ein Blatt Papier aufgezeichnet.
           Das endgültige Programm richtet sich an die gesamte Klasse, unabhängig der
           verschiedenen Arten der Fäden, Perlen und Talismane. Um dies effektiv zu
-          ermöglichen, müssen die Schüler/-innen ihre Details (spezifische Materialien)
-          "abstrahieren"  und vage Begriffe für die Versorgung jedes Teilchens erstellen.  Diese
-          Verwendung von generischen Platzhalter ist eine wunderbare Einführung der
-          Variablen.
+          ermöglichen, müssen die Schüler ihre Details (spezifische Materialien) "abstrahieren"  und
+          vage Begriffe für die Versorgung jedes Teilchens erstellen.  Diese Verwendung
+          von generischen Platzhalter ist eine wunderbare Einführung der Variablen.
         pdfs:
         - unplug5
         video: Unplug5
@@ -78,9 +76,9 @@
       Unplug7:
         title: Lieder schreiben
         desc: Noten lesen ist für viele kein Problem.  Wir nehmen eine Aktivität,
-          die bereits allgemein bekannt ist und führen die Schüler/-innen in die Definition
-          und das Aufrufen von Funktionen ein. Nachdem Studenten mit dem Definitions/Aufruf-Prozess
-          vertraut sind, werden wir die weitere Funktionen erstellen, welchen wir
+          die bereits allgemein bekannt ist und führen die Schüler in die Definition
+          und das Aufrufen von Funktionen ein. Nachdem die Schüler mit dem Definitions-/Aufruf-Prozess
+          vertraut sind, werden wir die weiteren Funktionen erstellen, welchen wir
           zusätzlich noch Parameter übergeben.
         pdfs:
         - unplug7
@@ -104,8 +102,8 @@
         video: Unplug9
       Unplug10:
         title: das Internet
-        desc: In dieser Lektion werden die Schüler/-innen durch das Internet fliegen,
-          während sie lernen wie Internetadressen, IPs und der DNS funktioniert.
+        desc: In dieser Lektion werden die Schüler durch das Internet fliegen, während
+          sie lernen wie Internetadressen, IPs und der DNS funktioniert.
         pdfs:
         - unplug10
         video: Unplug10
@@ -136,37 +134,36 @@
         video: C1_planting_seed
       BuildingAFoundation:
         title: Grundlagen aufbauen
-        desc: Nur mit den gegebenen Materialien bauen die Schüler/-innen eine Struktur.
-          Die Struktur muss eine gewisse Eigenheit besitzen(eine bestimmte Höhe erreichen
-          oder ein Gewicht tragen). Dabei diskutieren sie was es heisst persistent
-          zu sein wenn es kompliziert wird.
+        desc: Nur mit den gegebenen Materialien bauen die Schüler eine Struktur. Die
+          Struktur muss eine gewisse Eigenheit besitzen (eine bestimmte Höhe erreichen
+          oder ein Gewicht tragen). Dabei diskutieren sie was es heißt persistent
+          zu sein, wenn es kompliziert wird.
         video: C1_building_foundation
       GettingLoopy:
         title: Schöne Schleifen
         desc: Diese Lektion führt Schleifen (wiederholte Anweisungen) mithilfe einer
-          Tanzaktivität ein. Die Schüler/-innen lernen eine simple Choreographie und
-          werden dann angewiesen sie zu wiederholen.
+          Tanzaktivität ein. Die Schüler lernen eine simple Choreographie und werden
+          dann angewiesen sie zu wiederholen.
         video: C1_getting_loopy
       RelayProgramming:
         title: Relais-Programmierung
-        desc: Bei einem Staffellauf schreiben die Schüler/-innen einen Algorithmus,
-          basierend auf einem "Millimeterpapier Programmierung" Bild. Sie können nur
-          jeweils eine Anweisung pro Lauf schreiben. Machen sie einen Fehler, so müssen
-          sie alles was seit dem Fehler geschrieben wurde wieder löschen.
+        desc: Bei einem Staffellauf schreiben die Schüler einen Algorithmus, basierend
+          auf einem "Millimeterpapier Programmierung" Bild. Sie können nur jeweils
+          eine Anweisung pro Lauf schreiben. Machen sie einen Fehler, so müssen sie
+          alles was seit dem Fehler geschrieben wurde wieder löschen.
         video: C2_relay_programming
       Conditionals:
         title: Bedingungen
-        desc: Als Einführung in die bedingten Anweisungen spielen die Schüler/-innen
-          ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe,
+        desc: Als Einführung in die bedingten Anweisungen spielen die Schüler ein
+          Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe,
           bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst
           du einen Punkt" erstellen.
         video: C2_conditionals_with_cards
       BigEvent:
         title: Der große Event
-        desc: Die Schüler/-innen werden an das Konzept der "Ereignisse" herangeführt,
-          auf welche der Computer die ganze Zeit wartet. Die Lehrperson drückt einen
-          Knopf auf einer Papierferbedienung, worauf die Schüler/-innen entsprechend
-          reagieren.
+        desc: Die Schüler werden an das Konzept der "Ereignisse" herangeführt, auf
+          welche der Computer die ganze Zeit wartet. Die Lehrperson drückt einen Knopf
+          auf einer Papierfernbedienung, worauf die Schüler entsprechend reagieren.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Sicher unterwegs
@@ -175,8 +172,8 @@
         video: C1_sicher_wohin_gehen
       GraphPaperProgramming:
         title: Programmieren auf Millimeterpapier
-        desc: Die Schüler/-innen notieren einen Algorithmus(ein Satz von Anweisungen),
-          mittels eines vordefinierten Satz von Anweisungen, mit dem sie ihre Klassenkameraden
+        desc: Die Schüler notieren einen Algorithmus (ein Satz von Anweisungen), mittels
+          eines vordefinierten Satz von Anweisungen, mit dem sie ihre Klassenkameraden
           anweisen ein Bild zu reproduzieren.
         video: C2_graph_paper
       PaperPlanes:
@@ -206,24 +203,25 @@
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Funktionale Sonnenfänger
-        desc: Die Schüler/-innen erstellen einen Algorithmus mit Variablen und Funktionen(wiederverwendbarer
-          Code) um einen Sonnenfänger mit Faden und Perlen zu machen.
+        desc: Die Schüler erstellen einen Algorithmus mit Variablen und Funktionen
+          (wiederverwendbarer Code) um einen Sonnenfänger mit Faden und Perlen zu
+          machen.
         video: C3_functional_suncatchers
       SongwritingParameters:
         title: Komponieren mit Parametern
-        desc: Der Chor soll den Schüler/-innen das Konzept der Übergabe von Parameter
-          näherbringen (welche das Resultat einer Funktion beeinflussen).
+        desc: Der Chor soll den Schülern das Konzept der Übergabe von Parametern näherbringen
+          (welche das Resultat einer Funktion beeinflussen).
         video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algorithmen im Alltag: Würfel-Rennen'
         desc: Wir benutzten täglich Algorithmen, was diese Lektion zeigen soll. Dazu
-          werden die Schüler/-innen werden dazu einen Algorithmus für ein Würfel-Rennen
-          ermitteln und niederschreiben.
+          werden die Schüler einen Algorithmus für ein Würfel-Rennen ermitteln und
+          niederschreiben.
         video: C3_dice_race
       Internet:
         title: Internet
-        desc: Die Schüler/-innen verschicken Nachrichten, welche Internetübertragungen
-          repräsentieren, mittels Papierschnipsel.
+        desc: Die Schüler verschicken Nachrichten, welche Internetübertragungen repräsentieren,
+          mittels Papierschnipsel.
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
@@ -252,9 +250,9 @@
         video: C4_unverfälscht_Variablen
       MadGlibs:
         title: Sauer Glibs
-        desc: Abstraktion ist eine der wichtigsten Fähigkeiten für einen Informatiker
-          zum verstehen.  Diese Aufgabe lässt ihre Schüler in geschichten nachUnterschieden
-          suchen, um diese abziehen können. Die reduzierte GEschichte wird Vorlage
+        desc: Abstraktion ist eine der wichtigsten Fähigkeiten, die ein Informatiker
+          verstehen muss.  Diese Aufgabe lässt ihre Schüler in Geschichten nach Unterschieden
+          suchen, um diese abziehen können. Die reduzierte Geschichte wird Vorlage
           für lustige und verrückte neue Geschichten.
         video: C4_unplugged_madlibs
       ForLoopFun:
@@ -282,19 +280,31 @@
         video: C4_unverfälscht_Binärdatei
       VideoGamesCoordinatePlanes:
         title: Videospiele und Koordination von Flugzeugen
-        desc: Beschreibung der Lektion zu Videospielen und der Koordination von Flugzeugen
+        desc: Entdecke wie die Videospiele, die du so gerne spielst, durch Algebra
+          gesteuert werden. Erkunde wie algebraischer Ausdrücke und das Koordinatensystem
+          uns verstehen helfen können wie Videospiele funktionieren und beginne dann
+          das Videospiel zu planen, das du selbst bauen wirst.
+        video: alg_11_coordinate_plane
       Contracts:
         title: Verträge
         desc: Beschreibung der Lektion zu "Contracts unplugged"
+        video: alg_5_contracts
       DesignRecipe:
         title: Das Design-Rezept
         desc: Beschreibung der Lektion für Design-Rezepte
+        video: alg_8_design_recipe
       Booleans:
-        title: Boolesche Variable
-        desc: Beschreibung der Lektion zu Boolean Variablen
+        title: Boolesche Werte und Logik
+        desc: Boolesche Werte sind der vierte und letzte Datentyp, den du in diesem
+          Kurs kennenlernen wirst. Bei dieser Übung wirst du erfahren was boolesche
+          Werte sind und wie sie uns dabei helfen können, Funktionen zu schreiben,
+          die logisch denken
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Lektion zu Conditionals und Piecewise
+        video: alg_10_conditionals
       CollisionDetection:
         title: Erkennen eines Zusammenstosses
         desc: Beschreibung der Lektion zur Erzeugung eines Zusammenstosses
+        video: alg_16_biggame_collision_detection

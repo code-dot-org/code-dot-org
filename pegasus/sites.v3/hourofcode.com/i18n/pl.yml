@@ -148,7 +148,7 @@ pl:
   hoc_faq_frozen_q: Gdzie jest samouczek z Anną i Elsą?
   hoc_faq_frozen_a: "Jest opublikowany na <a href='http://code.org/learn'> Code.org/learn</a>. Mamy nadzieję, że ci się spodoba!"
   hoc_faq_high_school_q: Jakie aktywności wykonywać ze starszymi uczniami?
-  hoc_faq_high_school_a: "Bez względu na wiek, polecamy wypróbowanie naszego samouczka dla początkujących na <a href='http://code.org/learn'>Code.org/learn</a>, np. samoucznka z Angry Birds lub z Anną i Elsą. Starsi uczniowie powinni być w stanie je ukończyć w 30 minut, a potem możesz spróbować bardziej zaawansowanych kursów JavaScript na KhanAcademy lub CodeHS."
+  hoc_faq_high_school_a: "Bez względu na wiek, polecamy wypróbowanie naszego samouczka dla początkujących na <a href='http://code.org/learn'>Code.org/learn</a>, np. samoucznka z Angry Birds lub z Anną i Elsą. Starsi uczniowie powinni być w stanie je ukończyć w 30 minut, a potem możesz spróbować bardziej zaawansowanych kursów JavaScript na Khan Academy lub CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -195,7 +195,7 @@ pl:
   events_orgs_title: Wszystkie wydarzenia z serii Godzina Kodowania organizowane przez partnerów
   event: wydarzenie
   events: wydarzenia
-  footer_copyright_message: Copyright 2014 Code.org. Wszelkie prawa zastrzeżone.
+  footer_copyright_message: Copyright 2015 Code.org. Wszelkie prawa zastrzeżone.
   footer_trademark_message: Hour od Code™ jest znakiem towarowym Code.org.
   footer_menu_partners: Partnerzy
   footer_menu_contact: Kontakt

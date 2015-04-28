@@ -47,7 +47,9 @@ exports.clearTimeouts = function () {
   var t = getTimer();
   timeoutList.forEach(t.clearTimeout, window);
   timeoutList = [];
-  if(stubTimer) t.clearAll();
+  if(stubTimer) {
+    t.clearAll();
+  }
 };
 
 /**
@@ -55,8 +57,8 @@ exports.clearTimeouts = function () {
  */
 exports.clearTimeout = function (id) {
   log('clear timeout:' + id);
-  var t = getTimer();
-  t.clearTimeout(id);
+  var timer = getTimer();
+  timer.clearTimeout(id);
   // List removal requires IE9+
   var index = timeoutList.indexOf(id);
   if (index > -1) {
@@ -70,8 +72,8 @@ var intervalList = [];
  * call setInterval and track the returned id
  */
 exports.setInterval = function (fn, time) {
-  var t = getTimer();
-  var intervalId = t.setInterval.apply(window, [fn, time]);
+  var timer = getTimer();
+  var intervalId = timer.setInterval.apply(window, [fn, time]);
   log('Setting interval ' + intervalId);
   intervalList.push(intervalId);
   return intervalId;
@@ -82,10 +84,12 @@ exports.setInterval = function (fn, time) {
  */
 exports.clearIntervals = function () {
   log('clear intervals');
-  var t = getTimer();
+  var timer = getTimer();
   intervalList.forEach(t.clearInterval, window);
   intervalList = [];
-  if(stubTimer) t.clearAll();
+  if (stubTimer) {
+    t.clearAll();
+  }
 };
 
 /**
@@ -94,8 +98,8 @@ exports.clearIntervals = function () {
 exports.clearInterval = function (id) {
   log('clear interval:' + id);
 
-  var t = getTimer();
-  t.clearInterval(id);
+  var timer = getTimer();
+  timer.clearInterval(id);
   // List removal requires IE9+
   var index = intervalList.indexOf(id);
   if (index > -1) {
@@ -106,15 +110,17 @@ exports.clearInterval = function (id) {
 exports.advance = function() {
   log('advance');
   if(stubTimer) {
-    var t = getTimer();
-    if(stubTimer) t.wait(50000);
-    if(stubTimer) t.waitAll();
+    var timer = getTimer();
+    if(stubTimer) {
+      t.wait(50000);
+      t.waitAll();
+    }
   }
 };
 
 exports.waitAll = function(done) {
   log('WaitAll');
   if(stubTimer) {
-    if(stubTimer) getTimer().waitAll(done);
+    getTimer().waitAll(done);
   }
 };

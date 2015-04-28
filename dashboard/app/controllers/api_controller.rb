@@ -22,7 +22,7 @@ class ApiController < ApplicationController
 
     # student level completion data
     students = @section.students.map do |student|
-      level_map = student.user_levels.index_by {|ul| ul.level_id }
+      level_map = student.user_levels.index_by(&:level_id)
       student_levels = []
       @script.script_levels.each do |script_level|
         if user_level = level_map[script_level.level_id]

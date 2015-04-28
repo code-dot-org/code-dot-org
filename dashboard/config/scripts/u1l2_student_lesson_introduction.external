@@ -1,0 +1,29 @@
+name 'U1L2 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 1: Lesson 2 - Sending Binary Messages
+
+# Background
+
+The simplest type of information that can be sent is a BINARY message. The word “binary” is not actually a term from computing. Binary is used to describe a state of things that involve only two possibilities. Messages on the Internet are sent as a series of binary signals. 
+
+# Lesson
+
+* Think of a message that can be communicated with such a simple message. 
+* Build a device from everyday objects to communicate the message across the room. 
+* Work with your team mates in an iterative design process of rapidly building and improving your device.  
+
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/document/d/1s3qa6U2mPFSH_n6Uf0I9IHV2FOzXtOlxZ3LSTOM3JTQ/edit?usp=sharing" target="_blank">Sending Binary Numbers</a>
+* Assessment:  <a href="https://docs.google.com/document/d/1sO2881fgXnLSnF29qhYbCygfKDLPz-kdL5owZofp31I/edit?usp=sharing" target="_blank">Sending Binary Numbers Rubric</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

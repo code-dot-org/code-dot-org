@@ -15,6 +15,8 @@ class Ability
     else
       can :read, :all
       cannot :read, [
+        Script, # see override below
+        ScriptLevel, # see override below
         PrizeProvider,
         Prize,
         TeacherPrize,
@@ -70,8 +72,25 @@ class Ability
       end
 
       if user.district_contact?
-        can :teachers, District
         can [:cohort, :teacher], WorkshopAttendance
+        can :manage, Cohort do |cohort| # if the cohort has the district contact's district
+          cohort.districts.any? do |district|
+            district.contact_id == user.id
+          end
+        end
+      end
+    end
+
+    if user.id
+      can :read, Script
+      can :read, ScriptLevel
+    else
+      # not logged in
+      can :read, Script do |script|
+        !script.login_required?
+      end
+      can :read, ScriptLevel do |script_level|
+        !script_level.script.login_required?
       end
     end
 

@@ -11,17 +11,21 @@
  */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
+var i18n = require('../../locale/current/netsim');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var formatBinary = dataConverters.formatBinary;
+var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 
 /**
- * @type {number}
- * @const
+ * @typedef {Object} logEntryRow
+ * @property {number} nodeID
+ * @property {string} binary
+ * @property {NetSimLogEntry.LogStatus} status
+ * @property {number} timestamp
  */
-var BITS_PER_BYTE = 8;
 
 /**
  * Entry in shared log for a node on the network.
@@ -30,7 +34,7 @@ var BITS_PER_BYTE = 8;
  * removes it.
  *
  * @param {!NetSimShard} shard - The shard where this log entry lives.
- * @param {Object} [row] - A row out of the log table on the
+ * @param {logEntryRow} [row] - A row out of the log table on the
  *        shard.  If provided, will initialize this log with the given
  *        data.  If not, this log will initialize to default values.
  * @param {packetHeaderSpec} [packetSpec] - Packet layout spec used to
@@ -52,13 +56,20 @@ var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
    * Binary content of the log entry.  Defaults to empty string.
    * @type {string}
    */
-  this.binary = (row.binary !== undefined) ? row.binary : '';
+  this.binary = utils.valueOr(row.binary, '');
+
+  /**
+   * Status value for log entry; for router log, usually SUCCESS for completion
+   * of routing or DROPPED if routing failed.
+   * @type {NetSimLogEntry.LogStatus}
+   */
+  this.status = utils.valueOr(row.status, NetSimLogEntry.LogStatus.SUCCESS);
 
   /**
    * @type {Packet}
    * @private
    */
-  this.packet_ = new Packet(packetSpec ? packetSpec : [], this.binary);
+  this.packet_ = new Packet(utils.valueOr(packetSpec, []), this.binary);
 
   /**
    * Unix timestamp (local) of log creation time.
@@ -69,6 +80,15 @@ var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
 NetSimLogEntry.inherits(NetSimEntity);
 
 /**
+ * @enum {string}
+ * @const
+ */
+NetSimLogEntry.LogStatus = {
+  SUCCESS: 'success',
+  DROPPED: 'dropped'
+};
+
+/**
  * Helper that gets the log table for the configured instance.
  * @returns {NetSimTable}
  */
@@ -76,11 +96,15 @@ NetSimLogEntry.prototype.getTable_ = function () {
   return this.shard_.logTable;
 };
 
-/** Build own row for the log table  */
+/**
+ * Build own row for the log table
+ * @returns {logEntryRow}
+ */
 NetSimLogEntry.prototype.buildRow_ = function () {
   return {
     nodeID: this.nodeID,
     binary: this.binary,
+    status: this.status,
     timestamp: this.timestamp
   };
 };
@@ -91,15 +115,17 @@ NetSimLogEntry.prototype.buildRow_ = function () {
  * @param {!NetSimShard} shard
  * @param {!number} nodeID - associated node's row ID
  * @param {!string} binary - log contents
+ * @param {NetSimLogEntry.LogStatus} status
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimLogEntry.create = function (shard, nodeID, binary, onComplete) {
+NetSimLogEntry.create = function (shard, nodeID, binary, status, onComplete) {
   var entity = new NetSimLogEntry(shard);
   entity.nodeID = nodeID;
   entity.binary = binary;
+  entity.status = status;
   entity.timestamp = Date.now();
   entity.getTable_().create(entity.buildRow_(), function (err, result) {
-    if (err !== null) {
+    if (err) {
       onComplete(err, null);
       return;
     }
@@ -129,4 +155,13 @@ NetSimLogEntry.prototype.getMessageBinary = function () {
 /** Get packet message as ASCII */
 NetSimLogEntry.prototype.getMessageAscii = function () {
   return this.packet_.getBodyAsAscii(BITS_PER_BYTE);
+};
+
+NetSimLogEntry.prototype.getLocalizedStatus = function () {
+  if (this.status === NetSimLogEntry.LogStatus.SUCCESS) {
+    return i18n.logStatus_success();
+  } else if (this.status === NetSimLogEntry.LogStatus.DROPPED) {
+    return i18n.logStatus_dropped();
+  }
+  return '';
 };

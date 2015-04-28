@@ -1,0 +1,30 @@
+name 'U1L6 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 1: Lesson 6 - Number Systems
+
+# Background
+Numbers are just markings on paper with rules about how to get from one number to the next. The “binary number system” that is so fundamental to computing is a logical way of representing numbers with values that have two possible states. Representing values using a finite set of patterns in predictable sequences is the basis of a number system.
+
+
+# Lesson
+* Count using circles, triangles, and squares.
+* Create a number systems with non-numeric symbols. 
+* Write the rules for counting with your number system.
+
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/a/code.org/document/d/1QX6PDWnNHIJdE3aNMrXIBmlTSyL_jiWdu-OELV0rWvA/edit" target="_blank">Counting with Shapes</a>
+* Widget: <a href="http://cspdashboard-c9-bfranke.c9.io/Odometers/" target="_blank">Odometer Widget</a>
+* Peter Denning <a href="http://denninginstitute.com/pjd/GP/overviews/ov_computation.pdf" target="_blank">Computation
+: A new way of science</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

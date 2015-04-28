@@ -24,12 +24,59 @@ exports.BITS_PER_NIBBLE = 4;
 exports.BITS_PER_BYTE = 8;
 
 /**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_KILOBYTE = 1024 * exports.BITS_PER_BYTE;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_MEGABYTE = 1024 * exports.BITS_PER_KILOBYTE;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_GIGABYTE = 1024 * exports.BITS_PER_MEGABYTE;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_KILOBIT = 1024;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_MEGABIT = 1024 * exports.BITS_PER_KILOBIT;
+
+/**
+ * @type {number}
+ * @const
+ */
+exports.BITS_PER_GIGABIT = 1024 * exports.BITS_PER_MEGABIT;
+
+/**
  * Types of nodes that can show up in the simulation.
  * @enum {string}
  */
 exports.NodeType = {
   CLIENT: 'client',
   ROUTER: 'router'
+};
+
+/**
+ * What type of message makes up the 'atom' of communication for this
+ * simulator mode - single-bit messages (variant 1) or whole packets (variants
+ * 2 and up)
+ * @enum {string}
+ */
+exports.MessageGranularity = {
+  PACKETS: 'packets',
+  BITS: 'bits'
 };
 
 /**

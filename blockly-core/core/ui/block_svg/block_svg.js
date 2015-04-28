@@ -109,10 +109,11 @@ Blockly.BlockSvg.prototype.updateMovable = function() {
 };
 
 /**
- * Add or remove the UI indicating if this block is deletable or not.
+ * Add or remove the UI indicating if this block is deletable or not
+ * @param {boolean} shouldBeGray
  */
-Blockly.BlockSvg.prototype.updateGrayOutCSS = function() {
-  if (this.shouldBeGrayedOut()) {
+Blockly.BlockSvg.prototype.grayOut = function(shouldBeGray) {
+  if (shouldBeGray) {
     Blockly.addClass_(this.svgGroup_, 'blocklyUndeletable');
     Blockly.removeClass_(this.svgGroup_, 'blocklyDeletable');
   } else {
@@ -432,7 +433,9 @@ Blockly.BlockSvg.connectionUiStep_ = function(ripple) {
 };
 
 /**
- * Change the colour of a block.
+ * Change the display colour of a block. In the case of block.shouldBeGrayedOut
+ * this means the block color on the block object and the display color (gray)
+ * are potentially out of sync.
  */
 Blockly.BlockSvg.prototype.updateColour = function() {
   if (this.block_.disabled) {
@@ -442,7 +445,7 @@ Blockly.BlockSvg.prototype.updateColour = function() {
 
   var hexColour;
 
-  if (this.shouldBeGrayedOut()) {
+  if (this.block_.shouldBeGrayedOut()) {
     hexColour = BS.DISABLED_COLOUR;
   } else {
     hexColour = this.block_.getHexColour();
@@ -484,11 +487,6 @@ Blockly.BlockSvg.prototype.updateDisabled = function() {
     child.svg_.updateDisabled();
   }
 };
-
-Blockly.BlockSvg.prototype.shouldBeGrayedOut = function() {
-  return Blockly.grayOutUndeletableBlocks && !this.block_.isDeletable() && !Blockly.readOnly &&
-    this.block_.type !== 'when_run';
-}
 
 /**
  * Select this block.  Highlight it visually.  Move to top of the stack.
@@ -740,9 +738,9 @@ function thickenInlineRows (inputRows) {
 function inputRenderSize (input) {
   // Compute minimum input size.
   var renderHeight = BS.MIN_BLOCK_Y;
-  var renderWidth = BS.TAB_WIDTH + BS.SEP_SPACE_X
+  var renderWidth = BS.TAB_WIDTH + BS.SEP_SPACE_X;
   if (input.type === Blockly.FUNCTIONAL_INPUT) {
-    renderWidth = BS.NOTCH_WIDTH + BS.SEP_SPACE_X
+    renderWidth = BS.NOTCH_WIDTH + BS.SEP_SPACE_X;
   }
 
   // Expand input size if there is a connection.
@@ -859,7 +857,7 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
     // current x/y location
     curX: iconWidth,
     curY: 0
-  }
+  };
 
   this.renderDrawTop_(renderInfo, inputRows.rightEdge, connectionsXY);
   this.renderDrawRight_(renderInfo, connectionsXY, inputRows, iconWidth);

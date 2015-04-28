@@ -44,7 +44,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 # Teaching Guide
 
-## Materials, Resources and Prep
+## Materials, Resources, and Prep
 ### For the Student
 - [Contract Log](../docs/worksheets/contract_log.pdf)
 
@@ -91,7 +91,7 @@ Contracts have three distinct parts:
 
 1. Name
 2. Domain
-3. Rainge
+3. Range
 
 **The Name of a function briefly describes what the function does.**
 
@@ -130,7 +130,7 @@ Let's see if we can come up with contracts for some of the functions you've alre
 - We'll start with contracts for simple arithmetic functions
 - +, -, *, /
  
-Those ones were pretty easy, arithmetic functions only deal in Numbers! When it comes to writing functions that deal with multiple data types, looking at the Evaluation Block can give us some helpful clues.
+Those were pretty easy as arithmetic functions only deal in Numbers. When it comes to writing functions that deal with multiple data types, looking at the Evaluation Block can give us some helpful clues.
 
 - The Name of each function is at the top
 - There will be a slot for each Domain element
@@ -147,7 +147,7 @@ Common mistakes when students first write down contracts include: writing values
 
 [/tip]
 
-For each of the following Evaluation Blocks:
+Display each of the following Evaluation Blocks and ask students:
 
 - What is the Name of this function?
 - What is the Domain of this function?

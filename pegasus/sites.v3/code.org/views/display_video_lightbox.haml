@@ -1,6 +1,7 @@
 - facebook ||= nil
 - twitter ||= nil
 - download_filename ||= nil
+- download_path ||= nil
 
 .modal.fade{id: "showVideo_#{id}"}
   .modal-dialog.modal-lg
@@ -11,7 +12,7 @@
           %span{:class=>"sr-only"} Close
         %div{style: "clear:both"}
       .modal-body{style: "padding-top: 0px"}
-        =view :index_video_reveal, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename
+        =view :index_video_reveal, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path
 
 :css
   .modal{
@@ -22,7 +23,8 @@
 
   window["showVideo_#{id}"] = function()
   {
-    $("#showVideo_#{id}").modal('show')
+    $("#showVideo_#{id}").modal('show');
+    setupPopupWindows();
   };
 
   $("#showVideo_#{id}").on('hidden.bs.modal', function () 

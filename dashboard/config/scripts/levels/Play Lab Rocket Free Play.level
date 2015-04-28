@@ -37,7 +37,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "custom_game_type": "Rocket Height"
+    "custom_game_type": "Rocket Height",
+    "disable_examples": "false",
+    "maze_data": null
   },
   "md5": "cac0ee6bb21cac0e14b5e356c9b40c99"
 }]]></config>
@@ -105,13 +107,6 @@
             <outputtype>Number</outputtype>
           </mutation>
           <title name="NAME">rocket-height</title>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Number</outputtype>
-            <isfunctionalvariable>true</isfunctionalvariable>
-          </mutation>
-          <title name="NAME">time-elapsed</title>
         </block>
       </xml>
     </start_blocks>

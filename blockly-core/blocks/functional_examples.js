@@ -34,6 +34,9 @@ Blockly.Blocks.functional_example = {
   shouldHideIfInMainBlockSpace: function () {
     return true;
   },
+  isCopyable: function () {
+    return false;
+  },
   init: function() {
     this.setHSV(94, 0.84, 0.60);
     this.setFunctional(true, { headerHeight: 0, rowBuffer: 3 });
@@ -52,5 +55,23 @@ Blockly.Blocks.functional_example = {
   updateOutputType: function(outputType) {
     this.outputType_ = outputType;
     this.changeFunctionalOutput(this.outputType_);
+  },
+  /**
+   * Updates the functional examples' usage types
+   * @param {Blockly.BlockValueType} newType
+   */
+  updateInputsToType: function (newType) {
+    this.updateInputType_(this.getInput('EXPECTED'), newType);
+    this.updateInputType_(this.getInput('ACTUAL'), newType);
+    this.render();
+  },
+  /**
+   * Updates given input to match a given functional value type
+   * @param {Blockly.Input} input
+   * @param {Blockly.BlockValueType} newType
+   */
+  updateInputType_: function (input, newType) {
+    input.setHSV.apply(input, Blockly.FunctionalTypeColors[newType]);
+    input.setCheck(newType);
   }
 };

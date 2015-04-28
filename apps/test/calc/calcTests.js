@@ -84,7 +84,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.deepEqual(outcome.failedInput, [1]);
   });
 
-  it('fails when target has singleFunction, userSet does not', function () {
+  it('fails when target has computesFunctionCall, userSet does not', function () {
     // f(x) = x + 1
     // f(2)
     var targetSet = new EquationSet();
@@ -93,11 +93,14 @@ describe('evaluateResults_/evaluateFunction_', function () {
 
     // f(x) = x = 1
     // yvar = 1
-    // f(2)
+    // f(2) + yvar
     var userSet = new EquationSet();
     userSet.addEquation_(new Equation('f', ['x'], new ExpressionNode('+', ['x', 1])));
     userSet.addEquation_(new Equation('yvar', [], new ExpressionNode(1)));
-    userSet.addEquation_(new Equation(null, [], new ExpressionNode('f', [2])));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [
+      new ExpressionNode('f', [2]),
+      new ExpressionNode('yvar')
+    ])));
 
     var outcome = Calc.evaluateFunction_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
@@ -110,7 +113,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.deepEqual(outcome, otherOutcome);
   });
 
-  it('fails when target is simple expression and userSet hasSingleFunction', function () {
+  it('fails when target is simple expression and userSet computesFunctionCall', function () {
     // compute: 1 + 2
     var targetSet = new EquationSet();
     targetSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
@@ -139,7 +142,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
 
     // compute: 1 + 2
     var userSet = new EquationSet();
-    userSet.addEquation_(new EquationSet(null, new ExpressionNode('+', [1, 2])));
+    userSet.addEquation_(new Equation(null, [], new ExpressionNode('+', [1, 2])));
 
     var outcome = Calc.evaluateResults_(targetSet, userSet);
     assert.equal(outcome.result, ResultType.FAILURE);
@@ -264,7 +267,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function () {
     assert.equal(outcome.result, ResultType.FAILURE);
     assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
     assert.equal(outcome.message, calcMsg.wrongOtherValuesX({var: 'age'}));
-    assert.equal(outcome.failedInput, null);
+    assert.deepEqual(outcome.failedInput, [1]);
   });
 
   it('when user has age variable, but wrong expression', function () {
@@ -301,7 +304,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function () {
     assert.equal(outcome.result, ResultType.FAILURE);
     assert.equal(outcome.testResults, TestResults.APP_SPECIFIC_FAIL);
     assert.equal(outcome.message, calcMsg.wrongOtherValuesX({var: 'age'}));
-    assert.equal(outcome.failedInput, null);
+    assert.deepEqual(outcome.failedInput, [1]);
   });
 
   it('when user has the wrong compute expression', function () {

@@ -203,7 +203,7 @@ is:
         turtle_3_5: 'Búðu nú til fallið "teikna hús" og notaðu það til að hýsa tvo ketti. Vísbending: Búðu til nýtt fall með því að nota kubbinn "gera" og skrifaðu texta til að gefa kubbnum nafn.'
         turtle_3_6: 'Með "teikna ferning" sem fyrirmynd átt þú að bæta inntakinu "lengd" við "teikna þríhyrning". Teiknaðu svo þríhyrninga í mismunandi stærðum. (Vísbending: Smelltu á stjörnuna til að bæta inntaki við fall)'
         turtle_3_7: 'Bættu inntakinu "lengd" við "teikna hús" og byggðu svo nægilega stórt hús fyrir fílinn (með 150 pixla langar hliðar)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'Breyttu "teikna hús" svo ég endi við hornið neðst til hægri eftir að ég teikna nýtt hús. Notaðu þetta breytta fall til að teikna þrjú hús.'
         turtle_3_9: 'Getur þú búið til "teikna hús" fallið aftur án hjálpar? Reyndu það og teiknaðu svo röð af húsum.'
         turtle_3_10: Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn.
         maze_karel_debug_seq_1: Velkomin í villuleit! Kóðinn minn virkar ekki. Getur þú komið auga á ástæðuna og lagað kóðann svo ég geti sléttað akurinn og undirbúið hann fyrir sáningu?
@@ -428,12 +428,34 @@ is:
         playlab_intro: Kynning á Leikjasmiðju
         playlab_events: Leikjasmiðja, atvik
         playlab_repeat_forever: Leikjasmiðja, endurtaka endalaust
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Matskubbar
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Breytur
-        msm_7_functions: Föll
+        tutorial_puzzle_challenge: Þrautaáskorun
+        infinity_playlab_intro: 'Leikjasmiðja - kynning'
+        infinity_playlab_events: 'Leikjasmiðja - Atvik'
+        infinity_playlab_repeat_forever: 'Leikjasmiðja - Endurtaka endalaust'
+        csp_concept_rgb: Svolítið bitastætt um díla
+        csp_pixelation_color_1: 'Litadílamynstursgræja - 1. hluti'
+        csp_pixelation_color_2: 'Litadílamynstursgræja - 2. hluti'
+        csp_pixelation_color_3: 'Litadílamynstursgræja - 3. hluti'
+        csp_pixelation_bw: Svarthvítdílamynstursgræja
+        csp_U1L14_tipstricks: 'Ráð & refabrögð kennara fyrir 1. kafla, kennslustund 14'
+        csp_textcompression: Text compression widget
+        alg_1_intro: 'CS in Algebra - Introduction'
+        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
+        alg_3_pemdas: 'CS in Algebra - Order of Operations'
+        alg_4_data_types: 'CS in Algebra - Data Types'
+        alg_5_contracts: 'CS in Algebra - Contracts'
+        alg_6_variables: 'CS in Algebra - Variables'
+        alg_7_function: 'CS in Algebra - Functions'
+        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
+        alg_9_booleans: 'CS in Algebra - Booleans'
+        alg_10_conditionals: 'CS in Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
+        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
+        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
+        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
+        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
+        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
     callout:
       text:
         drag_blocks: 'Dragðu "færa" kubb og festu hann neðan í hinn kubbinn'
@@ -500,3 +522,8 @@ is:
         arrows_move_actor: Notaðu örvarlyklana til að færa persónuna
         right_arrow_fireball: Notaðu hægri örvarlykilinn til að skjóta eldhnöttum
         name_function: Skrifaðu heiti fallsins þíns hér
+        Infinity_move_right_runbutton: 'Bæta "færa" kubbi við hér'
+        Infinity_move_directions_callout: Hvaða kubbur mun láta Baymax færast upp þegar ýtt er á upp örina?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Spila hljóð þegar þetta atvik á sér stað.
+        Infinity_repeat_callout: 'Setja "færa" kubba hér innan í'

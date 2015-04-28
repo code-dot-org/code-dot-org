@@ -72,3 +72,24 @@
       not_saved:
         one: '1 hata %{resource} kaynağın kaydedilmesini engelledi:'
         other: '%{count} hata %{resource} kaynağının kaydedilmesini engelledi:'
+    invitations:
+      send_instructions: '%{email} adresine davetiye e-postası gönderildi.'
+      invitation_token_invalid: The invitation token provided is not valid!
+      updated: Your password was set successfully. You are now signed in.
+      no_invitations_remaining: No invitations remaining
+      invitation_removed: Your invitation was removed.
+      new:
+        header: Send invitation
+        submit_button: Send an invitation
+      edit:
+        header: şifreni belirle
+        submit_button: şifremi belirli
+    mailer:
+      invitation_instructions:
+        subject: Davetiye yönergeleri
+        hello: Merhaba  %{email}
+        someone_invited_you: Birileri sizi %{url},adrese davet etti. Aşağıdaki bağlantıdan
+          kabul edebilirsiniz.
+        accept: daveti  kabul et
+        ignore: davetiyeyi almak istemiyorsanız, lütfen bu e-postayı yoksayın. .<br
+          /> Aşağıdaki bağlantıya tıklamadan ve şifre oluşturmadan hesabınız oluşturulmayacak.

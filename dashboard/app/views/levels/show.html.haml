@@ -17,10 +17,16 @@
     - if @level.properties['instructions'].present?
       %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= @level.properties['instructions']
   - # Pass special parameters to Blockly partial for embedded level type.
-  = render partial: 'levels/blockly', locals: {embed: true, hide_source: true, no_padding: true, show_finish: true}
+  = render partial: 'levels/blockly'
 - elsif @level.is_a?(DSLDefined)
   = render partial: "levels/#{@level.class.to_s.underscore}"
-  %div{style: 'width: 400px'}= render partial: 'levels/reference_area'
+  :javascript
+    var appOptions = #{app_options.to_json};
+    dashboard.createCallouts(appOptions.callouts);
+    if (appOptions.autoplayVideo) {
+      showVideoDialog(appOptions.autoplayVideo);
+    }
+  = render partial: 'levels/reference_area'
 - else
   = render partial: 'levels/blockly'
 

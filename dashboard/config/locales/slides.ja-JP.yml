@@ -473,6 +473,4 @@
           to do anything, we'll put those blocks inside the "repeat forever" block.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
+        text: この次のパズルでの私たちの目標は魔法使いの王国の右へ左へとの継続的な国境パトロールを助けることです。繰り返しコマンドがどう動いているか勉強することで後ほどあなたが自分のゲームを作る時にたくさんの時間を節約できるでしょう。

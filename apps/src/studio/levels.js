@@ -309,11 +309,6 @@ levels.playlab_3 = {
   },
   background: 'tennis',
   firstSpriteIndex: 26, // tennis girl
-  goal: {
-    successCondition: function () {
-      return Studio.sprite[0].isCollidingWith(1);
-    }
-  },
   toolbox:
     tb(
       '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
@@ -1430,10 +1425,8 @@ levels.full_sandbox =  {
              '<title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>' +
            '</block>') +
        createCategory('Functional Start',
-           blockOfType('functional_start_setBackground') +
            blockOfType('functional_start_setSpeeds') +
-           blockOfType('functional_start_setBackgroundAndSpeeds') +
-           blockOfType('functional_start_dummyOnMove')) +
+           blockOfType('functional_start_setBackgroundAndSpeeds')) +
        createCategory('Functional Logic',
            blockOfType('functional_greater_than') +
            blockOfType('functional_less_than') +

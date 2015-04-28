@@ -267,18 +267,24 @@
       VideoGamesCoordinatePlanes:
         title: Відеоігри та координатні площини
         desc: Опис уроку Відеоігри та координатні площини
+        video: alg_11_coordinate_plane
       Contracts:
         title: Визначення
         desc: Опис безмашинної вправи Визначення
+        video: alg_5_contracts
       DesignRecipe:
         title: Створення рецепту
         desc: Опис уроку Рецепт дизайну
+        video: alg_8_design_recipe
       Booleans:
         title: Логічні вирази
         desc: Опис уроку Логічні вирази
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Умови та складні функції
         desc: Опис уроку Умови та складні функції
+        video: alg_10_conditionals
       CollisionDetection:
         title: Виявлення зіткнень
         desc: Опис уроку Виявлення зіткнень
+        video: alg_16_biggame_collision_detection

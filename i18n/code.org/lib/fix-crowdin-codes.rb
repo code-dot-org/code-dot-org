@@ -36,6 +36,7 @@ locales = {
   'Japanese' => 'ja-JP',
   'Khmer' => 'km-KH',
   'Korean' => 'ko-KR',
+  'Kurdish' => 'ku-IQ',
   'Latvian' => 'lv-LV',
   'Lithuanian' => 'lt-LT',
   'Macedonian (FYROM)' => 'mk-MK',
@@ -66,6 +67,8 @@ locales = {
 }
 
 locales.each_pair do |language, locale|
-  FileUtils.cp_r "../locales/#{language}/.", "../locales/#{locale}"
-  FileUtils.rm_r "../locales/#{language}"
+  if File.directory?("../locales/#{language}/")
+    FileUtils.cp_r "../locales/#{language}/.", "../locales/#{locale}"
+    FileUtils.rm_r "../locales/#{language}"
+  end
 end

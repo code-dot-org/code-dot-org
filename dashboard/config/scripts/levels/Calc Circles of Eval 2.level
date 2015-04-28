@@ -13,7 +13,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "Each Evaluation Block has a function at the top, with the inputs to that function written below. Each of those arguments can be a value, or another block.",
+    "instructions": "Use a multiplication block to complete this code.",
     "embed": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

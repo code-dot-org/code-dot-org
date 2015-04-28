@@ -292,14 +292,14 @@ tr:
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
           "Eval: Strings and Images": Diziler ve Görüntüler
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
-          "Eval: Writing Contracts": Writing Contracts
+          "Eval: Writing Contracts": Yazılı sözleşmeler
           "Calc: Defining Variables": Defining Variables and Substitution
-          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
-          "Eval: Defining Functions": Composite Functions
+          "Play Lab: Defining Variables (Big Game)": 'Büyük oyun - değişkenler'
+          "Eval: Defining Functions": Bileşik fonksiyonlar
           "Unplugged: The Design Recipe": 'Unplugged: Tasarım Tarifi'
-          "Play Lab: Defining Functions": Rocket Height
+          "Play Lab: Defining Functions": Roket yüksekliği
           "Eval: Functions": Solving Word Problems with the Design Recipe
-          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Play Lab: Animation (Big Game)": 'Büyük oyun - animasyon'
           "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
           "Eval: Boolean Operators": Boolean Operators
           "Play Lab: Booleans": Sam the Bat
@@ -307,9 +307,9 @@ tr:
           "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Şartlar ve Parçalı Fonksiyonlar'
           "Eval: Conditionals": Koşullar
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
-          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+          "Play Lab: Collision Detection (Big Game)": 'Büyük oyun - çarpışma algılama'
         infinity:
-          title: Oyun Laboratuvarı
+          title: Disney Infinity Play Lab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: Oyun Laboratuvarı
@@ -335,12 +335,13 @@ tr:
           Unplugged lessons: Bağımsız dersler
           Classroom Culture: Sınıf kültürü
           Ways to go beyond Courses 1, 2, and 3: kurs 1,2 ve 3 ünde ilersine gitmek için yollar
-          K-5 Courses: K-5 Courses
-          Writing computer programs in Blockly: Writing computer programs in Blockly
+          K-5 Courses: K-5 dersleri
+          Writing computer programs in Blockly: Bloklarla bilgisayar programı yazma
           Teacher Dashboard: Teacher Dashboard
-          Personal Reflection: Personal Reflection
-          Next Steps: Next Steps
+          Personal Reflection: Kişisel yansıma
+          Next Steps: Sonraki Adımlar
           Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
         netsim:
           title: İnternet Simülatörü
           description_short: ""
@@ -353,17 +354,12 @@ tr:
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
-        Infinity:
-          title: Infinity Oyun Laboratuvarı
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          Infinity: Sonsuz
         pixelation:
           title: Pikselleşme
           description: Bitler ve baytlar ile görüntüler oluştur.
           Pixelation: Pikselleşme
         20-hour:
-          title: 20-Hour Intro Course
+          title: 20 saat giriş kursu
           description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
           Introduction to Computer Science: Bilgisayar Bilimlerine Giriş
           The Maze: Labirent
@@ -396,8 +392,8 @@ tr:
           title: Olaylar
           description: ""
           Bounce: Sıçrama
-          Studio: Studio
-          Calc: Calc
+          Studio: Stüdyo
+          Calc: Kireç
           Eval: Eval
         flappy:
           title: Flappy Kod
@@ -460,19 +456,39 @@ tr:
           "Artist: Functions": 'Aktör: Fonksiyonlar'
           "Bee: Debugging": 'Arı: Ayıklama'
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
-          Lesson14: Lesson14
-          Lesson 14: Lesson 14
-          Lesson 14 v2: Lesson 14 v2
-          Lesson 15: Lesson 15
-          description_short: Make Black and White Images with the pixelation tool
-          Lesson 8: Lesson 8
-          Lesson 5: Lesson 5
-          Lesson 3: Lesson 3
-          Lesson 4: Lesson 4
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Ders 14
+          Lesson 14: Ders 14
+          Lesson 14 v2: Ders 14 v2
+          Lesson 15: Ders 15
+          Lesson 8: Ders 8
+          Lesson 5: Ders 5
+          Lesson 3: Ders 3
+          Lesson 4: Ders 4
+          Lesson 6: Ders 6
+          Lesson 2: Ders 2
+          Lesson 7: Ders 7
+          Lesson 1: Ders 1
+          Innovation: Yenilik
+          Sending Binary Messages: İkili Mesajları Gönderiyor
+          Sending More Complex Messages: Daha fazla kompleks mesaj gönderiyor
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Sayı Sistemleri
+          Binary Numbers: İkili Sayılar
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
         algebraPD:
-          title: Computer Science in Algebra PD
+          title: "Algebra PD'de Bilgisayar Bilimi"
           description: Teach Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Oyunları ve Koordinat Düzlemleri'
           "Calc: Evaluation Blocks": 'Calc: Değerlendirme Blokları'
@@ -507,8 +523,9 @@ tr:
           Conditionals and Piecewise Functions: Koşullar ve Parçalı Fonksiyonlar
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Kişisel Geliştirme Giriş
         algPDmiami:
-          title: Computer Science in Algebra PD
+          title: "Algebra PD'de Bilgisayar Bilimi"
           description: Teach Algebra through Functional Programming
           Evaluation Blocks: Değerlendirme Blokları
           Strings and Images: Diziler ve Görüntüler
@@ -518,7 +535,28 @@ tr:
           Booleans: Boolean Değerleri
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
-          Luigi's Pizza: "Luigi's Pizza"
+          Luigi's Pizza: "Luigi'nin Pizacısı"
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kaza Algılama (Büyük Oyun)'
-          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Player Movement: Senin Oyunun-Karakter Hareketleri
           Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: yeni kademe
+          Introduction to PD: Kişisel Geliştirme Giriş
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Ders 14
+          Lesson 15: Ders 15
+        ECSPD:
+          Introduction to PD: Kişisel Geliştirme Giriş
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Kişisel Geliştirme Giriş

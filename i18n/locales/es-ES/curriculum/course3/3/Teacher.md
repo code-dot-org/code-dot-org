@@ -6,17 +6,17 @@ title: Artist view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>3, :title=> 'Artist', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 This course is a review of artist concepts from Course 2. Students will draw images with the artist using a combination of sequences and loops.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ This course is a review of artist concepts from Course 2. Students will draw ima
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -44,7 +44,7 @@ This course is a review of artist concepts from Course 2. Students will draw ima
   * Identify symmetrical shapes
   * Decompose a shape into its smallest repeatable sequence
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -58,7 +58,7 @@ Review with students the basic maze navigation, particularly:
   * Turning by degrees
   * Looping
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -68,7 +68,7 @@ Review with students the basic maze navigation, particularly:
 
 In the Artist levels students are not constrained to 90 degree angles. Having protractors available can be help students better visualize the angles they need.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -86,7 +86,7 @@ In the Artist levels students are not constrained to 90 degree angles. Having pr
   * On the second sheet draw instructions for recreating that image commands to move straight and turn at various angles.
   * Trade instruction sheets and attempt to recreate the image using only the provided instructions.
 
-[/together]
+[/juntos]
 
 [standards]
 

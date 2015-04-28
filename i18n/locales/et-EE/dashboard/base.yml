@@ -212,6 +212,7 @@ et:
         artist: Joonista midagi
     user:
       classroom: Õpetaja kodulehekülg
+      district_dashboard: District Dashboard
       label: 'Tere, %{username}'
       stats: Minu progress
       settings: Minu konto
@@ -341,6 +342,7 @@ et:
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     your_gallery: Galerii
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Mees
     female: Naine
@@ -430,6 +432,9 @@ et:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
     students_made_these_with_code: Students made these with code!
@@ -459,6 +464,14 @@ et:
     wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!
     correct_title: Õige
     correct_body: See on õige vastus.
+  contract_match:
+    wrong_title: Vale vastus
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Sisesta siia oma vastus
   dialog:
@@ -543,3 +556,5 @@ et:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

@@ -4,14 +4,14 @@ title: App Lab Docs
 
 [name]
 
-## rect(x, y, width, height)
+## penColor(color)
 
 [/name]
 
 
 [category]
 
-Category: Canvas
+Category: Turtle
 
 [/category]
 
@@ -19,11 +19,13 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle with a given size and position onto a canvas element.
+Sets the color of the trail drawn behind the turtle as it moves.
 
 [/short_description]
 
-**Note**: A canvas element must exist before the rectangle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling rect().
+**Note**: If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.  
+**Note**: The color can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [colors](http://www.w3schools.com/HTML/html_colornames.asp) for a complete list of all available colors.
+
 
 [/description]
 
@@ -32,9 +34,11 @@ ____________________________________________________
 
 [example]
 
+**Example 1**
+
 <pre>
-createCanvas(); //Create a canvas to draw on first
-rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
+penColor("cyan");   // sets the color of the trail drawn behind the turtle to cyan
+moveForward(100);   // moves the turtle forward by 100 pixels
 </pre>
 
 [/example]
@@ -43,10 +47,32 @@ ____________________________________________________
 
 [example]
 
+**Example 2**
+
+This demonstrates all 3 ways to give a color to the penColor() function.
+
 <pre>
-createCanvas(); //Create a canvas to draw on first
-setFillColor("red"); //Set the fill color of future drawn shapes
-rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
+penColor("chartreuse");       // sets the color using a string
+moveForward(50);              // moves the turtle forward 50 pixels
+penColor("7fff00");           // sets the color using a hex value
+moveForward(50);              // moves the turtle forward 50 pixels
+penColor("rgb(127, 255, 0)"); // sets the color using a rgb value
+moveForward(50);              // moves the turtle forward 50 pixels
+</pre>
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example 3**
+
+<pre>
+var c = (prompt("Enter a color"));  // prompts the user for a color
+penColor(c);                        // sets the color of trail drawn behind the turtle to the color
+                                    // the user entered
+moveForward(100);                   // moves the turtle forward by 100 pixels
 </pre>
 
 
@@ -54,11 +80,34 @@ rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the scr
 
 ____________________________________________________
 
+[example]
+
+**Example 4**
+
+This program draws a circle figure out of lines. It cycles through the colors every time it turns. Here we use **4** colors, so we say penColor(colors[i%**4**]).
+
+<pre>
+var colors = ["red", "magenta", "pink", "purple"];  // creates an array of 4 strings representing colors
+for (var i = 0; i < 360; i++) {                     // loops 360 times
+  penColor(colors[i%4]);                            // sets the color of the turtles trail
+                                                    // to a color from the array
+  moveForward(100);                                 // moves the turtle forward by 100 pixels
+  moveBackward(100);                                // moves the turtle backward by 100 pixels
+  turnRight(1);                                     // turns the turtle 1 pixel to the right
+}
+</pre>
+
+
+[/example]
+
+____________________________________________________
+
+
 [syntax]
 
 ### Syntax
 <pre>
-rect(x, y, width, height);
+penColor(color);
 </pre>
 
 [/syntax]
@@ -69,10 +118,9 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
-| width | number | Yes | The horizontal width in pixels of the rectangle.  |
-| height | number | Yes | The vertical height in pixels of the rectangle.  |
+| color | String | Yes | The color of the line left behind the turtle as it moves  |
+<br />
+`penColor()` can be passed the name of the color, the hex value of the color, or the rgb value of the color. Reference Example 2 above for more specifics.
 
 [/parameters]
 
@@ -86,8 +134,8 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- Remember that x:0 y:0 is at the top left of the display, so x values increase as you move right, and y values increase as you go down (which is different from math class!).
-- If you're having trouble getting a rectangle to show up, make sure a [canvas is created](/applab/docs/createCanvas) first and that where you're trying to draw the rectangle fits within the coordinates of the canvas.
+- If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.
+- The color value being passed can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [colors](http://www.w3schools.com/HTML/html_colornames.asp) for a complete list of all available colors.
 
 [/tips]
 

@@ -278,9 +278,8 @@
         съберeтe всичкия нектар от цветята в това поле.
       2-3 Bee Loops 12_instruction: Използвайте "докато" повторения(цикли), за да
         съберeтe всичкия нектар от цветята в това поле.
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
+      2-3 Bee Loops 2_instruction: Използвайте повторение(цикъл), за да съберете нектар
+        и направете мед.
       2-3 Bee Loops 3_instruction: Съберете нектар от всеки цвят и направете мед на
         всяка пита.
       2-3 Bee Loops 4_instruction: Използвайте подобно повторение(цикъл) като при
@@ -524,520 +523,458 @@
         да създадете тази рамка за картина. Следете за ъглите - не можете да завиете
         само на 90 градуса! Ако повторите завиване на  3 градуса 60 пъти ще правите
         полукръг, кой от тези блокове с код ще направи една четвърт кръг за ъглите?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times do draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
+      4-5 Artist Patterns 2_instruction: Ако поставите квадратно повторение(цикъл)
+        вътре в друго повторение(цикъл), ние наричаме това вложено повторение(цикъл).
+        Какво трябва да добавите към вашето външно повторение (цикъл), за да се уверите,
+        всички 15 квадрати се нареждат в една линия един до друг?
+      4-5 Artist Patterns 3_instruction: Сега нека отидем едно ниво по-дълбоко! Ние
+        сме вложили целия блок от код в друго повторение(цикъл), но вие трябва да
+        върнете художника обратно на място, за да нарисува следващата линия. Кои от
+        тези блокове код може да поставите в края на най-отдалеченото повторение(цикъл),
+        за да нарисувате цялата мрежа?
+      4-5 Artist Patterns 4_instruction: Този диамант има 50 пикселови страни и ъгли
+        от 120 и 60 градуса. Използвайте повторение(цикъл), за да го нарисувате.
+      4-5 Artist Patterns 5.5_instruction: Колко пъти трябва да се повтаря този блок,
+        за да се начертае пълната мрежа от диаманти?
+      4-5 Artist Patterns 5_instruction: Нека да повторим това, за да направиш ред
+        от 6 диаманти. Обърни внимание, че променихме нашия диамантен код да се повтаря
+        3 пъти вместо 2 - Защо мислиш че направихме това?
+      4-5 Artist Patterns 6_instruction: Колко пъти трябва да се повтаря този блок
+        за да се изчертае пълната мрежа от диаманти?
+      4-5 Artist Patterns 7_instruction: Нека променим кода от последната загадка
+        да направим този по-сложен модел. Забележете как диамантите се припокриват
+        сега, опитайте се да промените първото "скочи назад" от 100 до 50 (наполовината)
+        - сега докъде трябва да отиде художника във второто "скочи назад"?
+      4-5 Artist Patterns 8_instruction: Използвайте повторение(цикъл), за да нарисувате
+        този шестоъгълник с 40 пикселови страни и 60 градусови ъгли.
+      4-5 Artist Patterns 9.5_instruction: Направи повторение(цикъл) на този код,
+        за да начертаеш два реда шестоъгълници. Забележете как нашият втори ред се
+        измества надясно.
+      4-5 Artist Patterns 9_instruction: 'Сега повтори този код 3 пъти, за да начертаеш
+        целия ред. Упътване: всеки шестоъгълник е 80 пиксела широк - от най-отдалечените
+        точки от ляво надясно.'
+      4-5 Artist Patterns Free Play_instruction: Безплатна игра - опитай да направиш
+        твой собствен модел!
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: Пчела не може да различи дали това е цвете
+        или медена пита. Събирай нектар само от цветята, но първо провери дали това
+        е цвете или медена пита.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right now. Remember,
-        not all objects are flowers, so check to gather nectar only at flowers.
-      4-5 Bee Conditionals 3_instruction: |
-        Now the bee just wants to make honey.
-        Check to make honey only at honeycombs.
+      4-5 Bee Conditionals 2_instruction: Пчелата иска нектар точно сега. Не забравяйте,
+        не всички обекти са цветя, така че направете проверка да събирате нектар само
+        от цветята.
+      4-5 Bee Conditionals 3_instruction: Сега пчела просто иска да направи мед. Проверете
+        че правите меда само в медни пити.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        The unknown object is either a flower
-        or a honeycomb. Use the if/else block to collect nectar if it is a flower,
-        else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 5_instruction: |
-        There might be a flower or a honeycomb
-        under those clouds. Use the if/else block to collect nectar if there is a
-        flower, else to make honey (because there is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: Неизвестния обект е цвете или медена пита.
+        Използвайте ако/иначе блок, за да съберете нектар ако е цвете, иначе направете
+        мед (защото е медена пита).
+      4-5 Bee Conditionals 5_instruction: Може да има цвете или медена пита под тези
+        облаци. Използвайте ако/иначе блок да събирате нектар, ако има цвете, иначе
+        павете мед (защото има медена пита).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write a function inside the block called
-        "check flower make honey." Your function should check how much nectar the
-        purple flower has and collect it, move forward, and then make honey.
+      4-5 Bee Conditionals 6_instruction: Това лилаво цвете може да има 3, 2 или 1
+        нектар. Тук ако-иначе блок е комбиниран с друг ако-иначе блок, за да създадете
+        ако, иначе-ако, иначе блок. Завършете решението, за да съберете неизвестното
+        количество нектар.
+      4-5 Bee Conditionals 7_instruction: Не забравяйте, че лилавите цветя може да
+        имат 3, 2 или 1 нектар. Допълнете функцията "провери лилаво цвете" и я използвайте,
+        за да се съберете всичкия нектар от цветята.
+      4-5 Bee Conditionals 8_instruction: Напиши функция вътре в блока наречен "провери
+        цвете прави мед." Твоята функция трябва да провери колко нектар има лилавото
+        цвете и да го събере - движи се напред и след това направи мед.
       4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
-      4-5 Bee Debugging 10_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 11_instruction: Does this count correctly?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
-      4-5 Bee Debugging 3_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 4_instruction: These blocks don't work. What's the pattern?
-      4-5 Bee Debugging 5_instruction: Something isn't right here...
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
-      4-5 Bee Debugging 9_instruction: Why isn't the bee making enough honey?
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: "Collect all of the nectar from each flower.\nUse
-        a nested loop. \n"
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
-      4-5 Bee Nested Loops 4_instruction: "Collect all of the nectar from each flower\nand
-        make honey at each honeycomb. Use a nested loop. \n"
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
-      4-5 Bee Nested Loops 6_instruction: Collect all the nectar.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
-      4-5 Bee Nested Loops 8_instruction: "Collect all of the nectar from these flowers\nby
-        nesting a while loop. Replace the inner repeat times block with a while\nblock.
-        \n"
-      4-5 Bee Nested Loops 9_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop inside a repeat.
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        Assessment - Collect all of
-        the nectar and make all the honey by using loops.
-      4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
-      4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+        Оценяване: Този код не е наред.
+        Изпълни функцията "вземи нектар или направи мед", а след това я извикай, за да събереш всичкия нектар и мед. Не забравяй, че лилавите цветя може да имат 3, 2 или 1 нектари.
+      4-5 Bee Debugging 1_instruction: Тези блокове наистина ме бъгват(подразнят).
+        Можете ли да ги коригирате?
+      4-5 Bee Debugging 10_instruction: Открий грешките и ги поправи.
+      4-5 Bee Debugging 11_instruction: Дали това брои правилно?
+      4-5 Bee Debugging 2_instruction: Помогни на пчелата да вземе нектар и направи
+        мед.
+      4-5 Bee Debugging 3_instruction: Открий грешките и ги поправи.
+      4-5 Bee Debugging 4_instruction: Тези блокове не работят. Какъв е модела?
+      4-5 Bee Debugging 5_instruction: Нещо не е наред тук...
+      4-5 Bee Debugging 6_instruction: Лилавото цвете има неизвестна сума нектар.
+        Поправи блоковете, за да получиш всичкия нектар от цветето.
+      4-5 Bee Debugging 7_instruction: На функцията й липсва нещо...
+      4-5 Bee Debugging 8_instruction: Тази функция е правилна, но тя не се използва
+        по правилен начин.
+      4-5 Bee Debugging 9_instruction: Защо пчелата не прави достатъчно мед?
+      4-5 Bee Debugging Assessment 1_instruction: 'Оценяване: Оправи кода.'
+      4-5 Bee Nested Loops 1_instruction: Използвайте повторение(цикъл), за да се
+        съберете всичкия нектар.
+      4-5 Bee Nested Loops 2_instruction: 'Съберете всичкия на нектара от всяко цвете.
+        Използвайте вложено повторение(цикъл). '
+      4-5 Bee Nested Loops 3_instruction: 'Съберете всичкия нектар чрез въвеждане
+        на началния код във вложено повторение(цикъл). '
+      4-5 Bee Nested Loops 4_instruction: 'Съберете всичкия нектара от всяко цвете
+        и правете мед на всяка пита. Използвайте вложено повторение(цикъл). '
+      4-5 Bee Nested Loops 5_instruction: 'Съберете всичкия нектара чрез създаване
+        на вложено повторение(цикъл). '
+      4-5 Bee Nested Loops 6_instruction: Съберете всичкия нектар.
+      4-5 Bee Nested Loops 7_instruction: Постави това повторение(цикъл) в друго повторение(цикъл),
+        за да създадеш вложено повторение(цикъл) и да събереш всичкия нектар от цветята.
+      4-5 Bee Nested Loops 8_instruction: 'Събери всичкия нектар от тези цветя като
+        вложиш "докато" повторение(цикъл). Замени вътрешния блок за повтори пъти с  "докато"
+        повторение(цикъл). '
+      4-5 Bee Nested Loops 9_instruction: Събери всичкия нектар от тези цветя като
+        вложиш  "докато" повторение(цикъл) вътре в повторение.
+      4-5 Bee Nested Loops Assessment 1_instruction: 'Оценяване: Събери всичкия нектар
+        и направи всичкия мед като използваш повторения(цикли).'
+      4-5 Bee Nested Loops Rows_instruction: Събери нектар от редовете цветя! Използвай
+        вложено повторение(цикъл).
+      4-5 Maze 1 (copy 1)_instruction: Скъпи човеко. Аз зомби. Трябва... отиде...
+        до слънчогледа.
+      4-5 Maze 1_instruction: Скъпи човеко. Аз зомби. Трябва... отиде... до слънчогледа.
       4-5 Maze 10_instruction: Можете ли да стигнете до слънчогледа, използвайки само
         четири блока?
-      4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
-      4-5 Maze 12_instruction: |
-        Ok, this is slightly different. Can you do it in
-        only six blocks?
+      4-5 Maze 11_instruction: Можете ли да отидете до слънчогледа, като използвате
+        само шест блока?
+      4-5 Maze 12_instruction: ОК, това е малко по-различно. Можете ли да го направите
+        само с шест блока?
       4-5 Maze 13_instruction: Заведи ме до прасето!
-      4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
-      4-5 Maze 2 (copy 1)_instruction: |
-        Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
-      4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: Create a loop with the "repeat until" block.
-      4-5 Maze Assessment 1_instruction: 'Assessment: Get to the sunflower.'
-      4-5 Maze Conditionals 1_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
-      4-5 Maze Conditionals 2_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      4-5 Maze Conditionals 4_instruction: |
-        Ok, this is just like the last puzzle,
-        but you need to remember how you used the "if" block and the "repeat"
-        block together.
-      4-5 Maze Conditionals 5_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 6_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 7_instruction: |
-        Ok, let's do that again for practice
-        - this isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
-      4-5 Maze Conditionals Assessment 1_instruction: |
-        Use a "repeat until" and
-        an "if-else" block to get me to the sunflower in as few blocks as possible.
+      4-5 Maze 14_instruction: Отведи ме до прасето! Използвай блока за Повторяй докато.
+      4-5 Maze 2 (copy 1)_instruction: Заведи зомбито до слънчогледа, но избягвай
+        хищното цвете!
+      4-5 Maze 2_instruction: Заведи зомбито до слънчогледа, но избягвай хищното цвете!
+      4-5 Maze 3 (copy 1)_instruction: Трябва... отиде... до слънчогледа.
+      4-5 Maze 3_instruction: Трябва... отиде... до слънчогледа.
+      4-5 Maze 4 (copy 1)_instruction: Опитай блока "повтаряй", за да използваш по-малко
+        блокове...
+      4-5 Maze 4_instruction: Опитай блока "повтаряй", за да използваш по-малко блокове...
+      4-5 Maze 5 (copy 1)_instruction: Можеш ли да решиш този пъзел, с помощта на
+        възможно най-малък брой блокове?
+      4-5 Maze 5_instruction: Можеш ли да решиш този пъзел, с помощта на възможно
+        най-малък брой блокове?
+      4-5 Maze 6 (copy 1)_instruction: Можеш ли да решиш този пъзел, с помощта на
+        възможно най-малък брой блокове?
+      4-5 Maze 6_instruction: Можеш ли да решиш този пъзел, с помощта на възможно
+        най-малък брой блокове?
+      4-5 Maze 7_instruction: Скъпи човеко. Аз зомби. Трябва... отиде... до слънчогледа.
+      4-5 Maze 8_instruction: Използвай блока "повтаря", за да заведеш зомбито до
+        слънчогледа. (Избягвайте хищните цветя!)
+      4-5 Maze 9_instruction: Създай повторение(цикъл) с "повтаряй докато" блок.
+      4-5 Maze Assessment 1_instruction: 'Оценяване: Стигни до слънчогледа.'
+      4-5 Maze Conditionals 1_instruction: Използвай блока за повторение, за да заведеш
+        зомбито до слънчогледа.
+      4-5 Maze Conditionals 10_instruction: Можеш ли да добавиш само 3 блока, за да
+        ми помогнеш да разгадая един по-сложен лабиринт? Ако го направиш правилно,
+        аз мога да извървя по всяка крива пътека, независимо колко е дълга.
+      4-5 Maze Conditionals 2_instruction: Използвай блока за повторение, за да заведеш
+        зомбито до слънчогледа.
+      4-5 Maze Conditionals 3_instruction: 'Използвай "Ако" блок, за да ми позволиш
+        да реша кога да обърна. Съвет: трябва само още един блок, но научи как ние
+        правим цялото нещо, така че да можеш ти сам да го направиш следващия път.'
+      4-5 Maze Conditionals 4_instruction: Добре, това е точно като последната загадка,
+        но трябва да си спомниш как използва заедно блока "ако" и блока "повтаряй".
+      4-5 Maze Conditionals 5_instruction: Аз иска слънчоглед! Използвай "ако" блок
+        да ме заведеш дотам с най-малкия брой блокове.
+      4-5 Maze Conditionals 6_instruction: Аз иска слънчоглед! Използвай "ако" блок
+        да ме заведеш дотам с най-малкия брой блокове.
+      4-5 Maze Conditionals 7_instruction: ОК, нека направим това отново за практика
+        - то не е много по-различено, но внимавай за хищните цветя!
+      4-5 Maze Conditionals 8_instruction: Блоковете "ако-иначе"  проверяват условие,
+        и след това правя едно нещо ИЛИ другото. За да ме  заведеш до слънчогледа
+        опитай да използваш този нов блок.
+      4-5 Maze Conditionals 9_instruction: Още една практика на блока "ако-иначе",
+        можеш ли да го напрвиш правилно още на първия си опит?
+      4-5 Maze Conditionals Assessment 1_instruction: Използвай "повтаряй докато"
+        и "ако-иначе" блок, за да ме заведеш към слънчогледа с възможно най-малко
+        блокове.
       A test level ArtistArtist_instruction: A test level ArtistArtist
-      add 2_instruction: |
-        Awesome job on the last puzzle, let's try it again this
-        time let's make this cool design with with 60 pixel hexagon's.
-      Alpha 2-3 Artist Loops New 3_instruction: |
-        Now, let's draw 6 squares each
-        a random color.  What angle should we turn between each square drawing to
-        make a full circle of squares?
-      Alpha Course 3 Artist Functions 5_instruction: |
-        Update the 'draw a square'
-        function so it draws a square using the parameter 'length'. Then draw a
-        square with a side length of 100 pixels.
-      Alpha Course 3 Artist Functions 6_instruction: |
-        The "draw a square" function
-        with parameter is ready for you to add the correct blocks and change the value
-        from zero to make it the correct size.  Hint:  The square sides are 100 pixels.
-      Alpha Course 3 Artist Functions 7_instruction: |
-        Use the "draw a triangle"
-        and "draw a square" functions together to draw two houses. (Hint: The houses
-        are 50 pixels apart)
-      Alpha Course 3 Artist Loops 3_instruction: |
-        Want to see what happens when we
-        repeat that shape over and over again using a loop?
-      Alpha Course 3 Artist Nested Loops 4_instruction: |
-        Replace the blocks with
-        a nested loop.
-      Alpha Course 3 Bee Conditionals 10_instruction: "Create a function that will\ncheck
-        if something is a purple flower and collect all of the nectar or if\nit is
-        a honeycomb and make honey.  \n"
-      Alpha Course 3 Bee Conditionals 9_instruction: |
-        Collect nectar using the 'check
-        purple flower' function.
-      Arbitrary_instruction: Make a line
-      Artist - Nested Loops 1_instruction: |
-        Complete the code to draw these triangles.  The
-        first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
-      Artist - Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag
-        by looping the provided blocks. The stars are 50 pixels apart, but remember
-        that the stars themselves are 30 pixels wide.
-      Artist - Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this
-        sidewalk using a nested loop? Each square is 30 pixels.
-      Artist - Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using
-        a nested loop?
-      Artist - Nested Loops 2_instruction: "Now nest this loop inside another loop\nto
-        draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
-        a 360 degree rotation.  \n"
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin
-        another loop. This is called a nested loop.\r\n"
-      Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
-      Artist - Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the
-        triangle code?
-      Artist - Nested Loops 7 (copy 1)_instruction: |
-        Loop this design 10 times. How
-        much do you have to turn each time you loop? (Hint: What is 360 divided by
-        10?)
-      Artist - Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do
-        you have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      Artist - Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do
-        you have to turn each time you loop? (Hint: What is 360 divided by 6?)
-      Artist - Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
-      Artist - Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete
-        the design.
+      add 2_instruction: Чудесна работа в последната загадка, нека опитаме отново;
+        този път направи този страхотен дизайн със 60 пикселов шестоъгълник.
+      Alice Test_instruction: Ето и някои инструкции!
+      Alpha 2-3 Artist Loops New 3_instruction: Сега, нарисувай 6 квадрата, всеки
+        в случаен цвят.  Под какъв ъгъл трябва да се обърнем между всеки квадрат,
+        за да се направи пълен кръг от квадрати?
+      Alpha Course 3 Artist Functions 5_instruction: Актуализирай функцията "нарисувай
+        квадрат", така че тя да чертае квадрат с помощта на параметъра "дължина".
+        След това начертай квадрат с дължина на страната 100 пиксела.
+      Alpha Course 3 Artist Functions 6_instruction: 'Функцията  с параметър "нарисувай
+        квадрат" е готова за теб, за да добавиш правилните блокове и да промениш стойността
+        от нула към правилния размер.  Допълнителна информация: Страните на квадрата
+        са 100 пиксела.'
+      Alpha Course 3 Artist Functions 7_instruction: 'Използвайте заедно функциите
+        "нарисувай триъгълник" и "нарисувай квадрат", за да нарисувате две къщи. (Упътване:
+        къщите са на 50 пиксела една от друга)'
+      Alpha Course 3 Artist Loops 3_instruction: Искате ли да видите какво се случва,
+        когато повтаряме тази фигура отново и отново, като използвате цикъл?
+      Alpha Course 3 Artist Nested Loops 4_instruction: Замени блоковете с вложени
+        повторения(цикли).
+      Alpha Course 3 Bee Conditionals 10_instruction: 'Създай функция, която ще провери
+        дали нещо е лилаво цвете и тогава събери всичкия нектар или ако е медена пита
+        - направи мед.  '
+      Alpha Course 3 Bee Conditionals 9_instruction: Съберете нектар, като използвате
+        функцията "провери лилаво цвете".
+      Arbitrary_instruction: Направи линия.
+      Artist - Nested Loops 1_instruction: 'Допълнете кода, за да нарисувате тези
+        триъгълници.  Първият е направен за теб.  Упътване: 3 триъгълника в 360 градусово
+        завъртане.'
+      Artist - Nested Loops 10_instruction: Начертайте последния ред от звезди на
+        този флаг с повторение(цикъл) на предоставените блокове. Звездите са 50 пиксела
+        една от друга, но запомнете, че самите звезди са 30 пиксела.
+      Artist - Nested Loops 11_instruction: Можеш ли да начертаеш тези 10 квадрата
+        на този тротоар, с вложени повторения(цикли)? Всеки квадрат е 30 пиксела.
+      Artist - Nested Loops 12_instruction: Можеш ли да начертаеш тези 36 триъгълници
+        с помощта на вложени повторения(цикли)?
+      Artist - Nested Loops 2_instruction: 'Сега вложи това повторение(цикъл) вътре
+        друго повторение(цикъл), за да нарисуваш 10 триъгълника.  Това се нарича вложено(вътрешно)
+        повторение(цикъл).  Упътване: Всички 10 триъгълника правят 360 градусово завъртане.  '
+      Artist - Nested Loops 3_instruction: 'Създай слънцето чрез влагането на начален
+        код в друго повторение(цикъл). Това се нарича вложено(вътрешно)  повторение(цикъл).  '
+      Artist - Nested Loops 5_instruction: Направи  повторение(цикъл) на дадения код
+        и създавай вятърна мелница.
+      Artist - Nested Loops 6_instruction: Може ли да начертаете шестоъгълник като
+        повторяте кода на триъгълника?
+      Artist - Nested Loops 7 (copy 1)_instruction: 'Повторете този дизайн 10 пъти.
+        Колко ли трябва да се завъртаме всеки път след цикъл? (Съвет: Колко е 360
+        делено на 10?)'
+      Artist - Nested Loops 7_instruction: 'Повторете този дизайн 10 пъти. Колко ли
+        трябва да се завъртаме всеки път след повторение? (Съвет: Колко е 360 делено
+        на 10?)'
+      Artist - Nested Loops 8_instruction: 'Повторете този дизайн 6 пъти. Колко ли
+        трябва да се завъртаме всеки път след повторение? (Съвет: Колко е 360, разделено
+        на 6?)'
+      Artist - Nested Loops 9_instruction: Начертайте зъбите в устата на алигатора!
+      Artist - Nested Loops Assessment 1_instruction: Използвайте цикъл, за да завършите
+        дизайна.
       Artist Artist Artist Artist _instruction: 'Artist Artist Artist Artist '
-      Artist For  Functions 11_instruction: |
-        Let's Step it up a little, can you
-        draw a Star shape using the "Draw a Square Line" function? Good luck!
-      Artist Functions 11_instruction: |
-        It's Free Play time! Use your new functions
-        to draw an awesome picture. Have fun!
-      Artist Functions 2.0_instruction: |
-        Can you draw 3 squares 20 pixels apart from
-        one another? Hint: each square is 100 pixels in size
-      Artist Functions 3.0_instruction: "Here is a new type of Block. It is called\na
-        \"Function block.\" Click on \"RUN\" to see what it can do. \n"
-      Artist Functions 4.0_instruction: |
-        We have given you most of the code to create
-        a function. However there seems to be something missing. Can you make this
-        function block complete?
-      Artist Functions 5.0_1_instruction: |
-        Are you ready to create your own "Function
-        Block"? Click on the "Functions" block in the tool box, name it "draw
-        a triangle", then create a triangle as you have done before with the Action
-        and Loops blocks. Then click on the Save and Close in the upper right hand
-        corner. Hint: Create a triangle that is 100 pixels in length.
-      Artist Functions 5.0_2_instruction: |
-        Create your own function block. Click
-        on the "Functions" in the tool box, and click on "create a function."
-        Give your function block a name, then create a 40 pixel square as you have
-        done before with the Actions and Loops blocks. Click on the "Save and Close"
-        in the upper right hand corner. Hint: Don't forget to drag your new function
-        block from the tool box to the "When run" block.
-      Artist Functions 5.0v1_instruction: |
-        Create your own function block. Click
-        on the "Functions" in the tool box, and click on "create a function."
-        Give your function block a name, then create a 40 pixel square as you have
-        done before with the Actions and Loops blocks. Click on the "Save and Close"
-        in the upper right hand corner. Hint: Don't forget to drag your new function
-        block from the tool box to the "When run" block.
-      Artist Functions 5.0v2_instruction: |
-        Are you ready to create your own "Function
-        Block"? Click on the "Functions" block in the tool box, name it "draw
-        a triangle", then create a triangle as you have done before with the Action
-        and Loops blocks. Then click on the Save and Close in the upper right hand
-        corner. Hint: Create a triangle that is 100 pixels in length.
-      Artist Functions 6_instruction: |
-        Create house function that calls triangle
-        and square function
-      Artist Functions 7_instruction: Loop square function to draw a line
-      Artist Functions 8_instruction: |
-        Can you create a new function called "Draw
-        a Square Line" function?
-      Artist Functions free play_instruction: |
-        It's Free Play time! Use your new
-        functions to draw an awesome picture. Have fun!
-      Artist level 10_instruction: "It's Free Play time! I have included all the\nnew
-        functions you have built. Have fun and draw anything you want. \n"
-      Artist Nested Loops_instruction: "Now nest this loop inside another loop to\ndraw
-        6 triangles. This is called a nested loop. Hint: All 6 triangles complete\na
-        60 degree rotation. \n"
-      Artist Params 10_instruction: |
-        You can call functions from inside other functions!
-        Using your "shape" function as a base, create a new "house" function that
-        takes a parameter "length"
-      Artist Params 11_instruction: |
-        How about a function called "pinwheel" that
-        takes three parameters - "sides," "length" and "repeat." Your function
-        function should draw a pinwheel of "repeat" shapes of "sides" and "length."
-        You can calculate how much to turn after each shape using the same math you
-        used to figure out the turns for a shape of "sides"
-      Artist Params 12_instruction: |
-        Use your "pinwheel" function to draw each
-        of these shapes. The side length for each image is 50.
-      Artist Params 13_instruction: |
-        Freeplay: Here are the functions you've written,
-        and some more for you to play with. Draw something awesome!
-      Artist Params 2_instruction: |
-        That triangle function would be a whole lot more
-        useful if it could draw triangles of different sizes. I've added a parameter
-        for line length, but it doesn't do anything yet. Can you update the function
-        so it uses the "length" parameter when it draws each side?
-      Artist Params 3_instruction: |
-        Awesome, can you draw each of these triangles
-        with that new function? The first is 25 pixels long, the second is 50, and
-        the third is 75. (If you're really clever, you could use a for loop for this!)
-      Artist Params 4_instruction: |
-        Can you add a new function called square? It
-        should also take a length parameter, just like the triangle.
-      Artist Params 5_instruction: Use both of your new functions to draw this picture
-      Artist Params 6_instruction: |
-        Remember how we used a variable to set the number
-        of sides for a shape? Why have two separate functions for "triangle" and
-        "square", when we could have one "shape" function that takes two parameters
-        - "sides" and "length"?
-      Artist Params 7_instruction: |
-        Draw several shapes and combinations of shapes
-        using the generic shape function.
-      Artist Params 8_instruction: |
-        Can you figure out how to draw two triangles?
-        Here's a hint create 2 new functions for each triangle.
-      Artist Params 9_instruction: |
-        Can you draw two squares inside of one another
-        that are 20 pixels apart and the length of each square is 200 pixels and 160
-        pixels.
-      Artist Variables level 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Artist Variables level 9a_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Artist Vars "height" block_instruction: "Now I want to make a rectangle that\nis
-        twice as wide than it is tall. We've got a variable called \"height\"\nthat
-        is set at 100. Can you use the math block to complete the code? \n"
-      Artist Vars height block_instruction: "Now I want to make a rectangle that\nis
-        twice as wide than it is tall. We've got a variable called \"height\"\nthat
-        is set at 100. Can you use the math block to complete the code? \n"
+      Artist For  Functions 11_instruction: Нека да го увеличим малко, може ли да
+        направите звезда  с помощта на функцията "Нарисувате квадрат с линия"? На
+        добър час!
+      Artist Functions 11_instruction: Време е за свободна игра! Използвайте новите
+        функции, за да начертаете една страхотна картина. Забавлявайте се!
+      Artist Functions 2.0_instruction: 'Можете ли да чертаете 3 квадрата на 20 пиксела
+        отдалечени един от друг? Съвет: всеки квадрат има страни по 100 пиксела'
+      Artist Functions 3.0_instruction: 'Тук е нов тип блок. Той се нарича "Функция
+        блок". Щракнете върху "Изпълни", за да видите какво може да направи. '
+      Artist Functions 4.0_instruction: Ние ти дадохме повечето от кода, за да създадеш
+        функция. Въпреки това изглежда, че нещо липсва. Можеш ли да направиш тази
+        блок функция пълен?
+      Artist Functions 5.0_1_instruction: "Готов ли си да създадеш своя собствена
+        \"функция блок\"? Щракнете върху блока \"функция\" в полето за инструменти,
+        наименувай я \"нарисувай триъгълник\", след това създай триъгълник, както
+        направи преди това с блоковете за Действие и повторение(цикъл). След това
+        щракнете върху Запиши и Затвори в горния десен ъгъл. \nСъвет: Създай триъгълник,
+        който е 100 пиксела по дължина.\n"
+      Artist Functions 5.0_2_instruction: 'Създай свой собствен блок за функция. Щракнете
+        върху "Функции" в кутията за инструменти и щракнете върху "създаване на функция".
+        Дай име на твоя блока за функция, след което създай 40 пикселов квадрат, както
+        направи преди с блоковете за Действия и  повторения(цикли). Щракни върху "Запиши
+        и Затвори" в горния десен ъгъл. Съвет: Не забравяй да плъзнете вашия нов блок
+        за функция от полето инструмент към блока "при изпълнение".'
+      Artist Functions 5.0v1_instruction: 'Създай свой собствен блок за функция. Щракнете
+        върху "Функции" в кутията за инструменти и щракнете върху "създаване на функция".
+        Дай име на твоя блока за функция, след което създай 40 пикселов квадрат, както
+        направи преди с блоковете за Действия и  повторения(цикли). Щракни върху "Запиши
+        и Затвори" в горния десен ъгъл. Съвет: Не забравяй да плъзнете вашия нов блок
+        за функция от полето инструмент към блока "при изпълнение".'
+      Artist Functions 5.0v2_instruction: "Готов ли си да създадеш своя собствена
+        \"функция блок\"? Щракнете върху блока \"функция\" в полето за инструменти,
+        наименувай я \"нарисувай триъгълник\", след това създай триъгълник, както
+        направи преди това с блоковете за Действие и повторение(цикъл). След това
+        щракнете върху Запиши и Затвори в горния десен ъгъл. \nСъвет: Създай триъгълник,
+        който е 100 пиксела по дължина.\n"
+      Artist Functions 6_instruction: Създайте функция за къща, която извиква функцията
+        триъгълник и квадрат
+      Artist Functions 7_instruction: Направи повторение(цикъл) на квадратна функция,
+        за да начертаеш линия
+      Artist Functions 8_instruction: Можеш ли да създадеш нова функция, наречена
+        "Нарисувай квадратна линия"?
+      Artist Functions free play_instruction: Време е за безплатна игра! Използвай
+        новите си функции, за да начертаеш една страхотна картина. Забавлявай се!
+      Artist level 10_instruction: 'Време е за безплатна игра! Включил съм всички
+        нови функции, изградени от теб. Забавлявайте се и нарисувай всичко, което
+        искаш. '
+      Artist Nested Loops_instruction: 'Сега преместете този цикъл вътре в друг цикъл
+        да начертаете 6 триъгълника. Това се нарича вложен цикъл. Съвет: При 6 триъгълника
+        трябва да се завърта на 60 градуса. '
+      Artist Params 10_instruction: Можете да извикате функции от вътрешността на
+        други функции! Използвайки функцията за "форма" като база, създаваме нова
+        функция за "къща", която има за параметър "дължина"
+      Artist Params 11_instruction: Какво мислиш за функция "колело", която има три
+        параметъра - "брой страни", "дължина" и "брой повторения". Твоята функция
+        ще трябва да начертае колело от "повторени" фигури с  "брой страни" и  "дължина".
+        Ще сметнеш по колко да се завърташ след всяка фигура, използвайки същите изчисления,
+        които използва, за да намериш завъртанията за фигура с "брой страни"
+      Artist Params 12_instruction: Използвайте вашата "колело" функция, за да се
+        изчертае всяка от тези фигури. Дължината на страната на всяко изображение
+        е 50.
+      Artist Params 13_instruction: 'ФрийПлей: Тук са функциите, които сте написали
+        и още няколко за да си поиграете с тях. Начертайте нещо страхотно!'
+      Artist Params 2_instruction: Тази функция ще бъде много по-полезна, ако тя може
+        да чертае триъгълници с различни размери. Аз бих добавил параметър за дължина
+        на линията, но тя не прави нищо все още. Можете ли да актуализирате функцията
+        така, че тя да използва параметъра "дължина" при изчертаване на всяка страна?
+      Artist Params 3_instruction: Страхотно, може ли да начертаете всеки един от
+        тези триъгълници с тази нова функция? Първият е дълъг 25 пиксела, вторият
+        е 50, а третият е 75. (Ако сте наистина умни, можете да използвате цикъл за
+        това!)
+      Artist Params 4_instruction: Можете ли да добавите нова функция, наречена квадрат?
+        Тя трябва да взима параметър за дължина, точно като функцията за триъгълника.
+      Artist Params 5_instruction: Използвайте и двете си нови функции за да начертаете
+        тази картина
+      Artist Params 6_instruction: Спомняте ли си как ние използвахме променлива за
+        да зададем броя на страните за фигура? Защо да има две отделни функции за
+        "триъгълник" и "квадрат", когато може да има една функция, наречена "форма",
+        която да има два параметъра - "страни" и "дължина"?
+      Artist Params 7_instruction: Начертайте няколко фигури и комбинации от фигури,
+        като използвате функцията за обща форма.
+      Artist Params 8_instruction: 'Може ли да разберете как да нарисувате два триъгълника?
+        Ето един съвет: Създайте 2 нови функции за всеки триъгълник.'
+      Artist Params 9_instruction: Може ли да чертаете два квадрата, единият вътре
+        в другия? Вътрешният е на 20 пиксела от външния и дължината на страните на
+        квадратите е 200 пиксела и 160 пиксела.
+      Artist Variables level 9_instruction: 'Това е алгоритъм, с който да нарисувате
+        триъгълник, да го промените, така че да използва променлива "страни". Заменете
+        цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава
+        страни" блок.'
+      Artist Variables level 9a_instruction: 'Това е алгоритъм, с който да нарисувате
+        триъгълник, да го промените, така че да използва променлива "страни". Заменете
+        цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава
+        страни" блок.'
+      Artist Vars "height" block_instruction: 'Сега искам да направим правоъгълник,
+        който е два пъти по-широк, отколкото е висок. Имаме променлива, наречена "височина",
+        която се определя на 100. Можете ли да използвате математическия блок, за
+        да завършите кода? '
+      Artist Vars height block_instruction: 'Сега искам да направим правоъгълник,
+        който е два пъти по-широк, отколкото е висок. Имаме променлива, наречена "височина",
+        която се определя на 100. Можете ли да използвате математическия блок, за
+        да завършите кода? '
       artist_test_brian_instruction: Artist test
       Basic_instruction: No instructions please
-      Bee procedures demo_instruction: Collect nectar from each flower
-      bee-test-1_instruction: Get the bee to the nectar
+      Bee procedures demo_instruction: Събири нектар от всяко цвете
+      bee-test-1_instruction: Заведете пчелата до нектара
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
         our game. Click play to see what your game can currently do (not much!), update
         any variables you like, and then click finish to move on.
-      Big Game Animation 1_instruction: |
-        Now that you've learned to write simple
-        linear functions, let's work on using them to add some movement to our game.
-        Click play to see what your game can currently do (not much!), update any
-        variables you like, and then click finish to move on.
+      Big Game Animation 1_instruction: Сега, когато вече сте се научили да пишете
+        прости линейни функции, да поработим върху използването им за да добавяне
+        на движение в нашата игра. Натиснете Старт за да видите какво прави играта
+        в момента(не е много!), актуализирайте всички променливи, както ви харесва,
+        и след това щракнете върху Готово, за да продължите.
       Big Game Animation 2 (copy 1)_instruction: |
         The function 'update-target'
         function takes the target's current x value, and returns an updated value.
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
       Big Game Animation 2_instruction: |
-        The function 'update-target' function
-        takes the target's current x value, and returns an updated value. Complete
-        the 'update-target' function so that it adds to the x value each time it
-        is called. The more you add to x, the faster the target will go.
-      Big Game Animation 3_instruction: |
-        The 'update-danger' function should work
-        just like 'update-target', except that the danger should move from the right
-        side over towards the left. Complete the 'update-danger' function to make
-        the danger fly across the screen.
-      Big Game Animation 4_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right. They don't ever come back on screen once they've left,
-        but we'll take care of that later. Take a minute to make sure your game is
-        working like you want it to, and then click finish to move on.
-      Big Game Booleans 1_instruction: |
-        When you last worked on your game we got
-        our target and danger sprites to fly across the screen, but they never come
-        back. Click run to see how your game is currently working, and then click
-        finish and we'll work on making those sprites reappear on screen after they've
-        left.
+        The 'update-target' function takes the
+        target's current x value, and returns an updated value. Complete the 'update-target'
+        function so that it adds to the x value each time it is called. The more you
+        add to x, the faster the target will go.
+      Big Game Animation 3_instruction: Функцията "актуализиране-опасност" трябва
+        да работи точно както "актуализиране-цел", с изключение, че опасността трябва
+        да се движи отдясно наляво. Допълнете функцията "актуализиране-опасност" да
+        задвижи опасността да лети по екрана.
+      Big Game Animation 4_instruction: В този момент опасността в играта ви трябва
+        да се движи на екрана отдясно наляво, а вашата цел трябва да се задвижи отляво
+        надясно. Те няма да се върнат на екрана ако излязат от него, но ние ще се
+        погрижим за това по-късно. Поиграйте си с играта за да се уверите, че работи
+        като искате, и след това щракнете върху Готово, за да продължите.
+      Big Game Booleans 1_instruction: Когато последно работехте върху играта си добавихте
+        целта и опасността да летят на екрана, но не да се връщат като стигнат края
+        на полето. Щракнете върху Старт за да видите как играта в момента работи и
+        след това ние ще поработим за да направим тези обекти да се връщат на екрана,
+        след като са излезли от него.
       Big Game Booleans 2_instruction: |
-        Remember the safe-left? and safe-right? functions
-        from Sam the Bat? We're going to use that same logic to figure out when the
-        target and danger leave the screen. Go to the "Functions" section of the
-        toolbox and complete the safe-left? function.
+        Now that your onscreen? function is checking
+        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
+        section of the toolbox and complete the safe-left? function so that it returns
+        true if the sprite's x coordinate is greater than -50. If you're successful
+        you should see the Danger go off the left side and then return on right side.
       Big Game Booleans 3_instruction: |
         Now that you've got safe-left?, let's fill
         in safe-right? - it should take in a sprite's x coordinate and return true
-        if the sprite hasn't gone off the right side of the screen.
-      Big Game Booleans 4_instruction: |
-        Great, now that you have functions to check
-        the left and right side of the screen, edit the on-screen? function so that
-        it checks safe-left? AND safe-right?, just like you did with Sam the Bat.
-      Big Game Booleans 5_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right, and they should both return to the opposite side. Take
-        a minute to make sure your game is working like you want it to, and then click
-        finish to move on.
-      Big Game Collision 1 (copy 1)_instruction: |
-        When you last worked on your game
-        we got our target and danger sprites to fly across the screen, but they never
-        come back. Click run to see how your game is currently working, and then click
-        finish and we'll work on making those sprites reappear on screen after they've
+        if that coordinate is less than 450. Once your safe-right? is complete you
+        should see the Target go off the right side of the screen and return on the
         left.
-      Big Game Collision 1_instruction: |
-        At this point you've programmed a video
-        game with a moving target and danger, both of which return to the screen once
-        they've left, and a player that responds to keyboard input. Click run to
-        see how your game is currently working, and then we'll dig into the final
-        missing piece - collision detection!
-      Big Game Collision 2_instruction: |
-        To move the player up and down, we'll need
-        to use a conditional block to figure out which key is pressed and respond
-        accordingly. Computers read keypresses as numeric key codes - the up arrow
-        is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
+      Big Game Booleans 4_instruction: |
+        We've provided a couple of empty functions
+        for safe-left? and safe-right? The first thing you need to do is complete
+        the onscreen? function so that it checks whether both safe-left? and safe-right?
+        are true. TIP - even after you add safe-left? and safe-right? your sprites
+        won't return to the screen. That will happen in the next puzzles when we
+        make sure that safe-left? and safe-right? actually work.
+      Big Game Booleans 5_instruction: |
+        At this point your danger should run across
+        the screen from right to left, your target should run across from left to
+        right, and they should both return to the opposite side, repeatedly. Take
+        a minute to make sure your game is working like you want it to, and then click
+        Finish to move on.
+      Big Game Collision 1 (copy 1)_instruction: Когато последно работехте върху играта
+        си добавихте целта и опасността да летят на екрана, но не да се връщат като
+        стигнат края на полето. Щракнете върху Старт за да видите как играта в момента
+        работи и след това ние ще поработим за да направим тези обекти да се връщат
+        на екрана, след като са излезли от него.
+      Big Game Collision 1_instruction: На този етап Вие сте програмирани видео игра
+        с подвижна мишена и опасност, и двете се връщат на екрана, след като са излезли
+        от него, и един играч, който отговаря на натискане на клавиши. Щракнете върху
+        Старт за да видите как играта работи в момента, а след това ние ще програмираме
+        последната липсваща част - отчитане на сблъсък!
+      Big Game Collision 2_instruction: За да преместим играча нагоре и надолу, ние
+        ще трябва да използваме условен блок, който да разбере кой клавиш е натиснат
+        и да реагира по съответния начин. Компютрите разчитат клавишите като цифрови
+        кодове - стрелка нагоре е 38 и стрелката надолу е 40. Можете да погледнете
+        и други цифрови кодове във вашата работна книга. Редактирайте "актуализира-играч"
+        функцията, така че играчът се движи нагоре когато се натисне стрелка нагоре
+        или надолу когато се натисне стрелка надолу.
       Big Game Collision 3_instruction: |
-        In order to know if two of our sprites are
-        touching, we first need to measure the distance between their center points.
-        Use the Pythagorean Theorem to complete this distance function so that it
-        returns the distance between the player's center coordinates (px, py), and
-        the center coordinates of another character (cx, cy). We've provided a working
+        Let's fix this distance function so our
+        collision detection works properly. Use the Distance Formula, so the distance
+        function returns the distance between the player's center coordinates (px,
+        py) and another sprite's center coordinates (cx, cy). We've provided a working
         line-length function to help you out.
       Big Game Collision 4_instruction: |
-        Now that you have a way to measure the distance
-        between two points, you just need to decide when those points are close enough
-        to be considered touching. Complete the 'collide?' function so that it checks
-        the distance function and returns true if the two points are close enough
-        to touch (100 pixels apart is a good place to start).
-      Big Game Complete (copy 1)_instruction: |
-        A demo of the completed CS in Algebra
-        Big Game project
-      Big Game Complete_instruction: |
-        A demo of the completed CS in Algebra Big Game
-        project
-      Big Game Final_instruction: |
-        You made it! At this point your game should be
-        fully functioning, take some time to enjoy your new game and make any final
-        tweaks to it. When you're happy with the final product, click Finish and
-        you'll have an opportunity to share a link to your game. Good work!
+        We've got a function called distance that
+        should return the distance between two sprites, and using that we can decide
+        when those sprites are close enough to be considered touching. Complete the
+        'collide?' function so that it checks the distance function and returns
+        true if the two points are close enough to touch (100 pixels apart is a good
+        place to start). TIP: the distance function doesn't work yet (it always returns
+        zero), so if you're successful you'll see that your sprites are instantly
+        "colliding," but we'll fix that in a second!
+      Big Game Complete (copy 1)_instruction: 'Демо на завършен CS в алгебрата: проект
+        "Голямата игра"'
+      Big Game Complete_instruction: 'Демо на завършен CS в алгебрата: проект "Голямата
+        игра"'
+      Big Game Final_instruction: Ти го направи! Сега, играта трябва да бъде напълно
+        функционираща! Ще отнеме известно време да се насладите на новата си игра,
+        но трябва да направим някои крайни настройки. Когато сте доволни от крайния
+        продукт, щракнете върху Готово и ще имате възможност да споделите връзка към
+        играта си. Добра работа!
       Big Game Player 1_instruction: |
         We're getting really close to a finished game!
-        Last time you work on your game, you used booleans to make your Target and
-        Danger return to the screen once the've left. Click Run to see how your game
-        looks right now, and then we'll get to making your Player move up and down.
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         To move the player up and down, we'll need
         to use a conditional block to figure out which key is pressed and respond
         accordingly. Computers read keypresses as numeric key codes - the up arrow
         is 38 and the down arrow is 40. You can lookup other key codes in your student
-        workbook. Edit the 'update-player' function so that if moves the player
-        up when the up arrow is pressed, or down when the down arrow is pressed.
-      Big Game Testing_instruction: |
-        A demo of the completed CS in Algebra Big Game
-        project
+        workbook. Edit the 'update-player' function so the player moves up when
+        the up arrow is pressed, and moves down when the down arrow is pressed.
+      Big Game Testing_instruction: 'Демо на завършен CS в алгебрата: проект "Голямата
+        игра"'
       Big Game Vars 1 (copy 1)_instruction: |
         Let's get started on your Big Game!
         Here you'll see a whole bunch of placeholder code that you'll eventually
@@ -1070,9 +1007,9 @@
         at this point to make your game look like you'd like it to. Click 'finish'
         when you're done.
       Big Game Vars 4_instruction: |
-        Awesome, now you can update the variables for
+        Awesome! Now you can update the variables for
         your Player, Target, and Danger. Feel free to play with all of the variables
-        at this point to make your game look like you'd like it to. Click 'finish'
+        at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
       BowShoot1_instruction: Use the repeat block to collect all the nectar!
       Brendan Artist work_instruction: няма
@@ -1119,15 +1056,15 @@
         piles.  Help me to fill and remove them to make the ground flat.
       C3-Farmer While Loops Multi Pics_instruction: избор от множество отговори
       Calc Circles of Eval .1_instruction: |
-        The code you'll be writing in this course
-        is called Evaluation Blocks, because each block of code evaluates to a single
-        value. Change the ??? in this code so that the block evaluates to 5.
+        You’ll be writing a kind of code called
+        Evaluation Blocks, because each block of code evaluates to a single value.
+        Change the ??? in this code so that the block evaluates to 5.
       Calc Circles of Eval .2_instruction: |
         This Evaluation Block is a multiplication
         function which takes two numbers and returns the product of those numbers.
         Edit this block so that it multiplies 2 * 5
       Calc Circles of Eval .3_instruction: |
-        Here's a function for Addition - it
+        Here's a function for Addition which
         takes two numbers and returns their sum. Use this Addition block to add 3
         + 6.
       Calc Circles of Eval .4_instruction: |
@@ -1145,9 +1082,8 @@
         Convert this statement to <some_shape>
         of evaluation.
       Calc Circles of Eval 2_instruction: |
-        Each Evaluation Block has a function at
-        the top, With the inputs to that function written below. Each of those arguments
-        can be a value, or another Block.
+        Use a multiplication block to complete
+        this code.
       Calc Circles of Eval 3_instruction: |
         Complete the Evaluation Blocks to match
         this statement.
@@ -1196,25 +1132,24 @@
         use it to calculate half(21)
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called "sqr" - this function should have a domain of Number and
-        range of Number. Make sure to write two example cases! When you're done,
-        use your new function to calculate 7 squared.
+        function called "cube" - this function should have a domain of Number, range
+        of Number, and return the given number to the power of 3. Make sure to write
+        two example cases! When you're done, use your new function to calculate 7
+        cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
-        are in charge of writing computer programs to track the cost of making\neach
-        treat, the money customers give you, and the total profit from selling\nthem.
-        Cookies cost $0.25 each to bake, and sell for $1.50/cookie.\r\n\r\nWrite\nthe
-        function `cookie-cost`, which takes in the number of cookies you intend\nto
-        sell, and gives you back the amount of money it would cost to produce that\nnumber
-        of cookies."
+        need to track the cost of making each cookie, the money paid, and the\ntotal
+        profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe
+        function `cost`, which takes in the number of cookies you intend to sell,\nand
+        returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
-        Write the function `cookie-sales`, which
-        takes in the number of cookies sold, and produces the amount of money people
-        spend to buy those cookies. (each cookie costs $1.50)
+        Write the function `sales` which takes in
+        the number of cookies sold, and produces the amount of money customers spent
+        to buy those cookies (each cookie is sold at $1.50).
       Calc Design Recipe 4_instruction: |
-        Free Play: Using the two functions we just
-        wrote, write the function `cookie-profit`, which takes in the number of cookies
-        you sold, and gives you back the total profit you make from selling your cookies,
-        accounting for the cost of baking them.
+        Using the two functions we just wrote, write
+        the function `profit`, which takes in the number of cookies you sold, and
+        gives you back the total profit you make from selling your cookies, accounting
+        for the cost of baking them.
       Calc Free Play_instruction: |
         Free Play: Write functions and algorithms of your
         own design!
@@ -1232,20 +1167,18 @@
         Great, let's do one more example before writing
         the function - what should the rocket height be after 30 seconds?
       Calc Vars 1.1_instruction: |
-        Here we've set the "age" variable to 17 - can
-        you write an expression that calculates "age" in days?
+        Here we've set the "age" variable to 17 years.
+        Can you write an expression that calculates "age" in days?
       Calc Vars 1_instruction: |
         Variables allow us to name values so that we can
-        then easily refer to them repeatedly throughout our programs. Here's a variable
-        called "age" - set its value to 14 and click run.
+        easily refer to them repeatedly throughout our programs. Here's a variable
+        called "age". Set its value to your age and click run.
       Calc Vars 2 (copy 1)_instruction: |
         Here we've set the "age" variable to
         17 - can you write an expression that calculates "age" in months?
       Calc Vars 2.1_instruction: |
-        You can actually set a variable using the value
-        of another variable! Here's a new variable called "age_in_months" - use
-        the expression you came up with in the last puzzle to set "age_in_months"
-        to the number of months in "age"
+        Here's a new variable called "age-in-months"
+        - use the variable "age" to set "age-in-months"
       Calc Vars 2_instruction: |
         Can you write an expression that calculates "age"
         in months?
@@ -1259,6 +1192,7 @@
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Code Logo v3_instruction: ''
       Code Studio Puzzle Challenge 1 - Artist (copy 1)_instruction: "Draw the line.\nIt
         is 200 pixels long. \n"
       Code Studio Puzzle Challenge 1 - Artist_instruction: "Draw the line. It is\n200
@@ -1343,7 +1277,7 @@
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      copy 1_instruction: Try the "repeat" block to use fewer blocks...
+      copy 1_instruction: Опитай блока "повтаряй", за да използваш по-малко блокове...
       course 1 artist 1 level 10_instruction: |
         Draw the dashed line by using both
         the jump and draw blocks
@@ -1492,10 +1426,10 @@
         inside a for loop that counts from 50 to 100 by 10. Take a look at\nhow I
         built the code then click on \"Run\" when you are ready to see it in\naction.
         \n"
-      Course 4 Artist For Loops 3_instruction: |
-        The smallest triangle has 20 pixel
-        sides, the largest has 200 pixel sides, and each triangle is 20 pixels larger
-        than the last. Update the for loop to draw these triangles.
+      Course 4 Artist For Loops 3_instruction: Страните на малкия триъгълник имат
+        20 пиксела дължина, а на най-големия 200 пиксела, всеки триъгълник е с 20
+        пиксела по-голям от предходния. Актуализирайте цикъла, за да начертаете тези
+        триъгълници.
       Course 4 Artist For Loops 4_instruction: |
         Use a for loop to draw these squares.
         They start at 50 pixels long, the largest is 300 pixels long, and each square
@@ -1527,7 +1461,8 @@
       Course 4 Artist Functions 11_instruction: |
         Check out this code that draws a
         cube - can you move it into a function called "Draw a Cube"
-      Course 4 Artist Functions 12_instruction: Loop square function to draw a line
+      Course 4 Artist Functions 12_instruction: Направи повторение(цикъл) на квадратна
+        функция, за да начертаеш линия
       Course 4 Artist Functions 13_instruction: |
         Check it out we have a new function
         called "draw a line of squares". Feel free to take a look inside the function
@@ -1628,10 +1563,10 @@
         shape" function with "sides" and "length" parameters. Can you re create
         these shapes? The square counter should be 5/100/5, the triangle counter should
         be 10/100/10 and the hexagon is 2/100/2.
-      Course 4 Artist Var 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
+      Course 4 Artist Var 9_instruction: 'Това е алгоритъм, с който да нарисувате
+        триъгълник, да го промените, така че да използва променлива "страни". Заменете
+        цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава
+        страни" блок.'
       Course 4 Artist Vars 1_instruction: |
         Can you help me draw a triangle? It's
         100 pixels long on each side.
@@ -1830,13 +1765,12 @@
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
       Course 4 Maze 2_instruction: Avoid the TNT!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
-      Course 4 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 4_instruction: Опитай блока "повтаряй", за да използваш по-малко
+        блокове...
+      Course 4 Maze 5_instruction: Можеш ли да решиш този пъзел, с помощта на възможно
+        най-малък брой блокове?
+      Course 4 Maze 6_instruction: Можеш ли да решиш този пъзел, с помощта на възможно
+        най-малък брой блокове?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -1963,7 +1897,7 @@
         vanish. If the score is every less than 0, make the player vanish.
       Course 4 Play Labs For Loops 1_instruction: |
         Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the speak block to speak the counter
+        number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         This time, let's try counting
@@ -2005,7 +1939,7 @@
         to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig."
-      course3 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      course3 Maze 1_instruction: Скъпи човеко. Аз зомби. Трябва... отиде... до слънчогледа.
       Coursen 4 Artist Functions 11_instruction: |
         Can you create a new function that
         will draw a cube shape?
@@ -2040,13 +1974,16 @@
         the x variable so that this expression returns true.
       Eval Booleans 5_instruction: |
         This OR block returns true if either of its parameters
-        is true, and otherwise returns false. Set the y variable to a value that will
-        cause this expression to return false.
+        is true. Otherwise, if both parameters are false it will return false. Set
+        the y variable to a value that will cause this expression to return false.
       Eval Booleans 6_instruction: |
         Here's one more boolean block called NOT. This
         block flips true to false, or false to true. If you wrap this block of code
         in a NOT block, it should return true (because we are asking if the two expressions
         do NOT produce equal values).
+      Eval Booleans Free Play_instruction: |
+        Free Play: Try out some creations of
+        your own using Booleans.
       Eval Booleans_instruction: |
         Booleans allow us to compare different values,
         returning "true" if the are equal, or "false" if they are not. What do
@@ -2081,8 +2018,8 @@
         We can use the "string=?" function to make conditionals
         that respond to text input. Here's a function called "green shape" that
         takes a string parameter for the shape. Complete the conditions so that the
-        correct shape is drawn when the function is run with "square," "triangle,"
-        "circle," or "rectangle."
+        correct shape is drawn when the function is run with "circle," "triangle,"
+        "square," or "rectangle."
       Eval Cond 5_instruction: |
         Here's a similar function "red shape" with an
         additional parameter for size. Complete the conditionals so the correct image
@@ -2125,9 +2062,9 @@
         just made a circle of that size in the first place?
       Eval Contracts 4_instruction: |
         The "scale" function returns an image that
-        is scaled either larger or smaller than the input image. Try scaling this
-        circle by a factor of 10 - how is the resulting image different than if you'd
-        just made a circle of that size in the first place?
+        is either larger or smaller than the input image. Try scaling this circle
+        by a factor of 10. How is the returned image different than if you'd just
+        made a circle of that size in the first place?
       Eval Contracts 8A_instruction: |
         Can you complete this puzzle? The big-triangle
         is 200 pixels in size and purple?
@@ -2139,7 +2076,7 @@
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        teal text at size 40.
+        "Hello, World!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
       Eval Define Funcs 1_instruction: |
@@ -2155,10 +2092,6 @@
         Image. The body of the function is broken though, it always draws a circle\nof
         50 pixel radius instead of using the radius parameter. Replace the current\nNumber
         with the \"radius\" block from the domain. \n"
-      Eval Define Funcs 4 (copy 1)_instruction: |
-        Create a new function called "aqua-star"
-        that has a Domain of a single Number for radius and returns an aqua star of
-        the given radius. Run your new function with a radius of 75.
       Eval Define Funcs 4_instruction: |
         Create a new function called "aqua-star"
         that has a Domain of a single Number for radius and returns an aqua star of
@@ -2169,12 +2102,12 @@
         have radiuses of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
-        that fills your screen with my-shape. Change my-shape to see what patterns
+        that fills your screen with my-image. Change my-image to see what patterns
         you can make.
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
-        called "square-circle" with domain Number String and range Image. Look at
-        the two examples we've provided and write the function definition.
+        called "square-circle" with domain Number String and range Image. Click
+        Edit to write the function description (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         We're going to write a function
         that draws a solid rectangle of any color that is twice wide as it is high.
@@ -2199,8 +2132,9 @@
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        "starburst" that takes a number of points and a radius, and returns a yellow
-        radial star with given points where the inner radius is half the outer radius.
+        "starburst" that has two domains. 1) a number of points and 2) a radius.
+        "starburst" returns a yellow radial star with given points, and an inner
+        radius that is half the outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         "striped-flag" that takes two colors and produces a flag that is 250 pixels
@@ -2231,14 +2165,15 @@
         use is an Image. This "star" function takes in a Number and two Strings,
         and it outputs an Image. Use this function to make a solid red star with radius
         of 100.
-      Eval Strings Images 2_instruction: "Free Play:  \r\nEvery Evaluation Block\nis
-        color-coded to let you know which data type it returns and which types\nin
-        needs for its parameters. The last parameter of the triangle function takes\na
-        String that controls its color - try some different colors to see what works."
+      Eval Strings Images 2_instruction: |
+        Free Play: Every Evaluation Block is color-coded
+        to let you know which data type it returns and which types it needs for its
+        parameters. The last parameter of the triangle function takes a String that
+        controls its color - try some different colors to see what works.
       Eval Strings Images 3_instruction: |
         Some functions can only take a specific
         set of Strings, such as the second argument of this circle function, which
-        controls its style. Draw this orange outline circle using the special string
+        controls its style. Draw this orange outline circle using the special String
         block with a dropdown to make sure you only use valid styles.
       Eval Strings Images 4_instruction: |
         Try using the "rectangle" block to draw
@@ -2253,15 +2188,15 @@
       Eval Strings Images 7_instruction: |
         The "offset" block lets you move an image
         relative to where it would normally be placed. Use this block to offset the
-        triangle 80 pixels on the y axis.
+        square by 100 pixels on the y axis.
       Eval Strings Images 8_instruction: |
-        Here's a different kinds of star block
+        Here's a different kind of star block
         - it's called "radial-star" and it allows you to draw stars with any number
         of points! Use it to create a solid orange star with an inner radius of 75
         pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
-        to draw something interesting. Make sure to save and share your favorite images.
+        to create something interesting. Make sure to share your favorite creations.
       Examples 4_instruction: Shrink function
       frozen circle function (copy 1)_instruction: |
         Use the new 'create a circle'
@@ -2355,46 +2290,40 @@
         The blocks in the function editor are the commands that make up "draw a square."
         When you're done looking around, click "Save and Close" in the upper right
         hand corner. Click on "Run" when you're ready to move to the next level.
-      Function Block 3.0_instruction: "Here is a new type of Block. It is called\na
-        \"Function block.\" Click on \"RUN\" to see what it can do. \n"
+      Function Block 3.0_instruction: 'Тук е нов тип блок. Той се нарича "Функция
+        блок". Щракнете върху "Изпълни", за да видите какво може да направи. '
       Function Block_instruction: "Here is a new type of Block. It is called a \"Function\nblock.\"
         Click on \"RUN\" to see what it can do. \n"
       function_instruction: |
         Use the new 'create a circle' block to create two
         circles
       Go Up Artist_instruction: Go Up Artist
-      Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
-      Infinity_finale_instruction: Create anything you like and share it!
-      Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
-      Infinity_repeat_instruction: |
-        Use a "repeat forever" block to make Anna move
-        up and down 400 pixels.
-      Infinity_say_instruction: Make Anna say "Hi there." by using the Say block.
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      Infinity_catch_instruction: Можете ли да накарате Елза ("актьор 2"), използвайки
+        клавишите със стрелки, да достигне Анна?
+      Infinity_finale_instruction: Създайте нещо, което ви харесва и  го споделете!
+      Infinity_move_collide_instruction: Хиро е "актьор 1".  Преместете го към Баумах
+        и когато те се докоснат трябва да се възпроизведе звук.
+      Infinity_move_directions_instruction: Баумаx е "актьор 2".  Добавете блок за
+        движение и след това преместете Баумах с помощта на стрелките.  Накарайте
+        го да докосне двама други герои.
+      Infinity_move_right_instruction: Хиро е "актьор 1".  Използвайте блок за движение,
+        за да преместите Хиро към Баумах и те да се докоснат.
+      Infinity_repeat_instruction: Използвайте "повтаря завинаги" блок, за да накарате
+        Анна да се движи нагоре и надолу по 400 пиксела.
+      Infinity_say_instruction: Накарайте Анна да каже "Здрасти." с помощта на блок
+        за текст.
+      Infinity_shoot_instruction: Баумаx е "актьор 2".  Накарай Баумах да хвърля ракета
+        по Хиро.
+      Infinity_shoot_directions_instruction: Хиро е "актьор 3".  Накарайте Хиро да
+        хвърли ракета по всеки от четирите героя.  Изчаквайте по една секунда между
+        всяко хвърляне.
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: |
-        Move Anna up, down left, and right to touch
-        each of the four snowflakes.
-      Infinity_touch_score_instruction: |
-        Score a point when a snowflake is touched.  Then
-        "Run", and steer Anna to touch each snowflake once.
+      Infinity_touch_faster_instruction: Докоснете още повече снежинки!
+      Infinity_touch_four_instruction: Премести Анна, нагоре, надолу наляво и надясно,
+        за да докосне всяка от четирите снежинки.
+      Infinity_touch_score_instruction: Направете така, че Анна да получава точка,
+        когато докосне снежинка.  След това щракнете върху бутона "Старт" и я направлявайте
+        да докосне всяка снежинка по веднъж.
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2600,10 +2529,10 @@
         to those people, could you update the "else" clause so that we charge them
         a premium for toppings that we don't normally offer? Let's charge $10,000
         for a topping we don't carry.
-      Luigi's Pizza 4_instruction: "What can you do to make Luigi's cost function\neven
-        better? Try one (or more) of the following:\r\n- Display an image of\nthe
-        chosen pizza\r\n- Allow for multiple topping combinations\r\n- Allow for\nordering
-        multiple pizzas\r\n- Add a coupon code for a 50% discount"
+      Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction
+        even better? Try one (or more) of the following:\r\n- Display an\nimage of
+        the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow
+        for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
       maze level test_instruction: Do this!
       Maze screenshot Work_instruction: Test instructions
       MSM Big Game Empty_instruction: |
@@ -2678,37 +2607,35 @@
       NetSim_AutomaticDNS_instruction: |
         In this version of the simulator a DNS service
         is provided for you. Send a message in the form GET [hostname] to the DNS
-        service to get a student's address.
+        service at address 15 to get a student's address.
       NetSim_ManualDNS_instruction: |
         In this version of the simulator you can't
         see the other students' addresses.  Instead, one of you must act as a name
         service, to help share addresses with each other.
       NetSim_SendAB_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is not
-        yet functional. It will allow students to manually set/read individual As
-        and Bs on a simplex wire.
+        Connect to another student.  Each of you can set
+        the value of the wire between you to "A" or "B".  See if you can send
+        a complete message!
       NetSim_SendAscii_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send ASCII to each other.
+        In this version of the simulator, you can send
+        numbers or ASCII characters to one another, one bit at a time.
       NetSim_SendBits_instruction: |
-        UNDER CONSTRUCTION: This version of NetSim is
-        not yet functional. It will allow students to send binary as zeroes and ones
-        to one another
+        Connect to another student.  You can now set
+        your wire to "0" or "1".  Send a message to your partner!
       NetSim_SendingABTest_instruction: |
         This is Sarah's test of making a netsim
         level
       NetSim_Superuser_instruction: You have loaded NetSim in superuser mode.
       NetSim_Variant1_instruction: |
-        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
-        Variant 1 is not yet functional because P2P connections have not been implemented.
-        Variant 1 allows students to manually work out the timing of sending bits
-        back and forth.
+        NetSim: Variant 1 allows students to manually
+        work out the timing of sending bits back and forth.
       NetSim_Variant2_instruction: |
-        NetSim: Variant 2 template: UNDER CONSTRUCTION:
-        Variant 2 is not yet functional because P2P connections have not been implemented.
+        NetSim: Variant 2: Students connect directly
+        to one another and send entire packets back and forth, exploring systems of
+        encoding data.
       NetSim_Variant3_instruction: |
-        NetSim: Variant 3 template: Connects groups of
-        2-6 students with a router, and explores issues in routing and DNS
+        NetSim: Variant 3: Connects groups of 2-6 students
+        with a router, and explores issues in routing and DNS
       NEW Artist Artist Functions 3_instruction: "Here is a new type of Block. It\nis
         called a \"Function block.\" Click on \"RUN\" to see what it can do. \n"
       New Artist Project_instruction: |
@@ -2908,19 +2835,55 @@
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
-        ninja left, right and jump - try to catch the unicorn and avoid the dragon!
+        ninja up and down - try to catch the unicorn and avoid the dragon! When you
+        think you've figured out how the game works, click "Finish"
+      PDK5 Conditionals 1_instruction: |
+        Purple flowers may have either 1 or 0 nectar,
+        but you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
+      PDK5 Events 1_instruction: "So far all of the programs we've written are executed\nin
+        order from top to bottom. In this puzzle, we'll use \"Events\" to respond\nto
+        an action on demand. Make the octopus say \"Hello\" only when you click\non
+        the Octopus. \n"
+      PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
+        \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
+        this is called a \"loop.\" \n"
+      PDK5 Loops 3_instruction: |
+        Here's another puzzle to practice loops. What happens
+        if you use the repeat block to run the code already provided on the workspace
+        4 times?
       perpendicular_instruction: |
         Now let's see if we can create two perpendicular
         lines. Perpendicular lines are two lines that intersect at a right, or 90
         degree, angle.
-      Play Lab Rocket 1 (copy 1)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
-      Play Lab Rocket 1 (copy 2)_instruction: |
-        A rocket blasts off, traveling at
-        15 meters per second... press "run" to see how this word problem looks as
-        an animation.
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
+        were added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'.  The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "run" to see how this word problem looks as an animation.
@@ -3012,20 +2975,20 @@
         your function works, Sam shouldn't be able to leave the yard from the left
         side.
       Sam the Butterfly 3_instruction: |
-        That's great, now Sam can't leave the yard
-        from the left side, but what about the right? Fill out the "safe-right?"
-        function to make sure Sam can't go past x = 425
+        In the last puzzle we kept Sam from leaving
+        on the left, now let's do the same thing on the right. Fill out the "safe-right?"
+        function to make sure Sam can't go past x = 425.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
-        from going either direction? Try using the "AND" block program the function
+        from going either direction? Try using the "AND" block to program the function
         "on-screen?" to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
         Free Play: Awesome, now Sam can't leave
         the yard from the left or the right, but what about up and down? We've added
         an additional parameter 'y' to the 'onscreen?' function. Can you update
         your program so Sam can't leave from the top (y = 425) or bottom (y = -25)
-        either? Test your program my moving Sam as far as he can go in all four directions.
+        either? Test your program by moving Sam as far as he can go in all four directions.
         Click Finish when Sam is completely protected.
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
@@ -3143,23 +3106,30 @@
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
-      temp_for_ross_instruction: |
-        This pig is ruffling my feathers. Help me find
-        him!
+      temp_for_ross_instruction: Това прасе ми лази по нервите. Помогнете ми да го
+        намеря!
       Test Artist Level_instruction: This is a test artist level
       test camel_instruction: Camel
       Test down solution_instruction: Test down solution
       Test Level Brian Maze_instruction: Test level
-      Test Studio Embed Free Play_instruction: |
-        FREE PLAY: Hit run and play the game.
-        Help the dog get to the cat.
-      Test-Karel-k1_instruction: Move east to remove the piles
-      test123_instruction: Draw a line
+      Test Studio Embed Free Play_instruction: 'Свободна игра: Щракни "Старт" и играй
+        играта. Помогни на кучето да хване котката.'
+      Test-Karel-k1_instruction: Премести на изток, за да премахнеш купчините
+      test123_instruction: Нарисувай линия
       test4_instruction: Hey Ho
       Testing Brian Level_instruction: Test Brian Level Nice
       testing_instruction: Test level
-      TestK1-1_instruction: |
-        Draw three partially overlapping squares using the repeat
-        block
+      TestK1-1_instruction: Нарисувайте три частично покриващи се квадрата, с помощта
+        на блок за повторение
+      Text Compression Peter Piper_instruction: |
+        This poem has been compressed by
+        replacing two common phrases with symbols in the dictionary. Can you identify
+        another common pattern to compress the poem further?
       toby-test5-16-1_instruction: dafsfas
-      XML Scratchpad_instruction: Using this test level to grab xml for unit tests
+      U1L4 NetSim SendAB_instruction: |
+        NetSim: Variant 1 playground: UNDER CONSTRUCTION:
+        Variant 1 is not yet functional because P2P connections have not been implemented.
+        Variant 1 allows students to manually work out the timing of sending bits
+        back and forth.
+      XML Scratchpad_instruction: Използвай това тестово ниво заа да вземеш xml-а
+        за unit тестове

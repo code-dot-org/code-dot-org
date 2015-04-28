@@ -123,7 +123,7 @@ def main()
   remaining = DB[:forms].where(processed_at:nil).count
   messages << "#{remaining} forms(s) remaining." if remaining > 0
 
-  HipChat.log messages.join('; ') unless messages.empty?
+#  HipChat.log messages.join('; ') unless messages.empty?
 
   system "#{deploy_dir('bin', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
 end

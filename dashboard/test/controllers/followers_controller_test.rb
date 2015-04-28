@@ -28,7 +28,7 @@ class FollowersControllerTest < ActionController::TestCase
     assert_response :success
     assert assigns(:user)
 
-    assert ! assigns(:user).persisted?
+    assert !assigns(:user).persisted?
   end
 
   test "student_user_new when signed in" do

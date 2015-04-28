@@ -4,7 +4,6 @@
   "circleBlockTitle": "cerchio (raggio, stile, colore)",
   "displayBlockTitle": "visualizza",
   "ellipseBlockTitle": "ellisse (larghezza, altezza, stile, colore)",
-  "emptyFunctionalBlock": "C'è un valore mancante in un blocco.",
   "extraTopBlocks": "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'visualizza'?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "metti-sopra (superiore, inferiore)",
@@ -27,5 +26,6 @@
   "solid": "solido",
   "string": "stringa",
   "stringMismatchError": "You have a string with the wrong capitalization.",
-  "userCodeException": "An error occurred while executing your code."
+  "userCodeException": "An error occurred while executing your code.",
+  "wrongBooleanError": "Your blocks evaluate to the wrong boolean value."
 }

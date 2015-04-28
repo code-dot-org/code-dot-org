@@ -10,7 +10,6 @@ HOC_COUNTRIES = hoc_load_countries()
 def hoc_load_i18n()
   i18n = {}
   Dir.glob(hoc_dir('i18n/*.yml')).each do |string_file|
-    language = File.basename(string_file, File.extname(string_file))
     i18n.merge!(YAML.load_file(string_file))
   end
   i18n
@@ -23,7 +22,7 @@ def hoc_s(id)
 end
 
 def hoc_canonicalized_i18n_path(uri)
-  empty, possible_country_or_company, possible_language, path = uri.split('/',4)
+  _, possible_country_or_company, possible_language, path = uri.split('/',4)
 
   if HOC_COUNTRIES[possible_country_or_company]
     @country = possible_country_or_company
@@ -98,9 +97,9 @@ def company_count(company)
   company_count = 0;
   DB[:forms].where(kind:'HocSignup2014').each do |i|
     data = JSON.parse(i[:data])
-      if data['hoc_company_s'] == company
-        company_count += 1
-      end
+    if data['hoc_company_s'] == company
+      company_count += 1
+    end
   end
   return company_count
 end

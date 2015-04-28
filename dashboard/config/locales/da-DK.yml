@@ -261,6 +261,7 @@
         artist: Tegn noget
     user:
       classroom: Lærerens Startside
+      district_dashboard: Særskilt betjeningspanel
       label: Hej %{username}
       stats: Mine fremskridt
       settings: Min konto
@@ -409,6 +410,7 @@
     heading_apps: <h2>Sjov for</h2><h1>Alle</h1>
     heading_legacy: <h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>
     your_gallery: Galleri
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Mand
     female: Kvinde
@@ -513,6 +515,10 @@
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Brug Play Lab til at skabe en historie eller et spil med karakterer fra
+        Disneys Infinity
   gallery:
     students_drew_these_with_code: Elever har tegnet disse med kode!
     students_made_these_with_code: Elever har lavet disse med kode!
@@ -549,6 +555,16 @@
     wrong_body: Den løsning, du har angivet er ikke korrekte.  Prøv venligst igen!
     correct_title: Rigtigt
     correct_body: Det er det korrekte svar.
+  contract_match:
+    wrong_title: Forkert svar
+    badname: Din kontrakt har det forkert navn.
+    badname_case: Funktionsnavne er store og små bogstaver. Forsøg at ændre casen
+      for dit kontraktnavn.
+    badrange: Din kontrakt har det forkert navn.
+    baddomainsize: Din kontrakt har ikke det rigtige antal elementer i domænet.
+    baddomainname: Én eller flere af dine domæneelementer har det forkert navn.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Skriv dit svar her
   dialog:
@@ -602,46 +618,48 @@
     Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at
     logge på eller spørg dine forældre eller lærer om at kontakte os for dig.
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: ikke startet
+    in_progress: i gang
     completed_too_many_blocks: afsluttet, for mange blokke
     completed_perfect: Afsluttet, perfekt
     furthest_level_attempted: længst opnåede niveau
-    assessment: assessment
+    assessment: vurdering
   studio:
     courses_working_on: Kurser du er i gang med
     completed_courses: Afsluttede kurser
     all_courses: Alle kurser
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projekter
+    create: Opret projekt
+    create_a_project: 'Opret et nyt projekt:'
+    new: Opret nyt
+    rename: Omdøb
     save: Gem
     delete: Slet
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Vend tilbage til kursus
+    my_projects: Mine projekter
     share: Del
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Del dit projekt
+    share_copy_link: 'Kopiér linket:'
+    close: Luk
     more: Mere
     name: Navn
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Opdateret
+    project_type: Projekttype
+    help_text: Klik på <strong>Lav en App</strong> eller <strong>Tegn noget</strong>
+      nedenfor for at lave et nyt Play Lab eller Kunstnerprojekt! <br/>Du kan til
+      enhver tid vende tilbage og arbejde videre på dine projekter.
+    need_help: Brug for hjælp til at komme i gang?
     really_delete: Slet?
     delete_yes: Ja
     delete_no: Nej
-    saved: Saved
-    not_saved: Not saved
+    saved: Gemt
+    not_saved: Ikke gemt
     cancel: Annuller
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Sikker på, at du vil slette dette projekt?
+    delete_confirm_text: Sletning af dit projekt vil permanent fjerne det fra listen
+      Mine Projekter. Enhver du har delt linket med vil ikke længere kunne se dit
+      projekt.
+    view_all: Se Mine Projekter
+    remix: Bland igen
+    click_to_remix: Klik 'Bland igen' oprette et spin-off i din egen version!

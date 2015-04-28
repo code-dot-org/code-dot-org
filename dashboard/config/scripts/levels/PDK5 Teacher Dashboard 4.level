@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-03-17T22:44:58.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged",
+      "skip_dialogue": true
+    },
+    "title": "Course Progress",
+    "markdown": "\n<img align=\"left\" src=\"http://staging.code.org/images/teacher-dashboard/lesson-plans.png\" height=\"200\" width=\"250\" hspace=\"20\" vspace=\"20\">\n\n\n</br>\n</br>\n\n\n## Lesson Plans and Resources\n\nWhen you click the \"Lesson Plans and Resources\" tile, you'll access lessons plans, an implementation guide, handouts for students and teachers, standards alignment for K-5 courses, video FAQs and more.  \n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "b2c4dcb5a5609ad8b71bd6c90bde01a9"
+}]]></config>
+</External>

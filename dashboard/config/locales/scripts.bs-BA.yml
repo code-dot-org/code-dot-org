@@ -3,62 +3,63 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          'Jigsaw: Learn to drag and drop': 'Slagalica: Nauči vući i ispustiti'
           The Maze: Labirint
-          Multi: Multi
-          Match: Match
-          Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
+          Multi: Višestruki izbor
+          Match: Upari
+          Math Image: Matematička Slika
+          title: Probni Kurs
+          description: Samo interni probni kurs.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
-          Multi & Match: Multi & Match
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Course 1 is designed to allow early readers to create computer
-            programs that will help them learn to collaborate with others, develop
-            problem-solving skills, and persist through difficult tasks. By the end
-            of this course, students create their very own custom game or story that
-            they can share. Recommended for grades K-1.
-          'Bee: Sequence': 'Bee: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Studio: Create a Story': 'Play Lab: Create a Story'
+          'Jigsaw: Learn to drag and drop': 'Slagalica: Nauči vući i ispustiti'
+          'Maze: Sequence': 'Labirint: Slijed'
+          'Maze: Debugging': 'Labirint: Ispravljanje grešaka'
+          'Artist 1: Intro': 'Umjetnik 1:  Uvod'
+          Artists 2: Umjetnici 2
+          Spelling Bee: Spelovanje
+          Spelling Bee not blockly: Spelovanje bez blokova
+          'Bee 1: Intro': 'Pčela 1: Uvod'
+          'Maze 2: Loops': 'Labirint 2: Petlje'
+          'Bee 2: Loops': 'Pčela 2: Petlje'
+          Multi & Match: Višestruki izbor & Upari
+          K-1 Flappy: '4-6 godina: Flappy'
+          Flappy non blockly: Flappy bez blokova
+          title: Kurs 1
+          Artist 2: Umjetnik 2
+          Happy Maps: Vesele Mape
+          Move it, Move it: Pomakni, pomakni
+          'Real-life Algorithms: Plant a Seed': 'Algoritmi u stvarnom životu: Posadi
+            sjeme'
+          Building a Foundation: Izrada Temelja
+          Getting Loopy: Zapetljavanje
+          The Big Event: Veliki Događaj
+          Going Places Safely: Sigurna Putovanja
+          description: Kurs 1 pomaže učenicima koji su tek naučili čitati pri stvaranju
+            kompjuterskih programa koji će im pomoći pri surađivanju s drugima, razvijanju
+            sposobnosti rješavanja problema i ustrajavanju kroz teške zadatke. Do
+            kraja ovog kursa, učenici će stvoriti vlastitu igru ili priču koju mogu
+            podijeliti. Preporučuje se za uzrast do 1. razreda.
+          'Bee: Sequence': 'Pčela: Slijed'
+          'Artist: Sequence': 'Umjetnik: Slijed'
+          'Artist: Shapes': 'Umjetnik: Oblici'
+          'Maze: Loops': 'Labirint: Petlje'
+          'Bee: Loops': 'Pčela: Petlje'
+          'Studio: Create a Story': 'Laboratorij Igara: Napravi Priču'
           'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Uzrast 4+ (predškolski uzrast)
+          description_short: Kurs 1 je predviđen za one koji su tek naučili čitati.
         course2:
           The Maze: Labirint
           Suzi: Suzi
           The Artist: Umjetnik
-          Artist Debugging: Artist Debugging
+          Artist Debugging: 'Umjetnik: Ispravljanje grešaka'
           Bounce: Odskok
-          'Studio: Create a Story': 'Play Lab: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          'Studio: Create a Story': 'Laboratorij Igara: Napravi Priču'
+          Artist Loops: 'Umjetnik: Petlje'
+          Bee Conditionals: 'Pčela: Uvjeti'
           Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
+          title: Kurs 2
+          Bee Loops: 'Pčela: Petlje'
           Artist Functions: Artist Functions
           The Artist Debugging: The Artist Debugging
           Bee Debugging: Bee Debugging
@@ -66,38 +67,38 @@
           Maze Loops: Maze Loops
           Graph Paper Programming: Papirno Programiranje Grafikona
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
+          Getting Loopy: Zapetljavanje
           Relay programming: Relay programming
           Conditionals: Uvjeti
           Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
+          The Big Event: Veliki Događaj
           Your Digital Footprint: Your Digital Footprint
           description: Course 2 is designed for students who can read and have no
             prior programming experience. In this course students will create programs
             to solve problems and develop interactive games or stories they can share.
             Recommended for grades 2-5.
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
+          'Maze: Sequence': 'Labirint: Slijed'
+          'Artist: Sequence': 'Umjetnik: Slijed'
+          'Maze: Loops': 'Labirint: Petlje'
           'Artist: Loops': 'Artist: Loops'
-          'Bee: Loops': 'Bee: Loops'
+          'Bee: Loops': 'Pčela: Petlje'
           'Bee: Debugging': 'Bee: Debugging'
           'Artist: Debugging': 'Artist: Debugging'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Sequence2': 'Artist: Sequence2'
           'Maze: Sequence2': 'Maze: Sequence2'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Artist: Nested Loops': 'Umjetnik: Ugniježdene Petlje'
           description_audience: Ages  6+ (reading required)
           description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: Labirint
-          'Studio: Create a Story': 'Play Lab: Create a Story'
+          'Studio: Create a Story': 'Laboratorij Igara: Napravi Priču'
           The Artist: Umjetnik
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
+          Bee Conditionals: 'Pčela: Uvjeti'
           Bee Nested Loops: Bee Nested Loops
           Bee Debuggin: Bee Debuggin
           Bee Debugging: Bee Debugging
@@ -107,61 +108,61 @@
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Računarsko razmišljanje
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Functional Suncatchers: Funkcionalni Vitraži
+          Songwriting Parameters: Parametri za Pisanje Pjesama
+          Dice Race: Utrka Kockica
           Internet: Internet
           Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: Farmer - While Loops
-          description: Course 3 is designed for students who have taken Course 2.
-            Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-5.
-          'Studio: Create a Game': 'Play Lab: Create a Game'
-          Maze: Maze
-          Artist: Artist
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Functions': 'Bee: Functions'
+          Digital Citizenship: Digitalno Državljanstvo
+          Farmer - While Loops: Farmer - Dok Petlje
+          description: Kurs 3 je namijenjen učenicima koji su odradili Kurs 2. Učenici
+            će ući dublje u tematiku programiranja iz prethodnog kursa da bi mogli
+            stvarati fleksibilna rješenja za kompleksne zadatke. Do kraja ovog kursa,
+            učenici će moći napraviti priče i igrice koje mogu dijeliti sa prijateljima.
+            Preporučuje se za 4-5 razred.
+          'Studio: Create a Game': 'Laboratorij Igara: Napravi Igru'
+          Maze: Labirint
+          Artist: Umjetnik
+          'Artist: Functions': 'Umjetnik: Funkcije'
+          'Bee: Functions': 'Pčela: Funkcije'
           'Bee: Conditionals': 'Bee: Conditionals'
-          'Maze: Conditionals': 'Maze: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Maze: Conditionals': 'Labirint: Uvjeti'
+          'Artist: Nested Loops': 'Umjetnik: Ugniježdene Petlje'
+          'Farmer: While Loops': 'Farmer: Dok Petlje'
+          'Bee: Nested Loops': 'Pčela: Ugniježdene petlje'
           'Bee: Debugging': 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
-          'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'Bee: Functions2'
-          'Bee: Conditionals2': 'Bee: Conditionals2'
-          'Maze: Conditionals2': 'Maze: Conditionals2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
-          'Farmer: While Loops2': 'Farmer: While Loops2'
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
-          'Bee: Debugging2': 'Bee: Debugging2'
+          Maze2: Labirint2
+          Artist2: Umjetnik2
+          'Artist: Functions2': 'Umjetnik: Funkcije 2'
+          'Bee: Functions2': 'Pčela: Funkcije 2'
+          'Bee: Conditionals2': 'Pčela: Uvjeti2'
+          'Maze: Conditionals2': 'Labirint: Uvjeti2'
+          'Artist: Nested Loops2': 'Umjetnik: Ugniježdene petlje2'
+          'Farmer: While Loops2': 'Farmer: Dok Petlje2'
+          'Bee: Nested Loops2': 'Pčela: Ugniježdene Petlje2'
+          'Bee: Debugging2': 'Pčela: Ispravljanje pogrešaka2'
           'Artist: Patterns': 'Artist: Patterns'
           Songwriting: Pisanje pjesama
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Godine 8+ (poslije Kursa 2)
+          description_short: Kurs 3 je nastavak Kursa 2.
         msm:
-          title: Middle School Math
-          description: Private work in progress for Middle School Math.
+          title: Srednjoškolska Matematika
+          description: Privatni rad u toku za Srednjoškolsku Matematiku.
           Graph Paper Programming: Papirno Programiranje Grafikona
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
-          'Artist: Strings and Images': 'Artist: Strings and Images'
-          Contracts: Contracts
-          'Artist: Writing Contracts': 'Artist: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          'Artist: Defining Functions': 'Artist: Defining Functions'
-          'Play Lab: Defining Functions': 'Play Lab: Design Recipe'
-          'Artist: Functions': 'Artist: Functions'
+          Assessments: Procjene
+          Unit 1: Jedinica 1
+          Unit 2: Jedinica 2
+          Ninja Cat and the Coordinate Plane: Ninja Mačak i Koordinatna Ravan
+          'Calc: Circles of Evaluation': 'Calc: Krugovi Izvršenja'
+          'Artist: Strings and Images': 'Umjetnik: Nizovi Karaktera i Slike'
+          Contracts: Ugovori
+          'Artist: Writing Contracts': 'Umjetnik: Pisanje Ugovora'
+          'Calc: Defining Variables': 'Calc: Definisanje Varijabli'
+          'Play Lab: Defining Variables': 'Laboratorij igara: Definiranje varijabli'
+          The Design Recipe: Recept za Dizajn
+          'Artist: Defining Functions': 'Umjetnik: Definiranje Funkcija'
+          'Play Lab: Defining Functions': 'Laboratorij igara: Recept za Dizajn'
+          'Artist: Functions': 'Umjetnik: Funkcije'
           'Play Lab: Animation': 'Play Lab: Animation'
           Booleans: Booleans
           'Play Lab: Booleans': 'Play Lab: Booleans'
@@ -198,7 +199,7 @@
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
           'Eval: Fast Functions': 'Eval: Fast Functions'
-          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
+          'Play Lab: Design Recipe': 'Laboratorij igara: Recept za Dizajn'
           'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
           title: Play Lab
@@ -206,201 +207,198 @@
           Play Lab: Play Lab
           description_short: Create a story or make a game with Play Lab!
         artist:
-          title: Artist
+          title: Umjetnik
           description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
+          Artist: Umjetnik
           description_short: Draw cool pictures and designs with the Artist!
         scrat:
           title: Scrat
           description_short: Scrat short description.
           description: Scrat long description
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Labirint: Slijed'
         hourofcode:
-          Maze: Maze
+          Maze: Labirint
           title: Sat Kodiranja
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Isprobaj osnove računarstva sa karakterima kao što su Angry
+            Birds, Plants vs. Zombies i Scrat iz Ice Age!
+          description_short: Pokušaj osnove računarstva sa mnogim zabavnim karakterima!
         frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
-          Artist: Artist
+          title: Programiraj sa Anna i Elsa
+          description: Hajde da programiramo sa Anna-om i Elsom pri njihovom istraživanju
+            magičnog i predivnog leda. Napraviti ćeš pahulje snijega dok se kližeš
+            i praviš zimsku idilu koju možeš onda podijeliti sa svojim prijateljima!
+          Artist: Umjetnik
           description_short: Hajde da se kodiranjem pridružimo Anni i Elsi dok istražuju
             čaroliju i ljepotu leda.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Učenici koji uzimaju Kurs 4 bi trebali prvo odraditi
+            Kurseve 2 i 3.
+          description: Kurs 4 je napravljen za studente koji su uzeli Kurseve 2 i
+            3. Učenici će ući duplje u programsku tematiku koju su vidjeli u prethodnim
+            kursevima. To će im omogućiti da pravi fleksibilna rješenja za kompleksnije
+            probleme. Do kraja ovog kursa, učenici će napraviti interaktivne priče
+            i igrice koje mogu dijeliti sa bilo kim. Preporučeno za dob od  9-13.
+          'Artist: Variables': 'Umjetnik: Varijable'
+          'Bee: For Loops': 'Pčela: Od-Do-Za Petlje'
+          title: Kurs 4
+          'Algorithms: Tangrams': 'Algoritmi: Tangrami'
           Variables: Varijable
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
-          'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: Artist
-          Bee: Bee
-          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-          'Unplugged: Madlibs': 'Unplugged: Madlibs'
-          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-          'Unplugged: Binary': 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          'Play Lab: Variables': 'Laboratorij Igara: Varijable'
+          'Play Lab: Functions with Parameters': 'Laboratorij Igara: Funkcije s Parametrima'
+          'Bee: Functions with Parameters': 'Pčela: Funkcije s Parametrima'
+          'Artist: For Loops': 'Umjetnik: Od-Do-Za Petlje'
+          'Play Lab: For Loops': 'Laboratorij Igara: Od-Do-Za Petlje'
+          'Artist: Functions': 'Umjetnik: Funkcije'
+          'Artist: Functions with Paraqmeters': 'Umjetnik: Funkcije s Parametrima'
+          'Unplugged: Tangrams': 'Izvanmrežno: Tangrami'
+          Artist: Umjetnik
+          Bee: Pčela
+          'Unplugged: Envelope Variables': 'Izvanmrežno: Varijable Omotnice'
+          'Unplugged: Madlibs': 'Izvanmrežno: Madlibs'
+          'Unplugged: For Loop Fun': 'Izvanmrežno: Zabava sa Od-Do-Za Petljom'
+          'Unplugged: Songwriting with Parameters': 'Izvanmrežno: Pisanje pjesama
+            s parametrima'
+          'Artist: Functions with Parameters': 'Umjetnik: Funkcije s Parametrima'
+          'Unplugged: Binary': 'Izvanmrežno: Binarni'
+          Bee Binary: 'Pčela: Binarno'
+          Farmer Binary: 'Farmer: Binarno'
+          Maze and Bee: Labirint i Pčela
+          Artist Binary: Umjetnik Binarno
+          description_audience: Dob 10+ (nakon Kursa 3)
         Course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          title: Preduvjeti za Kurs 4
+          description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli
+            Kurseve 2 i 3.
+          description: Kratko objašnjenje pojmova za učenike koji nisu prošli Kurseve
+            2 i 3.
+          Course 4 Prerequisite: Preduvjeti za Kurs 4
+          'Maze: Sequence': 'Labirint: Slijed'
+          'Artist: Sequence': 'Umjetnik: Slijed'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Nested Loops': 'Umjetnik: Ugniježdene Petlje'
+          'Farmer: While Loops': 'Farmer: Dok Petlje'
+          'Bee: Nested Loops': 'Pčela: Ugniježdene petlje'
+          'Artist: Functions': 'Umjetnik: Funkcije'
           'Bee: Debugging': 'Bee: Debugging'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          Intro: Uvod
+          Variables and For Loops: Varijable i Od-Do-Za Petlje
+          Functions and Functions with Parameters: Funkcije i Funkcije sa Parametrima
+          title: Testiranje Upotrebljivosti
           description_short: ''
-          description: A selection of Course 4 levels for usability testing.
+          description: Izbor nivoa iz Kursa 4 za testiranje upotrebljivosti.
           Variables: Varijable
-          For Loops: For Loops
+          For Loops: Od-Do-Za Petlje
           Binary: Binarno
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: posebno
+          description_short: posebno
+          description: posebno
+          Special: Posebno
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: posebno
+          description_short: posebno
+          description: posebno
+          Special: Posebno
           Binary: Binarno
         usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
+          title: Upotrebljivost Srednjoškolska Matematika
+          description_short: Test upotrebljivosti za srednjoškolsku matematiku
+          description: Test upotrebljivosti za srednjoškolsku matematiku
+          Usability testing for MSM: Test upotrebljivosti za MSM
+          Evaluation Blocks: Blokovi Izvršenja
           Blocks to Math: Blocks to Math
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
+          Strings and Images: Nizovi Karaktera i Slike
+          Defining Variables: Definiranje Varijabli
+          Defining Functions: Definiranje Funkcija
+          Design Recipe: Recept za Dizajn
           Booleans: Booleans
           Conditionals: Uvjeti
-          Free Play: Free Play
+          Free Play: Slobodno Igranje
         algebra:
-          title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
+          title: Računarstvo u Algebri
+          description: Nauči Funkcionalno Programiranje kroz Algebru
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
             and Coordinate Planes'
-          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Calc: Evaluation Blocks': Blokovi Izvršenja i Aritmetički Izrazi
+          'Eval: Strings and Images': Nizovi Karaktera i Slike
+          'Unplugged: Contracts': 'Izvanmrežno: Ugovori, Domene i Opsezi'
+          'Eval: Writing Contracts': Pisanje Ugovora
+          'Calc: Defining Variables': Definiranje Varijabli i Zamjenivanje
+          'Play Lab: Defining Variables (Big Game)': Velika Igra - Varijable
+          'Eval: Defining Functions': Kompozitne Funkcije
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Defining Functions': Visina Rakete
+          'Eval: Functions': Rješavanje Svjetskih Problema sa Receptom za Dizajn
+          'Play Lab: Animation (Big Game)': Velika Igra - Animacija
+          'Unplugged: Booleans': 'Izvanmrežno: Logičke varijable i Logika'
+          'Eval: Boolean Operators': Logički Operatori
+          'Play Lab: Booleans': Šišmiš Sem
+          'Play Lab: Boolean (Big Game)': Velika Igra - Logičke Varijable i Vrijednosti
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
           'Eval: Conditionals': Uvjeti
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
+          'Unplugged: Collision Detection and the Distance Formula': 'Izvanmrežno:
+            Detekcija Sudara i Pitagorina Teorema'
+          'Play Lab: Collision Detection (Big Game)': Velika Igra - Detekcija Sudara
         infinity:
-          title: Play Lab
-          description_short: Create a story or make a game with Play Lab!
-          description: Create a story or make a game with Play Lab!
+          title: Disney Beskonačni Laboratorij Igranja
+          description_short: Upotrijebi Laboratorij Igranja da bi napravio/la priču
+            ili igru u kojoj igraju karakteri Disney Beskonačnost.
+          description: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili
+            igru u kojoj igraju karakteri Disney Beskonačnost.
           Play Lab: Play Lab
           Infinity: Beskonačnost
         algebrademo:
           title: Algebra Demo
-          description_short: A handful of puzzles to demonstrate the environment and
-            programming language used in Code.org CS in Algebra
-          description: A handful of puzzles to demonstrate the environment and programming
-            language used in Code.org CS in Algebra
+          description_short: Evo nekoliko zadataka za demonstraciju okruženja i programskog
+            jezika korištenog u Code.org Računarstvo za Algebru
+          description: Evo nekoliko zadataka za demonstraciju okruženja i programskog
+            jezika korištenog u Code.org Računarstvo za Algebru
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
-          Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
-          Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          Evaluation Blocks: Blokovi Izvršenja
+          Making Pictures: Pravljenje Slika
+          Defining Variables: Definiranje Varijabli
+          Defining Simple Functions: Definiranje Jednostavnih Funkcija
+          The Design Recipe: Recept za Dizajn
         K5PD:
-          title: K5 Professional Development
-          description: Professional Development for K5 Courses
-          description_short: Professional Development for K5 Courses
-          Introduction to PD: Introduction to PD
-          Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
-          Navigating the teacher dashboard: Navigating the teacher dashboard
-          Unplugged lessons: Unplugged lessons
-          Classroom Culture: Classroom Culture
+          title: Profesionalni Razvoj za 5-11 dob
+          description: Profesionalni razvoj za Kurseve za dob 5-11
+          description_short: Profesionalni razvoj za Kurseve za dob 5-11
+          Introduction to PD: Uvod u Profesionalni Razvoj
+          Blockly Basics: Osnove Blockly-a
+          Writing computer programs: Pisanje kompjuterskih programa
+          Navigating the teacher dashboard: Navigacija kroz nastavničku radnu podlogu
+          Unplugged lessons: Izvanmrežne lekcije
+          Classroom Culture: Kultura Razreda
           Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and
             3
-          K-5 Courses: K-5 Courses
-          Writing computer programs in Blockly: Writing computer programs in Blockly
+          K-5 Courses: Kursevi za 5-11 dob
+          Writing computer programs in Blockly: Pisanje kompjuterskih programa u Blockly
           Teacher Dashboard: Nadzorna Ploča za Nastavnike
-          Personal Reflection: Personal Reflection
-          Next Steps: Next Steps
-          Computer Science Pedagogy: Computer Science Pedagogy
+          Personal Reflection: Privatna Razmišljanja o Napretku
+          Next Steps: Slijedeći Koraci
+          Computer Science Pedagogy: Pedagogija Računarstva
+          Programming Concepts: Programming Concepts
         netsim:
           title: Internet Simulator
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
-          Unit 1: Unit 1
-          Unit 2: Unit 2
-          Sending Bits: Sending Bits
-          Routing and DNS: Routing and DNS
-          'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
-          'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
-          Internet Simulator Templates: Internet Simulator Templates
-        Infinity:
-          title: Infinity Playlab
-          description_short: Create a story or make a game with Infinity Play Lab!!
-          description: Create a story or make a game with Infinity Play Lab!
-          Infinity: Beskonačnost
+          Unit 1: Jedinica 1
+          Unit 2: Jedinica 2
+          Sending Bits: Slanje Bit-a
+          Routing and DNS: Usmjeravanje (routing) i DNS
+          'Unit 1: Sending Bits': 'Jedinica 1: Slanje Bit-a'
+          'Unit 2: Routing and DNS': 'Jedinica 2: Usmjeravanje i DNS'
+          Internet Simulator Templates: Internet Simulator Uzorci
         pixelation:
-          title: Pixelation
+          title: Pikselizacija
           description: Create images with bits and bytes.
-          Pixelation: Pixelation
+          Pixelation: Pikselizacija
         20-hour:
-          title: Uvod u informatiku za osnovnu školu (15-25 sati)
+          title: 20-satni Uvodni Kurs
           description: Ovaj 20-satni kurs objašnjava osnovne koncepte programiranja
             i nformatike. Kurs je namijenjen za korištenje u nižim razredima osnovne
             škole, ali je zabavan za učenje bez obzira na dob polaznika.
@@ -456,79 +454,103 @@
           description: ''
           Hour of Code 2013: Hour of Code 2013
         Code Studio Puzzle Challenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Izazov Studija Kodiranja
+          description_short: Izazovi sam/a sebe!
+          description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
+          Puzzles: Zadaci
         CodeStudioPuzzleChallenge:
-          title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Izazov Studija Kodiranja
+          description_short: Izazovi sam/a sebe!
+          description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
+          Puzzles: Zadaci
         Test - Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Izazov Test Studija Kodiranja
+          description_short: Izazovi sam/a sebe!
+          description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
+          Puzzles: Zadaci
         How to do the Code Studio Puzzle Challenge:
-          title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Izazov Test Studija Kodiranja
+          description_short: Izazovi sam/a sebe!
+          description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
+          Puzzles: Zadaci
         Tutorial - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Tutorial - Izazov Studija Kodiranja
+          description_short: Izazovi sam/a sebe!
+          description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
+          Puzzles: Zadaci
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: Tutorial - Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
-          Puzzles: Puzzles
+          title: Tutorial - Izazov Studija Kodiranja
+          description_short: Izazovi sam/a sebe!
+          description: Isprobaj ove zabavne zadatke kodiranja. Daj sve od sebe!
+          Puzzles: Zadaci
         course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          title: Preduvjeti za Kurs 4
+          description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli
+            Kurseve 2 i 3.
+          description: Kratko objašnjenje pojmova za učenike koji nisu prošli Kurseve
+            2 i 3.
+          Course 4 Prerequisite: Preduvjeti za Kurs 4
+          'Maze: Sequence': 'Labirint: Slijed'
+          'Artist: Sequence': 'Umjetnik: Slijed'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Nested Loops': 'Umjetnik: Ugniježdene Petlje'
+          'Farmer: While Loops': 'Farmer: Dok Petlje'
+          'Bee: Nested Loops': 'Pčela: Ugniježdene petlje'
+          'Artist: Functions': 'Umjetnik: Funkcije'
           'Bee: Debugging': 'Bee: Debugging'
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
-          Lesson14: Lesson14
-          Lesson 14: Lesson 14
-          Lesson 14 v2: Lesson 14 v2
-          Lesson 15: Lesson 15
-          description_short: Make Black and White Images with the pixelation tool
-          Lesson 8: Lesson 8
-          Lesson 5: Lesson 5
-          Lesson 3: Lesson 3
-          Lesson 4: Lesson 4
+          title: SK Jedinica 1 - Digitalna Informacija
+          description_short: Istraži kako je digitalna informacija predstavljena i
+            prenešena
+          description: Ova jedinica istražuje neke tehničke izazove i pitanja koja
+            se pojave pri potrebi da se predstavi digitalna informacija u kompjuterima
+            i da se ona prenese imeđu ljudi i uređaja.
+          Lesson14: Lekcija14
+          Lesson 14: Lekcija 14
+          Lesson 14 v2: Lekcija 14 v2
+          Lesson 15: Lekcija 15
+          Lesson 8: Lekcija 8
+          Lesson 5: Lekcija 5
+          Lesson 3: Lekcija 3
+          Lesson 4: Lekcija 4
+          Lesson 6: Lekcija 6
+          Lesson 2: Lekcija 2
+          Lesson 7: Lekcija 7
+          Lesson 1: Lekcija 1
+          Innovation: Inovacija
+          Sending Binary Messages: Slanje Binarnih Poruka
+          Sending More Complex Messages: Slanje Komplikovanijih Poruka
+          Bit Sending Widget: Mali Program za Slanje Bit-a
+          Sending Bits in the Real World: Slanje Bita u Stvarnom Svijetu
+          Number Systems: Brojčani Sistemi
+          Binary Numbers: Binarni Brojevi
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
+            Information'
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
         algebraPD:
-          title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          title: Računarstvo u Algebri Profesionalni Razvoj
+          description: Predaji Funkcionalno Programiranje kroz Algebru
+          'Unplugged: Video Games and Coordinate Planes': 'Izvanmrežno: Video Igrice
+            i Koordinatne Ravni'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
           'Eval: Strings and Images': 'Eval: Strings and Images'
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Calc: Defining Variables': 'Calc: Definisanje Varijabli'
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
             (Big Game)'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Eval: Defining Functions': 'Eval: Definiranje Funkcija'
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Defining Functions': 'Laboratorij Igara: Definiranje Funkcija'
+          'Eval: Functions': 'Eval: Funkcije'
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
           'Unplugged: Booleans': 'Unplugged: Booleans'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
@@ -541,32 +563,54 @@
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Contracts: Contracts
+          Evaluation Blocks: Blokovi Izvršenja
+          Strings and Images: Nizovi Karaktera i Slike
+          Contracts: Ugovori
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Recept za Dizajn
           Your Game - Animation: Your Game - Animation
           Booleans: Booleans
-          Sam the Bat: Sam the Bat
+          Sam the Bat: Šišmiš Sem
           Your Game - Booleans: Your Game - Booleans
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Uvod u Profesionalni Razvoj
         algPDmiami:
-          title: Computer Science in Algebra PD
+          title: Računarstvo u Algebri Profesionalni Razvoj
           description: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Blokovi Izvršenja
+          Strings and Images: Nizovi Karaktera i Slike
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
           Booleans: Booleans
-          Sam the Bat: Sam the Bat
+          Sam the Bat: Šišmiš Sem
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Uvod u Profesionalni Razvoj
+        CSPLessonSamples:
+          title: Studio Kodiranja Primjeri za Lekciju
+          description_short: primjeri lekcije za studio kodiranja
+          Lesson 14: Lekcija 14
+          Lesson 15: Lekcija 15
+        ECSPD:
+          Introduction to PD: Uvod u Profesionalni Razvoj
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: Uvod u Profesionalni Razvoj

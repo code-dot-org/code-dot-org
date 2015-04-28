@@ -32,7 +32,7 @@ var DashboardUser = module.exports = function () {
 
   /**
    * Queue of callbacks to hit when this object gets initialized.
-   * @type {Array[Function]}
+   * @type {function[]}
    * @private
    */
   this.whenReadyCallbacks_ = [];

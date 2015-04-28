@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150323201349) do
+ActiveRecord::Schema.define(version: 20150423215833) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -63,6 +63,14 @@ ActiveRecord::Schema.define(version: 20150323201349) do
 
   add_index "cohorts", ["name"], name: "index_cohorts_on_name", using: :btree
   add_index "cohorts", ["program_type"], name: "index_cohorts_on_program_type", using: :btree
+
+  create_table "cohorts_deleted_users", id: false, force: true do |t|
+    t.integer "user_id",   null: false
+    t.integer "cohort_id", null: false
+  end
+
+  add_index "cohorts_deleted_users", ["cohort_id", "user_id"], name: "index_cohorts_deleted_users_on_cohort_id_and_user_id", using: :btree
+  add_index "cohorts_deleted_users", ["user_id", "cohort_id"], name: "index_cohorts_deleted_users_on_user_id_and_cohort_id", using: :btree
 
   create_table "cohorts_districts", force: true do |t|
     t.integer "cohort_id",    null: false
@@ -265,6 +273,7 @@ ActiveRecord::Schema.define(version: 20150323201349) do
     t.boolean  "trophies",        default: false, null: false
     t.boolean  "hidden",          default: false, null: false
     t.integer  "user_id"
+    t.boolean  "login_required",  default: false, null: false
   end
 
   add_index "scripts", ["name"], name: "index_scripts_on_name", unique: true, using: :btree
@@ -401,7 +410,7 @@ ActiveRecord::Schema.define(version: 20150323201349) do
 
   create_table "users", force: true do |t|
     t.string   "email",                                   default: "",      null: false
-    t.string   "encrypted_password",                      default: "",      null: false
+    t.string   "encrypted_password",                      default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -443,11 +452,22 @@ ActiveRecord::Schema.define(version: 20150323201349) do
     t.datetime "deleted_at"
     t.string   "secret_words"
     t.text     "properties"
+    t.string   "invitation_token"
+    t.datetime "invitation_created_at"
+    t.datetime "invitation_sent_at"
+    t.datetime "invitation_accepted_at"
+    t.integer  "invitation_limit"
+    t.integer  "invited_by_id"
+    t.string   "invited_by_type"
+    t.integer  "invitations_count",                       default: 0
   end
 
   add_index "users", ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
   add_index "users", ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
   add_index "users", ["hashed_email", "deleted_at"], name: "index_users_on_hashed_email_and_deleted_at", using: :btree
+  add_index "users", ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
+  add_index "users", ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
+  add_index "users", ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
   add_index "users", ["prize_id", "deleted_at"], name: "index_users_on_prize_id_and_deleted_at", unique: true, using: :btree
   add_index "users", ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
   add_index "users", ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
@@ -467,9 +487,10 @@ ActiveRecord::Schema.define(version: 20150323201349) do
   create_table "workshop_attendance", force: true do |t|
     t.integer  "teacher_id", null: false
     t.integer  "segment_id", null: false
-    t.string   "status",     null: false
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "notes"
   end
 
   add_index "workshop_attendance", ["segment_id"], name: "index_workshop_attendance_on_segment_id", using: :btree

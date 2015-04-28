@@ -62,7 +62,7 @@ CustomGameLogic.prototype.getVar_ = function (key) {
 };
 
 CustomGameLogic.prototype.getFunc_ = function (key) {
-  return this.resolveCachedBlock_(key);
+  return this.resolveCachedBlock_(key) || function () {};
 };
 
 module.exports = CustomGameLogic;

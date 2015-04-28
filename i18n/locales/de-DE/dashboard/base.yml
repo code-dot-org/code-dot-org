@@ -42,7 +42,7 @@ de:
   less: WENIGER
   beta: Beta
   try_hoc: 'Probiere "The Hour of Code" aus, klicke hier >> '
-  try_k8intro: Versuche unseren Einführungskurs in die Informatik (15-25 Stunden)
+  try_k8intro: Probiere unseren Einführungskurs in die Informatik (15-25 Stunden)
   k8intro: Einführung in die Informatik (15-25 Stunden)
   already_started: 'Schon begonnen? Hier fortsetzen >> '
   demos: 'Admin: Alle Demos'
@@ -68,9 +68,9 @@ de:
     overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen und ihren Lernfortschritt zu verfolgen.'
     no_signup_message: 'Du kannst <a target="_blank" href="http://learn.code.org">die verschiedenen Level und Puzzle</a> durchsuchen, aber um Deinen Fortschritt zu speichern musst Du dich anmelden.'
     teacher_educator_guide: Lehrer-Handbuch
-    teacher_pitch: Registrierung für LehrerInnen
-    teacher_title: Anmelden (Lehrer)
-    student_pitch: Anmeldung für SchülerInnen
+    teacher_pitch: Lehrer-Registrierung für Code.org
+    teacher_title: Registrierung (Lehrer)
+    student_pitch: Schüler-Registrierung für Code.org
     student_title: Registrierung für Schüler
     school_name: Name der Schule (optional)
     school_address: Adresse der Schule (optional)
@@ -98,8 +98,8 @@ de:
     submit: Anmelden
   signin:
     try_heading: Willst Du mit dem Programmieren anfangen, ohne Dich anzumelden?
-    try_hoc: Versuche zuerst eine Hour of Code
-    try_20hours: Versuche unsere 20-stündige Einführung in die Informatik
+    try_hoc: Probiere zuerst eine Hour of Code
+    try_20hours: Probiere unsere 20-stündige Einführung in die Informatik
   signinsection:
     welcome: 'Willkommen im Kapitel %{section_name}'
     name: Wähle deinen Namen
@@ -110,7 +110,7 @@ de:
     reset_form:
       title: Passwort vergessen?
       email: E-Mail-Adresse
-      submit: Sende mir Anweisungen um das Kennwort zurückzusetzen
+      submit: Sende mir Anweisungen um das Passwort zurückzusetzen
     change_form:
       title: Ändern Sie Ihr Passwort
       new_password: Neues Passwort
@@ -129,7 +129,7 @@ de:
   follower:
     invite_sent: Einladung gesendet
     added_teacher: '%{name} wurde als Ihr Lehrer hinzugefügt'
-    registered: 'Sie haben Sich registriert als %{section_name}.'
+    registered: 'Sie haben Sich für %{section_name} registriert.'
     error:
       signed_in: Bitte melden Sie sich ab bevor Sie fortfahren
       username_not_found: 'Benutzername %{username} wurde nicht gefunden'
@@ -222,6 +222,7 @@ de:
         artist: Zeichne etwas
     user:
       classroom: Lehrer-Homepage
+      district_dashboard: District Dashboard
       label: 'Hallo %{username}'
       stats: Mein Fortschritt
       settings: Mein Account
@@ -269,7 +270,7 @@ de:
       add: Schüler hinzufügen
       remove: Schüler entfernen
       confirm_remove: Sind Sie sicher, dass Sie diesen Schüler entfernen möchten?
-      help_reassign: Um die Klasse in mehrere Abschnitte zu unterteilen, wählen Sie die Studenten aus, die einem neuen Abschnitt zugewiesen werden sollen.
+      help_reassign: Um die Klasse in mehrere Abschnitte zu unterteilen, wählen Sie die Schüler aus, die einem neuen Abschnitt zugewiesen werden sollen.
       help_register: Anstatt viel Zeit damit zu verbringen die Schülerdaten zu importieren, können Sie ihre Klasse registrieren indem sich jeder Schüler selbst anmeldet. Ihre Schüler müssen dazu einen Username und ein Passwort angeben, jedoch keine Email-Adresse. Falls ein Schüler sein Passwort vergessen sollte, so können Sie dieses für ihn zurücksetzen.
       register: Fordern Sie ihre Schüler auf, sich selbst anzumelden
       vist: Fordern Sie Ihre Schüler auf, die Seite zu besuchen
@@ -294,7 +295,7 @@ de:
       email: Als e-Mail senden
     rollup: Fortschrittsanzeige
     activity: Letzte Aktivitäten der Klasse
-    user_not_found: Der Lehrer oder Student konnte nicht gefunden werden
+    user_not_found: Der Lehrer oder Schüler konnte nicht gefunden werden
     cant_remove_student_no_email: '%{student_name} kann nicht von ihren Schülern entfernt werden, da %{student_name} nicht mit einer E-Mail-Adresse registriert ist'
     cant_remove_teacher_no_email: '%{teacher_name} kann nicht als dein Lehrer entfernt werden, da du keine E-Mail-Adresse registriert hast'
     student_teacher_disassociated: '%{teacher_name} wurde als Lehrerin für %{student_name} entfernt'
@@ -304,7 +305,7 @@ de:
     email_confirm_wrong_email: (Falsche E-Mail-Adresse?)
     email_resend_confirm: Anmeldebestätigung erneut senden
     new_password_hint: (freilassen, wenn Sie es nicht verändern möchten)
-    current_password_hint: (wir benötigen Ihr aktuelle Kennwort, um Ihre Änderungen zu bestätigen)
+    current_password_hint: (wir benötigen dein aktuelles Passwort, um deine Änderungen zu bestätigen)
     delete: Lösche deinen Account
     delete_text: Klicke auf den unteren Button um deinen Account zu löschen.
     delete_text_teacher_note: 'Bitte bemerke: Das Löschen deines Accounts wird nicht die Accounts deiner Schüler löschen.'
@@ -323,7 +324,7 @@ de:
     signin_message: 'Schon registriert? %{link}'
     student_reg_link: Studenten Anmeldung
     teacher_reg_link: Lehrer Anmeldung
-    signin_directions: 'Melde Dich an, um Deinen Fortschritt festzuhalten.<br/> LehrerInnen können den Fortschritt der gesamten Klasse verfolgen.'
+    signin_directions: 'Melde Dich an, um Deinen Fortschritt festzuhalten.<br/> Lehrer können den Fortschritt der gesamten Klasse verfolgen.'
     teacher_dashboard: Fortschrittsanzeige einsehen
     teacher_student_count_one: 'Sie haben %{count} Schüler.'
     teacher_student_count: 'Sie haben %{count} Studenten.'
@@ -343,14 +344,15 @@ de:
     trynow: Probiere es jetzt aus
     add_hint_help: Bitte helfen Sie uns nützliche Hinweise zu Code.org Tutorials hinzuzufügen
     20hour_overview: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.'
-    test_videos_help: Testen Sie unseren neuen Video-Player an Ihrer Schule
+    test_videos_help: Teste unseren neuen Video-Player an deiner Schule
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Schüler der Schulstufen 1-6
     use_as_teacher: Verwende diese Seite als Lehrer
     heading_hoc2014: '<h2>Die Hour of Code für</h2><h1>jedes Alter</h1>'
     heading_elementary: '<h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>'
     heading_apps: '<h2>Spass für</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>'
-    your_gallery: Gallerie
+    your_gallery: Galerie
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Männlich
     female: Weiblich
@@ -434,12 +436,15 @@ de:
       body: Versuche unseren 20-Stunden Informatik-Einführungskurs.
     hoc2014:
       try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde aus
-      try_frozen: Künstler mit Anna und Elsa, aus Gefrorenem
+      try_frozen: Künstler mit Anna und Elsa, aus Die Eiskönigin
     gallery:
-      title: Gallerie
+      title: Galerie
       body: Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die von unseren Nutzern erstellt wurden
     frozen:
-      title: Gefroren
+      title: Die Eiskönigin
+    infinity:
+      title: Infinity Spiele Lab
+      body: Benutze den Spiele Lab, um eine Geschichte oder ein Spiel mit dem Disney Infinity Charakteren z u erstellen.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -449,7 +454,7 @@ de:
     more: 'Mehr &rarr;'
     caption_by_name_age: 'Von%{name}, Alter %{age}'
     caption_time_ago: '%{time_ago} früher'
-    header: Gallerie
+    header: Galerie
     header_playlab: Play Lab
     header_artist: Künstler
   landing:
@@ -469,6 +474,14 @@ de:
     wrong_body: Die Lösung, die du eingegeben hast, ist nicht korrekt. Bitte versuche es erneut!
     correct_title: Richtig
     correct_body: Das ist die richtige Antwort.
+  contract_match:
+    wrong_title: Falsche Antwort
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Gebe hier deine Antwort ein
   dialog:
@@ -514,8 +527,8 @@ de:
     sign_out: 'Solten sie ihr Alter nicht angeben wollen können sie sich noch<a href="%{url}"> abmelden</a>.'
   zendesk_too_young_message: 'Tut uns leid, jüngere Benutzer dürfen sich für unsere Hilfeseite nicht anmelden. Du kannst <a href="http://support.code.org">support.code.org</a> durchsuchen ohne dich anzumelden oder frag deine Eltern oder Lehrer uns zu kontaktieren.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: Nicht gestartet
+    in_progress: In Bearbeitung
     completed_too_many_blocks: abgeschlossen, zu viele Blöcke
     completed_perfect: Abgeschlossen, perfekt
     furthest_level_attempted: Höchste Ebene versucht
@@ -525,31 +538,33 @@ de:
     completed_courses: Abgeschlossene Kurse
     all_courses: Alle Kurse
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projekte
+    create: Projekt erstellen
+    create_a_project: 'Ein neues Projekt erstellen:'
+    new: Neu erstellen
+    rename: Umbenennen
     save: Speichern
     delete: Löschen
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Zurück zum Kurs
+    my_projects: Meine Projekte
     share: Teilen
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Teile Dein Projekt
+    share_copy_link: 'Kopiere den Link:'
+    close: Schliessen
     more: Mehr
     name: Name
-    updated: Updated
-    project_type: Project Type
+    updated: Aktualisiert
+    project_type: Projekttyp
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    need_help: Brauchen sie Hilfe bei den ersten Schritten?
     really_delete: Löschen?
     delete_yes: Ja
     delete_no: Nein
-    saved: Saved
-    not_saved: Not saved
+    saved: Gespeichert
+    not_saved: Nicht gespeichert
     cancel: Abbrechen
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Bist du dir sicher dass du dieses Projekt löschen möchtest?
+    delete_confirm_text: Wenn du dein Projekt löscht wird es dauerhaft aus der Liste deiner Projekte gelöscht. Jemand, der den freigegebenen Link verwendet wird nicht mehr in der Lage sein dein Projekt zu sehen.
+    view_all: Meine Projekte ansehen
+    remix: Remix
+    click_to_remix: 'Klicke auf "Remix" um Deine eigene Version zu erstellen!'

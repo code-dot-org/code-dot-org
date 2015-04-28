@@ -151,7 +151,7 @@ az:
   hoc_faq_frozen_q: Anna və Elza olan dərslik haradadır?
   hoc_faq_frozen_a: "O, indi <a href='http://code.org/learn'>Code.org/learn</a> ünvanında nəşr edilib. Ümid edirik ki, xoşunuza gəlir!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -198,7 +198,7 @@ az:
   events_orgs_title: Tərəfdaş təşkilatların təşkil etdiyi bütün Kod Saatı təədbirləri
   event: tədbir
   events: tədbirlər
-  footer_copyright_message: Copyright 2014 Code.org. Bütün hüquqları qorunur.
+  footer_copyright_message: Copyright 2015 Code.org. Bütün hüquqları qorunur.
   footer_trademark_message: 'Hour of Code™ "Code.org"-a aid ticarət markasıdır.'
   footer_menu_partners: Tərəfdaşlar
   footer_menu_contact: Bizimlə əlaqə

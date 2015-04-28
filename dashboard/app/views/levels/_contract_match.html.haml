@@ -10,7 +10,7 @@
 .contract
   - app = 'contract_match'
 
-  - options_to_colors = { None: "#999999", Number: "#00ccff", String: "#0099999", Image: "#9900cc", Boolean: "#336600" }
+  - options_to_colors = { None: "#000000", Number: "#00ccff", String: "#0099999", Image: "#9900cc", Boolean: "#336600" }
 
   .mainblock
     = render partial: 'levels/content', locals: {app: app, data: data}
@@ -22,14 +22,13 @@
 
 
   %div{style: 'display: none;'}
-    - ['badname', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
+    - ['badname', 'badname_case', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
       %div{id: "#{error_type}-dialogcontent"}
         .modal-content
           %p.dialog-title
-            =t('data.contract_match.errors.wrong_title')
+            =t('contract_match.wrong_title')
           %p
-            =t("data.contract_match.errors.#{error_type}")
+            =t("contract_match.#{error_type}")
           .farSide
             %button#ok-button.secondary
               =t('dialog.ok')
-

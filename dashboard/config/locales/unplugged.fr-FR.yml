@@ -290,12 +290,14 @@
           dirigés par de l'algèbre ! Explorez comment des expressions algébriques
           et le plan des coordonnées peuvent nous aider à comprendre comment fonctionnent
           des jeux vidéo, puis commencez à planifier le jeu vidéo que vous allez créer.
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contrats, domaine et gamme
         desc: Les contrats nous donnent un moyen de comprendre et de discuter des
           fonctions. Dans cette leçon, nous regarderons comment les contrats peuvent
           nous aider à comprendre un nouveau langage de programmation ou une nouvelle
           fonction.
+        video: alg_5_contracts
       DesignRecipe:
         title: La Recette de la Conception
         desc: Dans le dernier stade, des étudiants ont écrit quelques fonctions très
@@ -303,12 +305,14 @@
           réfléchie. La recette de la conception est une démarche structurée pour
           l'écriture de fonctions qui inclut la rédaction des scénarios de test pour
           s'assurer que la fonction fonctionne comme prévu.
+        video: alg_8_design_recipe
       Booleans:
         title: Les booléens et la logique
         desc: Les booléens sont le quatrième et dernier type de données que vous apprendrez
           dans ce cours. Dans cette activité, vous apprendrez quels sont les types
           booléens, et comment ils peuvent aider à nous écrire des fonctions qui raisonnent
           de façon logique
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Instructions conditionnelles et des fonctions par morceaux
         desc: Les paramètres que nous passons aux fonctions font varier les sorties
@@ -316,6 +320,7 @@
           créent des sorties qui suivent un certain schéma lorsqu'ils ont certaines
           valeurs, mais utilisent un schéma différent lorsqu'ils ont d'autres valeurs.
           C'est là où les conditions sont nécessaires...
+        video: alg_10_conditionals
       CollisionDetection:
         title: La détection de collision et le théorème de Pythagore
         desc: Déterminer quand des objets sur l'écran se touchent est un aspect important
@@ -323,3 +328,4 @@
           de Pythagore et la formule de Distance peuvent servir à mesurer la distance
           entre deux points sur le plan et décider ensuite si ces deux points (ou
           les personnages du jeu) se touchent.
+        video: alg_16_biggame_collision_detection

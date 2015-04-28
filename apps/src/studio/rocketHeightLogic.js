@@ -17,10 +17,21 @@ var RocketHeightLogic = function (studio) {
   // rocket and height for use in success/failure checking
   this.rocket = null;
   this.height = 0;
+
+  // Use by successCondition/failureCondition
+  this.SECONDS_TO_RUN = 8;
 };
 RocketHeightLogic.inherits(CustomGameLogic);
 
 RocketHeightLogic.prototype.onTick = function () {
+  if (this.studio_.tickCount === 1) {
+    // Make sure fields are properly initialized, for example if we've run
+    // and then reset.
+    this.last = Date.now();
+    this.seconds = 0;
+    this.rocket = this.studio_.sprite[this.rocketIndex];
+    this.height = 0;
+  }
 
   // Update the rocket once a second
   if (Date.now() - this.last < 1000) {
@@ -28,8 +39,6 @@ RocketHeightLogic.prototype.onTick = function () {
   }
   this.last = Date.now();
   this.seconds++;
-
-  this.rocket = this.studio_.sprite[this.rocketIndex];
 
   // Display the rocket height and time elapsed
   this.height = this.rocket_height(this.seconds) || 0;

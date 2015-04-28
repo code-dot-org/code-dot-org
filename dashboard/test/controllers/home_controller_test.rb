@@ -5,6 +5,11 @@ require 'time'
 class HomeControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
+  setup do
+    # stub properties so we don't try to hit pegasus db
+    Properties.stubs(:get).returns nil
+  end
+
   test "language is determined from cdo.locale" do
     @request.env['cdo.locale'] = "es-ES"
 
@@ -22,7 +27,7 @@ class HomeControllerTest < ActionController::TestCase
 
     assert_equal "es-ES", cookies[:language_]
 
-    assert_match "language_=es-ES; domain=.code.org; path=/; expires=#{10.years.from_now.rfc2822}"[0..-7], @response.headers["Set-Cookie"]
+    assert_match "language_=es-ES; domain=.code.org; path=/; expires=#{10.years.from_now.rfc2822}"[0..-15], @response.headers["Set-Cookie"]
 
     assert_redirected_to 'http://blahblah'
   end
@@ -260,4 +265,36 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
     assert_select '.alert', 0
   end
+
+  test 'show teacher-dashboard link when a teacher' do
+    teacher = create :teacher
+    sign_in teacher
+
+    get :index
+
+    assert_response :success
+    assert_select 'a[href=//test.code.org/teacher-dashboard]', 'Teacher Home Page'
+  end
+
+  test 'show ops-dashboard link when a district contact' do
+    contact = create(:district).contact
+    sign_in contact
+
+    get :index
+
+    assert_response :success
+    assert_select 'a[href=//test.code.org/ops-dashboard]', 'District Dashboard'
+  end
+
+  test 'student does not see links to ops dashbord or teacher dashboard' do
+    student = create :student
+    sign_in student
+
+    get :index
+
+    assert_response :success
+    assert_select 'a[href=//test.code.org/ops-dashboard]', 0
+    assert_select 'a[href=//test.code.org/teacher-dashboard]', 0
+  end
+
 end

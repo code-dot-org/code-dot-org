@@ -1,0 +1,38 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-16T18:57:14.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "more effort",
+        "correct": false
+      },
+      {
+        "text": "more strategies",
+        "correct": false
+      },
+      {
+        "text": "more engagement over longer periods of time",
+        "correct": false
+      },
+      {
+        "text": "more perseverance",
+        "correct": false
+      },
+      {
+        "text": "all of the above",
+        "correct": true
+      }
+    ],
+    "title": "Impact of Growth Mindset",
+    "content1": "Based on the video you saw before, please answer the following question."
+  },
+  "md5": "09ff3d70ca98863a0a9e170f3f3d0680"
+}]]></config>
+</Multi>

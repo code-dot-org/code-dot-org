@@ -1,6 +1,12 @@
 = render partial: 'devise/confirmations/alert'
 
 #landingpage
+  .lines_of_code_header
+    %a.lines_of_code_link{href: CDO.code_org_url('/loc')}
+      - loc = fetch_metrics['lines_of_code']
+      - loc = number_with_delimiter(loc, :delimiter => ',')
+      = t('home.lines_of_code', lines_count: loc)
+
   - if current_user
     .row#welcome
       .span9
@@ -15,7 +21,8 @@
       .row#continue
         .span12
           .padtopbottom{style: 'line-height: 1.5em'}
-            = render partial: 'shared/student_continue', locals: { include_finished: true }
+            - role_class = current_user.user_type
+            = render partial: 'shared/student_continue', locals: { include_finished: true, role_class: role_class }
 
     = render partial: 'home/projects'
 

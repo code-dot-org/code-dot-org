@@ -1,0 +1,12 @@
+name 'U1L2 Free response assessment question'
+title 'Assessment: Sending Binary Messages'
+content1 'Complete the Lesson 2 Rubric.'
+placeholder 'Enter your response here.'
+
+markdown <<MARKDOWN
+Respond in 100 words or less on this question: 
+
+What was the most challenging aspect of building a binary message device and how did you and your partner overcome it?
+
+
+MARKDOWN

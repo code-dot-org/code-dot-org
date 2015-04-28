@@ -1,0 +1,41 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-22T15:22:20.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What unit from the ECS curriculum are you most interested in?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Unit 1: Human Computer Interaction",
+        "correct": true
+      },
+      {
+        "text": "Unit 2: Problem Solving",
+        "correct": true
+      },
+      {
+        "text": "Unit 3: Web Design",
+        "correct": true
+      },
+      {
+        "text": "Unit 4: Introduction to Programming",
+        "correct": true
+      },
+      {
+        "text": "Unit 5: Computing and Data Analysis",
+        "correct": true
+      },
+      {
+        "text": "Unit 6: Robotics",
+        "correct": true
+      }
+    ],
+    "title": "ECS Curriculum",
+    "content1": "Based on what you just read about the ECS course, answer the following question"
+  }
+}]]></config>
+</Multi>

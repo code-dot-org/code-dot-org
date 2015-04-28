@@ -1,0 +1,20 @@
+name 'sciPD Intro'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+## Welcome!
+
+<img align="left" src="http://code.org/images/edquote1.png" height="900" width="400" hspace="20">
+
+**Welcome to the Online Professional Development for Code.org's Computer Science in Science Course.** 
+
+Code.org's professional development program prepares Science teachers to integrate computer science into existing curriculum and supports growth as a teacher. This online course is intended to be used in conjunction with our three phase professional development model, which includes a multi-day Summer workshop and mid-year check-ins. To ensure that you are prepared for each stage of PD, please be sure to complete the online units in order and during the appropriate timeframe.
+
+During this online course, you'll watch videos, read articles, do online activities, and discuss with other teachers the intersection of science and computer science. We want you to get excited to teach computer science, and let you explore writing computer programs on your own.
+
+Code.org and our community of engaged educators will be around for support at http://support.code.org during this PD experience and beyond.
+
+</br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

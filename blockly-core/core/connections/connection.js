@@ -556,6 +556,12 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
         return true;
       }
     }
+
+    // Don't offer to connect if the target is immovable
+    if (connection.targetConnection && !connection.targetBlock().isMovable()) {
+      return true;
+    }
+
     // Offering to connect the top of a statement block to an already connected
     // connection is ok, we'll just insert it into the stack.
     // Offering to connect the left (male) of a value block to an already
@@ -580,7 +586,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     if (connection.sourceBlock_.getDragging()) {
       connectionX += dx;
       connectionY += dy;
-    };
+    }
 
     var distX = currentX - connectionX;
     var distY = currentY - connectionY;
@@ -641,23 +647,13 @@ Blockly.Connection.prototype.acceptsType = function(type) {
  *     (to allow chaining).
  */
 Blockly.Connection.prototype.setCheck = function(check) {
-  if (check) {
+  if (check && check !== Blockly.BlockValueType.NONE) {
     // Ensure that check is in an array.
     if (!(check instanceof Array)) {
       check = [check];
     }
 
     this.check_ = check;
-
-    var legacyTypeFound = Blockly.Connection.findLegacyType_(check);
-    if (legacyTypeFound) {
-      /**
-       * Intended for temporary post-rename debugging
-       * Should not be hit by normal usage
-       * TODO(bjordan): Remove once confident no remaining usages
-       */
-      throw "Legacy type format found: " + legacyTypeFound;
-    }
 
     // The new value type may not be compatible with the existing connection.
     if (this.targetConnection && !this.checkAllowedConnectionType_(this.targetConnection)) {
@@ -676,29 +672,11 @@ Blockly.Connection.prototype.setCheck = function(check) {
 };
 
 /**
- * Tries to find a legacy type check on this connection
- * @returns {*}
- * @private
- * @param checkArray
+ * @returns {?Array.<Blockly.BlockValueType>}
  */
-Blockly.Connection.findLegacyType_ = function(checkArray) {
-  if (!checkArray) {
-    return false;
-  }
-  for (var i = 0; i < checkArray.length; i++) {
-    var type = checkArray[i];
-    if (Blockly.Connection.isLegacyType_(type)) {
-      return type;
-    }
-  }
-  return null;
+Blockly.Connection.prototype.getCheck = function () {
+  return this.check_;
 };
-
-Blockly.Connection.isLegacyType_ = function(type) {
-  var startsWithLowercase = /^[a-z]/.test(type);
-  return startsWithLowercase;
-};
-
 
 /**
  * Find all nearby compatible connections to this connection.

@@ -1,0 +1,15 @@
+#{@district_contact.ops_first_name} #{@district_contact.ops_last_name}
+from #{@district_contact.district_as_contact.try(:name)}
+modified cohort
+%a{href: "http:" + CDO.code_org_url("/ops-dashboard#/teacher-cohorts/#{@cohort.id}/teachers")} #{@cohort.name}
+%br
+- if @added_teachers.present?
+  added #{@added_teachers.count} teachers:
+  %ul
+    - @added_teachers.each do |teacher|
+      = render partial: 'teacher', locals: {teacher: teacher}
+- if @removed_teachers.present?
+  removed #{@removed_teachers.count} teachers:
+  %ul
+    - @removed_teachers.each do |teacher|
+      = render partial: 'teacher', locals: {teacher: teacher}

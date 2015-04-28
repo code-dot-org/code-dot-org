@@ -1,0 +1,12 @@
+<TextMatch>
+  <config><![CDATA[{
+  "game_id": 38,
+  "created_at": "2015-04-14T14:48:22.000Z",
+  "properties": {
+    "title": "Assessment 2: Text Compression",
+    "content1": "Write (in the space below) a segment of text that will not compress well.",
+    "markdown": "Explain why this text sample will not compress well by comparing the characteristics of this text to the text in the previous question.\n"
+  },
+  "md5": "1209cb1a6e880ffd6a2bfe671cb9ad4a"
+}]]></config>
+</TextMatch>

@@ -218,6 +218,7 @@ tr:
         artist: Bir şeyler çizin
     user:
       classroom: Öğretmen ana sayfa
+      district_dashboard: Kontrol Paneli Bölgesi
       label: 'Merhaba %{username}'
       stats: İlerlemem
       settings: Hesabım
@@ -347,6 +348,7 @@ tr:
     heading_apps: '<h1>Herkes</h1> için <h2>eğlence</h2>'
     heading_legacy: '<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>'
     your_gallery: Galeri
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Erkek
     female: Kadın
@@ -436,6 +438,9 @@ tr:
       body: Uygulamanın galerisine veya kullanıcılarımız tarafından oluşturulmuş sanatçı görsellerine göz atın
     frozen:
       title: Donmuş
+    infinity:
+      title: Sınırsız oyun laboratuarı
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
     students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
@@ -465,6 +470,14 @@ tr:
     wrong_body: 'Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!'
     correct_title: Doğru
     correct_body: İşte bu doğru cevap.
+  contract_match:
+    wrong_title: Yanlış cevap
+    badname: Senin sözleşmende yanlış isim var.
+    badname_case: 'Fonksiyon isimleri büyük-küçük harfe duyarlıdır. Fonksiyon gövdesindeki ismin büyüklüğünü   değiştirmeyi deneyin.'
+    badrange: Senin sözleşmen yanlış bir diziye sahip.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Cevabınızı buraya girin
   dialog:
@@ -510,42 +523,44 @@ tr:
     sign_out: 'Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a> çıkış yapabilirsiniz.'
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: Başlatılmadı
+    in_progress: İşlem devam ediyor
     completed_too_many_blocks: tamamlanmadı, fazla blok var
     completed_perfect: tamamlandı, harika
     furthest_level_attempted: denenen en yüksek seviye
-    assessment: assessment
+    assessment: değerlendirme
   studio:
     courses_working_on: Üzerinde çalışmakta olduğunuz dersler
     completed_courses: Tamamladığınız dersler
     all_courses: Tüm dersler
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projeler
+    create: Proje Oluştur
+    create_a_project: 'Yeni bir proje oluşturun:'
+    new: Yeni oluştur
+    rename: Yeniden adlandır
     save: Kaydet
     delete: Sil
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Kursa dön
+    my_projects: Projelerim
     share: Paylaş
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Projenizi paylaşın
+    share_copy_link: 'Bağlantıyı kopyala:'
+    close: Kapat
     more: Daha Fazla
     name: İsim
-    updated: Updated
-    project_type: Project Type
+    updated: Güncellendi
+    project_type: Proje türü
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    need_help: Başlarken yardıma mı ihtiyacınız var?
     really_delete: Silinsin mi?
     delete_yes: Evet
     delete_no: Hayır
-    saved: Saved
-    not_saved: Not saved
+    saved: Kaydedildi
+    not_saved: Kaydedilmedi
     cancel: İptal
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: Bu projeyi silmek istediğinizden emin misiniz?
+    delete_confirm_text: Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır. Bağlantı olarak paylaştığınız kimseler artık projenizi göremeyecekler.
+    view_all: Projelerimi görüntüle
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

@@ -39,6 +39,9 @@ class ActiveSupport::TestCase
     Rails.cache.clear
 
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
+
+    # clear log of 'delivered' mails
+    ActionMailer::Base.deliveries.clear
   end
 
   teardown do
@@ -108,7 +111,7 @@ class ActiveSupport::TestCase
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
       # rubocop:enable Lint/Eval
     }
-    before = exps.map { |e| e.call }
+    before = exps.map(&:call)
 
     yield
 
@@ -129,7 +132,7 @@ class ActiveSupport::TestCase
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
       # rubocop:enable Lint/Eval
     }
-    before = exps.map { |e| e.call }
+    before = exps.map(&:call)
 
     yield
 
@@ -147,6 +150,7 @@ class ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
+    request.env["devise.mapping"] = Devise.mappings[:user]
     request.env['cdo.locale'] = 'en-US'
   end
 

@@ -173,19 +173,25 @@ nl:
         video: C4_unplugged_binair
       VideoGamesCoordinatePlanes:
         title: Video games en coördinatenstelsels
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        desc: Ontdek hoe de videospellen die je graag speelt, onder de motorkap eigenlijk wiskunde gebruiken! Ontdek hoe wiskundige formules en het coördinatenstelsel ons kunnen leren hoe videospellen werken en begin dan met het ontwerpen van het videospel dat jij gaat maken.
+        video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts, Domain, and Range
-        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        title: Ontwerp, Domein en Bereik
+        desc: Functiedeclaraties helpen ons functies te begrijpen en ze te kunnen bespreken. In deze les behandelen hoe een functiedeclaratie ons kan helpen om een nieuwe programmeertaal of een functie te begrijpen.
+        video: alg_5_contracts
       DesignRecipe:
         title: Het ontwerp Recept
-        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        desc: Op het vorige niveau schreven de leerlingen enkele zeer simpele functies. Meer geavanceerde functies vereisen echter een meer doordachte aanpak. Het Design Recipe is een gestructureerde aanpak om functies te schrijven, die eveneens het schrijven van testcases voorschrijft om te verzekeren dat de functie werkt zoals verwacht.
+        video: alg_8_design_recipe
       Booleans:
-        title: Booleans and Logic
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        title: Booleans en logica
+        desc: Booleans zijn het vierde en laatste gegevenstype dat je in deze cursus leert kennen. In deze praktijkopdracht zul je leren wat Booleans zijn en hoe ze ons helpen om functies te schrijven die logisch denken
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionele en stuksgewijze functies
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: De parameters die we aan functies meegeven zorgen ervoor dat de uitvoer varieert volgens een vast patroon. Stel dat we met parameters met enkele waarden een uitvoer willen maken volgens een specifiek patroon en met andere waarden volgens een ander patroon. Dat is waar voorwaardelijke instructies voor nodig zijn...
+        video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        title: Botsingdetectie en de stelling van Pythagoras
+        desc: Bepalen wanneer objecten op het scherm elkaar raken is een belangrijk aspect van de meeste spellen. In deze les zullen we kijken hoe de stelling van Pythagoras en de afstandsformule kunnen worden gebruikt voor het meten van de afstand tussen twee punten op een plat vlak, om vervolgens te beslissen of die twee punten (of spelfiguren) elkaar raken.
+        video: alg_16_biggame_collision_detection

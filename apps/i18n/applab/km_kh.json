@@ -10,7 +10,6 @@
   "continue": "បន្ត",
   "container": "create container",
   "containerTooltip": "Creates a division container and sets its inner HTML.",
-  "designMode": "Design",
   "finalLevel": "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​ចុង​ក្រោយ​ហើយ។",
   "nextLevel": "សូម​អបអរ​សាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​នេះ​ហើយ។",
   "no": "ទេ",
@@ -25,6 +24,6 @@
   "stepIn": "Step in",
   "stepOver": "Step over",
   "stepOut": "Step out",
-  "viewData": "View Data",
+  "viewData": "មើល​ទិន្នន័យ",
   "yes": "យល់ព្រម"
 }

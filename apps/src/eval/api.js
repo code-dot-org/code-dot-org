@@ -74,10 +74,15 @@ exports.placeImage = function (x, y, image) {
   evalUtils.ensureNumber(y);
   evalUtils.ensureType(image, EvalImage);
 
-  // User inputs why in cartesian space. Convert to pixel space before sending
+  // origin at center
+  x = x + Eval.CANVAS_WIDTH / 2;
+  y = y + Eval.CANVAS_HEIGHT / 2;
+
+  // User inputs y in cartesian space. Convert to pixel space before sending
   // to our EvalImage.
   y = evalUtils.cartesianToPixel(y);
 
+  // relative to center of workspace
   image.place(x, y);
   return image;
 };
@@ -86,10 +91,10 @@ exports.offset = function (x, y, image) {
   evalUtils.ensureNumber(x);
   evalUtils.ensureNumber(y);
   evalUtils.ensureType(image, EvalImage);
-    
+
   x = image.x_ + x;
   y = image.y_ - y;
-    
+
   image.place(x, y);
   return image;
 };

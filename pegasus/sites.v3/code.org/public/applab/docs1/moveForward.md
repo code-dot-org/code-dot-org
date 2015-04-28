@@ -91,7 +91,7 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- Use [penUp()](/applab/docs/penUp) before calling moveForward() to have the turtle not draw as it moves.
+- Use [penUp()](/applab/docs/penUp) before calling `moveForward()`  to stop the turtle from drawing a line behind it as it moves
 
 [/tips]
 

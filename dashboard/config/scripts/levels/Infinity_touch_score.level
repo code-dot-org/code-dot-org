@@ -7,11 +7,10 @@
   "properties": {
     "skin": "infinity",
     "background": "snowy",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Score a point when a snowflake is touched.  Then \"Run\", and steer Anna to touch each snowflake once.",
+    "instructions": "Make Anna score a point when she touches a snowflake.  Then click \"Run\" and steer her to touch each snowflake once.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -39,10 +38,13 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "timeout_failure_tick": "300",
+    "timeout_failure_tick": "500",
     "timeout_after_when_run": "false",
+    "success_condition": "function () {\r\n   return Studio.playerScore >= 6;\r\n}",
+    "disable_examples": "false",
     "maze_data": null
-  }
+  },
+  "md5": "0ca2f4be6f61efdebe0fab63be9d37fb"
 }]]></config>
   <blocks>
     <start_blocks>

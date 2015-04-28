@@ -1,0 +1,43 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2014-09-20T02:31:00.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "/script_assets/k_1_images/maze_images/maze_EN.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/maze_images/maze_ENE.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/maze_images/maze_WW.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/maze_images/maze_WSS.png"
+      }
+    ],
+    "answers": [
+      {
+        "text": "/script_assets/k_1_images/move_blocks/EN.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/move_blocks/ENE.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/move_blocks/WW.png"
+      },
+      {
+        "text": "/script_assets/k_1_images/move_blocks/WSS.png"
+      }
+    ],
+    "title": "Matching",
+    "content2": "Match the puzzles and blocks",
+    "pre_title": "Instructions",
+    "pre_body": "Drag the blocks to match.",
+    "pre_ani": "/script_assets/images/matching_ani.gif",
+    "height": "150"
+  },
+  "md5": "88c6af1f5d0b148cd40814edc82e2db0"
+}]]></config>
+</Match>

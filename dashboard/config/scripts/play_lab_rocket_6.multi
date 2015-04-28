@@ -1,12 +1,11 @@
 name 'Play Lab Rocket 6'
 title 'Rocket Multiple Choice'
-question ' '
 
 markdown <<MARKDOWN
-## Which function describes a rocket that reaches:
-### 24 meters at 2 seconds
-### 60 meters at 5 seconds
-### 108 meters at 9 seconds
+### Which function describes a rocket that reaches:
+#### 24 meters at 2 seconds
+#### 60 meters at 5 seconds
+#### 108 meters at 9 seconds
 MARKDOWN
 
 wrong "rocket-height(seconds) = seconds + 12"

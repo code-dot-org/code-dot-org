@@ -9,10 +9,21 @@ var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimShardCleaner = require('@cdo/apps/netsim/NetSimShardCleaner');
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
+var NodeType = require('@cdo/apps/netsim/netsimConstants').NodeType;
 
 var makeNode = function (shard) {
   var newNodeID;
   shard.nodeTable.create({}, function (err, node) {
+    newNodeID = node.id;
+  });
+  return newNodeID;
+};
+
+var makeRouter = function (shard) {
+  var newNodeID;
+  shard.nodeTable.create({
+    type: NodeType.ROUTER
+  }, function (err, node) {
     newNodeID = node.id;
   });
   return newNodeID;
@@ -41,6 +52,12 @@ var makeNodeWithHeartbeat = function (shard) {
 var makeNodeWithExpiredHeartbeat = function (shard) {
   var newNodeID = makeNode(shard);
   makeExpiredHeartbeat(shard, newNodeID);
+  return newNodeID;
+};
+
+var makeRouterWithHeartbeat = function (shard) {
+  var newNodeID = makeRouter(shard);
+  makeHeartbeat(shard, newNodeID);
   return newNodeID;
 };
 
@@ -208,11 +225,15 @@ describe("NetSimShardCleaner", function () {
     var invalidNodeID = makeNodeWithExpiredHeartbeat(testShard);
 
     testShard.messageTable.create({
-      toNodeID: validNodeID
+      toNodeID: validNodeID,
+      fromNodeID: invalidNodeID,
+      simulatedBy: validNodeID
     }, function () {});
 
     testShard.messageTable.create({
-      toNodeID: invalidNodeID
+      toNodeID: invalidNodeID,
+      fromNodeID: validNodeID,
+      simulatedBy: validNodeID
     }, function () {});
 
     assertTableSize(testShard, 'heartbeatTable', 2);
@@ -229,6 +250,41 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'messageTable', 1);
     testShard.messageTable.readAll(function (err, rows) {
       assertEqual(rows[0].toNodeID, validNodeID);
+    });
+  });
+
+  it ("deletes messages that don't have a valid simulating client node", function () {
+    var validNodeID = makeNodeWithHeartbeat(testShard);
+    var invalidNodeID = makeNodeWithExpiredHeartbeat(testShard);
+    var routerID = makeRouterWithHeartbeat(testShard);
+
+    testShard.messageTable.create({
+      toNodeID: routerID,
+      fromNodeID: validNodeID,
+      simulatedBy: validNodeID
+    }, function () {});
+
+    testShard.messageTable.create({
+      toNodeID: routerID,
+      fromNodeID: invalidNodeID,
+      simulatedBy: invalidNodeID
+    }, function () {});
+
+    assertTableSize(testShard, 'heartbeatTable', 3);
+    assertTableSize(testShard, 'nodeTable', 3);
+    assertTableSize(testShard, 'messageTable', 2);
+
+    cleaner.tick(); // First tick triggers cleaning and starts it
+    cleaner.tick(); // Second tick runs heartbeat cleanup
+    cleaner.tick(); // Third tick runs node cleanup
+    cleaner.tick(); // Fourth tick runs message cleanup
+
+    assertTableSize(testShard, 'heartbeatTable', 2);
+    assertTableSize(testShard, 'nodeTable', 2);
+    assertTableSize(testShard, 'messageTable', 1);
+    testShard.messageTable.readAll(function (err, rows) {
+      assertEqual(rows[0].toNodeID, routerID);
+      assertEqual(rows[0].fromNodeID, validNodeID);
     });
   });
 

@@ -43,8 +43,7 @@ Blockly.Blocks.functional_parameters_get = {
     };
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
-        .appendTitle(Blockly.disableVariableEditing ? new Blockly.FieldLabel(fieldLabel, options)
-            : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        .appendTitle(fieldLabel, 'VAR')
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL)
         .setAlign(Blockly.ALIGN_CENTRE);
     this.setFunctionalOutput(true);
@@ -55,8 +54,10 @@ Blockly.Blocks.functional_parameters_get = {
       // Params should only be used in the FunctionEditor but better to be safe
       return;
     }
-    Blockly.functionEditor.renameParameter(oldName, newName);
-    Blockly.functionEditor.refreshParamsEverywhere();
+    var title = this.getTitle_('VAR');
+    if (title.getText() === oldName) {
+      title.setText(newName);
+    }
   },
   removeVar: Blockly.Blocks.variables_get.removeVar,
   mutationToDom: function() {
@@ -64,12 +65,12 @@ Blockly.Blocks.functional_parameters_get = {
     // Add description mutation
     if (this.description_) {
       var desc = document.createElement('description');
-      desc.innerHTML = this.description_;
+      desc.textContent = this.description_;
       container.appendChild(desc);
     }
     if (this.outputType_) {
       var outputType = document.createElement('outputtype');
-      outputType.innerHTML = this.outputType_;
+      outputType.textContent = this.outputType_;
       container.appendChild(outputType);
     }
     return container;
@@ -78,9 +79,9 @@ Blockly.Blocks.functional_parameters_get = {
     for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
       var nodeName = childNode.nodeName.toLowerCase();
       if (nodeName === 'description') {
-        this.description_ = childNode.innerHTML;
+        this.description_ = childNode.textContent;
       } else if (nodeName === 'outputtype') {
-        this.outputType_ = childNode.innerHTML;
+        this.outputType_ = childNode.textContent;
         this.changeFunctionalOutput(this.outputType_);
       }
     }

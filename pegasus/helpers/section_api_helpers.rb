@@ -113,8 +113,6 @@ class DashboardStudent
       and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}")
   end
 
-  private
-
   VALID_GENDERS = %w(m f)
   def self.valid_gender?(gender)
     VALID_GENDERS.include?(gender)
@@ -278,20 +276,20 @@ class DashboardSection
   end
 
   def self.fetch_user_sections(user_id)
-     DASHBOARD_DB[:sections].
-       join(:users, :id=>:user_id).
-       select(*fields).
-       where(user_id:user_id).
-       map{|row| self.new(row).to_owner_hash}
+    DASHBOARD_DB[:sections].
+      join(:users, :id=>:user_id).
+      select(*fields).
+      where(user_id:user_id).
+      map{|row| self.new(row).to_owner_hash}
   end
 
   def self.fetch_student_sections(student_id)
     DASHBOARD_DB[:sections].
-        select(*fields).
-        join(:followers, :section_id=>:id).
-        join(:users, :id=>:student_user_id).
-        where(student_user_id: student_id).
-        map{|row| self.new(row).to_member_hash}
+      select(*fields).
+      join(:followers, :section_id=>:id).
+      join(:users, :id=>:student_user_id).
+      where(student_user_id: student_id).
+      map{|row| self.new(row).to_member_hash}
   end
 
   def add_student(student)
@@ -407,8 +405,6 @@ class DashboardSection
 
     fetch_if_allowed(section_id, user_id)
   end
-
-  private
 
   def self.fields()
     [

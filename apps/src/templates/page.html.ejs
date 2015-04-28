@@ -72,12 +72,14 @@
     </div>
 
     <% if (data.hasDesignMode) { %>
-      <button id="designModeButton" class="share">
-        <%= msg.designMode() %>
-      </button>
-      <button id="codeModeButton" class="share" style="display:none;">
-        <%= msg.codeMode() %>
-      </button>
+      <div id="design-cell" class="design-cell-none">
+        <button id="designModeButton" class="share">
+          <%= msg.designMode() %>
+        </button>
+        <button id="codeModeButton" class="share" style="display:none;">
+          <%= msg.codeMode() %>
+        </button>
+      </div>
     <% } %>
   </div>
 </div>
@@ -85,7 +87,11 @@
 <div id="codeWorkspace">
   <div id="headers" dir="<%= data.localeDirection %>">
     <div id="codeModeHeaders">
-      <div id="toolbox-header" class="workspace-header"><span><%= msg.toolboxHeader() %></span></div>
+      <div id="toolbox-header" class="workspace-header">
+        <span><%= data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() %></span>
+        <span id="hide-toolbox" style="display:none;">&nbsp;<%= msg.hideToolbox() %></span>
+      </div>
+      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox"><%= msg.showToolbox() %></span></div>
       <div id="show-code-header" class="workspace-header"><span><%= msg.showCodeHeader() %></span></div>
       <div id="clear-puzzle-header" class="workspace-header"><span><%= msg.clearPuzzle() %></span></div>
       <div id="workspace-header" class="workspace-header">
@@ -112,14 +118,7 @@
     <div id="codeTextbox"></div>
   <% } %>
   <% if (data.hasDesignMode) { %>
-    <div id="designModeBox" style="display:none;">
-      <% /* contains temporary unlocalized strings */ %>
-      Welcome to Design mode. Under construction.<br>
-      <button id="designModeAddButton" class="share">Add Button</button><br>
-      <button id="designModeAddInput" class="share">Add Input</button><br>
-      <button id="designModeAddLabel" class="share">Add Label</button><br>
-      <button id="designModeClear" class="share">Clear</button><br>
-    </div>
+    <%- data.designModeBox %>
   <% } %>
   <% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
   <%- data.extraControlRows %>

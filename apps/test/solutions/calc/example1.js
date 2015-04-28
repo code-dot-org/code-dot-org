@@ -69,7 +69,7 @@ module.exports = {
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       customValidator: function (assert) {
-        assert.equal(Calc.__testonly__.appState.message, calcMsg.emptyFunctionalBlock());
+        assert.equal(Calc.__testonly__.appState.message, commonMsg.emptyFunctionalBlock());
         return true;
       },
       xml: '<xml>' +

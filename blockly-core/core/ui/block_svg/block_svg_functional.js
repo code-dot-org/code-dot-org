@@ -51,8 +51,13 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
 
   this.blockClipRect_.setAttribute('d', this.svgPath_.getAttribute('d'));
 
-  var rect = this.svgPath_.getBoundingClientRect();
-  this.divider_.setAttribute('width', Math.max(0, rect.width - 2));
+  try {
+    var rect = this.svgPath_.getBBox();
+    this.divider_.setAttribute('width', Math.max(0, rect.width - 2));
+  } catch (e) {
+    // Firefox has trouble with hidden elements (Bug 528969).
+    return;
+  }
 };
 
 /**
@@ -215,6 +220,20 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   if (input.connection.targetConnection) {
     input.connection.tighten_();
   }
+};
+
+Blockly.BlockSvgFunctional.prototype.updateToColour_ = function(hexColour) {
+  goog.base(this, 'updateToColour_', hexColour);
+
+  if (!this.divider_) {
+    return;
+  }
+
+  // The block's color and the hexColour passed in here get out of sync if
+  // the block is grayed out (hexColour is gray, block color remains unchanged)
+  // Base our divider colour off of the rendered color (which is hexColour)
+  var lightColor = goog.color.lighten(goog.color.hexToRgb(hexColour), 0.3);
+  this.divider_.setAttribute('fill', goog.color.rgbArrayToHex(lightColor));
 };
 
 Blockly.BlockSvgFunctional.prototype.dispose = function () {

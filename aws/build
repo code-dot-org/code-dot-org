@@ -38,8 +38,7 @@ def main()
     log = `git log -n #{count}`
     IO.write(deploy_dir('rebuild'), log)
 
-    commit = `git rev-parse HEAD`
-    HipChat.log "https://github.com/code-dot-org/code-dot-org/commit/#{commit}", message_format:'text', color:'purple'
+    HipChat.log "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", message_format:'text', color:'purple'
 
     status = 1
     Dir.chdir(aws_dir) do

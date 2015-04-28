@@ -1,21 +1,20 @@
-module Rack; class Request
+module Rack
+  class Request
+    def json_body()
+      return nil unless content_type.split(';').first == 'application/json'
+      return nil unless content_charset.downcase == 'utf-8'
+      JSON.parse(body.read, symbolize_names:true)
+    end
 
-  def json_body()
-    return nil unless content_type.split(';').first == 'application/json'
-    return nil unless content_charset.downcase == 'utf-8'
-    JSON.parse(body.read, symbolize_names:true)
-  end
+    def language()
+      locale.split('-').first
+    end
 
-  def language()
-    locale.split('-').first
-  end
+    def locale()
+      env['cdo.locale'] || 'en-US'
+    end
 
-  def locale()
-    env['cdo.locale'] || 'en-US'
-  end
-
-  def referer_site_with_port()
-    begin
+    def referer_site_with_port()
       url = URI.parse(self.referer.to_s)
       host = http_host_and_port(url.host, url.port)
       return host if host.include?('csedweek.org')
@@ -24,37 +23,48 @@ module Rack; class Request
     rescue URI::InvalidURIError
       return 'code.org'
     end
-  end
 
-  def site()
-    @site ||= site_from_host
-  end
-
-  def site_from_host()
-    parts = host.split('.')
-    if parts.count >= 3
-      domain = parts.last(3).join('.').split(':').first
-      return domain if ['studio.code.org', 'learn.code.org', 'translate.hourofcode.com', 'i18n.code.org',
-                        'al.code.org', 'ar.code.org', 'br.code.org', 'italia.code.org', 'ro.code.org',
-                        'eu.code.org', 'uk.code.org', 'za.code.org'].include?(domain)
+    def site()
+      @site ||= site_from_host
     end
 
-    domain = parts.last(2).join('.').split(':').first
-    return domain if ['csedweek.org','hourofcode.com'].include?(domain)
+    def site_from_host()
+      parts = host.split('.')
+      if parts.count >= 3
+        domain = parts.last(3).join('.').split(':').first
+        return domain if ['studio.code.org', 'learn.code.org', 'translate.hourofcode.com', 'i18n.code.org',
+                          'al.code.org', 'ar.code.org', 'br.code.org', 'italia.code.org', 'ro.code.org',
+                          'eu.code.org', 'uk.code.org', 'za.code.org'].include?(domain)
+      end
 
-    'code.org'
-  end
+      domain = parts.last(2).join('.').split(':').first
+      return domain if ['csedweek.org','hourofcode.com'].include?(domain)
 
-  def splat_path_info()
-    self.env[:splat_path_info]
-  end
+      'code.org'
+    end
 
-  def user_id()
-    @user_id ||= user_id_from_session_cookie
-  end
+    def shared_cookie_domain()
+      @shared_cookie_domain ||= shared_cookie_domain_from_host
+    end
 
-  def user_id_from_session_cookie()
-    begin
+    def shared_cookie_domain_from_host()
+      parts = host.split('.')
+      if parts.count >= 2
+        domain_suffix = parts.last(2).join('.')
+        return domain_suffix if domain_suffix == 'code.org'
+      end
+      host
+    end
+
+    def splat_path_info()
+      self.env[:splat_path_info]
+    end
+
+    def user_id()
+      @user_id ||= user_id_from_session_cookie
+    end
+
+    def user_id_from_session_cookie()
       session_cookie_key = "_learn_session"
       session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
 
@@ -77,5 +87,4 @@ module Rack; class Request
       return nil
     end
   end
-
-end; end;
+end

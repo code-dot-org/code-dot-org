@@ -320,9 +320,8 @@
           yıldız simgesine tıklayın.)'
         turtle_3_7: '"Ev çiz" fonksiyonuna "uzunluk" adında yeni bir girdi ekleyin
           ve fil için yeterince büyük bir ev çizin (kenarları 150 piksel uzunluğunda)'
-        turtle_3_8: işte bir önceki  bulmacanın tüm blokları. "Ev çiz" fonksiyonunu
-          çizimi evin sağ alt köşesinde bitirebilmem için değiştirin.  Sonra bu yeni
-          fonksiyonu kullanarak 3 ev çizin.
+        turtle_3_8: Yeni bir ev çizdikten sonra tamamlamak için sağ alt köşedeki  "Ev
+          çiz"i düzenle. 3 ev çizmek için bu  düzenlenmiş fonksiyonu kullan.
         turtle_3_9: '"Ev çiz" fonksiyonunu yardım almadan yeniden yapabilir misin?
           Bir dene ve bir dizi ev çiz.'
         turtle_3_10: Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız,
@@ -666,12 +665,34 @@
         playlab_intro: Oyun laboratuarı için giriş
         playlab_events: Laboratuvar Olaylarını Oynatın
         playlab_repeat_forever: Play Lab Sonsuza Dek Tekrarla
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Değerlendirme Blokları
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Değişkenler
-        msm_7_functions: Fonksiyonlar
+        tutorial_puzzle_challenge: YapBoz Mücadelesi Konu Anlatımı
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
+        csp_textcompression: Text compression widget
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
@@ -767,3 +788,9 @@
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
         right_arrow_fireball: Ateştoplarını fırlatmak için sağ ok tuşunu kullan
         name_function: Fonksiyonunun ismini buraya yaz
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

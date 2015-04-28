@@ -1,70 +1,70 @@
 * * *
 
-title: "Maze: Loops" view: page_curriculum theme: none
+title: "Labirinto: Laços" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>6, :title=> 'Maze: Loops', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Curso 2', :lesson=>6, :title=> 'Labirinto: Laços', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-Building on the concept of repeating instructions from Getting Loopy, this stage will have students using loops to more effeciently traverse the maze.
+Aproveitando o conceito de instruções de repetição da atividade Repetindo, nesta etapa os alunos vão usar laços para atravessar o labirinto de forma mais eficiente.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Maze: Loops**
+### **Atividade: Laços do labirinto**
 
-[Maze: Loops](#Activity)
+[Labirinto: Laços](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activities](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Identify the benefits of using a loop structure instead of manual repetition
-  * Create a program for a given task which loops a single command
-  * Break down a long sequence of instructions into the smallest repeatable sequence possible
-  * Create a program for a given task which loops a sequence of commands
-  * Employ a combination of sequential and looped commands to reach the end of a maze
-
-[/together]
-
-[together]
-
-## Getting Started
-
-### <a name="GetStarted"></a> Introduction
-
-Review with students the Getting Loopy activity:
-
-  * What are loops?
-  * Why do we use them?
+  * Identificar os benefícios de usar uma estrutura de laços ao invés da repetição manual
+  * Criar um programa para uma tarefa que faz o laço de um único comando
+  * Dividir uma longa sequência de instruções na menor sequência possível que possa ser repetida
+  * Criar um programa para uma tarefa que faz o laço de uma sequência de comandos
+  * Empregar uma combinação de comandos sequenciais e em laço para chegar ao fim de um labirinto
 
 [/together]
 
 [together]
 
-## Activity
+## Primeiros passos
 
-### <a name="Activity"></a> [Maze: Loops](http://learn.code.org/s/course2/stage/6/puzzle/1)
+### <a name="GetStarted"></a> Introdução
 
-As students work through the puzzles, see if they can figure out how many fewer blocks they use with a loop vs. not using a loop.
+Revisar a atividade de laços com os alunos:
+
+  * O que são laços?
+  * Por que os usamos?
+
+[/together]
+
+[together]
+
+## Atividade
+
+### <a name="Activity"></a> [Laços do labirinto](http://learn.code.org/s/course2/stage/6/puzzle/1)
+
+Conforme os alunos trabalham nos desafios, veja se eles conseguem descobrir quantos blocos a menos eles precisam ao usar um laço do que quando não usam um laço.
 
 [/together]
 
@@ -73,87 +73,87 @@ As students work through the puzzles, see if they can figure out how many fewer 
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### So Moving
+### Vamos mexer
 
-  * Give the students pictures of actions or dance moves that they can do. 
-      * Have students arrange moves and add loops to choreograph their own dance.
-  * Share the dances with the rest of the class.
+  * Dê aos alunos imagens de ações ou passos de dança que eles podem realizar. 
+      * Peça aos alunos que organizem passos e adicionem laços para coreografar sua própria dança.
+  * Compartilhe as danças com o resto da turma.
 
-### Connect It Back
+### Faça a conexão de volta
 
-  * Find some YouTube videos of popular dances that repeat themselves.
-  * Can your class find the loops?
-  * Try the same thing with songs! 
+  * Encontre vídeos no YouTube de danças populares que apresentam repetições.
+  * Você consegue encontrar os laços?
+  * Tente fazer a mesma coisa com músicas! 
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Select and drag / slide
-  * Select object
-  * Use video player
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Selecionar e arrastar / deslizar
+  * Selecionar objeto
+  * Usar player de vídeo
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
-  * 6.c - Troubleshoot systems and applications.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub problems. 
-  * CT.L3A-03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores. 
+  * CT.L3A-03. Explicar como sequência, seleção, iteração, e recursividade são blocos de construção de algoritmos.
 
 ### Next-Gen Science Standards
 
-  * K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
-  * K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
-  * 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * K-2-ETS1-1. Fazer perguntas, observações e reunir informações sobre uma situação que as pessoas querem mudar para definir um problema simples que pode ser resolvido com o desenvolvimento de uma ferramenta ou objeto novo, ou melhorado.
+  * K-2-PS3-2. Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico.
+  * 3-5-ETS1-2. Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics.
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos.
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 1.OA.1 - Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.
-  * 2.OA.1 - Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.
-  * 3.OA.3 - Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities.
+  * 1.OA.1 - Usar adição e subtração até 20 para resolver problemas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições, por exemplo, usando objetos, desenhos e equações com um símbolo que substitui o número desconhecido para representar o problema.
+  * 2.OA.1 - Usar adição e subtração até 100 para resolver problemas de uma ou duas etapas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições, por exemplo, usando objetos, desenhos e equações com um símbolo que substitui o número desconhecido para representar o problema.
+  * 3.OA.3 - Usar multiplicação e divisão até 100 para resolver os problemas em situações envolvendo grupos iguais, arrays e unidades de medida.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
 
 [/standards]
 

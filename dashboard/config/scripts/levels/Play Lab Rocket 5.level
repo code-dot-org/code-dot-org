@@ -6,8 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onTick = function() {\r\n  \tif (this.studio_.tickCount === 1) {\r\n      this.seconds = 0;\r\n      this.height = 0;\r\n    }\r\n    originalOnTick();\r\n    Studio.Globals.time = this.seconds;\r\n    Studio.Globals.succeeded = ((this.seconds == 6 && this.height == 365) && (this.rocket_height(2) == 45));\r\n  }\r\n  return Studio.Globals.succeeded;\r\n}",
-    "failure_condition": "function () {\r\n  return (Studio.Globals.time > 6 && !Studio.Globals.succeeded);\r\n }",
+    "success_condition": "function () {\r\n  var seconds = Studio.customLogic.seconds;\r\n  var height = Studio.customLogic.height;\r\n  // Note: We're not using the default customLogic.SECONDS_TO_RUN here\r\n  var SECONDS_TO_RUN = 6;\r\n  var targetHeight = SECONDS_TO_RUN * SECONDS_TO_RUN * 10 + 5;\r\n\r\n  // If at target time, make sure we have the right height for this time and\r\n  // the next time.\r\n  return seconds === SECONDS_TO_RUN && height === targetHeight &&\r\n    Studio.customLogic.rocket_height(2) === 2 * 2 * 10 + 5;\r\n}",
+    "failure_condition": "function () {\r\n  return Studio.customLogic.seconds > 6;\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "Much better, but let's write one more function with simple acceleration. This time the rocket should be 15 meters at 1 second, 45 meters at 2 seconds, 95 at 3 seconds, and 165 at 4 seconds.",
     "is_k1": "false",
@@ -38,7 +38,9 @@
     "definition_highlight": "false",
     "definition_collapse": "true",
     "custom_game_type": "Rocket Height",
-    "maze_data": null
+    "maze_data": null,
+    "disable_examples": "false",
+    "input_output_table": "[[1,15],[2,45],[3,95],[4,165]]"
   },
   "md5": "98b69e02ffde269fd3266b195c4a7003"
 }]]></config>
@@ -52,7 +54,7 @@
           </mutation>
           <title name="NAME">rocket-height</title>
         </block>
-        <block type="functional_start_setValue" inline="false">
+        <block type="functional_start_setValue" inline="false" editable="false" movable="false" deletable="false">
           <functional_input name="VALUE">
             <block type="functional_pass">
               <mutation name="rocket-height"/>

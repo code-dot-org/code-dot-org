@@ -4,27 +4,20 @@ class Cohort < ActiveRecord::Base
   has_many :workshops
 
   # A Cohort is associated with one or more Districts
-  has_many :cohorts_districts
+  has_many :cohorts_districts, inverse_of: :cohort, dependent: :destroy
   has_many :districts, through: :cohorts_districts
   accepts_nested_attributes_for :cohorts_districts, allow_destroy: true
 
-  # Teachers can be in multiple cohorts
-  has_and_belongs_to_many :teachers, class_name: 'User'
+  has_and_belongs_to_many :teachers, class_name: 'User', after_remove: :add_to_deleted_teachers, after_add: :remove_from_deleted_teachers
 
-  # a teacher must belong to an eligible District in order to join a Cohort
-#  validate :validate_teachers
-  # def validate_teachers
-  #   # All teachers in this cohort must have a district specified
-  #   _teacher_ids = teacher_ids
-  #   _teachers = User.where(id: _teacher_ids) # .joins(:district) doesn't work on the habtm collection directly for some reason
-  #   teacher_districts = _teachers.joins(:district)
-  #   errors.add(:teachers, "do not have a district specified: #{_teachers.joins(:district).where('districts_users.district_id', nil).map(&:email)}") unless
-  #       teacher_districts.count == _teacher_ids.count
+  # when teachers are deleted they are moved here
+  has_and_belongs_to_many :deleted_teachers, class_name: 'User', join_table: 'cohorts_deleted_users'
 
-  #   # All teachers in this cohort must be in eligible districts
-  #   teacher_district_ids = teacher_districts.group(:district_id).select(:district_id).map(&:district_id)
-  #   ineligible_districts = (teacher_district_ids - district_ids)
-  #   errors.add(:teachers, "are in ineligible districts for this cohort: #{District.where(id: ineligible_districts).map(&:name)}") unless
-  #       ineligible_districts.empty?
-  # end
+  def add_to_deleted_teachers(teacher)
+    deleted_teachers << teacher
+  end
+
+  def remove_from_deleted_teachers(teacher)
+    deleted_teachers.delete teacher
+  end
 end

@@ -52,7 +52,7 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_cache
     Script.connection
     [ScriptLevel, Level, Game, Concept, Callout, Video,
-     Artist, Blockly].each {|k| k.new} # make sure all possible loaded objects are completely loaded
+     Artist, Blockly].each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
 
@@ -128,6 +128,7 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_chapter(chapter)
     chapter = chapter.to_i
+    return nil if chapter < 1 || chapter > self.script_levels.count
     self.script_levels[chapter - 1] # order is by chapter
   end
 
@@ -153,8 +154,14 @@ class Script < ActiveRecord::Base
     name == 'course1'
   end
 
-  def has_banner_image?
-    k5_course?
+  def banner_image
+    if k5_course?
+      "banner_#{name}_cropped.jpg"
+    end
+  end
+
+  def logo_image
+    I18n.t(['data.script.name', name, 'logo_image'].join('.'), raise: true) rescue nil
   end
 
   def k5_course?
@@ -167,6 +174,10 @@ class Script < ActiveRecord::Base
 
   def has_lesson_plan?
     k5_course? || %w(msm algebra).include?(self.name)
+  end
+
+  def show_freeplay_links?
+    name != 'algebra'
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
@@ -183,10 +194,12 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse_file(script)
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
+        # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
         scripts_to_add << [{
           name: name,
           trophies: script_data[:trophies],
-          hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
+          login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           id: script_data[:id],
         }, stages.map{|stage| stage[:levels]}.flatten]
@@ -304,6 +317,7 @@ class Script < ActiveRecord::Base
           name: script_params[:name],
           trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
         }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)
@@ -360,6 +374,6 @@ class Script < ActiveRecord::Base
 
   def self.clear_cache
     # only call this in a test!
-   @@script_cache = nil
+    @@script_cache = nil
   end
 end

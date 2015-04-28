@@ -14,41 +14,22 @@ class ScriptDSL < BaseDSL
     @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
     @hidden = true
+    @login_required = false
     @trophies = false
     @wrapup_video = nil
   end
 
-  def id(id)
-    @id = ActiveRecord::ConnectionAdapters::Column::value_to_integer(id)
-  end
+  integer :id
+  string :title
+  string :description_short
+  string :description
+  string :description_audience
 
-  def title(title)
-    @title = title
-  end
+  boolean :hidden
+  boolean :login_required
+  boolean :trophies
 
-  def description_short(description_short)
-    @description_short = description_short
-  end
-
-  def description(description)
-    @description = description
-  end
-
-  def description_audience(description_audience)
-    @description_audience = description_audience
-  end
-
-  def hidden(hidden_string)
-    @hidden = ActiveRecord::ConnectionAdapters::Column::value_to_boolean(hidden_string)
-  end
-
-  def trophies(trophies_string)
-    @trophies = ActiveRecord::ConnectionAdapters::Column::value_to_boolean(trophies_string)
-  end
-
-  def wrapup_video(wrapup_video)
-    @wrapup_video = wrapup_video
-  end
+  string :wrapup_video
 
   def stage(name)
     @stages << {stage: @stage, levels: @levels} if @stage
@@ -60,20 +41,16 @@ class ScriptDSL < BaseDSL
 
   def parse_output
     stage(nil)
-    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies, wrapup_video: @wrapup_video}
+    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies, wrapup_video: @wrapup_video, login_required: @login_required}
   end
 
   def concepts(*items)
     @concepts = items
   end
 
-  def skin(name)
-    @skin = name
-  end
+  string :skin
 
-  def video_key_for_next_level(key)
-    @video_key_for_next_level = key
-  end
+  string :video_key_for_next_level
 
   def assessment(name)
     level(name, {assessment: true})

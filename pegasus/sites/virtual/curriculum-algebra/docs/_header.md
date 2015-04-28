@@ -1,4 +1,4 @@
-<%= partial('curriculum_header', :unittitle=> 'CS in Algebra', :lesson=> lesson[:id_s].scan(/\d/).join, :unplugged=>lesson[:unplugged_i] == 1, :title=> lesson[:name_s],:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>'30-60') %>
+<%= partial('curriculum_header', :unittitle=> 'CS in Algebra', :lesson=> lesson[:id_s].scan(/\d/).join, :unplugged=>lesson[:unplugged_i] == 1, :title=> lesson[:name_s], :time=>'30-60') %>
 
 <div class="content">
 

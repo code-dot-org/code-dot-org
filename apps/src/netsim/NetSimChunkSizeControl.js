@@ -8,109 +8,50 @@
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
-var markup = require('./NetSimChunkSizeControl.html.ejs');
-var EncodingType = require('./netsimConstants').EncodingType;
+var i18n = require('./locale');
+var NetSimSlider = require('./NetSimSlider');
 
 /**
  * Generator and controller for chunk size slider/selector
  * @param {jQuery} rootDiv
  * @param {function} chunkSizeChangeCallback
  * @constructor
+ * @augments NetSimSlider
  */
 var NetSimChunkSizeControl = module.exports = function (rootDiv,
     chunkSizeChangeCallback) {
-  /**
-   * Component root, which we fill whenever we call render()
-   * @type {jQuery}
-   * @private
-   */
-  this.rootDiv_ = rootDiv;
+  NetSimSlider.call(this, rootDiv, {
+    onChange: chunkSizeChangeCallback,
+    min: 1,
+    max: 32
+  });
 
-  /**
-   * @type {function}
-   * @private
-   */
-  this.chunkSizeChangeCallback_ = chunkSizeChangeCallback;
-
-  /**
-   * Internal state
-   * @type {number}
-   * @private
-   */
-  this.currentChunkSize_ = 8;
-
-  /**
-   * Fill in the blank: "8 bits per _"
-   * @type {Array.<String>}
-   * @private
-   */
-  this.currentUnits_ = ['byte'];
-
+  // Auto-render, unlike our parent class
   this.render();
 };
+NetSimChunkSizeControl.inherits(NetSimSlider);
 
 /**
- * Fill the root div with new elements reflecting the current state
+ * Converts an external-facing numeric value into a localized string
+ * representation of that value.
+ * @param {number} val - numeric value of the control
+ * @returns {string} - localized string representation of value
+ * @override
  */
-NetSimChunkSizeControl.prototype.render = function () {
-  var renderedMarkup = $(markup({}));
-  this.rootDiv_.html(renderedMarkup);
-  this.rootDiv_.find('.chunk_size_slider').slider({
-    value: this.currentChunkSize_,
-    min: 1,
-    max: 32,
-    step: 1,
-    slide: this.onChunkSizeChange_.bind(this)
+NetSimChunkSizeControl.prototype.valueToLabel = function (val) {
+  return i18n.numBitsPerChunk({
+    numBits: val
   });
-  this.setChunkSize(this.currentChunkSize_);
 };
 
 /**
- * Change handler for jQueryUI slider control.
- * @param {Event} event
- * @param {Object} ui
- * @param {jQuery} ui.handle - The jQuery object representing the handle that
- *        was changed.
- * @param {number} ui.value - The current value of the slider.
- * @private
+ * Alternate label converter, used for slider end labels.
+ * @param {number} val - numeric value of the control
+ * @returns {string} - localized string representation of value
+ * @override
  */
-NetSimChunkSizeControl.prototype.onChunkSizeChange_ = function (event, ui) {
-  var newChunkSize = ui.value;
-  this.setChunkSize(newChunkSize);
-  this.chunkSizeChangeCallback_(newChunkSize);
-};
-
-/**
- * Update the slider and its label to display the provided value.
- * @param {number} newChunkSize
- */
-NetSimChunkSizeControl.prototype.setChunkSize = function (newChunkSize) {
-  var rootDiv = this.rootDiv_;
-  this.currentChunkSize_ = newChunkSize;
-  rootDiv.find('.chunk_size_slider').slider('option', 'value', newChunkSize);
-  rootDiv.find('.chunk_size_value').html(newChunkSize);
-};
-
-/**
- * @param {EncodingType[]} newEncodings
- */
-NetSimChunkSizeControl.prototype.setEncodings = function (newEncodings) {
-  this.currentUnits_.length = 0;
-
-  if (newEncodings.indexOf(EncodingType.ASCII) > -1) {
-    this.currentUnits_.push('character'); // TODO: localize
-  }
-
-  if (newEncodings.indexOf(EncodingType.DECIMAL) > -1) {
-    this.currentUnits_.push('number'); // TODO: localize
-  }
-
-  if (this.currentUnits_.length === 0){
-    this.currentUnits_.push('byte'); // TODO: localize
-  }
-
-  this.rootDiv_.find('.unit_label').html(this.currentUnits_.join('/'));
+NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
+  return val.toString();
 };

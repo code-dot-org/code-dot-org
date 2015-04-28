@@ -18,9 +18,9 @@ zh:
           Artists 2: 畫家 2
           Spelling Bee: 拼字比賽
           Spelling Bee not blockly: Spelling Bee not blockly
-          "Bee 1: Intro": 'Bee 1: Intro'
-          "Maze 2: Loops": 'Maze 2: Loops'
-          "Bee 2: Loops": 'Bee 2: Loops'
+          "Bee 1: Intro": 蜜蜂 1： 簡介
+          "Maze 2: Loops": 迷宮 2： 迴圈
+          "Bee 2: Loops": 蜜蜂 2： 迴圈
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
@@ -34,11 +34,11 @@ zh:
           The Big Event: The Big Event
           Going Places Safely: Going Places Safely
           description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
-          "Bee: Sequence": 'Bee: Sequence'
+          "Bee: Sequence": 蜜蜂： 序列
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Shapes": 'Artist: Shapes'
-          "Maze: Loops": 'Maze: Loops'
-          "Bee: Loops": 'Bee: Loops'
+          "Maze: Loops": 迷宮： 迴圈
+          "Bee: Loops": 蜜蜂： 迴圈
           "Studio: Create a Story": 'Play Lab: Create a Story'
           "Artist: Loops": 'Artist: Loops'
           description_audience: Ages 4+ (pre-readers)
@@ -71,9 +71,9 @@ zh:
           description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           "Maze: Sequence": '迷宮: 序列'
           "Artist: Sequence": 'Artist: Sequence'
-          "Maze: Loops": 'Maze: Loops'
+          "Maze: Loops": 迷宮： 迴圈
           "Artist: Loops": 'Artist: Loops'
-          "Bee: Loops": 'Bee: Loops'
+          "Bee: Loops": 蜜蜂： 迴圈
           "Bee: Debugging": 蜜蜂： 除錯
           "Artist: Debugging": 'Artist: Debugging'
           "Bee: Conditionals": 'Bee: Conditionals'
@@ -301,7 +301,7 @@ zh:
           "Eval: Functions": Solving Word Problems with the Design Recipe
           "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
           "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
-          "Eval: Boolean Operators": Boolean Operators
+          "Eval: Boolean Operators": 布林運算子
           "Play Lab: Booleans": Sam the Bat
           "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
           "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
@@ -309,7 +309,7 @@ zh:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: 播放實驗室
+          title: Disney Infinity Play Lab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: 播放實驗室
@@ -326,21 +326,22 @@ zh:
           The Design Recipe: The Design Recipe
         K5PD:
           title: K5 Professional Development
-          description: Professional Development for K5 Courses
-          description_short: Professional Development for K5 Courses
-          Introduction to PD: Introduction to PD
-          Blockly Basics: Blockly Basics
-          Writing computer programs: Writing computer programs
+          description: K5 課程的專業發展
+          description_short: K5 課程的專業發展
+          Introduction to PD: PD 簡介
+          Blockly Basics: Blockly 的基本知識
+          Writing computer programs: 編寫電腦程式
           Navigating the teacher dashboard: Navigating the teacher dashboard
           Unplugged lessons: Unplugged lessons
           Classroom Culture: Classroom Culture
-          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          Ways to go beyond Courses 1, 2, and 3: 如何超越 課程1、 2 和 3
           K-5 Courses: K-5 Courses
           Writing computer programs in Blockly: Writing computer programs in Blockly
           Teacher Dashboard: Teacher Dashboard
           Personal Reflection: Personal Reflection
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -353,14 +354,9 @@ zh:
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
-        Infinity:
-          title: Infinity Playlab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          Infinity: 無窮
         pixelation:
           title: Pixelation
-          description: Create images with bits and bytes.
+          description: 以 bits 與 bytes 創造圖像
           Pixelation: Pixelation
         20-hour:
           title: 20-Hour Intro Course
@@ -412,38 +408,38 @@ zh:
           description: ""
           Step: 步驟
         Hour of Code:
-          title: Hour of Code 2013
+          title: 一小時Code 2013
           description: ""
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: 一小時Code 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
           Puzzles: Puzzles
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
           Puzzles: Puzzles
         Test - Code Studio Puzzle Challenge:
           title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
           Puzzles: Puzzles
         How to do the Code Studio Puzzle Challenge:
           title: Test Code Studio Puzzle Challenge
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
           Puzzles: Puzzles
         Tutorial - Code Studio Puzzle Challenge:
           title: 'Tutorial - Code Studio Puzzle Challenge'
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
           Puzzles: Puzzles
         Tutorial Video - Code Studio Puzzle Challenge:
           title: 'Tutorial - Code Studio Puzzle Challenge'
-          description_short: Challenge yourself!
-          description: Try out these fun coding puzzles. Do your best!
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
           Puzzles: Puzzles
         course4pre:
           title: Course 4 Prerequisite
@@ -460,17 +456,37 @@ zh:
           "Artist: Functions": 畫家：函數
           "Bee: Debugging": 蜜蜂： 除錯
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
           Lesson14: Lesson14
           Lesson 14: Lesson 14
           Lesson 14 v2: Lesson 14 v2
           Lesson 15: Lesson 15
-          description_short: Make Black and White Images with the pixelation tool
-          Lesson 8: Lesson 8
+          Lesson 8: 第 8 課
           Lesson 5: Lesson 5
           Lesson 3: Lesson 3
           Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -503,13 +519,14 @@ zh:
           Your Game - Animation: 'Your Game - Animation'
           Booleans: 布林值
           Sam the Bat: Sam the Bat
-          Your Game - Booleans: 'Your Game - Booleans'
+          Your Game - Booleans: 你的遊戲-布林值
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: PD 簡介
         algPDmiami:
           title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
+          description: 通過函數式程式設計教代數
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Strings and Images
           Rocket-Height: Rocket-Height
@@ -517,8 +534,29 @@ zh:
           Your Game - Animation: 'Your Game - Animation'
           Booleans: 布林值
           Sam the Bat: Sam the Bat
-          Your Game - Booleans: 'Your Game - Booleans'
-          Luigi's Pizza: "Luigi's Pizza"
+          Your Game - Booleans: 你的遊戲-布林值
+          Luigi's Pizza: 路易吉的披薩
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
           Your Game - Player Movement: 'Your Game - Player Movement'
-          Your Game - Collision Detection: 'Your Game - Collision Detection'
+          Your Game - Collision Detection: 你的遊戲-碰撞檢測
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: PD 簡介
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15
+        ECSPD:
+          Introduction to PD: PD 簡介
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+        sciencePD:
+          Introduction to PD: PD 簡介

@@ -1,4 +1,6 @@
-inherit_from: .rubocop_todo.yml
+inherit_from:
+  - .rubocop_hound.yml
+  - .rubocop_todo.yml
 
 AllCops:
   Exclude:
@@ -6,6 +8,12 @@ AllCops:
     - 'dashboard/scripts/**/*'
   RunRailsCops: true
   DisplayCopNames: true
+
+# Listed are rules we don't plan to enable in the foreseeable future.
+# Add rules we plan to fix (but are currently failing) to .rubocop_todo.yml.
+
+Style/BarePercentLiterals:
+  Enabled: false
 
 Style/ExtraSpacing:
   Enabled: false

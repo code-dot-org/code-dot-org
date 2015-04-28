@@ -6,10 +6,11 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 * Option A: Use [VMWare Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/4_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-desktop-amd64.iso)
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
-  1. `vagrant init ubuntu/trusty64`
-  1. Configure to use 2048mb rather than 512mb RAM ([instructions](https://docs.vagrantup.com/v2/virtualbox/configuration.html))
+  1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
+  1. `cd code-dot-org`
   1. `vagrant up`
   1. `vagrant ssh`
+  1. Goto step 2 of the common setup instructions
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Install OS-specific prerequisites
@@ -33,8 +34,13 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
-1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk`
+1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev`
   * **Hit enter and select default options for any configuration popups**
+1. Either setup RBENV or configure your default ruby and gem version to 2.0
+  1. Option A - RBENV: ([instructions](https://github.com/sstephenson/rbenv#installation))
+  1. Option B - Symlinks:
+    1. Ruby: `sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby`
+    1. Gem: `sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem`
 
 ## Common setup
 
@@ -67,7 +73,49 @@ Our code is segmented into four parts:
 4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
 5. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
 
+<<<<<<< HEAD
 ## Building Apps and Blockly-core
+=======
+## Running Pegasus
+
+1. `cd code-dot-org`
+2. `rake build:pegasus` (Generally, do this after each pull)
+3. `bin/pegasus-server`
+4. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
+
+## Building Apps and Blockly-core (optional)
+
+The studio.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core you'll want to enable building them in the build:
+
+### Enabling Apps Builds
+
+You'll need to do this once:
+
+1. OS X:
+  1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+  1. Install [XQuartz](http://xquartz.macosforge.org/trac) (NOTE: This is required to build the Canvas dependency).
+1. `cd code-dot-org`
+1. Edit `locals.yml`
+  1. Add `build_apps: true`
+  1. Add `build_blockly_core: true`
+  1. Add `use_my_apps: true`
+1. `rake install`
+
+This configures your system to build apps (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
+
+### Blockly Prerequisite: Cairo
+
+One of the node modules, node-canvas, depends on Cairo being installed.
+
+Instructions for MacOSX using [brew](http://brew.sh/) (instructions for other platforms [can be found here](https://github.com/LearnBoost/node-canvas/wiki)):
+
+1. Make sure XCode Command-line Tools are installed and up-to-date: `xcode-select --install`
+1. Install [XQuartz from here](http://xquartz.macosforge.org/landing/)
+1. `export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"`
+1. `brew update`
+1. `brew install cairo`
+1. In blockly, `npm install`
+>>>>>>> staging
 
 ### Building Apps and Blockly-Core
 
@@ -103,6 +151,10 @@ We maintain a [Pivotal Tracker board](https://www.pivotaltracker.com/n/projects/
 If you'd like to grab a task, have ideas for projects or want to discuss an item, email [brian@code.org](mailto:brian@code.org) for a board invite.
 
 ## Submitting Contributions
+
+### Code style
+
+Running `rake lint` locally will find any Ruby warnings. For other languages see the [style guide](STYLEGUIDE.md).
 
 ### Testing your changes
 

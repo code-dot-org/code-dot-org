@@ -808,7 +808,9 @@ Blockly.Blocks.procedures_defnoreturn = {shouldHideIfInMainBlockSpace:function()
   for(e = 0;e < this.parameterNames_.length;e++) {
     b = {enabled:!0}, c = this.parameterNames_[e], b.text = Blockly.Msg.VARIABLES_SET_CREATE_GET.replace("%1", c), d = goog.dom.createDom("title", null, c), d.setAttribute("name", "VAR"), d = goog.dom.createDom("block", null, d), d.setAttribute("type", "variables_get"), b.callback = Blockly.ContextMenu.callbackFactory(this, d), a.push(b)
   }
-}, userCreated:!1, callType_:"procedures_callnoreturn"};
+}, userCreated:!1, shouldBeGrayedOut:function() {
+  return!1
+}, callType_:"procedures_callnoreturn"};
 Blockly.Blocks.procedures_defreturn = {shouldHideIfInMainBlockSpace:function() {
   return Blockly.useModalFunctionEditor
 }, init:function() {
@@ -825,7 +827,7 @@ Blockly.Blocks.procedures_defreturn = {shouldHideIfInMainBlockSpace:function() {
 }, updateParams_:Blockly.Blocks.procedures_defnoreturn.updateParams_, updateCallerParams_:Blockly.Blocks.procedures_defnoreturn.updateCallerParams_, updateParamsFromArrays:Blockly.Blocks.procedures_defnoreturn.updateParamsFromArrays, mutationToDom:Blockly.Blocks.procedures_defnoreturn.mutationToDom, domToMutation:Blockly.Blocks.procedures_defnoreturn.domToMutation, decompose:Blockly.Blocks.procedures_defnoreturn.decompose, compose:Blockly.Blocks.procedures_defnoreturn.compose, dispose:Blockly.Blocks.procedures_defnoreturn.dispose, 
 getProcedureInfo:function() {
   return{name:this.getTitleValue("NAME"), parameterNames:this.parameterNames_, parameterIDs:this.paramIds_, type:this.type, callType:this.callType_}
-}, getVars:Blockly.Blocks.procedures_defnoreturn.getVars, renameVar:Blockly.Blocks.procedures_defnoreturn.renameVar, customContextMenu:Blockly.Blocks.procedures_defnoreturn.customContextMenu, userCreated:Blockly.Blocks.procedures_defnoreturn.userCreated, callType_:"procedures_callreturn"};
+}, getVars:Blockly.Blocks.procedures_defnoreturn.getVars, renameVar:Blockly.Blocks.procedures_defnoreturn.renameVar, customContextMenu:Blockly.Blocks.procedures_defnoreturn.customContextMenu, userCreated:Blockly.Blocks.procedures_defnoreturn.userCreated, shouldBeGrayedOut:Blockly.Blocks.procedures_defnoreturn.shouldBeGrayedOut, callType_:"procedures_callreturn"};
 Blockly.Blocks.procedures_mutatorcontainer = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE);
@@ -1269,6 +1271,12 @@ Blockly.Blocks.functional_definition = {shouldHideIfInMainBlockSpace:function() 
   this.parameterNames_ = [];
   this.paramIds_ = [];
   this.parameterTypes_ = []
+}, updateInputsToType:function(a) {
+  this.updateInputType_(this.getInput("STACK"), a);
+  this.render()
+}, updateInputType_:function(a, b) {
+  a.setHSV.apply(a, Blockly.FunctionalTypeColors[b]);
+  a.setCheck(b)
 }, mutationToDom:function() {
   for(var a = document.createElement("mutation"), b = 0;b < this.parameterNames_.length;b++) {
     var c = document.createElement("arg");
@@ -1343,6 +1351,8 @@ Blockly.Blocks.functional_definition = {shouldHideIfInMainBlockSpace:function() 
     Blockly.Names.equals(a, this.parameterNames_[d]) && (this.parameterTypes_[d] = b, c = !0)
   }
   c && (this.updateParams_(), this.updateCallerParams_())
+}, shouldBeGrayedOut:function() {
+  return!1
 }, callType_:"functional_call"};
 Blockly.Blocks.functional_call = {init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
@@ -1373,6 +1383,8 @@ Blockly.Blocks.functional_call = {init:function() {
   Blockly.functionEditor.openEditorForCallBlock_(this)
 }, getCallName:function() {
   return this.getTitleValue("NAME")
+}, getParamTypes:function() {
+  return this.currentParameterTypes_
 }, renameProcedure:function(a, b) {
   Blockly.Names.equals(a, this.getTitleValue("NAME")) && this.setTitleValue(b, "NAME")
 }, setProcedureParameters:function(a, b, c) {
@@ -1463,6 +1475,8 @@ Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callret
 Blockly.Blocks.functionalExamples = {};
 Blockly.Blocks.functional_example = {shouldHideIfInMainBlockSpace:function() {
   return!0
+}, isCopyable:function() {
+  return!1
 }, init:function() {
   this.setHSV(94, 0.84, 0.6);
   this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
@@ -1476,6 +1490,13 @@ Blockly.Blocks.functional_example = {shouldHideIfInMainBlockSpace:function() {
 }, updateOutputType:function(a) {
   this.outputType_ = a;
   this.changeFunctionalOutput(this.outputType_)
+}, updateInputsToType:function(a) {
+  this.updateInputType_(this.getInput("EXPECTED"), a);
+  this.updateInputType_(this.getInput("ACTUAL"), a);
+  this.render()
+}, updateInputType_:function(a, b) {
+  a.setHSV.apply(a, Blockly.FunctionalTypeColors[b]);
+  a.setCheck(b)
 }};
 Blockly.Blocks.functionalParameters = {};
 Blockly.Blocks.functional_parameters_get = {init:function() {
@@ -1484,25 +1505,27 @@ Blockly.Blocks.functional_parameters_get = {init:function() {
   this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
   this.setHSV(312, 0.32, 0.62);
   this.setFunctional(!0, {headerHeight:30});
-  var b = {fixedSize:{height:35}};
-  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing ? new Blockly.FieldLabel(a, b) : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL).setAlign(Blockly.ALIGN_CENTRE);
+  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(a, "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL).setAlign(Blockly.ALIGN_CENTRE);
   this.setFunctionalOutput(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)
 }, renameVar:function(a, b) {
-  Blockly.functionEditor && (Blockly.functionEditor.renameParameter(a, b), Blockly.functionEditor.refreshParamsEverywhere())
+  if(Blockly.functionEditor) {
+    var c = this.getTitle_("VAR");
+    c.getText() === a && c.setText(b)
+  }
 }, removeVar:Blockly.Blocks.variables_get.removeVar, mutationToDom:function() {
   var a = document.createElement("mutation");
   if(this.description_) {
     var b = document.createElement("description");
-    b.innerHTML = this.description_;
+    b.textContent = this.description_;
     a.appendChild(b)
   }
-  this.outputType_ && (b = document.createElement("outputtype"), b.innerHTML = this.outputType_, a.appendChild(b));
+  this.outputType_ && (b = document.createElement("outputtype"), b.textContent = this.outputType_, a.appendChild(b));
   return a
 }, domToMutation:function(a) {
   for(var b = 0, c;c = a.childNodes[b];b++) {
     var d = c.nodeName.toLowerCase();
-    "description" === d ? this.description_ = c.innerHTML : "outputtype" === d && (this.outputType_ = c.innerHTML, this.changeFunctionalOutput(this.outputType_))
+    "description" === d ? this.description_ = c.textContent : "outputtype" === d && (this.outputType_ = c.textContent, this.changeFunctionalOutput(this.outputType_))
   }
 }};
 

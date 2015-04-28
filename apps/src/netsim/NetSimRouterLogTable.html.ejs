@@ -1,6 +1,7 @@
 <%
   var i18n = require('./locale');
   var netsimConstants = require('./netsimConstants');
+  var netsimUtils = require('./netsimUtils');
   var Packet = require('./Packet');
 
   /** @type {Packet.HeaderType[]} */
@@ -27,8 +28,8 @@
       <% if (showPacketInfo) { %>
         <th nowrap><%= i18n.packetInfo() %></th>
       <% } %>
-      <th nowrap><%= i18n.message() %></th>
-      <th nowrap><%= i18n.bits() %></th>
+      <th nowrap><%= i18n.size() %></th>
+      <th nowrap><%= i18n.status() %></th>
     </tr>
     </thead>
     <tbody>
@@ -42,7 +43,7 @@
     tableData.forEach(function (logEntry) {
       var rowClasses = [];
     %>
-    <tr class="<%= rowClasses.join(' ') %>">
+    <tr class="<%= rowClasses.join(' ') %>" title="<%= logEntry.getMessageAscii() %>">
       <% if (showToAddress) { %>
         <td nowrap><%= logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS) %></td>
       <% } %>
@@ -55,8 +56,8 @@
             y: logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT)
           }) %></td>
       <% }%>
-      <td><%= logEntry.getMessageAscii() %></td>
-      <td nowrap><%= logEntry.binary.length %></td>
+      <td nowrap><%= netsimUtils.bitsToLocalizedRoundedBytesize(logEntry.binary.length) %></td>
+      <td nowrap><%= logEntry.getLocalizedStatus() %></td>
     </tr>
     <%
     });

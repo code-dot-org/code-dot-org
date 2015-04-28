@@ -13,8 +13,9 @@ gem 'seamless_database_pool'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
-gem 'google_drive', '~> 0.3.10'
+gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
+gem 'parallel'
 
 group :development do
   gem 'rerun', '~> 0.10.0'
@@ -45,7 +46,6 @@ group :development, :test do
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
-  gem 'parallel'
   gem 'spring'
   gem 'spring-commands-testunit'
   gem 'minitest-reporters'
@@ -77,6 +77,7 @@ gem 'jbuilder', '~> 1.2'
 
 # authentication and permissions
 gem 'devise'
+gem 'devise_invitable', '~> 1.3.4'
 gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 
 gem 'omniauth-facebook'
@@ -87,7 +88,7 @@ gem 'omniauth-clever', git: 'https://github.com/code-dot-org/omniauth-clever.git
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
 
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 5.0.3'
 
 gem 'nokogiri', '1.6.1'
 
@@ -134,9 +135,11 @@ gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rail
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
-gem 'react-rails'
+gem 'react-rails', '~> 1.0'
 # JSON model serializer for REST APIs
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '32343d'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
 gem 'rubocop', require: false, group: [:development, :staging]
+# Reduce volume of production logs
+gem 'lograge'

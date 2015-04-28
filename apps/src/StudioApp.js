@@ -377,7 +377,19 @@ StudioApp.prototype.init = function(config) {
     }, this));
 
     if (config.level.openFunctionDefinition) {
-      Blockly.functionEditor.openWithLevelConfiguration(config.level);
+      if (Blockly.contractEditor) {
+        Blockly.contractEditor.autoOpenWithLevelConfiguration({
+          autoOpenFunction: config.level.openFunctionDefinition,
+          contractCollapse: config.level.contractCollapse,
+          contractHighlight: config.level.contractHighlight,
+          examplesCollapse: config.level.examplesCollapse,
+          examplesHighlight: config.level.examplesHighlight,
+          definitionCollapse: config.level.definitionCollapse,
+          definitionHighlight: config.level.definitionHighlight
+        });
+      } else {
+        Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
+      }
     }
   }
 
@@ -764,7 +776,7 @@ StudioApp.prototype.onResize = function() {
 */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (this.editCode && this.editor) {
+  if (this.editCode && this.editor && this.editor.paletteEnabled) {
     // If in the droplet editor, set toolboxWidth based on the block palette width:
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
@@ -1111,7 +1123,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if(!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
-  workspaceDiv.style.visibility = 'hidden';
+  workspaceDiv.style.display = 'none';
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
     var buttonRow = runButton.parentElement;
@@ -1134,7 +1146,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
     dom.addClickTouchEvent(openWorkspace, function() {
       // TODO: don't make assumptions about hideSource during init so this works.
-      // workspaceDiv.style.visibility = 'visible';
+      // workspaceDiv.style.display = '';
       location.href += '/edit';
     });
 
@@ -1156,7 +1168,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       mode: 'javascript',
       modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
       palette: fullDropletPalette,
-      alwaysShowPalette: true
+      showPaletteInTextMode: true
     });
 
     this.editor.aceEditor.setShowPrintMargin(false);
@@ -1174,7 +1186,25 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
-    this.dropletTooltipManager = new DropletTooltipManager();
+    // Bind listener to palette/toolbox 'Hide' and 'Show' links
+    var hideToolboxLink = document.getElementById('hide-toolbox');
+    var showToolboxLink = document.getElementById('show-toolbox');
+    var showToolboxHeader = document.getElementById('show-toolbox-header');
+    if (hideToolboxLink && showToolboxLink && showToolboxHeader) {
+      hideToolboxLink.style.display = 'inline-block';
+      var handleTogglePalette = (function() {
+        if (this.editor) {
+          this.editor.enablePalette(!this.editor.paletteEnabled);
+          showToolboxHeader.style.display =
+              this.editor.paletteEnabled ? 'none' : 'inline-block';
+          this.resizeToolboxHeader();
+        }
+      }).bind(this);
+      dom.addClickTouchEvent(hideToolboxLink, handleTogglePalette);
+      dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
+    }
+
+    this.dropletTooltipManager = new DropletTooltipManager(this.editor);
     this.dropletTooltipManager.registerBlocksFromList(
       dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
 
@@ -1220,6 +1250,9 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
  * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
 StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
+  if (config.level.edit_blocks) {
+    loadLastAttempt = false;
+  }
   var startBlocks = config.level.startBlocks || '';
   if (loadLastAttempt) {
     startBlocks = config.level.lastAttempt || startBlocks;
@@ -1274,6 +1307,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
+    disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false)
@@ -1295,7 +1329,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 };
 
 /**
- * Modify the workspace header after a droplet blocks/code toggle
+ * Modify the workspace header after a droplet blocks/code or palette toggle
  */
 StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
@@ -1303,11 +1337,6 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
     msg.showBlocksHeader();
   showCodeHeader.firstChild.textContent = newButtonTitle;
-
-  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
-  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
-    msg.workspaceHeaderJavaScript();
-  workspaceHeaderSpan.innerText = newButtonTitle;
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
@@ -1333,7 +1362,7 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
 /**
  * @returns true if any non-example block in the workspace has an unfilled input
  */
-StudioApp.prototype.hasUnfilledBlock = function () {
+StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
   return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
@@ -1343,7 +1372,7 @@ StudioApp.prototype.hasUnfilledBlock = function () {
       return false;
     }
 
-    return block.hasUnfilledInput();
+    return block.hasUnfilledFunctionalInput();
   });
 };
 

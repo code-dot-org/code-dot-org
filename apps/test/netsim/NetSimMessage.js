@@ -32,6 +32,9 @@ describe("NetSimMessage", function () {
     assertOwnProperty(row, 'toNodeID');
     assertEqual(row.toNodeID, undefined);
 
+    assertOwnProperty(row, 'simulatedBy');
+    assertEqual(row.simulatedBy, undefined);
+
     assertOwnProperty(row, 'payload');
     assertEqual(row.payload, undefined);
   });
@@ -42,7 +45,7 @@ describe("NetSimMessage", function () {
         assert(rows.length === 0, "Table is empty");
       });
 
-      NetSimMessage.send(testShard, null, null, null, function () {});
+      NetSimMessage.send(testShard, null, null, null, null, function () {});
 
       messageTable.readAll(function (err, rows) {
         assert(rows.length === 1, "Table has one row");
@@ -52,20 +55,22 @@ describe("NetSimMessage", function () {
     it ("Puts row values in remote table", function () {
       var fromNodeID = 1;
       var toNodeID = 2;
+      var simulatedBy = 2;
       var payload = 'xyzzy';
 
-      NetSimMessage.send(testShard, fromNodeID, toNodeID, payload, function () {});
+      NetSimMessage.send(testShard, fromNodeID, toNodeID, simulatedBy, payload, function () {});
 
       messageTable.readAll(function (err, rows) {
         var row = rows[0];
         assertEqual(row.fromNodeID, fromNodeID);
         assertEqual(row.toNodeID, toNodeID);
+        assertEqual(row.simulatedBy, simulatedBy);
         assertEqual(row.payload, payload);
       });
     });
 
     it ("Returns no error to its callback when successful", function () {
-      NetSimMessage.send(testShard, null, null, null, function (err) {
+      NetSimMessage.send(testShard, null, null, null, null, function (err) {
         assert(err === null, "Error is null on success");
       });
     });
@@ -78,6 +83,7 @@ describe("NetSimMessage", function () {
     messageTable.create({
       fromNodeID: 1,
       toNodeID: 2,
+      simulatedBy: 2,
       payload: 'xyzzy'
     }, function (err, row) {
       testRow = row;
@@ -88,6 +94,7 @@ describe("NetSimMessage", function () {
     var message = new NetSimMessage(testShard, testRow);
     assertEqual(message.fromNodeID, 1);
     assertEqual(message.toNodeID, 2);
+    assertEqual(message.simulatedBy, 2);
     assertEqual(message.payload, 'xyzzy');
   });
 
@@ -114,9 +121,9 @@ describe("NetSimMessage", function () {
 
   describe("destroyEntities on messages", function () {
     it ("deletes all messages passed to it", function () {
-      NetSimMessage.send(testShard, 1, 2, 'alpha', function () {});
-      NetSimMessage.send(testShard, 1, 2, 'beta', function () {});
-      NetSimMessage.send(testShard, 1, 2, 'gamma', function () {});
+      NetSimMessage.send(testShard, 1, 2, 2, 'alpha', function () {});
+      NetSimMessage.send(testShard, 1, 2, 2, 'beta', function () {});
+      NetSimMessage.send(testShard, 1, 2, 2, 'gamma', function () {});
       assertTableSize(testShard, 'messageTable', 3);
 
       var messages;

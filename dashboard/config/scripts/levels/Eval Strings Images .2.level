@@ -22,7 +22,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "failure_message_override": "Make sure you append the string \"Universe\" to make the code create \"Hello, Universe\""
   },
   "md5": "d6717a8be86097d06d4f9c3e0e64b62a"
 }]]></config>
@@ -44,10 +45,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="string_append" inline="false"/>
         <block type="functional_string">
           <title name="VAL"/>
         </block>
-        <block type="string_append" inline="false"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

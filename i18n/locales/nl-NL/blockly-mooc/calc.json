@@ -1,17 +1,17 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
-  "emptyComputeBlock":"Je moet een blok aan het 'verwerk'-blok koppelen.",
-  "emptyFunctionalBlock":"Je hebt een blok zonder waarde.",
+  "divideByZeroError":"Je programma resulteert in een deling door nul.",
+  "emptyComputeBlock":"Je moet een blok aan het \"evalueren\" blok koppelen.",
   "equivalentExpression":"Probeer jouw argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen.",
-  "evaluate":"evaluate",
-  "extraTopBlocks":"Je hebt blokken die niet gekoppeld zijn. Was het jouw bedoeling om deze aan het \"verwerk\"-blok te koppelen?",
+  "evaluate":"evalueren",
+  "extraTopBlocks":"Je hebt niet-gekoppelde blokken. Was het de bedoeling om deze aan het \"evalueren\" blok te koppelen?",
   "failedInput":"Jouw functie geeft niet het juiste resultaat voor alle waardes.",
   "goal":"Doel:",
   "levelIncompleteError":"Jouw expressie komt niet overeen met het doel.",
-  "missingVariableX":"Your expression is missing variable {var}.",
+  "missingFunctionError":"Je moeten een functie genaamd {functionName} definiëren.",
+  "missingVariableX":"Variabele {var} ontbreekt in jouw expressie.",
   "reinfFeedbackMsg":"Hier is jouw berekening! Je kan er verder aan werken, of naar de volgende puzzel gaan!",
   "yourExpression":"Jouw expressie:",
   "wrongInput":"Je roept jouw functie met de verkeerde waarde aan.",
-  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expression does not return the correct result."
+  "wrongOtherValuesX":"Jouw expressie resulteert in de verkeerde waarde wanneer we {var} aanpassen.",
+  "wrongResult":"Jouw expressie geeft niet het juiste resultaat terug."
 }

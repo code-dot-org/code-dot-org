@@ -8,53 +8,49 @@ nav: pd2_nav
 
 ## Click on your location for more information. ##
 
-
-
-[Atlanta, GA](/educate/pd/15-16/atlanta)
+[CA - Los Angeles (LAUSD only)](/educate/pd/15-16/lausd)
 <br />
-[Boston, MA](/educate/pd/2/boston)
+[CA - Orange County](/educate/pd/15-16/orange)
 <br />
-[Broward County, FL](/educate/pd/2/broward)
+[CO - Denver](/educate/pd/15-16/denver)
 <br />
-[Charles County, MD](/educate/pd/2/charles)
+[FL - Broward](/educate/pd/15-16/broward)
 <br />
-[Chicago, IL](/educate/pd/2/chicago)
+[FL - Miami](/educate/pd/15-16/miami)
 <br />
-[Durham, NC](/educate/pd/2/durham)
+[GA - Atlanta](/educate/pd/15-16/atlanta)
 <br />
-[Frederick, MD](/educate/pd/2/frederick)
+[ID - Boise](/educate/pd/15-16/idaho)
 <br />
-[Houston](/educate/pd/2/houston)
+[IL - Chicago](/educate/pd/15-16/chicago)
 <br />
-[Howard, MD](/educate/pd/2/howard)
+[MD - Boston](/educate/pd/15-16/boston)
 <br />
-[Idaho](/educate/pd/2/idaho)
+[MD - Charles](/educate/pd/15-16/charles)
 <br />
-[Las Vegas](/educate/pd/2/las-vegas)
+[MD - Frederick](/educate/pd/15-16/frederick)
 <br />
-[Los Angeles](/educate/pd/2/los-angeles)
+[MD - Howard](/educate/pd/15-16/howard)
 <br />
-[Miami-Dade, FL](/educate/pd/2/miami)
+[MD - Prince George's County](/educate/pd/15-16/pg)
 <br />
-[Montgomery County, MD](/educate/pd/2/moco)
+[NC - Durham](/educate/pd/15-16/durham)
 <br />
-[New York City](/educate/pd/2/nyc)
+[NV - Las Vegas](/educate/pd/15-16/las-vegas)
 <br />
-[Ohio](/educate/pd/2/ohio)
+[NY - New York City](/educate/pd/15-16/nyc)
 <br />
-[Prince Geroge's County, MD](/educate/pd/2/pg)
+[OH - Columbus](/educate/pd/15-16/ohio)
 <br />
-[Seattle](/educate/pd/2/seattle)
+[TX - Houston](/educate/pd/15-16/houston)
 <br />
-[South Florida](/educate/pd/2/south-florida)
+[WA - Seattle](/educate/pd/15-16/seattle)
 <br />
-[Spokane](/educate/pd/2/spokane)
-<br />
-[Utah](/educate/pd/2/utah)
+[WA - Spokane](/educate/pd/15-16/spokane)
 <br />
 
 ----------
-Please visit [FAQs](/educate/pd/faq) for more information.
+Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 
 <br />
 <br />

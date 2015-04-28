@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Write the function `cookie-sales` which takes in the number of cookies sold, and produces the amount of money customers spent to buy those cookies (each cookie costs $1.50).",
+    "instructions": "Write the function `sales` which takes in the number of cookies sold, and produces the amount of money customers spent to buy those cookies (each cookie is sold at $1.50).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -20,7 +20,8 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
+    "definition_collapse": "false",
+    "disable_examples": "false"
   },
   "md5": "1bc152180c3741d0aabcb5bc8620a216"
 }]]></config>
@@ -44,7 +45,7 @@
             <arg name="cookies" type="Number"/>
             <outputtype>Number</outputtype>
           </mutation>
-          <title name="NAME">cookie-sales</title>
+          <title name="NAME">sales</title>
           <functional_input name="STACK">
             <block type="functional_times" inline="false">
               <functional_input name="ARG1">
@@ -66,7 +67,7 @@
         <block type="functional_compute" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
-              <mutation name="cookie-sales">
+              <mutation name="sales">
                 <arg name="cookies" type="Number"/>
               </mutation>
               <functional_input name="ARG0">

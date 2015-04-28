@@ -41,7 +41,17 @@ This lesson has four new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) Introduction
 
-In the previous stage, you only worked with a single type of value - Numbers. In this next stage you'll get a chance to write programs  with new data types to output text (Strings) and pictures (Images). Students should see Strings as an analog to Numbers: a different type of value, but one that is still a simple program that evaluates to itself and can be passed as an argument to a function. Note that the Number 42 and the String "42" are different values! You could add the Number 42 to another number, but you cannot add the String "42" to another number.
+In the previous stage, students only worked with a single type of value - Numbers. In this next stage they will get a chance to write programs with new data types to output text (Strings) and pictures (Images).
+
+<img src="purplestar.png" class="right-img" />
+
+Show students the 'star' function, and ask them to discuss the following questions:
+
+- What is the name of this function?
+- How many arguments are being given to this function?
+- What do you think this function will do?
+
+Students are not expected to know all the answers here - the goal is for them to apply what they know about Evaluation Blocks to a novel expression, and discuss for themselves what they think it might mean. Ask them to justify their answers, and to explain why they think they are correct. Encourage students to look for patterns among these new blocks (such as colors, or quotation marks around the words "solid" and "purple" - what might those patterns mean?
 
 [/together]
 

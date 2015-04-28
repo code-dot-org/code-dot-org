@@ -97,3 +97,38 @@ describe('haveCaseMismatch_', function () {
     assert.equal(Eval.haveCaseMismatch_(obj1, obj2), false);
   });
 });
+
+describe('haveBooleanMismatch_', function () {
+  before(function () {
+    // For some reason, this wasn't working properly if done at the top of the file.
+    global.document = jsdom('<html><head></head><body><svg id="svg"></svg></body></html>');
+  });
+
+  it('reports false if both bools are true', function () {
+    var text1 = new EvalText('true', 12, 'red');
+    var text2 = new EvalText('true', 12, 'red');
+
+    assert.equal(Eval.haveBooleanMismatch_(text1, text2), false);
+  });
+
+  it('reports false if both bools are false', function () {
+    var text1 = new EvalText('false', 12, 'red');
+    var text2 = new EvalText('false', 12, 'red');
+
+    assert.equal(Eval.haveBooleanMismatch_(text1, text2), false);
+  });
+
+  it('reports true if first is true, second is false', function () {
+    var text1 = new EvalText('true', 12, 'red');
+    var text2 = new EvalText('false', 12, 'red');
+
+    assert.equal(Eval.haveBooleanMismatch_(text1, text2), true);
+  });
+
+  it('reports true if first is false, second is true', function () {
+    var text1 = new EvalText('true', 12, 'red');
+    var text2 = new EvalText('false', 12, 'red');
+
+    assert.equal(Eval.haveBooleanMismatch_(text1, text2), true);
+  });
+});

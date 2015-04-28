@@ -235,6 +235,12 @@ li p {
   background-color: #ddd;
 }
 
+.right-img {
+  float:right;
+  padding-left: 20px;
+  max-width: 50%;
+}
+
 @page  
 { 
     size: auto;    
@@ -248,5 +254,9 @@ li p {
         zoom: 75%;
     }
 	img{ max-width: 100%; }
-    .standards, .video { display: none !important; }
+    .standards, .video { visibility: hidden; display: none !important; }
+    tr, td, th {page-break-inside:avoid}
+    thead {display:table-header-group}
+    a, p, li {color:#000000 !important}
+  
 }

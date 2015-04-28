@@ -10,7 +10,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   test "should get edit" do
     get :edit, id: @level_source.id
     assert_response :success
-    assert_equal([], assigns(:callouts))
+    assert_equal([], assigns(:view_options)[:callouts])
   end
 
   test "should not get edit if hidden" do
@@ -22,18 +22,24 @@ class LevelSourcesControllerTest < ActionController::TestCase
   test "should get show" do
     get :show, id: @level_source.id
     assert_response :success
-    assert_equal([], assigns(:callouts))
+    assert_equal([], assigns(:view_options)[:callouts])
   end
 
   test "should get show with embed" do
     get :show, id: @level_source.id, embed: '1'
     assert_response :success
-    assert_equal([], assigns(:callouts))
 
-    assert_equal true, assigns(:embed)
-    assert_equal false, assigns(:share)
-    assert_equal true, assigns(:no_padding)
-    assert_equal true, assigns(:skip_instructions_popup)
+    app_options = assigns(:view_options)
+    assert_equal true, app_options[:no_padding]
+    assert_equal true, app_options[:no_header]
+    assert_equal true, app_options[:no_footer]
+    assert_equal true, app_options[:white_background]
+    assert_equal [], app_options[:callouts]
+
+    options = assigns(:level_view_options)
+    assert_equal true, options[:embed]
+    assert_equal false, options[:share]
+    assert_equal true, options[:skip_instructions_popup]
   end
 
   test "should not get show if hidden" do
@@ -206,7 +212,6 @@ class LevelSourcesControllerTest < ActionController::TestCase
     level_source_id = ExecJS.exec("#{element.child.text};\nreturn appOptions.level_source_id")
     assert_equal @level_source.id, level_source_id
   end
-
 
   test 'artist levelsource has sharing meta tags' do
     level_source = create(:level_source, level: Artist.first)

@@ -216,6 +216,7 @@ hr:
         artist: Nacrtaj nešto
     user:
       classroom: Učiteljeva Početna stranica
+      district_dashboard: District Dashboard
       label: 'Zdravo, %{username}'
       stats: Moj napredak
       settings: Moj račun
@@ -345,6 +346,7 @@ hr:
     heading_apps: '<h2>Zabava za</h2><h1>sve</h1>'
     heading_legacy: '<h2>Naš općeniti tečaj za</h2><h1>sve uzraste</h1>'
     your_gallery: Galerija
+    no_primary_course: Try a course at Code Studio
   gender:
     male: Muško
     female: Žensko
@@ -434,6 +436,9 @@ hr:
       body: Pogledaj galeriju aplikacija i umjetničkih slika koje su napravili naši korisnici
     frozen:
       title: Snježno kraljevstvo
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
     students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!
@@ -463,6 +468,14 @@ hr:
     wrong_body: 'Rješenje koje ste unijeli nije ispravno.  Molimo pokušajte ponovo!'
     correct_title: Ispravno
     correct_body: To je točan odgovor.
+  contract_match:
+    wrong_title: Netočan odgovor
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Ovdje unesite vaš odgovor
   dialog:
@@ -547,3 +560,5 @@ hr:
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

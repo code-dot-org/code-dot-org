@@ -5,26 +5,20 @@ module Ops
     API = ::OPS::API
 
     setup do
-      @request.headers['Accept'] = 'application/json'
       @admin = create :admin
       sign_in @admin
       @district = create(:district)
     end
 
+    test 'just return json whatever you ask for' do
+      @request.headers['Accept'] = 'text/html'
 
-    test 'District contact can view all teachers in their district' do
-      #87054980
-      assert_routing({ path: "#{API}/districts/1/teachers", method: :get }, { controller: 'ops/districts', action: 'teachers', id: '1' })
-      sign_out @admin
-      sign_in @district.contact
-      teacher = create(:teacher)
-      @district.users << teacher
-      get :teachers, id: @district.id
+      get :index
       assert_response :success
-      assert_equal teacher.email, JSON.parse(@response.body).first['email']
-    end
 
-    # Test index + CRUD controller actions
+      # it's a json list
+      assert_equal 1, JSON.parse(@response.body).count
+    end
 
     test 'Ops team can list all districts' do
       assert_routing({ path: "#{API}/districts", method: :get }, { controller: 'ops/districts', action: 'index' })
@@ -83,7 +77,12 @@ module Ops
       assert_equal 'new_teacher@email.xx', dc.email
       assert dc.teacher?
       assert dc.district_contact?
-      assert_equal [district], dc.districts_as_contact
+      assert_equal district, dc.district_as_contact
+      assert dc.invitation_token
+      assert dc.teacher?
+      assert_equal 'New', dc.ops_first_name
+      assert_equal 'user', dc.ops_last_name
+      assert dc.invited_by == @admin
 
       # new district knows about the contact
       assert_equal dc, district.contact
@@ -121,7 +120,7 @@ module Ops
       assert_equal 'new_teacher@email.xx', dc.email
       assert dc.teacher?
       assert dc.district_contact?
-      assert_equal [@district], dc.districts_as_contact
+      assert_equal @district, dc.district_as_contact
 
       # district knows about the contact
       @district = @district.reload
@@ -148,7 +147,7 @@ module Ops
       dc = dc.reload
       assert dc.teacher?
       assert dc.district_contact? # upgrade
-      assert_equal [@district], dc.districts_as_contact
+      assert_equal @district, dc.district_as_contact
 
       # district knows about the contact
       @district = @district.reload

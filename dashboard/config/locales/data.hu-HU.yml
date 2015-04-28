@@ -104,7 +104,7 @@
         TextMatch: Szöveg egyezés
         StudioEC: Játéklabor
         Applab: App Lab
-        NetSim: Internet Simulator
+        NetSim: Internet szimulátor
     trophy:
       name:
         Bronze: Bronz
@@ -130,16 +130,16 @@
         maze_2_2_5: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp,
           vagy repülsz!
         maze_2_3: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
-        maze_2_4: Őrizd meg nyugalmad, és segíts megkeresni Rossz Disznót. Egyébként
+        maze_2_4: Őrizd meg a nyugalmad, és segíts megkeresni Rossz Disznót. Egyébként
           lehet, hogy dühös leszek!
         maze_2_5: Van egy 2 utasításból álló út a malachoz. Kitalálod?
-        maze_2_6: Próbálj meg elvezetni a zöld behatolóhoz nem több mint 3 utasítás
+        maze_2_6: Próbálj meg elvezetni a zöld behatolóhoz nem több, mint 3 utasítás
           használatával.
         maze_2_7: Segíts elűzni a rossz malackát a legkevesebb blokk segítségével.
           Próbálj egynél több „ismételd x alkalommal” blokkot felhasználni.
         maze_2_8: 'Ha egy blokk szürke, akkor az nem törölhető. Oldd meg ezt a feladványt
-          olyan "ismétlő" blokk használatával, ami 3-szor ismétel. Próbáld meg ezt
-          a 3 blokkot berakni a szürke "ismétlő" blokkba: menj, menj, fordulj.'
+          olyan "ismételd" blokk használatával, ami 3-szor ismétel. Próbáld meg ezt
+          a 3 blokkot berakni a szürke "ismételd" blokkba: menj, menj, fordulj.'
         maze_2_9: Ok, próbáld ki az új „ismételd amíg" blokkot - ez addig ismétli
           a benne lévő utasítást, amíg a madár el nem éri a bosszantó disznót.
         maze_2_10: Ok, még egyszer, utoljára a gyakorlatban - meg tudod oldani ezt
@@ -324,9 +324,9 @@
           egy bemenetet a függvényhez)'
         turtle_3_7: A "rajzoljon egy házat" függvényhez adj hozzá egy "hossza" bemenetet,
           és építs egy nagy házat az elefántnak (150 képpont hosszúságú falakkal)
-        turtle_3_8: Itt van minden a blokkokat az előző puzzle.  Módosítsa a "egy
-          ház rajzolása", úgyhogy a végén a jobb alsó sarokban után rajz egy új házat.
-          Ehhez a funkcióhoz módosított rajzoljunk három ház.
+        turtle_3_8: Változtasd meg a "rajzolj egy házat" eljárást úgy, hogy egy húj
+          ház rajzolását annak jobb felső sarkában fejezzem be. Használd a módosított
+          függvényt három ház megrajzolására.
         turtle_3_9: Létre tudod hozni újra segítség nélkül a "rajzoljon egy házat"
           függvényt? Próbáld ki, aztán rajzolj egy egész házsort.
         turtle_3_10: Sokat tanultál! Most ezt a tudást használd arra, hogy szabadon
@@ -424,9 +424,8 @@
         flappy_8: Bármikor átállíthatod a játék környezetét, nem csak akkor, amikor
           elkezdődik. Próbáld ki a VÉLETLEN hátteret különböző eseményekhez párosítani,
           például ahhoz, ha Flappy átjut egy akadályon.
-        flappy_9: Hogy kicsit felkavarjuk a dolgokat, változtasd meg a szabályokat.
-          Amikor beleütközöl egy akadályba, a játék ne álljon meg, hanem csak a pontszámlálót
-          állítsd vissza nullára.
+        flappy_9: Változtassuk meg úgy a dolgokat, hogy amikor leüt egy akadályt,
+          ahelyett hogy véget érne a játék, inkább állítsa vissza a pontokat 0-ra.
         flappy_11: Hozz létre egy saját Flappy játékot! Meg tudod változtatni a kinézetet
           és az összes szabályt, sőt még a gravitációt is. Ha elkészültél, kattints
           a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon.
@@ -573,12 +572,13 @@
           szót betűzzem
         maze_wordsearch_k_20: Ez egy próba! Mozgass engem egy irányba, majd egy másikba
           hogy a STORY szót betűzzem
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: Készítsd el saját appodat az eszköztárban található blokkok
+          felhasználásával.
         turtle_ec_1_2: 'Most rajzolj egy négyzetet. Megjegyzés: válaszd a kedvencedet
-          az új "színbeállítások megadása" blokk színei közül.'
+          az új "toll színe" blokk színei közül.'
         turtle_ec_1_10: 'Megcsináltad! Most rajzolj bármit, amit csak szeretnél. Néhány
           szórakoztató ötlet: pálcikaember, hópehely, vagy spirál. Próbáld ki az új
-          "szélesség beállítása" blokkot is. Jó szórakozást!'
+          "tollVastagság" blokkot is. Jó szórakozást!'
         studio_ec_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Kész
           gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
     video:
@@ -681,12 +681,34 @@
         playlab_intro: Bevezetés a játéklaborba
         playlab_events: A Játéklabor eseményei
         playlab_repeat_forever: Játéklabor Végtelen ciklus
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        msm_1_intro: CS in Algebra Chapter 1 Introduction
-        msm_2_eval_block: Evaluation Blocks
-        msm_3_pemdas: PEMDAS
-        msm_6_variables: Változók
-        msm_7_functions: Függvények
+        tutorial_puzzle_challenge: Bemutató a feladvány megoldásához
+        infinity_playlab_intro: Játéklabor - bevezetés
+        infinity_playlab_events: Játéklabor - események
+        infinity_playlab_repeat_forever: Játéklabor - végtelen ismétlés
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
+        csp_textcompression: Text compression widget
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
@@ -790,3 +812,9 @@
         arrows_move_actor: A nyilak segítségével mozgasd a szereplőt!
         right_arrow_fireball: A jobbra nyíllal tudod kilőni a tűzgolyókat
         name_function: Írd be a függvény nevét ide
+        Infinity_move_right_runbutton: Itt adj hozzá mozgasd blokkot
+        Infinity_move_directions_callout: Melyik blokk mozgatja majd Baymaxot fölfelé,
+          ha megnyomjuk a fel gombot?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Lejátszik egy hangot, amikor az esemény bekövetkezik.
+        Infinity_repeat_callout: Ide húzz be Mozgasd blokkokat

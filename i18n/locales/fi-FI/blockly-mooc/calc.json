@@ -1,17 +1,17 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
-  "emptyComputeBlock":"Liitä lohko \"laske\"-lohkoon.",
-  "emptyFunctionalBlock":"Sinulla on lohko, josta puuttuu syöte.",
+  "divideByZeroError":"Ohjelmasi johtaa nollalla jakamiseen.",
+  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
   "equivalentExpression":"Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen.",
-  "evaluate":"evaluate",
-  "extraTopBlocks":"Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?",
+  "evaluate":"arvioi",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "failedInput":"Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla.",
   "goal":"Tavoite:",
   "levelIncompleteError":"Lausekkeesi ei vastaa tavoitetta.",
-  "missingVariableX":"Your expression is missing variable {var}.",
+  "missingFunctionError":"You must define a function named {functionName}.",
+  "missingVariableX":"Lausekkeestasi puuttuu muuttuja {var}.",
   "reinfFeedbackMsg":"Tässä on laskelmasi! Jatka sen työstämistä tai siirry  seuraavaan tehtävään!",
   "yourExpression":"Lausekkeesi:",
   "wrongInput":"Kutsut funktiotasi väärällä arvolla.",
-  "wrongOtherValuesX":"Your expression results in the wrong value if we vary {var}.",
-  "wrongResult":"Your expression does not return the correct result."
+  "wrongOtherValuesX":"Lausekkeesi johtaa väärään arvoon, jos muutamme {var}.",
+  "wrongResult":"Lausekkeesi ei palauta oikeaa tulosta."
 }

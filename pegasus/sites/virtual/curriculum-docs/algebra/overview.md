@@ -35,18 +35,7 @@ Algebra goes beyond just _solving for x_, and Code.org CS in math goes beyond th
 
 Code.org’s CS in Math curriculum aligns to the [Common Core Math Standards and Practices](http://www.corestandards.org/Math/), as well as the [CSTA Computer Science Standards](http://csta.acm.org/Curriculum/sub/K12Standards.html) and [ISTE](http://www.iste.org/STANDARDS) standards.
 
-Across the entire CS in Algebra curriculum, students will develop the skills of a computer scientist through the development of *Computational Thinking Practices*:
-
-- Creativity
-- Collaboration
-- Communication
-- Persistence
-- Problem Solving
-
-## Technology Requirements
-
-#### A computing device and an Internet connection. 
-We work hard to build an environment that is supported by all modern web browsers on desktops and mobile devices, but you'll have the most success with an up-to-date browser (IE9+, Firefox, Chrome, Safari).
+Across the entire CS in Algebra curriculum, students will develop the skills of a computer scientist through the development of *Computational Thinking Practices*, including Creativity, Collaboration, Communication, Persistence, and Problem Solving
 
 [units]
 

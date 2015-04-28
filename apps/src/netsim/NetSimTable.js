@@ -73,11 +73,18 @@ var NetSimTable = module.exports = function (storageTable) {
  */
 NetSimTable.prototype.readAll = function (callback) {
   this.remoteTable_.readAll(function (err, data) {
-    callback(err, data);
     if (err === null) {
       this.fullCacheUpdate_(data);
     }
+    callback(err, data);
   }.bind(this));
+};
+
+/**
+ * @returns {Array} all locally cached table rows
+ */
+NetSimTable.prototype.readAllCached = function () {
+  return this.arrayFromCache_();
 };
 
 /**
@@ -86,10 +93,10 @@ NetSimTable.prototype.readAll = function (callback) {
  */
 NetSimTable.prototype.read = function (id, callback) {
   this.remoteTable_.read(id, function (err, data) {
-    callback(err, data);
     if (err === null) {
       this.updateCacheRow_(id, data);
     }
+    callback(err, data);
   }.bind(this));
 };
 
@@ -99,10 +106,10 @@ NetSimTable.prototype.read = function (id, callback) {
  */
 NetSimTable.prototype.create = function (value, callback) {
   this.remoteTable_.create(value, function (err, data) {
-    callback(err, data);
     if (err === null) {
       this.addRowToCache_(data);
     }
+    callback(err, data);
   }.bind(this));
 };
 
@@ -113,10 +120,10 @@ NetSimTable.prototype.create = function (value, callback) {
  */
 NetSimTable.prototype.update = function (id, value, callback) {
   this.remoteTable_.update(id, value, function (err, success) {
-    callback(err, success);
     if (err === null) {
       this.updateCacheRow_(id, value);
     }
+    callback(err, success);
   }.bind(this));
 };
 
@@ -126,11 +133,21 @@ NetSimTable.prototype.update = function (id, value, callback) {
  */
 NetSimTable.prototype.delete = function (id, callback) {
   this.remoteTable_.delete(id, function (err, success) {
-    callback(err, success);
     if (err === null) {
       this.removeRowFromCache_(id);
     }
+    callback(err, success);
   }.bind(this));
+};
+
+/**
+ * Delete a row using a synchronous call. For use when navigating away from
+ * the page; most of the time an asynchronous call is preferred.
+ * @param id
+ */
+NetSimTable.prototype.synchronousDelete = function (id) {
+  this.remoteTable_.synchronousDelete(id);
+  this.removeRowFromCache_(id);
 };
 
 /**
