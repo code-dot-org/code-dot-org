@@ -52,6 +52,20 @@
       }
     }
   }
+  function timeOnSiteRenderer(instance, td, row, col, prop, value, cellProperties) {
+  if(value) {
+    var val = parseFloat(value);
+    var minutes = Math.floor(val / 60);
+    var seconds = val - minutes*60;
+    value = ('0' + minutes).substr(-2) + ':' + ('0' + seconds).substr(-2);
+    var percent = Math.min(1, val / 600);
+  } else {
+    var percent = 0;
+  }
+  Handsontable.renderers.TextRenderer.apply(this, arguments);
+    td.style['font-family'] = 'monospace';
+    td.style['background'] = 'linear-gradient(90deg, silver ' + percent*100 + '%, white 0%)';
+  }
   $("#completionTable").handsontable({
     data: data, startRows: 10, startCols: 9,
     colHeaders: [
@@ -64,8 +78,9 @@
       'Unique Successful\nAttempts',
       'Perceived Dropout',
       'Avg. Unique\nSuccess Rate',
+      'Avg. Time\non Page',
     ],
-    colWidths: [200, 100, 100, 100, 100, 100, 100, 100, 100],
+    colWidths: [200, 100, 100, 100, 100, 100, 100, 100, 100, 100],
     stretchH: 'none',
     columnSorting: true,
     manualColumnResize: true,
@@ -108,12 +123,17 @@
         type: 'numeric',
         format: '0.00%',
       },
+      {
+        data: "timeOnSite"
+      },
     ],
     cells: function(row, col, prop) {
       if(col == 3) {
         return {renderer: successRateRenderer};
       } else if (col == 8) {
         return {renderer: uniqueSuccessRateRenderer};
+      } else if (col == 9) {
+        return {renderer: timeOnSiteRenderer};
       }
       return {};
     }
