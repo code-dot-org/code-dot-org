@@ -412,6 +412,7 @@ NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
   onComplete = onComplete || function () {};
 
+  // This callback is occasionally called in an infinite loop.  Figure out why!
   this.myWire.destroy(function (err) {
     if (err) {
       onComplete(err);
@@ -421,13 +422,13 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
     this.myWire = null;
     // Trigger an immediate router update so its connection count is correct.
     if (this.myRouter) {
-      this.myRouter.update(onComplete);
       this.myRouter.stopSimulation();
     }
 
     this.myRemoteClient = null;
     this.myRouter = null;
     this.remoteChange.notifyObservers(null, null);
+    onComplete(null);
   }.bind(this));
 };
 
