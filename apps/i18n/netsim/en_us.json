@@ -37,6 +37,8 @@
   "joinSection": "Join Section",
   "lobby": "Lobby",
   "lobbyIsEmpty": "Nobody's here yet.",
+  "lobbyStatusWaitingForOther": "{spinner} Waiting for {otherName} to connect... ({otherStatus})",
+  "lobbyStatusWaitingForYou": "Waiting for you...",
   "logStatus_dropped": "Dropped",
   "logStatus_success": "Success",
   "markAsRead": "Mark as read",

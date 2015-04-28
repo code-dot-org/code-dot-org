@@ -230,6 +230,11 @@ $wide-column-width: 121px;
 
     table {
       margin-bottom: 1em;
+
+      img {
+        height: 14px;
+        vertical-align: text-top;
+      }
     }
 
     td {
