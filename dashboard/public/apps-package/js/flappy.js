@@ -776,7 +776,7 @@ var flappyMsg = require('../../locale/current/flappy');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -1258,8 +1258,8 @@ Flappy.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl, shareable: level.shareable}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -1769,7 +1769,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":258,"../../locale/current/flappy":260,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../skins":207,"../templates/page.html":232,"../utils":253,"./api":80,"./constants":82,"./controls.html":83,"./visualization.html":88}],88:[function(require,module,exports){
+},{"../../locale/current/common":258,"../../locale/current/flappy":260,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../skins":207,"../templates/page.html.ejs":232,"../utils":253,"./api":80,"./constants":82,"./controls.html.ejs":83,"./visualization.html.ejs":88}],88:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
