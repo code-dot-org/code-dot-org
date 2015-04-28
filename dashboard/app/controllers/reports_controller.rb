@@ -216,9 +216,9 @@ SQL
       ga_data.data.rows.each do |r|
         label = r[0]
         output_data[label] ||= {}
-        output_data[label]["Total#{key}"] = r[1]
-        output_data[label]["Unique#{key}"] = r[2]
-        output_data[label]["Avg#{key}"] = r[3]
+        output_data[label]["Total#{key}"] = r[1].to_f
+        output_data[label]["Unique#{key}"] = r[2].to_f
+        output_data[label]["Avg#{key}"] = r[3].to_f
       end
     end
     output_data.each_key do |key|

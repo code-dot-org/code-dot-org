@@ -12,7 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
-var markup = require('./NetSimPanel.html');
+var markup = require('./NetSimPanel.html.ejs');
 
 /**
  * Generator and controller for a NetSim Panel, a single section on the
@@ -156,6 +156,7 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
 NetSimPanel.prototype.addButton = function(buttonText, pressCallback) {
   $('<span>')
       .addClass('netsim-button')
+      .addClass('secondary')
       .html(buttonText)
       .click(pressCallback)
       .appendTo(this.rootDiv_.find('.panel-controls'));

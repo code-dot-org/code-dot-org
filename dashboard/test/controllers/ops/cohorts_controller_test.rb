@@ -49,6 +49,7 @@ module Ops
       last_user = User.last
       assert_equal 'Male', last_user.ops_gender
       assert_equal 'Jefferson Middle School', last_user.ops_school
+      assert_equal 'Jefferson Middle School', last_user.school
 
       assert !ActionMailer::Base.deliveries.empty?
 

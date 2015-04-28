@@ -196,6 +196,10 @@ GEM
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    lograge (0.3.1)
+      actionpack (>= 3)
+      activesupport (>= 3)
+      railties (>= 3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -442,6 +446,7 @@ DEPENDENCIES
   jwt
   kaminari
   le (~> 2.2)
+  lograge
   minitest-reporters
   mocha
   mysql2 (= 0.3.13)

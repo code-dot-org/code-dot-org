@@ -1,4 +1,5 @@
 <%
+  var i18n = require('../../locale/current/netsim');
   var netsimConstants = require('./netsimConstants');
   var dataConverters = require('./dataConverters');
 
@@ -20,24 +21,29 @@
     <%
   }
 %>
-<div>
-  <div class="scroll-area">
-    <div class="packet">
-      <table>
-        <tbody>
-          <%
-            logRow(EncodingType.ASCII, dataConverters.binaryToAscii(binary, chunkSize));
+<div class="scroll-area bit-log-scroll-area">
+  <div class="packet">
+    <table>
+      <tbody>
+        <%
+          logRow(EncodingType.ASCII, dataConverters.binaryToAscii(binary, chunkSize));
 
-            logRow(EncodingType.DECIMAL, dataConverters.alignDecimal(dataConverters.binaryToDecimal(binary, chunkSize)));
+          logRow(EncodingType.DECIMAL, dataConverters.alignDecimal(dataConverters.binaryToDecimal(binary, chunkSize)));
 
-            logRow(EncodingType.HEXADECIMAL, dataConverters.formatHex(dataConverters.binaryToHex(binary), chunkSize));
+          logRow(EncodingType.HEXADECIMAL, dataConverters.formatHex(dataConverters.binaryToHex(binary), chunkSize));
 
-            logRow(EncodingType.BINARY, dataConverters.formatBinary(binary, chunkSize));
+          logRow(EncodingType.BINARY, dataConverters.formatBinary(binary, chunkSize));
 
-            logRow(EncodingType.A_AND_B, dataConverters.formatAB(dataConverters.binaryToAB(binary), chunkSize));
-          %>
-        </tbody>
-      </table>
-    </div>
+          logRow(EncodingType.A_AND_B, dataConverters.formatAB(dataConverters.binaryToAB(binary), chunkSize));
+        %>
+      </tbody>
+    </table>
   </div>
+  <% if (showReadWireButton) { %>
+    <div class="panel-footer bit-log-panel-footer">
+      <div class="right-side-controls">
+        <span class="netsim-button large-button" id="read-wire-button"><%= i18n.readWire() %></span>
+      </div>
+    </div>
+  <% } %>
 </div>

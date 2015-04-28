@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-21T21:50:59.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "title",
+    "content1": "this is a discourse forum",
+    "markdown": "# Test Discourse Level\n\nThis is a test Discourse level. Comments below.\n\n<div id=\"discourse-comments\"></div>\n"
+  }
+}]]></config>
+</External>

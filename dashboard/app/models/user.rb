@@ -81,9 +81,12 @@ class User < ActiveRecord::Base
   def User.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
     unless user
+      # initialize new users with name and school
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
+      params[:school] ||= params[:ops_school]
+
       user = User.invite!(email: params[:email],
                           user_type: TYPE_TEACHER, age: 21)
       user.invited_by = invited_by_user

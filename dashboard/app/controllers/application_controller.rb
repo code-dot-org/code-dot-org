@@ -40,12 +40,14 @@ class ApplicationController < ActionController::Base
     params[resource] &&= send(method) if respond_to?(method, true)
   end
 
-  # when CanCan denies access, send a 403 Forbidden response instead of causing a server error
   rescue_from CanCan::AccessDenied do
-    head :forbidden
-    # TODO if users are actually seeing this (eg. because they cleared
-    # cookies and clicked on something), maybe we should render an
-    # actual page
+    if !current_user && request.format == :html
+      # we don't know who you are, you can try to sign in
+      authenticate_user!
+    else
+      # we know who you are, you shouldn't be here
+      head :forbidden
+    end
   end
 
   # missing templates are usually a result of the user agent

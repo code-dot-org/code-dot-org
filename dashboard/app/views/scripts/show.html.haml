@@ -1,8 +1,8 @@
 #landingpage
-
   .row#lesson
     .span9#heading
       %h3.whitetext
+        = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
         = data_t_suffix('script.name', @script.name, 'title')
         - if @script.beta?
           %span.betatext
@@ -11,6 +11,7 @@
 
       %p.smallwhitetext
         = data_t_suffix('script.name', @script.name, 'description')
+
 
     .span3#trynow
       = button_to t('home.trynow'), script_puzzle_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
@@ -21,10 +22,10 @@
         = link_to t('landing.support'), t('landing.support_url')
         %br/
 
-    - if @script.has_banner_image?
+    - if @script.banner_image
       .span12
         %p
-          = link_to image_tag("banner_#{@script.name}_cropped.jpg"), script_puzzle_path(@script, 'next')
+          = link_to image_tag(@script.banner_image), script_puzzle_path(@script, 'next')
 
     - if @script.beta?
       .span10

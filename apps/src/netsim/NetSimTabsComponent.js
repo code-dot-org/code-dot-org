@@ -11,7 +11,7 @@
 /* global $ */
 'use strict';
 
-var buildMarkup = require('./NetSimTabsComponent.html');
+var buildMarkup = require('./NetSimTabsComponent.html.ejs');
 var NetSimRouterTab = require('./NetSimRouterTab');
 var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimDnsTab = require('./NetSimDnsTab');

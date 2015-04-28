@@ -2,6 +2,7 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 
 @import 'color';
 
+$alabaster: #fafafa;
 $own-node-background-color: $white;
 $user-row-hover-color: $lightest_teal;
 $router-row-hover-color: $lighter_orange;
@@ -23,11 +24,6 @@ $wide-column-width: 121px;
   user-select: $val;
 }
 
-// Reduce top margin to help fit everything above the fold
-.full_container {
-  padding-top: 2px;
-}
-
 // Hide the footer instructions, we put them in the instructions tab
 #prompt-table {
   display: none;
@@ -37,47 +33,38 @@ $wide-column-width: 121px;
   clear: both;
 }
 
-
-// Sprited icons.
-.icon21 {
-  height: 21px;
-  width: 21px;
-  background-image: url("#{$root}icons.png");
-}
-.code {
- background-position: -42px 0;
-}
-.link {
-  background-position: -21px 0;
-}
-.run {
-  background-position: -63px -21px;
-  margin-right: 3px;
-}
-.stop {
-  background-position: -63px 0;
-  margin-right: 3px;
-}
-.calcHeader {
-  font-size: 25px;
-}
-
-.markedToken {
-  fill: $white;
-}
-
-.errorToken {
-  fill: $red;
-}
-
-.expr {
-  font-size: 20px;
-}
-
 //
 // NetSim-specific styles
 //
 #netsim {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  #netsim-leftcol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    overflow-y: auto;
+
+    & > .column-width-limiter {
+      width: 300px;
+    }
+  }
+
+  #netsim-rightcol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 330px;
+    right: 0;
+    overflow-y: auto;
+  }
+
   h1 {
     font-family: "Gotham 5r", sans-serif;
   }
@@ -91,16 +78,17 @@ $wide-column-width: 121px;
 
     th, td {
       padding: 1px 5px;
-      border: solid lightgray 1px;
       border-collapse: collapse;
     }
 
     th {
+      border: none;
       font-family: "Gotham 4r", sans-serif;
       font-size: 10pt;
     }
 
     td {
+      border: solid $lighter_gray 1px;
       font-family: "Gotham 4r", sans-serif;
 
       // Make sure table text can be selected and copied
@@ -138,8 +126,8 @@ $wide-column-width: 121px;
   // Orange SPAN button
   .netsim-button {
     display: inline-block;
-    background-color: $orange;
     color: $white;
+    background-color: $orange;
     border-radius: 3px;
     font-family: "Gotham 4r", sans-serif;
     font-size: 8pt;
@@ -150,30 +138,28 @@ $wide-column-width: 121px;
     // Button text should not be selectable
     @include user_select(none);
 
+    &.large-button {
+      font-size: 14px;
+      line-height: 20px;
+      border-radius: 5px;
+      padding: 7px 14px;
+    }
+
+    &.secondary {
+      background-color: $light_cyan;
+    }
+
     &[disabled] {
       background-color: $lighter_gray;
       cursor: default;
     }
   }
 
-  //
-  //General two-column layout rules
-  //
-  #netsim-rightcol {
-    float: right;
-    width: 300px;
-  }
-
-  #netsim-leftcol {
-    margin-right: 320px;
-  }
-
   // Visualization styles
   #netsim-visualization {
     svg {
       background-color: $white;
-      border: solid $black thin;
-      border-radius: 25px;
+      border: solid darkgray thin;
 
       .viz-node {
         text {
@@ -213,10 +199,6 @@ $wide-column-width: 121px;
   .netsim-shard-selection-panel {
     overflow: hidden;
 
-    .content-wrap {
-      margin: 1em;
-    }
-
     .field-box {
       float: left;
       margin-right: 1em;
@@ -228,9 +210,6 @@ $wide-column-width: 121px;
   }
 
   .netsim-lobby-panel {
-    .content-wrap {
-      margin: 1em;
-    }
 
     ul {
       margin: 0 0 10px 0;
@@ -302,7 +281,6 @@ $wide-column-width: 121px;
   $panel_border_radius: 0.3em;
 
   div.netsim-panel {
-    background-color: $white;
     margin: 0 0 0.5em;
     padding: 0;
 
@@ -313,14 +291,14 @@ $wide-column-width: 121px;
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
-      background-color: $purple;
+      background-color: $cyan;
       color: $white;
       border-radius: $panel_border_radius $panel_border_radius 0 0;
 
       .panel-controls {
         float: right;
         margin-top: -0.3em;
-        padding-top: 3px;
+        padding-top: 2px;
 
         // Special margin for buttons in this control area, so they don't squish together.
         .netsim-button {
@@ -330,11 +308,16 @@ $wide-column-width: 121px;
     }
 
     div.panel-body {
-      border-left: solid darkgray thin;
-      border-right: solid darkgray thin;
-      border-bottom: solid darkgray thin;
-      border-top: solid $purple thin;
+      background-color: $white;
+      border-left: solid darkgray 1px;
+      border-right: solid darkgray 1px;
+      border-bottom: solid darkgray 1px;
+      border-top: solid $cyan 1px;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
+    }
+
+    .content-wrap {
+      margin: 1em;
     }
 
     // Minimized panel, contents are hidden.
@@ -373,27 +356,32 @@ $wide-column-width: 121px;
       border-radius: 3px;
       background-color: $lightest_gray;
 
-      td {
-        border-color: $lightest_gray;
-      }
-
-      .packet-controls {
-        float: right;
-        text-align: right;
-      }
-
       &.unread {
-        background-color: $lighter_gray;
+        background-color: $alabaster;
+        border-color: $black;
 
-        td {
-          border-color: $lighter_gray;
+        th {
+          font-weight: bold;
         }
+      }
+
+      .expander {
+        cursor: pointer;
+      }
+
+      // The top-left cell that contains the expander icon
+      .maximized-packet thead th.encodingLabel {
+        text-align: left;
+      }
+
+      // Nudge the minimized expander to line up with the maximized one
+      .minimized-packet .expander {
+        padding: 0 5px;
       }
     }
 
     .scroll-area {
-      margin: 0.5em 0 0.5em 0;
-      max-height: 300px;
+      margin: 0.5em 0;
       width: 100%;
       overflow-y: auto;
     }
@@ -459,6 +447,11 @@ $wide-column-width: 121px;
   // Panel that lets the user enter and send messages
   // Mimics the log panel styles as much as possible.
   .netsim-send-panel {
+
+    .send-panel-packets {
+      max-height: 265px;
+      overflow-y: auto;
+    }
 
     .netsim-packet {
       border: solid darkgray thin;
@@ -649,7 +642,6 @@ $wide-column-width: 121px;
   }
 
   .netsim-tabs {
-    margin-top: 1em;
 
     h1 {
       font-size: 10pt;
@@ -660,7 +652,7 @@ $wide-column-width: 121px;
 
     // Modify actual tabs at top of tab area
     .ui-tabs-nav {
-      background: $purple;
+      background: $cyan;
       border-left: none;
       border-right: none;
       border-top: none;
@@ -757,13 +749,6 @@ $wide-column-width: 121px;
         height: 100px;
       }
       padding-right: 14px;
-    }
-  }
-
-  // Connection status panel, above visualization
-  .netsim-panel.netsim_status_panel {
-    div.panel-body {
-      padding: 1em;
     }
   }
 }

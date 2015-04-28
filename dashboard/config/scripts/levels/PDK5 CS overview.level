@@ -4,10 +4,11 @@
   "created_at": "2015-04-16T20:05:50.000Z",
   "properties": {
     "options": {
-      "skip_dialog": true
+      "skip_dialog": true,
+      "css": "unplugged"
     },
     "title": "Overview of programming concepts",
-    "markdown": "Put concepts and words here.\n"
+    "markdown": "## Programming Concepts\n\nHere are the programming concepts you'll be introduced to in this stage:\n\n- Loops\n- Events\n- Conditionals\n- Functions\n"
   },
   "md5": "974aecb6bbc13729c05746afb4911e90"
 }]]></config>

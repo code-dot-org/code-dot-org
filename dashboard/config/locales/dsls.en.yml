@@ -78,6 +78,8 @@ en:
         Contract for rocket-height: Contract for rocket-height
         rocket-height|Number|Number: rocket-height|Number|Number
     external:
+      AlgPD Break:
+        Before you move on...: Before you move on...
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -114,7 +116,19 @@ en:
       Mixing Colors:
         description here: description here
         title: title
+      PDAlg Curriculum Overview:
+        Curriculum Overview: Curriculum Overview
+        Overview of CS in Algebra curriculum: Overview of CS in Algebra curriculum
       PDAlg Intro: {}
+      PDAlg Scope:
+        Scope and Sequence: Scope and Sequence
+      PDAlg Teacher Dashboard:
+        Course Progress: Course Progress
+      PDAlg Teacher Introduction:
+        Introduce yourself: Introduce yourself
+      PDAlg commitment:
+        CS in Algebra PD commitments: CS in Algebra PD commitments
+        overview of program commitments: overview of program commitments
       PDCSP Intro: {}
       PDECS Intro:
         PD Intro: PD Intro
@@ -134,8 +148,12 @@ en:
         Overview of programming concepts: Overview of programming concepts
       PDK5 Classroom Culture C:
         Classroom Culture: Classroom Culture
+      PDK5 Connections:
+        Connections: Connections
       PDK5 Course Maps C: {}
       PDK5 Course Overview C: {}
+      PDK5 Foundations F:
+        foundational skill: foundational skill
       PDK5 Glossary C:
         Vocabulary: Vocabulary
       PDK5 Intro C: {}
@@ -143,6 +161,10 @@ en:
         Pair Programming: Pair Programming
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
+      PDK5 Strategies 1:
+        Classroom Strategies: Classroom Strategies
+      PDK5 Strategies F:
+        Strategies Discussion: Strategies Discussion
       PDK5 Teacher Dashboard 1:
         Dashboard 1: Dashboard 1
       PDK5 Teacher Dashboard 2:
@@ -308,9 +330,19 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      sciPD Course Overview: {}
+      sciPD Intro: {}
+      sciPD expectations: {}
+      sciPD intro finale: {}
+      sciPD intro video:
+        Welcome to CS in Science: Welcome to CS in Science
+      sciPD meet and greet: {}
       test demo level:
         demo description: demo description
         demo title: demo title
+      test discourse level type:
+        this is a discourse forum: this is a discourse forum
+        title: title
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
@@ -430,6 +462,8 @@ en:
       Open text response example:
         I loved it because...: I loved it because...
         Open text response example: Open text response example
+      PDAlg course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
         Biggest Challenges: Biggest Challenges
       PDK5 Classroom Culture 2:
@@ -471,7 +505,7 @@ en:
       PDK5 Promo Video:
         'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher approved'
       PDK5 Promo Video 2:
-        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher approved'
+        'Code Studio: Kid Tested, Teacher Approved!': 'Code Studio: Kid Tested, Teacher Approved!'
         My first impressions of Code Studio are...: My first impressions of Code Studio are...
       PDK5 Strategies O:
         'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'I think teaching computer science will be different than teaching other subjects in these ways: ...'

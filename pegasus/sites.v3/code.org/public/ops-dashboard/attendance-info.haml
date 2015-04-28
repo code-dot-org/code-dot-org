@@ -5,14 +5,7 @@ template: none
 - authentication_required!
 - forbidden! unless have_permission?('facilitator') || dashboard_user[:admin]
 
-%a{href:'/ops-dashboard'}
-  Dashboard
->
-%a{href:'/ops-dashboard#/workshops'}
-  PD Workshops
->
-%span
-  {{workshop.name}}
+= view :breadcrumbs, trail: [{url: '/teacher-dashboard', text: 'Dashboard'}, {url: '/ops-dashboard#/workshops', text: 'PD Workshops'}, {text: '{{workshop.name}} Info'}]
 
 %h1
   Information for {{workshop.name}}

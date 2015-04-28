@@ -13,7 +13,7 @@
 
 require('../utils'); // For Function.prototype.inherits()
 var i18n = require('../../locale/current/netsim');
-var markup = require('./NetSimBitLogPanel.html');
+var markup = require('./NetSimBitLogPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 
@@ -83,14 +83,16 @@ NetSimBitLogPanel.prototype.render = function () {
   var newMarkup = $(markup({
     binary: this.binary_,
     enabledEncodings: this.encodings_,
-    chunkSize: this.chunkSize_
+    chunkSize: this.chunkSize_,
+    showReadWireButton: (this.receiveButtonCallback_ !== undefined)
   }));
   this.getBody().html(newMarkup);
   NetSimEncodingControl.hideRowsByEncoding(this.getBody(), this.encodings_);
 
   // If we have a receive callback, add a receive button
   if (this.receiveButtonCallback_) {
-    this.addButton(i18n.readWire(), this.onReceiveButtonPress_.bind(this));
+    this.getBody().find('#read-wire-button')
+        .click(this.onReceiveButtonPress_.bind(this));
   }
 
   // Add a clear button to the panel header

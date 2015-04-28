@@ -2127,9 +2127,6 @@ Blockly.FieldImage.prototype.dispose = function() {
   this.imageElement_ = null;
   this.clickRectElement_ = null
 };
-Blockly.FieldImage.prototype.setPreserveAspectRatio = function(value) {
-  this.imageElement_.setAttribute("preserveAspectRatio", value)
-};
 Blockly.FieldImage.prototype.getClickTarget = function() {
   return this.clickRectElement_ || this.imageElement_
 };
@@ -2145,10 +2142,6 @@ Blockly.FieldImage.prototype.setText = function(src) {
   }
   this.src_ = src;
   this.imageElement_.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", goog.isString(src) ? src : "")
-};
-Blockly.FieldImage.prototype.setTextAndRefreshSize = function(src) {
-  this.setText(src);
-  this.getDimensionsThenUpdate_(src)
 };
 goog.provide("Blockly.FieldRectangularDropdown");
 goog.require("Blockly.Field");
