@@ -21,8 +21,8 @@ module LevelsHelper
   end
 
   def set_channel
-    # This only works for logged-in users because the storage_id cookie is set
-    # on '/v3' path for non-logged-in users.
+    # This only works for logged-in users because the storage_id cookie is not
+    # sent back to the client if it is modified by ChannelsApi.
     return unless current_user
 
     # The channel should be associated with the template level, if present.
