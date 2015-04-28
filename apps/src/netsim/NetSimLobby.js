@@ -19,7 +19,7 @@ var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
-var markup = require('./NetSimLobby.html');
+var markup = require('./NetSimLobby.html.ejs');
 
 var logger = require('./NetSimLogger').getSingleton();
 

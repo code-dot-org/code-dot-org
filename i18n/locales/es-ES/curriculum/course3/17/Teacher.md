@@ -6,17 +6,17 @@ title: "Play Lab: Create a Game" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>17, :title=> 'Play Lab: Create a Story', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Building on the previous Play Lab activity, students will add deeper interactivity as they build their own video games.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ Building on the previous Play Lab activity, students will add deeper interactivi
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -41,7 +41,7 @@ Building on the previous Play Lab activity, students will add deeper interactivi
   * Create an animated, interactive story using sequence, loops, and event-handlers
   * Share a creative artifact with other students
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -49,15 +49,15 @@ Building on the previous Play Lab activity, students will add deeper interactivi
 
 ### <a name="GetStarted"></a> Introduction
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!
 
-[/tip]
+[/sugerencia]
 
 [together]
 
@@ -67,7 +67,7 @@ Students will have the opportunity to share their final product with a link. Thi
 
 Designing a game that is fun to play yet challenging enough to avoid boredom is a tough task. Encourage students to consider how their programming choices make different aspects of their game harder, easier, frustrating, and fun.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -90,7 +90,7 @@ When you share a link to your game, you also share all of the code that goes beh
       * What would you like to try?
   * Choose someone else's game and build on it. (Don't worry; the original game will be safe.)
 
-[/together]
+[/juntos]
 
 [standards]
 

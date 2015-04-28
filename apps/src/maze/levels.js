@@ -8,7 +8,7 @@ var mazeMsg = require('../../locale/current/maze');
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function(page, level) {
-  return require('./toolboxes/maze.xml')({
+  return require('./toolboxes/maze.xml.ejs')({
     page: page,
     level: level
   });
@@ -16,7 +16,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./startBlocks.xml')({
+  return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
   });

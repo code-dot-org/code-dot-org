@@ -344,6 +344,7 @@ en:
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
           Programming Concepts: Programming Concepts
+          Reflection: Reflection
         netsim:
           title: Internet Simulator
           description_short: ''
@@ -526,6 +527,9 @@ en:
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -560,7 +564,59 @@ en:
           Teaching Strategies: Teaching Strategies
           Preparing for in-person PD: Preparing for in-person PD
           reference: reference
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
         sciencePD:
           Introduction to PD: Introduction to PD
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
         rbo-reference:
           reference: reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro
+        ECSPD-NexTech:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: nextech_logo.png
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
+        ECSPD-iZone:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: izone_logo.png
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
+        algebraPD-NexTech:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: Evaluation Blocks
+          logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+        algebraPD-iZone:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: Evaluation Blocks
+          logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+        sciencePD-NexTech:
+          Introduction to PD: Introduction to PD
+          logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
+        sciencePD-iZone:
+          Introduction to PD: Introduction to PD
+          logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS

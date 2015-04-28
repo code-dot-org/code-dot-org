@@ -160,12 +160,18 @@ img#turtleImage {
   background-color: #FFA000;
   color: #fff;
   margin-left: 0px;
-  margin-right: 0px;
-  padding: 3px;
-  font-size: 12px; }
+  margin-right: 3px;
+  padding: 3px 6px;
+  font-size: 14px; }
+
+#pauseButton, #continueButton {
+  min-width: 120px; }
 
 .debugger_button:focus {
   outline-style: none; }
+
+.debugger_button > img {
+  opacity: 1; }
 
 #debug-area {
   position: absolute;
@@ -242,14 +248,13 @@ img#turtleImage {
 .sliderKnob:hover {
   fill: #eee; }
 
-#pauseButton {
-  min-width: 80px; }
-
 /* Sprited icons. */
 .icon21 {
   height: 21px;
   width: 21px;
-  background-image: url("/blockly/media/applab/icons.png"); }
+  background-image: url("/blockly/media/applab/icons.png");
+  background-size: 42px 147px;
+  margin-bottom: -3px; }
 
 .code {
   background-position: -21px 0px; }
@@ -279,6 +284,26 @@ img#turtleImage {
 
 .down-btn {
   background-position: 0px -42px;
+  margin-right: 3px; }
+
+.pause-btn {
+  background-position: 0px -84px;
+  margin-right: 3px; }
+
+.continue-btn {
+  background-position: -21px -84px;
+  margin-right: 3px; }
+
+.step-in-btn {
+  background-position: 0px -105px;
+  margin-right: 3px; }
+
+.step-out-btn {
+  background-position: -21px -105px;
+  margin-right: 3px; }
+
+.step-over-btn {
+  background-position: 0px 21px;
   margin-right: 3px; }
 
 button.arrow {
@@ -329,6 +354,12 @@ button.arrow:focus {
   #share-cell.share-cell-none {
     display: none; }
 
+#design-cell {
+  display: inline-block;
+  vertical-align: top; }
+  #design-cell.design-cell-none {
+    display: none; }
+
 .new-design-element {
   width: 100px;
   height: 40px;
@@ -340,3 +371,13 @@ button.arrow:focus {
   margin-top: 10px;
   margin-bottom: 5px;
   font-size: 18px; }
+
+.ace_gutter-cell.ace_error {
+  background-image: url('/blockly/media/skins/applab/gutterError.png');
+  background-size: 16px 16px;
+  background-position: 2px 0px; }
+
+.ace_gutter-cell.ace_warning {
+  background-image: url('/blockly/media/skins/applab/gutterWarn.png');
+  background-size: 16px 16px;
+  background-position: 2px 0px; }

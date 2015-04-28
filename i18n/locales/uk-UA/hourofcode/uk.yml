@@ -144,7 +144,7 @@ uk:
   hoc_faq_frozen_q: Де підручник з Анною та Ельзою?
   hoc_faq_frozen_a: "Він опублікований на <a href='http://code.org/learn'>Code.org/learn</a>. Сподіваємося, вам сподобається!"
   hoc_faq_high_school_q: Які вправи слід виконувати з учнями середньої школи?
-  hoc_faq_high_school_a: "Незалежно від віку, ми рекомендуємо спробувати вступну вправу для початківців з <a href='http://code.org/learn'>Code.org/learn</a>: підручники проходження лабіринту зі Злими птахами чи малювання з Анною та Ельзою. Старші учні повинні завершити ці вправи за 30 хвилин, після чого вони можуть перейти до складніших завдань з використанням JavaScript, наприклад, KhanAcademy чи CodeHS."
+  hoc_faq_high_school_a: "Незалежно від віку, ми рекомендуємо спробувати вступну вправу для початківців з <a href='http://code.org/learn'>Code.org/learn</a>: підручники проходження лабіринту зі Злими птахами чи малювання з Анною та Ельзою. Старші учні повинні завершити ці вправи за 30 хвилин, після чого вони можуть перейти до складніших завдань з використанням JavaScript, наприклад, Khan Academy чи CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "Година коду - це одногодинний вступ до інформатики, створений для того, щоб зняти завісу таємничості з програмування та показати, що кожен може навчитись основам. <a href='http://uk.code.org/learn'>Ознайомтесь з підручниками</a>, та очікуйте нових вправ до нової Години коду 2014."
@@ -191,7 +191,7 @@ uk:
   events_orgs_title: Всі заходи Години коду, організовані партнерськими організаціями
   event: захід
   events: заходи
-  footer_copyright_message: Copyright 2014 Code.org. Всі права захищені.
+  footer_copyright_message: Copyright 2015 Code.org. Всі права захищені.
   footer_trademark_message: Година коду ™ є торговою маркою компанії Code.org.
   footer_menu_partners: Партнери
   footer_menu_contact: Контакти

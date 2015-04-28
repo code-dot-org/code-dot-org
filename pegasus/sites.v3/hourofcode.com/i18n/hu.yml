@@ -98,11 +98,11 @@ hu:
   map_search_reset: Visszaállít
   meta_tag_og_title: A kódolás órája elérkezett
   meta_tag_og_description: |
-    A Kódolás Órája egy több mint 30 nyelven zajló, 180+ országban diákok tízmillióit elérő globális mozgalom. 
+    A Kódolás Órája egy több mint 30 nyelven zajló, 180+ országban diákok tízmillióit elérő globális mozgalom.
     4-től 104 éves korig.
   meta_tag_twitter_title: A kódolás órája elérkezett
   meta_tag_twitter_description: |
-    A Kódolás Órája egy több mint 30 nyelven zajló, 180+ országban diákok tízmillióit elérő globális mozgalom. 
+    A Kódolás Órája egy több mint 30 nyelven zajló, 180+ országban diákok tízmillióit elérő globális mozgalom.
     4-től 104 éves korig.
   twitter_default_text: 'Én részt veszek az idei #HourOfCode eseményen. És Te? @codeorg'
   hardware_prizes_form_name_label: Név
@@ -152,7 +152,7 @@ hu:
   hoc_faq_frozen_q: Hol van az Annaval és Elsaval készült oktatóanyag?
   hoc_faq_frozen_a: "Mostantól a <a href='http://code.org/learn'>Code.org/tanulás</a> oldalon található meg. Reméljük élvezni fogod!"
   hoc_faq_high_school_q: Mely gyakorlatokat mutassam meg középiskolás diákoknak?
-  hoc_faq_high_school_a: "Kezdésképp minden korosztálynak a <a href='http://code.org/learn'>Code.org/tanulás</a> oldalon található bevezető oktatóanyagokat ajánljuk, mint például az Angry Birds vagy az Anna és Elsa. Egy középiskolás diák ezek egyikével 30 perc alatt végez, ezek után továbbléphet a bonyolultabb JavaScript tanfolyamokra, mint a KhanAcademy vagy a CodeHS."
+  hoc_faq_high_school_a: "Kezdésképp minden korosztálynak a <a href='http://code.org/learn'>Code.org/tanulás</a> oldalon található bevezető oktatóanyagokat ajánljuk, mint például az Angry Birds vagy az Anna és Elsa. Egy középiskolás diák ezek egyikével 30 perc alatt végez, ezek után továbbléphet a bonyolultabb JavaScript tanfolyamokra, mint a Khan Academy vagy a CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -199,7 +199,7 @@ hu:
   events_orgs_title: A partner szervezetek által szervezett összes Kódolás Órája esemény
   event: esemény
   events: események
-  footer_copyright_message: Copyright 2014 Code.org. Minden jog fenntartva.
+  footer_copyright_message: Copyright 2015 Code.org. Minden jog fenntartva.
   footer_trademark_message: Hour of Code™ a Code.org bejegyzett védjegye.
   footer_menu_partners: Partnerek
   footer_menu_contact: Lépj velünk kapcsolatba

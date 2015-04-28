@@ -145,7 +145,7 @@ sl:
   hoc_faq_frozen_q: Kje je vaja z Anno in Elso?
   hoc_faq_frozen_a: "Zdaj je objavljena na <a href='http://code.org/learn'> Code.org/learn</a>. Upamo, da vam bo všeč!"
   hoc_faq_high_school_q: Katero dejavnost naj naredim z dijaki?
-  hoc_faq_high_school_a: "Za vse starosti priporočamo, da se za začetek poskuša ena od vaj za začetnike na <a href='http://code.org/learn'> Code.org/learn</a>  kot so vaje z Jeznimi ptiči ali z Anno in Elso. Dijaki bi morali končati eno od teh v 30 minutah in lahko nato poskusijo bolj napreden uvod v JavaScript, kot na primer KhanAcademy ali CodeHS."
+  hoc_faq_high_school_a: "Za vse starosti priporočamo, da se za začetek poskuša ena od vaj za začetnike na <a href='http://code.org/learn'> Code.org/learn</a>  kot so vaje z Jeznimi ptiči ali z Anno in Elso. Dijaki bi morali končati eno od teh v 30 minutah in lahko nato poskusijo bolj napreden uvod v JavaScript, kot na primer Khan Academy ali CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -192,7 +192,7 @@ sl:
   events_orgs_title: Vsi Hour of Code dogodki, ki jih organizira Partner Organizations
   event: dogodek
   events: dogodki
-  footer_copyright_message: Copyright 2014 Code.org. Vse pravice pridržane.
+  footer_copyright_message: Copyright 2015 Code.org. Vse pravice pridržane.
   footer_trademark_message: Hour of Code™ je blagovna znamka Code.org.
   footer_menu_partners: Partnerji
   footer_menu_contact: Kontaktirajte nas

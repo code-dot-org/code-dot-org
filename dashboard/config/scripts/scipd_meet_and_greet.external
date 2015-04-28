@@ -1,0 +1,15 @@
+name 'sciPD meet and greet'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+## Meet and Greet
+
+Introduce yourself (name, yrs taught, school, background (if different), subject, grade, past experience with CS, etc.) Then come back later and read other entries then introduce self on another teacher (find and comment on something you have in common). 
+
+STEP 1: To get started, click on "Show Discussion" below to view the introductions then add your own introduction after clicking "New Post". Note that you can press "Expand discussion" to view longer posts.
+
+STEP 2: Come back later and read new posts (use "Expand discussion" to read the entire post), then respond to someone else's post by clicking on "post a response" and entering your comment.
+
+
+<div id="discourse-comments">
+MARKDOWN

@@ -6,17 +6,17 @@ title: "Bee: Loops" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>8, :title=> 'Bee: Loops', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In the last stage students used loops to repeat simple movements. Now they're going to add to that the looping of actions in order to help the bee collect more nectar and make more honey.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ In the last stage students used loops to repeat simple movements. Now they're go
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -41,7 +41,7 @@ In the last stage students used loops to repeat simple movements. Now they're go
   * Identify when a loop can be used to simplify a repetitive action
   * Employ a combination of sequential and looped commands to move and perform actions
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -54,7 +54,7 @@ At this point, students have used loops in context of both the Maze and the Arti
   * What are some other elements of our programs that could benefit from loops?
   * How do you think we could use loops to make the Bee programs more efficient?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -64,7 +64,7 @@ At this point, students have used loops in context of both the Maze and the Arti
 
 When students are using loops to repeat an action (such as getting nectar), encourage them to think about the movements before and after that action. Could those be brought into the loop as well?
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -87,7 +87,7 @@ When students are using loops to repeat an action (such as getting nectar), enco
   * Can your class find the loops?
   * Try the same thing with songs! 
 
-[/together]
+[/juntos]
 
 [standards]
 

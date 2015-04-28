@@ -1,69 +1,70 @@
 * * *
 
-title: Dice Race view: page_curriculum theme: none
+title: Jogo de dados view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Dice Race', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Jogo de dados', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>20) %>
 
 [content]
 
-## Lesson Overview
+## Visão geral da aula
 
-In this lesson, students will relate the concept of algorithms back to everyday real-life activities by playing the Dice Race game. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
+Nesta aula, os alunos vão relacionar o conceito de algoritmos à vida cotidiana jogando o Jogo de dados. O objetivo aqui é começar a construir as habilidades para traduzir situações da vida real para o mundo on-line, e vice versa.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 15 minutes
+### **Primeiros passos** - 15 minutos
 
-1) [Review](#Review)   
-2) [Vocabulary](#Vocab)  
-3) [What We Do Daily](#GetStarted)
+1) [Revisão](#Review)   
+2) [Vocabulário](#Vocab)  
+3) [O que fazemos diariamente](#GetStarted)
 
-### **Activity: Real-Life Algorithms** - 20 minutes
+### **Atividade: Algoritmos da vida real** - 20 minutos
 
-4) [Real-Life Algorithms](#Activity1): Dice Race
+4) [Algoritmos da vida real](#Activity1): Jogo de dados
 
-### **Wrap-up** - 5 minutes
+### **Resumo** - 5 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
 
 
-### **Assessment** - 10 minutes
+### **Avaliação** - 10 minutos
 
-6) [Daily Algorithms](#Assessment)
+6) [Algoritmos do cotidiano](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Name various activities that make up their day
-  * Decompose large activities into a series of smaller events
-  * Arrange sequential events into their logical order
+  * Listar várias atividades que compõem seu dia
+  * Decompor atividades maiores em uma série de eventos menores
+  * Organizar eventos sequenciais em ordem lógica
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * Dice (1 per pair)
-  * Pens/Pencils/Markers
-  * [Real-Life Algorithms Worksheet](/curriculum/course3/10/Activity10-DiceRace.pdf): Dice Race
-  * Assessment Worksheet: [Daily Algorithms](/curriculum/course3/10/Assessment10-DiceRace.pdf)
+  * Dados (1 por par)
+  * Canetas/lápis/marcadores
+  * [Folha de atividade de algoritmos da vida real](/curriculum/course3/10/Activity10-DiceRace.pdf): Jogo de dados
+  * Folha de avaliação: [Algoritmos do cotidiano](/curriculum/course3/10/Assessment10-DiceRace.pdf)
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/BDDRw3wGnz4?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * Teacher Lesson Guide
   * Print one [Real-Life Algorithms Worksheet](/curriculum/course3/10/Activity10-DiceRace.pdf) per group 
   * Print one Assessment Worksheet: [Daily Algorithms](/curriculum/course3/10/Assessment10-DiceRace.pdf) per student
@@ -72,30 +73,30 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 
 [together]
 
-## Getting Started (15 min)
+## Primeiros passos (15 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. We suggest you alternate between asking questions of the whole class and having students talk about their answers in small groups.
+Este é um excelente momento para revisar a última aula que você deu à turma. Sugerimos que você faça perguntas sobre a aula anterior e depois divida os alunos em pequenos grupos para discutir as respostas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
-  * What do you wish we had had a chance to do?
-  * Did you think of any questions after the lesson that you want to ask?
-  * What was your favorite part of the last lesson?
+  * O que fizemos da última vez?
+  * O que você gostaria que tivéssemos feito?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one vocabulary word that is important to review:  
+Nesta aula há uma palavra que é muito importante revisar:  
 
 
 [centerIt]
@@ -104,62 +105,62 @@ This lesson has one vocabulary word that is important to review:
 
 [/centerIt]
 
-**Algorithm** - Say it with me: Al-go-ri-thm   
-A list of steps that you can follow to finish a task
+**Algoritmo** - Repita comigo: Al-go-rit-mo   
+Uma lista de passos que você pode seguir para concluir uma tarefa
 
-### <a name="GetStarted"></a> 3) What We Do Daily
+### <a name="GetStarted"></a> 3) O que fazemos diariamente
 
-  * Ask your students what they did to get ready for school this morning. 
-      * Write their answers on the board.
-      * If possible, put numbers next to their responses to indicate the order that they happen. 
-          * If students give responses out of order, have them help you put them in some kind of logical order.
-          * Point out places where order matters and places where it doesn't.  
+  * Pergunte aos alunos o que eles fizeram para se preparar para a escola esta manhã. 
+      * Escreva as respostas no quadro.
+      * Se possível, coloque números próximos às respostas para indicar a ordem na qual elas ocorreram. 
+          * Se os alunos derem respostas fora de ordem, peça que eles ajudem você a colocá-las em uma espécie de ordem lógica.
+          * Aponte lugares onde a ordem importa e lugares onde ela não importa.  
               
             
-  * Introduce students to the idea that it is possible to create algorithms for the things that we do everyday. 
-      * Give them a couple of examples, such as making breakfast, brushing teeth, planting a flower, and making paper airplanes.
-  * Computers need algorithms and programs to show them how to do even simple things that we can do without thinking about them. 
-      * It can be challenging to describe something that comes naturally in enough detail for a computer to replicate.   
+  * Apresente aos alunos a ideia de que é possível criar algoritmos para coisas que fazemos todos os dias. 
+      * Dê alguns exemplos, tais como café, escovar os dentes, plantar uma flor e fazer aviões de papel.
+  * Computadores precisam de algoritmos e programas para lhes mostrar como fazer as coisas mais simples que podemos fazer sem pensar sobre elas. 
+      * Pode ser desafiador descrever algo natural em detalhes para um computador replicar.   
           
         
-  * Let's try doing this with a new and fun activity, like playing the Dice Race Game!
+  * Vamos tentar fazer isso com uma atividade nova e divertida, como jogar o Jogo de dados!
 
 [/together]
 
 [together]
 
-## Activity: (20 min)
+## Atividade: (20 min)
 
-### <a name="Activity1"></a> 4) [Real-Life Algorithm Worksheet](/curriculum/course3/10/Activity10-DiceRace.pdf): Dice Race
+### <a name="Activity1"></a> 4) [Folha de atividade de algoritmos da vida real](/curriculum/course3/10/Activity10-DiceRace.pdf): Jogo de dados
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-You know your classroom best. As the teacher, decide if students should do this in pairs or small groups.
+Você conhece bem sua turma. Como o professor, decida se os alunos devem fazer a atividade em pares ou em pequenos grupos.
 
 [/tip]
 
-  * You can use algorithms to help describe things that people do every day. In this activity, we will create an algorithm to describe how we play the Dice Race Game.
-  * The hardest part about getting a problem ready for a computer can be figuring out how to describe real-life activities. We’re going to get some practice by playing and describing the Dice Race game. 
+  * Você pode usar algoritmos para ajudar a descrever coisas que as pessoas fazem todos os dias. Nesta atividade, vamos criar um algoritmo para descrever como jogar o Jogo de dados.
+  * A parte mais difícil de preparar um problema para um computador pode ser descobrir como descrever as atividades da vida real. Vamos praticar um pouco jogando e descrevendo o Jogo de dados. 
 
-> **Directions:**
+> **Instruções:**
 > 
->   1. Read the rules below.
->   2. Play a couple rounds of the Dice Race game. 
->       * As you’re playing, think about how you would describe everything that you’re doing. 
->       * What would it look like from the computer’s point of view?
+>   1. Leia as regras abaixo.
+>   2. Jogue algumas rodadas do Jogo de dados. 
+>       * Quando estiver jogando, pense em como você descreveria tudo o que você está fazendo. 
+>       * Como seria isso do ponto de vista do computador?
 > 
-> **Rules:**
+> **Regras:**
 > 
->   1. Set each player’s score to 0
->   2. Have the first player roll
->   3. Add points from that roll to player one’s total score
->   4. Have the next player roll
->   5. Add points from that roll to player two’s total score
->   6. Each player should go again two more times
->   7. Check each player’s total score to see who has the most points
->   8. Declare Winner
+>   1. Defina a pontuação de cada jogador como 0
+>   2. Faça o primeiro jogador jogar
+>   3. Some pontos daquela jogada à pontuação total do jogador
+>   4. Faça o próximo jogador jogar
+>   5. Some pontos daquela jogada à pontuação total do segundo jogador
+>   6. Cada jogador deve jogar novamente mais duas vezes
+>   7. Verifique a pontuação total de cada jogador para ver quem tem o maior número de pontos
+>   8. Declare o vencedor
 
 [centerIt]
 
@@ -171,105 +172,105 @@ You know your classroom best. As the teacher, decide if students should do this 
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Help the students see the game from a computer's point of view. If they need to roll the dice, then the computer needs to provide dice. If the student needs to play three turns, then the computer needs to loop through the steps multiple times.
+Ajude os alunos a ver o jogo do ponto de vista de um computador. Se eles precisam jogar os dados, então o computador precisa fornecer os dados. Se o aluno precisa jogar três vezes, então o computador precisa percorrer as etapas várias vezes.
 
 [/tip]
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * How many of you were able to follow your classmates' algorithms to play the Dice Race Game?
-  * What's the difference between an algorithm and a program? 
-      * An algorithm is the thinking behind what needs to happen, while the program is the actual instruction set that makes it happen.
-      * An algorithm has to be translated into a program before a computer can run it.
-  * Did the exercise leave anything out? 
-      * What would you have added to make the algorithm even better?
-      * What if the algorithm had been only one step: "Play Dice Race"? 
-          * Would it have been easier or harder?
-          * What if it were forty steps?
-  * What was your favorite part about that activity?
-
-[/together]
-
-[together]
-
-## Assessment (15 min)
-
-### <a name="Assessment"></a>6) Assessment Worksheet: [Daily Algorithms](/curriculum/course3/10/Assessment10-DiceRace.pdf)
-
-  * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Quantos de vocês conseguiram seguir os algoritmos de seus colegas de classe para jogar o Jogo de dados?
+  * Qual é a diferença entre um algoritmo e um programa? 
+      * Um algoritmo é o pensamento por trás do que precisa acontecer, enquanto o programa é o conjunto de instruções reais que faz isso acontecer.
+      * Um algoritmo deve ser traduzido em um programa antes que um computador possa executá-lo.
+  * Faltou alguma coisa nesse exercício? 
+      * O que você poderia ter adicionado para tornar o algoritmo ainda melhor?
+      * E se o algoritmo tivesse apenas um passo: "Jogue o Jogo de dados"? 
+          * Teria sido mais fácil, ou mais difícil?
+          * E se ele tivesse quarenta passos?
+  * Qual foi a parte da atividade que você mais gostou?
 
 [/together]
 
 [together]
 
-## Extended Learning
+## Avaliação (15 min)
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+### <a name="Assessment"></a>6) Folha de avaliação: [Algoritmos do cotidiano](/curriculum/course3/10/Assessment10-DiceRace.pdf)
 
-### Go Figure
+  * Distribua a folha de avaliação e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
-  * Break the class up into teams.
-  * Have each team come up with several steps that they can think of to complete a task.
-  * Gather teams back together into one big group and have one team share their steps, without letting anyone know what the activity was that they had chosen.
-  * Allow the rest of the class to try to guess what activity the algorithm is for.
+[/together]
+
+[together]
+
+## Aprendizagem estendida
+
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
+
+### Adivinhação
+
+  * Divida a classe em equipes.
+  * Peça que cada equipe sugira vários passos para completar uma tarefa.
+  * Junte as equipes em um grande grupo e peça para que uma das equipes compartilhe seus passos, sem deixar ninguém saber que atividade foi escolhida por eles.
+  * Deixe que o resto da turma tente adivinhar para qual atividade o algoritmo serve.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 2.d - Contribute to project teams to solve problems. 
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
-  * 6.a - Understand and use technology systems.
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 2.d - Contribuir com equipes de projeto para resolver problemas. 
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 4.d - Usar múltiplos processos e diversas perspectivas para explorar soluções alternativas.
+  * 6.a - Entender e usar sistemas tecnológicos.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CD1:6-06. Recognize that computers model intelligent behavior.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CT.L1:6-02. Develop a simple understanding of an algorithm using computer-free exercises.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-12. Use abstraction to decompose a problem into sub-problems.
+  * CD1:6-06. Reconheça que os computadores representam comportamento inteligente.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CT.L1:6-02. Desenvolver uma compreensão simples de algoritmo usando exercícios que não precisem de computador.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores.
 
-### NGSS Science and Engineering Practices
+### Práticas de engenharia e ciência NGSS
 
-  * 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * 3-5-ETS1-2. Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 4.NBT.B.4 - Fluently add and subtract multi-digit whole numbers using the standard algorithm.
+  * 4.NBT.B. 4 - Somar e subtrair números inteiros com vários dígitos usando o algoritmo padrão com facilidade.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
-  * SL.4.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 4 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.4.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
-  * SL.5.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 5 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.5.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships.
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * SL.3.3 - Perguntar e responder a questões sobre informações dadas por um orador, com elaboração e detalhes adequados.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
+  * SL.4.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do quarto ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.4.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam ações, emoções, ou estados de espírito precisos, e que sejam básicos em um tópico em particular.
+  * SL.5.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do quinto ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.5.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam contraste, adição e outras relações lógicas.
 
 [/standards]
 

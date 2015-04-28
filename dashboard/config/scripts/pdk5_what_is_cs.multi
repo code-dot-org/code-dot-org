@@ -3,13 +3,14 @@ title 'What is Computer Science?'
 
 
 markdown <<MARKDOWN
-Have you ever wondered exactly what is computer science? Or why some computer programs are written with words and some are written using images? Watch this video, which is a great introduction to the field of computer science.
+Have you ever wondered “Exactly what is computer science?” Or, “Why are some computer programs written with words and some are written using images?” 
+If so, watch this video; it's a great introduction to the field of computer science.
 
 <iframe width="426" height="260" src="//www.youtube.com/embed/KHXvOO8cVDE" frameborder="0" allowfullscreen></iframe>
 
 MARKDOWN
 
-question 'A computer program, or code, is:'
+question 'A computer program, or "code," is:'
 wrong 'a part inside of a computer'
 right 'a set of instructions a person gives a computer to execute'
 wrong 'a week-long course to learn about computers'

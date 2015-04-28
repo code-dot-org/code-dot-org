@@ -13,8 +13,8 @@
 
 require('../utils'); // For Function.prototype.inherits()
 var i18n = require('../../locale/current/netsim');
-var markup = require('./NetSimLogPanel.html');
-var packetMarkup = require('./NetSimLogPacket.html');
+var markup = require('./NetSimLogPanel.html.ejs');
+var packetMarkup = require('./NetSimLogPacket.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 
@@ -280,9 +280,7 @@ NetSimLogPacket.prototype.render = function () {
   var jQueryWrap = $(rawMarkup);
   NetSimEncodingControl.hideRowsByEncoding(jQueryWrap, this.encodings_);
   this.rootDiv_.html(jQueryWrap);
-  this.rootDiv_.find('.minimize-button').click(this.minimize.bind(this));
-  this.rootDiv_.find('.maximize-button').click(this.maximize.bind(this));
-
+  this.rootDiv_.find('.expander').click(this.toggleMinimized.bind(this));
   this.rootDiv_.toggleClass('unread', this.isUnread);
 };
 
@@ -325,12 +323,7 @@ NetSimLogPacket.prototype.markAsRead = function () {
   }
 };
 
-NetSimLogPacket.prototype.minimize = function () {
-  this.isMinimized = true;
-  this.render();
-};
-
-NetSimLogPacket.prototype.maximize = function () {
-  this.isMinimized = false;
+NetSimLogPacket.prototype.toggleMinimized = function () {
+  this.isMinimized = !this.isMinimized;
   this.render();
 };

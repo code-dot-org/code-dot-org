@@ -1,372 +1,362 @@
-.full_container {
-  padding-top: 2px; }
-
 #prompt-table {
   display: none; }
 
 .clearfix {
   clear: both; }
 
-.icon21 {
-  height: 21px;
-  width: 21px;
-  background-image: url("/blockly/media/turtle/icons.png"); }
-
-.code {
-  background-position: -42px 0; }
-
-.link {
-  background-position: -21px 0; }
-
-.run {
-  background-position: -63px -21px;
-  margin-right: 3px; }
-
-.stop {
-  background-position: -63px 0;
-  margin-right: 3px; }
-
-.calcHeader {
-  font-size: 25px; }
-
-.markedToken {
-  fill: white; }
-
-.errorToken {
-  fill: #c00; }
-
-.expr {
-  font-size: 20px; }
-
-#netsim h1 {
-  font-family: "Gotham 5r", sans-serif; }
-#netsim p, #netsim label {
-  font-family: "Gotham 4r", sans-serif; }
-#netsim table {
-  width: 100%; }
-  #netsim table th, #netsim table td {
-    padding: 1px 5px;
-    border: solid lightgray 1px;
-    border-collapse: collapse; }
-  #netsim table th {
-    font-family: "Gotham 4r", sans-serif;
-    font-size: 10pt; }
-  #netsim table td {
-    font-family: "Gotham 4r", sans-serif;
+#netsim {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  #netsim #netsim-leftcol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    overflow-y: auto; }
+    #netsim #netsim-leftcol > .column-width-limiter {
+      width: 300px; }
+  #netsim #netsim-rightcol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 330px;
+    right: 0;
+    overflow-y: auto; }
+  #netsim h1 {
+    font-family: "Gotham 5r", sans-serif; }
+  #netsim p, #netsim label {
+    font-family: "Gotham 4r", sans-serif; }
+  #netsim table {
+    width: 100%; }
+    #netsim table th, #netsim table td {
+      padding: 1px 5px;
+      border-collapse: collapse; }
+    #netsim table th {
+      border: none;
+      font-family: "Gotham 4r", sans-serif;
+      font-size: 10pt; }
+    #netsim table td {
+      border: solid #c6cacd 1px;
+      font-family: "Gotham 4r", sans-serif;
+      -moz-user-select: text;
+      -webkit-user-select: text;
+      -ms-user-select: text;
+      -khtml-user-select: text;
+      user-select: text; }
+    #netsim table tbody th, #netsim table tbody td {
+      vertical-align: top; }
+  #netsim .minimizer {
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; }
+  #netsim .single-line-with-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    padding-right: 1em; }
+  #netsim .user-data {
+    font-family: monospace;
     -moz-user-select: text;
     -webkit-user-select: text;
     -ms-user-select: text;
     -khtml-user-select: text;
     user-select: text; }
-  #netsim table tbody th, #netsim table tbody td {
-    vertical-align: top; }
-#netsim .minimizer {
-  cursor: pointer;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -khtml-user-select: none;
-  user-select: none; }
-#netsim .single-line-with-ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  padding-right: 1em; }
-#netsim .user-data {
-  font-family: monospace;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  -khtml-user-select: text;
-  user-select: text; }
-#netsim .netsim-button {
-  display: inline-block;
-  background-color: #ffa400;
-  color: white;
-  border-radius: 3px;
-  font-family: "Gotham 4r", sans-serif;
-  font-size: 8pt;
-  line-height: 14pt;
-  padding: 0 10px;
-  cursor: pointer;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -khtml-user-select: none;
-  user-select: none; }
-  #netsim .netsim-button[disabled] {
-    background-color: #c6cacd;
-    cursor: default; }
-#netsim #netsim-rightcol {
-  float: right;
-  width: 300px; }
-#netsim #netsim-leftcol {
-  margin-right: 320px; }
-#netsim #netsim-visualization svg {
-  background-color: white;
-  border: solid black thin;
-  border-radius: 25px; }
-  #netsim #netsim-visualization svg .viz-node text {
-    text-anchor: middle; }
-  #netsim #netsim-visualization svg .viz-node circle {
-    stroke: black;
-    stroke-width: 2;
-    fill: white; }
-  #netsim #netsim-visualization svg .viz-node rect.address-box {
-    stroke: black;
-    stroke-width: 2px;
-    fill: white; }
-  #netsim #netsim-visualization svg .viz-node text.address-box {
-    font-weight: bold; }
-  #netsim #netsim-visualization svg .router-node circle {
-    fill: #ffa400; }
-  #netsim #netsim-visualization svg .viz-wire {
-    stroke: black;
-    stroke-width: 2; }
-#netsim .netsim-shard-selection-panel {
-  overflow: hidden; }
-  #netsim .netsim-shard-selection-panel .content-wrap {
-    margin: 1em; }
-  #netsim .netsim-shard-selection-panel .field-box {
-    float: left;
-    margin-right: 1em; }
-  #netsim .netsim-shard-selection-panel .clearfix {
-    clear: both; }
-#netsim .netsim-lobby-panel .content-wrap {
-  margin: 1em; }
-#netsim .netsim-lobby-panel ul {
-  margin: 0 0 10px 0; }
-#netsim .netsim-panel.netsim-lobby div.panel-body {
-  padding: 1em; }
-#netsim .netsim-lobby-list {
-  background-color: white;
-  padding: 0.5em;
-  border: inset darkslategray thin;
-  list-style: none; }
-  #netsim .netsim-lobby-list li {
-    background-color: white;
-    border-left: solid white 3px;
-    border-right: solid white 3px;
-    padding: 0.3em 0.8em; }
-  #netsim .netsim-lobby-list .empty-row {
-    text-align: center;
-    color: #e7e8ea;
-    font-style: italic; }
-  #netsim .netsim-lobby-list .selectable-row {
-    cursor: pointer; }
-    #netsim .netsim-lobby-list .selectable-row:hover {
-      border-left: solid #ffa400 3px; }
-  #netsim .netsim-lobby-list .own-row {
-    background-color: white;
-    font-style: italic; }
-  #netsim .netsim-lobby-list .user-row.selectable-row:hover {
-    background-color: #d9f3f5;
-    color: black; }
-  #netsim .netsim-lobby-list .router-row.selectable-row:hover {
-    background-color: #ffe0a6;
-    color: black; }
-  #netsim .netsim-lobby-list .selected-row {
-    background-color: #ffa400 !important;
-    color: white !important;
-    font-weight: bold; }
-#netsim div.netsim-panel {
-  background-color: white;
-  margin: 0 0 0.5em;
-  padding: 0; }
-  #netsim div.netsim-panel h1 {
-    margin: 0;
-    padding: 0.3em 0.5em;
-    font-family: "Gotham 4r", sans-serif;
-    font-size: 110%;
-    font-weight: bold;
-    line-height: 110%;
-    background-color: #7665a0;
+  #netsim .netsim-button {
+    display: inline-block;
     color: white;
-    border-radius: 0.3em 0.3em 0 0; }
-    #netsim div.netsim-panel h1 .panel-controls {
-      float: right;
-      margin-top: -0.3em;
-      padding-top: 3px; }
-      #netsim div.netsim-panel h1 .panel-controls .netsim-button {
-        margin-left: 3px; }
-  #netsim div.netsim-panel div.panel-body {
-    border-left: solid darkgray thin;
-    border-right: solid darkgray thin;
-    border-bottom: solid darkgray thin;
-    border-top: solid #7665a0 thin;
-    border-radius: 0 0 0.3em 0.3em; }
-  #netsim div.netsim-panel.minimized h1 {
-    border-radius: 0.3em; }
-    #netsim div.netsim-panel.minimized h1 .clear_button {
-      display: none; }
-  #netsim div.netsim-panel.minimized div.panel-body {
-    display: none; }
-  #netsim div.netsim-panel .panel-footer {
-    margin: 10px;
+    background-color: #ffa400;
+    border-radius: 3px;
+    font-family: "Gotham 4r", sans-serif;
+    font-size: 8pt;
+    line-height: 14pt;
+    padding: 0 10px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; }
+    #netsim .netsim-button.large-button {
+      font-size: 14px;
+      line-height: 20px;
+      border-radius: 5px;
+      padding: 7px 14px; }
+    #netsim .netsim-button.secondary {
+      background-color: #59b9dc; }
+    #netsim .netsim-button[disabled] {
+      background-color: #c6cacd;
+      cursor: default; }
+  #netsim #netsim-visualization svg {
+    background-color: white;
+    border: solid darkgray thin; }
+    #netsim #netsim-visualization svg .viz-node text {
+      text-anchor: middle; }
+    #netsim #netsim-visualization svg .viz-node circle {
+      stroke: black;
+      stroke-width: 2;
+      fill: white; }
+    #netsim #netsim-visualization svg .viz-node rect.address-box {
+      stroke: black;
+      stroke-width: 2px;
+      fill: white; }
+    #netsim #netsim-visualization svg .viz-node text.address-box {
+      font-weight: bold; }
+    #netsim #netsim-visualization svg .router-node circle {
+      fill: #ffa400; }
+    #netsim #netsim-visualization svg .viz-wire {
+      stroke: black;
+      stroke-width: 2; }
+  #netsim .netsim-shard-selection-panel {
     overflow: hidden; }
-    #netsim div.netsim-panel .panel-footer .right-side-controls {
+    #netsim .netsim-shard-selection-panel .field-box {
+      float: left;
+      margin-right: 1em; }
+    #netsim .netsim-shard-selection-panel .clearfix {
+      clear: both; }
+  #netsim .netsim-lobby-panel ul {
+    margin: 0 0 10px 0; }
+  #netsim .netsim-panel.netsim-lobby div.panel-body {
+    padding: 1em; }
+  #netsim .netsim-lobby-list {
+    background-color: white;
+    padding: 0.5em;
+    border: inset darkslategray thin;
+    list-style: none; }
+    #netsim .netsim-lobby-list li {
+      background-color: white;
+      border-left: solid white 3px;
+      border-right: solid white 3px;
+      padding: 0.3em 0.8em; }
+    #netsim .netsim-lobby-list .empty-row {
+      text-align: center;
+      color: #e7e8ea;
+      font-style: italic; }
+    #netsim .netsim-lobby-list .selectable-row {
+      cursor: pointer; }
+      #netsim .netsim-lobby-list .selectable-row:hover {
+        border-left: solid #ffa400 3px; }
+    #netsim .netsim-lobby-list .own-row {
+      background-color: white;
+      font-style: italic; }
+    #netsim .netsim-lobby-list .user-row.selectable-row:hover {
+      background-color: #d9f3f5;
+      color: black; }
+    #netsim .netsim-lobby-list .router-row.selectable-row:hover {
+      background-color: #ffe0a6;
+      color: black; }
+    #netsim .netsim-lobby-list .selected-row {
+      background-color: #ffa400 !important;
+      color: white !important;
+      font-weight: bold; }
+  #netsim div.netsim-panel {
+    margin: 0 0 0.5em;
+    padding: 0; }
+    #netsim div.netsim-panel h1 {
+      margin: 0;
+      padding: 0.3em 0.5em;
+      font-family: "Gotham 4r", sans-serif;
+      font-size: 110%;
+      font-weight: bold;
+      line-height: 110%;
+      background-color: #0094ca;
+      color: white;
+      border-radius: 0.3em 0.3em 0 0; }
+      #netsim div.netsim-panel h1 .panel-controls {
+        float: right;
+        margin-top: -0.3em;
+        padding-top: 2px; }
+        #netsim div.netsim-panel h1 .panel-controls .netsim-button {
+          margin-left: 3px; }
+    #netsim div.netsim-panel div.panel-body {
+      background-color: white;
+      border-left: solid darkgray 1px;
+      border-right: solid darkgray 1px;
+      border-bottom: solid darkgray 1px;
+      border-top: solid #0094ca 1px;
+      border-radius: 0 0 0.3em 0.3em; }
+    #netsim div.netsim-panel .content-wrap {
+      margin: 1em; }
+    #netsim div.netsim-panel.minimized h1 {
+      border-radius: 0.3em; }
+      #netsim div.netsim-panel.minimized h1 .clear_button {
+        display: none; }
+    #netsim div.netsim-panel.minimized div.panel-body {
+      display: none; }
+    #netsim div.netsim-panel .panel-footer {
+      margin: 10px;
+      overflow: hidden; }
+      #netsim div.netsim-panel .panel-footer .right-side-controls {
+        float: right;
+        text-align: right; }
+  #netsim .netsim-log-panel .packet {
+    margin: 10px;
+    padding: 5px;
+    border: solid darkgray thin;
+    border-radius: 3px;
+    background-color: #e7e8ea; }
+    #netsim .netsim-log-panel .packet.unread {
+      background-color: #fafafa;
+      border-color: black; }
+      #netsim .netsim-log-panel .packet.unread th {
+        font-weight: bold; }
+    #netsim .netsim-log-panel .packet .expander {
+      cursor: pointer; }
+    #netsim .netsim-log-panel .packet .maximized-packet thead th.encodingLabel {
+      text-align: left; }
+    #netsim .netsim-log-panel .packet .minimized-packet .expander {
+      padding: 0 5px; }
+  #netsim .netsim-log-panel .scroll-area {
+    margin: 0.5em 0;
+    width: 100%;
+    overflow-y: auto; }
+  #netsim .netsim-log-panel table th {
+    background-color: transparent;
+    color: black; }
+  #netsim .netsim-log-panel table tbody td {
+    font-family: monospace;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    -khtml-user-select: text;
+    user-select: text; }
+  #netsim .netsim-log-panel table tbody tr.ascii td.message {
+    white-space: pre-wrap; }
+  #netsim .netsim-log-panel th.encodingLabel, #netsim .netsim-log-panel td.encodingLabel, #netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress, #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress, #netsim .netsim-log-panel th.packetInfo, #netsim .netsim-log-panel td.packetInfo {
+    text-align: center; }
+  #netsim .netsim-log-panel th.encodingLabel, #netsim .netsim-log-panel td.encodingLabel {
+    width: 1%; }
+  #netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress, #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress {
+    width: 50px; }
+  #netsim .netsim-log-panel th.packetInfo, #netsim .netsim-log-panel td.packetInfo {
+    width: 121px; }
+  #netsim .netsim-log-panel td.toAddress {
+    background-color: #d9eff7; }
+  #netsim .netsim-log-panel td.fromAddress {
+    background-color: #fff7df; }
+  #netsim .netsim-log-panel td.packetInfo {
+    background-color: #e7e9ad; }
+  #netsim .netsim-log-panel td.message {
+    background-color: white; }
+  #netsim .netsim-send-panel .send-panel-packets {
+    max-height: 265px;
+    overflow-y: auto; }
+  #netsim .netsim-send-panel .netsim-packet {
+    border: solid darkgray thin;
+    background-color: #e7e8ea;
+    margin: 10px;
+    padding: 0.5em;
+    border-radius: 0.5em; }
+    #netsim .netsim-send-panel .netsim-packet .packet-controls {
       float: right;
       text-align: right; }
-#netsim .netsim-log-panel .packet {
-  margin: 10px;
-  padding: 5px;
-  border: solid darkgray thin;
-  border-radius: 3px;
-  background-color: #e7e8ea; }
-  #netsim .netsim-log-panel .packet td {
-    border-color: #e7e8ea; }
-  #netsim .netsim-log-panel .packet .packet-controls {
-    float: right;
-    text-align: right; }
-  #netsim .netsim-log-panel .packet.unread {
-    background-color: #c6cacd; }
-    #netsim .netsim-log-panel .packet.unread td {
-      border-color: #c6cacd; }
-#netsim .netsim-log-panel .scroll-area {
-  margin: 0.5em 0 0.5em 0;
-  max-height: 300px;
-  width: 100%;
-  overflow-y: auto; }
-#netsim .netsim-log-panel table th {
-  background-color: transparent;
-  color: black; }
-#netsim .netsim-log-panel table tbody td {
-  font-family: monospace;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  -khtml-user-select: text;
-  user-select: text; }
-#netsim .netsim-log-panel table tbody tr.ascii td.message {
-  white-space: pre-wrap; }
-#netsim .netsim-log-panel th.encodingLabel, #netsim .netsim-log-panel td.encodingLabel, #netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress, #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress, #netsim .netsim-log-panel th.packetInfo, #netsim .netsim-log-panel td.packetInfo {
-  text-align: center; }
-#netsim .netsim-log-panel th.encodingLabel, #netsim .netsim-log-panel td.encodingLabel {
-  width: 1%; }
-#netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress, #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress {
-  width: 50px; }
-#netsim .netsim-log-panel th.packetInfo, #netsim .netsim-log-panel td.packetInfo {
-  width: 121px; }
-#netsim .netsim-log-panel td.toAddress {
-  background-color: #d9eff7; }
-#netsim .netsim-log-panel td.fromAddress {
-  background-color: #fff7df; }
-#netsim .netsim-log-panel td.packetInfo {
-  background-color: #e7e9ad; }
-#netsim .netsim-log-panel td.message {
-  background-color: white; }
-#netsim .netsim-send-panel .netsim-packet {
-  border: solid darkgray thin;
-  background-color: #e7e8ea;
-  margin: 10px;
-  padding: 0.5em;
-  border-radius: 0.5em; }
-  #netsim .netsim-send-panel .netsim-packet .packet-controls {
-    float: right;
-    text-align: right; }
-  #netsim .netsim-send-panel .netsim-packet th {
-    background-color: transparent;
-    color: black; }
-  #netsim .netsim-send-panel .netsim-packet input, #netsim .netsim-send-panel .netsim-packet textarea {
-    resize: none;
-    padding: 0.2em;
-    margin-bottom: 0.2em;
-    font-family: monospace;
-    background-color: transparent;
-    box-shadow: none; }
-  #netsim .netsim-send-panel .netsim-packet input {
-    border: solid 1px #ccc; }
-  #netsim .netsim-send-panel .netsim-packet textarea {
-    border: none; }
-  #netsim .netsim-send-panel .netsim-packet .watermark {
-    color: #e7e8ea; }
-  #netsim .netsim-send-panel .netsim-packet .bit-counter {
-    text-align: right;
-    color: #949ca2; }
-    #netsim .netsim-send-panel .netsim-packet .bit-counter.oversized {
-      color: #c00; }
-  #netsim .netsim-send-panel .netsim-packet th.encodingLabel, #netsim .netsim-send-panel .netsim-packet td.encodingLabel, #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress, #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress, #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
-    text-align: center; }
-    #netsim .netsim-send-panel .netsim-packet th.encodingLabel input, #netsim .netsim-send-panel .netsim-packet td.encodingLabel input, #netsim .netsim-send-panel .netsim-packet th.toAddress input, #netsim .netsim-send-panel .netsim-packet td.toAddress input, #netsim .netsim-send-panel .netsim-packet th.fromAddress input, #netsim .netsim-send-panel .netsim-packet td.fromAddress input, #netsim .netsim-send-panel .netsim-packet th.packetInfo input, #netsim .netsim-send-panel .netsim-packet td.packetInfo input {
-      width: 3em;
-      text-align: center; }
-  #netsim .netsim-send-panel .netsim-packet th.encodingLabel, #netsim .netsim-send-panel .netsim-packet td.encodingLabel {
-    width: 1%; }
-  #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress, #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress {
-    width: 50px; }
-  #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
-    width: 121px; }
-  #netsim .netsim-send-panel .netsim-packet td.toAddress {
-    background-color: #d9eff7; }
-  #netsim .netsim-send-panel .netsim-packet td.fromAddress {
-    background-color: #fff7df; }
-  #netsim .netsim-send-panel .netsim-packet td.packetInfo {
-    background-color: #e7e9ad; }
-  #netsim .netsim-send-panel .netsim-packet td.message {
-    background-color: white; }
-    #netsim .netsim-send-panel .netsim-packet td.message div {
-      margin-right: 0.4em; }
-      #netsim .netsim-send-panel .netsim-packet td.message div textarea {
-        resize: none;
-        height: 1.5em;
-        width: 100%; }
-#netsim .netsim-send-panel .packet-size {
-  width: 400px; }
-#netsim .netsim_packet_size_control label {
-  display: inline-block; }
-#netsim .netsim_packet_size_control .slider-inline-wrap {
-  display: inline-block;
-  margin-top: 3.5px;
-  width: 300px; }
-  #netsim .netsim_packet_size_control .slider-inline-wrap .slider-labels {
-    margin-bottom: 1px; }
-    #netsim .netsim_packet_size_control .slider-inline-wrap .slider-labels .max-value {
-      float: right;
+    #netsim .netsim-send-panel .netsim-packet th {
+      background-color: transparent;
+      color: black; }
+    #netsim .netsim-send-panel .netsim-packet input, #netsim .netsim-send-panel .netsim-packet textarea {
+      resize: none;
+      padding: 0.2em;
+      margin-bottom: 0.2em;
+      font-family: monospace;
+      background-color: transparent;
+      box-shadow: none; }
+    #netsim .netsim-send-panel .netsim-packet input {
+      border: solid 1px #ccc; }
+    #netsim .netsim-send-panel .netsim-packet textarea {
+      border: none; }
+    #netsim .netsim-send-panel .netsim-packet .watermark {
+      color: #e7e8ea; }
+    #netsim .netsim-send-panel .netsim-packet .bit-counter {
       text-align: right;
-      width: 5em; }
-    #netsim .netsim_packet_size_control .slider-inline-wrap .slider-labels .min-value {
-      float: left;
-      text-align: left;
-      width: 5em; }
-    #netsim .netsim_packet_size_control .slider-inline-wrap .slider-labels .current-value {
+      color: #949ca2; }
+      #netsim .netsim-send-panel .netsim-packet .bit-counter.oversized {
+        color: #c00; }
+    #netsim .netsim-send-panel .netsim-packet th.encodingLabel, #netsim .netsim-send-panel .netsim-packet td.encodingLabel, #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress, #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress, #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
       text-align: center; }
-  #netsim .netsim_packet_size_control .slider-inline-wrap .packet-size-slider {
-    clear: both; }
-#netsim .netsim-slider {
-  text-align: center; }
-  #netsim .netsim-slider label {
+      #netsim .netsim-send-panel .netsim-packet th.encodingLabel input, #netsim .netsim-send-panel .netsim-packet td.encodingLabel input, #netsim .netsim-send-panel .netsim-packet th.toAddress input, #netsim .netsim-send-panel .netsim-packet td.toAddress input, #netsim .netsim-send-panel .netsim-packet th.fromAddress input, #netsim .netsim-send-panel .netsim-packet td.fromAddress input, #netsim .netsim-send-panel .netsim-packet th.packetInfo input, #netsim .netsim-send-panel .netsim-packet td.packetInfo input {
+        width: 3em;
+        text-align: center; }
+    #netsim .netsim-send-panel .netsim-packet th.encodingLabel, #netsim .netsim-send-panel .netsim-packet td.encodingLabel {
+      width: 1%; }
+    #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress, #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress {
+      width: 50px; }
+    #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
+      width: 121px; }
+    #netsim .netsim-send-panel .netsim-packet td.toAddress {
+      background-color: #d9eff7; }
+    #netsim .netsim-send-panel .netsim-packet td.fromAddress {
+      background-color: #fff7df; }
+    #netsim .netsim-send-panel .netsim-packet td.packetInfo {
+      background-color: #e7e9ad; }
+    #netsim .netsim-send-panel .netsim-packet td.message {
+      background-color: white; }
+      #netsim .netsim-send-panel .netsim-packet td.message div {
+        margin-right: 0.4em; }
+        #netsim .netsim-send-panel .netsim-packet td.message div textarea {
+          resize: none;
+          height: 1.5em;
+          width: 100%; }
+  #netsim .netsim-send-panel .packet-size {
+    width: 400px; }
+  #netsim .netsim_packet_size_control label {
     display: inline-block; }
-  #netsim .netsim-slider .slider-inline-wrap {
+  #netsim .netsim_packet_size_control .slider-inline-wrap {
     display: inline-block;
     margin-top: 3.5px;
-    width: 95%;
-    margin-right: 0.5em; }
-    #netsim .netsim-slider .slider-inline-wrap .slider-labels {
+    width: 300px; }
+    #netsim .netsim_packet_size_control .slider-inline-wrap .slider-labels {
       margin-bottom: 1px; }
-      #netsim .netsim-slider .slider-inline-wrap .slider-labels .max-value {
+      #netsim .netsim_packet_size_control .slider-inline-wrap .slider-labels .max-value {
         float: right;
         text-align: right;
-        width: 3em; }
-      #netsim .netsim-slider .slider-inline-wrap .slider-labels .min-value {
+        width: 5em; }
+      #netsim .netsim_packet_size_control .slider-inline-wrap .slider-labels .min-value {
         float: left;
         text-align: left;
-        width: 3em; }
-      #netsim .netsim-slider .slider-inline-wrap .slider-labels.wide-labels .max-value, #netsim .netsim-slider .slider-inline-wrap .slider-labels.wide-labels .min-value {
-        width: 4em; }
-      #netsim .netsim-slider .slider-inline-wrap .slider-labels .current-value {
+        width: 5em; }
+      #netsim .netsim_packet_size_control .slider-inline-wrap .slider-labels .current-value {
         text-align: center; }
-    #netsim .netsim-slider .slider-inline-wrap .slider {
+    #netsim .netsim_packet_size_control .slider-inline-wrap .packet-size-slider {
       clear: both; }
-#netsim .netsim-tabs {
-  margin-top: 1em; }
+  #netsim .netsim-slider {
+    text-align: center; }
+    #netsim .netsim-slider label {
+      display: inline-block; }
+    #netsim .netsim-slider .slider-inline-wrap {
+      display: inline-block;
+      margin-top: 3.5px;
+      width: 95%;
+      margin-right: 0.5em; }
+      #netsim .netsim-slider .slider-inline-wrap .slider-labels {
+        margin-bottom: 1px; }
+        #netsim .netsim-slider .slider-inline-wrap .slider-labels .max-value {
+          float: right;
+          text-align: right;
+          width: 3em; }
+        #netsim .netsim-slider .slider-inline-wrap .slider-labels .min-value {
+          float: left;
+          text-align: left;
+          width: 3em; }
+        #netsim .netsim-slider .slider-inline-wrap .slider-labels.wide-labels .max-value, #netsim .netsim-slider .slider-inline-wrap .slider-labels.wide-labels .min-value {
+          width: 4em; }
+        #netsim .netsim-slider .slider-inline-wrap .slider-labels .current-value {
+          text-align: center; }
+      #netsim .netsim-slider .slider-inline-wrap .slider {
+        clear: both; }
   #netsim .netsim-tabs h1 {
     font-size: 10pt;
     line-height: 10pt;
     margin: 10px 0 3px 0;
     border-bottom: solid darkgrey thin; }
   #netsim .netsim-tabs .ui-tabs-nav {
-    background: #7665a0;
+    background: #0094ca;
     border-left: none;
     border-right: none;
     border-top: none; }
@@ -380,42 +370,40 @@
     padding: 0.8em 0.5em; }
     #netsim .netsim-tabs .ui-tabs-panel p {
       margin: 0 1em 10px 1em; }
-#netsim .netsim-metronome {
-  text-align: center; }
-  #netsim .netsim-metronome .pulse-dot {
-    fill: #7665a0; }
-  #netsim .netsim-metronome .progress-meter {
-    fill: #7665a0; }
-#netsim .netsim-encoding-selector div.hidden-control {
-  display: none; }
-#netsim .netsim-encoding-selector input[type="checkbox"] {
-  vertical-align: baseline;
-  margin: 0; }
-#netsim .netsim-encoding-selector label {
-  display: inline;
-  margin-left: 0.25em; }
-#netsim .netsim-router-log {
-  max-height: 200px;
-  overflow-y: scroll; }
-  #netsim .netsim-router-log table th, #netsim .netsim-router-log table td {
-    font-size: 8pt; }
-#netsim .dns-mode-control input[type="radio"] {
-  vertical-align: middle;
-  margin: 0; }
-#netsim .dns-mode-control label {
-  display: inline;
-  margin-left: 1em; }
-#netsim .netsim-dns-table tr.local-node {
-  font-weight: bold;
-  background-color: white; }
-#netsim .netsim-dns-table tr.dns-node {
-  color: white;
-  background-color: #ffa400; }
-#netsim .dns-notes div {
-  padding-right: 14px; }
-  #netsim .dns-notes div textarea {
-    resize: none;
-    width: 100%;
-    height: 100px; }
-#netsim .netsim-panel.netsim_status_panel div.panel-body {
-  padding: 1em; }
+  #netsim .netsim-metronome {
+    text-align: center; }
+    #netsim .netsim-metronome .pulse-dot {
+      fill: #7665a0; }
+    #netsim .netsim-metronome .progress-meter {
+      fill: #7665a0; }
+  #netsim .netsim-encoding-selector div.hidden-control {
+    display: none; }
+  #netsim .netsim-encoding-selector input[type="checkbox"] {
+    vertical-align: baseline;
+    margin: 0; }
+  #netsim .netsim-encoding-selector label {
+    display: inline;
+    margin-left: 0.25em; }
+  #netsim .netsim-router-log {
+    max-height: 200px;
+    overflow-y: scroll; }
+    #netsim .netsim-router-log table th, #netsim .netsim-router-log table td {
+      font-size: 8pt; }
+  #netsim .dns-mode-control input[type="radio"] {
+    vertical-align: middle;
+    margin: 0; }
+  #netsim .dns-mode-control label {
+    display: inline;
+    margin-left: 1em; }
+  #netsim .netsim-dns-table tr.local-node {
+    font-weight: bold;
+    background-color: white; }
+  #netsim .netsim-dns-table tr.dns-node {
+    color: white;
+    background-color: #ffa400; }
+  #netsim .dns-notes div {
+    padding-right: 14px; }
+    #netsim .dns-notes div textarea {
+      resize: none;
+      width: 100%;
+      height: 100px; }

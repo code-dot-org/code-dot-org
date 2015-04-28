@@ -5,6 +5,11 @@ require 'time'
 class HomeControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
+  setup do
+    # stub properties so we don't try to hit pegasus db
+    Properties.stubs(:get).returns nil
+  end
+
   test "language is determined from cdo.locale" do
     @request.env['cdo.locale'] = "es-ES"
 

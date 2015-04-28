@@ -150,7 +150,7 @@ ko:
   hoc_faq_frozen_q: 안나와 엘사가 나오는 튜토리얼은 어디에 있나요?
   hoc_faq_frozen_a: "<a href='http://code.org/learn'>Code.org/learn</a>가 오픈되었습니다. 재미있게 해보세요!"
   hoc_faq_high_school_q: 고등학생들에게는 어떤 활동들이 적당할까요?
-  hoc_faq_high_school_a: "모든 나이의 학생들에 대해서, <a href='http://code.org/learn'>Code.org/learn</a> 의 앵그리버드, 안나와 엘사와 같은 초급자 튜토리얼을 먼저 해보기를 추천합니다. 고등학생들은 이 과정들을 30분 내에 충분히 해결할 수 있을 것이고, 그 이후에 칸아카데미(KhanAcademy)나 CodeHS에서 자바스크립트(JavaScript) 과정과 같은 심화된 과정들을 해볼 수 있습니다."
+  hoc_faq_high_school_a: "모든 나이의 학생들에 대해서, <a href='http://code.org/learn'>Code.org/learn</a> 의 앵그리버드, 안나와 엘사와 같은 초급자 튜토리얼을 먼저 해보기를 추천합니다. 고등학생들은 이 과정들을 30분 내에 충분히 해결할 수 있을 것이고, 그 이후에 칸아카데미(Khan Academy)나 CodeHS에서 자바스크립트(JavaScript) 과정과 같은 심화된 과정들을 해볼 수 있습니다."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -197,7 +197,7 @@ ko:
   events_orgs_title: 협찬 파트너 조직들에 의해 운영되는 모든 Hour of Code 이벤트들
   event: 이벤트
   events: 이벤트들
-  footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
+  footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: 후원
   footer_menu_contact: Contact us
