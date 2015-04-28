@@ -3,6 +3,8 @@
   - data = @level.properties
   - app = 'multi'
 
+  = data['type']
+
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: 'question'}
 
   .answers
@@ -24,9 +26,13 @@
       %form#voteform{onsubmit: 'return false;'}
         - data['answers'].each_with_index do |answer, i|
           - correct = answer['correct']
-          %span.answerbutton.btn{style: "height: #{height}"}
-            .item-radio{id: "radio_#{i}"}
+          %span.answerbutton.btn{style: "height: #{height}", correct: "#{correct}", index: "#{i}"}
+            -#.item-radio{id: "radio_#{i}"}
               %input{id: "choice_#{i}", name: 'vote', type: 'radio', value: "#{i}", correct: "#{correct}"}
+            .item-cross{id: "unchecked_#{i}"}
+              %strong O
+            .item-cross{id: "checked_#{i}", style: 'display: none;'}
+              %strong Y
             .item-cross{id: "cross_#{i}", style: 'display: none;'}
               %strong X
             .item-label
@@ -98,39 +104,35 @@
   var dialogType = null;
   var adjustedScroll = false;
 
-  function choiceClicked(radioButton)
+
+  function choiceClicked(button)
   {
-    var index = radioButton.value;
-    var correctChoice = $(radioButton).attr('correct') === 'true';
+    var index = $(button).attr('index');
+    var correctChoice = $(button).attr('correct') === 'true';
     CDOSounds.play('click');
 
     enableButton(true);
     selection = correctChoice ? "right" : "wrong";
     selectionIndex = index;
 
+    // hide unchecked
+    $("#unchecked_" + index).hide();
+    $("#checked_" + index).show();
+
     return true;
   }
 
   $(function()
   {
-    $('#voteform input:radio').click(function(e) {
-      choiceClicked(this);
-      e.stopPropagation();
-    });
 
     $('span.answerbutton').click(function() {
-      // Handle non-radio button area click
-      var radioButton = $(this).find('input:radio')[0];
-      $(radioButton).prop('checked', true);
-      choiceClicked(radioButton);
-      return false;
+      choiceClicked(this);
     });
 
     $('#voteform img').on('dragstart', function(e) {
       // Prevent button images from being dragged, check button instead
-      var radioButton = $(this).parent().parent().parent().find('input:radio')[0];
-      $(radioButton).prop('checked', true);
-      choiceClicked(radioButton);
+      var button = $(this).parent().parent().parent();
+      choiceClicked(button);
       e.preventDefault();
       e.stopPropagation();
     });

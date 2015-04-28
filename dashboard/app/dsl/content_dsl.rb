@@ -1,6 +1,7 @@
 # Abstract class for DSL types which provide a standard set of content-definition methods.
 class ContentDSL < BaseDSL
   def title(text) @hash[:title] = text end
+  def type(text) @hash[:type] = text end
 
   # legacy
   def description(text) @hash[:content1] = text end
