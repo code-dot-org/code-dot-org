@@ -307,7 +307,18 @@ function loadProject(promise) {
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
     dashboard.isEditingProject = true;
-    dashboard.currentApp = {id: appOptions.channel};
+    promise = promise.then(function () {
+      var deferred = new $.Deferred();
+      channels().fetch(appOptions.channel, function(data) {
+        if (data) {
+          dashboard.currentApp = data;
+          deferred.resolve();
+        } else {
+          deferred.reject();
+        }
+      });
+      return deferred;
+    });
   }
   return promise;
 }

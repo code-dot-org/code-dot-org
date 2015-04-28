@@ -37,7 +37,7 @@ module LevelsHelper
         'PATH_INFO' => '/v3/channels',
         'REQUEST_PATH' => '/v3/channels',
         'CONTENT_TYPE' => 'application/json;charset=utf-8',
-        'rack.input' => StringIO.new('{}')
+        'rack.input' => StringIO.new('{"hidden":"true"}')
       )
       channel = channel[1]['Location'].split('/').last
       channel_token = ChannelToken.new(level: host_level, user: current_user, channel: channel)
