@@ -13,7 +13,6 @@ var EvalTriangle = require('@cdo/apps/eval/evalTriangle');
 
 describe('getTextStringsFromObject_', function () {
   before(function () {
-    // For some reason, this wasn't working properly if done at the top of the file.
     document.body.innerHTML = '<svg id="svg"></svg>';
   });
 
@@ -52,8 +51,6 @@ describe('getTextStringsFromObject_', function () {
 
 describe('haveCaseMismatch_', function () {
   before(function () {
-    // For some reason, this wasn't working properly if done at the top of the file.
-    //global.document = jsdom('<html><head></head><body><svg id="svg"></svg></body></html>');
     document.body.innerHTML = '<svg id="svg"></svg>';
   });
 
@@ -100,8 +97,7 @@ describe('haveCaseMismatch_', function () {
 
 describe('haveBooleanMismatch_', function () {
   before(function () {
-    // For some reason, this wasn't working properly if done at the top of the file.
-    global.document = jsdom('<html><head></head><body><svg id="svg"></svg></body></html>');
+    document.body.innerHTML = '<svg id="svg"></svg>';
   });
 
   it('reports false if both bools are true', function () {

@@ -7,7 +7,7 @@ var testUtils = require('../util/testUtils');
 var ExpressionNode = require('@cdo/apps/calc/expressionNode');
 var EquationSet = require('@cdo/apps/calc/equationSet');
 var Equation = require('@cdo/apps/calc/equation');
-var utils = require('@cdo.apps/utils');
+var utils = require('@cdo/apps/utils');
 
 describe('EquationSet', function () {
   describe('addEquation_', function () {

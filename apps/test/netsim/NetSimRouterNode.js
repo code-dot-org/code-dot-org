@@ -12,7 +12,7 @@ var assertWithinRange = testUtils.assertWithinRange;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
-var _ = require(testUtils.buildPath('lodash'));
+var _ = require('lodash');
 
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');

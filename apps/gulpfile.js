@@ -81,8 +81,8 @@ gulp.task('dev', ['media', 'sass', 'messages', 'vendor'], function() {
 // Format package.json config entries
 var STYLESHEETS = configArray('stylesheets');
 var MEDIA = configArray('media');
-var mediaFiles = {},
-  cssFiles = {};
+var mediaFiles = {};
+var cssFiles = {};
 MEDIA.forEach(function(media) {
   mediaFiles[media] = APPS_OUTPUT + 'media/';
 });
