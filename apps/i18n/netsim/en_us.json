@@ -18,6 +18,8 @@
   "connectedToNodeName": "Connected to {nodeName}",
   "connectingToNodeName": "Connecting to {nodeName}",
   "connectToANode": "Connect to a Node",
+  "connectToAPeer": "Connect to a Peer",
+  "connectToARouter": "Connect to a Router",
   "decimal": "Decimal",
   "disconnected": "Disconnected",
   "dns": "DNS",

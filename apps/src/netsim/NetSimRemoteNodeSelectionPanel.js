@@ -92,10 +92,20 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    */
   this.joinButtonCallback_ = callbacks.joinButtonCallback;
 
+  var panelTitle;
+  if (this.levelConfig_.canConnectToClients &&
+      this.levelConfig_.canConnectToRouters) {
+    panelTitle = i18n.connectToANode();
+  } else if (this.levelConfig_.canConnectToClients) {
+    panelTitle = i18n.connectToAPeer();
+  } else if (this.levelConfig_.canConnectToRouters) {
+    panelTitle = i18n.connectToARouter();
+  }
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
-    panelTitle: i18n.connectToANode(),
+    panelTitle: panelTitle,
     canMinimize: false
   });
 };
