@@ -149,7 +149,6 @@ class LevelsHelperTest < ActionView::TestCase
     blockly_options = level.blockly_options
 
     @level = level
-    set_videos_and_callouts
     app_options
 
     assert_equal blockly_options, level.blockly_options

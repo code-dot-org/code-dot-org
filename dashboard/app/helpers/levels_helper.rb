@@ -32,17 +32,6 @@ module LevelsHelper
     view_options channel: ChannelToken.unique_for_user_and_level(current_user, host_level)
   end
 
-  def set_videos_and_callouts
-
-    # Provide the channel for templated and applab levels.
-    set_channel if @level.try(:project_template_level) || @level.game == Game::APPLAB
-
-    view_options(
-        autoplay_video: select_and_track_autoplay_video,
-        callouts: select_and_remember_callouts(params[:show_callouts])
-    )
-  end
-
   def select_and_track_autoplay_video
     seen_videos = session[:videos_seen] || Set.new
     autoplay_video = nil
@@ -86,6 +75,15 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
+    # Provide the channel for templated and applab levels.
+    set_channel if @level.try(:project_template_level) || @level.game == Game::APPLAB
+
+    # Set videos and callouts.
+    view_options(
+      autoplay_video: select_and_track_autoplay_video,
+      callouts: select_and_remember_callouts(params[:show_callouts])
+    )
+
     return blockly_options if @level.is_a? Blockly
     Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
   end
