@@ -19,7 +19,7 @@ class CreateChannelTokens < ActiveRecord::Migration
         channel = storage_encrypt_channel_id(row[:storage_id], row[:id])
         user = user_storage_ids_table.where(id: row[:storage_id]).first
         if user && user[:user_id]
-          ChannelToken.new(channel: channel, user_id: user[:user_id], level_id: big_game_template).save!
+          ChannelToken.create!(channel: channel, user_id: user[:user_id], level_id: big_game_template)
         end
       end
     end
