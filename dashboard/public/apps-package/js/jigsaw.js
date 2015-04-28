@@ -70,7 +70,7 @@ exports.load = function(assetUrl, id) {
 
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 
 /**
@@ -189,7 +189,7 @@ Jigsaw.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      controls: require('./controls.html')({assetUrl: studioApp.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
@@ -312,7 +312,7 @@ Jigsaw.onPuzzleComplete = function() {
   });
 };
 
-},{"../StudioApp":4,"../dom":58,"../skins":207,"../templates/page.html":232,"./controls.html":91}],91:[function(require,module,exports){
+},{"../StudioApp":4,"../dom":58,"../skins":207,"../templates/page.html.ejs":232,"./controls.html.ejs":91}],91:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

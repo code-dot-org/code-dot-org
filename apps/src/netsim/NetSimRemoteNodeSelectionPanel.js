@@ -15,7 +15,7 @@ var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('../../locale/current/netsim');
 var NetSimPanel = require('./NetSimPanel');
-var markup = require('./NetSimRemoteNodeSelectionPanel.html');
+var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./netsimConstants').NodeType;
 
 /**

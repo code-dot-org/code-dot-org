@@ -260,7 +260,7 @@ var commonMsg = require('../../locale/current/common');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -754,7 +754,7 @@ Maze.init = function(config) {
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
-    extraControlRows = require('./extraControlRows.html')({
+    extraControlRows = require('./extraControlRows.html.ejs')({
       assetUrl: studioApp.assetUrl,
       searchWord: level.searchWord
     });
@@ -768,8 +768,8 @@ Maze.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl,
         showStepButton: level.step && !level.edit_blocks
       }),
@@ -2040,7 +2040,7 @@ Maze.onExecutionFinish = function () {
   }
 };
 
-},{"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../templates/page.html":232,"../timeoutList":238,"../utils":253,"./api":98,"./bee":99,"./beeItemDrawer":101,"./controls.html":103,"./dirtDrawer":104,"./dropletConfig":105,"./executionInfo":106,"./extraControlRows.html":107,"./mazeUtils":113,"./scrat":115,"./tiles":118,"./visualization.html":123,"./wordsearch":124}],124:[function(require,module,exports){
+},{"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../templates/page.html.ejs":232,"../timeoutList":238,"../utils":253,"./api":98,"./bee":99,"./beeItemDrawer":101,"./controls.html.ejs":103,"./dirtDrawer":104,"./dropletConfig":105,"./executionInfo":106,"./extraControlRows.html.ejs":107,"./mazeUtils":113,"./scrat":115,"./tiles":118,"./visualization.html.ejs":123,"./wordsearch":124}],124:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
@@ -2436,7 +2436,7 @@ var mazeMsg = require('../../locale/current/maze');
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function(page, level) {
-  return require('./toolboxes/maze.xml')({
+  return require('./toolboxes/maze.xml.ejs')({
     page: page,
     level: level
   });
@@ -2444,7 +2444,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./startBlocks.xml')({
+  return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
   });
@@ -3059,7 +3059,7 @@ cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../utils":253,"./karelLevels":108,"./requiredBlocks":114,"./startBlocks.xml":117,"./tiles":118,"./toolboxes/maze.xml":122,"./wordsearchLevels":125}],125:[function(require,module,exports){
+},{"../../locale/current/maze":262,"../block_utils":27,"../utils":253,"./karelLevels":108,"./requiredBlocks":114,"./startBlocks.xml.ejs":117,"./tiles":118,"./toolboxes/maze.xml.ejs":122,"./wordsearchLevels":125}],125:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -3381,13 +3381,13 @@ var toolbox = function(page, level) {
   // Must use switch, since browserify only works on requires with literals.
   switch (page) {
     case 1:
-      template = require('./toolboxes/karel1.xml');
+      template = require('./toolboxes/karel1.xml.ejs');
       break;
     case 2:
-      template = require('./toolboxes/karel2.xml');
+      template = require('./toolboxes/karel2.xml.ejs');
       break;
     case 3:
-      template = require('./toolboxes/karel3.xml');
+      template = require('./toolboxes/karel3.xml.ejs');
       break;
   }
   return template({level: level});
@@ -3395,7 +3395,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./karelStartBlocks.xml')({
+  return require('./karelStartBlocks.xml.ejs')({
     page: page,
     level: level
   });
@@ -4617,7 +4617,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../level_base":96,"./karelStartBlocks.xml":109,"./tiles":118,"./toolboxes/karel1.xml":119,"./toolboxes/karel2.xml":120,"./toolboxes/karel3.xml":121}],121:[function(require,module,exports){
+},{"../../locale/current/maze":262,"../block_utils":27,"../level_base":96,"./karelStartBlocks.xml.ejs":109,"./tiles":118,"./toolboxes/karel1.xml.ejs":119,"./toolboxes/karel2.xml.ejs":120,"./toolboxes/karel3.xml.ejs":121}],121:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

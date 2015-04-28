@@ -456,7 +456,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
   // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
   var upSale = document.createElement('div');
   if (options.makeYourOwn) {
-    upSale.innerHTML = require('./templates/makeYourOwn.html')({
+    upSale.innerHTML = require('./templates/makeYourOwn.html.ejs')({
       data: {
         makeUrl: options.makeUrl,
         makeString: options.makeString,
@@ -468,7 +468,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
     }
     belowVisualization.appendChild(upSale);
   } else if (typeof options.makeYourOwn === 'undefined') {
-    upSale.innerHTML = require('./templates/learn.html')({
+    upSale.innerHTML = require('./templates/learn.html.ejs')({
       assetUrl: this.assetUrl
     });
     belowVisualization.appendChild(upSale);
@@ -700,10 +700,10 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
-  instructionsDiv.innerHTML = require('./templates/instructions.html')(level);
+  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')(level);
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }
@@ -835,7 +835,7 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
 // to the server.
 StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html')();
+  builderDetails.innerHTML = require('./templates/builder.html.ejs')();
   var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: builderDetails,

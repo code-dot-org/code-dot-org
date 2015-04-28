@@ -557,7 +557,7 @@ var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Hammer = require('../hammer');
 var utils = require('../utils');
@@ -1209,8 +1209,8 @@ Bounce.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({assetUrl: studioApp.assetUrl}),
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -1956,7 +1956,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/bounce":256,"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../hammer":89,"../skins":207,"../templates/page.html":232,"../timeoutList":238,"../utils":253,"./api":29,"./controls.html":32,"./tiles":36,"./visualization.html":37}],37:[function(require,module,exports){
+},{"../../locale/current/bounce":256,"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../hammer":89,"../skins":207,"../templates/page.html.ejs":232,"../timeoutList":238,"../utils":253,"./api":29,"./controls.html.ejs":32,"./tiles":36,"./visualization.html.ejs":37}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

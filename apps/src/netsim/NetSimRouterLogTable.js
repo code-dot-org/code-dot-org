@@ -11,7 +11,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimRouterLogTable.html');
+var markup = require('./NetSimRouterLogTable.html.ejs');
 
 /**
  * Generator and controller for DNS network lookup table component.
