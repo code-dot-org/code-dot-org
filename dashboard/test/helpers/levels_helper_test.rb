@@ -143,6 +143,8 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'Blockly#blockly_options not modified by levels helper' do
+    self.stubs(:current_user).returns nil
+
     level = create(:level, :blockly, :with_autoplay_video)
     blockly_options = level.blockly_options
 
