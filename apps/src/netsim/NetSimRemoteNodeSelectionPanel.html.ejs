@@ -139,11 +139,11 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
         <%
           var markup = '';
           if (buttonType === 'join-button') {
-            markup = buttonMarkup('Join', undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
+            markup = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
           } else if (buttonType === 'accept-button') {
-            markup = buttonMarkup('Accept', undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
+            markup = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
           } else if (buttonType === 'cancel-button') {
-            markup = buttonMarkup('Cancel', undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': nodeID });
+            markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': nodeID });
           }
         %>
         <%- markup %>
