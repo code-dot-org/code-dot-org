@@ -329,6 +329,16 @@ Given(/^I am a teacher$/) do
   log_in_as(@teacher)
 end
 
+Given(/^I am a student$/) do
+  @student = User.find_or_create_by!(email: 'student@testing.xx') do |user|
+    user.name = "Test student"
+    user.password = SecureRandom.base64
+    user.user_type = 'student'
+    user.age = 16
+  end
+  log_in_as(@student)
+end
+
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
