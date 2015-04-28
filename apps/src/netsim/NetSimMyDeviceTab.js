@@ -11,7 +11,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimMyDeviceTab.html');
+var markup = require('./NetSimMyDeviceTab.html.ejs');
 var NetSimBitRateControl = require('./NetSimBitRateControl');
 var NetSimPulseRateControl = require('./NetSimPulseRateControl');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');

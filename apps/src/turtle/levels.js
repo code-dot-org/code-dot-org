@@ -12,7 +12,7 @@ var LEVELBUILDER_LEVEL = 7;
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function(page, level) {
-  return require('./toolbox.xml')({
+  return require('./toolbox.xml.ejs')({
     page: page,
     level: level
   });
@@ -20,7 +20,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./startBlocks.xml')({
+  return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
   });

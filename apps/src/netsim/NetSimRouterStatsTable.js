@@ -11,7 +11,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimRouterStatsTable.html');
+var markup = require('./NetSimRouterStatsTable.html.ejs');
 var netsimUtils = require('./netsimUtils');
 var NetSimLogEntry = require('./NetSimLogEntry');
 
