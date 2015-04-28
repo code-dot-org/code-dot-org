@@ -47,7 +47,10 @@ module LevelsHelper
   end
 
   def set_videos_and_callouts
-    set_channel
+
+    # Provide the channel for templated and applab levels.
+    set_channel if @level.try(:project_template_level) || @level.game == Game::APPLAB
+
     view_options(
         autoplay_video: select_and_track_autoplay_video,
         callouts: select_and_remember_callouts(params[:show_callouts])
