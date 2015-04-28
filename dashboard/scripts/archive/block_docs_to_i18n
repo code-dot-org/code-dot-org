@@ -10,13 +10,16 @@ CDO_ROOT = '../../../'
 FunctionInfo = Struct.new(:name, :params)
 ParameterInfo = Struct.new(:name, :description)
 
+def filename_without_extension(file_path)
+  File.basename(file_path, '.*')
+end
 
 # @param [String] doc_path path to .md block document
 # @return [FunctionInfo] parsed function information
 def parse_function_doc(doc_path)
   collecting_params = false
 
-  function_shortname = doc_path.split('/').last.split('.').first
+  function_shortname = filename_without_extension(doc_path)
   function = FunctionInfo.new(function_shortname, [])
 
   File.readlines(doc_path).each do |line|
@@ -49,7 +52,7 @@ def parse_function_docs(doc_files)
       functions << parse_function_doc(doc_filename)
     rescue Exception => e
       puts "Error processing file #{doc_filename}:"
-    puts e.message
+      puts e.message
       puts e.backtrace.inspect
     end
   end
