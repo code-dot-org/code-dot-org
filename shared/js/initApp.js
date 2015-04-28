@@ -162,43 +162,6 @@ dashboard.deleteProject = function(callback) {
   }
 };
 
-dashboard.loadEmbeddedProject = function(projectTemplateLevelName) {
-  var deferred = new $.Deferred();
-  // get all projects (TODO: filter on server side?)
-  channels().all(function(data) {
-    if (data) {
-      // find the one that matches this level
-      var projects = $.grep(data, function(app) {
-        return (app.projectTemplateLevelName &&
-                app.projectTemplateLevelName === projectTemplateLevelName);
-      });
-      if (projects.length == 0) {
-        // create a new project
-        var options = {
-          projectTemplateLevelName: projectTemplateLevelName,
-          name: projectTemplateLevelName,
-          hidden: true
-        };
-        channels().create(options, function(app) {
-          if (app) {
-            dashboard.currentApp = app;
-            deferred.resolve();
-          } else {
-            deferred.reject(); // failed to create project
-          }
-        });
-      } else {
-        // use the existing project
-        dashboard.currentApp = projects[0];
-        deferred.resolve();
-      }
-    } else {
-      deferred.reject(); // failed to list projects
-    }
-  });
-  return deferred;
-};
-
 function initApp() {
   if (appOptions.level.isProjectLevel || dashboard.currentApp) {
 
@@ -344,9 +307,7 @@ function loadProject(promise) {
   } else if (appOptions.level.projectTemplateLevelName) {
     // this is an embedded project
     dashboard.isEditingProject = true;
-    promise = promise.then(function () {
-      return dashboard.loadEmbeddedProject(appOptions.level.projectTemplateLevelName);
-    });
+    dashboard.currentApp = {id: appOptions.channel};
   }
   return promise;
 }
