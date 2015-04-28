@@ -36,18 +36,6 @@ var NetSimNode = module.exports = function (shard, nodeRow) {
    * @private
    */
   this.displayName_ = nodeRow.name;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.status_ = nodeRow.status;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.statusDetail_ = nodeRow.statusDetail;
 };
 NetSimNode.inherits(NetSimEntity);
 
@@ -64,9 +52,7 @@ NetSimNode.prototype.getTable_= function () {
 NetSimNode.prototype.buildRow_ = function () {
   return {
     type: this.getNodeType(),
-    name: this.getDisplayName(),
-    status: this.getStatus(),
-    statusDetail: this.getStatusDetail()
+    name: this.getDisplayName()
   };
 };
 
@@ -103,16 +89,7 @@ NetSimNode.prototype.getNodeType = function () {
  * @returns {string}
  */
 NetSimNode.prototype.getStatus = function () {
-  return this.status_;
-};
-
-/**
- * Get node's additional status info, usually display-only
- * status info.
- * @returns {string}
- */
-NetSimNode.prototype.getStatusDetail = function () {
-  return this.statusDetail_ ? this.statusDetail_ : '';
+  return '';
 };
 
 /**

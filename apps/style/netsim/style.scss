@@ -271,13 +271,6 @@ $wide-column-width: 121px;
       font-style: italic;
     }
 
-    .selectable-row {
-      cursor: pointer;
-      &:hover {
-        border-left: solid $orange 3px;
-      }
-    }
-
     .own-row {
       background-color: $own-node-background-color;
       font-style: italic;
@@ -295,13 +288,6 @@ $wide-column-width: 121px;
         background-color: $router-row-hover-color;
         color: $black;
       }
-    }
-
-
-    .selected-row {
-      background-color: $orange !important;
-      color: white !important;
-      font-weight: bold;
     }
   }
 
