@@ -154,7 +154,7 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
 
 %>
 <div class="content-wrap">
-  <div class="instructions">Click the 'Join' button next to any router to be added to the router. Create a new router to join by clicking the 'Add room' button.</div>
+  <div class="instructions"><%= controller.getLocalizedLobbyInstructions() %></div>
   <div class="controls">
     <table>
 

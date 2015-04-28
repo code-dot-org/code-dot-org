@@ -92,20 +92,10 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    */
   this.joinButtonCallback_ = callbacks.joinButtonCallback;
 
-  var panelTitle;
-  if (this.levelConfig_.canConnectToClients &&
-      this.levelConfig_.canConnectToRouters) {
-    panelTitle = i18n.connectToANode();
-  } else if (this.levelConfig_.canConnectToClients) {
-    panelTitle = i18n.connectToAPeer();
-  } else if (this.levelConfig_.canConnectToRouters) {
-    panelTitle = i18n.connectToARouter();
-  }
-
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
-    panelTitle: panelTitle,
+    panelTitle: this.getLocalizedPanelTitle(),
     canMinimize: false
   });
 };
@@ -134,6 +124,38 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.cancel-button').click(this.cancelButtonCallback_);
+};
+
+/**
+ * @returns {string} a localized panel title appropriate to the current level
+ *          configuration
+ */
+NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function () {
+  if (this.levelConfig_.canConnectToClients &&
+      this.levelConfig_.canConnectToRouters) {
+    return i18n.connectToANode();
+  } else if (this.levelConfig_.canConnectToClients) {
+    return i18n.connectToAPeer();
+  } else if (this.levelConfig_.canConnectToRouters) {
+    return i18n.connectToARouter();
+  }
+  return i18n.connectToANode();
+};
+
+/**
+ * @returns {string} localized lobby instructions appropriate to the current
+ *          level configuration
+ */
+NetSimRemoteNodeSelectionPanel.prototype.getLocalizedLobbyInstructions = function () {
+  if (this.levelConfig_.canConnectToClients &&
+      this.levelConfig_.canConnectToRouters) {
+    return i18n.lobbyInstructionsGeneral();
+  } else if (this.levelConfig_.canConnectToClients) {
+    return i18n.lobbyInstructionsForPeers();
+  } else if (this.levelConfig_.canConnectToRouters) {
+    return i18n.lobbyInstructionsForRouters();
+  }
+  return i18n.lobbyInstructionsGeneral();
 };
 
 /**
