@@ -289,7 +289,7 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
   @parent_item.should eq @actual_parent_item
 end
 
-def encrypted_cookie(user_id)
+def encrypted_cookie(user)
   key_generator = ActiveSupport::KeyGenerator.new(
       CDO.dashboard_secret_key_base,
       iterations:1000
@@ -300,7 +300,7 @@ def encrypted_cookie(user_id)
     key_generator.generate_key('signed encrypted cookie')
   )
 
-  cookie = {'warden.user.user.key' => [[user_id]]}
+  cookie = {'warden.user.user.key' => [[user.id], user.authenticatable_salt]}
 
   encrypted_data = encryptor.encrypt_and_sign(cookie)
 
@@ -309,7 +309,7 @@ end
 
 def log_in_as(user)
   params = { name: "_learn_session_#{Rails.env}",
-            value: encrypted_cookie(user.id)}
+            value: encrypted_cookie(user)}
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
