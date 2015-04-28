@@ -134,7 +134,7 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
   %>
     <tr>
       <td nowrap><%= nodeName %></td>
-      <td><%= nodeStatus %></td>
+      <td><%- nodeStatus %></td>
       <td class="button-column">
         <%
           var markup = '';
@@ -184,7 +184,8 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
             if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
               buttonType = 'accept-button';
             }
-            writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
+            var incomingStatus = i18n.lobbyStatusWaitingForYou();
+            writeNodeRow(row.nodeID, row.displayName, incomingStatus, buttonType, row.classAttr);
           });
         }
 
@@ -193,7 +194,12 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeEmptyRow();
           writeHeader(i18n.outgoingConnectionRequests());
           outgoingRequestRows.forEach(function (row) {
-            writeNodeRow(row.nodeID, row.displayName, row.status, 'cancel-button', row.classAttr);
+            var outgoingStatus = i18n.lobbyStatusWaitingForOther({
+              spinner: '<img src="/assets/spinner-big.gif" />',
+              otherName: row.displayName,
+              otherStatus: row.status
+            });
+            writeNodeRow(row.nodeID, row.displayName, outgoingStatus, 'cancel-button', row.classAttr);
           });
         }
       %>
