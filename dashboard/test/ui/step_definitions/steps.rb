@@ -320,7 +320,7 @@ def log_in_as(user)
 end
 
 Given(/^I am a teacher$/) do
-  @teacher = User.find_or_create_by!(email: 'teacher@testing.xx') do |teacher|
+  @teacher = User.find_or_create_by!(email: "teacher#{Time.now.to_i}@testing.xx") do |teacher|
     teacher.name = "Test teacher"
     teacher.password = SecureRandom.base64
     teacher.user_type = 'teacher'
@@ -330,7 +330,7 @@ Given(/^I am a teacher$/) do
 end
 
 Given(/^I am a student$/) do
-  @student = User.find_or_create_by!(email: 'student@testing.xx') do |user|
+  @student = User.find_or_create_by!(email: "student#{Time.now.to_i}@testing.xx") do |user|
     user.name = "Test student"
     user.password = SecureRandom.base64
     user.user_type = 'student'

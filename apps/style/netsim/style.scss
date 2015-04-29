@@ -43,6 +43,15 @@ $wide-column-width: 121px;
   left: 0;
   right: 0;
 
+  #netsim-disconnected {
+    display: block;
+    position: relative;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+    overflow-y: auto;
+  }
+
   #netsim-leftcol {
     position: absolute;
     top: 0;
@@ -82,7 +91,7 @@ $wide-column-width: 121px;
     }
 
     th {
-      border: none;
+      border: solid $charcoal 1px;
       font-family: "Gotham 4r", sans-serif;
       font-size: 10pt;
     }
@@ -210,9 +219,37 @@ $wide-column-width: 121px;
   }
 
   .netsim-lobby-panel {
+    .instructions {
+      float: left;
+      width: 30%;
+    }
 
-    ul {
-      margin: 0 0 10px 0;
+    .controls {
+      margin-left: calc(30% + 1em);
+    }
+
+    table {
+      margin-bottom: 1em;
+
+      img {
+        height: 14px;
+        vertical-align: text-top;
+      }
+    }
+
+    td {
+      height: 40px;
+      vertical-align: middle;
+    }
+
+    .empty-row {
+      text-align: center;
+      border: none;
+    }
+
+    .button-column {
+      width: 1px;
+      text-align: right;
     }
   }
 
@@ -239,13 +276,6 @@ $wide-column-width: 121px;
       font-style: italic;
     }
 
-    .selectable-row {
-      cursor: pointer;
-      &:hover {
-        border-left: solid $orange 3px;
-      }
-    }
-
     .own-row {
       background-color: $own-node-background-color;
       font-style: italic;
@@ -263,13 +293,6 @@ $wide-column-width: 121px;
         background-color: $router-row-hover-color;
         color: $black;
       }
-    }
-
-
-    .selected-row {
-      background-color: $orange !important;
-      color: white !important;
-      font-weight: bold;
     }
   }
 
@@ -388,6 +411,7 @@ $wide-column-width: 121px;
 
     table {
       th {
+        border: none;
         background-color: transparent;
         color: $black;
       }
@@ -466,6 +490,7 @@ $wide-column-width: 121px;
       }
 
       th {
+        border: none;
         background-color: transparent;
         color: $black;
       }

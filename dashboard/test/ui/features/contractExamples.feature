@@ -1,3 +1,4 @@
+@no_ie
 @dashboard_db_access
 Feature: Editing examples in the contract editor
 
