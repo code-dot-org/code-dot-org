@@ -3,6 +3,7 @@ var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
 testUtils.setupLocale('calc');
 var calcMsg = require('@cdo/apps/calc/locale');
+var commonMsg = require('@cdo/apps/locale');
 var Calc = require('@cdo/apps/calc/calc');
 
 module.exports = {

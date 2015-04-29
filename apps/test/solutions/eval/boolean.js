@@ -2,6 +2,7 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
 var evalMsg = require('@cdo/apps/eval/locale');
+var Eval = require('@cdo/apps/eval/eval');
 testUtils.setupLocale('eval');
 
 module.exports = {

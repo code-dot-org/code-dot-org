@@ -189,17 +189,17 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   /**
    * Local cache of our remote row, used to decide whether our state has
    * changed.
-   * 
+   *
    * Not persisted to server.
-   * 
+   *
    * @type {Object}
    * @private
    */
   this.stateCache_ = {};
-  
+
   /**
    * Event others can observe, which we fire when our own remote row changes.
-   * 
+   *
    * @type {ObservableEvent}
    */
   this.stateChange = new ObservableEvent();
@@ -234,16 +234,16 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   /**
    * Local cache of log rows associated with this router, used for detecting
    * and broadcasting relevant changes.
-   * 
+   *
    * @type {Array}
    * @private
    */
   this.myLogRowCache_ = [];
-  
+
   /**
    * Event others can observe, which we fire when the router's log content
    * changes.
-   * 
+   *
    * @type {ObservableEvent}
    */
   this.logChange = new ObservableEvent();
@@ -691,7 +691,7 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID, packetSpec) 
     var nodeChangeHandler = this.onNodeTableChange_.bind(this);
     this.nodeChangeKey_ = nodeChangeEvent.register(nodeChangeHandler);
     logger.info("Router registered for nodeTable tableChange");
-    
+
     var wireChangeEvent = this.shard_.wireTable.tableChange;
     var wireChangeHandler = this.onWireTableChange_.bind(this);
     this.wireChangeKey_ = wireChangeEvent.register(wireChangeHandler);
@@ -729,7 +729,7 @@ NetSimRouterNode.prototype.stopSimulation = function () {
     this.nodeChangeKey_ = undefined;
     logger.info("Router unregistered from nodeTable tableChange");
   }
-  
+
   if (this.wireChangeKey_ !== undefined) {
     var wireChangeEvent = this.shard_.messageTable.tableChange;
     wireChangeEvent.unregister(this.wireChangeKey_);

@@ -64,7 +64,7 @@ var skin;
 /**
  * Milliseconds between each animation frame.
  */
-var stepSpeed;
+var stepSpeed = 100;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -1136,7 +1136,7 @@ Maze.execute = function(stepMode) {
 
   // Speeding up specific levels
   var scaledStepSpeed = stepSpeed * Maze.scale.stepSpeed *
-  skin.movePegmanAnimationSpeedScale;
+    skin.movePegmanAnimationSpeedScale;
 
   timeoutList.setTimeout(function () {
     Maze.scheduleAnimations(stepMode);

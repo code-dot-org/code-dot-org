@@ -990,7 +990,6 @@ function animateUserExpression (maxNumSteps) {
  *   centered.
  */
 function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) {
-  tokenList = _.flattenDeep(tokenList);
   var parent = document.getElementById(parentId);
 
   var g = document.createElementNS(Blockly.SVG_NS, 'g');

@@ -483,6 +483,8 @@ Flappy.onMouseDown = function (e) {
  * Initialize Blockly and the Flappy app.  Called on page load.
  */
 Flappy.init = function(config) {
+  studioApp.runButtonClick = require('lodash').bind(this.runButtonClick, this);
+
   Flappy.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -662,7 +664,7 @@ studioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Flappy.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.

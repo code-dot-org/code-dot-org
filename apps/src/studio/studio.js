@@ -165,6 +165,7 @@ function loadLevel() {
       Studio.customLogic = new SamBatLogic(Studio);
       break;
   }
+  blocks.registerCustomGameLogic(Studio.customLogic);
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
@@ -201,7 +202,7 @@ function loadLevel() {
  */
 function reorderedStartAvatars (avatarList, firstSpriteIndex) {
   firstSpriteIndex = firstSpriteIndex || 0;
-  return _.flatten([
+  return _.flattenDeep([
     avatarList.slice(firstSpriteIndex),
     avatarList.slice(0, firstSpriteIndex)
   ]);

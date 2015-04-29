@@ -82,7 +82,6 @@ function setupBlocklyFrame() {
   // is loaded when we require our locale msg files
   studioApp = require('@cdo/apps/StudioApp').singleton;
   studioApp.reset = function(){};
-  studioApp.runButtonClick = function(){};
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');

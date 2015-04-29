@@ -246,6 +246,7 @@ module.exports = {
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       customValidator: function (assert) {
+        var Calc = require('@cdo/apps/calc/calc');
         assert.equal(Calc.__testonly__.appState.message, calcMsg.missingFunctionError({functionName: 'f'}));
         return true;
       },

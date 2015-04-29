@@ -61,7 +61,11 @@ gulp.task('bundle-js', ['vendor'], function() {
 function browserify(watch) {
   require('mkdirp')('./src/node_modules');
   var checkDeps = require('check-dependencies');
-  checkDeps.sync({'packageDir': './src', 'onlySpecified': true, 'install': true});
+  checkDeps.sync({
+    packageDir: './src',
+    onlySpecified: true,
+    install: true}
+  );
 
   var bundle = require('@cdo/cdo/lib/frontend/browserify');
   var extend = require('util')._extend;

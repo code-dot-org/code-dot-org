@@ -12,7 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
-var i18n = require('./netsim');
+var i18n = require('./locale');
 var markup = require('./NetSimShardSelectionPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 

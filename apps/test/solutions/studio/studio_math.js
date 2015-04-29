@@ -1,5 +1,6 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
+var Studio = require('@cdo/apps/studio/studio');
 
 var levelDef = {
   map: [

@@ -55,9 +55,6 @@ function customValidator(assert) {
   var validateTextElementContainer = function (element, items) {
     for (var i = 0; i < items.length; i++) {
       var expectedTextContent = items[i][0].replace(/ /g, '\u00A0\u00A0');
-      // TODO (brent) - this was changed from children to childNodes. Try to
-      // understand why children doesnt work (this was done in a bunch of places
-      // in this file
       assert.equal(element.childNodes[i].textContent, expectedTextContent);
       assert.equal(element.childNodes[i].getAttribute('class'), items[i][1]);
     }
@@ -504,7 +501,6 @@ function customValidator(assert) {
     Calc.__testonly__.appState.failedInput = null;
 
     assert.equal(userExpression.childNodes.length, 3);
-    assert.equal(userExpression.children.length, 3);
 
     validateTextElementContainer(userExpression.childNodes[0], [
       ['f(x) = ', null],
@@ -545,14 +541,14 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 2);
+    assert.equal(userExpression.childNodes.length, 2);
 
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['f(x) = ', null],
       ['x', null]
     ]);
 
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['f', 'errorToken'],
       ['(', 'errorToken'],
       ['3', 'errorToken'],
@@ -580,8 +576,8 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
-    validateTextElementContainer(userExpression.children[0], [
+    assert.equal(userExpression.childNodes.length, 1);
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['1', 'errorToken'],
       [' + ', null],
       ['2', 'errorToken'],
@@ -603,8 +599,8 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
-    validateTextElementContainer(userExpression.children[0], [
+    assert.equal(userExpression.childNodes.length, 1);
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['4', 'errorToken']
     ]);
 
@@ -616,8 +612,8 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
-    validateTextElementContainer(userExpression.children[0], [
+    assert.equal(userExpression.childNodes.length, 1);
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['5', null]
     ]);
   });

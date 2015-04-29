@@ -31,8 +31,8 @@ exports.stubTimer = function (bool) {
  */
 exports.setTimeout = function (fn, time) {
   log('setting timeout, stubTimer = ' + stubTimer);
-  var t = getTimer();
-  var timeoutId = t.setTimeout.apply(window, [fn, time]);
+  var timer = getTimer();
+  var timeoutId = timer.setTimeout.apply(window, [fn, time]);
   timeoutList.push(timeoutId);
   log('set timeout ' + timeoutId);
   exports.advance();
@@ -44,11 +44,11 @@ exports.setTimeout = function (fn, time) {
  */
 exports.clearTimeouts = function () {
   log('clear timeouts');
-  var t = getTimer();
-  timeoutList.forEach(t.clearTimeout, window);
+  var timer = getTimer();
+  timeoutList.forEach(timer.clearTimeout, window);
   timeoutList = [];
   if(stubTimer) {
-    t.clearAll();
+    timer.clearAll();
   }
 };
 
@@ -85,10 +85,10 @@ exports.setInterval = function (fn, time) {
 exports.clearIntervals = function () {
   log('clear intervals');
   var timer = getTimer();
-  intervalList.forEach(t.clearInterval, window);
+  intervalList.forEach(timer.clearInterval, window);
   intervalList = [];
   if (stubTimer) {
-    t.clearAll();
+    timer.clearAll();
   }
 };
 
@@ -111,10 +111,8 @@ exports.advance = function() {
   log('advance');
   if(stubTimer) {
     var timer = getTimer();
-    if(stubTimer) {
-      t.wait(50000);
-      t.waitAll();
-    }
+    timer.wait(50000);
+    timer.waitAll();
   }
 };
 
