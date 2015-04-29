@@ -101,14 +101,14 @@ dashboard.updateTimestamp = function() {
   }
 };
 
-function appToProjectUrl(options) {
-  switch (options.app) {
+function appToProjectUrl() {
+  switch (appOptions.app) {
     case 'applab':
       return '/p/applab';
     case 'turtle':
       return '/p/artist';
     case 'studio':
-      if (options.level.useContractEditor) {
+      if (appOptions.level.useContractEditor) {
         return '/p/algebra';
       }
       return '/p/playlab';
@@ -134,7 +134,7 @@ dashboard.saveProject = function(callback, overrideSource) {
   var channelId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = overrideSource || dashboard.getEditorSource();
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
-  dashboard.currentApp.level = appToProjectUrl(appOptions);
+  dashboard.currentApp.level = appToProjectUrl();
   if (channelId && dashboard.currentApp.isOwner) {
     channels().update(channelId, dashboard.currentApp, function(data) {
       if (data) {
@@ -233,7 +233,7 @@ function initApp() {
       appOptions.callouts = [];
       dashboard.showMinimalProjectHeader();
     }
-  } else if (appOptions.isLegacyShare && appToProjectUrl(appOptions)) {
+  } else if (appOptions.isLegacyShare && appToProjectUrl()) {
     dashboard.currentApp = {
       name: 'Untitled Project'
     };
@@ -327,6 +327,7 @@ function loadProject(promise) {
       });
       return deferred;
     });
+    dashboard.showProjectLevelHeader();
   }
   return promise;
 }
