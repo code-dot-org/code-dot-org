@@ -20,18 +20,25 @@ var DnsMode = netsimConstants.DnsMode;
 var NodeType = netsimConstants.NodeType;
 
 /**
+ * The narrowest that a text bubble is allowed to be.
+ * @type {number}
+ * @const
+ */
+var TEXT_MIN_WIDTH = 30;
+
+/**
  * Width to add to the bubble beyond the width of the student's name.
  * @type {number}
  * @const
  */
-var NAME_PADDING_X = 20;
+var TEXT_PADDING_X = 20;
 
 /**
  * Height to add to the bubble beyond the height of the student's name.
  * @type {number}
  * @const
  */
-var NAME_PADDING_Y = 10;
+var TEXT_PADDING_Y = 10;
 
 /**
  * @param {NetSimNode} sourceNode
@@ -101,13 +108,7 @@ var NetSimVizNode = module.exports = function (sourceNode) {
       .attr('y', textVerticalOffset);
 
   this.nameBox_ = jQuerySvgElement('rect')
-      .addClass('name-box')
-      .attr('x', 0)
-      .attr('y', 0)
-      .attr('rx', 0)
-      .attr('ry', 0)
-      .attr('width', 0)
-      .attr('height', 0);
+      .addClass('name-box');
 
   this.nameGroup_
       .append(this.nameBox_)
@@ -118,17 +119,8 @@ var NetSimVizNode = module.exports = function (sourceNode) {
       .hide()
       .appendTo(root);
 
-  var addressBoxHalfWidth = 15;
-  var addressBoxHalfHeight = 12;
-
-  jQuerySvgElement('rect')
+  this.addressBox_ = jQuerySvgElement('rect')
       .addClass('address-box')
-      .attr('x', -addressBoxHalfWidth)
-      .attr('y', -addressBoxHalfHeight)
-      .attr('rx', 5)
-      .attr('ry', 10)
-      .attr('width', addressBoxHalfWidth * 2)
-      .attr('height', addressBoxHalfHeight * 2)
       .appendTo(this.addressGroup_);
 
   this.addressText_ = jQuerySvgElement('text')
@@ -189,13 +181,30 @@ NetSimVizNode.prototype.setName = function (newName) {
  * @private
  */
 NetSimVizNode.prototype.resizeNameBox_ = function () {
-  var box = this.displayName_[0].getBBox();
-  var width = box.width + NAME_PADDING_X;
-  var height = box.height + NAME_PADDING_Y;
+  this.resizeRectToText_(this.nameBox_, this.displayName_);
+};
+
+/**
+ *
+ * @private
+ */
+NetSimVizNode.prototype.resizeAddressBox_ = function () {
+  this.resizeRectToText_(this.addressBox_, this.addressText_);
+};
+
+/**
+ * Utility for resizing a background rounded-rect to fit the given text element.
+ * @param {jQuery} rect
+ * @param {jQuery} text
+ * @private
+ */
+NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
+  var box = text[0].getBBox();
+  var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
+  var height = box.height + TEXT_PADDING_Y;
   var halfWidth = width / 2;
   var halfHeight = height / 2;
-  this.nameBox_
-      .attr('x', -halfWidth)
+  rect.attr('x', -halfWidth)
       .attr('y', -halfHeight)
       .attr('rx', halfHeight)
       .attr('ry', halfHeight)
@@ -226,6 +235,7 @@ NetSimVizNode.prototype.tick = function (clock) {
     this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
   } else if (this.isForeground && this.tweens_.length > 0) {
     this.resizeNameBox_();
+    this.resizeAddressBox_();
   }
 };
 
@@ -277,4 +287,5 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
   } else {
     this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
   }
+  this.resizeAddressBox_();
 };
