@@ -85,11 +85,11 @@ NetSimNode.prototype.getNodeType = function () {
 };
 
 /**
- * Get node's status, usually a string enum value.
+ * Get localized description of node status.
  * @returns {string}
  */
 NetSimNode.prototype.getStatus = function () {
-  return '';
+  throw new Error('getStatus method is not implemented');
 };
 
 /**
