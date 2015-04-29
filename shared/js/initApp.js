@@ -109,7 +109,7 @@ function appToProjectUrl() {
       return '/p/artist';
     case 'studio':
       if (appOptions.level.useContractEditor) {
-        return '/p/algebra';
+        return '/p/algebra_game';
       }
       return '/p/playlab';
   }
