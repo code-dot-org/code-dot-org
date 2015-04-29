@@ -28,13 +28,24 @@ var netsimNodeFactory = module.exports;
  * @return {Array.<NetSimNode>} nodes for the rows
  */
 netsimNodeFactory.nodesFromRows = function (shard, nodeRows) {
-  return nodeRows.map(function (row) {
-    if (row.type === NodeType.CLIENT) {
-      return new NetSimClientNode(shard, row);
-    } else if (row.type == NodeType.ROUTER) {
-      return new NetSimRouterNode(shard, row);
-    }
-    // Oops!  We probably shouldn't ever get here.
-    throw new Error("Unable to map row to node.");
-  });
+  return nodeRows.map(netsimNodeFactory.nodeFromRow.bind(this, shard));
+};
+
+/**
+ * Given a row from the node table on a shard, gives back a node controllers
+ * (of appropriate types).
+ * @param {!NetSimShard} shard
+ * @param {!Object} nodeRow
+ * @throws when the row doesn't have a mappable node type.
+ * @return {NetSimNode} node for the rows
+ */
+netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
+  if (nodeRow.type === NodeType.CLIENT) {
+    return new NetSimClientNode(shard, nodeRow);
+  } else if (nodeRow.type === NodeType.ROUTER) {
+    return new NetSimRouterNode(shard, nodeRow);
+  }
+
+  // Oops!  We probably shouldn't ever get here.
+  throw new Error("Unable to map row to node.");
 };
