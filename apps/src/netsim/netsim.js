@@ -1122,4 +1122,5 @@ NetSim.prototype.expireHeartbeat = function () {
   }
 
   this.myNode.heartbeat_.spoofExpired();
+  logger.info("Local node heartbeat is now expired.");
 };
