@@ -35,8 +35,18 @@ var NetSimStatusPanel = module.exports = function (rootDiv, callbacks) {
    */
   this.disconnectCallback_ = callbacks.disconnectCallback;
 
+  /**
+   * Callback for debug button that starts shard cleaning immediately
+   * @type {function}
+   * @private
+   */
   this.cleanShardNow_ = callbacks.cleanShardNow;
 
+  /**
+   * Callback for debug button that spoofs expired local node heartbeat
+   * @type {function}
+   * @private
+   */
   this.expireHeartbeat_ = callbacks.expireHeartbeat;
 
   // Superclass constructor
