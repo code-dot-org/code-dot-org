@@ -1,3 +1,4 @@
+@dashboard_db_access
 Feature: Contract Editor section configuration and manipulation
 
 Background:
