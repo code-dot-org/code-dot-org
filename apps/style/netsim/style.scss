@@ -172,49 +172,50 @@ $wide-column-width: 121px;
 
       .viz-node {
         text {
-          fill: $white;
+          fill: $black;
           text-anchor: middle;
-          font-weight: bold;
+
+          &.address-box {
+            font-weight: bold;
+          }
         }
 
         circle {
-          stroke: $cyan;
+          stroke: $light_cyan;
           stroke-width: 2;
-          fill: $lighter_cyan;
+          fill: $light_cyan;
         }
 
         rect {
-          stroke: $cyan;
+          stroke: $light_cyan;
           stroke-width: 2px;
-          fill: $light_cyan;
+          fill: $white;
         }
       }
 
       .local-node {
         circle {
-          stroke: $teal;
-          fill: $lighter_teal;
+          stroke: $light_teal;
+          fill: $light_teal;
         }
 
         rect {
-          stroke: $teal;
-          fill: $light_teal;
+          stroke: $light_teal;
         }
       }
       .router-node {
         circle {
-          stroke: $purple;
-          fill: $lighter_purple;
+          stroke: $light_purple;
+          fill: $light_purple;
         }
 
         rect {
-          stroke: $purple;
-          fill: $light_purple;
+          stroke: $light_purple;
         }
       }
 
       .viz-wire {
-        stroke: $black;
+        stroke: $charcoal;
         stroke-width: 2;
       }
     }
