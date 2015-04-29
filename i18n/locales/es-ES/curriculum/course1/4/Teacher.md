@@ -1,24 +1,24 @@
 * * *
 
-title: "Maze: Sequence" view: page_curriculum theme: none
+title: "Laberinto: Secuencias" view: page_curriculum theme: none
 
 * * *
 
 <%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>4, :title=> 'Maze: Sequence', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
-In this series of puzzles, students will build on the understanding of algorithms learned in the Happy Maps and Move It Unplugged activities. Featuring characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of the maze to the pig at the other side.
+En esta serie de actividades los estudiantes enriquecerán la compresión de algoritmos aprendida con las actividades fuera de línea 'Mapas Felices' y 'Muévelo'. Utilizando personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales para mover un pájaro desde un lado del laberinto hasta el cerdo que se encuentra en el otro lado.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
-### **Getting Started**
+### **Comenzando**
 
 [Introduction](#GetStarted)   
 
@@ -31,40 +31,40 @@ In this series of puzzles, students will build on the understanding of algorithm
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
-### Students will:
+### Los estudiantes podrán:
 
-  * Order movement commands as sequential steps in a program
-  * Represent an algorithm as a computer program
-  * Count the number of times an action should be executed and represent it as instructions in a program
+  * Ordenar comandos de movimiento como pasos secuenciales en un programa
+  * Representar un algoritmo como un programa de computadora
+  * Contar el número de veces que una acción deber ser ejecutada y representarlo como instrucciones en un programa
 
-[/together]
+[/juntos]
 
 [together]
 
-## Getting Started
+## Comenzando
 
-### <a name="GetStarted"></a> Introduction
+### <a name="GetStarted"></a> Introducción
 
-Ask your students if they are familiar with the game Angry Birds. Explain that they will be writing programs to help an Angry Bird locate a Pig.
+Pregunta a tus estudiantes si están familiarizados con el juego Angry Birds. Explica que escribirán programas para ayudar a un Angry Bird a encontrar un cerdo.
 
-  * Review cardinal directions.
-  * Use the NEWS mnemonic and let students know that they will see those letters in their programs next to the direction arrows.
-  * Getting the bird to the pig will require putting your directions in a very specific order or sequence.
-  * Can you solve the puzzles using the fewest blocks possible?
+  * Repasa los puntos cardinales.
+  * Usa el recordatorio NEOS y dile a tus estudiantes que verán esas letras en sus programas al lado de las flechas de dirección.
+  * Conseguir que el pájaro llegue al cerdo requerirá poner las direcciones en un orden o secuencia muy específico.
+  * ¿Puedes resolver los retos usando la menor cantidad de bloques posible?
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Encourage students to continue using the pair programming method that they learned in the last lesson. Ask them to restate the roles of the driver and navigator.
+Anima a los estudiantes a continuar usando el método de programación en parejas que aprendieron en la lección pasada. Pídeles volver a asignar los papeles de conductor y navegante.
 
-[/tip]
+[/sugerencia]
 
 [together]
 
@@ -74,7 +74,7 @@ Encourage students to continue using the pair programming method that they learn
 
 As your students work through the puzzles, observe how they plan the path for the bird. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems. You may want to go through a few puzzles on the projector. While doing this you can ask a one student to trace the path on the screen while another writes the directions on a whiteboard.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -89,7 +89,7 @@ As your students work through the puzzles, observe how they plan the path for th
 
 In small groups, let students design their own mazes and challenge each other to write programs to solve them. For added fun, make life-size mazes with students as the pig and bird.
 
-[/together]
+[/juntos]
 
 [standards]
 

@@ -23,6 +23,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: 400px; }
 
+  div#visualizationResizeBar {
+    left: 400px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 400px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -44,6 +50,12 @@ div#visualization.with_padding {
     left: 350px; }
 
   html[dir='rtl'] div#codeWorkspace {
+    right: 350px; }
+
+  div#visualizationResizeBar {
+    left: 350px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
     right: 350px; }
 
   div#visualization.responsive > * {
@@ -69,6 +81,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: 300px; }
 
+  div#visualizationResizeBar {
+    left: 300px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 300px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
@@ -92,6 +110,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: 250px; }
 
+  div#visualizationResizeBar {
+    left: 250px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 250px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
@@ -113,6 +137,12 @@ div#visualization.with_padding {
     left: 200px; }
 
   html[dir='rtl'] div#codeWorkspace {
+    right: 200px; }
+
+  div#visualizationResizeBar {
+    left: 200px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
     right: 200px; }
 
   div#visualization.responsive > * {
@@ -141,6 +171,10 @@ div#visualization.with_padding {
   left: 0px;
   z-index: -1; }
 
+#visualizationResizeBar {
+  margin-left: 2px;
+  width: 13px; }
+
 #divApplab img {
   opacity: 1; }
 
@@ -160,12 +194,18 @@ img#turtleImage {
   background-color: #FFA000;
   color: #fff;
   margin-left: 0px;
-  margin-right: 0px;
-  padding: 3px;
-  font-size: 12px; }
+  margin-right: 3px;
+  padding: 3px 6px;
+  font-size: 14px; }
+
+#pauseButton, #continueButton {
+  min-width: 120px; }
 
 .debugger_button:focus {
   outline-style: none; }
+
+.debugger_button > img {
+  opacity: 1; }
 
 #debug-area {
   position: absolute;
@@ -242,14 +282,13 @@ img#turtleImage {
 .sliderKnob:hover {
   fill: #eee; }
 
-#pauseButton {
-  min-width: 80px; }
-
 /* Sprited icons. */
 .icon21 {
   height: 21px;
   width: 21px;
-  background-image: url("/blockly/media/applab/icons.png"); }
+  background-image: url("/blockly/media/applab/icons.png");
+  background-size: 42px 147px;
+  margin-bottom: -3px; }
 
 .code {
   background-position: -21px 0px; }
@@ -279,6 +318,26 @@ img#turtleImage {
 
 .down-btn {
   background-position: 0px -42px;
+  margin-right: 3px; }
+
+.pause-btn {
+  background-position: 0px -84px;
+  margin-right: 3px; }
+
+.continue-btn {
+  background-position: -21px -84px;
+  margin-right: 3px; }
+
+.step-in-btn {
+  background-position: 0px -105px;
+  margin-right: 3px; }
+
+.step-out-btn {
+  background-position: -21px -105px;
+  margin-right: 3px; }
+
+.step-over-btn {
+  background-position: 0px 21px;
   margin-right: 3px; }
 
 button.arrow {

@@ -6,18 +6,26 @@
   <div>
     <div id="debug-buttons" style="display:inline;">
       <button id="pauseButton" class="debugger_button">
+        <img src="<%= assetUrl('media/1x1.gif') %>" class="pause-btn icon21">
         <%= applabMsg.pause() %>
       </button>
+      <button id="continueButton" class="debugger_button">
+        <img src="<%= assetUrl('media/1x1.gif') %>" class="continue-btn icon21">
+        <%= applabMsg.continue() %>
+      </button>
       <button id="stepInButton" class="debugger_button">
+        <img src="<%= assetUrl('media/1x1.gif') %>" class="step-in-btn icon21">
         <%= applabMsg.stepIn() %>
       </button>
       <button id="stepOverButton" class="debugger_button">
+        <img src="<%= assetUrl('media/1x1.gif') %>" class="step-over-btn icon21">
         <%= applabMsg.stepOver() %>
       </button>
       <button id="stepOutButton" class="debugger_button">
+        <img src="<%= assetUrl('media/1x1.gif') %>" class="step-out-btn icon21">
         <%= applabMsg.stepOut() %>
       </button>
-      <button id="viewDataButton" class="debugger_button" style="display:none;">
+      <button id="viewDataButton" class="debugger_button">
         <%= applabMsg.viewData() %>
       </button>
     </div>

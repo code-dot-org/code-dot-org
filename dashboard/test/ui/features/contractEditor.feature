@@ -1,6 +1,10 @@
 @eyes
 Feature: Opening the contract editor
 
+Background:
+  Given I am on "http://learn.code.org/"
+  And I am a student
+
 Scenario: Testing the contract variable editor
   When I open my eyes to test "contract variable editor"
   Given I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"

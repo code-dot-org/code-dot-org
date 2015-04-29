@@ -11,6 +11,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Game)
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
+
+    assert !ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
   end
 
   test "as member" do
@@ -26,6 +29,10 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)
+
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
+
   end
 
   test "as admin" do
@@ -39,6 +46,9 @@ class AbilityTest < ActiveSupport::TestCase
     # Can only destroy custom levels
     assert ability.can?(:destroy, Level.where.not(user_id: nil).first)
     assert ability.can?(:destroy, Activity)
+
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
   end
 
 end

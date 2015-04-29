@@ -11,7 +11,9 @@
  */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
+var _ = utils.getLodash();
+var i18n = require('../../locale/current/netsim');
 var NodeType = require('./netsimConstants').NodeType;
 var NetSimEntity = require('./NetSimEntity');
 var NetSimNode = require('./NetSimNode');
@@ -43,7 +45,43 @@ NetSimClientNode.prototype.getNodeType = function () {
 
 /** @inheritdoc */
 NetSimClientNode.prototype.getStatus = function () {
-  return this.status_ ? this.status_ : 'Online';
+  // Determine status based on cached outgoing wire
+  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var outgoingWireRow = _.find(cachedWireRows, function (wireRow) {
+    return wireRow.localNodeID === this.entityID;
+  }, this);
+
+  if (outgoingWireRow) {
+    // Get remote node for display name / hostname
+    var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+    var remoteNodeRow = _.find(cachedNodeRows, function (nodeRow) {
+      return nodeRow.id === outgoingWireRow.remoteNodeID;
+    });
+
+    var remoteNodeName = i18n.unknownNode();
+    if (remoteNodeRow) {
+      remoteNodeName = remoteNodeRow.name;
+    }
+
+    // Check for connection state
+    var mutualConnection;
+    if (remoteNodeRow && remoteNodeRow.type === NodeType.ROUTER) {
+      mutualConnection = true;
+    } else {
+      mutualConnection = _.find(cachedWireRows, function (wireRow) {
+        return wireRow.localNodeID === outgoingWireRow.remoteNodeID &&
+            wireRow.remoteNodeID === outgoingWireRow.localNodeID;
+      });
+    }
+
+    if (mutualConnection) {
+      return i18n.connectedToNodeName({nodeName:remoteNodeName});
+    } else {
+      return i18n.connectingToNodeName({nodeName:remoteNodeName});
+    }
+  }
+
+  return i18n.notConnected();
 };
 
 /**

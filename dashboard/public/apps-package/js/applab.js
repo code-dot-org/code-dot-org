@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":207}],19:[function(require,module,exports){
+},{"../skins":206}],19:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":255,"../block_utils":27,"../utils":253}],11:[function(require,module,exports){
+},{"../../locale/current/applab":254,"../block_utils":27,"../utils":252}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -313,7 +313,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -500,7 +500,7 @@ function adjustAppSizeStyles(container) {
 
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -523,8 +523,18 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "left: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationResizeBar") {
+              // set the left for the visualizationResizeBar
+              childRules[k].style.cssText = "left: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
+              childRules[k].style.cssText = "right: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div#visualizationResizeBar") {
+              // set the right for the visualizationResizeBar (RTL mode)
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
@@ -620,6 +630,10 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         var color = new RGBColor(varValue);
         properType = color.ok;
       }
+    } else if (expectedType === 'uistring') {
+      properType = (typeof varValue === 'string') ||
+                   (typeof varValue === 'number') ||
+                   (typeof varValue === 'boolean');
     } else if (expectedType === 'function') {
       // Special handling for functions, it must be an interpreter function:
       properType = (typeof varValue === 'object') && (varValue.type === 'function');
@@ -907,8 +921,9 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // Overwrite the nextStep value. (If we hit a breakpoint during a step
         // out or step over, this will cancel that step operation early)
         Applab.nextStep = StepType.RUN;
+        Applab.updatePauseUIState();
       } else {
-        Applab.onPauseButton();
+        Applab.onPauseContinueButton();
       }
       // Store some properties about where we stopped:
       Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -1007,6 +1022,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             // Our step operation is complete, reset nextStep to StepType.RUN to
             // return to a normal 'break' state:
             Applab.nextStep = StepType.RUN;
+            Applab.updatePauseUIState();
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -1081,18 +1097,18 @@ Applab.init = function(config) {
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var firstControlsRow = require('./controls.html')({
+  var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
     finishButton: true
   });
-  var extraControlsRow = require('./extraControlRows.html')({
+  var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designProperties = require('./designProperties.html')({tagName:null});
-  var designModeBox = require('./designModeBox.html')({
+  var designProperties = require('./designProperties.html.ejs')({tagName:null});
+  var designModeBox = require('./designModeBox.html.ejs')({
     designProperties: designProperties
   });
 
@@ -1100,7 +1116,7 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
+      visualization: require('./visualization.html.ejs')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -1173,6 +1189,9 @@ Applab.init = function(config) {
   config.dropletConfig = dropletConfig;
   config.pinWorkspaceToBottom = true;
 
+  config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
+  config.nativeVizWidth = Applab.appWidth;
+
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
   config.mobileNoPaddingShareWidth = config.level.appWidth;
@@ -1221,11 +1240,13 @@ Applab.init = function(config) {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      dom.addClickTouchEvent(pauseButton, Applab.onPauseButton);
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      dom.addClickTouchEvent(pauseButton, Applab.onPauseContinueButton);
+      dom.addClickTouchEvent(continueButton, Applab.onPauseContinueButton);
       dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
@@ -1423,7 +1444,7 @@ Applab.editElementProperties = function(el) {
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
+  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: tagName,
     props: {
       id: el.id,
@@ -1448,7 +1469,7 @@ Applab.editElementProperties = function(el) {
 
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
+  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: null
   });
 };
@@ -1513,12 +1534,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   }
 
   var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
   var stepInButton = document.getElementById('stepInButton');
   var stepOverButton = document.getElementById('stepOverButton');
   var stepOutButton = document.getElementById('stepOutButton');
-  if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-    pauseButton.textContent = applabMsg.pause();
+  if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+    pauseButton.style.display = "inline-block";
     pauseButton.disabled = true;
+    continueButton.style.display = "none";
     stepInButton.disabled = true;
     stepOverButton.disabled = true;
     stepOutButton.disabled = true;
@@ -1585,12 +1608,14 @@ studioApp.reset = function(first) {
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.textContent = applabMsg.pause();
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = true;
+      continueButton.style.display = "none";
       stepInButton.disabled = false;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1884,11 +1909,14 @@ Applab.execute = function() {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = false;
+      continueButton.style.display = "none";
       stepInButton.disabled = true;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1908,27 +1936,40 @@ Applab.execute = function() {
   queueOnTick();
 };
 
-Applab.onPauseButton = function() {
+Applab.onPauseContinueButton = function() {
   if (Applab.running) {
-    var pauseButton = document.getElementById('pauseButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
     // We have code and are either running or paused
-    if (Applab.paused) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
       Applab.paused = false;
-      Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.pause();
     } else {
       Applab.paused = true;
       Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.continue();
     }
+    Applab.updatePauseUIState();
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
     stepInButton.disabled = !Applab.paused;
     stepOverButton.disabled = !Applab.paused;
     stepOutButton.disabled = !Applab.paused;
-    document.getElementById('spinner').style.visibility =
-        Applab.paused ? 'hidden' : 'visible';
+  }
+};
+
+Applab.updatePauseUIState = function() {
+  var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
+  var spinner = document.getElementById('spinner');
+
+  if (pauseButton && continueButton && spinner) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
+      pauseButton.style.display = "none";
+      continueButton.style.display = "inline-block";
+      spinner.style.visibility = 'hidden';
+    } else {
+      pauseButton.style.display = "inline-block";
+      continueButton.style.display = "none";
+      spinner.style.visibility = 'visible';
+    }
   }
 };
 
@@ -1936,25 +1977,25 @@ Applab.onStepOverButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OVER;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
 Applab.onStepInButton = function() {
   if (!Applab.running) {
     studioApp.runButtonClick();
-    Applab.onPauseButton();
+    Applab.onPauseContinueButton();
   }
   Applab.paused = true;
   Applab.nextStep = StepType.IN;
-  document.getElementById('spinner').style.visibility = 'visible';
+  Applab.updatePauseUIState();
 };
 
 Applab.onStepOutButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OUT;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
@@ -2110,7 +2151,7 @@ Applab.container = function (opts) {
 
 Applab.write = function (opts) {
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'write', 'html', opts.html, 'string');
+  apiValidateType(opts, 'write', 'html', opts.html, 'uistring');
   return Applab.container(opts);
 };
 
@@ -2119,7 +2160,7 @@ Applab.button = function (opts) {
 
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
-  apiValidateType(opts, 'button', 'text', opts.text, 'string');
+  apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
 
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
@@ -2365,7 +2406,7 @@ Applab.getDirection = function (opts) {
 Applab.dot = function (opts) {
   apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = getTurtleContext();
-  if (ctx) {
+  if (ctx && opts.radius > 0) {
     ctx.beginPath();
     if (Applab.turtle.penUpColor) {
       // If the pen is up and the color has been changed, use that color:
@@ -2644,7 +2685,7 @@ Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'uistring');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
@@ -2657,8 +2698,10 @@ Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textLabel', 'text', opts.text, 'string');
-  apiValidateType(opts, 'textLabel', 'forId', opts.forId, 'string', OPTIONAL);
+  apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
+  if (typeof opts.forId !== 'undefined') {
+    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, false);
+  }
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
@@ -2712,7 +2755,7 @@ Applab.dropdown = function (opts) {
   if (opts.optionsArray) {
     for (var i = 0; i < opts.optionsArray.length; i++) {
       var option = document.createElement("option");
-      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'string');
+      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'uistring');
       option.text = opts.optionsArray[i];
       newSelect.add(option);
     }
@@ -2767,7 +2810,7 @@ Applab.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setText', 'text', opts.text, 'string');
+  apiValidateType(opts, 'setText', 'text', opts.text, 'uistring');
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
@@ -3507,7 +3550,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":255,"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../skins":207,"../slider":208,"../templates/page.html":232,"../timeoutList":238,"../utils":253,"../xml":254,"./acemode/annotationList":6,"./acemode/mode-javascript_codeorg":8,"./api":9,"./appStorage":10,"./blocks":12,"./controls.html":13,"./designModeBox.html":14,"./designProperties.html":15,"./dontMarshalApi":16,"./dropletConfig":17,"./extraControlRows.html":18,"./rgbcolor.js":21,"./visualization.html":23}],23:[function(require,module,exports){
+},{"../../locale/current/applab":254,"../../locale/current/common":257,"../StudioApp":4,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../skins":206,"../slider":207,"../templates/page.html.ejs":231,"../timeoutList":237,"../utils":252,"../xml":253,"./acemode/annotationList":6,"./acemode/mode-javascript_codeorg":8,"./api":9,"./appStorage":10,"./blocks":12,"./controls.html.ejs":13,"./designModeBox.html.ejs":14,"./designProperties.html.ejs":15,"./dontMarshalApi":16,"./dropletConfig":17,"./extraControlRows.html.ejs":18,"./rgbcolor.js":21,"./visualization.html.ejs":23}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3527,7 +3570,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],21:[function(require,module,exports){
+},{"ejs":273}],21:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -3807,7 +3850,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        ', escape((9,  applabMsg.pause() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        ', escape((12,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        ', escape((15,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        ', escape((18,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((21,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');25; } ; buf.push('\n\n  ');27; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');35; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((10,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((13,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((14,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((18,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((21,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((22,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((25,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((26,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((29,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');33; } ; buf.push('\n\n  ');35; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');43; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -3815,7 +3858,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":255,"../../locale/current/common":258,"ejs":274}],16:[function(require,module,exports){
+},{"../../locale/current/applab":254,"../../locale/current/common":257,"ejs":273}],16:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -3908,7 +3951,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],14:[function(require,module,exports){
+},{"ejs":273}],14:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3928,7 +3971,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],13:[function(require,module,exports){
+},{"ejs":273}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3948,7 +3991,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],12:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],12:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -4021,7 +4064,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":255,"../../locale/current/common":258,"../codegen":55,"../utils":253}],255:[function(require,module,exports){
+},{"../../locale/current/applab":254,"../../locale/current/common":257,"../codegen":55,"../utils":252}],254:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],10:[function(require,module,exports){
 'use strict';
@@ -4964,9 +5007,9 @@ module.exports.blocks = [
   {'func': 'hide', 'category': 'Turtle' },
   {'func': 'speed', 'category': 'Turtle', 'params': ["50"] },
 
-  {'func': 'setTimeout', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'setTimeout', 'category': 'Control', 'type': 'either', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'category': 'Control', 'params': ["0"] },
-  {'func': 'setInterval', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'setInterval', 'category': 'Control', 'type': 'either', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearInterval', 'category': 'Control', 'params': ["0"] },
 
   {'func': 'console.log', 'category': 'Variables', 'params': ['"Message"'], 'dontAlias': true },

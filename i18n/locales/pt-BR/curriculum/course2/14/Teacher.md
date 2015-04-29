@@ -1,69 +1,70 @@
 * * *
 
-title: Binary Bracelets view: page_curriculum theme: none
+title: Pulseiras binárias view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Binary Bracelets', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
+<%= partial('curriculum_header', :title=> 'Pulseiras binárias', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>15) %>
 
 [content]
 
-## Lesson Overview
+## Visão geral da aula
 
-Binary is extremely important to the computer world. The majority of computers today store all sorts of information in binary form. This lesson helps to demonstrate how it is possible to take something that we know and translate it into a series of ons and offs.
+A representação binária é extremamente importante para o mundo da computação. A maioria dos computadores hoje armazena todos os tipos de informação na forma binária. Esta aula ajuda a demonstrar como é possível pegar algo conhecido e traduzi-lo em uma série que alterna entre ligado e desligado.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 15 minutes
+### **Primeiros passos** - 15 minutos
 
-1) [Review](#Review)   
-2) [Vocabulary](#Vocab)  
-3) [Off and On](#GetStarted)
+1) [Revisão](#Review)   
+2) [Vocabulário](#Vocab)  
+3) [Ligado e desligado](#GetStarted)
 
-### **Activity: Binary Bracelets** - 15 minutes
+### **Atividade: Pulseiras binárias** - 15 minutos
 
-4) [Binary Bracelets](#Activity1)
+4) [Pulseiras binárias](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Resumo** - 5 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
 
 
-### **Assessment** - 10 minutes
+### **Avaliação** - 10 minutos
 
-6) [Binary Assessments](#Assessment)
+6) [Avaliações binárias](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Encode letters into binary
-  * Decode binary back to letters
-  * Relate the idea of storing initials on a bracelet to the idea of storing information in a computer
+  * Codificar letras em binário
+  * Decodificar códigos binários de volta para letras
+  * Relacionar a ideia de armazenar iniciais em uma pulseira à ideia de armazenar informações em um computador
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * [Binary Bracelet Worksheet](/curriculum/course2/14/Activity14-BinaryBracelets.pdf)
-  * [Binary Assessment](/curriculum/course2/14/Assessment14-BinaryBracelets.pdf)
-  * Pens and Pencils
-  * Scissors
+  * [Folha de atividade da pulseira binária](/curriculum/course2/14/Activity14-BinaryBracelets.pdf)
+  * [Avaliação binária](/curriculum/course2/14/Assessment14-BinaryBracelets.pdf)
+  * Canetas e lápis
+  * Tesoura
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/8HANsec7TiQ?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * This Teacher Lesson Guide
   * [Binary Bracelet Worksheet](/curriculum/course2/14/Activity14-BinaryBracelets.pdf)
   * [Binary Assessment](/curriculum/course2/14/Assessment14-BinaryBracelets.pdf)
@@ -74,33 +75,33 @@ Binary is extremely important to the computer world. The majority of computers t
 
 [together]
 
-## Getting Started (15 min)
+## Primeiros passos (15 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. We suggest you alternate between asking questions of the whole class and having students talk about their answers in small groups.
+Este é um excelente momento para revisar a última aula que você deu à turma. Sugerimos que você faça perguntas sobre a aula anterior e depois divida os alunos em pequenos grupos para discutir as respostas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one new and important word:  
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -110,62 +111,62 @@ This lesson has one new and important word:
 [/centerIt]
 
 **Binary** - Say it with me: Bi-nare-ee   
-A way of representing information using only two options.
+A way of representing information using only two options
 
-### <a name="GetStarted"></a> 3) Off and On
+### <a name="GetStarted"></a> 3) Ligado e desligado
 
-  * If you've written a short message on the board in binary, call the students' attention to it and ask if anyone knows what it is or what it means. 
-      * Put the message aside and move on to prepping for the activity.
-  * You can start by asking the class if they have ever seen inside a computer. 
-      * What's in there?
-      * This is a good place to actually show them the inside of a computer (or pictures of the inside of a computer).
-  * Wires carry information through the machine in the form of electricity. 
-      * The two options that a computer uses with respect to this electrical information are "off" and "on." 
-          * When computers represent information using only two options, it's called "Binary."
-      * That theme of two options doesn't stop when the information gets to its destination.
-  * Computers also *store* information using binary. 
-      * Binary isn't always off and on. 
-          * Hard Disk Drives store information using magnetic positive and magnetic negative.
-          * DVDs store information as either reflective or non-reflective.
-      * How do you suppose we can convert the things we store in a computer into binary? 
-          * Let's start with letters.
-          * Use the [Binary Decoder Key](/curriculum/course2/14/Activity14-BinaryBracelets.pdf) to show how a computer might represent capital letters. 
-              * **This is a good time to mention that each spot where you have a binary option is called a "binary digit" or "bit" for short.**
-              * **Ask if anyone knows what a grouping of eight bits is called** (it's a byte.)
-              * **Fun fact: A grouping of four bits is called a nibble.**
-          * Go over a few examples of converting letters into binary, then back.
-          * Afterward, write an encoded letter and give the class a few seconds to figure out what it is. 
-          * When the class can figure out your encoded letters on their own, you can move on to the activity.
+  * Se você escreveu uma pequena mensagem na lousa em binário, chame a atenção dos alunos para ela, e pergunte se alguém sabe o que ela é, ou o que significa. 
+      * Deixe a mensagem de lado e continue preparando a atividade.
+  * Você pode começar perguntado à turma se eles já viram um computador por dentro alguma vez. 
+      * O que tem lá?
+      * Esse é um bom momento para mostrar de fato como é um computador por dentro (ou mostrar imagens do interior de um computador).
+  * Os cabos levam informações pela máquina na forma de eletricidade. 
+      * As duas opções que um computador tem a respeito dessa informação elétrica são "desligado" e "ligado". 
+          * Quanto computadores representam informações usando apenas duas opções, isso é chamado de "binário".
+      * Essas duas opções não param quando a informação chega ao seu destino.
+  * Os computadores também *armazenam* as informações usando a forma binária. 
+      * Os binários não são sempre representados por desligado e ligado. 
+          * Os discos rígidos armazenam informações usando os conceitos magnéticos de positivo e negativo.
+          * Os DVDs armazenam informações como reflexivo ou não reflexivo.
+      * Como você acha que podemos converter as coisas que armazenamos em um computador na forma binária? 
+          * Vamos começar com as letras.
+          * Use o [decodificador binário](/curriculum/course2/14/Activity14-BinaryBracelets.pdf) para mostrar como um computador representa as letras maiúsculas. 
+              * **Esse é um bom momento para mencionar que todo lugar em que você tem uma opção binária é chamado de "dígito binário", ou "bit", abreviado.**
+              * **Pergunte se alguém sabe como é chamado um grupo de oito bits** (é chamado de byte).
+              * **Fato engraçado: um grupo de quatro bits é chamado de nibble.**
+          * Passe alguns exemplos de conversão de letras em binário, e depois converta-as de volta em letras.
+          * Depois, escreva uma letra codificada e dê alguns segundos para que a turma descubra que letra é. 
+          * Quando a turma conseguir descobrir quais são as letras codificadas sem ajuda, você pode continuar com a atividade.
 
 [/together]
 
 [together]
 
-## Activity: (20 min)
+## Atividade: (20 min)
 
-### <a name="Activity1"></a> 4) [Binary Bracelet Worksheet](/curriculum/course2/14/Activity14-BinaryBracelets.pdf)
+### <a name="Activity1"></a> 4) [Folha de atividade da pulseira binária](/curriculum/course2/14/Activity14-BinaryBracelets.pdf)
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-You know your classroom best. As the teacher, decide if students should do this individually or if students should work in pairs or small groups.
+Você conhece bem sua turma. Como professor, decida se os alunos devem fazer a atividade individualmente ou se devem trabalhar em duplas ou em pequenos grupos.
 
-You **do not** need to cover the whole of binary, including counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.
+Você **não** precisa cobrir todo o binário, como a contagem e a conversão de números decimais para outros formatos e reconversão para decimais. Esta aula pretende ser uma introdução divertida a como os computadores armazenam as informações, e não uma aula teórica frustrante.
 
 [/tip]
 
-> **Directions:**
+> **Instruções:**
 > 
->   1. Find the first letter of your first name in the Binary Decoder Key.
+>   1. Encontre a primeira letra do seu nome no decodificador binário.
 > 
->   2. Fill in the squares of the provided bracelet to match the pattern of the squares next to the letter that you selected.
+>   2. Preencha os quadrados da pulseira para corresponder ao padrão de quadrados próximos à letra que você escolheu.
 > 
->   3. Cut the bracelet out.
+>   3. Recorte a pulseira.
 > 
->   4. Tape the bracelet around your wrist to wear it!
+>   4. Coloque a pulseira no seu pulso para usá-la!
 > 
->   5. Share your bracelet with your classmates to see if they can figure out your letter.
+>   5. Compartilhe sua pulseira com a classe para ver se eles conseguem adivinhar qual é a sua letra.
 
 ![](key.png)
 
@@ -173,13 +174,13 @@ You **do not** need to cover the whole of binary, including counting and convert
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-If your class has extra budget for materials, try doing this exercise using thread (or pipe cleaners) and beads to create the binary bracelets instead of pen and paper. You can provide any combination of two colors in beads to the students, but black and white tend to be easiest, given the way that the key is done.
+Se a sua turma tiver orçamento extra para materiais, tente fazer essa atividade usando fitas e miçangas para confeccionar as pulseiras binárias, ao invés de papel e caneta. Você pode fornecer qualquer combinação de duas cores de miçangas aos alunos, mas usar preto e branco deve ser mais fácil, dada a forma como a atividade é feita.
 
 [/tip]
 
-After the activity, revisit the message that was on the board and see if your class can decypher it using what they've learned.
+Após a atividade, volte à mensagem que estava na lousa e veja se a turma consegue decifrá-la usando o que foi aprendido.
 
   
   
@@ -187,86 +188,86 @@ After the activity, revisit the message that was on the board and see if your cl
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * What else do you think is represented as binary inside of a computer?
-  * How else might you represent binary instead of boxes that are filled or not filled?
-  * What was your favorite part about that activity?
-
-[/together]
-
-[together]
-
-## Assessment (15 min)
-
-### <a name="Assessment"></a>7) [Binary Assessment](/curriculum/course2/14/Assessment14-BinaryBracelets.pdf)
-
-  * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * O que mais você acha que é representado na forma binária dentro de um computador?
+  * Como você poderia representar a forma binária, além de usar quadrados preenchidos ou não preenchidos?
+  * Qual foi a parte da atividade que você mais gostou?
 
 [/together]
 
 [together]
 
-## Extended Learning
+## Avaliação (15 min)
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+### <a name="Assessment"></a>7) [Avaliação binária](/curriculum/course2/14/Assessment14-BinaryBracelets.pdf)
 
-### Binary Images
+  * Distribua a folha de avaliação e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
-  * There are several great resources on the web for taking this activity to the next level. 
-  * If your students are interested in how images (or even music) can be represented as binary, you can find more details in Thinkersmith's [Binary Baubles](http://code.org/files/CSEDbinary.pdf).
+[/together]
+
+[together]
+
+## Aprendizagem estendida
+
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
+
+### Imagens binárias
+
+  * Existem várias fontes excelentes na internet para tonar essa atividade ainda mais interessante. 
+  * Se seus alunos estiverem interessados em como as imagens (ou até mesmo as músicas) podem ser representadas na forma binária, você pode encontrar mais detalhes em [Binary Baubles](http://code.org/files/CSEDbinary.pdf), da Thinkersmith.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 2.d - Contribute to project teams to solve problems. 
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 2.d - Contribuir com equipes de projeto para resolver problemas. 
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CT.L1:3-03. Understand how to arrange information into useful order without using a computer.
-  * CT.L1:6-03. Demonstrate how a string of bits can be used to represent alphanumeric information.
-  * CT.L1:3-05. Demonstrate how 0s and 1s can be used to represent information.
-  * CT.L2-07. Represent data in a variety of ways: text, sounds, pictures, numbers.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
+  * CT.L1:3-03. Entender como é possível organizar informações em uma ordem útil sem usar um computador.
+  * CT.L1:6-03. Demonstrar como uma sequência de bits pode ser usada para representar informações alfanuméricas.
+  * CT.L1:3-05. Demonstrar como 0s e 1s podem ser usados para representar informações.
+  * CT.L2-07. Representar dados de várias formas: textos, sons, imagens, números.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
 
-### NGSS Science and Engineering Practices
+### Práticas de engenharia e ciência NGSS
 
-  * K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
-  * K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
+  * K-2-PS3-2. Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico.
+  * K-2-ETS1-1 - Fazer perguntas, observações e reunir informações sobre uma situação que as pessoas querem mudar para definir um problema simples que pode ser resolvido com o desenvolvimento de uma ferramenta ou objeto novo, ou melhorado. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * SL.3.3 - Perguntar e responder a questões sobre informações dadas por um orador, com elaboração e detalhes adequados.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
 
 [/standards]
 

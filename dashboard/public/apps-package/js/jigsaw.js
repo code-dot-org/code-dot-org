@@ -58,7 +58,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":207}],92:[function(require,module,exports){
+},{"../skins":206}],92:[function(require,module,exports){
 /**
  * Blockly App: Jigsaw
  *
@@ -70,7 +70,7 @@ exports.load = function(assetUrl, id) {
 
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 
 /**
@@ -149,9 +149,11 @@ var loadLevel = function() {
 var drawMap = function() {
   var i, x, y, k, tile;
 
-  // Hide the left column.
+  // Hide the left column and the resize bar.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.display = 'none';
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  visualizationResizeBar.style.display = 'none';
 
   // account for toolbox if there
   var toolboxWidth = -Blockly.mainBlockSpace.getMetrics().viewLeft;
@@ -189,7 +191,7 @@ Jigsaw.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      controls: require('./controls.html')({assetUrl: studioApp.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
@@ -312,7 +314,7 @@ Jigsaw.onPuzzleComplete = function() {
   });
 };
 
-},{"../StudioApp":4,"../dom":58,"../skins":207,"../templates/page.html":232,"./controls.html":91}],91:[function(require,module,exports){
+},{"../StudioApp":4,"../dom":58,"../skins":206,"../templates/page.html.ejs":231,"./controls.html.ejs":91}],91:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -332,7 +334,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/jigsaw":261,"ejs":274}],90:[function(require,module,exports){
+},{"../../locale/current/jigsaw":260,"ejs":273}],90:[function(require,module,exports){
 /**
  * Blockly App: Jigsaw
  *
@@ -593,7 +595,7 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
   }
 }
 
-},{"../../locale/current/jigsaw":261,"../dom":58,"./levels":93}],261:[function(require,module,exports){
+},{"../../locale/current/jigsaw":260,"../dom":58,"./levels":93}],260:[function(require,module,exports){
 /*jigsaw*/ module.exports = window.blockly.appLocale;
 },{}],93:[function(require,module,exports){
 /*jshint multistr: true */

@@ -4,7 +4,8 @@ class ScriptLevelsController < ApplicationController
   include LevelsHelper
 
   def solution
-    authorize! :show, ScriptLevel
+    authorize! :read, ScriptLevel
+
     if current_user.teacher? || current_user.admin?
       @level = Level.find(params[:level_id])
       @game = @level.game
@@ -23,7 +24,8 @@ class ScriptLevelsController < ApplicationController
   end
 
   def show
-    authorize! :show, ScriptLevel
+    authorize! :read, ScriptLevel
+
     @script = Script.get_from_cache(params[:script_id])
 
     if params[:reset]
@@ -91,11 +93,11 @@ class ScriptLevelsController < ApplicationController
       @script_level = @script.get_script_level_by_id(params[:id])
     end
     raise ActiveRecord::RecordNotFound unless @script_level
+    authorize! :read, @script_level
   end
 
   def load_level_source
-    # Set start blocks to the user's previous attempt at this puzzle. Must be called after
-    # set_videos_and_blocks_and_callouts because we override @start_blocks set there.
+    # Set start blocks to the user's previous attempt at this puzzle.
     if current_user && @level.game.name != 'Jigsaw'
       @last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
     end
@@ -107,14 +109,12 @@ class ScriptLevelsController < ApplicationController
     @game = @level.game
     @stage = @script_level.stage
 
-    set_videos_and_callouts
-
     load_level_source
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     view_options(
       full_width: true,
-      no_footer: (@game == Game.applab)
+      no_footer: !@game.has_footer?
     )
 
     @@fallback_responses ||= {}
