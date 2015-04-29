@@ -296,7 +296,7 @@ var skin;
 /**
  * Milliseconds between each animation frame.
  */
-var stepSpeed;
+var stepSpeed = 100;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -6233,9 +6233,53 @@ exports.loopHighlight = API_FUNCTION(function (id) {
 });
 
 
-for (var functionName in Bee.api) {
-  exports[functionName] = API_FUNCTION(Bee.api[functionName]);
-}
+
+/**
+ * Bee related API functions. If better modularized, we could potentially
+ * separate these out, but as things stand right now they will be loaded
+ * whether or not we're a Bee level
+ */
+exports.getNectar = API_FUNCTION(function(id) {
+  Maze.bee.getNectar(id);
+});
+
+exports.makeHoney = API_FUNCTION(function(id) {
+  Maze.bee.makeHoney(id);
+});
+
+exports.atFlower = API_FUNCTION(function(id) {
+  var col = Maze.pegmanX;
+  var row = Maze.pegmanY;
+  Maze.executionInfo.queueAction("at_flower", id);
+  return Maze.bee.isFlower(row, col, true);
+});
+
+exports.atHoneycomb = API_FUNCTION(function(id) {
+  var col = Maze.pegmanX;
+  var row = Maze.pegmanY;
+  Maze.executionInfo.queueAction("at_honeycomb", id);
+  return Maze.bee.isHive(row, col, true);
+});
+
+exports.nectarRemaining = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("nectar_remaining", id);
+  return Maze.bee.nectarRemaining(true);
+});
+
+exports.honeyAvailable = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("honey_available", id);
+  return Maze.bee.honeyAvailable();
+});
+
+exports.nectarCollected = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("nectar_collected", id);
+  return Maze.bee.nectars_.length;
+});
+
+exports.honeyCreated = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("honey_created", id);
+  return Maze.bee.honey_;
+});
 
 },{"../utils":252,"./bee":99,"./tiles":118}],118:[function(require,module,exports){
 'use strict';
@@ -6713,52 +6757,6 @@ Bee.prototype.animateMakeHoney = function () {
   this.maze_.gridItemDrawer.updateItemImage(row, col, true);
 
   this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
-};
-
-/**
- * Bee related API functions
- */
-Bee.api = {};
-Bee.api.getNectar = function(id) {
-  Maze.bee.getNectar(id);
-};
-
-Bee.api.makeHoney = function(id) {
-  Maze.bee.makeHoney(id);
-};
-
-Bee.api.atFlower = function(id) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
-  Maze.executionInfo.queueAction("at_flower", id);
-  return Maze.bee.isFlower(row, col, true);
-};
-
-Bee.api.atHoneycomb = function(id) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
-  Maze.executionInfo.queueAction("at_honeycomb", id);
-  return Maze.bee.isHive(row, col, true);
-};
-
-Bee.api.nectarRemaining = function (id) {
-  Maze.executionInfo.queueAction("nectar_remaining", id);
-  return Maze.bee.nectarRemaining(true);
-};
-
-Bee.api.honeyAvailable = function (id) {
-  Maze.executionInfo.queueAction("honey_available", id);
-  return Maze.bee.honeyAvailable();
-};
-
-Bee.api.nectarCollected = function (id) {
-  Maze.executionInfo.queueAction("nectar_collected", id);
-  return Maze.bee.nectars_.length;
-};
-
-Bee.api.honeyCreated = function (id) {
-  Maze.executionInfo.queueAction("honey_created", id);
-  return Maze.bee.honey_;
 };
 
 },{"../../locale/current/maze":261,"../constants.js":57,"../utils":252}],261:[function(require,module,exports){
