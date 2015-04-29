@@ -67,6 +67,12 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   this.entities_ = [];
 
   /**
+   * Reference to the local node viz entity, the anchor for the visualization.
+   * @type {NetSimVizNode}
+   */
+  this.localNode = null;
+
+  /**
    * Width (in svg-units) of visualization
    * @type {number}
    */
@@ -192,6 +198,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     this.localNode.isLocalNode = true;
   } else {
     this.localNode.kill();
+    this.localNode = null;
   }
   this.pullElementsToForeground();
 };
