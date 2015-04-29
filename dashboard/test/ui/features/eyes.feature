@@ -43,6 +43,7 @@ Scenario:
   And I see no difference for "level load"
   And I close my eyes
 
+@dashboard_db_access
 Scenario:
   Given I am on "http://learn.code.org/"
   And I am a student
@@ -61,6 +62,7 @@ Scenario:
   And I see no difference for "finish dialog"
   And I close my eyes
 
+@dashboard_db_access
 Scenario:
   Given I am on "http://learn.code.org/"
   And I am a student
@@ -78,6 +80,7 @@ Scenario:
   And I see no difference for "evaluated expression"
   And I close my eyes
 
+@dashboard_db_access
 Scenario:
   Given I am on "http://learn.code.org/"
   And I am a student
@@ -95,6 +98,7 @@ Scenario:
   And I see no difference for "evaluated expression"
   And I close my eyes
 
+@dashboard_db_access
 Scenario Outline: Simple blockly level page view
   Given I am on "http://learn.code.org/"
   And I am a student
