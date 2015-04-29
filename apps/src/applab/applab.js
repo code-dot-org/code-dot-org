@@ -203,7 +203,7 @@ function adjustAppSizeStyles(container) {
 
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -226,8 +226,18 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "left: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationResizeBar") {
+              // set the left for the visualizationResizeBar
+              childRules[k].style.cssText = "left: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
+              childRules[k].style.cssText = "right: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div#visualizationResizeBar") {
+              // set the right for the visualizationResizeBar (RTL mode)
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
@@ -323,6 +333,10 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         var color = new RGBColor(varValue);
         properType = color.ok;
       }
+    } else if (expectedType === 'uistring') {
+      properType = (typeof varValue === 'string') ||
+                   (typeof varValue === 'number') ||
+                   (typeof varValue === 'boolean');
     } else if (expectedType === 'function') {
       // Special handling for functions, it must be an interpreter function:
       properType = (typeof varValue === 'object') && (varValue.type === 'function');
@@ -877,6 +891,9 @@ Applab.init = function(config) {
 
   config.dropletConfig = dropletConfig;
   config.pinWorkspaceToBottom = true;
+
+  config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
+  config.nativeVizWidth = Applab.appWidth;
 
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
@@ -1837,7 +1854,7 @@ Applab.container = function (opts) {
 
 Applab.write = function (opts) {
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'write', 'html', opts.html, 'string');
+  apiValidateType(opts, 'write', 'html', opts.html, 'uistring');
   return Applab.container(opts);
 };
 
@@ -1846,7 +1863,7 @@ Applab.button = function (opts) {
 
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
-  apiValidateType(opts, 'button', 'text', opts.text, 'string');
+  apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
 
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
@@ -2092,7 +2109,7 @@ Applab.getDirection = function (opts) {
 Applab.dot = function (opts) {
   apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = getTurtleContext();
-  if (ctx) {
+  if (ctx && opts.radius > 0) {
     ctx.beginPath();
     if (Applab.turtle.penUpColor) {
       // If the pen is up and the color has been changed, use that color:
@@ -2371,7 +2388,7 @@ Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'uistring');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
@@ -2384,8 +2401,10 @@ Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textLabel', 'text', opts.text, 'string');
-  apiValidateType(opts, 'textLabel', 'forId', opts.forId, 'string', OPTIONAL);
+  apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
+  if (typeof opts.forId !== 'undefined') {
+    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, false);
+  }
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
@@ -2439,7 +2458,7 @@ Applab.dropdown = function (opts) {
   if (opts.optionsArray) {
     for (var i = 0; i < opts.optionsArray.length; i++) {
       var option = document.createElement("option");
-      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'string');
+      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'uistring');
       option.text = opts.optionsArray[i];
       newSelect.add(option);
     }
@@ -2494,7 +2513,7 @@ Applab.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setText', 'text', opts.text, 'string');
+  apiValidateType(opts, 'setText', 'text', opts.text, 'uistring');
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {
