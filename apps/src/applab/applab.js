@@ -5,6 +5,7 @@
  *
  */
 /* global $ */
+/* global dashboard */
 
 'use strict';
 require('./acemode/mode-javascript_codeorg');
