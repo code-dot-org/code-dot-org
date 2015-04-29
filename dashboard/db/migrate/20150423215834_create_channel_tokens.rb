@@ -16,8 +16,9 @@ class CreateChannelTokens < ActiveRecord::Migration
     PEGASUS_DB[:storage_apps].where('state != "deleted"').each do |row|
       begin
         data = JSON.parse row[:value]
-      rescue
+      rescue JSON::ParserError
         puts "Couldn't parse channel with ID '#{row[:id]}'"
+        next
       end
       if data['projectTemplateLevelName'] == 'Big Game Template'
         channel = storage_encrypt_channel_id(row[:storage_id], row[:id])
