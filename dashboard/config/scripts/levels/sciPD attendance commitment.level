@@ -1,0 +1,21 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-22T22:42:29.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Please confirm that you have read the Attendance Policy and will work to follow it."
+      }
+    ],
+    "answers": [
+      {
+        "text": "I have read and agree to the Attendance Policy",
+        "correct": true
+      }
+    ],
+    "markdown": "### Attendance Policy\n\nSelected teachers must be teaching the course during the '15-'16 school year and be able to attend all days of professional development (12 months). The teachers must commit to attending all days of professional development (PD) when joining a Code.org cohort.\n\n1. Teachers will only receive stipends for the hours that they attend the professional development.\n2. Arriving/leaving over 30 minutes late/early will count as a full day absence if not approved by\nCode.org prior to the workshop.\n3. Teacher must complete Phase 1 PD prior to the start of Phase 2 PD to continue to be part of\nthe program and will not receive his/her Phase 2 PD stipend until Phase 1 PD is completed.\n4. Teacher must attend the full 3 days of Phase 2 PD to continue to be part of the program.\n5. Teacher must attend 2 days of Saturday in-person workshops (these\nhappen during the academic year).\n\n__If you have a schedule conflict e-mail [pd@code.org](mailto:pd@code.org) and notify your\ndistrict contact as soon as possible.__\n\nExceptions to this policy include districts where Saturday workshop participation is voluntary per union regulations.\n\n\n"
+  },
+  "md5": "36b61bc65c8886b279529c2a59608c99"
+}]]></config>
+</Multi>

@@ -1,0 +1,14 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-23T00:42:12.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "markdown": "**Thank You!** \n\nThank you for being part of the movement to bring Computer Science into mainstream K-12 education. Together, with the support of your professional development facilitators, your expanding local community of \"computer science in science\" teachers, as well as your district and school, you will be ready to tackle integrating computer science into your science classes this school year!\n"
+  },
+  "md5": "0c1b47f2ff6c6dc011ad7dc735a6263d"
+}]]></config>
+</External>

@@ -16,7 +16,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -610,8 +610,9 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // Overwrite the nextStep value. (If we hit a breakpoint during a step
         // out or step over, this will cancel that step operation early)
         Applab.nextStep = StepType.RUN;
+        Applab.updatePauseUIState();
       } else {
-        Applab.onPauseButton();
+        Applab.onPauseContinueButton();
       }
       // Store some properties about where we stopped:
       Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -710,6 +711,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             // Our step operation is complete, reset nextStep to StepType.RUN to
             // return to a normal 'break' state:
             Applab.nextStep = StepType.RUN;
+            Applab.updatePauseUIState();
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -761,6 +763,10 @@ Applab.init = function(config) {
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+  user = {
+    applabUserId: config.applabUserId,
+    isAdmin: (config.isAdmin === true)
+  };
 
   loadLevel();
 
@@ -780,18 +786,18 @@ Applab.init = function(config) {
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var firstControlsRow = require('./controls.html')({
+  var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
     finishButton: true
   });
-  var extraControlsRow = require('./extraControlRows.html')({
+  var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designProperties = require('./designProperties.html')({tagName:null});
-  var designModeBox = require('./designModeBox.html')({
+  var designProperties = require('./designProperties.html.ejs')({tagName:null});
+  var designModeBox = require('./designModeBox.html.ejs')({
     designProperties: designProperties
   });
 
@@ -799,7 +805,7 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
+      visualization: require('./visualization.html.ejs')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -807,7 +813,7 @@ Applab.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       pinWorkspaceToBottom: true,
-      hasDesignMode: true,
+      hasDesignMode: user.isAdmin,
       designModeBox: designModeBox
     }
   });
@@ -920,11 +926,13 @@ Applab.init = function(config) {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      dom.addClickTouchEvent(pauseButton, Applab.onPauseButton);
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      dom.addClickTouchEvent(pauseButton, Applab.onPauseContinueButton);
+      dom.addClickTouchEvent(continueButton, Applab.onPauseContinueButton);
       dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
@@ -977,8 +985,6 @@ Applab.init = function(config) {
     }
 
   }
-
-  user = {applabUserId: config.applabUserId};
 };
 
 /**
@@ -1124,7 +1130,7 @@ Applab.editElementProperties = function(el) {
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
+  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: tagName,
     props: {
       id: el.id,
@@ -1149,7 +1155,7 @@ Applab.editElementProperties = function(el) {
 
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
+  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: null
   });
 };
@@ -1214,12 +1220,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   }
 
   var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
   var stepInButton = document.getElementById('stepInButton');
   var stepOverButton = document.getElementById('stepOverButton');
   var stepOutButton = document.getElementById('stepOutButton');
-  if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-    pauseButton.textContent = applabMsg.pause();
+  if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+    pauseButton.style.display = "inline-block";
     pauseButton.disabled = true;
+    continueButton.style.display = "none";
     stepInButton.disabled = true;
     stepOverButton.disabled = true;
     stepOutButton.disabled = true;
@@ -1286,12 +1294,14 @@ studioApp.reset = function(first) {
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.textContent = applabMsg.pause();
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = true;
+      continueButton.style.display = "none";
       stepInButton.disabled = false;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1345,6 +1355,10 @@ studioApp.runButtonClick = function() {
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
+    var designCell = document.getElementById('design-cell');
+    if (designCell) {
+      designCell.className = 'design-cell-enabled';
+    }
   }
 };
 
@@ -1581,11 +1595,14 @@ Applab.execute = function() {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = false;
+      continueButton.style.display = "none";
       stepInButton.disabled = true;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1605,27 +1622,40 @@ Applab.execute = function() {
   queueOnTick();
 };
 
-Applab.onPauseButton = function() {
+Applab.onPauseContinueButton = function() {
   if (Applab.running) {
-    var pauseButton = document.getElementById('pauseButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
     // We have code and are either running or paused
-    if (Applab.paused) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
       Applab.paused = false;
-      Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.pause();
     } else {
       Applab.paused = true;
       Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.continue();
     }
+    Applab.updatePauseUIState();
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
     stepInButton.disabled = !Applab.paused;
     stepOverButton.disabled = !Applab.paused;
     stepOutButton.disabled = !Applab.paused;
-    document.getElementById('spinner').style.visibility =
-        Applab.paused ? 'hidden' : 'visible';
+  }
+};
+
+Applab.updatePauseUIState = function() {
+  var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
+  var spinner = document.getElementById('spinner');
+
+  if (pauseButton && continueButton && spinner) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
+      pauseButton.style.display = "none";
+      continueButton.style.display = "inline-block";
+      spinner.style.visibility = 'hidden';
+    } else {
+      pauseButton.style.display = "inline-block";
+      continueButton.style.display = "none";
+      spinner.style.visibility = 'visible';
+    }
   }
 };
 
@@ -1633,25 +1663,25 @@ Applab.onStepOverButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OVER;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
 Applab.onStepInButton = function() {
   if (!Applab.running) {
     studioApp.runButtonClick();
-    Applab.onPauseButton();
+    Applab.onPauseContinueButton();
   }
   Applab.paused = true;
   Applab.nextStep = StepType.IN;
-  document.getElementById('spinner').style.visibility = 'visible';
+  Applab.updatePauseUIState();
 };
 
 Applab.onStepOutButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OUT;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
@@ -1660,7 +1690,7 @@ Applab.encodedFeedbackImage = '';
 
 Applab.onViewData = function() {
   window.open(
-    '//' + getPegasusHost() + '/private/edit-csp-app/' + AppStorage.getChannelId(),
+    '//' + getPegasusHost() + '/edit-csp-app/' + AppStorage.getChannelId(),
     '_blank');
 };
 

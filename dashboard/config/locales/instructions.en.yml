@@ -1560,7 +1560,7 @@ en:
         the \"player_points\" variable. Have the Dog score 10 points to move on to
         the next puzzle. "
       Course 4 Play Lab Vars 1 (copy 1)_instruction: "This race seems a bit unfair,
-        try to get to the cat before the penguin does!"
+        try to get to the cat before Waddles does!"
       Course 4 Play Lab Vars 1_instruction: "You don't have to write any code, just
         hit \"run\" to play the game! In this game, you're the Dog who is trying
         to collect more flags than the Cat. Use the down arrow to control the Dog.

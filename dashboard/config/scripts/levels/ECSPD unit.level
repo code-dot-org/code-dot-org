@@ -35,11 +35,7 @@
       }
     ],
     "title": "ECS Curriculum",
-    "content1": "Based on what you just read about the ECS course, answer the following question",
-    "type": "Multi",
-    "concept_ids": [
-      ""
-    ]
+    "content1": "Based on what you just read about the ECS course, answer the following question"
   }
 }]]></config>
 </Multi>
