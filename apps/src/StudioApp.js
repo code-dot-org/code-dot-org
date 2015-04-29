@@ -809,8 +809,8 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
              parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
     newVizWidth = event.pageX - offset;
   }
-  var newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
-                             Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
+  newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
+                         Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
   var newVizWidthString = newVizWidth + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
