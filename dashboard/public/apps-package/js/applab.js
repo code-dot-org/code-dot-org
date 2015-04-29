@@ -302,6 +302,7 @@ levels.full_sandbox =  {
  *
  */
 /* global $ */
+/* global dashboard */
 
 'use strict';
 require('./acemode/mode-javascript_codeorg');
@@ -619,6 +620,25 @@ function outputError(warning, level, lineNum) {
 
 var OPTIONAL = true;
 
+/**
+ * @param value
+ * @returns {boolean} true if value is a string, number, boolean, undefined or null.
+ *     returns false for other values, including instances of Number or String.
+ */
+function isPrimitiveType(value) {
+  switch (typeof value) {
+    case 'string':
+    case 'number':
+    case 'boolean':
+    case 'undefined':
+      return true;
+    case 'object':
+      return (value === null);
+    default:
+      return false;
+  }
+}
+
 function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
@@ -637,6 +657,15 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     } else if (expectedType === 'function') {
       // Special handling for functions, it must be an interpreter function:
       properType = (typeof varValue === 'object') && (varValue.type === 'function');
+    } else if (expectedType === 'number') {
+      properType = (typeof varValue === 'number' ||
+                    (typeof varValue === 'string' && !isNaN(varValue)));
+    } else if (expectedType === 'primitive') {
+      properType = isPrimitiveType(varValue);
+      if (!properType) {
+        // Ensure a descriptive error message is displayed.
+        expectedType = 'string, number, boolean, undefined or null';
+      }
     } else {
       properType = (typeof varValue === expectedType);
     }
@@ -1253,7 +1282,11 @@ Applab.init = function(config) {
     }
     var viewDataButton = document.getElementById('viewDataButton');
     if (viewDataButton) {
-      dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
+      // Simulate a run button click, to load the channel id.
+      var viewDataClick = studioApp.runButtonClickWrapper.bind(
+          studioApp, Applab.onViewData);
+      var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
+      dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
     var designModeButton = document.getElementById('designModeButton');
     if (designModeButton) {
@@ -1641,6 +1674,29 @@ studioApp.reset = function(first) {
   Applab.interpreter = null;
 };
 
+// TODO(dave): remove once channel id is passed in appOptions.
+/**
+ * If channel id has not yet been loaded, delays calling of the callback
+ * until the saveProject response comes back. Otherwise, calls the callback
+ * directly.
+ * @param callback {Function}
+ */
+studioApp.runButtonClickWrapper = function (callback) {
+  // Behave like other apps when channel id is present.
+  if (dashboard.currentApp && dashboard.currentApp.id) {
+    if (window.$) {
+      $(window).trigger('run_button_pressed');
+    }
+    callback();
+  } else {
+    if (window.$) {
+      $(window).trigger('run_button_pressed', callback);
+    } else {
+      callback();
+    }
+  }
+};
+
 /**
  * Click the run button.  Start the program.
  */
@@ -1659,12 +1715,6 @@ studioApp.runButtonClick = function() {
   studioApp.reset(false);
   studioApp.attempts++;
   Applab.execute();
-
-  // Show view data button now that channel id is available.
-  var viewDataButton = document.getElementById('viewDataButton');
-  if (viewDataButton) {
-    viewDataButton.style.display = "inline-block";
-  }
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
@@ -3174,6 +3224,11 @@ Applab.clearInterval = function (opts) {
 };
 
 Applab.createRecord = function (opts) {
+  apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
+  apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
+  apiValidateType(opts, 'createRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleCreateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
@@ -3200,6 +3255,9 @@ Applab.handleError = function(errorCallback, message) {
 };
 
 Applab.getKeyValue = function(opts) {
+  apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
+  apiValidateType(opts, 'getKeyValue', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleReadValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
@@ -3215,6 +3273,10 @@ Applab.handleReadValue = function(successCallback, value) {
 };
 
 Applab.setKeyValue = function(opts) {
+  apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
+  apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
+  apiValidateType(opts, 'setKeyValue', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleSetKeyValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
@@ -3230,6 +3292,10 @@ Applab.handleSetKeyValue = function(successCallback) {
 };
 
 Applab.readRecords = function (opts) {
+  apiValidateType(opts, 'readRecords', 'table', opts.table, 'string');
+  apiValidateType(opts, 'readRecords', 'searchParams', opts.searchParams, 'object');
+  apiValidateType(opts, 'readRecords', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleReadRecords.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
@@ -3245,6 +3311,11 @@ Applab.handleReadRecords = function(successCallback, records) {
 };
 
 Applab.updateRecord = function (opts) {
+  apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
+  apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
+  apiValidateType(opts, 'updateRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleUpdateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
@@ -3260,6 +3331,11 @@ Applab.handleUpdateRecord = function(successCallback, record) {
 };
 
 Applab.deleteRecord = function (opts) {
+  apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
+  apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
+  apiValidateType(opts, 'deleteRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleDeleteRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
@@ -3850,7 +3926,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((10,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((13,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((14,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((18,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((21,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((22,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((25,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((26,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button" style="display:none;">\n        ', escape((29,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');33; } ; buf.push('\n\n  ');35; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');43; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div>\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((10,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((13,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((14,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((18,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((21,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((22,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((25,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((26,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button">\n        ', escape((29,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');33; } ; buf.push('\n\n  ');35; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n  ');43; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
