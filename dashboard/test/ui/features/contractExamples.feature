@@ -1,11 +1,7 @@
-@no_ie
-@dashboard_db_access
 Feature: Editing examples in the contract editor
 
 Background: Testing example add and removal
-  Given I am on "http://learn.code.org/"
-  And I am a student
-  And I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
+  Given I am on "http://learn.code.org/s/ui_tests/stage/1/puzzle/1?noautoplay=true"
   And I rotate to landscape
   And I press "x-close"
   Then element "#runButton" is visible
