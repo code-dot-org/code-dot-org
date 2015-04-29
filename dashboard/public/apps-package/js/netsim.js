@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({197:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({196:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -15,7 +15,7 @@ window.netsimMain = function(options) {
   appMain(netSim, levels, options);
 };
 
-},{"../StudioApp":4,"../appMain":5,"./levels":196,"./netsim":198,"./skins":203}],203:[function(require,module,exports){
+},{"../StudioApp":4,"../appMain":5,"./levels":195,"./netsim":197,"./skins":202}],202:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -23,7 +23,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{"../skins":207}],198:[function(require,module,exports){
+},{"../skins":206}],197:[function(require,module,exports){
 /**
  * @fileoverview Internet Simulator app for Code.org.
  */
@@ -68,6 +68,13 @@ var DnsMode = netsimConstants.DnsMode;
 var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
+
+/**
+ * Initial time between connecting to the shard and starting
+ * the first cleaning cycle.
+ * @type {number}
+ */
+var INITIAL_CLEANING_DELAY_MS = 10000; // 10 seconds
 
 /**
  * The top-level Internet Simulator controller.
@@ -460,7 +467,8 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
 
   this.shard_ = new NetSimShard(shardID);
   if (this.shouldEnableCleanup()) {
-    this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+    this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
+        INITIAL_CLEANING_DELAY_MS);
   }
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
@@ -936,27 +944,32 @@ NetSim.prototype.render = function () {
 
   shareLink = this.lobby_.getShareLink();
 
-  // Render left column
   if (this.isConnectedToRemote()) {
-    this.mainContainer_.find('.rightcol-disconnected').hide();
-    this.mainContainer_.find('.rightcol-connected').show();
-    this.sendPanel_.setFromAddress(myAddress);
-  } else {
-    this.mainContainer_.find('.rightcol-disconnected').show();
-    this.mainContainer_.find('.rightcol-connected').hide();
-    this.lobby_.render();
-  }
+    // Swap in 'connected' div
+    this.mainContainer_.find('#netsim-disconnected').hide();
+    this.mainContainer_.find('#netsim-connected').show();
 
-  // Render right column
-  if (this.statusPanel_) {
-    this.statusPanel_.render({
-      isConnected: isConnected,
-      statusString: clientStatus,
-      myHostname: myHostname,
-      myAddress: myAddress,
-      remoteNodeName: remoteNodeName,
-      shareLink: shareLink
-    });
+    // Render right column
+    this.sendPanel_.setFromAddress(myAddress);
+
+    // Render left column
+    if (this.statusPanel_) {
+      this.statusPanel_.render({
+        isConnected: isConnected,
+        statusString: clientStatus,
+        myHostname: myHostname,
+        myAddress: myAddress,
+        remoteNodeName: remoteNodeName,
+        shareLink: shareLink
+      });
+    }
+  } else {
+    // Swap in 'disconnected' div
+    this.mainContainer_.find('#netsim-disconnected').show();
+    this.mainContainer_.find('#netsim-connected').hide();
+
+    // Render lobby
+    this.lobby_.render();
   }
 };
 
@@ -1108,7 +1121,7 @@ NetSim.prototype.onRouterLogChange_ = function () {
   }
 };
 
-},{"../../locale/current/netsim":263,"../ObservableEvent":1,"../RunLoop":3,"../utils":253,"./DashboardUser":126,"./NetSimBitLogPanel":129,"./NetSimLobby":146,"./NetSimLocalClientNode":147,"./NetSimLogPanel":151,"./NetSimLogger":152,"./NetSimRouterNode":170,"./NetSimSendPanel":176,"./NetSimShard":177,"./NetSimShardCleaner":178,"./NetSimStatusPanel":184,"./NetSimTabsComponent":187,"./NetSimVisualization":188,"./controls.html.ejs":194,"./netsimConstants":199,"./netsimUtils":201,"./page.html.ejs":202}],202:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../ObservableEvent":1,"../RunLoop":3,"../utils":252,"./DashboardUser":126,"./NetSimBitLogPanel":129,"./NetSimLobby":145,"./NetSimLocalClientNode":146,"./NetSimLogPanel":150,"./NetSimLogger":151,"./NetSimRouterNode":169,"./NetSimSendPanel":175,"./NetSimShard":176,"./NetSimShardCleaner":177,"./NetSimStatusPanel":183,"./NetSimTabsComponent":186,"./NetSimVisualization":187,"./controls.html.ejs":193,"./netsimConstants":198,"./netsimUtils":200,"./page.html.ejs":201}],201:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1122,7 +1135,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
   var msg = require('../../locale/current/common');
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((5,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((7,  msg.rotateText() )), '<br>', escape((7,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');11; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((25,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');29; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n\n    <div id="netsim-leftcol">\n      <div class="column-width-limiter">\n\n        <div id="netsim-status"></div>\n\n        <div id="netsim-visualization">\n          <svg version="1.1" width="298" height="298" xmlns="http://www.w3.org/2000/svg">\n\n            <filter id="backgroundBlur">\n              <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n              <feComponentTransfer>\n                <feFuncA slope="0.5" type="linear"></feFuncA>\n              </feComponentTransfer>\n            </filter>\n\n            <g id="centered-group" transform="translate(150,150)">\n              <g id="background-group" filter="url(#backgroundBlur)"></g>\n              <g id="foreground-group"></g>\n            </g>\n          </svg>\n        </div>\n\n        <div id="netsim-tabs"></div>\n\n      </div>\n    </div>\n\n    <div id="netsim-rightcol">\n\n      <div class="rightcol-disconnected">\n        <div class="lobby-panel"></div>\n      </div>\n\n      <div class="rightcol-connected">\n        <div id="netsim-logs">\n          <div id="netsim-received"></div>\n          <div id="netsim-sent"></div>\n        </div>\n        <div id="netsim-send"></div>\n      </div>\n\n    </div>\n\n  </div>\n  <div id="footers" dir="', escape((78,  data.localeDirection )), '">\n    ');79; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((5,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((7,  msg.rotateText() )), '<br>', escape((7,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');11; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((25,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');29; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n\n    <div id="netsim-disconnected">\n      <div class="lobby-panel"></div>\n    </div>\n\n\n    <div id="netsim-connected">\n      <div id="netsim-leftcol">\n        <div class="column-width-limiter">\n\n          <div id="netsim-status"></div>\n\n          <div id="netsim-visualization">\n            <svg version="1.1" width="298" height="298" xmlns="http://www.w3.org/2000/svg">\n\n              <filter id="backgroundBlur">\n                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n                <feComponentTransfer>\n                  <feFuncA slope="0.5" type="linear"></feFuncA>\n                </feComponentTransfer>\n              </filter>\n\n              <g id="centered-group" transform="translate(150,150)">\n                <g id="background-group" filter="url(#backgroundBlur)"></g>\n                <g id="foreground-group"></g>\n              </g>\n            </svg>\n          </div>\n\n          <div id="netsim-tabs"></div>\n\n        </div>\n      </div>\n\n      <div id="netsim-rightcol">\n        <div class="rightcol-connected">\n          <div id="netsim-logs">\n            <div id="netsim-received"></div>\n            <div id="netsim-sent"></div>\n          </div>\n          <div id="netsim-send"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((78,  data.localeDirection )), '">\n    ');79; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -1130,7 +1143,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],196:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],195:[function(require,module,exports){
 /*jshint multistr: true */
 
 var netsimConstants = require('./netsimConstants');
@@ -1309,7 +1322,7 @@ levels.custom = {
   defaultDnsMode: DnsMode.NONE
 };
 
-},{"./Packet":193,"./netsimConstants":199}],194:[function(require,module,exports){
+},{"./Packet":192,"./netsimConstants":198}],193:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1329,7 +1342,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],188:[function(require,module,exports){
+},{"ejs":273}],187:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1870,7 +1883,7 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   });
 };
 
-},{"../utils":253,"./NetSimVizNode":190,"./NetSimVizWire":191,"./NetSimWire":192,"./netsimNodeFactory":200,"./tweens":204}],191:[function(require,module,exports){
+},{"../utils":252,"./NetSimVizNode":189,"./NetSimVizWire":190,"./NetSimWire":191,"./netsimNodeFactory":199,"./tweens":203}],190:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -1956,7 +1969,7 @@ NetSimVizWire.prototype.kill = function () {
   this.remoteVizNode = null;
 };
 
-},{"../utils":253,"./NetSimVizEntity":189,"./NetSimVizNode":190,"./netsimUtils":201}],190:[function(require,module,exports){
+},{"../utils":252,"./NetSimVizEntity":188,"./NetSimVizNode":189,"./netsimUtils":200}],189:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2164,7 +2177,7 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
   }
 };
 
-},{"../utils":253,"./NetSimVizEntity":189,"./netsimConstants":199,"./netsimUtils":201,"./tweens":204}],189:[function(require,module,exports){
+},{"../utils":252,"./NetSimVizEntity":188,"./netsimConstants":198,"./netsimUtils":200,"./tweens":203}],188:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2409,7 +2422,7 @@ NetSimVizEntity.prototype.snapToScale = function (newScale) {
   this.tweenToScale(newScale, 0);
 };
 
-},{"./netsimUtils":201,"./tweens":204}],204:[function(require,module,exports){
+},{"./netsimUtils":200,"./tweens":203}],203:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2589,7 +2602,7 @@ exports.TweenValueTo.prototype.tick = function (clock) {
     this.isFinished = true;
   }
 };
-},{"../utils":253}],187:[function(require,module,exports){
+},{"../utils":252}],186:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2875,7 +2888,7 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
   }
 };
 
-},{"./NetSimDnsTab":138,"./NetSimMyDeviceTab":158,"./NetSimRouterTab":174,"./NetSimTabsComponent.html.ejs":186,"./netsimConstants":199,"./netsimUtils":201}],186:[function(require,module,exports){
+},{"./NetSimDnsTab":138,"./NetSimMyDeviceTab":157,"./NetSimRouterTab":173,"./NetSimTabsComponent.html.ejs":185,"./netsimConstants":198,"./netsimUtils":200}],185:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2907,7 +2920,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"./netsimConstants":199,"./netsimUtils":201,"ejs":274}],184:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./netsimConstants":198,"./netsimUtils":200,"ejs":273}],183:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2984,7 +2997,7 @@ NetSimStatusPanel.prototype.render = function (data) {
   }
 };
 
-},{"../utils":253,"./NetSimPanel.js":164,"./NetSimStatusPanel.html.ejs":183}],183:[function(require,module,exports){
+},{"../utils":252,"./NetSimPanel.js":163,"./NetSimStatusPanel.html.ejs":182}],182:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3006,7 +3019,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"ejs":274}],178:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"ejs":273}],177:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3136,9 +3149,10 @@ CleaningHeartbeat.prototype.buildRow_ = function () {
  * right now, and we proceed to clean the tables of expired rows.
  *
  * @param {!NetSimShard} shard
+ * @param {number} initialCleaningDelayMs
  * @constructor
  */
-var NetSimShardCleaner = module.exports = function (shard) {
+var NetSimShardCleaner = module.exports = function (shard, initialCleaningDelayMs) {
 
   /**
    * Shard we intend to keep clean.
@@ -3153,7 +3167,7 @@ var NetSimShardCleaner = module.exports = function (shard) {
    * @type {number}
    * @private
    */
-  this.nextAttemptTime_ = Date.now();
+  this.nextAttemptTime_ = Date.now() + initialCleaningDelayMs;
 
   /**
    * A special heartbeat that acts as our cleaning lock on the shard
@@ -3602,7 +3616,7 @@ CleanLogs.prototype.onBegin_ = function () {
   CommandSequence.prototype.onBegin_.call(this);
 };
 
-},{"../commands":56,"../utils":253,"./NetSimEntity":143,"./NetSimHeartbeat":144,"./NetSimLogEntry":148,"./NetSimLogger":152,"./NetSimMessage":154,"./NetSimNode":159,"./NetSimWire":192}],177:[function(require,module,exports){
+},{"../commands":56,"../utils":252,"./NetSimEntity":143,"./NetSimHeartbeat":144,"./NetSimLogEntry":147,"./NetSimLogger":151,"./NetSimMessage":153,"./NetSimNode":158,"./NetSimWire":191}],176:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3685,7 +3699,7 @@ NetSimShard.prototype.tick = function (clock) {
   this.logTable.tick(clock);
 };
 
-},{"../clientApi":54,"./NetSimTable":185}],185:[function(require,module,exports){
+},{"../clientApi":54,"./NetSimTable":184}],184:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3929,7 +3943,7 @@ NetSimTable.prototype.tick = function () {
   }
 };
 
-},{"../ObservableEvent":1,"../utils":253}],176:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":252}],175:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4437,7 +4451,7 @@ NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
   });
 };
 
-},{"../../locale/current/netsim":263,"../utils":253,"./NetSimLogger":152,"./NetSimPacketEditor":161,"./NetSimPacketSizeControl":162,"./NetSimPanel":164,"./NetSimSendPanel.html.ejs":175,"./Packet":193,"./dataConverters":195,"./netsimConstants":199}],175:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimLogger":151,"./NetSimPacketEditor":160,"./NetSimPacketSizeControl":161,"./NetSimPanel":163,"./NetSimSendPanel.html.ejs":174,"./Packet":192,"./dataConverters":194,"./netsimConstants":198}],174:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4460,7 +4474,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"./netsimConstants":199,"ejs":274}],174:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./netsimConstants":198,"ejs":273}],173:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4654,7 +4668,7 @@ NetSimRouterTab.prototype.setDataRate = function (dataRateBitsPerSecond) {
   }
 };
 
-},{"./NetSimBandwidthControl":127,"./NetSimMemoryControl":153,"./NetSimRouterLogTable":169,"./NetSimRouterStatsTable":172,"./NetSimRouterTab.html.ejs":173}],173:[function(require,module,exports){
+},{"./NetSimBandwidthControl":127,"./NetSimMemoryControl":152,"./NetSimRouterLogTable":168,"./NetSimRouterStatsTable":171,"./NetSimRouterTab.html.ejs":172}],172:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4676,7 +4690,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"ejs":274}],172:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"ejs":273}],171:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4965,7 +4979,7 @@ NetSimRouterStatsTable.prototype.setDataRate = function (dataRateBitsPerSecond) 
   this.setNeedsRender();
 };
 
-},{"./NetSimLogEntry":148,"./NetSimRouterStatsTable.html.ejs":171,"./netsimUtils":201}],171:[function(require,module,exports){
+},{"./NetSimLogEntry":147,"./NetSimRouterStatsTable.html.ejs":170,"./netsimUtils":200}],170:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5013,7 +5027,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":253,"./netsimUtils":201,"ejs":274}],169:[function(require,module,exports){
+},{"../utils":252,"./netsimUtils":200,"ejs":273}],168:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5079,7 +5093,7 @@ NetSimRouterLogTable.prototype.setRouterLogData = function (logData) {
   this.render();
 };
 
-},{"./NetSimRouterLogTable.html.ejs":168}],168:[function(require,module,exports){
+},{"./NetSimRouterLogTable.html.ejs":167}],167:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5128,7 +5142,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"./Packet":193,"./netsimConstants":199,"./netsimUtils":201,"ejs":274}],162:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./Packet":192,"./netsimConstants":198,"./netsimUtils":200,"ejs":273}],161:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5206,7 +5220,7 @@ NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
   return val;
 };
 
-},{"../../locale/current/netsim":263,"./NetSimSlider":182}],161:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./NetSimSlider":181}],160:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5978,7 +5992,7 @@ NetSimPacketEditor.prototype.consumeFirstBit = function () {
   this.setPacketBinary(this.getPacketBinary().substr(1));
 };
 
-},{"../../locale/current/netsim":263,"../constants":57,"../utils":253,"./NetSimEncodingControl":142,"./NetSimPacketEditor.html.ejs":160,"./Packet":193,"./dataConverters":195,"./netsimConstants":199}],160:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../constants":57,"../utils":252,"./NetSimEncodingControl":142,"./NetSimPacketEditor.html.ejs":159,"./Packet":192,"./dataConverters":194,"./netsimConstants":198}],159:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6053,7 +6067,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"./Packet":193,"./netsimConstants":199,"./netsimUtils":201,"ejs":274}],158:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./Packet":192,"./netsimConstants":198,"./netsimUtils":200,"ejs":273}],157:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6261,7 +6275,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
   }
 };
 
-},{"./NetSimBitRateControl":130,"./NetSimChunkSizeControl":131,"./NetSimEncodingControl":142,"./NetSimMetronome":156,"./NetSimMyDeviceTab.html.ejs":157,"./NetSimPulseRateControl":165}],165:[function(require,module,exports){
+},{"./NetSimBitRateControl":130,"./NetSimChunkSizeControl":131,"./NetSimEncodingControl":142,"./NetSimMetronome":155,"./NetSimMyDeviceTab.html.ejs":156,"./NetSimPulseRateControl":164}],164:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6327,7 +6341,7 @@ NetSimPulseRateControl.prototype.valueToShortLabel = function (val) {
   return val;
 };
 
-},{"../../locale/current/netsim":263,"../utils":253,"./NetSimSlider":182}],157:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimSlider":181}],156:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6347,7 +6361,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],156:[function(require,module,exports){
+},{"ejs":273}],155:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6465,7 +6479,7 @@ NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
   this.pulseIntervalMillis_ = 1000 / pulsesPerSecond;
 };
 
-},{"./NetSimMetronome.html.ejs":155}],155:[function(require,module,exports){
+},{"./NetSimMetronome.html.ejs":154}],154:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6557,7 +6571,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],153:[function(require,module,exports){
+},{"ejs":273}],152:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6609,7 +6623,7 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
   return netsimUtils.bitsToLocalizedRoundedBytesize(val);
 };
 
-},{"../utils":253,"./NetSimSlider":182,"./netsimConstants":199,"./netsimUtils":201}],151:[function(require,module,exports){
+},{"../utils":252,"./NetSimSlider":181,"./netsimConstants":198,"./netsimUtils":200}],150:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6940,7 +6954,7 @@ NetSimLogPacket.prototype.toggleMinimized = function () {
   this.render();
 };
 
-},{"../../locale/current/netsim":263,"../utils":253,"./NetSimEncodingControl":142,"./NetSimLogPacket.html.ejs":149,"./NetSimLogPanel.html.ejs":150,"./NetSimPanel":164}],150:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimEncodingControl":142,"./NetSimLogPacket.html.ejs":148,"./NetSimLogPanel.html.ejs":149,"./NetSimPanel":163}],149:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6960,7 +6974,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],149:[function(require,module,exports){
+},{"ejs":273}],148:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7093,7 +7107,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"./Packet":193,"./dataConverters":195,"./netsimConstants":199,"./netsimUtils":201,"ejs":274}],147:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./Packet":192,"./dataConverters":194,"./netsimConstants":198,"./netsimUtils":200,"ejs":273}],146:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7508,6 +7522,7 @@ NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
   onComplete = onComplete || function () {};
 
+  // This callback is occasionally called in an infinite loop.  Figure out why!
   this.myWire.destroy(function (err) {
     if (err) {
       onComplete(err);
@@ -7517,13 +7532,13 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
     this.myWire = null;
     // Trigger an immediate router update so its connection count is correct.
     if (this.myRouter) {
-      this.myRouter.update(onComplete);
       this.myRouter.stopSimulation();
     }
 
     this.myRemoteClient = null;
     this.myRouter = null;
     this.remoteChange.notifyObservers(null, null);
+    onComplete(null);
   }.bind(this));
 };
 
@@ -7807,7 +7822,7 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
   }.bind(this));
 };
 
-},{"../ObservableEvent":1,"../utils":253,"./NetSimClientNode":132,"./NetSimEntity":143,"./NetSimHeartbeat":144,"./NetSimLogger":152,"./NetSimMessage":154,"./netsimConstants":199}],146:[function(require,module,exports){
+},{"../ObservableEvent":1,"../utils":252,"./NetSimClientNode":132,"./NetSimEntity":143,"./NetSimHeartbeat":144,"./NetSimLogger":151,"./NetSimMessage":153,"./netsimConstants":198}],145:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7829,7 +7844,6 @@ var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
-var markup = require('./NetSimLobby.html.ejs');
 
 var logger = require('./NetSimLogger').getSingleton();
 
@@ -7948,13 +7962,6 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
   this.incomingConnectionNodes_ = [];
 
   /**
-   * Which node in the lobby is currently selected
-   * @type {NetSimClientNode|NetSimRouterNode}
-   * @private
-   */
-  this.selectedNode_ = null;
-
-  /**
    * @type {NetSimNode}
    * @private
    */
@@ -7982,43 +7989,42 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
  * Recreate markup within panel body.
  */
 NetSimLobby.prototype.render = function () {
-  // Add our own content markup
-  var newMarkup = $(markup({}));
-  this.rootDiv_.html(newMarkup);
+  var isConnectedToShard = (this.shard_ !== null);
+  if (!isConnectedToShard) {
 
-  // Shard selection panel: Controls for setting display name and picking
-  // a section, if they aren't set automatically.
-  this.shardSelectionPanel_ = new NetSimShardSelectionPanel(
-      this.rootDiv_.find('.shard-select'),
-      {
-        displayName: this.displayName_,
-        shardChoices: this.shardChoices_,
-        selectedShardID: this.selectedShardID_
-      },
-      {
-        setNameCallback: this.setDisplayName.bind(this),
-        setShardCallback: this.setShardID.bind(this)
-      });
+    // Shard selection panel: Controls for setting display name and picking
+    // a section, if they aren't set automatically.
+    this.shardSelectionPanel_ = new NetSimShardSelectionPanel(
+        this.rootDiv_,
+        {
+          displayName: this.displayName_,
+          shardChoices: this.shardChoices_,
+          selectedShardID: this.selectedShardID_
+        },
+        {
+          setNameCallback: this.setDisplayName.bind(this),
+          setShardCallback: this.setShardID.bind(this)
+        });
 
-  // Node selection panel: The lobby list of who we can connect to, and
-  // controls for picking one and connecting.
-  if (this.shard_) {
+  } else {
+
+    // Node selection panel: The lobby list of who we can connect to, and
+    // controls for picking one and connecting.
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
-        this.rootDiv_.find('.remote-node-select'),
+        this.rootDiv_,
         {
           levelConfig: this.levelConfig_,
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
-          selectedNode: this.selectedNode_,
           remoteNode: this.remoteNode_,
           myNodeID: this.myNode_.entityID
         },
         {
           addRouterCallback: this.addRouterToLobby.bind(this),
-          selectNodeCallback: this.selectNode.bind(this),
-          connectButtonCallback: this.onConnectButtonClick_.bind(this),
-          cancelButtonCallback: this.onCancelButtonClick_.bind(this)
+          cancelButtonCallback: this.onCancelButtonClick_.bind(this),
+          joinButtonCallback: this.onJoinButtonClick_.bind(this)
         });
+
   }
 };
 
@@ -8103,8 +8109,25 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
       }
 
       this.onWireTableChange_(rows);
+
+      // On initial connect, if we are connecting to routers and no routers
+      // are present, add one automatically.
+      if (this.levelConfig_.canConnectToRouters &&
+          !this.doesShardContainRouter()) {
+        this.addRouterToLobby();
+      }
     }.bind(this));
   }.bind(this));
+};
+
+/**
+ * @returns {boolean} whether the currently cached node data for the shard
+ *          includes a router node.
+ */
+NetSimLobby.prototype.doesShardContainRouter = function () {
+  return undefined !== _.find(this.nodesOnShard_, function (shardNode) {
+        return shardNode instanceof NetSimRouterNode;
+      });
 };
 
 /**
@@ -8127,23 +8150,14 @@ NetSimLobby.prototype.addRouterToLobby = function () {
 };
 
 /**
- * @param {NetSimNode} node
+ * Handler for clicking the "Join" button.
+ * @param {NetSimClientNode|NetSimRouterNode} nodeToJoin
  */
-NetSimLobby.prototype.selectNode = function (node) {
-  this.selectedNode_ = node;
-  this.render();
-};
-
-/** Handler for clicking the "Connect" button. */
-NetSimLobby.prototype.onConnectButtonClick_ = function () {
-  if (!this.selectedNode_) {
-    return;
-  }
-
-  if (this.selectedNode_ instanceof NetSimRouterNode) {
-    this.netsim_.connectToRouter(this.selectedNode_.entityID);
-  } else if (this.selectedNode_ instanceof NetSimClientNode) {
-    this.myNode_.connectToClient(this.selectedNode_, function () {});
+NetSimLobby.prototype.onJoinButtonClick_ = function (nodeToJoin) {
+  if (nodeToJoin instanceof NetSimRouterNode) {
+    this.netsim_.connectToRouter(nodeToJoin.entityID);
+  } else if (nodeToJoin instanceof NetSimClientNode) {
+    this.myNode_.connectToClient(nodeToJoin, function () {});
   }
 };
 
@@ -8309,7 +8323,7 @@ NetSimLobby.prototype.getShareLink = function () {
   return '';
 };
 
-},{"../../locale/current/netsim":263,"../utils":253,"./NetSimClientNode":132,"./NetSimLobby.html.ejs":145,"./NetSimLogger":152,"./NetSimRemoteNodeSelectionPanel":167,"./NetSimRouterNode":170,"./NetSimShardSelectionPanel":180,"./netsimNodeFactory":200}],200:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimClientNode":132,"./NetSimLogger":151,"./NetSimRemoteNodeSelectionPanel":166,"./NetSimRouterNode":169,"./NetSimShardSelectionPanel":179,"./netsimNodeFactory":199}],199:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8340,18 +8354,29 @@ var netsimNodeFactory = module.exports;
  * @return {Array.<NetSimNode>} nodes for the rows
  */
 netsimNodeFactory.nodesFromRows = function (shard, nodeRows) {
-  return nodeRows.map(function (row) {
-    if (row.type === NodeType.CLIENT) {
-      return new NetSimClientNode(shard, row);
-    } else if (row.type == NodeType.ROUTER) {
-      return new NetSimRouterNode(shard, row);
-    }
-    // Oops!  We probably shouldn't ever get here.
-    throw new Error("Unable to map row to node.");
-  });
+  return nodeRows.map(netsimNodeFactory.nodeFromRow.bind(this, shard));
 };
 
-},{"./NetSimClientNode":132,"./NetSimRouterNode":170,"./netsimConstants":199}],180:[function(require,module,exports){
+/**
+ * Given a row from the node table on a shard, gives back a node controllers
+ * (of appropriate types).
+ * @param {!NetSimShard} shard
+ * @param {!Object} nodeRow
+ * @throws when the row doesn't have a mappable node type.
+ * @return {NetSimNode} node for the rows
+ */
+netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
+  if (nodeRow.type === NodeType.CLIENT) {
+    return new NetSimClientNode(shard, nodeRow);
+  } else if (nodeRow.type === NodeType.ROUTER) {
+    return new NetSimRouterNode(shard, nodeRow);
+  }
+
+  // Oops!  We probably shouldn't ever get here.
+  throw new Error("Unable to map row to node.");
+};
+
+},{"./NetSimClientNode":132,"./NetSimRouterNode":169,"./netsimConstants":198}],179:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8524,7 +8549,7 @@ NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
   this.setShardCallback_(this.getBody().find('#netsim-shard-select').val());
 };
 
-},{"../../locale/current/netsim":263,"../constants":57,"../utils":253,"./NetSimPanel":164,"./NetSimShardSelectionPanel.html.ejs":179}],179:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../constants":57,"../utils":252,"./NetSimPanel":163,"./NetSimShardSelectionPanel.html.ejs":178}],178:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8556,7 +8581,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"ejs":274}],170:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"ejs":273}],169:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9210,6 +9235,43 @@ NetSimRouterNode.prototype.getHostname = function () {
 /** @inheritdoc */
 NetSimRouterNode.prototype.getNodeType = function () {
   return NodeType.ROUTER;
+};
+
+/** @inheritdoc */
+NetSimRouterNode.prototype.getStatus = function () {
+  // Determine status based on cached wire data
+  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var incomingWireRows = cachedWireRows.filter(function (wireRow) {
+    return wireRow.remoteNodeID === this.entityID;
+  }, this);
+
+  if (incomingWireRows.length === 0) {
+    return i18n.routerStatusNoConnections({
+      maximumClients: MAX_CLIENT_CONNECTIONS
+    });
+  }
+
+  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var connectedNodeNames = incomingWireRows.map(function (wireRow) {
+    var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
+      return nodeRow.id === wireRow.localNodeID;
+    });
+    if (nodeRow) {
+      return nodeRow.name;
+    }
+    return i18n.unknownNode();
+  }).join(', ');
+
+  if (incomingWireRows.length >= MAX_CLIENT_CONNECTIONS) {
+    return i18n.routerStatusFull({
+      connectedClients: connectedNodeNames
+    });
+  }
+
+  return i18n.routerStatus({
+    connectedClients: connectedNodeNames,
+    remainingSpace: (MAX_CLIENT_CONNECTIONS - incomingWireRows.length)
+  });
 };
 
 /**
@@ -10048,7 +10110,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
       onComplete);
 };
 
-},{"../../locale/current/netsim":263,"../ObservableEvent":1,"../utils":253,"./NetSimEntity":143,"./NetSimHeartbeat":144,"./NetSimLogEntry":148,"./NetSimLogger":152,"./NetSimMessage":154,"./NetSimNode":159,"./NetSimWire":192,"./Packet":193,"./dataConverters":195,"./netsimConstants":199,"./netsimUtils":201}],154:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../ObservableEvent":1,"../utils":252,"./NetSimEntity":143,"./NetSimHeartbeat":144,"./NetSimLogEntry":147,"./NetSimLogger":151,"./NetSimMessage":153,"./NetSimNode":158,"./NetSimWire":191,"./Packet":192,"./dataConverters":194,"./netsimConstants":198,"./netsimUtils":200}],153:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10162,7 +10224,7 @@ NetSimMessage.prototype.buildRow_ = function () {
   };
 };
 
-},{"../utils":253,"./NetSimEntity":143}],148:[function(require,module,exports){
+},{"../utils":252,"./NetSimEntity":143}],147:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10331,7 +10393,7 @@ NetSimLogEntry.prototype.getLocalizedStatus = function () {
   return '';
 };
 
-},{"../../locale/current/netsim":263,"../utils":253,"./NetSimEntity":143,"./Packet":193,"./dataConverters":195,"./netsimConstants":199}],193:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimEntity":143,"./Packet":192,"./dataConverters":194,"./netsimConstants":198}],192:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10605,7 +10667,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
   return parts.join('');
 };
 
-},{"./dataConverters":195,"./netsimUtils":201}],167:[function(require,module,exports){
+},{"./dataConverters":194,"./netsimUtils":200}],166:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10636,15 +10698,13 @@ var NodeType = require('./netsimConstants').NodeType;
  * @param {netsimLevelConfiguration} options.levelConfig
  * @param {NetSimNode[]} options.nodesOnShard
  * @param {NetSimNode[]} options.incomingConnectionNodes
- * @param {NetSimNode} options.selectedNode
  * @param {NetSimNode} options.remoteNode - null if not attempting to connect
  * @param {number} options.myNodeID
  *
  * @param {Object} callbacks
  * @param {function} callbacks.addRouterCallback
- * @param {function} callbacks.selectNodeCallback
- * @param {function} callbacks.connectButtonCallback
  * @param {function} callbacks.cancelButtonCallback
+ * @param {function} callbacks.joinButtonCallback
  *
  * @constructor
  * @augments NetSimPanel
@@ -10670,13 +10730,6 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   this.incomingConnectionNodes_ = options.incomingConnectionNodes;
 
   /**
-   * Which node in the lobby is currently selected
-   * @type {NetSimNode}
-   * @private
-   */
-  this.selectedNode_ = options.selectedNode;
-
-  /**
    * @type {NetSimNode}
    * @private
    */
@@ -10696,30 +10749,23 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   this.addRouterCallback_ = callbacks.addRouterCallback;
 
   /**
-   * Handler for selecting a node row
-   * @type {function}
-   * @private
-   */
-  this.selectNodeCallback_ = callbacks.selectNodeCallback;
-
-  /**
-   * Handler for connect button
-   * @type {function}
-   * @private
-   */
-  this.connectButtonCallback_ = callbacks.connectButtonCallback;
-
-  /**
    * Handler for cancel button (backs out of non-mutual connection)
    * @type {function}
    * @private
    */
   this.cancelButtonCallback_ = callbacks.cancelButtonCallback;
 
+  /**
+   * Handler for "join" button next to each connectable node.
+   * @type {function}
+   * @private
+   */
+  this.joinButtonCallback_ = callbacks.joinButtonCallback;
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
-    panelTitle: i18n.connectToANode(),
+    panelTitle: this.getLocalizedPanelTitle(),
     canMinimize: false
   });
 };
@@ -10745,37 +10791,59 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
 
-  this.connectButton_ = this.getBody().find('#netsim-lobby-connect');
-  this.connectButton_.click(this.connectButtonCallback_);
+  this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
+  this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
+  this.getBody().find('.cancel-button').click(this.cancelButtonCallback_);
+};
 
-  this.cancelButton_ = this.getBody().find('#netsim-lobby-cancel');
-  this.cancelButton_.click(this.cancelButtonCallback_);
+/**
+ * @returns {string} a localized panel title appropriate to the current level
+ *          configuration
+ */
+NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function () {
+  if (this.levelConfig_.canConnectToClients &&
+      this.levelConfig_.canConnectToRouters) {
+    return i18n.connectToANode();
+  } else if (this.levelConfig_.canConnectToClients) {
+    return i18n.connectToAPeer();
+  } else if (this.levelConfig_.canConnectToRouters) {
+    return i18n.connectToARouter();
+  }
+  return i18n.connectToANode();
+};
 
-  this.getBody().find('.selectable-row').click(this.onRowClick_.bind(this));
+/**
+ * @returns {string} localized lobby instructions appropriate to the current
+ *          level configuration
+ */
+NetSimRemoteNodeSelectionPanel.prototype.getLocalizedLobbyInstructions = function () {
+  if (this.levelConfig_.canConnectToClients &&
+      this.levelConfig_.canConnectToRouters) {
+    return i18n.lobbyInstructionsGeneral();
+  } else if (this.levelConfig_.canConnectToClients) {
+    return i18n.lobbyInstructionsForPeers();
+  } else if (this.levelConfig_.canConnectToRouters) {
+    return i18n.lobbyInstructionsForRouters();
+  }
+  return i18n.lobbyInstructionsGeneral();
 };
 
 /**
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimRemoteNodeSelectionPanel.prototype.onRowClick_ = function (jQueryEvent) {
+NetSimRemoteNodeSelectionPanel.prototype.onJoinClick_ = function (jQueryEvent) {
   var target = $(jQueryEvent.target);
+  if (target.is('[disabled]')) {
+    return;
+  }
+
   var nodeID = target.data('nodeId');
   var clickedNode = _.find(this.nodesOnShard_, function (node) {
     return node.entityID === nodeID;
   });
 
-  // Don't even allow clicking on nodes we can't connect to.
-  if (!clickedNode || !this.canConnectToNode(clickedNode)) {
-    return;
-  }
-
-  // If the selected node was clicked, we want to deselect.
-  if (this.selectedNode_ && this.selectedNode_.entityID === clickedNode.entityID) {
-    this.selectNodeCallback_(null);
-  } else {
-    this.selectNodeCallback_(clickedNode);
-  }
+  this.joinButtonCallback_(clickedNode);
 };
 
 /**
@@ -10807,23 +10875,6 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connection
 };
 
 /**
- * @returns {boolean} TRUE if a node is selected in the listing.
- */
-NetSimRemoteNodeSelectionPanel.prototype.hasSelectedNode = function () {
-  return !!(this.selectedNode_);
-};
-
-/**
- * @param {NetSimNode} node
- * @returns {boolean} TRUE if the given node has the same ID as the currently
- *          selected node.
- */
-NetSimRemoteNodeSelectionPanel.prototype.isSelectedNode = function (node) {
-  return node && this.selectedNode_ &&
-      node.entityID === this.selectedNode_.entityID;
-};
-
-/**
  * @returns {boolean} TRUE if we have an open outgoing connection request.
  */
 NetSimRemoteNodeSelectionPanel.prototype.hasOutgoingRequest = function () {
@@ -10844,7 +10895,7 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
 };
 
 
-},{"../../locale/current/netsim":263,"../utils":253,"./NetSimPanel":164,"./NetSimRemoteNodeSelectionPanel.html.ejs":166,"./netsimConstants":199}],166:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimPanel":163,"./NetSimRemoteNodeSelectionPanel.html.ejs":165,"./netsimConstants":198}],165:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10903,19 +10954,12 @@ var nodeToRowMetadata = function (node) {
     classes.push('own-row');
   }
 
-  if (!controller.hasOutgoingRequest() && controller.canConnectToNode(node)) {
-    classes.push('selectable-row');
-  }
-
-  if (controller.isSelectedNode(node)) {
-    classes.push('selected-row');
-  }
-
   return {
     nodeID: node.entityID,
     classAttr: classes.join(' '),
     displayName: node.getDisplayName(),
-    status: node.getStatus() + ' ' + node.getStatusDetail()
+    status: node.getStatus(),
+    canConnectToNode: controller.canConnectToNode(node)
   };
 };
 
@@ -10945,26 +10989,106 @@ var requestRows = incomingConnectionNodes
 var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
     .filter(controller.shouldShowNode.bind(controller))
     .map(nodeToRowMetadata);
-; buf.push('\n<div class="content-wrap">\n\n  <strong>', escape((93,  i18n.lobby() )), '</strong>\n  <ul class="netsim-lobby-list">\n    ');95;
 
-    lobbyRows.forEach(function (row) {
-    ; buf.push('\n    <li class="', escape((99,  row.classAttr )), '" data-node-id="', escape((99,  row.nodeID )), '">\n      ', escape((100,  row.displayName )), ' : ', escape((100,  row.status )), '\n    </li>\n    ');102;
-    });
+/**
+ * @param {string} buttonText
+ * @param {string} buttonID
+ * @param {string[]} extraClasses
+ * @param {Object} extraAttributes
+ * @returns {string} markup for NetSim-style button
+ */
+function buttonMarkup(buttonText, buttonID, extraClasses, extraAttributes) {
+  var classes = utils.valueOr(extraClasses, []);
+  classes.push('netsim-button');
+  classes.push('large-button');
 
-    if (!controller.hasOutgoingRequest() && showAddRouterButton) {
-    ; buf.push('\n    <li class="empty-row">\n      <input type="button" id="netsim-lobby-add-router" value="', escape((108,  i18n.addRouter() )), '" />\n    </li>\n    ');110;
-    } else if (lobbyRows.length === 0) {
-    ; buf.push('\n    <li class="empty-row">', escape((113,  i18n.lobbyIsEmpty() )), '</li>\n    ');114;
+  extraAttributes = utils.valueOr(extraAttributes, {});
+
+  var markup = '<span class="' + classes.join(' ') + '" ';
+
+  // ID attribute for span tag
+  if (buttonID) {
+    markup += 'id="' + buttonID + '" ';
+  }
+
+  // Extra attributes for span tag
+  for (var key in extraAttributes) {
+    if (extraAttributes.hasOwnProperty(key)) {
+      markup += key + '="' + extraAttributes[key] + '" ';
     }
-    ; buf.push('\n  </ul>\n\n  ');119; if (requestRows.length > 0) { ; buf.push('\n  <strong>', escape((120,  i18n.incomingConnectionRequests() )), '</strong>\n  <ul class="netsim-lobby-list">\n    ');122;
-    requestRows.forEach(function (row) {
-    ; buf.push('\n    <li class="', escape((125,  row.classAttr )), '" data-node-id="', escape((125,  row.nodeID )), '">\n      ', escape((126,  row.displayName )), ' : ', escape((126,  row.status )), '\n    </li>\n    ');128;
-    });
-    ; buf.push('\n  </ul>\n  ');132; } ; buf.push('\n\n  ');134; if (outgoingRequestRows.length > 0) { ; buf.push('\n  <strong>', escape((135,  i18n.outgoingConnectionRequests() )), '</strong>\n  <ul class="netsim-lobby-list">\n    ');137;
-    outgoingRequestRows.forEach(function (row) {
-    ; buf.push('\n    <li class="', escape((140,  row.classAttr )), '" data-node-id="', escape((140,  row.nodeID )), '">\n      ', escape((141,  row.displayName )), ' : ', escape((141,  row.status )), '\n    </li>\n    ');143;
-    });
-    ; buf.push('\n  </ul>\n  ');147; } ; buf.push('\n\n  ');149; if (controller.hasOutgoingRequest()) { ; buf.push('\n    <p>', escape((150,  i18n.waitingForNodeToConnect({ node: remoteNode.getDisplayName() }) )), ' <input type="button" id="netsim-lobby-cancel" value="', escape((150,  i18n.cancel() )), '" /></p>\n  ');151; } else { ; buf.push('\n    <input type="button" id="netsim-lobby-connect" value="', escape((152,  i18n.connect() )), '" ');152; if (!controller.hasSelectedNode()) { ; buf.push('disabled');152; } ; buf.push(' />\n  ');153; } ; buf.push('\n</div>\n'); })();
+  }
+
+  markup += '>' + buttonText + '</span>';
+  return markup;
+}
+
+function writeHeader(headerText) {
+  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((119,  headerText )), '</th>\n    </tr>\n  ');121;
+}
+
+function writeEmptyRow(contents) {
+  contents = utils.valueOr(contents, '');
+  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (128,  contents ), '</td>\n    </tr>\n  ');130;
+}
+
+function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
+  ; buf.push('\n    <tr>\n      <td nowrap>', escape((136,  nodeName )), '</td>\n      <td>', (137,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');139;
+          var markup = '';
+          if (buttonType === 'join-button') {
+            markup = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
+          } else if (buttonType === 'accept-button') {
+            markup = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
+          } else if (buttonType === 'cancel-button') {
+            markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': nodeID });
+          }
+        ; buf.push('\n        ', (149,  markup ), '\n      </td>\n    </tr>\n  ');152;
+}
+
+; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((157,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');161;
+        // Primary lobby list
+        writeHeader(i18n.lobby());
+        lobbyRows.forEach(function (row) {
+          var buttonType;
+          if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
+            buttonType = 'join-button';
+          }
+          writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
+        });
+
+        if (!controller.hasOutgoingRequest() && showAddRouterButton) {
+          writeEmptyRow(buttonMarkup(i18n.addRouter(), 'netsim-lobby-add-router', ['secondary']));
+        } else if (lobbyRows.length === 0) {
+          writeEmptyRow(i18n.lobbyIsEmpty());
+        }
+
+        // Incoming requests table
+        if (requestRows.length > 0) {
+          writeEmptyRow();
+          writeHeader(i18n.incomingConnectionRequests());
+          requestRows.forEach(function (row) {
+            var buttonType;
+            if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
+              buttonType = 'accept-button';
+            }
+            var incomingStatus = i18n.lobbyStatusWaitingForYou();
+            writeNodeRow(row.nodeID, row.displayName, incomingStatus, buttonType, row.classAttr);
+          });
+        }
+
+        // Outgoing request table
+        if (outgoingRequestRows.length > 0) {
+          writeEmptyRow();
+          writeHeader(i18n.outgoingConnectionRequests());
+          outgoingRequestRows.forEach(function (row) {
+            var outgoingStatus = i18n.lobbyStatusWaitingForOther({
+              spinner: '<img src="/assets/spinner-big.gif" />',
+              otherName: row.displayName,
+              otherStatus: row.status
+            });
+            writeNodeRow(row.nodeID, row.displayName, outgoingStatus, 'cancel-button', row.classAttr);
+          });
+        }
+      ; buf.push('\n\n    </table>\n  </div>\n  <div class="clear"></div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -10972,27 +11096,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"../utils":253,"./netsimConstants":199,"ejs":274}],145:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('<div class="shard-select"></div>\n<div class="remote-node-select"></div>\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"ejs":274}],144:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./netsimConstants":198,"ejs":273}],144:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11177,7 +11281,7 @@ NetSimHeartbeat.prototype.tick = function () {
   }
 };
 
-},{"../utils":253,"./NetSimEntity":143}],138:[function(require,module,exports){
+},{"../utils":252,"./NetSimEntity":143}],138:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11303,7 +11407,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
   this.dnsTable_.setDnsTableContents(tableContents);
 };
 
-},{"./NetSimDnsManualControl":134,"./NetSimDnsModeControl":136,"./NetSimDnsTab.html.ejs":137,"./NetSimDnsTable":140,"./netsimConstants":199}],140:[function(require,module,exports){
+},{"./NetSimDnsManualControl":134,"./NetSimDnsModeControl":136,"./NetSimDnsTab.html.ejs":137,"./NetSimDnsTable":140,"./netsimConstants":198}],140:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11377,7 +11481,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
   this.render();
 };
 
-},{"./NetSimDnsTable.html.ejs":139,"./netsimConstants":199}],139:[function(require,module,exports){
+},{"./NetSimDnsTable.html.ejs":139,"./netsimConstants":198}],139:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11420,7 +11524,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":199,"ejs":274}],137:[function(require,module,exports){
+},{"./netsimConstants":198,"ejs":273}],137:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11440,7 +11544,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],136:[function(require,module,exports){
+},{"ejs":273}],136:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11526,7 +11630,7 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
       .prop('checked', true);
 };
 
-},{"./NetSimDnsModeControl.html.ejs":135,"./netsimConstants":199}],135:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html.ejs":135,"./netsimConstants":198}],135:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11557,7 +11661,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"./netsimConstants":199,"ejs":274}],134:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./netsimConstants":198,"ejs":273}],134:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11642,7 +11746,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],132:[function(require,module,exports){
+},{"ejs":273}],132:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11656,7 +11760,9 @@ return buf.join('');
  */
 'use strict';
 
-require('../utils');
+var utils = require('../utils');
+var _ = utils.getLodash();
+var i18n = require('../../locale/current/netsim');
 var NodeType = require('./netsimConstants').NodeType;
 var NetSimEntity = require('./NetSimEntity');
 var NetSimNode = require('./NetSimNode');
@@ -11688,7 +11794,43 @@ NetSimClientNode.prototype.getNodeType = function () {
 
 /** @inheritdoc */
 NetSimClientNode.prototype.getStatus = function () {
-  return this.status_ ? this.status_ : 'Online';
+  // Determine status based on cached outgoing wire
+  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var outgoingWireRow = _.find(cachedWireRows, function (wireRow) {
+    return wireRow.localNodeID === this.entityID;
+  }, this);
+
+  if (outgoingWireRow) {
+    // Get remote node for display name / hostname
+    var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+    var remoteNodeRow = _.find(cachedNodeRows, function (nodeRow) {
+      return nodeRow.id === outgoingWireRow.remoteNodeID;
+    });
+
+    var remoteNodeName = i18n.unknownNode();
+    if (remoteNodeRow) {
+      remoteNodeName = remoteNodeRow.name;
+    }
+
+    // Check for connection state
+    var mutualConnection;
+    if (remoteNodeRow && remoteNodeRow.type === NodeType.ROUTER) {
+      mutualConnection = true;
+    } else {
+      mutualConnection = _.find(cachedWireRows, function (wireRow) {
+        return wireRow.localNodeID === outgoingWireRow.remoteNodeID &&
+            wireRow.remoteNodeID === outgoingWireRow.localNodeID;
+      });
+    }
+
+    if (mutualConnection) {
+      return i18n.connectedToNodeName({nodeName:remoteNodeName});
+    } else {
+      return i18n.connectingToNodeName({nodeName:remoteNodeName});
+    }
+  }
+
+  return i18n.notConnected();
 };
 
 /**
@@ -11702,7 +11844,7 @@ NetSimClientNode.get = function (nodeID, shard, onComplete) {
   NetSimEntity.get(NetSimClientNode, nodeID, shard, onComplete);
 };
 
-},{"../utils":253,"./NetSimEntity":143,"./NetSimNode":159,"./netsimConstants":199}],159:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimEntity":143,"./NetSimNode":158,"./netsimConstants":198}],158:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11741,18 +11883,6 @@ var NetSimNode = module.exports = function (shard, nodeRow) {
    * @private
    */
   this.displayName_ = nodeRow.name;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.status_ = nodeRow.status;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.statusDetail_ = nodeRow.statusDetail;
 };
 NetSimNode.inherits(NetSimEntity);
 
@@ -11769,9 +11899,7 @@ NetSimNode.prototype.getTable_= function () {
 NetSimNode.prototype.buildRow_ = function () {
   return {
     type: this.getNodeType(),
-    name: this.getDisplayName(),
-    status: this.getStatus(),
-    statusDetail: this.getStatusDetail()
+    name: this.getDisplayName()
   };
 };
 
@@ -11804,20 +11932,11 @@ NetSimNode.prototype.getNodeType = function () {
 };
 
 /**
- * Get node's status, usually a string enum value.
+ * Get localized description of node status.
  * @returns {string}
  */
 NetSimNode.prototype.getStatus = function () {
-  return this.status_;
-};
-
-/**
- * Get node's additional status info, usually display-only
- * status info.
- * @returns {string}
- */
-NetSimNode.prototype.getStatusDetail = function () {
-  return this.statusDetail_ ? this.statusDetail_ : '';
+  throw new Error('getStatus method is not implemented');
 };
 
 /**
@@ -11862,7 +11981,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
-},{"../utils":253,"./NetSimEntity":143,"./NetSimWire":192}],192:[function(require,module,exports){
+},{"../utils":252,"./NetSimEntity":143,"./NetSimWire":191}],191:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -11986,7 +12105,7 @@ NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
   return onWire || onReverseWire;
 };
 
-},{"../utils":253,"./NetSimEntity":143}],143:[function(require,module,exports){
+},{"../utils":252,"./NetSimEntity":143}],143:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12191,7 +12310,7 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
   return val.toString();
 };
 
-},{"../../locale/current/netsim":263,"./NetSimSlider":182}],130:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./NetSimSlider":181}],130:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12242,7 +12361,7 @@ NetSimBitRateControl.prototype.valueToLabel = function (val) {
   return netsimUtils.bitrateToLocalizedRoundedBitrate(val);
 };
 
-},{"../utils":253,"./NetSimSlider":182,"./netsimUtils":201}],129:[function(require,module,exports){
+},{"../utils":252,"./NetSimSlider":181,"./netsimUtils":200}],129:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12411,7 +12530,7 @@ NetSimBitLogPanel.prototype.setChunkSize = function (newChunkSize) {
   this.render();
 };
 
-},{"../../locale/current/netsim":263,"../utils":253,"./NetSimBitLogPanel.html.ejs":128,"./NetSimEncodingControl":142,"./NetSimLogger":152,"./NetSimPanel":164}],164:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimBitLogPanel.html.ejs":128,"./NetSimEncodingControl":142,"./NetSimLogger":151,"./NetSimPanel":163}],163:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12583,7 +12702,7 @@ NetSimPanel.prototype.getBody = function () {
   return this.rootDiv_.find('.panel-body');
 };
 
-},{"../utils":253,"./NetSimPanel.html.ejs":163}],163:[function(require,module,exports){
+},{"../utils":252,"./NetSimPanel.html.ejs":162}],162:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -12603,7 +12722,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],142:[function(require,module,exports){
+},{"ejs":273}],142:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12726,7 +12845,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
   rootElement.find(makeEncodingRowSelector(hiddenEncodings)).hide();
 };
 
-},{"./NetSimEncodingControl.html.ejs":141,"./netsimConstants":199}],141:[function(require,module,exports){
+},{"./NetSimEncodingControl.html.ejs":141,"./netsimConstants":198}],141:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -12761,7 +12880,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"./netsimConstants":199,"ejs":274}],128:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./netsimConstants":198,"ejs":273}],128:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -12808,7 +12927,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/netsim":263,"./dataConverters":195,"./netsimConstants":199,"./netsimUtils":201,"ejs":274}],195:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"./dataConverters":194,"./netsimConstants":198,"./netsimUtils":200,"ejs":273}],194:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13152,7 +13271,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   return chars.join('');
 };
 
-},{"../utils":253,"./netsimUtils":201}],127:[function(require,module,exports){
+},{"../utils":252,"./netsimUtils":200}],127:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13205,7 +13324,7 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
   return netsimUtils.bitrateToLocalizedRoundedBitrate(val);
 };
 
-},{"../utils":253,"./NetSimSlider":182,"./netsimConstants":199,"./netsimUtils":201}],201:[function(require,module,exports){
+},{"../utils":252,"./NetSimSlider":181,"./netsimConstants":198,"./netsimUtils":200}],200:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13468,7 +13587,7 @@ exports.zeroPadRight = function (string, desiredWidth) {
 };
 
 
-},{"../../locale/current/netsim":263,"../utils":253,"./NetSimLogger":152,"./netsimConstants":199}],152:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimLogger":151,"./netsimConstants":198}],151:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13620,7 +13739,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
   }
 };
 
-},{}],199:[function(require,module,exports){
+},{}],198:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13771,7 +13890,7 @@ exports.PacketUIColumnType = {
   MESSAGE: 'message'
 };
 
-},{}],182:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14267,9 +14386,9 @@ NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (pos) 
   return Math.pow(this.logBase_, pos);
 };
 
-},{"../../locale/current/netsim":263,"../utils":253,"./NetSimSlider.html.ejs":181}],263:[function(require,module,exports){
+},{"../../locale/current/netsim":262,"../utils":252,"./NetSimSlider.html.ejs":180}],262:[function(require,module,exports){
 /*netsim*/ module.exports = window.blockly.appLocale;
-},{}],181:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -14289,7 +14408,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],126:[function(require,module,exports){
+},{"ejs":273}],126:[function(require,module,exports){
 /**
  * @fileoverview Interface to dashboard user data API.
  */
@@ -14629,7 +14748,7 @@ CommandSequence.prototype.tick = function (clock) {
   }
 };
 
-},{"./utils":253}],54:[function(require,module,exports){
+},{"./utils":252}],54:[function(require,module,exports){
 /**
  * Code.org Apps
  *
@@ -14938,7 +15057,7 @@ clientApi.UserPropertyBag = function (channel_publickey) {
 };
 clientApi.UserPropertyBag.inherits(clientApi.PropertyBag);
 
-},{"./utils":253}],3:[function(require,module,exports){
+},{"./utils":252}],3:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -15146,4 +15265,4 @@ ObservableEvent.prototype.notifyObservers = function () {
     observer.toCall.apply(undefined, args);
   });
 };
-},{}]},{},[197]);
+},{}]},{},[196]);
