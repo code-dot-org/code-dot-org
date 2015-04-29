@@ -260,7 +260,7 @@ var commonMsg = require('../../locale/current/common');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -754,7 +754,7 @@ Maze.init = function(config) {
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
-    extraControlRows = require('./extraControlRows.html')({
+    extraControlRows = require('./extraControlRows.html.ejs')({
       assetUrl: studioApp.assetUrl,
       searchWord: level.searchWord
     });
@@ -768,8 +768,8 @@ Maze.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl,
         showStepButton: level.step && !level.edit_blocks
       }),
@@ -2040,7 +2040,7 @@ Maze.onExecutionFinish = function () {
   }
 };
 
-},{"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../templates/page.html":232,"../timeoutList":238,"../utils":253,"./api":98,"./bee":99,"./beeItemDrawer":101,"./controls.html":103,"./dirtDrawer":104,"./dropletConfig":105,"./executionInfo":106,"./extraControlRows.html":107,"./mazeUtils":113,"./scrat":115,"./tiles":118,"./visualization.html":123,"./wordsearch":124}],124:[function(require,module,exports){
+},{"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../templates/page.html.ejs":232,"../timeoutList":238,"../utils":253,"./api":98,"./bee":99,"./beeItemDrawer":101,"./controls.html.ejs":103,"./dirtDrawer":104,"./dropletConfig":105,"./executionInfo":106,"./extraControlRows.html.ejs":107,"./mazeUtils":113,"./scrat":115,"./tiles":118,"./visualization.html.ejs":123,"./wordsearch":124}],124:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
@@ -2254,6 +2254,10 @@ function letterValue(val) {
   }
 
   if (typeof(val) === "string") {
+    // temporary hack to allow us to have 4 as a letter
+    if (val.length === 2 && val[0] === '_') {
+      return val[1];
+    }
     return val[0];
   }
 
@@ -2432,7 +2436,7 @@ var mazeMsg = require('../../locale/current/maze');
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function(page, level) {
-  return require('./toolboxes/maze.xml')({
+  return require('./toolboxes/maze.xml.ejs')({
     page: page,
     level: level
   });
@@ -2440,7 +2444,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./startBlocks.xml')({
+  return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
   });
@@ -3055,7 +3059,7 @@ cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../utils":253,"./karelLevels":108,"./requiredBlocks":114,"./startBlocks.xml":117,"./tiles":118,"./toolboxes/maze.xml":122,"./wordsearchLevels":125}],125:[function(require,module,exports){
+},{"../../locale/current/maze":262,"../block_utils":27,"../utils":253,"./karelLevels":108,"./requiredBlocks":114,"./startBlocks.xml.ejs":117,"./tiles":118,"./toolboxes/maze.xml.ejs":122,"./wordsearchLevels":125}],125:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -3090,7 +3094,7 @@ module.exports = {
       ['_', '_', '_', '_', '_', '_', '_', '_'],
       ['_', '_',   2, 'E', 'A', 'S', 'T', '_'],
       ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
+      ['_', 'K', 'E', 'L', 'L', 'Y', 'B', '_'],
       ['_', '_', '_', '_', '_', '_', '_', '_']
     ],
     'startBlocks': blockUtils.blockOfType('maze_moveEast')
@@ -3107,7 +3111,7 @@ module.exports = {
     step: true,
     map: [
       ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
+      ['A', 'N', 'G', 'I', 'E', 'D', 'O', 'G'],
       ['_', '_', '_',   2, '_', '_', '_', '_'],
       ['_', '_', '_', 'S', '_', '_', '_', '_'],
       ['_', '_', '_', 'O', '_', '_', '_', '_'],
@@ -3130,7 +3134,7 @@ module.exports = {
     map: [
       ['_', '_', '_', '_', '_', '_', '_', '_'],
       ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
+      ['L', 'E', 'V', 'E', 'N', 'S', 'O', 'N'],
       ['_', '_', '_', '_', '_', '_', '_', '_'],
       ['_', '_',  'T', 'S', 'E', 'W', 2, '_'],
       ['_', '_', '_', '_', '_', '_', '_', '_'],
@@ -3149,15 +3153,16 @@ module.exports = {
     'searchWord': 'NORTH',
     'startDirection': Direction.NORTH,
     step: true,
+    // When this gets removed, also remove the hack from letterValue
     map: [
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', 'H', '_', '_', '_', '_', '_'],
-      ['_', '_', 'T', '_', '_', '_', '_', '_'],
-      ['_', '_', 'R', '_', '_', '_', '_', '_'],
-      ['_', '_', 'O', '_', '_', '_', '_', '_'],
-      ['_', '_', 'N', '_', '_', '_', '_', '_'],
-      ['_', '_', 2, '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_']
+      ['_', '_', '_', '_', 'G', '_', '_', '_'],
+      ['_', '_', 'H', '_', 'O', '_', '_', '_'],
+      ['_', '_', 'T', '_', '_4', '_', '_', '_'],
+      ['_', '_', 'R', '_', 'I', '_', '_', '_'],
+      ['_', '_', 'O', '_', 'T', '_', '_', '_'],
+      ['_', '_', 'N', '_', 'J', '_', '_', '_'],
+      ['_', '_',  2 , '_', 'R', '_', '_', '_'],
+      ['_', '_', '_', '_', 'F', '_', '_', '_']
     ]
   },
   'k_6': {
@@ -3173,12 +3178,12 @@ module.exports = {
     step: true,
     map: [
       ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_',   2, 'J', 'U', 'M', '_', '_'],
-      ['_', '_', '_', '_', '_', 'P', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
+      ['S', '_', '_', '_', '_', '_', '_', '_'],
+      ['A', '_', '_', '_', '_', '_', '_', '_'],
+      ['Y', '_',   2, 'J', 'U', 'M', '_', '_'],
+      ['E', '_', '_', '_', '_', 'P', '_', '_'],
+      ['E', '_', '_', '_', '_', '_', '_', '_'],
+      ['D', '_', '_', '_', '_', '_', '_', '_'],
       ['_', '_', '_', '_', '_', '_', '_', '_']
     ]
   },
@@ -3193,14 +3198,14 @@ module.exports = {
     'startDirection': Direction.EAST,
     step: true,
     map: [
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', 'D', 'E', '_', '_', '_'],
-      ['_',   2, 'C', 'O', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_']
+      ['_', '_', '_', '_', '_', '_', 'M', '_'],
+      ['_', '_', '_', '_', '_', '_', 'A', '_'],
+      ['_', '_', '_', '_', '_', '_', 'R', '_'],
+      ['_', '_', '_', 'D', 'E', '_', 'K', '_'],
+      ['_',   2, 'C', 'O', '_', '_', 'N', '_'],
+      ['_', '_', '_', '_', '_', '_', 'P', '_'],
+      ['_', '_', '_', '_', '_', '_', 'A', '_'],
+      ['_', '_', '_', '_', '_', '_', 'M', '_']
     ]
   },
   'k_13': {
@@ -3221,7 +3226,7 @@ module.exports = {
       ['_', '_', '_', 'B', '_', '_', '_', '_'],
       ['_', '_', '_', 'U', 'G', '_', '_', '_'],
       ['_', '_', '_', '_', '_', '_', '_', '_'],
-      ['_', '_', '_', '_', '_', '_', '_', '_'],
+      ['_', '_', '_', 'H', 'E', 'N', 'R', 'Y'],
       ['_', '_', '_', '_', '_', '_', '_', '_']
     ]
   },
@@ -3376,13 +3381,13 @@ var toolbox = function(page, level) {
   // Must use switch, since browserify only works on requires with literals.
   switch (page) {
     case 1:
-      template = require('./toolboxes/karel1.xml');
+      template = require('./toolboxes/karel1.xml.ejs');
       break;
     case 2:
-      template = require('./toolboxes/karel2.xml');
+      template = require('./toolboxes/karel2.xml.ejs');
       break;
     case 3:
-      template = require('./toolboxes/karel3.xml');
+      template = require('./toolboxes/karel3.xml.ejs');
       break;
   }
   return template({level: level});
@@ -3390,7 +3395,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./karelStartBlocks.xml')({
+  return require('./karelStartBlocks.xml.ejs')({
     page: page,
     level: level
   });
@@ -4612,7 +4617,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../level_base":96,"./karelStartBlocks.xml":109,"./tiles":118,"./toolboxes/karel1.xml":119,"./toolboxes/karel2.xml":120,"./toolboxes/karel3.xml":121}],121:[function(require,module,exports){
+},{"../../locale/current/maze":262,"../block_utils":27,"../level_base":96,"./karelStartBlocks.xml.ejs":109,"./tiles":118,"./toolboxes/karel1.xml.ejs":119,"./toolboxes/karel2.xml.ejs":120,"./toolboxes/karel3.xml.ejs":121}],121:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

@@ -1,67 +1,67 @@
 * * *
 
-title: "Bee: Loops" view: page_curriculum theme: none
+title: "Abelha: Laços" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>14, :title=> 'Bee: Loops', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Curso 1', :lesson=>14, :title=> 'Abelha: Laços', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-In the last stage students used loops to repeat simple movements. Now they're going to add to that the looping of actions in order to help the bee collect more nectar and make more honey.
+Na última etapa, os alunos usaram laços para repetir movimentos simples. Agora, eles vão adicionar ações em laços para ajudar a abelha a coletar mais néctar e a produzir mais mel.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Bee Loops**
+### **Atividade: Laços da abelha**
 
-[Bee: Loops](#Activity)
+[Abelha: laços](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activities](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Write a program for a given task which loops a single command
-  * Identify when a loop can be used to simplify a repetitive action
-  * Employ a combination of sequential and looped commands to move and perform actions
-
-[/together]
-
-[together]
-
-## Getting Started
-
-### <a name="GetStarted"></a> Introduction
-
-  * What daily activites do you do that could be described as a loop?
-  * If you wanted someone to give you 5 cookies, how would you ask them to do it? 
-      * Push for a detailed descripton on this one. How can I take a cookie if the cookie jar is closed? How can I reach the cookie jar if I'm not in the kitchen?
-  * It's obviously far more efficient to do this activity as a loop, instead of laboriously giving all of the instructions for getting a cookie 5 times.
-  * We're going to help the bee be more efficient by looping the instructions to get lots of nectar and make lots of honey.
+  * Escrever um programa para uma tarefa que faz o laço de um único comando
+  * Identificar quando um laço pode ser usado para simplificar uma ação repetitiva
+  * Usar uma combinação de comandos sequenciais e laços para realizar movimentos e ações
 
 [/together]
 
 [together]
 
-## Activity
+## Primeiros passos
 
-### <a name="Activity"></a> [Bee: Loops](http://learn.code.org/s/course1/stage/14/puzzle/1)
+### <a name="GetStarted"></a> Introdução
+
+  * Quais atividades cotidianas você faz que poderiam ser descritas como um laço?
+  * Se você quisesse que alguém lhe desse 5 biscoitos, como você pediria? 
+      * Peça uma descrição detalhada como resposta. Como eu posso pegar um biscoito se o pote de biscoitos estiver fechado? Como eu posso chegar até o pote de biscoitos se eu não estiver na cozinha?
+  * É óbvio que é muito mais eficiente realizar essa atividade usando um laço, ao invés de ter o trabalho dar todas as instruções para pegar um biscoito 5 vezes.
+  * Vamos ajudar a abelha a ser mais eficiente colocando as instruções dentro de um laço, para coletar mais néctar e produzir mais mel.
+
+[/together]
+
+[together]
+
+## Atividade
+
+### <a name="Activity"></a> [Abelha: Laços](http://learn.code.org/s/course1/stage/14/puzzle/1)
 
 [/together]
 
@@ -70,89 +70,89 @@ In the last stage students used loops to repeat simple movements. Now they're go
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### So Moving
+### Vamos mexer
 
-  * Give the students pictures of actions or dance moves that they can do. 
-      * Have students arrange moves and add loops to choreograph their own dance.
-  * Share the dances with the rest of the class.
+  * Dê aos alunos imagens de ações ou passos de dança que eles podem realizar. 
+      * Peça aos alunos que organizem passos e adicionem laços para coreografar sua própria dança.
+  * Compartilhe as danças com o resto da turma.
 
-### Connect It Back
+### Faça a conexão de volta
 
-  * Find some YouTube videos of popular dances that repeat themselves.
-  * Can your class find the loops?
-  * Try the same thing with songs! 
+  * Encontre vídeos no YouTube de danças populares que apresentam repetições.
+  * Você consegue encontrar os laços?
+  * Tente fazer a mesma coisa com músicas! 
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Select and drag / slide
-  * Select object
-  * Use video player
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Selecionar e arrastar / deslizar
+  * Selecionar objeto
+  * Usar player de vídeo
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
-  * 6.c - Troubleshoot systems and applications.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub problems. 
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores. 
 
 ### Next-Gen Science Standards
 
-  * K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
-  * K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
-  * K-ESS3-1. Use a model to represent the relationship between the needs of different plants and animals (including humans) and the places they live.
+  * K-2-PS3-2. Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico.
+  * K-2-ETS1-1. Fazer perguntas, observações e reunir informações sobre uma situação que as pessoas querem mudar para definir um problema simples que pode ser resolvido pelo desenvolvimento de uma ferramenta ou objeto novo, ou melhorado.
+  * K-ESS3-1. Usar um modelo para representar a relação entre as necessidades de diferentes plantas e animais (inclusive humanos) e os lugares onde eles vivem.
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics.
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos.
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * K.CC.B.4 - Understand the relationship between numbers and quantities; connect counting to cardinality.
-  * K.OA.A.3 - Decompose numbers less than or equal to 10 into pairs in more than one way, e.g., by using objects or drawings, and record each decomposition by a drawing or equation (e.g., 5 = 2 + 3 and 5 = 4 + 1).
-  * K.OA.A.5 - Fluently add and subtract within 5.
-  * K.G.A.1 - Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.
-  * 1.OA.A.1 - Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.
-  * 2.OA.A.1 - Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.
+  * K.CC.B.4 - Entender a relação entre números e quantidades; relacionar contagem e cardinalidade.
+  * K.OA.A.3 - Decompor, de mais de uma maneira, números menores ou iguais a 10 em pares, por exemplo, usando objetos ou desenhos, e guardar cada decomposição fazendo um desenho ou equação (por exemplo, 5 = 2 + 3 e 5 = 4 + 1).
+  * K.OA.A.5 - Somar e subtrair até 5 fluentemente.
+  * K.G.A.1 - Descrever objetos no ambiente usando nomes de formas, e descrever as posições relativas desses objetos usando termos como acima, abaixo, ao lado, na frente, atrás e próximo a.
+  * 1.OA.A.1 - Usar adição e subtração até 20 para resolver problemas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições, por exemplo, usando objetos, desenhos e equações com um símbolo que substitui o número desconhecido para representar o problema.
+  * 2.OA.A.1 - Usar adição e subtração até 100 para resolver problemas de uma ou duas etapas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições, por exemplo, usando objetos, desenhos e equações com um símbolo que substitui o número desconhecido para representar o problema.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.K.1 - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
-  * L.K.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships (e.g., because).
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe (e.g., When other kids are happy that makes me happy).
+  * SL.K.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos da educação infantil e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.K.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples (por exemplo, porque).
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição (por exemplo, quando outras crianças estão felizes, eu também fico feliz).
 
 [/standards]
 

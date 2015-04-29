@@ -6,17 +6,17 @@ title: Conditionals with Cards view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=>'Conditionals with Cards', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 We don’t always know ahead of time what things will be like when we run our computer programs. Different users have different needs, and sometimes you will want to do something based off of one user's need that you don’t want to do with someone else. That is where conditionals come in. This lesson demonstrates how conditionals can be used to tailor a program to specific information.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -37,9 +37,9 @@ We don’t always know ahead of time what things will be like when we run our co
 
 7) [Conditionals with Cards Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,28 +47,29 @@ We don’t always know ahead of time what things will be like when we run our co
   * Determine whether a conditional is met based on criteria 
   * Traverse a program and predict the outcome, given a set of input
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Playing Cards
   * Paper for keeping track of how a program reacts to a card
   * Pens & Pencils
   * [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf)
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/IcEL5ibSvTs?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * This Teacher Lesson Guide
   * One [Sample Program](/curriculum/course2/12/Activity12-Conditionals.pdf) for the class to look at
   * Print one [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -88,24 +89,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Conditionals** - Say it with me: Con-di-shun-uls   
 Statements that only run under certain conditions
@@ -146,7 +147,7 @@ Statements that only run under certain conditions
 
 Now let's play a game.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -188,11 +189,11 @@ Here is the same program in pseudocode:
 
 ![](pseudo.png)
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -205,13 +206,13 @@ Here is the same program in pseudocode:
       * Can you give an example of where we saw that during the game?
   * What part of that game did you like the best?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 6) Vocab Shmocab
 
@@ -224,7 +225,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -235,7 +236,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -271,7 +272,7 @@ Use these activities to enhance student learning. They can be used as outside of
       * Did any two programs return the same answer?
       * Did any return something different?
 
-[/together]
+[/juntos]
 
 [standards]
 

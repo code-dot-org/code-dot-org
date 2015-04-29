@@ -190,13 +190,21 @@ img#turtleImage {
   background-color: #FFA000;
   color: #fff;
   margin-left: 0px;
-  margin-right: 0px;
-  padding: 3px;
-  font-size: 12px;
+  margin-right: 3px;
+  padding: 3px 6px;
+  font-size: 14px;
+}
+
+#pauseButton, #continueButton {
+  min-width: 120px;
 }
 
 .debugger_button:focus {
   outline-style: none;
+}
+
+.debugger_button>img {
+  opacity: 1;
 }
 
 #debug-area {
@@ -283,15 +291,13 @@ img#turtleImage {
   fill: #eee;
 }
 
-#pauseButton {
-  min-width: 80px;
-}
-
 /* Sprited icons. */
 .icon21 {
   height: 21px;
   width: 21px;
   background-image: url("#{$root}icons.png");
+  background-size: 42px 147px;
+  margin-bottom: -3px;
 }
 .code {
   background-position: -21px 0px;
@@ -321,6 +327,26 @@ img#turtleImage {
 }
 .down-btn {
   background-position: 0px -42px;
+  margin-right: 3px;
+}
+.pause-btn {
+  background-position: 0px -84px;
+  margin-right: 3px;
+}
+.continue-btn {
+  background-position: -21px -84px;
+  margin-right: 3px;
+}
+.step-in-btn {
+  background-position: 0px -105px;
+  margin-right: 3px;
+}
+.step-out-btn {
+  background-position: -21px -105px;
+  margin-right: 3px;
+}
+.step-over-btn {
+  background-position: 0px 21px;
   margin-right: 3px;
 }
 
@@ -372,6 +398,14 @@ button.arrow:focus {
   display: inline-block;
   vertical-align: top;
   &.share-cell-none {
+    display: none;
+  }
+}
+
+#design-cell {
+  display: inline-block;
+  vertical-align: top;
+  &.design-cell-none {
     display: none;
   }
 }

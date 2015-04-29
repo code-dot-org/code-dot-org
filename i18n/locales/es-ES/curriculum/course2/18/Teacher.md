@@ -6,17 +6,17 @@ title: Your Digital Footprint view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Your Digital Footprint', :unplugged=>true, :disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), this lesson helps students learn about the similarities of staying safe in the real world and when visiting websites. Students will also learn that the information they put online leaves a digital footprint or “trail.” This trail can be big or small, helpful or hurtful, depending on how they manage it.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 20 minutes
 
@@ -37,9 +37,9 @@ In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educ
 
 7) [Digital Footprint Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -48,22 +48,23 @@ In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educ
   * Recognize if they should ask an adult they trust before they visit a particular website
   * Explore what information is appropriate to be put online
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * One [Animal Tracks Chart](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) (page 7)
   * Pens & Pencils
   * [Digital Footprint Assessment](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf)
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/qjusxfefJdM?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * This Teacher Lesson Guide
   * [Download](http://d1pmarobgdhgjx.cloudfront.net/education/pause-think-online-2.mp4) or [prepare](https://www.commonsensemedia.org/videos/pause-think-online) the "Pause and Think" video
   * Common Sense Media's [Follow the Digital Trail](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) game 
@@ -71,7 +72,7 @@ In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educ
   * Print one [Animal Tracks](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) chart (page 7) for each student
   * Print one [Digital Footprint Assessment](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -91,24 +92,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Digital Footprint** - Say it with me: Dih-jih-tal Foot-print   
 The information about someone on the Internet
@@ -137,17 +138,17 @@ Play [Pause and Think Online](https://www.commonsensemedia.org/videos/pause-thin
           * Filled with things that are for older kids or adults
       * Discuss examples of each of these kinds of sites.
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 If you have access to a computer, feel free to navigate to sites that might showcase each of these types (using extreme caution with your RED selection).
 
-[/tip]
+[/sugerencia]
 
 Now, let's see what we can do to keep ourselves safe.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -172,19 +173,19 @@ Now, let's see what we can do to keep ourselves safe.
 > 
 > 5) Invite students to go on a hunt for information. Let them know that the information that Mizzle and Electra post can be seen by anyone, including the detectives. Each group should follow the digital trail of both animals, starting with the mouse and then the elephant. Stagger the groups so they are on the trail at slightly different times. Students should fill out their handout as they go.
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 For more in-depth modules, you can find additions to this curriculum at the [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) page on Scope and Sequence.
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -195,13 +196,13 @@ For more in-depth modules, you can find additions to this curriculum at the [Com
 
 Take the time to discuss what is appropriate information to share on the Internet, and what is not: ![](info.png)
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow-partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow-partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 6) Vocab Shmocab
 
@@ -214,7 +215,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -225,7 +226,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -240,7 +241,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
   * Visit [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) to learn more about how you can keep your students safe in this digital age.
 
-[/together]
+[/juntos]
 
 [standards]
 

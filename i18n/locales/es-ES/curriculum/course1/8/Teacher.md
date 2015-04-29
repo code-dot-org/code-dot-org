@@ -6,17 +6,17 @@ title: "Artist: Sequence" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>8, :title=> 'Artist: Sequence', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this lesson students will take control of the Artist to complete simple drawings on the screen.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ In this lesson students will take control of the Artist to complete simple drawi
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -41,7 +41,7 @@ In this lesson students will take control of the Artist to complete simple drawi
   * Select an argument for a given command
   * Choose the appropriate blocks to draw images with non-continuous lines
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -55,7 +55,7 @@ Brainstorm with students ways to tell someone else how to draw a picture:
   * In these puzzles you will be moving a character who leaves a line everywhere it goes. 
       * You'll use the cardinal directions to do this, just like we've been doing to move the bird and bee.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -65,7 +65,7 @@ Brainstorm with students ways to tell someone else how to draw a picture:
 
 If students struggle to use the correct number of blocks to draw a line, point out that each line segment has a dot on both ends.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -83,7 +83,7 @@ If students struggle to use the correct number of blocks to draw a line, point o
   * On the second sheet, draw instructions for recreating that image using a series of arrows.
   * Trade instruction sheets and attempt to recreate the image using only the provided instructions.
 
-[/together]
+[/juntos]
 
 [standards]
 

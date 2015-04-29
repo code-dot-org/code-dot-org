@@ -35,7 +35,7 @@ var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
@@ -1081,11 +1081,11 @@ Studio.init = function(config) {
 
   var showFinishButton = !level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({
+  var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  var extraControlsRow = require('./extraControlRows.html')({
+  var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
     finishButton: !finishButtonFirstLine && showFinishButton
   });
@@ -1094,7 +1094,7 @@ Studio.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
+      visualization: require('./visualization.html.ejs')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -3011,7 +3011,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/current/common":258,"../../locale/current/studio":264,"../StudioApp":4,"../canvg/StackBlur.js":50,"../canvg/canvg.js":51,"../canvg/rgbcolor.js":52,"../canvg/svg_todataurl":53,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../skins":207,"../templates/page.html":232,"../utils":253,"../xml":254,"./api":209,"./bigGameLogic":210,"./blocks":211,"./collidable":212,"./constants":213,"./controls.html":214,"./dropletConfig":216,"./extraControlRows.html":217,"./projectile":220,"./rocketHeightLogic":221,"./samBatLogic":222,"./visualization.html":225}],225:[function(require,module,exports){
+},{"../../locale/current/common":258,"../../locale/current/studio":264,"../StudioApp":4,"../canvg/StackBlur.js":50,"../canvg/canvg.js":51,"../canvg/rgbcolor.js":52,"../canvg/svg_todataurl":53,"../codegen":55,"../constants":57,"../dom":58,"../dropletUtils":59,"../skins":207,"../templates/page.html.ejs":232,"../utils":253,"../xml":254,"./api":209,"./bigGameLogic":210,"./blocks":211,"./collidable":212,"./constants":213,"./controls.html.ejs":214,"./dropletConfig":216,"./extraControlRows.html.ejs":217,"./projectile":220,"./rocketHeightLogic":221,"./samBatLogic":222,"./visualization.html.ejs":225}],225:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

@@ -69,7 +69,7 @@ def main()
       end
     end
 
-    HipChat.log "#{documents.count} users indexed into SOLR (ids: #{start_id} - #{last_id})"
+#    HipChat.log "#{documents.count} users indexed into SOLR (ids: #{start_id} - #{last_id})"
   end
 
   save_last_id(last_id)

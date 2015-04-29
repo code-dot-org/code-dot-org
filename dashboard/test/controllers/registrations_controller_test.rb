@@ -3,7 +3,8 @@ require 'test_helper'
 class RegistrationsControllerTest < ActionController::TestCase
 
   setup do
-    @request.env["devise.mapping"] = Devise.mappings[:user]
+    # stub properties so we don't try to hit pegasus db
+    Properties.stubs(:get).returns nil
   end
 
   test "new" do

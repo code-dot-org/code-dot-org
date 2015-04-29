@@ -6,17 +6,17 @@ title: Maze view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>2, :title=> 'Maze', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 This course is a review of maze concepts from Course 2. Students will help the zombie get to the sunflower using a combination of sequences and loops.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ This course is a review of maze concepts from Course 2. Students will help the z
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -42,7 +42,7 @@ This course is a review of maze concepts from Course 2. Students will help the z
   * Analyze a problem and complete it as efficiently as possible
   * Employ a combination of sequential and looped commands to reach the end of a maze
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -56,7 +56,7 @@ Review with students the basic maze navigation, particularly:
   * Turning left/right
   * Looping
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -66,7 +66,7 @@ Review with students the basic maze navigation, particularly:
 
 As your students work through the puzzles, observe how they plan the path for the zombie. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems. You may want to go through a few puzzles on the projector. While doing this you can ask a one student to trace the path on the screen while another writes the directions on a whiteboard.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -81,7 +81,7 @@ As your students work through the puzzles, observe how they plan the path for th
 
 In small groups, let students design their own mazes and challenge each other to write programs to solve them. For added fun, make life size mazes with students as the zombie and flower.
 
-[/together]
+[/juntos]
 
 [standards]
 

@@ -80,9 +80,9 @@ module.exports.blocks = [
   {'func': 'hide', 'category': 'Turtle' },
   {'func': 'speed', 'category': 'Turtle', 'params': ["50"] },
 
-  {'func': 'setTimeout', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'setTimeout', 'category': 'Control', 'type': 'either', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearTimeout', 'category': 'Control', 'params': ["0"] },
-  {'func': 'setInterval', 'category': 'Control', 'params': ["function() {\n  \n}", "1000"] },
+  {'func': 'setInterval', 'category': 'Control', 'type': 'either', 'params': ["function() {\n  \n}", "1000"] },
   {'func': 'clearInterval', 'category': 'Control', 'params': ["0"] },
 
   {'func': 'console.log', 'category': 'Variables', 'params': ['"Message"'], 'dontAlias': true },

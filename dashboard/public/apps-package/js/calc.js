@@ -42,7 +42,7 @@ var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
 var skins = require('../skins');
 var levels = require('./levels');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
@@ -158,8 +158,8 @@ Calc.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,
@@ -1074,7 +1074,7 @@ function displayFeedback() {
     level: level,
     feedbackType: appState.testResults,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
-    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined, 
+    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     appStrings: {
       reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
     },
@@ -1109,7 +1109,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":257,"../../locale/current/common":258,"../StudioApp":4,"../block_utils":27,"../dom":58,"../skins":207,"../templates/page.html":232,"../timeoutList":238,"../utils":253,"./controls.html":40,"./equation":41,"./equationSet":42,"./expressionNode":43,"./inputIterator":44,"./js-numbers/js-numbers.js":45,"./levels":46,"./token":48,"./visualization.html":49}],49:[function(require,module,exports){
+},{"../../locale/current/calc":257,"../../locale/current/common":258,"../StudioApp":4,"../block_utils":27,"../dom":58,"../skins":207,"../templates/page.html.ejs":232,"../timeoutList":238,"../utils":253,"./controls.html.ejs":40,"./equation":41,"./equationSet":42,"./expressionNode":43,"./inputIterator":44,"./js-numbers/js-numbers.js":45,"./levels":46,"./token":48,"./visualization.html.ejs":49}],49:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

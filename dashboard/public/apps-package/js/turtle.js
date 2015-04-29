@@ -1060,7 +1060,7 @@ var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
@@ -1226,7 +1226,7 @@ Artist.prototype.init = function(config) {
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
@@ -2484,7 +2484,7 @@ Artist.prototype.resetStepInfo_ = function () {
   this.stepDistanceCovered = 0;
 };
 
-},{"../../locale/current/common":258,"../../locale/current/turtle":265,"../codegen":55,"../dropletUtils":59,"../slider":208,"../templates/page.html":232,"../utils":253,"./api":240,"./colours":242,"./controls.html":243,"./dropletConfig":245,"./levels":246}],246:[function(require,module,exports){
+},{"../../locale/current/common":258,"../../locale/current/turtle":265,"../codegen":55,"../dropletUtils":59,"../slider":208,"../templates/page.html.ejs":232,"../utils":253,"./api":240,"./colours":242,"./controls.html.ejs":243,"./dropletConfig":245,"./levels":246}],246:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./colours');
 var answer = require('./answers').answer;
@@ -2499,7 +2499,7 @@ var LEVELBUILDER_LEVEL = 7;
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function(page, level) {
-  return require('./toolbox.xml')({
+  return require('./toolbox.xml.ejs')({
     page: page,
     level: level
   });
@@ -2507,7 +2507,7 @@ var toolbox = function(page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function(page, level) {
-  return require('./startBlocks.xml')({
+  return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
   });
@@ -3389,7 +3389,7 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
   'startBlocks': "moveForward(100);\n",
 });
 
-},{"../../locale/current/turtle":265,"../block_utils":27,"../level_base":96,"../utils":253,"./answers":239,"./colours":242,"./requiredBlocks":248,"./startBlocks.xml":250,"./toolbox.xml":251}],251:[function(require,module,exports){
+},{"../../locale/current/turtle":265,"../block_utils":27,"../level_base":96,"../utils":253,"./answers":239,"./colours":242,"./requiredBlocks":248,"./startBlocks.xml.ejs":250,"./toolbox.xml.ejs":251}],251:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

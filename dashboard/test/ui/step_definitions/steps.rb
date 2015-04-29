@@ -17,7 +17,7 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
-  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait = Selenium::WebDriver::Wait.new(:timeout => 60)
   wait.until { @browser.find_element(selection_criteria) }
 end
 
@@ -169,6 +169,10 @@ Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedTe
   element_has_text(selector, expectedText)
 end
 
+Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
+  element_has_i18n_text(selector, language, locKey)
+end
+
 Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
   element_contains_text(selector, expectedText)
 end
@@ -285,7 +289,7 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
   @parent_item.should eq @actual_parent_item
 end
 
-def encrypted_cookie(user_id)
+def encrypted_cookie(user)
   key_generator = ActiveSupport::KeyGenerator.new(
       CDO.dashboard_secret_key_base,
       iterations:1000
@@ -296,7 +300,7 @@ def encrypted_cookie(user_id)
     key_generator.generate_key('signed encrypted cookie')
   )
 
-  cookie = {'warden.user.user.key' => [[user_id]]}
+  cookie = {'warden.user.user.key' => [[user.id], user.authenticatable_salt]}
 
   encrypted_data = encryptor.encrypt_and_sign(cookie)
 
@@ -305,7 +309,7 @@ end
 
 def log_in_as(user)
   params = { name: "_learn_session_#{Rails.env}",
-            value: encrypted_cookie(user.id)}
+            value: encrypted_cookie(user)}
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
@@ -323,6 +327,16 @@ Given(/^I am a teacher$/) do
     teacher.age = 40
   end
   log_in_as(@teacher)
+end
+
+Given(/^I am a student$/) do
+  @student = User.find_or_create_by!(email: 'student@testing.xx') do |user|
+    user.name = "Test student"
+    user.password = SecureRandom.base64
+    user.user_type = 'student'
+    user.age = 16
+  end
+  log_in_as(@student)
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|

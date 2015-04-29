@@ -44,7 +44,7 @@ var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
@@ -97,8 +97,8 @@ Eval.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,
@@ -498,7 +498,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":258,"../../locale/current/eval":259,"../StudioApp":4,"../block_utils":27,"../canvg/StackBlur.js":50,"../canvg/canvg.js":51,"../canvg/rgbcolor.js":52,"../canvg/svg_todataurl":53,"../codegen":55,"../dom":58,"../skins":207,"../templates/page.html":232,"../utils":253,"./api":60,"./controls.html":62,"./evalError":66,"./evalText":72,"./levels":75,"./visualization.html":77}],77:[function(require,module,exports){
+},{"../../locale/current/common":258,"../../locale/current/eval":259,"../StudioApp":4,"../block_utils":27,"../canvg/StackBlur.js":50,"../canvg/canvg.js":51,"../canvg/rgbcolor.js":52,"../canvg/svg_todataurl":53,"../codegen":55,"../dom":58,"../skins":207,"../templates/page.html.ejs":232,"../utils":253,"./api":60,"./controls.html.ejs":62,"./evalError":66,"./evalText":72,"./levels":75,"./visualization.html.ejs":77}],77:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
