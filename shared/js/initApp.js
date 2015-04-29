@@ -101,11 +101,19 @@ dashboard.updateTimestamp = function() {
   }
 };
 
-var appToProjectUrl = {
-  turtle: '/p/artist',
-  studio: '/p/playlab',
-  applab: '/p/applab'
-};
+function appToProjectUrl(options) {
+  switch (options.app) {
+    case 'applab':
+      return '/p/applab';
+    case 'turtle':
+      return '/p/artist';
+    case 'studio':
+      if (options.level.useContractEditor) {
+        return '/p/algebra';
+      }
+      return '/p/playlab';
+  }
+}
 
 /**
  * @returns {string} The serialized level source from the editor.
@@ -126,7 +134,7 @@ dashboard.saveProject = function(callback, overrideSource) {
   var channelId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = overrideSource || dashboard.getEditorSource();
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
-  dashboard.currentApp.level = appToProjectUrl[appOptions.app];
+  dashboard.currentApp.level = appToProjectUrl(appOptions);
   if (channelId && dashboard.currentApp.isOwner) {
     channels().update(channelId, dashboard.currentApp, function(data) {
       if (data) {
@@ -225,7 +233,7 @@ function initApp() {
       appOptions.callouts = [];
       dashboard.showMinimalProjectHeader();
     }
-  } else if (appOptions.isLegacyShare && appToProjectUrl[appOptions.app]) {
+  } else if (appOptions.isLegacyShare && appToProjectUrl(appOptions)) {
     dashboard.currentApp = {
       name: 'Untitled Project'
     };
