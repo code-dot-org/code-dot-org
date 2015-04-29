@@ -117,16 +117,6 @@ dashboard.getEditorSource = function() {
 };
 
 /**
- * Wrapper to allow saveProject to be called by jQuery's trigger()
- * with a callback param.
- * @param event {*} Ignored.
- * @param callback {Function} Callback to pass to saveProject.
- */
-dashboard.saveProjectWrapper = function(event, callback) {
-  dashboard.saveProject(callback);
-};
-
-/**
  * Saves the project to the Channels API. Calls `callback` on success if a
  * callback function was provided. If `overrideSource` is set it will save that
  * string instead of calling `dashboard.getEditorSource()`.
@@ -235,7 +225,9 @@ function initApp() {
         };
       }
 
-      $(window).on('save_project', dashboard.saveProjectWrapper);
+      $(window).on('run_button_pressed', function(event, callback) {
+        dashboard.saveProject(callback);
+      });
 
       // Autosave every AUTOSAVE_INTERVAL milliseconds
       $(window).on('appInitialized', function () {
