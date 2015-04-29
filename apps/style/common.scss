@@ -264,6 +264,16 @@ html[dir='rtl'] #codeWorkspace {
   color: white;
 }
 
+#visualizationResizeBar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 15px;
+  left: 400px;
+  cursor: ew-resize;
+}
+
 #visualization {
   position: relative;
   height: 400px;
@@ -321,6 +331,12 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: $width;
   }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
   #visualizationEditor.responsive {
     margin-left: $width;
   }
@@ -348,6 +364,12 @@ html[dir='rtl'] #codeWorkspace {
     left: $width;
   }
   html[dir='rtl'] #codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   #visualizationEditor.responsive {
@@ -379,6 +401,12 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: $width;
   }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
   #visualizationEditor.responsive {
     margin-left: $width;
   }
@@ -406,6 +434,12 @@ html[dir='rtl'] #codeWorkspace {
     left: $width;
   }
   html[dir='rtl'] #codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   #visualizationEditor.responsive {
