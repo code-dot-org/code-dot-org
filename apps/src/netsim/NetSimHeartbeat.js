@@ -196,4 +196,5 @@ NetSimHeartbeat.prototype.tick = function () {
  */
 NetSimHeartbeat.prototype.spoofExpired = function () {
   this.falseAgeMS_ += 600000; // 10 minutes old
+  this.update();
 };
