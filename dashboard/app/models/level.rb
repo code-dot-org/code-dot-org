@@ -188,7 +188,7 @@ class Level < ActiveRecord::Base
   end
 
   def project_template_level
-    return nil if project_template_level_name.nil?
+    return nil if self.try(:project_template_level_name).nil?
     Level.find_by_key(project_template_level_name)
   end
 

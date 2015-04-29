@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150423215833) do
+ActiveRecord::Schema.define(version: 20150423215834) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -52,6 +52,16 @@ ActiveRecord::Schema.define(version: 20150423215833) do
     t.string   "on"
     t.string   "callout_text"
   end
+
+  create_table "channel_tokens", force: true do |t|
+    t.string   "channel",    null: false
+    t.integer  "user_id",    null: false
+    t.integer  "level_id",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "channel_tokens", ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
 
   create_table "cohorts", force: true do |t|
     t.datetime "created_at"
