@@ -44,6 +44,13 @@ var MessageGranularity = netsimConstants.MessageGranularity;
 var logger = NetSimLogger.getSingleton();
 
 /**
+ * Initial time between connecting to the shard and starting
+ * the first cleaning cycle.
+ * @type {number}
+ */
+var INITIAL_CLEANING_DELAY_MS = 10000; // 10 seconds
+
+/**
  * The top-level Internet Simulator controller.
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
@@ -434,7 +441,8 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
 
   this.shard_ = new NetSimShard(shardID);
   if (this.shouldEnableCleanup()) {
-    this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+    this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
+        INITIAL_CLEANING_DELAY_MS);
   }
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
@@ -910,27 +918,32 @@ NetSim.prototype.render = function () {
 
   shareLink = this.lobby_.getShareLink();
 
-  // Render left column
   if (this.isConnectedToRemote()) {
-    this.mainContainer_.find('.rightcol-disconnected').hide();
-    this.mainContainer_.find('.rightcol-connected').show();
-    this.sendPanel_.setFromAddress(myAddress);
-  } else {
-    this.mainContainer_.find('.rightcol-disconnected').show();
-    this.mainContainer_.find('.rightcol-connected').hide();
-    this.lobby_.render();
-  }
+    // Swap in 'connected' div
+    this.mainContainer_.find('#netsim-disconnected').hide();
+    this.mainContainer_.find('#netsim-connected').show();
 
-  // Render right column
-  if (this.statusPanel_) {
-    this.statusPanel_.render({
-      isConnected: isConnected,
-      statusString: clientStatus,
-      myHostname: myHostname,
-      myAddress: myAddress,
-      remoteNodeName: remoteNodeName,
-      shareLink: shareLink
-    });
+    // Render right column
+    this.sendPanel_.setFromAddress(myAddress);
+
+    // Render left column
+    if (this.statusPanel_) {
+      this.statusPanel_.render({
+        isConnected: isConnected,
+        statusString: clientStatus,
+        myHostname: myHostname,
+        myAddress: myAddress,
+        remoteNodeName: remoteNodeName,
+        shareLink: shareLink
+      });
+    }
+  } else {
+    // Swap in 'disconnected' div
+    this.mainContainer_.find('#netsim-disconnected').show();
+    this.mainContainer_.find('#netsim-connected').hide();
+
+    // Render lobby
+    this.lobby_.render();
   }
 };
 
