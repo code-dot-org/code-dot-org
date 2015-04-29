@@ -3,7 +3,7 @@
 
 <div id="debug-area">
   <% if (debugButtons) { %>
-  <div>
+  <div id="debugResizeBar">
     <div id="debug-buttons" style="display:inline;">
       <button id="pauseButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="pause-btn icon21">
@@ -34,11 +34,11 @@
 
   <% if (debugConsole) { %>
   <div id="debug-console" class="debug-console">
-    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>
+    <div id="debug-output" class="debug-output"></div>
     <span class="debug-input-prompt">
       &gt;
     </span>
-    <div contenteditable id="debug-input" class="debug-input"></div>
+    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>
   </div>
   <% } %>
 </div>
