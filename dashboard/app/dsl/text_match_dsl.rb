@@ -6,6 +6,7 @@ class TextMatchDSL < ContentDSL
     @hash = { answers: [] }
   end
 
+  def height(text) @hash[:height] = text end
   def answer(text) @hash[:answers] << text end
   def placeholder(text) @hash[:placeholder] = text end
 
