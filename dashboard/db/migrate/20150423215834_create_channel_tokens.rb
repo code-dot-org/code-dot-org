@@ -14,7 +14,11 @@ class CreateChannelTokens < ActiveRecord::Migration
 
     # Copy 'Big Game Template' channel for each user that has one saved.
     PEGASUS_DB[:storage_apps].where('state != "deleted"').each do |row|
-      data = JSON.parse row[:value]
+      begin
+        data = JSON.parse row[:value]
+      rescue
+        puts "Couldn't parse channel with ID '#{row[:id]}'"
+      end
       if data['projectTemplateLevelName'] == 'Big Game Template'
         channel = storage_encrypt_channel_id(row[:storage_id], row[:id])
         user = user_storage_ids_table.where(id: row[:storage_id]).first
