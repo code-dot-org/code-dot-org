@@ -323,6 +323,25 @@ function outputError(warning, level, lineNum) {
 
 var OPTIONAL = true;
 
+/**
+ * @param value
+ * @returns {boolean} true if value is a string, number, boolean, undefined or null.
+ *     returns false for other values, including instances of Number or String.
+ */
+function isPrimitiveType(value) {
+  switch (typeof value) {
+    case 'string':
+    case 'number':
+    case 'boolean':
+    case 'undefined':
+      return true;
+    case 'object':
+      return (value === null);
+    default:
+      return false;
+  }
+};
+
 function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
@@ -341,6 +360,15 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     } else if (expectedType === 'function') {
       // Special handling for functions, it must be an interpreter function:
       properType = (typeof varValue === 'object') && (varValue.type === 'function');
+    } else if (expectedType === 'number') {
+      properType = (typeof varValue === 'number' ||
+                    (typeof varValue === 'string' && !isNaN(varValue)));
+    } else if (expectedType === 'primitive') {
+      properType = isPrimitiveType(varValue);
+      if (!properType) {
+        // Ensure a descriptive error message is displayed.
+        expectedType = 'string, number, boolean, undefined or null';
+      }
     } else {
       properType = (typeof varValue === expectedType);
     }
@@ -2899,6 +2927,11 @@ Applab.clearInterval = function (opts) {
 };
 
 Applab.createRecord = function (opts) {
+  apiValidateType(opts, 'createRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'createRecord', 'record', opts.record, 'object');
+  apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
+  apiValidateType(opts, 'createRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleCreateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
@@ -2925,6 +2958,9 @@ Applab.handleError = function(errorCallback, message) {
 };
 
 Applab.getKeyValue = function(opts) {
+  apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
+  apiValidateType(opts, 'getKeyValue', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleReadValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
@@ -2940,6 +2976,10 @@ Applab.handleReadValue = function(successCallback, value) {
 };
 
 Applab.setKeyValue = function(opts) {
+  apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
+  apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
+  apiValidateType(opts, 'setKeyValue', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleSetKeyValue.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
@@ -2955,6 +2995,10 @@ Applab.handleSetKeyValue = function(successCallback) {
 };
 
 Applab.readRecords = function (opts) {
+  apiValidateType(opts, 'readRecords', 'table', opts.table, 'string');
+  apiValidateType(opts, 'readRecords', 'searchParams', opts.searchParams, 'object');
+  apiValidateType(opts, 'readRecords', 'onSuccess', opts.onSuccess, 'function');
+  apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleReadRecords.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
@@ -2970,6 +3014,11 @@ Applab.handleReadRecords = function(successCallback, records) {
 };
 
 Applab.updateRecord = function (opts) {
+  apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
+  apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
+  apiValidateType(opts, 'updateRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleUpdateRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
@@ -2985,6 +3034,11 @@ Applab.handleUpdateRecord = function(successCallback, record) {
 };
 
 Applab.deleteRecord = function (opts) {
+  apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
+  apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
+  apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
+  apiValidateType(opts, 'deleteRecord', 'onSuccess', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = Applab.handleDeleteRecord.bind(this, opts.onSuccess);
   var onError = Applab.handleError.bind(this, opts.onError);
   AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
