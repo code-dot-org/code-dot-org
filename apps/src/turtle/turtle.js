@@ -32,7 +32,7 @@ var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
@@ -198,7 +198,7 @@ Artist.prototype.init = function(config) {
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,

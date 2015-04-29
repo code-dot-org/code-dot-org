@@ -681,6 +681,32 @@ en:
       PDAlg attendance commitment:
         Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
         I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
+      PDAlg Blocks Video:
+        Intro to Evaluation Blocks: Intro to Evaluation Blocks
+        In which are of the screen do you click blocks together to write a program?: In which are of the screen do you click blocks together to write a program?
+        Play Area: Play Area
+        Toolbox: Toolbox
+        Workspace: Workspace
+      PDAlg implementation:
+        Curriculum Implementation: Curriculum Implementation
+        ? Given the scope and sequence from the last page, which of the following best describes when you expect to implement the CS in Algebra curriculum?
+        : Given the scope and sequence from the last page, which of the following best describes when you expect to implement the CS in Algebra curriculum?
+        September - October: September - October
+        November - December: November - December
+        January - February: January - February
+        March - April: March - April
+        May - June: May - June
+        Throughout the year: Throughout the year
+      PDAlg PreQ 1:
+        Pre-Survey Question 1: Pre-Survey Question 1
+        Have you ever participated in an online PD program before?: Have you ever participated in an online PD program before?
+        'Yes': 'Yes'
+        'No': 'No'
+      PDAlg PreQ 2:
+        Pre-Survey Question 2: Pre-Survey Question 2
+        Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?
+        'Yes': 'Yes'
+        'No': 'No'
       PDECS attendance commitment:
         Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
         I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
@@ -756,7 +782,7 @@ en:
         All of the above: All of the above
       PDK5 What is CS:
         What is Computer Science?: What is Computer Science?
-        'A computer program, or code, is:': 'A computer program, or code, is:'
+        'A computer program, or "code," is:': 'A computer program, or "code," is:'
         a part inside of a computer: a part inside of a computer
         a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
         a week-long course to learn about computers: a week-long course to learn about computers
@@ -779,6 +805,19 @@ en:
         rocket-height(seconds) = seconds * 10 + 7: rocket-height(seconds) = seconds * 10 + 7
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
         rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
+      sciPD attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
+        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
+      sciPD PreQ 1:
+        Pre-Survey Question 1: Pre-Survey Question 1
+        Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
+        'Yes': 'Yes'
+        'No': 'No'
+      sciPD PreQ 2:
+        Pre-Survey Question 2: Pre-Survey Question 2
+        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?
+        'Yes': 'Yes'
+        'No': 'No'
       test multi image:
         Maze Multiple Choice Two: Maze Multiple Choice Two
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400

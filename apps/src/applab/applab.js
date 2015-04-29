@@ -5,6 +5,7 @@
  *
  */
 /* global $ */
+/* global dashboard */
 
 'use strict';
 require('./acemode/mode-javascript_codeorg');
@@ -16,7 +17,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -203,7 +204,7 @@ function adjustAppSizeStyles(container) {
 
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
-          for (var k = 0; k < childRules.length && changedChildRules < 6; k++) {
+          for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
             if (childRules[k].selectorText === "div#visualization.responsive") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
@@ -226,8 +227,18 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "left: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
+            } else if (childRules[k].selectorText === "div#visualizationResizeBar") {
+              // set the left for the visualizationResizeBar
+              childRules[k].style.cssText = "left: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
+              childRules[k].style.cssText = "right: " +
+                  Applab.appWidth * scale + "px;";
+              changedChildRules++;
+            } else if (childRules[k].selectorText === "html[dir='rtl'] div#visualizationResizeBar") {
+              // set the right for the visualizationResizeBar (RTL mode)
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
@@ -342,6 +353,10 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         var color = new RGBColor(varValue);
         properType = color.ok;
       }
+    } else if (expectedType === 'uistring') {
+      properType = (typeof varValue === 'string') ||
+                   (typeof varValue === 'number') ||
+                   (typeof varValue === 'boolean');
     } else if (expectedType === 'function') {
       // Special handling for functions, it must be an interpreter function:
       properType = (typeof varValue === 'object') && (varValue.type === 'function');
@@ -638,8 +653,9 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
         // Overwrite the nextStep value. (If we hit a breakpoint during a step
         // out or step over, this will cancel that step operation early)
         Applab.nextStep = StepType.RUN;
+        Applab.updatePauseUIState();
       } else {
-        Applab.onPauseButton();
+        Applab.onPauseContinueButton();
       }
       // Store some properties about where we stopped:
       Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -738,6 +754,7 @@ Applab.executeInterpreter = function (runUntilCallbackReturn) {
             // Our step operation is complete, reset nextStep to StepType.RUN to
             // return to a normal 'break' state:
             Applab.nextStep = StepType.RUN;
+            Applab.updatePauseUIState();
             if (inUserCode) {
               // Store some properties about where we stopped:
               Applab.stoppedAtBreakpointRow = userCodeRow;
@@ -812,18 +829,18 @@ Applab.init = function(config) {
   var showSlider = !config.hideSource && config.level.editCode;
   var showDebugButtons = !config.hideSource && config.level.editCode;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var firstControlsRow = require('./controls.html')({
+  var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
     finishButton: true
   });
-  var extraControlsRow = require('./extraControlRows.html')({
+  var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
-  var designProperties = require('./designProperties.html')({tagName:null});
-  var designModeBox = require('./designModeBox.html')({
+  var designProperties = require('./designProperties.html.ejs')({tagName:null});
+  var designModeBox = require('./designModeBox.html.ejs')({
     designProperties: designProperties
   });
 
@@ -831,7 +848,7 @@ Applab.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
+      visualization: require('./visualization.html.ejs')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
@@ -904,6 +921,9 @@ Applab.init = function(config) {
   config.dropletConfig = dropletConfig;
   config.pinWorkspaceToBottom = true;
 
+  config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
+  config.nativeVizWidth = Applab.appWidth;
+
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
   config.mobileNoPaddingShareWidth = config.level.appWidth;
@@ -952,18 +972,24 @@ Applab.init = function(config) {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      dom.addClickTouchEvent(pauseButton, Applab.onPauseButton);
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      dom.addClickTouchEvent(pauseButton, Applab.onPauseContinueButton);
+      dom.addClickTouchEvent(continueButton, Applab.onPauseContinueButton);
       dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
     var viewDataButton = document.getElementById('viewDataButton');
     if (viewDataButton) {
-      dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
+      // Simulate a run button click, to load the channel id.
+      var viewDataClick = studioApp.runButtonClickWrapper.bind(
+          studioApp, Applab.onViewData);
+      var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
+      dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
     var designModeButton = document.getElementById('designModeButton');
     if (designModeButton) {
@@ -1154,7 +1180,7 @@ Applab.editElementProperties = function(el) {
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
+  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: tagName,
     props: {
       id: el.id,
@@ -1179,7 +1205,7 @@ Applab.editElementProperties = function(el) {
 
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html')({
+  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: null
   });
 };
@@ -1244,12 +1270,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   }
 
   var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
   var stepInButton = document.getElementById('stepInButton');
   var stepOverButton = document.getElementById('stepOverButton');
   var stepOutButton = document.getElementById('stepOutButton');
-  if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-    pauseButton.textContent = applabMsg.pause();
+  if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+    pauseButton.style.display = "inline-block";
     pauseButton.disabled = true;
+    continueButton.style.display = "none";
     stepInButton.disabled = true;
     stepOverButton.disabled = true;
     stepOutButton.disabled = true;
@@ -1316,12 +1344,14 @@ studioApp.reset = function(first) {
     Applab.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.textContent = applabMsg.pause();
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = true;
+      continueButton.style.display = "none";
       stepInButton.disabled = false;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1347,6 +1377,29 @@ studioApp.reset = function(first) {
   Applab.interpreter = null;
 };
 
+// TODO(dave): remove once channel id is passed in appOptions.
+/**
+ * If channel id has not yet been loaded, delays calling of the callback
+ * until the saveProject response comes back. Otherwise, calls the callback
+ * directly.
+ * @param callback {Function}
+ */
+studioApp.runButtonClickWrapper = function (callback) {
+  // Behave like other apps when channel id is present.
+  if (dashboard.currentApp && dashboard.currentApp.id) {
+    if (window.$) {
+      $(window).trigger('run_button_pressed');
+    }
+    callback();
+  } else {
+    if (window.$) {
+      $(window).trigger('run_button_pressed', callback);
+    } else {
+      callback();
+    }
+  }
+};
+
 /**
  * Click the run button.  Start the program.
  */
@@ -1365,12 +1418,6 @@ studioApp.runButtonClick = function() {
   studioApp.reset(false);
   studioApp.attempts++;
   Applab.execute();
-
-  // Show view data button now that channel id is available.
-  var viewDataButton = document.getElementById('viewDataButton');
-  if (viewDataButton) {
-    viewDataButton.style.display = "inline-block";
-  }
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
@@ -1615,11 +1662,14 @@ Applab.execute = function() {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
+    var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
     var stepOverButton = document.getElementById('stepOverButton');
     var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
+    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+      pauseButton.style.display = "inline-block";
       pauseButton.disabled = false;
+      continueButton.style.display = "none";
       stepInButton.disabled = true;
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
@@ -1639,27 +1689,40 @@ Applab.execute = function() {
   queueOnTick();
 };
 
-Applab.onPauseButton = function() {
+Applab.onPauseContinueButton = function() {
   if (Applab.running) {
-    var pauseButton = document.getElementById('pauseButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
     // We have code and are either running or paused
-    if (Applab.paused) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
       Applab.paused = false;
-      Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.pause();
     } else {
       Applab.paused = true;
       Applab.nextStep = StepType.RUN;
-      pauseButton.textContent = applabMsg.continue();
     }
+    Applab.updatePauseUIState();
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
     stepInButton.disabled = !Applab.paused;
     stepOverButton.disabled = !Applab.paused;
     stepOutButton.disabled = !Applab.paused;
-    document.getElementById('spinner').style.visibility =
-        Applab.paused ? 'hidden' : 'visible';
+  }
+};
+
+Applab.updatePauseUIState = function() {
+  var pauseButton = document.getElementById('pauseButton');
+  var continueButton = document.getElementById('continueButton');
+  var spinner = document.getElementById('spinner');
+
+  if (pauseButton && continueButton && spinner) {
+    if (Applab.paused && Applab.nextStep === StepType.RUN) {
+      pauseButton.style.display = "none";
+      continueButton.style.display = "inline-block";
+      spinner.style.visibility = 'hidden';
+    } else {
+      pauseButton.style.display = "inline-block";
+      continueButton.style.display = "none";
+      spinner.style.visibility = 'visible';
+    }
   }
 };
 
@@ -1667,25 +1730,25 @@ Applab.onStepOverButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OVER;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
 Applab.onStepInButton = function() {
   if (!Applab.running) {
     studioApp.runButtonClick();
-    Applab.onPauseButton();
+    Applab.onPauseContinueButton();
   }
   Applab.paused = true;
   Applab.nextStep = StepType.IN;
-  document.getElementById('spinner').style.visibility = 'visible';
+  Applab.updatePauseUIState();
 };
 
 Applab.onStepOutButton = function() {
   if (Applab.running) {
     Applab.paused = true;
     Applab.nextStep = StepType.OUT;
-    document.getElementById('spinner').style.visibility = 'visible';
+    Applab.updatePauseUIState();
   }
 };
 
@@ -1841,7 +1904,7 @@ Applab.container = function (opts) {
 
 Applab.write = function (opts) {
   // TODO: cpirich: may need to update param name
-  apiValidateType(opts, 'write', 'html', opts.html, 'string');
+  apiValidateType(opts, 'write', 'html', opts.html, 'uistring');
   return Applab.container(opts);
 };
 
@@ -1850,7 +1913,7 @@ Applab.button = function (opts) {
 
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'button', 'id', opts.elementId, false);
-  apiValidateType(opts, 'button', 'text', opts.text, 'string');
+  apiValidateType(opts, 'button', 'text', opts.text, 'uistring');
 
   var newButton = document.createElement("button");
   var textNode = document.createTextNode(opts.text);
@@ -2096,7 +2159,7 @@ Applab.getDirection = function (opts) {
 Applab.dot = function (opts) {
   apiValidateTypeAndRange(opts, 'dot', 'radius', opts.radius, 'number', 0.0001);
   var ctx = getTurtleContext();
-  if (ctx) {
+  if (ctx && opts.radius > 0) {
     ctx.beginPath();
     if (Applab.turtle.penUpColor) {
       // If the pen is up and the color has been changed, use that color:
@@ -2375,7 +2438,7 @@ Applab.textInput = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'textInput', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textInput', 'text', opts.text, 'string');
+  apiValidateType(opts, 'textInput', 'text', opts.text, 'uistring');
 
   var newInput = document.createElement("input");
   newInput.value = opts.text;
@@ -2388,8 +2451,10 @@ Applab.textLabel = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textLabel', 'text', opts.text, 'string');
-  apiValidateType(opts, 'textLabel', 'forId', opts.forId, 'string', OPTIONAL);
+  apiValidateType(opts, 'textLabel', 'text', opts.text, 'uistring');
+  if (typeof opts.forId !== 'undefined') {
+    apiValidateDomIdExistence(divApplab, opts, 'textLabel', 'forId', opts.forId, false);
+  }
 
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
@@ -2443,7 +2508,7 @@ Applab.dropdown = function (opts) {
   if (opts.optionsArray) {
     for (var i = 0; i < opts.optionsArray.length; i++) {
       var option = document.createElement("option");
-      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'string');
+      apiValidateType(opts, 'dropdown', 'option_' + (i + 1), opts.optionsArray[i], 'uistring');
       option.text = opts.optionsArray[i];
       newSelect.add(option);
     }
@@ -2498,7 +2563,7 @@ Applab.setText = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // TODO: cpirich: may need to update param name
   apiValidateDomIdExistence(divApplab, opts, 'setText', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setText', 'text', opts.text, 'string');
+  apiValidateType(opts, 'setText', 'text', opts.text, 'uistring');
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element)) {

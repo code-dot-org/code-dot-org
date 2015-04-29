@@ -4,6 +4,7 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
+require 'cdo/properties'
 require 'varnish_environment'
 require 'channels_api'
 require 'properties_api'

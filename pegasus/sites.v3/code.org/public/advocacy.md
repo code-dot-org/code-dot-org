@@ -5,20 +5,6 @@ title: Code.org Advocacy Coalition
 
 # Code.org Advocacy Coalition
 The Code.org Advocacy Coalition is a non-partisan group of organizations that believe K-12 computer science should be part of the core curriculum in education, and that we must expand opportunities for girls and underrepresented students of color. 
-## State Policy 
-We support the implementation of the eight following policies to make computer science fundamental in K-12: 
-
-* Define computer science and establish rigorous K-12 computer science standards
-* Allocate funding for rigorous computer science professional development and course support 
-* Implement clear certification pathways for computer science teachers
-* Create incentives at institutions of higher education to offer computer science to pre-service teachers
-* Establish dedicated computer science positions in state and local education authorities
-* Require that all secondary schools offer computer science with appropriate implementation timelines
-* Allow computer science to count for mathematics or science graduation requirements
-* Allow computer science to count as a mathematics or science admissions requirement at institutions of higher education.
-For a more in-depth description of our state policy agenda, please see our [state policy outline](/files/Making_CS_Fundamental.pdf).
-
-
 ## Map
 
 <%= view :interactive_map, use_url: false %>
@@ -27,15 +13,31 @@ For a more in-depth description of our state policy agenda, please see our [stat
 <div style="clear:both">
 </div>
 
-
-## Federal Policy
+## Our Agenda
 Despite demand for computer science skills and professionals, the country’s K-12 education system continues to marginalize computer science education.  Decisions about what is taught in elementary, middle and high schools are vested in state and local authority but federal, state and local education policy must support putting students on a path to fill high-demand, high-skilled, high-paying computing jobs across all sectors of the country’s economy. 
 
-* The US Congress should ensure there are minimal barriers in federal policies for K-12 computer science education. 
-* Professional development efforts supported by federal dollars should explicitly include computer science teachers.
-* Federal policies that affect teacher preparation programs at colleges and universities must be leveraged to grow a computer science teaching workforce that currently faces confusing professional pathways and certification and licensure processes. 
-* The billions of dollars the US government invests in STEM education programs at 13 federal agencies should adequately support computer science education.
-For more information on Code.org’s federal policy agenda, contact XXXXX.
+We support the implementation of the following policies to make computer science fundamental in K-12: 
+
+* Define computer science and establish rigorous K-12 computer science standards
+* Allocate funding for rigorous computer science professional development and course support 
+* Implement clear certification pathways for computer science teachers
+* Create incentives at institutions of higher education to offer computer science to pre-service teachers
+* Establish dedicated computer science positions in state and local education authorities
+* Require that all secondary schools offer computer science with appropriate implementation timelines
+* Allow computer science to count for mathematics or science graduation requirements and requirement at institutions of higher education
+* Clearly define computer science education in Federal Policy and programs
+* Leverage federal policies that affect teacher preparation programs at colleges and universities to grow a computer science teaching workforce. 
+* Adequately support computer science education with the billions of dollars the US government invests in STEM education programs at 13 federal agencies.
+
+##Learn more
+
+* [State policy tracking document](https://docs.google.com/document/d/1tKJFWknAAhykqJWwzzxrsWGex0CW0S1wtOlhd-buoZg/edit?usp=sharing)
+* [Federal policy tracking document](https://docs.google.com/spreadsheets/d/1WEQXeDfEp-UiD_YTrgD4fzhEId1fNoiU-6uMhHq8F0U/edit?usp=sharing)
+* [8 steps to make computer science fundamental](http://code.org/files/Making_CS_Fundamental.pdf)
+* [Professional development models](https://www.dropbox.com/s/2y0i360pt6pap1o/ModelStatePracticetoExpandCS.pdf?dl=0)
+* [Professional development funding calculator](https://docs.google.com/spreadsheets/d/1jAqB1Q0IiY4XRvpnfUdDwkfL2OEgvBT2HYg07yQAOSc/pubhtml)
+
+For more information, please contact advocacy@code.org. 
 
 
 ## Members
@@ -55,6 +57,7 @@ For more information on Code.org’s federal policy agenda, contact XXXXX.
 * Students First
 * Teach for America
 * TechNet
+* 
 
 
 [#tools-section]

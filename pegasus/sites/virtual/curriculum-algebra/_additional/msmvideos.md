@@ -2,7 +2,7 @@
 
 Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The twenty lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 
-These videos were created as part of the CS in Algebra professional development program. The nine videos are intended for teachers to build their background knowledge in preparation to teach the [CS in Algebra](/curriculum/algebra).
+These videos were created as part of the CS in Algebra professional development program. The nine videos are intended for teachers to build their background knowledge in preparation to teach [CS in Algebra](/curriculum/algebra).
 
 The videos introduce teachers to the curriculum materials and tools,  data modeling and coordinates planes, multiple representations of functions, using design recipes to solve problems, and more concepts vital in game design.
 

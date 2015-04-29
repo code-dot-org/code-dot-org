@@ -1,0 +1,14 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-23T16:48:16.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "markdown": "## Meet and Greet\n\nIntroduce yourself (name, yrs taught, school, background (if different), subject, grade, past experience with CS, etc.) Then come back later and read other entries then introduce self on another teacher (find and comment on something you have in common). \n\nSTEP 1: To get started, click on \"Show Discussion\" below to view the introductions then add your own introduction after clicking \"New Post\". Note that you can press \"Expand discussion\" to view longer posts.\n\nSTEP 2: Come back later and read new posts (use \"Expand discussion\" to read the entire post), then respond to someone else's post by clicking on \"post a response\" and entering your comment.\n\n\n<div id=\"discourse-comments\">\n"
+  },
+  "md5": "0c1b47f2ff6c6dc011ad7dc735a6263d"
+}]]></config>
+</External>

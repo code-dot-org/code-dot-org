@@ -32,6 +32,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: $width;
   }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
   div#visualization.responsive > * {
     -webkit-transform: scale(1.0);
     -ms-transform: scale(1.0);
@@ -56,6 +62,12 @@ div#visualization.with_padding {
     left: $width;
   }
   html[dir='rtl'] div#codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
@@ -84,6 +96,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: $width;
   }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
@@ -110,6 +128,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: $width;
   }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
   div#visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
@@ -134,6 +158,12 @@ div#visualization.with_padding {
     left: $width;
   }
   html[dir='rtl'] div#codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
@@ -167,6 +197,11 @@ div#visualization.with_padding {
   z-index: -1;
 }
 
+#visualizationResizeBar {
+  margin-left: 2px;
+  width: 13px;
+}
+
 #divApplab img {
   opacity: 1.0;
 }
@@ -190,13 +225,21 @@ img#turtleImage {
   background-color: #FFA000;
   color: #fff;
   margin-left: 0px;
-  margin-right: 0px;
-  padding: 3px;
-  font-size: 12px;
+  margin-right: 3px;
+  padding: 3px 6px;
+  font-size: 14px;
+}
+
+#pauseButton, #continueButton {
+  min-width: 120px;
 }
 
 .debugger_button:focus {
   outline-style: none;
+}
+
+.debugger_button>img {
+  opacity: 1;
 }
 
 #debug-area {
@@ -283,15 +326,13 @@ img#turtleImage {
   fill: #eee;
 }
 
-#pauseButton {
-  min-width: 80px;
-}
-
 /* Sprited icons. */
 .icon21 {
   height: 21px;
   width: 21px;
   background-image: url("#{$root}icons.png");
+  background-size: 42px 147px;
+  margin-bottom: -3px;
 }
 .code {
   background-position: -21px 0px;
@@ -321,6 +362,26 @@ img#turtleImage {
 }
 .down-btn {
   background-position: 0px -42px;
+  margin-right: 3px;
+}
+.pause-btn {
+  background-position: 0px -84px;
+  margin-right: 3px;
+}
+.continue-btn {
+  background-position: -21px -84px;
+  margin-right: 3px;
+}
+.step-in-btn {
+  background-position: 0px -105px;
+  margin-right: 3px;
+}
+.step-out-btn {
+  background-position: -21px -105px;
+  margin-right: 3px;
+}
+.step-over-btn {
+  background-position: 0px 21px;
   margin-right: 3px;
 }
 

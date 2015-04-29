@@ -1,6 +1,7 @@
 title 'Computer Science in Algebra'
 description "Learn Functional Programming through Algebra"
 hidden 'false'
+login_required 'true'
 
 stage 'Unplugged: Video Games and Coordinate Planes'
 level 'VideoGamesCoordinatePlanes'

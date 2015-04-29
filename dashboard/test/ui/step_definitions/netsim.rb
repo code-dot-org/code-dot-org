@@ -14,26 +14,8 @@ When /^I enter the netsim name "([^"]*)"$/ do |username|
   }
 end
 
-When /^I add a router$/ do
+Then /^there is a router in the lobby$/ do
   steps %q{
-    When I press the "Add Router" button
-    And I wait to see a ".router-row"
-    And I wait until ".router-row" contains text "Ready"
-    And I wait for 0.25 seconds
-  }
-  # All the waiting is important for the stability of the tests
-end
-
-When /^I select the first router$/ do
-  steps %q{
-    When I press the first ".router-row" element
-  }
-end
-
-When /^I connect to the first router$/ do
-  steps %q{
-    When I select the first router
-    And I press the "Connect" button
-    And I wait until element ".netsim-send-panel" is visible
+    Then element ".netsim-lobby-panel table" contains text "Nobody connected yet"
   }
 end
