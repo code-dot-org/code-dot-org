@@ -25,6 +25,13 @@ theme: none
             {{program_type.long_name}}
   .row
     .form-group.col-sm-6
+      %label.control-label{for: "cohort-script"} Assign Script
+      %div
+        %select.cohort-script.form-control{"ng-model" => "cohort.script_id", "ng-disabled" => "cohort.script_disabled"}
+          %option{"ng-repeat" => "script in scripts", value: "{{script.id}}"}
+            {{script.name}}
+  .row
+    .form-group.col-sm-6
       %label.control-label{for: "cohort-cutoff-date"} Cutoff Date
       %div
       %div
