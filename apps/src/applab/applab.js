@@ -936,7 +936,8 @@ Applab.init = function(config) {
     }
     var viewDataButton = document.getElementById('viewDataButton');
     if (viewDataButton) {
-      var viewDataClick = studioApp.saveProjectClickWrapper.bind(
+      // Simulate a run button click, to load the channel id.
+      var viewDataClick = studioApp.runButtonClickWrapper.bind(
           studioApp, Applab.onViewData);
       var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
@@ -1330,16 +1331,16 @@ studioApp.reset = function(first) {
  * directly.
  * @param callback {Function}
  */
-studioApp.saveProjectClickWrapper = function (callback) {
+studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when channel id is present.
   if (dashboard.currentApp && dashboard.currentApp.id) {
     if (window.$) {
-      $(window).trigger('save_project');
+      $(window).trigger('run_button_pressed');
     }
     callback();
   } else {
     if (window.$) {
-      $(window).trigger('save_project', callback);
+      $(window).trigger('run_button_pressed', callback);
     } else {
       callback();
     }
