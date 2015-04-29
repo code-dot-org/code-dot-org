@@ -23,6 +23,11 @@ class ContentDSL < BaseDSL
     {name: @name, properties: @hash}
   end
 
+  def method_missing(key, *args)
+    @hash[:options] ||= {}
+    @hash[:options][key.to_sym] = args.first
+  end
+
   def i18n_strings
     strings = {}
     %i(
