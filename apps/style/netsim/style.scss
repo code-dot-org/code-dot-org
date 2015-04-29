@@ -178,7 +178,13 @@ $wide-column-width: 121px;
         circle {
           stroke: $black;
           stroke-width: 2;
-          fill: $own-node-background-color;
+          fill: $cyan;
+        }
+
+        rect.name-box {
+          stroke: $black;
+          stroke-width: 2px;
+          fill: $white;
         }
 
         rect.address-box {
@@ -192,9 +198,14 @@ $wide-column-width: 121px;
         }
       }
 
+      .local-node {
+        circle {
+          fill: $green;
+        }
+      }
       .router-node {
         circle {
-          fill: $orange;
+          fill: $purple;
         }
       }
 

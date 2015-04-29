@@ -20,6 +20,20 @@ var DnsMode = netsimConstants.DnsMode;
 var NodeType = netsimConstants.NodeType;
 
 /**
+ * Width to add to the bubble beyond the width of the student's name.
+ * @type {number}
+ * @const
+ */
+var NAME_PADDING_X = 20;
+
+/**
+ * Height to add to the bubble beyond the height of the student's name.
+ * @type {number}
+ * @const
+ */
+var NAME_PADDING_Y = 10;
+
+/**
  * @param {NetSimNode} sourceNode
  * @constructor
  * @augments NetSimVizEntity
@@ -78,10 +92,26 @@ var NetSimVizNode = module.exports = function (sourceNode) {
       .attr('r', radius)
       .appendTo(root);
 
+  this.nameGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,0)')
+      .appendTo(root);
+
   this.displayName_ = jQuerySvgElement('text')
       .attr('x', 0)
-      .attr('y', textVerticalOffset)
-      .appendTo(root);
+      .attr('y', textVerticalOffset);
+
+  this.nameBox_ = jQuerySvgElement('rect')
+      .addClass('name-box')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('rx', 0)
+      .attr('ry', 0)
+      .attr('width', 0)
+      .attr('height', 0);
+
+  this.nameGroup_
+      .append(this.nameBox_)
+      .append(this.displayName_);
 
   this.addressGroup_ = jQuerySvgElement('g')
       .attr('transform', 'translate(0,30)')
@@ -122,13 +152,49 @@ NetSimVizNode.inherits(NetSimVizEntity);
  * @param {NetSimNode} sourceNode
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
-  this.displayName_.text(sourceNode.getDisplayName());
+  this.setName(sourceNode.getDisplayName());
   this.nodeID = sourceNode.entityID;
 
   if (sourceNode.getNodeType() === NodeType.ROUTER) {
     this.isRouter = true;
     this.getRoot().addClass('router-node');
   }
+};
+
+/**
+ * Flag this viz node as the simulation local node.
+ */
+NetSimVizNode.prototype.setIsLocalNode = function () {
+  this.isLocalNode = true;
+  this.getRoot().addClass('local-node');
+};
+
+/**
+ * Change the display name of the viz node
+ * @param {string} newName
+ */
+NetSimVizNode.prototype.setName = function (newName) {
+  this.displayName_.text(newName);
+  this.resizeNameBox_();
+};
+
+/**
+ *
+ * @private
+ */
+NetSimVizNode.prototype.resizeNameBox_ = function () {
+  var box = this.displayName_[0].getBBox();
+  var width = box.width + NAME_PADDING_X;
+  var height = box.height + NAME_PADDING_Y;
+  var halfWidth = width / 2;
+  var halfHeight = height / 2;
+  this.nameBox_
+      .attr('x', -halfWidth)
+      .attr('y', -halfHeight)
+      .attr('rx', halfHeight)
+      .attr('ry', halfHeight)
+      .attr('width', width)
+      .attr('height', height);
 };
 
 /**
@@ -152,6 +218,8 @@ NetSimVizNode.prototype.tick = function (clock) {
     var randomX = 300 * Math.random() - 150;
     var randomY = 300 * Math.random() - 150;
     this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
+  } else if (this.isForeground && this.tweens_.length > 0) {
+    this.resizeNameBox_();
   }
 };
 

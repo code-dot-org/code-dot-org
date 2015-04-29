@@ -195,7 +195,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.entities_.push(this.localNode);
       this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
-    this.localNode.isLocalNode = true;
+    this.localNode.setIsLocalNode();
   } else {
     this.localNode.kill();
     this.localNode = null;
