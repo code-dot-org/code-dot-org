@@ -620,7 +620,3 @@ en:
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
-        ui_tests:
-          title: Computer Science in Algebra
-          description: CSinA Testing Script
-          Test Script Do Not Change Order: Test Script Do Not Change Order
