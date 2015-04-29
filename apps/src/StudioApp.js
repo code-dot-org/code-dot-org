@@ -1026,11 +1026,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 };
 
 // Overwritten by applab.
-StudioApp.prototype.runClickWrapper = function () {
+StudioApp.prototype.saveProjectClickWrapper = function (callback) {
   if (window.$) {
-    $(window).trigger('run_button_pressed');
+    $(window).trigger('save_project');
   }
-  this.runButtonClick();
+  callback();
 };
 
 /**
@@ -1047,7 +1047,8 @@ StudioApp.prototype.configureDom = function (config) {
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(this.runClickWrapper.bind(this), 250, true);
+  var runClick = this.runButtonClick.bind(this);
+  var throttledRunClick = _.debounce(this.saveProjectClickWrapper.bind(this, runClick), 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 

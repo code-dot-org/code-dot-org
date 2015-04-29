@@ -235,7 +235,7 @@ function initApp() {
         };
       }
 
-      $(window).on('run_button_pressed', dashboard.saveProjectWrapper);
+      $(window).on('save_project', dashboard.saveProjectWrapper);
 
       // Autosave every AUTOSAVE_INTERVAL milliseconds
       $(window).on('appInitialized', function () {

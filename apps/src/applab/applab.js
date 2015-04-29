@@ -935,7 +935,10 @@ Applab.init = function(config) {
     }
     var viewDataButton = document.getElementById('viewDataButton');
     if (viewDataButton) {
-      dom.addClickTouchEvent(viewDataButton, Applab.onViewData);
+      var viewDataClick = studioApp.saveProjectClickWrapper.bind(
+          studioApp, Applab.onViewData);
+      var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
+      dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
     var designModeButton = document.getElementById('designModeButton');
     if (designModeButton) {
@@ -1320,21 +1323,24 @@ studioApp.reset = function(first) {
 };
 
 // TODO(dave): remove once channel id is passed in appOptions.
-studioApp.runClickWrapper = function () {
+/**
+ * If channel id has not yet been loaded, delays calling of the callback
+ * until the saveProject response comes back. Otherwise, calls the callback
+ * directly.
+ * @param callback {Function}
+ */
+studioApp.saveProjectClickWrapper = function (callback) {
   // Behave like other apps when channel id is present.
   if (dashboard.currentApp && dashboard.currentApp.id) {
     if (window.$) {
-      $(window).trigger('run_button_pressed');
+      $(window).trigger('save_project');
     }
-    studioApp.runButtonClick();
+    callback();
   } else {
     if (window.$) {
-      // Delay run button click until after channel id has been created,
-      // since the run button may cause data storage commands to be executed
-      // and those commands require a channel id.
-      $(window).trigger('run_button_pressed', studioApp.runButtonClick.bind(studioApp));
+      $(window).trigger('save_project', callback);
     } else {
-      studioApp.runButtonClick();
+      callback();
     }
   }
 };
@@ -1357,12 +1363,6 @@ studioApp.runButtonClick = function() {
   studioApp.reset(false);
   studioApp.attempts++;
   Applab.execute();
-
-  // Show view data button now that channel id is available.
-  var viewDataButton = document.getElementById('viewDataButton');
-  if (viewDataButton) {
-    viewDataButton.style.display = "inline-block";
-  }
 
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
