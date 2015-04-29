@@ -340,7 +340,7 @@ function isPrimitiveType(value) {
     default:
       return false;
   }
-};
+}
 
 function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
