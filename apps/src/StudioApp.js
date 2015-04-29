@@ -801,11 +801,11 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   var newVizWidth;
   if (this.isRtl()) {
     offset = window.innerWidth -
-             (window.scrollX + rect.left + (rect.width / 2)) -
+             (window.pageXOffset + rect.left + (rect.width / 2)) -
              parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
     newVizWidth = (window.innerWidth - event.pageX) - offset;
   } else {
-    offset = window.scrollX + rect.left + (rect.width / 2) -
+    offset = window.pageXOffset + rect.left + (rect.width / 2) -
              parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
     newVizWidth = event.pageX - offset;
   }
