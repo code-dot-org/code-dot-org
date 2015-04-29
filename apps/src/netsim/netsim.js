@@ -315,8 +315,14 @@ NetSim.prototype.initWithUserName_ = function (user) {
     });
   }
 
-  this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
-      this.disconnectFromRemote.bind(this, function () {}));
+  this.statusPanel_ = new NetSimStatusPanel(
+      $('#netsim-status'),
+      {
+        disconnectCallback: this.disconnectFromRemote.bind(this, function () {}),
+        cleanShardNow: this.cleanShardNow.bind(this),
+        expireHeartbeat: this.expireHeartbeat.bind(this)
+      });
+
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
@@ -507,8 +513,10 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
   this.myNode.stopSimulation();
   this.myNode.destroy(function (err, result) {
     if (err) {
-      onComplete(err, result);
-      return;
+      logger.warn('Error destroying node:' + err.message);
+      // Don't stop disconnecting on an error here; we make a good-faith
+      // effort to clean up after ourselves, and let the cleaning system take
+      // care of the rest.
     }
 
     this.myNode = null;
@@ -1093,4 +1101,26 @@ NetSim.prototype.onRouterLogChange_ = function () {
   if (this.isConnectedToRouter()) {
     this.setRouterLogData(this.getConnectedRouter().getLog());
   }
+};
+
+/**
+ * Immediately start a shard-cleaning process from this client
+ */
+NetSim.prototype.cleanShardNow = function () {
+  if (this.shardCleaner_) {
+    this.shardCleaner_.cleanShard();
+  }
+};
+
+/**
+ * Make the local node's heartbeat pretend to be expired, so it can be
+ * cleaned up.
+ */
+NetSim.prototype.expireHeartbeat = function () {
+  if (!(this.myNode && this.myNode.heartbeat_)) {
+    return;
+  }
+
+  this.myNode.heartbeat_.spoofExpired();
+  logger.info("Local node heartbeat is now expired.");
 };
