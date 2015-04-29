@@ -1025,6 +1025,14 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
 
+// Overwritten by applab.
+StudioApp.prototype.runClickWrapper = function () {
+  if (window.$) {
+    $(window).trigger('run_button_pressed');
+  }
+  this.runButtonClick();
+};
+
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
@@ -1039,12 +1047,7 @@ StudioApp.prototype.configureDom = function (config) {
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(function () {
-    if (window.$) {
-      $(window).trigger('run_button_pressed');
-    }
-    this.runButtonClick();
-  }, 250, true);
+  var throttledRunClick = _.debounce(this.runClickWrapper.bind(this), 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 

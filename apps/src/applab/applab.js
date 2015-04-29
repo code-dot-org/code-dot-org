@@ -1319,6 +1319,26 @@ studioApp.reset = function(first) {
   Applab.interpreter = null;
 };
 
+// TODO(dave): remove once channel id is passed in appOptions.
+studioApp.runClickWrapper = function () {
+  // Behave like other apps when channel id is present.
+  if (dashboard.currentApp && dashboard.currentApp.id) {
+    if (window.$) {
+      $(window).trigger('run_button_pressed');
+    }
+    studioApp.runButtonClick();
+  } else {
+    if (window.$) {
+      // Delay run button click until after channel id has been created,
+      // since the run button may cause data storage commands to be executed
+      // and those commands require a channel id.
+      $(window).trigger('run_button_pressed', studioApp.runButtonClick.bind(studioApp));
+    } else {
+      studioApp.runButtonClick();
+    }
+  }
+};
+
 /**
  * Click the run button.  Start the program.
  */

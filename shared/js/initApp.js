@@ -117,6 +117,16 @@ dashboard.getEditorSource = function() {
 };
 
 /**
+ * Wrapper to allow saveProject to be called by jQuery's trigger()
+ * with a callback param.
+ * @param event {*} Ignored.
+ * @param callback {Function} Callback to pass to saveProject.
+ */
+dashboard.saveProjectWrapper = function(event, callback) {
+  dashboard.saveProject(callback);
+};
+
+/**
  * Saves the project to the Channels API. Calls `callback` on success if a
  * callback function was provided. If `overrideSource` is set it will save that
  * string instead of calling `dashboard.getEditorSource()`.
@@ -128,7 +138,7 @@ dashboard.saveProject = function(callback, overrideSource) {
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
   dashboard.currentApp.level = appToProjectUrl[appOptions.app];
   if (channelId && dashboard.currentApp.isOwner) {
-    channels().update(channelId, dashboard.currentApp, function(data) {
+    channels().update(channelId, dashboard.currentApp, function(callback, data) {
       if (data) {
         dashboard.currentApp = data;
         dashboard.updateTimestamp();
@@ -136,9 +146,9 @@ dashboard.saveProject = function(callback, overrideSource) {
       }  else {
         $('.project_updated_at').text('Error saving project');  // TODO i18n
       }
-    });
+    }.bind(this, callback));
   } else {
-    channels().create(dashboard.currentApp, function(data) {
+    channels().create(dashboard.currentApp, function(callback, data) {
       if (data) {
         dashboard.currentApp = data;
         location.href = dashboard.currentApp.level + '#' + dashboard.currentApp.id + '/edit';
@@ -147,7 +157,7 @@ dashboard.saveProject = function(callback, overrideSource) {
       } else {
         $('.project_updated_at').text('Error saving project');  // TODO i18n
       }
-    });
+    }.bind(this, callback));
   }
 };
 
@@ -225,7 +235,7 @@ function initApp() {
         };
       }
 
-      $(window).on('run_button_pressed', dashboard.saveProject);
+      $(window).on('run_button_pressed', dashboard.saveProjectWrapper);
 
       // Autosave every AUTOSAVE_INTERVAL milliseconds
       $(window).on('appInitialized', function () {
