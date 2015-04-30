@@ -2,6 +2,13 @@
 title: Poste Clicks
 ---
 
+:css
+  .truncate {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    whitespace: nowrap;
+  }
 :ruby
   rows = DB.fetch('
   SELECT
@@ -27,5 +34,6 @@ title: Poste Clicks
         %a{href: "##{ row[:message] }"}= row[:message]
         %a{name: row[:message]}
       %td
-        %a{href: row[:url]}= row[:url]
+        .truncate
+          %a{href: row[:url]}= row[:url]
       %td= row[:clicks]
