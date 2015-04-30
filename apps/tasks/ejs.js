@@ -2,6 +2,9 @@ module.exports = function(grunt) {
   'use strict';
 
   var ejs = require('ejs');
+  // Don't let ejs overload how the ejs extension is loaded, as this confuses
+  // browserify
+  require.extensions['.ejs'] = undefined;
   var path = require('path');
 
   var compile = function(filename, template) {
@@ -30,7 +33,7 @@ module.exports = function(grunt) {
     var files = grunt.file.expandMapping(pattern, destBase, {
       expand: true,
       rename: function(destBase, destPath) {
-        var filename = destPath.replace('src/', '').replace('.ejs', '.js');
+        var filename = destPath.replace('src/', '');
         return path.join(destBase, filename);
       }
     });

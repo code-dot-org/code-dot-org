@@ -131,7 +131,7 @@ dashboard.showMinimalProjectHeader = function () {
 
   $('.project_info')
       .append(projectName)
-      .append($('<div class="project_remix header_button">').text('<%= I18n.t('project.remix') %>'));
+      .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'));
   $('.project_remix').click(remixProject);
 };
 
@@ -139,13 +139,13 @@ dashboard.showProjectHeader = function () {
   function projectNameShow() {
     $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.currentApp.name));
     dashboard.updateTimestamp();
-    $('.project_save').replaceWith($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'));
+    $('.project_save').replaceWith($('<div class="project_edit header_button header_button_light">').text('<%= I18n.t('project.rename') %>'));
   }
 
   function projectNameEdit() {
     $('.project_updated_at').hide();
     $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.currentApp.name));
-    $('.project_edit').replaceWith($('<div class="project_save header_button">').text('<%= I18n.t('project.save') %>'));
+    $('.project_edit').replaceWith($('<div class="project_save header_button header_button_light">').text('<%= I18n.t('project.save') %>'));
   }
 
   var moreButton = '<%= I18n.t('project.more') %> '
@@ -159,13 +159,13 @@ dashboard.showProjectHeader = function () {
       .append($('<div class="project_updated_at header_text">'));
 
   $('.project_info').append(nameAndUpdated)
-      .append($('<div class="project_edit header_button">').text('<%= I18n.t('project.rename') %>'))
-      .append($('<div class="project_share header_button">').text('<%= I18n.t('project.share') %>'))
-      .append($('<div class="project_remix header_button">').text('<%= I18n.t('project.remix') %>'))
-      .append($('<div class="project_more header_button" style="position: relative;">').html(moreButton));
+      .append($('<div class="project_edit header_button header_button_light">').text('<%= I18n.t('project.rename') %>'))
+      .append($('<div class="project_share header_button header_button_light">').text('<%= I18n.t('project.share') %>'))
+      .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'))
+      .append($('<div class="project_more header_button header_button_light" style="position: relative;">').html(moreButton));
 
   projectNameShow();
-  $('.freeplay_links').empty().before($('<div class="project_list header_button">').text('<%= I18n.t('project.my_projects') %>'));
+  $('.freeplay_links').empty().before($('<div class="project_list header_button header_button_light">').text('<%= I18n.t('project.my_projects') %>'));
 
   $(document).on('click', '.project_edit', projectNameEdit);
 

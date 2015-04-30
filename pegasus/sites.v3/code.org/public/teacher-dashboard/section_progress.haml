@@ -12,14 +12,14 @@ theme: none
 
 %table#progress{style: "width: 950px; table-layout: fixed"}
   %colgroup
-    %col{width: "{{950 - progress.table_width}}"}/
-    %col{width: "{{progress.table_width}}"}/
-  %tr.progressheader  
+    %col{width: "{{950 - progress.table_width - 5}}"}/
+    %col{width: "{{progress.table_width + 5}}"}/
+  %tr.progressheader
     %th
       %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
     %th
       %a{href: "", "ng-click" => "order = 'highest_level'"}= I18n.t('dashboard_students_progress')
-  %tr.progressheader  
+  %tr.progressheader
     %td.studentname
     %td
       .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (progress.bar_width * stage.length) + 'px'}", title: '{{stage.title}}'}
@@ -29,7 +29,7 @@ theme: none
       %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}", title: '{{student.name}}'} {{student.name}}
     %td.studentzone
       .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (progress.bar_width * stage.length) + 'px'}"}
-        &nbsp;    
+        &nbsp;
       .studentbar
         .bar{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', 'ng-style' => "{width: progress.bar_width + 'px'}"}
           &nbsp;
@@ -37,7 +37,7 @@ theme: none
         .dot{class: '{{student.levels[student.highest_level].class}}'}
           {{student.highest_level_in_stage}}
 
- 
+
 .clear
 
 .key
@@ -57,4 +57,3 @@ theme: none
     %dt
       .dot 10
     %dd= I18n.t('dashboard_progress_furthest_level_attempted')
-

@@ -21,7 +21,7 @@ var utils = require('../utils');
 var i18n = require('../../locale/current/netsim');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
-var page = require('./page.html');
+var page = require('./page.html.ejs');
 var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var DashboardUser = require('./DashboardUser');
@@ -42,6 +42,13 @@ var DnsMode = netsimConstants.DnsMode;
 var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
+
+/**
+ * Initial time between connecting to the shard and starting
+ * the first cleaning cycle.
+ * @type {number}
+ */
+var INITIAL_CLEANING_DELAY_MS = 10000; // 10 seconds
 
 /**
  * The top-level Internet Simulator controller.
@@ -187,12 +194,13 @@ NetSim.prototype.init = function(config) {
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl})
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
     },
     hideRunButton: true
   });
 
   config.enableShowCode = false;
+  config.pinWorkspaceToBottom = true;
   config.loadAudio = this.loadAudio_.bind(this);
 
   // Override certain StudioApp methods - netsim does a lot of configuration
@@ -307,8 +315,14 @@ NetSim.prototype.initWithUserName_ = function (user) {
     });
   }
 
-  this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
-      this.disconnectFromRemote.bind(this, function () {}));
+  this.statusPanel_ = new NetSimStatusPanel(
+      $('#netsim-status'),
+      {
+        disconnectCallback: this.disconnectFromRemote.bind(this, function () {}),
+        cleanShardNow: this.cleanShardNow.bind(this),
+        expireHeartbeat: this.expireHeartbeat.bind(this)
+      });
+
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
@@ -433,7 +447,8 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
 
   this.shard_ = new NetSimShard(shardID);
   if (this.shouldEnableCleanup()) {
-    this.shardCleaner_ = new NetSimShardCleaner(this.shard_);
+    this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
+        INITIAL_CLEANING_DELAY_MS);
   }
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
@@ -498,8 +513,10 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
   this.myNode.stopSimulation();
   this.myNode.destroy(function (err, result) {
     if (err) {
-      onComplete(err, result);
-      return;
+      logger.warn('Error destroying node:' + err.message);
+      // Don't stop disconnecting on an error here; we make a good-faith
+      // effort to clean up after ourselves, and let the cleaning system take
+      // care of the rest.
     }
 
     this.myNode = null;
@@ -743,6 +760,14 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
 };
 
 /**
+ * Get current DNS mode.
+ * @returns {DnsMode}
+ */
+NetSim.prototype.getDnsMode = function () {
+  return this.dnsMode_;
+};
+
+/**
  * Sets DNS mode across the whole simulation, propagating the change
  * to other clients.
  * @param {DnsMode} newDnsMode
@@ -856,6 +881,18 @@ NetSim.prototype.loadAudio_ = function () {
 NetSim.prototype.configureDomOverride_ = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
+
+  var vizHeight = this.MIN_WORKSPACE_HEIGHT;
+  var visualizationColumn = document.getElementById('netsim-leftcol');
+
+  if (config.pinWorkspaceToBottom) {
+    document.body.style.overflow = "hidden";
+    container.className = container.className + " pin_bottom";
+    visualizationColumn.className = visualizationColumn.className + " pin_bottom";
+  } else {
+    visualizationColumn.style.minHeight = vizHeight + 'px';
+    container.style.minHeight = vizHeight + 'px';
+  }
 };
 
 /**
@@ -897,27 +934,32 @@ NetSim.prototype.render = function () {
 
   shareLink = this.lobby_.getShareLink();
 
-  // Render left column
   if (this.isConnectedToRemote()) {
-    this.mainContainer_.find('.leftcol-disconnected').hide();
-    this.mainContainer_.find('.leftcol-connected').show();
-    this.sendPanel_.setFromAddress(myAddress);
-  } else {
-    this.mainContainer_.find('.leftcol-disconnected').show();
-    this.mainContainer_.find('.leftcol-connected').hide();
-    this.lobby_.render();
-  }
+    // Swap in 'connected' div
+    this.mainContainer_.find('#netsim-disconnected').hide();
+    this.mainContainer_.find('#netsim-connected').show();
 
-  // Render right column
-  if (this.statusPanel_) {
-    this.statusPanel_.render({
-      isConnected: isConnected,
-      statusString: clientStatus,
-      myHostname: myHostname,
-      myAddress: myAddress,
-      remoteNodeName: remoteNodeName,
-      shareLink: shareLink
-    });
+    // Render right column
+    this.sendPanel_.setFromAddress(myAddress);
+
+    // Render left column
+    if (this.statusPanel_) {
+      this.statusPanel_.render({
+        isConnected: isConnected,
+        statusString: clientStatus,
+        myHostname: myHostname,
+        myAddress: myAddress,
+        remoteNodeName: remoteNodeName,
+        shareLink: shareLink
+      });
+    }
+  } else {
+    // Swap in 'disconnected' div
+    this.mainContainer_.find('#netsim-disconnected').show();
+    this.mainContainer_.find('#netsim-connected').hide();
+
+    // Render lobby
+    this.lobby_.render();
   }
 };
 
@@ -1067,4 +1109,26 @@ NetSim.prototype.onRouterLogChange_ = function () {
   if (this.isConnectedToRouter()) {
     this.setRouterLogData(this.getConnectedRouter().getLog());
   }
+};
+
+/**
+ * Immediately start a shard-cleaning process from this client
+ */
+NetSim.prototype.cleanShardNow = function () {
+  if (this.shardCleaner_) {
+    this.shardCleaner_.cleanShard();
+  }
+};
+
+/**
+ * Make the local node's heartbeat pretend to be expired, so it can be
+ * cleaned up.
+ */
+NetSim.prototype.expireHeartbeat = function () {
+  if (!(this.myNode && this.myNode.heartbeat_)) {
+    return;
+  }
+
+  this.myNode.heartbeat_.spoofExpired();
+  logger.info("Local node heartbeat is now expired.");
 };

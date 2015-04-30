@@ -11,7 +11,7 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":207,"./blocks":38,"./calc":39,"./levels":46}],39:[function(require,module,exports){
+},{"../appMain":5,"../skins":206,"./blocks":38,"./calc":39,"./levels":46}],39:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -42,7 +42,7 @@ var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
 var skins = require('../skins');
 var levels = require('./levels');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
@@ -158,8 +158,8 @@ Calc.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,
@@ -1074,7 +1074,7 @@ function displayFeedback() {
     level: level,
     feedbackType: appState.testResults,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
-    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined, 
+    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     appStrings: {
       reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
     },
@@ -1109,7 +1109,7 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":257,"../../locale/current/common":258,"../StudioApp":4,"../block_utils":27,"../dom":58,"../skins":207,"../templates/page.html":232,"../timeoutList":238,"../utils":253,"./controls.html":40,"./equation":41,"./equationSet":42,"./expressionNode":43,"./inputIterator":44,"./js-numbers/js-numbers.js":45,"./levels":46,"./token":48,"./visualization.html":49}],49:[function(require,module,exports){
+},{"../../locale/current/calc":256,"../../locale/current/common":257,"../StudioApp":4,"../block_utils":27,"../dom":58,"../skins":206,"../templates/page.html.ejs":231,"../timeoutList":237,"../utils":252,"./controls.html.ejs":40,"./equation":41,"./equationSet":42,"./expressionNode":43,"./inputIterator":44,"./js-numbers/js-numbers.js":45,"./levels":46,"./token":48,"./visualization.html.ejs":49}],49:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1129,7 +1129,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":257,"ejs":274}],46:[function(require,module,exports){
+},{"../../locale/current/calc":256,"ejs":273}],46:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -1168,7 +1168,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":257,"../block_utils":27}],44:[function(require,module,exports){
+},{"../../locale/current/calc":256,"../block_utils":27}],44:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1628,7 +1628,7 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":253,"./equation":41,"./expressionNode":43,"./js-numbers/js-numbers":45}],43:[function(require,module,exports){
+},{"../utils":252,"./equation":41,"./expressionNode":43,"./js-numbers/js-numbers":45}],43:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -2239,7 +2239,7 @@ ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
   return tokenList;
 };
 
-},{"../utils":253,"./js-numbers/js-numbers":45,"./token":48}],48:[function(require,module,exports){
+},{"../utils":252,"./js-numbers/js-numbers":45,"./token":48}],48:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -6751,7 +6751,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":257,"../../locale/current/common":258,"ejs":274}],38:[function(require,module,exports){
+},{"../../locale/current/calc":256,"../../locale/current/common":257,"ejs":273}],38:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -6813,6 +6813,6 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":257,"../../locale/current/common":258,"../sharedFunctionalBlocks":206}],257:[function(require,module,exports){
+},{"../../locale/current/calc":256,"../../locale/current/common":257,"../sharedFunctionalBlocks":205}],256:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
 },{}]},{},[47]);

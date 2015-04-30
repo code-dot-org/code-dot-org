@@ -67,6 +67,8 @@ locales = {
 }
 
 locales.each_pair do |language, locale|
-  FileUtils.cp_r "../locales/#{language}/.", "../locales/#{locale}"
-  FileUtils.rm_r "../locales/#{language}"
+  if File.directory?("../locales/#{language}/")
+    FileUtils.cp_r "../locales/#{language}/.", "../locales/#{locale}"
+    FileUtils.rm_r "../locales/#{language}"
+  end
 end

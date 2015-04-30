@@ -11,7 +11,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":5,"../skins":207,"./blocks":61,"./eval":63,"./levels":75}],63:[function(require,module,exports){
+},{"../appMain":5,"../skins":206,"./blocks":61,"./eval":63,"./levels":75}],63:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -44,7 +44,7 @@ var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
@@ -97,8 +97,8 @@ Eval.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({
+      visualization: require('./visualization.html.ejs')(),
+      controls: require('./controls.html.ejs')({
         assetUrl: studioApp.assetUrl
       }),
       blockUsed : undefined,
@@ -498,7 +498,7 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":258,"../../locale/current/eval":259,"../StudioApp":4,"../block_utils":27,"../canvg/StackBlur.js":50,"../canvg/canvg.js":51,"../canvg/rgbcolor.js":52,"../canvg/svg_todataurl":53,"../codegen":55,"../dom":58,"../skins":207,"../templates/page.html":232,"../utils":253,"./api":60,"./controls.html":62,"./evalError":66,"./evalText":72,"./levels":75,"./visualization.html":77}],77:[function(require,module,exports){
+},{"../../locale/current/common":257,"../../locale/current/eval":258,"../StudioApp":4,"../block_utils":27,"../canvg/StackBlur.js":50,"../canvg/canvg.js":51,"../canvg/rgbcolor.js":52,"../canvg/svg_todataurl":53,"../codegen":55,"../dom":58,"../skins":206,"../templates/page.html.ejs":231,"../utils":252,"./api":60,"./controls.html.ejs":62,"./evalError":66,"./evalText":72,"./levels":75,"./visualization.html.ejs":77}],77:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -518,7 +518,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],75:[function(require,module,exports){
+},{"ejs":273}],75:[function(require,module,exports){
 var msg = require('../../locale/current/eval');
 var blockUtils = require('../block_utils');
 
@@ -586,7 +586,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/eval":259,"../block_utils":27}],62:[function(require,module,exports){
+},{"../../locale/current/eval":258,"../block_utils":27}],62:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -609,7 +609,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"../../locale/current/eval":259,"ejs":274}],61:[function(require,module,exports){
+},{"../../locale/current/common":257,"../../locale/current/eval":258,"ejs":273}],61:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -908,7 +908,7 @@ function installFunctionalBlock(blockly, generator, gensym, options) {
   };
 }
 
-},{"../../locale/current/common":258,"../../locale/current/eval":259,"../sharedFunctionalBlocks":206,"./evalUtils":74}],60:[function(require,module,exports){
+},{"../../locale/current/common":257,"../../locale/current/eval":258,"../sharedFunctionalBlocks":205,"./evalUtils":74}],60:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -1526,7 +1526,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{"../utils":253,"./evalError":66}],66:[function(require,module,exports){
+},{"../utils":252,"./evalError":66}],66:[function(require,module,exports){
 var evalMsg = require('../../locale/current/eval');
 
 /**
@@ -1564,6 +1564,6 @@ CustomEvalError.Type = {
   UserCodeException: 3
 };
 
-},{"../../locale/current/eval":259}],259:[function(require,module,exports){
+},{"../../locale/current/eval":258}],258:[function(require,module,exports){
 /*eval*/ module.exports = window.blockly.appLocale;
 },{}]},{},[76]);
