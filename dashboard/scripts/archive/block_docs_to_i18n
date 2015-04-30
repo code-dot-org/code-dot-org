@@ -6,6 +6,9 @@
 require 'json'
 
 CDO_ROOT = '../../../'
+FILE_LIST = "#{CDO_ROOT}pegasus/**/applab/docs/*.md"
+OUTPUT_FILE = "#{CDO_ROOT}apps/i18n/common/en_us.json"
+PARAM_DESCRIPTION_CHARACTER_LIMIT = 140
 
 FunctionInfo = Struct.new(:name, :params)
 ParameterInfo = Struct.new(:name, :description)
@@ -59,13 +62,25 @@ def parse_function_docs(doc_files)
   functions
 end
 
+def escape_for_message_format(unescaped_string)
+  capture_bracket = /([{}])/
+  escaped_backslash = '\\'
+  double_escaped_backslash = (escaped_backslash * 2)
+  capture_group = '\1'
+  unescaped_string.gsub(capture_bracket, double_escaped_backslash + capture_group)
+end
+
 def update_docs_i18n_file(functions, i18n_json_filename)
   new_strings = {}
 
   functions.each do |f|
     f.params.each_with_index do |param, i|
       new_strings["dropletBlock_#{f.name}_param#{i}"] = param.name
-      new_strings["dropletBlock_#{f.name}_param#{i}_description"] = param.description
+      max_description_characters = PARAM_DESCRIPTION_CHARACTER_LIMIT
+      message_format_description = escape_for_message_format(param.description)
+      if param.description.length <= max_description_characters
+        new_strings["dropletBlock_#{f.name}_param#{i}_description"] = message_format_description
+      end
     end
   end
 
@@ -77,9 +92,9 @@ def update_docs_i18n_file(functions, i18n_json_filename)
   File.write(i18n_json_filename, JSON.pretty_generate(sorted_data_hash) + "\n")
 end
 
-doc_files = Dir.glob("#{CDO_ROOT}pegasus/**/applab/docs/*.md").select { |e| File.file? e }
+doc_files = Dir.glob(FILE_LIST).select { |e| File.file? e }
 puts "Processing #{doc_files.count} doc files..."
 function_infos = parse_function_docs(doc_files)
 puts 'Updating i18n lines...'
-update_docs_i18n_file(function_infos, "#{CDO_ROOT}apps/i18n/common/en_us.json")
+update_docs_i18n_file(function_infos, OUTPUT_FILE)
 puts '⊙‿⊙'
