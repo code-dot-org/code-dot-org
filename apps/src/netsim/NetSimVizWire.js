@@ -14,6 +14,14 @@ require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
 var NetSimVizNode = require('./NetSimVizNode');
+var tweens = require('./tweens');
+
+/**
+ * How far the flying label should rest above the wire.
+ * @type {number}
+ * @const
+ */
+var TEXT_FINAL_VERTICAL_OFFSET = -10;
 
 /**
  *
@@ -27,11 +35,35 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
   NetSimVizEntity.call(this, sourceWire);
 
   var root = this.getRoot();
-
   root.addClass('viz-wire');
 
+  /**
+   * @type {jQuery} wrapped around a SVGPathElement
+   * @private
+   */
   this.line_ = jQuerySvgElement('path')
       .appendTo(root);
+
+  /**
+   * @type {jQuery} wrapped around a SVGTextElement
+   * @private
+   */
+  this.text_ = jQuerySvgElement('text')
+      .appendTo(root);
+
+  /**
+   * X-coordinate of text label, for animation.
+   * @type {number}
+   * @private
+   */
+  this.textPosX_ = 0;
+
+  /**
+   * Y-coordinate of text label, for animation.
+   * @type {number}
+   * @private
+   */
+  this.textPosY_ = 0;
 
   /**
    * Bound getEntityByID method from vizualization controller.
@@ -77,6 +109,10 @@ NetSimVizWire.prototype.render = function () {
         ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
   }
   this.line_.attr('d', pathData);
+  this.text_
+      .attr('x', this.textPosX_)
+      .attr('y', this.textPosY_);
+
 };
 
 /**
@@ -103,6 +139,9 @@ NetSimVizWire.prototype.kill = function () {
  * @param {string} newState - "0" or "1" for off and on.
  */
 NetSimVizWire.prototype.animateSetState = function (newState) {
+  // Remove all our tweens, we reset our animation now.
+  this.stopAllAnimation();
+
   this.getRoot().removeClass('state-unknown');
   if (newState === '0') {
     this.getRoot().addClass('state-off');
@@ -111,9 +150,49 @@ NetSimVizWire.prototype.animateSetState = function (newState) {
     this.getRoot().addClass('state-on');
     this.getRoot().removeClass('state-off');
   }
-  this.doAfterDelay(500, function () {
+
+  var flyOutMs = 300;
+  var holdPositionMs = 300;
+  this.text_.text(newState);
+  this.tweenTextFromLocalToWire(flyOutMs, tweens.easeOutQuad);
+
+  this.doAfterDelay(flyOutMs + holdPositionMs, function () {
     this.getRoot().removeClass('state-on');
     this.getRoot().removeClass('state-off');
     this.getRoot().addClass('state-unknown');
   }.bind(this));
+};
+
+/**
+ * Stops any existing motion animation and begins an animated motion to the
+ * given coordinates.  Note: This animates the VizEntity's root group.
+ * @param {number} [duration=600] in milliseconds
+ * @param {TweenFunction} [tweenFunction=linear]
+ */
+NetSimVizWire.prototype.tweenTextFromLocalToWire = function (duration,
+    tweenFunction) {
+  if (!(this.localVizNode && this.remoteVizNode)) {
+    return;
+  }
+
+  // Snap text to initial position
+  this.textPosX_ = this.localVizNode.posX;
+  this.textPosY_ = this.localVizNode.posY;
+
+  var newX = (this.remoteVizNode.posX - this.localVizNode.posX) / 2 +
+      this.localVizNode.posX;
+  var newY = (this.remoteVizNode.posY - this.remoteVizNode.posY) / 2 +
+      this.localVizNode.posY + TEXT_FINAL_VERTICAL_OFFSET;
+
+  // Add two new tweens, one for each axis
+  if (duration > 0) {
+    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosX_', newX, duration,
+        tweenFunction));
+    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosY_', newY, duration,
+        tweenFunction));
+  } else {
+    this.textPosX_ = newX;
+    this.textPosY_ = newY;
+  }
+
 };
