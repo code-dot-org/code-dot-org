@@ -1,10 +1,12 @@
-name 'ECSPD PD details'
-title 'ECSPD PD details'
+name 'ECSPD pause'
+title 'ECSPD pause'
+css 'unplugged'
 
 markdown <<MARKDOWN
-## What's next? 
+## Before we continue...
 
-For your convenience, we've developed individual websites for each region, with details on your in person PD location, times, and a list of what to bring to the workshop. Visit and bookmark the page for your region to keep up to date on logistics for your in-person pd. The following list is organized in alphabetical order by state, then region/county: 
+The next portion of this online PD is best completed shortly before your in-person session.  __If your workshop isn't within the next couple of weeks, we recommend that you wait to complete the rest of the stages until that two week window so that the information is fresher for you.__ If you don't know the dates for your in-person PD, check out the PD website for for your region, listed below.
+
 
 + [CA - Los Angeles County](http://code.org/educate/pd/15-16/lausd)
 + [CA - Orange County](http://code.org/educate/pd/15-16/orange)

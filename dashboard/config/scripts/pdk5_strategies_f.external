@@ -1,5 +1,6 @@
 name 'PDK5 Strategies F'
 title 'Strategies Discussion'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## What Strategies will you use?
@@ -12,7 +13,7 @@ What strategies will you use when facilitating computer science learning in your
 - Your students may not need you in the way you think they need you. You don’t need to be the expert. Ask probing questions to a student (even if you don't know the answer to the questions). Or ask the class if anyone has the answer. Or say “I don’t know; let’s figure this out together”
 
 
-<div id="discourse-comments" />
+<div id="discourse-comments"></div>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
