@@ -564,7 +564,7 @@ NetSimVisualization.prototype.setEncodings = function (newEncodings) {
 /**
  * Kick off an animation that will show the state of the simplex wire being
  * set by the local node.
- * @param {string} newState - "0" or "1"
+ * @param {"0"|"1"} newState
  */
 NetSimVisualization.prototype.animateSetWireState = function (newState) {
   // Assumptions - we are talking about the wire between the local node
@@ -580,8 +580,32 @@ NetSimVisualization.prototype.animateSetWireState = function (newState) {
     return;
   }
 
+  // Hide the incoming wire because we are in simplex mode.
   incomingWire.hide();
+  // Animate the outgoing wire
   vizWire.animateSetState(newState);
+};
+
+/**
+ * Kick off an animation that will show the state of the simplex wire being
+ * read by the local node.
+ * @param {"0"|"1"} newState
+ */
+NetSimVisualization.prototype.animateReadWireState = function (newState) {
+  // Assumes we are in simplex P2P mode and talking about the wire between
+  // the local node and its remote partner.  This is a no-op if no such wire
+  // exists.  We can stop any previous animation on the wire if this is called.
+
+  var vizWire = this.getVizWireToRemote();
+  var incomingWire = this.getVizWireFromRemote();
+  if (!(vizWire && incomingWire)) {
+    return;
+  }
+
+  // Hide the incoming wire because we are in simplex mode.
+  incomingWire.hide();
+  // Animate the outgoing wire
+  vizWire.animateReadState(newState);
 };
 
 /**

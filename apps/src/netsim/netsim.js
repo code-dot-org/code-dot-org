@@ -313,12 +313,14 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
       isMinimized: false,
-      receiveButtonCallback: this.receiveBit_.bind(this)
+      netsim: this,
+      showReadWireButton: true
     });
 
     this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentBitsLog(),
-      isMinimized: false
+      isMinimized: false,
+      netsim: this
     });
   }
 
@@ -633,9 +635,8 @@ NetSim.prototype.disconnectFromRemote = function (onComplete) {
  * node and its connected remote.
  * Used only in simplex & bit-granular mode.
  * @param {!NodeStyleCallback} onComplete
- * @private
  */
-NetSim.prototype.receiveBit_ = function (onComplete) {
+NetSim.prototype.receiveBit = function (onComplete) {
   this.myNode.getLatestMessageOnSimplexWire(onComplete);
 };
 
@@ -1153,8 +1154,17 @@ NetSim.prototype.expireHeartbeat = function () {
 /**
  * Kick off an animation that shows the local node setting the state of a
  * simplex wire.
- * @param {string} newState - "0" or "1"
+ * @param {"0"|"1"} newState
  */
 NetSim.prototype.animateSetWireState = function (newState) {
   this.visualization_.animateSetWireState(newState);
+};
+
+/**
+ * Kick off an animation that shows the local node reading the state of a
+ * simplex wire.
+ * @param {"0"|"1"} newState
+ */
+NetSim.prototype.animateReadWireState = function (newState) {
+  this.visualization_.animateReadWireState(newState);
 };
