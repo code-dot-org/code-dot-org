@@ -66,7 +66,7 @@ FactoryGirl.define do
 
   factory :match, :parent => Level, :class => Match do
     game {create(:game, app: "match")}
-    properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text:'test'}], options: {}}}
+    properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text:'test'}], options: {hide_submit: false}}}
   end
 
   factory :artist, :parent => Level, :class => Artist do
