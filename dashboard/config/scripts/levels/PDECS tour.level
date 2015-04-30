@@ -4,11 +4,16 @@
   "created_at": "2015-04-16T17:54:15.000Z",
   "properties": {
     "options": {
-      "skip_dialog": true
+      "skip_dialog": true,
+      "css": "unplugged"
     },
     "title": "Tour of PD Space",
     "content1": "tour of the PD space",
-    "markdown": "## Using the Space \n\nAll of your Online PD will be done here, in Code Studio. Here's a quick tour of the interface: \n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n"
+    "markdown": "## Using the Space \n\nAll of your Online PD will be done here, in Code Studio. Below you'll find a quick tour of the interface, which demonstrates several important features of using Code Studio:\n<br>\n\n\nThe main PD page is broken up into several __stages__, which each represent a different topic or idea\n\n<h4><details>\n<summary>click here to see more about stages</summary>\n<br>\n<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>\n<br>\n<img src =\"https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/eae8gOBHTnrjEBv/pd--stage_overview.gif\" />\n</details></h4>\n\n<br>\n\nEach stage is made up of __levels__, which hold individual videos, readings, or questions. Levels are indicated by the circles with numbers, and are visible on the main PD page, on the header in any level, and from the header drop-down in any level\n\nThe colors of the level circle will change based on your progress. In this PD you'll see the following types of circles:\n\n![https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/O852xo6rOH7QrCG/Screen%20Shot%202015-04-27%20at%204.07.28%20PM.png](https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/O852xo6rOH7QrCG/Screen%20Shot%202015-04-27%20at%204.07.28%20PM.png)\n\n\n\n<h4><details>\n<summary>click here to see more about levels</summary>\n<br>\n\n<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>\n<br>\n<img src =\"https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/HmiIDlpPlNirSy7/pd--level_overview.gif\" />\n</details></h4>\n\n<br>\n\n__Accessing levels__ can be done four ways:\n<ol><li>clicking from the main PD page, </li><li> clicking to a different level in the same stage with the circles on the header of the page,</li><li> advance to the next level by clicking \"continue\" or \"submit\" at the bottom of each level (<bold>NOTE: this is the way you'll advance through most activities in Code Studio</bold>) </li>\n<li>using the drop-down menu in the header can be used to access any level (this is helpful for going back to a level you've completed before)</li></ol>\n\n<h4><details>\n<summary>click here to see more about accessing levels</summary>\n<br>\n<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>\n<br>\n<img src =\"https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/YDzMeH5kzbKvBIq/pd--level-click.gif\" />\n</details></h4>\n\n<br>\n\n__Resizing text boxes__ can be done by clicking and dragging the bottom-right corner of the box. \n\n<h4><details>\n<summary>click here to see more about resizing text boxes</summary>\n<br>\n<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>\n<br>\n<img src =\"https://s3.amazonaws.com/uploads.hipchat.com/65395/734864/Glg54XH2VOXbihk/pd--resizing-box.gif\" />\n</details></h4>\n\n<br>\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "16a3f7f6e58481852f04cd638790c96c"
 }]]></config>
