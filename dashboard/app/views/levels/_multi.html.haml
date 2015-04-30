@@ -3,9 +3,15 @@
   - data = @level.properties
   - app = 'multi'
 
-  = render partial: 'levels/content', locals: {app: app, data: data, content_class: 'question'}
+  - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
+  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
 
-  .answers
+  .answers{style: question_content_blank ? 'width: 100%' : ''}
+    - if data['options']['answer_line']
+      :css
+        .btn {
+          display: table;
+        }
 
     %span
       %h4.multi-question!= multi_t(data['questions'][0]['text']) if data['questions']
@@ -13,9 +19,10 @@
     %br/
     %br/
 
-    .buttons
-      %a.btn.btn-large.btn-primary.next-stage.submitButton
-        =t('submit')
+    - unless data['options']['hide_submit']
+      .buttons
+        %a.btn.btn-large.btn-primary.next-stage.submitButton
+          =t('submit')
 
     - height = data['height'] || '20'
     - height += 'px'
