@@ -73,6 +73,9 @@ var ErrorLevel = {
   ERROR: 'ERROR'
 };
 
+var MIN_DEBUG_AREA_HEIGHT = 70;
+var MAX_DEBUG_AREA_HEIGHT = 400;
+
 // The typical width of the visualization area (indepdendent of appWidth)
 var vizAppWidth = 400;
 // The default values for appWidth and appHeight (if not specified in the level)
@@ -294,10 +297,10 @@ function outputApplabConsole(output) {
   // then put it in the applab console visible to the user:
   var debugOutput = document.getElementById('debug-output');
   if (debugOutput) {
-    if (debugOutput.value.length > 0) {
-      debugOutput.value += '\n' + output;
+    if (debugOutput.textContent.length > 0) {
+      debugOutput.textContent += '\n' + output;
     } else {
-      debugOutput.value = output;
+      debugOutput.textContent = output;
     }
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
@@ -967,6 +970,14 @@ Applab.init = function(config) {
     }
   }
 
+  var debugResizeBar = document.getElementById('debugResizeBar');
+  if (debugResizeBar) {
+    debugResizeBar.addEventListener('mousedown',
+                                    Applab.onMouseDownDebugResizeBar);
+    document.body.addEventListener('mouseup',
+                                   Applab.onMouseUpDebugResizeBar);
+  }
+
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
 
@@ -1034,6 +1045,58 @@ Applab.init = function(config) {
       });
     }
 
+  }
+};
+
+Applab.onMouseDownDebugResizeBar = function (event) {
+  // When we see a mouse down in the resize bar, start tracking mouse moves:
+
+  if (event.srcElement.id === 'debugResizeBar') {
+    Applab.draggingDebugResizeBar = true;
+    document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+
+    event.preventDefault();
+  }
+};
+
+/**
+*  Handle mouse moves while dragging the debug resize bar.
+*/
+Applab.onMouseMoveDebugResizeBar = function (event) {
+  var debugResizeBar = document.getElementById('debugResizeBar');
+  var codeApp = document.getElementById('codeApp');
+  var codeTextbox = document.getElementById('codeTextbox');
+  var debugArea = document.getElementById('debug-area');
+
+  var rect = debugResizeBar.getBoundingClientRect();
+  var offset = parseInt(window.getComputedStyle(codeApp).bottom, 10) -
+               rect.height / 2;
+  var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
+                       Math.min(MAX_DEBUG_AREA_HEIGHT,
+                                (window.innerHeight - event.pageY) - offset));
+
+  codeTextbox.style.bottom = newDbgHeight + 'px';
+  debugArea.style.height = newDbgHeight + 'px';
+
+  // Prevent the codeTextbox from being shrunk too small vertically
+  // (half for code, half for debug-area, minus half toolbar height + 1px border)
+  //
+  // (we would do this in CSS, but for precedence rules to work properly, if
+  //  we explicitly set bottom/height styles on the elements above, we need to
+  //  do the same for these styles as well)
+
+  codeTextbox.style.minHeight = 'calc(50% - 21px)';
+  debugArea.style.maxHeight = 'calc(50% - 21px)';
+
+  // Fire resize so blockly and droplet handle this type of resize properly:
+  utils.fireResizeEvent();
+};
+
+Applab.onMouseUpDebugResizeBar = function (event) {
+  // If we have been tracking mouse moves, remove the handler now:
+  if (Applab.draggingDebugResizeBar) {
+    document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    Applab.draggingDebugResizeBar = false;
   }
 };
 

@@ -155,6 +155,12 @@ exports.createUuid = function () {
   });
 };
 
+exports.fireResizeEvent = function () {
+  var ev = document.createEvent('Event');
+  ev.initEvent('resize', true, true);
+  window.dispatchEvent(ev);
+};
+
 // ECMAScript 6 polyfill for String.prototype.repeat
 // Polyfill adapted from
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
