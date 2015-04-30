@@ -7,7 +7,11 @@
       "skip_dialog": true
     },
     "title": "ECSPD PD details",
-    "markdown": "## What's next? \n\nHere are materials and information that will help you prepare for your in person PD. \n\n# insert links to regional pages\n\n[CA ,\tLos Angeles](http://code.org/educate/pd/15-16/lausd)\n"
+    "markdown": "## What's next? \n\nFor your convenience, we've developed individual websites for each region, with details on your in person PD location, times, and a list of what to bring to the workshop. Visit and bookmark the page for your region to keep up to date on logistics for your in-person pd. The following list is organized in alphabetical order by state, then region: \n\n# insert links to regional pages\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </External>

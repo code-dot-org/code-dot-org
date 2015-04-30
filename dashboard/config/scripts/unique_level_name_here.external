@@ -1,9 +1,7 @@
 name 'unique level name here'
 title 'title'
 description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-
+href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-Insert maddie video 1 here
+<iframe src="https://embed-ssl.ted.com/talks/del_harvey_the_strangeness_of_scale_at_twitter.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 MARKDOWN

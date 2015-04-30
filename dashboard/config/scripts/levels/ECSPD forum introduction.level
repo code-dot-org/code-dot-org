@@ -1,0 +1,18 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-25T04:28:27.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Forum Introductions",
+    "markdown": "## Forum Introductions\n\nIn our online PD you will have many opportunities to connect with other teachers through a forum. Take this opportunity to introduce yourself by sharing the same information that each of the facilitators shared on the previous level. **In your first post take a minute and introduce yourself by sharing your teaching background and any hobbies or pastimes you enjoy!**\n\n<div id=\"discourse-comments\" />\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>
