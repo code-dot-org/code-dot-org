@@ -733,7 +733,17 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     });
   }
 
-  dialog.show();
+  // We want the instructions dialog to shrink down to the instructions block when it's dismissed.
+  // We then want to flash the instructions block.
+  var hideOptions = {};
+  hideOptions.animate = true;
+  hideOptions.endTarget = "#prompt-table";
+  hideOptions.hideFn = function() {
+    // Momentariy flash the instruction block from white then back to regular.
+    $("#bubble").css({"background-color":"rgba(255,255,255,1)"}).delay(500).animate({"background-color":"rgba(0,0,0,0)"},1000);
+  };
+
+  dialog.show({hideOptions: hideOptions});
 };
 
 /**
