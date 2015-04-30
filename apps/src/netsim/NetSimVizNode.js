@@ -176,18 +176,12 @@ NetSimVizNode.prototype.setName = function (newName) {
   this.resizeNameBox_();
 };
 
-/**
- *
- * @private
- */
+/** @private */
 NetSimVizNode.prototype.resizeNameBox_ = function () {
   this.resizeRectToText_(this.nameBox_, this.displayName_);
 };
 
-/**
- *
- * @private
- */
+/** @private */
 NetSimVizNode.prototype.resizeAddressBox_ = function () {
   this.resizeRectToText_(this.addressBox_, this.addressText_);
 };
