@@ -7,7 +7,7 @@
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
 
   .answers{style: question_content_blank ? 'width: 100%' : ''}
-    - if data['options']['answer_line']
+    - if data['options'].try(:[], 'answer_line')
       :css
         .btn {
           display: table;
@@ -19,7 +19,7 @@
     %br/
     %br/
 
-    - unless data['options']['hide_submit']
+    - unless data['options'].try(:[], 'hide_submit')
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')

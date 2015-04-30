@@ -767,8 +767,6 @@ StudioApp.prototype.onResize = function() {
   this.resizeToolboxHeader();
 };
 
-
-
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
 

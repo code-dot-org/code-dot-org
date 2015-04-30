@@ -40,14 +40,14 @@
   #success-dialogcontent
     .modal-content
       %p.dialog-title
-        - if data['options']['success_title']
+        - if data['options'].try(:[], 'success_title')
           = data['options']['success_title']
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_title')
         - else
           =t('multi.correct_title')
       %p
-        - if data['options']['success_body']
+        - if data['options'].try(:[], 'success_body')
           = data['options']['success_body']
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_body')
@@ -60,7 +60,7 @@
 :javascript
   var dialogType = null;
   var adjustedScroll = false;
-  var skipSound = #{!!(data['options']['skip_sound'])};
+  var skipSound = #{!!(data['options'].try(:[], 'skip_sound'))};
 
   $(function () {
     if ("#{data['pre_title']}" != "") {
@@ -151,7 +151,7 @@
         {
           showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
-          if (#{data['options']['skip_dialog'].blank?}) {
+          if (#{data['options'].try(:[], 'skip_dialog').blank?}) {
             showDialog("success");
           } else {
             window.location.href = lastServerResponse.nextRedirect;
