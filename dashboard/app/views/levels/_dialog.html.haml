@@ -126,11 +126,11 @@
 
     if (!result) {
       showDialog(errorType || "error");
-      if(!skipSound) {
+      if (!skipSound) {
         CDOSounds.play('failure');
       }
     } else {
-      if(!skipSound) {
+      if (!skipSound) {
         CDOSounds.play('success');
       }
     }
@@ -151,7 +151,7 @@
         {
           showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
-          if(#{data['options']['skip_dialog'].blank?}) {
+          if (#{data['options']['skip_dialog'].blank?}) {
             showDialog("success");
           } else {
             window.location.href = lastServerResponse.nextRedirect;
