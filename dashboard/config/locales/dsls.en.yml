@@ -438,6 +438,21 @@ en:
       unique level name here:
         description here: description here
         title: title
+    match:
+      PDAlg commitment match:
+        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
+        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Program Commitment Matching Question: Program Commitment Matching Question
+    multi:
+      PDAlg attendance commitment:
+        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
