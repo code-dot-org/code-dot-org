@@ -7,11 +7,7 @@
       "skip_dialog": true,
       "css": "unplugged"
     },
-    "markdown": "### Meet and Greet\n\nIntroduce yourself (name, years taught, school, background, subject, grade, past experience with CS, etc.) Then come back later and read other entries and introduce yourself on another teachers thread (find and comment on something you have in common). \n\nSTEP 1: To get started, click on \"Start Discussion\" below to be taken to another page to view introductions. Click the \"Reply\" button under the Meet and Greet note to add your information. \n\nSTEP 2: Come back later and read new posts and respond to someone else's post by clicking on \"post a response\" and entering your comment.\n\n\n<div id=\"discourse-comments\">\n\n</br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "## Meet and Greet\n\nIntroduce yourself (name, yrs taught, school, background (if different), subject, grade, past experience with CS, etc.) Then come back later and read other entries then introduce self on another teacher (find and comment on something you have in common). \n\nSTEP 1: To get started, click on \"Show Discussion\" below to view the introductions then add your own introduction after clicking \"New Post\". Note that you can press \"Expand discussion\" to view longer posts.\n\nSTEP 2: Come back later and read new posts (use \"Expand discussion\" to read the entire post), then respond to someone else's post by clicking on \"post a response\" and entering your comment.\n\n\n<div id=\"discourse-comments\">\n"
   },
   "md5": "0c1b47f2ff6c6dc011ad7dc735a6263d"
 }]]></config>

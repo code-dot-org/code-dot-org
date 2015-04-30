@@ -35,11 +35,7 @@
       }
     ],
     "title": "Curriculum Implementation",
-    "markdown": "### **Units of Study**\n#### Video Games and Coordinate Planes\n#### Contracts, Strings, and Images\n#### Defining Functions\n#### The Design Recipe\n#### Game Animation (linear functions)\n#### Boundary Detection (inequalities in the plane)\n#### Piecewise Functions\n#### Collision Detection (the distance formula)\n",
-    "type": "Multi",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "### Video Games and Coordinate Planes\n### Contracts, Strings, and Images\n### Defining Functions\n### The Design Recipe\n### Game Animation (linear functions)\n### Boundary Detection (inequalities in the plane)\n### Piecewise Functions\n### Collision Detection (the distance formula)\n"
   }
 }]]></config>
 </Multi>
