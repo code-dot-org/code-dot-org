@@ -1,7 +1,10 @@
-module.exports = getTransform;
-function getTransform() {
-  var stream = require('stream');
-  var t = new stream.Transform({objectMode: true});
+var MessageFormat = require('messageformat');
+var stream = require('stream');
+var os = require('os');
+var path = require('path');
+
+module.exports = function () {
+  var t = new stream.Transform({ objectMode: true });
   t._transform = function (file, encoding, callback) {
     var output = transform(file);
     file.contents = output ? new Buffer(output) : null;
@@ -13,7 +16,6 @@ function getTransform() {
 // Options: locale (required), global, namespace, prepend, append
 function transform(file) {
   var filepath = file.path;
-  var path = require('path');
   var locale = path.basename(path.dirname(filepath));
   var app = path.basename(filepath, path.extname(filepath));
   var namespace = (app == 'common_locale' ? 'locale' : app);
@@ -24,7 +26,6 @@ function transform(file) {
 
 function process(locale, namespace, json) {
   var mf;
-  var MessageFormat = require('messageformat');
   try {
     mf = new MessageFormat(locale, false, namespace);
   } catch (e) {
@@ -36,7 +37,7 @@ function process(locale, namespace, json) {
     }
   }
 
-  var EOL = require('os').EOL;
+  var EOL = os.EOL;
   try {
     return [
       'var ' + namespace + ' = ' + mf.functions() + ';',

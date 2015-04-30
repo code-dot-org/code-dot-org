@@ -1,29 +1,27 @@
-/**
- *  Expose two primary tasks:
- *  gulp build: compile/concatenate all source files
- *  gulp dev: Run watch-mode incremental compilation
-**/
-require('child_process').spawnSync = require('spawn-sync');
+var childProcess = require('child_process');
+// Polyfill used by check-dependencies
+childProcess.spawnSync = require('spawn-sync');
 var checkDeps = require('check-dependencies');
-checkDeps.sync({
-  'onlySpecified': true,
-  'install': true
-});
+var mkdirp = require('mkdirp');
+var path = require('path');
 
 var gulp = require('gulp');
-gulp.task('build', [
-  (process.env.NODE_ENV == 'production' ? 'compress' : 'bundle-js'),
-  'media', 'sass', 'messages'
-]);
-
 var newer = require('gulp-newer');
-var rename = require("gulp-rename");
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+
+var bundle = require('@cdo/cdo/lib/frontend/browserify');
+var mediaTask = require('@cdo/cdo/lib/frontend/media');
+var sassTask = require('@cdo/cdo/lib/frontend/sass')
+var messageFormat = require('./tasks/transform-messageformat');
 
 function configString(id) {
   return process.env['npm_package_config_' + id];
 }
 
-// Convert npm-style package-config array entries to the original array
+/**
+ * Convert npm-style package-config array entries to the original array
+ */
 function configArray(id) {
   var item = null;
   var i = 0;
@@ -37,6 +35,43 @@ function configArray(id) {
   return array;
 }
 
+function browserify(watch) {
+  // TODO (brent) why does this happen as part of the browserify step here,
+  // but in the install in root?
+  mkdirp.sync('./src/node_modules');
+  var checkDeps = require('check-dependencies');
+  checkDeps.sync({
+    packageDir: './src',
+    onlySpecified: true,
+    install: true}
+  );
+
+  var bundleConfig = {
+    src: appFilesSrc,
+    dest: JS_OUTPUT + 'common.js',
+    factorBundleDest: appFilesDest,
+    watch: watch
+  };
+
+  return bundle(bundleConfig)();
+}
+
+// TODO (brent) - is there reason we dont try/catch here but do in the root gulpfile?
+function ensureNpmDependencies() {
+  // Install npm dependencies if not present
+  // try {
+    checkDeps.sync({
+      onlySpecified: true,
+      install: true
+    });
+  // } catch (e) {
+  //   console.error('Your dependencies are out of date. Run `npm prune && npm install` to fix.');
+  //   process.exit(1);
+  // }
+}
+
+ensureNpmDependencies();
+
 var APPS = configArray('apps');
 var APPS_OUTPUT = configString('output');
 
@@ -46,40 +81,6 @@ var appFilesDest = [];
 APPS.forEach(function (app) {
   appFilesSrc.push('./src/' + app + '/main.js');
   appFilesDest.push(JS_OUTPUT + app + '.js');
-});
-var appsBrowserifyConfig = {
-  src: appFilesSrc,
-  dest: JS_OUTPUT + 'common.js',
-  factorBundleDest: appFilesDest
-};
-
-// Bundle commonJS module graphs into a single file
-gulp.task('bundle-js', ['vendor'], function() {
-  return browserify(false);
-});
-
-function browserify(watch) {
-  require('mkdirp')('./src/node_modules');
-  var checkDeps = require('check-dependencies');
-  checkDeps.sync({
-    packageDir: './src',
-    onlySpecified: true,
-    install: true}
-  );
-
-  var bundle = require('@cdo/cdo/lib/frontend/browserify');
-  var extend = require('util')._extend;
-  var config = appsBrowserifyConfig;
-  if(watch) {
-    config = extend(config, {watch: true});
-  }
-  return bundle(config)();
-}
-
-gulp.task('dev', ['media', 'sass', 'messages', 'vendor'], function() {
-  gulp.watch(Object.keys(mediaFiles), ['media']);
-  gulp.watch(Object.keys(cssFiles), ['sass']);
-  return browserify(true);
 });
 
 // Format package.json config entries
@@ -94,17 +95,38 @@ STYLESHEETS.forEach(function(css) {
   cssFiles[css] = APPS_OUTPUT + 'css/';
 });
 
-// Synchronize static files to a public folder
-gulp.task('media', require('@cdo/cdo/lib/frontend/media')(mediaFiles));
-// Process sass stylesheets to .css
-gulp.task('sass', require('@cdo/cdo/lib/frontend/sass')(cssFiles));
+/**
+ *  Expose two primary tasks:
+ *  gulp build: compile/concatenate all source files
+ *  gulp dev: Run watch-mode incremental compilation
+**/
 
+gulp.task('build', [
+  (process.env.NODE_ENV === 'production' ? 'compress' : 'bundle-js'),
+  'media',
+  'sass',
+  'messages'
+]);
+
+// Bundle commonJS module graphs into a single file
+gulp.task('bundle-js', ['vendor'], function() {
+  browserify(false);
+});
+
+gulp.task('dev', ['media', 'sass', 'messages', 'vendor'], function() {
+  gulp.watch(Object.keys(mediaFiles), ['media']);
+  gulp.watch(Object.keys(cssFiles), ['sass']);
+  browserify(true);
+});
+
+// Synchronize static files to a public folder
+gulp.task('media', mediaTask(mediaFiles));
+// Process sass stylesheets to .css
+gulp.task('sass', sassTask(cssFiles));
 
 // MessageFormat .json to .js precompile
-var MESSAGES_PATH = 'i18n/**/*.json';
 gulp.task('messages', function () {
-  var messageFormat = require('./tasks/transform-messageformat');
-  return gulp.src(MESSAGES_PATH)
+  return gulp.src('i18n/**/*.json')
     .pipe(rename(function (filepath) {
       var app = filepath.dirname;
       var locale = filepath.basename;
@@ -116,13 +138,6 @@ gulp.task('messages', function () {
     .pipe(messageFormat())
     .pipe(gulp.dest(JS_OUTPUT));
 });
-
-var ext = 'compressed';
-var vendorFiles = [
-  'lib/blockly/blockly_' + ext + '.js',
-  'lib/blockly/blocks_' + ext + '.js',
-  'lib/blockly/javascript_' + ext + '.js'
-];
 
 gulp.task('blockly_locale', function() {
   var path = require('path');
@@ -137,6 +152,15 @@ gulp.task('blockly_locale', function() {
 
 // Compile blockly.js and locale files
 gulp.task('vendor', ['blockly_locale'], function () {
+
+  // TODO (brent) support uncompress versions
+  var ext = 'compressed';
+  var vendorFiles = [
+    'lib/blockly/blockly_' + ext + '.js',
+    'lib/blockly/blocks_' + ext + '.js',
+    'lib/blockly/javascript_' + ext + '.js'
+  ];
+
   var concat = require('gulp-concat');
   return gulp.src(vendorFiles)
     .pipe(newer(JS_OUTPUT + 'blockly.js'))
@@ -145,11 +169,11 @@ gulp.task('vendor', ['blockly_locale'], function () {
 });
 
 gulp.task('compress', ['bundle-js'], function () {
-  var uglify = require('gulp-uglify');
-  return gulp.src([
+  var files = [
     JS_OUTPUT + '*.js',
     '!' + JS_OUTPUT + '**//*blockly.js'
-  ])
+  ]
+  return gulp.src(files)
     .pipe(uglify())
     .pipe(gulp.dest(JS_OUTPUT));
 });
