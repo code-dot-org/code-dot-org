@@ -4,7 +4,7 @@ question 'Please confirm that you have read the Attendance Policy and will work 
 right 'I have read and agree to the Attendance Policy'
 
 markdown <<MARKDOWN
-### Attendance Policy
+## Attendance Policy
 
 Selected teachers must be teaching the course in the Fall and be able to attend all days of professional development (15 months). The teachers must commit to attending all days of professional development (PD) when joining a Code.org cohort.
 

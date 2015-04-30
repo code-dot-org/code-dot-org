@@ -1,0 +1,12 @@
+name 'sciPD agent based 1'
+title 'MULTIPLE CHOICE - INTERACTIONS IN AGENT-BASED MODELS'
+
+question 'What types of interactions can occur in agent-based models?'
+wrong 'agents interact with their environment only'
+wrong 'agents interact with other agents only'
+wrong 'agents interact with both their environment and other agents'
+right 'all of the above'
+
+markdown <<MARKDOWN
+
+MARKDOWN

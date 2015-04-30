@@ -16,7 +16,8 @@
     "ideal": "4",
     "slider_speed": "0.3",
     "free_play": "false"
-  }
+  },
+  "md5": "0795fc0884336e3cd22f5ef4d1cea0ba"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -55,7 +56,28 @@
       </xml>
     </toolbox_blocks>
     <required_blocks>
-      <xml/>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">25</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">25</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
     </required_blocks>
     <solution_blocks>
       <xml>
