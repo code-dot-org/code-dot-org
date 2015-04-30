@@ -172,34 +172,50 @@ $wide-column-width: 121px;
 
       .viz-node {
         text {
+          fill: $black;
           text-anchor: middle;
+
+          &.address-box {
+            font-weight: bold;
+          }
         }
 
         circle {
-          stroke: $black;
+          stroke: $light_cyan;
           stroke-width: 2;
-          fill: $own-node-background-color;
+          fill: $light_cyan;
         }
 
-        rect.address-box {
-          stroke: $black;
+        rect {
+          stroke: $light_cyan;
           stroke-width: 2px;
           fill: $white;
         }
-
-        text.address-box {
-          font-weight: bold;
-        }
       }
 
+      .local-node {
+        circle {
+          stroke: $light_teal;
+          fill: $light_teal;
+        }
+
+        rect {
+          stroke: $light_teal;
+        }
+      }
       .router-node {
         circle {
-          fill: $orange;
+          stroke: $light_purple;
+          fill: $light_purple;
+        }
+
+        rect {
+          stroke: $light_purple;
         }
       }
 
       .viz-wire {
-        stroke: $black;
+        stroke: $charcoal;
         stroke-width: 2;
       }
     }

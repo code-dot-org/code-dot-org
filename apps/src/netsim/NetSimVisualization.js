@@ -195,7 +195,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
       this.entities_.push(this.localNode);
       this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
-    this.localNode.isLocalNode = true;
+    this.localNode.setIsLocalNode();
   } else {
     this.localNode.kill();
     this.localNode = null;
@@ -253,6 +253,7 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizNode, tableNodes, function (node) {
     var newVizNode = new NetSimVizNode(node);
+    newVizNode.setDnsMode(this.netsim_.getDnsMode());
     newVizNode.snapToPosition(
         Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
         Math.random() * this.visualizationHeight - (this.visualizationHeight / 2));
@@ -522,7 +523,7 @@ NetSimVisualization.prototype.distributeForegroundNodes = function () {
 };
 
 /**
- * @param {string} newDnsMode
+ * @param {DnsMode} newDnsMode
  */
 NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
   // Tell all nodes about the new DNS mode, so they can decide whether to
