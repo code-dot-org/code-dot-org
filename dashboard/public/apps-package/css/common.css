@@ -40,7 +40,8 @@ html[dir='rtl'] #visualizationColumn {
 #visualizationColumn {
   position: relative;
   top: 0px;
-  left: 0px; }
+  left: 0px;
+  overflow-x: hidden; }
 
 #visualizationColumn.embed_hidesource {
   margin: 0 auto; }
@@ -148,7 +149,7 @@ div.droplet-palette-group-header-selected.orange {
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
-  bottom: 160px; }
+  bottom: 156px; }
 
 html[dir='rtl'] #codeWorkspace {
   right: 400px;

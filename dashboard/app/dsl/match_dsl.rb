@@ -1,6 +1,7 @@
 class MatchDSL < ContentDSL
   def initialize
-    @hash = { :questions => [], :answers => [] }
+    super
+    @hash.merge! questions: [], answers: []
   end
 
   def height(text) @hash[:height] = text end

@@ -6461,13 +6461,17 @@ StudioApp.prototype.onResize = function() {
   this.resizeToolboxHeader();
 };
 
+
+
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
 
-  this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
-  document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+  if (!this.onMouseMoveBoundHandler) {
+    this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
+    document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
 
-  event.preventDefault();
+    event.preventDefault();
+  }
 };
 
 function applyTransformScaleToChildren(element, scale) {
@@ -6525,7 +6529,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
   // Fire resize so blockly and droplet handle this type of resize properly:
-  window.dispatchEvent(new Event('resize'));
+  utils.fireResizeEvent();
 };
 
 StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
@@ -7085,7 +7089,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: utils.valueOr(config.level.edit_blocks, false)
+    editBlocks: utils.valueOr(config.level.edit_blocks, false),
+    readOnly: utils.valueOr(config.readonlyWorkspace, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
@@ -11224,6 +11229,12 @@ exports.createUuid = function () {
     var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
     return v.toString(16);
   });
+};
+
+exports.fireResizeEvent = function () {
+  var ev = document.createEvent('Event');
+  ev.initEvent('resize', true, true);
+  window.dispatchEvent(ev);
 };
 
 // ECMAScript 6 polyfill for String.prototype.repeat

@@ -1,0 +1,9 @@
+name 'sciPD computer models 1'
+title 'Multiple Choice - Stochastic Models'
+
+
+question 'What does it mean for a model to be stochastic?'
+right 'It includes some randomness'
+wrong 'It can be easily automated'
+wrong 'It is predictable'
+wrong 'It has fixed percentages of different elements'
