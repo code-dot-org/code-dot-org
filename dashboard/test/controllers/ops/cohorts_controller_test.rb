@@ -447,10 +447,12 @@ EOS
       assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
 
       new_name = 'New cohort name'
-      patch :update, id: @cohort.id, cohort: {name: new_name}
+      script = Script.find_by_name('ECSPD')
+      patch :update, id: @cohort.id, cohort: {name: new_name, script_id: script.id}
 
       get :show, id: @cohort.id
       assert_equal new_name, JSON.parse(@response.body)['name']
+      assert_equal script.id, JSON.parse(@response.body)['script_id']
       assert_response :success
     end
 

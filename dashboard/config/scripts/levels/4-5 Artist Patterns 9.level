@@ -12,10 +12,25 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Now repeat that code 3 times do draw the whole row. Hint, each hexagon is 80 pixels wide from the furthest points left to right.",
+    "instructions": "Now repeat that code 3 times to draw the whole row. Hint, each hexagon is 80 pixels wide from the furthest points left to right.",
     "slider_speed": ".6",
-    "ideal": "6"
-  }
+    "ideal": "6",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
+  },
+  "md5": "91916c43aa6fa2011b690b2251187512"
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,0 +1,38 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2015-04-27T19:03:55.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Phase 1"
+      },
+      {
+        "text": "Phase 2"
+      },
+      {
+        "text": "Phase 3"
+      },
+      {
+        "text": "Phase 4"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Online introduction to PD program"
+      },
+      {
+        "text": "Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum"
+      },
+      {
+        "text": "Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content"
+      },
+      {
+        "text": "in-person wrap up to the first year of teaching the course"
+      }
+    ],
+    "title": "Matching PD Phases and Descriptions",
+    "height": "75"
+  }
+}]]></config>
+</Match>

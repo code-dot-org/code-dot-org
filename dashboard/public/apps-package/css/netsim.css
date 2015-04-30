@@ -10,6 +10,13 @@
   bottom: 0;
   left: 0;
   right: 0; }
+  #netsim #netsim-disconnected {
+    display: block;
+    position: relative;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+    overflow-y: auto; }
   #netsim #netsim-leftcol {
     position: absolute;
     top: 0;
@@ -36,7 +43,7 @@
       padding: 1px 5px;
       border-collapse: collapse; }
     #netsim table th {
-      border: none;
+      border: solid #5b6770 1px;
       font-family: "Gotham 4r", sans-serif;
       font-size: 10pt; }
     #netsim table td {
@@ -98,21 +105,30 @@
     background-color: white;
     border: solid darkgray thin; }
     #netsim #netsim-visualization svg .viz-node text {
+      fill: black;
       text-anchor: middle; }
+      #netsim #netsim-visualization svg .viz-node text.address-box {
+        font-weight: bold; }
     #netsim #netsim-visualization svg .viz-node circle {
-      stroke: black;
+      stroke: #59b9dc;
       stroke-width: 2;
-      fill: white; }
-    #netsim #netsim-visualization svg .viz-node rect.address-box {
-      stroke: black;
+      fill: #59b9dc; }
+    #netsim #netsim-visualization svg .viz-node rect {
+      stroke: #59b9dc;
       stroke-width: 2px;
       fill: white; }
-    #netsim #netsim-visualization svg .viz-node text.address-box {
-      font-weight: bold; }
+    #netsim #netsim-visualization svg .local-node circle {
+      stroke: #59cad3;
+      fill: #59cad3; }
+    #netsim #netsim-visualization svg .local-node rect {
+      stroke: #59cad3; }
     #netsim #netsim-visualization svg .router-node circle {
-      fill: #ffa400; }
+      stroke: #a69bc1;
+      fill: #a69bc1; }
+    #netsim #netsim-visualization svg .router-node rect {
+      stroke: #a69bc1; }
     #netsim #netsim-visualization svg .viz-wire {
-      stroke: black;
+      stroke: #5b6770;
       stroke-width: 2; }
   #netsim .netsim-shard-selection-panel {
     overflow: hidden; }
@@ -121,8 +137,25 @@
       margin-right: 1em; }
     #netsim .netsim-shard-selection-panel .clearfix {
       clear: both; }
-  #netsim .netsim-lobby-panel ul {
-    margin: 0 0 10px 0; }
+  #netsim .netsim-lobby-panel .instructions {
+    float: left;
+    width: 30%; }
+  #netsim .netsim-lobby-panel .controls {
+    margin-left: calc(30% + 1em); }
+  #netsim .netsim-lobby-panel table {
+    margin-bottom: 1em; }
+    #netsim .netsim-lobby-panel table img {
+      height: 14px;
+      vertical-align: text-top; }
+  #netsim .netsim-lobby-panel td {
+    height: 40px;
+    vertical-align: middle; }
+  #netsim .netsim-lobby-panel .empty-row {
+    text-align: center;
+    border: none; }
+  #netsim .netsim-lobby-panel .button-column {
+    width: 1px;
+    text-align: right; }
   #netsim .netsim-panel.netsim-lobby div.panel-body {
     padding: 1em; }
   #netsim .netsim-lobby-list {
@@ -139,10 +172,6 @@
       text-align: center;
       color: #e7e8ea;
       font-style: italic; }
-    #netsim .netsim-lobby-list .selectable-row {
-      cursor: pointer; }
-      #netsim .netsim-lobby-list .selectable-row:hover {
-        border-left: solid #ffa400 3px; }
     #netsim .netsim-lobby-list .own-row {
       background-color: white;
       font-style: italic; }
@@ -152,10 +181,6 @@
     #netsim .netsim-lobby-list .router-row.selectable-row:hover {
       background-color: #ffe0a6;
       color: black; }
-    #netsim .netsim-lobby-list .selected-row {
-      background-color: #ffa400 !important;
-      color: white !important;
-      font-weight: bold; }
   #netsim div.netsim-panel {
     margin: 0 0 0.5em;
     padding: 0; }
@@ -218,6 +243,7 @@
     width: 100%;
     overflow-y: auto; }
   #netsim .netsim-log-panel table th {
+    border: none;
     background-color: transparent;
     color: black; }
   #netsim .netsim-log-panel table tbody td {
@@ -258,6 +284,7 @@
       float: right;
       text-align: right; }
     #netsim .netsim-send-panel .netsim-packet th {
+      border: none;
       background-color: transparent;
       color: black; }
     #netsim .netsim-send-panel .netsim-packet input, #netsim .netsim-send-panel .netsim-packet textarea {
@@ -407,3 +434,15 @@
       resize: none;
       width: 100%;
       height: 100px; }
+  #netsim input.debug-button {
+    background: #f9f968;
+    background: -moz-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f968), color-stop(82%, #ffa73d), color-stop(100%, #ff7f04));
+    background: -webkit-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -o-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -ms-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: linear-gradient(to bottom, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f968', endColorstr='#ff7f04',GradientType=0 );
+    border: outset #ff7f04 3px;
+    color: black;
+    font-weight: bold; }

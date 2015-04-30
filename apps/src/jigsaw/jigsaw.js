@@ -9,7 +9,7 @@
 
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
-var page = require('../templates/page.html');
+var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 
 /**
@@ -88,9 +88,11 @@ var loadLevel = function() {
 var drawMap = function() {
   var i, x, y, k, tile;
 
-  // Hide the left column.
+  // Hide the left column and the resize bar.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.display = 'none';
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  visualizationResizeBar.style.display = 'none';
 
   // account for toolbox if there
   var toolboxWidth = -Blockly.mainBlockSpace.getMetrics().viewLeft;
@@ -128,7 +130,7 @@ Jigsaw.init = function(config) {
     assetUrl: studioApp.assetUrl,
     data: {
       localeDirection: studioApp.localeDirection(),
-      controls: require('./controls.html')({assetUrl: studioApp.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }

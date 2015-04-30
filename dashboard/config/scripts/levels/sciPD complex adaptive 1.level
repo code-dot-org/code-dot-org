@@ -1,0 +1,33 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-28T04:38:58.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which of the following IS a characteristic of a complex adaptive system?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "has a leader",
+        "correct": false
+      },
+      {
+        "text": "is predictable",
+        "correct": false
+      },
+      {
+        "text": "has centralized control",
+        "correct": false
+      },
+      {
+        "text": "generates emergent patterns",
+        "correct": true
+      }
+    ],
+    "title": "Intro to Complex Adaptive Systems"
+  },
+  "md5": "b838376cc3f24f8633575b0cd467fa44"
+}]]></config>
+</Multi>

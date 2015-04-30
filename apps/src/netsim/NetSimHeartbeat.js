@@ -62,6 +62,14 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
    * @private
    */
   this.onFailedHeartbeat_ = undefined;
+
+  /**
+   * Fake age to apply to this heartbeat's remote row, allowing us to manually
+   * expire it for debugging purposes.
+   * @type {number}
+   * @private
+   */
+  this.falseAgeMS_ = 0;
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
@@ -134,7 +142,7 @@ NetSimHeartbeat.prototype.getTable_ = function () {
 NetSimHeartbeat.prototype.buildRow_ = function () {
   return {
     nodeID: this.nodeID,
-    time: this.time_
+    time: (this.time_ - this.falseAgeMS_)
   };
 };
 
@@ -180,4 +188,13 @@ NetSimHeartbeat.prototype.tick = function () {
       }
     }.bind(this));
   }
+};
+
+/**
+ * Cause this heartbeat to look like it's ten minutes old to the other
+ * nodes on the shard, so it will be cleaned up by another node.
+ */
+NetSimHeartbeat.prototype.spoofExpired = function () {
+  this.falseAgeMS_ += 600000; // 10 minutes old
+  this.update();
 };

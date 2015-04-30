@@ -1,0 +1,29 @@
+name 'PDAlg Facilitators'
+title 'Meet Your Facilitators'
+css 'unplugged'
+markdown <<MARKDOWN
+## Meet your Facilitators
+
+# From Code.org
+- Josh Caldwell, Education Program Manager
+- Kiki Prottsman, Education Program Manager
+
+# From Bootstrap
+- Emmanuel Schanzer, Bootstrap creator
+- Emma Youndtsmith, Bootstrap MA Regional Manager
+- Rosanna Sobota, Bootstrap NY Regional Manager
+
+# Classroom Teachers
+- Casey Cleary, Charles County, MD
+- Corey Morrison, Chicago, IL
+- Jeanni Kim, Montgomery County, MD
+- Joan O'Brien, Broward County, FL
+- Pedro Uribe, Broward County, FL
+- Rick Jennings, Charles County, MD
+- Rodney Weems, Chicago, IL
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+
+MARKDOWN

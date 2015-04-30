@@ -4150,7 +4150,7 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}],206:[function(require,module,exports){
+},{}],205:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4700,7 +4700,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":258,"./utils":253}],238:[function(require,module,exports){
+},{"../locale/current/common":257,"./utils":252}],237:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -4764,7 +4764,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],232:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4779,7 +4779,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <div id="design-cell" class="design-cell-none">\n        <button id="designModeButton" class="share">\n          ', escape((75,  msg.designMode() )), '\n        </button>\n        <button id="codeModeButton" class="share" style="display:none;">\n          ', escape((78,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');81; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((86,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((89,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((90,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((92,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((93,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((94,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((96,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((98,  data.blockCounterClass )), '>\n            ', escape((99,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((102,  data.idealBlockNumber )), '</span>\n          <span> ', escape((103,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');107; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((110,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');113; } ; buf.push('\n  </div>\n  ');115; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');117; } ; buf.push('\n  ');118; if (data.hasDesignMode) { ; buf.push('\n    ', (119,  data.designModeBox ), '\n  ');120; } ; buf.push('\n  ');121; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (122,  data.extraControlRows ), '\n  ');123; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <div id="design-cell" class="design-cell-none">\n        <button id="designModeButton" class="share">\n          ', escape((75,  msg.designMode() )), '\n        </button>\n        <button id="codeModeButton" class="share" style="display:none;">\n          ', escape((78,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');81; } ; buf.push('\n  </div>\n</div>\n\n<div id="visualizationResizeBar">\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((89,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((92,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((93,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((95,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((96,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((97,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((99,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((101,  data.blockCounterClass )), '>\n            ', escape((102,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((105,  data.idealBlockNumber )), '</span>\n          <span> ', escape((106,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');110; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((113,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');116; } ; buf.push('\n  </div>\n  ');118; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');120; } ; buf.push('\n  ');121; if (data.hasDesignMode) { ; buf.push('\n    ', (122,  data.designModeBox ), '\n  ');123; } ; buf.push('\n  ');124; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (125,  data.extraControlRows ), '\n  ');126; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4787,7 +4787,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],208:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],207:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -5052,7 +5052,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":58}],207:[function(require,module,exports){
+},{"./dom":58}],206:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5203,7 +5203,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":28,"./dom":58,"./required_block_utils":205,"./utils":253}],205:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":28,"./dom":58,"./required_block_utils":204,"./utils":252}],204:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -5523,7 +5523,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":258,"./block_utils":27,"./utils":253,"./xml":254}],28:[function(require,module,exports){
+},{"../locale/current/common":257,"./block_utils":27,"./utils":252,"./xml":253}],28:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5691,7 +5691,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":258}],4:[function(require,module,exports){
+},{"../locale/current/common":257}],4:[function(require,module,exports){
 // Globals:
 //   Blockly
 
@@ -5713,7 +5713,9 @@ var FeedbackUtils = require('./feedback');
 var MIN_WIDTH = 900;
 var MOBILE_SHARE_WIDTH_PADDING = 50;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-var WORKSPACE_PLAYSPACE_GAP = 15;
+var MAX_VISUALIZATION_WIDTH = 400;
+var MIN_VISUALIZATION_WIDTH = 200;
+
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
 
@@ -6054,6 +6056,14 @@ StudioApp.prototype.init = function(config) {
     this.handleUsingBlockly_(config);
   }
 
+  var vizResizeBar = document.getElementById('visualizationResizeBar');
+  if (vizResizeBar) {
+    vizResizeBar.addEventListener('mousedown',
+                                  _.bind(this.onMouseDownVizResizeBar, this));
+    document.body.addEventListener('mouseup',
+                                   _.bind(this.onMouseUpVizResizeBar, this));
+  }
+
   window.addEventListener('resize', _.bind(this.onResize, this));
 
   this.reset(true);
@@ -6150,7 +6160,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
   // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
   var upSale = document.createElement('div');
   if (options.makeYourOwn) {
-    upSale.innerHTML = require('./templates/makeYourOwn.html')({
+    upSale.innerHTML = require('./templates/makeYourOwn.html.ejs')({
       data: {
         makeUrl: options.makeUrl,
         makeString: options.makeString,
@@ -6162,7 +6172,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
     }
     belowVisualization.appendChild(upSale);
   } else if (typeof options.makeYourOwn === 'undefined') {
-    upSale.innerHTML = require('./templates/learn.html')({
+    upSale.innerHTML = require('./templates/learn.html.ejs')({
       assetUrl: this.assetUrl
     });
     belowVisualization.appendChild(upSale);
@@ -6394,10 +6404,10 @@ StudioApp.prototype.createModalDialogWithIcon = function(options) {
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
-  instructionsDiv.innerHTML = require('./templates/instructions.html')(level);
+  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')(level);
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }
@@ -6450,6 +6460,86 @@ StudioApp.prototype.onResize = function() {
   // Droplet toolbox width varies as the window size changes, so refresh:
   this.resizeToolboxHeader();
 };
+
+
+
+StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
+  // When we see a mouse down in the resize bar, start tracking mouse moves:
+
+  if (!this.onMouseMoveBoundHandler) {
+    this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
+    document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+
+    event.preventDefault();
+  }
+};
+
+function applyTransformScaleToChildren(element, scale) {
+  for (var i = 0; i < element.children.length; i++) {
+    element.children[i].style.transform = scale;
+    element.children[i].style.msTransform = scale;
+    element.children[i].style.webkitTransform = scale;
+  }
+}
+
+/**
+*  Handle mouse moves while dragging the visualization resize bar. We set
+*  styles on each of the elements directly, overriding the normal responsive
+*  classes that would typically adjust width and scale.
+*/
+StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
+  var codeWorkspace = document.getElementById('codeWorkspace');
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  var visualization = document.getElementById('visualization');
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualizationEditor = document.getElementById('visualizationEditor');
+
+  var rect = visualizationResizeBar.getBoundingClientRect();
+  var offset;
+  var newVizWidth;
+  if (this.isRtl()) {
+    offset = window.innerWidth -
+             (window.pageXOffset + rect.left + (rect.width / 2)) -
+             parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
+    newVizWidth = (window.innerWidth - event.pageX) - offset;
+  } else {
+    offset = window.pageXOffset + rect.left + (rect.width / 2) -
+             parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
+    newVizWidth = event.pageX - offset;
+  }
+  newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
+                         Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
+  var newVizWidthString = newVizWidth + 'px';
+  var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
+
+  if (this.isRtl()) {
+    visualizationResizeBar.style.right = newVizWidthString;
+    codeWorkspace.style.right = newVizWidthString;
+  } else {
+    visualizationResizeBar.style.left = newVizWidthString;
+    codeWorkspace.style.left = newVizWidthString;
+  }
+  // Add extra width to visualizationColumn if visualization has a border:
+  visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
+  visualization.style.maxWidth = newVizWidthString;
+  visualization.style.maxHeight = (newVizWidth / this.vizAspectRatio) + 'px';
+  applyTransformScaleToChildren(visualization,
+      'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
+  if (visualizationEditor) {
+    visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+  // Fire resize so blockly and droplet handle this type of resize properly:
+  utils.fireResizeEvent();
+};
+
+StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
+  // If we have been tracking mouse moves, remove the handler now:
+  if (this.onMouseMoveBoundHandler) {
+    document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
+    this.onMouseMoveBoundHandler = null;
+  }
+};
+
 
 /**
 *  Updates the width of the toolbox-header to match the width of the toolbox
@@ -6529,7 +6619,7 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
 // to the server.
 StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html')();
+  builderDetails.innerHTML = require('./templates/builder.html.ejs')();
   var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: builderDetails,
@@ -6700,6 +6790,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
+  this.vizAspectRatio = config.vizAspectRatio || 1.0;
+  this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
@@ -6719,6 +6811,14 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
 
+// Overwritten by applab.
+StudioApp.prototype.runButtonClickWrapper = function (callback) {
+  if (window.$) {
+    $(window).trigger('run_button_pressed');
+  }
+  callback();
+};
+
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
@@ -6733,12 +6833,8 @@ StudioApp.prototype.configureDom = function (config) {
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(function () {
-    if (window.$) {
-      $(window).trigger('run_button_pressed');
-    }
-    this.runButtonClick();
-  }, 250, true);
+  var runClick = this.runButtonClick.bind(this);
+  var throttledRunClick = _.debounce(this.runButtonClickWrapper.bind(this, runClick), 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -6805,6 +6901,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
+  document.getElementById('visualizationResizeBar').style.display = 'none';
+
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
     var buttonRow = runButton.parentElement;
@@ -6991,7 +7089,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: utils.valueOr(config.level.edit_blocks, false)
+    editBlocks: utils.valueOr(config.level.edit_blocks, false),
+    readOnly: utils.valueOr(config.readonlyWorkspace, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
@@ -7108,7 +7207,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":258,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":26,"./block_utils":27,"./constants.js":57,"./dom":58,"./dropletUtils":59,"./feedback":78,"./templates/builder.html":226,"./templates/buttons.html":227,"./templates/instructions.html":229,"./templates/learn.html":230,"./templates/makeYourOwn.html":231,"./utils":253,"./xml":254,"url":273}],273:[function(require,module,exports){
+},{"../locale/current/common":257,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":26,"./block_utils":27,"./constants.js":57,"./dom":58,"./dropletUtils":59,"./feedback":78,"./templates/builder.html.ejs":225,"./templates/buttons.html.ejs":226,"./templates/instructions.html.ejs":228,"./templates/learn.html.ejs":229,"./templates/makeYourOwn.html.ejs":230,"./utils":252,"./xml":253,"url":272}],272:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7817,13 +7916,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":269,"querystring":272}],272:[function(require,module,exports){
+},{"punycode":268,"querystring":271}],271:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":270,"./encode":271}],271:[function(require,module,exports){
+},{"./decode":269,"./encode":270}],270:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7910,7 +8009,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],270:[function(require,module,exports){
+},{}],269:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7996,7 +8095,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],269:[function(require,module,exports){
+},{}],268:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8507,7 +8606,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],231:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8527,7 +8626,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],230:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],229:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8549,7 +8648,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],229:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],228:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8569,7 +8668,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],226:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],225:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8589,7 +8688,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],78:[function(require,module,exports){
+},{"ejs":273}],78:[function(require,module,exports){
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -8612,7 +8711,7 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var trophy = require('./templates/trophy.html');
+var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
 var _ = utils.getLodash();
 var codegen = require('./codegen');
@@ -8904,7 +9003,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
     tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
   }
 
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       previousLevel:
         !this.canContinueToNextLevel(options.feedbackType) &&
@@ -8930,7 +9029,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
 FeedbackUtils.prototype.getShareFailure_ = function(options) {
   var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
-  shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
+  shareFailureDiv.innerHTML = require('./templates/shareFailure.html.ejs')({shareFailure: shareFailure});
   return shareFailureDiv;
 };
 
@@ -9151,7 +9250,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
-  sharingDiv.innerHTML = require('./templates/sharing.html')({
+  sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
 
@@ -9263,7 +9362,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
       (options.response.total_lines !== numLinesWritten));
   var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
 
-  showCodeDiv.innerHTML = require('./templates/showCode.html')({
+  showCodeDiv.innerHTML = require('./templates/showCode.html.ejs')({
     numLinesWritten: numLinesWritten,
     totalNumLinesWritten: totalNumLinesWritten
   });
@@ -9314,7 +9413,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function() {
   var code = this.getGeneratedCodeString_();
 
   var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = require('./templates/code.html')({
+  codeDiv.innerHTML = require('./templates/code.html.ejs')({
     message: infoMessage,
     code: code
   });
@@ -9329,7 +9428,7 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   var codeDiv = this.getGeneratedCodeElement_();
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }
@@ -9363,7 +9462,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
       '<p>' + msg.clearPuzzleConfirm() + '</p>';
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       clearPuzzle: true,
       cancel: true
@@ -9404,7 +9503,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
+  buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       ok: true
     }
@@ -9808,7 +9907,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":258,"./codegen":55,"./constants":57,"./dom":58,"./feedbackBlocks":79,"./templates/buttons.html":227,"./templates/code.html":228,"./templates/shareFailure.html":234,"./templates/sharing.html":235,"./templates/showCode.html":236,"./templates/trophy.html":237,"./utils":253,"./xml":254}],237:[function(require,module,exports){
+},{"../locale/current/common":257,"./codegen":55,"./constants":57,"./dom":58,"./feedbackBlocks":79,"./templates/buttons.html.ejs":226,"./templates/code.html.ejs":227,"./templates/shareFailure.html.ejs":233,"./templates/sharing.html.ejs":234,"./templates/showCode.html.ejs":235,"./templates/trophy.html.ejs":236,"./utils":252,"./xml":253}],236:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9828,7 +9927,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],236:[function(require,module,exports){
+},{"ejs":273}],235:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9848,7 +9947,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],235:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],234:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9868,7 +9967,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],234:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],233:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9888,7 +9987,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],228:[function(require,module,exports){
+},{"ejs":273}],227:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9908,7 +10007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],227:[function(require,module,exports){
+},{"ejs":273}],226:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9928,9 +10027,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],79:[function(require,module,exports){
+},{"../../locale/current/common":257,"ejs":273}],79:[function(require,module,exports){
 var constants = require('./constants');
-var readonly = require('./templates/readonly.html');
+var readonly = require('./templates/readonly.html.ejs');
 
 var TestResults = constants.TestResults;
 
@@ -10057,7 +10156,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":57,"./templates/readonly.html":233}],233:[function(require,module,exports){
+},{"./constants":57,"./templates/readonly.html.ejs":232}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10078,7 +10177,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],55:[function(require,module,exports){
+},{"ejs":273}],55:[function(require,module,exports){
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -10974,7 +11073,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
     .concat(configuredBlocks);
 };
 
-},{"./utils":253}],253:[function(require,module,exports){
+},{"./utils":252}],252:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -11132,6 +11231,12 @@ exports.createUuid = function () {
   });
 };
 
+exports.fireResizeEvent = function () {
+  var ev = document.createEvent('Event');
+  ev.initEvent('resize', true, true);
+  window.dispatchEvent(ev);
+};
+
 // ECMAScript 6 polyfill for String.prototype.repeat
 // Polyfill adapted from
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
@@ -11228,7 +11333,7 @@ exports.isInfiniteRecursionError = function (err) {
   return false;
 };
 
-},{"./hammer":89,"./lodash":97,"./xml":254}],97:[function(require,module,exports){
+},{"./hammer":89,"./lodash":97,"./xml":253}],97:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -17244,7 +17349,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
     '</block>';
 };
 
-},{"./xml":254}],254:[function(require,module,exports){
+},{"./xml":253}],253:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -17379,7 +17484,7 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
 module.exports = DropletTooltipManager;
 
 },{"./DropletFunctionTooltip":25}],25:[function(require,module,exports){
-var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html');
+var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html.ejs');
 var msg = require('../../locale/current/common');
 
 /**
@@ -17498,7 +17603,7 @@ DropletFunctionTooltip.prototype.getTooltipHTML = function () {
 
 module.exports = DropletFunctionTooltip;
 
-},{"../../locale/current/common":258,"./DropletBlockTooltip.html":24}],258:[function(require,module,exports){
+},{"../../locale/current/common":257,"./DropletBlockTooltip.html.ejs":24}],257:[function(require,module,exports){
 /*common*/ module.exports = window.blockly.locale;
 },{}],24:[function(require,module,exports){
 module.exports= (function() {
@@ -17520,7 +17625,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],274:[function(require,module,exports){
+},{"ejs":273}],273:[function(require,module,exports){
 
 /*!
  * EJS
@@ -17875,7 +17980,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":275,"./utils":276,"fs":266,"path":267}],276:[function(require,module,exports){
+},{"./filters":274,"./utils":275,"fs":265,"path":266}],275:[function(require,module,exports){
 
 /*!
  * EJS
@@ -17899,7 +18004,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],275:[function(require,module,exports){
+},{}],274:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -18098,7 +18203,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],267:[function(require,module,exports){
+},{}],266:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -18326,7 +18431,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":268}],268:[function(require,module,exports){
+},{"_process":267}],267:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -18385,7 +18490,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],266:[function(require,module,exports){
+},{}],265:[function(require,module,exports){
 
 },{}],2:[function(require,module,exports){
 /**

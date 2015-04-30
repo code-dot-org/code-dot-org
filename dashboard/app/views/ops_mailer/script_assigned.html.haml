@@ -1,0 +1,20 @@
+%p
+  Hi #{@params[:user].name},
+
+%p
+  You have been assigned to a new course on Code.org:
+  = link_to @params[:script].localized_title, script_url(@params[:script])
+
+%p
+  Your new course will appear on your progress page at
+  = link_to root_url, root_url
+  or you can click here to go to your course directly:
+  %br
+  = link_to script_url(@params[:script]), script_url(@params[:script])
+%p
+  If you have any difficulty accessing your course, please e-mail
+  = mail_to 'PD@code.org'
+%p
+  Thanks,
+  %br
+  The Code.org Team

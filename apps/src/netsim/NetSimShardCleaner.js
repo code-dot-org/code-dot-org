@@ -127,9 +127,10 @@ CleaningHeartbeat.prototype.buildRow_ = function () {
  * right now, and we proceed to clean the tables of expired rows.
  *
  * @param {!NetSimShard} shard
+ * @param {number} initialCleaningDelayMs
  * @constructor
  */
-var NetSimShardCleaner = module.exports = function (shard) {
+var NetSimShardCleaner = module.exports = function (shard, initialCleaningDelayMs) {
 
   /**
    * Shard we intend to keep clean.
@@ -144,7 +145,7 @@ var NetSimShardCleaner = module.exports = function (shard) {
    * @type {number}
    * @private
    */
-  this.nextAttemptTime_ = Date.now();
+  this.nextAttemptTime_ = Date.now() + initialCleaningDelayMs;
 
   /**
    * A special heartbeat that acts as our cleaning lock on the shard

@@ -1,5 +1,5 @@
 class CohortSerializer < ActiveModel::Serializer
-  attributes :id, :name, :program_type, :cutoff_date, :districts
+  attributes :id, :name, :program_type, :cutoff_date, :districts, :script_id
   has_many :workshops
   has_many :teachers
   has_many :deleted_teachers

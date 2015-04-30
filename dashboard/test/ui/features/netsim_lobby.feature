@@ -13,20 +13,12 @@ Feature: Using the Internet Simulator Lobby
     And element "#netsim-shard-select" is hidden
 
     When I enter the netsim name "Fred"
-    Then element "#netsim-lobby-name" is disabled
-    And element "#netsim-lobby-set-name-button" is hidden
-    And element "#netsim-shard-select" is visible
-    And element "#netsim-shard-select" contains text "My Private Network"
-
-    When I add a router
     And I wait for 2 seconds
-    Then element "#netsim-lobby-connect" is disabled
+    Then element ".netsim-shard-selection-panel" is hidden
+    And element ".netsim-lobby-panel" is visible
+    And there is a router in the lobby
 
-    When I select the first router
-    Then element ".router-row" has class "selected-row"
-    And element "#netsim-lobby-connect" is enabled
-
-    When I press the "Connect" button
+    When I press the first ".join-button" element
     And I wait until element ".netsim-send-panel" is visible
     Then element ".netsim-lobby" is hidden
     And element ".netsim-send-panel" is visible
