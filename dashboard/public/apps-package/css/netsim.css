@@ -105,21 +105,30 @@
     background-color: white;
     border: solid darkgray thin; }
     #netsim #netsim-visualization svg .viz-node text {
+      fill: black;
       text-anchor: middle; }
+      #netsim #netsim-visualization svg .viz-node text.address-box {
+        font-weight: bold; }
     #netsim #netsim-visualization svg .viz-node circle {
-      stroke: black;
+      stroke: #59b9dc;
       stroke-width: 2;
-      fill: white; }
-    #netsim #netsim-visualization svg .viz-node rect.address-box {
-      stroke: black;
+      fill: #59b9dc; }
+    #netsim #netsim-visualization svg .viz-node rect {
+      stroke: #59b9dc;
       stroke-width: 2px;
       fill: white; }
-    #netsim #netsim-visualization svg .viz-node text.address-box {
-      font-weight: bold; }
+    #netsim #netsim-visualization svg .local-node circle {
+      stroke: #59cad3;
+      fill: #59cad3; }
+    #netsim #netsim-visualization svg .local-node rect {
+      stroke: #59cad3; }
     #netsim #netsim-visualization svg .router-node circle {
-      fill: #ffa400; }
+      stroke: #a69bc1;
+      fill: #a69bc1; }
+    #netsim #netsim-visualization svg .router-node rect {
+      stroke: #a69bc1; }
     #netsim #netsim-visualization svg .viz-wire {
-      stroke: black;
+      stroke: #5b6770;
       stroke-width: 2; }
   #netsim .netsim-shard-selection-panel {
     overflow: hidden; }
