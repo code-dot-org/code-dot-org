@@ -13,7 +13,12 @@
     },
     "title": "Pixelation - Lesson 15 - Color Shades 4x4",
     "content1": "description here",
-    "markdown": "# Pixelation: Task 3\n<img src = \"http://staging.code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using *12-bits per pixel*. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n * Row 1 - fill with shades of red. \n * Row 2 - shades of green. \n * Row 3 - shades of blue. \n * Row 4 - shades of gray.\n"
+    "markdown": "# Pixelation: Task 3\n<img src = \"http://staging.code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using *12-bits per pixel*. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n * Row 1 - fill with shades of red. \n * Row 2 - shades of green. \n * Row 3 - shades of blue. \n * Row 4 - shades of gray.\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ],
+    "video_key": "csp_pixelation_color_3"
   },
   "md5": "fb3abab3480cb6bf0ce5e70625f8b3e9"
 }]]></config>

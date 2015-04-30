@@ -1,0 +1,18 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-28T18:09:32.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "End of Phase 1",
+    "markdown": "## Congratulations! \n\nYou've just finished your first phase of professional development! Thank you so much for spending the time to complete this introduction, where we hope you learned more about the program you've just embarked on. We'll see you this summer at your in-person professional development! If you have any questions, please don't hesitate to email us at [pd@code.org](mailto:pd@code.org).\n\n<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/ABw4yPFbEjg?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>

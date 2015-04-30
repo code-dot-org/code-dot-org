@@ -1,0 +1,16 @@
+name 'sciPD culture video'
+title 'Dispositions And Classroom Culture'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+### Dispositions and Classroom Culture
+
+In this lesson, you will build your background knowledge on dispositions and classroom culture to cultivate for success in CS learning by watching a video and checking your understanding by answering a few quiz questions. <br>
+
+<iframe width="600" height="338" src="https://www.youtube.com/embed/bR_pGotQ3wY" frameborder="0" allowfullscreen></iframe>
+
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
