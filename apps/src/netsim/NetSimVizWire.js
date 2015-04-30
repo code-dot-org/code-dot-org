@@ -103,6 +103,7 @@ NetSimVizWire.prototype.kill = function () {
  * @param {string} newState - "0" or "1" for off and on.
  */
 NetSimVizWire.prototype.animateSetState = function (newState) {
+  this.getRoot().removeClass('state-unknown');
   if (newState === '0') {
     this.getRoot().addClass('state-off');
     this.getRoot().removeClass('state-on');
@@ -110,4 +111,9 @@ NetSimVizWire.prototype.animateSetState = function (newState) {
     this.getRoot().addClass('state-on');
     this.getRoot().removeClass('state-off');
   }
+  this.doAfterDelay(500, function () {
+    this.getRoot().removeClass('state-on');
+    this.getRoot().removeClass('state-off');
+    this.getRoot().addClass('state-unknown');
+  }.bind(this));
 };
