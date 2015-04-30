@@ -14,7 +14,7 @@
 
 var utils = require('../utils');
 var i18n = require('../../locale/current/netsim');
-var markup = require('./NetSimSendPanel.html');
+var markup = require('./NetSimSendPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
@@ -210,7 +210,7 @@ NetSimSendPanel.prototype.render = function () {
   }
 
   // Bind useful elements and add handlers
-  this.packetsDiv_ = this.getBody().find('.send-widget-packets');
+  this.packetsDiv_ = this.getBody().find('.send-panel-packets');
   this.getBody()
       .find('#add-packet-button')
       .click(this.onAddPacketButtonPress_.bind(this));
@@ -365,6 +365,10 @@ NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
   }
 
   this.addPacket_();
+
+  // Scroll to end of packet area
+  var scrollingArea = this.getBody().find('.send-panel-packets');
+  scrollingArea.animate({ scrollTop: scrollingArea[0].scrollHeight }, 'fast');
 };
 
 /**

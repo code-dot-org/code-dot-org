@@ -6,17 +6,17 @@ title: Spelling Bee view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>11, :title=> 'Spelling Bee', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Part puzzle, part word search, the Spelling Bee asks students to program a bee to find common words in a grid.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,16 +31,16 @@ Part puzzle, part word search, the Spelling Bee asks students to program a bee t
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
   * Arrange sequential movement commands to search for and identify target words within a grid of letters.
   * Practice spelling age-appropriate words
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -62,7 +62,7 @@ Part puzzle, part word search, the Spelling Bee asks students to program a bee t
       * Move
       * Square
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -72,7 +72,7 @@ Part puzzle, part word search, the Spelling Bee asks students to program a bee t
 
 Very young students or struggling readers may need aditional support finding the words - using manipulatives (like Scrabble tiles) can help students see what words look like in different directions.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -87,7 +87,7 @@ Very young students or struggling readers may need aditional support finding the
 
 Using class vocab words, create a floor-sized word search. The whole class can then "program" a student, or teacher, to spell out words by creating sequences of cardinal directions.
 
-[/together]
+[/juntos]
 
 [standards]
 

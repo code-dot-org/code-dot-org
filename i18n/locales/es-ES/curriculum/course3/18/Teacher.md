@@ -6,17 +6,17 @@ title: The Internet view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'The Internet', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this lesson, students will pretend to flow through the Internet, all the while learning about Internet connections, URLs, IP Addresses, and the DNS.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 25 minutes
 
@@ -37,9 +37,9 @@ In this lesson, students will pretend to flow through the Internet, all the whil
 
 7) [The Internet Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,29 +47,30 @@ In this lesson, students will pretend to flow through the Internet, all the whil
   * Translate URLs into IP Addresses 
   * Practice creative problem solving
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Paper for writing messages to send
   * Paper for creating a sign to "label" each "server"
   * Pens & Pencils
   * IP Address and Delivery Type Cards [Found Here](Activity18-Internet.pdf)
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/Z6CEAOFZRRk?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * This Teacher Lesson Guide
   * Print enough [IP Address Cards and Delivery Type Cards](Activity18-Internet.pdf) for each group to draw
   * Print one [Internet Assessment](Assessment18-Internet.pdf) for each student
   * Access to the Internet (such as getip.com) or 6+ pre-determined URL/IP address combinations
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -89,24 +90,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
 This lesson has several new and important words:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **IP Address** - Say it with me: I-P Add-ress   
 A number assigned to any item that is connected to the Internet
@@ -135,13 +136,13 @@ A method of sending information using telephone or television cables
 **Packets** - Say it with me: Pack-ets   
 Small chunks of information that have been carefully formed from larger chunks of information
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a "see if you can spot these during the day" type of heads-up.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="GetStarted"></a> 3) Getting the Message
 
@@ -155,15 +156,15 @@ A quick preview is all you need here. These words will all be explained as part 
       * What do I do as a user?
       * What do you think happens inside the Internet?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 There are some great YouTube videos on this subject that can make this lesson a little easier to understand. You can show them to the class in advance, or just watch them yourself.  
 [Here is one of the most clear and entertaining versions.](http://youtu.be/7_LPdttKXPc)   
 (We recommend stopping the video at 2:59, if possible.)
 
-[/tip]
+[/sugerencia]
 
 Sending a message over the Internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!
 
@@ -199,15 +200,15 @@ Wi-Fi connections are super convenient, but the aren't always reliable.
 
 So, if you're used to sending information to URLs (like www.code.org) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other? That's what the DNS is for. The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the Internet as we know it!
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 If you're thinking that this is a lot of text and it would be extremely boring to try to lecture this to a class full of elementary school kids, you're absolutely right!
 
 If you're unable to show a YouTube video in class to help explain it all, I highly recommend drawing pictures to explain each idea above, or choosing students as volunteers to act out what you describe while you're explaining. They're not expected to get every detail and definition at this point, only to gain exposure.
 
-[/tip]
+[/sugerencia]
 
 With that said, let's try to understand what the DNS does by making a little DNS table ourselves.
 
@@ -222,7 +223,7 @@ First, we need to fill in this table.
 
 Now let's take this DNS Table and pretend to send messages through the Internet!
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -285,19 +286,19 @@ To play this game, you can have your groups cluster anywhere, but for the first 
 
 ![](layout.png)
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 If it feels like there are too many rules to explain outright, feel free to post them on the board and just explain the game as you go. You can play multiple rounds until the class really understands.
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -305,13 +306,13 @@ If it feels like there are too many rules to explain outright, feel free to post
       * Why?
   * Why might it take your message a long time to get somewhere?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 6) Vocab Shmocab
 
@@ -330,7 +331,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
   * Is there a word that we learned where you remember the word, but not what it means?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -341,7 +342,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->

@@ -23,10 +23,9 @@ class LevelsController < ApplicationController
   # GET /levels/1
   # GET /levels/1.json
   def show
-    set_videos_and_callouts
     view_options(
         full_width: true,
-        no_footer: @game == Game.applab
+        no_footer: !@game.has_footer?
     )
   end
 

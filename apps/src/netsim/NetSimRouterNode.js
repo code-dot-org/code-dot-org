@@ -653,6 +653,43 @@ NetSimRouterNode.prototype.getNodeType = function () {
   return NodeType.ROUTER;
 };
 
+/** @inheritdoc */
+NetSimRouterNode.prototype.getStatus = function () {
+  // Determine status based on cached wire data
+  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var incomingWireRows = cachedWireRows.filter(function (wireRow) {
+    return wireRow.remoteNodeID === this.entityID;
+  }, this);
+
+  if (incomingWireRows.length === 0) {
+    return i18n.routerStatusNoConnections({
+      maximumClients: MAX_CLIENT_CONNECTIONS
+    });
+  }
+
+  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var connectedNodeNames = incomingWireRows.map(function (wireRow) {
+    var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
+      return nodeRow.id === wireRow.localNodeID;
+    });
+    if (nodeRow) {
+      return nodeRow.name;
+    }
+    return i18n.unknownNode();
+  }).join(', ');
+
+  if (incomingWireRows.length >= MAX_CLIENT_CONNECTIONS) {
+    return i18n.routerStatusFull({
+      connectedClients: connectedNodeNames
+    });
+  }
+
+  return i18n.routerStatus({
+    connectedClients: connectedNodeNames,
+    remainingSpace: (MAX_CLIENT_CONNECTIONS - incomingWireRows.length)
+  });
+};
+
 /**
  * Makes sure that the given specification contains the fields that this
  * router needs to do its job.

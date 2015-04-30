@@ -6,17 +6,17 @@ title: "Artist: Debugging" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>11, :title=> 'Artist: Debugging', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this stage, students will continue practicing their debugging skills by helping the Artist to fix pictures that aren't coming out quite right.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ In this stage, students will continue practicing their debugging skills by helpi
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -42,7 +42,7 @@ In this stage, students will continue practicing their debugging skills by helpi
   * Identify an algorithm that is unsuccessful when the steps are out of order
   * Reflect on the debugging process in an age-appropriate way
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -56,7 +56,7 @@ By now students should be pretty comfortable digging in and finding bugs. This i
   * Which bugs were the hardest to find? How did you eventually fix them?
   * What's the first thing you look for in a buggy program?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -66,7 +66,7 @@ By now students should be pretty comfortable digging in and finding bugs. This i
 
 Some students are averse to running a program until they've fixed it. Sometimes the easiest way to figure out what's wrong with a program is to watch it fail, so there's nothing wrong with running a program before we've finished fixing it. The only time we care if they got it right the first time is on the assessment levels.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -81,7 +81,7 @@ Some students are averse to running a program until they've fixed it. Sometimes 
 
 Have students go back through previous levels, purposefully adding bugs to their solutions. They can then ask other students to debug their work. This can also be done with paper puzzles.
 
-[/together]
+[/juntos]
 
 [standards]
 

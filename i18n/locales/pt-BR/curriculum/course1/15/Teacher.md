@@ -1,67 +1,68 @@
 * * *
 
-title: The Big Event view: page_curriculum theme: none
+title: O grande evento view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'The Big Event', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
+<%= partial('curriculum_header', :title=> 'O grande evento', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>15) %>
 
 [content]
 
-## Lesson Overview
+## Visão geral da aula
 
-Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
+Eventos são uma excelente forma de adicionar variedade a um algoritmo previamente escrito. Às vezes você quer que seu programa possa responder ao usuário exatamente quando o usuário quiser. É para isso que servem os eventos.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 15 minutes
+### **Primeiros passos** - 15 minutos
 
-1) [Review](#Review)   
-2) [Vocabulary](#Vocab)  
-3) [A Series of Events](#GetStarted)
+1) [Revisão](#Review)   
+2) [Vocabulário](#Vocab)  
+3) [Uma série de eventos](#GetStarted)
 
-### **Activity: Events** - 15 minutes
+### **Atividade: Eventos** - 15 minutos
 
-4) [The Big Event](#Activity1)
+4) [O grande evento](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Resumo** - 5 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
 
 
-### **Assessment** - 10 minutes
+### **Avaliação** - 10 minutos
 
-6) [The Big Event Assessment](#Assessment)
+6) [Avaliação do grande evento](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Repeat commands given by an instructor
-  * Recognize actions of the teacher as signals to initiate commands
-  * Practice differentiating pre-defined actions and event-driven ones
+  * Repetir comandos dados por um instrutor
+  * Reconhecer ações do professor como sinais para iniciar comandos
+  * Praticar a diferenciação entre ações pré-definidas e ações orientadas a eventos
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * Assessment Worksheet: [The Big Event Assessment](/curriculum/course1/15/Assessment15-TheBigEvent.pdf)
-  * Pens/Pencils/Markers
+  * Folha de avaliação: [Avaliação do grande evento](/curriculum/course1/15/Assessment15-TheBigEvent.pdf)
+  * Canetas/lápis/marcadores
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/8PN8aPWZ2sY?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
   * Teacher Lesson Guide
   * Print one [The Big Event Activity Worksheet](/curriculum/course1/15/Activity15-TheBigEvent.pdf) and Event Controller
   * Print Assessment Worksheet: [The Big Event Assessment](/curriculum/course1/15/Assessment15-TheBigEvent.pdf) for each student
@@ -70,33 +71,33 @@ Events are a great way to add variety to a pre-written algorithm. Sometimes you 
 
 [together]
 
-## Getting Started (15 min)
+## Primeiros passos (15 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. You can do this as one large group or have students discuss with an elbow partner.
+Este é um excelente momento para revisar a última aula que você deu à turma. Você pode fazer isso com a turma toda ou pedir para que os alunos discutam em duplas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one new and important vocabulary word:  
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -105,65 +106,65 @@ This lesson has one new and important vocabulary word:
 
 [/centerIt]
 
-**Event** - Say it with me: E-vent   
-An action that causes something to happen
+**Evento** - Repita comigo: e-ven-to   
+Uma ação que faz alguma coisa acontecer
 
 [/together]
 
-### <a name="GetStarted"></a> 3) A Series of Events
+### <a name="GetStarted"></a> 3) Uma série de eventos
 
-  * Prep your class to answer a question:
+  * Prepare sua sala para responder a uma pergunta:
     
-      * "I'm going to ask you a question. I want you to raise your hand if you want me to call on you for the answer."
+      * "Vou fazer uma pergunta. Quem quiser responder à pergunta, levante a mão".
     
-      * Ask a simple question that most of your students should be able to answer, such as:
+      * Faça uma pergunta simples, que a maioria dos alunos saiba responder, como por exemplo:
         
-          * How many thumbs do I have?
-          * What is bigger, a bird or a horse?
+          * Quantos polegares eu tenho?
+          * O que é maior, um pássaro ou um cavalo?
     
-      * Call on a student who has their hand raised and let them give their answer.
+      * Chame um aluno que levantou a mão e peça para ele responder a pergunta.
     
-      * Upon finishing that display, ask the class how you knew that the student wanted you to call on them. 
-          * Your class will likely mention the raising of the hand.
-      * Explain to everyone that when students raise their hand, it is an "event" that causes you to know that they want to be called on.   
+      * Após fazer isso, pergunte à turma como você sabia que o aluno queria que você o chamasse para responder. 
+          * Provavelmente a turma vai mencionar o fato de ele ter levantado a mão.
+      * Explique para a turma que quando o aluno levanta a mão, acontece um "evento", que faz com que você saiba que ele quer responder a pergunta.   
           
         
 
-  * Ask the class if they can think of any other events that give signals.
+  * Pergunte à turma se eles conseguem apontar outros eventos que podem dar sinais.
     
-      * You may need to remind them that you're not talking about an event like a birthday party or a field trip.
-      * If they have trouble, you can remind them that an event is an action that causes something to happen. 
-          * What about an alarm clock going off? What does that make happen?
-          * What about pressing "Start" on the microwave? What does that do?
-          * What about pressing the power button on your tv remote?
+      * Você pode precisar lembrá-los de que você não está falando de um evento como uma festa de aniversário ou um passeio no campo.
+      * Se eles tiverem dificuldades, você pode lembrá-los de que um evento é uma ação que faz alguma coisa acontecer. 
+          * Que tal o exemplo de desligar um despertador? O que acontece?
+          * E pressionar o botão "ligar" do micro-ondas? O que acontece?
+          * E apertar o botão "ligar" no controle remoto da TV?
 
-  * Today, we're going to create programs with events.
+  * Hoje, vamos criar programas com eventos.
 
 [together]
 
-## Activity: (15 min)
+## Atividade: (15 min)
 
-### <a name="Activity1"></a> 4) [The Big Event](/curriculum/course1/15/Activity15-TheBigEvent.pdf)
+### <a name="Activity1"></a> 4) [O grande evento](/curriculum/course1/15/Activity15-TheBigEvent.pdf)
 
-  * Do you remember helping the Flurbs find fruit? How about making maps where you helped your friend get to the smiley face? 
-      * In those exercises, you knew in advance exactly where you wanted your character to end up, so you could make a program that took them from start to finish without any interruptions.
-      * In most real programs, we can't do that because we want to have options, depending on what the user needs.  
-          * Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to *only* move when I put my finger on the screen of my phone.
-          * Putting my finger on the screen would then become an "event" that tells my character to move.
+  * Você se lembra de como ajudamos os Flurbs a encontrar as frutas? E de quando fizemos mapas para ajudar os colegas a chegar ao rostinho feliz? 
+      * Nesses exercícios, você sabia com antecedência exatamente onde você queria que o personagem fosse, então você podia criar um programa que os levava a cumprir a tarefa do início ao fim sem qualquer interrupção.
+      * Na maioria dos programas reais, não podemos fazer isso porque queremos ter opções, dependendo das necessidades do usuário.  
+          * Digamos que eu quero que meu personagem se mova somente quando meu dedo estiver na tela do meu celular. Eu precisaria programar o personagem para se mover *somente* quando eu colocar meu dedo na tela do celular.
+          * Colocar meu dedo na tela do celular se tornaria, então, um "evento" que diz ao meu personagem para se mover.
 
-In earlier lessons, we created algorithms that allowed us to control a friend or Flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!
+Nas aulas anteriores, criamos algoritmos que nos permitiram controlar vários passos de um colega ou de um Flurb de uma vez. Foi divertido e útil, mas o que acontece quando você não sabe tudo que você quer que seu amigo faça com antecedência? É aí que entram os eventos!
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-If your students seem confused, talk about their favorite games and all of the ways that they let the characters know what they're supposed to do. Point out how the game would be really boring if it ran from start to finish without any events required.
+Se seus alunos parecerem confusos, fale sobre os jogos favoritos deles e de todas as formas que eles usam para que os personagens saibam o que eles devem fazer. Mostre como o jogo seria chato se ele fosse do início ao fim sem a necessidade de qualquer evento.
 
 [/tip]
 
-> **Directions:**
+> **Instruções:**
 > 
->   1. Project the Event Controller onto your classroom screen.
+>   1. Projete o controlador de eventos para a turma toda ver.
 
 [centerIt]
 
@@ -171,104 +172,104 @@ If your students seem confused, talk about their favorite games and all of the w
 
 [/centerIt]
 
->   1. Decide with your class what each button does. We suggest: 
->       * Pink Button -> Say “Wooooo!”
->       * Teal Button -> “Yeah!”
->       * Purple Dial -> “Boom!”
->   2. Practice tapping the buttons on the overhead and having your class react.
->   3. Add some button sequences into the mix and have the students try to keep up with their sounds.
->   4. Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.
->   5. Get the class started on a planned task before interrupting them again with the buttons. We suggest: 
->       * Counting to 10
->       * Singing “Old MacDonald”
->   6. Once their plan is underway, interject button presses sporadically. 
->   7. Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven. 
+>   1. Decida, juntamente com a turma, o que cada botão faz. Sugestão: 
+>       * Botão rosa -> dizer “Wooooo!”
+>       * Botão turquesa -> "Yeah!"
+>       * Botão roxo -> “Boom!”
+>   2. Pratique apertando os botões, de modo que toda a classe possa ver, e faça a turma toda reagir.
+>   3. Acrescente algumas sequências de botão e peça para os alunos tentarem continuar fazendo os sons.
+>   4. Fale para a turma que toda vez que você aperta um botão, é um "evento" que faz com que eles saibam o que devem fazer.
+>   5. Peça para a turma começar uma tarefa planejada antes de interrompê-los novamente com os botões. Sugestão: 
+>       * Contar até 10
+>       * Cantar uma música
+>   6. Quando eles estiverem realizando a tarefa, interrompa-os esporadicamente apertando os botões. 
+>   7. Continue o jogo até que eles compreendam a diferença entre ações que são orientadas por um plano e ações que são orientadas a eventos. 
 
 [/together]
 
 [together]
 
-## Wrap-up (10 min)
+## Resumo (10 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * Why do we need to be able to handle events in a program?
-  * What are some other kinds of events that you can think of?
-
-[/together]
-
-[together]
-
-## Assessment (10 min)
-
-### <a name="Assessment"></a>6) Assessment Worksheet: [Controlling by Events Assessment](Assessment15-TheBigEvent.pdf)
-
-  * Hand out the assessment activity and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Porque precisamos ser capazes de lidar com eventos em um programa?
+  * Quais são alguns outros tipos de eventos nos quais você pode pensar?
 
 [/together]
 
 [together]
 
-## Extended Learning
+## Avaliação (10 min)
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+### <a name="Assessment"></a>6) Folha de avaliação: [Avaliação do controle por eventos](Assessment15-TheBigEvent.pdf)
 
-### One Person's Event is Another One's Reaction
+  * Distribua a atividade de avaliação e deixe que os alunos a completem individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
-  * Assign each student an event to watch out for, and an appropriate reaction to that event. Chain the actions so that each child's reaction becomes an event that triggers the reaction of another student. Keep assigning until everyone has something to do and everyone makes someone react. 
+[/together]
+
+[together]
+
+## Aprendizagem estendida
+
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
+
+### O evento de uma pessoa é a reação de outra
+
+  * Atribua um evento a cada aluno, e uma reação apropriada a este evento. Conecte as ações de forma que a reação de cada criança seja um evento que dispara a reação de outro aluno. Continue fazendo atribuições até que todos tenham algo para fazer, e que todos façam alguém reagir. 
 
 ### Eventopalooza
 
-  * Break the class up into groups. Using the Events Controller, assign each group a different reaction to the same button. Do this for all three buttons, then watch the chaos! 
+  * Divida a sala em grupos. Usando o controlador de eventos, atribua uma reação diferente para cada grupo com relação ao mesmo botão. Faça isso para os três botões, e então veja o caos! 
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems. 
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos. 
 
 ### CSTA K-12 Computer Science Standards:
 
-  * CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task. 
-  * CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving. 
-  * CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises. 
-  * CT.L1:6-05 - Make a list of sub-problems to consider while addressing a larger problem.
-  * CT.L2-06 - Describe and analyze a sequence of instructions being followed.
+  * CPP.L1:3-04 - Construir um conjunto de comandos para realizar uma tarefa simples. 
+  * CT.L1:6-01 - Entender e usar os passos básicos na resolução de um problema com um algoritmo. 
+  * CT.L1:6-02 - Desenvolver uma compreensão simples de algoritmo usando exercícios que não precisem de computador. 
+  * CT.L1:6-05 - Fazer uma lista de subproblemas que devem ser considerados ao se tratar um problema maior.
+  * CT.L2-06 - Descrever e analisar uma sequência de instruções sendo seguidas.
 
-### NGSS Science and Engineering Practices
+### Práticas de engenharia e ciência NGSS
 
-  * K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
+  * K-2-ETS1-1 - Fazer perguntas, observações e reunir informações sobre uma situação que as pessoas querem mudar para definir um problema simples que pode ser resolvido com o desenvolvimento de uma ferramenta ou objeto novo, ou melhorado. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning. 
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido. 
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * K.CC.4 - Understand the relationship between numbers and quantities; connect counting to cardinality.
+  * K.CC.4 - Entender a relação entre números e quantidades; relacionar contagem e cardinalidade.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.K.1 - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
-  * SL.K.2 - Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.
-  * L.K.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
+  * SL.K.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos da educação infantil e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.K.2 - Confirmar a compreensão de um texto lido em voz alta ou de informações apresentadas de forma oral por outro tipo de mídia, perguntando e respondendo questões sobre detalhes importantes e pedindo explicações se algo não for entendido.
+  * L.K.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
 
 [/standards]
 

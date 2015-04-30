@@ -10,6 +10,11 @@ var testUtils = require('./testUtils');
 testUtils.setupLocales();
 var msg = testUtils.requireWithGlobalsCheckBuildFolder('../locale/current/common', ['c', 'n', 'v', 'p', 's']);
 
+// Don't let ejs overload how the ejs extension is loaded, as this confuses
+// browserify
+require('ejs');
+require.extensions['.ejs'] = undefined;
+
 var buildDir = '../../build';
 
 var BLOCKLY_CODE =
@@ -52,7 +57,9 @@ function setGlobals () {
   jsdomRoot.dom.level3.html.HTMLElement.prototype.getBBox = function () {
     return {
       height: 0,
-      width: 0
+      width: 0,
+      x: 0,
+      y: 0
     };
   };
 

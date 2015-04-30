@@ -1,77 +1,77 @@
 * * *
 
-title: "Play Lab: Create a Story" view: page_curriculum theme: none
+title: "Laboratório: Crie uma história" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>16, :title=> 'Play Lab: Create a Story', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Curso 1', :lesson=>16, :title=> 'Laboratório: Crie uma história', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-In this culminating plugged activity, students will have the opportunity to apply all of the coding skills they've learned to create an animated story. It's time to get creative and create a story in the Play Lab!
+Nesta atividade, os alunos terão a oportunidade de aplicar todas as habilidades de programação que aprenderam para criar uma história animada. É hora de usar a criatividade e criar uma história no laboratório!
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Play Lab Create a Story**
+### **Atividade: Laboratório - Crie uma história**
 
-[Play Lab: Create a Story](#Activity)
+[Laboratório: Crie uma história](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activities](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Identify actions that correlate to input events
-  * Create an animated, interactive story using sequence, loops, and event-handlers
-  * Share a creative artifact with other students
+  * Identificar ações que correspondem a eventos de entrada
+  * Criar uma história animada e interativa, usando sequências, laços e manipuladores de eventos
+  * Compartilhar a criatividade com os demais alunos
 
 [/together]
 
 [together]
 
-## Getting Started
+## Primeiros passos
 
-### <a name="GetStarted"></a> Introduction
+### <a name="GetStarted"></a> Introdução
 
-  * Review The Big Event activity with students: 
-      * What did we "program" the button click events to do?
-  * Now we're going to add events to our coding, Specifically, we're going to have an event for when two characters touch each other. 
-      * In video game programming we call this kind of event collision detection; it lets us decide what to do when one thing collides with, or touches, another.
-      * What kinds of collision events have you seen in games?
+  * Revise a atividade do grande evento com os alunos: 
+      * O que "programamos" para que os cliques nos botões fizessem?
+  * Agora vamos adicionar eventos ao nosso código. Especificamente, vamos ter um evento que acontece quando dois personagens se encontram. 
+      * Na programação de jogos para vídeo game, chamamos esse tipo de evento de detecção de colisão; ele nos permite decidir o que fazer e quando uma coisa colide, ou encontra outra coisa.
+      * Quais tipos de evento de colisão você já viu em jogos?
 
 [/together]
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!
+Os alunos terão a oportunidade de compartilhar o resultado da atividade por meio de um link. Essa é uma ótima oportunidade para mostrar à comunidade escolar as grandes coisas que seus alunos estão fazendo. Pegue todos os links e coloque-os no site da sua turma para que todos possam ver!
 
 [/tip]
 
 [together]
 
-## Activity
+## Atividade
 
-### <a name="Activity"></a> [Play Lab: Create a Story](http://learn.code.org/s/course1/stage/16/puzzle/1)
+### <a name="Activity"></a> [Laboratório: Crie uma história](http://learn.code.org/s/course1/stage/16/puzzle/1)
 
-This is the most free-form plugged activity of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, partiularly for students who are overwhelmed by too many options.
+Essa é a atividade mais livre do curso. Na última etapa, os alunos têm a liberdade de criar sua própria história. Você pode fornecer diretrizes sobre que tipo de história escrever, principalmente para alunos que estão em dúvida entre muitas opções.
 
 [/together]
 
@@ -80,95 +80,95 @@ This is the most free-form plugged activity of the course. At the final stage st
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### Look Under the Hood
+### Nos bastidores
 
-When you share a link to your story, you also share all of the code that goes behind it. This is a great way for students to learn from each other.
+Quando você compartilha um link para sua história, você também compartilha todo o código por trás dela. Essa é uma ótima maneira para que os estudantes aprendam uns com os outros.
 
-  * Post links to completed stories online or on the board. 
-      * Make a story of your own to share as well!
-  * When students load up a link, have them click the "How it Works" button to see the code behind the story.
-  * Discuss as a group the different ways your classmates coded their stories. 
-      * What suprised you?
-      * What would you like to try?
-  * Choose someone else's story and build on it. (Don't worry, the original story will be safe.)
+  * Publique links para histórias completas on-line, ou na lousa. 
+      * Faça uma história você mesmo para compartilhar também!
+  * Quando os alunos carregarem um link, peça para que eles cliquem no botão "Como isso funciona" para ver o código por trás da história.
+  * Discuta com a sala toda as diferentes formas que os colegas usaram para programar suas histórias. 
+      * O que o surpreendeu?
+      * O que você gostaria de experimentar?
+  * Escolha a história de alguém para editar. (Não se preocupe, a história original está segura).
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Scroll
-  * Select and drag / slide
-  * Select object
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Rolar
+  * Selecionar e arrastar / deslizar
+  * Selecionar objeto
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.b - Create original works as a means of personal or group expression.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
-  * 6.c - Troubleshoot systems and applications.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.b - Criar trabalhos originais como meio de expressão pessoal ou em grupo.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CPP.L1:6-03. Use technology tools for individual and collaborative writing, communication and publishing activities.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-07. Represent data in a variety of ways: text, sounds, pictures, numbers.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub problems. 
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CPP.L1:6-03. Usar ferramentas tecnológicas produtivas para atividades de escrita individual e colaborativa, comunicação e publicação.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-07. Representar dados de várias formas: textos, sons, imagens, números.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores. 
 
 ### Next-Gen Science Standards
 
-  * K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
-  * K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
+  * K-2-PS3-2. Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico.
+  * K-2-ETS1-1. Fazer perguntas, observações e reunir informações sobre uma situação que as pessoas querem mudar para definir um problema simples que pode ser resolvido com o desenvolvimento de uma ferramenta ou objeto novo, ou melhorado.
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * K.CC.B.4 - Understand the relationship between numbers and quantities; connect counting to cardinality.
-  * K.OA.A.5 - Fluently add and subtract within 5.
-  * 1.OA.A.1 - Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.
-  * 2.OA.A.1 - Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.
+  * K.CC.B.4 - Entender a relação entre números e quantidades; relacionar contagem e cardinalidade.
+  * K.OA.A.5 - Somar e subtrair até 5 fluentemente.
+  * 1.OA.A.1 - Usar adição e subtração até 20 para resolver problemas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições, por exemplo, usando objetos, desenhos e equações com um símbolo que substitui o número desconhecido para representar o problema.
+  * 2.OA.A.1 - Usar adição e subtração até 100 para resolver problemas de uma ou duas etapas que envolvam situações de somar, subtrair, separar, juntar e comparar, usando incógnitas em todas as posições, por exemplo, usando objetos, desenhos e equações com um símbolo que substitui o número desconhecido para representar o problema.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.K.1 - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
-  * SL.K.5 - Add drawings or other visual displays to descriptions as desired to provide additional detail.
-  * L.K.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-  * W.K.3 - Use a combination of drawing, dictating, and writing to narrate a single event or several loosely linked events, tell about the events in the order in which they occurred, and provide a reaction to what happened.
-  * W.K.6 - With guidance and support from adults, explore a variety of digital tools to produce and publish writing, including in collaboration with peers.
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * SL.1.5 - Add drawings or other visual displays to descriptions when appropriate to clarify ideas, thoughts, and feelings.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships (e.g., because).
-  * W.1.6 - With guidance and support from adults, use a variety of digital tools to produce and publish writing, including in collaboration with peers.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.5 - Create audio recordings of stories or poems; add drawings or other visual displays to stories or recounts of experiences when appropriate to clarify ideas, thoughts, and feelings.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe (e.g., When other kids are happy that makes me happy).
-  * W.2.3 - Write narratives in which they recount a well-elaborated event or short sequence of events, include details to describe actions, thoughts, and feelings, use temporal words to signal event order, and provide a sense of closure.
+  * SL.K.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos da educação infantil e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.K.5 - Adicionar desenhos ou outros elementos visuais às descrições para fornecer detalhes adicionais.
+  * L.K.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos.
+  * W.K.3 - Usar uma combinação de desenho, ditado e escrita para narrar um único evento ou vários eventos conectados, porém sem muitos detalhes, falar dos eventos na ordem em que eles ocorreram, e apresentar uma reação para o que aconteceu.
+  * W.K.6 - Com o auxílio de adultos, explorar uma variedade de ferramentas digitais para produzir e publicar textos escritos, inclusive em colaboração com os colegas.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.5 - Adicionar desenhos ou outros elementos visuais às descrições para esclarecer ideias, pensamentos e sentimentos.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples (por exemplo, porque).
+  * W.1.6 - Com o auxílio de adultos, usar uma variedade de ferramentas digitais para produzir e publicar textos escritos, inclusive em colaboração com colegas.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.5 - Criar gravações de áudio de histórias ou poemas; adicionar desenhos ou outros elementos visuais às histórias, ou contar experiências para esclarecer ideias, pensamentos e sentimentos.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição (por exemplo, quando outras crianças estão felizes, eu também fico feliz).
+  * W.2.3 - Escrever narrativas em que reconte um evento bem elaborado, ou uma pequena sequência de eventos, incluindo detalhes que descrevam as ações, pensamentos e sentimentos, usar palavras temporais para sinalizar a ordem dos eventos e fornecer um desfecho.
 
 [/standards]
 

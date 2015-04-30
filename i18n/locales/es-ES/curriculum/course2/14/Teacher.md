@@ -6,15 +6,15 @@ title: Binary Bracelets view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Binary Bracelets', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
 
-[content]
+[contenido]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Binary is extremely important to the computer world. The majority of computers today store all sorts of information in binary form. This lesson helps to demonstrate how it is possible to take something that we know and translate it into a series of ons and offs.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -26,7 +26,7 @@ Binary is extremely important to the computer world. The majority of computers t
 
 4) [Binary Bracelets](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 
@@ -35,11 +35,11 @@ Binary is extremely important to the computer world. The majority of computers t
 
 6) [Binary Assessments](#Assessment)
 
-[/summary]
+[/resumen]
 
 [together]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,30 +47,31 @@ Binary is extremely important to the computer world. The majority of computers t
   * Decode binary back to letters
   * Relate the idea of storing initials on a bracelet to the idea of storing information in a computer
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * [Binary Bracelet Worksheet](/curriculum/course2/14/Activity14-BinaryBracelets.pdf)
   * [Binary Assessment](/curriculum/course2/14/Assessment14-BinaryBracelets.pdf)
   * Pens and Pencils
-  * Scissors
+  * Tijeras
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/8HANsec7TiQ?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * This Teacher Lesson Guide
   * [Binary Bracelet Worksheet](/curriculum/course2/14/Activity14-BinaryBracelets.pdf)
   * [Binary Assessment](/curriculum/course2/14/Assessment14-BinaryBracelets.pdf)
   * Computer for opening or images of an open computer
   * Optional: Write a short message on the board in binary
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -90,27 +91,27 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Binary** - Say it with me: Bi-nare-ee   
-A way of representing information using only two options.
+A way of representing information using only two options
 
 ### <a name="GetStarted"></a> 3) Off and On
 
@@ -137,7 +138,7 @@ A way of representing information using only two options.
           * Afterward, write an encoded letter and give the class a few seconds to figure out what it is. 
           * When the class can figure out your encoded letters on their own, you can move on to the activity.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -145,15 +146,15 @@ A way of representing information using only two options.
 
 ### <a name="Activity1"></a> 4) [Binary Bracelet Worksheet](/curriculum/course2/14/Activity14-BinaryBracelets.pdf)
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 You know your classroom best. As the teacher, decide if students should do this individually or if students should work in pairs or small groups.
 
 You **do not** need to cover the whole of binary, including counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.
 
-[/tip]
+[/sugerencia]
 
 > **Directions:**
 > 
@@ -169,15 +170,15 @@ You **do not** need to cover the whole of binary, including counting and convert
 
 ![](key.png)
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 If your class has extra budget for materials, try doing this exercise using thread (or pipe cleaners) and beads to create the binary bracelets instead of pen and paper. You can provide any combination of two colors in beads to the students, but black and white tend to be easiest, given the way that the key is done.
 
-[/tip]
+[/sugerencia]
 
 After the activity, revisit the message that was on the board and see if your class can decypher it using what they've learned.
 
@@ -187,7 +188,7 @@ After the activity, revisit the message that was on the board and see if your cl
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -195,7 +196,7 @@ After the activity, revisit the message that was on the board and see if your cl
   * How else might you represent binary instead of boxes that are filled or not filled?
   * What was your favorite part about that activity?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -206,7 +207,7 @@ After the activity, revisit the message that was on the board and see if your cl
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -219,7 +220,7 @@ Use these activities to enhance student learning. They can be used as outside of
   * There are several great resources on the web for taking this activity to the next level. 
   * If your students are interested in how images (or even music) can be represented as binary, you can find more details in Thinkersmith's [Binary Baubles](http://code.org/files/CSEDbinary.pdf).
 
-[/together]
+[/juntos]
 
 [standards]
 

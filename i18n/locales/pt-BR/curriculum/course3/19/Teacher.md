@@ -4,102 +4,106 @@ title: Crowdsourcing view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Crowdsourcing', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Crowdsourcing', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>20) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-In computer science, we face some big, daunting problems. Challenges like finding large prime numbers or sequencing DNA are almost impossible to do alone. Adding the power of others makes these tasks managable. This lesson will show your students how helpful teamwork can really be.
+Em ciência da computação, enfrentamos alguns problemas grandes e assustadores. Desafios como encontrar números primos grandes ou sequências de DNA são quase impossíveis de se fazer sozinho. Associar as capacidades de outras pessoas torna essas tarefas possíveis. Essa aula vai mostrar aos alunos como pode ser útil trabalhar em grupo.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 20 minutes
+### **Primeiros passos** - 20 minutos
 
-1) [Review](#Review)  
-2) [Vocabulary](#Vocab)   
-3) [Big Problems](#GetStarted)
+1) [Revisão](#Review)  
+2) [Vocabulário](#Vocab)   
+3) [Grandes problemas](#GetStarted)
 
-### **Activity: Crowdsourcing** - 20 minutes
+### **Atividade: Crowdsourcing** - 20 minutos
 
-4) [Working Together](#Activity1)
+4) [Trabalho em equipe](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Resumo** - 5 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
-6) [Vocab Shmocab](#Shmocab)
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
+6) [Jogo de palavras](#Shmocab)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Identify a large task that needs to be done
-  * Rearrange a large task into several smaller tasks
-  * Build a complete solution from several smaller solutions
-
-[/together]
-
-[together]
-
-# Teaching Guide
-
-## Materials, Resources and Prep
-
-### For the Student
-
-  * Playing Cards (1 Deck per group)
-
-[tip]
-
-# Materials Tip
-
-Playing cards usually come in multi-packs at the dollar store, but if you're rushed you can [print some from online](http://printerprojects.com/playingcards/deck.html) onto cardstock and cut them out with a slicer.
-
-[/tip]
-
-### For the Teacher
-
-  * This Teacher Lesson Guide
-  * [Crowdsourcing Activity](Activity19-Crowdsourcing.pdf):Working Together
-  * Jar of lots of something (Pennies, Buttons, Slips of Paper)
+  * Identificar uma tarefa grande que precisa ser feita
+  * Reorganizar uma tarefa grande em várias tarefas menores
+  * Construir uma solução completa a partir de várias soluções menores
 
 [/together]
 
 [together]
 
-## Getting Started (20 min)
+# Guia de ensino
 
-### <a name="Review"></a> 1) Review
+## Materiais, recursos e preparação
 
-This is a great time to review the last lesson that you went through with your class. We suggest you alternate between asking questions of the whole class and having students talk about their answers in small groups.
+### Para o aluno
 
-Here are some questions that you can ask in review:
+  * Cartas de baralho (1 maço por grupo)
 
-  * What did we do last time?
+### Para o professor
 
-  * What do you wish we had had a chance to do?
-
-  * Did you think of any questions after the lesson that you want to ask?
-
-  * What was your favorite part of the last lesson?
+  * [Vídeo aula](http://youtu.be/UXCaokAHN1U?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
 
 [tip]
 
-# Lesson Tip
+# Dica de material
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+As cartas de baralho geralmente são vendidas em maços nas lojas, mas se você estiver com pressa, você pode [imprimi-las on-line](http://printerprojects.com/playingcards/deck.html) em uma cartolina e cortá-las com um estilete.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### Para o professor
 
-This lesson has one new and important word:  
+  * Guia da aula para o professor
+  * [Atividade Crowdsourcing](Activity19-Crowdsourcing.pdf): Trabalho em equipe
+  * Um pote cheio de alguma coisa (moedas, botões, clipes)
+
+[/together]
+
+[together]
+
+## Primeiros passos (20 min)
+
+### <a name="Review"></a> 1) Revisão
+
+Este é um excelente momento para revisar a última aula que você deu à turma. Sugerimos que você faça perguntas sobre a aula anterior e depois divida os alunos em pequenos grupos para discutir as respostas.
+
+Temos aqui algumas perguntas que você pode fazer na revisão:
+
+  * O que fizemos da última vez?
+
+  * O que você gostaria que tivéssemos feito?
+
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
+
+  * Qual foi a parte da última aula que você mais gostou?
+
+[tip]
+
+# Dica de aula
+
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
+
+[/tip]
+
+### <a name="Vocab"></a> 2) Vocabulário
+
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -108,69 +112,69 @@ This lesson has one new and important word:
 
 [/centerIt]
 
-**Crowdsourcing** - Say it with me: Crowd-sore-sing   
-Getting help from a large group of people to finish something faster
+**Crowdsourcing** - Repita comigo: Crowd-sour-cing   
+Obter ajuda de um grande grupo de pessoas para terminar algo mais rápido
 
 ### <a name="GetStarted"></a> 3) Big Problems
 
-  * Show your students your jar full of something. 
-      * "Look at this jar. I have a lot of buttons in here, and I need to tell the principal how many there are before the end of class."
-      * "Can you think of a way I could get these counted quickly?"
-  * Your students may guide you toward seeking help, but if they don't, you can suggest it, too. 
-      * Pour all of the buttons (or pennies, etc.) into a pile on the floor.
-      * Invite all of the students to come up and grab a small number (ten is good, but you can do more if your students can handle it).
-      * Once they've counted out their ten, have them report to you, drop their buttons back in the jar, and go again until the pile is gone.
-  * Comment on how fast the task went. 
-      * Have the class reflect on how long it might have taken or how hard it may have felt to do alone.
+  * Mostre aos alunos seu pote cheio de alguma coisa. 
+      * "Olhem para este pote. Eu tenho um monte de botões aqui dentro, e eu preciso contar ao diretor quantos botões eu tenho aqui antes de acabar a aula"
+      * "Vocês podem pensar em uma forma que eu possa contá-los rapidamente?"
+  * Seus alunos podem orientá-lo a pedir ajuda, mas se eles não fizerem isso, você também pode fazer essa sugestão. 
+      * Despeje todos os botões (ou moedas, etc.) amontoando-os no chão.
+      * Peça a todos os alunos que peguem um pequeno número (dez é um bom número, mas você pode dar mais se seus alunos puderem lidar com isso).
+      * Quando eles tiverem contado as dez, peça para que eles digam a você, guardem os botões de volta no pote e peguem mais alguns, até que o monte acabe.
+  * Comente sobre como a tarefa foi feita rapidamente. 
+      * Peça para que a turma reflita sobre quanto tempo teria levado e como seria difícil fazer isso sozinho.
 
 [/together]
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Jars of buttons and pennies work nicely, but if you find yourself with little time to prepare, you can cut slips of paper and put them in a ziplock bag or even a pencil box.
+Potes de botões e moedas funcionam bem, mas se você tiver pouco tempo para preparar a aula, você pode cortar algumas tiras de papel e colocá-las dentro de uma mochila, ou até mesmo dentro de uma caixa de lápis.
 
 [/tip]
 
 [together]
 
-## Activities: (20 min)
+## Atividades (20 min)
 
-### <a name="Activity1"></a> 4) [Crowdsourcing Activity](Activity19-Crowdsourcing.pdf):Working Together
+### <a name="Activity1"></a> 4) [Atividade Crowdsourcing](Activity19-Crowdsourcing.pdf): Trabalho em equipe
 
-  * Sometimes you have a big job that needs to get done, but it feels like it will take forever. Crowdsourcing is a way of using teamwork to make the job go much faster!
+  * As vezes você tem um grande trabalho que precisa ser feito, mas parece que vai levar todo o tempo. Crowdsourcing é uma forma de usar trabalho em equipe para realizar este trabalho de uma maneira muito mais rápida!
 
-  * In this game, we’ll use crowdsourcing to sort decks of playing cards.
+  * Nesse jogo, vamos usar crowdsourcing para ordenar um baralho.
 
-**Directions:**
+**Instruções:**
 
-> 1) Divide into groups of 4, 5, or 6.
+> 1) Divida os alunos em grupos de 4, 5 ou 6.
 > 
-> 2) Grab your deck of playing cards and dump it into a bag, bucket, or even a loose pocket that you can make with the bottom of your shirt.
+> 2) Pegue seu maço de cartas e coloque-o em um saco, balde, ou até mesmo em um bolso improvisado segurando a barra da sua camiseta.
 > 
-> 3) Shake the cards until they’re all mixed up.
+> 3) Misture as cartas até que fiquem embaralhadas.
 > 
-> 4) Dump the cards out onto a table or desk where the whole group can see them.
+> 4) Coloque as cartas em uma mesa ou carteira onde toda a classe possa vê-las.
 > 
-> 5) Decide how to break up the task of sorting the deck so that every person has something to do and no one is doing too much.
+> 5) Decida como dividir a tarefa de ordenar as cartas, de forma que cada pessoa tenha algo para fazer e que ninguém faça muita coisa.
 > 
-> 6) Time yourself sorting the cards. Can you figure out a way to do it faster?
+> 6) Organize as cartas você mesmo. Você pode pensar em um jeito de fazer isso mais rápido?
 > 
-> 7) Repeat the game over and over until you think you have found the fastest way of crowdsourcing the card sorting activity.
+> 7) Repita o jogo até que você tenha encontrado a forma mais rápida e eficiente de usar o crowdsourcing para essa atividade.
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-It can be challenging for students to figure out how to break apart large tasks at first. Students might find it helpful to have some ideas handed to them after working for a while. One great division for sorting cards is as follows:
+Pode ser um desafio para os alunos descobrir como dividir tarefas grandes no começo. Pode ser útil se você der algumas ideias para eles depois que eles trabalharem um tempo. Uma excelente divisão para ordenar cartas é a seguinte:
 
-  * One person picks up the cards and determines the suit of each one.
-  * One person manages Hearts.
-  * One person manages Diamonds.
-  * One person manages Clubs.
-  * One person manages Spades.
-  * (If there's another, they can put all sorted suits back together again.)
+  * Uma pessoa pega as cartas e determina o naipe de cada uma.
+  * Uma pessoa organiza as cartas de copas.
+  * Uma pessoa organiza as cartas de ouros.
+  * Uma pessoa organiza as cartas de paus.
+  * Uma pessoa organiza as cartas de espadas.
+  * (Se houver outra pessoa, ela pode colocar os naipes em ordem)
 
 [/tip]
 
@@ -178,19 +182,19 @@ It can be challenging for students to figure out how to break apart large tasks 
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 4) Bate-papo: o que aprendemos?
 
-  * Have you ever tried to sort a pile of cards by yourself before?
-  * Do you think it was easier or harder to have help?
-  * What other things do you have to do sometimes that would be easier with help?
+  * Alguma vez você já tentou ordenar um monte de cartas sozinho?
+  * Você acha que foi mais fácil ou mais difícil com ajuda?
+  * Que outras coisas você precisa fazer que seriam mais fáceis com ajuda?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+As perguntas do Bate-papo têm a finalidade de incentivar reflexões sobre como as aulas se relacionam com o mundo e com o futuro brilhante dos alunos. Use seus conhecimentos sobre sua sala de aula para decidir se você quer discutir isso como uma turma, em grupos, ou em duplas.
 
 [/tip]
 
@@ -198,18 +202,18 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
   * Which one of these definitions did we learn a word for today?
 
-> "Pulling something out"   
-> "Getting help from a large group of people to finish something faster"   
-> "Something that is not cooked"  
+> "Retirar algo"   
+> "Obter ajuda de um grande grupo de pessoas para terminar algo mais rápido"   
+> "Algo que não está cozido"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ...e qual é a palavra que aprendemos?
 
 [/together]
 
 [together]
 
-## Assessment (0 min)
+## Avaliação (0 min)
 
 ### <a name="Assessment"></a>7) No Indivdual Assessment
 
@@ -223,9 +227,9 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
 ### Reverse Crowdsourcing
 
@@ -253,7 +257,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
 ### ISTE Standards (formerly NETS)
 
