@@ -258,7 +258,7 @@ NetSimVizNode.prototype.setAddress = function (address) {
 };
 
 /**
- * @param {string} newDnsMode
+ * @param {DNSMode} newDnsMode
  */
 NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
   this.dnsMode_ = newDnsMode;
