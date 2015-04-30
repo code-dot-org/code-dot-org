@@ -27,11 +27,7 @@
     ],
     "title": "Block match",
     "content1": "Match the expressions with the appropriate Circle of Evaluation or Evaluation Block",
-    "height": "200",
-    "type": "Match",
-    "concept_ids": [
-      ""
-    ]
+    "height": "200"
   }
 }]]></config>
 </Match>

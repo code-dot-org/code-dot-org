@@ -4,11 +4,7 @@
   "created_at": "2015-04-25T03:29:52.000Z",
   "properties": {
     "title": "Relationship between Curriculum and PD",
-    "markdown": "\n#### Now that you've read more about the ECS program, what relationship do you see between the curriculum and Professional Development? What aspects of the two piece of the program seem most important or interesting to you?\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "\n#### Now that you've read more about the ECS program, what relationship do you see between the curriculum and Professional Development? What aspects of the two piece of the program seem most important or interesting to you?\n"
   }
 }]]></config>
 </TextMatch>
