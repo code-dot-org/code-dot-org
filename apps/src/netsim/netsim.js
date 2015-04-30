@@ -125,6 +125,13 @@ var NetSim = module.exports = function () {
   this.myDeviceBitRate_ = Infinity;
 
   /**
+   * Currently enabled encoding types.
+   * @type {EncodingType[]}
+   * @private
+   */
+  this.enabledEncodings_ = [];
+
+  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -642,12 +649,22 @@ NetSim.prototype.receiveBit_ = function (onComplete) {
  * @param {EncodingType[]} newEncodings
  */
 NetSim.prototype.changeEncodings = function (newEncodings) {
+  this.enabledEncodings_ = newEncodings;
   if (this.tabs_) {
     this.tabs_.setEncodings(newEncodings);
   }
   this.receivedMessageLog_.setEncodings(newEncodings);
   this.sentMessageLog_.setEncodings(newEncodings);
   this.sendPanel_.setEncodings(newEncodings);
+  this.visualization_.setEncodings(newEncodings);
+};
+
+/**
+ * Get the currently enabled encoding types.
+ * @returns {EncodingType[]}
+ */
+NetSim.prototype.getEncodings = function () {
+  return this.enabledEncodings_;
 };
 
 /**

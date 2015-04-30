@@ -274,7 +274,9 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
 
   // Update collection of VizWires from source data
   this.updateVizEntitiesOfType_(NetSimVizWire, tableWires, function (wire) {
-    return new NetSimVizWire(wire, this.getEntityByID.bind(this));
+    var newVizWire = new NetSimVizWire(wire, this.getEntityByID.bind(this));
+    newVizWire.setEncodings(this.netsim_.getEncodings());
+    return newVizWire;
   }.bind(this));
 
   // Since the wires table determines simulated connectivity, we trigger a
@@ -542,6 +544,19 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   this.entities_.forEach(function (vizEntity) {
     if (vizEntity instanceof NetSimVizNode) {
       vizEntity.setIsDnsNode(vizEntity.id === dnsNodeID);
+    }
+  });
+};
+
+/**
+ * Update encoding-view setting across the visualization.
+ *
+ * @param {EncodingType[]} newEncodings
+ */
+NetSimVisualization.prototype.setEncodings = function (newEncodings) {
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizWire) {
+      vizEntity.setEncodings(newEncodings);
     }
   });
 };
