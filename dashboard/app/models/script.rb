@@ -376,4 +376,8 @@ class Script < ActiveRecord::Base
     # only call this in a test!
     @@script_cache = nil
   end
+
+  def localized_title
+    I18n.t "data.script.name.#{name}.title"
+  end
 end
