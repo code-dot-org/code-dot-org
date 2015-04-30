@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="../css/common.css">
   <link rel="stylesheet" type="text/css" href="../css/<%= app %>.css">
 
-<% if ((app === "maze" && options.levelId.indexOf('3_') === 0) ||
+ <% if ((app === "maze" && options.levelId.indexOf('3_') === 0) ||
        (app === "applab" && options.levelId.indexOf('ec_') === 0) ||
        (app === "studio" && options.levelId.indexOf('ec_') === 0) ||
        (app === "turtle" && options.levelId.indexOf('ec_') === 0)) { -%>
@@ -73,7 +73,16 @@
     };
     appOptions.Dialog = StubDialog;
 
-    <%= app %>Main(appOptions);
+    // We have a race condition where .js files might not have loaded. Wait until
+    // they have. Longterm, there might be value in doing something more similar
+    // to initApp
+    var intervalId = setInterval(function () {
+      if (typeof(<%= app %>Main) !== "undefined") {
+        <%= app %>Main(appOptions)
+        clearInterval(intervalId);
+      }
+    }, 100);
+
   </script>
   <div id="codeApp"></div>
   <script type="text/javascript" src="chrome34Workaround.js"></script>
