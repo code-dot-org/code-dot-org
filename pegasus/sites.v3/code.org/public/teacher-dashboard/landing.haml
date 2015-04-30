@@ -4,44 +4,44 @@ theme: none
 ---
 = view :breadcrumbs, trail:[{url:'/teacher-dashboard', text:'Dashboard'}]
 
--if dashboard_user[:admin]
+-if dashboard_user[:admin] || have_permission?('facilitator') || have_permission?('district_contact') || have_permission?('create_professional_development_workshop')
   %h1
-    Ops Dashboard
--elsif have_permission?('district_contact')
-  %h1
-    District Dashboard
--elsif have_permission?('facilitator')
-  %h1
-    Facilitator Dashboard
--elsif have_permission?('create_professional_development_workshop')
-  %h1
-    Affiliate Dashboard
+    Professional Development
 
 -if dashboard_user[:admin]
+  %h2
+    Ops Dashboard
   %a{href:'/ops-dashboard#/districts'}
-    %h2
+    %h3
       Manage Districts
 -if dashboard_user[:admin] || have_permission?('facilitator')
-  %a{href:'/ops-dashboard#/workshops'}
+  -if !dashboard_user[:admin]
     %h2
+      Facilitator Dashboard
+  %a{href:'/ops-dashboard#/workshops'}
+    %h3
       Manage PD Workshops
 -elsif have_permission?('district_contact')
+  %h2
+    District Dashboard
   %a{href:'/ops-dashboard#/workshops'}
-    %h2
+    %h3
       View PD Workshops
 -if dashboard_user[:admin] || have_permission?('district_contact')
   %a{href:'/ops-dashboard#/teacher-cohorts'}
-    %h2
+    %h3
       Manage Teacher Cohorts
 -if dashboard_user[:admin] || have_permission?('create_professional_development_workshop')
+  %h2
+    Affiliate Dashboard
   %a{href:'/manage-professional-development-workshops'}
-    %h2
+    %h3
       Manage Workshops
   %a{href:'/professional-development-workshops'}
-    %h2
+    %h3
       View Workshop Map
   %a{href:'https://docs.google.com/a/code.org/document/d/1lHBthPKdKx3G-khyWYhVYQlfdi9Sa1L9EcOxEa-Xt14/edit'}
-    %h2
+    %h3
       View Affiliate Playbook
 
 %div

@@ -654,3 +654,53 @@ en:
           description_short: Let's make some puzzles!
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
+        ECSPD-NexTech:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: nextech_logo.png
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
+        ECSPD-iZone:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: izone_logo.png
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
+        algebraPD-NexTech:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: Evaluation Blocks
+          logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+        algebraPD-iZone:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: Evaluation Blocks
+          logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+        sciencePD-NexTech:
+          Introduction to PD: Introduction to PD
+          logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
+        sciencePD-iZone:
+          Introduction to PD: Introduction to PD
+          logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
+        ui_tests:
+          title: UI Tests
+          description: Script for test. Careful, don't change level ordering.
+          All the Tests: All the Tests

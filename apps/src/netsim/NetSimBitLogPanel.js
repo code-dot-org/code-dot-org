@@ -13,7 +13,7 @@
 
 require('../utils'); // For Function.prototype.inherits()
 var i18n = require('../../locale/current/netsim');
-var markup = require('./NetSimBitLogPanel.html');
+var markup = require('./NetSimBitLogPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 

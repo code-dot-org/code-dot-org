@@ -11,7 +11,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimDnsManualControl.html');
+var markup = require('./NetSimDnsManualControl.html.ejs');
 
 /**
  * Generator and controller for DNS mode selector

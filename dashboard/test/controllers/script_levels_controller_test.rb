@@ -7,8 +7,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   include ScriptLevelsHelper
 
   setup do
-    @admin = create(:admin)
-    sign_in(@admin)
+    @student = create(:student)
 
     @script = Script.twenty_hour_script
     @script_level = @script.script_levels.fifth
@@ -31,6 +30,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_equal @script_level, assigns(:script_level)
+  end
+
+  test "should show script level of ECSPD if signed in" do
+    sign_in @student
+    get :show, script_id: 'ECSPD', stage_id: 1, id: 1
+    assert_response :success
+  end
+
+  test "should not get show of ECSPD if not signed in" do
+    get :show, script_id: 'ECSPD', stage_id: 1, id: 1
+    assert_redirected_to_sign_in
   end
 
   test 'project template level sets start blocks' do
@@ -226,12 +236,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show next when logged in redirects to first non-unplugged non-finished level" do
+    sign_in @student
+
     custom_script = create(:script, :name => 'coolscript')
     custom_stage_1 = create(:stage, script: custom_script, name: 'neat stage', position: 1)
     first_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 1)
-    UserLevel.create(user: @admin, level: first_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+    UserLevel.create(user: @student, level: first_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     second_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 2)
-    UserLevel.create(user: @admin, level: second_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+    UserLevel.create(user: @student, level: second_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, :position => 3)
     last_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 4)
 
@@ -305,8 +317,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show new style unplugged level with PDF link' do
     @controller.expects(:slog).never
 
-    sign_out(@admin)
-
     script_level = Script.find_by_name('course1').script_levels.first
 
     get :show, script_id: script_level.script, stage_id: script_level.stage.position, id: script_level.position
@@ -333,7 +343,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should reset session when not logged in" do
-    sign_out(@admin)
     session[:progress] = {5 => 10}
 
     get :show, script_id: Script::HOC_NAME, reset: true
@@ -360,7 +369,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show reset resets for custom scripts" do
-    sign_out(@admin)
     session[:progress] = {5 => 10}
 
     get :show, script_id: 'laurel', reset: true
@@ -413,7 +421,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'end of HoC for a user is HOC endpoint' do
-    self.stubs(:current_user).returns(@admin)
+    self.stubs(:current_user).returns(@student)
     assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
   end
 
@@ -435,13 +443,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'end of HoC for anonymous visitor works' do
-    sign_out(@admin)
     get :show, {script_id: Script::HOC_NAME, chapter: '20'}
     assert_response :success
   end
 
   # test 'end of HoC has wrapup video in response' do
-  #   sign_out(@admin)
   #   get :show, {script_id: Script::HOC_NAME, chapter: '20'}
   #   assert(@response.body.include?('hoc_wrapup'))
   # end
@@ -453,7 +459,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   # end
 
   test 'next for non signed in user' do
-    sign_out @admin
     get :show, script_id: Script::HOC_NAME, chapter: 'next'
 
     assert_response :redirect
@@ -530,12 +535,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'loads state from last attempt' do
+    sign_in @student
     # Ensure that activity data from the last attempt is present in the @last_attempt instance variable
     # Used by TextMatch view partial
 
     last_attempt_data = 'test'
     level = @custom_s1_l1.level
-    Activity.create!(level: level, user: @admin, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
 
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
     assert_equal last_attempt_data, @controller.instance_variable_get(:@last_attempt)

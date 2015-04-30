@@ -77,6 +77,10 @@ class Game < ActiveRecord::Base
     name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC"
   end
 
+  def has_footer?
+    !(app == APPLAB || app == NETSIM)
+  end
+
   def self.setup
     transaction do
       # Format: name:app:intro_video

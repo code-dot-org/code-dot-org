@@ -19,38 +19,17 @@ Milestone Complete!
 Milestone Complete!
 
 ### Phase 3: Academic Year Development
-Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### Save The Date
-
-4/18/2015
-
-9:00am - 4:00pm
-<br />
-Breakfast and lunch will be served. 
-
-#### April 18th Location
-
-Microsoft
-<br/>
-Music Box 5411 & Winter Garden 5412
-<br/>
-11 Times Square
-<br/>
-New York, NY, 10036
-
-
-#### What do I bring to Phase 3 PD? ####
-Exploring Computer Science binder with curriculum
-<br />
-Green Code.org journal
-<br />
-Laptop
+Milestone Complete!
 
 ### Phase 4: Post Year Development
 
 #### Save the Dates
-7/8/2015 - 7/10/2015
+Wednesday, July 8th - Friday, July 10th
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
 
 #### Location
 Microsoft
@@ -58,6 +37,13 @@ Microsoft
 11 Times Square
 <br/>
 New York, NY, 10036
+
+#### What do I bring to Phase 4 PD? ####
+Exploring Computer Science binder with curriculum
+<br />
+Green Code.org journal
+<br />
+Laptop
 
 ----------
 Please visit [izonenyc.org](http://izonenyc.org/initiatives/blended-learning-institute/#overview) for more information.

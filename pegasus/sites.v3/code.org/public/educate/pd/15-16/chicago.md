@@ -160,7 +160,7 @@ Wednesday, July 8, 2015 - Friday, July 10, 2015
 <br />
 **Session 2:**
 <br />
-Monday, August 3, 2015 - Tuesday, August 7, 2015
+Monday, August 3, 2015 - Tuesday, August 4, 2015
 <br />
 8:00am - 4:30pm
 <br />

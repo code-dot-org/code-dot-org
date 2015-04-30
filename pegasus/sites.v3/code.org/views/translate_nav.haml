@@ -1,7 +1,7 @@
 #about_nav
   %span.about_list
     -current_url = request.path_info
-    -{'Help Translate'=>'/translate','Translate Tutorials'=>'/translate/tutorials','Translate Videos'=>'/translate/videos','Tips & Guidelines'=>'/translate/guidelines', 'Lead Translators'=>'/translate/translators'}.each_pair do |label,url|
+    -{'Help Translate'=>'/translate','Translate Tutorials'=>'/translate/tutorials','Translate Videos'=>'/translate/videos','Translate Curriculum'=>'/translate/curriculum','Tips & Guidelines'=>'/translate/guidelines', 'Lead Translators'=>'/translate/translators'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

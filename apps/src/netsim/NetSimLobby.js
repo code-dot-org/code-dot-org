@@ -19,7 +19,6 @@ var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
-var markup = require('./NetSimLobby.html');
 
 var logger = require('./NetSimLogger').getSingleton();
 
@@ -138,13 +137,6 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
   this.incomingConnectionNodes_ = [];
 
   /**
-   * Which node in the lobby is currently selected
-   * @type {NetSimClientNode|NetSimRouterNode}
-   * @private
-   */
-  this.selectedNode_ = null;
-
-  /**
    * @type {NetSimNode}
    * @private
    */
@@ -172,43 +164,42 @@ var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
  * Recreate markup within panel body.
  */
 NetSimLobby.prototype.render = function () {
-  // Add our own content markup
-  var newMarkup = $(markup({}));
-  this.rootDiv_.html(newMarkup);
+  var isConnectedToShard = (this.shard_ !== null);
+  if (!isConnectedToShard) {
 
-  // Shard selection panel: Controls for setting display name and picking
-  // a section, if they aren't set automatically.
-  this.shardSelectionPanel_ = new NetSimShardSelectionPanel(
-      this.rootDiv_.find('.shard-select'),
-      {
-        displayName: this.displayName_,
-        shardChoices: this.shardChoices_,
-        selectedShardID: this.selectedShardID_
-      },
-      {
-        setNameCallback: this.setDisplayName.bind(this),
-        setShardCallback: this.setShardID.bind(this)
-      });
+    // Shard selection panel: Controls for setting display name and picking
+    // a section, if they aren't set automatically.
+    this.shardSelectionPanel_ = new NetSimShardSelectionPanel(
+        this.rootDiv_,
+        {
+          displayName: this.displayName_,
+          shardChoices: this.shardChoices_,
+          selectedShardID: this.selectedShardID_
+        },
+        {
+          setNameCallback: this.setDisplayName.bind(this),
+          setShardCallback: this.setShardID.bind(this)
+        });
 
-  // Node selection panel: The lobby list of who we can connect to, and
-  // controls for picking one and connecting.
-  if (this.shard_) {
+  } else {
+
+    // Node selection panel: The lobby list of who we can connect to, and
+    // controls for picking one and connecting.
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
-        this.rootDiv_.find('.remote-node-select'),
+        this.rootDiv_,
         {
           levelConfig: this.levelConfig_,
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
-          selectedNode: this.selectedNode_,
           remoteNode: this.remoteNode_,
           myNodeID: this.myNode_.entityID
         },
         {
           addRouterCallback: this.addRouterToLobby.bind(this),
-          selectNodeCallback: this.selectNode.bind(this),
-          connectButtonCallback: this.onConnectButtonClick_.bind(this),
-          cancelButtonCallback: this.onCancelButtonClick_.bind(this)
+          cancelButtonCallback: this.onCancelButtonClick_.bind(this),
+          joinButtonCallback: this.onJoinButtonClick_.bind(this)
         });
+
   }
 };
 
@@ -245,31 +236,45 @@ NetSimLobby.prototype.setShardID = function (shardID) {
  */
 NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
   // Unregister old handlers
-  if (this.eventKeys.nodeTable) {
-    this.shard_.nodeTable.tableChange.unregister(this.eventKeys.nodeTable);
-  }
-  if (this.eventKeys.wireTable) {
-    this.shard_.wireTable.tableChange.unregister(this.eventKeys.wireTable);
+  if (this.eventKeys.registeredShard) {
+    this.eventKeys.registeredShard.nodeTable.tableChange.unregister(
+        this.eventKeys.nodeTable);
+    this.eventKeys.registeredShard.wireTable.tableChange.unregister(
+        this.eventKeys.wireTable);
+    this.registeredShard = undefined;
   }
 
   this.shard_ = shard;
   this.myNode_ = myNode;
 
-  if (!this.shard_) {
-    // If we disconnected, just clear our lobby data
+  if (this.shard_) {
+    // We got connected to a shard!
+    // Register for events
+    this.eventKeys.nodeTable = this.shard_.nodeTable.tableChange.register(
+        this.onNodeTableChange_.bind(this));
+    this.eventKeys.wireTable = this.shard_.wireTable.tableChange.register(
+        this.onWireTableChange_.bind(this));
+    this.eventKeys.registeredShard = this.shard_;
+
+    // Trigger a forced read of the node table
+    this.fetchInitialLobbyData_();
+  } else {
+    // We've been disconnected from a shard
+    // Clear our selected shard ID
+    this.selectedShardID_ = undefined;
+
+    // Clear cached lobby data
     this.nodesOnShard_.length = 0;
     this.incomingConnectionNodes_.length = 0;
-    return;
+
+    // Redraw the lobby
+    this.render();
+
+    // If there's only one option, try to auto-reconnect
+    if (this.shardChoices_.length === 1) {
+      this.setShardID(this.shardChoices_[0].shardID);
+    }
   }
-
-  // Register for events
-  this.eventKeys.nodeTable = this.shard_.nodeTable.tableChange.register(
-      this.onNodeTableChange_.bind(this));
-  this.eventKeys.wireTable = this.shard_.wireTable.tableChange.register(
-      this.onWireTableChange_.bind(this));
-
-  // Trigger a forced read of the node table
-  this.fetchInitialLobbyData_();
 };
 
 /**
@@ -293,8 +298,25 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
       }
 
       this.onWireTableChange_(rows);
+
+      // On initial connect, if we are connecting to routers and no routers
+      // are present, add one automatically.
+      if (this.levelConfig_.canConnectToRouters &&
+          !this.doesShardContainRouter()) {
+        this.addRouterToLobby();
+      }
     }.bind(this));
   }.bind(this));
+};
+
+/**
+ * @returns {boolean} whether the currently cached node data for the shard
+ *          includes a router node.
+ */
+NetSimLobby.prototype.doesShardContainRouter = function () {
+  return undefined !== _.find(this.nodesOnShard_, function (shardNode) {
+        return shardNode instanceof NetSimRouterNode;
+      });
 };
 
 /**
@@ -317,23 +339,14 @@ NetSimLobby.prototype.addRouterToLobby = function () {
 };
 
 /**
- * @param {NetSimNode} node
+ * Handler for clicking the "Join" button.
+ * @param {NetSimClientNode|NetSimRouterNode} nodeToJoin
  */
-NetSimLobby.prototype.selectNode = function (node) {
-  this.selectedNode_ = node;
-  this.render();
-};
-
-/** Handler for clicking the "Connect" button. */
-NetSimLobby.prototype.onConnectButtonClick_ = function () {
-  if (!this.selectedNode_) {
-    return;
-  }
-
-  if (this.selectedNode_ instanceof NetSimRouterNode) {
-    this.netsim_.connectToRouter(this.selectedNode_.entityID);
-  } else if (this.selectedNode_ instanceof NetSimClientNode) {
-    this.myNode_.connectToClient(this.selectedNode_, function () {});
+NetSimLobby.prototype.onJoinButtonClick_ = function (nodeToJoin) {
+  if (nodeToJoin instanceof NetSimRouterNode) {
+    this.netsim_.connectToRouter(nodeToJoin.entityID);
+  } else if (nodeToJoin instanceof NetSimClientNode) {
+    this.myNode_.connectToClient(nodeToJoin, function () {});
   }
 };
 
