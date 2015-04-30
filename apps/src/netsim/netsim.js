@@ -760,6 +760,14 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
 };
 
 /**
+ * Get current DNS mode.
+ * @returns {DnsMode}
+ */
+NetSim.prototype.getDnsMode = function () {
+  return this.dnsMode_;
+};
+
+/**
  * Sets DNS mode across the whole simulation, propagating the change
  * to other clients.
  * @param {DnsMode} newDnsMode
