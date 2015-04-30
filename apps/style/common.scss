@@ -85,6 +85,7 @@ html[dir='rtl'] #visualizationColumn {
   position: relative;
   top: 0px;
   left: 0px;
+  overflow-x: hidden;
 }
 
 #visualizationColumn.embed_hidesource {
