@@ -19281,9 +19281,14 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceWidth = function() {
   return metrics ? metrics.viewWidth : 0
 };
 Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
-  var flyout = this.flyout_ || this.toolbox.flyout_;
-  var metrics = flyout.blockSpace_.getMetrics();
-  var width = metrics ? metrics.viewWidth : 0;
+  var width = 0;
+  var flyout = this.flyout_ || this.toolbox && this.toolbox.flyout_;
+  if(flyout) {
+    var metrics = flyout.blockSpace_.getMetrics();
+    if(metrics) {
+      width = metrics.viewWidth
+    }
+  }
   if(this.toolbox) {
     width += this.toolbox.HtmlDiv.getBoundingClientRect().width
   }
