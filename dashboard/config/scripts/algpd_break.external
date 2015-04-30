@@ -1,22 +1,21 @@
 name 'AlgPD Break'
 title 'Before you move on...'
-css 'unplugged'
 markdown <<MARKDOWN
 ### Before you move on...
 
-The next portion of this online PD is best completed shortly before your in-person session. Check the PD schedule for your region below. If your workshop isn't within the next two weeks, **we recommend that you wait to complete the rest of the stages until that two week window** so that the information is fresher for you.
+The next portion of this online PD is best completed shortly before your in-person session. Check the PD schedule for your region below. If your workshop isn't within the next two weeks, we recommend that you wait to complete the rest of the stages until that two week window so that the information is fresher for you.
 
 #### Regional PD Pages
-- <a href="http://code.org/educate/pd/15-16/lausd" target="_blank">CA - Los Angeles (LAUSD only)</a>
-- <a href="http://code.org/educate/pd/15-16/orange" target="_blank">CA - Orange County</a>
-- <a href="http://code.org/educate/pd/15-16/broward" target="_blank">FL - Broward</a>
-- <a href="http://code.org/educate/pd/15-16/atlanta" target="_blank">GA - Atlanta</a>
-- <a href="http://code.org/educate/pd/15-16/idaho" target="_blank">ID - Boise</a>
-- <a href="http://code.org/educate/pd/15-16/chicago" target="_blank">IL - Chicago</a>
-- <a href="http://code.org/educate/pd/15-16/charles" target="_blank">MD - Charles</a>
-- <a href="http://code.org/educate/pd/15-16/ohio" target="_blank">OH - Columbus</a>
-- <a href="http://code.org/educate/pd/15-16/houston" target="_blank">TX - Houston</a>
-- <a href="http://code.org/educate/pd/15-16/seattle" target="_blank">WA - Seattle</a>
+- [CA - Los Angeles (LAUSD only)](http://code.org/educate/pd/15-16/lausd)
+- [CA - Orange County](http://code.org/educate/pd/15-16/orange)
+- [FL - Broward](http://code.org/educate/pd/15-16/broward)
+- [GA - Atlanta](http://code.org/educate/pd/15-16/atlanta)
+- [ID - Boise](http://code.org/educate/pd/15-16/idaho)
+- [IL - Chicago](http://code.org/educate/pd/15-16/chicago)
+- [MD - Charles](http://code.org/educate/pd/15-16/charles)
+- [OH - Columbus](http://code.org/educate/pd/15-16/ohio)
+- [TX - Houston](http://code.org/educate/pd/15-16/houston)
+- [WA - Seattle](http://code.org/educate/pd/15-16/seattle)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

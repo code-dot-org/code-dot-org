@@ -3,18 +3,13 @@
   "game_id": 43,
   "created_at": "2015-02-27T01:18:46.000Z",
   "properties": {
-    "href": "path/to/html/in/asset/folder",
     "options": {
-      "skip_dialog": true
+      "skip_dialog": "true",
+      "css": "unplugged"
     },
     "title": "title",
     "content1": "description here",
-    "markdown": "<iframe src=\"https://embed-ssl.ted.com/talks/del_harvey_the_strangeness_of_scale_at_twitter.html\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\n",
-    "type": "External",
-    "dsl_text": "name 'unique level name here'\r\ntitle 'title'\r\ndescription 'description here'\r\nhref 'path/to/html/in/asset/folder'\r\nmarkdown <<MARKDOWN\r\n<iframe src=\"https://embed-ssl.ted.com/talks/del_harvey_the_strangeness_of_scale_at_twitter.html\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "Insert maddie video 1 here\n"
   },
   "md5": "37f5dfa8b13d699e0d81822c2ed8b1c4"
 }]]></config>

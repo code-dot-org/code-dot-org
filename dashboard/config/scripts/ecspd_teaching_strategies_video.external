@@ -1,17 +1,6 @@
 name 'ECSPD teaching strategies video'
 title 'ECSPD teaching strategies video'
-css ‘unplugged’ 
 
 markdown <<MARKDOWN
-## Teaching Practice
-
-
-
-<iframe width="640" height="480" src="https://www.youtube.com/embed/_Bs0ZjuMix8?rel=0" frameborder="0" allowfullscreen></iframe>
-
-#### On the next page, you will find your classroom strategies journal, which will include the growth mindset strategies you documented in the last stage. __You should update this document, adding your favorite strategies for keeping students interested and engaged in your classes.__
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
+# insert video on teaching practice and pd 
 MARKDOWN
