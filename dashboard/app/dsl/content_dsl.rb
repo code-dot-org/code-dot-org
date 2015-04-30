@@ -1,5 +1,9 @@
 # Abstract class for DSL types which provide a standard set of content-definition methods.
 class ContentDSL < BaseDSL
+  def initialize
+    super
+    @hash.merge! options: {}
+  end
   def title(text) @hash[:title] = text end
 
   # legacy
@@ -24,7 +28,6 @@ class ContentDSL < BaseDSL
   end
 
   def method_missing(key, *args)
-    @hash[:options] ||= {}
     @hash[:options][key.to_sym] = args.first
   end
 
