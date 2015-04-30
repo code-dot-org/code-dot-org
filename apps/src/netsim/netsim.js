@@ -1132,3 +1132,12 @@ NetSim.prototype.expireHeartbeat = function () {
   this.myNode.heartbeat_.spoofExpired();
   logger.info("Local node heartbeat is now expired.");
 };
+
+/**
+ * Kick off an animation that shows the local node setting the state of a
+ * simplex wire.
+ * @param {string} newState - "0" or "1"
+ */
+NetSim.prototype.animateSetWireState = function (newState) {
+  this.visualization_.animateSetWireState(newState);
+};

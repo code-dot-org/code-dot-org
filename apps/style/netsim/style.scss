@@ -217,6 +217,22 @@ $wide-column-width: 121px;
       .viz-wire {
         stroke: $charcoal;
         stroke-width: 2;
+
+        &.hidden-wire {
+          display: none;
+        }
+
+        &.state-unknown {
+          stroke: $lighter_gray;
+        }
+
+        &.state-off {
+          stroke: $black;
+        }
+
+        &.state-on {
+          stroke: $orange;
+        }
       }
     }
   }
