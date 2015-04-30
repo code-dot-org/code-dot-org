@@ -1,0 +1,11 @@
+name 'sciPD complex adaptive 2'
+title 'Examples of Complex Adaptive Systems'
+
+question 'Which of the following is NOT an example of a complex adaptive system?'
+wrong 'a bee hive'
+right 'a wall clock'
+wrong 'a traffic jam'
+wrong 'the internet'
+markdown <<MARKDOWN
+
+MARKDOWN

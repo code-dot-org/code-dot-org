@@ -1,0 +1,19 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-25T04:58:15.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Impact of Computer Science",
+    "content1": "description here",
+    "markdown": "## Considering the Impact of Computer Science\n\nWe often hear people talk about Computer Science (CS) having more and more impact on society at large and our lives as individuals, but what does that actually mean? On the following levels you'll see a couple of videos that demonstrate how computing is shaping our lives both in obvious and unexpected ways. These videos help to motivate some of the core CS concepts that we see in the Exploring Computer Science course. \n\n**After watching the videos, you'll have space to write your impressions about them, and note any connections you think might exist between the ideas covered in the videos and the units of ECS that you learned about earlier.**\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>

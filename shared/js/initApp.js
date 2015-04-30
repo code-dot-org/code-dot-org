@@ -218,8 +218,14 @@ function initApp() {
         }
       }, AUTOSAVE_INTERVAL);
 
-      if (!dashboard.currentApp.hidden && (dashboard.currentApp.isOwner || location.hash === '')) {
-        dashboard.showProjectHeader();
+      if (!dashboard.currentApp.hidden) {
+        if (dashboard.currentApp.isOwner || location.hash === '') {
+          dashboard.showProjectHeader();
+        } else {
+          dashboard.showMinimalProjectHeader();
+          appOptions.readonlyWorkspace = true;
+          appOptions.callouts = [];
+        }
       }
     } else if (dashboard.currentApp && dashboard.currentApp.levelSource) {
       appOptions.level.lastAttempt = dashboard.currentApp.levelSource;

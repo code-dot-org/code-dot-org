@@ -4,7 +4,8 @@
 
   .mainblock
     = render partial: 'levels/content', locals: {app: app, data: data}
-    %textarea.response{placeholder: data['placeholder'] ? string_or_image(app, data['placeholder']) : t(app + '.placeholder'), style: 'width: 700px'}
+    - height = data['height'] || '40'
+    %textarea.response{placeholder: data['placeholder'] ? string_or_image(app, data['placeholder']) : t(app + '.placeholder'), style: "width: 700px; height: #{height}px;"}
     = render partial: 'levels/dialog', locals: {app: app, data: data}
   .clear
 

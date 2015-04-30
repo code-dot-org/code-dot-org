@@ -9,7 +9,7 @@
       result: true
     };
   }
-= render partial: 'levels/content', locals: {app: 'external', data: @level.properties, content_class: @level.properties['options'].try(:[], 'css')}
+= render partial: 'levels/content', locals: {app: 'external', data: @level.properties, content_class: @level.properties['options']['css']}
 - href = asset_path(@level.properties['href'])
 - if href.present?
   #external

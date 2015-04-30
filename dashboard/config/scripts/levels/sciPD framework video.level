@@ -1,0 +1,19 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-30T00:29:19.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Framework",
+    "markdown": "### Computational Thinking\n\nIn this lesson, you will build your background knowledge on the connections between Computational Thinking and the Framework by watching a video, reading a document on aligning practices in science and computational science, and checking your understanding by answering a few quiz questions.<br>\n\n<iframe width=\"600\" height=\"338\" src=\"https://www.youtube.com/embed/kP8C6qoUgxs\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\n<span style=\"color: #3c3c3c; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; line-height: 25.6000003814697px;\">This </span><a href=\"http://edx.code.org/c4x/Code.org/Project_GUTS/asset/Aligning_the_Framework_and_CSTA.pdf\" style=\"-webkit-transition: all 0.1s linear 0s;color: #1d9dd9; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; font-stretch: normal; line-height: 1.4em; text-decoration: none; transition: all 0.1s linear 0s;\">paper</a><span style=\"white; color: #3c3c3c; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; line-height: 25.6000003814697px;\"> describes the alignment between Science and Engineering Practices (from the Framework for K-12 Science Education) and the Computer Science Teachers Association K-12 Computer Science Standards.</span>\n\n<br><br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
+  },
+  "md5": "072a936ef658cade2e0c1d391071d9f9"
+}]]></config>
+</External>
