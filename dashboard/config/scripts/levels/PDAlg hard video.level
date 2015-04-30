@@ -1,0 +1,18 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-27T21:02:46.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Why is Algebra so Hard?",
+    "markdown": "## Why is Algebra so Hard?\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ujLs68JP00w\" frameborder=\"0\" allowfullscreen></iframe>\n### How do you transition students?\nThink about the tricks and techniques that you use to help students transition from concrete arithmetic to abstract algebra. Post some thoughts to the forum, considering:\n\n- What's worked for you in the past?\n- What do your students find the most difficult?\n- How do you think programming can help with this transition?\n\n<div id=\"discourse-comments\"></div>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</External>

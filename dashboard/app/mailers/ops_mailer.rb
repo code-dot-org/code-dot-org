@@ -2,12 +2,6 @@ class OpsMailer < ActionMailer::Base
   default from: 'noreply@code.org'
   default to: 'ops@code.org'
 
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.ops.district_contact_added_teachers.subject
-  #
-
   def district_contact_added_teachers(district_contact, cohort, added_teachers, removed_teachers)
     @district_contact = district_contact
     @cohort = cohort
@@ -17,5 +11,12 @@ class OpsMailer < ActionMailer::Base
     subject = "[ops notification] #{district_contact.ops_first_name} #{district_contact.ops_last_name} modified #{cohort.name}"
 
     mail content_type: 'text/html', subject: subject
+  end
+
+  def script_assigned(params)
+    @params = params
+
+    subject = "You have been assigned a new course: #{params[:script].localized_title}"
+    mail content_type: 'text/html', subject: subject, to: params[:user].email
   end
 end

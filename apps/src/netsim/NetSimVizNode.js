@@ -20,6 +20,27 @@ var DnsMode = netsimConstants.DnsMode;
 var NodeType = netsimConstants.NodeType;
 
 /**
+ * The narrowest that a text bubble is allowed to be.
+ * @type {number}
+ * @const
+ */
+var TEXT_MIN_WIDTH = 30;
+
+/**
+ * Width to add to the bubble beyond the width of the student's name.
+ * @type {number}
+ * @const
+ */
+var TEXT_PADDING_X = 20;
+
+/**
+ * Height to add to the bubble beyond the height of the student's name.
+ * @type {number}
+ * @const
+ */
+var TEXT_PADDING_Y = 10;
+
+/**
  * @param {NetSimNode} sourceNode
  * @constructor
  * @augments NetSimVizEntity
@@ -78,27 +99,28 @@ var NetSimVizNode = module.exports = function (sourceNode) {
       .attr('r', radius)
       .appendTo(root);
 
+  this.nameGroup_ = jQuerySvgElement('g')
+      .attr('transform', 'translate(0,0)')
+      .appendTo(root);
+
   this.displayName_ = jQuerySvgElement('text')
       .attr('x', 0)
-      .attr('y', textVerticalOffset)
-      .appendTo(root);
+      .attr('y', textVerticalOffset);
+
+  this.nameBox_ = jQuerySvgElement('rect')
+      .addClass('name-box');
+
+  this.nameGroup_
+      .append(this.nameBox_)
+      .append(this.displayName_);
 
   this.addressGroup_ = jQuerySvgElement('g')
       .attr('transform', 'translate(0,30)')
       .hide()
       .appendTo(root);
 
-  var addressBoxHalfWidth = 15;
-  var addressBoxHalfHeight = 12;
-
-  jQuerySvgElement('rect')
+  this.addressBox_ = jQuerySvgElement('rect')
       .addClass('address-box')
-      .attr('x', -addressBoxHalfWidth)
-      .attr('y', -addressBoxHalfHeight)
-      .attr('rx', 5)
-      .attr('ry', 10)
-      .attr('width', addressBoxHalfWidth * 2)
-      .attr('height', addressBoxHalfHeight * 2)
       .appendTo(this.addressGroup_);
 
   this.addressText_ = jQuerySvgElement('text')
@@ -122,13 +144,66 @@ NetSimVizNode.inherits(NetSimVizEntity);
  * @param {NetSimNode} sourceNode
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
-  this.displayName_.text(sourceNode.getDisplayName());
+  this.setName(sourceNode.getDisplayName());
   this.nodeID = sourceNode.entityID;
 
   if (sourceNode.getNodeType() === NodeType.ROUTER) {
     this.isRouter = true;
     this.getRoot().addClass('router-node');
   }
+};
+
+/**
+ * Flag this viz node as the simulation local node.
+ */
+NetSimVizNode.prototype.setIsLocalNode = function () {
+  this.isLocalNode = true;
+  this.getRoot().addClass('local-node');
+};
+
+/**
+ * Change the display name of the viz node
+ * @param {string} newName
+ */
+NetSimVizNode.prototype.setName = function (newName) {
+  // If the name is longer than ten characters (longer than "Router 999")
+  // then only show up to the first whitespace.
+  if (newName.length > 10) {
+    newName = newName.split(/\s/)[0];
+  }
+
+  this.displayName_.text(newName);
+  this.resizeNameBox_();
+};
+
+/** @private */
+NetSimVizNode.prototype.resizeNameBox_ = function () {
+  this.resizeRectToText_(this.nameBox_, this.displayName_);
+};
+
+/** @private */
+NetSimVizNode.prototype.resizeAddressBox_ = function () {
+  this.resizeRectToText_(this.addressBox_, this.addressText_);
+};
+
+/**
+ * Utility for resizing a background rounded-rect to fit the given text element.
+ * @param {jQuery} rect
+ * @param {jQuery} text
+ * @private
+ */
+NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
+  var box = text[0].getBBox();
+  var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
+  var height = box.height + TEXT_PADDING_Y;
+  var halfWidth = width / 2;
+  var halfHeight = height / 2;
+  rect.attr('x', -halfWidth)
+      .attr('y', -halfHeight)
+      .attr('rx', halfHeight)
+      .attr('ry', halfHeight)
+      .attr('width', width)
+      .attr('height', height);
 };
 
 /**
@@ -152,6 +227,9 @@ NetSimVizNode.prototype.tick = function (clock) {
     var randomX = 300 * Math.random() - 150;
     var randomY = 300 * Math.random() - 150;
     this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
+  } else if (this.isForeground && this.tweens_.length > 0) {
+    this.resizeNameBox_();
+    this.resizeAddressBox_();
   }
 };
 
@@ -174,7 +252,7 @@ NetSimVizNode.prototype.setAddress = function (address) {
 };
 
 /**
- * @param {string} newDnsMode
+ * @param {DNSMode} newDnsMode
  */
 NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
   this.dnsMode_ = newDnsMode;
@@ -192,7 +270,7 @@ NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
 NetSimVizNode.prototype.updateAddressDisplay = function () {
   // Routers never show their address
   // If a DNS mode has not been set we never show an address
-  if (this.isRouter || this.dnsMode_ === undefined) {
+  if (this.isRouter || this.address_ === undefined) {
     this.addressGroup_.hide();
     return;
   }
@@ -203,4 +281,5 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
   } else {
     this.addressText_.text(this.isLocalNode || this.isDnsNode ? this.address_ : '?');
   }
+  this.resizeAddressBox_();
 };

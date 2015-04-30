@@ -536,6 +536,9 @@ Blockly.Block.prototype.getHeightWidth = function() {
     // Firefox has trouble with hidden elements (Bug 528969).
     return {height: 0, width: 0};
   }
+
+  var expectedBBoxY = 0;
+
   if (Blockly.BROKEN_CONTROL_POINTS) {
     /* HACK:
      WebKit bug 67298 causes control points to be included in the reported
@@ -547,11 +550,29 @@ Blockly.Block.prototype.getHeightWidth = function() {
       // Bottom control point partially masked by lower tab.
       bBox.height += 4;
     }
+    /**
+     * We would expect bBox.y to be 0, but with broken control points,
+     * we'll expect it to be -5 (since we added an extra control point for
+     * measurement).
+     */
+    expectedBBoxY = -5;
   }
+
   if (bBox.height > 0) {
     // Subtract one from the height due to the shadow.
     bBox.height -= 1;
   }
+
+  /**
+   * When <text> or other child content's boundaries extend beyond tops of
+   * blocks (e.g. due to IE MSDN issue #791152), bBox.y ends up being < 0.
+   * Here we add bBox.y (which is otherwise typically 0) to the height to
+   * discount the above-block content distance.
+   */
+  var bboxYDifference = (bBox.y - expectedBBoxY);
+  var heightWithoutContentAboveTop = bBox.height + bboxYDifference;
+  bBox.height = Math.max(0, heightWithoutContentAboveTop);
+
   return bBox;
 };
 

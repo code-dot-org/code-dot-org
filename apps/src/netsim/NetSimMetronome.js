@@ -12,7 +12,7 @@
 /* global $ */
 'use strict';
 
-var markup = require('./NetSimMetronome.html');
+var markup = require('./NetSimMetronome.html.ejs');
 
 /**
  * An SVG "metronome", in the form of a radial meter that fills and resets

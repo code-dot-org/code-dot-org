@@ -1,0 +1,34 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2015-04-29T20:14:26.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Number"
+      },
+      {
+        "text": "String"
+      },
+      {
+        "text": "Image"
+      }
+    ],
+    "answers": [
+      {
+        "text": "http://staging.studio.code.org/script_assets/pd/blue.png"
+      },
+      {
+        "text": "http://staging.studio.code.org/script_assets/pd/teal.png"
+      },
+      {
+        "text": "http://staging.studio.code.org/script_assets/pd/purple.png"
+      }
+    ],
+    "title": "Intro to Data Types",
+    "content1": "Match each data type with its color code",
+    "height": "100",
+    "markdown": "### Evaluation Blocks\n\n<iframe width=\"350\" height=\"200\" src=\"https://www.youtube.com/embed/GD5ZrNcGeD0\" frameborder=\"0\" allowfullscreen style=\"float:left; margin: 0 20px 20px 0\"></iframe>\n\nA major benefit of using a visual programming language is that the language itself can help reinforce student understanding of key concepts. For example, every Evaluation Block is color coded to show the user what type of data it needs for its inputs, as well as the the data type that it returns. This color coding helps students to better understand how to use different functions while strongly reinforcing that distinct differences between data types. Watch this video introducing students to data types and then you'll move on to play through a few puzzles that use the newly introduced data types.\n\n<div style=\"clear:both\"/>\n"
+  }
+}]]></config>
+</Match>

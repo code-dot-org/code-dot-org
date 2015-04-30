@@ -1,0 +1,14 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-28T17:55:55.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Meet Your Facilitators",
+    "markdown": "## Meet your Facilitators\n\n# From Code.org\n- Josh Caldwell, Education Program Manager\n- Kiki Prottsman, Education Program Manager\n\n# From Bootstrap\n- Emmanuel Schanzer, Bootstrap creator\n- Emma Youndtsmith, Bootstrap MA Regional Manager\n- Rosanna Sobota, Bootstrap NY Regional Manager\n\n# Classroom Teachers\n- Casey Cleary, Charles County, MD\n- Corey Morrison, Chicago, IL\n- Jeanni Kim, Montgomery County, MD\n- Joan O'Brien, Broward County, FL\n- Pedro Uribe, Broward County, FL\n- Rick Jennings, Charles County, MD\n- Rodney Weems, Chicago, IL\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n\n\n"
+  }
+}]]></config>
+</External>

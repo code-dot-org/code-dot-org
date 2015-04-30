@@ -97,8 +97,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
-    # Set start blocks to the user's previous attempt at this puzzle. Must be called after
-    # set_videos_and_blocks_and_callouts because we override @start_blocks set there.
+    # Set start blocks to the user's previous attempt at this puzzle.
     if current_user && @level.game.name != 'Jigsaw'
       @last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
     end
@@ -109,8 +108,6 @@ class ScriptLevelsController < ApplicationController
     @level = @script_level.level
     @game = @level.game
     @stage = @script_level.stage
-
-    set_videos_and_callouts
 
     load_level_source
 

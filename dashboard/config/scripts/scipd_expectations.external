@@ -2,10 +2,9 @@ name 'sciPD expectations'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
+### Professional Development Overview
 
 <iframe width="680" height="415" src="https://www.youtube.com/embed/t29Ann5323w" frameborder="0" allowfullscreen></iframe>
-
-## Professional Development Overview
 
 **Participants are expected to do the following:**
 

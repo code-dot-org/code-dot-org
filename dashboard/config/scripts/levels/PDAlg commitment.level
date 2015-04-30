@@ -5,11 +5,16 @@
   "properties": {
     "options": {
       "skip_dialog": true,
-      "css": "unplugged"
+      "css": "unplugged",
+      "skip_sound": true
     },
     "title": "CS in Algebra PD commitments",
     "content1": "overview of program commitments",
-    "markdown": "## Program Timeline\n\nThe program you're about to begin spans through the upcoming academic year. During this time you will have access to three phases of professional development (PD) designed to leverage your experience with the curriculum and associated teaching strategies and to facilitate the development of a strong community of teachers. You'll work with a support network formed by that local community of teachers and facilitators to move through the first year and beyond. \n\nSee below for a timeline of these PD opportunities: \n![program commitments](http://staging.studio.code.org/script_assets/pd/algebra_timeline.png)\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n"
+    "markdown": "## Program Timeline\n\nThe program you're about to begin spans through the upcoming academic year. During this time you will have access to three phases of professional development (PD) designed to leverage your experience with the curriculum and associated teaching strategies and to facilitate the development of a strong community of teachers. You'll work with a support network formed by that local community of teachers and facilitators to move through the first year and beyond. \n<br><br>\n\nSee below for a timeline of these PD opportunities: \n![program commitments](/script_assets/pd/algebra_timeline.png)\n<br><br>\n_More information about timelines for your specific region can be found later in this series._\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </External>

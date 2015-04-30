@@ -7,8 +7,6 @@
       .user_options{style: 'display: none;'}
         - if current_user.teacher?
           = link_to t('nav.user.classroom'), teacher_dashboard_url
-        - if current_user.district_contact? || current_user.facilitator? || current_user.admin?
-          = link_to t('nav.user.district_dashboard'), ops_dashboard_url
         = link_to t('nav.user.stats'), root_url
         = link_to t('nav.user.settings'), edit_user_registration_url
         - if current_user.teacher? && (current_user.teacher_prize || current_user.teacher_bonus_prize)

@@ -91,6 +91,8 @@ en:
       Code Logo v3:
         Create images with bits and bytes.: Create images with bits and bytes.
         title: title
+      ECSPD PD Phases:
+        ECSPD PD Phases: ECSPD PD Phases
       ECSPD PD details:
         ECSPD PD details: ECSPD PD details
       ECSPD PD overview:
@@ -98,10 +100,24 @@ en:
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
+      ECSPD end of p1:
+        ECSPD end of p1: ECSPD end of p1
+      ECSPD forum introduction:
+        ECS Forum Introductions: ECS Forum Introductions
+        Forum Introductions: Forum Introductions
       ECSPD growth mindset strategies:
         Growth Mindset Strategies: Growth Mindset Strategies
+      ECSPD impact of CS:
+        Impact of Computer Science: Impact of Computer Science
+        description here: description here
+      ECSPD impact vid1:
+        ECSPD impact vid1: ECSPD impact vid1
+      ECSPD impact vid2:
+        ECSPD impact vid2: ECSPD impact vid2
       ECSPD meet facilitator:
         Meet your Facilitator!: Meet your Facilitator!
+      ECSPD pause:
+        ECSPD pause: ECSPD pause
       ECSPD program overview:
         ECS Program Overview: ECS Program Overview
         Overview of ECS Program: Overview of ECS Program
@@ -119,6 +135,12 @@ en:
       PDAlg Curriculum Overview:
         Curriculum Overview: Curriculum Overview
         Overview of CS in Algebra curriculum: Overview of CS in Algebra curriculum
+      PDAlg Details:
+        CS in Algebra PD Details: CS in Algebra PD Details
+      PDAlg End of P1:
+        End of Phase 1: End of Phase 1
+      PDAlg Facilitators:
+        Meet Your Facilitators: Meet Your Facilitators
       PDAlg Intro: {}
       PDAlg Scope:
         Scope and Sequence: Scope and Sequence
@@ -126,9 +148,19 @@ en:
         Course Progress: Course Progress
       PDAlg Teacher Introduction:
         Introduce yourself: Introduce yourself
+      PDAlg big game:
+        Introduction to the Big Game: Introduction to the Big Game
+      PDAlg bootstrap:
+        From Bootstrap to CS in Algebra: From Bootstrap to CS in Algebra
+      PDAlg circles to blocks:
+        From Circles to Blocks: From Circles to Blocks
       PDAlg commitment:
         CS in Algebra PD commitments: CS in Algebra PD commitments
         overview of program commitments: overview of program commitments
+      PDAlg functions:
+        The Concept of Function: The Concept of Function
+      PDAlg hard video:
+        Why is Algebra so Hard?: Why is Algebra so Hard?
       PDCSP Intro: {}
       PDECS Intro:
         PD Intro: PD Intro
@@ -332,11 +364,68 @@ en:
         title: title
       sciPD Course Overview: {}
       sciPD Intro: {}
+      sciPD StarLogo intro 1:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD StarLogo intro 2:
+        Guided Intro to StarLogo Nova: Guided Intro to StarLogo Nova
+      sciPD StarLogo intro 3:
+        Guided Tour of StarLogo Nova pt 3: Guided Tour of StarLogo Nova pt 3
+      sciPD StarLogo intro 4:
+        Guided Intro to StarLogo Nova part 4: Guided Intro to StarLogo Nova part 4
+      sciPD StarLogo intro video:
+        Introduction to StarLogo Nova: Introduction to StarLogo Nova
+      sciPD StarLogo tutorial 1:
+        StarLogo Tutorial part 1: StarLogo Tutorial part 1
+      sciPD StarLogo tutorial 2:
+        StarLogo Tutorial part 2: StarLogo Tutorial part 2
+      sciPD StarLogo tutorial 3:
+        StarLogo Tutorial part 3: StarLogo Tutorial part 3
+      sciPD StarLogo tutorial 4:
+        StarLogo Nova Tutorial Part 4: StarLogo Nova Tutorial Part 4
+      sciPD StarLogo tutorial 5:
+        StarLogo Nova Tutorial Part 5: StarLogo Nova Tutorial Part 5
+      sciPD StarLogo tutorial 6:
+        StarLogo Nova Tutorial Part 6: StarLogo Nova Tutorial Part 6
+      sciPD StarLogo tutorial 7:
+        StarLogo Nova Tutorial Part 7: StarLogo Nova Tutorial Part 7
+      sciPD StarLogo tutorial 8:
+        StarLogo Nova Tutorial Part 8: StarLogo Nova Tutorial Part 8
+      sciPD agent based forum:
+        Agent Based Modeling of Adaptive Systems Forum: Agent Based Modeling of Adaptive Systems Forum
+      sciPD agent based video:
+        Agent Based Modeling: Agent Based Modeling
+      sciPD class models forum:
+        Models in the Classroom: Models in the Classroom
+      sciPD class models video:
+        Using Models in the Classroom: Using Models in the Classroom
+      sciPD complex adaptive forum:
+        Complex Adaptive Forum: Complex Adaptive Forum
+      sciPD complex adaptive video:
+        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
+      sciPD computer models forum:
+        Using Computer Models in Science: Using Computer Models in Science
+      sciPD computer models video:
+        Using Computer Models in Science: Using Computer Models in Science
+      sciPD culture forum:
+        Dispositions and Classroom Culture: Dispositions and Classroom Culture
+      sciPD culture video:
+        Dispositions And Classroom Culture: Dispositions And Classroom Culture
       sciPD expectations: {}
+      sciPD finish:
+        Code.org Post Survey: Code.org Post Survey
+      sciPD framework forum:
+        Computational Thinking and the Framework for K-12: Computational Thinking and the Framework for K-12
+      sciPD framework video:
+        Framework: Framework
       sciPD intro finale: {}
+      sciPD intro to CS forum: {}
+      sciPD intro to CS video:
+        Intro to Computational Science: Intro to Computational Science
       sciPD intro video:
         Welcome to CS in Science: Welcome to CS in Science
       sciPD meet and greet: {}
+      sciPD what to expect:
+        What to Expect: What to Expect
       test demo level:
         demo description: demo description
         demo title: demo title
@@ -349,6 +438,21 @@ en:
       unique level name here:
         description here: description here
         title: title
+    match:
+      PDAlg commitment match:
+        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
+        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Program Commitment Matching Question: Program Commitment Matching Question
+    multi:
+      PDAlg attendance commitment:
+        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
@@ -452,6 +556,10 @@ en:
         Documenting Your PD Goals: Documenting Your PD Goals
       ECSPD course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
+      ECSPD impact in program:
+        Impact of Computing: Impact of Computing
+      ECSPD program overlap:
+        Relationship between Curriculum and PD: Relationship between Curriculum and PD
       ECSPD strategies:
         Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD your goals:

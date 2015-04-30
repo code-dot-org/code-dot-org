@@ -1,0 +1,107 @@
+title 'CSP Unit 3 - Programming'
+description 'Programming in Javascript and AppLap'
+description_short 'Programming'
+
+stage 'The Need For Programming Languages'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Using Simple Commands'
+level 'U1L1 Student Lesson Introduction'
+level 'U3L2 Using Simple Commands'
+
+stage 'Creating Procedures - Part 1'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Creating Procedures - Part 2'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Layers of Abstraction and Programming Efficiency'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'APIs and Function Parameters'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Looping and Random Numbers'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Creating functions with Parameters'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Scene Design Part 1 - Plan'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Scene Design Part 2 - Code'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Scene Design Part 3 - Reflect'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Unplugged Events Activity -  Mission Unsortable’
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Buttons on the Screen'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Unfortunate Events'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'On Beyond Buttons'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Cookie Clicker 1.0 DEPRECIATED'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Controlling Memory and Program Flow'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Variable Basics DEPRECIATED'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Clicker v.1 -  Variable Basics'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Conditional Basics'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'More Variables (2 days)'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Permanent Data Storage and Clicker Completion'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Natural Language Processing and Chat Bots'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Chained Conditionals'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Compound Conditionals'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Strings and Substrings'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'While Loop Basics'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'While Loops_ Counting Flips'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Arrays_ Intro'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Arrays_ Photo Album'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Images are Arrays'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Arrays and Loops_ Altering Images'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Arrays and Loops_ Hidden Images'
+level 'U1L1 Student Lesson Introduction'
+
+stage 'Sarah testing project backed levels'
+level 'applab_test_sarah'
+level 'applab_test2_sarah'
