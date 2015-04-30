@@ -7,6 +7,11 @@
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
 
   .answers{style: question_content_blank ? 'width: 100%' : ''}
+    - if !!(data['options'].try(:[], 'answer_line'))
+      :css
+        .btn {
+          display: table;
+        }
 
     %span
       %h4.multi-question!= multi_t(data['questions'][0]['text']) if data['questions']
