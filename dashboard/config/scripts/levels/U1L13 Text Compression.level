@@ -8,12 +8,7 @@
       "skip_dialog": true
     },
     "title": "U1L13 Text Compression",
-    "content1": "Compress text by identifying repeated patterns.",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ],
-    "video_key": "csp_textcompression"
+    "content1": "Compress text by identifying repeated patterns."
   },
   "md5": "700b7a101c5c10f16082720a7f2c969b"
 }]]></config>

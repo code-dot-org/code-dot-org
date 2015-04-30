@@ -1,6 +1,6 @@
 name 'PDAlg Scope'
 title 'Scope and Sequence'
-css 'unplugged'
+description 'Scope and Sequence'
 markdown <<MARKDOWN
 ## CS in Algebra Scope and Sequence
 

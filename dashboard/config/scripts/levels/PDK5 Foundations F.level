@@ -8,11 +8,7 @@
       "css": "unplugged"
     },
     "title": "foundational skill",
-    "markdown": "## Computer Science Education\n\nDo you see computer science as a foundational skill for your students? Why or why not?\n\n<div id=\"discourse-comments\"></div>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "## Computer Science Education\n\nDo you see computer science as a foundational skill for your students? Why or why not?\n\n<div id=\"discourse-comments\" />\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
   }
 }]]></config>
 </External>
