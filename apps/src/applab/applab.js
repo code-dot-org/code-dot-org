@@ -1056,7 +1056,7 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   debugArea.style.maxHeight = 'calc(50% - 21px)';
 
   // Fire resize so blockly and droplet handle this type of resize properly:
-  window.dispatchEvent(new Event('resize'));
+  utils.fireResizeEvent();
 };
 
 Applab.onMouseUpDebugResizeBar = function (event) {
