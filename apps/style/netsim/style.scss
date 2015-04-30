@@ -24,11 +24,6 @@ $wide-column-width: 121px;
   user-select: $val;
 }
 
-// Reduce top margin to help fit everything above the fold
-.full_container {
-  padding-top: 2px;
-}
-
 // Hide the footer instructions, we put them in the instructions tab
 #prompt-table {
   display: none;
@@ -38,47 +33,47 @@ $wide-column-width: 121px;
   clear: both;
 }
 
-
-// Sprited icons.
-.icon21 {
-  height: 21px;
-  width: 21px;
-  background-image: url("#{$root}icons.png");
-}
-.code {
- background-position: -42px 0;
-}
-.link {
-  background-position: -21px 0;
-}
-.run {
-  background-position: -63px -21px;
-  margin-right: 3px;
-}
-.stop {
-  background-position: -63px 0;
-  margin-right: 3px;
-}
-.calcHeader {
-  font-size: 25px;
-}
-
-.markedToken {
-  fill: $white;
-}
-
-.errorToken {
-  fill: $red;
-}
-
-.expr {
-  font-size: 20px;
-}
-
 //
 // NetSim-specific styles
 //
 #netsim {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  #netsim-disconnected {
+    display: block;
+    position: relative;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+    overflow-y: auto;
+  }
+
+  #netsim-leftcol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    overflow-y: auto;
+
+    & > .column-width-limiter {
+      width: 300px;
+    }
+  }
+
+  #netsim-rightcol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 330px;
+    right: 0;
+    overflow-y: auto;
+  }
+
   h1 {
     font-family: "Gotham 5r", sans-serif;
   }
@@ -96,7 +91,7 @@ $wide-column-width: 121px;
     }
 
     th {
-      border: none;
+      border: solid $charcoal 1px;
       font-family: "Gotham 4r", sans-serif;
       font-size: 10pt;
     }
@@ -152,6 +147,13 @@ $wide-column-width: 121px;
     // Button text should not be selectable
     @include user_select(none);
 
+    &.large-button {
+      font-size: 14px;
+      line-height: 20px;
+      border-radius: 5px;
+      padding: 7px 14px;
+    }
+
     &.secondary {
       background-color: $light_cyan;
     }
@@ -162,54 +164,58 @@ $wide-column-width: 121px;
     }
   }
 
-  //
-  //General two-column layout rules
-  //
-  #netsim-rightcol {
-    float: right;
-    width: 300px;
-  }
-
-  #netsim-leftcol {
-    margin-right: 320px;
-  }
-
   // Visualization styles
   #netsim-visualization {
     svg {
       background-color: $white;
-      border: solid $black thin;
+      border: solid darkgray thin;
 
       .viz-node {
         text {
+          fill: $black;
           text-anchor: middle;
+
+          &.address-box {
+            font-weight: bold;
+          }
         }
 
         circle {
-          stroke: $black;
+          stroke: $light_cyan;
           stroke-width: 2;
-          fill: $own-node-background-color;
+          fill: $light_cyan;
         }
 
-        rect.address-box {
-          stroke: $black;
+        rect {
+          stroke: $light_cyan;
           stroke-width: 2px;
           fill: $white;
         }
-
-        text.address-box {
-          font-weight: bold;
-        }
       }
 
+      .local-node {
+        circle {
+          stroke: $light_teal;
+          fill: $light_teal;
+        }
+
+        rect {
+          stroke: $light_teal;
+        }
+      }
       .router-node {
         circle {
-          fill: $orange;
+          stroke: $light_purple;
+          fill: $light_purple;
+        }
+
+        rect {
+          stroke: $light_purple;
         }
       }
 
       .viz-wire {
-        stroke: $black;
+        stroke: $charcoal;
         stroke-width: 2;
       }
     }
@@ -217,10 +223,6 @@ $wide-column-width: 121px;
 
   .netsim-shard-selection-panel {
     overflow: hidden;
-
-    .content-wrap {
-      margin: 1em;
-    }
 
     .field-box {
       float: left;
@@ -233,12 +235,37 @@ $wide-column-width: 121px;
   }
 
   .netsim-lobby-panel {
-    .content-wrap {
-      margin: 1em;
+    .instructions {
+      float: left;
+      width: 30%;
     }
 
-    ul {
-      margin: 0 0 10px 0;
+    .controls {
+      margin-left: calc(30% + 1em);
+    }
+
+    table {
+      margin-bottom: 1em;
+
+      img {
+        height: 14px;
+        vertical-align: text-top;
+      }
+    }
+
+    td {
+      height: 40px;
+      vertical-align: middle;
+    }
+
+    .empty-row {
+      text-align: center;
+      border: none;
+    }
+
+    .button-column {
+      width: 1px;
+      text-align: right;
     }
   }
 
@@ -265,13 +292,6 @@ $wide-column-width: 121px;
       font-style: italic;
     }
 
-    .selectable-row {
-      cursor: pointer;
-      &:hover {
-        border-left: solid $orange 3px;
-      }
-    }
-
     .own-row {
       background-color: $own-node-background-color;
       font-style: italic;
@@ -290,13 +310,6 @@ $wide-column-width: 121px;
         color: $black;
       }
     }
-
-
-    .selected-row {
-      background-color: $orange !important;
-      color: white !important;
-      font-weight: bold;
-    }
   }
 
   // NetSim Panel
@@ -307,7 +320,6 @@ $wide-column-width: 121px;
   $panel_border_radius: 0.3em;
 
   div.netsim-panel {
-    background-color: $white;
     margin: 0 0 0.5em;
     padding: 0;
 
@@ -335,11 +347,16 @@ $wide-column-width: 121px;
     }
 
     div.panel-body {
-      border-left: solid darkgray thin;
-      border-right: solid darkgray thin;
-      border-bottom: solid darkgray thin;
-      border-top: solid $cyan thin;
+      background-color: $white;
+      border-left: solid darkgray 1px;
+      border-right: solid darkgray 1px;
+      border-bottom: solid darkgray 1px;
+      border-top: solid $cyan 1px;
       border-radius: 0 0 $panel_border_radius $panel_border_radius;
+    }
+
+    .content-wrap {
+      margin: 1em;
     }
 
     // Minimized panel, contents are hidden.
@@ -403,14 +420,14 @@ $wide-column-width: 121px;
     }
 
     .scroll-area {
-      margin: 0.5em 0 0.5em 0;
-      max-height: 300px;
+      margin: 0.5em 0;
       width: 100%;
       overflow-y: auto;
     }
 
     table {
       th {
+        border: none;
         background-color: transparent;
         color: $black;
       }
@@ -471,6 +488,11 @@ $wide-column-width: 121px;
   // Mimics the log panel styles as much as possible.
   .netsim-send-panel {
 
+    .send-panel-packets {
+      max-height: 265px;
+      overflow-y: auto;
+    }
+
     .netsim-packet {
       border: solid darkgray thin;
       background-color: $lightest_gray;
@@ -484,6 +506,7 @@ $wide-column-width: 121px;
       }
 
       th {
+        border: none;
         background-color: transparent;
         color: $black;
       }
@@ -660,7 +683,6 @@ $wide-column-width: 121px;
   }
 
   .netsim-tabs {
-    margin-top: 1em;
 
     h1 {
       font-size: 10pt;
@@ -771,11 +793,19 @@ $wide-column-width: 121px;
     }
   }
 
-  // Connection status panel, above visualization
-  .netsim-panel.netsim_status_panel {
-    div.panel-body {
-      padding: 1em;
-    }
+  // Really garish terrible style for debug buttons that we should not ship.
+  input.debug-button {
+    background: #f9f968;
+    background: -moz-linear-gradient(top,  #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f968), color-stop(82%,#ffa73d), color-stop(100%,#ff7f04));
+    background: -webkit-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    background: -o-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    background: -ms-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    background: linear-gradient(to bottom,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f968', endColorstr='#ff7f04',GradientType=0 );
+    border: outset #ff7f04 3px;
+    color: black;
+    font-weight:bold;
   }
 }
 

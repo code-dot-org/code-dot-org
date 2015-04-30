@@ -1,5 +1,6 @@
 title 'Computer Science in Science PD'
 description "In Partnership with Project GUTS"
+login_required 'true'
 
 stage 'Introduction to PD'
 level 'sciPD Intro'
@@ -78,4 +79,3 @@ level 'sciPD StarLogo tutorial 8'
 
 stage 'Post-Survey'
 level 'sciPD finish'
-

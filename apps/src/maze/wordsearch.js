@@ -211,6 +211,10 @@ function letterValue(val) {
   }
 
   if (typeof(val) === "string") {
+    // temporary hack to allow us to have 4 as a letter
+    if (val.length === 2 && val[0] === '_') {
+      return val[1];
+    }
     return val[0];
   }
 

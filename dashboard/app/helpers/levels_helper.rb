@@ -20,11 +20,31 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def set_videos_and_callouts
-    view_options(
-        autoplay_video: select_and_track_autoplay_video,
-        callouts: select_and_remember_callouts(params[:show_callouts])
-    )
+  def set_channel
+    # This only works for logged-in users because the storage_id cookie is not
+    # sent back to the client if it is modified by ChannelsApi.
+    return unless current_user
+
+    # The channel should be associated with the template level, if present.
+    # Otherwise the current level.
+    host_level = @level.try(:project_template_level) || @level
+
+    # If `create` fails because it was beat by a competing request, a second
+    # `find_by` should succeed.
+    channel_token = retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
+        # Get a new channel_id.
+        ct.channel = ChannelsApi.call(request.env.merge(
+          'REQUEST_METHOD' => 'POST',
+          'PATH_INFO' => '/v3/channels',
+          'REQUEST_PATH' => '/v3/channels',
+          'CONTENT_TYPE' => 'application/json;charset=utf-8',
+          'rack.input' => StringIO.new('{"hidden":"true"}')
+        ))[1]['Location'].split('/').last
+      end
+    end
+
+    view_options channel: channel_token.channel
   end
 
   def select_and_track_autoplay_video
@@ -70,6 +90,15 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
+    # Provide the channel for templated and applab levels.
+    set_channel if @level.try(:project_template_level) || @level.game == Game::APPLAB
+
+    # Set videos and callouts.
+    view_options(
+      autoplay_video: select_and_track_autoplay_video,
+      callouts: select_and_remember_callouts(params[:show_callouts])
+    )
+
     return blockly_options if @level.is_a? Blockly
     Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
   end
