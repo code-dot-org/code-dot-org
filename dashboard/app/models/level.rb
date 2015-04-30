@@ -67,7 +67,7 @@ class Level < ActiveRecord::Base
   end
 
   def self.custom_levels
-    Naturally.sort_by(Level.all.select(&:custom?), :name)
+    Naturally.sort_by(Level.where.not(user_id: nil), :name)
   end
 
   # All levelbuilder levels will have a user_id, except for DSLDefined levels.
