@@ -224,7 +224,18 @@ $wide-column-width: 121px;
       .viz-wire {
         stroke: $charcoal;
         stroke-width: 2;
-        @include transition(stroke 1s, stroke-width 1s); // Fade back to normal stroke color
+        @include transition(
+                stroke 1s,
+                stroke-width 1s); // Fade back to normal stroke color
+
+        text {
+          stroke: none;
+          fill: transparent;
+          font-family: monospace;
+          font-size: 26pt;
+          text-anchor: middle;
+          @include transition(fill 1s);
+        }
 
         &.hidden-wire {
           display: none;
@@ -237,14 +248,26 @@ $wide-column-width: 121px;
         &.state-on, &.state-off {
           stroke-width: 4;
           @include transition(none); // Snap to this state
+
+          text {
+            @include transition(none);
+          }
         }
 
         &.state-off {
           stroke: $black;
+
+          text {
+            fill: $black;
+          }
         }
 
         &.state-on {
           stroke: $orange;
+
+          text {
+            fill: $orange;
+          }
         }
       }
     }
