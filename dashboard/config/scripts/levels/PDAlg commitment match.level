@@ -1,0 +1,37 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2015-04-26T03:17:28.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Phase 1"
+      },
+      {
+        "text": "Phase 2"
+      },
+      {
+        "text": "Phase 3"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Online Introduction: 2 hours online"
+      },
+      {
+        "text": "Blended Summer Study: 3 days in-person and 8 hours online"
+      },
+      {
+        "text": "Academic Year Development: 2 days in-person and 10 hours online"
+      }
+    ],
+    "title": "Program Commitment Matching Question",
+    "content1": "Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page",
+    "height": 60,
+    "type": "Match",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</Match>

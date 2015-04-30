@@ -1,0 +1,19 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-04-29T18:20:34.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Intro to Computational Science",
+    "markdown": "### Introduction to Computational Science\n\nIn this lesson, you will build your background knowledge on Computational Science by watching a video, looking at the scope of work performed by Computational Scientists, and checking your understanding by answering a few quiz questions. \n\n<iframe width=\"600\" height=\"455\" src=\"https://www.youtube.com/embed/C-9vMx0O3d8\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\nHere is an example of how computational science is used to study, plan, and prepare for community emergencies.\n\n<a href=\"http://edx.code.org/c4x/Code.org/Project_GUTS/asset/Examples_of_CT_in_the_workplace_-_J._Thorp_8-18-11.pdf\" style=\"-webkit-transition: all 0.1s linear 0s; color: #1d9dd9; font-size: 1em; font-stretch: normal; line-height: 1.4em; text-decoration: none; transition: all 0.1s linear 0s;\">Example of Computational Thinking in the workplace</a>\n\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
+  },
+  "md5": "072a936ef658cade2e0c1d391071d9f9"
+}]]></config>
+</External>

@@ -4,6 +4,10 @@ title 'Meet your Facilitator!'
 markdown <<MARKDOWN
 ## Meet your Facilitators
 
+# facilitator bios to go here
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 
 MARKDOWN

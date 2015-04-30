@@ -4,9 +4,11 @@ title 'ECSPD PD details'
 markdown <<MARKDOWN
 ## What's next? 
 
-Here are materials and information that will help you prepare for your in person PD. 
+For your convenience, we've developed individual websites for each region, with details on your in person PD location, times, and a list of what to bring to the workshop. Visit and bookmark the page for your region to keep up to date on logistics for your in-person pd. The following list is organized in alphabetical order by state, then region: 
 
 # insert links to regional pages
 
-[CA ,	Los Angeles](http://code.org/educate/pd/15-16/lausd)
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
 MARKDOWN
