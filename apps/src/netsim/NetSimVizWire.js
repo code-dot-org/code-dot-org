@@ -159,7 +159,7 @@ NetSimVizWire.prototype.setEncodings = function (newEncodings) {
 
 /**
  * Kick off an animation of the wire state being set by the local viznode.
- * @param {string} newState - "0" or "1" for off and on.
+ * @param {"0"|"1"} newState
  */
 NetSimVizWire.prototype.animateSetState = function (newState) {
   // Remove all our tweens, we reset our animation now.
@@ -180,6 +180,38 @@ NetSimVizWire.prototype.animateSetState = function (newState) {
   this.tweenTextFromLocalToWire(flyOutMs, tweens.easeOutQuad);
 
   this.doAfterDelay(flyOutMs + holdPositionMs, function () {
+    this.getRoot().removeClass('state-on');
+    this.getRoot().removeClass('state-off');
+    this.getRoot().addClass('state-unknown');
+  }.bind(this));
+};
+
+/**
+ * Kick off an animation of the wire state being read by the local viznode.
+ * @param {"0"|"1"} newState
+ */
+NetSimVizWire.prototype.animateReadState = function (newState) {
+  this.stopAllAnimation();
+
+  this.getRoot().removeClass('state-unknown');
+  if (newState === '0') {
+    this.getRoot().addClass('state-off');
+    this.getRoot().removeClass('state-on');
+  } else if (newState === '1') {
+    this.getRoot().addClass('state-on');
+    this.getRoot().removeClass('state-off');
+  }
+
+  this.textPosX_  = (this.remoteVizNode.posX - this.localVizNode.posX) / 2 +
+      this.localVizNode.posX;
+  this.textPosY_ = (this.remoteVizNode.posY - this.remoteVizNode.posY) / 2 +
+      this.localVizNode.posY + TEXT_FINAL_VERTICAL_OFFSET;
+
+  var holdPositionMs = 300;
+  var flyOutMs = 300;
+  this.text_.text(this.getDisplayBit_(newState));
+  this.doAfterDelay(holdPositionMs, function () {
+    this.tweenTextToLocalNode(flyOutMs, tweens.easeOutQuad);
     this.getRoot().removeClass('state-on');
     this.getRoot().removeClass('state-off');
     this.getRoot().addClass('state-unknown');
@@ -245,4 +277,31 @@ NetSimVizWire.prototype.tweenTextFromLocalToWire = function (duration,
     this.textPosY_ = newY;
   }
 
+};
+
+/**
+ * Stops any existing motion animation and begins an animated motion to the
+ * given coordinates.  Note: This animates the VizEntity's root group.
+ * @param {number} [duration=600] in milliseconds
+ * @param {TweenFunction} [tweenFunction=linear]
+ */
+NetSimVizWire.prototype.tweenTextToLocalNode = function (duration,
+    tweenFunction) {
+  if (!this.localVizNode) {
+    return;
+  }
+
+  var newX = this.localVizNode.posX;
+  var newY = this.localVizNode.posY;
+
+  // Add two new tweens, one for each axis
+  if (duration > 0) {
+    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosX_', newX, duration,
+        tweenFunction));
+    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosY_', newY, duration,
+        tweenFunction));
+  } else {
+    this.textPosX_ = newX;
+    this.textPosY_ = newY;
+  }
 };
