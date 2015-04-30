@@ -276,7 +276,7 @@ NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
 NetSimVizNode.prototype.updateAddressDisplay = function () {
   // Routers never show their address
   // If a DNS mode has not been set we never show an address
-  if (this.isRouter || this.dnsMode_ === undefined) {
+  if (this.isRouter || this.address_ === undefined) {
     this.addressGroup_.hide();
     return;
   }
