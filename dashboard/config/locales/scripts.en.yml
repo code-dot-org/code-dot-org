@@ -620,3 +620,7 @@ en:
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+        ui_tests:
+          title: UI Tests
+          description: Script for test. Careful, don't change level ordering.
+          All the Tests: All the Tests
