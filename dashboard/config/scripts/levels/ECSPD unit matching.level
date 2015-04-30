@@ -1,0 +1,54 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2015-04-27T17:29:40.080Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Unit 1"
+      },
+      {
+        "text": "Unit 2"
+      },
+      {
+        "text": "Unit 3"
+      },
+      {
+        "text": "Unit 4"
+      },
+      {
+        "text": "Unit 5"
+      },
+      {
+        "text": "Unit 6"
+      }
+    ],
+    "answers": [
+      {
+        "text": "introduction to the concepts of computer and computing"
+      },
+      {
+        "text": "application of problem solving techniques to develop solutions"
+      },
+      {
+        "text": "website development and design"
+      },
+      {
+        "text": "create programs to solve computational problems"
+      },
+      {
+        "text": "use computing to manage and interpret data"
+      },
+      {
+        "text": "apply programming and problem solving to the study of robots"
+      }
+    ],
+    "title": "Matching Unit Descriptions and Numbers",
+    "type": "Match",
+    "dsl_text": "name 'ECSPD unit matching'\r\ntitle 'Matching Unit Descriptions and Numbers'\r\n\r\nquestion 'Unit 1'\r\nanswer 'introduction to the concepts of computer and computing'\r\nquestion 'Unit 2'\r\nanswer 'application of problem solving techniques to develop solutions'\r\nquestion 'Unit 3'\r\nanswer 'website development and design'\r\nquestion 'Unit 4'\r\nanswer 'create programs to solve computational problems' \r\nquestion 'Unit 5'\r\nanswer 'use computing to manage and interpret data' \r\nquestion 'Unit 6'\r\nanswer 'apply programming and problem solving to the study of robots' \r\n\r\nmarkdown <<MARKDOWN\r\n\r\nMARKDOWN",
+    "concept_ids": [
+      ""
+    ]
+  }
+}]]></config>
+</Match>
