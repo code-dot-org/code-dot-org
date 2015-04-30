@@ -162,27 +162,21 @@ NetSimVizWire.prototype.setEncodings = function (newEncodings) {
  * @param {"0"|"1"} newState
  */
 NetSimVizWire.prototype.animateSetState = function (newState) {
-  // Remove all our tweens, we reset our animation now.
-  this.stopAllAnimation();
-
-  this.getRoot().removeClass('state-unknown');
-  if (newState === '0') {
-    this.getRoot().addClass('state-off');
-    this.getRoot().removeClass('state-on');
-  } else if (newState === '1') {
-    this.getRoot().addClass('state-on');
-    this.getRoot().removeClass('state-off');
+  if (!(this.localVizNode && this.remoteVizNode)) {
+    return;
   }
 
   var flyOutMs = 300;
   var holdPositionMs = 300;
-  this.text_.text(this.getDisplayBit_(newState));
-  this.tweenTextFromLocalToWire(flyOutMs, tweens.easeOutQuad);
 
+  this.stopAllAnimation();
+  this.setWireClasses_(newState);
+  this.text_.text(this.getDisplayBit_(newState));
+  this.snapTextToPosition(this.getLocalNodePosition());
+  this.tweenTextToPosition(this.getWireCenterPosition(), flyOutMs,
+      tweens.easeOutQuad);
   this.doAfterDelay(flyOutMs + holdPositionMs, function () {
-    this.getRoot().removeClass('state-on');
-    this.getRoot().removeClass('state-off');
-    this.getRoot().addClass('state-unknown');
+    this.setWireClasses_('unknown');
   }.bind(this));
 };
 
@@ -191,31 +185,39 @@ NetSimVizWire.prototype.animateSetState = function (newState) {
  * @param {"0"|"1"} newState
  */
 NetSimVizWire.prototype.animateReadState = function (newState) {
-  this.stopAllAnimation();
-
-  this.getRoot().removeClass('state-unknown');
-  if (newState === '0') {
-    this.getRoot().addClass('state-off');
-    this.getRoot().removeClass('state-on');
-  } else if (newState === '1') {
-    this.getRoot().addClass('state-on');
-    this.getRoot().removeClass('state-off');
+  if (!(this.localVizNode && this.remoteVizNode)) {
+    return;
   }
 
-  this.textPosX_  = (this.remoteVizNode.posX - this.localVizNode.posX) / 2 +
-      this.localVizNode.posX;
-  this.textPosY_ = (this.remoteVizNode.posY - this.remoteVizNode.posY) / 2 +
-      this.localVizNode.posY + TEXT_FINAL_VERTICAL_OFFSET;
-
   var holdPositionMs = 300;
-  var flyOutMs = 300;
+  var flyToNodeMs = 300;
+
+  this.stopAllAnimation();
+  this.setWireClasses_(newState);
   this.text_.text(this.getDisplayBit_(newState));
+  this.snapTextToPosition(this.getWireCenterPosition());
   this.doAfterDelay(holdPositionMs, function () {
-    this.tweenTextToLocalNode(flyOutMs, tweens.easeOutQuad);
-    this.getRoot().removeClass('state-on');
-    this.getRoot().removeClass('state-off');
-    this.getRoot().addClass('state-unknown');
+    this.tweenTextToPosition(this.getLocalNodePosition(), flyToNodeMs,
+        tweens.easeOutQuad);
+    this.setWireClasses_('unknown');
   }.bind(this));
+};
+
+/**
+ * Adds/removes classes from the SVG root according to the given wire state.
+ * Passing anything other than "1" or "0" will put the wire in an "unknown"
+ * state, which begins a CSS transition fade back to gray.
+ * @param {"0"|"1"|*} newState
+ * @private
+ */
+NetSimVizWire.prototype.setWireClasses_ = function (newState) {
+  var stateOff = (newState === '0');
+  var stateOn = (!stateOff && newState === '1');
+  var stateUnknown = (!stateOff && !stateOn);
+
+  this.getRoot().toggleClass('state-on', stateOn);
+  this.getRoot().toggleClass('state-off', stateOff);
+  this.getRoot().toggleClass('state-unknown', stateUnknown);
 };
 
 /**
@@ -246,62 +248,51 @@ NetSimVizWire.prototype.isEncodingEnabled_ = function (queryEncoding) {
 };
 
 /**
- * Stops any existing motion animation and begins an animated motion to the
- * given coordinates.  Note: This animates the VizEntity's root group.
+ * Creates an animated motion from the text's current position to the
+ * given coordinates.
+ * @param {{x:number, y:number}} destination
  * @param {number} [duration=600] in milliseconds
  * @param {TweenFunction} [tweenFunction=linear]
  */
-NetSimVizWire.prototype.tweenTextFromLocalToWire = function (duration,
+NetSimVizWire.prototype.tweenTextToPosition = function (destination, duration,
     tweenFunction) {
-  if (!(this.localVizNode && this.remoteVizNode)) {
-    return;
-  }
-
-  // Snap text to initial position
-  this.textPosX_ = this.localVizNode.posX;
-  this.textPosY_ = this.localVizNode.posY;
-
-  var newX = (this.remoteVizNode.posX - this.localVizNode.posX) / 2 +
-      this.localVizNode.posX;
-  var newY = (this.remoteVizNode.posY - this.remoteVizNode.posY) / 2 +
-      this.localVizNode.posY + TEXT_FINAL_VERTICAL_OFFSET;
-
-  // Add two new tweens, one for each axis
   if (duration > 0) {
-    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosX_', newX, duration,
-        tweenFunction));
-    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosY_', newY, duration,
-        tweenFunction));
+    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosX_', destination.x,
+        duration, tweenFunction));
+    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosY_', destination.y,
+        duration, tweenFunction));
   } else {
-    this.textPosX_ = newX;
-    this.textPosY_ = newY;
+    this.textPosX_ = destination.x;
+    this.textPosY_ = destination.y;
   }
-
 };
 
 /**
- * Stops any existing motion animation and begins an animated motion to the
- * given coordinates.  Note: This animates the VizEntity's root group.
- * @param {number} [duration=600] in milliseconds
- * @param {TweenFunction} [tweenFunction=linear]
+ * Snaps the text to the given position.
+ * @param {{x:number, y:number}} destination
  */
-NetSimVizWire.prototype.tweenTextToLocalNode = function (duration,
-    tweenFunction) {
-  if (!this.localVizNode) {
-    return;
-  }
+NetSimVizWire.prototype.snapTextToPosition = function (destination) {
+  this.tweenTextToPosition(destination, 0);
+};
 
-  var newX = this.localVizNode.posX;
-  var newY = this.localVizNode.posY;
+/**
+ * @returns {{x:number, y:number}}
+ */
+NetSimVizWire.prototype.getLocalNodePosition = function () {
+  return {
+    x: this.localVizNode.posX,
+    y: this.localVizNode.posY
+  };
+};
 
-  // Add two new tweens, one for each axis
-  if (duration > 0) {
-    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosX_', newX, duration,
-        tweenFunction));
-    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosY_', newY, duration,
-        tweenFunction));
-  } else {
-    this.textPosX_ = newX;
-    this.textPosY_ = newY;
-  }
+/**
+ * @returns {{x:number, y:number}}
+ */
+NetSimVizWire.prototype.getWireCenterPosition = function () {
+  return {
+    x: (this.remoteVizNode.posX - this.localVizNode.posX) / 2 +
+    this.localVizNode.posX,
+    y: (this.remoteVizNode.posY - this.remoteVizNode.posY) / 2 +
+    this.localVizNode.posY + TEXT_FINAL_VERTICAL_OFFSET
+  };
 };
