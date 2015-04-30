@@ -15,6 +15,12 @@ var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
 var NetSimVizNode = require('./NetSimVizNode');
 var tweens = require('./tweens');
+var dataConverters = require('./dataConverters');
+var netsimConstants = require('./netsimConstants');
+
+var EncodingType = netsimConstants.EncodingType;
+
+var binaryToAB = dataConverters.binaryToAB;
 
 /**
  * How far the flying label should rest above the wire.
@@ -64,6 +70,13 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
    * @private
    */
   this.textPosY_ = 0;
+
+  /**
+   * Enabled encoding types.
+   * @type {EncodingType[]}
+   * @private
+   */
+  this.encodings_ = [];
 
   /**
    * Bound getEntityByID method from vizualization controller.
@@ -135,6 +148,16 @@ NetSimVizWire.prototype.kill = function () {
 };
 
 /**
+ * Update encoding-view settings.  Determines how bit sets/reads are
+ * displayed when animating above the wire.
+ *
+ * @param {EncodingType[]} newEncodings
+ */
+NetSimVizWire.prototype.setEncodings = function (newEncodings) {
+  this.encodings_ = newEncodings;
+};
+
+/**
  * Kick off an animation of the wire state being set by the local viznode.
  * @param {string} newState - "0" or "1" for off and on.
  */
@@ -153,7 +176,7 @@ NetSimVizWire.prototype.animateSetState = function (newState) {
 
   var flyOutMs = 300;
   var holdPositionMs = 300;
-  this.text_.text(newState);
+  this.text_.text(this.getDisplayBit_(newState));
   this.tweenTextFromLocalToWire(flyOutMs, tweens.easeOutQuad);
 
   this.doAfterDelay(flyOutMs + holdPositionMs, function () {
@@ -161,6 +184,33 @@ NetSimVizWire.prototype.animateSetState = function (newState) {
     this.getRoot().removeClass('state-off');
     this.getRoot().addClass('state-unknown');
   }.bind(this));
+};
+
+/**
+ * Get an appropriate "display bit" to show above the wire, given the
+ * current enabled encodings (should match the "set wire" button label)
+ * @param {"0"|"1"} wireState
+ * @returns {string} a display bit appropriate to the enabled encodings.
+ * @private
+ */
+NetSimVizWire.prototype.getDisplayBit_ = function (wireState) {
+  if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
+      !this.isEncodingEnabled_(EncodingType.BINARY)) {
+    wireState = binaryToAB(wireState);
+  }
+  return wireState;
+};
+
+/**
+ * Check whether the given encoding is currently displayed by the panel.
+ * @param {EncodingType} queryEncoding
+ * @returns {boolean}
+ * @private
+ */
+NetSimVizWire.prototype.isEncodingEnabled_ = function (queryEncoding) {
+  return this.encodings_.some(function (enabledEncoding) {
+    return enabledEncoding === queryEncoding;
+  });
 };
 
 /**
