@@ -228,6 +228,10 @@ $wide-column-width: 121px;
                 stroke 1s,
                 stroke-width 1s); // Fade back to normal stroke color
 
+        &.hidden-wire {
+          display: none;
+        }
+
         text {
           stroke: none;
           fill: transparent;
@@ -235,29 +239,42 @@ $wide-column-width: 121px;
           font-size: 26pt;
           text-anchor: middle;
           @include transition(fill 1s);
-        }
 
-        &.hidden-wire {
-          display: none;
+          &.question-mark {
+            @include transition(fill 1.2s);
+          }
         }
 
         &.state-unknown {
           stroke: $lighter_gray;
+
+          .state-label {
+            fill: transparent;
+          }
+
+          .question-mark {
+            fill: $lighter-gray;
+          }
         }
 
         &.state-on, &.state-off {
           stroke-width: 4;
           @include transition(none); // Snap to this state
 
-          text {
+          .state-label {
             @include transition(none);
+          }
+
+          .question-mark {
+            fill: transparent;
+            @include transition(none); // Snap to this state
           }
         }
 
         &.state-off {
           stroke: $black;
 
-          text {
+          .state-label {
             fill: $black;
           }
         }
@@ -265,7 +282,7 @@ $wide-column-width: 121px;
         &.state-on {
           stroke: $orange;
 
-          text {
+          .state-label {
             fill: $orange;
           }
         }

@@ -54,7 +54,17 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
    * @type {jQuery} wrapped around a SVGTextElement
    * @private
    */
+  this.questionMark_ = jQuerySvgElement('text')
+      .text('?')
+      .addClass('question-mark')
+      .appendTo(root);
+
+  /**
+   * @type {jQuery} wrapped around a SVGTextElement
+   * @private
+   */
   this.text_ = jQuerySvgElement('text')
+      .addClass('state-label')
       .appendTo(root);
 
   /**
@@ -117,14 +127,19 @@ NetSimVizWire.prototype.render = function () {
   NetSimVizWire.superPrototype.render.call(this);
 
   var pathData = 'M 0 0';
+  var wireCenter = { x: 0, y: 0 };
   if (this.localVizNode && this.remoteVizNode) {
     pathData = 'M ' + this.localVizNode.posX + ' ' + this.localVizNode.posY +
         ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
+    wireCenter = this.getWireCenterPosition();
   }
   this.line_.attr('d', pathData);
   this.text_
       .attr('x', this.textPosX_)
       .attr('y', this.textPosY_);
+  this.questionMark_
+      .attr('x', wireCenter.x)
+      .attr('y', wireCenter.y);
 
 };
 
