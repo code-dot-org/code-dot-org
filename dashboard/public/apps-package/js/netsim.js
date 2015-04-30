@@ -341,8 +341,14 @@ NetSim.prototype.initWithUserName_ = function (user) {
     });
   }
 
-  this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
-      this.disconnectFromRemote.bind(this, function () {}));
+  this.statusPanel_ = new NetSimStatusPanel(
+      $('#netsim-status'),
+      {
+        disconnectCallback: this.disconnectFromRemote.bind(this, function () {}),
+        cleanShardNow: this.cleanShardNow.bind(this),
+        expireHeartbeat: this.expireHeartbeat.bind(this)
+      });
+
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
@@ -533,8 +539,10 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
   this.myNode.stopSimulation();
   this.myNode.destroy(function (err, result) {
     if (err) {
-      onComplete(err, result);
-      return;
+      logger.warn('Error destroying node:' + err.message);
+      // Don't stop disconnecting on an error here; we make a good-faith
+      // effort to clean up after ourselves, and let the cleaning system take
+      // care of the rest.
     }
 
     this.myNode = null;
@@ -1121,6 +1129,28 @@ NetSim.prototype.onRouterLogChange_ = function () {
   }
 };
 
+/**
+ * Immediately start a shard-cleaning process from this client
+ */
+NetSim.prototype.cleanShardNow = function () {
+  if (this.shardCleaner_) {
+    this.shardCleaner_.cleanShard();
+  }
+};
+
+/**
+ * Make the local node's heartbeat pretend to be expired, so it can be
+ * cleaned up.
+ */
+NetSim.prototype.expireHeartbeat = function () {
+  if (!(this.myNode && this.myNode.heartbeat_)) {
+    return;
+  }
+
+  this.myNode.heartbeat_.spoofExpired();
+  logger.info("Local node heartbeat is now expired.");
+};
+
 },{"../../locale/current/netsim":262,"../ObservableEvent":1,"../RunLoop":3,"../utils":252,"./DashboardUser":126,"./NetSimBitLogPanel":129,"./NetSimLobby":145,"./NetSimLocalClientNode":146,"./NetSimLogPanel":150,"./NetSimLogger":151,"./NetSimRouterNode":169,"./NetSimSendPanel":175,"./NetSimShard":176,"./NetSimShardCleaner":177,"./NetSimStatusPanel":183,"./NetSimTabsComponent":186,"./NetSimVisualization":187,"./controls.html.ejs":193,"./netsimConstants":198,"./netsimUtils":200,"./page.html.ejs":201}],201:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
@@ -1412,6 +1442,12 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   this.entities_ = [];
 
   /**
+   * Reference to the local node viz entity, the anchor for the visualization.
+   * @type {NetSimVizNode}
+   */
+  this.localNode = null;
+
+  /**
    * Width (in svg-units) of visualization
    * @type {number}
    */
@@ -1537,6 +1573,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     this.localNode.isLocalNode = true;
   } else {
     this.localNode.kill();
+    this.localNode = null;
   }
   this.pullElementsToForeground();
 };
@@ -2942,17 +2979,35 @@ var NetSimPanel = require('./NetSimPanel.js');
  * Generator and controller for connection status panel
  * in left column, displayed while connected.
  * @param {jQuery} rootDiv
- * @param {function} disconnectCallback - method to call when disconnect button
+ * @param {Object} callbacks
+ * @param {function} callbacks.disconnectCallback - method to call when disconnect button
  *        is clicked.
+ * @param {function} callbacks.cleanShardNow - Manually kick off shard cleaning
+ * @param {function} callbacks.expireHeartbeat - Force local node heartbeat to
+ *        look old
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimStatusPanel = module.exports = function (rootDiv, disconnectCallback) {
+var NetSimStatusPanel = module.exports = function (rootDiv, callbacks) {
   /**
    * @type {function}
    * @private
    */
-  this.disconnectCallback_ = disconnectCallback;
+  this.disconnectCallback_ = callbacks.disconnectCallback;
+
+  /**
+   * Callback for debug button that starts shard cleaning immediately
+   * @type {function}
+   * @private
+   */
+  this.cleanShardNow_ = callbacks.cleanShardNow;
+
+  /**
+   * Callback for debug button that spoofs expired local node heartbeat
+   * @type {function}
+   * @private
+   */
+  this.expireHeartbeat_ = callbacks.expireHeartbeat;
 
   // Superclass constructor
   NetSimPanel.call(this, rootDiv, {
@@ -2995,6 +3050,9 @@ NetSimStatusPanel.prototype.render = function (data) {
   if (data.isConnected) {
     this.addButton('Disconnect', this.disconnectCallback_);
   }
+
+  this.getBody().find('.clean-shard-now').click(this.cleanShardNow_);
+  this.getBody().find('.expire-heartbeat').click(this.expireHeartbeat_);
 };
 
 },{"../utils":252,"./NetSimPanel.js":163,"./NetSimStatusPanel.html.ejs":182}],182:[function(require,module,exports){
@@ -3011,7 +3069,16 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 var i18n = require('../../locale/current/netsim');
-; buf.push('\n<div class="content-wrap">\n  ');5; if (remoteNodeName) { ; buf.push('\n  <p>Connected to ', escape((6,  remoteNodeName )), '</p>\n  ');7; } ; buf.push('\n\n  ');9; if (myHostname) { ; buf.push('\n  <p>My hostname: ', escape((10,  myHostname )), '</p>\n  ');11; } ; buf.push('\n\n  ');13; if (myAddress) { ; buf.push('\n  <p>My address: ', escape((14,  myAddress )), '</p>\n  ');15; } ; buf.push('\n\n  ');17; if (shareLink) { ; buf.push('\n  <p><a href="', escape((18,  shareLink )), '">', escape((18,  i18n.shareThisNetwork() )), '</a></p>\n  ');19; } ; buf.push('\n</div>\n'); })();
+
+/**
+ * Causes helpful controls to appear that provide ways to manually change/break
+ * the simulation, for help repro-ing bugs.
+ * Don't check this in set to TRUE!
+ * @type {boolean}
+ * @const
+ */
+var ENABLE_DEBUG_CONTROLS = false;
+; buf.push('\n<div class="content-wrap">\n  ');14; if (remoteNodeName) { ; buf.push('\n  <p>Connected to ', escape((15,  remoteNodeName )), '</p>\n  ');16; } ; buf.push('\n\n  ');18; if (myHostname) { ; buf.push('\n  <p>My hostname: ', escape((19,  myHostname )), '</p>\n  ');20; } ; buf.push('\n\n  ');22; if (myAddress) { ; buf.push('\n  <p>My address: ', escape((23,  myAddress )), '</p>\n  ');24; } ; buf.push('\n\n  ');26; if (shareLink) { ; buf.push('\n  <p><a href="', escape((27,  shareLink )), '">', escape((27,  i18n.shareThisNetwork() )), '</a></p>\n  ');28; } ; buf.push('\n\n  ');30; if (ENABLE_DEBUG_CONTROLS) { ; buf.push('\n    <input type="button" class="debug-button expire-heartbeat" value="Expire Heartbeat" title="Make local node look expired" />\n    <input type="button" class="debug-button clean-shard-now" value="Clean Shard Now" title="Manuallly start a cleaning cycle from this client" />\n  ');33; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -7522,19 +7589,21 @@ NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  // This callback is occasionally called in an infinite loop.  Figure out why!
   this.myWire.destroy(function (err) {
+    // We're not going to stop if an error occurred here; the error might
+    // just be that the wire was already cleaned up by another node.
+    // As long as we make a good-faith disconnect effort, the cleanup system
+    // will correct any mistakes and we won't lock up our client trying to
+    // re-disconnect.
     if (err) {
-      onComplete(err);
-      return;
+      logger.info("Error while disconnecting: " + err.message);
     }
 
-    this.myWire = null;
-    // Trigger an immediate router update so its connection count is correct.
     if (this.myRouter) {
       this.myRouter.stopSimulation();
     }
 
+    this.myWire = null;
     this.myRemoteClient = null;
     this.myRouter = null;
     this.remoteChange.notifyObservers(null, null);
@@ -8061,31 +8130,45 @@ NetSimLobby.prototype.setShardID = function (shardID) {
  */
 NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
   // Unregister old handlers
-  if (this.eventKeys.nodeTable) {
-    this.shard_.nodeTable.tableChange.unregister(this.eventKeys.nodeTable);
-  }
-  if (this.eventKeys.wireTable) {
-    this.shard_.wireTable.tableChange.unregister(this.eventKeys.wireTable);
+  if (this.eventKeys.registeredShard) {
+    this.eventKeys.registeredShard.nodeTable.tableChange.unregister(
+        this.eventKeys.nodeTable);
+    this.eventKeys.registeredShard.wireTable.tableChange.unregister(
+        this.eventKeys.wireTable);
+    this.registeredShard = undefined;
   }
 
   this.shard_ = shard;
   this.myNode_ = myNode;
 
-  if (!this.shard_) {
-    // If we disconnected, just clear our lobby data
+  if (this.shard_) {
+    // We got connected to a shard!
+    // Register for events
+    this.eventKeys.nodeTable = this.shard_.nodeTable.tableChange.register(
+        this.onNodeTableChange_.bind(this));
+    this.eventKeys.wireTable = this.shard_.wireTable.tableChange.register(
+        this.onWireTableChange_.bind(this));
+    this.eventKeys.registeredShard = this.shard_;
+
+    // Trigger a forced read of the node table
+    this.fetchInitialLobbyData_();
+  } else {
+    // We've been disconnected from a shard
+    // Clear our selected shard ID
+    this.selectedShardID_ = undefined;
+
+    // Clear cached lobby data
     this.nodesOnShard_.length = 0;
     this.incomingConnectionNodes_.length = 0;
-    return;
+
+    // Redraw the lobby
+    this.render();
+
+    // If there's only one option, try to auto-reconnect
+    if (this.shardChoices_.length === 1) {
+      this.setShardID(this.shardChoices_[0].shardID);
+    }
   }
-
-  // Register for events
-  this.eventKeys.nodeTable = this.shard_.nodeTable.tableChange.register(
-      this.onNodeTableChange_.bind(this));
-  this.eventKeys.wireTable = this.shard_.wireTable.tableChange.register(
-      this.onWireTableChange_.bind(this));
-
-  // Trigger a forced read of the node table
-  this.fetchInitialLobbyData_();
 };
 
 /**
@@ -11161,6 +11244,14 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
    * @private
    */
   this.onFailedHeartbeat_ = undefined;
+
+  /**
+   * Fake age to apply to this heartbeat's remote row, allowing us to manually
+   * expire it for debugging purposes.
+   * @type {number}
+   * @private
+   */
+  this.falseAgeMS_ = 0;
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
@@ -11233,7 +11324,7 @@ NetSimHeartbeat.prototype.getTable_ = function () {
 NetSimHeartbeat.prototype.buildRow_ = function () {
   return {
     nodeID: this.nodeID,
-    time: this.time_
+    time: (this.time_ - this.falseAgeMS_)
   };
 };
 
@@ -11279,6 +11370,15 @@ NetSimHeartbeat.prototype.tick = function () {
       }
     }.bind(this));
   }
+};
+
+/**
+ * Cause this heartbeat to look like it's ten minutes old to the other
+ * nodes on the shard, so it will be cleaned up by another node.
+ */
+NetSimHeartbeat.prototype.spoofExpired = function () {
+  this.falseAgeMS_ += 600000; // 10 minutes old
+  this.update();
 };
 
 },{"../utils":252,"./NetSimEntity":143}],138:[function(require,module,exports){

@@ -425,3 +425,15 @@
       resize: none;
       width: 100%;
       height: 100px; }
+  #netsim input.debug-button {
+    background: #f9f968;
+    background: -moz-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f968), color-stop(82%, #ffa73d), color-stop(100%, #ff7f04));
+    background: -webkit-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -o-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -ms-linear-gradient(top, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: linear-gradient(to bottom, #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f968', endColorstr='#ff7f04',GradientType=0 );
+    border: outset #ff7f04 3px;
+    color: black;
+    font-weight: bold; }

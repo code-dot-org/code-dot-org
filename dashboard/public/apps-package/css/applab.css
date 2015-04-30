@@ -23,6 +23,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: 400px; }
 
+  div#visualizationResizeBar {
+    left: 400px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 400px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -44,6 +50,12 @@ div#visualization.with_padding {
     left: 350px; }
 
   html[dir='rtl'] div#codeWorkspace {
+    right: 350px; }
+
+  div#visualizationResizeBar {
+    left: 350px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
     right: 350px; }
 
   div#visualization.responsive > * {
@@ -69,6 +81,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: 300px; }
 
+  div#visualizationResizeBar {
+    left: 300px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 300px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
@@ -92,6 +110,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: 250px; }
 
+  div#visualizationResizeBar {
+    left: 250px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 250px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
@@ -113,6 +137,12 @@ div#visualization.with_padding {
     left: 200px; }
 
   html[dir='rtl'] div#codeWorkspace {
+    right: 200px; }
+
+  div#visualizationResizeBar {
+    left: 200px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
     right: 200px; }
 
   div#visualization.responsive > * {
@@ -140,6 +170,10 @@ div#visualization.with_padding {
   top: 0px;
   left: 0px;
   z-index: -1; }
+
+#visualizationResizeBar {
+  margin-left: 2px;
+  width: 13px; }
 
 #divApplab img {
   opacity: 1; }

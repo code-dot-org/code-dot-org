@@ -175,6 +175,15 @@ html[dir='rtl'] #codeWorkspace {
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white; }
 
+#visualizationResizeBar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 15px;
+  left: 400px;
+  cursor: ew-resize; }
+
 #visualization {
   position: relative;
   height: 400px;
@@ -224,6 +233,12 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: 350px; }
 
+  div#visualizationResizeBar {
+    left: 350px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 350px; }
+
   #visualizationEditor.responsive {
     margin-left: 350px; }
 
@@ -249,6 +264,12 @@ html[dir='rtl'] #codeWorkspace {
     left: 300px; }
 
   html[dir='rtl'] #codeWorkspace {
+    right: 300px; }
+
+  div#visualizationResizeBar {
+    left: 300px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
     right: 300px; }
 
   #visualizationEditor.responsive {
@@ -278,6 +299,12 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: 250px; }
 
+  div#visualizationResizeBar {
+    left: 250px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 250px; }
+
   #visualizationEditor.responsive {
     margin-left: 250px; }
 
@@ -303,6 +330,12 @@ html[dir='rtl'] #codeWorkspace {
     left: 200px; }
 
   html[dir='rtl'] #codeWorkspace {
+    right: 200px; }
+
+  div#visualizationResizeBar {
+    left: 200px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
     right: 200px; }
 
   #visualizationEditor.responsive {
