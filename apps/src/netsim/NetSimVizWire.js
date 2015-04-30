@@ -48,6 +48,10 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
 };
 NetSimVizWire.inherits(NetSimVizEntity);
 
+/**
+ * Configuring a wire means looking up the viz nodes that will be its endpoints.
+ * @param {NetSimWire} sourceWire
+ */
 NetSimVizWire.prototype.configureFrom = function (sourceWire) {
   this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
   this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
@@ -61,6 +65,9 @@ NetSimVizWire.prototype.configureFrom = function (sourceWire) {
   }
 };
 
+/**
+ * Update path data for wire.
+ */
 NetSimVizWire.prototype.render = function () {
   NetSimVizWire.superPrototype.render.call(this);
 
@@ -73,6 +80,14 @@ NetSimVizWire.prototype.render = function () {
 };
 
 /**
+ * Hide this wire - used to hide the incoming wire when we're trying to show
+ * simplex mode.
+ */
+NetSimVizWire.prototype.hide = function () {
+  this.getRoot().addClass('hidden-wire');
+};
+
+/**
  * Killing a visualization node removes its ID so that it won't conflict with
  * another node of matching ID being added, and begins its exit animation.
  * @override
@@ -81,4 +96,18 @@ NetSimVizWire.prototype.kill = function () {
   NetSimVizWire.superPrototype.kill.call(this);
   this.localVizNode = null;
   this.remoteVizNode = null;
+};
+
+/**
+ * Kick off an animation of the wire state being set by the local viznode.
+ * @param {string} newState - "0" or "1" for off and on.
+ */
+NetSimVizWire.prototype.animateSetState = function (newState) {
+  if (newState === '0') {
+    this.getRoot().addClass('state-off');
+    this.getRoot().removeClass('state-on');
+  } else if (newState === '1') {
+    this.getRoot().addClass('state-on');
+    this.getRoot().removeClass('state-off');
+  }
 };

@@ -545,3 +545,68 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
     }
   });
 };
+
+/**
+ * Kick off an animation that will show the state of the simplex wire being
+ * set by the local node.
+ * @param {string} newState - "0" or "1"
+ */
+NetSimVisualization.prototype.animateSetWireState = function (newState) {
+  // Assumptions - we are talking about the wire between the local node
+  // and its remote partner.
+  // This only gets used in peer-to-peer mode, so there should be an incoming
+  // wire too, which we should hide.
+  // This is a no-op if no such wire exists.
+  // We can stop any previous animation on the wire if this is called
+
+  var vizWire = this.getVizWireToRemote();
+  var incomingWire = this.getVizWireFromRemote();
+  if (!(vizWire && incomingWire)) {
+    return;
+  }
+
+  incomingWire.hide();
+  vizWire.animateSetState(newState);
+};
+
+/**
+ * Find the outgoing wire from the local node to a remote node.
+ * @returns {NetSimVizWire|null} null if no outgoing connection is established.
+ */
+NetSimVisualization.prototype.getVizWireToRemote = function () {
+  if (!this.localNode) {
+    return null;
+  }
+
+  var outgoingWires = this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizWire &&
+        entity.localVizNode === this.localNode;
+  }, this);
+
+  if (outgoingWires.length === 0) {
+    return null;
+  }
+
+  return outgoingWires[0];
+};
+
+/**
+ * Find the incoming wire from a remote node to the local node.
+ * @returns {NetSimVizWire|null} null if no incoming connection is established.
+ */
+NetSimVisualization.prototype.getVizWireFromRemote = function () {
+  if (!this.localNode) {
+    return null;
+  }
+
+  var incomingWires = this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizWire &&
+        entity.remoteVizNode === this.localNode;
+  }, this);
+
+  if (incomingWires.length === 0) {
+    return null;
+  }
+
+  return incomingWires[0];
+};
