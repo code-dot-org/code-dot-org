@@ -24,6 +24,13 @@ $wide-column-width: 121px;
   user-select: $val;
 }
 
+@mixin transition($val...) {
+  -moz-transition: $val;
+  -o-transition: $val;
+  -webkit-transition: $val;
+  transition: $val;
+}
+
 // Hide the footer instructions, we put them in the instructions tab
 #prompt-table {
   display: none;
@@ -217,6 +224,7 @@ $wide-column-width: 121px;
       .viz-wire {
         stroke: $charcoal;
         stroke-width: 2;
+        @include transition(stroke 1s, stroke-width 1s); // Fade back to normal stroke color
 
         &.hidden-wire {
           display: none;
@@ -224,6 +232,11 @@ $wide-column-width: 121px;
 
         &.state-unknown {
           stroke: $lighter_gray;
+        }
+
+        &.state-on, &.state-off {
+          stroke-width: 4;
+          @include transition(none); // Snap to this state
         }
 
         &.state-off {
