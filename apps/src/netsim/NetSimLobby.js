@@ -236,31 +236,45 @@ NetSimLobby.prototype.setShardID = function (shardID) {
  */
 NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
   // Unregister old handlers
-  if (this.eventKeys.nodeTable) {
-    this.shard_.nodeTable.tableChange.unregister(this.eventKeys.nodeTable);
-  }
-  if (this.eventKeys.wireTable) {
-    this.shard_.wireTable.tableChange.unregister(this.eventKeys.wireTable);
+  if (this.eventKeys.registeredShard) {
+    this.eventKeys.registeredShard.nodeTable.tableChange.unregister(
+        this.eventKeys.nodeTable);
+    this.eventKeys.registeredShard.wireTable.tableChange.unregister(
+        this.eventKeys.wireTable);
+    this.registeredShard = undefined;
   }
 
   this.shard_ = shard;
   this.myNode_ = myNode;
 
-  if (!this.shard_) {
-    // If we disconnected, just clear our lobby data
+  if (this.shard_) {
+    // We got connected to a shard!
+    // Register for events
+    this.eventKeys.nodeTable = this.shard_.nodeTable.tableChange.register(
+        this.onNodeTableChange_.bind(this));
+    this.eventKeys.wireTable = this.shard_.wireTable.tableChange.register(
+        this.onWireTableChange_.bind(this));
+    this.eventKeys.registeredShard = this.shard_;
+
+    // Trigger a forced read of the node table
+    this.fetchInitialLobbyData_();
+  } else {
+    // We've been disconnected from a shard
+    // Clear our selected shard ID
+    this.selectedShardID_ = undefined;
+
+    // Clear cached lobby data
     this.nodesOnShard_.length = 0;
     this.incomingConnectionNodes_.length = 0;
-    return;
+
+    // Redraw the lobby
+    this.render();
+
+    // If there's only one option, try to auto-reconnect
+    if (this.shardChoices_.length === 1) {
+      this.setShardID(this.shardChoices_[0].shardID);
+    }
   }
-
-  // Register for events
-  this.eventKeys.nodeTable = this.shard_.nodeTable.tableChange.register(
-      this.onNodeTableChange_.bind(this));
-  this.eventKeys.wireTable = this.shard_.wireTable.tableChange.register(
-      this.onWireTableChange_.bind(this));
-
-  // Trigger a forced read of the node table
-  this.fetchInitialLobbyData_();
 };
 
 /**

@@ -14460,15 +14460,20 @@ Blockly.Block.prototype.getHeightWidth = function() {
   }catch(e) {
     return{height:0, width:0}
   }
+  var expectedBBoxY = 0;
   if(Blockly.BROKEN_CONTROL_POINTS) {
     bBox.height -= 10;
     if(this.nextConnection) {
       bBox.height += 4
     }
+    expectedBBoxY = -5
   }
   if(bBox.height > 0) {
     bBox.height -= 1
   }
+  var bboxYDifference = bBox.y - expectedBBoxY;
+  var heightWithoutContentAboveTop = bBox.height + bboxYDifference;
+  bBox.height = Math.max(0, heightWithoutContentAboveTop);
   return bBox
 };
 Blockly.Block.prototype.onMouseDown_ = function(e) {

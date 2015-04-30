@@ -172,34 +172,50 @@ $wide-column-width: 121px;
 
       .viz-node {
         text {
+          fill: $black;
           text-anchor: middle;
+
+          &.address-box {
+            font-weight: bold;
+          }
         }
 
         circle {
-          stroke: $black;
+          stroke: $light_cyan;
           stroke-width: 2;
-          fill: $own-node-background-color;
+          fill: $light_cyan;
         }
 
-        rect.address-box {
-          stroke: $black;
+        rect {
+          stroke: $light_cyan;
           stroke-width: 2px;
           fill: $white;
         }
-
-        text.address-box {
-          font-weight: bold;
-        }
       }
 
+      .local-node {
+        circle {
+          stroke: $light_teal;
+          fill: $light_teal;
+        }
+
+        rect {
+          stroke: $light_teal;
+        }
+      }
       .router-node {
         circle {
-          fill: $orange;
+          stroke: $light_purple;
+          fill: $light_purple;
+        }
+
+        rect {
+          stroke: $light_purple;
         }
       }
 
       .viz-wire {
-        stroke: $black;
+        stroke: $charcoal;
         stroke-width: 2;
       }
     }
@@ -775,6 +791,21 @@ $wide-column-width: 121px;
       }
       padding-right: 14px;
     }
+  }
+
+  // Really garish terrible style for debug buttons that we should not ship.
+  input.debug-button {
+    background: #f9f968;
+    background: -moz-linear-gradient(top,  #f9f968 0%, #ffa73d 82%, #ff7f04 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f968), color-stop(82%,#ffa73d), color-stop(100%,#ff7f04));
+    background: -webkit-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    background: -o-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    background: -ms-linear-gradient(top,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    background: linear-gradient(to bottom,  #f9f968 0%,#ffa73d 82%,#ff7f04 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f968', endColorstr='#ff7f04',GradientType=0 );
+    border: outset #ff7f04 3px;
+    color: black;
+    font-weight:bold;
   }
 }
 

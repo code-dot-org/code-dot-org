@@ -412,19 +412,21 @@ NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  // This callback is occasionally called in an infinite loop.  Figure out why!
   this.myWire.destroy(function (err) {
+    // We're not going to stop if an error occurred here; the error might
+    // just be that the wire was already cleaned up by another node.
+    // As long as we make a good-faith disconnect effort, the cleanup system
+    // will correct any mistakes and we won't lock up our client trying to
+    // re-disconnect.
     if (err) {
-      onComplete(err);
-      return;
+      logger.info("Error while disconnecting: " + err.message);
     }
 
-    this.myWire = null;
-    // Trigger an immediate router update so its connection count is correct.
     if (this.myRouter) {
       this.myRouter.stopSimulation();
     }
 
+    this.myWire = null;
     this.myRemoteClient = null;
     this.myRouter = null;
     this.remoteChange.notifyObservers(null, null);
