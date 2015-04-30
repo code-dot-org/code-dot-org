@@ -32,11 +32,7 @@
       }
     ],
     "title": "Matching PD Phases and Descriptions",
-    "height": "75",
-    "type": "Match",
-    "concept_ids": [
-      ""
-    ]
+    "height": "75"
   }
 }]]></config>
 </Match>
