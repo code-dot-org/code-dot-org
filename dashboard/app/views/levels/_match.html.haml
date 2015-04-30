@@ -5,7 +5,7 @@
 
   = render partial: 'levels/content', locals: {app: app, data: data}
 
-  - unless !!(data['options'].try(:[], 'hide_submit'))
+  - unless data['options']['hide_submit']
     .buttons
       %a.btn.btn-large.btn-primary.next-stage.submitButton
         =t('submit')
