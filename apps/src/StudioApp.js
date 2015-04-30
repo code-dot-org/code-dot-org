@@ -770,10 +770,12 @@ StudioApp.prototype.onResize = function() {
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
 
-  this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
-  document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+  if (!this.onMouseMoveBoundHandler) {
+    this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
+    document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
 
-  event.preventDefault();
+    event.preventDefault();
+  }
 };
 
 function applyTransformScaleToChildren(element, scale) {
