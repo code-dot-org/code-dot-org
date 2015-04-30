@@ -9,7 +9,7 @@
     },
     "title": "Introduce yourself",
     "content1": "Introduce yourself",
-    "markdown": "## Now let's get to know _you_\n\nThrough the next year of PD we'll be working to develop your local cohort of teachers into a community of practice that will allow you to grow and develop as a teacher with the support of your peers. The first step to building that community is getting to know one another. Tell us all a little bit about yourself:\n\n- Where and what do you teach?\n- Why are you interested in Computer Science?\n- What do you like to do outside of the classroom?\n\nOnce you've posted your introduction, please take a moment to read through and comment on everyone else's intros.\n\n<div id=\"discourse-comments\" />\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "markdown": "## Now let's get to know _you_\n\nThrough the next year of PD we'll be working to develop your local cohort of teachers into a community of practice that will allow you to grow and develop as a teacher with the support of your peers. The first step to building that community is getting to know one another. Tell us all a little bit about yourself:\n\n- Where and what do you teach?\n- Why are you interested in Computer Science?\n- What do you like to do outside of the classroom?\n\nOnce you've posted your introduction, please take a moment to read through and comment on everyone else's intros.\n\n<div id=\"discourse-comments\" />\n<br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
     "type": "External",
     "concept_ids": [
       ""

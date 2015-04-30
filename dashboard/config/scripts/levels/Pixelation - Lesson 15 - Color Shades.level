@@ -11,12 +11,7 @@
     },
     "title": "Pixelation - Lesson 15 - Color Shades",
     "content1": "description here",
-    "markdown": "# Color Pixelation: Task 2\n**Directions:**\n\nOn the next screen we start you out with the row of shades of red that Maddie created. Experiment with 6-bit color by filling in the bottom row of the image. \n\n* DON'T just type in random 0s and 1s - though you might start that way for fun. \n* DO: Think of a color and try to make it. \n",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ],
-    "video_key": "csp_pixelation_color_2"
+    "markdown": "# Color Pixelation: Task 2\n**Directions:**\n\nOn the next screen we start you out with the row of shades of red that Maddie created. Experiment with 6-bit color by filling in the bottom row of the image. \n\n* DON'T just type in random 0s and 1s - though you might start that way for fun. \n* DO: Think of a color and try to make it. \n"
   },
   "md5": "9076506fc75ccae8260cfce7dc3b1544"
 }]]></config>

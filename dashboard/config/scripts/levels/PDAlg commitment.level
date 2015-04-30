@@ -5,7 +5,8 @@
   "properties": {
     "options": {
       "skip_dialog": true,
-      "css": "unplugged"
+      "css": "unplugged",
+      "skip_sound": true
     },
     "title": "CS in Algebra PD commitments",
     "content1": "overview of program commitments",

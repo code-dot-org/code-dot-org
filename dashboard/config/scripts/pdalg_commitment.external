@@ -2,6 +2,7 @@ name 'PDAlg commitment'
 title 'CS in Algebra PD commitments'
 description 'overview of program commitments'
 css 'unplugged'
+skip_sound true
 
 markdown <<MARKDOWN
 ## Program Timeline

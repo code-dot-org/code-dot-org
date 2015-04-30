@@ -33,11 +33,7 @@
     ],
     "title": "Program Commitment Matching Question",
     "content1": "Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 3).",
-    "height": 60,
-    "type": "Match",
-    "concept_ids": [
-      ""
-    ]
+    "height": 60
   }
 }]]></config>
 </Match>
