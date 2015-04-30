@@ -193,17 +193,22 @@ NetSimVizNode.prototype.resizeAddressBox_ = function () {
  * @private
  */
 NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
-  var box = text[0].getBBox();
-  var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
-  var height = box.height + TEXT_PADDING_Y;
-  var halfWidth = width / 2;
-  var halfHeight = height / 2;
-  rect.attr('x', -halfWidth)
-      .attr('y', -halfHeight)
-      .attr('rx', halfHeight)
-      .attr('ry', halfHeight)
-      .attr('width', width)
-      .attr('height', height);
+  try {
+    var box = text[0].getBBox();
+    var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
+    var height = box.height + TEXT_PADDING_Y;
+    var halfWidth = width / 2;
+    var halfHeight = height / 2;
+    rect.attr('x', -halfWidth)
+        .attr('y', -halfHeight)
+        .attr('rx', halfHeight)
+        .attr('ry', halfHeight)
+        .attr('width', width)
+        .attr('height', height);
+  } catch (e) {
+    // Rect resize failed this time, probably because the element
+    // isn't added to the DOM yet.
+  }
 };
 
 /**
