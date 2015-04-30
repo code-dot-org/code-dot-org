@@ -9,11 +9,7 @@
     },
     "title": "Welcome Video",
     "content1": "Welcome to Online PD for ECS",
-    "markdown": "## Welcome to the Family! \n\n\n<iframe width=\"640\" height=\"480\" src=\"https://www.youtube.com/embed/WjKVgXDwjYQ?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\n#### When you're ready, click continue below to get started with your Online Introduction to Professional Development.\n<br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "## Welcome to the Family! \n\n\n<iframe width=\"640\" height=\"480\" src=\"https://www.youtube.com/embed/WjKVgXDwjYQ?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\n#### When you're ready, click continue below to get started with your Online Introduction to Professional Development.\n<br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
   },
   "md5": "195a16e0e4e96c1cfe608f4b853d0a8b"
 }]]></config>

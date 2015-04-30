@@ -8,11 +8,7 @@
       "css": "unplugged"
     },
     "title": "Introduction to the Big Game",
-    "markdown": "## The Big Game!\n\n<img src=\"http://staging.studio.code.org/script_assets/pd/game_demo.gif\" style=\"float: right; margin: 0 0 20px 20px;\"/>\n\nAs with Bootstrap, over the course of CS in Algebra students develop a video game of their own design. In this stage you'll have a chance to complete the game in its entirety, should you wish. As you go through developing your game you'll want to keep in mind a few key tips:\n\n### Big Game Tips\n\n- All of the necessary functions are available from the start, but you'll be best off if you focus on the specific task for each puzzle.\n- Unlike other puzzles in this course, every Big Game puzzle loads up your most recently saved game. That means that if you choose to go back and look at a previous puzzle, you'll still see functions you've written later in the progression\n- This progression contains _all_ of the Big Game puzzles. When students complete this, it will be spread out across the curriculum.\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
-    "type": "External",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "## The Big Game!\n\n<img src=\"http://staging.studio.code.org/script_assets/pd/game_demo.gif\" style=\"float: right; margin: 0 0 20px 20px;\"/>\n\nAs with Bootstrap, over the course of CS in Algebra students develop a video game of their own design. In this stage you'll have a chance to complete the game in its entirety, should you wish. As you go through developing your game you'll want to keep in mind a few key tips:\n\n### Big Game Tips\n\n- All of the necessary functions are available from the start, but you'll be best off if you focus on the specific task for each puzzle.\n- Unlike other puzzles in this course, every Big Game puzzle loads up your most recently saved game. That means that if you choose to go back and look at a previous puzzle, you'll still see functions you've written later in the progression\n- This progression contains _all_ of the Big Game puzzles. When students complete this, it will be spread out across the curriculum.\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
   }
 }]]></config>
 </External>
