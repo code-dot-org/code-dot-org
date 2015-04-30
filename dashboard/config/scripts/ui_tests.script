@@ -1,0 +1,14 @@
+title 'UI Tests'
+description "Script for test. Careful, don't change level ordering."
+hidden 'true'
+
+stage 'All the Tests'
+skin 'birds'
+concepts 'sequence'
+level 'blockly:MazeEC:3_1'
+skin 'applab'
+level 'blockly:Applab:ec_simple'
+skin 'artist'
+level 'blockly:ArtistEC:ec_1_10'
+skin 'studio'
+level 'blockly:StudioEC:ec_sandbox'
