@@ -27,11 +27,12 @@ title: Poste Opens
     %th Opens
     %th Views
   - rows.each do |row|
+    - sent = sent_count(row)
     %tr
       %td
         %a{:href => "##{row[:message]}"}= row[:message]
         %a{:name => row[:message]}
-      %td= sent_count(row)
+      %td= sent
       %td
         = row[:opens]
         (#{(row[:opens]*100)/sent}%)
