@@ -3,7 +3,8 @@ title 'Why is Algebra so Hard?'
 css 'unplugged'
 markdown <<MARKDOWN
 ## Why is Algebra so Hard?
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ujLs68JP00w" frameborder="0" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/ujLs68JP00w" frameborder="0" allowfullscreen style="float: left; margin: 0 20px 20px 0;"></iframe>
+
 ### How do you transition students?
 Think about the tricks and techniques that you use to help students transition from concrete arithmetic to abstract algebra. Post some thoughts to the forum, considering:
 
