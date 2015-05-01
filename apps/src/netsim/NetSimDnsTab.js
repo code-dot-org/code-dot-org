@@ -16,29 +16,23 @@ var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 var NetSimDnsTable = require('./NetSimDnsTable');
+var netsimGlobals = require('./NetSimGlobals').getSingleton();
 
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
- * @param {netsimLevelConfiguration} levelConfig
  * @param {function} dnsModeChangeCallback
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimDnsTab = module.exports = function (rootDiv, levelConfig,
-    dnsModeChangeCallback, becomeDnsCallback) {
+var NetSimDnsTab = module.exports = function (rootDiv, dnsModeChangeCallback,
+    becomeDnsCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = rootDiv;
-
-  /**
-   * @type {netsimLevelConfiguration}
-   * @private
-   */
-  this.levelConfig_ = levelConfig;
 
   /**
    * @type {function}
@@ -77,12 +71,14 @@ var NetSimDnsTab = module.exports = function (rootDiv, levelConfig,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimDnsTab.prototype.render = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
   var renderedMarkup = $(markup({
-    level: this.levelConfig_
+    level: levelConfig
   }));
   this.rootDiv_.html(renderedMarkup);
 
-  if (this.levelConfig_.showDnsModeControl) {
+  if (levelConfig.showDnsModeControl) {
     this.dnsModeControl_ = new NetSimDnsModeControl(
         this.rootDiv_.find('.dns_mode'),
         this.dnsModeChangeCallback_);

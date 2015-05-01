@@ -181,7 +181,6 @@ NetSimTabsComponent.prototype.render = function () {
   if (shouldShowTab(levelConfig, NetSimTabType.DNS)) {
     this.dnsTab_ = new NetSimDnsTab(
         this.rootDiv_.find('#tab_dns'),
-        levelConfig,
         this.dnsModeChangeCallback_,
         this.becomeDnsCallback_);
   }
