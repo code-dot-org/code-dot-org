@@ -1407,7 +1407,8 @@ var displayFeedback = function() {
       continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
       level: level,
-      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure,
+      showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure
+          && !appOptions.level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)

@@ -117,6 +117,97 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
   }
 };
 
+function shareProject() {
+  dashboard.saveProject(function () {
+    var origin = location.protocol + '//' + location.host;
+    var shareUrl = origin + appToProjectUrl() + '#' + dashboard.currentApp.id;
+    var encodedShareUrl = encodeURIComponent(shareUrl);
+    var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
+    + '<div id="project-share" class="modal-content">'
+    + '<p class="dialog-title"><%= I18n.t('project.share_title') %></p>'
+    + '<p><%= I18n.t('project.share_copy_link') %></p>'
+      // TODO: de-dup with apps code once JS common-core work is done.
+    + '<div><input type="text" id="sharing-input" value="' + shareUrl + '" style="cursor: copy; width: 465px;" readonly></div>'
+    + '<button id="continue-button" style="float: right;"><%= I18n.t('project.close') %></button>'
+    + '<div class="social-buttons">'
+    + '  <a href="https://www.facebook.com/sharer/sharer.php?u=' + encodedShareUrl + '" target="_blank" class="popup-window">'
+    + '    <i class="fa fa-facebook"></i>'
+    + '  </a>'
+    + '  <a href="https://twitter.com/intent/tweet?url=' + encodedShareUrl + '&amp;text=Check%20out%20what%20I%20made%20@codeorg&amp;hashtags=HourOfCode&amp;related=codeorg" target="_blank" class="popup-window">'
+    + '    <i class="fa fa-twitter"></i>'
+    + '  </a>'
+    + '  <a id="sharing-phone" href="" onclick="return false;">'
+    + '    <i class="fa fa-mobile-phone" style="font-size: 28pt;"></i>'
+    + '  </a>'
+      // TODO + '  <a href="#" onclick="return false;" id="print"><i class="fa fa-print"></i></a>'
+    + '</div>'
+    + '<div id="send-to-phone" class="sharing" style="display: none;">'
+    + '  <label for="phone">Enter a US phone number:</label>'
+    + '  <input type="text" id="phone" name="phone">'
+    + '  <button id="phone-submit" onclick="return false;">Send</button>'
+    + '  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>'
+    + '</div></div>'
+    });
+    function createHiddenPrintWindow(src) {
+      var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
+      iframe.appendTo("body");
+      iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
+      iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
+      $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
+    }
+    $('#project-share #print').click(createHiddenPrintWindow);
+    $('#sharing-input').click(function () {
+      this.select();
+    });
+    dialog.show();
+    $('#project-share #sharing-phone').click(function() {
+      var sendToPhone = $('#project-share #send-to-phone');
+      if (sendToPhone.is(':hidden')) {
+        sendToPhone.attr('style', 'display:inline-block');
+        var phone = $("#project-share #phone");
+        var submitted = false;
+        var submitButton = $('#project-share #phone-submit');
+        submitButton.attr('disabled', 'true');
+        phone.mask('(000) 000-0000', {
+          onComplete:function(){
+            if (!submitted) {
+              submitButton.removeAttr('disabled');
+            }
+          },
+          onChange: function () {
+            submitButton.attr('disabled', 'true');
+          }
+        });
+        phone.focus();
+        submitButton.click(function() {
+          var phone = $("#project-share #phone");
+          var params = jQuery.param({
+            type: location.pathname.match(/^\/p\/(\w+)/)[1],
+            channel_id: dashboard.currentApp.id,
+            phone: phone.val()
+          });
+          $(submitButton).val("Sending..");
+          phone.prop('readonly', true);
+          submitButton.disabled = true;
+          submitted = true;
+          jQuery.post('/sms/send', params)
+              .done(function () {
+                $(submitButton).text("Sent!");
+                trackEvent("SendToPhone", "success");
+              })
+              .fail(function () {
+                $(submitButton).text("Error!");
+                trackEvent("SendToPhone", "error");
+              });
+        });
+      }
+    });
+    $('#project-share #continue-button').click(function() {
+      dialog.hide();
+    });
+  });
+}
+
 function remixProject() {
   delete dashboard.currentApp.id;
   dashboard.currentApp.name = "Remix: " + dashboard.currentApp.name;
@@ -124,6 +215,7 @@ function remixProject() {
   dashboard.saveProject();
 }
 
+// Minimal project header for legacy /c/ share pages.
 dashboard.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
       .append($('<div class="project_name header_text">').text(dashboard.currentApp.name))
@@ -132,6 +224,15 @@ dashboard.showMinimalProjectHeader = function () {
   $('.project_info')
       .append(projectName)
       .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'));
+  $('.project_remix').click(remixProject);
+};
+
+// Project header for levels backed by a channel, with "Share" and "Remix".
+dashboard.showProjectLevelHeader = function () {
+  $('.project_info')
+      .append($('<div class="project_share header_button header_button_light">').text('<%= I18n.t('project.share') %>'))
+      .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'));
+  $('.project_share').click(shareProject);
   $('.project_remix').click(remixProject);
 };
 
@@ -188,96 +289,7 @@ dashboard.showProjectHeader = function () {
     });
   });
 
-  $('.project_share').click(function () {
-    dashboard.saveProject(function () {
-      var shareUrl = encodeURIComponent(location.href.replace(/\/edit$/,''));
-      var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
-          + '<div id="project-share" class="modal-content">'
-          + '<p class="dialog-title"><%= I18n.t('project.share_title') %></p>'
-          + '<p><%= I18n.t('project.share_copy_link') %></p>'
-          // TODO: de-dup with apps code once JS common-core work is done.
-          + '<div><input type="text" id="sharing-input" value="' + location.href.split(/\/edit$/)[0] + '" style="cursor: copy; width: 465px;" readonly></div>'
-          + '<button id="continue-button" style="float: right;"><%= I18n.t('project.close') %></button>'
-          + '<div class="social-buttons">'
-          + '  <a href="https://www.facebook.com/sharer/sharer.php?u=' + shareUrl + '" target="_blank" class="popup-window">'
-          + '    <i class="fa fa-facebook"></i>'
-          + '  </a>'
-          + '  <a href="https://twitter.com/intent/tweet?url=' + shareUrl + '&amp;text=Check%20out%20what%20I%20made%20@codeorg&amp;hashtags=HourOfCode&amp;related=codeorg" target="_blank" class="popup-window">'
-          + '    <i class="fa fa-twitter"></i>'
-          + '  </a>'
-          + '  <a id="sharing-phone" href="" onclick="return false;">'
-          + '    <i class="fa fa-mobile-phone" style="font-size: 28pt;"></i>'
-          + '  </a>'
-          // TODO + '  <a href="#" onclick="return false;" id="print"><i class="fa fa-print"></i></a>'
-          + '</div>'
-          + '<div id="send-to-phone" class="sharing" style="display: none;">'
-          + '  <label for="phone">Enter a US phone number:</label>'
-          + '  <input type="text" id="phone" name="phone">'
-          + '  <button id="phone-submit" onclick="return false;">Send</button>'
-          + '  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>'
-          + '</div></div>'
-      });
-      function createHiddenPrintWindow(src) {
-        var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
-        iframe.appendTo("body");
-        iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
-        iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
-        $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
-      }
-      $('#project-share #print').click(createHiddenPrintWindow);
-      $('#sharing-input').click(function () {
-        this.select();
-      });
-      dialog.show();
-      $('#project-share #sharing-phone').click(function() {
-        var sendToPhone = $('#project-share #send-to-phone');
-        if (sendToPhone.is(':hidden')) {
-          sendToPhone.attr('style', 'display:inline-block');
-          var phone = $("#project-share #phone");
-          var submitted = false;
-          var submitButton = $('#project-share #phone-submit');
-          submitButton.attr('disabled', 'true');
-          phone.mask('(000) 000-0000', {
-                onComplete:function(){
-                  if (!submitted) {
-                    submitButton.removeAttr('disabled');
-                  }
-                },
-                onChange: function () {
-                  submitButton.attr('disabled', 'true');
-                }
-              }
-          );
-          phone.focus();
-          submitButton.click(function() {
-            var phone = $("#project-share #phone");
-            var params = jQuery.param({
-              type: location.pathname.match(/^\/p\/(\w+)/)[1],
-              channel_id: dashboard.currentApp.id,
-              phone: phone.val()
-            });
-            $(submitButton).val("Sending..");
-            phone.prop('readonly', true);
-            submitButton.disabled = true;
-            submitted = true;
-            jQuery.post('/sms/send', params)
-                .done(function () {
-                  $(submitButton).text("Sent!");
-                  trackEvent("SendToPhone", "success");
-                })
-                .fail(function () {
-                  $(submitButton).text("Error!");
-                  trackEvent("SendToPhone", "error");
-                });
-          });
-        }
-      });
-      $('#project-share #continue-button').click(function() {
-        dialog.hide();
-      });
-    });
-  });
-
+  $('.project_share').click(shareProject);
   $('.project_remix').click(remixProject);
 
   var $projectMorePopup = $('.project_more_popup');
