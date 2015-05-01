@@ -181,7 +181,6 @@ NetSimLobby.prototype.render = function () {
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
         this.rootDiv_,
         {
-          levelConfig: netsimGlobals.getLevelConfig(),
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
           remoteNode: this.remoteNode_,
