@@ -28,6 +28,7 @@ class ContentDSL < BaseDSL
   end
 
   def method_missing(key, *args)
+    @hash[:options] ||= {}
     @hash[:options][key.to_sym] = args.first
   end
 
