@@ -29,6 +29,7 @@
   "scripts": {
     "clean": "rm -rf ./build",
     "build": "gulp build",
+    "buildcore": "./build_with_core.sh",
     "deploy": "./deploy.sh",
     "unpack": "./unpack.sh",
     "start": "gulp dev & node server.js",
@@ -57,6 +58,7 @@
     "@cdo/cdo": "0.0.1",
     "browserify": "^9.0.7",
     "browserify-shim": "^3.8.3",
+    "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
     "messageformat": "^0.2.2",
     "partition-bundle": "^1.1.0"

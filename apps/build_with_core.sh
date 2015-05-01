@@ -12,12 +12,12 @@ fi
     echo "Skipping core. No ../blockly-core"
   fi
 )
-
 (
+  # TODO (brent) - do i need to account for debug/non-debug here?
   if [ -d "../apps" ] ; then
     cd ../apps
     npm install
-    grunt build
+    npm run build
   else
     echo "Skipping blockly. No ../apps"
   fi

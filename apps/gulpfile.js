@@ -4,6 +4,7 @@ childProcess.spawnSync = require('spawn-sync');
 var checkDeps = require('check-dependencies');
 var mkdirp = require('mkdirp');
 var path = require('path');
+var fs = require('fs');
 
 var gulp = require('gulp');
 var newer = require('gulp-newer');
@@ -68,6 +69,21 @@ function ensureNpmDependencies() {
   //   console.error('Your dependencies are out of date. Run `npm prune && npm install` to fix.');
   //   process.exit(1);
   // }
+}
+
+/**
+ * Newer looks at timestamps on link rather than linked file. This provides us
+ * a way to send it the linked file itself.
+ * @param {string} path Path to potential symlink
+ * @returns {string} Path to linked file if a symlink, otherwise the input path
+ */
+function followSymlink(filepath) {
+  var stats = fs.lstatSync(filepath);
+  if (!stats.isSymbolicLink()) {
+    return path;
+  }
+
+  return path.resolve(path.dirname(filepath), fs.readlinkSync(filepath));
 }
 
 ensureNpmDependencies();
@@ -152,15 +168,23 @@ gulp.task('blockly_locale', function() {
 
 // Compile blockly.js and locale files
 gulp.task('vendor', ['blockly_locale'], function () {
-
-  // TODO (brent) support uncompress versions
+  // Build debug version by setting env variable or passing --debug to npm
+  // command
+  // Note: If you try switch between full/minified builds without making code
+  // changes, newer() will prevent that from happening. Can solve with an
+  // npm clean.
   var ext = 'compressed';
+  if (process.env.MOOC_DEV === '1' || process.env.npm_config_debug) {
+    ext = 'uncompressed';
+  }
+
   var vendorFiles = [
     'lib/blockly/blockly_' + ext + '.js',
     'lib/blockly/blocks_' + ext + '.js',
     'lib/blockly/javascript_' + ext + '.js'
-  ];
+  ].map(followSymlink);
 
+  // Note: If you want to switch between
   var concat = require('gulp-concat');
   return gulp.src(vendorFiles)
     .pipe(newer(JS_OUTPUT + 'blockly.js'))
