@@ -3,6 +3,12 @@
   "game_id": 29,
   "created_at": "2015-04-23T21:09:52.000Z",
   "properties": {
+    "options": {
+      "skip_sound": true,
+      "hide_submit": true,
+      "success_title": "Awesome!",
+      "success_body": "Thanks for your response."
+    },
     "questions": [
       {
         "text": "Given the scope and sequence from the last page, which of the following best describes when you expect to implement the CS in Algebra curriculum?"
@@ -35,7 +41,11 @@
       }
     ],
     "title": "Curriculum Implementation",
-    "markdown": "### Video Games and Coordinate Planes\n### Contracts, Strings, and Images\n### Defining Functions\n### The Design Recipe\n### Game Animation (linear functions)\n### Boundary Detection (inequalities in the plane)\n### Piecewise Functions\n### Collision Detection (the distance formula)\n"
+    "markdown": "### **Units of Study**\n#### Video Games and Coordinate Planes\n#### Contracts, Strings, and Images\n#### Defining Functions\n#### The Design Recipe\n#### Game Animation (linear functions)\n#### Boundary Detection (inequalities in the plane)\n#### Piecewise Functions\n#### Collision Detection (the distance formula)\n",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </Multi>

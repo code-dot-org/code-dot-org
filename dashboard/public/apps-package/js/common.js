@@ -4779,7 +4779,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <div id="design-cell" class="design-cell-none">\n        <button id="designModeButton" class="share">\n          ', escape((75,  msg.designMode() )), '\n        </button>\n        <button id="codeModeButton" class="share" style="display:none;">\n          ', escape((78,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');81; } ; buf.push('\n  </div>\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((86,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((89,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((90,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((92,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((93,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((94,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((96,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((98,  data.blockCounterClass )), '>\n            ', escape((99,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((102,  data.idealBlockNumber )), '</span>\n          <span> ', escape((103,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');107; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((110,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');113; } ; buf.push('\n  </div>\n  ');115; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');117; } ; buf.push('\n  ');118; if (data.hasDesignMode) { ; buf.push('\n    ', (119,  data.designModeBox ), '\n  ');120; } ; buf.push('\n  ');121; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (122,  data.extraControlRows ), '\n  ');123; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <div id="design-cell" class="design-cell-none">\n        <button id="designModeButton" class="share">\n          ', escape((75,  msg.designMode() )), '\n        </button>\n        <button id="codeModeButton" class="share" style="display:none;">\n          ', escape((78,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');81; } ; buf.push('\n  </div>\n</div>\n\n<div id="visualizationResizeBar">\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((89,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((92,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((93,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((95,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((96,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((97,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((99,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((101,  data.blockCounterClass )), '>\n            ', escape((102,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((105,  data.idealBlockNumber )), '</span>\n          <span> ', escape((106,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');110; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((113,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');116; } ; buf.push('\n  </div>\n  ');118; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');120; } ; buf.push('\n  ');121; if (data.hasDesignMode) { ; buf.push('\n    ', (122,  data.designModeBox ), '\n  ');123; } ; buf.push('\n  ');124; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (125,  data.extraControlRows ), '\n  ');126; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -5713,7 +5713,9 @@ var FeedbackUtils = require('./feedback');
 var MIN_WIDTH = 900;
 var MOBILE_SHARE_WIDTH_PADDING = 50;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-var WORKSPACE_PLAYSPACE_GAP = 15;
+var MAX_VISUALIZATION_WIDTH = 400;
+var MIN_VISUALIZATION_WIDTH = 200;
+
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
 
@@ -6054,6 +6056,14 @@ StudioApp.prototype.init = function(config) {
     this.handleUsingBlockly_(config);
   }
 
+  var vizResizeBar = document.getElementById('visualizationResizeBar');
+  if (vizResizeBar) {
+    vizResizeBar.addEventListener('mousedown',
+                                  _.bind(this.onMouseDownVizResizeBar, this));
+    document.body.addEventListener('mouseup',
+                                   _.bind(this.onMouseUpVizResizeBar, this));
+  }
+
   window.addEventListener('resize', _.bind(this.onResize, this));
 
   this.reset(true);
@@ -6096,7 +6106,12 @@ StudioApp.prototype.init = function(config) {
           Blockly.mainBlockSpace.clear();
           this.setStartBlocks_(config, false);
         } else {
-          this.editor.setValue(config.level.startBlocks || '');
+          var resetValue = '';
+          if (config.level.startBlocks) {
+            // Don't pass CRLF pairs to droplet until they fix CR handling:
+            resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
+          }
+          this.editor.setValue(resetValue);
         }
       }).bind(this));
     }).bind(this));
@@ -6451,6 +6466,84 @@ StudioApp.prototype.onResize = function() {
   this.resizeToolboxHeader();
 };
 
+StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
+  // When we see a mouse down in the resize bar, start tracking mouse moves:
+
+  if (!this.onMouseMoveBoundHandler) {
+    this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
+    document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+
+    event.preventDefault();
+  }
+};
+
+function applyTransformScaleToChildren(element, scale) {
+  for (var i = 0; i < element.children.length; i++) {
+    element.children[i].style.transform = scale;
+    element.children[i].style.msTransform = scale;
+    element.children[i].style.webkitTransform = scale;
+  }
+}
+
+/**
+*  Handle mouse moves while dragging the visualization resize bar. We set
+*  styles on each of the elements directly, overriding the normal responsive
+*  classes that would typically adjust width and scale.
+*/
+StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
+  var codeWorkspace = document.getElementById('codeWorkspace');
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  var visualization = document.getElementById('visualization');
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualizationEditor = document.getElementById('visualizationEditor');
+
+  var rect = visualizationResizeBar.getBoundingClientRect();
+  var offset;
+  var newVizWidth;
+  if (this.isRtl()) {
+    offset = window.innerWidth -
+             (window.pageXOffset + rect.left + (rect.width / 2)) -
+             parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
+    newVizWidth = (window.innerWidth - event.pageX) - offset;
+  } else {
+    offset = window.pageXOffset + rect.left + (rect.width / 2) -
+             parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
+    newVizWidth = event.pageX - offset;
+  }
+  newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
+                         Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
+  var newVizWidthString = newVizWidth + 'px';
+  var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
+
+  if (this.isRtl()) {
+    visualizationResizeBar.style.right = newVizWidthString;
+    codeWorkspace.style.right = newVizWidthString;
+  } else {
+    visualizationResizeBar.style.left = newVizWidthString;
+    codeWorkspace.style.left = newVizWidthString;
+  }
+  // Add extra width to visualizationColumn if visualization has a border:
+  visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
+  visualization.style.maxWidth = newVizWidthString;
+  visualization.style.maxHeight = (newVizWidth / this.vizAspectRatio) + 'px';
+  applyTransformScaleToChildren(visualization,
+      'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
+  if (visualizationEditor) {
+    visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+  // Fire resize so blockly and droplet handle this type of resize properly:
+  utils.fireResizeEvent();
+};
+
+StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
+  // If we have been tracking mouse moves, remove the handler now:
+  if (this.onMouseMoveBoundHandler) {
+    document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
+    this.onMouseMoveBoundHandler = null;
+  }
+};
+
+
 /**
 *  Updates the width of the toolbox-header to match the width of the toolbox
 *  or palette in the workspace below the header.
@@ -6700,6 +6793,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
+  this.vizAspectRatio = config.vizAspectRatio || 1.0;
+  this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
@@ -6719,6 +6814,14 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
 
+// Overwritten by applab.
+StudioApp.prototype.runButtonClickWrapper = function (callback) {
+  if (window.$) {
+    $(window).trigger('run_button_pressed');
+  }
+  callback();
+};
+
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
@@ -6733,12 +6836,8 @@ StudioApp.prototype.configureDom = function (config) {
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(function () {
-    if (window.$) {
-      $(window).trigger('run_button_pressed');
-    }
-    this.runButtonClick();
-  }, 250, true);
+  var runClick = this.runButtonClick.bind(this);
+  var throttledRunClick = _.debounce(this.runButtonClickWrapper.bind(this, runClick), 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -6805,6 +6904,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
+  document.getElementById('visualizationResizeBar').style.display = 'none';
+
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
     var buttonRow = runButton.parentElement;
@@ -6904,7 +7005,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     this.resizeToolboxHeader();
 
     if (options.startBlocks) {
-      this.editor.setValue(options.startBlocks);
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
     }
 
     if (options.afterEditorReady) {
@@ -6991,7 +7093,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: utils.valueOr(config.level.edit_blocks, false)
+    editBlocks: utils.valueOr(config.level.edit_blocks, false),
+    readOnly: utils.valueOr(config.readonlyWorkspace, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
@@ -10917,6 +11020,8 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
       newFunc.color = category.rgb || category.color;
     }
 
+    newFunc.dropdown = config.blocks[i].dropdown;
+
     modeOptions.functions[config.blocks[i].func] = newFunc;
   }
 }
@@ -11130,6 +11235,12 @@ exports.createUuid = function () {
     var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
     return v.toString(16);
   });
+};
+
+exports.fireResizeEvent = function () {
+  var ev = document.createEvent('Event');
+  ev.initEvent('resize', true, true);
+  window.dispatchEvent(ev);
 };
 
 // ECMAScript 6 polyfill for String.prototype.repeat

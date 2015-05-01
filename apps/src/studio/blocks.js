@@ -50,6 +50,8 @@ var edgeCollisions = false;
 var allowSpritesOutsidePlayspace = false;
 var startAvatars = [];
 
+var customGameLogic = null;
+
 exports.setSpriteCount = function(blockly, count) {
   spriteCount = count;
 };
@@ -68,6 +70,10 @@ exports.enableSpritesOutsidePlayspace = function(blockly) {
 
 exports.setStartAvatars = function (avatarList) {
   startAvatars = avatarList.slice(0);
+};
+
+exports.registerCustomGameLogic = function (customGameLogicToRegister) {
+  customGameLogic = customGameLogicToRegister;
 };
 
 /**
@@ -1715,7 +1721,11 @@ exports.install = function(blockly, blockInstallOptions) {
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
-    Studio.customLogic.cacheBlock('VALUE', this.getInputTargetBlock('VALUE'));
+    if (customGameLogic) {
+      customGameLogic.cacheBlock('VALUE', this.getInputTargetBlock('VALUE'));
+    } else {
+      throw new Error('must register custom game logic');
+    }
   };
 
   blockly.Blocks.functional_start_setVars = {
@@ -1808,6 +1818,10 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.functional_start_setFuncs = function() {
+    if (!customGameLogic) {
+      throw new Error('must register custom game logic');
+    }
+
     // For each of our inputs (i.e. update-target, update-danger, etc.) get
     // the attached block and figure out what it's function name is. Store
     // that on BigGameLogic so we can know what functions to call later.
@@ -1817,7 +1831,7 @@ exports.install = function(blockly, blockInstallOptions) {
         return;
       }
 
-      Studio.customLogic.cacheBlock(arg.name, inputBlock);
+      customGameLogic.cacheBlock(arg.name, inputBlock);
     }, this);
   };
 

@@ -1,0 +1,29 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-26T03:09:39.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Have you ever programmed before?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Yes, and I'm familiar with functional programming",
+        "correct": true
+      },
+      {
+        "text": "Yes, but I don't know if it would be considered functional",
+        "correct": true
+      },
+      {
+        "text": "No",
+        "correct": true
+      }
+    ],
+    "title": "Functional Programming",
+    "markdown": "The language that we'll be using in this course is called a Functional programming language, which is a type of language that follows a set of rules that aligns very well with the rules of Algebra. Some of the defining characteristics of this language are:\n\n- Variables are immutable (once a value has been defined, it cannot be changed)\n- Functions do not have side effects (given the same inputs, a function will run the same way every time, because it can't be impacted by outside elements)\n- Every function maps its inputs (domain) to its output (range)\n"
+  }
+}]]></config>
+</Multi>

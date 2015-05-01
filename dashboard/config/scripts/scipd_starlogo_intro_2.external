@@ -1,0 +1,20 @@
+name 'sciPD StarLogo intro 2'
+title 'Guided Intro to StarLogo Nova'
+css 'unplugged'
+skip_dialog true
+
+
+markdown <<MARKDOWN
+### The StarLogo Nova User Interface
+
+<br /><br />The StarLogo Nova User Interface is made up of three parts.<br /><br />
+
+1) The top part, called the Information area, is a place for you to give your model a title and record notes about your model.<br /><br /><img src="http://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-top.png" /><br /><br />
+
+2) The middle part, called Spaceland, is a 3D world where the agents are displayed. It consists of a green flat plane (called the terrain). Note that it has several buttons that can be used to control the simulation. The “setup” button, “forever” button and “score” box are called “widgets” or “use interface elements”.<br /><br /><img src="http://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-middle.png" /><br /><br />
+
+3) The bottom part, called the Workspace or blocks area, contains drawers of blocks that represent the programming commands, and pages where you snap the blocks together to write programs. Programming is basically putting together a logical sequence of instructions.<br /><br /><img src="http://edx.code.org/c4x/Code.org/Project_GUTS/asset/slnova-bottom.png" />
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

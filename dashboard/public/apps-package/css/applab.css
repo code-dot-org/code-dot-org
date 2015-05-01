@@ -23,6 +23,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: 400px; }
 
+  div#visualizationResizeBar {
+    left: 400px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 400px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -44,6 +50,12 @@ div#visualization.with_padding {
     left: 350px; }
 
   html[dir='rtl'] div#codeWorkspace {
+    right: 350px; }
+
+  div#visualizationResizeBar {
+    left: 350px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
     right: 350px; }
 
   div#visualization.responsive > * {
@@ -69,6 +81,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: 300px; }
 
+  div#visualizationResizeBar {
+    left: 300px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 300px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
@@ -92,6 +110,12 @@ div#visualization.with_padding {
   html[dir='rtl'] div#codeWorkspace {
     right: 250px; }
 
+  div#visualizationResizeBar {
+    left: 250px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: 250px; }
+
   div#visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
@@ -113,6 +137,12 @@ div#visualization.with_padding {
     left: 200px; }
 
   html[dir='rtl'] div#codeWorkspace {
+    right: 200px; }
+
+  div#visualizationResizeBar {
+    left: 200px; }
+
+  html[dir='rtl'] div#visualizationResizeBar {
     right: 200px; }
 
   div#visualization.responsive > * {
@@ -141,6 +171,13 @@ div#visualization.with_padding {
   left: 0px;
   z-index: -1; }
 
+#visualizationResizeBar {
+  margin-left: 2px;
+  width: 13px; }
+
+#debugResizeBar {
+  cursor: ns-resize; }
+
 #divApplab img {
   opacity: 1; }
 
@@ -165,7 +202,7 @@ img#turtleImage {
   font-size: 14px; }
 
 #pauseButton, #continueButton {
-  min-width: 120px; }
+  min-width: 110px; }
 
 .debugger_button:focus {
   outline-style: none; }
@@ -176,6 +213,7 @@ img#turtleImage {
 #debug-area {
   position: absolute;
   bottom: 0;
+  height: 156px;
   left: 0;
   right: 0; }
 
@@ -184,48 +222,49 @@ img#turtleImage {
 
 .debug-console {
   display: block;
-  border: 1px solid #ddd; }
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 38px;
+  bottom: 0;
+  left: 1px;
+  right: 1px; }
 
 .debug-console * {
   font-family: monospace;
   font-size: 12px; }
 
 .debug-input-prompt {
-  max-height: 0px;
-  display: block; }
+  position: absolute;
+  bottom: 0;
+  height: 16px;
+  display: block;
+  left: 0;
+  width: 15px;
+  background-color: white; }
 
 .debug-input, .debug-output {
-  width: 100%;
+  position: absolute;
   border-width: 0px;
   padding: 0px;
-  outline: none; }
+  outline: none;
+  background-color: white; }
 
-.debug-output textarea[disabled], textarea[readonly] {
-  height: 100px;
-  resize: none;
-  margin-bottom: -1px;
+.debug-output {
+  top: 0;
+  bottom: 16px;
+  width: 100%;
   overflow: auto;
-  background-color: white;
   line-height: normal;
   cursor: text;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none; }
+  white-space: pre-wrap; }
 
 .debug-input {
-  max-height: 14px;
-  height: 14px;
-  background-color: white;
-  text-indent: 14.5px;
+  bottom: 0;
+  max-height: 16px;
+  height: 16px;
+  left: 15px;
+  right: 0;
   margin-top: -3px;
-  padding-top: 6px;
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text; }

@@ -88,6 +88,7 @@ module Ops
         params.require(:cohort).permit(
             :name,
             :program_type,
+            :script_id,
             :cutoff_date,
             :district_ids => [],
             :district_names => [],

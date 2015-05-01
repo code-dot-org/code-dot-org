@@ -398,6 +398,9 @@ title: "Ops Dashboard"
   controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
 
+    $scope.scripts = #{DASHBOARD_DB[:scripts].select(:id, :name).all.to_json};
+
+
       $scope.newDistrict = function() {
         $scope.cohort.districts.push({
           id: '',

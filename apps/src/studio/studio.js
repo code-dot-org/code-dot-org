@@ -163,6 +163,7 @@ function loadLevel() {
       Studio.customLogic = new SamBatLogic(Studio);
       break;
   }
+  blocks.registerCustomGameLogic(Studio.customLogic);
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();

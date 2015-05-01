@@ -85,6 +85,7 @@ html[dir='rtl'] #visualizationColumn {
   position: relative;
   top: 0px;
   left: 0px;
+  overflow-x: hidden;
 }
 
 #visualizationColumn.embed_hidesource {
@@ -232,7 +233,7 @@ div.droplet-palette-group-header-selected.orange {
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
-  bottom: 160px;
+  bottom: 156px;
 }
 
 html[dir='rtl'] #codeWorkspace {
@@ -262,6 +263,15 @@ html[dir='rtl'] #codeWorkspace {
   border-radius: 15px 0px 0px 15px;
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white;
+}
+
+#visualizationResizeBar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  left: 400px;
+  cursor: ew-resize;
 }
 
 #visualization {
@@ -321,6 +331,12 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: $width;
   }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
   #visualizationEditor.responsive {
     margin-left: $width;
   }
@@ -348,6 +364,12 @@ html[dir='rtl'] #codeWorkspace {
     left: $width;
   }
   html[dir='rtl'] #codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   #visualizationEditor.responsive {
@@ -379,6 +401,12 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: $width;
   }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
   #visualizationEditor.responsive {
     margin-left: $width;
   }
@@ -406,6 +434,12 @@ html[dir='rtl'] #codeWorkspace {
     left: $width;
   }
   html[dir='rtl'] #codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
   }
   #visualizationEditor.responsive {

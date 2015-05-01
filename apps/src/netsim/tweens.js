@@ -177,3 +177,58 @@ exports.TweenValueTo.prototype.tick = function (clock) {
     this.isFinished = true;
   }
 };
+
+exports.DoAfterDelay = function (target, duration, callback) {
+  /**
+   * Will be set to TRUE when tween is completed.
+   * @type {boolean}
+   */
+  this.isFinished = false;
+
+
+  /**
+   * Will be set on our first tick.
+   * @type {number}
+   * @private
+   */
+  this.startTime_ = undefined;
+
+  /**
+   * @type {Object}
+   */
+  this.target = target;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.propertyName = null;
+
+  /**
+   * Duration of tween in milliseconds
+   * @type {number}
+   * @private
+   */
+  this.duration_ = duration;
+
+  /**
+   * Function to call when the duration has elapsed.
+   * @type {function}
+   */
+  this.callback_ = callback;
+};
+
+/**
+ * @param {RunLoop.clock} clock
+ */
+exports.DoAfterDelay.prototype.tick = function (clock) {
+  if (this.startTime_ === undefined) {
+    this.startTime_ = clock.time;
+  }
+
+  var timeSinceStart = clock.time - this.startTime_;
+  if (timeSinceStart >= this.duration_) {
+    this.callback_();
+    this.isFinished = true;
+  }
+};
