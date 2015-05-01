@@ -149,7 +149,7 @@ NetSimVizNode.prototype.configureFrom = function (sourceNode) {
   if (netsimGlobals.getLevelConfig().showHostnameInGraph) {
     this.setName(sourceNode.getHostname());
   } else {
-    this.setName(sourceNode.getDisplayName());
+    this.setName(sourceNode.getShortDisplayName());
   }
   this.nodeID = sourceNode.entityID;
 
@@ -172,12 +172,6 @@ NetSimVizNode.prototype.setIsLocalNode = function () {
  * @param {string} newName
  */
 NetSimVizNode.prototype.setName = function (newName) {
-  // If the name is longer than ten characters (longer than "Router 999")
-  // then only show up to the first whitespace.
-  if (newName.length > 10) {
-    newName = newName.split(/\s/)[0];
-  }
-
   this.displayName_.text(newName);
   this.resizeNameBox_();
 };

@@ -117,4 +117,32 @@ describe("NetSimLocalClientNode", function () {
       assertTableSize(testShard, 'messageTable', payloads.length);
     });
   });
+
+  describe("getShortDisplayName", function () {
+    it ("reflects no change for names below 10 characters", function () {
+      testLocalNode.displayName_ = 'Sam';
+      assertEqual('Sam', testLocalNode.getShortDisplayName());
+
+      testLocalNode.displayName_ = 'Sam Well';
+      assertEqual('Sam Well', testLocalNode.getShortDisplayName());
+
+      // Note: spaces preserved for short names
+      testLocalNode.displayName_ = 'Samuel 999';
+      assertEqual('Samuel 999', testLocalNode.getShortDisplayName());
+    });
+
+    it ("uses first word for names longer than 10 characters", function () {
+      // Even short first names used, as long as whole name is > 10
+      testLocalNode.displayName_ = 'A Modest Proposal';
+      assertEqual('A', testLocalNode.getShortDisplayName());
+
+      // Ordinary case
+      testLocalNode.displayName_ = 'Jonathan Swift';
+      assertEqual('Jonathan', testLocalNode.getShortDisplayName());
+
+      // First name longer than 10 characters
+      testLocalNode.displayName_ = 'Constantine Rey';
+      assertEqual('Constantine', testLocalNode.getShortDisplayName());
+    });
+  });
 });
