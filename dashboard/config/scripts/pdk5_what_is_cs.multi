@@ -1,6 +1,9 @@
 name 'PDK5 What is CS'
 title 'What is Computer Science?'
-
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
 
 markdown <<MARKDOWN
 Have you ever wondered “Exactly what is computer science?” Or, “Why are some computer programs written with words and some are written using images?” 

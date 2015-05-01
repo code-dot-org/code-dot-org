@@ -1,6 +1,9 @@
 name 'sciPD commitment match'
 title 'Program Commitment Matching Question'
 description 'Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
+hide_submit true
+skip_sound true
+
 height 60
 
 question 'Phase 1'

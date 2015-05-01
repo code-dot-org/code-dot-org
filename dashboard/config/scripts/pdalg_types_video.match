@@ -2,6 +2,9 @@ name 'PDAlg Types Video'
 title 'Intro to Data Types'
 description 'Match each data type with its color code'
 height '100'
+skip_sound true
+hide_submit true
+
 question 'Number'
 answer 'http://staging.studio.code.org/script_assets/pd/blue.png'
 

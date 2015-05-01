@@ -3,6 +3,12 @@
   "game_id": 29,
   "created_at": "2015-02-24T18:00:59.000Z",
   "properties": {
+    "options": {
+      "css": "unplugged",
+      "hide_submit": true,
+      "skip_sound": true,
+      "answer_line": true
+    },
     "questions": [
       {
         "text": "A computer program, or \"code,\" is:"
@@ -27,7 +33,11 @@
       }
     ],
     "title": "What is Computer Science?",
-    "markdown": "Have you ever wondered \"Exactly what is computer science?\" Or, \"Why are some computer programs written with words and some are written using images?\" \nIf so, watch this video; it's a great introduction to the field of computer science.\n\n<iframe width=\"426\" height=\"260\" src=\"//www.youtube.com/embed/KHXvOO8cVDE\" frameborder=\"0\" allowfullscreen></iframe>\n\n"
+    "markdown": "Have you ever wondered \"Exactly what is computer science?\" Or, \"Why are some computer programs written with words and some are written using images?\" \nIf so, watch this video; it's a great introduction to the field of computer science.\n\n<iframe width=\"426\" height=\"260\" src=\"//www.youtube.com/embed/KHXvOO8cVDE\" frameborder=\"0\" allowfullscreen></iframe>\n\n",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "543b4e2ad2caef4d124ee394308b646a"
 }]]></config>

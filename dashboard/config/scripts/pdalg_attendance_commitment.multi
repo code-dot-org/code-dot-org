@@ -1,4 +1,8 @@
 name 'PDAlg attendance commitment'
+skip_sound true
+hide_submit true
+success_title 'Confirmed!'
+success_body 'Thank you for accepting the attendance policy.'
 
 question 'Please confirm that you have read the Attendance Policy and will work to follow it.'
 right 'I have read and agree to the Attendance Policy'
