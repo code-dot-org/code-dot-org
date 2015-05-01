@@ -23,7 +23,7 @@
     "edit_code": true,
     "embed": "false",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "slider_speed": "0.1",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -39,9 +39,9 @@
     "free_play": "true",
     "app_width": "200",
     "app_height": "200",
-    "instructions": "Draw a square using only moveForward and turnLeft.  The square should above and to the left of the turtle's starting position.",
+    "instructions": "Draw a square using only moveForward and turnLeft.  The square should be drawn above and to the left of the turtle's starting position.",
     "callout_json": "[]",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/click-block.gif"
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-leftSquare.gif"
   }
 }]]></config>
   <blocks/>

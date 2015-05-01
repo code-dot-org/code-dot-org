@@ -6,10 +6,7 @@ skip_sound true
 answer_line true
 
 markdown <<MARKDOWN
-Have you ever wondered “Exactly what is computer science?” Or, “Why are some computer programs written with words and some are written using images?” 
-If so, watch this video; it's a great introduction to the field of computer science.
 
-<iframe width="426" height="260" src="//www.youtube.com/embed/KHXvOO8cVDE" frameborder="0" allowfullscreen></iframe>
 
 MARKDOWN
 

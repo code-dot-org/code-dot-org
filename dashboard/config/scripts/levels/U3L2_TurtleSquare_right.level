@@ -41,7 +41,7 @@
     "app_height": "200",
     "instructions": "Draw a square using only moveForward and turnLeft, but this time, make the square appear ABOVE and to the RIGHT of the starting location.",
     "callout_json": "[]",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/click-block.gif"
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-rightSquare.png"
   }
 }]]></config>
   <blocks/>

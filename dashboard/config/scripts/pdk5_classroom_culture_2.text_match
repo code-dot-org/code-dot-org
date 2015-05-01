@@ -1,6 +1,7 @@
 name 'PDK5 Classroom Culture 2'
 title 'Facilitating a positive learning environment in your computer science classroom'
-
+success_title "Awesome!"
+success_body "Thanks for your response"
 content1 'Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?'
 placeholder 'In my classroom, I want to...'
 
