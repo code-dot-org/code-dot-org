@@ -40,6 +40,7 @@ var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 
 var logger = NetSimLogger.getSingleton();
+var netsimGlobals = require('./NetSimGlobals').getSingleton();
 
 /**
  * @type {number}
@@ -109,6 +110,8 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   row = row !== undefined ? row : {};
   NetSimNode.call(this, shard, row);
 
+  var levelConfig = netsimGlobals.getLevelConfig();
+
   /**
    * Unix timestamp (local) of router creation time.
    * @type {number}
@@ -121,7 +124,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @type {DnsMode}
    * @private
    */
-  this.dnsMode = utils.valueOr(row.dnsMode, DnsMode.NONE);
+  this.dnsMode = utils.valueOr(row.dnsMode, levelConfig.defaultDnsMode);
 
   /**
    * Sets current DNS node ID for the router's local network.
@@ -135,14 +138,16 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * Speed (in bits per second) at which messages are processed.
    * @type {number}
    */
-  this.bandwidth = utils.valueOr(deserializeNumber(row.bandwidth), Infinity);
+  this.bandwidth = utils.valueOr(deserializeNumber(row.bandwidth),
+      levelConfig.defaultRouterBandwidth);
 
   /**
    * Amount of data (in bits) that the router queue can hold before it starts
    * dropping packets.
    * @type {number}
    */
-  this.memory = utils.valueOr(deserializeNumber(row.memory), Infinity);
+  this.memory = utils.valueOr(deserializeNumber(row.memory),
+      levelConfig.defaultRouterMemory);
 
   /**
    * Determines a subset of connection and message events that this
