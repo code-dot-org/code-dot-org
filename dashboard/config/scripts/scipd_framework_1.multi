@@ -1,5 +1,9 @@
 name 'sciPD framework 1'
 title 'Multiple Choice - Computational Thinking 1'
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
 
 question 'Computational Thinking was referred to in the video as:'
 wrong 'a way of communicating with a computer'
