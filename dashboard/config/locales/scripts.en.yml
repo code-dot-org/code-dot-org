@@ -737,3 +737,5 @@ en:
           title: UI Tests
           description: Script for test. Careful, don't change level ordering.
           All the Tests: All the Tests
+        sciencePD2:
+          Phase 2 Summer Workshop: Phase 2 Summer Workshop
