@@ -404,6 +404,7 @@ NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
   // Find the first bit of the first packet.  Set the wire to 0/off if
   // there is no first bit.
   this.disableEverything();
+  this.netsim_.animateSetWireState(this.getNextBit_());
   myNode.setSimplexWireState(this.getNextBit_(), function (err) {
     if (err) {
       logger.warn(err.message);

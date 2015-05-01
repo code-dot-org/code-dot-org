@@ -12,7 +12,8 @@
 /* global $ */
 'use strict';
 
-var _ = require('../utils').getLodash();
+var utils = require('../utils');
+var _ = utils.getLodash();
 var i18n = require('../../locale/current/netsim');
 var netsimConstants = require('./netsimConstants');
 
@@ -24,7 +25,7 @@ var EncodingType = netsimConstants.EncodingType;
  * Make a new SVG element, appropriately namespaced, wrapped in a jQuery
  * object for (semi-)easy manipulation.
  * @param {string} type - the tagname for the svg element.
- * @returns {jQuery}
+ * @returns {jQuery} for chaining
  */
 exports.jQuerySvgElement = function (type) {
   var newElement = $(document.createElementNS('http://www.w3.org/2000/svg', type));
@@ -37,12 +38,72 @@ exports.jQuerySvgElement = function (type) {
     var oldClasses = newElement.attr('class');
     if (!oldClasses) {
       newElement.attr('class', className);
-    } else if (!oldClasses.split(/\s+/g).some(function (existingClass) {
-          return existingClass === className;
-        })) {
+    } else if (!newElement.hasClass(className)) {
       newElement.attr('class', oldClasses + ' ' + className);
     }
-    // Return element for chaining
+    return newElement;
+  };
+
+  /**
+   * Override removeClass since jQuery removeClass doesn't work on svg.
+   * Removes the given classname if it exists on the element.
+   * @param {string} className
+   * @returns {jQuery} for chaining
+   */
+  newElement.removeClass = function (className) {
+    var oldClasses = newElement.attr('class');
+    if (oldClasses) {
+      var newClasses = oldClasses
+          .split(/\s+/g)
+          .filter(function (word) {
+            return word !== className;
+          })
+          .join(' ');
+      newElement.attr('class', newClasses);
+    }
+    return newElement;
+  };
+
+  /**
+   * Override hasClass since jQuery hasClass doesn't work on svg.
+   * Checks whether the element has the given class.
+   * @param {string} className
+   * @returns {boolean}
+   */
+  newElement.hasClass = function (className) {
+    var oldClasses = newElement.attr('class');
+    return oldClasses && oldClasses.split(/\s+/g)
+        .some(function (existingClass) {
+          return existingClass === className;
+        });
+  };
+
+  /**
+   * Override toggleClass since jQuery toggleClass doesn't work on svg.
+   *
+   * Two versions:
+   *
+   * toggleClass(className) reverses the state of the class on the element;
+   *   if it has the class it gets removed, if it doesn't have the class it
+   *   gets added.
+   *
+   * toggleClass(className, shouldHaveClass) adds or removes the class on the
+   *   element depending on the value of the second argument.
+   *
+   *
+   * @param {string} className
+   * @param {boolean} [shouldHaveClass]
+   * @returns {jQuery} for chaining
+   */
+  newElement.toggleClass = function (className, shouldHaveClass) {
+    // Default second argument - if not provided, we flip the current state
+    shouldHaveClass = utils.valueOr(shouldHaveClass, !newElement.hasClass(className));
+
+    if (shouldHaveClass) {
+      newElement.addClass(className);
+    } else {
+      newElement.removeClass(className);
+    }
     return newElement;
   };
 
