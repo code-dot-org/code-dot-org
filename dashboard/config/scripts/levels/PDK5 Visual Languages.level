@@ -3,6 +3,12 @@
   "game_id": 29,
   "created_at": "2015-02-24T18:29:20.000Z",
   "properties": {
+    "options": {
+      "css": "unplugged",
+      "hide_submit": true,
+      "skip_sound": true,
+      "answer_line": true
+    },
     "questions": [
       {
         "text": "Why are visual programming languages easier to learn than text-based programming languages?"
@@ -27,7 +33,10 @@
       }
     ],
     "title": "Visual Programming Languages",
-    "content1": "Based on the video you saw before, please answer the question below."
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "9416f399ba630609fe797b93e6acf4e9"
 }]]></config>

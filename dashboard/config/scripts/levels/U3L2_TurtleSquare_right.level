@@ -1,0 +1,48 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-01T18:04:46.557Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": {
+        "params": [
+          ""
+        ]
+      },
+      "turnLeft": {
+        "params": [
+          ""
+        ]
+      },
+      "penUp": null,
+      "penDown": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "true",
+    "slider_speed": "0.1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "app_width": "200",
+    "app_height": "200",
+    "instructions": "Draw a square using only moveForward and turnLeft.  The square should above and to the left of the turtle's starting position.",
+    "callout_json": "[]",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/click-block.gif"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

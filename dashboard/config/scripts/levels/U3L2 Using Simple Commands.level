@@ -39,8 +39,9 @@
     "free_play": "true",
     "app_width": "200",
     "app_height": "200",
-    "instructions": "Draw a 3x3 grid as efficiently as possible using only the moveForward and turnLeft commands.",
-    "callout_json": "[]"
+    "instructions": "Draw a square using only moveForward and turnLeft.  The square should above and to the left of the turtle's starting position.",
+    "callout_json": "[]",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/click-block.gif"
   }
 }]]></config>
   <blocks/>

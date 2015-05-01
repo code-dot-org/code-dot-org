@@ -13,9 +13,9 @@ Feature: Using the Internet Simulator Lobby
     And element "#netsim-shard-select" is hidden
 
     When I enter the netsim name "Fred"
-    And I wait for 2 seconds
+    And I wait until element ".netsim-lobby-panel" is visible
+    And I wait until element ".join-button" is visible
     Then element ".netsim-shard-selection-panel" is hidden
-    And element ".netsim-lobby-panel" is visible
     And there is a router in the lobby
 
     When I press the first ".join-button" element

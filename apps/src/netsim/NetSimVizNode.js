@@ -193,17 +193,22 @@ NetSimVizNode.prototype.resizeAddressBox_ = function () {
  * @private
  */
 NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
-  var box = text[0].getBBox();
-  var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
-  var height = box.height + TEXT_PADDING_Y;
-  var halfWidth = width / 2;
-  var halfHeight = height / 2;
-  rect.attr('x', -halfWidth)
-      .attr('y', -halfHeight)
-      .attr('rx', halfHeight)
-      .attr('ry', halfHeight)
-      .attr('width', width)
-      .attr('height', height);
+  try {
+    var box = text[0].getBBox();
+    var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
+    var height = box.height + TEXT_PADDING_Y;
+    var halfWidth = width / 2;
+    var halfHeight = height / 2;
+    rect.attr('x', -halfWidth)
+        .attr('y', -halfHeight)
+        .attr('rx', halfHeight)
+        .attr('ry', halfHeight)
+        .attr('width', width)
+        .attr('height', height);
+  } catch (e) {
+    // Just allow this to be a no-op if it fails.  In some browsers,
+    // getBBox will throw if the element is not yet in the DOM.
+  }
 };
 
 /**
