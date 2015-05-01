@@ -1,6 +1,9 @@
 name 'sciPD computer models 1'
 title 'Multiple Choice - Stochastic Models'
-
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
 
 question 'What does it mean for a model to be stochastic?'
 right 'It includes some randomness'

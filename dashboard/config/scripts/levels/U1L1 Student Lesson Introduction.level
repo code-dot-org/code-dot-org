@@ -9,7 +9,11 @@
     },
     "title": "title",
     "content1": "description here",
-    "markdown": "## Unit 1: Lesson 1 - Innovation\n\n# Background\n\n \n\n# Lesson\n\n* student activity list\n\n\n# Resources\n\n*\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+    "markdown": "## Unit 1: Lesson 1 - Innovation\n\n# Background\n\n \n\n# Lesson\n\n* student activity list\n\n\n# Resources\n\n*\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "25ca4acbabfacfcfe83061429639107f"
 }]]></config>

@@ -8,6 +8,8 @@ level 'U1L1 Student Lesson Introduction'
 stage 'Using Simple Commands'
 level 'U1L1 Student Lesson Introduction'
 level 'U3L2 Using Simple Commands'
+level 'U3L2_TurtleSquare_right'
+level 'U3L2_Turtle3by3Grid'
 
 stage 'Creating Procedures - Part 1'
 level 'U1L1 Student Lesson Introduction'
