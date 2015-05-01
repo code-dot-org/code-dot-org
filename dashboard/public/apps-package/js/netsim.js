@@ -151,6 +151,13 @@ var NetSim = module.exports = function () {
   this.myDeviceBitRate_ = Infinity;
 
   /**
+   * Currently enabled encoding types.
+   * @type {EncodingType[]}
+   * @private
+   */
+  this.enabledEncodings_ = [];
+
+  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -332,12 +339,14 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
       isMinimized: false,
-      receiveButtonCallback: this.receiveBit_.bind(this)
+      netsim: this,
+      showReadWireButton: true
     });
 
     this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentBitsLog(),
-      isMinimized: false
+      isMinimized: false,
+      netsim: this
     });
   }
 
@@ -652,9 +661,8 @@ NetSim.prototype.disconnectFromRemote = function (onComplete) {
  * node and its connected remote.
  * Used only in simplex & bit-granular mode.
  * @param {!NodeStyleCallback} onComplete
- * @private
  */
-NetSim.prototype.receiveBit_ = function (onComplete) {
+NetSim.prototype.receiveBit = function (onComplete) {
   this.myNode.getLatestMessageOnSimplexWire(onComplete);
 };
 
@@ -668,12 +676,22 @@ NetSim.prototype.receiveBit_ = function (onComplete) {
  * @param {EncodingType[]} newEncodings
  */
 NetSim.prototype.changeEncodings = function (newEncodings) {
+  this.enabledEncodings_ = newEncodings;
   if (this.tabs_) {
     this.tabs_.setEncodings(newEncodings);
   }
   this.receivedMessageLog_.setEncodings(newEncodings);
   this.sentMessageLog_.setEncodings(newEncodings);
   this.sendPanel_.setEncodings(newEncodings);
+  this.visualization_.setEncodings(newEncodings);
+};
+
+/**
+ * Get the currently enabled encoding types.
+ * @returns {EncodingType[]}
+ */
+NetSim.prototype.getEncodings = function () {
+  return this.enabledEncodings_;
 };
 
 /**
@@ -1157,6 +1175,24 @@ NetSim.prototype.expireHeartbeat = function () {
 
   this.myNode.heartbeat_.spoofExpired();
   logger.info("Local node heartbeat is now expired.");
+};
+
+/**
+ * Kick off an animation that shows the local node setting the state of a
+ * simplex wire.
+ * @param {"0"|"1"} newState
+ */
+NetSim.prototype.animateSetWireState = function (newState) {
+  this.visualization_.animateSetWireState(newState);
+};
+
+/**
+ * Kick off an animation that shows the local node reading the state of a
+ * simplex wire.
+ * @param {"0"|"1"} newState
+ */
+NetSim.prototype.animateReadWireState = function (newState) {
+  this.visualization_.animateReadWireState(newState);
 };
 
 },{"../../locale/current/netsim":262,"../ObservableEvent":1,"../RunLoop":3,"../utils":252,"./DashboardUser":126,"./NetSimBitLogPanel":129,"./NetSimLobby":145,"./NetSimLocalClientNode":146,"./NetSimLogPanel":150,"./NetSimLogger":151,"./NetSimRouterNode":169,"./NetSimSendPanel":175,"./NetSimShard":176,"./NetSimShardCleaner":177,"./NetSimStatusPanel":183,"./NetSimTabsComponent":186,"./NetSimVisualization":187,"./controls.html.ejs":193,"./netsimConstants":198,"./netsimUtils":200,"./page.html.ejs":201}],201:[function(require,module,exports){
@@ -1657,7 +1693,9 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
 
   // Update collection of VizWires from source data
   this.updateVizEntitiesOfType_(NetSimVizWire, tableWires, function (wire) {
-    return new NetSimVizWire(wire, this.getEntityByID.bind(this));
+    var newVizWire = new NetSimVizWire(wire, this.getEntityByID.bind(this));
+    newVizWire.setEncodings(this.netsim_.getEncodings());
+    return newVizWire;
   }.bind(this));
 
   // Since the wires table determines simulated connectivity, we trigger a
@@ -1929,6 +1967,108 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   });
 };
 
+/**
+ * Update encoding-view setting across the visualization.
+ *
+ * @param {EncodingType[]} newEncodings
+ */
+NetSimVisualization.prototype.setEncodings = function (newEncodings) {
+  this.entities_.forEach(function (vizEntity) {
+    if (vizEntity instanceof NetSimVizWire) {
+      vizEntity.setEncodings(newEncodings);
+    }
+  });
+};
+
+/**
+ * Kick off an animation that will show the state of the simplex wire being
+ * set by the local node.
+ * @param {"0"|"1"} newState
+ */
+NetSimVisualization.prototype.animateSetWireState = function (newState) {
+  // Assumptions - we are talking about the wire between the local node
+  // and its remote partner.
+  // This only gets used in peer-to-peer mode, so there should be an incoming
+  // wire too, which we should hide.
+  // This is a no-op if no such wire exists.
+  // We can stop any previous animation on the wire if this is called
+
+  var vizWire = this.getVizWireToRemote();
+  var incomingWire = this.getVizWireFromRemote();
+  if (!(vizWire && incomingWire)) {
+    return;
+  }
+
+  // Hide the incoming wire because we are in simplex mode.
+  incomingWire.hide();
+  // Animate the outgoing wire
+  vizWire.animateSetState(newState);
+};
+
+/**
+ * Kick off an animation that will show the state of the simplex wire being
+ * read by the local node.
+ * @param {"0"|"1"} newState
+ */
+NetSimVisualization.prototype.animateReadWireState = function (newState) {
+  // Assumes we are in simplex P2P mode and talking about the wire between
+  // the local node and its remote partner.  This is a no-op if no such wire
+  // exists.  We can stop any previous animation on the wire if this is called.
+
+  var vizWire = this.getVizWireToRemote();
+  var incomingWire = this.getVizWireFromRemote();
+  if (!(vizWire && incomingWire)) {
+    return;
+  }
+
+  // Hide the incoming wire because we are in simplex mode.
+  incomingWire.hide();
+  // Animate the outgoing wire
+  vizWire.animateReadState(newState);
+};
+
+/**
+ * Find the outgoing wire from the local node to a remote node.
+ * @returns {NetSimVizWire|null} null if no outgoing connection is established.
+ */
+NetSimVisualization.prototype.getVizWireToRemote = function () {
+  if (!this.localNode) {
+    return null;
+  }
+
+  var outgoingWires = this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizWire &&
+        entity.localVizNode === this.localNode;
+  }, this);
+
+  if (outgoingWires.length === 0) {
+    return null;
+  }
+
+  return outgoingWires[0];
+};
+
+/**
+ * Find the incoming wire from a remote node to the local node.
+ * @returns {NetSimVizWire|null} null if no incoming connection is established.
+ */
+NetSimVisualization.prototype.getVizWireFromRemote = function () {
+  if (!this.localNode) {
+    return null;
+  }
+
+  var incomingWires = this.entities_.filter(function (entity) {
+    return entity instanceof NetSimVizWire &&
+        entity.remoteVizNode === this.localNode;
+  }, this);
+
+  if (incomingWires.length === 0) {
+    return null;
+  }
+
+  return incomingWires[0];
+};
+
 },{"../utils":252,"./NetSimVizNode":189,"./NetSimVizWire":190,"./NetSimWire":191,"./netsimNodeFactory":199,"./tweens":203}],190:[function(require,module,exports){
 /* jshint
  funcscope: true,
@@ -1946,6 +2086,20 @@ require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizEntity = require('./NetSimVizEntity');
 var NetSimVizNode = require('./NetSimVizNode');
+var tweens = require('./tweens');
+var dataConverters = require('./dataConverters');
+var netsimConstants = require('./netsimConstants');
+
+var EncodingType = netsimConstants.EncodingType;
+
+var binaryToAB = dataConverters.binaryToAB;
+
+/**
+ * How far the flying label should rest above the wire.
+ * @type {number}
+ * @const
+ */
+var TEXT_FINAL_VERTICAL_OFFSET = -10;
 
 /**
  *
@@ -1959,11 +2113,52 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
   NetSimVizEntity.call(this, sourceWire);
 
   var root = this.getRoot();
-
   root.addClass('viz-wire');
 
+  /**
+   * @type {jQuery} wrapped around a SVGPathElement
+   * @private
+   */
   this.line_ = jQuerySvgElement('path')
       .appendTo(root);
+
+  /**
+   * @type {jQuery} wrapped around a SVGTextElement
+   * @private
+   */
+  this.questionMark_ = jQuerySvgElement('text')
+      .text('?')
+      .addClass('question-mark')
+      .appendTo(root);
+
+  /**
+   * @type {jQuery} wrapped around a SVGTextElement
+   * @private
+   */
+  this.text_ = jQuerySvgElement('text')
+      .addClass('state-label')
+      .appendTo(root);
+
+  /**
+   * X-coordinate of text label, for animation.
+   * @type {number}
+   * @private
+   */
+  this.textPosX_ = 0;
+
+  /**
+   * Y-coordinate of text label, for animation.
+   * @type {number}
+   * @private
+   */
+  this.textPosY_ = 0;
+
+  /**
+   * Enabled encoding types.
+   * @type {EncodingType[]}
+   * @private
+   */
+  this.encodings_ = [];
 
   /**
    * Bound getEntityByID method from vizualization controller.
@@ -1980,6 +2175,10 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
 };
 NetSimVizWire.inherits(NetSimVizEntity);
 
+/**
+ * Configuring a wire means looking up the viz nodes that will be its endpoints.
+ * @param {NetSimWire} sourceWire
+ */
 NetSimVizWire.prototype.configureFrom = function (sourceWire) {
   this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
   this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
@@ -1993,15 +2192,35 @@ NetSimVizWire.prototype.configureFrom = function (sourceWire) {
   }
 };
 
+/**
+ * Update path data for wire.
+ */
 NetSimVizWire.prototype.render = function () {
   NetSimVizWire.superPrototype.render.call(this);
 
   var pathData = 'M 0 0';
+  var wireCenter = { x: 0, y: 0 };
   if (this.localVizNode && this.remoteVizNode) {
     pathData = 'M ' + this.localVizNode.posX + ' ' + this.localVizNode.posY +
         ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
+    wireCenter = this.getWireCenterPosition();
   }
   this.line_.attr('d', pathData);
+  this.text_
+      .attr('x', this.textPosX_)
+      .attr('y', this.textPosY_);
+  this.questionMark_
+      .attr('x', wireCenter.x)
+      .attr('y', wireCenter.y);
+
+};
+
+/**
+ * Hide this wire - used to hide the incoming wire when we're trying to show
+ * simplex mode.
+ */
+NetSimVizWire.prototype.hide = function () {
+  this.getRoot().addClass('hidden-wire');
 };
 
 /**
@@ -2015,7 +2234,157 @@ NetSimVizWire.prototype.kill = function () {
   this.remoteVizNode = null;
 };
 
-},{"../utils":252,"./NetSimVizEntity":188,"./NetSimVizNode":189,"./netsimUtils":200}],189:[function(require,module,exports){
+/**
+ * Update encoding-view settings.  Determines how bit sets/reads are
+ * displayed when animating above the wire.
+ *
+ * @param {EncodingType[]} newEncodings
+ */
+NetSimVizWire.prototype.setEncodings = function (newEncodings) {
+  this.encodings_ = newEncodings;
+};
+
+/**
+ * Kick off an animation of the wire state being set by the local viznode.
+ * @param {"0"|"1"} newState
+ */
+NetSimVizWire.prototype.animateSetState = function (newState) {
+  if (!(this.localVizNode && this.remoteVizNode)) {
+    return;
+  }
+
+  var flyOutMs = 300;
+  var holdPositionMs = 300;
+
+  this.stopAllAnimation();
+  this.setWireClasses_(newState);
+  this.text_.text(this.getDisplayBit_(newState));
+  this.snapTextToPosition(this.getLocalNodePosition());
+  this.tweenTextToPosition(this.getWireCenterPosition(), flyOutMs,
+      tweens.easeOutQuad);
+  this.doAfterDelay(flyOutMs + holdPositionMs, function () {
+    this.setWireClasses_('unknown');
+  }.bind(this));
+};
+
+/**
+ * Kick off an animation of the wire state being read by the local viznode.
+ * @param {"0"|"1"} newState
+ */
+NetSimVizWire.prototype.animateReadState = function (newState) {
+  if (!(this.localVizNode && this.remoteVizNode)) {
+    return;
+  }
+
+  var holdPositionMs = 300;
+  var flyToNodeMs = 300;
+
+  this.stopAllAnimation();
+  this.setWireClasses_(newState);
+  this.text_.text(this.getDisplayBit_(newState));
+  this.snapTextToPosition(this.getWireCenterPosition());
+  this.doAfterDelay(holdPositionMs, function () {
+    this.tweenTextToPosition(this.getLocalNodePosition(), flyToNodeMs,
+        tweens.easeOutQuad);
+    this.setWireClasses_('unknown');
+  }.bind(this));
+};
+
+/**
+ * Adds/removes classes from the SVG root according to the given wire state.
+ * Passing anything other than "1" or "0" will put the wire in an "unknown"
+ * state, which begins a CSS transition fade back to gray.
+ * @param {"0"|"1"|*} newState
+ * @private
+ */
+NetSimVizWire.prototype.setWireClasses_ = function (newState) {
+  var stateOff = (newState === '0');
+  var stateOn = (!stateOff && newState === '1');
+  var stateUnknown = (!stateOff && !stateOn);
+
+  this.getRoot().toggleClass('state-on', stateOn);
+  this.getRoot().toggleClass('state-off', stateOff);
+  this.getRoot().toggleClass('state-unknown', stateUnknown);
+};
+
+/**
+ * Get an appropriate "display bit" to show above the wire, given the
+ * current enabled encodings (should match the "set wire" button label)
+ * @param {"0"|"1"} wireState
+ * @returns {string} a display bit appropriate to the enabled encodings.
+ * @private
+ */
+NetSimVizWire.prototype.getDisplayBit_ = function (wireState) {
+  if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
+      !this.isEncodingEnabled_(EncodingType.BINARY)) {
+    wireState = binaryToAB(wireState);
+  }
+  return wireState;
+};
+
+/**
+ * Check whether the given encoding is currently displayed by the panel.
+ * @param {EncodingType} queryEncoding
+ * @returns {boolean}
+ * @private
+ */
+NetSimVizWire.prototype.isEncodingEnabled_ = function (queryEncoding) {
+  return this.encodings_.some(function (enabledEncoding) {
+    return enabledEncoding === queryEncoding;
+  });
+};
+
+/**
+ * Creates an animated motion from the text's current position to the
+ * given coordinates.
+ * @param {{x:number, y:number}} destination
+ * @param {number} [duration=600] in milliseconds
+ * @param {TweenFunction} [tweenFunction=linear]
+ */
+NetSimVizWire.prototype.tweenTextToPosition = function (destination, duration,
+    tweenFunction) {
+  if (duration > 0) {
+    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosX_', destination.x,
+        duration, tweenFunction));
+    this.tweens_.push(new tweens.TweenValueTo(this, 'textPosY_', destination.y,
+        duration, tweenFunction));
+  } else {
+    this.textPosX_ = destination.x;
+    this.textPosY_ = destination.y;
+  }
+};
+
+/**
+ * Snaps the text to the given position.
+ * @param {{x:number, y:number}} destination
+ */
+NetSimVizWire.prototype.snapTextToPosition = function (destination) {
+  this.tweenTextToPosition(destination, 0);
+};
+
+/**
+ * @returns {{x:number, y:number}}
+ */
+NetSimVizWire.prototype.getLocalNodePosition = function () {
+  return {
+    x: this.localVizNode.posX,
+    y: this.localVizNode.posY
+  };
+};
+
+/**
+ * @returns {{x:number, y:number}}
+ */
+NetSimVizWire.prototype.getWireCenterPosition = function () {
+  return {
+    x: (this.remoteVizNode.posX - this.localVizNode.posX) / 2 +
+    this.localVizNode.posX,
+    y: (this.remoteVizNode.posY - this.remoteVizNode.posY) / 2 +
+    this.localVizNode.posY + TEXT_FINAL_VERTICAL_OFFSET
+  };
+};
+
+},{"../utils":252,"./NetSimVizEntity":188,"./NetSimVizNode":189,"./dataConverters":194,"./netsimConstants":198,"./netsimUtils":200,"./tweens":203}],189:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2211,17 +2580,22 @@ NetSimVizNode.prototype.resizeAddressBox_ = function () {
  * @private
  */
 NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
-  var box = text[0].getBBox();
-  var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
-  var height = box.height + TEXT_PADDING_Y;
-  var halfWidth = width / 2;
-  var halfHeight = height / 2;
-  rect.attr('x', -halfWidth)
-      .attr('y', -halfHeight)
-      .attr('rx', halfHeight)
-      .attr('ry', halfHeight)
-      .attr('width', width)
-      .attr('height', height);
+  try {
+    var box = text[0].getBBox();
+    var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
+    var height = box.height + TEXT_PADDING_Y;
+    var halfWidth = width / 2;
+    var halfHeight = height / 2;
+    rect.attr('x', -halfWidth)
+        .attr('y', -halfHeight)
+        .attr('rx', halfHeight)
+        .attr('ry', halfHeight)
+        .attr('width', width)
+        .attr('height', height);
+  } catch (e) {
+    // Just allow this to be a no-op if it fails.  In some browsers,
+    // getBBox will throw if the element is not yet in the DOM.
+  }
 };
 
 /**
@@ -2512,6 +2886,14 @@ NetSimVizEntity.prototype.tweenToScale = function (newScale, duration,
   }
 };
 
+NetSimVizEntity.prototype.doAfterDelay = function (delay, callback) {
+  if (delay > 0) {
+    this.tweens_.push(new tweens.DoAfterDelay(this, delay, callback));
+  } else {
+    callback();
+  }
+};
+
 /**
  * Remove (stop) all active tweens that control the given property on this
  * visualization entity.
@@ -2727,6 +3109,62 @@ exports.TweenValueTo.prototype.tick = function (clock) {
     this.isFinished = true;
   }
 };
+
+exports.DoAfterDelay = function (target, duration, callback) {
+  /**
+   * Will be set to TRUE when tween is completed.
+   * @type {boolean}
+   */
+  this.isFinished = false;
+
+
+  /**
+   * Will be set on our first tick.
+   * @type {number}
+   * @private
+   */
+  this.startTime_ = undefined;
+
+  /**
+   * @type {Object}
+   */
+  this.target = target;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.propertyName = null;
+
+  /**
+   * Duration of tween in milliseconds
+   * @type {number}
+   * @private
+   */
+  this.duration_ = duration;
+
+  /**
+   * Function to call when the duration has elapsed.
+   * @type {function}
+   */
+  this.callback_ = callback;
+};
+
+/**
+ * @param {RunLoop.clock} clock
+ */
+exports.DoAfterDelay.prototype.tick = function (clock) {
+  if (this.startTime_ === undefined) {
+    this.startTime_ = clock.time;
+  }
+
+  var timeSinceStart = clock.time - this.startTime_;
+  if (timeSinceStart >= this.duration_) {
+    this.callback_();
+    this.isFinished = true;
+  }
+};
+
 },{"../utils":252}],186:[function(require,module,exports){
 /* jshint
  funcscope: true,
@@ -4505,6 +4943,7 @@ NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
   // Find the first bit of the first packet.  Set the wire to 0/off if
   // there is no first bit.
   this.disableEverything();
+  this.netsim_.animateSetWireState(this.getNextBit_());
   myNode.setSimplexWireState(this.getNextBit_(), function (err) {
     if (err) {
       logger.warn(err.message);
@@ -12577,7 +13016,8 @@ var logger = require('./NetSimLogger').getSingleton();
  * @param {Object} options
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
- * @param {function} [options.receiveButtonCallback]
+ * @param {boolean} [options.showReadWireButton] defaults to FALSE
+ * @param {NetSim} options.netsim
  * @constructor
  * @augments NetSimPanel
  * @implements INetSimLogPanel
@@ -12612,11 +13052,19 @@ var NetSimBitLogPanel = module.exports = function (rootDiv, options) {
   this.logTitle_ = options.logTitle;
 
   /**
-   * Method to call when the receive button is pressed.
-   * @type {function}
+   * Reference to the top-level NetSim controller for reading bits and
+   * triggering animations.
+   * @type {NetSim}
    * @private
    */
-  this.receiveButtonCallback_ = options.receiveButtonCallback;
+  this.netsim_ = options.netsim;
+
+  /**
+   * Whether this log should have a "Read Wire" button.
+   * @type {boolean}
+   * @private
+   */
+  this.showReadWireButton_ = options.showReadWireButton;
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -12636,16 +13084,14 @@ NetSimBitLogPanel.prototype.render = function () {
     binary: this.binary_,
     enabledEncodings: this.encodings_,
     chunkSize: this.chunkSize_,
-    showReadWireButton: (this.receiveButtonCallback_ !== undefined)
+    showReadWireButton: this.showReadWireButton_
   }));
   this.getBody().html(newMarkup);
   NetSimEncodingControl.hideRowsByEncoding(this.getBody(), this.encodings_);
 
-  // If we have a receive callback, add a receive button
-  if (this.receiveButtonCallback_) {
-    this.getBody().find('#read-wire-button')
-        .click(this.onReceiveButtonPress_.bind(this));
-  }
+
+  this.getBody().find('#read-wire-button')
+      .click(this.onReceiveButtonPress_.bind(this));
 
   // Add a clear button to the panel header
   this.addButton(i18n.clear(), this.onClearButtonPress_.bind(this));
@@ -12672,20 +13118,22 @@ NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function (jQueryEvent) {
   }
 
   thisButton.attr('disabled', 'disabled');
-  this.receiveButtonCallback_(function (err, message) {
+  this.netsim_.receiveBit(function (err, message) {
     if (err) {
       logger.warn("Error reading wire state: " + err.message);
       thisButton.removeAttr('disabled');
       return;
     }
 
+    // A successful fetch with a null message means there's nothing
+    // on the wire.  We should log its default state: off/zero
+    var receivedBit = '0';
     if (message) {
-      this.log(message.payload);
-    } else {
-      // A successful fetch with a null message means there's nothing
-      // on the wire.  We should log its default state: off/zero
-      this.log('0');
+      receivedBit = message.payload;
     }
+
+    this.log(receivedBit);
+    this.netsim_.animateReadWireState(receivedBit);
     thisButton.removeAttr('disabled');
   }.bind(this));
 };
@@ -13527,7 +13975,8 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
 /* global $ */
 'use strict';
 
-var _ = require('../utils').getLodash();
+var utils = require('../utils');
+var _ = utils.getLodash();
 var i18n = require('../../locale/current/netsim');
 var netsimConstants = require('./netsimConstants');
 
@@ -13539,7 +13988,7 @@ var EncodingType = netsimConstants.EncodingType;
  * Make a new SVG element, appropriately namespaced, wrapped in a jQuery
  * object for (semi-)easy manipulation.
  * @param {string} type - the tagname for the svg element.
- * @returns {jQuery}
+ * @returns {jQuery} for chaining
  */
 exports.jQuerySvgElement = function (type) {
   var newElement = $(document.createElementNS('http://www.w3.org/2000/svg', type));
@@ -13552,12 +14001,72 @@ exports.jQuerySvgElement = function (type) {
     var oldClasses = newElement.attr('class');
     if (!oldClasses) {
       newElement.attr('class', className);
-    } else if (!oldClasses.split(/\s+/g).some(function (existingClass) {
-          return existingClass === className;
-        })) {
+    } else if (!newElement.hasClass(className)) {
       newElement.attr('class', oldClasses + ' ' + className);
     }
-    // Return element for chaining
+    return newElement;
+  };
+
+  /**
+   * Override removeClass since jQuery removeClass doesn't work on svg.
+   * Removes the given classname if it exists on the element.
+   * @param {string} className
+   * @returns {jQuery} for chaining
+   */
+  newElement.removeClass = function (className) {
+    var oldClasses = newElement.attr('class');
+    if (oldClasses) {
+      var newClasses = oldClasses
+          .split(/\s+/g)
+          .filter(function (word) {
+            return word !== className;
+          })
+          .join(' ');
+      newElement.attr('class', newClasses);
+    }
+    return newElement;
+  };
+
+  /**
+   * Override hasClass since jQuery hasClass doesn't work on svg.
+   * Checks whether the element has the given class.
+   * @param {string} className
+   * @returns {boolean}
+   */
+  newElement.hasClass = function (className) {
+    var oldClasses = newElement.attr('class');
+    return oldClasses && oldClasses.split(/\s+/g)
+        .some(function (existingClass) {
+          return existingClass === className;
+        });
+  };
+
+  /**
+   * Override toggleClass since jQuery toggleClass doesn't work on svg.
+   *
+   * Two versions:
+   *
+   * toggleClass(className) reverses the state of the class on the element;
+   *   if it has the class it gets removed, if it doesn't have the class it
+   *   gets added.
+   *
+   * toggleClass(className, shouldHaveClass) adds or removes the class on the
+   *   element depending on the value of the second argument.
+   *
+   *
+   * @param {string} className
+   * @param {boolean} [shouldHaveClass]
+   * @returns {jQuery} for chaining
+   */
+  newElement.toggleClass = function (className, shouldHaveClass) {
+    // Default second argument - if not provided, we flip the current state
+    shouldHaveClass = utils.valueOr(shouldHaveClass, !newElement.hasClass(className));
+
+    if (shouldHaveClass) {
+      newElement.addClass(className);
+    } else {
+      newElement.removeClass(className);
+    }
     return newElement;
   };
 

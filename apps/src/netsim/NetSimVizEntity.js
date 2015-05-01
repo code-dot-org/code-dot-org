@@ -207,6 +207,14 @@ NetSimVizEntity.prototype.tweenToScale = function (newScale, duration,
   }
 };
 
+NetSimVizEntity.prototype.doAfterDelay = function (delay, callback) {
+  if (delay > 0) {
+    this.tweens_.push(new tweens.DoAfterDelay(this, delay, callback));
+  } else {
+    callback();
+  }
+};
+
 /**
  * Remove (stop) all active tweens that control the given property on this
  * visualization entity.
