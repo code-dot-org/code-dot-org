@@ -146,7 +146,7 @@ levels.custom = {
   clientInitialPacketHeader: [],
 
   // Visualization configuration
-  showHostnameInGraph: true,
+  showHostnameInGraph: false,
 
   // Send widget configuration
   showAddPacketButton: false,
