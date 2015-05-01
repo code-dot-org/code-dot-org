@@ -67,7 +67,13 @@ end
 
 When /^I press the first "([^"]*)" element$/ do |selector|
   @element = @browser.find_element(:css, selector)
-  @element.click
+  begin
+    @element.click
+  rescue
+    # Single retry to compensate for element changing between find and click
+    @element = @browser.find_element(:css, selector)
+    @element.click
+  end
 end
 
 When /^I press the "([^"]*)" button$/ do |buttonText|

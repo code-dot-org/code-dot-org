@@ -412,7 +412,12 @@ StudioApp.prototype.init = function(config) {
           Blockly.mainBlockSpace.clear();
           this.setStartBlocks_(config, false);
         } else {
-          this.editor.setValue(config.level.startBlocks || '');
+          var resetValue = '';
+          if (config.level.startBlocks) {
+            // Don't pass CRLF pairs to droplet until they fix CR handling:
+            resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
+          }
+          this.editor.setValue(resetValue);
         }
       }).bind(this));
     }).bind(this));
@@ -766,8 +771,6 @@ StudioApp.prototype.onResize = function() {
   // Droplet toolbox width varies as the window size changes, so refresh:
   this.resizeToolboxHeader();
 };
-
-
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
@@ -1308,7 +1311,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     this.resizeToolboxHeader();
 
     if (options.startBlocks) {
-      this.editor.setValue(options.startBlocks);
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
     }
 
     if (options.afterEditorReady) {

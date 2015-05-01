@@ -9890,7 +9890,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       };
 
       JavaScriptParser.prototype.mark = function(indentDepth, node, depth, bounds) {
-        var argument, block, declaration, element, expression, i, j, k, known, l, len, len1, len10, len2, len3, len4, len5, len6, len7, len8, len9, m, n, o, p, param, prefix, property, q, r, ref, ref1, ref10, ref11, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results10, results2, results3, results4, results5, results6, results7, results8, results9, s, statement, switchCase, t;
+        var argument, block, declaration, element, expression, i, j, k, known, l, len, len1, len10, len2, len3, len4, len5, len6, len7, len8, len9, m, n, o, p, param, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results10, results2, results3, results4, results5, results6, results7, results8, results9, s, statement, switchCase, t;
         switch (node.type) {
           case 'Program':
             ref = node.body;
@@ -10032,7 +10032,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             results5 = [];
             for (i = o = 0, len5 = ref5.length; o < len5; i = ++o) {
               argument = ref5[i];
-              results5.push(this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, known != null ? (ref6 = known.dropdown) != null ? ref6[i] : void 0 : void 0));
+              results5.push(this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref6 = known.fn) != null ? (ref7 = ref6.dropdown) != null ? ref7[i] : void 0 : void 0 : void 0));
             }
             return results5;
             break;
@@ -10045,10 +10045,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             return this.jsSocketAndMark(indentDepth, node.argument, depth + 1);
           case 'VariableDeclaration':
             this.jsBlock(node, depth, bounds);
-            ref7 = node.declarations;
+            ref8 = node.declarations;
             results6 = [];
-            for (p = 0, len6 = ref7.length; p < len6; p++) {
-              declaration = ref7[p];
+            for (p = 0, len6 = ref8.length; p < len6; p++) {
+              declaration = ref8[p];
               results6.push(this.mark(indentDepth, declaration, depth + 1));
             }
             return results6;
@@ -10070,10 +10070,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             return this.jsSocketAndMark(indentDepth, node.test, depth + 1);
           case 'ObjectExpression':
             this.jsBlock(node, depth, bounds);
-            ref8 = node.properties;
+            ref9 = node.properties;
             results7 = [];
-            for (q = 0, len7 = ref8.length; q < len7; q++) {
-              property = ref8[q];
+            for (q = 0, len7 = ref9.length; q < len7; q++) {
+              property = ref9[q];
               this.jsSocketAndMark(indentDepth, property.key, depth + 1);
               results7.push(this.jsSocketAndMark(indentDepth, property.value, depth + 1));
             }
@@ -10082,10 +10082,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           case 'SwitchStatement':
             this.jsBlock(node, depth, bounds);
             this.jsSocketAndMark(indentDepth, node.discriminant, depth + 1);
-            ref9 = node.cases;
+            ref10 = node.cases;
             results8 = [];
-            for (r = 0, len8 = ref9.length; r < len8; r++) {
-              switchCase = ref9[r];
+            for (r = 0, len8 = ref10.length; r < len8; r++) {
+              switchCase = ref10[r];
               results8.push(this.mark(indentDepth, switchCase, depth + 1, null));
             }
             return results8;
@@ -10103,10 +10103,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
                 depth: depth + 1,
                 prefix: prefix
               });
-              ref10 = node.consequent;
+              ref11 = node.consequent;
               results9 = [];
-              for (s = 0, len9 = ref10.length; s < len9; s++) {
-                statement = ref10[s];
+              for (s = 0, len9 = ref11.length; s < len9; s++) {
+                statement = ref11[s];
                 results9.push(this.mark(indentDepth, statement, depth + 2));
               }
               return results9;
@@ -10130,10 +10130,10 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
             break;
           case 'ArrayExpression':
             this.jsBlock(node, depth, bounds);
-            ref11 = node.elements;
+            ref12 = node.elements;
             results10 = [];
-            for (t = 0, len10 = ref11.length; t < len10; t++) {
-              element = ref11[t];
+            for (t = 0, len10 = ref12.length; t < len10; t++) {
+              element = ref12[t];
               if (element != null) {
                 results10.push(this.jsSocketAndMark(indentDepth, element, depth + 1, null));
               } else {
@@ -10160,14 +10160,15 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
         });
       };
 
-      JavaScriptParser.prototype.jsSocketAndMark = function(indentDepth, node, depth, precedence, bounds, classes) {
+      JavaScriptParser.prototype.jsSocketAndMark = function(indentDepth, node, depth, precedence, bounds, classes, dropdown) {
         if (node.type !== 'BlockStatement') {
           this.addSocket({
             bounds: bounds != null ? bounds : this.getBounds(node),
             depth: depth,
             precedence: precedence,
             classes: classes != null ? classes : [],
-            accepts: this.getAcceptsRule(node)
+            accepts: this.getAcceptsRule(node),
+            dropdown: dropdown
           });
         }
         return this.mark(indentDepth, node, depth + 1, bounds);
@@ -12054,8 +12055,9 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
           fn1(el);
         }
         location = this.view.getViewNodeFor(this.textFocus).bounds[0];
-        this.dropdownElement.style.top = location.y + this.fontSize - this.scrollOffsets.main.y;
-        return this.dropdownElement.style.left = location.x - this.scrollOffsets.main.x + this.dropletElement.offsetLeft + this.mainCanvas.offsetLeft;
+        this.dropdownElement.style.top = location.y + this.fontSize - this.scrollOffsets.main.y + 'px';
+        this.dropdownElement.style.left = location.x - this.scrollOffsets.main.x + this.dropletElement.offsetLeft + this.mainCanvas.offsetLeft + 'px';
+        return this.dropdownElement.style.minWidth = location.width + 'px';
       }
     };
     Editor.prototype.hideDropdown = function() {

@@ -7,7 +7,7 @@
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
 
   .answers{style: question_content_blank ? 'width: 100%' : ''}
-    - if data['options']['answer_line']
+    - if data['options'].try(:[], 'answer_line')
       :css
         .btn {
           display: table;
@@ -19,7 +19,7 @@
     %br/
     %br/
 
-    - unless data['options']['hide_submit']
+    - unless data['options'].try(:[], 'hide_submit')
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')
@@ -41,9 +41,7 @@
 
       .clear
 
-      .buttons
-        %a.btn.btn-large.btn-primary.next-stage.submitButton
-          =t('submit')
+      = render partial: 'levels/dialog', locals: {app: app, data: data}
 
   .clear
 
@@ -52,58 +50,18 @@
   %br/
 
   .clear
-
-  %div{style: 'display: none;'}
-    #error-dialogcontent
-      .modal-content
-        %p.dialog-title
-          =t('multi.wrong_title')
-        %p
-          =t('multi.wrong_body')
-        .farSide
-          %button#ok-button.secondary
-            =t('dialog.ok')
-
-    #pre-dialogcontent
-      - if data['pre_image']
-        .modal-image{style: 'margin-top: 0px;'}
-          != multi_t(data['pre_image'])
-      .modal-content
-        - if data['pre_image'].blank?
-          - adjust_layout_class = 'unindentContent'
-        - else
-          - adjust_layout_class = ''
-        %p.dialog-title{class: adjust_layout_class}
-          != multi_t(data['pre_title']) if data['pre_title']
-        %p{class: adjust_layout_class}
-          != multi_t(data['pre_body']) if data['pre_body']
-        - if data['pre_ani']
-          .aniGif.example-image{style: 'overflow: hidden;'}
-            != multi_t(data['pre_ani'])
-        .farSide
-          %button#ok-button.secondary
-            =t('dialog.ok')
-
-    #success-dialogcontent
-      .modal-content
-        %p.dialog-title
-          =t('multi.correct_title')
-        %p
-          =t('multi.correct_body')
-        .farSide
-          %button#ok-button.secondary
-            =t('dialog.ok')
 
 = render partial: 'levels/common_audio'
 
 :javascript
 
   var selection = "none";   // "none", "wrong", "right"
-  var selectionIndex = #{@last_attempt || -1};
+  var selectionIndex = #{ @last_attempt || -1};
 
-  var buttonEnabled = true;  // avoid multiple simultaneous submissions
-  var dialogType = null;
-  var adjustedScroll = false;
+  function enableButton(enable)
+  {
+    $('.submitButton').attr('disabled', !enable);
+  }
 
   function choiceClicked(radioButton)
   {
@@ -152,122 +110,18 @@
       selection = correctChoice ? "right" : "wrong";
       enableButton(true);
     }
-
-    if ("#{data['pre_title']}" != "")
-    {
-      setTimeout(function() {
-        showDialog("pre");
-        }, 1000);
-    }
   });
 
-  function enableButton(enable)
-  {
-    buttonEnabled = enable;
-
-    if (enable)
-      $('.submitButton').removeClass("disabled");
-    else
-      $('.submitButton').addClass("disabled");
-  }
-
-  function dialogHidden()
-  {
-    if (dialogType == "success" && lastServerResponse.nextRedirect)
-    {
-      window.location.href = lastServerResponse.nextRedirect;
-    }
-
-    if (dialogType == "error")
-    {
-      adjustScroll();
+  function getResult() {
+    return {
+      "response": selectionIndex,
+      "result": (selection == "right")
     }
   }
 
-  function showDialog(type)
-  {
-    dialogType = type;
-
-    var dialog = new Dialog({ body: "", onHidden: dialogHidden });
-
-    // use our prefabricated dialog content
-    $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
-
-    // clicking the okay button in the dialog box dismisses it
-    $(".modal-body #ok-button").click(function() {
-      dialog.hide();
-    });
-
-    dialog.show();
-  }
-
-  function adjustScroll()
-  {
-    if (adjustedScroll)
-      return;
-
-    var win = $(window);
-    var el = $('.mainblock');
-    var winPos = win.scrollTop() + win.height();
-    var elPos = el.offset().top + el.height() - 10;
-
-    if (winPos < elPos)
-    {
-      $('html, body').animate({
-        scrollTop: $(".submitButton:first").offset().top - 10
-      }, 1000);
-    }
-
-    adjustedScroll = true;
-  }
-
-  $('.submitButton').click(function()
-  {
-    if (buttonEnabled)
-    {
-      enableButton(false);
-
-      if (selection == "wrong")
-      {
-        showDialog("error");
-        $("#radio_" + selectionIndex).hide();
-        $("#cross_" + selectionIndex).show();
-        CDOSounds.play('failure');
-      } else {
-        CDOSounds.play('success');
-      }
-
-      if (selection != "none")
-      {
-        sendReport({
-          fallbackResponse: '#{@fallback_response.to_json}',
-          callback: '#{@callback}',
-          app: 'multi',
-          level: '#{@level.level_num}',
-          result: selection == "right",
-          testResult: selection == "right" ? 100 : 0,
-          program: selectionIndex,
-          onComplete: function()
-          {
-            if (!lastServerResponse.nextRedirect)
-            {
-              enableButton(true);
-            }
-
-            if (lastServerResponse.videoInfo)
-            {
-              showVideoDialog(lastServerResponse.videoInfo);
-            }
-            else if (lastServerResponse.nextRedirect)
-            {
-              showDialog("success");
-            }
-          }
-        });
-      }
-      else
-      {
-        enableButton(true);
-      }
+  $('.submitButton').click(function() {
+    if (selection == "wrong") {
+      $("#radio_" + selectionIndex).hide();
+      $("#cross_" + selectionIndex).show();
     }
   });

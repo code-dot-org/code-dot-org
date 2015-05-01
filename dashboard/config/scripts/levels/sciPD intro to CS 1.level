@@ -3,6 +3,12 @@
   "game_id": 29,
   "created_at": "2015-04-28T18:03:08.000Z",
   "properties": {
+    "options": {
+      "css": "unplugged",
+      "hide_submit": true,
+      "skip_sound": true,
+      "answer_line": true
+    },
     "questions": [
       {
         "text": "Computer modeling is used to study problems that are:"
@@ -26,7 +32,11 @@
         "correct": true
       }
     ],
-    "title": "Intro to Computational Science"
+    "title": "Intro to Computational Science",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "b838376cc3f24f8633575b0cd467fa44"
 }]]></config>

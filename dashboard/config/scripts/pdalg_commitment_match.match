@@ -2,6 +2,8 @@ name 'PDAlg commitment match'
 title 'Program Commitment Matching Question'
 description 'Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
 height 60
+skip_sound true
+hide_submit true
 
 question 'Phase 1'
 answer 'Online Introduction: 2 hours online'
