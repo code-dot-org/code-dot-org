@@ -1,4 +1,9 @@
 name 'sciPD attendance commitment'
+hide_submit true
+success_title 'Awesome!'
+success_body 'Thanks for your response'
+skip_sound true
+answer_line true
 
 question 'Please confirm that you have read the Attendance Policy and will work to follow it.'
 right 'I have read and agree to the Attendance Policy'

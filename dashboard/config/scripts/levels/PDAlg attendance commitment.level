@@ -3,6 +3,12 @@
   "game_id": 29,
   "created_at": "2015-04-21T17:29:51.000Z",
   "properties": {
+    "options": {
+      "skip_sound": true,
+      "hide_submit": true,
+      "success_title": "Confirmed!",
+      "success_body": "Thank you for accepting the attendance policy."
+    },
     "questions": [
       {
         "text": "Please confirm that you have read the Attendance Policy and will work to follow it."
