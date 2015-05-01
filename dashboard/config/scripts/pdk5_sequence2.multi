@@ -1,5 +1,8 @@
 name 'PDK5 Sequence2'
 title 'More Sequencing'
+css 'unplugged'
+hide_submit true
+skip_sound true
 
 question 'The grey rectangle to the left of the workspace is called the'
 right 'toolbox'

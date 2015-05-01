@@ -3,6 +3,10 @@
   "game_id": 30,
   "created_at": "2015-04-25T02:51:06.000Z",
   "properties": {
+    "options": {
+      "hide_submit": true,
+      "skip_sound": true
+    },
     "questions": [
       {
         "text": "Phase 1"
@@ -33,7 +37,11 @@
     ],
     "title": "Program Commitment Matching Question",
     "content1": "Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 3).",
-    "height": 60
+    "height": "60",
+    "type": "Match",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </Match>
