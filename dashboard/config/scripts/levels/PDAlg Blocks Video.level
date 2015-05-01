@@ -3,6 +3,10 @@
   "game_id": 29,
   "created_at": "2015-04-23T21:51:27.000Z",
   "properties": {
+    "options": {
+      "skip_sound": true,
+      "hide_submit": true
+    },
     "questions": [
       {
         "text": "In which are of the screen do you click blocks together to write a program?"
@@ -23,7 +27,11 @@
       }
     ],
     "title": "Intro to Evaluation Blocks",
-    "markdown": "### Evaluation Blocks\n\nThe programming language you're going to learn in this course is called Evaluation Blocks, and it's a visual programming language that we designed _specifically_ for learning Algebra. This language follows the same rules as Algebra does when it comes to concepts such as variables and functions. Watch this video introducing the basics of Evaluation Blocks and then you'll move on to play through a few basic puzzles.\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/9tUivnF7qiY\" frameborder=\"0\" allowfullscreen></iframe>\n"
+    "markdown": "### Evaluation Blocks\n\nThe programming language you're going to learn in this course is called Evaluation Blocks, and it's a visual programming language that we designed _specifically_ for learning Algebra. This language follows the same rules as Algebra does when it comes to concepts such as variables and functions. Watch this video introducing the basics of Evaluation Blocks and then you'll move on to play through a few basic puzzles.\n\n<iframe width=\"350\" height=\"225\" src=\"https://www.youtube.com/embed/9tUivnF7qiY\" frameborder=\"0\" allowfullscreen></iframe>\n",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </Multi>

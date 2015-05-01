@@ -1,0 +1,33 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-04-29T23:56:29.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Which of the following was NOT suggested as a way to get unstuck?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "taking a break",
+        "correct": false
+      },
+      {
+        "text": "meditating",
+        "correct": true
+      },
+      {
+        "text": "looking at other similar pieces of code",
+        "correct": false
+      },
+      {
+        "text": "reading through your code line by line",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice - Getting Unstuck"
+  },
+  "md5": "b838376cc3f24f8633575b0cd467fa44"
+}]]></config>
+</Multi>

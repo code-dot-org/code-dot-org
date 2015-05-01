@@ -1,5 +1,14 @@
 <%
 var i18n = require('../../locale/current/netsim');
+
+/**
+ * Causes helpful controls to appear that provide ways to manually change/break
+ * the simulation, for help repro-ing bugs.
+ * Don't check this in set to TRUE!
+ * @type {boolean}
+ * @const
+ */
+var ENABLE_DEBUG_CONTROLS = false;
 %>
 <div class="content-wrap">
   <% if (remoteNodeName) { %>
@@ -16,5 +25,10 @@ var i18n = require('../../locale/current/netsim');
 
   <% if (shareLink) { %>
   <p><a href="<%= shareLink %>"><%= i18n.shareThisNetwork() %></a></p>
+  <% } %>
+
+  <% if (ENABLE_DEBUG_CONTROLS) { %>
+    <input type="button" class="debug-button expire-heartbeat" value="Expire Heartbeat" title="Make local node look expired" />
+    <input type="button" class="debug-button clean-shard-now" value="Clean Shard Now" title="Manuallly start a cleaning cycle from this client" />
   <% } %>
 </div>

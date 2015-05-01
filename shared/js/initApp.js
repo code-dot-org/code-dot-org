@@ -128,7 +128,7 @@ dashboard.saveProject = function(callback, overrideSource) {
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
   dashboard.currentApp.level = appToProjectUrl[appOptions.app];
   if (channelId && dashboard.currentApp.isOwner) {
-    channels().update(channelId, dashboard.currentApp, function(data) {
+    channels().update(channelId, dashboard.currentApp, function(callback, data) {
       if (data) {
         dashboard.currentApp = data;
         dashboard.updateTimestamp();
@@ -136,9 +136,9 @@ dashboard.saveProject = function(callback, overrideSource) {
       }  else {
         $('.project_updated_at').text('Error saving project');  // TODO i18n
       }
-    });
+    }.bind(this, callback));
   } else {
-    channels().create(dashboard.currentApp, function(data) {
+    channels().create(dashboard.currentApp, function(callback, data) {
       if (data) {
         dashboard.currentApp = data;
         location.href = dashboard.currentApp.level + '#' + dashboard.currentApp.id + '/edit';
@@ -147,7 +147,7 @@ dashboard.saveProject = function(callback, overrideSource) {
       } else {
         $('.project_updated_at').text('Error saving project');  // TODO i18n
       }
-    });
+    }.bind(this, callback));
   }
 };
 
@@ -188,7 +188,9 @@ function initApp() {
         };
       }
 
-      $(window).on('run_button_pressed', dashboard.saveProject);
+      $(window).on('run_button_pressed', function(event, callback) {
+        dashboard.saveProject(callback);
+      });
 
       // Autosave every AUTOSAVE_INTERVAL milliseconds
       $(window).on('appInitialized', function () {
@@ -216,8 +218,14 @@ function initApp() {
         }
       }, AUTOSAVE_INTERVAL);
 
-      if (!dashboard.currentApp.hidden && (dashboard.currentApp.isOwner || location.hash === '')) {
-        dashboard.showProjectHeader();
+      if (!dashboard.currentApp.hidden) {
+        if (dashboard.currentApp.isOwner || location.hash === '') {
+          dashboard.showProjectHeader();
+        } else {
+          dashboard.showMinimalProjectHeader();
+          appOptions.readonlyWorkspace = true;
+          appOptions.callouts = [];
+        }
       }
     } else if (dashboard.currentApp && dashboard.currentApp.levelSource) {
       appOptions.level.lastAttempt = dashboard.currentApp.levelSource;

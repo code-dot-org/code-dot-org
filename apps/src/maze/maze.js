@@ -64,7 +64,7 @@ var skin;
 /**
  * Milliseconds between each animation frame.
  */
-var stepSpeed;
+var stepSpeed = 100;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);

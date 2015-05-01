@@ -306,6 +306,8 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
       newFunc.color = category.rgb || category.color;
     }
 
+    newFunc.dropdown = config.blocks[i].dropdown;
+
     modeOptions.functions[config.blocks[i].func] = newFunc;
   }
 }

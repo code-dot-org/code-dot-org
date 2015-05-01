@@ -125,6 +125,13 @@ var NetSim = module.exports = function () {
   this.myDeviceBitRate_ = Infinity;
 
   /**
+   * Currently enabled encoding types.
+   * @type {EncodingType[]}
+   * @private
+   */
+  this.enabledEncodings_ = [];
+
+  /**
    * Current dns mode.
    * @type {DnsMode}
    * @private
@@ -306,17 +313,25 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
       isMinimized: false,
-      receiveButtonCallback: this.receiveBit_.bind(this)
+      netsim: this,
+      showReadWireButton: true
     });
 
     this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentBitsLog(),
-      isMinimized: false
+      isMinimized: false,
+      netsim: this
     });
   }
 
-  this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'),
-      this.disconnectFromRemote.bind(this, function () {}));
+  this.statusPanel_ = new NetSimStatusPanel(
+      $('#netsim-status'),
+      {
+        disconnectCallback: this.disconnectFromRemote.bind(this, function () {}),
+        cleanShardNow: this.cleanShardNow.bind(this),
+        expireHeartbeat: this.expireHeartbeat.bind(this)
+      });
+
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
 
@@ -507,8 +522,10 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
   this.myNode.stopSimulation();
   this.myNode.destroy(function (err, result) {
     if (err) {
-      onComplete(err, result);
-      return;
+      logger.warn('Error destroying node:' + err.message);
+      // Don't stop disconnecting on an error here; we make a good-faith
+      // effort to clean up after ourselves, and let the cleaning system take
+      // care of the rest.
     }
 
     this.myNode = null;
@@ -618,9 +635,8 @@ NetSim.prototype.disconnectFromRemote = function (onComplete) {
  * node and its connected remote.
  * Used only in simplex & bit-granular mode.
  * @param {!NodeStyleCallback} onComplete
- * @private
  */
-NetSim.prototype.receiveBit_ = function (onComplete) {
+NetSim.prototype.receiveBit = function (onComplete) {
   this.myNode.getLatestMessageOnSimplexWire(onComplete);
 };
 
@@ -634,12 +650,22 @@ NetSim.prototype.receiveBit_ = function (onComplete) {
  * @param {EncodingType[]} newEncodings
  */
 NetSim.prototype.changeEncodings = function (newEncodings) {
+  this.enabledEncodings_ = newEncodings;
   if (this.tabs_) {
     this.tabs_.setEncodings(newEncodings);
   }
   this.receivedMessageLog_.setEncodings(newEncodings);
   this.sentMessageLog_.setEncodings(newEncodings);
   this.sendPanel_.setEncodings(newEncodings);
+  this.visualization_.setEncodings(newEncodings);
+};
+
+/**
+ * Get the currently enabled encoding types.
+ * @returns {EncodingType[]}
+ */
+NetSim.prototype.getEncodings = function () {
+  return this.enabledEncodings_;
 };
 
 /**
@@ -749,6 +775,14 @@ NetSim.prototype.setDnsMode = function (newDnsMode) {
     this.tabs_.setDnsMode(newDnsMode);
   }
   this.visualization_.setDnsMode(newDnsMode);
+};
+
+/**
+ * Get current DNS mode.
+ * @returns {DnsMode}
+ */
+NetSim.prototype.getDnsMode = function () {
+  return this.dnsMode_;
 };
 
 /**
@@ -1093,4 +1127,44 @@ NetSim.prototype.onRouterLogChange_ = function () {
   if (this.isConnectedToRouter()) {
     this.setRouterLogData(this.getConnectedRouter().getLog());
   }
+};
+
+/**
+ * Immediately start a shard-cleaning process from this client
+ */
+NetSim.prototype.cleanShardNow = function () {
+  if (this.shardCleaner_) {
+    this.shardCleaner_.cleanShard();
+  }
+};
+
+/**
+ * Make the local node's heartbeat pretend to be expired, so it can be
+ * cleaned up.
+ */
+NetSim.prototype.expireHeartbeat = function () {
+  if (!(this.myNode && this.myNode.heartbeat_)) {
+    return;
+  }
+
+  this.myNode.heartbeat_.spoofExpired();
+  logger.info("Local node heartbeat is now expired.");
+};
+
+/**
+ * Kick off an animation that shows the local node setting the state of a
+ * simplex wire.
+ * @param {"0"|"1"} newState
+ */
+NetSim.prototype.animateSetWireState = function (newState) {
+  this.visualization_.animateSetWireState(newState);
+};
+
+/**
+ * Kick off an animation that shows the local node reading the state of a
+ * simplex wire.
+ * @param {"0"|"1"} newState
+ */
+NetSim.prototype.animateReadWireState = function (newState) {
+  this.visualization_.animateReadWireState(newState);
 };

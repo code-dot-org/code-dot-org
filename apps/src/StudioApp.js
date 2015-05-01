@@ -19,7 +19,9 @@ var FeedbackUtils = require('./feedback');
 var MIN_WIDTH = 900;
 var MOBILE_SHARE_WIDTH_PADDING = 50;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-var WORKSPACE_PLAYSPACE_GAP = 15;
+var MAX_VISUALIZATION_WIDTH = 400;
+var MIN_VISUALIZATION_WIDTH = 200;
+
 var BLOCK_X_COORDINATE = 70;
 var BLOCK_Y_COORDINATE = 30;
 
@@ -360,6 +362,14 @@ StudioApp.prototype.init = function(config) {
     this.handleUsingBlockly_(config);
   }
 
+  var vizResizeBar = document.getElementById('visualizationResizeBar');
+  if (vizResizeBar) {
+    vizResizeBar.addEventListener('mousedown',
+                                  _.bind(this.onMouseDownVizResizeBar, this));
+    document.body.addEventListener('mouseup',
+                                   _.bind(this.onMouseUpVizResizeBar, this));
+  }
+
   window.addEventListener('resize', _.bind(this.onResize, this));
 
   this.reset(true);
@@ -402,7 +412,12 @@ StudioApp.prototype.init = function(config) {
           Blockly.mainBlockSpace.clear();
           this.setStartBlocks_(config, false);
         } else {
-          this.editor.setValue(config.level.startBlocks || '');
+          var resetValue = '';
+          if (config.level.startBlocks) {
+            // Don't pass CRLF pairs to droplet until they fix CR handling:
+            resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
+          }
+          this.editor.setValue(resetValue);
         }
       }).bind(this));
     }).bind(this));
@@ -757,6 +772,84 @@ StudioApp.prototype.onResize = function() {
   this.resizeToolboxHeader();
 };
 
+StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
+  // When we see a mouse down in the resize bar, start tracking mouse moves:
+
+  if (!this.onMouseMoveBoundHandler) {
+    this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
+    document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+
+    event.preventDefault();
+  }
+};
+
+function applyTransformScaleToChildren(element, scale) {
+  for (var i = 0; i < element.children.length; i++) {
+    element.children[i].style.transform = scale;
+    element.children[i].style.msTransform = scale;
+    element.children[i].style.webkitTransform = scale;
+  }
+}
+
+/**
+*  Handle mouse moves while dragging the visualization resize bar. We set
+*  styles on each of the elements directly, overriding the normal responsive
+*  classes that would typically adjust width and scale.
+*/
+StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
+  var codeWorkspace = document.getElementById('codeWorkspace');
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  var visualization = document.getElementById('visualization');
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualizationEditor = document.getElementById('visualizationEditor');
+
+  var rect = visualizationResizeBar.getBoundingClientRect();
+  var offset;
+  var newVizWidth;
+  if (this.isRtl()) {
+    offset = window.innerWidth -
+             (window.pageXOffset + rect.left + (rect.width / 2)) -
+             parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
+    newVizWidth = (window.innerWidth - event.pageX) - offset;
+  } else {
+    offset = window.pageXOffset + rect.left + (rect.width / 2) -
+             parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
+    newVizWidth = event.pageX - offset;
+  }
+  newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
+                         Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
+  var newVizWidthString = newVizWidth + 'px';
+  var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
+
+  if (this.isRtl()) {
+    visualizationResizeBar.style.right = newVizWidthString;
+    codeWorkspace.style.right = newVizWidthString;
+  } else {
+    visualizationResizeBar.style.left = newVizWidthString;
+    codeWorkspace.style.left = newVizWidthString;
+  }
+  // Add extra width to visualizationColumn if visualization has a border:
+  visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
+  visualization.style.maxWidth = newVizWidthString;
+  visualization.style.maxHeight = (newVizWidth / this.vizAspectRatio) + 'px';
+  applyTransformScaleToChildren(visualization,
+      'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
+  if (visualizationEditor) {
+    visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+  // Fire resize so blockly and droplet handle this type of resize properly:
+  utils.fireResizeEvent();
+};
+
+StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
+  // If we have been tracking mouse moves, remove the handler now:
+  if (this.onMouseMoveBoundHandler) {
+    document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
+    this.onMouseMoveBoundHandler = null;
+  }
+};
+
+
 /**
 *  Updates the width of the toolbox-header to match the width of the toolbox
 *  or palette in the workspace below the header.
@@ -1006,6 +1099,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
+  this.vizAspectRatio = config.vizAspectRatio || 1.0;
+  this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
@@ -1025,6 +1120,14 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
 
+// Overwritten by applab.
+StudioApp.prototype.runButtonClickWrapper = function (callback) {
+  if (window.$) {
+    $(window).trigger('run_button_pressed');
+  }
+  callback();
+};
+
 /**
  * Begin modifying the DOM based on config.
  * Note: Has side effects on config
@@ -1039,12 +1142,8 @@ StudioApp.prototype.configureDom = function (config) {
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(function () {
-    if (window.$) {
-      $(window).trigger('run_button_pressed');
-    }
-    this.runButtonClick();
-  }, 250, true);
+  var runClick = this.runButtonClick.bind(this);
+  var throttledRunClick = _.debounce(this.runButtonClickWrapper.bind(this, runClick), 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -1111,6 +1210,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
+  document.getElementById('visualizationResizeBar').style.display = 'none';
+
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
     var buttonRow = runButton.parentElement;
@@ -1210,7 +1311,8 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     this.resizeToolboxHeader();
 
     if (options.startBlocks) {
-      this.editor.setValue(options.startBlocks);
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
     }
 
     if (options.afterEditorReady) {
@@ -1297,7 +1399,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
-    editBlocks: utils.valueOr(config.level.edit_blocks, false)
+    editBlocks: utils.valueOr(config.level.edit_blocks, false),
+    readOnly: utils.valueOr(config.readonlyWorkspace, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing', 'generateFunctionPassBlocks'].forEach(

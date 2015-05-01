@@ -4,6 +4,7 @@ Feature: Using the Internet Simulator Lobby
   The internet simulator lets students experiment with a simulated network environment, connecting
   to one another through our system and sending data back and forth with different encodings.
 
+  @skip
   Scenario: When not logged in, can connect to a router
     Given I load netsim
     Then element "#netsim-lobby-name" is visible
