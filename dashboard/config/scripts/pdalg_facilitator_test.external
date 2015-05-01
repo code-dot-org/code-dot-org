@@ -1,5 +1,6 @@
-name 'PDAlg Facilitators'
-title 'Meet Your Facilitators'
+name 'PDAlg Facilitator Test'
+title 'title'
+description 'description here'
 css 'unplugged'
 markdown <<MARKDOWN
 <style>
@@ -166,7 +167,7 @@ markdown <<MARKDOWN
 <div class="facilitator">
   <div class="headshot">
     <h1>Rodney Weems</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/rodney.jpg">
+    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/rodney.gif">
     <h4>Chicago, IL</h4>
   </div>
   <div class="bio">
