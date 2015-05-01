@@ -21,7 +21,7 @@ var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 
 var logger = require('./NetSimLogger').getSingleton();
-var netsimGlobals = require('./NetSimGlobals');
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * @typedef {Object} shardChoice

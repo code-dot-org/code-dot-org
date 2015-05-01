@@ -23,7 +23,7 @@ var ObservableEvent = require('../ObservableEvent');
 var MessageGranularity = require('./netsimConstants').MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var netsimGlobals = require('./NetSimGlobals');
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * Client model of node being simulated on the local client.

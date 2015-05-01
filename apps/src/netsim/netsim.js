@@ -42,7 +42,7 @@ var DnsMode = netsimConstants.DnsMode;
 var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var netsimGlobals = require('./NetSimGlobals');
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * Initial time between connecting to the shard and starting

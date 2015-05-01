@@ -2,7 +2,7 @@ var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
 var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
-var netsimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimGlobals');
+var netsimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimGlobals');
 var levels = testUtils.requireWithGlobalsCheckBuildFolder('netsim/levels');
 
 /**
