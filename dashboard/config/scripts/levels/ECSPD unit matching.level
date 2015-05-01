@@ -3,6 +3,9 @@
   "game_id": 30,
   "created_at": "2015-04-27T17:29:40.000Z",
   "properties": {
+    "options": {
+      "skip_sound": true
+    },
     "questions": [
       {
         "text": "Unit 1"
@@ -43,7 +46,11 @@
         "text": "apply programming and problem solving to the study of robots"
       }
     ],
-    "title": "Matching Unit Descriptions and Numbers"
+    "title": "Matching Unit Descriptions and Numbers",
+    "type": "Match",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </Match>
