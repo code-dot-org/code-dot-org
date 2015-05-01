@@ -1,0 +1,13 @@
+- if current_user.try(:admin?) # TODO: this should change to :teacher? when we want to ship this
+  .teacher
+    %h4
+      Teachers:
+      %a{href: '#', onclick: '$(".teacher .content").toggle(); return false;'} [hide/show]
+    .content
+      - if @level && @level.ideal_level_source_id && @script
+        .solution_link
+          = link_to t('reference_area.teacher'), script_level_solution_path(@script, @level)
+      - if @user
+        Viewing solution by: #{@user.name}
+        %br
+        Last Attempt: #{@last_attempt}
