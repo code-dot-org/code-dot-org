@@ -27,7 +27,7 @@ var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
-var netsimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimGlobals');
+var netsimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimGlobals');
 
 describe("NetSimRouterNode", function () {
   var testShard;

@@ -16,7 +16,7 @@ var DnsMode = require('./netsimConstants').DnsMode;
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 var NetSimDnsTable = require('./NetSimDnsTable');
-var netsimGlobals = require('./NetSimGlobals');
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * Generator and controller for "My Device" tab.
