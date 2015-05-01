@@ -80,6 +80,12 @@ en:
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
+      CSP Journal Entry Placeholder:
+        CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
+        Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
+      CSP Journal Entry Placeholder2:
+        description here: description here
+        title: title
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -118,6 +124,8 @@ en:
         Meet your Facilitator!: Meet your Facilitator!
       ECSPD pause:
         ECSPD pause: ECSPD pause
+      ECSPD postsurvey: {}
+      ECSPD presurvey: {}
       ECSPD program overview:
         ECS Program Overview: ECS Program Overview
         Overview of ECS Program: Overview of ECS Program
@@ -149,6 +157,8 @@ en:
       PDAlg Facilitators:
         Meet Your Facilitators: Meet Your Facilitators
       PDAlg Intro: {}
+      PDAlg Post Survey:
+        CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
       PDAlg Scope:
         Scope and Sequence: Scope and Sequence
       PDAlg Teacher Dashboard:
@@ -183,6 +193,8 @@ en:
         tour of the PD space: tour of the PD space
       PDK5 Beyond C:
         Beyond: Beyond
+      PDK5 CS Video:
+        Computer Science: Computer Science
       PDK5 CS overview:
         Overview of programming concepts: Overview of programming concepts
       PDK5 Classroom Culture C:
@@ -448,81 +460,6 @@ en:
       unique level name here:
         description here: description here
         title: title
-    match:
-      PDAlg Design Recipe Video:
-        Contract and Purpose Statement: Contract and Purpose Statement
-        Definition: Definition
-        Examples: Examples
-        Intro to Data Types: Intro to Data Types
-        Place the Design Recipe steps in the correct order.: Place the Design Recipe steps in the correct order.
-        Step 1: Step 1
-        Step 2: Step 2
-        Step 3: Step 3
-    multi:
-      sciPD agent based 1:
-        MULTIPLE CHOICE - INTERACTIONS IN AGENT-BASED MODELS: MULTIPLE CHOICE - INTERACTIONS IN AGENT-BASED MODELS
-        Multiple Choice - Interactions In Agent-based Models: Multiple Choice - Interactions In Agent-based Models
-        What types of interactions can occur in agent-based models?: What types of interactions can occur in agent-based models?
-        agents interact with both their environment and other agents: agents interact with both their environment and other agents
-        agents interact with other agents only: agents interact with other agents only
-        agents interact with their environment only: agents interact with their environment only
-        all of the above: all of the above
-      sciPD agent based 2:
-        Multiple Choice - Agent-based Models: Multiple Choice - Agent-based Models
-        What type of systems are agent-based models suitable for modeling?: What type of systems are agent-based models suitable for modeling?
-        all of the above: all of the above
-        complex adaptive systems: complex adaptive systems
-        simple mechanical systems: simple mechanical systems
-        systems of mathematical equations: systems of mathematical equations
-      sciPD class models 1:
-        Using Models in the Classroom: Using Models in the Classroom
-        Which of the following is not a tenet of Papert's theory of Constructionism?: Which of the following is not a tenet of Papert's theory of Constructionism?
-        building relationships between old and new knowledge: building relationships between old and new knowledge
-        constructing social relationships: constructing social relationships
-        creating artifacts of social relevance: creating artifacts of social relevance
-        interacting with others: interacting with others
-      sciPD class models 2:
-        Constructionism: Constructionism
-        Constructionism focuses on how learning is constructed during the...: Constructionism focuses on how learning is constructed during the...
-        all of the above: all of the above
-        creation of learning artifacts: creation of learning artifacts
-        design of learning artifacts: design of learning artifacts
-        discussion of learning artifacts: discussion of learning artifacts
-      sciPD computer models 1:
-        It can be easily automated: It can be easily automated
-        It has fixed percentages of different elements: It has fixed percentages of different elements
-        It includes some randomness: It includes some randomness
-        It is predictable: It is predictable
-        Multiple Choice - Stochastic Models: Multiple Choice - Stochastic Models
-        What does it mean for a model to be stochastic?: What does it mean for a model to be stochastic?
-      sciPD culture 1:
-        Multiple Choice - Getting Unstuck: Multiple Choice - Getting Unstuck
-        Which of the following was NOT suggested as a way to get unstuck?: Which of the following was NOT suggested as a way to get unstuck?
-        looking at other similar pieces of code: looking at other similar pieces of code
-        meditating: meditating
-        reading through your code line by line: reading through your code line by line
-        taking a break: taking a break
-      sciPD culture 2:
-        Multiple Choice - Role Of Teacher: Multiple Choice - Role Of Teacher
-        What role for a teacher incorporating models and simulations into the classroom was proposed?: What role for a teacher incorporating models and simulations into the classroom was proposed?
-        classroom manager: classroom manager
-        engaging lecturer: engaging lecturer
-        expert in a computer language: expert in a computer language
-        learning coach or guide: learning coach or guide
-      sciPD framework 1:
-        'Computational Thinking was referred to in the video as:': 'Computational Thinking was referred to in the video as:'
-        Multiple Choice - Computational Thinking 1: Multiple Choice - Computational Thinking 1
-        a human thought process: a human thought process
-        a process that computers use to think: a process that computers use to think
-        a subfield of computer science: a subfield of computer science
-        a way of communicating with a computer: a way of communicating with a computer
-      sciPD framework 2:
-        Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?: Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?
-        Multiple Choice - Computational Thinking 2: Multiple Choice - Computational Thinking 2
-        abstraction: abstraction
-        algorithms: algorithms
-        analysis: analysis
-        automation: automation
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)

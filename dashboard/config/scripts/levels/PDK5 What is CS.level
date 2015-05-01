@@ -32,8 +32,7 @@
         "correct": false
       }
     ],
-    "title": "What is Computer Science?",
-    "markdown": "Have you ever wondered \"Exactly what is computer science?\" Or, \"Why are some computer programs written with words and some are written using images?\" \nIf so, watch this video; it's a great introduction to the field of computer science.\n\n<iframe width=\"426\" height=\"260\" src=\"//www.youtube.com/embed/KHXvOO8cVDE\" frameborder=\"0\" allowfullscreen></iframe>\n\n"
+    "title": "What is Computer Science?"
   },
   "md5": "543b4e2ad2caef4d124ee394308b646a"
 }]]></config>

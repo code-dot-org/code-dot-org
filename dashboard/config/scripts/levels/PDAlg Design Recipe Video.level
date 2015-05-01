@@ -1,7 +1,7 @@
 <Match>
   <config><![CDATA[{
   "game_id": 30,
-  "created_at": "2015-05-01T18:23:12.209Z",
+  "created_at": "2015-05-01T18:23:12.000Z",
   "properties": {
     "options": {
       "skip_sound": true,
@@ -31,12 +31,7 @@
     ],
     "title": "Intro to Data Types",
     "content1": "Place the Design Recipe steps in the correct order.",
-    "markdown": "### Evaluation Blocks\n\n<iframe width=\"350\" height=\"200\" src=\"https://www.youtube.com/embed/s5nBdrNgPwM\" frameborder=\"0\" allowfullscreen style=\"float:left; margin: 0 20px 20px 0\"></iframe>\n\nIn addition to the paper and pencil Design Recipe process that you've become familiar with, the new CS in Algebra programming environment includes a digital version of the Design Recipe. Watch this introductory video, and then work through the Design Recipe for `rocket-height`.\n\n<div style=\"clear:both\"/>\n",
-    "type": "Match",
-    "dsl_text": "name 'PDAlg Design Recipe Video'\r\ntitle 'Intro to Data Types'\r\ndescription 'Place the Design Recipe steps in the correct order.'\r\nskip_sound true\r\nhide_submit true\r\n\r\nquestion 'Step 1'\r\nanswer 'Contract and Purpose Statement'\r\n\r\nquestion 'Step 2'\r\nanswer 'Examples'\r\n\r\nquestion 'Step 3'\r\nanswer 'Definition'\r\n\r\nmarkdown <<MARKDOWN\r\n### Evaluation Blocks\r\n\r\n<iframe width=\"350\" height=\"200\" src=\"https://www.youtube.com/embed/s5nBdrNgPwM\" frameborder=\"0\" allowfullscreen style=\"float:left; margin: 0 20px 20px 0\"></iframe>\r\n\r\nIn addition to the paper and pencil Design Recipe process that you've become familiar with, the new CS in Algebra programming environment includes a digital version of the Design Recipe. Watch this introductory video, and then work through the Design Recipe for `rocket-height`.\r\n\r\n<div style=\"clear:both\"/>\r\nMARKDOWN",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "### Evaluation Blocks\n\n<iframe width=\"350\" height=\"200\" src=\"https://www.youtube.com/embed/s5nBdrNgPwM\" frameborder=\"0\" allowfullscreen style=\"float:left; margin: 0 20px 20px 0\"></iframe>\n\nIn addition to the paper and pencil Design Recipe process that you've become familiar with, the new CS in Algebra programming environment includes a digital version of the Design Recipe. Watch this introductory video, and then work through the Design Recipe for `rocket-height`.\n\n<div style=\"clear:both\"/>\n"
   }
 }]]></config>
 </Match>
