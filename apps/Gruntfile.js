@@ -359,13 +359,22 @@ config.jshint = {
   options: {
     curly: true,
     node: true,
+    mocha: true,
     browser: true,
+    undef: true,
     globals: {
       Blockly: true,
-      //TODO: Eliminate the globals below here.
+      //TODO: Eliminate the globals below here. Could at least warn about them
+      // in their respective files
+      Studio: true,
       Maze: true,
       Turtle: true,
-      Bounce: true
+      Bounce: true,
+      Eval: true,
+      Flappy: true,
+      Applab: true,
+      Calc: true,
+      Jigsaw: true
     }
   },
   all: [
@@ -377,7 +386,8 @@ config.jshint = {
     '!src/lodash.js',
     '!src/lodash.min.js',
     '!src/canvg/*.js',
-    '!src/calc/js-numbers/js-numbers.js'
+    '!src/calc/js-numbers/js-numbers.js',
+    '!src/ResizeSensor.js'
   ]
 };
 

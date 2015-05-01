@@ -1,4 +1,5 @@
 var SquareType = require('./tiles').SquareType;
+var Direction = require('./tiles').Direction;
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -95,7 +96,7 @@ module.exports.drawMapTiles = function (svg) {
  * Schedule the animations for Scrat dancing.
  * @param {integer} timeAlloted How much time we have for our animations
  */
-module.exports.scheduleDance = function (victoryDance, timeAlloted) {
+module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
   var finishIcon = document.getElementById('finish');
   if (finishIcon) {
     finishIcon.setAttribute('visibility', 'hidden');
@@ -105,6 +106,6 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted) {
   var timePerFrame = timeAlloted / numFrames;
   var start = {x: Maze.pegmanX, y: Maze.pegmanY};
 
-  scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
+  Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
     numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 };

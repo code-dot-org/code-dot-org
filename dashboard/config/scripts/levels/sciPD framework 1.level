@@ -3,6 +3,12 @@
   "game_id": 29,
   "created_at": "2015-04-30T00:31:35.000Z",
   "properties": {
+    "options": {
+      "css": "unplugged",
+      "hide_submit": true,
+      "skip_sound": true,
+      "answer_line": true
+    },
     "questions": [
       {
         "text": "Computational Thinking was referred to in the video as:"

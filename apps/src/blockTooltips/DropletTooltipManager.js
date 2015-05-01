@@ -1,3 +1,5 @@
+/* global $ */
+
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**

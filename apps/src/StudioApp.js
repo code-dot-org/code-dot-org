@@ -1,5 +1,4 @@
-// Globals:
-//   Blockly
+/* global Blockly, ace:true, $, requirejs */
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -446,6 +445,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
     }
     if (belowVisualization) {
       if (options.noButtonsBelowOnMobileShare) {
+        var visualization = document.getElementById('visualization');
         belowVisualization.style.display = 'none';
         visualization.style.marginBottom = '0px';
       } else {
@@ -1214,6 +1214,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
+    var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
     openWorkspace.setAttribute('id', 'open-workspace');
@@ -1248,7 +1249,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
+  
+    /* jshint ignore:start */
     ace = window.ace;
+    /* jshint ignore:end */
 
     var fullDropletPalette = dropletUtils.generateDropletPalette(
       options.codeFunctions, options.dropletConfig);
