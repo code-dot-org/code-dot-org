@@ -129,7 +129,59 @@
       stroke: #a69bc1; }
     #netsim #netsim-visualization svg .viz-wire {
       stroke: #5b6770;
-      stroke-width: 2; }
+      stroke-width: 2;
+      -moz-transition: stroke 1s, stroke-width 1s;
+      -o-transition: stroke 1s, stroke-width 1s;
+      -webkit-transition: stroke 1s, stroke-width 1s;
+      transition: stroke 1s, stroke-width 1s; }
+      #netsim #netsim-visualization svg .viz-wire.hidden-wire {
+        display: none; }
+      #netsim #netsim-visualization svg .viz-wire text {
+        stroke: none;
+        fill: transparent;
+        font-family: monospace;
+        font-size: 26pt;
+        text-anchor: middle;
+        -moz-transition: fill 1s;
+        -o-transition: fill 1s;
+        -webkit-transition: fill 1s;
+        transition: fill 1s; }
+        #netsim #netsim-visualization svg .viz-wire text.question-mark {
+          -moz-transition: fill 1.2s;
+          -o-transition: fill 1.2s;
+          -webkit-transition: fill 1.2s;
+          transition: fill 1.2s; }
+      #netsim #netsim-visualization svg .viz-wire.state-unknown {
+        stroke: #c6cacd; }
+        #netsim #netsim-visualization svg .viz-wire.state-unknown .state-label {
+          fill: transparent; }
+        #netsim #netsim-visualization svg .viz-wire.state-unknown .question-mark {
+          fill: #c6cacd; }
+      #netsim #netsim-visualization svg .viz-wire.state-on, #netsim #netsim-visualization svg .viz-wire.state-off {
+        stroke-width: 4;
+        -moz-transition: none;
+        -o-transition: none;
+        -webkit-transition: none;
+        transition: none; }
+        #netsim #netsim-visualization svg .viz-wire.state-on .state-label, #netsim #netsim-visualization svg .viz-wire.state-off .state-label {
+          -moz-transition: none;
+          -o-transition: none;
+          -webkit-transition: none;
+          transition: none; }
+        #netsim #netsim-visualization svg .viz-wire.state-on .question-mark, #netsim #netsim-visualization svg .viz-wire.state-off .question-mark {
+          fill: transparent;
+          -moz-transition: none;
+          -o-transition: none;
+          -webkit-transition: none;
+          transition: none; }
+      #netsim #netsim-visualization svg .viz-wire.state-off {
+        stroke: black; }
+        #netsim #netsim-visualization svg .viz-wire.state-off .state-label {
+          fill: black; }
+      #netsim #netsim-visualization svg .viz-wire.state-on {
+        stroke: #ffa400; }
+        #netsim #netsim-visualization svg .viz-wire.state-on .state-label {
+          fill: #ffa400; }
   #netsim .netsim-shard-selection-panel {
     overflow: hidden; }
     #netsim .netsim-shard-selection-panel .field-box {
