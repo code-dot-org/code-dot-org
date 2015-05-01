@@ -1745,8 +1745,8 @@ studioApp.reset = function(first) {
  * @param callback {Function}
  */
 studioApp.runButtonClickWrapper = function (callback) {
-  // Behave like other apps when channel id is present.
-  if (dashboard.currentApp && dashboard.currentApp.id) {
+  // Behave like other apps when not editing a project or channel id is present.
+  if (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id)) {
     if (window.$) {
       $(window).trigger('run_button_pressed');
     }
