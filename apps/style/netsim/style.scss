@@ -24,6 +24,13 @@ $wide-column-width: 121px;
   user-select: $val;
 }
 
+@mixin transition($val...) {
+  -moz-transition: $val;
+  -o-transition: $val;
+  -webkit-transition: $val;
+  transition: $val;
+}
+
 // Hide the footer instructions, we put them in the instructions tab
 #prompt-table {
   display: none;
@@ -217,6 +224,68 @@ $wide-column-width: 121px;
       .viz-wire {
         stroke: $charcoal;
         stroke-width: 2;
+        @include transition(
+                stroke 1s,
+                stroke-width 1s); // Fade back to normal stroke color
+
+        &.hidden-wire {
+          display: none;
+        }
+
+        text {
+          stroke: none;
+          fill: transparent;
+          font-family: monospace;
+          font-size: 26pt;
+          text-anchor: middle;
+          @include transition(fill 1s);
+
+          &.question-mark {
+            @include transition(fill 1.2s);
+          }
+        }
+
+        &.state-unknown {
+          stroke: $lighter_gray;
+
+          .state-label {
+            fill: transparent;
+          }
+
+          .question-mark {
+            fill: $lighter-gray;
+          }
+        }
+
+        &.state-on, &.state-off {
+          stroke-width: 4;
+          @include transition(none); // Snap to this state
+
+          .state-label {
+            @include transition(none);
+          }
+
+          .question-mark {
+            fill: transparent;
+            @include transition(none); // Snap to this state
+          }
+        }
+
+        &.state-off {
+          stroke: $black;
+
+          .state-label {
+            fill: $black;
+          }
+        }
+
+        &.state-on {
+          stroke: $orange;
+
+          .state-label {
+            fill: $orange;
+          }
+        }
       }
     }
   }
