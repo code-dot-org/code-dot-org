@@ -13,7 +13,7 @@ var uglify = require('gulp-uglify');
 
 var bundle = require('@cdo/cdo/lib/frontend/browserify');
 var mediaTask = require('@cdo/cdo/lib/frontend/media');
-var sassTask = require('@cdo/cdo/lib/frontend/sass')
+var sassTask = require('@cdo/cdo/lib/frontend/sass');
 var messageFormat = require('./tasks/transform-messageformat');
 
 function configString(id) {
@@ -196,7 +196,7 @@ gulp.task('compress', ['bundle-js'], function () {
   var files = [
     JS_OUTPUT + '*.js',
     '!' + JS_OUTPUT + '**//*blockly.js'
-  ]
+  ];
   return gulp.src(files)
     .pipe(uglify())
     .pipe(gulp.dest(JS_OUTPUT));
