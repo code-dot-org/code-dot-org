@@ -4969,6 +4969,8 @@ exports.penColor = function (blockId, color) {
 
 
 },{}],8:[function(require,module,exports){
+/* global ace */
+
 var dropletConfig = require('../dropletConfig');
 var dropletUtils = require('../../dropletUtils');
 var annotationList = require('./annotationList');

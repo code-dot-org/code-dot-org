@@ -5204,6 +5204,8 @@ module.exports = function(app, levels, options) {
 };
 
 },{"./StudioApp":4,"./blocksCommon":28,"./dom":58,"./required_block_utils":204,"./utils":252}],204:[function(require,module,exports){
+/* global Text */
+
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -5692,8 +5694,7 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 },{"../locale/current/common":257}],4:[function(require,module,exports){
-// Globals:
-//   Blockly
+/* global Blockly, ace:true, $, requirejs */
 
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
@@ -6140,6 +6141,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
     }
     if (belowVisualization) {
       if (options.noButtonsBelowOnMobileShare) {
+        var visualization = document.getElementById('visualization');
         belowVisualization.style.display = 'none';
         visualization.style.marginBottom = '0px';
       } else {
@@ -6908,6 +6910,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
   // For share page on mobile, do not show this part.
   if ((!options.embed) && (!this.share || !dom.isMobile())) {
+    var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
     openWorkspace.setAttribute('id', 'open-workspace');
@@ -6942,7 +6945,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
+  
+    /* jshint ignore:start */
     ace = window.ace;
+    /* jshint ignore:end */
 
     var fullDropletPalette = dropletUtils.generateDropletPalette(
       options.codeFunctions, options.dropletConfig);
@@ -8693,6 +8699,8 @@ return buf.join('');
   }
 }());
 },{"ejs":273}],78:[function(require,module,exports){
+/* global trackEvent, $, jQuery */
+
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
@@ -10182,6 +10190,8 @@ return buf.join('');
   }
 }());
 },{"ejs":273}],55:[function(require,module,exports){
+/* global Interpreter */
+
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -10585,7 +10595,7 @@ function aceFindRow(cumulativeLength, rows, rowe, pos) {
   }
 
   var mid = Math.floor((rows + rowe) / 2);
-  
+
   if (pos < cumulativeLength[mid]) {
     return aceFindRow(cumulativeLength, rows, mid, pos);
   } else if(pos > cumulativeLength[mid]) {
@@ -10640,7 +10650,7 @@ exports.selectCurrentCode = function (interpreter,
         editor.clearLineMarks();
         // NOTE: replace markLine with this new mark() call once we have a new
         // version of droplet
-        
+
         // editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
         editor.markLine(userCodeRow, style);
       } else {
@@ -11080,6 +11090,8 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
 };
 
 },{"./utils":252}],252:[function(require,module,exports){
+/* global define */
+
 var xml = require('./xml');
 var savedAmd;
 
@@ -17384,6 +17396,8 @@ exports.parseElement = function(text) {
 };
 
 },{}],26:[function(require,module,exports){
+/* global $ */
+
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**
