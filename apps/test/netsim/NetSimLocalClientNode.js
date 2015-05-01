@@ -145,4 +145,37 @@ describe("NetSimLocalClientNode", function () {
       assertEqual('Constantine', testLocalNode.getShortDisplayName());
     });
   });
+
+  describe("getHostname", function () {
+    it ("is a transformation of the short display name and node ID", function () {
+      assertEqual(1, testLocalNode.entityID);
+      testLocalNode.displayName_ = 'Sam';
+      assertEqual('sam1', testLocalNode.getHostname());
+    });
+
+    it ("strips spaces, preserves digits", function () {
+      assertEqual(1, testLocalNode.entityID);
+      testLocalNode.displayName_ = 'Sam Well';
+      assertEqual('samwell1', testLocalNode.getHostname());
+
+      // Note: spaces preserved for short names
+      testLocalNode.displayName_ = 'Samuel 999';
+      assertEqual('samuel9991', testLocalNode.getHostname());
+    });
+
+    it ("abbreviates with short-name rules", function () {
+      assertEqual(1, testLocalNode.entityID);
+      // Even short first names used, as long as whole name is > 10
+      testLocalNode.displayName_ = 'A Modest Proposal';
+      assertEqual('a1', testLocalNode.getHostname());
+
+      // Ordinary case
+      testLocalNode.displayName_ = 'Jonathan Swift';
+      assertEqual('jonathan1', testLocalNode.getHostname());
+
+      // First name longer than 10 characters
+      testLocalNode.displayName_ = 'Constantine Rey';
+      assertEqual('constantine1', testLocalNode.getHostname());
+    });
+  });
 });
