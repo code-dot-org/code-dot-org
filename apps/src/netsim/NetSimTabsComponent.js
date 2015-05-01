@@ -157,7 +157,6 @@ NetSimTabsComponent.prototype.render = function () {
   if (shouldShowTab(levelConfig, NetSimTabType.MY_DEVICE)) {
     this.myDeviceTab_ = new NetSimMyDeviceTab(
         this.rootDiv_.find('#tab_my_device'),
-        levelConfig,
         this.runLoop_,
         {
           chunkSizeChangeCallback: this.chunkSizeSliderChangeCallback_,

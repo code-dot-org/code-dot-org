@@ -17,11 +17,11 @@ var NetSimPulseRateControl = require('./NetSimPulseRateControl');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimMetronome = require('./NetSimMetronome');
+var netsimGlobals = require('./NetSimGlobals').getSingleton();
 
 /**
  * Generator and controller for "My Device" tab.
  * @param {jQuery} rootDiv
- * @param {netsimLevelConfiguration} levelConfig
  * @param {RunLoop} runLoop
  * @param {Object} callbacks
  * @param {function} callbacks.chunkSizeChangeCallback
@@ -29,20 +29,13 @@ var NetSimMetronome = require('./NetSimMetronome');
  * @param {function} callbacks.encodingChangeCallback
  * @constructor
  */
-var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
-    runLoop, callbacks) {
+var NetSimMyDeviceTab = module.exports = function (rootDiv, runLoop, callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = rootDiv;
-
-  /**
-   * @type {netsimLevelConfiguration}
-   * @private
-   */
-  this.levelConfig_ = levelConfig;
 
   /**
    * @type {RunLoop}
@@ -112,12 +105,14 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, levelConfig,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimMyDeviceTab.prototype.render = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
   var renderedMarkup = $(markup({
-    level: this.levelConfig_
+    level: levelConfig
   }));
   this.rootDiv_.html(renderedMarkup);
 
-  if (this.levelConfig_.showMetronome) {
+  if (levelConfig.showMetronome) {
     this.metronome_ = new NetSimMetronome(
         this.rootDiv_.find('.metronome'),
         this.runLoop_);
@@ -131,29 +126,29 @@ NetSimMyDeviceTab.prototype.render = function () {
         }.bind(this));
   }
 
-  if (this.levelConfig_.showBitRateControl) {
+  if (levelConfig.showBitRateControl) {
     this.bitRateControl_ = new NetSimBitRateControl(
         this.rootDiv_.find('.bitrate'),
         this.bitsPerSecond_,
         this.bitRateChangeCallback_);
-    if (this.levelConfig_.lockBitRateControl) {
+    if (levelConfig.lockBitRateControl) {
       this.bitRateControl_.disable();
     }
   }
 
-  if (this.levelConfig_.showChunkSizeControl) {
+  if (levelConfig.showChunkSizeControl) {
     this.chunkSizeControl_ = new NetSimChunkSizeControl(
         this.rootDiv_.find('.chunk-size'),
         this.chunkSizeSliderChangeCallback_);
-    if (this.levelConfig_.lockChunkSizeControl) {
+    if (levelConfig.lockChunkSizeControl) {
       this.chunkSizeControl_.disable();
     }
   }
 
-  if (this.levelConfig_.showEncodingControls.length > 0) {
+  if (levelConfig.showEncodingControls.length > 0) {
     this.encodingControl_ = new NetSimEncodingControl(
         this.rootDiv_.find('.encoding'),
-        this.levelConfig_,
+        levelConfig,
         this.encodingChangeCallback_);
   }
 };
