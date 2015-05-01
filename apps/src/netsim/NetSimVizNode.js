@@ -19,6 +19,8 @@ var tweens = require('./tweens');
 var DnsMode = netsimConstants.DnsMode;
 var NodeType = netsimConstants.NodeType;
 
+var netsimGlobals = require('./NetSimGlobals').getSingleton();
+
 /**
  * The narrowest that a text bubble is allowed to be.
  * @type {number}
@@ -144,7 +146,11 @@ NetSimVizNode.inherits(NetSimVizEntity);
  * @param {NetSimNode} sourceNode
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
-  this.setName(sourceNode.getDisplayName());
+  if (netsimGlobals.getLevelConfig().showHostnameInGraph) {
+    this.setName(sourceNode.getHostname());
+  } else {
+    this.setName(sourceNode.getDisplayName());
+  }
   this.nodeID = sourceNode.entityID;
 
   if (sourceNode.getNodeType() === NodeType.ROUTER) {

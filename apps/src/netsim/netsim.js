@@ -26,6 +26,7 @@ var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var DashboardUser = require('./DashboardUser');
 var NetSimBitLogPanel = require('./NetSimBitLogPanel');
+var NetSimGlobals = require('./NetSimGlobals');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var NetSimLogger = require('./NetSimLogger');
@@ -42,6 +43,7 @@ var DnsMode = netsimConstants.DnsMode;
 var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
+var netsimGlobals = NetSimGlobals.getSingleton();
 
 /**
  * Initial time between connecting to the shard and starting
@@ -183,6 +185,9 @@ NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
+
+  // Set up global singleton for easy access to simulator-wide settings
+  netsimGlobals.setRootController(this);
 
   /**
    * Skin for the loaded level

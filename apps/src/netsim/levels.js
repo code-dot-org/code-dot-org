@@ -48,6 +48,10 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           used by the local client node when generating/parsing packets,
  *           which affects the layout of the send panel and log panels.
  *
+ * @property {boolean} showHostnameInGraph - If false, student display name
+ *           is used in the network graph.  If true, their generated hostname
+ *           is displayed.
+ *
  * @property {boolean} showAddPacketButton - Whether the "Add Packet" button
  *           should appear in the send widget.
  *
@@ -140,6 +144,9 @@ levels.custom = {
   // Packet header specification
   routerExpectsPacketHeader: [],
   clientInitialPacketHeader: [],
+
+  // Visualization configuration
+  showHostnameInGraph: true,
 
   // Send widget configuration
   showAddPacketButton: false,
