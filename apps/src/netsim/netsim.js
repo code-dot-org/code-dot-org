@@ -484,8 +484,7 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
 
     node.setDisplayName(displayName);
     node.setLostConnectionCallback(this.disconnectFromShard.bind(this));
-    node.initializeSimulation(this.level, this.sentMessageLog_,
-        this.receivedMessageLog_);
+    node.initializeSimulation(this.sentMessageLog_, this.receivedMessageLog_);
     node.update(function (err) {
       onComplete(err, node);
     });

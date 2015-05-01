@@ -23,6 +23,7 @@ var ObservableEvent = require('../ObservableEvent');
 var MessageGranularity = require('./netsimConstants').MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
+var netsimGlobals = require('./NetSimGlobals').getSingleton();
 
 /**
  * Client model of node being simulated on the local client.
@@ -61,12 +62,6 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @type {NetSimRouterNode}
    */
   this.myRouter = null;
-
-  /**
-   * @type {netsimLevelConfiguration}
-   * @private
-   */
-  this.levelConfig_ = {};
 
   /**
    * Widget where we will post sent messages.
@@ -155,13 +150,11 @@ NetSimLocalClientNode.prototype.setDisplayName = function (displayName) {
 /**
  * Configure this node controller to actively simulate, and to post sent and
  * received messages to the given log widgets.
- * @param {!netsimLevelConfiguration} levelConfig
  * @param {!NetSimLogPanel} sentLog
  * @param {!NetSimLogPanel} receivedLog
  */
-NetSimLocalClientNode.prototype.initializeSimulation = function (levelConfig,
-    sentLog, receivedLog) {
-  this.levelConfig_ = levelConfig;
+NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
+    receivedLog) {
   this.sentLog_ = sentLog;
   this.receivedLog_ = receivedLog;
 
@@ -296,8 +289,7 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
     }
 
     this.myRouter = router;
-    this.myRouter.initializeSimulation(this.entityID,
-        this.levelConfig_.routerExpectsPacketHeader);
+    this.myRouter.initializeSimulation(this.entityID);
 
     router.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
@@ -481,7 +473,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
  */
 NetSimLocalClientNode.prototype.selectSimulatingNode_ = function (localNodeID,
     remoteNodeID) {
-  if (this.levelConfig_.messageGranularity === MessageGranularity.BITS) {
+  if (netsimGlobals.getLevelConfig().messageGranularity === MessageGranularity.BITS) {
     // In simplex wire mode, the local node cleans up its own messages
     // when it knows they are no longer current.
     return localNodeID;
@@ -555,7 +547,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
  * @private
  */
 NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
-  if (!this.levelConfig_.automaticReceive) {
+  if (!netsimGlobals.getLevelConfig().automaticReceive) {
     // In this level, we will not automatically pick up messages directed
     // at us.  We must manually call a receive method instead.
     return;

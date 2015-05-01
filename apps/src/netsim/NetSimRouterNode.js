@@ -721,12 +721,11 @@ NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
  * Puts this router controller into a mode where it will only
  * simulate for connection and messages -from- the given node.
  * @param {!number} nodeID
- * @param {packetHeaderSpec} packetSpec
  */
-NetSimRouterNode.prototype.initializeSimulation = function (nodeID, packetSpec) {
+NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
   this.simulateForSender_ = nodeID;
-  this.packetSpec_ = packetSpec;
-  this.validatePacketSpec_(packetSpec);
+  this.packetSpec_ = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+  this.validatePacketSpec_(this.packetSpec_);
 
   if (nodeID !== undefined) {
     var nodeChangeEvent = this.shard_.nodeTable.tableChange;
