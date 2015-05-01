@@ -26,7 +26,6 @@ var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var DashboardUser = require('./DashboardUser');
 var NetSimBitLogPanel = require('./NetSimBitLogPanel');
-var NetSimGlobals = require('./NetSimGlobals');
 var NetSimLobby = require('./NetSimLobby');
 var NetSimLocalClientNode = require('./NetSimLocalClientNode');
 var NetSimLogger = require('./NetSimLogger');
@@ -43,7 +42,7 @@ var DnsMode = netsimConstants.DnsMode;
 var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var netsimGlobals = NetSimGlobals.getSingleton();
+var netsimGlobals = require('./NetSimGlobals');
 
 /**
  * Initial time between connecting to the shard and starting

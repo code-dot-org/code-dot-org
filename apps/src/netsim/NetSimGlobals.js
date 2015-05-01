@@ -12,44 +12,30 @@
 'use strict';
 
 /**
- * Singleton access to global simulation settings.
- * @param {NetSim} netsim
- * @constructor
+ * Reference to root NetSim controller
+ * @type {NetSim}
+ * @private
  */
-var NetSimGlobals = module.exports = function () {
+var netsim_ = null;
+
+/**
+ * Provide singleton access to global simulation settings
+ */
+module.exports = {
+
   /**
-   * Reference to root NetSim controller
-   * @type {NetSim}
-   * @private
+   * Set the root controller that can be used for global operations.
+   * @param {NetSim} netsim
    */
-  this.netsim_ = null;
-};
+  setRootController: function (netsim) {
+    netsim_ = netsim;
+  },
 
-/**
- * Global singleton
- * @type {NetSimGlobals}
- */
-var singletonInstance;
-
-/**
- * Static getter/lazy-creator for the global singleton instance.
- * @returns {NetSimLogger}
- */
-NetSimGlobals.getSingleton = function () {
-  if (singletonInstance === undefined) {
-    singletonInstance = new NetSimGlobals();
+  /**
+   * @returns {netsimLevelConfiguration}
+   */
+  getLevelConfig: function () {
+    return netsim_.level;
   }
-  return singletonInstance;
-};
 
-/**
- * Set the root controller that can be used for global operations.
- * @param {NetSim} netsim
- */
-NetSimGlobals.prototype.setRootController = function (netsim) {
-  this.netsim_ = netsim;
-};
-
-NetSimGlobals.prototype.getLevelConfig = function () {
-  return this.netsim_.level;
 };
