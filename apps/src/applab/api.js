@@ -1,3 +1,4 @@
+var Applab = require('./applab');
 
 exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);

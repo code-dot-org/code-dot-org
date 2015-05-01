@@ -6,6 +6,8 @@ var SquareType = tiles.SquareType;
 var utils = require('../utils');
 var Bee = require('./bee');
 
+var Maze = require('./maze');
+
 /**
  * Only call API functions if we haven't yet terminated execution
  */
@@ -252,7 +254,6 @@ exports.notFinished = API_FUNCTION(function() {
 exports.loopHighlight = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction('null', id);
 });
-
 
 
 /**

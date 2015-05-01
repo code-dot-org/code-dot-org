@@ -1,9 +1,7 @@
-var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var blockUtils = require(testUtils.buildPath('block_utils'));
-testUtils.setupLocale('eval');
-var evalMsg = require(testUtils.buildPath('../locale/current/eval'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var blockUtils = require('@cdo/apps/block_utils');
 
+var Eval = require('@cdo/apps/eval/eval');
 module.exports = {
   app: "eval",
   skinId: 'eval',
@@ -19,7 +17,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function (assert) {
-        assert.equal(Eval.message, evalMsg.infiniteRecursionError());
+        assert.equal(Eval.message, window.blockly.eval_locale.infiniteRecursionError());
         return true;
       },
       xml: (function () {

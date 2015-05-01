@@ -17,8 +17,8 @@
 /* global $ */
 'use strict';
 
+var i18n = require('./locale');
 var utils = require('../utils');
-var i18n = require('../../locale/current/netsim');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');

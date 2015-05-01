@@ -1,3 +1,6 @@
 /build
-/node_modules/
+/node_modules/*
+!/node_modules/@cdo/
+/src/node_modules/*
 /npm-debug.log
+cdo-apps-build*.tgz

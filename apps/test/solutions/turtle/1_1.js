@@ -1,13 +1,9 @@
-var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-
+var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 var rblocks = function () {
   // stick this inside a function so that it's only loaded when needed
-  return testUtils.requireWithGlobalsCheckBuildFolder('turtle/requiredBlocks.js');
+  return require('@cdo/apps/turtle/requiredBlocks.js');
 };
-
-var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 
 module.exports = {
   app: "turtle",
@@ -21,6 +17,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
+        var studioApp = require('@cdo/apps/StudioApp').singleton;
         return studioApp.enableShowCode === true && studioApp.enableShowBlockCount === true;
       },
       missingBlocks: [],

@@ -1,9 +1,10 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var _ = require(testUtils.buildPath('lodash'));
-var Direction = require(testUtils.buildPath('studio/constants.js')).Direction;
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var _ = require('lodash');
+var Direction = require('@cdo/apps/studio/constants.js').Direction;
+var blockUtils = require('@cdo/apps/block_utils');
 
+var Studio = require('@cdo/apps/studio/studio');
 module.exports = {
   app: "studio",
   skinId: "studio",
@@ -17,9 +18,9 @@ module.exports = {
         // room to add tests here
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnStudioTick(1, function () {
           Studio.onPuzzleComplete();
-        }, 1);
+        });
       },
       expected: {
         result: true,
@@ -82,9 +83,9 @@ module.exports = {
           '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnStudioTick(60, function () {
           Studio.onPuzzleComplete();
-        }, 1000);
+        });
       },
       expected: {
         result: true,
@@ -288,9 +289,9 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnStudioTick(1, function () {
           Studio.onPuzzleComplete();
-        }, 1000);
+        });
       },
       expected: {
         result: true,
@@ -690,7 +691,7 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        testUtils.runOnStudioTick (24, function () {
+        testUtils.runOnStudioTick (23, function () {
           assert(Studio.playerScore === 1, 'score incremented');
           assert(Studio.sayComplete === 0, 'nothing was said yet');
         });

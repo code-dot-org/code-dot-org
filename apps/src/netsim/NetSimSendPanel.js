@@ -12,8 +12,8 @@
 /* global $ */
 'use strict';
 
-var utils = require('../utils');
-var i18n = require('../../locale/current/netsim');
+var utils = require('../utils'); // For Function.prototype.inherits()
+var i18n = require('./locale');
 var markup = require('./NetSimSendPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');

@@ -26,8 +26,8 @@
  */
 'use strict';
 
-var commonMsg = require('../../locale/current/common');
-var turtleMsg = require('../../locale/current/turtle');
+var commonMsg = require('locale');
+var turtleMsg = require('./locale');
 var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');
@@ -118,6 +118,7 @@ var Artist = function () {
   this.decorationAnimationWidth = 85;
   this.decorationAnimationHeight = 85;
   this.speedSlider = null;
+  this.skipAnimation = false;
 
   this.ctxAnswer = null;
   this.ctxImages = null;
@@ -229,6 +230,9 @@ Artist.prototype.afterInject_ = function (config) {
   // Change default speed (eg Speed up levels that have lots of steps).
   if (config.level.sliderSpeed) {
     this.speedSlider.setValue(config.level.sliderSpeed);
+    if(config.level.sliderSpeed == -1) {
+      this.skipAnimation = true;
+    }
   }
 
   if (this.studioApp_.isUsingBlockly()) {
@@ -318,7 +322,7 @@ Artist.prototype.drawAnswer = function() {
   if (this.level.solutionBlocks) {
     this.drawBlocksOnCanvas(this.level.solutionBlocks, this.ctxAnswer);
   } else {
-    this.drawLogOnCanvas(this.level.answer, this.ctxAnswer);
+    this.drawLogOnCanvas(this.level.answer.slice(0), this.ctxAnswer);
   }
 };
 
@@ -329,7 +333,7 @@ Artist.prototype.drawAnswer = function() {
 Artist.prototype.drawLogOnCanvas = function(log, canvas) {
   this.studioApp_.reset();
   while (log.length) {
-    var tuple = log.shift();
+    var tuple = log.shift().slice(0);
     this.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
     this.resetStepInfo_();
   }
@@ -733,7 +737,7 @@ Artist.prototype.execute = function() {
   this.studioApp_.playAudio('start', {loop : true});
   // animate the transcript.
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+  this.pid = require('../timeoutList').setTimeout(_.bind(this.animate, this), 100);
 
   if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
@@ -871,7 +875,11 @@ Artist.prototype.animate = function() {
     }
   }
 
-  this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
+  if(this.skipAnimation) {
+    this.animate();
+  } else {
+    this.pid = require('../timeoutList').setTimeout(_.bind(this.animate, this), stepSpeed);
+  }
 };
 
 Artist.prototype.calculateSmoothAnimate = function(options, distance) {

@@ -1,8 +1,4 @@
-var testUtils = require('../../util/testUtils');
-var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-
-var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
+var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 module.exports = {
   app: "turtle",
@@ -17,6 +13,7 @@ module.exports = {
       },
       customValidator: function () {
         // don't show block count because our ideal is Infinity
+        var studioApp = require('@cdo/apps/StudioApp').singleton;
         return studioApp.enableShowCode === true && studioApp.enableShowBlockCount === false;
       },
       missingBlocks: [],

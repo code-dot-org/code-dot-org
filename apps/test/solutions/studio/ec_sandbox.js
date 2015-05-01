@@ -1,9 +1,10 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var _ = require(testUtils.buildPath('lodash'));
-var Direction = require(testUtils.buildPath('studio/constants.js')).Direction;
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var _ = require('lodash');
+var Direction = require('@cdo/apps/studio/constants.js').Direction;
+var blockUtils = require('@cdo/apps/block_utils');
 
+var Studio = require('@cdo/apps/studio/studio');
 module.exports = {
   app: "studio",
   skinId: "studio",
@@ -18,9 +19,11 @@ module.exports = {
         // room to add tests here
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 1);
+        t.advance();
       },
       expected: {
         result: true,
@@ -37,9 +40,11 @@ module.exports = {
         "throwProjectile(0, 1, 'purple_fireball');",
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 1000);
+        t.advance();
       },
       expected: {
         result: true,

@@ -1,3 +1,5 @@
+var Eval = require('./eval');
+
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');

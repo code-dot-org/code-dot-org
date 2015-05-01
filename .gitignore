@@ -7,7 +7,6 @@
 /.bundle
 /.gdrive_session
 /crontab
-/dashboard/public/blockly
 /.dropbox.cache
 /build-started
 /locals.yml
@@ -20,3 +19,5 @@
 /pegasus/config/newrelic.yml
 /pegasus/.sass-cache
 /globals.yml
+/node_modules/*
+!/node_modules/@cdo/

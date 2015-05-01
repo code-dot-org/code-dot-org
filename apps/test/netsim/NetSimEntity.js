@@ -11,8 +11,8 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimEntity = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimEntity');
-var NetSimClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimClientNode');
+var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
+var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 
 describe("NetSimEntity", function () {
   it ("default entityID is undefined", function () {

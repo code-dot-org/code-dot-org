@@ -1,6 +1,3 @@
-var testUtils = require('../../util/testUtils');
-var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
-
 module.exports = {
   app: "flappy",
   skinId: "flappy",
@@ -22,11 +19,13 @@ module.exports = {
         {'test': 'flap', 'type': 'flappy_flap'}
       ],
       runBeforeClick: function (assert) {
+        var studioApp = require('@cdo/apps/StudioApp').singleton;
         assert(studioApp.enableShowCode === false);
         assert(studioApp.enableShowBlockCount === false);
 
         // manually complete rather than wait for timeout
         setTimeout(function () {
+          var Flappy = require('@cdo/apps/flappy/flappy');
           Flappy.onPuzzleComplete();
         }, 1);
       },

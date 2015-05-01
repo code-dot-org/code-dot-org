@@ -11,8 +11,8 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 }
 
 // get lodash
-var _ = require('./lodash');
-var Hammer = require('./hammer');
+var _ = require('lodash');
+var Hammer = require('hammerjs');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {

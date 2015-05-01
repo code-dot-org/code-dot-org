@@ -1,0 +1,15 @@
+{
+  "name": "@cdo/example",
+  "version": "0.0.1",
+  "private": true,
+  "description": "example npm frontend package with self-managed package lifecycle",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p ./build && browserify index.js > build/index-out.js",
+    "start": "mkdir -p ./build && watchify index.js -o build/index-out.js -v",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1.21"
+  }
+}

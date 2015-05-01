@@ -1,8 +1,14 @@
-#!/usr/bin/env ruby
-require_relative '../deployment'
-require 'cdo/rake_utils'
+#!/usr/bin/env bash
+# Exit on nonzero return value, always cd to script directory
+set -e
+cd -P -- "$(dirname -- "$0")"
 
-RakeUtils.sudo 'npm', 'install', '-g' 'grunt-cli'
-RakeUtils.sudo 'npm', 'install'
-RakeUtils.sudo 'MOOC_LOCALIZE=1', 'grunt'
-RakeUtils.sudo 'chown' '-R' 'ubuntu:ubuntu' 'build/package'
+export NODE_ENV="production"
+# build/package tgz archive, returns filename output
+npm install
+FILE=$(npm pack | tail -n 1)
+
+# Latest commit hash of any files in this subdirectory or blockly-core
+REV=$(git log --pretty=format:%h -n 1 -- . ../blockly-core)
+
+aws s3 cp ./${FILE} s3://cdo-dist/cdo-apps/cdo-apps-build-${REV}.tgz --acl public-read

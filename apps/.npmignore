@@ -1,0 +1,3 @@
+# Provide only bundled assets in /build to `npm pack`
+/*
+!/build

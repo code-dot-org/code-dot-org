@@ -1,5 +1,4 @@
-var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 
 module.exports = {
@@ -22,6 +21,7 @@ module.exports = {
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       customValidator: function () {
+        var Maze = require('@cdo/apps/maze/maze');
         return Maze.result === 2;
       },
       xml: '<xml><block type="maze_forever"><statement name="DO"><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></next></block></statement></block></xml>'

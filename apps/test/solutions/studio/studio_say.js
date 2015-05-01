@@ -1,5 +1,6 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var Studio = require('@cdo/apps/studio/studio');
 
 
 // Test saySprite
@@ -53,9 +54,11 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
+        t.advance();
       },
       customValidator: function (assert) {
         assert(spriteTalking(0) || Studio.sayComplete === 1, "Actor is talking");
@@ -81,9 +84,11 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
+        t.advance();
       },
       customValidator: function (assert) {
         assert(spriteTalking(1) === false, "Not talking");
@@ -121,9 +126,11 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
+        t.advance();
       },
       customValidator: function (assert) {
         assert(spriteTalking(1) === false, "Not talking");

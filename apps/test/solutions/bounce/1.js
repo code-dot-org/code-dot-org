@@ -1,5 +1,4 @@
-var testUtils = require('../../util/testUtils');
-var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
+var studioApp = require('@cdo/apps/StudioApp').singleton;
 
 module.exports = {
   app: "bounce",
@@ -27,6 +26,7 @@ module.exports = {
 
         // manually complete rather than wait for timeout
         setTimeout(function () {
+          var Bounce = require('@cdo/apps/bounce/bounce');
           Bounce.onPuzzleComplete();
         }, 1);
       },

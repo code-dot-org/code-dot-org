@@ -1,6 +1,7 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var TestResults = require('@cdo/apps/constants.js').TestResults;
 
+var Studio = require('@cdo/apps/studio/studio');
 module.exports = {
   app: "studio",
   skinId: "studio",
@@ -32,9 +33,9 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnStudioTick(100, function () {
           Studio.onPuzzleComplete();
-        }, 2000);
+        });
       },
       customValidator: function (assert) {
         assert(document.getElementById('sprite0').getAttribute('visibility') === 'hidden');

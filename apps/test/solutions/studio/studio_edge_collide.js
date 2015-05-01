@@ -1,5 +1,6 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var Studio = require('@cdo/apps/studio/studio');
 
 
 // Test edge collisions
@@ -92,9 +93,11 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 3000);
+        t.advance();
       },
       customValidator: function (assert) {
         assert(Studio.playerScore === 4, 'actual player score is ' + Studio.playerScore);
@@ -148,9 +151,11 @@ module.exports = {
       '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
+        t.advance();
       },
       customValidator: function (assert) {
         // make sure we've scored multiple points
@@ -198,9 +203,11 @@ module.exports = {
       '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
+        t.advance();
       },
       customValidator: function (assert) {
         // make sure we've scored multiple points
@@ -272,9 +279,11 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        var t = require('@cdo/apps/timeoutList');
+        t.setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
+        t.advance();
       },
       customValidator: function (assert) {
         // make sure we've scored all four points

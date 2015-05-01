@@ -6,7 +6,7 @@ var dropletUtils = require('./dropletUtils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
-var msg = require('../locale/current/common');
+var msg = require('locale');
 var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
@@ -369,7 +369,10 @@ StudioApp.prototype.init = function(config) {
                                    _.bind(this.onMouseUpVizResizeBar, this));
   }
 
-  window.addEventListener('resize', _.bind(this.onResize, this));
+  if(!this.resizeHandler) {
+    this.resizeHandler = _.bind(this.onResize, this);
+    window.addEventListener('resize', this.resizeHandler);
+  }
 
   this.reset(true);
 
@@ -421,6 +424,18 @@ StudioApp.prototype.init = function(config) {
       }).bind(this));
     }).bind(this));
   }
+};
+
+/**
+ * Use this function to cleanup any leftover event listeners on the global scope.
+ * Currently removes the 'resize' listener for unit tests reusing the StudioApp singleton.
+ */
+StudioApp.prototype.removeEventListeners = function () {
+  if (!this.resizeHandler) {
+    return;
+  }
+  window.removeEventListener('resize', this.resizeHandler);
+  this.resizeHandler = null;
 };
 
 /**
@@ -1249,7 +1264,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
-  
+
     /* jshint ignore:start */
     ace = window.ace;
     /* jshint ignore:end */

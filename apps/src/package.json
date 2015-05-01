@@ -1,0 +1,21 @@
+{
+  "name": "@cdo/apps",
+  "version": "0.0.1",
+  "description": "Code Studio module package",
+  "private": true,
+  "browser": {
+    "locale": "./locale.js"
+  },
+  "browserify": {
+    "transform": [
+      "ejsify"
+    ]
+  },
+  "dependencies": {
+    "ejsify": "^1.0.0",
+    "hammerjs": "^2.0.4",
+    "lodash": "^3.6.0",
+    "timers-browserify": "^1.4.0",
+    "timerstub": "^1.0.3"
+  }
+}

@@ -1,6 +1,5 @@
-var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var _ = require(testUtils.buildPath('lodash'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var _ = require('lodash');
 
 module.exports = {
   app: "applab",
@@ -17,13 +16,14 @@ module.exports = {
 
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
+          var Applab = require('@cdo/apps/applab/applab');
           Applab.onPuzzleComplete();
         }, 1);
       },
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
-      },
+      }
     },
     {
       description: "getText and setText on text labels.",
@@ -37,13 +37,14 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
           assert(document.getElementById('idTxt2').innerText === 'test-value');
+          var Applab = require('@cdo/apps/applab/applab');
           Applab.onPuzzleComplete();
         }, 100);
       },
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY
-      },
+      }
     }
   ]
 };

@@ -1,6 +1,6 @@
 var testUtils = require('../../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var blockUtils = require('@cdo/apps/block_utils');
 
 // Bee level in which we have a flower with zero nectar
 var levelDef = {
@@ -41,6 +41,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
+        var Maze = require('@cdo/apps/maze/maze');
         return Maze.bee.nectars_.length === 1;
       },
       xml: '<xml>' + blockUtils.blocksFromList([

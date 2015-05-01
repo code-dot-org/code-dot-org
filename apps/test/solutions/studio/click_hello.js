@@ -1,7 +1,7 @@
 var testUtils = require('../../util/testUtils');
-var _ = require(testUtils.buildPath('lodash'));
+var _ = require('lodash');
 
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 module.exports = {
   app: "studio",
@@ -13,6 +13,8 @@ module.exports = {
       description: "Expected solution.",
       xml: '<xml><block type="when_run" deletable="false"></block><block type="studio_whenSpriteClicked" deletable="false"><next><block type="studio_saySprite"><title name="TEXT">hello</title></block></next></block></xml>',
       runBeforeClick: function (assert) {
+        var Studio = require('@cdo/apps/studio/studio');
+
         // Make sure we reordered our start avatars
         assert(Studio.startAvatars.length, 23);
         assert(Studio.startAvatars[0] === 'octopus');

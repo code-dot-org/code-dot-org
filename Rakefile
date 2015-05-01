@@ -60,21 +60,14 @@ namespace :build do
       RakeUtils.system './deploy.sh', 'debug'
     end
     Dir.chdir(apps_dir) do
-      RakeUtils.system 'MOOC_DEV=1 grunt build'
+      RakeUtils.npm_install
     end
   end
 
   task :apps do
     Dir.chdir(apps_dir) do
-      HipChat.log 'Installing <b>apps</b> dependencies...'
-      RakeUtils.npm_install
-
       HipChat.log 'Building <b>apps</b>...'
-      if CDO.localize_apps
-        RakeUtils.system 'MOOC_LOCALIZE=1', 'grunt'
-      else
-        RakeUtils.system 'grunt'
-      end
+      RakeUtils.npm_install
     end
   end
 
@@ -196,11 +189,9 @@ namespace :install do
       if OS.linux?
         RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
         RakeUtils.sudo 'npm', 'update', '-g', 'npm'
-        RakeUtils.sudo 'npm', 'install', '-g', 'grunt-cli'
       elsif OS.mac?
         RakeUtils.system 'brew install node'
         RakeUtils.system 'npm', 'update', '-g', 'npm'
-        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
       end
     end
   end

@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+# Self-contained wrapper script using foreman to host multiple project processes in parallel
+
+proc = <<Procfile
+dashboard: bin/dashboard-server
+apps: npm --silent start
+Procfile
+
+require 'tempfile'
+procfile = Tempfile.new 'procfile'
+procfile.write(proc)
+procfile.close
+
+# install/load the Gem without Bundler
+def load_gem(name, require = nil)
+  begin
+    gem name
+  rescue LoadError
+    system("gem install #{name}")
+    Gem.clear_paths
+    retry
+  end
+  require require || name
+end
+
+# Ensure npm version meets minimum requirements
+if `npm -v`.to_i < 2
+  puts 'Your npm version is out of date. Running `sudo npm install -g npm` (may require password)'
+  `sudo npm install -g npm`
+end
+
+
+`bundle install --quiet --full-index`
+load_gem 'foreman'
+system "foreman start -f #{procfile.path} -d #{__dir__}"

@@ -1,3 +1,4 @@
+var Studio = require('./studio');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;

@@ -13,8 +13,8 @@
 'use strict';
 
 var utils = require('../utils');
-var _ = utils.getLodash();
-var i18n = require('../../locale/current/netsim');
+var _ = require('lodash');
+var i18n = require('./locale');
 var netsimConstants = require('./netsimConstants');
 
 var logger = require('./NetSimLogger').getSingleton();
@@ -319,4 +319,3 @@ exports.zeroPadRight = function (string, desiredWidth) {
   var padding = '0'.repeat(desiredWidth);
   return (string + padding).substr(0, desiredWidth);
 };
-

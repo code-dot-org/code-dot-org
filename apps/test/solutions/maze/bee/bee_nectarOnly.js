@@ -1,6 +1,6 @@
 var testUtils = require('../../../util/testUtils');
-var constants = require(testUtils.buildPath('constants.js'));
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var constants = require('@cdo/apps/constants.js');
+var blockUtils = require('@cdo/apps/block_utils');
 var TestResults = constants.TestResults;
 var TerminationValue = constants.BeeTerminationValue;
 
@@ -31,6 +31,7 @@ var levelDef = {
   flowerType: 'redWithNectar'
 };
 
+var Maze = require('@cdo/apps/maze/maze');
 module.exports = {
   app: "maze",
   skinId: 'bee',

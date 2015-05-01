@@ -1,8 +1,9 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var blockUtils = require('@cdo/apps/block_utils');
+var evalMsg = require('@cdo/apps/eval/locale');
+var Eval = require('@cdo/apps/eval/eval');
 testUtils.setupLocale('eval');
-var evalMsg = require(testUtils.buildPath('../locale/current/eval'));
 
 module.exports = {
   app: "eval",

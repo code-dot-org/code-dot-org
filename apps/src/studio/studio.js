@@ -8,8 +8,8 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
-var studioMsg = require('../../locale/current/studio');
+var commonMsg = require('locale');
+var studioMsg = require('./locale');
 var skins = require('../skins');
 var constants = require('./constants');
 var sharedConstants = require('../constants');
@@ -143,6 +143,8 @@ var twitterOptions = {
   hashtag: "StudioCode"
 };
 
+var timeouts = require('../timeoutList');
+
 function loadLevel() {
   // Load maps.
   Studio.map = level.map;
@@ -200,7 +202,7 @@ function loadLevel() {
  */
 function reorderedStartAvatars (avatarList, firstSpriteIndex) {
   firstSpriteIndex = firstSpriteIndex || 0;
-  return _.flatten([
+  return _.flattenDeep([
     avatarList.slice(firstSpriteIndex),
     avatarList.slice(0, firstSpriteIndex)
   ]);
@@ -1047,6 +1049,9 @@ var arrangeStartBlocks = function (config) {
  * Initialize Blockly and the Studio app.  Called on page load.
  */
 Studio.init = function(config) {
+  studioApp.reset = require('lodash').bind(this.reset, this);
+  studioApp.runButtonClick = require('lodash').bind(this.runButtonClick, this);
+
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1213,21 +1218,21 @@ Studio.clearEventHandlersKillTickLoop = function() {
 
       if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
         // Note: not calling waitCallback() or setting complete = true
-        window.clearTimeout(cmd.opts.waitTimeout);
+        timeouts.clearTimeout(cmd.opts.waitTimeout);
       }
     });
   }
   Studio.eventHandlers = [];
   if (Studio.perExecutionTimeouts) {
     Studio.perExecutionTimeouts.forEach(function (timeout) {
-      clearInterval(timeout);
+      timeouts.clearInterval(timeout);
     });
    }
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
     if (Studio.sprite[i] && Studio.sprite[i].bubbleTimeout) {
-      window.clearTimeout(Studio.sprite[i].bubbleTimeout);
+      timeouts.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
   if (Studio.projectiles) {
@@ -1242,7 +1247,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   var svg = document.getElementById('svgStudio');
@@ -1366,7 +1371,7 @@ studioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Studio.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -1662,7 +1667,8 @@ Studio.execute = function() {
   }
 
   Studio.perExecutionTimeouts = [];
-  Studio.perExecutionTimeouts.push(window.setInterval(Studio.onTick, Studio.scale.stepSpeed));
+  var onTickId = timeouts.setInterval(Studio.onTick, Studio.scale.stepSpeed);
+  Studio.perExecutionTimeouts.push(onTickId);
 };
 
 Studio.feedbackImage = '';
@@ -2160,12 +2166,12 @@ Studio.vanishActor = function (opts) {
     explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
     explosion.setAttribute('width', numFrames * 100);
     _.range(0, numFrames).forEach(function (i) {
-      Studio.perExecutionTimeouts.push(setTimeout(function () {
+      Studio.perExecutionTimeouts.push(timeouts.setTimeout(function () {
         explosion.setAttribute('x', baseX - i * 100);
         sprite.setAttribute('opacity', (numFrames - i) / numFrames);
       }, i * 100));
     });
-    Studio.perExecutionTimeouts.push(setTimeout(function () {
+    Studio.perExecutionTimeouts.push(timeouts.setTimeout(function () {
       explosion.setAttribute('visibility', 'hidden');
       // hide the sprite
       Studio.setSprite({
@@ -2365,7 +2371,7 @@ Studio.wait = function (opts) {
     if ('click' === opts.value) {
       opts.waitForClick = true;
     } else {
-      opts.waitTimeout = window.setTimeout(
+      opts.waitTimeout = timeouts.setTimeout(
         delegate(this, onWaitComplete, opts),
         opts.value);
     }
@@ -2410,7 +2416,7 @@ Studio.showTitleScreen = function (opts) {
     // Wait for a click or a timeout
     opts.waitForClick = true;
     opts.waitCallback = delegate(this, Studio.hideTitleScreen, opts);
-    opts.waitTimeout = window.setTimeout(
+    opts.waitTimeout = timeouts.setTimeout(
         delegate(this, onWaitComplete, opts),
         TITLE_SCREEN_TIMEOUT);
   }
@@ -2461,7 +2467,7 @@ Studio.saySprite = function (opts) {
   if (sprite.bubbleTimeoutFunc) {
     sprite.bubbleTimeoutFunc();
   }
-  window.clearTimeout(sprite.bubbleTimeout);
+  timeouts.clearTimeout(sprite.bubbleTimeout);
 
   if (!sprite.visible) {
     opts.complete = true;
@@ -2493,7 +2499,7 @@ Studio.saySprite = function (opts) {
   speechBubble.setAttribute('visibility', 'visible');
 
   sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
-  sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
+  sprite.bubbleTimeout = timeouts.setTimeout(sprite.bubbleTimeoutFunc,
     opts.seconds * 1000);
 
   return opts.complete;
@@ -2532,7 +2538,7 @@ Studio.throwProjectile = function (options) {
   }
   options.started = true;
   options.complete = false;
-  window.setTimeout(function () {
+  timeouts.setTimeout(function () {
     options.complete = true;
   }, MIN_TIME_BETWEEN_PROJECTILES);
 

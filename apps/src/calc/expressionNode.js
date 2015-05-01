@@ -348,18 +348,18 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
     ]);
     tokens.push(new Token(')', !nodesMatch));
 
-    return _.flatten(tokens);
+    return _.flattenDeep(tokens);
   }
 
   if (this.value_ === 'sqr') {
-    return _.flatten([
+    return _.flattenDeep([
       new Token('(', !nodesMatch),
       tokensForChild(0),
       new Token(' ^ 2', !nodesMatch),
       new Token(')', !nodesMatch)
     ]);
   } else if (this.value_ === 'pow') {
-    return _.flatten([
+    return _.flattenDeep([
       new Token('(', !nodesMatch),
       tokensForChild(0),
       new Token(' ^ ', !nodesMatch),
@@ -389,7 +389,7 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
   }
 
   tokens.push(new Token(")", !nodesMatch));
-  return _.flatten(tokens);
+  return _.flattenDeep(tokens);
 };
 
 /**
@@ -438,7 +438,7 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
   if (suffix) {
     tokens.push(suffix);
   }
-  return _.flatten(tokens);
+  return _.flattenDeep(tokens);
 };
 
 /**

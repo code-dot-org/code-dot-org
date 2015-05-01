@@ -13,7 +13,7 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
-var netsimMsg = require('../../locale/current/netsim');
+var netsimMsg = require('./locale');
 var markup = require('./NetSimPacketEditor.html.ejs');
 var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
@@ -84,14 +84,14 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
 
   /** @type {number} */
   this.toAddress = initialConfig.toAddress || 0;
-  
+
   /** @type {number} */
   this.fromAddress = initialConfig.fromAddress || 0;
-  
+
   /** @type {number} */
   this.packetIndex = initialConfig.packetIndex !== undefined ?
       initialConfig.packetIndex : 1;
-  
+
   /** @type {number} */
   this.packetCount = initialConfig.packetCount !== undefined ?
       initialConfig.packetCount : 1;
@@ -203,7 +203,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.lastBitSentTime_ = undefined;
-  
+
   this.render();
 };
 

@@ -1,8 +1,8 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var blockUtils = require('@cdo/apps/block_utils');
 testUtils.setupLocale('calc');
-var calcMsg = require(testUtils.buildPath('../locale/current/calc'));
+var calcMsg = require('@cdo/apps/calc/locale');
 
 var level = {
   // f(x, y) = x + y
@@ -246,6 +246,7 @@ module.exports = {
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       customValidator: function (assert) {
+        var Calc = require('@cdo/apps/calc/calc');
         assert.equal(Calc.__testonly__.appState.message, calcMsg.missingFunctionError({functionName: 'f'}));
         return true;
       },

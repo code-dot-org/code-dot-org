@@ -593,3 +593,5 @@ CleanLogs.prototype.onBegin_ = function () {
   }.bind(this));
   CommandSequence.prototype.onBegin_.call(this);
 };
+
+NetSimShardCleaner.nsle = NetSimLogEntry;

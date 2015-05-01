@@ -71,11 +71,15 @@ var Projectile = function (options) {
 
   this.currentFrame_ = 0;
   var self = this;
-  this.animator_ = window.setInterval(function () {
-    if (self.loop || self.currentFrame_ + 1 < self.frames) {
-      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
-    }
-  }, 50);
+
+  var timeoutList = require('../timeoutList');
+  if(timeoutList.getStubTimer() === false) {
+    this.animator_ = timeoutList.setInterval(function () {
+      if (self.loop || self.currentFrame_ + 1 < self.frames) {
+        self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+      }
+    }, 50);
+  }
 
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +

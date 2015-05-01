@@ -23,8 +23,8 @@ var Eval = module.exports;
  */
 var studioApp = require('../StudioApp').singleton;
 var Eval = module.exports;
-var commonMsg = require('../../locale/current/common');
-var evalMsg = require('../../locale/current/eval');
+var commonMsg = require('locale');
+var evalMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');
@@ -70,6 +70,7 @@ Eval.encodedFeedbackImage = null;
  * Initialize Blockly and the Eval.  Called on page load.
  */
 Eval.init = function(config) {
+  studioApp.runButtonClick = require('lodash').bind(this.runButtonClick, this);
 
   skin = config.skin;
   level = config.level;
@@ -157,7 +158,7 @@ Eval.init = function(config) {
 /**
  * Click the run button.  Start the program.
  */
-studioApp.runButtonClick = function() {
+Eval.runButtonClick = function() {
   studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp.attempts++;
@@ -477,7 +478,7 @@ function onReportComplete(response) {
   runButton.disabled = false;
 
   // Add a short delay so that user gets to see their finished drawing.
-  setTimeout(function () {
+  require('../timeoutList').setTimeout(function () {
     displayFeedback(response);
   }, 2000);
 }
