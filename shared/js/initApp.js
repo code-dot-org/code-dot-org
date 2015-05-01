@@ -101,11 +101,19 @@ dashboard.updateTimestamp = function() {
   }
 };
 
-var appToProjectUrl = {
-  turtle: '/p/artist',
-  studio: '/p/playlab',
-  applab: '/p/applab'
-};
+function appToProjectUrl() {
+  switch (appOptions.app) {
+    case 'applab':
+      return '/p/applab';
+    case 'turtle':
+      return '/p/artist';
+    case 'studio':
+      if (appOptions.level.useContractEditor) {
+        return '/p/algebra_game';
+      }
+      return '/p/playlab';
+  }
+}
 
 /**
  * @returns {string} The serialized level source from the editor.
@@ -126,7 +134,7 @@ dashboard.saveProject = function(callback, overrideSource) {
   var channelId = dashboard.currentApp.id;
   dashboard.currentApp.levelSource = overrideSource || dashboard.getEditorSource();
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
-  dashboard.currentApp.level = appToProjectUrl[appOptions.app];
+  dashboard.currentApp.level = appToProjectUrl();
   if (channelId && dashboard.currentApp.isOwner) {
     channels().update(channelId, dashboard.currentApp, function(callback, data) {
       if (data) {
@@ -233,7 +241,7 @@ function initApp() {
       appOptions.callouts = [];
       dashboard.showMinimalProjectHeader();
     }
-  } else if (appOptions.isLegacyShare && appToProjectUrl[appOptions.app]) {
+  } else if (appOptions.isLegacyShare && appToProjectUrl()) {
     dashboard.currentApp = {
       name: 'Untitled Project'
     };
@@ -327,6 +335,7 @@ function loadProject(promise) {
       });
       return deferred;
     });
+    dashboard.showProjectLevelHeader();
   }
   return promise;
 }
