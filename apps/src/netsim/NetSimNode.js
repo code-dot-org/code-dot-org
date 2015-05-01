@@ -87,7 +87,7 @@ NetSimNode.prototype.getHostname = function () {
   // Strip everything that's not a word-character or a digit from the display
   // name, then append the node ID so that hostnames are more likely to
   // be unique.
-  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase() +
+  return this.getShortDisplayName().replace(/[^\w\d]/g, '').toLowerCase() +
       this.entityID;
 };
 
