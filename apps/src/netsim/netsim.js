@@ -343,7 +343,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
       $('.lobby-panel'),
-      this.level,
       this, {
         user: user,
         levelKey: this.getUniqueLevelKey(),

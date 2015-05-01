@@ -21,6 +21,7 @@ var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 
 var logger = require('./NetSimLogger').getSingleton();
+var netsimGlobals = require('./NetSimGlobals').getSingleton();
 
 /**
  * @typedef {Object} shardChoice
@@ -36,7 +37,6 @@ var logger = require('./NetSimLogger').getSingleton();
  * Generator and controller for lobby/connection controls.
  *
  * @param {jQuery} rootDiv
- * @param {netsimLevelConfiguration} levelConfig
  * @param {NetSim} connection - The shard connection that this
  *        lobby control will manipulate.
  * @param {Object} options
@@ -46,19 +46,12 @@ var logger = require('./NetSimLogger').getSingleton();
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimLobby = module.exports = function (rootDiv, levelConfig, netsim,
-    options) {
+var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
   /**
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = rootDiv;
-
-  /**
-   * @type {netsimLevelConfiguration}
-   * @private
-   */
-  this.levelConfig_ = levelConfig;
 
   /**
    * Shard connection that this lobby control will manipulate.
@@ -188,7 +181,7 @@ NetSimLobby.prototype.render = function () {
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
         this.rootDiv_,
         {
-          levelConfig: this.levelConfig_,
+          levelConfig: netsimGlobals.getLevelConfig(),
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
           remoteNode: this.remoteNode_,
@@ -301,7 +294,7 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
 
       // On initial connect, if we are connecting to routers and no routers
       // are present, add one automatically.
-      if (this.levelConfig_.canConnectToRouters &&
+      if (netsimGlobals.getLevelConfig().canConnectToRouters &&
           !this.doesShardContainRouter()) {
         this.addRouterToLobby();
       }
@@ -331,9 +324,10 @@ NetSimLobby.prototype.addRouterToLobby = function () {
       return;
     }
 
-    router.bandwidth = this.levelConfig_.defaultRouterBandwidth;
-    router.memory = this.levelConfig_.defaultRouterMemory;
-    router.dnsMode = this.levelConfig_.defaultDnsMode;
+    var levelConfig = netsimGlobals.getLevelConfig();
+    router.bandwidth = levelConfig.defaultRouterBandwidth;
+    router.memory = levelConfig.defaultRouterMemory;
+    router.dnsMode = levelConfig.defaultDnsMode;
     router.update(function () {});
   }.bind(this));
 };
