@@ -13,7 +13,6 @@ fi
   fi
 )
 (
-  # TODO (brent) - do i need to account for debug/non-debug here?
   if [ -d "../apps" ] ; then
     cd ../apps
     npm install
