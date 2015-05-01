@@ -4,10 +4,15 @@
   "created_at": "2015-04-23T20:47:38.000Z",
   "properties": {
     "options": {
-      "skip_dialog": true
+      "skip_dialog": true,
+      "css": "unplugged"
     },
     "title": "Connections",
-    "markdown": "## Connections to Other Subject Areas\n\nDo you think computer science connects to other topics or subjects your students are learning about? Explain why or why not.\n\n<div id=\"discourse-comments\" />\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+    "markdown": "## Connections to Other Subject Areas\n\nDo you think computer science connects to other topics or subjects your students are learning about? Explain why or why not.\n<br><br>\n<div id=\"discourse-comments\"></div><br><br>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n",
+    "type": "External",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </External>

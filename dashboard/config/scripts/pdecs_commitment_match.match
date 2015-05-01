@@ -1,7 +1,9 @@
 name 'PDECS commitment match'
 title 'Program Commitment Matching Question'
 description 'Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 3).'
-height 60
+height '60'
+hide_submit true
+skip_sound true
 
 question 'Phase 1'
 answer 'Online Introduction: 2 hours online'

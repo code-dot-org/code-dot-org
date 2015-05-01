@@ -1,5 +1,9 @@
 name 'sciPD intro to CS 2'
 title 'Intro to Computational Science'
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
 
 question 'What is computational science good for?'
 wrong 'it replaces traditional science labs'
