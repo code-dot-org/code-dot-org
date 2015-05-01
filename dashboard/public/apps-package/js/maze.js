@@ -229,7 +229,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":207,"../utils":253}],112:[function(require,module,exports){
+},{"../skins":206,"../utils":252}],112:[function(require,module,exports){
 /**
  * Blockly Apps: Maze
  *
@@ -296,7 +296,7 @@ var skin;
 /**
  * Milliseconds between each animation frame.
  */
-var stepSpeed;
+var stepSpeed = 100;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -1530,7 +1530,7 @@ function animatedMove (direction, timeForMove) {
 /**
  * Schedule a movement animating using a spritesheet.
  */
-function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
+Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
     idStr, direction, hidePegman) {
   var pegmanIcon = document.getElementById('pegman');
   utils.range(0, numFrames - 1).forEach(function (frame) {
@@ -1547,7 +1547,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
       });
     }, timePerFrame * frame);
   });
-}
+};
 
 /**
  * Schedule the animations for a move from the current position
@@ -1572,7 +1572,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
     var movePegmanIcon = document.getElementById('movePegman');
     timePerFrame = timeForAnimation / numFrames;
 
-    scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
+    Maze.scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
       numFrames, timePerFrame, 'move', direction, true);
 
     // Hide movePegman and set pegman to the end position.
@@ -1703,7 +1703,7 @@ Maze.scheduleFail = function(forward) {
         }
         // animate our sprite sheet
         var timePerFrame = 100;
-        scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
+        Maze.scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
           {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
           Direction.NORTH, true);
         setTimeout(function () {
@@ -1833,8 +1833,8 @@ function setPegmanTransparent() {
  * @param {integer} timeAlloted How much time we have for our animations
  */
 function scheduleDance(victoryDance, timeAlloted) {
-  if (mazeUtils.isScratSkin()) {
-    scrat.scheduleDance(victoryDance, timeAlloted);
+  if (mazeUtils.isScratSkin(skin.id)) {
+    scrat.scheduleDance(victoryDance, timeAlloted, skin);
     return;
   }
 
@@ -2040,7 +2040,7 @@ Maze.onExecutionFinish = function () {
   }
 };
 
-},{"../../locale/current/common":258,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../templates/page.html.ejs":232,"../timeoutList":238,"../utils":253,"./api":98,"./bee":99,"./beeItemDrawer":101,"./controls.html.ejs":103,"./dirtDrawer":104,"./dropletConfig":105,"./executionInfo":106,"./extraControlRows.html.ejs":107,"./mazeUtils":113,"./scrat":115,"./tiles":118,"./visualization.html.ejs":123,"./wordsearch":124}],124:[function(require,module,exports){
+},{"../../locale/current/common":257,"../StudioApp":4,"../codegen":55,"../dom":58,"../dropletUtils":59,"../templates/page.html.ejs":231,"../timeoutList":237,"../utils":252,"./api":98,"./bee":99,"./beeItemDrawer":101,"./controls.html.ejs":103,"./dirtDrawer":104,"./dropletConfig":105,"./executionInfo":106,"./extraControlRows.html.ejs":107,"./mazeUtils":113,"./scrat":115,"./tiles":118,"./visualization.html.ejs":123,"./wordsearch":124}],124:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
@@ -2293,7 +2293,7 @@ WordSearch.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":253,"./mazeUtils":113,"./tiles":118}],123:[function(require,module,exports){
+},{"../utils":252,"./mazeUtils":113,"./tiles":118}],123:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2313,8 +2313,9 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],115:[function(require,module,exports){
+},{"ejs":273}],115:[function(require,module,exports){
 var SquareType = require('./tiles').SquareType;
+var Direction = require('./tiles').Direction;
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -2411,7 +2412,7 @@ module.exports.drawMapTiles = function (svg) {
  * Schedule the animations for Scrat dancing.
  * @param {integer} timeAlloted How much time we have for our animations
  */
-module.exports.scheduleDance = function (victoryDance, timeAlloted) {
+module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
   var finishIcon = document.getElementById('finish');
   if (finishIcon) {
     finishIcon.setAttribute('visibility', 'hidden');
@@ -2421,11 +2422,11 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted) {
   var timePerFrame = timeAlloted / numFrames;
   var start = {x: Maze.pegmanX, y: Maze.pegmanY};
 
-  scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
+  Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
     numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 };
 
-},{"../utils":253,"./tiles":118}],110:[function(require,module,exports){
+},{"../utils":252,"./tiles":118}],110:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var karelLevels = require('./karelLevels');
 var wordsearchLevels = require('./wordsearchLevels');
@@ -3059,7 +3060,7 @@ cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../utils":253,"./karelLevels":108,"./requiredBlocks":114,"./startBlocks.xml.ejs":117,"./tiles":118,"./toolboxes/maze.xml.ejs":122,"./wordsearchLevels":125}],125:[function(require,module,exports){
+},{"../../locale/current/maze":261,"../block_utils":27,"../utils":252,"./karelLevels":108,"./requiredBlocks":114,"./startBlocks.xml.ejs":117,"./tiles":118,"./toolboxes/maze.xml.ejs":122,"./wordsearchLevels":125}],125:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -3319,7 +3320,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],117:[function(require,module,exports){
+},{"ejs":273}],117:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3339,7 +3340,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],114:[function(require,module,exports){
+},{"ejs":273}],114:[function(require,module,exports){
 var requiredBlockUtils = require('../required_block_utils');
 
 var MOVE_FORWARD = {'test': 'moveForward', 'type': 'maze_moveForward'};
@@ -3367,7 +3368,7 @@ module.exports = {
   FOR_LOOP: FOR_LOOP
 };
 
-},{"../required_block_utils":205}],108:[function(require,module,exports){
+},{"../required_block_utils":204}],108:[function(require,module,exports){
 /*jshint multistr: true */
 
 var levelBase = require('../level_base');
@@ -4617,7 +4618,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../level_base":96,"./karelStartBlocks.xml.ejs":109,"./tiles":118,"./toolboxes/karel1.xml.ejs":119,"./toolboxes/karel2.xml.ejs":120,"./toolboxes/karel3.xml.ejs":121}],121:[function(require,module,exports){
+},{"../../locale/current/maze":261,"../block_utils":27,"../level_base":96,"./karelStartBlocks.xml.ejs":109,"./tiles":118,"./toolboxes/karel1.xml.ejs":119,"./toolboxes/karel2.xml.ejs":120,"./toolboxes/karel3.xml.ejs":121}],121:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4650,7 +4651,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/current/common":258,"ejs":274}],120:[function(require,module,exports){
+},{"../../../locale/current/common":257,"ejs":273}],120:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4675,7 +4676,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/current/common":258,"../../../locale/current/maze":262,"ejs":274}],119:[function(require,module,exports){
+},{"../../../locale/current/common":257,"../../../locale/current/maze":261,"ejs":273}],119:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4695,7 +4696,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],109:[function(require,module,exports){
+},{"ejs":273}],109:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4726,7 +4727,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/maze":262,"ejs":274}],107:[function(require,module,exports){
+},{"../../locale/current/maze":261,"ejs":273}],107:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4748,7 +4749,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/maze":262,"ejs":274}],106:[function(require,module,exports){
+},{"../../locale/current/maze":261,"ejs":273}],106:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -4874,7 +4875,7 @@ ExecutionInfo.prototype.checkTimeout = function() {
   }
 };
 
-},{"../utils":253}],105:[function(require,module,exports){
+},{"../utils":252}],105:[function(require,module,exports){
 var msg = require('../../locale/current/maze');
 
 module.exports.blocks = [
@@ -4890,7 +4891,7 @@ module.exports.categories = {
   },
 };
 
-},{"../../locale/current/maze":262}],103:[function(require,module,exports){
+},{"../../locale/current/maze":261}],103:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4911,7 +4912,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/maze":262,"ejs":274}],102:[function(require,module,exports){
+},{"../../locale/current/maze":261,"ejs":273}],102:[function(require,module,exports){
 /**
  * Blockly Demo: Maze
  *
@@ -5321,7 +5322,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-},{"../../locale/current/common":258,"../../locale/current/maze":262,"../block_utils":27,"../codegen":55,"./beeBlocks":100,"./mazeUtils":113}],101:[function(require,module,exports){
+},{"../../locale/current/common":257,"../../locale/current/maze":261,"../block_utils":27,"../codegen":55,"./beeBlocks":100,"./mazeUtils":113}],101:[function(require,module,exports){
 /*jshint -W086 */
 
 var DirtDrawer = require('./dirtDrawer');
@@ -5608,7 +5609,7 @@ BeeItemDrawer.prototype.addCheckerboardTile = function (row, col, isPath) {
   }
 };
 
-},{"../utils":253,"./dirtDrawer":104,"./mazeUtils":113}],104:[function(require,module,exports){
+},{"../utils":252,"./dirtDrawer":104,"./mazeUtils":113}],104:[function(require,module,exports){
 var cellId = require('./mazeUtils').cellId;
 
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
@@ -5976,7 +5977,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   };
 }
 
-},{"../../locale/current/maze":262,"../block_utils":27,"../codegen":55}],98:[function(require,module,exports){
+},{"../../locale/current/maze":261,"../block_utils":27,"../codegen":55}],98:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var MoveDirection = tiles.MoveDirection;
@@ -6233,11 +6234,55 @@ exports.loopHighlight = API_FUNCTION(function (id) {
 });
 
 
-for (var functionName in Bee.api) {
-  exports[functionName] = API_FUNCTION(Bee.api[functionName]);
-}
 
-},{"../utils":253,"./bee":99,"./tiles":118}],118:[function(require,module,exports){
+/**
+ * Bee related API functions. If better modularized, we could potentially
+ * separate these out, but as things stand right now they will be loaded
+ * whether or not we're a Bee level
+ */
+exports.getNectar = API_FUNCTION(function(id) {
+  Maze.bee.getNectar(id);
+});
+
+exports.makeHoney = API_FUNCTION(function(id) {
+  Maze.bee.makeHoney(id);
+});
+
+exports.atFlower = API_FUNCTION(function(id) {
+  var col = Maze.pegmanX;
+  var row = Maze.pegmanY;
+  Maze.executionInfo.queueAction("at_flower", id);
+  return Maze.bee.isFlower(row, col, true);
+});
+
+exports.atHoneycomb = API_FUNCTION(function(id) {
+  var col = Maze.pegmanX;
+  var row = Maze.pegmanY;
+  Maze.executionInfo.queueAction("at_honeycomb", id);
+  return Maze.bee.isHive(row, col, true);
+});
+
+exports.nectarRemaining = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("nectar_remaining", id);
+  return Maze.bee.nectarRemaining(true);
+});
+
+exports.honeyAvailable = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("honey_available", id);
+  return Maze.bee.honeyAvailable();
+});
+
+exports.nectarCollected = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("nectar_collected", id);
+  return Maze.bee.nectars_.length;
+});
+
+exports.honeyCreated = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction("honey_created", id);
+  return Maze.bee.honey_;
+});
+
+},{"../utils":252,"./bee":99,"./tiles":118}],118:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -6300,7 +6345,7 @@ Tiles.constrainDirection4 = function(d) {
   return utils.mod(d, 4);
 };
 
-},{"../utils":253}],99:[function(require,module,exports){
+},{"../utils":252}],99:[function(require,module,exports){
 var utils = require('../utils');
 var mazeMsg = require('../../locale/current/maze');
 var TestResults = require('../constants.js').TestResults;
@@ -6715,52 +6760,6 @@ Bee.prototype.animateMakeHoney = function () {
   this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
 };
 
-/**
- * Bee related API functions
- */
-Bee.api = {};
-Bee.api.getNectar = function(id) {
-  Maze.bee.getNectar(id);
-};
-
-Bee.api.makeHoney = function(id) {
-  Maze.bee.makeHoney(id);
-};
-
-Bee.api.atFlower = function(id) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
-  Maze.executionInfo.queueAction("at_flower", id);
-  return Maze.bee.isFlower(row, col, true);
-};
-
-Bee.api.atHoneycomb = function(id) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
-  Maze.executionInfo.queueAction("at_honeycomb", id);
-  return Maze.bee.isHive(row, col, true);
-};
-
-Bee.api.nectarRemaining = function (id) {
-  Maze.executionInfo.queueAction("nectar_remaining", id);
-  return Maze.bee.nectarRemaining(true);
-};
-
-Bee.api.honeyAvailable = function (id) {
-  Maze.executionInfo.queueAction("honey_available", id);
-  return Maze.bee.honeyAvailable();
-};
-
-Bee.api.nectarCollected = function (id) {
-  Maze.executionInfo.queueAction("nectar_collected", id);
-  return Maze.bee.nectars_.length;
-};
-
-Bee.api.honeyCreated = function (id) {
-  Maze.executionInfo.queueAction("honey_created", id);
-  return Maze.bee.honey_;
-};
-
-},{"../../locale/current/maze":262,"../constants.js":57,"../utils":253}],262:[function(require,module,exports){
+},{"../../locale/current/maze":261,"../constants.js":57,"../utils":252}],261:[function(require,module,exports){
 /*maze*/ module.exports = window.blockly.appLocale;
 },{}]},{},[111]);

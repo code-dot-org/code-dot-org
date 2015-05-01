@@ -25,7 +25,8 @@ var logger = require('./NetSimLogger').getSingleton();
  * @param {Object} options
  * @param {string} options.logTitle
  * @param {boolean} [options.isMinimized] defaults to FALSE
- * @param {function} [options.receiveButtonCallback]
+ * @param {boolean} [options.showReadWireButton] defaults to FALSE
+ * @param {NetSim} options.netsim
  * @constructor
  * @augments NetSimPanel
  * @implements INetSimLogPanel
@@ -60,11 +61,19 @@ var NetSimBitLogPanel = module.exports = function (rootDiv, options) {
   this.logTitle_ = options.logTitle;
 
   /**
-   * Method to call when the receive button is pressed.
-   * @type {function}
+   * Reference to the top-level NetSim controller for reading bits and
+   * triggering animations.
+   * @type {NetSim}
    * @private
    */
-  this.receiveButtonCallback_ = options.receiveButtonCallback;
+  this.netsim_ = options.netsim;
+
+  /**
+   * Whether this log should have a "Read Wire" button.
+   * @type {boolean}
+   * @private
+   */
+  this.showReadWireButton_ = options.showReadWireButton;
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -84,16 +93,14 @@ NetSimBitLogPanel.prototype.render = function () {
     binary: this.binary_,
     enabledEncodings: this.encodings_,
     chunkSize: this.chunkSize_,
-    showReadWireButton: (this.receiveButtonCallback_ !== undefined)
+    showReadWireButton: this.showReadWireButton_
   }));
   this.getBody().html(newMarkup);
   NetSimEncodingControl.hideRowsByEncoding(this.getBody(), this.encodings_);
 
-  // If we have a receive callback, add a receive button
-  if (this.receiveButtonCallback_) {
-    this.getBody().find('#read-wire-button')
-        .click(this.onReceiveButtonPress_.bind(this));
-  }
+
+  this.getBody().find('#read-wire-button')
+      .click(this.onReceiveButtonPress_.bind(this));
 
   // Add a clear button to the panel header
   this.addButton(i18n.clear(), this.onClearButtonPress_.bind(this));
@@ -120,20 +127,22 @@ NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function (jQueryEvent) {
   }
 
   thisButton.attr('disabled', 'disabled');
-  this.receiveButtonCallback_(function (err, message) {
+  this.netsim_.receiveBit(function (err, message) {
     if (err) {
       logger.warn("Error reading wire state: " + err.message);
       thisButton.removeAttr('disabled');
       return;
     }
 
+    // A successful fetch with a null message means there's nothing
+    // on the wire.  We should log its default state: off/zero
+    var receivedBit = '0';
     if (message) {
-      this.log(message.payload);
-    } else {
-      // A successful fetch with a null message means there's nothing
-      // on the wire.  We should log its default state: off/zero
-      this.log('0');
+      receivedBit = message.payload;
     }
+
+    this.log(receivedBit);
+    this.netsim_.animateReadWireState(receivedBit);
     thisButton.removeAttr('disabled');
   }.bind(this));
 };

@@ -98,7 +98,7 @@ module.exports.drawMapTiles = function (svg) {
  * Schedule the animations for Scrat dancing.
  * @param {integer} timeAlloted How much time we have for our animations
  */
-module.exports.scheduleDance = function (victoryDance, timeAlloted) {
+module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
   var finishIcon = document.getElementById('finish');
   if (finishIcon) {
     finishIcon.setAttribute('visibility', 'hidden');

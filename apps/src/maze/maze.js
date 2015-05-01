@@ -1307,7 +1307,7 @@ function animatedMove (direction, timeForMove) {
 /**
  * Schedule a movement animating using a spritesheet.
  */
-function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
+Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
     idStr, direction, hidePegman) {
   var pegmanIcon = document.getElementById('pegman');
   utils.range(0, numFrames - 1).forEach(function (frame) {
@@ -1324,8 +1324,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
       });
     }, timePerFrame * frame);
   });
-}
-Maze.scheduleSheetedMovement = scheduleSheetedMovement;
+};
 
 /**
  * Schedule the animations for a move from the current position
@@ -1350,7 +1349,7 @@ Maze.scheduleSheetedMovement = scheduleSheetedMovement;
     var movePegmanIcon = document.getElementById('movePegman');
     timePerFrame = timeForAnimation / numFrames;
 
-    scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
+    Maze.scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
       numFrames, timePerFrame, 'move', direction, true);
 
     // Hide movePegman and set pegman to the end position.
@@ -1481,7 +1480,7 @@ Maze.scheduleFail = function(forward) {
         }
         // animate our sprite sheet
         var timePerFrame = 100;
-        scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
+        Maze.scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
           {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
           Direction.NORTH, true);
         timeoutList.setTimeout(function () {
@@ -1611,8 +1610,8 @@ function setPegmanTransparent() {
  * @param {integer} timeAlloted How much time we have for our animations
  */
 function scheduleDance(victoryDance, timeAlloted) {
-  if (mazeUtils.isScratSkin()) {
-    scrat.scheduleDance(victoryDance, timeAlloted);
+  if (mazeUtils.isScratSkin(skin.id)) {
+    scrat.scheduleDance(victoryDance, timeAlloted, skin);
     return;
   }
 

@@ -10,5 +10,6 @@ function setGlobals () {
   // locale file requires Blockly as a global
   window.Blockly = require('blockly');
   require('blockly_locale');
+  // TODO (brent) - do we need getBBox here anymore?
 }
 module.exports = setGlobals;

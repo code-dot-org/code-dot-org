@@ -1,3 +1,5 @@
+/* global define */
+
 var xml = require('./xml');
 var savedAmd;
 
@@ -153,6 +155,12 @@ exports.createUuid = function () {
     var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
     return v.toString(16);
   });
+};
+
+exports.fireResizeEvent = function () {
+  var ev = document.createEvent('Event');
+  ev.initEvent('resize', true, true);
+  window.dispatchEvent(ev);
 };
 
 // ECMAScript 6 polyfill for String.prototype.repeat

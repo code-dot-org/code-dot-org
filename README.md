@@ -73,9 +73,6 @@ Our code is segmented into four parts:
 4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
 5. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
 
-<<<<<<< HEAD
-## Building Apps and Blockly-core
-=======
 ## Running Pegasus
 
 1. `cd code-dot-org`
@@ -93,7 +90,6 @@ You'll need to do this once:
 
 1. OS X:
   1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-  1. Install [XQuartz](http://xquartz.macosforge.org/trac) (NOTE: This is required to build the Canvas dependency).
 1. `cd code-dot-org`
 1. Edit `locals.yml`
   1. Add `build_apps: true`
@@ -103,19 +99,6 @@ You'll need to do this once:
 
 This configures your system to build apps (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
 
-### Blockly Prerequisite: Cairo
-
-One of the node modules, node-canvas, depends on Cairo being installed.
-
-Instructions for MacOSX using [brew](http://brew.sh/) (instructions for other platforms [can be found here](https://github.com/LearnBoost/node-canvas/wiki)):
-
-1. Make sure XCode Command-line Tools are installed and up-to-date: `xcode-select --install`
-1. Install [XQuartz from here](http://xquartz.macosforge.org/landing/)
-1. `export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"`
-1. `brew update`
-1. `brew install cairo`
-1. In blockly, `npm install`
->>>>>>> staging
 
 ### Building Apps and Blockly-Core
 

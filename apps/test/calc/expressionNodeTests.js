@@ -907,14 +907,14 @@ describe("ExpressionNode", function () {
     });
 
     it('works with nested sqrt/sqr', function () {
-      node = new ExpressionNode('sqrt', [
+      var node = new ExpressionNode('sqrt', [
         new ExpressionNode('+', [
           new ExpressionNode('sqr', [3]),
           new ExpressionNode('sqr', [4])
         ])
       ]);
 
-      tokenList = node.getTokenList(false);
+      var tokenList = node.getTokenList(false);
       assert.deepEqual(tokenList, [
         new Token('sqrt', false),
         new Token('(', false),

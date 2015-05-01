@@ -1,3 +1,5 @@
+/* global Text */
+
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');

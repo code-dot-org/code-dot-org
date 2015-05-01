@@ -50,7 +50,7 @@ var edgeCollisions = false;
 var allowSpritesOutsidePlayspace = false;
 var startAvatars = [];
 
-var customGameLogic;
+var customGameLogic = null;
 
 exports.setSpriteCount = function(blockly, count) {
   spriteCount = count;
@@ -75,7 +75,6 @@ exports.setStartAvatars = function (avatarList) {
 exports.registerCustomGameLogic = function (customGameLogicToRegister) {
   customGameLogic = customGameLogicToRegister;
 };
-
 
 /**
  * @param {function} stringGenerator A function that takes a spriteIndex and

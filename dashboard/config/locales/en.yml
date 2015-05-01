@@ -507,6 +507,8 @@ en:
     baddomaintype: "One or more of your domain items has the wrong type, or they are in the wrong order."
   text_match:
     placeholder: "Enter your answer here"
+    open_response_title: "Thanks"
+    open_response_body: "Thanks for your response!"
   dialog:
     ok: "OK"
   time:

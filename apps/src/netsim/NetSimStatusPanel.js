@@ -19,17 +19,35 @@ var NetSimPanel = require('./NetSimPanel.js');
  * Generator and controller for connection status panel
  * in left column, displayed while connected.
  * @param {jQuery} rootDiv
- * @param {function} disconnectCallback - method to call when disconnect button
+ * @param {Object} callbacks
+ * @param {function} callbacks.disconnectCallback - method to call when disconnect button
  *        is clicked.
+ * @param {function} callbacks.cleanShardNow - Manually kick off shard cleaning
+ * @param {function} callbacks.expireHeartbeat - Force local node heartbeat to
+ *        look old
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimStatusPanel = module.exports = function (rootDiv, disconnectCallback) {
+var NetSimStatusPanel = module.exports = function (rootDiv, callbacks) {
   /**
    * @type {function}
    * @private
    */
-  this.disconnectCallback_ = disconnectCallback;
+  this.disconnectCallback_ = callbacks.disconnectCallback;
+
+  /**
+   * Callback for debug button that starts shard cleaning immediately
+   * @type {function}
+   * @private
+   */
+  this.cleanShardNow_ = callbacks.cleanShardNow;
+
+  /**
+   * Callback for debug button that spoofs expired local node heartbeat
+   * @type {function}
+   * @private
+   */
+  this.expireHeartbeat_ = callbacks.expireHeartbeat;
 
   // Superclass constructor
   NetSimPanel.call(this, rootDiv, {
@@ -72,4 +90,7 @@ NetSimStatusPanel.prototype.render = function (data) {
   if (data.isConnected) {
     this.addButton('Disconnect', this.disconnectCallback_);
   }
+
+  this.getBody().find('.clean-shard-now').click(this.cleanShardNow_);
+  this.getBody().find('.expire-heartbeat').click(this.expireHeartbeat_);
 };

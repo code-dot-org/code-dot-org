@@ -67,7 +67,7 @@ describe("NetSimShardCleaner", function () {
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
     testShard = fakeShard();
-    cleaner = new NetSimShardCleaner(testShard);
+    cleaner = new NetSimShardCleaner(testShard, 0);
   });
 
   it ("makes a cleaning attempt on its first tick", function () {
@@ -95,7 +95,7 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'heartbeatTable', 1);
     assert(cleaner.hasCleaningLock());
 
-    var cleaner2 = new NetSimShardCleaner(testShard);
+    var cleaner2 = new NetSimShardCleaner(testShard, 0);
     cleaner2.getCleaningLock(function (err, success) {
       assert(err !== null, "Second cleaner fails to get lock.");
     });
