@@ -1530,7 +1530,7 @@ function animatedMove (direction, timeForMove) {
 /**
  * Schedule a movement animating using a spritesheet.
  */
-function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
+Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
     idStr, direction, hidePegman) {
   var pegmanIcon = document.getElementById('pegman');
   utils.range(0, numFrames - 1).forEach(function (frame) {
@@ -1547,7 +1547,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
       });
     }, timePerFrame * frame);
   });
-}
+};
 
 /**
  * Schedule the animations for a move from the current position
@@ -1572,7 +1572,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
     var movePegmanIcon = document.getElementById('movePegman');
     timePerFrame = timeForAnimation / numFrames;
 
-    scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
+    Maze.scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
       numFrames, timePerFrame, 'move', direction, true);
 
     // Hide movePegman and set pegman to the end position.
@@ -1703,7 +1703,7 @@ Maze.scheduleFail = function(forward) {
         }
         // animate our sprite sheet
         var timePerFrame = 100;
-        scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
+        Maze.scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
           {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
           Direction.NORTH, true);
         setTimeout(function () {
@@ -1833,8 +1833,8 @@ function setPegmanTransparent() {
  * @param {integer} timeAlloted How much time we have for our animations
  */
 function scheduleDance(victoryDance, timeAlloted) {
-  if (mazeUtils.isScratSkin()) {
-    scrat.scheduleDance(victoryDance, timeAlloted);
+  if (mazeUtils.isScratSkin(skin.id)) {
+    scrat.scheduleDance(victoryDance, timeAlloted, skin);
     return;
   }
 
@@ -2315,6 +2315,7 @@ return buf.join('');
 }());
 },{"ejs":273}],115:[function(require,module,exports){
 var SquareType = require('./tiles').SquareType;
+var Direction = require('./tiles').Direction;
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -2411,7 +2412,7 @@ module.exports.drawMapTiles = function (svg) {
  * Schedule the animations for Scrat dancing.
  * @param {integer} timeAlloted How much time we have for our animations
  */
-module.exports.scheduleDance = function (victoryDance, timeAlloted) {
+module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
   var finishIcon = document.getElementById('finish');
   if (finishIcon) {
     finishIcon.setAttribute('visibility', 'hidden');
@@ -2421,7 +2422,7 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted) {
   var timePerFrame = timeAlloted / numFrames;
   var start = {x: Maze.pegmanX, y: Maze.pegmanY};
 
-  scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
+  Maze.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
     numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 };
 

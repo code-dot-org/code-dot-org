@@ -1,5 +1,9 @@
 name 'sciPD agent based 2'
-title 'MULTIPLE CHOICE - AGENT-BASED MODELS'
+title 'Multiple Choice - Agent-based Models'
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
 
 question 'What type of systems are agent-based models suitable for modeling?'
 wrong 'simple mechanical systems'

@@ -1,5 +1,8 @@
 name 'PDK5 Course Descriptions'
 title 'Course Structure'
+success_title "Awesome!"
+success_body "Thanks for your response"
+height '200'
 
 markdown <<MARKDOWN
 The courses use a spiraling curriculum design, in which concepts and skills are revisited in each course while delving deeper each time.

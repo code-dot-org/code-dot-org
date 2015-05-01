@@ -1,5 +1,7 @@
 name 'PDAlg course goals'
 title 'Documenting Your Course Goals'
+success_title "Awesome!"
+success_body " "
 
 markdown <<MARKDOWN
 ***Now that you've learned more about the CS in Algebra program of PD and curriculum, let's consider your goals***
