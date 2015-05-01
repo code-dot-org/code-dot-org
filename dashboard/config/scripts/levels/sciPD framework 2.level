@@ -3,6 +3,12 @@
   "game_id": 29,
   "created_at": "2015-04-30T00:31:54.000Z",
   "properties": {
+    "options": {
+      "css": "unplugged",
+      "hide_submit": true,
+      "skip_sound": true,
+      "answer_line": true
+    },
     "questions": [
       {
         "text": "Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?"
@@ -26,7 +32,11 @@
         "correct": false
       }
     ],
-    "title": "Multiple Choice - Computational Thinking 2"
+    "title": "Multiple Choice - Computational Thinking 2",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "b838376cc3f24f8633575b0cd467fa44"
 }]]></config>

@@ -3,6 +3,12 @@
   "game_id": 29,
   "created_at": "2015-04-29T22:58:28.000Z",
   "properties": {
+    "options": {
+      "css": "unplugged",
+      "hide_submit": true,
+      "skip_sound": true,
+      "answer_line": true
+    },
     "questions": [
       {
         "text": "Which of the following is not a tenet of Papert's theory of Constructionism?"
@@ -26,7 +32,11 @@
         "correct": false
       }
     ],
-    "title": "Using Models in the Classroom"
+    "title": "Using Models in the Classroom",
+    "type": "Multi",
+    "concept_ids": [
+      ""
+    ]
   },
   "md5": "b838376cc3f24f8633575b0cd467fa44"
 }]]></config>
