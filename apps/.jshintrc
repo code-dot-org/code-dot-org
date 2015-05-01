@@ -1,4 +1,5 @@
 {
+  "curly": true,
   "browser": true,
   "node": true,
   "undef": true,

@@ -417,7 +417,9 @@ StudioApp.prototype.init = function(config) {
  * Currently removes the 'resize' listener for unit tests reusing the StudioApp singleton.
  */
 StudioApp.prototype.removeEventListeners = function () {
-  if(!this.resizeHandler) return;
+  if (!this.resizeHandler) {
+    return;
+  }
   window.removeEventListener('resize', this.resizeHandler);
   this.resizeHandler = null;
 };

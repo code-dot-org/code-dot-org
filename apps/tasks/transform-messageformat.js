@@ -11,7 +11,7 @@ module.exports = function () {
     return callback(null, file);
   };
   return t;
-}
+};
 
 // Options: locale (required), global, namespace, prepend, append
 function transform(file) {
