@@ -47,9 +47,6 @@ NetSimGlobals.getSingleton = function () {
  * @param {NetSim} netsim
  */
 NetSimGlobals.prototype.setRootController = function (netsim) {
-  if (this.netsim_ !== null) {
-    throw new Error("Should not set global root controller twice.");
-  }
   this.netsim_ = netsim;
 };
 

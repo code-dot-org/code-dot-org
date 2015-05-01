@@ -33,6 +33,7 @@ describe("NetSimRouterNode", function () {
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
+    netsimTestUtils.initializeGlobalsToDefaultValues();
 
     testShard = fakeShard();
   });

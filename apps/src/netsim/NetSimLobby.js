@@ -318,17 +318,10 @@ NetSimLobby.prototype.doesShardContainRouter = function () {
  * UI elements.
  */
 NetSimLobby.prototype.addRouterToLobby = function () {
-  NetSimRouterNode.create(this.shard_, function (err, router) {
+  NetSimRouterNode.create(this.shard_, function (err) {
     if (err) {
       logger.error("Unable to create router: " + err.message);
-      return;
     }
-
-    var levelConfig = netsimGlobals.getLevelConfig();
-    router.bandwidth = levelConfig.defaultRouterBandwidth;
-    router.memory = levelConfig.defaultRouterMemory;
-    router.dnsMode = levelConfig.defaultDnsMode;
-    router.update(function () {});
   }.bind(this));
 };
 
