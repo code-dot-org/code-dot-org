@@ -4,6 +4,11 @@
   "created_at": "2015-02-24T23:52:59.000Z",
   "properties": {
     "title": "Degree of Difficulty",
+    "options": {
+      "success_title": "Awesome!",
+      "success_body": "Thanks for your response"
+    },
+    "height": "200",
     "content1": "Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?",
     "placeholder": "Your thoughts here"
   },

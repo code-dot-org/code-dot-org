@@ -3,6 +3,12 @@
   "game_id": 29,
   "created_at": "2015-04-29T22:03:52.000Z",
   "properties": {
+    "options": {
+      "css": "unplugged",
+      "hide_submit": true,
+      "skip_sound": true,
+      "answer_line": true
+    },
     "questions": [
       {
         "text": "What does it mean for a model to be stochastic?"
