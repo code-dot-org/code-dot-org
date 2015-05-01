@@ -14,7 +14,6 @@ var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 var _ = require(testUtils.buildPath('lodash'));
 
-var NetSimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimGlobals');
 var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
 var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
 var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
@@ -28,6 +27,7 @@ var intToBinary = dataConverters.intToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var netsimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimGlobals');
 
 describe("NetSimRouterNode", function () {
   var testShard;
@@ -261,8 +261,7 @@ describe("NetSimRouterNode", function () {
         {key: Packet.HeaderType.FROM_ADDRESS, bits: 4},
         {key: Packet.HeaderType.TO_ADDRESS, bits: 4}
       ];
-      NetSimGlobals.getSingleton().getLevelConfig()
-          .routerExpectsPacketHeader = packetHeaderSpec;
+      netsimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
       encoder = new Packet.Encoder(packetHeaderSpec);
 
       // Make router

@@ -16,7 +16,7 @@ var NetSimBandwidthControl = require('./NetSimBandwidthControl');
 var NetSimMemoryControl = require('./NetSimMemoryControl');
 var NetSimRouterLogTable = require('./NetSimRouterLogTable');
 var NetSimRouterStatsTable = require('./NetSimRouterStatsTable');
-var netsimGlobals = require('./NetSimGlobals').getSingleton();
+var netsimGlobals = require('./NetSimGlobals');
 
 /**
  * Generator and controller for router information view.

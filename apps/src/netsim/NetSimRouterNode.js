@@ -40,7 +40,7 @@ var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
 
 var logger = NetSimLogger.getSingleton();
-var netsimGlobals = require('./NetSimGlobals').getSingleton();
+var netsimGlobals = require('./NetSimGlobals');
 
 /**
  * @type {number}

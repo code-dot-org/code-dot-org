@@ -1,8 +1,8 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
-var NetSimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimGlobals');
 var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
+var netsimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimGlobals');
 var levels = testUtils.requireWithGlobalsCheckBuildFolder('netsim/levels');
 
 /**
@@ -156,7 +156,7 @@ exports.fakeShard = function () {
  * Set up global singleton with default level configuration
  */
 exports.initializeGlobalsToDefaultValues = function () {
-  NetSimGlobals.getSingleton().setRootController({
+  netsimGlobals.setRootController({
     level: levels.custom
   });
 };
