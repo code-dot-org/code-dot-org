@@ -1178,6 +1178,7 @@ Applab.createElement = function (elementType, left, top) {
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(el);
   Applab.makeDraggable($(el));
+  Applab.editElementProperties(el);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
@@ -1200,6 +1201,10 @@ Applab.makeDraggable = function (jq) {
       var changeTop = ui.position.top - ui.originalPosition.top;
       var newTop = (ui.originalPosition.top + changeTop) / scale;
 
+      // grid
+      newLeft -= (newLeft + 10) % gridSize - 10;
+      newTop -= (newTop + 10) % gridSize - 10;
+
       // containment
       var container = $('#divApplab');
       var maxLeft = container.width() - ui.helper.outerWidth(true);
@@ -1208,10 +1213,6 @@ Applab.makeDraggable = function (jq) {
       newLeft = Math.max(newLeft, 0);
       newTop = Math.min(newTop, maxTop);
       newTop = Math.max(newTop, 0);
-
-      // grid
-      newLeft -= newLeft % gridSize;
-      newTop -= newTop % gridSize;
 
       ui.position.left = newLeft;
       ui.position.top = newTop;
