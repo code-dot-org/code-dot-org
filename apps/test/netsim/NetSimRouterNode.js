@@ -14,6 +14,7 @@ var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 var _ = require(testUtils.buildPath('lodash'));
 
+var NetSimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimGlobals');
 var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
 var NetSimRouterNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimRouterNode');
 var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
@@ -260,6 +261,8 @@ describe("NetSimRouterNode", function () {
         {key: Packet.HeaderType.FROM_ADDRESS, bits: 4},
         {key: Packet.HeaderType.TO_ADDRESS, bits: 4}
       ];
+      NetSimGlobals.getSingleton().getLevelConfig()
+          .routerExpectsPacketHeader = packetHeaderSpec;
       encoder = new Packet.Encoder(packetHeaderSpec);
 
       // Make router
@@ -277,7 +280,7 @@ describe("NetSimRouterNode", function () {
       });
 
       // Tell router to simulate for local node
-      router.initializeSimulation(localClient.entityID, packetHeaderSpec);
+      router.initializeSimulation(localClient.entityID);
 
       // Manually connect nodes
       var wire;
