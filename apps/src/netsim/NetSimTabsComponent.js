@@ -168,7 +168,6 @@ NetSimTabsComponent.prototype.render = function () {
   if (shouldShowTab(levelConfig, NetSimTabType.ROUTER)) {
     this.routerTab_ = new NetSimRouterTab(
         this.rootDiv_.find('#tab_router'),
-        levelConfig,
         {
           bandwidthSliderChangeCallback: this.routerBandwidthSliderChangeCallback_,
           bandwidthSliderStopCallback: this.routerBandwidthSliderStopCallback_,
