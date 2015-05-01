@@ -353,7 +353,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   if (this.shouldShowAnyTabs()) {
     this.tabs_ = new NetSimTabsComponent(
         $('#netsim-tabs'),
-        this.level,
         this.runLoop_,
         {
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
