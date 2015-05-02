@@ -4,8 +4,13 @@
   "created_at": "2015-02-24T23:55:38.000Z",
   "properties": {
     "title": "Impact for students",
+    "options": {
+      "success_title": "Awesome!",
+      "success_body": "Thanks for your response"
+    },
     "content1": "Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?",
-    "placeholder": "Your thoughts here"
+    "placeholder": "Your thoughts here",
+    "height": "200"
   },
   "md5": "ac5ce9a0001040ad009fa860ad82a6e6"
 }]]></config>

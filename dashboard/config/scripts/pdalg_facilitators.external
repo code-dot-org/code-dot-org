@@ -41,12 +41,12 @@ markdown <<MARKDOWN
 <div class="facilitator">
   <div class="headshot">
     <h1>Kiki Prottsman</h1>
-    <img src="https://lh3.googleusercontent.com/-DoI0_PT18eM/AAAAAAAAAAI/AAAAAAAAYyA/cec2b11yDP4/s120-c/photo.jpg">
+    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/kiki.jpg">
     <h4>K-8 Program Manager</h4>
   </div>
   <div class="bio">
     <h3>About Kiki</h3>
-    <p></p>
+    <p>Prior to her role as Education Manager at Code.org, Kiki was Founder and Executive Director of Thinkersmith, a non-profit on the cutting edge of K-8 Computer Science Education. As a champion for responsible computing and equity in both CS employment and education, Kiki works with many organizations to improve the experience of girls and women in STEM. </p>
   </div>
 </div>
 

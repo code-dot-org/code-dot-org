@@ -789,7 +789,6 @@ en:
         'Yes': 'Yes'
       PDK5 Visual Languages:
         Visual Programming Languages: Visual Programming Languages
-        Based on the video you saw before, please answer the question below.: Based on the video you saw before, please answer the question below.
         Why are visual programming languages easier to learn than text-based programming languages?: Why are visual programming languages easier to learn than text-based programming languages?
         Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
         Because you can focus on the logic of programming: Because you can focus on the logic of programming
@@ -821,14 +820,14 @@ en:
         rocket-height(seconds) = seconds * 7 + 3: rocket-height(seconds) = seconds * 7 + 3
         rocket-height(seconds) = seconds * 10 - 3: rocket-height(seconds) = seconds * 10 - 3
       sciPD agent based 1:
-        MULTIPLE CHOICE - INTERACTIONS IN AGENT-BASED MODELS: MULTIPLE CHOICE - INTERACTIONS IN AGENT-BASED MODELS
+        Multiple Choice - Interactions In Agent-based Models: Multiple Choice - Interactions In Agent-based Models
         What types of interactions can occur in agent-based models?: What types of interactions can occur in agent-based models?
         agents interact with their environment only: agents interact with their environment only
         agents interact with other agents only: agents interact with other agents only
         agents interact with both their environment and other agents: agents interact with both their environment and other agents
         all of the above: all of the above
       sciPD agent based 2:
-        MULTIPLE CHOICE - AGENT-BASED MODELS: MULTIPLE CHOICE - AGENT-BASED MODELS
+        Multiple Choice - Agent-based Models: Multiple Choice - Agent-based Models
         What type of systems are agent-based models suitable for modeling?: What type of systems are agent-based models suitable for modeling?
         simple mechanical systems: simple mechanical systems
         complex adaptive systems: complex adaptive systems
