@@ -1,7 +1,9 @@
 name 'PDK5 Promo Video 2'
 title 'Code Studio: Kid Tested, Teacher Approved!'
 placeholder 'My first impressions of Code Studio are...'
-
+success_title "Awesome!"
+success_body "Thanks for your response"
+height '200'
 markdown <<MARKDOWN
 <iframe width="640" height="390" src="https://www.youtube.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
 

@@ -1,5 +1,9 @@
 name 'sciPD agent based 1'
-title 'MULTIPLE CHOICE - INTERACTIONS IN AGENT-BASED MODELS'
+title 'Multiple Choice - Interactions In Agent-based Models'
+hide_submit true
+skip_sound true
+answer_line true
+
 
 question 'What types of interactions can occur in agent-based models?'
 wrong 'agents interact with their environment only'

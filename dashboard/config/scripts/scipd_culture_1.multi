@@ -1,5 +1,9 @@
 name 'sciPD culture 1'
 title 'Multiple Choice - Getting Unstuck'
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
 
 question 'Which of the following was NOT suggested as a way to get unstuck?'
 wrong 'taking a break'

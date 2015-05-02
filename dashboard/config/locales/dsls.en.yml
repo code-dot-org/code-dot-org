@@ -80,6 +80,12 @@ en:
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
+      CSP Journal Entry Placeholder:
+        CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
+        Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
+      CSP Journal Entry Placeholder2:
+        description here: description here
+        title: title
       CSP Lesson 14 encode letter A instructions:
         'Instructions: Encode the Letter A': 'Instructions: Encode the Letter A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -118,6 +124,8 @@ en:
         Meet your Facilitator!: Meet your Facilitator!
       ECSPD pause:
         ECSPD pause: ECSPD pause
+      ECSPD postsurvey: {}
+      ECSPD presurvey: {}
       ECSPD program overview:
         ECS Program Overview: ECS Program Overview
         Overview of ECS Program: Overview of ECS Program
@@ -149,6 +157,8 @@ en:
       PDAlg Facilitators:
         Meet Your Facilitators: Meet Your Facilitators
       PDAlg Intro: {}
+      PDAlg Post Survey:
+        CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
       PDAlg Scope:
         Scope and Sequence: Scope and Sequence
       PDAlg Teacher Dashboard:
@@ -183,6 +193,8 @@ en:
         tour of the PD space: tour of the PD space
       PDK5 Beyond C:
         Beyond: Beyond
+      PDK5 CS Video:
+        Computer Science: Computer Science
       PDK5 CS overview:
         Overview of programming concepts: Overview of programming concepts
       PDK5 Classroom Culture C:
@@ -448,148 +460,6 @@ en:
       unique level name here:
         description here: description here
         title: title
-    match:
-      ECSPD unit matching:
-        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
-        Unit 1: Unit 1
-        Unit 2: Unit 2
-        Unit 3: Unit 3
-        Unit 4: Unit 4
-        Unit 5: Unit 5
-        Unit 6: Unit 6
-        application of problem solving techniques to develop solutions: application of problem solving techniques to develop solutions
-        apply programming and problem solving to the study of robots: apply programming and problem solving to the study of robots
-        create programs to solve computational problems: create programs to solve computational problems
-        introduction to the concepts of computer and computing: introduction to the concepts of computer and computing
-        use computing to manage and interpret data: use computing to manage and interpret data
-        website development and design: website development and design
-      PDAlg Types Video:
-        Image: Image
-        Intro to Data Types: Intro to Data Types
-        Match each data type with its color code: Match each data type with its color code
-        Number: Number
-        String: String
-        http://staging.studio.code.org/script_assets/pd/blue.png: http://staging.studio.code.org/script_assets/pd/blue.png
-        http://staging.studio.code.org/script_assets/pd/purple.png: http://staging.studio.code.org/script_assets/pd/purple.png
-        http://staging.studio.code.org/script_assets/pd/teal.png: http://staging.studio.code.org/script_assets/pd/teal.png
-      PDAlg commitment match:
-        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
-        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        Program Commitment Matching Question: Program Commitment Matching Question
-      PDECS commitment match:
-        'Academic Year Development: 4 days in-person and 12 hours online': 'Academic Year Development: 4 days in-person and 12 hours online'
-        'Blended Summer Study: 5 days in-person and 8 hours online': 'Blended Summer Study: 5 days in-person and 8 hours online'
-        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 3).
-        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 3).
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        Phase 4: Phase 4
-        Program Commitment Matching Question: Program Commitment Matching Question
-        'Summer Wrap-up: 3 days in-person': 'Summer Wrap-up: 3 days in-person'
-      sciPD commitment match:
-        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
-        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
-        Phase 1: Phase 1
-        Phase 2: Phase 2
-        Phase 3: Phase 3
-        Program Commitment Matching Question: Program Commitment Matching Question
-    multi:
-      PDAlg Blocks Video:
-        In which are of the screen do you click blocks together to write a program?: In which are of the screen do you click blocks together to write a program?
-        Intro to Evaluation Blocks: Intro to Evaluation Blocks
-        Play Area: Play Area
-        Toolbox: Toolbox
-        Workspace: Workspace
-      PDAlg attendance commitment:
-        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
-        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
-      PDAlg implementation:
-        Curriculum Implementation: Curriculum Implementation
-        ? Given the scope and sequence from the last page, which of the following best describes when you expect to implement the CS in Algebra curriculum?
-        : Given the scope and sequence from the last page, which of the following best describes when you expect to implement the CS in Algebra curriculum?
-        January - February: January - February
-        March - April: March - April
-        May - June: May - June
-        November - December: November - December
-        September - October: September - October
-        Throughout the year: Throughout the year
-      PDECS attendance commitment:
-        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
-        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
-      PDK5 Sequence2:
-        More Sequencing: More Sequencing
-        The grey rectangle to the left of the workspace is called the: The grey rectangle to the left of the workspace is called the
-        bin: bin
-        dropdown: dropdown
-        shelf: shelf
-        toolbox: toolbox
-      PDK5 Visual Languages:
-        All of the above: All of the above
-        Based on the video you saw before, please answer the question below.: Based on the video you saw before, please answer the question below.
-        Because the commands are listed in a menu rather than having to remember them yourself: Because the commands are listed in a menu rather than having to remember them yourself
-        Because you can focus on the logic of programming: Because you can focus on the logic of programming
-        Because you dont have to worry about syntax as much, like where to put a semi-colon: Because you dont have to worry about syntax as much, like where to put a semi-colon
-        Visual Programming Languages: Visual Programming Languages
-        Why are visual programming languages easier to learn than text-based programming languages?: Why are visual programming languages easier to learn than text-based programming languages?
-      PDK5 What is CS:
-        'A computer program, or "code," is:': 'A computer program, or "code," is:'
-        What is Computer Science?: What is Computer Science?
-        a part inside of a computer: a part inside of a computer
-        a secret password: a secret password
-        a set of instructions a person gives a computer to execute: a set of instructions a person gives a computer to execute
-        a week-long course to learn about computers: a week-long course to learn about computers
-      sciPD PreQ 1:
-        Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
-        'No': 'No'
-        Pre-Survey Question 1: Pre-Survey Question 1
-        'Yes': 'Yes'
-      sciPD PreQ 2:
-        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?
-        'No': 'No'
-        Pre-Survey Question 2: Pre-Survey Question 2
-        'Yes': 'Yes'
-      sciPD attendance commitment:
-        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
-        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
-      sciPD complex adaptive 1:
-        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
-        Which of the following IS a characteristic of a complex adaptive system?: Which of the following IS a characteristic of a complex adaptive system?
-        generates emergent patterns: generates emergent patterns
-        has a leader: has a leader
-        has centralized control: has centralized control
-        is predictable: is predictable
-      sciPD complex adaptive 2:
-        Examples of Complex Adaptive Systems: Examples of Complex Adaptive Systems
-        Which of the following is NOT an example of a complex adaptive system?: Which of the following is NOT an example of a complex adaptive system?
-        a bee hive: a bee hive
-        a traffic jam: a traffic jam
-        a wall clock: a wall clock
-        the internet: the internet
-      sciPD intro to CS 1:
-        'Computer modeling is used to study problems that are:': 'Computer modeling is used to study problems that are:'
-        Intro to Computational Science: Intro to Computational Science
-        all of the above: all of the above
-        too dangerous to study in the real world: too dangerous to study in the real world
-        too expensive to study in the real world: too expensive to study in the real world
-        too time consuming to study in the real world: too time consuming to study in the real world
-      sciPD intro to CS 2:
-        Intro to Computational Science: Intro to Computational Science
-        What is computational science good for?: What is computational science good for?
-        'it complements lab and theoretical science ': 'it complements lab and theoretical science '
-        it replaces traditional science labs: it replaces traditional science labs
-        it slows the process of discovery: it slows the process of discovery
-        nothing at all: nothing at all
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)

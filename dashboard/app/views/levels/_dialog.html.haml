@@ -4,15 +4,15 @@
 - unless app == 'external'
   .buttons
     %a.btn.btn-large.btn-primary.next-stage.submitButton
-      Submit
+      =t('submit')
 .clear
 %div{style: 'display: none;'}
   #error-dialogcontent
     .modal-content
       %p.dialog-title
-        =t('multi.wrong_title')
+        =t("#{app == 'match' ? 'match' : 'multi'}.wrong_title")
       %p
-        =t('multi.wrong_body')
+        =t("#{app == 'match' ? 'match' : 'multi'}.wrong_body")
       .farSide
         %button#ok-button.secondary
           =t('dialog.ok')
@@ -20,19 +20,19 @@
   #pre-dialogcontent
     - if data['pre_image']
       .modal-image{style: 'margin-top: 0px;'}
-        != string_or_image(data_prefix, data['pre_image'])
+        != string_or_image(app, data['pre_image'])
     .modal-content
       - if data['pre_image'].blank?
         - adjust_layout_class = 'unindentContent'
       - else
         - adjust_layout_class = ''
       %p.dialog-title{class: adjust_layout_class}
-        != string_or_image(data_prefix, data['pre_title']) if data['pre_title']
+        != string_or_image(app, data['pre_title']) if data['pre_title']
       %p{class: adjust_layout_class}
-        != string_or_image(data_prefix, data['pre_body']) if data['pre_body']
+        != string_or_image(app, data['pre_body']) if data['pre_body']
       - if data['pre_ani']
         .aniGif.example-image{style: 'overflow: hidden;'}
-          != string_or_image(data_prefix, data['pre_ani'])
+          != string_or_image(app, data['pre_ani'])
       .farSide
         %button#ok-button.secondary
           =t('dialog.ok')
@@ -45,14 +45,14 @@
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_title')
         - else
-          =t('multi.correct_title')
+          =t("#{app == 'match' ? 'match' : 'multi'}.correct_title")
       %p
         - if data['options'].try(:[], 'success_body')
           = data['options']['success_body']
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_body')
         - else
-          =t('multi.correct_body')
+          =t("#{app == 'match' ? 'match' : 'multi'}.correct_body")
       .farSide
         %button#ok-button.secondary
           =t('dialog.ok')
@@ -60,10 +60,10 @@
 :javascript
   var dialogType = null;
   var adjustedScroll = false;
-  var skipSound = #{!!(data['options'].try(:[], 'skip_sound'))};
+  var skipSound = #{ !!(data['options'].try(:[], 'skip_sound'))};
 
   $(function () {
-    if ("#{data['pre_title']}" != "") {
+    if ("#{ data['pre_title']}" != "") {
       setTimeout(function () {
         showDialog("pre");
       }, 1000);
@@ -116,13 +116,18 @@
   }
 
   $('.submitButton').click(function () {
+    var submitButton = $('.submitButton');
+    if (submitButton.attr('disabled')) {
+      return;
+    }
+
     var results = getResult();
     var response = results['response'];
     var result = results['result'];
     var errorType = results['errorType'];
 
     // Avoid multiple simultaneous submissions.
-    $('.submitButton').attr('disabled', true);
+    submitButton.attr('disabled', true);
 
     if (!result) {
       showDialog(errorType || "error");
@@ -137,10 +142,10 @@
 
     sendReport({
       program: response,
-      fallbackResponse: '#{@fallback_response.to_json}',
-      callback: '#{@callback}',
-      app: '#{app}',
-      level: '#{@level.level_num}',
+      fallbackResponse: '#{ @fallback_response.to_json}',
+      callback: '#{ @callback}',
+      app: '#{ app}',
+      level: '#{ @level.level_num}',
       result: result,
       testResult: result ? 100 : 0,
       onComplete: function () {
@@ -151,7 +156,7 @@
         {
           showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
-          if (#{data['options'].try(:[], 'skip_dialog').blank?}) {
+          if (#{ data['options'].try(:[], 'skip_dialog').blank?}) {
             showDialog("success");
           } else {
             window.location.href = lastServerResponse.nextRedirect;
