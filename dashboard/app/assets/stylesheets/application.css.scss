@@ -702,25 +702,32 @@ input.header_input {
   margin-left: 5px;
 }
 
+$header_bar_bottom: 59px;
+$header_popup_bottom_margin: 20px;
+$header_popup_height_diff: $header_bar_bottom + $header_popup_bottom_margin;
+$header_popup_footer_height: 40px;
+$header_popop_scrollable_height_diff: $header_popup_height_diff + $header_popup_footer_height;
+
 .header_popup {
   display: none;
   position: absolute;
-  top: auto;
+  top: $header_bar_bottom;
+  max-height: calc(100vh - #{$header_popup_height_diff});
   right: 0;
   left: 0;
-  margin: 20px auto;
+  margin: 0 auto;
   width: 635px;
   border: 20px solid $bkgnd_color;
   border-top: 5px;
   border-bottom: 5px;
-  border-radius: 6px;
+  border-radius: 0 0 6px 6px;
   z-index: 1050;
   background-color: white;
   overflow: hidden;
 }
 
 .key {
-  margin: 10px 0;
+  margin: 10px 0 0 0;
   float: left;
   padding: 10px;
   background-color: $lightest_gray;
@@ -741,6 +748,11 @@ input.header_input {
   }
 }
 
+.header_popup_scrollable {
+  max-height: calc(100vh - #{$header_popop_scrollable_height_diff});
+  overflow-y: auto;
+}
+
 .header_popup_header {
   padding: 12px 15px;
   margin-bottom: 0;
@@ -753,9 +765,7 @@ input.header_input {
 
 .header_popup_body {
   position: relative;
-  overflow-y: auto;
   display: block;
-  min-height: 1100px;
   color: $charcoal;
 
   .loading {
@@ -766,7 +776,8 @@ input.header_input {
 }
 
 .header_popup_footer {
-  padding: 12px 15px;
+  height: calc(#{$header_popup_footer_height - 20px});
+  padding: 10px 15px;
   margin-bottom: 0;
   text-align: right;
   color: $header_text;
