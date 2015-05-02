@@ -3,6 +3,11 @@
   "game_id": 29,
   "created_at": "2015-04-29T20:27:24.000Z",
   "properties": {
+    "options": {
+      "hide_submit": true,
+      "skip_sound": true,
+      "answer_line": true
+    },
     "questions": [
       {
         "text": "What types of interactions can occur in agent-based models?"
@@ -26,7 +31,7 @@
         "correct": true
       }
     ],
-    "title": "MULTIPLE CHOICE - INTERACTIONS IN AGENT-BASED MODELS"
+    "title": "Multiple Choice - Interactions In Agent-based Models"
   },
   "md5": "b838376cc3f24f8633575b0cd467fa44"
 }]]></config>

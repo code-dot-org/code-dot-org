@@ -888,11 +888,11 @@ describe("ExpressionNode", function () {
 
     it("diffs function calls that are passed expressions", function () {
       // f(1 + 2)
-      node = new ExpressionNode('f', [
+      var node = new ExpressionNode('f', [
         new ExpressionNode('+', [1, 2])
       ]);
 
-      tokenList = node.getTokenList(false);
+      var tokenList = node.getTokenList(false);
       assert.deepEqual(tokenList, [
         new Token('f', false),
         new Token('(', false),
@@ -904,14 +904,14 @@ describe("ExpressionNode", function () {
     });
 
     it('works with nested sqrt/sqr', function () {
-      node = new ExpressionNode('sqrt', [
+      var node = new ExpressionNode('sqrt', [
         new ExpressionNode('+', [
           new ExpressionNode('sqr', [3]),
           new ExpressionNode('sqr', [4])
         ])
       ]);
 
-      tokenList = node.getTokenList(false);
+      var tokenList = node.getTokenList(false);
       assert.deepEqual(tokenList, [
         new Token('sqrt', false),
         new Token('(', false),

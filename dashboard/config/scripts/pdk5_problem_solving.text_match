@@ -1,6 +1,8 @@
 name 'PDK5 Problem Solving'
 title 'Problem Solving Methods'
-
+success_title "Awesome!"
+success_body "Thanks for your response"
+height '200'
 placeholder 'I could integrate this in my classroom by...'
 
 markdown <<MARKDOWN
