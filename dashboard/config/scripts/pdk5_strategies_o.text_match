@@ -1,5 +1,8 @@
 name 'PDK5 Strategies O'
 title 'Strategies for Teaching Computer Science'
+success_title "Awesome!"
+success_body "Thanks for your response"
+height '200'
 placeholder 'I think teaching computer science will be different than teaching other subjects in these ways: ...'
 
 markdown <<MARKDOWN

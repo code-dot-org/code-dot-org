@@ -1,3 +1,5 @@
+/* global Interpreter */
+
 var dropletUtils = require('./dropletUtils');
 
 /**
@@ -401,7 +403,7 @@ function aceFindRow(cumulativeLength, rows, rowe, pos) {
   }
 
   var mid = Math.floor((rows + rowe) / 2);
-  
+
   if (pos < cumulativeLength[mid]) {
     return aceFindRow(cumulativeLength, rows, mid, pos);
   } else if(pos > cumulativeLength[mid]) {
@@ -456,7 +458,7 @@ exports.selectCurrentCode = function (interpreter,
         editor.clearLineMarks();
         // NOTE: replace markLine with this new mark() call once we have a new
         // version of droplet
-        
+
         // editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
         editor.markLine(userCodeRow, style);
       } else {

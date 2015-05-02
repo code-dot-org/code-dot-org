@@ -11,7 +11,7 @@ class SmsController < ApplicationController
   def send_to_phone
     if params[:level_source] && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
       send_sms(level_source_url(level_source), params[:phone])
-    elsif params[:channel_id] && params[:phone] && %w(artist applab playlab).include?(params[:type])
+    elsif params[:channel_id] && params[:phone] && %w(artist applab playlab algebra_game).include?(params[:type])
       send_sms(polymorphic_url([params[:type], 'projects']) + '#' + params[:channel_id], params[:phone])
     else
       render status: :not_acceptable, nothing: true
