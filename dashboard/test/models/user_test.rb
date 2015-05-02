@@ -898,7 +898,7 @@ class UserTest < ActiveSupport::TestCase
 
     teacher.reload
     student.reload
-#    teacher = User.find(teacher.id)
+
     assert_equal [follow], teacher.followers
     assert_equal [follow], student.followeds
 
