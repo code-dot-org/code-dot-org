@@ -1,14 +1,8 @@
 <html>
 <head>
   <style>
-    #odometerToggles {
-      background-color: rgba(0, 164, 180, 0.5);
-      padding: 2px 20px;
-      top: 0;
-      color: white;
-      margin: 20px;
-      border-radius: 10px;
-      display: inline-block;
+    #odoAndSliderContainer td {
+      padding: 3px;
     }
 
     #odoDivBin {
@@ -61,9 +55,6 @@
       allOdos.push(myArbOdo);
 
       setAllOdos(odoVal);
-
-      toggleRow('rowHex');
-      toggleRow('rowArb');
     });
 
     var isMouseDown = false;
@@ -131,7 +122,6 @@
 
     function setArbOdo(val) {
       myArbOdo.changeRadix(parseInt(val));
-      myArbOdo.set(odoVal);
     }
 
     function setOdoSlider(val) {
@@ -142,32 +132,6 @@
     function setOdoNumberInput(val) {
       var obj = document.getElementById("odoNumberInput");
       obj.value = Math.floor(val);
-    }
-
-    function toggleRow(rowId) {
-      var rowObj = document.getElementById(rowId);
-      console.debug("toggle row " + rowObj);
-
-      if (rowObj.style.display === "" || rowObj.style.display === "table-row") {
-        rowObj.style.display = "none";
-      }
-      else {
-        rowObj.style.display = "table-row";
-      }
-    }
-
-    function toggleNumberScroller() {
-      var obj = document.getElementById("numberScroller");
-      var but = document.getElementById("showScrollButton");
-
-      if (obj.style.opacity == 1.0) {
-        obj.style.opacity = 0.0;
-        but.value = "show";
-      }
-      else {
-        obj.style.opacity = 1.0;
-        but.value = "hide";
-      }
     }
 
     function increment() {
@@ -184,23 +148,21 @@
 </head>
 <body>
 
-<div style="width: 640px; margin: 10px">
-  Use the widget controls below to watch odometers with various number
-  bases.<br>
-  Binary, Decimal and Hexadecimal are the most common number systems to see in
-  computer science.<br>
-  Practice with them here. Set a value. Predict what the number one up, or one
-  down will be.
+<div id="bubble">
+  <p>Use the widget controls below to watch odometers with various number
+  bases. Binary, Decimal and Hexadecimal are the most common number systems to see in
+  computer science.<p>
+  <p>Practice with them here. Set a value. Predict what the number one up, or one
+  down will be.</p>
 </div>
 
-<div id="odometerToggles" title="Toggle Visibility of Odometers">
-  Bin: <input type=checkbox onChange="toggleRow('rowBin')" checked>
-  Dec: <input type=checkbox onChange="toggleRow('rowDec')" checked>
-  Hex: <input type=checkbox onChange="toggleRow('rowHex')">
-  Arbitrary: <input type=checkbox onChange="toggleRow('rowArb')">
-  | Scroller: <input type=button value="show" onClick="toggleNumberScroller()"
-                     id="showScrollButton">
-</div>
+<button onClick="startOdo()">Start</button>
+<button onClick="pauseOdo()">Pause</button>
+<button onClick="resetOdo()">Reset</button>
+<br>
+Slow <input type=range min=0.005 max=0.15 step=0.005 oninput="setSpeed()"  id="speedSlider" value=0.01> Fast<br>
+<button onClick="increment()">Increment</button>
+<button onClick="decrement()">Decrement</button>
 
 <table id="odoAndSliderContainer">
   <tr>
@@ -237,36 +199,20 @@
         </tr>
       </table>
     </td>
-    <!-- End odometers table -->
-    <td valign=top>
-      <!--- Outer table cell to right for holding vertical slider -->
-      <div id="numberScroller" style="opacity: 0">
-        <input
-            title="Slider is just for playing. It maxes out at 256. But you can enter any number in the text box below."
-            style="-webkit-appearance: slider-vertical; height: 100%; width: 15px;"
-            type=range min=0 max=256 step=0.1
-            onClick="setAllOdos(parseFloat(this.value))"
-            onMouseMove="setOdoFromSlider()" id="odoValSlider" value=0>
-        <br>
-        <input type=number style="width:75px"
-               onChange="setAllOdos(parseFloat(this.value))"
-               id="odoNumberInput">
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td colspan=2>
-      <br>
-      <button onClick="startOdo()">Start</button>
-      <button onClick="pauseOdo()">Pause</button>
-      <button onClick="resetOdo()">Reset</button>
-      <br>
-      Slow <input type=range min=0.005 max=0.15 step=0.005 oninput="setSpeed()"
-                  id="speedSlider" value=0.01> Fast<br>
-      <button onClick="increment()">Increment</button>
-      <button onClick="decrement()">Decrement</button>
-    </td>
   </tr>
 </table>
+
+<div id="numberScroller">
+  <input
+      title="The slider maxes out at 1023, but you can enter any number in the text box below."
+      type=range min=0 max=1023 step=0.1
+      onClick="setAllOdos(parseFloat(this.value))"
+      onMouseMove="setOdoFromSlider()" id="odoValSlider" value=0>
+  <br>
+  Value: <input type=number style="width:75px"
+         onChange="setAllOdos(parseFloat(this.value))"
+         id="odoNumberInput">
+</div>
+
 </body>
 </html>
