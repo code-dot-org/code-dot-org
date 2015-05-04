@@ -4,25 +4,21 @@ theme: none
 ---
 = view :breadcrumbs, trail:[{url:'/teacher-dashboard', text:'Dashboard'}]
 
--if dashboard_user[:admin] || have_permission?('facilitator') || have_permission?('district_contact') || have_permission?('create_professional_development_workshop')
-  %h1
-    Professional Development
-
 -if dashboard_user[:admin]
-  %h2
+  %h1
     Ops Dashboard
   %a{href:'/ops-dashboard#/districts'}
     %h3
       Manage Districts
 -if dashboard_user[:admin] || have_permission?('facilitator')
   -if !dashboard_user[:admin]
-    %h2
+    %h1
       Facilitator Dashboard
   %a{href:'/ops-dashboard#/workshops'}
     %h3
       Manage PD Workshops
 -elsif have_permission?('district_contact')
-  %h2
+  %h1
     District Dashboard
   %a{href:'/ops-dashboard#/workshops'}
     %h3
@@ -32,7 +28,7 @@ theme: none
     %h3
       Manage Teacher Cohorts
 -if dashboard_user[:admin] || have_permission?('create_professional_development_workshop')
-  %h2
+  %h1
     Affiliate Dashboard
   %a{href:'/manage-professional-development-workshops'}
     %h3
