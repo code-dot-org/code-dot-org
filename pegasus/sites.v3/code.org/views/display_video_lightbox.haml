@@ -25,13 +25,21 @@
   {
     $("#showVideo_#{id}").modal('show');
     setupPopupWindows();
+    playVideo(true);
+
+    ga('send', 'event', 'showvideo', 'click', {'id': "#{id}"});
   };
 
   $("#showVideo_#{id}").on('hidden.bs.modal', function () 
   {
-    var play = false;
+    // Pause the video.
+    playVideo(false);
+  });
+
+  function playVideo(play)
+  {
     var div = $("#showVideo_#{id} .videodiv")[0];
     var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
     func = play ? 'playVideo' : 'pauseVideo';
     iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
-  });
+  }

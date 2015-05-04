@@ -1,0 +1,15 @@
+name 'U3L06-API-multichoice'
+title 'Multiple Choice'
+description 'Choose the option that best answers the question.'
+question 'What is the primary purpose of an API in a programming language?'
+wrong 'Application Primary Interactions are fundamental to programming'
+wrong 'To make programming more complex for those without experience'
+wrong 'Programs won\'t run without good API documentation'
+right 'To provide high-level functionality that simplifies complex programming tasks'
+wrong 'It is impossible to write a program without an API'
+
+markdown <<MARKDOWN
+# Multiple Choice
+
+
+MARKDOWN

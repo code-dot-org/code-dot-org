@@ -887,4 +887,44 @@ class UserTest < ActiveSupport::TestCase
     assert_not_equal other_script_user_level, lfs.first.user_level
     assert_equal user_level, lfs.first.user_level
   end
+
+
+  test 'student and teacher relationships' do
+    student = create :student
+    teacher = create :teacher
+    section = create :section, user_id: teacher.id
+
+    follow = Follower.create!(section_id: section.id, student_user_id: student.id, user_id: teacher.id)
+
+    teacher.reload
+    student.reload
+
+    assert_equal [follow], teacher.followers
+    assert_equal [follow], student.followeds
+
+    other_user = create :student
+
+
+    assert !student.student_of?(student)
+    assert !student.student_of?(other_user)
+    assert student.student_of?(teacher)
+
+    assert !teacher.student_of?(student)
+    assert !teacher.student_of?(other_user)
+    assert !teacher.student_of?(teacher)
+
+    assert !other_user.student_of?(student)
+    assert !other_user.student_of?(other_user)
+    assert !other_user.student_of?(teacher)
+
+    assert_equal [], other_user.teachers
+    assert_equal [], other_user.students
+
+    assert_equal [], teacher.teachers
+    assert_equal [student], teacher.students
+
+    assert_equal [teacher], student.teachers
+    assert_equal [], student.students
+
+  end
 end

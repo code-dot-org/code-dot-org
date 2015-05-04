@@ -1,0 +1,54 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-03T20:23:58.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "functionParams_none": null,
+      "callMyFunction": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Let's try this out one more time. This time the colors are NOT named colors - you need to use the hex-color number to set the color.  So that you're not randomly guessing, we'll give you a hint -- each of the colors shown in the target image is one of these one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699, #11CC00  You might be able to guess correctly if you apply what you know about RGB colors.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.0",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L06-challenge4.png"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

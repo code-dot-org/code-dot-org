@@ -9,10 +9,8 @@ class ScriptLevelsController < ApplicationController
     if current_user.teacher? || current_user.admin?
       @level = Level.find(params[:level_id])
       @game = @level.game
-      level_view_options(
-        start_blocks: @level.ideal_level_source.try(:data),
-        share: true
-      )
+      level_view_options(start_blocks: @level.ideal_level_source.try(:data),
+                         share: true)
       view_options(full_width: true)
       @level_source_id = @level.ideal_level_source_id
       @level_source = LevelSource.find(@level_source_id)
@@ -47,6 +45,8 @@ class ScriptLevelsController < ApplicationController
       redirect_to canonical_path, status: :moved_permanently
       return
     end
+
+    load_user
 
     present_level
 
@@ -97,9 +97,24 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
-    # Set start blocks to the user's previous attempt at this puzzle.
-    if current_user && @level.game.name != 'Jigsaw'
+    return if @level.game.name == 'Jigsaw'
+    if @user && current_user && @user != current_user
+      @last_attempt = @user.last_attempt(@level).try(:level_source).try(:data)
+      view_options(readonly_workspace: true,
+                   callouts: [])
+    elsif current_user
+      # Set start blocks to the user's previous attempt at this puzzle.
       @last_attempt = current_user.last_attempt(@level).try(:level_source).try(:data)
+    end
+  end
+
+  def load_user
+    if params[:user_id]
+      user = User.find(params[:user_id])
+
+      if user.student_of?(current_user)
+        @user = user
+      end
     end
   end
 
