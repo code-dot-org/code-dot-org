@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Write the turnAround() function and use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif",
+    "instructions": "Write the turnAround() function and use it to make the turtle move as depicted.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -41,7 +41,8 @@
     "free_play": "false",
     "app_width": "300",
     "app_height": "300",
-    "slider_speed": "0.1"
+    "slider_speed": "0.1",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-turnAndDown.gif"
   }
 }]]></config>
   <blocks/>

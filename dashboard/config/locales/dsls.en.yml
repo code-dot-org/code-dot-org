@@ -445,7 +445,15 @@ en:
         Welcome to CS in Science: Welcome to CS in Science
       sciPD logistics 1:
         Details and Logistics: Details and Logistics
+      sciPD materials:
+        Workshop Materials: Workshop Materials
       sciPD meet and greet: {}
+      sciPD p2 intro:
+        Welcome to Phase 2: Welcome to Phase 2
+      sciPD p3 intro:
+        CS in Science Introduction to Phase 3 PD: CS in Science Introduction to Phase 3 PD
+      sciPD preQ:
+        Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
         What to Expect: What to Expect
       test demo level:
@@ -460,6 +468,58 @@ en:
       unique level name here:
         description here: description here
         title: title
+    match:
+      ECSPD phase matching:
+        Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum
+        Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content
+        In-person wrap up to the first year of teaching the course: In-person wrap up to the first year of teaching the course
+        Matching PD Phases and Descriptions: Matching PD Phases and Descriptions
+        Online introduction to PD program: Online introduction to PD program
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+      ECSPD unit matching:
+        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Unit 1: Unit 1
+        Unit 2: Unit 2
+        Unit 3: Unit 3
+        Unit 4: Unit 4
+        Unit 5: Unit 5
+        Unit 6: Unit 6
+        application of problem solving techniques to develop solutions: application of problem solving techniques to develop solutions
+        apply programming and problem solving to the study of robots: apply programming and problem solving to the study of robots
+        create programs to solve computational problems: create programs to solve computational problems
+        introduction to the concepts of computer and computing: introduction to the concepts of computer and computing
+        use computing to manage and interpret data: use computing to manage and interpret data
+        website development and design: website development and design
+    multi:
+      ECSPD growth mindset in the classroom:
+        Growth Mindset in the Classroom: Growth Mindset in the Classroom
+        How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
+        praise students for getting the right answer: praise students for getting the right answer
+        praise students for their intelligence: praise students for their intelligence
+        praise the process that students use to solve problems: praise the process that students use to solve problems
+      ECSPD growth mindset question:
+        Based on the video you saw before, please answer the following question.: Based on the video you saw before, please answer the following question.
+        Impact of Growth Mindset: Impact of Growth Mindset
+        ? In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?
+        : In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?
+        all of the above: all of the above
+        more effort: more effort
+        more engagement over longer periods of time: more engagement over longer periods of time
+        more perseverance: more perseverance
+        more strategies: more strategies
+      ECSPD impact vid2 question:
+        Barrier to Using Data: Barrier to Using Data
+        ? "Based on the video you just watched, answer the following \nquestion"
+        : "Based on the video you just watched, answer the following \nquestion"
+        ? What issues did Ben Wellington address in his TED talk related to the barriers presented for people who want to access and analyze Big Data?
+        : What issues did Ben Wellington address in his TED talk related to the barriers presented for people who want to access and analyze Big Data?
+        all of the above: all of the above
+        data is normalized, so it is difficult to analyze data from different sources: data is normalized, so it is difficult to analyze data from different sources
+        data is technically available, but often not posted online: data is technically available, but often not posted online
+        data stored in ways that makes it difficult to analyze it: data stored in ways that makes it difficult to analyze it
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)

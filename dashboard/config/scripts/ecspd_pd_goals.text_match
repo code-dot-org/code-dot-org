@@ -1,5 +1,7 @@
 name 'ECSPD PD goals'
 title 'Documenting Your PD Goals'
+height '100'
+skip_sound true
 
 markdown <<MARKDOWN
 ***Now that you've learned more about the ECS Professional Development, let's consider your goals***
