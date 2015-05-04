@@ -1,18 +1,6 @@
 <html>
 <head>
   <style>
-    canvas {
-      border: solid 1px #000000;
-    }
-
-    body {
-      margin-left: 50px;
-    }
-
-    table tr td {
-      padding: 1px;
-    }
-
     #odometerToggles {
       background-color: rgba(0, 164, 180, 0.5);
       padding: 2px 20px;
@@ -38,10 +26,13 @@
     #odoDivArb {
       background: #a0a;
     }
+
+    #diyOdo {
+      width: 30px;
+    }
   </style>
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="cdo-odometer.js"></script>
-  <link rel="stylesheet" href="cdo-odometer.css">
+  <script src="/odometer/cdo-odometer.js"></script>
+  <link rel="stylesheet" href="/odometer/cdo-odometer.css">
 
   <script type="text/javascript">
     var myBinOdo, myDecOdo, myHexOdo, myArbOdo;
