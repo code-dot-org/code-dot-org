@@ -11,12 +11,6 @@ var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
  */
 var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
-  /**
-   * Whether we've already registered ACE event handlers
-   * @type {boolean}
-   * @private
-   */
-  this.handlersRegistered_ = false;
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -43,18 +37,21 @@ DropletAutocompletePopupTooltipManager.prototype.registerHandlers = function (dr
 
   var aceEditor = dropletEditor.aceEditor;
 
-  var self = this;
-
-  aceEditor.commands.on("afterExec", function (e) {
+  var registerOnEditorChanged = function (e) {
     if (e.command.name !== 'insertstring') {
       return;
     }
 
-    if (!self.handlersRegistered_) {
-      self.handlersRegistered_ = true;
-      self.registerPopupHandlers_(aceEditor);
+    var popupHasBeenShown = aceEditor.completer && aceEditor.completer.popup;
+    if (!popupHasBeenShown) {
+      return;
     }
-  });
+
+    this.registerPopupHandlers_(aceEditor);
+    aceEditor.commands.off("afterExec", registerOnEditorChanged);
+  }.bind(this);
+
+  aceEditor.commands.on("afterExec", registerOnEditorChanged);
 };
 
 DropletAutocompletePopupTooltipManager.prototype.registerPopupHandlers_ = function (aceEditor) {
