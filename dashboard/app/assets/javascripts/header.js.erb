@@ -23,7 +23,7 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
+dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId) {
   stageData = stageData || {};
   progressData = progressData || {};
   levelProgress = progressData.levels || {};
@@ -100,7 +100,8 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
         url: "/popup/stats",
         data: {
           script_id: stageData.script_id,
-          script_level_id: currentLevelId
+          script_level_id: currentLevelId,
+          user_id: userId
         }, success: function (result) {
           $('.header_popup_body').html(result);
           if (trophiesClicked) {
