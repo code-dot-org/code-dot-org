@@ -169,6 +169,16 @@
         but.value = "hide";
       }
     }
+
+    function increment() {
+      odoVal = Math.floor(odoVal) + 1;
+      setAllOdos(odoVal);
+    }
+
+    function decrement() {
+      odoVal = Math.ceil(odoVal) - 1;
+      setAllOdos(odoVal);
+    }
   </script>
 
 </head>
@@ -199,26 +209,26 @@
       <!----- all odometers table...needs to be able to resize dynamically -->
       <table>
         <tr id="rowBin">
-          <td>Bin:</td>
+          <td>Binary:</td>
           <td>
             <div id="odoDivBin"></div>
           </td>
         </tr>
         <tr id="rowDec">
-          <td>Dec:</td>
+          <td>Decimal:</td>
           <td>
             <div id="odoDivDec"></div>
 
           </td>
         </tr>
         <tr id="rowHex">
-          <td>Hex:</td>
+          <td>Hexadecimal:</td>
           <td>
             <div id="odoDivHex"></div>
           </td>
         </tr>
         <tr id="rowArb">
-          <td><input type=number id="diyOdo"
+          <td>Custom Base: <input type=number id="diyOdo"
                      title="Enter any number base here 2-36.  NOTE: base 36 is chars 0-Z"
                      min=2 max=36 width=1 value=25
                      onChange="setArbOdo(parseInt(this.value))"></td>
@@ -249,11 +259,13 @@
     <td colspan=2>
       <br>
       <button onClick="startOdo()">Start</button>
-      <button onClick="pauseOdo()">pause</button>
-      <button onClick="resetOdo()">reset</button>
+      <button onClick="pauseOdo()">Pause</button>
+      <button onClick="resetOdo()">Reset</button>
       <br>
       Slow <input type=range min=0.005 max=0.15 step=0.005 oninput="setSpeed()"
                   id="speedSlider" value=0.01> Fast<br>
+      <button onClick="increment()">Increment</button>
+      <button onClick="decrement()">Decrement</button>
     </td>
   </tr>
 </table>
