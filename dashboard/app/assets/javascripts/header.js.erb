@@ -93,6 +93,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
   $('.header_popup').click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
   });
+  $('.header_popup_close').click(hideHeaderPopup);
 
   $(window).resize(function () {
     if ($('.header_popup').is(':visible')) {
