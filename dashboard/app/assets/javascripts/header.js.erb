@@ -86,19 +86,6 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
     $(document).off('click', hideHeaderPopup);
   }
 
-  /** @const */
-  var headerPopupTop = 59;
-  /** @const */
-  var headerPopupBottom = 20;
-  /** @const */
-  var headerPopupFooterHeight = 40;
-
-  function sizeHeaderPopupToViewport() {
-    var viewportHeight = $(window).height();
-    $('.header_popup').css('max-height', viewportHeight - (headerPopupTop + headerPopupBottom)); // TODO: Try removing this property
-    $('.header_popup_scrollable').css('max-height', viewportHeight - (headerPopupTop + headerPopupBottom + headerPopupFooterHeight));
-  }
-
   $('.header_popup_link, .header_trophy_link').click(function (e) {
     e.stopPropagation();
     $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup(e.target);
@@ -106,6 +93,25 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
   $('.header_popup').click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
   });
+
+  $(window).resize(function () {
+    if ($('.header_popup').is(':visible')) {
+      sizeHeaderPopupToViewport();
+    }
+  });
+
+  /**
+   * Adjust the maximum size of the popup's inner scroll area so that the whole popup
+   * will fit within the browser viewport.
+   */
+  function sizeHeaderPopupToViewport() {
+    var viewportHeight = $(window).height();
+    var headerPopup = $('.header_popup');
+    var popupTop = parseInt(headerPopup.css('top'), 10);
+    var popupBottom = parseInt(headerPopup.css('margin-bottom'), 10);
+    var footerHeight = headerPopup.find('.header_popup_footer').outerHeight();
+    headerPopup.find('.header_popup_scrollable').css('max-height', viewportHeight - (popupTop + popupBottom + footerHeight));
+  }
 
   var popupLoaded = false;
   function lazyLoadPopup(trophiesClicked) {

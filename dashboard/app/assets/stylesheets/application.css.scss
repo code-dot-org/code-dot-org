@@ -702,18 +702,16 @@ input.header_input {
   margin-left: 5px;
 }
 
-$header_popup_top: 59px;
-$header_popup_default_max_height: 600px;
-$header_popup_footer_height: 40px;
-
 .header_popup {
   display: none;
   position: absolute;
-  top: $header_popup_top;
-  max-height: $header_popup_default_max_height;
+  // Set to exactly line up with the bottom of the header
+  top: 59px;
   right: 0;
   left: 0;
   margin: 0 auto;
+  // margin-bottom is reused in JavaScript to determine how close to get to the bottom of the viewport.
+  margin-bottom: 20px;
   width: 635px;
   border: 20px solid $bkgnd_color;
   border-top: 5px;
@@ -747,7 +745,7 @@ $header_popup_footer_height: 40px;
 }
 
 .header_popup_scrollable {
-  max-height: #{$header_popup_default_max_height - $header_popup_footer_height};
+  max-height: 560px;
   overflow-y: auto;
 }
 
@@ -774,7 +772,7 @@ $header_popup_footer_height: 40px;
 }
 
 .header_popup_footer {
-  height: #{$header_popup_footer_height - 20px};
+  height: 20px;
   padding: 10px 15px;
   margin-bottom: 0;
   text-align: right;
