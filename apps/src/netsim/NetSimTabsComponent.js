@@ -17,11 +17,11 @@ var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimDnsTab = require('./NetSimDnsTab');
 var NetSimTabType = require('./netsimConstants').NetSimTabType;
 var shouldShowTab = require('./netsimUtils').shouldShowTab;
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * Wrapper component for tabs panel on the right side of the page.
  * @param {jQuery} rootDiv
- * @param {netsimLevelConfiguration} levelConfig
  * @param {RunLoop} runLoop
  * @param {Object} callbacks
  * @param {function} callbacks.chunkSizeSliderChangeCallback
@@ -35,20 +35,13 @@ var shouldShowTab = require('./netsimUtils').shouldShowTab;
  * @param {function} callbacks.becomeDnsCallback
  * @constructor
  */
-var NetSimTabsComponent = module.exports = function (rootDiv, levelConfig, runLoop,
-    callbacks) {
+var NetSimTabsComponent = module.exports = function (rootDiv, runLoop, callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
    * @private
    */
   this.rootDiv_ = rootDiv;
-
-  /**
-   * @type {netsimLevelConfiguration}
-   * @private
-   */
-  this.levelConfig_ = levelConfig;
 
   /**
    * @type {RunLoop}
@@ -149,19 +142,21 @@ NetSimTabsComponent.prototype.attachToRunLoop = function (runLoop) {
  * Fill the root div with new elements reflecting the current state
  */
 NetSimTabsComponent.prototype.render = function () {
+  var levelConfig = netsimGlobals.getLevelConfig();
+
   var rawMarkup = buildMarkup({
-    level: this.levelConfig_
+    level: levelConfig
   });
   var jQueryWrap = $(rawMarkup);
   this.rootDiv_.html(jQueryWrap);
+
   this.rootDiv_.find('.netsim-tabs').tabs({
-    active: this.levelConfig_.defaultTabIndex
+    active: levelConfig.defaultTabIndex
   });
 
-  if (shouldShowTab(this.levelConfig_, NetSimTabType.MY_DEVICE)) {
+  if (shouldShowTab(levelConfig, NetSimTabType.MY_DEVICE)) {
     this.myDeviceTab_ = new NetSimMyDeviceTab(
         this.rootDiv_.find('#tab_my_device'),
-        this.levelConfig_,
         this.runLoop_,
         {
           chunkSizeChangeCallback: this.chunkSizeSliderChangeCallback_,
@@ -170,10 +165,9 @@ NetSimTabsComponent.prototype.render = function () {
         });
   }
 
-  if (shouldShowTab(this.levelConfig_, NetSimTabType.ROUTER)) {
+  if (shouldShowTab(levelConfig, NetSimTabType.ROUTER)) {
     this.routerTab_ = new NetSimRouterTab(
         this.rootDiv_.find('#tab_router'),
-        this.levelConfig_,
         {
           bandwidthSliderChangeCallback: this.routerBandwidthSliderChangeCallback_,
           bandwidthSliderStopCallback: this.routerBandwidthSliderStopCallback_,
@@ -182,10 +176,9 @@ NetSimTabsComponent.prototype.render = function () {
         });
   }
 
-  if (shouldShowTab(this.levelConfig_, NetSimTabType.DNS)) {
+  if (shouldShowTab(levelConfig, NetSimTabType.DNS)) {
     this.dnsTab_ = new NetSimDnsTab(
         this.rootDiv_.find('#tab_dns'),
-        this.levelConfig_,
         this.dnsModeChangeCallback_,
         this.becomeDnsCallback_);
   }
