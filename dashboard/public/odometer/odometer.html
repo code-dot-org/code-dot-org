@@ -59,10 +59,10 @@
       odoDivHex = document.getElementById("odoDivHex");
       odoDivArb = document.getElementById("odoDivArb");
 
-      myBinOdo = new Odometer(odoDivBin, 10, 2);
-      myDecOdo = new Odometer(odoDivDec, 10, 10);
-      myHexOdo = new Odometer(odoDivHex, 10, 16);
-      myArbOdo = new Odometer(odoDivArb, 10, 25);
+      myBinOdo = new Odometer({parent: odoDivBin, digits: 10, radix: 2});
+      myDecOdo = new Odometer({parent: odoDivDec, digits: 10, radix: 10});
+      myHexOdo = new Odometer({parent: odoDivHex, digits: 10, radix: 16});
+      myArbOdo = new Odometer({parent: odoDivArb, digits: 10, radix: 25});
 
       allOdos.push(myBinOdo);
       allOdos.push(myDecOdo);
