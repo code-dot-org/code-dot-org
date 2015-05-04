@@ -721,11 +721,31 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 
   instructionsDiv.appendChild(buttons);
 
+  // If there is an instructions block on the screen, we want the instructions dialog to
+  // shrink down to that instructions block when it's dismissed.
+  // We then want to flash the instructions block.
+  var hideFn = null;
+  var hideOptions = null;
+  var endTargetSelector = "#bubble";
+
+  if ($(endTargetSelector).length) {
+    hideOptions = {};
+    hideOptions.endTarget = endTargetSelector;
+
+    // Momentariy flash the instruction block white then back to regular.
+    hideFn = function() {
+      $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
+        .delay(500)
+        .animate({"background-color":"rgba(0,0,0,0)"},1000);
+    };
+  }
+
   var dialog = this.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
-    defaultBtnSelector: '#ok-button'
+    defaultBtnSelector: '#ok-button',
+    onHidden: hideFn
   });
 
   if (autoClose) {
@@ -742,15 +762,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
       }
     });
   }
-
-  // We want the instructions dialog to shrink down to the instructions block when it's dismissed.
-  // We then want to flash the instructions block.
-  var hideOptions = {};
-  hideOptions.endTarget = "#prompt-table";
-  hideOptions.hideFn = function() {
-    // Momentariy flash the instruction block from white then back to regular.
-    $("#bubble").css({"background-color":"rgba(255,255,255,1)"}).delay(500).animate({"background-color":"rgba(0,0,0,0)"},1000);
-  };
 
   dialog.show({hideOptions: hideOptions});
 };
