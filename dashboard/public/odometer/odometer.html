@@ -1,0 +1,290 @@
+<html>
+<head>
+	 <link type="text/css" rel="stylesheet" href="../css.1/code.org.css" />
+	 	 <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+	<script src="../js/analytics.js"></script>
+
+	 <style>
+	     canvas{
+	         border: solid 1px #000000;
+	     }
+	     body{
+	     	margin-left:50px;
+	     }
+	     table tr td{
+	     	padding: 1px;
+	     }
+	     
+	     #odometerToggles{
+			background-color: rgba(0,164,180, 0.5);
+			padding: 2px 20px;
+			top: 0px;
+			color: white;
+			margin: 20px;
+			border-radius: 10px;
+			display:inline-block;
+
+		}
+	     
+	 </style>
+	 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+	   <script src="../js/odometer.js"></script>
+
+	    <script type="text/javascript">
+	  
+	        
+           
+            var myBinOdo, myDecOdo, myHexOdo, myArbOdo;
+            var allOdos = new Array();
+            var odoVal = 0;
+            
+            var timer;
+            var tickValue = 0.01;
+			var odoDiv;
+	      	
+            $(document).ready(function(){
+            
+          
+                odoDivBin = document.getElementById("odoDivBin");
+				odoDivDec = document.getElementById("odoDivDec");
+			    odoDivHex = document.getElementById("odoDivHex");
+			    odoDivArb = document.getElementById("odoDivArb");
+
+
+        		myBinOdo = new Odometer(odoDivBin, {color: "#660000", base: 2, digits: 8, tenths: false, bustedness: 0});
+        		myDecOdo = new Odometer(odoDivDec, {color: "#006600", base: 10, digits: 8, tenths: false, bustedness: 0});
+        		myHexOdo = new Odometer(odoDivHex, {color: "#000066", base: 16, digits: 8, tenths: false, bustedness: 0});
+				myArbOdo = new Odometer(odoDivArb, {color: "#660066", base: 25, digits: 8, tenths: false, bustedness: 0})
+				
+				allOdos.push(myBinOdo);
+				allOdos.push(myDecOdo);
+				allOdos.push(myHexOdo);
+				
+				allOdos.push(myArbOdo);
+
+
+        		
+        		setAllOdos(odoVal);
+        		
+        		toggleRow('rowHex');
+        		toggleRow('rowArb');
+        	
+
+
+        		
+        		//timer = setInterval(update, 20);
+
+            });
+            
+            var isMouseDown = false;
+			document.onmousedown = function() { isMouseDown = true };
+			document.onmouseup   = function() { isMouseDown = false };
+
+            function setOdoFromSlider(){
+            	var val = parseFloat(document.getElementById("odoValSlider").value);
+            	if(isMouseDown){
+            		setAllOdos(val);
+            	}
+            	
+            	
+            }
+            
+            function setAllOdos(val){
+            	odoVal=val; //setGlobal for incrementing
+            	for (var i in allOdos){
+            		allOdos[i].set(val);
+            	}
+            	
+            	setOdoSlider(odoVal);
+            	setOdoNumberInput(odoVal);
+
+
+            }
+            
+           
+            
+            function pauseOdo(){
+            	if(timer){
+	            	clearInterval(timer);
+	            	timer=null;
+            	}
+            }
+            
+            function startOdo(){
+            	if(timer==null){
+            		timer = setInterval(update, 20);
+            	}
+            }
+            
+            function resetOdo(){
+            	pauseOdo();
+            	odoVal=0;
+            	for(var i in allOdos){ //hack to force proper resetting
+            		allOdos[i].resetAllDigits();
+            	}
+            	setAllOdos(odoVal);
+            }
+            
+           
+            
+            
+            
+	      
+	        function update(){
+	            
+	            
+	            odoVal += tickValue;
+	            setAllOdos(odoVal);
+	           
+	           
+
+	        }
+	        
+	        function setSpeed(){
+	        	var obj = document.getElementById("speedSlider");
+	        	if(obj.value===obj.max){
+	        		console.debug("max");
+	        		tickValue = 1;
+	        	}
+	        	else tickValue = parseFloat(obj.value);
+	        }
+	        
+	        function setArbOdo(val){
+	        	//myArbitraryOdo.resetAllDigits();
+	
+	        	myArbOdo.base=parseInt(val);
+	        	myArbOdo.set(odoVal);
+
+	        }
+	        
+	        function setOdoSlider(val){
+	        	var obj = document.getElementById("odoValSlider");
+	        	obj.value = Math.min(val,parseInt(obj.max));
+	        }
+	        
+	        function setOdoNumberInput(val){
+	        	var obj = document.getElementById("odoNumberInput");
+	        	obj.value = Math.floor(val);
+	        }
+	        
+	        function toggleRow(rowId){
+	        
+	        	
+	        	var rowObj = document.getElementById(rowId);
+	        	console.debug("toggle row "+rowObj);
+	        	
+	        	if(rowObj.style.display==="" || rowObj.style.display==="table-row"){
+	        		rowObj.style.display="none";
+	        	}
+	        	else{
+	        		rowObj.style.display="table-row";
+	        	} 
+	        }
+	        
+	        function toggleNumberScroller(){
+	        	var obj = document.getElementById("numberScroller");
+	        	var but = document.getElementById("showScrollButton");
+	        	
+	        	if(obj.style.opacity==1.0){
+	        		obj.style.opacity=0.0;
+	        		but.value="show";
+
+	        	}
+	        	else{
+	        		obj.style.opacity=1.0;
+	        		but.value="hide";
+	        	} 
+	        
+	        }
+	      
+	        
+
+	        
+	    </script>
+	    
+</head>
+<body>
+<header>
+		<img src="logo.png" hspace=20> 
+		<big> Odometers </big>
+	</header>
+    
+    <div style="width: 640px; margin: 10px">
+    Use the widget controls below to watch odometers with various number bases.<br>
+    Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.<br>
+    Practice with them here.  Set a value. Predict what the number one up, or one down will be.
+
+   </div>
+	
+	<div id="odometerToggles" title="Toggle Visibility of Odometers">
+	Bin: <input type=checkbox onChange="toggleRow('rowBin')" checked> 
+	Dec: <input type=checkbox onChange="toggleRow('rowDec')" checked> 
+	Hex: <input type=checkbox onChange="toggleRow('rowHex')"> 
+	Arbitrary: <input type=checkbox onChange="toggleRow('rowArb')"> 
+	| Scroller: <input type=button value="show" onClick="toggleNumberScroller()" id="showScrollButton">
+	</div>
+	
+    <table id="odoAndSliderContainer">
+    	<tr>
+    		<td valign=middle><!----- all odometers table...needs to be able to resize dynamically -->
+
+    
+			    <table>
+			    	<tr id="rowBin">
+			    		<td>Bin:</td>
+			    		<td><div id="odoDivBin"></div></td>
+			    	</tr>
+			    	<tr id="rowDec">
+			    		<td>Dec:</td>
+			    		<td>
+			    			<div id="odoDivDec"></div>
+			    			
+			    		</td>
+			    	</tr>
+			   		<tr id="rowHex">
+			    		<td>Hex:</td>
+			    		<td><div id="odoDivHex"></div></td>
+			    	</tr>
+			    	<tr id="rowArb">
+			    		<td><input type=number id="diyOdo" title="Enter any number base here 2-36.  NOTE: base 36 is chars 0-Z" min=2 max=36 width=1 value=25 onChange="setArbOdo(parseInt(this.value))"></td>
+			    		<td><div id="odoDivArb"></div></td>
+			    	</tr>
+			    	
+			    	
+			    </table>
+	    
+	        			
+    			
+    		</td> <!-- End odometers table -->
+    		<td valign=top> <!--- Outter table cell to right for holding vertical slider -->
+    		
+    		<div id="numberScroller" style="opacity: 0">
+    			<input title="Slider is just for playing. It maxes out at 256. But you can enter any number in the text box below." style="-webkit-appearance: slider-vertical; height: 100%; width: 15px;" type=range min=0 max=256 step=0.1 onClick="setAllOdos(parseFloat(this.value))" onMouseMove="setOdoFromSlider()" id="odoValSlider" value=0>
+				<br>
+				<input type=number style="width:75px" onChange="setAllOdos(parseFloat(this.value))" id="odoNumberInput">
+    		</div>
+    			
+    		</td>
+    	</tr>
+    	<tr>
+    		<td colspan=2>
+    			<br>
+    			<button onClick="startOdo()">Start</button>
+	   			 <button onClick="pauseOdo()">pause</button>
+	    		<button onClick="resetOdo()">reset</button><br>
+	   			 Slow <input type=range min=0.005 max=0.15 step=0.005 onChange="setSpeed()" id="speedSlider" value=0.01> Fast<br>
+			</td>
+    	</tr>
+    	
+    	
+    </table>
+<br>
+<footer style="clear:both">
+	<a  rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+			<img alt="Creative Commons License" style="border-width:0; float:left" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+All<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Code.org CSP Widgets</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Baker Franke</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+</footer>
+</body>
+</html>
