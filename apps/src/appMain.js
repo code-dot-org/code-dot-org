@@ -7,7 +7,13 @@ var studioApp = require('./StudioApp').singleton;
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
   loadBlocks: _.bind(studioApp.loadBlocks, studioApp),
-  arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp)
+  arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp),
+  getDropletContents: function () {
+    return _.bind(studioApp.editor.getValue, studioApp.editor)()
+  },
+  getDroplet: function () {
+    return studioApp.editor;
+  }
 };
 
 var addReadyListener = require('./dom').addReadyListener;
