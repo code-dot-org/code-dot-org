@@ -9,6 +9,10 @@
       background: #a00;
     }
 
+    #odoDivOct {
+      background: #c90;
+    }
+
     #odoDivDec {
       background: #0a0;
     }
@@ -22,7 +26,7 @@
     }
 
     #diyOdo {
-      width: 30px;
+      width: 40px;
     }
 
     .overflow {
@@ -35,7 +39,7 @@
   <link rel="stylesheet" href="/odometer/cdo-odometer.css">
 
   <script type="text/javascript">
-    var myBinOdo, myDecOdo, myHexOdo, myArbOdo;
+    var myArbOdo;
     var allOdos = [];
     var odoVal = 0;
 
@@ -46,18 +50,16 @@
     $(document).ready(function() {
 
       odoDivBin = document.getElementById("odoDivBin");
+      odoDivOct = document.getElementById("odoDivOct");
       odoDivDec = document.getElementById("odoDivDec");
       odoDivHex = document.getElementById("odoDivHex");
       odoDivArb = document.getElementById("odoDivArb");
 
-      myBinOdo = new Odometer({parent: odoDivBin, overflowSelector: '#odoDivBinOverflow', digits: 10, radix: 2});
-      myDecOdo = new Odometer({parent: odoDivDec, overflowSelector: '#odoDivDecOverflow', digits: 10, radix: 10});
-      myHexOdo = new Odometer({parent: odoDivHex, overflowSelector: '#odoDivHexOverflow', digits: 10, radix: 16});
-      myArbOdo = new Odometer({parent: odoDivArb, overflowSelector: '#odoDivArbOverflow', digits: 10, radix: 25});
-
-      allOdos.push(myBinOdo);
-      allOdos.push(myDecOdo);
-      allOdos.push(myHexOdo);
+      allOdos.push(new Odometer({parent: odoDivBin, overflowSelector: '#odoDivBinOverflow', digits: 10, radix: 2}));
+      allOdos.push(new Odometer({parent: odoDivOct, overflowSelector: '#odoDivOctOverflow', digits: 10, radix: 8}));
+      allOdos.push(new Odometer({parent: odoDivDec, overflowSelector: '#odoDivDecOverflow', digits: 10, radix: 10}));
+      allOdos.push(new Odometer({parent: odoDivHex, overflowSelector: '#odoDivHexOverflow', digits: 10, radix: 16}));
+      myArbOdo = new Odometer({parent: odoDivArb, overflowSelector: '#odoDivArbOverflow', digits: 10, radix: 20});
       allOdos.push(myArbOdo);
 
       setAllOdos(odoVal);
@@ -182,6 +184,13 @@ Slow <input type=range min=0.005 max=0.15 step=0.005 oninput="setSpeed()"  id="s
           </td>
           <td><span id="odoDivBinOverflow" class="overflow">Overflow!</span></td>
         </tr>
+        <tr id="rowOct">
+          <td>Octal:</td>
+          <td>
+            <div id="odoDivOct"></div>
+          </td>
+          <td><span id="odoDivOctOverflow" class="overflow">Overflow!</span></td>
+        </tr>
         <tr id="rowDec">
           <td>Decimal:</td>
           <td>
@@ -199,7 +208,7 @@ Slow <input type=range min=0.005 max=0.15 step=0.005 oninput="setSpeed()"  id="s
         <tr id="rowArb">
           <td>Custom Base: <input type=number id="diyOdo"
                      title="Enter any number base here 2-36.  NOTE: base 36 is chars 0-Z"
-                     min=2 max=36 width=1 value=25
+                     min=2 max=36 width=1 value=20
                      onChange="setArbOdo(parseInt(this.value))"></td>
           <td>
             <div id="odoDivArb"></div>
