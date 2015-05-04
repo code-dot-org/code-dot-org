@@ -4,7 +4,9 @@ function Odometer(config) {
   var digits = [];
   var scrollingDigits = [];
   var last = null;
-  var currentValue = config.initial || 0;
+
+  // The current value of the odometer (call `set` to change).
+  this.currentValue = config.initial || 0;
 
   // True if the current value and radix requires more digits than were set in the config.
   this.isOverflowing = false;
@@ -20,6 +22,7 @@ function Odometer(config) {
 
   // Set the odometer to a specific value.
   this.set = function(value) {
+    this.currentValue = value;
     var scrollAmount = (value % 1) * -DIGIT_HEIGHT;
     value = Math.floor(value);
 
@@ -58,8 +61,8 @@ function Odometer(config) {
   // Change the radix and update the odometer.
   this.changeRadix = function(newRadix) {
     config.radix = newRadix;
-    this.set(currentValue);
+    last = null;
   };
 
-  this.set(currentValue);
+  this.set(this.currentValue);
 }

@@ -130,6 +130,7 @@
 
     function setArbOdo(val) {
       myArbOdo.changeRadix(parseInt(val));
+      myArbOdo.set(odoVal);
     }
 
     function setOdoSlider(val) {
@@ -227,8 +228,8 @@ Slow <input type=range min=0.005 max=0.15 step=0.005 oninput="setSpeed()"  id="s
       onClick="setAllOdos(parseFloat(this.value))"
       onMouseMove="setOdoFromSlider()" id="odoValSlider" value=0>
   <br>
-  Value: <input type=number style="width:75px"
-         onChange="setAllOdos(parseFloat(this.value))"
+  Value: <input type=number
+         oninput="setAllOdos(parseFloat(this.value))"
          id="odoNumberInput">
 </div>
 
