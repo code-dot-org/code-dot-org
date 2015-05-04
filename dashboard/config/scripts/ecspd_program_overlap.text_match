@@ -1,5 +1,7 @@
 name 'ECSPD program overlap'
 title 'Relationship between Curriculum and PD'
+height '100'
+skip_sound true
 
 markdown <<MARKDOWN
 

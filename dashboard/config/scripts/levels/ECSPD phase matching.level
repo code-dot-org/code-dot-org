@@ -3,6 +3,10 @@
   "game_id": 30,
   "created_at": "2015-04-27T19:03:55.000Z",
   "properties": {
+    "options": {
+      "skip_sound": true,
+      "hide_submit": true
+    },
     "questions": [
       {
         "text": "Phase 1"
@@ -28,11 +32,15 @@
         "text": "Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content"
       },
       {
-        "text": "in-person wrap up to the first year of teaching the course"
+        "text": "In-person wrap up to the first year of teaching the course"
       }
     ],
     "title": "Matching PD Phases and Descriptions",
-    "height": "75"
+    "height": "75",
+    "type": "Match",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </Match>

@@ -1,6 +1,7 @@
 name 'ECSPD course goals'
 title 'Documenting Your Course Goals'
 height '100'
+skip_sound true
 
 markdown <<MARKDOWN
 ***Now that you've learned more about the ECS curriculum, let's consider your goals***
