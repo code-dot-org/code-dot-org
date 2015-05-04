@@ -37,6 +37,10 @@ var DEFAULT_TOOLTIP_CONFIG = {
  * @param {Editor} dropletEditor
  */
 DropletAutocompletePopupTooltipManager.prototype.registerHandlers = function (dropletEditor) {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
   var aceEditor = dropletEditor.aceEditor;
 
   var self = this;
