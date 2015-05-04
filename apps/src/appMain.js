@@ -9,7 +9,7 @@ window.__TestInterface = {
   loadBlocks: _.bind(studioApp.loadBlocks, studioApp),
   arrangeBlockPosition: _.bind(studioApp.arrangeBlockPosition, studioApp),
   getDropletContents: function () {
-    return _.bind(studioApp.editor.getValue, studioApp.editor)()
+    return _.bind(studioApp.editor.getValue, studioApp.editor)();
   },
   getDroplet: function () {
     return studioApp.editor;
