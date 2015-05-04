@@ -246,6 +246,7 @@ StudioApp.prototype.init = function(config) {
         this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
         if (!this.editor.currentlyUsingBlocks) {
           this.editor.aceEditor.focus();
+          this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
         }
       } else {
         this.feedback_.showGeneratedCode(this.Dialog);
@@ -1298,6 +1299,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
+    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager.registerBlocksFromList(
+      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+
     // Bind listener to palette/toolbox 'Hide' and 'Show' links
     var hideToolboxLink = document.getElementById('hide-toolbox');
     var showToolboxLink = document.getElementById('show-toolbox');
@@ -1316,22 +1321,6 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
     }
 
-    this.dropletTooltipManager = new DropletTooltipManager(this.editor);
-    this.dropletTooltipManager.registerBlocksFromList(
-      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
-
-    var installTooltips = function () {
-      this.dropletTooltipManager.installTooltipsOnVisibleToolboxBlocks();
-    }.bind(this);
-
-    this.editor.on('changepalette', installTooltips);
-
-    this.editor.on('toggledone', function () {
-      if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
-        installTooltips();
-      }
-    });
-
     this.resizeToolboxHeader();
 
     if (options.startBlocks) {
@@ -1341,7 +1330,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     if (options.afterEditorReady) {
       options.afterEditorReady();
-      installTooltips();
+      this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
     }
   }, this));
 
