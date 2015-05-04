@@ -37,37 +37,40 @@ DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = fun
 
   var aceEditor = dropletEditor.aceEditor;
 
-  var registerOnEditorChanged = function (e) {
-    if (e.command.name !== 'insertstring') {
-      return;
-    }
-
-    var popupHasBeenShown = aceEditor.completer && aceEditor.completer.popup;
-    if (!popupHasBeenShown) {
-      return;
-    }
-
-    this.registerPopupHandlers_(aceEditor);
-    aceEditor.commands.removeListener("afterExec", registerOnEditorChanged);
-  }.bind(this);
-
-  aceEditor.commands.on("afterExec", registerOnEditorChanged);
+  this.editorChangedEventHandler_ = this.setupOnPopupShown_.bind(this, aceEditor);
+  aceEditor.commands.on("afterExec", this.editorChangedEventHandler_);
 };
 
-DropletAutocompletePopupTooltipManager.prototype.registerPopupHandlers_ = function (aceEditor) {
-  this.installAfterRenderHandler_(aceEditor);
-  this.installHideHandler_(aceEditor);
+/**
+ * When an autocomplete popup has been shown the first time, register event
+ * handlers to show and hide tooltips during autocomplete popup usage.
+ * @param aceEditor - ace editor instance
+ * @param changeEvent - event from aceEditor.commands.on("afterExec")
+ * @private
+ */
+DropletAutocompletePopupTooltipManager.prototype.setupOnPopupShown_ = function (aceEditor, changeEvent) {
+  if (changeEvent.command.name !== 'insertstring') {
+    return;
+  }
+
+  var popupHasBeenShownOnce = aceEditor.completer && aceEditor.completer.popup;
+  if (!popupHasBeenShownOnce) {
+    return;
+  }
+
+  this.setupForEditorPopup_(aceEditor);
+
+  aceEditor.commands.removeListener("afterExec", this.editorChangedEventHandler_);
+  this.editorChangedEventHandler_ = null;
 };
 
-DropletAutocompletePopupTooltipManager.prototype.installAfterRenderHandler_ = function (aceEditor) {
+DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function (aceEditor) {
   aceEditor.completer.popup.setSelectOnHover(true);
 
   aceEditor.completer.popup.renderer.on("afterRender", function () {
     this.updateAutocompletePopupTooltip(aceEditor);
   }.bind(this));
-};
 
-DropletAutocompletePopupTooltipManager.prototype.installHideHandler_ = function (aceEditor) {
   aceEditor.completer.popup.on("hide", function () {
     this.destroyAutocompleteTooltips_();
   }.bind(this));
@@ -80,25 +83,26 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
 
   var keyboardRow = aceEditor.completer.popup.getRow();
 
-  var filteredCompletions = aceEditor.completer.completions.filtered;
-
-  if (keyboardRow >= 0) {
-    var funcName = filteredCompletions[keyboardRow].value;
-
-    this.destroyAutocompleteTooltips_();
-
-    if (!this.dropletTooltipManager.hasDocFor(funcName)) {
-      return;
-    }
-
-    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-      content: this.getTooltipHTML(funcName)
-    });
-
-    var rowOverlayDiv = $('.ace_selected');
-    rowOverlayDiv.tooltipster(configuration);
-    rowOverlayDiv.tooltipster('show');
+  if (keyboardRow < 0) {
+    return;
   }
+
+  var filteredCompletions = aceEditor.completer.completions.filtered;
+  var funcName = filteredCompletions[keyboardRow].value;
+
+  this.destroyAutocompleteTooltips_();
+
+  if (!this.dropletTooltipManager.hasDocFor(funcName)) {
+    return;
+  }
+
+  var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+    content: this.getTooltipHTML(funcName)
+  });
+
+  var rowOverlayDiv = $('.ace_selected');
+  rowOverlayDiv.tooltipster(configuration);
+  rowOverlayDiv.tooltipster('show');
 };
 
 DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = function () {
