@@ -24,19 +24,19 @@
     }
 
     #odoDivBin {
-      background: #600;
+      background: #a00;
     }
 
     #odoDivDec {
-      background: #060;
+      background: #0a0;
     }
 
     #odoDivHex {
-      background: #006;
+      background: #00a;
     }
 
     #odoDivArb {
-      background: #606;
+      background: #a0a;
     }
   </style>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -117,7 +117,7 @@
       pauseOdo();
       odoVal = 0;
       for (var i in allOdos) { //hack to force proper resetting
-        allOdos[i].resetAllDigits();
+        allOdos[i].set(0);
       }
       setAllOdos(odoVal);
     }
