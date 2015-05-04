@@ -1,0 +1,38 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-05-03T21:21:38.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What is the primary purpose of an API in a programming language?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Application Primary Interactions are fundamental to programming",
+        "correct": false
+      },
+      {
+        "text": "To make programming more complex for those without experience",
+        "correct": false
+      },
+      {
+        "text": "Programs won't run without good API documentation",
+        "correct": false
+      },
+      {
+        "text": "To provide high-level functionality that simplifies complex programming tasks",
+        "correct": true
+      },
+      {
+        "text": "It is impossible to write a program without an API",
+        "correct": false
+      }
+    ],
+    "title": "Multiple Choice",
+    "content1": "Choose the option that best answers the question.",
+    "markdown": "# Multiple Choice\n\n\n"
+  }
+}]]></config>
+</Multi>

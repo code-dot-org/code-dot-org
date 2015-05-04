@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Create a turnRight() function and draw a rectangle twice as tall as it is wide by having the turtle navigate clockwise to draw the rectangle. Make sure to comment your function as shown in the turnAround() function.  GIF: U3L03-RightTurnRectangle.gif",
+    "instructions": "Create a turnRight() function and draw a rectangle twice as tall as it is wide by having the turtle navigate clockwise to draw the rectangle. Make sure to comment your function as shown in the turnAround() function. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -41,7 +41,8 @@
     "free_play": "false",
     "app_width": "300",
     "app_height": "300",
-    "slider_speed": "0.1"
+    "slider_speed": "0.1",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-RightTurnRectangle.gif"
   }
 }]]></config>
   <blocks/>
