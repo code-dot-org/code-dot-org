@@ -14,17 +14,11 @@ Feature: Droplet levels work as expected
     And I press keys "utto"
     And the Droplet ACE text is "butto"
 
-    # TODO(bjordan): Assert: no tooltip, just dropdown
-
     And I press keys ":down"
     And the Droplet ACE text is "butto"
 
-    # TODO(bjordan): Assert: see tooltip for button
-
     And I press keys ":enter"
     And the Droplet ACE text is "button"
-
-    # TODO(bjordan): Assert: Original tooltip is hidden
 
     And I press keys "("
     And the Droplet ACE text is "button()"
