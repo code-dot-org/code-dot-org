@@ -4,6 +4,7 @@ function Odometer(config) {
   var digits = [];
   var scrollingDigits = [];
   var last = null;
+  var currentValue = config.initial || 0;
 
   // Create DOM.
   var odometer = $("<div class='odometer'>");
@@ -36,5 +37,12 @@ function Odometer(config) {
     scrollingDigits.forEach(function (n) {
       digits[n].css('top', scrollAmount);
     });
-  }
+  };
+
+  this.changeRadix = function(newRadix) {
+    config.radix = newRadix;
+    this.set(currentValue);
+  };
+
+  this.set(currentValue);
 }

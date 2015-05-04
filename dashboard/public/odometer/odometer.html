@@ -130,7 +130,7 @@
     }
 
     function setArbOdo(val) {
-      myArbOdo.base = parseInt(val);
+      myArbOdo.changeRadix(parseInt(val));
       myArbOdo.set(odoVal);
     }
 
@@ -191,7 +191,6 @@
   computer science.<br>
   Practice with them here. Set a value. Predict what the number one up, or one
   down will be.
-
 </div>
 
 <div id="odometerToggles" title="Toggle Visibility of Odometers">
