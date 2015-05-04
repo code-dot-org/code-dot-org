@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "The turnAround function is now provided for you in the code.  Use the turnAround() function to draw a T as depicted. see: U3L03-Tshape.gif",
+    "instructions": "The turnAround function is now provided for you in the code.  Use the turnAround() function to draw a T as depicted.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -42,7 +42,8 @@
     "app_width": "300",
     "app_height": "300",
     "slider_speed": "0.1",
-    "start_blocks": "function turnAround(){\r\n  turnLeft();\r\n  turnLeft();\r\n}"
+    "start_blocks": "function turnAround(){\r\n  turnLeft();\r\n  turnLeft();\r\n}",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-Tshape.gif"
   }
 }]]></config>
   <blocks/>

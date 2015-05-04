@@ -27,6 +27,9 @@
               - puzzle_outer_class = 'puzzle_outer_level'
             %span{class: puzzle_outer_class}
               - link = url_from_path("/s/#{script_summary[:name]}/stage/#{stage[:position]}/puzzle/#{level[:position]}")
+              - if current_user.try(:admin?) # TODO remove when we ship this feature
+                - if current_user && current_user != user # viewing someone else's progress
+                  - link += "?user_id=#{user.id}"
               %a.level_link{href: link, class: status}
                 - if level[:kind] == 'unplugged'
                   %span.puzzle-named
