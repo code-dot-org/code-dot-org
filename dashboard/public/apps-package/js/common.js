@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({96:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({98:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],53:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -280,7 +280,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],52:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -570,7 +570,7 @@ function RGBColor(color_string)
 }
 
 
-},{}],51:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3538,7 +3538,7 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],50:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -4150,7 +4150,7 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}],206:[function(require,module,exports){
+},{}],208:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4700,7 +4700,7 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":258,"./utils":253}],238:[function(require,module,exports){
+},{"../locale/current/common":260,"./utils":255}],240:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -4764,7 +4764,7 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],232:[function(require,module,exports){
+},{}],234:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4787,7 +4787,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],208:[function(require,module,exports){
+},{"../../locale/current/common":260,"ejs":276}],210:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -5052,7 +5052,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":58}],207:[function(require,module,exports){
+},{"./dom":60}],209:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5209,7 +5209,7 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":28,"./dom":58,"./required_block_utils":205,"./utils":253}],205:[function(require,module,exports){
+},{"./StudioApp":4,"./blocksCommon":30,"./dom":60,"./required_block_utils":207,"./utils":255}],207:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
@@ -5531,7 +5531,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":258,"./block_utils":27,"./utils":253,"./xml":254}],28:[function(require,module,exports){
+},{"../locale/current/common":260,"./block_utils":29,"./utils":255,"./xml":256}],30:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5699,7 +5699,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":258}],4:[function(require,module,exports){
+},{"../locale/current/common":260}],4:[function(require,module,exports){
 /* global Blockly, ace:true, $, requirejs */
 
 var parseXmlElement = require('./xml').parseElement;
@@ -5948,6 +5948,7 @@ StudioApp.prototype.init = function(config) {
         this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
         if (!this.editor.currentlyUsingBlocks) {
           this.editor.aceEditor.focus();
+          this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
         }
       } else {
         this.feedback_.showGeneratedCode(this.Dialog);
@@ -7000,6 +7001,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       enableLiveAutocompletion: true
     });
 
+    this.dropletTooltipManager = new DropletTooltipManager();
+    this.dropletTooltipManager.registerBlocksFromList(
+      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+
     // Bind listener to palette/toolbox 'Hide' and 'Show' links
     var hideToolboxLink = document.getElementById('hide-toolbox');
     var showToolboxLink = document.getElementById('show-toolbox');
@@ -7018,22 +7023,6 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
     }
 
-    this.dropletTooltipManager = new DropletTooltipManager(this.editor);
-    this.dropletTooltipManager.registerBlocksFromList(
-      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
-
-    var installTooltips = function () {
-      this.dropletTooltipManager.installTooltipsOnVisibleToolboxBlocks();
-    }.bind(this);
-
-    this.editor.on('changepalette', installTooltips);
-
-    this.editor.on('toggledone', function () {
-      if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
-        installTooltips();
-      }
-    });
-
     this.resizeToolboxHeader();
 
     if (options.startBlocks) {
@@ -7043,7 +7032,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     if (options.afterEditorReady) {
       options.afterEditorReady();
-      installTooltips();
+      this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
     }
   }, this));
 
@@ -7243,7 +7232,7 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":258,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":26,"./block_utils":27,"./constants.js":57,"./dom":58,"./dropletUtils":59,"./feedback":78,"./templates/builder.html.ejs":226,"./templates/buttons.html.ejs":227,"./templates/instructions.html.ejs":229,"./templates/learn.html.ejs":230,"./templates/makeYourOwn.html.ejs":231,"./utils":253,"./xml":254,"url":273}],273:[function(require,module,exports){
+},{"../locale/current/common":260,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":28,"./block_utils":29,"./constants.js":59,"./dom":60,"./dropletUtils":61,"./feedback":80,"./templates/builder.html.ejs":228,"./templates/buttons.html.ejs":229,"./templates/instructions.html.ejs":231,"./templates/learn.html.ejs":232,"./templates/makeYourOwn.html.ejs":233,"./utils":255,"./xml":256,"url":275}],275:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7952,13 +7941,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":269,"querystring":272}],272:[function(require,module,exports){
+},{"punycode":271,"querystring":274}],274:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":270,"./encode":271}],271:[function(require,module,exports){
+},{"./decode":272,"./encode":273}],273:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8045,7 +8034,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],270:[function(require,module,exports){
+},{}],272:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8131,7 +8120,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],269:[function(require,module,exports){
+},{}],271:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8642,7 +8631,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],231:[function(require,module,exports){
+},{}],233:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8662,7 +8651,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],230:[function(require,module,exports){
+},{"../../locale/current/common":260,"ejs":276}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8684,7 +8673,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],229:[function(require,module,exports){
+},{"../../locale/current/common":260,"ejs":276}],231:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8704,7 +8693,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],226:[function(require,module,exports){
+},{"../../locale/current/common":260,"ejs":276}],228:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8724,7 +8713,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],78:[function(require,module,exports){
+},{"ejs":276}],80:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -9945,7 +9934,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":258,"./codegen":55,"./constants":57,"./dom":58,"./feedbackBlocks":79,"./templates/buttons.html.ejs":227,"./templates/code.html.ejs":228,"./templates/shareFailure.html.ejs":234,"./templates/sharing.html.ejs":235,"./templates/showCode.html.ejs":236,"./templates/trophy.html.ejs":237,"./utils":253,"./xml":254}],237:[function(require,module,exports){
+},{"../locale/current/common":260,"./codegen":57,"./constants":59,"./dom":60,"./feedbackBlocks":81,"./templates/buttons.html.ejs":229,"./templates/code.html.ejs":230,"./templates/shareFailure.html.ejs":236,"./templates/sharing.html.ejs":237,"./templates/showCode.html.ejs":238,"./templates/trophy.html.ejs":239,"./utils":255,"./xml":256}],239:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9965,7 +9954,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],236:[function(require,module,exports){
+},{"ejs":276}],238:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9985,7 +9974,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],235:[function(require,module,exports){
+},{"../../locale/current/common":260,"ejs":276}],237:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10005,7 +9994,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],234:[function(require,module,exports){
+},{"../../locale/current/common":260,"ejs":276}],236:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10025,7 +10014,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],228:[function(require,module,exports){
+},{"ejs":276}],230:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10045,7 +10034,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],227:[function(require,module,exports){
+},{"ejs":276}],229:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10065,7 +10054,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":258,"ejs":274}],79:[function(require,module,exports){
+},{"../../locale/current/common":260,"ejs":276}],81:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10194,7 +10183,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":57,"./templates/readonly.html.ejs":233}],233:[function(require,module,exports){
+},{"./constants":59,"./templates/readonly.html.ejs":235}],235:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10215,7 +10204,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],55:[function(require,module,exports){
+},{"ejs":276}],57:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -10747,7 +10736,7 @@ exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
   return userCodeRow;
 };
 
-},{"./dropletUtils":59}],59:[function(require,module,exports){
+},{"./dropletUtils":61}],61:[function(require,module,exports){
 var utils = require('./utils');
 
 /**
@@ -11115,7 +11104,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
     .concat(configuredBlocks);
 };
 
-},{"./utils":253}],253:[function(require,module,exports){
+},{"./utils":255}],255:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -11377,7 +11366,7 @@ exports.isInfiniteRecursionError = function (err) {
   return false;
 };
 
-},{"./hammer":89,"./lodash":97,"./xml":254}],97:[function(require,module,exports){
+},{"./hammer":91,"./lodash":99,"./xml":256}],99:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -14746,7 +14735,7 @@ exports.isInfiniteRecursionError = function (err) {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],89:[function(require,module,exports){
+},{}],91:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16910,7 +16899,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],58:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -17017,7 +17006,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],57:[function(require,module,exports){
+},{}],59:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -17095,7 +17084,7 @@ exports.KeyCodes = {
   DELETE: 127
 };
 
-},{}],27:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 var xml = require('./xml');
 
 /**
@@ -17393,7 +17382,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
     '</block>';
 };
 
-},{"./xml":254}],254:[function(require,module,exports){
+},{"./xml":256}],256:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -17421,10 +17410,12 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],26:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
+var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
+var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
 
 /**
  * @fileoverview Manages a store of known blocks and tooltips
@@ -17432,10 +17423,9 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**
  * Store for finding tooltips for blocks
- * @param {Droplet.Editor} dropletEditor
  * @constructor
  */
-var DropletTooltipManager = function (dropletEditor) {
+function DropletTooltipManager() {
   /**
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
@@ -17443,37 +17433,32 @@ var DropletTooltipManager = function (dropletEditor) {
   this.blockTypeToTooltip = {};
 
   /**
-   * @type {Droplet.Editor}
+   * @type {DropletBlockTooltipManager}
    * @private
    */
-  this.dropletEditor_ = dropletEditor;
+  this.dropletBlockTooltipManager_ = new DropletBlockTooltipManager(this);
 
-  this.hideTooltipsOnBlockPick_();
-};
+  /**
+   * @type {DropletAutocompletePopupTooltipManager}
+   * @private
+   */
+  this.dropletAutocompletePopupTooltipManager_ = new DropletAutocompletePopupTooltipManager(this);
+}
 
-var DEFAULT_TOOLTIP_CONFIG = {
-  interactive: true,
-  speed: 150,
-  maxWidth: 450,
-  position: 'right',
-  contentAsHTML: true,
-  theme: 'droplet-block-tooltipster',
-  offsetY: 2,
-  delay: 400
+/**
+ * Registers handlers for droplet block tooltips.
+ * @param dropletEditor
+ */
+DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (dropletEditor) {
+  this.dropletBlockTooltipManager_.installTooltipsForEditor_(dropletEditor);
 };
 
 /**
- * Tooltipster's hideOnClick setting does not work with the droplet hover
- * overlay as-is. Hide the tooltip on block picking explicitly.
+ * Registers handlers for ACE mode tooltips
+ * @param dropletEditor
  */
-DropletTooltipManager.prototype.hideTooltipsOnBlockPick_ = function () {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
-  this.dropletEditor_.on('pickblock', function () {
-    $('.tooltipstered').tooltipster('hide');
-  });
+DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (dropletEditor) {
+  this.dropletAutocompletePopupTooltipManager_.installTooltipsForEditor_(dropletEditor);
 };
 
 /**
@@ -17485,6 +17470,10 @@ DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks
     this.blockTypeToTooltip[dropletBlockDefinition.func] =
       new DropletFunctionTooltip(dropletBlockDefinition.func);
   }, this);
+};
+
+DropletTooltipManager.prototype.hasDocFor = function (functionName) {
+  return this.blockTypeToTooltip.hasOwnProperty(functionName);
 };
 
 /**
@@ -17499,12 +17488,64 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
   return this.blockTypeToTooltip[functionName];
 };
 
-DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function () {
+module.exports = DropletTooltipManager;
+
+},{"./DropletAutocompletePopupTooltipManager":24,"./DropletBlockTooltipManager":25,"./DropletFunctionTooltip":27}],25:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltip = require('./DropletFunctionTooltip');
+var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+
+/**
+ * @fileoverview Displays tooltips for Droplet blocks
+ */
+
+/**
+ * Handles displaying tooltips on Droplet blocks
+ * @param {DropletTooltipManager} dropletTooltipManager
+ * @constructor
+ */
+var DropletBlockTooltipManager = function (dropletTooltipManager) {
+  this.dropletTooltipManager = dropletTooltipManager;
+};
+
+var DEFAULT_TOOLTIP_CONFIG = {
+  interactive: true,
+  speed: 150,
+  maxWidth: 450,
+  position: 'right',
+  contentAsHTML: true,
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2,
+  delay: 400
+};
+
+/**
+ * @param {Editor} dropletEditor
+ */
+DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
+  this.installTooltipsForCurrentCategoryBlocks(dropletEditor);
+  this.hideTooltipsOnBlockPick_(dropletEditor);
+
+  dropletEditor.on('changepalette', this.installTooltipsForCurrentCategoryBlocks.bind(this));
+  dropletEditor.on('toggledone', this.installTooltipsIfNotInstalled.bind(this));
+};
+
+DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function () {
   if (!window.$) {
     return; // TODO(bjordan): remove when $ available on dev server
   }
 
-  var self = this;
+  if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
+    this.installTooltipsForCurrentCategoryBlocks();
+  }
+};
+
+DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
   $('.droplet-hover-div').each(function (_, blockHoverDiv) {
     if ($(blockHoverDiv).hasClass('tooltipstered')) {
       return;
@@ -17513,24 +17554,51 @@ DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function
     var funcName = $(blockHoverDiv).attr('title');
 
     var hoverDivWidth = $(blockHoverDiv).width();
-    var hoverDivLeftToToolboxRight = $(".droplet-palette-canvas").width() -
+    var hoverDivLeftToToolboxRight = $('.droplet-palette-canvas').width() -
       parseInt(blockHoverDiv.style.left, 10);
     var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
     var tooltipOffsetX = desiredXPosition - hoverDivWidth;
 
     var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-      content: self.getDropletTooltip(funcName).getTooltipHTML(),
+      content: this.getTooltipHTML(funcName),
       offsetX: tooltipOffsetX
     });
 
     $(blockHoverDiv).tooltipster(configuration);
+  }.bind(this));
+};
+
+/**
+ * Tooltipster's hideOnClick setting does not work with the droplet hover
+ * overlay as-is. Hide the tooltip on block picking explicitly.
+ */
+DropletBlockTooltipManager.prototype.hideTooltipsOnBlockPick_ = function (dropletEditor) {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  dropletEditor.on('pickblock', function () {
+    $('.tooltipstered').tooltipster('hide');
   });
 };
 
-module.exports = DropletTooltipManager;
+/**
+ * @returns {String} HTML for tooltip
+ */
+DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
+  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
+  return DropletFunctionTooltipMarkup({
+    functionName: tooltipInfo.functionName,
+    functionShortDescription: tooltipInfo.description,
+    parameters: tooltipInfo.paramNames,
+    signatureOverride: tooltipInfo.signatureOverride,
+    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+  });
+};
 
-},{"./DropletFunctionTooltip":25}],25:[function(require,module,exports){
-var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html.ejs');
+module.exports = DropletBlockTooltipManager;
+
+},{"./DropletFunctionTooltip":27,"./DropletFunctionTooltip.html.ejs":26}],27:[function(require,module,exports){
 var msg = require('../../locale/current/common');
 
 /**
@@ -17634,24 +17702,141 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
   return 'http://code.org/applab/docs/' + this.functionName;
 };
 
+module.exports = DropletFunctionTooltip;
+
+},{"../../locale/current/common":260}],260:[function(require,module,exports){
+/*common*/ module.exports = window.blockly.locale;
+},{}],24:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+
+/**
+ * @fileoverview Displays tooltips for Droplet blocks
+ */
+
+/**
+ * Handles displaying tooltips on Droplet's ACE editor autocomplete dropdown
+ * @param {DropletTooltipManager} dropletTooltipManager
+ * @constructor
+ */
+var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
+  this.dropletTooltipManager = dropletTooltipManager;
+};
+
+var DEFAULT_TOOLTIP_CONFIG = {
+  interactive: true,
+  autoClose: false,
+  trigger: 'custom',
+  speed: 100,
+  maxWidth: 450,
+  position: 'left',
+  contentAsHTML: true,
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2,
+  restoration: 'none',
+  updateAnimation: false
+};
+
+/**
+ * @param {Editor} dropletEditor
+ */
+DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  var aceEditor = dropletEditor.aceEditor;
+
+  this.editorChangedEventHandler_ = this.setupOnPopupShown_.bind(this, aceEditor);
+  aceEditor.commands.on("afterExec", this.editorChangedEventHandler_);
+};
+
+/**
+ * When an autocomplete popup has been shown the first time, register event
+ * handlers to show and hide tooltips during autocomplete popup usage.
+ * @param aceEditor - ace editor instance
+ * @param changeEvent - event from aceEditor.commands.on("afterExec")
+ * @private
+ */
+DropletAutocompletePopupTooltipManager.prototype.setupOnPopupShown_ = function (aceEditor, changeEvent) {
+  if (changeEvent.command.name !== 'insertstring') {
+    return;
+  }
+
+  var popupHasBeenShownOnce = aceEditor.completer && aceEditor.completer.popup;
+  if (!popupHasBeenShownOnce) {
+    return;
+  }
+
+  this.setupForEditorPopup_(aceEditor);
+
+  aceEditor.commands.removeListener("afterExec", this.editorChangedEventHandler_);
+  this.editorChangedEventHandler_ = null;
+};
+
+DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function (aceEditor) {
+  aceEditor.completer.popup.setSelectOnHover(true);
+
+  aceEditor.completer.popup.renderer.on("afterRender", function () {
+    this.updateAutocompletePopupTooltip(aceEditor);
+  }.bind(this));
+
+  aceEditor.completer.popup.on("hide", function () {
+    this.destroyAutocompleteTooltips_();
+  }.bind(this));
+};
+
+DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip = function (aceEditor) {
+  if (!aceEditor.completer.completions) {
+    return;
+  }
+
+  var keyboardRow = aceEditor.completer.popup.getRow();
+
+  if (keyboardRow < 0) {
+    return;
+  }
+
+  var filteredCompletions = aceEditor.completer.completions.filtered;
+  var funcName = filteredCompletions[keyboardRow].value;
+
+  this.destroyAutocompleteTooltips_();
+
+  if (!this.dropletTooltipManager.hasDocFor(funcName)) {
+    return;
+  }
+
+  var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+    content: this.getTooltipHTML(funcName)
+  });
+
+  var rowOverlayDiv = $('.ace_selected');
+  rowOverlayDiv.tooltipster(configuration);
+  rowOverlayDiv.tooltipster('show');
+};
+
+DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = function () {
+  $('.ace_editor .tooltipstered').tooltipster('destroy');
+};
+
 /**
  * @returns {String} HTML for tooltip
  */
-DropletFunctionTooltip.prototype.getTooltipHTML = function () {
-  return DropletBlockTooltipMarkup({
-    functionName: this.functionName,
-    functionShortDescription: this.description,
-    parameters: this.paramNames,
-    signatureOverride: this.signatureOverride,
-    fullDocumentationURL: this.getFullDocumentationURL()
+DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (functionName) {
+  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
+  return DropletFunctionTooltipMarkup({
+    functionName: tooltipInfo.functionName,
+    functionShortDescription: tooltipInfo.description,
+    parameters: tooltipInfo.paramNames,
+    signatureOverride: tooltipInfo.signatureOverride,
+    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
   });
 };
 
-module.exports = DropletFunctionTooltip;
+module.exports = DropletAutocompletePopupTooltipManager;
 
-},{"../../locale/current/common":258,"./DropletBlockTooltip.html.ejs":24}],258:[function(require,module,exports){
-/*common*/ module.exports = window.blockly.locale;
-},{}],24:[function(require,module,exports){
+},{"./DropletFunctionTooltip.html.ejs":26}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17671,7 +17856,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":274}],274:[function(require,module,exports){
+},{"ejs":276}],276:[function(require,module,exports){
 
 /*!
  * EJS
@@ -18026,7 +18211,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":275,"./utils":276,"fs":266,"path":267}],276:[function(require,module,exports){
+},{"./filters":277,"./utils":278,"fs":268,"path":269}],278:[function(require,module,exports){
 
 /*!
  * EJS
@@ -18050,7 +18235,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],275:[function(require,module,exports){
+},{}],277:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -18249,7 +18434,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],267:[function(require,module,exports){
+},{}],269:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -18477,7 +18662,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":268}],268:[function(require,module,exports){
+},{"_process":270}],270:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -18536,7 +18721,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],266:[function(require,module,exports){
+},{}],268:[function(require,module,exports){
 
 },{}],2:[function(require,module,exports){
 /**
