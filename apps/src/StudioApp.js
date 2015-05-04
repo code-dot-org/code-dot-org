@@ -732,7 +732,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     hideOptions = {};
     hideOptions.endTarget = endTargetSelector;
 
-    // Momentariy flash the instruction block white then back to regular.
+    // Momentarily flash the instruction block white then back to regular.
     hideFn = function() {
       $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
         .delay(500)
