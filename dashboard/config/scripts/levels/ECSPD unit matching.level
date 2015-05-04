@@ -4,7 +4,8 @@
   "created_at": "2015-04-27T17:29:40.000Z",
   "properties": {
     "options": {
-      "skip_sound": true
+      "skip_sound": true,
+      "hide_submit": true
     },
     "questions": [
       {
@@ -46,7 +47,11 @@
         "text": "apply programming and problem solving to the study of robots"
       }
     ],
-    "title": "Matching Unit Descriptions and Numbers"
+    "title": "Matching Unit Descriptions and Numbers",
+    "type": "Match",
+    "concept_ids": [
+      ""
+    ]
   }
 }]]></config>
 </Match>

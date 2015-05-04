@@ -1,0 +1,14 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-05-01T23:48:06.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "Welcome to Phase 2",
+    "markdown": "### Welcome to Phase 2!\n\n<br><br>\n<div dir=\"ltr\" style=\"line-height: 1.38; margin-bottom: 17pt; margin-top: 0pt; color: #3c3c3c; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;\">Phase 2, the Summer Face-to-Face Professional Development Workshop will span three full days.  The primary focus during the summer workshop will be on experiencing the curriculum as a learner, then practicing the delivery of the curriculum as a learning coach.\n\n<b>Day 1:</b>   Walk through and prepare to teach Module 1 \"Introduction to Computer Modeling and Simulation.\"   Module 1 consists of a set of design and build activities that lead up to building a computer model.\n\n<b>Day 2:</b>   Walk through and prepare to teach the Computational Science Cycle and Scientific Practices using Computer Models.  Then customize/modify the model and run your own experiments.\n\n<b>Day 3:</b>   Walk through and prepare to teach Modules 2, 3, and 4 in subject area groupings (Earth Science, Life Science, and Physical Science).\n\nThe three days of Phase 2 will be completed in approximately 21 hours.</div>\n<br><br>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  }
+}]]></config>
+</External>

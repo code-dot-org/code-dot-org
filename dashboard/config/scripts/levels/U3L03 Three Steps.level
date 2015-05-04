@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Draw 3 \"steps\" moving up and to the right.  Notice the pattern in the movement. You should define a function called drawStep() which draws one of the steps, and then call it 3 times to achieve the effect.  GIF: U3L03-ThreeSteps.gif",
+    "instructions": "Draw 3 \"steps\" moving up and to the right.  Notice the pattern in the movement. You should define a function called drawStep() which draws one of the steps, and then call it 3 times to achieve the effect.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -41,7 +41,8 @@
     "free_play": "false",
     "app_width": "300",
     "app_height": "300",
-    "slider_speed": "0.1"
+    "slider_speed": "0.1",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-ThreeSteps.gif"
   }
 }]]></config>
   <blocks/>

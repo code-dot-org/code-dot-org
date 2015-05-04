@@ -1,6 +1,6 @@
 @import "color";
 
-.admin {
+.admin, .teacher {
   border: 2px solid $light_gray;
   padding: 10px;
   background: $lighter_gray;
@@ -22,4 +22,10 @@
   overflow: auto;
   /* admin box appears in front of the rest of the level */
   z-index: 1;
+}
+
+.teacher {
+  left: 0;
+  right: auto;
+  background: $light_purple;
 }
