@@ -72,6 +72,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
   });
 
   function showHeaderPopup(target) {
+    sizeHeaderPopupToViewport();
     $('.header_popup').show();
     $('.header_popup_link_glyph').html('&#x25B2;');
     $('.header_popup_link_text').text('<%= I18n.t(:less) %>');
@@ -84,6 +85,20 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
     $('.header_popup_link_text').text('<%= I18n.t(:more) %>');
     $(document).off('click', hideHeaderPopup);
   }
+
+  /** @const */
+  var headerPopupTop = 59;
+  /** @const */
+  var headerPopupBottom = 20;
+  /** @const */
+  var headerPopupFooterHeight = 40;
+
+  function sizeHeaderPopupToViewport() {
+    var viewportHeight = $(window).height();
+    $('.header_popup').css('max-height', viewportHeight - (headerPopupTop + headerPopupBottom)); // TODO: Try removing this property
+    $('.header_popup_scrollable').css('max-height', viewportHeight - (headerPopupTop + headerPopupBottom + headerPopupFooterHeight));
+  }
+
   $('.header_popup_link, .header_trophy_link').click(function (e) {
     e.stopPropagation();
     $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup(e.target);
