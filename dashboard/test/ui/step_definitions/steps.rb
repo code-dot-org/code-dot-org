@@ -345,9 +345,17 @@ And(/^I ctrl-([^"]*)$/) do |key|
 end
 
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
-  if key.start_with?(':')
-    key = key[1..-1].to_sym
-  end
   element = @browser.find_element(:css, selector)
-  element.send_keys(key)
+  element.send_keys(make_symbol_if_colon(key))
+end
+
+def make_symbol_if_colon(key)
+  # Available symbol keys:
+  # https://code.google.com/p/selenium/source/browse/rb/lib/selenium/webdriver/common/keys.rb?name=selenium-2.26.0
+  key.start_with?(':') ? key[1..-1].to_sym : key
+end
+
+When /^I press keys "([^"]*)"$/ do |keys|
+  # Note: Safari webdriver does not support actions API
+  @browser.action.send_keys(make_symbol_if_colon(keys)).perform
 end
