@@ -1,6 +1,11 @@
 name 'ECSPD impact vid2 question'
 title 'Barrier to Using Data'
-description 'Based on the video you just watched, answer the following question' 
+description 'Based on the video you just watched, answer the following 
+question' 
+answer_line true
+skip_sound true
+hide_submit true
+
 question 'What issues did Ben Wellington address in his TED talk related to the barriers presented for people who want to access and analyze Big Data?'
 
 wrong 'data stored in ways that makes it difficult to analyze it'

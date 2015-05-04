@@ -1,5 +1,7 @@
 name 'ECSPD impact in program'
 title 'Impact of Computing'
+height '100'
+skip_sound true
 
 markdown <<MARKDOWN
 
