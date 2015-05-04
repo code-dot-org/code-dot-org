@@ -28,7 +28,7 @@ var DEFAULT_TOOLTIP_CONFIG = {
 /**
  * @param {Editor} dropletEditor
  */
-DropletBlockTooltipManager.prototype.registerHandlers = function (dropletEditor) {
+DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
   this.installTooltipsForCurrentCategoryBlocks(dropletEditor);
   this.hideTooltipsOnBlockPick_(dropletEditor);
 
@@ -51,7 +51,6 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
     return; // TODO(bjordan): remove when $ available on dev server
   }
 
-  var self = this;
   $('.droplet-hover-div').each(function (_, blockHoverDiv) {
     if ($(blockHoverDiv).hasClass('tooltipstered')) {
       return;
@@ -66,12 +65,12 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
     var tooltipOffsetX = desiredXPosition - hoverDivWidth;
 
     var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-      content: self.getTooltipHTML(funcName),
+      content: this.getTooltipHTML(funcName),
       offsetX: tooltipOffsetX
     });
 
     $(blockHoverDiv).tooltipster(configuration);
-  });
+  }.bind(this));
 };
 
 /**
