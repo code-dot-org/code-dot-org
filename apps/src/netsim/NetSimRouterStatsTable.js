@@ -57,7 +57,6 @@ var MILLIS_PER_HOUR = MILLIS_PER_MINUTE * MINUTES_PER_HOUR;
  * Shows different amounts of information depending on the DNS mode.
  *
  * @param {jQuery} rootDiv
- * @param {netsimLevelConfiguration} levelConfig
  * @constructor
  */
 var NetSimRouterStatsTable = module.exports = function (rootDiv) {

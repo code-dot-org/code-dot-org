@@ -42,6 +42,7 @@ var DnsMode = netsimConstants.DnsMode;
 var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * Initial time between connecting to the shard and starting
@@ -183,6 +184,9 @@ NetSim.prototype.init = function(config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
+
+  // Set up global singleton for easy access to simulator-wide settings
+  netsimGlobals.setRootController(this);
 
   /**
    * Skin for the loaded level
@@ -338,7 +342,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
       $('.lobby-panel'),
-      this.level,
       this, {
         user: user,
         levelKey: this.getUniqueLevelKey(),
@@ -349,7 +352,6 @@ NetSim.prototype.initWithUserName_ = function (user) {
   if (this.shouldShowAnyTabs()) {
     this.tabs_ = new NetSimTabsComponent(
         $('#netsim-tabs'),
-        this.level,
         this.runLoop_,
         {
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
@@ -481,8 +483,7 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
 
     node.setDisplayName(displayName);
     node.setLostConnectionCallback(this.disconnectFromShard.bind(this));
-    node.initializeSimulation(this.level, this.sentMessageLog_,
-        this.receivedMessageLog_);
+    node.initializeSimulation(this.sentMessageLog_, this.receivedMessageLog_);
     node.update(function (err) {
       onComplete(err, node);
     });
