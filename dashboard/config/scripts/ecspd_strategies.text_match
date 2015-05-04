@@ -1,5 +1,8 @@
 name 'ECSPD strategies'
 title 'Classroom Strategies Journal'
+height '300'
+skip_sound true
+
 
 markdown <<MARKDOWN
 

@@ -1000,6 +1000,15 @@ en:
         '8': '8'
         '10': '10'
         '12': '12'
+      U3L06-API-multichoice:
+        Multiple Choice: Multiple Choice
+        Choose the option that best answers the question.: Choose the option that best answers the question.
+        What is the primary purpose of an API in a programming language?: What is the primary purpose of an API in a programming language?
+        Application Primary Interactions are fundamental to programming: Application Primary Interactions are fundamental to programming
+        To make programming more complex for those without experience: To make programming more complex for those without experience
+        Programs won't run without good API documentation: Programs won't run without good API documentation
+        To provide high-level functionality that simplifies complex programming tasks: To provide high-level functionality that simplifies complex programming tasks
+        It is impossible to write a program without an API: It is impossible to write a program without an API
       unique level name here:
         title: title
         description here: description here
