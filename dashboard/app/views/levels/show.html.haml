@@ -36,3 +36,6 @@
 
 - if current_user.try(:admin?)
   = render partial: 'levels/admin'
+
+- if current_user.try(:teacher?)
+  = render partial: 'levels/teacher'
