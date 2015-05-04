@@ -37,7 +37,7 @@ function DropletTooltipManager() {
  * @param dropletEditor
  */
 DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (dropletEditor) {
-  this.dropletBlockTooltipManager_.registerHandlers(dropletEditor);
+  this.dropletBlockTooltipManager_.installTooltipsForEditor_(dropletEditor);
 };
 
 /**
@@ -45,7 +45,7 @@ DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (dro
  * @param dropletEditor
  */
 DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (dropletEditor) {
-  this.dropletAutocompletePopupTooltipManager_.registerHandlers(dropletEditor);
+  this.dropletAutocompletePopupTooltipManager_.installTooltipsForEditor_(dropletEditor);
 };
 
 /**

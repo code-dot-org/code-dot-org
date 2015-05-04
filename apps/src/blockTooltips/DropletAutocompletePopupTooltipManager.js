@@ -30,7 +30,7 @@ var DEFAULT_TOOLTIP_CONFIG = {
 /**
  * @param {Editor} dropletEditor
  */
-DropletAutocompletePopupTooltipManager.prototype.registerHandlers = function (dropletEditor) {
+DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
   if (!window.$) {
     return; // TODO(bjordan): remove when $ available on dev server
   }
@@ -48,7 +48,7 @@ DropletAutocompletePopupTooltipManager.prototype.registerHandlers = function (dr
     }
 
     this.registerPopupHandlers_(aceEditor);
-    aceEditor.commands.off("afterExec", registerOnEditorChanged);
+    aceEditor.commands.removeListener("afterExec", registerOnEditorChanged);
   }.bind(this);
 
   aceEditor.commands.on("afterExec", registerOnEditorChanged);
