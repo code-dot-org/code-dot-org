@@ -27,7 +27,7 @@ module LevelsHelper
 
     # The channel should be associated with the template level, if present.
     # Otherwise the current level.
-    host_level = @level.try(:project_template_level) || @level
+    host_level = @level.project_template_level || @level
 
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
@@ -91,7 +91,7 @@ module LevelsHelper
   # Options hash for all level types
   def app_options
     # Provide the channel for templated and applab levels.
-    set_channel if @level.try(:project_template_level) || @level.game == Game.applab
+    set_channel if @level.project_template_level || @level.game == Game.applab
 
     # Set videos and callouts.
     view_options(
