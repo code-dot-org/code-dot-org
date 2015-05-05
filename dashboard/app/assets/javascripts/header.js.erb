@@ -143,11 +143,14 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
    */
   function sizeHeaderPopupToViewport() {
     var viewportHeight = $(window).height();
+    var headerWrapper = $('.header-wrapper');
     var headerPopup = $('.header_popup');
-    var popupTop = parseInt(headerPopup.css('top'), 10);
+    var popupTop = parseInt(headerWrapper.css('padding-top'), 10) +
+        parseInt(headerPopup.css('top'), 10);
     var popupBottom = parseInt(headerPopup.css('margin-bottom'), 10);
     var footerHeight = headerPopup.find('.header_popup_footer').outerHeight();
-    headerPopup.find('.header_popup_scrollable').css('max-height', viewportHeight - (popupTop + popupBottom + footerHeight));
+    headerPopup.find('.header_popup_scrollable').css('max-height',
+        viewportHeight - (popupTop + popupBottom + footerHeight));
   }
 
   var popupLoaded = false;
