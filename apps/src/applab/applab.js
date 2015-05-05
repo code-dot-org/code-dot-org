@@ -1046,12 +1046,14 @@ Applab.init = function(config) {
         accept: '.new-design-element',
         drop: function (event, ui) {
           var elementType = ui.draggable[0].dataset.elementType;
-          var scale = Applab.getVizScaleFactor();
 
+          var scale = Applab.getVizScaleFactor();
           var left = ui.position.left / scale;
-          left = Math.round(left - left % gridSize);
           var top = ui.position.top / scale;
-          top = Math.round(top - top % gridSize);
+
+          // snap top-left corner to nearest location in the grid
+          left -= (left + gridSize / 2) % gridSize - gridSize / 2;
+          top -= (top + gridSize / 2) % gridSize - gridSize / 2;
 
           Applab.createElement(elementType, left, top);
         }
@@ -1207,9 +1209,9 @@ Applab.makeDraggable = function (jq) {
       var changeTop = ui.position.top - ui.originalPosition.top;
       var newTop = (ui.originalPosition.top + changeTop) / scale;
 
-      // grid
-      newLeft -= (newLeft + 10) % gridSize - 10;
-      newTop -= (newTop + 10) % gridSize - 10;
+      // snap top-left corner to nearest location in the grid
+      newLeft -= (newLeft + gridSize / 2) % gridSize - gridSize / 2;
+      newTop -= (newTop + gridSize / 2) % gridSize - gridSize / 2;
 
       // containment
       var container = $('#divApplab');
