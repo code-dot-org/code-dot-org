@@ -14,11 +14,11 @@ function Odometer(config) {
   // Create DOM elements.
   var odometer = $("<div class='odometer'>");
   for (var i = 0; i < config.digits; i++) {
-    var digit = $("<div class='digit'><div class='digit-current'>0</div><div class='digit-next'>1</div>");
+    var digit = $("<div class='digit'><div class='digit-current'>0</div><div class='digit-next'>1</div></div>");
     digits.push(digit);
     odometer.append(digit);
   }
-  $(config.parent).addClass('odometerParent').append(odometer);
+  $(config.parent).addClass('odometerParent').append(odometer).append("<div class='odometerGradient'>");
 
   // Set the odometer to a specific value.
   this.set = function(value) {
