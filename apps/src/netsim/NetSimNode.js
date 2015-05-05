@@ -65,6 +65,21 @@ NetSimNode.prototype.getDisplayName = function () {
 };
 
 /**
+ * Get node's short display name, which is the same as the display name
+ * but truncated to the first word if it's over a certain length.
+ * @returns {string}
+ */
+NetSimNode.prototype.getShortDisplayName = function () {
+  // If the name is longer than ten characters (longer than "Router 999")
+  // then only show up to the first whitespace.
+  var shortName = this.getDisplayName();
+  if (shortName.length > 10) {
+    shortName = shortName.split(/\s/)[0];
+  }
+  return shortName;
+};
+
+/**
  * Get node's hostname, a modified version of its display name.
  * @returns {string}
  */
@@ -72,7 +87,7 @@ NetSimNode.prototype.getHostname = function () {
   // Strip everything that's not a word-character or a digit from the display
   // name, then append the node ID so that hostnames are more likely to
   // be unique.
-  return this.getDisplayName().replace(/[^\w\d]/g, '').toLowerCase() +
+  return this.getShortDisplayName().replace(/[^\w\d]/g, '').toLowerCase() +
       this.entityID;
 };
 

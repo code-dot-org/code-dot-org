@@ -19,6 +19,8 @@ var tweens = require('./tweens');
 var DnsMode = netsimConstants.DnsMode;
 var NodeType = netsimConstants.NodeType;
 
+var netsimGlobals = require('./netsimGlobals');
+
 /**
  * The narrowest that a text bubble is allowed to be.
  * @type {number}
@@ -144,7 +146,11 @@ NetSimVizNode.inherits(NetSimVizEntity);
  * @param {NetSimNode} sourceNode
  */
 NetSimVizNode.prototype.configureFrom = function (sourceNode) {
-  this.setName(sourceNode.getDisplayName());
+  if (netsimGlobals.getLevelConfig().showHostnameInGraph) {
+    this.setName(sourceNode.getHostname());
+  } else {
+    this.setName(sourceNode.getShortDisplayName());
+  }
   this.nodeID = sourceNode.entityID;
 
   if (sourceNode.getNodeType() === NodeType.ROUTER) {
@@ -166,12 +172,6 @@ NetSimVizNode.prototype.setIsLocalNode = function () {
  * @param {string} newName
  */
 NetSimVizNode.prototype.setName = function (newName) {
-  // If the name is longer than ten characters (longer than "Router 999")
-  // then only show up to the first whitespace.
-  if (newName.length > 10) {
-    newName = newName.split(/\s/)[0];
-  }
-
   this.displayName_.text(newName);
   this.resizeNameBox_();
 };
