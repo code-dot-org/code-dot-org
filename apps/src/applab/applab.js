@@ -1308,14 +1308,16 @@ Applab.editElementProperties = function(el) {
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
+  var outerWidth = Applab.getOuterWidth(el);
+  var outerHeight = Applab.getOuterHeight(el);
   designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: tagName,
     props: {
       id: el.id,
       left: el.style.left,
       top: el.style.top,
-      width: Applab.getOuterWidth(el),
-      height: Applab.getOuterHeight(el),
+      width: isNaN(outerWidth) ? '' : outerWidth,
+      height: isNaN(outerHeight) ? '' : outerHeight,
       text: $(el).text()
     }
   });
