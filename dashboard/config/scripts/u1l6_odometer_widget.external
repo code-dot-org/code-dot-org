@@ -1,6 +1,0 @@
-name 'U1L6 Odometer Widget'
-title 'Odometer Widget'
-description 'description here'
-markdown <<MARKDOWN
- Need to create a correct level type for this widget
-MARKDOWN
