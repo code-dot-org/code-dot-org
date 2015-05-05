@@ -354,7 +354,8 @@ en:
         all of the above: all of the above
       ECSPD impact vid2 question:
         Barrier to Using Data: Barrier to Using Data
-        Based on the video you just watched, answer the following question: Based on the video you just watched, answer the following question
+        ? "Based on the video you just watched, answer the following \nquestion"
+        : "Based on the video you just watched, answer the following \nquestion"
         ? What issues did Ben Wellington address in his TED talk related to the barriers presented for people who want to access and analyze Big Data?
         : What issues did Ben Wellington address in his TED talk related to the barriers presented for people who want to access and analyze Big Data?
         data stored in ways that makes it difficult to analyze it: data stored in ways that makes it difficult to analyze it

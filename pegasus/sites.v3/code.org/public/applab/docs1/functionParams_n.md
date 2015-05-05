@@ -27,6 +27,52 @@ Declares a named block of code that accepts one or more parameters, performs som
 
 ### Examples
 ____________________________________________________
+[example]
+
+**Turtle Example**
+In this example we show how you can make a function with a parameter that is used to control how far the turtle moves.
+
+<pre>
+square(25);
+turnRight();
+square(50);
+turnRight()
+square(75);
+
+function square(sideLength){
+	for(var i=0; i<4; i++){
+		moveForward(sideLength);
+		turnLeft();
+	}
+}
+</pre>
+
+[/example]
+
+[example]
+
+**Turtle Example 2**
+In this example we show how you can make a function with *two parameters* one for setting how much the turtle moves and the other for setting how many-sided shape you want to draw.  NOTICE: we have to do some 
+
+<pre>
+polygon(75, 4);
+turnRight();
+polygon(50, 8);
+turnRight()
+polygon(25, 16);
+
+function polygon(sideLength, numSides){
+	var angle = 360/numSides;
+	
+	for(var i=0; i<numSides; i++){
+		moveForward(sideLength);
+		turnLeft(angle);
+	}
+}
+</pre>
+
+[/example]
+
 
 [example]
 
