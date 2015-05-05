@@ -10,6 +10,7 @@ function setGlobals () {
   // locale file requires Blockly as a global
   try {
     window.Blockly = require('blockly');
+    // TODO (brent) removed top two lines from this file. check with tanya
     require('../../lib/blockly/en_us');
   } catch (err) {
     console.log(err);

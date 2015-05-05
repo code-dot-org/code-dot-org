@@ -1,12 +1,5 @@
-var wrench = require('wrench');
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-var canvas = require('canvas');
-
-// Some of our feedback tests need to use Image
-global.Image = canvas.Image;
-global.Turtle = {};
-
 testUtils.setupLocales();
 
 /**
@@ -357,62 +350,4 @@ describe("getMissingRequiredBlocks_ tests", function () {
       });
     });
   }
-
-  // todo - move this into shared dir
-  // Get all json files under directory path
-  function getTestCollections (directory) {
-    var files = wrench.readdirSyncRecursive(directory);
-    var testCollections = [];
-    files.forEach(function (file) {
-      if (/\.js$/.test(file)) {
-        testCollections.push(file);
-      }
-    });
-    return testCollections;
-  }
-
-  function validateMissingBlocksFromLevelTest(collection, levelTest) {
-    it (levelTest.description, function () {
-      testUtils.setupLocale(collection.app);
-      assert(global.Blockly, "Blockly is in global namespace");
-      var levels = testUtils.requireWithGlobalsCheckBuildFolder(collection.app + '/' +
-        collection.levelFile, []);
-
-      var skinForTests;
-      if (collection.skinId) {
-        var appSkins = testUtils.requireWithGlobalsCheckBuildFolder(collection.app + '/skins');
-        skinForTests = appSkins.load(studioApp.assetUrl, collection.skinId);
-      } else {
-        skinForTests = {
-          assetUrl: function (str) { return str; }
-        };
-      }
-
-      var blockInstallOptions = { skin: skinForTests, isK1: false };
-      var blocksCommon = testUtils.requireWithGlobalsCheckBuildFolder('blocksCommon');
-      blocksCommon.install(Blockly, blockInstallOptions);
-      var blocks = testUtils.requireWithGlobalsCheckBuildFolder(collection.app + '/blocks');
-      blocks.install(Blockly, blockInstallOptions);
-      validateBlocks({
-        requiredBlocks: levels[collection.levelId].requiredBlocks,
-        numToFlag: 1,
-        userBlockXml: levelTest.xml,
-        expectedResult: levelTest.missingBlocks,
-      });
-    });
-  }
-
-  describe("required blocks for specific levels", function () {
-    var collections = getTestCollections('./test/solutions');
-    collections.forEach(function (path) {
-      describe(path, function () {
-        var collection = require('./solutions/' + path);
-        collection.tests.forEach(function (levelTest) {
-          if (levelTest.missingBlocks) {
-            validateMissingBlocksFromLevelTest(collection, levelTest);
-          }
-        });
-      });
-    });
-  });
 });

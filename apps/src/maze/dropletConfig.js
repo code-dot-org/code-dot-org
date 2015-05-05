@@ -1,4 +1,4 @@
-var msg = require('../../locale/current/maze');
+var msg = require('./locale');
 
 module.exports.blocks = [
   {'func': 'moveForward', 'category': 'Movement' },
