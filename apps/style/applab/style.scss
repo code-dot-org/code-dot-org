@@ -464,8 +464,12 @@ button.arrow:focus {
   font-size: 18px;
 }
 
-#divApplab button {
+#divApplab * {
+  box-sizing: border-box;
   margin: 2px;
+}
+
+#divApplab button {
   padding: 0px;
 }
 

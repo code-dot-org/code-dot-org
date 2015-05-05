@@ -1165,10 +1165,13 @@ Applab.createElement = function (elementType, left, top) {
       break;
     case ElementType.LABEL:
       el.appendChild(document.createTextNode("text"));
-      el.style.margin = '10px';
+      el.style.margin = '10px 5px';
+      el.style.height = '20px';
       break;
     case ElementType.INPUT:
-      el.style.margin = '10px';
+      el.style.margin = '5px 2px';
+      el.style.width = '236px';
+      el.style.height = '30px';
       break;
     default:
       throw "unrecognized element type " + elementType;
