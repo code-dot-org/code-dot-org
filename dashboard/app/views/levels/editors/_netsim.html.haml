@@ -53,6 +53,14 @@
   :javascript
       codeMirror('client_initial_packet_header', 'javascript');
 
+%h3 Network Visualization
+.field
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_hostname_in_graph
+      %td= f.label :show_hostname_in_graph, 'Show hostname in graph'
+      %td If checked, show the user's generated hostname (e.g. "brad4") instead of their usual display name (e.g. "Brad")
+
 %h3 Send a Message Panel
 .field
   %table.checkboxes
