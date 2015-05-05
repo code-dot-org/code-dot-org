@@ -1,6 +1,8 @@
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
+var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
+var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
 
 /**
  * @fileoverview Manages a store of known blocks and tooltips
@@ -8,10 +10,9 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**
  * Store for finding tooltips for blocks
- * @param {Droplet.Editor} dropletEditor
  * @constructor
  */
-var DropletTooltipManager = function (dropletEditor) {
+function DropletTooltipManager() {
   /**
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
@@ -19,37 +20,32 @@ var DropletTooltipManager = function (dropletEditor) {
   this.blockTypeToTooltip = {};
 
   /**
-   * @type {Droplet.Editor}
+   * @type {DropletBlockTooltipManager}
    * @private
    */
-  this.dropletEditor_ = dropletEditor;
+  this.dropletBlockTooltipManager_ = new DropletBlockTooltipManager(this);
 
-  this.hideTooltipsOnBlockPick_();
-};
+  /**
+   * @type {DropletAutocompletePopupTooltipManager}
+   * @private
+   */
+  this.dropletAutocompletePopupTooltipManager_ = new DropletAutocompletePopupTooltipManager(this);
+}
 
-var DEFAULT_TOOLTIP_CONFIG = {
-  interactive: true,
-  speed: 150,
-  maxWidth: 450,
-  position: 'right',
-  contentAsHTML: true,
-  theme: 'droplet-block-tooltipster',
-  offsetY: 2,
-  delay: 400
+/**
+ * Registers handlers for droplet block tooltips.
+ * @param dropletEditor
+ */
+DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (dropletEditor) {
+  this.dropletBlockTooltipManager_.installTooltipsForEditor_(dropletEditor);
 };
 
 /**
- * Tooltipster's hideOnClick setting does not work with the droplet hover
- * overlay as-is. Hide the tooltip on block picking explicitly.
+ * Registers handlers for ACE mode tooltips
+ * @param dropletEditor
  */
-DropletTooltipManager.prototype.hideTooltipsOnBlockPick_ = function () {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
-  this.dropletEditor_.on('pickblock', function () {
-    $('.tooltipstered').tooltipster('hide');
-  });
+DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (dropletEditor) {
+  this.dropletAutocompletePopupTooltipManager_.installTooltipsForEditor_(dropletEditor);
 };
 
 /**
@@ -63,6 +59,10 @@ DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks
   }, this);
 };
 
+DropletTooltipManager.prototype.hasDocFor = function (functionName) {
+  return this.blockTypeToTooltip.hasOwnProperty(functionName);
+};
+
 /**
  * @param {String} functionName
  * @returns {DropletFunctionTooltip}
@@ -73,34 +73,6 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
   }
 
   return this.blockTypeToTooltip[functionName];
-};
-
-DropletTooltipManager.prototype.installTooltipsOnVisibleToolboxBlocks = function () {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
-  var self = this;
-  $('.droplet-hover-div').each(function (_, blockHoverDiv) {
-    if ($(blockHoverDiv).hasClass('tooltipstered')) {
-      return;
-    }
-
-    var funcName = $(blockHoverDiv).attr('title');
-
-    var hoverDivWidth = $(blockHoverDiv).width();
-    var hoverDivLeftToToolboxRight = $(".droplet-palette-canvas").width() -
-      parseInt(blockHoverDiv.style.left, 10);
-    var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
-    var tooltipOffsetX = desiredXPosition - hoverDivWidth;
-
-    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-      content: self.getDropletTooltip(funcName).getTooltipHTML(),
-      offsetX: tooltipOffsetX
-    });
-
-    $(blockHoverDiv).tooltipster(configuration);
-  });
 };
 
 module.exports = DropletTooltipManager;

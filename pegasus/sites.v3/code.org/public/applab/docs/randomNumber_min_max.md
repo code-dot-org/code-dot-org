@@ -34,6 +34,12 @@ ____________________________________________________
 
 **Example 1**
 
+turtle example
+<pre>
+moveForward(randomNumber(25, 150));
+</pre>
+
+console example
 <pre>
 console.log(randomNumber(5, 20));       // generates a pseudorandom number in the range 5 to 20 (inclusive)
                                         //    and then prints it to the console
@@ -46,6 +52,14 @@ ____________________________________________________
 [example]
 
 **Example 2**
+
+Turtle example.  Do a "random walk" of 25 steps, turning a random number of degrees after each step.
+<pre>
+for (var i = 0; i < 25; i++) {
+  moveForward(25);
+  turnRight(randomNumber(-90, 90));
+}
+</pre>
 
 This example prints out 5 pseudorandom numbers in the range -10 to 10 to the console.
 

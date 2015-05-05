@@ -10,7 +10,6 @@ When /^I enter the netsim name "([^"]*)"$/ do |username|
   steps %{
     And I type "#{username}" into "#netsim-lobby-name"
     And I press the "Set Name" button
-    And I wait until element "#netsim-shard-select" is visible
   }
 end
 
