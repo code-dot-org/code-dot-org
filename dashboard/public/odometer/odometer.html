@@ -5,10 +5,15 @@
   <style>
     #odoContainer {
       margin: 1em 0;
+      cursor: move;
     }
 
     #odoContainer td {
       padding: 3px;
+    }
+
+    #odoContainer .odoPlaceholder td {
+      height: 45px;
     }
 
     #odoDivBin {
@@ -74,6 +79,15 @@
 
       setAllOdos(odoVal);
       setSpeed();
+
+      var $odoContainer = $('#odoContainer');
+      // Set explicit widths so they don't resize when dragging
+      $odoContainer.find('td').each(function() {
+        var elm = $(this);
+        elm.width(elm.width());
+      });
+      // Make rows draggable
+      $odoContainer.find('tbody').sortable({placeholder: 'odoPlaceholder'});
     });
 
     var isMouseDown = false;
