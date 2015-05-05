@@ -1158,7 +1158,10 @@ Applab.createElement = function (elementType, left, top) {
   switch (elementType) {
     case ElementType.BUTTON:
       el.appendChild(document.createTextNode('Button'));
-      el.style.margin = 0;
+      el.style.class = 'app-button';
+      el.style.height = '36px';
+      el.style.width = '76px';
+      el.style.fontSize = '14px';
       break;
     case ElementType.LABEL:
       el.appendChild(document.createTextNode("text"));
@@ -1247,6 +1250,54 @@ Applab.onDivApplabClick = function (event) {
   Applab.editElementProperties(event.target);
 };
 
+/**
+ * @param el {Element}
+ * @returns {number} The outerWidth (width + margin) of the element in pixels,
+ * or NaN if element's css width or margin are not defined.
+ */
+Applab.getOuterWidth = function(el) {
+  var marginLeft = parseInt($(el).css('margin-left'));
+  var marginRight = parseInt($(el).css('margin-right'));
+  return parseInt(el.style.width) + marginLeft + marginRight;
+};
+
+/**
+ * Sets element width equal to outerWidth minus margin,
+ * or to '' if margin is undefined.
+ * @param el {Element}
+ * @param outerWidth {number} Desired element outerWidth in pixels.
+ */
+Applab.setOuterWidth = function(el, outerWidth) {
+  var marginLeft = parseInt($(el).css('margin-left'));
+  var marginRight = parseInt($(el).css('margin-right'));
+  var width = +outerWidth - marginLeft - marginRight;
+  el.style.width = isNaN(width) ? '' : width + 'px';
+};
+
+/**
+ * @param el {Element}
+ * @returns {number} the outerHeight (height + margin) of the element in pixels,
+ * or NaN if element's css height or margin are not defined.
+ */
+Applab.getOuterHeight = function(el) {
+  var marginTop = parseInt($(el).css('margin-top'));
+  var marginBottom = parseInt($(el).css('margin-bottom'));
+  return parseInt(el.style.height) + marginTop + marginBottom;
+};
+
+/**
+ * Sets element height equal to outerHeight minus margin,
+ * or to '' if margin is undefined.
+ * @param el {Element}
+ * @param outerHeight {number} Desired element outerHeight in pixels.
+ */
+Applab.setOuterHeight = function(el, outerHeight) {
+  var marginTop = parseInt($(el).css('margin-top'));
+  var marginBottom = parseInt($(el).css('margin-bottom'));
+  var height = +outerHeight - marginTop - marginBottom;
+  el.style.height = isNaN(height) ? '' : height + 'px';
+};
+
 // Currently there is a 1:1 mapping between applab element types and HTML tag names
 // (input, label, button, ...), so elements are simply identified by tag name.
 Applab.editElementProperties = function(el) {
@@ -1263,8 +1314,8 @@ Applab.editElementProperties = function(el) {
       id: el.id,
       left: el.style.left,
       top: el.style.top,
-      width: el.style.width,
-      height: el.style.height,
+      width: Applab.getOuterWidth(el),
+      height: Applab.getOuterHeight(el),
       text: $(el).text()
     }
   });
@@ -1300,8 +1351,10 @@ Applab.onSavePropertiesButton = function(el, event) {
   el.id = document.getElementById('design-property-id').value;
   el.style.left = document.getElementById('design-property-left').value;
   el.style.top = document.getElementById('design-property-top').value;
-  el.style.width = document.getElementById('design-property-width').value;
-  el.style.height = document.getElementById('design-property-height').value;
+  var outerWidth = document.getElementById('design-property-width').value;
+  Applab.setOuterWidth(el, outerWidth);
+  var outerHeight = document.getElementById('design-property-height').value;
+  Applab.setOuterHeight(el, outerHeight);
   $(el).text(document.getElementById('design-property-text').value);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
