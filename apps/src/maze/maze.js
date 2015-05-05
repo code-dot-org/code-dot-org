@@ -24,7 +24,7 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
+var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');

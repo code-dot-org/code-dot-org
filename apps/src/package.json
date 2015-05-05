@@ -1,0 +1,6 @@
+{
+  "name": "@cdo/apps",
+  "version": "0.0.1",
+  "description": "Code Studio module package",
+  "private": true
+}

@@ -26,8 +26,8 @@
  */
 'use strict';
 
-var commonMsg = require('../../locale/current/common');
-var turtleMsg = require('../../locale/current/turtle');
+var commonMsg = require('../locale');
+var turtleMsg = require('./locale');
 var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');

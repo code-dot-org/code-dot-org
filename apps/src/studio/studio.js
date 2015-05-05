@@ -8,8 +8,8 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
-var studioMsg = require('../../locale/current/studio');
+var commonMsg = require('../locale');
+var studioMsg = require('./locale');
 var skins = require('../skins');
 var constants = require('./constants');
 var sharedConstants = require('../constants');

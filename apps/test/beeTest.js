@@ -2,12 +2,14 @@ var chai = require('chai');
 chai.config.includeStack = true;
 var assert = chai.assert;
 
+console.log(__dirname);
+
 var testUtils = require('./util/testUtils');
 
 testUtils.setupLocales();
 
-var Bee = testUtils.requireWithGlobalsCheckBuildFolder('maze/bee');
-var utils = testUtils.requireWithGlobalsCheckBuildFolder('utils');
+var Bee = require('@cdo/apps/maze/bee');
+var utils = require('@cdo/apps/utils');
 
 var baseLevel = {
   honeyGoal: 1,
