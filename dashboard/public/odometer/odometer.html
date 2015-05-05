@@ -1,7 +1,11 @@
 <html>
 <head>
   <style>
-    #odoAndSliderContainer td {
+    #odoContainer {
+      margin: 1em 0;
+    }
+
+    #odoContainer td {
       padding: 3px;
     }
 
@@ -34,6 +38,10 @@
       text-shadow: 0 0 5px #f66;
       display: none;
     }
+
+    .baseLabel {
+      text-align: right;
+    }
   </style>
   <script src="/odometer/cdo-odometer.js"></script>
   <link rel="stylesheet" href="/odometer/cdo-odometer.css">
@@ -44,7 +52,7 @@
     var odoVal = 0;
 
     var timer;
-    var tickValue = 0.01;
+    var tickValue;
     var odoDiv;
 
     $(document).ready(function() {
@@ -63,6 +71,7 @@
       allOdos.push(myArbOdo);
 
       setAllOdos(odoVal);
+      setSpeed();
     });
 
     var isMouseDown = false;
@@ -120,7 +129,6 @@
     function setSpeed() {
       var obj = document.getElementById("speedSlider");
       if (obj.value === obj.max) {
-        console.debug("max");
         tickValue = 1;
       }
       else {
@@ -169,68 +177,61 @@
 <button onClick="pauseOdo()">Pause</button>
 <button onClick="resetOdo()">Reset</button>
 <br>
-Slow <input type=range min=0.005 max=0.15 step=0.005 oninput="setSpeed()"  id="speedSlider" value=0.01> Fast<br>
+Slow <input type=range min=0.005 max=0.15 step=0.005 oninput="setSpeed()"  id="speedSlider" value=0.03> Fast<br>
 <button onClick="increment()">Increment</button>
 <button onClick="decrement()">Decrement</button>
 
-<table id="odoAndSliderContainer">
-  <tr>
-    <td valign=middle>
-      <!----- all odometers table...needs to be able to resize dynamically -->
-      <table>
-        <tr id="rowBin">
-          <td>Binary:</td>
-          <td>
-            <div id="odoDivBin"></div>
-          </td>
-          <td><span id="odoDivBinOverflow" class="overflow">Overflow!</span></td>
-        </tr>
-        <tr id="rowOct">
-          <td>Octal:</td>
-          <td>
-            <div id="odoDivOct"></div>
-          </td>
-          <td><span id="odoDivOctOverflow" class="overflow">Overflow!</span></td>
-        </tr>
-        <tr id="rowDec">
-          <td>Decimal:</td>
-          <td>
-            <div id="odoDivDec"></div>
-          </td>
-          <td><span id="odoDivDecOverflow" class="overflow">Overflow!</span></td>
-        </tr>
-        <tr id="rowHex">
-          <td>Hexadecimal:</td>
-          <td>
-            <div id="odoDivHex"></div>
-          </td>
-          <td><span id="odoDivHexOverflow" class="overflow">Overflow!</span></td>
-        </tr>
-        <tr id="rowArb">
-          <td>Custom Base: <input type=number id="diyOdo"
-                     title="Enter any number base here 2-36.  NOTE: base 36 is chars 0-Z"
-                     min=2 max=36 width=1 value=20
-                     onChange="setArbOdo(parseInt(this.value))"></td>
-          <td>
-            <div id="odoDivArb"></div>
-          </td>
-          <td><span id="odoDivArbOverflow" class="overflow">Overflow!</span></td>
-        </tr>
-      </table>
+<table id="odoContainer">
+  <tr id="rowBin">
+    <td class="baseLabel">Binary:</td>
+    <td>
+      <div id="odoDivBin"></div>
     </td>
+    <td><span id="odoDivBinOverflow" class="overflow">Overflow!</span></td>
+  </tr>
+  <tr id="rowOct">
+    <td class="baseLabel">Octal:</td>
+    <td>
+      <div id="odoDivOct"></div>
+    </td>
+    <td><span id="odoDivOctOverflow" class="overflow">Overflow!</span></td>
+  </tr>
+  <tr id="rowDec">
+    <td class="baseLabel">Decimal:</td>
+    <td>
+      <div id="odoDivDec"></div>
+    </td>
+    <td><span id="odoDivDecOverflow" class="overflow">Overflow!</span></td>
+  </tr>
+  <tr id="rowHex">
+    <td class="baseLabel">Hexadecimal:</td>
+    <td>
+      <div id="odoDivHex"></div>
+    </td>
+    <td><span id="odoDivHexOverflow" class="overflow">Overflow!</span></td>
+  </tr>
+  <tr id="rowArb">
+    <td class="baseLabel">Custom Base: <input type=number id="diyOdo"
+               title="Enter any number base here 2-36. NOTE: base 36 is chars 0-Z"
+               min="2" max="36" value="20"
+               onChange="setArbOdo(parseInt(this.value))"></td>
+    <td>
+      <div id="odoDivArb"></div>
+    </td>
+    <td><span id="odoDivArbOverflow" class="overflow">Overflow!</span></td>
   </tr>
 </table>
 
 <div id="numberScroller">
-  <input
-      title="The slider maxes out at 1023, but you can enter any number in the text box below."
-      type=range min=0 max=1023 step=0.1
-      onClick="setAllOdos(parseFloat(this.value))"
-      onMouseMove="setOdoFromSlider()" id="odoValSlider" value=0>
-  <br>
   Value: <input type=number
          oninput="setAllOdos(parseFloat(this.value))"
          id="odoNumberInput">
+  <br>
+  Min <input
+      title="The slider maxes out at 1023, but you can enter any number in the text box below."
+      type="range" min="0" max="1023" step="0.1"
+      onClick="setAllOdos(parseFloat(this.value))"
+      onMouseMove="setOdoFromSlider()" id="odoValSlider" value="0"> Max
 </div>
 
 </body>
