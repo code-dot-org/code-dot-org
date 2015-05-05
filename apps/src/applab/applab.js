@@ -1041,12 +1041,12 @@ Applab.init = function(config) {
           studioApp.resetButtonClick();
         }
       });
-      var scale = vizAppWidth / Applab.appWidth;
       var gridSize = 20;
       $('#visualization').droppable({
         accept: '.new-design-element',
         drop: function (event, ui) {
           var elementType = ui.draggable[0].dataset.elementType;
+          var scale = Applab.getVizScaleFactor();
 
           var left = ui.position.left / scale;
           left = Math.round(left - left % gridSize);
