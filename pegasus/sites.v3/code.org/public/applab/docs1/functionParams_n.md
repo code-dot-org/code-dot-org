@@ -55,18 +55,18 @@ function square(sideLength){
 In this example we show how you can make a function with *two parameters* one for setting how much the turtle moves and the other for setting how many-sided shape you want to draw.  NOTICE: we have to do some 
 
 <pre>
-polygon(75, 4);
+rectangle(75, 45);
 turnRight();
-polygon(50, 8);
-turnRight()
-polygon(25, 16);
+rectangle(100, 50);
+turnRight();
+rectangle(25, 25);
 
-function polygon(sideLength, numSides){
-	var angle = 360/numSides;
-	
-	for(var i=0; i<numSides; i++){
-		moveForward(sideLength);
-		turnLeft(angle);
+function rectangle(width, height){
+	for(var i=0; i<2; i++){
+		moveForward(width);
+		turnLeft();
+		moveForward(height);
+		turnLeft();
 	}
 }
 </pre>
