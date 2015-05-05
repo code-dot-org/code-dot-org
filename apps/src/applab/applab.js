@@ -472,6 +472,13 @@ function onDebugInputKeyDown(e) {
           scope: currentScope,
           thisExpression: currentScope
       }];
+      // Copy these properties directly into the evalInterpreter so the .isa()
+      // method behaves as expected
+      ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
+        'UNDEFINED'].forEach(
+        function (prop) {
+          evalInterpreter[prop] = Applab.interpreter[prop];
+        });
       try {
         evalInterpreter.run();
         outputApplabConsole('< ' + String(evalInterpreter.value));
@@ -1449,7 +1456,8 @@ studioApp.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when not editing a project or channel id is present.
-  if (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id)) {
+  if (window.dashboard &&
+      (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id))) {
     if (window.$) {
       $(window).trigger('run_button_pressed');
     }
