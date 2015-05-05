@@ -8,12 +8,26 @@
   "scripts": {
     "test": "grunt test"
   },
+  "browser": {
+    "blockly": "./build/package/js/blockly.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "blockly": {
+      "exports": "Blockly"
+    }
+  },
   "optionalDependencies": {
     "canvas": "~1.1.6"
   },
   "devDependencies": {
     "@cdo/apps": "0.0.1",
     "browserify": "^8.1.1",
+    "browserify-shim": "^3.8.3",
     "chai": "~1.10.0",
     "connect-livereload": "~0.5.2",
     "ejs": "0.8.4",

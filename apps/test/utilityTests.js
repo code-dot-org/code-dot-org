@@ -1,17 +1,16 @@
 var testUtils = require('./util/testUtils');
-var buildDir = '../build';
-var xml = require(buildDir + '/js/xml');
+var xml = require('@cdo/apps/xml');
 
 testUtils.setupLocales();
 
-var utils = require(buildDir + '/js/utils');
-var requiredBlockUtils = require(buildDir + '/js/required_block_utils');
-var blockUtils = require(buildDir + '/js/block_utils');
+var utils = require('@cdo/apps/utils');
+var requiredBlockUtils = require('@cdo/apps/required_block_utils');
+var blockUtils = require('@cdo/apps/block_utils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
-var _ = require(buildDir + '/js/lodash');
-var mazeUtils = require(buildDir + '/js/maze/mazeUtils');
+var _ = require('lodash');
+var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 describe("String.prototype.repeat", function () {
   it ("returns a string that is n copies of the original string", function () {
@@ -265,6 +264,7 @@ describe("requiredBlockUtils", function () {
   });
 
   it("can recognize mismatching block types", function () {
+    debugger;
     var blockUser = blockUtils.domStringToBlock('<block type="logic_boolean"></block>');
     var blockRequired = blockUtils.domStringToBlock('<block type="block_with_3_titles"><title name="A">10</title></block>');
     assert(!requiredBlockUtils.blocksMatch(blockUser, blockRequired));
@@ -302,9 +302,6 @@ describe("mazeUtils", function () {
 });
 
 describe('forceInsertTopBlock', function () {
-  global.DOMParser = require('xmldom').DOMParser;
-  global.XMLSerializer = require('xmldom').XMLSerializer;
-
   it("no blocks", function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '';
