@@ -1,4 +1,3 @@
-var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html.ejs');
 var msg = require('../../locale/current/common');
 
 /**
@@ -100,19 +99,6 @@ DropletFunctionTooltip.prototype.i18nPrefix = function () {
  */
 DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
   return 'http://code.org/applab/docs/' + this.functionName;
-};
-
-/**
- * @returns {String} HTML for tooltip
- */
-DropletFunctionTooltip.prototype.getTooltipHTML = function () {
-  return DropletBlockTooltipMarkup({
-    functionName: this.functionName,
-    functionShortDescription: this.description,
-    parameters: this.paramNames,
-    signatureOverride: this.signatureOverride,
-    fullDocumentationURL: this.getFullDocumentationURL()
-  });
 };
 
 module.exports = DropletFunctionTooltip;
