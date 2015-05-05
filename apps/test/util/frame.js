@@ -8,8 +8,14 @@ function setGlobals () {
   // Initialize browser environment.
   document.body.innerHTML = '<div id="app"></div>';
   // locale file requires Blockly as a global
-  window.Blockly = require(cdo_app + '../build/package/js/blockly');
-  require(cdo_app + '../build/package/js/blockly_locale');
+  try {
+    window.Blockly = require('blockly');
+    require('../../lib/blockly/en_us');
+  } catch (err) {
+    console.log(err);
+  }
+
+
   // TODO (brent) - do we need getBBox here anymore?
 }
 module.exports = setGlobals;

@@ -10,6 +10,7 @@ var command = '';
 if (!fs.existsSync(target)) {
   command = 'ln -s ' + target + ' ' + nodePath;
 }
+
 exec(command, function (err, stdout, stderr) {
   if (err) {
     console.log(err);
@@ -17,15 +18,17 @@ exec(command, function (err, stdout, stderr) {
   }
 
   // mochify("./test/*.js ./test/calc/*.js ./test/netsim/*.js", {
-  mochify("./test/beeTest.js", {
+  mochify("./test/beeTest.js ./test/wordsearchTest.js ./test/utilityTests.js", {
     // Allow "npm test --grep=someTestHere" command
-    // TODO
+    // TODO (brent)
     // grep: process.env.npm_config_grep || '',
     // debug: process.env.npm_config_debug,
+    grep: process.env.GREP,
     debug: process.env.DEBUG,
     reporter : 'spec',
     timeout: 10000,
-    phantomjs: which('phantomjs')
+    phantomjs: which('phantomjs'),
+    transform: 'ejsify'
   }).bundle();
 
 });

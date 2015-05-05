@@ -7,8 +7,7 @@ exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
 
-// var _ = require(exports.buildPath('lodash'));
-require('lodash');
+var _ = require('lodash');
 
 var studioApp;
 
@@ -74,13 +73,14 @@ exports.setupBlocklyFrame = function () {
   // timeoutList.stubTimer(false);
   require('./frame')();
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
+  assert(Object.keys(global.Blockly).length > 0);
   Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
 
   setupLocales();
 
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
-  studioApp = require(cdo_apps + '/StudioApp').singleton;
+  studioApp = require('@cdo/apps/StudioApp').singleton;
   studioApp.reset = function(){};
 
   var blocklyAppDiv = document.getElementById('app');
@@ -102,7 +102,8 @@ exports.setupTestBlockly = function() {
   };
   var blocklyAppDiv = document.getElementById('app');
   Blockly.inject(blocklyAppDiv, options);
-  studioApp.removeEventListeners();
+  // TODO (brent)
+  // studioApp.removeEventListeners();
   testBlockFactory.installTestBlocks(Blockly);
 
   assert(Blockly.Blocks.text_print, "text_print block exists");
@@ -136,9 +137,7 @@ exports.getStudioAppSingleton = function () {
  * }
  */
 exports.generateArtistAnswer = function (generatedCode) {
-  // TODO (brent)
-  // var ArtistAPI = require(this.buildPath('turtle/api'));
-  var ArtistPI;
+  var ArtistAPI = require('@cdo/apps/turtle/api');
   var api = new ArtistAPI();
 
   api.log = [];
@@ -150,7 +149,8 @@ exports.generateArtistAnswer = function (generatedCode) {
  * Runs the given function at the provided tick count. For Studio only.
  */
 exports.runOnStudioTick = function (tick, fn) {
-  var Studio = require(cdo_apps + '/studio/studio');
+  // TODO (brent)
+  // var Studio = require('@cdo/apps/studio/studio');
   if (!Studio) {
     throw new Error('not supported outside of studio');
   }
@@ -158,8 +158,8 @@ exports.runOnStudioTick = function (tick, fn) {
   var ran = false;
   Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
     if (Studio.tickCount === tick && !ran) {
-      fn();
       ran = true;
+      fn();
     }
     studioOnTick();
   });
