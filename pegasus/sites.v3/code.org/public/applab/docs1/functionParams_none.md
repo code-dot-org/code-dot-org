@@ -31,7 +31,8 @@ Declares a named block of code that performs some computation and optionally ret
 ____________________________________________________
 [example]
 **Turtle Example**
-In this example with turtles we show the main part of the program at the top.  It shows that you can provide the definition of the function, in this case the sqaure() function, anywhere in the code regardless of where you "call it" or use it from.
+
+In this example with turtles we show the main part of the program at the top.  It shows that you can provide the definition of the function, in this case the square() function, anywhere in the code regardless of where you "call it" or use it from.
 
 <pre>
 square();
