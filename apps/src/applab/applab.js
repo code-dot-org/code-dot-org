@@ -1317,8 +1317,8 @@ Applab.editElementProperties = function(el) {
     tagName: tagName,
     props: {
       id: el.id,
-      left: el.style.left,
-      top: el.style.top,
+      left: parseInt(el.style.left) || 0,
+      top: parseInt(el.style.top) || 0,
       width: isNaN(outerWidth) ? '' : outerWidth,
       height: isNaN(outerHeight) ? '' : outerHeight,
       text: $(el).text()
@@ -1354,8 +1354,8 @@ Applab.isValidElementType = function (type) {
 
 Applab.onSavePropertiesButton = function(el, event) {
   el.id = document.getElementById('design-property-id').value;
-  el.style.left = document.getElementById('design-property-left').value;
-  el.style.top = document.getElementById('design-property-top').value;
+  el.style.left = document.getElementById('design-property-left').value + 'px';
+  el.style.top = document.getElementById('design-property-top').value + 'px';
   var outerWidth = document.getElementById('design-property-width').value;
   Applab.setOuterWidth(el, outerWidth);
   var outerHeight = document.getElementById('design-property-height').value;
