@@ -442,6 +442,10 @@ SQL
     self.user_type == TYPE_TEACHER
   end
 
+  def student_of?(teacher)
+    followeds.find_by_user_id(teacher.id).present?
+  end
+
   def locale
     read_attribute(:locale).try(:to_sym)
   end

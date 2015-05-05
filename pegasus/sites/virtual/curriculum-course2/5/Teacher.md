@@ -4,7 +4,7 @@ view: page_curriculum
 theme: none
 ---
 
-<%= partial('curriculum_header',  :title=> 'Getting Loopy', :disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
+<%= partial('curriculum_header',  :title=> 'Getting Loopy', :unplugged=>true, :disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
 
 [content]
 

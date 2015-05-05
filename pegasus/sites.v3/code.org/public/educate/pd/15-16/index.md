@@ -36,7 +36,7 @@ nav: pd2_nav
 <br />
 [IL - Chicago](/educate/pd/15-16/chicago)
 <br />
-[MD - Boston](/educate/pd/15-16/boston)
+[MA - Boston](/educate/pd/15-16/boston)
 <br />
 [MD - Charles](/educate/pd/15-16/charles)
 <br />

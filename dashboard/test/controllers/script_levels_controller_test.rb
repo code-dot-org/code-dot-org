@@ -7,7 +7,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   include ScriptLevelsHelper
 
   setup do
-    @student = create(:student)
+    @student = create :student
+    @teacher = create :teacher
+    @section = create :section, user_id: @teacher.id
+    Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
 
     @script = Script.twenty_hour_script
     @script_level = @script.script_levels.fifth
@@ -544,6 +547,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
 
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
-    assert_equal last_attempt_data, @controller.instance_variable_get(:@last_attempt)
+    assert_equal last_attempt_data, assigns(:last_attempt)
   end
+
+  test 'loads state from last attempt when you are a teacher viewing your student' do
+    sign_in @teacher
+    # Ensure that activity data from the last attempt is present in the @last_attempt instance variable
+    # Used by TextMatch view partial
+
+    last_attempt_data = 'test'
+    level = @custom_s1_l1.level
+    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
+    get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, user_id: @student.id
+
+    assert_equal last_attempt_data, assigns(:last_attempt)
+  end
+
 end
