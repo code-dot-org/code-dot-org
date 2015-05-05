@@ -34,6 +34,13 @@ ____________________________________________________
 
 **Example 1**
 
+Turtle Example
+<pre>
+dot(randomNumber(100));
+</pre>
+
+
+Console Example
 <pre>
 console.log(randomNumber(3));     // generates a pseudorandom number in the range of 0 to 3 and then prints
                                   //    it to the console
@@ -46,6 +53,15 @@ ____________________________________________________
 [example]
 
 **Example 2**
+
+Turtle Example -- move forward 25 times, turning right a random number of degrees between 0 and 45.
+
+<pre>
+for (var i = 0; i < 25; i++) {
+  moveForward();
+  turnRight(randomNumber(45));
+}
+</pre>
 
 This example prints out 10 pseudorandom numbers (in the range 0 to 10) to the console.
 
