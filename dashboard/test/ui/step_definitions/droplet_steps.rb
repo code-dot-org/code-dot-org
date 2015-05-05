@@ -14,6 +14,6 @@ And(/^no ACE tooltip is visible$/) do
 end
 
 And(/^there is a Droplet tooltip with text "([^"]*)"$/) do |tooltip_text|
-  has_text = @browser.execute_script("$('.tooltipster-content :contains(#{tooltip_text})').length > 0")
+  has_text = @browser.execute_script("return $('.tooltipster-content :contains(#{tooltip_text})').length > 0;")
   has_text.should eq true
 end
