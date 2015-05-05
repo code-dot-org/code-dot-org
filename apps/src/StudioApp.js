@@ -1137,6 +1137,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
   this.onContinue = config.onContinue || function () {};
+  this.onInitialize = config.onInitialize ?
+                        config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
@@ -1332,6 +1334,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       options.afterEditorReady();
       this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
     }
+
+    // Since the droplet editor loads asynchronously, we must call onInitialize
+    // here once loading is complete.
+    this.onInitialize();
   }, this));
 
   if (options.afterInject) {
