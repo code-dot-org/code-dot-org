@@ -54,6 +54,23 @@ function Dialog(options) {
         $(this).remove();
       });
 
+  $(this.div).on(
+      'hide.bs.modal',
+      function(e) {
+        if (this.hideOptions) {
+          // Let's have the dialog object handle hide options.
+          this.processHideOptions(this.hideOptions);
+
+          // Tell bootstrap modal dialog system not to remove this dialog yet.
+          e.preventDefault();
+
+          // Remove the options from dialog object so that when this event is called again at the
+          // end of the processing of hide options, we will just let bootstrap's modal dialog
+          // system clean it up like normal.
+          this.hideOptions = null;
+        }
+      }.bind(this));
+
   if (options.onKeydown) {
     $(this.div).on('keydown', options.onKeydown);
   }
@@ -63,6 +80,7 @@ function Dialog(options) {
  * Options is configurable with a top and left properties, both are integers.
  * Also includes staticBackdrop.  When true, modal dialog's backdrop will not
  * close the dialog when clicked.
+ * The caller can also specify hideOptions, for special behavior when the dialog is dismissed.
  */
 Dialog.prototype.show = function(options) {
   options = options || {};
@@ -74,10 +92,67 @@ Dialog.prototype.show = function(options) {
     backdrop: options.backdrop || true
   });
 
+  // Store hideOptions for later use when the dialog is dismissed, inside the div itself.
+  if (options.hideOptions) {
+    this.hideOptions = options.hideOptions;
+  }
+
   this.div.offset(options);
 };
 
 Dialog.prototype.hide = function() {
   $(this.div).modal('hide');
 };
+
+/**
+ * This processes optional hideOptions that were provided to show().
+ * At the moment it will play an animation of the dialog moving and resizing to
+ * the location and dimensions of a specified div, while also fading out.
+ * Certain elements are faded out more quickly so that they are gone before
+ * the dialog gets too small.
+ */
+Dialog.prototype.processHideOptions = function(options) {
+
+  var startCss = {};
+  startCss.opacity = '1';
+  startCss.left    = this.div.css('left');
+  startCss.top     = this.div.css('top');
+  startCss.width   = this.div.css('width');
+  startCss.height  = this.div.css('height');
+
+  // The dialog current is 640px wide but has a left margin of -320px.  We need to
+  // compensate for that when determining where the animation should end at.
+  var marginLeft = parseInt(this.div.css("marginLeft"));
+
+  var endCss = {};
+  endCss.opacity  = '0';
+  endCss.overflow = "visible";
+  endCss.left     = $(options.endTarget).offset().left - marginLeft;
+  endCss.top      = $(options.endTarget).offset().top - $(window).scrollTop();
+  endCss.width    = $(options.endTarget).css("width");
+  endCss.height   = $(options.endTarget).css("height");
+
+  // Fade the whole thing out slowly.
+  var totalFadeTime = 500;
+
+  // Fade some of the decorative elements quickly.
+  var decorationFadeTime = 150;
+
+  // Let's also fade the background out.
+  $(".modal-backdrop").animate({opacity: 0}, totalFadeTime);
+
+  // And a bunch of other elements
+  $(".farSide").animate({opacity: 0}, decorationFadeTime);
+  $("#x-close").animate({opacity: 0}, decorationFadeTime);
+  $(".dialog-title").animate({opacity: 0}, decorationFadeTime);
+  $(".aniGif").animate({opacity: 0}, decorationFadeTime);
+  $(".modal-content p").animate({"font-size": "13px"}, totalFadeTime)
+
+  // Slide the instruction box from its current position to its destination.
+  $(this.div).css(startCss).animate(endCss, totalFadeTime, "swing", function() {
+    // Just hide the dialog at the end.
+    $(this).modal('hide');
+  });
+
+}
 

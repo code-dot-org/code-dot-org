@@ -88,9 +88,18 @@ Our workshops for teachers in grades 6-12 are available as part of a district-wi
 
 ## District partnership
 
-Partner with Code.org to bring computer science to your entire school district. We will provide all curriculum and prepare your existing teachers and administrators, free of charge.
+### Elementary schools 
 
-[<button>Learn more</button>](/educate/districts)
+[Partner with us](/k5-district-partnership) to bring computer science to your entire school district, free of charge. Or send your teachers to a [nearby workshop](/professional-development-workshops).
+
+[<button>Apply</button>](/educate/k5-district-partnership)&nbsp;&nbsp;[<button>Find a workshop</button>](/professional-development-workshops)
+
+
+### Middle and high schools 
+
+If you're near an [exisiting Code.org partner](/educate/partner-districts), or a large district yourself, apply for a grant to bring computer science to your entire district.  
+
+[<button>Learn more</button>](/district-partner)
 
 
 ## Inspire students

@@ -71,19 +71,30 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
     }
   });
 
+  /**
+   * Track boolean "visible" state of header popup to avoid
+   * expensive lookup on window resize.
+   * @type {boolean}
+   */
+  var isHeaderPopupVisible = false;
+
   function showHeaderPopup(target) {
+    sizeHeaderPopupToViewport();
     $('.header_popup').show();
     $('.header_popup_link_glyph').html('&#x25B2;');
     $('.header_popup_link_text').text('<%= I18n.t(:less) %>');
     $(document).on('click', hideHeaderPopup);
     lazyLoadPopup($(target).closest('.header_trophy_link').length > 0);
+    isHeaderPopupVisible = true;
   }
   function hideHeaderPopup() {
     $('.header_popup').hide();
     $('.header_popup_link_glyph').html('&#x25BC;');
     $('.header_popup_link_text').text('<%= I18n.t(:more) %>');
     $(document).off('click', hideHeaderPopup);
+    isHeaderPopupVisible = false;
   }
+
   $('.header_popup_link, .header_trophy_link').click(function (e) {
     e.stopPropagation();
     $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup(e.target);
@@ -91,6 +102,29 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId) {
   $('.header_popup').click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
   });
+  $('.header_popup_close').click(hideHeaderPopup);
+
+  $(window).resize(debounce(function () {
+    if (isHeaderPopupVisible) {
+      sizeHeaderPopupToViewport();
+    }
+  }, 250));
+
+  /**
+   * Adjust the maximum size of the popup's inner scroll area so that the whole popup
+   * will fit within the browser viewport.
+   */
+  function sizeHeaderPopupToViewport() {
+    var viewportHeight = $(window).height();
+    var headerWrapper = $('.header-wrapper');
+    var headerPopup = $('.header_popup');
+    var popupTop = parseInt(headerWrapper.css('padding-top'), 10) +
+        parseInt(headerPopup.css('top'), 10);
+    var popupBottom = parseInt(headerPopup.css('margin-bottom'), 10);
+    var footerHeight = headerPopup.find('.header_popup_footer').outerHeight();
+    headerPopup.find('.header_popup_scrollable').css('max-height',
+        viewportHeight - (popupTop + popupBottom + footerHeight));
+  }
 
   var popupLoaded = false;
   function lazyLoadPopup(trophiesClicked) {
