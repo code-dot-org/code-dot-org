@@ -27,10 +27,10 @@ SQL
 
   def header_stats
     if params[:user_id]
-      @user = User.find(params[:user_id])
-      authorize! :read, @user
+      user = User.find(params[:user_id])
+      authorize! :read, user
     end
-    render file: 'shared/_user_stats', layout: false, locals: {user: @user || current_user}
+    render file: 'shared/_user_stats', layout: false, locals: {user: user || current_user}
   end
 
   def prizes
