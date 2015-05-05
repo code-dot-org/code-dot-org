@@ -18,7 +18,23 @@ exec(command, function (err, stdout, stderr) {
   }
 
   // mochify("./test/*.js ./test/calc/*.js ./test/netsim/*.js", {
-  mochify("./test/beeTest.js ./test/wordsearchTest.js ./test/utilityTests.js", {
+  var globs = [
+    './test/beeTest.js',
+    './test/wordsearchTest.js',
+    './test/utilityTests.js',
+    './test/acemodeTest.js',
+    './test/beeDrawingTest.js',
+    './test/commandsTest.js',
+    './test/condBlockTest.js',
+    './test/dirtDrawingTest.js',
+    './test/ejsTest.js',
+    './test/evalTests.js',
+    './test/executionInfoTests.js',
+    './test/ObservableEventTest.js',
+    './test/feedbackTests.js'
+
+  ];
+  mochify(globs.join(' '), {
     // Allow "npm test --grep=someTestHere" command
     // TODO (brent)
     // grep: process.env.npm_config_grep || '',
