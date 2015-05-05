@@ -23,6 +23,10 @@ module Geocoder
     return nil if number_to_end_search.empty?
 
     first_number_to_end = number_to_end_search.first.first
+
+    return nil if Float(first_number_to_end) rescue false # is a number
+    return nil if first_number_to_end.length <= 6 # too short to be an address
+
     results = Geocoder.search(first_number_to_end)
     return nil if results.empty?
 
