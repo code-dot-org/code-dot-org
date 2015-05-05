@@ -1158,7 +1158,7 @@ Applab.createElement = function (elementType, left, top) {
   switch (elementType) {
     case ElementType.BUTTON:
       el.appendChild(document.createTextNode('Button'));
-      el.style.class = 'app-button';
+      el.style.margin = '2px';
       el.style.height = '36px';
       el.style.width = '76px';
       el.style.fontSize = '14px';
