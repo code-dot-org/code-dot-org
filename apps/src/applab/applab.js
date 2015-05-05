@@ -10,8 +10,8 @@
 'use strict';
 require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
-var applabMsg = require('../../locale/current/applab');
+var commonMsg = require('../locale');
+var applabMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');

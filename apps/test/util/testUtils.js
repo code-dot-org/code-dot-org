@@ -7,7 +7,8 @@ exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
 
-var _ = require(exports.buildPath('lodash'));
+// var _ = require(exports.buildPath('lodash'));
+require('lodash');
 
 var studioApp;
 
@@ -46,44 +47,41 @@ exports.requireWithGlobalsCheckBuildFolder = function (path, allowedChanges) {
 
 function setupLocale(app) {
   setupLocales();
-  require.uncache('../../build/locale/current/' + app);
-  var localePath = '../../build/package/js/en_us/' + app + '_locale';
-  require.uncache(localePath);
-  require(localePath);
 }
 
 exports.setupLocale = setupLocale;
 
 function setupLocales() {
-  global.navigator = global.navigator || {};
-  global.window = global.window || {};
-  global.document = global.document || {};
-  global.window.blockly = {};
-  var localePath = '../../build/package/js/en_us/common_locale';
-  require.uncache(localePath);
-  require(localePath);
+  require('../../build/package/js/en_us/maze_locale');
+  require('../../build/package/js/en_us/turtle_locale');
+  require('../../build/package/js/en_us/bounce_locale');
+  require('../../build/package/js/en_us/flappy_locale');
+  require('../../build/package/js/en_us/studio_locale');
+  require('../../build/package/js/en_us/jigsaw_locale');
+  require('../../build/package/js/en_us/calc_locale');
+  require('../../build/package/js/en_us/applab_locale');
+  require('../../build/package/js/en_us/eval_locale');
+  require('../../build/package/js/en_us/netsim_locale');
+  require('../../build/package/js/en_us/common_locale');
 }
 
 exports.setupLocales = setupLocales;
 
-/**
- * Initializes an instance of blockly for testing
- */
-exports.setupTestBlockly = function() {
-  // uncache file to force reload
-  require.uncache(exports.buildPath('/StudioApp'));
-  require.uncache('./frame');
-
-  requireWithGlobalsCheck('./frame',
-    ['document', 'window', 'DOMParser', 'XMLSerializer', 'Blockly']);
+exports.setupBlocklyFrame = function () {
+  // TODO (brent) - do we need timeoutList?
+  // var timeoutList = require('@cdo/apps/timeoutList');
+  // timeoutList.clearTimeouts();
+  // timeoutList.stubTimer(false);
+  require('./frame')();
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
+  Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
 
   setupLocales();
 
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
-  studioApp = exports.requireWithGlobalsCheckBuildFolder('/StudioApp',
-    ['c', 'n', 'v', 'p', 's', 'TestResults']).singleton;
+  studioApp = require(cdo_apps + '/StudioApp').singleton;
+  studioApp.reset = function(){};
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');
@@ -92,11 +90,19 @@ exports.setupTestBlockly = function() {
   studioApp.assetUrl = function (path) {
     return '../lib/blockly/' + path;
   };
+}
 
+/**
+ * Initializes an instance of blockly for testing
+ */
+exports.setupTestBlockly = function() {
+  exports.setupBlocklyFrame();
   var options = {
     assetUrl: studioApp.assetUrl
   };
+  var blocklyAppDiv = document.getElementById('app');
   Blockly.inject(blocklyAppDiv, options);
+  studioApp.removeEventListeners();
   testBlockFactory.installTestBlocks(Blockly);
 
   assert(Blockly.Blocks.text_print, "text_print block exists");
@@ -130,7 +136,9 @@ exports.getStudioAppSingleton = function () {
  * }
  */
 exports.generateArtistAnswer = function (generatedCode) {
-  var ArtistAPI = require(this.buildPath('turtle/api'));
+  // TODO (brent)
+  // var ArtistAPI = require(this.buildPath('turtle/api'));
+  var ArtistPI;
   var api = new ArtistAPI();
 
   api.log = [];
@@ -142,12 +150,16 @@ exports.generateArtistAnswer = function (generatedCode) {
  * Runs the given function at the provided tick count. For Studio only.
  */
 exports.runOnStudioTick = function (tick, fn) {
+  var Studio = require(cdo_apps + '/studio/studio');
   if (!Studio) {
     throw new Error('not supported outside of studio');
   }
+  // TODO (brent) = other approach would be to unwrap once we hit
+  var ran = false;
   Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
-    if (Studio.tickCount === tick) {
+    if (Studio.tickCount === tick && !ran) {
       fn();
+      ran = true;
     }
     studioOnTick();
   });

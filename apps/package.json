@@ -12,6 +12,7 @@
     "canvas": "~1.1.6"
   },
   "devDependencies": {
+    "@cdo/apps": "0.0.1",
     "browserify": "^8.1.1",
     "chai": "~1.10.0",
     "connect-livereload": "~0.5.2",
@@ -42,15 +43,19 @@
     "lodash-cli": "~2.4.2",
     "messageformat": "^0.2.1",
     "mkdirp": "^0.5.0",
+    "mochify": "^2.8.1",
     "node-sass": "~2.0.0-beta",
     "phantomjs": "git://github.com/wjordan/phantomjs",
     "react": "^0.13.2",
     "reactify": "^1.1.0",
+    "npm-which": "^2.0.0",
+    "phantomjs": "^1.9.16",
     "requirejs": "~2.1.15",
     "rfile": "~1.0.0",
     "through": "~2.3.6",
     "uglify-js": "~2.4.16",
     "watchify": "^2.2.1",
+    "which": "^1.0.9",
     "wrench": "~1.5.8",
     "xmldom": "~0.1.19"
   }
