@@ -9,6 +9,7 @@ class NetSim < Blockly
     automatic_receive
     router_expects_packet_header
     client_initial_packet_header
+    show_hostname_in_graph
     show_add_packet_button
     show_packet_size_control
     default_packet_size_limit
