@@ -29,6 +29,29 @@ Declares a named block of code that performs some computation and optionally ret
 
 ### Examples
 ____________________________________________________
+[example]
+
+**Turtle Example**
+
+In this example with turtles we show the main part of the program at the top.  It shows that you can provide the definition of the function, in this case the square() function, anywhere in the code regardless of where you "call it" or use it from.
+
+<pre>
+square();
+turnRight();
+square();
+
+function square(){
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnLeft();
+}
+</pre>
+[/example]
 
 [example]
 
