@@ -210,6 +210,8 @@ en:
       PDK5 Intro C: {}
       PDK5 Pair Programming 1:
         Pair Programming: Pair Programming
+      PDK5 Puzzle Goals:
+        Puzzle Goals: Puzzle Goals
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
       PDK5 Strategies 1:
@@ -520,11 +522,25 @@ en:
         data is normalized, so it is difficult to analyze data from different sources: data is normalized, so it is difficult to analyze data from different sources
         data is technically available, but often not posted online: data is technically available, but often not posted online
         data stored in ways that makes it difficult to analyze it: data stored in ways that makes it difficult to analyze it
+      Play Lab Rocket 7:
+        Rocket Multiple Choice: Rocket Multiple Choice
+        rocket-height(seconds) = seconds * 16: rocket-height(seconds) = seconds * 16
+        rocket-height(seconds) = seconds * 2: rocket-height(seconds) = seconds * 2
+        rocket-height(seconds) = seconds * 4: rocket-height(seconds) = seconds * 4
+        rocket-height(seconds) = seconds * seconds: rocket-height(seconds) = seconds * seconds
+      msm variables multi 4:
+        /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
+        '15': '15'
+        '3': '3'
+        '8': '8'
+        What is the value of x?: What is the value of x?
+        string: string
     text_match:
       Blocks to Bools 1:
         ((4+5) > 9): ((4+5) > 9)
         (4+5) > 9: (4+5) > 9
         /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png, 300
+        4+5 > 9: 4+5 > 9
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
