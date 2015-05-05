@@ -166,16 +166,6 @@
       var obj = document.getElementById("odoNumberInput");
       obj.value = Math.floor(val);
     }
-
-    function increment() {
-      odoVal = Math.floor(odoVal) + 1;
-      setAllOdos(odoVal);
-    }
-
-    function decrement() {
-      odoVal = Math.ceil(odoVal) - 1;
-      setAllOdos(odoVal);
-    }
   </script>
 
 </head>
@@ -194,8 +184,6 @@
 <button onClick="resetOdo()">Reset</button>
 <br>
 Slow <input type=range min=0.005 max=0.15 step=0.005 oninput="setSpeed()"  id="speedSlider" value=0.03> Fast<br>
-<button onClick="increment()">Increment</button>
-<button onClick="decrement()">Decrement</button>
 
 <table id="odoContainer">
   <tr id="rowBin">
