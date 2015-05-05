@@ -22,9 +22,10 @@ var baseOptions = {
       return;
     }
     if (appOptions.channel) {
-      // Don't send the levelSource to Dashboard for channel-backed levels.
+      // Don't send the levelSource or image to Dashboard for channel-backed levels.
       // (The levelSource is already stored in the channels API.)
       delete report.program;
+      delete report.image;
     }
     report.fallbackResponse = appOptions.report.fallback_response;
     report.callback = appOptions.report.callback;

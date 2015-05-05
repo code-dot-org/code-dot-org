@@ -75,6 +75,10 @@ FactoryGirl.define do
   factory :maze, :parent => Level, :class => Maze do
   end
 
+  factory :applab, :parent => Level, :class => Applab do
+    game Game.applab
+  end
+
   factory :level_source do
     level
     data '<xml/>'
