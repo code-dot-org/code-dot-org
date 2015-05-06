@@ -176,7 +176,12 @@ div#visualization.with_padding {
   width: 13px; }
 
 #debugResizeBar {
-  cursor: ns-resize; }
+  cursor: ns-resize;
+  white-space: nowrap; }
+
+#debug-buttons {
+  display: inline;
+  white-space: normal; }
 
 #divApplab img {
   opacity: 1; }
@@ -218,7 +223,7 @@ img#turtleImage {
   right: 0; }
 
 #spinner {
-  margin-left: -15px; }
+  margin-left: -5px; }
 
 .debug-console {
   display: block;
@@ -226,8 +231,8 @@ img#turtleImage {
   position: absolute;
   top: 38px;
   bottom: 0;
-  left: 1px;
-  right: 1px; }
+  left: 0;
+  right: 0; }
 
 .debug-console * {
   font-family: monospace;
@@ -268,6 +273,9 @@ img#turtleImage {
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text; }
+
+#slider-cell {
+  cursor: default; }
 
 /* Slider. */
 .sliderContainer {
