@@ -970,7 +970,7 @@ Applab.init = function(config) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
     if (slider) {
-      Applab.speedSlider = new Slider(10, 35, 130, slider);
+      Applab.speedSlider = new Slider(10, 27, 130, slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
@@ -1082,7 +1082,7 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   var debugArea = document.getElementById('debug-area');
 
   var rect = debugResizeBar.getBoundingClientRect();
-  var offset = parseInt(window.getComputedStyle(codeApp).bottom, 10) -
+  var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
                rect.height / 2;
   var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
