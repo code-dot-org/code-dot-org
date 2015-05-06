@@ -208,7 +208,8 @@ div#visualization.with_padding {
 }
 
 #debug-buttons {
-  display: inline-block;
+  display: inline;
+  white-space: normal;
 }
 
 #divApplab img {
