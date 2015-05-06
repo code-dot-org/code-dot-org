@@ -1,7 +1,8 @@
 var which = require('npm-which')(__dirname).sync;
 var mochify = require('mochify');
 
-// TODO (brent) get rid of exec
+// TODO (brent) get rid of this
+// Right now we manually create a symbolic link to @cdo/apps
 var fs = require('fs');
 var exec = require('child_process').exec;
 var target = __dirname + '/../../src/';
@@ -31,7 +32,8 @@ exec(command, function (err, stdout, stderr) {
     './test/evalTests.js',
     './test/executionInfoTests.js',
     './test/ObservableEventTest.js',
-    './test/feedbackTests.js'
+    './test/feedbackTests.js',
+    './test/calc/*.js'
 
   ];
   mochify(globs.join(' '), {

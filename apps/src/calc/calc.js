@@ -32,7 +32,7 @@ var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('lodash');
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
@@ -128,6 +128,7 @@ function asExpressionNode(val) {
  * Initialize Blockly and the Calc.  Called on page load.
  */
 Calc.init = function(config) {
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   skin = config.skin;
   level = config.level;
@@ -259,7 +260,7 @@ function displayGoal(targetSet) {
 /**
  * Click the run button.  Start the program.
  */
-studioApp.runButtonClick = function() {
+Calc.runButtonClick = function() {
   studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp.attempts++;

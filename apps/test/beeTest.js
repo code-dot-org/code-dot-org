@@ -2,7 +2,7 @@ var chai = require('chai');
 chai.config.includeStack = true;
 var assert = chai.assert;
 
-console.log(__dirname);
+window.blockly = window.blockly || {};
 
 var testUtils = require('./util/testUtils');
 
