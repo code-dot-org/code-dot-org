@@ -239,6 +239,20 @@ SQL
     @data_array = @data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
   end
 
+  def monthly_metrics
+    authorize! :read, :reports
+    date = 30.days.ago
+    recent_users = User.where('users.last_sign_in_at > ?', date)
+    metrics = {
+      :'Teachers with Active Students' => recent_users.joins(:teachers).distinct.count('teachers_users.id'),
+      :'Active Students' => recent_users.count,
+      :'Active Female Students' => (f = recent_users.where(gender: 'f').count),
+      :'Active Male Students' =>  (m = recent_users.where(gender: 'm').count),
+      :'Female Ratio' => f.to_f / (f + m),
+    }
+    render 'reports/monthly_metrics', locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
+  end
+
   private
   def get_base_usage_activity
     Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
