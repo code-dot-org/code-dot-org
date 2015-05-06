@@ -37,9 +37,9 @@ theme: none
       Mary,Jones,mary.jones@example.com,Broward County Public Schools,Washington Middle School,Male
   %input{type: 'file', id: 'csv_upload', onchange: "angular.element(this).scope().onFileSelect(this)"}
 
-%div{"ng-hide" => "afterCutoff()"}
+%div{"ng-hide" => "afterCutoff() && #{ !dashboard_user[:admin]}"}
   You may edit the teachers in this cohort until {{cohort.cutoff_date | date:'fullDate'}}
-%div{"ng-show" => "afterCutoff()"}
+%div{"ng-show" => "afterCutoff() && #{ !dashboard_user[:admin]}"}
   The deadline for modifying the teachers in this cohort was {{cohort.cutoff_date | date:'fullDate'}}
 
 %div{'ng-show' => 'cohort.districts.length > 0'}
@@ -179,9 +179,9 @@ theme: none
           %a.btn.btn-danger.btn-xs{"ng-click"=>'del(teacher)'} Yes
           %a.btn.btn-success.btn-xs{"ng-click"=>'teacher.confirmDelete = false'} No
         %span{"ng-hide" => "teacher.confirmDelete"}
-          %a.btn.btn-white.btn-xs{"ng-click" => "edit(teacher)", "ng-hide" => "teacher.editing", "ng-disabled" => "afterCutoff()"} Edit
+          %a.btn.btn-white.btn-xs{"ng-click" => "edit(teacher)", "ng-hide" => "teacher.editing", "ng-disabled" => "afterCutoff() && #{ !dashboard_user[:admin]}"} Edit
           %a.btn.btn-white.btn-xs{"ng-click" => "cancel(teacher)", "ng-show" => "teacher.editing"} Cancel
-          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)", "ng-show" => "!teacher.editing && teacher.id", "ng-disabled" => "afterCutoff()"} Delete
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)", "ng-show" => "!teacher.editing && teacher.id", "ng-disabled" => "afterCutoff() && #{ !dashboard_user[:admin]}"} Delete
 
 %h3 Deleted Teachers
 
@@ -224,7 +224,7 @@ theme: none
       %td
         {{teacher.ops_gender}}
       %td{nowrap: true, style: 'white-space: nowrap;'}
-        %a.btn.btn-white.btn-xs{"ng-click" => "undelete(teacher)", "ng-disabled" => "afterCutoff()"}
+        %a.btn.btn-white.btn-xs{"ng-click" => "undelete(teacher)", "ng-disabled" => "afterCutoff() && #{ !dashboard_user[:admin]}"}
           Restore
 
 :scss
