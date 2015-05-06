@@ -185,9 +185,9 @@ Blockly.BlockSpace.prototype.createDom = function() {
     <g></g>
   </g>
   */
-  this.svgGroup_ = Blockly.createSvgElement('g', {}, null);
-  this.svgBlockCanvas_ = Blockly.createSvgElement('g', {}, this.svgGroup_);
-  this.svgBubbleCanvas_ = Blockly.createSvgElement('g', {}, this.svgGroup_);
+  this.svgGroup_ = Blockly.createSvgElement('g', {'class': 'svgGroup'}, null);
+  this.svgBlockCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBlockCanvas'}, this.svgGroup_);
+  this.svgBubbleCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBubbleCanvas'}, this.svgGroup_);
   this.fireChangeEvent();
   return this.svgGroup_;
 };
@@ -559,6 +559,8 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
   var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
 
+  //console.log(xy.x, xy.y);
+
   // Update trash can visual state
   // Might be nice to do this side-effect elsewhere.
   if (this.deleteAreaTrash_) {
@@ -569,14 +571,70 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
     }
   }
 
+  this.drawHotZone(xy.x);
+
   // Check against all delete areas
   for (var i = 0, area; area = this.deleteAreas_[i]; i++) {
     if (area.contains(xy)) {
       this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.DELETE);
+
       return true;
     }
   }
 
   this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
+
+  //goog.dom.getElementByClass("blocklyFlyoutBackground").setAttribute("style", "fill:#ddd")
+
   return false;
+};
+
+Blockly.BlockSpace.prototype.drawHotZone = function(x) {
+
+  var backgroundClass = this.blockSpaceEditor.toolbox ? "blocklyToolboxDiv" : "blocklyFlyoutBackground";
+  var background = goog.dom.getElementByClass(backgroundClass);
+  var toolbarWidth = background.getBoundingClientRect().width;
+
+  var hotZone = 100;
+
+  var trashColorIntensity = 0;
+  if (x <= toolbarWidth) {
+    trashColorIntensity = 1;
+  }
+  else if (x >= toolbarWidth + hotZone) {
+    trashColorIntensity = 0;
+  }
+  else {
+    trashColorIntensity = 1 - (x - toolbarWidth) / hotZone;
+  }
+  var normalColorIntensity = 1 - trashColorIntensity;
+
+  var r = Math.floor(trashColorIntensity * 0xaa + normalColorIntensity * 0xdd);
+  var g = Math.floor(trashColorIntensity * 0xaa + normalColorIntensity * 0xdd);
+  var b = Math.floor(trashColorIntensity * 0xaa + normalColorIntensity * 0xdd);
+  var rgbString = "rgb(" + r + ", " + g + ", " + b + ")";
+
+  if (this.blockSpaceEditor.toolbox) {
+    // fade towards the new toolbox background colour.
+    // this element can have existing styling, so use this syntax to modify a single property.
+    background.style["background-color"] = rgbString;
+  }
+  else {
+    // fade towards the new flyout backround colour
+    background.setAttribute("style", "fill:" + rgbString);
+  }
+
+  // and fade out the blocks in the flyout area
+  var blockGroup;
+  if (this.blockSpaceEditor.toolbox) {
+    var blockGroupClass = this.blockSpaceEditor.toolbox ? "blocklyTreeRoot" : "svgGroup";
+    blockGroup = goog.dom.getElementByClass("blocklyTreeRoot");
+  } else {
+    blockGroup = goog.dom.getElementByClass("svgGroup", goog.dom.getElementByClass("svgFlyoutGroup"));
+  }
+  blockGroup.setAttribute("style", "opacity:" + normalColorIntensity);
+
+  // and fade in the trash can
+  var trashcan = goog.dom.getElement("trashcan", goog.dom.getElementByClass("svgFlyoutGroup"));
+  trashcan.setAttribute("style", "opacity:" + trashColorIntensity);
 };
