@@ -1,0 +1,32 @@
+.odometerParent {
+  height: 40px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.odometerGradient {
+  height: 40px;
+  position: relative;
+  top: -40px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.odometer {
+  height: 40px;
+  overflow: hidden;
+  font: 32px monospace;
+  line-height: 32px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  border-collapse: collapse;
+}
+
+.odometer .digit {
+  white-space: pre;
+  position: relative;
+  display: table-cell;
+  padding: 4px 3px;
+  width: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
