@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+require_relative '../pegasus/src/env'
+require 'cdo/solr'
+require src_dir 'database'
+
+SOLR = Solr::Server.new(host:'ec2-54-83-22-254.compute-1.amazonaws.com')
+
+class Array
+  # when called on an array of hashes, output a CSV to path
+  def to_csv(path)
+    columns = nil
+
+    CSV.open(path, 'wb') do |results|
+      columns = self.first.keys
+      results << columns
+      self.each do |row|
+        results << columns.map{|column| row[column]}
+      end
+    end
+  end
+end
+
+results = SOLR.query(q: 'kind_s: "HocSurvey2014" && (event_location_type_s: "After school" || event_location_type_s: "Library" || event_location_type_s: "Camp or club")').map do |row|
+  organizer_email = row["email_s"]
+  signup = SOLR.query(q: %Q(kind_s: "HocSignup2014" && email_s: "#{organizer_email}"))
+  if signup.any?
+    row.merge(signup.first)
+  else
+    row
+  end
+end
+
+results.to_csv("map-hoc-afterschool.csv")

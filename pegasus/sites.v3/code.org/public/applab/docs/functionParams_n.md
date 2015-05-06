@@ -21,6 +21,11 @@ Category: Functions
 
 Declares a named block of code that accepts one or more parameters, performs some computation on those parameters, and optionally returns a value.
 
+See documentation for [functions with no parameters](http://code.org/applab/docs/functionParams_none) for notes on:
+
+ * The difference between *defining* a function and _calling_ it
+ * Where you should define functions in your code.
+
 [/short_description]
 
 [/description]
@@ -80,12 +85,12 @@ function rectangle(width, height){
 The following block of code declares and invokes a function named `computeCircleArea`. The function computes the area of a circle with the specified radius.
 
 <pre>
+var area = computeCircleArea(10); // compute the area of a circle with the radius 10
+console.log(area);
+
 function computeCircleArea(radius) {
     return Math.PI * Math.pow(radius, 2);
 }
-
-var area = computeCircleArea(10); // compute the area of a circle with the radius 10
-console.log(area);
 </pre>
 
 [/example]
@@ -97,14 +102,16 @@ ____________________________________________________
 The following block of code declares and invokes a function named `computeTriangleArea`. The function computes the area of a triangle with the specified base length and height.
 
 <pre>
-function computeTriangleArea(base, height) {
-    return height * base / 2;
-}
-
 // compute the area of a triangle with base 10 and height 5.
 var area = computeTriangleArea(10, 5);
 console.log(area);
+
+
+function computeTriangleArea(base, height) {
+    return height * base / 2;
+}
 </pre>
+
 
 [/example]
 
