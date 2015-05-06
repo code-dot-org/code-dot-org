@@ -1338,17 +1338,19 @@ Applab.init = function(config) {
           studioApp.resetButtonClick();
         }
       });
-      var scale = vizAppWidth / Applab.appWidth;
-      var gridSize = 20;
+      var GRID_SIZE = 20;
       $('#visualization').droppable({
         accept: '.new-design-element',
         drop: function (event, ui) {
           var elementType = ui.draggable[0].dataset.elementType;
 
+          var scale = Applab.getVizScaleFactor();
           var left = ui.position.left / scale;
-          left = Math.round(left - left % gridSize);
           var top = ui.position.top / scale;
-          top = Math.round(top - top % gridSize);
+
+          // snap top-left corner to nearest location in the grid
+          left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+          top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
           Applab.createElement(elementType, left, top);
         }
@@ -1455,14 +1457,20 @@ Applab.createElement = function (elementType, left, top) {
   switch (elementType) {
     case ElementType.BUTTON:
       el.appendChild(document.createTextNode('Button'));
-      el.style.margin = 0;
+      el.style.margin = '2px';
+      el.style.height = '36px';
+      el.style.width = '76px';
+      el.style.fontSize = '14px';
       break;
     case ElementType.LABEL:
       el.appendChild(document.createTextNode("text"));
-      el.style.margin = '10px';
+      el.style.margin = '10px 5px';
+      el.style.height = '20px';
       break;
     case ElementType.INPUT:
-      el.style.margin = '10px';
+      el.style.margin = '5px 2px';
+      el.style.width = '236px';
+      el.style.height = '30px';
       break;
     default:
       throw "unrecognized element type " + elementType;
@@ -1475,6 +1483,7 @@ Applab.createElement = function (elementType, left, top) {
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(el);
   Applab.makeDraggable($(el));
+  Applab.editElementProperties(el);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
@@ -1483,7 +1492,7 @@ Applab.createElement = function (elementType, left, top) {
  * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
  */
 Applab.makeDraggable = function (jq) {
-  var gridSize = 20;
+  var GRID_SIZE = 20;
   jq.draggable({
     cancel: false,  // allow buttons and inputs to be dragged
     drag: function(event, ui) {
@@ -1497,6 +1506,10 @@ Applab.makeDraggable = function (jq) {
       var changeTop = ui.position.top - ui.originalPosition.top;
       var newTop = (ui.originalPosition.top + changeTop) / scale;
 
+      // snap top-left corner to nearest location in the grid
+      newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+      newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+
       // containment
       var container = $('#divApplab');
       var maxLeft = container.width() - ui.helper.outerWidth(true);
@@ -1505,10 +1518,6 @@ Applab.makeDraggable = function (jq) {
       newLeft = Math.max(newLeft, 0);
       newTop = Math.min(newTop, maxTop);
       newTop = Math.max(newTop, 0);
-
-      // grid
-      newLeft -= newLeft % gridSize;
-      newTop -= newTop % gridSize;
 
       ui.position.left = newLeft;
       ui.position.top = newTop;
@@ -1543,6 +1552,54 @@ Applab.onDivApplabClick = function (event) {
   Applab.editElementProperties(event.target);
 };
 
+/**
+ * @param el {Element}
+ * @returns {number} The outerWidth (width + margin) of the element in pixels,
+ * or NaN if element's css width or margin are not defined.
+ */
+Applab.getOuterWidth = function(el) {
+  var marginLeft = parseInt($(el).css('margin-left'), 10);
+  var marginRight = parseInt($(el).css('margin-right'), 10);
+  return parseInt(el.style.width, 10) + marginLeft + marginRight;
+};
+
+/**
+ * Sets element width equal to outerWidth minus margin,
+ * or to '' if margin is undefined.
+ * @param el {Element}
+ * @param outerWidth {number} Desired element outerWidth in pixels.
+ */
+Applab.setOuterWidth = function(el, outerWidth) {
+  var marginLeft = parseInt($(el).css('margin-left'), 10);
+  var marginRight = parseInt($(el).css('margin-right'), 10);
+  var width = +outerWidth - marginLeft - marginRight;
+  el.style.width = isNaN(width) ? '' : width + 'px';
+};
+
+/**
+ * @param el {Element}
+ * @returns {number} the outerHeight (height + margin) of the element in pixels,
+ * or NaN if element's css height or margin are not defined.
+ */
+Applab.getOuterHeight = function(el) {
+  var marginTop = parseInt($(el).css('margin-top'), 10);
+  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
+  return parseInt(el.style.height, 10) + marginTop + marginBottom;
+};
+
+/**
+ * Sets element height equal to outerHeight minus margin,
+ * or to '' if margin is undefined.
+ * @param el {Element}
+ * @param outerHeight {number} Desired element outerHeight in pixels.
+ */
+Applab.setOuterHeight = function(el, outerHeight) {
+  var marginTop = parseInt($(el).css('margin-top'), 10);
+  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
+  var height = +outerHeight - marginTop - marginBottom;
+  el.style.height = isNaN(height) ? '' : height + 'px';
+};
+
 // Currently there is a 1:1 mapping between applab element types and HTML tag names
 // (input, label, button, ...), so elements are simply identified by tag name.
 Applab.editElementProperties = function(el) {
@@ -1553,14 +1610,16 @@ Applab.editElementProperties = function(el) {
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
+  var outerWidth = Applab.getOuterWidth(el);
+  var outerHeight = Applab.getOuterHeight(el);
   designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: tagName,
     props: {
       id: el.id,
-      left: el.style.left,
-      top: el.style.top,
-      width: el.style.width,
-      height: el.style.height,
+      left: parseInt(el.style.left, 10) || 0,
+      top: parseInt(el.style.top, 10) || 0,
+      width: isNaN(outerWidth) ? '' : outerWidth,
+      height: isNaN(outerHeight) ? '' : outerHeight,
       text: $(el).text()
     }
   });
@@ -1594,10 +1653,12 @@ Applab.isValidElementType = function (type) {
 
 Applab.onSavePropertiesButton = function(el, event) {
   el.id = document.getElementById('design-property-id').value;
-  el.style.left = document.getElementById('design-property-left').value;
-  el.style.top = document.getElementById('design-property-top').value;
-  el.style.width = document.getElementById('design-property-width').value;
-  el.style.height = document.getElementById('design-property-height').value;
+  el.style.left = document.getElementById('design-property-left').value + 'px';
+  el.style.top = document.getElementById('design-property-top').value + 'px';
+  var outerWidth = document.getElementById('design-property-width').value;
+  Applab.setOuterWidth(el, outerWidth);
+  var outerHeight = document.getElementById('design-property-height').value;
+  Applab.setOuterHeight(el, outerHeight);
   $(el).text(document.getElementById('design-property-text').value);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
@@ -4096,7 +4157,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; if (tagName) { ; buf.push('\n<table>\n  <tr>\n    <th>name</th>\n    <th>value</th>\n  </tr>\n  <tr>\n    <td>id</td>\n    <td><input id="design-property-id" value="', escape((9,  props.id )), '"></td>\n  </tr>\n  <tr>\n    <td>x position</td>\n    <td><input id="design-property-left" value="', escape((13,  props.left )), '"></td>\n  </tr>\n  <tr>\n    <td>y position</td>\n    <td><input id="design-property-top" value="', escape((17,  props.top )), '"></td>\n  </tr>\n  <tr>\n    <td>width</td>\n    <td><input id="design-property-width" value="', escape((21,  props.width)), '"></td>\n  </tr>\n  <tr>\n    <td>height</td>\n    <td><input id="design-property-height" value="', escape((25,  props.height )), '"></td>\n  </tr>\n  <tr>\n    <td>text</td>\n    <td><input id="design-property-text" value="', escape((29,  props.text )), '"></td>\n  </tr>\n</table>\n<button id="savePropertiesButton" class="share">Save</button>\n<button id="deletePropertiesButton" class="share">Delete</button>\n');34; } else { ; buf.push('\n  Click on an element to edit its properties.\n');36; } ; buf.push(''); })();
+ buf.push('');1; if (tagName) { ; buf.push('\n<table>\n  <tr>\n    <th>name</th>\n    <th>value</th>\n  </tr>\n  <tr>\n    <td>id</td>\n    <td><input id="design-property-id" value="', escape((9,  props.id )), '"></td>\n  </tr>\n  <tr>\n    <td>x position (px)</td>\n    <td><input id="design-property-left" value="', escape((13,  props.left )), '"></td>\n  </tr>\n  <tr>\n    <td>y position (px)</td>\n    <td><input id="design-property-top" value="', escape((17,  props.top )), '"></td>\n  </tr>\n  <tr>\n    <td>width (px)</td>\n    <td><input id="design-property-width" value="', escape((21,  props.width)), '"></td>\n  </tr>\n  <tr>\n    <td>height (px)</td>\n    <td><input id="design-property-height" value="', escape((25,  props.height )), '"></td>\n  </tr>\n  <tr>\n    <td>text</td>\n    <td><input id="design-property-text" value="', escape((29,  props.text )), '"></td>\n  </tr>\n</table>\n<button id="savePropertiesButton" class="share">Save</button>\n<button id="deletePropertiesButton" class="share">Delete</button>\n');34; } else { ; buf.push('\n  Click on an element to edit its properties.\n');36; } ; buf.push(''); })();
 } 
 return buf.join('');
 };
