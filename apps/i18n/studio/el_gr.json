@@ -298,7 +298,7 @@
   "soundWinPoint2": "κέρδισε πόντο 2",
   "soundWood": "ξύλο",
   "speed": "ταχύτητα",
-  "startSetValue": "start (rocket-height function)",
+  "startSetValue": "Έναρξη (συνάρτηση)",
   "startSetVars": "game_vars (title, subtitle, background, target, danger, player)",
   "startSetFuncs": "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)",
   "stopSprite": "στοπ",

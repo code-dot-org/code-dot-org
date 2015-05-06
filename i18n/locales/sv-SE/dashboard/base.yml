@@ -66,6 +66,8 @@ sv:
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Registrera dig för ett konto för att spåra dina framsteg. Din e-post används främst för att inloggning och för återställning av lösenord. För mer information, se vår <a href="http://code.org/privacy"> Sekretesspolicy</a>.'
     overview_teacher: 'Undervisa datavetenskap i klassrummet genom att registrera dig för ett konto. <p/> Du kommer att kunna lägga till dina elever och följa deras utveckling.'
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org"> Bläddra bland de olika stadierna och pusslen</a>, men du måste registrera dig för att spara dina framsteg.'
@@ -323,6 +325,7 @@ sv:
     classroom_activity: Ouppkopplad aktivitet
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Översikt över kurser 1, 2 och 3
     lesson_plans: Lektionsplaneringar
     signin_message: 'Redan registrerad? %{link}'
@@ -488,6 +491,8 @@ sv:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Skriv in ditt svar här
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Ok
   time:

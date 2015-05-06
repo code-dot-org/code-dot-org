@@ -64,6 +64,8 @@ ja:
     need_confirmation: 確認Eメールが届かない
     need_unlock: ロック解除用のEメールが届いていない
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: '登録することで、あなた自身の進み具合を管理できるようになります。あなたのメールアドレスは、主にパスワードを忘れた際、パスワードを再設定するために使用します。もっと詳しいことが知りたいかたは、<a href="http://code.org/privacy">個人情報の取扱いについて</a>をご覧ください。'
     overview_teacher: 'サインアップすることで、コンピューターサイエンスを教えることができます。<p/>あなたの生徒を追加することで、あなたは彼らの進捗状況を管理することができます。'
     no_signup_message: '<a target="_blank"href="http://learn.code.org"> いろいろなステージとパズルを見られます。</a>あなたの進捗状況を保存するためにはサインアップしてください'
@@ -316,6 +318,7 @@ ja:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: コース1、2、3の概要
     lesson_plans: Lesson plans
     signin_message: '既に登録されていますか？% {リンク}'
@@ -481,6 +484,8 @@ ja:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: ここに答えを入力
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

@@ -1,17 +1,17 @@
 {
   "divideByZeroError": "Your program results in division by zero.",
-  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyComputeBlock": "তোমাকে \"Evaluate\" ব্লকে অবশ্যই একটি ব্লক সংযুক্ত করতে হবে।",
   "equivalentExpression": "ঠিক একই অভিব্যক্তি পেতে আপনার কথাবার্তা রেকর্ড করতে চেষ্টা করুন ।",
-  "evaluate": "evaluate",
-  "extraTopBlocks": "তোমার অসংযুক্ত block আছে । তুমি  \"compute\" block এ যুক্ত করতে চেয়েছিলে কি ?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "evaluate": "নির্ণয় করা",
+  "extraTopBlocks": "তোমার অসংযুক্ত কিছু ব্লক আছে। তুমি কি এগুলোকে \"evaluate\" ব্লকে যুক্ত করার ব্যাপারটি বোঝাচ্ছো?",
+  "failedInput": "তোমার function টি সকল মানের ক্ষেত্রে সঠিক ফলাফল দিচ্ছে না।",
   "goal": "লক্ষ্য:",
-  "levelIncompleteError": "Your expression does not match the goal.",
-  "missingFunctionError": "You must define a function named {functionName}.",
-  "missingVariableX": "Your expression is missing variable {var}.",
-  "reinfFeedbackMsg": "এটি তোমার কাহিনী ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !",
+  "levelIncompleteError": "তোমার করা কাঠামোটি লক্ষ্যের সাথে খাপ খায় না।",
+  "missingFunctionError": "তোমাকে অবশ্যই {functionName} নামের এক function নির্ধারণ করতে হবে।",
+  "missingVariableX": "তোমার করা কাঠামোয় variable {var} নেই।",
+  "reinfFeedbackMsg": "এই হল তোমার হিসেব-নিকেশ! এ কাজটি পুনরায় করতে থাকো, অথবা পরের puzzle এ চলে যাও!",
   "yourExpression": "তোমার অভিব্যাক্তি:",
-  "wrongInput": "You are calling your function with the wrong value.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongInput": "তুমি ভুল মানে দিয়ে তোমার করা function টি চালু করছো।",
+  "wrongOtherValuesX": "যদি আমরা {var} পরিবর্তন করি তাহলে তোমার কাঠামোর ফলাফল ভুল হয়।",
+  "wrongResult": "তোমার করা কাঠামোর মাধ্যমে সঠিক ফলাফলটি এল না।"
 }

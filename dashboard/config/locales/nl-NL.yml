@@ -22,7 +22,7 @@
           future: kan niet in de toekomst
   hello: Hallo wereld
   welcome_back: Welkom terug, %{name}
-  submit: Klaar
+  submit: Insturen
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'
@@ -66,6 +66,8 @@
     need_confirmation: Geen bevestigingsinstructies ontvangen?
     need_unlock: Nog geen unlock instructies ontvangen?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Meld je aan voor een account om je voortgang bij te houden.
       Je e-mail wordt in eerste instantie gebruikt om je te laten inloggen en om je
       wachtwoord aan te passen. Zie voor meer informatie ons <a href="http://code.org/privacy">Privacy-beleid
@@ -375,6 +377,7 @@
     classroom_activity: Losgekoppelde activiteit
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
     signin_message: Al geregistreerd? %{link}
@@ -417,7 +420,7 @@
     heading_apps: <h2>Leuk voor</h2><h1>Iedereen</h1>
     heading_legacy: <h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>
     your_gallery: Galerij
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Probeer een cursus bij Code Studio
   gender:
     male: Man
     female: Vrouw
@@ -576,6 +579,8 @@
       in the wrong order.
   text_match:
     placeholder: Voer uw antwoord hier in
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

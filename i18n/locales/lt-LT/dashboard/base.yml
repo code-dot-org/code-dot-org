@@ -64,6 +64,8 @@ lt:
     need_confirmation: Negavai patvirtinimo instrukcijų?
     need_unlock: Negavai atrakinimo instrukcijų?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Užsiregistruok, kad galėtum sekti savo progresą. Tavo el. paštas bus naudojamas, kad galėtum prisijungti bei pasikeisti savo slaptažodį. Daugiau informacijos skaityk <a href="http://code.org/privacy">privatimo politikoje</a>.'
     overview_teacher: 'Mokykite informatikos savo klasėje ir prisiregistruokite. <p/>Galėsite pridėti savo mokinius ir stebėti jų pažangą.'
     no_signup_message: 'Jūs galite <a target="_blank" href="http://learn.code.org"> peržiūrėti įvairius etapus bei galvosūkius </a>, bet Jums reikės prisiregistruoti, kad Jūsų veiksmai išsisaugotų.'
@@ -318,6 +320,7 @@ lt:
     classroom_activity: Vaizdo įrašas mokytojams
   home:
     title: Programavimo kursai
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: 1, 2 ir 3 kursų apžvalga
     lesson_plans: Pamokų planai
     signin_message: 'Jau užsiregistravote? %{link}'
@@ -483,6 +486,8 @@ lt:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Įveskite savo atsakymą čia
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: gerai
   time:

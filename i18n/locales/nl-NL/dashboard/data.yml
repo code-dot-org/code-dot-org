@@ -154,8 +154,8 @@ nl:
         turtle_1_9: Kun je uitvinden welk nummer je moet vervangen met het vraagteken om een cirkel te tekenen?
         turtle_1_10: 'Je hebt het gehaald! Nu kun je tekenen wat je wilt. Wat leuke ideëen: een stick poppetje, sneeuwvlok of een spiraal. Je kunt nu ook het nieuwe "dikte instellen" blok gebruiken. Veel plezier!'
         turtle_4_1: 'Kun je een driehoek tekenen (met randen van 100 pixels) met maar 3 blokken? Tip: gebruik een "herhalen"-blok.'
-        turtle_4_2: 'Voeg om deze driehoeken te tekenen een blok "Draai rechtsom" ergens aan het programma toe.'
-        turtle_4_3: "OK, hier is de code die je hebt geschreven om een enkele driehoek te tekeken. Kun je een 'herhalen'- en 'draai'-blok toevoegen om een bloemetje te maken?"
+        turtle_4_2: 'Voeg om deze driehoeken te tekenen een blok "Draai 90 graden rechtsom" ergens aan het programma toe.'
+        turtle_4_3: "OK, hier is de code die je hebt geschreven om een enkele driehoek te tekenen. Kun je een 'herhalen'- en 'draai'-blok toevoegen om een bloemetje te maken?"
         turtle_4_4: 'Hier is dezelfde code van de vorige puzzel, maar nu draaien we maar 36 graden na het tekenen van iedere driehoek. Hoe vaak moeten we dit herhalen? (Tip: na 360 graden draaien hebben we een heel rondje gemaakt)'
         turtle_4_5: 'Hier is dezelfde code als de vorige puzzel, maar nu herhalen we 36 keer. Hoeveel graden moeten we draaien? (Tip: na 360 graden hebben we een heel rondje gedraaid)'
         turtle_4_6: Kun je met maar 3 blokken een vierkant tekenen met randen van 20 pixels?
@@ -346,7 +346,7 @@ nl:
         if_else: Als/anders Blok
         if_else_scrat: Als/anders Blok
         function: Functies
-        loop_while: Terwijl Blok
+        loop_while: Zolang Blok
         loop_for: Teller Blok
         parameters: Functies met Parameters
         hoc_wrapup: CodeUur Samenvatting
@@ -400,8 +400,8 @@ nl:
         C3_bee_functions: Bij functies
         C3_bee_conditionals: Bij voorwaardelijke instructies
         C3_maze_conditionals: Doolhof voorwaardelijke instructies
-        C3_artist_nested_loops: Genestelde lussen
-        C3_farmer_while: Terwijl lussen
+        C3_artist_nested_loops: Geneste lussen
+        C3_farmer_while: Zolang lussen
         C3_bee_nested_loops: Genestelde lussen
         C3_bee_debugging: Bij foutopsporing
         C3_bounce: Stuiter
@@ -474,11 +474,11 @@ nl:
         set_sprite_image: 'Plak een "koppel speler aan afbeelding" blok aan het "als het verhaal begint" blok om het verhaal een speler te geven'
         studio_say_text: Type wat je speler tussen deze aanhalingstekens moet zeggen
         jigsaw_click: Klik op dit blok!
-        move_elsa_forward: 'Sleep een "Move Forward" blok en hang het onder de "When Run" blok om Elsa vooruit te laten bewegen'
-        turn_elsa: 'Gebruik de "Draaien" blok om Elsa te doen draaien. Het getal in het keuzemenu bepaalt hoeveel Elsa draait'
+        move_elsa_forward: 'Sleep een "ga vooruit" blok en hang het onder de "als gestart" blok om Elsa vooruit te laten bewegen'
+        turn_elsa: 'Gebruik het "Draai" blok om Elsa te laten draaien. Het getal in het keuzemenu bepaalt hoeveel Elsa draait'
         replace_questions: 'Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal'
         replace_questions_degree: 'Gebruik de vervolgkeuzelijst om "???" te vervangen door de correcte graden om te draaien'
-        repeat_blocks: 'Gebruik van de blok "Repeat" en plaats deze rond de blokken in de werkruimte'
+        repeat_blocks: 'Gebruik het "Herhaal" blok en plaats dit rond de blokken in de werkruimte'
         repeat_blocks_1: (1) gebruik dit blok en zet het rond de grijze blokken in de werkruimte
         repeat_blocks_2: '(2) Verplaats het "Herhaal" blok naar hier en plaats de grijze blokken er in'
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken te maken!

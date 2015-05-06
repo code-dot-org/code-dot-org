@@ -95,7 +95,7 @@ el:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Ταίριαξε
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: 'Ταίριαξε  το πλέγμα στο πρόγραμμα.'
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -157,6 +157,30 @@ el:
         <h4>STAMP</h4>: '<h4>Σφραγίδα</h4>'
         <h4>STAR</h4>: '<h4>ΑΣΤΕΡΙ</h4>'
         <h4>RAMP</h4>: '<h4>Ράμπα</h4>'
+      ECSPD phase matching:
+        Matching PD Phases and Descriptions: Matching PD Phases and Descriptions
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+        Online introduction to PD program: Online introduction to PD program
+        Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum
+        Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content
+        In-person wrap up to the first year of teaching the course: In-person wrap up to the first year of teaching the course
+      ECSPD unit matching:
+        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Unit 1: Μονάδα 1
+        Unit 2: Μονάδα 2
+        Unit 3: Unit 3
+        Unit 4: Unit 4
+        Unit 5: Unit 5
+        Unit 6: Unit 6
+        introduction to the concepts of computer and computing: introduction to the concepts of computer and computing
+        application of problem solving techniques to develop solutions: application of problem solving techniques to develop solutions
+        website development and design: website development and design
+        create programs to solve computational problems: create programs to solve computational problems
+        use computing to manage and interpret data: use computing to manage and interpret data
+        apply programming and problem solving to the study of robots: apply programming and problem solving to the study of robots
       K-1 Artist 2 Match 1:
         Matching: Ταίριαξε
         Is the square next to, above, or below the ball?: Είναι η πλατεία δίπλα στο, πάνω ή κάτω από την μπάλα;
@@ -328,19 +352,78 @@ el:
         "small-star: string -> image": 'μικρό αστέρι: συμβολοσειρά-> εικόνα'
         "bigger-string: string string -> string": 'μεγαλύτερη συμβολοσειρά: συμβολοσειρά συμβολοσειρά-> συμβολοσειρά'
         "find-price: string -> number": 'Βρείτε-τιμή: συμβολοσειρά-> αριθμό'
+      PDAlg block match:
+        Block match: Block match
+        Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Match the expressions with the appropriate Circle of Evaluation or Evaluation Block
+        "http://staging.studio.code.org/script_assets/pd/circle1.png": http://staging.studio.code.org/script_assets/pd/circle1.png
+        "http://staging.studio.code.org/script_assets/pd/circle2.png": http://staging.studio.code.org/script_assets/pd/circle2.png
+        "http://staging.studio.code.org/script_assets/pd/circle3.png": http://staging.studio.code.org/script_assets/pd/circle3.png
+        "http://staging.studio.code.org/script_assets/pd/block1.png": http://staging.studio.code.org/script_assets/pd/block1.png
+        "http://staging.studio.code.org/script_assets/pd/block2.png": http://staging.studio.code.org/script_assets/pd/block2.png
+        "http://staging.studio.code.org/script_assets/pd/block3.png": http://staging.studio.code.org/script_assets/pd/block3.png
+      PDAlg commitment match:
+        Program Commitment Matching Question: Program Commitment Matching Question
+        0: '? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
+        1: ': Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        "Online Introduction: 2 hours online": 'Online Introduction: 2 hours online'
+        "Blended Summer Study: 3 days in-person and 8 hours online": 'Blended Summer Study: 3 days in-person and 8 hours online'
+        "Academic Year Development: 2 days in-person and 10 hours online": 'Academic Year Development: 2 days in-person and 10 hours online'
+      PDAlg Design Recipe Video:
+        Intro to Data Types: Intro to Data Types
+        Place the Design Recipe steps in the correct order.: Place the Design Recipe steps in the correct order.
+        Step 1: Step 1
+        Step 2: Step 2
+        Step 3: Step 3
+        Contract and Purpose Statement: Contract and Purpose Statement
+        Examples: Examples
+        Definition: Ορισμός
+      PDAlg Types Video:
+        Intro to Data Types: Intro to Data Types
+        Match each data type with its color code: Match each data type with its color code
+        Number: Αριθμός
+        String: String
+        Image: Image
+        "http://staging.studio.code.org/script_assets/pd/blue.png": http://staging.studio.code.org/script_assets/pd/blue.png
+        "http://staging.studio.code.org/script_assets/pd/teal.png": http://staging.studio.code.org/script_assets/pd/teal.png
+        "http://staging.studio.code.org/script_assets/pd/purple.png": http://staging.studio.code.org/script_assets/pd/purple.png
+      PDECS commitment match:
+        Program Commitment Matching Question: Program Commitment Matching Question
+        0: '? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 3).'
+        1: ': Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 3).'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+        "Online Introduction: 2 hours online": 'Online Introduction: 2 hours online'
+        "Blended Summer Study: 5 days in-person and 8 hours online": 'Blended Summer Study: 5 days in-person and 8 hours online'
+        "Academic Year Development: 4 days in-person and 12 hours online": 'Academic Year Development: 4 days in-person and 12 hours online'
+        "Summer Wrap-up: 3 days in-person": 'Summer Wrap-up: 3 days in-person'
       PDK5 Pair programming match:
         Pair programming match: Pair programming match
         Match the definitions to the words you were introduced to in the last video.: Match the definitions to the words you were introduced to in the last video.
-        Pair programming: Pair programming
-        Driver: Driver
-        Navigator: Navigator
-        When two students work at one computer to write a program together: When two students work at one computer to write a program together
-        The student who controls the keyboard, mouse, or touch screen: The student who controls the keyboard, mouse, or touch screen
+        Pair programming: Προγραμματισμός κατά ζεύγη
+        Driver: Πρόγραμμα οδήγησης
+        Navigator: Πλοηγός
+        When two students work at one computer to write a program together: Όταν δύο μαθητές εργάζονται μαζί σε έναν υπολογιστή για να γράψουν ένα πρόγραμμα
+        The student who controls the keyboard, mouse, or touch screen: Ο μαθητής που ελέχγει το πληκτρολόγιο, ποντίκι ή οθόνη αφής
         The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: The student who thinks about the big-picture and looks for potential mistakes or misunderstandings
       PDK5 What is unplugged:
         What is an unplugged activity?: What is an unplugged activity?
         Question: Ερώτηση
-        Answer 1: Answer 1
+        Answer 1: Απάντηση 1
+      sciPD commitment match:
+        Program Commitment Matching Question: Program Commitment Matching Question
+        0: '? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
+        1: ': Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        "Online Introduction: 2 hours online": 'Online Introduction: 2 hours online'
+        "Blended Summer Study: 3 days in-person and 8 hours online": 'Blended Summer Study: 3 days in-person and 8 hours online'
+        "Academic Year Development: 2 days in-person and 10 hours online": 'Academic Year Development: 2 days in-person and 10 hours online'
       test matching image:
         Matching Images Two: 'Ταιριάζουν εικόνες  δύο'
         Match up all the flowers by colour!: 'Ταίριαξε  όλα τα λουλούδια με το χρώμα τους!'

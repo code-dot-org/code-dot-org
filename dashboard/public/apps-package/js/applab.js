@@ -1267,7 +1267,7 @@ Applab.init = function(config) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
     if (slider) {
-      Applab.speedSlider = new Slider(10, 35, 130, slider);
+      Applab.speedSlider = new Slider(10, 27, 130, slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
@@ -1379,7 +1379,7 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   var debugArea = document.getElementById('debug-area');
 
   var rect = debugResizeBar.getBoundingClientRect();
-  var offset = parseInt(window.getComputedStyle(codeApp).bottom, 10) -
+  var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
                rect.height / 2;
   var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
@@ -4003,7 +4003,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div id="debugResizeBar">\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((10,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((13,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((14,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((18,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((21,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((22,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((25,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((26,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button">\n        ', escape((29,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');33; } ; buf.push('\n\n  ');35; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');43; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div id="debugResizeBar">\n    <div id="slider-cell">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="38">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((19,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((25,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n    <img id="spinner" style="visibility: hidden;" src="', escape((29,  assetUrl('media/applab/spinner-big.gif') )), '" height=16 width=16>\n\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((33,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((34,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((38,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((41,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((42,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((46,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((50,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button">\n        ', escape((53,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');57; } ; buf.push('\n\n  ');59; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');67; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4124,27 +4124,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],13:[function(require,module,exports){
-module.exports= (function() {
-  var t = function anonymous(locals, filters, escape) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&(?!\w+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n');3; if (showSlider) { ; buf.push('\n  <div id="slider-cell">\n    <svg id="applab-slider"\n         xmlns="http://www.w3.org/2000/svg"\n         xmlns:svg="http://www.w3.org/2000/svg"\n         xmlns:xlink="http://www.w3.org/1999/xlink"\n         version="1.1"\n         width="150"\n         height="50">\n        <!-- Slow icon. -->\n        <clipPath id="slowClipPath">\n          <rect width=26 height=12 x=5 y=14 />\n        </clipPath>\n        <image xlink:href="', escape((16,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-10\n            clip-path="url(#slowClipPath)" />\n        <!-- Fast icon. -->\n        <clipPath id="fastClipPath">\n          <rect width=26 height=16 x=120 y=10 />\n        </clipPath>\n        <image xlink:href="', escape((22,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-11\n            clip-path="url(#fastClipPath)" />\n    </svg>\n    <img id="spinner" style="visibility: hidden;" src="', escape((25,  assetUrl('media/applab/loading.gif') )), '" height=15 width=15>\n  </div>\n');27; } ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((31,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((34,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((40,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');44; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((47,  assetUrl('media/1x1.gif') )), '">', escape((47,  msg.finish() )), '\n    </button>\n  </div>\n');50; } ; buf.push('\n'); })();
-} 
-return buf.join('');
-};
-  return function(locals) {
-    return t(locals, require("ejs").filters);
-  }
-}());
-},{"../../locale/current/common":260,"ejs":276}],12:[function(require,module,exports){
+},{"ejs":276}],12:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *

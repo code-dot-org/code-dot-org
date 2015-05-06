@@ -64,6 +64,8 @@ zh:
     need_confirmation: 没有收到确认的说明吗？
     need_unlock: 没收到解锁指令吗？
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: '注册一个帐户来记录你的进度. 您的电子邮件是主要用来让您登录和密码恢复. 欲了解更多信息，请参阅我们的 <a href="http://code.org/privacy"> 隐私政策</a>.'
     overview_teacher: '通过注册一个帐号来在你的教室教计算机科学. <p/>你将能够添加你的学生，并跟踪其进度.'
     no_signup_message: '您可以 <a target="_blank"href="http://learn.code.org"> 浏览各个阶段和谜题</a>，但您将需要注册以保存您的进度。'
@@ -313,6 +315,7 @@ zh:
     classroom_activity: 不用电脑的活动
   home:
     title: 代码工作室
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: 1、 2 和 3 的课程概要
     lesson_plans: 课程计划
     signin_message: '已经注册了吗？%{link}'
@@ -478,6 +481,8 @@ zh:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: 在这里输入你的答案
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: 确定
   time:

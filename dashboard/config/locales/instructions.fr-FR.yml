@@ -9,8 +9,8 @@
         pour me faire repasser les lignes grises de l'image. (Chaque ligne a une longueur
         d'environ 100 pixels.)
       2-3 Artist 11_instruction: 'Ajoutez une ligne au panneau stop en dessinant un
-        octogone de 8 côtés, chacun faisant 100 pixels de long. Quel angle de rotation
-        choisiriez-vous ? (Indication : Combien fait 360 divisé par 8 ?) '
+        octagone de 8 côtés, chacun faisant 100 pixels de long. Quel angle de rotation
+        choisiriez-vous ? (Indice : Que font 360/8 ?)'
       2-3 Artist 12_instruction: Utilise le bloc « répéter plusieurs fois » pour créer
         un « cercle » qui complètera le globe. Si chaque mouvement effectue une rotation
         d'1 degré sur la droite, combien de répétitions dois-tu effectuer ? 180 ?
@@ -446,186 +446,150 @@
         le triangle équilatéral. Chaque côté fait 300 pixels.'
       4-5 Artist For Loops 1_instruction: Mets les nombres de 1 à 10 dans les blocs
         "largeur" et exécute le code.
-      4-5 Artist For Loops 10_instruction: "Complète le bloc \"Pour\" pour qu'il compte
-        10, 20, 30, 40, 50. Par quel nombre commences-tu à compter, et jusqu'à quel
-        nombre ? Quel est l'intervalle entre les nombres ?\r\n(mettre en gras les
-        mots \"commences\", \"jusqu'à\" et \"intervalle\" [jeu de prépositions en
-        anglais, intraduisible])"
-      4-5 Artist For Loops 11_instruction: Complète la boucle for pour qu'elle compte
-        0, 20, 40, 60, 80...200.
+      4-5 Artist For Loops 11_instruction: Complète la boucle "pour" pour qu'elle
+        compte 0, 20, 40, 60, 80... 200.
       4-5 Artist For Loops 12_instruction: 'Que se passe-t-il si on échange les nombres
         de départ et d''arrivée ? Complète le bloc de la boucle for pour qu''il compte
         200, 180, 160, 140, 120...0. '
       4-5 Artist For Loops 13_instruction: 'Cette conception a commencé sans une boucle
         "Pour" et prend trop de blocs !  Utilise un bloc "Pour" pour finir la spirale.
         Astuce : la longueur de la dernière ligne est de 250 pixels.'
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
-      4-5 Artist For Loops 5_instruction: |
-        Edit these blocks so that the lines are
-        double what they were before.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist For Loops Assessment 1_instruction: |
-        Complete the "for" block
-        so that it counts 10, 20, 30, 40, 50... 200.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
-      4-5 Artist Functions 10_instruction: |
-        Draw a snowflake using the 'draw a square'
-        function.  Repeat the square function to create 10 squares of 50 pixels each.  How
-        much do you turn each time a circle is made?  Hint: Turn (360 / 10) degrees.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
+      4-5 Artist For Loops 14_instruction: 'Quelqu''un a commencé le code, mais a
+        réalisé qu''il devait y avoir un moyen plus rapide! Utilise un bloc «Pour»
+        pour remplacer les blocs et complète la spirale triangulaire (Indice: la longueur
+        de la dernière ligne est 300 pixels.'
+      4-5 Artist For Loops 15_instruction: 'Quelqu''un a commencé le code, mais a
+        réalisé qu''il devait y avoir un moyen plus rapide! Utilise un bloc «Pour»
+        pour remplacer les blocs et complète la spirale hexagonale (Indice: la longueur
+        de la dernière ligne est 200 pixels.'
+      4-5 Artist For Loops 2_instruction: Ceci est un bloc «pour». Plutôt que de taper
+        1,2,3... 10, le bloc «pour» peut répéter les blocs qu'il contient et compter
+        pour toi. Place le nombre 10 dans la section «à» du bloc «pour».
+      4-5 Artist For Loops 3_instruction: Comment peut-on compter de 1 à 50? Édite
+        le bloc «pour».
+      4-5 Artist For Loops 4_instruction: Complète le bloc «pour» pour qu'il compte
+        de 1 à 10 par bonds de 1.
+      4-5 Artist For Loops 5_instruction: Édite ces blocs pour que les lignes soient
+        le double de ce qu'elles étaient avant.
+      4-5 Artist For Loops 6_instruction: Dessine des carrés avec des côtés de 50,
+        60, 70, 80 et 90 pixels. Tu devras utiliser la fonction «dessiner un carré»
+        cinq fois.
+      4-5 Artist For Loops 7_instruction: 'Dessine les mêmes carrés, mais utilise
+        un bloc «compter avec» pour changer les tailles. Place le bloc «compteur»
+        dans la fonction «dessiner une carré». Indice: Il est dans la catégorie Variables.'
+      4-5 Artist For Loops 8_instruction: Peux-tu compléter le programme en plaçant
+        des blocs dans le bloc «pour» qui compte de 10 à 200 par bonds de 10? Tu peux
+        trouver le bloc «pour» dans la catégorie Boucles.
+      4-5 Artist For Loops 9_instruction: Ces cercles sont de taille 5, 10, 15, 20,
+        25, 30, et 35. Dessine les cercles en utilisant un bloc «pour».
+      4-5 Artist Free Draw 1_instruction: Dessin libre! Dessine tout ce que tu souhaites
+        créer.
+      4-5 Artist Functions 1_instruction: Utiliser une boucle de répétition pour dessiner
+        ce triangle.
+      4-5 Artist Functions 10_instruction: 'Dessine un flocon de neige en utilisant
+        la fonction «dessiner un carré». Répète la fonction pour créer 10 carrés de
+        50 pixels chacun. Combien dois-tu tourner chaque fois qu''un cercle est créé?
+        Indice: Tourne (360 / 10) degrés.'
+      4-5 Artist Functions 10a_instruction: Place ce code dans la fonction «Dessiner
+        un flocon» et remplace le 50 par le paramètre «taille». La fonction est déjà
+        appelée pour faire un flocon de neige de 100 pixels.
+      4-5 Artist Functions 10b_instruction: 'Utilise la fonction « dessiner un flocon
+        de neige » pour créer différentes tailles de flocons. Indice: le premier flocon
+        a une largeur de 25 et les flocons suivants ont le double de la taille du
+        précédent.'
+      4-5 Artist Functions 11_instruction: 'Cette fonction « dessiner un hexagone
+        » utilise la fonction « dessiner un triangle ». Complète la fonction de l''hexagone.
+        (Indice: Un hexagone a 6 côtés de 100 pixels chacun)'
+      4-5 Artist Functions 12_instruction: 'Complète la fonction « dessiner des vagues
+        ». Chaque vague est faite d''une vague supérieure et d''une vague inférieure.
+        Indice: Dessine 5 vagues bleues.'
+      4-5 Artist Functions 13 Free play_instruction: Voici des fonctions pour dessiner
+        des planètes, des étoiles, des fusées et des robots. Utilise-les comme tu
+        veux pour créer des images que tu peux partager avec tes amis.
+      4-5 Artist Functions 14 Free play_instruction: Ici, nous te fournissons plusieurs
+        fonctions. Utilise-les comme tu veux à l'intérieur d'une ou plusieurs boucles
+        pour créer des images que tu peux partager avec tes amis. Clique sur « Démarrer
+        » pour voir un exemple.
       4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
+        Évaluation: Utilise la fonction « dessiner un carré » pour créer les carrés. Les carrés ont des tailles de 50, 100 et 150
         pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: "Now create the functions \"draw a medium\ntriangle\"
-        and \"draw a large triangle\". The \"draw a small triangle\" function\nis
-        done for you. The triangles have side lengths of 50 (small), 100 (medium),\nand
-        150 (large). \n"
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
-      4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
-      4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
+      4-5 Artist Functions 2a_instruction: Maintenant, place ces blocs dans une nouvelle
+        fonction nommée « dessiner un petit triangle » et appelle-la.
+      4-5 Artist Functions 2b_instruction: Maintenant, crée une fonction nommée «
+        dessiner un petit triangle » en utilisant les blocs fournis.
+      4-5 Artist Functions 3_instruction: 'Maintenant, crée les fonction « dessiner
+        un triangle moyen » et « dessiner un grand triangle ». La fonction « dessiner
+        un petit triangle » a déjà été créée pour toi. Les triangles ont des longueurs
+        de côté de 50 (petit), 100 (moyen) et 150 (grand). '
+      4-5 Artist Functions 4_instruction: Cette nouvelle fonction « dessiner un triangle
+        » a un paramètre et peut faire le travail des trois fonctions précédentes.
+        Dessine les mêmes triangles à l'aide de cette nouvelle fonction.
+      4-5 Artist Functions 5_instruction: Peux-tu changer la fonction « dessiner un
+        triangle » par une fonction de « dessiner un carré » afin de modifier le dessin
+        ?
+      4-5 Artist Functions 6_instruction: 'Utilise les fonctions « dessiner un carré
+        » et « dessiner un triangle » pour dessiner une maison. (Indice : les côtés
+        du carré mesurent 200 pixels)'
+      4-5 Artist Functions 6b_instruction: Ajoutant les fonctions « dessiner un carré
+        » et « dessiner un triangle » ainsi que d'autres blocs à la fonction « dessiner
+        une maison » et appelle cette fonction afin de dessiner une maison.
+      4-5 Artist Functions 7_instruction: Utilise la fonction « dessiner une maison
+        » pour dessiner des maisons de 100 pixels et 50 pixels. Les deux maisons sont
+        séparées par 50 pixels.
+      4-5 Artist Functions 8_instruction: La fonction « dessiner une fleur » a un
+        paramètre qui permet de définir la hauteur de la tige. Règle-le à 200 pour
+        voir ce qui se passe.
+      4-5 Artist Functions 9_instruction: Dessine ces 3 fleurs. La première a une
+        hauteur de 100 et les suivantes ont toujours une hauteur 50 pixels plus élevée
+        que la précédente. Il y a 100 pixels entre chaque fleurs.
+      4-5 Artist Patterns 1_instruction: Peux-tu dessiner ce carré à l'aide d'une
+        boucle ? Chaque côté mesure 20 pixels.
+      4-5 Artist Patterns 10_instruction: 'Ce code dessine deux rangées d''hexagones
+        - répète le tout 4 fois pour dessiner un nid d''abeille. Indice : Tu dois
+        revenir en arrière de 120 pixels dans la boucle externe pour éviter que l''artiste
+        ne dessine hors de l''écran.'
+      4-5 Artist Patterns 11_instruction: 'Combien de fois dois-tu répéter la boucle
+        pour dessiner un demi-cercle? Indice: s''il y a 360 degrés dans un cercle
+        et que chaque tour de boucle avance de 3 degrés, combien de fois dois-tu répéter
+        la boucle pour dessiner un cercle complet?'
+      4-5 Artist Patterns 12_instruction: Si tu copies cette boucle et tourne à gauche
+        plutôt qu'à droite, que se passe-t-il ? Peux-tu répéter ceci pour dessiner
+        cette vague ?
+      4-5 Artist Patterns 13_instruction: Essayons maintenant de répéter cette boucle
+        quatre fois pour créer ce cadre d'image. Attention aux coins - tu ne peux
+        pas simplement tourner de 90 degrés! Si répéter une rotation de 3 degrés 60
+        fois produit un demi-cercle, lequel de ces blocs de code fera un quart de
+        tour pour les coins?
+      4-5 Artist Patterns 2_instruction: Si tu places ta boucle de carré à l'intérieur
+        d'une autre boucle, on appelle ça une boucle imbriquée. Que faut-il ajouter
+        à ta boucle externe pour s'assurer que les 15 carrés soit alignés côte à côte
+        ?
+      4-5 Artist Patterns 3_instruction: Maintenant allons un niveau plus profond
+        ! Nous avons imbriqué ce bloc de code dans une autre boucle, mais tu dois
+        replacer l'artiste à la bonne place pour dessiner la ligne suivante. Lequel
+        de ces blocs peux-tu placer à la fin de la boucle extene pour dessiner la
+        grille entière ?
+      4-5 Artist Patterns 4_instruction: Ce diamant a des côtés de 50 pixels et des
+        angles de 120 et 60 degrés. Utilise une boucle pour le dessiner.
+      4-5 Artist Patterns 5.5_instruction: Combien de fois dois-tu répéter ce bloc
+        pour dessiner la grille de diamants complète ?
+      4-5 Artist Patterns 5_instruction: Nous allons répéter cela pour faire une rangée
+        de 6 diamants. Remarque que nous avons changé notre code de diamant pour faire
+        3 répétitions plutôt que 2. Pourquoi pense-tu que nous avons fait cela ?
+      4-5 Artist Patterns 6_instruction: Combien de fois dois-tu répéter ce bloc pour
+        dessiner la grille de diamants complète ?
+      4-5 Artist Patterns 7_instruction: Nous allons modifier le code du dernier puzzle
+        pour faire un motif plus complexe. Observe comment les diamants se chevauchent
+        maintenant. Essaie de changer le premier « saut en arrière » de 100 à 50 (réduction
+        de moitié). De combien l'artiste doit-il se déplacer dans le deuxième « saut
+        en arrière » maintenant ?
+      4-5 Artist Patterns 8_instruction: Utilise une boucle pour dessiner cet hexagone
+        avec des côtés de 40 pixels et des angles de 60 degrés.
+      4-5 Artist Patterns 9.5_instruction: Nous allons boucler ce code pour dessiner
+        deux rangées d'hexagones. Observe comment notre deuxième rangée est décalée
+        vers la droite.
       4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times do draw the
+        Now repeat that code 3 times to draw the
         whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
         to right.
       4-5 Artist Patterns Free Play_instruction: |
@@ -804,6 +768,7 @@
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
       Alice Test_instruction: Here are some instructions!
+      All green everything_instruction: click and drag the blocks
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -831,6 +796,7 @@
         ou bien qui va faire du miel  si c''est un nid d''abeilles.  '
       Alpha Course 3 Bee Conditionals 9_instruction: Butine en utilisant la fonction
         « vérifier la fleur pourpre ».
+      applab_test2_sarah_instruction: This is the instructions panel for level 2
       Arbitrary_instruction: Make a line
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
@@ -995,8 +961,8 @@
       Big Game Animation 1_instruction: |
         Now that you've learned to write simple
         linear functions, let's work on using them to add some movement to our game.
-        Click play to see what your game can currently do (not much!), update any
-        variables you like, and then click finish to move on.
+        Click run to see what your game can currently do (not much!), update any variables
+        you like, and then click finish to move on.
       Big Game Animation 2 (copy 1)_instruction: |
         The function 'update-target'
         function takes the target's current x value, and returns an updated value.
@@ -1041,8 +1007,7 @@
         for safe-left? and safe-right? The first thing you need to do is complete
         the onscreen? function so that it checks whether both safe-left? and safe-right?
         are true. TIP - even after you add safe-left? and safe-right? your sprites
-        won't return to the screen. That will happen in the next puzzles when we
-        make sure that safe-left? and safe-right? actually work.
+        won't return to the screen - why do you think that is?
       Big Game Booleans 5_instruction: |
         At this point your danger should run across
         the screen from right to left, your target should run across from left to
@@ -1440,7 +1405,7 @@
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
       Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      Course 3 Farmer Test_instruction: Utilise une boucle while.
+      Course 3 Farmer Test_instruction: Utilise une boucle «tant que».
       Course 3_instruction: |
         Here's a function that takes a binary string of 1's
         and 0's and instructs the artist to turn on the go from left to right, top
@@ -1509,6 +1474,7 @@
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
+      Course 4 Artist Binary 7 (copy 1)_instruction: Finish this drawing.
       Course 4 Artist Binary 7_instruction: Finish this drawing.
       Course 4 Artist Binary Free Play (copy 1)_instruction: |
         Free Play: Draw whatever
@@ -1548,6 +1514,10 @@
         utiliser la variable de compteur pour rendre les parties plus petits quand
         nous en avons de plus en plus ? Au lieu d'avancer sur une longueur fixe, essaie
         de te déplacer de (100 / compteur) pixels vers l'avant.
+      Course 4 Artist For Loops 14 _instruction: |
+        If you turn a little bit more or
+        less than you normally would for a shape, it creates a neat effect. Try turning
+        89 degrees to create this twisted square spiral.
       Course 4 Artist For Loops 14_instruction: |
         If you turn a little bit more or
         less than you normally would for a shape, it creates a neat effect. Try turning
@@ -1955,9 +1925,6 @@
         earlier. We've added a function called \"score_points\" that takes a parameter\n\"points.\"
         Edit the function so that the \"points\" parameter is added to\nthe \"player_points\"
         variable. Have the Dog score 10 points to move on to\nthe next puzzle. \n"
-      Course 4 Play Lab Vars 1 (copy 1)_instruction: |
-        This race seems a bit unfair,
-        try to get to the cat before the penguin does!
       Course 4 Play Lab Vars 1_instruction: |
         You don't have to write any code, just
         hit "run" to play the game! In this game, you're the Dog who is trying
@@ -2208,7 +2175,7 @@
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        "Hello, World!" in teal at size 40.
+        "Hello, world!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
       Eval Define Funcs 1_instruction: |
@@ -2239,7 +2206,7 @@
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
         called "square-circle" with domain Number String and range Image. Click
-        Edit to write the function description (you will see two examples provided).
+        Edit to write the function definition (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         We're going to write a function
         that draws a solid rectangle of any color that is twice wide as it is high.
@@ -2381,13 +2348,11 @@
       frozen freeplay_instruction: |
         You've officially become a master artist! Create
         a winter wonderland.
-      frozen line_instruction: |
-        Hi! I'm Elsa of Arendelle. Help me create a single
-        line.
-      frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
+      frozen line_instruction: Salut ! Je suis Elsa d'Arendelle. Aide-moi à créer
+        une ligne.
+      frozen perpendicular_instruction: Maintenant, voyons si nous pouvons créer deux
+        lignes qui ont une angle de 90 degrés entre elles. Tu devras utiliser le bloc
+        « Tourner » ainsi que le bloc « Avancer ».
       frozen snowflake branch_instruction: |
         Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake.
@@ -2398,20 +2363,17 @@
         Intricate snow patterns can be created with
         very simple shapes. Can you make a pattern by repeating 5 circles of size
         5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
+      frozen square iterative_instruction: On dirait que nous sommes à mi-chemin d'avoir
+        un carré. Essayons de combiner 4 lignes pour créer un carré.
+      frozen square loop 3x_instruction: Essayons de créer trois carrés, en tournant
+        après chaque carré. Tu dois tourner de 120 degrés avant chaque nouveau carré.
+      frozen square loop_instruction: Salut, je suis Anna dArendelle ! Nous allons
+        faire un carré avec le bloc « Répéter », ce qui nécessitera moins de blocs.
+        Combien de fois (???) est-ce que le bloc « Répéter » devrait répéter les blocs
+        qu'il contient pour faire un carré ?
+      frozen square snowflake_instruction: Peux-tu créer un flocon de neige en utilisant
+        le bloc « Répéter » pour faire un carré 10 fois et le bloc « Tourner » pour
+        tourner de 36 degrés entre chaque carré ?
       Function Block 1_instruction: "Here is a new type of Block. It is called a\n\"Function
         block.\" Click on \"RUN\" to see what it can do. \n"
       Function Block 2_instruction: |
@@ -2668,7 +2630,7 @@
         even better? Try one (or more) of the following:\r\n- Display an\nimage of
         the chosen pizza\r\n- Allow for multiple topping combinations\r\n-\nAllow
         for ordering multiple pizzas\r\n- Add a coupon code for a 50% discount"
-      maze level test_instruction: Do this!
+      maze level test_instruction: Fais ceci!
       Maze screenshot Work_instruction: Test instructions
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
@@ -2723,17 +2685,10 @@
       MSM Play Lab Butterfly 3_instruction: |
         Now, combine your work to make Sam stay
         on both sides of the screen.
-      MSM Play Lab Game 1_instruction: |
-        Variables can be used to change how a program
-        behaves. Try changing the scene for the game by setting the background.
       MSM Play Lab Game 2_instruction: |
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
-      MSM Play Lab Game 3_instruction: |
-        Now it's time to play a game! Press the
-        Run button, and use the arrows to move and shoot. Then change the background,
-        or and change the player and enemy speeds to make the game easier or harder.
       Neat Eval Functions_instruction: Check out these sweet functions.
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
@@ -2976,10 +2931,21 @@
         but you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
         the if block.
+      PDK5 Conditionals 2_instruction: "Try this puzzle that uses conditionals and\nloops
+        together. Use the \"if\" block to decide when to turn. Hint: you only\nneed
+        one more block to complete this puzzle. \n"
       PDK5 Events 1_instruction: "So far all of the programs we've written are executed\nin
         order from top to bottom. In this puzzle, we'll use \"Events\" to respond\nto
         an action on demand. Make the octopus say \"Hello\" only when you click\non
         the Octopus. \n"
+      PDK5 Functions 1_instruction: |
+        Hello. Me zombie artist. Me love drawing! Help
+        me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
+        shorter than the square length.
+      PDK5 Functions 2_instruction: Les fonctions te permettent de définir de nouveaux
+        blocs ! Nous avons déplacé les blocs permettant de dessiner un carré dans
+        une fonction appelée « dessiner un carré ». Peux-tu utiliser la fonction « dessiner
+        un carré » pour créer les verres ? Les carrés sont espacés de 75 pixels.
       PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
         \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
         this is called a \"loop.\" \n"
@@ -2987,10 +2953,9 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      perpendicular_instruction: |
-        Now let's see if we can create two perpendicular
-        lines. Perpendicular lines are two lines that intersect at a right, or 90
-        degree, angle.
+      perpendicular_instruction: Maintenant, voyons si nous pouvons créer deux lignes
+        perpendiculaires. Des lignes perpendiculaires se croisent en formant un angle
+        droit, ou de 90 degrés.
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
         Something happened
         to the bits in this image!  Find error and fix it!  Hint: a few extra bits
@@ -3098,8 +3063,9 @@
         This bat is named Sam, and the game area
         is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
         see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move sam
-        around his yard. Help Sam collect all of the flags to move on.
+        the screen update to tell you his location. Use the arrow keys to move Sam
+        around his yard, making note of Sam's coordinates at different locations.
+        Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
@@ -3129,10 +3095,6 @@
         "on-screen?" function. Update the function so that it checks that "safe-left?"
         AND "safe-right?" AND "safe-up?" are all true. When you've fixed the
         function, try going out of the yard from the left, right, and top sides.
-      Sam the Butterfly 7 (copy 1)_instruction: |
-        Only one last direction to worry
-        about! Create a "safe-down?" function and update the "on-screen?" function
-        so that it checks up, down, left, and right.
       Sam the Butterfly 7_instruction: |
         Only one last direction to worry about! Create
         a "safe-down?" function and update the "on-screen?" function so that it
@@ -3186,9 +3148,11 @@
       snowflower_instruction: "Intricate patterns can be created in the snow with\njust
         simple shapes like small and large circles. Can you create a pattern\nwith
         a 5 pixel and 10 pixel circle, repeating them 5 times in a circle? \n"
-      square iterative_instruction: |
-        Seems like we're halfway to making a square.
-        Create 4 lines to draw a square.
+      SpecialFrozenLevel_instruction: |
+        You've officially become a master artist!
+        Create a winter wonderland.
+      square iterative_instruction: On dirait que nous sommes à mi-chemin d'avoir
+        un carré. Crée 4 lignes pour dessiner un carré.
       square loop_instruction: |
         There is more than one way to make a square. Can
         you use the Repeat block to create the square again, but with fewer blocks?
@@ -3262,10 +3226,159 @@
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      the terps_instruction: Try your best to get to the green pig!!!
+      the yolo maze_instruction: Put the block in the right place
       toby-test5-16-1_instruction: dafsfas
       U1L4 NetSim SendAB_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:
         Variant 1 is not yet functional because P2P connections have not been implemented.
         Variant 1 allows students to manually work out the timing of sending bits
         back and forth.
+      U3L03 choose your own drawing_instruction: |
+        Now choose your own!  Pick one
+        of the three drawings shown here and attempt to create it on your own, making
+        smart decisions about how to break the problem down into re-usable functions.  You
+        will review your work with a peer using "procedures peer review rubric."  Check
+        it for the requirements.  GIF: U3L3-ProceduresChooseOne.png
+      U3L03 Creating Procedures 1_instruction: |
+        Write the turnAround() function and
+        use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
+      U3L03 Define and use turnAround_instruction: |
+        Write the turnAround() function
+        and use it to make the turtle move as depicted.
+      U3L03 define turnRight and draw a rectangle_instruction: "Create a turnRight()\nfunction
+        and draw a rectangle twice as tall as it is wide by having the turtle\nnavigate
+        clockwise to draw the rectangle. Make sure to comment your function\nas shown
+        in the turnAround() function. \n"
+      U3L03 Draw a T using turnAround_instruction: |
+        The turnAround function is now
+        provided for you in the code.  Use the turnAround() function to draw a T as
+        depicted.
+      U3L03 draw diamond_instruction: "Use any and all of the functions you wrote\npreviously
+        to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE:\nthis is another
+        tricky one.  The 4 sides of the diamond are made by drawing\nthree steps with
+        other movement made between calls.  HINT: you might want\nto make another
+        function that handles drawing one side of the diamond. "
+      U3L03 Three Steps_instruction: |
+        Draw 3 "steps" moving up and to the right.  Notice
+        the pattern in the movement. You should define a function called drawStep()
+        which draws one of the steps, and then call it 3 times to achieve the effect.
+      U3L04 choose your own drawing_instruction: |
+        Now choose your own!  Pick one
+        of the three drawings shown here and attempt to create it on your own, making
+        smart decisions about how to break the problem down into re-usable functions.  You
+        will review your work with a peer using "procedures peer review rubric."  Check
+        it for the requirements.
+      U3L04 diamond solution_instruction: |
+        Study this solution to the drawDiamond
+        problem.  Notice that the whole program starts by calling drawDiamond() at
+        the top.  The program then follows a chain of function calls.  You can trace
+        what's happening in the code to see the functions reused.  It's also easy
+        to read because the function names describe the expected behavior.
+      U3L05_3x3GridEfficiencyChallenge_instruction: |
+        Let's revisit the 3x3 grid
+        problem you did a few lessons ago.  This time the challenge is to program
+        the solution "as efficiently as possible."  Now that you know how to write
+        functions, it should be easier to break the problem down, and your code should
+        be easier to read and debug.  See the rubric for more details about requirements
+        and expectations.
+      U3L05_draw3x3GridEfficiently_instruction: |
+        Draw a 3x3 grid above and to the
+        right of the turtle. Try to do so with the fewest number of commands possible.
+        NOTE: This is a very challenging problem.  You may need to play with it for
+        a while and tweak it.  You might also consider using pencil and paper to sketch
+        your ideas.
+      U3L06 Challenge 1 triangle_instruction: "Check out the extended Turtle palette\nnow
+        made available to you. These new commands accept parameters, allowing\nyou
+        to specify precisely how the function operates rather than only being\nable
+        to move or turn a predetermined amount. Make use of these functions to\ndraw
+        the triangle as shown.\r\nPNG: U3L06-challenge1.png"
+      U3L06 Challenge 2 purple square_instruction: |
+        This time we're going to learn
+        a little bit about changing the turtle's pen. Read through the documentation
+        for penWidth() and penColor(), and then draw the purple square as shown.
+      U3L06 Challenge 3 fill pink_instruction: |
+        Now let's try to fill in the entire
+        background of the screen. To make it a little easier for you, we can tell
+        you the color we chose is one of the 140 named colors.  If you don't know
+        what the named colors are, take a closer look at the documentation for penColor()
+        again. Hint: you need to use dot().
+      U3L06 Challenge 4 bullseye_instruction: |
+        Let's try this out one more time.
+        This time the colors are NOT named colors - you need to use the hex-color
+        number to set the color.  So that you're not randomly guessing, we'll give
+        you a hint -- each of the colors shown in the target image is one of these
+        one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699,
+        #11CC00  You might be able to guess correctly if you apply what you know about
+        RGB colors.
+      U3L06 Challenge 5 overlapping circles_instruction: |
+        This image is created just
+        using dot() and penColor() but, how are we going to get those circles to be
+        transparent?  If you haven't gotten the hint yet: check out the documentation!
+      U3L06 Challenge 6 squiggles_instruction: |
+        Next we're going to be adding some
+        curves to our drawing. Read the documentation for the "arc" commands and
+        then draw the squiggles as shown. To make things easier here's a hint: all
+        the parameters are multiples of 10, and the colors are from the following
+        list of named colors: PowderBlue, lightBlue, Indigo, Purple, Magenta.
+      U3L06 Challenge 7 smiley face_instruction: |
+        To make this smiley face you'll
+        need to look at the documentation for the move() command and then use it with
+        the others you've learned.  You can make reasonable guesses about the colors.
+      U3L06 Challenge 8 make your own_instruction: |
+        Use the tools you've learned
+        today to create a drawing of your own creation. If you have time, challenge
+        your friends to see if they can duplicate your image.  We'll show you the
+        drawing we made for ourselves.  You can try to duplicate that if you want
+        to, otherwise, have fun making your own!
+      U3L07 - Free Play Loops and Random_instruction: |
+        Free Play!  Use what you learned
+        from loops and random to make your own little scene.  Have fun.
+      U3L07 - Starry Night Starter Code_instruction: "You are going to use loops\nand
+        random numbers to generate an image of starry night sky similar to one\nshown
+        here.  We have given you some starter code to generate the ground and\nsky
+        (just two giant dots), you will add code to this project to make the stars,\ngrass,
+        and moon.  All of the effects are clever applications of turtle dots,\nlines,
+        and colors.  To get started, follow the series of steps suggested in\nthe
+        accompanying worksheet. \n"
+      U3L13 - Button with ID_instruction: |
+        Drag a button out onto the screen and
+        set its text to "Go forth!".  Run the program to make sure you can see the
+        button.
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof
+        syntax error.  App Lab did not understand which object it should be listening\nto
+        for a \"click\" event so it showed an error message in the console to let\nyou
+        know.  Another kind of error is a logical error - the program is valid,\nbut
+        it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA
+        (tricky) syntax error and logical error.  Find them, fix them, and make\nthe
+        program work as expected."
+      U3L13 - Debug Id Problem_instruction: |
+        This program has problem!  Can you figure
+        it out?  Run the program and see if you can figure out from the error messages
+        in the console what the issue is.  There is not much code, so you might be
+        able to figure it out just by reading carefully.  Make a change that will
+        make the program work as expected.
+      U3L13 - Turtle Driver Project_instruction: |
+        Create a “turtle driver” with at
+        least three buttons on the screen to move the turtle forward, and turn the
+        turtle right and left. If you have time, try adding additional buttons!  You
+        can also have fun changing the parameters on the turtle functions, using colors,
+        etc.
+      U3L13 - Turtle move with button_instruction: "Drag a button out onto the screen\nand
+        set its text to \"Go forth!\".  Add an event handler for the button, that\nmakes
+        the turtle move forward.  Run the program to make sure it works. \n"
+      U3L2 Using Simple Commands_instruction: |
+        Draw a square using only moveForward
+        and turnLeft.  The square should be drawn above and to the left of the turtle's
+        starting position.
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid above and to the right of
+        the turtle. Try to do so with the fewest number of commands possible. NOTE:
+        This is a very challenging problem.  You may need to play with it for a while
+        and tweak it.  You might also consider using pencil and paper to sketch your
+        ideas.
+      U3L2_TurtleSquare_right_instruction: |
+        Draw a square using only moveForward
+        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

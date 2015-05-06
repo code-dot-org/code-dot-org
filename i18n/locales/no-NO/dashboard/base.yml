@@ -64,6 +64,8 @@
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Registrer en konto for å følge med på progresjonen din. Din epost er hovedsaklig brukt for å tillate deg å logge inn og for å gjenopprette passord. For mer informasjon, se våre <a href="http://code.org/privacy">rettningslinjer for personvern</a>.'
     overview_teacher: 'Undervis Informatikk i ditt klasserom med å registrere en konto.<p/> Du vil være i stand til å legge til dine studenter og følge med på deres fremdrift.'
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org">bla gjennom de forskjellige nivåene og oppgavene</a>, men du må registrere deg for å lagre hvor langt du har nådd.'
@@ -316,6 +318,7 @@
     classroom_activity: Frakoblet Aktivitet
   home:
     title: Kodestudio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Oversikt over kurs 1, 2 og 3
     lesson_plans: Leksjonsplaner
     signin_message: 'Allerede registrert? %{link}'
@@ -481,6 +484,8 @@
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Angi svaret her
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

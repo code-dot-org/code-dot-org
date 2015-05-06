@@ -154,10 +154,10 @@ v:function(d,k){appLocale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
-"divideByZeroError":function(d){return "Your program results in division by zero."},
-"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"divideByZeroError":function(d){return "O seu programa tem como resultado uma divisão por zero."},
+"emptyComputeBlock":function(d){return "Deve anexar um bloco para o bloco \"avaliar\"."},
 "equivalentExpression":function(d){return "Tente reordenar os seus argumentos para obter exactamente a mesma expressão."},
-"evaluate":function(d){return "evaluate"},
+"evaluate":function(d){return "avaliar"},
 "extraTopBlocks":function(d){return "Você tem blocos desligados. Você quis dizer para anexar estes para o bloco \"cálculo\"?"},
 "failedInput":function(d){return "Sua função não retorna o resultado certo para todos os valores."},
 "goal":function(d){return "Objectivo:"},

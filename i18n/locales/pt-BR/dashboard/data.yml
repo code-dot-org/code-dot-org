@@ -442,24 +442,24 @@ pt-BR:
         csp_pixelation_color_3: 'Widget de pixelização de cores - Parte 3'
         csp_pixelation_bw: Widget de pixelização em preto e branco
         csp_U1L14_tipstricks: 'Unidade 1 - Lição 14 - Dicas e truques de professores'
-        csp_textcompression: Text compression widget
-        alg_1_intro: 'CS in Algebra - Introduction'
-        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
-        alg_3_pemdas: 'CS in Algebra - Order of Operations'
-        alg_4_data_types: 'CS in Algebra - Data Types'
-        alg_5_contracts: 'CS in Algebra - Contracts'
-        alg_6_variables: 'CS in Algebra - Variables'
-        alg_7_function: 'CS in Algebra - Functions'
-        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
-        alg_9_booleans: 'CS in Algebra - Booleans'
-        alg_10_conditionals: 'CS in Algebra - Conditionals'
-        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
-        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
-        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
-        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
-        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
-        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
-        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        csp_textcompression: Widget de compressão de texto
+        alg_1_intro: 'Ciência da computação em álgebra - introdução'
+        alg_2_eval_block: 'Ciência da computação em álgebra - blocos de cálculo'
+        alg_3_pemdas: 'Ciência da computação em álgebra - ordem de operações'
+        alg_4_data_types: 'Ciência da computação em álgebra - tipos de dados'
+        alg_5_contracts: 'Ciência da computação em álgebra - contratos'
+        alg_6_variables: 'Ciência da computação em álgebra - variáveis'
+        alg_7_function: 'Ciência da computação em álgebra - funções'
+        alg_8_design_recipe: 'Ciência da computação em álgebra - receita de design'
+        alg_9_booleans: 'Ciência da computação em álgebra - booleanos'
+        alg_10_conditionals: 'Ciência da computação em álgebra - condicionais'
+        alg_11_coordinate_plane: 'Ciência da computação em álgebra - plano cartesiano'
+        alg_12_biggame_variables: 'Ciência da computação em álgebra - o grande jogo - variáveis'
+        alg_13_biggame_animation: 'Ciência da computação em álgebra - o grande jogo - animação'
+        alg_14_biggame_booleans: 'Ciência da computação em álgebra - o grande jogo - booleanos'
+        alg_15_biggame_update_player: 'Ciência da computação em álgebra - o grande jogo - atualizar jogador'
+        alg_16_biggame_collision_detection: 'Ciência da computação em álgebra - o grande jogo - detecção de colisão'
+        alg_17_sambat_compound_booleans: 'Ciência da computação em álgebra - booleanos compostos'
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'
@@ -528,6 +528,6 @@ pt-BR:
         name_function: Escreva o nome da sua função aqui
         Infinity_move_right_runbutton: Adicione um bloco Mova aqui
         Infinity_move_directions_callout: Qual bloco fará Baymax se mover para cima quando a seta para cima estiver pressionada?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Use as setas para direcionar
         Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro

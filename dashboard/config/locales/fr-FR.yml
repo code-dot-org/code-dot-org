@@ -66,6 +66,8 @@
     need_confirmation: Vous n'avez pas reçu les instructions de confirmation ?
     need_unlock: Vous n'avez pas reçu les instructions de déverrouillage ?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Inscrivez-vous pour un compte pour suivre vos progrès. Votre
       email est utilisé principalement pour vous permettre de vous connecter et pour
       récupérer votre mot de passe. Pour plus d'informations, consultez notre <a href="http://code.org/privacy">Politique
@@ -270,7 +272,7 @@
         artist: Dessine quelque chose
     user:
       classroom: Page d'accueil des enseignants
-      district_dashboard: District Dashboard
+      district_dashboard: Tableau de bord de district
       label: Bonjour %{username}
       stats: Ma progression
       settings: Mon compte
@@ -379,6 +381,7 @@
     classroom_activity: Activité manuelle
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Présentation des cours 1, 2 et 3
     lesson_plans: Plans des cours
     signin_message: Déjà inscrit ? %{link}
@@ -422,7 +425,7 @@
     heading_apps: <h2>Amusant pour</h2><h1>Tout le monde</h1>
     heading_legacy: <h2>Nos cours pour</h2><h1>Tous les âges</h1>
     your_gallery: Galerie
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Essayer un cours sur Code Studio
   gender:
     male: Masculin
     female: Féminin
@@ -573,15 +576,17 @@
   contract_match:
     wrong_title: Réponse incorrecte
     badname: Votre contrat a le mauvais nom.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    badname_case: Les noms de fonctions sont sensibles à la casse.  Essayez de changer
+      le nom de votre contrat.
+    badrange: Votre contrat a la mauvaise plage.
+    baddomainsize: Votre contrat n'a pas le bon nombre d'items dans son domaine.
+    baddomainname: Un ou plusieurs items de votre domaine ont le mauvais nom.
+    baddomaintype: Un ou plusieurs items de votre domaine ont le mauvais type ou sont
+      dans le mauvais ordre.
   text_match:
     placeholder: Entrez votre réponse ici
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:
@@ -680,4 +685,4 @@
       plus en mesure de visualiser votre projet.
     view_all: Afficher mes projets
     remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    click_to_remix: Cliquez sur «Remix» pour créer votre propre version!

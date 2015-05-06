@@ -64,6 +64,8 @@ sl:
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Registrirajte se, če želite spremljati svoj napredek. Vaš email bo služil za ponovni vpis ali novo geslo, če ga pozabite. Če želite več informacij, si oglejte našo <a href="http://code.org/privacy"> Politiko zasebnosti</a>.'
     overview_teacher: 'Pripravite učno uro računalništva v vašem razredu; registrirajte se. <p/> Lahko dodate tudi svoje učence in sledite njihovemu napredku.'
     no_signup_message: 'Lahko  <a target="_blank" href="http://learn.code.org"> brskaš po različnih stopnjah in ugankah</a>, a se boš moral vpisati, da shraniš svoj napredek.'
@@ -316,6 +318,7 @@ sl:
     classroom_activity: Dejavnost brez prijave
   home:
     title: Studio za kodiranje
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Pregled tečajev 1, 2 in 3
     lesson_plans: Učni načrti
     signin_message: 'Že registrirani? %{link}'
@@ -481,6 +484,8 @@ sl:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Vnesite vaš odgovor tukaj
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Vredu
   time:

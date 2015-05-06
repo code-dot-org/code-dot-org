@@ -21,6 +21,14 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   wait.until { @browser.find_element(selection_criteria) }
 end
 
+When /^I close the dialog$/ do
+  # Add a wait to closing dialog because it's sometimes animated, now.
+  steps %q{
+    When I press "x-close"
+    And I wait for 0.75 seconds
+  }
+end
+
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   @browser.find_element(selection_criteria)

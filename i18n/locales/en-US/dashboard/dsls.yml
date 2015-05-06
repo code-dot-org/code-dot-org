@@ -71,6 +71,14 @@ en:
         1: crwdns27829:0crwdne27829:0
         wide-rect|Image|Number|String: crwdns35126:0crwdne35126:0
     external:
+      AlgPD Break:
+        Before you move on...: crwdns37550:0crwdne37550:0
+      CSP Journal Entry Placeholder:
+        CSP Journal Entry Placeholder: crwdns37551:0crwdne37551:0
+        Eventually replace this with a free-response journal entry level: crwdns37552:0crwdne37552:0
+      CSP Journal Entry Placeholder2:
+        description here: crwdns37553:0crwdne37553:0
+        title: crwdns37554:0crwdne37554:0
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": crwdns35597:0crwdne35597:0
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -82,28 +90,89 @@ en:
       Code Logo v3:
         Create images with bits and bytes.: crwdns35098:0crwdne35098:0
         title: crwdns35097:0crwdne35097:0
+      ECSPD PD Phases:
+        ECSPD PD Phases: crwdns37555:0crwdne37555:0
+      ECSPD PD details:
+        ECSPD PD details: crwdns37556:0crwdne37556:0
       ECSPD PD overview:
         ECS PD Overview: crwdns36323:0crwdne36323:0
       ECSPD curriculum overview:
         ECS Curriculum Overview: crwdns36324:0crwdne36324:0
         Overview of Curriculum: crwdns36325:0crwdne36325:0
+      ECSPD end of p1:
+        ECSPD end of p1: crwdns37557:0crwdne37557:0
+      ECSPD forum introduction:
+        ECS Forum Introductions: crwdns37558:0crwdne37558:0
+        Forum Introductions: crwdns37559:0crwdne37559:0
       ECSPD growth mindset strategies:
         Growth Mindset Strategies: crwdns36326:0crwdne36326:0
+      ECSPD impact of CS:
+        Impact of Computer Science: crwdns37560:0crwdne37560:0
+        description here: crwdns37561:0crwdne37561:0
+      ECSPD impact vid1:
+        ECSPD impact vid1: crwdns37562:0crwdne37562:0
+      ECSPD impact vid2:
+        ECSPD impact vid2: crwdns37563:0crwdne37563:0
       ECSPD meet facilitator:
         Meet your Facilitator!: crwdns36327:0crwdne36327:0
+      ECSPD pause:
+        ECSPD pause: crwdns37564:0crwdne37564:0
+      ECSPD postsurvey: [ ]
+      ECSPD presurvey: [ ]
       ECSPD program overview:
         ECS Program Overview: crwdns36328:0crwdne36328:0
         Overview of ECS Program: crwdns36329:0crwdne36329:0
+      ECSPD teaching strategies video:
+        ECSPD teaching strategies video: crwdns37565:0crwdne37565:0
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: crwdns36330:0crwdne36330:0
         What is Growth Mindset?: crwdns36331:0crwdne36331:0
       External level test (will):
         first computer program: crwdns35598:0crwdne35598:0
       Hour of Code test content: [ ]
+      Intro to CodeStudio:
+        An Introduction to Code Studio: crwdns37566:0crwdne37566:0
       Mixing Colors:
         description here: crwdns35102:0crwdne35102:0
         title: crwdns35101:0crwdne35101:0
+      Odometer:
+        Odometer: crwdns37567:0crwdne37567:0
+      PDAlg Attitude Survey:
+        CS in Algebra Pre-attitude survey: crwdns37568:0crwdne37568:0
+      PDAlg Curriculum Overview:
+        Curriculum Overview: crwdns37569:0crwdne37569:0
+        Overview of CS in Algebra curriculum: crwdns37570:0crwdne37570:0
+      PDAlg Details:
+        CS in Algebra PD Details: crwdns37571:0crwdne37571:0
+      PDAlg End of P1:
+        End of Phase 1: crwdns37572:0crwdne37572:0
+      PDAlg Facilitator Test:
+        description here: crwdns37573:0crwdne37573:0
+        title: crwdns37574:0crwdne37574:0
+      PDAlg Facilitators:
+        Meet Your Facilitators: crwdns37575:0crwdne37575:0
       PDAlg Intro: [ ]
+      PDAlg Post Survey:
+        CS in Algebra Post-attitude survey: crwdns37576:0crwdne37576:0
+      PDAlg Scope:
+        Scope and Sequence: crwdns37577:0crwdne37577:0
+      PDAlg Teacher Dashboard:
+        Course Progress: crwdns37578:0crwdne37578:0
+      PDAlg Teacher Introduction:
+        Introduce yourself: crwdns37579:0crwdne37579:0
+      PDAlg big game:
+        Introduction to the Big Game: crwdns37580:0crwdne37580:0
+      PDAlg bootstrap:
+        From Bootstrap to CS in Algebra: crwdns37581:0crwdne37581:0
+      PDAlg circles to blocks:
+        From Circles to Blocks: crwdns37582:0crwdne37582:0
+      PDAlg commitment:
+        CS in Algebra PD commitments: crwdns37583:0crwdne37583:0
+        overview of program commitments: crwdns37584:0crwdne37584:0
+      PDAlg functions:
+        The Concept of Function: crwdns37585:0crwdne37585:0
+      PDAlg hard video:
+        Why is Algebra so Hard?: crwdns37586:0crwdne37586:0
       PDCSP Intro: [ ]
       PDECS Intro:
         PD Intro: crwdns36332:0crwdne36332:0
@@ -119,12 +188,18 @@ en:
         tour of the PD space: crwdns36339:0crwdne36339:0
       PDK5 Beyond C:
         Beyond: crwdns35599:0crwdne35599:0
+      PDK5 CS Video:
+        Computer Science: crwdns37587:0crwdne37587:0
       PDK5 CS overview:
         Overview of programming concepts: crwdns36340:0crwdne36340:0
       PDK5 Classroom Culture C:
         Classroom Culture: crwdns35600:0crwdne35600:0
+      PDK5 Connections:
+        Connections: crwdns37588:0crwdne37588:0
       PDK5 Course Maps C: [ ]
       PDK5 Course Overview C: [ ]
+      PDK5 Foundations F:
+        foundational skill: crwdns37589:0crwdne37589:0
       PDK5 Glossary C:
         Vocabulary: crwdns35601:0crwdne35601:0
       PDK5 Intro C: [ ]
@@ -132,6 +207,10 @@ en:
         Pair Programming: crwdns35602:0crwdne35602:0
       PDK5 Strategies:
         Strategies for Teaching Computer Science: crwdns35603:0crwdne35603:0
+      PDK5 Strategies 1:
+        Classroom Strategies: crwdns37590:0crwdne37590:0
+      PDK5 Strategies F:
+        Strategies Discussion: crwdns37591:0crwdne37591:0
       PDK5 Teacher Dashboard 1:
         Dashboard 1: crwdns35604:0crwdne35604:0
       PDK5 Teacher Dashboard 2:
@@ -258,6 +337,9 @@ en:
       U1L13 Student Lesson Introduction:
         description here: crwdns36349:0crwdne36349:0
         title: crwdns36350:0crwdne36350:0
+      U1L13 Text Compression:
+        Compress text by identifying repeated patterns.: crwdns37592:0crwdne37592:0
+        U1L13 Text Compression: crwdns37593:0crwdne37593:0
       U1L16 Student Lesson Introduction:
         description here: crwdns36351:0crwdne36351:0
         title: crwdns36352:0crwdne36352:0
@@ -279,9 +361,6 @@ en:
       U1L5 Student Lesson Introduction:
         description here: crwdns36363:0crwdne36363:0
         title: crwdns36364:0crwdne36364:0
-      U1L6 Odometer Widget:
-        Odometer Widget: crwdns36365:0crwdne36365:0
-        description here: crwdns36366:0crwdne36366:0
       U1L6 Student Lesson Introduction:
         description here: crwdns36367:0crwdne36367:0
         title: crwdns36368:0crwdne36368:0
@@ -294,9 +373,87 @@ en:
       U1L9 Student Lesson Introduction:
         description here: crwdns36373:0crwdne36373:0
         title: crwdns36374:0crwdne36374:0
+      facilitator test: [ ]
+      sciPD Course Overview: [ ]
+      sciPD Intro: [ ]
+      sciPD StarLogo intro 1:
+        Preface to the Guided Introduction to StarLogo Nova: crwdns37594:0crwdne37594:0
+      sciPD StarLogo intro 2:
+        Guided Intro to StarLogo Nova: crwdns37595:0crwdne37595:0
+      sciPD StarLogo intro 3:
+        Guided Tour of StarLogo Nova pt 3: crwdns37596:0crwdne37596:0
+      sciPD StarLogo intro 4:
+        Guided Intro to StarLogo Nova part 4: crwdns37597:0crwdne37597:0
+      sciPD StarLogo intro video:
+        Introduction to StarLogo Nova: crwdns37598:0crwdne37598:0
+      sciPD StarLogo tutorial 1:
+        StarLogo Tutorial part 1: crwdns37599:0crwdne37599:0
+      sciPD StarLogo tutorial 2:
+        StarLogo Tutorial part 2: crwdns37600:0crwdne37600:0
+      sciPD StarLogo tutorial 3:
+        StarLogo Tutorial part 3: crwdns37601:0crwdne37601:0
+      sciPD StarLogo tutorial 4:
+        StarLogo Nova Tutorial Part 4: crwdns37602:0crwdne37602:0
+      sciPD StarLogo tutorial 5:
+        StarLogo Nova Tutorial Part 5: crwdns37603:0crwdne37603:0
+      sciPD StarLogo tutorial 6:
+        StarLogo Nova Tutorial Part 6: crwdns37604:0crwdne37604:0
+      sciPD StarLogo tutorial 7:
+        StarLogo Nova Tutorial Part 7: crwdns37605:0crwdne37605:0
+      sciPD StarLogo tutorial 8:
+        StarLogo Nova Tutorial Part 8: crwdns37606:0crwdne37606:0
+      sciPD agent based forum:
+        Agent Based Modeling of Adaptive Systems Forum: crwdns37607:0crwdne37607:0
+      sciPD agent based video:
+        Agent Based Modeling: crwdns37608:0crwdne37608:0
+      sciPD class models forum:
+        Models in the Classroom: crwdns37609:0crwdne37609:0
+      sciPD class models video:
+        Using Models in the Classroom: crwdns37610:0crwdne37610:0
+      sciPD complex adaptive forum:
+        Complex Adaptive Forum: crwdns37611:0crwdne37611:0
+      sciPD complex adaptive video:
+        Intro to Complex Adaptive Systems: crwdns37612:0crwdne37612:0
+      sciPD computer models forum:
+        Using Computer Models in Science: crwdns37613:0crwdne37613:0
+      sciPD computer models video:
+        Using Computer Models in Science: crwdns37614:0crwdne37614:0
+      sciPD culture forum:
+        Dispositions and Classroom Culture: crwdns37615:0crwdne37615:0
+      sciPD culture video:
+        Dispositions And Classroom Culture: crwdns37616:0crwdne37616:0
+      sciPD expectations: [ ]
+      sciPD finish:
+        Code.org Post Survey: crwdns37617:0crwdne37617:0
+      sciPD framework forum:
+        Computational Thinking and the Framework for K-12: crwdns37618:0crwdne37618:0
+      sciPD framework video:
+        Framework: crwdns37619:0crwdne37619:0
+      sciPD intro finale: [ ]
+      sciPD intro to CS forum: [ ]
+      sciPD intro to CS video:
+        Intro to Computational Science: crwdns37620:0crwdne37620:0
+      sciPD intro video:
+        Welcome to CS in Science: crwdns37621:0crwdne37621:0
+      sciPD logistics 1:
+        Details and Logistics: crwdns37622:0crwdne37622:0
+      sciPD materials:
+        Workshop Materials: crwdns37623:0crwdne37623:0
+      sciPD meet and greet: [ ]
+      sciPD p2 intro:
+        Welcome to Phase 2: crwdns37624:0crwdne37624:0
+      sciPD p3 intro:
+        CS in Science Introduction to Phase 3 PD: crwdns37625:0crwdne37625:0
+      sciPD preQ:
+        Computer Science in Science Pre-Survey: crwdns37626:0crwdne37626:0
+      sciPD what to expect:
+        What to Expect: crwdns37627:0crwdne37627:0
       test demo level:
         demo description: crwdns35651:0crwdne35651:0
         demo title: crwdns35650:0crwdne35650:0
+      test discourse level type:
+        this is a discourse forum: crwdns37628:0crwdne37628:0
+        title: crwdns37629:0crwdne37629:0
       test html katie:
         lkajsdfasdf: crwdns35655:0crwdne35655:0
         testing: crwdns35654:0crwdne35654:0
@@ -403,6 +560,14 @@ en:
         Convert Blocks to Math: crwdns24893:0crwdne24893:0
         Type out the arithmetic expression that matches this code: crwdns24894:0crwdne24894:0
         Type the arithmetic expression here: crwdns24897:0crwdne24897:0
+      ECSPD PD goals:
+        Documenting Your PD Goals: crwdns37630:0crwdne37630:0
+      ECSPD course goals:
+        Documenting Your Course Goals: crwdns37631:0crwdne37631:0
+      ECSPD impact in program:
+        Impact of Computing: crwdns37632:0crwdne37632:0
+      ECSPD program overlap:
+        Relationship between Curriculum and PD: crwdns37633:0crwdne37633:0
       ECSPD strategies:
         Classroom Strategies Journal: crwdns36377:0crwdne36377:0
       ECSPD your goals:
@@ -410,6 +575,8 @@ en:
       Open text response example:
         I loved it because...: crwdns35070:0crwdne35070:0
         Open text response example: crwdns35069:0crwdne35069:0
+      PDAlg course goals:
+        Documenting Your Course Goals: crwdns37636:0crwdne37636:0
       PDK5 Challenges:
         Biggest Challenges: crwdns36381:0crwdne36381:0
       PDK5 Classroom Culture 2:
@@ -438,6 +605,9 @@ en:
         Connections to other Subjects: crwdns35086:0crwdne35086:0
         Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: crwdns35087:0crwdne35087:0
         Your thoughts here: crwdns35088:0crwdne35088:0
+      PDK5 Impact 3:
+        Real-world applications for Students: crwdns38270:0crwdne38270:0
+        Your thoughts here: crwdns38271:0crwdne38271:0
       PDK5 Loops 2:
         The Importance of Loops: crwdns36384:0crwdne36384:0
       PDK5 Problem Solving:
@@ -446,7 +616,7 @@ en:
       PDK5 Promo Video:
         "Code Studio: Kid tested, Teacher approved": crwdns35093:0crwdne35093:0
       PDK5 Promo Video 2:
-        "Code Studio: Kid tested, Teacher approved": crwdns35593:0crwdne35593:0
+        "Code Studio: Kid Tested, Teacher Approved!": crwdns37638:0crwdne37638:0
         My first impressions of Code Studio are...: crwdns35594:0crwdne35594:0
       PDK5 Strategies O:
         "I think teaching computer science will be different than teaching other subjects in these ways: ...": crwdns35596:0crwdne35596:0

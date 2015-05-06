@@ -71,6 +71,14 @@ pt-BR:
         1: ': Escreva o contrato para a função chamada "ret-largo" que cria um retângulo de altura e cores dadas e cuja largura seja duas vezes maior que a altura.'
         wide-rect|Image|Number|String: ret-largo|Imagem|Número|String
     external:
+      AlgPD Break:
+        Before you move on...: Before you move on...
+      CSP Journal Entry Placeholder:
+        CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
+        Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
+      CSP Journal Entry Placeholder2:
+        description here: descrição aqui
+        title: título
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Instruções: codifique a letra A'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -82,49 +90,116 @@ pt-BR:
       Code Logo v3:
         Create images with bits and bytes.: Crie imagens com bits e bytes.
         title: título
+      ECSPD PD Phases:
+        ECSPD PD Phases: ECSPD PD Phases
+      ECSPD PD details:
+        ECSPD PD details: ECSPD PD details
       ECSPD PD overview:
-        ECS PD Overview: ECS PD Overview
+        ECS PD Overview: Visão geral de ECS PD
       ECSPD curriculum overview:
-        ECS Curriculum Overview: ECS Curriculum Overview
-        Overview of Curriculum: Overview of Curriculum
+        ECS Curriculum Overview: Visão geral do currículo ECS
+        Overview of Curriculum: Visão geral do currículo
+      ECSPD end of p1:
+        ECSPD end of p1: ECSPD end of p1
+      ECSPD forum introduction:
+        ECS Forum Introductions: ECS Forum Introductions
+        Forum Introductions: Forum Introductions
       ECSPD growth mindset strategies:
-        Growth Mindset Strategies: Growth Mindset Strategies
+        Growth Mindset Strategies: Estratégias de mentalidade de crescimento
+      ECSPD impact of CS:
+        Impact of Computer Science: Impact of Computer Science
+        description here: descrição aqui
+      ECSPD impact vid1:
+        ECSPD impact vid1: ECSPD impact vid1
+      ECSPD impact vid2:
+        ECSPD impact vid2: ECSPD impact vid2
       ECSPD meet facilitator:
-        Meet your Facilitator!: Meet your Facilitator!
+        Meet your Facilitator!: Conheça seu facilitador!
+      ECSPD pause:
+        ECSPD pause: ECSPD pause
+      ECSPD postsurvey: [ ]
+      ECSPD presurvey: [ ]
       ECSPD program overview:
-        ECS Program Overview: ECS Program Overview
-        Overview of ECS Program: Overview of ECS Program
+        ECS Program Overview: Visão geral do programa ECS
+        Overview of ECS Program: Visão geral do programa ECS
+      ECSPD teaching strategies video:
+        ECSPD teaching strategies video: ECSPD teaching strategies video
       ECSPD what is growth mindset:
-        An exploration of Growth Mindset: An exploration of Growth Mindset
-        What is Growth Mindset?: What is Growth Mindset?
+        An exploration of Growth Mindset: Uma exploração da mentalidade de crescimento
+        What is Growth Mindset?: O que é mentalidade de crescimento?
       External level test (will):
         first computer program: primeiro programa de computador
       Hour of Code test content: [ ]
+      Intro to CodeStudio:
+        An Introduction to Code Studio: An Introduction to Code Studio
       Mixing Colors:
         description here: descrição aqui
         title: título
+      Odometer:
+        Odometer: Odometer
+      PDAlg Attitude Survey:
+        CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+      PDAlg Curriculum Overview:
+        Curriculum Overview: Curriculum Overview
+        Overview of CS in Algebra curriculum: Overview of CS in Algebra curriculum
+      PDAlg Details:
+        CS in Algebra PD Details: CS in Algebra PD Details
+      PDAlg End of P1:
+        End of Phase 1: End of Phase 1
+      PDAlg Facilitator Test:
+        description here: descrição aqui
+        title: título
+      PDAlg Facilitators:
+        Meet Your Facilitators: Meet Your Facilitators
       PDAlg Intro: [ ]
+      PDAlg Post Survey:
+        CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
+      PDAlg Scope:
+        Scope and Sequence: Scope and Sequence
+      PDAlg Teacher Dashboard:
+        Course Progress: Progresso do curso
+      PDAlg Teacher Introduction:
+        Introduce yourself: Introduce yourself
+      PDAlg big game:
+        Introduction to the Big Game: Introduction to the Big Game
+      PDAlg bootstrap:
+        From Bootstrap to CS in Algebra: From Bootstrap to CS in Algebra
+      PDAlg circles to blocks:
+        From Circles to Blocks: From Circles to Blocks
+      PDAlg commitment:
+        CS in Algebra PD commitments: CS in Algebra PD commitments
+        overview of program commitments: visão geral de compromissos do programa
+      PDAlg functions:
+        The Concept of Function: The Concept of Function
+      PDAlg hard video:
+        Why is Algebra so Hard?: Why is Algebra so Hard?
       PDCSP Intro: [ ]
       PDECS Intro:
-        PD Intro: PD Intro
-        Welcome to ECS Online PD: Welcome to ECS Online PD
+        PD Intro: Introdução a PD
+        Welcome to ECS Online PD: Bem-vindo ao PD on-line para ECS
       PDECS Welcome Video:
-        Welcome Video: Welcome Video
-        Welcome to Online PD for ECS: Welcome to Online PD for ECS
+        Welcome Video: Vídeo de boas-vindas
+        Welcome to Online PD for ECS: Bem-vindo ao PD on-line para ECS
       PDECS commitment:
-        ECS PD commitments: ECS PD commitments
-        overview of program commitments: overview of program commitments
+        ECS PD commitments: Compromissos de PD para ECS
+        overview of program commitments: visão geral de compromissos do programa
       PDECS tour:
-        Tour of PD Space: Tour of PD Space
-        tour of the PD space: tour of the PD space
+        Tour of PD Space: Um tour pelo espaço PD
+        tour of the PD space: um tour pelo espaço PD
       PDK5 Beyond C:
         Beyond: Além
+      PDK5 CS Video:
+        Computer Science: Ciência da Computação
       PDK5 CS overview:
-        Overview of programming concepts: Overview of programming concepts
+        Overview of programming concepts: Visão geral de conceitos de programação
       PDK5 Classroom Culture C:
         Classroom Culture: Cultura de sala de aula
+      PDK5 Connections:
+        Connections: Connections
       PDK5 Course Maps C: [ ]
       PDK5 Course Overview C: [ ]
+      PDK5 Foundations F:
+        foundational skill: foundational skill
       PDK5 Glossary C:
         Vocabulary: Vocabulário
       PDK5 Intro C: [ ]
@@ -132,6 +207,10 @@ pt-BR:
         Pair Programming: Programação em duplas
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Estratégias para o ensino de ciência da computação
+      PDK5 Strategies 1:
+        Classroom Strategies: Classroom Strategies
+      PDK5 Strategies F:
+        Strategies Discussion: Strategies Discussion
       PDK5 Teacher Dashboard 1:
         Dashboard 1: Painel de controle 1
       PDK5 Teacher Dashboard 2:
@@ -258,6 +337,9 @@ pt-BR:
       U1L13 Student Lesson Introduction:
         description here: descrição aqui
         title: título
+      U1L13 Text Compression:
+        Compress text by identifying repeated patterns.: Comprima o texto identificando padrões repetidos.
+        U1L13 Text Compression: U1L13 Text Compression
       U1L16 Student Lesson Introduction:
         description here: descrição aqui
         title: título
@@ -271,17 +353,14 @@ pt-BR:
         description here: descrição aqui
         title: título
       U1L4 Widget Demo - Video:
-        Widget Demonstration - Video: 'Widget Demonstration - Video'
+        Widget Demonstration - Video: 'Demonstração de widget - vídeo'
         description here: descrição aqui
       U1L5 How the Internet Works - Video:
-        How the Internet Works - Video: 'How the Internet Works - Video'
+        How the Internet Works - Video: 'Como a internet funciona - vídeo'
         description here: descrição aqui
       U1L5 Student Lesson Introduction:
         description here: descrição aqui
         title: título
-      U1L6 Odometer Widget:
-        Odometer Widget: Odometer Widget
-        description here: descrição aqui
       U1L6 Student Lesson Introduction:
         description here: descrição aqui
         title: título
@@ -289,14 +368,92 @@ pt-BR:
         description here: descrição aqui
         title: título
       U1L8 Student Lesson Introduction:
-        Sending Numbers: Sending Numbers
+        Sending Numbers: Envio de números
         description here: descrição aqui
       U1L9 Student Lesson Introduction:
         description here: descrição aqui
         title: título
+      facilitator test: [ ]
+      sciPD Course Overview: [ ]
+      sciPD Intro: [ ]
+      sciPD StarLogo intro 1:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD StarLogo intro 2:
+        Guided Intro to StarLogo Nova: Guided Intro to StarLogo Nova
+      sciPD StarLogo intro 3:
+        Guided Tour of StarLogo Nova pt 3: Guided Tour of StarLogo Nova pt 3
+      sciPD StarLogo intro 4:
+        Guided Intro to StarLogo Nova part 4: Guided Intro to StarLogo Nova part 4
+      sciPD StarLogo intro video:
+        Introduction to StarLogo Nova: Introduction to StarLogo Nova
+      sciPD StarLogo tutorial 1:
+        StarLogo Tutorial part 1: StarLogo Tutorial part 1
+      sciPD StarLogo tutorial 2:
+        StarLogo Tutorial part 2: StarLogo Tutorial part 2
+      sciPD StarLogo tutorial 3:
+        StarLogo Tutorial part 3: StarLogo Tutorial part 3
+      sciPD StarLogo tutorial 4:
+        StarLogo Nova Tutorial Part 4: StarLogo Nova Tutorial Part 4
+      sciPD StarLogo tutorial 5:
+        StarLogo Nova Tutorial Part 5: StarLogo Nova Tutorial Part 5
+      sciPD StarLogo tutorial 6:
+        StarLogo Nova Tutorial Part 6: StarLogo Nova Tutorial Part 6
+      sciPD StarLogo tutorial 7:
+        StarLogo Nova Tutorial Part 7: StarLogo Nova Tutorial Part 7
+      sciPD StarLogo tutorial 8:
+        StarLogo Nova Tutorial Part 8: StarLogo Nova Tutorial Part 8
+      sciPD agent based forum:
+        Agent Based Modeling of Adaptive Systems Forum: Agent Based Modeling of Adaptive Systems Forum
+      sciPD agent based video:
+        Agent Based Modeling: Agent Based Modeling
+      sciPD class models forum:
+        Models in the Classroom: Models in the Classroom
+      sciPD class models video:
+        Using Models in the Classroom: Using Models in the Classroom
+      sciPD complex adaptive forum:
+        Complex Adaptive Forum: Complex Adaptive Forum
+      sciPD complex adaptive video:
+        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
+      sciPD computer models forum:
+        Using Computer Models in Science: Using Computer Models in Science
+      sciPD computer models video:
+        Using Computer Models in Science: Using Computer Models in Science
+      sciPD culture forum:
+        Dispositions and Classroom Culture: Dispositions and Classroom Culture
+      sciPD culture video:
+        Dispositions And Classroom Culture: Dispositions And Classroom Culture
+      sciPD expectations: [ ]
+      sciPD finish:
+        Code.org Post Survey: Code.org Post Survey
+      sciPD framework forum:
+        Computational Thinking and the Framework for K-12: Computational Thinking and the Framework for K-12
+      sciPD framework video:
+        Framework: Quadro
+      sciPD intro finale: [ ]
+      sciPD intro to CS forum: [ ]
+      sciPD intro to CS video:
+        Intro to Computational Science: Intro to Computational Science
+      sciPD intro video:
+        Welcome to CS in Science: Welcome to CS in Science
+      sciPD logistics 1:
+        Details and Logistics: Details and Logistics
+      sciPD materials:
+        Workshop Materials: Workshop Materials
+      sciPD meet and greet: [ ]
+      sciPD p2 intro:
+        Welcome to Phase 2: Welcome to Phase 2
+      sciPD p3 intro:
+        CS in Science Introduction to Phase 3 PD: CS in Science Introduction to Phase 3 PD
+      sciPD preQ:
+        Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
+      sciPD what to expect:
+        What to Expect: What to Expect
       test demo level:
         demo description: demo description
         demo title: demo title
+      test discourse level type:
+        this is a discourse forum: this is a discourse forum
+        title: título
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
@@ -403,15 +560,25 @@ pt-BR:
         Convert Blocks to Math: Converta os blocos em matemática
         Type out the arithmetic expression that matches this code: Digite a expressão aritmética que corresponde a esse código
         Type the arithmetic expression here: Insira a expressão aritmética aqui
+      ECSPD PD goals:
+        Documenting Your PD Goals: Documenting Your PD Goals
+      ECSPD course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
+      ECSPD impact in program:
+        Impact of Computing: Impact of Computing
+      ECSPD program overlap:
+        Relationship between Curriculum and PD: Relationship between Curriculum and PD
       ECSPD strategies:
-        Classroom Strategies Journal: Classroom Strategies Journal
+        Classroom Strategies Journal: Diário de estratégias de sala de aula
       ECSPD your goals:
-        Documenting Your Goals: Documenting Your Goals
+        Documenting Your Goals: Documentando seus objetivos
       Open text response example:
         I loved it because...: Eu amei porque...
         Open text response example: Exemplo de resposta com texto aberto
+      PDAlg course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
-        Biggest Challenges: Biggest Challenges
+        Biggest Challenges: Os maiores desafios
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: Proporcionando um ambiente de aprendizagem positivo em sua sala de ciência da computação
         In my classroom, I want to...: Em minha sala de aula, eu quero...
@@ -429,7 +596,7 @@ pt-BR:
         Do you see computer science as a foundational skill for your students? Why or why not?: Você vê a ciência da computação como uma habilidade fundamental para seus alunos? Por que, ou por que não?
         Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Goals:
-        Goals for using Code.org in your Classroom: Goals for using Code.org in your Classroom
+        Goals for using Code.org in your Classroom: Objetivos para usar a Code.org em sua sala de aula
       PDK5 Impact 1:
         Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Você acha que seus alunos vão achar as atividades on-line dos cursos para o Ensino Fundamental divertidas e envolventes? Por que, ou por que não?
         Impact for students: Impacto para os alunos
@@ -438,95 +605,98 @@ pt-BR:
         Connections to other Subjects: Relação com outros assuntos
         Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: A ciência da computação tem relação com outros tópicos ou assuntos que seus alunos estão aprendendo? Explique por que sim ou por que não.
         Your thoughts here: Exponha seus pensamentos aqui
+      PDK5 Impact 3:
+        Real-world applications for Students: Real-world applications for Students
+        Your thoughts here: Exponha seus pensamentos aqui
       PDK5 Loops 2:
-        The Importance of Loops: The Importance of Loops
+        The Importance of Loops: A importância dos laços
       PDK5 Problem Solving:
         I could integrate this in my classroom by...: Eu poderia integrar isso em minha sala de aula...
         Problem Solving Methods: Métodos de resolução de problema
       PDK5 Promo Video:
         "Code Studio: Kid tested, Teacher approved": 'Code Studio: aluno testado, professor aprovado'
       PDK5 Promo Video 2:
-        "Code Studio: Kid tested, Teacher approved": 'Code Studio: aluno testado, professor aprovado'
+        "Code Studio: Kid Tested, Teacher Approved!": 'Code Studio: Kid Tested, Teacher Approved!'
         My first impressions of Code Studio are...: Minhas primeiras impressões do Code Studio são...
       PDK5 Strategies O:
         "I think teaching computer science will be different than teaching other subjects in these ways: ...": 'Eu acho que ensinar ciência da computação será diferente de ensinar outras matérias das seguintes formas: ...'
         Strategies for Teaching Computer Science: Estratégias para o ensino de ciência da computação
       PDK5 Test5:
-        Big Test: Big Test
+        Big Test: O grande teste
       Test Free Response Assessment Question:
-        Enter your reflection here: Enter your reflection here
-        0: '? Imagine that you have to send a list of 10 numbers to friend in binary using the bit-sending widget. The numbers are all between 0 and 100. Describe the issues or problems that you and your friend would encounter in trying to do this. How would you address these problem?'
-        1: ': Imagine that you have to send a list of 10 numbers to friend in binary using the bit-sending widget. The numbers are all between 0 and 100. Describe the issues or problems that you and your friend would encounter in trying to do this. How would you address these problem?'
-        Sending Numbers Free Response: Sending Numbers Free Response
+        Enter your reflection here: Digite sua reflexão aqui
+        0: '? Imagine que você precisa enviar uma lista de 10 números para um amigo em binário, usando o widget de envio de bits. Os números estão todos entre 0 e 100. Descreva as dúvidas ou problemas que você e seu amigo vão encontrar tentando fazer isso. Como você abordaria esses problemas?'
+        1: ': Imagine que você precisa enviar uma lista de 10 números para um amigo em binário, usando o widget de envio de bits. Os números estão todos entre 0 e 100. Descreva as dúvidas ou problemas que você e seu amigo vão encontrar tentando fazer isso. Como você abordaria esses problemas?'
+        Sending Numbers Free Response: Resposta livre sobre envio de números
       Test Markdown level:
         Enter prompt here: Digite a mensagem aqui
         Enter title here: Insira o título aqui
       U1L10 Assessment Free Response:
-        "A follow-up to the Assessment Question #2:": 'A follow-up to the Assessment Question #2:'
-        "Assessment: Encoding Text": 'Assessment: Encoding Text'
+        "A follow-up to the Assessment Question #2:": 'Um seguimento para a Questão 2:'
+        "Assessment: Encoding Text": 'Avaliação: codificação de texto'
       U1L10 Journal Free Response:
-        "Free Response: Encoding Text": 'Free Response: Encoding Text'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        "Free Response: Encoding Text": 'Resposta livre: codificação de texto'
+        Respond to this prompt or to another as directed by your teacher.: Responda ao que é pedido ou ao que é direcionado por seu professor.
       U1L11 Reflection Free Response:
-        "Reflection: Sending Formatted Text": 'Reflection: Sending Formatted Text'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        "Reflection: Sending Formatted Text": 'Reflexão: envio de texto formatado'
+        Respond to this prompt or to another as directed by your teacher.: Responda ao que é pedido ou ao que é direcionado por seu professor.
       U1L12 Reflection Free Response:
-        "Reflection: Data Storage": 'Reflection: Data Storage'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        "Reflection: Data Storage": 'Reflexão: armazenamento de dados'
+        Respond to this prompt or to another as directed by your teacher.: Responda ao que é pedido ou ao que é direcionado por seu professor.
       U1L13 Assessment 1:
-        "Assessment 1: Text Compression": 'Assessment 1: Text Compression'
-        Write (in the space below) a segment of text that should compress effectively and efficiently.: Write (in the space below) a segment of text that should compress effectively and efficiently.
+        "Assessment 1: Text Compression": 'Avaliação 1: Compressão de texto'
+        Write (in the space below) a segment of text that should compress effectively and efficiently.: Escreva (no espaço abaixo) um segmento de texto que deve ser comprimido de forma efetiva e eficiente.
       U1L13 Assessment 2:
-        "Assessment 2: Text Compression": 'Assessment 2: Text Compression'
-        Write (in the space below) a segment of text that will not compress well.: Write (in the space below) a segment of text that will not compress well.
+        "Assessment 2: Text Compression": 'Avaliação 2: Compressão de texto'
+        Write (in the space below) a segment of text that will not compress well.: Escreva (no espaço abaixo) um segmento de texto que não será bem comprimido.
       U1L13 Reflection Free Response:
-        "Reflection: Text Compression": 'Reflection: Text Compression'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        "Reflection: Text Compression": 'Reflexão: compressão de texto'
+        Respond to this prompt or to another as directed by your teacher.: Responda ao que é pedido ou ao que é direcionado por seu professor.
       U1L16 Reflection Free Response:
-        "Reflection: Encoding Complex data": 'Reflection: Encoding Complex data'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
+        "Reflection: Encoding Complex data": 'Reflexão: codificação de dados complexos'
+        Respond to this prompt or to another as directed by your teacher.: Responda ao que é pedido ou ao que é direcionado por seu professor.
       U1L2 Free response assessment question:
-        "Assessment: Sending Binary Messages": 'Assessment: Sending Binary Messages'
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
-        Enter your response here.: Enter your response here.
+        "Assessment: Sending Binary Messages": 'Avaliação: envio de mensagens binárias'
+        Complete the Lesson 2 Rubric.: Complete a rubrica da lição 2.
+        Enter your response here.: Digite sua resposta aqui.
       U1L2 Free response reflection question:
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
-        Enter your reflection here.: Enter your reflection here.
-        "Reflection: Sending Binary Messages": 'Reflection: Sending Binary Messages'
+        Complete the Lesson 2 Rubric.: Complete a rubrica da lição 2.
+        Enter your reflection here.: Digite sua reflexão aqui.
+        "Reflection: Sending Binary Messages": 'Reflexão: envio de mensagens binárias'
       U1L3 Free response reflection question:
-        Complete the Lesson 3 Rubric.: Complete the Lesson 3 Rubric.
-        Enter your reflection here.: Enter your reflection here.
-        "Reflection: Sending Complex Messages": 'Reflection: Sending Complex Messages'
+        Complete the Lesson 3 Rubric.: Complete a rubrica da lição 3.
+        Enter your reflection here.: Digite sua reflexão aqui.
+        "Reflection: Sending Complex Messages": 'Reflexão: envio de mensagens complexas'
       U1L4 Free Response Reflection:
-        Enter your reflection here.: Enter your reflection here.
-        Reflect on this lesson: Reflect on this lesson
+        Enter your reflection here.: Digite sua reflexão aqui.
+        Reflect on this lesson: Reflita sobre essa lição
       U1L4 Free response reflection question:
-        "Assessment: Bit sending Widget": 'Assessment: Bit sending Widget'
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
-        Enter your reflection here.: Enter your reflection here.
+        "Assessment: Bit sending Widget": 'Avaliação: widget de envio de bits'
+        Complete the Lesson 2 Rubric.: Complete a rubrica da lição 2.
+        Enter your reflection here.: Digite sua reflexão aqui.
       U1L5 Free Response Assessment:
-        Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.: Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.
-        Free Response Assessment: Free Response Assessment
+        Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.: Complete a rubrica para a lição 5. Então, responda ao que é pedido usando aproximadamente 100 palavras.
+        Free Response Assessment: Avaliação de resposta livre
       U1L5 Free Response Lesson Review:
-        Complete these three sentences.: Complete these three sentences.
-        Lesson Review: Lesson Review
+        Complete these three sentences.: Complete essas três frases.
+        Lesson Review: Revisão da lição
       U1L6 Free Response Assessment:
-        "Assessment: Number Systems": 'Assessment: Number Systems'
+        "Assessment: Number Systems": 'Avaliação: sistemas de números'
       U1L6 Free Response Reflection:
-        "Reflection: Number Systems": 'Reflection: Number Systems'
+        "Reflection: Number Systems": 'Reflexão: sistemas de números'
       U1L7 Free Response Assessment:
-        "Assessment: Binary Numbers": 'Assessment: Binary Numbers'
+        "Assessment: Binary Numbers": 'Avaliação: números binários'
       U1L7 Free Response Reflection:
-        "Reflect on your learning in this lesson. In the space below, enter:": 'Reflect on your learning in this lesson. In the space below, enter:'
-        "Reflection: Binary Numbers": 'Reflection: Binary Numbers'
+        "Reflect on your learning in this lesson. In the space below, enter:": 'Reflita sobre seu aprendizado nessa lição. No espaço abaixo, digite:'
+        "Reflection: Binary Numbers": 'Reflexão: números binários'
       U1L8 Free Response Getting Started:
-        "Getting Started: Sending Numbers ": 'Getting Started: Sending Numbers '
-        Respond to the following question.: Respond to the following question.
+        "Getting Started: Sending Numbers ": 'Primeiros passos: envio de números '
+        Respond to the following question.: Responda à seguinte questão.
       U1L8 Free Response Reflection:
-        Complete the Sending Numbers Checklist and then respond to the following prompt.: Complete the Sending Numbers Checklist and then respond to the following prompt.
-        "Reflection: Sending Numbers ": 'Reflection: Sending Numbers '
+        Complete the Sending Numbers Checklist and then respond to the following prompt.: Complete a lista de números de envio e então responda ao que é pedido a seguir.
+        "Reflection: Sending Numbers ": 'Reflexão: envio de números '
       U1L9 Free Response Assessment:
-        "Assessment: Real-world Numbers ": 'Assessment: Real-world Numbers '
+        "Assessment: Real-world Numbers ": 'Avaliação: números do mundo real '
       text match test:
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null

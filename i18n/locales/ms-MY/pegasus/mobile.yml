@@ -75,8 +75,8 @@ ms-MY:
   participant_educator: Pendidik
   participant_engineer: Jurutera perisian
   participant_other: Tiada satu pun di atas
-  print_all: Print all
-  print_ice_art: Print your ice art
+  print_all: Cetak semua
+  print_ice_art: Cetakan seni ais anda
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: Saya seorang
   never_spam: Kita tidak akan spam anda
@@ -121,9 +121,9 @@ ms-MY:
   studiobar_teacher_body: Perkenalkan Studio Kod dalam kelas anda
   studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
+  studiobar_donate_title: Derma
   studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: Shop
+  studiobar_shop_title: Kedai
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: |
     &ldquo;I challenge girls in every single country
@@ -182,25 +182,25 @@ ms-MY:
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: Kedai
   homepage_slot_text_flappy: Kod Flappy
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning today
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
+  homepage_action_text_codevideo: Tonton Video
+  homepage_action_text_teachervideo: Tonton Video
+  homepage_action_text_learn: Start learning
+  homepage_action_text_signpetition: Tandatangan petisyen
+  homepage_signpetition_dropdown: 'Tandatangan petisyen kami &#x25BE;'
   homepage_slot_text_title_hoc: Hour of Code
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Sesiapa pun boleh belajar. Mulakan hari ini
   homepage_slot_text_link_hoc: Cuba Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
+  homepage_slot_text_link_codestudio: Cuba Code Studio
+  homepage_slot_text_link_local: Cari kelas tempatan
+  homepage_slot_text_link_othercourses: Lain-lain kursus dalam talian
+  homepage_slot_text_title_educators: Pendidik
+  homepage_slot_text_blurb_educators: Ajar pelajar-pelajar anda
   homepage_slot_text_link_k5: Courses for grades K-5
   homepage_slot_text_link_fullcurriculum: See our full curriculum
   homepage_slot_text_link_pd: Professional development
@@ -212,7 +212,7 @@ ms-MY:
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
   homepage_donors_seall: See all
-  homepage_donors_donate: Donate
+  homepage_donors_donate: Derma
   contact_form_topic_student: saya seorang pelajar
   contact_form_topic_parent: Saya seorang ibu atau bapa
   contact_form_topic_teacher: Saya guru/pendidik
@@ -279,7 +279,7 @@ ms-MY:
   dashboard_landing_educator_blog: Baca tentang berita dan maklumat terkini mengenai bahan-bahan kami di Blog pendidik kami
   dashboard_landing_smart_hints: Sila bantu kami untuk menambah petunjuk pintar ke tutorial Code.org
   dashboard_landing_video_player: Uji pemain video baru kami di sekolah anda
-  dashboard_landing_progress_title: Main class progress
+  dashboard_landing_progress_title: Kemajuan kelas utama
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
   dashboard_landing_available_title: Kursus-kursus yang disediakan
@@ -333,7 +333,7 @@ ms-MY:
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: Nama pelajar
   dashboard_students_name: Nama
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Kemajuan
   dashboard_students_age: Umur
   dashboard_students_gender: Jantina
   dashboard_students_male: Lelaki
@@ -356,7 +356,7 @@ ms-MY:
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
   dashboard_students_join_link: Beritahu kepada pelajar anda untuk buka akaun mereka sendiri dan sertai seksyen pada
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
-  dashboard_students_print_page: Print this page
+  dashboard_students_print_page: Cetak halaman ini
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
   dashboard_curriculum_overview: K-5 Curriculum Overview
@@ -382,7 +382,7 @@ ms-MY:
   dashboard_new_password: Kata laluan baru
   dashboard_progress_not_started: not started
   dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: not completed
+  dashboard_progress_not_completed: belum selesai
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
@@ -397,7 +397,7 @@ ms-MY:
   dashboard_sections_word_account_creation: A simple word assigned by Code.org
   dashboard_sections_sign_in_question: Where do students sign-in?
   dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
-  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_sign_in_main: 'http://code.org dan klik "Daftar Masuk"'
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
   dashboard_faq: Soalan yang kerap ditanya

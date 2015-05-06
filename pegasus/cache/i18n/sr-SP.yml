@@ -227,7 +227,7 @@
   homepage_slot_text_title_advocates: Заговорници
   homepage_slot_text_blurb_advocates: Подржите наш рад
   homepage_slot_text_link_stats: Погледај статистику
-  homepage_slot_text_link_buy: Buy a T-shirt or hat
+  homepage_slot_text_link_buy: Укључите се
   homepage_slot_text_link_donate: Донирај
   homepage_header_codestudio: Студио Програмирања - радови наших ђака
   homepage_header_donors: Code.org захваљује својим сарадницима
@@ -504,24 +504,24 @@
   scratch_name: Будите креативни с програмирањем
   lightbot_name: Lightbot
   thinkersmith_name: Моји роботски пријатељи
-  condcards_name: Conditionals with Cards
+  condcards_name: Услови са картама
   lightbotintl_name: Lightbot
-  codehs_name: Learn to Code With Karel the Dog
+  codehs_name: Научите да програмирате са Карелом псом
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Направи игрицу са JavaScript-ом
-  processing_name: Drawing with Code
-  robomind_name: Program a virtual robot
-  groklearning_name: Eliza the Chatterbot Doctor
-  quorum_name: Accessible programming (with screenreader support)
-  codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable (pre-readers welcome)
-  tynkerapp_name: Tynker - on tablets
-  robomindnl_name: Program a virtual robot
-  flappy_name: Make a Flappy game
-  bitsbox_name: Bitsbox - make a game
-  makegameswithus_name: Build an iPhone game in your browser!
+  processing_name: Цртање програмрињем
+  robomind_name: Програмирајте виртуелног робота
+  groklearning_name: Докторка Елиза, виртуелни саговорник
+  quorum_name: Програмирање у моду без баријера (са подршком читача екрана)
+  codespark_name: The Foos (добродошли су и они који још не знају да читају)
+  kodable_name: Kodable (добродошли су и они који још не знају да читају)
+  tynkerapp_name: Tynker - на таблетима
+  robomindnl_name: Програмирајте виртуелног робота
+  flappy_name: Направите флапи игру
+  bitsbox_name: Bitsbox - напрабите игру
+  makegameswithus_name: Направите Ајфон игру у вашем браузеру!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
@@ -808,11 +808,11 @@
   pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Learn Python programming
   hacketyhack_beyond_name: Learn Ruby
-  robomind_beyond_name: Program a virtual robot
-  makegameswithus_beyond_name: Build an iPhone game in your browser!
+  robomind_beyond_name: Програмирајте виртуелног робота
+  makegameswithus_beyond_name: Направите Ајфон игру у вашем браузеру!
   appinventor_beyond_name: AppInventor Hour of Code
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Learn to Code With Karel the Dog
+  codehs_beyond_name: Научите да програмирате са Карелом псом
   udemy_beyond_name: Online Programming Courses
   lynda_beyond_name: Online Programming Courses
   edx_beyond_name: Harvard CS50 class

@@ -6,12 +6,12 @@ sk-SK:
   csedweek_dates: 8. až 14. decembera 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hodina Kódu</a> sa blíži. Vyzývame všetkých učiteľov a organizátorov, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> naplánujte si svoju Hodinu Kódu</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Učíte informatiku? Pozrite sa aj na ďalšie zdroje CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># </h3>'
   anybody_can_learn: Každý sa môže naučiť.
   learn_now: Nauč sa teraz
   petition_message: Každý študent v každej škole by mal mať možnosť naučiť sa informatiku
   petition_sign_message: 'Ak súhlasíš, zapíš svoje meno.  Zapoj # iných.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message_support: 'Pokiaľ nás podporuješ, zapíš sa. Pridaj sa k  # ostatným.'
   name: Meno
   email: E-mail
   zipcode: Poštové smerovacie číslo alebo krajina
@@ -91,7 +91,7 @@ sk-SK:
   learn_classes: Nájsť miestne triedy
   hoc_is_here: '#HourOfCode je tu - pozri na to! @codeorg'
   just_did_hoc: 'Prave som spravil #HourOfCode - Pozri sa na to! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Prečo sa viac škôl nevenuje výučbe informatiky? Môžeme to napraviť. http://youtu.be/nKIu9yen5nc. Navštívte http://code.org/ a zistíte viac.
   learn_hoc: Nauč sa Hour of Code
   beyond_hoc: Viac ako Jedna Hodina
   what_gender: Akého ste pohlavia?
@@ -106,11 +106,11 @@ sk-SK:
   students_and_lines: '%{students} študenti ukončili Hour of Code a napísali %{lines} riadkov kódu.'
   start_hoc: Spusti Hour of Code teraz
   contact_form_topic_press: Tlač/média (rozhovor alebo stretnutie)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_nina: '"Každý deň priniesť rovnaké výsledky &mdash; 100% záväzok."-Nina Nichols Peery, učiteľ'
+  stats_student: '"Vedela som, že to bola <b>-jedinečná</b> príležitosť."-Mariana Alzate, 5. ročník'
   stats_michael: '"<b>Nikdy</b> som nevidel svojich študentov tak nadšených učiť sa."-Michael Clark, učiteľ'
   studiobar_title: "Preskúmajte <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_title_nolink: Explore Code Studio
+  studiobar_title_nolink: Preskúmajte Code Studio
   studiobar_elementary_title: Základné kurzy
   studiobar_elementary_body: 'Naše tri nové kurzy pre K&#8209;5'
   studiobar_hoc_title: Hodina Kódu
@@ -124,11 +124,8 @@ sk-SK:
   studiobar_donate_title: Darovať
   studiobar_donate_body: Za každý darovaný dolár sa naučí jedno dieťa
   studiobar_shop_title: Obchod
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
+  studiobar_shop_body: Prelom stereotypy. Nos naše logo s hrdosťou.
+  homepage_hero_text_malala: '&ldquo;Vyzývam dievčatá v každej krajiny, sa aby naučili jednu Hodinu Kódu&rdquo;  Malala, nositeľ Nobelovej ceny mieru'
   homepage_hero_text_susan: |
     &ldquo;If you can change technology,
     you can change the world.&rdquo;
@@ -186,7 +183,7 @@ sk-SK:
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Watch the video
   homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning today
+  homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'Sign our petition &#x25BE;'
   homepage_slot_text_title_hoc: Hodina kódovania
@@ -205,13 +202,13 @@ sk-SK:
   homepage_slot_text_link_fullcurriculum: See our full curriculum
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Get involved
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_blurb_advocates: Podpor našu prácu
+  homepage_slot_text_link_stats: Pozrite sa na štatistiky
+  homepage_slot_text_link_buy: Zapojte sa
+  homepage_slot_text_link_donate: Venuj dar
   homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_header_donors: Code.org ďakuje za podporu
+  homepage_donors_seall: Zobraziť všetky
   homepage_donors_donate: Darovať
   contact_form_topic_student: som študent
   contact_form_topic_parent: Som rodič
@@ -333,7 +330,7 @@ sk-SK:
   dashboard_students_new_section: 'Vytvorili ste novú sekciu! Teraz pridajte svojich študentov pomocou tlačítka <b>Pridať študenta</b> a <b>Pridať viacerých študentov</b> vyššie.'
   dashboard_students_placeholder_name: Meno študenta
   dashboard_students_name: Meno
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Pokrok
   dashboard_students_age: Vek
   dashboard_students_gender: Pohlavie
   dashboard_students_male: Muž

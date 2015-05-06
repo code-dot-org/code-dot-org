@@ -165,7 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "τοποθέτησε-εικόνα (χ, ψ, εικόνα)"},
 "offsetBlockTitle":function(d){return "μετατόπιση (x, y, εικόνα)"},
 "rectangleBlockTitle":function(d){return "ορθογώνιο (πλάτος, ύψος, στυλ, χρώμα)"},
-"reinfFeedbackMsg":function(d){return "Μπορείτε να πατήσετε το κουμπί \"Προσπαθείστε ξανά\" για να επεξεργαστείτε τη ζωγραφιά σας."},
+"reinfFeedbackMsg":function(d){return "Μπορείτε να πατήσετε το \"Συνέχεια παιχνιδιού\" κουμπί για να επεξεργαστείτε το πρόγραμμα σας."},
 "rotateImageBlockTitle":function(d){return "περιστροφή (μοίρες, εικόνα)"},
 "scaleImageBlockTitle":function(d){return "κλίμακα (παράγοντας, εικόνα)"},
 "squareBlockTitle":function(d){return "τετράγωνο (μέγεθος, στυλ, χρώμα)"},

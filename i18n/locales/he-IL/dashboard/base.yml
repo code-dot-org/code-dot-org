@@ -33,14 +33,14 @@ he:
     submit: הוסף רמז
   appname: Code.org
   stage: שלב
-  stage_number: 'Stage %{number}'
+  stage_number: 'שלב %{number}'
   puzzle: חידה
   trophies: גביעי ניצחון
   courses: מסלולים
   of: של
   more: יותר
   less: פחות
-  beta: beta
+  beta: בטא
   try_hoc: 'נסה את שעת הקוד, לחץ כאן >> '
   try_k8intro: "נסה את הקורס מבוא למדעי המחשב לכיתות גן-ח'(15-25 שעות)"
   k8intro: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
@@ -52,7 +52,7 @@ he:
   auth:
     sign_in_with: 'היכנס באמצעות %{provider}'
     signed_in: נכנסת!
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
+    signed_out: 'התנתקת מ<a href="%{url}">Code.org</a>.'
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: כבר נרשמת?
     notyet_signedup: לא הצטרפת עדיין?
@@ -64,8 +64,10 @@ he:
     need_confirmation: 'לא קיבלת את  ההוראות האישור?'
     need_unlock: לא קיבלת את ההוראות הפתיחה?
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
+    overview_student: 'הירשם כדי לעקוב אחרי ההתקדמות שלך. כתובת המייל שלך תשמש לכניסה למערכת ולשחזור סיסמא . למידע נוסף ראה  <a href="http://code.org/privacy">מדיניות הפרטיות</a>.'
+    overview_teacher: 'תוכל ללמד מדעי המחשב בכיתה שלך באמצעות יצירת החשבון. <p/>תוכל להוסיף את תלמידי כיתתך ולעקוב אחרי התקדמותם.'
     no_signup_message: 'אתה יכול <a target="_blank" href="http://learn.code.org">לדפדף בחידות והשלבים השונים</a>, אבל אתה צריך להירשם על-מנת לשמור את התקדמותך.'
     teacher_educator_guide: ראה מדריך למחנך
     teacher_pitch: הירשמות מורה ל code.org
@@ -89,7 +91,7 @@ he:
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
   signin_form:
     title: כבר יצרת משתמש? היכנס למערכת
     login: דוא ל או שם משתמש
@@ -101,7 +103,7 @@ he:
     try_hoc: נסה קודם את שעת הקוד
     try_20hours: 'נסה את קורס ה-20 שעות שלנו - מבוא למדעי המחשב'
   signinsection:
-    welcome: 'Welcome to %{section_name}'
+    welcome: 'ברוך הבא ל%{section_name}'
     name: בחר את השם שלך
     picture: עכשיו מצא את התמונה הסודית שלך
     words: כעת הכנס את המילים הסודיות שלך
@@ -139,7 +141,7 @@ he:
         לא נמצא משתמש רשום ע״י ״%{teacher_email_or_code}״.
         אנא בקש מהם להירשם כאן ונסה להוסיף אותם שנית
       section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: Please enter a section code
+      blank_code: אנא הזן קוד סעיף
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
       invite_student:
@@ -219,7 +221,7 @@ he:
       finished_hoc: סיימתי את שעת הקוד שלי
       sign_in_to_save: התחבר כדי לשמור את התקדמות
       free_play:
-        playlab: Make an App
+        playlab: צור אפליקציה
         artist: Draw Something
     user:
       classroom: דף הבית של המורה
@@ -257,8 +259,8 @@ he:
       levels_key: Levels key
       perfect: Completed, perfect
       completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
+      tried: ניסה אך לא השלים
+      not_tried: טרם ניסה
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
       trophies: גביעי ניצחון
@@ -267,7 +269,7 @@ he:
       username: שם משתמש
       password: סיסמה
       manage: נהל תלמידים
-      dashboard: Go to Teacher Dashboard
+      dashboard: לגשת לתצגת המורה
       add: הוסף תלמיד
       remove: הסר סטודנט
       confirm_remove: Are you sure you want to remove this student?
@@ -320,6 +322,7 @@ he:
     classroom_activity: פעילות לא מחוברת
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'כבר רשום?  %{link}'
@@ -485,6 +488,8 @@ he:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: אישור
   time:

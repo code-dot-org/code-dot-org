@@ -1,8 +1,8 @@
 {
-  "divideByZeroError":"Your program results in division by zero.",
-  "emptyComputeBlock":"You must attach a block to the \"evaluate\" block.",
+  "divideByZeroError":"O seu programa tem como resultado uma divisão por zero.",
+  "emptyComputeBlock":"Deve anexar um bloco para o bloco \"avaliar\".",
   "equivalentExpression":"Tente reordenar os seus argumentos para obter exactamente a mesma expressão.",
-  "evaluate":"evaluate",
+  "evaluate":"avaliar",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
   "failedInput":"Sua função não retorna o resultado certo para todos os valores.",
   "goal":"Objectivo:",

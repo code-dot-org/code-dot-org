@@ -165,7 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "Görüntü Yerleştir (x, y, resim)"},
 "offsetBlockTitle":function(d){return "uzaklık (x, y, resim)"},
 "rectangleBlockTitle":function(d){return "dikdörtgen (genişlik, yükseklik, Stil, renk)"},
-"reinfFeedbackMsg":function(d){return "Çiziminizi düzenlemek için \"Oynamayı Sürdür\" butonuna basın."},
+"reinfFeedbackMsg":function(d){return "Programınızı düzenlemek için \"Oynamaya Devam Et\" düğmesine basabilirsiniz."},
 "rotateImageBlockTitle":function(d){return "döndürme (derece, resim)"},
 "scaleImageBlockTitle":function(d){return "ölçek(faktör, resim)"},
 "squareBlockTitle":function(d){return "kare (boyut, Stil, renk)"},
@@ -180,6 +180,6 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "outline":function(d){return "anahat"},
 "solid":function(d){return "katı"},
 "string":function(d){return "dize"},
-"stringMismatchError":function(d){return "You have a string with the wrong capitalization."},
-"userCodeException":function(d){return "An error occurred while executing your code."},
-"wrongBooleanError":function(d){return "Your blocks evaluate to the wrong boolean value."}};
+"stringMismatchError":function(d){return "Yanlış büyük harf içeren bir yazın var."},
+"userCodeException":function(d){return "Kodunuz yürütülürken bir sorun oluştu."},
+"wrongBooleanError":function(d){return "Bloklarınız yanlı boolean değerini yürüttü."}};

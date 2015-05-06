@@ -64,6 +64,8 @@ sk:
     need_confirmation: Neprišli ti pokyny na potvrdenie?
     need_unlock: Neprišli ti pokyny na odomknutie?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Vytvor si účet a sleduj ako postupuješ. Tvoj email sa používa hlavne na prihlásenie a na získanie zabudnutého hesla. Viac informácií nájdeš na našej stránke zásad <a href="http://code.org/privacy">Ochrany súkromia</a>.'
     overview_teacher: 'Výučujte informatiku vo vašej triede.<p/> Po prihlásení na účet budete mať možnosť pridávať svojich študentov a sledovať ich pokrok.'
     no_signup_message: 'Môžete <a target="_blank" href="http://learn.code.org">prehliadať rôzne úrovne a hádanky</a>, ale pre uloženie Vášho postupu je nutné prihlásenie.'
@@ -316,6 +318,7 @@ sk:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'Already registered? %{link}'
@@ -481,6 +484,8 @@ sk:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Zadajte vašu odpoveď
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: ok
   time:
