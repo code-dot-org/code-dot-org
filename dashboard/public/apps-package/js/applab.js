@@ -502,22 +502,27 @@ function adjustAppSizeStyles(container) {
         } else if (rules[j].media && childRules) {
           adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
 
+          // NOTE: selectorText can appear in two different forms when styles and IDs
+          // are both present. IE places the styles before the IDs, so we match both forms:
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
           for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
-            if (childRules[k].selectorText === "div#visualization.responsive") {
+            if (childRules[k].selectorText === "div#visualization.responsive" ||
+                childRules[k].selectorText === "div.responsive#visualization") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
               childRules[k].style.cssText = "max-height: " +
                   Applab.appHeight * scale + "px; max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive" ||
+                       childRules[k].selectorText === "div.responsive#visualizationColumn") {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding" ||
+                       childRules[k].selectorText === "div.with_padding.responsive#visualizationColumn") {
               // set the max-width for the parent visualizationColumn (with_padding)
               childRules[k].style.cssText = "max-width: " +
                   (Applab.appWidth * scale + 2) + "px;";
@@ -542,7 +547,8 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
+            } else if (childRules[k].selectorText === "div#visualization.responsive > *" ||
+                       childRules[k].selectorText === "div.responsive#visualization > *") {
               // and set the scale factor for all children of the visualization
               // (importantly, the divApplab element)
               childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
