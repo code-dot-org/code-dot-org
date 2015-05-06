@@ -124,17 +124,28 @@ Blockly.Flyout.prototype.onResizeWrapper_ = null;
  * Creates the flyout's DOM.  Only needs to be called once.
  * @return {!Element} The flyout's SVG group.
  */
-Blockly.Flyout.prototype.createDom = function() {
+Blockly.Flyout.prototype.createDom = function(insideToolbox) {
   /*
   <g>
     <path class="blocklyFlyoutBackground"/>
     <g></g>
   </g>
   */
-  this.svgGroup_ = Blockly.createSvgElement('g', {}, null);
+  this.svgGroup_ = Blockly.createSvgElement('g', {'class': 'svgFlyoutGroup'}, null);
   this.svgBackground_ = Blockly.createSvgElement('path',
       {'class': 'blocklyFlyoutBackground'}, this.svgGroup_);
   this.svgGroup_.appendChild(this.blockSpace_.createDom());
+
+  // we kinda want to show a trash can here
+  if (! insideToolbox) {
+    this.trashcan = new Blockly.Trashcan(this);
+    var svgTrashcan = this.trashcan.createDom();
+    svgTrashcan.setAttribute("style", "opacity: 0");
+    svgTrashcan.setAttribute('transform', 'translate(60, 20)');
+    this.svgGroup_.appendChild(svgTrashcan);
+    //this.trashcan.init();
+  }
+
   return this.svgGroup_;
 };
 
@@ -259,6 +270,9 @@ Blockly.Flyout.prototype.init = function(blockSpace, withScrollbar) {
   this.position_();
   this.changeWrapper_ = Blockly.bindEvent_(this.targetBlockSpace_.getCanvas(),
       'blocklyBlockSpaceChange', this, this.filterForCapacity_);
+
+  // We want our own trashcan image.
+  //this.blockSpace_.addTrashcan();
 };
 
 /**

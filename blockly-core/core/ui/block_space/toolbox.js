@@ -77,12 +77,28 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
   this.HtmlDiv.setAttribute('dir', Blockly.RTL ? 'RTL' : 'LTR');
   goog.dom.insertSiblingBefore(this.HtmlDiv, svg);
 
+  // we kinda want to show a trash can here
+
+  var trashCanHolder = Blockly.createSvgElement('svg', {
+    id: 'trashcanHolder',
+    width: 90,
+    height: 90,
+    style: 'display: block; position: absolute'
+  }, this.HtmlDiv);
+
+  this.trashcan = new Blockly.Trashcan(this);
+  var svgTrashcan = this.trashcan.createDom();
+  svgTrashcan.setAttribute("style", "opacity: 0");
+  svgTrashcan.setAttribute('transform', 'translate(20, 10)');
+  trashCanHolder.appendChild(svgTrashcan);
+  //this.trashcan.init();
+
   /**
    * @type {!Blockly.Flyout}
    * @private
    */
   this.flyout_ = new Blockly.Flyout(this.blockSpaceEditor_);
-  svg.appendChild(this.flyout_.createDom());
+  svg.appendChild(this.flyout_.createDom(true));
 
   // Clicking on toolbox closes popups.
   Blockly.bindEvent_(this.HtmlDiv, 'mousedown', this,
