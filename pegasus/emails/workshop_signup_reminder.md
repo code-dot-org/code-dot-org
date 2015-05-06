@@ -1,5 +1,5 @@
 ---
-from: "<%= affiliate[:name] %> <%= affiliate[:email] %>"
+from: "<%= affiliate[:name] %> <<%= affiliate[:email] %>>"
 subject: "Your [Code.org] Workshop is coming up!"
 litmus_tracking_id: "e5cj1of6"
 ---
