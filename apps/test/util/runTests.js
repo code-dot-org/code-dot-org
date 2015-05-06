@@ -33,7 +33,8 @@ exec(command, function (err, stdout, stderr) {
     './test/executionInfoTests.js',
     './test/ObservableEventTest.js',
     './test/feedbackTests.js',
-    './test/calc/*.js'
+    './test/calc/*.js',
+    './test/netsim/*.js'
 
   ];
   mochify(globs.join(' '), {

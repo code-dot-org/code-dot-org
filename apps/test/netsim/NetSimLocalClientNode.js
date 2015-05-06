@@ -4,17 +4,18 @@
 /* global it */
 
 var testUtils = require('../util/testUtils');
+testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
-var NetSimEntity = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimEntity');
-var NetSimClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimClientNode');
-var NetSimLocalClientNode = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLocalClientNode');
-var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
+var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
+var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
+var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
+var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 
 describe("NetSimLocalClientNode", function () {
   var testShard, testLocalNode, testRemoteNode;
