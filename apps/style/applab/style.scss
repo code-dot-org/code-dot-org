@@ -468,9 +468,13 @@ button.arrow:focus {
   vertical-align: top;
 }
 
-#divApplab * {
+#divApplab {
   box-sizing: border-box;
-  margin: 2px;
+  padding: 2px;
+}
+
+#divApplab input {
+  box-sizing: border-box;
 }
 
 #divApplab button {

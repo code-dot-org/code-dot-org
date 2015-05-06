@@ -1041,7 +1041,7 @@ Applab.init = function(config) {
           studioApp.resetButtonClick();
         }
       });
-      var gridSize = 20;
+      var GRID_SIZE = 20;
       $('#visualization').droppable({
         accept: '.new-design-element',
         drop: function (event, ui) {
@@ -1052,8 +1052,8 @@ Applab.init = function(config) {
           var top = ui.position.top / scale;
 
           // snap top-left corner to nearest location in the grid
-          left -= (left + gridSize / 2) % gridSize - gridSize / 2;
-          top -= (top + gridSize / 2) % gridSize - gridSize / 2;
+          left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+          top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
           Applab.createElement(elementType, left, top);
         }
@@ -1195,7 +1195,7 @@ Applab.createElement = function (elementType, left, top) {
  * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
  */
 Applab.makeDraggable = function (jq) {
-  var gridSize = 20;
+  var GRID_SIZE = 20;
   jq.draggable({
     cancel: false,  // allow buttons and inputs to be dragged
     drag: function(event, ui) {
@@ -1210,8 +1210,8 @@ Applab.makeDraggable = function (jq) {
       var newTop = (ui.originalPosition.top + changeTop) / scale;
 
       // snap top-left corner to nearest location in the grid
-      newLeft -= (newLeft + gridSize / 2) % gridSize - gridSize / 2;
-      newTop -= (newTop + gridSize / 2) % gridSize - gridSize / 2;
+      newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+      newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
       // containment
       var container = $('#divApplab');
@@ -1261,9 +1261,9 @@ Applab.onDivApplabClick = function (event) {
  * or NaN if element's css width or margin are not defined.
  */
 Applab.getOuterWidth = function(el) {
-  var marginLeft = parseInt($(el).css('margin-left'));
-  var marginRight = parseInt($(el).css('margin-right'));
-  return parseInt(el.style.width) + marginLeft + marginRight;
+  var marginLeft = parseInt($(el).css('margin-left'), 10);
+  var marginRight = parseInt($(el).css('margin-right'), 10);
+  return parseInt(el.style.width, 10) + marginLeft + marginRight;
 };
 
 /**
@@ -1273,8 +1273,8 @@ Applab.getOuterWidth = function(el) {
  * @param outerWidth {number} Desired element outerWidth in pixels.
  */
 Applab.setOuterWidth = function(el, outerWidth) {
-  var marginLeft = parseInt($(el).css('margin-left'));
-  var marginRight = parseInt($(el).css('margin-right'));
+  var marginLeft = parseInt($(el).css('margin-left'), 10);
+  var marginRight = parseInt($(el).css('margin-right'), 10);
   var width = +outerWidth - marginLeft - marginRight;
   el.style.width = isNaN(width) ? '' : width + 'px';
 };
@@ -1285,9 +1285,9 @@ Applab.setOuterWidth = function(el, outerWidth) {
  * or NaN if element's css height or margin are not defined.
  */
 Applab.getOuterHeight = function(el) {
-  var marginTop = parseInt($(el).css('margin-top'));
-  var marginBottom = parseInt($(el).css('margin-bottom'));
-  return parseInt(el.style.height) + marginTop + marginBottom;
+  var marginTop = parseInt($(el).css('margin-top'), 10);
+  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
+  return parseInt(el.style.height, 10) + marginTop + marginBottom;
 };
 
 /**
@@ -1297,8 +1297,8 @@ Applab.getOuterHeight = function(el) {
  * @param outerHeight {number} Desired element outerHeight in pixels.
  */
 Applab.setOuterHeight = function(el, outerHeight) {
-  var marginTop = parseInt($(el).css('margin-top'));
-  var marginBottom = parseInt($(el).css('margin-bottom'));
+  var marginTop = parseInt($(el).css('margin-top'), 10);
+  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
   var height = +outerHeight - marginTop - marginBottom;
   el.style.height = isNaN(height) ? '' : height + 'px';
 };
@@ -1319,8 +1319,8 @@ Applab.editElementProperties = function(el) {
     tagName: tagName,
     props: {
       id: el.id,
-      left: parseInt(el.style.left) || 0,
-      top: parseInt(el.style.top) || 0,
+      left: parseInt(el.style.left, 10) || 0,
+      top: parseInt(el.style.top, 10) || 0,
       width: isNaN(outerWidth) ? '' : outerWidth,
       height: isNaN(outerHeight) ? '' : outerHeight,
       text: $(el).text()
