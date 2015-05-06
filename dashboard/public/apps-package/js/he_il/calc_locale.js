@@ -155,17 +155,17 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "התכנית שלך מנסה לחלק באפס."},
-"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyComputeBlock":function(d){return "חובה לצרף בלוק לבלוק מסוג \"אמוד\"."},
 "equivalentExpression":function(d){return "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי."},
 "evaluate":function(d){return "לאמוד"},
-"extraTopBlocks":function(d){return "יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?"},
+"extraTopBlocks":function(d){return "יש לך בלוקים ללא שיוך. האם התכוונת לצרף אותם לבלוק \"אמוד\" ?"},
 "failedInput":function(d){return "הפונקציה שלך אינה מחזירה את התוצאה הנכונה עבור כל הערכים."},
 "goal":function(d){return "מטרה:"},
-"levelIncompleteError":function(d){return "Your expression does not match the goal."},
-"missingFunctionError":function(d){return "אתה חייב להכריז על פונקציה הנקראת "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "לביטוי שלך חסר משתנה "+appLocale.v(d,"var")+"."},
+"levelIncompleteError":function(d){return "הביטוי אינו תואם את המטרה."},
+"missingFunctionError":function(d){return "עליך להגדיר פונקציה בשם "+appLocale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "בביטוי שלך חסר משתנה "+appLocale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "הנה החישוב שלך! המשך לעבוד על זה, או עבור לחידה הבאה!"},
 "yourExpression":function(d){return "הביטוי שלך:"},
 "wrongInput":function(d){return "אתה קורא לפונקציה שלך עם ערך שגוי."},
-"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongOtherValuesX":function(d){return "הביטוי נותן תוצאה לא נכונה עבור ערך אחר של "+appLocale.v(d,"var")+"."},
+"wrongResult":function(d){return "הביטוי שלך אינו מחזיר את התוצאה הנכונה."}};

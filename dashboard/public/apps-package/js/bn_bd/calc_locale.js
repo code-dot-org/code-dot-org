@@ -155,17 +155,17 @@ p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[
 s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).appLocale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
-"emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
+"emptyComputeBlock":function(d){return "তোমাকে \"Evaluate\" ব্লকে অবশ্যই একটি ব্লক সংযুক্ত করতে হবে।"},
 "equivalentExpression":function(d){return "ঠিক একই অভিব্যক্তি পেতে আপনার কথাবার্তা রেকর্ড করতে চেষ্টা করুন ।"},
-"evaluate":function(d){return "evaluate"},
-"extraTopBlocks":function(d){return "তোমার অসংযুক্ত block আছে । তুমি  \"compute\" block এ যুক্ত করতে চেয়েছিলে কি ?"},
-"failedInput":function(d){return "Your function does not return the right result for all values."},
+"evaluate":function(d){return "নির্ণয় করা"},
+"extraTopBlocks":function(d){return "তোমার অসংযুক্ত কিছু ব্লক আছে। তুমি কি এগুলোকে \"evaluate\" ব্লকে যুক্ত করার ব্যাপারটি বোঝাচ্ছো?"},
+"failedInput":function(d){return "তোমার function টি সকল মানের ক্ষেত্রে সঠিক ফলাফল দিচ্ছে না।"},
 "goal":function(d){return "লক্ষ্য:"},
-"levelIncompleteError":function(d){return "Your expression does not match the goal."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
-"reinfFeedbackMsg":function(d){return "এটি তোমার কাহিনী ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !"},
+"levelIncompleteError":function(d){return "তোমার করা কাঠামোটি লক্ষ্যের সাথে খাপ খায় না।"},
+"missingFunctionError":function(d){return "তোমাকে অবশ্যই "+appLocale.v(d,"functionName")+" নামের এক function নির্ধারণ করতে হবে।"},
+"missingVariableX":function(d){return "তোমার করা কাঠামোয় variable "+appLocale.v(d,"var")+" নেই।"},
+"reinfFeedbackMsg":function(d){return "এই হল তোমার হিসেব-নিকেশ! এ কাজটি পুনরায় করতে থাকো, অথবা পরের puzzle এ চলে যাও!"},
 "yourExpression":function(d){return "তোমার অভিব্যাক্তি:"},
-"wrongInput":function(d){return "You are calling your function with the wrong value."},
-"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
-"wrongResult":function(d){return "Your expresison does not return the correct result."}};
+"wrongInput":function(d){return "তুমি ভুল মানে দিয়ে তোমার করা function টি চালু করছো।"},
+"wrongOtherValuesX":function(d){return "যদি আমরা "+appLocale.v(d,"var")+" পরিবর্তন করি তাহলে তোমার কাঠামোর ফলাফল ভুল হয়।"},
+"wrongResult":function(d){return "তোমার করা কাঠামোর মাধ্যমে সঠিক ফলাফলটি এল না।"}};

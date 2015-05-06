@@ -157,7 +157,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "badColorStringError":function(d){return "You used an invalid color string: "+appLocale.v(d,"val")},
 "badStyleStringError":function(d){return "You used an invalid style string: "+appLocale.v(d,"val")},
 "circleBlockTitle":function(d){return "Círculo (raio, estilo, cor)"},
-"displayBlockTitle":function(d){return "Exibir"},
+"displayBlockTitle":function(d){return "avaliar"},
 "ellipseBlockTitle":function(d){return "Elipse (largura, altura, estilo, cor)"},
 "extraTopBlocks":function(d){return "Você tem blocos não acoplados. Você quis dizer para anexar este para o bloco \"display\"?"},
 "infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},

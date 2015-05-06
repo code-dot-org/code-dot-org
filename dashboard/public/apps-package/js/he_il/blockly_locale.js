@@ -2,7 +2,7 @@ goog.provide('Blockly.Msg.he_il');
 goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "קריאה";
 Blockly.Msg.ADD = "הוסף";
-Blockly.Msg.ADD_COMMENT = "הוסף תגובה";
+Blockly.Msg.ADD_COMMENT = "הוסף הערה";
 Blockly.Msg.ADD_PARAMETER = "הוספת פרמטר";
 Blockly.Msg.CHANGE_VALUE_TITLE = "שנה ערך:";
 Blockly.Msg.COLLAPSE_ALL = "כווץ בלוקים";

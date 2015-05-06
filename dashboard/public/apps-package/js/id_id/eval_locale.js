@@ -165,7 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "tempat-gambar (x, y, gambar)"},
 "offsetBlockTitle":function(d){return "selisih (x, y, gambar)"},
 "rectangleBlockTitle":function(d){return "persegi-panjang (lebar, panjang, gaya, warna)"},
-"reinfFeedbackMsg":function(d){return "Anda dapat menekan tombol \"Terus Bermain\" untuk mengedit gambar Anda."},
+"reinfFeedbackMsg":function(d){return "Anda dapat menekan tombol \"Keep Playing\"  untuk mengedit program anda."},
 "rotateImageBlockTitle":function(d){return "putar (derajat, gambar)"},
 "scaleImageBlockTitle":function(d){return "Skala (faktor, gambar)"},
 "squareBlockTitle":function(d){return "persegi (ukuran, gaya, warna)"},

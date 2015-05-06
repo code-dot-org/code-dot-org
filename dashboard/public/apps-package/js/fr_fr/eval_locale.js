@@ -165,7 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "zone d'image (x, y, image)"},
 "offsetBlockTitle":function(d){return "decalage (x, y, image)"},
 "rectangleBlockTitle":function(d){return "rectangle (largeur, hauteur, style, couleur)"},
-"reinfFeedbackMsg":function(d){return "Vous pouvez appuyer sur le bouton « Continuer à jouer » pour éditer votre dessin."},
+"reinfFeedbackMsg":function(d){return "Tu peux appuyer sur le bouton «Continuer à jouer» pour éditer ton programme."},
 "rotateImageBlockTitle":function(d){return "rotation (degrés, image)"},
 "scaleImageBlockTitle":function(d){return "échelle (facteur, image)"},
 "squareBlockTitle":function(d){return "carré (taille, style, couleur)"},
