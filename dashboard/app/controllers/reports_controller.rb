@@ -241,8 +241,7 @@ SQL
 
   def monthly_metrics
     authorize! :read, :reports
-    date = 30.days.ago
-    recent_users = User.where('users.last_sign_in_at > ?', date)
+    recent_users = User.where(current_sign_in_at: (Time.now - 30.days)..Time.now)
     metrics = {
       :'Teachers with Active Students' => recent_users.joins(:teachers).distinct.count('teachers_users.id'),
       :'Active Students' => recent_users.count,
@@ -250,7 +249,7 @@ SQL
       :'Active Male Students' =>  (m = recent_users.where(gender: 'm').count),
       :'Female Ratio' => f.to_f / (f + m),
     }
-    render 'reports/monthly_metrics', locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
+    render locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
   end
 
   private
