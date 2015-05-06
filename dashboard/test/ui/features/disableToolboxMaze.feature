@@ -1,7 +1,7 @@
 Feature: Disabling/Reenabling the Toolbox While Running
 
 Background:
-  Given I am on "http://learn.code.org/s/1/level/18?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/17?noautoplay=true"
   And I rotate to landscape
   Then element ".dialog-title" has text "Puzzle 17 of 20"
   And I press "x-close"
