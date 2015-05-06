@@ -37,9 +37,9 @@ theme: none
       Mary,Jones,mary.jones@example.com,Broward County Public Schools,Washington Middle School,Male
   %input{type: 'file', id: 'csv_upload', onchange: "angular.element(this).scope().onFileSelect(this)"}
 
-%div{"ng-hide" => "isAfterCutoff()"}
+%div{"ng-hide" => "isAfterCutoff() || !cohort.cutoff_date"}
   You may edit the teachers in this cohort until {{cohort.cutoff_date | date:'fullDate'}}
-%div{"ng-show" => "isAfterCutoff()"}
+%div{"ng-show" => "isAfterCutoff() && cohort.cutoff_date"}
   The deadline for modifying the teachers in this cohort was {{cohort.cutoff_date | date:'fullDate'}}
 
 %div{'ng-show' => 'cohort.districts.length > 0'}

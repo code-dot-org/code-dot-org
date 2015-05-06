@@ -9,7 +9,7 @@ litmus_tracking_id: "e5cj1of6"
   workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
   
   affiliate = DASHBOARD_DB[:users].where(id: workshop_row[:user_id]).first
-
+  
   cancel_link = "http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/cancel/#{form.secret}"
 %>
 
