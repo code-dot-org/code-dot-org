@@ -130,26 +130,26 @@
     kod yazdı.'
   start_hoc: Kod Saatına indi başlayın
   contact_form_topic_press: Press/media (interview or speaking engagement)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
+  stats_nina: '"Hər gün eyni nəticə alındı&mdash; 100%-lik maraq" - Nina Nikols Peri,
+    müəllimə'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
     Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  studiobar_title: Explore Code Studio
-  studiobar_title_nolink: Explore Code Studio
+  stats_michael: '"Mən öz şagirdlərimi <b>heç vaxt </b> öyrənməyə bu qədər həvəsli
+    görməmişdim" - Maykl Klark, müəllim'
+  studiobar_title: <a href='http://studio.code.org'>Kod Studiyası</a>nı kəşf edin
+  studiobar_title_nolink: Kod Studiyasını kəşf edin
   studiobar_elementary_title: İbtidai kurslar
   studiobar_elementary_body: K-5 (11-12 yaşlılar) üçün üç yeni kursumuz
   studiobar_hoc_title: Kod Saatı
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Qanadlı Kod
-  studiobar_flappy_body: Make and share your own Flappy game
+  studiobar_flappy_body: Öz qanadlı oyununuzu düzəldib bölüşün
   studiobar_teacher_title: Made for teachers
-  studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_teacher_body: Sinfinizi Kod Studiyası ilə tanış edin
   studiobar_frozen_title: Kod Saatı
   studiobar_frozen_body: Anna və Elza ilə bir qış möcüzəsi yaradın
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_donate_title: İanə verin
+  studiobar_donate_body: İanə etdiyiniz hər dollara bir uşaq dərs alır
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
@@ -179,9 +179,9 @@
     Not to mention, it's just plain fun.&rdquo;
     Luna, 7th grade
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Mən şagirdlərimi heç vaxt öyrənməyə
+    bu qədər həvəsli görməmişdim&rdquo;
+    Maykl, müəllim
   homepage_hero_text_student3: |
     &ldquo;Computer science is a field you can't
     know if you like or not before you try it.&rdquo;
@@ -231,7 +231,7 @@
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
   homepage_donors_seall: See all
-  homepage_donors_donate: Donate
+  homepage_donors_donate: İanə verin
   contact_form_topic_student: Mən şagirdəm
   contact_form_topic_parent: Mən valideynəm
   contact_form_topic_teacher: Mən müəllim/təlimçiyəm
@@ -426,8 +426,8 @@
   dashboard_login_picture: Picture
   dashboard_login_none: E-poçt
   dashboard_new_password: new password
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: başlanmayıb
+  dashboard_progress_in_progress: tamamlanmayıb
   dashboard_progress_not_completed: tamamlanmayıb
   dashboard_progress_completed_too_many_blocks: tamamlanıb, artıq bloklar var
   dashboard_progress_completed_perfect: tamamlanıb, əladır
