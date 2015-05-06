@@ -48,9 +48,8 @@ exports.requireWithGlobalsCheckBuildFolder = function (path, allowedChanges) {
 // working
 function setupLocale(app) {
   setupLocales();
-  if (window.blockly) {
-    delete window.blockly.appLocale;
-  }
+  window.blockly = window.blockly || {};
+  delete window.blockly.appLocale;
 
   // browserify doesnt seem to handle something like this well for some reason:
   // require('../../build/package/js/en_us/' + app + '_locale');

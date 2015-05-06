@@ -2,8 +2,6 @@ var chai = require('chai');
 chai.config.includeStack = true;
 var assert = chai.assert;
 
-window.blockly = window.blockly || {};
-
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('calc');
 
