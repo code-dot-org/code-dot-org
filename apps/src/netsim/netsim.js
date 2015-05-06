@@ -18,6 +18,7 @@
 'use strict';
 
 var utils = require('../utils');
+var _ = utils.getLodash();
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
@@ -381,6 +382,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Try and gracefully disconnect when closing the window
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
   window.addEventListener('unload', this.onUnload_.bind(this));
+  window.addEventListener('resize', _.debounce(this.updateLayout.bind(this), 250));
 };
 
 /**
@@ -984,6 +986,8 @@ NetSim.prototype.render = function () {
     // Render lobby
     this.lobby_.render();
   }
+
+  this.updateLayout();
 };
 
 /**
@@ -1172,4 +1176,20 @@ NetSim.prototype.animateSetWireState = function (newState) {
  */
 NetSim.prototype.animateReadWireState = function (newState) {
   this.visualization_.animateReadWireState(newState);
+};
+
+NetSim.prototype.updateLayout = function () {
+  var rightColumn = $('#netsim-rightcol');
+  var sendPanel = $('#netsim-send');
+  var logWrap = $('#netsim-logs');
+  if (!rightColumn.is(':visible')) {
+    return;
+  }
+
+  // Right column wrapper and the send panel are both sized by CSS
+  var rightColumnHeight = rightColumn.height();
+  var sendPanelHeight = sendPanel.height();
+
+  // Manually adjust the logwrap to the remaining height
+  logWrap.css('height', rightColumnHeight - sendPanelHeight);
 };

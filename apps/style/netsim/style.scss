@@ -81,6 +81,22 @@ $wide-column-width: 121px;
     overflow-y: auto;
   }
 
+  #netsim-send {
+    position: absolute;
+    bottom: 0;
+    // omit "top"; Height determined from contents
+    left: 0;
+    right: 0;
+  }
+
+  #netsim-logs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+  }
+
   h1 {
     font-family: "Gotham 5r", sans-serif;
   }
