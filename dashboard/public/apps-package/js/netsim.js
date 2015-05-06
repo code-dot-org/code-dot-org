@@ -414,7 +414,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
  * are abandoning if they navigate away from the page.
  *
  * This event has some weird special properties and inconsistent behavior
- * across browsers.
+ * across browsers
  *
  * See:
  * https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload
