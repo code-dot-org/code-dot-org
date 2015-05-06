@@ -342,6 +342,11 @@ en:
           Next Steps: crwdns35324:0crwdne35324:0
           Computer Science Pedagogy: crwdns35325:0crwdne35325:0
           Programming Concepts: crwdns36516:0crwdne36516:0
+          Reflection: crwdns37912:0crwdne37912:0
+          "Programming Concept: Loops": crwdns37913:0crwdne37913:0
+          "Programming Concept: Conditionals": crwdns37914:0crwdne37914:0
+          "Programming Concept: Functions": crwdns37915:0crwdne37915:0
+          "Programming Concept: Events": crwdns37916:0crwdne37916:0
         netsim:
           title: crwdns29002:0crwdne29002:0
           description_short: crwdns29003:0crwdne29003:0
@@ -524,6 +529,11 @@ en:
           Rocket-Height: crwdns35426:0crwdne35426:0
           Design Recipe Practice: crwdns35427:0crwdne35427:0
           Introduction to PD: crwdns36526:0crwdne36526:0
+          Course Overview: crwdns37917:0crwdne37917:0
+          Computer Science Pedagogy: crwdns37918:0crwdne37918:0
+          Teacher Dashboard: crwdns37919:0crwdne37919:0
+          Why Computer Science belongs in Algebra: crwdns37920:0crwdne37920:0
+          Preparing for in-person PD: crwdns37921:0crwdne37921:0
         algPDmiami:
           title: crwdns35428:0crwdne35428:0
           description: crwdns35429:0crwdne35429:0
@@ -558,5 +568,176 @@ en:
           Teaching Strategies: crwdns36530:0crwdne36530:0
           Preparing for in-person PD: crwdns36531:0crwdne36531:0
           reference: crwdns36532:0crwdne36532:0
+          title: crwdns37922:0crwdne37922:0
+          description: crwdns37923:0crwdne37923:0
+          Impact of Computer Science: crwdns37924:0crwdne37924:0
         sciencePD:
           Introduction to PD: crwdns36533:0crwdne36533:0
+          title: crwdns37925:0crwdne37925:0
+          description: crwdns37926:0crwdne37926:0
+          Pre-Workshop Online Component: crwdns37927:0crwdne37927:0
+          Introduction to Complex Adaptive Systems: crwdns37928:0crwdne37928:0
+          Introduction to Computational Science: crwdns37929:0crwdne37929:0
+          What to Expect: crwdns37930:0crwdne37930:0
+          Agent Based Modeling of Complex Adaptive Systems: crwdns37931:0crwdne37931:0
+          Using Computer Models in Science: crwdns37932:0crwdne37932:0
+          Using Models in the Classroom: crwdns37933:0crwdne37933:0
+          Dispositions and Classroom Culture: crwdns37934:0crwdne37934:0
+          Computational Thinking And The Framework For K-12 Science Education: crwdns37935:0crwdne37935:0
+          Introduction to StarLogo Nova: crwdns37936:0crwdne37936:0
+          The Tutorial: crwdns37937:0crwdne37937:0
+          Post-Survey: crwdns37938:0crwdne37938:0
+        rbo-reference:
+          reference: crwdns37939:0crwdne37939:0
+        Test Wednesday:
+          PDK5 Intro: crwdns37940:0crwdne37940:0
+        cspunit3:
+          title: crwdns37941:0crwdne37941:0
+          description_short: crwdns37942:0crwdne37942:0
+          description: crwdns37943:0crwdne37943:0
+          Getting to know AppLab: crwdns37944:0crwdne37944:0
+          Functions: crwdns37945:0crwdne37945:0
+          Using Simple Commands: crwdns37946:0crwdne37946:0
+          Creating Procedures - Part 1: crwdns37947:0crwdne37947:0
+          Layers of Abstraction and Programming Efficiency: crwdns37948:0crwdne37948:0
+          APIs and Function Parameters: crwdns37949:0crwdne37949:0
+          Looping and Random Numbers: crwdns37950:0crwdne37950:0
+          Creating functions with Parameters: crwdns37951:0crwdne37951:0
+          Scene Design Part 1 - Plan: crwdns37952:0crwdne37952:0
+          Scene Design Part 2 - Code: crwdns37953:0crwdne37953:0
+          Scene Design Part 3 - Reflect: crwdns37954:0crwdne37954:0
+          Unplugged Events Activity -  Mission Unsortable: crwdns37955:0crwdne37955:0
+          Buttons on the Screen: crwdns37956:0crwdne37956:0
+          Unfortunate Events: crwdns37957:0crwdne37957:0
+          On Beyond Buttons: crwdns37958:0crwdne37958:0
+          Cookie Clicker 1.0 DEPRECIATED: crwdns37959:0crwdne37959:0
+          Controlling Memory and Program Flow: crwdns37960:0crwdne37960:0
+          Variable Basics DEPRECIATED: crwdns37961:0crwdne37961:0
+          Clicker v.1 -  Variable Basics: crwdns37962:0crwdne37962:0
+          Conditional Basics: crwdns37963:0crwdne37963:0
+          More Variables (2 days): crwdns37964:0crwdne37964:0
+          Permanent Data Storage and Clicker Completion: crwdns37965:0crwdne37965:0
+          Natural Language Processing and Chat Bots: crwdns37966:0crwdne37966:0
+          Chained Conditionals: crwdns37967:0crwdne37967:0
+          Compound Conditionals: crwdns37968:0crwdne37968:0
+          Strings and Substrings: crwdns37969:0crwdne37969:0
+          While Loop Basics: crwdns37970:0crwdne37970:0
+          While Loops_ Counting Flips: crwdns37971:0crwdne37971:0
+          Arrays_ Intro: crwdns37972:0crwdne37972:0
+          Arrays_ Photo Album: crwdns37973:0crwdne37973:0
+          Images are Arrays: crwdns37974:0crwdne37974:0
+          Arrays and Loops_ Altering Images: crwdns37975:0crwdne37975:0
+          Arrays and Loops_ Hidden Images: crwdns37976:0crwdne37976:0
+          The Need For Programming Languages: crwdns37977:0crwdne37977:0
+          Creating Procedures - Part 2: crwdns37978:0crwdne37978:0
+          Sarah testing project backed levels: crwdns37979:0crwdne37979:0
+        algebraPD3:
+          description: crwdns37980:0crwdne37980:0
+          Introduction to the new Computer Science in Algebra: crwdns37981:0crwdne37981:0
+          Course Overview: crwdns37982:0crwdne37982:0
+          Computer Science Pedagogy: crwdns37983:0crwdne37983:0
+          Teacher Dashboard: crwdns37984:0crwdne37984:0
+          Evaluation Blocks: crwdns37985:0crwdne37985:0
+          The Big Game: crwdns37986:0crwdne37986:0
+          Strings and Images: crwdns37987:0crwdne37987:0
+          The Design Recipe: crwdns37988:0crwdne37988:0
+        sciPD complex adaptive 2:
+          title: crwdns37989:0crwdne37989:0
+          description: crwdns37990:0crwdne37990:0
+          Introduction to PD: crwdns37991:0crwdne37991:0
+          Pre-Workshop Online Component: crwdns37992:0crwdne37992:0
+        sciPD complex adaptive forum:
+          title: crwdns37993:0crwdne37993:0
+          description: crwdns37994:0crwdne37994:0
+          Introduction to PD: crwdns37995:0crwdne37995:0
+          Introduction to Complex Adaptive Systems: crwdns37996:0crwdne37996:0
+        Glenallan Career Day Demo:
+          new stage: crwdns37997:0crwdne37997:0
+          title: crwdns37998:0crwdne37998:0
+          description_short: crwdns37999:0crwdne37999:0
+          description: crwdns38000:0crwdne38000:0
+          Puzzles: crwdns38001:0crwdne38001:0
+        ECSPD-NexTech:
+          Introduction to PD: crwdns38002:0crwdne38002:0
+          What is ECS?: crwdns38003:0crwdne38003:0
+          Growth Mindset: crwdns38004:0crwdne38004:0
+          Teaching Strategies: crwdns38005:0crwdne38005:0
+          Preparing for in-person PD: crwdns38006:0crwdne38006:0
+          logo_image: crwdns38007:0crwdne38007:0
+          title: crwdns38008:0crwdne38008:0
+          description: crwdns38009:0crwdne38009:0
+          Impact of Computer Science: crwdns38010:0crwdne38010:0
+        ECSPD-iZone:
+          Introduction to PD: crwdns38011:0crwdne38011:0
+          What is ECS?: crwdns38012:0crwdne38012:0
+          Growth Mindset: crwdns38013:0crwdne38013:0
+          Teaching Strategies: crwdns38014:0crwdne38014:0
+          Preparing for in-person PD: crwdns38015:0crwdne38015:0
+          logo_image: crwdns38016:0crwdne38016:0
+          title: crwdns38017:0crwdne38017:0
+          description: crwdns38018:0crwdne38018:0
+          Impact of Computer Science: crwdns38019:0crwdne38019:0
+        algebraPD-NexTech:
+          title: crwdns38020:0crwdne38020:0
+          description: crwdns38021:0crwdne38021:0
+          Introduction to PD: crwdns38022:0crwdne38022:0
+          Evaluation Blocks: crwdns38023:0crwdne38023:0
+          logo_image: crwdns38024:0crwdne38024:0
+          Course Overview: crwdns38025:0crwdne38025:0
+          Computer Science Pedagogy: crwdns38026:0crwdne38026:0
+          Teacher Dashboard: crwdns38027:0crwdne38027:0
+          Why Computer Science belongs in Algebra: crwdns38028:0crwdne38028:0
+          Preparing for in-person PD: crwdns38029:0crwdne38029:0
+        algebraPD-iZone:
+          title: crwdns38030:0crwdne38030:0
+          description: crwdns38031:0crwdne38031:0
+          Introduction to PD: crwdns38032:0crwdne38032:0
+          Evaluation Blocks: crwdns38033:0crwdne38033:0
+          logo_image: crwdns38034:0crwdne38034:0
+          Course Overview: crwdns38035:0crwdne38035:0
+          Computer Science Pedagogy: crwdns38036:0crwdne38036:0
+          Teacher Dashboard: crwdns38037:0crwdne38037:0
+          Why Computer Science belongs in Algebra: crwdns38038:0crwdne38038:0
+          Preparing for in-person PD: crwdns38039:0crwdne38039:0
+        sciencePD-NexTech:
+          Introduction to PD: crwdns38040:0crwdne38040:0
+          logo_image: crwdns38041:0crwdne38041:0
+          title: crwdns38042:0crwdne38042:0
+          description: crwdns38043:0crwdne38043:0
+          What to Expect: crwdns38044:0crwdne38044:0
+          Introduction to Complex Adaptive Systems: crwdns38045:0crwdne38045:0
+          Introduction to Computational Science: crwdns38046:0crwdne38046:0
+          Agent Based Modeling of Complex Adaptive Systems: crwdns38047:0crwdne38047:0
+          Using Computer Models in Science: crwdns38048:0crwdne38048:0
+          Using Models in the Classroom: crwdns38049:0crwdne38049:0
+          Dispositions and Classroom Culture: crwdns38050:0crwdne38050:0
+          Computational Thinking And The Framework For K-12 Science Education: crwdns38051:0crwdne38051:0
+          Introduction to StarLogo Nova: crwdns38052:0crwdne38052:0
+          The Tutorial: crwdns38053:0crwdne38053:0
+          Post-Survey: crwdns38054:0crwdne38054:0
+        sciencePD-iZone:
+          Introduction to PD: crwdns38055:0crwdne38055:0
+          logo_image: crwdns38056:0crwdne38056:0
+          title: crwdns38057:0crwdne38057:0
+          description: crwdns38058:0crwdne38058:0
+          What to Expect: crwdns38059:0crwdne38059:0
+          Introduction to Complex Adaptive Systems: crwdns38060:0crwdne38060:0
+          Introduction to Computational Science: crwdns38061:0crwdne38061:0
+          Agent Based Modeling of Complex Adaptive Systems: crwdns38062:0crwdne38062:0
+          Using Computer Models in Science: crwdns38063:0crwdne38063:0
+          Using Models in the Classroom: crwdns38064:0crwdne38064:0
+          Dispositions and Classroom Culture: crwdns38065:0crwdne38065:0
+          Computational Thinking And The Framework For K-12 Science Education: crwdns38066:0crwdne38066:0
+          Introduction to StarLogo Nova: crwdns38067:0crwdne38067:0
+          The Tutorial: crwdns38068:0crwdne38068:0
+          Post-Survey: crwdns38069:0crwdne38069:0
+        ui_tests:
+          title: crwdns38070:0crwdne38070:0
+          description: crwdns38071:0crwdne38071:0
+          All the Tests: crwdns38072:0crwdne38072:0
+          Free Response: crwdns38073:0crwdne38073:0
+          Multi: crwdns38074:0crwdne38074:0
+        sciencePD2:
+          Phase 2 Summer Workshop: crwdns38075:0crwdne38075:0
+        sciencePD3:
+          new stage: crwdns38076:0crwdne38076:0

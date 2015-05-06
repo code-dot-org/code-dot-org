@@ -685,7 +685,7 @@
         C4_unplugged_madlibs: Mad libs
         C4_unplugged_variables: Variabel dalam amplop
         C4_unplugged_forloops: Untuk Pengulangan
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_parameters: Penulisan lagu dengan Parameter
         C4_unplugged_binary: Biner
         frozen_intro: Perkenalan Hour of Code
         frozen_loops: Pengantar loop
@@ -703,24 +703,28 @@
         csp_pixelation_color_3: widget pixelation Warna - Bagian 3
         csp_pixelation_bw: widget pixelation Hitam dan Putih - Bagian 1
         csp_U1L14_tipstricks: Unit 1 pelajaran 14 Tips & Trik guru
-        csp_textcompression: Text compression widget
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_textcompression: widget Teks kompresi
+        alg_1_intro: CS didalam Aljabar - Pendahuluan
+        alg_2_eval_block: CS didalam Aljabar - Block Evaluasi
+        alg_3_pemdas: CS didalam Aljabar - Perintah Operasi
+        alg_4_data_types: CS didalam Aljabar - Tipe Data
+        alg_5_contracts: CS didalam Aljabar - Kontrak
+        alg_6_variables: CS didalam Aljabar -  Variabel
+        alg_7_function: CS didalam Aljabar - Fungsi
+        alg_8_design_recipe: CS didalam Aljabar - Resep Disain
+        alg_9_booleans: CS didalam Aljabar - Booleans
+        alg_10_conditionals: CS didalam Aljabar - Kondisional
+        alg_11_coordinate_plane: CS didalam Aljabar - Bidang Koordinate
+        alg_12_biggame_variables: CS didalam Aljabar - Variabel Big Game/Permainan
+          Besar
+        alg_13_biggame_animation: CS didalam Aljabar - Animasi Big Game/Permainan
+          Besar
+        alg_14_biggame_booleans: CS didalam Aljabar - Boolean Big Game/Permainan Besar
+        alg_15_biggame_update_player: CS didalam Aljabar - Perbaharui Pemain Big Game/Permainan
+          Besar
+        alg_16_biggame_collision_detection: CS didalam Aljabar - Deteksi Benturan
+          Big Game/Permainan Besar
+        alg_17_sambat_compound_booleans: CS didalam Aljabar - GabunganBoolean
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain
@@ -828,6 +832,6 @@
         Infinity_move_right_runbutton: Menambahkan blok gerak di sini
         Infinity_move_directions_callout: Blok manakah yang akan membuat Baymax naik
           ketika panah atas ditekan?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Gunakan panah untuk mengarahkan
         Infinity_move_collide_callout: Mainkan suara ketika peristiwa ini terjadi.
         Infinity_repeat_callout: Tempat blok gerak di sini

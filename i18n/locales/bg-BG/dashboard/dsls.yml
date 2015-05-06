@@ -3,74 +3,82 @@ bg:
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
         Big Triangle: Голям триъгълник
-        Big Triangle|Image|Number|String: Big Triangle|Image|Number|String
+        Big Triangle|Image|Number|String: Голям триъгълник| изображение| номер| Низ
         EXAMPLE 1.solution_blocks, 300: EXAMPLE 1.solution_blocks, 300
-        Write a contract for a big red triangle that is 100 pixels in size: Write a contract for a big red triangle that is 100 pixels in size
+        Write a contract for a big red triangle that is 100 pixels in size: Напишете договор за големия червен триъгълник, който е 100 пиксела в размер
       Creating Contracts From Examples 2:
         Example 2.solution_blocks, 300: Example 2.solution_blocks, 300
-        Square Contract: Square Contract
-        Square|Image|Number|String: Square|Image|Number|String
-        Write a contract for a purple square that is 15 pixels in size.: Write a contract for a purple square that is 15 pixels in size.
+        Square Contract: Договор за квадрат
+        Square|Image|Number|String: Квадрат| изображение| номер| Низ
+        Write a contract for a purple square that is 15 pixels in size.: Напишете договор за лилаво поле, което е 15 пиксела.
       Creating Contracts From Examples 3A:
-        Banner Contract: Banner Contract
-        Banner Function block: Banner Function block
+        Banner Contract: Банер договор
+        Banner Function block: Банер функционален блок
         Examples 3.solution_blocks, 300: Examples 3.solution_blocks, 300
-        banner|Image|String: banner|Image|String
+        banner|Image|String: Банер| изображение| Низ
       Creating Contracts From Examples 4:
         Examples 4.solution_blocks, 300: Examples 4.solution_blocks, 300
-        Shrink Contract: Shrink Contract
-        Try using the "shrink" function.: 'Try using the "shrink" function.'
-        shrink|Image|Image: shrink|Image|Image
+        Shrink Contract: Свий договора
+        Try using the "shrink" function.: 'Опитайте да използвате функцията "Свий".'
+        shrink|Image|Image: Свий| Изображение| Изображение
       Design Recipe 1.contract:
         Design Recipe 1 Contract: 'Състави Рецепта 1  Договор'
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        0: '? Запишете договор за функция, наречена "wide-rect", което създава правоъгълник с дадена височина и цвят, който е два пъти по-широк, отколкото е висок.'
+        1: ': Напишете Договор за функция, наречена "wide-rect", което създава правоъгълник с дадена височина и цвят, който е два пъти по-широк, отколкото е висок.'
+        wide-rect|Image|Number|String: Wide-rect| изображение| номер| Низ
       Enter name here:
-        Contract Name|Number|Number|String: Contract Name|Number|Number|String
+        Contract Name|Number|Number|String: Договор Имe| номер| номер| Низ
         Enter prompt here: Въведете ред тук
         Enter title here: Въведете заглавието тук
       Eval Contracts 1 B:
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
         Star Contract: Звезден договор
         Write a contract for the star function: Напишете рецепта за функцията на звездата
-        star|Image|String|Number|String: star|Image|String|Number|String
+        star|Image|String|Number|String: Звезда| изобрежение| Низ| номер| Низ
       Eval Contracts 2 B:
         Eval Contracts 2 A.solution_blocks, 300: Оценяване на рецепти 2 A.solution_blocks, 300
         Rotate Contract: Рецепта за Завъртане
         Write a contract for the rotate function: Напишете рецепта за функцията на завъртане
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: Завъртане| изоражение| номер| Изображение
       Eval Contracts 3 B:
         Eval Contracts 3 A.solution_blocks, 300: Оценяване на рецепти 3 A.solution_blocks, 300
         Text Contract: Рецепта за текст
         Write a contract for the text function: Напишете рецепта за функцията text
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: Текст| Изображение| Низ| номер| Низ
       Eval Contracts 4 B:
         Eval Contracts 4 A.solution_blocks, 300: Оценяване на рецепти 4 A.solution_blocks, 300
-        Scale Contract: Scale Contract
+        Scale Contract: Договор за размер
         Write a contract for the scale function: Напишете рецепта за функцията за завъртане
-        scale|Image|Number|Image: scale|Image|Number|Image
+        scale|Image|Number|Image: размер| изображение| номер| Изображение
       Eval Contracts B:
         Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
         Star Contract: Звезден договор
         Write a contract for the star function: Напишете рецепта за функцията на звездата
-        star|Image|Number|String|String: star|Image|Number|String|String
+        star|Image|Number|String|String: Звезда| изображение| Номер| Низ| Низ
       Eval Contracts D:
         Eval Contracts 2 A.solution_blocks, 300: Оценяване на рецепти 2 A.solution_blocks, 300
         Rotate Contract: Рецепта за Завъртане
         Write a contract for the rotate function: Напишете рецепта за функцията на завъртане
-        rotate|Image|Number|Image: rotate|Image|Number|Image
+        rotate|Image|Number|Image: Завъртане| изоражение| номер| Изображение
       Eval Contracts F:
         Eval Contracts 3 A.solution_blocks, 300: Оценяване на рецепти 3 A.solution_blocks, 300
         Text Contract: Рецепта за текст
         Write a contract for the text function: Напишете рецепта за функцията text
-        text|Image|String|Number|String: text|Image|String|Number|String
+        text|Image|String|Number|String: Текст| Изображение| Низ| номер| Низ
       Eval Design Recipe 1.contract:
         Design Recipe 1 Contract: 'Състави Рецепта 1  Договор'
-        0: '? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
-        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
-        wide-rect|Image|Number|String: wide-rect|Image|Number|String
+        0: '? Запишете договор за функция, наречена "wide-rect", което създава правоъгълник с дадена височина и цвят, който е два пъти по-широк, отколкото е висок.'
+        1: ': Напишете Договор за функция, наречена "wide-rect", което създава правоъгълник с дадена височина и цвят, който е два пъти по-широк, отколкото е висок.'
+        wide-rect|Image|Number|String: Wide-rect| изображение| номер| Низ
     external:
+      AlgPD Break:
+        Before you move on...: Before you move on...
+      CSP Journal Entry Placeholder:
+        CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
+        Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
+      CSP Journal Entry Placeholder2:
+        description here: описание тук
+        title: Заглавие
       CSP Lesson 14 encode letter A instructions:
         "Instructions: Encode the Letter A": 'Инструкции: Кодиране на буквата А'
       CSP Student Plan - U1L5 - Sending Bits in the real world:
@@ -82,56 +90,127 @@ bg:
       Code Logo v3:
         Create images with bits and bytes.: Създаване на изображения с битове и байтове.
         title: Заглавие
+      ECSPD PD Phases:
+        ECSPD PD Phases: ECSPD PD Phases
+      ECSPD PD details:
+        ECSPD PD details: ECSPD PD details
       ECSPD PD overview:
-        ECS PD Overview: ECS PD Overview
+        ECS PD Overview: ECS PD преглед
       ECSPD curriculum overview:
-        ECS Curriculum Overview: ECS Curriculum Overview
-        Overview of Curriculum: Overview of Curriculum
+        ECS Curriculum Overview: ECS програма преглед
+        Overview of Curriculum: Преглед на учебната програма
+      ECSPD end of p1:
+        ECSPD end of p1: ECSPD end of p1
+      ECSPD forum introduction:
+        ECS Forum Introductions: ECS Forum Introductions
+        Forum Introductions: Forum Introductions
       ECSPD growth mindset strategies:
-        Growth Mindset Strategies: Growth Mindset Strategies
+        Growth Mindset Strategies: Стратегии за растеж нагласи
+      ECSPD impact of CS:
+        Impact of Computer Science: Impact of Computer Science
+        description here: описание тук
+      ECSPD impact vid1:
+        ECSPD impact vid1: ECSPD impact vid1
+      ECSPD impact vid2:
+        ECSPD impact vid2: ECSPD impact vid2
       ECSPD meet facilitator:
-        Meet your Facilitator!: Meet your Facilitator!
+        Meet your Facilitator!: Запознайте се с вашия посредник!
+      ECSPD pause:
+        ECSPD pause: ECSPD pause
+      ECSPD postsurvey: [ ]
+      ECSPD presurvey: [ ]
       ECSPD program overview:
-        ECS Program Overview: ECS Program Overview
-        Overview of ECS Program: Overview of ECS Program
+        ECS Program Overview: ECS програма преглед
+        Overview of ECS Program: Преглед на ECS програма
+      ECSPD teaching strategies video:
+        ECSPD teaching strategies video: ECSPD teaching strategies video
       ECSPD what is growth mindset:
-        An exploration of Growth Mindset: An exploration of Growth Mindset
-        What is Growth Mindset?: What is Growth Mindset?
+        An exploration of Growth Mindset: Изследване на нагласите за напредък
+        What is Growth Mindset?: Какво представлява нагласата за растеж?
       External level test (will):
         first computer program: първата компютърна програма
       Hour of Code test content: [ ]
+      Intro to CodeStudio:
+        An Introduction to Code Studio: An Introduction to Code Studio
       Mixing Colors:
         description here: описание тук
         title: Заглавие
+      Odometer:
+        Odometer: Odometer
+      PDAlg Attitude Survey:
+        CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+      PDAlg Curriculum Overview:
+        Curriculum Overview: Curriculum Overview
+        Overview of CS in Algebra curriculum: Overview of CS in Algebra curriculum
+      PDAlg Details:
+        CS in Algebra PD Details: CS in Algebra PD Details
+      PDAlg End of P1:
+        End of Phase 1: End of Phase 1
+      PDAlg Facilitator Test:
+        description here: описание тук
+        title: Заглавие
+      PDAlg Facilitators:
+        Meet Your Facilitators: Meet Your Facilitators
       PDAlg Intro: [ ]
+      PDAlg Post Survey:
+        CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
+      PDAlg Scope:
+        Scope and Sequence: Scope and Sequence
+      PDAlg Teacher Dashboard:
+        Course Progress: Прогрес в курса
+      PDAlg Teacher Introduction:
+        Introduce yourself: Introduce yourself
+      PDAlg big game:
+        Introduction to the Big Game: Introduction to the Big Game
+      PDAlg bootstrap:
+        From Bootstrap to CS in Algebra: From Bootstrap to CS in Algebra
+      PDAlg circles to blocks:
+        From Circles to Blocks: From Circles to Blocks
+      PDAlg commitment:
+        CS in Algebra PD commitments: CS in Algebra PD commitments
+        overview of program commitments: Преглед на поетите от програмата ангажименти
+      PDAlg functions:
+        The Concept of Function: The Concept of Function
+      PDAlg hard video:
+        Why is Algebra so Hard?: Why is Algebra so Hard?
       PDCSP Intro: [ ]
       PDECS Intro:
-        PD Intro: PD Intro
-        Welcome to ECS Online PD: Welcome to ECS Online PD
+        PD Intro: PD въведение
+        Welcome to ECS Online PD: Добре дошли в онлайн PD ECS
       PDECS Welcome Video:
-        Welcome Video: Welcome Video
-        Welcome to Online PD for ECS: Welcome to Online PD for ECS
+        Welcome Video: Добре дошли видео
+        Welcome to Online PD for ECS: Добре дошли в онлайн PD за ECS
       PDECS commitment:
-        ECS PD commitments: ECS PD commitments
-        overview of program commitments: overview of program commitments
+        ECS PD commitments: ECS PD ангажименти
+        overview of program commitments: Преглед на поетите от програмата ангажименти
       PDECS tour:
-        Tour of PD Space: Tour of PD Space
-        tour of the PD space: tour of the PD space
+        Tour of PD Space: Обиколка на PD пространство
+        tour of the PD space: обиколка на PD пространство
       PDK5 Beyond C:
         Beyond: Отвъд
+      PDK5 CS Video:
+        Computer Science: Компютърни науки
       PDK5 CS overview:
-        Overview of programming concepts: Overview of programming concepts
+        Overview of programming concepts: Преглед на понятията по програмиране
       PDK5 Classroom Culture C:
         Classroom Culture: Култура на класната стая
+      PDK5 Connections:
+        Connections: Connections
       PDK5 Course Maps C: [ ]
       PDK5 Course Overview C: [ ]
+      PDK5 Foundations F:
+        foundational skill: foundational skill
       PDK5 Glossary C:
         Vocabulary: Речник
       PDK5 Intro C: [ ]
       PDK5 Pair Programming 1:
         Pair Programming: Програмиране по двойки
       PDK5 Strategies:
-        Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
+        Strategies for Teaching Computer Science: Стратегии за преподаване на информатика
+      PDK5 Strategies 1:
+        Classroom Strategies: Classroom Strategies
+      PDK5 Strategies F:
+        Strategies Discussion: Strategies Discussion
       PDK5 Teacher Dashboard 1:
         Dashboard 1: Табло 1
       PDK5 Teacher Dashboard 2:
@@ -149,7 +228,7 @@ bg:
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Защо да се изучават компютърни науки в началното училище?
       Pixelation - Hadi Emoji:
-        Pixelation - Hadi Emoji: 'Pixelation - Hadi Emoji'
+        Pixelation - Hadi Emoji: 'Пикселизация - Хади Емоджи'
         description here: описание тук
       Pixelation - Lesson 14 - Fix bit offset:
         Pixelation - Lesson 14 - Fix bit offset: 'Пикселизация - урок 14 - Поправи битовия офсет'
@@ -176,31 +255,31 @@ bg:
         Pixelation - Lesson 15 - Color Free Play: 'Пикселизация - урок 15 - цвят свободна игра'
         description here: описание тук
       Pixelation - Lesson 15 - Color Shades:
-        Pixelation - Lesson 15 - Color Shades: 'Pixelation - Lesson 15 - Color Shades'
+        Pixelation - Lesson 15 - Color Shades: 'Пикселизация - урок 15 - цветни нюанси'
         description here: описание тук
       Pixelation - Lesson 15 - Color Shades 4x4:
-        Pixelation - Lesson 15 - Color Shades 4x4: 'Pixelation - Lesson 15 - Color Shades 4x4'
+        Pixelation - Lesson 15 - Color Shades 4x4: 'Пикселизация - урок 15 - цветни нюанси 4 x 4'
         description here: описание тук
       Pixelation - Lesson 15 - Complete 3-bit color:
-        Pixelation - Lesson 15 - Complete 3-bit color: 'Pixelation - Lesson 15 - Complete 3-bit color'
+        Pixelation - Lesson 15 - Complete 3-bit color: 'Пикселизация - урок 15 - попълване с  3-битов цвят'
         description here: описание тук
       Pixelation - Lesson 15 - Favicon Instructions:
-        Pixelation - Lesson 15 - Favicon Instructions: 'Pixelation - Lesson 15 - Favicon Instructions'
+        Pixelation - Lesson 15 - Favicon Instructions: 'Пикселизация - урок 15 - Favicon инструкции'
         description here: описание тук
       Pixelation - Lesson 15 - Task 1 instructions:
-        Pixelation - Lesson 15 - Task 1 instructions: 'Pixelation - Lesson 15 - Task 1 instructions'
+        Pixelation - Lesson 15 - Task 1 instructions: 'Пикселизация - урок 15 - задача 1 инструкции'
         description here: описание тук
       Pixelation - Lesson 15 - Task 2 instructions:
-        Pixelation - Lesson 15 - Task 2 instructions: 'Pixelation - Lesson 15 - Task 2 instructions'
+        Pixelation - Lesson 15 - Task 2 instructions: 'Пикселизация - урок 15 - задача 2 инструкции'
         description here: описание тук
       Pixelation - Lesson 15 - Task 3 instructions:
-        Pixelation - Lesson 15 - Task 3 instructions: 'Pixelation - Lesson 15 - Task 3 instructions'
+        Pixelation - Lesson 15 - Task 3 instructions: 'Пикселизация - урок 15 - задача 3 инструкции'
         description here: описание тук
       Pixelation - Video - Color 1:
-        Pixelation - Video - Color 1: 'Pixelation - Video - Color 1'
+        Pixelation - Video - Color 1: 'Пикселизация - видео - цвят 1'
         description here: описание тук
       Pixelation - Video - Color 2:
-        Pixelation - Video - Color 2: 'Pixelation - Video - Color 2'
+        Pixelation - Video - Color 2: 'Пикселизация - видео - цвят 2'
         description here: описание тук
       Pixelation - Video - Color 3:
         Pixelation - Video - Color 3: 'Пикселизация - видео - цвят 3'
@@ -239,10 +318,10 @@ bg:
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Програмирането толкова трудно ли се оказа, колкото сте очаквали? Обяснете защо или защо не. Как това влияе на преподаването на информатика?
       Text Compression 1:
         Compress text by identifying repeated patterns.: Компресиране на текст чрез идентифициране на повтарящи се модели.
-        Text Compression 1: Text Compression 1
+        Text Compression 1: Компресия на текста 1
       Text Compression Peter Piper:
         Compress text by identifying repeated patterns.: Компресиране на текст чрез идентифициране на повтарящи се модели.
-        Text Compression Peter Piper: Text Compression Peter Piper
+        Text Compression Peter Piper: Текст компресия Питър Пайпър
       U1L1 Student Lesson Introduction:
         description here: описание тук
         title: Заглавие
@@ -258,6 +337,9 @@ bg:
       U1L13 Student Lesson Introduction:
         description here: описание тук
         title: Заглавие
+      U1L13 Text Compression:
+        Compress text by identifying repeated patterns.: Компресиране на текст чрез идентифициране на повтарящи се модели.
+        U1L13 Text Compression: U1L13 Text Compression
       U1L16 Student Lesson Introduction:
         description here: описание тук
         title: Заглавие
@@ -271,17 +353,14 @@ bg:
         description here: описание тук
         title: Заглавие
       U1L4 Widget Demo - Video:
-        Widget Demonstration - Video: 'Widget Demonstration - Video'
+        Widget Demonstration - Video: 'Демонстрация на приспособление - видео'
         description here: описание тук
       U1L5 How the Internet Works - Video:
-        How the Internet Works - Video: 'How the Internet Works - Video'
+        How the Internet Works - Video: 'Как работи интернет - видео'
         description here: описание тук
       U1L5 Student Lesson Introduction:
         description here: описание тук
         title: Заглавие
-      U1L6 Odometer Widget:
-        Odometer Widget: Odometer Widget
-        description here: описание тук
       U1L6 Student Lesson Introduction:
         description here: описание тук
         title: Заглавие
@@ -289,14 +368,92 @@ bg:
         description here: описание тук
         title: Заглавие
       U1L8 Student Lesson Introduction:
-        Sending Numbers: Sending Numbers
+        Sending Numbers: Изпращане на номера
         description here: описание тук
       U1L9 Student Lesson Introduction:
         description here: описание тук
         title: Заглавие
+      facilitator test: [ ]
+      sciPD Course Overview: [ ]
+      sciPD Intro: [ ]
+      sciPD StarLogo intro 1:
+        Preface to the Guided Introduction to StarLogo Nova: Preface to the Guided Introduction to StarLogo Nova
+      sciPD StarLogo intro 2:
+        Guided Intro to StarLogo Nova: Guided Intro to StarLogo Nova
+      sciPD StarLogo intro 3:
+        Guided Tour of StarLogo Nova pt 3: Guided Tour of StarLogo Nova pt 3
+      sciPD StarLogo intro 4:
+        Guided Intro to StarLogo Nova part 4: Guided Intro to StarLogo Nova part 4
+      sciPD StarLogo intro video:
+        Introduction to StarLogo Nova: Introduction to StarLogo Nova
+      sciPD StarLogo tutorial 1:
+        StarLogo Tutorial part 1: StarLogo Tutorial part 1
+      sciPD StarLogo tutorial 2:
+        StarLogo Tutorial part 2: StarLogo Tutorial part 2
+      sciPD StarLogo tutorial 3:
+        StarLogo Tutorial part 3: StarLogo Tutorial part 3
+      sciPD StarLogo tutorial 4:
+        StarLogo Nova Tutorial Part 4: StarLogo Nova Tutorial Part 4
+      sciPD StarLogo tutorial 5:
+        StarLogo Nova Tutorial Part 5: StarLogo Nova Tutorial Part 5
+      sciPD StarLogo tutorial 6:
+        StarLogo Nova Tutorial Part 6: StarLogo Nova Tutorial Part 6
+      sciPD StarLogo tutorial 7:
+        StarLogo Nova Tutorial Part 7: StarLogo Nova Tutorial Part 7
+      sciPD StarLogo tutorial 8:
+        StarLogo Nova Tutorial Part 8: StarLogo Nova Tutorial Part 8
+      sciPD agent based forum:
+        Agent Based Modeling of Adaptive Systems Forum: Agent Based Modeling of Adaptive Systems Forum
+      sciPD agent based video:
+        Agent Based Modeling: Agent Based Modeling
+      sciPD class models forum:
+        Models in the Classroom: Models in the Classroom
+      sciPD class models video:
+        Using Models in the Classroom: Using Models in the Classroom
+      sciPD complex adaptive forum:
+        Complex Adaptive Forum: Complex Adaptive Forum
+      sciPD complex adaptive video:
+        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
+      sciPD computer models forum:
+        Using Computer Models in Science: Using Computer Models in Science
+      sciPD computer models video:
+        Using Computer Models in Science: Using Computer Models in Science
+      sciPD culture forum:
+        Dispositions and Classroom Culture: Dispositions and Classroom Culture
+      sciPD culture video:
+        Dispositions And Classroom Culture: Dispositions And Classroom Culture
+      sciPD expectations: [ ]
+      sciPD finish:
+        Code.org Post Survey: Code.org Post Survey
+      sciPD framework forum:
+        Computational Thinking and the Framework for K-12: Computational Thinking and the Framework for K-12
+      sciPD framework video:
+        Framework: Рамка
+      sciPD intro finale: [ ]
+      sciPD intro to CS forum: [ ]
+      sciPD intro to CS video:
+        Intro to Computational Science: Intro to Computational Science
+      sciPD intro video:
+        Welcome to CS in Science: Welcome to CS in Science
+      sciPD logistics 1:
+        Details and Logistics: Details and Logistics
+      sciPD materials:
+        Workshop Materials: Workshop Materials
+      sciPD meet and greet: [ ]
+      sciPD p2 intro:
+        Welcome to Phase 2: Welcome to Phase 2
+      sciPD p3 intro:
+        CS in Science Introduction to Phase 3 PD: CS in Science Introduction to Phase 3 PD
+      sciPD preQ:
+        Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
+      sciPD what to expect:
+        What to Expect: What to Expect
       test demo level:
         demo description: demo description
         demo title: demo title
+      test discourse level type:
+        this is a discourse forum: this is a discourse forum
+        title: Заглавие
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
@@ -403,15 +560,25 @@ bg:
         Convert Blocks to Math: 'Конвертиране на блокове  в Математика'
         Type out the arithmetic expression that matches this code: Напишете аритметичен израз, който съответства на този код
         Type the arithmetic expression here: Въведете аритметичния израз тук
+      ECSPD PD goals:
+        Documenting Your PD Goals: Documenting Your PD Goals
+      ECSPD course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
+      ECSPD impact in program:
+        Impact of Computing: Impact of Computing
+      ECSPD program overlap:
+        Relationship between Curriculum and PD: Relationship between Curriculum and PD
       ECSPD strategies:
-        Classroom Strategies Journal: Classroom Strategies Journal
+        Classroom Strategies Journal: Дневник на стратегиите в Класната стая
       ECSPD your goals:
-        Documenting Your Goals: Documenting Your Goals
+        Documenting Your Goals: Документиране на целите Ви
       Open text response example:
         I loved it because...: Обичах го, защото...
         Open text response example: Отворен отговор с примерен текст
+      PDAlg course goals:
+        Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
-        Biggest Challenges: Biggest Challenges
+        Biggest Challenges: Най-големите предизвикателства
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: Спомагане положителна учебна среда във вашия клас по компютърни науки
         In my classroom, I want to...: В моята класна стая аз искам да...
@@ -429,104 +596,107 @@ bg:
         Do you see computer science as a foundational skill for your students? Why or why not?: Виждате ли компютърните науки като фундаментални умения за вашите ученици? Защо или защо не?
         Your thoughts here: Вашите мисли тук
       PDK5 Goals:
-        Goals for using Code.org in your Classroom: Goals for using Code.org in your Classroom
+        Goals for using Code.org in your Classroom: Цели за използване на Code.org в класната стая
       PDK5 Impact 1:
         Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Смятате ли, че вашите ученици ще намерят онлайн дейностите в курсовете К-5 за забавни и завладяващи? Защо или защо не?
         Impact for students: Въздействие върху учениците
         Your thoughts here: Вашите мисли тук
       PDK5 Impact 2:
-        Connections to other Subjects: Connections to other Subjects
-        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.
+        Connections to other Subjects: Връзки с други теми
+        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Компютърните науки се свързват с други теми или предмети, които вашите ученици изучават? Обяснява защо или защо не.
+        Your thoughts here: Вашите мисли тук
+      PDK5 Impact 3:
+        Real-world applications for Students: Real-world applications for Students
         Your thoughts here: Вашите мисли тук
       PDK5 Loops 2:
-        The Importance of Loops: The Importance of Loops
+        The Importance of Loops: Значението на циклите
       PDK5 Problem Solving:
-        I could integrate this in my classroom by...: I could integrate this in my classroom by...
-        Problem Solving Methods: Problem Solving Methods
+        I could integrate this in my classroom by...: Може да включа това в моята класна стая от...
+        Problem Solving Methods: Методи за решаване на проблем
       PDK5 Promo Video:
-        "Code Studio: Kid tested, Teacher approved": 'Code Studio: Kid tested, Teacher approved'
+        "Code Studio: Kid tested, Teacher approved": 'Код студио: изпробвани от деца, одобрени от учители'
       PDK5 Promo Video 2:
-        "Code Studio: Kid tested, Teacher approved": 'Code Studio: Kid tested, Teacher approved'
-        My first impressions of Code Studio are...: My first impressions of Code Studio are...
+        "Code Studio: Kid Tested, Teacher Approved!": 'Code Studio: Kid Tested, Teacher Approved!'
+        My first impressions of Code Studio are...: Моите първи впечатления от код студио са...
       PDK5 Strategies O:
-        "I think teaching computer science will be different than teaching other subjects in these ways: ...": 'I think teaching computer science will be different than teaching other subjects in these ways: ...'
-        Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
+        "I think teaching computer science will be different than teaching other subjects in these ways: ...": Мисля, че преподаването компютърни науки ще бъде различено от преподаването на други предмети по следните причини:...
+        Strategies for Teaching Computer Science: Стратегии за преподаване на информатика
       PDK5 Test5:
-        Big Test: Big Test
+        Big Test: Голям тест
       Test Free Response Assessment Question:
-        Enter your reflection here: Enter your reflection here
-        0: '? Imagine that you have to send a list of 10 numbers to friend in binary using the bit-sending widget. The numbers are all between 0 and 100. Describe the issues or problems that you and your friend would encounter in trying to do this. How would you address these problem?'
-        1: ': Imagine that you have to send a list of 10 numbers to friend in binary using the bit-sending widget. The numbers are all between 0 and 100. Describe the issues or problems that you and your friend would encounter in trying to do this. How would you address these problem?'
-        Sending Numbers Free Response: Sending Numbers Free Response
+        Enter your reflection here: Въведете коментара си тук
+        0: '? Представете си, че трябва да изпратите списък с 10 номера на приятел в бинарен код чрез  малко приспособление. Числата са между 0 и 100. Опишете въпроси или проблеми, които вие и вашият приятел ще се сблъскате в опит да направите това. Как ще се справите с проблемите?'
+        1: ': Представете си, че трябва да изпратите списък с 10 номера на приятел в бинарен код чрез  малко приспособление. Числата са между 0 и 100. Опишете въпроси или проблеми, които вие и вашият приятел ще се сблъскате в опит да направите това. Как ще се справите с проблемите?'
+        Sending Numbers Free Response: 'Изпращане на номера: Свободен отговор'
       Test Markdown level:
         Enter prompt here: Въведете ред тук
         Enter title here: Въведете заглавието тук
       U1L10 Assessment Free Response:
-        "A follow-up to the Assessment Question #2:": 'A follow-up to the Assessment Question #2:'
-        "Assessment: Encoding Text": 'Assessment: Encoding Text'
+        "A follow-up to the Assessment Question #2:": 'Отиди към оценка на въпрос #2:'
+        "Assessment: Encoding Text": 'Оценка: Кодиране на текст'
       U1L10 Journal Free Response:
-        "Free Response: Encoding Text": 'Free Response: Encoding Text'
+        "Free Response: Encoding Text": 'Свободен отговор: Кодиране на текст'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L11 Reflection Free Response:
-        "Reflection: Sending Formatted Text": 'Reflection: Sending Formatted Text'
+        "Reflection: Sending Formatted Text": 'Коментар: Изпращане на форматиран текст'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L12 Reflection Free Response:
-        "Reflection: Data Storage": 'Reflection: Data Storage'
+        "Reflection: Data Storage": 'Коментар: Съхраняване на данни'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L13 Assessment 1:
-        "Assessment 1: Text Compression": 'Assessment 1: Text Compression'
-        Write (in the space below) a segment of text that should compress effectively and efficiently.: Write (in the space below) a segment of text that should compress effectively and efficiently.
+        "Assessment 1: Text Compression": 'Оценка 1: Компресиране на текст'
+        Write (in the space below) a segment of text that should compress effectively and efficiently.: Напишете (в полето по-долу) част от текст, който ще има висока степен на компресия.
       U1L13 Assessment 2:
-        "Assessment 2: Text Compression": 'Assessment 2: Text Compression'
-        Write (in the space below) a segment of text that will not compress well.: Write (in the space below) a segment of text that will not compress well.
+        "Assessment 2: Text Compression": 'Оценка 1: Компресиране на текст'
+        Write (in the space below) a segment of text that will not compress well.: Напишете (в полето по-долу) част от текст, който ще има средна степен на компресия.
       U1L13 Reflection Free Response:
-        "Reflection: Text Compression": 'Reflection: Text Compression'
+        "Reflection: Text Compression": 'Коментар: Компресия на текста'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L16 Reflection Free Response:
-        "Reflection: Encoding Complex data": 'Reflection: Encoding Complex data'
+        "Reflection: Encoding Complex data": 'Коментар: Кодиране на сложни данни'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L2 Free response assessment question:
-        "Assessment: Sending Binary Messages": 'Assessment: Sending Binary Messages'
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
-        Enter your response here.: Enter your response here.
+        "Assessment: Sending Binary Messages": 'Оценка: Изпращане на бинарни съобщения'
+        Complete the Lesson 2 Rubric.: Попълнете рубриката от урок 2.
+        Enter your response here.: Въведете вашия отговор тук.
       U1L2 Free response reflection question:
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
-        Enter your reflection here.: Enter your reflection here.
-        "Reflection: Sending Binary Messages": 'Reflection: Sending Binary Messages'
+        Complete the Lesson 2 Rubric.: Попълнете рубриката от урок 2.
+        Enter your reflection here.: Въведете коментара си тук.
+        "Reflection: Sending Binary Messages": 'Коментар: Изпращане на бинарни съобщения'
       U1L3 Free response reflection question:
-        Complete the Lesson 3 Rubric.: Complete the Lesson 3 Rubric.
-        Enter your reflection here.: Enter your reflection here.
-        "Reflection: Sending Complex Messages": 'Reflection: Sending Complex Messages'
+        Complete the Lesson 3 Rubric.: Попълнете рубриката от урок 3.
+        Enter your reflection here.: Въведете коментара си тук.
+        "Reflection: Sending Complex Messages": 'Коментар: Изпращане на сложни съобщения'
       U1L4 Free Response Reflection:
-        Enter your reflection here.: Enter your reflection here.
-        Reflect on this lesson: Reflect on this lesson
+        Enter your reflection here.: Въведете коментара си тук.
+        Reflect on this lesson: Коментар на този урок
       U1L4 Free response reflection question:
-        "Assessment: Bit sending Widget": 'Assessment: Bit sending Widget'
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
-        Enter your reflection here.: Enter your reflection here.
+        "Assessment: Bit sending Widget": 'Оценка: Приспособление за изпращане на битове'
+        Complete the Lesson 2 Rubric.: Попълнете рубриката от урок 2.
+        Enter your reflection here.: Въведете коментара си тук.
       U1L5 Free Response Assessment:
-        Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.: Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.
-        Free Response Assessment: Free Response Assessment
+        Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.: Попълнете рубриката за урок 5. След това отговорете на този ред, с помощта на приблизително 100 думи.
+        Free Response Assessment: 'Свободен отговор: оценка'
       U1L5 Free Response Lesson Review:
-        Complete these three sentences.: Complete these three sentences.
-        Lesson Review: Lesson Review
+        Complete these three sentences.: Попълнете тези три изречения.
+        Lesson Review: Преглед на урока
       U1L6 Free Response Assessment:
-        "Assessment: Number Systems": 'Assessment: Number Systems'
+        "Assessment: Number Systems": 'Оценка: бройни системи'
       U1L6 Free Response Reflection:
-        "Reflection: Number Systems": 'Reflection: Number Systems'
+        "Reflection: Number Systems": 'Коментар: бройни системи'
       U1L7 Free Response Assessment:
-        "Assessment: Binary Numbers": 'Assessment: Binary Numbers'
+        "Assessment: Binary Numbers": 'Оценка: Бинарни числа'
       U1L7 Free Response Reflection:
-        "Reflect on your learning in this lesson. In the space below, enter:": 'Reflect on your learning in this lesson. In the space below, enter:'
-        "Reflection: Binary Numbers": 'Reflection: Binary Numbers'
+        "Reflect on your learning in this lesson. In the space below, enter:": 'Коментирайтеа вашето обучение в този урок. В полето по-долу въведете:'
+        "Reflection: Binary Numbers": 'Коментар: Бинарни числа'
       U1L8 Free Response Getting Started:
-        "Getting Started: Sending Numbers ": 'Getting Started: Sending Numbers '
-        Respond to the following question.: Respond to the following question.
+        "Getting Started: Sending Numbers ": 'Първи стъпки: Изпращане на номера '
+        Respond to the following question.: Отговори на следния въпрос.
       U1L8 Free Response Reflection:
         Complete the Sending Numbers Checklist and then respond to the following prompt.: Complete the Sending Numbers Checklist and then respond to the following prompt.
-        "Reflection: Sending Numbers ": 'Reflection: Sending Numbers '
+        "Reflection: Sending Numbers ": 'Коментар: Изпращане на номера '
       U1L9 Free Response Assessment:
-        "Assessment: Real-world Numbers ": 'Assessment: Real-world Numbers '
+        "Assessment: Real-world Numbers ": 'Оценка: Реални числа '
       text match test:
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null

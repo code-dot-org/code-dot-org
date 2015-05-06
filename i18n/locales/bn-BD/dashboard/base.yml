@@ -64,6 +64,8 @@ bn:
     need_confirmation: নিশ্চিতকরণ নির্দেশনা পাওনি?
     need_unlock: আনলক করার নির্দেশাবলী পাওনি?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'আপনার উন্নতি সম্পর্কে জানার জন্য সাইন আপ করার মাধ্যমে একটি একাউন্ট তৈরি করুন। প্রাথমিকভাবে আপনাকে লগ ইন করতে দেয়া এবং পাসওয়ার্ড উদ্ধার করার জন্য আপনার ইমেইল ঠিকানাটি ব্যবহৃত হবে। বিস্তারিত তথ্যের জন্য <a href="http://code.org/privacy">গোপনীয়তা নীতি</a> দেখুন।'
     overview_teacher: 'একটি একাউন্ট খোলার মাধ্যমে আপনার শ্রেণীকক্ষে কম্পিউটার বিজ্ঞান শিক্ষা দিন।<p/> আপনি আপনার ছাত্রছাত্রীদের এতে যুক্ত করতে পারবেন এবং তাদের উন্নতি তদারকি করতে সক্ষম হবেন।'
     no_signup_message: 'আপনি <a target="_blank" href="http://learn.code.org">বিভিন্ন স্টেজ এবং পাজলসমূহ ব্রাউজ</a> করতে পারবেন, কিন্তু আপনার অগ্রগতি সংরক্ষন করতে আপনাকে সাইন আপ করতে হবে।'
@@ -316,6 +318,7 @@ bn:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'Already registered? %{link}'
@@ -482,6 +485,8 @@ bn:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: ঠিক আছে
   time:

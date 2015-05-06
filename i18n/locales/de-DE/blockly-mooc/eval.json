@@ -5,7 +5,7 @@
   "displayBlockTitle":"Bewerten",
   "ellipseBlockTitle":"Ellipse (Breite, Höhe, Stil, Farbe)",
   "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
-  "infiniteRecursionError":"Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
+  "infiniteRecursionError":"Deine Funktion ruft sich selbst auf. Wir haben sie angehalten, da sie sonst für immer damit weitergemacht hätte sich selbst aufzurufen.",
   "overlayBlockTitle":"Overlay (oben, unten)",
   "placeImageBlockTitle":"Ort-Bild (x, y, Bild)",
   "offsetBlockTitle":"versatz (x,y,Bild)",

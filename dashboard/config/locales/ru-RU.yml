@@ -65,6 +65,8 @@
     need_confirmation: Не получили письмо для подтверждения?
     need_unlock: Не получили письмо-инструкцию для разблокировки?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Зарегистрироваться, чтобы отслеживать свои успехи. Ваш электронный
       адрес используется, главным образом, для  входа в систему и для восстановления
       пароля. Дополнительную информацию смотрите в наших <a href="http://code.org/privacy">Правилах  конфиденциальности</a>.
@@ -356,6 +358,7 @@
     classroom_activity: Урок без компьютера
   home:
     title: Студия кода
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Обзор курсов 1, 2 и 3
     lesson_plans: Планы уроков
     signin_message: Уже зарегистрированы? %{link}
@@ -399,7 +402,7 @@
     heading_apps: <h2>Развлечения для</h2><h1>всех</h1>
     heading_legacy: <h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>
     your_gallery: Галерея
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Попробуйте курс Студии Кода
   gender:
     male: Мужской
     female: Женский
@@ -555,10 +558,12 @@
     baddomainsize: Ваше определение имеет неправильное число элементов в домене.
     baddomainname: Один или несколько элементов в вашем домене имеют неправильное
       имя.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    baddomaintype: Один или несколько элементов домена имеет неверный тип, или они
+      находятся в неправильном порядке.
   text_match:
     placeholder: Внеси сюда свой ответ
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Продолжить
   time:

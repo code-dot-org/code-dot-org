@@ -4,72 +4,72 @@
       name:
         20-hour:
           desc: K-8 Intro to Computer Science Course
-          Unplug1: Stage 1
-          Maze: Stage 2
-          Unplug2: Stage 3
-          Unplug3: Stage 4
-          Artist: Stage 5
-          Unplug4: Stage 6
-          Artist2: Stage 7
-          Unplug5: Stage 8
-          Farmer: Stage 9
-          Unplug6: Stage 10
-          Artist3: Stage 11
-          Unplug7: Stage 12
-          Farmer2: Stage 13
-          Unplug8: Stage 14
-          Artist4: Stage 15
-          Unplug9: Stage 16
-          Farmer3: Stage 17
-          Unplug10: Stage 18
-          Artist5: Stage 19
-          Unplug11: Stage 20
+          Unplug1: قۆناغی 1
+          Maze: قۆناغی 2
+          Unplug2: قۆناغی 3
+          Unplug3: قۆناغی 4
+          Artist: قۆناغی 5
+          Unplug4: قۆناغی 6
+          Artist2: قۆناغی 7
+          Unplug5: قۆناغی 8
+          Farmer: قۆناغی 9
+          Unplug6: قۆناغی 10
+          Artist3: قۆناغی 11
+          Unplug7: قۆناغی 12
+          Farmer2: قۆناغی 13
+          Unplug8: قۆناغی 14
+          Artist4: قۆناغی 15
+          Unplug9: قۆناغی 16
+          Farmer3: قۆناغی 17
+          Unplug10: قۆناغی 18
+          Artist5: قۆناغی 19
+          Unplug11: قۆناغی 20
         Hour of Code:
-          desc: Hour of Code
-          Maze: Stage 1
+          desc: كاژێری كۆدنووسی
+          Maze: قۆناغی 1
         Edit Code:
           desc: Edit Code (beta)
-          MazeEC: Stage 1
+          MazeEC: قۆناغی 1
         2014 Levels:
           desc: Bounce (beta)
-          Bounce: Stage 1
+          Bounce: قۆناغی 1
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          Custom: قۆناغی 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: قۆناغی 1
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          Jigsaw: قۆناغی 1
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
-          MazeEC: Stage 1
-          Applab: Stage 2
-          ArtistEC: Stage 3
-          StudioEC: Stage 4
+          MazeEC: قۆناغی 1
+          Applab: قۆناغی 2
+          ArtistEC: قۆناغی 3
+          StudioEC: قۆناغی 4
         events:
           desc: Bounce (beta)
-          Bounce: Stage 1
-          Studio: Stage 2
+          Bounce: قۆناغی 1
+          Studio: قۆناغی 2
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          Custom: قۆناغی 1
         flappy:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: قۆناغی 1
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          Jigsaw: قۆناغی 1
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: Stage 1
+          WordSearch: قۆناغی 1
     game:
       name:
         Unplug1: Introduction to Computer Science

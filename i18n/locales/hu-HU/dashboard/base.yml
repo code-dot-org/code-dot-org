@@ -64,6 +64,8 @@ hu:
     need_confirmation: Nem kapta meg a megerősítő instrukciókat?
     need_unlock: Nem kaptál a zárolás megszüntetéséhez útmutatót?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Regisztrálj, hogy nyomon tudd követni a haladásodat. Az e-mail címedet csak azonosításként használjuk, vagy ha esetleg elfelejtetted a jelszavadat. További információkért olvasd el az <a href="http://code.org/privacy"> Adatvédelmi Szabályainkat.</a>'
     overview_teacher: 'A számítógép-tudomány tanításához hozz létre egy felhasználói fiókot. <p/> Felveheted diákjaidat hogy nyomon kövesd az előrehaladásukat.'
     no_signup_message: '<a target="_blank" href="http://learn.code.org">Böngészhetsz a különböző szakaszok és feladványok között</a>, de regisztrálnod kell, hogy elmenthesd, hogy hol tartasz.'
@@ -312,6 +314,7 @@ hu:
     classroom_activity: Offline tevékenység
   home:
     title: Kód Stúdió
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: 1., 2. és 3. tanfolyam áttekintése
     lesson_plans: Óravázlatok
     signin_message: 'Már regisztráltál? %{link}'
@@ -477,6 +480,8 @@ hu:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Itt add meg a válaszod
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

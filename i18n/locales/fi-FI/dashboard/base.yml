@@ -64,6 +64,8 @@ fi:
     need_confirmation: Etkö saanut vahvistusviestiä?
     need_unlock: Etkö saanut avausohjeita?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Rekisteröidy niin voit seurata edistymistäsi. Sähköpostiosoitettasi käytetään pääasiassa sisäänkirjautumiseen ja salasanan palauttamiseen. Katso lisätietoja <a href="http://code.org/privacy">Yksityisyyskäytännöstämme</a>.'
     overview_teacher: 'Rekisteröidy niin saat apua tietojenkäsittelyn opettamiseen.<p/>Voit lisätä oppilaita ja seurata heidän edistymistään.'
     no_signup_message: 'Voit <a target="_blank" href="http://learn.code.org">selata eri tasoja ja tehtäviä</a>, mutta sinun pitää rekistöröityä, jotta voit tallentaa edistymisesi.'
@@ -325,6 +327,7 @@ fi:
     classroom_activity: Tietokoneeton tekeminen
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Katsaus kursseihin 1, 2 ja 3
     lesson_plans: Tuntisuunnitelmat
     signin_message: 'Jo rekisteröitynyt? %{link}'
@@ -490,6 +493,8 @@ fi:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Kirjoita vastauksesi tähän
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

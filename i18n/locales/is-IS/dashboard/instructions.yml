@@ -198,7 +198,6 @@ is:
       4-5 Artist 9_instruction: Teiknaðu hinn helminginn svo að teikningin sé samhverf. Þríhyrningarnir eru jafnhliða og 50 díla langir.
       4-5 Artist Assessment 1_instruction: 'Mat: Notaðu lykkju til að teikna jafnhliða þríhyrninginn. Hver hlið er 300 dílar.'
       4-5 Artist For Loops 1_instruction: Settu tölurnar 1 til 10 í breiddarkubbana og keyrðu kóðann.
-      4-5 Artist For Loops 10_instruction: "Ljúktu \"frá\" kubbnum svo að hann telji 10, 20, 30, 40, 50. Frá hvaða tölu er byrjað að telja? Til hvaða tölu er talið? Hvað hækkar talan um mikið í einu?\r\n (feitletraðu orðin frá, til, um)"
       4-5 Artist For Loops 11_instruction: 'Ljúktu við "frá" kubbinn svo að hann telji 0, 20, 40, 60, 80... 200.'
       4-5 Artist For Loops 12_instruction: 'Hvað gerist ef þú víxlar "frá" og "til" tölunum? Ljúktu við "frá" kubbinn svo að hann telji 200, 180, 160, 140, 120...0. '
       4-5 Artist For Loops 13_instruction: 'Þessi lausn byrjaði án "frá" kubbs og inniheldur of marga kubba! Notaðu "frá" kubb til að ljúka við spíralinn. Vísbending: Lengd síðustu línunnar er 250 dílar.'
@@ -212,7 +211,6 @@ is:
       4-5 Artist For Loops 7_instruction: 'Teiknaðu sömu ferninga en notaðu teljarakubb til að breyta stærðinni. Settu kubbinn "teljari" í fallið "teikna ferning". Vísbending: Hann er í flokknum Breytur.'
       4-5 Artist For Loops 8_instruction: 'Getur þú lokið við forritið með því að nota "frá" kubb sem telur frá 10 til 200 um 10? Þú finnur "frá" kubb í flokknum Lykkjur.'
       4-5 Artist For Loops 9_instruction: 'Þessir hringir eru 5, 10, 15, 20, 25, 30 og 35 á stærð. Teiknaðu hringana með "frá" kubbi.'
-      4-5 Artist For Loops Assessment 1_instruction: 'Ljúktu við "frá" kubbinn svo að hann telji 10, 20, 30, 40, 50... 200.'
       4-5 Artist Free Draw 1_instruction: Frjáls teikning! Teiknaðu hvað sem þér dettur í hug að skapa.
       4-5 Artist Functions 1_instruction: Notaðu lykkju til að teikna þríhyrning.
       4-5 Artist Functions 10_instruction: 'Teiknaðu snjókorn með því að nota fallið "teikna ferning". Endurtaktu fallið til að búa til 10 ferninga með 50 díla hliðar. Hve mikið þarf að snúa eftir hvern? Vísbending: Snúðu um (360/10) gráður.'
@@ -247,7 +245,10 @@ is:
       4-5 Artist Patterns 7_instruction: 'Við skulum breyta kóðanum úr síðustu þraut til að teikna þetta flóknara mynstur. Taktu eftir hvernig tíglarnir skarast núna. Prófaðu að breyta fyrsta "hoppa aftur á bak" úr 100 í 50 (hálfa leið). Hve langt ætti listamaðurinn að hoppa aftur á bak í næsta skipti?'
       4-5 Artist Patterns 8_instruction: Notaðu lykkju til að teikna sexhyrning með 40 díla hliðar og 60 gráðu horn.
       4-5 Artist Patterns 9.5_instruction: Setjum þennan kóða í lykkju til að teikna tvær raðir af sexhyrningum. Taktu eftir að önnur röðin er færð til hægri.
-      4-5 Artist Patterns 9_instruction: 'Endurtaktu nú þennan kóða 3 sinnum til að teikna alla röðina. Vísbending: Hver sexhyrningur er 80 dílar á breidd frá ystu punktum til vinstri og hægri.'
+      4-5 Artist Patterns 9_instruction: |
+        Now repeat that code 3 times to draw the
+        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
+        to right.
       4-5 Artist Patterns Free Play_instruction: Frjáls æfing. Spreyttu þig á að búa til eigið mynstur!
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
@@ -333,6 +334,7 @@ is:
       A test level ArtistArtist_instruction: Prófunaráfangi listamanns
       add 2_instruction: Eftir þessa fínu vinnu með síðustu þraut skulum við æfa þetta einu sinni enn. Teiknaðu þetta með 60 díla sexhyrningum.
       Alice Test_instruction: Hér eru leiðbeiningar!
+      All green everything_instruction: click and drag the blocks
       Alpha 2-3 Artist Loops New 3_instruction: Nú skulum við teikna 6 ferninga í litum af handahófi. Hvað þarf að snúa um margar gráður eftir hvern ferning til að búa til heilan hring ferninga?
       Alpha Course 3 Artist Functions 5_instruction: 'Uppfærðu fallið "teikna ferning" svo það noti stikann "lengd" til að teikna ferninga. Teiknaðu svo ferning með 100 díla hliðar.'
       Alpha Course 3 Artist Functions 6_instruction: 'Hér er fallið "teikna ferning" með stika. Bættu við réttu kubbunum og breyttu núllinu í rétta tölu. Vísbending: Hliðar ferningsins eru 100 dílar.'
@@ -341,6 +343,7 @@ is:
       Alpha Course 3 Artist Nested Loops 4_instruction: Skiptu þessum kubbum út fyrir faldaða lykkju.
       Alpha Course 3 Bee Conditionals 10_instruction: 'Búðu til fall sem athugar hvort hlutur er fjólublátt blóm og safnar þá öllum blómasafanum eða býflugnabú og býr þá til hunang.  '
       Alpha Course 3 Bee Conditionals 9_instruction: 'Safnaðu blómasafa með fallinu "kanna fjólublátt blóm".'
+      applab_test2_sarah_instruction: This is the instructions panel for level 2
       Arbitrary_instruction: Búðu til strik
       Artist - Nested Loops 1_instruction: 'Ljúktu við kóðann til að teikna þessa þríhyrninga. Sá fyrsti er tilbúinn. Vísbending: 3 þríhyrningar í 360 gráðu snúningi.'
       Artist - Nested Loops 10_instruction: Teiknaðu síðustu röðina af stjörnum á flaggið með því að hafa gefnu kubbana í lykkju. Það eru 50 dílar á milli stjarna, en þær eru sjálfar 30 dílar á breidd.
@@ -399,39 +402,28 @@ is:
         simple linear functions, let's work on using them to add some movement to
         our game. Click play to see what your game can currently do (not much!), update
         any variables you like, and then click finish to move on.
-      Big Game Animation 1_instruction: 'Nú hefur þú lært að skrifa einföld línuleg föll. Notum þau til að bæta hreyfingu í leikinn. Spilaðu leikinn til að sjá hvað hann gerir (varla nokkuð!). Uppfærðu breytur að vild og smelltu á "Ljúka" til að halda áfram.'
+      Big Game Animation 1_instruction: |
+        Now that you've learned to write simple
+        linear functions, let's work on using them to add some movement to our game.
+        Click run to see what your game can currently do (not much!), update any variables
+        you like, and then click finish to move on.
       Big Game Animation 2 (copy 1)_instruction: |
         The function 'update-target'
         function takes the target's current x value, and returns an updated value.
         Complete the 'update-target' function so that it adds to the x value each
         time it is called. The more you add to x, the faster the target will go.
-      Big Game Animation 2_instruction: |
-        The 'update-target' function takes the
-        target's current x value, and returns an updated value. Complete the 'update-target'
-        function so that it adds to the x value each time it is called. The more you
-        add to x, the faster the target will go.
+      Big Game Animation 2_instruction: 'Fallið "update-target" (uppfæra-mark) tekur núverandi x gildi marksins og skilar uppfærðu gildi. Ljúktu við fallið "update-target" svo að það bæti við x gildið í hvert skipti sem kallað er á það. Því meira sem bætt er við x, því hraðar fer markið.'
       Big Game Animation 3_instruction: 'Fallið "update-danger" (uppfæra-hættu) ætti að virka alveg eins og fallið "update-target" (uppfæra-mark), nema hvað hættan á að færast frá hægri hlið yfir til vinstri. Ljúktu við fallið "update-danger" svo að hættan fljúgi yfir skjáinn.'
       Big Game Animation 4_instruction: Á þessu stigi í leiknum ætti hættan (danger) að hreyfast yfir skjáinn frá hægri til vinstri og markið (target) ætti að hreyfast frá vinstri til hægri. Eftir að hafa yfirgefið skjáinn koma þeir aldrei til baka, en við leysum það síðar. Gakktu úr skugga um að leikurinn virki eins og þú vilt og smelltu svo á ljúka til að halda áfram.
       Big Game Booleans 1_instruction: 'Síðast þegar við unnum með leikinn fóru leikverurnar mark (target) og hætta (danger) yfir skjáinn, en þær komu aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna að því að láta verurnar birtast aftur.'
-      Big Game Booleans 2_instruction: |
-        Now that your onscreen? function is checking
-        safe-left? and safe-right? we can complete those functions. Go to the "Functions"
-        section of the toolbox and complete the safe-left? function so that it returns
-        true if the sprite's x coordinate is greater than -50. If you're successful
-        you should see the Danger go off the left side and then return on right side.
-      Big Game Booleans 3_instruction: |
-        Now that you've got safe-left?, let's fill
-        in safe-right? - it should take in a sprite's x coordinate and return true
-        if that coordinate is less than 450. Once your safe-right? is complete you
-        should see the Target go off the right side of the screen and return on the
-        left.
+      Big Game Booleans 2_instruction: 'Nú þegar "on-screen?" fallið athugar "safe-left?" og "safe-right?" getum við klárað þau föll. Farðu í Föll í verkfærakassanum og ljúktu við "safe-left?" fallið svo að það skili "true" ef x-hnit leikverunnar er hærra en -50. Ef þetta heppnast, ættir þú að sjá hættuna fara út vinstra megin og birtast aftur hægra megin.'
+      Big Game Booleans 3_instruction: 'Nú þegar "safe-left?" er klár skulum við ljúka við "safe-right?" Þetta fall á að taka x hnit leikveru og skila "true" ef hnitið er minna en 450. Þegar "safe-right?" er búið, ætti markið að fara út af skjánum hægra megin og birtast aftur vinstra megin.'
       Big Game Booleans 4_instruction: |
         We've provided a couple of empty functions
         for safe-left? and safe-right? The first thing you need to do is complete
         the onscreen? function so that it checks whether both safe-left? and safe-right?
         are true. TIP - even after you add safe-left? and safe-right? your sprites
-        won't return to the screen. That will happen in the next puzzles when we
-        make sure that safe-left? and safe-right? actually work.
+        won't return to the screen - why do you think that is?
       Big Game Booleans 5_instruction: |
         At this point your danger should run across
         the screen from right to left, your target should run across from left to
@@ -614,6 +606,7 @@ is:
       Course 4 Artist Binary 4_instruction: Hver tvíundarstrengur er sýndur sem ein röð í þessari mynd. Getur þú umraðað þeim svo þeir teikni broskall en ekki fýlukall?
       Course 4 Artist Binary 5_instruction: Hvaða 6 stafa tvíundarstrengur, endurtekinn 11 sinnum, mun teikna þessa mynd?
       Course 4 Artist Binary 6_instruction: Hver er stysti tvíundarstrengur sem endurtekinn mundi teikna þessa mynd?
+      Course 4 Artist Binary 7 (copy 1)_instruction: Ljúktu við þessa teikningu.
       Course 4 Artist Binary 7_instruction: Ljúktu við þessa teikningu.
       Course 4 Artist Binary Free Play (copy 1)_instruction: 'Frjáls æfing: Teiknaðu hvað sem þú vilt með tvíundum!'
       Course 4 Artist Binary Free Play 2_instruction: 'Frjáls æfing: Hér er teikniflötur með hærri upplausn - 16 x 16 bitum!'
@@ -625,6 +618,7 @@ is:
       Course 4 Artist For Loops 11_instruction: 'Manstu hvernig við notuðum breytu til að stjórna fjölda hliða á formi? Hér byrjum við á þríhyrningi og bætum við einni hlið í einu þar til hliðarnar eru orðnar 10. Hver hlið á að vera 100 dílar. Vísbending: 360 deilt með fjölda hliðanna er gráðufjöldinn sem þarf að snúa um.'
       Course 4 Artist For Loops 12_instruction: 'Þetta leit vel út, en nú vil ég teikna hvert form við hlið þess síðasta. Í þetta sinn er hver hlið 20 dílar. Notaðu "hoppa" kubb til fara fram um 40 díla eftir hvert form. '
       Course 4 Artist For Loops 13_instruction: Hmmm, þessi form fara sístækkandi! Vorum við ekki búin að leysa þetta vandamál með breytum? Hvernig getum við notað teljarann til að stytta hliðarnar eftir því sem þeim fjölgar? Jú með því að deila með honum. Í stað þess að færa áfram um fasta stærð skulum við nú færa áfram um (100 / teljari) díla.
+      Course 4 Artist For Loops 14 _instruction: Ef þú snýrð aðeins meira eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart. Prófaðu að snúa 89 gráður til að búa til þennan spíral úr ferningum.
       Course 4 Artist For Loops 14_instruction: Ef þú snýrð aðeins meira eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart. Prófaðu að snúa 89 gráður til að búa til þennan spíral úr ferningum.
       Course 4 Artist For Loops 15_instruction: 'Frjáls æfing! Prófaðu að búa til eigin teikningar með "frá" lykkjum. Við höfum bætt við nokkrum almennum breytum sem þú getur notað.'
       Course 4 Artist For Loops 2_instruction: 'Ég hef sett kóða fyrir þríhyrning inn í "frá" lykkju sem telur frá 50 til 100 um 10. Skoðaðu hvernig kóðinn er samsettur og smelltu svo á "Keyra" til að sjá hvernig hann virkar. '
@@ -742,7 +736,6 @@ is:
       Course 4 Play Lab Params 7_instruction: Notaðu örvarlyklana til að stjórna hundinum og safna öllum flöggunum.
       Course 4 Play Lab Params 8_instruction: 'Notaðu kubbinn "þegar snertir" til að senda hundinn aftur efst til vinstri ef hann snertir einhvern annan leikmann.'
       Course 4 Play Lab Params 9_instruction: 'Hér er einn af leikjunum sem við unnum með fyrr. Nú hefur bæst við fallið "skora_stig" sem hefur stikann "stig". Breyttu fallinu svo að stikanum "stig" sé bætt við breytuna "stig_leikmanns". Láttu hundinn þurfa að skora 10 stig til að komast í næstu þraut. '
-      Course 4 Play Lab Vars 1 (copy 1)_instruction: Þetta kapp virðist ekki vera sanngjarnt. Reyndu að komast til kattarins á undan mörgæsinni!
       Course 4 Play Lab Vars 1_instruction: 'Þú þarft ekki að búa til neinn kóða heldur bara ýta á "Keyra" til að spila leikinn! Í leiknum stjórnar þú hundinum sem reynir að safna fleiri flöggum en kötturinn. Notaðu örvarlykilinn niður til að stjórna hundinum. Ýttu á "Ljúka" þegar þú vilt hætta.'
       Course 4 Play Lab Vars 2_instruction: 'Þetta kapp var ekki sanngjarnt! Breyttu breytunni "hraði_hunds" til að tryggja að þú náir að safna fleiri flöggum en kötturinn. Sá, sem fyrst safnar 10, vinnur leikinn!'
       Course 4 Play Lab Vars 3 (copy 1)_instruction: Hér er ný tegund af leik! Notaðu vinstri og hægri örvarnar til að hreyfa og upp örina til að stökkva. Reyndu að safna öllum flöggunum.
@@ -805,7 +798,9 @@ is:
       Eval Contracts 8A_instruction: Getur þú lokið við þessa þraut? Stóri þríhyrningurinn er 200 dílar og fjólublár.
       Eval Contracts A_instruction: 'Notaðu fallið "stjarna" til að búa til gegnheila rauða stjörnu með 60 díla geisla'
       Eval Contracts C_instruction: 'Skoðaðu þetta fall "snúa" - getur þú notað það til að snúa þessum 90 díla græna ferningi um 45 gráður?'
-      Eval Contracts E_instruction: 'Reyndu að nota fallið "text" til að skrifa "Hello, World!" í blágrænu og stærð 40.'
+      Eval Contracts E_instruction: |
+        Try using the "text" function to write this
+        "Hello, world!" in teal at size 40.
       Eval Contracts shrink_instruction: 'Getur þú klárað þessa mynd með fallkubbnum "minnka"? Geislinn er 20. '
       Eval Define Funcs 1_instruction: 'Hér er nýtt fall "green-triangle" (grænn-þríhyrningur) sem tekur inn eina tölu fyrir stærð og skilar grænum þríhyrningi. Notaðu nýja fallið til að búa til 125 díla grænan þríhyrning'
       Eval Define Funcs 2_instruction: 'Skoðaðu innan í fallið "green-triangle" (grænn-þríhyrningur) til að skilja hvernig það virkar. Getur þú breytt því svo það teikni alltaf útlínu af grænum þríhyrningi?'
@@ -813,7 +808,10 @@ is:
       Eval Define Funcs 4_instruction: 'Búðu til nýtt fall "grænblá-stjarna" með gildamengið Number (tala) fyrir geisla, sviðið Image (mynd) og skilar stjörnu með gefna geislann og litinn "aqua". Keyrðu nýja fallið þitt með geislann 75.'
       Eval Define Funcs 5_instruction: 'Notum fallið "aqua-star" (grænblá-stjarna) til að búa til röð af misstórum stjörnum. Frá vinstri til hægri ættu stjörnurnar að hafa geislana 25, 50 og 75.'
       Eval Defining Vars Free Play 1_instruction: 'Frjáls æfing: Hér færðu fall sem fyllir skjáinn með mynd. Breyttu myndinni til að sjá hvaða mynstur þú getur búið til.'
-      Eval Design Recipe .1_instruction: 'Hér er hönnunaruppskrift fyrir fallið "square-circle" með gildamengið Tala Strengur og sviðið Mynd. Skoðaðu dæmin tvö sem við höfum lagt til og skrifaðu lýsingu fallsins.'
+      Eval Design Recipe .1_instruction: |
+        Here's a Design Recipe for a function
+        called "square-circle" with domain Number String and range Image. Click
+        Edit to write the function definition (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: 'Við ætlum að skrifa fall, sem teiknar rétthyrning í einhverjum lit, með breidd sem er tvöföld hæðin. Byrjaðu með dæmi - teikna gegnheilan grænan rétthyrning með hæðina 100 dílar.'
       Eval Design Recipe 1_instruction: 'Gefum okkur samninginn breiður-rétth: Tala Strengur -> Mynd. Skrifaðu dæmi - teikna gegnheilan grænan rétthyrning með hæðina 100 dílar.'
       Eval Design Recipe 2 (copy 1)_instruction: 'Búum til enn eitt dæmi áður en við skrifum skilgreiningu fallsins - í þetta sinn er dæmið að teikna gegnheilan rauðan rétthyrning með hæðina 75 dílar.'
@@ -1029,9 +1027,7 @@ is:
       MSM Play Lab Butterfly 1_instruction: Hjálpaðu Sam að haldast á skjánum svo þú sjáir að minnsta kosti einhvern hluta hans. Notaðu örvarlyklana til að finna út hve langt til vinstri Sam getur farið án þess að hverfa. Þú munt komast að því að Sam sést á meðan x-hnit hans eru stærri en -50. Ljúktu svo við kóðann sem lætur Sam haldast á skjánum.
       MSM Play Lab Butterfly 2_instruction: Láttu nú Sam haldast inni hægra megin á skjánum. Þú verður að finna út hve langt hann má fara en vera samt að hluta sýnilegur.
       MSM Play Lab Butterfly 3_instruction: Sameinaðu nú þessa vinnu til að láta Sam haldast inni báðum megin á skjánum.
-      MSM Play Lab Game 1_instruction: Með breytum getum við haft áhrif á hegðun forrits. Prófaðu að breyta leiksviðinu með því að skipta um bakgrunn.
       MSM Play Lab Game 2_instruction: Með breytum getum við líka stjórnað hraða leikmanna í leik. Stilltu hraða leikmanns og óvinar og sjáðu hvaða áhrif það hefur á hreyfingarnar. Hraðinn getur verið frá 2 til 12.
-      MSM Play Lab Game 3_instruction: 'Nú er kominn tími til að spila leik! Ýttu á "Keyra" hnappinn og notaðu örvarlyklana til að færa og skjóta. Prófaðu svo að breyta hlutum eins og bakgrunni og hraða leikmanna til að gera leikinn auðveldari eða erfiðari.'
       Neat Eval Functions_instruction: Kíktu á þessi flottu föll.
       NetSim_AddressingMessages_instruction: 'Í þessari útgáfu af herminum, munt þú tengjast við beini (enska: router) í stað þess að tengjast beint við annan nemanda. Settu vistfang í "Til" reitinn til að senda skilaboð til annars nemanda.'
       NetSim_AutomaticDNS_instruction: |
@@ -1130,11 +1126,20 @@ is:
         but you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
         the if block.
+      PDK5 Conditionals 2_instruction: |
+        Try this puzzle that uses conditionals and
+        loops together. Use the "if" block to decide when to turn. Hint: you only
+        need one more block to complete this puzzle. 
       PDK5 Events 1_instruction: |
         So far all of the programs we've written are executed
         in order from top to bottom. In this puzzle, we'll use "Events" to respond
         to an action on demand. Make the octopus say "Hello" only when you click
         on the Octopus. 
+      PDK5 Functions 1_instruction: |
+        Hello. Me zombie artist. Me love drawing! Help
+        me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
+        shorter than the square length.
+      PDK5 Functions 2_instruction: 'Með föllum getur þú búið til nýja kubba! Við höfum fært kubbana, sem teikna ferning, inn í fall, sem heitir "teikna ferning". Getur þú notað "teikna ferning" fallið til að búa til gleraugun? Það eru 75 dílar á milli ferninganna.'
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -1178,16 +1183,18 @@ is:
       Puzzle One_instruction: Láttu reiða fuglinn komast til svínsins
       RossAniGifLevel1_instruction: Taka upp áfangann sem gif hreyfimynd
       Sam the Butterfly 1 (copy 1)_instruction: Þetta fiðrildi heitir Sammi og leiksvæðið er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum uppfærast til að sýna hvar hann er. Notaðu örvarlyklana til að færa Samma um garðinn sinn. Hjálpaðu Samma að safna öllum flöggunum til að komast áfram.
-      Sam the Butterfly 1_instruction: Þessi leðurblaka heitir Sammi og leiksvæðið er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum uppfærast til að sýna hvar hann er. Notaðu örvarlyklana til að færa Samma um garðinn sinn. Hjálpaðu Samma að safna öllum flöggunum til að komast áfram.
+      Sam the Butterfly 1_instruction: |
+        This bat is named Sam, and the game area
+        is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
+        see, Sam is free to walk around the yard, and the coordinates at the top of
+        the screen update to tell you his location. Use the arrow keys to move Sam
+        around his yard, making note of Sam's coordinates at different locations.
+        Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: 'Móðir Samma vill vera viss um að hún sjái að minnsta kosti eitthvað af honum. Skrifum nú föll sem hjálpa til að hann fari ekki of langt út úr garðinum. Hér er fall sem heitir "safe-left?" (öruggt-vinstri?). Það á að hafa sem gildamengi tölu sem táknar x-hnit Samma og skila útkomunni "true" ef hann er innan vinstri marka garðsins (x > -25). Ef fallið þitt virkar á Sammi ekki að geta yfirgefið garðinn vinstra megin.'
       Sam the Butterfly 3_instruction: 'Í síðustu þraut hindruðum við Sam í að fara út vinstra megin. Gerum nú það sama fyrir hægri hliðina. Ljúktu við fallið "safe-right?" (öruggt-hægri) til að tryggja að Sam fari ekki framhjá x = 425.'
       Sam the Butterfly 4_instruction: 'Nú getum við haldið Sam inni vinstra megin EÐA hægra megin, en hvernig getum við gert það báðum megin? Prófaðu að nota "AND" kubbinn til að forrita fallið "on-screen?" (á-skjá), sem athugar hvort Sam er öruggur vinstra megin OG öruggur hægra megin?'
       Sam the Butterfly 5_instruction: 'Frjáls æfing: Vel gert. Nú getur Sam ekki yfirgefið garðinn til vinstri eða til hægri, en hvað með upp og niður? Við höfum bætt nýjum stika "y" við fallið "on-screen?". Getur þú uppfært forritið þitt svo að Sam geti ekki farið út að ofan (y = 425) eða neðan (y = -25)? Prófaðu forritið með því að færa Sam eins og langt og hann kemst í allar fjórar áttirnar. Smelltu á "Ljúka" þegar Sam er alveg öruggur.'
       Sam the Butterfly 6_instruction: 'Við höfum bætt við nýjum stika "y" við fallið "á-skjá?". Uppfærðu fallið "á-skjá?" svo það athugi hvort "öruggt-v?" OG " öruggt-h?" OG "öruggt-u?" eru öll sönn. Prófaðu svo fallið með því að reyna að fara út fyrir vinstri, hægri og efri hlið garðsins.'
-      Sam the Butterfly 7 (copy 1)_instruction: |
-        Only one last direction to worry
-        about! Create a "safe-down?" function and update the "on-screen?" function
-        so that it checks up, down, left, and right.
       Sam the Butterfly 7_instruction: 'Nú þarf að tryggja neðri hliðina! Búðu til fallið "öruggt-n?" og uppfærðu "á-skjá?" fallið svo að það athugi uppi, niðri, vinstri og hægri.'
       Sam the Butterfly Complete_instruction: 'Nú þarf að tryggja neðri hliðina! Búðu til fallið "öruggt-n?" og uppfærðu "á-skjá?" fallið svo að það athugi uppi, niðri, vinstri og hægri.'
       scrat 16 (copy 1)_instruction: |
@@ -1214,6 +1221,7 @@ is:
       snowflake full_instruction: Búðu til snjókorn með því að endurtaka grein snjókorns 8 sinnum
       snowflower pattern_instruction: En hvað snjóblómin eru falleg! Búum til minni snjóblóm og þekjum allt svellið.
       snowflower_instruction: 'Við getum skapað flókin mynstur úr einföldum formum eins og litlum og stórum hringum. Getur þú búið til mynstur með 5 díla og 10 díla hringum, sem endurteknir eru 5 sinnum til að mynda hring? '
+      SpecialFrozenLevel_instruction: Þú ert hér með orðin meistari í ísteikningu! Búðu nú til ævintýralegt vetrarríki.
       square iterative_instruction: Hér er kominn hálfur ferningur. Teiknaðu ferning með 4 línum.
       square loop_instruction: 'Það er hægt að teikna ferning á ýmsa vegu. Getur þú notað "endurtaka" kubbinn til að teikna ferning aftur, en með færri kubbum? Hvaða kubbar eru endurteknir, sem þú gætir sett inn í "endurtaka" kubbinn?'
       square snowflake_instruction: 'Þegar þú hefur lært að búa til einfalt form eins og ferning, getur þú notað það til að teikna falleg snjókorn. Getur þú skapað snjókorn með því að nota "endurtaka" kubbinn til að teikna ferning 10 sinnum? Það þarf að snúa um 36 gráður eftir hvern ferning.'
@@ -1241,10 +1249,148 @@ is:
       testing_instruction: Prófáfangi
       TestK1-1_instruction: 'Notaðu "endurtaka" kubbinn til að teikna þrjá ferninga sem skarast að hluta'
       Text Compression Peter Piper_instruction: Þessu ljóði hefur verið þjappað með því að skipta út tveimur algengum klausum fyrir tákn í orðabókinni. Getur þú komið auga á annað algengt mynstur til þjappa ljóðinu enn meira?
+      the terps_instruction: Try your best to get to the green pig!!!
+      the yolo maze_instruction: Put the block in the right place
       toby-test5-16-1_instruction: dafsfas
       U1L4 NetSim SendAB_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:
         Variant 1 is not yet functional because P2P connections have not been implemented.
         Variant 1 allows students to manually work out the timing of sending bits
         back and forth.
+      U3L03 choose your own drawing_instruction: |
+        Now choose your own!  Pick one
+        of the three drawings shown here and attempt to create it on your own, making
+        smart decisions about how to break the problem down into re-usable functions.  You
+        will review your work with a peer using "procedures peer review rubric."  Check
+        it for the requirements.  GIF: U3L3-ProceduresChooseOne.png
+      U3L03 Creating Procedures 1_instruction: |
+        Write the turnAround() function and
+        use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
+      U3L03 Define and use turnAround_instruction: |
+        Write the turnAround() function
+        and use it to make the turtle move as depicted.
+      U3L03 define turnRight and draw a rectangle_instruction: |
+        Create a turnRight()
+        function and draw a rectangle twice as tall as it is wide by having the turtle
+        navigate clockwise to draw the rectangle. Make sure to comment your function
+        as shown in the turnAround() function. 
+      U3L03 Draw a T using turnAround_instruction: |
+        The turnAround function is now
+        provided for you in the code.  Use the turnAround() function to draw a T as
+        depicted.
+      U3L03 draw diamond_instruction: "Use any and all of the functions you wrote\npreviously to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE:\nthis is another tricky one.  The 4 sides of the diamond are made by drawing\nthree steps with other movement made between calls.  HINT: you might want\nto make another function that handles drawing one side of the diamond. "
+      U3L03 Three Steps_instruction: |
+        Draw 3 "steps" moving up and to the right.  Notice
+        the pattern in the movement. You should define a function called drawStep()
+        which draws one of the steps, and then call it 3 times to achieve the effect.
+      U3L04 choose your own drawing_instruction: |
+        Now choose your own!  Pick one
+        of the three drawings shown here and attempt to create it on your own, making
+        smart decisions about how to break the problem down into re-usable functions.  You
+        will review your work with a peer using "procedures peer review rubric."  Check
+        it for the requirements.
+      U3L04 diamond solution_instruction: |
+        Study this solution to the drawDiamond
+        problem.  Notice that the whole program starts by calling drawDiamond() at
+        the top.  The program then follows a chain of function calls.  You can trace
+        what's happening in the code to see the functions reused.  It's also easy
+        to read because the function names describe the expected behavior.
+      U3L05_3x3GridEfficiencyChallenge_instruction: |
+        Let's revisit the 3x3 grid
+        problem you did a few lessons ago.  This time the challenge is to program
+        the solution "as efficiently as possible."  Now that you know how to write
+        functions, it should be easier to break the problem down, and your code should
+        be easier to read and debug.  See the rubric for more details about requirements
+        and expectations.
+      U3L05_draw3x3GridEfficiently_instruction: |
+        Draw a 3x3 grid above and to the
+        right of the turtle. Try to do so with the fewest number of commands possible.
+        NOTE: This is a very challenging problem.  You may need to play with it for
+        a while and tweak it.  You might also consider using pencil and paper to sketch
+        your ideas.
+      U3L06 Challenge 1 triangle_instruction: "Check out the extended Turtle palette\nnow made available to you. These new commands accept parameters, allowing\nyou to specify precisely how the function operates rather than only being\nable to move or turn a predetermined amount. Make use of these functions to\ndraw the triangle as shown.\r\nPNG: U3L06-challenge1.png"
+      U3L06 Challenge 2 purple square_instruction: |
+        This time we're going to learn
+        a little bit about changing the turtle's pen. Read through the documentation
+        for penWidth() and penColor(), and then draw the purple square as shown.
+      U3L06 Challenge 3 fill pink_instruction: |
+        Now let's try to fill in the entire
+        background of the screen. To make it a little easier for you, we can tell
+        you the color we chose is one of the 140 named colors.  If you don't know
+        what the named colors are, take a closer look at the documentation for penColor()
+        again. Hint: you need to use dot().
+      U3L06 Challenge 4 bullseye_instruction: |
+        Let's try this out one more time.
+        This time the colors are NOT named colors - you need to use the hex-color
+        number to set the color.  So that you're not randomly guessing, we'll give
+        you a hint -- each of the colors shown in the target image is one of these
+        one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699,
+        #11CC00  You might be able to guess correctly if you apply what you know about
+        RGB colors.
+      U3L06 Challenge 5 overlapping circles_instruction: |
+        This image is created just
+        using dot() and penColor() but, how are we going to get those circles to be
+        transparent?  If you haven't gotten the hint yet: check out the documentation!
+      U3L06 Challenge 6 squiggles_instruction: |
+        Next we're going to be adding some
+        curves to our drawing. Read the documentation for the "arc" commands and
+        then draw the squiggles as shown. To make things easier here's a hint: all
+        the parameters are multiples of 10, and the colors are from the following
+        list of named colors: PowderBlue, lightBlue, Indigo, Purple, Magenta.
+      U3L06 Challenge 7 smiley face_instruction: |
+        To make this smiley face you'll
+        need to look at the documentation for the move() command and then use it with
+        the others you've learned.  You can make reasonable guesses about the colors.
+      U3L06 Challenge 8 make your own_instruction: |
+        Use the tools you've learned
+        today to create a drawing of your own creation. If you have time, challenge
+        your friends to see if they can duplicate your image.  We'll show you the
+        drawing we made for ourselves.  You can try to duplicate that if you want
+        to, otherwise, have fun making your own!
+      U3L07 - Free Play Loops and Random_instruction: |
+        Free Play!  Use what you learned
+        from loops and random to make your own little scene.  Have fun.
+      U3L07 - Starry Night Starter Code_instruction: |
+        You are going to use loops
+        and random numbers to generate an image of starry night sky similar to one
+        shown here.  We have given you some starter code to generate the ground and
+        sky (just two giant dots), you will add code to this project to make the stars,
+        grass, and moon.  All of the effects are clever applications of turtle dots,
+        lines, and colors.  To get started, follow the series of steps suggested in
+        the accompanying worksheet. 
+      U3L13 - Button with ID_instruction: |
+        Drag a button out onto the screen and
+        set its text to "Go forth!".  Run the program to make sure you can see the
+        button.
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
+      U3L13 - Debug Id Problem_instruction: |
+        This program has problem!  Can you figure
+        it out?  Run the program and see if you can figure out from the error messages
+        in the console what the issue is.  There is not much code, so you might be
+        able to figure it out just by reading carefully.  Make a change that will
+        make the program work as expected.
+      U3L13 - Turtle Driver Project_instruction: |
+        Create a “turtle driver” with at
+        least three buttons on the screen to move the turtle forward, and turn the
+        turtle right and left. If you have time, try adding additional buttons!  You
+        can also have fun changing the parameters on the turtle functions, using colors,
+        etc.
+      U3L13 - Turtle move with button_instruction: |
+        Drag a button out onto the screen
+        and set its text to "Go forth!".  Add an event handler for the button, that
+        makes the turtle move forward.  Run the program to make sure it works. 
+      U3L2 Using Simple Commands_instruction: |
+        Draw a square using only moveForward
+        and turnLeft.  The square should be drawn above and to the left of the turtle's
+        starting position.
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid above and to the right of
+        the turtle. Try to do so with the fewest number of commands possible. NOTE:
+        This is a very challenging problem.  You may need to play with it for a while
+        and tweak it.  You might also consider using pencil and paper to sketch your
+        ideas.
+      U3L2_TurtleSquare_right_instruction: |
+        Draw a square using only moveForward
+        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        of the starting location.
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf

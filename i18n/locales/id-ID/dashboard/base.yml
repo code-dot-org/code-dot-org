@@ -1,7 +1,7 @@
 id:
   errors:
     messages:
-      not_saved: 'Perbaikilah kesalahan berikut:'
+      not_saved: 'Mohon Perbaiki kesalahan berikut:'
   activerecord:
     errors:
       messages:
@@ -64,6 +64,8 @@ id:
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Daftarkan untuk akun untuk melacak kemajuan Anda. Email utama anda akan digunakan untuk menginjinkan anda untuk masuk dan pemulihan password. Untuk selengkapnya <a href="<a href="http://code.org/privacy">Kebijakan privasi</a> kami.'
     overview_teacher: 'Ajarkan ilmu kompter pada kelas anda dengan mendaftar untuk akun.<p/> Anda akan dapat menambahkan pelajar anda dan mendata kemajuan mereka.'
     no_signup_message: 'Anda dapat <a target="_blank" href="http://learn.code.org"> mencoba berbagai tahap dan berbagai teka-teki</a>, tetapi Anda akan perlu untuk masuk supaya kemajuan belajar Anda dapat dicatat.'
@@ -317,6 +319,7 @@ id:
     classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Tinjauan Kursus 1, 2, dan 3
     lesson_plans: Rencana pelajaran
     signin_message: 'Sudah terdaftar? %{link}'
@@ -350,7 +353,7 @@ id:
     heading_apps: '<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>'
     heading_legacy: '<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>'
     your_gallery: Galeri
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Coba kursus di Code Studio
   gender:
     male: Laki-laki
     female: Wanita
@@ -479,9 +482,11 @@ id:
     badrange: Kontrak Anda memiliki jarak yang salah.
     baddomainsize: Kontrak Anda tidak memiliki jumlah yang tepat dari item dalam domain.
     baddomainname: Satu atau lebih dari item domain Anda memiliki nama yang salah.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    baddomaintype: Satu atau lebih item domain Anda memiliki Tipe yang salah, atau dalam urutan yang salah.
   text_match:
     placeholder: Masukkan jawaban Anda di sini
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Oke!
   time:

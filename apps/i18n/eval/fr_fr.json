@@ -10,7 +10,7 @@
   "placeImageBlockTitle": "zone d'image (x, y, image)",
   "offsetBlockTitle": "decalage (x, y, image)",
   "rectangleBlockTitle": "rectangle (largeur, hauteur, style, couleur)",
-  "reinfFeedbackMsg": "Vous pouvez appuyer sur le bouton « Continuer à jouer » pour éditer votre dessin.",
+  "reinfFeedbackMsg": "Tu peux appuyer sur le bouton «Continuer à jouer» pour éditer ton programme.",
   "rotateImageBlockTitle": "rotation (degrés, image)",
   "scaleImageBlockTitle": "échelle (facteur, image)",
   "squareBlockTitle": "carré (taille, style, couleur)",

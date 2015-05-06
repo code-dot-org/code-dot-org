@@ -10,10 +10,10 @@
     failure:
       already_authenticated: You are already signed in.
       inactive: Your account was not activated yet.
-      invalid: Invalid email or password.
+      invalid: ئیمەیڵ یان تێپەڕەوشە نادروستە.
       invalid_token: Invalid authentication token.
       locked: Your account is locked.
-      not_found_in_database: Invalid email or password.
+      not_found_in_database: ئیمەیڵ یان تێپەڕەوشە نادروستە.
       timeout: Your session expired, please sign in again to continue.
       unauthenticated: You need to sign in or sign up before continuing.
       unconfirmed: You have to confirm your account before continuing.
@@ -53,7 +53,7 @@
       updated: You updated your account successfully.
     sessions:
       signed_in: ''
-      signed_out: Signed out successfully.
+      signed_out: بەسەرکەوتوویی دەرچووی.
     unlocks:
       send_instructions: You will receive an email with instructions about how to
         unlock your account in a few minutes.
@@ -66,7 +66,7 @@
       confirmation_period_expired: needs to be confirmed within %{period}, please
         request a new one
       expired: has expired, please request a new one
-      not_found: not found
+      not_found: نەدۆزرایەوە
       not_locked: was not locked
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
@@ -78,15 +78,15 @@
       no_invitations_remaining: No invitations remaining
       invitation_removed: Your invitation was removed.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: ناردنی بانگێشت
+        submit_button: ناردنی بانگێشتێک
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: تێپەڕەوشە دابنێ
+        submit_button: تێپەڕەوشەکەم دانێ
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
+        subject: ڕێنماییەکانی بانگێشتکردن
+        hello: سڵاو %{email}
         someone_invited_you: Someone has invited you to %{url}, you can accept it
           through the link below.
         accept: Accept invitation

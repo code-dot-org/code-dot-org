@@ -65,6 +65,8 @@
     need_confirmation: Nesaņēmi apstiprinājuma instrukcijas?
     need_unlock: Nesaņēmi atslēgšanas norādijumus?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Pierakstaties, lai sekotu līdzi savam progresam, Jūsu e-pasts
       primāri tiek izmantots, lai pierakstītos un paroles atgūšanai. Lai iegūtu vairāk
       informāciju, apskatat mūsu <a href="http://code.org/privacy">konfidencialitātes
@@ -355,6 +357,7 @@
     classroom_activity: Atvienota aktivitāte
   home:
     title: Kodu studija
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Pārskats par kursiem, 1, 2 un 3
     lesson_plans: Nodarbību plāni
     signin_message: Jau reģistrējies? %{link}
@@ -551,6 +554,8 @@
       in the wrong order.
   text_match:
     placeholder: Ievadi savu atbildi šeit
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Labi
   time:

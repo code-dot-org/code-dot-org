@@ -170,26 +170,26 @@
     &ldquo;Eğer kod yazıyorsanız, hayatınızın seyrini seçebilirsiniz.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Bu yetenekler geleceğimi değiştirdi. Anlatmaya gerek yok, burası çok eğlenceli.&rdquo;
+    Luna, 7'nci sınıf
   homepage_hero_text_student2: |
     &Idquo;Ben çocuklarımın öğrenmek için heyecanlandığını hiç görmemiştim,&
     rdquoİ; Michael, öğretmen
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
-    with programming.&rdquo; \nMaya, 2nd grade\n"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
-    for you, here, now.&rdquo; \nGeraldo, teacher\n"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+    &ldquo;Bilgisayar bilimi, beğenip beğenmediğinizi denemeden bilemeyeceğiniz bir alandır.&rdquo;
+    Jackson, 6'ncı sınıf
+  homepage_hero_text_student4: |
+    &ldquo;Programlama ile aklınızdan geçen herhangi bir şeyi yapabilirsiniz.&rdquo;
+    Maya, 2'nci sınıf
+  homepage_hero_text_student5: |
+    &ldquo;Bilgisayar bilimi başkası için değildir. Şimdi burada senin için var.&rdquo;
+    Geraldo, öğretmen
+  homepage_hero_text_teacher1: |
+    &ldquo;Kodlama, yaratıcılığı, ilhamı ve yeniliği ateşler&mdash; bunların hepsi bir kariyerde gerekli olan parçalardır.&rdquo;
+    Floresa, öğretmen
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;Bu program, öğrencilerimin %100'ünün ilgisinde ve katılımında.&rdquo;
+    Adam, öğretmen
   homepage_slot_text_hoc: Kod Saati
   homepage_slot_text_frozen: Anna ve Elsa ile dondurulmuş
   homepage_slot_text_teacher: Teacher Dashboard
@@ -220,7 +220,7 @@
   homepage_slot_text_title_advocates: Katkıda bulunanlar
   homepage_slot_text_blurb_advocates: Bizi destekleyin
   homepage_slot_text_link_stats: Istatistiklere göz atın
-  homepage_slot_text_link_buy: Tisört veya şapka satın al
+  homepage_slot_text_link_buy: Dahil olun
   homepage_slot_text_link_donate: Bağış yap
   homepage_header_codestudio: Code Studio öğrencilerinin yaptıkları
   homepage_header_donors: Code.org destekleyenlere teşekkürler

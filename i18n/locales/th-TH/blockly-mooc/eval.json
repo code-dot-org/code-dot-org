@@ -4,7 +4,7 @@
   "circleBlockTitle":"วงกลม (รัศมี แบบ สี)",
   "displayBlockTitle":"การทดสอบ",
   "ellipseBlockTitle":"วงรี (ความกว้าง ความสูง ลักษณะ สี)",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"evaluate\" block?",
+  "extraTopBlocks":"คุณมีบางบล๊อกที่ไม่ได้เชื่อมต่อ. คุณตั้งใจที่จะเชื่อมบล๊อกเหล่านี้เข้ากับ \"evaluate\" บล๊อกใช่หรือไม่?",
   "infiniteRecursionError":"ฟังก์ชันของคุณกำลังเรียกตัวเอง เราหยุดมันไว้ มิฉะนั้น มันจะเรียกตัวมันเองไปตลอด.",
   "overlayBlockTitle":"ซ้อนทับ (บน ล่าง)",
   "placeImageBlockTitle":"เอารูปวาง (x, y, รูป)",

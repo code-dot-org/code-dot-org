@@ -33,7 +33,7 @@ fr-FR:
   california_text: |-
     Tout enseignant peut promouvoir notre <a href="http://learn.code.org">cours d'introduction gratuit</a>. Toute école élémentaire peut <a href="http://code.org/educate/k5">enseigner l'informatique</a>. Demandez aux lycées de <a href="http://code.org/educate/districts">collaborer avec nous</a>.
   california_button: En savoir plus
-  flappy_heading: Flappy Birthday à Code.org
+  flappy_heading: Flappy anniversaire à Code.org
   flappy_text: "Code.org vient d'avoir 1 an.<br/><br/> Fais la fête avec nous en faisant ton propre jeu de <b>Flappy</b>. Code tes propres règles, et partage-le avec tes amis !"
   view_english_site: Voir le site en anglais
   non_english_tutorials: 'Tutoriels traduits en plusieurs langues :'
@@ -167,7 +167,7 @@ fr-FR:
   homepage_slot_text_flappy: "Flappy l'oiseau"
   homepage_action_text_codevideo: Voir la vidéo
   homepage_action_text_teachervideo: Voir la vidéo
-  homepage_action_text_learn: "Commence à apprendre aujourd'hui"
+  homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Signez la pétition
   homepage_signpetition_dropdown: 'Signez notre pétition &#x25BE;'
   homepage_slot_text_title_hoc: Heure de Code

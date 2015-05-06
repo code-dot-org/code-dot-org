@@ -301,8 +301,8 @@ lt:
         studio_c3_game_5: Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas.
         studio_c3_game_6: Pridėk blokelius, kurie, paleidus žaidimą, pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką.
         studio_c3_game_7: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok draugams išmėginti žaidimą savo telefonuose.
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
+        studio_playlab_1: 'Waddles wants to say "hello" - can you help him?'
+        studio_playlab_2: 'Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
         studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'

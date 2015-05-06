@@ -434,6 +434,33 @@
           of time
         more perseverance: more perseverance
         all of the above: all of the above
+      ECSPD impact vid2 question:
+        Barrier to Using Data: Barrier to Using Data
+        0: "? \"Based on the video you just watched, answer the following \nquestion\""
+        1: ": \"Based on the video you just watched, answer the following \nquestion\""
+        2: '? What issues did Ben Wellington address in his TED talk related to the
+          barriers presented for people who want to access and analyze Big Data?'
+        3: ': What issues did Ben Wellington address in his TED talk related to the
+          barriers presented for people who want to access and analyze Big Data?'
+        data stored in ways that makes it difficult to analyze it: data stored in
+          ways that makes it difficult to analyze it
+        data is technically available, but often not posted online: data is technically
+          available, but often not posted online
+        data is normalized, so it is difficult to analyze data from different sources: data
+          is normalized, so it is difficult to analyze data from different sources
+        all of the above: all of the above
+      ECSPD unit:
+        ECS Curriculum: ECS Curriculum
+        Based on what you just read about the ECS course, answer the following question: Based
+          on what you just read about the ECS course, answer the following question
+        What unit from the ECS curriculum are you most interested in?: What unit from
+          the ECS curriculum are you most interested in?
+        'Unit 1: Human Computer Interaction': 'Unit 1: Human Computer Interaction'
+        'Unit 2: Problem Solving': 'Unit 2: Problem Solving'
+        'Unit 3: Web Design': 'Unit 3: Web Design'
+        'Unit 4: Introduction to Programming': 'Unit 4: Introduction to Programming'
+        'Unit 5: Computing and Data Analysis': 'Unit 5: Computing and Data Analysis'
+        'Unit 6: Robotics': 'Unit 6: Robotics'
       K-1 Artist 1 Multi 1:
         Multiple Choice: Flervalsfråga
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -792,6 +819,52 @@
           1.blocks3.start_blocks, 350, 100
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
           1.blocks4.start_blocks, 350, 100
+      PDAlg attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please
+          confirm that you have read the Attendance Policy and will work to follow
+          it.
+        I have read and agree to the Attendance Policy: I have read and agree to the
+          Attendance Policy
+      PDAlg Blocks Video:
+        Intro to Evaluation Blocks: Intro to Evaluation Blocks
+        In which are of the screen do you click blocks together to write a program?: In
+          which are of the screen do you click blocks together to write a program?
+        Play Area: Play Area
+        Toolbox: Toolbox
+        Workspace: Workspace
+      PDAlg functional:
+        Functional Programming: Functional Programming
+        Have you ever programmed before?: Have you ever programmed before?
+        Yes, and I'm familiar with functional programming: Yes, and I'm familiar with
+          functional programming
+        Yes, but I don't know if it would be considered functional: Yes, but I don't
+          know if it would be considered functional
+        'No': Nej
+      PDAlg implementation:
+        Curriculum Implementation: Curriculum Implementation
+        0: '? Given the scope and sequence from the last page, which of the following
+          best describes when you expect to implement the CS in Algebra curriculum?'
+        1: ': Given the scope and sequence from the last page, which of the following
+          best describes when you expect to implement the CS in Algebra curriculum?'
+        September - October: September - October
+        November - December: November - December
+        January - February: January - February
+        March - April: March - April
+        May - June: May - June
+        Throughout the year: Throughout the year
+      PDAlg PreQ 1:
+        Pre-Survey Question 1: Pre-Survey Question 1
+        Have you ever participated in an online PD program before?: Have you ever
+          participated in an online PD program before?
+        'Yes': Ja
+        'No': Nej
+      PDAlg PreQ 2:
+        Pre-Survey Question 2: Pre-Survey Question 2
+        Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Have
+          you ever taken an Online Course before (through a platform like Coursera,
+          edX, Udacity, Khan Academy, etc)?
+        'Yes': Ja
+        'No': Nej
       PDECS attendance commitment:
         Please confirm that you have read the Attendance Policy and will work to follow it.: Please
           confirm that you have read the Attendance Policy and will work to follow
@@ -870,8 +943,6 @@
         'Yes': Ja
       PDK5 Visual Languages:
         Visual Programming Languages: Visuellt programmeringsspråk
-        Based on the video you saw before, please answer the question below.: Baserat
-          på videon du såg innan, vänligen svara på frågan nedan.
         Why are visual programming languages easier to learn than text-based programming languages?: Varför
           är visuellt programmeringsspråk lättare att lära än text-baserat programmeringsspråk?
         Because you dont have to worry about syntax as much, like where to put a semi-colon: Eftersom
@@ -883,7 +954,7 @@
         All of the above: Alla ovanstående
       PDK5 What is CS:
         What is Computer Science?: Vad är datavetenskap?
-        'A computer program, or code, is:': 'Ett datorprogram, eller kod, är:'
+        'A computer program, or "code," is:': 'A computer program, or "code," is:'
         a part inside of a computer: en del i en dator
         a set of instructions a person gives a computer to execute: en uppsättning
           instruktioner en person ger en dator att utföra
@@ -913,6 +984,156 @@
           7 + 3
         rocket-height(seconds) = seconds * 10 - 3: Rakethöjd(sekunder)= sekunder *
           10 -3
+      sciPD agent based 1:
+        Multiple Choice - Interactions In Agent-based Models: Multiple Choice - Interactions
+          In Agent-based Models
+        What types of interactions can occur in agent-based models?: What types of
+          interactions can occur in agent-based models?
+        agents interact with their environment only: agents interact with their environment
+          only
+        agents interact with other agents only: agents interact with other agents
+          only
+        agents interact with both their environment and other agents: agents interact
+          with both their environment and other agents
+        all of the above: all of the above
+      sciPD agent based 2:
+        Multiple Choice - Agent-based Models: Multiple Choice - Agent-based Models
+        What type of systems are agent-based models suitable for modeling?: What type
+          of systems are agent-based models suitable for modeling?
+        simple mechanical systems: simple mechanical systems
+        complex adaptive systems: complex adaptive systems
+        systems of mathematical equations: systems of mathematical equations
+        all of the above: all of the above
+      sciPD attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Please
+          confirm that you have read the Attendance Policy and will work to follow
+          it.
+        I have read and agree to the Attendance Policy: I have read and agree to the
+          Attendance Policy
+      sciPD class models 1:
+        Using Models in the Classroom: Using Models in the Classroom
+        Which of the following is not a tenet of Papert's theory of Constructionism?: Which
+          of the following is not a tenet of Papert's theory of Constructionism?
+        constructing social relationships: constructing social relationships
+        interacting with others: interacting with others
+        creating artifacts of social relevance: creating artifacts of social relevance
+        building relationships between old and new knowledge: building relationships
+          between old and new knowledge
+      sciPD class models 2:
+        Constructionism: Constructionism
+        Constructionism focuses on how learning is constructed during the...: Constructionism
+          focuses on how learning is constructed during the...
+        design of learning artifacts: design of learning artifacts
+        creation of learning artifacts: creation of learning artifacts
+        discussion of learning artifacts: discussion of learning artifacts
+        all of the above: all of the above
+      sciPD complex adaptive 1:
+        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
+        Which of the following IS a characteristic of a complex adaptive system?: Which
+          of the following IS a characteristic of a complex adaptive system?
+        has a leader: has a leader
+        is predictable: is predictable
+        has centralized control: has centralized control
+        generates emergent patterns: generates emergent patterns
+      sciPD complex adaptive 2:
+        Examples of Complex Adaptive Systems: Examples of Complex Adaptive Systems
+        Which of the following is NOT an example of a complex adaptive system?: Which
+          of the following is NOT an example of a complex adaptive system?
+        a bee hive: a bee hive
+        a wall clock: a wall clock
+        a traffic jam: a traffic jam
+        the internet: the internet
+      sciPD computer models 1:
+        Multiple Choice - Stochastic Models: Multiple Choice - Stochastic Models
+        What does it mean for a model to be stochastic?: What does it mean for a model
+          to be stochastic?
+        It includes some randomness: It includes some randomness
+        It can be easily automated: It can be easily automated
+        It is predictable: It is predictable
+        It has fixed percentages of different elements: It has fixed percentages of
+          different elements
+      sciPD computer models 2:
+        Multiple Choice - Common Features Of Lab And Computational Science Experiments: Multiple
+          Choice - Common Features Of Lab And Computational Science Experiments
+        Which of the following are common to both lab experiments and computational science experiments?: Which
+          of the following are common to both lab experiments and computational science
+          experiments?
+        automation of experiments is easy: automation of experiments is easy
+        changing physical properties like the gravitational constant: changing physical
+          properties like the gravitational constant
+        sweeping a set of variables: sweeping a set of variables
+        the need for controlled experiments: the need for controlled experiments
+      sciPD culture 1:
+        Multiple Choice - Getting Unstuck: Multiple Choice - Getting Unstuck
+        Which of the following was NOT suggested as a way to get unstuck?: Which of
+          the following was NOT suggested as a way to get unstuck?
+        taking a break: taking a break
+        meditating: meditating
+        looking at other similar pieces of code: looking at other similar pieces of
+          code
+        reading through your code line by line: reading through your code line by
+          line
+      sciPD culture 2:
+        Multiple Choice - Role Of Teacher: Multiple Choice - Role Of Teacher
+        What role for a teacher incorporating models and simulations into the classroom was proposed?: What
+          role for a teacher incorporating models and simulations into the classroom
+          was proposed?
+        engaging lecturer: engaging lecturer
+        learning coach or guide: learning coach or guide
+        expert in a computer language: expert in a computer language
+        classroom manager: classroom manager
+      sciPD framework 1:
+        Multiple Choice - Computational Thinking 1: Multiple Choice - Computational
+          Thinking 1
+        'Computational Thinking was referred to in the video as:': 'Computational
+          Thinking was referred to in the video as:'
+        a way of communicating with a computer: a way of communicating with a computer
+        a process that computers use to think: a process that computers use to think
+        a human thought process: a human thought process
+        a subfield of computer science: a subfield of computer science
+      sciPD framework 2:
+        Multiple Choice - Computational Thinking 2: Multiple Choice - Computational
+          Thinking 2
+        Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?: Comparing
+          outcomes with what is known about the real world falls under which pillar
+          of computational thinking?
+        abstraction: abstraction
+        automation: automation
+        analysis: analysis
+        algorithms: algorithms
+      sciPD intro to CS 1:
+        Intro to Computational Science: Intro to Computational Science
+        'Computer modeling is used to study problems that are:': 'Computer modeling
+          is used to study problems that are:'
+        too dangerous to study in the real world: too dangerous to study in the real
+          world
+        too time consuming to study in the real world: too time consuming to study
+          in the real world
+        too expensive to study in the real world: too expensive to study in the real
+          world
+        all of the above: all of the above
+      sciPD intro to CS 2:
+        Intro to Computational Science: Intro to Computational Science
+        What is computational science good for?: What is computational science good
+          for?
+        it replaces traditional science labs: it replaces traditional science labs
+        it complements lab and theoretical science: 'it complements lab and theoretical
+          science '
+        it slows the process of discovery: it slows the process of discovery
+        nothing at all: nothing at all
+      sciPD PreQ 1:
+        Pre-Survey Question 1: Pre-Survey Question 1
+        Before now, have you ever participated in an online PD program?: Har du någonsin
+          deltagit i ett online PD-program innan?
+        'Yes': Ja
+        'No': Nej
+      sciPD PreQ 2:
+        Pre-Survey Question 2: Pre-Survey Question 2
+        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Before
+          now, have you ever taken an Online Course (through a platform like Coursera,
+          edX, Udacity, Khan Academy, etc)?
+        'Yes': Ja
+        'No': Nej
       test multi image:
         Maze Multiple Choice Two: Labyrint Flerval Två
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -1007,6 +1228,22 @@
         8: '8'
         10: '10'
         12: '12'
+      U3L06-API-multichoice:
+        Multiple Choice: Flervalsfråga
+        Choose the option that best answers the question.: Choose the option that
+          best answers the question.
+        What is the primary purpose of an API in a programming language?: What is
+          the primary purpose of an API in a programming language?
+        Application Primary Interactions are fundamental to programming: Application
+          Primary Interactions are fundamental to programming
+        To make programming more complex for those without experience: To make programming
+          more complex for those without experience
+        Programs won't run without good API documentation: Programs won't run without
+          good API documentation
+        To provide high-level functionality that simplifies complex programming tasks: To
+          provide high-level functionality that simplifies complex programming tasks
+        It is impossible to write a program without an API: It is impossible to write
+          a program without an API
       unique level name here:
         title: titel
         description here: Beskrivning här

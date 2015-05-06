@@ -160,11 +160,11 @@ en:
         a string: crwdns35759:0crwdne35759:0
         boolean: crwdns35760:0crwdne35760:0
       2-3 multi match 4:
-        Green colored blocks are associated with __________ ?: crwdns36715:0__________crwdne36715:0
-        a image: crwdns36716:0crwdne36716:0
-        a number: crwdns36717:0crwdne36717:0
-        a string: crwdns36718:0crwdne36718:0
-        boolean: crwdns36719:0crwdne36719:0
+        Green colored blocks are associated with __________ ?: crwdns38272:0__________crwdne38272:0
+        a image: crwdns38273:0crwdne38273:0
+        a number: crwdns38274:0crwdne38274:0
+        a string: crwdns38275:0crwdne38275:0
+        boolean: crwdns38276:0crwdne38276:0
       4-5 artist multi 1:
         Artist Multiple Choice: crwdns6306:0crwdne6306:0
         Which blocks draw a rectangle with a perimeter of 100?: crwdns6307:0crwdne6307:0
@@ -347,6 +347,26 @@ en:
         more engagement over longer periods of time: crwdns36476:0crwdne36476:0
         more perseverance: crwdns36477:0crwdne36477:0
         all of the above: crwdns36478:0crwdne36478:0
+      ECSPD impact vid2 question:
+        Barrier to Using Data: crwdns37762:0crwdne37762:0
+        0: crwdns37763:0crwdne37763:0
+        1: crwdns37764:0crwdne37764:0
+        2: crwdns37765:0crwdne37765:0
+        3: crwdns37766:0crwdne37766:0
+        data stored in ways that makes it difficult to analyze it: crwdns37767:0crwdne37767:0
+        data is technically available, but often not posted online: crwdns37768:0crwdne37768:0
+        data is normalized, so it is difficult to analyze data from different sources: crwdns37769:0crwdne37769:0
+        all of the above: crwdns37770:0crwdne37770:0
+      ECSPD unit:
+        ECS Curriculum: crwdns37771:0crwdne37771:0
+        Based on what you just read about the ECS course, answer the following question: crwdns37772:0crwdne37772:0
+        What unit from the ECS curriculum are you most interested in?: crwdns37773:0crwdne37773:0
+        "Unit 1: Human Computer Interaction": crwdns37774:0crwdne37774:0
+        "Unit 2: Problem Solving": crwdns37775:0crwdne37775:0
+        "Unit 3: Web Design": crwdns37776:0crwdne37776:0
+        "Unit 4: Introduction to Programming": crwdns37777:0crwdne37777:0
+        "Unit 5: Computing and Data Analysis": crwdns37778:0crwdne37778:0
+        "Unit 6: Robotics": crwdns37779:0crwdne37779:0
       K-1 Artist 1 Multi 1:
         Multiple Choice: crwdns6099:0crwdne6099:0
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: crwdns6100:0crwdne6100:0
@@ -663,6 +683,41 @@ en:
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: crwdns36048:0crwdne36048:0
         Multi Strings Images 1.blocks3.start_blocks, 350, 100: crwdns36049:0crwdne36049:0
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: crwdns36050:0crwdne36050:0
+      PDAlg attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: crwdns37780:0crwdne37780:0
+        I have read and agree to the Attendance Policy: crwdns37781:0crwdne37781:0
+      PDAlg Blocks Video:
+        Intro to Evaluation Blocks: crwdns37782:0crwdne37782:0
+        In which are of the screen do you click blocks together to write a program?: crwdns37783:0crwdne37783:0
+        Play Area: crwdns37784:0crwdne37784:0
+        Toolbox: crwdns37785:0crwdne37785:0
+        Workspace: crwdns37786:0crwdne37786:0
+      PDAlg functional:
+        Functional Programming: crwdns37787:0crwdne37787:0
+        Have you ever programmed before?: crwdns37788:0crwdne37788:0
+        Yes, and I'm familiar with functional programming: crwdns37789:0crwdne37789:0
+        Yes, but I don't know if it would be considered functional: crwdns37790:0crwdne37790:0
+        "No": crwdns37791:0crwdne37791:0
+      PDAlg implementation:
+        Curriculum Implementation: crwdns37792:0crwdne37792:0
+        0: crwdns37793:0crwdne37793:0
+        1: crwdns37794:0crwdne37794:0
+        September - October: crwdns37795:0crwdne37795:0
+        November - December: crwdns37796:0crwdne37796:0
+        January - February: crwdns37797:0crwdne37797:0
+        March - April: crwdns37798:0crwdne37798:0
+        May - June: crwdns37799:0crwdne37799:0
+        Throughout the year: crwdns37800:0crwdne37800:0
+      PDAlg PreQ 1:
+        Pre-Survey Question 1: crwdns37801:0crwdne37801:0
+        Have you ever participated in an online PD program before?: crwdns37802:0crwdne37802:0
+        "Yes": crwdns37803:0crwdne37803:0
+        "No": crwdns37804:0crwdne37804:0
+      PDAlg PreQ 2:
+        Pre-Survey Question 2: crwdns37805:0crwdne37805:0
+        Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: crwdns37806:0crwdne37806:0
+        "Yes": crwdns37807:0crwdne37807:0
+        "No": crwdns37808:0crwdne37808:0
       PDECS attendance commitment:
         Please confirm that you have read the Attendance Policy and will work to follow it.: crwdns36480:0crwdne36480:0
         I have read and agree to the Attendance Policy: crwdns36481:0crwdne36481:0
@@ -730,7 +785,6 @@ en:
         "Yes": crwdns35272:0crwdne35272:0
       PDK5 Visual Languages:
         Visual Programming Languages: crwdns35273:0crwdne35273:0
-        Based on the video you saw before, please answer the question below.: crwdns35274:0crwdne35274:0
         Why are visual programming languages easier to learn than text-based programming languages?: crwdns35275:0crwdne35275:0
         Because you dont have to worry about syntax as much, like where to put a semi-colon: crwdns35276:0crwdne35276:0
         Because you can focus on the logic of programming: crwdns35277:0crwdne35277:0
@@ -738,7 +792,7 @@ en:
         All of the above: crwdns35279:0crwdne35279:0
       PDK5 What is CS:
         What is Computer Science?: crwdns35280:0crwdne35280:0
-        "A computer program, or code, is:": crwdns35281:0crwdne35281:0
+        "A computer program, or \"code,\" is:": crwdns37809:0crwdne37809:0
         a part inside of a computer: crwdns35282:0crwdne35282:0
         a set of instructions a person gives a computer to execute: crwdns35283:0crwdne35283:0
         a week-long course to learn about computers: crwdns35284:0crwdne35284:0
@@ -761,6 +815,117 @@ en:
         rocket-height(seconds) = seconds * 10 + 7: crwdns34805:0crwdne34805:0
         rocket-height(seconds) = seconds * 7 + 3: crwdns34806:0crwdne34806:0
         rocket-height(seconds) = seconds * 10 - 3: crwdns34807:0crwdne34807:0
+      sciPD agent based 1:
+        Multiple Choice - Interactions In Agent-based Models: crwdns37810:0crwdne37810:0
+        What types of interactions can occur in agent-based models?: crwdns37811:0crwdne37811:0
+        agents interact with their environment only: crwdns37812:0crwdne37812:0
+        agents interact with other agents only: crwdns37813:0crwdne37813:0
+        agents interact with both their environment and other agents: crwdns37814:0crwdne37814:0
+        all of the above: crwdns37815:0crwdne37815:0
+      sciPD agent based 2:
+        Multiple Choice - Agent-based Models: crwdns37816:0crwdne37816:0
+        What type of systems are agent-based models suitable for modeling?: crwdns37817:0crwdne37817:0
+        simple mechanical systems: crwdns37818:0crwdne37818:0
+        complex adaptive systems: crwdns37819:0crwdne37819:0
+        systems of mathematical equations: crwdns37820:0crwdne37820:0
+        all of the above: crwdns37821:0crwdne37821:0
+      sciPD attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: crwdns37822:0crwdne37822:0
+        I have read and agree to the Attendance Policy: crwdns37823:0crwdne37823:0
+      sciPD class models 1:
+        Using Models in the Classroom: crwdns37824:0crwdne37824:0
+        Which of the following is not a tenet of Papert's theory of Constructionism?: crwdns37825:0crwdne37825:0
+        constructing social relationships: crwdns37826:0crwdne37826:0
+        interacting with others: crwdns37827:0crwdne37827:0
+        creating artifacts of social relevance: crwdns37828:0crwdne37828:0
+        building relationships between old and new knowledge: crwdns37829:0crwdne37829:0
+      sciPD class models 2:
+        Constructionism: crwdns37830:0crwdne37830:0
+        Constructionism focuses on how learning is constructed during the...: crwdns37831:0crwdne37831:0
+        design of learning artifacts: crwdns37832:0crwdne37832:0
+        creation of learning artifacts: crwdns37833:0crwdne37833:0
+        discussion of learning artifacts: crwdns37834:0crwdne37834:0
+        all of the above: crwdns37835:0crwdne37835:0
+      sciPD complex adaptive 1:
+        Intro to Complex Adaptive Systems: crwdns37836:0crwdne37836:0
+        Which of the following IS a characteristic of a complex adaptive system?: crwdns37837:0crwdne37837:0
+        has a leader: crwdns37838:0crwdne37838:0
+        is predictable: crwdns37839:0crwdne37839:0
+        has centralized control: crwdns37840:0crwdne37840:0
+        generates emergent patterns: crwdns37841:0crwdne37841:0
+      sciPD complex adaptive 2:
+        Examples of Complex Adaptive Systems: crwdns37842:0crwdne37842:0
+        Which of the following is NOT an example of a complex adaptive system?: crwdns37843:0crwdne37843:0
+        a bee hive: crwdns37844:0crwdne37844:0
+        a wall clock: crwdns37845:0crwdne37845:0
+        a traffic jam: crwdns37846:0crwdne37846:0
+        the internet: crwdns37847:0crwdne37847:0
+      sciPD computer models 1:
+        Multiple Choice - Stochastic Models: crwdns37848:0crwdne37848:0
+        What does it mean for a model to be stochastic?: crwdns37849:0crwdne37849:0
+        It includes some randomness: crwdns37850:0crwdne37850:0
+        It can be easily automated: crwdns37851:0crwdne37851:0
+        It is predictable: crwdns37852:0crwdne37852:0
+        It has fixed percentages of different elements: crwdns37853:0crwdne37853:0
+      sciPD computer models 2:
+        Multiple Choice - Common Features Of Lab And Computational Science Experiments: crwdns37854:0crwdne37854:0
+        Which of the following are common to both lab experiments and computational science experiments?: crwdns37855:0crwdne37855:0
+        automation of experiments is easy: crwdns37856:0crwdne37856:0
+        changing physical properties like the gravitational constant: crwdns37857:0crwdne37857:0
+        sweeping a set of variables: crwdns37858:0crwdne37858:0
+        the need for controlled experiments: crwdns37859:0crwdne37859:0
+      sciPD culture 1:
+        Multiple Choice - Getting Unstuck: crwdns37860:0crwdne37860:0
+        Which of the following was NOT suggested as a way to get unstuck?: crwdns37861:0crwdne37861:0
+        taking a break: crwdns37862:0crwdne37862:0
+        meditating: crwdns37863:0crwdne37863:0
+        looking at other similar pieces of code: crwdns37864:0crwdne37864:0
+        reading through your code line by line: crwdns37865:0crwdne37865:0
+      sciPD culture 2:
+        Multiple Choice - Role Of Teacher: crwdns37866:0crwdne37866:0
+        What role for a teacher incorporating models and simulations into the classroom was proposed?: crwdns37867:0crwdne37867:0
+        engaging lecturer: crwdns37868:0crwdne37868:0
+        learning coach or guide: crwdns37869:0crwdne37869:0
+        expert in a computer language: crwdns37870:0crwdne37870:0
+        classroom manager: crwdns37871:0crwdne37871:0
+      sciPD framework 1:
+        Multiple Choice - Computational Thinking 1: crwdns37872:0crwdne37872:0
+        "Computational Thinking was referred to in the video as:": crwdns37873:0crwdne37873:0
+        a way of communicating with a computer: crwdns37874:0crwdne37874:0
+        a process that computers use to think: crwdns37875:0crwdne37875:0
+        a human thought process: crwdns37876:0crwdne37876:0
+        a subfield of computer science: crwdns37877:0crwdne37877:0
+      sciPD framework 2:
+        Multiple Choice - Computational Thinking 2: crwdns37878:0crwdne37878:0
+        Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?: crwdns37879:0crwdne37879:0
+        abstraction: crwdns37880:0crwdne37880:0
+        automation: crwdns37881:0crwdne37881:0
+        analysis: crwdns37882:0crwdne37882:0
+        algorithms: crwdns37883:0crwdne37883:0
+      sciPD intro to CS 1:
+        Intro to Computational Science: crwdns37884:0crwdne37884:0
+        "Computer modeling is used to study problems that are:": crwdns37885:0crwdne37885:0
+        too dangerous to study in the real world: crwdns37886:0crwdne37886:0
+        too time consuming to study in the real world: crwdns37887:0crwdne37887:0
+        too expensive to study in the real world: crwdns37888:0crwdne37888:0
+        all of the above: crwdns37889:0crwdne37889:0
+      sciPD intro to CS 2:
+        Intro to Computational Science: crwdns37890:0crwdne37890:0
+        What is computational science good for?: crwdns37891:0crwdne37891:0
+        it replaces traditional science labs: crwdns37892:0crwdne37892:0
+        it complements lab and theoretical science : crwdns37893:0crwdne37893:0
+        it slows the process of discovery: crwdns37894:0crwdne37894:0
+        nothing at all: crwdns37895:0crwdne37895:0
+      sciPD PreQ 1:
+        Pre-Survey Question 1: crwdns37896:0crwdne37896:0
+        Before now, have you ever participated in an online PD program?: crwdns37897:0crwdne37897:0
+        "Yes": crwdns37898:0crwdne37898:0
+        "No": crwdns37899:0crwdne37899:0
+      sciPD PreQ 2:
+        Pre-Survey Question 2: crwdns37900:0crwdne37900:0
+        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: crwdns37901:0crwdne37901:0
+        "Yes": crwdns37902:0crwdne37902:0
+        "No": crwdns37903:0crwdne37903:0
       test multi image:
         Maze Multiple Choice Two: crwdns6190:0crwdne6190:0
         /script_assets/matches/images/head.jpg,400: crwdns6191:0crwdne6191:0
@@ -831,6 +996,15 @@ en:
         8: crwdns36282:0crwdne36282:0
         10: crwdns36283:0crwdne36283:0
         12: crwdns36284:0crwdne36284:0
+      U3L06-API-multichoice:
+        Multiple Choice: crwdns37904:0crwdne37904:0
+        Choose the option that best answers the question.: crwdns37905:0crwdne37905:0
+        What is the primary purpose of an API in a programming language?: crwdns37906:0crwdne37906:0
+        Application Primary Interactions are fundamental to programming: crwdns37907:0crwdne37907:0
+        To make programming more complex for those without experience: crwdns37908:0crwdne37908:0
+        Programs won't run without good API documentation: crwdns37909:0crwdne37909:0
+        To provide high-level functionality that simplifies complex programming tasks: crwdns37910:0crwdne37910:0
+        It is impossible to write a program without an API: crwdns37911:0crwdne37911:0
       unique level name here:
         title: crwdns36515:0crwdne36515:0
         description here: crwdns21784:0crwdne21784:0

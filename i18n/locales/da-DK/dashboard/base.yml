@@ -64,6 +64,8 @@ da:
     need_confirmation: Har ikke modtaget bekræftelses instruktioner?
     need_unlock: Ikke modtaget lås op instruktioner?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Tilmeld dig en konto for at spore dine fremskridt. Din email bruges primært til at tillade log ind og til gendannelse af din adgangskode. For mere information, se vores <a href="http://code.org/privacy">Privat Politik</a>.'
     overview_teacher: 'Undervis i programmering i din klasse ved at oprette en konto. <p/> Så kan du tilføje dine elever og følge deres fremdrift.'
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org">gennemse de forskellige trin og øvelser</a>, men du bliver nødt til at tilmelde dig for at gemme dine fremskridt.'
@@ -316,6 +318,7 @@ da:
     classroom_activity: Unplugged aktivitet
   home:
     title: Kode Værktøj
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Oversigt over kursus 1, 2 og 3
     lesson_plans: Lektionsplaner
     signin_message: 'Allerede registreret? %{link}'
@@ -481,6 +484,8 @@ da:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Skriv dit svar her
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Ok
   time:
