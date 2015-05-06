@@ -112,7 +112,7 @@ Scenario Outline: Simple blockly level page view
   And I close my eyes
 Examples:
   | url                                                                | test_name                 |
-  | http://learn.code.org/s/1/level/2?noautoplay=true                  | first maze level          |
+  | http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true   | first maze level          |
   | http://learn.code.org/s/course2/stage/7/puzzle/2?noautoplay=true   | artist level              |
   | http://learn.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true  | playlab level             |
   | http://learn.code.org/s/course1/stage/3/puzzle/5?noautoplay=true   | jigsaw level              |
