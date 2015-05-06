@@ -2,16 +2,18 @@ var chai = require('chai');
 chai.config.includeStack = true;
 var assert = chai.assert;
 
-var testUtils = require('../util/testUtils');
-testUtils.setupLocales('calc');
+window.blockly = window.blockly || {};
 
-var Calc = require(testUtils.buildPath('/calc/calc.js'));
-var EquationSet = require(testUtils.buildPath('/calc/equationSet.js'));
-var Equation = require(testUtils.buildPath('/calc/equation.js'));
-var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode.js'));
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var ResultType = require(testUtils.buildPath('constants.js')).ResultType;
-var calcMsg = require(testUtils.buildPath('../locale/current/calc'));
+var testUtils = require('../util/testUtils');
+testUtils.setupLocale('calc');
+
+var Calc = require('@cdo/apps/calc/calc.js');
+var EquationSet = require('@cdo/apps/calc/equationSet.js');
+var Equation = require('@cdo/apps/calc/equation.js');
+var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var ResultType = require('@cdo/apps/constants.js').ResultType;
+var calcMsg = require('@cdo/apps/calc/locale');
 
 describe('evaluateResults_/evaluateFunction_', function () {
   it('fails when callers have different compute signatures', function () {
@@ -63,7 +65,6 @@ describe('evaluateResults_/evaluateFunction_', function () {
     assert.deepEqual(outcome, otherOutcome);
   });
 
-  // currently disabled until i figure out locale stuff in calc
   it('fails when evaluate is different for non-compute inputs', function () {
     // f(x) = x + 1
     // f(2)

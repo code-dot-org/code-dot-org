@@ -44,23 +44,56 @@ exports.requireWithGlobalsCheckBuildFolder = function (path, allowedChanges) {
   return requireWithGlobalsCheck(exports.buildPath(path), allowedChanges, false);
 };
 
+// TODO (brent) makes sure locales stuff still makes sense once all tests are
+// working
 function setupLocale(app) {
   setupLocales();
+  if (window.blockly) {
+    delete window.blockly.appLocale;
+  }
+
+  // browserify doesnt seem to handle something like this well for some reason:
+  // require('../../build/package/js/en_us/' + app + '_locale');
+  switch (app) {
+    case 'maze':
+      require('../../build/package/js/en_us/maze_locale');
+      break;
+    case 'turtle':
+      require('../../build/package/js/en_us/turtle_locale');
+      break;
+    case 'bounce':
+      require('../../build/package/js/en_us/bounce_locale');
+      break;
+    case 'flappy':
+      require('../../build/package/js/en_us/flappy_locale');
+      break;
+    case 'studio':
+      require('../../build/package/js/en_us/studio_locale');
+      break;
+    case 'jigsaw':
+      require('../../build/package/js/en_us/jigsaw_locale');
+      break;
+    case 'calc':
+      require('../../build/package/js/en_us/calc_locale');
+      break;
+    case 'applab':
+      require('../../build/package/js/en_us/applab_locale');
+      break;
+    case 'eval':
+      require('../../build/package/js/en_us/eval_locale');
+      break;
+    case 'netsim':
+      require('../../build/package/js/en_us/netsim_locale');
+      break;
+    default:
+      throw('bad app: ' + app);
+  }
+
 }
 
 exports.setupLocale = setupLocale;
 
 function setupLocales() {
-  require('../../build/package/js/en_us/maze_locale');
-  require('../../build/package/js/en_us/turtle_locale');
-  require('../../build/package/js/en_us/bounce_locale');
-  require('../../build/package/js/en_us/flappy_locale');
-  require('../../build/package/js/en_us/studio_locale');
-  require('../../build/package/js/en_us/jigsaw_locale');
-  require('../../build/package/js/en_us/calc_locale');
-  require('../../build/package/js/en_us/applab_locale');
-  require('../../build/package/js/en_us/eval_locale');
-  require('../../build/package/js/en_us/netsim_locale');
   require('../../build/package/js/en_us/common_locale');
 }
 
