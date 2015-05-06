@@ -398,7 +398,7 @@ title: "Ops Dashboard"
   controllers.controller('CohortController', ['$scope', '$route', '$routeParams', '$location', '$window', 'workshopsService', 'cohortsService', 'districtsService', 'programTypesService',
     function($scope, $route, $routeParams, $location, $window, workshopsService, cohortsService, districtsService, programTypesService) {
 
-    $scope.scripts = #{DASHBOARD_DB[:scripts].select(:id, :name).all.to_json};
+    $scope.scripts = #{ DASHBOARD_DB[:scripts].select(:id, :name).all.to_json};
 
 
       $scope.newDistrict = function() {
@@ -502,6 +502,13 @@ title: "Ops Dashboard"
         return $.grep(values, function(value) {return (value !== null && value !== "");}).length == 0
       };
 
+      $scope.afterCutoff = function() {
+        if ($scope.cohort.cutoff_date) {
+          return "#{ Date.today.to_s}" > $scope.cohort.cutoff_date;
+        } else {
+          return false;
+        }
+      };
 
       $scope.editingAny = function(things) {
         if (!things) {
