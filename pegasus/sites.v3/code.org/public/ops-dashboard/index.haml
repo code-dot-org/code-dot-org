@@ -502,8 +502,8 @@ title: "Ops Dashboard"
         return $.grep(values, function(value) {return (value !== null && value !== "");}).length == 0
       };
 
-      $scope.afterCutoff = function() {
-        if ($scope.cohort.cutoff_date) {
+      $scope.isAfterCutoff = function() {
+        if (#{ !dashboard_user[:admin]} && $scope.cohort.cutoff_date) {
           return "#{ Date.today.to_s}" > $scope.cohort.cutoff_date;
         } else {
           return false;
