@@ -279,9 +279,11 @@ Artist.prototype.afterInject_ = function (config) {
   // Set their initial contents.
   this.loadTurtle();
   this.drawImages();
+
   this.isDrawingAnswer_ = true;
   this.drawAnswer();
   this.isDrawingAnswer_ = false;
+
   if (this.level.predrawBlocks) {
     this.isPredrawing_ = true;
     this.drawBlocksOnCanvas(this.level.predrawBlocks, this.ctxPredraw);

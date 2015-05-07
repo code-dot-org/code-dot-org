@@ -37,22 +37,31 @@ describe('Level tests', function() {
   afterEach(function () {
     wrappedEventListener.detach();
     Blockly.BlockSvg.prototype.render = originalRender;
+
+    // Clean up some state that is meant to be per level. This is an issue
+    // because we're using the same window for all tests.
+    if (window.Maze) {
+      window.Maze.bee = null
+      window.Maze.wordSearch = null;
+    }
+    if (window.Studio) {
+      window.Studio.customLogic = null;
+    }
   });
 
-  getTestCollections().forEach(function (item, index) {
-    runTestCollection(item);
-  });
+  getTestCollections().forEach(runTestCollection);
 
 });
 
 // Get all json files under directory path
 function getTestCollections () {
   // require-globify transform
-  var files = require('./solutions/maze/*.js', {hash: 'path'});
+  var files = require('./solutions/**/*.js', {hash: 'path'});
   var testCollections = [];
   Object.keys(files).forEach(function (file) {
     testCollections.push({path: file, data: files[file]});
   });
+
   return testCollections;
 }
 
@@ -83,6 +92,10 @@ function runTestCollection (item) {
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
             this.timeout(testData.timeout);
+          }
+
+          if (testUtils.debugMode()) {
+            this.timeout(0);
           }
           runLevelTest(testCollection, testData, dataItem, done);
         });

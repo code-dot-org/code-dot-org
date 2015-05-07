@@ -1047,6 +1047,10 @@ var arrangeStartBlocks = function (config) {
  * Initialize Blockly and the Studio app.  Called on page load.
  */
 Studio.init = function(config) {
+  // replace studioApp methods with our own
+  studioApp.reset = this.reset.bind(this);
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
+
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1242,7 +1246,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   var svg = document.getElementById('svgStudio');
@@ -1366,7 +1370,7 @@ studioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Studio.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.

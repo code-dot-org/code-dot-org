@@ -237,3 +237,11 @@ exports.assertOwnProperty = function (obj, propertyName) {
       obj.constructor.name + " to have a property '" +
       propertyName + "' but no such property was found.");
 };
+
+
+/**
+ * @returns {boolean} True if mochify was launched with debug flag
+ */
+exports.debugMode = function () {
+  return location.search.substring(1).split('&').indexOf('debug') !== -1;
+};
