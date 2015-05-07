@@ -44,7 +44,9 @@ DropletAutocompleteParameterTooltipManager.prototype.installTooltipsForEditor_ =
 
   var cursorMovementHandler = this.onCursorMovement_.bind(this, aceEditor);
   aceEditor.commands.on('afterExec', cursorMovementHandler);
-  aceEditor.on('mousedown', function(e) { this.getCursorTooltip_().tooltipster('hide'); }.bind(this));
+  aceEditor.on('mousedown', function(e) {
+    this.getCursorTooltip_().tooltipster('hide');
+  }.bind(this));
 };
 
 /**
