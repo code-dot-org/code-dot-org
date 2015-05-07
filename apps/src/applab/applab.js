@@ -1224,8 +1224,8 @@ Applab.makeDraggable = function (jq) {
 
       // containment
       var container = $('#divApplab');
-      var maxLeft = container.width() - ui.helper.outerWidth(true);
-      var maxTop = container.height() - ui.helper.outerHeight(true);
+      var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+      var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
       newLeft = Math.min(newLeft, maxLeft);
       newLeft = Math.max(newLeft, 0);
       newTop = Math.min(newTop, maxTop);
