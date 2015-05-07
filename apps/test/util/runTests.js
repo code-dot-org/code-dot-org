@@ -24,12 +24,8 @@ exec(command, function (err, stdout, stderr) {
     './test/netsim/*.js'
   ];
   mochify(globs.join(' '), {
-    // Allow "npm test --grep=someTestHere" command
-    // TODO (brent)
-    // grep: process.env.npm_config_grep || '',
-    // debug: process.env.npm_config_debug,
-    grep: process.env.GREP,
-    debug: process.env.DEBUG,
+    grep: process.env.mocha_grep,
+    debug: process.env.mocha_debug,
     reporter : 'spec',
     timeout: 10000,
     phantomjs: which('phantomjs'),
