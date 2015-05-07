@@ -44,7 +44,7 @@
 }
 
 .level_link.perfect, .level_link.perfect:link, .level_link.perfect:visited {
-  background-color: $level_submitted;
+  background-color: $level_perfect;
   color: white !important;
   &:hover {
     background-color: $level_current;
