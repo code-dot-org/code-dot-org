@@ -1,3 +1,3 @@
 // locale for bounce
 
-module.exports = window.blockly.appLocale;
+module.exports = window.blockly.bounce_locale;

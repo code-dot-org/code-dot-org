@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     this.files.forEach(function(filePair) {
       filePair.src.forEach(function(src) {
         var locale = path.basename(src, '.json');
-        var namespace = src.indexOf('common') > -1 ? 'locale' : 'appLocale';
+        var namespace = path.basename(filePair.dest).split('.js')[0];
         try {
           var formatted = process(locale, namespace, grunt.file.readJSON(src));
           grunt.file.write(filePair.dest, formatted);

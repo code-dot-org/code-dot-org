@@ -1,3 +1,3 @@
 // locale for studio
 
-module.exports = window.blockly.appLocale;
+module.exports = window.blockly.studio_locale;

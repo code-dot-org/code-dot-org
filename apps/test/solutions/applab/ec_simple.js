@@ -1,6 +1,6 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var _ = require(testUtils.buildPath('lodash'));
+var TestResults = require('@cdo/apps/constants').TestResults;
+var _ = require('lodash');
 
 module.exports = {
   app: "applab",

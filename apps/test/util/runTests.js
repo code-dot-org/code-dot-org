@@ -20,21 +20,23 @@ exec(command, function (err, stdout, stderr) {
 
   // mochify("./test/*.js ./test/calc/*.js ./test/netsim/*.js", {
   var globs = [
-    './test/beeTest.js',
-    './test/wordsearchTest.js',
-    './test/utilityTests.js',
-    './test/acemodeTest.js',
+    './test/aceModeTest.js',
     './test/beeDrawingTest.js',
+    './test/beeTest.js',
     './test/commandsTest.js',
     './test/condBlockTest.js',
     './test/dirtDrawingTest.js',
     './test/ejsTest.js',
     './test/evalTests.js',
     './test/executionInfoTests.js',
-    './test/ObservableEventTest.js',
     './test/feedbackTests.js',
+
+    './test/ObservableEventTest.js',
+    './test/utilityTests.js',
+    './test/wordsearchTest.js',
     './test/calc/*.js',
-    './test/netsim/*.js'
+    './test/netsim/*.js',
+    './test/levelTests.js'
 
   ];
   mochify(globs.join(' '), {

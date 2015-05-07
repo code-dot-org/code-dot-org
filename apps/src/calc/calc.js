@@ -128,6 +128,7 @@ function asExpressionNode(val) {
  * Initialize Blockly and the Calc.  Called on page load.
  */
 Calc.init = function(config) {
+  // replace studioApp methods with our own
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   skin = config.skin;

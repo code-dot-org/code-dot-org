@@ -1,2 +1,2 @@
 // locale for turtle
-module.exports = window.blockly.appLocale;
+module.exports = window.blockly.turtle_locale;

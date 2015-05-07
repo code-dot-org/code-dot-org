@@ -264,7 +264,6 @@ describe("requiredBlockUtils", function () {
   });
 
   it("can recognize mismatching block types", function () {
-    debugger;
     var blockUser = blockUtils.domStringToBlock('<block type="logic_boolean"></block>');
     var blockRequired = blockUtils.domStringToBlock('<block type="block_with_3_titles"><title name="A">10</title></block>');
     assert(!requiredBlockUtils.blocksMatch(blockUser, blockRequired));

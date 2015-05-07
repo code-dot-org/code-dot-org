@@ -1,5 +1,5 @@
 var testUtils = require('../../util/testUtils');
-var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
+var studioApp = require('@cdo/apps/StudioApp').singleton;
 
 module.exports = {
   app: "flappy",
