@@ -18,26 +18,10 @@ exec(command, function (err, stdout, stderr) {
     return;
   }
 
-  // mochify("./test/*.js ./test/calc/*.js ./test/netsim/*.js", {
   var globs = [
-    './test/aceModeTest.js',
-    './test/beeDrawingTest.js',
-    './test/beeTest.js',
-    './test/commandsTest.js',
-    './test/condBlockTest.js',
-    './test/dirtDrawingTest.js',
-    './test/ejsTest.js',
-    './test/evalTests.js',
-    './test/executionInfoTests.js',
-    './test/feedbackTests.js',
-
-    './test/ObservableEventTest.js',
-    './test/utilityTests.js',
-    './test/wordsearchTest.js',
+    './test/*.js',
     './test/calc/*.js',
-    './test/netsim/*.js',
-    './test/levelTests.js'
-
+    './test/netsim/*.js'
   ];
   mochify(globs.join(' '), {
     // Allow "npm test --grep=someTestHere" command
