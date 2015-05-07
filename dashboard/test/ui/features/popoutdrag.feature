@@ -1,7 +1,7 @@
 Feature: Blocks can be dragged from popouts
 
 Background:
-  Given I am on "http://learn.code.org/s/1/level/59?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true"
 
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape

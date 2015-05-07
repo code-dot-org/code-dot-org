@@ -415,9 +415,22 @@ button.arrow:focus {
   border-color: black;
   border-style: solid;
   border-width: 1px;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 10px;
   font-size: 18px; }
+
+#designModeBox td {
+  vertical-align: top; }
+
+#divApplab {
+  box-sizing: border-box;
+  padding: 2px; }
+
+#divApplab input {
+  box-sizing: border-box; }
+
+#divApplab button {
+  padding: 0px; }
 
 .ace_gutter-cell.ace_error {
   background-image: url('/blockly/media/skins/applab/gutterError.png');

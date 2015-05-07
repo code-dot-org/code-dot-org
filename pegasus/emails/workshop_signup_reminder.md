@@ -1,14 +1,15 @@
 ---
-from: "Code.org <info@code.org>"
+<%
+workshop_row = DB[:forms].first(id:form.parent_id)
+affiliate = DASHBOARD_DB[:users].where(id: workshop_row[:user_id]).first
+%>
+from: <%= affiliate[:name] + " <" + affiliate[:email] + ">" %>
 subject: "Your [Code.org] Workshop is coming up!"
 litmus_tracking_id: "e5cj1of6"
 ---
 
 <%
-  workshop_row = DB[:forms].first(id:form.parent_id)
   workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
-  
-  affiliate = DASHBOARD_DB[:users].where(id: workshop_row[:user_id]).first
   
   cancel_link = "http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/cancel/#{form.secret}"
 %>
