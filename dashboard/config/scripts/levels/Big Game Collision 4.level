@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "We've got a function called distance that should return the distance between two sprites, and using that we can decide when those sprites are close enough to be considered touching. Complete the 'collide?' function so that it checks the distance function and returns true if the two points are close enough to touch (100 pixels apart is a good place to start). TIP: the distance function doesn't work yet (it always returns zero), so if you're successful you'll see that your sprites are instantly \"colliding,\" but we'll fix that in a second!",
+    "instructions": "The 'distance' function returns the distance between two sprites. Complete the 'collide?' function so that it returns true if the distance between two points is less than 100 pixels apart. If you're successful, your sprites will instantly collide - why do you think that is?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

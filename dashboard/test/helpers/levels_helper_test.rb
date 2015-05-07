@@ -174,4 +174,17 @@ class LevelsHelperTest < ActionView::TestCase
     set_channel
     assert_not_equal channel, @view_options[:channel]
   end
+
+  test 'applab levels should have channels' do
+    @user = create :user
+    sign_in @user
+    self.stubs(:current_user).returns @user
+
+    def request
+      OpenStruct.new(env: {})
+    end
+
+    @level = create :applab
+    assert_not_nil app_options['channel']
+  end
 end

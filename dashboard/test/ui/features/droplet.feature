@@ -2,6 +2,7 @@ Feature: Droplet levels work as expected
 
   Background:
     Given I am on "http://learn.code.org/s/ui_tests/stage/1/puzzle/1?noautoplay=true"
+    And I am a student
 
   # For now test only Chrome, Safari does not support actions API
   @chrome

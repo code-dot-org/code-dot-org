@@ -1,5 +1,6 @@
 name 'Play Lab Rocket 7'
 title 'Rocket Multiple Choice'
+answer_line true
 
 markdown <<MARKDOWN
 ### Which function describes a rocket that reaches:
