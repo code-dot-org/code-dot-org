@@ -1,17 +1,17 @@
 {
   "divideByZeroError": "התכנית שלך מנסה לחלק באפס.",
-  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "emptyComputeBlock": "חובה לצרף בלוק לבלוק מסוג \"אמוד\".",
   "equivalentExpression": "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי.",
   "evaluate": "לאמוד",
-  "extraTopBlocks": "יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?",
+  "extraTopBlocks": "יש לך בלוקים ללא שיוך. האם התכוונת לצרף אותם לבלוק \"אמוד\" ?",
   "failedInput": "הפונקציה שלך אינה מחזירה את התוצאה הנכונה עבור כל הערכים.",
   "goal": "מטרה:",
-  "levelIncompleteError": "Your expression does not match the goal.",
-  "missingFunctionError": "אתה חייב להכריז על פונקציה הנקראת {functionName}.",
-  "missingVariableX": "לביטוי שלך חסר משתנה {var}.",
+  "levelIncompleteError": "הביטוי אינו תואם את המטרה.",
+  "missingFunctionError": "עליך להגדיר פונקציה בשם {functionName}.",
+  "missingVariableX": "בביטוי שלך חסר משתנה {var}.",
   "reinfFeedbackMsg": "הנה החישוב שלך! המשך לעבוד על זה, או עבור לחידה הבאה!",
   "yourExpression": "הביטוי שלך:",
   "wrongInput": "אתה קורא לפונקציה שלך עם ערך שגוי.",
-  "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongOtherValuesX": "הביטוי נותן תוצאה לא נכונה עבור ערך אחר של {var}.",
+  "wrongResult": "הביטוי שלך אינו מחזיר את התוצאה הנכונה."
 }

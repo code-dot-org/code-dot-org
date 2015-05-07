@@ -51,7 +51,7 @@
           button.
       13:
         image: notes/hoc1_13.jpg
-        text: Let's go get those pigs!
+        text: بابڕۆین ئەو بەرازانە بگرین!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
@@ -210,7 +210,7 @@
           win.
       7:
         image: notes/hoc4_7.jpg
-        text: Have fun using the "if" block!
+        text: خۆشی ببینە لەگەڵ بەکارهێنانی بلۆکی "if" دا!
     if_else:
       1:
         image: notes/hoc5_1.jpg

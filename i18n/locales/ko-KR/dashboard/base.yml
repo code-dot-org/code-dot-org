@@ -64,6 +64,8 @@ ko:
     need_confirmation: 확인 메일을 받지 못 했나요?
     need_unlock: 잠김 해제 메일을 받지 못 했나요?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: '진도를 확인하기 위해서는 로그인하세요. 이메일 주소는 비밀번호 복구를 위해 사용됩니다.  <a href="http://code.org/privacy">개인정보보호 정책</a>.'
     overview_teacher: 계정을 이용해 로그인하고 수업에서 컴퓨터과학(정보과학)을 교육하세요. 학생들을 추가하고 진도를 확인할 수 있습니다.
     no_signup_message: '여러 개의 단계로 이루어진 퍼즐들을 살펴보세요. <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a> 해결한 퍼즐을 저장하려면 가입해야 합니다.'
@@ -316,6 +318,7 @@ ko:
     classroom_activity: 언플러그드 활동
   home:
     title: 코드 스튜디오
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: 코스1, 2, 3 살펴보기
     lesson_plans: 레슨 계획
     signin_message: '이미 등록되어있나요? %{link}'
@@ -477,10 +480,12 @@ ko:
     badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
     badrange: Your contract has the wrong range.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    baddomainname: 도메인 항목 중 잘못된 이름이 있습니다.
+    baddomaintype: 도메인 항목중 잘못된 형식이 있거나, 잘못된 순서로 있습니다.
   text_match:
     placeholder: 이름을 입력하세요.
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: 확인
   time:
@@ -525,7 +530,7 @@ ko:
   zendesk_too_young_message: '어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a href="http://support.code.org">support.code.org</a> 를 사용할 수 있습니다.'
   progress:
     not_started: not started
-    in_progress: in progress
+    in_progress: 진행 중
     completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
     completed_perfect: 완료
     furthest_level_attempted: 시도한 가장 높은 레벨
@@ -535,23 +540,23 @@ ko:
     completed_courses: 완료한 코스
     all_courses: 모든 코스
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: 프로젝트
+    create: 프로젝트 만들기
+    create_a_project: '새 프로젝트 만들기:'
+    new: 새로 만들기
+    rename: 이름 바꾸기
     save: 저장
     delete: 삭제
-    exit: Return to Course
-    my_projects: My Projects
+    exit: 코스로 돌아가기
+    my_projects: 내 프로젝트
     share: 공유하기
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: 프로젝트 공유
+    share_copy_link: 링크 복사
+    close: 닫기
     more: 더 많은
     name: 이름
     updated: Updated
-    project_type: Project Type
+    project_type: 프로젝트 형식
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
     need_help: Need help getting started?
     really_delete: 삭제하시겠습니까?
@@ -561,7 +566,7 @@ ko:
     not_saved: Not saved
     cancel: 취소
     delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_text: "프로젝트를 삭제하면 '나의 프로젝트 리스트'에서 영원히 삭제됩니다. 삭제한 프로젝트의 링크를 공유하는 사람은 더 이상 당신의 프로젝트를 볼 수 없습니다."
+    view_all: 내 프로젝트 보기
     remix: Remix
     click_to_remix: "Click 'Remix' to spin-off your own version!"

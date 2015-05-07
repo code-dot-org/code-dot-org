@@ -65,6 +65,8 @@
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
     need_unlock: Fékkstu ekki leiðbeiningar um opnun?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Skráðu þig sem notandi til að geyma vinnu þína. Netfangið þitt
       er aðallega notað til að þú getir skráð þig inn og til að endurheimta aðgangsorð.
       Nánari upplýsingar má fá í <a href="http://code.org/privacy">persónuverndarstefnu</a>
@@ -369,6 +371,7 @@
     classroom_activity: Verkefni án tölvu
   home:
     title: Kóðastúdíó
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Yfirlit yfir námskeið 1, 2 og 3
     lesson_plans: Námsáætlun
     signin_message: Þegar skráð(ur)? %{link}
@@ -566,6 +569,8 @@
       in the wrong order.
   text_match:
     placeholder: Skráðu svar þitt hér
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Í lagi
   time:

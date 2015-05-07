@@ -10,7 +10,7 @@
   "placeImageBlockTitle": "tempat-gambar (x, y, gambar)",
   "offsetBlockTitle": "selisih (x, y, gambar)",
   "rectangleBlockTitle": "persegi-panjang (lebar, panjang, gaya, warna)",
-  "reinfFeedbackMsg": "Anda dapat menekan tombol \"Terus Bermain\" untuk mengedit gambar Anda.",
+  "reinfFeedbackMsg": "Anda dapat menekan tombol \"Keep Playing\"  untuk mengedit program anda.",
   "rotateImageBlockTitle": "putar (derajat, gambar)",
   "scaleImageBlockTitle": "Skala (faktor, gambar)",
   "squareBlockTitle": "persegi (ukuran, gaya, warna)",

@@ -3,7 +3,7 @@ pt:
     script:
       name:
         test:
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": 'Puzzle: Aprender a arrastar e largar'
           The Maze: O Labirinto
           Multi: Multi
           Match: Match
@@ -11,15 +11,15 @@ pt:
           title: Curso Teste
           description: Just an internal test course.
         course1:
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          "Maze: Sequence": 'Maze: Sequence'
-          "Maze: Debugging": 'Maze: Debugging'
+          "Jigsaw: Learn to drag and drop": 'Puzzle: Aprender a arrastar e largar'
+          "Maze: Sequence": 'Labirinto: Sequência'
+          "Maze: Debugging": 'Labirinto: Depuração'
           "Artist 1: Intro": 'Artist 1: Intro'
           Artists 2: Artistas 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
           "Bee 1: Intro": 'Bee 1: Intro'
-          "Maze 2: Loops": 'Maze 2: Loops'
+          "Maze 2: Loops": 'Labirinto 2: Repetições'
           "Bee 2: Loops": 'Bee 2: Loops'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
@@ -37,7 +37,7 @@ pt:
           "Bee: Sequence": 'Bee: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Shapes": 'Artist: Shapes'
-          "Maze: Loops": 'Maze: Loops'
+          "Maze: Loops": 'Labirinto: Repetições'
           "Bee: Loops": 'Bee: Loops'
           "Studio: Create a Story": 'Play Lab: Create a Story'
           "Artist: Loops": 'Artist: Loops'
@@ -59,7 +59,7 @@ pt:
           The Artist Debugging: The Artist Debugging
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          Maze Loops: 'Labirinto - Repetições'
           Graph Paper Programming: Programação de papel milimetrico
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
@@ -69,16 +69,16 @@ pt:
           The Big Event: O Grande Evento
           Your Digital Footprint: Your Digital Footprint
           description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
-          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artist: Sequence'
-          "Maze: Loops": 'Maze: Loops'
+          "Maze: Loops": 'Labirinto: Repetições'
           "Artist: Loops": 'Artist: Loops'
           "Bee: Loops": 'Bee: Loops'
           "Bee: Debugging": 'Bee: Debugging'
           "Artist: Debugging": 'Artist: Debugging'
           "Bee: Conditionals": 'Bee: Conditionals'
           "Artist: Sequence2": 'Artist: Sequence2'
-          "Maze: Sequence2": 'Maze: Sequence2'
+          "Maze: Sequence2": 'Labirinto: Sequência 2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
           description_audience: 'Ages  6+ (reading required)'
           description_short: Course 2 is designed for students who can read.
@@ -119,7 +119,7 @@ pt:
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Bee: Debugging'
-          Maze2: Maze2
+          Maze2: Labirinto 2
           Artist2: Artist2
           "Artist: Functions2": 'Artist: Functions2'
           "Bee: Functions2": 'Bee: Functions2'
@@ -196,7 +196,7 @@ pt:
           title: Scrat
           description_short: Scrat short description.
           description: Scrat long description
-          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Sequence": 'Labirinto: Sequência'
         hourofcode:
           Maze: Labirinto
           title: Hora de Código
@@ -233,7 +233,7 @@ pt:
           "Unplugged: Binary": 'Unplugged: Binary'
           Bee Binary: Bee Binary
           Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
+          Maze and Bee: Labirinto e Abelha
           Artist Binary: Artist Binary
           description_audience: Ages 10+ (after Course 3)
         Course4pre:
@@ -241,7 +241,7 @@ pt:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Loops": 'Artist: Loops'
           "Bee: Conditionals": 'Bee: Conditionals'
@@ -342,6 +342,11 @@ pt:
           Next Steps: Next Steps
           Computer Science Pedagogy: Computer Science Pedagogy
           Programming Concepts: Programming Concepts
+          Reflection: Reflection
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
           title: Internet Simulator
           description_short: ""
@@ -446,7 +451,7 @@ pt:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Loops": 'Artist: Loops'
           "Bee: Conditionals": 'Bee: Conditionals'
@@ -478,7 +483,7 @@ pt:
           Sending Bits in the Real World: Sending Bits in the Real World
           Number Systems: Number Systems
           Binary Numbers: Binary Numbers
-          Sending Numbers: Sending Numbers
+          Sending Numbers: Enviando números
           Encoding Numbers in the Real World: Encoding Numbers in the Real World
           Encoding and Sending Text: Encoding and Sending Text
           Sending Formatted Text: Sending Formatted Text
@@ -524,6 +529,11 @@ pt:
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -558,5 +568,176 @@ pt:
           Teaching Strategies: Teaching Strategies
           Preparing for in-person PD: Preparing for in-person PD
           reference: reference
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
+          Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Introduction to PD
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          What to Expect: What to Expect
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        rbo-reference:
+          reference: reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro
+        cspunit3:
+          title: 'CSP Unit 3 - Programming'
+          description_short: Programming
+          description: Programming in Javascript and AppLap
+          Getting to know AppLab: Getting to know AppLab
+          Functions: Funções
+          Using Simple Commands: Using Simple Commands
+          Creating Procedures - Part 1: 'Creating Procedures - Part 1'
+          Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
+          APIs and Function Parameters: APIs and Function Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Creating functions with Parameters: Creating functions with Parameters
+          Scene Design Part 1 - Plan: 'Scene Design Part 1 - Plan'
+          Scene Design Part 2 - Code: 'Scene Design Part 2 - Code'
+          Scene Design Part 3 - Reflect: 'Scene Design Part 3 - Reflect'
+          Unplugged Events Activity -  Mission Unsortable: 'Unplugged Events Activity -  Mission Unsortable'
+          Buttons on the Screen: Buttons on the Screen
+          Unfortunate Events: Unfortunate Events
+          On Beyond Buttons: On Beyond Buttons
+          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
+          Controlling Memory and Program Flow: Controlling Memory and Program Flow
+          Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
+          Clicker v.1 -  Variable Basics: 'Clicker v.1 -  Variable Basics'
+          Conditional Basics: Conditional Basics
+          More Variables (2 days): More Variables (2 days)
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Natural Language Processing and Chat Bots: Natural Language Processing and Chat Bots
+          Chained Conditionals: Chained Conditionals
+          Compound Conditionals: Compound Conditionals
+          Strings and Substrings: Strings and Substrings
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          The Need For Programming Languages: The Need For Programming Languages
+          Creating Procedures - Part 2: 'Creating Procedures - Part 2'
+          Sarah testing project backed levels: Sarah testing project backed levels
+        algebraPD3:
+          description: Teach Algebra through block-based Functional Programming
+          Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evaluation Blocks
+          The Big Game: The Big Game
+          Strings and Images: Strings and Images
+          The Design Recipe: The Design Recipe
+        sciPD complex adaptive 2:
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+        sciPD complex adaptive forum:
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+        Glenallan Career Day Demo:
+          new stage: new stage
+          title: Glenallan Career Day Demo
+          description_short: "Let's make some puzzles!"
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        ECSPD-NexTech:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: nextech_logo.png
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
+          Impact of Computer Science: Impact of Computer Science
+        ECSPD-iZone:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: izone_logo.png
+          title: Exploring Computer Science PD
+          description: Online Introduction to ECS
+          Impact of Computer Science: Impact of Computer Science
+        algebraPD-NexTech:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: Evaluation Blocks
+          logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD-iZone:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: Evaluation Blocks
+          logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        sciencePD-NexTech:
+          Introduction to PD: Introduction to PD
+          logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        sciencePD-iZone:
+          Introduction to PD: Introduction to PD
+          logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: In Partnership with Project GUTS
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        ui_tests:
+          title: UI Tests
+          description: "Script for test. Careful, don't change level ordering."
+          All the Tests: All the Tests
+          Free Response: Free Response
+          Multi: Multi
+        sciencePD2:
+          Phase 2 Summer Workshop: Phase 2 Summer Workshop
+        sciencePD3:
+          new stage: new stage

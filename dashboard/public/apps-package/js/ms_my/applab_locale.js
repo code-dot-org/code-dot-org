@@ -84,8 +84,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatForeverTooltip":function(d){return "Laksanakan aksi di dalam blok ini berulang sementara aplikasi sedang berjalan."},
 "shareApplabTwitter":function(d){return "Periksa aplikasi yang saya hasilkan. Saya menulis sendiri dengan @codeorg"},
 "shareGame":function(d){return "Kongsi aplikasi anda:"},
-"stepIn":function(d){return "Lankah masuk"},
+"stepIn":function(d){return "Langkah masuk"},
 "stepOver":function(d){return "Langkah ke atas"},
 "stepOut":function(d){return "Langkah keluar"},
-"viewData":function(d){return "View Data"},
+"viewData":function(d){return "Papar Data"},
 "yes":function(d){return "Ya"}};

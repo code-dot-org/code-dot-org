@@ -429,10 +429,6 @@
         gleichseitiges Dreieck zu zeichnen. Jede Seite hat eine Länge von 300 Pixeln.'
       4-5 Artist For Loops 1_instruction: Setze die Zahlen 1 bis 10 in die "Breite"-
         Bausteine ein und führe den Code aus.
-      4-5 Artist For Loops 10_instruction: "Vervollständige den \"Für\"-Baustein,
-        sodass er wie folgt zählt: 10, 20, 30, 40, 50.  Ab welcher Zahl beginnst du
-        zu zählen? Bis zu welcher Zahl zählst du? In welchen Schritten zählst du?\r\n(die
-        Wörter Ab, Bis, In welchen Schritten fett gedruckt)"
       4-5 Artist For Loops 11_instruction: 'Vervollständige den "Für"-Baustein, sodass
         er wie folgt zählt: 0, 20, 40, 60, 80... 200.'
       4-5 Artist For Loops 12_instruction: 'Was passiert, wenn du die "Für"- und "Bis"-Zahlen
@@ -472,8 +468,6 @@
       4-5 Artist For Loops 9_instruction: |
         Diese Kreise haben die Größe 5, 10, 15, 20,
         25, 30, und 35. Zeichne die Kreise. Benutze einen "for"-Baustein.
-      4-5 Artist For Loops Assessment 1_instruction: Vervollständige den "for"- Baustein,
-        so dass er 10, 20, 30, 40, 50... 200 durchzählt.
       4-5 Artist Free Draw 1_instruction: Freies Zeichnen! Zeichne, was deine Inspiration
         dir eingibt.
       4-5 Artist Functions 1_instruction: Benutze eine "wiederholen"- Schleife, um
@@ -581,10 +575,10 @@
       4-5 Artist Patterns 9.5_instruction: Wir wollen diesen Code in einer Schleife
         laufen lassen, um zwei Reihen Sechsecke zu zeichnen. Beachte, wie unsere zweite
         Reihe nach rechts verschoben wird.
-      4-5 Artist Patterns 9_instruction: 'Wiederhole den Code jetzt 3 mal, um die
-        ganze Reihe zu zeichnen. Hinweis: Jedes Sechseck hat einen Durchmesser von
-        80 Pixeln, gemessen von links nach rechts zwischen den Punkten, die am weitesten
-        auseinander liegen.'
+      4-5 Artist Patterns 9_instruction: |
+        Now repeat that code 3 times to draw the
+        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
+        to right.
       4-5 Artist Patterns Free Play_instruction: Freies Spielen - versuche dein Glück
         beim Entwerfen deines eigenen Musters!
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
@@ -643,160 +637,139 @@
       4-5 Bee Debugging 2_instruction: Hilf der Biene, Necktar zu holen und Honig
         zu machen.
       4-5 Bee Debugging 3_instruction: Finde die Fehler und behebe sie.
-      4-5 Bee Debugging 4_instruction: These blocks don't work. What's the pattern?
+      4-5 Bee Debugging 4_instruction: Diese Bausteine funktionieren nicht. Wie sieht
+        das Muster aus?
       4-5 Bee Debugging 5_instruction: Etwas stimmt hier nicht...
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
-      4-5 Bee Debugging 9_instruction: Why isn't the bee making enough honey?
+      4-5 Bee Debugging 6_instruction: Die lila Blüte hat eine unbekannte Menge Necktar.
+        Bringe die Bausteine in Ordnung, so dass der ganze Necktar aus der Blüte herausgeholt
+        wird.
+      4-5 Bee Debugging 7_instruction: Der Funktion fehlt etwas...
+      4-5 Bee Debugging 8_instruction: Die Funktion ist gut, aber sie wird nicht richtig
+        benutzt.
+      4-5 Bee Debugging 9_instruction: Warum macht die Biene nicht genug Honig?
       4-5 Bee Debugging Assessment 1_instruction: 'Aufgabe: Repariere das Programm.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: "Collect all of the nectar from each flower.\nUse
-        a nested loop. \n"
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
-      4-5 Bee Nested Loops 4_instruction: "Collect all of the nectar from each flower\nand
-        make honey at each honeycomb. Use a nested loop. \n"
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
+      4-5 Bee Nested Loops 1_instruction: Benutze eine Schleife, um den gesamten Necktar
+        zu sammeln.
+      4-5 Bee Nested Loops 2_instruction: 'Sammle den gesamten Necktar von jeder Blüte.
+        Benutze eine geschachtelte Schleife. '
+      4-5 Bee Nested Loops 3_instruction: Sammle den gesamten Necktar, indem du den
+        anfangs vorhandenen Code in eine geschachtelte Schleife einschließt.
+      4-5 Bee Nested Loops 4_instruction: 'Sammle den gesamten Necktar jeder Blüte
+        und mache Honig an jeder Honigwabe. Benutze eine geschachtelte Schleife. '
+      4-5 Bee Nested Loops 5_instruction: Sammle den gesamten Necktar, indem du eine
+        geschachtelte Schleife erzeugst.
       4-5 Bee Nested Loops 6_instruction: Sammle den ganzen Nektar.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
-      4-5 Bee Nested Loops 8_instruction: "Collect all of the nectar from these flowers\nby
-        nesting a while loop. Replace the inner repeat times block with a while\nblock.
-        \n"
-      4-5 Bee Nested Loops 9_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop inside a repeat.
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        Assessment - Collect all of
-        the nectar and make all the honey by using loops.
-      4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
-      4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      4-5 Bee Nested Loops 7_instruction: Schließe diese Schleife in eine andere Schleife
+        ein, so dass eine geschachtelte Schleife entsteht, und sammle so den gesamten
+        Necktar der Blüten.
+      4-5 Bee Nested Loops 8_instruction: 'Sammle den gesamten Necktar aus diesen
+        Blüten, indem du eine while-Schleife schachtelst. Ersetze den inneren Wiederholen-
+        Baustein durch einen while- Baustein. '
+      4-5 Bee Nested Loops 9_instruction: Sammle den gesamten Necktar aus diesen Blüten,
+        indem du eine while-Schleife in eine Wiederholen- Schleife schachtelst.
+      4-5 Bee Nested Loops Assessment 1_instruction: Bewertung - Sammle den gesamten
+        Necktar und mache den gesamten Honig, indem du Schleifen benutzt.
+      4-5 Bee Nested Loops Rows_instruction: Sammle Necktar aus den Blütenzeile! Benutze
+        eine geschachtelte Schleife.
+      4-5 Maze 1 (copy 1)_instruction: Lieber Mensch. Ich Zombie. Muss ... zur ...
+        Sonnenblume.
+      4-5 Maze 1_instruction: Lieber Mensch. Ich Zombie. Muss ... zur ... Sonnenblume.
       4-5 Maze 10_instruction: Kannst du die Sonnenblume holen und dabei nur vier
         Bausteine benutzen?
-      4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
-      4-5 Maze 12_instruction: |
-        Ok, this is slightly different. Can you do it in
-        only six blocks?
+      4-5 Maze 11_instruction: Kommst du zur Sonnenblume, indem du nur sechs Bausteine
+        verwendest?
+      4-5 Maze 12_instruction: OK, das ist ein bisschen schwierig. Kannst du das mit
+        nur sechs Bausteinen machen?
       4-5 Maze 13_instruction: Bring mich zum Schwein!
-      4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
-      4-5 Maze 2 (copy 1)_instruction: |
-        Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
-      4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: Create a loop with the "repeat until" block.
+      4-5 Maze 14_instruction: Bringe mir das Schwein! Benutze den "Wiederholen bis"-Baustein.
+      4-5 Maze 2 (copy 1)_instruction: Bringe den Zombie zur Sonnenblume, aber weiche
+        der Fleischfressenden Pflanze aus!
+      4-5 Maze 2_instruction: Bringe den Zombie zur Sonnenblume, aber weiche der Fleischfressenden
+        Pflanze aus!
+      4-5 Maze 3 (copy 1)_instruction: Muss ... zur ... Sonnenblume.
+      4-5 Maze 3_instruction: Muss ... zur ... Sonnenblume.
+      4-5 Maze 4 (copy 1)_instruction: Versuche es mit dem "wiederholen"-Baustein,
+        damit du weniger Bausteine benötigst...
+      4-5 Maze 4_instruction: Versuche es mit dem "wiederholen"-Baustein, damit du
+        weniger Bausteine benötigst...
+      4-5 Maze 5 (copy 1)_instruction: Kannst du dieses Rätsel lösen, indem du die
+        kleinstmögliche Anzahl von Bausteinen verwendest?
+      4-5 Maze 5_instruction: Kannst du dieses Rätsel lösen, indem du die kleinstmögliche
+        Anzahl von Bausteinen verwendest?
+      4-5 Maze 6 (copy 1)_instruction: Kannst du dieses Rätsel lösen, indem du die
+        kleinstmögliche Anzahl von Bausteinen verwendest?
+      4-5 Maze 6_instruction: Kannst du dieses Rätsel lösen, indem du die kleinstmögliche
+        Anzahl von Bausteinen verwendest?
+      4-5 Maze 7_instruction: Lieber Mensch. Ich Zombie. Muss ... zur ... Sonnenblume.
+      4-5 Maze 8_instruction: Benutze den "wiederholen"-Baustein um den Zombie  zur
+        Sonnenblume zu bringen. (Weiche den Fleischfressenden Pflanzen aus!)
+      4-5 Maze 9_instruction: Erzeuge eine Schleife mit dem "Wiederholen bis"-Baustein.
       4-5 Maze Assessment 1_instruction: 'Aufgabe: Erreiche die Sonnenblume.'
-      4-5 Maze Conditionals 1_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
-      4-5 Maze Conditionals 2_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      4-5 Maze Conditionals 4_instruction: |
-        Ok, this is just like the last puzzle,
-        but you need to remember how you used the "if" block and the "repeat"
-        block together.
-      4-5 Maze Conditionals 5_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 6_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 7_instruction: |
-        Ok, let's do that again for practice
-        - this isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
-      4-5 Maze Conditionals Assessment 1_instruction: |
-        Use a "repeat until" and
-        an "if-else" block to get me to the sunflower in as few blocks as possible.
+      4-5 Maze Conditionals 1_instruction: Benutze den "wiederholen"-Baustein um den
+        Zombie  zur Sonnenblume zu bringen.
+      4-5 Maze Conditionals 10_instruction: Kannst du einfach drei Bausteine hinzufügen
+        und so einen komplizierteres Labyrinth bewältigen? Wenn du es richtig machst,
+        kann ich jeden gekrümmten Weg gehen, unabhängig von seiner Länge.
+      4-5 Maze Conditionals 2_instruction: Benutze den "wiederholen"-Baustein um den
+        Zombie  zur Sonnenblume zu bringen.
+      4-5 Maze Conditionals 3_instruction: 'Benutze den "wenn"-Baustein, damit ich
+        entscheiden kann, wann ich mich drehe. Hinweis: du brauchst nur einen weiteren
+        Baustein, aber sieh dir an, wie wir das machen, damit du es beim nächsten
+        Mal alleine hinbekommst.'
+      4-5 Maze Conditionals 4_instruction: Okay, das ist genau so wie beim vorigen
+        Rätsel, aber du musst dich daran erinnern, wie du den "wenn"-Baustein zusammen
+        mit dem "wiederholen"-Baustein benutzt hast.
+      4-5 Maze Conditionals 5_instruction: Ich wollen Sonnenblume! Benutze den "wenn"-
+        Baustein, um mich mit möglichst wenigen Bausteinen dahin zu bringen.
+      4-5 Maze Conditionals 6_instruction: Ich wollen Sonnenblume! Benutze den "wenn"-
+        Baustein, um mich mit möglichst wenigen Bausteinen dahin zu bringen.
+      4-5 Maze Conditionals 7_instruction: Okay, wir wollen das zur Übung wiederholen
+        - es ist fast dasselbe, aber pass auf die Fleischfressenden Pflanzen auf!
+      4-5 Maze Conditionals 8_instruction: Die "wenn-ansonsten"-Bausteine überprüfen
+        eine Bedingung, und machen dann das eine ODER das andere. Versuche, diesen
+        neuen Baustein zu benutzen, um mir die Sonnenblume zu holen.
+      4-5 Maze Conditionals 9_instruction: Eine weitere Übung mit dem "wenn-ansonsten"-Baustein.
+        Kriegst du das beim ersten Versuch hin?
+      4-5 Maze Conditionals Assessment 1_instruction: Benutze einen "Wiederholen bis"-
+        und einen "wenn-ansonsten"- Baustein und bringe mich so mit der geringstmöglichen
+        Anzahl an Bausteinen zur Sonnenblume.
       A test level ArtistArtist_instruction: A test level ArtistArtist
-      add 2_instruction: |
-        Awesome job on the last puzzle, let's try it again this
-        time let's make this cool design with with 60 pixel hexagon's.
-      Alice Test_instruction: Here are some instructions!
-      Alpha 2-3 Artist Loops New 3_instruction: |
-        Now, let's draw 6 squares each
-        a random color.  What angle should we turn between each square drawing to
-        make a full circle of squares?
-      Alpha Course 3 Artist Functions 5_instruction: |
-        Update the 'draw a square'
-        function so it draws a square using the parameter 'length'. Then draw a
-        square with a side length of 100 pixels.
-      Alpha Course 3 Artist Functions 6_instruction: |
-        The "draw a square" function
-        with parameter is ready for you to add the correct blocks and change the value
-        from zero to make it the correct size.  Hint:  The square sides are 100 pixels.
-      Alpha Course 3 Artist Functions 7_instruction: |
-        Use the "draw a triangle"
-        and "draw a square" functions together to draw two houses. (Hint: The houses
-        are 50 pixels apart)
-      Alpha Course 3 Artist Loops 3_instruction: |
-        Want to see what happens when we
-        repeat that shape over and over again using a loop?
-      Alpha Course 3 Artist Nested Loops 4_instruction: |
-        Replace the blocks with
-        a nested loop.
-      Alpha Course 3 Bee Conditionals 10_instruction: "Create a function that will\ncheck
-        if something is a purple flower and collect all of the nectar or if\nit is
-        a honeycomb and make honey.  \n"
-      Alpha Course 3 Bee Conditionals 9_instruction: |
-        Collect nectar using the 'check
-        purple flower' function.
-      Arbitrary_instruction: Make a line
-      Artist - Nested Loops 1_instruction: |
-        Complete the code to draw these triangles.  The
-        first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
-      Artist - Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag
-        by looping the provided blocks. The stars are 50 pixels apart, but remember
-        that the stars themselves are 30 pixels wide.
+      add 2_instruction: Super gemacht beim vorigen Rätsel. Wir wollen es noch mal
+        versuchen und dieses coole Muster mit den 60- Pixel- Sechsecken machen.
+      Alice Test_instruction: Hier einige Anweisungen!
+      All green everything_instruction: click and drag the blocks
+      Alpha 2-3 Artist Loops New 3_instruction: Also, wir wollen 6 Quadrate zeichenen,
+        von denen jedes eine zufällig gewählte Farbe hat. Um welchen Winkel sollten
+        wir uns drehen, wenn wir einen Vollkreis aus Quadraten machen wollen?
+      Alpha Course 3 Artist Functions 5_instruction: Aktualisiere die 'zeichne ein
+        Quadrat'- Funktion, so dass sie beim Zeichnen des Quadates den Parameter 'Länge'
+        benutzt. Dann zeichne ein Quadrat der Seitenlänge 100 Pixel.
+      Alpha Course 3 Artist Functions 6_instruction: 'Die "zeichne-ein-Quadrat"- Funktion
+        mit Parameter ist für dich bereit. Du kannst die richtigen Bausteine hinzufügen
+        und den Wert Null verändern, so dass es die richtige Größe bekommt. Hinweis:
+        Die Seiten des Quadrates haben 100 Pixel.'
+      Alpha Course 3 Artist Functions 7_instruction: 'Benutze sowohl die "zeichne-ein-Dreieck"-
+        Funktion als auch die "zeichne-ein-Quadrat"-Funktion, um zwei Häuser zu zeichnen.
+        (Hinweis: Die Häuser liegen 50 Pixel auseinander)'
+      Alpha Course 3 Artist Loops 3_instruction: Willst du sehen, was passiert, wenn
+        wir dieses Muster mithilfe einer Schleife immer wieder zeichnen?
+      Alpha Course 3 Artist Nested Loops 4_instruction: Ersetze die Bausteine durch
+        eine verschachtelte Schleife.
+      Alpha Course 3 Bee Conditionals 10_instruction: 'Erstelle eine Funktion, die
+        überprüft, ob es sich um eine lila Blüte handelt und in diesem Fall deren
+        gesamten Necktar sammelt, oder ob es sich um eine Honigwabe handelt und dann
+        Honig macht.  '
+      Alpha Course 3 Bee Conditionals 9_instruction: Sammle Necktar unter Benutzung
+        der "prüfe-lila-Blüte"- Funktion.
+      applab_test2_sarah_instruction: This is the instructions panel for level 2
+      Arbitrary_instruction: Mache eine Linie
+      Artist - Nested Loops 1_instruction: 'Vervollständige den Code, damit diese
+        Dreiecke gezeichnet werden. Das erste hast du erledigt. Hinweis: 3 Dreiecke
+        in einer 360- Grad- Drehung.'
+      Artist - Nested Loops 10_instruction: Zeichne die letzte Sternenzeile dieser
+        Flagge, indem du die verfügbaren Bausteine in Schleifen einschließt. Die Sterne
+        liegen 50 Pixel auseinander, aber vergiss nicht, dass die Sterne selbst 30
+        Pixel breit sind.
       Artist - Nested Loops 11_instruction: |
         Can you draw these 10 squares of this
         sidewalk using a nested loop? Each square is 30 pixels.
@@ -953,8 +926,8 @@
       Big Game Animation 1_instruction: |
         Now that you've learned to write simple
         linear functions, let's work on using them to add some movement to our game.
-        Click play to see what your game can currently do (not much!), update any
-        variables you like, and then click finish to move on.
+        Click run to see what your game can currently do (not much!), update any variables
+        you like, and then click finish to move on.
       Big Game Animation 2 (copy 1)_instruction: |
         The function 'update-target'
         function takes the target's current x value, and returns an updated value.
@@ -999,8 +972,7 @@
         for safe-left? and safe-right? The first thing you need to do is complete
         the onscreen? function so that it checks whether both safe-left? and safe-right?
         are true. TIP - even after you add safe-left? and safe-right? your sprites
-        won't return to the screen. That will happen in the next puzzles when we
-        make sure that safe-left? and safe-right? actually work.
+        won't return to the screen - why do you think that is?
       Big Game Booleans 5_instruction: |
         At this point your danger should run across
         the screen from right to left, your target should run across from left to
@@ -1370,7 +1342,8 @@
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      copy 1_instruction: Try the "repeat" block to use fewer blocks...
+      copy 1_instruction: Versuche es mit dem "wiederholen"-Baustein, damit du weniger
+        Bausteine benötigst...
       course 1 artist 1 level 10_instruction: |
         Draw the dashed line by using both
         the jump and draw blocks
@@ -1468,6 +1441,7 @@
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
+      Course 4 Artist Binary 7 (copy 1)_instruction: Stelle diese Zeichnung fertig.
       Course 4 Artist Binary 7_instruction: Stelle diese Zeichnung fertig.
       Course 4 Artist Binary Free Play (copy 1)_instruction: |
         Free Play: Draw whatever
@@ -1507,6 +1481,10 @@
         we use the counter variable to make the sides smaller as there are more of
         them? Instead of moving forward by a set amount, try moving forward (100 /
         counter) pixels.
+      Course 4 Artist For Loops 14 _instruction: |
+        If you turn a little bit more or
+        less than you normally would for a shape, it creates a neat effect. Try turning
+        89 degrees to create this twisted square spiral.
       Course 4 Artist For Loops 14_instruction: |
         If you turn a little bit more or
         less than you normally would for a shape, it creates a neat effect. Try turning
@@ -1857,13 +1835,12 @@
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
       Course 4 Maze 2_instruction: Vermeide das Dynamit!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
-      Course 4 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 4_instruction: Versuche es mit dem "wiederholen"-Baustein, damit
+        du weniger Bausteine benötigst...
+      Course 4 Maze 5_instruction: Kannst du dieses Rätsel lösen, indem du die kleinstmögliche
+        Anzahl von Bausteinen verwendest?
+      Course 4 Maze 6_instruction: Kannst du dieses Rätsel lösen, indem du die kleinstmögliche
+        Anzahl von Bausteinen verwendest?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -1916,9 +1893,6 @@
         earlier. We've added a function called \"score_points\" that takes a parameter\n\"points.\"
         Edit the function so that the \"points\" parameter is added to\nthe \"player_points\"
         variable. Have the Dog score 10 points to move on to\nthe next puzzle. \n"
-      Course 4 Play Lab Vars 1 (copy 1)_instruction: |
-        This race seems a bit unfair,
-        try to get to the cat before the penguin does!
       Course 4 Play Lab Vars 1_instruction: |
         You don't have to write any code, just
         hit "run" to play the game! In this game, you're the Dog who is trying
@@ -2032,7 +2006,7 @@
         to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig."
-      course3 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      course3 Maze 1_instruction: Lieber Mensch. Ich Zombie. Muss ... zur ... Sonnenblume.
       Coursen 4 Artist Functions 11_instruction: |
         Can you create a new function that
         will draw a cube shape?
@@ -2169,7 +2143,7 @@
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        "Hello, World!" in teal at size 40.
+        "Hello, world!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
       Eval Define Funcs 1_instruction: |
@@ -2200,7 +2174,7 @@
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
         called "square-circle" with domain Number String and range Image. Click
-        Edit to write the function description (you will see two examples provided).
+        Edit to write the function definition (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         We're going to write a function
         that draws a solid rectangle of any color that is twice wide as it is high.
@@ -2687,17 +2661,10 @@
       MSM Play Lab Butterfly 3_instruction: |
         Now, combine your work to make Sam stay
         on both sides of the screen.
-      MSM Play Lab Game 1_instruction: |
-        Variables can be used to change how a program
-        behaves. Try changing the scene for the game by setting the background.
       MSM Play Lab Game 2_instruction: |
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
-      MSM Play Lab Game 3_instruction: |
-        Now it's time to play a game! Press the
-        Run button, and use the arrows to move and shoot. Then change the background,
-        or and change the player and enemy speeds to make the game easier or harder.
       Neat Eval Functions_instruction: Check out these sweet functions.
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
@@ -2941,10 +2908,21 @@
         but you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
         the if block.
+      PDK5 Conditionals 2_instruction: "Try this puzzle that uses conditionals and\nloops
+        together. Use the \"if\" block to decide when to turn. Hint: you only\nneed
+        one more block to complete this puzzle. \n"
       PDK5 Events 1_instruction: "So far all of the programs we've written are executed\nin
         order from top to bottom. In this puzzle, we'll use \"Events\" to respond\nto
         an action on demand. Make the octopus say \"Hello\" only when you click\non
         the Octopus. \n"
+      PDK5 Functions 1_instruction: |
+        Hello. Me zombie artist. Me love drawing! Help
+        me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
+        shorter than the square length.
+      PDK5 Functions 2_instruction: Funktionen erlauben dir, neue Blöcke zu definieren!
+        Wir haben Blöcke in eine Funktion namens "zeichne ein Quadrat" verschoben,
+        um ein Quadrat zu zeichnen. Nutze die Funktion "zeichne ein Quadrat", um die
+        Gläser zu erstellen? Die Quadrate sind 75 Pixel auseinander.
       PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
         \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
         this is called a \"loop.\" \n"
@@ -3063,8 +3041,9 @@
         This bat is named Sam, and the game area
         is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
         see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move sam
-        around his yard. Help Sam collect all of the flags to move on.
+        the screen update to tell you his location. Use the arrow keys to move Sam
+        around his yard, making note of Sam's coordinates at different locations.
+        Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
@@ -3094,10 +3073,6 @@
         "on-screen?" function. Update the function so that it checks that "safe-left?"
         AND "safe-right?" AND "safe-up?" are all true. When you've fixed the
         function, try going out of the yard from the left, right, and top sides.
-      Sam the Butterfly 7 (copy 1)_instruction: |
-        Only one last direction to worry
-        about! Create a "safe-down?" function and update the "on-screen?" function
-        so that it checks up, down, left, and right.
       Sam the Butterfly 7_instruction: |
         Only one last direction to worry about! Create
         a "safe-down?" function and update the "on-screen?" function so that it
@@ -3151,6 +3126,9 @@
       snowflower_instruction: "Intricate patterns can be created in the snow with\njust
         simple shapes like small and large circles. Can you create a pattern\nwith
         a 5 pixel and 10 pixel circle, repeating them 5 times in a circle? \n"
+      SpecialFrozenLevel_instruction: |
+        You've officially become a master artist!
+        Create a winter wonderland.
       square iterative_instruction: |
         Seems like we're halfway to making a square.
         Create 4 lines to draw a square.
@@ -3229,10 +3207,159 @@
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      the terps_instruction: Try your best to get to the green pig!!!
+      the yolo maze_instruction: Put the block in the right place
       toby-test5-16-1_instruction: dafsfas
       U1L4 NetSim SendAB_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:
         Variant 1 is not yet functional because P2P connections have not been implemented.
         Variant 1 allows students to manually work out the timing of sending bits
         back and forth.
+      U3L03 choose your own drawing_instruction: |
+        Now choose your own!  Pick one
+        of the three drawings shown here and attempt to create it on your own, making
+        smart decisions about how to break the problem down into re-usable functions.  You
+        will review your work with a peer using "procedures peer review rubric."  Check
+        it for the requirements.  GIF: U3L3-ProceduresChooseOne.png
+      U3L03 Creating Procedures 1_instruction: |
+        Write the turnAround() function and
+        use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
+      U3L03 Define and use turnAround_instruction: |
+        Write the turnAround() function
+        and use it to make the turtle move as depicted.
+      U3L03 define turnRight and draw a rectangle_instruction: "Create a turnRight()\nfunction
+        and draw a rectangle twice as tall as it is wide by having the turtle\nnavigate
+        clockwise to draw the rectangle. Make sure to comment your function\nas shown
+        in the turnAround() function. \n"
+      U3L03 Draw a T using turnAround_instruction: |
+        The turnAround function is now
+        provided for you in the code.  Use the turnAround() function to draw a T as
+        depicted.
+      U3L03 draw diamond_instruction: "Use any and all of the functions you wrote\npreviously
+        to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE:\nthis is another
+        tricky one.  The 4 sides of the diamond are made by drawing\nthree steps with
+        other movement made between calls.  HINT: you might want\nto make another
+        function that handles drawing one side of the diamond. "
+      U3L03 Three Steps_instruction: |
+        Draw 3 "steps" moving up and to the right.  Notice
+        the pattern in the movement. You should define a function called drawStep()
+        which draws one of the steps, and then call it 3 times to achieve the effect.
+      U3L04 choose your own drawing_instruction: |
+        Now choose your own!  Pick one
+        of the three drawings shown here and attempt to create it on your own, making
+        smart decisions about how to break the problem down into re-usable functions.  You
+        will review your work with a peer using "procedures peer review rubric."  Check
+        it for the requirements.
+      U3L04 diamond solution_instruction: |
+        Study this solution to the drawDiamond
+        problem.  Notice that the whole program starts by calling drawDiamond() at
+        the top.  The program then follows a chain of function calls.  You can trace
+        what's happening in the code to see the functions reused.  It's also easy
+        to read because the function names describe the expected behavior.
+      U3L05_3x3GridEfficiencyChallenge_instruction: |
+        Let's revisit the 3x3 grid
+        problem you did a few lessons ago.  This time the challenge is to program
+        the solution "as efficiently as possible."  Now that you know how to write
+        functions, it should be easier to break the problem down, and your code should
+        be easier to read and debug.  See the rubric for more details about requirements
+        and expectations.
+      U3L05_draw3x3GridEfficiently_instruction: |
+        Draw a 3x3 grid above and to the
+        right of the turtle. Try to do so with the fewest number of commands possible.
+        NOTE: This is a very challenging problem.  You may need to play with it for
+        a while and tweak it.  You might also consider using pencil and paper to sketch
+        your ideas.
+      U3L06 Challenge 1 triangle_instruction: "Check out the extended Turtle palette\nnow
+        made available to you. These new commands accept parameters, allowing\nyou
+        to specify precisely how the function operates rather than only being\nable
+        to move or turn a predetermined amount. Make use of these functions to\ndraw
+        the triangle as shown.\r\nPNG: U3L06-challenge1.png"
+      U3L06 Challenge 2 purple square_instruction: |
+        This time we're going to learn
+        a little bit about changing the turtle's pen. Read through the documentation
+        for penWidth() and penColor(), and then draw the purple square as shown.
+      U3L06 Challenge 3 fill pink_instruction: |
+        Now let's try to fill in the entire
+        background of the screen. To make it a little easier for you, we can tell
+        you the color we chose is one of the 140 named colors.  If you don't know
+        what the named colors are, take a closer look at the documentation for penColor()
+        again. Hint: you need to use dot().
+      U3L06 Challenge 4 bullseye_instruction: |
+        Let's try this out one more time.
+        This time the colors are NOT named colors - you need to use the hex-color
+        number to set the color.  So that you're not randomly guessing, we'll give
+        you a hint -- each of the colors shown in the target image is one of these
+        one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699,
+        #11CC00  You might be able to guess correctly if you apply what you know about
+        RGB colors.
+      U3L06 Challenge 5 overlapping circles_instruction: |
+        This image is created just
+        using dot() and penColor() but, how are we going to get those circles to be
+        transparent?  If you haven't gotten the hint yet: check out the documentation!
+      U3L06 Challenge 6 squiggles_instruction: |
+        Next we're going to be adding some
+        curves to our drawing. Read the documentation for the "arc" commands and
+        then draw the squiggles as shown. To make things easier here's a hint: all
+        the parameters are multiples of 10, and the colors are from the following
+        list of named colors: PowderBlue, lightBlue, Indigo, Purple, Magenta.
+      U3L06 Challenge 7 smiley face_instruction: |
+        To make this smiley face you'll
+        need to look at the documentation for the move() command and then use it with
+        the others you've learned.  You can make reasonable guesses about the colors.
+      U3L06 Challenge 8 make your own_instruction: |
+        Use the tools you've learned
+        today to create a drawing of your own creation. If you have time, challenge
+        your friends to see if they can duplicate your image.  We'll show you the
+        drawing we made for ourselves.  You can try to duplicate that if you want
+        to, otherwise, have fun making your own!
+      U3L07 - Free Play Loops and Random_instruction: |
+        Free Play!  Use what you learned
+        from loops and random to make your own little scene.  Have fun.
+      U3L07 - Starry Night Starter Code_instruction: "You are going to use loops\nand
+        random numbers to generate an image of starry night sky similar to one\nshown
+        here.  We have given you some starter code to generate the ground and\nsky
+        (just two giant dots), you will add code to this project to make the stars,\ngrass,
+        and moon.  All of the effects are clever applications of turtle dots,\nlines,
+        and colors.  To get started, follow the series of steps suggested in\nthe
+        accompanying worksheet. \n"
+      U3L13 - Button with ID_instruction: |
+        Drag a button out onto the screen and
+        set its text to "Go forth!".  Run the program to make sure you can see the
+        button.
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof
+        syntax error.  App Lab did not understand which object it should be listening\nto
+        for a \"click\" event so it showed an error message in the console to let\nyou
+        know.  Another kind of error is a logical error - the program is valid,\nbut
+        it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA
+        (tricky) syntax error and logical error.  Find them, fix them, and make\nthe
+        program work as expected."
+      U3L13 - Debug Id Problem_instruction: |
+        This program has problem!  Can you figure
+        it out?  Run the program and see if you can figure out from the error messages
+        in the console what the issue is.  There is not much code, so you might be
+        able to figure it out just by reading carefully.  Make a change that will
+        make the program work as expected.
+      U3L13 - Turtle Driver Project_instruction: |
+        Create a “turtle driver” with at
+        least three buttons on the screen to move the turtle forward, and turn the
+        turtle right and left. If you have time, try adding additional buttons!  You
+        can also have fun changing the parameters on the turtle functions, using colors,
+        etc.
+      U3L13 - Turtle move with button_instruction: "Drag a button out onto the screen\nand
+        set its text to \"Go forth!\".  Add an event handler for the button, that\nmakes
+        the turtle move forward.  Run the program to make sure it works. \n"
+      U3L2 Using Simple Commands_instruction: |
+        Draw a square using only moveForward
+        and turnLeft.  The square should be drawn above and to the left of the turtle's
+        starting position.
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid above and to the right of
+        the turtle. Try to do so with the fewest number of commands possible. NOTE:
+        This is a very challenging problem.  You may need to play with it for a while
+        and tweak it.  You might also consider using pencil and paper to sketch your
+        ideas.
+      U3L2_TurtleSquare_right_instruction: |
+        Draw a square using only moveForward
+        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

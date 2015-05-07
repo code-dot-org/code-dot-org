@@ -66,6 +66,8 @@
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: İlerleme durumunuzu takip etmek için kayıt olun. Giriş işlemleri
       için ve şifrenizi unuttuğunuzda E-posta adresiniz kullanılacaktır. Daha fazla
       bilgi için <a href="http://code.org/privacy">gizlilik politikamızı</a> tıklayınız.
@@ -359,6 +361,7 @@
     classroom_activity: Bağlantısız Etkinlik
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: 1, 2 ve 3 nolu derslerine genel bakış
     lesson_plans: Ders planları
     signin_message: Zaten üye misiniz? % {link}
@@ -401,7 +404,7 @@
     heading_apps: <h1>Herkes</h1> için <h2>eğlence</h2>
     heading_legacy: <h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>
     your_gallery: Galeri
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Code Studio'daki kurslardan birisini deneyin
   gender:
     male: Erkek
     female: Kadın
@@ -557,6 +560,8 @@
       in the wrong order.
   text_match:
     placeholder: Cevabınızı buraya girin
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: TAMAM
   time:

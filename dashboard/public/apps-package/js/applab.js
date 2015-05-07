@@ -502,22 +502,27 @@ function adjustAppSizeStyles(container) {
         } else if (rules[j].media && childRules) {
           adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
 
+          // NOTE: selectorText can appear in two different forms when styles and IDs
+          // are both present. IE places the styles before the IDs, so we match both forms:
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
           for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
-            if (childRules[k].selectorText === "div#visualization.responsive") {
+            if (childRules[k].selectorText === "div#visualization.responsive" ||
+                childRules[k].selectorText === "div.responsive#visualization") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
               childRules[k].style.cssText = "max-height: " +
                   Applab.appHeight * scale + "px; max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive" ||
+                       childRules[k].selectorText === "div.responsive#visualizationColumn") {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding" ||
+                       childRules[k].selectorText === "div.with_padding.responsive#visualizationColumn") {
               // set the max-width for the parent visualizationColumn (with_padding)
               childRules[k].style.cssText = "max-width: " +
                   (Applab.appWidth * scale + 2) + "px;";
@@ -542,7 +547,8 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
+            } else if (childRules[k].selectorText === "div#visualization.responsive > *" ||
+                       childRules[k].selectorText === "div.responsive#visualization > *") {
               // and set the scale factor for all children of the visualization
               // (importantly, the divApplab element)
               childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
@@ -769,6 +775,13 @@ function onDebugInputKeyDown(e) {
           scope: currentScope,
           thisExpression: currentScope
       }];
+      // Copy these properties directly into the evalInterpreter so the .isa()
+      // method behaves as expected
+      ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
+        'UNDEFINED'].forEach(
+        function (prop) {
+          evalInterpreter[prop] = Applab.interpreter[prop];
+        });
       try {
         evalInterpreter.run();
         outputApplabConsole('< ' + String(evalInterpreter.value));
@@ -1254,7 +1267,7 @@ Applab.init = function(config) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
     if (slider) {
-      Applab.speedSlider = new Slider(10, 35, 130, slider);
+      Applab.speedSlider = new Slider(10, 27, 130, slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
@@ -1269,10 +1282,10 @@ Applab.init = function(config) {
 
   var debugResizeBar = document.getElementById('debugResizeBar');
   if (debugResizeBar) {
-    debugResizeBar.addEventListener('mousedown',
-                                    Applab.onMouseDownDebugResizeBar);
-    document.body.addEventListener('mouseup',
-                                   Applab.onMouseUpDebugResizeBar);
+    dom.addMouseDownTouchEvent(debugResizeBar,
+                               Applab.onMouseDownDebugResizeBar);
+    dom.addMouseUpTouchEvent(document.body,
+                             Applab.onMouseUpDebugResizeBar);
   }
 
   var finishButton = document.getElementById('finishButton');
@@ -1325,17 +1338,19 @@ Applab.init = function(config) {
           studioApp.resetButtonClick();
         }
       });
-      var scale = vizAppWidth / Applab.appWidth;
-      var gridSize = 20;
+      var GRID_SIZE = 20;
       $('#visualization').droppable({
         accept: '.new-design-element',
         drop: function (event, ui) {
           var elementType = ui.draggable[0].dataset.elementType;
 
+          var scale = Applab.getVizScaleFactor();
           var left = ui.position.left / scale;
-          left = Math.round(left - left % gridSize);
           var top = ui.position.top / scale;
-          top = Math.round(top - top % gridSize);
+
+          // snap top-left corner to nearest location in the grid
+          left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+          top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
           Applab.createElement(elementType, left, top);
         }
@@ -1351,6 +1366,11 @@ Applab.onMouseDownDebugResizeBar = function (event) {
   if (event.srcElement.id === 'debugResizeBar') {
     Applab.draggingDebugResizeBar = true;
     document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.addEventListener(Applab.mouseMoveTouchEventName,
+                                     Applab.onMouseMoveDebugResizeBar);
+    }
 
     event.preventDefault();
   }
@@ -1366,7 +1386,7 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   var debugArea = document.getElementById('debug-area');
 
   var rect = debugResizeBar.getBoundingClientRect();
-  var offset = parseInt(window.getComputedStyle(codeApp).bottom, 10) -
+  var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
                rect.height / 2;
   var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
@@ -1393,6 +1413,10 @@ Applab.onMouseUpDebugResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (Applab.draggingDebugResizeBar) {
     document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.removeEventListener(Applab.mouseMoveTouchEventName,
+                                        Applab.onMouseMoveDebugResizeBar);
+    }
     Applab.draggingDebugResizeBar = false;
   }
 };
@@ -1442,14 +1466,20 @@ Applab.createElement = function (elementType, left, top) {
   switch (elementType) {
     case ElementType.BUTTON:
       el.appendChild(document.createTextNode('Button'));
-      el.style.margin = 0;
+      el.style.margin = '2px';
+      el.style.height = '36px';
+      el.style.width = '76px';
+      el.style.fontSize = '14px';
       break;
     case ElementType.LABEL:
       el.appendChild(document.createTextNode("text"));
-      el.style.margin = '10px';
+      el.style.margin = '10px 5px';
+      el.style.height = '20px';
       break;
     case ElementType.INPUT:
-      el.style.margin = '10px';
+      el.style.margin = '5px 2px';
+      el.style.width = '236px';
+      el.style.height = '30px';
       break;
     default:
       throw "unrecognized element type " + elementType;
@@ -1462,6 +1492,7 @@ Applab.createElement = function (elementType, left, top) {
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(el);
   Applab.makeDraggable($(el));
+  Applab.editElementProperties(el);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
@@ -1470,7 +1501,7 @@ Applab.createElement = function (elementType, left, top) {
  * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
  */
 Applab.makeDraggable = function (jq) {
-  var gridSize = 20;
+  var GRID_SIZE = 20;
   jq.draggable({
     cancel: false,  // allow buttons and inputs to be dragged
     drag: function(event, ui) {
@@ -1484,18 +1515,18 @@ Applab.makeDraggable = function (jq) {
       var changeTop = ui.position.top - ui.originalPosition.top;
       var newTop = (ui.originalPosition.top + changeTop) / scale;
 
+      // snap top-left corner to nearest location in the grid
+      newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+      newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+
       // containment
       var container = $('#divApplab');
-      var maxLeft = container.width() - ui.helper.outerWidth(true);
-      var maxTop = container.height() - ui.helper.outerHeight(true);
+      var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+      var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
       newLeft = Math.min(newLeft, maxLeft);
       newLeft = Math.max(newLeft, 0);
       newTop = Math.min(newTop, maxTop);
       newTop = Math.max(newTop, 0);
-
-      // grid
-      newLeft -= newLeft % gridSize;
-      newTop -= newTop % gridSize;
 
       ui.position.left = newLeft;
       ui.position.top = newTop;
@@ -1521,6 +1552,11 @@ Applab.getVizScaleFactor = function () {
   throw 'Unexpected body width: ' + width;
 };
 
+/**
+ * If in design mode and program is not running, display Properties
+ * pane for editing the clicked element.
+ * @param event
+ */
 Applab.onDivApplabClick = function (event) {
   if (!window.$ || $('#designModeButton').is(':visible') ||
       $('#resetButton').is(':visible')) {
@@ -1528,6 +1564,54 @@ Applab.onDivApplabClick = function (event) {
   }
   event.preventDefault();
   Applab.editElementProperties(event.target);
+};
+
+/**
+ * @param el {Element}
+ * @returns {number} The outerWidth (width + margin) of the element in pixels,
+ * or NaN if element's css width or margin are not defined.
+ */
+Applab.getOuterWidth = function(el) {
+  var marginLeft = parseInt($(el).css('margin-left'), 10);
+  var marginRight = parseInt($(el).css('margin-right'), 10);
+  return parseInt(el.style.width, 10) + marginLeft + marginRight;
+};
+
+/**
+ * Sets element width equal to outerWidth minus margin,
+ * or to '' if margin is undefined.
+ * @param el {Element}
+ * @param outerWidth {number} Desired element outerWidth in pixels.
+ */
+Applab.setOuterWidth = function(el, outerWidth) {
+  var marginLeft = parseInt($(el).css('margin-left'), 10);
+  var marginRight = parseInt($(el).css('margin-right'), 10);
+  var width = +outerWidth - marginLeft - marginRight;
+  el.style.width = isNaN(width) ? '' : width + 'px';
+};
+
+/**
+ * @param el {Element}
+ * @returns {number} the outerHeight (height + margin) of the element in pixels,
+ * or NaN if element's css height or margin are not defined.
+ */
+Applab.getOuterHeight = function(el) {
+  var marginTop = parseInt($(el).css('margin-top'), 10);
+  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
+  return parseInt(el.style.height, 10) + marginTop + marginBottom;
+};
+
+/**
+ * Sets element height equal to outerHeight minus margin,
+ * or to '' if margin is undefined.
+ * @param el {Element}
+ * @param outerHeight {number} Desired element outerHeight in pixels.
+ */
+Applab.setOuterHeight = function(el, outerHeight) {
+  var marginTop = parseInt($(el).css('margin-top'), 10);
+  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
+  var height = +outerHeight - marginTop - marginBottom;
+  el.style.height = isNaN(height) ? '' : height + 'px';
 };
 
 // Currently there is a 1:1 mapping between applab element types and HTML tag names
@@ -1540,14 +1624,16 @@ Applab.editElementProperties = function(el) {
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
+  var outerWidth = Applab.getOuterWidth(el);
+  var outerHeight = Applab.getOuterHeight(el);
   designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: tagName,
     props: {
       id: el.id,
-      left: el.style.left,
-      top: el.style.top,
-      width: el.style.width,
-      height: el.style.height,
+      left: parseInt(el.style.left, 10) || 0,
+      top: parseInt(el.style.top, 10) || 0,
+      width: isNaN(outerWidth) ? '' : outerWidth,
+      height: isNaN(outerHeight) ? '' : outerHeight,
       text: $(el).text()
     }
   });
@@ -1563,11 +1649,32 @@ Applab.editElementProperties = function(el) {
   }
 };
 
+/**
+ * Clear the Properties pane of applab's design mode.
+ */
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
-    tagName: null
+  if (designPropertiesEl) {
+    designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
+      tagName: null
+    });
+  }
+};
+
+/**
+ * Enable (or disable) dragging of new elements from the element tray,
+ * and show (or hide) the 'Clear' button.
+ * @param allowEditing {boolean}
+ */
+Applab.resetElementTray = function (allowEditing) {
+  $('#design-elements .new-design-element').each(function() {
+    $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
+  var designModeClear = document.getElementById('designModeClear');
+  if (designModeClear) {
+    designModeClear.style.display = allowEditing ? 'inline-block' : 'none';
+  }
+
 };
 
 Applab.isValidElementType = function (type) {
@@ -1581,10 +1688,12 @@ Applab.isValidElementType = function (type) {
 
 Applab.onSavePropertiesButton = function(el, event) {
   el.id = document.getElementById('design-property-id').value;
-  el.style.left = document.getElementById('design-property-left').value;
-  el.style.top = document.getElementById('design-property-top').value;
-  el.style.width = document.getElementById('design-property-width').value;
-  el.style.height = document.getElementById('design-property-height').value;
+  el.style.left = document.getElementById('design-property-left').value + 'px';
+  el.style.top = document.getElementById('design-property-top').value + 'px';
+  var outerWidth = document.getElementById('design-property-width').value;
+  Applab.setOuterWidth(el, outerWidth);
+  var outerHeight = document.getElementById('design-property-height').value;
+  Applab.setOuterHeight(el, outerHeight);
   $(el).text(document.getElementById('design-property-text').value);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
@@ -1604,14 +1713,18 @@ Applab.serializeToLevelHtml = function () {
   return s.serializeToString(clone);
 };
 
-Applab.parseFromLevelHtml = function(rootEl, isDesignMode) {
+/**
+ * @param rootEl {Element}
+ * @param allowDragging {boolean}
+ */
+Applab.parseFromLevelHtml = function(rootEl, allowDragging) {
   if (!Applab.levelHtml) {
     return;
   }
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
   children.appendTo(rootEl);
-  if (isDesignMode) {
+  if (allowDragging) {
     Applab.makeDraggable(children);
   }
 };
@@ -1683,10 +1796,15 @@ studioApp.reset = function(first) {
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
-  Applab.parseFromLevelHtml(newDivApplab, isDesignMode);
+  var isRunning = window.$ && $('#resetButton').is(':visible');
+  var allowDragging = isDesignMode && !isRunning;
+  Applab.parseFromLevelHtml(newDivApplab, allowDragging);
+  if (isDesignMode) {
+    Applab.clearProperties();
+    Applab.resetElementTray(allowDragging);
+  }
 
   newDivApplab.addEventListener('click', Applab.onDivApplabClick);
-
 
   // Reset goal successState:
   if (level.goal) {
@@ -1746,7 +1864,8 @@ studioApp.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when not editing a project or channel id is present.
-  if (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id)) {
+  if (window.dashboard &&
+      (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id))) {
     if (window.$) {
       $(window).trigger('run_button_pressed');
     }
@@ -1782,10 +1901,6 @@ studioApp.runButtonClick = function() {
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
-    var designCell = document.getElementById('design-cell');
-    if (designCell) {
-      designCell.className = 'design-cell-enabled';
-    }
   }
 };
 
@@ -2122,8 +2237,8 @@ Applab.onViewData = function() {
 };
 
 Applab.onDesignModeButton = function() {
-  studioApp.resetButtonClick();
   Applab.toggleDesignMode(true);
+  studioApp.resetButtonClick();
 };
 
 Applab.onCodeModeButton = function() {
@@ -2132,6 +2247,19 @@ Applab.onCodeModeButton = function() {
 
 Applab.onDesignModeClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
+Applab.toggleDragging = function(enable) {
+  var children = $('#divApplab').children();
+  if (enable) {
+    Applab.makeDraggable(children);
+  } else {
+    children.each(function() {
+      if ($(this).data('uiDraggable')) {
+        $(this).draggable('destroy');
+      }
+    });
+  }
 };
 
 Applab.toggleDesignMode = function(enable) {
@@ -2153,12 +2281,7 @@ Applab.toggleDesignMode = function(enable) {
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
 
-  var children = $('#divApplab').children();
-  if (enable) {
-    Applab.makeDraggable(children);
-  } else if (children.data('uiDraggable')) {
-    children.draggable('destroy');
-  }
+  Applab.toggleDragging(enable);
 };
 
 Applab.onPuzzleComplete = function() {
@@ -3989,7 +4112,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div id="debugResizeBar">\n    <div id="debug-buttons" style="display:inline;">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((10,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((13,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((14,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((18,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((21,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((22,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((25,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((26,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button">\n        ', escape((29,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');33; } ; buf.push('\n\n  ');35; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');43; } ; buf.push('\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; var applabMsg = require('../../locale/current/applab') ; buf.push('\n\n<div id="debug-area">\n  ');5; if (debugButtons) { ; buf.push('\n  <div id="debugResizeBar">\n    <div id="slider-cell">\n      <svg id="applab-slider"\n           xmlns="http://www.w3.org/2000/svg"\n           xmlns:svg="http://www.w3.org/2000/svg"\n           xmlns:xlink="http://www.w3.org/1999/xlink"\n           version="1.1"\n           width="150"\n           height="38">\n          <!-- Slow icon. -->\n          <clipPath id="slowClipPath">\n            <rect width=26 height=12 x=5 y=6 />\n          </clipPath>\n          <image xlink:href="', escape((19,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-18\n              clip-path="url(#slowClipPath)" />\n          <!-- Fast icon. -->\n          <clipPath id="fastClipPath">\n            <rect width=26 height=16 x=120 y=2 />\n          </clipPath>\n          <image xlink:href="', escape((25,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-19\n              clip-path="url(#fastClipPath)" />\n      </svg>\n    </div>\n    <img id="spinner" style="visibility: hidden;" src="', escape((29,  assetUrl('media/applab/spinner-big.gif') )), '" height=16 width=16>\n\n    <div id="debug-buttons">\n      <button id="pauseButton" class="debugger_button">\n        <img src="', escape((33,  assetUrl('media/1x1.gif') )), '" class="pause-btn icon21">\n        ', escape((34,  applabMsg.pause() )), '\n      </button>\n      <button id="continueButton" class="debugger_button">\n        <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="continue-btn icon21">\n        ', escape((38,  applabMsg.continue() )), '\n      </button>\n      <button id="stepInButton" class="debugger_button">\n        <img src="', escape((41,  assetUrl('media/1x1.gif') )), '" class="step-in-btn icon21">\n        ', escape((42,  applabMsg.stepIn() )), '\n      </button>\n      <button id="stepOverButton" class="debugger_button">\n        <img src="', escape((45,  assetUrl('media/1x1.gif') )), '" class="step-over-btn icon21">\n        ', escape((46,  applabMsg.stepOver() )), '\n      </button>\n      <button id="stepOutButton" class="debugger_button">\n        <img src="', escape((49,  assetUrl('media/1x1.gif') )), '" class="step-out-btn icon21">\n        ', escape((50,  applabMsg.stepOut() )), '\n      </button>\n      <button id="viewDataButton" class="debugger_button">\n        ', escape((53,  applabMsg.viewData() )), '\n      </button>\n    </div>\n  </div>\n  ');57; } ; buf.push('\n\n  ');59; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <div id="debug-output" class="debug-output"></div>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable spellcheck="false" id="debug-input" class="debug-input"></div>\n  </div>\n  ');67; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4082,7 +4205,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; if (tagName) { ; buf.push('\n<table>\n  <tr>\n    <th>name</th>\n    <th>value</th>\n  </tr>\n  <tr>\n    <td>id</td>\n    <td><input id="design-property-id" value="', escape((9,  props.id )), '"></td>\n  </tr>\n  <tr>\n    <td>x position</td>\n    <td><input id="design-property-left" value="', escape((13,  props.left )), '"></td>\n  </tr>\n  <tr>\n    <td>y position</td>\n    <td><input id="design-property-top" value="', escape((17,  props.top )), '"></td>\n  </tr>\n  <tr>\n    <td>width</td>\n    <td><input id="design-property-width" value="', escape((21,  props.width)), '"></td>\n  </tr>\n  <tr>\n    <td>height</td>\n    <td><input id="design-property-height" value="', escape((25,  props.height )), '"></td>\n  </tr>\n  <tr>\n    <td>text</td>\n    <td><input id="design-property-text" value="', escape((29,  props.text )), '"></td>\n  </tr>\n</table>\n<button id="savePropertiesButton" class="share">Save</button>\n<button id="deletePropertiesButton" class="share">Delete</button>\n');34; } else { ; buf.push('\n  Click on an element to edit its properties.\n');36; } ; buf.push(''); })();
+ buf.push('');1; if (tagName) { ; buf.push('\n<table>\n  <tr>\n    <th>name</th>\n    <th>value</th>\n  </tr>\n  <tr>\n    <td>id</td>\n    <td><input id="design-property-id" value="', escape((9,  props.id )), '"></td>\n  </tr>\n  <tr>\n    <td>x position (px)</td>\n    <td><input id="design-property-left" value="', escape((13,  props.left )), '"></td>\n  </tr>\n  <tr>\n    <td>y position (px)</td>\n    <td><input id="design-property-top" value="', escape((17,  props.top )), '"></td>\n  </tr>\n  <tr>\n    <td>width (px)</td>\n    <td><input id="design-property-width" value="', escape((21,  props.width)), '"></td>\n  </tr>\n  <tr>\n    <td>height (px)</td>\n    <td><input id="design-property-height" value="', escape((25,  props.height )), '"></td>\n  </tr>\n  <tr>\n    <td>text</td>\n    <td><input id="design-property-text" value="', escape((29,  props.text )), '"></td>\n  </tr>\n</table>\n<button id="savePropertiesButton" class="share">Save</button>\n<button id="deletePropertiesButton" class="share">Delete</button>\n');34; } else { ; buf.push('\n  Click on an element to edit its properties.\n');36; } ; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -4122,7 +4245,8 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n\n');3; if (showSlider) { ; buf.push('\n  <div id="slider-cell">\n    <svg id="applab-slider"\n         xmlns="http://www.w3.org/2000/svg"\n         xmlns:svg="http://www.w3.org/2000/svg"\n         xmlns:xlink="http://www.w3.org/1999/xlink"\n         version="1.1"\n         width="150"\n         height="50">\n        <!-- Slow icon. -->\n        <clipPath id="slowClipPath">\n          <rect width=26 height=12 x=5 y=14 />\n        </clipPath>\n        <image xlink:href="', escape((16,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-10\n            clip-path="url(#slowClipPath)" />\n        <!-- Fast icon. -->\n        <clipPath id="fastClipPath">\n          <rect width=26 height=16 x=120 y=10 />\n        </clipPath>\n        <image xlink:href="', escape((22,  assetUrl('media/applab/turtle_icons.png') )), '" height=42 width=84 x=120 y=-11\n            clip-path="url(#fastClipPath)" />\n    </svg>\n    <img id="spinner" style="visibility: hidden;" src="', escape((25,  assetUrl('media/applab/loading.gif') )), '" height=15 width=15>\n  </div>\n');27; } ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((31,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((34,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((40,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');44; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((47,  assetUrl('media/1x1.gif') )), '">', escape((47,  msg.finish() )), '\n    </button>\n  </div>\n');50; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/current/common') ; buf.push('\n');2; // Comment so this file is not identical to studio/controls.html.ejs 
+; buf.push('\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');18; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((21,  assetUrl('media/1x1.gif') )), '">', escape((21,  msg.finish() )), '\n    </button>\n  </div>\n');24; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };

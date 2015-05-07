@@ -161,7 +161,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "당신은 연결되지 않은 블록들을 가지고 있습니다. \"평가\" 블록에 연결할 것이였나요?"},
 "failedInput":function(d){return "함수가 모든 값에 대해서 올바른 결과를 반환하지 않습니다."},
 "goal":function(d){return "목표값:"},
-"levelIncompleteError":function(d){return "수식이 목표 값과 일치하지 않습니다."},
+"levelIncompleteError":function(d){return "수식이 목표와일치하지 않습니다."},
 "missingFunctionError":function(d){return appLocale.v(d,"functionName")+" 이라는 함수를 반드시 정의해야 합니다."},
 "missingVariableX":function(d){return "수식에 변수 "+appLocale.v(d,"var")+"가 빠졌습니다."},
 "reinfFeedbackMsg":function(d){return "축하합니다! 계속해서 작업을 하거나, 다음 퍼즐로 넘어갈 수 있습니다!"},

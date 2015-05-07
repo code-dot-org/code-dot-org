@@ -39,7 +39,7 @@ hu:
       2-3 Artist Functions 1_instruction: 'Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő 25 pixellel rövidebb, mint a négyzet oldala.'
       2-3 Artist Functions 10_instruction: 'Itt van két függvény: az egyik egy nagy, a másik egy kis kereket rajzol. Használd fel őket egy gép belsejének megrajzolásához.'
       2-3 Artist Functions 11.5_instruction: 'Itt van ugyanaz a "Rajzolj egy hatszöget" függvény. Mi történik, ha minden ismétlésnél csak 60 fokkal fordulnál el?'
-      2-3 Artist Functions 11_instruction: 'Átneveztük a "rajtolj egy négyzetet" függvényt "rajzolj egy hatszöget"-re, de még mindig négyzetet rajzol! Meg tudod változtatni a "rajzolj egy hatszöget" függvényt úgy, hogy 50 pixeles oldalhosszúságú hatszöget rajzoljon, és segítségével meg tudod rajzolni a képet?'
+      2-3 Artist Functions 11_instruction: 'Átneveztük a "rajzolj egy négyzetet" függvényt "rajzolj egy hatszöget"-re, de még mindig négyzetet rajzol! Meg tudod változtatni a "rajzolj egy hatszöget" függvényt úgy, hogy 50 pixeles oldalhosszúságú hatszöget rajzoljon, és segítségével meg tudod rajzolni a képet?'
       2-3 Artist Functions 12_instruction: 'A függvények nagyszerűen használhatók összetett dolgok többszöri megrajzolására. Fel tudod használni a "rajzolj egy virágot" függvényt  az egész láda beültetésére? (Tipp: A növények 100 pixeles távolságban állnak egymástól.)'
       2-3 Artist Functions 13_instruction: 'Készítettünk számodra négy függvényt. Változtasd meg kedvedre a belsejüket egy vagy több ismétléssel, hogy az elkészült képet megoszthasd barátaiddal. Kattints a "Futtatás"-ra, hogy láthass egy példát. '
       2-3 Artist Functions 2_instruction: |
@@ -281,9 +281,7 @@ hu:
       2-3 Bee Loops 1_instruction: |
         Each flower contains one unit of nectar. Collect
         nectar from each of the flowers. 
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
+      2-3 Bee Loops 10_instruction: 'Össze tudod gyűjteni az összes nektárt úgy, hogy egy "amíg" ciklust két másik ciklus belsejébe ágyazol?'
       2-3 Bee Loops 11_instruction: |
         Use while loops to collect all of the nectar
         from the flowers in this field.
@@ -308,17 +306,12 @@ hu:
       2-3 Bee Loops 7_instruction: |
         Put these blocks into a loop to collect nectar
         from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
+      2-3 Bee Loops 8_instruction: 'A lila virágokról nem tudjuk, hogy mennyi nektárral rendelkeznek. használd az "amíg nektár" ciklust az összes nektár összegyűjtéséhez. Ez a ciklus addig fog ismétlődni, amíg a megadott feltétel IGAZ. Jelen esetben a nektár > 0.'
       2-3 Bee Loops 9_instruction: |
         The while loop can perform the same action as
         an if statement in a loop. Add a while loop to this code to perform the same
         task.
-      2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
+      2-3 Bee Loops Assessment 1_instruction: 'Értékelés - Használj "amíg" ciklust az összes nektár begyűjtésére!'
       2-3 Maze 1_instruction: 'Tudsz segíteni nekem elkapni azt a rossz disznót? Pakolj egymás alá néhány "előrelépni" blokkot, és kattints a "Futtatás"-ra. '
       2-3 Maze 10_instruction: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
       2-3 Maze 11_instruction: |
@@ -442,7 +435,6 @@ hu:
       4-5 Artist For Loops 1_instruction: |
         Put the numbers 1 through 10 into the
         width blocks and run the code.
-      4-5 Artist For Loops 10_instruction: "Complete the \"for\" block so that it\ncounts 10, 20, 30, 40, 50. What number do you start counting from? What number\ndo you count to? How much do you count by?\r\n (bold the words from, to, and\nby)"
       4-5 Artist For Loops 11_instruction: |
         Complete the "for" block so that it
         counts 0, 20, 40, 60, 80... 200.
@@ -491,9 +483,6 @@ hu:
       4-5 Artist For Loops 9_instruction: |
         These circles are size 5, 10, 15, 20,
         25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist For Loops Assessment 1_instruction: |
-        Complete the "for" block
-        so that it counts 10, 20, 30, 40, 50... 200.
       4-5 Artist Free Draw 1_instruction: |
         Free Draw!  Draw whatever you are inspired
         to create.
@@ -617,7 +606,7 @@ hu:
         Let's loop this code to draw two rows
         of hexagons. Notice how our second row is shifted to the right.
       4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times do draw the
+        Now repeat that code 3 times to draw the
         whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
         to right.
       4-5 Artist Patterns Free Play_instruction: |
@@ -667,36 +656,20 @@ hu:
         properly.
       4-5 Bee Debugging 9_instruction: "Why isn't the bee making enough honey?"
       4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: |
-        Collect all of the nectar from each flower.
-        Use a nested loop. 
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
-      4-5 Bee Nested Loops 4_instruction: |
-        Collect all of the nectar from each flower
-        and make honey at each honeycomb. Use a nested loop. 
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
+      4-5 Bee Nested Loops 1_instruction: Használj ciklust az összes nektár összegyűjtéséhez!
+      4-5 Bee Nested Loops 2_instruction: Gyűjtsd össze az összes nektárt az összes virágról! Használj egymásba ágyazott ciklusokat!
+      4-5 Bee Nested Loops 3_instruction: Gyűjtsd össze az összes nektárt a kiindulási kód ciklusba ágyazásával.
+      4-5 Bee Nested Loops 4_instruction: Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      4-5 Bee Nested Loops 5_instruction: Gyűjtasd össze az összes nektárt beágyazott ciklus készítésével.
       4-5 Bee Nested Loops 6_instruction: Collect all the nectar.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
+      4-5 Bee Nested Loops 7_instruction: Rakd be ezt a ciklust egy másik ciklus belsejébe, készíts el így egy beágyazott ciklust, és gyűjtsd össze a virágok összes nektárját!
       4-5 Bee Nested Loops 8_instruction: |
         Collect all of the nectar from these flowers
         by nesting a while loop. Replace the inner repeat times block with a while
         block. 
-      4-5 Bee Nested Loops 9_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop inside a repeat.
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        Assessment - Collect all of
-        the nectar and make all the honey by using loops.
-      4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
+      4-5 Bee Nested Loops 9_instruction: 'Gyűjtsd össze ezeknek a virágoknak az összes nektárját egy "amíg" ciklus ismétlésbe ágyazásával!'
+      4-5 Bee Nested Loops Assessment 1_instruction: 'Értékelés - Gyűjtsd össze az összes nektárt, és készítsd el az összes mézet ciklusok használatával!'
+      4-5 Bee Nested Loops Rows_instruction: Gyűjts nektárt virágok egész sorairól! Használj beágyazott ciklust!
       4-5 Maze 1 (copy 1)_instruction: |
         Dear person. Me zombie. Must... get... to
         sunflower.
@@ -742,6 +715,7 @@ hu:
         Awesome job on the last puzzle, let's try it again this
         time let's make this cool design with with 60 pixel hexagon's.
       Alice Test_instruction: Here are some instructions!
+      All green everything_instruction: click and drag the blocks
       Alpha 2-3 Artist Loops New 3_instruction: |
         Now, let's draw 6 squares each
         a random color.  What angle should we turn between each square drawing to
@@ -771,43 +745,27 @@ hu:
       Alpha Course 3 Bee Conditionals 9_instruction: |
         Collect nectar using the 'check
         purple flower' function.
+      applab_test2_sarah_instruction: This is the instructions panel for level 2
       Arbitrary_instruction: Make a line
-      Artist - Nested Loops 1_instruction: |
-        Complete the code to draw these triangles.  The
-        first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
+      Artist - Nested Loops 1_instruction: 'Egészítsd ki a kódot úgy, hogy ezeket a háromszögeket rajzolja meg.   Az első már készen is van. Tipp: a 3 db háromszög 360°-os körben van elforgatva.'
       Artist - Nested Loops 10_instruction: |
         Draw the last row of stars on this flag
         by looping the provided blocks. The stars are 50 pixels apart, but remember
         that the stars themselves are 30 pixels wide.
-      Artist - Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this
-        sidewalk using a nested loop? Each square is 30 pixels.
-      Artist - Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using
-        a nested loop?
-      Artist - Nested Loops 2_instruction: |
-        Now nest this loop inside another loop
-        to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
-        complete a 360 degree rotation.  
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin another loop. This is called a nested loop.\r\n"
-      Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
-      Artist - Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the
-        triangle code?
+      Artist - Nested Loops 11_instruction: Meg tudod rajzolni a járda 10 négyzetét egymásba ágyazott ciklusokkal? Minden négyzet 30 pixeles.
+      Artist - Nested Loops 12_instruction: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba ágyazott ciklusok segítségével?
+      Artist - Nested Loops 2_instruction: 'Most ágyazd be ezt a ciklust egy másik ciklus belsejébe, hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak nevezik. Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.'
+      Artist - Nested Loops 3_instruction: Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.
+      Artist - Nested Loops 5_instruction: Ismételd meg a megadott kódot annyiszor, hogy szélmalmot készíts.
+      Artist - Nested Loops 6_instruction: Meg tudod rajzolni a hatszöget a háromszög rajzoló kód ciklusba ágyazásával?
       Artist - Nested Loops 7 (copy 1)_instruction: |
         Loop this design 10 times. How
         much do you have to turn each time you loop? (Hint: What is 360 divided by
         10?)
-      Artist - Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do
-        you have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      Artist - Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do
-        you have to turn each time you loop? (Hint: What is 360 divided by 6?)
-      Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      Artist - Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete
-        the design.
+      Artist - Nested Loops 7_instruction: 'Rajzold meg ezt az alakzatot tízszer. Hány fokot kell fordulnod minden egyes ismétlésnél? (Tipp: Mennyi 360 osztva 10-zel?)'
+      Artist - Nested Loops 8_instruction: 'Ismételd meg azt az alakzatot hatszor. Hány fokot kell elfordulnod ismétlésenként? (Tipp: Mennyi 360 osztva 6-tal?)'
+      Artist - Nested Loops 9_instruction: Rajzold meg az alligátor alsó fogsorát!
+      Artist - Nested Loops Assessment 1_instruction: Használj egymásba ágyazott ciklust az ábra befejezéséhez!
       Artist Artist Artist Artist _instruction: 'Artist Artist Artist Artist '
       Artist For  Functions 11_instruction: |
         Let's Step it up a little, can you
@@ -940,8 +898,8 @@ hu:
       Big Game Animation 1_instruction: |
         Now that you've learned to write simple
         linear functions, let's work on using them to add some movement to our game.
-        Click play to see what your game can currently do (not much!), update any
-        variables you like, and then click finish to move on.
+        Click run to see what your game can currently do (not much!), update any variables
+        you like, and then click finish to move on.
       Big Game Animation 2 (copy 1)_instruction: |
         The function 'update-target'
         function takes the target's current x value, and returns an updated value.
@@ -986,8 +944,7 @@ hu:
         for safe-left? and safe-right? The first thing you need to do is complete
         the onscreen? function so that it checks whether both safe-left? and safe-right?
         are true. TIP - even after you add safe-left? and safe-right? your sprites
-        won't return to the screen. That will happen in the next puzzles when we
-        make sure that safe-left? and safe-right? actually work.
+        won't return to the screen - why do you think that is?
       Big Game Booleans 5_instruction: |
         At this point your danger should run across
         the screen from right to left, your target should run across from left to
@@ -1104,36 +1061,15 @@ hu:
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      C3-Farmer While Loops 1_instruction: |
-        Move me to the hole and fill it with
-        two shovelfuls of dirt, using the "fill" block.
-      C3-Farmer While Loops 2_instruction: |
-        Move me to the pile of dirt and remove
-        it with 5 shovel scoops, using the 'remove' block.
-      C3-Farmer While Loops 3_instruction: |
-        Move me to the pile and remove all of
-        it, then move to the hole and fill it completely.  Hint:  Use as few blocks
-        as possible.
-      C3-Farmer While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't
-        know how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
-      C3-Farmer While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can
-        you write a program that fills them both until the ground is even?
-      C3-Farmer While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt!
-        Can you write a program that removes all of it so the ground is even?
-      C3-Farmer While Loops 7_instruction: |
-        Wow, now there are three piles of dirt!
-        Can you write a program that removes each of them until the ground is even?
-      C3-Farmer While Loops 8_instruction: |2
-         There is a really deep hole and a really
-        large pile of dirt.  How many shovelfuls of dirt need to be moved around to
-        make the ground flat?  Hint: Use the while loop for both.
-      C3-Farmer While Loops Assessment 1_instruction: |
-        There are a lot of holes and
-        piles.  Help me to fill and remove them to make the ground flat.
+      C3-Farmer While Loops 1_instruction: 'Vigyél el a lyukig, és töltsd fel két lapát földdel. Használd a "töltsd fel" blokkot!'
+      C3-Farmer While Loops 2_instruction: 'Vigyél el a földkupachoz, és távolítsd el azt 5 lapátolással. Használd a "távolítsd el" blokkot!'
+      C3-Farmer While Loops 3_instruction: 'Vigyél el a földkupacig, és távolítsd el az egészet, aztán vigyél a lyukhoz, és töltsd azt fel teljesen. Tipp: A lehető legkevesebb blokkot használd fel!'
+      C3-Farmer While Loops 4_instruction: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
+      C3-Farmer While Loops 5_instruction: Hoppá, most már két mély lyuk van! Tudsz olyan programot írni, ami mindkettőt feltölti?
+      C3-Farmer While Loops 6_instruction: Hoppá, most egy nagy földkupac van itt! Tudsz olyan programot írni, ami az egészet eltávolítja, és a föld színével teszi egyenlővé?
+      C3-Farmer While Loops 7_instruction: Upsz, most már három földkupacunk van! Tudsz olyan programot írni, ami mindhármat a földdel teszi egyenlővé?
+      C3-Farmer While Loops 8_instruction: 'Egy valóban mély lyuk és egy tényleg nagy földkupac van itt. Hány lapáttal tudod őket elegyengetni? Tipp: Használd mindkét esetben az "amíg van" ciklust!'
+      C3-Farmer While Loops Assessment 1_instruction: Sok lyuk és sok kupac van. Segíts nekem ezeket elegyengetnem!
       C3-Farmer While Loops Multi Pics_instruction: Feleletválasztós
       Calc Circles of Eval .1_instruction: |
         You’ll be writing a kind of code called
@@ -1410,10 +1346,7 @@ hu:
       Course 4 Artist 6_instruction: |
         Complete the code to draw these triangles.
         Hint: 3 triangles in a 360 degree rotation.
-      Course 4 Artist 7_instruction: |
-        Now nest this loop inside another loop to draw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete
-        a 360 degree rotation.  
+      Course 4 Artist 7_instruction: 'Most ágyazd be ezt a ciklust egy másik ciklus belsejébe, hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak nevezik. Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.'
       Course 4 Artist 8_instruction: |
         Draw this sun by looping this whole block of
         code 12 times.
@@ -1451,6 +1384,7 @@ hu:
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
+      Course 4 Artist Binary 7 (copy 1)_instruction: Finish this drawing.
       Course 4 Artist Binary 7_instruction: Finish this drawing.
       Course 4 Artist Binary Free Play (copy 1)_instruction: |
         Free Play: Draw whatever
@@ -1491,6 +1425,10 @@ hu:
         we use the counter variable to make the sides smaller as there are more of
         them? Instead of moving forward by a set amount, try moving forward (100 /
         counter) pixels.
+      Course 4 Artist For Loops 14 _instruction: |
+        If you turn a little bit more or
+        less than you normally would for a shape, it creates a neat effect. Try turning
+        89 degrees to create this twisted square spiral.
       Course 4 Artist For Loops 14_instruction: |
         If you turn a little bit more or
         less than you normally would for a shape, it creates a neat effect. Try turning
@@ -1898,9 +1836,6 @@ hu:
         "points." Edit the function so that the "points" parameter is added to
         the "player_points" variable. Have the Dog score 10 points to move on to
         the next puzzle. 
-      Course 4 Play Lab Vars 1 (copy 1)_instruction: |
-        This race seems a bit unfair,
-        try to get to the cat before the penguin does!
       Course 4 Play Lab Vars 1_instruction: |
         You don't have to write any code, just
         hit "run" to play the game! In this game, you're the Dog who is trying
@@ -2137,7 +2072,7 @@ hu:
         use it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
         Try using the "text" function to write this
-        "Hello, World!" in teal at size 40.
+        "Hello, world!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
         function block? The radius is 20. 
@@ -2170,7 +2105,7 @@ hu:
       Eval Design Recipe .1_instruction: |
         Here's a Design Recipe for a function
         called "square-circle" with domain Number String and range Image. Click
-        Edit to write the function description (you will see two examples provided).
+        Edit to write the function definition (you will see two examples provided).
       Eval Design Recipe 1 (copy 1)_instruction: |
         We're going to write a function
         that draws a solid rectangle of any color that is twice wide as it is high.
@@ -2588,17 +2523,10 @@ hu:
       MSM Play Lab Butterfly 3_instruction: |
         Now, combine your work to make Sam stay
         on both sides of the screen.
-      MSM Play Lab Game 1_instruction: |
-        Variables can be used to change how a program
-        behaves. Try changing the scene for the game by setting the background.
       MSM Play Lab Game 2_instruction: |
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
-      MSM Play Lab Game 3_instruction: |
-        Now it's time to play a game! Press the
-        Run button, and use the arrows to move and shoot. Then change the background,
-        or and change the player and enemy speeds to make the game easier or harder.
       Neat Eval Functions_instruction: Check out these sweet functions.
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
@@ -2851,11 +2779,24 @@ hu:
         but you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
         the if block.
+      PDK5 Conditionals 2_instruction: |
+        Try this puzzle that uses conditionals and
+        loops together. Use the "if" block to decide when to turn. Hint: you only
+        need one more block to complete this puzzle. 
       PDK5 Events 1_instruction: |
         So far all of the programs we've written are executed
         in order from top to bottom. In this puzzle, we'll use "Events" to respond
         to an action on demand. Make the octopus say "Hello" only when you click
         on the Octopus. 
+      PDK5 Functions 1_instruction: |
+        Hello. Me zombie artist. Me love drawing! Help
+        me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
+        shorter than the square length.
+      PDK5 Functions 2_instruction: |
+        Functions let you define new blocks! We've
+        moved the blocks to draw a square into a function called "draw a square".
+        Can you use the "draw a square" function to create the glasses? The squares
+        are 75 pixels apart.
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -2975,8 +2916,9 @@ hu:
         This bat is named Sam, and the game area
         is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
         see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move sam
-        around his yard. Help Sam collect all of the flags to move on.
+        the screen update to tell you his location. Use the arrow keys to move Sam
+        around his yard, making note of Sam's coordinates at different locations.
+        Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
@@ -3006,10 +2948,6 @@ hu:
         "on-screen?" function. Update the function so that it checks that "safe-left?"
         AND "safe-right?" AND "safe-up?" are all true. When you've fixed the
         function, try going out of the yard from the left, right, and top sides.
-      Sam the Butterfly 7 (copy 1)_instruction: |
-        Only one last direction to worry
-        about! Create a "safe-down?" function and update the "on-screen?" function
-        so that it checks up, down, left, and right.
       Sam the Butterfly 7_instruction: |
         Only one last direction to worry about! Create
         a "safe-down?" function and update the "on-screen?" function so that it
@@ -3053,6 +2991,9 @@ hu:
         Intricate patterns can be created in the snow with
         just simple shapes like small and large circles. Can you create a pattern
         with a 5 pixel and 10 pixel circle, repeating them 5 times in a circle? 
+      SpecialFrozenLevel_instruction: |
+        You've officially become a master artist!
+        Create a winter wonderland.
       square iterative_instruction: |
         Seems like we're halfway to making a square.
         Create 4 lines to draw a square.
@@ -3131,10 +3072,148 @@ hu:
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      the terps_instruction: Try your best to get to the green pig!!!
+      the yolo maze_instruction: Put the block in the right place
       toby-test5-16-1_instruction: dafsfas
       U1L4 NetSim SendAB_instruction: |
         NetSim: Variant 1 playground: UNDER CONSTRUCTION:
         Variant 1 is not yet functional because P2P connections have not been implemented.
         Variant 1 allows students to manually work out the timing of sending bits
         back and forth.
+      U3L03 choose your own drawing_instruction: |
+        Now choose your own!  Pick one
+        of the three drawings shown here and attempt to create it on your own, making
+        smart decisions about how to break the problem down into re-usable functions.  You
+        will review your work with a peer using "procedures peer review rubric."  Check
+        it for the requirements.  GIF: U3L3-ProceduresChooseOne.png
+      U3L03 Creating Procedures 1_instruction: |
+        Write the turnAround() function and
+        use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
+      U3L03 Define and use turnAround_instruction: |
+        Write the turnAround() function
+        and use it to make the turtle move as depicted.
+      U3L03 define turnRight and draw a rectangle_instruction: |
+        Create a turnRight()
+        function and draw a rectangle twice as tall as it is wide by having the turtle
+        navigate clockwise to draw the rectangle. Make sure to comment your function
+        as shown in the turnAround() function. 
+      U3L03 Draw a T using turnAround_instruction: |
+        The turnAround function is now
+        provided for you in the code.  Use the turnAround() function to draw a T as
+        depicted.
+      U3L03 draw diamond_instruction: "Use any and all of the functions you wrote\npreviously to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE:\nthis is another tricky one.  The 4 sides of the diamond are made by drawing\nthree steps with other movement made between calls.  HINT: you might want\nto make another function that handles drawing one side of the diamond. "
+      U3L03 Three Steps_instruction: |
+        Draw 3 "steps" moving up and to the right.  Notice
+        the pattern in the movement. You should define a function called drawStep()
+        which draws one of the steps, and then call it 3 times to achieve the effect.
+      U3L04 choose your own drawing_instruction: |
+        Now choose your own!  Pick one
+        of the three drawings shown here and attempt to create it on your own, making
+        smart decisions about how to break the problem down into re-usable functions.  You
+        will review your work with a peer using "procedures peer review rubric."  Check
+        it for the requirements.
+      U3L04 diamond solution_instruction: |
+        Study this solution to the drawDiamond
+        problem.  Notice that the whole program starts by calling drawDiamond() at
+        the top.  The program then follows a chain of function calls.  You can trace
+        what's happening in the code to see the functions reused.  It's also easy
+        to read because the function names describe the expected behavior.
+      U3L05_3x3GridEfficiencyChallenge_instruction: |
+        Let's revisit the 3x3 grid
+        problem you did a few lessons ago.  This time the challenge is to program
+        the solution "as efficiently as possible."  Now that you know how to write
+        functions, it should be easier to break the problem down, and your code should
+        be easier to read and debug.  See the rubric for more details about requirements
+        and expectations.
+      U3L05_draw3x3GridEfficiently_instruction: |
+        Draw a 3x3 grid above and to the
+        right of the turtle. Try to do so with the fewest number of commands possible.
+        NOTE: This is a very challenging problem.  You may need to play with it for
+        a while and tweak it.  You might also consider using pencil and paper to sketch
+        your ideas.
+      U3L06 Challenge 1 triangle_instruction: "Check out the extended Turtle palette\nnow made available to you. These new commands accept parameters, allowing\nyou to specify precisely how the function operates rather than only being\nable to move or turn a predetermined amount. Make use of these functions to\ndraw the triangle as shown.\r\nPNG: U3L06-challenge1.png"
+      U3L06 Challenge 2 purple square_instruction: |
+        This time we're going to learn
+        a little bit about changing the turtle's pen. Read through the documentation
+        for penWidth() and penColor(), and then draw the purple square as shown.
+      U3L06 Challenge 3 fill pink_instruction: |
+        Now let's try to fill in the entire
+        background of the screen. To make it a little easier for you, we can tell
+        you the color we chose is one of the 140 named colors.  If you don't know
+        what the named colors are, take a closer look at the documentation for penColor()
+        again. Hint: you need to use dot().
+      U3L06 Challenge 4 bullseye_instruction: |
+        Let's try this out one more time.
+        This time the colors are NOT named colors - you need to use the hex-color
+        number to set the color.  So that you're not randomly guessing, we'll give
+        you a hint -- each of the colors shown in the target image is one of these
+        one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699,
+        #11CC00  You might be able to guess correctly if you apply what you know about
+        RGB colors.
+      U3L06 Challenge 5 overlapping circles_instruction: |
+        This image is created just
+        using dot() and penColor() but, how are we going to get those circles to be
+        transparent?  If you haven't gotten the hint yet: check out the documentation!
+      U3L06 Challenge 6 squiggles_instruction: |
+        Next we're going to be adding some
+        curves to our drawing. Read the documentation for the "arc" commands and
+        then draw the squiggles as shown. To make things easier here's a hint: all
+        the parameters are multiples of 10, and the colors are from the following
+        list of named colors: PowderBlue, lightBlue, Indigo, Purple, Magenta.
+      U3L06 Challenge 7 smiley face_instruction: |
+        To make this smiley face you'll
+        need to look at the documentation for the move() command and then use it with
+        the others you've learned.  You can make reasonable guesses about the colors.
+      U3L06 Challenge 8 make your own_instruction: |
+        Use the tools you've learned
+        today to create a drawing of your own creation. If you have time, challenge
+        your friends to see if they can duplicate your image.  We'll show you the
+        drawing we made for ourselves.  You can try to duplicate that if you want
+        to, otherwise, have fun making your own!
+      U3L07 - Free Play Loops and Random_instruction: |
+        Free Play!  Use what you learned
+        from loops and random to make your own little scene.  Have fun.
+      U3L07 - Starry Night Starter Code_instruction: |
+        You are going to use loops
+        and random numbers to generate an image of starry night sky similar to one
+        shown here.  We have given you some starter code to generate the ground and
+        sky (just two giant dots), you will add code to this project to make the stars,
+        grass, and moon.  All of the effects are clever applications of turtle dots,
+        lines, and colors.  To get started, follow the series of steps suggested in
+        the accompanying worksheet. 
+      U3L13 - Button with ID_instruction: |
+        Drag a button out onto the screen and
+        set its text to "Go forth!".  Run the program to make sure you can see the
+        button.
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof syntax error.  App Lab did not understand which object it should be listening\nto for a \"click\" event so it showed an error message in the console to let\nyou know.  Another kind of error is a logical error - the program is valid,\nbut it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA (tricky) syntax error and logical error.  Find them, fix them, and make\nthe program work as expected."
+      U3L13 - Debug Id Problem_instruction: |
+        This program has problem!  Can you figure
+        it out?  Run the program and see if you can figure out from the error messages
+        in the console what the issue is.  There is not much code, so you might be
+        able to figure it out just by reading carefully.  Make a change that will
+        make the program work as expected.
+      U3L13 - Turtle Driver Project_instruction: |
+        Create a “turtle driver” with at
+        least three buttons on the screen to move the turtle forward, and turn the
+        turtle right and left. If you have time, try adding additional buttons!  You
+        can also have fun changing the parameters on the turtle functions, using colors,
+        etc.
+      U3L13 - Turtle move with button_instruction: |
+        Drag a button out onto the screen
+        and set its text to "Go forth!".  Add an event handler for the button, that
+        makes the turtle move forward.  Run the program to make sure it works. 
+      U3L2 Using Simple Commands_instruction: |
+        Draw a square using only moveForward
+        and turnLeft.  The square should be drawn above and to the left of the turtle's
+        starting position.
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid above and to the right of
+        the turtle. Try to do so with the fewest number of commands possible. NOTE:
+        This is a very challenging problem.  You may need to play with it for a while
+        and tweak it.  You might also consider using pencil and paper to sketch your
+        ideas.
+      U3L2_TurtleSquare_right_instruction: |
+        Draw a square using only moveForward
+        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

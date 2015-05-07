@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
+          desc: K-8 Úvod do počítačových kurz informatiky
           Unplug1: Úroveň 1
           Maze: Úroveň 2
           Unplug2: Úroveň 3

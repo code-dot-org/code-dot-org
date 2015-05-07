@@ -64,6 +64,8 @@ pt-BR:
     need_confirmation: Não recebeu as instruções de confirmação?
     need_unlock: Não recebeu as instruções de desbloqueio?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Crie uma conta para acompanhar seu progresso. Seu e-mail é usado principalmente para permitir que você faça logon e para a recuperação de senha. Para obter mais informações, consulte nossa <a href="http://code.org/privacy">Política de privacidade</a>.'
     overview_teacher: 'Cadastre-se e ensine ciência da computação em sua sala de aula.<p/> Você poderá adicionar alunos e acompanhar o progresso deles.'
     no_signup_message: 'Você pode <a target="_blank" href="http://learn.code.org"> consultar as várias fases e desafios</a>, mas você precisa se cadastrar para salvar seu progresso.'
@@ -316,6 +318,7 @@ pt-BR:
     classroom_activity: Atividade off-line
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos de aula
     signin_message: 'Já se registrou? %{link}'
@@ -349,7 +352,7 @@ pt-BR:
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
     heading_legacy: '<h2>Nosso curso geral para</h2><h1>todas as idades</h1>'
     your_gallery: Galeria
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Faça um curso no Code Studio
   gender:
     male: Masculino
     female: Feminino
@@ -478,9 +481,11 @@ pt-BR:
     badrange: Seu contrato tem a imagem errada.
     baddomainsize: Seu contrato não tem o número correto de itens no domínio.
     baddomainname: Um ou mais de seus itens de domínio têm o nome errado.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    baddomaintype: Um ou mais de seus itens de domínio têm o tipo errado, ou eles estão na ordem errada.
   text_match:
     placeholder: Insira sua resposta aqui
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

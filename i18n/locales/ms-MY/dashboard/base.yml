@@ -64,6 +64,8 @@ ms:
     need_confirmation: Tidak menerima arahan pengesahan?
     need_unlock: Tidak menerima kunci arahan?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Daftarkan akaun untuk menjejaki kemajuan anda. Email anda digunakan terutamanya untuk membenarkan anda untuk mendaftar masuk dan memulihan kata laluan. Untuk maklumat lanjut, lihat  <a href="http://code.org/privacy">Polisi Privasi</a>.'
     overview_teacher: 'Ajar sains komputer di dalam kelas anda dengan mendaftarkan akaun.<p/> Anda boleh menambah pelajar-pelajar dan menjejaki kemajuan mereka.'
     no_signup_message: 'Anda boleh <a target="_blank" href="http://learn.code.org"> layari pelbagai tahap dan susun-suai</a>, tetapi anda perlu mendaftar untuk menyimpan perkembangan anda.'
@@ -309,6 +311,7 @@ ms:
     classroom_activity: Cabut aktiviti
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'Sudah mendaftar? %{link}'
@@ -474,6 +477,8 @@ ms:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

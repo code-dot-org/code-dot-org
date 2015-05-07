@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: Computational Thinking
+        title: Arvutuslik mõtlemine
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -190,7 +190,7 @@
           themselves online creates a digital footprint or "trail" that has consequences.
         video: C2_digitaalne_jalajälg
       ComputationalThinking:
-        title: Computational Thinking
+        title: Arvutuslik mõtlemine
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -291,6 +291,6 @@
         desc: Conditionals and Piecewise Functions lesson description
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection
+        title: Kokkupõrke tuvastamine ja Pythagorase teoreem
         desc: Collision Detection lesson description
         video: alg_16_biggame_collision_detection

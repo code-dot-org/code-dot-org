@@ -65,6 +65,8 @@
     need_confirmation: ¿No recibiste las instrucciones de confirmación?
     need_unlock: ¿No recibiste las instrucciones de desbloqueo?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Regístrese en una cuenta para poder seguir su progreso. Su correo
       se utiliza principalmente para permitirle iniciar sesión y para la recuperación
       de la contraseña. Para obtener más información, consulte nuestra <a href="http://code.org/privacy">Política
@@ -373,6 +375,7 @@
     classroom_activity: Actividad fuera de línea
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Resumen de los cursos 1, 2 y 3
     lesson_plans: Plan de estudio
     signin_message: ¿Ya estás registrado? %{link}
@@ -578,6 +581,8 @@
       in the wrong order.
   text_match:
     placeholder: Escribe aquí tu respuesta
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

@@ -3,7 +3,7 @@ ku:
     unplugged:
       Unplug1:
         title: Introduction to Computer Science
-        desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
+        desc: ئەم وانەیە پێشەکییەکت پێدەدات لەبارەی تێگەیشتنی زانستی کۆمپیوتەر و بۆتی روون دەکاتەوە زانستی کۆمپیوتەر چی دەکات. هەروەها دەرفەتێک بە قوتابیان دەدات بۆ ئەوەی بزانن کاریگەری زانستی کۆمپیوتەر چییە، لە کۆتایی چالاکییەکە هەر قوتابییەک ئەرکێکی وەبیرهێنانەی پێدەدرێت بۆ ئەوەی لە ماڵەوەی ئەنجامی بدات سەبارەت بەو شتەی فێری بووە. لەوانەیە تۆش حەز بکەیت منداڵە بچووکان قێری وشەی تایبەت بە کۆمپیوتەر بکەیت، بەڵام دەبێت ئاگادار بیت بە شێوازێک ئەم کارە بکەیت کە چێژ و خۆشیان پێ ببەخشیت بۆ ئەوەی زیاتر لەوەی چاوەڕوان دەکەیت هەڵی زیاتر ببەخشیت.
         pdfs:
           - unplug1
         video: Unplug1
@@ -33,7 +33,7 @@ ku:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: مەرجەکان
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6

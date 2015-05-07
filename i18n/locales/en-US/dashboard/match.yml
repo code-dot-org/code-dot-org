@@ -157,6 +157,30 @@ en:
         <h4>STAMP</h4>: crwdns20099:0crwdne20099:0
         <h4>STAR</h4>: crwdns20100:0crwdne20100:0
         <h4>RAMP</h4>: crwdns20101:0crwdne20101:0
+      ECSPD phase matching:
+        Matching PD Phases and Descriptions: crwdns37684:0crwdne37684:0
+        Phase 1: crwdns37685:0crwdne37685:0
+        Phase 2: crwdns37686:0crwdne37686:0
+        Phase 3: crwdns37687:0crwdne37687:0
+        Phase 4: crwdns37688:0crwdne37688:0
+        Online introduction to PD program: crwdns37689:0crwdne37689:0
+        Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: crwdns37690:0crwdne37690:0
+        Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: crwdns37691:0crwdne37691:0
+        In-person wrap up to the first year of teaching the course: crwdns37692:0crwdne37692:0
+      ECSPD unit matching:
+        Matching Unit Descriptions and Numbers: crwdns37693:0crwdne37693:0
+        Unit 1: crwdns37694:0crwdne37694:0
+        Unit 2: crwdns37695:0crwdne37695:0
+        Unit 3: crwdns37696:0crwdne37696:0
+        Unit 4: crwdns37697:0crwdne37697:0
+        Unit 5: crwdns37698:0crwdne37698:0
+        Unit 6: crwdns37699:0crwdne37699:0
+        introduction to the concepts of computer and computing: crwdns37700:0crwdne37700:0
+        application of problem solving techniques to develop solutions: crwdns37701:0crwdne37701:0
+        website development and design: crwdns37702:0crwdne37702:0
+        create programs to solve computational problems: crwdns37703:0crwdne37703:0
+        use computing to manage and interpret data: crwdns37704:0crwdne37704:0
+        apply programming and problem solving to the study of robots: crwdns37705:0crwdne37705:0
       K-1 Artist 2 Match 1:
         Matching: crwdns5660:0crwdne5660:0
         Is the square next to, above, or below the ball?: crwdns6000:0crwdne6000:0
@@ -328,6 +352,55 @@ en:
         "small-star: string -> image": crwdns7404:0crwdne7404:0
         "bigger-string: string string -> string": crwdns7405:0crwdne7405:0
         "find-price: string -> number": crwdns7406:0crwdne7406:0
+      PDAlg block match:
+        Block match: crwdns37706:0crwdne37706:0
+        Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: crwdns37707:0crwdne37707:0
+        "http://staging.studio.code.org/script_assets/pd/circle1.png": crwdns37708:0crwdne37708:0
+        "http://staging.studio.code.org/script_assets/pd/circle2.png": crwdns37709:0crwdne37709:0
+        "http://staging.studio.code.org/script_assets/pd/circle3.png": crwdns37710:0crwdne37710:0
+        "http://staging.studio.code.org/script_assets/pd/block1.png": crwdns37711:0crwdne37711:0
+        "http://staging.studio.code.org/script_assets/pd/block2.png": crwdns37712:0crwdne37712:0
+        "http://staging.studio.code.org/script_assets/pd/block3.png": crwdns37713:0crwdne37713:0
+      PDAlg commitment match:
+        Program Commitment Matching Question: crwdns37714:0crwdne37714:0
+        0: crwdns37715:0crwdne37715:0
+        1: crwdns37716:0crwdne37716:0
+        Phase 1: crwdns37717:0crwdne37717:0
+        Phase 2: crwdns37718:0crwdne37718:0
+        Phase 3: crwdns37719:0crwdne37719:0
+        "Online Introduction: 2 hours online": crwdns37720:0crwdne37720:0
+        "Blended Summer Study: 3 days in-person and 8 hours online": crwdns37721:0crwdne37721:0
+        "Academic Year Development: 2 days in-person and 10 hours online": crwdns37722:0crwdne37722:0
+      PDAlg Design Recipe Video:
+        Intro to Data Types: crwdns37723:0crwdne37723:0
+        Place the Design Recipe steps in the correct order.: crwdns37724:0crwdne37724:0
+        Step 1: crwdns37725:0crwdne37725:0
+        Step 2: crwdns37726:0crwdne37726:0
+        Step 3: crwdns37727:0crwdne37727:0
+        Contract and Purpose Statement: crwdns37728:0crwdne37728:0
+        Examples: crwdns37729:0crwdne37729:0
+        Definition: crwdns37730:0crwdne37730:0
+      PDAlg Types Video:
+        Intro to Data Types: crwdns37731:0crwdne37731:0
+        Match each data type with its color code: crwdns37732:0crwdne37732:0
+        Number: crwdns37733:0crwdne37733:0
+        String: crwdns37734:0crwdne37734:0
+        Image: crwdns37735:0crwdne37735:0
+        "http://staging.studio.code.org/script_assets/pd/blue.png": crwdns37736:0crwdne37736:0
+        "http://staging.studio.code.org/script_assets/pd/teal.png": crwdns37737:0crwdne37737:0
+        "http://staging.studio.code.org/script_assets/pd/purple.png": crwdns37738:0crwdne37738:0
+      PDECS commitment match:
+        Program Commitment Matching Question: crwdns37739:0crwdne37739:0
+        0: crwdns37740:0crwdne37740:0
+        1: crwdns37741:0crwdne37741:0
+        Phase 1: crwdns37742:0crwdne37742:0
+        Phase 2: crwdns37743:0crwdne37743:0
+        Phase 3: crwdns37744:0crwdne37744:0
+        Phase 4: crwdns37745:0crwdne37745:0
+        "Online Introduction: 2 hours online": crwdns37746:0crwdne37746:0
+        "Blended Summer Study: 5 days in-person and 8 hours online": crwdns37747:0crwdne37747:0
+        "Academic Year Development: 4 days in-person and 12 hours online": crwdns37748:0crwdne37748:0
+        "Summer Wrap-up: 3 days in-person": crwdns37749:0crwdne37749:0
       PDK5 Pair programming match:
         Pair programming match: crwdns35195:0crwdne35195:0
         Match the definitions to the words you were introduced to in the last video.: crwdns35196:0crwdne35196:0
@@ -341,6 +414,16 @@ en:
         What is an unplugged activity?: crwdns35203:0crwdne35203:0
         Question: crwdns35204:0crwdne35204:0
         Answer 1: crwdns35205:0crwdne35205:0
+      sciPD commitment match:
+        Program Commitment Matching Question: crwdns37750:0crwdne37750:0
+        0: crwdns37751:0crwdne37751:0
+        1: crwdns37752:0crwdne37752:0
+        Phase 1: crwdns37753:0crwdne37753:0
+        Phase 2: crwdns37754:0crwdne37754:0
+        Phase 3: crwdns37755:0crwdne37755:0
+        "Online Introduction: 2 hours online": crwdns37756:0crwdne37756:0
+        "Blended Summer Study: 3 days in-person and 8 hours online": crwdns37757:0crwdne37757:0
+        "Academic Year Development: 2 days in-person and 10 hours online": crwdns37758:0crwdne37758:0
       test matching image:
         Matching Images Two: crwdns6007:0crwdne6007:0
         Match up all the flowers by colour!: crwdns6008:0crwdne6008:0

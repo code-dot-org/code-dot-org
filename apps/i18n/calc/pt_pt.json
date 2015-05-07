@@ -1,8 +1,8 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
-  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "divideByZeroError": "O seu programa tem como resultado uma divisão por zero.",
+  "emptyComputeBlock": "Deve anexar um bloco para o bloco \"avaliar\".",
   "equivalentExpression": "Tente reordenar os seus argumentos para obter exactamente a mesma expressão.",
-  "evaluate": "evaluate",
+  "evaluate": "avaliar",
   "extraTopBlocks": "Você tem blocos desligados. Você quis dizer para anexar estes para o bloco \"cálculo\"?",
   "failedInput": "Sua função não retorna o resultado certo para todos os valores.",
   "goal": "Objectivo:",

@@ -337,15 +337,17 @@ StudioApp.prototype.init = function(config) {
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    aniGifPreview.onclick = _.bind(function() {
-      this.showInstructions_(config.level, false);
-    }, this);
     var promptTable = document.getElementById('prompt-table');
     promptTable.className += " with-ani-gif";
   } else {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'none';
   }
+
+  var bubble = document.getElementById('bubble');
+  dom.addClickTouchEvent(bubble, _.bind(function() {
+    this.showInstructions_(config.level, false);
+  }, this));
 
   if (this.editCode) {
     this.handleEditCode_({
@@ -364,10 +366,10 @@ StudioApp.prototype.init = function(config) {
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
-    vizResizeBar.addEventListener('mousedown',
-                                  _.bind(this.onMouseDownVizResizeBar, this));
-    document.body.addEventListener('mouseup',
-                                   _.bind(this.onMouseUpVizResizeBar, this));
+    dom.addMouseDownTouchEvent(vizResizeBar,
+                               _.bind(this.onMouseDownVizResizeBar, this));
+    dom.addMouseUpTouchEvent(document.body,
+                             _.bind(this.onMouseUpVizResizeBar, this));
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
@@ -799,6 +801,11 @@ StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   if (!this.onMouseMoveBoundHandler) {
     this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
     document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (this.mouseMoveTouchEventName) {
+      document.body.addEventListener(this.mouseMoveTouchEventName,
+                                     this.onMouseMoveBoundHandler);
+    }
 
     event.preventDefault();
   }
@@ -866,6 +873,10 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (this.onMouseMoveBoundHandler) {
     document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
+    if (this.mouseMoveTouchEventName) {
+      document.body.removeEventListener(this.mouseMoveTouchEventName,
+                                        this.onMouseMoveBoundHandler);
+    }
     this.onMouseMoveBoundHandler = null;
   }
 };
@@ -1137,6 +1148,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
   this.onContinue = config.onContinue || function () {};
+  this.onInitialize = config.onInitialize ?
+                        config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
 };
@@ -1332,6 +1345,10 @@ StudioApp.prototype.handleEditCode_ = function (options) {
       options.afterEditorReady();
       this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
     }
+
+    // Since the droplet editor loads asynchronously, we must call onInitialize
+    // here once loading is complete.
+    this.onInitialize();
   }, this));
 
   if (options.afterInject) {

@@ -226,7 +226,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareDrawing":function(d){return "שתף את הציור שלך:"},
 "showMe":function(d){return "הראה לי"},
 "showTurtle":function(d){return "הראה את האמן"},
-"sizeParameter":function(d){return "size"},
+"sizeParameter":function(d){return "גודל"},
 "step":function(d){return "צעד"},
 "tooFewColours":function(d){return "צריך להשתמש בלפחות %1 צבעים שונים בשביל החידה הזאת. השתמשת רק ב %2."},
 "turnLeft":function(d){return "פנה שמאלה"},

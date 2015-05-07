@@ -141,7 +141,7 @@ pt-BR:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       2-3 multi match 1:
-        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block'
+        " + block <br> - block <br> / block <br> * block <br> 0 # block <br> ??? # block <br> size block": ' + bloco <br> - bloco <br> / bloco <br> * bloco <br> 0 # bloco <br> ??? # bloco <br> bloco de tamanho'
         Blue colored blocks are associated with __________ ?: Blocos de cor azul estão associados com __________ ?
         a image: uma imagem
         a number: um número
@@ -311,7 +311,7 @@ pt-BR:
         1: ': Qual é a maior parte dessa música que você pode definir como o refrão, de forma que o refrão se repita a cada vez que ela for chamada?'
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
-        2: '? Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Pule para o Lou, minha querida.<br/><br/><p>A mosca está na manteiga, <br/>Shoo, mosca, shoo,'
+        2: '? Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Pule para o Lou, minha querida.<br/><br/><p>A mosca está na manteiga, <br/>Xô, mosca, xô,'
         3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         4: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         5: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
@@ -325,28 +325,48 @@ pt-BR:
       Coordinates Multi 1:
         Video game Coordinates: Coordenadas de video game
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        0: "? Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?"
-        1: ": Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?"
+        0: '? Considerando o que você sabe sobre jogos e o plano cartesiano, qual dessas declarações descreve os movimentos do unicórnio de forma mais precisa?'
+        1: ': Considerando o que você sabe sobre jogos e o plano cartesiano, qual dessas declarações descreve os movimentos do unicórnio de forma mais precisa?'
         The unicorn moves across the screen: O unicórnio se movimenta pela tela
         The unicorn's y value changes: O valor de y do unicórnio muda
         The unicorn moves to the left: O unicórnio se move para a esquerda
         The unicorn's x value decreases: O valor de x do unicórnio diminui
       ECSPD growth mindset in the classroom:
-        Growth Mindset in the Classroom: Growth Mindset in the Classroom
-        How can we use praise to encourage Growth Mindset in our students?: How can we use praise to encourage Growth Mindset in our students?
-        praise students for getting the right answer: praise students for getting the right answer
-        praise the process that students use to solve problems: praise the process that students use to solve problems
-        praise students for their intelligence: praise students for their intelligence
+        Growth Mindset in the Classroom: Mentalidade de crescimento na sala de aula
+        How can we use praise to encourage Growth Mindset in our students?: Como podemos usar elogios para incentivar a mentalidade de crescimento em nossos alunos?
+        praise students for getting the right answer: elogie os alunos por darem a resposta correta
+        praise the process that students use to solve problems: elogie o processo que os alunos usam para resolver os problemas
+        praise students for their intelligence: elogie a inteligência dos alunos
       ECSPD growth mindset question:
-        Impact of Growth Mindset: Impact of Growth Mindset
-        Based on the video you saw before, please answer the following question.: Based on the video you saw before, please answer the following question.
-        0: '? In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?'
-        1: ': In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?'
-        more effort: more effort
-        more strategies: more strategies
-        more engagement over longer periods of time: more engagement over longer periods of time
-        more perseverance: more perseverance
-        all of the above: all of the above
+        Impact of Growth Mindset: Impacto da mentalidade de crescimento
+        Based on the video you saw before, please answer the following question.: Com base no vídeo que você assistiu antes, responda à questão a seguir.
+        0: '? No vídeo, Carol Dweck descreve um jogo de matemática on-line que recompensa o esforço, a estratégia e o progresso do aluno. Que resultados eles viram dos alunos que jogaram esse jogo?'
+        1: ': No vídeo, Carol Dweck descreve um jogo de matemática on-line que recompensa o esforço, a estratégia e o progresso do aluno. Que resultados eles viram dos alunos que jogaram esse jogo?'
+        more effort: mais esforço
+        more strategies: mais estratégias
+        more engagement over longer periods of time: mais envolvimento durante longos períodos de tempo
+        more perseverance: mais perseverança
+        all of the above: todas as anteriores
+      ECSPD impact vid2 question:
+        Barrier to Using Data: Barrier to Using Data
+        0: "? \"Based on the video you just watched, answer the following \nquestion\""
+        1: ": \"Based on the video you just watched, answer the following \nquestion\""
+        2: '? What issues did Ben Wellington address in his TED talk related to the barriers presented for people who want to access and analyze Big Data?'
+        3: ': What issues did Ben Wellington address in his TED talk related to the barriers presented for people who want to access and analyze Big Data?'
+        data stored in ways that makes it difficult to analyze it: data stored in ways that makes it difficult to analyze it
+        data is technically available, but often not posted online: data is technically available, but often not posted online
+        data is normalized, so it is difficult to analyze data from different sources: data is normalized, so it is difficult to analyze data from different sources
+        all of the above: todas as anteriores
+      ECSPD unit:
+        ECS Curriculum: ECS Curriculum
+        Based on what you just read about the ECS course, answer the following question: Based on what you just read about the ECS course, answer the following question
+        What unit from the ECS curriculum are you most interested in?: What unit from the ECS curriculum are you most interested in?
+        "Unit 1: Human Computer Interaction": 'Unit 1: Human Computer Interaction'
+        "Unit 2: Problem Solving": 'Unit 2: Problem Solving'
+        "Unit 3: Web Design": 'Unit 3: Web Design'
+        "Unit 4: Introduction to Programming": 'Unit 4: Introduction to Programming'
+        "Unit 5: Computing and Data Analysis": 'Unit 5: Computing and Data Analysis'
+        "Unit 6: Robotics": 'Unit 6: Robotics'
       K-1 Artist 1 Multi 1:
         Multiple Choice: Múltipla Escolha
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -663,9 +683,44 @@ pt-BR:
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
         Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
+      PDAlg attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Confirme que você leu e concorda com a política de atendimento.
+        I have read and agree to the Attendance Policy: Eu li e concordo com a política de atendimento
+      PDAlg Blocks Video:
+        Intro to Evaluation Blocks: Intro to Evaluation Blocks
+        In which are of the screen do you click blocks together to write a program?: In which are of the screen do you click blocks together to write a program?
+        Play Area: Play Area
+        Toolbox: Caixa de ferramentas
+        Workspace: Workspace
+      PDAlg functional:
+        Functional Programming: Functional Programming
+        Have you ever programmed before?: Have you ever programmed before?
+        Yes, and I'm familiar with functional programming: "Yes, and I'm familiar with functional programming"
+        Yes, but I don't know if it would be considered functional: "Yes, but I don't know if it would be considered functional"
+        "No": Não
+      PDAlg implementation:
+        Curriculum Implementation: Curriculum Implementation
+        0: '? Given the scope and sequence from the last page, which of the following best describes when you expect to implement the CS in Algebra curriculum?'
+        1: ': Given the scope and sequence from the last page, which of the following best describes when you expect to implement the CS in Algebra curriculum?'
+        September - October: 'September - October'
+        November - December: 'November - December'
+        January - February: 'January - February'
+        March - April: 'March - April'
+        May - June: 'May - June'
+        Throughout the year: Throughout the year
+      PDAlg PreQ 1:
+        Pre-Survey Question 1: Pre-Survey Question 1
+        Have you ever participated in an online PD program before?: Have you ever participated in an online PD program before?
+        "Yes": Sim
+        "No": Não
+      PDAlg PreQ 2:
+        Pre-Survey Question 2: Pre-Survey Question 2
+        Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?
+        "Yes": Sim
+        "No": Não
       PDECS attendance commitment:
-        Please confirm that you have read the Attendance Policy and will work to follow it.: Please confirm that you have read the Attendance Policy and will work to follow it.
-        I have read and agree to the Attendance Policy: I have read and agree to the Attendance Policy
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Confirme que você leu e concorda com a política de atendimento.
+        I have read and agree to the Attendance Policy: Eu li e concordo com a política de atendimento
       PDK5 Basic CS:
         Video Follow-up Question: Questões sobre o vídeo
         Answer this question based on the video you just watched.: Responda a essa pergunta com base no vídeo que você acabou de assistir.
@@ -730,15 +785,14 @@ pt-BR:
         "Yes": Sim
       PDK5 Visual Languages:
         Visual Programming Languages: Linguagens de programação visual
-        Based on the video you saw before, please answer the question below.: Com base no vídeo que você viu anteriormente, responda às questões abaixo.
         Why are visual programming languages easier to learn than text-based programming languages?: Por que as linguagens de programação visual são mais fáceis de aprender se comparadas às linguagens de programação escritas?
         Because you dont have to worry about syntax as much, like where to put a semi-colon: Porque você não precisa se preocupar tanto com a sintaxe, como, por exemplo, onde colocar um ponto e vírgula
         Because you can focus on the logic of programming: Porque você pode se concentrar na lógica de programação
-        Because the commands are listed in a menu rather than having to remember them yourself: Because the commands are listed in a menu rather than having to remember them yourself
+        Because the commands are listed in a menu rather than having to remember them yourself: Porque os comandos estão listados em um menu ao invés de precisar decorar todos eles
         All of the above: Todas as anteriores
       PDK5 What is CS:
         What is Computer Science?: O que é ciência da computação?
-        "A computer program, or code, is:": 'Um programa de computador, ou código, é:'
+        "A computer program, or \"code,\" is:": 'A computer program, or "code," is:'
         a part inside of a computer: uma parte dentro de um computador
         a set of instructions a person gives a computer to execute: um conjunto de instruções que uma pessoa dá a um computador para que ele as execute
         a week-long course to learn about computers: um curso de uma semana para aprender sobre computadores
@@ -761,6 +815,117 @@ pt-BR:
         rocket-height(seconds) = seconds * 10 + 7: 'altura-foguete(segundos) = segundos * 10 + 7'
         rocket-height(seconds) = seconds * 7 + 3: 'altura-foguete(segundos) = segundos * 7 + 3'
         rocket-height(seconds) = seconds * 10 - 3: 'altura-foguete(segundos) = segundos * 10 - 3'
+      sciPD agent based 1:
+        Multiple Choice - Interactions In Agent-based Models: 'Multiple Choice - Interactions In Agent-based Models'
+        What types of interactions can occur in agent-based models?: What types of interactions can occur in agent-based models?
+        agents interact with their environment only: agents interact with their environment only
+        agents interact with other agents only: agents interact with other agents only
+        agents interact with both their environment and other agents: agents interact with both their environment and other agents
+        all of the above: todas as anteriores
+      sciPD agent based 2:
+        Multiple Choice - Agent-based Models: 'Multiple Choice - Agent-based Models'
+        What type of systems are agent-based models suitable for modeling?: What type of systems are agent-based models suitable for modeling?
+        simple mechanical systems: simple mechanical systems
+        complex adaptive systems: complex adaptive systems
+        systems of mathematical equations: systems of mathematical equations
+        all of the above: todas as anteriores
+      sciPD attendance commitment:
+        Please confirm that you have read the Attendance Policy and will work to follow it.: Confirme que você leu e concorda com a política de atendimento.
+        I have read and agree to the Attendance Policy: Eu li e concordo com a política de atendimento
+      sciPD class models 1:
+        Using Models in the Classroom: Using Models in the Classroom
+        Which of the following is not a tenet of Papert's theory of Constructionism?: "Which of the following is not a tenet of Papert's theory of Constructionism?"
+        constructing social relationships: constructing social relationships
+        interacting with others: interacting with others
+        creating artifacts of social relevance: creating artifacts of social relevance
+        building relationships between old and new knowledge: building relationships between old and new knowledge
+      sciPD class models 2:
+        Constructionism: Constructionism
+        Constructionism focuses on how learning is constructed during the...: Constructionism focuses on how learning is constructed during the...
+        design of learning artifacts: design of learning artifacts
+        creation of learning artifacts: creation of learning artifacts
+        discussion of learning artifacts: discussion of learning artifacts
+        all of the above: todas as anteriores
+      sciPD complex adaptive 1:
+        Intro to Complex Adaptive Systems: Intro to Complex Adaptive Systems
+        Which of the following IS a characteristic of a complex adaptive system?: Which of the following IS a characteristic of a complex adaptive system?
+        has a leader: has a leader
+        is predictable: is predictable
+        has centralized control: has centralized control
+        generates emergent patterns: generates emergent patterns
+      sciPD complex adaptive 2:
+        Examples of Complex Adaptive Systems: Examples of Complex Adaptive Systems
+        Which of the following is NOT an example of a complex adaptive system?: Which of the following is NOT an example of a complex adaptive system?
+        a bee hive: a bee hive
+        a wall clock: a wall clock
+        a traffic jam: a traffic jam
+        the internet: the internet
+      sciPD computer models 1:
+        Multiple Choice - Stochastic Models: 'Multiple Choice - Stochastic Models'
+        What does it mean for a model to be stochastic?: What does it mean for a model to be stochastic?
+        It includes some randomness: It includes some randomness
+        It can be easily automated: It can be easily automated
+        It is predictable: It is predictable
+        It has fixed percentages of different elements: It has fixed percentages of different elements
+      sciPD computer models 2:
+        Multiple Choice - Common Features Of Lab And Computational Science Experiments: 'Multiple Choice - Common Features Of Lab And Computational Science Experiments'
+        Which of the following are common to both lab experiments and computational science experiments?: Which of the following are common to both lab experiments and computational science experiments?
+        automation of experiments is easy: automation of experiments is easy
+        changing physical properties like the gravitational constant: changing physical properties like the gravitational constant
+        sweeping a set of variables: sweeping a set of variables
+        the need for controlled experiments: the need for controlled experiments
+      sciPD culture 1:
+        Multiple Choice - Getting Unstuck: 'Multiple Choice - Getting Unstuck'
+        Which of the following was NOT suggested as a way to get unstuck?: Which of the following was NOT suggested as a way to get unstuck?
+        taking a break: taking a break
+        meditating: meditating
+        looking at other similar pieces of code: looking at other similar pieces of code
+        reading through your code line by line: reading through your code line by line
+      sciPD culture 2:
+        Multiple Choice - Role Of Teacher: 'Multiple Choice - Role Of Teacher'
+        What role for a teacher incorporating models and simulations into the classroom was proposed?: What role for a teacher incorporating models and simulations into the classroom was proposed?
+        engaging lecturer: engaging lecturer
+        learning coach or guide: learning coach or guide
+        expert in a computer language: expert in a computer language
+        classroom manager: classroom manager
+      sciPD framework 1:
+        Multiple Choice - Computational Thinking 1: 'Multiple Choice - Computational Thinking 1'
+        "Computational Thinking was referred to in the video as:": 'Computational Thinking was referred to in the video as:'
+        a way of communicating with a computer: a way of communicating with a computer
+        a process that computers use to think: a process that computers use to think
+        a human thought process: a human thought process
+        a subfield of computer science: a subfield of computer science
+      sciPD framework 2:
+        Multiple Choice - Computational Thinking 2: 'Multiple Choice - Computational Thinking 2'
+        Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?: Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?
+        abstraction: abstraction
+        automation: automation
+        analysis: analysis
+        algorithms: algorithms
+      sciPD intro to CS 1:
+        Intro to Computational Science: Intro to Computational Science
+        "Computer modeling is used to study problems that are:": 'Computer modeling is used to study problems that are:'
+        too dangerous to study in the real world: too dangerous to study in the real world
+        too time consuming to study in the real world: too time consuming to study in the real world
+        too expensive to study in the real world: too expensive to study in the real world
+        all of the above: todas as anteriores
+      sciPD intro to CS 2:
+        Intro to Computational Science: Intro to Computational Science
+        What is computational science good for?: What is computational science good for?
+        it replaces traditional science labs: it replaces traditional science labs
+        it complements lab and theoretical science : 'it complements lab and theoretical science '
+        it slows the process of discovery: it slows the process of discovery
+        nothing at all: nothing at all
+      sciPD PreQ 1:
+        Pre-Survey Question 1: Pre-Survey Question 1
+        Before now, have you ever participated in an online PD program?: Você já participou alguma vez de um programa PD on-line?
+        "Yes": Sim
+        "No": Não
+      sciPD PreQ 2:
+        Pre-Survey Question 2: Pre-Survey Question 2
+        Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?: Before now, have you ever taken an Online Course (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?
+        "Yes": Sim
+        "No": Não
       test multi image:
         Maze Multiple Choice Two: Labirinto de Múltipla Escolha Dois
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -788,36 +953,36 @@ pt-BR:
         wrong answer: resposta errada
         right answer: resposta certa
       U1L10 Assessment 1:
-        "Assessment: Encoding Text": 'Assessment: Encoding Text'
-        "Question #1": 'Question #1'
-        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?
+        "Assessment: Encoding Text": 'Avaliação: codificação de texto'
+        "Question #1": Questão 1
+        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: Qual é o número mínimo de bits que você precisa para codificar as 26 letras do alfabeto mais um espaço?
         2 bits: 2 bits
         3 bits: 3 bits
         4 bits: 4 bits
         5 bits: 5 bits
         6 bits: 6 bits
       U1L10 Assessment 2:
-        "Assessment: Encoding Text": 'Assessment: Encoding Text'
-        "Question # 2": 'Question # 2'
-        0: "? \"The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?\""
-        1: ": \"The standard QWERTY keyboard has 47 keys that when pressed cause a character show up on the screen. Consider also that the shift key, which when pressed at the same time as a character key, changes the resulting character. (Assume, that TAB, CAPS, CTRL, ALT, ENTER are not considered in this question). \n\nHow many bits would you need to encode everything that could be typed on this keyboard?\""
+        "Assessment: Encoding Text": 'Avaliação: codificação de texto'
+        "Question # 2": Questão 2
+        0: "? \"O teclado padrão QWERTY tem 47 teclas que, quando pressionadas, fazem um caractere aparecer na tela. Considere também que a tecla shift, que quando pressionada ao mesmo tempo que uma tecla de caractere, altera o caractere resultante. (Vamos desconsiderar as teclas TAB, CAPS, CTRL, ALT e ENTER para essa questão). \n\nQuantos bits você precisaria para codificar tudo que poderia ser digitado nesse teclado?\""
+        1: ": \"O teclado padrão QWERTY tem 47 teclas que, quando pressionadas, fazem um caractere aparecer na tela. Considere também que a tecla shift, que quando pressionada ao mesmo tempo que uma tecla de caractere, altera o caractere resultante. (Vamos desconsiderar as teclas TAB, CAPS, CTRL, ALT e ENTER para essa questão). \n\nQuantos bits você precisaria para codificar tudo que poderia ser digitado nesse teclado?\""
         3 bits: 3 bits
         4 bits: 4 bits
         5 bits: 5 bits
         6 bits: 6 bits
         7 bits: 7 bits
       U1L11 Assessment 1:
-        "Assessment: Sending Formatted Text": 'Assessment: Sending Formatted Text'
-        "Question #1": 'Question #1'
-        What is ASCII text?: What is ASCII text?
-        American Strict Conformance of Internet Interchange: American Strict Conformance of Internet Interchange
-        Authentication Standards for Commerce in Interstate Information: Authentication Standards for Commerce in Interstate Information
-        American Standard Code for Information Interchange: American Standard Code for Information Interchange
-        Automatic Serial Coding for Interface Interchange: Automatic Serial Coding for Interface Interchange
+        "Assessment: Sending Formatted Text": 'Avaliação: envio de texto formatado'
+        "Question #1": Questão 1
+        What is ASCII text?: O que é texto ASCII?
+        American Strict Conformance of Internet Interchange: American Strict Conformance of Internet Interchange (Conformidade estrita de intercâmbio de internet dos EUA)
+        Authentication Standards for Commerce in Interstate Information: Authentication Standards for Commerce in Interstate Information (Padrões de autenticação para o comércio em informações interestaduais)
+        American Standard Code for Information Interchange: American Standard Code for Information Interchange (Código padrão para intercâmbio de informações dos EUA)
+        Automatic Serial Coding for Interface Interchange: Automatic Serial Coding for Interface Interchange (Série de codificação automática para intercâmbio de interface)
       U1L11 Assessment 2:
-        "Assessment: Sending Formatted Text": 'Assessment: Sending Formatted Text'
-        "Question #2": 'Question #2'
-        How many bytes are used to encode a single ASCII character?: How many bytes are used to encode a single ASCII character?
+        "Assessment: Sending Formatted Text": 'Avaliação: envio de texto formatado'
+        "Question #2": Questão 2
+        How many bytes are used to encode a single ASCII character?: Quantos bytes são usados para codificar um único caractere ASCII?
         1 byte: 1 byte
         2 bytes: 2 bytes
         4 bytes: 4 bytes
@@ -831,6 +996,15 @@ pt-BR:
         8: "8"
         10: "10"
         12: "12"
+      U3L06-API-multichoice:
+        Multiple Choice: Múltipla Escolha
+        Choose the option that best answers the question.: Choose the option that best answers the question.
+        What is the primary purpose of an API in a programming language?: What is the primary purpose of an API in a programming language?
+        Application Primary Interactions are fundamental to programming: Application Primary Interactions are fundamental to programming
+        To make programming more complex for those without experience: To make programming more complex for those without experience
+        Programs won't run without good API documentation: "Programs won't run without good API documentation"
+        To provide high-level functionality that simplifies complex programming tasks: To provide high-level functionality that simplifies complex programming tasks
+        It is impossible to write a program without an API: It is impossible to write a program without an API
       unique level name here:
         title: título
         description here: descrição aqui

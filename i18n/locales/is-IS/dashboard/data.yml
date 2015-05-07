@@ -438,24 +438,24 @@ is:
         csp_pixelation_color_3: 'Litadílamynstursgræja - 3. hluti'
         csp_pixelation_bw: Svarthvítdílamynstursgræja
         csp_U1L14_tipstricks: 'Ráð & refabrögð kennara fyrir 1. kafla, kennslustund 14'
-        csp_textcompression: Text compression widget
-        alg_1_intro: 'CS in Algebra - Introduction'
-        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
-        alg_3_pemdas: 'CS in Algebra - Order of Operations'
-        alg_4_data_types: 'CS in Algebra - Data Types'
-        alg_5_contracts: 'CS in Algebra - Contracts'
-        alg_6_variables: 'CS in Algebra - Variables'
-        alg_7_function: 'CS in Algebra - Functions'
-        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
-        alg_9_booleans: 'CS in Algebra - Booleans'
-        alg_10_conditionals: 'CS in Algebra - Conditionals'
-        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
-        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
-        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
-        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
-        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
-        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
-        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        csp_textcompression: Textaþjöppunargræja
+        alg_1_intro: 'Tölvunarfræði (TF) í Algebru - Inngangur'
+        alg_2_eval_block: 'TF í Algebru - Matskubbar'
+        alg_3_pemdas: 'TF í Algebru - Röð aðgerða'
+        alg_4_data_types: 'TF í Algebru - Gagnagerðir'
+        alg_5_contracts: 'TF í Algebru - Samningar'
+        alg_6_variables: 'TF í Algebru - Breytur'
+        alg_7_function: 'TF í Algebru - Föll'
+        alg_8_design_recipe: 'TF í Algebru - Hönnunaruppskrift'
+        alg_9_booleans: 'TF í Algebru - Boole gildi'
+        alg_10_conditionals: 'TF í Algebru - Skilyrði'
+        alg_11_coordinate_plane: 'TF í Algebru - Hnitakerfi'
+        alg_12_biggame_variables: 'TF í Algebru - Stórleikur, breytur'
+        alg_13_biggame_animation: 'TF í Algebru - Stórleikur, hreyfing'
+        alg_14_biggame_booleans: 'TF í Algebru - Stórleikur, Boole gildi'
+        alg_15_biggame_update_player: 'TF í Algebru - Stórleikur, uppfæra leikmann'
+        alg_16_biggame_collision_detection: 'TF í Algebru - Stórleikur, skynjun árekstra'
+        alg_17_sambat_compound_booleans: 'TF í Algebru - Stórleikur, samsett Bool gildi'
     callout:
       text:
         drag_blocks: 'Dragðu "færa" kubb og festu hann neðan í hinn kubbinn'
@@ -524,6 +524,6 @@ is:
         name_function: Skrifaðu heiti fallsins þíns hér
         Infinity_move_right_runbutton: 'Bæta "færa" kubbi við hér'
         Infinity_move_directions_callout: Hvaða kubbur mun láta Baymax færast upp þegar ýtt er á upp örina?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Notaðu þessar örvar til að stýra
         Infinity_move_collide_callout: Spila hljóð þegar þetta atvik á sér stað.
         Infinity_repeat_callout: 'Setja "færa" kubba hér innan í'

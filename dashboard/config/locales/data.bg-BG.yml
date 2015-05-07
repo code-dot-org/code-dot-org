@@ -690,24 +690,26 @@
         csp_pixelation_color_3: Приспособление за цветова пикселизация - част 3
         csp_pixelation_bw: 'Приспособление за черно- бяла пикселизация '
         csp_U1L14_tipstricks: Част 1 урок 14 съвети & трикове за учителя
-        csp_textcompression: Text compression widget
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_textcompression: Приспособление за компресиране на текст
+        alg_1_intro: CS в алгебрата - Въведение
+        alg_2_eval_block: CS в алгебрата - блокове за оценка
+        alg_3_pemdas: CS в алгебрата - ред на операциите
+        alg_4_data_types: CS в алгебрата - типове данни
+        alg_5_contracts: CS в алгебрата - договори
+        alg_6_variables: CS в алгебрата - променливи
+        alg_7_function: CS в алгебрата - функции
+        alg_8_design_recipe: CS в алгебрата - рецепа за дизайн
+        alg_9_booleans: CS в алгебрата -  Booleans
+        alg_10_conditionals: CS в алгебрата - Условия
+        alg_11_coordinate_plane: CS в алгебрата - координатна система
+        alg_12_biggame_variables: 'CS в алгебрата - "Голямата игра": променливи'
+        alg_13_biggame_animation: 'CS в алгебрата - "Голямата игра": анимация'
+        alg_14_biggame_booleans: 'CS в алгебрата - "Голямата игра": Booleans'
+        alg_15_biggame_update_player: 'CS в алгебрата - "Голямата игра": актуализация
+          играч'
+        alg_16_biggame_collision_detection: 'CS в алгебрата - "Голямата игра": отчитане
+          на сблъсък'
+        alg_17_sambat_compound_booleans: CS в алгебрата - комбинирани Booleans
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок
@@ -814,6 +816,6 @@
         Infinity_move_right_runbutton: Добави блок за движение тук
         Infinity_move_directions_callout: Кой блок ще накара Баумакс да се премести
           нагоре при натискане на стрелка нагоре?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Използвайте тези стрелки за управление
         Infinity_move_collide_callout: Издай звук, когато това събитие се случи.
         Infinity_repeat_callout: Постави блоковете за движение тук вътре

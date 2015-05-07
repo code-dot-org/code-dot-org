@@ -582,7 +582,9 @@ input[type="radio"] {
 /* Instructions. */
 #bubble {
   color: black;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer; }
 
 #prompt-table {
   display: inline-block;
@@ -603,7 +605,6 @@ input[type="radio"] {
   vertical-align: top; }
 
 #ani-gif-preview {
-  cursor: pointer;
   display: table-cell;
   background-size: 80px 60px;
   width: 80px;
@@ -617,9 +618,6 @@ input[type="radio"] {
     position: relative; }
 
 /* Place ani-gif next to text for column width 300px or wider. */
-#bubble {
-  position: relative; }
-
 @media screen and (min-width: 1051px) {
   #prompt-table.with-ani-gif {
     margin-right: 80px;

@@ -581,7 +581,7 @@ Blockly.Css.CONTENT = [
   '  position: absolute;',
   '  top: 40px;',
   '  width: 100%;',
-  '  height: 100%;',
+  '  bottom: 0;',
   '}',
   '#modalContainer > svg {',
   '  position: absolute;',

@@ -4,7 +4,7 @@
   "circleBlockTitle": "מעגל (רדיוס, סגנון, צבע)",
   "displayBlockTitle": "לאמוד",
   "ellipseBlockTitle": "אליפסה (רוחב, גובה, סגנון, צבע)",
-  "extraTopBlocks": "יש לך בלוקים לא מחוברים. האם התכוונת לצרף אותם לבלוק ה\"תצוגה\"?",
+  "extraTopBlocks": "יש לך בלוקים ללא שיוך. האם התכוונת לצרף אותם לבלוק \"אמוד\" ?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",
   "overlayBlockTitle": "שכבת-על (למעלה, למטה)",
   "placeImageBlockTitle": "מקם-תמונה (y, x, תמונה)",

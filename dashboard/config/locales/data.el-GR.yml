@@ -736,13 +736,13 @@
         csp_pixelation_bw: Βοήθημα Ασπρόμαυρης εικονοστοιχειοποίησης
         csp_U1L14_tipstricks: Ενότητα 1 Μάθημα 14 Βοηθήματα για δασκάλους
         csp_textcompression: Text compression widget
-        alg_1_intro: CS in Algebra - Introduction
+        alg_1_intro: CS στην Άλγεβρα - Εισαγωγή
         alg_2_eval_block: CS in Algebra - Evaluation Blocks
         alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
+        alg_4_data_types: CS στην Άλγεβρα - Τύποι Δεδομένων
         alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
+        alg_6_variables: CS στην Άλγεβρα - Μεταβλητές
+        alg_7_function: CS στην Άλγεβρα - Συναρτήσεις
         alg_8_design_recipe: CS in Algebra - Design Recipe
         alg_9_booleans: CS in Algebra - Booleans
         alg_10_conditionals: CS in Algebra - Conditionals
