@@ -1,21 +1,27 @@
 /* global ace */
 'use strict';
 
+var utils = require('../utils');
+var _ = utils.getLodash();
+
 /**
  * @typedef {Object} parameterSlotInfo
  * @property {string} funcName
  * @property {number} currentParameterIndex
  */
 
-var ONLY_WHITESPACE_REGEXP = /^[ ]*$/;
-var ENDING_OF_BLOCK_COMMENT = /^\*\/$/;
+var ONLY_WHITESPACE_REGEXP = /^\s*$/;
+var ENDING_OF_BLOCK_COMMENT = /\*\/$/;
+var START_OF_BLOCK_COMMENT = /^\/\*/;
 
+/**
+ * Returns the number of instances of character within string
+ * @param {string} string
+ * @param {string} character
+ * @returns {number}
+ */
 function countNumberOfCharacter(string, character) {
   return string.split(character).length - 1;
-}
-
-function stringContainsCharacter(string, character) {
-  return string.indexOf(character) >= 0;
 }
 
 function openerMatchesCloser(opener, closer) {
@@ -50,13 +56,19 @@ exports.findFunctionAndParamNumber = function (editor, position) {
   if (position.column === 0) {
     // At beginning of a line. Step back one for first token.
     token = iterator.stepBackward();
-  } else if (token) {
-    if (token.type === "comment") {
+  } else if (token && token.type.match(/^comment/)) {
+    var isBlockComment = token.type === "comment.doc" ||
+      token.value.match(START_OF_BLOCK_COMMENT);
+    if (isBlockComment) {
+      var tokenIsEndOfDocComment = token.value.match(ENDING_OF_BLOCK_COMMENT);
+      var cursorIsEndOfToken = (token.start + token.value.length) === position.column;
+      var cursorIsEndOfBlockComment = (tokenIsEndOfDocComment && cursorIsEndOfToken);
+      if (!cursorIsEndOfBlockComment) {
+        // Starting within a block comment
+        return null;
+      }
+    } else {
       // Starting within a comment
-      return null;
-    } else if (token.type === "comment.doc" &&
-      token.value.match(ENDING_OF_BLOCK_COMMENT)) {
-      // Starting within a block comment
       return null;
     }
   }
@@ -88,15 +100,14 @@ exports.findFunctionAndParamNumber = function (editor, position) {
           if (!lastCloser || !openerMatchesCloser(currentOpener, lastCloser)) {
             return null;
           }
-
         }
         break;
       case "punctuation.operator":
         if (seenCloserStack.length === 0) {
-          if (stringContainsCharacter(token.value, ';')) {
+          if (_.contains(token.value, ';')) {
             return null;
           }
-          if (stringContainsCharacter(token.value, ',')) {
+          if (_.contains(token.value, ',')) {
             sameDepthPrecedingCommaCount += countNumberOfCharacter(token.value, ',');
           }
         }
