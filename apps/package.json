@@ -13,6 +13,7 @@
   },
   "browserify": {
     "transform": [
+      "require-globify",
       "browserify-shim"
     ]
   },
@@ -20,9 +21,6 @@
     "blockly": {
       "exports": "Blockly"
     }
-  },
-  "optionalDependencies": {
-    "canvas": "~1.1.6"
   },
   "devDependencies": {
     "@cdo/apps": "0.0.1",
@@ -64,6 +62,7 @@
     "reactify": "^1.1.0",
     "npm-which": "^2.0.0",
     "phantomjs": "^1.9.16",
+    "require-globify": "^1.1.0",
     "requirejs": "~2.1.15",
     "rfile": "~1.0.0",
     "through": "~2.3.6",

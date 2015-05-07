@@ -1,3 +1,3 @@
 // locale for calc
 
-module.exports = window.blockly.appLocale;
+module.exports = window.blockly.calc_locale;

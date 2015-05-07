@@ -1,3 +1,3 @@
 // locale for applab
 
-module.exports = window.blockly.appLocale;
+module.exports = window.blockly.applab_locale;

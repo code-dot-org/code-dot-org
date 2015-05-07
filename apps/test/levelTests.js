@@ -11,76 +11,78 @@
 
 var path = require('path');
 var assert = require('chai').assert;
-var wrench = require('wrench');
-
-var child_process = require('child_process');
 
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
 
-getTestCollections('./test/solutions').forEach(function (path) {
-  runTestCollection(path);
+describe('Level tests', function() {
+  var studioApp;
+  var originalRender;
+
+  beforeEach(function () {
+    testUtils.setupBlocklyFrame();
+    studioApp = testUtils.getStudioAppSingleton();
+
+    // For some reason, svg rendering is taking a long time in phantomjs. None
+    // of these tests depend on that rendering actually happening.
+    var originalRender = Blockly.BlockSvg.prototype.render;
+    Blockly.BlockSvg.prototype.render = function () {
+      this.block_.rendered = true;
+    };
+  });
+
+  afterEach(function () {
+    Blockly.BlockSvg.prototype.render = originalRender;
+  });
+
+  getTestCollections().forEach(function (item, index) {
+    runTestCollection(item);
+  });
+
 });
 
 // Get all json files under directory path
-function getTestCollections (directory) {
-  var files = wrench.readdirSyncRecursive(directory);
+function getTestCollections () {
+  // require-globify transform
+  var files = require('./solutions/maze/*.js', {hash: 'path'});
   var testCollections = [];
-  files.forEach(function (file) {
-    if (/\.js$/.test(file)) {
-      testCollections.push(file);
-    }
+  Object.keys(files).forEach(function (file) {
+    testCollections.push({path: file, data: files[file]});
   });
   return testCollections;
 }
 
 // Loads a test collection at path and runs all the tests specified in it.
-function runTestCollection (path) {
-  var testCollection = require('./solutions/' + path);
+function runTestCollection (item) {
+  var runLevelTest = require('./util/runLevelTest');
+  // Append back the .js so that we can distinguish 2_1.js from 2_10.js when grepping
+  var path = item.path + '.js';
+  var testCollection = item.data;
+
   var app = testCollection.app;
 
   describe(path, function () {
     testCollection.tests.forEach(function (testData, index) {
+      // TODO (brent)
+      if(testData.editCode) {
+        console.log('Skipping editCode test: ' + testData.description);
+        return;
+      }
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these
       // and our getMissingRequiredBlocks tests (and likely also other things
       // in the future)
       if (testData.expected) {
-        runTest(path, testData, index);
+        it(testData.description, function (done) {
+          testUtils.setupLocale(app);
+          var dataItem = require('./util/data')(app);
+          // can specify a test specific timeout in json file.
+          if (testData.timeout !== undefined) {
+            this.timeout(testData.timeout);
+          }
+          runLevelTest(testCollection, testData, dataItem, done);
+        });
       }
-    });
-  });
-}
-
-function runTest (path, testData, index) {
-  it(testData.description, function (done) {
-    var debugArgs = '';
-    // use --dbg to have node start child in debugger on port 5859
-    process.argv.forEach(function (arg) {
-      if (arg === '--dbg') {
-        debugArgs = '--debug-brk=5859';
-      }
-    });
-
-    // can specify a test specific timeout in json file.
-    if (testData.timeout !== undefined) {
-      this.timeout(testData.timeout);
-    }
-    if (process.execArgv.indexOf('--debug') !== -1 ||
-      process.execArgv.indexOf('--debug-brk') !== -1 || debugArgs) {
-      // Don't timeout while we're debugging
-      this.timeout(0);
-    }
-
-    // run executor in it's own node process
-    child_process.exec('node ' + debugArgs + ' test/util/executor ' + path + ' ' +  index,
-      {}, function (error, stdout, stderr) {
-        if (stdout && stdout !== '') {
-          console.log(stdout);
-        }
-        assert.equal(error, null);
-        assert(stderr === "", '\n' + stderr);
-        done();
     });
   });
 }

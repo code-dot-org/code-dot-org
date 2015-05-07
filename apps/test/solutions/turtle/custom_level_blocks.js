@@ -1,10 +1,10 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var blockUtils = require(testUtils.buildPath('block_utils.js'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var blockUtils = require('@cdo/apps/block_utils.js');
 
-var Colours = require(testUtils.buildPath('turtle/colours'));
+var Colours = require('@cdo/apps/turtle/colours');
 
-var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
+var studioApp = require('@cdo/apps/StudioApp').singleton;
 
 module.exports = {
   app: "turtle",

@@ -1,3 +1,3 @@
 // locale for jigsaw
 
-module.exports = window.blockly.appLocale;
+module.exports = window.blockly.jigsaw_locale;
