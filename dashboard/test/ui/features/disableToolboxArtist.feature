@@ -1,7 +1,7 @@
 Feature: Disabling/Reenabling the Toolbox While Running
 
 Background:
-  Given I am on "http://learn.code.org/s/1/level/103?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/19/puzzle/1?noautoplay=true"
   And I rotate to landscape
   Then element ".dialog-title" has text "Puzzle 1 of 6"
   And I close the dialog
@@ -25,7 +25,7 @@ Scenario: Toolbox in artist category view is disabled while running
   Then the workspace has "0" blocks of type "controls_repeat"
 
 Scenario: Toolbox in artist category view is reenabled after finished running a short level
-  Given I am on "http://learn.code.org/s/1/level/63?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/11/puzzle/5?noautoplay=true"
   And I rotate to landscape
   And I close the dialog
   Then I press "runButton"
