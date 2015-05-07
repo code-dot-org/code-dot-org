@@ -1,0 +1,16 @@
+<div class="function-name">
+  <% if (signatureOverride) { -%>
+    <%= signatureOverride %>
+  <% } else {
+    /**
+     * TODO(bjordan): would be nice to split the following line up, can't figure
+     * out how to do so without inserting extraneous spaces between parameters.
+     */
+    -%>
+    <%= functionName %>(<% for (var i = 0; i < parameters.length; i++) { -%><span class="tooltip-parameter-name <% if (i === currentParameterIndex) { %> current-tooltip-parameter-name<% } %>"><%- parameters[i].name -%></span><% if (i < parameters.length - 1) { -%>, <% } -%><% } -%>)
+  <% } %>
+</div>
+<% if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { %><div><%= parameters[currentParameterIndex].description %></div><% } %>
+<div class="tooltip-example-link">
+  <a href="<%= fullDocumentationURL %>" target="_blank">See examples</a>
+</div>
