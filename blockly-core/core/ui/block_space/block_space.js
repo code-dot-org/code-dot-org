@@ -233,6 +233,10 @@ Blockly.BlockSpace.prototype.addTrashcan = function() {
   }
 };
 
+Blockly.BlockSpace.prototype.setTrashcan = function(trashcan) {
+  this.trashcan = trashcan;
+};
+
 /**
  * Get the SVG element that forms the drawing surface.
  * @return {!Element} SVG element.
@@ -553,6 +557,7 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
 * Is the mouse event over a delete area (toolbar or non-closing flyout)?
 * Opens or closes the trashcan and sets the cursor as a side effect.
 * @param {!Event} e Mouse move event.
+* @param {integer} mouseDx The X difference from mouse initial location to current location.
 * @return {boolean} True if event is in a delete area.
 */
 Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
@@ -589,23 +594,34 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
   return false;
 };
 
+Blockly.BlockSpace.prototype.hideDelete = function() {
+  this.drawHotZone(10000);
+};
+
 Blockly.BlockSpace.prototype.drawHotZone = function(x) {
 
   var backgroundClass = this.blockSpaceEditor.toolbox ? "blocklyToolboxDiv" : "blocklyFlyoutBackground";
   var background = goog.dom.getElementByClass(backgroundClass);
   var toolbarWidth = background.getBoundingClientRect().width;
 
+  var trashcan = this.blockSpaceEditor.toolbox ? this.blockSpaceEditor.toolbox.trashcan : this.blockSpaceEditor.flyout_.trashcan;
+
   var hotZone = 100;
 
   var trashColorIntensity = 0;
   if (x <= toolbarWidth) {
     trashColorIntensity = 1;
-  }
-  else if (x >= toolbarWidth + hotZone) {
-    trashColorIntensity = 0;
+    trashcan.setOpen_(true);
   }
   else {
-    trashColorIntensity = 1 - (x - toolbarWidth) / hotZone;
+    trashcan.setOpen_(false);
+
+    if (x >= toolbarWidth + hotZone) {
+      trashColorIntensity = 0;
+    }
+    else {
+      trashColorIntensity = 1 - (x - toolbarWidth) / hotZone;
+    }
   }
   var normalColorIntensity = 1 - trashColorIntensity;
 

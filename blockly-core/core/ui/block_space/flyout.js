@@ -138,12 +138,13 @@ Blockly.Flyout.prototype.createDom = function(insideToolbox) {
 
   // we kinda want to show a trash can here
   if (! insideToolbox) {
-    this.trashcan = new Blockly.Trashcan(this);
-    var svgTrashcan = this.trashcan.createDom();
+    var trashcan = new Blockly.Trashcan(this);
+    var svgTrashcan = trashcan.createDom();
     svgTrashcan.setAttribute("style", "opacity: 0");
     svgTrashcan.setAttribute('transform', 'translate(60, 20)');
     this.svgGroup_.appendChild(svgTrashcan);
     //this.trashcan.init();
+    this.trashcan = trashcan;
   }
 
   return this.svgGroup_;
