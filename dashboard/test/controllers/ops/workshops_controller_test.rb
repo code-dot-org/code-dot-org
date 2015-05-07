@@ -74,7 +74,7 @@ module Ops
                          {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}]
 
       assert_creates(Workshop, User) do
-        post :create, workshop: {name: 'test workshop', program_type: '1', cohort_id: @cohort, facilitators:facilitator_params}
+        post :create, workshop: {name: 'test workshop', program_type: '1', cohorts: [{id: @cohort.id}], facilitators:facilitator_params}
       end
       assert_response :success
 
