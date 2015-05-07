@@ -637,6 +637,10 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
       this.startDragMouseX = e.clientX;
       this.startDragMouseY = e.clientY;
     }
+
+    // At this point, the user has not moved to the left of the starting point.
+    this.movedLeft = false;
+
     Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_INSIDE_STICKY_RADIUS;
     Blockly.Block.onMouseUpWrapper_ = Blockly.bindEvent_(document,
         'mouseup', this, this.onMouseUp_);
@@ -705,6 +709,7 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
     Blockly.highlightedConnection_.unhighlight();
     Blockly.highlightedConnection_ = null;
   }
+  thisBlockSpace.hideDelete();
   thisBlockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.OPEN);
 };
 
@@ -1037,6 +1042,12 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
   Blockly.removeAllRanges();
   var dx = e.clientX - this.startDragMouseX;
   var dy = e.clientY - this.startDragMouseY;
+
+  // Determine whether the user has moved significantly to the left of the starting point.
+  if (dx < -10) {
+    this.movedLeft = true;
+  }
+
   if (Blockly.Block.dragMode_ == Blockly.Block.DRAG_MODE_INSIDE_STICKY_RADIUS) {
     // Still dragging within the sticky DRAG_RADIUS.
     var dr = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
@@ -1097,7 +1108,11 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
     // Provide visual indication of whether the block will be
     // deleted if dropped here.
     if (this.areBlockAndDescendantsDeletable()) {
-      this.blockSpace.isDeleteArea(e);
+      // We only want to check for deleting if the user has moved
+      // the block left of its starting point at some point in this drag.
+      if (this.movedLeft) {
+        this.blockSpace.isDeleteArea(e, dx);
+      }
     }
   }
   // This event has been handled.  No need to bubble up to the document.

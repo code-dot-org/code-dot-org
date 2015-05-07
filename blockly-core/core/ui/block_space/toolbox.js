@@ -86,12 +86,13 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
     style: 'display: block; position: absolute'
   }, this.HtmlDiv);
 
-  this.trashcan = new Blockly.Trashcan(this);
-  var svgTrashcan = this.trashcan.createDom();
+  var trashcan = new Blockly.Trashcan(this);
+  var svgTrashcan = trashcan.createDom();
   svgTrashcan.setAttribute("style", "opacity: 0");
   svgTrashcan.setAttribute('transform', 'translate(20, 10)');
   trashCanHolder.appendChild(svgTrashcan);
   //this.trashcan.init();
+  this.trashcan = trashcan;
 
   /**
    * @type {!Blockly.Flyout}
