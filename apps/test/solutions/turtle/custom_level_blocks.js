@@ -13,6 +13,7 @@ module.exports = {
   tests: [
     {
       description: "fractal snowflake",
+      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
@@ -49,6 +50,7 @@ module.exports = {
 
     {
       description: "spiral snowflake",
+      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
@@ -67,6 +69,7 @@ module.exports = {
 
     {
       description: "line snowflake",
+      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
@@ -85,6 +88,7 @@ module.exports = {
 
     {
       description: "parallelogram snowflake",
+      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,

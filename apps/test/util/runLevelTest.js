@@ -1,4 +1,5 @@
 var assert = require('chai').assert;
+var _ = require('lodash');
 var timeoutList = require('@cdo/apps/timeoutList');
 var cb;
 
@@ -15,7 +16,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
   // level, or provide it's own custom level
   if (testCollection.levelFile) {
     var levels = data.levels[testCollection.levelFile];
-    level = levels[testCollection.levelId];
+    level = _.cloneDeep(levels[testCollection.levelId]);
   } else {
     // custom levels can either be across all tests in the collection (in which
     // case it's testCollection.levelDefinition), or for a single test (in which
@@ -34,7 +35,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
     level.scale = {};
   }
   level.scale.stepSpeed = 0;
-  level.sliderSpeed = -1;
+  level.sliderSpeed = 1;
 
   // studio tests depend on timing
   if (app === 'studio') {

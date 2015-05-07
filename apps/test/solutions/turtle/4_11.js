@@ -8,6 +8,7 @@ module.exports = {
   levelId: "4_11",
   tests: [
     {
+      timeout: 12000,
       description: "Top Solve: Repeat 9 times, right 80",
       expected: {
         result: true,
