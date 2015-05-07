@@ -32,11 +32,8 @@
       }
     ],
     "title": "Barrier to Using Data",
-    "content1": "Based on the video you just watched, answer the following \nquestion",
-    "type": "Multi",
-    "concept_ids": [
-      ""
-    ]
-  }
+    "content1": "Based on the video you just watched, answer the following \nquestion"
+  },
+  "md5": "8c2782d8068b22bb54ef890271bf9467"
 }]]></config>
 </Multi>

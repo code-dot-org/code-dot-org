@@ -1,19 +1,18 @@
 title 'CSP Unit 3 - Programming'
 description 'Programming in JavaScript and App Lap'
 description_short 'Programming'
+login_required 'true'
 
 stage 'The Need For Programming Languages'
 level 'U1L1 Student Lesson Introduction'
 
 stage 'Using Simple Commands'
-level 'U1L1 Student Lesson Introduction'
 level 'U3L2 Using Simple Commands'
 level 'U3L2_TurtleSquare_right'
 level 'U3L2_Turtle3by3Grid'
 level 'CSP Journal Entry Placeholder2'
 
 stage 'Creating Procedures - Part 1'
-level 'U1L1 Student Lesson Introduction'
 level 'U3L03 Define and use turnAround'
 level 'U3L03 Draw a T using turnAround'
 level 'U3L03 define turnRight and draw a rectangle'
@@ -23,14 +22,12 @@ level 'CSP Journal Entry Placeholder2'
 
 
 stage 'Creating Procedures - Part 2'
-level 'U1L1 Student Lesson Introduction'
 level 'U3L04 diamond solution'
 level 'U3L04 choose your own drawing'
 level 'CSP Journal Entry Placeholder2'
 
 
 stage 'Layers of Abstraction and Programming Efficiency'
-level 'U1L1 Student Lesson Introduction'
 level 'U3L05_3x3GridEfficiencyChallenge'
 level 'CSP Journal Entry Placeholder2'
 
@@ -47,13 +44,11 @@ level 'U3L06-API-multichoice'
 level 'CSP Journal Entry Placeholder2'
 
 stage 'Looping and Random Numbers'
-level 'U1L1 Student Lesson Introduction'
 level 'U3L07 - Starry Night Starter Code'
 level 'U3L07 - Free Play Loops and Random'
 level 'CSP Journal Entry Placeholder2'
 
 stage 'Creating functions with Parameters'
-level 'U1L1 Student Lesson Introduction'
 level 'U3L08 - Enchantment Under the Sea'
 
 stage 'Scene Design Part 1 - Plan'
@@ -69,8 +64,10 @@ stage 'Unplugged Events Activity -  Mission Unsortable’
 level 'U1L1 Student Lesson Introduction'
 
 stage 'Buttons on the Screen'
-level 'U1L1 Student Lesson Introduction'
+level 'U3L13 Add Button Instrucitons'
 level 'U3L13 - Turtle move with button'
+level 'U3L13 - Explanation of Ids'
+level 'U313 Two Buttons with Ids'
 level 'U3L13 - Debug Id Problem'
 level 'U3L13 - Debug Id plus logic problem'
 level 'U3L13 - Turtle Driver Project'
@@ -135,7 +132,3 @@ level 'U1L1 Student Lesson Introduction'
 
 stage 'Arrays and Loops_ Hidden Images'
 level 'U1L1 Student Lesson Introduction'
-
-stage 'Sarah testing project backed levels'
-level 'applab_test_sarah'
-level 'applab_test2_sarah'

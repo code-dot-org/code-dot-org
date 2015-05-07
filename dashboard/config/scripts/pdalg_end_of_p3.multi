@@ -1,0 +1,22 @@
+name 'PDAlg end of P3'
+title 'Plans for the Future'
+skip_sound true
+hide_submit true
+success_title 'Awesome!'
+success_body 'Thanks for your response.'
+
+question 'What are you plans for next year?'
+right 'Keep teaching Bootstrap'
+right 'Start teaching CS in Algebra'
+right 'Not teaching either'
+right 'Not sure yet'
+
+markdown <<MARKDOWN
+### Thank's for checking out CS in Algebra
+
+We hope you've had a great year teaching Bootstrap, and that you've enjoyed learning about our new CS in Algebra course. If you'd like to learn more about CS in Algebra, you can visit the following pages:
+
+- <a href="http://studio.code.org/s/algebra" target="_blank">Online Activities</a>
+- <a href="http://code.org/curriculum/algebra" target="_blank">Lesson Plans and Teaching Materials</a>
+- <a href="http://code.org/teacher-dashboard" target="_blank">Teacher Dashboard</a>
+MARKDOWN
