@@ -12,7 +12,7 @@ class Workshop < ActiveRecord::Base
   # A Workshop is associated with one or more Cohorts
   has_many :workshops_cohorts, inverse_of: :workshop, dependent: :destroy
   has_many :cohorts, through: :workshops_cohorts
-  accepts_nested_attributes_for :workshops_cohorts, allow_destroy: true
+  has_many :districts, through: :cohorts
 
   # A Workshop has at least one Facilitator(s)
   has_and_belongs_to_many :facilitators,
