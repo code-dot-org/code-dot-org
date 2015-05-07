@@ -3,6 +3,7 @@
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
 var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
+var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
 
 /**
  * @fileoverview Manages a store of known blocks and tooltips
@@ -30,6 +31,12 @@ function DropletTooltipManager() {
    * @private
    */
   this.dropletAutocompletePopupTooltipManager_ = new DropletAutocompletePopupTooltipManager(this);
+
+  /**
+   * @type {DropletAutocompletePopupTooltipManager}
+   * @private
+   */
+  this.dropletAutocompleteParameterTooltipManager_ = new DropletAutocompleteParameterTooltipManager(this);
 }
 
 /**
@@ -46,6 +53,7 @@ DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (dro
  */
 DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (dropletEditor) {
   this.dropletAutocompletePopupTooltipManager_.installTooltipsForEditor_(dropletEditor);
+  this.dropletAutocompleteParameterTooltipManager_.installTooltipsForEditor_(dropletEditor);
 };
 
 /**

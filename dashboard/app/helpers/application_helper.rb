@@ -48,6 +48,8 @@ module ApplicationHelper
   def activity_css_class(result)
     if result.nil?
       'not_tried'
+    elsif result >= Activity::SUBMITTED_RESULT
+      'submitted'
     elsif result >= Activity::FREE_PLAY_RESULT
       'perfect'
     elsif result >= Activity::MINIMUM_PASS_RESULT
@@ -64,8 +66,7 @@ module ApplicationHelper
       elsif session[:progress] && session[:progress][script_level.level_id]
         session[:progress][script_level.level_id]
       end
-    link = build_script_level_url(script_level)
-    [activity_css_class(result), link]
+    activity_css_class(result)
   end
 
   def show_flashes
