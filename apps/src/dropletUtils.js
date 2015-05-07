@@ -129,6 +129,9 @@ standardConfig.categories = {
 /**
  * @param codeFunctions
  * @param {DropletConfig} dropletConfig
+ * @param {DropletConfig} otherConfig optionally used to supply a standardConfig
+ *  object which is not app specific. It will be used first, then overriden
+ *  by the primary dropletConfig if there is overlap between the two.
  * @returns {Array}
  */
 function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
