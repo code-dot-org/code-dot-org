@@ -254,7 +254,7 @@ SQL
 
   def pd_progress
     authorize! :read, :reports
-    @script = Script.find_by(name: 'K5PD')
+    @script = Script.find_by(name: params[:script] || 'K5PD')
     # Get all users with any activity in the script
     @users = Activity.where(level_id: @script.levels.map(&:id)).map(&:user_id).uniq.map{|id|User.find(id)}
   end
