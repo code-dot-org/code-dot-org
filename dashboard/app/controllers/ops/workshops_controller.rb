@@ -26,7 +26,7 @@ module Ops
           Workshop.all
         elsif current_user.permission?('district_contact')
           # For district contacts, list all workshops in all cohorts in their district.
-          Workshop.includes(cohort: :districts).where(districts: {contact_id: current_user.try(:id)})
+          Workshop.includes(cohorts: :districts).where(districts: {contact_id: current_user.try(:id)})
         elsif current_user.permission?('facilitator')
           # For facilitators, list all workshops they're facilitating.
           current_user.workshops_as_facilitator
@@ -68,7 +68,7 @@ module Ops
         :program_type,
         :location,
         :instructions,
-        :cohort_id,
+        cohorts: [:cohort_id],
         facilitators: [:ops_first_name, :ops_last_name, :email]
       )
     end
