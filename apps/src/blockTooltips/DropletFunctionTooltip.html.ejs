@@ -2,7 +2,7 @@
   <% if (signatureOverride) { -%>
     <%= signatureOverride %>
   <% } else { -%>
-    <%= functionName %>(<% for (var i = 0; i < parameters.length; i++) { -%><%- parameters[i] -%><% if (i < parameters.length - 1) { -%>, <% } -%><% } -%>)
+    <%= functionName %>(<% for (var i = 0; i < parameters.length; i++) { -%><%- parameters[i].name -%><% if (i < parameters.length - 1) { -%>, <% } -%><% } -%>)
   <% } %>
 </div>
 <% if (functionShortDescription) { %><div><%= functionShortDescription %></div><% } %>
