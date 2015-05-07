@@ -9,7 +9,8 @@ module Ops
       @admin = create(:admin)
       sign_in @admin
       @workshop = create(:workshop)
-      @cohort = @workshop.cohort
+      # @cohort = @workshop.cohort
+      @cohort = @workshops_cohort.cohort
       @cohort_district = create(:cohorts_district, cohort: @cohort)
       @cohort = @cohort.reload
       @district = @cohort_district.district
