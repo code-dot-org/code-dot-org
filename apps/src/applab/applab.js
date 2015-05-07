@@ -205,22 +205,27 @@ function adjustAppSizeStyles(container) {
         } else if (rules[j].media && childRules) {
           adjustMediaHeightRule(rules[j].media, defaultHeightRules, newHeightRules);
 
+          // NOTE: selectorText can appear in two different forms when styles and IDs
+          // are both present. IE places the styles before the IDs, so we match both forms:
           var changedChildRules = 0;
           var scale = scaleFactors[curScaleIndex];
           for (var k = 0; k < childRules.length && changedChildRules < 8; k++) {
-            if (childRules[k].selectorText === "div#visualization.responsive") {
+            if (childRules[k].selectorText === "div#visualization.responsive" ||
+                childRules[k].selectorText === "div.responsive#visualization") {
               // For this scale factor...
               // set the max-height and max-width for the visualization
               childRules[k].style.cssText = "max-height: " +
                   Applab.appHeight * scale + "px; max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive") {
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive" ||
+                       childRules[k].selectorText === "div.responsive#visualizationColumn") {
               // set the max-width for the parent visualizationColumn
               childRules[k].style.cssText = "max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding") {
+            } else if (childRules[k].selectorText === "div#visualizationColumn.responsive.with_padding" ||
+                       childRules[k].selectorText === "div.with_padding.responsive#visualizationColumn") {
               // set the max-width for the parent visualizationColumn (with_padding)
               childRules[k].style.cssText = "max-width: " +
                   (Applab.appWidth * scale + 2) + "px;";
@@ -245,7 +250,8 @@ function adjustAppSizeStyles(container) {
               childRules[k].style.cssText = "right: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
-            } else if (childRules[k].selectorText === "div#visualization.responsive > *") {
+            } else if (childRules[k].selectorText === "div#visualization.responsive > *" ||
+                       childRules[k].selectorText === "div.responsive#visualization > *") {
               // and set the scale factor for all children of the visualization
               // (importantly, the divApplab element)
               childRules[k].style.cssText = "-webkit-transform: scale(" + scale +
@@ -472,6 +478,13 @@ function onDebugInputKeyDown(e) {
           scope: currentScope,
           thisExpression: currentScope
       }];
+      // Copy these properties directly into the evalInterpreter so the .isa()
+      // method behaves as expected
+      ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
+        'UNDEFINED'].forEach(
+        function (prop) {
+          evalInterpreter[prop] = Applab.interpreter[prop];
+        });
       try {
         evalInterpreter.run();
         outputApplabConsole('< ' + String(evalInterpreter.value));
@@ -957,7 +970,7 @@ Applab.init = function(config) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
     if (slider) {
-      Applab.speedSlider = new Slider(10, 35, 130, slider);
+      Applab.speedSlider = new Slider(10, 27, 130, slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
@@ -972,10 +985,10 @@ Applab.init = function(config) {
 
   var debugResizeBar = document.getElementById('debugResizeBar');
   if (debugResizeBar) {
-    debugResizeBar.addEventListener('mousedown',
-                                    Applab.onMouseDownDebugResizeBar);
-    document.body.addEventListener('mouseup',
-                                   Applab.onMouseUpDebugResizeBar);
+    dom.addMouseDownTouchEvent(debugResizeBar,
+                               Applab.onMouseDownDebugResizeBar);
+    dom.addMouseUpTouchEvent(document.body,
+                             Applab.onMouseUpDebugResizeBar);
   }
 
   var finishButton = document.getElementById('finishButton');
@@ -1028,17 +1041,19 @@ Applab.init = function(config) {
           studioApp.resetButtonClick();
         }
       });
-      var scale = vizAppWidth / Applab.appWidth;
-      var gridSize = 20;
+      var GRID_SIZE = 20;
       $('#visualization').droppable({
         accept: '.new-design-element',
         drop: function (event, ui) {
           var elementType = ui.draggable[0].dataset.elementType;
 
+          var scale = Applab.getVizScaleFactor();
           var left = ui.position.left / scale;
-          left = Math.round(left - left % gridSize);
           var top = ui.position.top / scale;
-          top = Math.round(top - top % gridSize);
+
+          // snap top-left corner to nearest location in the grid
+          left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+          top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
 
           Applab.createElement(elementType, left, top);
         }
@@ -1054,6 +1069,11 @@ Applab.onMouseDownDebugResizeBar = function (event) {
   if (event.srcElement.id === 'debugResizeBar') {
     Applab.draggingDebugResizeBar = true;
     document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.addEventListener(Applab.mouseMoveTouchEventName,
+                                     Applab.onMouseMoveDebugResizeBar);
+    }
 
     event.preventDefault();
   }
@@ -1069,7 +1089,7 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   var debugArea = document.getElementById('debug-area');
 
   var rect = debugResizeBar.getBoundingClientRect();
-  var offset = parseInt(window.getComputedStyle(codeApp).bottom, 10) -
+  var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
                rect.height / 2;
   var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
@@ -1096,6 +1116,10 @@ Applab.onMouseUpDebugResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (Applab.draggingDebugResizeBar) {
     document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.removeEventListener(Applab.mouseMoveTouchEventName,
+                                        Applab.onMouseMoveDebugResizeBar);
+    }
     Applab.draggingDebugResizeBar = false;
   }
 };
@@ -1145,14 +1169,20 @@ Applab.createElement = function (elementType, left, top) {
   switch (elementType) {
     case ElementType.BUTTON:
       el.appendChild(document.createTextNode('Button'));
-      el.style.margin = 0;
+      el.style.margin = '2px';
+      el.style.height = '36px';
+      el.style.width = '76px';
+      el.style.fontSize = '14px';
       break;
     case ElementType.LABEL:
       el.appendChild(document.createTextNode("text"));
-      el.style.margin = '10px';
+      el.style.margin = '10px 5px';
+      el.style.height = '20px';
       break;
     case ElementType.INPUT:
-      el.style.margin = '10px';
+      el.style.margin = '5px 2px';
+      el.style.width = '236px';
+      el.style.height = '30px';
       break;
     default:
       throw "unrecognized element type " + elementType;
@@ -1165,6 +1195,7 @@ Applab.createElement = function (elementType, left, top) {
   var divApplab = document.getElementById('divApplab');
   divApplab.appendChild(el);
   Applab.makeDraggable($(el));
+  Applab.editElementProperties(el);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
@@ -1173,7 +1204,7 @@ Applab.createElement = function (elementType, left, top) {
  * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
  */
 Applab.makeDraggable = function (jq) {
-  var gridSize = 20;
+  var GRID_SIZE = 20;
   jq.draggable({
     cancel: false,  // allow buttons and inputs to be dragged
     drag: function(event, ui) {
@@ -1187,18 +1218,18 @@ Applab.makeDraggable = function (jq) {
       var changeTop = ui.position.top - ui.originalPosition.top;
       var newTop = (ui.originalPosition.top + changeTop) / scale;
 
+      // snap top-left corner to nearest location in the grid
+      newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+      newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
+
       // containment
       var container = $('#divApplab');
-      var maxLeft = container.width() - ui.helper.outerWidth(true);
-      var maxTop = container.height() - ui.helper.outerHeight(true);
+      var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+      var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
       newLeft = Math.min(newLeft, maxLeft);
       newLeft = Math.max(newLeft, 0);
       newTop = Math.min(newTop, maxTop);
       newTop = Math.max(newTop, 0);
-
-      // grid
-      newLeft -= newLeft % gridSize;
-      newTop -= newTop % gridSize;
 
       ui.position.left = newLeft;
       ui.position.top = newTop;
@@ -1224,6 +1255,11 @@ Applab.getVizScaleFactor = function () {
   throw 'Unexpected body width: ' + width;
 };
 
+/**
+ * If in design mode and program is not running, display Properties
+ * pane for editing the clicked element.
+ * @param event
+ */
 Applab.onDivApplabClick = function (event) {
   if (!window.$ || $('#designModeButton').is(':visible') ||
       $('#resetButton').is(':visible')) {
@@ -1231,6 +1267,54 @@ Applab.onDivApplabClick = function (event) {
   }
   event.preventDefault();
   Applab.editElementProperties(event.target);
+};
+
+/**
+ * @param el {Element}
+ * @returns {number} The outerWidth (width + margin) of the element in pixels,
+ * or NaN if element's css width or margin are not defined.
+ */
+Applab.getOuterWidth = function(el) {
+  var marginLeft = parseInt($(el).css('margin-left'), 10);
+  var marginRight = parseInt($(el).css('margin-right'), 10);
+  return parseInt(el.style.width, 10) + marginLeft + marginRight;
+};
+
+/**
+ * Sets element width equal to outerWidth minus margin,
+ * or to '' if margin is undefined.
+ * @param el {Element}
+ * @param outerWidth {number} Desired element outerWidth in pixels.
+ */
+Applab.setOuterWidth = function(el, outerWidth) {
+  var marginLeft = parseInt($(el).css('margin-left'), 10);
+  var marginRight = parseInt($(el).css('margin-right'), 10);
+  var width = +outerWidth - marginLeft - marginRight;
+  el.style.width = isNaN(width) ? '' : width + 'px';
+};
+
+/**
+ * @param el {Element}
+ * @returns {number} the outerHeight (height + margin) of the element in pixels,
+ * or NaN if element's css height or margin are not defined.
+ */
+Applab.getOuterHeight = function(el) {
+  var marginTop = parseInt($(el).css('margin-top'), 10);
+  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
+  return parseInt(el.style.height, 10) + marginTop + marginBottom;
+};
+
+/**
+ * Sets element height equal to outerHeight minus margin,
+ * or to '' if margin is undefined.
+ * @param el {Element}
+ * @param outerHeight {number} Desired element outerHeight in pixels.
+ */
+Applab.setOuterHeight = function(el, outerHeight) {
+  var marginTop = parseInt($(el).css('margin-top'), 10);
+  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
+  var height = +outerHeight - marginTop - marginBottom;
+  el.style.height = isNaN(height) ? '' : height + 'px';
 };
 
 // Currently there is a 1:1 mapping between applab element types and HTML tag names
@@ -1243,14 +1327,16 @@ Applab.editElementProperties = function(el) {
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
+  var outerWidth = Applab.getOuterWidth(el);
+  var outerHeight = Applab.getOuterHeight(el);
   designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
     tagName: tagName,
     props: {
       id: el.id,
-      left: el.style.left,
-      top: el.style.top,
-      width: el.style.width,
-      height: el.style.height,
+      left: parseInt(el.style.left, 10) || 0,
+      top: parseInt(el.style.top, 10) || 0,
+      width: isNaN(outerWidth) ? '' : outerWidth,
+      height: isNaN(outerHeight) ? '' : outerHeight,
       text: $(el).text()
     }
   });
@@ -1266,11 +1352,32 @@ Applab.editElementProperties = function(el) {
   }
 };
 
+/**
+ * Clear the Properties pane of applab's design mode.
+ */
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
-    tagName: null
+  if (designPropertiesEl) {
+    designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
+      tagName: null
+    });
+  }
+};
+
+/**
+ * Enable (or disable) dragging of new elements from the element tray,
+ * and show (or hide) the 'Clear' button.
+ * @param allowEditing {boolean}
+ */
+Applab.resetElementTray = function (allowEditing) {
+  $('#design-elements .new-design-element').each(function() {
+    $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
+  var designModeClear = document.getElementById('designModeClear');
+  if (designModeClear) {
+    designModeClear.style.display = allowEditing ? 'inline-block' : 'none';
+  }
+
 };
 
 Applab.isValidElementType = function (type) {
@@ -1284,10 +1391,12 @@ Applab.isValidElementType = function (type) {
 
 Applab.onSavePropertiesButton = function(el, event) {
   el.id = document.getElementById('design-property-id').value;
-  el.style.left = document.getElementById('design-property-left').value;
-  el.style.top = document.getElementById('design-property-top').value;
-  el.style.width = document.getElementById('design-property-width').value;
-  el.style.height = document.getElementById('design-property-height').value;
+  el.style.left = document.getElementById('design-property-left').value + 'px';
+  el.style.top = document.getElementById('design-property-top').value + 'px';
+  var outerWidth = document.getElementById('design-property-width').value;
+  Applab.setOuterWidth(el, outerWidth);
+  var outerHeight = document.getElementById('design-property-height').value;
+  Applab.setOuterHeight(el, outerHeight);
   $(el).text(document.getElementById('design-property-text').value);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
@@ -1307,14 +1416,18 @@ Applab.serializeToLevelHtml = function () {
   return s.serializeToString(clone);
 };
 
-Applab.parseFromLevelHtml = function(rootEl, isDesignMode) {
+/**
+ * @param rootEl {Element}
+ * @param allowDragging {boolean}
+ */
+Applab.parseFromLevelHtml = function(rootEl, allowDragging) {
   if (!Applab.levelHtml) {
     return;
   }
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
   children.appendTo(rootEl);
-  if (isDesignMode) {
+  if (allowDragging) {
     Applab.makeDraggable(children);
   }
 };
@@ -1386,10 +1499,15 @@ studioApp.reset = function(first) {
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
-  Applab.parseFromLevelHtml(newDivApplab, isDesignMode);
+  var isRunning = window.$ && $('#resetButton').is(':visible');
+  var allowDragging = isDesignMode && !isRunning;
+  Applab.parseFromLevelHtml(newDivApplab, allowDragging);
+  if (isDesignMode) {
+    Applab.clearProperties();
+    Applab.resetElementTray(allowDragging);
+  }
 
   newDivApplab.addEventListener('click', Applab.onDivApplabClick);
-
 
   // Reset goal successState:
   if (level.goal) {
@@ -1449,7 +1567,8 @@ studioApp.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   // Behave like other apps when not editing a project or channel id is present.
-  if (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id)) {
+  if (window.dashboard &&
+      (!dashboard.isEditingProject || (dashboard.currentApp && dashboard.currentApp.id))) {
     if (window.$) {
       $(window).trigger('run_button_pressed');
     }
@@ -1485,10 +1604,6 @@ studioApp.runButtonClick = function() {
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
-    var designCell = document.getElementById('design-cell');
-    if (designCell) {
-      designCell.className = 'design-cell-enabled';
-    }
   }
 };
 
@@ -1825,8 +1940,8 @@ Applab.onViewData = function() {
 };
 
 Applab.onDesignModeButton = function() {
-  studioApp.resetButtonClick();
   Applab.toggleDesignMode(true);
+  studioApp.resetButtonClick();
 };
 
 Applab.onCodeModeButton = function() {
@@ -1835,6 +1950,19 @@ Applab.onCodeModeButton = function() {
 
 Applab.onDesignModeClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
+Applab.toggleDragging = function(enable) {
+  var children = $('#divApplab').children();
+  if (enable) {
+    Applab.makeDraggable(children);
+  } else {
+    children.each(function() {
+      if ($(this).data('uiDraggable')) {
+        $(this).draggable('destroy');
+      }
+    });
+  }
 };
 
 Applab.toggleDesignMode = function(enable) {
@@ -1856,12 +1984,7 @@ Applab.toggleDesignMode = function(enable) {
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
 
-  var children = $('#divApplab').children();
-  if (enable) {
-    Applab.makeDraggable(children);
-  } else if (children.data('uiDraggable')) {
-    children.draggable('destroy');
-  }
+  Applab.toggleDragging(enable);
 };
 
 Applab.onPuzzleComplete = function() {

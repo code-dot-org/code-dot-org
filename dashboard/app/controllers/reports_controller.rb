@@ -26,7 +26,11 @@ SQL
   end
 
   def header_stats
-    render file: 'shared/_user_stats', layout: false, locals: {user: current_user}
+    if params[:user_id].present?
+      user = User.find(params[:user_id])
+      authorize! :read, user
+    end
+    render file: 'shared/_user_stats', layout: false, locals: {user: user || current_user}
   end
 
   def prizes
@@ -233,6 +237,19 @@ SQL
     end
     require 'naturally'
     @data_array = @data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+  end
+
+  def monthly_metrics
+    authorize! :read, :reports
+    recent_users = User.where(current_sign_in_at: (Time.now - 30.days)..Time.now)
+    metrics = {
+      :'Teachers with Active Students' => recent_users.joins(:teachers).distinct.count('teachers_users.id'),
+      :'Active Students' => recent_users.count,
+      :'Active Female Students' => (f = recent_users.where(gender: 'f').count),
+      :'Active Male Students' =>  (m = recent_users.where(gender: 'm').count),
+      :'Female Ratio' => f.to_f / (f + m),
+    }
+    render locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
   end
 
   private

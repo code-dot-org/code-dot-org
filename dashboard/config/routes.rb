@@ -163,6 +163,8 @@ Dashboard::Application.routes.draw do
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
   get '/admin/lookup_section', to: 'reports#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'reports#lookup_section'
+  get '/admin/:action', controller: 'reports', as: 'reports'
+
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
   get '/stats/students', to: redirect_to_teacher_dashboard
   get '/stats/:user_id', to: 'reports#user_stats', as: 'user_stats'

@@ -4,9 +4,10 @@ theme: none
 ---
 - authentication_required!
 
-= view :breadcrumbs, trail: [{url: '/teacher-dashboard', text: 'Dashboard'}, {url: '/ops-dashboard#/teacher-cohorts', text: 'PD Workshops'}, {text: 'Teacher cohort management'}]
+= view :breadcrumbs, trail: [{url: '/teacher-dashboard', text: 'Dashboard'}, {url: '/ops-dashboard#/teacher-cohorts', text: 'Teacher cohorts'}, {text: 'Teacher cohort management'}]
 
 %h1{"ng-show" => "cohort.id"} Teachers in {{cohort.name}}
+
 
 #learn-tabs{"ng-show"=>"cohort.id", style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
   %ul.nav.nav-tabs{style: "float: left;"}
@@ -15,11 +16,11 @@ theme: none
       %a{'ng-href' => "#/teacher-cohorts/{{cohort.id}}/teachers"} Manage
 
   .managebuttons{"ng-if" => "tab == 'manage' || 1", style: "float:right"}
-    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = false; new_teacher()"}
+    %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = false; new_teacher()", "ng-disabled" => "isAfterCutoff()"}
       %i.fa.fa-user-plus
       Add teacher
     - if dashboard_user[:admin]
-      %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading"}
+      %button.btn.btn-white{"ng-click" => "teachers_bulk_import.uploading = !teachers_bulk_import.uploading", "ng-disabled" => "isAfterCutoff()"}
         %i.fa.fa-upload
         Import teachers
       %a{"ng-href" => '/dashboardapi/cohorts/{{cohort.id}}/teachers.csv'}
@@ -35,6 +36,11 @@ theme: none
       Bob,Smith,bob.smith@example.com,Los Angeles Unified School District,Pine Tree Elementary,Female
       Mary,Jones,mary.jones@example.com,Broward County Public Schools,Washington Middle School,Male
   %input{type: 'file', id: 'csv_upload', onchange: "angular.element(this).scope().onFileSelect(this)"}
+
+%div{"ng-hide" => "isAfterCutoff() || !cohort.cutoff_date"}
+  You may edit the teachers in this cohort until {{cohort.cutoff_date | date:'fullDate'}}
+%div{"ng-show" => "isAfterCutoff() && cohort.cutoff_date"}
+  The deadline for modifying the teachers in this cohort was {{cohort.cutoff_date | date:'fullDate'}}
 
 %div{'ng-show' => 'cohort.districts.length > 0'}
   %h3 Cohort capacity
@@ -173,9 +179,9 @@ theme: none
           %a.btn.btn-danger.btn-xs{"ng-click"=>'del(teacher)'} Yes
           %a.btn.btn-success.btn-xs{"ng-click"=>'teacher.confirmDelete = false'} No
         %span{"ng-hide" => "teacher.confirmDelete"}
-          %a.btn.btn-white.btn-xs{"ng-click" => "edit(teacher)", "ng-hide" => "teacher.editing"} Edit
+          %a.btn.btn-white.btn-xs{"ng-click" => "edit(teacher)", "ng-hide" => "teacher.editing", "ng-disabled" => "isAfterCutoff()"} Edit
           %a.btn.btn-white.btn-xs{"ng-click" => "cancel(teacher)", "ng-show" => "teacher.editing"} Cancel
-          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)", "ng-show" => "!teacher.editing && teacher.id"} Delete
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(teacher)", "ng-show" => "!teacher.editing && teacher.id", "ng-disabled" => "isAfterCutoff()"} Delete
 
 %h3 Deleted Teachers
 
@@ -218,7 +224,8 @@ theme: none
       %td
         {{teacher.ops_gender}}
       %td{nowrap: true, style: 'white-space: nowrap;'}
-        %a.btn.btn-white.btn-xs{"ng-click" => "undelete(teacher)"} Restore
+        %a.btn.btn-white.btn-xs{"ng-click" => "undelete(teacher)", "ng-disabled" => "isAfterCutoff()"}
+          Restore
 
 :scss
   .cohort-teachers input.ng-invalid.ng-dirty {

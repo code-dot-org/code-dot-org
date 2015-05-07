@@ -1,7 +1,7 @@
 Feature: Blocks can be dragged
 
 Background:
-  Given I am on "http://learn.code.org/s/1/level/6?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/5?noautoplay=true"
 
 Scenario: Connect two blocks from toolbox in landscape mode
   When I rotate to landscape

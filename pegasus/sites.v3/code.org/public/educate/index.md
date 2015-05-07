@@ -90,7 +90,7 @@ Our workshops for teachers in grades 6-12 are available as part of a district-wi
 
 ### Elementary schools 
 
-[Partner with us](/k5-district-partnership) to bring computer science to your entire school district, free of charge. Or send your teachers to a [nearby workshop](/professional-development-workshops).
+[Partner with us](/educate/k5-district-partnership) to bring computer science to your entire school district, free of charge. Or send your teachers to a [nearby workshop](/professional-development-workshops).
 
 [<button>Apply</button>](/educate/k5-district-partnership)&nbsp;&nbsp;[<button>Find a workshop</button>](/professional-development-workshops)
 

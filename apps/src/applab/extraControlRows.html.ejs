@@ -4,7 +4,31 @@
 <div id="debug-area">
   <% if (debugButtons) { %>
   <div id="debugResizeBar">
-    <div id="debug-buttons" style="display:inline;">
+    <div id="slider-cell">
+      <svg id="applab-slider"
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:svg="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           version="1.1"
+           width="150"
+           height="38">
+          <!-- Slow icon. -->
+          <clipPath id="slowClipPath">
+            <rect width=26 height=12 x=5 y=6 />
+          </clipPath>
+          <image xlink:href="<%= assetUrl('media/applab/turtle_icons.png') %>" height=42 width=84 x=-21 y=-18
+              clip-path="url(#slowClipPath)" />
+          <!-- Fast icon. -->
+          <clipPath id="fastClipPath">
+            <rect width=26 height=16 x=120 y=2 />
+          </clipPath>
+          <image xlink:href="<%= assetUrl('media/applab/turtle_icons.png') %>" height=42 width=84 x=120 y=-19
+              clip-path="url(#fastClipPath)" />
+      </svg>
+    </div>
+    <img id="spinner" style="visibility: hidden;" src="<%= assetUrl('media/applab/spinner-big.gif') %>" height=16 width=16>
+
+    <div id="debug-buttons">
       <button id="pauseButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="pause-btn icon21">
         <%= applabMsg.pause() %>

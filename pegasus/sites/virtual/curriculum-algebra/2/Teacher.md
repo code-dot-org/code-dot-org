@@ -64,8 +64,8 @@ Depending on which way you read the expression, you might have very different re
 
 Mathematicians didn’t always agree on the order of operations, but now we have a common set of rules for how to evaluate expressions. When evaluating an expression, we begin by applying the operations written at the top of the pyramid (multiplication and division). Only after we have completed all of those operations can we move down to the lower level. If both operations are present (as in 4 - 2 + 1), we read the expression from left to right, applying the operations in the order in which they appear.
 
-Evaluation Blocks provide a visual way to indicate the order of operations in an expression.  
-One way to indicate the order of operations is an expression. 
+Evaluation Blocks provide a visual way to indicate the order of operations in an expression.
+
 All Evaluation Blocks follow three rules: 
 
 - Rule 1: Each block must have one function, which is displayed at the top of the block.
