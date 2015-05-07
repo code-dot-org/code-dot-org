@@ -4,7 +4,7 @@ Scenario: Solving puzzle 1
   Given I am on "http://learn.code.org/flappy/1?noautoplay=true"
   And I rotate to landscape
   Then element ".dialog-title" has text "Puzzle 1 of 10"
-  And I press "x-close"
+  And I close the dialog
   Then I wait until element "#runButton" is visible
   And I drag block "1" to block "3"
   And I press "runButton"
