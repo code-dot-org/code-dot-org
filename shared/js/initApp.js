@@ -21,6 +21,12 @@ var baseOptions = {
     if (appOptions.level.isProjectLevel) {
       return;
     }
+    if (appOptions.channel) {
+      // Don't send the levelSource or image to Dashboard for channel-backed levels.
+      // (The levelSource is already stored in the channels API.)
+      delete report.program;
+      delete report.image;
+    }
     report.fallbackResponse = appOptions.report.fallback_response;
     report.callback = appOptions.report.callback;
     // Track puzzle attempt event
@@ -320,7 +326,7 @@ function loadProject(promise) {
     } else {
       dashboard.isEditingProject = true;
     }
-  } else if (appOptions.level.projectTemplateLevelName) {
+  } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
     // this is an embedded project
     dashboard.isEditingProject = true;
     promise = promise.then(function () {

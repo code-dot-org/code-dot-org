@@ -35,7 +35,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":209}],19:[function(require,module,exports){
+},{"../skins":212}],19:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/applab');
@@ -294,7 +294,7 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/current/applab":257,"../block_utils":29,"../utils":255}],11:[function(require,module,exports){
+},{"../../locale/current/applab":260,"../block_utils":32,"../utils":258}],11:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -1466,6 +1466,7 @@ Applab.createElement = function (elementType, left, top) {
   switch (elementType) {
     case ElementType.BUTTON:
       el.appendChild(document.createTextNode('Button'));
+      el.style.padding = '0px';
       el.style.margin = '2px';
       el.style.height = '36px';
       el.style.width = '76px';
@@ -3816,7 +3817,7 @@ var getPegasusHost = function() {
         return Array(multiplier + 1).join(input)
     }
 
-},{"../../locale/current/applab":257,"../../locale/current/common":260,"../StudioApp":4,"../codegen":57,"../constants":59,"../dom":60,"../dropletUtils":61,"../skins":209,"../slider":210,"../templates/page.html.ejs":234,"../timeoutList":240,"../utils":255,"../xml":256,"./acemode/annotationList":6,"./acemode/mode-javascript_codeorg":8,"./api":9,"./appStorage":10,"./blocks":12,"./controls.html.ejs":13,"./designModeBox.html.ejs":14,"./designProperties.html.ejs":15,"./dontMarshalApi":16,"./dropletConfig":17,"./extraControlRows.html.ejs":18,"./rgbcolor.js":21,"./visualization.html.ejs":23}],23:[function(require,module,exports){
+},{"../../locale/current/applab":260,"../../locale/current/common":263,"../StudioApp":4,"../codegen":60,"../constants":62,"../dom":63,"../dropletUtils":64,"../skins":212,"../slider":213,"../templates/page.html.ejs":237,"../timeoutList":243,"../utils":258,"../xml":259,"./acemode/annotationList":6,"./acemode/mode-javascript_codeorg":8,"./api":9,"./appStorage":10,"./blocks":12,"./controls.html.ejs":13,"./designModeBox.html.ejs":14,"./designProperties.html.ejs":15,"./dontMarshalApi":16,"./dropletConfig":17,"./extraControlRows.html.ejs":18,"./rgbcolor.js":21,"./visualization.html.ejs":23}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3836,7 +3837,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],21:[function(require,module,exports){
+},{"ejs":279}],21:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -4124,7 +4125,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/applab":257,"../../locale/current/common":260,"ejs":276}],16:[function(require,module,exports){
+},{"../../locale/current/applab":260,"../../locale/current/common":263,"ejs":279}],16:[function(require,module,exports){
 var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -4217,7 +4218,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],14:[function(require,module,exports){
+},{"ejs":279}],14:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4237,7 +4238,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],13:[function(require,module,exports){
+},{"ejs":279}],13:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4258,7 +4259,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":260,"ejs":276}],12:[function(require,module,exports){
+},{"../../locale/current/common":263,"ejs":279}],12:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -4331,7 +4332,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
   };
 }
 
-},{"../../locale/current/applab":257,"../../locale/current/common":260,"../codegen":57,"../utils":255}],257:[function(require,module,exports){
+},{"../../locale/current/applab":260,"../../locale/current/common":263,"../codegen":60,"../utils":258}],260:[function(require,module,exports){
 /*applab*/ module.exports = window.blockly.appLocale;
 },{}],10:[function(require,module,exports){
 'use strict';
@@ -5193,7 +5194,7 @@ oop.inherits(Mode, JavaScriptMode);
 exports.Mode = Mode;
 });
 
-},{"../../dropletUtils":61,"../dropletConfig":17,"./annotationList":6}],17:[function(require,module,exports){
+},{"../../dropletUtils":64,"../dropletConfig":17,"./annotationList":6}],17:[function(require,module,exports){
 var COLOR_LIGHT_GREEN = '#D3E965';
 var COLOR_BLUE = '#19C3E1';
 var COLOR_RED = '#F78183';
@@ -5230,8 +5231,8 @@ module.exports.blocks = [
   {'func': 'circle', 'category': 'Canvas', 'params': ["160", "240", "100"] },
   {'func': 'rect', 'category': 'Canvas', 'params': ["80", "120", "160", "240"] },
   {'func': 'setStrokeWidth', 'category': 'Canvas', 'params': ["3"] },
-  {'func': 'setStrokeColor', 'category': 'Canvas', 'params': ['"red"'] },
-  {'func': 'setFillColor', 'category': 'Canvas', 'params': ['"yellow"'] },
+  {'func': 'setStrokeColor', 'category': 'Canvas', 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
+  {'func': 'setFillColor', 'category': 'Canvas', 'params': ['"yellow"'], 'dropdown': { 0: [ '"yellow"', '"rgb(255,255,0)"', '"rgba(255,255,0,0.5)"', '"#FFFF00"' ] } },
   {'func': 'drawImage', 'category': 'Canvas', 'params': ['"imageId"', "0", "0"] },
   {'func': 'getImageData', 'category': 'Canvas', 'params': ["0", "0", "320", "480"], 'type': 'value' },
   {'func': 'putImageData', 'category': 'Canvas', 'params': ["imageData", "0", "0"] },
@@ -5271,7 +5272,7 @@ module.exports.blocks = [
   {'func': 'penUp', 'category': 'Turtle' },
   {'func': 'penDown', 'category': 'Turtle' },
   {'func': 'penWidth', 'category': 'Turtle', 'params': ["3"], 'dropdown': { 0: [ "1", "3", "5" ] } },
-  {'func': 'penColor', 'category': 'Turtle', 'params': ['"red"'] },
+  {'func': 'penColor', 'category': 'Turtle', 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
   {'func': 'show', 'category': 'Turtle' },
   {'func': 'hide', 'category': 'Turtle' },
   {'func': 'speed', 'category': 'Turtle', 'params': ["50"], 'dropdown': { 0: [ "25", "50", "75", "100" ] } },
