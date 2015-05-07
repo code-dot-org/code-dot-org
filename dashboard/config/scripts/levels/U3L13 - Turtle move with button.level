@@ -60,9 +60,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
+    "free_play": "true",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L13 - Button with Event.gif"
-  }
+  },
+  "md5": "cae14e841abef425a988607ebf541592"
 }]]></config>
   <blocks/>
 </Applab>
