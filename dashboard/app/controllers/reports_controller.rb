@@ -26,7 +26,7 @@ SQL
   end
 
   def header_stats
-    if params[:user_id]
+    if params[:user_id].present?
       user = User.find(params[:user_id])
       authorize! :read, user
     end
