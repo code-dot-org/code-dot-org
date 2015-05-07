@@ -1521,8 +1521,8 @@ Applab.makeDraggable = function (jq) {
 
       // containment
       var container = $('#divApplab');
-      var maxLeft = container.width() - ui.helper.outerWidth(true);
-      var maxTop = container.height() - ui.helper.outerHeight(true);
+      var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
+      var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
       newLeft = Math.min(newLeft, maxLeft);
       newLeft = Math.max(newLeft, 0);
       newTop = Math.min(newTop, maxTop);
@@ -1552,6 +1552,11 @@ Applab.getVizScaleFactor = function () {
   throw 'Unexpected body width: ' + width;
 };
 
+/**
+ * If in design mode and program is not running, display Properties
+ * pane for editing the clicked element.
+ * @param event
+ */
 Applab.onDivApplabClick = function (event) {
   if (!window.$ || $('#designModeButton').is(':visible') ||
       $('#resetButton').is(':visible')) {
@@ -1644,11 +1649,32 @@ Applab.editElementProperties = function(el) {
   }
 };
 
+/**
+ * Clear the Properties pane of applab's design mode.
+ */
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
-  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
-    tagName: null
+  if (designPropertiesEl) {
+    designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
+      tagName: null
+    });
+  }
+};
+
+/**
+ * Enable (or disable) dragging of new elements from the element tray,
+ * and show (or hide) the 'Clear' button.
+ * @param allowEditing {boolean}
+ */
+Applab.resetElementTray = function (allowEditing) {
+  $('#design-elements .new-design-element').each(function() {
+    $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
+  var designModeClear = document.getElementById('designModeClear');
+  if (designModeClear) {
+    designModeClear.style.display = allowEditing ? 'inline-block' : 'none';
+  }
+
 };
 
 Applab.isValidElementType = function (type) {
@@ -1687,14 +1713,18 @@ Applab.serializeToLevelHtml = function () {
   return s.serializeToString(clone);
 };
 
-Applab.parseFromLevelHtml = function(rootEl, isDesignMode) {
+/**
+ * @param rootEl {Element}
+ * @param allowDragging {boolean}
+ */
+Applab.parseFromLevelHtml = function(rootEl, allowDragging) {
   if (!Applab.levelHtml) {
     return;
   }
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
   children.appendTo(rootEl);
-  if (isDesignMode) {
+  if (allowDragging) {
     Applab.makeDraggable(children);
   }
 };
@@ -1766,10 +1796,15 @@ studioApp.reset = function(first) {
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
-  Applab.parseFromLevelHtml(newDivApplab, isDesignMode);
+  var isRunning = window.$ && $('#resetButton').is(':visible');
+  var allowDragging = isDesignMode && !isRunning;
+  Applab.parseFromLevelHtml(newDivApplab, allowDragging);
+  if (isDesignMode) {
+    Applab.clearProperties();
+    Applab.resetElementTray(allowDragging);
+  }
 
   newDivApplab.addEventListener('click', Applab.onDivApplabClick);
-
 
   // Reset goal successState:
   if (level.goal) {
@@ -1866,10 +1901,6 @@ studioApp.runButtonClick = function() {
   if (level.freePlay && !studioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
-    var designCell = document.getElementById('design-cell');
-    if (designCell) {
-      designCell.className = 'design-cell-enabled';
-    }
   }
 };
 
@@ -2206,8 +2237,8 @@ Applab.onViewData = function() {
 };
 
 Applab.onDesignModeButton = function() {
-  studioApp.resetButtonClick();
   Applab.toggleDesignMode(true);
+  studioApp.resetButtonClick();
 };
 
 Applab.onCodeModeButton = function() {
@@ -2216,6 +2247,19 @@ Applab.onCodeModeButton = function() {
 
 Applab.onDesignModeClear = function() {
   document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
+};
+
+Applab.toggleDragging = function(enable) {
+  var children = $('#divApplab').children();
+  if (enable) {
+    Applab.makeDraggable(children);
+  } else {
+    children.each(function() {
+      if ($(this).data('uiDraggable')) {
+        $(this).draggable('destroy');
+      }
+    });
+  }
 };
 
 Applab.toggleDesignMode = function(enable) {
@@ -2237,12 +2281,7 @@ Applab.toggleDesignMode = function(enable) {
   var debugArea = document.getElementById('debug-area');
   debugArea.style.display = enable ? 'none' : 'block';
 
-  var children = $('#divApplab').children();
-  if (enable) {
-    Applab.makeDraggable(children);
-  } else if (children.data('uiDraggable')) {
-    children.draggable('destroy');
-  }
+  Applab.toggleDragging(enable);
 };
 
 Applab.onPuzzleComplete = function() {
