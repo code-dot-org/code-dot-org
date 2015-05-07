@@ -76,7 +76,7 @@ FactoryGirl.define do
   end
 
   factory :applab, :parent => Level, :class => Applab do
-    game Game.applab
+    game {Game.applab}
   end
 
   factory :level_source do
