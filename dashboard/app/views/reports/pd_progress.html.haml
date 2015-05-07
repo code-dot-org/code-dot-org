@@ -1,0 +1,17 @@
+- script = @script
+- users = @users
+%h1 Online Course Name: #{script.name}
+- users.each do |user|
+  - user_progress = summarize_user_progress(script, user)
+  %p ID: #{user.id}
+  %p First name: #{user.ops_first_name}
+  %p Last name: #{user.ops_last_name}
+  %p Email: #{user.email}
+  %p District: #{user.district || 'None'}
+  %p Progress:
+  - percent = percent_complete(script, user)
+  - script.stages.each do |stage|
+    - stage.script_levels.map(&:level).each do |level|
+      #{level.id}: #{(progress = user_progress[:levels][level.id]) && progress[:status] == 'perfect' ? '1' : '0'}
+    %p Stage Percent Complete: #{percent[stage.position - 1].to_s}
+  %p Script Percent Complete: #{percent_complete_total(script, user).to_s}
