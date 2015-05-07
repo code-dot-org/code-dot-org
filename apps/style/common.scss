@@ -1236,6 +1236,10 @@ $see-examples-thick-underline-color: $yellow-dark;
   margin-bottom: 7px;
 }
 
+.current-tooltip-parameter-name {
+  border-bottom: 3px solid #ffb81d;
+}
+
 // Tooltipster theme class
 .droplet-block-tooltipster {
   border-radius: $tooltip-border-radius;
