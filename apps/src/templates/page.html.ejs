@@ -36,6 +36,16 @@
   <div id="belowVisualization">
 
     <% gameButtons() %>
+
+    <% if (data.hasDesignMode) { %>
+      <button id="designModeButton" class="share">
+        <%= msg.designMode() %>
+      </button>
+      <button id="codeModeButton" class="share" style="display:none;">
+        <%= msg.codeMode() %>
+      </button>
+    <% } %>
+
     <div id="bubble" class="clearfix">
       <table id="prompt-table">
         <tr>
@@ -70,17 +80,6 @@
         </div>
       </div>
     </div>
-
-    <% if (data.hasDesignMode) { %>
-      <div id="design-cell" class="design-cell-none">
-        <button id="designModeButton" class="share">
-          <%= msg.designMode() %>
-        </button>
-        <button id="codeModeButton" class="share" style="display:none;">
-          <%= msg.codeMode() %>
-        </button>
-      </div>
-    <% } %>
   </div>
 </div>
 
