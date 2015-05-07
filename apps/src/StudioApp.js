@@ -356,7 +356,8 @@ StudioApp.prototype.init = function(config) {
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
-      afterInject: config.afterInject
+      afterInject: config.afterInject,
+      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
 
@@ -1302,9 +1303,13 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Add an ace completer for the API functions exposed for this level
     if (options.dropletConfig) {
+      var functionsFilter = null;
+      if (options.autocompletePaletteApisOnly) {
+         functionsFilter = options.codeFunctions;
+      }
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        dropletUtils.generateAceApiCompleter(options.dropletConfig));
+        dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
