@@ -31,6 +31,7 @@ function openerMatchesCloser(opener, closer) {
  * Given an ace editor and row/column position, returns the function
  * name and index of the currently edited parameter.
  * If a parameter is not currently being filled in, returns null.
+ * TODO(bjordan): Unit test once ace.require available in utility tests
  * @param editor
  * @param position
  * @returns {parameterSlotInfo|null}
