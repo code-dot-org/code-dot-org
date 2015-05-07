@@ -1,7 +1,12 @@
 <div class="function-name">
   <% if (signatureOverride) { -%>
     <%= signatureOverride %>
-  <% } else { -%>
+  <% } else {
+    /**
+     * TODO(bjordan): would be nice to split the following line up, can't figure
+     * out how to do so without inserting extraneous spaces between parameters.
+     */
+    -%>
     <%= functionName %>(<% for (var i = 0; i < parameters.length; i++) { -%><%- parameters[i].name -%><% if (i < parameters.length - 1) { -%>, <% } -%><% } -%>)
   <% } %>
 </div>
