@@ -18,7 +18,9 @@
         ]
       },
       "penUp": null,
-      "penDown": null
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null
     },
     "edit_code": true,
     "embed": "false",

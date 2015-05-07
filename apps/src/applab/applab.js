@@ -1498,6 +1498,10 @@ studioApp.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
+  if (level.showTurtleBeforeRun) {
+    turtleSetVisibility(true);
+  }
+
   var isDesignMode = window.$ && $('#codeModeButton').is(':visible');
   var isRunning = window.$ && $('#resetButton').is(':visible');
   var allowDragging = isDesignMode && !isRunning;

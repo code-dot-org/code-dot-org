@@ -28,6 +28,7 @@
     ],
     "title": "Intro to Evaluation Blocks",
     "markdown": "### Evaluation Blocks\n\nThe programming language you're going to learn in this course is called Evaluation Blocks, and it's a visual programming language that we designed _specifically_ for learning Algebra. This language follows the same rules as Algebra does when it comes to concepts such as variables and functions. Watch this video introducing the basics of Evaluation Blocks and then you'll move on to play through a few basic puzzles.\n\n<iframe width=\"350\" height=\"225\" src=\"https://www.youtube.com/embed/9tUivnF7qiY\" frameborder=\"0\" allowfullscreen></iframe>\n"
-  }
+  },
+  "md5": "1cfa1408fed050e8e02d16bcc0d55522"
 }]]></config>
 </Multi>

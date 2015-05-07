@@ -10,3 +10,9 @@
   = f.label :app_height
   %p Integer representing the height of the app in pixel coordinates. Default is 480.
   = f.number_field :app_height
+.field
+  = f.label :show_turtle_before_run, 'Show turtle before Run is pressed'
+  = boolean_check_box f, :show_turtle_before_run
+.field
+  = f.label :autocomplete_palette_apis_only, 'Autocomplete palette APIs only'
+  = boolean_check_box f, :autocomplete_palette_apis_only
