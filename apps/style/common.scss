@@ -819,14 +819,14 @@ $aniGifPreviewHeight: 60px;
   #hide-toolbox, #show-toolbox {
     cursor: pointer;
     &:hover {
-      color: #ffb81d;
+      color: $yellow-dark;
     }
   }
   .block-counter-default {
     color: white;
   }
   .block-counter-overflow {
-    color: #ffb81d;
+    color: $yellow-dark;
   }
 }
 
@@ -1234,6 +1234,10 @@ $see-examples-thick-underline-color: $yellow-dark;
   font-size: 16px;
   margin-top: 3px;
   margin-bottom: 7px;
+}
+
+.current-tooltip-parameter-name {
+  border-bottom: 3px solid $yellow-dark;
 }
 
 // Tooltipster theme class
