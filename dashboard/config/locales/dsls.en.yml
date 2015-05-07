@@ -212,6 +212,8 @@ en:
       PDK5 Intro C: {}
       PDK5 Pair Programming 1:
         Pair Programming: Pair Programming
+      PDK5 Puzzle Goals:
+        Puzzle Goals: Puzzle Goals
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
       PDK5 Strategies 1:
@@ -380,6 +382,18 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U3L13 - Explanation of Ids:
+        description here: description here
+        title: title
+      U3L13 Add Button Instrucitons:
+        description here: description here
+        title: title
+      U3L13 Add Button Instructions:
+        description here: description here
+        title: title
+      U3L14 - Student Intro Page:
+        description here: description here
+        title: title
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -472,6 +486,7 @@ en:
         ((4+5) > 9): ((4+5) > 9)
         (4+5) > 9: (4+5) > 9
         /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png, 300
+        4+5 > 9: 4+5 > 9
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
