@@ -2,7 +2,7 @@ Feature: Complete a complicated maze level
 
 Background:
   Given I am on "http://learn.code.org/reset_session"
-  Given I am on "http://learn.code.org/s/1/level/16?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
   And I rotate to landscape
   And I wait for 2 seconds
   Then element ".dialog-title" has text "Puzzle 15 of 20"

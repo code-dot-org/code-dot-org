@@ -1,7 +1,7 @@
 Feature: Playing the Farmer Game
 
 Background:
-  Given I am on "http://learn.code.org/s/1/level/47?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
   And I rotate to landscape
   Then element ".dialog-title" has text "Puzzle 1 of 11"
   And element ".modal-content p:nth-child(2)" has text "Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the \"remove\" block to remove it."
