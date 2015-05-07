@@ -15,6 +15,8 @@ var assert = require('chai').assert;
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
 
+var wrappedEventListener = require('./util/wrappedEventListener');
+
 describe('Level tests', function() {
   var studioApp;
   var originalRender;
@@ -22,16 +24,18 @@ describe('Level tests', function() {
   beforeEach(function () {
     testUtils.setupBlocklyFrame();
     studioApp = testUtils.getStudioAppSingleton();
+    wrappedEventListener.attach();
 
     // For some reason, svg rendering is taking a long time in phantomjs. None
     // of these tests depend on that rendering actually happening.
-    var originalRender = Blockly.BlockSvg.prototype.render;
+    originalRender = Blockly.BlockSvg.prototype.render;
     Blockly.BlockSvg.prototype.render = function () {
       this.block_.rendered = true;
     };
   });
 
   afterEach(function () {
+    wrappedEventListener.detach();
     Blockly.BlockSvg.prototype.render = originalRender;
   });
 
