@@ -630,8 +630,9 @@ en:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of x?: What is the value of x?
         '3': '3'
+        '8': '8'
         '15': '15'
-        do not know: do not know
+        string: string
       msm variables multi 5:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of (p - x)?: What is the value of (p - x)?
@@ -697,6 +698,13 @@ en:
         Play Area: Play Area
         Toolbox: Toolbox
         Workspace: Workspace
+      PDAlg end of P3:
+        Plans for the Future: Plans for the Future
+        What are you plans for next year?: What are you plans for next year?
+        Keep teaching Bootstrap: Keep teaching Bootstrap
+        Start teaching CS in Algebra: Start teaching CS in Algebra
+        Not teaching either: Not teaching either
+        Not sure yet: Not sure yet
       PDAlg functional:
         Functional Programming: Functional Programming
         Have you ever programmed before?: Have you ever programmed before?

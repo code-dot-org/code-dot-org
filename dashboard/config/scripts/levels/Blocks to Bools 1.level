@@ -11,11 +11,7 @@
     "title": "Convert Blocks to Math",
     "placeholder": "Type the arithmetic expression here",
     "content1": "Type out the arithmetic expression that matches this code",
-    "content2": "/script_assets/msm/unit6/blockstomath1.png, 300",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
+    "content2": "/script_assets/msm/unit6/blockstomath1.png, 300"
   },
   "md5": "c2167eb41b489752114d78f9b09da8db"
 }]]></config>

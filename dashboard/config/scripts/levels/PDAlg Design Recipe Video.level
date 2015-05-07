@@ -32,6 +32,7 @@
     "title": "Intro to Data Types",
     "content1": "Place the Design Recipe steps in the correct order.",
     "markdown": "### Evaluation Blocks\n\n<iframe width=\"350\" height=\"200\" src=\"https://www.youtube.com/embed/s5nBdrNgPwM\" frameborder=\"0\" allowfullscreen style=\"float:left; margin: 0 20px 20px 0\"></iframe>\n\nIn addition to the paper and pencil Design Recipe process that you've become familiar with, the new CS in Algebra programming environment includes a digital version of the Design Recipe. Watch this introductory video, and then work through the Design Recipe for `rocket-height`.\n\n<div style=\"clear:both\"/>\n"
-  }
+  },
+  "md5": "d5ad491cefe04830ddc6bfb78cdb5601"
 }]]></config>
 </Match>

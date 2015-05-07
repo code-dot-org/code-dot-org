@@ -9,6 +9,7 @@
     "title": "title",
     "content1": "description here",
     "markdown": "# Free Response Journal Entry\n\n<textarea style='width: 50%; height: 250px' onClick=\"this.innerHTML=''\">Respond to your teacher's prompt here.</textarea>\n\n<button>Submit</button>\n\n\n\n"
-  }
+  },
+  "md5": "9d939af6c3d2db6f4a641d15dc900de1"
 }]]></config>
 </External>

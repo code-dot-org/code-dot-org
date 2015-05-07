@@ -25,11 +25,7 @@
       }
     ],
     "title": "Rocket Multiple Choice",
-    "markdown": "### Which function describes a rocket that reaches:\n#### 4 meters at 2 seconds\n#### 16 meters at 4 seconds\n#### 256 meters at 16 seconds\n",
-    "type": "Multi",
-    "concept_ids": [
-      ""
-    ]
+    "markdown": "### Which function describes a rocket that reaches:\n#### 4 meters at 2 seconds\n#### 16 meters at 4 seconds\n#### 256 meters at 16 seconds\n"
   },
   "md5": "d4ac335424616fb754164aa2473e1b04"
 }]]></config>

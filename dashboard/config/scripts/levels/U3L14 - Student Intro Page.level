@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-05-07T21:02:55.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "title",
+    "content1": "description here",
+    "markdown": "## Unit 3: Lesson 14 - Unfortunate Events\n# Background\n\n\n# Lesson\n\n\n\n# Resources\n\n* Worksheet <a href=\"https://docs.google.com/document/d/1WU2eqfC0Z5xC19BMQXkV6yBBccUlN8g6NvWwU3z8TPM\" target=\"_blank\">Unfortunate Events</a>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  },
+  "md5": "4305bff8bd9adbca898e51641889247c"
+}]]></config>
+</External>
