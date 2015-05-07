@@ -65,6 +65,8 @@
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail
       Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr
       Informationen kannst du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a>
@@ -373,6 +375,7 @@
     classroom_activity: Aktivität ohne Computer
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Übersicht der Level 1, 2 und 3
     lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}
@@ -578,6 +581,8 @@
       in the wrong order.
   text_match:
     placeholder: Gebe hier deine Antwort ein
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

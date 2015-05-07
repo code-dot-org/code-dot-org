@@ -66,6 +66,8 @@
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Registrera dig för ett konto för att spåra dina framsteg. Din
       e-post används främst för att inloggning och för återställning av lösenord.
       För mer information, se vår <a href="http://code.org/privacy"> Sekretesspolicy</a>.
@@ -359,6 +361,7 @@
     classroom_activity: Ouppkopplad aktivitet
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Översikt över kurser 1, 2 och 3
     lesson_plans: Lektionsplaneringar
     signin_message: Redan registrerad? %{link}
@@ -560,6 +563,8 @@
       in the wrong order.
   text_match:
     placeholder: Skriv in ditt svar här
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Ok
   time:

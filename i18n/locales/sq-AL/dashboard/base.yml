@@ -64,6 +64,8 @@ sq:
     need_confirmation: Nuk i keni marre instruksionet e konfirmimit?
     need_unlock: Nuk keni marre instruksionet e zhbllokimit?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Regjistrohu në një llogari për të parë ecurinë tënde. Emaili yt, fillimisht, përdoret për të të lejuar ty të futesh dhe të rigjesh fjalëkalimin. Për më shumë informacione, shiko në <a href="http://code.org/privacy">Politikat e Privatësisë</a>.'
     overview_teacher: 'Jep mësim në shkencat kompjuterike tek klasa jote duke u rregjistruar në një llogari.<p/> Ti do kesh mundësi të shtosh studentët e tu dhe të ndjekësh progresin e tyre.'
     no_signup_message: 'Ti mund <a target="_blank" href="http://learn.code.org"> te shfletosh faza te ndryshme dhe enigma ne Code.org</a>, por te duhet te regjistrohesh qe te ruash progresin tend.'
@@ -364,6 +366,7 @@ sq:
     classroom_activity: Aktiviteti Unplugged
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Pamja e përgjithshme e Kurseve 1,2 dhe 3
     lesson_plans: Planet e mësimeve
     signin_message: 'Je i rregjistruar? %{link}'
@@ -529,6 +532,8 @@ sq:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Shtyp përgjigjen tënde këtu
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Në rregull
   time:

@@ -64,6 +64,8 @@ el:
     need_confirmation: Δεν έλαβες τις οδηγίες επιβεβαίωσης;
     need_unlock: Δεν έλαβες τις οδηγίες ξεκλειδώματος;
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Δημιουργήστε λογαριασμό για να βλέπετε την πρόοδό σας. Το email σας χρησιμοποιείται κυρίως για να σας επιτρέπει να συνδέεστε και για την ανάκτηση του κωδικού. Για περισσότερες πληροφορίες δείτε την <a href="http://code.org/privacy">Πολιτική Απορρήτου</a>.'
     overview_teacher: 'Διδάξτε την επιστήμη των υπολογιστών στην τάξη σας, με την εγγραφή σας.<p/>Θα μπορείτε να προσθέσετε τους μαθητές σας και να παρακολουθείτε την πρόοδό τους.'
     no_signup_message: 'Μπορείτε να <a target="_blank" href="http://learn.code.org"> περιηγηθείτε στα διάφορα στάδια και παζλ</a>, αλλά θα πρέπει να εγγραφείτε για να αποθηκεύσετε την πρόοδό σας.'
@@ -307,7 +309,7 @@ el:
     delete: Διαγράψτε τον λογαριασμό σας
     delete_text: Κάνοντας κλικ στο παρακάτω κουμπί , θα διαγράψετε τον λογαριασμό σας.
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete_confirm: Είστε βέβαιοι οτι θέλετε να διαγράψετε τον λογαριασμό σας?
   user_level:
     completed: Ολοκληρώθηκε
     tried: Δοκιμάστηκε
@@ -317,6 +319,7 @@ el:
     classroom_activity: Αποσυνδεδεμένη Δραστηριότητα
   home:
     title: Στούντιο Κώδικα
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Επισκόπηση των μαθημάτων 1, 2 και 3
     lesson_plans: Σχέδια μαθήματος
     signin_message: 'Ήδη εγγεγραμμένος; %{link}'
@@ -482,6 +485,8 @@ el:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Εισάγετε την απάντησή σας εδώ
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OΚ
   time:
@@ -537,31 +542,31 @@ el:
     all_courses: Όλα τα μαθήματα
   project:
     projects: Projects
-    create: Create Project
+    create: Δημιουργία Έργου
     create_a_project: 'Create a new project:'
     new: Create New
-    rename: Rename
+    rename: Μετονομασία
     save: αποθήκευση
     delete: Διαγραφή
     exit: Return to Course
     my_projects: My Projects
     share: Μοιράσου
     share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_copy_link: 'Αντιγραφή του συνδέσμου:'
+    close: Κλείσιμο
     more: Περισσότερα
     name: Όνομα
     updated: Updated
     project_type: Project Type
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    need_help: Χρειάζεστε βοήθεια για να ξεκινήσετε?
     really_delete: Διαγραφή;
     delete_yes: Ναι
     delete_no: Όχι
-    saved: Saved
+    saved: Αποθηκευμένο
     not_saved: Not saved
     cancel: Άκυρο
-    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_title: Είστε σίγουροι οτι θέλετε να διαγράψετε αυτό το έργο?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
     remix: Remix

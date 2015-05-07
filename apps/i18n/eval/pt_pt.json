@@ -2,7 +2,7 @@
   "badColorStringError": "You used an invalid color string: {val}",
   "badStyleStringError": "You used an invalid style string: {val}",
   "circleBlockTitle": "Círculo (raio, estilo, cor)",
-  "displayBlockTitle": "Exibir",
+  "displayBlockTitle": "avaliar",
   "ellipseBlockTitle": "Elipse (largura, altura, estilo, cor)",
   "extraTopBlocks": "Você tem blocos não acoplados. Você quis dizer para anexar este para o bloco \"display\"?",
   "infiniteRecursionError": "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever.",

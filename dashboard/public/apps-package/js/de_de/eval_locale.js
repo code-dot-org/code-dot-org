@@ -160,7 +160,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "displayBlockTitle":function(d){return "Bewerten"},
 "ellipseBlockTitle":function(d){return "Ellipse (Breite, Höhe, Stil, Farbe)"},
 "extraTopBlocks":function(d){return "Sie haben freie Blöcke. Möchtest du diese an den \"Anzeige\" Block anfügen?"},
-"infiniteRecursionError":function(d){return "Your function is calling itself. We have stopped it, otherwise it would have continued calling itself forever."},
+"infiniteRecursionError":function(d){return "Deine Funktion ruft sich selbst auf. Wir haben sie angehalten, da sie sonst für immer damit weitergemacht hätte sich selbst aufzurufen."},
 "overlayBlockTitle":function(d){return "Overlay (oben, unten)"},
 "placeImageBlockTitle":function(d){return "Ort-Bild (x, y, Bild)"},
 "offsetBlockTitle":function(d){return "versatz (x,y,Bild)"},

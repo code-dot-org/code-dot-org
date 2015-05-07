@@ -16,7 +16,7 @@ nl-NL:
   name: naam
   email: E-mail
   zipcode: Postcode of land
-  submit: Klaar
+  submit: Insturen
   twentyhours_heading: Probeer onze introductiecursus Informatica
   twentyhours_text: "Klaar met je eerste 'Hour of Code'? Leer meer over Informatica en programmeerconcepten in deze vervolgcursus."
   hoc2014_heading: 'Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br />8 - 14 december 2014<br/>'
@@ -172,7 +172,7 @@ nl-NL:
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Bekijk de video
   homepage_action_text_teachervideo: Bekijk de video
-  homepage_action_text_learn: Begin vandaag met leren
+  homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Teken de petitie
   homepage_signpetition_dropdown: 'Teken onze petitie &#x25BE;'
   homepage_slot_text_title_hoc: Een Uur Code

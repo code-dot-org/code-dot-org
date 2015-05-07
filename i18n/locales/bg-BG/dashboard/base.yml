@@ -64,6 +64,8 @@ bg:
     need_confirmation: Не сте получили инструкции за потвърждение ?
     need_unlock: Не сте получили инструкции за отключване?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Регистрирайте се, за да следите напредъка си. Вашият имейл се използва само при влизане в сайта и за възстановяване на парола. За повече информация вижте нашата <a href="http://code.org/privacy"> Политика за поверителност</a>.'
     overview_teacher: 'Преподавайте компютърни науки в класната ви стая като се регистрирате. <p/> Вие ще можете да добавите вашите ученици и да проследявате тяхното развитие.'
     no_signup_message: 'Можете да <a target="_blank" href="http://learn.code.org"> сърфирате в различните етапи и пъзели</a>, но ще трябва да се регистрирате, за да запишете вашия прогрес.'
@@ -314,6 +316,7 @@ bg:
     classroom_activity: Ънплъгд дейност
   home:
     title: Студио по кодиране
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Преглед на курсове 1, 2 и 3
     lesson_plans: Учебни планове
     signin_message: 'Вече сте регистриран? %{link}'
@@ -347,7 +350,7 @@ bg:
     heading_apps: '<h2>Забавление за</h2><h1>Всеки</h1>'
     heading_legacy: '<h2>Нашият общ курс за</h2><h1>Всички възрасти</h1>'
     your_gallery: Галерия
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Опитайте курс в студиото по кодииране
   gender:
     male: Мъж
     female: Жена
@@ -476,9 +479,11 @@ bg:
     badrange: Вашият договор е грешен диапазон.
     baddomainsize: Вашият договор няма точния брой на елементите в домейна.
     baddomainname: Един или повече елементи на вашия домейн са/е с грешно име.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    baddomaintype: Една или повече от вашите домейн настройки е грешна, или са въведени в грешен ред.
   text_match:
     placeholder: Въведете отговора си тук
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

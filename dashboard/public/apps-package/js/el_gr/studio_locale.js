@@ -453,7 +453,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "soundWinPoint2":function(d){return "κέρδισε πόντο 2"},
 "soundWood":function(d){return "ξύλο"},
 "speed":function(d){return "ταχύτητα"},
-"startSetValue":function(d){return "start (rocket-height function)"},
+"startSetValue":function(d){return "Έναρξη (συνάρτηση)"},
 "startSetVars":function(d){return "game_vars (title, subtitle, background, target, danger, player)"},
 "startSetFuncs":function(d){return "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)"},
 "stopSprite":function(d){return "στοπ"},

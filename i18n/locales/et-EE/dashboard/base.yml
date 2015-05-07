@@ -64,6 +64,8 @@ et:
     need_confirmation: Ei saanud kinnituse juhiseid?
     need_unlock: Ei saanud avamise juhiseid?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Registreeri et oma progressi jälgida. Sinu email on primaarselt sisselogimiseks ja parooli lähtestamiseks. Rohkema info jaoks vaata <a href="http://code.org/privacy">Privaatsuspoliitikat</a>.'
     overview_teacher: 'Õpeta arvutiteadust oma klassiruumis registreerides endale konto. <p/> Sa saad lisada õpilasi ja jälgida nende tegevuse edenemist.'
     no_signup_message: 'Saad  <a target="_blank" href="http://learn.code.org">sirvida erinevaid tasemeid ja puslesid</a>, aga sa pead registreeruma et oma progressi eelnevalt salvestada.'
@@ -309,6 +311,7 @@ et:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'Oled juba registreerunud? %{link}'
@@ -474,6 +477,8 @@ et:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Sisesta siia oma vastus
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Olgu
   time:

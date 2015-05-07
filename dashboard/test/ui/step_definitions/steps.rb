@@ -2,7 +2,9 @@ require File.expand_path('../../../../config/environment.rb', __FILE__)
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
-    url = url.gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
+    url = url.
+      gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/").
+      gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
   end
   if ENV['PEGASUS_TEST_DOMAIN']
     url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
@@ -19,6 +21,14 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait = Selenium::WebDriver::Wait.new(:timeout => 60)
   wait.until { @browser.find_element(selection_criteria) }
+end
+
+When /^I close the dialog$/ do
+  # Add a wait to closing dialog because it's sometimes animated, now.
+  steps %q{
+    When I press "x-close"
+    And I wait for 0.75 seconds
+  }
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|

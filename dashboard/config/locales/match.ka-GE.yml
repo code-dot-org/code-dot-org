@@ -172,6 +172,40 @@
         <h4>STAMP</h4>: <h4>STAMP</h4>
         <h4>STAR</h4>: <h4>STAR</h4>
         <h4>RAMP</h4>: <h4>RAMP</h4>
+      ECSPD phase matching:
+        Matching PD Phases and Descriptions: Matching PD Phases and Descriptions
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+        Online introduction to PD program: Online introduction to PD program
+        Blended in-person and online PD, focused on building pedagogical strategies and getting comfortable with the curriculum: Blended
+          in-person and online PD, focused on building pedagogical strategies and
+          getting comfortable with the curriculum
+        Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content: Blended
+          in-person and online PD, focused on supporting academic year instruction,
+          and provide space for learning content
+        In-person wrap up to the first year of teaching the course: In-person wrap
+          up to the first year of teaching the course
+      ECSPD unit matching:
+        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Unit 1: Unit 1
+        Unit 2: Unit 2
+        Unit 3: Unit 3
+        Unit 4: Unit 4
+        Unit 5: Unit 5
+        Unit 6: Unit 6
+        introduction to the concepts of computer and computing: introduction to the
+          concepts of computer and computing
+        application of problem solving techniques to develop solutions: application
+          of problem solving techniques to develop solutions
+        website development and design: website development and design
+        create programs to solve computational problems: create programs to solve
+          computational problems
+        use computing to manage and interpret data: use computing to manage and interpret
+          data
+        apply programming and problem solving to the study of robots: apply programming
+          and problem solving to the study of robots
       K-1 Artist 2 Match 1:
         Matching: Matching
         Is the square next to, above, or below the ball?: Is the square next to, above,
@@ -365,6 +399,71 @@
         'bigger-string: string string -> string': 'bigger-string: string string ->
           string'
         'find-price: string -> number': 'find-price: string -> number'
+      PDAlg block match:
+        Block match: Block match
+        Match the expressions with the appropriate Circle of Evaluation or Evaluation Block: Match
+          the expressions with the appropriate Circle of Evaluation or Evaluation
+          Block
+        http://staging.studio.code.org/script_assets/pd/circle1.png: http://staging.studio.code.org/script_assets/pd/circle1.png
+        http://staging.studio.code.org/script_assets/pd/circle2.png: http://staging.studio.code.org/script_assets/pd/circle2.png
+        http://staging.studio.code.org/script_assets/pd/circle3.png: http://staging.studio.code.org/script_assets/pd/circle3.png
+        http://staging.studio.code.org/script_assets/pd/block1.png: http://staging.studio.code.org/script_assets/pd/block1.png
+        http://staging.studio.code.org/script_assets/pd/block2.png: http://staging.studio.code.org/script_assets/pd/block2.png
+        http://staging.studio.code.org/script_assets/pd/block3.png: http://staging.studio.code.org/script_assets/pd/block3.png
+      PDAlg commitment match:
+        Program Commitment Matching Question: Program Commitment Matching Question
+        0: '? Match the phases of PD with their descriptions below. Feel free to look
+          back at the Program Commitment details on the previous page'
+        1: ': Match the phases of PD with their descriptions below. Feel free to look
+          back at the Program Commitment details on the previous page'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer
+          Study: 3 days in-person and 8 hours online'
+        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic
+          Year Development: 2 days in-person and 10 hours online'
+      PDAlg Design Recipe Video:
+        Intro to Data Types: Intro to Data Types
+        Place the Design Recipe steps in the correct order.: Place the Design Recipe
+          steps in the correct order.
+        Step 1: Step 1
+        Step 2: Step 2
+        Step 3: Step 3
+        Contract and Purpose Statement: Contract and Purpose Statement
+        Examples: Examples
+        Definition: განსაზღვრება
+      PDAlg Types Video:
+        Intro to Data Types: Intro to Data Types
+        Match each data type with its color code: Match each data type with its color
+          code
+        Number: Number
+        String: String
+        Image: Image
+        http://staging.studio.code.org/script_assets/pd/blue.png: http://staging.studio.code.org/script_assets/pd/blue.png
+        http://staging.studio.code.org/script_assets/pd/teal.png: http://staging.studio.code.org/script_assets/pd/teal.png
+        http://staging.studio.code.org/script_assets/pd/purple.png: http://staging.studio.code.org/script_assets/pd/purple.png
+      PDECS commitment match:
+        Program Commitment Matching Question: Program Commitment Matching Question
+        0: '? Match the phases of PD with their descriptions below. Feel free to look
+          back at the Program Commitment details on the previous page (you can get
+          back to the last level by clicking above on the small circle immediately
+          to the left of the number 3).'
+        1: ': Match the phases of PD with their descriptions below. Feel free to look
+          back at the Program Commitment details on the previous page (you can get
+          back to the last level by clicking above on the small circle immediately
+          to the left of the number 3).'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Blended Summer Study: 5 days in-person and 8 hours online': 'Blended Summer
+          Study: 5 days in-person and 8 hours online'
+        'Academic Year Development: 4 days in-person and 12 hours online': 'Academic
+          Year Development: 4 days in-person and 12 hours online'
+        'Summer Wrap-up: 3 days in-person': 'Summer Wrap-up: 3 days in-person'
       PDK5 Pair programming match:
         Pair programming match: Pair programming match
         Match the definitions to the words you were introduced to in the last video.: Match
@@ -383,6 +482,20 @@
         What is an unplugged activity?: What is an unplugged activity?
         Question: Question
         Answer 1: Answer 1
+      sciPD commitment match:
+        Program Commitment Matching Question: Program Commitment Matching Question
+        0: '? Match the phases of PD with their descriptions below. Feel free to look
+          back at the Program Commitment details on the previous page'
+        1: ': Match the phases of PD with their descriptions below. Feel free to look
+          back at the Program Commitment details on the previous page'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer
+          Study: 3 days in-person and 8 hours online'
+        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic
+          Year Development: 2 days in-person and 10 hours online'
       test matching image:
         Matching Images Two: Matching Images Two
         Match up all the flowers by colour!: Match up all the flowers by colour!

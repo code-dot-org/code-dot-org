@@ -9,7 +9,7 @@
   "catVariables": "Muutujad",
   "continue": "Jätka",
   "container": "Loo konteiner",
-  "containerTooltip": "Creates a division container and sets its inner HTML.",
+  "containerTooltip": "Loob jagamise konteineri ja määrab selle sisemise HTML-i.",
   "finalLevel": "Tubli! Sa lahendasid viimase mõistatuse.",
   "nextLevel": "Palju õnne! See ülesanne on lahendatud.",
   "no": "Ei",
@@ -18,12 +18,12 @@
   "reinfFeedbackMsg": "Võite vajutada \"Proovi uuesti\" nuppu, et minna tagasi oma rakenduse juurde.",
   "repeatForever": "korda igavesti",
   "repeatDo": "täida",
-  "repeatForeverTooltip": "Teostab ülesandeid selles plokis korduvalt kui rakendus käib.",
+  "repeatForeverTooltip": "Teostab ülesandeid korduvalt selles plokis, kui rakendus töötab.",
   "shareApplabTwitter": "Vaata seda rakendust, mis ma tegin. Kirjutasin selle ise @codeorg-is",
   "shareGame": "Jaga oma rakendust:",
   "stepIn": "Astu sisse",
   "stepOver": "Astu üle",
   "stepOut": "Astu välja",
-  "viewData": "Näita infot",
+  "viewData": "Vaata infot",
   "yes": "Jah"
 }

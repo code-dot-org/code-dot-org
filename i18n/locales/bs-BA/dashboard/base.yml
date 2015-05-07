@@ -64,6 +64,8 @@ bs:
     need_confirmation: Nisi primio/la upute za potvrdu?
     need_unlock: Nisi primio/la upute za otključavanje?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Prijavi se za račun kako bi mogao/la pratiti svoj napredak. Tvoj e-mail se koristi prvenstveno kako bismo ti omogućili prijavu i ponovno dobijanje šifre. Za više informacija pogledaj naša <a href="http://code.org/privacy">Pravila privatnosti</a>.'
     overview_teacher: 'Podučavajte informatiku u svom razredu tako što ćete se prijaviti za korisnički račun.<p/>Moći ćete dodati svoje učenike i pratiti njihov napredak.'
     no_signup_message: 'Možeš <a target="_blank" href="http://learn.code.org">pregledati razne nivoe i zadatke</a>, ali da bi tvoj napredak bio spremljen trebaš se prijaviti.'
@@ -313,6 +315,7 @@ bs:
     classroom_activity: Izvanmrežna aktivnost
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Pregled kurseva 1, 2 i 3
     lesson_plans: Nastavni planovi
     signin_message: 'Jeste li već registrirani? %{link}'
@@ -478,6 +481,8 @@ bs:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Ovdje unesite vaš odgovor
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: U redu
   time:

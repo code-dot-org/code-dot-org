@@ -65,6 +65,8 @@
     need_confirmation: Не отримали вказівок підтвердження?
     need_unlock: Не отримали вказівок розблокування?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Зареєструйтесь для відстеження свого навчання. Ваша скринька
       буде використовуватись для входу на сайт та відновлення забутого паролю. Більше
       інформації у <a href="http://code.org/privacy">Політиці конфіденційності</a>.
@@ -363,6 +365,7 @@
     classroom_activity: Безмашинна вправа
   home:
     title: Студія коду
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Огляд курсів, 1, 2 і 3
     lesson_plans: Плани уроків
     signin_message: Вже зареєстровані? %{link}
@@ -557,6 +560,8 @@
       in the wrong order.
   text_match:
     placeholder: Введіть свою відповідь тут
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Гаразд
   time:

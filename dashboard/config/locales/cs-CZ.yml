@@ -65,6 +65,8 @@
     need_confirmation: Nedostal jsi instrukce pro potvrzení?
     need_unlock: Nezískal si instrukce pro odemčení?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Vytvořte si účet, abyste mohli sledovat svůj postup.. Váš email
       slouží především k přihlášení a pro obnovení hesla. Další informace naleznete
       v našich <a hrefshttp://code.org/privacy"> Zásadách ochrany osobních údajů</a>.
@@ -359,6 +361,7 @@
     classroom_activity: Aktivita bez počítače
   home:
     title: Code studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Přehled kurzů 1, 2 a 3
     lesson_plans: Plány hodin
     signin_message: Nejsi už zaregistrován? %{link}
@@ -557,6 +560,8 @@
       in the wrong order.
   text_match:
     placeholder: Zadejte svou odpověď zde
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

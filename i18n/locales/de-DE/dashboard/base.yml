@@ -64,6 +64,8 @@ de:
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr Informationen kannst du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a> anschauen.'
     overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen und ihren Lernfortschritt zu verfolgen.'
     no_signup_message: 'Du kannst <a target="_blank" href="http://learn.code.org">die verschiedenen Level und Puzzle</a> durchsuchen, aber um Deinen Fortschritt zu speichern musst Du dich anmelden.'
@@ -319,6 +321,7 @@ de:
     classroom_activity: Aktivität ohne Computer
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Übersicht der Level 1, 2 und 3
     lesson_plans: Arbeitsplan
     signin_message: 'Schon registriert? %{link}'
@@ -484,6 +487,8 @@ de:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Gebe hier deine Antwort ein
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

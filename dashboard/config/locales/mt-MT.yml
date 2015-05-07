@@ -67,6 +67,8 @@
     need_confirmation: Ma rcevejtx istruzzjonijiet tal-konferma?
     need_unlock: Ma rcevejtx istruxzzjonijiet biex tanlokkja?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Sign up for an account to track your progress. Your email is
       primarily used to allow you to log in and for password recovery. For more information,
       see our <a href="http://code.org/privacy">Privacy Policy</a>.
@@ -372,6 +374,7 @@
     classroom_activity: Attivita bla kompjuter
   home:
     title: Code Stuwdjo
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Ħarsa ġenerali tal-korsijiet 1, 2 u 3
     lesson_plans: Pjanijiet tal-Lezzjoni
     signin_message: Diġà rreġistrat? %{link}
@@ -569,6 +572,8 @@
       in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:

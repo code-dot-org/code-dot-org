@@ -67,6 +67,8 @@
     need_confirmation: Non hai ricevuto le istruzioni di conferma?
     need_unlock: Non hai ricevuto le istruzioni di sblocco?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Iscriviti per avere un account che ti permetta di tener traccia
       dei tuoi progressi. Il tuo indirizzo di posta elettronica verrà usato soprattutto
       per accedere e recuperare la tua password. Per maggiori informazioni, consulta
@@ -382,6 +384,7 @@
     classroom_activity: Attività "Senza Rete"
   home:
     title: Officina del Codice
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Panoramica dei corsi 1, 2 e 3
     lesson_plans: Piani di lavoro delle lezioni
     signin_message: Già iscritto? %{link}
@@ -589,6 +592,8 @@
       in the wrong order.
   text_match:
     placeholder: Inserisci qui la tua risposta
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Ok
   time:

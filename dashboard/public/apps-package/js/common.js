@@ -4779,7 +4779,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../../locale/current/common');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');49; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');56; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (58,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (59,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');61; } ; buf.push('\n        </table>\n      </div>\n      ');64; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n          <img id="play-button" src="', escape((67,  assetUrl('media/play-circle.png') )), '"/>\n        </div>\n      </div>\n    </div>\n\n    ');72; if (data.hasDesignMode) { ; buf.push('\n      <div id="design-cell" class="design-cell-none">\n        <button id="designModeButton" class="share">\n          ', escape((75,  msg.designMode() )), '\n        </button>\n        <button id="codeModeButton" class="share" style="display:none;">\n          ', escape((78,  msg.codeMode() )), '\n        </button>\n      </div>\n    ');81; } ; buf.push('\n  </div>\n</div>\n\n<div id="visualizationResizeBar">\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((89,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((92,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((93,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((95,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((96,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((97,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((99,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((101,  data.blockCounterClass )), '>\n            ', escape((102,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((105,  data.idealBlockNumber )), '</span>\n          <span> ', escape((106,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');110; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((113,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');116; } ; buf.push('\n  </div>\n  ');118; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');120; } ; buf.push('\n  ');121; if (data.hasDesignMode) { ; buf.push('\n    ', (122,  data.designModeBox ), '\n  ');123; } ; buf.push('\n  ');124; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (125,  data.extraControlRows ), '\n  ');126; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (31,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');36; gameButtons() ; buf.push('\n\n    ');38; if (data.hasDesignMode) { ; buf.push('\n      <button id="designModeButton" class="share">\n        ', escape((40,  msg.designMode() )), '\n      </button>\n      <button id="codeModeButton" class="share" style="display:none;">\n        ', escape((43,  msg.codeMode() )), '\n      </button>\n    ');45; } ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');59; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');66; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (68,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (69,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');71; } ; buf.push('\n        </table>\n      </div>\n      ');74; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar">\n</div>\n\n<div id="codeWorkspace">\n  <div id="headers" dir="', escape((87,  data.localeDirection )), '">\n    <div id="codeModeHeaders">\n      <div id="toolbox-header" class="workspace-header">\n        <span>', escape((90,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        <span id="hide-toolbox" style="display:none;">&nbsp;', escape((91,  msg.hideToolbox() )), '</span>\n      </div>\n      <div id="show-toolbox-header" class="workspace-header" style="display:none;"><span id="show-toolbox">', escape((93,  msg.showToolbox() )), '</span></div>\n      <div id="show-code-header" class="workspace-header"><span>', escape((94,  msg.showCodeHeader() )), '</span></div>\n      <div id="clear-puzzle-header" class="workspace-header"><span>', escape((95,  msg.clearPuzzle() )), '</span></div>\n      <div id="workspace-header" class="workspace-header">\n        <span id="workspace-header-span">', escape((97,  msg.workspaceHeaderShort())), ' </span>\n        <div id="blockCounter">\n          <div id="blockUsed" class=', escape((99,  data.blockCounterClass )), '>\n            ', escape((100,  data.blockUsed )), '\n          </div>\n          <span>/</span>\n          <span id="idealBlockNumber">', escape((103,  data.idealBlockNumber )), '</span>\n          <span> ', escape((104,  msg.blocks() )), '</span>\n        </div>\n      </div>\n    </div>\n    ');108; if (data.hasDesignMode) { ; buf.push('\n      <div id="designModeHeaders" style="display:none;">\n        <div id="design-header" class="workspace-header">\n          <span>', escape((111,  msg.designModeHeader() )), '</span>\n        </div>\n      </div>\n    ');114; } ; buf.push('\n  </div>\n  ');116; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');118; } ; buf.push('\n  ');119; if (data.hasDesignMode) { ; buf.push('\n    ', (120,  data.designModeBox ), '\n  ');121; } ; buf.push('\n  ');122; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n  ', (123,  data.extraControlRows ), '\n  ');124; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -6037,15 +6037,17 @@ StudioApp.prototype.init = function(config) {
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    aniGifPreview.onclick = _.bind(function() {
-      this.showInstructions_(config.level, false);
-    }, this);
     var promptTable = document.getElementById('prompt-table');
     promptTable.className += " with-ani-gif";
   } else {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'none';
   }
+
+  var bubble = document.getElementById('bubble');
+  dom.addClickTouchEvent(bubble, _.bind(function() {
+    this.showInstructions_(config.level, false);
+  }, this));
 
   if (this.editCode) {
     this.handleEditCode_({
@@ -6054,7 +6056,8 @@ StudioApp.prototype.init = function(config) {
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
-      afterInject: config.afterInject
+      afterInject: config.afterInject,
+      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
 
@@ -6064,10 +6067,10 @@ StudioApp.prototype.init = function(config) {
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
-    vizResizeBar.addEventListener('mousedown',
-                                  _.bind(this.onMouseDownVizResizeBar, this));
-    document.body.addEventListener('mouseup',
-                                   _.bind(this.onMouseUpVizResizeBar, this));
+    dom.addMouseDownTouchEvent(vizResizeBar,
+                               _.bind(this.onMouseDownVizResizeBar, this));
+    dom.addMouseUpTouchEvent(document.body,
+                             _.bind(this.onMouseUpVizResizeBar, this));
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
@@ -6499,6 +6502,11 @@ StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   if (!this.onMouseMoveBoundHandler) {
     this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
     document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (this.mouseMoveTouchEventName) {
+      document.body.addEventListener(this.mouseMoveTouchEventName,
+                                     this.onMouseMoveBoundHandler);
+    }
 
     event.preventDefault();
   }
@@ -6566,6 +6574,10 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (this.onMouseMoveBoundHandler) {
     document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
+    if (this.mouseMoveTouchEventName) {
+      document.body.removeEventListener(this.mouseMoveTouchEventName,
+                                        this.onMouseMoveBoundHandler);
+    }
     this.onMouseMoveBoundHandler = null;
   }
 };
@@ -6991,9 +7003,13 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Add an ace completer for the API functions exposed for this level
     if (options.dropletConfig) {
+      var functionsFilter = null;
+      if (options.autocompletePaletteApisOnly) {
+         functionsFilter = options.codeFunctions;
+      }
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        dropletUtils.generateAceApiCompleter(options.dropletConfig));
+        dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
@@ -10872,13 +10888,19 @@ standardConfig.categories = {
 /**
  * @param codeFunctions
  * @param {DropletConfig} dropletConfig
+ * @param {DropletConfig} otherConfig optionally used to supply a standardConfig
+ *  object which is not app specific. It will be used first, then overriden
+ *  by the primary dropletConfig if there is overlap between the two.
  * @returns {Array}
  */
-function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
+function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
   var merged = [];
 
   if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ standardConfig.blocks, dropletConfig.blocks ];
+    var blockSets = [ dropletConfig.blocks ];
+    if (otherConfig) {
+      blockSets.splice(0, 0, otherConfig.blocks);
+    }
     // codeFunctions is an object with named key/value pairs
     //  key is a block name from dropletBlocks or standardBlocks
     //  value is an object that can be used to override block defaults
@@ -10956,7 +10978,9 @@ exports.generateCodeAliases = function (dropletConfig, parentObjName) {
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions,
+                                                 dropletConfig,
+                                                 standardConfig);
   var i, j;
 
   for (i = 0; i < mergedFunctions.length; i++) {
@@ -11011,13 +11035,21 @@ function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
 
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
+ *
+ * If functionFilter is non-null, use it to filter the dropletConfig APIs to
+ * be set in autocomplete and create no other autocomplete entries
  */
-exports.generateAceApiCompleter = function (dropletConfig) {
+exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   var apis = [];
 
-  populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
-  populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
-  populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+  if (functionFilter) {
+    var mergedBlocks = mergeFunctionsWithConfig(functionFilter, dropletConfig);
+    populateCompleterApisFromConfigBlocks(apis, mergedBlocks);
+  } else {
+    populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
+    populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
+    populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+  }
 
   return {
     getCompletions: function(editor, session, pos, prefix, callback) {
@@ -16924,10 +16956,7 @@ exports.setText = function(node, string) {
   }
 };
 
-
-var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
+exports.getTouchEventName = function(eventName) {
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
   var isStandardTouch = 'ontouchend' in document.documentElement;
@@ -16940,8 +16969,16 @@ var addEvent = function(element, eventName, handler) {
   } else if (isStandardTouch) {
     key = "standard";
   }
-  if (key) {
-    var touchEvent = TOUCH_MAP[eventName][key];
+  if (key && TOUCH_MAP[eventName]) {
+    return TOUCH_MAP[eventName][key];
+  }
+};
+
+var addEvent = function(element, eventName, handler) {
+  element.addEventListener(eventName, handler, false);
+
+  var touchEvent = exports.getTouchEventName(eventName);
+  if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
       e.preventDefault();  // Stop mouse events.
       handler(e);

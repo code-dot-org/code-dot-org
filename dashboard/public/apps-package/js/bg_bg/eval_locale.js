@@ -165,7 +165,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "placeImageBlockTitle":function(d){return "място-изображение (x, y, изображение)"},
 "offsetBlockTitle":function(d){return "изместване (x, y, изображение)"},
 "rectangleBlockTitle":function(d){return "правоъгълник (ширина, височина, стил, цвят)"},
-"reinfFeedbackMsg":function(d){return "Можете да натиснете бутона \"Продължете да  играете\", за да редактирате вашата рисунка."},
+"reinfFeedbackMsg":function(d){return "Можете да натиснете бутона \"Стартиране отначало\", за да редактирате вашата програма."},
 "rotateImageBlockTitle":function(d){return "завъртане (градуси, изображение)"},
 "scaleImageBlockTitle":function(d){return "скала (фактор, изображение)"},
 "squareBlockTitle":function(d){return "квадрат (размер, стил, цвят)"},

@@ -1,46 +1,46 @@
 ku:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'تکایە ئەم هەڵانەی خوارەوە ڕاست بکەوە:'
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: داواکراوە
     attributes:
       user:
-        name: Display Name
-        email: Email
-        username: Username
-        password: Password
-        password_confirmation: Password confirmation
-        current_password: Current password
-        locale: Language
-        age: Age
-        gender: Gender
-        edit_header: Edit Account Details
+        name: ناوی پیشاندراو
+        email: ئیمەیڵ
+        username: ناوی بەکارهێنەر
+        password: تێپەڕەوشە
+        password_confirmation: پشتڕاستکردنەوەی تێپەڕەوشە
+        current_password: تێپەڕەوشەی ئێستا
+        locale: زمان
+        age: تەمەن
+        gender: ڕەگەز
+        edit_header: دەستکاریکردنی وردەکارییەکانی هەژمار
         error:
-          future: "can't be in the future"
-  hello: Hello world
-  welcome_back: 'Welcome back, %{name}'
-  submit: Submit
+          future: ناکرێت لە داهاتوو بێت
+  hello: چۆنی جیهان
+  welcome_back: 'بەخێربێیەوە، %{name}'
+  submit: بنێرە
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
+      label: 'زیادکردنی مامۆستایەک:'
       placeholder: Section Code (ABCDEF)
-    submit: Add teacher
+    submit: زیادکردنی مامۆستا
   add_hint_form:
     placeholder: Please enter your hint here
     submit: Add hint
   appname: Code.org
-  stage: Stage
-  stage_number: 'Stage %{number}'
+  stage: قۆناغ
+  stage_number: 'قۆناغی %{number}'
   puzzle: Puzzle
   trophies: Trophies
   courses: Courses
   of: of
-  more: MORE
-  less: LESS
-  beta: beta
+  more: زیاتر
+  less: کەمتر
+  beta: تاقیکاری
   try_hoc: 'Try the Hour of Code, click here >> '
   try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
@@ -48,22 +48,24 @@ ku:
   demos: 'Admin: All Demos'
   continue: Continue
   prize: prize
-  more_info: More info
+  more_info: زانیاری زیاتر
   auth:
-    sign_in_with: 'Sign in with %{provider}'
+    sign_in_with: 'چوونەژوورەوە لەگەڵ %{provider}'
     signed_in: Signed in!
     signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: Already signed up?
     notyet_signedup: "Haven't joined yet?"
-    google_oauth2: Google Account
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft Account
-    forgot_password: Forgot your password?
+    google_oauth2: هەژماری گووگڵ
+    twitter: تویتەر
+    facebook: فەیسبووک
+    windowslive: هەژماری مایکڕۆسۆفت
+    forgot_password: تێپەڕەوشەت لەبیر کردووە؟
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'You can <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a>, but you will need to sign up to save your progress.'
@@ -77,45 +79,45 @@ ku:
     address_placeholder: address, city, state, zip
     gender: Gender (optional)
     birthday: Birthday (optional)
-    age: Age
+    age: تەمەن
     user_type: Are you a student or teacher?
-    submit: Sign up
-    teacher: Are you a teacher?
-    valid_username: Available!
+    submit: خۆتۆمارکردن
+    teacher: ئایا تۆ مامۆستای؟
+    valid_username: بەردەستە!
     invalid_username: Username must be at least 5 characters
-    taken_username: Username is already taken
-    valid_password: Valid password!
-    invalid_password: Password must be at least 6 characters
+    taken_username: ئەم ناوی بەکارهێنەرە بەکارهاتووە
+    valid_password: تێپەڕەوشەی دروست!
+    invalid_password: تێپەڕەوشە پێویستە لانی کەم 6 نووسە بێت
     mismatch_password: The two passwords you entered do not match
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
     additional_information: We need some additional information to continue signing you up.
   signin_form:
     title: Have an account already? Sign in
-    login: Email or username
-    password: Password
+    login: ئیمەیڵ یان ناوی بەکارهێنەر
+    password: تێپەڕەوشە
     remember: Remember me
-    submit: Sign in
+    submit: چوونەژوورەوە
   signin:
     try_heading: Want to try coding without signing up?
     try_hoc: Try one Hour of Code first
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
-    welcome: 'Welcome to %{section_name}'
-    name: Choose your name
+    welcome: 'بەخێربێیت بۆ %{section_name}'
+    name: ناوەکەت هەڵبژێرە
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: Sign in
+    login: چوونەژوورەوە
   password:
     reset_form:
-      title: Forgot your password?
-      email: Email address
+      title: تێپەڕەوشەت لەبیر کردووە؟
+      email: ناونیشانی ئیمەیڵ
       submit: Send me reset password instructions
     change_form:
-      title: Change your password
-      new_password: New password
-      confirm_password: Confirm new password
-      submit: Change my password
+      title: گۆڕینی تێپەڕەوشەکەت
+      new_password: تێپەڕەوشەی نوێ
+      confirm_password: پشتڕاستکردنەوەی تێپەڕەوشەی نوێ
+      submit: گۆڕینی تێپەڕەوشەکەم
   welcome_email:
     subject: Join my class (on Code.org)
     body: |
@@ -150,8 +152,8 @@ ku:
       access_denied: "You don't have access to this person's stats"
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
+    provider: 'دابینکەر:'
+    code: 'کۆد:'
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
     donorschoose_project: Post a project
@@ -165,13 +167,13 @@ ku:
     teacher_info_required: 'Teacher prizes require school name and address information:'
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
-      title: Please Confirm
+      title: تکایە پشتڕاستی بکەوە
       "no": 'No'
       "yes": 'Yes'
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: Visit website
+      msg_visit_website: سەردانیکردنی ماڵپەڕ
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -205,7 +207,7 @@ ku:
     update: Update
     destroy: Destroy
     back: Back
-    confirm: Are you sure?
+    confirm: ئایا تۆ دڵنیایت؟
     created: '%{model} was successfully created.'
     updated: '%{model} was successfully updated.'
     destroyed: '%{model} was successfully deleted.'
@@ -218,37 +220,37 @@ ku:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Teacher Home Page
+      classroom: پەڕەی سەرەکی مامۆستا
       district_dashboard: District Dashboard
       label: 'Hi %{username}'
       stats: My progress
-      settings: My account
+      settings: هەژمارەکەم
       prizes: Prizes
-      logout: Sign out
-      signin: Sign in
-      signup: Sign up
-      already_registered: Already registered?
+      logout: دەرچوون
+      signin: چوونەژوورەوە
+      signup: خۆتۆمارکردن
+      already_registered: پێشوو تۆمارکراویت؟
     popup:
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
-      close: CLOSE
+      close: داخستن
       mastery: Concepts
-      puzzle_map: Stages
+      puzzle_map: قۆناغەکان
       prizes: 'Collect all %{total_trophies} trophies and win prizes!'
       prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
       prize_us_only: (U.S. students only)
       prizes_link: more info
   teacher:
     title:
-      one: 'Your teacher:'
-      other: 'Your teachers:'
-    remove: (remove teacher)
+      one: 'مامۆستاکەت:'
+      other: 'مامۆستاکانت:'
+    remove: (لابردنی مامۆستا)
     confirm:
-      remove: Are you sure you want to remove this teacher?
-    tools: Teacher Tools
+      remove: ئایا تۆ دڵنیایت لە لابردنی ئەم مامۆستایە؟
+    tools: ئامرازەکانی مامۆستا
     followers:
       section: 'Section:'
-      stages: 'Stage(s) to display:'
+      stages: 'قۆناغەکان بۆ پیشاندان:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
       perfect: Completed, perfect
@@ -259,9 +261,9 @@ ku:
       no_section: No assigned section
       trophies: Trophies
     students:
-      name: Name
-      username: Username
-      password: Password
+      name: ناو
+      username: ناوی بەکارهێنەر
+      password: تێپەڕەوشە
       manage: Manage students
       dashboard: Go to Teacher Dashboard
       add: Add students
@@ -279,15 +281,15 @@ ku:
       add: Add section
       manage: Manage sections
       section: Section
-      students: Students
+      students: خوێندکارەکان
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
-      edit: edit
-      delete: delete
+      rename: ناونانەوە
+      edit: دەستکاری
+      delete: سڕینەوە
       confirm_delete: Are you sure you want to delete this section?
       email: Send in email
     rollup: Progress Dashboard
@@ -316,6 +318,7 @@ ku:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'Already registered? %{link}'
@@ -335,11 +338,11 @@ ku:
     student_left_off: 'Where you left off:'
     student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
     local_school: local school
-    online: online
+    online: سەرهێڵ
     see_details: See details
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: Try now
+    trynow: ئێستا تاقیبکەوە
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
     test_videos_help: Test our new video player at your school
@@ -352,25 +355,25 @@ ku:
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
   gender:
-    male: Male
-    female: Female
+    male: نێر
+    female: مێ
     none: Prefer not to answer
   user_type:
-    student: Student
-    teacher: Teacher
+    student: قوتابی
+    teacher: مامۆستا
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     powered_by_aws: Powered by Amazon Web Services
     feedback: Provide feedback
     translate: Help us translate to your language
-    support: Support
+    support: پاڵپشتی
     support_url: http://support.code.org
-    tos: Terms
+    tos: بڕگەکان
     privacy: Privacy Policy
     secure: Secure Version
   reference_area:
-    title: Need help?
+    title: یارمەتیت پێویستە؟
     subtitle: See these videos and hints
     teacher: See the solution
     auth_error: You are not authorized to see the solution.
@@ -393,11 +396,11 @@ ku:
       button: Take me to the list of supported browsers
   slow_loading: This is taking longer than usual...
   try_reloading: Try reloading the page
-  next_stage: Finished! Continue to next stage
+  next_stage: تەواوبوو! بەردەوامبە بۆ قۆناغی دواتر
   download_pdf: Open Lesson Plan
   lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  pdf_download: داگرتنی PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
@@ -424,7 +427,7 @@ ku:
       unused: Unused Levels
   upsell:
     hoc:
-      title: Hour of Code
+      title: كاژێری كۆدنووسی
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -482,6 +485,8 @@ ku:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:
@@ -541,8 +546,8 @@ ku:
     create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
-    save: Save
-    delete: Delete
+    save: پاشه‌كه‌وت بكە
+    delete: بسڕەوە
     exit: Return to Course
     my_projects: My Projects
     share: Share
@@ -550,12 +555,12 @@ ku:
     share_copy_link: 'Copy the link:'
     close: Close
     more: More
-    name: Name
+    name: ناو
     updated: Updated
     project_type: Project Type
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
     need_help: Need help getting started?
-    really_delete: Delete?
+    really_delete: بسڕێتەوە؟
     delete_yes: 'Yes'
     delete_no: 'No'
     saved: Saved

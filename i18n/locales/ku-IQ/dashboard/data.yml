@@ -4,72 +4,72 @@ ku:
       name:
         20-hour:
           desc: K-8 Intro to Computer Science Course
-          Unplug1: Stage 1
-          Maze: Stage 2
-          Unplug2: Stage 3
-          Unplug3: Stage 4
-          Artist: Stage 5
-          Unplug4: Stage 6
-          Artist2: Stage 7
-          Unplug5: Stage 8
-          Farmer: Stage 9
-          Unplug6: Stage 10
-          Artist3: Stage 11
-          Unplug7: Stage 12
-          Farmer2: Stage 13
-          Unplug8: Stage 14
-          Artist4: Stage 15
-          Unplug9: Stage 16
-          Farmer3: Stage 17
-          Unplug10: Stage 18
-          Artist5: Stage 19
-          Unplug11: Stage 20
+          Unplug1: قۆناغی 1
+          Maze: قۆناغی 2
+          Unplug2: قۆناغی 3
+          Unplug3: قۆناغی 4
+          Artist: قۆناغی 5
+          Unplug4: قۆناغی 6
+          Artist2: قۆناغی 7
+          Unplug5: قۆناغی 8
+          Farmer: قۆناغی 9
+          Unplug6: قۆناغی 10
+          Artist3: قۆناغی 11
+          Unplug7: قۆناغی 12
+          Farmer2: قۆناغی 13
+          Unplug8: قۆناغی 14
+          Artist4: قۆناغی 15
+          Unplug9: قۆناغی 16
+          Farmer3: قۆناغی 17
+          Unplug10: قۆناغی 18
+          Artist5: قۆناغی 19
+          Unplug11: قۆناغی 20
         Hour of Code:
-          desc: Hour of Code
-          Maze: Stage 1
+          desc: كاژێری كۆدنووسی
+          Maze: قۆناغی 1
         Edit Code:
           desc: Edit Code (beta)
-          MazeEC: Stage 1
+          MazeEC: قۆناغی 1
         2014 Levels:
           desc: Bounce (beta)
-          Bounce: Stage 1
+          Bounce: قۆناغی 1
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          Custom: قۆناغی 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: قۆناغی 1
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          Jigsaw: قۆناغی 1
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
-          MazeEC: Stage 1
-          Applab: Stage 2
-          ArtistEC: Stage 3
-          StudioEC: Stage 4
+          MazeEC: قۆناغی 1
+          Applab: قۆناغی 2
+          ArtistEC: قۆناغی 3
+          StudioEC: قۆناغی 4
         events:
           desc: Bounce (beta)
-          Bounce: Stage 1
-          Studio: Stage 2
+          Bounce: قۆناغی 1
+          Studio: قۆناغی 2
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          Custom: قۆناغی 1
         flappy:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: قۆناغی 1
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          Jigsaw: قۆناغی 1
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: Stage 1
+          WordSearch: قۆناغی 1
     game:
       name:
         Unplug1: Introduction to Computer Science
@@ -299,11 +299,11 @@ ku:
         studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c2_6: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c2_8: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c2_9: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
+        studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_story_1: 'Can you make this dog say "hello world"?'
         studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
@@ -312,14 +312,14 @@ ku:
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_2: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_4: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c3_game_5: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_6: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
+        studio_playlab_1: 'Waddles wants to say "hello" - can you help him?'
+        studio_playlab_2: 'Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
         studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'

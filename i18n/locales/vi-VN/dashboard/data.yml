@@ -302,11 +302,11 @@ vi:
         studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c2_6: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c2_8: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c2_9: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
+        studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_story_1: 'Can you make this dog say "hello world"?'
         studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
@@ -315,14 +315,14 @@ vi:
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_2: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_4: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c3_game_5: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_6: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
+        studio_playlab_1: 'Waddles wants to say "hello" - can you help him?'
+        studio_playlab_2: 'Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
         studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'

@@ -416,8 +416,8 @@
         flappy_5: 'Давайте сделаем доску очков и подсчитаем очки, когда Птичка пересекает
           последнее препятствие. Добавьте команду "когда пройдешь препятствие", и
           тогда получи очко за пролет Птички через определенное количество труб. '
-        flappy_6: Посмотри можешь ли ты заработать очко в более маленьком или более
-          большом разрыве труб.
+        flappy_6: Посмотрим, сможешь ли ты заработать очко делая взмах Flappy, либо
+          более маленьким или более большим значением.
         flappy_7: Далее, попробуйте изменить сцену, присоединив другой блок к блоку
           «при запуске».
         flappy_8: Визуальные эффекты можно задать в любое время, не только при запуске
@@ -682,24 +682,28 @@
         csp_pixelation_color_3: Инструмент пикселизации цвета - часть 3
         csp_pixelation_bw: Инструмент пикселизации чёрного и белого
         csp_U1L14_tipstricks: 'Модуль 1, урок 14: советы для учителей'
-        csp_textcompression: Text compression widget
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_textcompression: Виджет сжатия текста
+        alg_1_intro: Информатика в Алгебре - Введение
+        alg_2_eval_block: Информатика в Алгебре - Блоки Оценивания
+        alg_3_pemdas: Информатика в Алгебре - Порядок Операций
+        alg_4_data_types: Информатика в Алгебре - Типы Данных
+        alg_5_contracts: Информатика в Алгебре - Контракты
+        alg_6_variables: Информатика в Алгебре - Переменные
+        alg_7_function: Информатика в Алгебре - Функции
+        alg_8_design_recipe: Информатика в Алгебре - Набор правил Структуры кода
+        alg_9_booleans: Информатика в Алгебре - Логические значения
+        alg_10_conditionals: Информатика в Алгебре - Условные команды
+        alg_11_coordinate_plane: Информатика в Алгебре - Плоскость Координат
+        alg_12_biggame_variables: 'Информатика в Алгебре - Большая Игра: Переменные'
+        alg_13_biggame_animation: 'Информатика в Алгебре - Большая Игра: Анимация'
+        alg_14_biggame_booleans: 'Информатика в Алгебре - Большая Игра: Логические
+          значения'
+        alg_15_biggame_update_player: 'Информатика в Алгебре - Большая Игра: Обновление
+          Игрока'
+        alg_16_biggame_collision_detection: 'Информатика в Алгебре - Большая Игра:
+          Обнаружение Конфликтов'
+        alg_17_sambat_compound_booleans: Информатика в Алгебре - Составные Логические
+          значения
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока
@@ -805,7 +809,7 @@
         Infinity_move_right_runbutton: Добавьте сюда блок "двигаться"
         Infinity_move_directions_callout: Какой блок сделают Baymax переместить при
           нажатии стрелки вверх?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_directions_callout_arrow: Используйте эти стрелки, чтобы управлять
         Infinity_move_collide_callout: Воспроизведение звука, когда происходит данное
           событие.
         Infinity_repeat_callout: Место переместить блоки внутри здесь

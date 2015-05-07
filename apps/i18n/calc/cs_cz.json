@@ -1,17 +1,17 @@
 {
-  "divideByZeroError": "Your program results in division by zero.",
-  "emptyComputeBlock": "You must attach a block to the \"compute\" block.",
+  "divideByZeroError": "Váš program způsobí dělení nulou.",
+  "emptyComputeBlock": "Musíte připojit blok k \"výpočetnímu bloku\".",
   "equivalentExpression": "Zkus změnit pořadí argumentů a tak získat přesně stejný výraz.",
-  "evaluate": "evaluate",
-  "extraTopBlocks": "Máš nepřipojené bloky. Nechceš je připojit na blok \"vypočítat\"?",
-  "failedInput": "Your function does not return the right result for all values.",
+  "evaluate": "vypočítat",
+  "extraTopBlocks": "Máte nepřipojené bloky. Chtěli jste je připojit k \"výpočetnímu bloku\"?",
+  "failedInput": "Vaše funkce nevrací správný výsledek pro všechny hodnoty.",
   "goal": "Cíl:",
-  "levelIncompleteError": "Your expression does not match the goal.",
-  "missingFunctionError": "You must define a function named {functionName}.",
-  "missingVariableX": "Your expression is missing variable {var}.",
-  "reinfFeedbackMsg": "Tady je tvůj příběh! Pokračuj v práci, nebo přejdi na další hádanku!",
+  "levelIncompleteError": "Váš výraz se neshoduje s cílem.",
+  "missingFunctionError": "Je třeba definovat funkci s názvem {functionName}.",
+  "missingVariableX": "Ve výrazu chybí proměnná {var}.",
+  "reinfFeedbackMsg": "Tady je váš výpočet! Pokračujte s ním dále, nebo přejděte na další hádanku!",
   "yourExpression": "Výraz:",
-  "wrongInput": "You are calling your function with the wrong value.",
+  "wrongInput": "Voláte funkci s nesprávnou hodnotou.",
   "wrongOtherValuesX": "Your expression results in the wrong value if we vary {var}.",
-  "wrongResult": "Your expresison does not return the correct result."
+  "wrongResult": "Výraz nevrací správný výsledek."
 }
