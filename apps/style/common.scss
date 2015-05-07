@@ -712,6 +712,8 @@ input[type="radio"] {
 #bubble {
   color: black;
   margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
 }
 
 #prompt-table {
@@ -739,7 +741,6 @@ input[type="radio"] {
 $aniGifPreviewWidth: 80px;
 $aniGifPreviewHeight: 60px;
 #ani-gif-preview {
-  cursor: pointer;
   display: table-cell;
   background-size: $aniGifPreviewWidth $aniGifPreviewHeight;
   // background-image set via javascript
@@ -757,9 +758,6 @@ $aniGifPreviewHeight: 60px;
 }
 
 /* Place ani-gif next to text for column width 300px or wider. */
-#bubble {
-  position: relative;
-}
 @media screen and (min-width: 1051px) {
   #prompt-table.with-ani-gif {
     margin-right: $aniGifPreviewWidth;
