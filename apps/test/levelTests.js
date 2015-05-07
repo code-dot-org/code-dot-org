@@ -41,7 +41,7 @@ describe('Level tests', function() {
     // Clean up some state that is meant to be per level. This is an issue
     // because we're using the same window for all tests.
     if (window.Maze) {
-      window.Maze.bee = null
+      window.Maze.bee = null;
       window.Maze.wordSearch = null;
     }
     if (window.Studio) {

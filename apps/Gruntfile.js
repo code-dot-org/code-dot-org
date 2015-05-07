@@ -257,6 +257,13 @@ config.ejs = {
   }
 };
 
+
+config.shell = {
+  runTests: {
+    command: 'node test/util/runTests.js'
+  }
+};
+
 var allFilesSrc = [];
 var allFilesDest = [];
 var outputDir = 'build/package/js/';
@@ -391,20 +398,6 @@ config.jshint = {
   ]
 };
 
-config.mochaTest = {
-  all: {
-    options: {
-      reporter: 'spec',
-      timeout: 10000
-    },
-    src: [
-      'test/*.js',
-      'test/calc/*.js',
-      'test/netsim/*.js'
-    ]
-  }
-};
-
 config.strip_code = {
   options: {
     start_comment: 'start-test-block',
@@ -476,9 +469,12 @@ module.exports = function(grunt) {
     'concurrent:watch'
   ]);
 
+  grunt.registerTask('mochaTest', ['shell:runTests']);
+
   grunt.registerTask('test', ['jshint', 'mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 
-  config.mochaTest.all.options.grep = new RegExp(grunt.option('grep'));
+  process.env.mocha_grep = grunt.option('grep') || '';
+  process.env.mocha_debug = grunt.option('debug') || '';
 };

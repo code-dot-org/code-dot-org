@@ -27,10 +27,10 @@ module.exports = {
    */
   detach: function () {
     window.addEventListener = original;
-    original = null
+    original = null;
     listeners.forEach(function (argList) {
       window.removeEventListener.apply(window, argList);
     });
     listeners = [];
   }
-}
+};
