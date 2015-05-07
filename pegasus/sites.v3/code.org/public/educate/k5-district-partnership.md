@@ -8,6 +8,9 @@ Code.org is looking to partner with school districts to prepare a Facilitator (c
 
 Ideal partnerships are with school districts interested in bringing computer science to **all** elementary school students and have 30+ elementary school teachers to develop.  
 <br />
+
+**Application period for 2015-2016 school year is now closed. We will begin reviewing 2016-2017 applications in Spring of 2016.**
+
 [<button>Apply Now</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)&nbsp;&nbsp;[<button>Learn about the K-5 curriculum</button>](/k5)
 <br />
 <br />

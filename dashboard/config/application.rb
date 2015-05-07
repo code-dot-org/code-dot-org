@@ -83,6 +83,8 @@ module Dashboard
       editor/blockly_editor.js
       levels/*
       react.js
+      jquery.handsontable.full.css
+      jquery.handsontable.full.js
     )
     config.react.variant = :development
     config.react.addons = true

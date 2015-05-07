@@ -3,7 +3,7 @@
 Feature: Blocks can be copied and pasted using the keyboard
 
 Background:
-  Given I am on "http://learn.code.org/s/1/level/40?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/7/puzzle/6?noautoplay=true"
 
 Scenario: Copy and paste a block
   When I rotate to landscape
