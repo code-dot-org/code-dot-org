@@ -147,7 +147,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'course4' || name == 'edit-code'
+    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit3'
   end
 
   def is_k1?
