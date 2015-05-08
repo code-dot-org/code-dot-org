@@ -6,11 +6,11 @@
       %i.fa.fa-chevron-left{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
 
     %h3
-      Answer Viewer
+      = t('teacher.panel.answer_viewer')
     .content
       - if @user
         .students
-          %h4 Student
+          %h4= t('teacher.panel.student')
           = link_to @user.name, teacher_dashboard_student_progress_url(@section, @user)
       - if @user_level
         .user_level
@@ -33,11 +33,11 @@
           = link_to script_level_solution_path(@script, @level) do
             %button.btn.btn-info= t('reference_area.teacher')
         = link_to build_script_level_path(@script_level) do
-          %button.btn.btn-info= 'Try it yourself'
+          %button.btn.btn-info= t('teacher.panel.try_it_yourself')
       - if @section
         .section
           %h4
-            Section:
+            =t('teacher.panel.section')
             =link_to @section.name, teacher_dashboard_section_progress_url(@section)
           %table.section-students
             - @section.students.order(:name).each do |student|
