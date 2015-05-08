@@ -1,0 +1,152 @@
+@import "color";
+
+.teacher-panel {
+  position: fixed;
+  top: 85px;
+  bottom: 20px;
+  right: 0;
+  width: 200px;
+  transition: right 0.5s;
+
+  background: $lightest_cyan;
+
+  opacity: 0.9;
+
+  border: 5px solid $cyan;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+
+// these make the show/hide handle go away?
+//  overflow-x: hidden;
+//  overflow-y: auto;
+  z-index: 100;
+
+  .hide-handle,
+  .show-handle {
+    transition: right 0.5s;
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    border-radius: 10px 0 0 10px;
+    color: white;
+    background: $cyan;
+    height: 30px;
+    width: 25px;
+    i {
+      line-height: 30px;
+      padding-left: 5px;
+      font-size: 20px;
+    }
+  }
+
+  .hide-handle {
+    display: block;
+  }
+
+  .show-handle {
+    display: none;
+  }
+
+  h3 {
+    padding: 5px;
+    font-size: 18px;
+    font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+    color: white;
+    background: $cyan;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .content {
+    h4 {
+      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+      text-align: center;
+    }
+  }
+
+  .students {
+    padding: 0 5px;
+    a {
+      width: 100%;
+      text-align: center;
+      font-size: 17.5px;
+    }
+  }
+
+  &.hidden {
+    right: -195px;
+    .hide-handle {
+      right: 200px;
+      display: none;
+    }
+    .show-handle {
+      right: 200px;
+      display: block;
+    }
+  }
+
+  .user_level {
+    padding: 0 5px;
+
+   .level_link {
+     margin: 0 auto;
+     border-radius: 40px;
+     width: 44px;
+     min-width: 44px;
+     line-height: 44px;
+     font-size: 32px;
+     border-width: 4px;
+     display: block;
+     img {
+       width: 32px;
+       height: 32px;
+     }
+   }
+  }
+
+  .level {
+    margin: 10px 0;
+  }
+
+  .section {
+    padding: 0 5px;
+    table, tr {
+      border: 1px solid $light_gray;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 2.5px;
+    }
+
+    h4 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .section-student {
+      background-color: $lightest_gray;
+      opacity: 1;
+
+      .level_link {
+        padding: 5px;
+      }
+      .name a {
+        display: block;
+        width: 140px;
+        line-height: 34px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-decoration: none;
+      }
+
+      &:hover,
+      &.active {
+        background-color: $light_cyan;
+        font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+        a { color: white; }
+      }
+    }
+  }
+}
