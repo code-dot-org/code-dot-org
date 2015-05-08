@@ -32,6 +32,9 @@ var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
+var React = require('react');
+// Prevent mochaTest from choking on JSX.
+var DesignProperties = window.dashboard ? require('./designProperties.jsx') : null;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -1359,9 +1362,7 @@ Applab.editElementProperties = function(el) {
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
   if (designPropertiesEl) {
-    designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
-      tagName: null
-    });
+    React.render(React.createElement(DesignProperties, {el: null}), designPropertiesEl);
   }
 };
 
