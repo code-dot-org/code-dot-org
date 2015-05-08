@@ -15,7 +15,7 @@ social:
 
 ## Existing partners (including all 7 of the largest US school districts)
 
-
+[col-50]
 - New York City Department of Education (NY)
 - Los Angeles Unified School District (CA)
 - Chicago Public Schools (IL)
@@ -28,51 +28,15 @@ social:
 - San Francisco Unified School District (CA)
 - [See all 60+ partner districts](/educate/partner-districts)
 
-
-## Code.org provides (at no charge): 
-
-1. Professional development for teachers
-2. Nationally-recognized courses and curriculum in a blended-learning environment
-3. Materials to promote computer science to parents/students
-4. Support for all grade levels K-12
-<br />
-	
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For a high-level terms sheet outlining commitments by Code.org and Partner districts see this document. 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[High Level Terms Sheet](https://docs.google.com/document/d/19gQVqJD_QymJUnqmfUYgyq1s7xtf0piC6KIiMBhNmgI/pub)
+[/col-50]
 
 
-<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note: This program is currently for **US public schools only**. <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you are a private or international school, know that all of our curriculum and professional <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;development resources will be publicly available under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+[col-50]
+<img src="/images/districtmap"
 
-## District Partnership Materials 
+[/col-50]
 
-For detailed partnership information, check out these resources:
- 
-
-- [District partnership brochure](/files/Code.org_SchoolsBrochure.pdf)
-- [District partnership model](/files/DistrictPartnershipPlan.pdf)
-- [District partnership presentation](/files/DistrictPartnershipPresentation.pdf)
-- [Promotional flyer for schools](/files/SchoolsOnePager.pdf)
-- [High School professional development philosophy](/files/HighSchoolProfessionalDevelopmentPhilosophy.pdf) 
-
-### Interested in partnering?
-
-We are currently at capacity for the 2015-2016 school year. By filling out this form you will be added to our list of districts to contact in April 2015 for ***potential*** partnerships in the 2016-2017 school year. Completion does not mean guaranteed acceptance into our program **as we have limited capacity**. Our expansion for the 2016-2017 school year is focused on districts in regions where we have [existing partnerships](http://code.org/educate/partner-districts) and new regions that can support at least 30 teachers in our high school program.
-
-[<button>Click to Request Partnership</button>](/district-partner)
-
-## The K-12 Computer Science Program
-
-The Code.org Program consists of teacher professional development and three course packages that together represent a comprehensive approach to K-12 computer science education.  A district partnership **requires** adoption of the High School computer science course package, while the Elementary and Middle School programs may be added independently. [Learn more about Code.org's curriculum](/educate/curriculum/).
-
-## Instructions for district representatives
-
-If you are a district representative, complete this [form](/district-partner) and we will update you in April 2015 when our 2016-2017 school year application is ready. Please contact <district@code.org> for more information.
-
-[<button>Click to Request Partnership</button>](/district-partner)
+# NEW TEXT GOES HERE
 
   
 ## If you are a teacher or a parent
