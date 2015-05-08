@@ -612,6 +612,12 @@ input.header_input {
   background-color: $hdr_color;
   font-size: 22px;
   cursor: pointer;
+
+  span {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .header_popup_body {

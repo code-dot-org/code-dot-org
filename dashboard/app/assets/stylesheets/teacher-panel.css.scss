@@ -70,6 +70,10 @@
       width: 100%;
       text-align: center;
       font-size: 17.5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 2em;
+      display: block;
     }
   }
 
@@ -111,7 +115,7 @@
   .section {
     padding: 0 5px;
     table, tr {
-      border: 1px solid $light_gray;
+      border: 1px solid $light_cyan;
       border-collapse: collapse;
     }
 
@@ -133,7 +137,7 @@
       }
       .name a {
         display: block;
-        width: 140px;
+        width: 146px;
         line-height: 34px;
         white-space: nowrap;
         overflow: hidden;
