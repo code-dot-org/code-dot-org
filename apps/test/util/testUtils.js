@@ -67,7 +67,8 @@ function setupLocales() {
 exports.setupLocales = setupLocales;
 
 exports.setupBlocklyFrame = function () {
-  // TODO (brent) - do we need timeoutList?
+  // TODO (brent): Intentionally not messing with timing yet, though that will
+  // come in a future commit.
   // var timeoutList = require('@cdo/apps/timeoutList');
   // timeoutList.clearTimeouts();
   // timeoutList.stubTimer(false);
@@ -149,12 +150,9 @@ exports.generateArtistAnswer = function (generatedCode) {
  * Runs the given function at the provided tick count. For Studio only.
  */
 exports.runOnStudioTick = function (tick, fn) {
-  // TODO (brent)
-  // var Studio = require('@cdo/apps/studio/studio');
   if (!Studio) {
     throw new Error('not supported outside of studio');
   }
-  // TODO (brent) = other approach would be to unwrap once we hit
   var ran = false;
   Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
     if (Studio.tickCount === tick && !ran) {

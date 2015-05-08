@@ -257,7 +257,8 @@ config.ejs = {
   }
 };
 
-
+// TODO (brent): we've lost color with this approach. You can run the command
+// directly to get colors
 config.shell = {
   runTests: {
     command: 'node test/util/runTests.js'
