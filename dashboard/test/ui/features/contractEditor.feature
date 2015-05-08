@@ -1,3 +1,4 @@
+@dashboard_db_access
 @eyes
 Feature: Opening the contract editor
 

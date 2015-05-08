@@ -1,5 +1,5 @@
+@dashboard_db_access
 Feature: Droplet levels work as expected
-
   Background:
     Given I am on "http://studio.code.org/"
     And I am a student
