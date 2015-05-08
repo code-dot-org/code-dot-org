@@ -109,12 +109,25 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_user
-    if params[:user_id]
-      user = User.find(params[:user_id])
+    return if params[:user_id].blank?
 
-      if user.student_of?(current_user)
-        @user = user
-      end
+    user = User.find(params[:user_id])
+
+    if user.student_of?(current_user)
+      @user = user
+      @user_level = @user.user_level_for(@script_level)
+    end
+
+    load_section
+  end
+
+  def load_section
+    return if params[:section_id].blank?
+
+    section = Section.find(params[:section_id])
+
+    if section.user == current_user
+      @section = section
     end
   end
 
