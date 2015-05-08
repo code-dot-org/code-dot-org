@@ -1,12 +1,12 @@
 @import "color";
 
-.admin, .teacher {
+.admin {
   border: 2px solid $light_gray;
   padding: 10px;
   background: $lighter_gray;
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
   h4 {
     font-size: 14px;
     font-weight: bold;
@@ -21,11 +21,5 @@
   /* only display scrollbars when needed */
   overflow: auto;
   /* admin box appears in front of the rest of the level */
-  z-index: 1;
-}
-
-.teacher {
-  left: 0;
-  right: auto;
-  background: $light_purple;
+  z-index: 200;
 }

@@ -1,0 +1,44 @@
+<Match>
+  <config><![CDATA[{
+  "game_id": 30,
+  "created_at": "2015-05-08T03:41:09.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "Triggers constantly while hovering over a button."
+      },
+      {
+        "text": "Triggers once, the instant mouse hovers over the button"
+      },
+      {
+        "text": "Triggers when mouse button is released"
+      },
+      {
+        "text": "Triggers when mouse button is released"
+      },
+      {
+        "text": "Triggers when mouse button is pressed"
+      }
+    ],
+    "answers": [
+      {
+        "text": "mousemove"
+      },
+      {
+        "text": "mouseover"
+      },
+      {
+        "text": "click"
+      },
+      {
+        "text": "mouseup"
+      },
+      {
+        "text": "mousedown"
+      }
+    ],
+    "title": "Event triggers",
+    "content1": "Match the event type name with the description of what triggers it."
+  }
+}]]></config>
+</Match>
