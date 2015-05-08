@@ -256,6 +256,10 @@ class Script < ActiveRecord::Base
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
       end
 
+      if level.game.applab? && !script.login_required
+        raise 'Applab levels can only be added to a script requires login'
+      end
+
       script_level_attributes = {
         script_id: script.id,
         level_id: level.id,
