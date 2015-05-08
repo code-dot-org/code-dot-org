@@ -7,7 +7,7 @@ class Workshop < ActiveRecord::Base
 
   has_many :attendances, through: :segments
 
-  has_many :teachers, through: :cohort, class_name: 'User'
+  has_many :teachers, through: :cohorts, class_name: 'User'
 
   # A Workshop is associated with one or more Cohorts
   has_many :workshops_cohorts, inverse_of: :workshop, dependent: :destroy
