@@ -15,4 +15,4 @@ Feature: Big Game Remix
     Then I wait until element ".project_updated_at" contains text "Saved"
     And check that the URL contains "http://learn.code.org/p/algebra_game"
     Then I am on "http://learn.code.org/p"
-    And element ".projects td:eq(0)" contains text "Remix: My Project"
+    And I wait until element ".projects td:eq(0)" contains text "Remix: Big Game Template"
