@@ -450,3 +450,15 @@ en:
         salt: salt
         Van Minnen: Van Minnen
         Sydney: Sydney
+      U3L14 - Matching Events to Description:
+        Event triggers: Event triggers
+        Match the event type name with the description of what triggers it.: Match the event type name with the description of what triggers it.
+        Triggers constantly while hovering over a button.: Triggers constantly while hovering over a button.
+        Triggers once, the instant mouse hovers over the button: Triggers once, the instant mouse hovers over the button
+        Triggers when mouse button is released: Triggers when mouse button is released
+        Triggers when mouse button is pressed: Triggers when mouse button is pressed
+        mousemove: mousemove
+        mouseover: mouseover
+        click: click
+        mouseup: mouseup
+        mousedown: mousedown

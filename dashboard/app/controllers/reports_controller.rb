@@ -27,6 +27,11 @@ SQL
   end
 
   def header_stats
+    if params[:section_id].present?
+      @section = Section.find(params[:section_id])
+      authorize! :read, @section
+    end
+
     if params[:user_id].present?
       user = User.find(params[:user_id])
       authorize! :read, user
@@ -233,8 +238,10 @@ SQL
       output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
     end
 
+    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+
     @data_array = output_data.map do |key, value|
-      {'Puzzle' => key}.merge(value)
+      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
     end
     require 'naturally'
     @data_array = @data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}

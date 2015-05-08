@@ -32,6 +32,9 @@ var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
 var RGBColor = require('./rgbcolor.js');
 var annotationList = require('./acemode/annotationList');
+var React = require('react');
+// Prevent mochaTest from choking on JSX.
+var DesignProperties = window.dashboard ? require('./designProperties.jsx') : null;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -985,10 +988,10 @@ Applab.init = function(config) {
 
   var debugResizeBar = document.getElementById('debugResizeBar');
   if (debugResizeBar) {
-    dom.addMouseDownTouchEvent(debugResizeBar,
-                               Applab.onMouseDownDebugResizeBar);
-    dom.addMouseUpTouchEvent(document.body,
-                             Applab.onMouseUpDebugResizeBar);
+    debugResizeBar.addEventListener('mousedown',
+                                    Applab.onMouseDownDebugResizeBar);
+    document.body.addEventListener('mouseup',
+                                   Applab.onMouseUpDebugResizeBar);
   }
 
   var finishButton = document.getElementById('finishButton');
@@ -1069,11 +1072,6 @@ Applab.onMouseDownDebugResizeBar = function (event) {
   if (event.srcElement.id === 'debugResizeBar') {
     Applab.draggingDebugResizeBar = true;
     document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
-    Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-    if (Applab.mouseMoveTouchEventName) {
-      document.body.addEventListener(Applab.mouseMoveTouchEventName,
-                                     Applab.onMouseMoveDebugResizeBar);
-    }
 
     event.preventDefault();
   }
@@ -1116,10 +1114,6 @@ Applab.onMouseUpDebugResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (Applab.draggingDebugResizeBar) {
     document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
-    if (Applab.mouseMoveTouchEventName) {
-      document.body.removeEventListener(Applab.mouseMoveTouchEventName,
-                                        Applab.onMouseMoveDebugResizeBar);
-    }
     Applab.draggingDebugResizeBar = false;
   }
 };
@@ -1359,9 +1353,7 @@ Applab.editElementProperties = function(el) {
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
   if (designPropertiesEl) {
-    designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
-      tagName: null
-    });
+    React.render(React.createElement(DesignProperties, {el: null}), designPropertiesEl);
   }
 };
 

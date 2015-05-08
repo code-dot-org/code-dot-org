@@ -2,6 +2,15 @@ name 'PDAlg bootstrap'
 title 'From Bootstrap to CS in Algebra'
 css 'unplugged'
 markdown <<MARKDOWN
+<style type="text/css">
+tbody tr:nth-child(even) {
+   background-color: #ddd;
+}
+td {
+    vertical-align: top;
+    padding: 5px;
+}
+</style>
 ## Code.org Computer Science in Algebra
 #### Powered by Bootstrap
 ### What is CS in Algebra?
@@ -22,11 +31,6 @@ In developing this course we've taken everything we've learned about computer sc
 
 ### What's the Same?
 Just about everything else that you've come to love about Bootstrap has been brought along to CS in Algebra. The scope and sequence, Design Recipe, projects, and overall video game are all present, with some new fun surprises as well.
-
-### What do you love about Bootstrap?
-Post your favorite element of the Bootstrap curriculum to this forum. Come back later to read the posts of others and further the conversation.
-
-<div id="discourse-comments" />
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -367,10 +367,10 @@ StudioApp.prototype.init = function(config) {
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
-    dom.addMouseDownTouchEvent(vizResizeBar,
-                               _.bind(this.onMouseDownVizResizeBar, this));
-    dom.addMouseUpTouchEvent(document.body,
-                             _.bind(this.onMouseUpVizResizeBar, this));
+    vizResizeBar.addEventListener('mousedown',
+                                  _.bind(this.onMouseDownVizResizeBar, this));
+    document.body.addEventListener('mouseup',
+                                   _.bind(this.onMouseUpVizResizeBar, this));
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
@@ -802,11 +802,6 @@ StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   if (!this.onMouseMoveBoundHandler) {
     this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
     document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
-    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-    if (this.mouseMoveTouchEventName) {
-      document.body.addEventListener(this.mouseMoveTouchEventName,
-                                     this.onMouseMoveBoundHandler);
-    }
 
     event.preventDefault();
   }
@@ -874,10 +869,6 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (this.onMouseMoveBoundHandler) {
     document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
-    if (this.mouseMoveTouchEventName) {
-      document.body.removeEventListener(this.mouseMoveTouchEventName,
-                                        this.onMouseMoveBoundHandler);
-    }
     this.onMouseMoveBoundHandler = null;
   }
 };

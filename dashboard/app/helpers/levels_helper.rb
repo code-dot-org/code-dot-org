@@ -2,13 +2,13 @@ require 'digest/sha1'
 
 module LevelsHelper
   include ViewOptionsHelper
-  def build_script_level_path(script_level)
+  def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
-      hoc_chapter_path(script_level.chapter)
+      hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Script::FLAPPY_NAME
-      flappy_chapter_path(script_level.chapter)
+      flappy_chapter_path(script_level.chapter, params)
     else
-      script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
+      script_stage_script_level_path(script_level.script, script_level.stage, script_level.position, params)
     end
   end
 

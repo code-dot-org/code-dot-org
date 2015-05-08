@@ -1,5 +1,6 @@
 name 'PDAlg course goals'
 title 'Documenting Your Course Goals'
+skip_sound true
 success_title "Awesome!"
 success_body " "
 
