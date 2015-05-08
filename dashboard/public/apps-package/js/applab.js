@@ -1288,10 +1288,10 @@ Applab.init = function(config) {
 
   var debugResizeBar = document.getElementById('debugResizeBar');
   if (debugResizeBar) {
-    dom.addMouseDownTouchEvent(debugResizeBar,
-                               Applab.onMouseDownDebugResizeBar);
-    dom.addMouseUpTouchEvent(document.body,
-                             Applab.onMouseUpDebugResizeBar);
+    debugResizeBar.addEventListener('mousedown',
+                                    Applab.onMouseDownDebugResizeBar);
+    document.body.addEventListener('mouseup',
+                                   Applab.onMouseUpDebugResizeBar);
   }
 
   var finishButton = document.getElementById('finishButton');
@@ -1372,11 +1372,6 @@ Applab.onMouseDownDebugResizeBar = function (event) {
   if (event.srcElement.id === 'debugResizeBar') {
     Applab.draggingDebugResizeBar = true;
     document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
-    Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-    if (Applab.mouseMoveTouchEventName) {
-      document.body.addEventListener(Applab.mouseMoveTouchEventName,
-                                     Applab.onMouseMoveDebugResizeBar);
-    }
 
     event.preventDefault();
   }
@@ -1419,10 +1414,6 @@ Applab.onMouseUpDebugResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (Applab.draggingDebugResizeBar) {
     document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
-    if (Applab.mouseMoveTouchEventName) {
-      document.body.removeEventListener(Applab.mouseMoveTouchEventName,
-                                        Applab.onMouseMoveDebugResizeBar);
-    }
     Applab.draggingDebugResizeBar = false;
   }
 };
