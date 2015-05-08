@@ -9,6 +9,7 @@ class ReportsController < ApplicationController
 
   before_action :set_script
   include LevelSourceHintsHelper
+  include UsersHelper
 
   def user_stats
     @user = User.find(params[:user_id])
@@ -250,6 +251,37 @@ SQL
       :'Female Ratio' => f.to_f / (f + m),
     }
     render locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
+  end
+
+  def pd_progress
+    authorize! :read, :reports
+    script = Script.find_by(name: params[:script] || 'K5PD')
+    # Get all users with any activity in the script
+    users = Activity.where(level_id: script.levels.map(&:id)).map(&:user_id).uniq.map{|id|User.find(id)}
+    headers = nil
+    data = users.map do |user|
+      row = {}
+      row.merge!({
+                     :'ID' => user.id,
+                     :'Ops First Name' => user.ops_first_name,
+                     :'Ops Last name' => user.ops_last_name,
+                     :'Email' => user.email,
+                     :'District' => user.district || 'None'
+                 })
+      user_progress = summarize_user_progress(script, user)
+      percent = percent_complete(script, user)
+      script.stages.each do |stage|
+        levels = Hash[stage.script_levels.map(&:level).map do |level|
+          ["<a href='#{level_path(level.id)}'>#{level.id}</a>", (progress = user_progress[:levels][level.id]) && progress[:status] == 'perfect' ? '1' : '0']
+        end]
+        row.merge!(levels)
+        row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})
+      end
+      row.merge!({:'Script Percent Complete' => percent_complete_total(script, user).to_s})
+      headers ||= row.keys
+      row.values
+    end
+    render locals: {headers: headers, data: data, script: script}
   end
 
   private
