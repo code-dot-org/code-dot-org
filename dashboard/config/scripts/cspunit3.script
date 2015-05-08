@@ -61,7 +61,8 @@ stage 'Scene Design Part 3 - Reflect'
 level 'U1L1 Student Lesson Introduction'
 
 stage 'Unplugged Events Activity -  Mission Unsortable’
-level 'U1L1 Student Lesson Introduction'
+level 'U3L12 - Mission Unsortable'
+level 'U3L12 - Reflection - Mission Unsortable'
 
 stage 'Buttons on the Screen'
 level 'U3L13 Add Button Instrucitons'
@@ -74,7 +75,12 @@ level 'U3L13 - Turtle Driver Project'
 level 'CSP Journal Entry Placeholder2'
 
 stage 'Unfortunate Events'
-level 'U1L1 Student Lesson Introduction'
+level 'U3L14 - Student Intro Page'
+level 'U3L14 - Unfortunate Events Free Play'
+level 'U3L14 - Matching Events to Description'
+level 'U3L14 - MC order of button and onEvent'
+level 'U3L14 - MC Duplicate Ids'
+level 'U3L14 - Journal Favorite Event'
 
 stage 'On Beyond Buttons'
 level 'U1L1 Student Lesson Introduction'

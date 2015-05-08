@@ -1,8 +1,11 @@
+title 'Phase 3 PD'
+
 stage 'Introduction to the new Computer Science in Algebra'
 description "Teach Algebra through block-based Functional Programming"
 
 stage 'Course Overview'
 level 'PDAlg bootstrap'
+level 'PDAlg first forum'
 level 'PDECS tour'
 level 'PDAlg circles to blocks'
 level 'PDAlg block match'
@@ -16,7 +19,7 @@ level 'PDK5 Pair Programming 1'
 level 'PDK5 Pair programming match'
 level 'PDK5 Problem solving'
 level 'PDK5 Classroom Culture C'
-level 'PDK5 Classroom Culture 2'
+level 'PDAlg Classroom Culture 2'
 level 'PDK5 Strategies F'
 
 stage 'Teacher Dashboard'

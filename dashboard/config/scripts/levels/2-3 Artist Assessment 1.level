@@ -15,7 +15,22 @@
     "scrollbars": "true",
     "ideal": "4",
     "slider_speed": "0.3",
-    "free_play": "false"
+    "free_play": "false",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "permitted_errors": "0"
   },
   "md5": "0795fc0884336e3cd22f5ef4d1cea0ba"
 }]]></config>
@@ -57,26 +72,33 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">25</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">25</title>
+        </block>
       </xml>
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">25</title>
           <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">25</title>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">turnLeft</title>
+              <title name="VALUE" config="45,60,90,120,180">90</title>
               <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">90</title>
-                  <next>
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">25</title>
-                    </block>
-                  </next>
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">25</title>
                 </block>
               </next>
             </block>

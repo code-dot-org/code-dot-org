@@ -1,0 +1,31 @@
+name 'U3L12 - Mission Unsortable'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 12 - Mission Unsortable
+# Background
+
+
+# Lesson
+
+* In this lesson you will play a type of card game.
+* Each person on your team has a mission related to flipping or moving cards around on the table.
+
+**Activity Description: Mission Unsortable*
+
+Your group will start with 8 playing cards face down on the table in front of you. Your group’s goal is to get a row of 8 playing cards, all in the same suit, into sorted order, face up on the table. The catch is that some other group might have some of the cards you need, and there are rules about what each person is allowed to do. Each person has a specific “mission” that involves moving or flipping the cards at specific times. There are 4 missions:
+
+* Mission 1: The Swapper
+* Mission 2: The Turn Downer
+* Mission 3: The Timer and Flipper-Upper
+* Mission 4: The Card Exchanger
+
+Each Mission has a sheet that explains your mission and how to act it out.
+Ask your teacher for your mission sheet
+
+# Resources
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
