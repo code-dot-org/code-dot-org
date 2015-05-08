@@ -51,6 +51,11 @@ Then /^check that I am on "([^"]*)"$/ do |url|
   @browser.current_url.should eq url
 end
 
+Then /^check that the URL contains "([^"]*)"$/ do |url|
+  url = replace_hostname(url)
+  @browser.current_url.should include url
+end
+
 When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end

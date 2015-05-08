@@ -245,7 +245,8 @@ function shareProject() {
 
 function remixProject() {
   delete dashboard.currentApp.id;
-  dashboard.currentApp.name = "Remix: " + dashboard.currentApp.name;
+  delete dashboard.currentApp.hidden;
+  dashboard.currentApp.name = "Remix: " + (dashboard.currentApp.name || "My Project");
   $('.project_name').text(dashboard.currentApp.name);
   dashboard.saveProject();
 }
