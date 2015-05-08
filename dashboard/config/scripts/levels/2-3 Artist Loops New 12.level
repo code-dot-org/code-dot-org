@@ -82,7 +82,6 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
         <block type="pick_one">
           <statement name="PICK">
             <block type="draw_move_by_constant">
@@ -100,26 +99,12 @@
         <block type="pick_one">
           <statement name="PICK">
             <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnLeft</title>
+              <title name="DIR">turnRight</title>
               <title name="VALUE" config="45,60,90,120,180">120</title>
               <next>
                 <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnRight</title>
+                  <title name="DIR">turnLeft</title>
                   <title name="VALUE" config="45,60,90,120,180">120</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnLeft</title>
-              <title name="VALUE" config="45,60,90,120,180">60</title>
-              <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE" config="45,60,90,120,180">60</title>
                 </block>
               </next>
             </block>

@@ -2,6 +2,19 @@ name 'PDAlg Scope'
 title 'Scope and Sequence'
 css 'unplugged'
 markdown <<MARKDOWN
+<style type="text/css">
+table {
+   width: 100%;
+   margin-bottom: 20px;
+}
+tbody tr:nth-child(even) {
+   background-color: #ddd;
+}
+td {
+    vertical-align: top;
+    padding: 5px;
+}
+</style>
 ## CS in Algebra Scope and Sequence
 
 The Code.org CS in Algebra curriculum is designed to be integrated into any class where you would already be teaching algebraic functions, whether it's as a first taste in pre-Algebra, a core component of Algebra I, or review/remediation in other courses.
