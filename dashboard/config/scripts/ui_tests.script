@@ -12,7 +12,12 @@ skin 'artist'
 level 'blockly:ArtistEC:ec_1_10'
 skin 'studio'
 level 'blockly:StudioEC:ec_sandbox'
+
 stage 'Free Response'
 level 'U1L6 Free Response Assessment' # free response text match
+
 stage 'Multi'
 level 'U1L6 Assessment multiple choice' # multi
+
+stage 'Big Game'
+level 'Big Game Vars 1'
