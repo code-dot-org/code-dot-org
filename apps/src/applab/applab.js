@@ -1343,7 +1343,8 @@ Applab.editElementProperties = function(el) {
         width={isNaN(outerWidth) ? '' : outerWidth}
         height={isNaN(outerHeight) ? '' : outerHeight}
         text={$(el).text()}
-        onSave={Applab.onSavePropertiesButton.bind(this, el)}
+        handleChange={Applab.onPropertyChange.bind(this, el)}
+        onDone={Applab.onDonePropertiesButton}
         onDelete={Applab.onDeletePropertiesButton.bind(this, el)}
       />,
       designPropertiesEl);
@@ -1385,16 +1386,34 @@ Applab.isValidElementType = function (type) {
   return false;
 };
 
-Applab.onSavePropertiesButton = function(el, event) {
-  el.id = document.getElementById('design-property-id').value;
-  el.style.left = document.getElementById('design-property-left').value + 'px';
-  el.style.top = document.getElementById('design-property-top').value + 'px';
-  var outerWidth = document.getElementById('design-property-width').value;
-  Applab.setOuterWidth(el, outerWidth);
-  var outerHeight = document.getElementById('design-property-height').value;
-  Applab.setOuterHeight(el, outerHeight);
-  $(el).text(document.getElementById('design-property-text').value);
+Applab.onPropertyChange = function(el, name, value) {
+  switch (name) {
+    case 'id':
+      el.id = value;
+      break;
+    case 'left':
+      el.style.left = value + 'px';
+      break;
+    case 'top':
+      el.style.top = value + 'px';
+      break;
+    case 'width':
+      Applab.setOuterWidth(el, value);
+      break;
+    case 'height':
+      Applab.setOuterHeight(el, value);
+      break;
+    case 'text':
+      $(el).text(value);
+      break;
+    default:
+      throw "unknown property name " + name;
+  }
   Applab.levelHtml = Applab.serializeToLevelHtml();
+};
+
+Applab.onDonePropertiesButton = function() {
+  Applab.clearProperties();
 };
 
 Applab.onDeletePropertiesButton = function(el, event) {

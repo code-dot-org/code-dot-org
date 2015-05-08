@@ -1,5 +1,21 @@
 var React = require('react')
 
+var PropertyRow = React.createClass({
+  handleChangeInternal: function(event) {
+    var value = event.target.value;
+    this.props.handleChange(value);
+  },
+  render: function() {
+    return <tr>
+        <td>{this.props.desc}</td>
+        <td>
+          <input
+            defaultValue={this.props.initialValue}
+            onChange={this.handleChangeInternal}/></td>
+      </tr>
+  }
+});
+
 var DesignProperties = module.exports = React.createClass({
   render: function() {
     if (this.props.tagName) {
@@ -9,33 +25,27 @@ var DesignProperties = module.exports = React.createClass({
             <th>name</th>
             <th>value</th>
           </tr>
-          <tr>
-            <td>id</td>
-            <td><input id="design-property-id" value={this.props.id}/></td>
-          </tr>
-          <tr>
-            <td>x position (px)</td>
-            <td><input id="design-property-left" value={this.props.left}/></td>
-          </tr>
-          <tr>
-            <td>y position (px)</td>
-            <td><input id="design-property-top" value={this.props.top}/></td>
-          </tr>
-          <tr>
-            <td>width (px)</td>
-            <td><input id="design-property-width" value={this.props.width}/></td>
-          </tr>
-          <tr>
-            <td>height (px)</td>
-            <td><input id="design-property-height" value={this.props.height}/></td>
-          </tr>
-          <tr>
-            <td>text</td>
-            <td><input id="design-property-text" value={this.props.text}/></td>
-          </tr>
+          <PropertyRow
+              desc={'id'} initialValue={this.props['id']}
+              handleChange={this.props.handleChange.bind(this, 'id')} />
+          <PropertyRow
+              desc={'x position (px)'} initialValue={this.props['left']}
+              handleChange={this.props.handleChange.bind(this, 'left')} />
+          <PropertyRow
+              desc={'y position (px)'} initialValue={this.props['top']}
+              handleChange={this.props.handleChange.bind(this, 'top')} />
+          <PropertyRow
+              desc={'width (px)'} initialValue={this.props['width']}
+              handleChange={this.props.handleChange.bind(this, 'width')} />
+          <PropertyRow
+              desc={'height (px)'} initialValue={this.props['height']}
+              handleChange={this.props.handleChange.bind(this, 'height')} />
+          <PropertyRow
+              desc={'text'} initialValue={this.props['text']}
+              handleChange={this.props.handleChange.bind(this, 'text')} />
         </table>
-        <button id="savePropertiesButton" class="share">Save</button>
-        <button id="deletePropertiesButton" class="share">Delete</button>
+        <button id="donePropertiesButton" class="share" onClick={this.props.onDone}>Done</button>
+        <button id="deletePropertiesButton" class="share" onClick={this.props.onDelete}>Delete</button>
       </div>
     } else {
       return <p>Click on an element to edit its properties.</p>;
