@@ -1,11 +1,56 @@
 - if current_user.try(:admin?) # TODO: this should change to :teacher? when we want to ship this
-  .teacher
-    %h4
-      Teachers:
-      %a{href: '#', onclick: '$(".teacher .content").toggle(); return false;'} [hide/show]
+  .teacher-panel
+    .hide-handle
+      %i.fa.fa-chevron-right{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
+    .show-handle
+      %i.fa.fa-chevron-left{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
+
+    %h3
+      Answer Viewer
     .content
-      - if @level && @level.ideal_level_source_id && @script
-        .solution_link
-          = link_to t('reference_area.teacher'), script_level_solution_path(@script, @level)
       - if @user
-        Viewing solution by: #{@user.name}
+        .students
+          %h4 Student
+          = link_to @user.name, teacher_dashboard_student_progress_url(@section, @user)
+      - if @user_level
+        .user_level
+          .level
+            - status = activity_css_class(@user_level.best_result)
+            .level_link{class: status}
+              - if @level.unplugged?
+                %span.puzzle-named
+                  Unplugged
+              - elsif status == 'passed' || status == 'perfect'
+                = check_mark_html
+              - else
+                %span.puzzle-number
+                  = @script_level.position
+      .level
+        - if @level && @level.ideal_level_source_id && @script
+          = link_to script_level_solution_path(@script, @level) do
+            %button.btn.btn-info= t('reference_area.teacher')
+        - else
+          = link_to script_level_solution_path(@script, @level) do
+            %button.btn.btn-info= t('reference_area.teacher')
+        = link_to build_script_level_path(@script_level) do
+          %button.btn.btn-info= 'Try it yourself'
+      - if @section
+        .section
+          %h4
+            Section:
+            =link_to @section.name, teacher_dashboard_section_progress_url(@section)
+          %table.section-students
+            - @section.students.order(:name).each do |student|
+              - active = 'active' if student.id == @user.id
+              %tr.section-student{class: active}
+                - status = activity_css_class(student.user_level_for(@script_level).try(:best_result))
+                %td.level_link{class: status}
+                  - if @level.unplugged?
+                    %span.puzzle-named
+                      Unplugged
+                  - elsif status == 'passed' || status == 'perfect'
+                    = check_mark_html
+                  - else
+                    %span.puzzle-number
+                      = @script_level.position
+                %td.name= link_to student.name, build_script_level_path(@script_level, user_id: student.id, section_id: @section.id)

@@ -92,6 +92,14 @@ module ApplicationHelper
     CDO.code_org_url '/teacher-dashboard'
   end
 
+  def teacher_dashboard_section_progress_url(section)
+    CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}"
+  end
+
+  def teacher_dashboard_student_progress_url(section, user)
+    CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
+  end
+
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
     if session[:return_to]
