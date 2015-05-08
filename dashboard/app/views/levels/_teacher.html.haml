@@ -29,9 +29,6 @@
         - if @level && @level.ideal_level_source_id && @script
           = link_to script_level_solution_path(@script, @level) do
             %button.btn.btn-info= t('reference_area.teacher')
-        - else
-          = link_to script_level_solution_path(@script, @level) do
-            %button.btn.btn-info= t('reference_area.teacher')
         = link_to build_script_level_path(@script_level) do
           %button.btn.btn-info= t('teacher.panel.try_it_yourself')
       - if @section
