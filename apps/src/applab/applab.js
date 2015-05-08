@@ -1333,27 +1333,21 @@ Applab.editElementProperties = function(el) {
   var designPropertiesEl = document.getElementById('design-properties');
   var outerWidth = Applab.getOuterWidth(el);
   var outerHeight = Applab.getOuterHeight(el);
-  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
-    tagName: tagName,
-    props: {
-      id: el.id,
-      left: parseInt(el.style.left, 10) || 0,
-      top: parseInt(el.style.top, 10) || 0,
-      width: isNaN(outerWidth) ? '' : outerWidth,
-      height: isNaN(outerHeight) ? '' : outerHeight,
-      text: $(el).text()
-    }
-  });
-  var savePropertiesButton = document.getElementById('savePropertiesButton');
-  var onSave = Applab.onSavePropertiesButton.bind(this, el);
-  if (savePropertiesButton) {
-    dom.addClickTouchEvent(savePropertiesButton, onSave);
-  }
-  var deletePropertiesButton = document.getElementById('deletePropertiesButton');
-  var onDelete = Applab.onDeletePropertiesButton.bind(this, el);
-  if (deletePropertiesButton) {
-    dom.addClickTouchEvent(deletePropertiesButton, onDelete);
-  }
+  /* jshint ignore:start */
+  React.render(
+      <DesignProperties
+        tagName={tagName}
+        id={el.id}
+        left={parseInt(el.style.left, 10) || 0}
+        top={parseInt(el.style.top, 10) || 0}
+        width={isNaN(outerWidth) ? '' : outerWidth}
+        height={isNaN(outerHeight) ? '' : outerHeight}
+        text={$(el).text()}
+        onSave={Applab.onSavePropertiesButton.bind(this, el)}
+        onDelete={Applab.onDeletePropertiesButton.bind(this, el)}
+      />,
+      designPropertiesEl);
+  /* jshint ignore:end */
 };
 
 /**
