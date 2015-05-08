@@ -273,7 +273,7 @@ SQL
       script.stages.each do |stage|
         levels = Hash[stage.script_levels.map(&:level).map do |level|
           ["<a href='#{level_path(level.id)}'>#{level.id}</a>", (progress = user_progress[:levels][level.id]) && progress[:status] == 'perfect' ? '1' : '0']
-                      end]
+        end]
         row.merge!(levels)
         row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})
       end
