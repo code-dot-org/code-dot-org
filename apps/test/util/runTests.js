@@ -1,5 +1,6 @@
 var which = require('npm-which')(__dirname).sync;
 var mochify = require('mochify');
+var http = require('http');
 
 // TODO (brent) When we move to npm/gulp, we will want to take care of this
 // logic in our gulpfile instead
@@ -12,6 +13,36 @@ var command = '';
 if (!fs.existsSync(target)) {
   command = 'ln -s ' + target + ' ' + nodePath;
 }
+
+
+/**
+ * Mochify uses phantomic to run a server that it connects to, which serves up
+ * the generated bundle. I couldn't find a way to get it to serve up non-bundle
+ * code as well. Instead, I'm creating my own server which serves up files
+ * from cdo/apps/lib. This way I can script inject some necessary files.
+ */
+function httpServer(port, callback) {
+  var server = http.createServer(function (req, res) {
+    var url = req.url;
+    var p = url.indexOf('?');
+    if (p !== -1) {
+      url = url.substring(0, p);
+    }
+    var filepath = __dirname + '/../../lib' + url;
+    if (!fs.existsSync(filepath)) {
+      res.writeHead(404);
+      res.end();
+    } else {
+      res.writeHead(200);
+      fs.createReadStream(filepath).pipe(res);
+    }
+  });
+  server.timeout = 0;
+  server.listen(port);
+  return server;
+}
+
+var libServer = httpServer(8001);
 
 exec(command, function (err, stdout, stderr) {
   if (err) {
@@ -33,6 +64,7 @@ exec(command, function (err, stdout, stderr) {
     transform: 'ejsify',
     colors: true,
     color: true
-  }).bundle();
-
+  }).bundle().on('end', function () {
+    libServer.close();
+  });
 });

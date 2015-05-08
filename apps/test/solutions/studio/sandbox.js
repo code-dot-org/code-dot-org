@@ -19,7 +19,7 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
           Studio.onPuzzleComplete();
-        }, 1);
+        }, 100);
       },
       expected: {
         result: true,
@@ -141,6 +141,7 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         testUtils.runOnStudioTick(5, function () {
+          debugger;
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
           var proj = document.getElementById('projectile_clippath_0').nextSibling;

@@ -28,7 +28,7 @@ module.exports = {
         // manually complete rather than wait for timeout
         setTimeout(function () {
           Bounce.onPuzzleComplete();
-        }, 1);
+        }, 100);
       },
       xml: '<xml><block type="bounce_whenLeft" deletable="false"></block></xml>'
     }
