@@ -1333,22 +1333,20 @@ Applab.editElementProperties = function(el) {
   var designPropertiesEl = document.getElementById('design-properties');
   var outerWidth = Applab.getOuterWidth(el);
   var outerHeight = Applab.getOuterHeight(el);
-  /* jshint ignore:start */
   React.render(
-      <DesignProperties
-        tagName={tagName}
-        id={el.id}
-        left={parseInt(el.style.left, 10) || 0}
-        top={parseInt(el.style.top, 10) || 0}
-        width={isNaN(outerWidth) ? '' : outerWidth}
-        height={isNaN(outerHeight) ? '' : outerHeight}
-        text={$(el).text()}
-        handleChange={Applab.onPropertyChange.bind(this, el)}
-        onDone={Applab.onDonePropertiesButton}
-        onDelete={Applab.onDeletePropertiesButton.bind(this, el)}
-      />,
-      designPropertiesEl);
-  /* jshint ignore:end */
+    React.createElement(DesignProperties, {
+        tagName: tagName,
+        id: el.id,
+        left: parseInt(el.style.left, 10) || 0,
+        top: parseInt(el.style.top, 10) || 0,
+        width: isNaN(outerWidth) ? '' : outerWidth,
+        height: isNaN(outerHeight) ? '' : outerHeight,
+        text: $(el).text(),
+        handleChange: Applab.onPropertyChange.bind(this, el),
+        onDone: Applab.onDonePropertiesButton,
+        onDelete: Applab.onDeletePropertiesButton.bind(this, el)}
+    ),
+    designPropertiesEl);
 };
 
 /**
