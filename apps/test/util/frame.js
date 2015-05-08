@@ -15,8 +15,5 @@ function setGlobals () {
   } catch (err) {
     console.log(err);
   }
-
-
-  // TODO (brent) - do we need getBBox here anymore?
 }
 module.exports = setGlobals;

@@ -1,7 +1,8 @@
 var which = require('npm-which')(__dirname).sync;
 var mochify = require('mochify');
 
-// TODO (brent) get rid of this
+// TODO (brent) When we move to npm/gulp, we will want to take care of this
+// logic in our gulpfile instead
 // Right now we manually create a symbolic link to @cdo/apps
 var fs = require('fs');
 var exec = require('child_process').exec;
@@ -29,7 +30,9 @@ exec(command, function (err, stdout, stderr) {
     reporter : 'spec',
     timeout: 10000,
     phantomjs: which('phantomjs'),
-    transform: 'ejsify'
+    transform: 'ejsify',
+    colors: true,
+    color: true
   }).bundle();
 
 });
