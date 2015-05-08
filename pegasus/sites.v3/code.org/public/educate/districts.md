@@ -57,7 +57,6 @@ For detailed partnership information, check out these resources:
 - [District partnership presentation](/files/DistrictPartnershipPresentation.pdf)
 - [Promotional flyer for schools](/files/SchoolsOnePager.pdf)
 - [High School professional development philosophy](/files/HighSchoolProfessionalDevelopmentPhilosophy.pdf) 
-- [High School professional development outline](/files/HighSchoolProfessionalDevelopmentOutline.pdf) 
 
 ### Interested in partnering?
 

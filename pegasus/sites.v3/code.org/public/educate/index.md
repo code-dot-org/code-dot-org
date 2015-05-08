@@ -6,9 +6,6 @@ title: Educator Overview
 
 Whether you're a school teacher, an administrator, an after-school teacher, or a volunteer, Code.org provides educational resources for all ages, free of cost. Below is a summary of our curriculum and other programs. Our online courses on [Code Studio](http://studio.code.org) are meant for use in all settings - in-school, home-schooling, after-school - and can be taught by teachers, parents or volunteers. If you're a parent, you can guide your child to [learn online](/learn/beyond) or [at a local workshop or camp](/learn/local), or [help us in other ways](/help). 
 
-
----
-
 [col-50]
 
 [desktop-pad-right]
@@ -21,11 +18,14 @@ Sign up now for computer science professional development for K-5 educators
 
 [<button>Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button>Find a workshop</button>](/professional-development-workshops)
 <br/>
+<br/>
 
 [Workshops for middle and high school teachers](/educate/professional-development)
 <br/>
 Our [workshops](/educate/professional-development) for teachers in grades 6-12 are available as part of a [district-wide partnership](/district-partner).
+<br/>
 
+[<button>Learn more</button>](/educate/professional-development)
 
 
 ## District partnership
@@ -116,14 +116,13 @@ An open library of our educational videos for use in any classroom.
 <div style="clear:both"/>
 
 <br/>
-<br/>
 
----
-
-## The Hour of Code
+# The Hour of Code
 The first step to introduce children to computer science is to participate in the Hour of Code, the largest learning campaign in history. In one hour, students (and teachers) can learn that computer science is fun, easy, and accessible at all ages.
 
 [<button>Learn more about Hour of Code</button>](http://hourofcode.com) &nbsp;&nbsp; [<button>How-to guide for educators</button>](http://hourofcode.com/resources/how-to)
 
----
+<br/>
+
+# Philosophy
 If you like to geek out on education philosophy, we've published our [curriculum philosophy](/educate/curriculum-philosophy) and [professional development philosophy](/educate/professional-development-philosophy). We use these documents to inspire our own team's work and to help guide our work with our curriculum partners. 
