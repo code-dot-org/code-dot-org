@@ -18,11 +18,14 @@ Sign up now for computer science professional development for K-5 educators
 
 [<button>Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button>Find a workshop</button>](/professional-development-workshops)
 <br/>
+<br/>
 
 [Workshops for middle and high school teachers](/educate/professional-development)
 <br/>
 Our [workshops](/educate/professional-development) for teachers in grades 6-12 are available as part of a [district-wide partnership](/district-partner).
+<br/>
 
+[<button>Learn more</button>](/educate/professional-development)
 
 
 ## District partnership
