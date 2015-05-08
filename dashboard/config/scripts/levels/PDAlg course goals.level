@@ -5,6 +5,7 @@
   "properties": {
     "title": "Documenting Your Course Goals",
     "options": {
+      "skip_sound": true,
       "success_title": "Awesome!",
       "success_body": " "
     },
