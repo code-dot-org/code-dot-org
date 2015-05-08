@@ -13,6 +13,7 @@ social:
 ---
 # Code.org's partner school districts
 
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=zYPcjMEiE_Lk.kvcsHLK1SPns" width="750" height="480"></iframe>
 
 Learn how your district can [partner with Code.org](/educate/districts) to bring full computer science courses to every student.
 

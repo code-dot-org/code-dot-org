@@ -973,6 +973,9 @@ body.readonly.embed-block #codeWorkspace .userHidden {
   margin-top: 3px;
   margin-bottom: 7px; }
 
+.current-tooltip-parameter-name {
+  border-bottom: 3px solid #ffb81d; }
+
 .droplet-block-tooltipster {
   border-radius: 14px;
   border: none;
