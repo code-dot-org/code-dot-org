@@ -197,12 +197,12 @@ namespace :install do
         RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
         RakeUtils.sudo 'npm', 'update', '-g', 'npm'
         RakeUtils.sudo 'npm', 'install', '-g', 'grunt-cli'
-        RakeUtils.sudo 'npm', 'install', '-g', 'reactify'
+        RakeUtils.sudo 'npm', 'install', 'reactify'
       elsif OS.mac?
         RakeUtils.system 'brew install node'
         RakeUtils.system 'npm', 'update', '-g', 'npm'
         RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
-        RakeUtils.system 'npm', 'install', '-g', 'reactify'
+        RakeUtils.system 'npm', 'install', 'reactify'
       end
     end
   end
