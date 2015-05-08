@@ -90,6 +90,13 @@ Projectile.prototype = new Collidable();
 module.exports = Projectile;
 
 /**
+ * Test only function so that we can start our id count over.
+ */
+Projectile.__resetIds = function () {
+  uniqueId = 0;
+};
+
+/**
  * Create an image element with a clip path
  */
 Projectile.prototype.createElement = function (parentElement) {

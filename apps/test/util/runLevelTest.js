@@ -94,7 +94,10 @@ StubDialog.prototype.show = function() {
   // (otherwise process may continue indefinitely due to timers)
   var done = cb;
   cb = null;
-  Blockly.mainBlockSpace.clear();
+  // Main blockspace doesn't always exist (i.e. edit-code)
+  if (Blockly.mainBlockSpace) {
+    Blockly.mainBlockSpace.clear();
+  }
   if(done) {
     done();
   }
@@ -113,12 +116,17 @@ function ಠ_ಠ() {
   require('@cdo/apps/studio/main');
   require('@cdo/apps/calc/main');
   require('@cdo/apps/bounce/main');
+  require('@cdo/apps/applab/main');
 }
 
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
   require('@cdo/apps/' + app + '/main');
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
+
+  if (level.editCode) {
+    assert(window.requirejs);
+  }
   setAppSpecificGlobals(app);
 
   // TODO (brent): Intentionally not messing with timing yet, though that will
@@ -140,7 +148,16 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
       if (beforeClick) {
         beforeClick(assert);
       }
-      studioApp.runButtonClick();
+
+      // we have a race condition for loading our editor. give it another 500ms
+      // to load if it hasnt already
+      var timeout = 0;
+      if (level.editCode && !studioApp.editor) {
+        timeout = 500;
+      }
+      setTimeout(function () {
+        studioApp.runButtonClick();
+      }, timeout);
       // waitLong();
     },
     onAttempt: onAttempt

@@ -1226,7 +1226,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
     Studio.perExecutionTimeouts.forEach(function (timeout) {
       clearInterval(timeout);
     });
-   }
+  }
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {

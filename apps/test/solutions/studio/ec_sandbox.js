@@ -20,7 +20,7 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
           Studio.onPuzzleComplete();
-        }, 1);
+        }, 100);
       },
       expected: {
         result: true,

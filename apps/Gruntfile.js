@@ -259,6 +259,7 @@ config.ejs = {
 
 // TODO (brent): we've lost color with this approach. You can run the command
 // directly to get colors
+// TODO (brent) can i make use of exec?
 config.shell = {
   runTests: {
     command: 'node test/util/runTests.js'

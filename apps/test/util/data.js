@@ -74,6 +74,16 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/studio/blocks')
       };
     };
+  } else if (app == 'applab') {
+    appCache[app] = function() {
+      return {
+        skins: require('@cdo/apps/applab/skins'),
+        levels: {
+          levels: require('@cdo/apps/applab/levels')
+        },
+        blocks: require('@cdo/apps/applab/blocks')
+      };
+    };
   }
   if(appCache[app]) {
     return appCache[app];
