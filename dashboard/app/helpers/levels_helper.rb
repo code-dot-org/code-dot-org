@@ -2,13 +2,13 @@ require 'digest/sha1'
 
 module LevelsHelper
   include ViewOptionsHelper
-  def build_script_level_path(script_level)
+  def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
-      hoc_chapter_path(script_level.chapter)
+      hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Script::FLAPPY_NAME
-      flappy_chapter_path(script_level.chapter)
+      flappy_chapter_path(script_level.chapter, params)
     else
-      script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
+      script_stage_script_level_path(script_level.script, script_level.stage, script_level.position, params)
     end
   end
 
@@ -27,7 +27,7 @@ module LevelsHelper
 
     # The channel should be associated with the template level, if present.
     # Otherwise the current level.
-    host_level = @level.try(:project_template_level) || @level
+    host_level = @level.project_template_level || @level
 
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
@@ -91,7 +91,7 @@ module LevelsHelper
   # Options hash for all level types
   def app_options
     # Provide the channel for templated and applab levels.
-    set_channel if @level.try(:project_template_level) || @level.game == Game::APPLAB
+    set_channel if @level.project_template_level || @level.game == Game.applab
 
     # Set videos and callouts.
     view_options(

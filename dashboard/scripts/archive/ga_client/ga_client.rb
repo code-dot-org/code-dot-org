@@ -32,7 +32,8 @@ class GAClient
                                                              'dimensions' => dimensions,
                                                              'metrics' => metrics,
                                                              'filters' => filter,
-                                                             'sampleLevel' => 'HIGHER_PRECISION'
+                                                             'sampleLevel' => 'HIGHER_PRECISION',
+                                                             'max-results' => 10000
                                                          })
   end
 

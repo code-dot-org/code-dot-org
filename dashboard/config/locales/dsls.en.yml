@@ -176,6 +176,8 @@ en:
       PDAlg commitment:
         CS in Algebra PD commitments: CS in Algebra PD commitments
         overview of program commitments: overview of program commitments
+      PDAlg first forum:
+        Starting the Conversation: Starting the Conversation
       PDAlg functions:
         The Concept of Function: The Concept of Function
       PDAlg hard video:
@@ -212,6 +214,8 @@ en:
       PDK5 Intro C: {}
       PDK5 Pair Programming 1:
         Pair Programming: Pair Programming
+      PDK5 Puzzle Goals:
+        Puzzle Goals: Puzzle Goals
       PDK5 Strategies:
         Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
       PDK5 Strategies 1:
@@ -380,6 +384,21 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U3L12 - Mission Unsortable:
+        description here: description here
+        title: title
+      U3L13 - Explanation of Ids:
+        description here: description here
+        title: title
+      U3L13 Add Button Instrucitons:
+        description here: description here
+        title: title
+      U3L13 Add Button Instructions:
+        description here: description here
+        title: title
+      U3L14 - Student Intro Page:
+        description here: description here
+        title: title
       facilitator test: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
@@ -472,6 +491,7 @@ en:
         ((4+5) > 9): ((4+5) > 9)
         (4+5) > 9: (4+5) > 9
         /script_assets/msm/unit6/blockstomath1.png, 300: /script_assets/msm/unit6/blockstomath1.png, 300
+        4+5 > 9: 4+5 > 9
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
@@ -584,6 +604,9 @@ en:
       Open text response example:
         I loved it because...: I loved it because...
         Open text response example: Open text response example
+      PDAlg Classroom Culture 2:
+        Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
+        In my classroom, I want to...: In my classroom, I want to...
       PDAlg course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
@@ -591,8 +614,6 @@ en:
       PDK5 Classroom Culture 2:
         Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
         In my classroom, I want to...: In my classroom, I want to...
-        ? Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?
-        : Now that you know more about our curriculum, what practices do you want to use to promote a healthy atmosphere in your computer science classroom?
       PDK5 Course Descriptions:
         Course Structure: Course Structure
         I am going to start with Course...: I am going to start with Course...
@@ -708,6 +729,12 @@ en:
         'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
       U1L9 Free Response Assessment:
         'Assessment: Real-world Numbers ': 'Assessment: Real-world Numbers '
+      U3L12 - Reflection - Mission Unsortable:
+        Activity Reflection: Activity Reflection
+        'Mission Unsortable ': 'Mission Unsortable '
+      U3L14 - Journal Favorite Event:
+        Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
+        'Reflection: Events': 'Reflection: Events'
       text match test:
         (9-3)+(4*7): (9-3)+(4*7)
         (9-3)+4*7: (9-3)+4*7

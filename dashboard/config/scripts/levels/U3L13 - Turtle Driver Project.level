@@ -7,6 +7,7 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "button": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -14,7 +15,6 @@
           "function(){\n\n}"
         ]
       },
-      "button": null,
       "moveForward": null,
       "moveBackward": null,
       "move": null,
@@ -46,7 +46,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Create a “turtle driver” with at least three buttons on the screen to move the turtle forward, and turn the turtle right and left. If you have time, try adding additional buttons!  You can also have fun changing the parameters on the turtle functions, using colors, etc.",
+    "instructions": "Challenge: Create a “turtle driver” with at least three buttons on the screen to move the turtle forward, and turn the turtle right and left. You can copy/paste code from a previous level if you like but it will help build your coding muscles if you create this small program from scratch.  If you have time, try adding additional buttons!  You can also have fun changing the parameters on the turtle functions, using colors, etc.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -60,8 +60,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false"
-  }
+    "free_play": "true"
+  },
+  "md5": "5b1b88db941b15bd8105e35271f10b3a"
 }]]></config>
   <blocks/>
 </Applab>

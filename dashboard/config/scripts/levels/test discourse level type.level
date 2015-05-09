@@ -10,6 +10,7 @@
     "title": "title",
     "content1": "this is a discourse forum",
     "markdown": "# Test Discourse Level\n\nThis is a test Discourse level. Comments below.\n\n<div id=\"discourse-comments\"></div>\n"
-  }
+  },
+  "md5": "6cbc6e2dd4d5c6b9c25ddff97d19761c"
 }]]></config>
 </External>

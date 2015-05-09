@@ -1,0 +1,39 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-05-06T20:45:22.000Z",
+  "properties": {
+    "options": {
+      "skip_sound": true,
+      "hide_submit": true,
+      "success_title": "Awesome!",
+      "success_body": "Thanks for your response."
+    },
+    "questions": [
+      {
+        "text": "What are your plans for next year?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "Keep teaching Bootstrap",
+        "correct": true
+      },
+      {
+        "text": "Start teaching CS in Algebra",
+        "correct": true
+      },
+      {
+        "text": "Not teaching either",
+        "correct": true
+      },
+      {
+        "text": "Not sure yet",
+        "correct": true
+      }
+    ],
+    "title": "Plans for the Future",
+    "markdown": "### Thanks for checking out CS in Algebra\n\nWe hope you've had a great year teaching Bootstrap, and that you've enjoyed learning about our new CS in Algebra course. If you'd like to learn more about CS in Algebra, you can visit the following pages:\n\n- <a href=\"http://studio.code.org/s/algebra\" target=\"_blank\">Online Activities</a>\n- <a href=\"http://code.org/curriculum/algebra\" target=\"_blank\">Lesson Plans and Teaching Materials</a>\n- <a href=\"http://code.org/teacher-dashboard\" target=\"_blank\">Teacher Dashboard</a>\n"
+  }
+}]]></config>
+</Multi>

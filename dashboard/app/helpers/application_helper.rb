@@ -7,6 +7,7 @@ module ApplicationHelper
   include LocaleHelper
   include ScriptLevelsHelper
   include ViewOptionsHelper
+  include LevelsHelper
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 
@@ -48,6 +49,8 @@ module ApplicationHelper
   def activity_css_class(result)
     if result.nil?
       'not_tried'
+    elsif result >= Activity::SUBMITTED_RESULT
+      'submitted'
     elsif result >= Activity::FREE_PLAY_RESULT
       'perfect'
     elsif result >= Activity::MINIMUM_PASS_RESULT
@@ -64,8 +67,7 @@ module ApplicationHelper
       elsif session[:progress] && session[:progress][script_level.level_id]
         session[:progress][script_level.level_id]
       end
-    link = build_script_level_url(script_level)
-    [activity_css_class(result), link]
+    activity_css_class(result)
   end
 
   def show_flashes
@@ -89,6 +91,14 @@ module ApplicationHelper
 
   def teacher_dashboard_url
     CDO.code_org_url '/teacher-dashboard'
+  end
+
+  def teacher_dashboard_section_progress_url(section)
+    CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}"
+  end
+
+  def teacher_dashboard_student_progress_url(section, user)
+    CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
   end
 
   # used by devise to redirect user after signing in

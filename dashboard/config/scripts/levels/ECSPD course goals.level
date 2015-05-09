@@ -8,11 +8,8 @@
     "options": {
       "skip_sound": true
     },
-    "markdown": "***Now that you've learned more about the ECS curriculum, let's consider your goals***\n<br>\n<br>\n\n__What are your goals for your ECS class?__ *These goals will change over time, and we'll revisit this your response as we go through the course so we can check in on how we're progressing towards those goals.*\n\n*NOTE: remember you can change the size of the text box by clicking and dragging the bottom-right corner of the box.*\n",
-    "type": "TextMatch",
-    "concept_ids": [
-      ""
-    ]
-  }
+    "markdown": "***Now that you've learned more about the ECS curriculum, let's consider your goals***\n<br>\n<br>\n\n__What are your goals for your ECS class?__ *These goals will change over time, and we'll revisit this your response as we go through the course so we can check in on how we're progressing towards those goals.*\n\n*NOTE: remember you can change the size of the text box by clicking and dragging the bottom-right corner of the box.*\n"
+  },
+  "md5": "94d32583b4674128f26589880110722a"
 }]]></config>
 </TextMatch>

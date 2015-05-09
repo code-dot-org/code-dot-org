@@ -5,6 +5,7 @@
   "properties": {
     "title": "Strategies for Teaching Computer Science",
     "options": {
+      "css": "unplugged",
       "success_title": "Awesome!",
       "success_body": "Thanks for your response"
     },
