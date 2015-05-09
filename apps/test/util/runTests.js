@@ -61,9 +61,7 @@ exec(command, function (err, stdout, stderr) {
     reporter : 'spec',
     timeout: 10000,
     phantomjs: which('phantomjs'),
-    transform: 'ejsify',
-    colors: true,
-    color: true
+    transform: 'ejsify'
   }).bundle().on('end', function () {
     libServer.close();
   });
