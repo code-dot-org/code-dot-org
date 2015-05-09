@@ -257,15 +257,6 @@ config.ejs = {
   }
 };
 
-// TODO (brent): we've lost color with this approach. You can run the command
-// directly to get colors
-// TODO (brent) can i make use of exec?
-config.shell = {
-  runTests: {
-    command: 'node test/util/runTests.js'
-  }
-};
-
 var allFilesSrc = [];
 var allFilesDest = [];
 var outputDir = 'build/package/js/';
@@ -281,7 +272,8 @@ var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify -t rea
 
 config.exec = {
   browserify: browserifyExec,
-  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v'
+  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v',
+  mochaTest: 'node test/util/runTests.js --color'
 };
 
 var ext = DEV ? 'uncompressed' : 'compressed';
@@ -471,7 +463,7 @@ module.exports = function(grunt) {
     'concurrent:watch'
   ]);
 
-  grunt.registerTask('mochaTest', ['shell:runTests']);
+  grunt.registerTask('mochaTest', ['exec:mochaTest']);
 
   grunt.registerTask('test', ['jshint', 'mochaTest']);
 

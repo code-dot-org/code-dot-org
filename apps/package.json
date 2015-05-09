@@ -46,7 +46,6 @@
     "grunt-newer": "^1.1.0",
     "grunt-notify": "^0.4.1",
     "grunt-sass": "~0.17.0",
-    "grunt-shell": "^1.1.2",
     "grunt-strip-code": "~0.1.2",
     "handlebars-runtime": "~1.0.12",
     "jquery": "^2.1.4",
