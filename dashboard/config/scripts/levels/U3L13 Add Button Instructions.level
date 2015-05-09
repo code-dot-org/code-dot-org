@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-05-07T13:42:25.000Z",
+  "properties": {
+    "href": "path/to/html/in/asset/folder",
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "title",
+    "content1": "description here",
+    "markdown": "## Add a button \n\n\n\n"
+  }
+}]]></config>
+</External>

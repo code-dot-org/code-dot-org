@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({98:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({102:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -57,7 +57,8 @@ exports.define = function(name) {
   };
 };
 
-},{}],55:[function(require,module,exports){
+
+},{}],59:[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -280,7 +281,8 @@ SVGElement.prototype.toDataURL = function(type, options) {
 	}
 }
 
-},{}],54:[function(require,module,exports){
+
+},{}],58:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -570,7 +572,8 @@ function RGBColor(color_string)
 }
 
 
-},{}],53:[function(require,module,exports){
+
+},{}],57:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -3538,7 +3541,8 @@ if (typeof(CanvasRenderingContext2D) != 'undefined') {
 	}
 }
 
-},{}],52:[function(require,module,exports){
+
+},{}],56:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -4150,7 +4154,8 @@ function BlurStack()
 	this.a = 0;
 	this.next = null;
 }
-},{}],208:[function(require,module,exports){
+
+},{}],212:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4700,7 +4705,8 @@ function installCond(blockly, generator) {
   };
 }
 
-},{"../locale/current/common":260,"./utils":255}],240:[function(require,module,exports){
+
+},{"../locale/current/common":264,"./utils":259}],244:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -4764,7 +4770,8 @@ exports.clearInterval = function (id) {
 };
 
 
-},{}],234:[function(require,module,exports){
+
+},{}],238:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4787,7 +4794,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":260,"ejs":276}],210:[function(require,module,exports){
+},{"../../locale/current/common":264,"ejs":280}],214:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -5052,7 +5059,8 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":60}],209:[function(require,module,exports){
+
+},{"./dom":64}],213:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5125,6 +5133,7 @@ exports.load = function(assetUrl, id) {
 
   return skin;
 };
+
 
 },{}],5:[function(require,module,exports){
 var utils = require('./utils');
@@ -5207,7 +5216,8 @@ module.exports = function(app, levels, options) {
   });
 };
 
-},{"./StudioApp":4,"./blocksCommon":30,"./dom":60,"./required_block_utils":207,"./utils":255}],207:[function(require,module,exports){
+
+},{"./StudioApp":4,"./blocksCommon":34,"./dom":64,"./required_block_utils":211,"./utils":259}],211:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
@@ -5529,7 +5539,8 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/current/common":260,"./block_utils":29,"./utils":255,"./xml":256}],30:[function(require,module,exports){
+
+},{"../locale/current/common":264,"./block_utils":33,"./utils":259,"./xml":260}],34:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5697,7 +5708,8 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/current/common":260}],4:[function(require,module,exports){
+
+},{"../locale/current/common":264}],4:[function(require,module,exports){
 /* global Blockly, ace:true, $, requirejs */
 
 var parseXmlElement = require('./xml').parseElement;
@@ -6056,7 +6068,8 @@ StudioApp.prototype.init = function(config) {
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
-      afterInject: config.afterInject
+      afterInject: config.afterInject,
+      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
 
@@ -6066,10 +6079,10 @@ StudioApp.prototype.init = function(config) {
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
-    dom.addMouseDownTouchEvent(vizResizeBar,
-                               _.bind(this.onMouseDownVizResizeBar, this));
-    dom.addMouseUpTouchEvent(document.body,
-                             _.bind(this.onMouseUpVizResizeBar, this));
+    vizResizeBar.addEventListener('mousedown',
+                                  _.bind(this.onMouseDownVizResizeBar, this));
+    document.body.addEventListener('mouseup',
+                                   _.bind(this.onMouseUpVizResizeBar, this));
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
@@ -6501,11 +6514,6 @@ StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   if (!this.onMouseMoveBoundHandler) {
     this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
     document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
-    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-    if (this.mouseMoveTouchEventName) {
-      document.body.addEventListener(this.mouseMoveTouchEventName,
-                                     this.onMouseMoveBoundHandler);
-    }
 
     event.preventDefault();
   }
@@ -6573,10 +6581,6 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (this.onMouseMoveBoundHandler) {
     document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
-    if (this.mouseMoveTouchEventName) {
-      document.body.removeEventListener(this.mouseMoveTouchEventName,
-                                        this.onMouseMoveBoundHandler);
-    }
     this.onMouseMoveBoundHandler = null;
   }
 };
@@ -7002,9 +7006,13 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Add an ace completer for the API functions exposed for this level
     if (options.dropletConfig) {
+      var functionsFilter = null;
+      if (options.autocompletePaletteApisOnly) {
+         functionsFilter = options.codeFunctions;
+      }
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        dropletUtils.generateAceApiCompleter(options.dropletConfig));
+        dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({
@@ -7247,7 +7255,8 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"../locale/current/common":260,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":28,"./block_utils":29,"./constants.js":59,"./dom":60,"./dropletUtils":61,"./feedback":80,"./templates/builder.html.ejs":228,"./templates/buttons.html.ejs":229,"./templates/instructions.html.ejs":231,"./templates/learn.html.ejs":232,"./templates/makeYourOwn.html.ejs":233,"./utils":255,"./xml":256,"url":275}],275:[function(require,module,exports){
+
+},{"../locale/current/common":264,"./ResizeSensor":2,"./blockTooltips/DropletTooltipManager":31,"./block_utils":33,"./constants.js":63,"./dom":64,"./dropletUtils":65,"./feedback":84,"./templates/builder.html.ejs":232,"./templates/buttons.html.ejs":233,"./templates/instructions.html.ejs":235,"./templates/learn.html.ejs":236,"./templates/makeYourOwn.html.ejs":237,"./utils":259,"./xml":260,"url":279}],279:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7956,13 +7965,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":271,"querystring":274}],274:[function(require,module,exports){
+},{"punycode":275,"querystring":278}],278:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":272,"./encode":273}],273:[function(require,module,exports){
+},{"./decode":276,"./encode":277}],277:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8049,7 +8058,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],272:[function(require,module,exports){
+},{}],276:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8135,7 +8144,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],271:[function(require,module,exports){
+},{}],275:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8646,7 +8655,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],233:[function(require,module,exports){
+},{}],237:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8666,7 +8675,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":260,"ejs":276}],232:[function(require,module,exports){
+},{"../../locale/current/common":264,"ejs":280}],236:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8688,7 +8697,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":260,"ejs":276}],231:[function(require,module,exports){
+},{"../../locale/current/common":264,"ejs":280}],235:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8708,7 +8717,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":260,"ejs":276}],228:[function(require,module,exports){
+},{"../../locale/current/common":264,"ejs":280}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8728,7 +8737,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],80:[function(require,module,exports){
+},{"ejs":280}],84:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -9949,7 +9958,8 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"../locale/current/common":260,"./codegen":57,"./constants":59,"./dom":60,"./feedbackBlocks":81,"./templates/buttons.html.ejs":229,"./templates/code.html.ejs":230,"./templates/shareFailure.html.ejs":236,"./templates/sharing.html.ejs":237,"./templates/showCode.html.ejs":238,"./templates/trophy.html.ejs":239,"./utils":255,"./xml":256}],239:[function(require,module,exports){
+
+},{"../locale/current/common":264,"./codegen":61,"./constants":63,"./dom":64,"./feedbackBlocks":85,"./templates/buttons.html.ejs":233,"./templates/code.html.ejs":234,"./templates/shareFailure.html.ejs":240,"./templates/sharing.html.ejs":241,"./templates/showCode.html.ejs":242,"./templates/trophy.html.ejs":243,"./utils":259,"./xml":260}],243:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9969,7 +9979,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],238:[function(require,module,exports){
+},{"ejs":280}],242:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9989,7 +9999,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":260,"ejs":276}],237:[function(require,module,exports){
+},{"../../locale/current/common":264,"ejs":280}],241:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10009,7 +10019,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":260,"ejs":276}],236:[function(require,module,exports){
+},{"../../locale/current/common":264,"ejs":280}],240:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10029,7 +10039,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],230:[function(require,module,exports){
+},{"ejs":280}],234:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10049,7 +10059,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],229:[function(require,module,exports){
+},{"ejs":280}],233:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10069,7 +10079,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":260,"ejs":276}],81:[function(require,module,exports){
+},{"../../locale/current/common":264,"ejs":280}],85:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10198,7 +10208,8 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":59,"./templates/readonly.html.ejs":235}],235:[function(require,module,exports){
+
+},{"./constants":63,"./templates/readonly.html.ejs":239}],239:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10219,7 +10230,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],57:[function(require,module,exports){
+},{"ejs":280}],61:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -10751,7 +10762,8 @@ exports.getNearestUserCodeLine = function (interpreter, cumulativeLength,
   return userCodeRow;
 };
 
-},{"./dropletUtils":61}],61:[function(require,module,exports){
+
+},{"./dropletUtils":65}],65:[function(require,module,exports){
 var utils = require('./utils');
 
 /**
@@ -10883,13 +10895,19 @@ standardConfig.categories = {
 /**
  * @param codeFunctions
  * @param {DropletConfig} dropletConfig
+ * @param {DropletConfig} otherConfig optionally used to supply a standardConfig
+ *  object which is not app specific. It will be used first, then overriden
+ *  by the primary dropletConfig if there is overlap between the two.
  * @returns {Array}
  */
-function mergeFunctionsWithConfig(codeFunctions, dropletConfig) {
+function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
   var merged = [];
 
   if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ standardConfig.blocks, dropletConfig.blocks ];
+    var blockSets = [ dropletConfig.blocks ];
+    if (otherConfig) {
+      blockSets.splice(0, 0, otherConfig.blocks);
+    }
     // codeFunctions is an object with named key/value pairs
     //  key is a block name from dropletBlocks or standardBlocks
     //  value is an object that can be used to override block defaults
@@ -10967,7 +10985,9 @@ exports.generateCodeAliases = function (dropletConfig, parentObjName) {
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions, dropletConfig);
+  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions,
+                                                 dropletConfig,
+                                                 standardConfig);
   var i, j;
 
   for (i = 0; i < mergedFunctions.length; i++) {
@@ -11022,13 +11042,21 @@ function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
 
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
+ *
+ * If functionFilter is non-null, use it to filter the dropletConfig APIs to
+ * be set in autocomplete and create no other autocomplete entries
  */
-exports.generateAceApiCompleter = function (dropletConfig) {
+exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   var apis = [];
 
-  populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
-  populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
-  populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+  if (functionFilter) {
+    var mergedBlocks = mergeFunctionsWithConfig(functionFilter, dropletConfig);
+    populateCompleterApisFromConfigBlocks(apis, mergedBlocks);
+  } else {
+    populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
+    populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
+    populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+  }
 
   return {
     getCompletions: function(editor, session, pos, prefix, callback) {
@@ -11119,7 +11147,1237 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
     .concat(configuredBlocks);
 };
 
-},{"./utils":255}],255:[function(require,module,exports){
+
+},{"./utils":259}],64:[function(require,module,exports){
+exports.addReadyListener = function(callback) {
+  if (document.readyState === "complete") {
+    setTimeout(callback, 1);
+  } else {
+    window.addEventListener('load', callback, false);
+  }
+};
+
+exports.getText = function(node) {
+  return node.innerText || node.textContent;
+};
+
+exports.setText = function(node, string) {
+  if (node.innerText) {
+    node.innerText = string;
+  } else {
+    node.textContent = string;
+  }
+};
+
+
+var addEvent = function(element, eventName, handler) {
+  element.addEventListener(eventName, handler, false);
+
+  var isIE11Touch = window.navigator.pointerEnabled;
+  var isIE10Touch = window.navigator.msPointerEnabled;
+  var isStandardTouch = 'ontouchend' in document.documentElement;
+
+  var key;
+  if (isIE11Touch) {
+    key = "ie11";
+  } else if (isIE10Touch) {
+    key = "ie10";
+  } else if (isStandardTouch) {
+    key = "standard";
+  }
+  if (key) {
+    var touchEvent = TOUCH_MAP[eventName][key];
+    element.addEventListener(touchEvent, function(e) {
+      e.preventDefault();  // Stop mouse events.
+      handler(e);
+    }, false);
+  }
+};
+
+exports.addMouseDownTouchEvent = function(element, handler) {
+  addEvent(element, 'mousedown', handler);
+};
+
+exports.addMouseUpTouchEvent = function(element, handler) {
+  addEvent(element, 'mouseup', handler);
+};
+
+exports.addMouseMoveTouchEvent = function(element, handler) {
+  addEvent(element, 'mousemove', handler);
+};
+
+exports.addClickTouchEvent = function(element, handler) {
+  addEvent(element, 'click', handler);
+};
+
+// A map from standard touch events to various aliases.
+var TOUCH_MAP = {
+  //  Incomplete list, add as needed.
+  click: {
+    standard: 'touchend',
+    ie10: 'MSPointerUp',
+    ie11: 'pointerup'
+  },
+  mousedown: {
+    standard: 'touchstart',
+    ie10: 'MSPointerDown',
+    ie11: 'pointerdown'
+  },
+  mouseup: {
+    standard: 'touchend',
+    ie10: 'MSPointerUp',
+    ie11: 'pointerup'
+  },
+  mousemove: {
+    standard: 'touchmove',
+    ie10: 'MSPointerMove',
+    ie11: 'pointermove'
+  }
+};
+
+exports.isMobile = function() {
+  var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isWindowsTouch = function() {
+  var reg = /MSIE.*Touch/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isAndroid = function() {
+  var reg = /Android/;
+  return reg.test(window.navigator.userAgent);
+};
+
+exports.isIOS = function() {
+  var reg = /iP(hone|od|ad)/;
+  return reg.test(window.navigator.userAgent);
+};
+
+
+},{}],63:[function(require,module,exports){
+/**
+ * @fileoverview Constants used in production code and tests.
+ */
+
+/**
+ * Enumeration of user program execution outcomes.
+ * These are determined by each app.
+ */
+exports.ResultType = {
+  UNSET: 0,       // The result has not yet been computed.
+  SUCCESS: 1,     // The program completed successfully, achieving the goal.
+  FAILURE: -1,    // The program ran without error but did not achieve goal.
+  TIMEOUT: 2,     // The program did not complete (likely infinite loop).
+  ERROR: -2       // The program generated an error.
+};
+
+/**
+ * Enumeration of test results.
+ * EMPTY_BLOCK_FAIL and EMPTY_FUNCTION_BLOCK_FAIL can only occur if
+ * StudioApp.checkForEmptyBlocks_ is true.
+ */
+exports.TestResults = {
+  // Default value before any tests are run.
+  NO_TESTS_RUN: -1,
+
+  // The level was not solved.
+  EMPTY_BLOCK_FAIL: 1,           // An "if" or "repeat" block was empty.
+  TOO_FEW_BLOCKS_FAIL: 2,        // Fewer than the ideal number of blocks used.
+  LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
+  MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
+  EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
+  MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
+  APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
+  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
+  UNUSED_PARAM: 13,              // Param declared but not used in function.
+  UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
+  PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
+  INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
+  QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
+  EMPTY_FUNCTIONAL_BLOCK: 18,    // There's a functional block with an open input
+
+  // The level was solved in a non-optimal way.  User may advance or retry.
+  TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
+  APP_SPECIFIC_ACCEPTABLE_FAIL: 21,  // Application-specific acceptable failure.
+
+  // Other.
+  FREE_PLAY: 30,              // The user is in free-play mode.
+  EDIT_BLOCKS: 70,            // The user is creating/editing a new level.
+
+  // The level was solved in the ideal manner.
+  ALL_PASS: 100
+};
+
+exports.BeeTerminationValue = {
+  FAILURE: false,
+  SUCCESS: true,
+  INFINITE_LOOP: Infinity,
+  NOT_AT_FLOWER: 1,     // Tried to get nectar when not at flower.
+  FLOWER_EMPTY: 2,      // Tried to get nectar when flower empty.
+  NOT_AT_HONEYCOMB: 3,  // Tried to make honey when not at honeycomb.
+  HONEYCOMB_FULL: 4,    // Tried to make honey, but no room at honeycomb.
+  UNCHECKED_CLOUD: 5,    // Finished puzzle, but didn't check every clouded item
+  UNCHECKED_PURPLE: 6,   // Finished puzzle, but didn't check every purple flower
+  INSUFFICIENT_NECTAR: 7,// Didn't collect all nectar by finish
+  INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
+};
+
+exports.KeyCodes = {
+  ENTER: 13,
+  SPACE: 32,
+  LEFT: 37,
+  UP: 38,
+  RIGHT: 39,
+  DOWN: 40,
+  DELETE: 127
+};
+
+
+},{}],33:[function(require,module,exports){
+var xml = require('./xml');
+
+/**
+ * Create the xml for a level's toolbox
+ * @param {string} blocks The xml of the blocks to go in the toolbox
+ */
+exports.createToolbox = function(blocks) {
+  return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
+};
+
+/**
+ * Create the xml for a block of the given type
+ * @param {string} type The type of the block
+ * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
+ */
+exports.blockOfType = function(type, titles) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText +'</block>';
+};
+
+/**
+ * Create the xml for a block of the given type, with the provided child nested
+ * in a next block
+ * @param {string} type The type of the block
+ * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
+ * @param {string} child Xml for the child block
+ */
+exports.blockWithNext = function (type, titles, child) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText + '<next>' + child + '</next></block>';
+};
+
+/**
+ * Give a list of types, returns the xml assuming each block is a child of
+ * the previous block.
+ */
+exports.blocksFromList = function (types) {
+  if (types.length === 1) {
+    return this.blockOfType(types[0]);
+  }
+
+  return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
+};
+
+/**
+ * Create the xml for a category in a toolbox
+ */
+exports.createCategory = function(name, blocks, custom) {
+  return '<category name="' + name + '"' +
+          (custom ? ' custom="' + custom + '"' : '') +
+          '>' + blocks + '</category>';
+};
+
+/**
+ * Generate a simple block with a plain title and next/previous connectors.
+ */
+exports.generateSimpleBlock = function (blockly, generator, options) {
+  ['name', 'title', 'tooltip', 'functionName'].forEach(function (param) {
+    if (!options[param]) {
+      throw new Error('generateSimpleBlock requires param "' + param + '"');
+    }
+  });
+
+  var name = options.name;
+  var helpUrl = options.helpUrl || ""; // optional param
+  var title = options.title;
+  var titleImage = options.titleImage;
+  var tooltip = options.tooltip;
+  var functionName = options.functionName;
+
+  blockly.Blocks[name] = {
+    helpUrl: helpUrl,
+    init: function() {
+      // Note: has a fixed HSV.  Could make this customizable if need be
+      this.setHSV(184, 1.00, 0.74);
+      var input = this.appendDummyInput();
+      if (title) {
+        input.appendTitle(title);
+      }
+      if (titleImage) {
+        input.appendTitle(new blockly.FieldImage(titleImage));
+      }
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(tooltip);
+    }
+  };
+
+  generator[name] = function() {
+    // Generate JavaScript for putting dirt on to a tile.
+    return functionName + '(\'block_id_' + this.id + '\');\n';
+  };
+};
+
+/**
+ * Generates a single block from a <block/> DOM element, adding it to the main workspace
+ * @param blockDOM {Element}
+ * @returns {*}
+ */
+exports.domToBlock = function(blockDOM) {
+  return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
+};
+
+/**
+ * Generates a single block from a block XML string—e.g., <block type="testBlock"></block>,
+ * and adds it to the main workspace
+ * @param blockDOMString
+ * @returns {*}
+ */
+exports.domStringToBlock = function(blockDOMString) {
+  return exports.domToBlock(xml.parseElement(blockDOMString).firstChild);
+};
+
+/**
+ * Takes a set of start blocks, and returns them with a particular top level
+ * block inserted in front of the first non-function block.  If we already have
+ * this block, does nothing.
+ */
+exports.forceInsertTopBlock = function (input, blockType) {
+  input = input || '';
+
+  if (blockType === null || input.indexOf(blockType) !== -1) {
+    return input;
+  }
+
+  var root = xml.parseElement(input);
+
+  // Extract the document from the root. The reason I do this instead of just
+  // using document.createElement elsewhere is
+  var doc = root.parentNode;
+
+  var topBlock = doc.createElement('block');
+  topBlock.setAttribute('type', blockType);
+  topBlock.setAttribute('movable', 'false');
+  topBlock.setAttribute('deletable', 'false');
+
+  var numChildren = root.childNodes ? root.childNodes.length : 0;
+
+  // find the first non-function definition block and extract it
+  var firstBlock = null, i = 0;
+  while (i < numChildren && firstBlock === null) {
+    var child = root.childNodes[i];
+    // only look at element nodes
+    if (child.nodeType === 1) {
+      var type = child.getAttribute('type');
+      if (type !== 'procedures_defnoreturn' && type !== 'procedures_defreturn') {
+        firstBlock = root.removeChild(child);
+        numChildren--;
+      }
+    }
+    i++;
+  }
+
+  if (firstBlock !== null) {
+    // when run -> next -> firstBlock
+    var next;
+    if (/^functional/.test(blockType)) {
+      next = doc.createElement('functional_input');
+      next.setAttribute('name', 'ARG1');
+    } else {
+      next = doc.createElement('next');
+    }
+    next.appendChild(firstBlock);
+    topBlock.appendChild(next);
+  }
+
+  if (numChildren > 0) {
+    root.insertBefore(topBlock, root.childNodes[0]);
+  } else {
+    root.appendChild(topBlock);
+  }
+  return xml.serialize(root);
+};
+
+/**
+ * Generate the xml for a block for the calc app.
+ * @param {string} type Type for this block
+ * @param {number[]|string[]} args List of args, where each arg is either the
+ *   xml for a child block, a number, or the name of a variable.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    } else if (/^<block/.test(arg)) {
+      // we have xml, dont make any changes
+      arg = arg;
+    } else {
+      // we think we have a variable
+      arg = exports.calcBlockGetVar(arg);
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str += '</block>';
+
+  return str;
+};
+
+/**
+ * @returns the xml for a functional_parameters_get block with the given
+ *   variableName
+ */
+exports.calcBlockGetVar = function (variableName) {
+  return '' +
+    '<block type="functional_parameters_get" uservisible="false">' +
+    '  <mutation>' +
+    '    <outputtype>Number</outputtype>' +
+    '  </mutation>' +
+    '  <title name="VAR">' + variableName + '</title>' +
+    '</block>';
+};
+
+/**
+ * Generate the xml for a math block (either calc or eval apps).
+ * @param {string} type Type for this block
+ * @param {Object.<string,string} inputs Dictionary mapping input name to the
+     xml for that input
+ * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
+ */
+exports.mathBlockXml = function (type, inputs, titles) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var title in titles) {
+    str += '<title name="' + title + '">' + titles[title] + '</title>';
+  }
+
+  for (var input in inputs) {
+    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
+  }
+
+  str += '</block>';
+
+  return str;
+};
+
+/**
+ * Generate xml for a functional defintion
+ * @param {string} name The name of the function
+ * @param {string} outputType Function's output type
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ * @param {string} blockXml Xml for the blocks that actually define the function
+ */
+exports.functionalDefinitionXml = function (name, outputType, argList, blockXml) {
+  var mutation = '<mutation>';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '<outputtype>' + outputType + '</outputtype></mutation>';
+
+  return '<block type="functional_definition" inline="false">'+
+      mutation +
+      '<title name="NAME">' + name + '</title>' +
+     '<functional_input name="STACK">' + blockXml + '</functional_input>' +
+    '</block>';
+};
+
+/**
+ * Generate xml for a calling a functional function
+ * @param {string} name The name of the function
+ * @param {Object<string, string>[]} argList Name and type for each arg
+ */
+exports.functionalCallXml = function (name, argList, inputContents) {
+  if (argList.length !== inputContents.length) {
+    throw new Error('must define contents for each arg');
+  }
+
+  var mutation = '<mutation name="' + name + '">';
+  argList.forEach(function (argInfo) {
+    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
+  });
+  mutation += '</mutation>';
+
+  var contents = '';
+  inputContents.forEach(function (blockXml, index) {
+    contents += '<functional_input name="ARG' + index + '">' + blockXml + '</functional_input>';
+  });
+
+  return '<block type="functional_call">' +
+      mutation +
+      contents +
+    '</block>';
+};
+
+
+},{"./xml":260}],31:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltip = require('./DropletFunctionTooltip');
+var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
+var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
+var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
+
+/**
+ * @fileoverview Manages a store of known blocks and tooltips
+ */
+
+/**
+ * Store for finding tooltips for blocks
+ * @constructor
+ */
+function DropletTooltipManager() {
+  /**
+   * Map of block types to tooltip objects
+   * @type {Object.<String, DropletFunctionTooltip>}
+   */
+  this.blockTypeToTooltip = {};
+
+  /**
+   * @type {DropletBlockTooltipManager}
+   * @private
+   */
+  this.dropletBlockTooltipManager_ = new DropletBlockTooltipManager(this);
+
+  /**
+   * @type {DropletAutocompletePopupTooltipManager}
+   * @private
+   */
+  this.dropletAutocompletePopupTooltipManager_ = new DropletAutocompletePopupTooltipManager(this);
+
+  /**
+   * @type {DropletAutocompletePopupTooltipManager}
+   * @private
+   */
+  this.dropletAutocompleteParameterTooltipManager_ = new DropletAutocompleteParameterTooltipManager(this);
+}
+
+/**
+ * Registers handlers for droplet block tooltips.
+ * @param dropletEditor
+ */
+DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (dropletEditor) {
+  this.dropletBlockTooltipManager_.installTooltipsForEditor_(dropletEditor);
+};
+
+/**
+ * Registers handlers for ACE mode tooltips
+ * @param dropletEditor
+ */
+DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (dropletEditor) {
+  this.dropletAutocompletePopupTooltipManager_.installTooltipsForEditor_(dropletEditor);
+  this.dropletAutocompleteParameterTooltipManager_.installTooltipsForEditor_(dropletEditor);
+};
+
+/**
+ * @param {DropletBlock[]} dropletBlocks list of Droplet block definitions for
+ *    which to register documentation
+ */
+DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
+  dropletBlocks.forEach(function (dropletBlockDefinition) {
+    this.blockTypeToTooltip[dropletBlockDefinition.func] =
+      new DropletFunctionTooltip(dropletBlockDefinition.func);
+  }, this);
+};
+
+DropletTooltipManager.prototype.hasDocFor = function (functionName) {
+  return this.blockTypeToTooltip.hasOwnProperty(functionName);
+};
+
+/**
+ * @param {String} functionName
+ * @returns {DropletFunctionTooltip}
+ */
+DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
+  if (!this.blockTypeToTooltip.hasOwnProperty(functionName)) {
+    throw "Function name " + functionName + " not registered in documentation manager.";
+  }
+
+  return this.blockTypeToTooltip[functionName];
+};
+
+module.exports = DropletTooltipManager;
+
+
+},{"./DropletAutocompleteParameterTooltipManager":25,"./DropletAutocompletePopupTooltipManager":26,"./DropletBlockTooltipManager":27,"./DropletFunctionTooltip":29}],27:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltip = require('./DropletFunctionTooltip');
+var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+
+/**
+ * @fileoverview Displays tooltips for Droplet blocks
+ */
+
+/**
+ * Handles displaying tooltips on Droplet blocks
+ * @param {DropletTooltipManager} dropletTooltipManager
+ * @constructor
+ */
+var DropletBlockTooltipManager = function (dropletTooltipManager) {
+  this.dropletTooltipManager = dropletTooltipManager;
+};
+
+var DEFAULT_TOOLTIP_CONFIG = {
+  interactive: true,
+  speed: 150,
+  maxWidth: 450,
+  position: 'right',
+  contentAsHTML: true,
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2,
+  delay: 400
+};
+
+/**
+ * @param {Editor} dropletEditor
+ */
+DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
+  this.installTooltipsForCurrentCategoryBlocks(dropletEditor);
+  this.hideTooltipsOnBlockPick_(dropletEditor);
+
+  dropletEditor.on('changepalette', this.installTooltipsForCurrentCategoryBlocks.bind(this));
+  dropletEditor.on('toggledone', this.installTooltipsIfNotInstalled.bind(this));
+};
+
+DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function () {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
+    this.installTooltipsForCurrentCategoryBlocks();
+  }
+};
+
+DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  $('.droplet-hover-div').each(function (_, blockHoverDiv) {
+    if ($(blockHoverDiv).hasClass('tooltipstered')) {
+      return;
+    }
+
+    var funcName = $(blockHoverDiv).attr('title');
+
+    var hoverDivWidth = $(blockHoverDiv).width();
+    var hoverDivLeftToToolboxRight = $('.droplet-palette-canvas').width() -
+      parseInt(blockHoverDiv.style.left, 10);
+    var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
+    var tooltipOffsetX = desiredXPosition - hoverDivWidth;
+
+    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+      content: this.getTooltipHTML(funcName),
+      offsetX: tooltipOffsetX
+    });
+
+    $(blockHoverDiv).tooltipster(configuration);
+  }.bind(this));
+};
+
+/**
+ * Tooltipster's hideOnClick setting does not work with the droplet hover
+ * overlay as-is. Hide the tooltip on block picking explicitly.
+ */
+DropletBlockTooltipManager.prototype.hideTooltipsOnBlockPick_ = function (dropletEditor) {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  dropletEditor.on('pickblock', function () {
+    $('.tooltipstered').tooltipster('hide');
+  });
+};
+
+/**
+ * @returns {String} HTML for tooltip
+ */
+DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
+  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
+  return DropletFunctionTooltipMarkup({
+    functionName: tooltipInfo.functionName,
+    functionShortDescription: tooltipInfo.description,
+    parameters: tooltipInfo.parameterInfos,
+    signatureOverride: tooltipInfo.signatureOverride,
+    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+  });
+};
+
+module.exports = DropletBlockTooltipManager;
+
+
+},{"./DropletFunctionTooltip":29,"./DropletFunctionTooltip.html.ejs":28}],29:[function(require,module,exports){
+var msg = require('../../locale/current/common');
+
+/**
+ * @fileoverview Representation of a droplet function/block's tooltip
+ */
+
+var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
+
+/**
+ * @typedef {Object} parameterInfo
+ * @property {String} name
+ * @property {?String} description
+ */
+
+/**
+ * Stores a block's tooltip information and helps render it
+ * Grabs much of the tooltip's information from the 'common' locale file,
+ * (apps/i18n/common/en_us.json), keyed by the function name.
+ *
+ * e.g.,
+ *
+ * "dropletBlock_readRecords_description": "Reads records [...].",
+ * "dropletBlock_readRecords_param0": "table",
+ * "dropletBlock_readRecords_param1": "searchParams",
+ * "dropletBlock_readRecords_param2": "onSuccess",
+ *
+ * Will result in a tooltip with the contents:
+ *
+ *    readRecords(table, searchParams, onSuccess)
+ *    Reads records [...].
+ *    [Read More] (links to `readRecords` doc file)
+ *
+ * Blocks which have functionNames that should not be user-visible can define
+ * their own signature override.
+ *
+ * e.g.,
+ *
+ * "dropletBlock_functionParams_n_description": "Define a function with a given parameter",
+ * "dropletBlock_functionParams_n_signatureOverride": "Function with a Parameter",
+ *
+ * Will result in a tooltip with the contents:
+ *
+ *    Function with a Parameter <-- note, no ()s
+ *    Define a function with a given parameter.
+ *    [Read More] (links to `functionParams_n` doc file)
+ *
+ * @constructor
+ */
+var DropletFunctionTooltip = function (functionName) {
+  /** @type {String} */
+  this.functionName = functionName;
+
+  /** @type {String} */
+  this.description = null;
+
+  if (msg.hasOwnProperty(this.descriptionKey())) {
+    this.description = msg[this.descriptionKey()]();
+  }
+
+  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
+    this.signatureOverride = msg[this.signatureOverrideKey()]();
+  }
+
+  /** @type {Array.<parameterInfo>} */
+  this.parameterInfos = [];
+
+  var paramId = 0;
+  while (msg.hasOwnProperty(this.parameterNameKey(paramId))) {
+    var paramInfo = {};
+    paramInfo.name = msg[this.parameterNameKey(paramId)]();
+    if (msg.hasOwnProperty(this.parameterDescriptionKey(paramId))) {
+      paramInfo.description = msg[this.parameterDescriptionKey(paramId)]();
+    }
+    this.parameterInfos.push(paramInfo);
+    paramId++;
+  }
+};
+
+/**
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.descriptionKey = function () {
+  return this.i18nPrefix() + "_description";
+};
+
+/**
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.signatureOverrideKey = function () {
+  return this.i18nPrefix() + "_signatureOverride";
+};
+
+/**
+ * @param {Number} paramIndex
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.parameterNameKey = function (paramIndex) {
+  return this.i18nPrefix() + "_param" + paramIndex;
+};
+
+/**
+ * @param {Number} paramIndex
+ * @returns {string}
+ */
+DropletFunctionTooltip.prototype.parameterDescriptionKey = function (paramIndex) {
+  return this.i18nPrefix() + "_param" + paramIndex + '_description';
+};
+
+/**
+ * @returns {string} i18n file prefix for this function
+ */
+DropletFunctionTooltip.prototype.i18nPrefix = function () {
+  return DROPLET_BLOCK_I18N_PREFIX + this.functionName;
+};
+
+/**
+ * @returns {string} URL for full doc about this function
+ */
+DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
+  return 'http://code.org/applab/docs/' + this.functionName;
+};
+
+module.exports = DropletFunctionTooltip;
+
+
+},{"../../locale/current/common":264}],264:[function(require,module,exports){
+/*common*/ module.exports = window.blockly.locale;
+
+},{}],26:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
+
+/**
+ * @fileoverview Displays tooltips for Droplet blocks
+ */
+
+/**
+ * Handles displaying tooltips on Droplet's ACE editor autocomplete dropdown
+ * @param {DropletTooltipManager} dropletTooltipManager
+ * @constructor
+ */
+var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
+  this.dropletTooltipManager = dropletTooltipManager;
+};
+
+var DEFAULT_TOOLTIP_CONFIG = {
+  interactive: true,
+  autoClose: false,
+  trigger: 'custom',
+  speed: 100,
+  maxWidth: 450,
+  position: 'left',
+  contentAsHTML: true,
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2,
+  restoration: 'none',
+  updateAnimation: false
+};
+
+/**
+ * @param {Editor} dropletEditor
+ */
+DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  var aceEditor = dropletEditor.aceEditor;
+
+  this.editorChangedEventHandler_ = this.setupOnPopupShown_.bind(this, aceEditor);
+  aceEditor.commands.on("afterExec", this.editorChangedEventHandler_);
+};
+
+/**
+ * When an autocomplete popup has been shown the first time, register event
+ * handlers to show and hide tooltips during autocomplete popup usage.
+ * @param aceEditor - ace editor instance
+ * @param changeEvent - event from aceEditor.commands.on("afterExec")
+ * @private
+ */
+DropletAutocompletePopupTooltipManager.prototype.setupOnPopupShown_ = function (aceEditor, changeEvent) {
+  if (changeEvent.command.name !== 'insertstring') {
+    return;
+  }
+
+  var popupHasBeenShownOnce = aceEditor.completer && aceEditor.completer.popup;
+  if (!popupHasBeenShownOnce) {
+    return;
+  }
+
+  this.setupForEditorPopup_(aceEditor);
+
+  aceEditor.commands.removeListener("afterExec", this.editorChangedEventHandler_);
+  this.editorChangedEventHandler_ = null;
+};
+
+DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function (aceEditor) {
+  aceEditor.completer.popup.setSelectOnHover(true);
+
+  aceEditor.completer.popup.renderer.on("afterRender", function () {
+    this.updateAutocompletePopupTooltip(aceEditor);
+  }.bind(this));
+
+  aceEditor.completer.popup.on("hide", function () {
+    this.destroyAutocompleteTooltips_();
+  }.bind(this));
+};
+
+DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip = function (aceEditor) {
+  if (!aceEditor.completer.completions) {
+    return;
+  }
+
+  var keyboardRow = aceEditor.completer.popup.getRow();
+
+  if (keyboardRow < 0) {
+    return;
+  }
+
+  var filteredCompletions = aceEditor.completer.completions.filtered;
+  var funcName = filteredCompletions[keyboardRow].value;
+
+  this.destroyAutocompleteTooltips_();
+
+  if (!this.dropletTooltipManager.hasDocFor(funcName)) {
+    return;
+  }
+
+  var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+    content: this.getTooltipHTML(funcName)
+  });
+
+  var rowOverlayDiv = $('.ace_selected');
+  rowOverlayDiv.tooltipster(configuration);
+  rowOverlayDiv.tooltipster('show');
+};
+
+DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = function () {
+  $('.ace_autocomplete .tooltipstered').tooltipster('destroy');
+};
+
+/**
+ * @returns {String} HTML for tooltip
+ */
+DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (functionName) {
+  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
+  return DropletFunctionTooltipMarkup({
+    functionName: tooltipInfo.functionName,
+    functionShortDescription: tooltipInfo.description,
+    parameters: tooltipInfo.parameterInfos,
+    signatureOverride: tooltipInfo.signatureOverride,
+    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+  });
+};
+
+module.exports = DropletAutocompletePopupTooltipManager;
+
+
+},{"./DropletFunctionTooltip.html.ejs":28}],28:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!\w+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<div class="function-name">\n  ');2; if (signatureOverride) {; buf.push('    ', escape((2,  signatureOverride )), '\n  ');3; } else {
+    /**
+     * TODO(bjordan): would be nice to split the following line up, can't figure
+     * out how to do so without inserting extraneous spaces between parameters.
+     */
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('', (8,  parameters[i].name), '');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (functionShortDescription) { ; buf.push('<div>', escape((10,  functionShortDescription )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":280}],25:[function(require,module,exports){
+/* global $ */
+
+var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
+var tooltipUtils = require('./tooltipUtils.js');
+
+/**
+ * @fileoverview Displays tooltips for Droplet blocks
+ */
+
+/**
+ * Handles displaying tooltips on Droplet's ACE editor when filling in
+ * an empty parameter.
+ * @param {DropletTooltipManager} dropletTooltipManager
+ * @constructor
+ */
+var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager) {
+  this.dropletTooltipManager = dropletTooltipManager;
+};
+
+var DEFAULT_TOOLTIP_CONFIG = {
+  interactive: true,
+  autoClose: false,
+  trigger: 'custom',
+  speed: 100,
+  maxWidth: 450,
+  position: 'bottom',
+  contentAsHTML: true,
+  theme: 'droplet-block-tooltipster',
+  offsetY: 2,
+  restoration: 'none',
+  updateAnimation: false,
+  positionTracker: true
+};
+
+/**
+ * @param {Editor} dropletEditor
+ */
+DropletAutocompleteParameterTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
+  if (!window.$) {
+    return; // TODO(bjordan): remove when $ available on dev server
+  }
+
+  var aceEditor = dropletEditor.aceEditor;
+
+  var cursorMovementHandler = this.onCursorMovement_.bind(this, aceEditor);
+  aceEditor.commands.on('afterExec', cursorMovementHandler);
+  aceEditor.on('mousedown', function(e) {
+    this.getCursorTooltip_().tooltipster('hide');
+  }.bind(this));
+};
+
+/**
+ * @param editor - ace editor instance
+ * @param changeEvent - event from aceEditor.session.selection.on('changeCursor')
+ * @private
+ */
+DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = function (editor, changeEvent) {
+  this.getCursorTooltip_().tooltipster('hide');
+
+  if (!editor.selection.isEmpty()) {
+    return;
+  }
+
+  var cursorPosition = editor.selection.getCursor();
+
+  var currentParameterInfo = tooltipUtils.findFunctionAndParamNumber(editor, cursorPosition);
+  if (!currentParameterInfo) {
+    return;
+  }
+
+  this.updateParameterTooltip_(editor, currentParameterInfo.funcName,
+    currentParameterInfo.currentParameterIndex);
+};
+
+DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = function (aceEditor, functionName, currentParameterIndex) {
+  if (!this.dropletTooltipManager.hasDocFor(functionName)) {
+    return;
+  }
+
+  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
+
+  if (currentParameterIndex >= tooltipInfo.parameterInfos.length) {
+    return;
+  }
+
+  this.getCursorTooltip_().tooltipster('content',
+    this.getTooltipHTML(tooltipInfo, currentParameterIndex));
+  this.getCursorTooltip_().tooltipster('show');
+};
+
+DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
+  if (!this.cursorTooltip_) {
+    this.cursorTooltip_ = $('.droplet-ace .ace_cursor');
+    this.cursorTooltip_.tooltipster(DEFAULT_TOOLTIP_CONFIG);
+  }
+  return this.cursorTooltip_;
+};
+
+/**
+ * @returns {String} HTML for tooltip
+ */
+DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (tooltipInfo, currentParameterIndex) {
+  return DropletFunctionTooltipMarkup({
+    functionName: tooltipInfo.functionName,
+    functionShortDescription: tooltipInfo.description,
+    parameters: tooltipInfo.parameterInfos,
+    signatureOverride: tooltipInfo.signatureOverride,
+    fullDocumentationURL: tooltipInfo.getFullDocumentationURL(),
+    currentParameterIndex: currentParameterIndex
+  });
+};
+
+module.exports = DropletAutocompleteParameterTooltipManager;
+
+
+},{"./DropletParameterTooltip.html.ejs":30,"./tooltipUtils.js":32}],32:[function(require,module,exports){
+/* global ace */
+'use strict';
+
+var utils = require('../utils');
+var _ = utils.getLodash();
+
+/**
+ * @typedef {Object} parameterSlotInfo
+ * @property {string} funcName
+ * @property {number} currentParameterIndex
+ */
+
+var ONLY_WHITESPACE_REGEXP = /^\s*$/;
+var ENDING_OF_BLOCK_COMMENT = /\*\/$/;
+var START_OF_BLOCK_COMMENT = /^\/\*/;
+
+/**
+ * Returns the number of instances of character within string
+ * @param {string} string
+ * @param {string} character
+ * @returns {number}
+ */
+function countNumberOfCharacter(string, character) {
+  return string.split(character).length - 1;
+}
+
+function openerMatchesCloser(opener, closer) {
+  var closersToOpeners = {
+    '}': '{',
+    ')': '(',
+    ']': '['
+  };
+  return closersToOpeners[closer] === opener;
+}
+
+/**
+ * Given an ace editor and row/column position, returns the function
+ * name and index of the currently edited parameter.
+ * If a parameter is not currently being filled in, returns null.
+ * TODO(bjordan): Unit test once ace.require available in utility tests
+ * @param editor
+ * @param position
+ * @returns {parameterSlotInfo|null}
+ */
+exports.findFunctionAndParamNumber = function (editor, position) {
+  var seenCloserStack = [];
+  var sameDepthPrecedingCommaCount = 0;
+
+  var TokenIterator = ace.require("./token_iterator").TokenIterator;
+  var iterator = new TokenIterator(editor.session, position.row, position.column);
+
+  var token = iterator.getCurrentToken();
+
+  // Special cases for first token
+
+  if (position.column === 0) {
+    // At beginning of a line. Step back one for first token.
+    token = iterator.stepBackward();
+  } else if (token && token.type.match(/^comment/)) {
+    var isBlockComment = token.type === "comment.doc" ||
+      token.value.match(START_OF_BLOCK_COMMENT);
+    if (isBlockComment) {
+      var tokenIsEndOfDocComment = token.value.match(ENDING_OF_BLOCK_COMMENT);
+      var cursorIsEndOfToken = (token.start + token.value.length) === position.column;
+      var cursorIsEndOfBlockComment = (tokenIsEndOfDocComment && cursorIsEndOfToken);
+      if (!cursorIsEndOfBlockComment) {
+        // Starting within a block comment
+        return null;
+      }
+    } else {
+      // Starting within a comment
+      return null;
+    }
+  }
+
+  while (token) {
+    switch (token.type) {
+      case "paren.rparen":
+        var closers = token.value.split();
+        for (var i = closers.length - 1; i >= 0; i--) {
+          var currentCloser = closers[i];
+          seenCloserStack.push(currentCloser);
+        }
+        break;
+      case "paren.lparen":
+        var openers = token.value.split();
+        for (var j = openers.length - 1; j >= 0; j--) {
+          var currentOpener = openers[j];
+
+          var isBeginningOfFunctionCall =
+            seenCloserStack.length === 0 && currentOpener === '(';
+          if (isBeginningOfFunctionCall) {
+            return {
+              funcName: iterator.stepBackward().value,
+              currentParameterIndex: sameDepthPrecedingCommaCount
+            };
+          }
+
+          var lastCloser = seenCloserStack.pop();
+          if (!lastCloser || !openerMatchesCloser(currentOpener, lastCloser)) {
+            return null;
+          }
+        }
+        break;
+      case "punctuation.operator":
+        if (seenCloserStack.length === 0) {
+          if (_.contains(token.value, ';')) {
+            return null;
+          }
+          if (_.contains(token.value, ',')) {
+            sameDepthPrecedingCommaCount += countNumberOfCharacter(token.value, ',');
+          }
+        }
+        break;
+      case "comment":
+      case "comment.doc":
+        break;
+      case "text":
+        // Whitespace or random non-identifier characters
+        if (seenCloserStack.length !== 0 || token.value.match(ONLY_WHITESPACE_REGEXP)) {
+          break;
+        }
+        return null;
+      case "string":
+      case "storage.type":
+      case "identifier":
+        /* falls through */
+      default:
+        if (seenCloserStack.length === 0 && sameDepthPrecedingCommaCount === 0) {
+          // Something substantial between cursor and start of parameter slot
+          return null;
+        }
+        break;
+    }
+
+    token = iterator.stepBackward();
+  }
+
+  return null;
+};
+
+
+
+},{"../utils":259}],259:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -11381,7 +12639,37 @@ exports.isInfiniteRecursionError = function (err) {
   return false;
 };
 
-},{"./hammer":91,"./lodash":99,"./xml":256}],99:[function(require,module,exports){
+
+},{"./hammer":95,"./lodash":103,"./xml":260}],260:[function(require,module,exports){
+// Serializes an XML DOM node to a string.
+exports.serialize = function(node) {
+  var serializer = new XMLSerializer();
+  return serializer.serializeToString(node);
+};
+
+// Parses a single root element string, wrapping it in an <xml/> element
+exports.parseElement = function(text) {
+  var parser = new DOMParser();
+  text = text.trim();
+  var dom = text.indexOf('<xml') === 0 ?
+      parser.parseFromString(text, 'text/xml') :
+      parser.parseFromString('<xml>' + text + '</xml>', 'text/xml');
+  var errors = dom.getElementsByTagName("parsererror");
+  var element = dom.firstChild;
+  if (!element) {
+    throw new Error('Nothing parsed');
+  }
+  if (errors.length > 0) {
+    throw new Error(exports.serialize(errors[0]));
+  }
+  if (element !== dom.lastChild) {
+    throw new Error('Parsed multiple elements');
+  }
+  return element;
+};
+
+
+},{}],103:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -14749,8 +16037,9 @@ exports.isInfiniteRecursionError = function (err) {
   }
 }.call(this));
 
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],91:[function(require,module,exports){
+},{}],95:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -16914,949 +18203,8 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],60:[function(require,module,exports){
-exports.addReadyListener = function(callback) {
-  if (document.readyState === "complete") {
-    setTimeout(callback, 1);
-  } else {
-    window.addEventListener('load', callback, false);
-  }
-};
 
-exports.getText = function(node) {
-  return node.innerText || node.textContent;
-};
-
-exports.setText = function(node, string) {
-  if (node.innerText) {
-    node.innerText = string;
-  } else {
-    node.textContent = string;
-  }
-};
-
-exports.getTouchEventName = function(eventName) {
-  var isIE11Touch = window.navigator.pointerEnabled;
-  var isIE10Touch = window.navigator.msPointerEnabled;
-  var isStandardTouch = 'ontouchend' in document.documentElement;
-
-  var key;
-  if (isIE11Touch) {
-    key = "ie11";
-  } else if (isIE10Touch) {
-    key = "ie10";
-  } else if (isStandardTouch) {
-    key = "standard";
-  }
-  if (key && TOUCH_MAP[eventName]) {
-    return TOUCH_MAP[eventName][key];
-  }
-};
-
-var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
-  var touchEvent = exports.getTouchEventName(eventName);
-  if (touchEvent) {
-    element.addEventListener(touchEvent, function(e) {
-      e.preventDefault();  // Stop mouse events.
-      handler(e);
-    }, false);
-  }
-};
-
-exports.addMouseDownTouchEvent = function(element, handler) {
-  addEvent(element, 'mousedown', handler);
-};
-
-exports.addMouseUpTouchEvent = function(element, handler) {
-  addEvent(element, 'mouseup', handler);
-};
-
-exports.addMouseMoveTouchEvent = function(element, handler) {
-  addEvent(element, 'mousemove', handler);
-};
-
-exports.addClickTouchEvent = function(element, handler) {
-  addEvent(element, 'click', handler);
-};
-
-// A map from standard touch events to various aliases.
-var TOUCH_MAP = {
-  //  Incomplete list, add as needed.
-  click: {
-    standard: 'touchend',
-    ie10: 'MSPointerUp',
-    ie11: 'pointerup'
-  },
-  mousedown: {
-    standard: 'touchstart',
-    ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
-  },
-  mouseup: {
-    standard: 'touchend',
-    ie10: 'MSPointerUp',
-    ie11: 'pointerup'
-  },
-  mousemove: {
-    standard: 'touchmove',
-    ie10: 'MSPointerMove',
-    ie11: 'pointermove'
-  }
-};
-
-exports.isMobile = function() {
-  var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isWindowsTouch = function() {
-  var reg = /MSIE.*Touch/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isAndroid = function() {
-  var reg = /Android/;
-  return reg.test(window.navigator.userAgent);
-};
-
-exports.isIOS = function() {
-  var reg = /iP(hone|od|ad)/;
-  return reg.test(window.navigator.userAgent);
-};
-
-},{}],59:[function(require,module,exports){
-/**
- * @fileoverview Constants used in production code and tests.
- */
-
-/**
- * Enumeration of user program execution outcomes.
- * These are determined by each app.
- */
-exports.ResultType = {
-  UNSET: 0,       // The result has not yet been computed.
-  SUCCESS: 1,     // The program completed successfully, achieving the goal.
-  FAILURE: -1,    // The program ran without error but did not achieve goal.
-  TIMEOUT: 2,     // The program did not complete (likely infinite loop).
-  ERROR: -2       // The program generated an error.
-};
-
-/**
- * Enumeration of test results.
- * EMPTY_BLOCK_FAIL and EMPTY_FUNCTION_BLOCK_FAIL can only occur if
- * StudioApp.checkForEmptyBlocks_ is true.
- */
-exports.TestResults = {
-  // Default value before any tests are run.
-  NO_TESTS_RUN: -1,
-
-  // The level was not solved.
-  EMPTY_BLOCK_FAIL: 1,           // An "if" or "repeat" block was empty.
-  TOO_FEW_BLOCKS_FAIL: 2,        // Fewer than the ideal number of blocks used.
-  LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
-  MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
-  EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
-  MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
-  APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
-  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
-  UNUSED_PARAM: 13,              // Param declared but not used in function.
-  UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
-  PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
-  INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
-  QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
-  EMPTY_FUNCTIONAL_BLOCK: 18,    // There's a functional block with an open input
-
-  // The level was solved in a non-optimal way.  User may advance or retry.
-  TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
-  APP_SPECIFIC_ACCEPTABLE_FAIL: 21,  // Application-specific acceptable failure.
-
-  // Other.
-  FREE_PLAY: 30,              // The user is in free-play mode.
-  EDIT_BLOCKS: 70,            // The user is creating/editing a new level.
-
-  // The level was solved in the ideal manner.
-  ALL_PASS: 100
-};
-
-exports.BeeTerminationValue = {
-  FAILURE: false,
-  SUCCESS: true,
-  INFINITE_LOOP: Infinity,
-  NOT_AT_FLOWER: 1,     // Tried to get nectar when not at flower.
-  FLOWER_EMPTY: 2,      // Tried to get nectar when flower empty.
-  NOT_AT_HONEYCOMB: 3,  // Tried to make honey when not at honeycomb.
-  HONEYCOMB_FULL: 4,    // Tried to make honey, but no room at honeycomb.
-  UNCHECKED_CLOUD: 5,    // Finished puzzle, but didn't check every clouded item
-  UNCHECKED_PURPLE: 6,   // Finished puzzle, but didn't check every purple flower
-  INSUFFICIENT_NECTAR: 7,// Didn't collect all nectar by finish
-  INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
-};
-
-exports.KeyCodes = {
-  ENTER: 13,
-  SPACE: 32,
-  LEFT: 37,
-  UP: 38,
-  RIGHT: 39,
-  DOWN: 40,
-  DELETE: 127
-};
-
-},{}],29:[function(require,module,exports){
-var xml = require('./xml');
-
-/**
- * Create the xml for a level's toolbox
- * @param {string} blocks The xml of the blocks to go in the toolbox
- */
-exports.createToolbox = function(blocks) {
-  return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
-};
-
-/**
- * Create the xml for a block of the given type
- * @param {string} type The type of the block
- * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
- */
-exports.blockOfType = function(type, titles) {
-  var titleText = '';
-  if (titles) {
-    for (var key in titles) {
-      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
-    }
-  }
-  return '<block type="' + type + '">' + titleText +'</block>';
-};
-
-/**
- * Create the xml for a block of the given type, with the provided child nested
- * in a next block
- * @param {string} type The type of the block
- * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
- * @param {string} child Xml for the child block
- */
-exports.blockWithNext = function (type, titles, child) {
-  var titleText = '';
-  if (titles) {
-    for (var key in titles) {
-      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
-    }
-  }
-  return '<block type="' + type + '">' + titleText + '<next>' + child + '</next></block>';
-};
-
-/**
- * Give a list of types, returns the xml assuming each block is a child of
- * the previous block.
- */
-exports.blocksFromList = function (types) {
-  if (types.length === 1) {
-    return this.blockOfType(types[0]);
-  }
-
-  return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
-};
-
-/**
- * Create the xml for a category in a toolbox
- */
-exports.createCategory = function(name, blocks, custom) {
-  return '<category name="' + name + '"' +
-          (custom ? ' custom="' + custom + '"' : '') +
-          '>' + blocks + '</category>';
-};
-
-/**
- * Generate a simple block with a plain title and next/previous connectors.
- */
-exports.generateSimpleBlock = function (blockly, generator, options) {
-  ['name', 'title', 'tooltip', 'functionName'].forEach(function (param) {
-    if (!options[param]) {
-      throw new Error('generateSimpleBlock requires param "' + param + '"');
-    }
-  });
-
-  var name = options.name;
-  var helpUrl = options.helpUrl || ""; // optional param
-  var title = options.title;
-  var titleImage = options.titleImage;
-  var tooltip = options.tooltip;
-  var functionName = options.functionName;
-
-  blockly.Blocks[name] = {
-    helpUrl: helpUrl,
-    init: function() {
-      // Note: has a fixed HSV.  Could make this customizable if need be
-      this.setHSV(184, 1.00, 0.74);
-      var input = this.appendDummyInput();
-      if (title) {
-        input.appendTitle(title);
-      }
-      if (titleImage) {
-        input.appendTitle(new blockly.FieldImage(titleImage));
-      }
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip(tooltip);
-    }
-  };
-
-  generator[name] = function() {
-    // Generate JavaScript for putting dirt on to a tile.
-    return functionName + '(\'block_id_' + this.id + '\');\n';
-  };
-};
-
-/**
- * Generates a single block from a <block/> DOM element, adding it to the main workspace
- * @param blockDOM {Element}
- * @returns {*}
- */
-exports.domToBlock = function(blockDOM) {
-  return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
-};
-
-/**
- * Generates a single block from a block XML string—e.g., <block type="testBlock"></block>,
- * and adds it to the main workspace
- * @param blockDOMString
- * @returns {*}
- */
-exports.domStringToBlock = function(blockDOMString) {
-  return exports.domToBlock(xml.parseElement(blockDOMString).firstChild);
-};
-
-/**
- * Takes a set of start blocks, and returns them with a particular top level
- * block inserted in front of the first non-function block.  If we already have
- * this block, does nothing.
- */
-exports.forceInsertTopBlock = function (input, blockType) {
-  input = input || '';
-
-  if (blockType === null || input.indexOf(blockType) !== -1) {
-    return input;
-  }
-
-  var root = xml.parseElement(input);
-
-  // Extract the document from the root. The reason I do this instead of just
-  // using document.createElement elsewhere is
-  var doc = root.parentNode;
-
-  var topBlock = doc.createElement('block');
-  topBlock.setAttribute('type', blockType);
-  topBlock.setAttribute('movable', 'false');
-  topBlock.setAttribute('deletable', 'false');
-
-  var numChildren = root.childNodes ? root.childNodes.length : 0;
-
-  // find the first non-function definition block and extract it
-  var firstBlock = null, i = 0;
-  while (i < numChildren && firstBlock === null) {
-    var child = root.childNodes[i];
-    // only look at element nodes
-    if (child.nodeType === 1) {
-      var type = child.getAttribute('type');
-      if (type !== 'procedures_defnoreturn' && type !== 'procedures_defreturn') {
-        firstBlock = root.removeChild(child);
-        numChildren--;
-      }
-    }
-    i++;
-  }
-
-  if (firstBlock !== null) {
-    // when run -> next -> firstBlock
-    var next;
-    if (/^functional/.test(blockType)) {
-      next = doc.createElement('functional_input');
-      next.setAttribute('name', 'ARG1');
-    } else {
-      next = doc.createElement('next');
-    }
-    next.appendChild(firstBlock);
-    topBlock.appendChild(next);
-  }
-
-  if (numChildren > 0) {
-    root.insertBefore(topBlock, root.childNodes[0]);
-  } else {
-    root.appendChild(topBlock);
-  }
-  return xml.serialize(root);
-};
-
-/**
- * Generate the xml for a block for the calc app.
- * @param {string} type Type for this block
- * @param {number[]|string[]} args List of args, where each arg is either the
- *   xml for a child block, a number, or the name of a variable.
- */
-exports.calcBlockXml = function (type, args) {
-  var str = '<block type="' + type + '" inline="false">';
-  for (var i = 1; i <= args.length; i++) {
-    str += '<functional_input name="ARG' + i + '">';
-    var arg = args[i - 1];
-    if (typeof(arg) === "number") {
-      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
-        '</title></block>';
-    } else if (/^<block/.test(arg)) {
-      // we have xml, dont make any changes
-      arg = arg;
-    } else {
-      // we think we have a variable
-      arg = exports.calcBlockGetVar(arg);
-    }
-    str += arg;
-    str += '</functional_input>';
-  }
-  str += '</block>';
-
-  return str;
-};
-
-/**
- * @returns the xml for a functional_parameters_get block with the given
- *   variableName
- */
-exports.calcBlockGetVar = function (variableName) {
-  return '' +
-    '<block type="functional_parameters_get" uservisible="false">' +
-    '  <mutation>' +
-    '    <outputtype>Number</outputtype>' +
-    '  </mutation>' +
-    '  <title name="VAR">' + variableName + '</title>' +
-    '</block>';
-};
-
-/**
- * Generate the xml for a math block (either calc or eval apps).
- * @param {string} type Type for this block
- * @param {Object.<string,string} inputs Dictionary mapping input name to the
-     xml for that input
- * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
- */
-exports.mathBlockXml = function (type, inputs, titles) {
-  var str = '<block type="' + type + '" inline="false">';
-  for (var title in titles) {
-    str += '<title name="' + title + '">' + titles[title] + '</title>';
-  }
-
-  for (var input in inputs) {
-    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
-  }
-
-  str += '</block>';
-
-  return str;
-};
-
-/**
- * Generate xml for a functional defintion
- * @param {string} name The name of the function
- * @param {string} outputType Function's output type
- * @param {Object<string, string>[]} argList Name and type for each arg
- * @param {string} blockXml Xml for the blocks that actually define the function
- */
-exports.functionalDefinitionXml = function (name, outputType, argList, blockXml) {
-  var mutation = '<mutation>';
-  argList.forEach(function (argInfo) {
-    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
-  });
-  mutation += '<outputtype>' + outputType + '</outputtype></mutation>';
-
-  return '<block type="functional_definition" inline="false">'+
-      mutation +
-      '<title name="NAME">' + name + '</title>' +
-     '<functional_input name="STACK">' + blockXml + '</functional_input>' +
-    '</block>';
-};
-
-/**
- * Generate xml for a calling a functional function
- * @param {string} name The name of the function
- * @param {Object<string, string>[]} argList Name and type for each arg
- */
-exports.functionalCallXml = function (name, argList, inputContents) {
-  if (argList.length !== inputContents.length) {
-    throw new Error('must define contents for each arg');
-  }
-
-  var mutation = '<mutation name="' + name + '">';
-  argList.forEach(function (argInfo) {
-    mutation += '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
-  });
-  mutation += '</mutation>';
-
-  var contents = '';
-  inputContents.forEach(function (blockXml, index) {
-    contents += '<functional_input name="ARG' + index + '">' + blockXml + '</functional_input>';
-  });
-
-  return '<block type="functional_call">' +
-      mutation +
-      contents +
-    '</block>';
-};
-
-},{"./xml":256}],256:[function(require,module,exports){
-// Serializes an XML DOM node to a string.
-exports.serialize = function(node) {
-  var serializer = new XMLSerializer();
-  return serializer.serializeToString(node);
-};
-
-// Parses a single root element string, wrapping it in an <xml/> element
-exports.parseElement = function(text) {
-  var parser = new DOMParser();
-  text = text.trim();
-  var dom = text.indexOf('<xml') === 0 ?
-      parser.parseFromString(text, 'text/xml') :
-      parser.parseFromString('<xml>' + text + '</xml>', 'text/xml');
-  var errors = dom.getElementsByTagName("parsererror");
-  var element = dom.firstChild;
-  if (!element) {
-    throw new Error('Nothing parsed');
-  }
-  if (errors.length > 0) {
-    throw new Error(exports.serialize(errors[0]));
-  }
-  if (element !== dom.lastChild) {
-    throw new Error('Parsed multiple elements');
-  }
-  return element;
-};
-
-},{}],28:[function(require,module,exports){
-/* global $ */
-
-var DropletFunctionTooltip = require('./DropletFunctionTooltip');
-var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
-var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
-
-/**
- * @fileoverview Manages a store of known blocks and tooltips
- */
-
-/**
- * Store for finding tooltips for blocks
- * @constructor
- */
-function DropletTooltipManager() {
-  /**
-   * Map of block types to tooltip objects
-   * @type {Object.<String, DropletFunctionTooltip>}
-   */
-  this.blockTypeToTooltip = {};
-
-  /**
-   * @type {DropletBlockTooltipManager}
-   * @private
-   */
-  this.dropletBlockTooltipManager_ = new DropletBlockTooltipManager(this);
-
-  /**
-   * @type {DropletAutocompletePopupTooltipManager}
-   * @private
-   */
-  this.dropletAutocompletePopupTooltipManager_ = new DropletAutocompletePopupTooltipManager(this);
-}
-
-/**
- * Registers handlers for droplet block tooltips.
- * @param dropletEditor
- */
-DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (dropletEditor) {
-  this.dropletBlockTooltipManager_.installTooltipsForEditor_(dropletEditor);
-};
-
-/**
- * Registers handlers for ACE mode tooltips
- * @param dropletEditor
- */
-DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (dropletEditor) {
-  this.dropletAutocompletePopupTooltipManager_.installTooltipsForEditor_(dropletEditor);
-};
-
-/**
- * @param {DropletBlock[]} dropletBlocks list of Droplet block definitions for
- *    which to register documentation
- */
-DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
-  dropletBlocks.forEach(function (dropletBlockDefinition) {
-    this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(dropletBlockDefinition.func);
-  }, this);
-};
-
-DropletTooltipManager.prototype.hasDocFor = function (functionName) {
-  return this.blockTypeToTooltip.hasOwnProperty(functionName);
-};
-
-/**
- * @param {String} functionName
- * @returns {DropletFunctionTooltip}
- */
-DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
-  if (!this.blockTypeToTooltip.hasOwnProperty(functionName)) {
-    throw "Function name " + functionName + " not registered in documentation manager.";
-  }
-
-  return this.blockTypeToTooltip[functionName];
-};
-
-module.exports = DropletTooltipManager;
-
-},{"./DropletAutocompletePopupTooltipManager":24,"./DropletBlockTooltipManager":25,"./DropletFunctionTooltip":27}],25:[function(require,module,exports){
-/* global $ */
-
-var DropletFunctionTooltip = require('./DropletFunctionTooltip');
-var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
-
-/**
- * @fileoverview Displays tooltips for Droplet blocks
- */
-
-/**
- * Handles displaying tooltips on Droplet blocks
- * @param {DropletTooltipManager} dropletTooltipManager
- * @constructor
- */
-var DropletBlockTooltipManager = function (dropletTooltipManager) {
-  this.dropletTooltipManager = dropletTooltipManager;
-};
-
-var DEFAULT_TOOLTIP_CONFIG = {
-  interactive: true,
-  speed: 150,
-  maxWidth: 450,
-  position: 'right',
-  contentAsHTML: true,
-  theme: 'droplet-block-tooltipster',
-  offsetY: 2,
-  delay: 400
-};
-
-/**
- * @param {Editor} dropletEditor
- */
-DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
-  this.installTooltipsForCurrentCategoryBlocks(dropletEditor);
-  this.hideTooltipsOnBlockPick_(dropletEditor);
-
-  dropletEditor.on('changepalette', this.installTooltipsForCurrentCategoryBlocks.bind(this));
-  dropletEditor.on('toggledone', this.installTooltipsIfNotInstalled.bind(this));
-};
-
-DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function () {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
-  if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
-    this.installTooltipsForCurrentCategoryBlocks();
-  }
-};
-
-DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
-  $('.droplet-hover-div').each(function (_, blockHoverDiv) {
-    if ($(blockHoverDiv).hasClass('tooltipstered')) {
-      return;
-    }
-
-    var funcName = $(blockHoverDiv).attr('title');
-
-    var hoverDivWidth = $(blockHoverDiv).width();
-    var hoverDivLeftToToolboxRight = $('.droplet-palette-canvas').width() -
-      parseInt(blockHoverDiv.style.left, 10);
-    var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
-    var tooltipOffsetX = desiredXPosition - hoverDivWidth;
-
-    var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-      content: this.getTooltipHTML(funcName),
-      offsetX: tooltipOffsetX
-    });
-
-    $(blockHoverDiv).tooltipster(configuration);
-  }.bind(this));
-};
-
-/**
- * Tooltipster's hideOnClick setting does not work with the droplet hover
- * overlay as-is. Hide the tooltip on block picking explicitly.
- */
-DropletBlockTooltipManager.prototype.hideTooltipsOnBlockPick_ = function (dropletEditor) {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
-  dropletEditor.on('pickblock', function () {
-    $('.tooltipstered').tooltipster('hide');
-  });
-};
-
-/**
- * @returns {String} HTML for tooltip
- */
-DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
-  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
-  return DropletFunctionTooltipMarkup({
-    functionName: tooltipInfo.functionName,
-    functionShortDescription: tooltipInfo.description,
-    parameters: tooltipInfo.paramNames,
-    signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
-  });
-};
-
-module.exports = DropletBlockTooltipManager;
-
-},{"./DropletFunctionTooltip":27,"./DropletFunctionTooltip.html.ejs":26}],27:[function(require,module,exports){
-var msg = require('../../locale/current/common');
-
-/**
- * @fileoverview Representation of a droplet function/block's tooltip
- */
-
-var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
-
-/**
- * Stores a block's tooltip information and helps render it
- * Grabs much of the tooltip's information from the 'common' locale file,
- * (apps/i18n/common/en_us.json), keyed by the function name.
- *
- * e.g.,
- *
- * "dropletBlock_readRecords_description": "Reads records [...].",
- * "dropletBlock_readRecords_param0": "table",
- * "dropletBlock_readRecords_param1": "searchParams",
- * "dropletBlock_readRecords_param2": "onSuccess",
- *
- * Will result in a tooltip with the contents:
- *
- *    readRecords(table, searchParams, onSuccess)
- *    Reads records [...].
- *    [Read More] (links to `readRecords` doc file)
- *
- * Blocks which have functionNames that should not be user-visible can define
- * their own signature override.
- *
- * e.g.,
- *
- * "dropletBlock_functionParams_n_description": "Define a function with a given parameter",
- * "dropletBlock_functionParams_n_signatureOverride": "Function with a Parameter",
- *
- * Will result in a tooltip with the contents:
- *
- *    Function with a Parameter <-- note, no ()s
- *    Define a function with a given parameter.
- *    [Read More] (links to `functionParams_n` doc file)
- *
- * @constructor
- */
-var DropletFunctionTooltip = function (functionName) {
-  /** @type {String} */
-  this.functionName = functionName;
-
-  /** @type {String} */
-  this.description = null;
-
-  if (msg.hasOwnProperty(this.descriptionKey())) {
-    this.description = msg[this.descriptionKey()]();
-  }
-
-  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
-    this.signatureOverride = msg[this.signatureOverrideKey()]();
-  }
-
-  /** @type {Array.<String>} */
-  this.paramNames = [];
-
-  var paramId = 0;
-  while (msg.hasOwnProperty(this.parameterKey(paramId))) {
-    this.paramNames.push(msg[this.parameterKey(paramId)]());
-    paramId++;
-  }
-};
-
-/**
- * @returns {string}
- */
-DropletFunctionTooltip.prototype.descriptionKey = function () {
-  return this.i18nPrefix() + "_description";
-};
-
-/**
- * @returns {string}
- */
-DropletFunctionTooltip.prototype.signatureOverrideKey = function () {
-  return this.i18nPrefix() + "_signatureOverride";
-};
-
-/**
- * @param {Number} paramIndex
- * @returns {string}
- */
-DropletFunctionTooltip.prototype.parameterKey = function (paramIndex) {
-  return this.i18nPrefix() + "_param" + paramIndex;
-};
-
-/**
- * @returns {string} i18n file prefix for this function
- */
-DropletFunctionTooltip.prototype.i18nPrefix = function () {
-  return DROPLET_BLOCK_I18N_PREFIX + this.functionName;
-};
-
-/**
- * @returns {string} URL for full doc about this function
- */
-DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
-  return 'http://code.org/applab/docs/' + this.functionName;
-};
-
-module.exports = DropletFunctionTooltip;
-
-},{"../../locale/current/common":260}],260:[function(require,module,exports){
-/*common*/ module.exports = window.blockly.locale;
-},{}],24:[function(require,module,exports){
-/* global $ */
-
-var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
-
-/**
- * @fileoverview Displays tooltips for Droplet blocks
- */
-
-/**
- * Handles displaying tooltips on Droplet's ACE editor autocomplete dropdown
- * @param {DropletTooltipManager} dropletTooltipManager
- * @constructor
- */
-var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
-  this.dropletTooltipManager = dropletTooltipManager;
-};
-
-var DEFAULT_TOOLTIP_CONFIG = {
-  interactive: true,
-  autoClose: false,
-  trigger: 'custom',
-  speed: 100,
-  maxWidth: 450,
-  position: 'left',
-  contentAsHTML: true,
-  theme: 'droplet-block-tooltipster',
-  offsetY: 2,
-  restoration: 'none',
-  updateAnimation: false
-};
-
-/**
- * @param {Editor} dropletEditor
- */
-DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
-  if (!window.$) {
-    return; // TODO(bjordan): remove when $ available on dev server
-  }
-
-  var aceEditor = dropletEditor.aceEditor;
-
-  this.editorChangedEventHandler_ = this.setupOnPopupShown_.bind(this, aceEditor);
-  aceEditor.commands.on("afterExec", this.editorChangedEventHandler_);
-};
-
-/**
- * When an autocomplete popup has been shown the first time, register event
- * handlers to show and hide tooltips during autocomplete popup usage.
- * @param aceEditor - ace editor instance
- * @param changeEvent - event from aceEditor.commands.on("afterExec")
- * @private
- */
-DropletAutocompletePopupTooltipManager.prototype.setupOnPopupShown_ = function (aceEditor, changeEvent) {
-  if (changeEvent.command.name !== 'insertstring') {
-    return;
-  }
-
-  var popupHasBeenShownOnce = aceEditor.completer && aceEditor.completer.popup;
-  if (!popupHasBeenShownOnce) {
-    return;
-  }
-
-  this.setupForEditorPopup_(aceEditor);
-
-  aceEditor.commands.removeListener("afterExec", this.editorChangedEventHandler_);
-  this.editorChangedEventHandler_ = null;
-};
-
-DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function (aceEditor) {
-  aceEditor.completer.popup.setSelectOnHover(true);
-
-  aceEditor.completer.popup.renderer.on("afterRender", function () {
-    this.updateAutocompletePopupTooltip(aceEditor);
-  }.bind(this));
-
-  aceEditor.completer.popup.on("hide", function () {
-    this.destroyAutocompleteTooltips_();
-  }.bind(this));
-};
-
-DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip = function (aceEditor) {
-  if (!aceEditor.completer.completions) {
-    return;
-  }
-
-  var keyboardRow = aceEditor.completer.popup.getRow();
-
-  if (keyboardRow < 0) {
-    return;
-  }
-
-  var filteredCompletions = aceEditor.completer.completions.filtered;
-  var funcName = filteredCompletions[keyboardRow].value;
-
-  this.destroyAutocompleteTooltips_();
-
-  if (!this.dropletTooltipManager.hasDocFor(funcName)) {
-    return;
-  }
-
-  var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
-    content: this.getTooltipHTML(funcName)
-  });
-
-  var rowOverlayDiv = $('.ace_selected');
-  rowOverlayDiv.tooltipster(configuration);
-  rowOverlayDiv.tooltipster('show');
-};
-
-DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = function () {
-  $('.ace_editor .tooltipstered').tooltipster('destroy');
-};
-
-/**
- * @returns {String} HTML for tooltip
- */
-DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (functionName) {
-  var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
-  return DropletFunctionTooltipMarkup({
-    functionName: tooltipInfo.functionName,
-    functionShortDescription: tooltipInfo.description,
-    parameters: tooltipInfo.paramNames,
-    signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
-  });
-};
-
-module.exports = DropletAutocompletePopupTooltipManager;
-
-},{"./DropletFunctionTooltip.html.ejs":26}],26:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17868,7 +18216,12 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div class="function-name">\n  ');2; if (signatureOverride) {; buf.push('    ', escape((2,  signatureOverride )), '\n  ');3; } else {; buf.push('    ', escape((3,  functionName )), '(');3; for (var i = 0; i < parameters.length; i++) {; buf.push('', (3,  parameters[i]), '');3; if (i < parameters.length - 1) {; buf.push(', ');3; }; buf.push('');3; }; buf.push(')  ');3; } ; buf.push('\n</div>\n');5; if (functionShortDescription) { ; buf.push('<div>', escape((5,  functionShortDescription )), '</div>');5; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((7,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
+ buf.push('<div class="function-name">\n  ');2; if (signatureOverride) {; buf.push('    ', escape((2,  signatureOverride )), '\n  ');3; } else {
+    /**
+     * TODO(bjordan): would be nice to split the following line up, can't figure
+     * out how to do so without inserting extraneous spaces between parameters.
+     */
+   ; buf.push('    ', escape((8,  functionName )), '(');8; for (var i = 0; i < parameters.length; i++) {; buf.push('<span class="tooltip-parameter-name ');8; if (i === currentParameterIndex) { ; buf.push(' current-tooltip-parameter-name');8; } ; buf.push('">', (8,  parameters[i].name), '</span>');8; if (i < parameters.length - 1) {; buf.push(', ');8; }; buf.push('');8; }; buf.push(')  ');8; } ; buf.push('\n</div>\n');10; if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { ; buf.push('<div>', escape((10,  parameters[currentParameterIndex].description )), '</div>');10; } ; buf.push('\n<div class="tooltip-example-link">\n  <a href="', escape((12,  fullDocumentationURL )), '" target="_blank">See examples</a>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -17876,7 +18229,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":276}],276:[function(require,module,exports){
+},{"ejs":280}],280:[function(require,module,exports){
 
 /*!
  * EJS
@@ -18231,7 +18584,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":277,"./utils":278,"fs":268,"path":269}],278:[function(require,module,exports){
+},{"./filters":281,"./utils":282,"fs":272,"path":273}],282:[function(require,module,exports){
 
 /*!
  * EJS
@@ -18255,7 +18608,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],277:[function(require,module,exports){
+},{}],281:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -18454,7 +18807,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],269:[function(require,module,exports){
+},{}],273:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -18682,7 +19035,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":270}],270:[function(require,module,exports){
+},{"_process":274}],274:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -18741,7 +19094,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],268:[function(require,module,exports){
+},{}],272:[function(require,module,exports){
 
 },{}],2:[function(require,module,exports){
 /**
@@ -18884,5 +19237,6 @@ process.umask = function() { return 0; };
             attachResizeEvent(element, callback);
         }
     };
+
 
 },{}]},{},[]);

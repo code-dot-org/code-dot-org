@@ -356,7 +356,8 @@ StudioApp.prototype.init = function(config) {
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
-      afterInject: config.afterInject
+      afterInject: config.afterInject,
+      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
 
@@ -366,10 +367,10 @@ StudioApp.prototype.init = function(config) {
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
-    dom.addMouseDownTouchEvent(vizResizeBar,
-                               _.bind(this.onMouseDownVizResizeBar, this));
-    dom.addMouseUpTouchEvent(document.body,
-                             _.bind(this.onMouseUpVizResizeBar, this));
+    vizResizeBar.addEventListener('mousedown',
+                                  _.bind(this.onMouseDownVizResizeBar, this));
+    document.body.addEventListener('mouseup',
+                                   _.bind(this.onMouseUpVizResizeBar, this));
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
@@ -801,11 +802,6 @@ StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   if (!this.onMouseMoveBoundHandler) {
     this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
     document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
-    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-    if (this.mouseMoveTouchEventName) {
-      document.body.addEventListener(this.mouseMoveTouchEventName,
-                                     this.onMouseMoveBoundHandler);
-    }
 
     event.preventDefault();
   }
@@ -873,10 +869,6 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (this.onMouseMoveBoundHandler) {
     document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
-    if (this.mouseMoveTouchEventName) {
-      document.body.removeEventListener(this.mouseMoveTouchEventName,
-                                        this.onMouseMoveBoundHandler);
-    }
     this.onMouseMoveBoundHandler = null;
   }
 };
@@ -1302,9 +1294,13 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Add an ace completer for the API functions exposed for this level
     if (options.dropletConfig) {
+      var functionsFilter = null;
+      if (options.autocompletePaletteApisOnly) {
+         functionsFilter = options.codeFunctions;
+      }
       var langTools = window.ace.require("ace/ext/language_tools");
       langTools.addCompleter(
-        dropletUtils.generateAceApiCompleter(options.dropletConfig));
+        dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
     }
 
     this.editor.aceEditor.setOptions({

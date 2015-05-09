@@ -630,8 +630,9 @@ en:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of x?: What is the value of x?
         '3': '3'
+        '8': '8'
         '15': '15'
-        do not know: do not know
+        string: string
       msm variables multi 5:
         /script_assets/msm/define_xpq.png, 600: /script_assets/msm/define_xpq.png, 600
         What is the value of (p - x)?: What is the value of (p - x)?
@@ -697,6 +698,13 @@ en:
         Play Area: Play Area
         Toolbox: Toolbox
         Workspace: Workspace
+      PDAlg end of P3:
+        Plans for the Future: Plans for the Future
+        What are your plans for next year?: What are your plans for next year?
+        Keep teaching Bootstrap: Keep teaching Bootstrap
+        Start teaching CS in Algebra: Start teaching CS in Algebra
+        Not teaching either: Not teaching either
+        Not sure yet: Not sure yet
       PDAlg functional:
         Functional Programming: Functional Programming
         Have you ever programmed before?: Have you ever programmed before?
@@ -1010,6 +1018,21 @@ en:
         Programs won't run without good API documentation: Programs won't run without good API documentation
         To provide high-level functionality that simplifies complex programming tasks: To provide high-level functionality that simplifies complex programming tasks
         It is impossible to write a program without an API: It is impossible to write a program without an API
+      U3L14 - MC Duplicate Ids:
+        Buttons and Ids: Buttons and Ids
+        What happens when two buttons are given the same id?: What happens when two buttons are given the same id?
+        JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.: JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.
+        A warning message will appear for the second button that that id is already in use: A warning message will appear for the second button that that id is already in use
+        The first button created with the id will work, the other will not: The first button created with the id will work, the other will not
+        The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant: The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant
+        Two buttons with same id are linked during the running of the program.  Clicking on is just like clicking the other: Two buttons with same id are linked during the running of the program.  Clicking on is just like clicking the other
+      U3L14 - MC order of button and onEvent:
+        Buttons and Event Handlers: Buttons and Event Handlers
+        Does order matter when adding a button and its event handler to your code?: Does order matter when adding a button and its event handler to your code?
+        The button, with its id, must appear in the code AFTER the event handler: The button, with its id, must appear in the code AFTER the event handler
+        JavaScript is flexible. The button and its event handler can appear in any order in the code: JavaScript is flexible. The button and its event handler can appear in any order in the code
+        The button, with its id, must appear in the code BEFORE the event handler: The button, with its id, must appear in the code BEFORE the event handler
+        JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API: JavaScript forces you decouple view and controller. You are required to declare buttons in a separate API
       unique level name here:
         title: title
         description here: description here

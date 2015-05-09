@@ -47,5 +47,5 @@
 - if script_level
   :javascript
     //<![CDATA[
-    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{summarize_user_progress(script_level.script, @user).to_json}, #{script_level.level_id}, #{@user.try(:id) || 'null'});
+    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{summarize_user_progress(script_level.script, @user).to_json}, #{script_level.level_id}, #{@user.try(:id) || 'null'}, #{@section.try(:id) || 'null'});
     //]]>

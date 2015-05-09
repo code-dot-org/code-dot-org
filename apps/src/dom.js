@@ -18,7 +18,10 @@ exports.setText = function(node, string) {
   }
 };
 
-exports.getTouchEventName = function(eventName) {
+
+var addEvent = function(element, eventName, handler) {
+  element.addEventListener(eventName, handler, false);
+
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
   var isStandardTouch = 'ontouchend' in document.documentElement;
@@ -31,16 +34,8 @@ exports.getTouchEventName = function(eventName) {
   } else if (isStandardTouch) {
     key = "standard";
   }
-  if (key && TOUCH_MAP[eventName]) {
-    return TOUCH_MAP[eventName][key];
-  }
-};
-
-var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
-  var touchEvent = exports.getTouchEventName(eventName);
-  if (touchEvent) {
+  if (key) {
+    var touchEvent = TOUCH_MAP[eventName][key];
     element.addEventListener(touchEvent, function(e) {
       e.preventDefault();  // Stop mouse events.
       handler(e);

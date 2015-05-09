@@ -1,0 +1,11 @@
+- content_for(:head) do
+  = stylesheet_link_tag    'jquery.handsontable.full', media: 'all'
+  = javascript_include_tag 'jquery.handsontable.full'
+%h1 Online Course Name: #{script.name}
+#progress
+:javascript
+  var data = #{ data.try(:to_json)};
+  $("#progress").handsontable({
+      data: data,
+      colHeaders: #{ headers.try(:to_json)}
+  });

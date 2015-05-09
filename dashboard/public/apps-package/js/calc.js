@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({49:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({53:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -11,7 +11,8 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":5,"../skins":209,"./blocks":40,"./calc":41,"./levels":48}],41:[function(require,module,exports){
+
+},{"../appMain":5,"../skins":213,"./blocks":44,"./calc":45,"./levels":52}],45:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1109,7 +1110,8 @@ Calc.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../../locale/current/calc":259,"../../locale/current/common":260,"../StudioApp":4,"../block_utils":29,"../dom":60,"../skins":209,"../templates/page.html.ejs":234,"../timeoutList":240,"../utils":255,"./controls.html.ejs":42,"./equation":43,"./equationSet":44,"./expressionNode":45,"./inputIterator":46,"./js-numbers/js-numbers.js":47,"./levels":48,"./token":50,"./visualization.html.ejs":51}],51:[function(require,module,exports){
+
+},{"../../locale/current/calc":263,"../../locale/current/common":264,"../StudioApp":4,"../block_utils":33,"../dom":64,"../skins":213,"../templates/page.html.ejs":238,"../timeoutList":244,"../utils":259,"./controls.html.ejs":46,"./equation":47,"./equationSet":48,"./expressionNode":49,"./inputIterator":50,"./js-numbers/js-numbers.js":51,"./levels":52,"./token":54,"./visualization.html.ejs":55}],55:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1129,7 +1131,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":259,"ejs":276}],48:[function(require,module,exports){
+},{"../../locale/current/calc":263,"ejs":280}],52:[function(require,module,exports){
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
@@ -1168,7 +1170,8 @@ module.exports = {
   }
 };
 
-},{"../../locale/current/calc":259,"../block_utils":29}],46:[function(require,module,exports){
+
+},{"../../locale/current/calc":263,"../block_utils":33}],50:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -1222,7 +1225,8 @@ InputIterator.prototype.remaining = function () {
   return this.remaining_;
 };
 
-},{}],44:[function(require,module,exports){
+
+},{}],48:[function(require,module,exports){
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
@@ -1628,7 +1632,8 @@ EquationSet.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":255,"./equation":43,"./expressionNode":45,"./js-numbers/js-numbers":47}],45:[function(require,module,exports){
+
+},{"../utils":259,"./equation":47,"./expressionNode":49,"./js-numbers/js-numbers":51}],49:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -2239,7 +2244,8 @@ ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
   return tokenList;
 };
 
-},{"../utils":255,"./js-numbers/js-numbers":47,"./token":50}],50:[function(require,module,exports){
+
+},{"../utils":259,"./js-numbers/js-numbers":51,"./token":54}],54:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -2356,7 +2362,8 @@ Token.numberWithCommas_ = function (x) {
   return parts.join(".");
 };
 
-},{"./js-numbers/js-numbers":47}],47:[function(require,module,exports){
+
+},{"./js-numbers/js-numbers":51}],51:[function(require,module,exports){
 // Scheme numbers.
 
 // NOTE: This top bit differs from the version at https://github.com/bootstrapworld/js-numbers/blob/master/src/js-numbers.js
@@ -6688,7 +6695,8 @@ module.exports = jsnums;
 
 })();
 
-},{}],43:[function(require,module,exports){
+
+},{}],47:[function(require,module,exports){
 /**
  * An equation is an expression attached to a particular name. For example:
  *   f(x) = x + 1
@@ -6728,7 +6736,8 @@ Equation.prototype.clone = function () {
   return new Equation(this.name, this.params.slice(), this.expression.clone());
 };
 
-},{}],42:[function(require,module,exports){
+
+},{}],46:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6751,7 +6760,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/calc":259,"../../locale/current/common":260,"ejs":276}],40:[function(require,module,exports){
+},{"../../locale/current/calc":263,"../../locale/current/common":264,"ejs":280}],44:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -6813,6 +6822,8 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/current/calc":259,"../../locale/current/common":260,"../sharedFunctionalBlocks":208}],259:[function(require,module,exports){
+
+},{"../../locale/current/calc":263,"../../locale/current/common":264,"../sharedFunctionalBlocks":212}],263:[function(require,module,exports){
 /*calc*/ module.exports = window.blockly.appLocale;
-},{}]},{},[49]);
+
+},{}]},{},[53]);

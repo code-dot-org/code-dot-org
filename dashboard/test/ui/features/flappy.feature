@@ -16,7 +16,7 @@ Scenario: Solving puzzle 2
   Given I am on "http://learn.code.org/flappy/2?noautoplay=true"
   And I rotate to landscape
   Then element ".dialog-title" has text "Puzzle 2 of 10"
-  And I press "x-close"
+  And I close the dialog
   Then I wait until element "#runButton" is visible
   And I drag block "2" to block "6"
   And I press "runButton"
@@ -29,7 +29,7 @@ Scenario: Failing puzzle 2
   Given I am on "http://learn.code.org/flappy/2?noautoplay=true"
   And I rotate to landscape
   Then element ".dialog-title" has text "Puzzle 2 of 10"
-  And I press "x-close"
+  And I close the dialog
   Then I wait until element "#runButton" is visible
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.onMouseDown(), true;"
