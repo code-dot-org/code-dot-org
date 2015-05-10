@@ -369,8 +369,16 @@ StudioApp.prototype.init = function(config) {
   if (vizResizeBar) {
     dom.addMouseDownTouchEvent(vizResizeBar,
                                _.bind(this.onMouseDownVizResizeBar, this));
-    dom.addMouseUpTouchEvent(document.body,
-                             _.bind(this.onMouseUpVizResizeBar, this));
+
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
+    document.body.addEventListener('mouseup',
+                                   _.bind(this.onMouseUpVizResizeBar, this));
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+                                     _.bind(this.onMouseUpVizResizeBar, this));
+    }
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
