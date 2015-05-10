@@ -990,8 +990,14 @@ Applab.init = function(config) {
   if (debugResizeBar) {
     dom.addMouseDownTouchEvent(debugResizeBar,
                                Applab.onMouseDownDebugResizeBar);
-    dom.addMouseUpTouchEvent(document.body,
-                             Applab.onMouseUpDebugResizeBar);
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
+    document.body.addEventListener('mouseup', Applab.onMouseUpDebugResizeBar);
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+                                     Applab.onMouseUpDebugResizeBar);
+    }
   }
 
   var finishButton = document.getElementById('finishButton');
