@@ -10,6 +10,7 @@ Feature: Big Game Remix
     And I press "x-close"
     And element "#runButton" is visible
 
+  @no_mobile
   Scenario: Big Game Remix
     Then I press the first ".project_remix" element
     And I wait for 5 seconds
