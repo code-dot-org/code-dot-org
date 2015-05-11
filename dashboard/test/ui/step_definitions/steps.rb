@@ -51,6 +51,11 @@ Then /^check that I am on "([^"]*)"$/ do |url|
   @browser.current_url.should eq url
 end
 
+Then /^check that the URL contains "([^"]*)"$/ do |url|
+  url = replace_hostname(url)
+  @browser.current_url.should include url
+end
+
 When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
@@ -374,4 +379,8 @@ end
 When /^I press keys "([^"]*)"$/ do |keys|
   # Note: Safari webdriver does not support actions API
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
+end
+
+When /^I disable onBeforeUnload$/ do
+  @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
 end
