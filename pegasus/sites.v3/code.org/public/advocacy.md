@@ -29,7 +29,7 @@ We support the implementation of the following policies to make computer science
 * Leverage federal policies that affect teacher preparation programs at colleges and universities to grow a computer science teaching workforce. 
 * Adequately support computer science education with the billions of dollars the US government invests in STEM education programs at 13 federal agencies.
 
-##Learn more
+## Learn more
 
 * [State policy tracking document](https://docs.google.com/document/d/1tKJFWknAAhykqJWwzzxrsWGex0CW0S1wtOlhd-buoZg/edit?usp=sharing)
 * [Federal policy tracking document](https://docs.google.com/spreadsheets/d/1WEQXeDfEp-UiD_YTrgD4fzhEId1fNoiU-6uMhHq8F0U/edit?usp=sharing)
@@ -57,7 +57,6 @@ For more information, please contact advocacy@code.org.
 * Students First
 * Teach for America
 * TechNet
-* 
 
 
 [#tools-section]
