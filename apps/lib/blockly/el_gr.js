@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.el_gr');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "κλήση";
 Blockly.Msg.ADD = "Πρόσθεσε";
 Blockly.Msg.ADD_COMMENT = "Πρόσθεσε σχόλιο";
