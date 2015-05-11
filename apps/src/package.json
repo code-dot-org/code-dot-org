@@ -1,11 +1,12 @@
 {
   "name": "@cdo/apps",
   "version": "0.0.1",
-  "description": "Code Studio module package",
+  "description": "Code Studio module package, used to reference src files from tests",
   "private": true,
   "browserify": {
     "transform": [
-      "ejsify"
+      "ejsify",
+      "reactify"
     ]
   }
 }
