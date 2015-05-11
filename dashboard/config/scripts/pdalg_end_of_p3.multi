@@ -14,9 +14,6 @@ right 'Not sure yet'
 markdown <<MARKDOWN
 ### Thanks for checking out CS in Algebra
 
-We hope you've had a great year teaching Bootstrap, and that you've enjoyed learning about our new CS in Algebra course. If you'd like to learn more about CS in Algebra, you can visit the following pages:
+We hope you've had a great year teaching Bootstrap, and that you've enjoyed learning about our new CS in Algebra course.
 
-- <a href="http://studio.code.org/s/algebra" target="_blank">Online Activities</a>
-- <a href="http://code.org/curriculum/algebra" target="_blank">Lesson Plans and Teaching Materials</a>
-- <a href="http://code.org/teacher-dashboard" target="_blank">Teacher Dashboard</a>
 MARKDOWN
