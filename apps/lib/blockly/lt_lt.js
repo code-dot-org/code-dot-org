@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.lt_lt');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "iškviesti";
 Blockly.Msg.ADD = "Pridėti";
 Blockly.Msg.ADD_COMMENT = "Pridėkite komentarą";

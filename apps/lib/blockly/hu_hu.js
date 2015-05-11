@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.hu_hu');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "hívás";
 Blockly.Msg.ADD = "Hozzáad";
 Blockly.Msg.ADD_COMMENT = "Megjegyzés hozzáadása";
