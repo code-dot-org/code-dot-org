@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.zh_cn');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "hello";
 Blockly.Msg.ADD = "添加";
 Blockly.Msg.ADD_COMMENT = "添加注释";
