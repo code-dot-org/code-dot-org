@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.ur_pk');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "بلانا";
 Blockly.Msg.ADD = "شامل کرنا";
 Blockly.Msg.ADD_COMMENT = "تبصرہ شامل کریں";

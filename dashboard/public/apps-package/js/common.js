@@ -6081,10 +6081,18 @@ StudioApp.prototype.init = function(config) {
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
-    vizResizeBar.addEventListener('mousedown',
-                                  _.bind(this.onMouseDownVizResizeBar, this));
+    dom.addMouseDownTouchEvent(vizResizeBar,
+                               _.bind(this.onMouseDownVizResizeBar, this));
+
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
     document.body.addEventListener('mouseup',
                                    _.bind(this.onMouseUpVizResizeBar, this));
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+                                     _.bind(this.onMouseUpVizResizeBar, this));
+    }
   }
 
   window.addEventListener('resize', _.bind(this.onResize, this));
@@ -6516,6 +6524,11 @@ StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   if (!this.onMouseMoveBoundHandler) {
     this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
     document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
+    this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (this.mouseMoveTouchEventName) {
+      document.body.addEventListener(this.mouseMoveTouchEventName,
+                                     this.onMouseMoveBoundHandler);
+    }
 
     event.preventDefault();
   }
@@ -6583,6 +6596,10 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (this.onMouseMoveBoundHandler) {
     document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
+    if (this.mouseMoveTouchEventName) {
+      document.body.removeEventListener(this.mouseMoveTouchEventName,
+                                        this.onMouseMoveBoundHandler);
+    }
     this.onMouseMoveBoundHandler = null;
   }
 };
@@ -11180,10 +11197,7 @@ exports.setText = function(node, string) {
   }
 };
 
-
-var addEvent = function(element, eventName, handler) {
-  element.addEventListener(eventName, handler, false);
-
+exports.getTouchEventName = function(eventName) {
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
   var isStandardTouch = 'ontouchend' in document.documentElement;
@@ -11196,8 +11210,16 @@ var addEvent = function(element, eventName, handler) {
   } else if (isStandardTouch) {
     key = "standard";
   }
-  if (key) {
-    var touchEvent = TOUCH_MAP[eventName][key];
+  if (key && TOUCH_MAP[eventName]) {
+    return TOUCH_MAP[eventName][key];
+  }
+};
+
+var addEvent = function(element, eventName, handler) {
+  element.addEventListener(eventName, handler, false);
+
+  var touchEvent = exports.getTouchEventName(eventName);
+  if (touchEvent) {
     element.addEventListener(touchEvent, function(e) {
       e.preventDefault();  // Stop mouse events.
       handler(e);

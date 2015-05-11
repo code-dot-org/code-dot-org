@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.ja_jp');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "コール";
 Blockly.Msg.ADD = "ついか";
 Blockly.Msg.ADD_COMMENT = "コメントを追加";

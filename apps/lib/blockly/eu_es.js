@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.eu_es');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "actual";
 Blockly.Msg.ADD = "Gehitu";
 Blockly.Msg.ADD_COMMENT = "Iruzkina gehitu";

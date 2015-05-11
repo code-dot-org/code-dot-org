@@ -145,6 +145,7 @@ levels.custom = {
     "penDown": null,
     "penWidth": null,
     "penColor": null,
+    "penRGB": null,
     "show": null,
     "hide": null,
     "speed" : null,
@@ -700,15 +701,16 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
 }
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                 expectedType, minValue, maxValue) {
+                                 expectedType, minValue, maxValue, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   var validatedRangeKey = 'validated_range_' + varName;
-  apiValidateType(opts, funcName, varName, varValue, expectedType);
+  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
   if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
     var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
     if (inRange) {
       inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
     }
+    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!inRange) {
       var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
                                                     Applab.cumulativeLength,
@@ -1289,10 +1291,16 @@ Applab.init = function(config) {
 
   var debugResizeBar = document.getElementById('debugResizeBar');
   if (debugResizeBar) {
-    debugResizeBar.addEventListener('mousedown',
-                                    Applab.onMouseDownDebugResizeBar);
-    document.body.addEventListener('mouseup',
-                                   Applab.onMouseUpDebugResizeBar);
+    dom.addMouseDownTouchEvent(debugResizeBar,
+                               Applab.onMouseDownDebugResizeBar);
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
+    document.body.addEventListener('mouseup', Applab.onMouseUpDebugResizeBar);
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+                                     Applab.onMouseUpDebugResizeBar);
+    }
   }
 
   var finishButton = document.getElementById('finishButton');
@@ -1373,6 +1381,11 @@ Applab.onMouseDownDebugResizeBar = function (event) {
   if (event.srcElement.id === 'debugResizeBar') {
     Applab.draggingDebugResizeBar = true;
     document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.addEventListener(Applab.mouseMoveTouchEventName,
+                                     Applab.onMouseMoveDebugResizeBar);
+    }
 
     event.preventDefault();
   }
@@ -1415,6 +1428,10 @@ Applab.onMouseUpDebugResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (Applab.draggingDebugResizeBar) {
     document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.removeEventListener(Applab.mouseMoveTouchEventName,
+                                        Applab.onMouseMoveDebugResizeBar);
+    }
     Applab.draggingDebugResizeBar = false;
   }
 };
@@ -2701,18 +2718,32 @@ Applab.penWidth = function (opts) {
   }
 };
 
-Applab.penColor = function (opts) {
-  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
+Applab.penColorInternal = function (rgbstring) {
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
       // pen is currently up, store this color for pen down
-      Applab.turtle.penUpColor = opts.color;
+      Applab.turtle.penUpColor = rgbstring;
     } else {
-      ctx.strokeStyle = opts.color;
+      ctx.strokeStyle = rgbstring;
     }
-    ctx.fillStyle = opts.color;
+    ctx.fillStyle = rgbstring;
   }
+};
+
+Applab.penColor = function (opts) {
+  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
+  Applab.penColorInternal(opts.color);
+};
+
+Applab.penRGB = function (opts) {
+  apiValidateTypeAndRange(opts, 'penRGB', 'r', opts.r, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'g', opts.g, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'b', opts.b, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'a', opts.a, 'number', 0, 1, OPTIONAL);
+  var alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
+  var rgbstring = "rgba(" + opts.r + "," + opts.g + "," + opts.b + "," + alpha + ")";
+  Applab.penColorInternal(rgbstring);
 };
 
 Applab.speed = function (opts) {
@@ -24842,6 +24873,15 @@ exports.penColor = function (blockId, color) {
                           {'color': color });
 };
 
+exports.penRGB = function (blockId, r, g, b, a) {
+  return Applab.executeCmd(blockId,
+                          'penRGB',
+                          {'r': r,
+                           'g': g,
+                           'b': b,
+                           'a': a });
+};
+
 
 
 },{}],8:[function(require,module,exports){
@@ -25023,6 +25063,7 @@ module.exports.blocks = [
   {'func': 'penDown', 'parent': api, 'category': 'Turtle' },
   {'func': 'penWidth', 'parent': api, 'category': 'Turtle', 'params': ["3"], 'dropdown': { 0: [ "1", "3", "5" ] } },
   {'func': 'penColor', 'parent': api, 'category': 'Turtle', 'params': ['"red"'], 'dropdown': { 0: [ '"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"' ] } },
+  {'func': 'penRGB', 'parent': api, 'category': 'Turtle', 'params': ["120", "180", "200"] },
   {'func': 'show', 'parent': api, 'category': 'Turtle' },
   {'func': 'hide', 'parent': api, 'category': 'Turtle' },
   {'func': 'speed', 'parent': api, 'category': 'Turtle', 'params': ["50"], 'dropdown': { 0: [ "25", "50", "75", "100" ] } },
@@ -25567,6 +25608,15 @@ exports.penColor = function (color) {
   return Applab.executeCmd(null,
                           'penColor',
                           {'color': color });
+};
+
+exports.penRGB = function (r, g, b, a) {
+  return Applab.executeCmd(null,
+                          'penRGB',
+                          {'r': r,
+                           'g': g,
+                           'b': b,
+                           'a': a });
 };
 
 

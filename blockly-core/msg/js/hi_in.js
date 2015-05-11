@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.hi_in');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "कॉल";
 Blockly.Msg.ADD = "जोडें";
 Blockly.Msg.ADD_COMMENT = "टिप्पणी जोड़ें";
