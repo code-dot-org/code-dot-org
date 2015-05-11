@@ -2,47 +2,56 @@
 title: Educator Overview
 ---
 
-# Resources for educators
-
-Whether you're a school teacher, an administrator, an after-school teacher, or a volunteer, Code.org provides educational resources for all ages, free of cost. Below is a summary of our curriculum and other programs. Our online courses on [Code Studio](http://studio.code.org) are meant for use in all settings - in-school, home-schooling, after-school - and can be taught by teachers, parents or volunteers. If you're a parent, you can guide your child to [learn online](/learn/beyond) or [at a local workshop or camp](/learn/local), or [help us in other ways](/help). 
-
-[col-50]
-
-[desktop-pad-right]
-
-## Professional development
-
-[Workshops for elementary school teachers](/educate/k5)
 <br/>
+
+<%= view :educate_banner %>
+
+[tight-heading]
+
+# All resources for educators
+
+[/tight-heading]
+
+Whether you're a school teacher, an administrator, an after-school teacher, or a volunteer, Code.org provides educational resources for all ages, free of cost. Below is a summary of our curriculum and other programs. Our online courses on [Code Studio](http://studio.code.org) are meant for use in all settings &mdash; in-school, home-schooling, after-school &mdash; and can be taught by teachers, parents or volunteers. 
+
+<!-- If you're a parent, you can guide your child to [learn online](/learn/beyond) or [at a local workshop or camp](/learn/local), or [help us in other ways](/help).  -->
+
+[col-60]
+
+[mainbar]
+
+## Professional Development for Teachers
+
+### Workshops for elementary school teachers
+
 Sign up now for computer science professional development for K-5 educators
 
-[<button>Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button>Find a workshop</button>](/professional-development-workshops)
-<br/>
-<br/>
+[<button class="teacher-button">Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button class="teacher-button">Find a workshop</button>](/professional-development-workshops)
 
-[Workshops for middle and high school teachers](/educate/professional-development)
-<br/>
+
+### Workshops for middle and high school teachers
+
 Our [workshops](/educate/professional-development) for teachers in grades 6-12 are available as part of a [district-wide partnership](/district-partner).
+
+[<button class="teacher-button">Learn more</button>](/educate/professional-development)
+
 <br/>
 
-[<button>Learn more</button>](/educate/professional-development)
-
-
-## District partnership
+## Partnerships for Districts
 
 ### Elementary schools 
 
 [Partner with us](/educate/k5-district-partnership) to bring computer science to your entire school district, free of charge. Or send your teachers to a [nearby workshop](/professional-development-workshops).
 
-[<button>Apply</button>](/educate/k5-district-partnership)
-
+[<button class="district-button">Apply</button>](/educate/k5-district-partnership)
 
 ### Middle and High schools 
 
 If you're near an [existing Code.org partner](/educate/partner-districts), or a large district yourself, apply for a grant to bring computer science to your entire district.  
 
-[<button>Learn more</button>](/district-partner)
+[<button class="district-button">Learn more</button>](/district-partner)
 
+<br/>
 
 ## Inspire students
 Use these videos, posters, and how-to resources to inspire students to try computer science. You can also [nominate a student](/sotw) or [teacher](/totm) for a Code.org award.
@@ -57,15 +66,15 @@ Click below for links to other resources for educators interested in teaching co
 
 [<button>Get Tools</button>](/educate/3rdparty)
 
-[/desktop-pad-right]
+[/mainbar]
 
-[/col-50]
+[/col-60]
 
-[col-50]
+[col-40]
 
-[desktop-pad-left]
+[sidebar]
 
-## Computer science curriculum
+## Our CS Curriculum
 
 ### Elementary school (Grades K-5)
 
@@ -108,9 +117,9 @@ Our online learning platform for students of all ages.
 <br/>
 An open library of our educational videos for use in any classroom.
 
-[/desktop-pad-left]
+[/sidebar]
 
-[/col-50]
+[/col-40]
 
 
 <div style="clear:both"/>
