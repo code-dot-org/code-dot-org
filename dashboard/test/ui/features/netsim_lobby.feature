@@ -23,3 +23,9 @@ Feature: Using the Internet Simulator Lobby
     Then element ".netsim-lobby" is hidden
     And element ".netsim-send-panel" is visible
     And element ".netsim-log-panel" is visible
+
+    # Make sure we can navigate to another page without getting an alert
+    When I disable onBeforeUnload
+    And I am on "http://studio.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true"
+    And I wait to see "#x-close"
+    And I press "x-close"
