@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.vi_vn');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "Gọi hàm";
 Blockly.Msg.ADD = "Thêm";
 Blockly.Msg.ADD_COMMENT = "Thêm bình luận";

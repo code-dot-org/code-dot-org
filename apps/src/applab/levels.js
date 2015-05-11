@@ -105,6 +105,7 @@ levels.custom = {
     "penDown": null,
     "penWidth": null,
     "penColor": null,
+    "penRGB": null,
     "show": null,
     "hide": null,
     "speed" : null,

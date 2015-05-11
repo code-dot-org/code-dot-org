@@ -494,3 +494,12 @@ exports.penColor = function (color) {
                           {'color': color });
 };
 
+exports.penRGB = function (r, g, b, a) {
+  return Applab.executeCmd(null,
+                          'penRGB',
+                          {'r': r,
+                           'g': g,
+                           'b': b,
+                           'a': a });
+};
+
