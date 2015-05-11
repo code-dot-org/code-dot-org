@@ -197,9 +197,6 @@ exports.generateCodeAliases = function (dropletConfig, parentObjName) {
   // Insert aliases from aliasFunctions into code
   for (var i = 0; i < aliasFunctions.length; i++) {
     var cf = aliasFunctions[i];
-    if (cf.dontAlias) {
-      continue;
-    }
     code += "var " + cf.func + " = function() { ";
     if (cf.idArgNone) {
       code += "return " + parentObjName + "." + cf.func + ".apply(" +

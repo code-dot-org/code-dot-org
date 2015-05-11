@@ -45,14 +45,14 @@ social:
 
 We have two goals for a district partnership: 
 
-- Expanding access to high-quality computer science education to all students;
-- A computer science program that will grow and be sustained within the district beyond the term of our partnership.
+- Expanding *access* to high-quality computer science education to all students;
+- Establishing a computer science program that will grow and be sustained within the district beyond the term of our partnership.
 
-Our commitment includes providing, at no cost, high-quality computer science curriculum across multiple grade bands coupled with high-quality professional development (see links below), teacher supports, a learning platform, and course marketing materials among other things.
+Our commitment includes providing, at no cost, high-quality computer science curriculum across multiple grade bands, coupled with high-quality professional development (see links below), teacher supports, a learning platform, and course marketing materials among other things.
 
 We also commit to matching the funds you put toward teacher stipends for high school or middle school professional development.
 
-In exchange, we want your district to commit  to the partnership, to the goal of access to computer science education for all students, and to continuing and sustaining the the work we begin together into the future. 
+In exchange, we want your district to commit  to the partnership, to the goal of *access* to computer science education for all students, and to continuing and sustaining the the work we begin together into the future. 
 
 Here’s [a detailed term sheet](/educate/districtterms) that describes what you need to do and what we will do as part of the partnership. 
 
@@ -99,11 +99,11 @@ Here are our deadlines for Applications. Applications received earlier will rece
 
 ## Information on Curriculum and PD
 
-- K-5 ([Curriculum](/educate/k5)/[PD Model](https://docs.google.com/document/d/1OsT09Unc0K_2qLckJQWOMrUxerfb-kSuybawGAQbjEs/pub))
-- Computer Science in Algebra ([Curriculum](/curriculum/algebra)/[PD Model](https://docs.google.com/document/d/1afDNY70MrWkBTQGuGoaOXBQjfIzHH1FVzKNYOIv7vMU/pub))
-- Computer Science in Science ([Curriculum](/curriculum/science)/[PD Model](https://docs.google.com/document/d/111v2O8rsK3iRl4ZeuZxPdwpHLkALyLjtmv7iuQmlYio/pub))
-- Exploring Computer Science ([Curriculum](http://www.exploringcs.org/curriculum)/[PD Model](https://docs.google.com/document/d/1RbP0u41DgxGL1bTcMDaxe3pc4vQ-WaxHajZ2m53Zato/pub))
-- Computer Science Principles ([Curriculum](/educate/csp)/[PD Model](https://docs.google.com/document/d/193NM9tQ0Wroq5sm4G5DT0txfxLeFjR8iEKqk5hHbC88/pub))
+- K-5 ([Curriculum](/educate/k5)/[PD Model](https://docs.google.com/document/d/1OsT09Unc0K_2qLckJQWOMrUxerfb-kSuybawGAQbjEs/edit#heading=h.w2x7lc5ji6f2))
+- Computer Science in Algebra ([Curriculum](/curriculum/algebra)/[PD Model](https://docs.google.com/document/d/1afDNY70MrWkBTQGuGoaOXBQjfIzHH1FVzKNYOIv7vMU/edit?usp=sharing))
+- Computer Science in Science ([Curriculum](/curriculum/science)/[PD Model](https://docs.google.com/document/d/111v2O8rsK3iRl4ZeuZxPdwpHLkALyLjtmv7iuQmlYio/edit?usp=sharing))
+- Exploring Computer Science ([Curriculum](http://www.exploringcs.org/curriculum)/[PD Model](https://docs.google.com/document/d/1RbP0u41DgxGL1bTcMDaxe3pc4vQ-WaxHajZ2m53Zato/edit?usp=sharing))
+- Computer Science Principles ([Curriculum](/educate/csp)/[PD Model](https://docs.google.com/document/d/1cNoj6LOMhWTN8IBjxQaMQeZEcIN5_fiJSODq13h7jGo/edit))
 - [High-level implementation timeline - COMING SOON]()
 
   

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({225:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({226:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -17,7 +17,7 @@ window.studioMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":217,"./levels":224,"./skins":229,"./studio":230}],230:[function(require,module,exports){
+},{"../appMain":5,"./blocks":218,"./levels":225,"./skins":230,"./studio":231}],231:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -1654,7 +1654,7 @@ Studio.execute = function() {
 
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      codegen.initJSInterpreter(interpreter, scope, {
+      codegen.initJSInterpreter(interpreter, null, scope, {
                                         StudioApp: studioApp,
                                         Studio: api,
                                         Globals: Studio.Globals } );
@@ -3015,7 +3015,7 @@ var checkFinished = function () {
 };
 
 
-},{"../../locale/current/common":264,"../../locale/current/studio":270,"../StudioApp":4,"../canvg/StackBlur.js":56,"../canvg/canvg.js":57,"../canvg/rgbcolor.js":58,"../canvg/svg_todataurl":59,"../codegen":61,"../constants":63,"../dom":64,"../dropletUtils":65,"../skins":213,"../templates/page.html.ejs":238,"../utils":259,"../xml":260,"./api":215,"./bigGameLogic":216,"./blocks":217,"./collidable":218,"./constants":219,"./controls.html.ejs":220,"./dropletConfig":222,"./extraControlRows.html.ejs":223,"./projectile":226,"./rocketHeightLogic":227,"./samBatLogic":228,"./visualization.html.ejs":231}],231:[function(require,module,exports){
+},{"../../locale/current/common":265,"../../locale/current/studio":271,"../StudioApp":4,"../canvg/StackBlur.js":57,"../canvg/canvg.js":58,"../canvg/rgbcolor.js":59,"../canvg/svg_todataurl":60,"../codegen":62,"../constants":64,"../dom":65,"../dropletUtils":66,"../skins":214,"../templates/page.html.ejs":239,"../utils":260,"../xml":261,"./api":216,"./bigGameLogic":217,"./blocks":218,"./collidable":219,"./constants":220,"./controls.html.ejs":221,"./dropletConfig":223,"./extraControlRows.html.ejs":224,"./projectile":227,"./rocketHeightLogic":228,"./samBatLogic":229,"./visualization.html.ejs":232}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3035,7 +3035,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":280}],228:[function(require,module,exports){
+},{"ejs":281}],229:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3160,7 +3160,7 @@ SamBatLogic.prototype.onscreen = function (x, y) {
 module.exports = SamBatLogic;
 
 
-},{"../codegen":61,"../constants":63,"./api":215,"./constants":219,"./customGameLogic":221}],227:[function(require,module,exports){
+},{"../codegen":62,"../constants":64,"./api":216,"./constants":220,"./customGameLogic":222}],228:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -3223,7 +3223,7 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
 module.exports = RocketHeightLogic;
 
 
-},{"../codegen":61,"./api":215,"./constants":219,"./customGameLogic":221}],226:[function(require,module,exports){
+},{"../codegen":62,"./api":216,"./constants":220,"./customGameLogic":222}],227:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
@@ -3398,7 +3398,7 @@ Projectile.prototype.moveToNextPosition = function () {
 };
 
 
-},{"./collidable":218,"./constants":219}],229:[function(require,module,exports){
+},{"./collidable":219,"./constants":220}],230:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -3768,7 +3768,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../../locale/current/studio":270,"../skins":213,"./constants":219}],224:[function(require,module,exports){
+},{"../../locale/current/studio":271,"../skins":214,"./constants":220}],225:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/current/studio');
@@ -5269,7 +5269,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
 });
 
 
-},{"../../locale/current/studio":270,"../block_utils":33,"../utils":259,"./constants":219}],223:[function(require,module,exports){
+},{"../../locale/current/studio":271,"../block_utils":34,"../utils":260,"./constants":220}],224:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5289,7 +5289,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":264,"ejs":280}],222:[function(require,module,exports){
+},{"../../locale/current/common":265,"ejs":281}],223:[function(require,module,exports){
 var msg = require('../../locale/current/studio');
 
 module.exports.blocks = [
@@ -5314,7 +5314,7 @@ module.exports.categories = {
 };
 
 
-},{"../../locale/current/studio":270}],220:[function(require,module,exports){
+},{"../../locale/current/studio":271}],221:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5334,7 +5334,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":264,"ejs":280}],218:[function(require,module,exports){
+},{"../../locale/current/common":265,"ejs":281}],219:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -5441,7 +5441,7 @@ Collidable.prototype.outOfBounds = function () {
 };
 
 
-},{"../StudioApp":4,"./constants":219}],217:[function(require,module,exports){
+},{"../StudioApp":4,"./constants":220}],218:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -7469,10 +7469,10 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 }
 
 
-},{"../../locale/current/common":264,"../../locale/current/studio":270,"../StudioApp":4,"../codegen":61,"../sharedFunctionalBlocks":212,"../utils":259,"./constants":219}],270:[function(require,module,exports){
+},{"../../locale/current/common":265,"../../locale/current/studio":271,"../StudioApp":4,"../codegen":62,"../sharedFunctionalBlocks":213,"../utils":260,"./constants":220}],271:[function(require,module,exports){
 /*studio*/ module.exports = window.blockly.appLocale;
 
-},{}],216:[function(require,module,exports){
+},{}],217:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -7706,7 +7706,7 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
 module.exports = BigGameLogic;
 
 
-},{"../codegen":61,"./api":215,"./constants":219,"./customGameLogic":221}],221:[function(require,module,exports){
+},{"../codegen":62,"./api":216,"./constants":220,"./customGameLogic":222}],222:[function(require,module,exports){
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
@@ -7776,7 +7776,7 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
 module.exports = CustomGameLogic;
 
 
-},{"../codegen":61,"./api":215,"./constants":219}],215:[function(require,module,exports){
+},{"../codegen":62,"./api":216,"./constants":220}],216:[function(require,module,exports){
 var constants = require('./constants');
 
 exports.SpriteSpeed = {
@@ -7941,7 +7941,7 @@ exports.isKeyDown = function (keyCode) {
 };
 
 
-},{"./constants":219}],219:[function(require,module,exports){
+},{"./constants":220}],220:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -8119,4 +8119,4 @@ exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
 
-},{}]},{},[225]);
+},{}]},{},[226]);

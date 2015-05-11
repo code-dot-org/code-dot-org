@@ -1634,7 +1634,7 @@ Studio.execute = function() {
 
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      codegen.initJSInterpreter(interpreter, scope, {
+      codegen.initJSInterpreter(interpreter, null, scope, {
                                         StudioApp: studioApp,
                                         Studio: api,
                                         Globals: Studio.Globals } );
