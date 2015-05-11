@@ -61,7 +61,7 @@
     "react": "^0.13.2",
     "reactify": "^1.1.0",
     "npm-which": "^2.0.0",
-    "phantomjs": "^1.9.16",
+    "phantomjs": "git://github.com/wjordan/phantomjs",
     "require-globify": "^1.1.0",
     "requirejs": "~2.1.15",
     "rfile": "~1.0.0",
