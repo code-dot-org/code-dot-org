@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.az_az');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "çağırış";
 Blockly.Msg.ADD = "Əlavə et";
 Blockly.Msg.ADD_COMMENT = "Şərh əlavə et";

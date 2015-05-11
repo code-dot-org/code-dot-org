@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.fil_ph');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "tawag";
 Blockly.Msg.ADD = "Dagdagan";
 Blockly.Msg.ADD_COMMENT = "Magdagdag ng komento";
