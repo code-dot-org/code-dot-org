@@ -1,4 +1,3 @@
-var DropletBlockTooltipMarkup = require('./DropletBlockTooltip.html.ejs');
 var msg = require('../locale');
 
 /**
