@@ -83,13 +83,9 @@ Consider a [K-5 only partnership](/educate/k5-district-partnership), or see if t
 [<button>See 3rd party options</button>](/educate/3rdparty)
 
 ## Application Form
-Applying for a district partnership is a relatively thorough process. You can read through the materials here, but we expect it to be a collaborative process, working with our district outreach team. If you qualify for a partnership (see above) and want to go through the process, please fill out our [interest form](/educate/interesteddistrict).
+Applying for a district partnership is a relatively thorough process. You can read through the materials here, but we expect it to be a collaborative process, working with our district outreach team. If you qualify for a partnership (see above) and want to go through the process, please fill out our interest form to begin the dialogue.
 
-
-
-<!--
-JAKE JOTFORM REPLACES THE EMAIL LINK ABOVE
--->
+[<button>Begin application process</button>](/educate/interesteddistrict)
 
 
 Download district partnership application: 
@@ -97,7 +93,6 @@ Download district partnership application:
 - [Download Word doc](/files/district_partnership_application.docx)
 - [See Google doc](https://docs.google.com/document/d/1wGk4LPrFsA5sKxxD2S173WsJC8QX8tfWuPcyJLhgDPk/edit?usp=sharing) 
 
-[<button>Let us know you're interested</button>](/educate/interesteddistrict)
 
 <!--
 CAMERON DOC NEEDED
