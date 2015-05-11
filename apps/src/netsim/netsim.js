@@ -403,6 +403,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
  * @private
  */
 NetSim.prototype.onBeforeUnload_ = function (event) {
+  if (window.__TestInterface && window.__TestInterface.ignoreOnBeforeUnload) {
+    return;
+  }
+
   // No need to warn about navigating away if the student is not connected,
   // or is still in the lobby.
   if (this.isConnectedToRemote()) {
