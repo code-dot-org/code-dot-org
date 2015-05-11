@@ -50,11 +50,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
+    "free_play": "true",
     "app_width": "320",
     "app_height": "480",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L07-starryNightExample.gif"
-  }
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L07-starryNightExample.gif",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false"
+  },
+  "md5": "7b011228e778a47ae8c59b1611b73c89"
 }]]></config>
   <blocks/>
 </Applab>

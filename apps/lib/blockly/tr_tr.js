@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.tr_tr');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "çağır";
 Blockly.Msg.ADD = "Ekle";
 Blockly.Msg.ADD_COMMENT = "Yorum Ekle";

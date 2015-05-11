@@ -8,9 +8,9 @@ And(/^the Droplet ACE text is "([^"]*)"$/) do |expected_text|
   actual_text.should eq expected_text
 end
 
-And(/^no ACE tooltip is visible$/) do
+And(/^ACE tooltip is visible$/) do
   is_empty = @browser.execute_script("return $('.ace_editor .tooltipstered').length === 0;")
-  is_empty.should eq true
+  is_empty.should eq false
 end
 
 And(/^there is a Droplet tooltip with text "([^"]*)"$/) do |tooltip_text|

@@ -9,7 +9,7 @@ exports.evalWith = function(code, options) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, scope, options);
+      exports.initJSInterpreter(interpreter, null, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -274,18 +274,20 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
   }
 }
 
-function populateGlobalFunctions(interpreter, scope) {
-  for (var i = 0; i < dropletUtils.dropletGlobalConfigBlocks.length; i++) {
-    var gf = dropletUtils.dropletGlobalConfigBlocks[i];
-    var func = gf.parent[gf.func];
-    var wrapper = exports.makeNativeMemberFunction({
-        interpreter: interpreter,
-        nativeFunc: func,
-        nativeParentObj: gf.parent,
-    });
-    interpreter.setProperty(scope,
-                            gf.func,
-                            interpreter.createNativeFunction(wrapper));
+function populateGlobalFunctions(interpreter, blocks, scope) {
+  for (var i = 0; i < blocks.length; i++) {
+    var gf = blocks[i];
+    if (gf.parent) {
+      var func = gf.parent[gf.func];
+      var wrapper = exports.makeNativeMemberFunction({
+          interpreter: interpreter,
+          nativeFunc: func,
+          nativeParentObj: gf.parent,
+      });
+      interpreter.setProperty(scope,
+                              gf.func,
+                              interpreter.createNativeFunction(wrapper));
+    }
   }
 }
 
@@ -310,8 +312,15 @@ function populateJSFunctions(interpreter) {
 
 /**
  * Initialize a JS interpreter.
+ *
+ * interpreter (required): JS interpreter instance.
+ * blocks (optional): blocks in dropletConfig.blocks format. If a block has
+ *  a parent property, we will populate that function into the specified scope.
+ * scope (required): interpreter's global scope.
+ * options (optional): objects containing functions to placed in a new scope
+ *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function (interpreter, scope, options) {
+exports.initJSInterpreter = function (interpreter, blocks, scope, options) {
   for (var optsObj in options) {
     // The options object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
@@ -323,7 +332,10 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
     interpreter.setProperty(scope, optsObj.toString(), obj);
     populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
   }
-  populateGlobalFunctions(interpreter, scope);
+  populateGlobalFunctions(interpreter, dropletUtils.dropletGlobalConfigBlocks, scope);
+  if (blocks) {
+    populateGlobalFunctions(interpreter, blocks, scope);
+  }
   populateJSFunctions(interpreter);
 };
 

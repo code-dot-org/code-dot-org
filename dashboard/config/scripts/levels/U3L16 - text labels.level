@@ -53,7 +53,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Introducing objects other than buttons! - textLabels.  First try replacing your button with a textLabel.  Will the text respond to events just like the button?  Try connecting an event handler to it.  We've started you out with code similar to the result of the last level, you can copy your code from that level into here if you prefer. ",
+    "instructions": "Introducing textLabels.  First try replacing your button with a textLabel.  Will the text respond to events just like the button?  Try connecting an event handler to it.  We've started you out with code similar to the result of the last level, you can copy your code from that level into here if you prefer. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
