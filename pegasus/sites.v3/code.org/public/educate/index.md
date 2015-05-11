@@ -31,7 +31,7 @@ To introduce your students to our popular introductory courses, attend one of ou
 
 ### Middle and high school teachers
 
-Our [workshops](/educate/professional-development) for teachers in grades 6-12 are only available as part of a [district-wide partnership](/district-partner).
+Our [workshops](/educate/professional-development) for teachers in grades 6-12 are only available as part of a [district-wide partnership](/districts).
 
 [<button class="teacher-button">Learn more</button>](/educate/professional-development)
 
@@ -49,7 +49,7 @@ Our [workshops](/educate/professional-development) for teachers in grades 6-12 a
 
 If you're an administrator at a large district, or situated near an [existing Code.org partner](/educate/partner-districts), apply for a partnership grant to bring computer science to your entire district.  
 
-[<button class="district-button">Learn more</button>](/district-partner)
+[<button class="district-button">Learn more</button>](/districts)
 
 <br/>
 
