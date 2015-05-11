@@ -15,6 +15,7 @@ var applabMsg = require('../../locale/current/applab');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var page = require('../templates/page.html.ejs');
@@ -568,7 +569,7 @@ Applab.onTick = function() {
 
 Applab.executeNativeJS = function () {
   if (Applab.tickCount === 1) {
-    try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+    try { Applab.whenRunFunc(studioApp, apiBlockly, Applab.Globals); } catch (e) { }
   }
 };
 
@@ -1661,7 +1662,7 @@ var defineProcedures = function (blockType) {
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
                          studioApp: studioApp,
-                         Applab: api,
+                         Applab: apiBlockly,
                          Globals: Applab.Globals } ); } catch (e) { }
 };
 
@@ -1772,11 +1773,10 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Applab');
-    Applab.userCodeStartOffset = codeWhenRun.length;
-    Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
-    codeWhenRun += studioApp.editor.getValue();
-    Applab.userCodeLength = codeWhenRun.length - Applab.userCodeStartOffset;
+    codeWhenRun = studioApp.editor.getValue();
+    Applab.userCodeStartOffset = 0;
+    Applab.userCodeLineOffset = 0;
+    Applab.userCodeLength = codeWhenRun.length;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
@@ -1805,9 +1805,9 @@ Applab.execute = function() {
       // Use JS interpreter on editCode levels
       var initFunc = function(interpreter, scope) {
         codegen.initJSInterpreter(interpreter,
+                                  dropletConfig.blocks,
                                   scope,
-                                  { Applab: api,
-                                    console: consoleApi,
+                                  { console: consoleApi,
                                     JSON: JSONApi });
 
         populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
@@ -1841,7 +1841,7 @@ Applab.execute = function() {
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
                                           StudioApp: studioApp,
-                                          Applab: api,
+                                          Applab: apiBlockly,
                                           Globals: Applab.Globals } );
     }
   }

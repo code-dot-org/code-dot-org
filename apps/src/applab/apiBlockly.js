@@ -1,59 +1,65 @@
-// APIs needed for droplet (keep in sync with apiBlockly.js):
 
-exports.container = function (elementId, html) {
-  return Applab.executeCmd(null,
+exports.randomFromArray = function (values) {
+  var key = Math.floor(Math.random() * values.length);
+  return values[key];
+};
+
+// APIs needed for blockly (must include blockId) (keep in sync with api.js):
+
+exports.container = function (blockId, elementId, html) {
+  return Applab.executeCmd(blockId,
                           'container',
                           {'elementId': elementId,
                            'html': html });
 };
 
-exports.write = function (html) {
-  return Applab.executeCmd(null,
+exports.write = function (blockId, html) {
+  return Applab.executeCmd(blockId,
                           'write',
                           {'html': html });
 };
 
-exports.innerHTML = function (elementId, html) {
-  return Applab.executeCmd(null,
+exports.innerHTML = function (blockId, elementId, html) {
+  return Applab.executeCmd(blockId,
                           'innerHTML',
                           {'elementId': elementId,
                            'html': html });
 };
 
-exports.deleteElement = function (elementId) {
-  return Applab.executeCmd(null,
+exports.deleteElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
                           'deleteElement',
                           {'elementId': elementId });
 };
 
-exports.showElement = function (elementId) {
-  return Applab.executeCmd(null,
+exports.showElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
                           'showElement',
                           {'elementId': elementId });
 };
 
-exports.hideElement = function (elementId) {
-  return Applab.executeCmd(null,
+exports.hideElement = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
                           'hideElement',
                           {'elementId': elementId });
 };
 
-exports.button = function (elementId, text) {
-  return Applab.executeCmd(null,
+exports.button = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
                           'button',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.image = function (elementId, src) {
-  return Applab.executeCmd(null,
+exports.image = function (blockId, elementId, src) {
+  return Applab.executeCmd(blockId,
                           'image',
                           {'elementId': elementId,
                            'src': src });
 };
 
-exports.setPosition = function (elementId, left, top, width, height) {
-  return Applab.executeCmd(null,
+exports.setPosition = function (blockId, elementId, left, top, width, height) {
+  return Applab.executeCmd(blockId,
                           'setPosition',
                           {'elementId': elementId,
                            'left': left,
@@ -62,34 +68,34 @@ exports.setPosition = function (elementId, left, top, width, height) {
                            'height': height });
 };
 
-exports.getXPosition = function (elementId) {
-  return Applab.executeCmd(null,
+exports.getXPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
                           'getXPosition',
                           {'elementId': elementId });
 };
 
-exports.getYPosition = function (elementId) {
-  return Applab.executeCmd(null,
+exports.getYPosition = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
                           'getYPosition',
                           {'elementId': elementId });
 };
 
-exports.createCanvas = function (elementId, width, height) {
-  return Applab.executeCmd(null,
+exports.createCanvas = function (blockId, elementId, width, height) {
+  return Applab.executeCmd(blockId,
                           'createCanvas',
                           {'elementId': elementId,
                            'width': width,
                            'height': height });
 };
 
-exports.setActiveCanvas = function (elementId) {
-  return Applab.executeCmd(null,
+exports.setActiveCanvas = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
                           'setActiveCanvas',
                           {'elementId': elementId  });
 };
 
-exports.line = function (x1, y1, x2, y2) {
-  return Applab.executeCmd(null,
+exports.line = function (blockId, x1, y1, x2, y2) {
+  return Applab.executeCmd(blockId,
                           'line',
                           {'x1': x1,
                            'y1': y1,
@@ -97,16 +103,16 @@ exports.line = function (x1, y1, x2, y2) {
                            'y2': y2 });
 };
 
-exports.circle = function (x, y, radius) {
-  return Applab.executeCmd(null,
+exports.circle = function (blockId, x, y, radius) {
+  return Applab.executeCmd(blockId,
                           'circle',
                           {'x': x,
                            'y': y,
                            'radius': radius });
 };
 
-exports.rect = function (x, y, width, height) {
-  return Applab.executeCmd(null,
+exports.rect = function (blockId, x, y, width, height) {
+  return Applab.executeCmd(blockId,
                           'rect',
                           {'x': x,
                            'y': y,
@@ -114,30 +120,30 @@ exports.rect = function (x, y, width, height) {
                            'height': height });
 };
 
-exports.setStrokeWidth = function (width) {
-  return Applab.executeCmd(null,
+exports.setStrokeWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
                           'setStrokeWidth',
                           {'width': width });
 };
 
-exports.setStrokeColor = function (color) {
-  return Applab.executeCmd(null,
+exports.setStrokeColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
                           'setStrokeColor',
                           {'color': color });
 };
 
-exports.setFillColor = function (color) {
-  return Applab.executeCmd(null,
+exports.setFillColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
                           'setFillColor',
                           {'color': color });
 };
 
-exports.clearCanvas = function () {
-  return Applab.executeCmd(null, 'clearCanvas');
+exports.clearCanvas = function (blockId) {
+  return Applab.executeCmd(blockId, 'clearCanvas');
 };
 
-exports.drawImage = function (imageId, x, y, width, height) {
-  return Applab.executeCmd(null,
+exports.drawImage = function (blockId, imageId, x, y, width, height) {
+  return Applab.executeCmd(blockId,
                           'drawImage',
                           {'imageId': imageId,
                            'x': x,
@@ -146,8 +152,8 @@ exports.drawImage = function (imageId, x, y, width, height) {
                            'height': height });
 };
 
-exports.getImageData = function (x, y, width, height) {
-  return Applab.executeCmd(null,
+exports.getImageData = function (blockId, x, y, width, height) {
+  return Applab.executeCmd(blockId,
                           'getImageData',
                           {'x': x,
                            'y': y,
@@ -155,130 +161,130 @@ exports.getImageData = function (x, y, width, height) {
                            'height': height });
 };
 
-exports.putImageData = function (imageData, x, y) {
-  return Applab.executeCmd(null,
+exports.putImageData = function (blockId, imageData, x, y) {
+  return Applab.executeCmd(blockId,
                           'putImageData',
                           {'imageData': imageData,
                            'x': x,
                            'y': y });
 };
 
-exports.textInput = function (elementId, text) {
-  return Applab.executeCmd(null,
+exports.textInput = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
                           'textInput',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.textLabel = function (elementId, text, forId) {
-  return Applab.executeCmd(null,
+exports.textLabel = function (blockId, elementId, text, forId) {
+  return Applab.executeCmd(blockId,
                           'textLabel',
                           {'elementId': elementId,
                            'text': text,
                            'forId': forId });
 };
 
-exports.checkbox = function (elementId, checked) {
-  return Applab.executeCmd(null,
+exports.checkbox = function (blockId, elementId, checked) {
+  return Applab.executeCmd(blockId,
                           'checkbox',
                           {'elementId': elementId,
                            'checked': checked });
 };
 
-exports.radioButton = function (elementId, checked, name) {
-  return Applab.executeCmd(null,
+exports.radioButton = function (blockId, elementId, checked, name) {
+  return Applab.executeCmd(blockId,
                           'radioButton',
                           {'elementId': elementId,
                            'checked': checked,
                            'name': name });
 };
 
-exports.getChecked = function (elementId) {
-  return Applab.executeCmd(null,
+exports.getChecked = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
                           'getChecked',
                           {'elementId': elementId });
 };
 
-exports.setChecked = function (elementId, checked) {
-  return Applab.executeCmd(null,
+exports.setChecked = function (blockId, elementId, checked) {
+  return Applab.executeCmd(blockId,
                           'setChecked',
                           {'elementId': elementId,
                            'checked': checked });
 };
 
-exports.dropdown = function (elementId) {
-  var optionsArray = Array.prototype.slice.call(arguments, 1);
-  return Applab.executeCmd(null,
+exports.dropdown = function (blockId, elementId) {
+  var optionsArray = Array.prototype.slice.call(arguments, 2);
+  return Applab.executeCmd(blockId,
                           'dropdown',
                           {'elementId': elementId,
                            'optionsArray': optionsArray });
 };
 
-exports.getAttribute = function(elementId, attribute) {
-  return Applab.executeCmd(null,
+exports.getAttribute = function(blockId, elementId, attribute) {
+  return Applab.executeCmd(blockId,
                            'getAttribute',
                            {elementId: elementId,
                             attribute: attribute});
 };
 
-exports.setAttribute = function(elementId, attribute, value) {
-  return Applab.executeCmd(null,
+exports.setAttribute = function(blockId, elementId, attribute, value) {
+  return Applab.executeCmd(blockId,
                            'setAttribute',
                            {elementId: elementId,
                             attribute: attribute,
                             value: value});
 };
 
-exports.getText = function (elementId) {
-  return Applab.executeCmd(null,
+exports.getText = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
                           'getText',
                           {'elementId': elementId });
 };
 
-exports.setText = function (elementId, text) {
-  return Applab.executeCmd(null,
+exports.setText = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
                           'setText',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.getImageURL = function (elementId) {
-  return Applab.executeCmd(null,
+exports.getImageURL = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
                           'getImageURL',
                           {'elementId': elementId });
 };
 
-exports.setImageURL = function (elementId, src) {
-  return Applab.executeCmd(null,
+exports.setImageURL = function (blockId, elementId, src) {
+  return Applab.executeCmd(blockId,
                           'setImageURL',
                           {'elementId': elementId,
                            'src': src });
 };
 
-exports.imageUploadButton = function (elementId, text) {
-  return Applab.executeCmd(null,
+exports.imageUploadButton = function (blockId, elementId, text) {
+  return Applab.executeCmd(blockId,
                            'imageUploadButton',
                            {'elementId': elementId,
                             'text': text });
 };
 
-exports.setParent = function (elementId, parentId) {
-  return Applab.executeCmd(null,
+exports.setParent = function (blockId, elementId, parentId) {
+  return Applab.executeCmd(blockId,
                           'setParent',
                           {'elementId': elementId,
                            'parentId': parentId });
 };
 
-exports.setStyle = function (elementId, style) {
-  return Applab.executeCmd(null,
+exports.setStyle = function (blockId, elementId, style) {
+  return Applab.executeCmd(blockId,
                            'setStyle',
                            {'elementId': elementId,
                            'style': style });
 };
 
-exports.onEvent = function (elementId, eventName, func) {
-  var extraArgs = Array.prototype.slice.call(arguments).slice(3);
-  return Applab.executeCmd(null,
+exports.onEvent = function (blockId, elementId, eventName, func) {
+  var extraArgs = Array.prototype.slice.call(arguments).slice(4);
+  return Applab.executeCmd(blockId,
                           'onEvent',
                           {'elementId': elementId,
                            'eventName': eventName,
@@ -286,55 +292,55 @@ exports.onEvent = function (elementId, eventName, func) {
                            'extraArgs': extraArgs});
 };
 
-exports.startWebRequest = function (url, func) {
-  return Applab.executeCmd(null,
+exports.startWebRequest = function (blockId, url, func) {
+  return Applab.executeCmd(blockId,
                           'startWebRequest',
                           {'url': url,
                            'func': func });
 };
 
-exports.setTimeout = function (func, milliseconds) {
-  return Applab.executeCmd(null,
+exports.setTimeout = function (blockId, func, milliseconds) {
+  return Applab.executeCmd(blockId,
                           'setTimeout',
                           {'func': func,
                            'milliseconds': milliseconds });
 };
 
-exports.clearTimeout = function (timeoutId) {
-  return Applab.executeCmd(null,
+exports.clearTimeout = function (blockId, timeoutId) {
+  return Applab.executeCmd(blockId,
                            'clearTimeout',
                            {'timeoutId': timeoutId });
 };
 
-exports.setInterval = function (func, milliseconds) {
-  return Applab.executeCmd(null,
+exports.setInterval = function (blockId, func, milliseconds) {
+  return Applab.executeCmd(blockId,
                           'setInterval',
                           {'func': func,
                            'milliseconds': milliseconds });
 };
 
-exports.clearInterval = function (intervalId) {
-  return Applab.executeCmd(null,
+exports.clearInterval = function (blockId, intervalId) {
+  return Applab.executeCmd(blockId,
                            'clearInterval',
                            {'intervalId': intervalId });
 };
 
-exports.playSound = function (url) {
-  return Applab.executeCmd(null,
+exports.playSound = function (blockId, url) {
+  return Applab.executeCmd(blockId,
                           'playSound',
                           {'url': url});
 };
 
-exports.getKeyValue = function(key, onSuccess, onError) {
-  return Applab.executeCmd(null,
+exports.getKeyValue = function(blockId, key, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
                            'getKeyValue',
                            {'key':key,
                             'onSuccess': onSuccess,
                             'onError': onError});
 };
 
-exports.setKeyValue = function(key, value, onSuccess, onError) {
-  return Applab.executeCmd(null,
+exports.setKeyValue = function(blockId, key, value, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
                            'setKeyValue',
                            {'key':key,
                             'value': value,
@@ -342,8 +348,8 @@ exports.setKeyValue = function(key, value, onSuccess, onError) {
                             'onError': onError});
 };
 
-exports.createRecord = function (table, record, onSuccess, onError) {
-  return Applab.executeCmd(null,
+exports.createRecord = function (blockId, table, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
                           'createRecord',
                           {'table': table,
                            'record': record,
@@ -351,8 +357,8 @@ exports.createRecord = function (table, record, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.readRecords = function (table, searchParams, onSuccess, onError) {
-  return Applab.executeCmd(null,
+exports.readRecords = function (blockId, table, searchParams, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
                           'readRecords',
                           {'table': table,
                            'searchParams': searchParams,
@@ -360,8 +366,8 @@ exports.readRecords = function (table, searchParams, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.updateRecord = function (table, record, onSuccess, onError) {
-  return Applab.executeCmd(null,
+exports.updateRecord = function (blockId, table, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
                           'updateRecord',
                           {'table': table,
                            'record': record,
@@ -369,8 +375,8 @@ exports.updateRecord = function (table, record, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.deleteRecord = function (table, record, onSuccess, onError) {
-  return Applab.executeCmd(null,
+exports.deleteRecord = function (blockId, table, record, onSuccess, onError) {
+  return Applab.executeCmd(blockId,
                           'deleteRecord',
                           {'table': table,
                            'record': record,
@@ -378,118 +384,118 @@ exports.deleteRecord = function (table, record, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.getUserId = function () {
-  return Applab.executeCmd(null,
+exports.getUserId = function (blockId) {
+  return Applab.executeCmd(blockId,
                           'getUserId',
                           {});
 };
 
-exports.moveForward = function (distance) {
-  return Applab.executeCmd(null,
+exports.moveForward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
                           'moveForward',
                           {'distance': distance });
 };
 
-exports.moveBackward = function (distance) {
-  return Applab.executeCmd(null,
+exports.moveBackward = function (blockId, distance) {
+  return Applab.executeCmd(blockId,
                           'moveBackward',
                           {'distance': distance });
 };
 
-exports.move = function (x, y) {
-  return Applab.executeCmd(null,
+exports.move = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
                           'move',
                           {'x': x,
                            'y': y });
 };
 
-exports.moveTo = function (x, y) {
-  return Applab.executeCmd(null,
+exports.moveTo = function (blockId, x, y) {
+  return Applab.executeCmd(blockId,
                           'moveTo',
                           {'x': x,
                            'y': y });
 };
 
-exports.turnRight = function (degrees) {
-  return Applab.executeCmd(null,
+exports.turnRight = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
                           'turnRight',
                           {'degrees': degrees });
 };
 
-exports.turnLeft = function (degrees) {
-  return Applab.executeCmd(null,
+exports.turnLeft = function (blockId, degrees) {
+  return Applab.executeCmd(blockId,
                           'turnLeft',
                           {'degrees': degrees });
 };
 
-exports.turnTo = function (direction) {
-  return Applab.executeCmd(null,
+exports.turnTo = function (blockId, direction) {
+  return Applab.executeCmd(blockId,
                            'turnTo',
                            {'direction': direction });
 };
 
-exports.arcRight = function (degrees, radius) {
-  return Applab.executeCmd(null,
+exports.arcRight = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
                            'arcRight',
                            {'degrees': degrees,
                             'radius': radius });
 };
 
-exports.arcLeft = function (degrees, radius) {
-  return Applab.executeCmd(null,
+exports.arcLeft = function (blockId, degrees, radius) {
+  return Applab.executeCmd(blockId,
                            'arcLeft',
                            {'degrees': degrees,
                             'radius': radius });
 };
 
-exports.dot = function (radius) {
-  return Applab.executeCmd(null,
+exports.dot = function (blockId, radius) {
+  return Applab.executeCmd(blockId,
                            'dot',
                            {'radius': radius });
 };
 
-exports.getX = function () {
-  return Applab.executeCmd(null, 'getX');
+exports.getX = function (blockId) {
+  return Applab.executeCmd(blockId, 'getX');
 };
 
-exports.getY = function () {
-  return Applab.executeCmd(null, 'getY');
+exports.getY = function (blockId) {
+  return Applab.executeCmd(blockId, 'getY');
 };
 
-exports.getDirection = function () {
-  return Applab.executeCmd(null, 'getDirection');
+exports.getDirection = function (blockId) {
+  return Applab.executeCmd(blockId, 'getDirection');
 };
 
-exports.penUp = function () {
-  return Applab.executeCmd(null, 'penUp');
+exports.penUp = function (blockId) {
+  return Applab.executeCmd(blockId, 'penUp');
 };
 
-exports.penDown = function () {
-  return Applab.executeCmd(null, 'penDown');
+exports.penDown = function (blockId) {
+  return Applab.executeCmd(blockId, 'penDown');
 };
 
-exports.show = function () {
-  return Applab.executeCmd(null, 'show');
+exports.show = function (blockId) {
+  return Applab.executeCmd(blockId, 'show');
 };
 
-exports.hide = function () {
-  return Applab.executeCmd(null, 'hide');
+exports.hide = function (blockId) {
+  return Applab.executeCmd(blockId, 'hide');
 };
 
-exports.speed = function (percent) {
-  return Applab.executeCmd(null,
+exports.speed = function (blockId, percent) {
+  return Applab.executeCmd(blockId,
                            'speed',
                            {'percent': percent});
 };
 
-exports.penWidth = function (width) {
-  return Applab.executeCmd(null,
+exports.penWidth = function (blockId, width) {
+  return Applab.executeCmd(blockId,
                           'penWidth',
                           {'width': width });
 };
 
-exports.penColor = function (color) {
-  return Applab.executeCmd(null,
+exports.penColor = function (blockId, color) {
+  return Applab.executeCmd(blockId,
                           'penColor',
                           {'color': color });
 };

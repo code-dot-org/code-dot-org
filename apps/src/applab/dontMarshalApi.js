@@ -2,9 +2,8 @@ var Applab = require('./applab');
 
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
-
-// Note: these also don't have blockId params for blockly support, so they are
-// used without aliasing (dropletConfig marked with dontMarshal and dontAlias)
+//
+// dropletConfig for each of these APIs should be marked with dontMarshal:true
 
 // ImageData RGB helper functions
 
