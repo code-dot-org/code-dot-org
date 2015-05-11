@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.fi_fi');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "kutsu";
 Blockly.Msg.ADD = "Lisää";
 Blockly.Msg.ADD_COMMENT = "Lisää kommentti";

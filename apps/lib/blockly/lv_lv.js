@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.lv_lv');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "zvanīt";
 Blockly.Msg.ADD = "Pievienot";
 Blockly.Msg.ADD_COMMENT = "Pievienot komentāru";

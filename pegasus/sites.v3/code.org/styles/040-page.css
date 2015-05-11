@@ -342,6 +342,61 @@ th a:link, th a:visited, th a:hover, th a:active {
   color: white;
 }
 
+
+.tight-heading h1 {
+  margin-top:30px;
+  margin-bottom:15px;
+}
+
+.mainbar {
+  padding-right: 40px;
+}
+
+.mainbar h2 {
+  margin-topp: 30px;
+}
+
+.mainbar h3 {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.mainbar p {
+  margin-left:30px;
+}
+
+.sidebar {
+  background-color: #eee;
+  margin-top:30px;
+  padding-top:30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+  padding-bottom:30px;
+}
+
+.sidebar h2 {
+  margin-top: 0px;
+}
+
+.sidebar h3 {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 18px;
+}
+
+.sidebar p {
+  margin-left:20px;
+}
+
+.teacher-button {
+  background-color: #59b9dc; border-color: #59b9dc
+}
+
+.district-button {
+  background-color: #a69bc1; border-color: #a69bc1
+}
+
 #about_nav {
   margin: 50px 0 0 0;
 }

@@ -15,6 +15,7 @@ social:
 
 ## Existing partners (including all 7 of the largest US school districts)
 
+[col-50]
 
 - New York City Department of Education (NY)
 - Los Angeles Unified School District (CA)
@@ -24,56 +25,103 @@ social:
 - Broward County Public Schools (FL)
 - Houston Independent School District (TX)
 - Montgomery County Public Schools (MD)
-- Denver Public Schools (CO)
-- San Francisco Unified School District (CA)
-- [See all 60+ partner districts](/educate/partner-districts)
+- [See all 70+ partner districts](/educate/partner-districts)
+
+[/col-50]
 
 
-## Code.org provides (at no charge): 
+[col-50]
 
-1. Professional development for teachers
-2. Nationally-recognized courses and curriculum in a blended-learning environment
-3. Materials to promote computer science to parents/students
-4. Support for all grade levels K-12
-<br />
-	
+<br/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For a high-level terms sheet outlining commitments by Code.org and Partner districts see this document. 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[High Level Terms Sheet](https://docs.google.com/document/d/19gQVqJD_QymJUnqmfUYgyq1s7xtf0piC6KIiMBhNmgI/pub)
+<a href = "/educate/partner-districts"><img src="/images/districtmap.png" width=300/></a>
+
+[/col-50]
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note: This program is currently for **US public schools only**. <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you are a private or international school, know that all of our curriculum and professional <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;development resources will be publicly available under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+## What does a K-12 district partnership look like?
 
-## District Partnership Materials 
+We have two goals for a district partnership: 
 
-For detailed partnership information, check out these resources:
- 
+- Expanding *access* to high-quality computer science education to all students;
+- Establishing a computer science program that will grow and be sustained within the district beyond the term of our partnership.
 
-- [District partnership brochure](/files/Code.org_SchoolsBrochure.pdf)
-- [District partnership model](/files/DistrictPartnershipPlan.pdf)
-- [District partnership presentation](/files/DistrictPartnershipPresentation.pdf)
-- [Promotional flyer for schools](/files/SchoolsOnePager.pdf)
-- [High School professional development philosophy](/files/HighSchoolProfessionalDevelopmentPhilosophy.pdf) 
+Our commitment includes providing, at no cost, high-quality [computer science curriculum](/educate/curriculum) across multiple grade bands, coupled with high-quality [professional development](/educate/professional-development) (see links below), teacher supports, a learning platform, and course marketing materials among other things.
 
-### Interested in partnering?
+We also commit to matching the funds you put toward teacher stipends for high school or middle school professional development.
 
-We are currently at capacity for the 2015-2016 school year. By filling out this form you will be added to our list of districts to contact in April 2015 for ***potential*** partnerships in the 2016-2017 school year. Completion does not mean guaranteed acceptance into our program **as we have limited capacity**. Our expansion for the 2016-2017 school year is focused on districts in regions where we have [existing partnerships](http://code.org/educate/partner-districts) and new regions that can support at least 30 teachers in our high school program.
+In exchange, we want your district to commit  to the partnership, to the goal of *access* to computer science education for all students, and to continuing and sustaining the the work we begin together into the future. 
 
-[<button>Click to Request Partnership</button>](/district-partner)
+Here’s [a detailed term sheet](/educate/districtterms) that describes what you need to do and what we will do as part of the partnership. 
 
-## The K-12 Computer Science Program
+## Can your district qualify?
 
-The Code.org Program consists of teacher professional development and three course packages that together represent a comprehensive approach to K-12 computer science education.  A district partnership **requires** adoption of the High School computer science course package, while the Elementary and Middle School programs may be added independently. [Learn more about Code.org's curriculum](/educate/curriculum/).
+You’ll need to apply *and be accepted* to our district partnership program. **(Application does not mean acceptance.) Before you do, consider these key requirements up front:**
 
-## Instructions for district representatives
+1. Identify, or explain in detail, how you will identify at least 30 teachers who will participate in the professional development workshops we hold in your area. This can happen in one of following ways:
 
-If you are a district representative, complete this [form](/district-partner) and we will update you in April 2015 when our 2016-2017 school year application is ready. Please contact <district@code.org> for more information.
+	1. Your district has at least 30 committed teachers for each program you want
+	1. You join forces with neighboring districts either as a consortia of districts lead by one district submitting one application for the group or districts joining together to submit individual applications together
 
-[<button>Click to Request Partnership</button>](/district-partner)
+1. If you can’t identify 30 teachers, here are two other options:
+	1. You’re in driving distance of our existing [partnerships regions](/educate/partner-districts) to join existing Code.org workshops
+	1. You pay the cost of your teachers to travel to an existing region (See [XLS spreadsheet](/files/travelcalculator.xlsx) to calculate costs)
 
+1. If you want to focus building a K-5 program, you can do so through a district affiliate trainer and identify or explain in detail how you will identify teachers who will participate in the training
+
+1. Each teacher accepted into our professional development must teach the course -- this means taking steps on your side (such as securing course codes in high school) in advance of the partnership.
+
+1. We will match up to 50% of the teacher stipends for high school and middle school professional development when scheduled. Budget your contribution in advance and identify the source of funding. Here is an [XLS calculator](/files/stipendcalculator.xlsx) to determine costs. (Note: Code.org doesn’t cover taxes and benefits on stipends and we don’t provide stipends for K-5 workshops.)
+
+## What if you don’t qualify?
+
+Check out our list of preferred [3rd party providers](/educate/3rdparty) who can help you bring computer science to your schools.
+Consider a [K-5 only partnership](/educate/k5-district-partnership), or see if there’s a [K-5 Code.org workshop](http://code.org/professional-development-workshops) in your area that can prepare your teachers.
+
+[<button>See 3rd party options</button>](/educate/3rdparty)
+
+## Application Form
+Applying for a district partnership is a relatively thorough process. You can read through the materials here, but we expect it to be a collaborative process, working with our district outreach team. If you qualify for a partnership (see above) and want to go through the process, please fill out our interest form to begin the dialogue.
+
+[<button>Begin application process</button>](/educate/interesteddistrict)
+
+
+Download district partnership application: 
+
+- [Download Word doc](/files/district_partnership_application.docx)
+- [See Google doc](https://docs.google.com/document/d/1wGk4LPrFsA5sKxxD2S173WsJC8QX8tfWuPcyJLhgDPk/edit?usp=sharing) 
+
+
+<!--
+CAMERON DOC NEEDED
+[Here - COMING SOON]() is a short legal agreement that is part of any district partnership that governs the terms of the agreement that will need to be signed if you are accepted into the program.
+-->
+
+When you have finished filling out your partnership application, submit it to us via email at <district@code.org>.
+
+
+## Deadlines
+
+Here are our deadlines for Applications. Applications received earlier will receive higher priorty. 
+
+- **Window 1**  -- Applications need to be in by June 30th.
+- **Window 2**  -- Applications need to be in by August 31st.
+- **Window 3**  -- Applications need to be in by October 31st.
+
+## Information on Curriculum and PD
+
+- Courses for grades K-5 ([Curriculum](/educate/k5)/[PD Model](https://docs.google.com/document/d/1OsT09Unc0K_2qLckJQWOMrUxerfb-kSuybawGAQbjEs/edit#heading=h.w2x7lc5ji6f2))
+- Computer Science in Algebra ([Curriculum](/curriculum/algebra)/[PD Model](https://docs.google.com/document/d/1afDNY70MrWkBTQGuGoaOXBQjfIzHH1FVzKNYOIv7vMU/edit?usp=sharing))
+- Computer Science in Science ([Curriculum](/curriculum/science)/[PD Model](https://docs.google.com/document/d/111v2O8rsK3iRl4ZeuZxPdwpHLkALyLjtmv7iuQmlYio/edit?usp=sharing))
+- Exploring Computer Science ([Curriculum](http://www.exploringcs.org/curriculum)/[PD Model](https://docs.google.com/document/d/1RbP0u41DgxGL1bTcMDaxe3pc4vQ-WaxHajZ2m53Zato/edit?usp=sharing))
+- Computer Science Principles ([Curriculum](/educate/csp)/[PD Model](https://docs.google.com/document/d/1cNoj6LOMhWTN8IBjxQaMQeZEcIN5_fiJSODq13h7jGo/edit))
+
+<!--
+CAMERON DOC NEEDED
+- [High-level implementation timeline - COMING SOON]()
+-->
   
 ## If you are a teacher or a parent
 If you want to encourage your district to work with us, send this email to a district representative:

@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.fa_ir');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "تماس بگیر";
 Blockly.Msg.ADD = "اضافه کردن";
 Blockly.Msg.ADD_COMMENT = "اضافه کردن نظر";
