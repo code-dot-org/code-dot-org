@@ -1,0 +1,36 @@
+<Multi>
+  <config><![CDATA[{
+  "game_id": 29,
+  "created_at": "2015-05-08T04:02:34.000Z",
+  "properties": {
+    "questions": [
+      {
+        "text": "What happens when two buttons are given the same id?"
+      }
+    ],
+    "answers": [
+      {
+        "text": "JavaScript is flexible. Two buttons with same id will respond to a single event handler associated with that id.",
+        "correct": false
+      },
+      {
+        "text": "A warning message will appear for the second button that that id is already in use",
+        "correct": true
+      },
+      {
+        "text": "The first button created with the id will work, the other will not",
+        "correct": true
+      },
+      {
+        "text": "The JavaScript API for MVC allows for duplicate Ids as long as the HTML is CSS compliant",
+        "correct": false
+      },
+      {
+        "text": "Two buttons with same id are linked during the running of the program.  Clicking on is just like clicking the other",
+        "correct": false
+      }
+    ],
+    "title": "Buttons and Ids"
+  }
+}]]></config>
+</Multi>

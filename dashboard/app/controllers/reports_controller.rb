@@ -27,6 +27,11 @@ SQL
   end
 
   def header_stats
+    if params[:section_id].present?
+      @section = Section.find(params[:section_id])
+      authorize! :read, @section
+    end
+
     if params[:user_id].present?
       user = User.find(params[:user_id])
       authorize! :read, user

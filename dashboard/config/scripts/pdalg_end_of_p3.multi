@@ -5,14 +5,14 @@ hide_submit true
 success_title 'Awesome!'
 success_body 'Thanks for your response.'
 
-question 'What are you plans for next year?'
+question 'What are your plans for next year?'
 right 'Keep teaching Bootstrap'
 right 'Start teaching CS in Algebra'
 right 'Not teaching either'
 right 'Not sure yet'
 
 markdown <<MARKDOWN
-### Thank's for checking out CS in Algebra
+### Thanks for checking out CS in Algebra
 
 We hope you've had a great year teaching Bootstrap, and that you've enjoyed learning about our new CS in Algebra course. If you'd like to learn more about CS in Algebra, you can visit the following pages:
 

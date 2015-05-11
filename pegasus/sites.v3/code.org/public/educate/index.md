@@ -45,9 +45,9 @@ Our [workshops](/educate/professional-development) for teachers in grades 6-12 a
 
 [<button class="district-button">Apply</button>](/educate/k5-district-partnership)
 
-### Middle and high schools 
+### Middle and High schools 
 
-If you're near an [exisiting Code.org partner](/educate/partner-districts), or a large district yourself, apply for a grant to bring computer science to your entire district.  
+If you're near an [existing Code.org partner](/educate/partner-districts), or a large district yourself, apply for a grant to bring computer science to your entire district.  
 
 [<button class="district-button">Learn more</button>](/district-partner)
 
