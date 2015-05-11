@@ -26,15 +26,16 @@ Whether you're a school teacher, an administrator, an after-school teacher, or a
 
 Sign up now for computer science professional development for K-5 educators
 
-[<button>Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button>Find a workshop</button>](/professional-development-workshops)
+[<button class="teacher-button">Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button class="teacher-button">Find a workshop</button>](/professional-development-workshops)
 
 
 ### Workshops for middle and high school teachers
 
 Our [workshops](/educate/professional-development) for teachers in grades 6-12 are available as part of a [district-wide partnership](/district-partner).
 
-[<button>Learn more</button>](/educate/professional-development)
+[<button class="teacher-button">Learn more</button>](/educate/professional-development)
 
+<br/>
 
 ## Partnerships for Districts
 
@@ -42,16 +43,15 @@ Our [workshops](/educate/professional-development) for teachers in grades 6-12 a
 
 [Partner with us](/educate/k5-district-partnership) to bring computer science to your entire school district, free of charge. Or send your teachers to a [nearby workshop](/professional-development-workshops).
 
-[<button>Apply</button>](/educate/k5-district-partnership)
-
+[<button class="district-button">Apply</button>](/educate/k5-district-partnership)
 
 ### Middle and high schools 
 
 If you're near an [exisiting Code.org partner](/educate/partner-districts), or a large district yourself, apply for a grant to bring computer science to your entire district.  
 
-[<button>Learn more</button>](/district-partner)
+[<button class="district-button">Learn more</button>](/district-partner)
 
-
+<br/>
 
 ## Inspire students
 Use these videos, posters, and how-to resources to inspire students to try computer science. You can also [nominate a student](/sotw) or [teacher](/totm) for a Code.org award.

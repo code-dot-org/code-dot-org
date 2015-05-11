@@ -389,6 +389,14 @@ th a:link, th a:visited, th a:hover, th a:active {
   margin-left:20px;
 }
 
+.teacher-button {
+  background-color: #59b9dc; border-color: #59b9dc
+}
+
+.district-button {
+  background-color: #a69bc1; border-color: #a69bc1
+}
+
 #about_nav {
   margin: 50px 0 0 0;
 }
