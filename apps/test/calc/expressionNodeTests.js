@@ -386,9 +386,7 @@ describe("ExpressionNode", function () {
       assert(jsnums.equals(evaluation.result, 6));
     });
 
-    it('generates error on infinite recursion', function (done) {
-      // TODO (brent) Skip this test for now
-      done();
+    it('generates error on infinite recursion', function () {
       // f(x) = f(x) + 1
       var mapping = {
         f: {
@@ -403,10 +401,6 @@ describe("ExpressionNode", function () {
       node = new ExpressionNode('f', [1]);
       evaluation = node.evaluate(mapping);
 
-      // pivotal # 87579626
-      // what it throws is Maximum callstack exceeded. i wonder if i
-      // can/should get it to fail earlier
-      // maybe when evaluating, remove self from mapping?
       assert(evaluation.err);
     });
 
