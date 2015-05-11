@@ -13,8 +13,17 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "Every mathematical operator (+, -, *, /, and so on) can be represented by an Evaluation Block in code. Convert the Evaluation Block to match the expression."
-  }
+    "instructions": "Every mathematical operator (+, -, *, /, and so on) can be represented by an Evaluation Block in code. Change the Evaluation Block to match the expression.",
+    "embed": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
+  },
+  "md5": "5e6cf94f958f2330898918eed75b7590"
 }]]></config>
   <blocks>
     <start_blocks>
