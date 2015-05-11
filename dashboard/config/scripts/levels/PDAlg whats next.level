@@ -1,0 +1,14 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2015-05-08T21:11:49.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true,
+      "css": "unplugged"
+    },
+    "title": "What's Next?",
+    "markdown": "## What's Next?\n\nNow that you've got a feel for the new CS in Algebra course, we hope you're excited to learn more. If you'd like to try out the course on your own, or with your students, check out the following resources:\n\n### <a href=\"http://studio.code.org/s/algebra\" target=\"_blank\">Computer Science in Algebra Course</a>\n### <a href=\"http://code.org/curriculum/algebra\" target=\"_blank\">Lesson Plans and Teaching Materials</a>\n### <a href=\"http://code.org/teacher-dashboard\" target=\"_blank\">Teacher Dashboard</a>\n\n## Post PD Survey\nTo help us better understand your needs, and to improve our curriculum and PD, please take a moment to complete this survey. \n\n<script type=\"text/javascript\" src=\"http://form.jotform.us/jsform/51305645460147\"></script>\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+  }
+}]]></config>
+</External>
