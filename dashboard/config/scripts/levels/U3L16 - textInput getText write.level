@@ -22,6 +22,7 @@
           "\"text\""
         ]
       },
+      "addOperator": null,
       "image": null,
       "textInput": null,
       "write": null,
@@ -57,7 +58,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Introducing textInput, getText and write.",
+    "instructions": "Introducing textInput, getText and write.  First run the starter code several times.  Try to change what's written to the screen when the button is clicked. Then use getText to write to the screen what the user entered in the text box. GIF: U3L16 - useGetText.gif",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -72,7 +73,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "textLabel(\"txt\",\"Enter your name:\");\r\ntextInput(\"name\",\"\");\r\nbutton(\"done\", \"I'm Done!\");\r\nonEvent(\"done\", \"click\", function(){\r\n  write(\"Stop touching me!\");\r\n});\r\n",
+    "start_blocks": "textLabel(\"lbl\",\"Enter your name:\");\r\ntextInput(\"name\",\"\");\r\nbutton(\"done\", \"I'm Done!\");\r\nonEvent(\"done\", \"click\", function(){\r\n  write(\"Stop touching me!\");\r\n});\r\n",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "app_width": "320",
