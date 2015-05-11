@@ -8,7 +8,6 @@
   padding: 4px;
   font-size: 16px;
   text-align: center;
-  cursor: pointer;
   display: inline-block;
   font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
@@ -26,51 +25,38 @@
 .level_link.not_tried, .level_link.not_tried:link, .level_link.not_tried:visited {
   background-color: $level_not_tried;
   color: $charcoal !important;
-  &:hover {
+}
+
+a.level_link.not_tried:hover,
+a.level_link.attempted:hover,
+a.level_link.perfect:hover,
+a.level_link.passed:hover,
+a.level_link.submitted:hover
+ {
     background-color: $level_current;
     color: white;
     text-decoration: none;
-  }
 }
 
 .level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
   background-color: $level_attempted;
   color: $charcoal !important;
-  &:hover {
-    background-color: $level_current;
-    color: white;
-    text-decoration: none;
-  }
 }
 
 .level_link.perfect, .level_link.perfect:link, .level_link.perfect:visited {
   background-color: $level_perfect;
   color: white !important;
-  &:hover {
-    background-color: $level_current;
-    color: white;
-    text-decoration: none;
-  }
 }
 
 
 .level_link.passed, .level_link.passed:link, .level_link.passed:visited {
   background-color: $level_passed;
   color: white !important;
-  &:hover {
-    background-color: $level_current;
-    color: white;
-    text-decoration: none;
-  }
 }
 
 .level_link.submitted, .level_link.submitted:link, .level_link.submitted:visited {
   background-color: $level_submitted;
   color: $charcoal !important;
-  &:hover {
-    background-color: $level_submitted;
-    text-decoration: none;
-  }
 }
 
 .puzzle_outer_level,

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({40:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({41:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Bounce = require('./bounce');
@@ -17,7 +17,7 @@ window.bounceMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":36,"./bounce":37,"./levels":39,"./skins":41}],41:[function(require,module,exports){
+},{"../appMain":5,"./blocks":37,"./bounce":38,"./levels":40,"./skins":42}],42:[function(require,module,exports){
 /**
  * Load Skin for Bounce.
  */
@@ -111,7 +111,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":213}],39:[function(require,module,exports){
+},{"../skins":214}],40:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -543,7 +543,7 @@ module.exports = {
 };
 
 
-},{"../block_utils":33,"./tiles":42}],37:[function(require,module,exports){
+},{"../block_utils":34,"./tiles":43}],38:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -1960,7 +1960,7 @@ var checkFinished = function () {
 };
 
 
-},{"../../locale/current/bounce":262,"../../locale/current/common":264,"../StudioApp":4,"../codegen":61,"../constants":63,"../dom":64,"../dropletUtils":65,"../hammer":95,"../skins":213,"../templates/page.html.ejs":238,"../timeoutList":244,"../utils":259,"./api":35,"./controls.html.ejs":38,"./tiles":42,"./visualization.html.ejs":43}],43:[function(require,module,exports){
+},{"../../locale/current/bounce":263,"../../locale/current/common":265,"../StudioApp":4,"../codegen":62,"../constants":64,"../dom":65,"../dropletUtils":66,"../hammer":96,"../skins":214,"../templates/page.html.ejs":239,"../timeoutList":245,"../utils":260,"./api":36,"./controls.html.ejs":39,"./tiles":43,"./visualization.html.ejs":44}],44:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1980,7 +1980,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":280}],38:[function(require,module,exports){
+},{"ejs":281}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2003,7 +2003,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/bounce":262,"../../locale/current/common":264,"ejs":280}],36:[function(require,module,exports){
+},{"../../locale/current/bounce":263,"../../locale/current/common":265,"ejs":281}],37:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2499,10 +2499,10 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../../locale/current/bounce":262,"../codegen":61}],262:[function(require,module,exports){
+},{"../../locale/current/bounce":263,"../codegen":62}],263:[function(require,module,exports){
 /*bounce*/ module.exports = window.blockly.appLocale;
 
-},{}],35:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -2685,7 +2685,7 @@ exports.bounceBall = function(id) {
 };
 
 
-},{"../StudioApp":4,"./tiles":42}],42:[function(require,module,exports){
+},{"../StudioApp":4,"./tiles":43}],43:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2725,4 +2725,4 @@ exports.SquareType = {
 };
 
 
-},{}]},{},[40]);
+},{}]},{},[41]);

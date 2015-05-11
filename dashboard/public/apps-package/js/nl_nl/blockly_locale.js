@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.nl_nl');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "roep";
 Blockly.Msg.ADD = "Optellen";
 Blockly.Msg.ADD_COMMENT = "Reactie toevoegen";

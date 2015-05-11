@@ -15,6 +15,7 @@ var applabMsg = require('../../locale/current/applab');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var page = require('../templates/page.html.ejs');
@@ -399,15 +400,16 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
 }
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                 expectedType, minValue, maxValue) {
+                                 expectedType, minValue, maxValue, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   var validatedRangeKey = 'validated_range_' + varName;
-  apiValidateType(opts, funcName, varName, varValue, expectedType);
+  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
   if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
     var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
     if (inRange) {
       inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
     }
+    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!inRange) {
       var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
                                                     Applab.cumulativeLength,
@@ -568,7 +570,7 @@ Applab.onTick = function() {
 
 Applab.executeNativeJS = function () {
   if (Applab.tickCount === 1) {
-    try { Applab.whenRunFunc(studioApp, api, Applab.Globals); } catch (e) { }
+    try { Applab.whenRunFunc(studioApp, apiBlockly, Applab.Globals); } catch (e) { }
   }
 };
 
@@ -988,10 +990,16 @@ Applab.init = function(config) {
 
   var debugResizeBar = document.getElementById('debugResizeBar');
   if (debugResizeBar) {
-    debugResizeBar.addEventListener('mousedown',
-                                    Applab.onMouseDownDebugResizeBar);
-    document.body.addEventListener('mouseup',
-                                   Applab.onMouseUpDebugResizeBar);
+    dom.addMouseDownTouchEvent(debugResizeBar,
+                               Applab.onMouseDownDebugResizeBar);
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
+    document.body.addEventListener('mouseup', Applab.onMouseUpDebugResizeBar);
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+                                     Applab.onMouseUpDebugResizeBar);
+    }
   }
 
   var finishButton = document.getElementById('finishButton');
@@ -1072,6 +1080,11 @@ Applab.onMouseDownDebugResizeBar = function (event) {
   if (event.srcElement.id === 'debugResizeBar') {
     Applab.draggingDebugResizeBar = true;
     document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.addEventListener(Applab.mouseMoveTouchEventName,
+                                     Applab.onMouseMoveDebugResizeBar);
+    }
 
     event.preventDefault();
   }
@@ -1114,6 +1127,10 @@ Applab.onMouseUpDebugResizeBar = function (event) {
   // If we have been tracking mouse moves, remove the handler now:
   if (Applab.draggingDebugResizeBar) {
     document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
+    if (Applab.mouseMoveTouchEventName) {
+      document.body.removeEventListener(Applab.mouseMoveTouchEventName,
+                                        Applab.onMouseMoveDebugResizeBar);
+    }
     Applab.draggingDebugResizeBar = false;
   }
 };
@@ -1159,38 +1176,38 @@ Applab.getUnusedElementId = function (prefix) {
  * @param {number} top Position from top.
  */
 Applab.createElement = function (elementType, left, top) {
-  var el = document.createElement(elementType);
+  var element = document.createElement(elementType);
   switch (elementType) {
     case ElementType.BUTTON:
-      el.appendChild(document.createTextNode('Button'));
-      el.style.padding = '0px';
-      el.style.margin = '2px';
-      el.style.height = '36px';
-      el.style.width = '76px';
-      el.style.fontSize = '14px';
+      element.appendChild(document.createTextNode('Button'));
+      element.style.padding = '0px';
+      element.style.margin = '2px';
+      element.style.height = '36px';
+      element.style.width = '76px';
+      element.style.fontSize = '14px';
       break;
     case ElementType.LABEL:
-      el.appendChild(document.createTextNode("text"));
-      el.style.margin = '10px 5px';
-      el.style.height = '20px';
+      element.appendChild(document.createTextNode("text"));
+      element.style.margin = '10px 5px';
+      element.style.height = '20px';
       break;
     case ElementType.INPUT:
-      el.style.margin = '5px 2px';
-      el.style.width = '236px';
-      el.style.height = '30px';
+      element.style.margin = '5px 2px';
+      element.style.width = '236px';
+      element.style.height = '30px';
       break;
     default:
       throw "unrecognized element type " + elementType;
   }
-  el.id = Applab.getUnusedElementId(elementType);
-  el.style.position = 'absolute';
-  el.style.left = left + 'px';
-  el.style.top = top + 'px';
+  element.id = Applab.getUnusedElementId(elementType);
+  element.style.position = 'absolute';
+  element.style.left = left + 'px';
+  element.style.top = top + 'px';
 
   var divApplab = document.getElementById('divApplab');
-  divApplab.appendChild(el);
-  Applab.makeDraggable($(el));
-  Applab.editElementProperties(el);
+  divApplab.appendChild(element);
+  Applab.makeDraggable($(element));
+  Applab.editElementProperties(element);
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
@@ -1265,86 +1282,79 @@ Applab.onDivApplabClick = function (event) {
 };
 
 /**
- * @param el {Element}
+ * @param element {Element}
  * @returns {number} The outerWidth (width + margin) of the element in pixels,
  * or NaN if element's css width or margin are not defined.
  */
-Applab.getOuterWidth = function(el) {
-  var marginLeft = parseInt($(el).css('margin-left'), 10);
-  var marginRight = parseInt($(el).css('margin-right'), 10);
-  return parseInt(el.style.width, 10) + marginLeft + marginRight;
+Applab.getOuterWidth = function(element) {
+  var marginLeft = parseInt($(element).css('margin-left'), 10);
+  var marginRight = parseInt($(element).css('margin-right'), 10);
+  return parseInt(element.style.width, 10) + marginLeft + marginRight;
 };
 
 /**
  * Sets element width equal to outerWidth minus margin,
  * or to '' if margin is undefined.
- * @param el {Element}
+ * @param element {Element}
  * @param outerWidth {number} Desired element outerWidth in pixels.
  */
-Applab.setOuterWidth = function(el, outerWidth) {
-  var marginLeft = parseInt($(el).css('margin-left'), 10);
-  var marginRight = parseInt($(el).css('margin-right'), 10);
+Applab.setOuterWidth = function(element, outerWidth) {
+  var marginLeft = parseInt($(element).css('margin-left'), 10);
+  var marginRight = parseInt($(element).css('margin-right'), 10);
   var width = +outerWidth - marginLeft - marginRight;
-  el.style.width = isNaN(width) ? '' : width + 'px';
+  element.style.width = isNaN(width) ? '' : width + 'px';
 };
 
 /**
- * @param el {Element}
+ * @param element {Element}
  * @returns {number} the outerHeight (height + margin) of the element in pixels,
  * or NaN if element's css height or margin are not defined.
  */
-Applab.getOuterHeight = function(el) {
-  var marginTop = parseInt($(el).css('margin-top'), 10);
-  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
-  return parseInt(el.style.height, 10) + marginTop + marginBottom;
+Applab.getOuterHeight = function(element) {
+  var marginTop = parseInt($(element).css('margin-top'), 10);
+  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
+  return parseInt(element.style.height, 10) + marginTop + marginBottom;
 };
 
 /**
  * Sets element height equal to outerHeight minus margin,
  * or to '' if margin is undefined.
- * @param el {Element}
+ * @param element {Element}
  * @param outerHeight {number} Desired element outerHeight in pixels.
  */
-Applab.setOuterHeight = function(el, outerHeight) {
-  var marginTop = parseInt($(el).css('margin-top'), 10);
-  var marginBottom = parseInt($(el).css('margin-bottom'), 10);
+Applab.setOuterHeight = function(element, outerHeight) {
+  var marginTop = parseInt($(element).css('margin-top'), 10);
+  var marginBottom = parseInt($(element).css('margin-bottom'), 10);
   var height = +outerHeight - marginTop - marginBottom;
-  el.style.height = isNaN(height) ? '' : height + 'px';
+  element.style.height = isNaN(height) ? '' : height + 'px';
 };
 
 // Currently there is a 1:1 mapping between applab element types and HTML tag names
 // (input, label, button, ...), so elements are simply identified by tag name.
-Applab.editElementProperties = function(el) {
-  var tagName = el.tagName.toLowerCase();
+Applab.editElementProperties = function(element) {
+  var tagName = element.tagName.toLowerCase();
   if (!Applab.isValidElementType(tagName)) {
    Applab.clearProperties();
    return;
   }
 
   var designPropertiesEl = document.getElementById('design-properties');
-  var outerWidth = Applab.getOuterWidth(el);
-  var outerHeight = Applab.getOuterHeight(el);
-  designPropertiesEl.innerHTML = require('./designProperties.html.ejs')({
-    tagName: tagName,
-    props: {
-      id: el.id,
-      left: parseInt(el.style.left, 10) || 0,
-      top: parseInt(el.style.top, 10) || 0,
-      width: isNaN(outerWidth) ? '' : outerWidth,
-      height: isNaN(outerHeight) ? '' : outerHeight,
-      text: $(el).text()
-    }
-  });
-  var savePropertiesButton = document.getElementById('savePropertiesButton');
-  var onSave = Applab.onSavePropertiesButton.bind(this, el);
-  if (savePropertiesButton) {
-    dom.addClickTouchEvent(savePropertiesButton, onSave);
-  }
-  var deletePropertiesButton = document.getElementById('deletePropertiesButton');
-  var onDelete = Applab.onDeletePropertiesButton.bind(this, el);
-  if (deletePropertiesButton) {
-    dom.addClickTouchEvent(deletePropertiesButton, onDelete);
-  }
+  var outerWidth = Applab.getOuterWidth(element);
+  var outerHeight = Applab.getOuterHeight(element);
+  React.render(
+    React.createElement(DesignProperties, {
+        tagName: tagName,
+        id: element.id,
+        left: parseInt(element.style.left, 10) || 0,
+        top: parseInt(element.style.top, 10) || 0,
+        width: isNaN(outerWidth) ? '' : outerWidth,
+        height: isNaN(outerHeight) ? '' : outerHeight,
+        text: $(element).text(),
+        handleChange: Applab.onPropertyChange.bind(this, element),
+        onDone: Applab.onDonePropertiesButton,
+        onDelete: Applab.onDeletePropertiesButton.bind(this, element)}
+    ),
+    designPropertiesEl);
 };
 
 /**
@@ -1353,7 +1363,7 @@ Applab.editElementProperties = function(el) {
 Applab.clearProperties = function () {
   var designPropertiesEl = document.getElementById('design-properties');
   if (designPropertiesEl) {
-    React.render(React.createElement(DesignProperties, {el: null}), designPropertiesEl);
+    React.render(React.createElement(DesignProperties, {tagName: null}), designPropertiesEl);
   }
 };
 
@@ -1382,20 +1392,38 @@ Applab.isValidElementType = function (type) {
   return false;
 };
 
-Applab.onSavePropertiesButton = function(el, event) {
-  el.id = document.getElementById('design-property-id').value;
-  el.style.left = document.getElementById('design-property-left').value + 'px';
-  el.style.top = document.getElementById('design-property-top').value + 'px';
-  var outerWidth = document.getElementById('design-property-width').value;
-  Applab.setOuterWidth(el, outerWidth);
-  var outerHeight = document.getElementById('design-property-height').value;
-  Applab.setOuterHeight(el, outerHeight);
-  $(el).text(document.getElementById('design-property-text').value);
+Applab.onPropertyChange = function(element, name, value) {
+  switch (name) {
+    case 'id':
+      element.id = value;
+      break;
+    case 'left':
+      element.style.left = value + 'px';
+      break;
+    case 'top':
+      element.style.top = value + 'px';
+      break;
+    case 'width':
+      Applab.setOuterWidth(element, value);
+      break;
+    case 'height':
+      Applab.setOuterHeight(element, value);
+      break;
+    case 'text':
+      $(element).text(value);
+      break;
+    default:
+      throw "unknown property name " + name;
+  }
   Applab.levelHtml = Applab.serializeToLevelHtml();
 };
 
-Applab.onDeletePropertiesButton = function(el, event) {
-  el.parentNode.removeChild(el);
+Applab.onDonePropertiesButton = function() {
+  Applab.clearProperties();
+};
+
+Applab.onDeletePropertiesButton = function(element, event) {
+  element.parentNode.removeChild(element);
   Applab.levelHtml = Applab.serializeToLevelHtml();
   Applab.clearProperties();
 };
@@ -1650,7 +1678,7 @@ var defineProcedures = function (blockType) {
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
                          studioApp: studioApp,
-                         Applab: api,
+                         Applab: apiBlockly,
                          Globals: Applab.Globals } ); } catch (e) { }
 };
 
@@ -1761,11 +1789,10 @@ Applab.execute = function() {
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = dropletUtils.generateCodeAliases(dropletConfig, 'Applab');
-    Applab.userCodeStartOffset = codeWhenRun.length;
-    Applab.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
-    codeWhenRun += studioApp.editor.getValue();
-    Applab.userCodeLength = codeWhenRun.length - Applab.userCodeStartOffset;
+    codeWhenRun = studioApp.editor.getValue();
+    Applab.userCodeStartOffset = 0;
+    Applab.userCodeLineOffset = 0;
+    Applab.userCodeLength = codeWhenRun.length;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
@@ -1794,9 +1821,9 @@ Applab.execute = function() {
       // Use JS interpreter on editCode levels
       var initFunc = function(interpreter, scope) {
         codegen.initJSInterpreter(interpreter,
+                                  dropletConfig.blocks,
                                   scope,
-                                  { Applab: api,
-                                    console: consoleApi,
+                                  { console: consoleApi,
                                     JSON: JSONApi });
 
         populateNonMarshalledFunctions(interpreter, scope, dontMarshalApi);
@@ -1830,7 +1857,7 @@ Applab.execute = function() {
     } else {
       Applab.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
                                           StudioApp: studioApp,
-                                          Applab: api,
+                                          Applab: apiBlockly,
                                           Globals: Applab.Globals } );
     }
   }
@@ -2390,18 +2417,32 @@ Applab.penWidth = function (opts) {
   }
 };
 
-Applab.penColor = function (opts) {
-  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
+Applab.penColorInternal = function (rgbstring) {
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
       // pen is currently up, store this color for pen down
-      Applab.turtle.penUpColor = opts.color;
+      Applab.turtle.penUpColor = rgbstring;
     } else {
-      ctx.strokeStyle = opts.color;
+      ctx.strokeStyle = rgbstring;
     }
-    ctx.fillStyle = opts.color;
+    ctx.fillStyle = rgbstring;
   }
+};
+
+Applab.penColor = function (opts) {
+  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
+  Applab.penColorInternal(opts.color);
+};
+
+Applab.penRGB = function (opts) {
+  apiValidateTypeAndRange(opts, 'penRGB', 'r', opts.r, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'g', opts.g, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'b', opts.b, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'a', opts.a, 'number', 0, 1, OPTIONAL);
+  var alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
+  var rgbstring = "rgba(" + opts.r + "," + opts.g + "," + opts.b + "," + alpha + ")";
+  Applab.penColorInternal(rgbstring);
 };
 
 Applab.speed = function (opts) {

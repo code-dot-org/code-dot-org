@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.ta_in');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "அழைப்பு";
 Blockly.Msg.ADD = "சேர்";
 Blockly.Msg.ADD_COMMENT = "குறிப்பை சேர்க்க";

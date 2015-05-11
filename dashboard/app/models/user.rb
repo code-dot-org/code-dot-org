@@ -344,6 +344,11 @@ class User < ActiveRecord::Base
       index_by(&:level_id)
   end
 
+  def user_level_for(script_level)
+    user_levels.find_by(script_id: [script_level.script_id, nil],
+                        level_id: script_level.level_id)
+  end
+
   def levels_from_script(script, stage = nil)
     ul_map = user_levels_by_level(script)
     q = script.script_levels.includes(:level, :script, :stage).order(:position)

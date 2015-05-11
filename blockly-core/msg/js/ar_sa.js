@@ -1,5 +1,3 @@
-goog.provide('Blockly.Msg.ar_sa');
-goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "مناداة";
 Blockly.Msg.ADD = "أضف";
 Blockly.Msg.ADD_COMMENT = "اضافة تعليق";

@@ -700,7 +700,7 @@ Artist.prototype.generateTurtleCodeFromJS_ = function () {
   this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
   var initFunc = _.bind(function(interpreter, scope) {
-    codegen.initJSInterpreter(interpreter, scope, {
+    codegen.initJSInterpreter(interpreter, null, scope, {
       Turtle: this.api
     });
   }, this);
