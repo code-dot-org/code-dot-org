@@ -350,4 +350,8 @@ describe("getMissingRequiredBlocks_ tests", function () {
       });
     });
   }
+
+  // TODO (brent): this apparently hasnt been ported yet
+  describe("required blocks for specific levels", function () {
+  });
 });

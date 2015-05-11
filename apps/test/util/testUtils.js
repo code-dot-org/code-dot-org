@@ -13,37 +13,6 @@ var studioApp;
 
 var testBlockFactory = require('./testBlockFactory');
 
-require('./requireUncache').wrap(require);
-
-var GlobalDiff = require('./globalDiff');
-var globalDiff = new GlobalDiff();
-
-/**
- * Wrapper around require, potentially also using our overloader, that also
- * validates that any additions to our global namespace are expected.
- */
-function requireWithGlobalsCheck(path, allowedChanges) {
-  allowedChanges = allowedChanges || [];
-
-  globalDiff.cache();
-  var result = require(path);
-  var diff = globalDiff.diff(true);
-  diff.forEach(function (key) {
-    assert.notEqual(allowedChanges.indexOf(key), -1, "unexpected global change\n" +
-      "key: " + key + "\n" +
-      "require: " + path + "\n");
-  });
-  return result;
-}
-
-/**
- * Load files from code-dot-org/apps/build, while checking that the only
- * additions to the global namespace are allowedChanges
- */
-exports.requireWithGlobalsCheckBuildFolder = function (path, allowedChanges) {
-  return requireWithGlobalsCheck(exports.buildPath(path), allowedChanges, false);
-};
-
 function setupLocale(app) {
   setupLocales();
 }

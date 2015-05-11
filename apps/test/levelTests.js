@@ -128,6 +128,7 @@ function runTestCollection (item) {
           }
 
           if (testUtils.debugMode()) {
+            // No timeout if we have a debugger attached
             this.timeout(0);
           }
           runLevelTest(testCollection, testData, dataItem, done);

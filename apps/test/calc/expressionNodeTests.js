@@ -387,7 +387,7 @@ describe("ExpressionNode", function () {
     });
 
     it('generates error on infinite recursion', function (done) {
-      // Skip this test for now
+      // TODO (brent) Skip this test for now
       done();
       // f(x) = f(x) + 1
       var mapping = {
