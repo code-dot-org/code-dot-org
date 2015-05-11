@@ -10,7 +10,7 @@ Whether you're a school teacher, an administrator, an after-school teacher, or a
 
 [desktop-pad-right]
 
-## Professional Development
+## Professional development
 
 [Workshops for elementary school teachers](/educate/k5)
 <br/>
@@ -37,9 +37,9 @@ Our [workshops](/educate/professional-development) for teachers in grades 6-12 a
 [<button>Apply</button>](/educate/k5-district-partnership)
 
 
-### Middle and high schools 
+### Middle and High schools 
 
-If you're near an [exisiting Code.org partner](/educate/partner-districts), or a large district yourself, apply for a grant to bring computer science to your entire district.  
+If you're near an [existing Code.org partner](/educate/partner-districts), or a large district yourself, apply for a grant to bring computer science to your entire district.  
 
 [<button>Learn more</button>](/district-partner)
 
