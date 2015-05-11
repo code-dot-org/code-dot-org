@@ -23,7 +23,7 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId) {
+dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
   stageData = stageData || {};
   progressData = progressData || {};
   levelProgress = progressData.levels || {};
@@ -51,7 +51,14 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     var status = (levelProgress[level.id] || {}).status || 'not_tried';
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = "/s/" + stageData.script_name + "/stage/" + stageData.position + "/puzzle/" + level.position;
+    if (userId) {
+      href += '?user_id=' + userId;
+      if (sectionId) {
+        href += '&section_id=' + sectionId;
+      }
+    }
     var link = $('<a>').attr('href', href).addClass('level_link').addClass(status).text(level.title);
+
     if (level.kind == 'unplugged') {
       link.addClass('unplugged_level');
     }
@@ -135,7 +142,8 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
         data: {
           script_id: stageData.script_id,
           script_level_id: currentLevelId,
-          user_id: userId
+          user_id: userId,
+          section_id: sectionId
         }, success: function (result) {
           $('.header_popup_body').html(result);
           if (trophiesClicked) {
@@ -245,7 +253,8 @@ function shareProject() {
 
 function remixProject() {
   delete dashboard.currentApp.id;
-  dashboard.currentApp.name = "Remix: " + dashboard.currentApp.name;
+  delete dashboard.currentApp.hidden;
+  dashboard.currentApp.name = "Remix: " + (dashboard.currentApp.name || appOptions.level.projectTemplateLevelName || "My Project");
   $('.project_name').text(dashboard.currentApp.name);
   dashboard.saveProject();
 }
