@@ -400,15 +400,16 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
 }
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                 expectedType, minValue, maxValue) {
+                                 expectedType, minValue, maxValue, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   var validatedRangeKey = 'validated_range_' + varName;
-  apiValidateType(opts, funcName, varName, varValue, expectedType);
+  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
   if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
     var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
     if (inRange) {
       inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
     }
+    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!inRange) {
       var line = 1 + codegen.getNearestUserCodeLine(Applab.interpreter,
                                                     Applab.cumulativeLength,
@@ -2401,18 +2402,32 @@ Applab.penWidth = function (opts) {
   }
 };
 
-Applab.penColor = function (opts) {
-  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
+Applab.penColorInternal = function (rgbstring) {
   var ctx = getTurtleContext();
   if (ctx) {
     if (Applab.turtle.penUpColor) {
       // pen is currently up, store this color for pen down
-      Applab.turtle.penUpColor = opts.color;
+      Applab.turtle.penUpColor = rgbstring;
     } else {
-      ctx.strokeStyle = opts.color;
+      ctx.strokeStyle = rgbstring;
     }
-    ctx.fillStyle = opts.color;
+    ctx.fillStyle = rgbstring;
   }
+};
+
+Applab.penColor = function (opts) {
+  apiValidateType(opts, 'penColor', 'color', opts.color, 'color');
+  Applab.penColorInternal(opts.color);
+};
+
+Applab.penRGB = function (opts) {
+  apiValidateTypeAndRange(opts, 'penRGB', 'r', opts.r, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'g', opts.g, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'b', opts.b, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'penRGB', 'a', opts.a, 'number', 0, 1, OPTIONAL);
+  var alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
+  var rgbstring = "rgba(" + opts.r + "," + opts.g + "," + opts.b + "," + alpha + ")";
+  Applab.penColorInternal(rgbstring);
 };
 
 Applab.speed = function (opts) {
