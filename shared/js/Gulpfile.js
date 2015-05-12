@@ -5,10 +5,18 @@
 
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
+var jshint = require('gulp-jshint');
 
 var browserify = require('./lib/frontend/browserify');
 
 var watchEnabled = false;
+
+gulp.task('lint', function () {
+  // TODO - more complete list
+  return gulp.src('initApp.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
 
 gulp.task('enable-watch', function () {
   watchEnabled = true;
