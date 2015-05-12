@@ -13,8 +13,15 @@ var watchEnabled = false;
 
 gulp.task('lint', function () {
   // TODO - more complete list
+  // TODO - share jshint config between different packages
   return gulp.src('initApp.js')
-    .pipe(jshint())
+    .pipe(jshint({
+      curly: true,
+      node: true,
+      mocha: true,
+      browser: true,
+      undef: true
+    }))
     .pipe(jshint.reporter('default'));
 });
 
