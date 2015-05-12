@@ -15,7 +15,10 @@ var watchEnabled = false;
 gulp.task('lint', function () {
   // TODO - more complete list
   // TODO - share jshint config between different packages
-  return gulp.src('initApp.js')
+  return gulp.src([
+      'initApp.js',
+      'client_api/*.js'
+    ])
     .pipe(jshint({
       curly: true,
       node: true,
@@ -37,7 +40,6 @@ gulp.task('bundle-js', function () {
   var files = [
     'initApp.js'
   ];
-  console.log(files);
   var config = {
     src: files,
     dest: 'build/shared.js',

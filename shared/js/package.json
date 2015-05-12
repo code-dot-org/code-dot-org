@@ -6,7 +6,8 @@
     "node": "~0.10.18"
   },
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "lint": "gulp -- lint"
   },
   "devDependencies": {
     "browserify": "^10.1.3",
