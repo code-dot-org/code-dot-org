@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "an der Honigwabe"},
 "atFlower":function(d){return "an der Blume"},
 "avoidCowAndRemove":function(d){return "vermeide die Kuh und entferne 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "mache"},
 "elseCode":function(d){return "ansonsten"},
 "fill":function(d){return "1 hinzufügen"},
-"fillN":function(d){return "fülle "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "Das Loch mit "+appLocale.v(d,"shovelfuls")+" Schaufeln Erde befüllen"},
+"fillN":function(d){return "fülle "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "Das Loch mit "+maze_locale.v(d,"shovelfuls")+" Schaufeln Erde befüllen"},
 "fillSquare":function(d){return "Viereck füllen"},
 "fillTooltip":function(d){return "Lege eine Einheit Schmutz auf den Boden"},
 "finalLevel":function(d){return "Glückwunsch! Sie haben das letzte Puzzle gelöst."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "Da ist ein Stapel"},
 "putdownTower":function(d){return "Stellen Sie den Turm ab"},
 "removeAndAvoidTheCow":function(d){return "entferne 1 und vermeide die Kuh"},
-"removeN":function(d){return "Entferne "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "Entferne "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "Haufen entfernen"},
-"removeStack":function(d){return appLocale.v(d,"shovelfuls")+" Schaufeln Erde vom Haufen entfernen"},
+"removeStack":function(d){return maze_locale.v(d,"shovelfuls")+" Schaufeln Erde vom Haufen entfernen"},
 "removeSquare":function(d){return "Viereck entfernen"},
 "repeatCarefullyError":function(d){return "Um dieses Level zu schaffen, musst du auf die Muster von zwei Mustern achten, die du in einen \"repeat\"-Block setzt. Es ist in Ordnung, wenn du nach dieser Runde noch Züge übrig hast."},
 "repeatUntil":function(d){return "Wiederhole bis"},

@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "e"},
 "backToPreviousLevel":function(d){return "Torna al livello precedente"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Ci sono dei blocchi non collegati agli altri. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Complimenti! Hai completato l'ultima lezione."},
-"finalStageTrophies":function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+locale.p(d,"numTrophies",0,"it",{"one":"un trofeo","other":locale.n(d,"numTrophies")+" trofei"})+"."},
+"finalStageTrophies":function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+common_locale.p(d,"numTrophies",0,"it",{"one":"un trofeo","other":common_locale.n(d,"numTrophies")+" trofei"})+"."},
 "finish":function(d){return "Condividi"},
-"generatedCodeInfo":function(d){return "Anche le migliori università (p.es., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"},
+"generatedCodeInfo":function(d){return "Anche le migliori università (p.es., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"},
 "genericFeedback":function(d){return "Verifica il risultato e prova a correggere il tuo programma."},
 "hashError":function(d){return "Siamo spiacenti, '%1' non corrisponde ad alcun programma salvato."},
 "help":function(d){return "Aiuto"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "lista"},
 "makeYourOwnFlappy":function(d){return "Costruisci la tua versione del gioco Flappy"},
 "missingBlocksErrorMsg":function(d){return "Prova uno o più dei blocchi che trovi qui sotto per risolvere questo esercizio."},
-"nextLevel":function(d){return "Complimenti! Hai completato l'esercizio "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Complimenti! Hai completato l'esercizio "+locale.v(d,"puzzleNumber")+" e vinto "+locale.p(d,"numTrophies",0,"it",{"one":"un trofeo","other":locale.n(d,"numTrophies")+" trofei"})+"."},
+"nextLevel":function(d){return "Complimenti! Hai completato l'esercizio "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Complimenti! Hai completato l'esercizio "+common_locale.v(d,"puzzleNumber")+" e vinto "+common_locale.p(d,"numTrophies",0,"it",{"one":"un trofeo","other":common_locale.n(d,"numTrophies")+" trofei"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Complimenti! Hai completato la lezione "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Complimenti! Hai completato la lezione "+locale.v(d,"stageName")+" e vinto "+locale.p(d,"numTrophies",0,"it",{"one":"un trofeo","other":locale.n(d,"numTrophies")+" trofei"})+"."},
-"numBlocksNeeded":function(d){return "Complimenti! Hai completato l'esercizio "+locale.v(d,"puzzleNumber")+". (Puoi risolverlo meglio usando solo "+locale.p(d,"numBlocks",0,"it",{"one":"1 blocco","other":locale.n(d,"numBlocks")+" blocchi"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Hai appena scritto "+locale.p(d,"numLines",0,"it",{"one":"1 linea","other":locale.n(d,"numLines")+" linee"})+" di codice!"},
+"nextStage":function(d){return "Complimenti! Hai completato la lezione "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Complimenti! Hai completato la lezione "+common_locale.v(d,"stageName")+" e vinto "+common_locale.p(d,"numTrophies",0,"it",{"one":"un trofeo","other":common_locale.n(d,"numTrophies")+" trofei"})+"."},
+"numBlocksNeeded":function(d){return "Complimenti! Hai completato l'esercizio "+common_locale.v(d,"puzzleNumber")+". (Puoi risolverlo meglio usando solo "+common_locale.p(d,"numBlocks",0,"it",{"one":"1 blocco","other":common_locale.n(d,"numBlocks")+" blocchi"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Hai appena scritto "+common_locale.p(d,"numLines",0,"it",{"one":"1 linea","other":common_locale.n(d,"numLines")+" linee"})+" di codice!"},
 "openWorkspace":function(d){return "Come funziona"},
 "orientationLock":function(d){return "Disattiva il blocco dell'orientamento nelle impostazioni del dispositivo."},
 "play":function(d){return "inizia"},
 "print":function(d){return "Stampa"},
-"puzzleTitle":function(d){return "Esercizio "+locale.v(d,"puzzle_number")+" di "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Esercizio "+common_locale.v(d,"puzzle_number")+" di "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "ripeti"},
 "resetProgram":function(d){return "Ricomincia"},
 "rotateText":function(d){return "Ruota il dispositivo."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Mi hai fatto fare un sacco di lavoro!  Puoi provare a farmi fare meno ripetizioni?"},
 "toolboxHeader":function(d){return "Blocchi"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Totale complessivo: "+locale.p(d,"numLines",0,"it",{"one":"1 linea","other":locale.n(d,"numLines")+" linee"})+" di codice."},
+"totalNumLinesOfCodeWritten":function(d){return "Totale complessivo: "+common_locale.p(d,"numLines",0,"it",{"one":"1 linea","other":common_locale.n(d,"numLines")+" linee"})+" di codice."},
 "tryAgain":function(d){return "Riprova"},
 "tryHOC":function(d){return "Prova l'Ora del Codice"},
 "wantToLearn":function(d){return "Vuoi imparare a programmare?"},

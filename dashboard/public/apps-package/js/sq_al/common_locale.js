@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "dhe"},
 "backToPreviousLevel":function(d){return "Kthehu në nivelin e mëparshëm"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Ti ke blloqe që nuk janë të bashkuar. Mendove të bashkosh ato me bllokun \"kur vrapon\"?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Urime! Ju sapo perfunduat fazen finale "},
-"finalStageTrophies":function(d){return "Urime! Ti ke përfunduar fazën finale dhe ke fituar "+locale.p(d,"numTrophies",0,"sq",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "Urime! Ti ke përfunduar fazën finale dhe ke fituar "+common_locale.p(d,"numTrophies",0,"sq",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "Përfundo"},
-"generatedCodeInfo":function(d){return "Edhe universitetet më të mira të mësojnë kodimin e bazuar në blloqe (psh "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Por mbrapa asaj çfarë shohim, blloqet të cilat ke mbledhur, mund të shfaqen në JavaScript, në gjuhën më të përdorur të kodimit:"},
+"generatedCodeInfo":function(d){return "Edhe universitetet më të mira të mësojnë kodimin e bazuar në blloqe (psh "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Por mbrapa asaj çfarë shohim, blloqet të cilat ke mbledhur, mund të shfaqen në JavaScript, në gjuhën më të përdorur të kodimit:"},
 "genericFeedback":function(d){return "Shiko se si përfundove dhe përpiqu të rregullosh programin tënd."},
 "hashError":function(d){return "Më vjen keq, '%1' nuk përputhet me asnjë program të ruajtur."},
 "help":function(d){return "Ndihmë"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "listë"},
 "makeYourOwnFlappy":function(d){return "Bëj lojën tënde Flappy"},
 "missingBlocksErrorMsg":function(d){return "Përdor një ose më shumë nga blloqet e mëposhtme për të zgjidhur këtë puzzle."},
-"nextLevel":function(d){return "Urime ju e perfunduat Puzzle-n "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Urime! Ti përfundove Puzzle "+locale.v(d,"puzzleNumber")+" dhe fitove "+locale.p(d,"numTrophies",0,"sq",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextLevel":function(d){return "Urime ju e perfunduat Puzzle-n "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Urime! Ti përfundove Puzzle "+common_locale.v(d,"puzzleNumber")+" dhe fitove "+common_locale.p(d,"numTrophies",0,"sq",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Urime! Ti përfundove "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Urime! Ti përfundove "+locale.v(d,"stageName")+" dhe fitove "+locale.p(d,"numTrophies",0,"sq",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Urime! Ti përfundove Puzzle "+locale.v(d,"puzzleNumber")+". (Megjithatë, ti mund të kishe përdorur vetëm "+locale.p(d,"numBlocks",0,"sq",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Ti sapo shkruajte "+locale.p(d,"numLines",0,"sq",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" të kodit!"},
+"nextStage":function(d){return "Urime! Ti përfundove "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Urime! Ti përfundove "+common_locale.v(d,"stageName")+" dhe fitove "+common_locale.p(d,"numTrophies",0,"sq",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Urime! Ti përfundove Puzzle "+common_locale.v(d,"puzzleNumber")+". (Megjithatë, ti mund të kishe përdorur vetëm "+common_locale.p(d,"numBlocks",0,"sq",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Ti sapo shkruajte "+common_locale.p(d,"numLines",0,"sq",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" të kodit!"},
 "openWorkspace":function(d){return "Si Funksionon"},
 "orientationLock":function(d){return "Fik orientimet në konfigurimet e pajisjes."},
 "play":function(d){return "luaj"},
 "print":function(d){return "Shtyp"},
-"puzzleTitle":function(d){return "Puzzle "+locale.v(d,"puzzle_number")+" i "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Puzzle "+common_locale.v(d,"puzzle_number")+" i "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "përsërit"},
 "resetProgram":function(d){return "Rivendosni"},
 "rotateText":function(d){return "Rrotullo pajisjen tënde."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Ti më detyrove të bëj shumë veprime! Mund të përpiqesh ta përsërisësh me më pak hapa?"},
 "toolboxHeader":function(d){return "Blloqet"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Totali i gjithë kohës: "+locale.p(d,"numLines",0,"sq",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" i kodit."},
+"totalNumLinesOfCodeWritten":function(d){return "Totali i gjithë kohës: "+common_locale.p(d,"numLines",0,"sq",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" i kodit."},
 "tryAgain":function(d){return "Provo perseri"},
 "tryHOC":function(d){return "Provo Orën e Kodimit"},
 "wantToLearn":function(d){return "Dëshiron të mësosh se si të kodosh?"},

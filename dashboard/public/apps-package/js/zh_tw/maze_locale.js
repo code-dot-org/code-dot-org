@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "在蜂巢"},
 "atFlower":function(d){return "在花叢中"},
 "avoidCowAndRemove":function(d){return "避開牛隻，並且移除1鏟泥土"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "執行"},
 "elseCode":function(d){return "否則"},
 "fill":function(d){return "填充 1"},
-"fillN":function(d){return "填充 "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "填充  深度是 "+appLocale.v(d,"shovelfuls")+" 的坑洞"},
+"fillN":function(d){return "填充 "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "填充  深度是 "+maze_locale.v(d,"shovelfuls")+" 的坑洞"},
 "fillSquare":function(d){return "填滿正方形"},
 "fillTooltip":function(d){return "填充1鏟泥土 "},
 "finalLevel":function(d){return "恭喜！你已經完成最後的關卡。"},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "有一堆土"},
 "putdownTower":function(d){return "將小土丘放下"},
 "removeAndAvoidTheCow":function(d){return "移除 1 並避開牛"},
-"removeN":function(d){return "移除 "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "移除 "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "移除土推"},
-"removeStack":function(d){return "移除由"+appLocale.v(d,"shovelfuls")+"鏟土堆成的小土堆"},
+"removeStack":function(d){return "移除由"+maze_locale.v(d,"shovelfuls")+"鏟土堆成的小土堆"},
 "removeSquare":function(d){return "移除正方型內的土堆"},
 "repeatCarefullyError":function(d){return "要解決這個問題，想清楚，把兩個移動和一個轉方向放在\"重複\"積木中。最後尾有一個額外的轉方向是接受的。"},
 "repeatUntil":function(d){return "重複 直到"},

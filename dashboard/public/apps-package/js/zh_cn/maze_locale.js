@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "在蜂巢"},
 "atFlower":function(d){return "在花里"},
 "avoidCowAndRemove":function(d){return "躲开牛并移除1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "执行"},
 "elseCode":function(d){return "或者"},
 "fill":function(d){return "填充1"},
-"fillN":function(d){return "填充"+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "填满 "+appLocale.v(d,"shovelfuls")+" 个坑\n"},
+"fillN":function(d){return "填充"+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "填满 "+maze_locale.v(d,"shovelfuls")+" 个坑\n"},
 "fillSquare":function(d){return "填充正方形"},
 "fillTooltip":function(d){return "填充1单位的土"},
 "finalLevel":function(d){return "恭喜你！你完成了最后一个谜题。"},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "有一堆土"},
 "putdownTower":function(d){return "放下塔"},
 "removeAndAvoidTheCow":function(d){return "移除1并躲开牛"},
-"removeN":function(d){return "移除"+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "移除"+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "移除土堆"},
-"removeStack":function(d){return "移除"+appLocale.v(d,"shovelfuls")+"铲子的土"},
+"removeStack":function(d){return "移除"+maze_locale.v(d,"shovelfuls")+"铲子的土"},
 "removeSquare":function(d){return "移除正方形"},
 "repeatCarefullyError":function(d){return "为了解决这个问题，仔细想一想将两次移动和一个转身放进“重复”块的这种模式。最后再有一个额外的转身就可以了。"},
 "repeatUntil":function(d){return "重复直到"},

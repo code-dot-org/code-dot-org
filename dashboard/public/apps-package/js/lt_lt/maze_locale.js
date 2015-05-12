@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "prie korio"},
 "atFlower":function(d){return "prie gėlės"},
 "avoidCowAndRemove":function(d){return "Išvenk karvės ir pašalink 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return " "},
 "elseCode":function(d){return "kitu atveju"},
 "fill":function(d){return "užpildyk 1"},
-"fillN":function(d){return "užpildyk "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "užpildyk "+appLocale.v(d,"shovelfuls")+" duobes žemėmis"},
+"fillN":function(d){return "užpildyk "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "užpildyk "+maze_locale.v(d,"shovelfuls")+" duobes žemėmis"},
 "fillSquare":function(d){return "užpildyk kvadratą"},
 "fillTooltip":function(d){return "iškrauk 1 žemių krūvą"},
 "finalLevel":function(d){return "Sveikinu! Tu išsprendei paskutinį galvosūkį."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "čia yra žemių krūva"},
 "putdownTower":function(d){return "padėk bokštą"},
 "removeAndAvoidTheCow":function(d){return "pašalink 1krūvą ir išvenk karvės"},
-"removeN":function(d){return "pašalink "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "pašalink "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "pašalink krūvą"},
-"removeStack":function(d){return "pašalink "+appLocale.v(d,"shovelfuls")+" krūveles(-ių)"},
+"removeStack":function(d){return "pašalink "+maze_locale.v(d,"shovelfuls")+" krūveles(-ių)"},
 "removeSquare":function(d){return "pašalink kvadratą"},
 "repeatCarefullyError":function(d){return "Norėdamas išspręsti, gerai pagalvok - kiek kartų reiktų pakartot po seką: du žingsniai ir pasukimas."},
 "repeatUntil":function(d){return "kartok, kol pasieksi"},

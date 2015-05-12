@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "dan"},
 "backToPreviousLevel":function(d){return "Kembali ke teka-teki sebelumnya"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Anda memiliki blok yang tak terpasang."},
 "extraTopBlocksWhenRun":function(d){return "Anda memiliki blok yang tak terpasang. Apakah maksud Anda untuk memasang ini ke blok \"ketika dijalankan\"/\"when run\" ?"},
 "finalStage":function(d){return "Horee! Anda berhasil menyelesaikan tahap akhir."},
-"finalStageTrophies":function(d){return "Horee! Anda berhasil menyelesaikan tahap akhir dan memenangkan "+locale.p(d,"numTrophies",0,"id",{"one":"piala","other":"piala "+locale.n(d,"numTrophies")})+"."},
+"finalStageTrophies":function(d){return "Horee! Anda berhasil menyelesaikan tahap akhir dan memenangkan "+common_locale.p(d,"numTrophies",0,"id",{"one":"piala","other":"piala "+common_locale.n(d,"numTrophies")})+"."},
 "finish":function(d){return "Selesai"},
-"generatedCodeInfo":function(d){return "Bahkan Universitas mengajar blok berbasis pengkodean (misalnya, "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Tetapi di bawah tenda, blok Anda telah berkumpul dapat juga ditunjukkan dalam JavaScript, dunia yang paling banyak digunakan pengkodean bahasa:"},
+"generatedCodeInfo":function(d){return "Bahkan Universitas mengajar blok berbasis pengkodean (misalnya, "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Tetapi di bawah tenda, blok Anda telah berkumpul dapat juga ditunjukkan dalam JavaScript, dunia yang paling banyak digunakan pengkodean bahasa:"},
 "genericFeedback":function(d){return "Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda."},
 "hashError":function(d){return "Maaf, '%1' tidak sesuai dengan program yang disimpan."},
 "help":function(d){return "Tolong"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "list"},
 "makeYourOwnFlappy":function(d){return "Buatlah permainan \"Flappy\" versi Anda sendiri"},
 "missingBlocksErrorMsg":function(d){return "Cobalah satu atau lebih blok di bawah untuk memecahkan teka-teki ini."},
-"nextLevel":function(d){return "Horee! Anda berhasil menyelesaikan teka-teki ke  "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Horee! Anda berhasil menyelesaikan teka-teki ke  "+locale.v(d,"puzzleNumber")+" dan memenangkan "+locale.p(d,"numTrophies",0,"id",{"satu":"a trophy","other":"trophies "+locale.n(d,"numTrophies")})+"."},
+"nextLevel":function(d){return "Horee! Anda berhasil menyelesaikan teka-teki ke  "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Horee! Anda berhasil menyelesaikan teka-teki ke  "+common_locale.v(d,"puzzleNumber")+" dan memenangkan "+common_locale.p(d,"numTrophies",0,"id",{"satu":"a trophy","other":"trophies "+common_locale.n(d,"numTrophies")})+"."},
 "nextPuzzle":function(d){return "Teka-teki berikutnya"},
-"nextStage":function(d){return "Selamat! Anda telah menyelesaikan "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Horee! Anda berhasil menyelesaikan teka-teki ke "+locale.v(d,"stageNumber")+" dan memenangkan "+locale.p(d,"numTrophies",0,"id",{"one":"piala","other":locale.n(d,"numTrophies")+" piala"})+"."},
-"numBlocksNeeded":function(d){return "Horee! Anda berhasil menyelesaikan teka-teki ke  "+locale.v(d,"puzzleNumber")+". (Namun, sebetulnya Anda cukup gunakan hanya "+locale.p(d,"numBlocks",0,"id",{"one":"1 blok","other":"blok "+locale.n(d,"numBlocks")})+".)"},
-"numLinesOfCodeWritten":function(d){return "Anda baru saja menulis "+locale.p(d,"numLines",0,"id",{"one":"1 baris","other":locale.n(d,"numLines")+" baris"})+" kode!"},
+"nextStage":function(d){return "Selamat! Anda telah menyelesaikan "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Horee! Anda berhasil menyelesaikan teka-teki ke "+common_locale.v(d,"stageNumber")+" dan memenangkan "+common_locale.p(d,"numTrophies",0,"id",{"one":"piala","other":common_locale.n(d,"numTrophies")+" piala"})+"."},
+"numBlocksNeeded":function(d){return "Horee! Anda berhasil menyelesaikan teka-teki ke  "+common_locale.v(d,"puzzleNumber")+". (Namun, sebetulnya Anda cukup gunakan hanya "+common_locale.p(d,"numBlocks",0,"id",{"one":"1 blok","other":"blok "+common_locale.n(d,"numBlocks")})+".)"},
+"numLinesOfCodeWritten":function(d){return "Anda baru saja menulis "+common_locale.p(d,"numLines",0,"id",{"one":"1 baris","other":common_locale.n(d,"numLines")+" baris"})+" kode!"},
 "openWorkspace":function(d){return "Cara kerjanya"},
 "orientationLock":function(d){return "Matikan orientasi kunci dalam pengaturan perangkat."},
 "play":function(d){return "mainkan"},
 "print":function(d){return "Cetak"},
-"puzzleTitle":function(d){return "Teka-teki ke "+locale.v(d,"puzzle_number")+" dari "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Teka-teki ke "+common_locale.v(d,"puzzle_number")+" dari "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "Ulangi"},
 "resetProgram":function(d){return "Kembali ke awal"},
 "rotateText":function(d){return "Memutar perangkat anda."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Anda membuat saya melakukan terlalu banyak pekerjaan!  Bisakan Anda coba membuat pengulangan yang lebih sedikit?"},
 "toolboxHeader":function(d){return "blok"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Total keseluruhan: "+locale.p(d,"numLines",0,"id",{"one":"1 baris","other":locale.n(d,"numLines")+" baris"})+" kode."},
+"totalNumLinesOfCodeWritten":function(d){return "Total keseluruhan: "+common_locale.p(d,"numLines",0,"id",{"one":"1 baris","other":common_locale.n(d,"numLines")+" baris"})+" kode."},
 "tryAgain":function(d){return "Ayo coba lagi!"},
 "tryHOC":function(d){return "Cobalah \"Hour of Code\""},
 "wantToLearn":function(d){return "Ingin belajar untuk mengkode?"},
