@@ -11,7 +11,7 @@ Background:
 
 @no_mobile
 Scenario: Submit an invalid solution
-  When I press "x-close"
+  When I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   And I press "runButton"
@@ -29,7 +29,7 @@ Scenario: Submit an invalid solution
 
 @no_mobile
 Scenario: Submit a valid solution
-  When I press "x-close"
+  When I close the dialog
   Then I wait until element "#runButton" is visible
   And element "#resetButton" is hidden
   Then I drag block "4" to block "6"
