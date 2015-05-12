@@ -11,7 +11,7 @@ theme: none
 %h3 {{progress.script.name}}
 
 %div
-  Switch course:
+  View progress in:
   %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeProgress(course_id)'}
 %br
 
