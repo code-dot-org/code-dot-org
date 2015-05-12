@@ -112,6 +112,13 @@ NetSimPanel.prototype.render = function () {
 };
 
 /**
+ * @returns {jQuery} a handle on the root element for this panel
+ */
+NetSimPanel.prototype.getRoot = function () {
+  return this.rootDiv_;
+};
+
+/**
  * Set panel title.
  * @param {string} newTitle - Localized panel title.
  */

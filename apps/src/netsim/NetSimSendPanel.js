@@ -510,3 +510,14 @@ NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
     packetEditor.setMaxPacketSize(newPacketSize);
   });
 };
+
+/**
+ * After toggling panel visibility, trigger a layout update so send/log panel
+ * space is shared correctly.
+ * @private
+ * @override
+ */
+NetSimSendPanel.prototype.onMinimizerClick_ = function () {
+  NetSimSendPanel.superPrototype.onMinimizerClick_.call(this);
+  this.netsim_.updateLayout();
+};
