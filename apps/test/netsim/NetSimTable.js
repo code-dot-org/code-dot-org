@@ -4,7 +4,7 @@ var assertEqual = testUtils.assertEqual;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeStorageTable = netsimTestUtils.fakeStorageTable;
 
-var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
+var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
 
 describe("NetSimTable", function () {
   var apiTable, netsimTable, callback, notified;

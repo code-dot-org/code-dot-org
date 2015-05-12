@@ -1,6 +1,6 @@
 var testUtils = require('../../../util/testUtils');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var blockUtils = require(testUtils.buildPath('block_utils'));
 
 // Bee level in which we have a flower with zero nectar
 var levelDef = {

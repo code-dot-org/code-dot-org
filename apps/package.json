@@ -8,24 +8,11 @@
   "scripts": {
     "test": "grunt test"
   },
-  "browser": {
-    "blockly": "./build/package/js/blockly.js"
-  },
-  "browserify": {
-    "transform": [
-      "require-globify",
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "blockly": {
-      "exports": "Blockly"
-    }
+  "optionalDependencies": {
+    "canvas": "~1.1.6"
   },
   "devDependencies": {
-    "@cdo/apps": "0.0.1",
     "browserify": "^8.1.1",
-    "browserify-shim": "^3.8.3",
     "chai": "~1.10.0",
     "connect-livereload": "~0.5.2",
     "ejs": "0.8.4",
@@ -43,32 +30,27 @@
     "grunt-exec": "^0.4.6",
     "grunt-express": "~1.4.1",
     "grunt-lodash": "~0.3.0",
+    "grunt-mocha-test": "~0.12.6",
     "grunt-newer": "^1.1.0",
     "grunt-notify": "^0.4.1",
     "grunt-sass": "~0.17.0",
     "grunt-strip-code": "~0.1.2",
     "handlebars-runtime": "~1.0.12",
-    "jquery": "^2.1.4",
     "jsdom": "0.8.6",
     "load-grunt-tasks": "^2.0.0",
     "lodash": "~2.4.1",
     "lodash-cli": "~2.4.2",
     "messageformat": "^0.2.1",
     "mkdirp": "^0.5.0",
-    "mochify": "^2.8.1",
     "node-sass": "~2.0.0-beta",
     "phantomjs": "git://github.com/wjordan/phantomjs",
     "react": "^0.13.2",
     "reactify": "^1.1.0",
-    "npm-which": "^2.0.0",
-    "phantomjs": "git://github.com/wjordan/phantomjs",
-    "require-globify": "^1.1.0",
     "requirejs": "~2.1.15",
     "rfile": "~1.0.0",
     "through": "~2.3.6",
     "uglify-js": "~2.4.16",
     "watchify": "^2.2.1",
-    "which": "^1.0.9",
     "wrench": "~1.5.8",
     "xmldom": "~0.1.19"
   }

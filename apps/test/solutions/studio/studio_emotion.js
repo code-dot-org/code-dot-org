@@ -1,8 +1,8 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
-var Emotions = require('@cdo/apps/studio/constants.js').Emotions;
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var Emotions = require(testUtils.buildPath('studio/constants.js')).Emotions;
 
-var _ = require('@cdo/apps/lodash');
+var _ = require(testUtils.buildPath('lodash'));
 
 var levelDef = {
   map: [

@@ -1,10 +1,10 @@
 var testUtils = require('../../../util/testUtils');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var blockUtils = require(testUtils.buildPath('block_utils'));
 
 var reqBlocks = function () {
   // stick this inside a function so that it's only loaded when needed
-  return require('@cdo/apps/maze/requiredBlocks.js');
+  return require('../../../util/testUtils').requireWithGlobalsCheckBuildFolder('maze/requiredBlocks.js');
 };
 
 module.exports = {

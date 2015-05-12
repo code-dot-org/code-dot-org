@@ -12,7 +12,7 @@
 
 // Utils required only for Function.prototype.inherits()
 require('../utils');
-var i18n = require('./locale');
+var i18n = require('../../locale/current/netsim');
 var NetSimSlider = require('./NetSimSlider');
 
 /**

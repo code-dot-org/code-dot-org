@@ -2,7 +2,7 @@
  * Blocks specific to Bee
  */
 
-var msg = require('./locale');
+var msg = require('../../locale/current/maze');
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 

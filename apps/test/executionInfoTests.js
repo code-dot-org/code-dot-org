@@ -1,7 +1,12 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 
-var ExecutionInfo = require('@cdo/apps/maze/executionInfo');
+// needed for Hammerjs
+global.navigator = {};
+global.window = {};
+global.document = {};
+
+var ExecutionInfo = testUtils.requireWithGlobalsCheckBuildFolder('maze/executionInfo');
 
 describe("ExecutionInfo tests", function () {
   it("single action queue/dequeue", function () {

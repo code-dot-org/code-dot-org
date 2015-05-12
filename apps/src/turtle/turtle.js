@@ -26,8 +26,8 @@
  */
 'use strict';
 
-var commonMsg = require('../locale');
-var turtleMsg = require('./locale');
+var commonMsg = require('../../locale/current/common');
+var turtleMsg = require('../../locale/current/turtle');
 var levels = require('./levels');
 var Colours = require('./colours');
 var codegen = require('../codegen');
@@ -279,11 +279,9 @@ Artist.prototype.afterInject_ = function (config) {
   // Set their initial contents.
   this.loadTurtle();
   this.drawImages();
-
   this.isDrawingAnswer_ = true;
   this.drawAnswer();
   this.isDrawingAnswer_ = false;
-
   if (this.level.predrawBlocks) {
     this.isPredrawing_ = true;
     this.drawBlocksOnCanvas(this.level.predrawBlocks, this.ctxPredraw);

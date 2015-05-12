@@ -1,7 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assertEqual = testUtils.assertEqual;
 
-var netsimUtils = require('@cdo/apps/netsim/netsimUtils');
+var netsimUtils = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimUtils');
 
 describe("netsimUtils", function () {
 
