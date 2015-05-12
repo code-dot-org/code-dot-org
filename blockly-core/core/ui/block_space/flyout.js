@@ -143,7 +143,6 @@ Blockly.Flyout.prototype.createDom = function(insideToolbox) {
     svgTrashcan.setAttribute("style", "opacity: 0");
     svgTrashcan.setAttribute('transform', 'translate(60, 20)');
     this.svgGroup_.appendChild(svgTrashcan);
-    //this.trashcan.init();
     this.trashcan = trashcan;
   }
 
