@@ -24,7 +24,8 @@ angular: teacherDashboard
     'ngResource',
     'teacherDashboard.controllers',
     'teacherDashboard.services',
-    'teacherDashboard.directives'
+    'teacherDashboard.directives',
+    'teacherDashboard.filters'
   ]).
 
   // ROUTES
@@ -45,6 +46,10 @@ angular: teacherDashboard
     $routeProvider.when('/sections/:id/:tab',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionDetailController'});
     $routeProvider.when('/sections/:sectionid/student/:studentid',
+        {templateUrl: '/teacher-dashboard/student', controller: 'StudentDetailController'});
+    $routeProvider.when('/sections/:sectionid/student/:studentid/course/',
+        {templateUrl: '/teacher-dashboard/student', controller: 'StudentDetailController'});
+    $routeProvider.when('/sections/:sectionid/student/:studentid/course/:courseid',
         {templateUrl: '/teacher-dashboard/student', controller: 'StudentDetailController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
@@ -70,6 +75,15 @@ angular: teacherDashboard
     };
   }]);
 
+  // FILTERS
+  var filters = angular.module('teacherDashboard.filters', []).
+    value('version', '0.1');
+
+  filters.filter('htmlSafe', function($sce) {
+    return function(val) {
+        return $sce.trustAsHtml(val);
+    };
+  });
 
   // SERVICES
 
@@ -89,7 +103,8 @@ angular: teacherDashboard
          update: {method:'POST', url: 'v2/sections/:id/update'},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
-         progress: {method:'GET', url:'/dashboardapi/section_progress/:id'}
+         progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
+         studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'}
       });
     }]);
 
@@ -174,13 +189,18 @@ angular: teacherDashboard
     };
   }]);
 
-  app.controller('StudentDetailController', ['$scope', '$routeParams', 'studentsService', 'sectionsService',
-                                             function($scope, $routeParams, studentsService, sectionsService) {
+  app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',
+                                             function($scope, $routeParams, sectionsService) {
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
-    $scope.student = studentsService.get({id: $routeParams.studentid});
 
-    $scope.studentProgressUrl = '/dashboardapi/student_progress/' +
-                                $routeParams.sectionid + '/' + $routeParams.studentid;
+    $scope.course_id = parseInt($routeParams.courseid);
+    $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
+
+    $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid});
+
+    $scope.changeProgress = function() {
+      $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid, script_id: $scope.course_id});
+    };
   }]);
 
   app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService', 'studentsService',
@@ -384,8 +404,8 @@ angular: teacherDashboard
 
   }]);
 
-  app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, sectionsService, studentsService) {
+  app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
 
 
     $scope.section = sectionsService.get({id: $routeParams.id});
@@ -411,14 +431,44 @@ angular: teacherDashboard
 
     $scope.progressLoaded = false;
 
+    $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
+
     // wait until we have both the students and the student progress
     $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
       $scope.mergeProgress();
       $scope.progressLoaded = true;
     });
 
+    $scope.changeProgress = function(scriptId) {
+      $scope.progressLoaded = false;
+      $scope.progress = sectionsService.progress({id: $routeParams.id, script_id: scriptId});
+
+      $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
+        $scope.mergeProgress();
+        $scope.progressLoaded = true;
+      });
+    };
+
+    // refresh progress every 30s
+    // TODO: 'update' progress instead of replacing it
+    // $interval(function() {
+    //   if (!$scope.progressLoaded) { return; } // don't refresh if loading
+    //   $scope.progressLoaded = false;
+    //   if ($scope.scriptId) {
+    //     $scope.progress = sectionsService.progress({id: $routeParams.id, script_id: $scope.scriptId});
+    //   } else {
+    //     $scope.progress = sectionsService.progress({id: $routeParams.id});
+    //   }
+
+    //   $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(data){
+    //     $scope.mergeProgress();
+    //     $scope.progressLoaded = true;
+    //   });
+    // }, 30 * 1000);
+
     // merge the data returned by progress api into the data returned by the section students api
     $scope.mergeProgress = function() {
+      $scope.course_id = $scope.progress.script.id;
       // calculate width of each level in the progress bar assuming the overall width is 780 px
       $scope.progress.bar_width = Math.floor(780 / $scope.progress.script.levels_count);
       $scope.progress.table_width = $scope.progress.bar_width * $scope.progress.script.levels_count;
