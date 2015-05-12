@@ -1,9 +1,11 @@
 // TODO (brent) - way too many globals
-/* global startTiming, script_path, Dialog, CDOSounds, dashboard, wrapExistingClipPaths, handleClipPathChanges, appOptions, $, trackEvent, Blockly, Applab, stopTiming, sendReport, cancelReport, lastServerResponse, showVideoDialog, channels*/
+/* global startTiming, script_path, Dialog, CDOSounds, dashboard, wrapExistingClipPaths, handleClipPathChanges, appOptions, $, trackEvent, Blockly, Applab, stopTiming, sendReport, cancelReport, lastServerResponse, showVideoDialog*/
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
+
+var channels = require('./client_api/channels');
 
 // Sets up default options and initializes blockly
 startTiming('Puzzle', script_path, '');

@@ -4,6 +4,7 @@
 
 
 var gulp = require('gulp');
+var glob = require('glob');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
 
@@ -30,12 +31,15 @@ gulp.task('enable-watch', function () {
 });
 
 gulp.task('bundle-js', function () {
-  console.log('bundle');
   // TODO - check dependencies?
 
   // TODO - more complete list
+  var files = [
+    'initApp.js'
+  ];
+  console.log(files);
   var config = {
-    src: ['initApp.js'],
+    src: files,
     dest: 'build/shared.js',
     watch: watchEnabled
   };

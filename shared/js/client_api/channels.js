@@ -1,6 +1,6 @@
-function channels()
-{
-  var object = {
+module.exports = function () {
+  // TODO (brent) : we should just export this object
+  return {
     api_base_url: "/v3/channels",
 
     all: function(callback) {
@@ -51,7 +51,7 @@ function channels()
         callback(undefined);
       });
     },
-  
+
     update: function(id, value, callback) {
       $.ajax({
         url: this.api_base_url + "/" + id,
@@ -64,7 +64,5 @@ function channels()
         callback(false)
       });
     }
-  }
-  
-  return object;
+  };
 }
