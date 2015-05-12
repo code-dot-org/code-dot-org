@@ -665,6 +665,7 @@ NetSim.prototype.changeEncodings = function (newEncodings) {
   this.sentMessageLog_.setEncodings(newEncodings);
   this.sendPanel_.setEncodings(newEncodings);
   this.visualization_.setEncodings(newEncodings);
+  this.updateLayout();
 };
 
 /**
