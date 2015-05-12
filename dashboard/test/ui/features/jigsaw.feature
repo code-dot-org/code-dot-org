@@ -5,7 +5,7 @@ Background:
   And I rotate to landscape
   Then element ".dialog-title" has text "Puzzle 1 of 12"
   Then there's an image "instruction_gifs/drag-drop.gif"
-  And I press "x-close"
+  And I close the dialog
 
 @new_courses
 Scenario: Loading the first jigsaw level
