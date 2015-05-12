@@ -186,7 +186,7 @@ NetSim.prototype.init = function(config) {
   }
 
   // Set up global singleton for easy access to simulator-wide settings
-  netsimGlobals.setRootController(this);
+  netsimGlobals.setRootControllers(this.studioApp_, this);
 
   /**
    * Skin for the loaded level
