@@ -54,6 +54,20 @@ var MESSAGE_SLIDE_IN_DURATION_MS = 400;
  */
 
 /**
+ * @function
+ * @name INetSimLogPanel#getHeight
+ * @returns {number} vertical space that panel currently consumes (including
+ *          margins) in pixels.
+ */
+
+/**
+ * Sets the vertical space that this log panel should consume (including margins)
+ * @function
+ * @name INetSimLogPanel#setHeight
+ * @param {number} heightPixels
+ */
+
+/**
  * Generator and controller for message log.
  * @param {jQuery} rootDiv
  * @param {Object} options
@@ -355,7 +369,7 @@ NetSimLogPanel.prototype.setHeight = function (heightPixels) {
 
 /**
  * @returns {number} vertical space that panel currently consumes (including
- * margins) in pixels.
+ *          margins) in pixels.
  */
 NetSimLogPanel.prototype.getHeight = function () {
   return this.getRoot().find('.netsim-panel').outerHeight(true);
