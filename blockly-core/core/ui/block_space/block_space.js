@@ -634,8 +634,7 @@ Blockly.BlockSpace.prototype.drawHotZone = function(x) {
     // fade towards the new toolbox background colour.
     // this element can have existing styling, so use this syntax to modify a single property.
     background.style["background-color"] = rgbString;
-  }
-  else {
+  } else {
     // fade towards the new flyout backround colour
     background.setAttribute("style", "fill:" + rgbString);
   }
@@ -651,6 +650,9 @@ Blockly.BlockSpace.prototype.drawHotZone = function(x) {
   blockGroup.setAttribute("style", "opacity:" + normalColorIntensity);
 
   // and fade in the trash can
-  var trashcan = goog.dom.getElement("trashcan", goog.dom.getElementByClass("svgFlyoutGroup"));
-  trashcan.setAttribute("style", "opacity:" + trashColorIntensity);
+  var trashcanElementName = this.blockSpaceEditor.toolbox ? "trashcanHolder" : "trashcan"
+  var trashcanElement = goog.dom.getElement(trashcanElementName, goog.dom.getElementByClass("svgFlyoutGroup"));
+  var trashcanDisplay = trashColorIntensity == 0 ? "none" : "block";
+  var styleString = "opacity: " + trashColorIntensity + "; display: " + trashcanDisplay + "; position: absolute";
+  trashcanElement.setAttribute("style", styleString);
 };

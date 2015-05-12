@@ -77,21 +77,17 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
   this.HtmlDiv.setAttribute('dir', Blockly.RTL ? 'RTL' : 'LTR');
   goog.dom.insertSiblingBefore(this.HtmlDiv, svg);
 
-  // we kinda want to show a trash can here
-
+  // Add a trashcan inside a holder svg element.
   var trashCanHolder = Blockly.createSvgElement('svg', {
     id: 'trashcanHolder',
     width: 90,
     height: 90,
-    style: 'display: block; position: absolute'
+    style: 'display: none; position: absolute'
   }, this.HtmlDiv);
-
   var trashcan = new Blockly.Trashcan(this);
   var svgTrashcan = trashcan.createDom();
-  svgTrashcan.setAttribute("style", "opacity: 0");
   svgTrashcan.setAttribute('transform', 'translate(20, 10)');
   trashCanHolder.appendChild(svgTrashcan);
-  //this.trashcan.init();
   this.trashcan = trashcan;
 
   /**
