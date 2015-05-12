@@ -156,6 +156,14 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
 };
 
 /**
+ * Whether this panel is currently minimized (showing only its header) or not.
+ * @returns {boolean}
+ */
+NetSimPanel.prototype.isMinimized = function () {
+  return this.isMinimized_;
+};
+
+/**
  * Add a button to the right end of the panel header.
  * @param {string} buttonText
  * @param {function} pressCallback

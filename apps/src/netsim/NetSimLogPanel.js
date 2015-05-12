@@ -17,6 +17,7 @@ var markup = require('./NetSimLogPanel.html.ejs');
 var packetMarkup = require('./NetSimLogPacket.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * How long the "entrance" animation for new messages lasts, in milliseconds.
@@ -326,4 +327,47 @@ NetSimLogPacket.prototype.markAsRead = function () {
 NetSimLogPacket.prototype.toggleMinimized = function () {
   this.isMinimized = !this.isMinimized;
   this.render();
+};
+
+/**
+ * Sets the vertical space that this log panel should consume (including margins)
+ * @param {number} heightPixels
+ */
+NetSimLogPanel.prototype.setHeight = function (heightPixels) {
+  var root = this.getRoot().find('.netsim-panel');
+  var panelHeader = root.find('h1');
+  var panelBody = root.find('.panel-body');
+
+  var panelMargins = parseFloat(root.css('margin-top')) +
+      parseFloat(root.css('margin-bottom'));
+  var headerHeight = panelHeader.outerHeight(true);
+  var panelBorders = parseFloat(panelBody.css('border-top-width')) +
+      parseFloat(panelBody.css('border-bottom-width'));
+  var scrollMargins = parseFloat(this.scrollArea_.css('margin-top')) +
+      parseFloat(this.scrollArea_.css('margin-bottom'));
+
+  // We set the panel height by fixing the size of its inner scrollable
+  // area.
+  var newScrollViewportHeight = heightPixels - (panelMargins + headerHeight +
+      panelBorders + scrollMargins);
+  this.scrollArea_.height(Math.floor(newScrollViewportHeight));
+};
+
+/**
+ * @returns {number} vertical space that panel currently consumes (including
+ * margins) in pixels.
+ */
+NetSimLogPanel.prototype.getHeight = function () {
+  return this.getRoot().find('.netsim-panel').outerHeight(true);
+};
+
+/**
+ * After toggling panel visibility, trigger a layout update so send/log panel
+ * space is shared correctly.
+ * @private
+ * @override
+ */
+NetSimLogPanel.prototype.onMinimizerClick_ = function () {
+  NetSimLogPanel.superPrototype.onMinimizerClick_.call(this);
+  netsimGlobals.updateLayout();
 };
