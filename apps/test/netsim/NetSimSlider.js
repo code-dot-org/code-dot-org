@@ -2,7 +2,7 @@ var testUtils = require('../util/testUtils');
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 
-var NetSimSlider = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimSlider');
+var NetSimSlider = require('@cdo/apps/netsim/NetSimSlider');
 
 describe("NetSimSlider", function () {
   var slider;

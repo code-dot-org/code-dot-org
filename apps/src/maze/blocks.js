@@ -23,8 +23,8 @@
  */
 'use strict';
 
-var msg = require('../../locale/current/maze');
-var commonMsg = require('../../locale/current/common');
+var msg = require('./locale');
+var commonMsg = require('../locale');
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 var mazeUtils = require('./mazeUtils');

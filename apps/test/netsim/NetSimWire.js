@@ -6,7 +6,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimWire = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimWire');
+var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 
 describe("NetSimWire", function () {
   var testShard, wireTable;
