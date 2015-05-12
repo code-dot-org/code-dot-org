@@ -4,10 +4,10 @@ var assert = chai.assert;
 
 var testUtils = require('../util/testUtils');
 
-var ExpressionNode = require('@cdo/apps/calc/expressionNode');
-var EquationSet = require('@cdo/apps/calc/equationSet');
-var Equation = require('@cdo/apps/calc/equation');
-var utils = require('@cdo/apps/utils');
+var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
+var EquationSet = require(testUtils.buildPath('/calc/equationSet'));
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
+var utils = require(testUtils.buildPath('/utils.js'));
 
 describe('EquationSet', function () {
   describe('addEquation_', function () {

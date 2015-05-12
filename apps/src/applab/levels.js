@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = require('./locale');
+var msg = require('../../locale/current/applab');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;

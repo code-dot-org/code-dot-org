@@ -6,7 +6,7 @@ var testUtils = require('./util/testUtils');
 
 testUtils.setupLocales();
 
-var errorMapper = require('@cdo/apps/applab/acemode/errorMapper');
+var errorMapper = testUtils.requireWithGlobalsCheckBuildFolder('applab/acemode/errorMapper');
 
 describe('errorMapper correctly maps different errors', function () {
   it('defined but never used', function () {

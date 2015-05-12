@@ -4,9 +4,9 @@ var assert = chai.assert;
 
 var testUtils = require('../util/testUtils');
 
-var ExpressionNode = require('@cdo/apps/calc/expressionNode');
-var Token = require('@cdo/apps/calc/token');
-var jsnums = require('@cdo/apps/calc/js-numbers/js-numbers');
+var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
+var Token = require(testUtils.buildPath('/calc/token'));
+var jsnums = require(testUtils.buildPath('/calc/js-numbers/js-numbers'));
 
 function isJsNumber(val) {
   return (val instanceof jsnums.Rational ||
@@ -401,6 +401,10 @@ describe("ExpressionNode", function () {
       node = new ExpressionNode('f', [1]);
       evaluation = node.evaluate(mapping);
 
+      // pivotal # 87579626
+      // what it throws is Maximum callstack exceeded. i wonder if i
+      // can/should get it to fail earlier
+      // maybe when evaluating, remove self from mapping?
       assert(evaluation.err);
     });
 
@@ -883,13 +887,12 @@ describe("ExpressionNode", function () {
     });
 
     it("diffs function calls that are passed expressions", function () {
-      var node, tokenList;
       // f(1 + 2)
-      node = new ExpressionNode('f', [
+      var node = new ExpressionNode('f', [
         new ExpressionNode('+', [1, 2])
       ]);
 
-      tokenList = node.getTokenList(false);
+      var tokenList = node.getTokenList(false);
       assert.deepEqual(tokenList, [
         new Token('f', false),
         new Token('(', false),

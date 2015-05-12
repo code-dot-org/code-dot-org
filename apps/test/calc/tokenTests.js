@@ -4,9 +4,9 @@ var assert = chai.assert;
 
 var testUtils = require('../util/testUtils');
 
-var ExpressionNode = require('@cdo/apps/calc/expressionNode');
-var Token = require('@cdo/apps/calc/token');
-var jsnums = require('@cdo/apps/calc/js-numbers/js-numbers');
+var ExpressionNode = require(testUtils.buildPath('/calc/expressionNode'));
+var Token = require(testUtils.buildPath('/calc/token'));
+var jsnums = require(testUtils.buildPath('/calc/js-numbers/js-numbers'));
 
 describe('Token', function () {
   it('handles repeated decimals properly', function () {

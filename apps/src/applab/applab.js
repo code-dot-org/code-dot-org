@@ -10,8 +10,8 @@
 'use strict';
 require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
-var applabMsg = require('./locale');
+var commonMsg = require('../../locale/current/common');
+var applabMsg = require('../../locale/current/applab');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -824,10 +824,6 @@ Applab.initReadonly = function(config) {
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function(config) {
-  // replace studioApp methods with our own
-  studioApp.reset = this.reset.bind(this);
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
-
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -929,7 +925,7 @@ Applab.init = function(config) {
 
     if (studioApp.share) {
       // automatically run in share mode:
-      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+      window.setTimeout(studioApp.runButtonClick.bind(studioApp), 0);
     }
   };
 
@@ -1489,7 +1485,7 @@ Applab.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Applab.reset = function(first) {
+studioApp.reset = function(first) {
   var i;
   Applab.clearEventHandlersKillTickLoop();
 
@@ -1615,7 +1611,7 @@ studioApp.runButtonClickWrapper = function (callback) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Applab.runButtonClick = function() {
+studioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -1942,7 +1938,7 @@ Applab.onStepOverButton = function() {
 
 Applab.onStepInButton = function() {
   if (!Applab.running) {
-    Applab.runButtonClick();
+    studioApp.runButtonClick();
     Applab.onPauseContinueButton();
   }
   Applab.paused = true;

@@ -3,13 +3,13 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
-var NetSimShardCleaner = require('@cdo/apps/netsim/NetSimShardCleaner');
-var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
-var NodeType = require('@cdo/apps/netsim/netsimConstants').NodeType;
-
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
+
+var NetSimShardCleaner = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimShardCleaner');
+var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
+var NodeType = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimConstants').NodeType;
 
 var makeNode = function (shard) {
   var newNodeID;

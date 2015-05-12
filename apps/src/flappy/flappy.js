@@ -8,8 +8,8 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
-var flappyMsg = require('./locale');
+var commonMsg = require('../../locale/current/common');
+var flappyMsg = require('../../locale/current/flappy');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -476,17 +476,13 @@ Flappy.onMouseDown = function (e) {
     document.getElementById('instructions').setAttribute('visibility', 'hidden');
     document.getElementById('getready').setAttribute('visibility', 'hidden');
   } else if (Flappy.gameState === Flappy.GameStates.WAITING) {
-    Flappy.runButtonClick();
+    studioApp.runButtonClick();
   }
 };
 /**
  * Initialize Blockly and the Flappy app.  Called on page load.
  */
 Flappy.init = function(config) {
-  // replace studioApp methods with our own
-  studioApp.reset = this.reset.bind(this);
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
-
   Flappy.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -612,7 +608,7 @@ Flappy.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Flappy.reset = function(first) {
+studioApp.reset = function(first) {
   var i;
   Flappy.clearEventHandlersKillTickLoop();
 
@@ -666,7 +662,7 @@ Flappy.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Flappy.runButtonClick = function() {
+studioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.

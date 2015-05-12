@@ -1,10 +1,10 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils.js');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var blockUtils = require(testUtils.buildPath('block_utils.js'));
 
-var Colours = require('@cdo/apps/turtle/colours');
+var Colours = require(testUtils.buildPath('turtle/colours'));
 
-var studioApp = require('@cdo/apps/StudioApp').singleton;
+var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
 
 module.exports = {
   app: "turtle",
@@ -13,7 +13,6 @@ module.exports = {
   tests: [
     {
       description: "fractal snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
@@ -50,7 +49,6 @@ module.exports = {
 
     {
       description: "spiral snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
@@ -69,7 +67,6 @@ module.exports = {
 
     {
       description: "line snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
@@ -88,7 +85,6 @@ module.exports = {
 
     {
       description: "parallelogram snowflake",
-      timeout: 12000,
       delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,

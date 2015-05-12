@@ -1,9 +1,9 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var blockUtils = require(testUtils.buildPath('block_utils'));
 testUtils.setupLocale('calc');
-var calcMsg = require('@cdo/apps/calc/locale');
-var commonMsg = require('@cdo/apps/locale');
+var calcMsg = require(testUtils.buildPath('../locale/current/calc'));
+var commonMsg = require(testUtils.buildPath('../locale/current/common'));
 
 module.exports = {
   app: "calc",

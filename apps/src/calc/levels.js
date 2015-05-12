@@ -1,4 +1,4 @@
-var msg = require('./locale');
+var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
 
 /**

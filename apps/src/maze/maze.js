@@ -24,7 +24,7 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
+var commonMsg = require('../../locale/current/common');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -507,10 +507,6 @@ function resetDirtImages(running) {
  * Initialize Blockly and the maze.  Called on page load.
  */
 Maze.init = function(config) {
-  // replace studioApp methods with our own
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
-  studioApp.reset = this.reset.bind(this);
-
   var extraControlRows = null;
 
   skin = config.skin;
@@ -748,7 +744,7 @@ var updatePegmanAnimation = function(options) {
  * Reset the maze to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Maze.reset = function(first) {
+studioApp.reset = function(first) {
   if (Maze.bee) {
     // Bee needs to reset itself and still run studioApp.reset logic
     Maze.bee.reset();
@@ -877,7 +873,7 @@ function resetTiles() {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Maze.runButtonClick = function() {
+studioApp.runButtonClick = function() {
   var stepButton = document.getElementById('stepButton');
   if (stepButton) {
     stepButton.setAttribute('disabled', '');

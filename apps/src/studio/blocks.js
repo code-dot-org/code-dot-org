@@ -8,9 +8,9 @@
 /* global Studio */
 
 var studioApp = require('../StudioApp').singleton;
-var msg = require('./locale');
+var msg = require('../../locale/current/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('../locale');
+var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');

@@ -1,5 +1,5 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
 
 
 // Test saySprite

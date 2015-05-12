@@ -1,13 +1,13 @@
 var testUtils = require('../../util/testUtils');
 testUtils.setupLocale('calc');
 
-var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
-var studioApp = require('@cdo/apps/StudioApp').singleton;
-var Calc = require('@cdo/apps/calc/calc.js');
-var EquationSet = require('@cdo/apps/calc/equationSet.js');
-var Equation = require('@cdo/apps//calc/equation.js');
-var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
+var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
+var blockUtils = require(testUtils.buildPath('block_utils'));
+var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
+var Calc = require(testUtils.buildPath('calc/calc.js'));
+var EquationSet = require(testUtils.buildPath('calc/equationSet.js'));
+var Equation = require(testUtils.buildPath('/calc/equation.js'));
+var ExpressionNode = require(testUtils.buildPath('calc/expressionNode.js'));
 
 /**
  * This is another example of me taking advantage of the fact that our level
@@ -57,12 +57,12 @@ function displayGoalCustomValidator(assert) {
 
     displayGoal(targetSet);
 
-    assert.equal(answerExpression.childElementCount, 1);
+    assert.equal(answerExpression.children.length, 1);
 
-    var g = answerExpression.firstElementChild;
-    assert.equal(g.childNodes.length, 1);
-    assert.equal(g.childNodes[0].textContent, "5");
-    assert.equal(g.childNodes[0].getAttribute('class'), null);
+    var g = answerExpression.children[0];
+    assert.equal(g.children.length, 1);
+    assert.equal(g.children[0].textContent, "5");
+    assert.equal(g.children[0].getAttribute('class'), null);
   });
 
   displayGoalTest(assert, 'single function', function () {
@@ -74,23 +74,23 @@ function displayGoalCustomValidator(assert) {
 
     displayGoal(targetSet);
 
-    assert.equal(answerExpression.childElementCount, 1);
+    assert.equal(answerExpression.children.length, 1);
 
     // f(5) = 5
-    var g = answerExpression.firstElementChild;
-    // assert.equal(g.childNodes.length, 1);
-    assert.equal(g.childNodes[0].textContent, "f");
-    assert.equal(g.childNodes[0].getAttribute('class'), null);
-    assert.equal(g.childNodes[1].textContent, "(");
-    assert.equal(g.childNodes[1].getAttribute('class'), null);
-    assert.equal(g.childNodes[2].textContent, "5");
-    assert.equal(g.childNodes[2].getAttribute('class'), null);
-    assert.equal(g.childNodes[3].textContent, ")");
-    assert.equal(g.childNodes[3].getAttribute('class'), null);
-    assert.equal(g.childNodes[4].textContent, replaceSpaces(" = "));
-    assert.equal(g.childNodes[4].getAttribute('class'), null);
-    assert.equal(g.childNodes[5].textContent, replaceSpaces("5"));
-    assert.equal(g.childNodes[5].getAttribute('class'), null);
+    var g = answerExpression.children[0];
+    // assert.equal(g.children.length, 1);
+    assert.equal(g.children[0].textContent, "f");
+    assert.equal(g.children[0].getAttribute('class'), null);
+    assert.equal(g.children[1].textContent, "(");
+    assert.equal(g.children[1].getAttribute('class'), null);
+    assert.equal(g.children[2].textContent, "5");
+    assert.equal(g.children[2].getAttribute('class'), null);
+    assert.equal(g.children[3].textContent, ")");
+    assert.equal(g.children[3].getAttribute('class'), null);
+    assert.equal(g.children[4].textContent, replaceSpaces(" = "));
+    assert.equal(g.children[4].getAttribute('class'), null);
+    assert.equal(g.children[5].textContent, replaceSpaces("5"));
+    assert.equal(g.children[5].getAttribute('class'), null);
   });
 
   displayGoalTest(assert, 'multiple functions', function () {
@@ -140,20 +140,20 @@ function displayGoalCustomValidator(assert) {
     displayGoal(targetSet);
 
     // Line 1: g(1) = 1
-    var g = answerExpression.firstElementChild;
-    // assert.equal(g.childNodes.length, 1);
-    assert.equal(g.childNodes[0].textContent, "g");
-    assert.equal(g.childNodes[0].getAttribute('class'), null);
-    assert.equal(g.childNodes[1].textContent, "(");
-    assert.equal(g.childNodes[1].getAttribute('class'), null);
-    assert.equal(g.childNodes[2].textContent, "1");
-    assert.equal(g.childNodes[2].getAttribute('class'), null);
-    assert.equal(g.childNodes[3].textContent, ")");
-    assert.equal(g.childNodes[3].getAttribute('class'), null);
-    assert.equal(g.childNodes[4].textContent, replaceSpaces(" = "));
-    assert.equal(g.childNodes[4].getAttribute('class'), null);
-    assert.equal(g.childNodes[5].textContent, replaceSpaces("1"));
-    assert.equal(g.childNodes[5].getAttribute('class'), null);
+    var g = answerExpression.children[0];
+    // assert.equal(g.children.length, 1);
+    assert.equal(g.children[0].textContent, "g");
+    assert.equal(g.children[0].getAttribute('class'), null);
+    assert.equal(g.children[1].textContent, "(");
+    assert.equal(g.children[1].getAttribute('class'), null);
+    assert.equal(g.children[2].textContent, "1");
+    assert.equal(g.children[2].getAttribute('class'), null);
+    assert.equal(g.children[3].textContent, ")");
+    assert.equal(g.children[3].getAttribute('class'), null);
+    assert.equal(g.children[4].textContent, replaceSpaces(" = "));
+    assert.equal(g.children[4].getAttribute('class'), null);
+    assert.equal(g.children[5].textContent, replaceSpaces("1"));
+    assert.equal(g.children[5].getAttribute('class'), null);
   });
 
   displayGoalTest(assert, 'single variable in compute', function () {
@@ -168,12 +168,12 @@ function displayGoalCustomValidator(assert) {
 
     displayGoal(targetSet);
 
-    assert.equal(answerExpression.childElementCount, 1);
+    assert.equal(answerExpression.children.length, 1);
 
-    var g = answerExpression.firstElementChild;
-    assert.equal(g.childNodes.length, 1);
-    assert.equal(g.childNodes[0].textContent, "age_in_months");
-    assert.equal(g.childNodes[0].getAttribute('class'), null);
+    var g = answerExpression.children[0];
+    assert.equal(g.children.length, 1);
+    assert.equal(g.children[0].textContent, "age_in_months");
+    assert.equal(g.children[0].getAttribute('class'), null);
   });
 
   displayGoalTest(assert, 'variables without single variable in compute', function () {
@@ -186,24 +186,24 @@ function displayGoalCustomValidator(assert) {
 
     displayGoal(targetSet);
 
-    assert.equal(answerExpression.childElementCount, 2);
+    assert.equal(answerExpression.children.length, 2);
 
-    var g = answerExpression.firstElementChild;
-    assert.equal(g.childNodes.length, 2);
-    assert.equal(g.childNodes[0].textContent, replaceSpaces("age = "));
-    assert.equal(g.childNodes[0].getAttribute('class'), null);
-    assert.equal(g.childNodes[1].textContent, "17");
-    assert.equal(g.childNodes[1].getAttribute('class'), null);
+    var g = answerExpression.children[0];
+    assert.equal(g.children.length, 2);
+    assert.equal(g.children[0].textContent, replaceSpaces("age = "));
+    assert.equal(g.children[0].getAttribute('class'), null);
+    assert.equal(g.children[1].textContent, "17");
+    assert.equal(g.children[1].getAttribute('class'), null);
 
-    g = answerExpression.childNodes[1];
+    g = answerExpression.children[1];
 
-    assert.equal(g.childNodes[0].textContent, "age");
-    assert.equal(g.childNodes[0].getAttribute('class'), null);
-    assert.equal(g.childNodes[1].textContent, replaceSpaces(" * "));
-    assert.equal(g.childNodes[1].getAttribute('class'), null);
-    assert.equal(g.childNodes[2].textContent, "12");
-    assert.equal(g.childNodes[2].getAttribute('class'), null);
-    assert.equal(g.childNodes.length, 3);
+    assert.equal(g.children[0].textContent, "age");
+    assert.equal(g.children[0].getAttribute('class'), null);
+    assert.equal(g.children[1].textContent, replaceSpaces(" * "));
+    assert.equal(g.children[1].getAttribute('class'), null);
+    assert.equal(g.children[2].textContent, "12");
+    assert.equal(g.children[2].getAttribute('class'), null);
+    assert.equal(g.children.length, 3);
   });
 
   return true;
@@ -218,9 +218,6 @@ function displayGoalCustomValidator(assert) {
  */
 function displayGoalTest(assert, description, fn) {
   var answerExpression = document.getElementById('answerExpression');
-  while (answerExpression.firstChild) {
-    answerExpression.removeChild(answerExpression.firstChild);
-  }
   answerExpression.innerHTML = ''; // clear children
 
   fn();

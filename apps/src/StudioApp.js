@@ -6,7 +6,7 @@ var dropletUtils = require('./dropletUtils');
 var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
-var msg = require('./locale');
+var msg = require('../locale/current/common');
 var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
@@ -1292,7 +1292,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
     // Ensure global ace variable is the same as window.ace
     // (important because they can be different in our test environment)
-
+  
     /* jshint ignore:start */
     ace = window.ace;
     /* jshint ignore:end */

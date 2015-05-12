@@ -23,8 +23,8 @@
  */
 'use strict';
 
-var msg = require('./locale');
-var commonMsg = require('../locale');
+var msg = require('../../locale/current/eval');
+var commonMsg = require('../../locale/current/common');
 
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');

@@ -89,10 +89,6 @@ oop.inherits(Mode, JavaScriptMode);
 
     return worker;
   };
-
-  this.cleanup = function () {
-    annotationList.detachFromSession();
-  };
 }).call(Mode.prototype);
 
 exports.Mode = Mode;

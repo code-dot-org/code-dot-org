@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var msg = require('./locale');
+var msg = require('../../locale/current/bounce');
 var codegen = require('../codegen');
 
 var generateSetterCode = function (ctx, name) {
