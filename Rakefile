@@ -78,6 +78,16 @@ namespace :build do
     end
   end
 
+  task :shared_js do
+    Dir.chdir(shared_js_dir) do
+      HipChat.log 'Installing <b>shared js</b> dependencies...'
+      RakeUtils.npm_install
+
+      HipChat.log 'Building <b>shared js</b>...'
+      RakeUtils.system 'npm run gulp'
+    end
+  end
+
   task :stop_varnish do
     Dir.chdir(aws_dir) do
       unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') != 0)
