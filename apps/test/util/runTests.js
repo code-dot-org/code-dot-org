@@ -1,4 +1,8 @@
-var which = require('npm-which')(__dirname).sync;
+// Based on the documentation, it seems like npm-which SHOULD look through
+// node_modules directories in parents in addition to the current directory.
+// In practice, that doesn't seem to happen, so instead I'm hardcoding it's
+// current directory to be our root
+var which = require('npm-which')(__dirname + '/../..').sync;
 var mochify = require('mochify');
 var http = require('http');
 
@@ -8,12 +12,11 @@ var http = require('http');
 var fs = require('fs');
 var exec = require('child_process').exec;
 var target = __dirname + '/../../src/';
-var nodePath = __dirname + '/../../node_modules/@cdo/apps';
+var nodePath = __dirname + '/../../node_modules/@cdo';
 var command = '';
-if (!fs.existsSync(target)) {
-  command = 'ln -s ' + target + ' ' + nodePath;
+if (!fs.existsSync(nodePath)) {
+  command = 'mkdir -p ' + nodePath + ' && ln -s ' + target + ' ' + nodePath + '/apps';
 }
-
 
 /**
  * Mochify uses phantomic to run a server that it connects to, which serves up
