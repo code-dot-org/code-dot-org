@@ -151,7 +151,7 @@ dashboard.saveProject = function(callback, overrideSource) {
   dashboard.currentApp.levelHtml = window.Applab && Applab.getHtml();
   dashboard.currentApp.level = appToProjectUrl();
   if (channelId && dashboard.currentApp.isOwner) {
-    channels().update(channelId, dashboard.currentApp, function(callback, data) {
+    channels.update(channelId, dashboard.currentApp, function(callback, data) {
       if (data) {
         dashboard.currentApp = data;
         dashboard.updateTimestamp();
@@ -161,7 +161,7 @@ dashboard.saveProject = function(callback, overrideSource) {
       }
     }.bind(this, callback));
   } else {
-    channels().create(dashboard.currentApp, function(callback, data) {
+    channels.create(dashboard.currentApp, function(callback, data) {
       if (data) {
         dashboard.currentApp = data;
         location.href = dashboard.currentApp.level + '#' + dashboard.currentApp.id + '/edit';
@@ -177,7 +177,7 @@ dashboard.saveProject = function(callback, overrideSource) {
 dashboard.deleteProject = function(callback) {
   var channelId = dashboard.currentApp.id;
   if (channelId) {
-    channels().delete(channelId, function(data) {
+    channels.delete(channelId, function(data) {
       callbackSafe(callback, data);
     });
   } else {
@@ -322,7 +322,7 @@ function loadProject(promise) {
       // Load the project ID, if one exists
       promise = promise.then(function () {
         var deferred = new $.Deferred();
-        channels().fetch(hashData.channelId, function (data) {
+        channels.fetch(hashData.channelId, function (data) {
           if (data) {
             dashboard.currentApp = data;
             deferred.resolve();
@@ -341,7 +341,7 @@ function loadProject(promise) {
     dashboard.isEditingProject = true;
     promise = promise.then(function () {
       var deferred = new $.Deferred();
-      channels().fetch(appOptions.channel, function(data) {
+      channels.fetch(appOptions.channel, function(data) {
         if (data) {
           dashboard.currentApp = data;
           deferred.resolve();
