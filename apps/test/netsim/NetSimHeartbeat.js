@@ -7,7 +7,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var NetSimHeartbeat = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimHeartbeat');
+var NetSimHeartbeat = require('@cdo/apps/netsim/NetSimHeartbeat');
 
 describe("NetSimHeartbeat", function () {
   var testShard;

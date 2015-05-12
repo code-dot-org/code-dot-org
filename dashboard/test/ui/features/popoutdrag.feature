@@ -6,7 +6,7 @@ Background:
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape
   And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I press ":1.label"
   And I drag block "2" to block "1"
   And I press ":2.label"
