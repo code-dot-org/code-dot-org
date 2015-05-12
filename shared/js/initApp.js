@@ -1,3 +1,6 @@
+// TODO (brent) - way too many globals
+/* global startTiming, script_path, Dialog, CDOSounds, dashboard, wrapExistingClipPaths, handleClipPathChanges, appOptions, $, trackEvent, Blockly, Applab, stopTiming, sendReport, cancelReport, lastServerResponse, showVideoDialog, channels*/
+
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
@@ -74,7 +77,9 @@ $.extend(true, appOptions, baseOptions);
 // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
 // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
 (function fixUpFunctions(node) {
-  if (typeof node !== 'object') return;
+  if (typeof node !== 'object') {
+    return;
+  }
   for (var i in node) {
     if (/^fn_/.test(i)) {
       try {
