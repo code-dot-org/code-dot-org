@@ -17,6 +17,7 @@ var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
 
 var wrappedEventListener = require('./util/wrappedEventListener');
+var testCollectionUtils = require('./util/testCollectionUtils');
 
 // One day this might be the sort of thing we share with initApp.js
 function loadSource(src) {
@@ -26,6 +27,7 @@ function loadSource(src) {
   })[0]);
   return deferred;
 }
+
 describe('Level tests', function() {
   var studioApp;
   var originalRender;
@@ -65,7 +67,7 @@ describe('Level tests', function() {
     }
   });
 
-  getTestCollections().forEach(runTestCollection);
+  testCollectionUtils.getCollections().forEach(runTestCollection);
 
   afterEach(function () {
     var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -91,18 +93,6 @@ describe('Level tests', function() {
   });
 });
 
-// Get all json files under directory path
-function getTestCollections () {
-  // require-globify transform
-  var files = require('./solutions/**/*.js', {hash: 'path'});
-  var testCollections = [];
-  Object.keys(files).forEach(function (file) {
-    testCollections.push({path: file, data: files[file]});
-  });
-
-  return testCollections;
-}
-
 // Loads a test collection at path and runs all the tests specified in it.
 function runTestCollection (item) {
   var runLevelTest = require('./util/runLevelTest');
@@ -114,14 +104,15 @@ function runTestCollection (item) {
 
   describe(path, function () {
     testCollection.tests.forEach(function (testData, index) {
+      testUtils.setupLocale(app);
+      var dataItem = require('./util/data')(app);
+
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these
       // and our getMissingRequiredBlocks tests (and likely also other things
       // in the future)
       if (testData.expected) {
         it(testData.description, function (done) {
-          testUtils.setupLocale(app);
-          var dataItem = require('./util/data')(app);
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
             this.timeout(testData.timeout);
