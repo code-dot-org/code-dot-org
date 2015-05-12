@@ -1,6 +1,6 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var blockUtils = require('@cdo/apps/block_utils');
 
 var level = {
   // f(x) = x
@@ -158,14 +158,14 @@ module.exports = {
         // we do update our display area before this gets called
         setTimeout(function () {
           var userExpression = document.getElementById('userExpression');
-          assert(userExpression.children.length === 3);
-          var failedInputGroup = userExpression.children[2];
-          assert(failedInputGroup.children.length === 6);
-          var equalSign = failedInputGroup.children[4];
-          assert(equalSign.className === '', 'actual: ' + equalSign.className);
+          assert(userExpression.childNodes.length === 3);
+          var failedInputGroup = userExpression.childNodes[2];
+          assert(failedInputGroup.childNodes.length === 6);
+          var equalSign = failedInputGroup.childNodes[4];
+          assert(equalSign.className.baseVal === '', 'actual: ' + equalSign.className);
           assert(equalSign.textContent === "\u00A0\u00A0=\u00A0\u00A0", 'actual: ' + equalSign.textContent.replace(/ /g, "_"));
-          var failureText = failedInputGroup.children[5];
-          assert(failureText.className === 'errorToken');
+          var failureText = failedInputGroup.childNodes[5];
+          assert(failureText.className.baseVal === 'errorToken');
           assert(failureText.textContent === "3");
         }, 0);
 

@@ -1,8 +1,8 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var _ = require(testUtils.buildPath('lodash'));
-var Direction = require(testUtils.buildPath('studio/constants.js')).Direction;
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var _ = require('@cdo/apps/lodash');
+var Direction = require('@cdo/apps/studio/constants.js').Direction;
+var blockUtils = require('@cdo/apps/block_utils');
 
 module.exports = {
   app: "studio",
@@ -20,7 +20,7 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
           Studio.onPuzzleComplete();
-        }, 1);
+        }, 100);
       },
       expected: {
         result: true,
