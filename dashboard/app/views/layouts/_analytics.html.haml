@@ -25,20 +25,8 @@
 
   ga('set', dimensions);
   ga('send', 'pageview');
-  var userTimings = {};
   function trackEvent(category, action, label, value) {
     ga('send', 'event', category, action, label, value);
-  }
-  function startTiming(category, variable, label) {
-    var key = category + variable + label;
-    userTimings[key] = new Date().getTime();
-  }
-  function stopTiming(category, variable, label) {
-    var key = category + variable + label;
-    var endTime = new Date().getTime();
-    var startTime = userTimings[key];
-    var timeElapsed = endTime - startTime;
-    ga('send', 'timing', category, variable, timeElapsed, label);
   }
 
   // Fullstory snippet
@@ -53,4 +41,3 @@
     g.clearUserCookie=function(d,i){d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
     ';path=/;expires='+new Date(0);i=d.indexOf('.');if(i < 0)break;d=d.slice(i+1)}}
     })(window,document,'FS','script','user');
-
