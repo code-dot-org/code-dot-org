@@ -34,7 +34,7 @@ var logger = require('./NetSimLogger').getSingleton();
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
- * @param {NetSim} connection
+ * @param {NetSim} netsim
  * @constructor
  * @augments NetSimPanel
  */
@@ -264,8 +264,9 @@ NetSimSendPanel.prototype.addPacket_ = function () {
   });
 
   // Attach the new packet to this SendPanel
+  var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   newPacket.getRoot().appendTo(this.packetsDiv_);
-  newPacket.getRoot().hide().slideDown('fast');
+  newPacket.getRoot().hide().slideDown('fast', updateLayout);
   this.packets_.push(newPacket);
 };
 
@@ -277,8 +278,12 @@ NetSimSendPanel.prototype.addPacket_ = function () {
  */
 NetSimSendPanel.prototype.removePacket_ = function (packet) {
   // Remove from DOM
+  var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   packet.getRoot()
-      .slideUp('fast', function() { $(this).remove(); });
+      .slideUp('fast', function() {
+        $(this).remove();
+        updateLayout();
+      });
 
   // Remove from internal collection
   this.packets_ = this.packets_.filter(function (packetEditor) {
