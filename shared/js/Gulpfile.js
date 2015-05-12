@@ -2,6 +2,12 @@
 // (1) Where does built js live? Same as apps?
 // (2) Is built code checked in?
 
+// There's also a set of code that lives in dashbaord/app/assets/javascript
+// that should really be going through our browserify type pipeline
+
+// TODO - figure out story for sharing code between different packages
+// TODO - framework for writing tests
+
 
 var gulp = require('gulp');
 var glob = require('glob');
@@ -60,4 +66,4 @@ gulp.task('compress', ['bundle-js'], function () {
 });
 
 gulp.task('watch', ['enable-watch', 'bundle-js']);
-gulp.task('default', ['bundle-js']);
+gulp.task('default', ['lint', 'bundle-js']);

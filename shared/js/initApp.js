@@ -1,14 +1,15 @@
 // TODO (brent) - way too many globals
-/* global startTiming, script_path, Dialog, CDOSounds, dashboard, wrapExistingClipPaths, handleClipPathChanges, appOptions, $, trackEvent, Blockly, Applab, stopTiming, sendReport, cancelReport, lastServerResponse, showVideoDialog*/
+/* global script_path, Dialog, CDOSounds, dashboard, wrapExistingClipPaths, handleClipPathChanges, appOptions, $, trackEvent, Blockly, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga*/
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
 var channels = require('./client_api/channels');
+var timing = require('./timing');
 
 // Sets up default options and initializes blockly
-startTiming('Puzzle', script_path, '');
+timing.startTiming('Puzzle', script_path, '');
 var baseOptions = {
   containerId: 'codeApp',
   Dialog: Dialog,
@@ -38,7 +39,7 @@ var baseOptions = {
     trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
     if (report.pass) {
       trackEvent('Puzzle', 'Success', script_path, report.attempt);
-      stopTiming('Puzzle', script_path, '');
+      timing.stopTiming('Puzzle', script_path, '');
     }
     trackEvent('Activity', 'Lines of Code', script_path, report.lines);
     sendReport(report);
