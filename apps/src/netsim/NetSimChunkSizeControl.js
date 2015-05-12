@@ -10,7 +10,7 @@
  */
 'use strict';
 
-var i18n = require('./locale');
+var i18n = require('../../locale/current/netsim');
 var NetSimSlider = require('./NetSimSlider');
 
 /**

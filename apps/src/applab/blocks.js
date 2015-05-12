@@ -6,8 +6,8 @@
  */
 'use strict';
 
-var msg = require('./locale');
-var commonMsg = require('../locale');
+var msg = require('../../locale/current/applab');
+var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
 var utils = require('../utils');
 var _ = utils.getLodash();

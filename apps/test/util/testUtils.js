@@ -7,51 +7,83 @@ exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
 
-var _ = require('lodash');
+var _ = require(exports.buildPath('lodash'));
 
 var studioApp;
 
 var testBlockFactory = require('./testBlockFactory');
 
+require('./requireUncache').wrap(require);
+
+var GlobalDiff = require('./globalDiff');
+var globalDiff = new GlobalDiff();
+
+/**
+ * Wrapper around require, potentially also using our overloader, that also
+ * validates that any additions to our global namespace are expected.
+ */
+function requireWithGlobalsCheck(path, allowedChanges) {
+  allowedChanges = allowedChanges || [];
+
+  globalDiff.cache();
+  var result = require(path);
+  var diff = globalDiff.diff(true);
+  diff.forEach(function (key) {
+    assert.notEqual(allowedChanges.indexOf(key), -1, "unexpected global change\n" +
+      "key: " + key + "\n" +
+      "require: " + path + "\n");
+  });
+  return result;
+}
+
+/**
+ * Load files from code-dot-org/apps/build, while checking that the only
+ * additions to the global namespace are allowedChanges
+ */
+exports.requireWithGlobalsCheckBuildFolder = function (path, allowedChanges) {
+  return requireWithGlobalsCheck(exports.buildPath(path), allowedChanges, false);
+};
+
 function setupLocale(app) {
   setupLocales();
+  require.uncache('../../build/locale/current/' + app);
+  var localePath = '../../build/package/js/en_us/' + app + '_locale';
+  require.uncache(localePath);
+  require(localePath);
 }
 
 exports.setupLocale = setupLocale;
 
 function setupLocales() {
-  require('../../build/package/js/en_us/maze_locale');
-  require('../../build/package/js/en_us/turtle_locale');
-  require('../../build/package/js/en_us/bounce_locale');
-  require('../../build/package/js/en_us/flappy_locale');
-  require('../../build/package/js/en_us/studio_locale');
-  require('../../build/package/js/en_us/jigsaw_locale');
-  require('../../build/package/js/en_us/calc_locale');
-  require('../../build/package/js/en_us/applab_locale');
-  require('../../build/package/js/en_us/eval_locale');
-  require('../../build/package/js/en_us/netsim_locale');
-  require('../../build/package/js/en_us/common_locale');
+  global.navigator = global.navigator || {};
+  global.window = global.window || {};
+  global.document = global.document || {};
+  global.window.blockly = {};
+  var localePath = '../../build/package/js/en_us/common_locale';
+  require.uncache(localePath);
+  require(localePath);
 }
 
 exports.setupLocales = setupLocales;
 
-exports.setupBlocklyFrame = function () {
-  // TODO (brent): Intentionally not messing with timing yet, though that will
-  // come in a future commit.
-  // var timeoutList = require('@cdo/apps/timeoutList');
-  // timeoutList.clearTimeouts();
-  // timeoutList.stubTimer(false);
-  require('./frame')();
+/**
+ * Initializes an instance of blockly for testing
+ */
+exports.setupTestBlockly = function() {
+  // uncache file to force reload
+  require.uncache(exports.buildPath('/StudioApp'));
+  require.uncache('./frame');
+
+  requireWithGlobalsCheck('./frame',
+    ['document', 'window', 'DOMParser', 'XMLSerializer', 'Blockly']);
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
-  assert(Object.keys(global.Blockly).length > 0);
-  Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
 
   setupLocales();
 
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
-  studioApp = require('@cdo/apps/StudioApp').singleton;
-  studioApp.reset = function(){};
+  studioApp = exports.requireWithGlobalsCheckBuildFolder('/StudioApp',
+    ['c', 'n', 'v', 'p', 's', 'TestResults']).singleton;
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');
@@ -60,20 +92,11 @@ exports.setupBlocklyFrame = function () {
   studioApp.assetUrl = function (path) {
     return '../lib/blockly/' + path;
   };
-};
 
-/**
- * Initializes an instance of blockly for testing
- */
-exports.setupTestBlockly = function() {
-  exports.setupBlocklyFrame();
   var options = {
     assetUrl: studioApp.assetUrl
   };
-  var blocklyAppDiv = document.getElementById('app');
   Blockly.inject(blocklyAppDiv, options);
-  // TODO (brent)
-  // studioApp.removeEventListeners();
   testBlockFactory.installTestBlocks(Blockly);
 
   assert(Blockly.Blocks.text_print, "text_print block exists");
@@ -107,7 +130,7 @@ exports.getStudioAppSingleton = function () {
  * }
  */
 exports.generateArtistAnswer = function (generatedCode) {
-  var ArtistAPI = require('@cdo/apps/turtle/api');
+  var ArtistAPI = require(this.buildPath('turtle/api'));
   var api = new ArtistAPI();
 
   api.log = [];
@@ -122,10 +145,8 @@ exports.runOnStudioTick = function (tick, fn) {
   if (!Studio) {
     throw new Error('not supported outside of studio');
   }
-  var ran = false;
   Studio.onTick = _.wrap(Studio.onTick, function (studioOnTick) {
-    if (Studio.tickCount === tick && !ran) {
-      ran = true;
+    if (Studio.tickCount === tick) {
       fn();
     }
     studioOnTick();
@@ -203,12 +224,4 @@ exports.assertOwnProperty = function (obj, propertyName) {
   assert(obj.hasOwnProperty(propertyName), "Expected " +
       obj.constructor.name + " to have a property '" +
       propertyName + "' but no such property was found.");
-};
-
-
-/**
- * @returns {boolean} True if mochify was launched with debug flag
- */
-exports.debugMode = function () {
-  return location.search.substring(1).split('&').indexOf('debug') !== -1;
 };

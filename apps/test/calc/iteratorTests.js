@@ -4,7 +4,7 @@ var assert = chai.assert;
 
 var testUtils = require('../util/testUtils');
 
-var InputIterator = require('@cdo/apps/calc/inputIterator');
+var InputIterator = require(testUtils.buildPath('/calc/inputIterator'));
 
 describe('InputIterator', function () {
   it('works for a single param', function () {

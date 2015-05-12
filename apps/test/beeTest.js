@@ -6,8 +6,8 @@ var testUtils = require('./util/testUtils');
 
 testUtils.setupLocales();
 
-var Bee = require('@cdo/apps/maze/bee');
-var utils = require('@cdo/apps/utils');
+var Bee = testUtils.requireWithGlobalsCheckBuildFolder('maze/bee');
+var utils = testUtils.requireWithGlobalsCheckBuildFolder('utils');
 
 var baseLevel = {
   honeyGoal: 1,

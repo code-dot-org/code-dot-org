@@ -3,7 +3,7 @@
  */
 var utils = require('./utils');
 var _ = utils.getLodash();
-var msg = require('./locale');
+var msg = require('../locale/current/common');
 
 var ARITHMETIC_TITLE_FONT_SIZE = 25;
 

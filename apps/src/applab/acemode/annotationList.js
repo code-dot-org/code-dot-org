@@ -22,10 +22,6 @@ function updateGutter() {
  * go away the next time jstlint gets run (when code changes)
  */
 module.exports = {
-  detachFromSession: function () {
-    aceSession = null;
-  },
-  
   attachToSession: function (session) {
     if (aceSession && session !== aceSession) {
       throw new Error('Already attached to ace session');

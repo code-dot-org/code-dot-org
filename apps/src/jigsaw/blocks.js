@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var msg = require('./locale');
+var msg = require('../../locale/current/jigsaw');
 var dom = require('../dom');
 var levels = require('./levels');
 
