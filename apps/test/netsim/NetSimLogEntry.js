@@ -3,12 +3,12 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
+var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
+var Packet = require('@cdo/apps/netsim/Packet');
+
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
-
-var NetSimLogEntry = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogEntry');
-var Packet = testUtils.requireWithGlobalsCheckBuildFolder('netsim/Packet');
 
 describe("NetSimLogEntry", function () {
   var testShard;

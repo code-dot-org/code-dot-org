@@ -12,7 +12,7 @@
 'use strict';
 
 var utils = require('../utils');
-var i18n = require('../../locale/current/netsim');
+var i18n = require('./locale');
 var netsimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var NetSimNode = require('./NetSimNode');
