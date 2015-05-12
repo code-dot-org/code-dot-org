@@ -7,7 +7,7 @@ Feature: Big Game Remix
     And I am on "http://learn.code.org/users/sign_in"
     And I am on "http://learn.code.org/s/ui_tests/stage/4/puzzle/1?noautoplay=true"
     And I rotate to landscape
-    And I press "x-close"
+    And I close the dialog
     And element "#runButton" is visible
 
   @no_mobile

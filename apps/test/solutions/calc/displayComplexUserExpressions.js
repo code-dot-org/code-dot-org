@@ -1,13 +1,13 @@
 var testUtils = require('../../util/testUtils');
 testUtils.setupLocale('calc');
 
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var blockUtils = require(testUtils.buildPath('block_utils'));
-var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
-var Calc = require(testUtils.buildPath('calc/calc.js'));
-var EquationSet = require(testUtils.buildPath('calc/equationSet.js'));
-var Equation = require(testUtils.buildPath('/calc/equation.js'));
-var ExpressionNode = require(testUtils.buildPath('calc/expressionNode.js'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var blockUtils = require('@cdo/apps/block_utils');
+var studioApp = require('@cdo/apps/StudioApp').singleton;
+var Calc = require('@cdo/apps/calc/calc.js');
+var EquationSet = require('@cdo/apps/calc/equationSet.js');
+var Equation = require('@cdo/apps//calc/equation.js');
+var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
 
 /**
  * This is another example of me taking advantage of the fact that our level
@@ -56,10 +56,10 @@ function customValidator(assert) {
   var validateTextElementContainer = function (element, items) {
     for (var i = 0; i < items.length; i++) {
       var expectedTextContent = items[i][0].replace(/ /g, '\u00A0\u00A0');
-      assert.equal(element.children[i].textContent, expectedTextContent);
-      assert.equal(element.children[i].getAttribute('class'), items[i][1], 'token #' + i);
+      assert.equal(element.childNodes[i].textContent, expectedTextContent);
+      assert.equal(element.childNodes[i].getAttribute('class'), items[i][1], 'token #' + i);
     }
-    assert.equal(element.children.length, i);
+    assert.equal(element.childNodes.length, i);
   };
 
 
@@ -78,16 +78,16 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 3);
+    assert.equal(userExpression.childNodes.length, 3);
 
     // line 1: age = 17
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['age = ', null],
       ['17', null]
     ]);
 
     // line 2: age_in_months = (age * 12)
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['age_in_months = ', null],
       ['age', null],
       [' * ', null],
@@ -95,7 +95,7 @@ function customValidator(assert) {
     ]);
 
     // line 3: age_in_months = 194
-    validateTextElementContainer(userExpression.children[2], [
+    validateTextElementContainer(userExpression.childNodes[2], [
       ['age_in_months', null],
       [' = ', null],
       ['204', null]
@@ -115,16 +115,16 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 3);
+    assert.equal(userExpression.childNodes.length, 3);
 
     // line 1: age = 10
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['age = ',  null],
       ['10',  null]
     ]);
 
     // line 2: age_in_months = age * 12
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['age_in_months = ',  null],
       ['age',  null],
       [' * ',  null],
@@ -132,7 +132,7 @@ function customValidator(assert) {
     ]);
 
     // line 3: age_in_months = 120
-    validateTextElementContainer(userExpression.children[2], [
+    validateTextElementContainer(userExpression.childNodes[2], [
       ['age_in_months',  null],
       [' = ',  null],
       ['120',  null]
@@ -159,16 +159,16 @@ function customValidator(assert) {
 
     Calc.__testonly__.appState.failedInput = null;
 
-    assert.equal(userExpression.children.length, 3);
+    assert.equal(userExpression.childNodes.length, 3);
 
     // line 1: age = 1
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['age = ',  null],
       ['1',  null]
     ]);
 
     // line 2: age_in_months = 17 * 12
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['age_in_months = ',  null],
       ['17',  null],
       [' * ',  null],
@@ -176,7 +176,7 @@ function customValidator(assert) {
     ]);
 
     // line 3: age_in_months = 204
-    validateTextElementContainer(userExpression.children[2], [
+    validateTextElementContainer(userExpression.childNodes[2], [
       ['age_in_months',  null],
       [' = ',  null],
       ['204',  'errorToken'],
@@ -196,16 +196,16 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 3);
+    assert.equal(userExpression.childNodes.length, 3);
 
     // line 1: age = 10
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['age = ',  null],
       ['17',  null]
     ]);
 
     // line 2: age_in_months = age * 12
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['age_in_months2 = ',  null],
       ['age',  null],
       [' * ',  null],
@@ -213,7 +213,7 @@ function customValidator(assert) {
     ]);
 
     // line 3: age_in_months = 120
-    validateTextElementContainer(userExpression.children[2], [
+    validateTextElementContainer(userExpression.childNodes[2], [
       ['age_in_months2',  'errorToken'],
       [' = ',  null],
       ['204',  null]
@@ -244,10 +244,10 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 2);
+    assert.equal(userExpression.childNodes.length, 2);
 
     // line 1: f(i) = 4 / (4 - 4)
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['f(i) = ',  null],
       ['4',  null],
       [' / ',  null],
@@ -261,7 +261,7 @@ function customValidator(assert) {
 
     // line 2: f(10)
     // Note that there's no = (result), because we have a divide by zero error
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['f',  null],
       ['(',  null],
       ['10',  null],
@@ -284,10 +284,10 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 2);
+    assert.equal(userExpression.childNodes.length, 2);
 
     // line 1: f(i) = 4 / (4 - 4)
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['f(i) = ',  null],
       ['4',  null],
       [' / ',  null],
@@ -300,7 +300,7 @@ function customValidator(assert) {
 
     // line 2: f(10)
     // Note that there's no = (result), because we have a divide by zero error
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['f',  null],
       ['(',  null],
       ['10',  null],
@@ -325,10 +325,10 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
+    assert.equal(userExpression.childNodes.length, 1);
 
     // line 1: 4 / (4 - 4)
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['4',  'errorToken'],
       [' / ',  'errorToken'],
       ['(',  'errorToken'],
@@ -348,10 +348,10 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
+    assert.equal(userExpression.childNodes.length, 1);
 
     // line 1: 1 / 4 = 0.25
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['1',  null],
       [' / ',  null],
       ['4',  null],
@@ -369,22 +369,22 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
+    assert.equal(userExpression.childNodes.length, 1);
 
     // line 1: (1 / 9) = 0._1
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['1',  null],
       [' / ',  null],
       ['9',  null],
       [' = ',  null],
       ['0.1', null] // this line does account for repeating symbol
     ]);
-    var g = userExpression.children[0];
-    var text = g.children[4];
-    assert.equal(text.children.length, 2);
-    assert.equal(text.children[0].textContent, '0.');
-    assert.equal(text.children[1].textContent, '1');
-    assert.equal(text.children[1].getAttribute('style'), 'text-decoration: overline');
+    var g = userExpression.childNodes[0];
+    var text = g.childNodes[4];
+    assert.equal(text.childNodes.length, 2);
+    assert.equal(text.childNodes[0].textContent, '0.');
+    assert.equal(text.childNodes[1].textContent, '1');
+    assert.equal(text.childNodes[1].getAttribute('style'), 'text-decoration: overline');
   });
 
   displayComplexUserExpressionTest(assert, 'function called with expression', function () {
@@ -402,13 +402,13 @@ function customValidator(assert) {
     displayComplexUserExpressions();
 
     // line 1: f(x) = x
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['f(x) = ',  null],
       ['x',  null],
     ]);
 
     // line 2: f(1 + 1) = 2
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['f',  null],
       ['(',  null],
       ['1',  null],
@@ -430,7 +430,7 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['2', null],
       [' ^ ', null],
       ['3', null],
@@ -449,7 +449,7 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['2', null],
       [' ^ 2', null],
       [' = ', null],
@@ -467,7 +467,7 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['sqrt', null],
       ['(', null],
       ['4', null],
@@ -501,14 +501,14 @@ function customValidator(assert) {
 
     Calc.__testonly__.appState.failedInput = null;
 
-    assert.equal(userExpression.children.length, 3);
+    assert.equal(userExpression.childNodes.length, 3);
 
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['f(x) = ', null],
       ['5', null]
     ]);
 
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['f', null],
       ['(', null],
       ['5', null],
@@ -517,7 +517,7 @@ function customValidator(assert) {
       ['5', null]
     ]);
 
-    validateTextElementContainer(userExpression.children[2], [
+    validateTextElementContainer(userExpression.childNodes[2], [
       ['f', null],
       ['(', null],
       ['1', null],
@@ -542,14 +542,14 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 2);
+    assert.equal(userExpression.childNodes.length, 2);
 
-    validateTextElementContainer(userExpression.children[0], [
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['f(x) = ', null],
       ['x', null]
     ]);
 
-    validateTextElementContainer(userExpression.children[1], [
+    validateTextElementContainer(userExpression.childNodes[1], [
       ['f', 'errorToken'],
       ['(', 'errorToken'],
       ['3', 'errorToken'],
@@ -577,8 +577,8 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
-    validateTextElementContainer(userExpression.children[0], [
+    assert.equal(userExpression.childNodes.length, 1);
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['1', 'errorToken'],
       [' + ', null],
       ['2', 'errorToken'],
@@ -600,8 +600,8 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
-    validateTextElementContainer(userExpression.children[0], [
+    assert.equal(userExpression.childNodes.length, 1);
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['4', 'errorToken']
     ]);
 
@@ -613,8 +613,8 @@ function customValidator(assert) {
 
     displayComplexUserExpressions();
 
-    assert.equal(userExpression.children.length, 1);
-    validateTextElementContainer(userExpression.children[0], [
+    assert.equal(userExpression.childNodes.length, 1);
+    validateTextElementContainer(userExpression.childNodes[0], [
       ['5', null]
     ]);
   });
