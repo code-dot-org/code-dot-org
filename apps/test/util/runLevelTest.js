@@ -108,6 +108,8 @@ StubDialog.prototype.hide = function() {
 
 
 // Hack to compile files into browserify. Don't call this function!
+// TODO (brent) : this can probably be replaced using require-globify and/or
+// making use of data.js
 function ಠ_ಠ() {
   require('@cdo/apps/maze/main');
   require('@cdo/apps/flappy/main');
