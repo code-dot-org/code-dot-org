@@ -78,7 +78,9 @@ $.extend(true, appOptions, baseOptions);
   for (var i in node) {
     if (/^fn_/.test(i)) {
       try {
+        /* jshint ignore:start */
         node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
+        /* jshint ignore:end */
       } catch (e) { }
     } else {
       fixUpFunctions(node[i]);
@@ -125,9 +127,9 @@ function appToProjectUrl() {
  * @returns {string} The serialized level source from the editor.
  */
 dashboard.getEditorSource = function() {
-  return window.Blockly
-      ? Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
-      : window.Applab && Applab.getCode();
+  return window.Blockly ?
+    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)) :
+    window.Applab && Applab.getCode();
 };
 
 /**
@@ -181,8 +183,9 @@ function initApp() {
 
     $(window).on('hashchange', function () {
       var hashData = parseHash();
-      if ((dashboard.currentApp && hashData.channelId !== dashboard.currentApp.id)
-          || hashData.isEditingProject !== dashboard.isEditingProject) {
+      if ((dashboard.currentApp &&
+          hashData.channelId !== dashboard.currentApp.id) ||
+          hashData.isEditingProject !== dashboard.isEditingProject) {
         location.reload();
       }
     });
@@ -216,7 +219,7 @@ function initApp() {
       });
       window.setInterval(function () {
         // Bail if a baseline levelSource doesn't exist (app not yet initialized)
-        if (dashboard.currentApp.levelSource == undefined) {
+        if (dashboard.currentApp.levelSource === undefined) {
           return;
         }
         // `dashboard.getEditorSource()` is expensive for Blockly so only call if `workspaceChange` fires
@@ -267,7 +270,7 @@ function loadSource(name) {
       deferred.resolve();
     })[0]);
     return deferred;
-  }
+  };
 }
 
 // Loads the given app stylesheet.
@@ -296,7 +299,7 @@ function parseHash() {
   return {
     channelId: channelId,
     isEditingProject: isEditingProject
-  }
+  };
 }
 
 function loadProject(promise) {
