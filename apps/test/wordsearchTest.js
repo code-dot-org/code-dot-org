@@ -1,23 +1,11 @@
 var testUtils = require('./util/testUtils');
 
-// needed for Hammerjs
-global.navigator = {};
-global.window = {};
-global.document = {};
-
-var WordSearch = testUtils.requireWithGlobalsCheckBuildFolder('maze/wordsearch');
+var WordSearch = require('@cdo/apps/maze/wordsearch');
 var assert = testUtils.assert;
-var jsdom = require('jsdom').jsdom;
 
 function setGlobals() {
-  var html = '<html><head></head><body><svg id="svg"></svg></body></html>';
-  global.document = jsdom(html);
-  global.window = global.document.parentWindow;
-  global.Blockly = {
-    SVG_NS: "http://www.w3.org/2000/svg"
-  };
+  document.body.innerHTML = '<svg id="svg"></svg>';
 }
-
 
 describe("wordsearch: letterValue", function () {
   var letterValue = WordSearch.__testonly__.letterValue;

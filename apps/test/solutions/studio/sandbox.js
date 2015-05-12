@@ -1,8 +1,8 @@
 var testUtils = require('../../util/testUtils');
-var TestResults = require(testUtils.buildPath('constants.js')).TestResults;
-var _ = require(testUtils.buildPath('lodash'));
-var Direction = require(testUtils.buildPath('studio/constants.js')).Direction;
-var blockUtils = require(testUtils.buildPath('block_utils'));
+var TestResults = require('@cdo/apps/constants.js').TestResults;
+var _ = require('@cdo/apps/lodash');
+var Direction = require('@cdo/apps/studio/constants.js').Direction;
+var blockUtils = require('@cdo/apps/block_utils');
 
 module.exports = {
   app: "studio",
@@ -19,7 +19,7 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         setTimeout(function () {
           Studio.onPuzzleComplete();
-        }, 1);
+        }, 100);
       },
       expected: {
         result: true,
@@ -141,6 +141,7 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         testUtils.runOnStudioTick(5, function () {
+          debugger;
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
           var proj = document.getElementById('projectile_clippath_0').nextSibling;
@@ -501,7 +502,7 @@ module.exports = {
           assert(Studio.playerScore === 1, 'score incremented');
           assert(Studio.sayComplete === 0, 'nothing was said yet');
         });
-        testUtils.runOnStudioTick (180, function () {
+        testUtils.runOnStudioTick (200, function () {
           assert(Studio.playerScore === 2, 'score incremented again');
           assert(Studio.sayComplete === 1, 'something was said');
           Studio.onPuzzleComplete();
@@ -640,7 +641,6 @@ module.exports = {
     {
       description: 'collision with any projectile',
       xml: '<xml>' +
-        '  <block type="when_run" deletable="false"></block>' +
         '  <block type="when_run" deletable="false">' +
         '    <next>' +
         '      <block type="studio_setSprite">' +
@@ -694,7 +694,7 @@ module.exports = {
           assert(Studio.playerScore === 1, 'score incremented');
           assert(Studio.sayComplete === 0, 'nothing was said yet');
         });
-        testUtils.runOnStudioTick (125, function () {
+        testUtils.runOnStudioTick (130, function () {
           assert(Studio.playerScore === 2, 'score incremented again');
           assert(Studio.sayComplete === 1, 'something was said');
           Studio.onPuzzleComplete();
@@ -747,14 +747,18 @@ module.exports = {
         '  </block>' +
         '</xml>',
       runBeforeClick: function (assert) {
-        testUtils.runOnStudioTick (18, function () {
+        testUtils.runOnStudioTick (19, function () {
           assert(Studio.playerScore === 1, 'one point for fireball collision');
         });
-        testUtils.runOnStudioTick (37, function () {
+        testUtils.runOnStudioTick (38, function () {
           assert(Studio.playerScore === 2, 'second point for actor collision');
         });
-        testUtils.runOnStudioTick (65, function () {
+        testUtils.runOnStudioTick (66, function () {
           assert(Studio.playerScore === 3, 'third point for edge collision');
+          Studio.onPuzzleComplete();
+        });
+
+        testUtils.runOnStudioTick(100, function () {
           Studio.onPuzzleComplete();
         });
       },
