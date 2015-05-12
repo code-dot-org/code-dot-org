@@ -3,8 +3,8 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 
-var utils = require('@cdo/apps/utils');
-var commands = require('@cdo/apps/commands');
+var utils = testUtils.requireWithGlobalsCheckBuildFolder('utils');
+var commands = testUtils.requireWithGlobalsCheckBuildFolder('commands');
 var Command = commands.Command;
 var CommandSequence = commands.CommandSequence;
 

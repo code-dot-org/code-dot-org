@@ -1,16 +1,17 @@
 var testUtils = require('./util/testUtils');
-var xml = require('@cdo/apps/xml');
+var buildDir = '../build';
+var xml = require(buildDir + '/js/xml');
 
 testUtils.setupLocales();
 
-var utils = require('@cdo/apps/utils');
-var requiredBlockUtils = require('@cdo/apps/required_block_utils');
-var blockUtils = require('@cdo/apps/block_utils');
+var utils = require(buildDir + '/js/utils');
+var requiredBlockUtils = require(buildDir + '/js/required_block_utils');
+var blockUtils = require(buildDir + '/js/block_utils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
-var _ = require('lodash');
-var mazeUtils = require('@cdo/apps/maze/mazeUtils');
+var _ = require(buildDir + '/js/lodash');
+var mazeUtils = require(buildDir + '/js/maze/mazeUtils');
 
 describe("String.prototype.repeat", function () {
   it ("returns a string that is n copies of the original string", function () {
@@ -301,6 +302,9 @@ describe("mazeUtils", function () {
 });
 
 describe('forceInsertTopBlock', function () {
+  global.DOMParser = require('xmldom').DOMParser;
+  global.XMLSerializer = require('xmldom').XMLSerializer;
+
   it("no blocks", function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '';

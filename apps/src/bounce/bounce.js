@@ -8,8 +8,8 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
-var bounceMsg = require('./locale');
+var commonMsg = require('../../locale/current/common');
+var bounceMsg = require('../../locale/current/bounce');
 var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
@@ -654,10 +654,6 @@ Bounce.onMouseUp = function(e) {
  * Initialize Blockly and the Bounce app.  Called on page load.
  */
 Bounce.init = function(config) {
-  // replace studioApp methods with our own
-  studioApp.reset = this.reset.bind(this);
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
-
   Bounce.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -869,7 +865,7 @@ Bounce.resetBall = function(i, options) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Bounce.reset = function(first) {
+studioApp.reset = function(first) {
   var i;
   Bounce.clearEventHandlersKillTickLoop();
 
@@ -993,7 +989,7 @@ Bounce.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Bounce.runButtonClick = function() {
+studioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.

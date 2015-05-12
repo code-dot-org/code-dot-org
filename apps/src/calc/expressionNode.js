@@ -143,7 +143,6 @@ ExpressionNode.prototype.clone = function () {
  * @returns {jsnumber?} evaluation.result
  */
 ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
-  var error;
   try {
     globalMapping = globalMapping || {};
     localMapping = localMapping || {};
@@ -252,9 +251,8 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     // to a jsnumber before we return.
     return { result: ensureJsnum(val) };
   } catch (err) {
-    error = err;
+    return { err: err };
   }
-  return { err: error };
 };
 
 /**

@@ -59,3 +59,4 @@ exports.clearInterval = function (id) {
     intervalList.splice(index, 1);
   }
 };
+

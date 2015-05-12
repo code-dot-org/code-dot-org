@@ -1,4 +1,4 @@
-var msg = require('../locale');
+var msg = require('../../locale/current/common');
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip

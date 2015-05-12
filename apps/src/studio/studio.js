@@ -8,8 +8,8 @@
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../locale');
-var studioMsg = require('./locale');
+var commonMsg = require('../../locale/current/common');
+var studioMsg = require('../../locale/current/studio');
 var skins = require('../skins');
 var constants = require('./constants');
 var sharedConstants = require('../constants');
@@ -1047,10 +1047,6 @@ var arrangeStartBlocks = function (config) {
  * Initialize Blockly and the Studio app.  Called on page load.
  */
 Studio.init = function(config) {
-  // replace studioApp methods with our own
-  studioApp.reset = this.reset.bind(this);
-  studioApp.runButtonClick = this.runButtonClick.bind(this);
-
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1226,7 +1222,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
     Studio.perExecutionTimeouts.forEach(function (timeout) {
       clearInterval(timeout);
     });
-  }
+   }
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -1246,7 +1242,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Studio.reset = function(first) {
+studioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   var svg = document.getElementById('svgStudio');
@@ -1370,7 +1366,7 @@ Studio.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Studio.runButtonClick = function() {
+studioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
