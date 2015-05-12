@@ -41,7 +41,7 @@ describe('Level tests', function() {
     .then(function () { return loadSource('http://localhost:8001/ace/src-noconflict/ext-language_tools.js'); })
     .then(function () { return loadSource('http://localhost:8001/droplet/droplet-full.js'); })
     .then(function () {
-      assert(requirejs);
+      assert(window.requirejs);
       done();
     });
   });
