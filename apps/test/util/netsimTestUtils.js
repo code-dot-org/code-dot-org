@@ -156,7 +156,7 @@ exports.fakeShard = function () {
  * Set up global singleton with default level configuration
  */
 exports.initializeGlobalsToDefaultValues = function () {
-  netsimGlobals.setRootController({
+  netsimGlobals.setRootControllers({}, {
     level: levels.custom
   });
 };
