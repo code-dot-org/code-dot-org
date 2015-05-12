@@ -2,7 +2,7 @@ var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 
 describe("ObservableEvent", function () {
-  var ObservableEvent = testUtils.requireWithGlobalsCheckBuildFolder('ObservableEvent');
+  var ObservableEvent = require('@cdo/apps/ObservableEvent');
   var eventA, eventB, log, funcX, funcY;
 
   beforeEach(function () {

@@ -43,7 +43,7 @@ var warnMsg =  "Then he picked himself up";
 var errorMsg = "And went to lunch.";
 
 describe("NetSimLogger", function () {
-  var NetSimLogger = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimLogger');
+  var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
   var LogLevel = NetSimLogger.LogLevel;
 
   it("is a complete no-op with no console defined", function () {
