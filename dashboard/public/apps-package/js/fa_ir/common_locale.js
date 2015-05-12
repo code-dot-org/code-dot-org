@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "و"},
 "backToPreviousLevel":function(d){return "برگرد به سطح قبلی"},
 "blocklyMessage":function(d){return "بلوکی"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "تو بلوک‌های نچسبیده‌ داری. آیا میخواستی که اینها را به بلوک \"زمان اجرا\" وصل کنی؟"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "آفرین! شما مرحله‌ی نهایی را به پایان رساندید."},
-"finalStageTrophies":function(d){return "آفرین! شما مرحله‌ی نهایی را به پایان رساندید و برنده‌ی "+locale.p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":locale.n(d,"numTrophies")+" جایزه"})+" شدید."},
+"finalStageTrophies":function(d){return "آفرین! شما مرحله‌ی نهایی را به پایان رساندید و برنده‌ی "+common_locale.p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":common_locale.n(d,"numTrophies")+" جایزه"})+" شدید."},
 "finish":function(d){return "تمام کن"},
-"generatedCodeInfo":function(d){return "دانشگاههای برتر نیز کدنویسی بر اساس بلوک ها را آموزش می دهند (مثل "+locale.v(d,"berkeleyLink")+" و "+locale.v(d,"harvardLink")+"). اما در پشت پرده، بلوک هایی که شما سر هم کرده اید را می توان به زبان جاوا اسکریپت نشان داد، که پر استفاده ترین زبان کدنویسی در دنیاست:"},
+"generatedCodeInfo":function(d){return "دانشگاههای برتر نیز کدنویسی بر اساس بلوک ها را آموزش می دهند (مثل "+common_locale.v(d,"berkeleyLink")+" و "+common_locale.v(d,"harvardLink")+"). اما در پشت پرده، بلوک هایی که شما سر هم کرده اید را می توان به زبان جاوا اسکریپت نشان داد، که پر استفاده ترین زبان کدنویسی در دنیاست:"},
 "genericFeedback":function(d){return "ببین چطور به اینجا رسیدی، و سعی کن برنامه ات را درست کنی."},
 "hashError":function(d){return "با عرض پوزش، '%1' با هیچ کدام از برنامه‌های ذخیره شده مطابقت ندارد."},
 "help":function(d){return "راهنما"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "فهرست"},
 "makeYourOwnFlappy":function(d){return "پرنده ی فلاپیِ خودتان را بسازید"},
 "missingBlocksErrorMsg":function(d){return "برای حل این پازل، یک یا چند تا از بلوک‌های زیر را بکار ببرید."},
-"nextLevel":function(d){return "آفرین! شما پازل "+locale.v(d,"puzzleNumber")+" را به پایان رساندید."},
-"nextLevelTrophies":function(d){return "آفرین! شما معمای "+locale.v(d,"puzzleNumber")+" را به پایان رساندید و برنده‌ی "+locale.p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":locale.n(d,"numTrophies")+" جایزه"})+" شدید."},
+"nextLevel":function(d){return "آفرین! شما پازل "+common_locale.v(d,"puzzleNumber")+" را به پایان رساندید."},
+"nextLevelTrophies":function(d){return "آفرین! شما معمای "+common_locale.v(d,"puzzleNumber")+" را به پایان رساندید و برنده‌ی "+common_locale.p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":common_locale.n(d,"numTrophies")+" جایزه"})+" شدید."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "آفرین! شما "+locale.v(d,"stageName")+" را به پایان رساندید."},
-"nextStageTrophies":function(d){return "آفرین! شما مرحله‌ی "+locale.v(d,"stageName")+" را به پایان رساندید و برنده‌ی "+locale.p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":locale.n(d,"numTrophies")+" جایزه"})+" شدید."},
-"numBlocksNeeded":function(d){return "آفرین! شما پازل "+locale.v(d,"puzzleNumber")+" را به پایان رساندید. (اگرچه می‌توانستید تنها "+locale.p(d,"numBlocks",0,"fa",{"one":"یک بلوک","other":locale.n(d,"numBlocks")+" بلوک"})+" بکار ببرید.)"},
-"numLinesOfCodeWritten":function(d){return "شما همین الان  "+locale.p(d,"numLines",0,"fa",{"one":"یک خط","other":locale.n(d,"numLines")+" خط"})+" کد نوشتید!"},
+"nextStage":function(d){return "آفرین! شما "+common_locale.v(d,"stageName")+" را به پایان رساندید."},
+"nextStageTrophies":function(d){return "آفرین! شما مرحله‌ی "+common_locale.v(d,"stageName")+" را به پایان رساندید و برنده‌ی "+common_locale.p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":common_locale.n(d,"numTrophies")+" جایزه"})+" شدید."},
+"numBlocksNeeded":function(d){return "آفرین! شما پازل "+common_locale.v(d,"puzzleNumber")+" را به پایان رساندید. (اگرچه می‌توانستید تنها "+common_locale.p(d,"numBlocks",0,"fa",{"one":"یک بلوک","other":common_locale.n(d,"numBlocks")+" بلوک"})+" بکار ببرید.)"},
+"numLinesOfCodeWritten":function(d){return "شما همین الان  "+common_locale.p(d,"numLines",0,"fa",{"one":"یک خط","other":common_locale.n(d,"numLines")+" خط"})+" کد نوشتید!"},
 "openWorkspace":function(d){return "چگونه کار می کند"},
 "orientationLock":function(d){return "قفل جهت یابی را در تنظیمات دستگاه باز کنید."},
 "play":function(d){return "بازی کن"},
 "print":function(d){return "چاپ کن"},
-"puzzleTitle":function(d){return "پازل "+locale.v(d,"puzzle_number")+"  از"+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "پازل "+common_locale.v(d,"puzzle_number")+"  از"+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "تکرار کن"},
 "resetProgram":function(d){return "تنظیم مجدد"},
 "rotateText":function(d){return "دستگاهت  را بچرخان."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "شما منو مجبور به انجام مقدار زیادی کار کردید. میشه تعداد تکرار رو کمتر کنید؟"},
 "toolboxHeader":function(d){return "بلوک ها"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "در مجموع: "+locale.p(d,"numLines",0,"fa",{"one":"یک خط","other":locale.n(d,"numLines")+" خط"})+" کد."},
+"totalNumLinesOfCodeWritten":function(d){return "در مجموع: "+common_locale.p(d,"numLines",0,"fa",{"one":"یک خط","other":common_locale.n(d,"numLines")+" خط"})+" کد."},
 "tryAgain":function(d){return "دوباره تلاش کن"},
 "tryHOC":function(d){return "ساعتِ کد نویسی را امتحان کنید"},
 "wantToLearn":function(d){return "آیا می‌خواهید کد نویسی را یاد بگیرید؟"},

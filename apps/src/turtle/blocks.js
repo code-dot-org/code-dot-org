@@ -24,8 +24,8 @@
 'use strict';
 
 var Colours = require('./colours');
-var msg = require('../../locale/current/turtle');
-var commonMsg = require('../../locale/current/common');
+var msg = require('./locale');
+var commonMsg = require('../locale');
 
 var customLevelBlocks = require('./customLevelBlocks');
 var Turtle = require('./turtle');

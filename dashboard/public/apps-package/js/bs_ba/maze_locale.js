@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "na saću"},
 "atFlower":function(d){return "na cvijetu"},
 "avoidCowAndRemove":function(d){return "izbjegni kravu i ukloni 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "uradi"},
 "elseCode":function(d){return "inače"},
 "fill":function(d){return "popuniti 1"},
-"fillN":function(d){return "popuniti "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "popuni stog od "+appLocale.v(d,"shovelfuls")+" rupa"},
+"fillN":function(d){return "popuniti "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "popuni stog od "+maze_locale.v(d,"shovelfuls")+" rupa"},
 "fillSquare":function(d){return "popuni kvadrat"},
 "fillTooltip":function(d){return "stavi 1 komad zemlje"},
 "finalLevel":function(d){return "Čestitamo ! Riješili ste posljednji zadatak."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "ovdje je hrpa"},
 "putdownTower":function(d){return "spusti kulu"},
 "removeAndAvoidTheCow":function(d){return "ukloni 1 i izbjegni kravu"},
-"removeN":function(d){return "ukloni "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "ukloni "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "ukloni hrpu"},
-"removeStack":function(d){return "ukloni stog od "+appLocale.v(d,"shovelfuls")+" hrpa"},
+"removeStack":function(d){return "ukloni stog od "+maze_locale.v(d,"shovelfuls")+" hrpa"},
 "removeSquare":function(d){return "ukloni kvadrat"},
 "repeatCarefullyError":function(d){return "Da bi ovo riješio, dobro razmisli o uzorku sastavljenom od dva kretanja i jednog skretanja koji se stavlja u blok \"ponovi\". U redu je ako na kraju imaš jedno skretanje više."},
 "repeatUntil":function(d){return "ponavljaj dok ne bude"},

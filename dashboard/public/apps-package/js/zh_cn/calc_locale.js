@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "你的程序因除以 0 而结束。"},
 "emptyComputeBlock":function(d){return "您必须将一个块附加到\"评价\"块。"},
 "equivalentExpression":function(d){return "试着重新排列你的参数来得到完全相同的表达式。"},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "你的函数没有返回所有的正确值。"},
 "goal":function(d){return "目标："},
 "levelIncompleteError":function(d){return "你的表达式没有匹配目标。"},
-"missingFunctionError":function(d){return "你必须定义一个名为 "+appLocale.v(d,"functionName")+" 的函数。"},
-"missingVariableX":function(d){return "你的表的式缺少了变量 "+appLocale.v(d,"var")+"。"},
+"missingFunctionError":function(d){return "你必须定义一个名为 "+calc_locale.v(d,"functionName")+" 的函数。"},
+"missingVariableX":function(d){return "你的表的式缺少了变量 "+calc_locale.v(d,"var")+"。"},
 "reinfFeedbackMsg":function(d){return "这是你的计算！继续做这个工作，或移动到下一个谜！"},
 "yourExpression":function(d){return "你的表达式："},
 "wrongInput":function(d){return "你使用了错误的值来运行你的函数。"},
-"wrongOtherValuesX":function(d){return "如果我们改变"+appLocale.v(d,"var")+"，那你的表达式导致了错误的值。"},
+"wrongOtherValuesX":function(d){return "如果我们改变"+calc_locale.v(d,"var")+"，那你的表达式导致了错误的值。"},
 "wrongResult":function(d){return "你的表达式没有返回正确的结果。"}};

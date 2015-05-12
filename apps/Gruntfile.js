@@ -272,7 +272,8 @@ var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify -t rea
 
 config.exec = {
   browserify: browserifyExec,
-  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v'
+  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v',
+  mochaTest: 'node test/util/runTests.js --color'
 };
 
 var ext = DEV ? 'uncompressed' : 'compressed';
@@ -391,20 +392,6 @@ config.jshint = {
   ]
 };
 
-config.mochaTest = {
-  all: {
-    options: {
-      reporter: 'spec',
-      timeout: 10000
-    },
-    src: [
-      'test/*.js',
-      'test/calc/*.js',
-      'test/netsim/*.js'
-    ]
-  }
-};
-
 config.strip_code = {
   options: {
     start_comment: 'start-test-block',
@@ -476,9 +463,12 @@ module.exports = function(grunt) {
     'concurrent:watch'
   ]);
 
+  grunt.registerTask('mochaTest', ['exec:mochaTest']);
+
   grunt.registerTask('test', ['jshint', 'mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 
-  config.mochaTest.all.options.grep = new RegExp(grunt.option('grep'));
+  process.env.mocha_grep = grunt.option('grep') || '';
+  process.env.mocha_debug = grunt.option('debug') || '';
 };

@@ -12,7 +12,7 @@ Feature: Complete a simple maze level
   # This builds an uncommon program to avoid getting a crowdsourced hint.
   @no_mobile
   Scenario: Submit an incorrect program missing a block
-    When I press "x-close"
+    And I close the dialog
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # Repeat: move forward, turn right, turn right
@@ -34,7 +34,7 @@ Feature: Complete a simple maze level
     And element "#resetButton" is hidden
 
   Scenario: Submit a program with an empty repeat
-    When I press "x-close"
+    When I close the dialog
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # Drag out repeat block.
@@ -50,7 +50,7 @@ Feature: Complete a simple maze level
     And element "#resetButton" is hidden
 
   Scenario: Submit a working program that uses too many blocks
-    When I press "x-close"
+    When I close the dialog
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # move forward, Repeat: move forward, turn left, move forward

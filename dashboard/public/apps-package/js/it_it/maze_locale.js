@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "al favo"},
 "atFlower":function(d){return "al fiore"},
 "avoidCowAndRemove":function(d){return "evita la mucca e rimuovi 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "esegui"},
 "elseCode":function(d){return "altrimenti"},
 "fill":function(d){return "riempi 1"},
-"fillN":function(d){return "riempi "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "riempi una colonna di "+appLocale.v(d,"shovelfuls")+" buche"},
+"fillN":function(d){return "riempi "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "riempi una colonna di "+maze_locale.v(d,"shovelfuls")+" buche"},
 "fillSquare":function(d){return "riempi un quadrato"},
 "fillTooltip":function(d){return "metti 1 palata di terra"},
 "finalLevel":function(d){return "Complimenti! Hai risolto l'esercizio finale."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "c'è un mucchio"},
 "putdownTower":function(d){return "metti giù la torre"},
 "removeAndAvoidTheCow":function(d){return "rimuovi 1 ed evita la mucca"},
-"removeN":function(d){return "rimuovi "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "rimuovi "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "rimuovi il mucchio"},
-"removeStack":function(d){return "rimuovi una colonna di "+appLocale.v(d,"shovelfuls")+" mucchi"},
+"removeStack":function(d){return "rimuovi una colonna di "+maze_locale.v(d,"shovelfuls")+" mucchi"},
 "removeSquare":function(d){return "rimuovi un quadrato"},
 "repeatCarefullyError":function(d){return "Per risolvere questo esercizio, ripensa allo schema costituito da due spostamenti e una svolta e mettilo nel blocco \"ripeti\". Non fa niente se fai una svolta in più del necessario."},
 "repeatUntil":function(d){return "ripeti fino a che"},

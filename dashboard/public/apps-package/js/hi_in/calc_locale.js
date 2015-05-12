@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "You must attach a block to the \"compute\" block."},
 "equivalentExpression":function(d){return "बिल्कुल उसी अभिव्यक्ति प्राप्त करने के लिए अपने तर्क पुनर्व्यवस्था की कोशिश करो।"},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "आपका फंक्षन सभी मूल्यों के लिए सही परिणाम वापस नहीं करता है।"},
 "goal":function(d){return "लक्ष्य:"},
 "levelIncompleteError":function(d){return "Your expression does not match the goal."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Your expression is missing variable "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Your expression is missing variable "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "यहाँ अपनी गणना है! उस पर काम जारी रखे, या अगले पहेली के लिए आगे बढ़े"},
 "yourExpression":function(d){return "आपका उत्तर"},
 "wrongInput":function(d){return "You are calling your function with the wrong value."},
-"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Your expression results in the wrong value if we vary "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Your expresison does not return the correct result."}};

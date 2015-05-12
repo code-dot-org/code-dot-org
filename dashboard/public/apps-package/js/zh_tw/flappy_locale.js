@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var flappy_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){flappy_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:(k=flappy_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).flappy_locale = {
 "continue":function(d){return "繼續 "},
 "doCode":function(d){return "執行"},
 "elseCode":function(d){return "否則"},
@@ -189,7 +189,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundLaser":function(d){return "播放雷射音效"},
 "playSoundTooltip":function(d){return "播放所選音效"},
 "reinfFeedbackMsg":function(d){return "您可以按\"重試\"按鈕，回去玩您的遊戲。"},
-"scoreText":function(d){return "得分: "+appLocale.v(d,"playerScore")},
+"scoreText":function(d){return "得分: "+flappy_locale.v(d,"playerScore")},
 "setBackground":function(d){return "設置場景"},
 "setBackgroundRandom":function(d){return "設定為隨機場景"},
 "setBackgroundFlappy":function(d){return "設定為城市場景(白天)"},

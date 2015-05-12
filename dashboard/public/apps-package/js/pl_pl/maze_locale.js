@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "w plastrze miodu"},
 "atFlower":function(d){return "w kwiat"},
 "avoidCowAndRemove":function(d){return "unikaj krowy i usuń 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "wykonaj"},
 "elseCode":function(d){return "w przeciwnym razie"},
 "fill":function(d){return "wypełnij 1"},
-"fillN":function(d){return "wypełnij "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "wypełnij stos "+appLocale.v(d,"shovelfuls")+" otworów"},
+"fillN":function(d){return "wypełnij "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "wypełnij stos "+maze_locale.v(d,"shovelfuls")+" otworów"},
 "fillSquare":function(d){return "wypełnij kwadrat"},
 "fillTooltip":function(d){return "umieść 1 jednostkę śmieci"},
 "finalLevel":function(d){return "Gratulacje! Rozwiązałeś końcową łamigłówkę."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "jest tam sterta"},
 "putdownTower":function(d){return "postaw wieżę na ziemi"},
 "removeAndAvoidTheCow":function(d){return "usuń 1 i unikaj krowy"},
-"removeN":function(d){return "usuń "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "usuń "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "usuń stos"},
-"removeStack":function(d){return "usuń stos "+appLocale.v(d,"shovelfuls")+" stosów"},
+"removeStack":function(d){return "usuń stos "+maze_locale.v(d,"shovelfuls")+" stosów"},
 "removeSquare":function(d){return "usuń kwadrat"},
 "repeatCarefullyError":function(d){return "Aby to rozwiązać, pomyśl uważnie o układzie dwóch ruchów i jednego obrotu umieszczając ten układ w bloku Powtórz (repeat). W porządku, jeśli na końcu będzie dodatkowy obrót."},
 "repeatUntil":function(d){return "powtarzaj aż"},

@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "và"},
 "backToPreviousLevel":function(d){return "Chơi lại màn trước"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Bạn có các khối tự do. Ý của bạn là để đính kèm chúng vào khối \"khi chạy\"?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Chúc mừng. Bạn vừa hoàn thành xong bước cuối cùng."},
-"finalStageTrophies":function(d){return "Chúc mừng! Bạn vừa hoàn thành bước cuối cùng và dành danh hiệu "+locale.p(d,"numTrophies",0,"vi",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "Chúc mừng! Bạn vừa hoàn thành bước cuối cùng và dành danh hiệu "+common_locale.p(d,"numTrophies",0,"vi",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "Hoàn Thành"},
-"generatedCodeInfo":function(d){return "Các trường đại học hàng đầu cũng dạy lập trình dựa trên \"khối lệnh\" (block) (như: "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Tuy nhiên, để hổ trợ, các \"khối lệnh\" cũng được hiển thị trong ngôn ngữ JavaScript, ngôn ngữ lập trình thông dụng nhất:"},
+"generatedCodeInfo":function(d){return "Các trường đại học hàng đầu cũng dạy lập trình dựa trên \"khối lệnh\" (block) (như: "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Tuy nhiên, để hổ trợ, các \"khối lệnh\" cũng được hiển thị trong ngôn ngữ JavaScript, ngôn ngữ lập trình thông dụng nhất:"},
 "genericFeedback":function(d){return "Nhìn xem bằng cách nào bạn kết thúc và hãy cố gắng sửa chương trình của bạn."},
 "hashError":function(d){return "Xin lỗi, '%1' không tương ứng với bất kì chương trình đã lưu."},
 "help":function(d){return "Trợ Giúp"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "danh sách"},
 "makeYourOwnFlappy":function(d){return "Tự tạo game Flappy Bird của riêng bạn"},
 "missingBlocksErrorMsg":function(d){return "Thử dùng một hoặc nhiều khối được cho để giải quyết câu này."},
-"nextLevel":function(d){return "Chúc mừng! Bạn đã hoàn thành câu số "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Chúc mừng! Bạn đã hoàn thành Câu đố "+locale.v(d,"puzzleNumber")+" và chiến thắng "+locale.v(d,"numTrophies")+"."},
+"nextLevel":function(d){return "Chúc mừng! Bạn đã hoàn thành câu số "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Chúc mừng! Bạn đã hoàn thành Câu đố "+common_locale.v(d,"puzzleNumber")+" và chiến thắng "+common_locale.v(d,"numTrophies")+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Chúc mừng! Bạn đã hoàn thành xong "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+locale.v(d,"stageName")+" và giành được "+locale.p(d,"numTrophies",0,"vi",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+locale.v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+locale.p(d,"numBlocks",0,"vi",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+" khối thôi ."},
-"numLinesOfCodeWritten":function(d){return "Bạn vừa mới viết "+locale.p(d,"numLines",0,"vi",{"one":"1 dòng","other":locale.n(d,"numLines")+" dòng"})+" mã!"},
+"nextStage":function(d){return "Chúc mừng! Bạn đã hoàn thành xong "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+common_locale.v(d,"stageName")+" và giành được "+common_locale.p(d,"numTrophies",0,"vi",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+common_locale.v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+common_locale.p(d,"numBlocks",0,"vi",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+" khối thôi ."},
+"numLinesOfCodeWritten":function(d){return "Bạn vừa mới viết "+common_locale.p(d,"numLines",0,"vi",{"one":"1 dòng","other":common_locale.n(d,"numLines")+" dòng"})+" mã!"},
 "openWorkspace":function(d){return "Hoạt động ra sao"},
 "orientationLock":function(d){return "Tắt khóa hướng trong cài đặt thiết bị."},
 "play":function(d){return "Bắt đầu chơi"},
 "print":function(d){return "In"},
-"puzzleTitle":function(d){return "Câu đố thứ "+locale.v(d,"puzzle_number")+" trong số "+locale.v(d,"stage_total")+" câu"},
+"puzzleTitle":function(d){return "Câu đố thứ "+common_locale.v(d,"puzzle_number")+" trong số "+common_locale.v(d,"stage_total")+" câu"},
 "repeat":function(d){return "lặp lại"},
 "resetProgram":function(d){return "Thiết lập lại"},
 "rotateText":function(d){return "Xoay thiết bị của bạn."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Bạn làm tôi phải làm quá nhiều việc! Bạn làm ơn thử làm cho nó ít hơn được không?"},
 "toolboxHeader":function(d){return "các khối"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Thời gian tổng cộng: "+locale.p(d,"numLines",0,"vi",{"one":"1 dòng","other":locale.n(d,"numLines")+" dòng"})+" của mã chương trình."},
+"totalNumLinesOfCodeWritten":function(d){return "Thời gian tổng cộng: "+common_locale.p(d,"numLines",0,"vi",{"one":"1 dòng","other":common_locale.n(d,"numLines")+" dòng"})+" của mã chương trình."},
 "tryAgain":function(d){return "Thử lại"},
 "tryHOC":function(d){return "Học thử Hour of Code"},
 "wantToLearn":function(d){return "Bạn muốn học lập trình?"},

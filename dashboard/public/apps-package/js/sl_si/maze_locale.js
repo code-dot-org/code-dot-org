@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "pri satovju"},
 "atFlower":function(d){return "v roži"},
 "avoidCowAndRemove":function(d){return "izogni se kravi in odstrani 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "izvrši"},
 "elseCode":function(d){return "potem"},
 "fill":function(d){return "zapolni 1"},
-"fillN":function(d){return "zapolni "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "zapolni kopico "+appLocale.v(d,"shovelfuls")+" lukenj"},
+"fillN":function(d){return "zapolni "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "zapolni kopico "+maze_locale.v(d,"shovelfuls")+" lukenj"},
 "fillSquare":function(d){return "zapolni kvadrat"},
 "fillTooltip":function(d){return "postavi 1 enoto umazanije"},
 "finalLevel":function(d){return "Čestitke! Rešil/a si zadnjo uganko."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "tukaj je kup"},
 "putdownTower":function(d){return "postavi stolp"},
 "removeAndAvoidTheCow":function(d){return "odstrani 1 in se izogni kravi"},
-"removeN":function(d){return "odstrani "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "odstrani "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "odstrani kup"},
-"removeStack":function(d){return "odstrani več "+appLocale.v(d,"shovelfuls")+" kupov"},
+"removeStack":function(d){return "odstrani več "+maze_locale.v(d,"shovelfuls")+" kupov"},
 "removeSquare":function(d){return "odstrani kvadrat"},
 "repeatCarefullyError":function(d){return "Za uspešno rešitev dobor premisli o vzorcu premikanja znotraj bloka \"ponovi\". Dodaten obrat na konvu nič ne škodi."},
 "repeatUntil":function(d){return "ponavljaj dokler"},

@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "برنامه شما تقسیم بر صفر تولید میکند."},
 "emptyComputeBlock":function(d){return "شما باید یک قطعه به قطعه \"ارزیابی\" وصل کنید."},
 "equivalentExpression":function(d){return "سعی کنید ایده ها و فکرهایتان را منظم و مرتب کنید تا دقیقا همان عبارت را به دست بیاورید."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "تابع تو نتیجه مناسبی برای همه مقادیر برنمیگرداند."},
 "goal":function(d){return "هدف:"},
 "levelIncompleteError":function(d){return "معادله ی شما با هدف تطابق ندارد."},
-"missingFunctionError":function(d){return "شما باید یک تابع به اسم "+appLocale.v(d,"functionName")+" تعریف کنید."},
-"missingVariableX":function(d){return "معادله شما فاقد متغیر است"+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "شما باید یک تابع به اسم "+calc_locale.v(d,"functionName")+" تعریف کنید."},
+"missingVariableX":function(d){return "معادله شما فاقد متغیر است"+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "این محاسبات شماست! یا روی آنها کار کنید، یا برو به پازل بعدی!"},
 "yourExpression":function(d){return "عبارت شما:"},
 "wrongInput":function(d){return "شما تابع خود را با مقدار نادرست صدا می کنید."},
-"wrongOtherValuesX":function(d){return "اگر ما متغیر"+appLocale.v(d,"var")+" را تغییر دهیم معادله شما جواب اشتباه می دهد."},
+"wrongOtherValuesX":function(d){return "اگر ما متغیر"+calc_locale.v(d,"var")+" را تغییر دهیم معادله شما جواب اشتباه می دهد."},
 "wrongResult":function(d){return "عبارت شما جواب درست را بر نمی گرداند."}};

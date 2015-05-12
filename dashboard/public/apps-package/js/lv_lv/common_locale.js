@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "un"},
 "backToPreviousLevel":function(d){return "Atpakaļ uz iepriekšējo līmeni"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Tev ir nepievienoti bloki. Vai tu domā pievienot šos \"kad palaists\" blokam?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Apsveicu! Pēdējais posms ir pabeigts."},
-"finalStageTrophies":function(d){return "Apsveicu! Tu esi pabeidzis pēdējos posmu un ieguvis "+locale.p(d,"numTrophies",0,"lv",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "Apsveicu! Tu esi pabeidzis pēdējos posmu un ieguvis "+common_locale.p(d,"numTrophies",0,"lv",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "Pabeigt"},
-"generatedCodeInfo":function(d){return "Arī labākās universitātēs apmāca vizuālo programmēšanu (piemēram, "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Bet pamatā bloki, ko tu esi izveidojies, var arī tikt parādīti valodā JavaScript - vienā no pasaules populārākajām programmēšanas valodām:"},
+"generatedCodeInfo":function(d){return "Arī labākās universitātēs apmāca vizuālo programmēšanu (piemēram, "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Bet pamatā bloki, ko tu esi izveidojies, var arī tikt parādīti valodā JavaScript - vienā no pasaules populārākajām programmēšanas valodām:"},
 "genericFeedback":function(d){return "Apskati rezultātu un pamēģini salabot savu programmu."},
 "hashError":function(d){return "Atvainojiet, '%1' neatbilst nevienai saglabātai programmai."},
 "help":function(d){return "Palīdzība"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "saraksts"},
 "makeYourOwnFlappy":function(d){return "Izveido savu \"Flappy\" spēli"},
 "missingBlocksErrorMsg":function(d){return "Izmēģini vienu vai vairākus no zemākesošajiem blokiem, lai atrisinātu šo mīklu."},
-"nextLevel":function(d){return "Apsveicu! Esi pabeidzis mīklu "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Apsveicu! Tu pabeidzi mīklu "+locale.v(d,"puzzleNumber")+" un ieguvi "+locale.p(d,"numTrophies",0,"lv",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextLevel":function(d){return "Apsveicu! Esi pabeidzis mīklu "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Apsveicu! Tu pabeidzi mīklu "+common_locale.v(d,"puzzleNumber")+" un ieguvi "+common_locale.p(d,"numTrophies",0,"lv",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Apsveicu! Tu pabeidzi "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Apsveicu! tu pabeidzi "+locale.v(d,"stageName")+" un ieguvi "+locale.p(d,"numTrophies",0,"lv",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Apsveicu! Tu pabeidzis mīkl "+locale.v(d,"puzzleNumber")+". (Tomēr tu būtu varējis izmantot tikai "+locale.p(d,"numBlocks",0,"lv",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Tu tikko uzrakstīji "+locale.p(d,"numLines",0,"lv",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" koda!"},
+"nextStage":function(d){return "Apsveicu! Tu pabeidzi "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Apsveicu! tu pabeidzi "+common_locale.v(d,"stageName")+" un ieguvi "+common_locale.p(d,"numTrophies",0,"lv",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Apsveicu! Tu pabeidzis mīkl "+common_locale.v(d,"puzzleNumber")+". (Tomēr tu būtu varējis izmantot tikai "+common_locale.p(d,"numBlocks",0,"lv",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Tu tikko uzrakstīji "+common_locale.p(d,"numLines",0,"lv",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" koda!"},
 "openWorkspace":function(d){return "Kā tas darbojas"},
 "orientationLock":function(d){return "Ieslēdz rotāciju ierīces uzstādījumos."},
 "play":function(d){return "spēlēt"},
 "print":function(d){return "Drukāt"},
-"puzzleTitle":function(d){return "Mīkla "+locale.v(d,"puzzle_number")+" no "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Mīkla "+common_locale.v(d,"puzzle_number")+" no "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "atkārtot"},
 "resetProgram":function(d){return "Atiestatīt"},
 "rotateText":function(d){return "Pagriez savu ierīci."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Tu man liki daudz darīt! Vari pamēģināt atkārtot mazāk reižu?"},
 "toolboxHeader":function(d){return "Bloki"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Visu laiko kopējais:  "+locale.p(d,"numLines",0,"lv",{"one":"1 rinda","other":locale.n(d,"numLines")+" rindas"})+"  koda"},
+"totalNumLinesOfCodeWritten":function(d){return "Visu laiko kopējais:  "+common_locale.p(d,"numLines",0,"lv",{"one":"1 rinda","other":common_locale.n(d,"numLines")+" rindas"})+"  koda"},
 "tryAgain":function(d){return "Mēgini vēlreiz"},
 "tryHOC":function(d){return "Izmēģini Programmēšanas stundu"},
 "wantToLearn":function(d){return "Vai vēlies iemācīties programmēt?"},

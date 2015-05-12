@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "El teu programa dona com a resultat una divisió per zero."},
 "emptyComputeBlock":function(d){return "Has d'adjuntar un bloc al bloc \"avaluar\"."},
 "equivalentExpression":function(d){return "Intenta reordenant els teus arguments per aconseguir exactament la mateixa expressió."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "La teva funció no retorna el resultat correcte per a tots els valors."},
 "goal":function(d){return "Objectiu:"},
 "levelIncompleteError":function(d){return "La teva expressió no es correspon amb l'objectiu."},
-"missingFunctionError":function(d){return "Heu de definir una funció anomenada "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Falta la variable "+appLocale.v(d,"var")+" a la teva expressió."},
+"missingFunctionError":function(d){return "Heu de definir una funció anomenada "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Falta la variable "+calc_locale.v(d,"var")+" a la teva expressió."},
 "reinfFeedbackMsg":function(d){return "Aquí tens el teu càlcul! Continua treballant-hi, o passa al següent trencaclosques!"},
 "yourExpression":function(d){return "La teva expressió:"},
 "wrongInput":function(d){return "Has cridat la teva funció amb un valor erroni."},
-"wrongOtherValuesX":function(d){return "La teva expressió dona un resultat erroni si variem "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "La teva expressió dona un resultat erroni si variem "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "La teva expressió no retorna el resultat correcte."}};

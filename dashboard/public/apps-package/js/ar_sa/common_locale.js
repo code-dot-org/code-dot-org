@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "و"},
 "backToPreviousLevel":function(d){return "الرجوع إلى المستوى السابق"},
 "blocklyMessage":function(d){return "بلوكلي"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "أنت لم تقم بإرفاق القطع . هل قصدت إرفاق هذه القطع إلى قطعة \"عند التشغيل\"؟"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "تهانينا! لقد اتممت المرحلة النهائية."},
-"finalStageTrophies":function(d){return "تهانينا! لقد أكملت المرحلة النهائية وفزت بـ "+locale.p(d,"numTrophies",0,"ar",{"one":"جائزة","other":locale.n(d,"numTrophies")+" جوائز"})+"."},
+"finalStageTrophies":function(d){return "تهانينا! لقد أكملت المرحلة النهائية وفزت بـ "+common_locale.p(d,"numTrophies",0,"ar",{"one":"جائزة","other":common_locale.n(d,"numTrophies")+" جوائز"})+"."},
 "finish":function(d){return "إنهاء"},
-"generatedCodeInfo":function(d){return "حتى أفضل الجامعات تعلم الكود البرمجي المبني على القطع (على سبيل المثال، "+locale.v(d,"berkeleyLink")+"، "+locale.v(d,"harvardLink")+"). ولكن في الحقيقه، يمكن للقطع التي جمعتها انت في الظهور في الجافا سكريبت، وهو أكثر لغة كود برمجي مستخدم في العالم:"},
+"generatedCodeInfo":function(d){return "حتى أفضل الجامعات تعلم الكود البرمجي المبني على القطع (على سبيل المثال، "+common_locale.v(d,"berkeleyLink")+"، "+common_locale.v(d,"harvardLink")+"). ولكن في الحقيقه، يمكن للقطع التي جمعتها انت في الظهور في الجافا سكريبت، وهو أكثر لغة كود برمجي مستخدم في العالم:"},
 "genericFeedback":function(d){return "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."},
 "hashError":function(d){return "عذرا , %1 لايتوافق مع اي البرامج المحفوظة ."},
 "help":function(d){return "مساعدة"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "قائمة"},
 "makeYourOwnFlappy":function(d){return "برمج لعبة فلابي الخاصة بك"},
 "missingBlocksErrorMsg":function(d){return "استخدم القطع الموجودة في الاسفل لحل هذا اللغز."},
-"nextLevel":function(d){return "تهانينا ! أنت اكملت اللغز "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "تهانينا! لقد أكملت اللغز "+locale.v(d,"puzzleNumber")+" وفزت بـ "+locale.p(d,"numTrophies",0,"ar",{"one":"جائزة","other":locale.n(d,"numTrophies")+" جوائز"})+"."},
+"nextLevel":function(d){return "تهانينا ! أنت اكملت اللغز "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "تهانينا! لقد أكملت اللغز "+common_locale.v(d,"puzzleNumber")+" وفزت بـ "+common_locale.p(d,"numTrophies",0,"ar",{"one":"جائزة","other":common_locale.n(d,"numTrophies")+" جوائز"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "تهانينا! لقد أكملت مرحلة "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "تهانينا! لقد أكملت المرحلة "+locale.v(d,"stageNumber")+" وفزت بـ "+locale.p(d,"numTrophies",0,"ar",{"one":"جائزة","other":locale.n(d,"numTrophies")+" جوائز"})+"."},
-"numBlocksNeeded":function(d){return "تهانينا! لقد أكملت اللغز "+locale.v(d,"puzzleNumber")+". (لكن كان بامكانك استخذام "+locale.p(d,"numBlocks",0,"ar",{"one":"1 بلوك","other":locale.n(d,"numBlocks")+" بلوكات"})+".) فقط"},
-"numLinesOfCodeWritten":function(d){return "لقد كتبت "+locale.p(d,"numLines",0,"ar",{"one":"سطر1","other":locale.n(d,"numLines")+" سطور"})+" من الكود البرمجي!"},
+"nextStage":function(d){return "تهانينا! لقد أكملت مرحلة "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "تهانينا! لقد أكملت المرحلة "+common_locale.v(d,"stageNumber")+" وفزت بـ "+common_locale.p(d,"numTrophies",0,"ar",{"one":"جائزة","other":common_locale.n(d,"numTrophies")+" جوائز"})+"."},
+"numBlocksNeeded":function(d){return "تهانينا! لقد أكملت اللغز "+common_locale.v(d,"puzzleNumber")+". (لكن كان بامكانك استخذام "+common_locale.p(d,"numBlocks",0,"ar",{"one":"1 بلوك","other":common_locale.n(d,"numBlocks")+" بلوكات"})+".) فقط"},
+"numLinesOfCodeWritten":function(d){return "لقد كتبت "+common_locale.p(d,"numLines",0,"ar",{"one":"سطر1","other":common_locale.n(d,"numLines")+" سطور"})+" من الكود البرمجي!"},
 "openWorkspace":function(d){return "كيف يعمل ذلك"},
 "orientationLock":function(d){return "قم بتعطيل قفل التوجه في اعدادات المستخدم."},
 "play":function(d){return "إلعب"},
 "print":function(d){return "طباعة"},
-"puzzleTitle":function(d){return "اللغز "+locale.v(d,"puzzle_number")+" من "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "اللغز "+common_locale.v(d,"puzzle_number")+" من "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "كرر"},
 "resetProgram":function(d){return "إعادة تعيين"},
 "rotateText":function(d){return "دور النص."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "جعلتني أقوم بالكثير من العمل!  هل بإمكانك أن تحاول جعل مرات التكرار أقل؟"},
 "toolboxHeader":function(d){return "قطع"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "مجموع كل الاوقات: "+locale.p(d,"numLines",0,"ar",{"one":"1 خط","other":locale.n(d,"numLines")+" خطوط"})+"  من الكود البرمجي."},
+"totalNumLinesOfCodeWritten":function(d){return "مجموع كل الاوقات: "+common_locale.p(d,"numLines",0,"ar",{"one":"1 خط","other":common_locale.n(d,"numLines")+" خطوط"})+"  من الكود البرمجي."},
 "tryAgain":function(d){return "حاول مرة أخرى"},
 "tryHOC":function(d){return "جرب \"Hour of Code\""},
 "wantToLearn":function(d){return "هل تريد أن تتعلم البرمجة؟"},

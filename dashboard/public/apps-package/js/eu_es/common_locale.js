@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "eta"},
 "backToPreviousLevel":function(d){return "Atzera aurreko mailara"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Zorionak! Azkeneko eszenatokia osatu duzu."},
-"finalStageTrophies":function(d){return "Zorionak! Azkeneko eszenatokia osatu duzu eta "+locale.p(d,"numTrophies",0,"eu",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "Zorionak! Azkeneko eszenatokia osatu duzu eta "+common_locale.p(d,"numTrophies",0,"eu",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "Finish"},
-"generatedCodeInfo":function(d){return "Goi mailako unibertsitateek (adib., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+" ) ere blokeetan oinarritutako kodeketa irakasten dute. Baina zuk erabilitako blokeen azpian munduan zehar erabilera zabalen duen kode hizkuntza dago, JavaScript:"},
+"generatedCodeInfo":function(d){return "Goi mailako unibertsitateek (adib., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+" ) ere blokeetan oinarritutako kodeketa irakasten dute. Baina zuk erabilitako blokeen azpian munduan zehar erabilera zabalen duen kode hizkuntza dago, JavaScript:"},
 "genericFeedback":function(d){return "See how you ended up, and try to fix your program."},
 "hashError":function(d){return "Barkatu. %1 ez dator bat inongo gordetako programarekin."},
 "help":function(d){return "Laguntza"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "zerrenda"},
 "makeYourOwnFlappy":function(d){return "Egin zure Flappy joko propioa"},
 "missingBlocksErrorMsg":function(d){return "Probatu azpiko bloke bat edo gehiago pule hau ebazteko."},
-"nextLevel":function(d){return "Zorionak!  "+locale.v(d,"puzzleNumber")+" puzlea osatu duzu."},
-"nextLevelTrophies":function(d){return "Zorionak!  "+locale.v(d,"puzzleNumber")+" puzlea osatu duzu eta  "+locale.p(d,"numTrophies",0,"eu",{"one":"garaikur 1","other":locale.n(d,"numTrophies")+" garaikur"})+" irabazi dituzu."},
+"nextLevel":function(d){return "Zorionak!  "+common_locale.v(d,"puzzleNumber")+" puzlea osatu duzu."},
+"nextLevelTrophies":function(d){return "Zorionak!  "+common_locale.v(d,"puzzleNumber")+" puzlea osatu duzu eta  "+common_locale.p(d,"numTrophies",0,"eu",{"one":"garaikur 1","other":common_locale.n(d,"numTrophies")+" garaikur"})+" irabazi dituzu."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Zorionak! "+locale.v(d,"stageName")+" osatu duzu."},
-"nextStageTrophies":function(d){return "Zorionak!  "+locale.v(d,"stageName")+" osatu duzu eta "+locale.p(d,"numTrophies",0,"eu",{"one":"garaikur 1","other":locale.n(d,"numTrophies")+" garaikur"})+" irabazi dituzu."},
-"numBlocksNeeded":function(d){return "Zorionak! "+locale.v(d,"puzzleNumber")+". puzlea osatu dizu. (Hala ere "+locale.p(d,"numBlocks",0,"eu",{"one":"bloke 1","other":locale.n(d,"numBlocks")+" bloke"})+" erabili ahal zenituen."},
-"numLinesOfCodeWritten":function(d){return " "+locale.p(d,"numLines",0,"eu",{"one":"lerro 1","other":locale.n(d,"numLines")+" lerro"})+" kode idatzi berri dituzu!\n"},
+"nextStage":function(d){return "Zorionak! "+common_locale.v(d,"stageName")+" osatu duzu."},
+"nextStageTrophies":function(d){return "Zorionak!  "+common_locale.v(d,"stageName")+" osatu duzu eta "+common_locale.p(d,"numTrophies",0,"eu",{"one":"garaikur 1","other":common_locale.n(d,"numTrophies")+" garaikur"})+" irabazi dituzu."},
+"numBlocksNeeded":function(d){return "Zorionak! "+common_locale.v(d,"puzzleNumber")+". puzlea osatu dizu. (Hala ere "+common_locale.p(d,"numBlocks",0,"eu",{"one":"bloke 1","other":common_locale.n(d,"numBlocks")+" bloke"})+" erabili ahal zenituen."},
+"numLinesOfCodeWritten":function(d){return " "+common_locale.p(d,"numLines",0,"eu",{"one":"lerro 1","other":common_locale.n(d,"numLines")+" lerro"})+" kode idatzi berri dituzu!\n"},
 "openWorkspace":function(d){return "Nola dabilen"},
 "orientationLock":function(d){return "Itzali orientazio lokatzea gailuaren aukeretan."},
 "play":function(d){return "play"},
 "print":function(d){return "Print"},
-"puzzleTitle":function(d){return locale.v(d,"stage_total")+"etik, "+locale.v(d,"puzzle_number")+" puzlea"},
+"puzzleTitle":function(d){return common_locale.v(d,"stage_total")+"etik, "+common_locale.v(d,"puzzle_number")+" puzlea"},
 "repeat":function(d){return "errepikatu"},
 "resetProgram":function(d){return "Leheneratu"},
 "rotateText":function(d){return "Biratu zure gailua."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Lan asko eginarazi didazu! Saiatu zaitezke gutxiagotan errepikatzen?"},
 "toolboxHeader":function(d){return "Blokeak"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Guztira:  "+locale.p(d,"numLines",0,"eu",{"one":"kode lerro 1","other":locale.n(d,"numLines")+" lerro kode"})+"."},
+"totalNumLinesOfCodeWritten":function(d){return "Guztira:  "+common_locale.p(d,"numLines",0,"eu",{"one":"kode lerro 1","other":common_locale.n(d,"numLines")+" lerro kode"})+"."},
 "tryAgain":function(d){return "Saiatu berriro"},
 "tryHOC":function(d){return "Probatu Kode Ordua"},
 "wantToLearn":function(d){return "Kodetzen ikasi nahi?"},

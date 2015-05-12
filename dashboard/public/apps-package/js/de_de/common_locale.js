@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "und"},
 "backToPreviousLevel":function(d){return "Zurück zum vorherigen Level"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Einige Blöcke sind nicht verbunden. Wolltest Du diese mit dem \"Wenn ausführen\" Block verbinden?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen."},
-"finalStageTrophies":function(d){return "Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen und "+locale.p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":locale.n(d,"numTrophies")+" Trophäen"})+" gewonnen."},
+"finalStageTrophies":function(d){return "Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen und "+common_locale.p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":common_locale.n(d,"numTrophies")+" Trophäen"})+" gewonnen."},
 "finish":function(d){return "Abschließen"},
-"generatedCodeInfo":function(d){return "Selbst Eliteuniversitäten unterrichten blockbasiertes Programmieren (z.B. "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Allerdings können die von Dir zusammengefügten Blöcke auch in JavaScript, der weltweit meistverbreiteten Programmierspache, dargestellt werden:"},
+"generatedCodeInfo":function(d){return "Selbst Eliteuniversitäten unterrichten blockbasiertes Programmieren (z.B. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Allerdings können die von Dir zusammengefügten Blöcke auch in JavaScript, der weltweit meistverbreiteten Programmierspache, dargestellt werden:"},
 "genericFeedback":function(d){return "Sieh Dir Dein Ergebnis an und versuche, Programmierfehler zu beheben."},
 "hashError":function(d){return "Ups, '%1' stimmt mit keinem gespeicherten Programm überein."},
 "help":function(d){return "Hilfe"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "Liste"},
 "makeYourOwnFlappy":function(d){return "Programmiere Dein eigenes \"Flappy\"-Spiel"},
 "missingBlocksErrorMsg":function(d){return "Versuche einen, oder mehrere Bausteine von unten zu verwenden, um dieses Puzzle zu lösen."},
-"nextLevel":function(d){return "Glückwunsch! Du hast Puzzle "+locale.v(d,"puzzleNumber")+" erfolgreich abgeschlossen."},
-"nextLevelTrophies":function(d){return "Glückwunsch! Du hast Puzzle "+locale.v(d,"puzzleNumber")+" erfolgreich abgeschlossen und "+locale.p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":locale.n(d,"numTrophies")+" Trophäen"})+" gewonnen."},
+"nextLevel":function(d){return "Glückwunsch! Du hast Puzzle "+common_locale.v(d,"puzzleNumber")+" erfolgreich abgeschlossen."},
+"nextLevelTrophies":function(d){return "Glückwunsch! Du hast Puzzle "+common_locale.v(d,"puzzleNumber")+" erfolgreich abgeschlossen und "+common_locale.p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":common_locale.n(d,"numTrophies")+" Trophäen"})+" gewonnen."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Glückwunsch! "+locale.v(d,"stageName")+" abgeschlossen."},
-"nextStageTrophies":function(d){return "Glückwunsch! "+locale.v(d,"stageName")+" abgeschlossen und "+locale.p(d,"numTrophies",0,"de",{"eine":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+" gewonnen."},
-"numBlocksNeeded":function(d){return "Glückwunsch! Du hast Puzzle "+locale.v(d,"puzzleNumber")+" fertig gestellt. (Du hättest jedoch nur "+locale.p(d,"numBlocks",0,"de",{"one":"1 Baustein","other":locale.n(d,"numBlocks")+" Bausteine"})+" gebraucht.)"},
-"numLinesOfCodeWritten":function(d){return "Du hast soeben "+locale.p(d,"numLines",0,"de",{"one":"eine Zeile","other":locale.n(d,"numLines")+" Zeilen"})+" Code geschrieben!"},
+"nextStage":function(d){return "Glückwunsch! "+common_locale.v(d,"stageName")+" abgeschlossen."},
+"nextStageTrophies":function(d){return "Glückwunsch! "+common_locale.v(d,"stageName")+" abgeschlossen und "+common_locale.p(d,"numTrophies",0,"de",{"eine":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+" gewonnen."},
+"numBlocksNeeded":function(d){return "Glückwunsch! Du hast Puzzle "+common_locale.v(d,"puzzleNumber")+" fertig gestellt. (Du hättest jedoch nur "+common_locale.p(d,"numBlocks",0,"de",{"one":"1 Baustein","other":common_locale.n(d,"numBlocks")+" Bausteine"})+" gebraucht.)"},
+"numLinesOfCodeWritten":function(d){return "Du hast soeben "+common_locale.p(d,"numLines",0,"de",{"one":"eine Zeile","other":common_locale.n(d,"numLines")+" Zeilen"})+" Code geschrieben!"},
 "openWorkspace":function(d){return "Wie es funktioniert"},
 "orientationLock":function(d){return "Deaktivieren Sie die Dreh-Möglichkeit des Bildschirms in den Geräteeinstellungen."},
 "play":function(d){return "spielen"},
 "print":function(d){return "Drucken"},
-"puzzleTitle":function(d){return "Puzzle "+locale.v(d,"puzzle_number")+" von "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Puzzle "+common_locale.v(d,"puzzle_number")+" von "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "wiederhole"},
 "resetProgram":function(d){return "Zurücksetzen"},
 "rotateText":function(d){return "Drehen Sie ihr Gerät."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Du lässt mich ganz schön arbeiten! Könntest du versuchen es seltener zu wiederholen?"},
 "toolboxHeader":function(d){return "Bausteine"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Insgesamt: "+locale.p(d,"numLines",0,"de",{"one":"Eine Zeile","other":locale.n(d,"numLines")+" Zeilen"})+" Code."},
+"totalNumLinesOfCodeWritten":function(d){return "Insgesamt: "+common_locale.p(d,"numLines",0,"de",{"one":"Eine Zeile","other":common_locale.n(d,"numLines")+" Zeilen"})+" Code."},
 "tryAgain":function(d){return "Versuche es noch einmal"},
 "tryHOC":function(d){return "Probiere \"The Hour of Code\" aus"},
 "wantToLearn":function(d){return "Möchtest du programmieren lernen?"},

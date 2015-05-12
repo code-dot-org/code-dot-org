@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({41:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({43:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Bounce = require('./bounce');
@@ -17,7 +17,7 @@ window.bounceMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":5,"./blocks":37,"./bounce":38,"./levels":40,"./skins":42}],42:[function(require,module,exports){
+},{"../appMain":5,"./blocks":38,"./bounce":39,"./levels":41,"./skins":44}],44:[function(require,module,exports){
 /**
  * Load Skin for Bounce.
  */
@@ -111,7 +111,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":214}],40:[function(require,module,exports){
+},{"../skins":223}],41:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -543,7 +543,7 @@ module.exports = {
 };
 
 
-},{"../block_utils":34,"./tiles":43}],38:[function(require,module,exports){
+},{"../block_utils":35,"./tiles":45}],39:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -554,8 +554,8 @@ module.exports = {
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('../../locale/current/common');
-var bounceMsg = require('../../locale/current/bounce');
+var commonMsg = require('../locale');
+var bounceMsg = require('./locale');
 var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
@@ -1200,6 +1200,10 @@ Bounce.onMouseUp = function(e) {
  * Initialize Blockly and the Bounce app.  Called on page load.
  */
 Bounce.init = function(config) {
+  // replace studioApp methods with our own
+  studioApp.reset = this.reset.bind(this);
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
+
   Bounce.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
@@ -1411,7 +1415,7 @@ Bounce.resetBall = function(i, options) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-studioApp.reset = function(first) {
+Bounce.reset = function(first) {
   var i;
   Bounce.clearEventHandlersKillTickLoop();
 
@@ -1535,7 +1539,7 @@ studioApp.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-studioApp.runButtonClick = function() {
+Bounce.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -1960,7 +1964,7 @@ var checkFinished = function () {
 };
 
 
-},{"../../locale/current/bounce":263,"../../locale/current/common":265,"../StudioApp":4,"../codegen":62,"../constants":64,"../dom":65,"../dropletUtils":66,"../hammer":96,"../skins":214,"../templates/page.html.ejs":239,"../timeoutList":245,"../utils":260,"./api":36,"./controls.html.ejs":39,"./tiles":43,"./visualization.html.ejs":44}],44:[function(require,module,exports){
+},{"../StudioApp":4,"../codegen":65,"../constants":67,"../dom":68,"../dropletUtils":69,"../hammer":101,"../locale":110,"../skins":223,"../templates/page.html.ejs":249,"../timeoutList":255,"../utils":271,"./api":37,"./controls.html.ejs":40,"./locale":42,"./tiles":45,"./visualization.html.ejs":46}],46:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1980,7 +1984,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":281}],39:[function(require,module,exports){
+},{"ejs":281}],40:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1993,8 +1997,8 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
-  var msg = require('../../locale/current/bounce');
-  var commonMsg = require('../../locale/current/common');
+  var msg = require('./locale');
+  var commonMsg = require('../locale');
 ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((17,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n<div id="share-cell-wrapper">\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((23,  assetUrl('media/1x1.gif') )), '">', escape((23,  commonMsg.finish() )), '\n    </button>\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
@@ -2003,7 +2007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/bounce":263,"../../locale/current/common":265,"ejs":281}],37:[function(require,module,exports){
+},{"../locale":110,"./locale":42,"ejs":281}],38:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2012,7 +2016,7 @@ return buf.join('');
  */
 'use strict';
 
-var msg = require('../../locale/current/bounce');
+var msg = require('./locale');
 var codegen = require('../codegen');
 
 var generateSetterCode = function (ctx, name) {
@@ -2499,10 +2503,13 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../../locale/current/bounce":263,"../codegen":62}],263:[function(require,module,exports){
-/*bounce*/ module.exports = window.blockly.appLocale;
+},{"../codegen":65,"./locale":42}],42:[function(require,module,exports){
+// locale for bounce
 
-},{}],36:[function(require,module,exports){
+module.exports = window.blockly.bounce_locale;
+
+
+},{}],37:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -2685,7 +2692,7 @@ exports.bounceBall = function(id) {
 };
 
 
-},{"../StudioApp":4,"./tiles":43}],43:[function(require,module,exports){
+},{"../StudioApp":4,"./tiles":45}],45:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2725,4 +2732,4 @@ exports.SquareType = {
 };
 
 
-},{}]},{},[41]);
+},{}]},{},[43]);

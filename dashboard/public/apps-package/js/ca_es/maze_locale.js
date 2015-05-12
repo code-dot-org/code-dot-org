@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "al rusc"},
 "atFlower":function(d){return "a la flor"},
 "avoidCowAndRemove":function(d){return "evita la vaca i elimina 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "fes"},
 "elseCode":function(d){return "en cas contrari"},
 "fill":function(d){return "Ompleix 1"},
-"fillN":function(d){return "ompli "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "Omple les piles de forats "+appLocale.v(d,"shovelfuls")},
+"fillN":function(d){return "ompli "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "Omple les piles de forats "+maze_locale.v(d,"shovelfuls")},
 "fillSquare":function(d){return "ompli el quadrat"},
 "fillTooltip":function(d){return "Lloc d'unitat 1 de brutícia"},
 "finalLevel":function(d){return "Felicitats! Has resolt el puzzle final."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "hi ha un munt"},
 "putdownTower":function(d){return "Posa la torre"},
 "removeAndAvoidTheCow":function(d){return "elimina 1 i evita la vaca"},
-"removeN":function(d){return "elimina"+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "elimina"+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "treu la pila"},
-"removeStack":function(d){return "treu la pila del munt de "+appLocale.v(d,"shovelfuls")},
+"removeStack":function(d){return "treu la pila del munt de "+maze_locale.v(d,"shovelfuls")},
 "removeSquare":function(d){return "elimina el quadrat"},
 "repeatCarefullyError":function(d){return "Per solucionar això, pensar acuradament sobre el patró de dos moviments i un gir per posar en el bloc \"repetició\".  Està bé tenir un gir addicional al final."},
 "repeatUntil":function(d){return "repeteix fins que"},

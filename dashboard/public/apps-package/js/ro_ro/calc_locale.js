@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Programul rezultă prin împărţirea la zero."},
 "emptyComputeBlock":function(d){return "Trebuie să ataşaţi un block la block-ul \"evalueză\"."},
 "equivalentExpression":function(d){return "Încercaţi să vă reordonați argumentele pentru a obţine exact aceeaşi expresie."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Funcția ta nu returnează rezultatul corect pentru toate valorile."},
 "goal":function(d){return "Obiectiv:"},
 "levelIncompleteError":function(d){return "Expresia nu se potriveşte obiectivului."},
-"missingFunctionError":function(d){return "Trebuie să definiţi o funcţie prin nume "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "În expresia ta lipsește variabila "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "Trebuie să definiţi o funcţie prin nume "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "În expresia ta lipsește variabila "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Aici este calculul tău! Continuă să lucrezi la el, sau treci la următorul puzzle!"},
 "yourExpression":function(d){return "Expresia dvs.:"},
 "wrongInput":function(d){return "Apelezi funcţia cu o valoare greşită."},
-"wrongOtherValuesX":function(d){return "Rezultatul expresiei tale este greșit dacă modificăm valoarea variabilei "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Rezultatul expresiei tale este greșit dacă modificăm valoarea variabilei "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Expresia nu se întoarce rezultatul corect."}};

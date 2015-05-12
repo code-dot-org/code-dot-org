@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "и"},
 "backToPreviousLevel":function(d){return "Обратно към предишното ниво"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Имате неприкрепени блокове."},
 "extraTopBlocksWhenRun":function(d){return "Имате неприкрепени блокове. Искате ли да се приложат към \"при стартиране\" блока?"},
 "finalStage":function(d){return "Поздравления! Вие завършихте последния етап."},
-"finalStageTrophies":function(d){return "Поздравления! Вие завършихте последния етап и спечелихте  "+locale.p(d,"numTrophies",0,"bg",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "Поздравления! Вие завършихте последния етап и спечелихте  "+common_locale.p(d,"numTrophies",0,"bg",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "Финал"},
-"generatedCodeInfo":function(d){return "Дори най-добрите университети учат блок базирано програмиране(напр., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Но под капака, блоковете представляват кодове, написани на JavaScript, в света най-широко използваният за програмиране език:"},
+"generatedCodeInfo":function(d){return "Дори най-добрите университети учат блок базирано програмиране(напр., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Но под капака, блоковете представляват кодове, написани на JavaScript, в света най-широко използваният за програмиране език:"},
 "genericFeedback":function(d){return "Вижте какво сте въвели и се опитайте да коригирате вашата програма."},
 "hashError":function(d){return "За съжаление '%1' не съответства на нито една запазена програма."},
 "help":function(d){return "Помощ"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "списък"},
 "makeYourOwnFlappy":function(d){return "Направете своя собствена Flappy Bird игра"},
 "missingBlocksErrorMsg":function(d){return "Опитайте един или повече блокове по-долу, за да решите този пъзел."},
-"nextLevel":function(d){return "Поздравления! Приключите пъзел "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Поздравления! Завършихте пъзел "+locale.v(d,"puzzleNumber")+" и спечелихте "+locale.p(d,"numTrophies",0,"bg",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextLevel":function(d){return "Поздравления! Приключите пъзел "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Поздравления! Завършихте пъзел "+common_locale.v(d,"puzzleNumber")+" и спечелихте "+common_locale.p(d,"numTrophies",0,"bg",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "nextPuzzle":function(d){return "Следващ пъзел"},
-"nextStage":function(d){return "Поздравления! Вие завършихте "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Поздравления! Завършихте етап "+locale.v(d,"stageName")+" и спечелихте "+locale.p(d,"numTrophies",0,"bg",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Поздравления! Приключихте пъзел "+locale.v(d,"puzzleNumber")+". (Въпреки това, можехте да използвате само "+locale.p(d,"numBlocks",0,"bg",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Вие написахте "+locale.p(d,"numLines",0,"bg",{"one":"1line","other":locale.n(d,"numLines")+" lines"})+" код!"},
+"nextStage":function(d){return "Поздравления! Вие завършихте "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Поздравления! Завършихте етап "+common_locale.v(d,"stageName")+" и спечелихте "+common_locale.p(d,"numTrophies",0,"bg",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Поздравления! Приключихте пъзел "+common_locale.v(d,"puzzleNumber")+". (Въпреки това, можехте да използвате само "+common_locale.p(d,"numBlocks",0,"bg",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Вие написахте "+common_locale.p(d,"numLines",0,"bg",{"one":"1line","other":common_locale.n(d,"numLines")+" lines"})+" код!"},
 "openWorkspace":function(d){return "Как работи"},
 "orientationLock":function(d){return "Изключете заключването на ориентацията от опциите на устройството."},
 "play":function(d){return "играй"},
 "print":function(d){return "Печат"},
-"puzzleTitle":function(d){return "Пъзел "+locale.v(d,"puzzle_number")+" от "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Пъзел "+common_locale.v(d,"puzzle_number")+" от "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "повтори"},
 "resetProgram":function(d){return "Начално състояние"},
 "rotateText":function(d){return "Завъртете устройството си."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Вие ме накарахте да свърша много работа! Може ли да повторите няколко пъти?"},
 "toolboxHeader":function(d){return "Блокове"},
 "toolboxHeaderDroplet":function(d){return "Кутия с инструменти"},
-"totalNumLinesOfCodeWritten":function(d){return "Общо: "+locale.p(d,"numLines",0,"bg",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" код."},
+"totalNumLinesOfCodeWritten":function(d){return "Общо: "+common_locale.p(d,"numLines",0,"bg",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" код."},
 "tryAgain":function(d){return "Опитайте отново"},
 "tryHOC":function(d){return "Опитайте Часа на Кодирането"},
 "wantToLearn":function(d){return "Искате ли да се научите да кодирате?"},

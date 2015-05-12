@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({83:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({87:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -12,7 +12,7 @@ window.evalMain = function(options) {
 };
 
 
-},{"../appMain":5,"../skins":214,"./blocks":68,"./eval":70,"./levels":82}],70:[function(require,module,exports){
+},{"../appMain":5,"../skins":223,"./blocks":71,"./eval":73,"./levels":85}],73:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -39,8 +39,8 @@ var Eval = module.exports;
  */
 var studioApp = require('../StudioApp').singleton;
 var Eval = module.exports;
-var commonMsg = require('../../locale/current/common');
-var evalMsg = require('../../locale/current/eval');
+var commonMsg = require('../locale');
+var evalMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');
@@ -86,6 +86,7 @@ Eval.encodedFeedbackImage = null;
  * Initialize Blockly and the Eval.  Called on page load.
  */
 Eval.init = function(config) {
+  studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   skin = config.skin;
   level = config.level;
@@ -173,7 +174,7 @@ Eval.init = function(config) {
 /**
  * Click the run button.  Start the program.
  */
-studioApp.runButtonClick = function() {
+Eval.runButtonClick = function() {
   studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp.attempts++;
@@ -468,7 +469,7 @@ var displayFeedback = function(response) {
     response: response,
     level: level,
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
-    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined, 
+    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     showingSharing: !level.disableSharing && (level.freePlay),
     // allow users to save freeplay levels to their gallery
     saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
@@ -500,7 +501,7 @@ function onReportComplete(response) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/current/common":265,"../../locale/current/eval":266,"../StudioApp":4,"../block_utils":34,"../canvg/StackBlur.js":57,"../canvg/canvg.js":58,"../canvg/rgbcolor.js":59,"../canvg/svg_todataurl":60,"../codegen":62,"../dom":65,"../skins":214,"../templates/page.html.ejs":239,"../utils":260,"./api":67,"./controls.html.ejs":69,"./evalError":73,"./evalText":79,"./levels":82,"./visualization.html.ejs":84}],84:[function(require,module,exports){
+},{"../StudioApp":4,"../block_utils":35,"../canvg/StackBlur.js":60,"../canvg/canvg.js":61,"../canvg/rgbcolor.js":62,"../canvg/svg_todataurl":63,"../codegen":65,"../dom":68,"../locale":110,"../skins":223,"../templates/page.html.ejs":249,"../utils":271,"./api":70,"./controls.html.ejs":72,"./evalError":76,"./evalText":82,"./levels":85,"./locale":86,"./visualization.html.ejs":88}],88:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -520,8 +521,8 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":281}],82:[function(require,module,exports){
-var msg = require('../../locale/current/eval');
+},{"ejs":281}],85:[function(require,module,exports){
+var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
 /**
@@ -589,7 +590,7 @@ module.exports = {
 };
 
 
-},{"../../locale/current/eval":266,"../block_utils":34}],69:[function(require,module,exports){
+},{"../block_utils":35,"./locale":86}],72:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -602,8 +603,8 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
-  var msg = require('../../locale/current/eval');
-  var commonMsg = require('../../locale/current/common');
+  var msg = require('./locale');
+  var commonMsg = require('../locale');
 ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
@@ -612,7 +613,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/current/common":265,"../../locale/current/eval":266,"ejs":281}],68:[function(require,module,exports){
+},{"../locale":110,"./locale":86,"ejs":281}],71:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -638,8 +639,8 @@ return buf.join('');
  */
 'use strict';
 
-var msg = require('../../locale/current/eval');
-var commonMsg = require('../../locale/current/common');
+var msg = require('./locale');
+var commonMsg = require('../locale');
 
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
@@ -912,7 +913,7 @@ function installFunctionalBlock(blockly, generator, gensym, options) {
 }
 
 
-},{"../../locale/current/common":265,"../../locale/current/eval":266,"../sharedFunctionalBlocks":213,"./evalUtils":81}],67:[function(require,module,exports){
+},{"../locale":110,"../sharedFunctionalBlocks":222,"./evalUtils":84,"./locale":86}],70:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
@@ -1039,7 +1040,7 @@ exports.stringLength = function (str) {
 };
 
 
-},{"./evalCircle":71,"./evalEllipse":72,"./evalImage":74,"./evalMulti":75,"./evalPolygon":76,"./evalRect":77,"./evalStar":78,"./evalText":79,"./evalTriangle":80,"./evalUtils":81}],80:[function(require,module,exports){
+},{"./evalCircle":74,"./evalEllipse":75,"./evalImage":77,"./evalMulti":78,"./evalPolygon":79,"./evalRect":80,"./evalStar":81,"./evalText":82,"./evalTriangle":83,"./evalUtils":84}],83:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1091,7 +1092,7 @@ EvalTriangle.prototype.draw = function (parent) {
 };
 
 
-},{"./evalImage":74,"./evalUtils":81}],79:[function(require,module,exports){
+},{"./evalImage":77,"./evalUtils":84}],82:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1131,7 +1132,7 @@ EvalText.prototype.getText = function () {
 };
 
 
-},{"./evalImage":74,"./evalUtils":81}],78:[function(require,module,exports){
+},{"./evalImage":77,"./evalUtils":84}],81:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1179,7 +1180,7 @@ EvalStar.prototype.draw = function (parent) {
 };
 
 
-},{"./evalImage":74,"./evalUtils":81}],77:[function(require,module,exports){
+},{"./evalImage":77,"./evalUtils":84}],80:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1215,7 +1216,7 @@ EvalRect.prototype.draw = function (parent) {
 };
 
 
-},{"./evalImage":74,"./evalUtils":81}],76:[function(require,module,exports){
+},{"./evalImage":77,"./evalUtils":84}],79:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1255,7 +1256,7 @@ EvalPolygon.prototype.draw = function (parent) {
 };
 
 
-},{"./evalImage":74,"./evalUtils":81}],75:[function(require,module,exports){
+},{"./evalImage":77,"./evalUtils":84}],78:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1303,7 +1304,7 @@ EvalImage.prototype.getChildren = function () {
 };
 
 
-},{"./evalImage":74,"./evalUtils":81}],72:[function(require,module,exports){
+},{"./evalImage":77,"./evalUtils":84}],75:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1337,7 +1338,7 @@ EvalCircle.prototype.draw = function (parent) {
 };
 
 
-},{"./evalImage":74,"./evalUtils":81}],71:[function(require,module,exports){
+},{"./evalImage":77,"./evalUtils":84}],74:[function(require,module,exports){
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
@@ -1373,7 +1374,7 @@ EvalCircle.prototype.rotate = function () {
 };
 
 
-},{"./evalImage":74,"./evalUtils":81}],74:[function(require,module,exports){
+},{"./evalImage":77,"./evalUtils":84}],77:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 
 var EvalImage = function (style, color) {
@@ -1442,7 +1443,7 @@ EvalImage.prototype.getChildren = function () {
 };
 
 
-},{"./evalUtils":81}],81:[function(require,module,exports){
+},{"./evalUtils":84}],84:[function(require,module,exports){
 var CustomEvalError = require('./evalError');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -1541,8 +1542,8 @@ module.exports.cartesianToPixel = function (cartesianY) {
 };
 
 
-},{"../utils":260,"./evalError":73}],73:[function(require,module,exports){
-var evalMsg = require('../../locale/current/eval');
+},{"../utils":271,"./evalError":76}],76:[function(require,module,exports){
+var evalMsg = require('./locale');
 
 /**
  * An Eval error indicating that something bad happened, but we understand
@@ -1580,7 +1581,10 @@ CustomEvalError.Type = {
 };
 
 
-},{"../../locale/current/eval":266}],266:[function(require,module,exports){
-/*eval*/ module.exports = window.blockly.appLocale;
+},{"./locale":86}],86:[function(require,module,exports){
+// locale for eval
 
-},{}]},{},[83]);
+module.exports = window.blockly.eval_locale;
+
+
+},{}]},{},[87]);

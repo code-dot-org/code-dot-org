@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "och"},
 "backToPreviousLevel":function(d){return "Gå tillbaka till föregående nivå"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Du har okopplade block. Menade du att fästa dessa till \"när startat\" blocket?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Grattis! Du har slutfört den sista nivån."},
-"finalStageTrophies":function(d){return "Grattis! Du har slutfört den sista nivån och vann "+locale.p(d,"numTrophies",0,"sv",{"en":"en trofé","other":locale.n(d,"numTrophies")+" troféer"})+"."},
+"finalStageTrophies":function(d){return "Grattis! Du har slutfört den sista nivån och vann "+common_locale.p(d,"numTrophies",0,"sv",{"en":"en trofé","other":common_locale.n(d,"numTrophies")+" troféer"})+"."},
 "finish":function(d){return "Avsluta"},
-"generatedCodeInfo":function(d){return "Även toppuniversitet lär ut blockbaserad programmering (t.ex. "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Men under ytan kan blocken du har byggt ihop också visas som JavaScript, världens mest använda programmeringsspråk:"},
+"generatedCodeInfo":function(d){return "Även toppuniversitet lär ut blockbaserad programmering (t.ex. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Men under ytan kan blocken du har byggt ihop också visas som JavaScript, världens mest använda programmeringsspråk:"},
 "genericFeedback":function(d){return "Se vad det blev, och försök fixa ditt program."},
 "hashError":function(d){return "Tyvärr, '%1' finns inte bland dina sparade program."},
 "help":function(d){return "Hjälp"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "lista"},
 "makeYourOwnFlappy":function(d){return "Gör ditt eget Flappy-spel"},
 "missingBlocksErrorMsg":function(d){return "Prova att använda ett eller flera av blocken nedan för att lösa pusslet."},
-"nextLevel":function(d){return "Grattis! Du slutförde pussel "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Grattis! Du slutförde pussel "+locale.v(d,"puzzleNumber")+" och vann "+locale.p(d,"numTrophies",0,"sv",{"one":"en trofé","other":locale.n(d,"numTrophies")+" troféer"})+"."},
+"nextLevel":function(d){return "Grattis! Du slutförde pussel "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Grattis! Du slutförde pussel "+common_locale.v(d,"puzzleNumber")+" och vann "+common_locale.p(d,"numTrophies",0,"sv",{"one":"en trofé","other":common_locale.n(d,"numTrophies")+" troféer"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Grattis! Du har klarat "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Grattis! Du klarade "+locale.v(d,"stageName")+" och har fått "+locale.p(d,"numTrophies",0,"sv",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Grattis! Du klarade pussel "+locale.v(d,"puzzleNumber")+". (Men du borde bara behövt använda "+locale.p(d,"numBlocks",0,"sv",{"one":"1 block","other":locale.n(d,"numBlocks")+" block"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Du skrev "+locale.p(d,"numLines",0,"sv",{"one":"1 rad","other":locale.n(d,"numLines")+" rader"})+" kod!"},
+"nextStage":function(d){return "Grattis! Du har klarat "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Grattis! Du klarade "+common_locale.v(d,"stageName")+" och har fått "+common_locale.p(d,"numTrophies",0,"sv",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Grattis! Du klarade pussel "+common_locale.v(d,"puzzleNumber")+". (Men du borde bara behövt använda "+common_locale.p(d,"numBlocks",0,"sv",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" block"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Du skrev "+common_locale.p(d,"numLines",0,"sv",{"one":"1 rad","other":common_locale.n(d,"numLines")+" rader"})+" kod!"},
 "openWorkspace":function(d){return "Hur det fungerar"},
 "orientationLock":function(d){return "Stäng av orienterings låset i enhetsinställningar."},
 "play":function(d){return "spela"},
 "print":function(d){return "Skriv ut"},
-"puzzleTitle":function(d){return "Pussel "+locale.v(d,"puzzle_number")+" av "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Pussel "+common_locale.v(d,"puzzle_number")+" av "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "upprepa"},
 "resetProgram":function(d){return "Återställ"},
 "rotateText":function(d){return "Rotera din enhet."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Du fick mig att göra en hel del arbete!  Du kan försöka upprepa färre gånger?"},
 "toolboxHeader":function(d){return "bitar"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Totalt: "+locale.p(d,"numLines",0,"sv",{"one":"1 rad","other":locale.n(d,"numLines")+" rader"})+" kod."},
+"totalNumLinesOfCodeWritten":function(d){return "Totalt: "+common_locale.p(d,"numLines",0,"sv",{"one":"1 rad","other":common_locale.n(d,"numLines")+" rader"})+" kod."},
 "tryAgain":function(d){return "Försök igen"},
 "tryHOC":function(d){return "Prova Kodtimmen"},
 "wantToLearn":function(d){return "Vill du lära dig att programmera?"},

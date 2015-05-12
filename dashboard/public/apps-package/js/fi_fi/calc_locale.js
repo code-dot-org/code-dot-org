@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Ohjelmasi johtaa nollalla jakamiseen."},
 "emptyComputeBlock":function(d){return "Liitä lohko \"laske\"-lohkoon."},
 "equivalentExpression":function(d){return "Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Sinun funktiosi ei palauta oikeata tulosta kaikilla eri arvoilla."},
 "goal":function(d){return "Tavoite:"},
 "levelIncompleteError":function(d){return "Lausekkeesi ei vastaa tavoitetta."},
-"missingFunctionError":function(d){return "You must define a function named "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Lausekkeestasi puuttuu muuttuja "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "You must define a function named "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Lausekkeestasi puuttuu muuttuja "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Tässä on laskelmasi! Jatka sen työstämistä tai siirry  seuraavaan tehtävään!"},
 "yourExpression":function(d){return "Lausekkeesi:"},
 "wrongInput":function(d){return "Kutsut funktiotasi väärällä arvolla."},
-"wrongOtherValuesX":function(d){return "Lausekkeesi johtaa väärään arvoon, jos muutamme "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Lausekkeesi johtaa väärään arvoon, jos muutamme "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Lausekkeesi ei palauta oikeaa tulosta."}};

@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "और"},
 "backToPreviousLevel":function(d){return "Back to previous level"},
 "blocklyMessage":function(d){return "ब्लॉक्ली"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "बधाई हो! आपने अंतिम चरण पूरा कर लिया है।"},
-"finalStageTrophies":function(d){return "बधाइयाँ! आप अंतिम चरण पूरा कर लिया है और जीता "+locale.p(d,"numTrophies",0,"hi",{"one":"एक ट्राफी","other":locale.n(d,"numTrophies")+" ट्राफियां"})+"।"},
+"finalStageTrophies":function(d){return "बधाइयाँ! आप अंतिम चरण पूरा कर लिया है और जीता "+common_locale.p(d,"numTrophies",0,"hi",{"one":"एक ट्राफी","other":common_locale.n(d,"numTrophies")+" ट्राफियां"})+"।"},
 "finish":function(d){return "Finish"},
-"generatedCodeInfo":function(d){return "Even top universities teach block-based coding (e.g., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"},
+"generatedCodeInfo":function(d){return "Even top universities teach block-based coding (e.g., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"},
 "genericFeedback":function(d){return "देखिये की आपने ये समाप्त कैसे किया , और अपना प्रोग्राम फिक्स करने की कोशिश करें।"},
 "hashError":function(d){return "Sorry, '%1' doesn't correspond with any saved program."},
 "help":function(d){return "Help"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "सूची"},
 "makeYourOwnFlappy":function(d){return "Make Your Own Flappy Game"},
 "missingBlocksErrorMsg":function(d){return "Try one or more of the blocks below to solve this puzzle."},
-"nextLevel":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+" and won "+locale.p(d,"numTrophies",0,"hi",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextLevel":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+" and won "+common_locale.p(d,"numTrophies",0,"hi",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Congratulations! You completed "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Congratulations! You completed "+locale.v(d,"stageName")+" and won "+locale.p(d,"numTrophies",0,"hi",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+". (However, you could have used only "+locale.p(d,"numBlocks",0,"hi",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
-"numLinesOfCodeWritten":function(d){return "You just wrote "+locale.p(d,"numLines",0,"hi",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" of code!"},
+"nextStage":function(d){return "Congratulations! You completed "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Congratulations! You completed "+common_locale.v(d,"stageName")+" and won "+common_locale.p(d,"numTrophies",0,"hi",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (However, you could have used only "+common_locale.p(d,"numBlocks",0,"hi",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+".)"},
+"numLinesOfCodeWritten":function(d){return "You just wrote "+common_locale.p(d,"numLines",0,"hi",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" of code!"},
 "openWorkspace":function(d){return "How It Works"},
 "orientationLock":function(d){return "डिवाइस सेटिंग्स में ओरिएंटेशन ऑफ कर दें।"},
 "play":function(d){return "play"},
 "print":function(d){return "Print"},
-"puzzleTitle":function(d){return "Puzzle "+locale.v(d,"puzzle_number")+" of "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Puzzle "+common_locale.v(d,"puzzle_number")+" of "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "दोहराएँ"},
 "resetProgram":function(d){return "Reset"},
 "rotateText":function(d){return "अपना डिवाइस घुमाएँ।"},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "You made me do a lot of work!  Could you try repeating fewer times?"},
 "toolboxHeader":function(d){return "Blocks"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "All-time total: "+locale.p(d,"numLines",0,"hi",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" of code."},
+"totalNumLinesOfCodeWritten":function(d){return "All-time total: "+common_locale.p(d,"numLines",0,"hi",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" of code."},
 "tryAgain":function(d){return "Try again"},
 "tryHOC":function(d){return "एक घंटे कोडिंग की कोशिश करें "},
 "wantToLearn":function(d){return "क्या आप कोड लिखना जानना चाहते हैं।"},

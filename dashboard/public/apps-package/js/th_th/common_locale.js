@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "และ"},
 "backToPreviousLevel":function(d){return "กลับไปยังระดับก่อนหน้า"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "คุณมีบล็อกที่แยกออกไป คุณหมายถึง ว่าคุณจะแนบบล็อคเหล่านี้ไปที่ \"เมื่อรัน\" บล็อกหรือเปล่า ?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "ขอแสดงความยินดี ขั้นตอนสุดท้ายสำเร็จแล้ว."},
-"finalStageTrophies":function(d){return "ขอแสดงความยินดี คุณได้เสร็จสิ้นขั้นตอนสุดท้าย และชนะ "+locale.p(d,"numTrophies",0,"th",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "ขอแสดงความยินดี คุณได้เสร็จสิ้นขั้นตอนสุดท้าย และชนะ "+common_locale.p(d,"numTrophies",0,"th",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "เสร็จ"},
-"generatedCodeInfo":function(d){return "มหาวิทยาลัยชั้นนำสอนการเขียนโค้ดแบบ  บล็อกเบสต์   (e.g., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+").  แต่ภายใต้กรอบสี่เหลี่ยมนั้น,  คุณต้องประมวลผลให้บล็อกของคุณแสดงใน ภาษาจาว่า, ซึ่งเป็นภาษาที่กว้าง และสำคัญของโลก."},
+"generatedCodeInfo":function(d){return "มหาวิทยาลัยชั้นนำสอนการเขียนโค้ดแบบ  บล็อกเบสต์   (e.g., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+").  แต่ภายใต้กรอบสี่เหลี่ยมนั้น,  คุณต้องประมวลผลให้บล็อกของคุณแสดงใน ภาษาจาว่า, ซึ่งเป็นภาษาที่กว้าง และสำคัญของโลก."},
 "genericFeedback":function(d){return "ดูว่าคุณสิ้นสุดอย่างไร และพยายามที่จะแก้ไขโปรแกรมของคุณ."},
 "hashError":function(d){return "ขออภัย '%1' ไม่ตรงกับโปรแกรมที่บันทึกไว้."},
 "help":function(d){return "ขอความช่วยเหลือ"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "รายการ"},
 "makeYourOwnFlappy":function(d){return "สร้าง Flappy เกม ไว้เป็นของเราเอง"},
 "missingBlocksErrorMsg":function(d){return "ลองอย่างน้อยหนึ่งบล็อกด้านล่างเพื่อแก้ปริศนานี้."},
-"nextLevel":function(d){return "ขอแสดงความยินดี คุณเสร็จสิ้นปริศนา "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "ขอแสดงความยินดี คุณเสร็จสิ้นปริศนา "+locale.v(d,"puzzleNumber")+" และชนะ "+locale.p(d,"numTrophies",0,"th",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextLevel":function(d){return "ขอแสดงความยินดี คุณเสร็จสิ้นปริศนา "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "ขอแสดงความยินดี คุณเสร็จสิ้นปริศนา "+common_locale.v(d,"puzzleNumber")+" และชนะ "+common_locale.p(d,"numTrophies",0,"th",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "เย้ ยินดีด้วย คุณผ่านด่าน "+locale.v(d,"stageName")+" แล้ว"},
-"nextStageTrophies":function(d){return "เย้ ยินดีด้วย คุณผ่านด่าน "+locale.v(d,"stageName")+" แล้ว และยังได้ "+locale.p(d,"numTrophies",0,"th",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+" อีกด้วย !"},
-"numBlocksNeeded":function(d){return "ขอแสดงความยินดี คุณสมบูรณ์ปริศนา "+locale.v(d,"puzzleNumber")+" (อย่างไรก็ตาม คุณสามารถใช้เฉพาะ "+locale.p(d,"numBlocks",0,"th",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
-"numLinesOfCodeWritten":function(d){return "คุณเพิ่งเขียนรหัส "+locale.p(d,"numLines",0,"th",{"one":"1 บรรทัด","other":locale.n(d,"numLines")+" บรรทัด"})+"!"},
+"nextStage":function(d){return "เย้ ยินดีด้วย คุณผ่านด่าน "+common_locale.v(d,"stageName")+" แล้ว"},
+"nextStageTrophies":function(d){return "เย้ ยินดีด้วย คุณผ่านด่าน "+common_locale.v(d,"stageName")+" แล้ว และยังได้ "+common_locale.p(d,"numTrophies",0,"th",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+" อีกด้วย !"},
+"numBlocksNeeded":function(d){return "ขอแสดงความยินดี คุณสมบูรณ์ปริศนา "+common_locale.v(d,"puzzleNumber")+" (อย่างไรก็ตาม คุณสามารถใช้เฉพาะ "+common_locale.p(d,"numBlocks",0,"th",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+".)"},
+"numLinesOfCodeWritten":function(d){return "คุณเพิ่งเขียนรหัส "+common_locale.p(d,"numLines",0,"th",{"one":"1 บรรทัด","other":common_locale.n(d,"numLines")+" บรรทัด"})+"!"},
 "openWorkspace":function(d){return "มันทำงานได้อย่างไร"},
 "orientationLock":function(d){return "ปิดล็อควางแนวในการตั้งค่าอุปกรณ์."},
 "play":function(d){return "เล่น"},
 "print":function(d){return "พิมพ์"},
-"puzzleTitle":function(d){return "ปริศนา "+locale.v(d,"puzzle_number")+" ของ "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "ปริศนา "+common_locale.v(d,"puzzle_number")+" ของ "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "ทำซ้ำ"},
 "resetProgram":function(d){return "ตั้งค่าใหม่"},
 "rotateText":function(d){return "หมุนอุปกรณ์ของคุณ."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "คุณทำให้ฉันทำงานหนัก! คุณจะทำซ้ำให้น้อยลงได้ไหม?"},
 "toolboxHeader":function(d){return "บล็อก"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "รวมสรุป: "+locale.p(d,"numLines",0,"th",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" of code."},
+"totalNumLinesOfCodeWritten":function(d){return "รวมสรุป: "+common_locale.p(d,"numLines",0,"th",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" of code."},
 "tryAgain":function(d){return "ลองอีกครั้ง"},
 "tryHOC":function(d){return "ลองใช้ Hour of Code สิ"},
 "wantToLearn":function(d){return "ต้องการศึกษาการเขียนโปรแกรมหรือ"},
