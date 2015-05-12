@@ -2,6 +2,8 @@ var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales();
 
+var testCollectionUtils = require('./util/testCollectionUtils');
+
 /**
  * Loads blocks into the workspace, then calls
  * checkForEmptyContainerBlockFailure_ and validates
@@ -351,7 +353,72 @@ describe("getMissingRequiredBlocks_ tests", function () {
     });
   }
 
-  // TODO (brent): this apparently hasnt been ported yet
+  // Hack to compile files into browserify. Don't call this function!
+  function ಠ_ಠ() {
+    require('@cdo/apps/maze/blocks');
+    require('@cdo/apps/flappy/blocks');
+    require('@cdo/apps/turtle/blocks');
+    require('@cdo/apps/eval/blocks');
+    require('@cdo/apps/studio/blocks');
+    require('@cdo/apps/calc/blocks');
+    require('@cdo/apps/bounce/blocks');
+    require('@cdo/apps/applab/blocks');
+
+    require('@cdo/apps/maze/skins');
+    require('@cdo/apps/flappy/skins');
+    require('@cdo/apps/turtle/skins');
+    require('@cdo/apps/studio/skins');
+    require('@cdo/apps/bounce/skins');
+    require('@cdo/apps/applab/skins');
+  }
+
+  function validateMissingBlocksFromLevelTest(testCollection, testData, dataItem) {
+    var level = testCollectionUtils.getLevelFromCollection(testCollection,
+      testData, dataItem);
+    assert(global.Blockly, "Blockly is in global namespace");
+
+    var skinForTests;
+    if (testCollection.skinId) {
+      var appSkins = require('@cdo/apps/' + testCollection.app + '/skins');
+      skinForTests = appSkins.load(studioApp.assetUrl, testCollection.skinId);
+    } else {
+      skinForTests = {
+        assetUrl: function (str) {
+          return str;
+        }
+      };
+    }
+
+    var blockInstallOptions = { skin: skinForTests, isK1: false };
+    var blocksCommon = require('@cdo/apps/blocksCommon');
+    blocksCommon.install(Blockly, blockInstallOptions);
+    var blocks = require('@cdo/apps/' + testCollection.app + '/blocks');
+    assert(blocks);
+    blocks.install(Blockly, blockInstallOptions);
+    validateBlocks({
+      requiredBlocks: level.requiredBlocks,
+      numToFlag: 1,
+      userBlockXml: testData.xml,
+      expectedResult: testData.missingBlocks,
+    });
+  }
+
   describe("required blocks for specific levels", function () {
+    var collections = testCollectionUtils.getCollections();
+    collections.forEach(function (item) {
+      var testCollection = item.data;
+      var app = testCollection.app;
+
+      testCollection.tests.forEach(function (testData, index) {
+        testUtils.setupLocale(app);
+        var dataItem = require('./util/data')(app);
+
+        if (testData.missingBlocks) {
+          it('MissingBlocks: ' + testData.description, function () {
+            validateMissingBlocksFromLevelTest(testCollection, testData, dataItem);
+          });
+        }
+      });
+    });
   });
 });

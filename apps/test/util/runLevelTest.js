@@ -1,6 +1,8 @@
 var assert = require('chai').assert;
 var _ = require('lodash');
 var timeoutList = require('@cdo/apps/timeoutList');
+var testCollectionUtils = require('./testCollectionUtils');
+
 var cb;
 
 module.exports = function(testCollection, testData, dataItem, done) {
@@ -11,24 +13,8 @@ module.exports = function(testCollection, testData, dataItem, done) {
   // skin shouldn't matter for most cases
   var skinId = testCollection.skinId || 'farmer';
 
-  var level;
-  // Each testCollection file must either specify a file from which to get the
-  // level, or provide it's own custom level
-  if (testCollection.levelFile) {
-    var levels = data.levels[testCollection.levelFile];
-    level = _.cloneDeep(levels[testCollection.levelId]);
-  } else {
-    // custom levels can either be across all tests in the collection (in which
-    // case it's testCollection.levelDefinition), or for a single test (in which
-    // case it's returned by testData.delayLoadLevelDefinition())
-    // NOTE: we could simplify things by converting everyone to use the per test
-    // usage instead of the per collection usage
-    if (!testCollection.levelDefinition && !testData.delayLoadLevelDefinition) {
-      logError('testCollection requires levelFile or levelDefinition');
-      return;
-    }
-    level = testCollection.levelDefinition || testData.delayLoadLevelDefinition();
-  }
+  var level = testCollectionUtils.getLevelFromCollection(testCollection,
+    testData, dataItem);
 
   // Override speed
   if (!level.scale) {
@@ -105,7 +91,6 @@ StubDialog.prototype.show = function() {
 
 StubDialog.prototype.hide = function() {
 };
-
 
 // Hack to compile files into browserify. Don't call this function!
 // TODO (brent) : this can probably be replaced using require-globify and/or
