@@ -13,7 +13,7 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var i18n = require('../../locale/current/netsim');
+var i18n = require('./locale');
 var NodeType = require('./netsimConstants').NodeType;
 var NetSimEntity = require('./NetSimEntity');
 var NetSimNode = require('./NetSimNode');

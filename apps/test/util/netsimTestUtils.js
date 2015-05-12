@@ -1,9 +1,9 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
-var NetSimTable = testUtils.requireWithGlobalsCheckBuildFolder('netsim/NetSimTable');
-var netsimGlobals = testUtils.requireWithGlobalsCheckBuildFolder('netsim/netsimGlobals');
-var levels = testUtils.requireWithGlobalsCheckBuildFolder('netsim/levels');
+var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
+var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var levels = require('@cdo/apps/netsim/levels');
 
 /**
  * Checks whether the given table has the specified number of rows.
