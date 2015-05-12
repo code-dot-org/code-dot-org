@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "且"},
 "backToPreviousLevel":function(d){return "返回上一階段"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "你有一些程式積木沒連接上. 你是要把它們接在\"當按下執行時\"的積木後面嗎?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "恭喜你 ！你已完成最後關卡的挑戰。"},
-"finalStageTrophies":function(d){return "恭喜! 你已完成最後關卡並且贏得 "+locale.p(d,"numTrophies",0,"zh",{"one":"一個獎盃","other":locale.n(d,"numTrophies")+" 獎盃"})+"."},
+"finalStageTrophies":function(d){return "恭喜! 你已完成最後關卡並且贏得 "+common_locale.p(d,"numTrophies",0,"zh",{"one":"一個獎盃","other":common_locale.n(d,"numTrophies")+" 獎盃"})+"."},
 "finish":function(d){return "完成 "},
-"generatedCodeInfo":function(d){return "就連頂尖大學也使用\"程式積木\"來進行程式教學。(例如 :  "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+")。但是藏在底下的是，你所組裝的每個程式積木都可以用JavaScript 語法（世界上使用最廣的程式語言之一）來表示。"},
+"generatedCodeInfo":function(d){return "就連頂尖大學也使用\"程式積木\"來進行程式教學。(例如 :  "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+")。但是藏在底下的是，你所組裝的每個程式積木都可以用JavaScript 語法（世界上使用最廣的程式語言之一）來表示。"},
 "genericFeedback":function(d){return "看看你的成果如何, 並試著修正你的程式"},
 "hashError":function(d){return "對不起，'%1' 無法對應任何已儲存的程式。"},
 "help":function(d){return "說明"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "列表變數"},
 "makeYourOwnFlappy":function(d){return "做出自己的 Flappy 遊戲"},
 "missingBlocksErrorMsg":function(d){return "請嘗試組合底下的程式積木來解決這一個關卡。"},
-"nextLevel":function(d){return "恭喜你 ！你已完成第"+locale.v(d,"puzzleNumber")+"關。"},
-"nextLevelTrophies":function(d){return "恭喜!你已經完成第"+locale.v(d,"puzzleNumber")+"關，並且贏得"+locale.p(d,"numTrophies",0,"zh",{"one":"1個獎盃","other":locale.n(d,"numTrophies")+" 獎盃"})+"."},
+"nextLevel":function(d){return "恭喜你 ！你已完成第"+common_locale.v(d,"puzzleNumber")+"關。"},
+"nextLevelTrophies":function(d){return "恭喜!你已經完成第"+common_locale.v(d,"puzzleNumber")+"關，並且贏得"+common_locale.p(d,"numTrophies",0,"zh",{"one":"1個獎盃","other":common_locale.n(d,"numTrophies")+" 獎盃"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return " 恭喜你！你已經完成 "+locale.v(d,"stageName")+"。"},
-"nextStageTrophies":function(d){return "恭喜您!你已經完成\""+locale.v(d,"stageName")+"\"階段，並贏得"+locale.p(d,"numTrophies",0,"zh",{"one":"1個獎盃","other":locale.n(d,"numTrophies")+"個獎盃"})+"."},
-"numBlocksNeeded":function(d){return "恭喜！你已經完成第 "+locale.v(d,"puzzleNumber")+" 關。 (但是，你可以只使用 "+locale.p(d,"numBlocks",0,"zh",{"one":"一個程式積木","other":locale.n(d,"numBlocks")+" 程式積木"})+".來完成挑戰哦！)"},
-"numLinesOfCodeWritten":function(d){return "你已經撰寫了 "+locale.p(d,"numLines",0,"zh",{"one":"一行","other":locale.n(d,"numLines")+" 行"})+" 的程式碼！"},
+"nextStage":function(d){return " 恭喜你！你已經完成 "+common_locale.v(d,"stageName")+"。"},
+"nextStageTrophies":function(d){return "恭喜您!你已經完成\""+common_locale.v(d,"stageName")+"\"階段，並贏得"+common_locale.p(d,"numTrophies",0,"zh",{"one":"1個獎盃","other":common_locale.n(d,"numTrophies")+"個獎盃"})+"."},
+"numBlocksNeeded":function(d){return "恭喜！你已經完成第 "+common_locale.v(d,"puzzleNumber")+" 關。 (但是，你可以只使用 "+common_locale.p(d,"numBlocks",0,"zh",{"one":"一個程式積木","other":common_locale.n(d,"numBlocks")+" 程式積木"})+".來完成挑戰哦！)"},
+"numLinesOfCodeWritten":function(d){return "你已經撰寫了 "+common_locale.p(d,"numLines",0,"zh",{"one":"一行","other":common_locale.n(d,"numLines")+" 行"})+" 的程式碼！"},
 "openWorkspace":function(d){return "它如何運作的"},
 "orientationLock":function(d){return "在設備設置中關閉旋轉鎖定。"},
 "play":function(d){return "玩"},
 "print":function(d){return "列印"},
-"puzzleTitle":function(d){return "階段 "+locale.v(d,"stage_total")+" 的第"+locale.v(d,"puzzle_number")+" 關"},
+"puzzleTitle":function(d){return "階段 "+common_locale.v(d,"stage_total")+" 的第"+common_locale.v(d,"puzzle_number")+" 關"},
 "repeat":function(d){return "重複"},
 "resetProgram":function(d){return "再試一次"},
 "rotateText":function(d){return "旋轉你的設備。"},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "你讓我做太多工作了! 可以試著減少一些重複次數嗎?"},
 "toolboxHeader":function(d){return "程式模塊"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "到目前為止共撰寫了："+locale.p(d,"numLines",0,"zh",{"one":"1 行","other":locale.n(d,"numLines")+" 行"})+" 的程式碼。"},
+"totalNumLinesOfCodeWritten":function(d){return "到目前為止共撰寫了："+common_locale.p(d,"numLines",0,"zh",{"one":"1 行","other":common_locale.n(d,"numLines")+" 行"})+" 的程式碼。"},
 "tryAgain":function(d){return "再試一次"},
 "tryHOC":function(d){return "試試一小時的程式設計課程"},
 "wantToLearn":function(d){return "想要學習寫程式嗎?"},

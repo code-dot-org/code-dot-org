@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var bounce_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){bounce_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).bounce_locale = {
 "bounceBall":function(d){return "ลูกบอลกระเด้ง"},
 "bounceBallTooltip":function(d){return "กระเด้งลูกบอลหนึ่งลูกออกจากวัตถุ."},
 "continue":function(d){return "ต่อไป\n"},
@@ -217,7 +217,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatUntil":function(d){return "ทำซ้ำจนกว่า"},
 "repeatUntilBlocked":function(d){return "ขณะที่ยังมีทางข้างหน้า"},
 "repeatUntilFinish":function(d){return "repeat until finish"},
-"scoreText":function(d){return "คะแนน: "+appLocale.v(d,"playerScore")+" : "+appLocale.v(d,"opponentScore")},
+"scoreText":function(d){return "คะแนน: "+bounce_locale.v(d,"playerScore")+" : "+bounce_locale.v(d,"opponentScore")},
 "setBackgroundRandom":function(d){return "ตั่งฉากแบบสุ่ม"},
 "setBackgroundHardcourt":function(d){return "สุ่มการติดตั้งฉาก hardcourt"},
 "setBackgroundRetro":function(d){return "ตั้งฉากแบบยุคเก่า"},

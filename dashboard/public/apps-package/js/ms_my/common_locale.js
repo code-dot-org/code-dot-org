@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "dan"},
 "backToPreviousLevel":function(d){return "Kembali ke tahap yang sebelumnya"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Tahniah! Anda telah melengkapkan peringkat akhir."},
-"finalStageTrophies":function(d){return "Tahniah! Anda telah selesai peringkat akhir dan memenangi "+locale.p(d,"numTrophies",0,"ms",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "Tahniah! Anda telah selesai peringkat akhir dan memenangi "+common_locale.p(d,"numTrophies",0,"ms",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "Selesai"},
-"generatedCodeInfo":function(d){return "Universiti terkemuka juga mengajarkan blok-asas koding (cth., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Tetapi, blok yang telah disusun juga boleh ditunjukkan dalam JavaScript, bahasa koding yang paling meluas digunakan:"},
+"generatedCodeInfo":function(d){return "Universiti terkemuka juga mengajarkan blok-asas koding (cth., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Tetapi, blok yang telah disusun juga boleh ditunjukkan dalam JavaScript, bahasa koding yang paling meluas digunakan:"},
 "genericFeedback":function(d){return "Lihat bagaimana anda akhiri, dan cuba membaiki program anda."},
 "hashError":function(d){return "Maaf, '%1' tidak sepadan dengan sebarang atur cara yang disimpan."},
 "help":function(d){return "Bantu"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "senarai"},
 "makeYourOwnFlappy":function(d){return "Buat permainan Flappy anda sendiri"},
 "missingBlocksErrorMsg":function(d){return "Cuba satu atau lebih blok di bawah untuk menyelesaikan puzzle ini."},
-"nextLevel":function(d){return "Tahniah! Anda telah melengkapkan puzzle "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Tahniah! Anda telah menyelesaikan Puzzle "+locale.v(d,"puzzleNumber")+" dan memenangi "+locale.p(d,"numTrophies",0,"ms",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextLevel":function(d){return "Tahniah! Anda telah melengkapkan puzzle "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Tahniah! Anda telah menyelesaikan Puzzle "+common_locale.v(d,"puzzleNumber")+" dan memenangi "+common_locale.p(d,"numTrophies",0,"ms",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Tahniah! Anda tamatkan "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Tahniah! Anda telah menyelesaikan "+locale.v(d,"stageName")+" dan memenangi "+locale.p(d,"numTrophies",0,"ms",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Tahniah! Anda melengkapkan Puzzle "+locale.v(d,"puzzleNumber")+". (Walau bagaimanapun, anda hanya boleh menggunakan "+locale.p(d,"numBlocks",0,"ms",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Anda baru sahaja menulis "+locale.p(d,"numLines",0,"ms",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" kod!"},
+"nextStage":function(d){return "Tahniah! Anda tamatkan "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Tahniah! Anda telah menyelesaikan "+common_locale.v(d,"stageName")+" dan memenangi "+common_locale.p(d,"numTrophies",0,"ms",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Tahniah! Anda melengkapkan Puzzle "+common_locale.v(d,"puzzleNumber")+". (Walau bagaimanapun, anda hanya boleh menggunakan "+common_locale.p(d,"numBlocks",0,"ms",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Anda baru sahaja menulis "+common_locale.p(d,"numLines",0,"ms",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" kod!"},
 "openWorkspace":function(d){return "Bagaimana ia berfungsi"},
 "orientationLock":function(d){return "Matikan kunci orientasi dalam tetapan peranti."},
 "play":function(d){return "Main"},
 "print":function(d){return "Cetak"},
-"puzzleTitle":function(d){return "Puzzle "+locale.v(d,"puzzle_number")+" dari "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Puzzle "+common_locale.v(d,"puzzle_number")+" dari "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "Ulang"},
 "resetProgram":function(d){return "Tetapkan semula"},
 "rotateText":function(d){return "Pusingkan peranti anda."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Anda membuatkan saya melakukan banyak kerja! Bolehkah anda cuba ulang beberapa kali sahaja?"},
 "toolboxHeader":function(d){return "blok"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Total masa keseluruhan: "+locale.p(d,"numLines",0,"ms",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" kod."},
+"totalNumLinesOfCodeWritten":function(d){return "Total masa keseluruhan: "+common_locale.p(d,"numLines",0,"ms",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" kod."},
 "tryAgain":function(d){return "Cuba lagi"},
 "tryHOC":function(d){return "Cuba Hour of Code"},
 "wantToLearn":function(d){return "Ingin belajar untuk mengekod?"},

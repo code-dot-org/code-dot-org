@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "در کندوی عسل"},
 "atFlower":function(d){return "در گل"},
 "avoidCowAndRemove":function(d){return "از گاو دوری کنید و ۱ را حذف کنید"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "انجام بده"},
 "elseCode":function(d){return "وگرنه"},
 "fill":function(d){return "1 را پر کن"},
-"fillN":function(d){return "پر کنید "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "چاله ها را پر کن بیل"+appLocale.v(d,"shovelfuls")},
+"fillN":function(d){return "پر کنید "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "چاله ها را پر کن بیل"+maze_locale.v(d,"shovelfuls")},
 "fillSquare":function(d){return "مربع را پر کنید"},
 "fillTooltip":function(d){return "1 واحد خاک را قرار بده"},
 "finalLevel":function(d){return "تبریک! شما پازل نهایی را حل کردید."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "آنجا یک توده وجود دارد"},
 "putdownTower":function(d){return "کثیفی ها را پایین بکشید"},
 "removeAndAvoidTheCow":function(d){return "۱ را حذف کنید و از گاو اجتناب کنید"},
-"removeN":function(d){return appLocale.v(d,"shovelfuls")+" را حذف کن"},
+"removeN":function(d){return maze_locale.v(d,"shovelfuls")+" را حذف کن"},
 "removePile":function(d){return "کپه را حذف کن"},
-"removeStack":function(d){return "بک دسته از"+appLocale.v(d,"shovelfuls")+" را حذف کن"},
+"removeStack":function(d){return "بک دسته از"+maze_locale.v(d,"shovelfuls")+" را حذف کن"},
 "removeSquare":function(d){return "مربع را حزف کن"},
 "repeatCarefullyError":function(d){return "برای حل کردن ، با دقت به الگوی دو حرکت و یک چرخش برای قرار دادن در بلوک \" تکرار \" فکر کنید . خوب است که یک چرخش اضافه در انتها داشته باشیم . "},
 "repeatUntil":function(d){return "تکرار کن تا زمانی که"},

@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "at"},
 "backToPreviousLevel":function(d){return "Bumalik sa nakaraang level"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Mayroon kang hindi isinama na block. Ibig mo bang ilakip ang mga ito sa \"when run\" block?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Maligayang pagbati! Natapos mo na ang pinakahuling stage."},
-"finalStageTrophies":function(d){return "Maligayang pagbati! Nakumpleto mo na ang pinakahuling stage at nanalo ng "+locale.p(d,"numTrophies",0,"fil",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "Maligayang pagbati! Nakumpleto mo na ang pinakahuling stage at nanalo ng "+common_locale.p(d,"numTrophies",0,"fil",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "Katapusan"},
-"generatedCodeInfo":function(d){return "Kahit ang mga nangungunang mga unibersidad ay nagtuturo ng block-based na coding (eg, "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Ngunit sa ilalim nito, ang mga bloke na iyong binuo ay maaari ring ipakita sa JavaScript, pinaka-tinatanggap na mga wika coding ng mundo:"},
+"generatedCodeInfo":function(d){return "Kahit ang mga nangungunang mga unibersidad ay nagtuturo ng block-based na coding (eg, "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Ngunit sa ilalim nito, ang mga bloke na iyong binuo ay maaari ring ipakita sa JavaScript, pinaka-tinatanggap na mga wika coding ng mundo:"},
 "genericFeedback":function(d){return "Tingnan kung ano ang nangyari dito, at subukang ayusin ang iyong mga program."},
 "hashError":function(d){return "Pasensya, '%1' ay walang katumbas sa mga na save na program."},
 "help":function(d){return "Tulong"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "list"},
 "makeYourOwnFlappy":function(d){return "Gumawa Ng Sarili Mong Flappy Game"},
 "missingBlocksErrorMsg":function(d){return "Subukan ang isa o higit pa sa mga bloke sa ibaba upang malutas itong palaisipan."},
-"nextLevel":function(d){return "Maligayang bati! Natapos mo ang Puzzle "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Maligayang bati! Nakumpleto mo ang Puzzle "+locale.v(d,"puzzleNumber")+" at nanalo ng "+locale.p(d,"numTrophies",0,"fil",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextLevel":function(d){return "Maligayang bati! Natapos mo ang Puzzle "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Maligayang bati! Nakumpleto mo ang Puzzle "+common_locale.v(d,"puzzleNumber")+" at nanalo ng "+common_locale.p(d,"numTrophies",0,"fil",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Maligayang bati! Nakumpleto mo ang "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Maligayang bati! Natapos mo ang "+locale.v(d,"stageName")+" at nanalo ng "+locale.p(d,"numTrophies",0,"fil",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Maligayang bati! Nakumpleto mo ang Puzzle "+locale.v(d,"puzzleNumber")+". (Subalit, maaari mo sanang gamitin lamang ang "+locale.p(d,"numBlocks",0,"fil",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Ikaw ang nagsulat ng "+locale.p(d,"numLines",0,"fil",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" ng code!"},
+"nextStage":function(d){return "Maligayang bati! Nakumpleto mo ang "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Maligayang bati! Natapos mo ang "+common_locale.v(d,"stageName")+" at nanalo ng "+common_locale.p(d,"numTrophies",0,"fil",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Maligayang bati! Nakumpleto mo ang Puzzle "+common_locale.v(d,"puzzleNumber")+". (Subalit, maaari mo sanang gamitin lamang ang "+common_locale.p(d,"numBlocks",0,"fil",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Ikaw ang nagsulat ng "+common_locale.p(d,"numLines",0,"fil",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" ng code!"},
 "openWorkspace":function(d){return "Kung Paano Ito Gumagana"},
 "orientationLock":function(d){return "I-off ang orientation ng lock sa mga setting ng device."},
 "play":function(d){return "i-play"},
 "print":function(d){return "I-print"},
-"puzzleTitle":function(d){return "Puzzle "+locale.v(d,"puzzle_number")+" ng "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Puzzle "+common_locale.v(d,"puzzle_number")+" ng "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "ulitin"},
 "resetProgram":function(d){return "Ulitin"},
 "rotateText":function(d){return "Paikutin ang iyong device."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Pinagawa mo ako ng naparaming trabaho! Maaari mo ba na ulitin ng mas kaunting mga beses?"},
 "toolboxHeader":function(d){return "Mga block"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Kinabuohan: "+locale.p(d,"numLines",0,"fil",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" ng code."},
+"totalNumLinesOfCodeWritten":function(d){return "Kinabuohan: "+common_locale.p(d,"numLines",0,"fil",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" ng code."},
 "tryAgain":function(d){return "Subukang muli"},
 "tryHOC":function(d){return "Subukan ang Hour of Code"},
 "wantToLearn":function(d){return "Gusto mo matuto mag-code?"},

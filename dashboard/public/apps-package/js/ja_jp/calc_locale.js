@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "０による割り算を行ってしまいました。"},
 "emptyComputeBlock":function(d){return "「evaluate」ブロックにブロックを追加する必要があります"},
 "equivalentExpression":function(d){return "同じ式になるよう引数を並べ替えてください。"},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "あなたの関数は正しい結果を返していません。"},
 "goal":function(d){return "ゴール: "},
 "levelIncompleteError":function(d){return "あなたの式はゴールと合っていません。"},
-"missingFunctionError":function(d){return appLocale.v(d,"functionName")+" という関数を定義してください"},
-"missingVariableX":function(d){return "あなたの式には、変数"+appLocale.v(d,"var")+"がありません。"},
+"missingFunctionError":function(d){return calc_locale.v(d,"functionName")+" という関数を定義してください"},
+"missingVariableX":function(d){return "あなたの式には、変数"+calc_locale.v(d,"var")+"がありません。"},
 "reinfFeedbackMsg":function(d){return "あなたの計算結果です！このパズルを続けるか、次のパズルに進んでください！"},
 "yourExpression":function(d){return "あなたの式:"},
 "wrongInput":function(d){return "誤った入力値で関数を呼び出しています。"},
-"wrongOtherValuesX":function(d){return appLocale.v(d,"var")+"の値が変わると、あなたの式の結果は誤った値になります。"},
+"wrongOtherValuesX":function(d){return calc_locale.v(d,"var")+"の値が変わると、あなたの式の結果は誤った値になります。"},
 "wrongResult":function(d){return "あなたの式は、正しい結果を返していません。"}};

@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "a"},
 "backToPreviousLevel":function(d){return "Zpět na předchozí úroveň"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Máš nepřipojené bloky. Nechceš je připojit k bloku \"po spuštění\"?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Dobrá práce! Dokončil si poslední fázi."},
-"finalStageTrophies":function(d){return "Dobrá práce! Dokončil si poslední fázi a vyhrál "+locale.p(d,"numTrophies",0,"cs",{"one":"trofej","other":locale.n(d,"numTrophies")+" trofejí"})+"."},
+"finalStageTrophies":function(d){return "Dobrá práce! Dokončil si poslední fázi a vyhrál "+common_locale.p(d,"numTrophies",0,"cs",{"one":"trofej","other":common_locale.n(d,"numTrophies")+" trofejí"})+"."},
 "finish":function(d){return "Dokončit"},
-"generatedCodeInfo":function(d){return "Dokonce nejlepší university učí programovat pomocí bloků (např. "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Ale vnitřek bloků, které jsi sestavil, lze zobrazit také v JavaScriptu, světově nejrozšířenějším programovacím jazyce:"},
+"generatedCodeInfo":function(d){return "Dokonce nejlepší university učí programovat pomocí bloků (např. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Ale vnitřek bloků, které jsi sestavil, lze zobrazit také v JavaScriptu, světově nejrozšířenějším programovacím jazyce:"},
 "genericFeedback":function(d){return "Podívej se jak jsi skončil a zkus svůj program opravit."},
 "hashError":function(d){return "Promiň, ale '%1' neodpovídá žádnému uloženému programu."},
 "help":function(d){return "Nápověda"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "seznam"},
 "makeYourOwnFlappy":function(d){return "Vytvoř Si Vlastní Hru Flappy"},
 "missingBlocksErrorMsg":function(d){return "Použijte jeden či více bloků k vyřešení těto hádanky."},
-"nextLevel":function(d){return "Dobrá práce! Dokončil jsi Hádanku "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Dobrá práce! Dokončil jsi Hádanku "+locale.v(d,"puzzleNumber")+" a vyhrál "+locale.p(d,"numTrophies",0,"cs",{"one":"trofej","other":locale.n(d,"numTrophies")+" trofeje"})+"."},
+"nextLevel":function(d){return "Dobrá práce! Dokončil jsi Hádanku "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Dobrá práce! Dokončil jsi Hádanku "+common_locale.v(d,"puzzleNumber")+" a vyhrál "+common_locale.p(d,"numTrophies",0,"cs",{"one":"trofej","other":common_locale.n(d,"numTrophies")+" trofeje"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Blahopřejeme! Dokončil jsi "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Blahopřejeme! Dokončil jsi "+locale.v(d,"stageName")+" a vyhrál "+locale.p(d,"numTrophies",0,"cs",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Dobrá práce! Dokončil jsi Hádanku "+locale.v(d,"puzzleNumber")+". (Ale mohl jsi použít pouze "+locale.p(d,"numBlocks",0,"cs",{"one":"1 blok","other":locale.n(d,"numBlocks")+" bloků"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Už jsi napsal "+locale.p(d,"numLines",0,"cs",{"one":"1 řádek","other":locale.n(d,"numLines")+" řádků"})+" kódu!"},
+"nextStage":function(d){return "Blahopřejeme! Dokončil jsi "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Blahopřejeme! Dokončil jsi "+common_locale.v(d,"stageName")+" a vyhrál "+common_locale.p(d,"numTrophies",0,"cs",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Dobrá práce! Dokončil jsi Hádanku "+common_locale.v(d,"puzzleNumber")+". (Ale mohl jsi použít pouze "+common_locale.p(d,"numBlocks",0,"cs",{"one":"1 blok","other":common_locale.n(d,"numBlocks")+" bloků"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Už jsi napsal "+common_locale.p(d,"numLines",0,"cs",{"one":"1 řádek","other":common_locale.n(d,"numLines")+" řádků"})+" kódu!"},
 "openWorkspace":function(d){return "Jak To Funguje"},
 "orientationLock":function(d){return "Vypni uzamčení rotace v nastavení zařízení."},
 "play":function(d){return "hrát"},
 "print":function(d){return "Tisk"},
-"puzzleTitle":function(d){return "Hádanka "+locale.v(d,"puzzle_number")+" z "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Hádanka "+common_locale.v(d,"puzzle_number")+" z "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "opakuj"},
 "resetProgram":function(d){return "Obnovit"},
 "rotateText":function(d){return "Otoč své zařízení."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Přinutil jsi mne udělat spoustu práce! Mohl bys zkusit opakovat méně krát?"},
 "toolboxHeader":function(d){return "bloky"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Celkově: "+locale.p(d,"numLines",0,"cs",{"one":"1 řádek","other":locale.n(d,"numLines")+" řádků"})+" kódu."},
+"totalNumLinesOfCodeWritten":function(d){return "Celkově: "+common_locale.p(d,"numLines",0,"cs",{"one":"1 řádek","other":common_locale.n(d,"numLines")+" řádků"})+" kódu."},
 "tryAgain":function(d){return "Zkusit znovu"},
 "tryHOC":function(d){return "Vyzkoušej Hodinu Programování"},
 "wantToLearn":function(d){return "Chceš se naučit programovat?"},

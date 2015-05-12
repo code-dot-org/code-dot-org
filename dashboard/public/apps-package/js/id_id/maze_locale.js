@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "di sarang lebah"},
 "atFlower":function(d){return "di bunga"},
 "avoidCowAndRemove":function(d){return "Hindari sapi dan pindahkan 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "kerjakan"},
 "elseCode":function(d){return "jika tidak"},
 "fill":function(d){return "Timbun 1"},
-"fillN":function(d){return "Timbun "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "Isi "+appLocale.v(d,"shovelfuls")+" lubang dengan tumpukan "},
+"fillN":function(d){return "Timbun "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "Isi "+maze_locale.v(d,"shovelfuls")+" lubang dengan tumpukan "},
 "fillSquare":function(d){return "isi persegi empat"},
 "fillTooltip":function(d){return "tempat 1 unit tanah"},
 "finalLevel":function(d){return "Selamat! Anda telah menyelesaikan teka-teki terakhir."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "ada tumpukan"},
 "putdownTower":function(d){return "letakkan tower"},
 "removeAndAvoidTheCow":function(d){return "Pindahkan 1 dan hindari sapi"},
-"removeN":function(d){return "Pindahkan "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "Pindahkan "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "hapus tumpukan"},
-"removeStack":function(d){return "pindahkan "+appLocale.v(d,"shovelfuls")+" tumpukan"},
+"removeStack":function(d){return "pindahkan "+maze_locale.v(d,"shovelfuls")+" tumpukan"},
 "removeSquare":function(d){return "hapus persegi empat"},
 "repeatCarefullyError":function(d){return "Untuk memecahkan masalah ini, berpikirlah hati-hati tentang pola satu dan dua gerakkan untuk menempatkan blok \"Ulangi\".  Tidak apa-apa memiliki gerakkan ekstra pada bagian akhir."},
 "repeatUntil":function(d){return "Ulangi sampai"},

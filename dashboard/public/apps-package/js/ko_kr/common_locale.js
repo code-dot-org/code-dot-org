@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "이면서"},
 "backToPreviousLevel":function(d){return "이전 퍼즐"},
 "blocklyMessage":function(d){return "Blockly(블러클리)"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "블럭들이 붙어있지 않습니다. 블럭들을 붙이겠습니까?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."},
-"finalStageTrophies":function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했고, "+locale.p(d,"numTrophies",0,"ko",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."},
+"finalStageTrophies":function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했고, "+common_locale.p(d,"numTrophies",0,"ko",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."},
 "finish":function(d){return "마침"},
-"generatedCodeInfo":function(d){return " "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"와 같은 유명한 대학에서도 블럭기반 프로그래밍을 가르칩니다. 하지만, 블럭들은 모두 JavaScript로 바뀌어 실행됩니다 : "},
+"generatedCodeInfo":function(d){return " "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"와 같은 유명한 대학에서도 블럭기반 프로그래밍을 가르칩니다. 하지만, 블럭들은 모두 JavaScript로 바뀌어 실행됩니다 : "},
 "genericFeedback":function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."},
 "hashError":function(d){return "죄송합니다. 저장된 '%1' 프로그램은 없습니다."},
 "help":function(d){return "도움말"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "리스트"},
 "makeYourOwnFlappy":function(d){return "자신만의 플래피 게임을 만들어보세요."},
 "missingBlocksErrorMsg":function(d){return "퍼즐을 풀기 위해 아래 블럭들을 더 사용해 보세요."},
-"nextLevel":function(d){return "축하합니다! "+locale.v(d,"puzzleNumber")+" 번 퍼즐을 해결했습니다."},
-"nextLevelTrophies":function(d){return "축하합니다! "+locale.v(d,"puzzleNumber")+" 번 퍼즐을 해결하고, "+locale.p(d,"numTrophies",0,"ko",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+" 를 얻었습니다."},
+"nextLevel":function(d){return "축하합니다! "+common_locale.v(d,"puzzleNumber")+" 번 퍼즐을 해결했습니다."},
+"nextLevelTrophies":function(d){return "축하합니다! "+common_locale.v(d,"puzzleNumber")+" 번 퍼즐을 해결하고, "+common_locale.p(d,"numTrophies",0,"ko",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+" 를 얻었습니다."},
 "nextPuzzle":function(d){return "다음 퍼즐"},
-"nextStage":function(d){return "축하드립니다! "+locale.v(d,"stageName")+"을(를) 완료하셨습니다."},
-"nextStageTrophies":function(d){return "축하합니다. "+locale.v(d,"stageName")+" 를 완료하였습니다. "+locale.p(d,"numTrophies",0,"ko",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "축하합니다! "+locale.v(d,"puzzleNumber")+" 번 퍼즐을 해결했습니다. (하지만, "+locale.p(d,"numBlocks",0,"ko",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+" 만 사용해야 합니다.)"},
-"numLinesOfCodeWritten":function(d){return "오! 코드 "+locale.p(d,"numLines",0,"ko",{"one":"1 line","other":locale.n(d,"numLines")+" 줄"})+"로 해결했네요!"},
+"nextStage":function(d){return "축하드립니다! "+common_locale.v(d,"stageName")+"을(를) 완료하셨습니다."},
+"nextStageTrophies":function(d){return "축하합니다. "+common_locale.v(d,"stageName")+" 를 완료하였습니다. "+common_locale.p(d,"numTrophies",0,"ko",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "축하합니다! "+common_locale.v(d,"puzzleNumber")+" 번 퍼즐을 해결했습니다. (하지만, "+common_locale.p(d,"numBlocks",0,"ko",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+" 만 사용해야 합니다.)"},
+"numLinesOfCodeWritten":function(d){return "오! 코드 "+common_locale.p(d,"numLines",0,"ko",{"one":"1 line","other":common_locale.n(d,"numLines")+" 줄"})+"로 해결했네요!"},
 "openWorkspace":function(d){return "실행 설명"},
 "orientationLock":function(d){return "회전 잠금을 해제하세요."},
 "play":function(d){return "실행"},
 "print":function(d){return "인쇄"},
-"puzzleTitle":function(d){return "퍼즐 "+locale.v(d,"puzzle_number")+"/"+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "퍼즐 "+common_locale.v(d,"puzzle_number")+"/"+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "반복"},
 "resetProgram":function(d){return "처음 상태로"},
 "rotateText":function(d){return "돌리세요."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "작업을 너무 많이 해야 되요! 더 적게 반복하는 방법은 없을까요?"},
 "toolboxHeader":function(d){return "blocks"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "지금까지: 코드 "+locale.p(d,"numLines",0,"ko",{"one":"1 line","other":locale.n(d,"numLines")+" 줄"})+" 사용."},
+"totalNumLinesOfCodeWritten":function(d){return "지금까지: 코드 "+common_locale.p(d,"numLines",0,"ko",{"one":"1 line","other":common_locale.n(d,"numLines")+" 줄"})+" 사용."},
 "tryAgain":function(d){return "다시 시도"},
 "tryHOC":function(d){return "Hour of Code 해보기"},
 "wantToLearn":function(d){return "코드(code)를 배워볼까요?"},

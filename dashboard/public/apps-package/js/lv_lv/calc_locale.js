@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Tava programma rezultējas ar nulles dalījumu."},
 "emptyComputeBlock":function(d){return "Tev ir jāpievieno bloks, lai \"izpildītu\" bloku."},
 "equivalentExpression":function(d){return "Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Tava funkcija neatgriež pareizo rezultātu priekš visām vērtībām."},
 "goal":function(d){return "Mērķis:"},
 "levelIncompleteError":function(d){return "Tava izteiksme neatbilst mērķim."},
-"missingFunctionError":function(d){return "Tev ir jādefinē funkcija ar nosaukumu "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Tavai izteiksmei trūkst mainīgā "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "Tev ir jādefinē funkcija ar nosaukumu "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Tavai izteiksmei trūkst mainīgā "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Te ir tavs aprēķins! Turpini strādāt pie tā, vai dodies uz nākamo uzdevumu!"},
 "yourExpression":function(d){return "Jūsu izteiksme:"},
 "wrongInput":function(d){return "Jūs izsaucat savu fukciju ar nepareizu vērtību."},
-"wrongOtherValuesX":function(d){return "Jūsu izteiksmes rezultāti nepareizā daudzumā, ja ir mainīgs "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Jūsu izteiksmes rezultāti nepareizā daudzumā, ja ir mainīgs "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Tava izteiksme neatgriež pareizo rezultātu."}};

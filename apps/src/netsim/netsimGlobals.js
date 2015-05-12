@@ -12,6 +12,13 @@
 'use strict';
 
 /**
+ * Reference to root StudioApp controller
+ * @type {StudioApp}
+ * @private
+ */
+var studioApp_ = null;
+
+/**
  * Reference to root NetSim controller
  * @type {NetSim}
  * @private
@@ -24,10 +31,12 @@ var netsim_ = null;
 module.exports = {
 
   /**
-   * Set the root controller that can be used for global operations.
+   * Set the root controllers that can be used for global operations.
+   * @param {StudioApp} studioApp
    * @param {NetSim} netsim
    */
-  setRootController: function (netsim) {
+  setRootControllers: function (studioApp, netsim) {
+    studioApp_ = studioApp;
     netsim_ = netsim;
   },
 
@@ -36,6 +45,13 @@ module.exports = {
    */
   getLevelConfig: function () {
     return netsim_.level;
+  },
+
+  /**
+   * @returns {function}
+   */
+  getAssetUrlFunction: function () {
+    return studioApp_.assetUrl;
   }
 
 };

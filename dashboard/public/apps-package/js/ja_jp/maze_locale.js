@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "はちのす"},
 "atFlower":function(d){return "はな"},
 "avoidCowAndRemove":function(d){return "うしにぶつからないように つちをかたづけよう"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "実行"},
 "elseCode":function(d){return "他"},
 "fill":function(d){return "あなをうめる"},
-"fillN":function(d){return appLocale.v(d,"shovelfuls")+"かい あなをうめる"},
-"fillStack":function(d){return appLocale.v(d,"shovelfuls")+"つのあなをうめる"},
+"fillN":function(d){return maze_locale.v(d,"shovelfuls")+"かい あなをうめる"},
+"fillStack":function(d){return maze_locale.v(d,"shovelfuls")+"つのあなをうめる"},
 "fillSquare":function(d){return "しかくのなかを ぬる"},
 "fillTooltip":function(d){return "つちを１かい おく"},
 "finalLevel":function(d){return "おめでとうございます ！最後のパズルを解決しました。"},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "山があります。"},
 "putdownTower":function(d){return "タワーを置く"},
 "removeAndAvoidTheCow":function(d){return "うしにぶつからないように つちをかたづける"},
-"removeN":function(d){return appLocale.v(d,"shovelfuls")+"かい つちをかたづける"},
+"removeN":function(d){return maze_locale.v(d,"shovelfuls")+"かい つちをかたづける"},
 "removePile":function(d){return "つちをかたづける"},
-"removeStack":function(d){return appLocale.v(d,"shovelfuls")+"かい つちをかたづける"},
+"removeStack":function(d){return maze_locale.v(d,"shovelfuls")+"かい つちをかたづける"},
 "removeSquare":function(d){return "正方形を削除します。"},
 "repeatCarefullyError":function(d){return "くりかえすどうぐのなかで、２かいすすむ、１かいほうこうをかえるといいね。そのあとに、もういっかい ほうこうをかえるといいよ。"},
 "repeatUntil":function(d){return "までを繰り返します"},

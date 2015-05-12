@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Su programa tiene como resultado una división por cero."},
 "emptyComputeBlock":function(d){return "Debes adjuntar un bloque al bloque \"evaluar\"."},
 "equivalentExpression":function(d){return "Intenta reorganizar tus argumentos para obtener exactamente la misma expresión."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Tu función no devuelve el resultado correcto para todos los valores."},
 "goal":function(d){return "Objetivo:"},
 "levelIncompleteError":function(d){return "Su expresión no coincide con el objetivo."},
-"missingFunctionError":function(d){return "Se debe definir una función denominada "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "A su expresión le falta la variable "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "Se debe definir una función denominada "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "A su expresión le falta la variable "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "¡Aquí está tu cálculo! ¡Sigue trabajando en ello, o pasa al siguiente puzle!"},
 "yourExpression":function(d){return "Tu expresión:"},
 "wrongInput":function(d){return "Estás llamando tu función con el valor incorrecto."},
-"wrongOtherValuesX":function(d){return "Su expresión da como resultado un valor incorrecto si variamos "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Su expresión da como resultado un valor incorrecto si variamos "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Su expresión no devuelve el resultado correcto."}};

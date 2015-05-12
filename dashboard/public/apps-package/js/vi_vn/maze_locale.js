@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "tại/ trong tổ ong"},
 "atFlower":function(d){return "tại/ trên bông hoa"},
 "avoidCowAndRemove":function(d){return "tránh con bò và loại bỏ 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "thực hiện"},
 "elseCode":function(d){return "nếu không"},
 "fill":function(d){return "lấp đầy"},
-"fillN":function(d){return "lấp đầy "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "lấp đầy dãy "+appLocale.v(d,"shovelfuls")+" những cái lỗ"},
+"fillN":function(d){return "lấp đầy "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "lấp đầy dãy "+maze_locale.v(d,"shovelfuls")+" những cái lỗ"},
 "fillSquare":function(d){return "lấp đầy hình vuông"},
 "fillTooltip":function(d){return "Đặt 1 đơn vị của bụi bẩn"},
 "finalLevel":function(d){return "Xin chúc mừng! Bạn đã hoàn thành câu đố cuối cùng."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "Một đống"},
 "putdownTower":function(d){return "Đặt xuống tháp"},
 "removeAndAvoidTheCow":function(d){return "loại bỏ 1 và tránh những con bò"},
-"removeN":function(d){return "Loại bỏ "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "Loại bỏ "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "Loại bỏ mảng"},
-"removeStack":function(d){return "Loại bỏ các ngăn xếp của "+appLocale.v(d,"shovelfuls")+" những cái cọc"},
+"removeStack":function(d){return "Loại bỏ các ngăn xếp của "+maze_locale.v(d,"shovelfuls")+" những cái cọc"},
 "removeSquare":function(d){return "xóa ô vuông"},
 "repeatCarefullyError":function(d){return "Để giải quyết điều này,hãy suy nghĩ thật kỹ lưỡng về mô hình của hai bước di chuyển và một bước ngoặt để \"lặp lại\" một khối/ block. Điều đó sẽ ổn để có một turn thêm vào lúc cuối."},
 "repeatUntil":function(d){return "lặp lại cho đến khi"},

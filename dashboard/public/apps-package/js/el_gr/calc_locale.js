@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Το πρόγραμμά σας καταλήγει σε διαίρεση με το μηδέν."},
 "emptyComputeBlock":function(d){return "Πρέπει να επισυνάψετε ένα μπλοκ στο μπλοκ \"αξιολόγηση\"."},
 "equivalentExpression":function(d){return "Δοκιμάστε να αναδιατάξετε τα ορίσματά σας έτσι ώστε να έχετε την ίδια έκφραση."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Η συνάρτηση δεν επιστρέφει το σωστό αποτέλεσμα για όλες τις τιμές."},
 "goal":function(d){return "Στόχος:"},
 "levelIncompleteError":function(d){return "Η έκφραση σας δεν ταιριάζει με την αναμενόμενη του στόχου."},
-"missingFunctionError":function(d){return "Πρέπει να ορίσετε μία συνάρτηση με το όνομα "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "Η έκφρασή σας δεν περιέχει την μεταβλητή "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "Πρέπει να ορίσετε μία συνάρτηση με το όνομα "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "Η έκφρασή σας δεν περιέχει την μεταβλητή "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Εδώ είναι το αποτέλεσμα σας! Συνεχίστε να εργάζεστε εδω ή προχωρήστε στον επόμενο γρίφο!"},
 "yourExpression":function(d){return "Η έκφρασή σας:"},
 "wrongInput":function(d){return "Κάνετε κλήση μίας συνάρτησης με την λανθασμένη τιμή."},
-"wrongOtherValuesX":function(d){return "Η έκφρασή σας οδηγεί σε λάθος αποτέλεσμα αν αλλάξουμε την "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Η έκφρασή σας οδηγεί σε λάθος αποτέλεσμα αν αλλάξουμε την "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "H έκφρασή σας δεν επιστρέφει το σωστό αποτέλεσμα."}};

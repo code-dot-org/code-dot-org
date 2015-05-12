@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "και"},
 "backToPreviousLevel":function(d){return "Πίσω στο προηγούμενο επίπεδο"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Έχεις ασύνδετα μπλοκ."},
 "extraTopBlocksWhenRun":function(d){return "Έχεις ασύνδετα μπλοκ. Μήπως εννοείς να τα συνδέσεις στο μπλοκ \"όταν τρέχει\";"},
 "finalStage":function(d){return "Συγχαρητήρια! τέλειωσες το τελικό στάδιο."},
-"finalStageTrophies":function(d){return "Συγχαρητήρια! Τέλειωσες το τελευταίο στάδιο και κέρδισες "+locale.p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":locale.n(d,"numTrophies")+" τράπαια"})+"."},
+"finalStageTrophies":function(d){return "Συγχαρητήρια! Τέλειωσες το τελευταίο στάδιο και κέρδισες "+common_locale.p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":common_locale.n(d,"numTrophies")+" τράπαια"})+"."},
 "finish":function(d){return "Τερματισμός"},
-"generatedCodeInfo":function(d){return "Ακόμη και τα κορυφαία πανεπιστήμια διδάσκουν κώδικα με βάση τα μπλοκ (π.χ. "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Αλλά στο παρασκήνιο τα μπλοκ που συναρμολόγησες μπορούν να εμφανιστούν σε JavaScript, την πιο διαδεδομένη γλώσσα προγραμματισμού στον κόσμο:"},
+"generatedCodeInfo":function(d){return "Ακόμη και τα κορυφαία πανεπιστήμια διδάσκουν κώδικα με βάση τα μπλοκ (π.χ. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Αλλά στο παρασκήνιο τα μπλοκ που συναρμολόγησες μπορούν να εμφανιστούν σε JavaScript, την πιο διαδεδομένη γλώσσα προγραμματισμού στον κόσμο:"},
 "genericFeedback":function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."},
 "hashError":function(d){return "Συγνώμη, το '%1' δεν αντιστοιχεί με κανένα αποθηκευμένο πρόγραμμα."},
 "help":function(d){return "Βοήθεια"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "λίστα"},
 "makeYourOwnFlappy":function(d){return "Φτιάξτε το δικό σας Flappy παιχνίδι"},
 "missingBlocksErrorMsg":function(d){return "Δοκίμασε ένα ή περισσότερα από τα παρακάτω μπλοκ για να λύσεις το παζλ."},
-"nextLevel":function(d){return "Συγχαρητήρια! Τελείωσες το παζλ "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Συγχαρητήρια! Τελείωσες το παζλ "+locale.v(d,"puzzleNumber")+" και κέρδισες "+locale.p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":locale.n(d,"numTrophies")+" τρόπαια"})+"."},
+"nextLevel":function(d){return "Συγχαρητήρια! Τελείωσες το παζλ "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Συγχαρητήρια! Τελείωσες το παζλ "+common_locale.v(d,"puzzleNumber")+" και κέρδισες "+common_locale.p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":common_locale.n(d,"numTrophies")+" τρόπαια"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Συγχαρητήρια! Ολοκληρώσατε το "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Συγχαρητήρια! Ολοκλήρωσες  το στάδιο "+locale.v(d,"stageName")+" και κέρδισες "+locale.p(d,"numTrophies",0,"el",{"one":"a trophy","other":locale.n(d,"numTrophies")+" τράπαια"})+"."},
-"numBlocksNeeded":function(d){return "Συγχαρητήρια! Τελείωσες το πάζλ "+locale.v(d,"puzzleNumber")+". (Όμως, θα μπορούσες να βάλεις μόνο   "+locale.p(d,"numBlocks",0,"el",{"one":"1 μπλοκ","other":locale.n(d,"numBlocks")+" μπλοκ"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Μόλις έγραψες "+locale.p(d,"numLines",0,"el",{"one":"1 γραμμή","other":locale.n(d,"numLines")+" γραμμές"})+" κώδικα!"},
+"nextStage":function(d){return "Συγχαρητήρια! Ολοκληρώσατε το "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Συγχαρητήρια! Ολοκλήρωσες  το στάδιο "+common_locale.v(d,"stageName")+" και κέρδισες "+common_locale.p(d,"numTrophies",0,"el",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" τράπαια"})+"."},
+"numBlocksNeeded":function(d){return "Συγχαρητήρια! Τελείωσες το πάζλ "+common_locale.v(d,"puzzleNumber")+". (Όμως, θα μπορούσες να βάλεις μόνο   "+common_locale.p(d,"numBlocks",0,"el",{"one":"1 μπλοκ","other":common_locale.n(d,"numBlocks")+" μπλοκ"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Μόλις έγραψες "+common_locale.p(d,"numLines",0,"el",{"one":"1 γραμμή","other":common_locale.n(d,"numLines")+" γραμμές"})+" κώδικα!"},
 "openWorkspace":function(d){return "Πώς λειτουργεί"},
 "orientationLock":function(d){return "Απενεργοποιήστε το κλείδωμα περιστροφής στις ρυθμίσεις της συσκευής σας."},
 "play":function(d){return "παίξε"},
 "print":function(d){return "Εκτύπωσε"},
-"puzzleTitle":function(d){return "Παζλ "+locale.v(d,"puzzle_number")+" από "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Παζλ "+common_locale.v(d,"puzzle_number")+" από "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "επανάλαβε"},
 "resetProgram":function(d){return "Επαναφορά"},
 "rotateText":function(d){return "Περιστρέψτε τη συσκευή σας."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;"},
 "toolboxHeader":function(d){return "μπλοκ"},
 "toolboxHeaderDroplet":function(d){return "Εργαλειοθήκη"},
-"totalNumLinesOfCodeWritten":function(d){return "Γενικό σύνολο: "+locale.p(d,"numLines",0,"el",{"one":"1 γραμμή","other":locale.n(d,"numLines")+" γραμμές"})+" κώδικα."},
+"totalNumLinesOfCodeWritten":function(d){return "Γενικό σύνολο: "+common_locale.p(d,"numLines",0,"el",{"one":"1 γραμμή","other":common_locale.n(d,"numLines")+" γραμμές"})+" κώδικα."},
 "tryAgain":function(d){return "Δοκίμασε ξανά"},
 "tryHOC":function(d){return "Δοκίμασε την Ώρα του Κώδικα"},
 "wantToLearn":function(d){return "Θέλετε να μάθετε προγραμματισμό;"},
