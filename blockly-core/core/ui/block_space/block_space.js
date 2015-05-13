@@ -600,11 +600,26 @@ Blockly.BlockSpace.prototype.hideDelete = function() {
 
 Blockly.BlockSpace.prototype.drawHotZone = function(x) {
 
-  var backgroundClass = this.blockSpaceEditor.toolbox ? "blocklyToolboxDiv" : "blocklyFlyoutBackground";
-  var background = goog.dom.getElementByClass(backgroundClass);
-  var toolbarWidth = background.getBoundingClientRect().width;
+  var background;
+  var blockGroup;
+  var trashcan;
+  var trashcanElement;
 
-  var trashcan = this.blockSpaceEditor.toolbox ? this.blockSpaceEditor.toolbox.trashcan : this.blockSpaceEditor.flyout_.trashcan;
+  if (this.blockSpaceEditor.toolbox) {
+    var toolbox = this.blockSpaceEditor.toolbox;
+    background = toolbox.HtmlDiv;
+    blockGroup = toolbox.tree_.element_;
+    trashcan = toolbox.trashcan;
+    trashcanElement = toolbox.trashcanHolder;
+  } else {
+    var flyout = this.blockSpaceEditor.flyout_;
+    background = flyout.svgBackground_;
+    blockGroup = flyout.blockSpace_.svgGroup_;
+    trashcan = flyout.trashcan;
+    trashcanElement = trashcan.svgGroup_;
+  }
+
+  var toolbarWidth = background.getBoundingClientRect().width;
 
   var hotZone = 100;
 
@@ -640,18 +655,9 @@ Blockly.BlockSpace.prototype.drawHotZone = function(x) {
   }
 
   // and fade out the blocks in the flyout area
-  var blockGroup;
-  if (this.blockSpaceEditor.toolbox) {
-    var blockGroupClass = this.blockSpaceEditor.toolbox ? "blocklyTreeRoot" : "svgGroup";
-    blockGroup = goog.dom.getElementByClass("blocklyTreeRoot");
-  } else {
-    blockGroup = goog.dom.getElementByClass("svgGroup", goog.dom.getElementByClass("svgFlyoutGroup"));
-  }
   blockGroup.setAttribute("style", "opacity:" + normalColorIntensity);
 
   // and fade in the trash can
-  var trashcanElementName = this.blockSpaceEditor.toolbox ? "trashcanHolder" : "trashcan"
-  var trashcanElement = goog.dom.getElement(trashcanElementName, goog.dom.getElementByClass("svgFlyoutGroup"));
   var trashcanDisplay = trashColorIntensity == 0 ? "none" : "block";
   var styleString = "opacity: " + trashColorIntensity + "; display: " + trashcanDisplay + "; position: absolute";
   trashcanElement.setAttribute("style", styleString);
