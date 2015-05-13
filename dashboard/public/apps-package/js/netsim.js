@@ -46,6 +46,7 @@ exports.load = function (assetUrl, id) {
 'use strict';
 
 var utils = require('../utils');
+var _ = utils.getLodash();
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
@@ -409,6 +410,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   // Try and gracefully disconnect when closing the window
   window.addEventListener('beforeunload', this.onBeforeUnload_.bind(this));
   window.addEventListener('unload', this.onUnload_.bind(this));
+  window.addEventListener('resize', _.debounce(this.updateLayout.bind(this), 250));
 };
 
 /**
@@ -691,6 +693,7 @@ NetSim.prototype.changeEncodings = function (newEncodings) {
   this.sentMessageLog_.setEncodings(newEncodings);
   this.sendPanel_.setEncodings(newEncodings);
   this.visualization_.setEncodings(newEncodings);
+  this.updateLayout();
 };
 
 /**
@@ -1012,6 +1015,8 @@ NetSim.prototype.render = function () {
     // Render lobby
     this.lobby_.render();
   }
+
+  this.updateLayout();
 };
 
 /**
@@ -1202,6 +1207,52 @@ NetSim.prototype.animateReadWireState = function (newState) {
   this.visualization_.animateReadWireState(newState);
 };
 
+/**
+ * Specifically, update the layout of the right column when connected,
+ * and change how the three panels there (received log, sent log, send controls)
+ * share the current vertical space in the viewport.
+ *
+ * We're trying to use the following rules:
+ *
+ * 1. The send controls panel is fixed to the bottom of the viewport, and will
+ *    size upwards to fit its contents up to a maximum height.
+ * 2. The log widgets use the remaining vertical space
+ *    a) If only one log widget is open, it fills the vertical space (except
+ *       leaves enough room to see the other header)
+ *    b) If both log widgets are open, they share the vertical space 50/50
+ *    c) If both log widgets are closed, they float at the top of the space.
+ */
+NetSim.prototype.updateLayout = function () {
+  var rightColumn = $('#netsim-rightcol');
+  var sendPanel = $('#netsim-send');
+  var logWrap = $('#netsim-logs');
+  if (!rightColumn.is(':visible')) {
+    return;
+  }
+
+  // Right column wrapper and the send panel are both sized by CSS
+  var rightColumnHeight = rightColumn.height();
+  var sendPanelHeight = sendPanel.height();
+  var logsSharedVerticalSpace = rightColumnHeight - sendPanelHeight;
+
+  var showingSent = !this.sentMessageLog_.isMinimized();
+  var showingReceived = !this.receivedMessageLog_.isMinimized();
+  if (showingReceived && showingSent) {
+    var halfHeight = Math.floor(logsSharedVerticalSpace / 2);
+    this.receivedMessageLog_.setHeight(halfHeight);
+    this.sentMessageLog_.setHeight(halfHeight);
+  } else if (showingReceived) {
+    this.receivedMessageLog_.setHeight(Math.floor(logsSharedVerticalSpace -
+        this.sentMessageLog_.getHeight()));
+  } else if (showingSent) {
+    this.sentMessageLog_.setHeight(Math.floor(logsSharedVerticalSpace -
+        this.receivedMessageLog_.getHeight()));
+  }
+
+  // Manually adjust the logwrap to the remaining height
+  logWrap.css('height', rightColumnHeight - sendPanelHeight);
+};
+
 
 },{"../ObservableEvent":1,"../RunLoop":3,"../utils":271,"./DashboardUser":141,"./NetSimBitLogPanel":144,"./NetSimLobby":160,"./NetSimLocalClientNode":161,"./NetSimLogPanel":165,"./NetSimLogger":166,"./NetSimRouterNode":184,"./NetSimSendPanel":190,"./NetSimShard":191,"./NetSimShardCleaner":192,"./NetSimStatusPanel":198,"./NetSimTabsComponent":201,"./NetSimVisualization":202,"./controls.html.ejs":208,"./locale":211,"./netsimConstants":214,"./netsimGlobals":215,"./netsimUtils":217,"./page.html.ejs":218}],218:[function(require,module,exports){
 module.exports= (function() {
@@ -1217,7 +1268,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
   var msg = require('../locale');
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((5,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((7,  msg.rotateText() )), '<br>', escape((7,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');11; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n      </div>\n    </div>\n  </div>\n');28; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n\n    <div id="netsim-disconnected">\n      <div class="lobby-panel"></div>\n    </div>\n\n\n    <div id="netsim-connected">\n      <div id="netsim-leftcol">\n        <div class="column-width-limiter">\n\n          <div id="netsim-status"></div>\n\n          <div id="netsim-visualization">\n            <svg version="1.1" width="298" height="298" xmlns="http://www.w3.org/2000/svg">\n\n              <filter id="backgroundBlur">\n                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n                <feComponentTransfer>\n                  <feFuncA slope="0.5" type="linear"></feFuncA>\n                </feComponentTransfer>\n              </filter>\n\n              <g id="centered-group" transform="translate(150,150)">\n                <g id="background-group" filter="url(#backgroundBlur)"></g>\n                <g id="foreground-group"></g>\n              </g>\n            </svg>\n          </div>\n\n          <div id="netsim-tabs"></div>\n\n        </div>\n      </div>\n\n      <div id="netsim-rightcol">\n        <div class="rightcol-connected">\n          <div id="netsim-logs">\n            <div id="netsim-received"></div>\n            <div id="netsim-sent"></div>\n          </div>\n          <div id="netsim-send"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((77,  data.localeDirection )), '">\n    ');78; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((5,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((7,  msg.rotateText() )), '<br>', escape((7,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');11; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n      </div>\n    </div>\n  </div>\n');28; };; buf.push('\n<div id="appcontainer">\n  <!-- Should disable spell-check on all netsim elements -->\n  <div id="netsim" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">\n\n    <div id="netsim-disconnected">\n      <div class="lobby-panel"></div>\n    </div>\n\n\n    <div id="netsim-connected">\n      <div id="netsim-leftcol">\n        <div class="column-width-limiter">\n\n          <div id="netsim-status"></div>\n\n          <div id="netsim-visualization">\n            <svg version="1.1" width="298" height="298" xmlns="http://www.w3.org/2000/svg">\n\n              <filter id="backgroundBlur">\n                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />\n                <feComponentTransfer>\n                  <feFuncA slope="0.5" type="linear"></feFuncA>\n                </feComponentTransfer>\n              </filter>\n\n              <g id="centered-group" transform="translate(150,150)">\n                <g id="background-group" filter="url(#backgroundBlur)"></g>\n                <g id="foreground-group"></g>\n              </g>\n            </svg>\n          </div>\n\n          <div id="netsim-tabs"></div>\n\n        </div>\n      </div>\n\n      <div id="netsim-rightcol">\n        <div id="netsim-logs">\n          <div id="netsim-received"></div>\n          <div id="netsim-sent"></div>\n        </div>\n        <div id="netsim-send"></div>\n      </div>\n    </div>\n  </div>\n  <div id="footers" dir="', escape((75,  data.localeDirection )), '">\n    ');76; instructions() ; buf.push('\n  </div>\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4599,7 +4650,7 @@ var logger = require('./NetSimLogger').getSingleton();
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
  * @param {netsimLevelConfiguration} levelConfig
- * @param {NetSim} connection
+ * @param {NetSim} netsim
  * @constructor
  * @augments NetSimPanel
  */
@@ -4829,8 +4880,9 @@ NetSimSendPanel.prototype.addPacket_ = function () {
   });
 
   // Attach the new packet to this SendPanel
+  var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   newPacket.getRoot().appendTo(this.packetsDiv_);
-  newPacket.getRoot().hide().slideDown('fast');
+  newPacket.getRoot().hide().slideDown('fast', updateLayout);
   this.packets_.push(newPacket);
 };
 
@@ -4842,8 +4894,12 @@ NetSimSendPanel.prototype.addPacket_ = function () {
  */
 NetSimSendPanel.prototype.removePacket_ = function (packet) {
   // Remove from DOM
+  var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   packet.getRoot()
-      .slideUp('fast', function() { $(this).remove(); });
+      .slideUp('fast', function() {
+        $(this).remove();
+        updateLayout();
+      });
 
   // Remove from internal collection
   this.packets_ = this.packets_.filter(function (packetEditor) {
@@ -5069,6 +5125,17 @@ NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
   this.packets_.forEach(function (packetEditor){
     packetEditor.setMaxPacketSize(newPacketSize);
   });
+};
+
+/**
+ * After toggling panel visibility, trigger a layout update so send/log panel
+ * space is shared correctly.
+ * @private
+ * @override
+ */
+NetSimSendPanel.prototype.onMinimizerClick_ = function () {
+  NetSimSendPanel.superPrototype.onMinimizerClick_.call(this);
+  this.netsim_.updateLayout();
 };
 
 
@@ -7265,6 +7332,7 @@ var markup = require('./NetSimLogPanel.html.ejs');
 var packetMarkup = require('./NetSimLogPacket.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * How long the "entrance" animation for new messages lasts, in milliseconds.
@@ -7298,6 +7366,20 @@ var MESSAGE_SLIDE_IN_DURATION_MS = 400;
  * @function
  * @name INetSimLogPanel#setChunkSize
  * @param {number} newChunkSize
+ */
+
+/**
+ * @function
+ * @name INetSimLogPanel#getHeight
+ * @returns {number} vertical space that panel currently consumes (including
+ *          margins) in pixels.
+ */
+
+/**
+ * Sets the vertical space that this log panel should consume (including margins)
+ * @function
+ * @name INetSimLogPanel#setHeight
+ * @param {number} heightPixels
  */
 
 /**
@@ -7576,8 +7658,51 @@ NetSimLogPacket.prototype.toggleMinimized = function () {
   this.render();
 };
 
+/**
+ * Sets the vertical space that this log panel should consume (including margins)
+ * @param {number} heightPixels
+ */
+NetSimLogPanel.prototype.setHeight = function (heightPixels) {
+  var root = this.getRoot().find('.netsim-panel');
+  var panelHeader = root.find('h1');
+  var panelBody = root.find('.panel-body');
 
-},{"../utils":271,"./NetSimEncodingControl":157,"./NetSimLogPacket.html.ejs":163,"./NetSimLogPanel.html.ejs":164,"./NetSimPanel":178,"./locale":211}],164:[function(require,module,exports){
+  var panelMargins = parseFloat(root.css('margin-top')) +
+      parseFloat(root.css('margin-bottom'));
+  var headerHeight = panelHeader.outerHeight(true);
+  var panelBorders = parseFloat(panelBody.css('border-top-width')) +
+      parseFloat(panelBody.css('border-bottom-width'));
+  var scrollMargins = parseFloat(this.scrollArea_.css('margin-top')) +
+      parseFloat(this.scrollArea_.css('margin-bottom'));
+
+  // We set the panel height by fixing the size of its inner scrollable
+  // area.
+  var newScrollViewportHeight = heightPixels - (panelMargins + headerHeight +
+      panelBorders + scrollMargins);
+  this.scrollArea_.height(Math.floor(newScrollViewportHeight));
+};
+
+/**
+ * @returns {number} vertical space that panel currently consumes (including
+ *          margins) in pixels.
+ */
+NetSimLogPanel.prototype.getHeight = function () {
+  return this.getRoot().find('.netsim-panel').outerHeight(true);
+};
+
+/**
+ * After toggling panel visibility, trigger a layout update so send/log panel
+ * space is shared correctly.
+ * @private
+ * @override
+ */
+NetSimLogPanel.prototype.onMinimizerClick_ = function () {
+  NetSimLogPanel.superPrototype.onMinimizerClick_.call(this);
+  netsimGlobals.updateLayout();
+};
+
+
+},{"../utils":271,"./NetSimEncodingControl":157,"./NetSimLogPacket.html.ejs":163,"./NetSimLogPanel.html.ejs":164,"./NetSimPanel":178,"./locale":211,"./netsimGlobals":215}],164:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -12054,67 +12179,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsManualControl":149,"./NetSimDnsModeControl":151,"./NetSimDnsTab.html.ejs":152,"./NetSimDnsTable":155,"./netsimConstants":214,"./netsimGlobals":215}],215:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-'use strict';
-
-/**
- * Reference to root StudioApp controller
- * @type {StudioApp}
- * @private
- */
-var studioApp_ = null;
-
-/**
- * Reference to root NetSim controller
- * @type {NetSim}
- * @private
- */
-var netsim_ = null;
-
-/**
- * Provide singleton access to global simulation settings
- */
-module.exports = {
-
-  /**
-   * Set the root controllers that can be used for global operations.
-   * @param {StudioApp} studioApp
-   * @param {NetSim} netsim
-   */
-  setRootControllers: function (studioApp, netsim) {
-    studioApp_ = studioApp;
-    netsim_ = netsim;
-  },
-
-  /**
-   * @returns {netsimLevelConfiguration}
-   */
-  getLevelConfig: function () {
-    return netsim_.level;
-  },
-
-  /**
-   * @returns {function}
-   */
-  getAssetUrlFunction: function () {
-    return studioApp_.assetUrl;
-  }
-
-};
-
-
-},{}],155:[function(require,module,exports){
+},{"./NetSimDnsManualControl":149,"./NetSimDnsModeControl":151,"./NetSimDnsTab.html.ejs":152,"./NetSimDnsTable":155,"./netsimConstants":214,"./netsimGlobals":215}],155:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13111,6 +13176,7 @@ var i18n = require('./locale');
 var markup = require('./NetSimBitLogPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
+var netsimGlobals = require('./netsimGlobals');
 
 var logger = require('./NetSimLogger').getSingleton();
 
@@ -13170,6 +13236,14 @@ var NetSimBitLogPanel = module.exports = function (rootDiv, options) {
    */
   this.showReadWireButton_ = options.showReadWireButton;
 
+  /**
+   * How tall the overall panel should be when it's open (in pixels).
+   * Set by a dynamic resize system.
+   * @type {number}
+   * @private
+   */
+  this.openHeight_ = 0;
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
@@ -13199,6 +13273,9 @@ NetSimBitLogPanel.prototype.render = function () {
 
   // Add a clear button to the panel header
   this.addButton(i18n.clear(), this.onClearButtonPress_.bind(this));
+
+  // Snap back to the dynamic size we've been given.
+  this.sizeToOpenHeight_();
 };
 
 /**
@@ -13270,8 +13347,129 @@ NetSimBitLogPanel.prototype.setChunkSize = function (newChunkSize) {
   this.render();
 };
 
+/**
+ * Sets the vertical space that this log panel should consume (including margins)
+ * @param {number} heightPixels
+ */
+NetSimBitLogPanel.prototype.setHeight = function (heightPixels) {
+  this.openHeight_ = heightPixels;
+  this.sizeToOpenHeight_();
+};
 
-},{"../utils":271,"./NetSimBitLogPanel.html.ejs":143,"./NetSimEncodingControl":157,"./NetSimLogger":166,"./NetSimPanel":178,"./locale":211}],178:[function(require,module,exports){
+/**
+ * Scale the scroll area inside the panel so that the whole panel
+ * is the desired height.
+ * @private
+ */
+NetSimBitLogPanel.prototype.sizeToOpenHeight_ = function () {
+  var root = this.getRoot().find('.netsim-panel');
+  var panelHeader = root.find('h1');
+  var panelBody = root.find('.panel-body');
+  var scrollArea = root.find('.scroll-area');
+
+  var panelMargins = parseFloat(root.css('margin-top')) +
+      parseFloat(root.css('margin-bottom'));
+  var headerHeight = panelHeader.outerHeight(true);
+  var panelBorders = parseFloat(panelBody.css('border-top-width')) +
+      parseFloat(panelBody.css('border-bottom-width'));
+  var scrollMargins = parseFloat(scrollArea.css('margin-top')) +
+      parseFloat(scrollArea.css('margin-bottom'));
+
+  // We set the panel height by fixing the size of its inner scrollable
+  // area.
+  var newScrollViewportHeight = this.openHeight_ - (panelMargins + headerHeight +
+      panelBorders + scrollMargins);
+  scrollArea.height(Math.floor(newScrollViewportHeight));
+};
+
+/**
+ * @returns {number} vertical space that panel currently consumes (including
+ * margins) in pixels.
+ */
+NetSimBitLogPanel.prototype.getHeight = function () {
+  return this.getRoot().find('.netsim-panel').outerHeight(true);
+};
+
+/**
+ * After toggling panel visibility, trigger a layout update so send/log panel
+ * space is shared correctly.
+ * @private
+ * @override
+ */
+NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
+  NetSimBitLogPanel.superPrototype.onMinimizerClick_.call(this);
+  netsimGlobals.updateLayout();
+};
+
+
+},{"../utils":271,"./NetSimBitLogPanel.html.ejs":143,"./NetSimEncodingControl":157,"./NetSimLogger":166,"./NetSimPanel":178,"./locale":211,"./netsimGlobals":215}],215:[function(require,module,exports){
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+'use strict';
+
+/**
+ * Reference to root StudioApp controller
+ * @type {StudioApp}
+ * @private
+ */
+var studioApp_ = null;
+
+/**
+ * Reference to root NetSim controller
+ * @type {NetSim}
+ * @private
+ */
+var netsim_ = null;
+
+/**
+ * Provide singleton access to global simulation settings
+ */
+module.exports = {
+
+  /**
+   * Set the root controllers that can be used for global operations.
+   * @param {StudioApp} studioApp
+   * @param {NetSim} netsim
+   */
+  setRootControllers: function (studioApp, netsim) {
+    studioApp_ = studioApp;
+    netsim_ = netsim;
+  },
+
+  /**
+   * @returns {netsimLevelConfiguration}
+   */
+  getLevelConfig: function () {
+    return netsim_.level;
+  },
+
+  /**
+   * @returns {function}
+   */
+  getAssetUrlFunction: function () {
+    return studioApp_.assetUrl;
+  },
+
+  /**
+   * Trigger a layout update of the right column, received/sent/send panels.
+   */
+  updateLayout: function () {
+    netsim_.updateLayout();
+  }
+
+};
+
+
+},{}],178:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13386,6 +13584,13 @@ NetSimPanel.prototype.render = function () {
 };
 
 /**
+ * @returns {jQuery} a handle on the root element for this panel
+ */
+NetSimPanel.prototype.getRoot = function () {
+  return this.rootDiv_;
+};
+
+/**
  * Set panel title.
  * @param {string} newTitle - Localized panel title.
  */
@@ -13420,6 +13625,14 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
         .removeClass('fa-plus-square');
   }
   this.isMinimized_ = becomeMinimized;
+};
+
+/**
+ * Whether this panel is currently minimized (showing only its header) or not.
+ * @returns {boolean}
+ */
+NetSimPanel.prototype.isMinimized = function () {
+  return this.isMinimized_;
 };
 
 /**
