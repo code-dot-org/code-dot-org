@@ -219,8 +219,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 
-  get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
-  get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
+  get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
+  get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/:action', controller: 'api'
 
   # The priority is based upon order of creation: first created -> highest priority.

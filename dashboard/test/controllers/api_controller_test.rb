@@ -92,6 +92,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'api routing' do
+    # /dashboardapi urls
     assert_routing({method: "get", path: "/dashboardapi/user_menu"},
                    {controller: "api", action: "user_menu"})
 
@@ -103,6 +104,23 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_routing({method: "get", path: "/dashboardapi/whatevvv"},
                    {controller: "api", action: "whatevvv"})
+
+    # /api urls
+    assert_recognizes({controller: "api", action: "user_menu"},
+                      {method: "get", path: "/api/user_menu"})
+
+
+    assert_recognizes({controller: "api", action: "section_progress", section_id: '2'},
+                      {method: "get", path: "/api/section_progress/2"})
+
+
+    assert_recognizes({controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
+                      {method: "get", path: "/api/student_progress/2/15"})
+
+
+    assert_recognizes({controller: "api", action: "whatevvv"},
+                      {method: "get", path: "/api/whatevvv"})
+
   end
 
   test 'courses' do
