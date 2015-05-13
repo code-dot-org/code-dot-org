@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "프로그램의 결과가 0으로 나누기가 되었습니다."},
 "emptyComputeBlock":function(d){return "블록을 \"평가\" 블록에 연결해야 합니다."},
 "equivalentExpression":function(d){return "같은 계산결과가 나올 수 있도록 다시 배치하세요."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "함수가 모든 값에 대해서 올바른 결과를 반환하지 않습니다."},
 "goal":function(d){return "목표값:"},
 "levelIncompleteError":function(d){return "수식이 목표와일치하지 않습니다."},
-"missingFunctionError":function(d){return appLocale.v(d,"functionName")+" 이라는 함수를 반드시 정의해야 합니다."},
-"missingVariableX":function(d){return "수식에 변수 "+appLocale.v(d,"var")+"가 빠졌습니다."},
+"missingFunctionError":function(d){return calc_locale.v(d,"functionName")+" 이라는 함수를 반드시 정의해야 합니다."},
+"missingVariableX":function(d){return "수식에 변수 "+calc_locale.v(d,"var")+"가 빠졌습니다."},
 "reinfFeedbackMsg":function(d){return "축하합니다! 계속해서 작업을 하거나, 다음 퍼즐로 넘어갈 수 있습니다!"},
 "yourExpression":function(d){return "계산식:"},
 "wrongInput":function(d){return "잘못된 값으로 함수를 호출하고 있습니다."},
-"wrongOtherValuesX":function(d){return "만약 "+appLocale.v(d,"var")+"를 바꾼다면 수식의 결과가 틀릴 것입니다."},
+"wrongOtherValuesX":function(d){return "만약 "+calc_locale.v(d,"var")+"를 바꾼다면 수식의 결과가 틀릴 것입니다."},
 "wrongResult":function(d){return "수식이 정확한 결과를 반환하지 않습니다."}};

@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "og"},
 "backToPreviousLevel":function(d){return "Til baka í fyrri áfanga"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Þú ert með ótengda kubba. Ætlaðir þú að festa þá á \"þegar keyrt\" kubbinn?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann."},
-"finalStageTrophies":function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+locale.p(d,"numTrophies",0,"is",{"one":"bikar","other":locale.n(d,"numTrophies")+" bikara"})+"."},
+"finalStageTrophies":function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+common_locale.p(d,"numTrophies",0,"is",{"one":"bikar","other":common_locale.n(d,"numTrophies")+" bikara"})+"."},
 "finish":function(d){return "Ljúka"},
-"generatedCodeInfo":function(d){return "Jafnvel bestu háskólar kenna forritun með kubbum (t.d. "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). En bak við tjöldin er hægt að sýna kubbana sem þú hefur sett saman sem JavaScript, sem er mest notaða forritunarmál í heimi:"},
+"generatedCodeInfo":function(d){return "Jafnvel bestu háskólar kenna forritun með kubbum (t.d. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). En bak við tjöldin er hægt að sýna kubbana sem þú hefur sett saman sem JavaScript, sem er mest notaða forritunarmál í heimi:"},
 "genericFeedback":function(d){return "Athugaðu hvernig þetta fór og reyndu að laga forritið."},
 "hashError":function(d){return "Því miður finnst ekkert vistað forrit '%1'."},
 "help":function(d){return "Hjálp"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "listi"},
 "makeYourOwnFlappy":function(d){return "Búðu til þinn eigin(n) Flappy leik"},
 "missingBlocksErrorMsg":function(d){return "Reyndu einn eða fleiri af kubbunum hér fyrir neðan til að leysa þessa þraut."},
-"nextLevel":function(d){return "Til hamingju! Þú hefur leyst þraut "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Til hamingju! Þú hefur leyst þraut "+locale.v(d,"puzzleNumber")+" og unnið "+locale.p(d,"numTrophies",0,"is",{"one":"bikar","other":locale.n(d,"numTrophies")+" bikara"})+"."},
+"nextLevel":function(d){return "Til hamingju! Þú hefur leyst þraut "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Til hamingju! Þú hefur leyst þraut "+common_locale.v(d,"puzzleNumber")+" og unnið "+common_locale.p(d,"numTrophies",0,"is",{"one":"bikar","other":common_locale.n(d,"numTrophies")+" bikara"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Til hamingju! Þú kláraðir "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Til hamingju! Þú kláraðir "+locale.v(d,"stageName")+" og vannst "+locale.p(d,"numTrophies",0,"is",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Til hamingju! Þú kláraðir þraut "+locale.v(d,"puzzleNumber")+". (En þú hefðir getað notað bara  "+locale.p(d,"numBlocks",0,"is",{"one":"1 kubb","other":locale.n(d,"numBlocks")+" kubba"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Þú náðir að skrifa "+locale.p(d,"numLines",0,"is",{"one":"1 línu","other":locale.n(d,"numLines")+" línur"})+" af kóða!"},
+"nextStage":function(d){return "Til hamingju! Þú kláraðir "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Til hamingju! Þú kláraðir "+common_locale.v(d,"stageName")+" og vannst "+common_locale.p(d,"numTrophies",0,"is",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Til hamingju! Þú kláraðir þraut "+common_locale.v(d,"puzzleNumber")+". (En þú hefðir getað notað bara  "+common_locale.p(d,"numBlocks",0,"is",{"one":"1 kubb","other":common_locale.n(d,"numBlocks")+" kubba"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Þú náðir að skrifa "+common_locale.p(d,"numLines",0,"is",{"one":"1 línu","other":common_locale.n(d,"numLines")+" línur"})+" af kóða!"},
 "openWorkspace":function(d){return "Hvernig það virkar"},
 "orientationLock":function(d){return "Slökktu á stefnulæsingu í stillingum tækis."},
 "play":function(d){return "spila"},
 "print":function(d){return "Prenta"},
-"puzzleTitle":function(d){return "Þraut "+locale.v(d,"puzzle_number")+" af "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Þraut "+common_locale.v(d,"puzzle_number")+" af "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "endurtaka"},
 "resetProgram":function(d){return "Endurstilla"},
 "rotateText":function(d){return "Snúðu tækinu þínu."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Þú lagðir á mig mjög mikla vinnu! Gætirðu reynt að nota færri endurtekningar?"},
 "toolboxHeader":function(d){return "kubbar"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Samtals: "+locale.p(d,"numLines",0,"is",{"one":"1 lína","other":locale.n(d,"numLines")+" línur"})+" af kóða."},
+"totalNumLinesOfCodeWritten":function(d){return "Samtals: "+common_locale.p(d,"numLines",0,"is",{"one":"1 lína","other":common_locale.n(d,"numLines")+" línur"})+" af kóða."},
 "tryAgain":function(d){return "Reyna aftur"},
 "tryHOC":function(d){return "Prófa Klukkustund kóðunar"},
 "wantToLearn":function(d){return "Viltu læra að kóða?"},

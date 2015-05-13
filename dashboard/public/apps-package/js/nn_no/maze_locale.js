@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "på bikuba"},
 "atFlower":function(d){return "på blomen"},
 "avoidCowAndRemove":function(d){return "unngå kua og fjern 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "gjør"},
 "elseCode":function(d){return "ellers"},
 "fill":function(d){return "fyll 1"},
-"fillN":function(d){return "fyll "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "fyll stabelen av "+appLocale.v(d,"shovelfuls")+" hol"},
+"fillN":function(d){return "fyll "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "fyll stabelen av "+maze_locale.v(d,"shovelfuls")+" hol"},
 "fillSquare":function(d){return "fyll et kvadrat"},
 "fillTooltip":function(d){return "plasser 1 enhet jord"},
 "finalLevel":function(d){return "Gratulerer! Du har løst den siste oppgaven."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "det er en haug"},
 "putdownTower":function(d){return "sett ned tårn"},
 "removeAndAvoidTheCow":function(d){return "fjern 1 og unngå kua"},
-"removeN":function(d){return "fjern "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "fjern "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "fjern haugen"},
-"removeStack":function(d){return "Fjern raden med med "+appLocale.v(d,"shovelfuls")+" hauger"},
+"removeStack":function(d){return "Fjern raden med med "+maze_locale.v(d,"shovelfuls")+" hauger"},
 "removeSquare":function(d){return "fjern kvadratet"},
 "repeatCarefullyError":function(d){return "For å løyse dette, sjå nøye etter eit mønster med to flytt og ei vending  som kan plasserast i \"gjenta\"-blokka. Det er greit å avslutte med ei ekstra vending."},
 "repeatUntil":function(d){return "gjenta til"},

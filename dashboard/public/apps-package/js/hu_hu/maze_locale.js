@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "a lépnél"},
 "atFlower":function(d){return "a virágnál"},
 "avoidCowAndRemove":function(d){return "Kerüld el a tehenet, és távolíts el 1-et"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "csináld"},
 "elseCode":function(d){return "különben"},
 "fill":function(d){return "töltsd fel 1"},
-"fillN":function(d){return "töltsd fel "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "töltsd fel a gödröt "+appLocale.v(d,"shovelfuls")+" lapát földddel"},
+"fillN":function(d){return "töltsd fel "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "töltsd fel a gödröt "+maze_locale.v(d,"shovelfuls")+" lapát földddel"},
 "fillSquare":function(d){return "négyzet kitöltése"},
 "fillTooltip":function(d){return "rakj le 1 adag földet"},
 "finalLevel":function(d){return "Gratulálok, megoldottad az utolsó feladatot."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "van egy halom"},
 "putdownTower":function(d){return "torony lerakása"},
 "removeAndAvoidTheCow":function(d){return "vegyél el 1-et és kerüld el a tehenet"},
-"removeN":function(d){return "távolítsd el "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "távolítsd el "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "halom eltávolítása"},
-"removeStack":function(d){return "távolíts el egy "+appLocale.v(d,"shovelfuls")+" lapátnyi halmot"},
+"removeStack":function(d){return "távolíts el egy "+maze_locale.v(d,"shovelfuls")+" lapátnyi halmot"},
 "removeSquare":function(d){return "távolítsd el a négyzetet"},
 "repeatCarefullyError":function(d){return "A megoldáshoz gondold meg két  \"Előrelépni\" és egy \"Fordulj\" parancs használatát az \"Ismételd amíg\" blokkban. Nem baj hogyha a végén még egy külön \"Fordulj\" parancs lesz."},
 "repeatUntil":function(d){return "ismételd amíg nem"},

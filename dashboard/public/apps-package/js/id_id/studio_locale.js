@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var studio_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){studio_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:(k=studio_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "aktor"},
 "alienInvasion":function(d){return "Serangan Alien!"},
 "backgroundBlack":function(d){return "hitam"},
@@ -212,7 +212,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveDistanceRandom":function(d){return "piksel-piksel acak"},
 "moveDistanceTooltip":function(d){return "memindahkan aktor dalam jarak tertentu ke arah yang telah ditentukan"},
 "moveSprite":function(d){return "bergerak"},
-"moveSpriteN":function(d){return "pindahkan aktor "+appLocale.v(d,"spriteIndex")},
+"moveSpriteN":function(d){return "pindahkan aktor "+studio_locale.v(d,"spriteIndex")},
 "toXY":function(d){return "ke x, y"},
 "moveDown":function(d){return "Pindahkan ke bawah"},
 "moveDownTooltip":function(d){return "pindahkan aktor ke bawah."},
@@ -279,7 +279,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatDo":function(d){return "kerjakan"},
 "repeatForeverTooltip":function(d){return "jalankan tindakan-tindakan dalam  blok ini saat cerita masih berjalan"},
 "saySprite":function(d){return "mengatakan"},
-"saySpriteN":function(d){return "aktor "+appLocale.v(d,"spriteIndex")+" mengatakan"},
+"saySpriteN":function(d){return "aktor "+studio_locale.v(d,"spriteIndex")+" mengatakan"},
 "saySpriteTooltip":function(d){return "Munculkan pop up dengan teks dari aktor tertentu."},
 "saySpriteChoices_0":function(d){return "Hai."},
 "saySpriteChoices_1":function(d){return "Hai semua."},
@@ -340,7 +340,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySpriteChoices_56":function(d){return "Anda hampir membuat saya!"},
 "saySpriteChoices_57":function(d){return "Usaha yang bagus!"},
 "saySpriteChoices_58":function(d){return "Kamu tidak bisa menangkap aku!"},
-"scoreText":function(d){return "Skor: "+appLocale.v(d,"playerScore")},
+"scoreText":function(d){return "Skor: "+studio_locale.v(d,"playerScore")},
 "setBackground":function(d){return "atur latar belakang"},
 "setBackgroundRandom":function(d){return "tetapkan latar belakang acak"},
 "setBackgroundBlack":function(d){return "menetapkan latar belakang hitam"},
@@ -463,7 +463,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "throwSpriteN":function(d){return "aktor tersebut melempar"},
 "throwTooltip":function(d){return "melempar sebuah objek ke aktor tertentu"},
 "vanish":function(d){return "menghilang"},
-"vanishActorN":function(d){return "menghilangkan aktor "+appLocale.v(d,"spriteIndex")},
+"vanishActorN":function(d){return "menghilangkan aktor "+studio_locale.v(d,"spriteIndex")},
 "vanishTooltip":function(d){return "Lenyapkan aktor."},
 "waitFor":function(d){return "menunggu untuk"},
 "waitSeconds":function(d){return "detik"},

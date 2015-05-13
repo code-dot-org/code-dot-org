@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "na colmeia"},
 "atFlower":function(d){return "na flor"},
 "avoidCowAndRemove":function(d){return "evita a vaca e remove 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "fazer"},
 "elseCode":function(d){return "se não"},
 "fill":function(d){return "Enche 1"},
-"fillN":function(d){return "preenche "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "preenche pilha de "+appLocale.v(d,"shovelfuls")+" buracos"},
+"fillN":function(d){return "preenche "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "preenche pilha de "+maze_locale.v(d,"shovelfuls")+" buracos"},
 "fillSquare":function(d){return "Preencha o quadrado"},
 "fillTooltip":function(d){return "Coloca 1 unidade de terra"},
 "finalLevel":function(d){return "Parabéns! Resolveste o desafio final."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "há uma pilha"},
 "putdownTower":function(d){return "coloca a torre em baixo"},
 "removeAndAvoidTheCow":function(d){return "remove 1 e evita a vaca"},
-"removeN":function(d){return "remove "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "remove "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "Remove a pilha"},
-"removeStack":function(d){return "remove o monte de pilhas de "+appLocale.v(d,"shovelfuls")},
+"removeStack":function(d){return "remove o monte de pilhas de "+maze_locale.v(d,"shovelfuls")},
 "removeSquare":function(d){return "remove o quadrado"},
 "repeatCarefullyError":function(d){return "Para resolver isto, pensa cuidadosamente no padrão de dois \"mover\" e um \"virar\" para colocar no bloco \"repetir\". Não há problema em ter um \"virar\" extra no final."},
 "repeatUntil":function(d){return "repita até"},

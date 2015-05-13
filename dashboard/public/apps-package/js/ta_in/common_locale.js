@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "மற்றும்"},
 "backToPreviousLevel":function(d){return "முந்தைய நிலைக்கு திரும்பவும்"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிக் கட்டத்தை நிறைவு செய்துள்ளீர்கள்."},
-"finalStageTrophies":function(d){return "Congratulations! You have completed the final stage and won "+locale.p(d,"numTrophies",0,"ta",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "Congratulations! You have completed the final stage and won "+common_locale.p(d,"numTrophies",0,"ta",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "Finish"},
-"generatedCodeInfo":function(d){return "Even top universities teach block-based coding (e.g., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"},
+"generatedCodeInfo":function(d){return "Even top universities teach block-based coding (e.g., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"},
 "genericFeedback":function(d){return "See how you ended up, and try to fix your program."},
 "hashError":function(d){return "மன்னிக்கவும், '%1' எந்த சேமிக்கப்பட்ட நிரலுடனும் பொருந்தவில்லை."},
 "help":function(d){return "உதவி"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "பட்டியல்"},
 "makeYourOwnFlappy":function(d){return "Make Your Own Flappy Game"},
 "missingBlocksErrorMsg":function(d){return "Try one or more of the blocks below to solve this puzzle."},
-"nextLevel":function(d){return "வாழ்த்துக்கள்! நீங்கள் "+locale.v(d,"puzzleNumber")+" ஆவது புதிரை நிறைவு செய்துள்ளீர்கள்."},
-"nextLevelTrophies":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+" and won "+locale.p(d,"numTrophies",0,"ta",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
+"nextLevel":function(d){return "வாழ்த்துக்கள்! நீங்கள் "+common_locale.v(d,"puzzleNumber")+" ஆவது புதிரை நிறைவு செய்துள்ளீர்கள்."},
+"nextLevelTrophies":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+" and won "+common_locale.p(d,"numTrophies",0,"ta",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Congratulations! You completed "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Congratulations! You completed "+locale.v(d,"stageName")+" and won "+locale.p(d,"numTrophies",0,"ta",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Congratulations! You completed Puzzle "+locale.v(d,"puzzleNumber")+". (However, you could have used only "+locale.p(d,"numBlocks",0,"ta",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+".)"},
-"numLinesOfCodeWritten":function(d){return "You just wrote "+locale.p(d,"numLines",0,"ta",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" of code!"},
+"nextStage":function(d){return "Congratulations! You completed "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Congratulations! You completed "+common_locale.v(d,"stageName")+" and won "+common_locale.p(d,"numTrophies",0,"ta",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (However, you could have used only "+common_locale.p(d,"numBlocks",0,"ta",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+".)"},
+"numLinesOfCodeWritten":function(d){return "You just wrote "+common_locale.p(d,"numLines",0,"ta",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" of code!"},
 "openWorkspace":function(d){return "இது எப்படி செயல்படுகிறது"},
 "orientationLock":function(d){return "Turn off orientation lock in device settings."},
 "play":function(d){return "play"},
 "print":function(d){return "Print"},
-"puzzleTitle":function(d){return locale.v(d,"stage_total")+" ஆம் நிலையில் புதிர் "+locale.v(d,"puzzle_number")},
+"puzzleTitle":function(d){return common_locale.v(d,"stage_total")+" ஆம் நிலையில் புதிர் "+common_locale.v(d,"puzzle_number")},
 "repeat":function(d){return "மறுபடி"},
 "resetProgram":function(d){return "மீட்டமை"},
 "rotateText":function(d){return "உங்கள் சாதனத்தை சுழற்றவும்."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "You made me do a lot of work!  Could you try repeating fewer times?"},
 "toolboxHeader":function(d){return "தொகுதிகள்"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "All-time total: "+locale.p(d,"numLines",0,"ta",{"one":"1 line","other":locale.n(d,"numLines")+" lines"})+" of code."},
+"totalNumLinesOfCodeWritten":function(d){return "All-time total: "+common_locale.p(d,"numLines",0,"ta",{"one":"1 line","other":common_locale.n(d,"numLines")+" lines"})+" of code."},
 "tryAgain":function(d){return "மீண்டும் முயற்சி செய்"},
 "tryHOC":function(d){return "Try the Hour of Code"},
 "wantToLearn":function(d){return "குறியீடுகள் கற்க வேண்டுமா?"},

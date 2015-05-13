@@ -1,5 +1,5 @@
 var testUtils = require('../../util/testUtils');
-var studioApp = require(testUtils.buildPath('StudioApp')).singleton;
+var studioApp = require('@cdo/apps/StudioApp').singleton;
 
 module.exports = {
   app: "flappy",
@@ -28,7 +28,7 @@ module.exports = {
         // manually complete rather than wait for timeout
         setTimeout(function () {
           Flappy.onPuzzleComplete();
-        }, 1);
+        }, 100);
       },
       xml: '<xml><block type="flappy_whenClick" deletable="false"></block></xml>'
     }

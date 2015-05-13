@@ -68,8 +68,14 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           that should be active by default, which depends on which tabs
  *           you have enabled.
  *
- * @property {boolean} showMetronome - Whether the metronome (and its related
- *           speed control) should show up on the "My Device" tab.
+ * @property {boolean} showPulseRateSlider - Whether the pulse rate slider
+ *           is visible on the "My Device" tab.  This control is a different
+ *           view on the bitrate, given in seconds-per-pulse; in fact, if both
+ *           this and the bitrate slider are visible, dragging one will change
+ *           the other.
+ *
+ * @property {boolean} showMetronome - Whether the metronome should show up on
+ *           the "My Device" tab.
  *
  * @property {EncodingType[]} showEncodingControls - Which encodings, (ASCII,
  *           binary, etc.) should have visible controls on the "My Device" tab.
@@ -162,6 +168,7 @@ levels.custom = {
   //       be localized by the time it gets here.
 
   // "My Device" tab and its controls
+  showPulseRateSlider: false,
   showMetronome: false,
   showEncodingControls: [],
   defaultEnabledEncodings: [],

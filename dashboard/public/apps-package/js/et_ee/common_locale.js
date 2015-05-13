@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "ja"},
 "backToPreviousLevel":function(d){return "Tagasi eelmisele tasemele"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Sul on lahtiseid plokke. Kas sa soovisid neid ühendada \"kui käib\" ploki külge?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Tubli! Sa läbisid viimase taseme."},
-"finalStageTrophies":function(d){return "Palju õnne! Oled lõpetanud lõppfaasi ja võitsid"+locale.p(d,"numTrophies",0,"et",{"one":"a trofee","other":locale.n(d,"numTrophies")+"trofeed"})+"."},
+"finalStageTrophies":function(d){return "Palju õnne! Oled lõpetanud lõppfaasi ja võitsid"+common_locale.p(d,"numTrophies",0,"et",{"one":"a trofee","other":common_locale.n(d,"numTrophies")+"trofeed"})+"."},
 "finish":function(d){return "Lõpeta"},
-"generatedCodeInfo":function(d){return "Even top universities teach block-based coding (e.g., "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"},
+"generatedCodeInfo":function(d){return "Even top universities teach block-based coding (e.g., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:"},
 "genericFeedback":function(d){return "Vaata, mis kokkuvõttes välja tuli, ja proovi oma programm korda teha."},
 "hashError":function(d){return "Vabandust, '%1' ei vasta ühelegi salvestatud programmile."},
 "help":function(d){return "Abi"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "loend"},
 "makeYourOwnFlappy":function(d){return "Tee oma Flappy mäng"},
 "missingBlocksErrorMsg":function(d){return "Selle mõistatuse lahendamiseks kasuta ühte või mitut allpool olevat plokki."},
-"nextLevel":function(d){return "Tubli! Sa lahendasid mõistatuse nr."+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Õnnitlused! Lõpetasid pusle "+locale.v(d,"puzzleNumber")+" ja võitsid "+locale.p(d,"numTrophies",0,"et",{"one":"trofee","other":locale.n(d,"numTrophies")+" trofeed"})+"."},
+"nextLevel":function(d){return "Tubli! Sa lahendasid mõistatuse nr."+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Õnnitlused! Lõpetasid pusle "+common_locale.v(d,"puzzleNumber")+" ja võitsid "+common_locale.p(d,"numTrophies",0,"et",{"one":"trofee","other":common_locale.n(d,"numTrophies")+" trofeed"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Õnnitlused! Lõpetasid "+locale.v(d,"stageName")+" taseme."},
-"nextStageTrophies":function(d){return "Õnnitlused! Lõpetasid "+locale.v(d,"stageName")+" ja võistid "+locale.p(d,"numTrophies",0,"et",{"one":"trofee","other":locale.n(d,"numTrophies")+" trofeed"})},
-"numBlocksNeeded":function(d){return "Õnnitlused! Lõpetasid pusle "+locale.v(d,"puzzleNumber")+". (Siiski, sa oleks võinud kasutada ainult "+locale.p(d,"numBlocks",0,"et",{"one":"1 plokki","other":locale.n(d,"numBlocks")+" plokki"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Kirjutasin just "+locale.p(d,"numLines",0,"et",{"one":"1 rea","other":locale.n(d,"numLines")+" rida"})+" koodi!"},
+"nextStage":function(d){return "Õnnitlused! Lõpetasid "+common_locale.v(d,"stageName")+" taseme."},
+"nextStageTrophies":function(d){return "Õnnitlused! Lõpetasid "+common_locale.v(d,"stageName")+" ja võistid "+common_locale.p(d,"numTrophies",0,"et",{"one":"trofee","other":common_locale.n(d,"numTrophies")+" trofeed"})},
+"numBlocksNeeded":function(d){return "Õnnitlused! Lõpetasid pusle "+common_locale.v(d,"puzzleNumber")+". (Siiski, sa oleks võinud kasutada ainult "+common_locale.p(d,"numBlocks",0,"et",{"one":"1 plokki","other":common_locale.n(d,"numBlocks")+" plokki"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Kirjutasin just "+common_locale.p(d,"numLines",0,"et",{"one":"1 rea","other":common_locale.n(d,"numLines")+" rida"})+" koodi!"},
 "openWorkspace":function(d){return "Kuidas see töötab"},
 "orientationLock":function(d){return "Lülita  automaatne pööramine oma seadme seadetes välja."},
 "play":function(d){return "mängi"},
 "print":function(d){return "Trüki välja"},
-"puzzleTitle":function(d){return "Mõistatus "+locale.v(d,"puzzle_number")+"/"+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Mõistatus "+common_locale.v(d,"puzzle_number")+"/"+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "korda"},
 "resetProgram":function(d){return "Kustuta"},
 "rotateText":function(d){return "Pööra oma seadet."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Ma tegin jube palju tööd! Kas sa saaksid hakkama vähemate kordustega?"},
 "toolboxHeader":function(d){return "Plokid"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Kokku: "+locale.p(d,"numLines",0,"et",{"one":"1 rida","other":locale.n(d,"numLines")+" rida"})+" rida koodi."},
+"totalNumLinesOfCodeWritten":function(d){return "Kokku: "+common_locale.p(d,"numLines",0,"et",{"one":"1 rida","other":common_locale.n(d,"numLines")+" rida"})+" rida koodi."},
 "tryAgain":function(d){return "Proovi uuesti"},
 "tryHOC":function(d){return "Proovi Koodi Tundi"},
 "wantToLearn":function(d){return "Tahad programmeerimist õppida?"},

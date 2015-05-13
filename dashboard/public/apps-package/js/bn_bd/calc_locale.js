@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Your program results in division by zero."},
 "emptyComputeBlock":function(d){return "তোমাকে \"Evaluate\" ব্লকে অবশ্যই একটি ব্লক সংযুক্ত করতে হবে।"},
 "equivalentExpression":function(d){return "ঠিক একই অভিব্যক্তি পেতে আপনার কথাবার্তা রেকর্ড করতে চেষ্টা করুন ।"},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "তোমার function টি সকল মানের ক্ষেত্রে সঠিক ফলাফল দিচ্ছে না।"},
 "goal":function(d){return "লক্ষ্য:"},
 "levelIncompleteError":function(d){return "তোমার করা কাঠামোটি লক্ষ্যের সাথে খাপ খায় না।"},
-"missingFunctionError":function(d){return "তোমাকে অবশ্যই "+appLocale.v(d,"functionName")+" নামের এক function নির্ধারণ করতে হবে।"},
-"missingVariableX":function(d){return "তোমার করা কাঠামোয় variable "+appLocale.v(d,"var")+" নেই।"},
+"missingFunctionError":function(d){return "তোমাকে অবশ্যই "+calc_locale.v(d,"functionName")+" নামের এক function নির্ধারণ করতে হবে।"},
+"missingVariableX":function(d){return "তোমার করা কাঠামোয় variable "+calc_locale.v(d,"var")+" নেই।"},
 "reinfFeedbackMsg":function(d){return "এই হল তোমার হিসেব-নিকেশ! এ কাজটি পুনরায় করতে থাকো, অথবা পরের puzzle এ চলে যাও!"},
 "yourExpression":function(d){return "তোমার অভিব্যাক্তি:"},
 "wrongInput":function(d){return "তুমি ভুল মানে দিয়ে তোমার করা function টি চালু করছো।"},
-"wrongOtherValuesX":function(d){return "যদি আমরা "+appLocale.v(d,"var")+" পরিবর্তন করি তাহলে তোমার কাঠামোর ফলাফল ভুল হয়।"},
+"wrongOtherValuesX":function(d){return "যদি আমরা "+calc_locale.v(d,"var")+" পরিবর্তন করি তাহলে তোমার কাঠামোর ফলাফল ভুল হয়।"},
 "wrongResult":function(d){return "তোমার করা কাঠামোর মাধ্যমে সঠিক ফলাফলটি এল না।"}};

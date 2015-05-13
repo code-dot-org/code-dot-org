@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Ваша программа приводит к делению на ноль."},
 "emptyComputeBlock":function(d){return "Вам необходимо присоединить блок к блоку «оценить»."},
 "equivalentExpression":function(d){return "Попробуйте переназначить ваши аргументы, чтобы получить точно такое же выражение."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Ваша процедура возвращает неверный результат для некоторых значений."},
 "goal":function(d){return "Цель:"},
 "levelIncompleteError":function(d){return "Ваше выражение не соответствует цели."},
-"missingFunctionError":function(d){return "Вы должны определить функцию "+appLocale.v(d,"functionName")+"."},
-"missingVariableX":function(d){return "В вашем выражении не хватает переменной "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "Вы должны определить функцию "+calc_locale.v(d,"functionName")+"."},
+"missingVariableX":function(d){return "В вашем выражении не хватает переменной "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Вот ваши вычисления! Продолжай работать над этим, или переходи к следующей задаче!"},
 "yourExpression":function(d){return "Ваше выражение:"},
 "wrongInput":function(d){return "Вы вызываете функцию с неправильным значением параметра."},
-"wrongOtherValuesX":function(d){return "Ваше выражение возвращает неправильное значение, если мы поменяем "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Ваше выражение возвращает неправильное значение, если мы поменяем "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Ваше выражение возвращает неправильный результат."}};

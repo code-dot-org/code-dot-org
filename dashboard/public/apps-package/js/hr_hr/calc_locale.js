@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "Program rezultira dijeljenjem s nulom."},
 "emptyComputeBlock":function(d){return "Morate spojiti blok sa blokom za evaluaciju."},
 "equivalentExpression":function(d){return "Pokušaj presložiti svoje argumente da dobiješ posve jednak izraz."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "Funkcija ne vraća točan rezultat za sve vrijednosti."},
 "goal":function(d){return "Cilj:"},
 "levelIncompleteError":function(d){return "Izraz ne odgovara predviđenom."},
-"missingFunctionError":function(d){return "Funkciju s imenom "+appLocale.v(d,"functionName")+" mora biti definirana."},
-"missingVariableX":function(d){return "Izrazu nedostaje varijabla "+appLocale.v(d,"var")+"."},
+"missingFunctionError":function(d){return "Funkciju s imenom "+calc_locale.v(d,"functionName")+" mora biti definirana."},
+"missingVariableX":function(d){return "Izrazu nedostaje varijabla "+calc_locale.v(d,"var")+"."},
 "reinfFeedbackMsg":function(d){return "Ovo je tvoj izračun! Nastavi raditi na njemu, ili prijeđi na sljedeći zadatak!"},
 "yourExpression":function(d){return "Tvoj izraz:"},
 "wrongInput":function(d){return "Funkcija se poziva s krivom vrijednosti."},
-"wrongOtherValuesX":function(d){return "Izraz rezultira krivom vrijednosti ako se mijenja "+appLocale.v(d,"var")+"."},
+"wrongOtherValuesX":function(d){return "Izraz rezultira krivom vrijednosti ako se mijenja "+calc_locale.v(d,"var")+"."},
 "wrongResult":function(d){return "Izraz ne vraća ispravan rezultat."}};

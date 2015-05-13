@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "И"},
 "backToPreviousLevel":function(d){return "Натраг на претходни ниво"},
 "blocklyMessage":function(d){return "Blockly"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Имате незакачене блокове. Да ли сте хтели да их закачите за \"када се извршава\" блок?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "Честитамо! Завршили сте последњу етапу."},
-"finalStageTrophies":function(d){return "Честитамо! Завршио-ла си последњи ниво и освојио-ла  "+locale.p(d,"numTrophies",0,"sr",{"one":"трофеј","other":locale.n(d,"numTrophies")+" трофеја"})+"."},
+"finalStageTrophies":function(d){return "Честитамо! Завршио-ла си последњи ниво и освојио-ла  "+common_locale.p(d,"numTrophies",0,"sr",{"one":"трофеј","other":common_locale.n(d,"numTrophies")+" трофеја"})+"."},
 "finish":function(d){return "Заврши"},
-"generatedCodeInfo":function(d){return "Чак и најбољи универзитети уче блок-базирано кодирање (нпр. "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). Али блокови су постављени тако да их можете видети у JavaScript, светском најкоришћенијем програмском језику:"},
+"generatedCodeInfo":function(d){return "Чак и најбољи универзитети уче блок-базирано кодирање (нпр. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Али блокови су постављени тако да их можете видети у JavaScript, светском најкоришћенијем програмском језику:"},
 "genericFeedback":function(d){return "Погледај како си завршио и пробај да поправиш свој програм."},
 "hashError":function(d){return "Жао нам је, '%1' не одговара ни једном сачуваном програму."},
 "help":function(d){return "Помоћ"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "листа"},
 "makeYourOwnFlappy":function(d){return "Направи своју Flappy игру"},
 "missingBlocksErrorMsg":function(d){return "Пробај један или више понуђених блокова како би решио-ла мозгалицу."},
-"nextLevel":function(d){return "Честитамо! Решио-ла си мозгалицу "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "Честитамо! Решили сте Слагалицу "+locale.v(d,"puzzleNumber")+" и освојили "+locale.p(d,"numTrophies",0,"sr",{"one":"трофеј","other":locale.n(d,"numTrophies")+" трофеја"})+"."},
+"nextLevel":function(d){return "Честитамо! Решио-ла си мозгалицу "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "Честитамо! Решили сте Слагалицу "+common_locale.v(d,"puzzleNumber")+" и освојили "+common_locale.p(d,"numTrophies",0,"sr",{"one":"трофеј","other":common_locale.n(d,"numTrophies")+" трофеја"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "Честитамо! Завршили сте "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return "Честитамо! Завршили сте "+locale.v(d,"stageName")+" и освојили "+locale.p(d,"numTrophies",0,"sr",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+"."},
-"numBlocksNeeded":function(d){return "Честитамо! Решио-ла си мозгалицу "+locale.v(d,"puzzleNumber")+". (Међутим, постоји програм са само "+locale.p(d,"numBlocks",0,"sr",{"one":"једним блоком","other":locale.n(d,"numBlocks")+" блокова"})+".)"},
-"numLinesOfCodeWritten":function(d){return "Управо си написао-ла "+locale.p(d,"numLines",0,"sr",{"one":"1 линију","other":locale.n(d,"numLines")+" линија"})+" кода!"},
+"nextStage":function(d){return "Честитамо! Завршили сте "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return "Честитамо! Завршили сте "+common_locale.v(d,"stageName")+" и освојили "+common_locale.p(d,"numTrophies",0,"sr",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"numBlocksNeeded":function(d){return "Честитамо! Решио-ла си мозгалицу "+common_locale.v(d,"puzzleNumber")+". (Међутим, постоји програм са само "+common_locale.p(d,"numBlocks",0,"sr",{"one":"једним блоком","other":common_locale.n(d,"numBlocks")+" блокова"})+".)"},
+"numLinesOfCodeWritten":function(d){return "Управо си написао-ла "+common_locale.p(d,"numLines",0,"sr",{"one":"1 линију","other":common_locale.n(d,"numLines")+" линија"})+" кода!"},
 "openWorkspace":function(d){return "Како то ради"},
 "orientationLock":function(d){return "У подешавањима уређаја искључи блокаду оријентације."},
 "play":function(d){return "играј"},
 "print":function(d){return "Одштампај"},
-"puzzleTitle":function(d){return "Мозгалица "+locale.v(d,"puzzle_number")+" од "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "Мозгалица "+common_locale.v(d,"puzzle_number")+" од "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "понављај"},
 "resetProgram":function(d){return "Почни поново"},
 "rotateText":function(d){return "Окрените ваш уређај."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "Задао си ми много посла! Покушај са мање понављања."},
 "toolboxHeader":function(d){return "блокови"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "Укупно : "+locale.p(d,"numLines",0,"sr",{"one":"1 линија","other":locale.n(d,"numLines")+" линија"})+" кода."},
+"totalNumLinesOfCodeWritten":function(d){return "Укупно : "+common_locale.p(d,"numLines",0,"sr",{"one":"1 линија","other":common_locale.n(d,"numLines")+" линија"})+" кода."},
 "tryAgain":function(d){return "Покушај поново"},
 "tryHOC":function(d){return "Испробај \"Hour of Code\""},
 "wantToLearn":function(d){return "Желиш да научиш да програмираш?"},

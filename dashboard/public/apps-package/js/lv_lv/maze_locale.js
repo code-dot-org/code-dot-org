@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){maze_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:(k=maze_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).maze_locale = {
 "atHoneycomb":function(d){return "pie meduskāres"},
 "atFlower":function(d){return "pie zieda"},
 "avoidCowAndRemove":function(d){return "izvairies no govs un noņem 1"},
@@ -167,8 +167,8 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "doCode":function(d){return "darīt"},
 "elseCode":function(d){return "cits"},
 "fill":function(d){return "aizpildīt 1"},
-"fillN":function(d){return "aizpildīt "+appLocale.v(d,"shovelfuls")},
-"fillStack":function(d){return "aizpildīt kaudzi ar "+appLocale.v(d,"shovelfuls")+" bedrēm"},
+"fillN":function(d){return "aizpildīt "+maze_locale.v(d,"shovelfuls")},
+"fillStack":function(d){return "aizpildīt kaudzi ar "+maze_locale.v(d,"shovelfuls")+" bedrēm"},
 "fillSquare":function(d){return "aizpildīt kvadrātu"},
 "fillTooltip":function(d){return "uzlikt 1 dubļa vienību"},
 "finalLevel":function(d){return "Apsveicu! Jūs esat atrisinājis pēdējo puzli."},
@@ -215,9 +215,9 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "pilePresent":function(d){return "ir kaudze"},
 "putdownTower":function(d){return "nolikt torni"},
 "removeAndAvoidTheCow":function(d){return "noņemt 1 un izvairies no govs"},
-"removeN":function(d){return "noņemt "+appLocale.v(d,"shovelfuls")},
+"removeN":function(d){return "noņemt "+maze_locale.v(d,"shovelfuls")},
 "removePile":function(d){return "noņemt kaudzi"},
-"removeStack":function(d){return "nonemt "+appLocale.v(d,"shovelfuls")+" kaudzes"},
+"removeStack":function(d){return "nonemt "+maze_locale.v(d,"shovelfuls")+" kaudzes"},
 "removeSquare":function(d){return "noņemt kvadrātu"},
 "repeatCarefullyError":function(d){return "Lai atrisinātu šo, padomā kārtīgi par 2 gājienu modeli un vienu pagriezienu,ko ievietot \"atkārtot\" blokā. Tas nekas, ka beigās paliek brīvs gājiens."},
 "repeatUntil":function(d){return "atkārtot līdz"},

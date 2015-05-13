@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "そして"},
 "backToPreviousLevel":function(d){return "前のレベルに戻る"},
 "blocklyMessage":function(d){return "ブロッキー"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "おめでとうございます ！最終ステージをクリアしました。"},
-"finalStageTrophies":function(d){return "おめでとうございます ！最終ステージをクリアしたので  "+locale.p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":locale.n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"},
+"finalStageTrophies":function(d){return "おめでとうございます ！最終ステージをクリアしたので  "+common_locale.p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":common_locale.n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"},
 "finish":function(d){return "完了"},
-"generatedCodeInfo":function(d){return "アメリカのトップの大学(例えば、"+locale.v(d,"berkeleyLink")+" "+locale.v(d,"harvardLink")+")でもブロック ベースのプログラミングを教えています 。あなたが組み合わせたブロックは実際のプログラム言語でどのようになっているか確認できるようにJavaScriptで表示できます。JavaScriptは世界中で最も広く使われているプログラム言語です。"},
+"generatedCodeInfo":function(d){return "アメリカのトップの大学(例えば、"+common_locale.v(d,"berkeleyLink")+" "+common_locale.v(d,"harvardLink")+")でもブロック ベースのプログラミングを教えています 。あなたが組み合わせたブロックは実際のプログラム言語でどのようになっているか確認できるようにJavaScriptで表示できます。JavaScriptは世界中で最も広く使われているプログラム言語です。"},
 "genericFeedback":function(d){return "どうなったかよく見て、プログラムを直してみよう。"},
 "hashError":function(d){return "申し訳ありませんが、'%1'は保存されているプログラムと一致しません。"},
 "help":function(d){return "ヘルプ"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "リスト"},
 "makeYourOwnFlappy":function(d){return "自分だけの「パタパタゲーム」を作りましょう。"},
 "missingBlocksErrorMsg":function(d){return "下にあるブロックを使ってこのパズルを解いてみましょう。"},
-"nextLevel":function(d){return "おめでとうございます ！あなたはパズルを "+locale.v(d,"puzzleNumber")+" 完了しました。"},
-"nextLevelTrophies":function(d){return "おめでとうございます ！あなたはパズル "+locale.v(d,"puzzleNumber")+" をクリアし、"+locale.p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":locale.n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"},
+"nextLevel":function(d){return "おめでとうございます ！あなたはパズルを "+common_locale.v(d,"puzzleNumber")+" 完了しました。"},
+"nextLevelTrophies":function(d){return "おめでとうございます ！あなたはパズル "+common_locale.v(d,"puzzleNumber")+" をクリアし、"+common_locale.p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":common_locale.n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "おめでとうございます ！"+locale.v(d,"stageName")+"を クリアしました。"},
-"nextStageTrophies":function(d){return "おめでとうございます！ "+locale.v(d,"stageName")+" をクリアして "+locale.p(d,"numTrophies",0,"ja",{"one":"a trophy","other":locale.n(d,"numTrophies")+" trophies"})+" を手に入れました。"},
-"numBlocksNeeded":function(d){return "おめでとうございます ！あなたはパズル "+locale.v(d,"puzzleNumber")+" をクリアしました。 (ヒント： "+locale.p(d,"numBlocks",0,"ja",{"one":"1 block","other":locale.n(d,"numBlocks")+" blocks"})+" だけで解くこともできました。)"},
-"numLinesOfCodeWritten":function(d){return "あなたはたった今 "+locale.p(d,"numLines",0,"ja",{"one":"1 行","other":locale.n(d,"numLines")+" 行"})+" のコードを書きました！"},
+"nextStage":function(d){return "おめでとうございます ！"+common_locale.v(d,"stageName")+"を クリアしました。"},
+"nextStageTrophies":function(d){return "おめでとうございます！ "+common_locale.v(d,"stageName")+" をクリアして "+common_locale.p(d,"numTrophies",0,"ja",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+" を手に入れました。"},
+"numBlocksNeeded":function(d){return "おめでとうございます ！あなたはパズル "+common_locale.v(d,"puzzleNumber")+" をクリアしました。 (ヒント： "+common_locale.p(d,"numBlocks",0,"ja",{"one":"1 block","other":common_locale.n(d,"numBlocks")+" blocks"})+" だけで解くこともできました。)"},
+"numLinesOfCodeWritten":function(d){return "あなたはたった今 "+common_locale.p(d,"numLines",0,"ja",{"one":"1 行","other":common_locale.n(d,"numLines")+" 行"})+" のコードを書きました！"},
 "openWorkspace":function(d){return "仕組み"},
 "orientationLock":function(d){return "デバイスの設定にあるオリエンテーション（方向）ロックをオフにしてください。"},
 "play":function(d){return "再生する"},
 "print":function(d){return "印刷"},
-"puzzleTitle":function(d){return "パズル "+locale.v(d,"puzzle_number")+" (全 "+locale.v(d,"stage_total")+" ステージ)"},
+"puzzleTitle":function(d){return "パズル "+common_locale.v(d,"puzzle_number")+" (全 "+common_locale.v(d,"stage_total")+" ステージ)"},
 "repeat":function(d){return "繰り返し"},
 "resetProgram":function(d){return "リセット"},
 "rotateText":function(d){return "お使いのデバイスを回転させてください。"},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "ちょっと作業が多すぎますね！もう少し繰り返し回数を少なくできませんか？"},
 "toolboxHeader":function(d){return "ブロック達"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "すべての時間の合計:  "+locale.p(d,"numLines",0,"ja",{"one":"1 ライン","other":locale.n(d,"numLines")+" ライン"})+" のコード\n"},
+"totalNumLinesOfCodeWritten":function(d){return "すべての時間の合計:  "+common_locale.p(d,"numLines",0,"ja",{"one":"1 ライン","other":common_locale.n(d,"numLines")+" ライン"})+" のコード\n"},
 "tryAgain":function(d){return "やり直す"},
 "tryHOC":function(d){return "「コードの時間」に挑戦する"},
 "wantToLearn":function(d){return "プログラムを覚えてみたいですか？"},

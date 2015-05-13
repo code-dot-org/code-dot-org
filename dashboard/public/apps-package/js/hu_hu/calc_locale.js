@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var calc_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){calc_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:(k=calc_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){calc_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).calc_locale = {
 "divideByZeroError":function(d){return "A programod nullával való osztást eredményezett."},
 "emptyComputeBlock":function(d){return "A kiértékeléshez először csatlakoztatni kell egy blokkot."},
 "equivalentExpression":function(d){return "Próbáld meg átrendezni az érveidet, hogy pontosan ugyanazt a kifejezést kapd."},
@@ -162,10 +162,10 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedInput":function(d){return "A függvényed nem ad vissza minden változóhoz helyes eredményt."},
 "goal":function(d){return "Cél:"},
 "levelIncompleteError":function(d){return "A kifejezésed nem a célt eredményezi."},
-"missingFunctionError":function(d){return "Meg kell határozni a "+appLocale.v(d,"functionName")+" függvényt."},
-"missingVariableX":function(d){return "A kifejezésből hiányzik a "+appLocale.v(d,"var")+" változó."},
+"missingFunctionError":function(d){return "Meg kell határozni a "+calc_locale.v(d,"functionName")+" függvényt."},
+"missingVariableX":function(d){return "A kifejezésből hiányzik a "+calc_locale.v(d,"var")+" változó."},
 "reinfFeedbackMsg":function(d){return "Íme a számításod! Folytathatod vele a munkát, vagy menj a következő blokkra."},
 "yourExpression":function(d){return "A kifejezésed:"},
 "wrongInput":function(d){return "Rossz értékkel hívtad meg a függvényedet."},
-"wrongOtherValuesX":function(d){return "A kifejezés rossz értéket eredményez, ha "+appLocale.v(d,"var")+"-t megváltoztatjuk."},
+"wrongOtherValuesX":function(d){return "A kifejezés rossz értéket eredményez, ha "+calc_locale.v(d,"var")+"-t megváltoztatjuk."},
 "wrongResult":function(d){return "A kifejezés nem ad vissza helyes eredményt."}};

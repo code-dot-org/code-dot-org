@@ -1,4 +1,4 @@
-var locale = {lc:{"ar":function(n){
+var common_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var locale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){locale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){locale.c(d,k);return d[k] in p?p[d[k]]:(k=locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).locale = {
+v:function(d,k){common_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:(k=common_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "ו"},
 "backToPreviousLevel":function(d){return "חזרה לשלב הקודם"},
 "blocklyMessage":function(d){return "בלוקלי"},
@@ -663,9 +663,9 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "יש לך אבני כעיגולים בצבע. התכוונת לצרף אלה כדי לחסום את \"בעת הפעלת\"?"},
 "extraTopBlocksWhenRun":function(d){return "You have unattached blocks. Did you mean to attach these to the \"when run\" block?"},
 "finalStage":function(d){return "מזל טוב! השלמת את השלב הסופי."},
-"finalStageTrophies":function(d){return "מזל טוב! השלמת את השלב הסופי וזכית ב"+locale.p(d,"numTrophies",0,"he",{"one":"פרס","other":locale.n(d,"numTrophies")+" פרסים"})+"."},
+"finalStageTrophies":function(d){return "מזל טוב! השלמת את השלב הסופי וזכית ב"+common_locale.p(d,"numTrophies",0,"he",{"one":"פרס","other":common_locale.n(d,"numTrophies")+" פרסים"})+"."},
 "finish":function(d){return "סיים"},
-"generatedCodeInfo":function(d){return "אפילו האוניברסטאות הטובות ביותר מלמדות תכנות בשיטת בלוקים (לדוגמה, "+locale.v(d,"berkeleyLink")+", "+locale.v(d,"harvardLink")+"). אבל מתחת למכסה המנוע, המיומנויות שרכשת ניתנות למימוש גם בג'אווה סקריפט, שפת התכנות הפופלרית בעולם:"},
+"generatedCodeInfo":function(d){return "אפילו האוניברסטאות הטובות ביותר מלמדות תכנות בשיטת בלוקים (לדוגמה, "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). אבל מתחת למכסה המנוע, המיומנויות שרכשת ניתנות למימוש גם בג'אווה סקריפט, שפת התכנות הפופלרית בעולם:"},
 "genericFeedback":function(d){return "לראות איך גמרת, ולנסות לתקן את התוכנית שלך."},
 "hashError":function(d){return "סליחה, אך '%1' אינו תואם לאף תוכנית שנשמרה."},
 "help":function(d){return "עזרה"},
@@ -680,18 +680,18 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "listVariable":function(d){return "רשימה"},
 "makeYourOwnFlappy":function(d){return "תיצור משחק Flappy משלך"},
 "missingBlocksErrorMsg":function(d){return "השתמש באחד או יותר מהבלוקים להלן כדי לפתור את הפאזל."},
-"nextLevel":function(d){return "מזל טוב! השלמת את פאזל "+locale.v(d,"puzzleNumber")+"."},
-"nextLevelTrophies":function(d){return "מזל טוב! השלמת את פאזל "+locale.v(d,"puzzleNumber")+" וזכית ב"+locale.p(d,"numTrophies",0,"he",{"one":"פרס","other":locale.n(d,"numTrophies")+" פרסים"})+"."},
+"nextLevel":function(d){return "מזל טוב! השלמת את פאזל "+common_locale.v(d,"puzzleNumber")+"."},
+"nextLevelTrophies":function(d){return "מזל טוב! השלמת את פאזל "+common_locale.v(d,"puzzleNumber")+" וזכית ב"+common_locale.p(d,"numTrophies",0,"he",{"one":"פרס","other":common_locale.n(d,"numTrophies")+" פרסים"})+"."},
 "nextPuzzle":function(d){return "Next Puzzle"},
-"nextStage":function(d){return "מזל טוב! השלמת "+locale.v(d,"stageName")+"."},
-"nextStageTrophies":function(d){return " הכבוד! השלמת את שלב "+locale.v(d,"stageName")+" וזכית ב-"+locale.p(d,"numTrophies",0,"he",{"one":"פרס","other":locale.n(d,"numTrophies")+" פרסים"})+"."},
-"numBlocksNeeded":function(d){return "כל הכבוד! השלמת את חידה "+locale.v(d,"puzzleNumber")+". (עם זאת, יכולת להשתמש רק ב "+locale.p(d,"numBlocks",0,"he",{"one":"1 בלוק","other":locale.n(d,"numBlocks")+" בלוקים"})+".)"},
-"numLinesOfCodeWritten":function(d){return "כתבת "+locale.p(d,"numLines",0,"he",{"one":"שורת","other":locale.n(d,"numLines")+" שורות"})+" קוד!"},
+"nextStage":function(d){return "מזל טוב! השלמת "+common_locale.v(d,"stageName")+"."},
+"nextStageTrophies":function(d){return " הכבוד! השלמת את שלב "+common_locale.v(d,"stageName")+" וזכית ב-"+common_locale.p(d,"numTrophies",0,"he",{"one":"פרס","other":common_locale.n(d,"numTrophies")+" פרסים"})+"."},
+"numBlocksNeeded":function(d){return "כל הכבוד! השלמת את חידה "+common_locale.v(d,"puzzleNumber")+". (עם זאת, יכולת להשתמש רק ב "+common_locale.p(d,"numBlocks",0,"he",{"one":"1 בלוק","other":common_locale.n(d,"numBlocks")+" בלוקים"})+".)"},
+"numLinesOfCodeWritten":function(d){return "כתבת "+common_locale.p(d,"numLines",0,"he",{"one":"שורת","other":common_locale.n(d,"numLines")+" שורות"})+" קוד!"},
 "openWorkspace":function(d){return "איך זה עובד"},
 "orientationLock":function(d){return "בטל את נעילת הכיוון בהגדרות המכשיר."},
 "play":function(d){return "הפעל"},
 "print":function(d){return "הדפס"},
-"puzzleTitle":function(d){return "חידה "+locale.v(d,"puzzle_number")+" מ- "+locale.v(d,"stage_total")},
+"puzzleTitle":function(d){return "חידה "+common_locale.v(d,"puzzle_number")+" מ- "+common_locale.v(d,"stage_total")},
 "repeat":function(d){return "חזור על"},
 "resetProgram":function(d){return "אפס"},
 "rotateText":function(d){return "סובב את המכשיר שלך."},
@@ -715,7 +715,7 @@ s:function(d,k,p){locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tooMuchWork":function(d){return "גרמת לי להרבה עבודה! האם אתה יכול לנסות לחזור פחות פעמים?"},
 "toolboxHeader":function(d){return "בלוקים"},
 "toolboxHeaderDroplet":function(d){return "Toolbox"},
-"totalNumLinesOfCodeWritten":function(d){return "סך כל הזמנים:  "+locale.p(d,"numLines",0,"he",{"one":"שורה אחת","other":locale.n(d,"numLines")+" שורות"})+" של קוד."},
+"totalNumLinesOfCodeWritten":function(d){return "סך כל הזמנים:  "+common_locale.p(d,"numLines",0,"he",{"one":"שורה אחת","other":common_locale.n(d,"numLines")+" שורות"})+" של קוד."},
 "tryAgain":function(d){return "נסה שוב"},
 "tryHOC":function(d){return "נסה את \"שעת הקוד\" (Hour of Code)"},
 "wantToLearn":function(d){return "רוצה ללמוד לתכנת?"},

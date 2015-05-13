@@ -1,4 +1,4 @@
-var appLocale = {lc:{"ar":function(n){
+var bounce_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -150,10 +150,10 @@ var appLocale = {lc:{"ar":function(n){
 },"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
-v:function(d,k){appLocale.c(d,k);return d[k]},
-p:function(d,k,o,l,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:(k=appLocale.lc[l](d[k]-o),k in p?p[k]:p.other)},
-s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
-(window.blockly = window.blockly || {}).appLocale = {
+v:function(d,k){bounce_locale.c(d,k);return d[k]},
+p:function(d,k,o,l,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:(k=bounce_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
+s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
+(window.blockly = window.blockly || {}).bounce_locale = {
 "bounceBall":function(d){return "הקפץ כדור"},
 "bounceBallTooltip":function(d){return "הקפץ כדור על אובייקט."},
 "continue":function(d){return "המשך"},
@@ -217,7 +217,7 @@ s:function(d,k,p){appLocale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatUntil":function(d){return "חזור עד אשר"},
 "repeatUntilBlocked":function(d){return "כאשר דרך מקדימה"},
 "repeatUntilFinish":function(d){return "חזור עד סיום"},
-"scoreText":function(d){return "ניקוד: "+appLocale.v(d,"playerScore")+":"+appLocale.v(d,"opponentScore")},
+"scoreText":function(d){return "ניקוד: "+bounce_locale.v(d,"playerScore")+":"+bounce_locale.v(d,"opponentScore")},
 "setBackgroundRandom":function(d){return "הגדר זירה אקראית"},
 "setBackgroundHardcourt":function(d){return "הפעל סצנת מגרש"},
 "setBackgroundRetro":function(d){return "הפעל סצנת רטרו"},
