@@ -1,3 +1,6 @@
+- authentication_required!
+- forbidden! unless dashboard_user[:admin]
+
 = view :breadcrumbs, trail: [{text: 'Dashboard'}]
 
 %h1
@@ -74,6 +77,8 @@
     %th.manage-th
       Sent
     %th.manage-th
+      Date
+    %th.manage-th
       Opens
     %th.manage-th
       Clicks
@@ -87,6 +92,8 @@
       765
     %td
       765
+    %td
+      2014-05-28
     %td
       466
       %br
@@ -109,6 +116,8 @@
     %td
       281202
     %td
+      2014-11-11
+    %td
       81713
       %br
       29% sent
@@ -128,27 +137,11 @@
     %td
     %td
     %td
-      %button
-        View Results
-  %tr
-    %td
-    %td
-    %td
-    %td
-    %td
     %td
       %button
         View Results
   %tr
     %td
-    %td
-    %td
-    %td
-    %td
-    %td
-      %button
-        View Results
-  %tr
     %td
     %td
     %td
@@ -164,6 +157,17 @@
     %td
     %td
     %td
+    %td
+      %button
+        View Results
+  %tr
+    %td
+    %td
+    %td
+    %td
+    %td
+    %td
+    %td
       %button
         View Results
   %tr
@@ -173,9 +177,21 @@
     %td
     %td
     %td
+    %td
       %button
         View Results
   %tr
+    %td
+    %td
+    %td
+    %td
+    %td
+    %td
+    %td
+      %button
+        View Results
+  %tr
+    %td
     %td
     %td
     %td

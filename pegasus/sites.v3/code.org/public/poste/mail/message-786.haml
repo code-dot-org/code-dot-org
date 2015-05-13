@@ -1,3 +1,6 @@
+- authentication_required!
+- forbidden! unless dashboard_user[:admin]
+
 = view :breadcrumbs, trail: [{text: 'Dashboard', url:'/poste'}, {text:'Create Mail', url:'/poste/mail'}, {text:'HOC 2015 Reminder'}]
 
 %h1
